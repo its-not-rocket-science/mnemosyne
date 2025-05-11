@@ -50,12 +50,6 @@
 - Wikipedia dataset + wikiextractor
 - Cluster deployment for parallelism
 
-## 🪄 Logo & Branding Ideas
-
-- Stylized Greek column + neural network motif
-- Mnemosyne name in ancient script font
-- Knowledge tree with nodes resembling neural connections
-
 ## 🤖 Project Slogan
 
 *"Memory. Knowledge. Continuity."*
