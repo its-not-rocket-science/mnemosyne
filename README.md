@@ -1,6 +1,12 @@
 
 # Mnemosyne
 
+[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/github/license/its-not-rocket-science/mnemosyne)](LICENSE)
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](CONTRIBUTING.md)
+[![Status](https://img.shields.io/badge/status-experimental-orange)]()
+[![CI](https://github.com/YOUR_USERNAME/mnemosyne/actions/workflows/ci.yml/badge.svg)](https://github.com/its-not-rocket-science/mnemosyne/actions)
+
 **Mnemosyne** is an autonomous knowledge extraction and continual learning system inspired by the Greek goddess of memory. The project uses large language models (LLMs) and knowledge graphs to analyze text, build structured ontologies, identify testable hypotheses, and iteratively evolve its understanding as new information arrives.
 
 ## 🌟 Project Vision
@@ -49,5 +55,9 @@
 - OpenAI GPT-4 Turbo (API)
 - Wikipedia dataset + wikiextractor
 - Cluster deployment for parallelism
+
+## 🤖 Project Slogan
+
+*"Memory. Knowledge. Continuity."*
 
 ---
