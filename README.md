@@ -50,8 +50,4 @@
 - Wikipedia dataset + wikiextractor
 - Cluster deployment for parallelism
 
-## 🤖 Project Slogan
-
-*"Memory. Knowledge. Continuity."*
-
 ---
