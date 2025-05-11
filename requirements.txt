@@ -1,0 +1,36 @@
+# Core Python packages
+python>=3.9
+
+# Wikipedia parsing
+wikiextractor
+
+# LLM interaction (OpenAI or open models via LangChain)
+openai
+langchain
+
+# Neo4j graph database
+neo4j
+py2neo
+
+# Document parsing and cleaning
+beautifulsoup4
+lxml
+
+# Parallel processing / job queues (optional but recommended)
+ray
+tqdm
+
+# Data manipulation
+pandas
+numpy
+
+# Logging & utilities
+loguru
+
+# Optional: LLM local inference support (for later phases)
+transformers
+sentence-transformers
+
+# Optional: Jupyter notebooks for experiments
+jupyter
+ipykernel
