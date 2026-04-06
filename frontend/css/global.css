@@ -125,9 +125,19 @@ select:focus-visible {
   outline-offset: 2px;
 }
 
+.button-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 .status {
   min-block-size: 1.5rem;
   color: var(--muted);
+  transition: color 0.15s ease;
+}
+
+.status[data-state="error"] {
+  color: color-mix(in srgb, red 65%, var(--text));
 }
 
 .results {
