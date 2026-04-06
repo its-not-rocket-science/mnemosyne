@@ -1,9 +1,12 @@
 import importlib
+import logging
 import pkgutil
 from types import ModuleType
 
 from backend.core.config import get_settings
 from backend.parsing.plugin_interface import LanguagePlugin
+
+logger = logging.getLogger(__name__)
 
 
 class PluginRegistry:
@@ -40,6 +43,15 @@ def load_plugins() -> PluginRegistry:
         plugin_factory = getattr(module, "create_plugin", None)
         if plugin_factory is None:
             continue
-        plugin = plugin_factory()
-        registry.register(plugin)
+        try:
+            plugin = plugin_factory()
+            registry.register(plugin)
+            logger.info("Registered plugin %r (language: %r)", module.__name__, plugin.language_code)
+        except Exception:
+            logger.warning(
+                "Could not load plugin from %r — skipping.  "
+                "(Missing model?  Run the model download command.)",
+                module.__name__,
+                exc_info=True,
+            )
     return registry

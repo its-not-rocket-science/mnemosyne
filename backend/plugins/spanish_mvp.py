@@ -259,5 +259,6 @@ class SpanishMVPPlugin:
         )
 
 
-def create_plugin() -> SpanishMVPPlugin:
-    return SpanishMVPPlugin()
+# create_plugin intentionally absent — SpanishMVPPlugin is superseded by
+# SpanishPlugin (spanish.py).  The class is retained for tests that import
+# it directly.
