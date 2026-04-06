@@ -23,15 +23,21 @@ async def parse_text(
         raise HTTPException(status_code=404, detail=str(exc)) from exc
 
     cache_key = _cache_key(payload.text, payload.language)
-    cached = await get_json(cache_key)
-    if cached is not None:
-        return ParseResponse.model_validate(cached)
+    try:
+        cached = await get_json(cache_key)
+        if cached is not None:
+            return ParseResponse.model_validate(cached)
+    except Exception:
+        pass  # Redis unavailable — continue without cache
 
     sentences: list[SentenceResult] = [
         plugin.analyze_sentence(sentence) for sentence in plugin.split_sentences(payload.text)
     ]
     response = ParseResponse(sentences=sentences)
-    await set_json(cache_key, response.model_dump(mode="json"))
+    try:
+        await set_json(cache_key, response.model_dump(mode="json"))
+    except Exception:
+        pass  # Redis unavailable — return result uncached
     return response
 
 
