@@ -251,7 +251,12 @@ class SpanishMVPPlugin:
         return objects
 
     def _looks_like_verb(self, word: str) -> bool:
-        return any(word.endswith(ending) for ending in VERB_ENDINGS)
+        # Require a stem of at least 4 characters so short nouns ending in
+        # "a"/"o" (casa, rojo) are not mis-tagged as verbs.
+        return any(
+            word.endswith(ending) and len(word) - len(ending) > 3
+            for ending in VERB_ENDINGS
+        )
 
 
 def create_plugin() -> SpanishMVPPlugin:

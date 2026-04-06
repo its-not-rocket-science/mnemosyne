@@ -1,3 +1,6 @@
+import logging
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -5,10 +8,26 @@ from backend.api.routes.lesson import router as lesson_router
 from backend.api.routes.parse import router as parse_router
 from backend.api.routes.review import router as review_router
 from backend.core.config import get_settings
+from backend.api.dependencies import get_plugin_registry
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 
 settings = get_settings()
 
-app = FastAPI(title=settings.app_name, debug=settings.debug)
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    registry = get_plugin_registry()
+    loaded = list(registry.all().keys())
+    if loaded:
+        logger.info("Plugins loaded: %s", loaded)
+    else:
+        logger.warning("No plugins found in package '%s'.", settings.plugin_package)
+    yield
+
+
+app = FastAPI(title=settings.app_name, debug=settings.debug, lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
