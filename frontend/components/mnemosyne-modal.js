@@ -61,10 +61,14 @@ export class MnemosyneModal extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <style>
+        :host {
+          color-scheme: light dark;
+        }
+
         .overlay {
           position: fixed;
           inset: 0;
-          background: rgba(0, 0, 0, 0.5);
+          background: color-mix(in srgb, black 55%, transparent);
           display: grid;
           place-items: center;
           padding: 1rem;
@@ -78,8 +82,8 @@ export class MnemosyneModal extends HTMLElement {
           background: Canvas;
           color: CanvasText;
           border-radius: 1rem;
-          padding: 1rem;
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          padding: 1.5rem;
+          box-shadow: 0 1rem 2rem color-mix(in srgb, black 25%, transparent);
         }
 
         .header {
@@ -89,12 +93,26 @@ export class MnemosyneModal extends HTMLElement {
           gap: 1rem;
         }
 
-        .close {
-          border: 1px solid rgba(0, 0, 0, 0.2);
+        .close,
+        .actions button,
+        .ratings button {
+          border: 1px solid color-mix(in srgb, CanvasText 25%, transparent);
           background: transparent;
           border-radius: 999px;
-          padding: 0.5rem 0.8rem;
+          color: inherit;
+          font: inherit;
           cursor: pointer;
+        }
+
+        .close {
+          padding: 0.5rem 0.8rem;
+        }
+
+        .close:focus-visible,
+        .actions button:focus-visible,
+        .ratings button:focus-visible {
+          outline: 3px solid color-mix(in srgb, var(--accent, #3557ff) 55%, transparent);
+          outline-offset: 2px;
         }
 
         .actions,
@@ -105,13 +123,12 @@ export class MnemosyneModal extends HTMLElement {
           margin-block-start: 1rem;
         }
 
-        .ratings button,
-        .actions button {
-          border: 1px solid rgba(0, 0, 0, 0.2);
-          background: transparent;
-          border-radius: 999px;
+        .ratings button {
           padding: 0.6rem 0.85rem;
-          cursor: pointer;
+        }
+
+        .actions button {
+          padding: 0.6rem 0.85rem;
         }
 
         .content {
@@ -128,7 +145,7 @@ export class MnemosyneModal extends HTMLElement {
       <div class="overlay">
         <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
           <div class="header">
-            <h2 id="modal-title">${state.title}</h2>
+            <h2 id="modal-title"></h2>
             <button type="button" class="close" data-close data-autofocus>Close</button>
           </div>
 
@@ -149,6 +166,9 @@ export class MnemosyneModal extends HTMLElement {
         </div>
       </div>
     `
+
+    // Set title via textContent to avoid XSS from API-sourced strings.
+    this.shadowRoot.querySelector('#modal-title').textContent = state.title
 
     this.shadowRoot.querySelector('[data-close]')?.addEventListener('click', () => this.close())
     this.shadowRoot.querySelector('[data-speak]')?.addEventListener('click', () => state.onSpeak?.(state.exampleText))
