@@ -1,10 +1,13 @@
+// One OKLCH reference color per type.
+// color-mix blends it with the system Canvas color so pills adapt to
+// both light and dark mode without any media-query duplication.
 const TYPE_META = {
-  vocabulary: { icon: '📗', label: 'Vocabulary', bg: '#dff7df' },
-  conjugation: { icon: '🔧', label: 'Verb', bg: '#dbeafe' },
-  agreement: { icon: '🧩', label: 'Agreement', bg: '#ffe8cc' },
-  idiom: { icon: '💬', label: 'Idiom', bg: '#f3e8ff' },
-  grammar: { icon: '📐', label: 'Grammar', bg: '#fff3bf' },
-  nuance: { icon: '🎭', label: 'Nuance', bg: '#ffd6d6' },
+  vocabulary:  { icon: '📗', label: 'Vocabulary', ref: 'oklch(0.50 0.20 142)' },
+  conjugation: { icon: '🔧', label: 'Verb',        ref: 'oklch(0.50 0.20 240)' },
+  agreement:   { icon: '🧩', label: 'Agreement',   ref: 'oklch(0.50 0.15  50)' },
+  idiom:       { icon: '💬', label: 'Idiom',        ref: 'oklch(0.50 0.20 300)' },
+  grammar:     { icon: '📐', label: 'Grammar',      ref: 'oklch(0.50 0.15  90)' },
+  nuance:      { icon: '🎭', label: 'Nuance',       ref: 'oklch(0.50 0.20  20)' },
 }
 
 export class MnemosynePill extends HTMLElement {
@@ -53,17 +56,17 @@ export class MnemosynePill extends HTMLElement {
           display: inline-flex;
           align-items: center;
           gap: 0.45rem;
-          border: 1px solid rgba(0, 0, 0, 0.15);
+          border: 1px solid color-mix(in oklch, ${meta.ref} 35%, Canvas);
           border-radius: 999px;
           padding: 0.45rem 0.8rem;
-          background: ${meta.bg};
-          color: #111;
+          background: color-mix(in oklch, ${meta.ref} 18%, Canvas);
+          color: CanvasText;
           font: inherit;
           cursor: pointer;
         }
 
         button:focus-visible {
-          outline: 3px solid rgba(53, 87, 255, 0.4);
+          outline: 3px solid color-mix(in oklch, ${meta.ref} 55%, transparent);
           outline-offset: 2px;
         }
 

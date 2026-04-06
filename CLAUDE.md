@@ -20,6 +20,10 @@ You are the lead architect and senior engineer for Mnemosyne.
 - Do not overclaim linguistic certainty
 - For weak parsing cases, degrade gracefully
 
+## Workflow
+
+- Always suggest a commit message at the end of every task that changes files
+
 ## Tech preferences
 
 - Frontend: HTML, CSS, vanilla JS
