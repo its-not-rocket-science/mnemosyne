@@ -29,6 +29,7 @@ class SentenceResult(BaseModel):
 class ParseRequest(BaseModel):
     text: str = Field(min_length=1)
     language: str = Field(min_length=2, max_length=10)
+    source_url: str | None = Field(default=None, description="Optional provenance URL; stored for attribution, not fetched by the server.")
 
 
 class ParseResponse(BaseModel):
