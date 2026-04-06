@@ -1,0 +1,57 @@
+.sentence-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  background: var(--bg);
+}
+
+.sentence-card__text {
+  font-size: 1.05rem;
+  margin-block-end: var(--space-2);
+}
+
+.sentence-card__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.lesson-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-block-start: 1rem;
+}
+
+.rating-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block-start: 1rem;
+}
+
+.rating-button,
+.ghost-button {
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.markdown {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.markdown h2,
+.markdown h3,
+.markdown p,
+.markdown ul {
+  margin: 0;
+}
+
+.markdown ul {
+  padding-inline-start: 1.25rem;
+}
