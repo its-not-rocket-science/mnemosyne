@@ -1,0 +1,151 @@
+:root {
+  color-scheme: light dark;
+  --bg: Canvas;
+  --surface: color-mix(in srgb, Canvas 92%, CanvasText 8%);
+  --text: CanvasText;
+  --muted: color-mix(in srgb, CanvasText 60%, Canvas 40%);
+  --border: color-mix(in srgb, CanvasText 20%, Canvas 80%);
+  --accent: #3557ff;
+  --accent-contrast: white;
+  --radius: 0.9rem;
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 0.08);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.wrap {
+  inline-size: min(72rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  padding-block: var(--space-5) var(--space-4);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.875rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-block: 0 0.75rem;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-4);
+  margin-block-end: var(--space-4);
+}
+
+.stack > * + * {
+  margin-block-start: var(--space-3);
+}
+
+label {
+  display: block;
+  font-weight: 600;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  inline-size: 100%;
+  padding: 0.75rem;
+  border-radius: 0.7rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.button-row {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.button-primary {
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+}
+
+.button-primary:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  outline-offset: 2px;
+}
+
+.status {
+  min-block-size: 1.5rem;
+  color: var(--muted);
+}
+
+.results {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.skip-link {
+  position: absolute;
+  inset-inline-start: 1rem;
+  inset-block-start: 1rem;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
