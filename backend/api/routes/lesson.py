@@ -1,9 +1,16 @@
-from fastapi import APIRouter, Depends, HTTPException
+from __future__ import annotations
 
-from backend.api.dependencies import get_plugin_registry
+import logging
+
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from backend.api.dependencies import get_db_session, get_plugin_registry
+from backend.models import LearnableObjectRow
 from backend.parsing.plugin_loader import PluginRegistry
 from backend.schemas.parse import LessonResponse
 
+logger = logging.getLogger(__name__)
 router = APIRouter(tags=["lesson"])
 
 
@@ -12,7 +19,22 @@ async def get_lesson(
     object_id: str,
     language: str,
     registry: PluginRegistry = Depends(get_plugin_registry),
+    db: AsyncSession = Depends(get_db_session),
 ) -> LessonResponse:
+    # 1. Database lookup — authoritative when the object has been parsed.
+    try:
+        row = await db.get(LearnableObjectRow, object_id)
+        if row is not None:
+            return _build_response(
+                id=row.id,
+                obj_type=row.type,
+                label=row.label,
+                lesson_data=row.lesson_data,
+            )
+    except Exception:
+        logger.warning("DB lesson lookup failed for %r", object_id, exc_info=True)
+
+    # 2. Fall back to the plugin's in-memory store (populated during /parse).
     try:
         plugin = registry.get(language)
     except KeyError as exc:
@@ -22,14 +44,27 @@ async def get_lesson(
     if lesson is None:
         raise HTTPException(status_code=404, detail="Lesson object not found")
 
-    title = f"{lesson.type.replace('_', ' ').title()}: {lesson.label}"
-    content = _render_markdown(lesson.type, lesson.label, lesson.lesson_data)
-
-    return LessonResponse(
+    return _build_response(
         id=lesson.id,
+        obj_type=lesson.type,
+        label=lesson.label,
+        lesson_data=lesson.lesson_data,
+    )
+
+
+def _build_response(
+    *,
+    id: str,
+    obj_type: str,
+    label: str,
+    lesson_data: dict,
+) -> LessonResponse:
+    title = f"{obj_type.replace('_', ' ').title()}: {label}"
+    return LessonResponse(
+        id=id,
         title=title,
-        content_markdown=content,
-        example_text=lesson.label,
+        content_markdown=_render_markdown(obj_type, label, lesson_data),
+        example_text=label,
     )
 
 
