@@ -3,7 +3,8 @@
     "allow": [
       "Bash(python:*)",
       "Bash(poetry install:*)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(poetry run:*)"
     ]
   }
 }
