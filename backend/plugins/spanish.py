@@ -1,25 +1,37 @@
 """Spanish language plugin — spaCy ``es_core_news_sm``.
 
-Registers as ``language_code = "es"``, replacing the regex-based MVP stub.
+Registers as ``language_code = "es"``.
 
-Known limitations
------------------
+Improvements over the initial version
+──────────────────────────────────────
+- PRON (reflexive/clitic pronouns) excluded from vocabulary; they are a
+  closed class best taught as part of the verb construction, not as
+  standalone vocabulary items.
+- AUX conjugations now carry a ``construction`` annotation in
+  ``lesson_data`` (progressive, perfect, passive, copula, modal,
+  near_future, standalone) so downstream lessons can give context.
+- Reflexive clitics are detected and flagged on the conjugation entry via
+  ``is_reflexive`` in ``lesson_data``.
+- All learnable objects carry a ``confidence_note`` in ``lesson_data``
+  explaining the confidence score, so the frontend can surface rationale.
+- Adjacency fallback in agreement detection now skips pairs separated by
+  a CCONJ (coordinated nouns/adjectives), removing the most common source
+  of spurious agreement objects.
+
+Known limitations (unchanged)
+─────────────────────────────
 - *es_core_news_sm* is a small model (~12 MB).  Morphology is often
   incomplete for irregular verbs, clitic clusters (se lo doy), enclitic
   pronouns (dámelo), and archaic or literary forms.
-- Sentence segmentation works best on well-formed prose.  Dialogue,
-  social-media text, and mid-sentence line breaks may produce
-  over-/under-split results.
-- Confidence scores are heuristic proxies, not calibrated probabilities.
-- Reflexive and pronominal verbs are not yet decomposed; the whole surface
-  form is treated as a single conjugation.
+- A verb at the start of a sentence is sometimes mis-tagged as PROPN.
+  We do not re-tag; the sentence is silently under-extracted.
 - Subjunctive detection is unreliable for present subjunctive forms that
   are homographic with indicative forms (e.g. "hable").
-- The agreement extractor relies on the dependency parse; parsing errors
-  will produce missed or spurious pairs.
+- Reflexive detection relies on the dependency parse; parsing errors will
+  produce missed or spurious results.
 - ``_nlp`` is called twice per text when the route calls
-  ``split_sentences`` then ``analyze_sentence`` for each result.  This is
-  a consequence of the current two-method protocol; acceptable at MVP scale.
+  ``split_sentences`` then ``analyze_sentence`` for each result.
+- Confidence scores are heuristic proxies, not calibrated probabilities.
 """
 from __future__ import annotations
 
@@ -31,13 +43,22 @@ from backend.schemas.parse import LearnableObject, SentenceResult
 
 logger = logging.getLogger(__name__)
 
-# Universal-Dependencies POS tags that carry no learnable content for L2 learners.
+# Universal-Dependencies POS tags excluded from vocabulary extraction.
+# PRON is excluded because reflexive/clitic pronouns ("me", "te", "se",
+# "nos") pollute vocabulary with misleading lemmas (e.g. "me" → "yo").
+# Personal pronouns are a closed class best handled by dedicated lessons.
 _SKIP_POS = frozenset(
-    {"DET", "ADP", "CCONJ", "SCONJ", "CONJ", "PUNCT", "SPACE", "X", "SYM", "NUM"}
+    {"DET", "ADP", "CCONJ", "SCONJ", "CONJ", "PUNCT", "SPACE",
+     "X", "SYM", "NUM", "PRON"}
 )
 
-# VerbForm values handled as vocabulary entries, not conjugation exercises.
+# VerbForm values that represent non-finite forms (handled as vocabulary,
+# not conjugation exercises).
 _NON_FINITE_FORMS = frozenset({"Inf", "Part", "Ger"})
+
+# Spanish reflexive/clitic pronoun surface forms.  Used to detect whether
+# a verb is used reflexively or pronominally.
+_REFLEXIVE_CLITICS = frozenset({"me", "te", "se", "nos", "os"})
 
 _TENSE_DISPLAY: dict[str, str] = {
     "Pres": "present",
@@ -69,7 +90,7 @@ class SpanishPlugin:
     @cached_property
     def _nlp(self) -> Any:
         try:
-            import spacy  # noqa: PLC0415 (local import is intentional)
+            import spacy  # noqa: PLC0415
             return spacy.load("es_core_news_sm", disable=["ner"])
         except ImportError as exc:
             raise RuntimeError("spaCy is not installed.  Run: pip install spacy") from exc
@@ -125,10 +146,10 @@ class SpanishPlugin:
                 continue
             seen.add(lemma)
 
-            confidence, note = self._vocab_confidence(tok)
+            confidence, confidence_note = self._vocab_confidence(tok)
             data: dict[str, Any] = {"lemma": lemma, "pos": tok.pos_}
-            if note:
-                data["note"] = note
+            if confidence_note is not None:
+                data["confidence_note"] = confidence_note
 
             objects.append(LearnableObject(
                 id=f"es:vocab:{lemma}",
@@ -141,9 +162,9 @@ class SpanishPlugin:
 
     def _vocab_confidence(self, tok: Any) -> tuple[float, str | None]:
         if tok.pos_ == "PROPN":
-            return 0.60, "proper noun — may not be general vocabulary"
+            return 0.60, "proper noun — may not represent general vocabulary"
         if tok.is_oov:
-            return 0.50, "out-of-vocabulary for this model"
+            return 0.50, "word not found in model vocabulary — form may be incorrect"
         return 0.85, None
 
     # ------------------------------------------------------------------
@@ -169,21 +190,33 @@ class SpanishPlugin:
                 continue
             seen.add(oid)
 
+            construction   = _detect_construction(tok)
+            is_reflexive   = _has_reflexive_clitic(tok, tokens)
+            confidence     = self._conj_confidence(tok, feats)
+            confidence_note = _conj_confidence_note(feats, tok.is_oov)
+
+            lesson: dict[str, Any] = {
+                "lemma":          tok.lemma_.lower(),
+                "surface":        tok.text,
+                "tense":          feats["tense"],
+                "mood":           feats["mood"],
+                "person":         feats["person"],
+                "number":         feats["number"],
+                "morph_complete": _conj_is_complete(feats),
+                "construction":   construction,
+                "is_reflexive":   is_reflexive,
+            }
+            if "verb_form" in feats:
+                lesson["verb_form"] = feats["verb_form"]
+            if confidence_note is not None:
+                lesson["confidence_note"] = confidence_note
+
             objects.append(LearnableObject(
                 id=oid,
                 type="conjugation",
                 label=tok.text,
-                lesson_data={
-                    "lemma":          tok.lemma_.lower(),
-                    "surface":        tok.text,
-                    "tense":          feats["tense"],
-                    "mood":           feats["mood"],
-                    "person":         feats["person"],
-                    "number":         feats["number"],
-                    "morph_complete": _conj_is_complete(feats),
-                    **({"verb_form": feats["verb_form"]} if "verb_form" in feats else {}),
-                },
-                confidence=self._conj_confidence(tok, feats),
+                lesson_data=lesson,
+                confidence=confidence,
             ))
         return objects
 
@@ -226,9 +259,11 @@ class SpanishPlugin:
         """Find DET+NOUN and ADJ+NOUN gender/number agreement pairs.
 
         Primary signal: spaCy dependency parse (det, amod arcs into the noun).
-        Fallback: adjacency within one position for when the parse is wrong.
+        Fallback: adjacency within one position, excluding pairs separated
+        by a CCONJ (coordination) to avoid spurious objects like
+        "español e inglés" → agreement(español, inglés).
         Only emits objects when at least one feature (gender or number) can
-        be compared.
+        be confirmed.
         """
         objects: list[LearnableObject] = []
         seen_pairs: set[tuple[str, str, str]] = set()
@@ -262,28 +297,33 @@ class SpanishPlugin:
                     continue
                 seen_pairs.add(pair_key)
 
-                # Order label by surface position
                 label = (
                     f"{cand.text} {noun.text}"
                     if cand.i < noun.i
                     else f"{noun.text} {cand.text}"
                 )
-                oid = f"es:agreement:{cand.pos_.lower()}:{cand.lemma_.lower()}_{noun.lemma_.lower()}"
+                oid = (
+                    f"es:agreement:{cand.pos_.lower()}"
+                    f":{cand.lemma_.lower()}_{noun.lemma_.lower()}"
+                )
+                confidence = _agreement_confidence(gender_match, number_match)
+                confidence_note = _agreement_confidence_note(gender_match, number_match)
 
                 objects.append(LearnableObject(
                     id=oid,
                     type="agreement",
                     label=label,
                     lesson_data={
-                        "modifier":     cand.text,
-                        "modifier_pos": cand.pos_,
-                        "noun":         noun.text,
-                        "gender":       noun_gender or "unknown",
-                        "number":       noun_number or "unknown",
-                        "gender_match": gender_match,
-                        "number_match": number_match,
+                        "modifier":        cand.text,
+                        "modifier_pos":    cand.pos_,
+                        "noun":            noun.text,
+                        "gender":          noun_gender or "unknown",
+                        "number":          noun_number or "unknown",
+                        "gender_match":    gender_match,
+                        "number_match":    number_match,
+                        "confidence_note": confidence_note,
                     },
-                    confidence=_agreement_confidence(gender_match, number_match),
+                    confidence=confidence,
                 ))
         return objects
 
@@ -313,6 +353,65 @@ def _conj_is_complete(feats: dict[str, str]) -> bool:
     return all(feats.get(k) not in (None, "unknown") for k in ("tense", "mood", "person"))
 
 
+def _conj_confidence_note(feats: dict[str, str], is_oov: bool) -> str | None:
+    """Human-readable rationale for conjugation confidence.  None when nominal."""
+    unknown = [k for k in ("tense", "mood", "person") if feats.get(k) in (None, "unknown")]
+    parts: list[str] = []
+    if unknown:
+        parts.append(f"morphology unavailable for: {', '.join(unknown)}")
+    if is_oov:
+        parts.append("word not found in model vocabulary")
+    return "; ".join(parts) if parts else None
+
+
+def _detect_construction(tok: Any) -> str:
+    """Annotate the periphrastic construction for a conjugated verb token.
+
+    Returns one of:
+        "standalone"   — simple finite verb, not part of a periphrasis
+        "progressive"  — estar + gerund (estoy comiendo)
+        "perfect"      — haber + participle (he comido)
+        "passive"      — ser/estar + participle (fue escrito)
+        "near_future"  — ir a + infinitive (voy a estudiar)
+        "modal"        — modal AUX + infinitive (debo estudiar)
+        "copula"       — ser/estar as copula (soy médico)
+    """
+    if tok.pos_ != "AUX":
+        return "standalone"
+    if tok.dep_ == "cop":
+        return "copula"
+    if tok.dep_ == "ROOT":
+        # AUX as sentence root with no accompanying VERB (e.g. "Voy al mercado").
+        return "standalone"
+    if tok.dep_ == "aux":
+        head = tok.head
+        head_vf = _morph_first(head, "VerbForm")
+        if head_vf == "Ger":
+            return "progressive"
+        if head_vf == "Part":
+            return "perfect" if tok.lemma_.lower() == "haber" else "passive"
+        if head_vf == "Inf":
+            return "near_future" if tok.lemma_.lower() == "ir" else "modal"
+    return "standalone"
+
+
+def _has_reflexive_clitic(tok: Any, tokens: list[Any]) -> bool:
+    """True if *tok* has a reflexive or pronominal clitic as a dependent.
+
+    Checks for PRON dependents whose surface form is one of the reflexive
+    clitics (me/te/se/nos/os) and that are not the subject (nsubj).
+    This catches both explicit reflexive markers (dep=expl:pv) and
+    indirect-object clitics (dep=iobj) as in "me levanto".
+    """
+    return any(
+        t.pos_ == "PRON"
+        and t.head.i == tok.i
+        and t.text.lower() in _REFLEXIVE_CLITICS
+        and t.dep_ != "nsubj"
+        for t in tokens
+    )
+
+
 def _fallback_tense(tok: Any) -> str | None:
     """Heuristic tense from suffix when the model's morphology is empty."""
     w = tok.text.lower()
@@ -330,20 +429,22 @@ def _fallback_tense(tok: Any) -> str | None:
 def _find_modifiers(noun: Any, tokens: list[Any]) -> list[Any]:
     """Return DET and ADJ tokens that modify *noun*.
 
-    First tries dependency arcs (dep_ in {det, amod}), then falls back
-    to single-position adjacency so that parsing errors don't silently
-    drop all agreement data.
+    Primary: spaCy dependency arcs (dep_ in {det, amod}).
+    Fallback: single-position adjacency, with two filters:
+      - no sentence-boundary punctuation between candidate and noun
+      - no CCONJ between candidate and noun (avoids spurious pairs in
+        coordinations like "inglés y español")
     """
     dep_based: list[Any] = [
         t for t in tokens
         if t.pos_ in {"DET", "ADJ"}
         and t.head.i == noun.i
         and t.i != noun.i
+        and t.dep_ not in {"conj", "flat"}  # exclude coordinated elements
     ]
     if dep_based:
         return dep_based
 
-    # Adjacency fallback: up to 2 positions away, same clause (no PUNCT between)
     adjacent: list[Any] = []
     for t in tokens:
         if t.pos_ not in {"DET", "ADJ"} or t.i == noun.i:
@@ -351,9 +452,14 @@ def _find_modifiers(noun: Any, tokens: list[Any]) -> list[Any]:
         distance = abs(t.i - noun.i)
         if distance > 2:
             continue
-        # Skip if a sentence-boundary punctuation sits between them
         lo, hi = min(t.i, noun.i), max(t.i, noun.i)
-        if any(tokens[k].is_sent_start for k in range(lo + 1, hi)):
+        # Skip if any sentence-boundary token or CCONJ sits between them.
+        # CCONJ check prevents "español e inglés" from producing an agreement
+        # object where the two coordinated nouns are treated as modifier+noun.
+        if any(
+            tokens[k].is_sent_start or tokens[k].pos_ == "CCONJ"
+            for k in range(lo + 1, hi)
+        ):
             continue
         adjacent.append(t)
     return adjacent
@@ -368,6 +474,19 @@ def _agreement_confidence(
     if gender_match is True or number_match is True:
         return 0.72
     return 0.55
+
+
+def _agreement_confidence_note(
+    gender_match: bool | None,
+    number_match: bool | None,
+) -> str:
+    if gender_match is True and number_match is True:
+        return "gender and number both confirmed"
+    if gender_match is True:
+        return "gender confirmed; number unavailable"
+    if number_match is True:
+        return "number confirmed; gender unavailable"
+    return "agreement inferred from adjacency — morphology incomplete"
 
 
 def create_plugin() -> SpanishPlugin:
