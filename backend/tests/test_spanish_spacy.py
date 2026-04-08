@@ -1,7 +1,10 @@
-"""Tests for the spaCy-based Spanish plugin (backend/plugins/spanish.py).
+"""Tests for the spaCy-backed Spanish plugin (backend/plugins/spanish.py).
 
-The entire module is skipped when spaCy or es_core_news_sm is not installed,
-so the CI baseline (which runs without the model) stays green.
+The entire module is skipped when spaCy or es_core_news_sm is not installed
+so the CI baseline stays green.
+
+To enable these tests, install the model once:
+    python -m spacy download es_core_news_sm
 """
 from __future__ import annotations
 
@@ -10,9 +13,8 @@ import pytest
 from backend.schemas.parse import LearnableObject, SentenceResult
 
 
-# ---------------------------------------------------------------------------
-# Skip guard — keep this at module level so pytest skips collection entirely
-# ---------------------------------------------------------------------------
+# ── skip guard ────────────────────────────────────────────────────────────────
+# Module-level so pytest skips collection entirely, not just individual tests.
 
 def _spacy_available() -> bool:
     try:
@@ -25,13 +27,13 @@ def _spacy_available() -> bool:
 
 pytestmark = pytest.mark.skipif(
     not _spacy_available(),
-    reason="spaCy + es_core_news_sm not installed",
+    reason="spaCy + es_core_news_sm not installed; "
+           "run: python -m spacy download es_core_news_sm",
 )
 
 
-# ---------------------------------------------------------------------------
-# Fixtures
-# ---------------------------------------------------------------------------
+# ── fixtures ──────────────────────────────────────────────────────────────────
+
 
 @pytest.fixture(scope="module")
 def plugin():
@@ -39,21 +41,19 @@ def plugin():
     return SpanishPlugin()
 
 
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
+# ── helpers ───────────────────────────────────────────────────────────────────
+
 
 def objects_of(result: SentenceResult, kind: str) -> list[LearnableObject]:
     return [o for o in result.learnable_objects if o.type == kind]
 
 
-def all_confidences_valid(objects: list[LearnableObject]) -> bool:
+def confidences_valid(objects: list[LearnableObject]) -> bool:
     return all(0.0 < o.confidence <= 1.0 for o in objects if o.confidence is not None)
 
 
-# ---------------------------------------------------------------------------
-# Sentence splitting
-# ---------------------------------------------------------------------------
+# ── sentence splitting ────────────────────────────────────────────────────────
+
 
 class TestSentenceSplitting:
     def test_splits_multi_sentence_prose(self, plugin) -> None:
@@ -66,16 +66,19 @@ class TestSentenceSplitting:
         assert len(sents) == 1
         assert sents[0].strip() == "La casa es roja."
 
-    def test_empty_string_returns_no_sentences(self, plugin) -> None:
+    def test_empty_string_returns_empty_list(self, plugin) -> None:
         assert plugin.split_sentences("") == []
 
-    def test_whitespace_only_returns_no_sentences(self, plugin) -> None:
+    def test_whitespace_only_returns_empty_list(self, plugin) -> None:
         assert plugin.split_sentences("   \n  ") == []
 
+    def test_sentences_are_non_empty_strings(self, plugin) -> None:
+        sents = plugin.split_sentences("Vivo aquí. Trabajo allá.")
+        assert all(isinstance(s, str) and s.strip() for s in sents)
 
-# ---------------------------------------------------------------------------
-# Vocabulary
-# ---------------------------------------------------------------------------
+
+# ── vocabulary extraction ─────────────────────────────────────────────────────
+
 
 class TestVocabularyExtraction:
     def test_nouns_included(self, plugin) -> None:
@@ -87,14 +90,19 @@ class TestVocabularyExtraction:
     def test_determiners_excluded(self, plugin) -> None:
         result = plugin.analyze_sentence("La casa tiene un jardín.")
         lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
-        # "la", "un" are DET → must not appear as vocabulary
         assert "la" not in lemmas
         assert "un" not in lemmas
 
+    def test_prepositions_excluded(self, plugin) -> None:
+        result = plugin.analyze_sentence("Vivo en la ciudad de Madrid.")
+        lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
+        assert "en" not in lemmas
+        assert "de" not in lemmas
+
     def test_verb_lemma_included(self, plugin) -> None:
+        # spaCy lemmatises "hablo" → "hablar"
         result = plugin.analyze_sentence("Yo hablo español.")
         lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
-        # spaCy lemmatises "hablo" → "hablar"
         assert "hablar" in lemmas
 
     def test_no_duplicate_lemmas(self, plugin) -> None:
@@ -104,7 +112,7 @@ class TestVocabularyExtraction:
 
     def test_confidence_in_valid_range(self, plugin) -> None:
         result = plugin.analyze_sentence("Los estudiantes estudian mucho.")
-        assert all_confidences_valid(objects_of(result, "vocabulary"))
+        assert confidences_valid(objects_of(result, "vocabulary"))
 
     def test_lesson_data_has_required_keys(self, plugin) -> None:
         result = plugin.analyze_sentence("El gato duerme.")
@@ -112,10 +120,20 @@ class TestVocabularyExtraction:
             assert "lemma" in obj.lesson_data
             assert "pos" in obj.lesson_data
 
+    def test_short_tokens_excluded(self, plugin) -> None:
+        # Single-character tokens (e.g. "y" is CCONJ) should not appear.
+        result = plugin.analyze_sentence("Él y ella estudian.")
+        lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
+        assert all(len(l) >= 2 for l in lemmas)
 
-# ---------------------------------------------------------------------------
-# Conjugation
-# ---------------------------------------------------------------------------
+    def test_numbers_not_extracted(self, plugin) -> None:
+        result = plugin.analyze_sentence("Tengo 3 libros en casa.")
+        vocab_labels = [o.label for o in objects_of(result, "vocabulary")]
+        assert "3" not in vocab_labels
+
+
+# ── conjugation extraction ────────────────────────────────────────────────────
+
 
 class TestConjugationExtraction:
     def test_present_tense_detected(self, plugin) -> None:
@@ -129,21 +147,35 @@ class TestConjugationExtraction:
         result = plugin.analyze_sentence("Él comió las manzanas ayer.")
         conjs = objects_of(result, "conjugation")
         assert len(conjs) >= 1
+        # es_core_news_sm marks "comió" as preterite; gracefully accept unknown
         tenses = {o.lesson_data["tense"] for o in conjs}
-        # es_core_news_sm should tag "comió" as preterite
-        assert "preterite" in tenses or "unknown" in tenses
+        assert tenses & {"preterite", "unknown"}
 
-    def test_infinitives_not_conjugations(self, plugin) -> None:
-        # "hablar" is an infinitive — must not appear as a conjugation
+    def test_infinitives_not_tagged_as_conjugation(self, plugin) -> None:
         result = plugin.analyze_sentence("Quiero hablar contigo.")
-        conj_surfaces = {o.lesson_data["surface"].lower() for o in objects_of(result, "conjugation")}
+        conj_surfaces = {
+            o.lesson_data["surface"].lower() for o in objects_of(result, "conjugation")
+        }
         assert "hablar" not in conj_surfaces
+
+    def test_gerund_not_tagged_as_conjugation(self, plugin) -> None:
+        result = plugin.analyze_sentence("Estoy comiendo ahora.")
+        conj_surfaces = {
+            o.lesson_data["surface"].lower() for o in objects_of(result, "conjugation")
+        }
+        assert "comiendo" not in conj_surfaces
 
     def test_conjugation_has_required_keys(self, plugin) -> None:
         result = plugin.analyze_sentence("Nosotros comemos juntos.")
         for obj in objects_of(result, "conjugation"):
             for key in ("lemma", "surface", "tense", "mood", "person", "number"):
-                assert key in obj.lesson_data
+                assert key in obj.lesson_data, f"Missing key {key!r} in {obj.lesson_data}"
+
+    def test_morph_complete_flag_present(self, plugin) -> None:
+        result = plugin.analyze_sentence("Ella canta bien.")
+        for obj in objects_of(result, "conjugation"):
+            assert "morph_complete" in obj.lesson_data
+            assert isinstance(obj.lesson_data["morph_complete"], bool)
 
     def test_conjugation_id_is_stable(self, plugin) -> None:
         r1 = plugin.analyze_sentence("Yo hablo mucho.")
@@ -154,37 +186,31 @@ class TestConjugationExtraction:
 
     def test_confidence_in_valid_range(self, plugin) -> None:
         result = plugin.analyze_sentence("Tú corres rápido.")
-        assert all_confidences_valid(objects_of(result, "conjugation"))
+        assert confidences_valid(objects_of(result, "conjugation"))
 
-    def test_morph_complete_flag_present(self, plugin) -> None:
-        result = plugin.analyze_sentence("Ella canta bien.")
+    def test_all_conjugation_ids_start_with_es_conj(self, plugin) -> None:
+        result = plugin.analyze_sentence("Ellos caminan despacio.")
         for obj in objects_of(result, "conjugation"):
-            assert "morph_complete" in obj.lesson_data
-            assert isinstance(obj.lesson_data["morph_complete"], bool)
+            assert obj.id.startswith("es:conj:")
 
 
-# ---------------------------------------------------------------------------
-# Agreement
-# ---------------------------------------------------------------------------
+# ── agreement extraction ──────────────────────────────────────────────────────
+
 
 class TestAgreementExtraction:
     def test_det_noun_agreement_extracted(self, plugin) -> None:
         # "la casa" — feminine singular DET + NOUN
         result = plugin.analyze_sentence("La casa es bonita.")
-        agreements = objects_of(result, "agreement")
-        assert len(agreements) >= 1
+        assert len(objects_of(result, "agreement")) >= 1
 
     def test_adj_noun_agreement_extracted(self, plugin) -> None:
-        # "casa bonita" — feminine singular ADJ + NOUN
         result = plugin.analyze_sentence("Tengo una casa bonita.")
-        agreements = objects_of(result, "agreement")
-        assert len(agreements) >= 1
+        assert len(objects_of(result, "agreement")) >= 1
 
     def test_plural_agreement_extracted(self, plugin) -> None:
         result = plugin.analyze_sentence("Los libros viejos son interesantes.")
         agreements = objects_of(result, "agreement")
         assert len(agreements) >= 1
-        # At least one plural pair
         numbers = {o.lesson_data["number"] for o in agreements}
         assert "Plur" in numbers
 
@@ -192,26 +218,83 @@ class TestAgreementExtraction:
         result = plugin.analyze_sentence("El perro negro ladra.")
         for obj in objects_of(result, "agreement"):
             for key in ("modifier", "modifier_pos", "noun", "gender", "number"):
-                assert key in obj.lesson_data
+                assert key in obj.lesson_data, f"Missing key {key!r}"
 
     def test_agreement_confidence_in_valid_range(self, plugin) -> None:
         result = plugin.analyze_sentence("La niña pequeña juega.")
-        assert all_confidences_valid(objects_of(result, "agreement"))
+        assert confidences_valid(objects_of(result, "agreement"))
 
-    def test_agreement_id_uses_lemmas_not_surface(self, plugin) -> None:
-        # "las casas" and "la casa" should produce different IDs (different
-        # noun lemmas are the same, but number features differ) — specifically,
-        # the IDs must not change with inflection if lemmas are identical.
+    def test_agreement_id_stable_across_identical_sentences(self, plugin) -> None:
         r1 = plugin.analyze_sentence("La casa blanca es grande.")
         r2 = plugin.analyze_sentence("La casa blanca es grande.")
         ids1 = {o.id for o in objects_of(r1, "agreement")}
         ids2 = {o.id for o in objects_of(r2, "agreement")}
         assert ids1 == ids2
 
+    def test_agreement_id_uses_lemmas(self, plugin) -> None:
+        # IDs must be lemma-based ("es:agreement:det:el_libro"), not surface-based
+        result = plugin.analyze_sentence("Los libros nuevos.")
+        for obj in objects_of(result, "agreement"):
+            assert obj.id.startswith("es:agreement:")
+            # Surface forms like "los" should not appear verbatim in the ID;
+            # only the lemma (e.g. "el") should.
+            assert "los" not in obj.id   # "los" lemmatises to "el" or "lo"
 
-# ---------------------------------------------------------------------------
-# Lesson store
-# ---------------------------------------------------------------------------
+
+# ── confidence heuristics ─────────────────────────────────────────────────────
+
+
+class TestConfidenceHeuristics:
+    def test_proper_noun_has_lower_confidence_than_common_noun(self, plugin) -> None:
+        # The plugin hard-codes 0.60 for PROPN and 0.85 for in-vocab common words.
+        # We assert the constant directly so the test doesn't depend on whether
+        # other tokens happen to be OOV (confidence 0.50 < 0.60 would cause a
+        # naive max(common) < max(propn) comparison to flip unexpectedly).
+        result = plugin.analyze_sentence("El estudiante habla con María.")
+        vocab = objects_of(result, "vocabulary")
+        propn_confs = [o.confidence for o in vocab if o.lesson_data.get("pos") == "PROPN"]
+        assert propn_confs, "Expected at least one PROPN in the result"
+        assert all(c == 0.60 for c in propn_confs)
+
+    def test_complete_morph_gives_higher_conjugation_confidence(self, plugin) -> None:
+        result = plugin.analyze_sentence("Nosotros estudiamos juntos.")
+        for obj in objects_of(result, "conjugation"):
+            morph_complete = obj.lesson_data["morph_complete"]
+            if morph_complete:
+                assert obj.confidence >= 0.65
+            else:
+                assert obj.confidence is not None
+
+    def test_conjugation_confidence_capped_at_0_85(self, plugin) -> None:
+        result = plugin.analyze_sentence("Ella trabaja mucho.")
+        for obj in objects_of(result, "conjugation"):
+            assert obj.confidence is not None
+            assert obj.confidence <= 0.85
+
+    def test_agreement_full_match_has_highest_confidence(self, plugin) -> None:
+        # Both gender and number match → confidence 0.85
+        result = plugin.analyze_sentence("El perro negro corre.")
+        agreements = objects_of(result, "agreement")
+        full_match = [
+            o for o in agreements
+            if o.lesson_data.get("gender_match") is True
+            and o.lesson_data.get("number_match") is True
+        ]
+        for obj in full_match:
+            assert obj.confidence == 0.85
+
+    def test_agreement_partial_match_has_medium_confidence(self, plugin) -> None:
+        # One feature matches → confidence 0.72
+        result = plugin.analyze_sentence("La casa grande es bonita.")
+        for obj in objects_of(result, "agreement"):
+            g = obj.lesson_data.get("gender_match")
+            n = obj.lesson_data.get("number_match")
+            if (g is True) != (n is True):   # exactly one True
+                assert obj.confidence == 0.72
+
+
+# ── lesson store ──────────────────────────────────────────────────────────────
+
 
 class TestLessonStore:
     def test_all_objects_retrievable_by_id(self, plugin) -> None:
@@ -222,18 +305,17 @@ class TestLessonStore:
             assert stored.id == obj.id
 
     def test_missing_id_returns_none(self, plugin) -> None:
-        assert plugin.get_lesson("es:vocab:xyzzy_nonexistent") is None
+        assert plugin.get_lesson("es:vocab:_zzz_nonexistent_") is None
 
-    def test_lesson_persists_across_calls(self, plugin) -> None:
+    def test_lesson_persists_across_unrelated_calls(self, plugin) -> None:
         r = plugin.analyze_sentence("El médico habla despacio.")
-        first_obj = r.learnable_objects[0]
-        # Second independent call should still find the stored lesson
-        assert plugin.get_lesson(first_obj.id) is not None
+        first_id = r.learnable_objects[0].id
+        plugin.analyze_sentence("Los niños juegan afuera.")
+        assert plugin.get_lesson(first_id) is not None
 
 
-# ---------------------------------------------------------------------------
-# ID stability (cross-sentence)
-# ---------------------------------------------------------------------------
+# ── ID stability ──────────────────────────────────────────────────────────────
+
 
 class TestIdStability:
     def test_same_word_same_id_across_sentences(self, plugin) -> None:
@@ -241,11 +323,49 @@ class TestIdStability:
         r2 = plugin.analyze_sentence("No tengo el libro.")
         vocab1 = {o.id for o in objects_of(r1, "vocabulary")}
         vocab2 = {o.id for o in objects_of(r2, "vocabulary")}
-        # "libro" should appear in both with the same ID
-        libro_ids = vocab1 & vocab2
-        assert any("libro" in i for i in libro_ids)
+        shared = vocab1 & vocab2
+        assert any("libro" in i for i in shared)
 
-    def test_all_ids_prefixed_with_language(self, plugin) -> None:
+    def test_all_ids_prefixed_with_es(self, plugin) -> None:
         result = plugin.analyze_sentence("Mañana voy al mercado.")
         for obj in result.learnable_objects:
-            assert obj.id.startswith("es:")
+            assert obj.id.startswith("es:"), f"Bad prefix: {obj.id!r}"
+
+    def test_ids_are_non_empty_strings(self, plugin) -> None:
+        result = plugin.analyze_sentence("La profesora explica bien.")
+        for obj in result.learnable_objects:
+            assert isinstance(obj.id, str) and obj.id
+
+
+# ── edge cases ────────────────────────────────────────────────────────────────
+
+
+class TestEdgeCases:
+    def test_punctuation_only_returns_no_objects(self, plugin) -> None:
+        result = plugin.analyze_sentence("...")
+        assert result.learnable_objects == []
+
+    def test_sentence_text_preserved_verbatim(self, plugin) -> None:
+        sentence = "¡Qué bueno es esto!"
+        result = plugin.analyze_sentence(sentence)
+        assert result.text == sentence
+
+    def test_single_word_sentence_does_not_crash(self, plugin) -> None:
+        result = plugin.analyze_sentence("Hola.")
+        assert isinstance(result.learnable_objects, list)
+
+    def test_all_returned_types_are_known(self, plugin) -> None:
+        known_types = {"vocabulary", "conjugation", "agreement", "idiom", "grammar", "nuance"}
+        result = plugin.analyze_sentence(
+            "Los estudiantes inteligentes hablan bien el español."
+        )
+        for obj in result.learnable_objects:
+            assert obj.type in known_types, f"Unknown type: {obj.type!r}"
+
+    def test_repeated_analysis_of_same_sentence_is_idempotent(self, plugin) -> None:
+        sentence = "El gato negro duerme."
+        r1 = plugin.analyze_sentence(sentence)
+        r2 = plugin.analyze_sentence(sentence)
+        ids1 = {o.id for o in r1.learnable_objects}
+        ids2 = {o.id for o in r2.learnable_objects}
+        assert ids1 == ids2
