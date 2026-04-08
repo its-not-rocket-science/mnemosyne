@@ -1,0 +1,29 @@
+# Git
+.git
+.github
+
+# Python bytecode and caches
+__pycache__
+**/__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# Virtual environments
+.venv
+venv
+
+# Secrets — never bake into the image
+.env
+
+# Dev-only content that doesn't belong in the image
+prompts/
+docs/
+.claude/
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.swp
