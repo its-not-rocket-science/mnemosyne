@@ -369,3 +369,123 @@ class TestEdgeCases:
         ids1 = {o.id for o in r1.learnable_objects}
         ids2 = {o.id for o in r2.learnable_objects}
         assert ids1 == ids2
+
+
+# ── improved plugin features ──────────────────────────────────────────────────
+
+
+class TestPronounExclusion:
+    def test_reflexive_pronoun_not_in_vocabulary(self, plugin) -> None:
+        # "se" is a reflexive clitic — it should never appear as a vocabulary item.
+        result = plugin.analyze_sentence("Se llama María.")
+        lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
+        assert "se" not in lemmas
+        assert "yo" not in lemmas  # "me" lemmatises to "yo" in some models
+
+    def test_personal_pronoun_not_in_vocabulary(self, plugin) -> None:
+        result = plugin.analyze_sentence("Ella habla con él.")
+        lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
+        # PRON is in _SKIP_POS so neither "ella" nor "él" should appear
+        pron_lemmas = {"ella", "él", "ellos", "nosotros", "yo", "tú"}
+        assert not (lemmas & pron_lemmas), f"Unexpected PRON lemmas: {lemmas & pron_lemmas}"
+
+
+class TestReflexiveDetection:
+    def test_reflexive_verb_flagged(self, plugin) -> None:
+        # "me levanto" — levantarse with reflexive clitic "me"
+        result = plugin.analyze_sentence("Me levanto temprano.")
+        conjs = objects_of(result, "conjugation")
+        assert conjs, "Expected at least one conjugation"
+        reflexive_conjs = [o for o in conjs if o.lesson_data.get("is_reflexive") is True]
+        assert reflexive_conjs, "Expected levantarse to be flagged as reflexive"
+
+    def test_non_reflexive_verb_not_flagged(self, plugin) -> None:
+        result = plugin.analyze_sentence("Ella come una manzana.")
+        for obj in objects_of(result, "conjugation"):
+            assert obj.lesson_data["is_reflexive"] is False
+
+    def test_is_reflexive_key_always_present(self, plugin) -> None:
+        result = plugin.analyze_sentence("Nosotros estudiamos juntos.")
+        for obj in objects_of(result, "conjugation"):
+            assert "is_reflexive" in obj.lesson_data
+            assert isinstance(obj.lesson_data["is_reflexive"], bool)
+
+
+class TestConstructionAnnotation:
+    def test_simple_verb_is_standalone(self, plugin) -> None:
+        result = plugin.analyze_sentence("Ella trabaja mucho.")
+        for obj in objects_of(result, "conjugation"):
+            assert obj.lesson_data["construction"] == "standalone"
+
+    def test_estar_gerund_is_progressive(self, plugin) -> None:
+        # "estoy comiendo" — estar (AUX) + comiendo (gerund)
+        result = plugin.analyze_sentence("Estoy comiendo ahora.")
+        conjs = objects_of(result, "conjugation")
+        constructions = {o.lesson_data["construction"] for o in conjs}
+        assert "progressive" in constructions
+
+    def test_haber_participle_is_perfect(self, plugin) -> None:
+        # "he comido" — haber (AUX) + comido (participle)
+        result = plugin.analyze_sentence("He comido demasiado.")
+        conjs = objects_of(result, "conjugation")
+        constructions = {o.lesson_data["construction"] for o in conjs}
+        assert "perfect" in constructions
+
+    def test_construction_key_always_present(self, plugin) -> None:
+        result = plugin.analyze_sentence("Los niños juegan afuera.")
+        for obj in objects_of(result, "conjugation"):
+            assert "construction" in obj.lesson_data
+            assert isinstance(obj.lesson_data["construction"], str)
+
+    def test_copula_detected(self, plugin) -> None:
+        # "es" in "La casa es grande" — ser as copula
+        result = plugin.analyze_sentence("La casa es grande.")
+        conjs = objects_of(result, "conjugation")
+        constructions = {o.lesson_data["construction"] for o in conjs}
+        assert "copula" in constructions
+
+
+class TestCoordinationAgreement:
+    def test_coordinated_nouns_no_spurious_agreement(self, plugin) -> None:
+        # "inglés y español" — "español" is conj-dep of "inglés"; should not
+        # generate an agreement object between them.
+        result = plugin.analyze_sentence("Ella habla inglés y español.")
+        agreements = objects_of(result, "agreement")
+        pair_nouns = {
+            frozenset([o.lesson_data["modifier"].lower(), o.lesson_data["noun"].lower()])
+            for o in agreements
+        }
+        assert frozenset(["inglés", "español"]) not in pair_nouns
+
+    def test_genuine_det_noun_agreement_still_extracted(self, plugin) -> None:
+        # Coordination fix must not suppress valid DET+NOUN pairs.
+        result = plugin.analyze_sentence("Los libros y las revistas son nuevos.")
+        assert len(objects_of(result, "agreement")) >= 1
+
+
+class TestConfidenceNote:
+    def test_proper_noun_has_confidence_note(self, plugin) -> None:
+        result = plugin.analyze_sentence("Viajo a Madrid mañana.")
+        vocab = objects_of(result, "vocabulary")
+        propn_objs = [o for o in vocab if o.lesson_data.get("pos") == "PROPN"]
+        assert propn_objs, "Expected at least one PROPN vocabulary item"
+        for obj in propn_objs:
+            assert "confidence_note" in obj.lesson_data
+            assert isinstance(obj.lesson_data["confidence_note"], str)
+
+    def test_nominal_vocab_has_no_confidence_note(self, plugin) -> None:
+        # Common in-vocabulary nouns should have no confidence_note key
+        result = plugin.analyze_sentence("El perro corre rápido.")
+        vocab = objects_of(result, "vocabulary")
+        common = [
+            o for o in vocab
+            if o.lesson_data.get("pos") not in ("PROPN",) and not o.confidence == 0.50
+        ]
+        for obj in common:
+            assert "confidence_note" not in obj.lesson_data
+
+    def test_agreement_always_has_confidence_note(self, plugin) -> None:
+        result = plugin.analyze_sentence("La casa blanca es bonita.")
+        for obj in objects_of(result, "agreement"):
+            assert "confidence_note" in obj.lesson_data
+            assert isinstance(obj.lesson_data["confidence_note"], str)
