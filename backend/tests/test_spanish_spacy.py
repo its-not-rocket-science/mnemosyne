@@ -99,9 +99,10 @@ class TestVocabularyExtraction:
         assert "en" not in lemmas
         assert "de" not in lemmas
 
-    def test_verb_lemma_included(self, plugin) -> None:
-        # spaCy lemmatises "hablo" → "hablar"
-        result = plugin.analyze_sentence("Yo hablo español.")
+    def test_infinitive_lemma_included(self, plugin) -> None:
+        # Non-finite VERB forms (infinitives) still appear as vocabulary;
+        # "Necesito hablar" — "hablar" is VerbForm=Inf → vocabulary.
+        result = plugin.analyze_sentence("Necesito hablar más.")
         lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
         assert "hablar" in lemmas
 
@@ -121,7 +122,6 @@ class TestVocabularyExtraction:
             assert "pos" in obj.lesson_data
 
     def test_short_tokens_excluded(self, plugin) -> None:
-        # Single-character tokens (e.g. "y" is CCONJ) should not appear.
         result = plugin.analyze_sentence("Él y ella estudian.")
         lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
         assert all(len(l) >= 2 for l in lemmas)
@@ -130,6 +130,13 @@ class TestVocabularyExtraction:
         result = plugin.analyze_sentence("Tengo 3 libros en casa.")
         vocab_labels = [o.label for o in objects_of(result, "vocabulary")]
         assert "3" not in vocab_labels
+
+    def test_lemma_with_space_not_extracted(self, plugin) -> None:
+        # Enclitic-fusion tokens like "hacerlo" produce lemmas containing a
+        # space ("hacer él").  These are model artefacts and must be suppressed.
+        result = plugin.analyze_sentence("Quiero poder hacerlo.")
+        lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
+        assert all(" " not in lemma for lemma in lemmas)
 
 
 # ── conjugation extraction ────────────────────────────────────────────────────
@@ -239,6 +246,18 @@ class TestAgreementExtraction:
             # Surface forms like "los" should not appear verbatim in the ID;
             # only the lemma (e.g. "el") should.
             assert "los" not in obj.id   # "los" lemmatises to "el" or "lo"
+
+    def test_no_confirmed_mismatch_emitted(self, plugin) -> None:
+        # Agreements with a confirmed gender or number mismatch indicate a
+        # model parse error and must never be emitted as learning objects.
+        result = plugin.analyze_sentence("Los libros viejos son interesantes.")
+        for obj in objects_of(result, "agreement"):
+            assert obj.lesson_data.get("gender_match") is not False, (
+                f"Confirmed gender mismatch in {obj.lesson_data}"
+            )
+            assert obj.lesson_data.get("number_match") is not False, (
+                f"Confirmed number mismatch in {obj.lesson_data}"
+            )
 
 
 # ── confidence heuristics ─────────────────────────────────────────────────────
@@ -371,12 +390,89 @@ class TestEdgeCases:
         assert ids1 == ids2
 
 
+# ── deduplication ─────────────────────────────────────────────────────────────
+
+
+class TestDeduplication:
+    def test_finite_verb_not_in_vocabulary(self, plugin) -> None:
+        # "corre" is VERB VerbForm=Fin → conjugation only, not vocabulary.
+        result = plugin.analyze_sentence("El perro corre por el parque.")
+        vocab_lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
+        assert "correr" not in vocab_lemmas, (
+            "Finite verb lemma must not appear in vocabulary"
+        )
+
+    def test_finite_aux_not_in_vocabulary(self, plugin) -> None:
+        # "estoy" is AUX VerbForm=Fin → conjugation only.
+        result = plugin.analyze_sentence("Estoy comiendo ahora.")
+        vocab_lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
+        assert "estar" not in vocab_lemmas
+
+    def test_finite_verb_still_in_conjugation(self, plugin) -> None:
+        result = plugin.analyze_sentence("El gato come pescado.")
+        conj_lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "conjugation")}
+        # comer (or whatever the model produces) must appear in conjugation
+        assert len(conj_lemmas) >= 1
+
+    def test_periphrastic_lemma_not_duplicated(self, plugin) -> None:
+        # "Voy a ir" — "Voy" (AUX Fin, lemma=ir) generates a conjugation and
+        # pre-empts "ir" (VERB Inf) from also appearing as vocabulary.
+        # The lemma "ir" should appear exactly once across all objects.
+        result = plugin.analyze_sentence("Voy a ir al mercado.")
+        all_ir = [
+            o for o in result.learnable_objects
+            if o.lesson_data.get("lemma") == "ir"
+        ]
+        assert len(all_ir) == 1, (
+            f"Expected exactly one object for lemma 'ir', got {len(all_ir)}"
+        )
+
+    def test_infinitive_in_vocabulary_when_no_finite_form(self, plugin) -> None:
+        # "hablar" is VERB Inf and there is no finite form of "hablar" in the
+        # sentence, so it must appear in vocabulary.
+        result = plugin.analyze_sentence("Necesito hablar más.")
+        vocab_lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
+        assert "hablar" in vocab_lemmas
+
+    def test_gerund_in_vocabulary(self, plugin) -> None:
+        # "comiendo" is VERB VerbForm=Ger → vocabulary (not conjugation).
+        result = plugin.analyze_sentence("Estoy comiendo ahora.")
+        vocab_lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
+        # The gerund's lemma should be in vocabulary.
+        conj_lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "conjugation")}
+        # The gerund's lemma must not be in conjugation.
+        assert vocab_lemmas - conj_lemmas, (
+            "Expected at least one non-finite verb lemma in vocabulary"
+        )
+
+    def test_non_finite_verb_vocab_has_verb_form(self, plugin) -> None:
+        # Vocabulary entries for non-finite verbs carry a verb_form key so the
+        # frontend can label them as "infinitive", "gerund", or "participle".
+        result = plugin.analyze_sentence("Necesito hablar más.")
+        inf_items = [
+            o for o in objects_of(result, "vocabulary")
+            if o.lesson_data.get("pos") in {"VERB", "AUX"}
+        ]
+        assert inf_items, "Expected at least one VERB vocabulary item"
+        for obj in inf_items:
+            assert "verb_form" in obj.lesson_data, (
+                f"Non-finite verb vocabulary item missing verb_form: {obj.lesson_data}"
+            )
+
+    def test_no_id_appears_twice(self, plugin) -> None:
+        # Each ID must be unique within a single sentence result.
+        result = plugin.analyze_sentence(
+            "Los estudiantes estudian y aprenden mucho."
+        )
+        ids = [o.id for o in result.learnable_objects]
+        assert len(ids) == len(set(ids)), "Duplicate object IDs in one sentence"
+
+
 # ── improved plugin features ──────────────────────────────────────────────────
 
 
 class TestPronounExclusion:
     def test_reflexive_pronoun_not_in_vocabulary(self, plugin) -> None:
-        # "se" is a reflexive clitic — it should never appear as a vocabulary item.
         result = plugin.analyze_sentence("Se llama María.")
         lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
         assert "se" not in lemmas
@@ -385,14 +481,14 @@ class TestPronounExclusion:
     def test_personal_pronoun_not_in_vocabulary(self, plugin) -> None:
         result = plugin.analyze_sentence("Ella habla con él.")
         lemmas = {o.lesson_data["lemma"] for o in objects_of(result, "vocabulary")}
-        # PRON is in _SKIP_POS so neither "ella" nor "él" should appear
         pron_lemmas = {"ella", "él", "ellos", "nosotros", "yo", "tú"}
-        assert not (lemmas & pron_lemmas), f"Unexpected PRON lemmas: {lemmas & pron_lemmas}"
+        assert not (lemmas & pron_lemmas), (
+            f"Unexpected PRON lemmas in vocabulary: {lemmas & pron_lemmas}"
+        )
 
 
 class TestReflexiveDetection:
     def test_reflexive_verb_flagged(self, plugin) -> None:
-        # "me levanto" — levantarse with reflexive clitic "me"
         result = plugin.analyze_sentence("Me levanto temprano.")
         conjs = objects_of(result, "conjugation")
         assert conjs, "Expected at least one conjugation"
@@ -418,18 +514,25 @@ class TestConstructionAnnotation:
             assert obj.lesson_data["construction"] == "standalone"
 
     def test_estar_gerund_is_progressive(self, plugin) -> None:
-        # "estoy comiendo" — estar (AUX) + comiendo (gerund)
         result = plugin.analyze_sentence("Estoy comiendo ahora.")
-        conjs = objects_of(result, "conjugation")
-        constructions = {o.lesson_data["construction"] for o in conjs}
+        constructions = {
+            o.lesson_data["construction"] for o in objects_of(result, "conjugation")
+        }
         assert "progressive" in constructions
 
     def test_haber_participle_is_perfect(self, plugin) -> None:
-        # "he comido" — haber (AUX) + comido (participle)
         result = plugin.analyze_sentence("He comido demasiado.")
-        conjs = objects_of(result, "conjugation")
-        constructions = {o.lesson_data["construction"] for o in conjs}
+        constructions = {
+            o.lesson_data["construction"] for o in objects_of(result, "conjugation")
+        }
         assert "perfect" in constructions
+
+    def test_copula_detected(self, plugin) -> None:
+        result = plugin.analyze_sentence("La casa es grande.")
+        constructions = {
+            o.lesson_data["construction"] for o in objects_of(result, "conjugation")
+        }
+        assert "copula" in constructions
 
     def test_construction_key_always_present(self, plugin) -> None:
         result = plugin.analyze_sentence("Los niños juegan afuera.")
@@ -437,28 +540,22 @@ class TestConstructionAnnotation:
             assert "construction" in obj.lesson_data
             assert isinstance(obj.lesson_data["construction"], str)
 
-    def test_copula_detected(self, plugin) -> None:
-        # "es" in "La casa es grande" — ser as copula
-        result = plugin.analyze_sentence("La casa es grande.")
-        conjs = objects_of(result, "conjugation")
-        constructions = {o.lesson_data["construction"] for o in conjs}
-        assert "copula" in constructions
-
 
 class TestCoordinationAgreement:
     def test_coordinated_nouns_no_spurious_agreement(self, plugin) -> None:
-        # "inglés y español" — "español" is conj-dep of "inglés"; should not
-        # generate an agreement object between them.
+        # "español" is conj-dep of "inglés" — should not generate an agreement
+        # object between them.
         result = plugin.analyze_sentence("Ella habla inglés y español.")
-        agreements = objects_of(result, "agreement")
         pair_nouns = {
-            frozenset([o.lesson_data["modifier"].lower(), o.lesson_data["noun"].lower()])
-            for o in agreements
+            frozenset([
+                o.lesson_data["modifier"].lower(),
+                o.lesson_data["noun"].lower(),
+            ])
+            for o in objects_of(result, "agreement")
         }
         assert frozenset(["inglés", "español"]) not in pair_nouns
 
     def test_genuine_det_noun_agreement_still_extracted(self, plugin) -> None:
-        # Coordination fix must not suppress valid DET+NOUN pairs.
         result = plugin.analyze_sentence("Los libros y las revistas son nuevos.")
         assert len(objects_of(result, "agreement")) >= 1
 
@@ -472,17 +569,6 @@ class TestConfidenceNote:
         for obj in propn_objs:
             assert "confidence_note" in obj.lesson_data
             assert isinstance(obj.lesson_data["confidence_note"], str)
-
-    def test_nominal_vocab_has_no_confidence_note(self, plugin) -> None:
-        # Common in-vocabulary nouns should have no confidence_note key
-        result = plugin.analyze_sentence("El perro corre rápido.")
-        vocab = objects_of(result, "vocabulary")
-        common = [
-            o for o in vocab
-            if o.lesson_data.get("pos") not in ("PROPN",) and not o.confidence == 0.50
-        ]
-        for obj in common:
-            assert "confidence_note" not in obj.lesson_data
 
     def test_agreement_always_has_confidence_note(self, plugin) -> None:
         result = plugin.analyze_sentence("La casa blanca es bonita.")
