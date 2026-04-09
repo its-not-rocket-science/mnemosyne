@@ -13,16 +13,17 @@ from __future__ import annotations
 
 import pytest
 
+from backend.parsing.canonical import canonical_object_id
 from backend.parsing.plugin_loader import PluginRegistry, load_plugins
 from backend.plugins.spanish_stub import SpanishStubPlugin
-from backend.schemas.parse import LearnableObject, SentenceResult
+from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 
 # ── helpers ───────────────────────────────────────────────────────────────────
 
 
-def objects_of(result: SentenceResult, kind: str) -> list[LearnableObject]:
-    return [o for o in result.learnable_objects if o.type == kind]
+def objects_of(result: CandidateSentenceResult, kind: str) -> list[CandidateObject]:
+    return [o for o in result.candidates if o.type == kind]
 
 
 # ── plugin registry ───────────────────────────────────────────────────────────
@@ -41,6 +42,24 @@ class TestPluginRegistry:
         registry = load_plugins()
         assert "en" in registry.all()
 
+    def test_fr_plugin_registered(self) -> None:
+        registry = load_plugins()
+        assert "fr" in registry.all()
+
+    def test_supported_languages_includes_all_active(self) -> None:
+        registry = load_plugins()
+        langs = registry.supported_languages()
+        assert "es" in langs
+        assert "en" in langs
+        assert "fr" in langs
+
+    def test_supported_languages_has_expected_fields(self) -> None:
+        registry = load_plugins()
+        for code, meta in registry.supported_languages().items():
+            assert meta["code"] == code
+            assert "display_name" in meta
+            assert meta["direction"] in ("ltr", "rtl")
+
     def test_get_returns_correct_plugin(self) -> None:
         registry = load_plugins()
         plugin = registry.get("es")
@@ -53,8 +72,8 @@ class TestPluginRegistry:
 
     def test_get_unknown_language_raises_key_error(self) -> None:
         registry = load_plugins()
-        with pytest.raises(KeyError, match="fr"):
-            registry.get("fr")
+        with pytest.raises(KeyError, match="zh"):
+            registry.get("zh")
 
     def test_all_returns_copy(self) -> None:
         registry = load_plugins()
@@ -91,26 +110,28 @@ class TestStubProtocol:
         assert isinstance(result, list)
         assert all(isinstance(s, str) for s in result)
 
-    def test_analyze_sentence_returns_sentence_result(self) -> None:
+    def test_analyze_sentence_returns_candidate_result(self) -> None:
         result = self.plugin.analyze_sentence("La casa roja habla.")
-        assert isinstance(result, SentenceResult)
+        assert isinstance(result, CandidateSentenceResult)
         assert result.text == "La casa roja habla."
-        assert isinstance(result.learnable_objects, list)
+        assert isinstance(result.candidates, list)
 
-    def test_get_lesson_returns_learnable_object_or_none(self) -> None:
+    def test_get_lesson_returns_none_without_parse_route(self) -> None:
+        # lesson_store is only populated by the parse route; direct analyze_sentence
+        # calls do not populate it.
         result = self.plugin.analyze_sentence("Hola.")
-        for obj in result.learnable_objects:
-            stored = self.plugin.get_lesson(obj.id)
-            assert stored is None or isinstance(stored, LearnableObject)
+        for obj in result.candidates:
+            obj_id = canonical_object_id("es", obj.type, obj.canonical_form)
+            assert self.plugin.get_lesson(obj_id) is None
 
-    def test_all_ids_start_with_language_prefix(self) -> None:
+    def test_canonical_forms_are_non_empty(self) -> None:
         result = self.plugin.analyze_sentence("El gato duerme bien.")
-        for obj in result.learnable_objects:
-            assert obj.id.startswith("es:"), f"Bad id prefix: {obj.id!r}"
+        for obj in result.candidates:
+            assert obj.canonical_form, f"Empty canonical_form on {obj!r}"
 
     def test_confidence_none_or_float_in_range(self) -> None:
         result = self.plugin.analyze_sentence("Los niños juegan mucho.")
-        for obj in result.learnable_objects:
+        for obj in result.candidates:
             if obj.confidence is not None:
                 assert 0.0 < obj.confidence <= 1.0, (
                     f"Confidence out of range: {obj.confidence}"
@@ -128,27 +149,25 @@ class TestStubVocabulary:
         # "sol" and "pan" end in consonants → NOUN → vocabulary.
         # Words ending in "a"/"o"/"e" are tagged as VERB by the stub heuristic.
         result = self.plugin.analyze_sentence("El sol brilla hoy.")
-        assert any(o.type == "vocabulary" for o in result.learnable_objects)
+        assert any(o.type == "vocabulary" for o in result.candidates)
 
     def test_vocabulary_has_lemma(self) -> None:
         result = self.plugin.analyze_sentence("El libro.")
         for obj in objects_of(result, "vocabulary"):
             assert "lemma" in obj.lesson_data
 
-    def test_no_duplicate_ids(self) -> None:
+    def test_no_duplicate_canonical_forms(self) -> None:
         result = self.plugin.analyze_sentence("El libro y el libro viejo.")
-        ids = [o.id for o in result.learnable_objects]
-        assert len(ids) == len(set(ids))
+        forms = [o.canonical_form for o in result.candidates]
+        assert len(forms) == len(set(forms))
 
-    def test_same_word_same_id_across_sentences(self) -> None:
+    def test_same_word_same_canonical_form_across_sentences(self) -> None:
         # "pan" ends in a consonant → NOUN → vocabulary in both sentences.
-        # "libro" ends in "o" and would be tagged as VERB by the stub.
         r1 = self.plugin.analyze_sentence("El pan es fresco.")
         r2 = self.plugin.analyze_sentence("No hay pan hoy.")
-        ids1 = {o.id for o in objects_of(r1, "vocabulary")}
-        ids2 = {o.id for o in objects_of(r2, "vocabulary")}
-        shared = ids1 & ids2
-        assert any("pan" in i for i in shared)
+        forms1 = {o.canonical_form for o in objects_of(r1, "vocabulary")}
+        forms2 = {o.canonical_form for o in objects_of(r2, "vocabulary")}
+        assert "pan" in forms1 & forms2
 
 
 class TestStubConjugation:
@@ -158,7 +177,7 @@ class TestStubConjugation:
     def test_finite_verb_tagged_as_conjugation(self) -> None:
         # "hablo" ends in "-o" (first person singular present)
         result = self.plugin.analyze_sentence("Yo hablo español.")
-        assert any(o.type == "conjugation" for o in result.learnable_objects)
+        assert any(o.type == "conjugation" for o in result.candidates)
 
     def test_conjugation_has_stem_and_form(self) -> None:
         result = self.plugin.analyze_sentence("Ella habla mucho.")
@@ -166,12 +185,12 @@ class TestStubConjugation:
             assert "stem" in obj.lesson_data
             assert "form" in obj.lesson_data
 
-    def test_conjugation_id_stable_across_calls(self) -> None:
+    def test_conjugation_canonical_form_stable_across_calls(self) -> None:
         r1 = self.plugin.analyze_sentence("Yo como pizza.")
         r2 = self.plugin.analyze_sentence("Yo como pizza.")
-        ids1 = {o.id for o in objects_of(r1, "conjugation")}
-        ids2 = {o.id for o in objects_of(r2, "conjugation")}
-        assert ids1 == ids2
+        forms1 = {o.canonical_form for o in objects_of(r1, "conjugation")}
+        forms2 = {o.canonical_form for o in objects_of(r2, "conjugation")}
+        assert forms1 == forms2
 
 
 class TestStubAgreement:
@@ -182,7 +201,7 @@ class TestStubAgreement:
         # The stub only produces ADJ for words ending in "os" (stem >= 3).
         # "Los" → NOUN (stem too short), "libros" → ADJ, so libros follows a NOUN.
         result = self.plugin.analyze_sentence("Los libros rojos.")
-        assert any(o.type == "agreement" for o in result.learnable_objects)
+        assert any(o.type == "agreement" for o in result.candidates)
 
     def test_agreement_has_noun_and_adjective(self) -> None:
         result = self.plugin.analyze_sentence("El perro negro ladra.")
@@ -195,17 +214,26 @@ class TestStubLessonStore:
     def setup_method(self) -> None:
         self.plugin = SpanishStubPlugin()
 
-    def test_all_objects_retrievable(self) -> None:
-        result = self.plugin.analyze_sentence("El médico habla despacio.")
-        for obj in result.learnable_objects:
-            assert self.plugin.get_lesson(obj.id) is not None
-
     def test_missing_id_returns_none(self) -> None:
-        assert self.plugin.get_lesson("es:vocab:_zzz_not_real_") is None
+        assert self.plugin.get_lesson("nonexistent-uuid") is None
 
-    def test_lesson_persists_across_analyze_calls(self) -> None:
-        result = self.plugin.analyze_sentence("La ciudad bonita.")
-        first_id = result.learnable_objects[0].id
-        # Second unrelated call should not evict the first object
-        self.plugin.analyze_sentence("El sol brilla.")
-        assert self.plugin.get_lesson(first_id) is not None
+    def test_lesson_store_accepts_and_returns_candidate_object(self) -> None:
+        obj_id = canonical_object_id("es", "vocabulary", "médico")
+        cand = CandidateObject(
+            canonical_form="médico",
+            type="vocabulary",
+            label="médico",
+            lesson_data={"lemma": "médico"},
+        )
+        self.plugin.lesson_store[obj_id] = cand
+        stored = self.plugin.get_lesson(obj_id)
+        assert stored is not None
+        assert stored.canonical_form == "médico"
+
+    def test_lesson_store_independent_across_instances(self) -> None:
+        plugin2 = SpanishStubPlugin()
+        obj_id = canonical_object_id("es", "vocabulary", "sol")
+        self.plugin.lesson_store[obj_id] = CandidateObject(
+            canonical_form="sol", type="vocabulary", label="sol", lesson_data={}
+        )
+        assert plugin2.get_lesson(obj_id) is None

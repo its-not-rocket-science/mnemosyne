@@ -14,7 +14,7 @@ from __future__ import annotations
 import re
 
 from backend.parsing.plugin_interface import Token
-from backend.schemas.parse import LearnableObject, SentenceResult
+from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 # ---------------------------------------------------------------------------
 # Regex helpers
@@ -70,11 +70,14 @@ class SpanishStubPlugin:
     direction = "ltr"
 
     def __init__(self) -> None:
-        self._lesson_store: dict[str, LearnableObject] = {}
+        self.lesson_store: dict[str, CandidateObject] = {}
 
     # ------------------------------------------------------------------
     # LanguagePlugin protocol
     # ------------------------------------------------------------------
+
+    def analyze_text(self, text: str) -> list[CandidateSentenceResult]:
+        return [self.analyze_sentence(s) for s in self.split_sentences(text)]
 
     def split_sentences(self, text: str) -> list[str]:
         return [
@@ -83,15 +86,13 @@ class SpanishStubPlugin:
             if m.group(0).strip()
         ]
 
-    def analyze_sentence(self, sentence: str) -> SentenceResult:
+    def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
         tokens = self._tokenize(sentence)
-        objects = self._extract(tokens)
-        for obj in objects:
-            self._lesson_store[obj.id] = obj
-        return SentenceResult(text=sentence, learnable_objects=objects)
+        candidates = self._extract(tokens)
+        return CandidateSentenceResult(text=sentence, candidates=candidates)
 
-    def get_lesson(self, object_id: str) -> LearnableObject | None:
-        return self._lesson_store.get(object_id)
+    def get_lesson(self, object_id: str) -> CandidateObject | None:
+        return self.lesson_store.get(object_id)
 
     # ------------------------------------------------------------------
     # Internals
@@ -118,12 +119,12 @@ class SpanishStubPlugin:
             tokens.append(Token(text=word, lemma=lower, pos=pos, morph=morph))
         return tokens
 
-    def _extract(self, tokens: list[Token]) -> list[LearnableObject]:
+    def _extract(self, tokens: list[Token]) -> list[CandidateObject]:
         seen: set[str] = set()
-        objects: list[LearnableObject] = []
+        candidates: list[CandidateObject] = []
 
         for i, token in enumerate(tokens):
-            obj: LearnableObject | None = None
+            obj: CandidateObject | None = None
 
             if token.pos == "VERB":
                 obj = self._conjugation(token)
@@ -132,39 +133,36 @@ class SpanishStubPlugin:
             else:
                 obj = self._vocabulary(token)
 
-            if obj is not None and obj.id not in seen:
-                seen.add(obj.id)
-                objects.append(obj)
+            if obj is not None and obj.canonical_form not in seen:
+                seen.add(obj.canonical_form)
+                candidates.append(obj)
 
-        return objects
+        return candidates
 
     # -- object factories --------------------------------------------------
 
-    def _vocabulary(self, token: Token) -> LearnableObject:
-        oid = f"es:vocab:{token.lemma}"
-        return LearnableObject(
-            id=oid,
+    def _vocabulary(self, token: Token) -> CandidateObject:
+        return CandidateObject(
+            canonical_form=token.lemma,
             type="vocabulary",
             label=token.text,
             lesson_data={"lemma": token.lemma},
             confidence=0.5,
         )
 
-    def _conjugation(self, token: Token) -> LearnableObject:
+    def _conjugation(self, token: Token) -> CandidateObject:
         stem = token.morph.get("Stem", token.lemma)
-        oid = f"es:conj:{token.lemma}"
-        return LearnableObject(
-            id=oid,
+        return CandidateObject(
+            canonical_form=token.lemma,
             type="conjugation",
             label=token.text,
             lesson_data={"stem": stem, "form": token.text.lower()},
             confidence=0.55,
         )
 
-    def _agreement(self, noun: Token, adj: Token) -> LearnableObject:
-        oid = f"es:agree:{noun.lemma}+{adj.lemma}"
-        return LearnableObject(
-            id=oid,
+    def _agreement(self, noun: Token, adj: Token) -> CandidateObject:
+        return CandidateObject(
+            canonical_form=f"{noun.lemma}+{adj.lemma}",
             type="agreement",
             label=f"{noun.text} {adj.text}",
             lesson_data={"noun": noun.text, "adjective": adj.text},

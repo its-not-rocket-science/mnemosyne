@@ -150,6 +150,7 @@ class UserKnowledgeRow(Base):
 
     user_id: Mapped[str] = mapped_column(String(50), primary_key=True)
     object_id: Mapped[str] = mapped_column(String, primary_key=True)
+    language: Mapped[str | None] = mapped_column(String(10), nullable=True)
     fsrs_state: Mapped[dict | None] = mapped_column(JSON, nullable=True)
     mastery_score: Mapped[float] = mapped_column(Float, default=0.0)
     last_seen: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)

@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from backend.api.dependencies import get_plugin_registry
 from backend.api.routes.dashboard import router as dashboard_router
+from backend.api.routes.languages import router as languages_router
 from backend.api.routes.lesson import router as lesson_router
 from backend.api.routes.parse import router as parse_router
 from backend.api.routes.ready import router as ready_router
@@ -40,6 +41,7 @@ def _log_config(s: Settings) -> None:
     logger.info("│  redis_url     : %s", s.redis_url)
     logger.info("│  cors_origins  : %s", s.cors_origins)
     logger.info("│  plugin_package: %s", s.plugin_package)
+    logger.info("│  enabled_langs : %s", s.enabled_languages or "all")
     logger.info("└──────────────────────────────────────────────────────")
 
 
@@ -104,6 +106,7 @@ app.include_router(parse_router)
 app.include_router(lesson_router)
 app.include_router(review_router)
 app.include_router(dashboard_router)
+app.include_router(languages_router)
 app.include_router(ready_router)
 
 

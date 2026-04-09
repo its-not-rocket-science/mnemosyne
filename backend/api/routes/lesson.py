@@ -47,9 +47,9 @@ async def get_lesson(
         raise HTTPException(status_code=404, detail="Lesson object not found")
 
     return build_lesson(
-        object_id=lo.id,
+        object_id=object_id,
         obj_type=lo.type,
-        canonical_form=lo.id,   # plugin fallback: no canonical_form field on LearnableObject
+        canonical_form=lo.canonical_form,
         display_label=lo.label,
         lesson_data=lo.lesson_data or {},
     )

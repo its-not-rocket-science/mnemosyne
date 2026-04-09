@@ -9,6 +9,7 @@ from backend.srs.knowledge import KnowledgeStatus
 
 class KnowledgeObject(BaseModel):
     object_id: str
+    language: str | None = None
     status: KnowledgeStatus
     mastery_score: float
     total_reviews: int

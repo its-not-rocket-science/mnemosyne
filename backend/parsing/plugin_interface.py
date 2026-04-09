@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Protocol
 
-from backend.schemas.parse import CandidateSentenceResult, LearnableObject
+from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 
 @dataclass(slots=True)
@@ -20,8 +20,9 @@ class LanguagePlugin(Protocol):
     direction: str
 
     # Populated by the parse route after UUID resolution; used by get_lesson()
-    # as a fallback when the DB is unavailable.
-    lesson_store: dict[str, LearnableObject]
+    # as a fallback when the DB is unavailable.  Keyed by the canonical UUID
+    # so the parse route can populate it without a separate lookup.
+    lesson_store: dict[str, CandidateObject]
 
     def analyze_text(self, text: str) -> list[CandidateSentenceResult]:
         """Parse the full input text in one pass and return one result per sentence.
@@ -38,5 +39,5 @@ class LanguagePlugin(Protocol):
     def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
         ...
 
-    def get_lesson(self, object_id: str) -> LearnableObject | None:
+    def get_lesson(self, object_id: str) -> CandidateObject | None:
         ...

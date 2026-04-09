@@ -70,6 +70,7 @@ async def parse_text(
             obj_id = canonical_object_id(payload.language, cand.type, cand.canonical_form)
             lo = LearnableObject(
                 id=obj_id,
+                language=payload.language,
                 type=cand.type,
                 label=cand.label,
                 lesson_data=cand.lesson_data,
@@ -80,14 +81,10 @@ async def parse_text(
         sentences.append(SentenceResult(text=cand_result.text, learnable_objects=resolved))
 
     # Populate the plugin's lesson_store for fallback when the DB is unavailable.
+    # Store the CandidateObject directly — it carries canonical_form, which the
+    # lesson endpoint needs to call build_lesson() correctly.
     for obj_id, (_, cand) in uuid_to_candidate.items():
-        plugin.lesson_store[obj_id] = LearnableObject(
-            id=obj_id,
-            type=cand.type,
-            label=cand.label,
-            lesson_data=cand.lesson_data,
-            confidence=cand.confidence,
-        )
+        plugin.lesson_store[obj_id] = cand
 
     response = ParseResponse(sentences=sentences)
     response_json = response.model_dump(mode="json")
@@ -200,6 +197,7 @@ async def _persist_parse(
             db.add(UserKnowledgeRow(
                 user_id=DEFAULT_USER_ID,
                 object_id=obj_id,
+                language=payload.language,
                 fsrs_state=None,
                 mastery_score=0.0,
                 last_seen=now,

@@ -12,6 +12,10 @@ class Settings(BaseSettings):
     )
     redis_url: str = Field(default="redis://localhost:6379/0")
     plugin_package: str = "backend.plugins"
+    # Explicit allow-list of language codes to activate.  None (default) means
+    # all plugins with a create_plugin() factory are loaded.  Set to e.g.
+    # ["es", "fr"] in .env as ENABLED_LANGUAGES=es,fr to limit the active set.
+    enabled_languages: list[str] | None = None
     cors_origins: list[str] = Field(default_factory=lambda: ["*"])
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")

@@ -1,8 +1,14 @@
-"""Stub English plugin.
+"""Stub French plugin.
 
 Splits text into sentences on terminal punctuation and tags every
 alphabetic token as a vocabulary word.  No real NLP — suitable for
-integration tests and as a template for real plugins.
+integration tests and as a foundation for a full French plugin.
+
+French-specific notes for a future real implementation:
+- Use ``fr_core_news_md`` or ``fr_core_news_lg`` for morphology-rich parsing.
+- French has grammatical gender and number agreement (adj-noun, det-noun).
+- Verb conjugation is highly irregular; a separate lemmatiser may help.
+- Elision contractions ("l'", "d'", "qu'") need special handling.
 """
 from __future__ import annotations
 
@@ -11,13 +17,32 @@ import re
 from backend.parsing.plugin_interface import Token
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
+# French sentence endings include standard punctuation.
+# «»  quotation marks are left to the sentence splitter to absorb;
+# they rarely coincide with sentence boundaries so ignoring them is safe.
 _SENTENCE_RE = re.compile(r"[^.!?]+[.!?]?")
-_WORD_RE = re.compile(r"[A-Za-z']+")
+
+# Match alphabetic tokens including French diacritics and apostrophes.
+# Split on apostrophes so "l'homme" → ["l", "homme"] (elision).
+_WORD_RE = re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿ]+")
+
+# Common French function words to exclude from vocabulary extraction.
+# A real plugin would use POS tagging; this is a conservative static list.
+_STOP_WORDS = frozenset({
+    "le", "la", "les", "un", "une", "des", "du", "de", "d",
+    "et", "ou", "mais", "donc", "or", "ni", "car",
+    "je", "tu", "il", "elle", "nous", "vous", "ils", "elles",
+    "me", "te", "se", "y", "en",
+    "que", "qui", "qu", "ce", "cet", "cette", "ces",
+    "l", "j",  # elided forms
+    "à", "au", "aux", "par", "pour", "sur", "sous", "dans", "avec",
+    "est", "sont", "a", "ont",  # high-freq copula/avoir forms
+})
 
 
-class EnglishStubPlugin:
-    language_code = "en"
-    display_name = "English (stub)"
+class FrenchStubPlugin:
+    language_code = "fr"
+    display_name = "French (stub)"
     direction = "ltr"
 
     def __init__(self) -> None:
@@ -55,20 +80,21 @@ class EnglishStubPlugin:
         seen: set[str] = set()
         candidates: list[CandidateObject] = []
         for token in tokens:
-            if token.lemma in seen:
+            lemma = token.lemma
+            if len(lemma) < 2 or lemma in seen or lemma in _STOP_WORDS:
                 continue
-            seen.add(token.lemma)
+            seen.add(lemma)
             candidates.append(
                 CandidateObject(
-                    canonical_form=token.lemma,
+                    canonical_form=lemma,
                     type="vocabulary",
                     label=token.text,
-                    lesson_data={"lemma": token.lemma},
+                    lesson_data={"lemma": lemma},
                     confidence=None,  # stub — no real confidence
                 )
             )
         return candidates
 
 
-def create_plugin() -> EnglishStubPlugin:
-    return EnglishStubPlugin()
+def create_plugin() -> FrenchStubPlugin:
+    return FrenchStubPlugin()
