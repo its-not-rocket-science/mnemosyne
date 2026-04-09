@@ -10,44 +10,82 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header">
       <div class="wrap">
-        <p class="eyebrow">Mnemosyne</p>
+        <!-- aria-hidden: the word is decorative here; the h1 is the real label -->
+        <p class="eyebrow" aria-hidden="true">Mnemosyne</p>
         <h1>Turn text into a living lesson</h1>
         <p class="lede">Paste text, parse sentences, open micro-lessons, and rate recall.</p>
       </div>
     </header>
 
-    <main id="main" class="wrap" aria-labelledby="page-title">
-      <section class="panel" aria-labelledby="page-title">
-        <h2 id="page-title">Create a lesson from text</h2>
+    <main id="main" class="wrap">
 
-        <form id="parse-form" class="stack">
-          <label for="language">Language</label>
-          <select id="language" name="language">
-            <option value="es">Spanish</option>
-            <option value="en">English (stub)</option>
-          </select>
+      <section class="panel" aria-labelledby="parse-heading">
+        <h2 id="parse-heading">Create a lesson from text</h2>
 
-          <label for="source-url">Source URL (optional)</label>
-          <input id="source-url" name="source-url" type="url" placeholder="https://example.com/article">
+        <!--
+          novalidate: we run our own validation so the browser's native
+          bubbles don't fire. aria-required and setCustomValidity() handle AT.
+        -->
+        <form id="parse-form" class="stack" novalidate>
 
-          <label for="source-text">Text</label>
-          <textarea id="source-text" name="source-text" rows="10" required
-            placeholder="Paste Spanish text here...">Hola. La casa roja habla. Yo hablo español.</textarea>
+          <div class="field">
+            <label for="language">Language</label>
+            <select id="language" name="language">
+              <option value="es">Spanish</option>
+              <option value="en">English (stub)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="source-url">
+              Source URL
+              <span class="field-hint">(optional — for attribution only)</span>
+            </label>
+            <input id="source-url" name="source-url" type="url"
+              placeholder="https://example.com/article"
+              autocomplete="url">
+          </div>
+
+          <div class="field">
+            <label for="source-text">Text to parse</label>
+            <textarea id="source-text" name="source-text" rows="8"
+              required aria-required="true"
+              placeholder="Paste Spanish text here…">Hola. La casa roja habla. Yo hablo español.</textarea>
+          </div>
 
           <div class="button-row">
-            <button type="submit" class="button-primary">Parse text</button>
+            <button type="submit" class="button-primary" id="parse-submit">
+              Parse text
+            </button>
           </div>
+
         </form>
 
-        <p id="status" class="status" aria-live="polite"></p>
+        <!--
+          role="status" implies aria-live="polite" and aria-atomic="true".
+          The JS clears then re-sets textContent so identical messages are
+          re-announced. Placed after the form so it doesn't interrupt typing.
+        -->
+        <p id="status" role="status" aria-atomic="true" class="status"></p>
+
       </section>
 
-      <section class="panel" aria-labelledby="results-title">
-        <h2 id="results-title">Sentence lessons</h2>
-        <div id="results" class="results" aria-live="polite"></div>
+      <section class="panel" aria-labelledby="results-heading">
+        <h2 id="results-heading">Sentence lessons</h2>
+        <!--
+          No aria-live here — announcing the full card dump is too noisy.
+          The #status region announces the summary ("3 sentences parsed").
+        -->
+        <div id="results" class="results">
+          <p class="results-empty">
+            Parse some text above to see learnable items here.
+          </p>
+        </div>
       </section>
+
     </main>
 
     <mnemosyne-modal id="lesson-modal"></mnemosyne-modal>
