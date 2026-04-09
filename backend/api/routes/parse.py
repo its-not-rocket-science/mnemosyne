@@ -161,6 +161,10 @@ async def _persist_parse(
             row.display_label = cand.label
             row.lesson_data = cand.lesson_data
             row.confidence = cand.confidence
+            if cand.surface_form:
+                current = list(row.surface_forms or [])
+                if cand.surface_form not in current:
+                    row.surface_forms = current + [cand.surface_form]
         else:
             db.add(
                 CanonicalObjectRow(
@@ -169,6 +173,7 @@ async def _persist_parse(
                     type=cand.type,
                     canonical_form=canonical_form,
                     display_label=cand.label,
+                    surface_forms=[cand.surface_form] if cand.surface_form else [],
                     lesson_data=cand.lesson_data,
                     confidence=cand.confidence,
                 )
