@@ -205,6 +205,7 @@ async def _persist_parse(
                 language=payload.language,
                 fsrs_state=None,
                 mastery_score=0.0,
+                first_seen=now,
                 last_seen=now,
                 total_reviews=0,
                 due_at=now,

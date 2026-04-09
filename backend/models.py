@@ -154,6 +154,7 @@ class UserKnowledgeRow(Base):
     language: Mapped[str | None] = mapped_column(String(10), nullable=True)
     fsrs_state: Mapped[dict | None] = mapped_column(JSON, nullable=True)
     mastery_score: Mapped[float] = mapped_column(Float, default=0.0)
+    first_seen: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     last_seen: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
     total_reviews: Mapped[int] = mapped_column(Integer, default=0)
     due_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
