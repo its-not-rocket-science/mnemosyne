@@ -15,8 +15,8 @@ export class MnemosynePill extends HTMLElement {
 
   constructor() {
     super()
-    // delegatesFocus: true — focusing the host element (e.g. after modal close)
-    // delegates to the first focusable child in the shadow tree.
+    // delegatesFocus: true — focusing the host (e.g. on modal close) delegates
+    // to the shadow button automatically.
     this.attachShadow({ mode: 'open', delegatesFocus: true })
     this.handleClick = this.handleClick.bind(this)
   }
@@ -26,7 +26,10 @@ export class MnemosynePill extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    // Skip no-op attribute updates to avoid spurious re-renders.
+    // During HTML parsing, attributeChangedCallback fires for each attribute
+    // before connectedCallback.  Guard here so we don't render into a detached
+    // shadow root before the element is live in the document.
+    if (!this.isConnected) return
     if (oldValue === newValue) return
     this.render()
   }
@@ -50,6 +53,9 @@ export class MnemosynePill extends HTMLElement {
     const text = this.getAttribute('label') || ''
     const meta = TYPE_META[type] || TYPE_META.vocabulary
 
+    // Build the shadow DOM structure.  aria-label is NOT interpolated into
+    // the innerHTML string — setAttribute handles all escaping and avoids
+    // any risk of breaking the attribute if `text` contains quote characters.
     this.shadowRoot.innerHTML = `
       <style>
         :host {
@@ -62,14 +68,17 @@ export class MnemosynePill extends HTMLElement {
           gap: 0.4rem;
           border: 1px solid color-mix(in oklch, ${meta.ref} 35%, Canvas);
           border-radius: 999px;
-          padding: 0.45rem 0.8rem;
+          /* 2.75rem ≈ 44 CSS px — WCAG 2.5.8 minimum touch target */
+          min-block-size: 2.75rem;
+          padding-inline: 0.8rem;
           background: color-mix(in oklch, ${meta.ref} 18%, Canvas);
           color: CanvasText;
           font: inherit;
           cursor: pointer;
         }
 
-        /* Solid focus ring — color-mix with transparent fails WCAG 2.4.11 */
+        /* Solid focus ring — semi-transparent outline fails WCAG 2.4.11 3:1
+           non-text contrast requirement against adjacent colors. */
         button:focus-visible {
           outline: 3px solid color-mix(in oklch, ${meta.ref} 90%, CanvasText);
           outline-offset: 3px;
@@ -80,26 +89,33 @@ export class MnemosynePill extends HTMLElement {
           text-align: center;
         }
 
-        /* Visible non-color type indicator so type is never communicated by
-           color or icon alone.  Visually small; not aria-hidden so that it
-           supplements the button's aria-label for AT users who may override
-           label computation.  The button aria-label is the primary AT signal. */
+        /* Visible non-color type indicator: type is signalled by icon shape,
+           badge text, AND background tint — never by color alone.
+           aria-hidden keeps it out of the AT name computation; the button's
+           aria-label is the canonical accessible name. */
         .type-badge {
           font-size: 0.68em;
           font-weight: 700;
           letter-spacing: 0.04em;
           text-transform: uppercase;
           opacity: 0.65;
-          padding-inline-start: 0.15rem;
+          padding-inline-start: 0.1rem;
         }
       </style>
-      <button type="button" aria-label="${meta.label} lesson: ${text}">
+      <button type="button">
         <span class="icon" aria-hidden="true">${meta.icon}</span>
+        <span>${meta.badge}</span>
+        <span aria-hidden="true">·</span>
         <span>${text}</span>
-        <span class="type-badge" aria-hidden="true">${meta.badge}</span>
       </button>
     `
-    this.shadowRoot.querySelector('button')?.addEventListener('click', this.handleClick)
+
+    // Set aria-label via setAttribute so the browser handles escaping.
+    // Interpolating user-supplied `text` directly into innerHTML would break
+    // if the value contains quote characters.
+    const btn = this.shadowRoot.querySelector('button')
+    btn.setAttribute('aria-label', `${meta.label} lesson: ${text}`)
+    btn.addEventListener('click', this.handleClick)
   }
 }
 

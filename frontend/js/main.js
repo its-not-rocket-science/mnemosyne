@@ -53,8 +53,15 @@ function hideResultsMessage() {
 form.addEventListener('submit', async (event) => {
   event.preventDefault()
 
+  // Clear any previous validation state on every submission attempt.
+  textarea.removeAttribute('aria-invalid')
+
   const text = textarea.value.trim()
   if (!text) {
+    // aria-invalid="true" tells AT the field is in an error state.
+    // aria-describedby="status" (set in HTML) then surfaces the message
+    // when focus lands on the textarea.
+    textarea.setAttribute('aria-invalid', 'true')
     setStatus('Please enter some text to parse.', 'error')
     textarea.focus()
     return

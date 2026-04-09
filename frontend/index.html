@@ -13,21 +13,26 @@
 
     <header class="site-header">
       <div class="wrap">
-        <!-- aria-hidden: the word is decorative here; the h1 is the real label -->
+        <!-- aria-hidden: the word is decorative; the h1 is the real page label -->
         <p class="eyebrow" aria-hidden="true">Mnemosyne</p>
         <h1>Turn text into a living lesson</h1>
         <p class="lede">Paste text, parse sentences, open micro-lessons, and rate recall.</p>
       </div>
     </header>
 
-    <main id="main" class="wrap">
+    <!--
+      tabindex="-1" makes <main> programmatically focusable so the skip-link
+      actually moves keyboard focus here (not just scroll position), which is
+      required for the skip link to work in Safari and Firefox.
+    -->
+    <main id="main" tabindex="-1" class="wrap">
 
       <section class="panel" aria-labelledby="parse-heading">
         <h2 id="parse-heading">Create a lesson from text</h2>
 
         <!--
-          novalidate: we run our own validation so the browser's native
-          bubbles don't fire. aria-required and setCustomValidity() handle AT.
+          novalidate: JS handles validation so the browser's native error
+          bubbles don't fire.  aria-required and aria-invalid signal state to AT.
         -->
         <form id="parse-form" class="stack" novalidate>
 
@@ -51,8 +56,14 @@
 
           <div class="field">
             <label for="source-text">Text to parse</label>
+            <!--
+              aria-required: tells AT the field is mandatory.
+              aria-describedby="status": when focus lands here after a validation
+              error, AT reads the live-region message that explains what went wrong.
+            -->
             <textarea id="source-text" name="source-text" rows="8"
               required aria-required="true"
+              aria-describedby="status"
               placeholder="Paste Spanish text here…">Hola. La casa roja habla. Yo hablo español.</textarea>
           </div>
 
@@ -66,8 +77,8 @@
 
         <!--
           role="status" implies aria-live="polite" and aria-atomic="true".
-          The JS clears then re-sets textContent so identical messages are
-          re-announced. Placed after the form so it doesn't interrupt typing.
+          JS clears then re-sets textContent so identical messages re-announce.
+          Placed after the form so it doesn't interrupt typing.
         -->
         <p id="status" role="status" aria-atomic="true" class="status"></p>
 
