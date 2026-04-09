@@ -87,6 +87,7 @@ async def test_recommend_sentence_fields_present(async_client) -> None:
         assert "text" in sent
         assert "language" in sent
         assert "difficulty" in sent
+        assert "difficulty_label" in sent
         assert "unknown_ratio" in sent
         assert "grammar_score" in sent
         assert "length_score" in sent
@@ -202,3 +203,53 @@ async def test_recommend_unknown_language_returns_empty(async_client) -> None:
     resp = await async_client.get("/recommend-text?language=zh")
     assert resp.status_code == 200
     assert resp.json()["sentences"] == []
+
+
+@pytest.mark.asyncio
+async def test_recommend_alias_matches_recommend_text(async_client) -> None:
+    """/recommend and /recommend-text return identical responses."""
+    await async_client.post(
+        "/parse",
+        json={"text": "El gato duerme.", "language": "es"},
+    )
+    r1 = (await async_client.get("/recommend?language=es")).json()
+    r2 = (await async_client.get("/recommend-text?language=es")).json()
+    assert r1["sentences"] == r2["sentences"]
+    assert r1["user_level"] == r2["user_level"]
+
+
+@pytest.mark.asyncio
+async def test_recommend_difficulty_label_present(async_client) -> None:
+    """Every returned sentence must carry a difficulty_label field."""
+    await async_client.post(
+        "/parse",
+        json={"text": "Yo hablo español bien.", "language": "es"},
+    )
+    resp = await async_client.get("/recommend?language=es")
+    assert resp.status_code == 200
+    for sent in resp.json()["sentences"]:
+        assert sent["difficulty_label"] in {"easy", "ideal", "hard"}
+
+
+@pytest.mark.asyncio
+async def test_recommend_all_unknown_sentences_labeled_hard(async_client) -> None:
+    """For a new user with no mastery, sentences with many objects are 'hard'."""
+    await async_client.post(
+        "/parse",
+        json={
+            "text": (
+                "Los estudiantes trabajan mucho todos los días "
+                "para aprender el idioma español correctamente."
+            ),
+            "language": "es",
+        },
+    )
+    resp = await async_client.get("/recommend?language=es&limit=50")
+    sentences = resp.json()["sentences"]
+    # With no mastery all objects are unknown; long sentences → hard
+    long_ones = [s for s in sentences if s["total_objects"] >= 6]
+    for s in long_ones:
+        assert s["difficulty_label"] == "hard", (
+            f"Expected 'hard' for unknown_ratio={s['unknown_ratio']}, "
+            f"got '{s['difficulty_label']}'"
+        )

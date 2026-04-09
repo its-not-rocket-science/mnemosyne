@@ -29,6 +29,7 @@ from backend.api.dependencies import get_db_session
 from backend.difficulty.scorer import (
     DifficultyScore,
     ObjectMastery,
+    difficulty_label,
     score_sentence,
     target_difficulty_window,
     user_level_label,
@@ -51,6 +52,7 @@ logger = logging.getLogger(__name__)
 router = APIRouter(tags=["curriculum"])
 
 
+@router.get("/recommend", response_model=RecommendTextResponse)
 @router.get("/recommend-text", response_model=RecommendTextResponse)
 async def recommend_text(
     language: str,
@@ -162,6 +164,7 @@ async def recommend_text(
             text=text,
             language=language,
             difficulty=ds.difficulty,
+            difficulty_label=difficulty_label(ds.unknown_ratio),
             unknown_ratio=ds.unknown_ratio,
             grammar_score=ds.grammar_score,
             length_score=ds.length_score,

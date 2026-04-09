@@ -13,6 +13,7 @@ from backend.difficulty.scorer import (
     _W_GRAMMAR,
     _W_LENGTH,
     _W_UNKNOWN,
+    difficulty_label,
     score_sentence,
     target_difficulty_window,
     user_level_label,
@@ -298,3 +299,48 @@ class TestIPlusOne:
         assert score.difficulty > high, (
             f"Long complex sentence (difficulty={score.difficulty}) unexpectedly in bootstrap window"
         )
+
+
+# ── difficulty_label ──────────────────────────────────────────────────────────
+
+
+class TestDifficultyLabel:
+    @pytest.mark.parametrize("unknown_ratio,expected", [
+        (0.00, "easy"),   # 100% known
+        (0.05, "easy"),   # 95% known
+        (0.14, "easy"),   # just under the easy/ideal boundary
+        (0.15, "ideal"),  # boundary: exactly 15% unknown → ideal
+        (0.20, "ideal"),  # ~80% known — classic i+1 zone
+        (0.30, "ideal"),  # 70% known — still ideal
+        (0.40, "ideal"),  # 60% known — upper edge of ideal
+        (0.41, "hard"),   # just over the ideal/hard boundary
+        (0.60, "hard"),   # only 40% known
+        (1.00, "hard"),   # everything unknown
+    ])
+    def test_band_boundaries(self, unknown_ratio: float, expected: str) -> None:
+        assert difficulty_label(unknown_ratio) == expected, (
+            f"unknown_ratio={unknown_ratio} → expected '{expected}'"
+        )
+
+    def test_all_known_is_easy(self) -> None:
+        objects = [_known(f"k{i}") for i in range(5)]
+        score = score_sentence(objects, "El gato duerme bien.")
+        assert difficulty_label(score.unknown_ratio) == "easy"
+
+    def test_all_unknown_is_hard(self) -> None:
+        objects = [_unknown(f"u{i}") for i in range(5)]
+        score = score_sentence(objects, "Habla rápido siempre.")
+        assert difficulty_label(score.unknown_ratio) == "hard"
+
+    def test_twenty_percent_unknown_is_ideal(self) -> None:
+        objects = (
+            [_known(f"k{i}") for i in range(8)]
+            + [_unknown(f"u{i}") for i in range(2)]
+        )
+        score = score_sentence(objects, "El gato negro duerme bien aquí.")
+        assert difficulty_label(score.unknown_ratio) == "ideal"
+
+    def test_returns_valid_literal(self) -> None:
+        valid = {"easy", "ideal", "hard"}
+        for r in [i / 20 for i in range(21)]:  # 0.0, 0.05, ..., 1.0
+            assert difficulty_label(r) in valid

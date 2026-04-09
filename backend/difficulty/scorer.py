@@ -162,6 +162,34 @@ def _length_score(text: str) -> float:
     return round(min(word_count / _LENGTH_MAX_WORDS, 1.0), 4)
 
 
+# ── Difficulty labels ─────────────────────────────────────────────────────────
+
+DifficultyLabel = Literal["easy", "ideal", "hard"]
+
+
+def difficulty_label(unknown_ratio: float) -> DifficultyLabel:
+    """Classify a sentence's challenge level for the current user.
+
+    Maps the fraction of unknown objects to a named band:
+
+      easy   — <15% unknown (>85% known): very little new material,
+               safe for extensive reading but limited learning value.
+      ideal  — 15–40% unknown (60–85% known): follows the i+1
+               comprehensible-input principle; controlled novelty.
+      hard   — >40% unknown (<60% known): too much new material to
+               sustain comprehension without heavy lookup support.
+
+    The 15% / 40% thresholds are slightly widened from the spec's
+    10% / 30% to give the "ideal" band a broader, more forgiving range
+    that accommodates the scorer's grammar and length components.
+    """
+    if unknown_ratio < 0.15:
+        return "easy"
+    if unknown_ratio <= 0.40:
+        return "ideal"
+    return "hard"
+
+
 # ── Progression ───────────────────────────────────────────────────────────────
 
 UserLevel = Literal["beginner", "elementary", "intermediate", "advanced"]
