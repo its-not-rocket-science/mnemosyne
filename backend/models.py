@@ -12,9 +12,11 @@ Table overview
                      (e.g. conjugation → vocabulary lemma).
   sentence_objects   Join table linking sentences to the canonical objects
                      found in them, enabling cross-text reinforcement queries.
-  review_states      FSRS scheduling state per canonical object.  No FK to
-                     canonical_objects so reviews can be submitted even when
-                     the object row is absent.
+  user_knowledge     One row per (user_id, object_id) pair; stores the FSRS
+                     scheduling state, mastery score, and review history.
+                     No FK to canonical_objects so reviews can be submitted
+                     even when the object row is absent (e.g. after a DB
+                     outage during /parse).
 """
 from __future__ import annotations
 
@@ -130,16 +132,26 @@ class SentenceObjectRow(Base):
     sentence: Mapped[Sentence] = relationship("Sentence", back_populates="sentence_objects")
 
 
-class ReviewStateRow(Base):
-    """Persisted FSRS scheduling state for one learnable object.
+class UserKnowledgeRow(Base):
+    """FSRS state and mastery metrics for one (user, canonical object) pair.
 
-    No FK constraint on ``object_id`` so that reviews can be submitted
-    for objects that pre-date the current server session.
+    No FK constraint on ``object_id`` so that reviews can be submitted for
+    objects that pre-date the current server session or whose
+    ``canonical_objects`` row was absent during a DB outage.
+
+    ``user_id`` is ``"default"`` for all requests until authentication is
+    implemented (Phase 1).
+
+    ``due_at`` mirrors ``fsrs_state["due_at"]`` as a proper datetime column
+    so that the daily review queue query is a single indexed comparison
+    instead of a JSON extraction.
     """
-    __tablename__ = "review_states"
+    __tablename__ = "user_knowledge"
 
+    user_id: Mapped[str] = mapped_column(String(50), primary_key=True)
     object_id: Mapped[str] = mapped_column(String, primary_key=True)
-    state: Mapped[dict] = mapped_column(JSON)
-    updated_at: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), default=_now, onupdate=_now
-    )
+    fsrs_state: Mapped[dict | None] = mapped_column(JSON, nullable=True)
+    mastery_score: Mapped[float] = mapped_column(Float, default=0.0)
+    last_seen: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+    total_reviews: Mapped[int] = mapped_column(Integer, default=0)
+    due_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)

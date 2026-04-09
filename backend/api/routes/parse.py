@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import logging
+from datetime import UTC, datetime
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
@@ -9,7 +10,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_db_session, get_plugin_registry
 from backend.core.cache import get_json, set_json
-from backend.models import CanonicalObjectRow, ObjectRelationRow, ParsedText, Sentence, SentenceObjectRow
+from backend.models import CanonicalObjectRow, ObjectRelationRow, ParsedText, Sentence, SentenceObjectRow, UserKnowledgeRow
+from backend.srs.knowledge import DEFAULT_USER_ID
 from backend.parsing.canonical import canonical_object_id
 from backend.parsing.plugin_loader import PluginRegistry
 from backend.schemas.parse import (
@@ -150,6 +152,34 @@ async def _persist_parse(
 
     await db.flush()  # canonical objects must exist before relations and join rows
 
+    # ── User knowledge — seed new objects as unseen ──────────────────────────
+    # Creates a UserKnowledgeRow (total_reviews=0) the first time this user
+    # encounters a canonical object via /parse.  Existing rows are left
+    # untouched except for updating last_seen, so review history is never lost.
+    uk_result = await db.execute(
+        select(UserKnowledgeRow).where(
+            UserKnowledgeRow.user_id == DEFAULT_USER_ID,
+            UserKnowledgeRow.object_id.in_(all_ids),
+        )
+    )
+    existing_uk: dict[str, UserKnowledgeRow] = {
+        row.object_id: row for row in uk_result.scalars()
+    }
+    now = _now_utc()
+    for obj_id in all_ids:
+        if obj_id in existing_uk:
+            existing_uk[obj_id].last_seen = now
+        else:
+            db.add(UserKnowledgeRow(
+                user_id=DEFAULT_USER_ID,
+                object_id=obj_id,
+                fsrs_state=None,
+                mastery_score=0.0,
+                last_seen=now,
+                total_reviews=0,
+                due_at=now,
+            ))
+
     # ── Sentence–object join rows ────────────────────────────────────────────
     for sent_row, sent_result in zip(sentence_rows, sentences):
         for pos, lo in enumerate(sent_result.learnable_objects):
@@ -189,3 +219,7 @@ async def _persist_parse(
 def _cache_key(text: str, language: str) -> str:
     digest = hashlib.sha256(f"{language}:{text}".encode("utf-8")).hexdigest()
     return f"parse:{digest}"
+
+
+def _now_utc() -> datetime:
+    return datetime.now(UTC)
