@@ -54,7 +54,12 @@ import logging
 from functools import cached_property
 from typing import Any
 
-from backend.schemas.parse import LearnableObject, SentenceResult
+from backend.schemas.parse import (
+    CandidateObject,
+    CandidateSentenceResult,
+    LearnableObject,
+    RelationHint,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -101,7 +106,7 @@ class SpanishPlugin:
     direction     = "ltr"
 
     def __init__(self) -> None:
-        self._lesson_store: dict[str, LearnableObject] = {}
+        self.lesson_store: dict[str, LearnableObject] = {}
 
     # ------------------------------------------------------------------
     # Model — lazy, loaded at most once per process via cached_property
@@ -130,7 +135,7 @@ class SpanishPlugin:
         doc = self._nlp(text.strip())
         return [s.text.strip() for s in doc.sents if s.text.strip()]
 
-    def analyze_sentence(self, sentence: str) -> SentenceResult:
+    def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
         doc = self._nlp(sentence)
         tokens = list(doc)
 
@@ -139,20 +144,17 @@ class SpanishPlugin:
         seen_vocab: set[str] = set()
         seen_conj:  set[str] = set()
 
-        objects: list[LearnableObject] = []
+        candidates: list[CandidateObject] = []
         # Conjugation must run first to pre-populate seen_vocab before
         # vocabulary extraction consults it.
-        objects.extend(self._extract_conjugations(tokens, seen_conj, seen_vocab))
-        objects.extend(self._extract_vocabulary(tokens, seen_vocab))
-        objects.extend(self._extract_agreements(tokens))
+        candidates.extend(self._extract_conjugations(tokens, seen_conj, seen_vocab))
+        candidates.extend(self._extract_vocabulary(tokens, seen_vocab))
+        candidates.extend(self._extract_agreements(tokens))
 
-        for obj in objects:
-            self._lesson_store[obj.id] = obj
-
-        return SentenceResult(text=sentence, learnable_objects=objects)
+        return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     def get_lesson(self, object_id: str) -> LearnableObject | None:
-        return self._lesson_store.get(object_id)
+        return self.lesson_store.get(object_id)
 
     # ------------------------------------------------------------------
     # Vocabulary
@@ -162,8 +164,8 @@ class SpanishPlugin:
         self,
         tokens: list[Any],
         seen: set[str],
-    ) -> list[LearnableObject]:
-        objects: list[LearnableObject] = []
+    ) -> list[CandidateObject]:
+        candidates: list[CandidateObject] = []
         for tok in tokens:
             if tok.pos_ in _SKIP_POS or tok.is_punct or tok.is_space:
                 continue
@@ -199,14 +201,14 @@ class SpanishPlugin:
             if confidence_note is not None:
                 data["confidence_note"] = confidence_note
 
-            objects.append(LearnableObject(
-                id=f"es:vocab:{lemma}",
+            candidates.append(CandidateObject(
+                canonical_form=lemma,
                 type="vocabulary",
                 label=tok.text,
                 lesson_data=data,
                 confidence=confidence,
             ))
-        return objects
+        return candidates
 
     def _vocab_confidence(self, tok: Any) -> tuple[float, str | None]:
         if tok.pos_ == "PROPN":
@@ -224,8 +226,8 @@ class SpanishPlugin:
         tokens: list[Any],
         seen_conj: set[str],
         seen_vocab: set[str],
-    ) -> list[LearnableObject]:
-        objects: list[LearnableObject] = []
+    ) -> list[CandidateObject]:
+        candidates: list[CandidateObject] = []
         for tok in tokens:
             if tok.pos_ not in {"VERB", "AUX"}:
                 continue
@@ -240,10 +242,10 @@ class SpanishPlugin:
                 continue
 
             feats = self._verb_morph(tok)
-            oid = _conj_id(lemma, feats)
-            if oid in seen_conj:
+            canonical_form = _conj_canonical_form(lemma, feats)
+            if canonical_form in seen_conj:
                 continue
-            seen_conj.add(oid)
+            seen_conj.add(canonical_form)
             # Prevent the same lemma from also appearing as a vocabulary item
             # within this sentence (e.g. suppresses the infinitive "ir" after
             # a conjugation entry has been generated for "voy").
@@ -270,14 +272,21 @@ class SpanishPlugin:
             if confidence_note is not None:
                 lesson["confidence_note"] = confidence_note
 
-            objects.append(LearnableObject(
-                id=oid,
+            candidates.append(CandidateObject(
+                canonical_form=canonical_form,
                 type="conjugation",
                 label=tok.text,
                 lesson_data=lesson,
                 confidence=confidence,
+                relation_hints=[
+                    RelationHint(
+                        relation_type="conjugation_of",
+                        target_canonical_form=lemma,
+                        target_type="vocabulary",
+                    )
+                ],
             ))
-        return objects
+        return candidates
 
     def _verb_morph(self, tok: Any) -> dict[str, str]:
         tense_raw = _morph_first(tok, "Tense")
@@ -314,7 +323,7 @@ class SpanishPlugin:
     # Agreement
     # ------------------------------------------------------------------
 
-    def _extract_agreements(self, tokens: list[Any]) -> list[LearnableObject]:
+    def _extract_agreements(self, tokens: list[Any]) -> list[CandidateObject]:
         """Find DET+NOUN and ADJ+NOUN gender/number agreement pairs.
 
         Emission rules:
@@ -327,7 +336,7 @@ class SpanishPlugin:
         - Fallback: single-position adjacency, skipping pairs separated by a
           CCONJ (coordination) to avoid spurious pairs like "inglés y español".
         """
-        objects: list[LearnableObject] = []
+        candidates: list[CandidateObject] = []
         seen_pairs: set[tuple[str, str, str]] = set()
 
         nouns = [t for t in tokens if t.pos_ == "NOUN"]
@@ -362,20 +371,19 @@ class SpanishPlugin:
                     continue
                 seen_pairs.add(pair_key)
 
+                noun_lemma = noun.lemma_.lower()
+                cand_lemma = cand.lemma_.lower()
                 label = (
                     f"{cand.text} {noun.text}"
                     if cand.i < noun.i
                     else f"{noun.text} {cand.text}"
                 )
-                oid = (
-                    f"es:agreement:{cand.pos_.lower()}"
-                    f":{cand.lemma_.lower()}_{noun.lemma_.lower()}"
-                )
+                canonical_form = f"{cand.pos_.lower()}:{cand_lemma}_{noun_lemma}"
                 confidence      = _agreement_confidence(gender_match, number_match)
                 confidence_note = _agreement_confidence_note(gender_match, number_match)
 
-                objects.append(LearnableObject(
-                    id=oid,
+                candidates.append(CandidateObject(
+                    canonical_form=canonical_form,
                     type="agreement",
                     label=label,
                     lesson_data={
@@ -389,8 +397,15 @@ class SpanishPlugin:
                         "confidence_note": confidence_note,
                     },
                     confidence=confidence,
+                    relation_hints=[
+                        RelationHint(
+                            relation_type="agreement_of",
+                            target_canonical_form=noun_lemma,
+                            target_type="vocabulary",
+                        )
+                    ],
                 ))
-        return objects
+        return candidates
 
 
 # ── module-level helpers (stateless) ─────────────────────────────────────────
@@ -401,10 +416,10 @@ def _morph_first(tok: Any, feature: str) -> str | None:
     return values[0] if values else None
 
 
-def _conj_id(lemma: str, feats: dict[str, str]) -> str:
-    """Stable conjugation ID: lemma + the four morphological axes."""
+def _conj_canonical_form(lemma: str, feats: dict[str, str]) -> str:
+    """Stable conjugation canonical_form: lemma + the four morphological axes."""
     return (
-        f"es:conj:{lemma}"
+        f"{lemma}"
         f":{feats.get('tense', 'unk')}"
         f":{feats.get('mood', 'unk')}"
         f":{feats.get('person', 'unk')}"

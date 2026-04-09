@@ -100,7 +100,7 @@ A plugin is a single Python module in `backend/plugins/` that exports a `create_
 # backend/plugins/french.py
 from __future__ import annotations
 
-from backend.schemas.parse import LearnableObject, SentenceResult
+from backend.schemas.parse import CandidateObject, CandidateSentenceResult, LearnableObject
 
 
 class FrenchPlugin:
@@ -109,19 +109,18 @@ class FrenchPlugin:
     direction     = "ltr"      # or "rtl" for Arabic, Hebrew, etc.
 
     def __init__(self) -> None:
-        # Populated during analyze_sentence; used by get_lesson() as a fallback.
-        self._lesson_store: dict[str, LearnableObject] = {}
+        # Populated by the parse route after UUID resolution; used by get_lesson().
+        self.lesson_store: dict[str, LearnableObject] = {}
 
     def split_sentences(self, text: str) -> list[str]:
         """Return sentence strings in document order."""
         ...
 
-    def analyze_sentence(self, sentence: str) -> SentenceResult:
-        """Parse one sentence; return all learnable objects found in it."""
-        objects: list[LearnableObject] = []
-        # ... build LearnableObject instances, append to objects,
-        #     store each in self._lesson_store[obj.id] ...
-        return SentenceResult(text=sentence, learnable_objects=objects)
+    def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
+        """Parse one sentence; return candidate objects with canonical forms."""
+        candidates: list[CandidateObject] = []
+        # ... build CandidateObject instances and append to candidates ...
+        return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     def get_lesson(self, object_id: str) -> LearnableObject | None:
         """Return the stored object, or None if unknown.
@@ -129,36 +128,39 @@ class FrenchPlugin:
         Called by GET /lesson when the DB row is absent — e.g. on the first
         request after a restart if the DB was unavailable during /parse.
         """
-        return self._lesson_store.get(object_id)
+        return self.lesson_store.get(object_id)
 
 
 def create_plugin() -> FrenchPlugin:
     return FrenchPlugin()
 ```
 
-### Building a `LearnableObject`
+### Building a `CandidateObject`
 
 ```python
-LearnableObject(
-    id          = "fr:vocab:maison",   # {lang}:{type}:{canonical_lemma}
-    type        = "vocabulary",        # see LearnableType in schemas/parse.py
-    label       = "maison",            # surface form shown in the UI pill
-    lesson_data = {                    # rendered as a bullet list in the lesson modal;
-        "lemma":  "maison",            # any key-value pairs are valid
+CandidateObject(
+    canonical_form = "maison",       # stable key within (language, type) — e.g. the lemma
+    type           = "vocabulary",   # see LearnableType in schemas/parse.py
+    label          = "maison",       # surface form shown in the UI pill
+    lesson_data    = {               # rendered as a bullet list in the lesson modal;
+        "lemma":  "maison",          # any key-value pairs are valid
         "gender": "feminine",
         "pos":    "noun",
     },
-    confidence  = 0.80,                # 0–1 heuristic; None if not computed
+    confidence     = 0.80,           # 0–1 heuristic; None if not computed
 )
 ```
 
+The parse route derives a stable UUID from `canonical_object_id(language, type, canonical_form)`. You never construct IDs in the plugin.
+
 `type` must be one of: `vocabulary`, `conjugation`, `agreement`, `idiom`, `grammar`, `nuance`.
 
-### ID rules
+### canonical_form rules
 
-- Format: `{language_code}:{type}:{canonical_form}` — lowercase, no spaces.
-- Must be **stable**: re-parsing the same text must produce the same ID.
-- Drop any lemma that contains a space (spaCy enclitic-fusion artifact); IDs with spaces break the `/lesson` URL route.
+- Must be **stable**: re-parsing the same text must produce the same `canonical_form`.
+- Lowercase, no leading/trailing whitespace.
+- Drop any lemma that contains a space (spaCy enclitic-fusion artifact).
+- For conjugations, encode the morphological axes: `{lemma}:{tense}:{mood}:{person}:{number}`.
 
 ### Confidence guidelines
 

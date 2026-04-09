@@ -9,9 +9,17 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_db_session, get_plugin_registry
 from backend.core.cache import get_json, set_json
-from backend.models import LearnableObjectRow, ParsedText, Sentence
+from backend.models import CanonicalObjectRow, ObjectRelationRow, ParsedText, Sentence, SentenceObjectRow
+from backend.parsing.canonical import canonical_object_id
 from backend.parsing.plugin_loader import PluginRegistry
-from backend.schemas.parse import ParseRequest, ParseResponse, SentenceResult
+from backend.schemas.parse import (
+    CandidateObject,
+    CandidateSentenceResult,
+    LearnableObject,
+    ParseRequest,
+    ParseResponse,
+    SentenceResult,
+)
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["parse"])
@@ -36,13 +44,44 @@ async def parse_text(
     except Exception:
         pass  # Redis unavailable — continue without cache
 
-    sentences: list[SentenceResult] = [
+    candidate_results: list[CandidateSentenceResult] = [
         plugin.analyze_sentence(s) for s in plugin.split_sentences(payload.text)
     ]
+
+    # Resolve candidates → LearnableObjects with stable UUIDs.
+    # uuid_to_candidate tracks (canonical_form, CandidateObject) for DB persistence.
+    uuid_to_candidate: dict[str, tuple[str, CandidateObject]] = {}
+    sentences: list[SentenceResult] = []
+
+    for cand_result in candidate_results:
+        resolved: list[LearnableObject] = []
+        for cand in cand_result.candidates:
+            obj_id = canonical_object_id(payload.language, cand.type, cand.canonical_form)
+            lo = LearnableObject(
+                id=obj_id,
+                type=cand.type,
+                label=cand.label,
+                lesson_data=cand.lesson_data,
+                confidence=cand.confidence,
+            )
+            resolved.append(lo)
+            uuid_to_candidate[obj_id] = (cand.canonical_form, cand)
+        sentences.append(SentenceResult(text=cand_result.text, learnable_objects=resolved))
+
+    # Populate the plugin's lesson_store for fallback when the DB is unavailable.
+    for obj_id, (_, cand) in uuid_to_candidate.items():
+        plugin.lesson_store[obj_id] = LearnableObject(
+            id=obj_id,
+            type=cand.type,
+            label=cand.label,
+            lesson_data=cand.lesson_data,
+            confidence=cand.confidence,
+        )
+
     response = ParseResponse(sentences=sentences)
 
     try:
-        await _persist_parse(db, payload, sentences)
+        await _persist_parse(db, payload, candidate_results, sentences, uuid_to_candidate)
     except Exception:
         logger.warning("DB persistence failed for /parse", exc_info=True)
 
@@ -57,9 +96,11 @@ async def parse_text(
 async def _persist_parse(
     db: AsyncSession,
     payload: ParseRequest,
+    candidate_results: list[CandidateSentenceResult],
     sentences: list[SentenceResult],
+    uuid_to_candidate: dict[str, tuple[str, CandidateObject]],
 ) -> None:
-    """Write ParsedText, Sentences, and upsert LearnableObjects to the DB."""
+    """Write ParsedText, Sentences, upsert CanonicalObjects, and record relations."""
     parsed = ParsedText(
         language=payload.language,
         source_text=payload.text,
@@ -68,43 +109,79 @@ async def _persist_parse(
     db.add(parsed)
     await db.flush()  # materialise parsed.id before FK references
 
-    for pos, sentence in enumerate(sentences):
-        db.add(Sentence(parsed_text_id=parsed.id, position=pos, text=sentence.text))
+    # Insert sentence rows and collect their IDs for the join table.
+    sentence_rows: list[Sentence] = []
+    for pos, result in enumerate(sentences):
+        row = Sentence(parsed_text_id=parsed.id, position=pos, text=result.text)
+        db.add(row)
+        sentence_rows.append(row)
+    await db.flush()  # materialise sentence IDs
 
-    # Upsert learnable objects — one SELECT to find existing IDs, then
-    # add new rows and refresh lesson_data on existing ones.
-    all_ids = list({obj.id for s in sentences for obj in s.learnable_objects})
+    # ── Pass 1: upsert canonical objects ────────────────────────────────────
+    all_ids = list(uuid_to_candidate.keys())
     if all_ids:
-        result = await db.execute(
-            select(LearnableObjectRow).where(LearnableObjectRow.id.in_(all_ids))
+        result_q = await db.execute(
+            select(CanonicalObjectRow).where(CanonicalObjectRow.id.in_(all_ids))
         )
-        existing: dict[str, LearnableObjectRow] = {
-            row.id: row for row in result.scalars()
+        existing: dict[str, CanonicalObjectRow] = {
+            row.id: row for row in result_q.scalars()
         }
     else:
         existing = {}
 
-    seen: set[str] = set()
-    for sentence in sentences:
-        for obj in sentence.learnable_objects:
-            if obj.id in seen:
-                continue
-            seen.add(obj.id)
-            if obj.id in existing:
-                row = existing[obj.id]
-                row.lesson_data = obj.lesson_data
-                row.confidence = obj.confidence
-            else:
-                db.add(
-                    LearnableObjectRow(
-                        id=obj.id,
-                        language=payload.language,
-                        type=obj.type,
-                        label=obj.label,
-                        lesson_data=obj.lesson_data,
-                        confidence=obj.confidence,
+    for obj_id, (canonical_form, cand) in uuid_to_candidate.items():
+        if obj_id in existing:
+            row = existing[obj_id]
+            row.display_label = cand.label
+            row.lesson_data = cand.lesson_data
+            row.confidence = cand.confidence
+        else:
+            db.add(
+                CanonicalObjectRow(
+                    id=obj_id,
+                    language=payload.language,
+                    type=cand.type,
+                    canonical_form=canonical_form,
+                    display_label=cand.label,
+                    lesson_data=cand.lesson_data,
+                    confidence=cand.confidence,
+                )
+            )
+
+    await db.flush()  # canonical objects must exist before relations and join rows
+
+    # ── Sentence–object join rows ────────────────────────────────────────────
+    for sent_row, sent_result in zip(sentence_rows, sentences):
+        for pos, lo in enumerate(sent_result.learnable_objects):
+            db.add(SentenceObjectRow(
+                sentence_id=sent_row.id,
+                object_id=lo.id,
+                position=pos,
+            ))
+
+    # ── Pass 2: upsert object relations ─────────────────────────────────────
+    for cand_result in candidate_results:
+        for cand in cand_result.candidates:
+            src_id = canonical_object_id(payload.language, cand.type, cand.canonical_form)
+            for hint in cand.relation_hints:
+                tgt_id = canonical_object_id(
+                    payload.language, hint.target_type, hint.target_canonical_form
+                )
+                if tgt_id not in uuid_to_candidate:
+                    continue  # target not extracted in this parse — skip
+                rel_q = await db.execute(
+                    select(ObjectRelationRow).where(
+                        ObjectRelationRow.source_id == src_id,
+                        ObjectRelationRow.target_id == tgt_id,
+                        ObjectRelationRow.relation_type == hint.relation_type,
                     )
                 )
+                if rel_q.scalar_one_or_none() is None:
+                    db.add(ObjectRelationRow(
+                        source_id=src_id,
+                        target_id=tgt_id,
+                        relation_type=hint.relation_type,
+                    ))
 
     await db.commit()
 

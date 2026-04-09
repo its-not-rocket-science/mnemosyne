@@ -102,7 +102,7 @@ class LanguagePlugin(Protocol):
 
 ### Object IDs
 
-The plugin constructs each ID as `{language_code}:{type}:{canonical_lemma}` (e.g. `es:vocab:hola`, `es:conj:hablar`). IDs must be **deterministic** across restarts: `ReviewStateRow` records are keyed by them, so a change in ID format silently orphans every stored review state.
+Plugins return `CandidateObject` values with a `canonical_form` field (the stable key within a `(language, type)` space — e.g. the lemma for vocabulary, or `{lemma}:{tense}:{mood}:{person}:{number}` for conjugations). The parse route derives a deterministic UUID-v5 from `(language, type, canonical_form)` via `canonical_object_id()` in `backend/parsing/canonical.py`. The same word in any text always maps to the same UUID without a database round-trip.
 
 ### Spanish plugin
 
@@ -184,24 +184,34 @@ parsed_texts
   sentences  (FK → parsed_texts, cascade delete)
     id, parsed_text_id, position, text
 
-learnable_objects
-  id          plugin-generated, e.g. "es:vocab:hola"   PRIMARY KEY
-  language, type, label
-  lesson_data JSON   — upserted on every /parse so content stays current
-  confidence  float | null
-  created_at
+canonical_objects                             PRIMARY KEY: deterministic UUID-v5
+  id           uuid string   canonical_object_id(language, type, canonical_form)
+  language, type, canonical_form             UNIQUE together
+  display_label, lesson_data JSON, confidence float | null
+  created_at, updated_at
+
+object_relations
+  source_id FK → canonical_objects
+  target_id FK → canonical_objects
+  relation_type   e.g. "conjugation_of", "agreement_of"
+  UNIQUE (source_id, target_id, relation_type)
+
+sentence_objects   (join table)
+  sentence_id FK → sentences   PRIMARY KEY (composite)
+  object_id   FK → canonical_objects
+  position    int
 
 review_states
-  object_id   string   PRIMARY KEY   — intentionally no FK to learnable_objects
+  object_id   string   PRIMARY KEY   — intentionally no FK to canonical_objects
   state       JSON     CardState serialised via to_dict()
   updated_at
 ```
 
-`review_states.object_id` has no foreign key constraint. This lets a review be submitted for an object that pre-dates the current server session or whose `learnable_objects` row was deleted, without cascading failure.
+`review_states.object_id` has no foreign key constraint. This lets a review be submitted for an object that pre-dates the current server session, without cascading failure.
 
 ### Migrations
 
-`Base.metadata.create_all` runs at startup. This is acceptable for development and fresh deployments. Before deploying over an existing database, replace the `create_all` call with Alembic: `alembic upgrade head` (planned for Phase 1 — see [ROADMAP.md](ROADMAP.md)).
+`Base.metadata.create_all` runs at startup for fresh deployments. For existing databases run `alembic upgrade head`. Migration `0001_canonical_object_graph` creates the new tables and data-migrates the old `learnable_objects` rows (string PKs) to `canonical_objects` (UUID PKs) by recomputing IDs with `canonical_object_id()`.
 
 ### Fault tolerance
 

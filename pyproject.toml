@@ -16,6 +16,7 @@ sqlalchemy = "^2.0.32"
 asyncpg = "^0.29.0"
 redis = "^5.0.8"
 python-multipart = "^0.0.9"
+alembic = "^1.13"
 spacy = "^3.7"
 # After `poetry install`, download the model once:
 #   python -m spacy download es_core_news_sm
