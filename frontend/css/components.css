@@ -1,17 +1,19 @@
 .sentence-card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: var(--space-3);
+  padding: clamp(0.75rem, 3vw, 1rem);
   background: var(--bg);
 }
 
 .sentence-card__text {
   font-size: 1.05rem;
   margin-block-end: var(--space-2);
+  /* Prevent long unbroken words from overflowing on narrow screens / 200% zoom. */
+  overflow-wrap: break-word;
 }
 
-/* Pill list — reset UA list styling; semantic <ul>/<li> is preserved for AT
-   so screen readers announce the item count. */
+/* Pill list — <ul>/<li> gives AT the item count; reset UA list styles so the
+   pills render as an inline flex row without bullets or indentation. */
 .sentence-card__pills {
   display: flex;
   flex-wrap: wrap;
@@ -21,7 +23,13 @@
   margin: 0;
 }
 
-/* Empty-state paragraph shown before any parse or when no results are found. */
+/* Each <li> wraps exactly one pill.  display:contents makes the li transparent
+   to flex layout so mnemosyne-pill is the actual flex item, not the li. */
+.sentence-card__pills li {
+  display: contents;
+}
+
+/* Empty-state message shown before any parse and when no results are found. */
 .results-empty {
   color: var(--muted);
   text-align: center;
@@ -56,10 +64,12 @@
 .markdown {
   display: grid;
   gap: 0.5rem;
+  /* Prevent long technical terms from overflowing the modal on narrow viewports. */
+  overflow-wrap: break-word;
 }
 
-/* markdownToHtml maps ## → <h3> and ### → <h4> so modal content sits
-   below the modal's own <h2> heading in the document outline. */
+/* markdownToHtml maps ## → <h3> and ### → <h4> so lesson headings sit below
+   the modal's own <h2> title in the document outline. */
 .markdown h3,
 .markdown h4,
 .markdown p,
