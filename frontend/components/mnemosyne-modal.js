@@ -1,5 +1,4 @@
 export class MnemosyneModal extends HTMLElement {
-  // Tracks elements that were made inert on modal open so we can restore them.
   #inertedElements = []
 
   constructor() {
@@ -14,16 +13,13 @@ export class MnemosyneModal extends HTMLElement {
     this.render()
   }
 
-  open({ title, html, objectId, exampleText, onRate, onSpeak }) {
+  open({ lesson, objectId, onRate, onSpeak }) {
     this.isOpen = true
     this.previouslyFocused = document.activeElement
-    this.render({ title, html, objectId, exampleText, onRate, onSpeak })
+    this.render({ lesson, objectId, onRate, onSpeak })
     document.body.style.overflow = 'hidden'
     document.addEventListener('keydown', this.onKeydown)
 
-    // Inert all sibling body children so background content is unreachable
-    // by AT virtual cursor and keyboard.  aria-modal alone is insufficient
-    // across all screen reader / browser combinations.
     this.#inertedElements = []
     for (const child of document.body.children) {
       if (child !== this && !child.hasAttribute('inert')) {
@@ -32,9 +28,6 @@ export class MnemosyneModal extends HTMLElement {
       }
     }
 
-    // Focus the dialog container (tabindex="-1") so the screen reader
-    // announces "dialog, <title>" immediately on open.  Users then Tab
-    // to reach the first interactive button.
     this.shadowRoot.querySelector('[role="dialog"]')?.focus()
   }
 
@@ -43,17 +36,12 @@ export class MnemosyneModal extends HTMLElement {
     document.body.style.overflow = ''
     document.removeEventListener('keydown', this.onKeydown)
 
-    // Restore background accessibility before returning focus, so the
-    // focus target is reachable if it was previously inerted.
     for (const el of this.#inertedElements) {
       el.removeAttribute('inert')
     }
     this.#inertedElements = []
 
     this.render()
-
-    // previouslyFocused is often a mnemosyne-pill host with delegatesFocus:true,
-    // so calling .focus() on the host delegates into the shadow button.
     this.previouslyFocused?.focus?.()
   }
 
@@ -67,8 +55,6 @@ export class MnemosyneModal extends HTMLElement {
     }
 
     if (event.key === 'Tab') {
-      // Collect only enabled interactive elements; exclude the dialog container
-      // itself (tabindex="-1") since it is not in the natural tab sequence.
       const focusables = [
         ...this.shadowRoot.querySelectorAll(
           'button:not([disabled]), [href], input:not([disabled]), ' +
@@ -96,13 +82,13 @@ export class MnemosyneModal extends HTMLElement {
       return
     }
 
+    const { lesson, objectId, onRate, onSpeak } = state
     const canSpeak = 'speechSynthesis' in window
+    const exampleText = lesson.examples?.[0] ?? lesson.title
 
     this.shadowRoot.innerHTML = `
       <style>
-        :host {
-          color-scheme: light dark;
-        }
+        :host { color-scheme: light dark; }
 
         .overlay {
           position: fixed;
@@ -112,27 +98,21 @@ export class MnemosyneModal extends HTMLElement {
           place-items: center;
           padding: 1rem;
           z-index: 1000;
-          /* Prevent scroll-chaining to the page body on mobile. */
           overscroll-behavior: contain;
         }
 
         .dialog {
-          inline-size: min(42rem, 100%);
+          inline-size: min(44rem, 100%);
           max-block-size: 90dvh;
           overflow-y: auto;
           background: Canvas;
           color: CanvasText;
           border-radius: 1rem;
-          /* clamp keeps padding comfortable on narrow screens / 200% zoom. */
           padding: clamp(1rem, 4vw, 1.5rem);
           box-shadow: 0 1rem 2rem color-mix(in srgb, black 25%, transparent);
         }
 
-        /* tabindex="-1" makes the dialog focusable for the AT announcement on
-           open; suppress the visible ring since this is a programmatic focus. */
-        .dialog:focus {
-          outline: none;
-        }
+        .dialog:focus { outline: none; }
 
         .header {
           display: flex;
@@ -146,85 +126,217 @@ export class MnemosyneModal extends HTMLElement {
           font-size: clamp(1rem, 2.5vw + 0.5rem, 1.25rem);
         }
 
-        .close,
-        .actions button,
-        .ratings button {
+        /* ── buttons ── */
+        button {
           border: 1px solid color-mix(in srgb, CanvasText 25%, transparent);
           background: transparent;
           border-radius: 999px;
           color: inherit;
           font: inherit;
           cursor: pointer;
-          /* 2.75rem ≈ 44 CSS px touch target per WCAG 2.5.8 */
           min-block-size: 2.75rem;
         }
+
+        button:focus-visible {
+          outline: 3px solid var(--accent, #3557ff);
+          outline-offset: 3px;
+        }
+
+        button:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+
+        /* ── lesson body ── */
+        .lesson-body {
+          margin-block-start: 1rem;
+        }
+
+        .explanation {
+          margin: 0 0 0.75rem;
+          line-height: 1.5;
+        }
+
+        .type-badge {
+          display: inline-block;
+          font-size: 0.75rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          padding: 0.15em 0.6em;
+          border-radius: 999px;
+          border: 1px solid color-mix(in srgb, CanvasText 20%, transparent);
+          margin-block-end: 0.75rem;
+          color: var(--muted, GrayText);
+        }
+
+        /* ── fields ── */
+        .fields {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          gap: 0.2rem 1rem;
+          margin: 0 0 1rem;
+          font-size: 0.9rem;
+        }
+
+        .field-label {
+          color: var(--muted, GrayText);
+          white-space: nowrap;
+        }
+
+        .field-value {
+          font-weight: 500;
+          overflow-wrap: break-word;
+        }
+
+        /* ── examples / speak ── */
+        .examples {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          margin-block-end: 1.25rem;
+          flex-wrap: wrap;
+        }
+
+        .example-text {
+          font-size: 1.15rem;
+          font-weight: 600;
+          margin: 0;
+        }
+
+        .btn-speak {
+          padding-inline: 0.85rem;
+          font-size: 0.85rem;
+        }
+
+        /* ── drills ── */
+        .drills-section { margin-block-start: 1.25rem; }
+
+        .drills-heading {
+          font-size: 0.8rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: var(--muted, GrayText);
+          margin: 0 0 0.75rem;
+        }
+
+        .drill {
+          background: color-mix(in srgb, CanvasText 4%, transparent);
+          border-radius: 0.5rem;
+          padding: 0.85rem 1rem;
+          margin-block-end: 0.6rem;
+        }
+
+        .drill[data-answered="true"] .drill-option { cursor: default; }
+
+        .drill-prompt {
+          margin: 0 0 0.6rem;
+          font-size: 0.95rem;
+        }
+
+        .drill-text {
+          font-size: 1.1rem;
+          font-weight: 600;
+          margin: 0 0 0.6rem;
+        }
+
+        .drill-options {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.4rem;
+        }
+
+        .drill-option {
+          padding-inline: 0.85rem;
+          font-size: 0.9rem;
+        }
+
+        .drill-option[data-state="correct"] {
+          background: oklch(0.92 0.10 145);
+          border-color: oklch(0.55 0.18 145);
+          color: oklch(0.25 0.10 145);
+        }
+
+        @media (prefers-color-scheme: dark) {
+          .drill-option[data-state="correct"] {
+            background: oklch(0.30 0.10 145);
+            border-color: oklch(0.55 0.18 145);
+            color: oklch(0.85 0.08 145);
+          }
+        }
+
+        .drill-option[data-state="wrong"] {
+          background: color-mix(in srgb, var(--error-color, oklch(0.50 0.2 29)) 10%, transparent);
+          border-color: var(--error-color, oklch(0.50 0.2 29));
+          opacity: 0.7;
+        }
+
+        .drill-input-row {
+          display: flex;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+
+        .drill-input {
+          border: 1px solid color-mix(in srgb, CanvasText 30%, transparent);
+          border-radius: 0.375rem;
+          background: Canvas;
+          color: CanvasText;
+          font: inherit;
+          font-size: 0.95rem;
+          padding: 0.4rem 0.6rem;
+          min-inline-size: 8rem;
+          block-size: 2.75rem;
+        }
+
+        .drill-input:focus-visible {
+          outline: 3px solid var(--accent, #3557ff);
+          outline-offset: 2px;
+        }
+
+        .drill-check {
+          padding-inline: 0.85rem;
+          font-size: 0.9rem;
+        }
+
+        .drill-feedback {
+          margin: 0.5rem 0 0;
+          font-size: 0.875rem;
+          font-weight: 500;
+        }
+
+        .drill-feedback[data-result="correct"] { color: oklch(0.45 0.15 145); }
+        .drill-feedback[data-result="wrong"]   { color: var(--error-color, oklch(0.50 0.2 29)); }
+
+        @media (prefers-color-scheme: dark) {
+          .drill-feedback[data-result="correct"] { color: oklch(0.70 0.15 145); }
+        }
+
+        /* ── recall ratings ── */
+        .ratings {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-block-start: 1.25rem;
+        }
+
+        .ratings button { padding-inline: 0.85rem; }
 
         .close {
           padding-inline: 0.9rem;
           flex-shrink: 0;
         }
 
-        .close:focus-visible,
-        .actions button:focus-visible,
-        .ratings button:focus-visible {
-          outline: 3px solid var(--accent, #3557ff);
-          outline-offset: 3px;
-        }
+        /* ── status regions ── */
+        .status, .status-error { min-block-size: 1.5rem; margin-block-start: 0.75rem; }
+        .status       { color: var(--muted, GrayText); }
+        .status-error { color: var(--error-color, oklch(0.50 0.2 29)); }
+        .status-error:empty { display: none; }
 
-        .close:disabled,
-        .actions button:disabled,
-        .ratings button:disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
-        }
-
-        .actions,
-        .ratings {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.5rem;
-          margin-block-start: 1rem;
-        }
-
-        .ratings button {
-          padding-inline: 0.85rem;
-        }
-
-        .actions button {
-          padding-inline: 0.85rem;
-        }
-
-        .content {
-          margin-block-start: 1rem;
-          overflow-wrap: break-word;
-        }
-
-        /*
-         * Two live regions handle different urgency levels:
-         *
-         * .status   role="status"  — polite, for progress and success.
-         * .status-error  role="alert"   — assertive, for failures.
-         *
-         * Both are always present so the browser registers them before any
-         * announcement is needed (live regions must exist in the DOM first).
-         */
-        .status,
-        .status-error {
-          min-block-size: 1.5rem;
-          margin-block-start: 0.75rem;
-        }
-
-        .status {
-          color: var(--muted, GrayText);
-        }
-
-        .status-error {
-          /* Visible even when empty to keep layout stable. */
-          color: var(--error-color, oklch(0.50 0.2 29));
-        }
-
-        .status-error:empty {
-          display: none;
+        @media (prefers-reduced-motion: reduce) {
+          .status { transition: none !important; }
         }
       </style>
 
@@ -237,13 +349,22 @@ export class MnemosyneModal extends HTMLElement {
             <button type="button" class="close" data-close>Close</button>
           </div>
 
-          <div class="content">${state.html}</div>
+          <div class="lesson-body">
+            <span class="type-badge"></span>
+            <p class="explanation"></p>
 
-          <div class="actions">
-            <button type="button" data-speak
-              ${!canSpeak || !state.exampleText ? 'disabled' : ''}>
-              Speak example
-            </button>
+            <dl class="fields"></dl>
+
+            <div class="examples">
+              <p class="example-text"></p>
+              <button type="button" class="btn-speak"
+                ${!canSpeak ? 'disabled' : ''}>Speak</button>
+            </div>
+
+            <section class="drills-section" aria-label="Practice drills">
+              <p class="drills-heading" aria-hidden="true">Practice</p>
+              <div class="drills-list"></div>
+            </section>
           </div>
 
           <div class="ratings" role="group" aria-label="Rate your recall">
@@ -253,54 +374,74 @@ export class MnemosyneModal extends HTMLElement {
             <button type="button" data-rate="4">Easy  <span class="sr-only">(remembered effortlessly)</span></button>
           </div>
 
-          <!-- role="status": polite announcements (progress, success) -->
-          <p class="status" role="status" aria-atomic="true"></p>
-          <!-- role="alert": assertive announcements (errors) -->
-          <p class="status-error" role="alert" aria-atomic="true"></p>
+          <p class="status"      role="status" aria-atomic="true"></p>
+          <p class="status-error" role="alert"  aria-atomic="true"></p>
         </div>
       </div>
     `
 
-    // Set title via textContent — never innerHTML — to avoid XSS from API strings.
-    this.shadowRoot.querySelector('#modal-title').textContent = state.title
+    // ── Populate text safely via DOM (never innerHTML for API data) ───────────
+    const sr = this.shadowRoot
 
-    // Clicking the backdrop (overlay) but not the dialog closes the modal.
-    this.shadowRoot.querySelector('[data-overlay]')?.addEventListener('click', (event) => {
+    sr.querySelector('#modal-title').textContent = lesson.title
+    sr.querySelector('.type-badge').textContent  = lesson.type.replace('_', ' ')
+    sr.querySelector('.explanation').textContent = lesson.explanation
+
+    // Fields — definition list
+    const dl = sr.querySelector('.fields')
+    for (const field of lesson.fields ?? []) {
+      const dt = document.createElement('dt')
+      dt.className = 'field-label'
+      dt.textContent = field.label
+      const dd = document.createElement('dd')
+      dd.className = 'field-value'
+      dd.textContent = field.value
+      dl.append(dt, dd)
+    }
+
+    // Example text + speak
+    sr.querySelector('.example-text').textContent = exampleText
+    sr.querySelector('.btn-speak').addEventListener('click', () => {
+      onSpeak?.(exampleText)
+    })
+
+    // Drills
+    const drillsContainer = sr.querySelector('.drills-list')
+    for (let i = 0; i < (lesson.drills ?? []).length; i++) {
+      const drillEl = this.#renderDrill(lesson.drills[i], i, onSpeak)
+      if (drillEl) drillsContainer.appendChild(drillEl)
+    }
+
+    // ── Overlay click closes ──────────────────────────────────────────────────
+    sr.querySelector('[data-overlay]').addEventListener('click', (event) => {
       if (event.target === event.currentTarget) this.close()
     })
 
-    this.shadowRoot.querySelector('[data-close]')?.addEventListener('click', () => this.close())
+    sr.querySelector('[data-close]').addEventListener('click', () => this.close())
 
-    this.shadowRoot.querySelector('[data-speak]')?.addEventListener('click', () => {
-      state.onSpeak?.(state.exampleText)
-    })
-
-    this.shadowRoot.querySelectorAll('[data-rate]').forEach((button) => {
+    // ── Recall rating buttons ─────────────────────────────────────────────────
+    sr.querySelectorAll('[data-rate]').forEach((button) => {
       button.addEventListener('click', async () => {
-        const statusEl      = this.shadowRoot.querySelector('.status')
-        const errorEl       = this.shadowRoot.querySelector('.status-error')
-        const ratingButtons = [...this.shadowRoot.querySelectorAll('[data-rate]')]
+        const statusEl      = sr.querySelector('.status')
+        const errorEl       = sr.querySelector('.status-error')
+        const ratingButtons = [...sr.querySelectorAll('[data-rate]')]
 
-        // Disable all rating buttons while the save is in flight.
         ratingButtons.forEach((b) => { b.disabled = true })
-
-        // Clear both regions, then set the progress message in the polite one.
         errorEl.textContent  = ''
         statusEl.textContent = ''
-        queueMicrotask(() => { statusEl.textContent = 'Saving…' })
+        queueMicrotask(() => { statusEl.textContent = 'Saving\u2026' })
 
         try {
-          const result = await state.onRate?.(state.objectId, Number(button.dataset.rate))
+          const result = await onRate?.(objectId, Number(button.dataset.rate))
           const msg = result
             ? `Saved. Next review in ${result.next_interval_days} day(s).`
             : 'Review saved.'
           statusEl.textContent = ''
           queueMicrotask(() => { statusEl.textContent = msg })
         } catch (error) {
-          // Route errors to the assertive region so they interrupt the user.
           statusEl.textContent = ''
           const msg = error instanceof Error ? error.message : 'Review failed.'
-          errorEl.textContent = ''
+          errorEl.textContent  = ''
           queueMicrotask(() => { errorEl.textContent = msg })
         } finally {
           ratingButtons.forEach((b) => { b.disabled = false })
@@ -308,8 +449,7 @@ export class MnemosyneModal extends HTMLElement {
       })
     })
 
-    // Inline sr-only style — the component is self-contained and cannot rely
-    // on the light-DOM .sr-only utility class reaching into the shadow tree.
+    // sr-only inline style — shadow DOM cannot reach light-DOM utility classes
     const srOnlyStyle = `
       position: absolute;
       inline-size: 1px; block-size: 1px;
@@ -317,9 +457,213 @@ export class MnemosyneModal extends HTMLElement {
       overflow: hidden; clip-path: inset(50%);
       white-space: nowrap; border: 0;
     `
-    this.shadowRoot.querySelectorAll('.sr-only').forEach((el) => {
-      el.setAttribute('style', srOnlyStyle)
+    sr.querySelectorAll('.sr-only').forEach((el) => el.setAttribute('style', srOnlyStyle))
+  }
+
+  // ── Drill renderers ─────────────────────────────────────────────────────────
+  // Each renderer creates DOM nodes and attaches event listeners.
+  // Note: answer data (answer_index, answer, correct) is kept in JS closure —
+  // it is NOT embedded in data-attributes to avoid trivial DOM inspection.
+  // For a self-study tool this is still visible in memory, which is fine.
+
+  #renderDrill(drill, index, onSpeak) {
+    switch (drill.type) {
+      case 'shadowing':      return this.#renderShadowing(drill, index, onSpeak)
+      case 'multiple_choice': return this.#renderMultipleChoice(drill, index)
+      case 'fill_blank':     return this.#renderFillBlank(drill, index)
+      case 'recognition':    return this.#renderRecognition(drill, index)
+      default:               return null
+    }
+  }
+
+  #renderShadowing(drill, index, onSpeak) {
+    const canSpeak = 'speechSynthesis' in window
+    const el = document.createElement('div')
+    el.className = 'drill drill--shadowing'
+    el.setAttribute('aria-label', `Practice drill ${index + 1}: shadowing`)
+
+    const prompt = document.createElement('p')
+    prompt.className = 'drill-prompt'
+    prompt.textContent = 'Say aloud:'
+
+    const text = document.createElement('p')
+    text.className = 'drill-text'
+    text.textContent = drill.text
+
+    const btn = document.createElement('button')
+    btn.type = 'button'
+    btn.className = 'btn-speak'
+    btn.disabled = !canSpeak
+    btn.textContent = 'Speak'
+    btn.addEventListener('click', () => onSpeak?.(drill.text))
+
+    el.append(prompt, text, btn)
+    return el
+  }
+
+  #renderMultipleChoice(drill, index) {
+    const el = document.createElement('div')
+    el.className = 'drill drill--mc'
+    el.setAttribute('aria-label', `Practice drill ${index + 1}: multiple choice`)
+
+    const prompt = document.createElement('p')
+    prompt.className = 'drill-prompt'
+    prompt.textContent = drill.prompt
+
+    const group = document.createElement('div')
+    group.className = 'drill-options'
+    group.setAttribute('role', 'group')
+    group.setAttribute('aria-label', 'Choose one')
+
+    const feedback = document.createElement('p')
+    feedback.className = 'drill-feedback'
+    feedback.setAttribute('aria-live', 'polite')
+    feedback.setAttribute('aria-atomic', 'true')
+
+    let answered = false
+    drill.options.forEach((optionText, i) => {
+      const btn = document.createElement('button')
+      btn.type = 'button'
+      btn.className = 'drill-option'
+      btn.textContent = optionText
+      btn.addEventListener('click', () => {
+        if (answered) return
+        answered = true
+        const isCorrect = i === drill.answer_index
+
+        // Mark each option as correct/wrong/neutral
+        group.querySelectorAll('.drill-option').forEach((b, j) => {
+          b.disabled = true
+          if (j === drill.answer_index) b.dataset.state = 'correct'
+          else if (j === i && !isCorrect) b.dataset.state = 'wrong'
+        })
+
+        feedback.dataset.result = isCorrect ? 'correct' : 'wrong'
+        feedback.textContent = isCorrect
+          ? '\u2713 Correct!'
+          : `\u2717 The answer is \u201c${drill.options[drill.answer_index]}\u201d.`
+      })
+      group.appendChild(btn)
     })
+
+    el.append(prompt, group, feedback)
+    return el
+  }
+
+  #renderFillBlank(drill, index) {
+    const el = document.createElement('div')
+    el.className = 'drill drill--fill'
+    el.setAttribute('aria-label', `Practice drill ${index + 1}: fill in the blank`)
+
+    const prompt = document.createElement('p')
+    prompt.className = 'drill-prompt'
+    // Replace ___ with a visible blank marker
+    prompt.textContent = drill.prompt.replace('___', '\u2014\u2014\u2014')
+
+    const row = document.createElement('div')
+    row.className = 'drill-input-row'
+
+    const inputId = `drill-input-${index}`
+    const input = document.createElement('input')
+    input.type = 'text'
+    input.id = inputId
+    input.className = 'drill-input'
+    input.setAttribute('placeholder', 'Type your answer')
+    input.setAttribute('autocomplete', 'off')
+    input.setAttribute('autocorrect', 'off')
+    input.setAttribute('spellcheck', 'false')
+
+    const checkBtn = document.createElement('button')
+    checkBtn.type = 'button'
+    checkBtn.className = 'drill-check'
+    checkBtn.textContent = 'Check'
+
+    const hint = document.createElement('p')
+    hint.className = 'drill-feedback'
+    hint.setAttribute('aria-live', 'polite')
+    hint.setAttribute('aria-atomic', 'true')
+
+    if (drill.hint) {
+      const hintEl = document.createElement('p')
+      hintEl.className = 'drill-feedback'
+      hintEl.style.color = 'var(--muted, GrayText)'
+      hintEl.textContent = `Hint: ${drill.hint}`
+      row.appendChild(hintEl)
+    }
+
+    let answered = false
+    const check = () => {
+      if (answered) return
+      const value = input.value.trim()
+      if (!value) return
+      answered = true
+      input.disabled = true
+      checkBtn.disabled = true
+
+      const isCorrect = value.toLowerCase() === drill.answer.toLowerCase()
+      hint.dataset.result = isCorrect ? 'correct' : 'wrong'
+      hint.textContent = isCorrect
+        ? '\u2713 Correct!'
+        : `\u2717 The answer is \u201c${drill.answer}\u201d.`
+    }
+
+    checkBtn.addEventListener('click', check)
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { e.preventDefault(); check() }
+    })
+
+    row.append(input, checkBtn)
+    el.append(prompt, row, hint)
+    return el
+  }
+
+  #renderRecognition(drill, index) {
+    const el = document.createElement('div')
+    el.className = 'drill drill--rec'
+    el.setAttribute('aria-label', `Practice drill ${index + 1}: true or false`)
+
+    const prompt = document.createElement('p')
+    prompt.className = 'drill-prompt'
+    prompt.textContent = drill.statement
+
+    const group = document.createElement('div')
+    group.className = 'drill-options'
+    group.setAttribute('role', 'group')
+    group.setAttribute('aria-label', 'True or false?')
+
+    const feedback = document.createElement('p')
+    feedback.className = 'drill-feedback'
+    feedback.setAttribute('aria-live', 'polite')
+    feedback.setAttribute('aria-atomic', 'true')
+
+    let answered = false
+    ;[{ label: 'True', value: true }, { label: 'False', value: false }].forEach(({ label, value }) => {
+      const btn = document.createElement('button')
+      btn.type = 'button'
+      btn.className = 'drill-option'
+      btn.textContent = label
+      btn.addEventListener('click', () => {
+        if (answered) return
+        answered = true
+        const isCorrect = value === drill.correct
+
+        group.querySelectorAll('.drill-option').forEach((b) => {
+          b.disabled = true
+          const btnValue = b.textContent === 'True'
+          if (btnValue === drill.correct) b.dataset.state = 'correct'
+          else if (btnValue === value && !isCorrect) b.dataset.state = 'wrong'
+        })
+
+        feedback.dataset.result = isCorrect ? 'correct' : 'wrong'
+        feedback.textContent = isCorrect
+          ? '\u2713 Correct!'
+          : `\u2717 That\u2019s ${drill.correct ? 'true' : 'false'}.`
+      })
+      group.appendChild(btn)
+    })
+
+    el.append(prompt, group, feedback)
+    return el
   }
 }
 

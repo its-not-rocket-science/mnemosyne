@@ -159,7 +159,8 @@ async def test_lesson_served_from_db(async_client, db_engine) -> None:
     data = resp.json()
     assert data["id"] == obj_id
     assert "prueba" in data["title"]
-    assert "prueba" in data["content_markdown"]
+    assert "prueba" in data["explanation"]
+    assert len(data["drills"]) >= 1
 
 
 @pytest.mark.asyncio

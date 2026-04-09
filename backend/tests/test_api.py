@@ -173,9 +173,9 @@ def test_lesson_available_after_parse() -> None:
     data = lesson_resp.json()
     assert data["id"] == obj_id
     assert "title" in data
-    assert "content_markdown" in data
-    assert isinstance(data["content_markdown"], str)
-    assert len(data["content_markdown"]) > 0
+    assert "explanation" in data
+    assert isinstance(data["explanation"], str)
+    assert len(data["explanation"]) > 0
 
 
 def test_lesson_response_shape() -> None:
@@ -190,7 +190,51 @@ def test_lesson_response_shape() -> None:
     lesson_resp = client.get(f"/lesson/{objects[0]['id']}?language=en")
     assert lesson_resp.status_code == 200
     data = lesson_resp.json()
-    assert set(data.keys()) >= {"id", "title", "content_markdown"}
+    assert set(data.keys()) >= {"id", "type", "title", "explanation", "fields", "examples", "drills"}
+
+
+def test_lesson_drills_are_present() -> None:
+    """Each lesson must include at least one drill."""
+    parse_resp = _parse("The teacher writes clearly.")
+    objects = [obj for s in parse_resp.json()["sentences"] for obj in s["learnable_objects"]]
+    assert objects
+    data = client.get(f"/lesson/{objects[0]['id']}?language=en").json()
+    assert len(data["drills"]) >= 1
+    for drill in data["drills"]:
+        assert "type" in drill
+
+
+def test_lesson_drill_types_are_valid() -> None:
+    """Drill type values must be one of the four defined types."""
+    valid_types = {"multiple_choice", "fill_blank", "recognition", "shadowing"}
+    parse_resp = _parse("The student reads books.")
+    objects = [obj for s in parse_resp.json()["sentences"] for obj in s["learnable_objects"]]
+    data = client.get(f"/lesson/{objects[0]['id']}?language=en").json()
+    for drill in data["drills"]:
+        assert drill["type"] in valid_types
+
+
+def test_lesson_multiple_choice_shape() -> None:
+    """Multiple-choice drills must have options and a valid answer_index."""
+    parse_resp = _parse("The cat sleeps quietly.")
+    objects = [obj for s in parse_resp.json()["sentences"] for obj in s["learnable_objects"]]
+    data = client.get(f"/lesson/{objects[0]['id']}?language=en").json()
+    mc_drills = [d for d in data["drills"] if d["type"] == "multiple_choice"]
+    for drill in mc_drills:
+        assert len(drill["options"]) >= 2
+        assert 0 <= drill["answer_index"] < len(drill["options"])
+
+
+def test_lesson_is_deterministic() -> None:
+    """Fetching the same lesson twice must return identical content."""
+    parse_resp = _parse("The river flows slowly.")
+    objects = [obj for s in parse_resp.json()["sentences"] for obj in s["learnable_objects"]]
+    assert objects
+    obj_id = objects[0]["id"]
+    url = f"/lesson/{obj_id}?language=en"
+    first  = client.get(url).json()
+    second = client.get(url).json()
+    assert first == second
 
 
 # ── /review ───────────────────────────────────────────────────────────────────

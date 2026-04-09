@@ -139,16 +139,12 @@ results.addEventListener('lesson-open', async (event) => {
     const lesson = await response.json()
 
     modal.open({
-      title:       lesson.title,
-      html:        markdownToHtml(lesson.content_markdown),
-      objectId:    lesson.id,
-      exampleText: lesson.example_text,
-      onRate:      submitReview,
-      onSpeak:     (text) => speakText(text, language),
+      lesson,
+      objectId: lesson.id,
+      onRate:   submitReview,
+      onSpeak:  (text) => speakText(text, language),
     })
 
-    // Announce after the modal opens; the modal itself announces its title
-    // via role="dialog" + aria-labelledby, so keep this brief.
     setStatus(`Lesson open: ${lesson.title}.`)
   } catch (error) {
     setStatus(error instanceof Error ? error.message : 'Failed to load lesson.', 'error')
@@ -228,49 +224,10 @@ function speakText(text, language) {
 }
 
 
-// ── Markdown → safe HTML ──────────────────────────────────────────────────────
-// Minimal subset: ##/### headings, - list items, **bold**, plain paragraphs.
-//
-// Maps ## → <h3> and ### → <h4> so lesson content headings sit below the
-// modal's own <h2> title and maintain a valid document outline.
-//
-// All text is HTML-escaped before insertion; bold markers are applied after
-// escaping so special characters in the text cannot break the <strong> tag.
-
-function markdownToHtml(markdown) {
-  const lines = markdown.split('\n')
-  let html = '<div class="markdown">'
-  let inList = false
-
-  for (const line of lines) {
-    if (line.startsWith('### ')) {
-      if (inList) { html += '</ul>'; inList = false }
-      html += `<h4>${escapeHtml(line.slice(4))}</h4>`
-    } else if (line.startsWith('## ')) {
-      if (inList) { html += '</ul>'; inList = false }
-      html += `<h3>${escapeHtml(line.slice(3))}</h3>`
-    } else if (line.startsWith('- ')) {
-      if (!inList) { html += '<ul>'; inList = true }
-      html += `<li>${inlineMarkdown(line.slice(2))}</li>`
-    } else if (line.trim() === '') {
-      if (inList) { html += '</ul>'; inList = false }
-    } else {
-      if (inList) { html += '</ul>'; inList = false }
-      html += `<p>${inlineMarkdown(line)}</p>`
-    }
-  }
-
-  if (inList) html += '</ul>'
-  html += '</div>'
-  return html
-}
-
-function inlineMarkdown(text) {
-  return escapeHtml(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-}
+// ── HTML escaping ─────────────────────────────────────────────────────────────
 
 function escapeHtml(value) {
-  return value
+  return String(value)
     .replaceAll('&',  '&amp;')
     .replaceAll('<',  '&lt;')
     .replaceAll('>',  '&gt;')
