@@ -43,13 +43,6 @@ class ParseResponse(BaseModel):
     sentences: list[SentenceResult]
 
 
-class LessonResponse(BaseModel):
-    id: str
-    title: str
-    content_markdown: str
-    example_text: str | None = None
-
-
 class ReviewRequest(BaseModel):
     object_id: str
     quality: int = Field(ge=1, le=4)

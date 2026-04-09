@@ -6,9 +6,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_db_session, get_plugin_registry
+from backend.lesson.generators import build_lesson
 from backend.models import CanonicalObjectRow
 from backend.parsing.plugin_loader import PluginRegistry
-from backend.schemas.parse import LessonResponse
+from backend.schemas.lesson import LessonResponse
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["lesson"])
@@ -25,11 +26,12 @@ async def get_lesson(
     try:
         row = await db.get(CanonicalObjectRow, object_id)
         if row is not None:
-            return _build_response(
-                id=row.id,
+            return build_lesson(
+                object_id=row.id,
                 obj_type=row.type,
-                label=row.display_label,
-                lesson_data=row.lesson_data,
+                canonical_form=row.canonical_form,
+                display_label=row.display_label,
+                lesson_data=row.lesson_data or {},
             )
     except Exception:
         logger.warning("DB lesson lookup failed for %r", object_id, exc_info=True)
@@ -40,37 +42,14 @@ async def get_lesson(
     except KeyError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
 
-    lesson = plugin.get_lesson(object_id)
-    if lesson is None:
+    lo = plugin.get_lesson(object_id)
+    if lo is None:
         raise HTTPException(status_code=404, detail="Lesson object not found")
 
-    return _build_response(
-        id=lesson.id,
-        obj_type=lesson.type,
-        label=lesson.label,
-        lesson_data=lesson.lesson_data,
+    return build_lesson(
+        object_id=lo.id,
+        obj_type=lo.type,
+        canonical_form=lo.id,   # plugin fallback: no canonical_form field on LearnableObject
+        display_label=lo.label,
+        lesson_data=lo.lesson_data or {},
     )
-
-
-def _build_response(
-    *,
-    id: str,
-    obj_type: str,
-    label: str,
-    lesson_data: dict,
-) -> LessonResponse:
-    title = f"{obj_type.replace('_', ' ').title()}: {label}"
-    return LessonResponse(
-        id=id,
-        title=title,
-        content_markdown=_render_markdown(obj_type, label, lesson_data),
-        example_text=label,
-    )
-
-
-def _render_markdown(lesson_type: str, label: str, lesson_data: dict) -> str:
-    lines = [f"## {label}", "", f"Type: **{lesson_type}**", ""]
-    for key, value in lesson_data.items():
-        lines.append(f"- **{key.replace('_', ' ').title()}**: {value}")
-    lines.extend(["", "### Drill", "", "Choose the best interpretation, then rate your recall."])
-    return "\n".join(lines)
