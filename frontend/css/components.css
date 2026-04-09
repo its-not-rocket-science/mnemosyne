@@ -10,10 +10,23 @@
   margin-block-end: var(--space-2);
 }
 
+/* Pill list — reset UA list styling; semantic <ul>/<li> is preserved for AT
+   so screen readers announce the item count. */
 .sentence-card__pills {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Empty-state paragraph shown before any parse or when no results are found. */
+.results-empty {
+  color: var(--muted);
+  text-align: center;
+  padding-block: var(--space-4);
+  margin: 0;
 }
 
 .lesson-actions {
@@ -45,8 +58,10 @@
   gap: 0.5rem;
 }
 
-.markdown h2,
+/* markdownToHtml maps ## → <h3> and ### → <h4> so modal content sits
+   below the modal's own <h2> heading in the document outline. */
 .markdown h3,
+.markdown h4,
 .markdown p,
 .markdown ul {
   margin: 0;
