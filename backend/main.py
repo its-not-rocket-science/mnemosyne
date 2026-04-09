@@ -11,6 +11,7 @@ from backend.api.routes.languages import router as languages_router
 from backend.api.routes.lesson import router as lesson_router
 from backend.api.routes.parse import router as parse_router
 from backend.api.routes.ready import router as ready_router
+from backend.api.routes.recommend import router as recommend_router
 from backend.api.routes.review import router as review_router
 from backend.core.config import Settings, get_settings
 from backend.core.database import engine
@@ -106,6 +107,7 @@ app.include_router(parse_router)
 app.include_router(lesson_router)
 app.include_router(review_router)
 app.include_router(dashboard_router)
+app.include_router(recommend_router)
 app.include_router(languages_router)
 app.include_router(ready_router)
 
