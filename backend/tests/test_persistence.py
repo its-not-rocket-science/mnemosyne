@@ -16,8 +16,9 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_asyn
 
 from backend.core.database import get_db_session
 from backend.main import app
-from backend.models import Base, CanonicalObjectRow, ParsedText, ReviewStateRow
+from backend.models import Base, CanonicalObjectRow, ParsedText, UserKnowledgeRow
 from backend.parsing.canonical import canonical_object_id
+from backend.srs.knowledge import DEFAULT_USER_ID
 
 _TEST_DB_URL = "sqlite+aiosqlite:///:memory:"
 
@@ -202,16 +203,19 @@ async def test_review_persists_state(async_client, db_engine) -> None:
 
     factory = async_sessionmaker(db_engine, class_=AsyncSession, expire_on_commit=False)
     async with factory() as db:
-        rows = (await db.execute(select(ReviewStateRow))).scalars().all()
+        rows = (await db.execute(select(UserKnowledgeRow))).scalars().all()
 
     assert len(rows) == 1
     assert rows[0].object_id == "es:vocab:hola"
-    assert rows[0].state["reviews"] == 1
+    assert rows[0].user_id == DEFAULT_USER_ID
+    assert rows[0].fsrs_state["reviews"] == 1
+    assert rows[0].total_reviews == 1
+    assert rows[0].mastery_score > 0.0
 
 
 @pytest.mark.asyncio
 async def test_review_loads_prior_state_from_db(async_client) -> None:
-    """Second review must pick up the DB state, not start from scratch."""
+    """Second review must pick up the UserKnowledge DB state, not start fresh."""
     await async_client.post(
         "/review",
         json={"object_id": "es:vocab:mundo", "quality": 3},

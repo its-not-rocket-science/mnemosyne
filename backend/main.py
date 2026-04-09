@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from backend.api.dependencies import get_plugin_registry
+from backend.api.routes.dashboard import router as dashboard_router
 from backend.api.routes.lesson import router as lesson_router
 from backend.api.routes.parse import router as parse_router
 from backend.api.routes.ready import router as ready_router
@@ -102,6 +103,7 @@ app.add_middleware(
 app.include_router(parse_router)
 app.include_router(lesson_router)
 app.include_router(review_router)
+app.include_router(dashboard_router)
 app.include_router(ready_router)
 
 
