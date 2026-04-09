@@ -10,7 +10,8 @@ from __future__ import annotations
 
 import pytest
 
-from backend.schemas.parse import LearnableObject, SentenceResult
+from backend.parsing.canonical import canonical_object_id
+from backend.schemas.parse import CandidateObject, CandidateSentenceResult, LearnableObject
 
 
 # ── skip guard ────────────────────────────────────────────────────────────────
@@ -44,11 +45,11 @@ def plugin():
 # ── helpers ───────────────────────────────────────────────────────────────────
 
 
-def objects_of(result: SentenceResult, kind: str) -> list[LearnableObject]:
-    return [o for o in result.learnable_objects if o.type == kind]
+def objects_of(result: CandidateSentenceResult, kind: str) -> list[CandidateObject]:
+    return [o for o in result.candidates if o.type == kind]
 
 
-def confidences_valid(objects: list[LearnableObject]) -> bool:
+def confidences_valid(objects: list[CandidateObject]) -> bool:
     return all(0.0 < o.confidence <= 1.0 for o in objects if o.confidence is not None)
 
 
@@ -187,18 +188,20 @@ class TestConjugationExtraction:
     def test_conjugation_id_is_stable(self, plugin) -> None:
         r1 = plugin.analyze_sentence("Yo hablo mucho.")
         r2 = plugin.analyze_sentence("Yo hablo mucho.")
-        ids1 = {o.id for o in objects_of(r1, "conjugation")}
-        ids2 = {o.id for o in objects_of(r2, "conjugation")}
+        ids1 = {canonical_object_id("es", o.type, o.canonical_form) for o in objects_of(r1, "conjugation")}
+        ids2 = {canonical_object_id("es", o.type, o.canonical_form) for o in objects_of(r2, "conjugation")}
         assert ids1 == ids2
 
     def test_confidence_in_valid_range(self, plugin) -> None:
         result = plugin.analyze_sentence("Tú corres rápido.")
         assert confidences_valid(objects_of(result, "conjugation"))
 
-    def test_all_conjugation_ids_start_with_es_conj(self, plugin) -> None:
+    def test_conjugation_canonical_form_has_expected_format(self, plugin) -> None:
+        # canonical_form for conjugations is lemma:tense:mood:person:number
         result = plugin.analyze_sentence("Ellos caminan despacio.")
         for obj in objects_of(result, "conjugation"):
-            assert obj.id.startswith("es:conj:")
+            parts = obj.canonical_form.split(":")
+            assert len(parts) == 5, f"Unexpected canonical_form: {obj.canonical_form!r}"
 
 
 # ── agreement extraction ──────────────────────────────────────────────────────
@@ -234,18 +237,18 @@ class TestAgreementExtraction:
     def test_agreement_id_stable_across_identical_sentences(self, plugin) -> None:
         r1 = plugin.analyze_sentence("La casa blanca es grande.")
         r2 = plugin.analyze_sentence("La casa blanca es grande.")
-        ids1 = {o.id for o in objects_of(r1, "agreement")}
-        ids2 = {o.id for o in objects_of(r2, "agreement")}
+        ids1 = {canonical_object_id("es", o.type, o.canonical_form) for o in objects_of(r1, "agreement")}
+        ids2 = {canonical_object_id("es", o.type, o.canonical_form) for o in objects_of(r2, "agreement")}
         assert ids1 == ids2
 
-    def test_agreement_id_uses_lemmas(self, plugin) -> None:
-        # IDs must be lemma-based ("es:agreement:det:el_libro"), not surface-based
+    def test_agreement_canonical_form_uses_lemmas(self, plugin) -> None:
+        # canonical_form for agreements is pos:modifier_lemma_noun_lemma — lemma-based
         result = plugin.analyze_sentence("Los libros nuevos.")
         for obj in objects_of(result, "agreement"):
-            assert obj.id.startswith("es:agreement:")
-            # Surface forms like "los" should not appear verbatim in the ID;
-            # only the lemma (e.g. "el") should.
-            assert "los" not in obj.id   # "los" lemmatises to "el" or "lo"
+            # Surface form "los" lemmatises to "el" or "lo"; must not appear verbatim
+            assert "los" not in obj.canonical_form, (
+                f"Surface form 'los' found in canonical_form: {obj.canonical_form!r}"
+            )
 
     def test_no_confirmed_mismatch_emitted(self, plugin) -> None:
         # Agreements with a confirmed gender or number mismatch indicate a
@@ -316,44 +319,51 @@ class TestConfidenceHeuristics:
 
 
 class TestLessonStore:
-    def test_all_objects_retrievable_by_id(self, plugin) -> None:
-        result = plugin.analyze_sentence("El estudiante inteligente lee muchos libros.")
-        for obj in result.learnable_objects:
-            stored = plugin.get_lesson(obj.id)
-            assert stored is not None
-            assert stored.id == obj.id
-
     def test_missing_id_returns_none(self, plugin) -> None:
-        assert plugin.get_lesson("es:vocab:_zzz_nonexistent_") is None
+        assert plugin.get_lesson("nonexistent-uuid-0000") is None
 
-    def test_lesson_persists_across_unrelated_calls(self, plugin) -> None:
-        r = plugin.analyze_sentence("El médico habla despacio.")
-        first_id = r.learnable_objects[0].id
-        plugin.analyze_sentence("Los niños juegan afuera.")
-        assert plugin.get_lesson(first_id) is not None
+    def test_get_lesson_returns_stored_object(self, plugin) -> None:
+        # lesson_store is populated by the parse route after UUID resolution.
+        # Simulate that here by inserting a LearnableObject directly.
+        fake_id = canonical_object_id("es", "vocabulary", "_test_word_")
+        lo = LearnableObject(id=fake_id, type="vocabulary", label="test", lesson_data={})
+        plugin.lesson_store[fake_id] = lo
+        stored = plugin.get_lesson(fake_id)
+        assert stored is not None
+        assert stored.id == fake_id
+
+    def test_lesson_store_keyed_by_uuid(self, plugin) -> None:
+        # Verify the lesson_store key format is a UUID string (deterministic v5).
+        result = plugin.analyze_sentence("El libro es bueno.")
+        for obj in result.candidates:
+            obj_id = canonical_object_id("es", obj.type, obj.canonical_form)
+            assert len(obj_id) == 36  # UUID string length
+            assert obj_id.count("-") == 4  # UUID hyphen count
 
 
 # ── ID stability ──────────────────────────────────────────────────────────────
 
 
 class TestIdStability:
-    def test_same_word_same_id_across_sentences(self, plugin) -> None:
+    def test_same_word_same_canonical_form_across_sentences(self, plugin) -> None:
         r1 = plugin.analyze_sentence("El libro es bueno.")
         r2 = plugin.analyze_sentence("No tengo el libro.")
-        vocab1 = {o.id for o in objects_of(r1, "vocabulary")}
-        vocab2 = {o.id for o in objects_of(r2, "vocabulary")}
-        shared = vocab1 & vocab2
-        assert any("libro" in i for i in shared)
+        vocab1 = {o.canonical_form for o in objects_of(r1, "vocabulary")}
+        vocab2 = {o.canonical_form for o in objects_of(r2, "vocabulary")}
+        assert "libro" in vocab1 & vocab2
 
-    def test_all_ids_prefixed_with_es(self, plugin) -> None:
+    def test_canonical_object_id_deterministic(self, plugin) -> None:
+        # The same canonical_form always produces the same UUID.
         result = plugin.analyze_sentence("Mañana voy al mercado.")
-        for obj in result.learnable_objects:
-            assert obj.id.startswith("es:"), f"Bad prefix: {obj.id!r}"
+        for obj in result.candidates:
+            id1 = canonical_object_id("es", obj.type, obj.canonical_form)
+            id2 = canonical_object_id("es", obj.type, obj.canonical_form)
+            assert id1 == id2
 
-    def test_ids_are_non_empty_strings(self, plugin) -> None:
+    def test_canonical_forms_are_non_empty_strings(self, plugin) -> None:
         result = plugin.analyze_sentence("La profesora explica bien.")
-        for obj in result.learnable_objects:
-            assert isinstance(obj.id, str) and obj.id
+        for obj in result.candidates:
+            assert isinstance(obj.canonical_form, str) and obj.canonical_form
 
 
 # ── edge cases ────────────────────────────────────────────────────────────────
@@ -362,7 +372,7 @@ class TestIdStability:
 class TestEdgeCases:
     def test_punctuation_only_returns_no_objects(self, plugin) -> None:
         result = plugin.analyze_sentence("...")
-        assert result.learnable_objects == []
+        assert result.candidates == []
 
     def test_sentence_text_preserved_verbatim(self, plugin) -> None:
         sentence = "¡Qué bueno es esto!"
@@ -371,23 +381,23 @@ class TestEdgeCases:
 
     def test_single_word_sentence_does_not_crash(self, plugin) -> None:
         result = plugin.analyze_sentence("Hola.")
-        assert isinstance(result.learnable_objects, list)
+        assert isinstance(result.candidates, list)
 
     def test_all_returned_types_are_known(self, plugin) -> None:
         known_types = {"vocabulary", "conjugation", "agreement", "idiom", "grammar", "nuance"}
         result = plugin.analyze_sentence(
             "Los estudiantes inteligentes hablan bien el español."
         )
-        for obj in result.learnable_objects:
+        for obj in result.candidates:
             assert obj.type in known_types, f"Unknown type: {obj.type!r}"
 
     def test_repeated_analysis_of_same_sentence_is_idempotent(self, plugin) -> None:
         sentence = "El gato negro duerme."
         r1 = plugin.analyze_sentence(sentence)
         r2 = plugin.analyze_sentence(sentence)
-        ids1 = {o.id for o in r1.learnable_objects}
-        ids2 = {o.id for o in r2.learnable_objects}
-        assert ids1 == ids2
+        forms1 = {o.canonical_form for o in r1.candidates}
+        forms2 = {o.canonical_form for o in r2.candidates}
+        assert forms1 == forms2
 
 
 # ── deduplication ─────────────────────────────────────────────────────────────
@@ -420,7 +430,7 @@ class TestDeduplication:
         # The lemma "ir" should appear exactly once across all objects.
         result = plugin.analyze_sentence("Voy a ir al mercado.")
         all_ir = [
-            o for o in result.learnable_objects
+            o for o in result.candidates
             if o.lesson_data.get("lemma") == "ir"
         ]
         assert len(all_ir) == 1, (
@@ -459,13 +469,13 @@ class TestDeduplication:
                 f"Non-finite verb vocabulary item missing verb_form: {obj.lesson_data}"
             )
 
-    def test_no_id_appears_twice(self, plugin) -> None:
-        # Each ID must be unique within a single sentence result.
+    def test_no_canonical_form_appears_twice(self, plugin) -> None:
+        # Each canonical_form must be unique within a single sentence result.
         result = plugin.analyze_sentence(
             "Los estudiantes estudian y aprenden mucho."
         )
-        ids = [o.id for o in result.learnable_objects]
-        assert len(ids) == len(set(ids)), "Duplicate object IDs in one sentence"
+        forms = [o.canonical_form for o in result.candidates]
+        assert len(forms) == len(set(forms)), "Duplicate canonical forms in one sentence"
 
 
 # ── improved plugin features ──────────────────────────────────────────────────

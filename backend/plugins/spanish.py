@@ -45,8 +45,8 @@ Known limitations
 - Reflexive detection relies on the dependency parse.  Parse errors
   produce missed or spurious results.
 - Confidence scores are heuristic proxies, not calibrated probabilities.
-- ``_nlp`` is called twice per text when the route calls
-  ``split_sentences`` then ``analyze_sentence`` for each result.
+- ``_nlp`` is called once per text via ``analyze_text``; ``split_sentences``
+  and ``analyze_sentence`` are kept for direct use in tests and tooling.
 """
 from __future__ import annotations
 
@@ -131,14 +131,26 @@ class SpanishPlugin:
     # LanguagePlugin protocol
     # ------------------------------------------------------------------
 
+    def analyze_text(self, text: str) -> list[CandidateSentenceResult]:
+        """Parse full text in a single spaCy call; return one result per sentence."""
+        doc = self._nlp(text.strip())
+        results = []
+        for sent in doc.sents:
+            sent_text = sent.text.strip()
+            if not sent_text:
+                continue
+            results.append(self._analyze_tokens(sent_text, list(sent)))
+        return results
+
     def split_sentences(self, text: str) -> list[str]:
         doc = self._nlp(text.strip())
         return [s.text.strip() for s in doc.sents if s.text.strip()]
 
     def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
         doc = self._nlp(sentence)
-        tokens = list(doc)
+        return self._analyze_tokens(sentence, list(doc))
 
+    def _analyze_tokens(self, sentence: str, tokens: list[Any]) -> CandidateSentenceResult:
         # seen_vocab is shared: conjugation populates it with verb lemmas so
         # that the same lemma is not also emitted as a vocabulary item.
         seen_vocab: set[str] = set()
