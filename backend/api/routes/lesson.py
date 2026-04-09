@@ -6,7 +6,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_db_session, get_plugin_registry
-from backend.models import LearnableObjectRow
+from backend.models import CanonicalObjectRow
 from backend.parsing.plugin_loader import PluginRegistry
 from backend.schemas.parse import LessonResponse
 
@@ -23,12 +23,12 @@ async def get_lesson(
 ) -> LessonResponse:
     # 1. Database lookup — authoritative when the object has been parsed.
     try:
-        row = await db.get(LearnableObjectRow, object_id)
+        row = await db.get(CanonicalObjectRow, object_id)
         if row is not None:
             return _build_response(
                 id=row.id,
                 obj_type=row.type,
-                label=row.label,
+                label=row.display_label,
                 lesson_data=row.lesson_data,
             )
     except Exception:

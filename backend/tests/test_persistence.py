@@ -16,7 +16,8 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_asyn
 
 from backend.core.database import get_db_session
 from backend.main import app
-from backend.models import Base, LearnableObjectRow, ParsedText, ReviewStateRow
+from backend.models import Base, CanonicalObjectRow, ParsedText, ReviewStateRow
+from backend.parsing.canonical import canonical_object_id
 
 _TEST_DB_URL = "sqlite+aiosqlite:///:memory:"
 
@@ -91,7 +92,7 @@ async def test_parse_persists_source_url(async_client, db_engine) -> None:
 
 
 @pytest.mark.asyncio
-async def test_parse_persists_learnable_objects(async_client, db_engine) -> None:
+async def test_parse_persists_canonical_objects(async_client, db_engine) -> None:
     resp = await async_client.post(
         "/parse",
         json={"text": "Yo hablo español.", "language": "es"},
@@ -103,7 +104,7 @@ async def test_parse_persists_learnable_objects(async_client, db_engine) -> None
 
     factory = async_sessionmaker(db_engine, class_=AsyncSession, expire_on_commit=False)
     async with factory() as db:
-        rows = (await db.execute(select(LearnableObjectRow))).scalars().all()
+        rows = (await db.execute(select(CanonicalObjectRow))).scalars().all()
 
     assert len(rows) > 0
     ids_in_db = {r.id for r in rows}
@@ -116,18 +117,18 @@ async def test_parse_persists_learnable_objects(async_client, db_engine) -> None
 
 
 @pytest.mark.asyncio
-async def test_parse_upserts_learnable_objects(async_client, db_engine) -> None:
-    """Parsing the same text twice must not create duplicate object rows."""
+async def test_parse_upserts_canonical_objects(async_client, db_engine) -> None:
+    """Parsing the same text twice must not create duplicate canonical object rows."""
     payload = {"text": "Hola amigo.", "language": "es"}
     await async_client.post("/parse", json=payload)
     await async_client.post("/parse", json=payload)
 
     factory = async_sessionmaker(db_engine, class_=AsyncSession, expire_on_commit=False)
     async with factory() as db:
-        rows = (await db.execute(select(LearnableObjectRow))).scalars().all()
+        rows = (await db.execute(select(CanonicalObjectRow))).scalars().all()
 
     ids = [r.id for r in rows]
-    assert len(ids) == len(set(ids)), "Duplicate learnable object rows after re-parse"
+    assert len(ids) == len(set(ids)), "Duplicate canonical object rows after re-parse"
 
 
 # ── /lesson DB lookup ─────────────────────────────────────────────────────────
@@ -135,25 +136,27 @@ async def test_parse_upserts_learnable_objects(async_client, db_engine) -> None:
 
 @pytest.mark.asyncio
 async def test_lesson_served_from_db(async_client, db_engine) -> None:
-    """A learnable object pre-loaded in the DB should be returned directly."""
+    """A canonical object pre-loaded in the DB should be returned directly."""
+    obj_id = canonical_object_id("es", "vocabulary", "prueba")
     factory = async_sessionmaker(db_engine, class_=AsyncSession, expire_on_commit=False)
     async with factory() as db:
         db.add(
-            LearnableObjectRow(
-                id="es:vocab:prueba",
+            CanonicalObjectRow(
+                id=obj_id,
                 language="es",
                 type="vocabulary",
-                label="prueba",
+                canonical_form="prueba",
+                display_label="prueba",
                 lesson_data={"lemma": "prueba", "gloss": "test / trial"},
                 confidence=0.9,
             )
         )
         await db.commit()
 
-    resp = await async_client.get("/lesson/es%3Avocab%3Aprueba?language=es")
+    resp = await async_client.get(f"/lesson/{obj_id}?language=es")
     assert resp.status_code == 200
     data = resp.json()
-    assert data["id"] == "es:vocab:prueba"
+    assert data["id"] == obj_id
     assert "prueba" in data["title"]
     assert "prueba" in data["content_markdown"]
 

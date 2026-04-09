@@ -9,7 +9,7 @@ from __future__ import annotations
 import re
 
 from backend.parsing.plugin_interface import Token
-from backend.schemas.parse import LearnableObject, SentenceResult
+from backend.schemas.parse import CandidateObject, CandidateSentenceResult, LearnableObject
 
 _SENTENCE_RE = re.compile(r"[^.!?]+[.!?]?")
 _WORD_RE = re.compile(r"[A-Za-z']+")
@@ -21,7 +21,7 @@ class EnglishStubPlugin:
     direction = "ltr"
 
     def __init__(self) -> None:
-        self._lesson_store: dict[str, LearnableObject] = {}
+        self.lesson_store: dict[str, LearnableObject] = {}
 
     # ------------------------------------------------------------------
     # LanguagePlugin protocol
@@ -30,15 +30,13 @@ class EnglishStubPlugin:
     def split_sentences(self, text: str) -> list[str]:
         return [m.group(0).strip() for m in _SENTENCE_RE.finditer(text) if m.group(0).strip()]
 
-    def analyze_sentence(self, sentence: str) -> SentenceResult:
+    def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
         tokens = self._tokenize(sentence)
-        objects = self._extract_vocabulary(tokens)
-        for obj in objects:
-            self._lesson_store[obj.id] = obj
-        return SentenceResult(text=sentence, learnable_objects=objects)
+        candidates = self._extract_vocabulary(tokens)
+        return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     def get_lesson(self, object_id: str) -> LearnableObject | None:
-        return self._lesson_store.get(object_id)
+        return self.lesson_store.get(object_id)
 
     # ------------------------------------------------------------------
     # Internals
@@ -50,24 +48,23 @@ class EnglishStubPlugin:
             for w in _WORD_RE.findall(sentence)
         ]
 
-    def _extract_vocabulary(self, tokens: list[Token]) -> list[LearnableObject]:
+    def _extract_vocabulary(self, tokens: list[Token]) -> list[CandidateObject]:
         seen: set[str] = set()
-        objects: list[LearnableObject] = []
+        candidates: list[CandidateObject] = []
         for token in tokens:
             if token.lemma in seen:
                 continue
             seen.add(token.lemma)
-            object_id = f"en:vocab:{token.lemma}"
-            objects.append(
-                LearnableObject(
-                    id=object_id,
+            candidates.append(
+                CandidateObject(
+                    canonical_form=token.lemma,
                     type="vocabulary",
                     label=token.text,
                     lesson_data={"lemma": token.lemma},
                     confidence=None,  # stub — no real confidence
                 )
             )
-        return objects
+        return candidates
 
 
 def create_plugin() -> EnglishStubPlugin:

@@ -2,26 +2,26 @@
 
 Table overview
 ──────────────
-  parsed_texts        One row per /parse call; stores raw input for audit.
-  sentences           One row per sentence within a ParsedText, in order.
-  learnable_objects   Canonical record per learnable item, keyed by the
-                      deterministic ID produced by the plugin (e.g.
-                      "es:vocab:hola").  Upserted on each /parse so
-                      lesson_data stays fresh.
-  review_states       One row per learnable_object; stores the FSRS
-                      scheduling state.  No FK to learnable_objects so
-                      that a review can be submitted even if the object
-                      has not been parsed in the current session.
-
-JSON columns use the dialect-neutral ``JSON`` type.  PostgreSQL will map
-this to ``jsonb`` in a future Alembic migration if index support is needed.
+  parsed_texts       One row per /parse call; stores raw input for audit.
+  sentences          One row per sentence within a ParsedText, in order.
+  canonical_objects  Deduplicated learnable objects keyed by a deterministic
+                     UUID derived from (language, type, canonical_form).
+                     The same word encountered in different texts always maps
+                     to the same row.
+  object_relations   Directed relationships between canonical objects
+                     (e.g. conjugation → vocabulary lemma).
+  sentence_objects   Join table linking sentences to the canonical objects
+                     found in them, enabling cross-text reinforcement queries.
+  review_states      FSRS scheduling state per canonical object.  No FK to
+                     canonical_objects so reviews can be submitted even when
+                     the object row is absent.
 """
 from __future__ import annotations
 
 import uuid
 from datetime import UTC, datetime
 
-from sqlalchemy import DateTime, Float, ForeignKey, Integer, String, Text
+from sqlalchemy import DateTime, Float, ForeignKey, Integer, String, Text, UniqueConstraint
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 from sqlalchemy.types import JSON
 
@@ -61,23 +61,73 @@ class Sentence(Base):
     text: Mapped[str] = mapped_column(Text)
 
     parsed_text: Mapped[ParsedText] = relationship("ParsedText", back_populates="sentences")
+    sentence_objects: Mapped[list[SentenceObjectRow]] = relationship(
+        "SentenceObjectRow", back_populates="sentence", cascade="all, delete-orphan"
+    )
 
 
-class LearnableObjectRow(Base):
-    """Canonical lesson record, keyed by the plugin-generated deterministic ID.
+class CanonicalObjectRow(Base):
+    """Deduplicated canonical learnable object.
 
-    On re-parse the row is upserted: existing rows have their ``lesson_data``
-    and ``confidence`` updated; ``created_at`` is only set on first insert.
+    The primary key is a deterministic UUID-v5 derived from
+    ``(language, type, canonical_form)`` via ``canonical_object_id()``.
+    This means upserts are PK lookups — no SELECT by natural key needed.
     """
-    __tablename__ = "learnable_objects"
+    __tablename__ = "canonical_objects"
 
-    id: Mapped[str] = mapped_column(String, primary_key=True)
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
     language: Mapped[str] = mapped_column(String(10))
     type: Mapped[str] = mapped_column(String(50))
-    label: Mapped[str] = mapped_column(String)
+    canonical_form: Mapped[str] = mapped_column(String)
+    display_label: Mapped[str] = mapped_column(String)
     lesson_data: Mapped[dict] = mapped_column(JSON, default=dict)
     confidence: Mapped[float | None] = mapped_column(Float, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=_now, onupdate=_now
+    )
+
+    __table_args__ = (
+        UniqueConstraint("language", "type", "canonical_form", name="uq_canonical_object"),
+    )
+
+
+class ObjectRelationRow(Base):
+    """Directed relationship between two canonical objects.
+
+    Example: a conjugation object (source) relates to its lemma's vocabulary
+    object (target) via ``relation_type = "conjugation_of"``.
+    """
+    __tablename__ = "object_relations"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    source_id: Mapped[str] = mapped_column(String(36), ForeignKey("canonical_objects.id"))
+    target_id: Mapped[str] = mapped_column(String(36), ForeignKey("canonical_objects.id"))
+    relation_type: Mapped[str] = mapped_column(String(50))
+
+    __table_args__ = (
+        UniqueConstraint("source_id", "target_id", "relation_type", name="uq_object_relation"),
+    )
+
+
+class SentenceObjectRow(Base):
+    """Join table: which canonical objects appear in which sentence.
+
+    Enables queries like "show me all sentences where this word appeared"
+    for cross-text reinforcement.  ``position`` is the zero-based index of
+    the object within the sentence's learnable_objects list.
+    """
+    __tablename__ = "sentence_objects"
+
+    sentence_id: Mapped[str] = mapped_column(
+        String(36), ForeignKey("sentences.id"), primary_key=True
+    )
+    object_id: Mapped[str] = mapped_column(
+        String(36), ForeignKey("canonical_objects.id"), primary_key=True
+    )
+    position: Mapped[int] = mapped_column(Integer)
+
+    sentence: Mapped[Sentence] = relationship("Sentence", back_populates="sentence_objects")
 
 
 class ReviewStateRow(Base):
