@@ -68,6 +68,7 @@ async def submit_review(
                 object_id=payload.object_id,
                 fsrs_state=updated_state,
                 mastery_score=score,
+                first_seen=now,
                 last_seen=now,
                 total_reviews=updated_state["reviews"],
                 due_at=due_at,
