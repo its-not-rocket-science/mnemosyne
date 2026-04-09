@@ -34,9 +34,13 @@ def _ensure_utc(dt: datetime) -> datetime:
 
 @router.get("/dashboard", response_model=DashboardResponse)
 async def get_dashboard(
+    language: str | None = None,
     db: AsyncSession = Depends(get_db_session),
 ) -> DashboardResponse:
     """Return a summary of the learner's knowledge state.
+
+    Pass ``?language=es`` to scope the results to a single language.
+    Omit the parameter to return all languages combined.
 
     All UserKnowledge rows for the default user are loaded and classified
     in-process.  For the single-user MVP this is fast enough; a future
@@ -45,11 +49,12 @@ async def get_dashboard(
     now = datetime.now(UTC)
 
     try:
-        result = await db.execute(
-            select(UserKnowledgeRow).where(
-                UserKnowledgeRow.user_id == DEFAULT_USER_ID
-            )
+        query = select(UserKnowledgeRow).where(
+            UserKnowledgeRow.user_id == DEFAULT_USER_ID
         )
+        if language is not None:
+            query = query.where(UserKnowledgeRow.language == language)
+        result = await db.execute(query)
         rows = result.scalars().all()
     except Exception as exc:
         logger.warning("DB dashboard query failed", exc_info=True)

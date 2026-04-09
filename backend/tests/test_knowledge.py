@@ -281,3 +281,49 @@ async def test_review_payload_state_used_when_no_db_row(async_client) -> None:
     )
     assert resp.status_code == 200
     assert resp.json()["review_state"]["reviews"] == 6
+
+
+# ── /dashboard?language= filter ───────────────────────────────────────────────
+
+
+@pytest.mark.asyncio
+async def test_dashboard_language_filter_isolates_language(async_client) -> None:
+    """Objects from one language must not appear in another language's dashboard."""
+    await async_client.post("/parse", json={"text": "Hola amigo.", "language": "es"})
+    await async_client.post("/parse", json={"text": "Bonjour monde.", "language": "fr"})
+
+    dash_es = (await async_client.get("/dashboard?language=es")).json()
+    dash_fr = (await async_client.get("/dashboard?language=fr")).json()
+
+    es_ids = {o["object_id"] for o in dash_es["new"]}
+    fr_ids = {o["object_id"] for o in dash_fr["new"]}
+
+    assert es_ids, "Expected Spanish objects in es dashboard"
+    assert fr_ids, "Expected French objects in fr dashboard"
+    assert es_ids.isdisjoint(fr_ids), "Language dashboards must not share object IDs"
+
+
+@pytest.mark.asyncio
+async def test_dashboard_no_language_filter_returns_all(async_client) -> None:
+    """Without ?language, all languages are combined."""
+    await async_client.post("/parse", json={"text": "Hola.", "language": "es"})
+    await async_client.post("/parse", json={"text": "Bonjour.", "language": "fr"})
+
+    dash_all = (await async_client.get("/dashboard")).json()
+    dash_es  = (await async_client.get("/dashboard?language=es")).json()
+    dash_fr  = (await async_client.get("/dashboard?language=fr")).json()
+
+    assert dash_all["total_objects"] >= dash_es["total_objects"] + dash_fr["total_objects"]
+
+
+@pytest.mark.asyncio
+async def test_dashboard_unknown_language_returns_empty(async_client) -> None:
+    """A language with no parsed objects returns an empty dashboard, not an error."""
+    await async_client.post("/parse", json={"text": "Hola.", "language": "es"})
+
+    dash = (await async_client.get("/dashboard?language=zh")).json()
+    assert dash["total_objects"] == 0
+    assert dash["new"] == []
+    assert dash["weak"] == []
+    assert dash["known"] == []
+    assert dash["due_for_review"] == []
