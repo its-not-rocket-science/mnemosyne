@@ -87,6 +87,7 @@ class FrenchStubPlugin:
             candidates.append(
                 CandidateObject(
                     canonical_form=lemma,
+                    surface_form=token.text,
                     type="vocabulary",
                     label=token.text,
                     lesson_data={"lemma": lemma},

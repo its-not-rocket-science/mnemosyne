@@ -82,6 +82,7 @@ class CanonicalObjectRow(Base):
     type: Mapped[str] = mapped_column(String(50))
     canonical_form: Mapped[str] = mapped_column(String)
     display_label: Mapped[str] = mapped_column(String)
+    surface_forms: Mapped[list] = mapped_column(JSON, default=list)
     lesson_data: Mapped[dict] = mapped_column(JSON, default=dict)
     confidence: Mapped[float | None] = mapped_column(Float, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)

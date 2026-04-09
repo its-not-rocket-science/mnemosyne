@@ -61,6 +61,7 @@ class EnglishStubPlugin:
             candidates.append(
                 CandidateObject(
                     canonical_form=token.lemma,
+                    surface_form=token.text,
                     type="vocabulary",
                     label=token.text,
                     lesson_data={"lemma": token.lemma},

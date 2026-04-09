@@ -78,10 +78,16 @@ class CandidateObject(BaseModel):
     vocabulary, or ``{lemma}:{tense}:{mood}:{person}:{number}`` for
     conjugations.  The parse route derives the deterministic UUID from
     ``canonical_object_id(language, type, canonical_form)``.
+
+    ``surface_form`` is the specific inflected form seen in this text
+    (e.g. "gatos" for canonical "gato", "hablo" for a conjugation).
+    The parse route accumulates all distinct surface forms ever seen
+    into ``CanonicalObjectRow.surface_forms``.
     """
     canonical_form: str
     type: LearnableType
     label: str
+    surface_form: str | None = None
     lesson_data: dict[str, Any] = Field(default_factory=dict)
     confidence: float | None = None
     relation_hints: list[RelationHint] = Field(default_factory=list)

@@ -132,6 +132,70 @@ async def test_parse_upserts_canonical_objects(async_client, db_engine) -> None:
     assert len(ids) == len(set(ids)), "Duplicate canonical object rows after re-parse"
 
 
+# ── surface_forms accumulation ───────────────────────────────────────────────
+
+
+@pytest.mark.asyncio
+async def test_parse_surface_forms_populated(async_client, db_engine) -> None:
+    """After /parse, canonical objects carry at least one surface form."""
+    await async_client.post(
+        "/parse",
+        json={"text": "Los gatos negros duermen.", "language": "es"},
+    )
+    factory = async_sessionmaker(db_engine, class_=AsyncSession, expire_on_commit=False)
+    async with factory() as db:
+        rows = (await db.execute(select(CanonicalObjectRow))).scalars().all()
+
+    for row in rows:
+        assert isinstance(row.surface_forms, list), (
+            f"surface_forms should be a list, got {type(row.surface_forms)}"
+        )
+        assert len(row.surface_forms) >= 1, (
+            f"canonical '{row.canonical_form}' has no surface forms"
+        )
+
+
+@pytest.mark.asyncio
+async def test_parse_surface_forms_accumulate_across_parses(async_client, db_engine) -> None:
+    """Parsing different inflections of the same lemma grows surface_forms."""
+    # Parse singular first, then plural — both map to the same canonical "gato"
+    await async_client.post(
+        "/parse", json={"text": "El gato duerme.", "language": "es"}
+    )
+    await async_client.post(
+        "/parse", json={"text": "Los gatos duermen.", "language": "es"}
+    )
+
+    factory = async_sessionmaker(db_engine, class_=AsyncSession, expire_on_commit=False)
+    async with factory() as db:
+        result = await db.execute(
+            select(CanonicalObjectRow).where(CanonicalObjectRow.canonical_form == "gato")
+        )
+        gato = result.scalars().first()
+
+    assert gato is not None
+    assert len(gato.surface_forms) >= 2, (
+        f"Expected at least 2 surface forms for 'gato', got {gato.surface_forms}"
+    )
+
+
+@pytest.mark.asyncio
+async def test_parse_surface_forms_no_duplicates(async_client, db_engine) -> None:
+    """Re-parsing the same text does not duplicate surface forms."""
+    payload = {"text": "El libro rojo.", "language": "es"}
+    await async_client.post("/parse", json=payload)
+    await async_client.post("/parse", json=payload)
+
+    factory = async_sessionmaker(db_engine, class_=AsyncSession, expire_on_commit=False)
+    async with factory() as db:
+        rows = (await db.execute(select(CanonicalObjectRow))).scalars().all()
+
+    for row in rows:
+        assert len(row.surface_forms) == len(set(row.surface_forms)), (
+            f"Duplicate surface forms on '{row.canonical_form}': {row.surface_forms}"
+        )
+
+
 # ── /lesson DB lookup ─────────────────────────────────────────────────────────
 
 

@@ -144,6 +144,7 @@ class SpanishStubPlugin:
     def _vocabulary(self, token: Token) -> CandidateObject:
         return CandidateObject(
             canonical_form=token.lemma,
+            surface_form=token.text,
             type="vocabulary",
             label=token.text,
             lesson_data={"lemma": token.lemma},
@@ -154,6 +155,7 @@ class SpanishStubPlugin:
         stem = token.morph.get("Stem", token.lemma)
         return CandidateObject(
             canonical_form=token.lemma,
+            surface_form=token.text,
             type="conjugation",
             label=token.text,
             lesson_data={"stem": stem, "form": token.text.lower()},
@@ -161,10 +163,12 @@ class SpanishStubPlugin:
         )
 
     def _agreement(self, noun: Token, adj: Token) -> CandidateObject:
+        surface = f"{noun.text} {adj.text}"
         return CandidateObject(
             canonical_form=f"{noun.lemma}+{adj.lemma}",
+            surface_form=surface,
             type="agreement",
-            label=f"{noun.text} {adj.text}",
+            label=surface,
             lesson_data={"noun": noun.text, "adjective": adj.text},
             confidence=0.5,
         )

@@ -214,6 +214,7 @@ class SpanishPlugin:
 
             candidates.append(CandidateObject(
                 canonical_form=lemma,
+                surface_form=tok.text,
                 type="vocabulary",
                 label=tok.text,
                 lesson_data=data,
@@ -285,6 +286,7 @@ class SpanishPlugin:
 
             candidates.append(CandidateObject(
                 canonical_form=canonical_form,
+                surface_form=tok.text,
                 type="conjugation",
                 label=tok.text,
                 lesson_data=lesson,
@@ -395,6 +397,7 @@ class SpanishPlugin:
 
                 candidates.append(CandidateObject(
                     canonical_form=canonical_form,
+                    surface_form=label,
                     type="agreement",
                     label=label,
                     lesson_data={
