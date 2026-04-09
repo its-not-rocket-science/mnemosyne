@@ -19,6 +19,7 @@ LearnableType = Literal[
 
 class LearnableObject(BaseModel):
     id: str
+    language: str
     type: LearnableType
     label: str
     lesson_data: dict[str, Any] = Field(default_factory=dict)

@@ -57,7 +57,6 @@ from typing import Any
 from backend.schemas.parse import (
     CandidateObject,
     CandidateSentenceResult,
-    LearnableObject,
     RelationHint,
 )
 
@@ -106,7 +105,7 @@ class SpanishPlugin:
     direction     = "ltr"
 
     def __init__(self) -> None:
-        self.lesson_store: dict[str, LearnableObject] = {}
+        self.lesson_store: dict[str, CandidateObject] = {}
 
     # ------------------------------------------------------------------
     # Model — lazy, loaded at most once per process via cached_property
@@ -165,7 +164,7 @@ class SpanishPlugin:
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
-    def get_lesson(self, object_id: str) -> LearnableObject | None:
+    def get_lesson(self, object_id: str) -> CandidateObject | None:
         return self.lesson_store.get(object_id)
 
     # ------------------------------------------------------------------

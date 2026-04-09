@@ -14,13 +14,41 @@ class PluginRegistry:
         self._plugins: dict[str, LanguagePlugin] = {}
 
     def register(self, plugin: LanguagePlugin) -> None:
-        self._plugins[plugin.language_code] = plugin
+        code = plugin.language_code.lower().strip()
+        if code in self._plugins:
+            logger.warning(
+                "Language %r already registered by %r; overwriting with %r.",
+                code,
+                type(self._plugins[code]).__name__,
+                type(plugin).__name__,
+            )
+        self._plugins[code] = plugin
 
     def get(self, language_code: str) -> LanguagePlugin:
         normalized = language_code.lower().strip()
         if normalized not in self._plugins:
-            raise KeyError(f"No plugin registered for language '{language_code}'")
+            available = ", ".join(sorted(self._plugins)) or "none"
+            raise KeyError(
+                f"Language '{language_code}' is not supported. "
+                f"Available: {available}"
+            )
         return self._plugins[normalized]
+
+    def supported_languages(self) -> dict[str, dict[str, str]]:
+        """Return metadata for every registered plugin.
+
+        Keys are language codes; values are dicts with ``display_name`` and
+        ``direction`` so the frontend can build a language selector without
+        knowing plugin internals.
+        """
+        return {
+            code: {
+                "code": code,
+                "display_name": p.display_name,
+                "direction": p.direction,
+            }
+            for code, p in self._plugins.items()
+        }
 
     def all(self) -> dict[str, LanguagePlugin]:
         return dict(self._plugins)
@@ -38,6 +66,11 @@ def _iter_plugin_modules(package_name: str) -> list[ModuleType]:
 
 def load_plugins() -> PluginRegistry:
     settings = get_settings()
+    allowed: set[str] | None = (
+        {lang.lower().strip() for lang in settings.enabled_languages}
+        if settings.enabled_languages is not None
+        else None
+    )
     registry = PluginRegistry()
     for module in _iter_plugin_modules(settings.plugin_package):
         plugin_factory = getattr(module, "create_plugin", None)
@@ -45,6 +78,12 @@ def load_plugins() -> PluginRegistry:
             continue
         try:
             plugin = plugin_factory()
+            if allowed is not None and plugin.language_code.lower() not in allowed:
+                logger.debug(
+                    "Skipping plugin %r (language %r not in ENABLED_LANGUAGES).",
+                    module.__name__, plugin.language_code,
+                )
+                continue
             registry.register(plugin)
             logger.info("Registered plugin %r (language: %r)", module.__name__, plugin.language_code)
         except Exception:

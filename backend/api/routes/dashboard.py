@@ -65,6 +65,7 @@ async def get_dashboard(
         status = classify(row.total_reviews, row.fsrs_state, now)
         obj = KnowledgeObject(
             object_id=row.object_id,
+            language=row.language,
             status=status,
             mastery_score=round(score, 4),
             total_reviews=row.total_reviews,

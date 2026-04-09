@@ -79,7 +79,7 @@ def test_parse_single_sentence_no_trailing_punctuation() -> None:
 
 
 def test_parse_unsupported_language_returns_404() -> None:
-    resp = _parse("Bonjour monde.", language="fr")
+    resp = _parse("你好世界", language="zh")
     assert resp.status_code == 404
     assert "detail" in resp.json()
 
@@ -151,7 +151,7 @@ def test_lesson_not_found_returns_404() -> None:
 
 
 def test_lesson_unsupported_language_returns_404() -> None:
-    resp = client.get("/lesson/fr%3Avocab%3Abonjour?language=fr")
+    resp = client.get("/lesson/zh%3Avocab%3A%E4%BD%A0%E5%A5%BD?language=zh")
     assert resp.status_code == 404
 
 

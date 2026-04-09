@@ -11,7 +11,7 @@ from __future__ import annotations
 import pytest
 
 from backend.parsing.canonical import canonical_object_id
-from backend.schemas.parse import CandidateObject, CandidateSentenceResult, LearnableObject
+from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 
 # ── skip guard ────────────────────────────────────────────────────────────────
@@ -324,13 +324,14 @@ class TestLessonStore:
 
     def test_get_lesson_returns_stored_object(self, plugin) -> None:
         # lesson_store is populated by the parse route after UUID resolution.
-        # Simulate that here by inserting a LearnableObject directly.
+        # Simulate that by inserting a CandidateObject directly (the store type).
+        from backend.schemas.parse import CandidateObject as CO
         fake_id = canonical_object_id("es", "vocabulary", "_test_word_")
-        lo = LearnableObject(id=fake_id, type="vocabulary", label="test", lesson_data={})
-        plugin.lesson_store[fake_id] = lo
+        cand = CO(canonical_form="_test_word_", type="vocabulary", label="test", lesson_data={})
+        plugin.lesson_store[fake_id] = cand
         stored = plugin.get_lesson(fake_id)
         assert stored is not None
-        assert stored.id == fake_id
+        assert stored.canonical_form == "_test_word_"
 
     def test_lesson_store_keyed_by_uuid(self, plugin) -> None:
         # Verify the lesson_store key format is a UUID string (deterministic v5).
