@@ -2,15 +2,16 @@ from __future__ import annotations
 
 from pydantic import BaseModel, Field
 
-from backend.difficulty.scorer import UserLevel
+from backend.difficulty.scorer import DifficultyLabel, UserLevel
 
 
 class SentenceDifficultyItem(BaseModel):
-    """One scored sentence returned by GET /recommend-text."""
+    """One scored sentence returned by GET /recommend or /recommend-text."""
     sentence_id: str
     text: str
     language: str
     difficulty: float = Field(ge=0.0, le=1.0, description="Composite difficulty 0.0–1.0")
+    difficulty_label: DifficultyLabel = Field(description="easy | ideal | hard")
     unknown_ratio: float = Field(ge=0.0, le=1.0, description="Fraction of objects below mastery threshold")
     grammar_score: float = Field(ge=0.0, le=1.0, description="Conjugation/agreement density")
     length_score: float = Field(ge=0.0, le=1.0, description="Normalised word count")
