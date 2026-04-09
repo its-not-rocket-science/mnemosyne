@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import asyncio
 import hashlib
 import logging
+import time
 from datetime import UTC, datetime
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -38,17 +40,24 @@ async def parse_text(
     except KeyError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
 
+    t0 = time.perf_counter()
+
     cache_key = _cache_key(payload.text, payload.language)
     try:
         cached = await get_json(cache_key)
         if cached is not None:
+            logger.debug(
+                "parse cache=HIT lang=%s chars=%d elapsed_ms=%.1f",
+                payload.language, len(payload.text),
+                (time.perf_counter() - t0) * 1000,
+            )
             return ParseResponse.model_validate(cached)
     except Exception:
         pass  # Redis unavailable — continue without cache
 
-    candidate_results: list[CandidateSentenceResult] = [
-        plugin.analyze_sentence(s) for s in plugin.split_sentences(payload.text)
-    ]
+    t_nlp = time.perf_counter()
+    candidate_results: list[CandidateSentenceResult] = plugin.analyze_text(payload.text)
+    logger.debug("parse nlp_ms=%.1f sentences=%d", (time.perf_counter() - t_nlp) * 1000, len(candidate_results))
 
     # Resolve candidates → LearnableObjects with stable UUIDs.
     # uuid_to_candidate tracks (canonical_form, CandidateObject) for DB persistence.
@@ -81,17 +90,35 @@ async def parse_text(
         )
 
     response = ParseResponse(sentences=sentences)
+    response_json = response.model_dump(mode="json")
 
+    # DB persist and cache write are independent after the response is built.
+    # AsyncSession is not concurrency-safe, so persist runs first; then both
+    # the cache write and the (already-done) return value are ready together.
+    persist_exc: Exception | None = None
     try:
         await _persist_parse(db, payload, candidate_results, sentences, uuid_to_candidate)
-    except Exception:
-        logger.warning("DB persistence failed for /parse", exc_info=True)
+    except Exception as exc:
+        persist_exc = exc
+
+    cache_task = asyncio.ensure_future(set_json(cache_key, response_json))
+
+    if persist_exc is not None:
+        logger.warning("DB persistence failed for /parse", exc_info=persist_exc)
 
     try:
-        await set_json(cache_key, response.model_dump(mode="json"))
+        await cache_task
     except Exception:
         pass  # Redis unavailable — return result uncached
 
+    logger.info(
+        "parse lang=%s chars=%d sentences=%d objects=%d elapsed_ms=%.1f",
+        payload.language,
+        len(payload.text),
+        len(sentences),
+        len(uuid_to_candidate),
+        (time.perf_counter() - t0) * 1000,
+    )
     return response
 
 
@@ -189,7 +216,9 @@ async def _persist_parse(
                 position=pos,
             ))
 
-    # ── Pass 2: upsert object relations ─────────────────────────────────────
+    # ── Pass 2: upsert object relations (batched) ───────────────────────────
+    # Collect every (src_id, tgt_id, relation_type) triple that should exist.
+    desired_relations: list[tuple[str, str, str]] = []
     for cand_result in candidate_results:
         for cand in cand_result.candidates:
             src_id = canonical_object_id(payload.language, cand.type, cand.canonical_form)
@@ -199,19 +228,23 @@ async def _persist_parse(
                 )
                 if tgt_id not in uuid_to_candidate:
                     continue  # target not extracted in this parse — skip
-                rel_q = await db.execute(
-                    select(ObjectRelationRow).where(
-                        ObjectRelationRow.source_id == src_id,
-                        ObjectRelationRow.target_id == tgt_id,
-                        ObjectRelationRow.relation_type == hint.relation_type,
-                    )
-                )
-                if rel_q.scalar_one_or_none() is None:
-                    db.add(ObjectRelationRow(
-                        source_id=src_id,
-                        target_id=tgt_id,
-                        relation_type=hint.relation_type,
-                    ))
+                desired_relations.append((src_id, tgt_id, hint.relation_type))
+
+    if desired_relations:
+        src_ids = list({r[0] for r in desired_relations})
+        rel_q = await db.execute(
+            select(ObjectRelationRow).where(ObjectRelationRow.source_id.in_(src_ids))
+        )
+        existing_rels: set[tuple[str, str, str]] = {
+            (r.source_id, r.target_id, r.relation_type) for r in rel_q.scalars()
+        }
+        for triple in desired_relations:
+            if triple not in existing_rels:
+                db.add(ObjectRelationRow(
+                    source_id=triple[0],
+                    target_id=triple[1],
+                    relation_type=triple[2],
+                ))
 
     await db.commit()
 

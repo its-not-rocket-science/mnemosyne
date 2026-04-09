@@ -27,6 +27,9 @@ class EnglishStubPlugin:
     # LanguagePlugin protocol
     # ------------------------------------------------------------------
 
+    def analyze_text(self, text: str) -> list[CandidateSentenceResult]:
+        return [self.analyze_sentence(s) for s in self.split_sentences(text)]
+
     def split_sentences(self, text: str) -> list[str]:
         return [m.group(0).strip() for m in _SENTENCE_RE.finditer(text) if m.group(0).strip()]
 

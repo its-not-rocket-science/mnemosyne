@@ -23,6 +23,15 @@ class LanguagePlugin(Protocol):
     # as a fallback when the DB is unavailable.
     lesson_store: dict[str, LearnableObject]
 
+    def analyze_text(self, text: str) -> list[CandidateSentenceResult]:
+        """Parse the full input text in one pass and return one result per sentence.
+
+        Implementations should avoid calling the underlying NLP model more than
+        once.  The parse route calls this method exclusively; ``split_sentences``
+        and ``analyze_sentence`` are kept for direct use in tests and tooling.
+        """
+        ...
+
     def split_sentences(self, text: str) -> list[str]:
         ...
 
