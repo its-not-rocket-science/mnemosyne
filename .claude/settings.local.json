@@ -4,7 +4,11 @@
       "Bash(python:*)",
       "Bash(poetry install:*)",
       "Bash(pip install:*)",
-      "Bash(poetry run:*)"
+      "Bash(poetry run:*)",
+      "Bash(node --input-type=module)",
+      "Bash(node --check \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\\\\frontend\\\\js\\\\main.js\")",
+      "Bash(node --check \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\\\\frontend\\\\components\\\\mnemosyne-modal.js\")",
+      "Bash(node --check \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\\\\frontend\\\\components\\\\mnemosyne-pill.js\")"
     ]
   }
 }

@@ -1,0 +1,568 @@
+<!doctype html>
+<!--
+  Multilingual UI Test Matrix — Mnemosyne
+  =========================================
+  A self-contained static page for manually verifying that the UI renders
+  correctly across script families, directions, and tokenisation modes.
+
+  HOW TO USE
+  ----------
+  Open this file directly in a browser (no server needed).  Work through each
+  section in turn using the checklist.  Record PASS / FAIL against each item.
+
+  No backend calls are made.  All sample content is hard-coded.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multilingual UI Test Matrix — Mnemosyne</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <script type="module" src="../components/mnemosyne-pill.js"></script>
+    <style>
+      /* ── Matrix-specific chrome ── */
+      .matrix-section {
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: clamp(1rem, 4vw, 1.5rem);
+        margin-block-end: var(--space-4);
+        background: var(--surface);
+      }
+
+      .matrix-section h2 {
+        margin-block-start: 0;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+      }
+
+      .test-case {
+        border-block-start: 1px solid var(--border);
+        padding-block: var(--space-3);
+      }
+
+      .test-case:first-of-type { border-block-start: none; }
+
+      .test-label {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-block-end: 0.5rem;
+      }
+
+      .checklist {
+        font-size: 0.85rem;
+        color: var(--muted);
+        margin: 0.5rem 0 0;
+        padding-inline-start: 1.2rem;
+      }
+
+      .checklist li { margin-block-end: 0.2rem; }
+
+      /* Narrow viewport simulation */
+      .narrow-wrap {
+        max-inline-size: 20rem;
+        border: 1px dashed var(--border);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap">
+        <p class="eyebrow" aria-hidden="true">Mnemosyne</p>
+        <h1>Multilingual UI Test Matrix</h1>
+        <p class="lede">
+          Manual checklist for verifying rendering across LTR, RTL, CJK, and mixed-script scenarios.
+          Open DevTools → Inspect each card to verify <code>lang</code> and <code>dir</code> attributes.
+        </p>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1" class="wrap">
+
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s1">
+        <h2 id="s1">1 — LTR Latin (Spanish)</h2>
+
+        <div class="test-case">
+          <p class="test-label">TC-LTR-01: Basic sentence card</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text"
+               lang="es" dir="ltr"
+               data-tokenization="whitespace"
+               data-layer="native">
+              La casa roja habla muy despacio.
+            </p>
+            <ul class="sentence-card__pills" dir="ltr">
+              <li><mnemosyne-pill type="vocabulary"  label="casa"   object-id="x1" language="es"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="conjugation" label="habla"  object-id="x2" language="es"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="agreement"   label="roja"   object-id="x3" language="es"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] Text is left-aligned</li>
+            <li>[ ] Pills flow left → right</li>
+            <li>[ ] Font is Latin (Inter / system sans-serif)</li>
+            <li>[ ] Inspect: <code>lang="es" dir="ltr"</code> on the &lt;p&gt;</li>
+          </ul>
+        </div>
+
+        <div class="test-case">
+          <p class="test-label">TC-LTR-02: Long unbreakable word (overflow guard)</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text" lang="es" dir="ltr" data-tokenization="whitespace">
+              Electroencefalografía es una palabra muy larga que no debería desbordarse.
+            </p>
+            <ul class="sentence-card__pills" dir="ltr">
+              <li><mnemosyne-pill type="vocabulary" label="electroencefalografía" object-id="x4" language="es"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] Long word wraps rather than overflows the card boundary</li>
+            <li>[ ] Card width stays within the panel</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s2">
+        <h2 id="s2">2 — RTL Arabic (future language)</h2>
+        <p style="font-size:0.875rem;color:var(--muted)">
+          Arabic plugin not yet implemented.  These cards simulate what the
+          rendered output <em>should</em> look like when it is.
+        </p>
+
+        <div class="test-case">
+          <p class="test-label">TC-RTL-01: Basic RTL sentence card</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text"
+               lang="ar" dir="rtl"
+               data-tokenization="whitespace"
+               data-layer="native">
+              ذهب الطالب إلى المدرسة كل يوم.
+            </p>
+            <ul class="sentence-card__pills" dir="rtl">
+              <li><mnemosyne-pill type="vocabulary"  label="طالب"   object-id="y1" language="ar"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="conjugation" label="ذهب"    object-id="y2" language="ar"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] Arabic text is right-aligned (text-align:start resolves to right)</li>
+            <li>[ ] Pills flow right → left</li>
+            <li>[ ] Arabic font renders (Segoe UI / SF Arabic / Noto Sans Arabic)</li>
+            <li>[ ] Diacritics have sufficient vertical space (line-height ≥ 1.8)</li>
+            <li>[ ] Inspect: <code>lang="ar" dir="rtl"</code> on the &lt;p&gt;</li>
+          </ul>
+        </div>
+
+        <div class="test-case">
+          <p class="test-label">TC-RTL-02: Narrow viewport RTL</p>
+          <div class="narrow-wrap">
+            <article class="sentence-card">
+              <p class="sentence-card__text" lang="ar" dir="rtl" data-tokenization="whitespace">
+                البيت الكبير جميل جداً.
+              </p>
+              <ul class="sentence-card__pills" dir="rtl">
+                <li><mnemosyne-pill type="vocabulary" label="بيت" object-id="y3" language="ar"></mnemosyne-pill></li>
+                <li><mnemosyne-pill type="agreement"  label="كبير" object-id="y4" language="ar"></mnemosyne-pill></li>
+              </ul>
+            </article>
+          </div>
+          <ul class="checklist">
+            <li>[ ] Text wraps within the 20 rem box without overflow</li>
+            <li>[ ] Pills wrap to next line and remain right-aligned</li>
+          </ul>
+        </div>
+
+        <div class="test-case">
+          <p class="test-label">TC-RTL-03: Mixed LTR/RTL (Arabic sentence containing a Latin proper noun)</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text" lang="ar" dir="rtl" data-tokenization="whitespace">
+              ذهب Mohamed إلى باريس.
+            </p>
+          </article>
+          <ul class="checklist">
+            <li>[ ] "Mohamed" and "باريس" render with correct bidirectional text (Unicode Bidi)</li>
+            <li>[ ] No character reversal or garbling of the Latin sequence</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s3">
+        <h2 id="s3">3 — CJK: Chinese</h2>
+
+        <div class="test-case">
+          <p class="test-label">TC-CJK-01: Character-segmented text (word-break)</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text"
+               lang="zh" dir="ltr"
+               data-tokenization="character"
+               data-layer="native">
+              学习汉语是一件非常有趣的事情。
+            </p>
+            <ul class="sentence-card__pills" dir="ltr">
+              <li><mnemosyne-pill type="vocabulary" label="学习" object-id="z1" language="zh"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="script"     label="汉"   object-id="z2" language="zh"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] CJK system font renders (PingFang / Noto Sans CJK)</li>
+            <li>[ ] Long string wraps between characters (word-break:break-all)</li>
+            <li>[ ] Letter spacing is slightly tighter (0.02em)</li>
+            <li>[ ] Inspect: <code>data-tokenization="character"</code> present</li>
+          </ul>
+        </div>
+
+        <div class="test-case">
+          <p class="test-label">TC-CJK-02: Narrow viewport overflow guard</p>
+          <div class="narrow-wrap">
+            <article class="sentence-card">
+              <p class="sentence-card__text" lang="zh" dir="ltr" data-tokenization="character">
+                这个句子特别特别特别特别特别特别特别长。
+              </p>
+            </article>
+          </div>
+          <ul class="checklist">
+            <li>[ ] Characters wrap at the box edge — no horizontal scroll</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s4">
+        <h2 id="s4">4 — CJK: Japanese</h2>
+
+        <div class="test-case">
+          <p class="test-label">TC-JA-01: Mixed kana / kanji sentence</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text"
+               lang="ja" dir="ltr"
+               data-tokenization="character"
+               data-layer="native">
+              猫がゆっくり歩いています。
+            </p>
+            <ul class="sentence-card__pills" dir="ltr">
+              <li><mnemosyne-pill type="vocabulary"       label="猫"   object-id="j1" language="ja"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="conjugation"      label="歩いています" object-id="j2" language="ja"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="transliteration"  label="neko" object-id="j3" language="ja"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] Hiragino / Meiryo / Noto Sans JP font renders</li>
+            <li>[ ] Transliteration pill has distinct styling (roma badge)</li>
+            <li>[ ] word-break:break-all applies (data-tokenization="character")</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s5">
+        <h2 id="s5">5 — CJK: Korean</h2>
+
+        <div class="test-case">
+          <p class="test-label">TC-KO-01: Korean segmented text (keep-all word-break)</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text"
+               lang="ko" dir="ltr"
+               data-tokenization="segmented"
+               data-layer="native">
+              나는 매일 한국어를 공부합니다.
+            </p>
+            <ul class="sentence-card__pills" dir="ltr">
+              <li><mnemosyne-pill type="vocabulary"  label="한국어" object-id="k1" language="ko"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="conjugation" label="공부합니다" object-id="k2" language="ko"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] Malgun Gothic / Noto Sans KR font renders</li>
+            <li>[ ] word-break:keep-all prevents breaking within syllable blocks</li>
+            <li>[ ] Inspect: <code>data-tokenization="segmented"</code> present</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s6">
+        <h2 id="s6">6 — Devanagari (Hindi, future)</h2>
+
+        <div class="test-case">
+          <p class="test-label">TC-DEVA-01: Devanagari sentence card</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text"
+               lang="hi" dir="ltr"
+               data-tokenization="whitespace"
+               data-layer="native">
+              मैं हर दिन हिन्दी सीखता हूँ।
+            </p>
+            <ul class="sentence-card__pills" dir="ltr">
+              <li><mnemosyne-pill type="vocabulary"  label="हिन्दी" object-id="h1" language="hi"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="conjugation" label="सीखता"  object-id="h2" language="hi"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] Devanagari font renders (Kohinoor / Noto Sans Devanagari)</li>
+            <li>[ ] Line height is generous (≥ 1.7) to avoid clipping top matras</li>
+            <li>[ ] No character overlap at 100% and 200% zoom</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s7">
+        <h2 id="s7">7 — Mixed-script</h2>
+
+        <div class="test-case">
+          <p class="test-label">TC-MIX-01: English sentence with CJK pill labels</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text"
+               lang="en" dir="ltr"
+               data-tokenization="whitespace">
+              I eat sushi every Friday.
+            </p>
+            <ul class="sentence-card__pills" dir="ltr">
+              <li><mnemosyne-pill type="vocabulary" label="sushi"  object-id="m1" language="en"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="script"     label="寿司"   object-id="m2" language="ja"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] English text and Latin font for the sentence</li>
+            <li>[ ] CJK characters in the "script" pill render correctly</li>
+            <li>[ ] No font fallback box (□) visible in the pill</li>
+          </ul>
+        </div>
+
+        <div class="test-case">
+          <p class="test-label">TC-MIX-02: Transliteration alongside native script</p>
+          <p style="font-size:0.875rem;color:var(--muted);margin-block-end:0.5rem">
+            Simulates what the script-view toggle shows when a language with
+            <code>transliteration_scheme</code> is active.
+          </p>
+          <article class="sentence-card">
+            <!-- Native layer -->
+            <p class="sentence-card__text"
+               lang="ja" dir="ltr"
+               data-tokenization="character"
+               data-layer="native">
+              ありがとう
+            </p>
+            <!-- Romanized layer (hidden when script-view = native) -->
+            <p class="sentence-card__text"
+               lang="ja-Latn" dir="ltr"
+               data-tokenization="whitespace"
+               data-layer="romanized"
+               style="font-style:italic;color:var(--muted)">
+              arigatō
+            </p>
+            <ul class="sentence-card__pills" dir="ltr">
+              <li><mnemosyne-pill type="transliteration" label="arigatō" object-id="m3" language="ja"></mnemosyne-pill></li>
+            </ul>
+          </article>
+
+          <!-- Simulate the script toggle applied to this test case -->
+          <div style="margin-block-start:0.75rem" id="demo-results">
+            <div class="results-toolbar" style="display:flex;margin-block-end:0.5rem">
+              <div class="script-toggle" role="group" aria-label="Script view (demo)">
+                <span class="script-toggle__label" aria-hidden="true">View:</span>
+                <button type="button" class="script-toggle__btn script-toggle__btn--active"
+                        aria-pressed="true" data-demo-view="native">Script</button>
+                <button type="button" class="script-toggle__btn"
+                        aria-pressed="false" data-demo-view="romanized">Romanized</button>
+                <button type="button" class="script-toggle__btn"
+                        aria-pressed="false" data-demo-view="both">Both</button>
+              </div>
+            </div>
+            <article class="sentence-card" id="demo-card">
+              <p class="sentence-card__text" lang="ja" dir="ltr"
+                 data-tokenization="character" data-layer="native">ありがとう</p>
+              <p class="sentence-card__text" lang="ja-Latn" dir="ltr"
+                 data-layer="romanized"
+                 style="font-style:italic;color:var(--muted)">arigatō</p>
+              <ul class="sentence-card__pills" dir="ltr">
+                <li><mnemosyne-pill type="transliteration" label="arigatō" object-id="m4" language="ja"></mnemosyne-pill></li>
+              </ul>
+            </article>
+          </div>
+          <script>
+            // Wire the demo toggle buttons to #demo-results.
+            document.querySelectorAll('[data-demo-view]').forEach((btn) => {
+              btn.addEventListener('click', () => {
+                const view = btn.dataset.demoView
+                document.querySelector('#demo-results').dataset.scriptView = view
+                document.querySelectorAll('[data-demo-view]').forEach((b) => {
+                  const active = b.dataset.demoView === view
+                  b.setAttribute('aria-pressed', String(active))
+                  b.classList.toggle('script-toggle__btn--active', active)
+                })
+              })
+            })
+          </script>
+          <ul class="checklist">
+            <li>[ ] "Script" button: only ありがとう visible, arigatō hidden</li>
+            <li>[ ] "Romanized" button: only arigatō visible, ありがとう hidden</li>
+            <li>[ ] "Both" button: both lines visible</li>
+            <li>[ ] Toggle button that is active has accent background</li>
+            <li>[ ] aria-pressed updates with the active state</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s8">
+        <h2 id="s8">8 — Pill type coverage</h2>
+
+        <div class="test-case">
+          <p class="test-label">TC-PILL-01: All eight pill types render</p>
+          <ul class="sentence-card__pills" dir="ltr" style="margin-block-start:0.5rem">
+            <li><mnemosyne-pill type="vocabulary"      label="casa"   object-id="p1" language="es"></mnemosyne-pill></li>
+            <li><mnemosyne-pill type="conjugation"     label="hablar" object-id="p2" language="es"></mnemosyne-pill></li>
+            <li><mnemosyne-pill type="agreement"       label="rojos"  object-id="p3" language="es"></mnemosyne-pill></li>
+            <li><mnemosyne-pill type="idiom"           label="a pesar de" object-id="p4" language="es"></mnemosyne-pill></li>
+            <li><mnemosyne-pill type="grammar"         label="subjunctive" object-id="p5" language="es"></mnemosyne-pill></li>
+            <li><mnemosyne-pill type="nuance"          label="por/para" object-id="p6" language="es"></mnemosyne-pill></li>
+            <li><mnemosyne-pill type="script"          label="字"      object-id="p7" language="ja"></mnemosyne-pill></li>
+            <li><mnemosyne-pill type="transliteration" label="ji"      object-id="p8" language="ja"></mnemosyne-pill></li>
+          </ul>
+          <ul class="checklist">
+            <li>[ ] Each pill has a distinct icon and badge</li>
+            <li>[ ] Each pill has a distinct background tint</li>
+            <li>[ ] No two pill types share identical appearance</li>
+            <li>[ ] "script" pill renders ✍️ icon with "script" badge</li>
+            <li>[ ] "transliteration" pill renders 🔤 icon with "roma" badge</li>
+            <li>[ ] All pills meet 44 × 44 CSS-px minimum touch target</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s9">
+        <h2 id="s9">9 — Narrow viewport (320 px simulation)</h2>
+
+        <div class="test-case">
+          <p class="test-label">TC-NARROW-01: LTR card at 20 rem</p>
+          <div class="narrow-wrap">
+            <article class="sentence-card">
+              <p class="sentence-card__text" lang="es" dir="ltr" data-tokenization="whitespace">
+                Supercalifragilisticoespialidoso es una palabra.
+              </p>
+              <ul class="sentence-card__pills" dir="ltr">
+                <li><mnemosyne-pill type="vocabulary" label="supercalifragilisticoespialidoso" object-id="n1" language="es"></mnemosyne-pill></li>
+              </ul>
+            </article>
+          </div>
+          <ul class="checklist">
+            <li>[ ] Long word wraps — no horizontal scroll</li>
+            <li>[ ] Pill label wraps inside the pill gracefully</li>
+            <li>[ ] Card padding is maintained (clamp)</li>
+          </ul>
+        </div>
+
+        <div class="test-case">
+          <p class="test-label">TC-NARROW-02: RTL card at 20 rem</p>
+          <div class="narrow-wrap">
+            <article class="sentence-card">
+              <p class="sentence-card__text" lang="ar" dir="rtl" data-tokenization="whitespace">
+                هذا نص عربي طويل جداً جداً يجب أن يلتف بشكل صحيح.
+              </p>
+              <ul class="sentence-card__pills" dir="rtl">
+                <li><mnemosyne-pill type="vocabulary" label="نص" object-id="n2" language="ar"></mnemosyne-pill></li>
+              </ul>
+            </article>
+          </div>
+          <ul class="checklist">
+            <li>[ ] Arabic text wraps correctly within the narrow container</li>
+            <li>[ ] Pills remain right-aligned in RTL</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s10">
+        <h2 id="s10">10 — Zoom and text size</h2>
+
+        <div class="test-case">
+          <p class="test-label">TC-ZOOM-01: Resize browser to 200% zoom</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text" lang="es" dir="ltr" data-tokenization="whitespace">
+              El precio extraordinariamente elevado es un impedimento para la adquisición.
+            </p>
+            <ul class="sentence-card__pills" dir="ltr">
+              <li><mnemosyne-pill type="vocabulary"  label="precio"  object-id="z1" language="es"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="conjugation" label="es"      object-id="z2" language="es"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] Card text wraps — no horizontal scroll at 200% zoom</li>
+            <li>[ ] Pills wrap to a new row if needed — no overflow</li>
+            <li>[ ] Touch targets remain ≥ 44 CSS px (check with DevTools)</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s11">
+        <h2 id="s11">11 — Keyboard and focus</h2>
+
+        <div class="test-case">
+          <p class="test-label">TC-KEY-01: Tab through all pills</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text" lang="es" dir="ltr" data-tokenization="whitespace">
+              Yo como bien.
+            </p>
+            <ul class="sentence-card__pills" dir="ltr">
+              <li><mnemosyne-pill type="conjugation" label="como"  object-id="k1" language="es"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="vocabulary"  label="bien"  object-id="k2" language="es"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] Tab visits each pill button in DOM order</li>
+            <li>[ ] Focus ring is visible on each pill (3 px solid accent)</li>
+            <li>[ ] Enter/Space activates the pill (dispatches lesson-open)</li>
+            <li>[ ] Focus ring visible on the script toggle buttons</li>
+          </ul>
+        </div>
+
+        <div class="test-case">
+          <p class="test-label">TC-KEY-02: Script view toggle keyboard</p>
+          <div class="results-toolbar" style="display:flex">
+            <div class="script-toggle" role="group" aria-label="Script view">
+              <span class="script-toggle__label" aria-hidden="true">View:</span>
+              <button type="button" class="script-toggle__btn script-toggle__btn--active"
+                      aria-pressed="true">Script</button>
+              <button type="button" class="script-toggle__btn"
+                      aria-pressed="false">Romanized</button>
+              <button type="button" class="script-toggle__btn"
+                      aria-pressed="false">Both</button>
+            </div>
+          </div>
+          <ul class="checklist">
+            <li>[ ] All three buttons are reachable via Tab</li>
+            <li>[ ] Active button shows aria-pressed="true"</li>
+            <li>[ ] Focus ring is a solid 3 px outline</li>
+          </ul>
+        </div>
+      </section>
+
+
+    </main>
+  </body>
+</html>

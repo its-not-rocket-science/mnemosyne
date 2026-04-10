@@ -29,6 +29,76 @@
   display: contents;
 }
 
+/* ── Results toolbar ─────────────────────────────────────────────────────────
+   Shown between the results heading and sentence cards when the selected
+   language declares a transliteration_scheme.  JS populates the toggle inside.
+   hidden attribute controlled by main.js via updateScriptViewToolbar().       */
+
+.results-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-block-end: var(--space-2);
+}
+
+/* ── Script view toggle ──────────────────────────────────────────────────────
+   Segmented button group: Script / Romanized / Both.
+   aria-pressed signals the active state to AT.                               */
+
+.script-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  flex-wrap: wrap;
+}
+
+.script-toggle__label {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-inline-end: 0.2rem;
+}
+
+.script-toggle__btn {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.65rem;
+  /* WCAG 2.5.8: 44 × 44 CSS-px minimum not required for optional controls, but
+     keeping min-block-size at 2rem keeps the target reasonably large. */
+  min-block-size: 2rem;
+  cursor: pointer;
+}
+
+.script-toggle__btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Active state signalled by both class (immediate) and aria-pressed (AT). */
+.script-toggle__btn--active,
+.script-toggle__btn[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border-color: var(--accent);
+}
+
+/* ── Script-view layer visibility — sentence cards ───────────────────────────
+   [data-layer="native"]    — source-script text (sentence text, native pills)
+   [data-layer="romanized"] — transliterated / romanized forms
+   Controlled by data-script-view on the #results container.
+   'both' or missing value: all layers visible (default).                     */
+
+#results[data-script-view="native"]    [data-layer="romanized"] { display: none; }
+#results[data-script-view="romanized"] [data-layer="native"]    { display: none; }
+
 /* Empty-state message shown before any parse and when no results are found. */
 .results-empty {
   color: var(--muted);
