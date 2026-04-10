@@ -3,6 +3,11 @@
 These tests verify that the stub satisfies the LanguagePlugin protocol and
 produces structurally valid output.  They do not test linguistic correctness —
 the stub uses regex heuristics, not a real NLP model.
+
+Note: the stub is no longer registered by the plugin loader (create_plugin()
+has been removed from stub_fr.py).  The real French plugin is in french.py.
+These tests are kept to verify that the stub class itself remains valid as
+a minimal reference for the LanguagePlugin protocol.
 """
 from __future__ import annotations
 
@@ -158,7 +163,8 @@ def test_lesson_store_accepts_candidate_object(plugin: FrenchStubPlugin) -> None
 # ── Registry integration ──────────────────────────────────────────────────────
 
 
-def test_create_plugin_factory() -> None:
-    from backend.plugins.stub_fr import create_plugin
+def test_real_plugin_factory() -> None:
+    # The real French plugin (french.py) exposes create_plugin(); the stub does not.
+    from backend.plugins.french import create_plugin
     p = create_plugin()
     assert p.language_code == "fr"

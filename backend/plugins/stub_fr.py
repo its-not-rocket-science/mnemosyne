@@ -1,14 +1,11 @@
-"""Stub French plugin.
+"""Legacy French stub plugin — kept for reference and protocol-compliance tests.
 
-Splits text into sentences on terminal punctuation and tags every
-alphabetic token as a vocabulary word.  No real NLP — suitable for
-integration tests and as a foundation for a full French plugin.
+This stub is no longer registered by the plugin loader (``create_plugin`` has
+been removed).  The real implementation is in ``backend/plugins/french.py``.
 
-French-specific notes for a future real implementation:
-- Use ``fr_core_news_md`` or ``fr_core_news_lg`` for morphology-rich parsing.
-- French has grammatical gender and number agreement (adj-noun, det-noun).
-- Verb conjugation is highly irregular; a separate lemmatiser may help.
-- Elision contractions ("l'", "d'", "qu'") need special handling.
+The stub uses regex-based sentence splitting and a static stop-word list for
+vocabulary extraction.  It demonstrates the minimal surface area required by
+the ``LanguagePlugin`` protocol for languages without NLP model support.
 """
 from __future__ import annotations
 
@@ -116,5 +113,5 @@ class FrenchStubPlugin:
         return candidates
 
 
-def create_plugin() -> FrenchStubPlugin:
-    return FrenchStubPlugin()
+# create_plugin() intentionally absent — the real French plugin
+# (backend/plugins/french.py) is now registered instead.

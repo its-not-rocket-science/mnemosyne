@@ -388,19 +388,65 @@ pytestmark = pytest.mark.skipif(
 
 ---
 
+## Language Support Levels
+
+### Spanish (`es`) — Reference Implementation
+
+`backend/plugins/spanish.py` is the reference for a full-parse plugin:
+
+- `analysis_depth="full"`, `morphology_depth="rich"`
+- Vocabulary, conjugation, agreement, idiom, grammar, nuance objects
+- Paradigm class (-ar/-er/-ir/irregular), irregular verb detection
+- `fr_core_news_sm` — 12 MB model
+
+### French (`fr`) — Full-Parse Plugin (Grammar/Idiom Deferred)
+
+`backend/plugins/french.py` provides:
+
+- `analysis_depth="full"`, `morphology_depth="rich"`
+- Vocabulary, conjugation, agreement objects
+- Paradigm class (-er/-ir/-re/irregular), irregular verb detection
+- Reflexive detection via `Reflex=Yes` morph (more portable than surface lists)
+- Grammar patterns and idiom detection are **not yet implemented** (future)
+- `fr_core_news_sm` — 16 MB model
+
+**Known limitation**: `fr_core_news_sm` sometimes mis-tags finite verbs as
+ADJ/NOUN after noun subjects.  These are silently under-extracted.
+
+**Architecture findings** this plugin surfaced:
+1. `generators._TENSE_OPTIONS` includes "preterite" (Spanish-specific)
+2. `paradigm_class` encoding is language-dependent (-ar/-er/-ir vs -er/-ir/-re)
+3. Reflexive detection via surface forms is less portable than using `Reflex=Yes`
+
+### English (`en`) — Minimal Stub
+
+`backend/plugins/stub_en.py` — regex tokenisation, no NLP:
+
+- `analysis_depth="dictionary"`, `lesson_modes_supported=["vocabulary"]`
+- Whitespace-split tokens, no POS or morphology
+
 ## Minimal Stub Plugin
 
 If full NLP is not yet available for your language, start with a stub that
 returns vocabulary objects with `pos="WORD"` and no morphology.  Set
 `lesson_modes_supported=["dictionary"]` and `morphology_depth="none"`.
 
-The English stub (`backend/plugins/english_stub.py`) is the reference for
+The English stub (`backend/plugins/stub_en.py`) is the reference for
 this pattern.  It demonstrates:
 
-- `analysis_depth="stub"` capability
+- `analysis_depth="dictionary"` capability
 - `lesson_modes_supported=["vocabulary"]`
 - No conjugation, agreement, idiom, grammar, or nuance objects
 - All words tokenised by whitespace split and emitted as `vocabulary`
 
 Once a real NLP model is available, upgrade the capabilities and add
 extraction methods incrementally — each new method is independently testable.
+
+**Migration checklist when upgrading a stub to a real plugin:**
+
+1. Change `morphology_depth` to match the model's actual capability.
+2. Update `analysis_depth` to `"full"` or `"morphology_light"`.
+3. Add `lesson_modes_supported=["morphology", "vocabulary"]`.
+4. Update `test_plugin.py` and `test_language_capabilities.py` stub-specific
+   assertions to reflect the new capabilities.
+5. Create a dedicated `test_{lang}_spacy.py` test file with a skip guard.

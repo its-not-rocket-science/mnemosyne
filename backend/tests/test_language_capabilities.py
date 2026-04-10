@@ -183,11 +183,12 @@ class TestLanguagesEndpoint:
         assert en is not None
         assert en["morphology_depth"] == "none"
 
-    def test_french_stub_no_morphology(self) -> None:
+    def test_french_rich_morphology(self) -> None:
+        # French now uses the real spaCy plugin, not the stub.
         resp = client.get("/languages")
         fr = next((x for x in resp.json() if x["code"] == "fr"), None)
         assert fr is not None
-        assert fr["morphology_depth"] == "none"
+        assert fr["morphology_depth"] == "rich"
 
     def test_all_entries_deserialise_as_language_capabilities(self) -> None:
         resp = client.get("/languages")
@@ -466,13 +467,20 @@ class TestLanguagesEndpointV2:
         assert es["syntax_support"] is True
         assert es["tts_lang_tag"] == "es"
 
-    def test_stubs_dictionary_analysis(self) -> None:
+    def test_english_stub_dictionary_analysis(self) -> None:
+        # English is still a stub; French now has a real spaCy plugin.
         resp = client.get("/languages")
-        for code in ("en", "fr"):
-            item = next(x for x in resp.json() if x["code"] == code)
-            assert item["analysis_depth"] == "dictionary"
-            assert item["syntax_support"] is False
-            assert item["morphology_quality"] == "none"
+        en = next(x for x in resp.json() if x["code"] == "en")
+        assert en["analysis_depth"] == "dictionary"
+        assert en["syntax_support"] is False
+        assert en["morphology_quality"] == "none"
+
+    def test_french_full_analysis(self) -> None:
+        resp = client.get("/languages")
+        fr = next(x for x in resp.json() if x["code"] == "fr")
+        assert fr["analysis_depth"] == "full"
+        assert fr["syntax_support"] is True
+        assert fr["morphology_quality"] == "medium"
 
 
 # ── _build_script() ───────────────────────────────────────────────────────────
