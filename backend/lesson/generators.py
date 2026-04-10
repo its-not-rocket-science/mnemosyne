@@ -66,17 +66,25 @@ _POS_OPTIONS: list[str] = [
 
 # ── Conjugation display ───────────────────────────────────────────────────────
 
-# ARCH (multilingual gap): "preterite" is a Spanish-specific term.
-# French, Italian, Portuguese, and other Romance languages use different
-# past-tense vocabulary in pedagogical contexts.  "past" is added here so
-# French verbs tagged Tense=Past (literary passé simple) produce a valid
-# MC drill, but "preterite" remains as a wrong-option distractor which is
-# misleading for French learners.
+# ARCH (multilingual gap): tense terminology is language-specific.
+# "preterite" is a Spanish term; French uses "imparfait"; German uses
+# "Präteritum" (here labelled "past").  All are in this pool so MC drills
+# work for every language, but wrong options may include misleading terms
+# for a given language (e.g. "preterite" appearing in a German drill).
 # Future fix: make this pool pluggable via lesson_data["tense_options"] or
-# a per-language registry so each plugin can supply the appropriate terms.
+# a per-language registry so each plugin can supply appropriate terms.
 _TENSE_OPTIONS: list[str] = [
     "present", "preterite", "imperfect", "future", "conditional", "past",
 ]
+
+# Case labels and MC options — used by _build_case_agreement (German).
+_CASE_DISPLAY: dict[str, str] = {
+    "Nom": "nominative",
+    "Acc": "accusative",
+    "Dat": "dative",
+    "Gen": "genitive",
+}
+_CASE_OPTIONS: list[str] = ["nominative", "accusative", "dative", "genitive"]
 
 _MOOD_OPTIONS: list[str] = [
     "indicative", "subjunctive", "imperative",
@@ -162,6 +170,7 @@ def build_lesson(
             "idiom":            _build_idiom,
             "grammar":          _build_grammar,
             "nuance":           _build_nuance,
+            "case_agreement":   _build_case_agreement,
         }
         builder = builders.get(obj_type, _build_generic)
         response = builder(
@@ -285,6 +294,12 @@ def _build_conjugation(
         fields.append(LessonField(label="Construction", value=construction))
     if lesson_data.get("is_reflexive"):
         fields.append(LessonField(label="Reflexive", value="yes"))
+    if verb_class := lesson_data.get("verb_class"):
+        fields.append(LessonField(label="Verb class", value=verb_class))
+    if lesson_data.get("is_separable"):
+        particle = lesson_data.get("particle") or ""
+        sep_label = f"yes — particle: {particle}" if particle else "yes"
+        fields.append(LessonField(label="Separable verb", value=sep_label))
     if note := lesson_data.get("confidence_note"):
         fields.append(LessonField(label="Note", value=note))
 
@@ -800,6 +815,117 @@ def _build_nuance(
         explanation=explanation,
         fields=fields,
         examples=[surface],
+        drills=drills,
+    )
+
+
+def _build_case_agreement(
+    *,
+    object_id: str,
+    obj_type: str,
+    canonical_form: str,
+    display_label: str,
+    lesson_data: dict[str, Any],
+) -> LessonResponse:
+    """Lesson for a German-style case+gender+number agreement group.
+
+    Extends the basic agreement lesson with case information.  Used when the
+    plugin emits a ``case_agreement`` object — e.g. a determiner/adjective/noun
+    cluster where case, gender, and number are all resolved.
+
+    Expected ``lesson_data`` keys:
+
+    modifier      — surface form of the determiner or adjective.
+    modifier_pos  — UD POS tag of the modifier.
+    noun          — surface form of the head noun.
+    case          — morphological case ("Nom" | "Acc" | "Dat" | "Gen").
+    gender        — grammatical gender ("Masc" | "Fem" | "Neut").
+    number        — "Sing" | "Plur".
+    case_match    — bool | None
+    gender_match  — bool | None
+    number_match  — bool | None
+    """
+    modifier     = lesson_data.get("modifier") or display_label
+    noun         = lesson_data.get("noun") or display_label
+    modifier_pos = lesson_data.get("modifier_pos") or ""
+    case         = lesson_data.get("case") or "unknown"
+    gender       = lesson_data.get("gender") or "unknown"
+    number       = lesson_data.get("number") or "unknown"
+    case_match   = lesson_data.get("case_match")
+    gender_match = lesson_data.get("gender_match")
+    number_match = lesson_data.get("number_match")
+    seed         = canonical_form
+
+    case_display   = _CASE_DISPLAY.get(case, case.lower())
+    gender_display = {"Masc": "masculine", "Fem": "feminine", "Neut": "neuter"}.get(
+        gender, gender.lower()
+    )
+    number_display = {"Sing": "singular", "Plur": "plural"}.get(number, number.lower())
+    pos_display    = _POS_DISPLAY.get(modifier_pos, modifier_pos.lower())
+
+    # Explanation
+    confirmed: list[str] = []
+    if case_match is True:
+        confirmed.append("case")
+    if gender_match is True:
+        confirmed.append("gender")
+    if number_match is True:
+        confirmed.append("number")
+    confirmed_str = " and ".join(confirmed) if confirmed else "morphological features"
+    explanation = (
+        f"\u201c{modifier}\u201d ({pos_display}) and \u201c{noun}\u201d agree in "
+        f"{confirmed_str}. The noun \u201c{noun}\u201d is {gender_display} "
+        f"{number_display} in the {case_display} case."
+    )
+
+    # Fields
+    fields: list[LessonField] = [
+        LessonField(label="Modifier", value=f"{modifier} ({pos_display})"),
+        LessonField(label="Noun",     value=noun),
+        LessonField(label="Case",     value=case_display),
+        LessonField(label="Gender",   value=gender_display),
+        LessonField(label="Number",   value=number_display),
+    ]
+    if case_match is not None:
+        fields.append(LessonField(label="Case match",   value="yes" if case_match else "no"))
+    if gender_match is not None:
+        fields.append(LessonField(label="Gender match", value="yes" if gender_match else "no"))
+    if number_match is not None:
+        fields.append(LessonField(label="Number match", value="yes" if number_match else "no"))
+
+    # Drills
+    drills: list[Drill] = [ShadowingDrill(type="shadowing", text=display_label)]
+
+    # MC: identify the case
+    if case_display != "unknown":
+        mc = _make_mc_drill(
+            seed=seed,
+            prompt=f"What case is \u201c{modifier}\u201d … \u201c{noun}\u201d in?",
+            correct=case_display,
+            pool=_CASE_OPTIONS,
+        )
+        if mc:
+            drills.append(mc)
+
+    # MC: identify the gender
+    gender_options = ["masculine", "feminine", "neuter"]
+    if gender_display in gender_options:
+        mc_g = _make_mc_drill(
+            seed=seed + "gender",
+            prompt=f"What gender is \u201c{noun}\u201d?",
+            correct=gender_display,
+            pool=gender_options,
+        )
+        if mc_g:
+            drills.append(mc_g)
+
+    return LessonResponse(
+        id=object_id,
+        type="case_agreement",  # type: ignore[arg-type]
+        title=f"Case agreement: {display_label}",
+        explanation=explanation,
+        fields=fields,
+        examples=[display_label],
         drills=drills,
     )
 

@@ -47,12 +47,17 @@ class TestPluginRegistry:
         registry = load_plugins()
         assert "fr" in registry.all()
 
+    def test_de_plugin_registered(self) -> None:
+        registry = load_plugins()
+        assert "de" in registry.all()
+
     def test_supported_languages_includes_all_active(self) -> None:
         registry = load_plugins()
         langs = registry.supported_languages()
         assert "es" in langs
         assert "en" in langs
         assert "fr" in langs
+        assert "de" in langs
 
     def test_supported_languages_returns_capabilities_objects(self) -> None:
         registry = load_plugins()
@@ -146,6 +151,20 @@ class TestPluginRegistry:
         assert caps.analysis_depth == "full"
         assert caps.morphology_quality == "medium"
         assert caps.tts_lang_tag == "fr"
+
+    def test_german_capabilities_morphology(self) -> None:
+        registry = load_plugins()
+        caps = registry.supported_languages()["de"]
+        assert caps.morphology_depth == "rich"
+        assert "morphology" in caps.lesson_modes_supported
+
+    def test_german_capabilities_v2_fields(self) -> None:
+        registry = load_plugins()
+        caps = registry.supported_languages()["de"]
+        assert caps.analysis_depth == "full"
+        assert caps.morphology_quality == "medium"
+        assert caps.tts_lang_tag == "de"
+        assert caps.syntax_support is True
 
     def test_get_returns_correct_plugin(self) -> None:
         registry = load_plugins()
