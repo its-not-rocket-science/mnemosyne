@@ -12,6 +12,9 @@ LearnableType = Literal[
     "idiom",
     "grammar",
     "nuance",
+    # ── v2 types ──────────────────────────────────────────────────────────
+    "script",           # character / sign learning object (kanji, Arabic letter, …)
+    "transliteration",  # native-form ↔ romanization / phonetic mapping
 ]
 
 

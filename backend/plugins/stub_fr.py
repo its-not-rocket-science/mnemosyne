@@ -53,6 +53,15 @@ class FrenchStubPlugin:
         tokenization_mode="whitespace",
         morphology_depth="none",
         lesson_modes_supported=["vocabulary"],
+        # v2 fields
+        analysis_depth="dictionary",
+        segmentation_quality="medium",
+        tokenization_quality="low",      # regex + static stop-word list
+        morphology_quality="none",
+        syntax_support=False,
+        idiom_detection=False,
+        tts_lang_tag="fr",
+        transliteration_scheme=None,
     )
 
     def __init__(self) -> None:

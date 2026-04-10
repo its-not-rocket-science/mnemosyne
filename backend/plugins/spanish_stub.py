@@ -77,6 +77,15 @@ class SpanishStubPlugin:
         tokenization_mode="whitespace",
         morphology_depth="shallow",
         lesson_modes_supported=["morphology", "vocabulary"],
+        # v2 fields
+        analysis_depth="morphology_light",
+        segmentation_quality="medium",
+        tokenization_quality="medium",   # regex-based; decent for Latin script
+        morphology_quality="low",        # heuristic suffix rules; many edge cases
+        syntax_support=False,
+        idiom_detection=False,
+        tts_lang_tag="es",
+        transliteration_scheme=None,
     )
 
     def __init__(self) -> None:

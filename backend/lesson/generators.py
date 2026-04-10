@@ -110,7 +110,21 @@ def build_lesson(
     - ``"dictionary"`` — uses the minimal dictionary builder: word + gloss
       only.  Use when the plugin cannot reliably provide POS or morphology.
     """
-    if lesson_mode == "dictionary":
+    # "script" and "transliteration" always use their dedicated builders.
+    # They have no tense/POS equivalent so lesson_mode does not apply.
+    if obj_type in ("script", "transliteration"):
+        _type_builders = {
+            "script":          _build_script,
+            "transliteration": _build_transliteration,
+        }
+        response = _type_builders[obj_type](
+            object_id=object_id,
+            obj_type=obj_type,
+            canonical_form=canonical_form,
+            display_label=display_label,
+            lesson_data=lesson_data,
+        )
+    elif lesson_mode == "dictionary":
         response = _build_dictionary(
             object_id=object_id,
             obj_type=obj_type,
@@ -127,11 +141,16 @@ def build_lesson(
             lesson_data=lesson_data,
         )
     else:
-        # lesson_mode == "morphology" — dispatch by type
+        # lesson_mode == "morphology" — dispatch by type.
+        # "script" and "transliteration" always use their dedicated builders
+        # regardless of lesson_mode because their structure is intrinsic to the
+        # object type, not a choice of lesson depth.
         builders = {
-            "vocabulary":  _build_vocabulary,
-            "conjugation": _build_conjugation,
-            "agreement":   _build_agreement,
+            "vocabulary":       _build_vocabulary,
+            "conjugation":      _build_conjugation,
+            "agreement":        _build_agreement,
+            "script":           _build_script,
+            "transliteration":  _build_transliteration,
         }
         builder = builders.get(obj_type, _build_generic)
         response = builder(
@@ -367,6 +386,162 @@ def _build_agreement(
         explanation=explanation,
         fields=fields,
         examples=[display_label],
+        drills=drills,
+    )
+
+
+def _build_script(
+    *,
+    object_id: str,
+    obj_type: str,
+    canonical_form: str,
+    display_label: str,
+    lesson_data: dict[str, Any],
+) -> LessonResponse:
+    """Lesson for a script / character / sign learning object.
+
+    Used for CJK kanji/hanzi, Arabic letters, Devanagari akṣaras, and any
+    other writing-system unit that warrants its own drill.
+
+    Expected ``lesson_data`` keys (all optional — the builder degrades
+    gracefully when any are absent):
+
+    character     — the character or sign to learn (defaults to display_label).
+    readings      — list[str] of pronunciations / readings.
+    meaning       — English gloss or short definition.
+    stroke_count  — integer stroke count (informational).
+    notes         — free-text notes from the plugin.
+    """
+    character    = lesson_data.get("character") or display_label
+    readings_raw = lesson_data.get("readings") or []
+    readings: list[str] = (
+        readings_raw if isinstance(readings_raw, list) else [str(readings_raw)]
+    )
+    meaning      = lesson_data.get("meaning") or lesson_data.get("gloss")
+    stroke_count = lesson_data.get("stroke_count")
+    notes        = lesson_data.get("notes")
+
+    # Explanation
+    if meaning:
+        explanation = f"\u201c{character}\u201d — {meaning}."
+    else:
+        explanation = f"\u201c{character}\u201d"
+
+    # Fields
+    fields: list[LessonField] = [LessonField(label="Character", value=character)]
+    if readings:
+        fields.append(LessonField(label="Reading(s)", value=",  ".join(readings)))
+    if meaning:
+        fields.append(LessonField(label="Meaning", value=str(meaning)))
+    if stroke_count is not None:
+        fields.append(LessonField(label="Strokes", value=str(stroke_count)))
+    if notes:
+        fields.append(LessonField(label="Notes", value=str(notes)))
+
+    # Drills
+    drills: list[Drill] = [ShadowingDrill(type="shadowing", text=character)]
+
+    if readings:
+        # Fill-blank: write the reading from memory.
+        primary_reading = readings[0]
+        drills.append(FillBlankDrill(
+            type="fill_blank",
+            prompt=f"How is \u201c{character}\u201d read?",
+            answer=primary_reading,
+            hint=f"(first reading)" if len(readings) > 1 else None,
+        ))
+
+    if meaning:
+        # Fill-blank: recall the meaning.
+        drills.append(FillBlankDrill(
+            type="fill_blank",
+            prompt=f"What does \u201c{character}\u201d mean?",
+            answer=str(meaning),
+        ))
+
+    return LessonResponse(
+        id=object_id,
+        type="script",  # type: ignore[arg-type]
+        title=f"Script: {character}",
+        explanation=explanation,
+        fields=fields,
+        examples=[character] + readings[:2],  # show up to 2 readings as spoken examples
+        drills=drills,
+    )
+
+
+def _build_transliteration(
+    *,
+    object_id: str,
+    obj_type: str,
+    canonical_form: str,
+    display_label: str,
+    lesson_data: dict[str, Any],
+) -> LessonResponse:
+    """Lesson for a native-form ↔ romanization / phonetic mapping.
+
+    Used when a plugin emits a "transliteration" object — for example a
+    Japanese word with its Hepburn romaji, or a Mandarin word with pinyin.
+
+    Expected ``lesson_data`` keys (all optional):
+
+    native_form   — the original-script form (defaults to display_label).
+    romanized     — romanized / phonetic representation (defaults to canonical_form).
+    scheme        — name of the transliteration scheme (e.g. "hepburn_romaji").
+    meaning       — optional English gloss.
+    """
+    native_form = lesson_data.get("native_form") or display_label
+    romanized   = lesson_data.get("romanized") or canonical_form
+    scheme      = lesson_data.get("scheme") or ""
+    meaning     = lesson_data.get("meaning") or lesson_data.get("gloss")
+    seed        = canonical_form
+
+    # Explanation
+    scheme_note = f" ({scheme})" if scheme else ""
+    if meaning:
+        explanation = (
+            f"\u201c{native_form}\u201d is romanized as \u201c{romanized}\u201d"
+            f"{scheme_note} and means \u201c{meaning}\u201d."
+        )
+    else:
+        explanation = (
+            f"\u201c{native_form}\u201d is romanized as \u201c{romanized}\u201d{scheme_note}."
+        )
+
+    # Fields
+    fields: list[LessonField] = [
+        LessonField(label="Native form",    value=native_form),
+        LessonField(label="Romanization",   value=romanized),
+    ]
+    if scheme:
+        fields.append(LessonField(label="Scheme", value=scheme))
+    if meaning:
+        fields.append(LessonField(label="Meaning", value=str(meaning)))
+
+    # Drills
+    drills: list[Drill] = [ShadowingDrill(type="shadowing", text=native_form)]
+
+    # Fill-blank: produce the romanization from the native form.
+    drills.append(FillBlankDrill(
+        type="fill_blank",
+        prompt=f"Romanize \u201c{native_form}\u201d.",
+        answer=romanized,
+    ))
+
+    # Fill-blank: produce the native form from the romanization.
+    drills.append(FillBlankDrill(
+        type="fill_blank",
+        prompt=f"Write the native form for \u201c{romanized}\u201d.",
+        answer=native_form,
+    ))
+
+    return LessonResponse(
+        id=object_id,
+        type="transliteration",  # type: ignore[arg-type]
+        title=f"Transliteration: {native_form}",
+        explanation=explanation,
+        fields=fields,
+        examples=[native_form, romanized],
         drills=drills,
     )
 
