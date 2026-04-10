@@ -1,5 +1,23 @@
+// Field labels (lower-cased) whose values are romanized / transliterated text.
+// Used to assign data-layer="romanized" so the script-view toggle can hide them.
+const ROMANIZED_LABELS = new Set(['romanized', 'readings'])
+
+// Field labels whose values are source-script (native) text.
+const NATIVE_LABELS = new Set(['native', 'character'])
+
+// Field labels whose values are in the UI language (English) — do NOT apply
+// the target lang/dir to these, or an Arabic gloss would render in RTL.
+const UI_LANG_LABELS = new Set(['translation', 'gloss'])
+
 export class MnemosyneModal extends HTMLElement {
   #inertedElements = []
+
+  // Language context — set by open(), used by drill renderers.
+  #language   = null
+  #dir        = 'ltr'
+  #ttsTag     = null
+  // Modal-local script view: 'both' shows all layers by default.
+  #scriptView = 'both'
 
   constructor() {
     super()
@@ -13,10 +31,16 @@ export class MnemosyneModal extends HTMLElement {
     this.render()
   }
 
-  open({ lesson, objectId, onRate, onSpeak }) {
+  open({ lesson, objectId, caps, language, onRate, onSpeak }) {
+    // Resolve language metadata from caps with safe fallbacks.
+    this.#language   = language ?? null
+    this.#dir        = caps?.direction ?? 'ltr'
+    this.#ttsTag     = caps?.tts_lang_tag ?? language ?? null
+    this.#scriptView = 'both'
+
     this.isOpen = true
     this.previouslyFocused = document.activeElement
-    this.render({ lesson, objectId, onRate, onSpeak })
+    this.render({ lesson, objectId, caps, language, onRate, onSpeak })
     document.body.style.overflow = 'hidden'
     document.addEventListener('keydown', this.onKeydown)
 
@@ -82,8 +106,9 @@ export class MnemosyneModal extends HTMLElement {
       return
     }
 
-    const { lesson, objectId, onRate, onSpeak } = state
-    const canSpeak = 'speechSynthesis' in window
+    const { lesson, objectId, caps, onRate, onSpeak } = state
+    const canSpeak  = 'speechSynthesis' in window
+    const hasTranslit = Boolean(caps?.transliteration_scheme)
     const exampleText = lesson.examples?.[0] ?? lesson.title
 
     this.shadowRoot.innerHTML = `
@@ -114,6 +139,8 @@ export class MnemosyneModal extends HTMLElement {
 
         .dialog:focus { outline: none; }
 
+        /* Header always uses logical LTR layout — close button stays at
+           inline-end regardless of the target language direction. */
         .header {
           display: flex;
           justify-content: space-between;
@@ -124,6 +151,8 @@ export class MnemosyneModal extends HTMLElement {
         h2 {
           margin: 0;
           font-size: clamp(1rem, 2.5vw + 0.5rem, 1.25rem);
+          /* Target-language title may wrap differently — let it. */
+          overflow-wrap: break-word;
         }
 
         /* ── buttons ── */
@@ -147,9 +176,54 @@ export class MnemosyneModal extends HTMLElement {
           cursor: not-allowed;
         }
 
+        /* ── script view toggle ── */
+        .script-toggle {
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+          flex-wrap: wrap;
+          margin-block: 0.75rem;
+          font-size: 0.85rem;
+        }
+
+        .script-toggle__label {
+          color: var(--muted, GrayText);
+          font-size: 0.75rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          margin-inline-end: 0.15rem;
+        }
+
+        .script-toggle__btn {
+          min-block-size: 2rem;
+          padding-inline: 0.65rem;
+          font-size: 0.8rem;
+          border: 1px solid color-mix(in srgb, CanvasText 25%, transparent);
+          border-radius: 999px;
+          background: transparent;
+          color: inherit;
+          cursor: pointer;
+        }
+
+        .script-toggle__btn:focus-visible {
+          outline: 3px solid var(--accent, #3557ff);
+          outline-offset: 2px;
+        }
+
+        .script-toggle__btn[aria-pressed="true"] {
+          background: color-mix(in srgb, CanvasText 15%, Canvas);
+          border-color: color-mix(in srgb, CanvasText 40%, Canvas);
+        }
+
+        /* ── layer visibility — controlled by data-script-view on .lesson-body ── */
+        .lesson-body[data-script-view="native"]    [data-layer="romanized"] { display: none; }
+        .lesson-body[data-script-view="romanized"] [data-layer="native"]    { display: none; }
+        /* 'both' (default): both layers visible */
+
         /* ── lesson body ── */
         .lesson-body {
-          margin-block-start: 1rem;
+          margin-block-start: 0.5rem;
         }
 
         .explanation {
@@ -202,6 +276,8 @@ export class MnemosyneModal extends HTMLElement {
           font-size: 1.15rem;
           font-weight: 600;
           margin: 0;
+          /* Prevent overflow for long CJK or unbreakable script strings. */
+          overflow-wrap: break-word;
         }
 
         .btn-speak {
@@ -233,12 +309,21 @@ export class MnemosyneModal extends HTMLElement {
         .drill-prompt {
           margin: 0 0 0.6rem;
           font-size: 0.95rem;
+          overflow-wrap: break-word;
         }
 
         .drill-text {
           font-size: 1.1rem;
           font-weight: 600;
           margin: 0 0 0.6rem;
+          overflow-wrap: break-word;
+        }
+
+        /* RTL text elements — text-align:start resolves to right in RTL. */
+        .drill-text[dir="rtl"],
+        .drill-prompt[dir="rtl"],
+        .example-text[dir="rtl"] {
+          text-align: start;
         }
 
         .drill-options {
@@ -289,6 +374,11 @@ export class MnemosyneModal extends HTMLElement {
           padding: 0.4rem 0.6rem;
           min-inline-size: 8rem;
           block-size: 2.75rem;
+        }
+
+        /* RTL input: align cursor/caret to the inline-start (right) edge. */
+        .drill-input[dir="rtl"] {
+          text-align: start;
         }
 
         .drill-input:focus-visible {
@@ -349,6 +439,14 @@ export class MnemosyneModal extends HTMLElement {
             <button type="button" class="close" data-close>Close</button>
           </div>
 
+          ${hasTranslit ? `
+          <div class="script-toggle" role="group" aria-label="Script view">
+            <span class="script-toggle__label" aria-hidden="true">View:</span>
+            <button type="button" class="script-toggle__btn" data-view="native">Script</button>
+            <button type="button" class="script-toggle__btn" data-view="romanized">Romanized</button>
+            <button type="button" class="script-toggle__btn" data-view="both">Both</button>
+          </div>` : ''}
+
           <div class="lesson-body">
             <span class="type-badge"></span>
             <p class="explanation"></p>
@@ -374,42 +472,89 @@ export class MnemosyneModal extends HTMLElement {
             <button type="button" data-rate="4">Easy  <span class="sr-only">(remembered effortlessly)</span></button>
           </div>
 
-          <p class="status"      role="status" aria-atomic="true"></p>
+          <p class="status"       role="status" aria-atomic="true"></p>
           <p class="status-error" role="alert"  aria-atomic="true"></p>
         </div>
       </div>
     `
 
     // ── Populate text safely via DOM (never innerHTML for API data) ───────────
-    const sr = this.shadowRoot
+    const sr  = this.shadowRoot
+    const dir = this.#dir
 
-    sr.querySelector('#modal-title').textContent = lesson.title
-    sr.querySelector('.type-badge').textContent  = lesson.type.replace('_', ' ')
+    // Title — target-language word/phrase.
+    const titleEl = sr.querySelector('#modal-title')
+    titleEl.textContent = lesson.title
+    this.#applyTargetLang(titleEl)
+
+    sr.querySelector('.type-badge').textContent = lesson.type.replace('_', ' ')
+    // Explanation is always UI-language (English) — no lang/dir override.
     sr.querySelector('.explanation').textContent = lesson.explanation
 
-    // Fields — definition list
+    // Fields — definition list.
+    // Labels from the backend identify whether each value is native script,
+    // romanized, or a UI-language gloss, so we annotate accordingly.
     const dl = sr.querySelector('.fields')
     for (const field of lesson.fields ?? []) {
+      const labelLower = field.label.toLowerCase()
+      const layer = NATIVE_LABELS.has(labelLower)    ? 'native'
+                  : ROMANIZED_LABELS.has(labelLower)  ? 'romanized'
+                  : null
+
       const dt = document.createElement('dt')
       dt.className = 'field-label'
       dt.textContent = field.label
+
       const dd = document.createElement('dd')
       dd.className = 'field-value'
       dd.textContent = field.value
+
+      if (layer) {
+        // Annotate both label and value so the toggle hides the whole row.
+        dt.dataset.layer = layer
+        dd.dataset.layer = layer
+      }
+
+      // Apply target lang/dir to the value unless it's a known UI-language field.
+      if (!UI_LANG_LABELS.has(labelLower)) {
+        this.#applyTargetLang(dd)
+      }
+
       dl.append(dt, dd)
     }
 
-    // Example text + speak
-    sr.querySelector('.example-text').textContent = exampleText
+    // Example text — always target-language.
+    const exampleEl = sr.querySelector('.example-text')
+    exampleEl.textContent = exampleText
+    this.#applyTargetLang(exampleEl)
+
     sr.querySelector('.btn-speak').addEventListener('click', () => {
       onSpeak?.(exampleText)
     })
 
-    // Drills
+    // Drills.
     const drillsContainer = sr.querySelector('.drills-list')
     for (let i = 0; i < (lesson.drills ?? []).length; i++) {
       const drillEl = this.#renderDrill(lesson.drills[i], i, onSpeak)
       if (drillEl) drillsContainer.appendChild(drillEl)
+    }
+
+    // ── Script view toggle wiring ─────────────────────────────────────────────
+    if (hasTranslit) {
+      const lessonBody = sr.querySelector('.lesson-body')
+      lessonBody.dataset.scriptView = this.#scriptView
+
+      sr.querySelectorAll('.script-toggle__btn').forEach((btn) => {
+        const active = btn.dataset.view === this.#scriptView
+        btn.setAttribute('aria-pressed', String(active))
+        btn.addEventListener('click', () => {
+          this.#scriptView = btn.dataset.view
+          lessonBody.dataset.scriptView = this.#scriptView
+          sr.querySelectorAll('.script-toggle__btn').forEach((b) => {
+            b.setAttribute('aria-pressed', String(b.dataset.view === this.#scriptView))
+          })
+        })
+      })
     }
 
     // ── Overlay click closes ──────────────────────────────────────────────────
@@ -449,7 +594,7 @@ export class MnemosyneModal extends HTMLElement {
       })
     })
 
-    // sr-only inline style — shadow DOM cannot reach light-DOM utility classes
+    // sr-only inline style — shadow DOM cannot reach light-DOM utility classes.
     const srOnlyStyle = `
       position: absolute;
       inline-size: 1px; block-size: 1px;
@@ -460,19 +605,25 @@ export class MnemosyneModal extends HTMLElement {
     sr.querySelectorAll('.sr-only').forEach((el) => el.setAttribute('style', srOnlyStyle))
   }
 
+  // ── Language helpers ────────────────────────────────────────────────────────
+
+  /** Apply lang + dir to an element that displays target-language text. */
+  #applyTargetLang(el) {
+    if (this.#language) el.setAttribute('lang', this.#language)
+    if (this.#dir !== 'ltr') el.setAttribute('dir', this.#dir)
+  }
+
   // ── Drill renderers ─────────────────────────────────────────────────────────
-  // Each renderer creates DOM nodes and attaches event listeners.
-  // Note: answer data (answer_index, answer, correct) is kept in JS closure —
-  // it is NOT embedded in data-attributes to avoid trivial DOM inspection.
-  // For a self-study tool this is still visible in memory, which is fine.
+  // Answer data (answer_index, answer, correct) is kept in JS closure —
+  // never embedded in data-attributes to avoid trivial DOM inspection.
 
   #renderDrill(drill, index, onSpeak) {
     switch (drill.type) {
-      case 'shadowing':      return this.#renderShadowing(drill, index, onSpeak)
+      case 'shadowing':       return this.#renderShadowing(drill, index, onSpeak)
       case 'multiple_choice': return this.#renderMultipleChoice(drill, index)
-      case 'fill_blank':     return this.#renderFillBlank(drill, index)
-      case 'recognition':    return this.#renderRecognition(drill, index)
-      default:               return null
+      case 'fill_blank':      return this.#renderFillBlank(drill, index)
+      case 'recognition':     return this.#renderRecognition(drill, index)
+      default:                return null
     }
   }
 
@@ -489,6 +640,8 @@ export class MnemosyneModal extends HTMLElement {
     const text = document.createElement('p')
     text.className = 'drill-text'
     text.textContent = drill.text
+    // Shadowing text is always target-language.
+    this.#applyTargetLang(text)
 
     const btn = document.createElement('button')
     btn.type = 'button'
@@ -509,6 +662,8 @@ export class MnemosyneModal extends HTMLElement {
     const prompt = document.createElement('p')
     prompt.className = 'drill-prompt'
     prompt.textContent = drill.prompt
+    // MC prompts often contain target-language text (e.g. "What does X mean?").
+    this.#applyTargetLang(prompt)
 
     const group = document.createElement('div')
     group.className = 'drill-options'
@@ -531,7 +686,6 @@ export class MnemosyneModal extends HTMLElement {
         answered = true
         const isCorrect = i === drill.answer_index
 
-        // Mark each option as correct/wrong/neutral
         group.querySelectorAll('.drill-option').forEach((b, j) => {
           b.disabled = true
           if (j === drill.answer_index) b.dataset.state = 'correct'
@@ -557,8 +711,9 @@ export class MnemosyneModal extends HTMLElement {
 
     const prompt = document.createElement('p')
     prompt.className = 'drill-prompt'
-    // Replace ___ with a visible blank marker
+    // Replace ___ with an em-dash run for visual clarity.
     prompt.textContent = drill.prompt.replace('___', '\u2014\u2014\u2014')
+    this.#applyTargetLang(prompt)
 
     const row = document.createElement('div')
     row.className = 'drill-input-row'
@@ -572,6 +727,8 @@ export class MnemosyneModal extends HTMLElement {
     input.setAttribute('autocomplete', 'off')
     input.setAttribute('autocorrect', 'off')
     input.setAttribute('spellcheck', 'false')
+    // Apply lang so the OS/IME offers the correct keyboard/input method.
+    this.#applyTargetLang(input)
 
     const checkBtn = document.createElement('button')
     checkBtn.type = 'button'
@@ -625,6 +782,7 @@ export class MnemosyneModal extends HTMLElement {
     const prompt = document.createElement('p')
     prompt.className = 'drill-prompt'
     prompt.textContent = drill.statement
+    this.#applyTargetLang(prompt)
 
     const group = document.createElement('div')
     group.className = 'drill-options'

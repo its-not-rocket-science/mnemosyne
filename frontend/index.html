@@ -67,7 +67,7 @@
             <textarea id="source-text" name="source-text" rows="8"
               required aria-required="true"
               aria-describedby="status"
-              placeholder="Paste text here…">Hola. La casa roja habla. Yo hablo español.</textarea>
+              placeholder="Paste text here…"></textarea>
           </div>
 
           <div class="button-row">
@@ -89,6 +89,13 @@
 
       <section class="panel" aria-labelledby="results-heading">
         <h2 id="results-heading">Sentence lessons</h2>
+
+        <!--
+          Script view toolbar — hidden until a language with transliteration
+          support is selected.  JS populates the toggle button group inside it.
+        -->
+        <div id="results-toolbar" class="results-toolbar" hidden></div>
+
         <!--
           No aria-live here — announcing the full card dump is too noisy.
           The #status region announces the summary ("3 sentences parsed").

@@ -53,6 +53,21 @@
   letter-spacing: 0.02em;
 }
 
+/* Chinese and Japanese: break between characters — there are no inter-word
+   spaces so word-break:normal would cause overflow on long strings. */
+[lang^="zh"],
+[lang^="ja"] {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+/* Korean uses dictionary-based line-breaking (keep-all prevents breaking
+   within syllable clusters mid-word). */
+[lang^="ko"] {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
 /* Devanagari: Segoe UI (Windows), Kohinoor Devanagari (Apple), Noto Sans Devanagari. */
 [lang^="hi"],
 [lang^="mr"],
@@ -61,6 +76,23 @@
   font-family: "Segoe UI", "Kohinoor Devanagari", "Noto Sans Devanagari",
                system-ui, sans-serif;
   line-height: 1.7;
+}
+
+/* ── Tokenisation-mode word-breaking ─────────────────────────────────────────
+   When the backend declares tokenization_mode, main.js sets data-tokenization
+   on each sentence-card text element.  The lang-based rules above cover the
+   common CJK case; these catch any language the lang selectors miss.         */
+
+/* Character-segmented languages (e.g. future classical Chinese, Thai) */
+.sentence-card__text[data-tokenization="character"] {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+/* Segmented languages with dictionary-based breaking (e.g. Korean, Thai) */
+.sentence-card__text[data-tokenization="segmented"] {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 /* ── RTL layout overrides ────────────────────────────────────────────────────

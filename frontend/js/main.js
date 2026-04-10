@@ -14,14 +14,25 @@ const results        = document.querySelector('#results')
 const resultsEmpty   = document.querySelector('.results-empty')
 const status         = document.querySelector('#status')
 const modal          = document.querySelector('#lesson-modal')
+const resultsToolbar = document.querySelector('#results-toolbar')
 
 // Carries FSRS state across multiple ratings of the same object in one session.
 const reviewStateByObject = new Map()
 
 // ── Language capabilities ─────────────────────────────────────────────────────
 // Populated from GET /languages on page load.
-// Maps language code → { code, display_name, direction, script_family, … }
+// Maps language code → LanguageCapabilities object from the backend schema.
 const languageCapabilities = new Map()
+
+// Currently selected language capabilities — updated whenever the select changes.
+let currentCaps = null
+
+// Script view state for the results panel.
+// 'native'    — show source script only (default)
+// 'romanized' — show romanized/transliterated form only
+// 'both'      — show both layers side by side
+// Only active when currentCaps.transliteration_scheme is set.
+let scriptView = 'native'
 
 async function loadLanguages() {
   try {
@@ -29,68 +40,143 @@ async function loadLanguages() {
     if (!response.ok) throw new Error(`GET /languages failed (${response.status})`)
     const languages = await response.json()
 
-    // Populate the capabilities map.
     for (const caps of languages) {
       languageCapabilities.set(caps.code, caps)
     }
 
     // Replace the loading placeholder with real options.
-    // Preserve the currently selected value if it happens to be in the list.
+    // Preserve any prior selection; otherwise default to the first in the list.
     const current = languageSelect.value
+    let firstSet  = false
     languageSelect.removeAttribute('aria-busy')
     languageSelect.replaceChildren(
       ...languages.map((caps) => {
         const opt = document.createElement('option')
         opt.value = caps.code
         opt.textContent = caps.display_name
-        if (caps.code === current || (current === '' && caps.code === 'es')) {
+        if (caps.code === current || (!firstSet && current === '')) {
           opt.selected = true
+          firstSet = true
         }
         return opt
       })
     )
   } catch {
-    // On error, fall back to a static minimal list so the form stays usable.
+    // On error, show a minimal static fallback so the form stays usable.
     languageSelect.removeAttribute('aria-busy')
     languageSelect.replaceChildren()
-    ;[['es', 'Spanish'], ['en', 'English (stub)']].forEach(([code, name]) => {
+    ;[['es', 'Spanish'], ['en', 'English (stub)'], ['fr', 'French (stub)']].forEach(([code, name]) => {
       const opt = document.createElement('option')
       opt.value = code
       opt.textContent = name
       languageSelect.appendChild(opt)
     })
   }
+
+  // Sync currentCaps after options are settled.
+  syncCurrentCaps()
 }
 
-// Load language list as soon as the module executes.
 loadLanguages()
+
+// Re-sync whenever the user changes the language.
+languageSelect.addEventListener('change', () => {
+  scriptView = 'native'  // reset view for the new language
+  syncCurrentCaps()
+})
+
+function syncCurrentCaps() {
+  currentCaps = languageCapabilities.get(languageSelect.value) ?? null
+  updateScriptViewToolbar()
+}
+
+
+// ── Script view toolbar ───────────────────────────────────────────────────────
+// Only shown for languages that declare a transliteration_scheme, since that
+// is the prerequisite for romanized output existing in the lesson data.
+
+function updateScriptViewToolbar() {
+  if (!resultsToolbar) return
+  const supported = Boolean(currentCaps?.transliteration_scheme)
+  resultsToolbar.hidden = !supported
+  if (!supported) return
+
+  // Build toggle group on first show; re-use on subsequent calls.
+  let group = resultsToolbar.querySelector('.script-toggle')
+  if (!group) {
+    group = buildScriptToggleGroup()
+    resultsToolbar.appendChild(group)
+  }
+  syncScriptToggleUI(group)
+}
+
+function buildScriptToggleGroup() {
+  const group = document.createElement('div')
+  group.className = 'script-toggle'
+  group.setAttribute('role', 'group')
+  group.setAttribute('aria-label', 'Script view')
+
+  const label = document.createElement('span')
+  label.className = 'script-toggle__label'
+  label.textContent = 'View:'
+  label.setAttribute('aria-hidden', 'true')
+  group.appendChild(label)
+
+  for (const { value, text } of [
+    { value: 'native',    text: 'Script' },
+    { value: 'romanized', text: 'Romanized' },
+    { value: 'both',      text: 'Both' },
+  ]) {
+    const btn = document.createElement('button')
+    btn.type = 'button'
+    btn.className = 'script-toggle__btn'
+    btn.dataset.view = value
+    btn.textContent = text
+    btn.addEventListener('click', () => {
+      scriptView = value
+      syncScriptToggleUI(group)
+      applyScriptViewToResults()
+    })
+    group.appendChild(btn)
+  }
+
+  return group
+}
+
+function syncScriptToggleUI(group) {
+  group.querySelectorAll('.script-toggle__btn').forEach((btn) => {
+    const active = btn.dataset.view === scriptView
+    btn.setAttribute('aria-pressed', String(active))
+    btn.classList.toggle('script-toggle__btn--active', active)
+  })
+}
+
+function applyScriptViewToResults() {
+  results.dataset.scriptView = scriptView
+}
 
 
 // ── Status helper ─────────────────────────────────────────────────────────────
-// Writes to the role="status" live region.  The clear-then-set pattern ensures
-// screen readers announce the new message even when the text is unchanged.
+// Clear-then-set ensures screen readers re-announce even identical messages.
 
 function setStatus(message, state = 'idle') {
   status.textContent = ''
   queueMicrotask(() => {
     status.textContent = message
-    status.dataset.state = state  // 'idle' | 'busy' | 'error'
+    status.dataset.state = state   // 'idle' | 'busy' | 'error'
   })
 }
 
 
 // ── Results empty state ───────────────────────────────────────────────────────
-// resultsEmpty is always an orphaned node that is moved in/out of #results
-// by the helpers below.  It is never cloned, so one reference suffices.
+// resultsEmpty is a persistent orphan node moved in/out of #results.
 
 function showResultsMessage(message) {
   resultsEmpty.textContent = message
-  // replaceChildren re-parents the node if it was detached; no-op if already there.
   results.replaceChildren(resultsEmpty)
 }
 
 function hideResultsMessage() {
-  // Remove from DOM without destroying the reference.
   resultsEmpty.remove()
 }
 
@@ -100,29 +186,24 @@ function hideResultsMessage() {
 form.addEventListener('submit', async (event) => {
   event.preventDefault()
 
-  // Clear any previous validation state on every submission attempt.
   textarea.removeAttribute('aria-invalid')
 
   const text = textarea.value.trim()
   if (!text) {
-    // aria-invalid="true" tells AT the field is in an error state.
-    // aria-describedby="status" (set in HTML) then surfaces the message
-    // when focus lands on the textarea.
     textarea.setAttribute('aria-invalid', 'true')
     setStatus('Please enter some text to parse.', 'error')
     textarea.focus()
     return
   }
 
-  // Reset previous session.
   reviewStateByObject.clear()
-  showResultsMessage('Loading…')
-  setStatus('Parsing text…', 'busy')
+  showResultsMessage('Loading\u2026')
+  setStatus('Parsing text\u2026', 'busy')
 
   submitButton.disabled = true
   submitButton.setAttribute('aria-busy', 'true')
   const originalLabel = submitButton.textContent.trim()
-  submitButton.textContent = 'Parsing…'
+  submitButton.textContent = 'Parsing\u2026'
 
   try {
     const payload = {
@@ -145,7 +226,7 @@ form.addEventListener('submit', async (event) => {
     const data = await response.json()
 
     if (data.sentences.length === 0) {
-      showResultsMessage('No learnable items found — try pasting a longer passage.')
+      showResultsMessage('No learnable items found \u2014 try pasting a longer passage.')
       setStatus('No sentences found.')
       return
     }
@@ -165,14 +246,15 @@ form.addEventListener('submit', async (event) => {
 
 
 // ── Lesson open ───────────────────────────────────────────────────────────────
-// Delegated to #results so it catches events from all pill descendants.
-// lesson-open is dispatched with composed:true so it crosses the shadow-DOM
-// boundary and reaches the light DOM.
+// Delegated to #results; lesson-open is dispatched with composed:true so it
+// crosses the shadow-DOM boundary and reaches the light DOM.
 
 results.addEventListener('lesson-open', async (event) => {
   const { objectId, language } = event.detail
+  const caps   = languageCapabilities.get(language)
+  const ttsTag = caps?.tts_lang_tag ?? language
 
-  setStatus('Loading lesson…', 'busy')
+  setStatus('Loading lesson\u2026', 'busy')
 
   try {
     const url = `${API_BASE}/lesson/${encodeURIComponent(objectId)}?language=${encodeURIComponent(language)}`
@@ -188,8 +270,10 @@ results.addEventListener('lesson-open', async (event) => {
     modal.open({
       lesson,
       objectId: lesson.id,
-      onRate:   submitReview,
-      onSpeak:  (text) => speakText(text, language),
+      caps,
+      language,
+      onRate:  submitReview,
+      onSpeak: (text) => speakText(text, ttsTag),
     })
 
     setStatus(`Lesson open: ${lesson.title}.`)
@@ -203,10 +287,9 @@ results.addEventListener('lesson-open', async (event) => {
 
 function renderResults(sentences, language) {
   const fragment = document.createDocumentFragment()
-  const caps = languageCapabilities.get(language)
-  // direction and lang tag for target-language text.  Fall back to "ltr" if
-  // capabilities haven't loaded yet (e.g. /languages failed).
-  const dir  = caps?.direction ?? 'ltr'
+  const caps      = languageCapabilities.get(language)
+  const dir       = caps?.direction ?? 'ltr'
+  const tokenMode = caps?.tokenization_mode ?? 'whitespace'
 
   for (const sentence of sentences) {
     const article = document.createElement('article')
@@ -214,20 +297,22 @@ function renderResults(sentences, language) {
 
     const textEl = document.createElement('p')
     textEl.className = 'sentence-card__text'
-    textEl.textContent = sentence.text  // textContent — never innerHTML
-    // Apply language and direction so AT announces the text correctly and
-    // the browser applies script-appropriate shaping and line-breaking.
+    textEl.textContent = sentence.text   // textContent — never innerHTML
+    // lang + dir: correct AT announcement, font shaping, and line-breaking.
     textEl.setAttribute('lang', language)
     textEl.setAttribute('dir',  dir)
+    // data-tokenization: drives word-break CSS for segmented / character scripts.
+    textEl.dataset.tokenization = tokenMode
+    // data-layer: consumed by script-view CSS when transliteration is toggled.
+    textEl.dataset.layer = 'native'
 
-    // Use <ul>/<li> for semantic list semantics; AT announces item count.
     const list = document.createElement('ul')
     list.className = 'sentence-card__pills'
-    // Pill labels are target-language text too; match direction of the text.
+    // Pill labels are target-language text; match text direction.
     list.setAttribute('dir', dir)
 
     for (const item of sentence.learnable_objects) {
-      const li = document.createElement('li')
+      const li   = document.createElement('li')
       const pill = document.createElement('mnemosyne-pill')
       pill.setAttribute('type',      item.type)
       pill.setAttribute('label',     item.label)
@@ -241,8 +326,11 @@ function renderResults(sentences, language) {
     fragment.appendChild(article)
   }
 
-  // Replace everything in #results (detaches resultsEmpty if present).
   results.replaceChildren(fragment)
+
+  // Apply current script-view and toolbar state to the new cards.
+  applyScriptViewToResults()
+  updateScriptViewToolbar()
 }
 
 
@@ -271,12 +359,14 @@ async function submitReview(objectId, quality) {
 
 
 // ── Text-to-speech ────────────────────────────────────────────────────────────
+// langTag should be caps.tts_lang_tag ?? language — callers are responsible
+// for resolving the right BCP-47 tag before calling here.
 
-function speakText(text, language) {
+function speakText(text, langTag) {
   if (!text || !('speechSynthesis' in window)) return
   const utterance = new SpeechSynthesisUtterance(text)
-  if (language) utterance.lang = language
-  window.speechSynthesis.cancel()  // stop any ongoing speech first
+  if (langTag) utterance.lang = langTag
+  window.speechSynthesis.cancel()   // stop any ongoing speech first
   window.speechSynthesis.speak(utterance)
 }
 
