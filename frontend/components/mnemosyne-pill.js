@@ -2,12 +2,15 @@
 // color-mix blends it with the system Canvas color so pills adapt to
 // both light and dark mode without any media-query duplication.
 const TYPE_META = {
-  vocabulary:  { icon: '📗', label: 'Vocabulary', badge: 'vocab', ref: 'oklch(0.50 0.20 142)' },
-  conjugation: { icon: '🔧', label: 'Verb',        badge: 'verb',  ref: 'oklch(0.50 0.20 240)' },
-  agreement:   { icon: '🧩', label: 'Agreement',   badge: 'agr',   ref: 'oklch(0.50 0.15  50)' },
-  idiom:       { icon: '💬', label: 'Idiom',        badge: 'idiom', ref: 'oklch(0.50 0.20 300)' },
-  grammar:     { icon: '📐', label: 'Grammar',      badge: 'gram',  ref: 'oklch(0.50 0.15  90)' },
-  nuance:      { icon: '🎭', label: 'Nuance',       badge: 'nuance',ref: 'oklch(0.50 0.20  20)' },
+  vocabulary:       { icon: '📗', label: 'Vocabulary',      badge: 'vocab',  ref: 'oklch(0.50 0.20 142)' },
+  conjugation:      { icon: '🔧', label: 'Verb',             badge: 'verb',   ref: 'oklch(0.50 0.20 240)' },
+  agreement:        { icon: '🧩', label: 'Agreement',        badge: 'agr',    ref: 'oklch(0.50 0.15  50)' },
+  idiom:            { icon: '💬', label: 'Idiom',             badge: 'idiom',  ref: 'oklch(0.50 0.20 300)' },
+  grammar:          { icon: '📐', label: 'Grammar',           badge: 'gram',   ref: 'oklch(0.50 0.15  90)' },
+  nuance:           { icon: '🎭', label: 'Nuance',            badge: 'nuance', ref: 'oklch(0.50 0.20  20)' },
+  // v2 types
+  script:           { icon: '✍️', label: 'Script',           badge: 'script', ref: 'oklch(0.50 0.18 200)' },
+  transliteration:  { icon: '🔤', label: 'Transliteration',  badge: 'roma',   ref: 'oklch(0.50 0.15 170)' },
 }
 
 export class MnemosynePill extends HTMLElement {

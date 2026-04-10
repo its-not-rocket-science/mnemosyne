@@ -84,11 +84,40 @@ class TestPluginRegistry:
             assert len(caps.lesson_modes_supported) >= 1
             assert all(m in valid for m in caps.lesson_modes_supported)
 
+    def test_supported_languages_analysis_depth_valid(self) -> None:
+        registry = load_plugins()
+        valid = {"full", "morphology_light", "dictionary", "segmentation_only"}
+        for caps in registry.supported_languages().values():
+            assert caps.analysis_depth in valid
+
+    def test_supported_languages_quality_levels_valid(self) -> None:
+        registry = load_plugins()
+        valid = {"high", "medium", "low", "none"}
+        for caps in registry.supported_languages().values():
+            assert caps.segmentation_quality in valid
+            assert caps.tokenization_quality in valid
+            assert caps.morphology_quality in valid
+
+    def test_supported_languages_feature_flags_are_bool(self) -> None:
+        registry = load_plugins()
+        for caps in registry.supported_languages().values():
+            assert isinstance(caps.syntax_support, bool)
+            assert isinstance(caps.idiom_detection, bool)
+
     def test_spanish_capabilities_rich_morphology(self) -> None:
         registry = load_plugins()
         caps = registry.supported_languages()["es"]
         assert caps.morphology_depth == "rich"
         assert "morphology" in caps.lesson_modes_supported
+
+    def test_spanish_capabilities_v2_fields(self) -> None:
+        registry = load_plugins()
+        caps = registry.supported_languages()["es"]
+        assert caps.analysis_depth == "full"
+        assert caps.morphology_quality in ("medium", "high")
+        assert caps.syntax_support is True
+        assert caps.tts_lang_tag == "es"
+        assert caps.transliteration_scheme is None
 
     def test_english_stub_capabilities_no_morphology(self) -> None:
         registry = load_plugins()
@@ -96,11 +125,26 @@ class TestPluginRegistry:
         assert caps.morphology_depth == "none"
         assert caps.lesson_modes_supported == ["vocabulary"]
 
+    def test_english_stub_capabilities_v2_fields(self) -> None:
+        registry = load_plugins()
+        caps = registry.supported_languages()["en"]
+        assert caps.analysis_depth == "dictionary"
+        assert caps.morphology_quality == "none"
+        assert caps.syntax_support is False
+        assert caps.tts_lang_tag == "en"
+
     def test_french_stub_capabilities_no_morphology(self) -> None:
         registry = load_plugins()
         caps = registry.supported_languages()["fr"]
         assert caps.morphology_depth == "none"
         assert caps.lesson_modes_supported == ["vocabulary"]
+
+    def test_french_stub_capabilities_v2_fields(self) -> None:
+        registry = load_plugins()
+        caps = registry.supported_languages()["fr"]
+        assert caps.analysis_depth == "dictionary"
+        assert caps.morphology_quality == "none"
+        assert caps.tts_lang_tag == "fr"
 
     def test_get_returns_correct_plugin(self) -> None:
         registry = load_plugins()

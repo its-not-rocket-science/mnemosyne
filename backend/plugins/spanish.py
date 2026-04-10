@@ -112,6 +112,15 @@ class SpanishPlugin:
         tokenization_mode="whitespace",
         morphology_depth="rich",
         lesson_modes_supported=["morphology", "vocabulary"],
+        # v2 fields
+        analysis_depth="full",
+        segmentation_quality="medium",   # es_core_news_sm sentence splits are decent
+        tokenization_quality="high",     # word tokenization is reliable for Spanish
+        morphology_quality="medium",     # small model; many OOV tokens
+        syntax_support=True,             # dep parse used for reflexive detection
+        idiom_detection=False,
+        tts_lang_tag="es",
+        transliteration_scheme=None,
     )
 
     def __init__(self) -> None:
