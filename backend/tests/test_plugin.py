@@ -133,17 +133,18 @@ class TestPluginRegistry:
         assert caps.syntax_support is False
         assert caps.tts_lang_tag == "en"
 
-    def test_french_stub_capabilities_no_morphology(self) -> None:
+    def test_french_capabilities_morphology(self) -> None:
+        # French now uses the real spaCy plugin (fr_core_news_sm), not the stub.
         registry = load_plugins()
         caps = registry.supported_languages()["fr"]
-        assert caps.morphology_depth == "none"
-        assert caps.lesson_modes_supported == ["vocabulary"]
+        assert caps.morphology_depth == "rich"
+        assert "morphology" in caps.lesson_modes_supported
 
-    def test_french_stub_capabilities_v2_fields(self) -> None:
+    def test_french_capabilities_v2_fields(self) -> None:
         registry = load_plugins()
         caps = registry.supported_languages()["fr"]
-        assert caps.analysis_depth == "dictionary"
-        assert caps.morphology_quality == "none"
+        assert caps.analysis_depth == "full"
+        assert caps.morphology_quality == "medium"
         assert caps.tts_lang_tag == "fr"
 
     def test_get_returns_correct_plugin(self) -> None:

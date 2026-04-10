@@ -66,8 +66,16 @@ _POS_OPTIONS: list[str] = [
 
 # ── Conjugation display ───────────────────────────────────────────────────────
 
+# ARCH (multilingual gap): "preterite" is a Spanish-specific term.
+# French, Italian, Portuguese, and other Romance languages use different
+# past-tense vocabulary in pedagogical contexts.  "past" is added here so
+# French verbs tagged Tense=Past (literary passé simple) produce a valid
+# MC drill, but "preterite" remains as a wrong-option distractor which is
+# misleading for French learners.
+# Future fix: make this pool pluggable via lesson_data["tense_options"] or
+# a per-language registry so each plugin can supply the appropriate terms.
 _TENSE_OPTIONS: list[str] = [
-    "present", "preterite", "imperfect", "future", "conditional",
+    "present", "preterite", "imperfect", "future", "conditional", "past",
 ]
 
 _MOOD_OPTIONS: list[str] = [
