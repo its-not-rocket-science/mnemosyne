@@ -151,6 +151,9 @@ def build_lesson(
             "agreement":        _build_agreement,
             "script":           _build_script,
             "transliteration":  _build_transliteration,
+            "idiom":            _build_idiom,
+            "grammar":          _build_grammar,
+            "nuance":           _build_nuance,
         }
         builder = builders.get(obj_type, _build_generic)
         response = builder(
@@ -581,6 +584,215 @@ def _build_dictionary(
         fields=fields,
         examples=[display_label],
         drills=[ShadowingDrill(type="shadowing", text=display_label)],
+    )
+
+
+def _build_idiom(
+    *,
+    object_id: str,
+    obj_type: str,
+    canonical_form: str,
+    display_label: str,
+    lesson_data: dict[str, Any],
+) -> LessonResponse:
+    """Lesson for a multi-word idiomatic expression.
+
+    Expected ``lesson_data`` keys:
+
+    phrase    — the canonical fixed-form phrase (defaults to display_label).
+    meaning   — English translation / gloss.
+    register  — "neutral" | "formal" | "informal" (optional).
+    """
+    phrase   = lesson_data.get("phrase") or display_label
+    meaning  = lesson_data.get("meaning") or ""
+    register = lesson_data.get("register") or ""
+    seed     = canonical_form
+
+    # Explanation
+    if meaning:
+        explanation = f"\u201c{phrase}\u201d is a Spanish idiom meaning \u201c{meaning}\u201d."
+    else:
+        explanation = f"\u201c{phrase}\u201d is a Spanish idiomatic expression."
+
+    # Fields
+    fields: list[LessonField] = [LessonField(label="Phrase", value=phrase)]
+    if meaning:
+        fields.append(LessonField(label="Meaning", value=meaning))
+    if register:
+        fields.append(LessonField(label="Register", value=register))
+
+    # Drills
+    drills: list[Drill] = [ShadowingDrill(type="shadowing", text=phrase)]
+
+    if meaning:
+        drills.append(FillBlankDrill(
+            type="fill_blank",
+            prompt=f"What does \u201c{phrase}\u201d mean?",
+            answer=meaning,
+        ))
+
+    if register:
+        register_options = ["neutral", "formal", "informal"]
+        mc = _make_mc_drill(
+            seed=seed,
+            prompt=f"What register is \u201c{phrase}\u201d?",
+            correct=register,
+            pool=register_options,
+        )
+        if mc:
+            drills.append(mc)
+
+    return LessonResponse(
+        id=object_id,
+        type="idiom",  # type: ignore[arg-type]
+        title=f"Idiom: {phrase}",
+        explanation=explanation,
+        fields=fields,
+        examples=[phrase],
+        drills=drills,
+    )
+
+
+def _build_grammar(
+    *,
+    object_id: str,
+    obj_type: str,
+    canonical_form: str,
+    display_label: str,
+    lesson_data: dict[str, Any],
+) -> LessonResponse:
+    """Lesson for a periphrastic / structural grammar pattern.
+
+    Expected ``lesson_data`` keys:
+
+    pattern_id   — stable identifier (e.g. "ser_copula").
+    pattern      — human-readable pattern label (e.g. "ser + [adjective / noun]").
+    usage        — when and why this construction is used.
+    contrast     — how it differs from a related construction.
+    verb_lemma   — the triggering verb lemma (optional).
+    surface_verb — the specific surface form found in the text (optional).
+    """
+    pattern_id   = lesson_data.get("pattern_id") or canonical_form
+    pattern      = lesson_data.get("pattern") or display_label
+    usage        = lesson_data.get("usage") or ""
+    contrast     = lesson_data.get("contrast") or ""
+    surface_verb = lesson_data.get("surface_verb") or display_label
+
+    # Explanation
+    if usage:
+        explanation = f"The pattern \u201c{pattern}\u201d: {usage}"
+    else:
+        explanation = f"The grammatical pattern \u201c{pattern}\u201d."
+
+    # Fields
+    fields: list[LessonField] = [LessonField(label="Pattern", value=pattern)]
+    if usage:
+        fields.append(LessonField(label="Usage", value=usage))
+    if contrast:
+        fields.append(LessonField(label="Contrast", value=contrast))
+
+    # Drills
+    drills: list[Drill] = [ShadowingDrill(type="shadowing", text=surface_verb)]
+
+    if usage:
+        drills.append(RecognitionDrill(
+            type="recognition",
+            statement=f"The pattern \u201c{pattern}\u201d is used for: {usage[:80]}{'...' if len(usage) > 80 else ''}",
+            correct=True,
+        ))
+
+    if contrast:
+        drills.append(RecognitionDrill(
+            type="recognition",
+            statement=f"The pattern \u201c{pattern}\u201d can replace a related construction without any meaning difference.",
+            correct=False,
+        ))
+
+    return LessonResponse(
+        id=object_id,
+        type="grammar",  # type: ignore[arg-type]
+        title=f"Grammar: {pattern}",
+        explanation=explanation,
+        fields=fields,
+        examples=[surface_verb],
+        drills=drills,
+    )
+
+
+def _build_nuance(
+    *,
+    object_id: str,
+    obj_type: str,
+    canonical_form: str,
+    display_label: str,
+    lesson_data: dict[str, Any],
+) -> LessonResponse:
+    """Lesson for an aspect, mood, or verb-type nuance observation.
+
+    Expected ``lesson_data`` keys:
+
+    nuance_type    — "imperfect_aspect" | "subjunctive_mood" | "reflexive_verb".
+    lemma          — the verb lemma this nuance was derived from.
+    surface        — the surface form found in the text.
+    note           — human-readable explanation of the nuance.
+    contrast_tense — for aspect nuances, the contrasting tense (optional).
+    """
+    nuance_type    = lesson_data.get("nuance_type") or obj_type
+    lemma          = lesson_data.get("lemma") or canonical_form
+    surface        = lesson_data.get("surface") or display_label
+    note           = lesson_data.get("note") or ""
+    contrast_tense = lesson_data.get("contrast_tense") or ""
+
+    # Human-readable type label
+    _type_labels: dict[str, str] = {
+        "imperfect_aspect": "Imperfect aspect",
+        "subjunctive_mood": "Subjunctive mood",
+        "reflexive_verb":   "Reflexive / pronominal verb",
+    }
+    type_label = _type_labels.get(nuance_type, nuance_type.replace("_", " ").title())
+
+    # Explanation
+    if note:
+        explanation = note
+    else:
+        explanation = f"\u201c{surface}\u201d exhibits {type_label.lower()}."
+
+    # Fields
+    fields: list[LessonField] = [
+        LessonField(label="Type", value=type_label),
+        LessonField(label="Verb", value=lemma),
+        LessonField(label="Surface form", value=surface),
+    ]
+    if note:
+        fields.append(LessonField(label="Note", value=note))
+    if contrast_tense:
+        fields.append(LessonField(label="Contrast tense", value=contrast_tense))
+
+    # Drills
+    drills: list[Drill] = [ShadowingDrill(type="shadowing", text=surface)]
+
+    if note:
+        drills.append(RecognitionDrill(
+            type="recognition",
+            statement=f"\u201c{surface}\u201d ({type_label}) describes a completed, one-time past event.",
+            correct=(nuance_type != "imperfect_aspect"),
+        ))
+
+    if contrast_tense:
+        drills.append(FillBlankDrill(
+            type="fill_blank",
+            prompt=f"The tense that contrasts with the imperfect for a single completed event is the \u2014\u2014\u2014.",
+            answer=contrast_tense,
+        ))
+
+    return LessonResponse(
+        id=object_id,
+        type="nuance",  # type: ignore[arg-type]
+        title=f"{type_label}: {surface}",
+        explanation=explanation,
+        fields=fields,
+        examples=[surface],
+        drills=drills,
     )
 
 

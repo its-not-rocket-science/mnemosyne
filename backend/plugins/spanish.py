@@ -2,51 +2,121 @@
 
 Registers as ``language_code = "es"``.
 
-Extraction model
-────────────────
-Three categories are extracted from each sentence:
+This module is the **reference implementation** for full-parse living-language
+plugins.  Read it alongside ``PLUGIN_AUTHOR_GUIDE.md`` when building a plugin
+for a new language.  The sections below document every design decision that is
+not immediately obvious from the code.
 
-**Vocabulary** — open-class words (NOUN, ADJ, ADV, VERB/AUX in non-finite
-forms).  Finite VERB and AUX tokens are *excluded* from vocabulary because
-they are already represented by a conjugation object; emitting the same
-lemma in both categories would create redundant learning items.
-Cross-tracking between conjugation and vocabulary also prevents the same
-lemma from appearing twice within a single sentence (e.g. "voy a ir" —
-the infinitive "ir" is suppressed once "ir" has been emitted as a
-conjugation entry for "voy").
-Lemmas that contain a space are silently dropped; they arise from enclitic
-fusion tokens that the model fails to split (e.g. "hacerlo" → "hacer él").
+─────────────────────────────────────────────────────────────────────────────
+WHAT THE PLUGIN EXTRACTS
+─────────────────────────────────────────────────────────────────────────────
 
-**Conjugation** — finite VERB and AUX tokens, each annotated with:
-  - morphological features (tense, mood, person, number)
-  - ``construction`` (standalone / progressive / perfect / passive /
-    near_future / modal / copula)
-  - ``is_reflexive`` (True when a reflexive or pronominal clitic is a
-    non-subject dependent of the verb)
-  - ``morph_complete`` (True when tense, mood, and person are all known)
-  - optional ``confidence_note`` explaining any score penalty
+**Vocabulary** — open-class content words (NOUN, ADJ, ADV, non-finite
+VERB/AUX).  Finite verbs are *excluded* here; they are already represented
+as conjugation objects.  Cross-tracking (``seen_vocab``) prevents the same
+lemma from appearing twice in the same sentence.
 
-**Agreement** — DET+NOUN and ADJ+NOUN pairs where at least one
-morphological feature (gender or number) can be positively confirmed to
-match.  Pairs with a *confirmed mismatch* on any available feature are
-silently dropped; they indicate a model error rather than a valid teaching
-object.
+  lesson_data keys: lemma, pos, gender*, number*, verb_form*, confidence_note*
+  (* = only when available)
 
-Known limitations
-─────────────────
+**Conjugation** — finite VERB and AUX tokens, annotated with:
+  • morphological features: tense, mood, person, number
+  • construction: standalone / progressive / perfect / passive /
+                  near_future / modal / copula
+  • is_reflexive: True when a reflexive clitic is a dependent of this verb
+  • morph_complete: True when tense + mood + person are all resolved
+  • paradigm_class: -ar / -er / -ir / irregular
+  • is_irregular: True for known irregular verb stems
+  • confidence_note: human-readable rationale for any score penalty
+
+**Agreement** — DET+NOUN and ADJ+NOUN pairs with at least one positively
+confirmed morphological match (gender or number).  Confirmed mismatches are
+silently dropped (they indicate model errors).
+
+  lesson_data keys: modifier, modifier_pos, noun, gender, number,
+                    gender_match, number_match, confidence_note
+
+**Idiom** — invariant multi-word expressions detected by token-sequence
+surface matching against a curated table of ~35 common Spanish idioms.
+Only fixed-form expressions (no conjugable verb) are in the table; this
+prevents false positives caused by morphological variation.
+
+  lesson_data keys: phrase, meaning, register
+
+**Grammar** — periphrastic construction objects derived from conjugation
+results.  One object per distinct construction type per sentence.  Covers:
+  ser_copula, estar_copula, estar_progressive, ir_near_future,
+  haber_perfect, ser_passive.
+
+  lesson_data keys: pattern_id, pattern, usage, contrast, verb_lemma,
+                    surface_verb
+
+**Nuance** — aspect and mood observations derived from conjugation results.
+Emitted when morphology is reliably resolved.  Covers:
+  imperfect_aspect (one per imperfect verb lemma, per sentence),
+  subjunctive_mood (one per subjunctive verb lemma, per sentence),
+  reflexive_verb   (one per reflexive lemma, per sentence).
+
+  lesson_data keys: nuance_type, lemma, surface, note, contrast_tense*
+
+─────────────────────────────────────────────────────────────────────────────
+CONFIDENCE SCORES
+─────────────────────────────────────────────────────────────────────────────
+
+Scores are heuristic proxies, not calibrated probabilities.  They reflect
+how much the plugin trusts its own output for this specific object.
+
+  0.90  idiom — direct string match against curated table
+  0.85  vocabulary (in-vocabulary word), full-match agreement, grammar
+  0.82  reflexive nuance — dep parse required but reliable
+  0.80  conjugation with complete morphology, in-vocabulary word
+  0.78  imperfect nuance — tense detection is reliable for regular forms
+  0.72  agreement with one confirmed feature; subjunctive nuance
+  0.60  PROPN vocabulary — may not generalise
+  0.50  OOV vocabulary — surface form may be incorrect
+
+A ``confidence_note`` key in ``lesson_data`` provides a human-readable
+rationale whenever the score is below the nominal maximum for that type.
+
+─────────────────────────────────────────────────────────────────────────────
+RELATION HINTS
+─────────────────────────────────────────────────────────────────────────────
+
+Each conjugation carries a ``conjugation_of`` hint pointing to its
+vocabulary lemma.  Each agreement object carries an ``agreement_of`` hint
+pointing to the head noun.  Grammar and nuance objects carry ``instance_of``
+and ``nuance_of`` hints pointing back to the triggering conjugation.  The
+parse route resolves both ends to UUIDs and records them in the relation
+table; hints for objects not present in the same parse are silently skipped.
+
+─────────────────────────────────────────────────────────────────────────────
+CANONICAL FORMS (deterministic ID scheme)
+─────────────────────────────────────────────────────────────────────────────
+
+  vocabulary:   lemma string           e.g. "casa"
+  conjugation:  lemma:tense:mood:person:number
+                                       e.g. "hablar:present:indicative:1:Sing"
+  agreement:    pos:modifier_lemma_noun_lemma
+                                       e.g. "det:el_casa"
+  idiom:        phrase string          e.g. "sin embargo"
+  grammar:      "grammar:{pattern_id}" e.g. "grammar:ser_copula"
+  nuance:       "nuance:{type}:{lemma}" e.g. "nuance:imperfect_aspect:hablar"
+
+─────────────────────────────────────────────────────────────────────────────
+KNOWN LIMITATIONS
+─────────────────────────────────────────────────────────────────────────────
+
 - ``es_core_news_sm`` is a small model (~12 MB).  Morphology is often
-  incomplete for irregular verbs, clitic clusters, enclitic pronouns,
-  and archaic or literary forms.  Nearly every surface token is marked
-  out-of-vocabulary (``is_oov=True``) by this model.
-- A verb at the start of a sentence is sometimes mis-tagged as PROPN.
-  We do not re-tag; the sentence is silently under-extracted.
-- Subjunctive detection is unreliable for present-subjunctive forms that
-  are homographic with indicative forms (e.g. "hable").
-- Reflexive detection relies on the dependency parse.  Parse errors
-  produce missed or spurious results.
-- Confidence scores are heuristic proxies, not calibrated probabilities.
-- ``_nlp`` is called once per text via ``analyze_text``; ``split_sentences``
-  and ``analyze_sentence`` are kept for direct use in tests and tooling.
+  incomplete for irregular verbs, clitic clusters, and archaic forms.
+  Nearly every surface token is marked OOV by this model.
+- Verb-initial sentences are sometimes mis-tagged as PROPN; silently
+  under-extracted rather than re-tagged.
+- Present-subjunctive forms homographic with indicative (e.g. "hable")
+  receive reduced confidence (0.72) to reflect this ambiguity.
+- Reflexive detection relies on the dependency parse; parse errors produce
+  missed or spurious results.
+- Idiom detection is surface-form only; inflected verb idioms like
+  "tener en cuenta" are not matched.  See _IDIOM_TABLE for the curated list.
 """
 from __future__ import annotations
 
@@ -66,22 +136,21 @@ logger = logging.getLogger(__name__)
 # ── POS filter ────────────────────────────────────────────────────────────────
 
 # Universal-Dependencies POS tags excluded from vocabulary extraction.
-# PRON is excluded because reflexive/clitic pronouns ("me", "te", "se", "nos")
-# lemmatise to misleading forms (e.g. "me" → "yo") and represent a closed
-# class better taught as part of the verb construction they modify.
+# PRON is excluded: reflexive/clitic pronouns ("me", "se") lemmatise to
+# misleading forms and represent a closed class better taught through the
+# verb construction they modify.
 _SKIP_POS = frozenset(
     {"DET", "ADP", "CCONJ", "SCONJ", "CONJ", "PUNCT", "SPACE",
      "X", "SYM", "NUM", "PRON"}
 )
 
-# VerbForm feature values that classify a VERB/AUX token as non-finite.
-# Non-finite forms go to vocabulary; finite forms go to conjugation only.
+# VerbForm values that classify a VERB/AUX token as non-finite.
 _NON_FINITE_FORMS = frozenset({"Inf", "Part", "Ger"})
 
 # Spanish reflexive/clitic pronoun surface forms.
 _REFLEXIVE_CLITICS = frozenset({"me", "te", "se", "nos", "os"})
 
-# ── display maps ──────────────────────────────────────────────────────────────
+# ── Display maps ──────────────────────────────────────────────────────────────
 
 _TENSE_DISPLAY: dict[str, str] = {
     "Pres": "present",
@@ -97,8 +166,127 @@ _MOOD_DISPLAY: dict[str, str] = {
     "Imp": "imperative",
 }
 
+# ── Irregular verbs ───────────────────────────────────────────────────────────
+# Common verbs whose paradigm cannot be predicted from the infinitive ending
+# alone.  Used by _paradigm_class() to label conjugations "irregular".
 
-# ── plugin ────────────────────────────────────────────────────────────────────
+_IRREGULAR_VERBS: frozenset[str] = frozenset({
+    "ser", "estar", "ir", "haber", "tener", "hacer", "poder", "querer",
+    "saber", "venir", "decir", "ver", "dar", "poner", "traer", "caer",
+    "oir", "oír", "salir", "valer", "caber", "andar", "conducir", "reír",
+})
+
+# ── Idiom table ───────────────────────────────────────────────────────────────
+# Invariant multi-word expressions — no conjugable verb in the phrase.
+# Format: (word_tuple, english_meaning, register)
+# Sorted longest-first so longer matches take priority over sub-phrases.
+# Register: "neutral" | "formal" | "informal"
+
+_IDIOM_TABLE: tuple[tuple[tuple[str, ...], str, str], ...] = (
+    # ── 4-word phrases ────────────────────────────────────────────────────────
+    (("de", "vez", "en", "cuando"),   "from time to time",          "neutral"),
+    (("al", "mismo", "tiempo"),       "at the same time",           "neutral"),
+    (("cada", "vez", "más"),          "more and more",              "neutral"),
+    # ── 3-word phrases ────────────────────────────────────────────────────────
+    (("a", "pesar", "de"),            "in spite of",                "neutral"),
+    (("en", "vez", "de"),             "instead of",                 "neutral"),
+    (("a", "partir", "de"),           "starting from / from",       "neutral"),
+    (("a", "causa", "de"),            "because of",                 "neutral"),
+    (("en", "cuanto", "a"),           "as for / regarding",         "formal"),
+    (("por", "lo", "tanto"),          "therefore",                  "formal"),
+    (("por", "lo", "menos"),          "at least",                   "neutral"),
+    (("en", "todo", "caso"),          "in any case",                "neutral"),
+    (("a", "lo", "mejor"),            "maybe / perhaps",            "neutral"),
+    (("más", "o", "menos"),           "more or less",               "neutral"),
+    # ── 2-word phrases ────────────────────────────────────────────────────────
+    (("sin", "embargo"),              "however",                    "neutral"),
+    (("no", "obstante"),              "nevertheless",               "formal"),
+    (("en", "cambio"),                "on the other hand",          "neutral"),
+    (("así", "que"),                  "so / and so",                "neutral"),
+    (("de", "hecho"),                 "in fact",                    "neutral"),
+    (("en", "realidad"),              "in fact / actually",         "neutral"),
+    (("en", "efecto"),                "indeed / in effect",         "formal"),
+    (("por", "supuesto"),             "of course",                  "neutral"),
+    (("desde", "luego"),              "of course / certainly",      "neutral"),
+    (("por", "cierto"),               "by the way",                 "neutral"),
+    (("de", "acuerdo"),               "agreed / OK",                "informal"),
+    (("sin", "duda"),                 "without doubt",              "neutral"),
+    (("por", "ejemplo"),              "for example",                "neutral"),
+    (("a", "veces"),                  "sometimes",                  "neutral"),
+    (("a", "menudo"),                 "often",                      "neutral"),
+    (("de", "repente"),               "suddenly",                   "neutral"),
+    (("por", "fin"),                  "finally",                    "neutral"),
+    (("al", "final"),                 "in the end",                 "neutral"),
+    (("en", "seguida"),               "right away / immediately",   "neutral"),
+    (("al", "menos"),                 "at least",                   "neutral"),
+    (("en", "absoluto"),              "not at all / absolutely not","neutral"),
+    (("o", "sea"),                    "that is / I mean",           "informal"),
+    (("de", "nuevo"),                 "again / anew",               "neutral"),
+    (("a", "tiempo"),                 "on time",                    "neutral"),
+)
+
+# ── Grammar patterns ──────────────────────────────────────────────────────────
+# Each entry: (construction, required_lemma_or_None, pattern_id,
+#              pattern_label, usage_text, contrast_text)
+# Derived from conjugation construction + lemma fields.
+
+_GRAMMAR_PATTERNS: tuple[
+    tuple[str, str | None, str, str, str, str], ...
+] = (
+    (
+        "copula", "ser",
+        "ser_copula",
+        "ser + [adjective / noun]",
+        "Expresses permanent or defining characteristics: identity, "
+        "origin, occupation, nationality, or material.",
+        "Use estar for temporary states, conditions, emotions, or location.",
+    ),
+    (
+        "copula", "estar",
+        "estar_copula",
+        "estar + [adjective]",
+        "Expresses temporary states, conditions, emotions, or location.",
+        "Use ser for permanent or defining characteristics.",
+    ),
+    (
+        "progressive", None,
+        "estar_progressive",
+        "estar + [gerund]",
+        "Expresses an action in progress at the moment of speaking "
+        "(e.g. estoy comiendo — I am eating).",
+        "The simple present can also express ongoing actions without "
+        "emphasising the immediacy.",
+    ),
+    (
+        "near_future", "ir",
+        "ir_near_future",
+        "ir a + [infinitive]",
+        "Expresses a planned or near-future action "
+        "(e.g. voy a estudiar — I am going to study).",
+        "The future tense (estudiaré) is more formal and less immediate.",
+    ),
+    (
+        "perfect", "haber",
+        "haber_perfect",
+        "haber + [past participle]",
+        "Expresses a past action with relevance to the present "
+        "(e.g. he comido — I have eaten).",
+        "The preterite (comí) marks a completed event with no implied "
+        "present relevance.",
+    ),
+    (
+        "passive", None,
+        "ser_passive",
+        "ser + [past participle] (passive voice)",
+        "Expresses a passive action where the subject receives the action "
+        "(e.g. fue escrito — it was written).",
+        "Spanish often prefers the se-passive (se vendió el libro) over "
+        "ser-passive in everyday speech.",
+    ),
+)
+
+
+# ── Plugin ────────────────────────────────────────────────────────────────────
 
 class SpanishPlugin:
     language_code = "es"
@@ -115,10 +303,10 @@ class SpanishPlugin:
         # v2 fields
         analysis_depth="full",
         segmentation_quality="medium",   # es_core_news_sm sentence splits are decent
-        tokenization_quality="high",     # word tokenization is reliable for Spanish
+        tokenization_quality="high",     # word tokenisation is reliable for Spanish
         morphology_quality="medium",     # small model; many OOV tokens
-        syntax_support=True,             # dep parse used for reflexive detection
-        idiom_detection=False,
+        syntax_support=True,             # dep parse used for reflexive / modifier detection
+        idiom_detection=True,            # invariant fixed-expression table
         tts_lang_tag="es",
         transliteration_scheme=None,
     )
@@ -168,18 +356,30 @@ class SpanishPlugin:
         doc = self._nlp(sentence)
         return self._analyze_tokens(sentence, list(doc))
 
-    def _analyze_tokens(self, sentence: str, tokens: list[Any]) -> CandidateSentenceResult:
-        # seen_vocab is shared: conjugation populates it with verb lemmas so
-        # that the same lemma is not also emitted as a vocabulary item.
+    def _analyze_tokens(
+        self, sentence: str, tokens: list[Any]
+    ) -> CandidateSentenceResult:
+        # seen_vocab is shared: conjugation pre-populates it with verb lemmas so
+        # the same lemma is not also emitted as a vocabulary item.
         seen_vocab: set[str] = set()
         seen_conj:  set[str] = set()
 
         candidates: list[CandidateObject] = []
-        # Conjugation must run first to pre-populate seen_vocab before
-        # vocabulary extraction consults it.
-        candidates.extend(self._extract_conjugations(tokens, seen_conj, seen_vocab))
+
+        # Conjugation runs first to populate seen_vocab before vocabulary
+        # extraction consults it.
+        conj_candidates = self._extract_conjugations(tokens, seen_conj, seen_vocab)
+        candidates.extend(conj_candidates)
         candidates.extend(self._extract_vocabulary(tokens, seen_vocab))
         candidates.extend(self._extract_agreements(tokens))
+        candidates.extend(self._extract_idioms(tokens))
+
+        # Grammar and nuance objects are derived from the already-extracted
+        # conjugation results — no second pass over raw tokens required.
+        seen_grammar: set[str] = set()
+        seen_nuance:  set[str] = set()
+        candidates.extend(self._extract_grammar(conj_candidates, seen_grammar))
+        candidates.extend(self._extract_nuance(conj_candidates, seen_nuance))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
@@ -202,17 +402,14 @@ class SpanishPlugin:
 
             verb_form = _morph_first(tok, "VerbForm")
 
-            # Finite VERB/AUX tokens are covered exclusively by conjugation
-            # extraction; including them here as well would create duplicate
-            # learning items for the same lemma.
+            # Finite VERB/AUX → conjugation only; non-finite → vocabulary.
             if tok.pos_ in {"VERB", "AUX"} and verb_form not in _NON_FINITE_FORMS:
                 continue
 
             lemma = tok.lemma_.lower()
 
-            # Enclitic fusion: the model sometimes cannot split clitics from
+            # Enclitic-fusion artefact: the model cannot split clitics from
             # their host verb, yielding multi-word lemmas like "hacer él".
-            # These are model artifacts, not learnable vocabulary.
             if " " in lemma:
                 continue
 
@@ -223,8 +420,15 @@ class SpanishPlugin:
             confidence, confidence_note = self._vocab_confidence(tok)
             data: dict[str, Any] = {"lemma": lemma, "pos": tok.pos_}
 
-            # Record the non-finite form type for VERB/AUX vocabulary entries
-            # so the frontend can label them as "infinitive", "gerund", etc.
+            # Gender and number for noun entries help lesson generators frame
+            # "el/la" article drills and agree-pattern explanations.
+            if tok.pos_ == "NOUN":
+                if noun_gender := _morph_first(tok, "Gender"):
+                    data["gender"] = noun_gender
+                if noun_number := _morph_first(tok, "Number"):
+                    data["number"] = noun_number
+
+            # Verb form type for non-finite verb vocabulary entries.
             if tok.pos_ in {"VERB", "AUX"} and verb_form:
                 data["verb_form"] = verb_form
 
@@ -267,20 +471,15 @@ class SpanishPlugin:
                 continue  # infinitives, participles, gerunds → vocabulary
 
             lemma = tok.lemma_.lower()
-
-            # Skip enclitic-fusion lemmas (contain a space, e.g. "hacer él").
             if " " in lemma:
-                continue
+                continue  # enclitic fusion artefact
 
             feats = self._verb_morph(tok)
             canonical_form = _conj_canonical_form(lemma, feats)
             if canonical_form in seen_conj:
                 continue
             seen_conj.add(canonical_form)
-            # Prevent the same lemma from also appearing as a vocabulary item
-            # within this sentence (e.g. suppresses the infinitive "ir" after
-            # a conjugation entry has been generated for "voy").
-            seen_vocab.add(lemma)
+            seen_vocab.add(lemma)  # prevent the lemma from appearing in vocabulary
 
             construction    = _detect_construction(tok)
             is_reflexive    = _has_reflexive_clitic(tok, tokens)
@@ -297,6 +496,12 @@ class SpanishPlugin:
                 "morph_complete": _conj_is_complete(feats),
                 "construction":   construction,
                 "is_reflexive":   is_reflexive,
+                # Conjugation-class and irregularity metadata for lesson
+                # generators.  "-ar"/"-er"/"-ir" enables paradigm-table drills;
+                # is_irregular signals that surface forms cannot be predicted
+                # by rule from the infinitive alone.
+                "paradigm_class": _paradigm_class(lemma),
+                "is_irregular":   lemma in _IRREGULAR_VERBS,
             }
             if "verb_form" in feats:
                 lesson["verb_form"] = feats["verb_form"]
@@ -391,10 +596,8 @@ class SpanishPlugin:
                     if cand_number and noun_number else None
                 )
 
-                # Need at least one positive confirmation.
                 if gender_match is None and number_match is None:
                     continue
-                # Drop confirmed mismatches — model error, not a teaching object.
                 if gender_match is False or number_match is False:
                     continue
 
@@ -440,13 +643,298 @@ class SpanishPlugin:
                 ))
         return candidates
 
+    # ------------------------------------------------------------------
+    # Idioms
+    # ------------------------------------------------------------------
 
-# ── module-level helpers (stateless) ─────────────────────────────────────────
+    def _extract_idioms(self, tokens: list[Any]) -> list[CandidateObject]:
+        """Detect invariant multi-word expressions by surface-form token matching.
+
+        Scans the lowercased token sequence for entries in ``_IDIOM_TABLE``.
+        The table is sorted longest-first; once a span is claimed by a longer
+        match, shorter overlapping phrases are skipped.
+
+        Confidence is 0.90 for all idiom matches because the evidence is
+        direct string equality on a curated fixed-form list — no morphological
+        analysis is required, so the OOV penalty does not apply.
+
+        Only fixed-form (non-conjugable) expressions are in the table.  Verb
+        idioms like "tener en cuenta" require lemma-based matching and are not
+        yet supported.
+        """
+        if not tokens:
+            return []
+
+        lower_texts = [t.text.lower() for t in tokens]
+        n = len(lower_texts)
+        seen_idioms: set[str] = set()
+        used_positions: set[int] = set()
+        candidates: list[CandidateObject] = []
+
+        for words, meaning, register in _IDIOM_TABLE:
+            wlen = len(words)
+            for start in range(n - wlen + 1):
+                # Skip spans claimed by a prior (longer) match.
+                if any(start + k in used_positions for k in range(wlen)):
+                    continue
+                if lower_texts[start : start + wlen] == list(words):
+                    phrase = " ".join(words)
+                    if phrase in seen_idioms:
+                        continue
+                    seen_idioms.add(phrase)
+                    used_positions.update(range(start, start + wlen))
+
+                    # Preserve original casing from the text for the surface form.
+                    surface = " ".join(t.text for t in tokens[start : start + wlen])
+
+                    candidates.append(CandidateObject(
+                        canonical_form=phrase,
+                        surface_form=surface,
+                        type="idiom",
+                        label=surface,
+                        lesson_data={
+                            "phrase":    phrase,
+                            "meaning":   meaning,
+                            "register":  register,
+                        },
+                        confidence=0.90,
+                    ))
+
+        return candidates
+
+    # ------------------------------------------------------------------
+    # Grammar patterns
+    # ------------------------------------------------------------------
+
+    def _extract_grammar(
+        self,
+        conj_candidates: list[CandidateObject],
+        seen_grammar: set[str],
+    ) -> list[CandidateObject]:
+        """Emit grammar-pattern objects derived from conjugation results.
+
+        Each construction type (ser_copula, estar_progressive, etc.) is emitted
+        at most once per sentence regardless of how many conjugated verbs
+        exhibit that construction.
+
+        Grammar objects complement conjugation objects: the conjugation tells
+        the learner *which* form was used; the grammar object explains *why*
+        the construction exists and what the contrast is.
+
+        Confidence is 0.85 for all grammar objects: construction detection is
+        based on spaCy dependency arcs and is reliable for common sentences,
+        but parse errors may produce spurious or missed objects.
+        """
+        candidates: list[CandidateObject] = []
+
+        for conj in conj_candidates:
+            construction = conj.lesson_data.get("construction", "standalone")
+            lemma        = conj.lesson_data.get("lemma", "")
+            surface_verb = conj.lesson_data.get("surface", conj.label)
+
+            for (
+                expected_construction,
+                expected_lemma,
+                pattern_id,
+                pattern,
+                usage,
+                contrast,
+            ) in _GRAMMAR_PATTERNS:
+                if construction != expected_construction:
+                    continue
+                if expected_lemma is not None and lemma != expected_lemma:
+                    continue
+
+                canonical_form = f"grammar:{pattern_id}"
+                if canonical_form in seen_grammar:
+                    continue
+                seen_grammar.add(canonical_form)
+
+                candidates.append(CandidateObject(
+                    canonical_form=canonical_form,
+                    surface_form=surface_verb,
+                    type="grammar",
+                    label=surface_verb,
+                    lesson_data={
+                        "pattern_id":  pattern_id,
+                        "pattern":     pattern,
+                        "usage":       usage,
+                        "contrast":    contrast,
+                        "verb_lemma":  lemma,
+                        "surface_verb": surface_verb,
+                    },
+                    confidence=0.85,
+                    relation_hints=[
+                        RelationHint(
+                            relation_type="instance_of",
+                            target_canonical_form=conj.canonical_form,
+                            target_type="conjugation",
+                        )
+                    ],
+                ))
+
+        return candidates
+
+    # ------------------------------------------------------------------
+    # Nuance
+    # ------------------------------------------------------------------
+
+    def _extract_nuance(
+        self,
+        conj_candidates: list[CandidateObject],
+        seen_nuance: set[str],
+    ) -> list[CandidateObject]:
+        """Emit nuance observations derived from conjugation results.
+
+        Three nuance types are currently supported:
+
+          imperfect_aspect  — tense == "imperfect"
+            Signals the ongoing/habitual vs. preterite/completed distinction.
+            Confidence 0.78: suffix heuristics are reliable for -aba/-ía
+            endings; irregular imperfects may be mis-classified as "unknown".
+
+          subjunctive_mood  — mood == "subjunctive"
+            Confidence 0.72: present-subjunctive forms that are homographic
+            with indicative (e.g. "hable") may be mis-classified.
+
+          reflexive_verb    — is_reflexive == True
+            Confidence 0.82: dep-parse based; reliable for common sentences.
+
+        One nuance object is emitted per (nuance_type, verb_lemma) pair per
+        sentence.  The canonical_form encodes both so the UUID is stable.
+        """
+        candidates: list[CandidateObject] = []
+
+        for conj in conj_candidates:
+            tense        = conj.lesson_data.get("tense")
+            mood         = conj.lesson_data.get("mood")
+            is_reflexive = conj.lesson_data.get("is_reflexive", False)
+            lemma        = conj.lesson_data.get("lemma", "")
+            surface      = conj.lesson_data.get("surface", conj.label)
+
+            # ── Imperfect aspect ──────────────────────────────────────────────
+            if tense == "imperfect":
+                cf = f"nuance:imperfect_aspect:{lemma}"
+                if cf not in seen_nuance:
+                    seen_nuance.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=surface,
+                        type="nuance",
+                        label=surface,
+                        lesson_data={
+                            "nuance_type":    "imperfect_aspect",
+                            "lemma":          lemma,
+                            "surface":        surface,
+                            "note": (
+                                "The imperfect tense describes an ongoing, habitual, "
+                                "or background action in the past. Contrast with the "
+                                "preterite, which marks a single completed event."
+                            ),
+                            "contrast_tense": "preterite",
+                        },
+                        confidence=0.78,
+                        relation_hints=[
+                            RelationHint(
+                                relation_type="nuance_of",
+                                target_canonical_form=conj.canonical_form,
+                                target_type="conjugation",
+                            )
+                        ],
+                    ))
+
+            # ── Subjunctive mood ──────────────────────────────────────────────
+            if mood == "subjunctive":
+                cf = f"nuance:subjunctive_mood:{lemma}"
+                if cf not in seen_nuance:
+                    seen_nuance.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=surface,
+                        type="nuance",
+                        label=surface,
+                        lesson_data={
+                            "nuance_type": "subjunctive_mood",
+                            "lemma":       lemma,
+                            "surface":     surface,
+                            "note": (
+                                "The subjunctive mood expresses doubt, desire, "
+                                "emotion, or hypothetical situations. It typically "
+                                "appears after verbs of wanting or fearing, or after "
+                                "subordinating conjunctions such as 'para que', "
+                                "'aunque', and 'cuando' (future reference)."
+                            ),
+                        },
+                        confidence=0.72,
+                        relation_hints=[
+                            RelationHint(
+                                relation_type="nuance_of",
+                                target_canonical_form=conj.canonical_form,
+                                target_type="conjugation",
+                            )
+                        ],
+                    ))
+
+            # ── Reflexive / pronominal verb ───────────────────────────────────
+            if is_reflexive:
+                cf = f"nuance:reflexive_verb:{lemma}"
+                if cf not in seen_nuance:
+                    seen_nuance.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=surface,
+                        type="nuance",
+                        label=surface,
+                        lesson_data={
+                            "nuance_type": "reflexive_verb",
+                            "lemma":       lemma,
+                            "surface":     surface,
+                            "note": (
+                                "This verb uses a reflexive pronoun "
+                                "(me / te / se / nos / os). The pronoun signals "
+                                "that the action affects the subject (true reflexive) "
+                                "or is intrinsic to the meaning of this verb form "
+                                "(pronominal verb, e.g. llamarse, levantarse)."
+                            ),
+                        },
+                        confidence=0.82,
+                        relation_hints=[
+                            RelationHint(
+                                relation_type="nuance_of",
+                                target_canonical_form=conj.canonical_form,
+                                target_type="conjugation",
+                            )
+                        ],
+                    ))
+
+        return candidates
+
+
+# ── Module-level helpers (stateless) ─────────────────────────────────────────
 
 def _morph_first(tok: Any, feature: str) -> str | None:
     """Return the first value for a morph feature, or None if absent."""
     values = tok.morph.get(feature)
     return values[0] if values else None
+
+
+def _paradigm_class(lemma: str) -> str:
+    """Return the conjugation class of a Spanish verb lemma.
+
+    Returns "-ar", "-er", "-ir", or "irregular".  Known irregular verbs
+    (see ``_IRREGULAR_VERBS``) always return "irregular" regardless of their
+    infinitive ending.  Unknown forms that do not end in a regular infinitive
+    suffix also return "irregular" as a conservative fallback.
+    """
+    if lemma in _IRREGULAR_VERBS:
+        return "irregular"
+    if lemma.endswith("ar"):
+        return "-ar"
+    if lemma.endswith("er"):
+        return "-er"
+    if lemma.endswith("ir"):
+        return "-ir"
+    return "irregular"
 
 
 def _conj_canonical_form(lemma: str, feats: dict[str, str]) -> str:
@@ -498,7 +986,6 @@ def _detect_construction(tok: Any) -> str:
     if tok.dep_ == "cop":
         return "copula"
     if tok.dep_ == "ROOT":
-        # AUX as sentence root with no accompanying VERB.
         return "standalone"
     if tok.dep_ == "aux":
         head_vf = _morph_first(tok.head, "VerbForm")
@@ -515,9 +1002,8 @@ def _has_reflexive_clitic(tok: Any, tokens: list[Any]) -> bool:
     """True when *tok* has a reflexive or pronominal clitic as a dependent.
 
     Covers proclitic pronouns ("me levanto", "se llama") via dependency
-    arcs where the PRON's head is the verb.  The subject relation (nsubj)
-    is excluded because a subject pronoun like "yo" or "ella" is not a
-    clitic even when it happens to be in _REFLEXIVE_CLITICS.
+    arcs where the PRON's head is the verb.  Subject pronouns (nsubj) are
+    excluded because "yo" is not a clitic.
     """
     return any(
         t.pos_ == "PRON"
@@ -545,13 +1031,9 @@ def _fallback_tense(tok: Any) -> str | None:
 def _find_modifiers(noun: Any, tokens: list[Any]) -> list[Any]:
     """Return DET and ADJ tokens that modify *noun*.
 
-    Primary: spaCy dependency arcs (head == noun and dep not in coordinating
-    relations).  Coordinated elements (dep_=conj or flat) are excluded because
-    spaCy sometimes attaches a conjoined ADJ to the head noun of the other
-    conjunct, which would create spurious agreement objects.
-
-    Fallback: immediate adjacency (distance == 1), skipping pairs that have
-    a CCONJ between them to avoid "inglés y español" false pairs.
+    Primary: spaCy dependency arcs.  Fallback: immediate adjacency, skipping
+    CCONJ-separated pairs.  Coordinated modifiers (dep_=conj or flat) are
+    excluded to prevent spurious agreement pairs like "inglés y español".
     """
     dep_based: list[Any] = [
         t for t in tokens

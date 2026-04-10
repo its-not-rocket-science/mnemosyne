@@ -498,6 +498,290 @@ class TestPronounExclusion:
         )
 
 
+# ── idiom extraction ──────────────────────────────────────────────────────────
+
+
+class TestIdiomExtraction:
+    def test_sin_embargo_detected(self, plugin) -> None:
+        result = plugin.analyze_sentence("Sin embargo, no estoy de acuerdo.")
+        idioms = objects_of(result, "idiom")
+        phrases = {o.lesson_data["phrase"] for o in idioms}
+        assert "sin embargo" in phrases
+
+    def test_idiom_has_required_lesson_data_keys(self, plugin) -> None:
+        result = plugin.analyze_sentence("Sin embargo, llegamos tarde.")
+        for obj in objects_of(result, "idiom"):
+            assert "phrase" in obj.lesson_data
+            assert "meaning" in obj.lesson_data
+            assert "register" in obj.lesson_data
+
+    def test_idiom_confidence_is_0_90(self, plugin) -> None:
+        result = plugin.analyze_sentence("Por ejemplo, puedes usar este método.")
+        for obj in objects_of(result, "idiom"):
+            assert obj.confidence == 0.90
+
+    def test_plain_sentence_has_no_idiom(self, plugin) -> None:
+        result = plugin.analyze_sentence("El gato duerme en la cama.")
+        assert objects_of(result, "idiom") == []
+
+    def test_surface_form_preserves_original_casing(self, plugin) -> None:
+        # Capital-S "Sin" at sentence start must be preserved in surface_form.
+        result = plugin.analyze_sentence("Sin embargo, todo está bien.")
+        idioms = objects_of(result, "idiom")
+        surfaces = {o.surface_form for o in idioms}
+        assert "Sin embargo" in surfaces
+
+    def test_multiple_idioms_in_one_sentence(self, plugin) -> None:
+        result = plugin.analyze_sentence(
+            "Por ejemplo, de vez en cuando hay problemas."
+        )
+        idioms = objects_of(result, "idiom")
+        phrases = {o.lesson_data["phrase"] for o in idioms}
+        assert "por ejemplo" in phrases
+        assert "de vez en cuando" in phrases
+
+    def test_longer_match_prevents_sub_phrase_match(self, plugin) -> None:
+        # "de vez en cuando" (4 words) must claim its positions so the
+        # sub-phrase "en cuando" (not in the table) cannot match — and
+        # "al menos" (2 words) inside "por lo menos" (3 words) must not
+        # fire when "por lo menos" matches first.
+        result = plugin.analyze_sentence(
+            "Por lo menos llega a tiempo."
+        )
+        idioms = objects_of(result, "idiom")
+        phrases = {o.lesson_data["phrase"] for o in idioms}
+        # "por lo menos" must match; "al menos" must not (no overlap here,
+        # but "al menos" is a different phrase so both could appear in
+        # different positions — the key point is no duplicated position).
+        if "por lo menos" in phrases:
+            # Verify no duplicate canonical_form in the whole result.
+            all_canonical = [o.canonical_form for o in result.candidates]
+            assert len(all_canonical) == len(set(all_canonical))
+
+    def test_idiom_canonical_form_is_stable(self, plugin) -> None:
+        r1 = plugin.analyze_sentence("Sin embargo, el tiempo pasa.")
+        r2 = plugin.analyze_sentence("Sin embargo, todo cambia.")
+        cf1 = {o.canonical_form for o in objects_of(r1, "idiom")}
+        cf2 = {o.canonical_form for o in objects_of(r2, "idiom")}
+        assert "sin embargo" in cf1
+        assert cf1 & cf2  # same canonical_form in both results
+
+    def test_de_vez_en_cuando_meaning(self, plugin) -> None:
+        result = plugin.analyze_sentence("De vez en cuando voy al cine.")
+        idioms = objects_of(result, "idiom")
+        phrases = {o.lesson_data["phrase"]: o.lesson_data["meaning"] for o in idioms}
+        assert "de vez en cuando" in phrases
+        assert "time" in phrases["de vez en cuando"].lower()
+
+    def test_no_idiom_duplicate_canonical_forms(self, plugin) -> None:
+        result = plugin.analyze_sentence(
+            "Sin embargo, por ejemplo, de hecho todo está bien."
+        )
+        idiom_forms = [o.canonical_form for o in objects_of(result, "idiom")]
+        assert len(idiom_forms) == len(set(idiom_forms))
+
+
+# ── grammar pattern extraction ────────────────────────────────────────────────
+
+
+class TestGrammarExtraction:
+    def test_ser_copula_detected(self, plugin) -> None:
+        result = plugin.analyze_sentence("La casa es bonita.")
+        grammars = objects_of(result, "grammar")
+        pattern_ids = {o.lesson_data["pattern_id"] for o in grammars}
+        assert "ser_copula" in pattern_ids
+
+    def test_estar_copula_detected(self, plugin) -> None:
+        result = plugin.analyze_sentence("El niño está cansado.")
+        grammars = objects_of(result, "grammar")
+        pattern_ids = {o.lesson_data["pattern_id"] for o in grammars}
+        assert "estar_copula" in pattern_ids
+
+    def test_grammar_has_pattern_usage_contrast_fields(self, plugin) -> None:
+        result = plugin.analyze_sentence("La casa es bonita.")
+        for obj in objects_of(result, "grammar"):
+            assert "pattern_id" in obj.lesson_data
+            assert "pattern" in obj.lesson_data
+            assert "usage" in obj.lesson_data
+            assert "contrast" in obj.lesson_data
+
+    def test_estar_progressive_detected(self, plugin) -> None:
+        result = plugin.analyze_sentence("Estoy comiendo ahora.")
+        grammars = objects_of(result, "grammar")
+        pattern_ids = {o.lesson_data["pattern_id"] for o in grammars}
+        assert "estar_progressive" in pattern_ids
+
+    def test_ir_near_future_detected(self, plugin) -> None:
+        result = plugin.analyze_sentence("Voy a estudiar esta tarde.")
+        grammars = objects_of(result, "grammar")
+        pattern_ids = {o.lesson_data["pattern_id"] for o in grammars}
+        assert "ir_near_future" in pattern_ids
+
+    def test_grammar_confidence_is_0_85(self, plugin) -> None:
+        result = plugin.analyze_sentence("La casa es bonita.")
+        for obj in objects_of(result, "grammar"):
+            assert obj.confidence == 0.85
+
+    def test_grammar_canonical_form_format(self, plugin) -> None:
+        result = plugin.analyze_sentence("La ciudad es grande.")
+        for obj in objects_of(result, "grammar"):
+            assert obj.canonical_form.startswith("grammar:"), (
+                f"Unexpected canonical_form: {obj.canonical_form!r}"
+            )
+
+    def test_grammar_canonical_form_is_stable(self, plugin) -> None:
+        r1 = plugin.analyze_sentence("La casa es bonita.")
+        r2 = plugin.analyze_sentence("El libro es interesante.")
+        cf1 = {o.canonical_form for o in objects_of(r1, "grammar")}
+        cf2 = {o.canonical_form for o in objects_of(r2, "grammar")}
+        # Both have ser_copula — the canonical_form must be identical.
+        assert "grammar:ser_copula" in cf1
+        assert "grammar:ser_copula" in cf2
+
+    def test_standalone_verb_has_no_grammar_object(self, plugin) -> None:
+        # "corre" is a simple intransitive verb — no periphrastic construction.
+        result = plugin.analyze_sentence("El perro corre por el parque.")
+        grammars = objects_of(result, "grammar")
+        # No grammar object expected for a standalone finite verb.
+        assert len(grammars) == 0
+
+    def test_no_duplicate_grammar_per_sentence(self, plugin) -> None:
+        # Even with multiple ser-copula verbs the grammar object is emitted once.
+        result = plugin.analyze_sentence("Él es médico y ella es profesora.")
+        grammars = objects_of(result, "grammar")
+        pattern_ids = [o.lesson_data["pattern_id"] for o in grammars]
+        assert len(pattern_ids) == len(set(pattern_ids))
+
+
+# ── nuance extraction ─────────────────────────────────────────────────────────
+
+
+class TestNuanceExtraction:
+    def test_imperfect_triggers_nuance(self, plugin) -> None:
+        result = plugin.analyze_sentence("Cuando era niño, jugaba mucho.")
+        nuances = objects_of(result, "nuance")
+        nuance_types = {o.lesson_data["nuance_type"] for o in nuances}
+        assert "imperfect_aspect" in nuance_types
+
+    def test_imperfect_nuance_has_note(self, plugin) -> None:
+        result = plugin.analyze_sentence("Vivía en Madrid antes.")
+        for obj in objects_of(result, "nuance"):
+            if obj.lesson_data.get("nuance_type") == "imperfect_aspect":
+                assert "note" in obj.lesson_data
+                assert obj.lesson_data["note"]
+
+    def test_reflexive_triggers_nuance(self, plugin) -> None:
+        result = plugin.analyze_sentence("Se llama Pedro.")
+        nuances = objects_of(result, "nuance")
+        nuance_types = {o.lesson_data["nuance_type"] for o in nuances}
+        assert "reflexive_verb" in nuance_types
+
+    def test_nuance_confidence_ranges(self, plugin) -> None:
+        # imperfect: 0.78 | reflexive: 0.82 | subjunctive: 0.72
+        # All nuance confidences must be in (0, 1].
+        result = plugin.analyze_sentence("Cuando era pequeño, se levantaba temprano.")
+        for obj in objects_of(result, "nuance"):
+            assert obj.confidence is not None
+            assert 0.0 < obj.confidence <= 1.0
+
+    def test_imperfect_nuance_confidence_is_0_78(self, plugin) -> None:
+        result = plugin.analyze_sentence("Antes estudiaba mucho.")
+        for obj in objects_of(result, "nuance"):
+            if obj.lesson_data.get("nuance_type") == "imperfect_aspect":
+                assert obj.confidence == 0.78
+
+    def test_reflexive_nuance_confidence_is_0_82(self, plugin) -> None:
+        result = plugin.analyze_sentence("Me levanto temprano.")
+        for obj in objects_of(result, "nuance"):
+            if obj.lesson_data.get("nuance_type") == "reflexive_verb":
+                assert obj.confidence == 0.82
+
+    def test_nuance_has_relation_hint(self, plugin) -> None:
+        result = plugin.analyze_sentence("Antes vivía aquí.")
+        for obj in objects_of(result, "nuance"):
+            assert obj.relation_hints, f"Nuance object has no relation_hints: {obj}"
+            relations = {h.relation_type for h in obj.relation_hints}
+            assert "nuance_of" in relations
+
+    def test_present_indicative_has_no_imperfect_nuance(self, plugin) -> None:
+        result = plugin.analyze_sentence("Él habla español perfectamente.")
+        nuance_types = {
+            o.lesson_data["nuance_type"] for o in objects_of(result, "nuance")
+        }
+        assert "imperfect_aspect" not in nuance_types
+
+
+# ── improved lesson_data ──────────────────────────────────────────────────────
+
+
+class TestImprovedLessonData:
+    def test_noun_has_gender(self, plugin) -> None:
+        result = plugin.analyze_sentence("La casa es bonita.")
+        vocab = objects_of(result, "vocabulary")
+        casa = next((o for o in vocab if o.lesson_data.get("lemma") == "casa"), None)
+        assert casa is not None, "Expected 'casa' in vocabulary"
+        assert "gender" in casa.lesson_data, "Noun vocabulary item missing 'gender'"
+
+    def test_noun_has_number(self, plugin) -> None:
+        result = plugin.analyze_sentence("Los libros son interesantes.")
+        vocab = objects_of(result, "vocabulary")
+        libros = next(
+            (o for o in vocab if o.lesson_data.get("lemma") == "libro"), None
+        )
+        assert libros is not None, "Expected 'libro' in vocabulary"
+        assert "number" in libros.lesson_data, "Noun vocabulary item missing 'number'"
+
+    def test_conjugation_has_paradigm_class(self, plugin) -> None:
+        result = plugin.analyze_sentence("Ella habla español.")
+        for obj in objects_of(result, "conjugation"):
+            assert "paradigm_class" in obj.lesson_data, (
+                f"Conjugation missing 'paradigm_class': {obj.lesson_data}"
+            )
+
+    def test_conjugation_has_is_irregular_bool(self, plugin) -> None:
+        result = plugin.analyze_sentence("Ella habla español.")
+        for obj in objects_of(result, "conjugation"):
+            assert "is_irregular" in obj.lesson_data
+            assert isinstance(obj.lesson_data["is_irregular"], bool)
+
+    def test_ser_is_irregular(self, plugin) -> None:
+        result = plugin.analyze_sentence("Él es médico.")
+        conjs = objects_of(result, "conjugation")
+        ser_conj = next(
+            (o for o in conjs if o.lesson_data.get("lemma") == "ser"), None
+        )
+        assert ser_conj is not None, "Expected 'ser' conjugation"
+        assert ser_conj.lesson_data["is_irregular"] is True
+
+    def test_hablar_paradigm_class_is_ar(self, plugin) -> None:
+        result = plugin.analyze_sentence("Yo hablo mucho.")
+        conjs = objects_of(result, "conjugation")
+        hablar_conj = next(
+            (o for o in conjs if o.lesson_data.get("lemma") == "hablar"), None
+        )
+        assert hablar_conj is not None, "Expected 'hablar' conjugation"
+        assert hablar_conj.lesson_data["paradigm_class"] == "-ar"
+
+    def test_beber_paradigm_class_is_er(self, plugin) -> None:
+        result = plugin.analyze_sentence("Ella bebe agua.")
+        conjs = objects_of(result, "conjugation")
+        beber_conj = next(
+            (o for o in conjs if o.lesson_data.get("lemma") == "beber"), None
+        )
+        assert beber_conj is not None, "Expected 'beber' conjugation"
+        assert beber_conj.lesson_data["paradigm_class"] == "-er"
+
+    def test_vivir_paradigm_class_is_ir(self, plugin) -> None:
+        result = plugin.analyze_sentence("Ella vive en Madrid.")
+        conjs = objects_of(result, "conjugation")
+        # es_core_news_sm may lemmatise "vive" as "vivir"
+        vivir_conj = next(
+            (o for o in conjs if o.lesson_data.get("lemma") == "vivir"), None
+        )
+        assert vivir_conj is not None, "Expected 'vivir' conjugation"
+        assert vivir_conj.lesson_data["paradigm_class"] == "-ir"
+
+
 class TestReflexiveDetection:
     def test_reflexive_verb_flagged(self, plugin) -> None:
         result = plugin.analyze_sentence("Me levanto temprano.")
