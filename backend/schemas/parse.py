@@ -15,6 +15,8 @@ LearnableType = Literal[
     # ── v2 types ──────────────────────────────────────────────────────────
     "script",           # character / sign learning object (kanji, Arabic letter, …)
     "transliteration",  # native-form ↔ romanization / phonetic mapping
+    # ── v3 types ──────────────────────────────────────────────────────────
+    "case_agreement",   # case+gender+number agreement cluster (German, etc.)
 ]
 
 

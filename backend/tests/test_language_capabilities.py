@@ -482,6 +482,15 @@ class TestLanguagesEndpointV2:
         assert fr["syntax_support"] is True
         assert fr["morphology_quality"] == "medium"
 
+    def test_german_full_analysis(self) -> None:
+        resp = client.get("/languages")
+        de = next((x for x in resp.json() if x["code"] == "de"), None)
+        assert de is not None
+        assert de["analysis_depth"] == "full"
+        assert de["syntax_support"] is True
+        assert de["morphology_quality"] == "medium"
+        assert de["tts_lang_tag"] == "de"
+
 
 # ── _build_script() ───────────────────────────────────────────────────────────
 
@@ -858,3 +867,17 @@ class TestNewLearnableTypes:
                 label="test",
             )
             assert obj.type == t
+
+    def test_case_agreement_is_valid_learnable_type(self) -> None:
+        from backend.schemas.parse import CandidateObject
+        obj = CandidateObject(
+            canonical_form="case_agreement:nom:der_Mann",
+            type="case_agreement",
+            label="der Mann",
+            lesson_data={
+                "modifier": "der", "modifier_pos": "DET",
+                "noun": "Mann", "case": "Nom",
+                "gender": "Masc", "number": "Sing",
+            },
+        )
+        assert obj.type == "case_agreement"

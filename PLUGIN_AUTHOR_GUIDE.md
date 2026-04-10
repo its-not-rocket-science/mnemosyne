@@ -94,6 +94,7 @@ handle these types:
 | `nuance`          | `_build_nuance`     | Aspect, mood, or verb-type observations      |
 | `script`          | `_build_script`     | Individual characters / signs (CJK, Arabic…) |
 | `transliteration` | `_build_transliteration` | Native ↔ romanized form pairs          |
+| `case_agreement`  | `_build_case_agreement` | DET/ADJ+NOUN with case+gender+number (German etc.) |
 
 Unknown types fall through to `_build_generic`, which renders every
 `lesson_data` key as a plain field.  Prefer registering a dedicated builder
@@ -201,6 +202,33 @@ pass over raw tokens.  One object per `pattern_id` per sentence.
 
 Emit nuance objects derived from conjugation results.  One object per
 `(nuance_type, lemma)` pair per sentence.
+
+### case_agreement
+
+```python
+{
+    "modifier":       str,   # surface form of the modifier (DET or ADJ)
+    "modifier_pos":   str,   # UD POS tag of the modifier
+    "noun":           str,   # surface form of the head noun
+    "case":           str,   # "Nom" | "Acc" | "Dat" | "Gen" | "unknown"
+    "gender":         str,   # "Masc" | "Fem" | "Neut" | "unknown"
+    "number":         str,   # "Sing" | "Plur" | "unknown"
+    "case_match":     bool | None,
+    "gender_match":   bool | None,
+    "number_match":   bool | None,
+    "confidence_note": str,  # always present (describes what was confirmed)
+}
+```
+
+Use `case_agreement` instead of `agreement` for languages with morphological
+case (German, Latin, Russian, etc.) so the lesson builder can present all
+three agreement dimensions.  The canonical form scheme is:
+
+```
+case_agreement:{case_lower}:{modifier_lemma}_{noun_lemma}
+```
+
+e.g. `"case_agreement:nom:der_Mann"`.
 
 ### script
 
@@ -424,6 +452,33 @@ ADJ/NOUN after noun subjects.  These are silently under-extracted.
 
 - `analysis_depth="dictionary"`, `lesson_modes_supported=["vocabulary"]`
 - Whitespace-split tokens, no POS or morphology
+
+### German (`de`) — Full-Parse Plugin (Grammar/Idiom Deferred)
+
+`backend/plugins/german.py` provides:
+
+- `analysis_depth="full"`, `morphology_depth="rich"`
+- Vocabulary (with capitalised NOUN lemmas per German orthographic convention),
+  conjugation, `case_agreement` objects
+- Separable verb detection via `dep=svp`; full lemma reconstructed as
+  `{particle}{bare_lemma}` (e.g. `an` + `rufen` → `anrufen`)
+- Paradigm class (weak/strong/modal), irregular/strong verb detection
+- Reflexive detection via `Reflex=Yes` morph feature
+- Grammar patterns and idiom detection **not yet implemented** (future)
+- `de_core_news_sm` — ~43 MB model
+
+**Known limitation**: `is_oov` is always `True` for `de_core_news_sm` — not
+used for confidence.  Confidence is based on count of resolved features.
+
+**Architecture findings** this plugin surfaced:
+1. `agreement` type is insufficient for case-marking languages; the new
+   `case_agreement` type (with `_build_case_agreement` in `generators.py`)
+   carries case as a first-class dimension alongside gender and number.
+2. German noun lemmas preserve capitalisation — use `tok.lemma_` as-is, not
+   `.lower()`, so canonical forms match German dictionary headwords.
+3. Separable verb lemma reconstruction (`{particle}{bare_lemma}`) is a
+   Germanic-language pattern that Dutch/Swedish/Norwegian plugins will reuse.
+4. Feature-count confidence is more portable than `is_oov`-based heuristics.
 
 ## Minimal Stub Plugin
 
