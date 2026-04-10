@@ -2,7 +2,7 @@
 
 Paste any text, parse it into sentences, open per-word micro-lessons, and rate your recall. FSRS schedules the next review.
 
-**Current state:** single-user MVP. Spanish (`es_core_news_sm`) and an English stub are the only active plugins. User accounts, Alembic migrations, and additional languages are Phase 1/2; see [ROADMAP.md](ROADMAP.md).
+**Current state:** single-user MVP. Spanish (`es_core_news_sm`), an English stub, and a French vocabulary stub are the active plugins. User authentication and additional full-language plugins are planned; see [ROADMAP.md](ROADMAP.md).
 
 ---
 
@@ -38,7 +38,7 @@ make dev                 # uvicorn --reload on :8000
 python -m http.server 8080 -d frontend
 ```
 
-Tables are created automatically via `create_all` on first startup. Swap in `alembic upgrade head` before deploying over existing data.
+Tables are created automatically via `create_all` on first startup. For existing databases run `alembic upgrade head` instead.
 
 ---
 
@@ -66,10 +66,11 @@ Parses text into sentences and learnable objects. Caches the result in Redis (1 
       "text": "Hola.",
       "learnable_objects": [
         {
-          "id": "es:vocab:hola",
+          "id": "a7f3c2d1-e4b5-5678-90ab-cdef12345678",
+          "language": "es",
           "type": "vocabulary",
           "label": "hola",
-          "lesson_data": { "lemma": "hola", "pos": "interjection" },
+          "lesson_data": { "lemma": "hola", "pos": "INTJ" },
           "confidence": 0.85
         }
       ]
@@ -77,6 +78,8 @@ Parses text into sentences and learnable objects. Caches the result in Redis (1 
   ]
 }
 ```
+
+`id` is a deterministic UUID-v5 derived from `(language, type, canonical_form)`. The same word in any text always produces the same UUID.
 
 `type` is one of: `vocabulary` `conjugation` `agreement` `idiom` `grammar` `nuance`.
 
@@ -95,7 +98,7 @@ Submits a recall rating and returns the next scheduled interval.
 **Request**
 ```json
 {
-  "object_id": "es:vocab:hola",
+  "object_id": "a7f3c2d1-e4b5-5678-90ab-cdef12345678",
   "quality": 3,
   "review_state": null
 }
@@ -103,15 +106,107 @@ Submits a recall rating and returns the next scheduled interval.
 
 `quality`: 1 = Again, 2 = Hard, 3 = Good, 4 = Easy.
 
-`review_state`: send `null` (or omit the field) on the first review — the server creates a fresh FSRS state. On subsequent reviews within the same browser session, pass back the `review_state` from the previous response so the server can use it as a fallback if the database is unavailable.
+`review_state`: send `null` on the first review. On subsequent reviews within the same browser session pass back the `review_state` from the previous response so the server can use it as a fallback if the database is unavailable.
 
 **Response**
 ```json
 {
-  "object_id": "es:vocab:hola",
+  "object_id": "a7f3c2d1-e4b5-5678-90ab-cdef12345678",
   "next_interval_days": 3,
-  "review_state": { "stability": 2.4, "difficulty": 5.31, "reviews": 1, "..." : "..." }
+  "review_state": { "stability": 2.4, "difficulty": 5.31, "reviews": 1, "...": "..." }
 }
+```
+
+---
+
+### `GET /dashboard`
+
+Returns a knowledge-state summary for the default user.
+
+Optional query parameter: `?language=es` — scopes results to one language.
+
+```json
+{
+  "known": [...],
+  "weak": [...],
+  "new": [...],
+  "due_for_review": [...],
+  "total_objects": 42
+}
+```
+
+Each item carries `object_id`, `language`, `status` (`new` / `learning` / `mastered` / `forgotten`), `mastery_score`, `total_reviews`, `last_seen`, and `due_at`.
+
+---
+
+### `GET /metrics`
+
+Returns quantitative learning-effectiveness figures.
+
+Optional query parameter: `?language=es`.
+
+```json
+{
+  "total_seen": 84,
+  "total_reviewed": 31,
+  "total_mastered": 7,
+  "overall_retention": 0.74,
+  "success_rate": 0.82,
+  "avg_stability_days": 4.3,
+  "overdue_count": 3,
+  "by_language": [{ "language": "es", "seen": 80, "mastered": 7, "retention": 0.74 }],
+  "by_type": [{ "type": "vocabulary", "seen": 60, "reviewed": 22, "mastered": 5, "retention": 0.78 }],
+  "weakest": [{ "object_id": "...", "type": "conjugation", "mastery_score": 0.12, "lapse_rate": 0.5 }]
+}
+```
+
+---
+
+### `GET /recommend` or `GET /recommend-text`
+
+Returns sentences from the user's parse history at the difficulty appropriate for their current knowledge state, following the i+1 comprehensible-input principle.
+
+Required query parameter: `?language=es`  
+Optional: `&limit=10` (1–50)
+
+```json
+{
+  "sentences": [
+    {
+      "sentence_id": "...",
+      "text": "El gato duerme.",
+      "difficulty": 0.38,
+      "difficulty_label": "ideal",
+      "unknown_ratio": 0.25,
+      "grammar_score": 0.14,
+      "length_score": 0.12,
+      "known_count": 3,
+      "unknown_count": 1,
+      "total_objects": 4
+    }
+  ],
+  "user_level": "elementary",
+  "target_difficulty_min": 0.15,
+  "target_difficulty_max": 0.39,
+  "total_mastered": 12,
+  "total_seen": 47
+}
+```
+
+`difficulty_label` is `easy` (< 15% unknown), `ideal` (15–40% unknown), or `hard` (> 40% unknown).
+
+---
+
+### `GET /languages`
+
+Returns the list of active language plugins.
+
+```json
+[
+  { "code": "en", "display_name": "English (stub)", "direction": "ltr" },
+  { "code": "es", "display_name": "Spanish",        "direction": "ltr" },
+  { "code": "fr", "display_name": "French (stub)",  "direction": "ltr" }
+]
 ```
 
 ---
@@ -133,7 +228,7 @@ make test
 # or: pytest backend/tests -q
 ```
 
-No external services needed. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full breakdown of which test files need the spaCy model.
+No external services needed for most tests. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full breakdown.
 
 ---
 
@@ -146,6 +241,9 @@ No external services needed. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full
 | `DEBUG` | `true` |
 | `CORS_ORIGINS` | `["*"]` |
 | `PLUGIN_PACKAGE` | `backend.plugins` |
+| `ENABLED_LANGUAGES` | *(empty — all plugins loaded)* |
+
+`ENABLED_LANGUAGES` is a comma-separated list (e.g. `es,fr`) that restricts which plugins are registered. Unset means load all discovered plugins.
 
 See `.env.example` for the full list including the `POSTGRES_*` variables used by Docker Compose.
 
@@ -153,6 +251,7 @@ See `.env.example` for the full list including the `POSTGRES_*` variables used b
 
 ## Docs
 
-- [ARCHITECTURE.md](ARCHITECTURE.md) — request flows, plugin system, FSRS scheduler, persistence
+- [ARCHITECTURE.md](ARCHITECTURE.md) — request flows, plugin system, FSRS scheduler, persistence, difficulty scoring
 - [CONTRIBUTING.md](CONTRIBUTING.md) — setup, coding standards, how to write a language plugin
 - [ROADMAP.md](ROADMAP.md) — what is done and what is next
+- [VISION_ALIGNMENT.md](VISION_ALIGNMENT.md) — vision, current state, gaps, and design principles
