@@ -9,6 +9,7 @@ from __future__ import annotations
 import re
 
 from backend.parsing.plugin_interface import Token
+from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 _SENTENCE_RE = re.compile(r"[^.!?]+[.!?]?")
@@ -17,8 +18,17 @@ _WORD_RE = re.compile(r"[A-Za-z']+")
 
 class EnglishStubPlugin:
     language_code = "en"
-    display_name = "English (stub)"
-    direction = "ltr"
+    display_name  = "English (stub)"
+    direction     = "ltr"
+    capabilities  = LanguageCapabilities(
+        code="en",
+        display_name="English (stub)",
+        direction="ltr",
+        script_family="latin",
+        tokenization_mode="whitespace",
+        morphology_depth="none",
+        lesson_modes_supported=["vocabulary"],
+    )
 
     def __init__(self) -> None:
         self.lesson_store: dict[str, CandidateObject] = {}

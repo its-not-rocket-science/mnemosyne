@@ -15,6 +15,7 @@ from __future__ import annotations
 import re
 
 from backend.parsing.plugin_interface import Token
+from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 # French sentence endings include standard punctuation.
@@ -42,8 +43,17 @@ _STOP_WORDS = frozenset({
 
 class FrenchStubPlugin:
     language_code = "fr"
-    display_name = "French (stub)"
-    direction = "ltr"
+    display_name  = "French (stub)"
+    direction     = "ltr"
+    capabilities  = LanguageCapabilities(
+        code="fr",
+        display_name="French (stub)",
+        direction="ltr",
+        script_family="latin",
+        tokenization_mode="whitespace",
+        morphology_depth="none",
+        lesson_modes_supported=["vocabulary"],
+    )
 
     def __init__(self) -> None:
         self.lesson_store: dict[str, CandidateObject] = {}

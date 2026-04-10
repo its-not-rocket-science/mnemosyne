@@ -9,10 +9,27 @@ from backend.api.dependencies import get_db_session, get_plugin_registry
 from backend.lesson.generators import build_lesson
 from backend.models import CanonicalObjectRow
 from backend.parsing.plugin_loader import PluginRegistry
+from backend.schemas.language import LessonMode, best_lesson_mode
 from backend.schemas.lesson import LessonResponse
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["lesson"])
+
+
+def _mode_for_language(registry: PluginRegistry, language: str) -> LessonMode:
+    """Return the richest lesson mode the plugin for *language* supports.
+
+    Falls back to ``"morphology"`` (the historic default) if the plugin
+    pre-dates the capabilities system or if the language is not registered.
+    """
+    try:
+        plugin = registry.get(language)
+        caps = getattr(plugin, "capabilities", None)
+        if caps is not None:
+            return best_lesson_mode(caps.lesson_modes_supported)
+    except KeyError:
+        pass
+    return "morphology"
 
 
 @router.get("/lesson/{object_id}", response_model=LessonResponse)
@@ -26,12 +43,14 @@ async def get_lesson(
     try:
         row = await db.get(CanonicalObjectRow, object_id)
         if row is not None:
+            mode = _mode_for_language(registry, row.language)
             return build_lesson(
                 object_id=row.id,
                 obj_type=row.type,
                 canonical_form=row.canonical_form,
                 display_label=row.display_label,
                 lesson_data=row.lesson_data or {},
+                lesson_mode=mode,
             )
     except Exception:
         logger.warning("DB lesson lookup failed for %r", object_id, exc_info=True)
@@ -46,10 +65,12 @@ async def get_lesson(
     if lo is None:
         raise HTTPException(status_code=404, detail="Lesson object not found")
 
+    mode = _mode_for_language(registry, language)
     return build_lesson(
         object_id=object_id,
         obj_type=lo.type,
         canonical_form=lo.canonical_form,
         display_label=lo.label,
         lesson_data=lo.lesson_data or {},
+        lesson_mode=mode,
     )

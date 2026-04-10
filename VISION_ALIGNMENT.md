@@ -66,9 +66,11 @@ Only Spanish has a production-quality plugin. English and French stubs extract v
 
 ### Gap 2 — RTL and non-Latin scripts
 
-The `direction` field exists on every plugin and is returned by `GET /languages`. The frontend does not apply it. There are no layout rules for RTL text flow, no font considerations for Arabic, Hebrew, or CJK scripts, and no test fixture that exercises a non-Latin canonical form through the full pipeline.
+**Partially addressed (2026-04-10):** `GET /languages` now returns full `LanguageCapabilities` objects including `direction`, `script_family`, `tokenization_mode`, and `morphology_depth`. The frontend fetches this on page load, stores a capabilities map, and applies `lang` and `dir` attributes to sentence-card text elements and pill lists. Non-Latin font stacks (Arabic, Hebrew, CJK, Devanagari) are included in `global.css`. RTL layout overrides for sentence cards and pill lists are in place.
 
-**Impact:** The system cannot be used for Arabic, Hebrew, or Japanese today without visual breakage. Adding `[dir="rtl"]` CSS overrides is moderate work; the harder part is auditing every component for implicit LTR assumptions.
+**Remaining gaps:** The modal (`mnemosyne-modal.js`) does not yet apply `dir` or `lang` to example text or drill prompts. There are no integration tests that push an RTL text fixture through the full parse → lesson → render pipeline. The difficulty scorer still uses `text.split()` for word count when `word_count_hint` is not supplied, which is wrong for CJK; the `word_count_hint` parameter exists on `score_sentence` but the recommend route does not yet pass it for segmented-script languages.
+
+**Impact:** A user pasting Arabic or Hebrew text today will get correct `dir` on the sentence text but the modal will not apply RTL styling to example text or drill prompts. Visual breakage is reduced but not eliminated.
 
 ### Gap 3 — No review event history
 

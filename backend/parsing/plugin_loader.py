@@ -5,6 +5,7 @@ from types import ModuleType
 
 from backend.core.config import get_settings
 from backend.parsing.plugin_interface import LanguagePlugin
+from backend.schemas.language import LanguageCapabilities
 
 logger = logging.getLogger(__name__)
 
@@ -34,21 +35,31 @@ class PluginRegistry:
             )
         return self._plugins[normalized]
 
-    def supported_languages(self) -> dict[str, dict[str, str]]:
-        """Return metadata for every registered plugin.
+    def supported_languages(self) -> dict[str, LanguageCapabilities]:
+        """Return full capability metadata for every registered plugin.
 
-        Keys are language codes; values are dicts with ``display_name`` and
-        ``direction`` so the frontend can build a language selector without
-        knowing plugin internals.
+        Keys are language codes; values are ``LanguageCapabilities`` objects.
+        Plugins that pre-date the capabilities system are synthesised with
+        conservative defaults so the rest of the stack always gets a typed
+        object.
         """
-        return {
-            code: {
-                "code": code,
-                "display_name": p.display_name,
-                "direction": p.direction,
-            }
-            for code, p in self._plugins.items()
-        }
+        result: dict[str, LanguageCapabilities] = {}
+        for code, p in self._plugins.items():
+            caps = getattr(p, "capabilities", None)
+            if caps is None:
+                # Backward-compat fallback for plugins written before this
+                # capability system.  Synthesise the minimum required fields.
+                caps = LanguageCapabilities(
+                    code=code,
+                    display_name=p.display_name,
+                    direction=p.direction,  # type: ignore[arg-type]
+                    script_family="other",
+                    tokenization_mode="whitespace",
+                    morphology_depth="none",
+                    lesson_modes_supported=["dictionary"],
+                )
+            result[code] = caps
+        return result
 
     def all(self) -> dict[str, LanguagePlugin]:
         return dict(self._plugins)

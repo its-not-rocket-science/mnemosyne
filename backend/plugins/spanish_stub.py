@@ -14,6 +14,7 @@ from __future__ import annotations
 import re
 
 from backend.parsing.plugin_interface import Token
+from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 # ---------------------------------------------------------------------------
@@ -66,8 +67,17 @@ def _stem(word: str, endings: tuple[str, ...]) -> str | None:
 
 class SpanishStubPlugin:
     language_code = "es"
-    display_name = "Spanish (stub)"
-    direction = "ltr"
+    display_name  = "Spanish (stub)"
+    direction     = "ltr"
+    capabilities  = LanguageCapabilities(
+        code="es",
+        display_name="Spanish (stub)",
+        direction="ltr",
+        script_family="latin",
+        tokenization_mode="whitespace",
+        morphology_depth="shallow",
+        lesson_modes_supported=["morphology", "vocabulary"],
+    )
 
     def __init__(self) -> None:
         self.lesson_store: dict[str, CandidateObject] = {}

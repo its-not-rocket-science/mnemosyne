@@ -18,8 +18,67 @@
   /* Error color: dark enough for 4.5:1 on a light Canvas. */
   --error-color: oklch(0.48 0.20 29);
 
+  /* UI chrome font — Latin-optimised.  Target-language text in sentence cards
+     uses system fonts selected by lang+dir to get appropriate shaping. */
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
   line-height: 1.5;
+}
+
+/* ── Script-family font overrides ────────────────────────────────────────────
+   Applied to elements carrying a non-Latin lang attribute (sentence text,
+   example text in modals).  Uses system fonts so no download is required.
+   Each family is tested for coverage breadth on Windows, macOS, and Linux.  */
+
+/* Arabic: Segoe UI (Windows), SF Arabic (macOS/iOS), Noto Sans Arabic. */
+[lang^="ar"],
+[lang^="fa"],
+[lang^="ur"] {
+  font-family: "Segoe UI", "SF Arabic", "Noto Sans Arabic", system-ui, sans-serif;
+  line-height: 1.8; /* Arabic diacritics need more vertical space */
+}
+
+/* Hebrew: Segoe UI (Windows), SF Hebrew (macOS/iOS), Noto Sans Hebrew. */
+[lang^="he"],
+[lang^="yi"] {
+  font-family: "Segoe UI", "SF Hebrew", "Noto Sans Hebrew", system-ui, sans-serif;
+}
+
+/* CJK — Chinese, Japanese, Korean: system-ui resolves to the OS CJK font on
+   all major platforms (PingFang, Hiragino, Meiryo, Malgun Gothic, Noto). */
+[lang^="zh"],
+[lang^="ja"],
+[lang^="ko"] {
+  font-family: system-ui, sans-serif;
+  /* CJK often benefits from slightly tighter tracking. */
+  letter-spacing: 0.02em;
+}
+
+/* Devanagari: Segoe UI (Windows), Kohinoor Devanagari (Apple), Noto Sans Devanagari. */
+[lang^="hi"],
+[lang^="mr"],
+[lang^="ne"],
+[lang^="sa"] {
+  font-family: "Segoe UI", "Kohinoor Devanagari", "Noto Sans Devanagari",
+               system-ui, sans-serif;
+  line-height: 1.7;
+}
+
+/* ── RTL layout overrides ────────────────────────────────────────────────────
+   Sentence-card text and pill lists receive dir="rtl" from main.js when the
+   selected language plugin declares direction = "rtl".  The overrides here
+   ensure pill flow and card layout mirror correctly for those elements.
+   The surrounding UI chrome (labels, buttons, navigation) remains LTR
+   because the interface language is always English.                          */
+
+/* Ensure sentence-card text aligns to the natural reading edge in RTL. */
+[dir="rtl"].sentence-card__text {
+  text-align: start;
+}
+
+/* Pill list: flex-wrap already uses the logical inline axis; explicitly set
+   justify-content so pills start from the inline-start edge in RTL. */
+[dir="rtl"].sentence-card__pills {
+  justify-content: flex-start;
 }
 
 /* Lighten the error token for dark-mode backgrounds. */

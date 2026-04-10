@@ -18,6 +18,53 @@ const modal          = document.querySelector('#lesson-modal')
 // Carries FSRS state across multiple ratings of the same object in one session.
 const reviewStateByObject = new Map()
 
+// ── Language capabilities ─────────────────────────────────────────────────────
+// Populated from GET /languages on page load.
+// Maps language code → { code, display_name, direction, script_family, … }
+const languageCapabilities = new Map()
+
+async function loadLanguages() {
+  try {
+    const response = await fetch(`${API_BASE}/languages`)
+    if (!response.ok) throw new Error(`GET /languages failed (${response.status})`)
+    const languages = await response.json()
+
+    // Populate the capabilities map.
+    for (const caps of languages) {
+      languageCapabilities.set(caps.code, caps)
+    }
+
+    // Replace the loading placeholder with real options.
+    // Preserve the currently selected value if it happens to be in the list.
+    const current = languageSelect.value
+    languageSelect.removeAttribute('aria-busy')
+    languageSelect.replaceChildren(
+      ...languages.map((caps) => {
+        const opt = document.createElement('option')
+        opt.value = caps.code
+        opt.textContent = caps.display_name
+        if (caps.code === current || (current === '' && caps.code === 'es')) {
+          opt.selected = true
+        }
+        return opt
+      })
+    )
+  } catch {
+    // On error, fall back to a static minimal list so the form stays usable.
+    languageSelect.removeAttribute('aria-busy')
+    languageSelect.replaceChildren()
+    ;[['es', 'Spanish'], ['en', 'English (stub)']].forEach(([code, name]) => {
+      const opt = document.createElement('option')
+      opt.value = code
+      opt.textContent = name
+      languageSelect.appendChild(opt)
+    })
+  }
+}
+
+// Load language list as soon as the module executes.
+loadLanguages()
+
 
 // ── Status helper ─────────────────────────────────────────────────────────────
 // Writes to the role="status" live region.  The clear-then-set pattern ensures
@@ -156,6 +203,10 @@ results.addEventListener('lesson-open', async (event) => {
 
 function renderResults(sentences, language) {
   const fragment = document.createDocumentFragment()
+  const caps = languageCapabilities.get(language)
+  // direction and lang tag for target-language text.  Fall back to "ltr" if
+  // capabilities haven't loaded yet (e.g. /languages failed).
+  const dir  = caps?.direction ?? 'ltr'
 
   for (const sentence of sentences) {
     const article = document.createElement('article')
@@ -164,10 +215,16 @@ function renderResults(sentences, language) {
     const textEl = document.createElement('p')
     textEl.className = 'sentence-card__text'
     textEl.textContent = sentence.text  // textContent — never innerHTML
+    // Apply language and direction so AT announces the text correctly and
+    // the browser applies script-appropriate shaping and line-breaking.
+    textEl.setAttribute('lang', language)
+    textEl.setAttribute('dir',  dir)
 
     // Use <ul>/<li> for semantic list semantics; AT announces item count.
     const list = document.createElement('ul')
     list.className = 'sentence-card__pills'
+    // Pill labels are target-language text too; match direction of the text.
+    list.setAttribute('dir', dir)
 
     for (const item of sentence.learnable_objects) {
       const li = document.createElement('li')

@@ -38,9 +38,12 @@
 
           <div class="field">
             <label for="language">Language</label>
-            <select id="language" name="language">
-              <option value="es">Spanish</option>
-              <option value="en">English (stub)</option>
+            <!--
+              Options are populated from GET /languages on page load.
+              A static fallback option is shown while loading or on error.
+            -->
+            <select id="language" name="language" aria-busy="true">
+              <option value="">Loading languages…</option>
             </select>
           </div>
 
@@ -64,7 +67,7 @@
             <textarea id="source-text" name="source-text" rows="8"
               required aria-required="true"
               aria-describedby="status"
-              placeholder="Paste Spanish text here…">Hola. La casa roja habla. Yo hablo español.</textarea>
+              placeholder="Paste text here…">Hola. La casa roja habla. Yo hablo español.</textarea>
           </div>
 
           <div class="button-row">
