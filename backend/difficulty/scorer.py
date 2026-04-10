@@ -98,7 +98,11 @@ class DifficultyScore:
 # ── Scoring ───────────────────────────────────────────────────────────────────
 
 
-def score_sentence(objects: list[ObjectMastery], text: str) -> DifficultyScore:
+def score_sentence(
+    objects: list[ObjectMastery],
+    text: str,
+    word_count_hint: int | None = None,
+) -> DifficultyScore:
     """Score a sentence's difficulty given the user's current mastery of its objects.
 
     Parameters
@@ -107,7 +111,14 @@ def score_sentence(objects: list[ObjectMastery], text: str) -> DifficultyScore:
         One ``ObjectMastery`` per learnable object extracted from the sentence.
         May be empty for punctuation-only sentences.
     text:
-        Raw sentence text; used only for word-count estimation.
+        Raw sentence text; used for word-count estimation when
+        *word_count_hint* is not provided.
+    word_count_hint:
+        Optional override for the word count used in the length score.
+        Supply this for languages where ``text.split()`` is meaningless —
+        notably CJK and other segmented-script languages.  Plugins can pass
+        ``len(objects)`` as a conservative proxy, or a model-derived token
+        count.  When ``None``, the function falls back to ``len(text.split())``.
 
     Returns
     -------
@@ -115,7 +126,7 @@ def score_sentence(objects: list[ObjectMastery], text: str) -> DifficultyScore:
         All components are in [0.0, 1.0].  When *objects* is empty, difficulty
         is 0.0 (the sentence contributes nothing to the learning agenda).
     """
-    ls = _length_score(text)
+    ls = _length_score(text, word_count_hint)
 
     if not objects:
         return DifficultyScore(
@@ -157,8 +168,8 @@ def score_sentence(objects: list[ObjectMastery], text: str) -> DifficultyScore:
     )
 
 
-def _length_score(text: str) -> float:
-    word_count = len(text.split())
+def _length_score(text: str, word_count_hint: int | None = None) -> float:
+    word_count = word_count_hint if word_count_hint is not None else len(text.split())
     return round(min(word_count / _LENGTH_MAX_WORDS, 1.0), 4)
 
 

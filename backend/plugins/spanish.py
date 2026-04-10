@@ -54,6 +54,7 @@ import logging
 from functools import cached_property
 from typing import Any
 
+from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import (
     CandidateObject,
     CandidateSentenceResult,
@@ -103,6 +104,15 @@ class SpanishPlugin:
     language_code = "es"
     display_name  = "Spanish"
     direction     = "ltr"
+    capabilities  = LanguageCapabilities(
+        code="es",
+        display_name="Spanish",
+        direction="ltr",
+        script_family="latin",
+        tokenization_mode="whitespace",
+        morphology_depth="rich",
+        lesson_modes_supported=["morphology", "vocabulary"],
+    )
 
     def __init__(self) -> None:
         self.lesson_store: dict[str, CandidateObject] = {}

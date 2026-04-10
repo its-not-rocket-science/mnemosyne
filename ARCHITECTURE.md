@@ -129,7 +129,8 @@ At startup `load_plugins()` iterates every module in `PLUGIN_PACKAGE` (`backend.
 class LanguagePlugin(Protocol):
     language_code: str               # BCP-47, e.g. "es"
     display_name:  str
-    direction:     str               # "ltr" | "rtl"
+    direction:     str               # "ltr" | "rtl" (kept for compat; mirrors capabilities)
+    capabilities:  LanguageCapabilities   # full capability metadata — see below
     lesson_store:  dict[str, CandidateObject]
 
     def analyze_text(self, text: str) -> list[CandidateSentenceResult]:
@@ -147,6 +148,29 @@ class LanguagePlugin(Protocol):
 ```
 
 `Protocol` is structural — plugins do not inherit anything. `analyze_text` is the required hot path; `analyze_sentence` is kept for tests and direct tooling use.
+
+### Language capabilities
+
+Every plugin declares a `capabilities: LanguageCapabilities` class attribute (from `backend/schemas/language.py`). The registry exposes it through `supported_languages()` and `GET /languages` returns the full object. The lesson route uses `best_lesson_mode(capabilities.lesson_modes_supported)` to select the appropriate lesson template.
+
+```python
+LanguageCapabilities(
+    code="es",
+    display_name="Spanish",
+    direction="ltr",                         # "ltr" | "rtl"
+    script_family="latin",                   # latin | arabic | hebrew | cjk | devanagari | cyrillic | other
+    tokenization_mode="whitespace",          # whitespace | segmented | character
+    morphology_depth="rich",                 # none | shallow | rich
+    lesson_modes_supported=["morphology", "vocabulary"],  # richest first
+)
+```
+
+The lesson builder dispatches based on the richest supported mode:
+- `"morphology"` — full conjugation/agreement/tense drills (Spanish)
+- `"vocabulary"` — lemma + POS only; no morphological drills (English/French stubs)
+- `"dictionary"` — word + gloss only (future: minimal-NLP languages)
+
+The difficulty scorer's `score_sentence()` accepts an optional `word_count_hint: int` for languages where `text.split()` is meaningless (CJK, Thai). Pass this from plugin-derived token counts when available.
 
 ### Object IDs
 

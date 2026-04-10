@@ -16,6 +16,7 @@ import pytest
 from backend.parsing.canonical import canonical_object_id
 from backend.parsing.plugin_loader import PluginRegistry, load_plugins
 from backend.plugins.spanish_stub import SpanishStubPlugin
+from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 
@@ -53,12 +54,53 @@ class TestPluginRegistry:
         assert "en" in langs
         assert "fr" in langs
 
-    def test_supported_languages_has_expected_fields(self) -> None:
+    def test_supported_languages_returns_capabilities_objects(self) -> None:
         registry = load_plugins()
-        for code, meta in registry.supported_languages().items():
-            assert meta["code"] == code
-            assert "display_name" in meta
-            assert meta["direction"] in ("ltr", "rtl")
+        for code, caps in registry.supported_languages().items():
+            assert isinstance(caps, LanguageCapabilities)
+            assert caps.code == code
+
+    def test_supported_languages_direction_valid(self) -> None:
+        registry = load_plugins()
+        for caps in registry.supported_languages().values():
+            assert caps.direction in ("ltr", "rtl")
+
+    def test_supported_languages_tokenization_mode_valid(self) -> None:
+        registry = load_plugins()
+        valid = {"whitespace", "segmented", "character"}
+        for caps in registry.supported_languages().values():
+            assert caps.tokenization_mode in valid
+
+    def test_supported_languages_morphology_depth_valid(self) -> None:
+        registry = load_plugins()
+        valid = {"none", "shallow", "rich"}
+        for caps in registry.supported_languages().values():
+            assert caps.morphology_depth in valid
+
+    def test_supported_languages_lesson_modes_non_empty(self) -> None:
+        registry = load_plugins()
+        valid = {"morphology", "vocabulary", "dictionary"}
+        for caps in registry.supported_languages().values():
+            assert len(caps.lesson_modes_supported) >= 1
+            assert all(m in valid for m in caps.lesson_modes_supported)
+
+    def test_spanish_capabilities_rich_morphology(self) -> None:
+        registry = load_plugins()
+        caps = registry.supported_languages()["es"]
+        assert caps.morphology_depth == "rich"
+        assert "morphology" in caps.lesson_modes_supported
+
+    def test_english_stub_capabilities_no_morphology(self) -> None:
+        registry = load_plugins()
+        caps = registry.supported_languages()["en"]
+        assert caps.morphology_depth == "none"
+        assert caps.lesson_modes_supported == ["vocabulary"]
+
+    def test_french_stub_capabilities_no_morphology(self) -> None:
+        registry = load_plugins()
+        caps = registry.supported_languages()["fr"]
+        assert caps.morphology_depth == "none"
+        assert caps.lesson_modes_supported == ["vocabulary"]
 
     def test_get_returns_correct_plugin(self) -> None:
         registry = load_plugins()
@@ -104,6 +146,15 @@ class TestStubProtocol:
 
     def test_direction_ltr(self) -> None:
         assert self.plugin.direction == "ltr"
+
+    def test_capabilities_is_language_capabilities(self) -> None:
+        assert isinstance(self.plugin.capabilities, LanguageCapabilities)
+
+    def test_capabilities_code_matches_language_code(self) -> None:
+        assert self.plugin.capabilities.code == self.plugin.language_code
+
+    def test_capabilities_direction_matches_direction(self) -> None:
+        assert self.plugin.capabilities.direction == self.plugin.direction
 
     def test_split_sentences_returns_list(self) -> None:
         result = self.plugin.split_sentences("Hola. Yo hablo.")

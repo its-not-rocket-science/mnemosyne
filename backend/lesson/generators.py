@@ -17,12 +17,27 @@ Adding new languages or lesson types
 Register the type in ``build_lesson()``'s dispatch table.  Each builder
 receives the full ``lesson_data`` dict, so new fields added by a plugin
 are automatically available without changes here.
+
+Lesson modes
+────────────
+``build_lesson()`` accepts an optional ``lesson_mode`` that controls which
+template is used regardless of object type:
+
+  morphology  — full conjugation/agreement/tense drills (default).
+  vocabulary  — lemma + POS fields and shadowing drill only.  Use for
+                plugins that provide POS but not full morphology (e.g. stubs).
+  dictionary  — word + gloss fields only.  Use for languages where the
+                plugin cannot provide POS or inflection analysis.
+
+The lesson route picks the mode from the plugin's ``capabilities.lesson_modes_supported``
+list so plugins do not need to know which template they will use.
 """
 from __future__ import annotations
 
 import hashlib
 from typing import Any
 
+from backend.schemas.language import LessonMode
 from backend.schemas.lesson import (
     Drill,
     FillBlankDrill,
@@ -80,25 +95,55 @@ def build_lesson(
     canonical_form: str,
     display_label: str,
     lesson_data: dict[str, Any],
+    lesson_mode: LessonMode = "morphology",
 ) -> LessonResponse:
     """Build a structured lesson for any canonical object type.
 
-    Dispatches to a type-specific builder; falls back to a generic
-    builder for types without a dedicated generator.
+    ``lesson_mode`` controls the template used:
+
+    - ``"morphology"`` (default) — dispatches by object type to the richest
+      available builder (conjugation/agreement/vocabulary).  Use for plugins
+      with full morphological analysis.
+    - ``"vocabulary"`` — always uses the vocabulary builder regardless of
+      object type.  Suitable for plugins that provide POS but not full
+      paradigms (e.g. stub plugins).
+    - ``"dictionary"`` — uses the minimal dictionary builder: word + gloss
+      only.  Use when the plugin cannot reliably provide POS or morphology.
     """
-    builders = {
-        "vocabulary":  _build_vocabulary,
-        "conjugation": _build_conjugation,
-        "agreement":   _build_agreement,
-    }
-    builder = builders.get(obj_type, _build_generic)
-    return builder(
-        object_id=object_id,
-        obj_type=obj_type,
-        canonical_form=canonical_form,
-        display_label=display_label,
-        lesson_data=lesson_data,
-    )
+    if lesson_mode == "dictionary":
+        response = _build_dictionary(
+            object_id=object_id,
+            obj_type=obj_type,
+            canonical_form=canonical_form,
+            display_label=display_label,
+            lesson_data=lesson_data,
+        )
+    elif lesson_mode == "vocabulary":
+        response = _build_vocabulary(
+            object_id=object_id,
+            obj_type=obj_type,
+            canonical_form=canonical_form,
+            display_label=display_label,
+            lesson_data=lesson_data,
+        )
+    else:
+        # lesson_mode == "morphology" — dispatch by type
+        builders = {
+            "vocabulary":  _build_vocabulary,
+            "conjugation": _build_conjugation,
+            "agreement":   _build_agreement,
+        }
+        builder = builders.get(obj_type, _build_generic)
+        response = builder(
+            object_id=object_id,
+            obj_type=obj_type,
+            canonical_form=canonical_form,
+            display_label=display_label,
+            lesson_data=lesson_data,
+        )
+
+    # Stamp the lesson_mode onto the response regardless of which builder ran.
+    return response.model_copy(update={"lesson_mode": lesson_mode})
 
 
 # ── Type-specific builders ────────────────────────────────────────────────────
@@ -323,6 +368,44 @@ def _build_agreement(
         fields=fields,
         examples=[display_label],
         drills=drills,
+    )
+
+
+def _build_dictionary(
+    *,
+    object_id: str,
+    obj_type: str,
+    canonical_form: str,
+    display_label: str,
+    lesson_data: dict[str, Any],
+) -> LessonResponse:
+    """Minimal lesson for dictionary-mode plugins.
+
+    Used when the plugin cannot reliably provide POS or morphological
+    analysis (e.g. a vocabulary stub or a language with limited NLP support).
+    Shows the word, any available gloss, and a single shadowing drill.
+    No POS labels, no tense/mood drills — only what the plugin reliably knows.
+    """
+    fields: list[LessonField] = []
+
+    # Show any gloss the plugin provides; never fabricate one.
+    if gloss := lesson_data.get("gloss"):
+        fields.append(LessonField(label="Gloss", value=str(gloss)))
+    # Show lemma only when it differs from the display form.
+    if lemma := lesson_data.get("lemma"):
+        if str(lemma).lower() != display_label.lower():
+            fields.append(LessonField(label="Base form", value=str(lemma)))
+    if note := lesson_data.get("confidence_note"):
+        fields.append(LessonField(label="Note", value=str(note)))
+
+    return LessonResponse(
+        id=object_id,
+        type=obj_type,  # type: ignore[arg-type]
+        title=f"{display_label}",
+        explanation=f"\u201c{display_label}\u201d",
+        fields=fields,
+        examples=[display_label],
+        drills=[ShadowingDrill(type="shadowing", text=display_label)],
     )
 
 

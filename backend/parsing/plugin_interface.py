@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Protocol
 
+from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 
@@ -17,7 +18,11 @@ class Token:
 class LanguagePlugin(Protocol):
     language_code: str
     display_name: str
-    direction: str
+    direction: str  # kept for backward compatibility; mirrors capabilities.direction
+
+    # Rich capability metadata — replaces the bare ``direction`` string for
+    # any code that needs to know how to render or score this language.
+    capabilities: LanguageCapabilities
 
     # Populated by the parse route after UUID resolution; used by get_lesson()
     # as a fallback when the DB is unavailable.  Keyed by the canonical UUID

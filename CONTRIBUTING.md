@@ -105,6 +105,7 @@ A plugin is a single Python module in `backend/plugins/` that exports a `create_
 # backend/plugins/german.py
 from __future__ import annotations
 
+from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult, RelationHint
 
 
@@ -112,6 +113,15 @@ class GermanPlugin:
     language_code = "de"       # BCP-47 tag used in /parse requests
     display_name  = "German"
     direction     = "ltr"      # "rtl" for Arabic, Hebrew, etc.
+    capabilities  = LanguageCapabilities(
+        code="de",
+        display_name="German",
+        direction="ltr",
+        script_family="latin",          # "arabic" | "hebrew" | "cjk" | "devanagari" | …
+        tokenization_mode="whitespace", # "segmented" for CJK/Thai; "character" for annotation mode
+        morphology_depth="rich",        # "none" | "shallow" | "rich"
+        lesson_modes_supported=["morphology", "vocabulary"],  # richest first
+    )
 
     def __init__(self) -> None:
         # Populated by the parse route after UUID resolution.
@@ -205,6 +215,24 @@ The parse route derives stable UUIDs via `canonical_object_id(language, type, ca
 - The specific inflected form seen in this text (e.g. `"gatos"` for canonical `"gato"`).
 - Preserve original casing from the source text.
 - Set to `None` only when there is genuinely no single surface form (e.g. a multiword expression where the label already encodes the surface).
+
+### Capability metadata
+
+Every plugin must declare a `capabilities` class attribute of type `LanguageCapabilities` (from `backend.schemas.language`). The registry reads it to populate `GET /languages`; the lesson route reads it to choose the right lesson template.
+
+| Field | Values | Notes |
+|---|---|---|
+| `direction` | `"ltr"` \| `"rtl"` | Applied as `dir=` attribute on sentence text in the frontend |
+| `script_family` | `"latin"` \| `"arabic"` \| `"hebrew"` \| `"cjk"` \| `"devanagari"` \| `"cyrillic"` \| `"other"` | Frontend uses this to select a font stack |
+| `tokenization_mode` | `"whitespace"` \| `"segmented"` \| `"character"` | Pass `word_count_hint` to `score_sentence` for `"segmented"` languages |
+| `morphology_depth` | `"none"` \| `"shallow"` \| `"rich"` | Informs how much morphological analysis the plugin provides |
+| `lesson_modes_supported` | `["morphology", "vocabulary", "dictionary"]` | Richest mode first; lesson route picks first available |
+
+**Lesson mode selection:** the lesson route calls `best_lesson_mode(capabilities.lesson_modes_supported)` and passes it to `build_lesson()`. Match your mode to your actual extraction depth:
+
+- `"dictionary"` — only a gloss or translation is available; no POS, no inflection.
+- `"vocabulary"` — lemma + POS available; no conjugation paradigms.
+- `"morphology"` — full tense/mood/person/number analysis available.
 
 ### Confidence guidelines
 

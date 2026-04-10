@@ -26,6 +26,7 @@ from typing import Annotated, Any, Literal
 
 from pydantic import BaseModel, Field
 
+from backend.schemas.language import LessonMode
 from backend.schemas.parse import LearnableType
 
 
@@ -73,9 +74,15 @@ class LessonResponse(BaseModel):
     Replaces the old ``content_markdown`` string.  All fields are
     deterministically derived from the canonical object's stored
     ``lesson_data``; no LLM or external call is needed.
+
+    ``lesson_mode`` reflects which template was used to generate this
+    lesson.  The frontend can use it to decide how to present drills —
+    e.g. morphological drill widgets are only appropriate for
+    "morphology" mode.
     """
     id: str
     type: LearnableType
+    lesson_mode: LessonMode = "morphology"
     title: str
     explanation: str            # one human-readable sentence
     fields: list[LessonField]   # key-value fact rows (lemma, tense, …)
