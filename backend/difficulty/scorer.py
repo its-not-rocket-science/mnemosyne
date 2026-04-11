@@ -15,14 +15,43 @@ three components:
       regardless of grammar or length.
 
   grammar_score  (weight 0.25)
-      Normalised density of grammatically complex object types —
-      conjugations (weight 0.70) and agreements (weight 0.30) — relative to
-      the total number of objects.  Pure vocabulary sentences score 0.
+      Normalised density of grammatically complex object types relative to
+      the total number of objects.  Supported types and their default weights:
+        conjugation   → 0.70 (verb morphology; central to acquisition)
+        agreement     → 0.30 (det/adj/noun agreement)
+        case_agreement→ 0.00 (language-specific; see profiles.py)
+      Pure vocabulary sentences score 0.  Weights and overall scale are
+      calibrated per language via LanguageScoringProfile (see below).
 
   length_score   (weight 0.20)
       Sentence word count normalised to LENGTH_MAX_WORDS (25).  Longer
       sentences impose a higher working-memory load even when all words
-      are known.
+      are known.  The ceiling is profile-adjustable for segmented scripts.
+
+Multilingual fairness
+─────────────────────
+A plain scorer treats every language identically, which produces unfair
+results.  German and Russian sentences are morphologically dense by design,
+not by complexity — every noun phrase yields case_agreement objects, every
+finite verb a conjugation.  Without calibration these languages always
+score harder than Spanish at the same comprehension level.
+
+Similarly, Chinese and Japanese text cannot be tokenised by whitespace, so
+``text.split()`` returns ~1 token regardless of sentence length.  The
+length signal collapses to near-zero for all CJK input.
+
+The solution is ``LanguageScoringProfile`` (defined in ``difficulty.profiles``):
+pass one to ``score_sentence()`` and it adjusts:
+
+  grammar_weight_scale  — scales down grammar density for morphologically
+                          rich languages where density is expected.
+  length_max_words      — lowers the normalisation ceiling for segmented
+                          scripts; use with word_count_hint=len(objects).
+  conj_weight / agree_weight / case_agree_weight — per-type grammar weights
+                          so case_agreement is counted for German etc.
+
+The unknown_ratio component is NEVER profile-adjusted.  Encountering an
+unknown word costs the same in every language.
 
 Progression model
 ─────────────────
@@ -39,7 +68,10 @@ Progression model
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Literal
+from typing import TYPE_CHECKING, Literal
+
+if TYPE_CHECKING:
+    from backend.difficulty.profiles import LanguageScoringProfile
 
 # ── Constants ────────────────────────────────────────────────────────────────
 
@@ -102,6 +134,7 @@ def score_sentence(
     objects: list[ObjectMastery],
     text: str,
     word_count_hint: int | None = None,
+    profile: "LanguageScoringProfile | None" = None,
 ) -> DifficultyScore:
     """Score a sentence's difficulty given the user's current mastery of its objects.
 
@@ -119,14 +152,25 @@ def score_sentence(
         notably CJK and other segmented-script languages.  Plugins can pass
         ``len(objects)`` as a conservative proxy, or a model-derived token
         count.  When ``None``, the function falls back to ``len(text.split())``.
+    profile:
+        Optional ``LanguageScoringProfile`` from ``difficulty.profiles``.
+        When supplied, grammar weights, length ceiling, and the grammar
+        contribution scale are taken from the profile.  When ``None`` the
+        module-level defaults apply, preserving backward compatibility.
 
     Returns
     -------
     DifficultyScore
         All components are in [0.0, 1.0].  When *objects* is empty, difficulty
         is 0.0 (the sentence contributes nothing to the learning agenda).
+
+    Notes
+    -----
+    The ``unknown_ratio`` component is never profile-adjusted.  Encountering
+    an unknown word costs equally regardless of language.
     """
-    ls = _length_score(text, word_count_hint)
+    length_max = profile.length_max_words if profile is not None else _LENGTH_MAX_WORDS
+    ls = _length_score(text, word_count_hint, length_max)
 
     if not objects:
         return DifficultyScore(
@@ -141,14 +185,32 @@ def score_sentence(
 
     total = len(objects)
     unknown = sum(1 for o in objects if o.mastery_score < KNOWN_THRESHOLD)
-    conj_count  = sum(1 for o in objects if o.obj_type == "conjugation")
-    agree_count = sum(1 for o in objects if o.obj_type == "agreement")
+
+    conj_count       = sum(1 for o in objects if o.obj_type == "conjugation")
+    agree_count      = sum(1 for o in objects if o.obj_type == "agreement")
+    case_agree_count = sum(1 for o in objects if o.obj_type == "case_agreement")
+
+    # Resolve per-type weights from profile or module defaults.
+    if profile is not None:
+        conj_w       = profile.conj_weight
+        agree_w      = profile.agree_weight
+        case_agree_w = profile.case_agree_weight
+        gw_scale     = profile.grammar_weight_scale
+    else:
+        conj_w       = _CONJ_WEIGHT
+        agree_w      = _AGREE_WEIGHT
+        case_agree_w = 0.0
+        gw_scale     = 1.0
 
     unknown_ratio = unknown / total
-    grammar_score = (
-        (conj_count  / total) * _CONJ_WEIGHT
-        + (agree_count / total) * _AGREE_WEIGHT
+    grammar_raw = (
+        (conj_count       / total) * conj_w
+        + (agree_count    / total) * agree_w
+        + (case_agree_count / total) * case_agree_w
     )
+    # Apply the language-specific scale: morphologically dense languages get
+    # their grammar contribution discounted toward the expected baseline.
+    grammar_score = min(grammar_raw * gw_scale, 1.0)
 
     difficulty = round(
         _W_UNKNOWN * unknown_ratio
@@ -168,9 +230,13 @@ def score_sentence(
     )
 
 
-def _length_score(text: str, word_count_hint: int | None = None) -> float:
+def _length_score(
+    text: str,
+    word_count_hint: int | None = None,
+    length_max: int = _LENGTH_MAX_WORDS,
+) -> float:
     word_count = word_count_hint if word_count_hint is not None else len(text.split())
-    return round(min(word_count / _LENGTH_MAX_WORDS, 1.0), 4)
+    return round(min(word_count / length_max, 1.0), 4)
 
 
 # ── Difficulty labels ─────────────────────────────────────────────────────────
