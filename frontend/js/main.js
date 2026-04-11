@@ -377,10 +377,11 @@ results.addEventListener('lesson-open', async (event) => {
 // ── Render sentence cards ─────────────────────────────────────────────────────
 
 function renderResults(sentences, language) {
-  const fragment = document.createDocumentFragment()
-  const caps      = languageCapabilities.get(language)
-  const dir       = caps?.direction ?? 'ltr'
-  const tokenMode = caps?.tokenization_mode ?? 'whitespace'
+  const fragment   = document.createDocumentFragment()
+  const caps       = languageCapabilities.get(language)
+  const dir        = caps?.direction       ?? 'ltr'
+  const tokenMode  = caps?.tokenization_mode ?? 'whitespace'
+  const scriptFam  = caps?.script_family   ?? 'latin'
 
   for (const sentence of sentences) {
     const article = document.createElement('article')
@@ -394,6 +395,9 @@ function renderResults(sentences, language) {
     textEl.setAttribute('dir',  dir)
     // data-tokenization: drives word-break CSS for segmented / character scripts.
     textEl.dataset.tokenization = tokenMode
+    // data-script-family: CSS hook for font/layout rules when lang selectors
+    // do not match (e.g. private-use codes like x-rtl-test, x-cjk-test).
+    textEl.dataset.scriptFamily = scriptFam
     // data-layer: consumed by script-view CSS when transliteration is toggled.
     textEl.dataset.layer = 'native'
 
@@ -409,6 +413,8 @@ function renderResults(sentences, language) {
       pill.setAttribute('label',     item.label)
       pill.setAttribute('object-id', item.id)
       pill.setAttribute('language',  language)
+      // dir forwarded so the pill can apply correct lang/dir to its button.
+      pill.setAttribute('dir',       dir)
       li.appendChild(pill)
       list.appendChild(li)
     }

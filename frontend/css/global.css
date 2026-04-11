@@ -78,6 +78,36 @@
   line-height: 1.7;
 }
 
+/* ── Script-family data-attribute hooks ─────────────────────────────────────
+   main.js sets data-script-family on each sentence-card text element from the
+   plugin's capabilities.script_family value.  These rules mirror the lang-based
+   font/layout rules above and apply when the lang attribute uses a private-use
+   code (e.g. "x-rtl-test", "x-cjk-test") that the standard selectors miss.
+   Standard lang selectors above have higher specificity and will override where
+   they match, so there is no conflict.                                       */
+
+.sentence-card__text[data-script-family="arabic"] {
+  font-family: "Segoe UI", "SF Arabic", "Noto Sans Arabic", system-ui, sans-serif;
+  line-height: 1.8;
+}
+
+.sentence-card__text[data-script-family="hebrew"] {
+  font-family: "Segoe UI", "SF Hebrew", "Noto Sans Hebrew", system-ui, sans-serif;
+}
+
+.sentence-card__text[data-script-family="cjk"] {
+  font-family: system-ui, sans-serif;
+  letter-spacing: 0.02em;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+.sentence-card__text[data-script-family="devanagari"] {
+  font-family: "Segoe UI", "Kohinoor Devanagari", "Noto Sans Devanagari",
+               system-ui, sans-serif;
+  line-height: 1.7;
+}
+
 /* ── Tokenisation-mode word-breaking ─────────────────────────────────────────
    When the backend declares tokenization_mode, main.js sets data-tokenization
    on each sentence-card text element.  The lang-based rules above cover the

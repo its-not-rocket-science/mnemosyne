@@ -14,7 +14,7 @@ const TYPE_META = {
 }
 
 export class MnemosynePill extends HTMLElement {
-  static observedAttributes = ['type', 'label', 'object-id', 'language']
+  static observedAttributes = ['type', 'label', 'object-id', 'language', 'dir']
 
   constructor() {
     super()
@@ -52,9 +52,11 @@ export class MnemosynePill extends HTMLElement {
 
   render() {
     if (!this.shadowRoot) return
-    const type = this.getAttribute('type') || 'vocabulary'
-    const text = this.getAttribute('label') || ''
-    const meta = TYPE_META[type] || TYPE_META.vocabulary
+    const type     = this.getAttribute('type')     || 'vocabulary'
+    const text     = this.getAttribute('label')    || ''
+    const language = this.getAttribute('language') || ''
+    const dir      = this.getAttribute('dir')      || null
+    const meta     = TYPE_META[type] || TYPE_META.vocabulary
 
     // Build the shadow DOM structure.  aria-label is NOT interpolated into
     // the innerHTML string — setAttribute handles all escaping and avoids
@@ -104,20 +106,39 @@ export class MnemosynePill extends HTMLElement {
           opacity: 0.65;
           padding-inline-start: 0.1rem;
         }
+
+        /* The label span inherits the button's direction.  We keep the
+           button itself LTR so the icon/badge/separator stay in a consistent
+           left-to-right order regardless of language; only the label text is
+           marked as the target language so the bidi algorithm handles it. */
+        .pill-label { unicode-bidi: isolate; }
       </style>
       <button type="button">
         <span class="icon" aria-hidden="true">${meta.icon}</span>
         <span>${meta.badge}</span>
         <span aria-hidden="true">·</span>
-        <span>${text}</span>
+        <span class="pill-label"></span>
       </button>
     `
 
-    // Set aria-label via setAttribute so the browser handles escaping.
-    // Interpolating user-supplied `text` directly into innerHTML would break
-    // if the value contains quote characters.
-    const btn = this.shadowRoot.querySelector('button')
+    const btn      = this.shadowRoot.querySelector('button')
+    const labelEl  = this.shadowRoot.querySelector('.pill-label')
+
+    // Set text content and aria-label via DOM (never via innerHTML) to avoid
+    // any risk of injection if the label value contains markup characters.
+    labelEl.textContent = text
     btn.setAttribute('aria-label', `${meta.label} lesson: ${text}`)
+
+    // lang on the button so AT announces the accessible name in the correct
+    // language / with the correct TTS voice.
+    if (language) btn.setAttribute('lang', language)
+
+    // dir on the label span only — NOT on the whole button — so the
+    // icon / badge / separator retain their LTR order in RTL languages.
+    // unicode-bidi:isolate (set in CSS above) ensures the label's bidi
+    // context is isolated from the surrounding flex layout.
+    if (dir && dir !== 'ltr') labelEl.setAttribute('dir', dir)
+
     btn.addEventListener('click', this.handleClick)
   }
 }
