@@ -563,6 +563,235 @@
       </section>
 
 
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s12">
+        <h2 id="s12">12 — Capability-aware rendering hooks</h2>
+        <p style="font-size:0.875rem;color:var(--muted)">
+          main.js sets <code>data-script-family</code>, <code>data-tokenization</code>,
+          and <code>dir</code> on sentence-card elements from plugin capabilities.
+          These test cases use private-use language codes (<code>x-*</code>) to
+          confirm that the data-attribute CSS hooks apply font and layout rules
+          when the standard <code>[lang^=…]</code> selectors cannot match.
+        </p>
+
+        <div class="test-case">
+          <p class="test-label">TC-HOOK-01: data-script-family="arabic" with private-use lang code</p>
+          <p style="font-size:0.85rem;color:var(--muted);margin-block-end:0.5rem">
+            Simulates the x-rtl-test plugin output.  The <code>lang</code> attribute
+            is a private-use code so the <code>[lang^="ar"]</code> selector does NOT
+            match.  Font and line-height must come from <code>[data-script-family="arabic"]</code>.
+          </p>
+          <article class="sentence-card">
+            <p class="sentence-card__text"
+               lang="x-rtl-test" dir="rtl"
+               data-tokenization="whitespace"
+               data-script-family="arabic"
+               data-layer="native">
+              ذهب الطالب إلى المدرسة كل يوم.
+            </p>
+            <ul class="sentence-card__pills" dir="rtl">
+              <li><mnemosyne-pill type="vocabulary" label="طالب"  object-id="h1" language="x-rtl-test" dir="rtl"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="vocabulary" label="ذهب"   object-id="h2" language="x-rtl-test" dir="rtl"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] Arabic font renders (data-script-family="arabic" hook applies)</li>
+            <li>[ ] Line height is generous (≥ 1.8) for diacritics</li>
+            <li>[ ] Text is right-aligned (dir="rtl" applied)</li>
+            <li>[ ] Pills flow right → left</li>
+            <li>[ ] Pill icon/badge stay in consistent LTR order; only label text is RTL</li>
+            <li>[ ] Inspect: <code>lang="x-rtl-test"</code> — NOT "ar"</li>
+          </ul>
+        </div>
+
+        <div class="test-case">
+          <p class="test-label">TC-HOOK-02: data-script-family="cjk" with private-use lang code</p>
+          <p style="font-size:0.85rem;color:var(--muted);margin-block-end:0.5rem">
+            Simulates the x-cjk-test plugin output.  The <code>lang</code> attribute
+            is a private-use code so the <code>[lang^="zh"]</code> selector does NOT
+            match.  word-break and letter-spacing must come from
+            <code>[data-script-family="cjk"]</code>.
+          </p>
+          <article class="sentence-card">
+            <p class="sentence-card__text"
+               lang="x-cjk-test" dir="ltr"
+               data-tokenization="character"
+               data-script-family="cjk"
+               data-layer="native">
+              学习这个语言非常有趣。
+            </p>
+            <ul class="sentence-card__pills" dir="ltr">
+              <li><mnemosyne-pill type="script" label="学" object-id="h3" language="x-cjk-test"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="script" label="习" object-id="h4" language="x-cjk-test"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] CJK system font renders (data-script-family="cjk" hook applies)</li>
+            <li>[ ] Characters wrap at box edge (word-break:break-all from data-script-family)</li>
+            <li>[ ] Letter spacing is slightly tighter (0.02em)</li>
+            <li>[ ] Inspect: <code>lang="x-cjk-test"</code> — NOT "zh"</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s13">
+        <h2 id="s13">13 — Fake RTL plugin (x-rtl-test)</h2>
+        <p style="font-size:0.875rem;color:var(--muted)">
+          Test cases for the <code>x-rtl-test</code> backend plugin.  This plugin
+          drives the RTL rendering path without claiming real Arabic/Hebrew support.
+          Paste any RTL text into the main app with "RTL Test (fake — UI only)"
+          selected to see the live result; this section shows the expected card shape.
+        </p>
+
+        <div class="test-case">
+          <p class="test-label">TC-RTL-FAKE-01: x-rtl-test sentence card — Arabic sample</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text"
+               lang="x-rtl-test" dir="rtl"
+               data-tokenization="whitespace"
+               data-script-family="arabic"
+               data-layer="native">
+              كتب الطفل رسالة طويلة إلى أصدقائه في المدرسة.
+            </p>
+            <ul class="sentence-card__pills" dir="rtl">
+              <li><mnemosyne-pill type="vocabulary" label="كتب"    object-id="r1" language="x-rtl-test" dir="rtl"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="vocabulary" label="رسالة"  object-id="r2" language="x-rtl-test" dir="rtl"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="vocabulary" label="أصدقاء" object-id="r3" language="x-rtl-test" dir="rtl"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] Arabic script renders correctly with Arabic font</li>
+            <li>[ ] Text right-aligned; pills start from inline-start (right)</li>
+            <li>[ ] No transliteration toolbar (x-rtl-test declares no transliteration_scheme)</li>
+          </ul>
+        </div>
+
+        <div class="test-case">
+          <p class="test-label">TC-RTL-FAKE-02: x-rtl-test — bidi mixed-direction content</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text"
+               lang="x-rtl-test" dir="rtl"
+               data-tokenization="whitespace"
+               data-script-family="arabic"
+               data-layer="native">
+              ذهب Ahmed إلى Paris في شهر March.
+            </p>
+          </article>
+          <ul class="checklist">
+            <li>[ ] Arabic words render RTL; "Ahmed", "Paris", "March" render LTR within the RTL context</li>
+            <li>[ ] No garbling of Latin sequences (Unicode bidi algorithm active)</li>
+            <li>[ ] Overall sentence block is right-aligned</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s14">
+        <h2 id="s14">14 — Fake CJK plugin (x-cjk-test)</h2>
+        <p style="font-size:0.875rem;color:var(--muted)">
+          Test cases for the <code>x-cjk-test</code> backend plugin.  This plugin
+          drives character-level segmentation and the transliteration toggle without
+          implementing real CJK NLP.  Transliteration labels are fake (U+XXXX hex
+          code points) — the test goal is layout and toggle behaviour, not linguistic
+          accuracy.
+        </p>
+
+        <div class="test-case">
+          <p class="test-label">TC-CJK-FAKE-01: x-cjk-test card with script pills</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text"
+               lang="x-cjk-test" dir="ltr"
+               data-tokenization="character"
+               data-script-family="cjk"
+               data-layer="native">
+              你好世界！
+            </p>
+            <ul class="sentence-card__pills" dir="ltr">
+              <li><mnemosyne-pill type="script" label="你" object-id="c1" language="x-cjk-test"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="script" label="好" object-id="c2" language="x-cjk-test"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="script" label="世" object-id="c3" language="x-cjk-test"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="script" label="界" object-id="c4" language="x-cjk-test"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] CJK font renders (data-script-family="cjk" hook applies for x-cjk-test lang)</li>
+            <li>[ ] Characters wrap at box edge (break-all)</li>
+            <li>[ ] Each character has a "script" type pill (✍️ icon, "script" badge)</li>
+          </ul>
+        </div>
+
+        <div class="test-case">
+          <p class="test-label">TC-CJK-FAKE-02: x-cjk-test — script-view toggle with fake romaji</p>
+          <p style="font-size:0.85rem;color:var(--muted);margin-block-end:0.5rem">
+            x-cjk-test declares <code>transliteration_scheme="fake_romaji"</code> so the
+            script-view toolbar must appear.  The romanized layer shows U+XXXX code points.
+          </p>
+
+          <div id="demo-cjk-results">
+            <div class="results-toolbar" style="display:flex;margin-block-end:0.5rem">
+              <div class="script-toggle" role="group" aria-label="Script view (CJK demo)">
+                <span class="script-toggle__label" aria-hidden="true">View:</span>
+                <button type="button" class="script-toggle__btn script-toggle__btn--active"
+                        aria-pressed="true" data-cjk-view="native">Script</button>
+                <button type="button" class="script-toggle__btn"
+                        aria-pressed="false" data-cjk-view="romanized">Romanized</button>
+                <button type="button" class="script-toggle__btn"
+                        aria-pressed="false" data-cjk-view="both">Both</button>
+              </div>
+            </div>
+            <article class="sentence-card">
+              <!-- Native layer: CJK characters -->
+              <p class="sentence-card__text"
+                 lang="x-cjk-test" dir="ltr"
+                 data-tokenization="character"
+                 data-script-family="cjk"
+                 data-layer="native">
+                你好
+              </p>
+              <!-- Romanized layer: fake U+XXXX placeholders (hidden when script-view = native) -->
+              <p class="sentence-card__text"
+                 lang="x-cjk-test-Latn" dir="ltr"
+                 data-tokenization="whitespace"
+                 data-layer="romanized"
+                 style="font-style:italic;color:var(--muted)">
+                U+4F60 U+597D
+              </p>
+              <ul class="sentence-card__pills" dir="ltr">
+                <li><mnemosyne-pill type="script"          label="你"    object-id="c5" language="x-cjk-test"></mnemosyne-pill></li>
+                <li><mnemosyne-pill type="transliteration" label="U+4F60" object-id="c6" language="x-cjk-test"></mnemosyne-pill></li>
+              </ul>
+            </article>
+          </div>
+
+          <script>
+            document.querySelectorAll('[data-cjk-view]').forEach((btn) => {
+              btn.addEventListener('click', () => {
+                const view = btn.dataset.cjkView
+                document.querySelector('#demo-cjk-results').dataset.scriptView = view
+                document.querySelectorAll('[data-cjk-view]').forEach((b) => {
+                  const active = b.dataset.cjkView === view
+                  b.setAttribute('aria-pressed', String(active))
+                  b.classList.toggle('script-toggle__btn--active', active)
+                })
+              })
+            })
+          </script>
+
+          <ul class="checklist">
+            <li>[ ] "Script" button: only 你好 visible, U+XXXX line hidden</li>
+            <li>[ ] "Romanized" button: only U+4F60 U+597D visible, 你好 hidden</li>
+            <li>[ ] "Both" button: both layers visible</li>
+            <li>[ ] script pill (✍️) and transliteration pill (🔤) both render</li>
+            <li>[ ] Toolbar script-view CSS rule controls layer visibility via #demo-cjk-results</li>
+          </ul>
+        </div>
+      </section>
+
+
     </main>
   </body>
 </html>

@@ -93,11 +93,12 @@
 /* ── Script-view layer visibility — sentence cards ───────────────────────────
    [data-layer="native"]    — source-script text (sentence text, native pills)
    [data-layer="romanized"] — transliterated / romanized forms
-   Controlled by data-script-view on the #results container.
+   Controlled by data-script-view on any ancestor container.  main.js sets
+   this on #results; test fixtures set it on local demo containers.
    'both' or missing value: all layers visible (default).                     */
 
-#results[data-script-view="native"]    [data-layer="romanized"] { display: none; }
-#results[data-script-view="romanized"] [data-layer="native"]    { display: none; }
+[data-script-view="native"]    [data-layer="romanized"] { display: none; }
+[data-script-view="romanized"] [data-layer="native"]    { display: none; }
 
 /* Empty-state message shown before any parse and when no results are found. */
 .results-empty {
