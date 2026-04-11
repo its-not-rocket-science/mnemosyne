@@ -205,6 +205,69 @@ class SourceChunkRow(Base):
     )
 
 
+class SourceProgressionRow(Base):
+    """Text-level reading progression for one (user, source_document) pair.
+
+    Complements the object-level FSRS tracking in ``UserKnowledgeRow`` with
+    a document-level view of learning progress.  Where FSRS tracks whether a
+    learner *knows* a word, this tracks how far they have *read* through a
+    source text — enabling the i+1 recommendation engine to prefer continuing
+    an in-progress document over jumping to an unrelated sentence.
+
+    Design rationale
+    ────────────────
+    Authentic reading requires context.  Recommending isolated sentences from
+    different documents produces the flashcard anti-pattern: learners never
+    encounter the same vocabulary in a coherent narrative.  SourceProgressionRow
+    allows the recommendation engine to:
+
+      1. Prefer the next unread passage from a document the user has already
+         started, preserving narrative context.
+      2. Track comprehension at the document level (avg_comprehension is the
+         rolling mean of object mastery scores for all objects in the document).
+      3. Record reading velocity (sentences_seen / sessions) for curriculum
+         pacing — not yet implemented but the data is preserved.
+      4. Mark documents as completed (next_position >= sentences_total).
+
+    next_position
+        Zero-based sentence index of the sentence the user should read next.
+        Incremented by the frontend after the user finishes reading a passage.
+        Persisted here so progress survives across sessions.
+
+    sentences_total
+        Total sentence count for the associated source document.  Set at
+        ingestion time from the ParsedText sentence count.  Needed to
+        determine document completion without a COUNT(*) query.
+
+    avg_comprehension
+        Rolling mean of ``mastery_score`` values for every canonical object
+        encountered in this document.  Updated asynchronously as review
+        events arrive.  Ranges from 0.0 (nothing mastered) to 1.0 (all
+        objects mastered).  Used for document-level progress display and to
+        weigh recommendation preference toward documents where the learner
+        has enough vocabulary to benefit from continued reading.
+
+    completion_fraction
+        Derived from ``next_position / sentences_total``; stored as a
+        convenience column to avoid a division on every sort.  Updated
+        whenever ``next_position`` changes.  Ranges from 0.0 to 1.0.
+    """
+    __tablename__ = "source_progression"
+
+    user_id: Mapped[str] = mapped_column(String(50), primary_key=True)
+    source_document_id: Mapped[str] = mapped_column(
+        String(36), ForeignKey("source_documents.id"), primary_key=True
+    )
+
+    next_position: Mapped[int] = mapped_column(Integer, default=0)
+    sentences_total: Mapped[int] = mapped_column(Integer, default=0)
+    avg_comprehension: Mapped[float] = mapped_column(Float, default=0.0)
+    completion_fraction: Mapped[float] = mapped_column(Float, default=0.0)
+
+    last_read_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+
 class UserKnowledgeRow(Base):
     """FSRS state and mastery metrics for one (user, canonical object) pair.
 
