@@ -237,6 +237,64 @@ textarea[aria-invalid="true"] {
   border-color: var(--error-color);
 }
 
+/* ── Field header — label + secondary action on one row ──────────────────────
+   Used for the "Text to parse" field, which pairs its label with a file-picker
+   trigger on the inline-end edge.  align-items: baseline keeps label and
+   button text optically aligned even if font sizes differ.                  */
+.field-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-block-end: 0.25rem;
+}
+
+/* Suppress the default label block display inside the flex container. */
+.field-header > label {
+  margin: 0;
+}
+
+/* File-pick button — styled like a quiet secondary action.
+   It wraps a visually-hidden <input type="file"> so clicking the label
+   opens the OS file picker.  min-block-size ensures the 44 px touch target
+   even though the text is small.                                             */
+.file-pick-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent);
+  cursor: pointer;
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.4rem;
+  min-block-size: 2.75rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+
+.file-pick-btn:hover {
+  text-decoration-thickness: 2px;
+}
+
+.file-pick-btn:focus-within {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* File info line — shown below the field header, above the textarea. */
+.file-info {
+  margin-block: 0 0.35rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.file-info[data-state="error"] {
+  color: var(--error-color);
+}
+
 .button-row {
   display: flex;
   gap: var(--space-2);

@@ -7,7 +7,10 @@ const API_BASE = 'http://localhost:8000'
 
 const form           = document.querySelector('#parse-form')
 const languageSelect = document.querySelector('#language')
+const sourceTitleInput = document.querySelector('#source-title')
 const sourceUrlInput = document.querySelector('#source-url')
+const fileInput      = document.querySelector('#file-input')
+const fileInfo       = document.querySelector('#file-info')
 const textarea       = document.querySelector('#source-text')
 const submitButton   = document.querySelector('#parse-submit')
 const results        = document.querySelector('#results')
@@ -18,6 +21,11 @@ const resultsToolbar = document.querySelector('#results-toolbar')
 
 // Carries FSRS state across multiple ratings of the same object in one session.
 const reviewStateByObject = new Map()
+
+// Tracks whether the current textarea content came from a file upload.
+// Reset to 'pasted_text' whenever the user edits the textarea directly.
+let currentContentType = 'pasted_text'
+let currentFilename    = null
 
 // ── Language capabilities ─────────────────────────────────────────────────────
 // Populated from GET /languages on page load.
@@ -33,6 +41,74 @@ let currentCaps = null
 // 'both'      — show both layers side by side
 // Only active when currentCaps.transliteration_scheme is set.
 let scriptView = 'native'
+
+// ── File input ────────────────────────────────────────────────────────────────
+// Reads a .txt file into the textarea and records the filename for the
+// ingest payload.  The textarea remains the editing surface — the user can
+// review and edit the loaded text before submitting.
+
+const MAX_FILE_BYTES = 1_048_576  // 1 MiB
+
+if (fileInput) {
+  fileInput.addEventListener('change', () => {
+    const file = fileInput.files?.[0]
+    if (!file) return
+
+    // Validate type and size client-side before reading.
+    const isPlainText = file.type === 'text/plain' || file.name.endsWith('.txt')
+    if (!isPlainText) {
+      setFileInfo('Only .txt files are supported.', 'error')
+      fileInput.value = ''
+      return
+    }
+    if (file.size > MAX_FILE_BYTES) {
+      setFileInfo(`File is too large (${(file.size / 1024).toFixed(0)} KB). Maximum is 1 MB.`, 'error')
+      fileInput.value = ''
+      return
+    }
+
+    const reader = new FileReader()
+    reader.onload = (evt) => {
+      const text = evt.target.result
+      textarea.value = text
+      textarea.removeAttribute('aria-invalid')
+      currentContentType = 'uploaded_file'
+      currentFilename    = file.name
+
+      // Pre-fill the title with the filename (minus extension) if the user
+      // hasn't already typed a title.
+      if (sourceTitleInput && !sourceTitleInput.value.trim()) {
+        sourceTitleInput.value = file.name.replace(/\.[^.]+$/, '')
+      }
+
+      setFileInfo(`Loaded: ${escapeHtml(file.name)} (${(file.size / 1024).toFixed(1)} KB)`)
+    }
+    reader.onerror = () => {
+      setFileInfo('Could not read the file. Try copying the text manually.', 'error')
+      currentContentType = 'pasted_text'
+      currentFilename    = null
+    }
+    reader.readAsText(file, 'utf-8')
+  })
+}
+
+// Reset content_type when user edits the textarea directly.
+if (textarea) {
+  textarea.addEventListener('input', () => {
+    if (currentContentType === 'uploaded_file') {
+      currentContentType = 'pasted_text'
+      currentFilename    = null
+      setFileInfo('')
+    }
+  })
+}
+
+function setFileInfo(message, state = 'idle') {
+  if (!fileInfo) return
+  fileInfo.textContent = message
+  fileInfo.dataset.state = state  // 'idle' | 'error'
+}
+
 
 async function loadLanguages() {
   try {
@@ -206,13 +282,17 @@ form.addEventListener('submit', async (event) => {
   submitButton.textContent = 'Parsing\u2026'
 
   try {
+    const language = languageSelect.value
     const payload = {
-      language:   languageSelect.value,
+      language,
       text,
-      source_url: sourceUrlInput?.value.trim() || null,
+      content_type: currentContentType,
+      title:        sourceTitleInput?.value.trim() || null,
+      source_url:   sourceUrlInput?.value.trim() || null,
+      filename:     currentFilename || null,
     }
 
-    const response = await fetch(`${API_BASE}/parse`, {
+    const response = await fetch(`${API_BASE}/ingest`, {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify(payload),
@@ -231,9 +311,20 @@ form.addEventListener('submit', async (event) => {
       return
     }
 
-    renderResults(data.sentences, payload.language)
+    renderResults(data.sentences, language)
     const n = data.sentences.length
-    setStatus(`${n} sentence${n !== 1 ? 's' : ''} parsed. Use Tab to navigate the items.`)
+
+    // Surface any non-fatal validation warnings (e.g. script mismatch) in
+    // the status region before the success count so they don't get buried.
+    if (data.warnings?.length) {
+      setStatus(data.warnings[0], 'error')
+      // Delay the success message so the warning is announced first.
+      setTimeout(() => {
+        setStatus(`${n} sentence${n !== 1 ? 's' : ''} parsed. Use Tab to navigate the items.`)
+      }, 4000)
+    } else {
+      setStatus(`${n} sentence${n !== 1 ? 's' : ''} parsed. Use Tab to navigate the items.`)
+    }
   } catch (error) {
     showResultsMessage('An error occurred. Please try again.')
     setStatus(error instanceof Error ? error.message : 'Parsing failed.', 'error')
