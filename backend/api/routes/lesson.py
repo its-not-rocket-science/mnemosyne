@@ -6,6 +6,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_db_session, get_plugin_registry
+from backend.lesson.context import LessonContext
 from backend.lesson.generators import build_lesson
 from backend.models import CanonicalObjectRow
 from backend.parsing.plugin_loader import PluginRegistry
@@ -32,6 +33,22 @@ def _mode_for_language(registry: PluginRegistry, language: str) -> LessonMode:
     return "morphology"
 
 
+def _context_for_language(registry: PluginRegistry, language: str) -> LessonContext:
+    """Build a ``LessonContext`` from the registered plugin's capabilities.
+
+    Falls back to ``LessonContext.unknown()`` when the language is not
+    registered or the plugin pre-dates the capabilities system.
+    """
+    try:
+        plugin = registry.get(language)
+        caps = getattr(plugin, "capabilities", None)
+        if caps is not None:
+            return LessonContext.from_capabilities(caps)
+    except KeyError:
+        pass
+    return LessonContext.unknown()
+
+
 @router.get("/lesson/{object_id}", response_model=LessonResponse)
 async def get_lesson(
     object_id: str,
@@ -43,7 +60,8 @@ async def get_lesson(
     try:
         row = await db.get(CanonicalObjectRow, object_id)
         if row is not None:
-            mode = _mode_for_language(registry, row.language)
+            mode    = _mode_for_language(registry, row.language)
+            context = _context_for_language(registry, row.language)
             return build_lesson(
                 object_id=row.id,
                 obj_type=row.type,
@@ -51,6 +69,7 @@ async def get_lesson(
                 display_label=row.display_label,
                 lesson_data=row.lesson_data or {},
                 lesson_mode=mode,
+                context=context,
             )
     except Exception:
         logger.warning("DB lesson lookup failed for %r", object_id, exc_info=True)
@@ -65,7 +84,8 @@ async def get_lesson(
     if lo is None:
         raise HTTPException(status_code=404, detail="Lesson object not found")
 
-    mode = _mode_for_language(registry, language)
+    mode    = _mode_for_language(registry, language)
+    context = _context_for_language(registry, language)
     return build_lesson(
         object_id=object_id,
         obj_type=lo.type,
@@ -73,4 +93,5 @@ async def get_lesson(
         display_label=lo.label,
         lesson_data=lo.lesson_data or {},
         lesson_mode=mode,
+        context=context,
     )
