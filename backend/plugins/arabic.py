@@ -1,0 +1,177 @@
+"""Arabic starter plugin — dictionary mode.
+
+BCP-47 code "ar", RTL direction, Arabic sentence punctuation.
+This plugin provides NO morphological analysis — no CAMeL-Tools dependency.
+
+What this plugin does reliably
+──────────────────────────────
+  - Sentence splitting on Arabic and standard terminal punctuation.
+  - Whitespace tokenisation (Modern Standard Arabic is whitespace-delimited).
+  - Tashkeel (diacritic / harakat) stripping for canonical forms, so
+    "كَتَبَ" and "كتب" resolve to the same canonical object.
+  - Correct RTL / arabic metadata for frontend rendering and font selection.
+  - TTS tag "ar" (browser SpeechSynthesis covers MSA on major platforms).
+
+What this plugin does NOT do
+─────────────────────────────
+  - Root extraction or pattern-based morphological analysis.
+  - Part-of-speech tagging.
+  - Lemmatisation beyond tashkeel normalisation.
+  - Dialectal Arabic support (Egyptian, Gulf, Levantine, …).
+  - Clitic segmentation (ال definite article, pronominal clitics, etc.).
+  - Any claim about word meaning.
+
+Upgrade path
+────────────
+  When CAMeL-Tools, Stanza-ar, or a comparable library is available as a
+  dependency, this plugin can be promoted:
+    tokenization_quality → high        (after adding clitic splitting)
+    morphology_depth     → shallow     (after POS tagging)
+    analysis_depth       → morphology_light
+    lesson_modes_supported → ["vocabulary", "dictionary"]
+
+Known limitations
+─────────────────
+  • Arabic proclitics (وَ "and-", بِ "in-", كَ "like-", لِ "for-") attach to
+    the following word without a space in normal orthography.  Whitespace
+    tokenisation will return the combined form as a single token; the clitic
+    is not split off.
+  • Tokenisation quality is rated "medium" for MSA prose.  Poetry, headlines,
+    and dialectal text will have higher error rates.
+  • Sentence splitting is a regex heuristic; Arabic discourse markers and
+    run-on sentences may cause over- or under-splitting.
+"""
+from __future__ import annotations
+
+import re
+
+from backend.schemas.language import LanguageCapabilities
+from backend.schemas.parse import CandidateObject, CandidateSentenceResult
+
+# ── Sentence splitting ────────────────────────────────────────────────────────
+# Split on standard terminal marks plus:
+#   ؟  U+061F  Arabic question mark
+#   ۔  U+06D4  Arabic full stop (used in Urdu/Pashto prose but also appears in
+#               some Arabic texts)
+# Newlines serve as an additional soft boundary.
+_SENTENCE_RE = re.compile(r"[^.!?؟۔\n]+[.!?؟۔\n]?")
+
+# ── Word tokenisation ─────────────────────────────────────────────────────────
+# Match runs of Arabic-script characters:
+#   U+0600–U+06FF  Arabic block (letters, digits, punctuation)
+#   U+0750–U+077F  Arabic Supplement (additional letters)
+#   U+FB50–U+FDFF  Arabic Presentation Forms-A (ligatures, compatibility)
+#   U+FE70–U+FEFF  Arabic Presentation Forms-B (more ligatures)
+# Digits (٠–٩), harakat, and spacing punctuation are excluded by the character
+# ranges above — they do NOT appear in standalone Arabic letter runs but may
+# appear as combining marks, which the tashkeel stripper handles below.
+_WORD_RE = re.compile(
+    r"[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]+"
+)
+
+# ── Tashkeel / harakat stripping ──────────────────────────────────────────────
+# Arabic combining diacritical marks used to represent short vowels and
+# other phonemic features (fathatan, dammatan, kasratan, fatha, damma,
+# kasra, shadda, sukun, and a handful of rarer marks through U+065F).
+# U+0670 (superscript alef / alef waslah) is also a combining mark.
+# These marks are optional in normal prose — stripping them yields the
+# undiacritised orthography used for canonicalisation.
+_TASHKEEL_RE = re.compile(r"[\u064B-\u065F\u0670]")
+
+# Confidence note shown in every lesson card — informs the learner honestly.
+_CONFIDENCE_NOTE = (
+    "Arabic dictionary mode: no morphological analysis. "
+    "Canonical form is the undiacritised surface token. "
+    "Clitic prefixes (ال, وَ, بِ…) are not split from their host word."
+)
+
+
+def _strip_tashkeel(text: str) -> str:
+    """Remove Arabic diacritical marks for canonical normalisation."""
+    return _TASHKEEL_RE.sub("", text)
+
+
+class ArabicPlugin:
+    """Arabic starter — dictionary-mode plugin.
+
+    Provides sentence splitting and whitespace tokenisation with tashkeel
+    normalisation.  Capabilities honestly declare the pipeline depth.
+    """
+
+    language_code = "ar"
+    display_name  = "Arabic (starter — dictionary mode)"
+    direction     = "rtl"
+    capabilities  = LanguageCapabilities(
+        code="ar",
+        display_name="Arabic (starter — dictionary mode)",
+        direction="rtl",
+        script_family="arabic",
+        tokenization_mode="whitespace",
+        morphology_depth="none",
+        lesson_modes_supported=["dictionary"],
+        # v2 — honest quality declarations.
+        analysis_depth="dictionary",
+        segmentation_quality="low",    # regex heuristic; discourse markers and
+                                       # run-on sentences may cause errors.
+        tokenization_quality="medium", # whitespace works well for MSA prose;
+                                       # clitics and dialectal contractions
+                                       # are not split.
+        morphology_quality="none",
+        syntax_support=False,
+        idiom_detection=False,
+        tts_lang_tag="ar",             # browser TTS: MSA widely supported.
+        transliteration_scheme=None,   # no romanisation in this iteration.
+    )
+
+    def __init__(self) -> None:
+        self.lesson_store: dict[str, CandidateObject] = {}
+
+    # ------------------------------------------------------------------
+    # LanguagePlugin protocol
+    # ------------------------------------------------------------------
+
+    def analyze_text(self, text: str) -> list[CandidateSentenceResult]:
+        return [self.analyze_sentence(s) for s in self.split_sentences(text)]
+
+    def split_sentences(self, text: str) -> list[str]:
+        return [
+            m.group(0).strip()
+            for m in _SENTENCE_RE.finditer(text)
+            if m.group(0).strip()
+        ]
+
+    def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
+        candidates: list[CandidateObject] = []
+        seen: set[str] = set()
+
+        for word in _WORD_RE.findall(sentence):
+            canonical = _strip_tashkeel(word)
+            if not canonical or canonical in seen:
+                continue
+            seen.add(canonical)
+
+            # Surface form may carry tashkeel (e.g. "كَتَبَ"); canonical
+            # form is the undiacritised version ("كتب").  The lesson builder
+            # will display "Base form: كتب" when they differ.
+            candidates.append(
+                CandidateObject(
+                    canonical_form=canonical,
+                    surface_form=word,
+                    type="vocabulary",
+                    label=word,
+                    lesson_data={
+                        "lemma": canonical,
+                        "confidence_note": _CONFIDENCE_NOTE,
+                    },
+                    confidence=None,
+                )
+            )
+
+        return CandidateSentenceResult(text=sentence, candidates=candidates)
+
+    def get_lesson(self, object_id: str) -> CandidateObject | None:
+        return self.lesson_store.get(object_id)
+
+
+def create_plugin() -> ArabicPlugin:
+    return ArabicPlugin()
