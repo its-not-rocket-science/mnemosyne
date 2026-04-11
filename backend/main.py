@@ -10,6 +10,7 @@ from backend.api.routes.dashboard import router as dashboard_router
 from backend.api.routes.languages import router as languages_router
 from backend.api.routes.lesson import router as lesson_router
 from backend.api.routes.metrics import router as metrics_router
+from backend.api.routes.ingest import router as ingest_router
 from backend.api.routes.parse import router as parse_router
 from backend.api.routes.ready import router as ready_router
 from backend.api.routes.recommend import router as recommend_router
@@ -104,6 +105,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(ingest_router)
 app.include_router(parse_router)
 app.include_router(lesson_router)
 app.include_router(review_router)

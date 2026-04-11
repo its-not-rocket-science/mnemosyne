@@ -48,9 +48,19 @@
           </div>
 
           <div class="field">
+            <label for="source-title">
+              Title
+              <span class="field-hint">(optional)</span>
+            </label>
+            <input id="source-title" name="source-title" type="text"
+              placeholder="Article or chapter title"
+              autocomplete="off">
+          </div>
+
+          <div class="field">
             <label for="source-url">
               Source URL
-              <span class="field-hint">(optional — for attribution only)</span>
+              <span class="field-hint">(optional — attribution only, never fetched)</span>
             </label>
             <input id="source-url" name="source-url" type="url"
               placeholder="https://example.com/article"
@@ -58,16 +68,36 @@
           </div>
 
           <div class="field">
-            <label for="source-text">Text to parse</label>
+            <!--
+              The label row holds both the field label and the file-picker trigger.
+              The file input is visually hidden; its <label> acts as the trigger.
+            -->
+            <div class="field-header">
+              <label for="source-text">Text to parse</label>
+              <label class="file-pick-btn" for="file-input">
+                Load .txt file
+                <!--
+                  sr-only hides the input visually; the wrapping label triggers it.
+                  accept limits the file picker to plain text; JS re-validates.
+                -->
+                <input id="file-input" type="file" accept=".txt,text/plain"
+                  class="sr-only" tabindex="-1" aria-hidden="true">
+              </label>
+            </div>
+            <!--
+              aria-live="polite": announces the loaded filename to screen readers
+              without interrupting other announcements.
+            -->
+            <p id="file-info" class="field-hint file-info" aria-live="polite"></p>
             <!--
               aria-required: tells AT the field is mandatory.
-              aria-describedby="status": when focus lands here after a validation
-              error, AT reads the live-region message that explains what went wrong.
+              aria-describedby links to both the status region (parse errors) and
+              the file-info paragraph (loaded filename feedback).
             -->
             <textarea id="source-text" name="source-text" rows="8"
               required aria-required="true"
-              aria-describedby="status"
-              placeholder="Paste text here…"></textarea>
+              aria-describedby="file-info status"
+              placeholder="Paste text here, or load a .txt file above…"></textarea>
           </div>
 
           <div class="button-row">

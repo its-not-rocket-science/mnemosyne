@@ -133,6 +133,78 @@ class SentenceObjectRow(Base):
     sentence: Mapped[Sentence] = relationship("Sentence", back_populates="sentence_objects")
 
 
+class SourceDocumentRow(Base):
+    """A source document: one ingested piece of text with attribution metadata.
+
+    Represents a logical unit of text as the user thinks of it — an article,
+    a book chapter, a subtitle file, or a paste session.  One document maps to
+    one or more ``SourceChunkRow`` entries; each chunk links to one
+    ``ParsedText`` row.
+
+    For the common case (pasted text, short file upload) there is exactly one
+    chunk.  For long-form text (ebooks, corpora) the chunker will split the
+    document at paragraph boundaries, creating multiple sequential chunks each
+    with its own ``ParsedText`` parse.
+
+    ``content_type`` mirrors ``ContentType`` in ``backend.schemas.ingest``.
+    Stored as a plain string so the DB does not need an ALTER when new
+    content types are added.
+
+    ``script_hint`` is the dominant Unicode script family detected at
+    ingestion time (e.g. "latin", "arabic", "cjk").  Stored for display
+    and future recommendation heuristics.
+    """
+    __tablename__ = "source_documents"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    language: Mapped[str] = mapped_column(String(10))
+    content_type: Mapped[str] = mapped_column(String(50))
+    title: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    author: Mapped[str | None] = mapped_column(String(256), nullable=True)
+    source_url: Mapped[str | None] = mapped_column(String, nullable=True)
+    filename: Mapped[str | None] = mapped_column(String(256), nullable=True)
+    char_count: Mapped[int] = mapped_column(Integer, default=0)
+    script_hint: Mapped[str | None] = mapped_column(String(32), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+    chunks: Mapped[list["SourceChunkRow"]] = relationship(
+        "SourceChunkRow", back_populates="source_document", cascade="all, delete-orphan"
+    )
+
+
+class SourceChunkRow(Base):
+    """One parsed segment of a ``SourceDocument``.
+
+    Links a ``SourceDocument`` to the ``ParsedText`` row that holds the raw
+    text and NLP results for that segment.  ``char_start`` / ``char_end`` are
+    character offsets within the original document so chunks can be
+    reassembled in order and sentence context can be reconstructed.
+
+    For single-chunk documents (pasted text, short file uploads):
+        chunk_index = 0, char_start = 0, char_end = len(text).
+
+    For multi-chunk long-form documents the chunker assigns sequential
+    ``chunk_index`` values and tracks where each chunk begins in the original
+    text so that sentence highlights can be mapped back to the source.
+    """
+    __tablename__ = "source_chunks"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    source_document_id: Mapped[str] = mapped_column(
+        String(36), ForeignKey("source_documents.id"), nullable=False
+    )
+    parsed_text_id: Mapped[str] = mapped_column(
+        String(36), ForeignKey("parsed_texts.id"), nullable=False
+    )
+    chunk_index: Mapped[int] = mapped_column(Integer, default=0)
+    char_start: Mapped[int] = mapped_column(Integer, default=0)
+    char_end: Mapped[int] = mapped_column(Integer, default=0)
+
+    source_document: Mapped[SourceDocumentRow] = relationship(
+        "SourceDocumentRow", back_populates="chunks"
+    )
+
+
 class UserKnowledgeRow(Base):
     """FSRS state and mastery metrics for one (user, canonical object) pair.
 
