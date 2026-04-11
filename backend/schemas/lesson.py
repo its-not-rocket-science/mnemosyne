@@ -29,6 +29,32 @@ from pydantic import BaseModel, Field
 from backend.schemas.language import LessonMode
 from backend.schemas.parse import LearnableType
 
+# ── Lesson template type ──────────────────────────────────────────────────────
+
+LessonTemplate = Literal[
+    # Richness-level templates — also used in LanguageCapabilities.lesson_modes_supported
+    "morphology",      # full morphological drills (conjugation, agreement, tense)
+    "vocabulary",      # lemma + POS; no morphological breakdown
+    "dictionary",      # word + gloss only
+
+    # Object-type-specific templates — used only in LessonResponse.lesson_mode;
+    # never appear in lesson_modes_supported on LanguageCapabilities.
+    "idiom",           # fixed-form idiomatic expression
+    "script",          # character / sign lesson (CJK kanji, Arabic letter, …)
+    "transliteration", # native-form ↔ romanization / phonetic mapping
+]
+"""Lesson template type.
+
+Reported in ``LessonResponse.lesson_mode`` to tell the frontend which kind of
+lesson was generated.  A superset of ``LessonMode`` — the extra values
+(``"idiom"``, ``"script"``, ``"transliteration"``) identify object-type-specific
+templates that bypass the richness-level selection entirely.
+
+``LessonMode`` (the input to ``build_lesson``) governs *richness*;
+``LessonTemplate`` (the output on ``LessonResponse``) describes the *actual
+template used*, which may differ when a dedicated builder was invoked.
+"""
+
 
 class LessonField(BaseModel):
     """One fact about a learnable object, rendered as a key-value row."""
@@ -75,16 +101,38 @@ class LessonResponse(BaseModel):
     deterministically derived from the canonical object's stored
     ``lesson_data``; no LLM or external call is needed.
 
-    ``lesson_mode`` reflects which template was used to generate this
-    lesson.  The frontend can use it to decide how to present drills —
-    e.g. morphological drill widgets are only appropriate for
-    "morphology" mode.
+    ``lesson_mode`` reflects the *template* used to generate this lesson.
+    For most objects this matches the richness level requested (morphology /
+    vocabulary / dictionary).  For idiom, script, and transliteration objects
+    the dedicated builder always runs regardless of the requested mode, and
+    ``lesson_mode`` reports the actual template.
+
+    The frontend can use ``lesson_mode`` to select drill widgets:
+    - ``"morphology"``      — morphological drills (MC for tense/mood, fill-blank)
+    - ``"vocabulary"``      — POS recognition + shadowing
+    - ``"dictionary"``      — shadowing only
+    - ``"idiom"``           — meaning fill-blank + register MC
+    - ``"script"``          — reading fill-blank + meaning fill-blank
+    - ``"transliteration"`` — bidirectional romanization fill-blank
+
+    New optional fields (``language_code``, ``script_direction``) are set
+    when a ``LessonContext`` is provided to ``build_lesson()``.  They are
+    ``None`` for lessons built without language context (e.g. in tests that
+    do not pass a context).
     """
     id: str
     type: LearnableType
-    lesson_mode: LessonMode = "morphology"
+    lesson_mode: LessonTemplate = "morphology"
     title: str
-    explanation: str            # one human-readable sentence
-    fields: list[LessonField]   # key-value fact rows (lemma, tense, …)
-    examples: list[str]         # surface forms for TTS / display
-    drills: list[Drill]         # ordered practice items
+    explanation: str                    # one human-readable sentence
+    fields: list[LessonField]           # key-value fact rows
+    examples: list[str]                 # surface forms for TTS / display
+    drills: list[Drill]                 # ordered practice items
+
+    # ── Language context — optional, populated when context is provided ───────
+    language_code: str | None = None
+    """BCP-47 language code for this lesson (e.g. ``"es"``).
+    ``None`` when built without a ``LessonContext``."""
+
+    script_direction: Literal["ltr", "rtl"] | None = None
+    """Text direction for the target language.  ``None`` when unknown."""

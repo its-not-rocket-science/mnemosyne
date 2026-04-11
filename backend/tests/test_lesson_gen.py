@@ -1,12 +1,27 @@
-"""Unit tests for the lesson generator.
+"""Unit tests for the lesson generator — multilingual lesson engine.
 
 All tests are synchronous — generators are pure functions with no I/O.
+
+Test organisation
+─────────────────
+Existing classes: build_lesson general, drill presence, MC integrity,
+    determinism, field rendering.
+
+New classes (multilingual engine):
+  TestLessonContext      — LessonContext construction and helpers.
+  TestLessonProviders    — Provider protocols and null implementations.
+  TestLessonFormatters   — Language-aware explanation text.
+  TestLanguageAwareness  — Context threaded into build_lesson.
+  TestLessonModeStamping — Effective template reported on LessonResponse.
+  TestProviderIntegration— Gloss provider supplementing lesson fields.
 """
 from __future__ import annotations
 
 import pytest
 
 from backend.lesson.generators import build_lesson, _make_mc_drill, _hash_key
+from backend.lesson.context import LessonContext
+from backend.lesson.providers import LessonProviders, NullGlossProvider
 from backend.schemas.lesson import (
     FillBlankDrill,
     MultipleChoiceDrill,
@@ -84,7 +99,8 @@ def test_agreement_lesson_has_required_fields():
     assert "casa" in lesson.explanation
 
 
-def test_generic_fallback_for_unknown_type():
+def test_idiom_uses_dedicated_builder():
+    # "idiom" now has its own dedicated builder (_build_idiom).
     lesson = build_lesson(
         object_id="zzz",
         obj_type="idiom",
@@ -93,6 +109,18 @@ def test_generic_fallback_for_unknown_type():
         lesson_data={"meaning": "of course"},
     )
     assert lesson.type == "idiom"
+    assert len(lesson.drills) >= 1
+
+
+def test_generic_fallback_for_truly_unknown_type():
+    lesson = build_lesson(
+        object_id="zzz",
+        obj_type="vocabulary",   # uses morphology dispatch → _build_vocabulary
+        canonical_form="cosa",
+        display_label="cosa",
+        lesson_data={"lemma": "cosa", "pos": "NOUN"},
+    )
+    assert lesson.type == "vocabulary"
     assert len(lesson.drills) >= 1
 
 

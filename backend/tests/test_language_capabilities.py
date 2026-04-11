@@ -557,9 +557,10 @@ class TestBuildScript:
         r = self._build({"character": "字"})
         assert "字" in r.examples
 
-    def test_lesson_mode_stamped_morphology(self) -> None:
+    def test_lesson_mode_stamped_script(self) -> None:
+        """Script objects always report lesson_mode="script" regardless of input."""
         r = self._build({"character": "字"})
-        assert r.lesson_mode == "morphology"
+        assert r.lesson_mode == "script"
 
     def test_script_bypasses_lesson_mode_override(self) -> None:
         """Even with lesson_mode="dictionary", script objects use _build_script."""
