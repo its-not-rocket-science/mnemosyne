@@ -136,10 +136,13 @@
 
       <!-- ═══════════════════════════════════════════════════════════════════ -->
       <section class="matrix-section" aria-labelledby="s2">
-        <h2 id="s2">2 — RTL Arabic (future language)</h2>
+        <h2 id="s2">2 — RTL Arabic (<code>ar</code>)</h2>
         <p style="font-size:0.875rem;color:var(--muted)">
-          Arabic plugin not yet implemented.  These cards simulate what the
-          rendered output <em>should</em> look like when it is.
+          Arabic starter plugin (<code>backend/plugins/arabic.py</code>).
+          Dictionary mode only — no morphological analysis.
+          Tashkeel (diacritic) stripping for canonical forms.
+          Capabilities honestly declare <code>morphology_depth="none"</code>
+          and <code>analysis_depth="dictionary"</code>.
         </p>
 
         <div class="test-case">
@@ -194,6 +197,81 @@
           <ul class="checklist">
             <li>[ ] "Mohamed" and "باريس" render with correct bidirectional text (Unicode Bidi)</li>
             <li>[ ] No character reversal or garbling of the Latin sequence</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════════════════════════ -->
+      <section class="matrix-section" aria-labelledby="s2b">
+        <h2 id="s2b">2b — RTL Hebrew (<code>he</code>)</h2>
+        <p style="font-size:0.875rem;color:var(--muted)">
+          Hebrew starter plugin (<code>backend/plugins/hebrew.py</code>).
+          Dictionary mode only — no morphological analysis.
+          Nikud (vowel-point) stripping for canonical forms.
+          Capabilities honestly declare <code>morphology_depth="none"</code>
+          and <code>analysis_depth="dictionary"</code>.
+          Note: inseparable prefixes (ו-, ב-, ה-, ל-…) are not split from host words.
+        </p>
+
+        <div class="test-case">
+          <p class="test-label">TC-HE-01: Basic Hebrew sentence card</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text"
+               lang="he" dir="rtl"
+               data-tokenization="whitespace"
+               data-script-family="hebrew"
+               data-layer="native">
+              הילד קרא ספר מעניין בספרייה.
+            </p>
+            <ul class="sentence-card__pills" dir="rtl">
+              <li><mnemosyne-pill type="vocabulary" label="ילד"     object-id="he1" language="he" dir="rtl"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="vocabulary" label="קרא"     object-id="he2" language="he" dir="rtl"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="vocabulary" label="ספר"     object-id="he3" language="he" dir="rtl"></mnemosyne-pill></li>
+              <li><mnemosyne-pill type="vocabulary" label="ספרייה"  object-id="he4" language="he" dir="rtl"></mnemosyne-pill></li>
+            </ul>
+          </article>
+          <ul class="checklist">
+            <li>[ ] Hebrew text is right-aligned (text-align:start resolves to right)</li>
+            <li>[ ] Pills flow right → left</li>
+            <li>[ ] Hebrew font renders (Segoe UI / SF Hebrew / Noto Sans Hebrew)</li>
+            <li>[ ] Inspect: <code>lang="he" dir="rtl"</code> on the &lt;p&gt;</li>
+          </ul>
+        </div>
+
+        <div class="test-case">
+          <p class="test-label">TC-HE-02: Hebrew with nikud (vowel points)</p>
+          <p style="font-size:0.85rem;color:var(--muted);margin-block-end:0.5rem">
+            The plugin strips nikud to form canonical keys; the surface label retains the diacritics.
+            "Base form" should appear in the lesson card when surface ≠ canonical.
+          </p>
+          <article class="sentence-card">
+            <p class="sentence-card__text"
+               lang="he" dir="rtl"
+               data-tokenization="whitespace"
+               data-script-family="hebrew"
+               data-layer="native">
+              בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ.
+            </p>
+          </article>
+          <ul class="checklist">
+            <li>[ ] Nikud diacritics render above/below letters without clipping</li>
+            <li>[ ] Line height is sufficient for diacritics (Hebrew font default)</li>
+            <li>[ ] Text is right-aligned</li>
+          </ul>
+        </div>
+
+        <div class="test-case">
+          <p class="test-label">TC-HE-03: Mixed LTR/RTL (Hebrew with Latin numerals)</p>
+          <article class="sentence-card">
+            <p class="sentence-card__text" lang="he" dir="rtl" data-tokenization="whitespace">
+              הספר עולה 25 שקלים בחנות.
+            </p>
+          </article>
+          <ul class="checklist">
+            <li>[ ] "25" renders LTR within the RTL context (Unicode Bidi)</li>
+            <li>[ ] No garbling of the numeral sequence</li>
+            <li>[ ] Overall block is right-aligned</li>
           </ul>
         </div>
       </section>
