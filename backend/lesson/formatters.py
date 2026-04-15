@@ -174,6 +174,28 @@ def script_explanation(
     return f"{_q(character)}"
 
 
+def dictionary_explanation(
+    token: str,
+    gloss: str | None,
+    context: LessonContext,
+) -> str:
+    """One-sentence explanation for a dictionary-mode token.
+
+    Priorities:
+      1. When gloss is known: ``"amor" — love, desire.``
+      2. When language is known but no gloss: ``"amor" — Latin vocabulary.``
+      3. Fallback: ``"amor"``
+
+    Deliberately terse — the lesson fields carry the structural detail.
+    Does not claim grammatical completeness.
+    """
+    if gloss:
+        return f"{_q(token)} {_EM} {gloss}."
+    if context.language_name:
+        return f"{_q(token)} {_EM} {context.language_name} vocabulary."
+    return f"{_q(token)}"
+
+
 def transliteration_explanation(
     native_form: str,
     romanized: str,
