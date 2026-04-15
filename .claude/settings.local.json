@@ -17,7 +17,8 @@
       "Bash(git stash:*)",
       "Bash(git checkout:*)",
       "Bash(git:*)",
-      "Bash(pip show *)"
+      "Bash(pip show *)",
+      "Bash(pip list *)"
     ]
   }
 }
