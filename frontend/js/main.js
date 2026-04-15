@@ -9,6 +9,8 @@ const form           = document.querySelector('#parse-form')
 const languageSelect = document.querySelector('#language')
 const sourceTitleInput = document.querySelector('#source-title')
 const sourceUrlInput = document.querySelector('#source-url')
+const fetchUrlBtn    = document.querySelector('#fetch-url-btn')
+const fetchUrlHint   = document.querySelector('#fetch-url-hint')
 const fileInput      = document.querySelector('#file-input')
 const fileInfo       = document.querySelector('#file-info')
 const textarea       = document.querySelector('#source-text')
@@ -26,6 +28,11 @@ const reviewStateByObject = new Map()
 // Reset to 'pasted_text' whenever the user edits the textarea directly.
 let currentContentType = 'pasted_text'
 let currentFilename    = null
+
+// True once the user has manually changed the language select; prevents
+// auto-detection from overriding an explicit user choice.
+// Reset when new text is imported from a URL or file.
+let languageUserSelected = false
 
 // ── Language capabilities ─────────────────────────────────────────────────────
 // Populated from GET /languages on page load.
@@ -72,8 +79,9 @@ if (fileInput) {
       const text = evt.target.result
       textarea.value = text
       textarea.removeAttribute('aria-invalid')
-      currentContentType = 'uploaded_file'
-      currentFilename    = file.name
+      currentContentType  = 'uploaded_file'
+      currentFilename     = file.name
+      languageUserSelected = false  // fresh import: allow auto-detection
 
       // Pre-fill the title with the filename (minus extension) if the user
       // hasn't already typed a title.
@@ -82,6 +90,7 @@ if (fileInput) {
       }
 
       setFileInfo(`Loaded: ${escapeHtml(file.name)} (${(file.size / 1024).toFixed(1)} KB)`)
+      scheduleLanguageDetection()
     }
     reader.onerror = () => {
       setFileInfo('Could not read the file. Try copying the text manually.', 'error')
@@ -92,7 +101,8 @@ if (fileInput) {
   })
 }
 
-// Reset content_type when user edits the textarea directly.
+// Reset content_type when user edits the textarea directly, then schedule
+// a debounced language-detection call.
 if (textarea) {
   textarea.addEventListener('input', () => {
     if (currentContentType === 'uploaded_file') {
@@ -100,6 +110,7 @@ if (textarea) {
       currentFilename    = null
       setFileInfo('')
     }
+    scheduleLanguageDetection()
   })
 }
 
@@ -156,7 +167,9 @@ async function loadLanguages() {
 loadLanguages()
 
 // Re-sync whenever the user changes the language.
+// Mark languageUserSelected so auto-detection respects the manual choice.
 languageSelect.addEventListener('change', () => {
+  languageUserSelected = true
   scriptView = 'native'  // reset view for the new language
   syncCurrentCaps()
 })
@@ -229,6 +242,145 @@ function syncScriptToggleUI(group) {
 
 function applyScriptViewToResults() {
   results.dataset.scriptView = scriptView
+}
+
+
+// ── URL fetch ─────────────────────────────────────────────────────────────────
+// Calls POST /fetch-url to retrieve a page server-side and populate the
+// textarea.  The browser makes no cross-origin request to the remote URL.
+
+function setFetchUrlHint(message, state = 'idle') {
+  if (!fetchUrlHint) return
+  fetchUrlHint.textContent = message
+  fetchUrlHint.dataset.state = state   // 'idle' | 'busy' | 'error'
+}
+
+if (fetchUrlBtn) {
+  fetchUrlBtn.addEventListener('click', async () => {
+    const url = sourceUrlInput?.value.trim()
+    if (!url) {
+      sourceUrlInput?.focus()
+      setFetchUrlHint('Enter a URL first.', 'error')
+      return
+    }
+
+    fetchUrlBtn.disabled = true
+    fetchUrlBtn.setAttribute('aria-busy', 'true')
+    const originalLabel = fetchUrlBtn.textContent.trim()
+    fetchUrlBtn.textContent = 'Fetching\u2026'
+    setFetchUrlHint('Fetching page\u2026', 'busy')
+    setStatus('Fetching text from URL\u2026', 'busy')
+
+    try {
+      const response = await fetch(`${API_BASE}/fetch-url`, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify({ source_url: url }),
+      })
+
+      if (!response.ok) {
+        const body = await response.json().catch(() => null)
+        throw new Error(body?.detail ?? `Fetch failed (${response.status})`)
+      }
+
+      const data = await response.json()
+
+      textarea.value = data.text
+      textarea.removeAttribute('aria-invalid')
+      currentContentType   = 'article'
+      currentFilename      = null
+      languageUserSelected = false   // fresh import: allow auto-detection
+      setFileInfo('')
+
+      // Pre-fill the title if the user hasn't typed one and the page has one.
+      if (sourceTitleInput && !sourceTitleInput.value.trim() && data.title) {
+        sourceTitleInput.value = data.title
+      }
+
+      const chars = data.char_count.toLocaleString()
+
+      // Apply the language detection bundled with the fetch result.
+      if (data.detected_language) {
+        const option = [...languageSelect.options].find(o => o.value === data.detected_language)
+        if (option) {
+          languageSelect.value = data.detected_language
+          syncCurrentCaps()
+          setStatus(
+            `Fetched ${chars} characters. Language detected: ${option.text}.`
+          )
+        } else {
+          // Language detected but no plugin — report without changing select.
+          setStatus(
+            `Fetched ${chars} characters. ` +
+            `Detected language '${data.detected_language}' has no plugin.`
+          )
+        }
+      } else {
+        setStatus(`Fetched ${chars} characters.`)
+      }
+
+      setFetchUrlHint(`${chars} characters extracted.`)
+      textarea.focus()
+    } catch (error) {
+      const msg = error instanceof Error ? error.message : 'Fetch failed.'
+      setFetchUrlHint(msg, 'error')
+      setStatus(msg, 'error')
+    } finally {
+      fetchUrlBtn.disabled = false
+      fetchUrlBtn.removeAttribute('aria-busy')
+      fetchUrlBtn.textContent = originalLabel
+    }
+  })
+}
+
+
+// ── Language auto-detection ───────────────────────────────────────────────────
+// Debounced: fires 600 ms after the last textarea change.
+// Skipped when the user has manually set the language select.
+// Calls POST /detect-language; updates the select only when confidence is
+// high enough and the detected language has a registered plugin.
+
+const _DETECT_DEBOUNCE_MS = 600
+const _DETECT_MIN_CHARS   = 50
+let   _detectTimer        = null
+
+function scheduleLanguageDetection() {
+  clearTimeout(_detectTimer)
+  _detectTimer = setTimeout(_runLanguageDetection, _DETECT_DEBOUNCE_MS)
+}
+
+async function _runLanguageDetection() {
+  const text = textarea?.value.trim() ?? ''
+  if (text.length < _DETECT_MIN_CHARS) return
+  if (languageUserSelected) return
+
+  try {
+    const response = await fetch(`${API_BASE}/detect-language`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ text }),
+    })
+    if (!response.ok) return
+
+    const data = await response.json()
+    if (!data.language) return
+
+    const currentCode = languageSelect.value
+    if (data.language === currentCode) return  // already correct — no-op
+
+    if (data.supported) {
+      // Update the select and announce the change.
+      languageSelect.value = data.language
+      syncCurrentCaps()
+      const name = languageSelect.options[languageSelect.selectedIndex]?.text ?? data.language
+      setStatus(`Language detected: ${name}.`)
+    } else {
+      // Detected but unsupported — announce without touching the select.
+      setStatus(`Detected language '${data.language}' has no plugin in this deployment.`)
+    }
+  } catch {
+    // Detection failure is silent — it is always best-effort.
+  }
 }
 
 

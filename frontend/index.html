@@ -60,11 +60,31 @@
           <div class="field">
             <label for="source-url">
               Source URL
-              <span class="field-hint">(optional — attribution only, never fetched)</span>
+              <span class="field-hint">(optional)</span>
             </label>
-            <input id="source-url" name="source-url" type="url"
-              placeholder="https://example.com/article"
-              autocomplete="url">
+            <div class="input-group">
+              <input id="source-url" name="source-url" type="url"
+                placeholder="https://example.com/article"
+                autocomplete="url"
+                aria-describedby="fetch-url-hint">
+              <!--
+                type="button" prevents this from submitting the form.
+                aria-label gives a full description since the visible
+                text "Fetch" alone is not sufficiently descriptive.
+              -->
+              <button type="button" id="fetch-url-btn" class="ghost-button"
+                      aria-label="Fetch text from URL">
+                Fetch
+              </button>
+            </div>
+            <!--
+              aria-live="polite": announces status changes (fetching, done,
+              errors) without interrupting ongoing announcements.
+              Initial text is not announced — only dynamic updates are.
+            -->
+            <p id="fetch-url-hint" class="field-hint fetch-url-hint" aria-live="polite">
+              Enter a URL and press Fetch to import its text.
+            </p>
           </div>
 
           <div class="field">

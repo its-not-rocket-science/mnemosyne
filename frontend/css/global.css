@@ -314,6 +314,31 @@ textarea[aria-invalid="true"] {
   outline-offset: 2px;
 }
 
+/* ── Input group — input + inline action button ──────────────────────────────
+   Used for the Source URL field: input takes all remaining space, button is
+   intrinsically sized.  min-inline-size: 0 on the input prevents flex overflow
+   when a long URL is typed.                                                  */
+.input-group {
+  display: flex;
+  gap: var(--space-1);
+  align-items: stretch;
+}
+
+.input-group > input,
+.input-group > select {
+  flex: 1 1 0;
+  min-inline-size: 0;
+}
+
+/* Align the ghost-button height with the adjacent input (both use 0.75 rem
+   block padding, so explicitly match here in case the cascade differs). */
+.input-group > .ghost-button {
+  padding-block: 0.75rem;
+  white-space: nowrap;
+  /* 2.75 rem ≈ 44 CSS px — WCAG 2.5.8 minimum touch target size. */
+  min-block-size: 2.75rem;
+}
+
 /* File info line — shown below the field header, above the textarea. */
 .file-info {
   margin-block: 0 0.35rem;
@@ -323,6 +348,19 @@ textarea[aria-invalid="true"] {
 
 .file-info[data-state="error"] {
   color: var(--error-color);
+}
+
+/* Fetch-URL hint line — shown below the URL input group. */
+.fetch-url-hint {
+  margin-block: 0.35rem 0;
+}
+
+.fetch-url-hint[data-state="error"] {
+  color: var(--error-color);
+}
+
+.fetch-url-hint[data-state="busy"] {
+  color: var(--muted);
 }
 
 .button-row {
@@ -350,6 +388,7 @@ textarea[aria-invalid="true"] {
 /* Solid focus rings — color-mix with transparent fails WCAG 2.4.11 3:1
    non-text contrast requirement against adjacent background colors. */
 .button-primary:focus-visible,
+.ghost-button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
