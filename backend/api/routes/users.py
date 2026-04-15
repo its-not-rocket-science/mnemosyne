@@ -1,0 +1,149 @@
+"""User preference routes.
+
+Routes
+──────
+GET  /users/me/preferences
+    Return all per-language preferences for the current user.
+    Returns an empty ``languages`` list when no preferences have been saved.
+
+GET  /users/me/languages/{language_code}/preferences
+    Return preferences for one (user, language) pair.
+    Returns all-default values when no row exists — callers do not need to
+    distinguish "never set" from "set to defaults".
+
+PUT  /users/me/languages/{language_code}/preferences
+    Upsert preferences for one (user, language) pair.  The full preference
+    object must be supplied; partial-update semantics are not provided to keep
+    the schema simple.  Omit a language entirely to restore all defaults
+    (i.e. delete the row via DELETE, which is not yet implemented).
+"""
+from __future__ import annotations
+
+import logging
+
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from backend.api.dependencies import get_current_user, get_db_session
+from backend.models import UserLanguagePreferenceRow
+from backend.schemas.user import LanguagePreference, UserPreferences
+
+logger = logging.getLogger(__name__)
+router = APIRouter(tags=["users"], prefix="/users")
+
+
+@router.get("/me/preferences", response_model=UserPreferences)
+async def get_my_preferences(
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> UserPreferences:
+    """Return all per-language preferences for the current user.
+
+    An empty ``languages`` list is returned when the user has not yet
+    customised any language preferences — this is the normal state for a
+    new user and should be treated as "all defaults apply".
+    """
+    try:
+        result = await db.execute(
+            select(UserLanguagePreferenceRow).where(
+                UserLanguagePreferenceRow.user_id == current_user
+            )
+        )
+        rows = result.scalars().all()
+    except Exception as exc:
+        logger.warning("DB preferences query failed for user %r", current_user, exc_info=True)
+        raise HTTPException(status_code=503, detail="Database unavailable") from exc
+
+    return UserPreferences(
+        user_id=current_user,
+        languages=[
+            LanguagePreference(
+                language_code=row.language_code,
+                show_transliteration=row.show_transliteration,
+                script_preference=row.script_preference,
+                lesson_mode_override=row.lesson_mode_override,
+            )
+            for row in rows
+        ],
+    )
+
+
+@router.get(
+    "/me/languages/{language_code}/preferences",
+    response_model=LanguagePreference,
+)
+async def get_language_preference(
+    language_code: str,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> LanguagePreference:
+    """Return preferences for one (user, language) pair.
+
+    Returns all-default values when no row exists; the response schema is
+    the same regardless of whether a row has been explicitly saved.
+    """
+    try:
+        row = await db.get(UserLanguagePreferenceRow, (current_user, language_code))
+    except Exception as exc:
+        logger.warning(
+            "DB preference lookup failed for user=%r lang=%r",
+            current_user, language_code,
+            exc_info=True,
+        )
+        raise HTTPException(status_code=503, detail="Database unavailable") from exc
+
+    if row is None:
+        return LanguagePreference(language_code=language_code)
+
+    return LanguagePreference(
+        language_code=row.language_code,
+        show_transliteration=row.show_transliteration,
+        script_preference=row.script_preference,
+        lesson_mode_override=row.lesson_mode_override,
+    )
+
+
+@router.put(
+    "/me/languages/{language_code}/preferences",
+    response_model=LanguagePreference,
+)
+async def set_language_preference(
+    language_code: str,
+    payload: LanguagePreference,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> LanguagePreference:
+    """Upsert preferences for one (user, language) pair.
+
+    The ``language_code`` path parameter must match ``payload.language_code``
+    when the payload includes it.  If they differ the path parameter wins
+    and the payload field is ignored.
+    """
+    try:
+        row = await db.get(UserLanguagePreferenceRow, (current_user, language_code))
+        if row is None:
+            row = UserLanguagePreferenceRow(
+                user_id=current_user,
+                language_code=language_code,
+            )
+            db.add(row)
+        row.show_transliteration = payload.show_transliteration
+        row.script_preference = payload.script_preference
+        row.lesson_mode_override = payload.lesson_mode_override
+        await db.commit()
+        await db.refresh(row)
+    except Exception as exc:
+        logger.warning(
+            "DB preference upsert failed for user=%r lang=%r",
+            current_user, language_code,
+            exc_info=True,
+        )
+        raise HTTPException(status_code=503, detail="Database unavailable") from exc
+
+    return LanguagePreference(
+        language_code=row.language_code,
+        show_transliteration=row.show_transliteration,
+        script_preference=row.script_preference,
+        lesson_mode_override=row.lesson_mode_override,
+    )

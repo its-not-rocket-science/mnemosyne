@@ -7,11 +7,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.api.dependencies import get_db_session
+from backend.api.dependencies import get_current_user, get_db_session
 from backend.models import UserKnowledgeRow
 from backend.schemas.knowledge import DashboardResponse, KnowledgeObject
 from backend.srs.knowledge import (
-    DEFAULT_USER_ID,
     KnowledgeStatus,
     classify,
     mastery_score,
@@ -36,6 +35,7 @@ def _ensure_utc(dt: datetime) -> datetime:
 async def get_dashboard(
     language: str | None = None,
     db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
 ) -> DashboardResponse:
     """Return a summary of the learner's knowledge state.
 
@@ -50,7 +50,7 @@ async def get_dashboard(
 
     try:
         query = select(UserKnowledgeRow).where(
-            UserKnowledgeRow.user_id == DEFAULT_USER_ID
+            UserKnowledgeRow.user_id == current_user
         )
         if language is not None:
             query = query.where(UserKnowledgeRow.language == language)
