@@ -57,16 +57,29 @@ from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 _SENTENCE_RE = re.compile(r"[^.!?؟۔\n]+[.!?؟۔\n]?")
 
 # ── Word tokenisation ─────────────────────────────────────────────────────────
-# Match runs of Arabic-script characters:
-#   U+0600–U+06FF  Arabic block (letters, digits, punctuation)
+# Match runs of Arabic *letters* and attached diacritical marks.  The broad
+# U+0600–U+06FF block is NOT used wholesale because it contains Arabic
+# punctuation (، U+060C, ؛ U+061B, ؟ U+061F), number signs, and Arabic-Indic
+# digits (٠–٩, U+0660–U+0669) that must not be treated as word tokens.
+#
+# Ranges included:
+#   U+0621–U+063A  Arabic consonants: ء through غ
+#   U+0641–U+064A  Arabic consonants: ف through ي
+#   U+064B–U+065F  Harakat (diacritical short-vowel marks)
+#   U+0670         Arabic superscript alef (combining)
+#   U+0671–U+06D3  Extended Arabic letters (alef wasla, special forms)
+#   U+06D5         Arabic letter ae
 #   U+0750–U+077F  Arabic Supplement (additional letters)
-#   U+FB50–U+FDFF  Arabic Presentation Forms-A (ligatures, compatibility)
+#   U+FB50–U+FDFF  Arabic Presentation Forms-A (ligatures)
 #   U+FE70–U+FEFF  Arabic Presentation Forms-B (more ligatures)
-# Digits (٠–٩), harakat, and spacing punctuation are excluded by the character
-# ranges above — they do NOT appear in standalone Arabic letter runs but may
-# appear as combining marks, which the tashkeel stripper handles below.
 _WORD_RE = re.compile(
-    r"[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]+"
+    r"[\u0621-\u063A"
+    r"\u0641-\u065F"
+    r"\u0670-\u06D3"
+    r"\u06D5"
+    r"\u0750-\u077F"
+    r"\uFB50-\uFDFF"
+    r"\uFE70-\uFEFF]+"
 )
 
 # ── Tashkeel / harakat stripping ──────────────────────────────────────────────

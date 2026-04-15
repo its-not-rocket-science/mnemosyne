@@ -359,7 +359,7 @@ class TestLessonEngineIntegration:
             context=ctx,
         )
         assert lesson.lesson_mode == "dictionary"
-        assert lesson.language_code == "la"
+        assert lesson.language_code == "la"   # "la" is Latin
 
     def test_lesson_has_gloss_field(self) -> None:
         from backend.lesson.generators import build_lesson
@@ -461,6 +461,12 @@ class TestLessonEngineIntegration:
         )
         assert "latin" in lesson.explanation.lower()
 
+    def test_lesson_context_is_ltr_not_cjk(self) -> None:
+        from backend.lesson.context import LessonContext
+        ctx = LessonContext.from_capabilities(LatinPlugin.capabilities)
+        assert ctx.is_rtl is False
+        assert ctx.is_cjk is False
+
     def test_analyze_sentence_roundtrip_to_lesson(self, plugin: LatinPlugin) -> None:
         """End-to-end: plugin extraction → lesson build."""
         from backend.lesson.generators import build_lesson
@@ -485,3 +491,49 @@ class TestLessonEngineIntegration:
         )
         assert lesson.lesson_mode == "dictionary"
         assert lesson.language_code == "la"
+
+
+# ── Multilingual architecture integration ─────────────────────────────────────
+
+class TestMultilingualArchitecture:
+    def test_latin_registered_in_plugin_loader(self) -> None:
+        from backend.parsing.plugin_loader import load_plugins
+        registry = load_plugins()
+        assert "la" in registry.all()
+
+    def test_latin_capabilities_in_registry(self) -> None:
+        from backend.parsing.plugin_loader import load_plugins
+        registry = load_plugins()
+        caps = registry.supported_languages()
+        assert "la" in caps
+        assert caps["la"].script_family == "latin"
+
+    def test_la_and_es_canonical_ids_differ(self) -> None:
+        from backend.parsing.canonical import canonical_object_id
+        la_id = canonical_object_id("la", "vocabulary", "amor")
+        es_id = canonical_object_id("es", "vocabulary", "amor")
+        assert la_id != es_id
+
+    def test_same_la_word_same_canonical_id(self) -> None:
+        from backend.parsing.canonical import canonical_object_id
+        id1 = canonical_object_id("la", "vocabulary", "amor")
+        id2 = canonical_object_id("la", "vocabulary", "amor")
+        assert id1 == id2
+
+    def test_canonical_id_is_uuid_format(self) -> None:
+        import uuid
+        from backend.parsing.canonical import canonical_object_id
+        raw = canonical_object_id("la", "vocabulary", "amor")
+        uuid.UUID(raw)
+
+    def test_latin_direction_ltr(self) -> None:
+        from backend.parsing.plugin_loader import load_plugins
+        registry = load_plugins()
+        caps = registry.supported_languages()
+        assert caps["la"].direction == "ltr"
+
+    def test_latin_only_dictionary_mode(self) -> None:
+        from backend.parsing.plugin_loader import load_plugins
+        registry = load_plugins()
+        caps = registry.supported_languages()
+        assert caps["la"].lesson_modes_supported == ["dictionary"]
