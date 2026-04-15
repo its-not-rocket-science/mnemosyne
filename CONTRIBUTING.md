@@ -34,6 +34,30 @@ make ready                     # should print {"status": "ready", ...}
 
 `./backend` and `./frontend` are bind-mounted into the container. Uvicorn reloads on backend saves; refresh the browser for frontend changes.
 
+PowerShell:
+
+```powershell
+Copy-Item .env.example .env
+docker compose build
+docker compose up -d
+```
+
+### Local Windows
+
+```powershell
+poetry install
+python -m spacy download es_core_news_sm
+Copy-Item .env.example .env
+uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+---
+
+## Notes
+
+- Use Memurai or Redis via Docker
+- Use localhost in .env
+
 ---
 
 ## Running tests

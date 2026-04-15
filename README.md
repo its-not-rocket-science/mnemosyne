@@ -26,6 +26,18 @@ python -m http.server 8080 -d frontend
 
 Backend source is bind-mounted into the container, so uvicorn hot-reloads on save.
 
+
+### Windows note
+
+Use Docker Desktop and PowerShell:
+
+```powershell
+Copy-Item .env.example .env
+docker compose build
+docker compose up -d
+Invoke-WebRequest http://localhost:8000/ready | Select-Object -Expand Content
+```
+
 ### Local (no Docker)
 
 Requires PostgreSQL and Redis already running.
@@ -34,11 +46,41 @@ Requires PostgreSQL and Redis already running.
 poetry install
 python -m spacy download es_core_news_sm
 cp .env.example .env     # set DATABASE_URL and REDIS_URL
+psql -h localhost -U postgres -l
 make dev                 # uvicorn --reload on :8000
 python -m http.server 8080 -d frontend
 ```
 
 Tables are created automatically via `create_all` on first startup. For existing databases run `alembic upgrade head` instead.
+
+
+Windows PowerShell:
+
+```powershell
+poetry install
+python -m spacy download es_core_news_sm
+Copy-Item .env.example .env
+psql -h localhost -U postgres -l
+```
+
+Example .env for Windows:
+
+```env
+DATABASE_URL=postgresql+asyncpg://postgres:changeme@postgres:5432/mnemosyne
+REDIS_URL=redis://localhost:6379/0
+```
+
+Run:
+
+```powershell
+uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
+
+or as a background process:
+Start-Process python -WorkingDirectory "working directory path" `
+  -ArgumentList "-m","uvicorn","backend.main:app","--reload","--host","0.0.0.0","--port","8000"
+
+python -m http.server 8080 -d frontend
+```
 
 ---
 
