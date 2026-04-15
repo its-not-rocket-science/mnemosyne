@@ -386,6 +386,9 @@ function renderResults(sentences, language) {
   for (const sentence of sentences) {
     const article = document.createElement('article')
     article.className = 'sentence-card'
+    // Expose tokenization mode on the card so CSS can adjust pill layout for
+    // segmented scripts (CJK, Thai) where tokens have no natural whitespace.
+    article.dataset.tokenization = tokenMode
 
     const textEl = document.createElement('p')
     textEl.className = 'sentence-card__text'

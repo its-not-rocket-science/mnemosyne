@@ -246,6 +246,10 @@ def _build_vocabulary(b: _B) -> LessonResponse:
         LessonField(label="Lemma", value=lemma),
         LessonField(label="Part of speech", value=pos),
     ]
+    if pinyin := b.lesson_data.get("pinyin"):
+        # CJK romanization — tagged "Romanized" so the script-view toggle can
+        # hide/show it.  The modal's ROMANIZED_LABELS set matches on "romanized".
+        fields.append(LessonField(label="Romanized", value=pinyin))
     if verb_form := b.lesson_data.get("verb_form"):
         fields.append(LessonField(label="Form", value=verb_form.lower()))
 
