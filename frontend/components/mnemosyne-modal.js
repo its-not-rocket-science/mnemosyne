@@ -240,8 +240,16 @@ export class MnemosyneModal extends HTMLElement {
           padding: 0.15em 0.6em;
           border-radius: 999px;
           border: 1px solid color-mix(in srgb, CanvasText 20%, transparent);
-          margin-block-end: 0.75rem;
+          margin-block-end: 0.25rem;
           color: var(--muted, GrayText);
+        }
+
+        /* Shown only in dictionary mode — honest signal to the learner. */
+        .mode-note {
+          font-size: 0.75rem;
+          font-style: italic;
+          color: var(--muted, GrayText);
+          margin: 0 0 0.5rem;
         }
 
         /* ── fields ── */
@@ -449,6 +457,7 @@ export class MnemosyneModal extends HTMLElement {
 
           <div class="lesson-body">
             <span class="type-badge"></span>
+            <p class="mode-note" hidden></p>
             <p class="explanation"></p>
 
             <dl class="fields"></dl>
@@ -488,6 +497,16 @@ export class MnemosyneModal extends HTMLElement {
     this.#applyTargetLang(titleEl)
 
     sr.querySelector('.type-badge').textContent = lesson.type.replace('_', ' ')
+
+    // Dictionary-mode signal — shown when the lesson was built from a
+    // dictionary-depth plugin.  Informs the learner that no full parse was
+    // performed without hiding any of the lesson content.
+    const modeNote = sr.querySelector('.mode-note')
+    if (lesson.lesson_mode === 'dictionary') {
+      modeNote.textContent = 'dictionary lookup \u2014 no full parse'
+      modeNote.removeAttribute('hidden')
+    }
+
     // Explanation is always UI-language (English) — no lang/dir override.
     sr.querySelector('.explanation').textContent = lesson.explanation
 

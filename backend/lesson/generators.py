@@ -531,38 +531,72 @@ def _build_transliteration(b: _B) -> LessonResponse:
 
 
 def _build_dictionary(b: _B) -> LessonResponse:
-    """Minimal lesson for dictionary-mode plugins.
+    """Dictionary-mode lesson for plugins without full morphological analysis.
 
-    Shows the word, any available gloss, and a single shadowing drill.
-    No POS labels, no tense/mood drills — only what the plugin reliably knows.
-    Providers may supplement a gloss when the plugin has not supplied one.
+    Emits whatever the plugin reliably knows — gloss, romanization, citation
+    form, grammar note — without asserting unverified morphological structure.
+    Suitable for dead languages, under-resourced languages, or any plugin that
+    declares ``analysis_depth="dictionary"``.
+
+    Fields emitted (when present in lesson_data):
+      - Gloss         — English meaning (or provider-supplied fallback).
+      - Romanized     — Transliteration / phonetic reading (from
+                        ``lesson_data["romanized"]`` or ``["pinyin"]``).
+      - Citation form — Dictionary headword (e.g. ``"amor, amōris m."``).
+      - Grammar       — Free-text grammar note (e.g. ``"3rd decl. masc."``).
+      - Base form     — Shown when ``lemma`` differs from ``display_label``.
+      - Note          — Confidence / provenance note.
+
+    Drills:
+      1. Shadowing (always).
+      2. Fill-blank "What does X mean?" — only when a gloss is available.
     """
-    fields: list[LessonField] = []
-
     gloss = b.lesson_data.get("gloss")
 
     # Provider-supplied gloss fallback — only when plugin has no gloss.
     if not gloss:
         gloss = b.prov.gloss.lookup(b.canonical_form, b.ctx.language_code)
 
-    if gloss:
-        fields.append(LessonField(label="Gloss", value=str(gloss)))
+    gloss_str: str | None = str(gloss) if gloss else None
 
+    # Romanization: prefer the generic key; fall back to Mandarin-specific "pinyin".
+    romanized = b.lesson_data.get("romanized") or b.lesson_data.get("pinyin")
+
+    fields: list[LessonField] = []
+
+    if gloss_str:
+        fields.append(LessonField(label="Gloss", value=gloss_str))
+    if romanized:
+        fields.append(LessonField(label="Romanized", value=str(romanized)))
+    if citation := b.lesson_data.get("citation_form"):
+        fields.append(LessonField(label="Citation form", value=str(citation)))
+    if grammar := b.lesson_data.get("grammar_note"):
+        fields.append(LessonField(label="Grammar", value=str(grammar)))
     if lemma := b.lesson_data.get("lemma"):
         if str(lemma).lower() != b.display_label.lower():
             fields.append(LessonField(label="Base form", value=str(lemma)))
-
     if note := b.lesson_data.get("confidence_note"):
         fields.append(LessonField(label="Note", value=str(note)))
+
+    explanation = fmt.dictionary_explanation(b.display_label, gloss_str, b.ctx)
+
+    drills: list[Drill] = [ShadowingDrill(type="shadowing", text=b.display_label)]
+
+    if gloss_str:
+        drills.append(FillBlankDrill(
+            type="fill_blank",
+            prompt=f"What does \u201c{b.display_label}\u201d mean?",
+            answer=gloss_str,
+        ))
 
     return LessonResponse(
         id=b.object_id,
         type=b.obj_type,  # type: ignore[arg-type]
-        title=f"{b.display_label}",
-        explanation=f"\u201c{b.display_label}\u201d",
+        title=b.display_label,
+        explanation=explanation,
         fields=fields,
         examples=[b.display_label],
-        drills=[ShadowingDrill(type="shadowing", text=b.display_label)],
+        drills=drills,
     )
 
 

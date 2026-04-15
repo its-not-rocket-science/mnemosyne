@@ -234,9 +234,10 @@ class TestLessonModeInResponse:
         # Should have a gloss field.
         field_labels = [f.label for f in response.fields]
         assert "Gloss" in field_labels
-        # Only a shadowing drill — no multiple-choice or fill-blank.
-        assert len(response.drills) == 1
-        assert response.drills[0].type == "shadowing"
+        # Shadowing drill always present; fill-blank added when gloss is known.
+        drill_types = [d.type for d in response.drills]
+        assert "shadowing" in drill_types
+        assert "fill_blank" in drill_types
 
     def test_lesson_mode_vocabulary_no_morphology_drills(self) -> None:
         from backend.lesson.generators import build_lesson
@@ -795,9 +796,10 @@ class TestPartialCapabilityPluginCompat:
         assert r.lesson_mode == "dictionary"
         field_labels = {f.label for f in r.fields}
         assert "Gloss" in field_labels
-        # Dictionary mode should have minimal drills (shadowing only).
-        assert len(r.drills) == 1
-        assert r.drills[0].type == "shadowing"
+        # Shadowing drill always; fill-blank added when gloss is available.
+        drill_types = [d.type for d in r.drills]
+        assert "shadowing" in drill_types
+        assert "fill_blank" in drill_types
 
     def test_segmentation_only_plugin_objects_round_trip_canonical_id(self) -> None:
         """Objects from a segmentation-only plugin get stable UUIDs."""
