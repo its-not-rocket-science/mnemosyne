@@ -21,6 +21,15 @@ spacy = "^3.7"
 # After `poetry install`, download the model once:
 #   python -m spacy download es_core_news_sm
 
+# ── CJK extras (optional) ─────────────────────────────────────────────────────
+# Required for the Mandarin Chinese plugin (backend/plugins/chinese.py).
+# Install with:  poetry install --extras cjk
+jieba    = { version = "^0.42", optional = true }
+pypinyin = { version = "^0.50", optional = true }
+
+[tool.poetry.extras]
+cjk = ["jieba", "pypinyin"]
+
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.0"
 pytest-asyncio = "^0.23.8"

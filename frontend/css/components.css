@@ -29,6 +29,14 @@
   display: contents;
 }
 
+/* Segmented and character-mode scripts (CJK, Thai) carry no inter-word spaces,
+   so pills should be packed tightly to match the visual rhythm of the source text.
+   The tokenization mode is set on .sentence-card by main.js. */
+.sentence-card[data-tokenization="segmented"] .sentence-card__pills,
+.sentence-card[data-tokenization="character"]  .sentence-card__pills {
+  gap: 0.2rem;
+}
+
 /* ── Results toolbar ─────────────────────────────────────────────────────────
    Shown between the results heading and sentence cards when the selected
    language declares a transliteration_scheme.  JS populates the toggle inside.

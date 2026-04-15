@@ -12,7 +12,11 @@
       "Bash(echo \"exit: $?\")",
       "Bash(grep \"\\\\.py$\")",
       "Bash(grep -v \"//\")",
-      "Bash(grep -E \"\\\\.\\(html|py\\)$\")"
+      "Bash(grep -E \"\\\\.\\(html|py\\)$\")",
+      "Bash(wc:*)",
+      "Bash(git stash:*)",
+      "Bash(git checkout:*)",
+      "Bash(git:*)"
     ]
   }
 }

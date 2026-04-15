@@ -178,8 +178,8 @@ class TestPluginRegistry:
 
     def test_get_unknown_language_raises_key_error(self) -> None:
         registry = load_plugins()
-        with pytest.raises(KeyError, match="zh"):
-            registry.get("zh")
+        with pytest.raises(KeyError, match="xx-unknown"):
+            registry.get("xx-unknown")
 
     def test_all_returns_copy(self) -> None:
         registry = load_plugins()
