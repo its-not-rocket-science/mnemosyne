@@ -10,10 +10,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.api.dependencies import get_db_session, get_plugin_registry
+from backend.api.dependencies import get_current_user, get_db_session, get_plugin_registry
 from backend.core.cache import get_json, set_json
 from backend.models import CanonicalObjectRow, ObjectRelationRow, ParsedText, Sentence, SentenceObjectRow, UserKnowledgeRow
-from backend.srs.knowledge import DEFAULT_USER_ID
 from backend.parsing.canonical import canonical_object_id
 from backend.parsing.plugin_loader import PluginRegistry
 from backend.schemas.parse import (
@@ -34,6 +33,7 @@ async def parse_text(
     payload: ParseRequest,
     registry: PluginRegistry = Depends(get_plugin_registry),
     db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
 ) -> ParseResponse:
     try:
         plugin = registry.get(payload.language)
@@ -94,7 +94,7 @@ async def parse_text(
     # the cache write and the (already-done) return value are ready together.
     persist_exc: Exception | None = None
     try:
-        await _persist_parse(db, payload, candidate_results, sentences, uuid_to_candidate)
+        await _persist_parse(db, payload, candidate_results, sentences, uuid_to_candidate, current_user)
     except Exception as exc:
         persist_exc = exc
 
@@ -125,6 +125,7 @@ async def _persist_parse(
     candidate_results: list[CandidateSentenceResult],
     sentences: list[SentenceResult],
     uuid_to_candidate: dict[str, tuple[str, CandidateObject]],
+    user_id: str,
 ) -> None:
     """Write ParsedText, Sentences, upsert CanonicalObjects, and record relations."""
     parsed = ParsedText(
@@ -187,7 +188,7 @@ async def _persist_parse(
     # untouched except for updating last_seen, so review history is never lost.
     uk_result = await db.execute(
         select(UserKnowledgeRow).where(
-            UserKnowledgeRow.user_id == DEFAULT_USER_ID,
+            UserKnowledgeRow.user_id == user_id,
             UserKnowledgeRow.object_id.in_(all_ids),
         )
     )
@@ -200,7 +201,7 @@ async def _persist_parse(
             existing_uk[obj_id].last_seen = now
         else:
             db.add(UserKnowledgeRow(
-                user_id=DEFAULT_USER_ID,
+                user_id=user_id,
                 object_id=obj_id,
                 language=payload.language,
                 fsrs_state=None,

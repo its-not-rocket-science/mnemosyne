@@ -7,11 +7,11 @@ from fastapi import APIRouter, Depends
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.api.dependencies import get_db_session
+from backend.api.dependencies import get_current_user, get_db_session
 from backend.models import UserKnowledgeRow
 from backend.schemas.parse import ReviewRequest, ReviewResponse
 from backend.srs.fsrs import review
-from backend.srs.knowledge import DEFAULT_USER_ID, mastery_score
+from backend.srs.knowledge import mastery_score
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["review"])
@@ -21,6 +21,7 @@ router = APIRouter(tags=["review"])
 async def submit_review(
     payload: ReviewRequest,
     db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
 ) -> ReviewResponse:
     now = datetime.now(UTC)
 
@@ -32,7 +33,7 @@ async def submit_review(
     try:
         result = await db.execute(
             select(UserKnowledgeRow).where(
-                UserKnowledgeRow.user_id == DEFAULT_USER_ID,
+                UserKnowledgeRow.user_id == current_user,
                 UserKnowledgeRow.object_id == payload.object_id,
             )
         )
@@ -56,7 +57,7 @@ async def submit_review(
             #  because the DB was unavailable above; both paths are safe here)
             result2 = await db.execute(
                 select(UserKnowledgeRow).where(
-                    UserKnowledgeRow.user_id == DEFAULT_USER_ID,
+                    UserKnowledgeRow.user_id == current_user,
                     UserKnowledgeRow.object_id == payload.object_id,
                 )
             )
@@ -64,7 +65,7 @@ async def submit_review(
 
         if row is None:
             db.add(UserKnowledgeRow(
-                user_id=DEFAULT_USER_ID,
+                user_id=current_user,
                 object_id=payload.object_id,
                 fsrs_state=updated_state,
                 mastery_score=score,

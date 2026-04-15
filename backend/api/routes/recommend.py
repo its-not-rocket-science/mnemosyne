@@ -46,7 +46,7 @@ from fastapi import APIRouter, Depends, Query
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.api.dependencies import get_db_session
+from backend.api.dependencies import get_current_user, get_db_session
 from backend.difficulty.profiles import get_profile
 from backend.difficulty.scorer import (
     DifficultyScore,
@@ -71,7 +71,6 @@ from backend.schemas.curriculum import (
     SentenceDifficultyItem,
 )
 from backend.srs.knowledge import (
-    DEFAULT_USER_ID,
     MASTERY_SCORE_THRESHOLD,
     MIN_REVIEWS_FOR_MASTERY,
 )
@@ -90,6 +89,7 @@ async def recommend_text(
     language: str,
     limit: int = Query(default=10, ge=1, le=50),
     db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
 ) -> RecommendTextResponse:
     """Return sentences at appropriate difficulty for the current user.
 
@@ -105,7 +105,7 @@ async def recommend_text(
     """
     # ── 1. Load mastery map ───────────────────────────────────────────────────
     uk_result = await db.execute(
-        select(UserKnowledgeRow).where(UserKnowledgeRow.user_id == DEFAULT_USER_ID)
+        select(UserKnowledgeRow).where(UserKnowledgeRow.user_id == current_user)
     )
     mastery: dict[str, tuple[float, int]] = {
         row.object_id: (row.mastery_score or 0.0, row.total_reviews)

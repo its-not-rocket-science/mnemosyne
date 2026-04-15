@@ -15,6 +15,7 @@ from backend.api.routes.parse import router as parse_router
 from backend.api.routes.ready import router as ready_router
 from backend.api.routes.recommend import router as recommend_router
 from backend.api.routes.review import router as review_router
+from backend.api.routes.users import router as users_router
 from backend.core.config import Settings, get_settings
 from backend.core.database import engine
 from backend.models import Base
@@ -113,6 +114,7 @@ app.include_router(dashboard_router)
 app.include_router(metrics_router)
 app.include_router(recommend_router)
 app.include_router(languages_router)
+app.include_router(users_router)
 app.include_router(ready_router)
 
 

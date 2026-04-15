@@ -23,7 +23,7 @@ from __future__ import annotations
 import uuid
 from datetime import UTC, datetime
 
-from sqlalchemy import DateTime, Float, ForeignKey, Integer, String, Text, UniqueConstraint
+from sqlalchemy import Boolean, DateTime, Float, ForeignKey, Integer, String, Text, UniqueConstraint
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 from sqlalchemy.types import JSON
 
@@ -293,3 +293,50 @@ class UserKnowledgeRow(Base):
     last_seen: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
     total_reviews: Mapped[int] = mapped_column(Integer, default=0)
     due_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+
+class UserLanguagePreferenceRow(Base):
+    """Per-user, per-language study preferences.
+
+    Stores presentation and pathway overrides for a specific (user, language)
+    pair.  Orthogonal to FSRS state — describes *how* to present content,
+    not *what* the user knows.
+
+    Design notes
+    ────────────
+    Rows are sparse by intent: only languages where the user has changed a
+    default need a row.  A missing row means "apply all defaults".
+
+    show_transliteration
+        Toggle romanisation for scripts the user cannot yet read natively.
+        Relevant for CJK (pinyin), Arabic, Hebrew, Japanese (romaji), etc.
+
+    script_preference
+        Variant when a language has multiple orthographies:
+          "simplified" / "traditional"  for Mandarin Chinese
+          "modern"     / "classical"    for Arabic
+        None → use the plugin default.
+
+    lesson_mode_override
+        Force a lesson mode for this language, overriding the plugin's
+        richest-available mode.  Useful for reading-only languages where the
+        user wants dictionary mode without grammar drills.
+        None → use the plugin's richest available mode.
+
+    Upgrade path
+    ────────────
+    Future per-language settings (study goals, notification schedules, custom
+    vocabulary lists) extend this table rather than adding new preference tables.
+    """
+    __tablename__ = "user_language_preferences"
+
+    user_id: Mapped[str] = mapped_column(String(50), primary_key=True)
+    language_code: Mapped[str] = mapped_column(String(10), primary_key=True)
+
+    show_transliteration: Mapped[bool] = mapped_column(Boolean, default=True)
+    script_preference: Mapped[str | None] = mapped_column(String(50), nullable=True)
+    lesson_mode_override: Mapped[str | None] = mapped_column(String(30), nullable=True)
+
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=_now, onupdate=_now
+    )

@@ -29,7 +29,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.api.dependencies import get_db_session
+from backend.api.dependencies import get_current_user, get_db_session
 from backend.models import CanonicalObjectRow, UserKnowledgeRow
 from backend.schemas.metrics import (
     LanguageMetrics,
@@ -38,7 +38,6 @@ from backend.schemas.metrics import (
     WeakObject,
 )
 from backend.srs.knowledge import (
-    DEFAULT_USER_ID,
     MASTERY_SCORE_THRESHOLD,
     MIN_REVIEWS_FOR_MASTERY,
 )
@@ -53,6 +52,7 @@ _WEAKEST_LIMIT = 10
 async def get_metrics(
     language: str | None = None,
     db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
 ) -> MetricsResponse:
     """Return a learning-effectiveness snapshot for the default user.
 
@@ -73,7 +73,7 @@ async def get_metrics(
                 CanonicalObjectRow,
                 CanonicalObjectRow.id == UserKnowledgeRow.object_id,
             )
-            .where(UserKnowledgeRow.user_id == DEFAULT_USER_ID)
+            .where(UserKnowledgeRow.user_id == current_user)
         )
         if language is not None:
             stmt = stmt.where(UserKnowledgeRow.language == language)
