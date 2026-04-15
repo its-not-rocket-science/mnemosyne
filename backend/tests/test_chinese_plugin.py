@@ -157,10 +157,12 @@ class TestSegmentFallback:
         tokens = _segment("你好世界")
         assert len(tokens) > 0
 
-    def test_segment_ignores_spaces(self) -> None:
-        # The fallback strips spaces before splitting into chars.
-        tokens = _segment("你 好")
-        assert " " not in tokens
+    def test_segment_produces_tokens(self) -> None:
+        # Whether jieba or the character fallback runs, _segment must return
+        # at least the two characters.  jieba may emit whitespace as its own
+        # token; that is filtered downstream by _is_learnable, not here.
+        tokens = _segment("你好")
+        assert "你" in tokens or any("你" in t for t in tokens)
 
 
 # ── Candidate extraction ───────────────────────────────────────────────────────
@@ -354,3 +356,90 @@ class TestLessonEngineIntegration:
         ctx = LessonContext.from_capabilities(MandarinChinesePlugin.capabilities)
         assert ctx.is_cjk is True
         assert ctx.is_rtl is False
+
+
+# ── jieba word-segmentation path (requires jieba) ────────────────────────────
+
+_jieba_available = __import__("importlib").util.find_spec("jieba") is not None
+
+@pytest.mark.skipif(not _jieba_available, reason="jieba not installed")
+class TestJiebaSegmentation:
+    """Tests that require jieba to be installed — word-level segmentation."""
+
+    def test_common_word_appears_as_unit(self, plugin: MandarinChinesePlugin) -> None:
+        # 学习 (to study) is a well-known two-character word; jieba should keep
+        # it together rather than split it into 学 + 习.
+        result = plugin.analyze_sentence("我喜欢学习中文。")
+        canonical_forms = {c.canonical_form for c in result.candidates}
+        assert "学习" in canonical_forms
+
+    def test_confidence_is_jieba_level(self, plugin: MandarinChinesePlugin) -> None:
+        result = plugin.analyze_sentence("你好世界")
+        for c in result.candidates:
+            # jieba path → 0.70; character fallback → 0.40.
+            assert c.confidence == 0.70
+
+    def test_no_confidence_note_in_lesson_data(self, plugin: MandarinChinesePlugin) -> None:
+        # The "character-level fallback" note must NOT appear when jieba is active.
+        result = plugin.analyze_sentence("你好")
+        for c in result.candidates:
+            assert "confidence_note" not in c.lesson_data
+
+    def test_multiple_words_extracted(self, plugin: MandarinChinesePlugin) -> None:
+        # Jieba should produce several word-level tokens from a full sentence.
+        result = plugin.analyze_sentence("我爱学习中文汉字。")
+        assert len(result.candidates) >= 3
+
+    def test_pinyin_in_lesson_data(self, plugin: MandarinChinesePlugin) -> None:
+        pytest.importorskip("pypinyin")
+        result = plugin.analyze_sentence("你好")
+        candidates_with_pinyin = [c for c in result.candidates if "pinyin" in c.lesson_data]
+        assert len(candidates_with_pinyin) > 0
+
+    def test_pinyin_is_tone_marked_string(self, plugin: MandarinChinesePlugin) -> None:
+        pytest.importorskip("pypinyin")
+        result = plugin.analyze_sentence("学习")
+        for c in result.candidates:
+            if "pinyin" in c.lesson_data:
+                assert isinstance(c.lesson_data["pinyin"], str)
+                assert len(c.lesson_data["pinyin"]) > 0
+
+
+# ── Multilingual architecture integration ─────────────────────────────────────
+
+class TestMultilingualArchitecture:
+    def test_chinese_plugin_registered(self) -> None:
+        from backend.parsing.plugin_loader import load_plugins
+        registry = load_plugins()
+        assert "zh" in registry.all()
+
+    def test_chinese_capabilities_in_registry(self) -> None:
+        from backend.parsing.plugin_loader import load_plugins
+        registry = load_plugins()
+        caps = registry.supported_languages()
+        assert "zh" in caps
+        assert caps["zh"].script_family == "cjk"
+
+    def test_zh_and_es_canonical_ids_differ(self) -> None:
+        from backend.parsing.canonical import canonical_object_id
+        zh_id = canonical_object_id("zh", "vocabulary", "学习")
+        es_id = canonical_object_id("es", "vocabulary", "aprendizaje")
+        assert zh_id != es_id
+
+    def test_same_zh_word_same_canonical_id(self) -> None:
+        from backend.parsing.canonical import canonical_object_id
+        id1 = canonical_object_id("zh", "vocabulary", "学习")
+        id2 = canonical_object_id("zh", "vocabulary", "学习")
+        assert id1 == id2
+
+    def test_canonical_id_is_uuid_format(self) -> None:
+        import uuid
+        from backend.parsing.canonical import canonical_object_id
+        raw = canonical_object_id("zh", "vocabulary", "学习")
+        # Should not raise
+        uuid.UUID(raw)
+
+    def test_zh_type_is_vocabulary_only(self, plugin: MandarinChinesePlugin) -> None:
+        result = plugin.analyze_sentence("我喜欢学习中文。")
+        types = {c.type for c in result.candidates}
+        assert types == {"vocabulary"}  # no conjugation, agreement, etc.

@@ -51,11 +51,26 @@ from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 _SENTENCE_RE = re.compile(r"[^.!?\n]+[.!?\n]?")
 
 # ── Word tokenisation ─────────────────────────────────────────────────────────
-# Hebrew Unicode block: U+05D0–U+05EA (core letters: alef through tav).
-# U+05F0–U+05F4: Yiddish digraphs and Hebrew punctuation (geresh, gershayim).
-# U+FB1D–U+FB4E: Hebrew Presentation Forms (alternative letter forms).
-# This excludes digits, Latin characters, and punctuation not part of a word.
-_WORD_RE = re.compile(r"[\u05D0-\u05EA\u05F0-\u05F4\uFB1D-\uFB4E]+")
+# Match runs of Hebrew letters together with any attached nikud / cantillation
+# marks so that a vowel-pointed word like "שַׁבָּת" is captured as one token
+# rather than being split by the combining characters into "ש", "ב", "ת".
+# After matching, _strip_nikud removes all combining marks to give the clean
+# canonical form.
+#
+# Ranges included:
+#   U+05D0–U+05EA  Hebrew core letters (alef through tav)
+#   U+05F0–U+05F4  Yiddish digraphs and Hebrew punctuation (geresh, gershayim)
+#   U+FB1D–U+FB4E  Hebrew Presentation Forms (alternative letter forms)
+#   U+0591–U+05AF  Cantillation marks (te'amim — Biblical Hebrew)
+#   U+05B0–U+05BD  Vowel points (shva, patah, qamats, hiriq, …)
+#   U+05BF         Rafe (softening mark)
+#   U+05C1–U+05C2  Shin dot / sin dot
+#   U+05C4–U+05C5  Upper / lower dots
+#   U+05C7         Qamats qatan
+_WORD_RE = re.compile(
+    r"[\u05D0-\u05EA\u05F0-\u05F4\uFB1D-\uFB4E"
+    r"\u0591-\u05AF\u05B0-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7]+"
+)
 
 # ── Nikud (vowel points) stripping ────────────────────────────────────────────
 # Hebrew combining diacritical marks:
