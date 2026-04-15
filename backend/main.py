@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from backend.api.dependencies import get_plugin_registry
 from backend.api.routes.dashboard import router as dashboard_router
+from backend.api.routes.fetch_url import router as fetch_url_router
 from backend.api.routes.languages import router as languages_router
 from backend.api.routes.lesson import router as lesson_router
 from backend.api.routes.metrics import router as metrics_router
@@ -107,6 +108,7 @@ app.add_middleware(
 )
 
 app.include_router(ingest_router)
+app.include_router(fetch_url_router)
 app.include_router(parse_router)
 app.include_router(lesson_router)
 app.include_router(review_router)
