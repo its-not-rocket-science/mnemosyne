@@ -38,8 +38,13 @@ The five pillars are:
 | Spanish (`es`) | implemented | vocabulary, conjugation (full morph), agreement (gender/number) |
 | English (`en`) stub | partial | vocabulary only; regex-based; no morphology |
 | French (`fr`) stub | partial | vocabulary only; regex-based; stop-word filter; no morphology |
+| German (`de`) | scaffold | capabilities declared; NLP not implemented |
+| Mandarin Chinese (`zh`) | scaffold | CJK segmentation architecture; dictionary mode only |
+| Arabic (`ar`) | scaffold | capabilities declared; dictionary mode only; RTL path tested |
+| Hebrew (`he`) | scaffold | capabilities declared; dictionary mode only; RTL path tested |
+| Latin (`la`) | scaffold | dead-language annotation mode; dictionary lookup only |
 
-All other languages: **not implemented**.
+**Production-quality** means full morphological extraction with relation hints. Only Spanish qualifies today. French and German are the next targets.
 
 ### Infrastructure
 
@@ -47,12 +52,13 @@ All other languages: **not implemented**.
 |-----------|--------|-------|
 | Canonical knowledge layer (UUID-v5 PKs, surface_forms, object_relations) | implemented | |
 | Plugin registry with multi-language support | implemented | `ENABLED_LANGUAGES` filter |
-| Alembic migrations | partial | 3 revision files exist; `create_all` still runs on fresh start |
-| RTL layout support | partial | `direction` field on plugins; frontend CSS not yet RTL-aware |
-| User authentication | deferred | All state belongs to `user_id = "default"` |
+| Alembic migrations | partial | 4 revision files exist (0001–0004); `create_all` still runs on fresh start — not yet replaced with `alembic upgrade head` |
+| RTL layout support | partial | `direction`/`script_family`/`tokenization_mode` on all plugins; sentence card and pill `dir`/`lang` applied dynamically; modal does not yet apply `dir`/`lang` to example text or drill prompts |
+| Multi-user data isolation | implemented | `X-User-Id` header; `get_current_user` dependency; per-user isolation across all routes; `UserLanguagePreferenceRow` table; `/users/me/*` preference CRUD |
+| User authentication (JWT) | deferred | Header-based identity in place; cryptographic verification not yet implemented |
 | Review event log | deferred | Only current FSRS state is stored; no per-review history |
 | Offline / PWA | deferred | |
-| Background processing for large texts | deferred | NLP blocks the request path |
+| Background processing for large texts | deferred | NLP blocks the request path; `max_chars` guard not yet implemented |
 
 ---
 
@@ -68,7 +74,11 @@ Only Spanish has a production-quality plugin. English and French stubs extract v
 
 **Partially addressed (2026-04-10):** `GET /languages` now returns full `LanguageCapabilities` objects including `direction`, `script_family`, `tokenization_mode`, and `morphology_depth`. The frontend fetches this on page load, stores a capabilities map, and applies `lang` and `dir` attributes to sentence-card text elements and pill lists. Non-Latin font stacks (Arabic, Hebrew, CJK, Devanagari) are included in `global.css`. RTL layout overrides for sentence cards and pill lists are in place.
 
-**Remaining gaps:** The modal (`mnemosyne-modal.js`) does not yet apply `dir` or `lang` to example text or drill prompts. There are no integration tests that push an RTL text fixture through the full parse → lesson → render pipeline. The difficulty scorer still uses `text.split()` for word count when `word_count_hint` is not supplied, which is wrong for CJK; the `word_count_hint` parameter exists on `score_sentence` but the recommend route does not yet pass it for segmented-script languages.
+**Remaining gaps:**
+- The modal (`mnemosyne-modal.js`) does not yet apply `dir` or `lang` to example text or drill prompts — this is a public beta blocker.
+- There are no integration tests that push an RTL text fixture through the full parse → lesson → render pipeline.
+- The difficulty scorer still uses `text.split()` for word count when `word_count_hint` is not supplied, which is wrong for CJK; the `word_count_hint` parameter exists on `score_sentence` but the recommend route does not yet pass it for segmented-script languages.
+- `canonical_form` conventions are documented only for Latin-script morphology; non-Latin conventions (Arabic root+pattern, CJK disambiguation) are undocumented, creating a risk of incompatible plugin inventions.
 
 **Impact:** A user pasting Arabic or Hebrew text today will get correct `dir` on the sentence text but the modal will not apply RTL styling to example text or drill prompts. Visual breakage is reduced but not eliminated.
 
@@ -82,9 +92,9 @@ Only Spanish has a production-quality plugin. English and French stubs extract v
 
 `/metrics` approximates these from the snapshot state (current `mastery_score`, `lapses`, `stability`), which is accurate for current-state reporting but useless for trend analysis.
 
-### Gap 4 — Single user
+### Gap 4 — Authentication (not data isolation)
 
-Every piece of knowledge state is attached to `user_id = "default"`. The schema already uses a `user_id` primary key component and passes it through every query. Adding real users requires authentication middleware and a login flow, but the data model is not a blocker.
+Multi-user data isolation is complete: all routes scope knowledge state and recommendations to `current_user`, resolved from the `X-User-Id` header with `"default"` fallback. Per-user language preferences are stored and returned via `/users/me/*`. The remaining gap is cryptographic authentication — the header is not verified, so any caller can impersonate any user on a shared deployment. JWT authentication is the next step; the `get_current_user` dependency is the single injection point for the change.
 
 ### Gap 5 — NLP in the request path
 
