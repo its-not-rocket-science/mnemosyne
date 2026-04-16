@@ -5,7 +5,7 @@
 | Tool | Minimum version |
 |---|---|
 | Python | 3.12 |
-| Poetry | 1.8 |
+| Poetry | 2.x |
 | Docker + Compose v2 | any recent |
 | spaCy model | `es_core_news_sm` (Spanish tests only) |
 
@@ -19,7 +19,10 @@
 poetry install
 python -m spacy download es_core_news_sm
 cp .env.example .env
-# Edit .env: set DATABASE_URL and REDIS_URL to local services.
+# Edit .env — minimum changes for local dev:
+#   DATABASE_URL=postgresql+asyncpg://postgres:postgres@localhost:5432/mnemosyne
+#   REDIS_URL=redis://localhost:6379/0
+#   JWT_SECRET=$(python -c "import secrets; print(secrets.token_hex(32))")
 make dev                       # uvicorn --reload on :8000
 python -m http.server 8080 -d frontend
 ```
@@ -28,6 +31,9 @@ python -m http.server 8080 -d frontend
 
 ```bash
 cp .env.example .env
+# Set a strong JWT_SECRET before starting:
+#   Linux/macOS: sed -i "s/CHANGE_ME_IN_PRODUCTION/$(python -c "import secrets; print(secrets.token_hex(32))")/" .env
+#   PowerShell:  (see below)
 make build && make up
 make ready                     # should print {"status": "ready", ...}
 ```
@@ -38,8 +44,13 @@ PowerShell:
 
 ```powershell
 Copy-Item .env.example .env
+# Generate a strong JWT secret and write it to .env:
+$secret = -join ((65..90)+(97..122)+(48..57) | Get-Random -Count 32 | ForEach-Object {[char]$_})
+(Get-Content .env) -replace 'CHANGE_ME_IN_PRODUCTION', $secret | Set-Content .env
 docker compose build
 docker compose up -d
+# Verify the stack is ready:
+Invoke-RestMethod http://localhost:8000/ready | ConvertTo-Json
 ```
 
 ### Local Windows
@@ -51,12 +62,42 @@ Copy-Item .env.example .env
 uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
+Windows-specific notes:
+- Use [Memurai](https://www.memurai.com/) for a native Redis or start Redis via `docker compose up redis -d`.
+- The `DATABASE_URL` must use `localhost`, not the Compose service name `postgres`, when running the app outside Docker.
+- The `alembic upgrade head` startup migration runs in a subprocess; `alembic` must be on `PATH` (installed by `poetry install`).
+
+---
+
+## Required environment variables
+
+Copy `.env.example` to `.env` and set at minimum:
+
+| Variable | Required | Notes |
+|---|---|---|
+| `DATABASE_URL` | yes | `postgresql+asyncpg://user:pass@host:5432/db` |
+| `REDIS_URL` | yes | `redis://host:6379/0` |
+| `JWT_SECRET` | **yes in prod** | Long random hex string — see setup above |
+| `CORS_ORIGINS` | **yes in prod** | JSON array, e.g. `["https://yourapp.example.com"]` — wildcards rejected when `DEBUG=false` |
+| `DEBUG` | no | Default `true`; set `false` in any deployed environment |
+| `MAX_PARSE_CHARS` | no | Default `10000` |
+| `RATE_LIMIT_PARSE` | no | Default `20/minute` |
+| `SENTRY_DSN` | no | Leave empty to disable error monitoring |
+
+Postgres-specific (consumed by the `postgres` container in Compose):
+
+| Variable | Default |
+|---|---|
+| `POSTGRES_DB` | `mnemosyne` |
+| `POSTGRES_USER` | `mnemosyne` |
+| `POSTGRES_PASSWORD` | `changeme` — **change before deploying** |
+
 ---
 
 ## Notes
 
 - Use Memurai or Redis via Docker
-- Use localhost in .env
+- Use localhost in .env when running outside Docker
 
 ---
 
