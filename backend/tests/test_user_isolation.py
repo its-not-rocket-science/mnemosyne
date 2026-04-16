@@ -446,3 +446,166 @@ async def test_preference_upsert_updates_existing_row(async_client) -> None:
     all_resp = await async_client.get("/users/me/preferences", headers=headers)
     zh_rows = [l for l in all_resp.json()["languages"] if l["language_code"] == "zh"]
     assert len(zh_rows) == 1
+
+
+# ── Data export ───────────────────────────────────────────────────────────────
+
+
+@pytest.mark.asyncio
+async def test_export_empty_for_new_user(async_client) -> None:
+    """A brand-new user gets a valid export with empty knowledge and preferences."""
+    resp = await async_client.get(
+        "/users/me/export",
+        headers={"X-User-Id": "export-new"},
+    )
+    assert resp.status_code == 200
+    data = resp.json()
+    assert data["user_id"] == "export-new"
+    assert data["schema_version"] == "1"
+    assert data["knowledge"] == []
+    assert data["language_preferences"] == []
+    assert "exported_at" in data
+
+
+@pytest.mark.asyncio
+async def test_export_includes_review_knowledge(async_client) -> None:
+    """Knowledge rows created by /review appear in the export."""
+    obj_id = "es:vocab:perro"
+    await async_client.post(
+        "/review",
+        json={"object_id": obj_id, "quality": 4},
+        headers={"X-User-Id": "export-user"},
+    )
+
+    resp = await async_client.get(
+        "/users/me/export",
+        headers={"X-User-Id": "export-user"},
+    )
+    assert resp.status_code == 200
+    data = resp.json()
+    assert len(data["knowledge"]) == 1
+    item = data["knowledge"][0]
+    assert item["object_id"] == obj_id
+    assert item["total_reviews"] == 1
+    assert "mastery_score" in item
+    assert "due_at" in item
+    assert "fsrs_state" in item
+
+
+@pytest.mark.asyncio
+async def test_export_knowledge_enriched_with_canonical_data(async_client, db_engine) -> None:
+    """When a canonical_objects row exists for a knowledge item it is joined in."""
+    from backend.models import CanonicalObjectRow
+    from backend.parsing.canonical import canonical_object_id
+
+    lang, obj_type, form = "es", "vocabulary", "gato"
+    obj_id = canonical_object_id(lang, obj_type, form)
+
+    # Insert a canonical object directly.
+    factory = async_sessionmaker(db_engine, class_=AsyncSession, expire_on_commit=False)
+    async with factory() as db:
+        db.add(
+            CanonicalObjectRow(
+                id=obj_id,
+                language=lang,
+                type=obj_type,
+                canonical_form=form,
+                display_label="gato",
+            )
+        )
+        await db.commit()
+
+    # Create a review for the same object_id.
+    await async_client.post(
+        "/review",
+        json={"object_id": obj_id, "quality": 3},
+        headers={"X-User-Id": "export-enrich"},
+    )
+
+    resp = await async_client.get(
+        "/users/me/export",
+        headers={"X-User-Id": "export-enrich"},
+    )
+    assert resp.status_code == 200
+    items = resp.json()["knowledge"]
+    assert len(items) == 1
+    item = items[0]
+    assert item["canonical_form"] == form
+    assert item["type"] == obj_type
+    assert item["display_label"] == "gato"
+    # language on UserKnowledgeRow is set during /parse, not /review; it may be
+    # None here.  The canonical enrichment fields are what we're testing.
+
+
+@pytest.mark.asyncio
+async def test_export_orphan_knowledge_has_null_enrichment(async_client) -> None:
+    """Knowledge rows without a matching canonical object export with null enrichment."""
+    orphan_id = "xx:vocab:orphan-object"
+    await async_client.post(
+        "/review",
+        json={"object_id": orphan_id, "quality": 2},
+        headers={"X-User-Id": "export-orphan"},
+    )
+
+    resp = await async_client.get(
+        "/users/me/export",
+        headers={"X-User-Id": "export-orphan"},
+    )
+    assert resp.status_code == 200
+    items = resp.json()["knowledge"]
+    assert len(items) == 1
+    item = items[0]
+    assert item["canonical_form"] is None
+    assert item["type"] is None
+    assert item["display_label"] is None
+
+
+@pytest.mark.asyncio
+async def test_export_includes_preferences(async_client) -> None:
+    """Language preferences set by the user appear in the export."""
+    await async_client.put(
+        "/users/me/languages/ar/preferences",
+        json={
+            "language_code": "ar",
+            "show_transliteration": False,
+            "script_preference": "modern",
+            "lesson_mode_override": "dictionary",
+        },
+        headers={"X-User-Id": "export-prefs"},
+    )
+
+    resp = await async_client.get(
+        "/users/me/export",
+        headers={"X-User-Id": "export-prefs"},
+    )
+    assert resp.status_code == 200
+    data = resp.json()
+    prefs = data["language_preferences"]
+    assert len(prefs) == 1
+    assert prefs[0]["language_code"] == "ar"
+    assert prefs[0]["show_transliteration"] is False
+    assert prefs[0]["script_preference"] == "modern"
+
+
+@pytest.mark.asyncio
+async def test_export_isolated_between_users(async_client) -> None:
+    """alice's export contains only her data; bob's is empty."""
+    await async_client.post(
+        "/review",
+        json={"object_id": "es:vocab:libro", "quality": 4},
+        headers={"X-User-Id": "export-alice"},
+    )
+
+    bob_resp = await async_client.get(
+        "/users/me/export",
+        headers={"X-User-Id": "export-bob"},
+    )
+    assert bob_resp.status_code == 200
+    assert bob_resp.json()["knowledge"] == []
+
+    alice_resp = await async_client.get(
+        "/users/me/export",
+        headers={"X-User-Id": "export-alice"},
+    )
+    assert alice_resp.status_code == 200
+    assert len(alice_resp.json()["knowledge"]) == 1
