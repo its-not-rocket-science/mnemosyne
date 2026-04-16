@@ -13,6 +13,8 @@ logger = logging.getLogger(__name__)
 class PluginRegistry:
     def __init__(self) -> None:
         self._plugins: dict[str, LanguagePlugin] = {}
+        self._failed: dict[str, str] = {}
+        """module_name → error summary for plugins that raised during load."""
 
     def register(self, plugin: LanguagePlugin) -> None:
         code = plugin.language_code.lower().strip()
@@ -61,6 +63,13 @@ class PluginRegistry:
             result[code] = caps
         return result
 
+    def failed_plugins(self) -> dict[str, str]:
+        """Return a mapping of module_name → error summary for failed plugins.
+
+        An empty dict means all plugins loaded successfully.
+        """
+        return dict(self._failed)
+
     def all(self) -> dict[str, LanguagePlugin]:
         return dict(self._plugins)
 
@@ -97,11 +106,12 @@ def load_plugins() -> PluginRegistry:
                 continue
             registry.register(plugin)
             logger.info("Registered plugin %r (language: %r)", module.__name__, plugin.language_code)
-        except Exception:
+        except Exception as exc:
             logger.warning(
                 "Could not load plugin from %r — skipping.  "
                 "(Missing model?  Run the model download command.)",
                 module.__name__,
                 exc_info=True,
             )
+            registry._failed[module.__name__] = f"{type(exc).__name__}: {exc}"
     return registry
