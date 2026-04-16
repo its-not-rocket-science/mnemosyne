@@ -4,11 +4,12 @@ import os
 import re
 import shutil
 import subprocess
+import uuid
 from contextlib import asynccontextmanager
 from pathlib import Path
 
 import sentry_sdk
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from sentry_sdk.integrations.fastapi import FastApiIntegration
 from sentry_sdk.integrations.starlette import StarletteIntegration
@@ -29,14 +30,20 @@ from backend.api.routes.recommend import router as recommend_router
 from backend.api.routes.review import router as review_router
 from backend.api.routes.users import router as users_router
 from backend.core.config import Settings, get_settings
+from backend.core.logging import RequestIdFilter, request_id_var
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s %(levelname)-8s %(name)s: %(message)s",
+    format="%(asctime)s %(levelname)-8s [%(request_id)s] %(name)s: %(message)s",
     datefmt="%Y-%m-%dT%H:%M:%S",
 )
+# Filters must be on handlers, not on loggers, so that propagated records
+# from child loggers (e.g. httpx, sqlalchemy) also have request_id injected.
+_request_id_filter = RequestIdFilter()
+for _h in logging.getLogger().handlers:
+    _h.addFilter(_request_id_filter)
 logger = logging.getLogger(__name__)
 
 # ── Configuration ─────────────────────────────────────────────────────────────
@@ -201,6 +208,24 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.middleware("http")
+async def _request_id_middleware(request: Request, call_next):
+    """Attach a unique request ID to every request.
+
+    Sets ``request.state.request_id`` for use in route handlers and stores the
+    ID in a context variable so all log lines emitted during the request (via
+    ``RequestIdFilter``) include the same ID.  The ID is echoed back in the
+    ``X-Request-Id`` response header so clients can correlate frontend errors
+    with server log entries.
+    """
+    request_id = uuid.uuid4().hex[:8]
+    request.state.request_id = request_id
+    request_id_var.set(request_id)
+    response = await call_next(request)
+    response.headers["X-Request-Id"] = request_id
+    return response
 
 app.include_router(auth_router)
 app.include_router(ingest_router)

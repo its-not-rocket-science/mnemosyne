@@ -4,13 +4,14 @@ import logging
 import time
 from datetime import UTC, datetime
 
-from fastapi import APIRouter, Depends, HTTPException, Request
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Request
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.api.dependencies import get_current_user, get_db_session, get_plugin_registry
+from backend.api.dependencies import get_current_user, get_plugin_registry
 from backend.core.cache import get_json, set_json
 from backend.core.config import Settings, get_settings
+from backend.core.database import get_session_factory
 from backend.core.limiter import limiter
 from backend.models import CanonicalObjectRow, ObjectRelationRow, ParsedText, Sentence, SentenceObjectRow, UserKnowledgeRow
 from backend.parsing.canonical import canonical_object_id
@@ -33,10 +34,11 @@ router = APIRouter(tags=["parse"])
 async def parse_text(
     request: Request,
     payload: ParseRequest,
+    background_tasks: BackgroundTasks,
     registry: PluginRegistry = Depends(get_plugin_registry),
-    db: AsyncSession = Depends(get_db_session),
     current_user: str = Depends(get_current_user),
     settings: Settings = Depends(get_settings),
+    session_factory=Depends(get_session_factory),
 ) -> ParseResponse:
     if len(payload.text) > settings.max_parse_chars:
         raise HTTPException(
@@ -102,22 +104,17 @@ async def parse_text(
     response = ParseResponse(sentences=sentences)
     response_json = response.model_dump(mode="json")
 
-    # DB persist and cache write are independent after the response is built.
-    # AsyncSession is not concurrency-safe, so persist runs first; then both
-    # the cache write and the (already-done) return value are ready together.
-    persist_exc: Exception | None = None
-    try:
-        await _persist_parse(db, payload, candidate_results, sentences, uuid_to_candidate, current_user)
-    except Exception as exc:
-        persist_exc = exc
-
-    cache_task = asyncio.ensure_future(set_json(cache_key, response_json))
-
-    if persist_exc is not None:
-        logger.warning("DB persistence failed for /parse", exc_info=persist_exc)
+    # Schedule DB persist as a background task so the response is returned
+    # to the client immediately after NLP + cache write.  The background task
+    # opens its own session — the request-scoped session is not safe to use
+    # after the response is sent.
+    background_tasks.add_task(
+        _persist_parse_background,
+        session_factory, payload, candidate_results, sentences, uuid_to_candidate, current_user,
+    )
 
     try:
-        await cache_task
+        await asyncio.ensure_future(set_json(cache_key, response_json))
     except Exception:
         pass  # Redis unavailable — return result uncached
 
@@ -130,6 +127,27 @@ async def parse_text(
         (time.perf_counter() - t0) * 1000,
     )
     return response
+
+
+async def _persist_parse_background(
+    session_factory,
+    payload: ParseRequest,
+    candidate_results: list[CandidateSentenceResult],
+    sentences: list[SentenceResult],
+    uuid_to_candidate: dict[str, tuple[str, CandidateObject]],
+    user_id: str,
+) -> None:
+    """Open a fresh DB session and persist the parse results.
+
+    Called by FastAPI's BackgroundTasks after the HTTP response has been sent.
+    Creating a new session here is necessary because the request-scoped session
+    is closed before background tasks run.
+    """
+    try:
+        async with session_factory() as db:
+            await _persist_parse(db, payload, candidate_results, sentences, uuid_to_candidate, user_id)
+    except Exception:
+        logger.warning("Background DB persist failed for /parse", exc_info=True)
 
 
 async def _persist_parse(
