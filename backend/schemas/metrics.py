@@ -4,6 +4,12 @@ from __future__ import annotations
 from pydantic import BaseModel, Field
 
 
+class DailyActivity(BaseModel):
+    """Review count for a single calendar day (UTC)."""
+    date: str = Field(description="ISO-8601 date string, e.g. '2026-04-16'")
+    count: int = Field(description="Number of reviews submitted on this day")
+
+
 class LanguageMetrics(BaseModel):
     """Per-language breakdown of knowledge state."""
     language: str
@@ -68,4 +74,18 @@ class MetricsResponse(BaseModel):
     # ── Weakest areas ─────────────────────────────────────────────────────────
     weakest: list[WeakObject] = Field(
         description="Up to 10 reviewed objects with the lowest mastery_score"
+    )
+
+    # ── Activity (from review_events) ─────────────────────────────────────────
+    reviews_today: int = Field(
+        default=0,
+        description="Reviews submitted today (UTC calendar day)",
+    )
+    streak_days: int = Field(
+        default=0,
+        description="Consecutive calendar days (UTC) ending today with ≥1 review",
+    )
+    daily_activity: list[DailyActivity] = Field(
+        default_factory=list,
+        description="Per-day review counts for the last 30 days (newest first)",
     )
