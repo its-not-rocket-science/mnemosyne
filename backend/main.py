@@ -58,10 +58,12 @@ def _log_config(s: Settings) -> None:
 
 def _warn_config(s: Settings) -> None:
     """Emit warnings for common misconfiguration before traffic arrives."""
-    if not s.debug and "*" in s.cors_origins:
+    # Wildcard CORS in debug mode is expected; in production it is already
+    # rejected by Settings._reject_wildcard_cors_in_production at startup.
+    if s.debug and "*" in s.cors_origins:
         logger.warning(
-            "CORS_ORIGINS contains '*' but DEBUG=False. "
-            "Restrict to specific origins before exposing this service."
+            "CORS_ORIGINS is '*' — this is fine for local development but "
+            "must be restricted before deploying (set DEBUG=False to enforce)."
         )
     if s.jwt_secret == "CHANGE_ME_IN_PRODUCTION":
         logger.warning(
