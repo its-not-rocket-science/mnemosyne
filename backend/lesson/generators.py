@@ -87,13 +87,9 @@ _POS_OPTIONS: list[str] = [
 
 # ── Conjugation display ───────────────────────────────────────────────────────
 
-# ARCH (multilingual gap): tense terminology is language-specific.
-# "preterite" is a Spanish term; French uses "imparfait"; German uses
-# "Präteritum" (labelled "past" here).  All are in this pool so MC drills
-# work for every language, but wrong options may include misleading terms
-# for a given language (e.g. "preterite" appearing in a German drill).
-# Future fix: make this pool pluggable via lesson_data["tense_options"] or
-# a per-language registry so each plugin can supply appropriate terms.
+# Global tense pool — used only when a plugin does not declare its own
+# ``tense_pool`` via ``LanguageCapabilities``.  Covers the broadest set of
+# plausible options across all supported languages.
 _TENSE_OPTIONS: list[str] = [
     "present", "preterite", "imperfect", "future", "conditional", "past",
 ]
@@ -340,14 +336,26 @@ def _build_conjugation(b: _B) -> LessonResponse:
     ))
 
     if tense != "unknown":
+        tense_pool = list(b.ctx.tense_pool) if b.ctx.tense_pool else _TENSE_OPTIONS
         mc = _make_mc_drill(
             seed=seed,
             prompt=f"What tense is \u201c{surface}\u201d?",
             correct=tense,
-            pool=_TENSE_OPTIONS,
+            pool=tense_pool,
         )
         if mc:
             drills.append(mc)
+
+    if mood != "unknown":
+        mood_pool = list(b.ctx.mood_pool) if b.ctx.mood_pool else _MOOD_OPTIONS
+        mc_mood = _make_mc_drill(
+            seed=seed + "mood",
+            prompt=f"What mood is \u201c{surface}\u201d?",
+            correct=mood,
+            pool=mood_pool,
+        )
+        if mc_mood:
+            drills.append(mc_mood)
 
     if b.lesson_data.get("is_reflexive") is not None:
         drills.append(RecognitionDrill(

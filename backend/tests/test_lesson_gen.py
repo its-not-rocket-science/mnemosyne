@@ -268,3 +268,123 @@ def test_vocabulary_fields_include_pos():
     )
     labels = {f.label for f in lesson.fields}
     assert "Part of speech" in labels
+
+
+# ── pluggable tense/mood pools ────────────────────────────────────────────────
+
+
+class TestPluggablePools:
+    """LessonContext tense_pool / mood_pool are used instead of global defaults."""
+
+    _CONJ = {
+        "lemma": "hablar", "surface": "hablo",
+        "tense": "present", "mood": "indicative",
+        "person": "1", "number": "Sing",
+    }
+
+    def _mc_drills(self, lesson) -> list:
+        return [d for d in lesson.drills if d.type == "multiple_choice"]
+
+    def test_tense_mc_uses_global_pool_when_no_context(self):
+        """Without a context, the global _TENSE_OPTIONS pool is used."""
+        from backend.lesson.generators import _TENSE_OPTIONS
+        lesson = build_lesson(
+            object_id="x", obj_type="conjugation",
+            canonical_form="c", display_label="hablo",
+            lesson_data=self._CONJ,
+        )
+        mc_drills = self._mc_drills(lesson)
+        tense_mc = next(d for d in mc_drills if "tense" in d.prompt.lower())
+        for opt in tense_mc.options:
+            assert opt in _TENSE_OPTIONS
+
+    def test_tense_mc_uses_language_pool_when_context_set(self):
+        """With a tense_pool on LessonContext, wrong options are from that pool only."""
+        spanish_pool = ("present", "preterite", "imperfect", "future", "conditional")
+        ctx = LessonContext(
+            language_code="es", language_name="Spanish",
+            tense_pool=spanish_pool,
+        )
+        lesson = build_lesson(
+            object_id="x", obj_type="conjugation",
+            canonical_form="c", display_label="hablo",
+            lesson_data=self._CONJ,
+            context=ctx,
+        )
+        mc_drills = self._mc_drills(lesson)
+        tense_mc = next(d for d in mc_drills if "tense" in d.prompt.lower())
+        for opt in tense_mc.options:
+            assert opt in spanish_pool, f"Unexpected option {opt!r} not in Spanish tense pool"
+
+    def test_german_tense_pool_excludes_preterite(self):
+        """German tense pool should not offer 'preterite' as a wrong answer."""
+        german_pool = ("present", "past", "perfect", "pluperfect", "future")
+        ctx = LessonContext(
+            language_code="de", language_name="German",
+            tense_pool=german_pool,
+        )
+        lesson = build_lesson(
+            object_id="x", obj_type="conjugation",
+            canonical_form="c", display_label="spricht",
+            lesson_data={**self._CONJ, "tense": "present", "lemma": "sprechen"},
+            context=ctx,
+        )
+        mc_drills = self._mc_drills(lesson)
+        tense_mc = next(d for d in mc_drills if "tense" in d.prompt.lower())
+        assert "preterite" not in tense_mc.options
+
+    def test_mood_mc_drill_present_when_mood_known(self):
+        """A mood MC drill is emitted when mood is known and pool has enough options."""
+        ctx = LessonContext(
+            language_code="fr", language_name="French",
+            mood_pool=("indicative", "subjunctive", "conditional", "imperative"),
+        )
+        lesson = build_lesson(
+            object_id="x", obj_type="conjugation",
+            canonical_form="c", display_label="parle",
+            lesson_data={**self._CONJ, "mood": "indicative"},
+            context=ctx,
+        )
+        mc_drills = self._mc_drills(lesson)
+        mood_mc = next((d for d in mc_drills if "mood" in d.prompt.lower()), None)
+        assert mood_mc is not None, "Expected a mood MC drill"
+        assert mood_mc.options[mood_mc.answer_index] == "indicative"
+
+    def test_mood_mc_absent_when_mood_unknown(self):
+        """No mood MC drill when lesson_data has no mood (or mood is 'unknown')."""
+        lesson = build_lesson(
+            object_id="x", obj_type="conjugation",
+            canonical_form="c", display_label="hablo",
+            lesson_data={**self._CONJ, "mood": "unknown"},
+        )
+        mc_drills = self._mc_drills(lesson)
+        mood_mcs = [d for d in mc_drills if "mood" in d.prompt.lower()]
+        assert mood_mcs == []
+
+    def test_from_capabilities_populates_pools(self):
+        """LessonContext.from_capabilities transfers tense_pool and mood_pool."""
+        from backend.schemas.language import LanguageCapabilities
+        caps = LanguageCapabilities(
+            code="es", display_name="Spanish", direction="ltr",
+            script_family="latin", tokenization_mode="whitespace",
+            morphology_depth="rich",
+            lesson_modes_supported=["morphology"],
+            tense_pool=["present", "preterite", "imperfect"],
+            mood_pool=["indicative", "subjunctive"],
+        )
+        ctx = LessonContext.from_capabilities(caps)
+        assert ctx.tense_pool == ("present", "preterite", "imperfect")
+        assert ctx.mood_pool == ("indicative", "subjunctive")
+
+    def test_from_capabilities_none_pools_stay_none(self):
+        """When a plugin declares no pools, context pools are None (use global)."""
+        from backend.schemas.language import LanguageCapabilities
+        caps = LanguageCapabilities(
+            code="xx", display_name="Unknown", direction="ltr",
+            script_family="latin", tokenization_mode="whitespace",
+            morphology_depth="shallow",
+            lesson_modes_supported=["vocabulary"],
+        )
+        ctx = LessonContext.from_capabilities(caps)
+        assert ctx.tense_pool is None
+        assert ctx.mood_pool is None
