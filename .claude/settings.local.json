@@ -19,7 +19,10 @@
       "Bash(git:*)",
       "Bash(pip show *)",
       "Bash(pip list *)",
-      "Bash(pip index *)"
+      "Bash(pip index *)",
+      "Bash(grep -n \"sentry\\\\|fastapi\" requirements*.txt)",
+      "Bash(ls *)",
+      "Bash(grep *)"
     ]
   }
 }

@@ -36,17 +36,26 @@ silently dropped.
                     gender_match, number_match, confidence_note
 
 ─────────────────────────────────────────────────────────────────────────────
-NOT YET IMPLEMENTED (future iterations)
+GRAMMAR PATTERNS
 ─────────────────────────────────────────────────────────────────────────────
 
-Grammar patterns (être-copula, avoir-perfect, aller-near-future, etc.) are
-not yet emitted.  French constructions differ significantly from Spanish:
-  - être-copula pattern differs from Spanish ser/estar distinction
-  - Passé composé (avoir/être + past participle) has no Spanish equivalent
-  - Aller + infinitive parallels Spanish ir-near-future
+**Grammar** — periphrastic construction objects derived from conjugation
+results.  One object per distinct construction type per sentence.  Covers:
+  être_copula, avoir_perfect, être_perfect, aller_near_future.
 
-Idiom detection and nuance objects are also deferred pending curation of a
-French-specific idiom table.
+  lesson_data keys: pattern_id, pattern, usage, contrast, verb_lemma,
+                    surface_verb
+
+**Idiom** — ~35 common fixed French expressions detected by surface-form
+token matching against a curated table.
+
+  lesson_data keys: phrase, meaning, register
+
+**Nuance** — aspectual and modal observations derived from conjugation
+results.  Covers: imperfect_aspect, subjunctive_mood, conditional_mood,
+reflexive_verb.
+
+  lesson_data keys: nuance_type, lemma, surface, note, contrast_tense*
 
 ─────────────────────────────────────────────────────────────────────────────
 KNOWN MODEL LIMITATIONS (fr_core_news_sm)
@@ -158,6 +167,104 @@ _IRREGULAR_VERBS: frozenset[str] = frozenset({
 })
 
 
+# ── Idiom table ───────────────────────────────────────────────────────────────
+# Each entry: (token_tuple_lowercase, english_meaning, register)
+# Sorted longest-first so a longer match claims positions before shorter ones.
+# Only invariant fixed-form expressions are listed.  Verb-headed idioms
+# (e.g. "casser les pieds") require lemma matching and are not yet supported.
+
+_IDIOM_TABLE: tuple[tuple[tuple[str, ...], str, str], ...] = (
+    # ── 4-word ────────────────────────────────────────────────────────────────
+    (("de", "temps", "en", "temps"),    "from time to time",               "neutral"),
+    (("de", "toute", "façon"),           "anyway / in any case",            "neutral"),
+    (("tout", "au", "plus"),             "at most",                         "neutral"),
+    # ── 3-word ────────────────────────────────────────────────────────────────
+    (("tout", "à", "fait"),              "absolutely / quite right",        "neutral"),
+    (("tout", "de", "même"),             "all the same / even so",          "neutral"),
+    (("tout", "à", "coup"),              "suddenly",                        "neutral"),
+    (("tout", "de", "suite"),            "immediately / right away",        "neutral"),
+    (("à", "peu", "près"),               "approximately / more or less",    "neutral"),
+    (("à", "vrai", "dire"),              "to tell the truth",               "formal"),
+    (("à", "la", "fois"),               "at the same time / both",          "neutral"),
+    (("en", "même", "temps"),           "at the same time",                 "neutral"),
+    (("en", "tout", "cas"),             "in any case / at any rate",        "neutral"),
+    (("à", "ce", "propos"),             "on that subject / in that regard", "formal"),
+    (("bien", "au", "contraire"),       "quite the contrary",               "neutral"),
+    # ── 2-word ────────────────────────────────────────────────────────────────
+    (("bien", "sûr"),                   "of course",                        "neutral"),
+    (("bien", "entendu"),               "of course / naturally",            "formal"),
+    (("en", "effet"),                   "indeed / in fact",                 "formal"),
+    (("par", "exemple"),                "for example",                      "neutral"),
+    (("en", "fait"),                    "in fact / actually",               "neutral"),
+    (("de", "plus"),                    "furthermore / moreover",           "neutral"),
+    (("en", "général"),                 "in general / generally",           "neutral"),
+    (("après", "tout"),                 "after all",                        "neutral"),
+    (("sans", "doute"),                 "no doubt / probably",              "neutral"),
+    (("en", "revanche"),                "on the other hand / in return",    "formal"),
+    (("au", "contraire"),               "on the contrary",                  "neutral"),
+    (("au", "moins"),                   "at least",                         "neutral"),
+    (("à", "nouveau"),                  "again / anew",                     "neutral"),
+    (("quand", "même"),                 "all the same / nevertheless",      "neutral"),
+    (("par", "contre"),                 "on the other hand",                "neutral"),
+    (("en", "principe"),                "in principle / as a rule",         "neutral"),
+    (("en", "pratique"),                "in practice",                      "neutral"),
+    (("à", "part"),                     "apart from / except for",          "neutral"),
+    (("en", "dehors"),                  "outside / apart from",             "neutral"),
+    (("tôt", "ou"),                     "sooner or later",                  "neutral"),
+)
+
+# ── Grammar patterns ──────────────────────────────────────────────────────────
+# Each entry: (construction, required_lemma_or_None, pattern_id,
+#              pattern_label, usage_text, contrast_text)
+# Matched against the ``construction`` and ``lemma`` fields of conjugation
+# candidates produced by ``_extract_conjugations``.
+
+_GRAMMAR_PATTERNS: tuple[
+    tuple[str, str | None, str, str, str, str], ...
+] = (
+    (
+        "copula", "être",
+        "être_copula",
+        "être + [noun / adjective]",
+        "Expresses identity, profession, nationality, and descriptive states: "
+        "'Je suis médecin', 'Elle est intelligente'. "
+        "Unlike Spanish, French uses a single copula for both permanent and "
+        "temporary states.",
+        "English learners should resist translating 'be' as 'avoir'; "
+        "'avoir' is used for age and physical sensations "
+        "('j'ai faim', 'j'ai vingt ans').",
+    ),
+    (
+        "perfect", "avoir",
+        "avoir_perfect",
+        "avoir + [past participle]",
+        "Forms the passé composé for most verbs: 'j'ai mangé' (I ate / I have eaten). "
+        "The past participle agrees in gender and number with a preceding direct object.",
+        "Verbs of movement and reflexive verbs use être, not avoir, to form the passé composé.",
+    ),
+    (
+        "perfect", "être",
+        "être_perfect",
+        "être + [past participle]",
+        "Forms the passé composé for verbs of movement and state change "
+        "(aller, venir, partir, arriver, naître, mourir, etc.) and all reflexive verbs: "
+        "'il est parti', 'elle s'est levée'. "
+        "The past participle agrees with the subject in gender and number.",
+        "Most other verbs use avoir to form the passé composé.",
+    ),
+    (
+        "near_future", "aller",
+        "aller_near_future",
+        "aller + [infinitive]",
+        "Expresses a planned or near-future action: "
+        "'je vais étudier' (I am going to study). "
+        "More common than the simple future in everyday speech.",
+        "The simple future (j'étudierai) is more formal and used for "
+        "more distant or uncertain events.",
+    ),
+)
+
+
 # ── Plugin ────────────────────────────────────────────────────────────────────
 
 class FrenchPlugin:
@@ -178,7 +285,7 @@ class FrenchPlugin:
         tokenization_quality="high",      # French word tokenisation + elision handling is reliable
         morphology_quality="medium",      # small model; verb POS-tagging errors in some contexts
         syntax_support=True,              # dep parse used for modifier / reflexive detection
-        idiom_detection=False,            # not yet implemented
+        idiom_detection=True,             # curated fixed-expression table (~35 entries)
         tts_lang_tag="fr",
         transliteration_scheme=None,
     )
@@ -240,6 +347,12 @@ class FrenchPlugin:
         candidates.extend(conj_candidates)
         candidates.extend(self._extract_vocabulary(tokens, seen_vocab))
         candidates.extend(self._extract_agreements(tokens))
+        candidates.extend(self._extract_idioms(tokens))
+
+        seen_grammar: set[str] = set()
+        seen_nuance:  set[str] = set()
+        candidates.extend(self._extract_grammar(conj_candidates, seen_grammar))
+        candidates.extend(self._extract_nuance(conj_candidates, seen_nuance))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
@@ -339,6 +452,7 @@ class FrenchPlugin:
             seen_vocab.add(lemma)
 
             is_reflexive    = _has_reflexive_clitic(tok, tokens)
+            construction    = _detect_construction(tok)
             confidence      = self._conj_confidence(tok, feats)
             confidence_note = _conj_confidence_note(feats, tok.is_oov)
 
@@ -351,6 +465,7 @@ class FrenchPlugin:
                 "number":         feats["number"],
                 "morph_complete": _conj_is_complete(feats),
                 "is_reflexive":   is_reflexive,
+                "construction":   construction,
                 "paradigm_class": _paradigm_class(lemma),
                 "is_irregular":   lemma in _IRREGULAR_VERBS,
             }
@@ -491,7 +606,334 @@ class FrenchPlugin:
         return candidates
 
 
+    # ------------------------------------------------------------------
+    # Idioms
+    # ------------------------------------------------------------------
+
+    def _extract_idioms(self, tokens: list[Any]) -> list[CandidateObject]:
+        """Detect invariant multi-word expressions by surface-form token matching.
+
+        Scans the lowercased token sequence for entries in ``_IDIOM_TABLE``.
+        The table is sorted longest-first so a longer match claims positions
+        before shorter overlapping phrases are considered.
+
+        Confidence is 0.90: direct string equality on a curated fixed-form
+        list requires no morphological analysis.
+        """
+        if not tokens:
+            return []
+
+        lower_texts = [t.text.lower() for t in tokens]
+        n = len(lower_texts)
+        seen_idioms: set[str] = set()
+        used_positions: set[int] = set()
+        candidates: list[CandidateObject] = []
+
+        for words, meaning, register in _IDIOM_TABLE:
+            wlen = len(words)
+            for start in range(n - wlen + 1):
+                if any(start + k in used_positions for k in range(wlen)):
+                    continue
+                if lower_texts[start : start + wlen] == list(words):
+                    phrase = " ".join(words)
+                    if phrase in seen_idioms:
+                        continue
+                    seen_idioms.add(phrase)
+                    used_positions.update(range(start, start + wlen))
+                    surface = " ".join(t.text for t in tokens[start : start + wlen])
+                    candidates.append(CandidateObject(
+                        canonical_form=phrase,
+                        surface_form=surface,
+                        type="idiom",
+                        label=surface,
+                        lesson_data={
+                            "phrase":   phrase,
+                            "meaning":  meaning,
+                            "register": register,
+                        },
+                        confidence=0.90,
+                    ))
+
+        return candidates
+
+    # ------------------------------------------------------------------
+    # Grammar patterns
+    # ------------------------------------------------------------------
+
+    def _extract_grammar(
+        self,
+        conj_candidates: list[CandidateObject],
+        seen_grammar: set[str],
+    ) -> list[CandidateObject]:
+        """Emit grammar-pattern objects derived from conjugation results.
+
+        Each construction type is emitted at most once per sentence.  Grammar
+        objects complement conjugation objects: the conjugation tells the
+        learner *which* form was used; the grammar object explains *why* the
+        construction exists and what the contrast is.
+
+        Confidence is 0.85: construction detection is based on spaCy dependency
+        arcs and is reliable for common sentences.
+        """
+        candidates: list[CandidateObject] = []
+
+        for conj in conj_candidates:
+            construction = conj.lesson_data.get("construction", "standalone")
+            lemma        = conj.lesson_data.get("lemma", "")
+            surface_verb = conj.lesson_data.get("surface", conj.label)
+
+            for (
+                expected_construction,
+                expected_lemma,
+                pattern_id,
+                pattern,
+                usage,
+                contrast,
+            ) in _GRAMMAR_PATTERNS:
+                if construction != expected_construction:
+                    continue
+                if expected_lemma is not None and lemma != expected_lemma:
+                    continue
+
+                canonical_form = f"grammar:{pattern_id}"
+                if canonical_form in seen_grammar:
+                    continue
+                seen_grammar.add(canonical_form)
+
+                candidates.append(CandidateObject(
+                    canonical_form=canonical_form,
+                    surface_form=surface_verb,
+                    type="grammar",
+                    label=surface_verb,
+                    lesson_data={
+                        "pattern_id":   pattern_id,
+                        "pattern":      pattern,
+                        "usage":        usage,
+                        "contrast":     contrast,
+                        "verb_lemma":   lemma,
+                        "surface_verb": surface_verb,
+                    },
+                    confidence=0.85,
+                    relation_hints=[
+                        RelationHint(
+                            relation_type="instance_of",
+                            target_canonical_form=conj.canonical_form,
+                            target_type="conjugation",
+                        )
+                    ],
+                ))
+
+        return candidates
+
+    # ------------------------------------------------------------------
+    # Nuance
+    # ------------------------------------------------------------------
+
+    def _extract_nuance(
+        self,
+        conj_candidates: list[CandidateObject],
+        seen_nuance: set[str],
+    ) -> list[CandidateObject]:
+        """Emit nuance observations derived from conjugation results.
+
+        Four nuance types:
+
+          imperfect_aspect  — tense == "imperfect"
+            The imparfait signals ongoing, habitual, or background past action.
+            Confidence 0.78.
+
+          subjunctive_mood  — mood == "subjunctive"
+            The subjonctif signals doubt, desire, emotion, or subordinate
+            hypotheticals.  Confidence 0.72.
+
+          conditional_mood  — mood == "conditional"
+            The conditionnel signals hypothesis, polite requests, or reported
+            speech.  Confidence 0.78.
+
+          reflexive_verb    — is_reflexive == True
+            Verbes pronominaux use a reflexive pronoun that changes the meaning
+            or signals reciprocal action.  Confidence 0.82.
+        """
+        candidates: list[CandidateObject] = []
+
+        for conj in conj_candidates:
+            tense        = conj.lesson_data.get("tense")
+            mood         = conj.lesson_data.get("mood")
+            is_reflexive = conj.lesson_data.get("is_reflexive", False)
+            lemma        = conj.lesson_data.get("lemma", "")
+            surface      = conj.lesson_data.get("surface", conj.label)
+
+            # ── Imperfect aspect ──────────────────────────────────────────────
+            if tense == "imperfect":
+                cf = f"nuance:imperfect_aspect:{lemma}"
+                if cf not in seen_nuance:
+                    seen_nuance.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=surface,
+                        type="nuance",
+                        label=surface,
+                        lesson_data={
+                            "nuance_type":    "imperfect_aspect",
+                            "lemma":          lemma,
+                            "surface":        surface,
+                            "note": (
+                                "The imparfait describes an ongoing, habitual, or "
+                                "background action in the past. Contrast with the "
+                                "passé composé, which marks a completed event."
+                            ),
+                            "contrast_tense": "passé composé",
+                        },
+                        confidence=0.78,
+                        relation_hints=[
+                            RelationHint(
+                                relation_type="nuance_of",
+                                target_canonical_form=conj.canonical_form,
+                                target_type="conjugation",
+                            )
+                        ],
+                    ))
+
+            # ── Subjunctive mood ──────────────────────────────────────────────
+            if mood == "subjunctive":
+                cf = f"nuance:subjunctive_mood:{lemma}"
+                if cf not in seen_nuance:
+                    seen_nuance.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=surface,
+                        type="nuance",
+                        label=surface,
+                        lesson_data={
+                            "nuance_type": "subjunctive_mood",
+                            "lemma":       lemma,
+                            "surface":     surface,
+                            "note": (
+                                "The subjonctif expresses doubt, desire, emotion, "
+                                "or hypothetical situations. It typically appears after "
+                                "verbs of wanting, fearing, or doubting, and after "
+                                "subordinating conjunctions such as 'pour que', "
+                                "'bien que', and 'avant que'."
+                            ),
+                        },
+                        confidence=0.72,
+                        relation_hints=[
+                            RelationHint(
+                                relation_type="nuance_of",
+                                target_canonical_form=conj.canonical_form,
+                                target_type="conjugation",
+                            )
+                        ],
+                    ))
+
+            # ── Conditional mood ──────────────────────────────────────────────
+            if mood == "conditional":
+                cf = f"nuance:conditional_mood:{lemma}"
+                if cf not in seen_nuance:
+                    seen_nuance.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=surface,
+                        type="nuance",
+                        label=surface,
+                        lesson_data={
+                            "nuance_type": "conditional_mood",
+                            "lemma":       lemma,
+                            "surface":     surface,
+                            "note": (
+                                "The conditionnel is used for hypothetical situations "
+                                "('si j'avais le temps, je lirais'), polite requests "
+                                "('je voudrais un café'), and reported speech "
+                                "('il a dit qu'il viendrait')."
+                            ),
+                        },
+                        confidence=0.78,
+                        relation_hints=[
+                            RelationHint(
+                                relation_type="nuance_of",
+                                target_canonical_form=conj.canonical_form,
+                                target_type="conjugation",
+                            )
+                        ],
+                    ))
+
+            # ── Reflexive / pronominal verb ───────────────────────────────────
+            if is_reflexive:
+                cf = f"nuance:reflexive_verb:{lemma}"
+                if cf not in seen_nuance:
+                    seen_nuance.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=surface,
+                        type="nuance",
+                        label=surface,
+                        lesson_data={
+                            "nuance_type": "reflexive_verb",
+                            "lemma":       lemma,
+                            "surface":     surface,
+                            "note": (
+                                "This verb uses a reflexive pronoun "
+                                "(me / te / se / nous / vous). The pronoun signals "
+                                "a reflexive action (the subject acts on itself), "
+                                "a reciprocal action (two subjects act on each other), "
+                                "or is intrinsic to the meaning of the verb "
+                                "(verbe essentiellement pronominal, e.g. se souvenir)."
+                            ),
+                        },
+                        confidence=0.82,
+                        relation_hints=[
+                            RelationHint(
+                                relation_type="nuance_of",
+                                target_canonical_form=conj.canonical_form,
+                                target_type="conjugation",
+                            )
+                        ],
+                    ))
+
+        return candidates
+
+
 # ── Module-level helpers (stateless) ─────────────────────────────────────────
+
+def _detect_construction(tok: Any) -> str:
+    """Annotate the periphrastic construction for a conjugated verb token.
+
+    Returns one of:
+        "standalone"   — simple finite verb, not part of a known periphrasis
+        "copula"       — être as a copula  (je suis médecin)
+        "perfect"      — avoir/être + past participle  (j'ai mangé / il est parti)
+        "near_future"  — aller + infinitive  (je vais étudier)
+        "progressive"  — être en train de + infinitive  (rare with this model)
+        "modal"        — modal AUX + infinitive  (je dois partir)
+
+    Handles both the canonical AUX case and a fr_core_news_sm quirk where
+    "aller" in the near-future construction is tagged as VERB ROOT (not AUX)
+    with the dependent infinitive attached via dep_=xcomp.
+    """
+    if tok.pos_ == "AUX":
+        if tok.dep_ == "cop":
+            return "copula"
+        if tok.dep_ in {"aux", "aux:pass"}:
+            head_vf = _morph_first(tok.head, "VerbForm")
+            if head_vf == "Part":
+                return "perfect"
+            if head_vf == "Inf":
+                lemma = tok.lemma_.lower()
+                return "near_future" if lemma == "aller" else "modal"
+            if head_vf == "Ger":
+                return "progressive"
+    elif tok.pos_ == "VERB" and tok.lemma_.lower() == "aller":
+        # fr_core_news_sm tags "aller" as VERB ROOT in "je vais + infinitive".
+        # Detect near_future by looking for an xcomp infinitive child.
+        for child in tok.children:
+            if (
+                child.pos_ in {"VERB", "AUX"}
+                and child.dep_ == "xcomp"
+                and _morph_first(child, "VerbForm") == "Inf"
+            ):
+                return "near_future"
+    return "standalone"
+
 
 def _morph_first(tok: Any, feature: str) -> str | None:
     """Return the first value for a morph feature, or None if absent."""
