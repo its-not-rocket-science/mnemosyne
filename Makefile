@@ -46,12 +46,12 @@ lint: ## Lint (ruff) and type-check (mypy)
 	mypy backend --ignore-missing-imports
 
 lock: ## Regenerate poetry.lock from pyproject.toml (required before docker build)
-	poetry lock --no-update
+	poetry lock
 
 # ── Docker ────────────────────────────────────────────────────────────────────
 
 build: ## Build (or rebuild) the app image — generates poetry.lock if absent
-	@test -f poetry.lock || { echo "No poetry.lock found — running 'poetry lock' first"; poetry lock --no-update; }
+	@test -f poetry.lock || { echo "No poetry.lock found — running 'poetry lock' first"; poetry lock; }
 	$(COMPOSE) build
 
 up: ## Start all services in the background

@@ -22,7 +22,12 @@
       "Bash(pip index *)",
       "Bash(grep -n \"sentry\\\\|fastapi\" requirements*.txt)",
       "Bash(ls *)",
-      "Bash(grep *)"
+      "Bash(grep *)",
+      "Bash(poetry lock *)",
+      "Bash(docker compose *)",
+      "Bash(where docker *)",
+      "Bash(docker --version)",
+      "Bash(poetry *)"
     ]
   }
 }
