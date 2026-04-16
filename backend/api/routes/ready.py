@@ -1,11 +1,15 @@
-"""Readiness probe — verifies that the DB and Redis are reachable.
+"""Readiness probe — verifies that the DB, Redis, and plugins are healthy.
 
 GET /ready
 
-Returns 200 {"status": "ready", "db": "ok", "redis": "ok"} when all
-backing services respond normally.
+Returns 200 {"status": "ready", "db": "ok", "redis": "ok", "plugins": "ok"}
+when all backing services respond normally and every plugin loaded.
 
 Returns 503 with per-service error detail on any failure.
+
+``plugins`` is included in the degraded status even though it does not block
+DB or Redis I/O — a partially-loaded plugin set means some languages will
+return 404 on parse/lesson requests, which is observable and worth flagging.
 
 Use this endpoint for:
   - Kubernetes readiness probes (kubelet stops sending traffic on 503)
@@ -17,19 +21,23 @@ live I/O against each dependency on every call — it is never cached.
 """
 from __future__ import annotations
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 from fastapi.responses import JSONResponse
 from sqlalchemy import text
 
+from backend.api.dependencies import get_plugin_registry
 from backend.core.cache import get_redis
 from backend.core.database import engine
+from backend.parsing.plugin_loader import PluginRegistry
 
 router = APIRouter(tags=["ops"])
 
 
 @router.get("/ready")
-async def ready() -> JSONResponse:
-    report: dict[str, str] = {"db": "unknown", "redis": "unknown"}
+async def ready(
+    registry: PluginRegistry = Depends(get_plugin_registry),
+) -> JSONResponse:
+    report: dict[str, object] = {"db": "unknown", "redis": "unknown", "plugins": "unknown"}
     failed = False
 
     # ── Database ──────────────────────────────────────────────────────────────
@@ -49,6 +57,14 @@ async def ready() -> JSONResponse:
     except Exception as exc:
         report["redis"] = f"error ({type(exc).__name__})"
         failed = True
+
+    # ── Plugin health ─────────────────────────────────────────────────────────
+    failed_plugins = registry.failed_plugins()
+    if failed_plugins:
+        report["plugins"] = {"degraded": list(failed_plugins.keys())}
+        failed = True
+    else:
+        report["plugins"] = "ok"
 
     report["status"] = "degraded" if failed else "ready"
     return JSONResponse(content=report, status_code=503 if failed else 200)
