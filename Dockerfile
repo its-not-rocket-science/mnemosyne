@@ -11,7 +11,7 @@ WORKDIR /app
 ENV PIP_NO_CACHE_DIR=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    POETRY_VERSION=1.8.3 \
+    POETRY_VERSION=2.1.0 \
     POETRY_VIRTUALENVS_CREATE=false
 
 RUN pip install "poetry==$POETRY_VERSION"
@@ -21,12 +21,20 @@ RUN pip install "poetry==$POETRY_VERSION"
 COPY pyproject.toml poetry.lock ./
 RUN poetry install --without dev --no-interaction --no-ansi
 
-# Download the spaCy model into the image so containers start immediately.
+# Download spaCy models for the ES/FR/DE beta language trio.
+# Each model is downloaded in a separate RUN so a single model failure does not
+# invalidate the other layers during development rebuilds.
 RUN python -m spacy download es_core_news_sm
+RUN python -m spacy download fr_core_news_sm
+RUN python -m spacy download de_core_news_sm
 
 # Application source is copied after deps to preserve layer caching on code changes.
 COPY backend/ ./backend/
 COPY frontend/ ./frontend/
+
+# Alembic migrations — must be present so the startup migration runner works.
+COPY alembic/ ./alembic/
+COPY alembic.ini ./
 
 # Run as a non-root user.
 RUN useradd -m -u 1001 appuser && chown -R appuser /app
