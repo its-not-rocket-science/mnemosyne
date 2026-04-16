@@ -16,7 +16,7 @@ from httpx import ASGITransport, AsyncClient
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
-from backend.core.database import get_db_session
+from backend.core.database import get_db_session, get_session_factory
 from backend.main import app
 from backend.models import Base, UserKnowledgeRow
 from backend.srs.fsrs import CardState, default_state, review as fsrs_review
@@ -55,10 +55,12 @@ async def async_client(db_engine):
             yield session
 
     app.dependency_overrides[get_db_session] = _override_db
+    app.dependency_overrides[get_session_factory] = lambda: factory
     transport = ASGITransport(app=app)
     async with AsyncClient(transport=transport, base_url="http://test") as client:
         yield client
     app.dependency_overrides.pop(get_db_session, None)
+    app.dependency_overrides.pop(get_session_factory, None)
 
 
 # ── mastery_score() ───────────────────────────────────────────────────────────
