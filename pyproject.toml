@@ -22,6 +22,7 @@ spacy = "^3.7"
 #   python -m spacy download es_core_news_sm
 httpx = "^0.27.0"
 beautifulsoup4 = "^4.12"
+sentry-sdk = { version = "^2.0", extras = ["fastapi"] }
 
 # ── CJK extras (optional) ─────────────────────────────────────────────────────
 # Required for the Mandarin Chinese plugin (backend/plugins/chinese.py).

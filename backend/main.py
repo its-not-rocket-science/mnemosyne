@@ -7,8 +7,11 @@ import subprocess
 from contextlib import asynccontextmanager
 from pathlib import Path
 
+import sentry_sdk
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from sentry_sdk.integrations.fastapi import FastApiIntegration
+from sentry_sdk.integrations.starlette import StarletteIntegration
 from slowapi.errors import RateLimitExceeded
 
 from backend.api.dependencies import get_plugin_registry
@@ -41,6 +44,40 @@ logger = logging.getLogger(__name__)
 settings = get_settings()
 
 
+def _init_sentry(s: Settings) -> None:
+    """Initialise the Sentry SDK when a DSN is configured.
+
+    A missing or empty DSN is treated as "monitoring disabled" — no exception
+    is raised and no network connection is attempted.  This keeps local
+    development and CI clean without requiring a real DSN.
+
+    The FastAPI + Starlette integrations are enabled together so that:
+      - Unhandled exceptions in route handlers are captured automatically.
+      - Request context (URL, method, user) is attached to each event.
+      - Performance traces are sent when ``traces_sample_rate > 0``.
+    """
+    if not s.sentry_dsn:
+        return
+    environment = s.sentry_environment or ("development" if s.debug else "production")
+    sentry_sdk.init(
+        dsn=s.sentry_dsn,
+        environment=environment,
+        integrations=[
+            StarletteIntegration(transaction_style="url"),
+            FastApiIntegration(transaction_style="url"),
+        ],
+        # Capture 100 % of errors; sample traces at 5 % to stay inside the
+        # free quota on most plans.  Override via SENTRY_TRACES_SAMPLE_RATE.
+        traces_sample_rate=0.05,
+        # Strip PII — email addresses, IP addresses — from captured events.
+        send_default_pii=False,
+    )
+    logger.info("Sentry initialised (environment=%s)", environment)
+
+
+_init_sentry(settings)
+
+
 def _log_config(s: Settings) -> None:
     """Log a sanitised summary of the runtime configuration."""
     # Remove the password from DATABASE_URL before it enters the log stream.
@@ -53,6 +90,7 @@ def _log_config(s: Settings) -> None:
     logger.info("│  cors_origins  : %s", s.cors_origins)
     logger.info("│  plugin_package: %s", s.plugin_package)
     logger.info("│  enabled_langs : %s", s.enabled_languages or "all")
+    logger.info("│  sentry        : %s", "enabled" if s.sentry_dsn else "disabled")
     logger.info("└──────────────────────────────────────────────────────")
 
 

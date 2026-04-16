@@ -36,6 +36,12 @@ class Settings(BaseSettings):
     # Token lifetime in minutes.  Default: 7 days (suitable for web clients
     # storing the token in sessionStorage).
     jwt_expire_minutes: int = 60 * 24 * 7
+    # Sentry DSN for error monitoring.  Leave unset (or empty) to disable.
+    # Set SENTRY_DSN=https://...@sentry.io/... in .env to enable.
+    sentry_dsn: str | None = Field(default=None)
+    # Sentry environment tag — defaults to "development" when debug=True and
+    # "production" when debug=False so events are bucketed correctly.
+    sentry_environment: str | None = Field(default=None)
     # Rate limit applied to /parse and /ingest.
     # Uses slowapi / limits syntax: "N/period" where period is second, minute,
     # hour, or day.  Multiple limits can be joined with ";".
