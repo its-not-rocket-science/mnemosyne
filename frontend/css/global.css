@@ -192,6 +192,95 @@ main:focus {
   padding-block: var(--space-5) var(--space-4);
 }
 
+/* Header inner — lays heading text and user-info side by side on wide screens,
+   stacks them on narrow ones. */
+.site-header__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* User-info pill — email + sign-out button */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  /* Push to the inline-end edge on wide screens. */
+  margin-inline-start: auto;
+}
+
+.user-info__email {
+  font-size: 0.875rem;
+  color: var(--muted);
+  /* Truncate long email addresses on narrow screens. */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-inline-size: 18rem;
+}
+
+/* ── Auth panel ──────────────────────────────────────────────────────────────
+   Displayed when no JWT is in sessionStorage.  Constrained width so the form
+   doesn't stretch the full page on wide viewports.                           */
+
+#auth-panel {
+  padding-block-start: var(--space-4);
+}
+
+#auth-panel .panel {
+  max-inline-size: 28rem;
+  margin-inline: auto;
+}
+
+/* Tab list — two tabs side by side */
+.auth-tabs {
+  display: flex;
+  gap: 0;
+  border-block-end: 2px solid var(--border);
+  margin-block-end: var(--space-3);
+}
+
+.auth-tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-block-end: 3px solid transparent;
+  margin-block-end: -2px;   /* overlap the tablist border */
+  padding-block: var(--space-2);
+  padding-inline: var(--space-3);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--muted);
+  /* 2.75 rem ≈ 44 CSS px — WCAG 2.5.8 minimum touch target size. */
+  min-block-size: 2.75rem;
+  transition: color 0.1s ease, border-color 0.1s ease;
+}
+
+.auth-tab[aria-selected="true"] {
+  color: var(--accent);
+  border-block-end-color: var(--accent);
+}
+
+.auth-tab:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-tab {
+    transition: none;
+  }
+}
+
+/* Auth form — add a bit of breathing room between fields and the submit row. */
+.auth-form .button-row {
+  margin-block-start: var(--space-2);
+}
+
 .eyebrow {
   margin: 0;
   color: var(--muted);

@@ -12,13 +12,97 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <div class="wrap">
-        <!-- aria-hidden: the word is decorative; the h1 is the real page label -->
-        <p class="eyebrow" aria-hidden="true">Mnemosyne</p>
-        <h1>Turn text into a living lesson</h1>
-        <p class="lede">Paste text, parse sentences, open micro-lessons, and rate recall.</p>
+      <div class="wrap site-header__inner">
+        <div>
+          <!-- aria-hidden: the word is decorative; the h1 is the real page label -->
+          <p class="eyebrow" aria-hidden="true">Mnemosyne</p>
+          <h1>Turn text into a living lesson</h1>
+          <p class="lede">Paste text, parse sentences, open micro-lessons, and rate recall.</p>
+        </div>
+        <!--
+          Hidden until JS confirms a signed-in session.
+          aria-label gives a meaningful landmark name for the user controls.
+        -->
+        <div id="user-info" class="user-info" hidden aria-label="Account">
+          <span id="user-email" class="user-info__email" aria-label="Signed in as"></span>
+          <button type="button" id="logout-btn" class="ghost-button">Sign out</button>
+        </div>
       </div>
     </header>
+
+    <!--
+      Auth panel — shown when no JWT is present in sessionStorage.
+      Hidden by JS (initAuth) once a valid session is found or established.
+      role="region" with labelledby makes it a named landmark for AT.
+    -->
+    <section id="auth-panel" class="wrap" aria-labelledby="auth-heading">
+      <div class="panel">
+        <h2 id="auth-heading">Sign in to continue</h2>
+
+        <div id="auth-tablist" role="tablist" aria-label="Authentication" class="auth-tabs">
+          <!--
+            role="tab" + aria-selected + aria-controls:
+            standard tab pattern (ARIA APG authoring practices).
+            tabindex managed via JS arrow-key handler.
+          -->
+          <button id="tab-signin"   role="tab" aria-selected="true"  aria-controls="login-tab"    class="auth-tab" type="button">Sign in</button>
+          <button id="tab-register" role="tab" aria-selected="false" aria-controls="register-tab" class="auth-tab" type="button">Create account</button>
+        </div>
+
+        <!-- Sign-in panel -->
+        <div id="login-tab" role="tabpanel" aria-labelledby="tab-signin">
+          <form id="login-form" class="stack auth-form" novalidate>
+            <div class="field">
+              <label for="login-email">Email</label>
+              <input id="login-email" type="email" autocomplete="email"
+                required aria-required="true" placeholder="you@example.com">
+            </div>
+            <div class="field">
+              <label for="login-password">Password</label>
+              <input id="login-password" type="password" autocomplete="current-password"
+                required aria-required="true" placeholder="••••••••">
+            </div>
+            <div class="button-row">
+              <button type="submit" class="button-primary">Sign in</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Create-account panel -->
+        <div id="register-tab" role="tabpanel" aria-labelledby="tab-register" hidden>
+          <form id="register-form" class="stack auth-form" novalidate>
+            <div class="field">
+              <label for="reg-email">Email</label>
+              <input id="reg-email" type="email" autocomplete="email"
+                required aria-required="true" placeholder="you@example.com">
+            </div>
+            <div class="field">
+              <label for="reg-password">Password</label>
+              <input id="reg-password" type="password" autocomplete="new-password"
+                required aria-required="true" placeholder="••••••••"
+                aria-describedby="pw-hint">
+              <p id="pw-hint" class="field-hint">At least 8 characters.</p>
+            </div>
+            <div class="field">
+              <label for="reg-confirm">Confirm password</label>
+              <input id="reg-confirm" type="password" autocomplete="new-password"
+                required aria-required="true" placeholder="••••••••">
+            </div>
+            <div class="button-row">
+              <button type="submit" class="button-primary">Create account</button>
+            </div>
+          </form>
+        </div>
+
+        <p id="auth-status" role="status" aria-atomic="true" class="status"></p>
+      </div>
+    </section>
+
+    <!--
+      #main-content wraps the app shell.  Hidden until auth is confirmed;
+      revealed by initAuth() in auth.js.
+    -->
+    <div id="main-content" hidden>
 
     <!--
       tabindex="-1" makes <main> programmatically focusable so the skip-link
@@ -164,5 +248,7 @@
     </main>
 
     <mnemosyne-modal id="lesson-modal"></mnemosyne-modal>
+
+    </div><!-- /#main-content -->
   </body>
 </html>
