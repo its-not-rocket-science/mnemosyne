@@ -2,36 +2,23 @@
 
 Computes review success rates, retention, stability, and weak-area
 identification from the current ``user_knowledge`` + ``canonical_objects``
-tables.  All computation is in-process (no stored aggregates).
-
-What is computable without a review-event log
-─────────────────────────────────────────────
-  success_rate      1 − (lapses / reviews) per object, from fsrs_state
-  retention         mastery_score = FSRS retrievability R(t, S) right now
-  avg_stability     fsrs_state["stability"] — days until R drops to 0.90
-  time-since-seen   now − first_seen (requires the first_seen column)
-  by_language       filter / group UserKnowledgeRow.language
-  by_type           join canonical_objects to get the learnable-object type
-
-What requires a future review_events table
-──────────────────────────────────────────
-  retention curves  — score at multiple past timestamps
-  time-to-mastery   — exact datetime the mastery threshold was first crossed
-  per-session stats — reviews per day / week
+tables.  Activity figures (streak, daily counts) come from ``review_events``.
+All computation is in-process (no stored aggregates).
 """
 from __future__ import annotations
 
 import logging
 from collections import defaultdict
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime, timedelta
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session
-from backend.models import CanonicalObjectRow, UserKnowledgeRow
+from backend.models import CanonicalObjectRow, ReviewEventRow, UserKnowledgeRow
 from backend.schemas.metrics import (
+    DailyActivity,
     LanguageMetrics,
     MetricsResponse,
     TypeMetrics,
@@ -85,7 +72,14 @@ async def get_metrics(
         raise HTTPException(status_code=503, detail="Database unavailable") from exc
 
     if not rows:
-        return _empty_response()
+        reviews_today, streak_days, daily_activity = await _activity_metrics(
+            db, current_user, now
+        )
+        return _empty_response(
+            reviews_today=reviews_today,
+            streak_days=streak_days,
+            daily_activity=daily_activity,
+        )
 
     # ── Aggregate in Python ───────────────────────────────────────────────────
 
@@ -206,9 +200,15 @@ async def get_metrics(
             retention=round(b["ret_sum"] / b["reviewed"], 4) if b["reviewed"] else 0.0,
         ))
 
+    # ── Activity from review_events ──────────────────────────────────────────
+    reviews_today, streak_days, daily_activity = await _activity_metrics(
+        db, current_user, now
+    )
+
     logger.info(
-        "metrics lang=%s seen=%d reviewed=%d mastered=%d retention=%.2f",
-        language or "all", total_seen, total_reviewed, total_mastered, overall_retention,
+        "metrics lang=%s seen=%d reviewed=%d mastered=%d retention=%.2f streak=%d",
+        language or "all", total_seen, total_reviewed, total_mastered,
+        overall_retention, streak_days,
     )
 
     return MetricsResponse(
@@ -222,10 +222,81 @@ async def get_metrics(
         by_language=language_rows,
         by_type=type_rows,
         weakest=weakest,
+        reviews_today=reviews_today,
+        streak_days=streak_days,
+        daily_activity=daily_activity,
     )
 
 
-def _empty_response() -> MetricsResponse:
+async def _activity_metrics(
+    db: AsyncSession,
+    user_id: str,
+    now: datetime,
+) -> tuple[int, int, list[DailyActivity]]:
+    """Return (reviews_today, streak_days, daily_activity) from review_events.
+
+    Loads at most 31 days of events for the user so the query is bounded.
+    Falls back to zeroes if the table is unavailable.
+
+    ``daily_activity`` contains one entry per day that had at least one review,
+    covering the last 30 calendar days, newest first.  Days with zero reviews
+    are omitted to keep the payload small.
+
+    ``streak_days`` is the length of the longest unbroken run of days ending
+    on today (UTC).  A day counts if it has at least one review event.
+    """
+    _LOOKBACK = 31  # days
+    cutoff = now - timedelta(days=_LOOKBACK)
+    try:
+        result = await db.execute(
+            select(ReviewEventRow.reviewed_at)
+            .where(
+                ReviewEventRow.user_id == user_id,
+                ReviewEventRow.reviewed_at >= cutoff,
+            )
+            .order_by(ReviewEventRow.reviewed_at)
+        )
+        timestamps = [row[0] for row in result.all()]
+    except Exception:
+        logger.warning("review_events query failed", exc_info=True)
+        return 0, 0, []
+
+    if not timestamps:
+        return 0, 0, []
+
+    today_utc: date = now.date()
+
+    # Count events per calendar day (UTC).
+    counts: dict[date, int] = defaultdict(int)
+    for ts in timestamps:
+        if ts.tzinfo is None:
+            ts = ts.replace(tzinfo=UTC)
+        counts[ts.date()] += 1
+
+    reviews_today = counts.get(today_utc, 0)
+
+    # Streak: walk backwards from today, stop at first gap.
+    streak_days = 0
+    cursor = today_utc
+    while counts.get(cursor, 0) > 0:
+        streak_days += 1
+        cursor -= timedelta(days=1)
+
+    # Daily activity list for last 30 days, newest first, zero-count days omitted.
+    daily_activity: list[DailyActivity] = []
+    for i in range(30):
+        d = today_utc - timedelta(days=i)
+        if d in counts:
+            daily_activity.append(DailyActivity(date=d.isoformat(), count=counts[d]))
+
+    return reviews_today, streak_days, daily_activity
+
+
+def _empty_response(
+    reviews_today: int = 0,
+    streak_days: int = 0,
+    daily_activity: list[DailyActivity] | None = None,
+) -> MetricsResponse:
     return MetricsResponse(
         total_seen=0,
         total_reviewed=0,
@@ -237,4 +308,7 @@ def _empty_response() -> MetricsResponse:
         by_language=[],
         by_type=[],
         weakest=[],
+        reviews_today=reviews_today,
+        streak_days=streak_days,
+        daily_activity=daily_activity or [],
     )

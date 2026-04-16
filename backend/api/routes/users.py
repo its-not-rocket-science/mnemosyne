@@ -39,6 +39,7 @@ from sqlalchemy.orm import outerjoin
 from backend.api.dependencies import get_current_user, get_db_session
 from backend.models import (
     CanonicalObjectRow,
+    ReviewEventRow,
     SourceProgressionRow,
     UserKnowledgeRow,
     UserLanguagePreferenceRow,
@@ -271,6 +272,9 @@ async def delete_my_account(
     create new rows — the deleted user_id is effectively inert.
     """
     try:
+        await db.execute(
+            delete(ReviewEventRow).where(ReviewEventRow.user_id == current_user)
+        )
         await db.execute(
             delete(UserKnowledgeRow).where(UserKnowledgeRow.user_id == current_user)
         )
