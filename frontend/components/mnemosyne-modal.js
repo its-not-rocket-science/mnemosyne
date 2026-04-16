@@ -465,6 +465,7 @@ export class MnemosyneModal extends HTMLElement {
             <div class="examples">
               <p class="example-text"></p>
               <button type="button" class="btn-speak"
+                aria-label="Listen to example"
                 ${!canSpeak ? 'disabled' : ''}>Speak</button>
             </div>
 
@@ -667,6 +668,7 @@ export class MnemosyneModal extends HTMLElement {
     btn.className = 'btn-speak'
     btn.disabled = !canSpeak
     btn.textContent = 'Speak'
+    btn.setAttribute('aria-label', 'Speak drill text aloud')
     btn.addEventListener('click', () => onSpeak?.(drill.text))
 
     el.append(prompt, text, btn)
@@ -736,7 +738,9 @@ export class MnemosyneModal extends HTMLElement {
     el.className = 'drill drill--fill'
     el.setAttribute('aria-label', `Practice drill ${index + 1}: fill in the blank`)
 
+    const promptId = `drill-prompt-${index}`
     const prompt = document.createElement('p')
+    prompt.id = promptId
     prompt.className = 'drill-prompt'
     // Replace ___ with an em-dash run for visual clarity.
     prompt.textContent = drill.prompt.replace('___', '\u2014\u2014\u2014')
@@ -750,6 +754,9 @@ export class MnemosyneModal extends HTMLElement {
     input.type = 'text'
     input.id = inputId
     input.className = 'drill-input'
+    // aria-labelledby associates the fill-blank prompt as the accessible name
+    // for this input (SC 1.3.1 / 4.1.2).
+    input.setAttribute('aria-labelledby', promptId)
     input.setAttribute('placeholder', 'Type your answer')
     input.setAttribute('autocomplete', 'off')
     input.setAttribute('autocorrect', 'off')
