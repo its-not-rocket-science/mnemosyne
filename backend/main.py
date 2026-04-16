@@ -11,6 +11,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from backend.api.dependencies import get_plugin_registry
+from backend.api.routes.auth import router as auth_router
 from backend.api.routes.dashboard import router as dashboard_router
 from backend.api.routes.fetch_url import router as fetch_url_router
 from backend.api.routes.languages import router as languages_router
@@ -59,6 +60,11 @@ def _warn_config(s: Settings) -> None:
         logger.warning(
             "CORS_ORIGINS contains '*' but DEBUG=False. "
             "Restrict to specific origins before exposing this service."
+        )
+    if s.jwt_secret == "CHANGE_ME_IN_PRODUCTION":
+        logger.warning(
+            "JWT_SECRET is using the default insecure value. "
+            "Set a strong random secret in .env before deploying."
         )
     # Detect unchanged default credentials in DATABASE_URL.
     if "postgres:postgres@" in s.database_url or ":changeme@" in s.database_url:
@@ -151,6 +157,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(auth_router)
 app.include_router(ingest_router)
 app.include_router(fetch_url_router)
 app.include_router(parse_router)
