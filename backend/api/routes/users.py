@@ -20,14 +20,21 @@ PUT  /users/me/languages/{language_code}/preferences
 from __future__ import annotations
 
 import logging
+from datetime import UTC, datetime
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.orm import outerjoin
 
 from backend.api.dependencies import get_current_user, get_db_session
-from backend.models import UserLanguagePreferenceRow
-from backend.schemas.user import LanguagePreference, UserPreferences
+from backend.models import CanonicalObjectRow, UserKnowledgeRow, UserLanguagePreferenceRow
+from backend.schemas.user import (
+    KnowledgeExportItem,
+    LanguagePreference,
+    UserExport,
+    UserPreferences,
+)
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["users"], prefix="/users")
@@ -146,4 +153,83 @@ async def set_language_preference(
         show_transliteration=row.show_transliteration,
         script_preference=row.script_preference,
         lesson_mode_override=row.lesson_mode_override,
+    )
+
+
+@router.get("/me/export", response_model=UserExport)
+async def export_my_data(
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> UserExport:
+    """Return a complete portable export of the current user's knowledge state.
+
+    The response is a self-contained JSON document that includes:
+
+    * **knowledge** — every ``user_knowledge`` row for this user, enriched with
+      ``canonical_form``, ``type``, and ``display_label`` from the matching
+      ``canonical_objects`` row (when present).  Items whose canonical object
+      has been deleted are still included; their enrichment fields are ``null``.
+
+    * **language_preferences** — all saved per-language preference overrides.
+
+    This endpoint is intended for data portability.  The ``schema_version``
+    field is ``"1"``; it will be bumped on backwards-incompatible changes so
+    future import tooling can detect format mismatches.
+    """
+    try:
+        # LEFT OUTER JOIN so knowledge rows without a matching canonical object
+        # are still included (no FK between the two tables by design).
+        join_clause = outerjoin(
+            UserKnowledgeRow,
+            CanonicalObjectRow,
+            UserKnowledgeRow.object_id == CanonicalObjectRow.id,
+        )
+        result = await db.execute(
+            select(UserKnowledgeRow, CanonicalObjectRow)
+            .select_from(join_clause)
+            .where(UserKnowledgeRow.user_id == current_user)
+            .order_by(UserKnowledgeRow.last_seen.desc())
+        )
+        knowledge_rows = result.all()
+
+        pref_result = await db.execute(
+            select(UserLanguagePreferenceRow).where(
+                UserLanguagePreferenceRow.user_id == current_user
+            )
+        )
+        pref_rows = pref_result.scalars().all()
+    except Exception as exc:
+        logger.warning("DB export query failed for user %r", current_user, exc_info=True)
+        raise HTTPException(status_code=503, detail="Database unavailable") from exc
+
+    knowledge_items = [
+        KnowledgeExportItem(
+            object_id=uk.object_id,
+            language=uk.language,
+            canonical_form=co.canonical_form if co else None,
+            type=co.type if co else None,
+            display_label=co.display_label if co else None,
+            fsrs_state=uk.fsrs_state,
+            mastery_score=uk.mastery_score,
+            first_seen=uk.first_seen,
+            last_seen=uk.last_seen,
+            total_reviews=uk.total_reviews,
+            due_at=uk.due_at,
+        )
+        for uk, co in knowledge_rows
+    ]
+
+    return UserExport(
+        exported_at=datetime.now(UTC),
+        user_id=current_user,
+        knowledge=knowledge_items,
+        language_preferences=[
+            LanguagePreference(
+                language_code=row.language_code,
+                show_transliteration=row.show_transliteration,
+                script_preference=row.script_preference,
+                lesson_mode_override=row.lesson_mode_override,
+            )
+            for row in pref_rows
+        ],
     )

@@ -36,6 +36,8 @@ existing clients are unaffected.
 """
 from __future__ import annotations
 
+from datetime import datetime
+
 from pydantic import BaseModel, Field
 
 
@@ -76,3 +78,46 @@ class UserPreferences(BaseModel):
         default_factory=list,
         description="Per-language preferences; empty if no overrides have been saved.",
     )
+
+
+class KnowledgeExportItem(BaseModel):
+    """FSRS state for one (user, object) pair, enriched with canonical metadata."""
+
+    object_id: str
+    language: str | None
+    canonical_form: str | None = Field(
+        default=None,
+        description="canonical_form from canonical_objects; None when the object row is absent.",
+    )
+    type: str | None = Field(
+        default=None,
+        description="Object type (vocabulary, conjugation, …); None when object row is absent.",
+    )
+    display_label: str | None = Field(
+        default=None,
+        description="Human-readable label; None when object row is absent.",
+    )
+    fsrs_state: dict | None
+    mastery_score: float
+    first_seen: datetime | None
+    last_seen: datetime
+    total_reviews: int
+    due_at: datetime
+
+
+class UserExport(BaseModel):
+    """Complete portable export of one user's knowledge state.
+
+    Intended for data portability: a user can download this and re-import
+    it into another Mnemosyne instance (import endpoint not yet implemented).
+
+    schema_version
+        Bumped whenever the structure changes in a backwards-incompatible way,
+        so importers can detect format mismatches early.
+    """
+
+    schema_version: str = Field(default="1", description="Export format version.")
+    exported_at: datetime
+    user_id: str
+    knowledge: list[KnowledgeExportItem] = Field(default_factory=list)
+    language_preferences: list[LanguagePreference] = Field(default_factory=list)
