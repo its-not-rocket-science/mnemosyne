@@ -83,6 +83,7 @@ Copy `.env.example` to `.env` and set at minimum:
 | `MAX_PARSE_CHARS` | no | Default `10000` |
 | `RATE_LIMIT_PARSE` | no | Default `20/minute` |
 | `SENTRY_DSN` | no | Leave empty to disable error monitoring |
+| `ENABLED_LANGUAGES` | no | Comma-separated BCP-47 codes, e.g. `es,fr` — see below |
 
 Postgres-specific (consumed by the `postgres` container in Compose):
 
@@ -91,6 +92,56 @@ Postgres-specific (consumed by the `postgres` container in Compose):
 | `POSTGRES_DB` | `mnemosyne` |
 | `POSTGRES_USER` | `mnemosyne` |
 | `POSTGRES_PASSWORD` | `changeme` — **change before deploying** |
+
+---
+
+## Single-language deployments
+
+`ENABLED_LANGUAGES` restricts which plugins are loaded at startup.  Set it to a
+comma-separated list of BCP-47 codes when you only need a subset of the
+bundled languages:
+
+```bash
+# .env — Spanish and French only
+ENABLED_LANGUAGES=es,fr
+```
+
+Behaviour:
+
+- Plugins not in the list are skipped silently — no `WARNING` is emitted.
+- The database is **not modified** — existing rows for excluded languages are
+  preserved and will reappear if the language is re-enabled later.
+- `GET /languages` returns only the loaded plugins, so the frontend never shows
+  languages that are unavailable on this instance.
+- `GET /ready` still reports `"plugins": "ok"` when every *requested* plugin
+  loaded successfully.  Set `ENABLED_LANGUAGES` to the set of languages you care
+  about to suppress warnings about plugins that are intentionally absent.
+
+Unset `ENABLED_LANGUAGES` (or leave it empty) to load every plugin in
+`PLUGIN_PACKAGE`.
+
+---
+
+## Adding a language to an existing deployment
+
+Mnemosyne's schema is language-agnostic.  Every learnable object is stored as a
+row in `canonical_objects` and keyed by `(language, type, canonical_form)`.
+Adding a new language to a running instance requires no database migration:
+
+1. **Create the plugin** — drop a new `.py` file into `backend/plugins/` (or
+   your custom `PLUGIN_PACKAGE`).  See the *Adding a language plugin* section
+   below for the full interface.
+2. **Download the model** — follow the plugin's model-download instructions,
+   typically `python -m spacy download xx_core_news_sm`.
+3. **Update `ENABLED_LANGUAGES`** — if this variable is set, add the new
+   language code to the comma-separated list.  If it is not set, nothing to do.
+4. **Restart the server** — plugins are loaded once at startup via
+   `lru_cache`; a running server will not pick up a new file.
+5. **Verify** — `GET /languages` should include the new language code.  `GET /ready`
+   should report `"plugins": "ok"`.
+
+No `alembic` migration is needed.  Existing data for other languages is
+untouched.
 
 ---
 
