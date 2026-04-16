@@ -21,6 +21,17 @@ class Settings(BaseSettings):
     # NLP pipeline is invoked.  Protects against event-loop blocking on large
     # pastes.  Set MAX_PARSE_CHARS in .env to override.
     max_parse_chars: int = 10_000
+    # JWT authentication settings.
+    # jwt_secret MUST be overridden in production via the JWT_SECRET env var.
+    # The default is intentionally weak so it fails loudly if deployed as-is.
+    jwt_secret: str = Field(
+        default="CHANGE_ME_IN_PRODUCTION",
+        description="HS256 signing secret for JWT tokens.",
+    )
+    jwt_algorithm: str = "HS256"
+    # Token lifetime in minutes.  Default: 7 days (suitable for web clients
+    # storing the token in sessionStorage).
+    jwt_expire_minutes: int = 60 * 24 * 7
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 

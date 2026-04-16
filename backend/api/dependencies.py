@@ -13,21 +13,37 @@ def get_plugin_registry() -> PluginRegistry:
 
 
 def get_current_user(
+    authorization: str | None = Header(default=None),
     x_user_id: str | None = Header(default=None),
 ) -> str:
-    """Resolve the current user from the ``X-User-Id`` request header.
+    """Resolve the current user from the request.
 
-    Falls back to ``DEFAULT_USER_ID`` (``"default"``) when the header is
-    absent, preserving backward compatibility for local development and
-    existing clients that do not send the header.
+    Resolution order
+    ─────────────────
+    1. ``Authorization: Bearer <jwt>`` — decoded JWT ``sub`` claim.
+    2. ``X-User-Id: <id>`` — plain header (dev / legacy clients only).
+    3. ``DEFAULT_USER_ID`` (``"default"``) — fallback for local runs with
+       no auth configured.
 
-    This is the single injection point for future authentication.  To add
-    JWT support, replace the ``Header`` extraction with a ``Bearer`` token
-    decoder — all routes that ``Depends(get_current_user)`` update
-    automatically without any other changes.
+    The JWT path is the production path.  The ``X-User-Id`` fallback remains
+    for development convenience and for existing integration tests that pre-date
+    JWT auth.  It is ignored when a valid Bearer token is present.
     """
+    # 1. Bearer JWT
+    if authorization and authorization.lower().startswith("bearer "):
+        token = authorization[7:].strip()
+        if token:
+            from backend.auth.tokens import decode_access_token
+            user_id = decode_access_token(token)
+            if user_id:
+                return user_id
+        # Token present but invalid — fall through to header fallback so dev
+        # clients still work; a strict mode can raise 401 here in the future.
+
+    # 2. Plain header (dev / legacy)
     if x_user_id:
         stripped = x_user_id.strip()
         if stripped:
             return stripped
+
     return DEFAULT_USER_ID

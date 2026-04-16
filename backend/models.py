@@ -40,6 +40,25 @@ class Base(DeclarativeBase):
     pass
 
 
+class UserRow(Base):
+    """Registered user account for authentication.
+
+    ``id`` is a random UUID-v4 and becomes the ``user_id`` used throughout
+    the system once JWT auth is active.  ``email`` is the unique login
+    credential; ``hashed_password`` stores a bcrypt hash (never plain text).
+
+    Keeping auth in a separate table from the rest of the knowledge schema
+    means the auth layer can be swapped (e.g. SSO) without touching any
+    knowledge-state tables.
+    """
+    __tablename__ = "users"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    email: Mapped[str] = mapped_column(String(254), unique=True, nullable=False, index=True)
+    hashed_password: Mapped[str] = mapped_column(String(128), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+
 class ParsedText(Base):
     __tablename__ = "parsed_texts"
 
