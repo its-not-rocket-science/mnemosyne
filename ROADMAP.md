@@ -9,11 +9,19 @@ Status markers: **implemented** · **partial** · **planned** · **deferred**
 | Feature | Status | Notes |
 |---------|--------|-------|
 | FastAPI scaffold + static frontend | implemented | No build step; vanilla JS + Web Components |
-| Spanish NLP plugin (`es_core_news_sm`) | implemented | Vocabulary, conjugation, agreement; single-pass spaCy |
+| Spanish NLP plugin (`es_core_news_sm`) | implemented | Vocabulary, conjugation, agreement, idiom, grammar, nuance; single-pass spaCy |
+| French NLP plugin (`fr_core_news_sm`) | implemented | Vocabulary, conjugation, agreement; paradigm class; reflexive detection |
+| German NLP plugin (`de_core_news_sm`) | implemented | Vocabulary, conjugation, `case_agreement`; separable verbs; 3-gender, 4-case |
+| Russian NLP plugin (`ru_core_news_sm`) | implemented | Vocabulary, conjugation (aspect + past-tense gender), `case_agreement`; 6-case |
+| Japanese plugin (`ja_core_news_sm`) | implemented | Vocabulary with hiragana readings; SudachiPy segmentation; particles filtered |
+| Arabic plugin (dictionary mode) | implemented | Sentence splitting; whitespace tokenisation; tashkeel normalisation; RTL |
+| Hebrew plugin (dictionary mode) | implemented | Sentence splitting; whitespace tokenisation; nikud normalisation; RTL |
+| Mandarin Chinese plugin (jieba + pypinyin) | implemented | jieba segmentation; tone-marked pinyin; CJK script family |
+| Latin plugin (dictionary mode) | implemented | Regex tokenisation; dictionary-mode lesson builder; dead-language scaffold |
 | English stub plugin | implemented | Regex vocab only; no morphology |
-| French stub plugin | partial | Regex vocab + stop-word filter; no morphology, no conjugation |
-| Plugin registry with multi-language support | implemented | `ENABLED_LANGUAGES` filter; collision warning on duplicates |
+| Plugin registry with multi-language support | implemented | `ENABLED_LANGUAGES` filter; auto-discovery; collision warning on duplicates |
 | Canonical knowledge layer | implemented | UUID-v5 PKs; `(language, type, canonical_form)` unique; `object_relations`; `surface_forms` accumulation |
+| Non-Latin DB round-trip verified | implemented | Arabic, Hebrew, Chinese, Russian, Japanese canonical forms tested through SQLite |
 | FSRS-5 spaced-repetition scheduler | implemented | Pure Python; all functions deterministic |
 | `POST /parse` with Redis cache | implemented | SHA-256 key; 1 h TTL; graceful Redis-down degradation |
 | `GET /lesson/{id}` | implemented | DB-first; plugin in-session fallback |
@@ -25,7 +33,7 @@ Status markers: **implemented** · **partial** · **planned** · **deferred**
 | `GET /health` + `GET /ready` | implemented | Liveness and readiness probes |
 | Alembic migrations | partial | Three migration files exist; `create_all` still runs on fresh startup |
 | Accessibility baseline | partial | Focus trap, ARIA live regions, reduced-motion, 44 px targets; WCAG AA not audited end-to-end |
-| RTL layout support | partial | `direction` field on plugins; frontend CSS not yet RTL-aware |
+| RTL layout support | implemented | `dir`/`lang` applied to all text elements in modal; `<bdi>` isolation in drill feedback; CSS uses logical properties throughout |
 | Multi-user architecture | implemented | `X-User-Id` header; `get_current_user` dependency; per-user isolation across all routes; `UserLanguagePreferenceRow` table; `/users/me/*` preference CRUD |
 | User authentication | partial | Header-based identity complete; JWT auth not yet implemented — header is not cryptographically verified |
 
@@ -56,15 +64,17 @@ See `BETA_GAP_REPORT.md` for the detailed blocker breakdown by alpha / beta / vi
 
 These unlock meaningful expansion beyond Spanish.
 
-- **Full French plugin** — replace the regex stub with `fr_core_news_md`; extract conjugation, agreement, and elision contractions. — **Private alpha blocker A3, Public beta blocker B9**
-- **Full German plugin** — `de_core_news_sm`, vocabulary + conjugation; document canonical_form conventions for German compound nouns and case-marked articles.
-- **Modal RTL fix** — apply `dir`/`lang` to example text and drill prompts in `mnemosyne-modal.js`. RTL integration test with Arabic fixture. — **Public beta blocker B4**
-- **RTL CSS audit** — complete `[dir="rtl"]` layout pass: modal margins, button ordering, focus ring visibility. Must not break LTR.
-- **Non-Latin script round-trip tests** — push `(ar, vocabulary, كتاب)`, `(he, vocabulary, ספר)`, `(zh, vocabulary, 书)` through `canonical_object_id`, DB insert, retrieve, and assert lossless. Zero such tests exist today.
-- **`canonical_form` conventions for non-Latin morphology** — extend `CONTRIBUTING.md` to cover Arabic root+pattern forms, CJK lexeme conventions, and agglutinative language axes before adding any plugin for those scripts.
-- **Lesson generator pluggable templates** — `build_lesson()` produces English prose regardless of target language. Needs a per-language template layer so lesson text can be composed from structured data.
-- **`ENABLED_LANGUAGES` documentation** — explain how to run a single-language deployment and how to add a new language to an existing database without affecting other users' data.
-- **Plugin loading resilience** — a plugin that raises during `create_plugin()` is already skipped with a `WARNING`. Add a `GET /ready` signal that reports degraded-plugin status so operators can see partial failures.
+- **Full French plugin** — ~~replace the regex stub with `fr_core_news_md`~~ **done**: `fr_core_news_sm`, vocabulary + conjugation + agreement. — ~~**Private alpha blocker A3, Public beta blocker B9**~~
+- **Full German plugin** — ~~`de_core_news_sm`~~ **done**: `de_core_news_sm`, vocabulary + conjugation + `case_agreement`; separable verbs; canonical_form conventions documented.
+- **Full Russian plugin** — **done**: `ru_core_news_sm`, full morphology with aspect system, 6-case agreement, past-tense gender-based conjugation.
+- **Full Japanese plugin** — **done**: `ja_core_news_sm` + SudachiPy, vocabulary with hiragana readings, katakana→hiragana conversion.
+- **Modal RTL fix** — ~~apply `dir`/`lang` to example text and drill prompts~~ **done**: `#applyTargetLang` covers title, example text, drill prompts/text/input; `<bdi>` isolation in fill-blank and multiple-choice feedback. CSS uses logical properties throughout. — ~~**Public beta blocker B4**~~
+- **RTL CSS audit** — **done**: `[dir="rtl"]` text-alignment; logical margin/padding/size properties throughout modal; close button stays at inline-end independent of content direction.
+- **Non-Latin script round-trip tests** — **done**: 43 tests covering Arabic, Hebrew, Chinese, Russian, Japanese through `canonical_object_id`, SQLite insert, retrieve, and lossless assertion. API-level RTL pipeline tests included.
+- **`canonical_form` conventions for non-Latin morphology** — **partially done**: `PLUGIN_AUTHOR_GUIDE.md` documents `case_agreement` and Russian/Japanese patterns. Agglutinative-language axes (Finnish, Turkish) not yet documented.
+- **Lesson generator pluggable templates** — `build_lesson()` produces English prose regardless of target language. Needs a per-language template layer so lesson text can be composed from structured data. **planned**
+- **`ENABLED_LANGUAGES` documentation** — explain how to run a single-language deployment and how to add a new language to an existing database without affecting other users' data. **planned**
+- **Plugin loading resilience** — a plugin that raises during `create_plugin()` is already skipped with a `WARNING`. Add a `GET /ready` signal that reports degraded-plugin status so operators can see partial failures. **planned**
 
 ---
 
