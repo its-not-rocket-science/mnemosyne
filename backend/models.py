@@ -314,6 +314,33 @@ class UserKnowledgeRow(Base):
     due_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
 
 
+class ReviewEventRow(Base):
+    """One recorded review interaction.
+
+    Written by ``POST /review`` immediately after the FSRS scheduler updates
+    the card state.  Never updated — rows are append-only.
+
+    ``mastery_score_before`` and ``mastery_score_after`` are the FSRS
+    retrievability R(t, S) computed just before and just after the review so
+    that retention curves can be reconstructed without re-running the scheduler.
+
+    No FK constraints on ``user_id`` or ``object_id`` — consistent with
+    ``UserKnowledgeRow`` so reviews can be logged even when canonical_objects
+    or users rows are temporarily absent.
+    """
+    __tablename__ = "review_events"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    user_id: Mapped[str] = mapped_column(String(50), nullable=False, index=True)
+    object_id: Mapped[str] = mapped_column(String, nullable=False)
+    quality: Mapped[int] = mapped_column(Integer, nullable=False)
+    mastery_score_before: Mapped[float] = mapped_column(Float, nullable=False)
+    mastery_score_after: Mapped[float] = mapped_column(Float, nullable=False)
+    reviewed_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=_now, nullable=False, index=True
+    )
+
+
 class UserLanguagePreferenceRow(Base):
     """Per-user, per-language study preferences.
 

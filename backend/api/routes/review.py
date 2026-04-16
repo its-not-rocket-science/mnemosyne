@@ -8,7 +8,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session
-from backend.models import UserKnowledgeRow
+from backend.models import ReviewEventRow, UserKnowledgeRow
 from backend.schemas.parse import ReviewRequest, ReviewResponse
 from backend.srs.fsrs import review
 from backend.srs.knowledge import mastery_score
@@ -45,6 +45,7 @@ async def submit_review(
             "DB knowledge load failed for %r", payload.object_id, exc_info=True
         )
 
+    score_before = mastery_score(prior_state, now)
     next_days, updated_state = review(quality=payload.quality, state=prior_state, now=now)
 
     score = mastery_score(updated_state, now)
@@ -80,6 +81,14 @@ async def submit_review(
             row.last_seen = now
             row.total_reviews = updated_state["reviews"]
             row.due_at = due_at
+        db.add(ReviewEventRow(
+            user_id=current_user,
+            object_id=payload.object_id,
+            quality=payload.quality,
+            mastery_score_before=round(score_before, 4),
+            mastery_score_after=round(score, 4),
+            reviewed_at=now,
+        ))
         await db.commit()
     except Exception:
         logger.warning(
