@@ -166,15 +166,13 @@ See B4 above.
 
 `build_lesson()` generates English prose. For a multilingual platform, the lesson template layer needs to be pluggable — either by language code (so a French plugin can return French-language lesson text) or by template variable (so the UI can compose lesson text from structured data without prose from the server). The current implementation is a medium-term blocker to supporting learners whose native language is not English.
 
-### M6. `canonical_form` conventions for non-Latin morphology
+### M6. `canonical_form` conventions for non-Latin morphology ✓ DONE
 
-`CONTRIBUTING.md` documents the format for Latin-script conjugations (`{lemma}:{tense}:{mood}:{person}:{number}`). It does not document:
-- Arabic root+pattern forms (`ktb:CaCaCa`)
-- Chinese lexeme+tone disambiguation
-- Agglutinative languages with 10+ morphological axes (Finnish, Turkish)
-- Languages where the lemma is itself a derived form
-
-This needs to be documented before adding plugins for these languages, or every plugin author will invent incompatible conventions and break canonical ID stability.
+`CONTRIBUTING.md` now documents:
+- **Arabic conjugation** — 5-axis form `{lemma}:{tense}:{person}:{gender}:{number}`; trilateral roots go in `lesson_data["root"]`, not in `canonical_form`; root objects use `"root:{consonants}"` as canonical form with type `"script"`
+- **Derived lemmas** (Hebrew binyanim, Arabic masdar) — use the dictionary citation form; decompose to root only in `lesson_data`
+- **Chinese polysemy** — bare character sequence when reading is ambiguous; `{chars}:{pinyin_tones}` (digit notation) only when the plugin can determine the reading from context
+- **Agglutinative languages** (Finnish, Turkish, Hungarian) — encode only reliably-extracted axes; fix axis order per-language in the plugin file before the first row is stored; suggested axis orders for Turkish conjugations and Finnish nominals are specified
 
 ---
 
