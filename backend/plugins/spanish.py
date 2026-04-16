@@ -309,6 +309,8 @@ class SpanishPlugin:
         idiom_detection=True,            # invariant fixed-expression table
         tts_lang_tag="es",
         transliteration_scheme=None,
+        tense_pool=["present", "preterite", "imperfect", "future", "conditional"],
+        mood_pool=["indicative", "subjunctive", "imperative"],
     )
 
     def __init__(self) -> None:

@@ -14,7 +14,8 @@ v1 fields (all required, set at launch):
 v2 fields (all optional / defaulted — existing plugins compile unchanged):
     analysis_depth, segmentation_quality, tokenization_quality,
     morphology_quality, syntax_support, idiom_detection,
-    tts_lang_tag, transliteration_scheme
+    tts_lang_tag, transliteration_scheme,
+    tense_pool, mood_pool
 
 The backward-compatibility rule is strict: adding a field to this class
 requires a default value so plugins that declare ``LanguageCapabilities(...)``
@@ -191,6 +192,21 @@ class LanguageCapabilities(BaseModel):
     transliteration_scheme: str | None = None
     """Transliteration scheme name, or None if not supported.
     E.g. "hepburn_romaji", "pinyin_tone_marks", "ipa"."""
+
+    tense_pool: list[str] | None = None
+    """Language-specific tense labels used as multiple-choice drill options.
+
+    When set, the lesson builder uses this pool instead of the global English
+    default so wrong-answer options are grammatically appropriate for the
+    language.  Should include all tense values the plugin emits (from its
+    ``_TENSE_DISPLAY`` dict) plus a few plausible distractors.
+    Set to ``None`` to fall back to the built-in pool."""
+
+    mood_pool: list[str] | None = None
+    """Language-specific mood labels used as multiple-choice drill options.
+
+    Same semantics as ``tense_pool``.  Set to ``None`` to fall back to the
+    built-in pool."""
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────

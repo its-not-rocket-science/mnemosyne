@@ -47,6 +47,12 @@ class LessonContext:
     direction: Literal["ltr", "rtl"] = "ltr"
     """Text direction for explanation copy and TTS hint."""
 
+    tense_pool: tuple[str, ...] | None = None
+    """Language-specific tense labels for MC drill pools.  ``None`` → use global default."""
+
+    mood_pool: tuple[str, ...] | None = None
+    """Language-specific mood labels for MC drill pools.  ``None`` → use global default."""
+
     # ── Derived properties ────────────────────────────────────────────────────
 
     @property
@@ -69,6 +75,8 @@ class LessonContext:
             language_name=caps.display_name,
             script_family=caps.script_family,
             direction=caps.direction,
+            tense_pool=tuple(caps.tense_pool) if caps.tense_pool is not None else None,
+            mood_pool=tuple(caps.mood_pool) if caps.mood_pool is not None else None,
         )
 
     @classmethod
