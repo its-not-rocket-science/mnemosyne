@@ -1,4 +1,4 @@
-"""User preference routes.
+"""User preference and account routes.
 
 Routes
 ──────
@@ -14,21 +14,36 @@ GET  /users/me/languages/{language_code}/preferences
 PUT  /users/me/languages/{language_code}/preferences
     Upsert preferences for one (user, language) pair.  The full preference
     object must be supplied; partial-update semantics are not provided to keep
-    the schema simple.  Omit a language entirely to restore all defaults
-    (i.e. delete the row via DELETE, which is not yet implemented).
+    the schema simple.
+
+GET  /users/me/export
+    Return a portable JSON export of all user knowledge and preferences.
+
+DELETE  /users/me
+    Permanently delete all personal data for the current user.  Removes rows
+    from user_knowledge, user_language_preferences, source_progression, and
+    the users table.  Returns 204 No Content.  Existing JWTs continue to pass
+    signature verification until they expire; any request they reach will
+    simply find no data and will create no new rows under that user_id.
 """
 from __future__ import annotations
 
 import logging
 from datetime import UTC, datetime
 
-from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import select
+from fastapi import APIRouter, Depends, HTTPException, Response
+from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import outerjoin
 
 from backend.api.dependencies import get_current_user, get_db_session
-from backend.models import CanonicalObjectRow, UserKnowledgeRow, UserLanguagePreferenceRow
+from backend.models import (
+    CanonicalObjectRow,
+    SourceProgressionRow,
+    UserKnowledgeRow,
+    UserLanguagePreferenceRow,
+    UserRow,
+)
 from backend.schemas.user import (
     KnowledgeExportItem,
     LanguagePreference,
@@ -233,3 +248,49 @@ async def export_my_data(
             for row in pref_rows
         ],
     )
+
+
+@router.delete("/me", status_code=204)
+async def delete_my_account(
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> Response:
+    """Permanently delete all personal data for the current user.
+
+    Deletes every row owned by this user across:
+      - ``user_knowledge``           — FSRS state and review history
+      - ``user_language_preferences``— study preference overrides
+      - ``source_progression``       — reading progress per source document
+      - ``users``                    — the account row itself (if it exists)
+
+    The operation is idempotent: calling it on a user who has already been
+    deleted (or never registered) returns 204 as well.
+
+    Existing JWTs remain cryptographically valid until they expire.  Any
+    subsequent authenticated request will simply find no data and will not
+    create new rows — the deleted user_id is effectively inert.
+    """
+    try:
+        await db.execute(
+            delete(UserKnowledgeRow).where(UserKnowledgeRow.user_id == current_user)
+        )
+        await db.execute(
+            delete(UserLanguagePreferenceRow).where(
+                UserLanguagePreferenceRow.user_id == current_user
+            )
+        )
+        await db.execute(
+            delete(SourceProgressionRow).where(
+                SourceProgressionRow.user_id == current_user
+            )
+        )
+        await db.execute(
+            delete(UserRow).where(UserRow.id == current_user)
+        )
+        await db.commit()
+    except Exception as exc:
+        logger.warning("Account deletion failed for user %r", current_user, exc_info=True)
+        raise HTTPException(status_code=503, detail="Database unavailable") from exc
+
+    logger.info("Account and all personal data deleted for user %r", current_user)
+    return Response(status_code=204)
