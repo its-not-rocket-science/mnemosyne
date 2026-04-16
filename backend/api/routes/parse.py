@@ -1,18 +1,17 @@
-from __future__ import annotations
-
 import asyncio
 import hashlib
 import logging
 import time
 from datetime import UTC, datetime
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session, get_plugin_registry
 from backend.core.cache import get_json, set_json
 from backend.core.config import Settings, get_settings
+from backend.core.limiter import limiter
 from backend.models import CanonicalObjectRow, ObjectRelationRow, ParsedText, Sentence, SentenceObjectRow, UserKnowledgeRow
 from backend.parsing.canonical import canonical_object_id
 from backend.parsing.plugin_loader import PluginRegistry
@@ -30,7 +29,9 @@ router = APIRouter(tags=["parse"])
 
 
 @router.post("/parse", response_model=ParseResponse)
+@limiter.limit(lambda: get_settings().rate_limit_parse)
 async def parse_text(
+    request: Request,
     payload: ParseRequest,
     registry: PluginRegistry = Depends(get_plugin_registry),
     db: AsyncSession = Depends(get_db_session),

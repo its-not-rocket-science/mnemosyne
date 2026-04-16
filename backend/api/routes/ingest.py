@@ -10,8 +10,6 @@ repeated-exposure tracking, recommendation, and reading-progression features.
 ``POST /parse`` remains unchanged for backward compatibility.  New clients
 should prefer ``/ingest``.
 """
-from __future__ import annotations
-
 import asyncio
 import hashlib
 import logging
@@ -19,13 +17,14 @@ import time
 import uuid
 from datetime import UTC, datetime
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.api.dependencies import get_db_session, get_plugin_registry
+from backend.api.dependencies import get_current_user, get_db_session, get_plugin_registry
 from backend.core.cache import get_json, set_json
 from backend.core.config import Settings, get_settings
+from backend.core.limiter import limiter
 from backend.ingestion.validator import detect_dominant_script, validate_ingest_text
 from backend.models import (
     CanonicalObjectRow,
@@ -53,10 +52,13 @@ router = APIRouter(tags=["ingest"])
 
 
 @router.post("/ingest", response_model=IngestResponse)
+@limiter.limit(lambda: get_settings().rate_limit_parse)
 async def ingest_text(
+    request: Request,
     payload: IngestRequest,
     registry: PluginRegistry = Depends(get_plugin_registry),
     db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
     settings: Settings = Depends(get_settings),
 ) -> IngestResponse:
     # ── 0. Size guard — reject before any NLP work ───────────────────────────
