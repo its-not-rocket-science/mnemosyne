@@ -94,6 +94,27 @@ def test_parse_missing_language_returns_422() -> None:
     assert resp.status_code == 422
 
 
+def test_parse_oversized_text_returns_413() -> None:
+    """Text exceeding max_parse_chars is rejected before NLP runs."""
+    from backend.core.config import get_settings
+    limit = get_settings().max_parse_chars
+    oversized = "a " * (limit + 1)  # definitely over the limit
+    resp = _parse(oversized)
+    assert resp.status_code == 413
+    assert "limit" in resp.json()["detail"].lower()
+
+
+def test_parse_at_limit_returns_200() -> None:
+    """Text exactly at the limit is accepted."""
+    from backend.core.config import get_settings
+    limit = get_settings().max_parse_chars
+    text = "Hello world. " * (limit // len("Hello world. "))
+    # Trim to exactly the limit
+    text = text[:limit]
+    resp = _parse(text)
+    assert resp.status_code == 200
+
+
 # ── /parse — cache fault tolerance ───────────────────────────────────────────
 
 

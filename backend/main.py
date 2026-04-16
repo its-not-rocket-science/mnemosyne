@@ -1,6 +1,11 @@
+import asyncio
 import logging
+import os
 import re
+import shutil
+import subprocess
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -18,8 +23,6 @@ from backend.api.routes.recommend import router as recommend_router
 from backend.api.routes.review import router as review_router
 from backend.api.routes.users import router as users_router
 from backend.core.config import Settings, get_settings
-from backend.core.database import engine
-from backend.models import Base
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 
@@ -65,6 +68,47 @@ def _warn_config(s: Settings) -> None:
         )
 
 
+# ── Migration helper ──────────────────────────────────────────────────────────
+
+_PROJECT_ROOT = Path(__file__).parent.parent
+
+
+def _run_alembic_upgrade() -> None:
+    """Run ``alembic upgrade head`` in a subprocess.
+
+    The project's ``alembic/`` migrations directory shadows the installed
+    ``alembic`` package inside this process's import system.  Running the
+    ``alembic`` CLI binary as a subprocess sidesteps that collision — the
+    binary resolves ``alembic`` from site-packages regardless of CWD.
+
+    DATABASE_URL is injected explicitly so the subprocess receives it even
+    when pydantic-settings loaded it from .env without touching os.environ.
+
+    Raises RuntimeError on migration failure so the lifespan warning handler
+    can log it and continue (same behaviour as the old create_all path).
+    """
+    alembic_bin = shutil.which("alembic")
+    if alembic_bin is None:
+        raise RuntimeError(
+            "'alembic' executable not found in PATH. "
+            "Install it with: pip install alembic"
+        )
+    env = {**os.environ, "DATABASE_URL": settings.database_url}
+    result = subprocess.run(
+        [alembic_bin, "upgrade", "head"],
+        cwd=str(_PROJECT_ROOT),
+        env=env,
+        capture_output=True,
+        text=True,
+    )
+    if result.stdout:
+        logger.info("alembic: %s", result.stdout.strip())
+    if result.returncode != 0:
+        raise RuntimeError(
+            f"alembic upgrade head exited {result.returncode}:\n{result.stderr.strip()}"
+        )
+
+
 # ── Lifespan ──────────────────────────────────────────────────────────────────
 
 
@@ -73,12 +117,12 @@ async def lifespan(app: FastAPI):
     _log_config(settings)
     _warn_config(settings)
 
-    # Create DB tables on startup.
-    # Replace with `alembic upgrade head` once migrations are in place.
+    # Run pending Alembic migrations on startup.
+    # _run_alembic_upgrade uses subprocess to avoid the local alembic/ directory
+    # shadowing the installed package; asyncio.to_thread prevents blocking the loop.
     try:
-        async with engine.begin() as conn:
-            await conn.run_sync(Base.metadata.create_all)
-        logger.info("Database tables verified.")
+        await asyncio.to_thread(_run_alembic_upgrade)
+        logger.info("Database migrations applied.")
     except Exception as exc:
         logger.warning("Database unavailable at startup — continuing: %s", exc)
 

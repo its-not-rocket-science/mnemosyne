@@ -49,17 +49,16 @@ These are true today. Name them plainly.
 
 These are blockers because they either cause data loss, prevent setup, or make the system embarrassing to hand to a real person.
 
-### A1. `alembic upgrade head` on fresh startup
+### A1. `alembic upgrade head` on fresh startup ✓ DONE
 
-**Why it blocks:** `create_all` diverges silently from migration history. Alpha testers who set up from scratch via Docker Compose will end up with a schema that does not match what `alembic upgrade head` would produce. When the migration is fixed later, their database will be broken. Fix this before the first external tester ever runs the app.
+`backend/main.py` lifespan now runs `alembic upgrade head` via subprocess on startup (`_run_alembic_upgrade()`). The project's local `alembic/` migrations directory shadows the installed `alembic` package inside the process's import system, so the implementation calls the `alembic` CLI binary in a subprocess (which resolves from site-packages) via `asyncio.to_thread`. `DATABASE_URL` is injected into the subprocess environment from `settings.database_url`. On failure the warning handler logs and continues — same behaviour as the old `create_all` path.
 
-**What to do:** In `main.py` lifespan, replace `conn.run_sync(Base.metadata.create_all)` with `conn.run_sync(lambda c: alembic.command.upgrade(alembic_cfg, "head"))` or an equivalent async-safe migration run.
+### A2. `max_chars` guard on `/parse` and `/ingest` ✓ DONE
 
-### A2. `max_chars` guard on `/parse` and `/ingest`
-
-**Why it blocks:** An enthusiastic tester who pastes a chapter will block the server for all other users. 10 000 characters is a reasonable default. Return 413 with a clear error message above the limit.
-
-**What to do:** Add `max_chars: int = settings.max_parse_chars` to `ParseRequest`; validate in the route before calling the plugin. Document the setting in `.env.example`.
+`backend/core/config.py`: `max_parse_chars: int = 10_000` setting (override with `MAX_PARSE_CHARS` in `.env`).
+`/parse` and `/ingest`: 413 with a descriptive message when `len(payload.text) > settings.max_parse_chars`, before any NLP work.
+`.env.example`: `MAX_PARSE_CHARS` documented with explanation.
+2 new tests in `test_api.py`: oversized text → 413, text at limit → 200.
 
 ### A3. At least one working second language
 
