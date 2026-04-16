@@ -9,9 +9,11 @@ from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from slowapi.errors import RateLimitExceeded
 
 from backend.api.dependencies import get_plugin_registry
 from backend.api.routes.auth import router as auth_router
+from backend.core.limiter import limiter, rate_limit_exceeded_handler
 from backend.api.routes.dashboard import router as dashboard_router
 from backend.api.routes.fetch_url import router as fetch_url_router
 from backend.api.routes.languages import router as languages_router
@@ -148,6 +150,9 @@ async def lifespan(app: FastAPI):
 # ── App ───────────────────────────────────────────────────────────────────────
 
 app = FastAPI(title=settings.app_name, debug=settings.debug, lifespan=lifespan)
+
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
