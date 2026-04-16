@@ -1,5 +1,6 @@
 import '../components/mnemosyne-pill.js'
 import '../components/mnemosyne-modal.js'
+import { initAuth, getAuthHeaders } from './auth.js'
 
 const API_BASE = 'http://localhost:8000'
 
@@ -274,7 +275,7 @@ if (fetchUrlBtn) {
     try {
       const response = await fetch(`${API_BASE}/fetch-url`, {
         method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
         body:    JSON.stringify({ source_url: url }),
       })
 
@@ -446,7 +447,7 @@ form.addEventListener('submit', async (event) => {
 
     const response = await fetch(`${API_BASE}/ingest`, {
       method:  'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
       body:    JSON.stringify(payload),
     })
 
@@ -591,7 +592,7 @@ function renderResults(sentences, language) {
 async function submitReview(objectId, quality) {
   const response = await fetch(`${API_BASE}/review`, {
     method:  'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
     body:    JSON.stringify({
       object_id:    objectId,
       quality,
@@ -633,3 +634,10 @@ function escapeHtml(value) {
     .replaceAll('"',  '&quot;')
     .replaceAll("'", '&#39;')
 }
+
+
+// ── Auth init ─────────────────────────────────────────────────────────────────
+// Must run after all DOM references above are established.
+// Shows the auth panel or the app depending on sessionStorage state.
+
+initAuth()
