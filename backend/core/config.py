@@ -32,6 +32,11 @@ class Settings(BaseSettings):
     # Token lifetime in minutes.  Default: 7 days (suitable for web clients
     # storing the token in sessionStorage).
     jwt_expire_minutes: int = 60 * 24 * 7
+    # Rate limit applied to /parse and /ingest.
+    # Uses slowapi / limits syntax: "N/period" where period is second, minute,
+    # hour, or day.  Multiple limits can be joined with ";".
+    # Examples: "20/minute", "5/second;100/hour".
+    rate_limit_parse: str = "20/minute"
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
