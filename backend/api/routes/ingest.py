@@ -25,6 +25,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_db_session, get_plugin_registry
 from backend.core.cache import get_json, set_json
+from backend.core.config import Settings, get_settings
 from backend.ingestion.validator import detect_dominant_script, validate_ingest_text
 from backend.models import (
     CanonicalObjectRow,
@@ -56,7 +57,19 @@ async def ingest_text(
     payload: IngestRequest,
     registry: PluginRegistry = Depends(get_plugin_registry),
     db: AsyncSession = Depends(get_db_session),
+    settings: Settings = Depends(get_settings),
 ) -> IngestResponse:
+    # ── 0. Size guard — reject before any NLP work ───────────────────────────
+    if len(payload.text) > settings.max_parse_chars:
+        raise HTTPException(
+            status_code=413,
+            detail=(
+                f"Text is {len(payload.text):,} characters; "
+                f"the limit is {settings.max_parse_chars:,}. "
+                "Split the text into smaller passages and submit each separately."
+            ),
+        )
+
     # ── 1. Validate and normalize text ───────────────────────────────────────
     try:
         normalized_text, warnings = validate_ingest_text(payload.text, payload.language)

@@ -12,6 +12,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session, get_plugin_registry
 from backend.core.cache import get_json, set_json
+from backend.core.config import Settings, get_settings
 from backend.models import CanonicalObjectRow, ObjectRelationRow, ParsedText, Sentence, SentenceObjectRow, UserKnowledgeRow
 from backend.parsing.canonical import canonical_object_id
 from backend.parsing.plugin_loader import PluginRegistry
@@ -34,7 +35,18 @@ async def parse_text(
     registry: PluginRegistry = Depends(get_plugin_registry),
     db: AsyncSession = Depends(get_db_session),
     current_user: str = Depends(get_current_user),
+    settings: Settings = Depends(get_settings),
 ) -> ParseResponse:
+    if len(payload.text) > settings.max_parse_chars:
+        raise HTTPException(
+            status_code=413,
+            detail=(
+                f"Text is {len(payload.text):,} characters; "
+                f"the limit is {settings.max_parse_chars:,}. "
+                "Split the text into smaller passages and submit each separately."
+            ),
+        )
+
     try:
         plugin = registry.get(payload.language)
     except KeyError as exc:
