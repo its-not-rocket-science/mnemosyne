@@ -189,6 +189,11 @@ class GermanPlugin:
         idiom_detection=False,
         tts_lang_tag="de",
         transliteration_scheme=None,
+        # German: only present/past (Präteritum) in simple tenses; perfect and
+        # pluperfect are compound.  "preterite" and "conditional" are not
+        # German terms — exclude them from wrong-answer options.
+        tense_pool=["present", "past", "perfect", "pluperfect", "future"],
+        mood_pool=["indicative", "subjunctive", "imperative"],
     )
 
     def __init__(self) -> None:

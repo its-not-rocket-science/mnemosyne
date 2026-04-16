@@ -288,6 +288,10 @@ class FrenchPlugin:
         idiom_detection=True,             # curated fixed-expression table (~35 entries)
         tts_lang_tag="fr",
         transliteration_scheme=None,
+        # French: conditional is a mood (Mood=Cnd), not a tense — "preterite"
+        # does not exist in modern French; passé simple is literary only.
+        tense_pool=["present", "imperfect", "future", "past", "past perfect"],
+        mood_pool=["indicative", "subjunctive", "conditional", "imperative"],
     )
 
     def __init__(self) -> None:

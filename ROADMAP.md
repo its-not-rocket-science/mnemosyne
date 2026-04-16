@@ -72,7 +72,7 @@ These unlock meaningful expansion beyond Spanish.
 - **RTL CSS audit** — **done**: `[dir="rtl"]` text-alignment; logical margin/padding/size properties throughout modal; close button stays at inline-end independent of content direction.
 - **Non-Latin script round-trip tests** — **done**: 43 tests covering Arabic, Hebrew, Chinese, Russian, Japanese through `canonical_object_id`, SQLite insert, retrieve, and lossless assertion. API-level RTL pipeline tests included.
 - **`canonical_form` conventions for non-Latin morphology** — **partially done**: `PLUGIN_AUTHOR_GUIDE.md` documents `case_agreement` and Russian/Japanese patterns. Agglutinative-language axes (Finnish, Turkish) not yet documented.
-- **Lesson generator pluggable templates** — `build_lesson()` produces English prose regardless of target language. Needs a per-language template layer so lesson text can be composed from structured data. **planned**
+- **Lesson generator pluggable templates** — ~~`build_lesson()` produces English prose regardless of target language.~~ **done**: `LanguageCapabilities.tense_pool` / `mood_pool` let each plugin declare language-appropriate MC drill options; `LessonContext` carries them through to `_build_conjugation`; mood MC drill wired up (was defined but not emitted). Spanish/French/German pools set. — ~~**planned**~~
 - **`ENABLED_LANGUAGES` documentation** — explain how to run a single-language deployment and how to add a new language to an existing database without affecting other users' data. **planned**
 - **Plugin loading resilience** — a plugin that raises during `create_plugin()` is already skipped with a `WARNING`. Add a `GET /ready` signal that reports degraded-plugin status so operators can see partial failures. **planned**
 
