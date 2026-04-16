@@ -276,6 +276,45 @@ case_agreement:{case_lower}:{modifier_lemma}_{noun_lemma}
 
 e.g. `"case_agreement:nom:der_mann"` (German), `"case_agreement:ins:новый_друг"` (Russian).
 
+**Arabic conjugation canonical form** (5 axes):
+
+```
+{undiacritised_lemma}:{tense}:{person}:{gender}:{number}
+```
+
+Arabic verbs agree with person, gender, and number — not mood as the primary axis. Use lowercase English labels:
+
+| Axis | Values |
+|---|---|
+| tense | `past` \| `present` \| `future` \| `imperative` |
+| person | `1` \| `2` \| `3` |
+| gender | `masculine` \| `feminine` |
+| number | `singular` \| `dual` \| `plural` |
+
+Example: `كتب:past:3:masculine:singular`
+
+**Arabic trilateral roots** do NOT go in `canonical_form`. If your plugin identifies a root (e.g. `ك-ت-ب`), store it in `lesson_data["root"]` using the bare consonant sequence without diacritics (`ktb` in romanisation, or the Unicode consonants `كتب`). Root objects, if taught separately, use the type `"script"` with `canonical_form = "root:{consonants}"` — e.g. `"root:كتب"`. This keeps vocabulary and root objects in separate ID spaces so they can be related via `RelationHint` without colliding.
+
+**Languages where the lemma is a derived form** (Hebrew binyanim, Classical Arabic masdar, etc.): use the dictionary citation form — the form that appears as the headword in a standard printed dictionary for that language. Do not attempt to decompose it to a root. Roots go in `lesson_data["root"]`; the canonical form stays as the citation form. For Hebrew verbs, the citation form is the Pa'al (or binyan-specific) 3rd person masculine singular past: e.g. `כתב` not `כ-ת-ב`.
+
+**Chinese polysemy disambiguation**: when a segmented token has multiple readings that differ in meaning (e.g. `长 cháng` = "long" vs `长 zhǎng` = "to grow"), the canonical form uses the bare character sequence when the plugin cannot resolve the reading, and appends the pinyin reading (tones as digits) when it can:
+
+```
+{characters}:{pinyin_tones_no_spaces}
+```
+
+Example: `长:zhang3` (to grow) vs `长:chang2` (long). Append pinyin **only when you can determine the reading from context**. When ambiguous, use the bare form `长` — a wrong disambiguation is worse than no disambiguation. Pinyin tones use the digit convention (1–4, 5 for neutral tone).
+
+**Agglutinative languages** (Finnish, Turkish, Hungarian, and similar): these languages have 10+ productive morphological axes. Rules:
+
+1. **Encode only axes your plugin extracts reliably.** Do not emit axes you cannot determine. A 4-axis canonical form is better than a 10-axis form where 6 axes are guessed.
+2. **Fix the axis order per language and document it in the plugin file.** The order must be stable across all parses; if it changes, all stored IDs become invalid. Use a module-level docstring or comment that states the axis order explicitly.
+3. **Use lowercase English labels** for axis values (e.g. `nominative` not `NOM`, `singular` not `SG`).
+4. Suggested axis order for Turkish conjugations: `{lemma}:{tense}:{aspect}:{mood}:{person}:{number}:{voice}` — omit trailing axes when unknown.
+5. Suggested axis order for Finnish nominals: `{lemma}:{case}:{number}` (14 cases; use full lowercase English names: `nominative`, `genitive`, `accusative`, `partitive`, `inessive`, `elative`, `illative`, `adessive`, `ablative`, `allative`, `essive`, `translative`, `instructive`, `abessive`, `comitative`).
+
+Until a plugin for an agglutinative language is implemented, no canonical forms are stored. Define the axis order in the plugin before the first parse — you cannot change it after rows exist.
+
 ### surface_form rules
 
 - The specific inflected form seen in this text (e.g. `"gatos"` for canonical `"gato"`).
