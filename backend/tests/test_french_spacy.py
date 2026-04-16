@@ -95,9 +95,8 @@ class TestCapabilities:
     def test_capabilities_syntax_support_is_true(self, plugin) -> None:
         assert plugin.capabilities.syntax_support is True
 
-    def test_capabilities_idiom_detection_is_false(self, plugin) -> None:
-        # Not yet implemented — must be declared honestly.
-        assert plugin.capabilities.idiom_detection is False
+    def test_capabilities_idiom_detection_is_true(self, plugin) -> None:
+        assert plugin.capabilities.idiom_detection is True
 
     def test_capabilities_no_transliteration(self, plugin) -> None:
         assert plugin.capabilities.transliteration_scheme is None
@@ -573,7 +572,7 @@ class TestEdgeCases:
         assert {o.canonical_form for o in r1.candidates} == {o.canonical_form for o in r2.candidates}
 
     def test_all_returned_types_are_known(self, plugin) -> None:
-        known_types = {"vocabulary", "conjugation", "agreement"}
+        known_types = {"vocabulary", "conjugation", "agreement", "idiom", "grammar", "nuance"}
         result = plugin.analyze_sentence(
             "Les grandes maisons blanches sont belles."
         )
@@ -657,3 +656,123 @@ class TestMultilingualArchitecture:
             assert finir_conj.lesson_data["paradigm_class"] == "-ir"
             # Not "-ar" which would indicate a Spanish assumption bleed-through.
             assert finir_conj.lesson_data["paradigm_class"] != "-ar"
+
+
+# ── Idiom tests ───────────────────────────────────────────────────────────────
+
+class TestIdioms:
+    def test_bien_sur_detected(self, plugin) -> None:
+        result = plugin.analyze_sentence("Bien sûr, je viendrai demain.")
+        idioms = objects_of(result, "idiom")
+        phrases = {o.lesson_data["phrase"] for o in idioms}
+        assert "bien sûr" in phrases
+
+    def test_par_exemple_detected(self, plugin) -> None:
+        result = plugin.analyze_sentence("Il cite, par exemple, plusieurs auteurs.")
+        idioms = objects_of(result, "idiom")
+        phrases = {o.lesson_data["phrase"] for o in idioms}
+        assert "par exemple" in phrases
+
+    def test_tout_a_fait_detected(self, plugin) -> None:
+        result = plugin.analyze_sentence("C'est tout à fait normal.")
+        idioms = objects_of(result, "idiom")
+        phrases = {o.lesson_data["phrase"] for o in idioms}
+        assert "tout à fait" in phrases
+
+    def test_idiom_has_required_lesson_data_keys(self, plugin) -> None:
+        result = plugin.analyze_sentence("Bien sûr, nous partons.")
+        for obj in objects_of(result, "idiom"):
+            for key in ("phrase", "meaning", "register"):
+                assert key in obj.lesson_data, f"Missing key {key!r}"
+
+    def test_idiom_confidence_is_0_90(self, plugin) -> None:
+        result = plugin.analyze_sentence("Bien sûr, je comprends.")
+        for obj in objects_of(result, "idiom"):
+            assert obj.confidence == 0.90
+
+    def test_longer_idiom_takes_priority_over_shorter(self, plugin) -> None:
+        # "bien au contraire" (3-word) should be preferred over "au contraire" (2-word)
+        result = plugin.analyze_sentence("Bien au contraire, c'est faux.")
+        idioms = objects_of(result, "idiom")
+        phrases = {o.lesson_data["phrase"] for o in idioms}
+        assert "bien au contraire" in phrases
+        assert "au contraire" not in phrases
+
+
+# ── Grammar pattern tests ─────────────────────────────────────────────────────
+
+class TestGrammarPatterns:
+    def test_etre_copula_detected(self, plugin) -> None:
+        result = plugin.analyze_sentence("Il est médecin.")
+        grammar = objects_of(result, "grammar")
+        pattern_ids = {o.lesson_data["pattern_id"] for o in grammar}
+        assert "être_copula" in pattern_ids
+
+    def test_aller_near_future_detected(self, plugin) -> None:
+        result = plugin.analyze_sentence("Je vais partir demain.")
+        grammar = objects_of(result, "grammar")
+        pattern_ids = {o.lesson_data["pattern_id"] for o in grammar}
+        assert "aller_near_future" in pattern_ids
+
+    def test_grammar_has_required_lesson_data_keys(self, plugin) -> None:
+        result = plugin.analyze_sentence("Il est grand.")
+        for obj in objects_of(result, "grammar"):
+            for key in ("pattern_id", "pattern", "usage", "contrast", "verb_lemma"):
+                assert key in obj.lesson_data, f"Missing key {key!r}"
+
+    def test_grammar_confidence_is_0_85(self, plugin) -> None:
+        result = plugin.analyze_sentence("Il est grand.")
+        for obj in objects_of(result, "grammar"):
+            assert obj.confidence == 0.85
+
+    def test_grammar_has_instance_of_relation_hint(self, plugin) -> None:
+        result = plugin.analyze_sentence("Il est grand.")
+        for obj in objects_of(result, "grammar"):
+            hint_types = {h.relation_type for h in obj.relation_hints}
+            assert "instance_of" in hint_types
+
+    def test_grammar_pattern_not_duplicated_in_same_sentence(self, plugin) -> None:
+        # Two être forms in the same sentence → still only one grammar object
+        result = plugin.analyze_sentence("Il est grand et elle est belle.")
+        grammar = objects_of(result, "grammar")
+        copula_objects = [o for o in grammar if o.lesson_data.get("pattern_id") == "être_copula"]
+        assert len(copula_objects) <= 1
+
+
+# ── Nuance tests ──────────────────────────────────────────────────────────────
+
+class TestNuance:
+    def test_imperfect_nuance_emitted(self, plugin) -> None:
+        result = plugin.analyze_sentence("Il parlait souvent de son enfance.")
+        nuances = objects_of(result, "nuance")
+        types = {o.lesson_data["nuance_type"] for o in nuances}
+        assert "imperfect_aspect" in types
+
+    def test_subjunctive_nuance_emitted(self, plugin) -> None:
+        # "Il faut que tu parles." mis-tags the subject as ADJ and the verb as
+        # NOUN in fr_core_news_sm, so it never emits Mood=Sub.  "Bien qu'il
+        # soit tard." reliably produces an AUX token with Mood=Sub.
+        result = plugin.analyze_sentence("Bien qu'il soit tard.")
+        nuances = objects_of(result, "nuance")
+        types = {o.lesson_data["nuance_type"] for o in nuances}
+        assert "subjunctive_mood" in types
+
+    def test_nuance_has_required_lesson_data_keys(self, plugin) -> None:
+        result = plugin.analyze_sentence("Il parlait souvent.")
+        for obj in objects_of(result, "nuance"):
+            for key in ("nuance_type", "lemma", "surface", "note"):
+                assert key in obj.lesson_data, f"Missing key {key!r}"
+
+    def test_nuance_has_nuance_of_relation_hint(self, plugin) -> None:
+        result = plugin.analyze_sentence("Il parlait souvent.")
+        for obj in objects_of(result, "nuance"):
+            hint_types = {h.relation_type for h in obj.relation_hints}
+            assert "nuance_of" in hint_types
+
+    def test_nuance_not_duplicated_for_same_verb(self, plugin) -> None:
+        # Same verb lemma twice should yield at most one nuance per type
+        result = plugin.analyze_sentence("Il parlait et parlait sans cesse.")
+        nuances = objects_of(result, "nuance")
+        imperfect = [o for o in nuances if o.lesson_data.get("nuance_type") == "imperfect_aspect"
+                     and o.lesson_data.get("lemma") == "parler"]
+        assert len(imperfect) <= 1
