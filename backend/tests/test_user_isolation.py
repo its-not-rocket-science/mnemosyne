@@ -65,27 +65,27 @@ async def async_client(db_engine):
 
 
 def test_get_current_user_returns_default_when_header_absent() -> None:
-    result = get_current_user(x_user_id=None)
+    result = get_current_user(authorization=None, x_user_id=None)
     assert result == DEFAULT_USER_ID
 
 
 def test_get_current_user_returns_default_for_empty_string() -> None:
-    result = get_current_user(x_user_id="")
+    result = get_current_user(authorization=None, x_user_id="")
     assert result == DEFAULT_USER_ID
 
 
 def test_get_current_user_returns_default_for_whitespace_only() -> None:
-    result = get_current_user(x_user_id="   ")
+    result = get_current_user(authorization=None, x_user_id="   ")
     assert result == DEFAULT_USER_ID
 
 
 def test_get_current_user_returns_header_value() -> None:
-    result = get_current_user(x_user_id="alice")
+    result = get_current_user(authorization=None, x_user_id="alice")
     assert result == "alice"
 
 
 def test_get_current_user_strips_whitespace() -> None:
-    result = get_current_user(x_user_id="  bob  ")
+    result = get_current_user(authorization=None, x_user_id="  bob  ")
     assert result == "bob"
 
 

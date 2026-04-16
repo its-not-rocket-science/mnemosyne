@@ -86,6 +86,11 @@ function switchTab(active) {
   tabSignIn.setAttribute('aria-selected',   String(isLogin))
   tabRegister.setAttribute('aria-selected', String(!isLogin))
 
+  // Roving tabindex: only the selected tab is in the sequential focus order.
+  // The unselected tab is reachable only via arrow keys.
+  tabSignIn.tabIndex   = isLogin ? 0  : -1
+  tabRegister.tabIndex = isLogin ? -1 : 0
+
   loginTab.hidden    = !isLogin
   registerTab.hidden = isLogin
   clearAuthStatus()
@@ -95,6 +100,7 @@ tabSignIn?.addEventListener('click',   () => switchTab('login'))
 tabRegister?.addEventListener('click', () => switchTab('register'))
 
 // Keyboard navigation inside the tablist (Left/Right arrows).
+// Per ARIA APG tab pattern: arrow keys move between tabs, Tab leaves the group.
 document.querySelector('#auth-tablist')?.addEventListener('keydown', (e) => {
   const tabs = [tabSignIn, tabRegister]
   const idx  = tabs.indexOf(document.activeElement)
@@ -109,17 +115,40 @@ document.querySelector('#auth-tablist')?.addEventListener('keydown', (e) => {
 
 // ── Auth UI show / hide ───────────────────────────────────────────────────────
 
-function showApp(email) {
+// moveFocus controls whether focus is explicitly moved.
+// Pass true on user-triggered transitions (login, logout).
+// Pass false on page-load restoration to avoid stealing initial focus.
+
+function showApp(email, { moveFocus = false } = {}) {
   authPanel.hidden   = true
   mainContent.hidden = false
   if (userEmailEl) userEmailEl.textContent = email ?? ''
   if (userInfo)    userInfo.hidden = !email
+  if (moveFocus) {
+    // Move focus to the language select — first meaningful interactive element
+    // in the app — so the keyboard user knows the app is now available.
+    queueMicrotask(() => {
+      const target = document.querySelector('#language') ??
+                     document.querySelector('#main')
+      target?.focus()
+    })
+  }
 }
 
-function showAuthPanel() {
+function showAuthPanel({ moveFocus = false } = {}) {
   authPanel.hidden   = false
   mainContent.hidden = true
   if (userInfo) userInfo.hidden = true
+  if (moveFocus) {
+    // Move focus to the email field on the active tab so the keyboard user
+    // can immediately start typing without having to Tab into the form.
+    queueMicrotask(() => {
+      const emailInput = loginTab.hidden
+        ? document.querySelector('#reg-email')
+        : document.querySelector('#login-email')
+      emailInput?.focus()
+    })
+  }
 }
 
 function setAuthStatus(message, state = 'idle') {
@@ -142,7 +171,7 @@ function clearAuthStatus() {
 logoutBtn?.addEventListener('click', () => {
   clearToken()
   switchTab('login')
-  showAuthPanel()
+  showAuthPanel({ moveFocus: true })
   loginForm?.reset()
   registerForm?.reset()
 })
@@ -179,7 +208,7 @@ loginForm?.addEventListener('submit', async (e) => {
     const data = await callAuth('/auth/login', { email, password })
     setToken(data.access_token, data.user_id, email)
     loginForm.reset()
-    showApp(email)
+    showApp(email, { moveFocus: true })
   } catch (err) {
     setAuthStatus(err.message, 'error')
   } finally {
@@ -208,7 +237,7 @@ registerForm?.addEventListener('submit', async (e) => {
     const data = await callAuth('/auth/register', { email, password })
     setToken(data.access_token, data.user_id, email)
     registerForm.reset()
-    showApp(email)
+    showApp(email, { moveFocus: true })
   } catch (err) {
     setAuthStatus(err.message, 'error')
   } finally {

@@ -35,7 +35,11 @@
       Hidden by JS (initAuth) once a valid session is found or established.
       role="region" with labelledby makes it a named landmark for AT.
     -->
-    <section id="auth-panel" class="wrap" aria-labelledby="auth-heading">
+    <!--
+      hidden in HTML so AT cannot reach auth-panel while #main-content is
+      visible.  initAuth() removes hidden from whichever panel is appropriate.
+    -->
+    <section id="auth-panel" class="wrap" aria-labelledby="auth-heading" hidden>
       <div class="panel">
         <h2 id="auth-heading">Sign in to continue</h2>
 
@@ -45,8 +49,13 @@
             standard tab pattern (ARIA APG authoring practices).
             tabindex managed via JS arrow-key handler.
           -->
-          <button id="tab-signin"   role="tab" aria-selected="true"  aria-controls="login-tab"    class="auth-tab" type="button">Sign in</button>
-          <button id="tab-register" role="tab" aria-selected="false" aria-controls="register-tab" class="auth-tab" type="button">Create account</button>
+          <!--
+            Roving tabindex: only the selected tab is in the sequential tab
+            order (tabindex="0"); the other tab is reachable only via arrow
+            keys (tabindex="-1").  JS updates tabIndex on every switch.
+          -->
+          <button id="tab-signin"   role="tab" aria-selected="true"  aria-controls="login-tab"    class="auth-tab" type="button" tabindex="0">Sign in</button>
+          <button id="tab-register" role="tab" aria-selected="false" aria-controls="register-tab" class="auth-tab" type="button" tabindex="-1">Create account</button>
         </div>
 
         <!-- Sign-in panel -->
