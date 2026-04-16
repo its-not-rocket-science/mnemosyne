@@ -712,9 +712,17 @@ export class MnemosyneModal extends HTMLElement {
         })
 
         feedback.dataset.result = isCorrect ? 'correct' : 'wrong'
-        feedback.textContent = isCorrect
-          ? '\u2713 Correct!'
-          : `\u2717 The answer is \u201c${drill.options[drill.answer_index]}\u201d.`
+        if (isCorrect) {
+          feedback.textContent = '\u2713 Correct!'
+        } else {
+          // Wrap the answer in <bdi> so the Unicode bidi algorithm treats it
+          // as an isolated run — prevents RTL answers from pushing the
+          // surrounding LTR punctuation (quotes, period) to wrong positions.
+          const bdi = document.createElement('bdi')
+          bdi.textContent = drill.options[drill.answer_index]
+          feedback.textContent = ''
+          feedback.append('\u2717 The answer is \u201c', bdi, '\u201d.')
+        }
       })
       group.appendChild(btn)
     })
@@ -778,9 +786,16 @@ export class MnemosyneModal extends HTMLElement {
 
       const isCorrect = value.toLowerCase() === drill.answer.toLowerCase()
       hint.dataset.result = isCorrect ? 'correct' : 'wrong'
-      hint.textContent = isCorrect
-        ? '\u2713 Correct!'
-        : `\u2717 The answer is \u201c${drill.answer}\u201d.`
+      if (isCorrect) {
+        hint.textContent = '\u2713 Correct!'
+      } else {
+        // <bdi> isolates the target-language answer from the LTR wrapper so
+        // typographic quotes don't flip sides for RTL answer strings.
+        const bdi = document.createElement('bdi')
+        bdi.textContent = drill.answer
+        hint.textContent = ''
+        hint.append('\u2717 The answer is \u201c', bdi, '\u201d.')
+      }
     }
 
     checkBtn.addEventListener('click', check)

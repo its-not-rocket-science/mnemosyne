@@ -210,7 +210,9 @@ Emit nuance objects derived from conjugation results.  One object per
     "modifier":       str,   # surface form of the modifier (DET or ADJ)
     "modifier_pos":   str,   # UD POS tag of the modifier
     "noun":           str,   # surface form of the head noun
-    "case":           str,   # "Nom" | "Acc" | "Dat" | "Gen" | "unknown"
+    # case — use display name, not raw spaCy tag:
+    "case":           str,   # "nominative" | "accusative" | "dative" | "genitive"
+                             # | "instrumental" | "locative" | "unknown"
     "gender":         str,   # "Masc" | "Fem" | "Neut" | "unknown"
     "number":         str,   # "Sing" | "Plur" | "unknown"
     "case_match":     bool | None,
@@ -228,7 +230,11 @@ three agreement dimensions.  The canonical form scheme is:
 case_agreement:{case_lower}:{modifier_lemma}_{noun_lemma}
 ```
 
-e.g. `"case_agreement:nom:der_Mann"`.
+e.g. `"case_agreement:nom:der_Mann"` (German), `"case_agreement:ins:новый_друг"` (Russian).
+
+Russian adds two cases beyond the German/Latin four: **Instrumental** and
+**Locative**.  German uses DET+NOUN and ADJ+NOUN pairs; Russian omits DET
+(no articles) and uses only ADJ+NOUN pairs.
 
 ### script
 
@@ -479,6 +485,56 @@ used for confidence.  Confidence is based on count of resolved features.
 3. Separable verb lemma reconstruction (`{particle}{bare_lemma}`) is a
    Germanic-language pattern that Dutch/Swedish/Norwegian plugins will reuse.
 4. Feature-count confidence is more portable than `is_oov`-based heuristics.
+
+### Russian (`ru`) — Full-Parse Plugin (Grammar/Idiom Deferred)
+
+`backend/plugins/russian.py` provides:
+
+- `analysis_depth="full"`, `morphology_depth="rich"`, `script_family="cyrillic"`
+- Vocabulary (lowercase Cyrillic lemmas from pymorphy3), conjugation, `case_agreement`
+- **Aspect** (imperfective/perfective) on every conjugation object — critical for Russian learners
+- **Past tense uses Gender** (Masc/Fem/Neut), not Person — Russian past verbs agree with the
+  subject's gender.  The `person_or_gender` key encodes a person digit for present/future and a
+  gender word for past.
+- **Six cases** in `case_agreement`: Nom, Gen, Dat, Acc, **Ins, Loc** (two beyond German)
+- No DET in case agreement (Russian has no articles — only ADJ+NOUN pairs)
+- `ru_core_news_sm` + pymorphy3
+
+**Canonical form scheme for Russian conjugation** (6 axes):
+```
+{lemma}:{tense}:{aspect}:{mood}:{person_or_gender}:{number}
+```
+
+**Architecture findings** this plugin surfaced:
+1. Aspect is a first-class morphological axis in Russian — encode it in the canonical form
+   so imperfective and perfective of the same verb get different UUIDs.
+2. Past tense agreement targets gender, not person — `person_or_gender` must vary by tense.
+3. Lowercase lemma convention (pymorphy3) differs from German (capitalised nouns).
+4. Six-case system extends the `_CASE_DISPLAY` map; display names are full English words
+   (`"instrumental"`, `"locative"`) stored in `lesson_data["case"]`.
+
+### Japanese (`ja`) — Morphology-Light Vocabulary Plugin
+
+`backend/plugins/japanese.py` provides:
+
+- `analysis_depth="morphology_light"`, `morphology_depth="shallow"`, `script_family="cjk"`
+- `tokenization_mode="segmented"` — SudachiPy word-boundary segmentation, not whitespace
+- `transliteration_scheme="hiragana"` — readings stored as hiragana in `lesson_data["reading"]`
+- Vocabulary only (NOUN, PROPN, ADJ, ADV, VERB content words)
+- Particles (ADP), auxiliaries (AUX), and all function words filtered out
+- Readings from `tok.morph.get("Reading")` converted from katakana to hiragana via
+  `_kata_to_hira(text)`: subtract `0x60` from chars in `U+30A1–U+30F6`
+- `ja_core_news_sm` + SudachiPy (`sudachidict-core`)
+
+**Architecture findings** this plugin surfaced:
+1. CJK tokenisation requires `tokenization_mode="segmented"` — whitespace splitting produces
+   one token per entire sentence for Japanese/Chinese.
+2. Readings are in katakana from SudachiPy; a simple subtraction converts them to hiragana
+   without an extra dependency.
+3. Japanese verbal morphology is carried by the auxiliary chain (ます, た, ない…), not by the
+   main verb stem — extracting conjugation objects for the full chain is deferred.
+4. `transliteration_scheme` triggers the script-view toggle (Script / Romanized / Both) in
+   the frontend; set it to `"hiragana"` not `"romaji"` to signal the scheme used.
 
 ## Minimal Stub Plugin
 

@@ -79,13 +79,27 @@ The suite requires no running external services:
 | `test_difficulty.py` | Difficulty scorer — pure functions | none |
 | `test_fsrs.py` | FSRS scheduler — pure functions | none |
 | `test_plugin.py` | Plugin registry and loader | none |
-| `test_stub_fr.py` | French stub plugin | none |
+| `test_non_latin_roundtrip.py` | Non-Latin DB round-trip + RTL API pipeline | in-memory SQLite |
+| `test_arabic_plugin.py` | Arabic plugin (dictionary mode) | none |
+| `test_hebrew_plugin.py` | Hebrew plugin (dictionary mode) | none |
+| `test_latin_plugin.py` | Latin plugin (dictionary mode) | none |
+| `test_chinese_plugin.py` | Chinese plugin (jieba segmentation) | none |
 | `test_spanish_spacy.py` | Spanish NLP extraction | **requires `es_core_news_sm`** |
+| `test_french_spacy.py` | French NLP extraction | **requires `fr_core_news_sm`** |
+| `test_german_spacy.py` | German NLP extraction | **requires `de_core_news_sm`** |
+| `test_russian_spacy.py` | Russian NLP extraction | **requires `ru_core_news_sm`** |
+| `test_japanese_plugin.py` | Japanese plugin (SudachiPy) | **requires `ja_core_news_sm`** |
 
-Skip the spaCy-dependent test when the model is not installed:
+Tests that require spaCy models are auto-skipped when the model is not installed (each file has a `pytestmark = pytest.mark.skipif(not _model_available(), ...)` guard). Run the full suite without any model installed:
 
 ```bash
-pytest backend/tests -q --ignore=backend/tests/test_spanish_spacy.py
+pytest backend/tests -q
+```
+
+To run only the model-free tests:
+
+```bash
+pytest backend/tests -q -k "not (spacy or spanish or french or german or russian or japanese)"
 ```
 
 ---
@@ -229,10 +243,38 @@ The parse route derives stable UUIDs via `canonical_object_id(language, type, ca
 ### canonical_form rules
 
 - **Stable**: re-parsing the same text must produce the same `canonical_form`.
-- Lowercase, no leading/trailing whitespace.
+- Lowercase, no leading/trailing whitespace (exception: German noun lemmas keep their initial capital — see below).
 - Drop any form that contains a space (NLP enclitic-fusion artifact).
 - For conjugations, encode the morphological axes: `{lemma}:{tense}:{mood}:{person}:{number}`.
 - For agreements, encode the pair: `{modifier_pos_lower}:{modifier_lemma}_{noun_lemma}`.
+
+**Script-family conventions:**
+
+| Script family | Lemma case | Notes |
+|---|---|---|
+| Latin (es, fr, la) | lowercase | Standard; matches dictionary headword convention |
+| Latin-German (de) | preserve capital on NOUN | German dictionaries capitalise nouns; `"Haus"` not `"haus"` |
+| Cyrillic (ru) | lowercase | pymorphy3 returns lowercase lemmas |
+| Arabic (ar) | undiacritised (tashkeel stripped) | `كتب` not `كَتَبَ`; strip combining marks U+064B–U+0670 before storing |
+| Hebrew (he) | unpointed (nikud stripped) | `ספר` not `סֵפֶר`; strip combining marks U+05B0–U+05C7 before storing |
+| CJK (zh, ja) | surface form as-is | No case; no diacritic stripping; store the segmented word token directly |
+| Hiragana/katakana (ja) | surface form as-is | Do not convert katakana to hiragana in the canonical form; readings go in `lesson_data["reading"]`, not in the canonical form |
+
+**Russian conjugation canonical form** (6 axes, not 5):
+
+```
+{lemma}:{tense}:{aspect}:{mood}:{person_or_gender}:{number}
+```
+
+`person_or_gender` is a person digit (`1`, `2`, `3`) for present/future tense, and a gender word (`masculine`, `feminine`, `neuter`) for past tense, because Russian past-tense verbs agree with the subject's gender, not person.
+
+**`case_agreement` canonical form** (German, Russian, Latin):
+
+```
+case_agreement:{case_lower}:{modifier_lemma}_{noun_lemma}
+```
+
+e.g. `"case_agreement:nom:der_mann"` (German), `"case_agreement:ins:новый_друг"` (Russian).
 
 ### surface_form rules
 

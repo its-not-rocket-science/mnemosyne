@@ -2,7 +2,7 @@
 
 Paste any text, parse it into sentences, open per-word micro-lessons, and rate your recall. FSRS schedules the next review.
 
-**Current state:** single-user MVP. Spanish (`es_core_news_sm`), an English stub, and a French vocabulary stub are the active plugins. User authentication and additional full-language plugins are planned; see [ROADMAP.md](ROADMAP.md).
+**Current state:** single-user MVP with ten language plugins. Full morphological analysis for Spanish, French, German, Russian, and Japanese; vocabulary/dictionary mode for Arabic, Hebrew, Mandarin Chinese, Latin, and English. RTL layout (Arabic, Hebrew) and CJK segmentation (Chinese, Japanese) are supported. User authentication is planned; see [ROADMAP.md](ROADMAP.md).
 
 ---
 
@@ -44,7 +44,11 @@ Requires PostgreSQL and Redis already running.
 
 ```bash
 poetry install
+# Minimum — Spanish only:
 python -m spacy download es_core_news_sm
+# Optional — install additional language models as needed:
+# python -m spacy download fr_core_news_sm de_core_news_sm
+# python -m spacy download ru_core_news_sm ja_core_news_sm
 cp .env.example .env     # set DATABASE_URL and REDIS_URL
 psql -h localhost -U postgres -l
 make dev                 # uvicorn --reload on :8000

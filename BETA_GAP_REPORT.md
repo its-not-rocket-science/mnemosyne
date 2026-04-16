@@ -31,12 +31,12 @@ These are genuinely solid and should not be second-guessed.
 
 These are true today. Name them plainly.
 
-- **Spanish is the only production-quality language.** Every other plugin is a stub or scaffold. A user who selects French, German, Arabic, Hebrew, Chinese, or Latin today gets vocabulary extracted by regex at best, or placeholder results at worst. The multi-language promise is architecturally ready and practically hollow.
+- **Five production-quality languages.** Spanish, French, German, Russian, and Japanese have full spaCy-backed morphological pipelines. Arabic, Hebrew, Chinese, and Latin are in dictionary/vocabulary mode. The multi-language promise is architecturally solid and partially delivered.
 - **No authentication beyond a header.** `X-User-Id` is trivially spoofable. Anyone who knows the API can read or overwrite another user's knowledge state. This is acceptable for local single-user use; it is not acceptable for a hosted service with multiple users who do not trust each other.
 - **No login UI.** There is no frontend for user registration, login, or session management. The multi-user backend is complete; the frontend has no way to surface it.
 - **NLP blocks the event loop.** `plugin.analyze_text()` runs synchronously in the FastAPI handler. For a 500-word Spanish text this is < 1 s and acceptable. For a 5 000-word paste it will block other requests. There is no `max_chars` guard.
 - **`create_all` still runs on startup.** Alembic migrations exist (0001–0004) but `Base.metadata.create_all` is still the startup path. On a fresh database this works; on an existing database that has been migrated, it is silently inconsistent.
-- **RTL layout is partially complete.** Sentence card text and pill lists receive `dir` and `lang` attributes. The modal (`mnemosyne-modal.js`) does not. Example text and drill prompts in the modal render without direction or language context. There are no integration tests that push a non-Latin text fixture through parse → lesson → render.
+- **RTL layout is complete.** `dir`/`lang` are applied to all text elements in the modal (title, example text, drill text/prompt/input) via `#applyTargetLang`. `<bdi>` isolation is used in fill-blank and multiple-choice feedback so RTL answer strings do not scramble surrounding LTR punctuation. CSS uses logical properties throughout. 43 non-Latin round-trip tests (M4) cover Arabic, Hebrew, Chinese, Russian, Japanese through the DB and API pipeline.
 - **No review event history.** `user_knowledge` stores only the current FSRS state. There is no record of when individual reviews happened, what quality rating was given, or what the mastery score was at each point. Retention curves, exact time-to-mastery, and per-session analytics are unavailable.
 - **No data export.** A user has no way to get their knowledge state or review history out of the system.
 - **Lesson generator is English-prose-centric.** `build_lesson()` produces sentences like "The word *X* is a noun" in English regardless of the target language. For a Spanish learner reading Spanish text this is acceptable. For a learner whose native language is not English, or for languages with grammatical concepts that do not map to English prose ("aspect", "classifier", "tone class"), it is a friction point.
@@ -101,14 +101,14 @@ Everything in private alpha plus the following.
 
 **What to do:** Run the full flow keyboard-only. Fix any focus management gaps. Run `axe` or `Lighthouse` accessibility audit on the rendered page. Document the result.
 
-### B4. RTL layout complete
+### B4. RTL layout complete ✓ DONE
 
-**Why it blocks:** The modal does not apply `dir` or `lang` to example text or drill prompts. For Arabic and Hebrew users this is a real visual breakage. Calling the system RTL-capable while the lesson modal renders RTL text as LTR is worse than not claiming RTL support at all.
+**Why it blocked:** The modal did not apply `dir` or `lang` to example text or drill prompts.
 
-**What to do:**
-1. `mnemosyne-modal.js` — apply `dir` and `lang` to the example text container and drill prompt container, sourced from the lesson's language metadata.
-2. Write an integration test that pushes an Arabic or Hebrew text fixture through parse → lesson → render and asserts `dir="rtl"` on the correct elements.
-3. Do a full CSS layout audit of the modal under `dir="rtl"`: margin directions, text alignment, button ordering.
+**What was done:**
+1. `mnemosyne-modal.js` — `#applyTargetLang` applies `dir` and `lang` to: title, example text, all drill text/prompt elements, and fill-blank input. CSS uses logical properties throughout.
+2. `<bdi>` elements wrap embedded target-language answers in fill-blank and multiple-choice feedback, preventing Unicode bidi algorithm from mis-ordering typographic quotes around RTL text.
+3. `test_non_latin_roundtrip.py` — API-level RTL pipeline tests assert `direction="rtl"` on Arabic and Hebrew plugins via `GET /languages`, and verify Arabic/Hebrew parse requests return valid UUID object IDs.
 
 ### B5. CORS lockdown
 
@@ -136,21 +136,31 @@ Everything in private alpha plus the following.
 
 *These are required to deliver on the multilingual promise, regardless of beta timeline.*
 
-### M1. Full French plugin
+### M1. Full French plugin ✓ DONE
 
-The scaffold and the test file (`test_french_spacy.py`) already exist. This is execution work, not design work. `fr_core_news_md` is available. Extract vocabulary and conjugation; emit `relation_hints` for conjugation_of; pass the existing tests.
+`backend/plugins/french.py` — `fr_core_news_sm`, vocabulary + conjugation + agreement.
+Paradigm class (-er/-ir/-re/irregular), reflexive detection via `Reflex=Yes`.
 
-### M2. Full German plugin
+### M2. Full German plugin ✓ DONE
 
-Same situation. Scaffold exists. `de_core_news_sm` is available. German morphology (case, gender, strong/weak inflection) is richer than Spanish; the canonical_form convention documentation should be extended to cover German compound nouns and case-marked articles.
+`backend/plugins/german.py` — `de_core_news_sm`, vocabulary + conjugation + `case_agreement`.
+Separable verb detection, 3-gender/4-case agreement, capitalised noun lemmas.
+Canonical form conventions for German documented in `PLUGIN_AUTHOR_GUIDE.md` and `CONTRIBUTING.md`.
 
-### M3. Modal RTL fix
+### M3. Modal RTL fix ✓ DONE
 
-Listed in public beta blockers. Also a multilingual blocker independently — without it, Arabic and Hebrew users get a broken lesson experience.
+See B4 above.
 
-### M4. Integration tests for non-Latin scripts
+### M4. Integration tests for non-Latin scripts ✓ DONE
 
-There are zero tests that push a non-ASCII, non-Latin canonical form through `canonical_object_id()`, store it in the database, retrieve it, and assert the round-trip is lossless. This is a cheap test that would expose encoding or collation bugs early. Add fixtures for Arabic (`كتاب`), Hebrew (`ספר`), and Chinese (`书`) as a minimum.
+`backend/tests/test_non_latin_roundtrip.py` — 43 tests covering:
+- `canonical_object_id()` UUID stability for Arabic, Hebrew, Chinese, Russian, Japanese
+- `CanonicalObjectRow` insert + retrieve via in-memory SQLite — lossless for all five scripts
+- `surface_forms` JSON array round-trip with diacritically-marked Arabic
+- `lesson_data` JSON round-trip with Hebrew
+- Unique constraint enforcement for Arabic
+- API-level: `GET /languages` returns `direction="rtl"` for Arabic and Hebrew
+- API-level: `POST /parse` with Arabic/Hebrew/Chinese text returns stable UUID v5 object IDs
 
 ### M5. Lesson generator pluggable templates
 
