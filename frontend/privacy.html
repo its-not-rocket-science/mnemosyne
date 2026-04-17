@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy policy — Mnemosyne</title>
+    <link rel="stylesheet" href="./css/global.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap">
+        <p class="eyebrow" aria-hidden="true">Mnemosyne</p>
+        <h1>Privacy policy</h1>
+      </div>
+    </header>
+
+    <main id="main" class="wrap" tabindex="-1">
+      <article class="prose">
+
+        <p>Last updated: April 2026.</p>
+
+        <h2>What we collect</h2>
+        <p>When you create an account we store:</p>
+        <ul>
+          <li>Your <strong>email address</strong> and a bcrypt hash of your password.</li>
+          <li><strong>Learning data</strong> — the text you parse, extracted vocabulary and grammar objects, spaced-repetition state (FSRS), and review history.</li>
+          <li><strong>Language preferences</strong> — transliteration and script settings you configure.</li>
+        </ul>
+        <p>We do not sell data, run ads, or share your data with third parties except as required to operate the service (e.g. the database host).</p>
+
+        <h2>Cookies and storage</h2>
+        <p>
+          Mnemosyne stores a JSON Web Token in <code>sessionStorage</code> while
+          you are signed in. <code>sessionStorage</code> is scoped to the current
+          browser tab and is cleared when the tab is closed. No persistent
+          cookies are set.
+        </p>
+
+        <h2>Error monitoring</h2>
+        <p>
+          When error monitoring is enabled (Sentry), crash reports and stack
+          traces may be sent to Sentry's servers. No personal data beyond IP
+          address and browser user-agent is included in these reports.
+        </p>
+
+        <h2>Your rights</h2>
+        <ul>
+          <li><strong>Access</strong> — download all your data at any time via
+            <a href="./index.html">Settings → Export data</a> (or
+            <code>GET /users/me/export</code>).</li>
+          <li><strong>Deletion</strong> — permanently delete your account and
+            all associated data. Sign in, then click <em>Delete account</em>
+            in the top-right corner, or send a
+            <code>DELETE /users/me</code> request with your token.
+            Deletion is immediate and irreversible.</li>
+          <li><strong>Correction</strong> — contact us to correct inaccurate
+            account information.</li>
+        </ul>
+
+        <h2>Data retention</h2>
+        <p>
+          Your data is kept for as long as your account exists. When you delete
+          your account all rows linked to your user ID are permanently removed
+          from the database within the same request.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions about this policy can be sent to
+          <a href="mailto:paul_schleifer@hotmail.com">paul_schleifer@hotmail.com</a>.
+        </p>
+
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <p><a href="./index.html">&larr; Back to Mnemosyne</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
