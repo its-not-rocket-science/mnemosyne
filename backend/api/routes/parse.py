@@ -155,14 +155,22 @@ async def _persist_parse_background(
         logger.warning("Background DB persist failed for /parse", exc_info=True)
         return  # Don't attempt enrichment if persist itself failed
 
-    if get_settings().enable_dictionary_lookup:
+    s = get_settings()
+    if s.enable_dictionary_lookup or s.enable_translation_enrichment:
         from backend.dictionary.enrichment import enrich_objects
         object_ids = list(uuid_to_candidate.keys())
         try:
             async with session_factory() as db:
-                await enrich_objects(db, object_ids)
+                await enrich_objects(
+                    db,
+                    object_ids,
+                    enable_gloss=s.enable_dictionary_lookup,
+                    translation_provider=s.translation_provider if s.enable_translation_enrichment else "none",
+                    translation_api_url=s.translation_api_url,
+                    translation_api_key=s.translation_api_key,
+                )
         except Exception:
-            logger.warning("Background dictionary enrichment failed for /parse", exc_info=True)
+            logger.warning("Background enrichment failed for /parse", exc_info=True)
 
 
 async def _persist_parse(

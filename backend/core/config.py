@@ -52,6 +52,22 @@ class Settings(BaseSettings):
     # Disabled by default to avoid external network calls in development and CI.
     # Set ENABLE_DICTIONARY_LOOKUP=true in .env to activate.
     enable_dictionary_lookup: bool = False
+    # Machine translation provider.
+    # Options: "none" (disabled), "libretranslate", "mymemory".
+    # "none" is the safe default — no external translation calls are made.
+    # See backend/dictionary/translation.py for attribution and cost details.
+    translation_provider: str = "none"
+    # Translation API base URL.  Only relevant when translation_provider is
+    # "libretranslate".  Defaults to https://libretranslate.com; point at a
+    # self-hosted instance for unlimited free use.
+    translation_api_url: str | None = None
+    # Translation API key.  Optional for LibreTranslate (required on the paid
+    # hosted plan); for MyMemory, set this to your registered email to raise
+    # the daily quota from 1 000 to 10 000 words.
+    translation_api_key: str | None = None
+    # When True, vocabulary objects are also enriched with machine translations
+    # in the same background pass as dictionary glosses.
+    enable_translation_enrichment: bool = False
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
