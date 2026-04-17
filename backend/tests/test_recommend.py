@@ -13,15 +13,13 @@ from backend.core.database import get_db_session, get_session_factory
 from backend.main import app
 from backend.models import Base
 
-_TEST_DB_URL = "sqlite+aiosqlite:///:memory:"
-
 
 # ── Fixtures (same pattern as test_persistence.py) ───────────────────────────
 
 
 @pytest_asyncio.fixture
-async def db_engine():
-    engine = create_async_engine(_TEST_DB_URL)
+async def db_engine(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path}/test.db")
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
     yield engine

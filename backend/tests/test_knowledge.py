@@ -30,7 +30,6 @@ from backend.srs.knowledge import (
     mastery_score,
 )
 
-_TEST_DB_URL = "sqlite+aiosqlite:///:memory:"
 _NOW = datetime(2025, 6, 1, 12, 0, 0, tzinfo=UTC)
 
 
@@ -38,8 +37,8 @@ _NOW = datetime(2025, 6, 1, 12, 0, 0, tzinfo=UTC)
 
 
 @pytest_asyncio.fixture
-async def db_engine():
-    engine = create_async_engine(_TEST_DB_URL)
+async def db_engine(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path}/test.db")
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
     yield engine

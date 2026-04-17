@@ -536,6 +536,117 @@ used for confidence.  Confidence is based on count of resolved features.
 4. `transliteration_scheme` triggers the script-view toggle (Script / Romanized / Both) in
    the frontend; set it to `"hiragana"` not `"romaji"` to signal the scheme used.
 
+### Agglutinative Languages (Finnish, Turkish, Hungarian, …)
+
+Agglutinative languages attach 10+ productive morphological suffixes to a single
+stem.  Turkish can express in one word what takes an English sentence.  These
+rules prevent ID space explosions and keep canonical forms stable across parses.
+
+#### Core rules
+
+1. **Encode only axes your plugin extracts reliably.**  Do not emit axes you
+   cannot determine.  A 4-axis canonical form is better than a 10-axis form
+   where 6 axes are guessed.  A wrong canonical form is worse than a missing one
+   because it creates a permanent ID collision.
+
+2. **Fix the axis order per language before the first parse.**  The order must be
+   stable across all parses; changing it after rows exist invalidates all stored
+   IDs.  Declare the order in a module-level docstring and in the plugin's
+   `CANONICAL_FORM_AXES` constant.
+
+3. **Use lowercase English labels** for axis values (`nominative` not `NOM`,
+   `singular` not `SG`).
+
+4. **Vocabulary canonical form** — the citation form (lemma as it appears in a
+   standard printed dictionary).  For Finnish: nominative singular.  For
+   Turkish: bare verbal stem (infinitive minus the `-mek`/`-mak` suffix — just
+   the stem, e.g. `git` not `gitmek`).
+
+#### Turkish conjugation canonical form
+
+Turkish verbs encode: tense, aspect, mood, person, number, voice (active,
+passive, causative, reflexive).  Suggested axis order:
+
+```
+{lemma}:{tense}:{aspect}:{mood}:{person}:{number}:{voice}
+```
+
+Omit trailing axes when unknown.  Only encode what your plugin verifies.
+
+| Axis | Example values |
+|---|---|
+| tense | `present`, `aorist`, `past`, `future`, `conditional` |
+| aspect | `progressive`, `habitual`, `perfective` |
+| mood | `indicative`, `optative`, `necessitative`, `imperative` |
+| person | `1`, `2`, `3` |
+| number | `singular`, `plural` |
+| voice | `active`, `passive`, `causative`, `reflexive` (omit when active) |
+
+Example: `git:past:perfective:indicative:1:singular` (I went).
+
+Turkish has a vowel harmony rule — the same morpheme has different surface forms
+depending on the stem vowels (`-dım`/`-dim`/`-dum`/`-düm` for past 1sg).
+The canonical form uses the abstract tense label, not the surface suffix.
+
+#### Finnish nominal canonical form
+
+Finnish nominals (nouns, adjectives, pronouns) have 15 cases × 2 numbers = 30
+inflected forms per word.  Encode:
+
+```
+{lemma}:{case}:{number}
+```
+
+Full case inventory (lowercase English names):
+
+```
+nominative  genitive    accusative  partitive
+inessive    elative     illative
+adessive    ablative    allative
+essive      translative
+instructive abessive    comitative
+```
+
+Example: `talo:inessive:singular` ("talossa" — in the house).
+
+Finnish verbs add: tense, mood, person, number, infinitive type.  Suggested
+conjugation form:
+
+```
+{lemma}:{tense}:{mood}:{person}:{number}
+```
+
+| Axis | Example values |
+|---|---|
+| tense | `present`, `past`, `perfect`, `pluperfect` |
+| mood | `indicative`, `conditional`, `imperative`, `potential` |
+| person | `1`, `2`, `3`, `passive` |
+| number | `singular`, `plural` |
+
+Example: `talo:inessive:singular` for a nominal; `puhua:present:indicative:1:singular` for a verb.
+
+#### Compatibility with the lesson builder
+
+The `_build_conjugation` and `_build_agreement` builders in `generators.py`
+expect English-label values for tense, mood, person, and number.  The Finnish
+and Turkish values above use the same label convention.  Set
+`LanguageCapabilities.tense_pool` and `mood_pool` to the tense/mood labels your
+plugin emits so MC drills only offer language-appropriate wrong answers.
+
+#### Architecture guidance
+
+- Do not extract suffixes as separate learnable objects.  The boundary between
+  stem and suffix is meaningful to linguists but not to language learners; teach
+  inflected forms as wholes.
+- Use `lesson_data["morphology_note"]` for a free-text explanation of the
+  grammatical structure (e.g. `"2nd person plural past passive"`).
+- For languages with 15+ cases, the `_build_case_agreement` lesson builder is
+  insufficiently parameterised — it knows only 4 cases.  You will need to extend
+  `_CASE_DISPLAY` in `generators.py` and add case labels to `_CASE_OPTIONS` when
+  implementing a Finnish or Turkish plugin.
+
+---
+
 ## Minimal Stub Plugin
 
 If full NLP is not yet available for your language, start with a stub that

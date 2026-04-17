@@ -14,22 +14,20 @@ from httpx import ASGITransport, AsyncClient
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
-from backend.core.database import get_db_session
+from backend.core.database import get_db_session, get_session_factory
 from backend.main import app
 from backend.models import Base, CanonicalObjectRow, ParsedText, UserKnowledgeRow
 from backend.parsing.canonical import canonical_object_id
 from backend.srs.knowledge import DEFAULT_USER_ID
-
-_TEST_DB_URL = "sqlite+aiosqlite:///:memory:"
 
 
 # ── Fixtures ─────────────────────────────────────────────────────────────────
 
 
 @pytest_asyncio.fixture
-async def db_engine():
-    """Fresh in-memory SQLite engine with all tables created."""
-    engine = create_async_engine(_TEST_DB_URL)
+async def db_engine(tmp_path):
+    """Fresh file-based SQLite engine with all tables created."""
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path}/test.db")
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
     yield engine
@@ -46,10 +44,12 @@ async def async_client(db_engine):
             yield session
 
     app.dependency_overrides[get_db_session] = _override_db
+    app.dependency_overrides[get_session_factory] = lambda: factory
     transport = ASGITransport(app=app)
     async with AsyncClient(transport=transport, base_url="http://test") as client:
         yield client
     app.dependency_overrides.pop(get_db_session, None)
+    app.dependency_overrides.pop(get_session_factory, None)
 
 
 # ── /parse persistence ────────────────────────────────────────────────────────
