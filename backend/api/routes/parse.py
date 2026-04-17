@@ -142,12 +142,27 @@ async def _persist_parse_background(
     Called by FastAPI's BackgroundTasks after the HTTP response has been sent.
     Creating a new session here is necessary because the request-scoped session
     is closed before background tasks run.
+
+    When ``ENABLE_DICTIONARY_LOOKUP=true``, a second pass is made in a fresh
+    session to enrich vocabulary objects with Wiktionary glosses.  This runs
+    after the main persist so canonical objects are guaranteed to be in the DB
+    before enrichment reads them.
     """
     try:
         async with session_factory() as db:
             await _persist_parse(db, payload, candidate_results, sentences, uuid_to_candidate, user_id)
     except Exception:
         logger.warning("Background DB persist failed for /parse", exc_info=True)
+        return  # Don't attempt enrichment if persist itself failed
+
+    if get_settings().enable_dictionary_lookup:
+        from backend.dictionary.enrichment import enrich_objects
+        object_ids = list(uuid_to_candidate.keys())
+        try:
+            async with session_factory() as db:
+                await enrich_objects(db, object_ids)
+        except Exception:
+            logger.warning("Background dictionary enrichment failed for /parse", exc_info=True)
 
 
 async def _persist_parse(
