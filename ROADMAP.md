@@ -35,7 +35,12 @@ Status markers: **implemented** · **partial** · **planned** · **deferred**
 | Accessibility baseline | partial | Focus trap, ARIA live regions, reduced-motion, 44 px targets; WCAG AA not audited end-to-end |
 | RTL layout support | implemented | `dir`/`lang` applied to all text elements in modal; `<bdi>` isolation in drill feedback; CSS uses logical properties throughout |
 | Multi-user architecture | implemented | `X-User-Id` header; `get_current_user` dependency; per-user isolation across all routes; `UserLanguagePreferenceRow` table; `/users/me/*` preference CRUD |
-| User authentication | partial | Header-based identity complete; JWT auth not yet implemented — header is not cryptographically verified |
+| User authentication | implemented | `/auth/register` + `/auth/login`; HS256 JWT; `get_current_user` verifies Bearer token or falls back to `X-User-Id`; login/logout UI |
+| Rate limiting | implemented | `slowapi`; JWT > X-User-Id > IP key; configurable `RATE_LIMIT_PARSE`; per-user independent counters |
+| Review event log | implemented | `ReviewEventRow` per review; `mastery_score_before/after`; `GET /metrics` exposes `reviews_today`, `streak_days`, `daily_activity` |
+| Privacy policy + account deletion | implemented | `DELETE /users/me` cascades all rows; `frontend/privacy.html`; "Delete account" button with confirmation |
+| Sentry error monitoring | implemented | SDK init in `main.py` when `SENTRY_DSN` is set; environment tag auto-derived from `DEBUG` |
+| Request-id structured logging | implemented | `RequestIdFilter` context-var; 8-char hex ID on every log line and `request.state.request_id` |
 
 ---
 
@@ -51,11 +56,11 @@ See `BETA_GAP_REPORT.md` for the detailed blocker breakdown by alpha / beta / vi
 - **Login/register UI** — frontend login panel, JWT in `sessionStorage`, logout. — **Public beta blocker B2**
 - **WCAG 2.1 AA audit** — keyboard-only run through the full parse → lesson → review flow; screen-reader smoke test with NVDA and VoiceOver. — **Public beta blocker B3**
 - **CORS lockdown** — warn-on-`*` is already in `main.py`; wire it to a deployment checklist. — **Public beta blocker B5**
-- **Rate limiting** — per-IP and per-user rate limiting on the parse endpoint at minimum. — **Public beta blocker B6**
-- **Privacy policy + data deletion** — `DELETE /users/me` removes all user data; visible privacy policy page. — **Public beta blocker B7**
-- **Error monitoring** — Sentry SDK or equivalent before public traffic. — **Public beta blocker B8**
-- **Structured request logging** — add `request_id` to each request's log lines for trace correlation.
-- **Background DB persist** — currently `_persist_parse` runs in the request path after the response is built. Move to a true background task so the client is not held waiting on DB I/O.
+- **Rate limiting** — ~~per-IP and per-user rate limiting on the parse endpoint at minimum.~~ **done**: `slowapi` limiter; JWT > X-User-Id > IP key function; configurable `RATE_LIMIT_PARSE`; tests in `test_rate_limit.py`. — ~~**Public beta blocker B6**~~
+- **Privacy policy + data deletion** — ~~`DELETE /users/me` removes all user data; visible privacy policy page.~~ **done**: `DELETE /users/me` cascades all user rows; `frontend/privacy.html`; "Delete account" button in header with confirmation; privacy link in footer. — ~~**Public beta blocker B7**~~
+- **Error monitoring** — ~~Sentry SDK or equivalent before public traffic.~~ **done**: `sentry_sdk` initialised in `main.py` when `SENTRY_DSN` env var is set; `sentry_environment` defaults to `development` / `production` from `DEBUG`. — ~~**Public beta blocker B8**~~
+- **Structured request logging** — ~~add `request_id` to each request's log lines for trace correlation.~~ **done**: `RequestIdFilter` injects `request_id` (8-char hex UUID) into every log line via context var; middleware sets `request.state.request_id`. — ~~**done**~~
+- **Background DB persist** — ~~currently `_persist_parse` runs in the request path after the response is built. Move to a true background task so the client is not held waiting on DB I/O.~~ **done**: `BackgroundTasks.add_task(_persist_parse_background, ...)` after response is built; factory injected so tests can override. — ~~**done**~~
 - **< 2 s parse time for 500 words** — profile `es_core_news_sm` on the target hardware; document the result.
 
 ---
