@@ -26,6 +26,7 @@ FastAPI's standard error format.  Wire it via:
 from __future__ import annotations
 
 import logging
+import os
 
 from fastapi import Request
 from fastapi.responses import JSONResponse
@@ -61,7 +62,14 @@ def _user_or_ip_key(request: Request) -> str:
     return get_remote_address(request)
 
 
-limiter = Limiter(key_func=_user_or_ip_key)
+# SLOWAPI_STORAGE_URI controls the counter backend.
+#
+# Default (unset) → in-memory: counters are per-process and reset on restart.
+# Multi-worker deployments must set this to a Redis URL so all workers share
+# the same counter, e.g. SLOWAPI_STORAGE_URI=redis://redis:6379/1
+# See DEPLOYMENT.md §5 for details.
+_storage_uri = os.environ.get("SLOWAPI_STORAGE_URI", "memory://")
+limiter = Limiter(key_func=_user_or_ip_key, storage_uri=_storage_uri)
 
 
 async def rate_limit_exceeded_handler(request: Request, exc: RateLimitExceeded) -> JSONResponse:
