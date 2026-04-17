@@ -533,6 +533,39 @@ select:focus-visible {
   color: var(--error-color);
 }
 
+/* ── Job progress bar ────────────────────────────────────────────────────────
+   Shown while a large text is being processed by the async /parse/jobs API. */
+
+.job-progress {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.job-progress__bar {
+  block-size: 0.375rem;
+  border-radius: 9999px;
+  background-color: var(--border);
+  overflow: hidden;
+  position: relative;
+}
+
+.job-progress__bar::after {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  inline-size: var(--progress, 0%);
+  background-color: var(--accent);
+  border-radius: inherit;
+  transition: inline-size 0.3s ease;
+}
+
+.job-progress__label {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  margin: 0;
+}
+
 .results {
   display: grid;
   gap: var(--space-3);

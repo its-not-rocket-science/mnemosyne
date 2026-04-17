@@ -25,6 +25,10 @@ class Settings(BaseSettings):
     # NLP pipeline is invoked.  Protects against event-loop blocking on large
     # pastes.  Set MAX_PARSE_CHARS in .env to override.
     max_parse_chars: int = 10_000
+    # Maximum characters accepted by POST /parse/jobs (the async large-text
+    # endpoint).  Must be >= max_parse_chars.  Texts between the two limits
+    # must use the job endpoint; texts above this limit are always rejected.
+    max_job_chars: int = 100_000
     # JWT authentication settings.
     # jwt_secret MUST be overridden in production via the JWT_SECRET env var.
     # The default is intentionally weak so it fails loudly if deployed as-is.
