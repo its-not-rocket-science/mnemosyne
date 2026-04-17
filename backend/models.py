@@ -341,6 +341,43 @@ class ReviewEventRow(Base):
     )
 
 
+class UserFsrsParamsRow(Base):
+    """Per-user FSRS scheduling parameters.
+
+    Created on demand when a user first calibrates or manually sets their
+    desired retention.  A missing row means "use global defaults".
+
+    ``desired_retention`` ∈ [0.70, 0.97] controls the target recall probability
+    at the scheduled review date.  Lower values → longer intervals (user has
+    stronger memory or prefers more spacing); higher values → shorter intervals.
+
+    ``last_calibrated_at`` and ``calibration_rmse`` are populated only by the
+    auto-calibration endpoint; they are ``None`` when the user set the parameter
+    manually.
+    """
+    __tablename__ = "user_fsrs_params"
+
+    user_id: Mapped[str] = mapped_column(String(50), primary_key=True)
+
+    #: Target recall probability at scheduled review; default 0.90.
+    desired_retention: Mapped[float] = mapped_column(Float, default=0.90)
+
+    #: Set to the timestamp of the last auto-calibration run, else None.
+    last_calibrated_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
+
+    #: Number of review events used in the last calibration.
+    reviews_used: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
+    #: RMSE of predicted vs actual recall across bins (lower = better).
+    calibration_rmse: Mapped[float | None] = mapped_column(Float, nullable=True)
+
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=_now, onupdate=_now
+    )
+
+
 class UserLanguagePreferenceRow(Base):
     """Per-user, per-language study preferences.
 

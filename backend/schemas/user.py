@@ -41,6 +41,47 @@ from datetime import datetime
 from pydantic import BaseModel, Field
 
 
+class FsrsParams(BaseModel):
+    """Current FSRS scheduling parameters for a user.
+
+    ``desired_retention`` is the target recall probability at the scheduled
+    review date.  Values < 0.90 give longer intervals (less frequent reviews);
+    values > 0.90 give shorter intervals (more frequent reviews).
+
+    When ``last_calibrated_at`` is ``None`` the value was either the factory
+    default or was set manually via PATCH.
+    """
+
+    desired_retention: float = Field(
+        default=0.90,
+        ge=0.70,
+        le=0.97,
+        description="Target recall probability at scheduled review. Range [0.70, 0.97].",
+    )
+    last_calibrated_at: datetime | None = Field(
+        default=None,
+        description="Timestamp of the last successful auto-calibration run.",
+    )
+    reviews_used: int | None = Field(
+        default=None,
+        description="Number of review events consumed in the last calibration.",
+    )
+    calibration_rmse: float | None = Field(
+        default=None,
+        description="RMSE of predicted vs actual recall per bin (lower = better fit).",
+    )
+
+
+class FsrsParamsUpdate(BaseModel):
+    """Payload for manually setting FSRS parameters."""
+
+    desired_retention: float = Field(
+        ge=0.70,
+        le=0.97,
+        description="New desired retention. Range [0.70, 0.97].",
+    )
+
+
 class LanguagePreference(BaseModel):
     """Preferences for one (user, language) pair."""
 

@@ -8,9 +8,9 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session
-from backend.models import ReviewEventRow, UserKnowledgeRow
+from backend.models import ReviewEventRow, UserFsrsParamsRow, UserKnowledgeRow
 from backend.schemas.parse import ReviewRequest, ReviewResponse
-from backend.srs.fsrs import review
+from backend.srs.fsrs import DESIRED_RETENTION, review
 from backend.srs.knowledge import mastery_score
 
 logger = logging.getLogger(__name__)
@@ -24,6 +24,17 @@ async def submit_review(
     current_user: str = Depends(get_current_user),
 ) -> ReviewResponse:
     now = datetime.now(UTC)
+
+    # Load per-user desired_retention (defaults to DESIRED_RETENTION if absent).
+    user_desired_retention = DESIRED_RETENTION
+    try:
+        params_row = await db.get(UserFsrsParamsRow, current_user)
+        if params_row is not None:
+            user_desired_retention = params_row.desired_retention
+    except Exception:
+        logger.warning(
+            "DB fsrs-params load failed for user %r, using default", current_user, exc_info=True
+        )
 
     # Load prior FSRS state from UserKnowledge.  DB row takes precedence over
     # the payload-supplied state so that the server's record is authoritative.
@@ -46,7 +57,12 @@ async def submit_review(
         )
 
     score_before = mastery_score(prior_state, now)
-    next_days, updated_state = review(quality=payload.quality, state=prior_state, now=now)
+    next_days, updated_state = review(
+        quality=payload.quality,
+        state=prior_state,
+        now=now,
+        desired_retention=user_desired_retention,
+    )
 
     score = mastery_score(updated_state, now)
     due_at = datetime.fromisoformat(updated_state["due_at"])
