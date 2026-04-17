@@ -166,6 +166,49 @@ _STRONG_VERBS: frozenset[str] = frozenset({
 })
 
 
+# ── Idiom table ───────────────────────────────────────────────────────────────
+# Fixed-form (non-conjugable) multi-word expressions.
+# Tuples: (lowercased_word_sequence, english_meaning, register)
+# Sorted longest-first so longer matches are consumed before their substrings.
+
+_IDIOM_TABLE: tuple[tuple[tuple[str, ...], str, str], ...] = (
+    # ── 4-word phrases ────────────────────────────────────────────────────────
+    (("so", "schnell", "wie", "möglich"),  "as quickly as possible",     "neutral"),
+    (("auf", "der", "einen", "seite"),     "on the one hand",            "neutral"),
+    # ── 3-word phrases ────────────────────────────────────────────────────────
+    (("auf", "jeden", "fall"),             "in any case / definitely",   "neutral"),
+    (("auf", "keinen", "fall"),            "under no circumstances",     "neutral"),
+    (("in", "der", "tat"),                 "in fact / indeed",           "formal"),
+    (("im", "großen", "ganzen"),           "on the whole / by and large","neutral"),
+    (("unter", "anderem"),                 "among other things",         "neutral"),
+    (("zum", "beispiel"),                  "for example",                "neutral"),
+    (("im", "gegenteil"),                  "on the contrary",            "neutral"),
+    (("auf", "einmal"),                    "all at once / suddenly",     "neutral"),
+    (("im", "allgemeinen"),                "in general",                 "neutral"),
+    (("in", "der", "regel"),               "as a rule / generally",      "neutral"),
+    (("ab", "und", "zu"),                  "from time to time",          "neutral"),
+    (("hin", "und", "wieder"),             "now and then",               "neutral"),
+    # ── 2-word phrases ────────────────────────────────────────────────────────
+    (("auf", "deutsch"),                   "in German",                  "neutral"),
+    (("auf", "englisch"),                  "in English",                 "neutral"),
+    (("zum", "glück"),                     "fortunately / luckily",      "neutral"),
+    (("zum", "schluss"),                   "finally / in conclusion",    "neutral"),
+    (("zum", "beispiel"),                  "for example",                "neutral"),
+    (("im", "moment"),                     "at the moment",              "neutral"),
+    (("im", "gegensatz"),                  "in contrast (to)",           "neutral"),
+    (("auf", "wiedersehen"),               "goodbye (formal)",           "formal"),
+    (("tschüss",),                         "bye (informal)",             "informal"),
+    (("natürlich",),                       "of course / naturally",      "neutral"),
+    (("übrigens",),                        "by the way",                 "neutral"),
+    (("trotzdem",),                        "nevertheless / still",       "neutral"),
+    (("außerdem",),                        "besides / moreover",         "neutral"),
+    (("deswegen",),                        "because of that / therefore","neutral"),
+    (("deshalb",),                         "therefore / that's why",     "neutral"),
+    (("allerdings",),                      "however / admittedly",       "neutral"),
+    (("nämlich",),                         "namely / you see",           "neutral"),
+)
+
+
 # ── Plugin ────────────────────────────────────────────────────────────────────
 
 class GermanPlugin:
@@ -186,7 +229,7 @@ class GermanPlugin:
         tokenization_quality="high",
         morphology_quality="medium",   # small model; case inference is imperfect
         syntax_support=True,
-        idiom_detection=False,
+        idiom_detection=True,    # curated fixed-expression table (~35 entries)
         tts_lang_tag="de",
         transliteration_scheme=None,
         # German: only present/past (Präteritum) in simple tenses; perfect and
@@ -253,11 +296,59 @@ class GermanPlugin:
         candidates.extend(conj_candidates)
         candidates.extend(self._extract_vocabulary(tokens, seen_vocab))
         candidates.extend(self._extract_case_agreements(tokens))
+        candidates.extend(self._extract_idioms(tokens))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     def get_lesson(self, object_id: str) -> CandidateObject | None:
         return self.lesson_store.get(object_id)
+
+    # ------------------------------------------------------------------
+    # Idioms
+    # ------------------------------------------------------------------
+
+    def _extract_idioms(self, tokens: list[Any]) -> list[CandidateObject]:
+        """Detect invariant multi-word expressions by surface-form token matching.
+
+        Scans the lowercased token sequence for entries in ``_IDIOM_TABLE``.
+        Sorted longest-first (by table order); once a span is consumed by a
+        longer match, shorter overlapping phrases are not re-matched.
+        """
+        if not tokens:
+            return []
+
+        lower_texts = [t.text.lower() for t in tokens]
+        n = len(lower_texts)
+        seen_idioms: set[str] = set()
+        used_positions: set[int] = set()
+        candidates: list[CandidateObject] = []
+
+        for words, meaning, register in _IDIOM_TABLE:
+            wlen = len(words)
+            for start in range(n - wlen + 1):
+                if any(start + k in used_positions for k in range(wlen)):
+                    continue
+                if lower_texts[start : start + wlen] == list(words):
+                    phrase = " ".join(words)
+                    if phrase in seen_idioms:
+                        continue
+                    seen_idioms.add(phrase)
+                    used_positions.update(range(start, start + wlen))
+                    surface = " ".join(t.text for t in tokens[start : start + wlen])
+                    candidates.append(CandidateObject(
+                        canonical_form=phrase,
+                        surface_form=surface,
+                        type="idiom",
+                        label=surface,
+                        lesson_data={
+                            "phrase":   phrase,
+                            "meaning":  meaning,
+                            "register": register,
+                        },
+                        confidence=0.90,
+                    ))
+
+        return candidates
 
     # ------------------------------------------------------------------
     # Vocabulary

@@ -120,6 +120,47 @@ _GENDER_DISPLAY: dict[str, str] = {
 _PAST_TENSES = frozenset({"Past"})
 
 
+# ── Idiom table ───────────────────────────────────────────────────────────────
+# Fixed-form (non-conjugable) multi-word expressions.
+# Tuples: (lowercased_word_sequence, english_meaning, register)
+# Sorted longest-first so longer matches are consumed before their substrings.
+
+_IDIOM_TABLE: tuple[tuple[tuple[str, ...], str, str], ...] = (
+    # ── 4-word phrases ────────────────────────────────────────────────────────
+    (("в", "то", "же", "время"),          "at the same time",           "neutral"),
+    (("с", "одной", "стороны",),          "on the one hand",            "neutral"),
+    # ── 3-word phrases ────────────────────────────────────────────────────────
+    (("в", "самом", "деле"),              "really / in fact",           "neutral"),
+    (("на", "самом", "деле"),             "in fact / actually",         "neutral"),
+    (("в", "конце", "концов"),            "in the end / after all",     "neutral"),
+    (("по", "крайней", "мере"),           "at least",                   "neutral"),
+    (("прежде", "всего"),                 "first of all / above all",   "neutral"),
+    (("в", "общем",),                     "in general / on the whole",  "neutral"),
+    (("в", "частности",),                 "in particular",              "formal"),
+    (("тем", "не", "менее"),              "nevertheless",               "formal"),
+    (("иными", "словами",),               "in other words",             "neutral"),
+    (("другими", "словами",),             "in other words",             "neutral"),
+    (("то", "есть"),                      "that is / i.e.",             "neutral"),
+    # ── 2-word phrases ────────────────────────────────────────────────────────
+    (("конечно",),                        "of course / certainly",      "neutral"),
+    (("наверное",),                       "probably / perhaps",         "neutral"),
+    (("наверняка",),                      "for sure / certainly",       "neutral"),
+    (("вообще-то",),                      "actually / generally speaking","neutral"),
+    (("честно", "говоря"),                "honestly speaking",          "neutral"),
+    (("кстати",),                         "by the way",                 "neutral"),
+    (("вдруг",),                          "suddenly / what if",         "neutral"),
+    (("пожалуй",),                        "perhaps / I'd say",          "neutral"),
+    (("например",),                       "for example",                "neutral"),
+    (("поэтому",),                        "therefore / that's why",     "neutral"),
+    (("однако",),                         "however / but",              "neutral"),
+    (("зато",),                           "but on the other hand",      "neutral"),
+    (("всё-таки",),                       "all the same / still",       "neutral"),
+    (("всё", "равно"),                    "all the same / anyway",      "neutral"),
+    (("до", "свидания"),                  "goodbye (formal)",           "formal"),
+    (("спокойной", "ночи"),               "good night",                 "neutral"),
+)
+
+
 # ── Plugin ────────────────────────────────────────────────────────────────────
 
 class RussianPlugin:
@@ -140,7 +181,7 @@ class RussianPlugin:
         tokenization_quality="high",
         morphology_quality="medium",   # small model; ambiguous forms may err
         syntax_support=True,
-        idiom_detection=False,
+        idiom_detection=True,    # curated fixed-expression table (~35 entries)
         tts_lang_tag="ru",
         transliteration_scheme=None,   # no romanisation in this iteration
     )
@@ -202,11 +243,141 @@ class RussianPlugin:
         candidates.extend(conj_candidates)
         candidates.extend(self._extract_vocabulary(tokens, seen_vocab))
         candidates.extend(self._extract_case_agreements(tokens))
+        candidates.extend(self._extract_idioms(tokens))
+
+        seen_nuance: set[str] = set()
+        candidates.extend(self._extract_nuance(conj_candidates, seen_nuance))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     def get_lesson(self, object_id: str) -> CandidateObject | None:
         return self.lesson_store.get(object_id)
+
+    # ------------------------------------------------------------------
+    # Idioms
+    # ------------------------------------------------------------------
+
+    def _extract_idioms(self, tokens: list[Any]) -> list[CandidateObject]:
+        """Detect invariant multi-word expressions by surface-form token matching."""
+        if not tokens:
+            return []
+
+        lower_texts = [t.text.lower() for t in tokens]
+        n = len(lower_texts)
+        seen_idioms: set[str] = set()
+        used_positions: set[int] = set()
+        candidates: list[CandidateObject] = []
+
+        for words, meaning, register in _IDIOM_TABLE:
+            wlen = len(words)
+            for start in range(n - wlen + 1):
+                if any(start + k in used_positions for k in range(wlen)):
+                    continue
+                if lower_texts[start : start + wlen] == list(words):
+                    phrase = " ".join(words)
+                    if phrase in seen_idioms:
+                        continue
+                    seen_idioms.add(phrase)
+                    used_positions.update(range(start, start + wlen))
+                    surface = " ".join(t.text for t in tokens[start : start + wlen])
+                    candidates.append(CandidateObject(
+                        canonical_form=phrase,
+                        surface_form=surface,
+                        type="idiom",
+                        label=surface,
+                        lesson_data={
+                            "phrase":   phrase,
+                            "meaning":  meaning,
+                            "register": register,
+                        },
+                        confidence=0.90,
+                    ))
+
+        return candidates
+
+    # ------------------------------------------------------------------
+    # Nuance
+    # ------------------------------------------------------------------
+
+    def _extract_nuance(
+        self,
+        conj_candidates: list[CandidateObject],
+        seen_nuance: set[str],
+    ) -> list[CandidateObject]:
+        """Emit aspect nuance observations derived from conjugation results.
+
+        Russian verbal aspect is one of the most important grammatical concepts
+        for learners.  A nuance object is emitted once per (aspect, lemma) pair:
+
+        - ``perfective_aspect`` — the action is presented as completed or
+          resulting in a state change.
+        - ``imperfective_aspect`` — the action is ongoing, habitual, or viewed
+          as a process without reference to completion.
+        """
+        candidates: list[CandidateObject] = []
+
+        for cand in conj_candidates:
+            lemma  = cand.lesson_data.get("lemma", "")
+            aspect = cand.lesson_data.get("aspect", "")
+            surface = cand.lesson_data.get("surface", cand.surface_form or "")
+
+            if aspect == "perfective":
+                cf = f"nuance:perfective_aspect:{lemma}"
+                if cf in seen_nuance:
+                    continue
+                seen_nuance.add(cf)
+                candidates.append(CandidateObject(
+                    canonical_form=cf,
+                    surface_form=surface,
+                    type="nuance",
+                    label=surface,
+                    lesson_data={
+                        "nuance_type": "perfective_aspect",
+                        "lemma":       lemma,
+                        "surface":     surface,
+                        "note": (
+                            f"«{surface}» is perfective: the action is viewed as "
+                            "completed or resulting in a definite outcome. "
+                            "Perfective verbs typically cannot form an imperfective present."
+                        ),
+                    },
+                    confidence=0.80,
+                    relation_hints=[RelationHint(
+                        relation_type="nuance_of",
+                        target_canonical_form=lemma,
+                        target_type="vocabulary",
+                    )],
+                ))
+
+            elif aspect == "imperfective":
+                cf = f"nuance:imperfective_aspect:{lemma}"
+                if cf in seen_nuance:
+                    continue
+                seen_nuance.add(cf)
+                candidates.append(CandidateObject(
+                    canonical_form=cf,
+                    surface_form=surface,
+                    type="nuance",
+                    label=surface,
+                    lesson_data={
+                        "nuance_type": "imperfective_aspect",
+                        "lemma":       lemma,
+                        "surface":     surface,
+                        "note": (
+                            f"«{surface}» is imperfective: the action is viewed as "
+                            "ongoing, repeated, or habitual — not necessarily completed. "
+                            "Imperfective verbs form a full present-tense paradigm."
+                        ),
+                    },
+                    confidence=0.80,
+                    relation_hints=[RelationHint(
+                        relation_type="nuance_of",
+                        target_canonical_form=lemma,
+                        target_type="vocabulary",
+                    )],
+                ))
+
+        return candidates
 
     # ------------------------------------------------------------------
     # Vocabulary
