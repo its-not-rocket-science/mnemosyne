@@ -79,7 +79,8 @@ def test_parse_single_sentence_no_trailing_punctuation() -> None:
 
 
 def test_parse_unsupported_language_returns_404() -> None:
-    resp = _parse("你好世界", language="zh")
+    # "xx" has no registered plugin; "zh" is now supported via the Chinese plugin.
+    resp = _parse("Hello world.", language="xx")
     assert resp.status_code == 404
     assert "detail" in resp.json()
 
