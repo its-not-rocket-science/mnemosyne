@@ -215,11 +215,14 @@ main:focus {
 .user-info__email {
   font-size: 0.875rem;
   color: var(--muted);
-  /* Truncate long email addresses on narrow screens. */
+  /* Truncate long email addresses on narrow screens.
+     min-inline-size: 0 lets the flex item shrink below its un-wrapped
+     content width so text-overflow: ellipsis actually fires. */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   max-inline-size: 18rem;
+  min-inline-size: 0;
 }
 
 /* ── Offline badge ───────────────────────────────────────────────────────────
