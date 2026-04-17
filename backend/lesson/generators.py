@@ -249,6 +249,10 @@ def _build_vocabulary(b: _B) -> LessonResponse:
     if verb_form := b.lesson_data.get("verb_form"):
         fields.append(LessonField(label="Form", value=verb_form.lower()))
 
+    # Stored translation (from background enrichment or on-demand /translate).
+    if translation := b.lesson_data.get("translation"):
+        fields.append(LessonField(label="Translation", value=str(translation)))
+
     # Provider-supplied gloss — only added when lesson_data has no gloss key.
     if not b.lesson_data.get("gloss"):
         if auto_gloss := b.prov.gloss.lookup(lemma, b.ctx.language_code, pos_raw):
@@ -572,6 +576,9 @@ def _build_dictionary(b: _B) -> LessonResponse:
 
     fields: list[LessonField] = []
 
+    # Stored translation shown before gloss for quick comprehension.
+    if translation := b.lesson_data.get("translation"):
+        fields.append(LessonField(label="Translation", value=str(translation)))
     if gloss_str:
         fields.append(LessonField(label="Gloss", value=gloss_str))
     if romanized:
