@@ -18,38 +18,46 @@ from datetime import UTC, date, datetime, timedelta
 from unittest.mock import patch, AsyncMock
 
 import pytest
+import pytest_asyncio
 from httpx import ASGITransport, AsyncClient
 from sqlalchemy import select
-from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
 from backend.api.dependencies import get_current_user, get_db_session
+from backend.core.database import get_session_factory
 from backend.main import app
 from backend.models import Base, ReviewEventRow
 
 # ── DB fixture ────────────────────────────────────────────────────────────────
 
-_TEST_DB = "sqlite+aiosqlite:///:memory:"
 
-
-@pytest.fixture()
-async def db_session():
-    engine = create_async_engine(_TEST_DB, echo=False)
+@pytest_asyncio.fixture
+async def db_engine(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path}/test.db")
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
-    factory = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
-    async with factory() as session:
-        yield session
+    yield engine
     await engine.dispose()
 
 
-@pytest.fixture()
-async def client(db_session: AsyncSession):
-    """HTTP client with DB and auth overrides."""
-    async def _db():
-        yield db_session
+@pytest_asyncio.fixture
+async def db_session(db_engine):
+    factory = async_sessionmaker(db_engine, class_=AsyncSession, expire_on_commit=False)
+    async with factory() as session:
+        yield session
 
-    app.dependency_overrides[get_db_session] = _db
+
+@pytest_asyncio.fixture
+async def client(db_engine):
+    """HTTP client with DB and auth overrides."""
+    factory = async_sessionmaker(db_engine, class_=AsyncSession, expire_on_commit=False)
+
+    async def _override_db():
+        async with factory() as session:
+            yield session
+
+    app.dependency_overrides[get_db_session] = _override_db
+    app.dependency_overrides[get_session_factory] = lambda: factory
     app.dependency_overrides[get_current_user] = lambda: "test-user"
 
     async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as ac:
@@ -183,7 +191,7 @@ class TestMetricsActivity:
         await client.post("/review", json=_review_payload())
         resp = await client.get("/metrics")
         data = resp.json()
-        today = date.today().isoformat()
+        today = datetime.now(UTC).date().isoformat()  # match server's UTC storage
         dates = [entry["date"] for entry in data["daily_activity"]]
         assert today in dates
 
