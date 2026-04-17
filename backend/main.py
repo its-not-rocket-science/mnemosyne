@@ -26,6 +26,7 @@ from backend.api.routes.lesson import router as lesson_router
 from backend.api.routes.metrics import router as metrics_router
 from backend.api.routes.ingest import router as ingest_router
 from backend.api.routes.parse import router as parse_router
+from backend.api.routes.parse_jobs import router as parse_jobs_router
 from backend.api.routes.ready import router as ready_router
 from backend.api.routes.recommend import router as recommend_router
 from backend.api.routes.review import router as review_router
@@ -233,6 +234,7 @@ app.include_router(auth_router)
 app.include_router(ingest_router)
 app.include_router(fetch_url_router)
 app.include_router(parse_router)
+app.include_router(parse_jobs_router)
 app.include_router(lesson_router)
 app.include_router(review_router)
 app.include_router(dashboard_router)

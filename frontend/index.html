@@ -251,6 +251,25 @@
         -->
         <p id="status" role="status" aria-atomic="true" class="status"></p>
 
+        <!--
+          Job progress bar — visible only when a large text is being processed
+          via the async /parse/jobs endpoint.  Hidden by default; JS controls
+          visibility via setJobProgress().
+          role="progressbar" + aria-valuenow/max satisfy WCAG 4.1.2.
+        -->
+        <div id="job-progress" class="job-progress" hidden>
+          <div
+            id="job-progress-fill"
+            class="job-progress__bar"
+            role="progressbar"
+            aria-label="Parse progress"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+          <p id="job-progress-label" class="job-progress__label" aria-live="polite"></p>
+        </div>
+
       </section>
 
       <section class="panel" aria-labelledby="results-heading">

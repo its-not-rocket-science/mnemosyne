@@ -20,13 +20,19 @@ const fetchUrlBtn    = document.querySelector('#fetch-url-btn')
 const fetchUrlHint   = document.querySelector('#fetch-url-hint')
 const fileInput      = document.querySelector('#file-input')
 const fileInfo       = document.querySelector('#file-info')
-const textarea       = document.querySelector('#source-text')
-const submitButton   = document.querySelector('#parse-submit')
-const results        = document.querySelector('#results')
-const resultsEmpty   = document.querySelector('.results-empty')
-const status         = document.querySelector('#status')
-const modal          = document.querySelector('#lesson-modal')
-const resultsToolbar = document.querySelector('#results-toolbar')
+const textarea          = document.querySelector('#source-text')
+const submitButton      = document.querySelector('#parse-submit')
+const results           = document.querySelector('#results')
+const resultsEmpty      = document.querySelector('.results-empty')
+const status            = document.querySelector('#status')
+const modal             = document.querySelector('#lesson-modal')
+const resultsToolbar    = document.querySelector('#results-toolbar')
+const jobProgressPanel  = document.querySelector('#job-progress')
+const jobProgressFill   = document.querySelector('#job-progress-fill')
+const jobProgressLabel  = document.querySelector('#job-progress-label')
+
+// Texts longer than this go through the async job endpoint instead of /ingest.
+const MAX_SYNC_CHARS = 10_000
 
 // Carries FSRS state across multiple ratings of the same object in one session.
 const reviewStateByObject = new Map()
@@ -442,27 +448,32 @@ form.addEventListener('submit', async (event) => {
 
   try {
     const language = languageSelect.value
-    const payload = {
-      language,
-      text,
-      content_type: currentContentType,
-      title:        sourceTitleInput?.value.trim() || null,
-      source_url:   sourceUrlInput?.value.trim() || null,
-      filename:     currentFilename || null,
+
+    let data
+    if (text.length > MAX_SYNC_CHARS) {
+      // Large text — use the async job endpoint with SSE progress reporting.
+      data = await parseWithJob(text, language)
+    } else {
+      // Small text — use the existing sync /ingest endpoint.
+      const payload = {
+        language,
+        text,
+        content_type: currentContentType,
+        title:        sourceTitleInput?.value.trim() || null,
+        source_url:   sourceUrlInput?.value.trim() || null,
+        filename:     currentFilename || null,
+      }
+      const response = await fetch(`${API_BASE}/ingest`, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
+        body:    JSON.stringify(payload),
+      })
+      if (!response.ok) {
+        const body = await response.json().catch(() => null)
+        throw new Error(body?.detail ?? `Parse failed (${response.status})`)
+      }
+      data = await response.json()
     }
-
-    const response = await fetch(`${API_BASE}/ingest`, {
-      method:  'POST',
-      headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
-      body:    JSON.stringify(payload),
-    })
-
-    if (!response.ok) {
-      const body = await response.json().catch(() => null)
-      throw new Error(body?.detail ?? `Parse failed (${response.status})`)
-    }
-
-    const data = await response.json()
 
     if (data.sentences.length === 0) {
       showResultsMessage('No learnable items found \u2014 try pasting a longer passage.')
@@ -473,11 +484,9 @@ form.addEventListener('submit', async (event) => {
     renderResults(data.sentences, language)
     const n = data.sentences.length
 
-    // Surface any non-fatal validation warnings (e.g. script mismatch) in
-    // the status region before the success count so they don't get buried.
+    // Surface any non-fatal validation warnings (e.g. script mismatch).
     if (data.warnings?.length) {
       setStatus(data.warnings[0], 'error')
-      // Delay the success message so the warning is announced first.
       setTimeout(() => {
         setStatus(`${n} sentence${n !== 1 ? 's' : ''} parsed. Use Tab to navigate the items.`)
       }, 4000)
@@ -491,6 +500,7 @@ form.addEventListener('submit', async (event) => {
     submitButton.disabled = false
     submitButton.removeAttribute('aria-busy')
     submitButton.textContent = originalLabel
+    setJobProgress(null)  // hide progress bar
   }
 })
 
@@ -590,6 +600,114 @@ function renderResults(sentences, language) {
   // Apply current script-view and toolbar state to the new cards.
   applyScriptViewToResults()
   updateScriptViewToolbar()
+}
+
+
+// ── Large-text async parse (job API + SSE) ────────────────────────────────────
+
+/**
+ * Submit text to POST /parse/jobs, stream SSE progress events, and return the
+ * final ParseResponse data when the job completes.
+ *
+ * Throws on network failure or if the job ends in a failed state.
+ */
+async function parseWithJob(text, language) {
+  // ── 1. Submit the job ──────────────────────────────────────────────────────
+  const jobResp = await fetch(`${API_BASE}/parse/jobs`, {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
+    body:    JSON.stringify({ language, text }),
+  })
+  if (!jobResp.ok) {
+    const body = await jobResp.json().catch(() => null)
+    throw new Error(body?.detail ?? `Job submission failed (${jobResp.status})`)
+  }
+  const { job_id: jobId } = await jobResp.json()
+
+  // ── 2. Stream SSE progress ─────────────────────────────────────────────────
+  setJobProgress(0, 'Queued\u2026')
+
+  const eventsResp = await fetch(`${API_BASE}/parse/jobs/${jobId}/events`, {
+    headers: getAuthHeaders(),
+  })
+  if (!eventsResp.ok) {
+    throw new Error(`SSE stream unavailable (${eventsResp.status})`)
+  }
+
+  for await (const event of readSseEvents(eventsResp)) {
+    if (event.status === 'running' || event.status === 'pending') {
+      const pct   = Math.round((event.progress ?? 0) * 100)
+      const total = event.sentences_total
+      const done  = event.sentences_done
+      const label = total
+        ? `Analysing\u2026 ${done}/${total} sentences`
+        : _stageLabel(event.stage)
+      setJobProgress(pct, label)
+    }
+
+    if (event.status === 'done') {
+      return event.result   // ParseResponse shape
+    }
+
+    if (event.status === 'failed') {
+      throw new Error(event.error ?? 'Parse job failed.')
+    }
+  }
+
+  // SSE stream closed before a terminal event — poll once as fallback.
+  const poll = await fetch(`${API_BASE}/parse/jobs/${jobId}`, {
+    headers: getAuthHeaders(),
+  })
+  const finalJob = await poll.json()
+  if (finalJob.status === 'done')    return finalJob.result
+  if (finalJob.status === 'failed')  throw new Error(finalJob.error ?? 'Parse job failed.')
+  throw new Error('Job did not complete in time. Check back later.')
+}
+
+function _stageLabel(stage) {
+  return { nlp: 'Analysing text\u2026', persist: 'Saving\u2026', pending: 'Queued\u2026' }[stage]
+    ?? 'Processing\u2026'
+}
+
+/** Show/update the job progress bar.  Pass null to hide it. */
+function setJobProgress(percent, label) {
+  if (!jobProgressPanel) return
+  if (percent === null) {
+    jobProgressPanel.hidden = true
+    return
+  }
+  jobProgressPanel.hidden = false
+  if (jobProgressFill) {
+    jobProgressFill.style.setProperty('--progress', `${percent}%`)
+    jobProgressFill.setAttribute('aria-valuenow', String(percent))
+  }
+  if (jobProgressLabel) jobProgressLabel.textContent = label ?? ''
+}
+
+/**
+ * Async generator that reads an SSE response body and yields parsed JSON
+ * objects from each "data: {...}" line.  Handles chunked transfer correctly.
+ */
+async function* readSseEvents(response) {
+  const reader  = response.body.getReader()
+  const decoder = new TextDecoder()
+  let   buffer  = ''
+
+  while (true) {
+    const { done, value } = await reader.read()
+    if (done) break
+    buffer += decoder.decode(value, { stream: true })
+    // SSE blocks are separated by double newlines.
+    const blocks = buffer.split('\n\n')
+    buffer = blocks.pop()  // keep any incomplete trailing block
+    for (const block of blocks) {
+      for (const line of block.split('\n')) {
+        if (line.startsWith('data: ')) {
+          try { yield JSON.parse(line.slice(6)) } catch { /* skip malformed */ }
+        }
+      }
+    }
+  }
 }
 
 
