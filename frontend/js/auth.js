@@ -62,12 +62,13 @@ export function getAuthHeaders() {
 
 // ── DOM references ────────────────────────────────────────────────────────────
 
-const authPanel    = document.querySelector('#auth-panel')
-const mainContent  = document.querySelector('#main-content')
-const userInfo     = document.querySelector('#user-info')
-const userEmailEl  = document.querySelector('#user-email')
-const logoutBtn    = document.querySelector('#logout-btn')
-const authStatus   = document.querySelector('#auth-status')
+const authPanel         = document.querySelector('#auth-panel')
+const mainContent       = document.querySelector('#main-content')
+const userInfo          = document.querySelector('#user-info')
+const userEmailEl       = document.querySelector('#user-email')
+const logoutBtn         = document.querySelector('#logout-btn')
+const deleteAccountBtn  = document.querySelector('#delete-account-btn')
+const authStatus        = document.querySelector('#auth-status')
 
 const loginTab       = document.querySelector('#login-tab')
 const registerTab    = document.querySelector('#register-tab')
@@ -174,6 +175,38 @@ logoutBtn?.addEventListener('click', () => {
   showAuthPanel({ moveFocus: true })
   loginForm?.reset()
   registerForm?.reset()
+})
+
+// ── Delete account ────────────────────────────────────────────────────────────
+
+deleteAccountBtn?.addEventListener('click', async () => {
+  // Native confirm is synchronous, accessible, and avoids building a custom
+  // dialog for a destructive one-off action.
+  if (!confirm(
+    'Permanently delete your account and all learning data?\n\n' +
+    'This cannot be undone.'
+  )) return
+
+  deleteAccountBtn.disabled = true
+
+  try {
+    const resp = await fetch(`${API_BASE}/users/me`, {
+      method: 'DELETE',
+      headers: { ...getAuthHeaders() },
+    })
+    if (!resp.ok && resp.status !== 204) {
+      const data = await resp.json().catch(() => null)
+      throw new Error(data?.detail ?? `Request failed (${resp.status})`)
+    }
+    clearToken()
+    switchTab('login')
+    showAuthPanel({ moveFocus: true })
+    loginForm?.reset()
+    registerForm?.reset()
+  } catch (err) {
+    alert(`Could not delete account: ${err.message}`)
+    deleteAccountBtn.disabled = false
+  }
 })
 
 // ── API helpers ───────────────────────────────────────────────────────────────

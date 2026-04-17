@@ -538,3 +538,70 @@ select:focus-visible {
   white-space: nowrap;
   border: 0;
 }
+
+/* ── Prose content (privacy page, long-form text) ───────────────────────────
+   Simple readable layout for article pages.  Max width keeps line length
+   comfortable; flow children get vertical rhythm via gap or margin.          */
+.prose {
+  max-inline-size: 52rem;
+  padding-block: var(--space-4);
+}
+
+.prose h2 {
+  margin-block: var(--space-4) var(--space-2);
+  font-size: 1.2rem;
+}
+
+.prose p,
+.prose ul {
+  margin-block: 0 var(--space-3);
+}
+
+.prose ul {
+  padding-inline-start: 1.5rem;
+}
+
+.prose li {
+  margin-block-end: var(--space-1);
+}
+
+.prose a {
+  color: var(--accent);
+}
+
+/* ── Danger ghost button ─────────────────────────────────────────────────────
+   Matches .ghost-button dimensions; signals a destructive action in red.     */
+.ghost-button--danger {
+  color: var(--error-color);
+  border-color: var(--error-color);
+}
+
+.ghost-button--danger:focus-visible {
+  outline-color: var(--error-color);
+}
+
+/* ── Site footer ─────────────────────────────────────────────────────────────
+   Slim footer below the main content.  Uses muted text and a top border to
+   visually separate it without heavyweight styling.                           */
+.site-footer {
+  padding-block: var(--space-4);
+  margin-block-start: var(--space-5);
+  border-block-start: 1px solid var(--border);
+}
+
+.site-footer__inner {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.site-footer__inner p {
+  margin: 0;
+}
+
+.site-footer__inner a {
+  color: inherit;
+}
+
+.site-footer__inner a:hover {
+  color: var(--text);
+}
