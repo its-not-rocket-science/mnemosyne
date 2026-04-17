@@ -380,6 +380,9 @@ export class MnemosyneModal extends HTMLElement {
           font: inherit;
           font-size: 0.95rem;
           padding: 0.4rem 0.6rem;
+          /* flex: 1 lets the input fill available row space while min-inline-size: 0
+             allows it to shrink below its intrinsic width when the row is tight. */
+          flex: 1 1 0;
           min-inline-size: 8rem;
           block-size: 2.75rem;
         }
@@ -432,6 +435,27 @@ export class MnemosyneModal extends HTMLElement {
         .status       { color: var(--muted, GrayText); }
         .status-error { color: var(--error-color, oklch(0.50 0.2 29)); }
         .status-error:empty { display: none; }
+
+        /* ── Narrow-screen overrides (≤ 320 px viewport) ── */
+        @media (max-width: 20rem) {
+          /* Switch the definition list from a two-column grid to a stacked layout
+             so long field labels (e.g. "Separable prefix") don't crowd the value
+             column on the narrowest Android and iPhone SE displays. */
+          .fields {
+            grid-template-columns: 1fr;
+            gap: 0.1rem 0;
+          }
+
+          .field-label {
+            margin-block-start: 0.6rem;
+            font-size: 0.8rem;
+          }
+
+          /* Tighten drill padding to reclaim horizontal space. */
+          .drill {
+            padding: 0.65rem 0.75rem;
+          }
+        }
 
         @media (prefers-reduced-motion: reduce) {
           .status { transition: none !important; }
