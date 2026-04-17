@@ -112,7 +112,7 @@ from pydantic import BaseModel, Field
 
 TokenizationMode = Literal["whitespace", "segmented", "character"]
 MorphologyDepth  = Literal["none", "shallow", "rich"]
-ScriptFamily     = Literal["latin", "arabic", "hebrew", "cjk", "devanagari", "cyrillic", "other"]
+ScriptFamily     = Literal["latin", "arabic", "hebrew", "cjk", "devanagari", "cyrillic", "greek", "other"]
 LessonMode       = Literal["morphology", "vocabulary", "dictionary"]
 
 # ── v2 types ──────────────────────────────────────────────────────────────────
