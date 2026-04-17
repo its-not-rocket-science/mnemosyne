@@ -102,8 +102,8 @@ class TestCapabilities:
     def test_syntax_support_true(self, plugin) -> None:
         assert plugin.capabilities.syntax_support is True
 
-    def test_idiom_detection_false(self, plugin) -> None:
-        assert plugin.capabilities.idiom_detection is False
+    def test_idiom_detection_true(self, plugin) -> None:
+        assert plugin.capabilities.idiom_detection is True
 
     def test_morphology_quality_medium(self, plugin) -> None:
         assert plugin.capabilities.morphology_quality == "medium"
