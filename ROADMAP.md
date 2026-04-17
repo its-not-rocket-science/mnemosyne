@@ -39,6 +39,7 @@ Status markers: **implemented** · **partial** · **planned** · **deferred**
 | Rate limiting | implemented | `slowapi`; JWT > X-User-Id > IP key; configurable `RATE_LIMIT_PARSE`; per-user independent counters |
 | Review event log | implemented | `ReviewEventRow` per review; `mastery_score_before/after`; `GET /metrics` exposes `reviews_today`, `streak_days`, `daily_activity` |
 | Privacy policy + account deletion | implemented | `DELETE /users/me` cascades all rows; `frontend/privacy.html`; "Delete account" button with confirmation |
+| FSRS per-user calibration | implemented | Bias-correction over `ReviewEventRow`; `UserFsrsParamsRow`; `GET/PATCH /users/me/fsrs-params`; `POST /users/me/calibrate`; `POST /review` uses per-user `desired_retention` |
 | Sentry error monitoring | implemented | SDK init in `main.py` when `SENTRY_DSN` is set; environment tag auto-derived from `DEBUG` |
 | Request-id structured logging | implemented | `RequestIdFilter` context-var; 8-char hex ID on every log line and `request.state.request_id` |
 
@@ -91,7 +92,7 @@ These follow from the starting vision but require category 1 and 2 to be solid f
 - **Review event log** — a `review_events` table (one row per review: user_id, object_id, quality, mastery_score_before/after, reviewed_at) unlocks retention curves, exact time-to-mastery, per-session analytics, and FSRS parameter fitting. The current `user_knowledge` table stores only the current FSRS state. This is pure DB + route work; the scheduler does not change.
 - **Real dictionary integration** — gloss data, example sentences, etymology. The `lesson_data` JSON field accepts any keys; the lesson generator needs a source to populate them.
 - **Real translation integration** — one-tap translation of extracted objects. Requires a clear policy on attribution and API cost.
-- **FSRS parameter fitting** — per-user or per-deck parameter optimisation improves retention predictions by ~5 pp. Requires the review event log.
+- **FSRS parameter fitting** — **done**: per-user `desired_retention` calibration via bias-correction over `ReviewEventRow` history. `UserFsrsParamsRow` table; `GET/PATCH /users/me/fsrs-params`; `POST /users/me/calibrate`; `POST /review` uses per-user retention threshold.
 - **PWA / offline mode** — service worker, IndexedDB lesson cache, offline reviews with sync-on-reconnect.
 - **Background processing for large texts** — async job queue (e.g. Redis Streams or Celery) for corpora > 10 000 characters; progress SSE to the frontend.
 - **Dead and historic language support** — annotation mode (dictionary lookup, no morphological parser) rather than pretending spaCy-style NLP is available. Latin, Classical Arabic, Koine Greek as first candidates.
