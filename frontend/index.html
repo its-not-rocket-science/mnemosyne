@@ -4,9 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mnemosyne</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3557ff">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/components.css">
     <script type="module" src="./js/main.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch(() => {})
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -28,6 +35,17 @@
           <button type="button" id="logout-btn" class="ghost-button">Sign out</button>
           <button type="button" id="delete-account-btn" class="ghost-button ghost-button--danger">Delete account</button>
         </div>
+        <!--
+          Offline indicator — hidden until JS detects queued reviews.
+          aria-live="polite" announces count changes to screen readers without
+          interrupting ongoing speech.
+        -->
+        <p id="offline-badge" class="offline-badge" hidden aria-live="polite">
+          <span class="offline-badge__dot" aria-hidden="true"></span>
+          Offline —
+          <span id="offline-count">0</span>
+          review<span id="offline-plural">s</span> queued
+        </p>
       </div>
     </header>
 

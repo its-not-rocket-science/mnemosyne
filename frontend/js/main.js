@@ -1,6 +1,12 @@
 import '../components/mnemosyne-pill.js'
 import '../components/mnemosyne-modal.js'
 import { initAuth, getAuthHeaders } from './auth.js'
+import {
+  queueReview,
+  getPendingReviews,
+  deleteReview,
+  countPendingReviews,
+} from './offline.js'
 
 const API_BASE = 'http://localhost:8000'
 
@@ -590,25 +596,91 @@ function renderResults(sentences, language) {
 // ── Review submission ─────────────────────────────────────────────────────────
 
 async function submitReview(objectId, quality) {
-  const response = await fetch(`${API_BASE}/review`, {
-    method:  'POST',
-    headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
-    body:    JSON.stringify({
-      object_id:    objectId,
-      quality,
-      review_state: reviewStateByObject.get(objectId) ?? null,
-    }),
-  })
+  const body = {
+    object_id:    objectId,
+    quality,
+    review_state: reviewStateByObject.get(objectId) ?? null,
+  }
+
+  let response
+  try {
+    response = await fetch(`${API_BASE}/review`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
+      body:    JSON.stringify(body),
+    })
+  } catch {
+    // Network unreachable — queue locally and return null so the modal shows
+    // "Review saved." rather than an error.
+    await queueReview({ ...body, queued_at: Date.now() })
+    updateOfflineBadge()
+    return null
+  }
 
   if (!response.ok) {
-    const body = await response.json().catch(() => null)
-    throw new Error(body?.detail ?? `Review failed (${response.status})`)
+    const detail = await response.json().catch(() => null)
+    throw new Error(detail?.detail ?? `Review failed (${response.status})`)
   }
 
   const payload = await response.json()
   reviewStateByObject.set(objectId, payload.review_state)
   return payload
 }
+
+
+// ── Offline review queue ──────────────────────────────────────────────────────
+
+const offlineBadge      = document.querySelector('#offline-badge')
+const offlineCountEl    = document.querySelector('#offline-count')
+const offlinePluralEl   = document.querySelector('#offline-plural')
+
+async function updateOfflineBadge() {
+  if (!offlineBadge) return
+  const n = await countPendingReviews()
+  if (n === 0) {
+    offlineBadge.hidden = true
+    return
+  }
+  offlineCountEl.textContent  = String(n)
+  offlinePluralEl.textContent = n === 1 ? '' : 's'
+  offlineBadge.hidden = false
+}
+
+async function drainReviewQueue() {
+  const pending = await getPendingReviews()
+  if (!pending.length) return
+
+  let synced = 0
+  for (const { key, value } of pending) {
+    try {
+      const response = await fetch(`${API_BASE}/review`, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
+        body:    JSON.stringify({
+          object_id:    value.object_id,
+          quality:      value.quality,
+          review_state: value.review_state ?? null,
+        }),
+      })
+      if (response.ok) {
+        await deleteReview(key)
+        synced++
+      } else {
+        break  // server error — stop and retry later
+      }
+    } catch {
+      break  // still offline
+    }
+  }
+
+  if (synced > 0) updateOfflineBadge()
+}
+
+// Attempt to drain whenever the device goes back online.
+window.addEventListener('online', drainReviewQueue)
+
+// Show badge for any reviews queued in a previous session.
+updateOfflineBadge()
 
 
 // ── Text-to-speech ────────────────────────────────────────────────────────────
