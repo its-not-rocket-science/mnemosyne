@@ -256,6 +256,7 @@ def review(
     quality: int,
     state: dict[str, Any] | None = None,
     now: datetime | None = None,
+    desired_retention: float = DESIRED_RETENTION,
 ) -> tuple[int, dict[str, Any]]:
     """Process a single review and return the updated scheduling state.
 
@@ -269,6 +270,10 @@ def review(
     now:
         Review timestamp (UTC).  Defaults to the current UTC time.
         Pass an explicit value in tests to get deterministic output.
+    desired_retention:
+        Target recall probability at the scheduled review date.  Defaults to
+        the global DESIRED_RETENTION (0.90).  Pass a per-user calibrated value
+        to personalise inter-review intervals.
 
     Returns
     -------
@@ -290,7 +295,7 @@ def review(
     new_d = _next_difficulty(card.difficulty, quality, card.reviews)
     new_s = _next_stability(card.stability, new_d, r, quality, card.reviews)
 
-    interval = next_interval(new_s)
+    interval = next_interval(new_s, desired_retention=desired_retention)
 
     updated = CardState(
         stability=round(new_s, 4),

@@ -16,15 +16,26 @@ PUT  /users/me/languages/{language_code}/preferences
     object must be supplied; partial-update semantics are not provided to keep
     the schema simple.
 
+GET  /users/me/fsrs-params
+    Return the current FSRS scheduling parameters (desired_retention and
+    calibration metadata).  Returns factory defaults when no row exists.
+
+PATCH  /users/me/fsrs-params
+    Manually set desired_retention.  Clears calibration metadata so the UI
+    can distinguish manual from auto-calibrated values.
+
+POST  /users/me/calibrate
+    Run auto-calibration from the user's review history.  Requires at least
+    30 review events.  Persists the calibrated desired_retention and returns
+    it along with calibration quality metrics.
+
 GET  /users/me/export
     Return a portable JSON export of all user knowledge and preferences.
 
 DELETE  /users/me
     Permanently delete all personal data for the current user.  Removes rows
-    from user_knowledge, user_language_preferences, source_progression, and
-    the users table.  Returns 204 No Content.  Existing JWTs continue to pass
-    signature verification until they expire; any request they reach will
-    simply find no data and will create no new rows under that user_id.
+    from user_knowledge, user_language_preferences, source_progression,
+    user_fsrs_params, and the users table.  Returns 204 No Content.
 """
 from __future__ import annotations
 
@@ -41,16 +52,20 @@ from backend.models import (
     CanonicalObjectRow,
     ReviewEventRow,
     SourceProgressionRow,
+    UserFsrsParamsRow,
     UserKnowledgeRow,
     UserLanguagePreferenceRow,
     UserRow,
 )
 from backend.schemas.user import (
+    FsrsParams,
+    FsrsParamsUpdate,
     KnowledgeExportItem,
     LanguagePreference,
     UserExport,
     UserPreferences,
 )
+from backend.srs.calibrate import MIN_REVIEWS_FOR_CALIBRATION, calibrate
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["users"], prefix="/users")
@@ -172,6 +187,129 @@ async def set_language_preference(
     )
 
 
+@router.get("/me/fsrs-params", response_model=FsrsParams)
+async def get_fsrs_params(
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> FsrsParams:
+    """Return the current FSRS scheduling parameters for the user.
+
+    Returns factory defaults when the user has never calibrated or set params.
+    """
+    try:
+        row = await db.get(UserFsrsParamsRow, current_user)
+    except Exception as exc:
+        logger.warning("DB fsrs-params lookup failed for user %r", current_user, exc_info=True)
+        raise HTTPException(status_code=503, detail="Database unavailable") from exc
+
+    if row is None:
+        return FsrsParams()
+
+    return FsrsParams(
+        desired_retention=row.desired_retention,
+        last_calibrated_at=row.last_calibrated_at,
+        reviews_used=row.reviews_used,
+        calibration_rmse=row.calibration_rmse,
+    )
+
+
+@router.patch("/me/fsrs-params", response_model=FsrsParams)
+async def set_fsrs_params(
+    payload: FsrsParamsUpdate,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> FsrsParams:
+    """Manually set the desired_retention for the current user.
+
+    Clears calibration metadata so the UI can distinguish a manual value
+    from an auto-calibrated one.
+    """
+    try:
+        row = await db.get(UserFsrsParamsRow, current_user)
+        if row is None:
+            row = UserFsrsParamsRow(user_id=current_user)
+            db.add(row)
+        row.desired_retention    = payload.desired_retention
+        row.last_calibrated_at   = None
+        row.reviews_used         = None
+        row.calibration_rmse     = None
+        await db.commit()
+        await db.refresh(row)
+    except Exception as exc:
+        logger.warning("DB fsrs-params update failed for user %r", current_user, exc_info=True)
+        raise HTTPException(status_code=503, detail="Database unavailable") from exc
+
+    return FsrsParams(desired_retention=row.desired_retention)
+
+
+@router.post("/me/calibrate", response_model=FsrsParams)
+async def calibrate_fsrs_params(
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> FsrsParams:
+    """Run auto-calibration and update the user's desired_retention.
+
+    Reads all ``review_events`` for this user and applies the bias-correction
+    algorithm from ``backend.srs.calibrate`` to estimate the optimal
+    ``desired_retention``.
+
+    Returns 422 when the user has fewer than the minimum required reviews
+    (currently {min_reviews}).
+    """.format(min_reviews=MIN_REVIEWS_FOR_CALIBRATION)
+    try:
+        result = await db.execute(
+            select(ReviewEventRow.mastery_score_before, ReviewEventRow.quality).where(
+                ReviewEventRow.user_id == current_user
+            )
+        )
+        events: list[tuple[float, int]] = [(r, q) for r, q in result.all()]
+    except Exception as exc:
+        logger.warning("DB review_events query failed for user %r", current_user, exc_info=True)
+        raise HTTPException(status_code=503, detail="Database unavailable") from exc
+
+    cal = calibrate(events)
+    if cal is None:
+        raise HTTPException(
+            status_code=422,
+            detail=(
+                f"Not enough review history for calibration. "
+                f"Need at least {MIN_REVIEWS_FOR_CALIBRATION} reviews; "
+                f"found {len(events)}."
+            ),
+        )
+
+    now = datetime.now(UTC)
+    try:
+        row = await db.get(UserFsrsParamsRow, current_user)
+        if row is None:
+            row = UserFsrsParamsRow(user_id=current_user)
+            db.add(row)
+        row.desired_retention  = cal.desired_retention
+        row.last_calibrated_at = now
+        row.reviews_used       = cal.reviews_used
+        row.calibration_rmse   = cal.calibration_rmse
+        await db.commit()
+        await db.refresh(row)
+    except Exception as exc:
+        logger.warning("DB fsrs-params persist failed for user %r", current_user, exc_info=True)
+        raise HTTPException(status_code=503, detail="Database unavailable") from exc
+
+    logger.info(
+        "Calibrated desired_retention=%.4f rmse=%s reviews=%d user=%r",
+        cal.desired_retention,
+        cal.calibration_rmse,
+        cal.reviews_used,
+        current_user,
+    )
+
+    return FsrsParams(
+        desired_retention=row.desired_retention,
+        last_calibrated_at=row.last_calibrated_at,
+        reviews_used=row.reviews_used,
+        calibration_rmse=row.calibration_rmse,
+    )
+
+
 @router.get("/me/export", response_model=UserExport)
 async def export_my_data(
     db: AsyncSession = Depends(get_db_session),
@@ -287,6 +425,9 @@ async def delete_my_account(
             delete(SourceProgressionRow).where(
                 SourceProgressionRow.user_id == current_user
             )
+        )
+        await db.execute(
+            delete(UserFsrsParamsRow).where(UserFsrsParamsRow.user_id == current_user)
         )
         await db.execute(
             delete(UserRow).where(UserRow.id == current_user)
