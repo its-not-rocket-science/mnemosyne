@@ -39,6 +39,7 @@ Status markers: **implemented** · **partial** · **planned** · **deferred**
 | Rate limiting | implemented | `slowapi`; JWT > X-User-Id > IP key; configurable `RATE_LIMIT_PARSE`; per-user independent counters |
 | Review event log | implemented | `ReviewEventRow` per review; `mastery_score_before/after`; `GET /metrics` exposes `reviews_today`, `streak_days`, `daily_activity` |
 | Privacy policy + account deletion | implemented | `DELETE /users/me` cascades all rows; `frontend/privacy.html`; "Delete account" button with confirmation |
+| Real dictionary integration | implemented | Wiktionary REST API; background enrichment of vocabulary gloss; `ENABLE_DICTIONARY_LOOKUP` flag; attempt-tracking prevents redundant fetches |
 | FSRS per-user calibration | implemented | Bias-correction over `ReviewEventRow`; `UserFsrsParamsRow`; `GET/PATCH /users/me/fsrs-params`; `POST /users/me/calibrate`; `POST /review` uses per-user `desired_retention` |
 | Sentry error monitoring | implemented | SDK init in `main.py` when `SENTRY_DSN` is set; environment tag auto-derived from `DEBUG` |
 | Request-id structured logging | implemented | `RequestIdFilter` context-var; 8-char hex ID on every log line and `request.state.request_id` |
@@ -90,7 +91,7 @@ These follow from the starting vision but require category 1 and 2 to be solid f
 
 - **User accounts** — multi-user data isolation is complete (all routes scoped to `current_user`; `UserLanguagePreferenceRow` implemented). Remaining work: JWT auth middleware, login/register API routes, login UI. See category 1.
 - **Review event log** — a `review_events` table (one row per review: user_id, object_id, quality, mastery_score_before/after, reviewed_at) unlocks retention curves, exact time-to-mastery, per-session analytics, and FSRS parameter fitting. The current `user_knowledge` table stores only the current FSRS state. This is pure DB + route work; the scheduler does not change.
-- **Real dictionary integration** — gloss data, example sentences, etymology. The `lesson_data` JSON field accepts any keys; the lesson generator needs a source to populate them.
+- **Real dictionary integration** — **done**: `backend/dictionary/wiktionary.py` fetches English glosses from the Wiktionary REST API; `backend/dictionary/enrichment.py` enriches vocabulary `CanonicalObjectRow` objects post-parse in the background; gated by `ENABLE_DICTIONARY_LOOKUP=true` in `.env`. Glosses stored in `lesson_data["gloss"]` — consumed by existing `_build_vocabulary` and `_build_dictionary` builders with zero changes.
 - **Real translation integration** — one-tap translation of extracted objects. Requires a clear policy on attribution and API cost.
 - **FSRS parameter fitting** — **done**: per-user `desired_retention` calibration via bias-correction over `ReviewEventRow` history. `UserFsrsParamsRow` table; `GET/PATCH /users/me/fsrs-params`; `POST /users/me/calibrate`; `POST /review` uses per-user retention threshold.
 - **PWA / offline mode** — service worker, IndexedDB lesson cache, offline reviews with sync-on-reconnect.
