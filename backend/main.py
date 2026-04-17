@@ -11,6 +11,7 @@ from pathlib import Path
 import sentry_sdk
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from sentry_sdk.integrations.fastapi import FastApiIntegration
 from sentry_sdk.integrations.starlette import StarletteIntegration
 from slowapi.errors import RateLimitExceeded
@@ -253,3 +254,17 @@ async def health() -> dict[str, str]:
     Does not check backing services.  Use /ready for that.
     """
     return {"status": "ok"}
+
+
+# ── Static frontend ───────────────────────────────────────────────────────────
+# Mounted last (after every route definition) so all API routes take priority
+# over the static file handler in Starlette's route-matching order.
+# Serves the frontend at / (index.html) and sub-paths (/css/*, /js/*, etc.).
+# The service worker at /sw.js must be on the same origin as the page.
+#
+# When the frontend directory does not exist (API-only deployments) the mount
+# is skipped silently rather than crashing startup.
+
+_FRONTEND_DIR = Path(__file__).parent.parent / "frontend"
+if _FRONTEND_DIR.exists():
+    app.mount("/", StaticFiles(directory=str(_FRONTEND_DIR), html=True), name="frontend")
