@@ -5,6 +5,10 @@
   --text: CanvasText;
   --muted: color-mix(in srgb, CanvasText 60%, Canvas 40%);
   --border: color-mix(in srgb, CanvasText 20%, Canvas 80%);
+  /* Higher-contrast border for interactive controls (inputs, buttons).
+     45% CanvasText achieves ≥ 3:1 against Canvas in both light and dark mode,
+     satisfying WCAG 2.1 SC 1.4.11 (Non-text Contrast). */
+  --border-input: color-mix(in srgb, CanvasText 45%, Canvas);
   --accent: #3557ff;
   --accent-contrast: white;
   --radius: 0.9rem;
@@ -376,7 +380,8 @@ select {
   inline-size: 100%;
   padding: 0.75rem;
   border-radius: 0.7rem;
-  border: 1px solid var(--border);
+  /* --border-input (45% CanvasText) gives ≥ 3:1 against Canvas — SC 1.4.11. */
+  border: 1px solid var(--border-input);
   background: var(--bg);
   color: var(--text);
 }

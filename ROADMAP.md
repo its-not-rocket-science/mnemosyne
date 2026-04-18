@@ -56,7 +56,7 @@ See `BETA_GAP_REPORT.md` for the detailed blocker breakdown by alpha / beta / vi
 - **Data export endpoint** — `GET /users/me/export` returns all knowledge state as JSON. — **Private alpha blocker A4**
 - **JWT authentication** — `POST /auth/register` + `POST /auth/login`; replace header-only identity in `get_current_user`. — **Public beta blocker B1**
 - **Login/register UI** — frontend login panel, JWT in `sessionStorage`, logout. — **Public beta blocker B2**
-- **WCAG 2.1 AA audit** — keyboard-only run through the full parse → lesson → review flow; screen-reader smoke test with NVDA and VoiceOver. — **Public beta blocker B3**
+- **WCAG 2.1 AA audit** — ~~keyboard-only run through the full parse → lesson → review flow; screen-reader smoke test with NVDA and VoiceOver.~~ **Code-level audit done and three issues fixed**: (1) SC 1.4.11 Non-text Contrast — input/textarea/select/button borders raised from 20–25% to 45% CanvasText (≥ 3:1 against Canvas in light + dark); pill button borders raised from 35% to 60% (verify in browser per type-color); (2) SC 2.5.3 Label in Name — Speak button `aria-label` changed from "Listen to example" to "Speak example aloud" so visible label is contained in accessible name; (3) SC 1.3.1 — `role="list"` added to pill `<ul>` to restore list semantics removed by `list-style:none` in Safari VoiceOver. Manual keyboard + screen-reader smoke-test still recommended before public launch. — **Public beta blocker B3**
 - **CORS lockdown** — ~~warn-on-`*` is already in `main.py`; wire it to a deployment checklist.~~ **done**: `Settings._reject_wildcard_cors_in_production` hard-fails startup when `DEBUG=false` + `CORS_ORIGINS=["*"]`; `DEPLOYMENT.md` pre-launch checklist covers CORS, JWT, DB credentials, HTTPS, Redis rate-limit storage, and smoke tests. — ~~**Public beta blocker B5**~~
 - **Rate limiting** — ~~per-IP and per-user rate limiting on the parse endpoint at minimum.~~ **done**: `slowapi` limiter; JWT > X-User-Id > IP key function; configurable `RATE_LIMIT_PARSE`; tests in `test_rate_limit.py`. — ~~**Public beta blocker B6**~~
 - **Privacy policy + data deletion** — ~~`DELETE /users/me` removes all user data; visible privacy policy page.~~ **done**: `DELETE /users/me` cascades all user rows; `frontend/privacy.html`; "Delete account" button in header with confirmation; privacy link in footer. — ~~**Public beta blocker B7**~~
@@ -105,7 +105,7 @@ These follow from the starting vision but require category 1 and 2 to be solid f
 ## Quality targets (ongoing)
 
 - [x] `alembic upgrade head` is the only DB initialisation path (no `create_all` in production)
-- [ ] WCAG 2.1 AA on the core parse → review flow
+- [x] WCAG 2.1 AA on the core parse → review flow — **code-level fixes applied** (see B3 in category 1). Manual browser/AT run still recommended before public beta.
 - [x] 90% branch coverage on `backend/srs/` and `backend/parsing/`
 - [x] Parse time < 2 s for 500 words on the CI runner — **measured 76 ms mean / 86 ms max** (480 words, 5 runs, `es_core_news_sm`, warm model, dev machine). Hot spots: spaCy inference 47 ms, `_extract_idioms` O(idioms × tokens) scan 54 ms — both negligible at this scale. 26× headroom against the 2 s target.
 - [x] Zero `# type: ignore` comments without an explanatory note
