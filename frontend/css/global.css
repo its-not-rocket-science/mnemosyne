@@ -192,6 +192,28 @@ main:focus {
   outline: none;
 }
 
+/* ── Startup warning banner ──────────────────────────────────────────────────
+   Shown by JS when /ready reports startup errors or returns 503.
+   role="alert" in HTML ensures the message is announced immediately on show.
+   Sits above the header so it is the first visible content after the skip link. */
+.startup-banner {
+  background: color-mix(in srgb, var(--error-color) 8%, Canvas);
+  border-block-end: 2px solid var(--error-color);
+  color: var(--error-color);
+  padding: var(--space-2) var(--space-4);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
+/* Restore default hidden behaviour — display:flex above would override it. */
+.startup-banner[hidden] { display: none; }
+
+.startup-banner__icon {
+  flex-shrink: 0;
+}
+
 .site-header {
   padding-block: var(--space-5) var(--space-4);
 }

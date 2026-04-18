@@ -45,6 +45,10 @@ Status markers: **implemented** · **partial** · **planned** · **deferred**
 | FSRS per-user calibration | implemented | Bias-correction over `ReviewEventRow`; `UserFsrsParamsRow`; `GET/PATCH /users/me/fsrs-params`; `POST /users/me/calibrate`; `POST /review` uses per-user `desired_retention` |
 | Sentry error monitoring | implemented | SDK init in `main.py` when `SENTRY_DSN` is set; environment tag auto-derived from `DEBUG` |
 | Request-id structured logging | implemented | `RequestIdFilter` context-var; 8-char hex ID on every log line and `request.state.request_id` |
+| Portuguese NLP plugin | implemented | `pt_core_news_sm`; vocabulary, conjugation, agreement, ser/estar copula, ter_perfect, personal infinitive; idioms; 62 tests |
+| Italian NLP plugin | implemented | `it_core_news_sm`; vocabulary, conjugation, agreement, essere/avere auxiliary, stare_progressive; idioms; 60 tests |
+| Source progression tracking | implemented | `SourceProgressionRow`; `GET/PATCH /reading/{id}`; `POST /ingest` creates row; `GET /recommend` surfaces `is_continuation` items first |
+| Backend startup resilience | implemented | `app.state.startup_errors`; `X-Startup-Warning` response header; `/ready` startup field; frontend banner on degraded-startup detection |
 
 ---
 
@@ -101,6 +105,10 @@ These follow from the starting vision but require category 1 and 2 to be solid f
 - **Dead and historic language support** — **done**: Latin (`la`) and Arabic (`ar`) dictionary-mode plugins already implemented. New: Koine Greek (`grc`) — ~100-entry NT Greek lexicon; polytonic diacritic normalisation (accents, breathings, iota subscript, diaeresis); SBL-simplified transliteration stored in `lesson_data["romanized"]` for script-view toggle; `script_family="greek"` added to `ScriptFamily` literal; honest capability declarations throughout (no morphology claimed).
 - **Idiom and multiword-expression detection** — **done**: German and Russian plugins now extract idioms via `_IDIOM_TABLE` (longest-match, position-overlap prevention). Russian also extracts `nuance` objects for perfective/imperfective aspect pairs with `RelationHint(relation_type="nuance_of")`. All types carry `meaning`, `register`, and `note` in `lesson_data`. 25 new tests in `test_idiom_nuance.py` (token-injection pattern, no spaCy model required).
 - **Mobile / responsive layout audit** — **done**: three targeted 320 px fixes: (1) `min-inline-size: 0` on `.user-info__email` so `text-overflow: ellipsis` actually fires inside the flex header; (2) `flex: 1 1 0` on `.drill-input` so fill-blank inputs fill their row; (3) `@media (max-width: 20rem)` inside the modal shadow DOM switches `.fields` from `auto 1fr` two-column to stacked single-column and tightens drill padding. All other layout elements already use `clamp()`, `flex-wrap`, and logical properties and handle 320 px without changes.
+- **Full morphological plugins for Korean and Hindi** — **planned**: `ko_core_news_sm` (agglutinative; 7-case nominal, verb endings, `han`/`ro`/`eul` particle detection); `hi_core_news_sm` (Devanagari; gender–number–case agreement, postpositions, perfective aspect). Each needs canonical-form convention decisions per `PLUGIN_AUTHOR_GUIDE.md` before the first row is written.
+- **Full morphological plugins for Turkish and Finnish** — **planned**: both agglutinative; `PLUGIN_AUTHOR_GUIDE.md` already includes axis-order conventions for Turkish (tense/aspect/mood/person/number/voice) and Finnish (15-case nominal + conjugation). Requires spaCy model availability check and per-language morpheme coverage audit.
+- **Lesson text localisation** — **planned**: `build_lesson()` always produces English prose. Add an optional `l1_language` parameter threaded from the request through `LanguageCapabilities` to each lesson builder so explanations ("The word X is a noun") can be rendered in the learner's native language. UI-side: a second language selector or a profile preference.
+- **Classical lexicon depth** — **planned**: Latin and Koine Greek are in dictionary mode with ~100–200-entry curated lexicons. Perseus Digital Library integration or Logeion API would substantially increase coverage. Requires a product decision on what "production quality" means for a dead language before committing to a data pipeline.
 
 ---
 
