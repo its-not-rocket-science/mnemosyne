@@ -54,13 +54,13 @@ from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 # rather than raising ImportError on the first request.
 
 try:
-    import jieba                            # type: ignore[import-untyped]
+    import jieba                            # type: ignore[import-untyped]  # jieba ships no py.typed marker or stubs
     _HAS_JIEBA = True
 except ImportError:
     _HAS_JIEBA = False
 
 try:
-    from pypinyin import lazy_pinyin, Style  # type: ignore[import-untyped]
+    from pypinyin import lazy_pinyin, Style  # type: ignore[import-untyped]  # pypinyin ships no py.typed marker or stubs
     _HAS_PYPINYIN = True
 except ImportError:
     _HAS_PYPINYIN = False

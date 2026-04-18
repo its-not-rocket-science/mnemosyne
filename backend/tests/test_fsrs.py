@@ -284,7 +284,7 @@ class TestCardState:
     def test_frozen(self) -> None:
         card = default_state(T0)
         with pytest.raises((AttributeError, TypeError)):
-            card.stability = 99.0  # type: ignore[misc]
+            card.stability = 99.0  # type: ignore[misc]  # assignment to frozen dataclass field; we're testing it raises at runtime
 
 
 # ────────────────────────────────────────────────────────────────────────────

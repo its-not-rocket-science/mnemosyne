@@ -187,7 +187,7 @@ class TestPluginRegistry:
     def test_all_returns_copy(self) -> None:
         registry = load_plugins()
         copy = registry.all()
-        copy["zz"] = None  # type: ignore[assignment]
+        copy["zz"] = None  # type: ignore[assignment]  # intentional None to verify the copy is independent of the registry
         assert "zz" not in registry.all()
 
     def test_spanish_stub_not_in_registry(self) -> None:
