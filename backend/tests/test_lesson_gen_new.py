@@ -150,7 +150,7 @@ class TestLessonProviders:
     def test_providers_frozen(self) -> None:
         prov = LessonProviders.null()
         with pytest.raises((AttributeError, TypeError)):
-            prov.gloss = NullGlossProvider()  # type: ignore[misc]
+            prov.gloss = NullGlossProvider()  # type: ignore[misc]  # assignment to frozen dataclass field; we're testing it raises at runtime
 
 
 # ── TestLessonFormatters ──────────────────────────────────────────────────────
@@ -365,7 +365,7 @@ class TestLessonModeStamping:
                 object_id="x", obj_type="script",
                 canonical_form="字", display_label="字",
                 lesson_data={"character": "字", "readings": ["zi4"]},
-                lesson_mode=mode,  # type: ignore[arg-type]
+                lesson_mode=mode,  # type: ignore[arg-type]  # mode is str from loop; all values are valid LessonMode members, Pydantic validates
             )
             assert r.lesson_mode == "script", (
                 f"Expected 'script', got {r.lesson_mode!r} for lesson_mode={mode!r}"
@@ -377,7 +377,7 @@ class TestLessonModeStamping:
             canonical_form="mizu:hepburn_romaji",
             display_label="mizu",
             lesson_data={"native_form": "mizu", "romanized": "mizu"},
-            lesson_mode="vocabulary",  # type: ignore[arg-type]
+            lesson_mode="vocabulary",  # type: ignore[arg-type]  # "vocabulary" ∈ LessonMode; mypy can't narrow str literals to a Literal type alias
         )
         assert r.lesson_mode == "transliteration"
 
@@ -386,7 +386,7 @@ class TestLessonModeStamping:
             object_id="x", obj_type="idiom",
             canonical_form="sin embargo", display_label="sin embargo",
             lesson_data={"phrase": "sin embargo", "meaning": "nevertheless"},
-            lesson_mode="vocabulary",  # type: ignore[arg-type]
+            lesson_mode="vocabulary",  # type: ignore[arg-type]  # "vocabulary" ∈ LessonMode; mypy can't narrow str literals to a Literal type alias
         )
         assert r.lesson_mode == "idiom"
 
@@ -416,7 +416,7 @@ class TestLessonModeStamping:
             object_id="x", obj_type="idiom",
             canonical_form="por favor", display_label="por favor",
             lesson_data={"phrase": "por favor", "meaning": "please"},
-            lesson_mode="vocabulary",  # type: ignore[arg-type]
+            lesson_mode="vocabulary",  # type: ignore[arg-type]  # "vocabulary" ∈ LessonMode; mypy can't narrow str literals to a Literal type alias
         )
         # _build_idiom ran, not _build_vocabulary
         assert r.title.startswith("Idiom:")

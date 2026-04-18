@@ -108,4 +108,4 @@ These follow from the starting vision but require category 1 and 2 to be solid f
 - [ ] WCAG 2.1 AA on the core parse → review flow
 - [x] 90% branch coverage on `backend/srs/` and `backend/parsing/`
 - [ ] Parse time < 2 s for 500 words on the CI runner
-- [ ] Zero `# type: ignore` comments without an explanatory note
+- [x] Zero `# type: ignore` comments without an explanatory note

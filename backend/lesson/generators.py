@@ -487,7 +487,7 @@ def _build_script(b: _B) -> LessonResponse:
 
     return LessonResponse(
         id=b.object_id,
-        type="script",  # type: ignore[arg-type]
+        type="script",  # type: ignore[arg-type]  # "script" ∈ LearnableType; mypy can't narrow str literals to a Literal type alias
         title=f"Script: {character}",
         explanation=explanation,
         fields=fields,
@@ -533,7 +533,7 @@ def _build_transliteration(b: _B) -> LessonResponse:
 
     return LessonResponse(
         id=b.object_id,
-        type="transliteration",  # type: ignore[arg-type]
+        type="transliteration",  # type: ignore[arg-type]  # "transliteration" ∈ LearnableType; same mypy narrowing limitation
         title=f"Transliteration: {native_form}",
         explanation=explanation,
         fields=fields,
@@ -606,7 +606,7 @@ def _build_dictionary(b: _B) -> LessonResponse:
 
     return LessonResponse(
         id=b.object_id,
-        type=b.obj_type,  # type: ignore[arg-type]
+        type=b.obj_type,  # type: ignore[arg-type]  # obj_type is str, not narrowed to LearnableType; Pydantic validates at runtime
         title=b.display_label,
         explanation=explanation,
         fields=fields,
@@ -652,7 +652,7 @@ def _build_idiom(b: _B) -> LessonResponse:
 
     return LessonResponse(
         id=b.object_id,
-        type="idiom",  # type: ignore[arg-type]
+        type="idiom",  # type: ignore[arg-type]  # "idiom" ∈ LearnableType; same mypy narrowing limitation
         title=f"Idiom: {phrase}",
         explanation=explanation,
         fields=fields,
@@ -695,7 +695,7 @@ def _build_grammar(b: _B) -> LessonResponse:
 
     return LessonResponse(
         id=b.object_id,
-        type="grammar",  # type: ignore[arg-type]
+        type="grammar",  # type: ignore[arg-type]  # "grammar" ∈ LearnableType; same mypy narrowing limitation
         title=f"Grammar: {pattern}",
         explanation=explanation,
         fields=fields,
@@ -749,7 +749,7 @@ def _build_nuance(b: _B) -> LessonResponse:
 
     return LessonResponse(
         id=b.object_id,
-        type="nuance",  # type: ignore[arg-type]
+        type="nuance",  # type: ignore[arg-type]  # "nuance" ∈ LearnableType; same mypy narrowing limitation
         title=f"{type_label}: {surface}",
         explanation=explanation,
         fields=fields,
@@ -830,7 +830,7 @@ def _build_case_agreement(b: _B) -> LessonResponse:
 
     return LessonResponse(
         id=b.object_id,
-        type="case_agreement",  # type: ignore[arg-type]
+        type="case_agreement",  # type: ignore[arg-type]  # "case_agreement" ∈ LearnableType; same mypy narrowing limitation
         title=f"Case agreement: {b.display_label}",
         explanation=explanation,
         fields=fields,
@@ -848,7 +848,7 @@ def _build_generic(b: _B) -> LessonResponse:
     ]
     return LessonResponse(
         id=b.object_id,
-        type=b.obj_type,  # type: ignore[arg-type]
+        type=b.obj_type,  # type: ignore[arg-type]  # obj_type is str, not narrowed to LearnableType; Pydantic validates at runtime
         title=f"{b.obj_type.replace('_', ' ').title()}: {b.display_label}",
         explanation=f"\u201c{b.display_label}\u201d \u2014 {b.obj_type.replace('_', ' ')}.",
         fields=fields,
