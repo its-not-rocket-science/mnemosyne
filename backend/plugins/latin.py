@@ -526,6 +526,7 @@ class LatinPlugin:
                     "gloss": gloss,
                     "grammar_note": grammar,
                     "pos": pos.upper(),
+                    "cefr_level": "A1",
                 }
                 confidence = 0.85
             else:

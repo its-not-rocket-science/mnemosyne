@@ -638,6 +638,7 @@ class KoineGreekPlugin:
                     "gloss": gloss,
                     "grammar_note": grammar,
                     "pos": pos.upper(),
+                    "cefr_level": "A1",
                     "romanized": romanized,
                 }
                 confidence = 0.85
