@@ -46,8 +46,11 @@ from __future__ import annotations
 
 import re
 
+from backend.plugins.cefr_vocab import A1 as _CEFR_A1
 from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
+
+_A1: frozenset[str] = _CEFR_A1.get("zh", frozenset())
 
 # ── Optional heavy imports ─────────────────────────────────────────────────────
 # Imported at module load so the server fails fast on a mis-configured venv
@@ -196,6 +199,8 @@ class MandarinChinesePlugin:
             }
             if pinyin := _pinyin_for(canonical):
                 lesson_data["pinyin"] = pinyin
+            if canonical in _A1:
+                lesson_data["cefr_level"] = "A1"
             if not _HAS_JIEBA:
                 lesson_data["confidence_note"] = (
                     "character-level fallback — install jieba for word-level segmentation"

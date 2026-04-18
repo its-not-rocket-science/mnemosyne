@@ -53,10 +53,13 @@ import logging
 from functools import cached_property
 from typing import Any
 
+from backend.plugins.cefr_vocab import A1 as _CEFR_A1
 from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 logger = logging.getLogger(__name__)
+
+_A1: frozenset[str] = _CEFR_A1.get("ja", frozenset())
 
 # ── POS filter ────────────────────────────────────────────────────────────────
 
@@ -185,6 +188,8 @@ class JapanesePlugin:
                 data["reading"] = reading_hira
             else:
                 data["confidence_note"] = _CONFIDENCE_NOTE_NO_READING
+            if lemma in _A1:
+                data["cefr_level"] = "A1"
 
             confidence = self._vocab_confidence(tok, reading_hira)
             candidates.append(CandidateObject(
@@ -200,6 +205,8 @@ class JapanesePlugin:
     def _vocab_confidence(self, tok: Any, reading: str | None) -> float:
         if tok.pos_ == "PROPN":
             return 0.60
+        if tok.lemma_ in _A1:
+            return 0.90  # known A1 word — suppress is_oov false-positive
         if reading is None:
             return 0.65
         return 0.80
