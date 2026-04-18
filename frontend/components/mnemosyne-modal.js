@@ -157,7 +157,8 @@ export class MnemosyneModal extends HTMLElement {
 
         /* ── buttons ── */
         button {
-          border: 1px solid color-mix(in srgb, CanvasText 25%, transparent);
+          /* 45% CanvasText gives ≥ 3:1 against Canvas in light and dark mode — SC 1.4.11. */
+          border: 1px solid color-mix(in srgb, CanvasText 45%, Canvas);
           background: transparent;
           border-radius: 999px;
           color: inherit;
@@ -199,7 +200,8 @@ export class MnemosyneModal extends HTMLElement {
           min-block-size: 2rem;
           padding-inline: 0.65rem;
           font-size: 0.8rem;
-          border: 1px solid color-mix(in srgb, CanvasText 25%, transparent);
+          /* Inherits the general button border (45% CanvasText). */
+          border: 1px solid color-mix(in srgb, CanvasText 45%, Canvas);
           border-radius: 999px;
           background: transparent;
           color: inherit;
@@ -489,7 +491,7 @@ export class MnemosyneModal extends HTMLElement {
             <div class="examples">
               <p class="example-text"></p>
               <button type="button" class="btn-speak"
-                aria-label="Listen to example"
+                aria-label="Speak example aloud"
                 ${!canSpeak ? 'disabled' : ''}>Speak</button>
             </div>
 

@@ -575,6 +575,9 @@ function renderResults(sentences, language) {
 
     const list = document.createElement('ul')
     list.className = 'sentence-card__pills'
+    // list-style:none in CSS removes list semantics in Safari VoiceOver;
+    // role="list" restores them (SC 1.3.1).
+    list.setAttribute('role', 'list')
     // Pill labels are target-language text; match text direction.
     list.setAttribute('dir', dir)
 

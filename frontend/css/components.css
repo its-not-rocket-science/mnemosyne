@@ -72,7 +72,8 @@
 }
 
 .script-toggle__btn {
-  border: 1px solid var(--border);
+  /* --border-input (45% CanvasText) gives ≥ 3:1 against Canvas — SC 1.4.11. */
+  border: 1px solid var(--border-input);
   border-radius: 999px;
   background: transparent;
   color: var(--text);
@@ -134,7 +135,8 @@
 .ghost-button {
   padding: 0.6rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid var(--border);
+  /* --border-input (45% CanvasText) gives ≥ 3:1 against Canvas — SC 1.4.11. */
+  border: 1px solid var(--border-input);
   background: transparent;
   color: inherit;
   cursor: pointer;
