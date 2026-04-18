@@ -176,6 +176,10 @@ async def lifespan(app: FastAPI):
     _log_config(settings)
     _warn_config(settings)
 
+    # Startup health state — read by /ready and the X-Startup-Warning middleware.
+    # Each entry is a human-readable sentence shown in the banner and in /ready.
+    app.state.startup_errors: list[str] = []
+
     # Run pending Alembic migrations on startup.
     # _run_alembic_upgrade uses subprocess to avoid the local alembic/ directory
     # shadowing the installed package; asyncio.to_thread prevents blocking the loop.
@@ -183,7 +187,15 @@ async def lifespan(app: FastAPI):
         await asyncio.to_thread(_run_alembic_upgrade)
         logger.info("Database migrations applied.")
     except Exception as exc:
-        logger.warning("Database unavailable at startup — continuing: %s", exc)
+        # Condense multi-line alembic output to one readable sentence.
+        first_line = str(exc).splitlines()[0][:300]
+        msg = (
+            f"Database migration failed at startup ({first_line}). "
+            "Ensure the database is running and DATABASE_URL is correct. "
+            "API calls that require the database will fail until this is resolved."
+        )
+        logger.error("Startup: %s", msg)
+        app.state.startup_errors.append(msg)
 
     # Load language plugins eagerly so the first request isn't slow.
     registry = get_plugin_registry()
@@ -230,6 +242,26 @@ async def _request_id_middleware(request: Request, call_next):
     response = await call_next(request)
     response.headers["X-Request-Id"] = request_id
     return response
+
+
+@app.middleware("http")
+async def _startup_warning_middleware(request: Request, call_next):
+    """Attach X-Startup-Warning to every response when startup had errors.
+
+    The header value is the first error message, truncated to 500 characters.
+    Clients (monitoring dashboards, the frontend health check) can read this
+    header on any response to detect degraded-startup state without having to
+    poll /ready explicitly.
+
+    Ops routes (/health, /ready) are included — they benefit from the header
+    as well since they are the first thing monitoring tools hit.
+    """
+    response = await call_next(request)
+    errors: list[str] = getattr(request.app.state, "startup_errors", [])
+    if errors:
+        response.headers["X-Startup-Warning"] = errors[0][:500]
+    return response
+
 
 app.include_router(auth_router)
 app.include_router(ingest_router)
