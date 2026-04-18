@@ -45,8 +45,11 @@ from __future__ import annotations
 
 import re
 
+from backend.plugins.cefr_vocab import A1 as _CEFR_A1
 from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
+
+_A1: frozenset[str] = _CEFR_A1.get("ar", frozenset())
 
 # ── Sentence splitting ────────────────────────────────────────────────────────
 # Split on standard terminal marks plus:
@@ -166,17 +169,21 @@ class ArabicPlugin:
             # Surface form may carry tashkeel (e.g. "كَتَبَ"); canonical
             # form is the undiacritised version ("كتب").  The lesson builder
             # will display "Base form: كتب" when they differ.
+            lesson_data: dict = {"lemma": canonical}
+            if canonical in _A1:
+                lesson_data["cefr_level"] = "A1"
+                confidence: float | None = 0.70
+            else:
+                lesson_data["confidence_note"] = _CONFIDENCE_NOTE
+                confidence = None
             candidates.append(
                 CandidateObject(
                     canonical_form=canonical,
                     surface_form=word,
                     type="vocabulary",
                     label=word,
-                    lesson_data={
-                        "lemma": canonical,
-                        "confidence_note": _CONFIDENCE_NOTE,
-                    },
-                    confidence=None,
+                    lesson_data=lesson_data,
+                    confidence=confidence,
                 )
             )
 

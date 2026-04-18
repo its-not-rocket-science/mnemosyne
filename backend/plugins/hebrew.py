@@ -44,8 +44,11 @@ from __future__ import annotations
 
 import re
 
+from backend.plugins.cefr_vocab import A1 as _CEFR_A1
 from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
+
+_A1: frozenset[str] = _CEFR_A1.get("he", frozenset())
 
 # ── Sentence splitting ────────────────────────────────────────────────────────
 _SENTENCE_RE = re.compile(r"[^.!?\n]+[.!?\n]?")
@@ -156,17 +159,21 @@ class HebrewPlugin:
             # Surface form may carry nikud (e.g. "סֵפֶר"); canonical form is
             # the undiacritised version ("ספר").  The lesson builder will
             # display "Base form: ספר" when they differ.
+            lesson_data: dict = {"lemma": canonical}
+            if canonical in _A1:
+                lesson_data["cefr_level"] = "A1"
+                confidence: float | None = 0.70
+            else:
+                lesson_data["confidence_note"] = _CONFIDENCE_NOTE
+                confidence = None
             candidates.append(
                 CandidateObject(
                     canonical_form=canonical,
                     surface_form=word,
                     type="vocabulary",
                     label=word,
-                    lesson_data={
-                        "lemma": canonical,
-                        "confidence_note": _CONFIDENCE_NOTE,
-                    },
-                    confidence=None,
+                    lesson_data=lesson_data,
+                    confidence=confidence,
                 )
             )
 
