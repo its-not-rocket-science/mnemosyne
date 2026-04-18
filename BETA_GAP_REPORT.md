@@ -19,7 +19,7 @@ These are genuinely solid and should not be second-guessed.
 - **FSRS-5 is correct.** Pure Python, deterministic, no external dependencies. Survives restart, DB outage, and re-parse. Review state is authoritative in the DB; payload fallback on outage.
 - **Canonical knowledge layer is robust.** UUID-v5 PKs mean the same word in two different texts always maps to the same DB row. Surface forms accumulate across parses. Object relations are stored. This is the right foundation for cross-text reinforcement and it will not need to be redesigned.
 - **Plugin architecture is clean.** Structural typing, no ABC, no registration step — drop a file in `backend/plugins/` and the server picks it up. Plugins are isolated; a crash in one does not affect others.
-- **Accessibility baseline is real.** Skip link, focus trap, ARIA live regions, reduced motion, 44 px touch targets. Not complete (WCAG AA not audited end-to-end) but deliberately built.
+- **Accessibility baseline is complete.** Skip link, focus trap, ARIA live regions, reduced motion, 44 px touch targets, roving tabindex, `role="list"` on pill lists. Static WCAG 2.1 AA code audit done; 8 issues found and fixed. Manual keyboard + screen-reader run recommended before public launch but no known remaining blockers.
 - **Multi-user architecture is complete.** `X-User-Id` header, `"default"` fallback, per-user isolation across all routes, `UserLanguagePreferenceRow` table, preference CRUD at `/users/me/*`. The schema was right all along; the routes are now wired correctly.
 - **RTL plugin metadata is real.** `direction`, `script_family`, `tokenization_mode`, `morphology_depth` on every plugin. Frontend reads these at load and applies `dir`/`lang` to sentence text. Non-Latin font stacks in `global.css`.
 - **i+1 recommendation engine works.** Difficulty window shifts with mastery. Per-language calibration profiles. Passage context for ingested documents. Deduplication of identical sentence texts.
@@ -94,11 +94,16 @@ Everything in private alpha plus the following.
 
 **What to do:** A login/register panel in `index.html`. After login, store the JWT in `sessionStorage` (not `localStorage` — reduce XSS exposure) and include it in every API request as `Authorization: Bearer <token>`. Logout clears the token and returns to the login panel.
 
-### B3. WCAG 2.1 AA audit on the core flow
+### B3. WCAG 2.1 AA audit on the core flow ✓ DONE (code-level)
 
-**Why it blocks:** The accessibility baseline was built deliberately, but has not been audited end-to-end. Shipping a public beta without a keyboard-only run-through of parse → lesson → review exposes real users to barriers. Screen-reader smoke test with NVDA and VoiceOver at minimum.
+**What was done:** Full static code audit of index.html, global.css, components.css, mnemosyne-modal.js, mnemosyne-pill.js, main.js, auth.js against WCAG 2.1 AA criteria. Eight issues found and fixed across two audit passes:
 
-**What to do:** Run the full flow keyboard-only. Fix any focus management gaps. Run `axe` or `Lighthouse` accessibility audit on the rendered page. Document the result.
+- **SC 1.4.11 Non-text Contrast** — input/textarea/select/button borders raised from 20–25% to 45% CanvasText (≥ 3:1 against Canvas in light and dark mode); `--border-input` CSS variable introduced; pill borders raised from 35% to 60%.
+- **SC 2.5.3 Label in Name** — example-speak button `aria-label` changed from "Listen to example" to "Speak example aloud" so visible text "Speak" is contained in the accessible name.
+- **SC 1.3.1** — `role="list"` added to pill `<ul>` to restore list semantics stripped by `list-style: none` in Safari VoiceOver.
+- Five additional issues fixed in prior audit pass (roving tabindex, focus management on login/logout, fill-blank input label, auth-panel `hidden`, speak button disambiguation).
+
+Results documented in `WCAG_AUDIT.md`. Manual keyboard-only walkthrough and screen-reader test (NVDA + Chrome, VoiceOver + Safari) remain recommended before the public launch tag.
 
 ### B4. RTL layout complete ✓ DONE
 

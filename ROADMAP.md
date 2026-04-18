@@ -32,7 +32,7 @@ Status markers: **implemented** · **partial** · **planned** · **deferred**
 | `GET /languages` | implemented | Lists active plugins with direction metadata |
 | `GET /health` + `GET /ready` | implemented | Liveness and readiness probes |
 | Alembic migrations | implemented | `0000_baseline` + migrations 0001–0007; `alembic upgrade head` verified on fresh SQLite DB; production startup uses subprocess alembic only |
-| Accessibility baseline | partial | Focus trap, ARIA live regions, reduced-motion, 44 px targets; WCAG AA not audited end-to-end |
+| Accessibility baseline | implemented | Skip link, focus trap (`inert` + Tab intercept), ARIA live regions, reduced-motion, 44 px touch targets, roving tabindex on auth tabs, `role="list"` on pill lists; static WCAG 2.1 AA code audit complete — 8 issues found and fixed (SC 1.4.11 border contrast, SC 2.5.3 label-in-name, SC 1.3.1 list role, plus 5 issues from prior audit); manual keyboard + screen-reader run recommended before public beta |
 | RTL layout support | implemented | `dir`/`lang` applied to all text elements in modal; `<bdi>` isolation in drill feedback; CSS uses logical properties throughout |
 | Multi-user architecture | implemented | `X-User-Id` header; `get_current_user` dependency; per-user isolation across all routes; `UserLanguagePreferenceRow` table; `/users/me/*` preference CRUD |
 | User authentication | implemented | `/auth/register` + `/auth/login`; HS256 JWT; `get_current_user` verifies Bearer token or falls back to `X-User-Id`; login/logout UI |
