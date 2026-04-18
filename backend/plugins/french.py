@@ -111,6 +111,7 @@ import logging
 from functools import cached_property
 from typing import Any
 
+from backend.plugins.cefr_vocab import A1 as _CEFR_A1
 from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import (
     CandidateObject,
@@ -119,6 +120,8 @@ from backend.schemas.parse import (
 )
 
 logger = logging.getLogger(__name__)
+
+_A1 = _CEFR_A1.get("fr", frozenset())
 
 # ── POS filter ────────────────────────────────────────────────────────────────
 
@@ -394,8 +397,10 @@ class FrenchPlugin:
                 continue
             seen.add(lemma)
 
-            confidence, confidence_note = self._vocab_confidence(tok)
+            confidence, confidence_note = self._vocab_confidence(tok, lemma)
             data: dict[str, Any] = {"lemma": lemma, "pos": tok.pos_}
+            if lemma in _A1:
+                data["cefr_level"] = "A1"
 
             if tok.pos_ == "NOUN":
                 if noun_gender := _morph_first(tok, "Gender"):
@@ -419,9 +424,11 @@ class FrenchPlugin:
             ))
         return candidates
 
-    def _vocab_confidence(self, tok: Any) -> tuple[float, str | None]:
+    def _vocab_confidence(self, tok: Any, lemma: str) -> tuple[float, str | None]:
         if tok.pos_ == "PROPN":
             return 0.60, "proper noun — may not represent general vocabulary"
+        if lemma in _A1:
+            return 0.90, None  # known A1 word — suppress is_oov false-positive
         if tok.is_oov:
             return 0.50, "word not found in model vocabulary — form may be incorrect"
         return 0.85, None

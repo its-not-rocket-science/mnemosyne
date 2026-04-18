@@ -258,6 +258,9 @@ def _build_vocabulary(b: _B) -> LessonResponse:
         if auto_gloss := b.prov.gloss.lookup(lemma, b.ctx.language_code, pos_raw):
             fields.append(LessonField(label="Gloss", value=auto_gloss))
 
+    if cefr := b.lesson_data.get("cefr_level"):
+        fields.append(LessonField(label="CEFR level", value=cefr))
+
     if note := b.lesson_data.get("confidence_note"):
         fields.append(LessonField(label="Note", value=note))
 
