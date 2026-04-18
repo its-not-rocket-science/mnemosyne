@@ -17,6 +17,8 @@ Status markers: **implemented** · **partial** · **planned** · **deferred**
 | Arabic plugin (dictionary mode) | implemented | Sentence splitting; whitespace tokenisation; tashkeel normalisation; RTL |
 | Hebrew plugin (dictionary mode) | implemented | Sentence splitting; whitespace tokenisation; nikud normalisation; RTL |
 | Mandarin Chinese plugin (jieba + pypinyin) | implemented | jieba segmentation; tone-marked pinyin; CJK script family |
+| Portuguese NLP plugin (`pt_core_news_sm`) | implemented | Vocabulary, conjugation, agreement; ser/estar copula; ter_perfect; personal infinitive nuance |
+| Italian NLP plugin (`it_core_news_sm`) | implemented | Vocabulary, conjugation, agreement; essere/avere auxiliary; stare_progressive; grammar + nuance |
 | Latin plugin (dictionary mode) | implemented | Regex tokenisation; dictionary-mode lesson builder; dead-language scaffold |
 | English stub plugin | implemented | Regex vocab only; no morphology |
 | Plugin registry with multi-language support | implemented | `ENABLED_LANGUAGES` filter; auto-discovery; collision warning on duplicates |
