@@ -71,7 +71,10 @@ export class MnemosynePill extends HTMLElement {
           display: inline-flex;
           align-items: center;
           gap: 0.4rem;
-          border: 1px solid color-mix(in oklch, ${meta.ref} 35%, Canvas);
+          /* 60% reference color gives noticeably more contrast against Canvas
+             than the prior 35%; exact ratio varies by type color and OS
+             Canvas value — verify in browser for each type. SC 1.4.11. */
+          border: 1px solid color-mix(in oklch, ${meta.ref} 60%, Canvas);
           border-radius: 999px;
           /* 2.75rem ≈ 44 CSS px — WCAG 2.5.8 minimum touch target */
           min-block-size: 2.75rem;
