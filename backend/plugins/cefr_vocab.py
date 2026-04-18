@@ -88,6 +88,53 @@ _ES_A1: frozenset[str] = frozenset({
     "después", "siempre", "nunca", "también", "tampoco", "muy", "bien",
     "mal", "más", "menos", "solo", "mucho", "poco", "tarde", "temprano",
     "pronto", "cerca", "lejos",
+    # body parts
+    "cabeza", "cara", "ojo", "oreja", "nariz", "boca", "diente", "cuello",
+    "brazo", "mano", "dedo", "pierna", "pie", "espalda", "estómago", "pelo",
+    # animals (extended)
+    "caballo", "vaca", "elefante", "serpiente", "conejo", "cerdo", "oveja",
+    "león", "ratón", "tigre", "oso", "mono", "pato", "zorro", "lobo",
+    # food & drink (extended)
+    "banana", "mantequilla", "pastel", "zanahoria", "queso", "chocolate",
+    "huevo", "helado", "zumo", "jugo", "cebolla", "pasta", "pizza",
+    "patata", "arroz", "ensalada", "sal", "bocadillo", "sopa", "azúcar",
+    "tomate", "miel", "champiñón", "fresa", "uva", "limón", "judía",
+    "pimiento", "naranja",
+    # clothes & accessories
+    "ropa", "bota", "abrigo", "vestido", "sombrero", "chaqueta", "vaquero",
+    "camisa", "zapato", "falda", "suéter", "camiseta", "pantalón",
+    "paraguas", "calcetín", "guante", "bufanda", "cinturón", "anillo",
+    "reloj", "bicicleta",
+    # technology & media
+    "cámara", "computadora", "ordenador", "correo", "internet", "teléfono",
+    "radio", "televisión", "vídeo", "blog", "web", "revista", "periódico",
+    # places (extended)
+    "aeropuerto", "bar", "cafetería", "cine", "granja", "gimnasio",
+    "hospital", "hotel", "isla", "biblioteca", "museo", "piscina",
+    "restaurante", "supermercado", "teatro", "fábrica", "castillo",
+    "iglesia", "mezquita",
+    # people & professions
+    "actor", "actriz", "adulto", "artista", "cliente", "bailarín",
+    "conductor", "granjero", "enfermero", "jugador", "policía", "científico",
+    "adolescente", "turista", "visitante", "camarero", "trabajador",
+    "escritor", "cantante", "médico", "bebé", "cocinero", "dentista",
+    "ingeniero", "piloto", "soldado",
+    # verbs (extended)
+    "construir", "cambiar", "elegir", "escalar", "costar", "decidir",
+    "morir", "dibujar", "arreglar", "volar", "adivinar", "odiar",
+    "incluir", "presentar", "reír", "perder", "mover", "pintar",
+    "pagar", "relajar", "recordar", "repetir", "montar", "enviar",
+    "viajar", "despertar", "vestir", "ganar", "correr", "vender",
+    "nadar", "caer", "romper", "soñar", "preferir", "prometer",
+    "cantar", "mostrar",
+    # adjectives (extended)
+    "asustado", "increíble", "enojado", "rubio", "aburrido", "peligroso",
+    "oscuro", "delicioso", "seco", "emocionado", "famoso", "fantástico",
+    "gordo", "simpático", "gracioso", "genial", "duro", "casado", "moderno",
+    "perfecto", "popular", "posible", "tranquilo", "real", "rico",
+    "especial", "fuerte", "verdadero", "cálido", "maravilloso", "hermoso",
+    "correcto", "terrible", "seguro", "inteligente", "perezoso", "educado",
+    "grosero", "raro", "delgado", "afortunado",
 })
 
 # ── French (fr) ───────────────────────────────────────────────────────────────
@@ -143,6 +190,53 @@ _FR_A1: frozenset[str] = frozenset({
     "après", "toujours", "jamais", "aussi", "non plus", "très", "bien",
     "mal", "plus", "moins", "seulement", "beaucoup", "peu", "tard",
     "tôt", "vite", "près", "loin",
+    # body parts
+    "tête", "visage", "œil", "oreille", "nez", "bouche", "dent", "cou",
+    "bras", "main", "doigt", "jambe", "pied", "dos", "ventre", "cheveu",
+    # animals (extended)
+    "cheval", "vache", "éléphant", "serpent", "lapin", "cochon", "mouton",
+    "lion", "souris", "tigre", "ours", "singe", "canard", "renard", "loup",
+    # food & drink (extended)
+    "banane", "beurre", "gâteau", "carotte", "fromage", "chocolat",
+    "œuf", "glace", "jus", "oignon", "pâte", "pizza", "pomme",
+    "riz", "salade", "sel", "sandwich", "soupe", "sucre", "tomate",
+    "miel", "champignon", "fraise", "raisin", "citron", "haricot",
+    "poivron",
+    # clothes & accessories
+    "botte", "manteau", "robe", "chapeau", "veste", "jean", "chemise",
+    "chaussure", "jupe", "pull", "tee-shirt", "pantalon", "parapluie",
+    "chaussette", "gant", "écharpe", "ceinture", "bague", "montre",
+    # technology & media
+    "caméra", "ordinateur", "courriel", "internet", "téléphone", "radio",
+    "télévision", "vidéo", "blog", "site", "magazine", "journal",
+    "programme", "vélo", "taxi",
+    # places (extended)
+    "aéroport", "bar", "café", "cinéma", "ferme", "gymnase",
+    "hôpital", "hôtel", "île", "bibliothèque", "musée", "piscine",
+    "restaurant", "supermarché", "théâtre", "usine", "château",
+    "église", "mosquée",
+    # people & professions
+    "acteur", "actrice", "adulte", "artiste", "client", "danseur",
+    "chauffeur", "fermier", "infirmier", "joueur", "policier",
+    "scientifique", "adolescent", "touriste", "visiteur", "serveur",
+    "travailleur", "écrivain", "chanteur", "bébé", "médecin",
+    "cuisinier", "dentiste", "ingénieur", "pilote", "soldat",
+    # verbs (extended)
+    "construire", "changer", "choisir", "grimper", "coûter", "décider",
+    "mourir", "dessiner", "expliquer", "réparer", "voler", "oublier",
+    "deviner", "haïr", "inclure", "présenter", "garder", "rire",
+    "perdre", "bouger", "peindre", "payer", "détendre", "répéter",
+    "monter", "envoyer", "voyager", "réveiller", "porter", "gagner",
+    "courir", "vendre", "nager", "tomber", "casser", "rêver",
+    "marier", "préférer", "promettre", "chanter", "montrer",
+    # adjectives (extended)
+    "effrayé", "incroyable", "colère", "blond", "ennuyeux", "dangereux",
+    "sombre", "délicieux", "sec", "excité", "célèbre", "fantastique",
+    "gros", "sympa", "drôle", "génial", "dur", "marié", "moderne",
+    "parfait", "populaire", "possible", "joli", "calme", "réel",
+    "riche", "spécial", "fort", "vrai", "merveilleux", "correct",
+    "terrible", "sûr", "intelligent", "paresseux", "poli", "grossier",
+    "bizarre", "mince", "chanceux",
 })
 
 # ── German (de) ───────────────────────────────────────────────────────────────
@@ -199,6 +293,56 @@ _DE_A1: frozenset[str] = frozenset({
     "nachher", "danach", "immer", "nie", "auch", "nicht", "sehr", "gut",
     "schlecht", "mehr", "weniger", "nur", "viel", "wenig", "spät",
     "früh", "schnell", "nah", "weit",
+    # body parts (Title-cased nouns)
+    "Kopf", "Gesicht", "Auge", "Ohr", "Nase", "Mund", "Zahn", "Hals",
+    "Arm", "Hand", "Finger", "Bein", "Fuß", "Rücken", "Bauch", "Haar",
+    # animals (extended — Title-cased)
+    "Pferd", "Kuh", "Elefant", "Schlange", "Kaninchen", "Schwein",
+    "Schaf", "Löwe", "Maus", "Tiger", "Bär", "Affe", "Ente", "Fuchs",
+    "Wolf",
+    # food & drink (extended — Title-cased)
+    "Banane", "Butter", "Kuchen", "Karotte", "Käse", "Schokolade",
+    "Ei", "Eis", "Saft", "Zwiebel", "Nudel", "Pizza", "Kartoffel",
+    "Reis", "Salat", "Salz", "Sandwich", "Suppe", "Zucker", "Tomate",
+    "Honig", "Pilz", "Erdbeere", "Traube", "Zitrone", "Bohne",
+    "Paprika", "Orange",
+    # clothes & accessories (Title-cased)
+    "Kleidung", "Stiefel", "Mantel", "Kleid", "Hut", "Jacke", "Jeans",
+    "Hemd", "Schuh", "Rock", "Pullover", "T-Shirt", "Hose",
+    "Regenschirm", "Socke", "Handschuh", "Schal", "Gürtel", "Ring",
+    "Uhr", "Fahrrad",
+    # technology & media (Title-cased)
+    "Kamera", "Computer", "E-Mail", "Internet", "Telefon", "Radio",
+    "Fernseher", "Video", "Blog", "Webseite", "Zeitschrift", "Zeitung",
+    "Programm", "Taxi",
+    # places (extended — Title-cased)
+    "Flughafen", "Bar", "Café", "Kino", "Bauernhof", "Fitnessstudio",
+    "Krankenhaus", "Hotel", "Insel", "Bibliothek", "Museum",
+    "Schwimmbad", "Restaurant", "Supermarkt", "Theater", "Fabrik",
+    "Schloss", "Kirche", "Moschee",
+    # people & professions (Title-cased)
+    "Schauspieler", "Schauspielerin", "Erwachsener", "Künstler",
+    "Kunde", "Tänzer", "Fahrer", "Bauer", "Krankenschwester",
+    "Spieler", "Polizist", "Wissenschaftler", "Teenager", "Tourist",
+    "Besucher", "Kellner", "Arbeiter", "Schriftsteller", "Sänger",
+    "Baby", "Arzt", "Koch", "Zahnarzt", "Ingenieur", "Pilot", "Soldat",
+    # verbs (lowercase)
+    "bauen", "ändern", "wählen", "klettern", "entscheiden", "sterben",
+    "zeichnen", "erklären", "reparieren", "vergessen", "raten", "hassen",
+    "einschließen", "vorstellen", "behalten", "lachen", "verlieren",
+    "meinen", "vermissen", "bewegen", "malen", "bezahlen", "entspannen",
+    "erinnern", "wiederholen", "reiten", "rennen", "schicken", "stehen",
+    "schwimmen", "reisen", "aufwachen", "tragen", "gewinnen",
+    "verkaufen", "fallen", "brechen", "träumen", "heiraten",
+    "bevorzugen", "versprechen", "singen", "zeigen",
+    # adjectives (lowercase)
+    "ängstlich", "erstaunlich", "wütend", "blond", "langweilig",
+    "gefährlich", "dunkel", "lecker", "trocken", "aufgeregt", "berühmt",
+    "fantastisch", "dick", "freundlich", "lustig", "großartig", "hart",
+    "verheiratet", "modern", "perfekt", "beliebt", "möglich", "hübsch",
+    "ruhig", "echt", "reich", "sicher", "speziell", "stark", "wahr",
+    "wunderbar", "schrecklich", "klug", "faul", "höflich", "unhöflich",
+    "seltsam", "dünn", "glücklich",
 })
 
 # ── Italian (it) ──────────────────────────────────────────────────────────────
@@ -255,6 +399,58 @@ _IT_A1: frozenset[str] = frozenset({
     "dopo", "sempre", "mai", "anche", "molto", "bene", "male", "più",
     "meno", "solo", "tanto", "poco", "tardi", "presto", "vicino",
     "lontano",
+    # body parts
+    "testa", "faccia", "occhio", "orecchio", "naso", "bocca", "dente",
+    "collo", "braccio", "mano", "dito", "gamba", "piede", "schiena",
+    "pancia", "capello",
+    # animals (extended)
+    "cavallo", "mucca", "elefante", "serpente", "coniglio", "maiale",
+    "pecora", "leone", "topo", "tigre", "orso", "scimmia", "anatra",
+    "volpe", "lupo",
+    # food & drink (extended)
+    "banana", "burro", "torta", "carota", "formaggio", "cioccolato",
+    "uovo", "gelato", "succo", "cipolla", "pasta", "pizza", "patata",
+    "riso", "insalata", "sale", "panino", "zuppa", "zucchero",
+    "pomodoro", "miele", "fungo", "fragola", "uva", "limone",
+    "fagiolo", "peperone",
+    # clothes & accessories
+    "vestiti", "stivale", "cappotto", "vestito", "cappello", "giacca",
+    "jeans", "camicia", "scarpa", "gonna", "maglione", "maglietta",
+    "pantaloni", "ombrello", "calzino", "guanto", "sciarpa", "cintura",
+    "anello", "orologio", "bicicletta",
+    # technology & media
+    "macchina fotografica", "computer", "email", "internet", "telefono",
+    "radio", "televisione", "video", "blog", "sito", "rivista",
+    "giornale", "programma", "taxi",
+    # places (extended)
+    "aeroporto", "bar", "caffè", "cinema", "fattoria", "palestra",
+    "ospedale", "hotel", "isola", "biblioteca", "museo", "piscina",
+    "ristorante", "supermercato", "teatro", "fabbrica", "castello",
+    "chiesa", "moschea",
+    # people & professions
+    "attore", "attrice", "adulto", "artista", "cliente", "ballerino",
+    "autista", "contadino", "infermiere", "giocatore", "poliziotto",
+    "scienziato", "adolescente", "turista", "visitatore", "cameriere",
+    "lavoratore", "scrittore", "cantante", "neonato", "dottore",
+    "cuoco", "dentista", "ingegnere", "pilota", "soldato",
+    # verbs (extended)
+    "costruire", "cambiare", "scegliere", "arrampicarsi", "costare",
+    "decidere", "morire", "disegnare", "spiegare", "riparare", "volare",
+    "dimenticare", "indovinare", "odiare", "includere", "presentare",
+    "tenere", "ridere", "perdere", "muovere", "dipingere", "pagare",
+    "rilassare", "ricordare", "ripetere", "cavalcare", "correre",
+    "mandare", "stare", "nuotare", "viaggiare", "svegliare", "portare",
+    "vincere", "vendere", "cadere", "rompere", "sognare", "sposare",
+    "preferire", "promettere", "cantare", "mostrare",
+    # adjectives (extended)
+    "spaventato", "incredibile", "arrabbiato", "biondo", "noioso",
+    "pericoloso", "scuro", "delizioso", "asciutto", "emozionato",
+    "famoso", "fantastico", "grasso", "simpatico", "divertente",
+    "geniale", "duro", "sposato", "moderno", "perfetto", "popolare",
+    "possibile", "carino", "tranquillo", "reale", "ricco", "speciale",
+    "forte", "vero", "meraviglioso", "corretto", "terribile", "sicuro",
+    "intelligente", "pigro", "educato", "maleducato", "strano",
+    "magro", "fortunato",
 })
 
 # ── Portuguese (pt) ───────────────────────────────────────────────────────────
@@ -311,6 +507,56 @@ _PT_A1: frozenset[str] = frozenset({
     "aqui", "ali", "lá", "hoje", "ontem", "amanhã", "agora", "antes",
     "depois", "sempre", "nunca", "também", "muito", "bem", "mal",
     "mais", "menos", "só", "apenas", "tarde", "cedo", "perto", "longe",
+    # body parts
+    "cabeça", "rosto", "olho", "orelha", "nariz", "boca", "dente",
+    "pescoço", "braço", "mão", "dedo", "perna", "pé", "costas",
+    "barriga", "cabelo",
+    # animals (extended)
+    "cavalo", "vaca", "elefante", "cobra", "coelho", "porco", "ovelha",
+    "leão", "rato", "tigre", "urso", "macaco", "pato", "raposa", "lobo",
+    # food & drink (extended)
+    "banana", "manteiga", "bolo", "cenoura", "queijo", "chocolate",
+    "ovo", "gelado", "sorvete", "sumo", "suco", "cebola", "massa",
+    "pizza", "batata", "arroz", "salada", "sal", "sandes", "sanduíche",
+    "sopa", "açúcar", "tomate", "mel", "cogumelo", "morango", "uva",
+    "limão", "feijão", "pimento",
+    # clothes & accessories
+    "roupa", "bota", "casaco", "vestido", "chapéu", "jaqueta", "jeans",
+    "camisa", "sapato", "saia", "camisola", "camiseta", "calças",
+    "guarda-chuva", "meia", "luva", "cachecol", "cinto", "anel",
+    "relógio", "taxi",
+    # technology & media
+    "câmara", "computador", "email", "internet", "telefone", "rádio",
+    "televisão", "vídeo", "blog", "website", "revista", "jornal",
+    "programa",
+    # places (extended)
+    "aeroporto", "bar", "café", "cinema", "quinta", "ginásio",
+    "hospital", "hotel", "ilha", "biblioteca", "museu", "piscina",
+    "restaurante", "supermercado", "teatro", "fábrica", "castelo",
+    "igreja", "mesquita",
+    # people & professions
+    "ator", "atriz", "adulto", "artista", "cliente", "bailarino",
+    "motorista", "agricultor", "enfermeiro", "jogador", "polícia",
+    "cientista", "adolescente", "turista", "visitante", "empregado",
+    "trabalhador", "escritor", "cantor", "bebé", "bebê", "médico",
+    "cozinheiro", "dentista", "engenheiro", "piloto", "soldado",
+    # verbs (extended)
+    "construir", "mudar", "escolher", "escalar", "custar", "decidir",
+    "morrer", "desenhar", "explicar", "arranjar", "voar", "esquecer",
+    "adivinhar", "odiar", "incluir", "apresentar", "guardar", "rir",
+    "perder", "mover", "pintar", "pagar", "relaxar", "lembrar",
+    "repetir", "montar", "correr", "mandar", "nadar", "viajar",
+    "acordar", "vestir", "ganhar", "vender", "cair", "partir",
+    "sonhar", "casar", "preferir", "prometer", "cantar", "mostrar",
+    # adjectives (extended)
+    "assustado", "incrível", "zangado", "loiro", "aborrecido",
+    "perigoso", "escuro", "delicioso", "seco", "emocionado", "famoso",
+    "fantástico", "gordo", "simpático", "engraçado", "óptimo", "duro",
+    "casado", "moderno", "perfeito", "popular", "possível", "giro",
+    "calmo", "real", "rico", "especial", "forte", "verdadeiro",
+    "quente", "maravilhoso", "correto", "terrível", "seguro",
+    "inteligente", "preguiçoso", "educado", "malcriado", "estranho",
+    "magro", "sortudo",
 })
 
 # ── Russian (ru) ──────────────────────────────────────────────────────────────
@@ -373,6 +619,57 @@ _RU_A1: frozenset[str] = frozenset({
     "раньше", "потом", "после", "всегда", "никогда", "тоже", "очень",
     "хорошо", "плохо", "больше", "меньше", "только", "много", "мало",
     "поздно", "рано", "быстро", "близко", "далеко",
+    # body parts
+    "голова", "лицо", "глаз", "ухо", "нос", "рот", "зуб", "шея",
+    "рука", "палец", "нога", "спина", "живот", "волос",
+    # animals (extended)
+    "лошадь", "корова", "слон", "змея", "кролик", "свинья", "овца",
+    "лев", "мышь", "тигр", "медведь", "обезьяна", "утка", "лиса",
+    "волк",
+    # food & drink (extended)
+    "банан", "масло", "торт", "морковь", "сыр", "шоколад", "яйцо",
+    "мороженое", "сок", "лук", "макароны", "пицца", "картошка",
+    "рис", "салат", "соль", "бутерброд", "суп", "сахар", "помидор",
+    "мёд", "гриб", "клубника", "виноград", "лимон", "фасоль",
+    "перец",
+    # clothes & accessories
+    "одежда", "ботинок", "сапог", "пальто", "платье", "шляпа",
+    "шапка", "куртка", "джинсы", "рубашка", "туфля", "юбка",
+    "свитер", "футболка", "брюки", "зонт", "носок", "перчатка",
+    "шарф", "ремень", "кольцо", "часы", "велосипед",
+    # technology & media
+    "камера", "компьютер", "имейл", "интернет", "телефон", "радио",
+    "телевизор", "видео", "блог", "сайт", "журнал", "газета",
+    "программа", "такси",
+    # places (extended)
+    "аэропорт", "бар", "кафе", "кинотеатр", "ферма", "спортзал",
+    "больница", "отель", "остров", "библиотека", "музей", "бассейн",
+    "ресторан", "супермаркет", "театр", "завод", "замок", "церковь",
+    "мечеть",
+    # people & professions
+    "актёр", "актриса", "взрослый", "художник", "клиент", "танцор",
+    "водитель", "фермер", "медсестра", "игрок", "полицейский",
+    "учёный", "певец", "подросток", "турист", "посетитель",
+    "официант", "рабочий", "писатель", "младенец", "врач", "повар",
+    "стоматолог", "инженер", "пилот", "солдат",
+    # verbs (extended)
+    "строить", "менять", "выбирать", "карабкаться", "стоить",
+    "решать", "умирать", "рисовать", "объяснять", "чинить", "летать",
+    "забывать", "угадывать", "ненавидеть", "включать", "представлять",
+    "сохранять", "смеяться", "терять", "двигаться", "красить",
+    "платить", "отдыхать", "помнить", "повторять", "ехать", "бегать",
+    "посылать", "стоять", "плавать", "путешествовать", "просыпаться",
+    "носить", "выигрывать", "продавать", "падать", "ломать", "мечтать",
+    "жениться", "предпочитать", "обещать", "петь", "показывать",
+    # adjectives (extended)
+    "испуганный", "удивительный", "злой", "русый", "скучный",
+    "опасный", "тёмный", "вкусный", "сухой", "взволнованный",
+    "знаменитый", "фантастический", "толстый", "дружелюбный",
+    "смешной", "замечательный", "жёсткий", "женатый", "замужем",
+    "современный", "идеальный", "популярный", "возможный", "симпатичный",
+    "тихий", "настоящий", "богатый", "особенный", "сильный",
+    "прекрасный", "правильный", "ужасный", "уверенный", "умный",
+    "ленивый", "вежливый", "грубый", "странный", "тонкий", "везучий",
 })
 
 # ── Japanese (ja) ─────────────────────────────────────────────────────────────
@@ -421,6 +718,49 @@ _JA_A1: frozenset[str] = frozenset({
     "ここ", "そこ", "あそこ", "今日", "昨日", "明日", "今", "前",
     "後", "いつも", "ぜんぜん", "とても", "よく", "もっと", "少し",
     "たくさん", "もう", "まだ",
+    # body parts
+    "頭", "顔", "目", "耳", "鼻", "口", "歯", "首", "腕", "手",
+    "指", "足", "背中", "お腹", "髪",
+    # animals (extended)
+    "馬", "牛", "象", "蛇", "うさぎ", "豚", "羊", "ライオン",
+    "ねずみ", "トラ", "クマ", "サル", "アヒル", "キツネ", "オオカミ",
+    # food & drink (extended)
+    "バナナ", "バター", "ケーキ", "にんじん", "チーズ", "チョコレート",
+    "卵", "アイスクリーム", "ジュース", "たまねぎ", "パスタ", "ピザ",
+    "じゃがいも", "ご飯", "サラダ", "塩", "サンドイッチ", "スープ",
+    "砂糖", "トマト", "はちみつ", "きのこ", "いちご", "ぶどう",
+    "レモン", "豆", "ピーマン",
+    # clothes & accessories
+    "服", "ブーツ", "コート", "ワンピース", "帽子", "ジャケット",
+    "ジーンズ", "シャツ", "靴", "スカート", "セーター", "Tシャツ",
+    "ズボン", "傘", "靴下", "手袋", "マフラー", "ベルト", "指輪",
+    "時計", "自転車",
+    # technology & media
+    "カメラ", "パソコン", "メール", "インターネット", "電話",
+    "ラジオ", "テレビ", "ビデオ", "ブログ", "ウェブサイト",
+    "雑誌", "新聞", "番組", "タクシー",
+    # places (extended)
+    "空港", "バー", "カフェ", "映画館", "農場", "ジム", "病院",
+    "ホテル", "島", "図書館", "美術館", "プール", "レストラン",
+    "スーパー", "劇場", "工場", "城", "教会", "モスク",
+    # people & professions
+    "俳優", "大人", "芸術家", "お客さん", "ダンサー", "運転手",
+    "農家", "看護師", "選手", "警察官", "科学者", "歌手",
+    "ティーンエイジャー", "観光客", "訪問者", "ウェイター",
+    "労働者", "作家", "赤ちゃん", "医者", "料理人", "歯医者",
+    "エンジニア", "パイロット", "兵士",
+    # verbs (extended)
+    "建てる", "変える", "選ぶ", "登る", "かかる", "決める", "死ぬ",
+    "描く", "説明する", "直す", "飛ぶ", "忘れる", "笑う", "失う",
+    "動く", "払う", "覚える", "繰り返す", "走る", "送る", "立つ",
+    "泳ぐ", "旅行する", "着る", "勝つ", "売る", "転ぶ", "壊す",
+    "夢見る", "結婚する", "好む", "約束する", "歌う", "見せる",
+    # i-adjectives (extended)
+    "怖い", "すごい", "美しい", "暗い", "乾いた", "太った", "面白い",
+    "賢い", "強い", "温かい", "正しい", "ひどい", "細い",
+    # na-adjective bases / nouns used attributively (extended)
+    "有名", "退屈", "危険", "元気", "静か", "現代的", "完璧",
+    "人気", "可能", "特別", "安全", "丁寧", "奇妙", "幸運",
 })
 
 # ── Chinese Simplified (zh) ───────────────────────────────────────────────────
@@ -476,6 +816,50 @@ _ZH_A1: frozenset[str] = frozenset({
     "这里", "那里", "今天", "昨天", "明天", "现在", "以前", "以后",
     "总是", "从不", "也", "非常", "很", "好", "更", "只", "多",
     "少", "晚", "早", "快", "近", "远",
+    # body parts
+    "头", "脸", "眼睛", "耳朵", "鼻子", "嘴", "牙齿", "脖子",
+    "手臂", "手", "手指", "腿", "脚", "背", "肚子", "头发",
+    # animals (extended)
+    "马", "牛", "大象", "蛇", "兔子", "猪", "羊", "狮子",
+    "老鼠", "老虎", "熊", "猴子", "鸭子", "狐狸", "狼",
+    # food & drink (extended)
+    "香蕉", "黄油", "蛋糕", "胡萝卜", "奶酪", "巧克力",
+    "鸡蛋", "冰淇淋", "果汁", "洋葱", "意大利面", "比萨",
+    "土豆", "沙拉", "盐", "三明治", "汤", "糖", "西红柿",
+    "蜂蜜", "蘑菇", "草莓", "葡萄", "柠檬", "豆子", "辣椒",
+    # clothes & accessories
+    "衣服", "靴子", "外套", "连衣裙", "帽子", "夹克", "牛仔裤",
+    "衬衫", "鞋", "裙子", "毛衣", "T恤", "裤子", "雨伞",
+    "袜子", "手套", "围巾", "腰带", "戒指", "手表", "自行车",
+    # technology & media
+    "相机", "电脑", "邮件", "网络", "手机", "收音机",
+    "电视", "视频", "博客", "网站", "杂志", "报纸", "节目",
+    "出租车",
+    # places (extended)
+    "机场", "酒吧", "咖啡馆", "电影院", "农场", "健身房",
+    "医院", "酒店", "岛", "图书馆", "博物馆", "游泳池",
+    "餐厅", "超市", "剧院", "工厂", "城堡", "教堂", "清真寺",
+    # people & professions
+    "演员", "成人", "艺术家", "顾客", "舞蹈演员", "司机",
+    "农民", "护士", "运动员", "警察", "科学家", "歌手",
+    "青少年", "游客", "访客", "服务员", "工人", "作家",
+    "婴儿", "医生", "厨师", "牙医", "工程师", "飞行员", "士兵",
+    # verbs (extended)
+    "建造", "改变", "选择", "爬", "花费", "决定", "死",
+    "画", "解释", "修理", "飞", "忘记", "猜", "恨",
+    "包括", "介绍", "保持", "笑", "失去", "移动",
+    "支付", "放松", "记得", "重复", "骑", "发送",
+    "游泳", "旅行", "醒来", "穿", "赢", "卖",
+    "跌倒", "打破", "做梦", "结婚", "更喜欢", "承诺",
+    "唱", "展示",
+    # adjectives (extended)
+    "害怕", "令人惊讶", "生气", "美丽", "无聊",
+    "危险", "黑暗", "美味", "干燥", "兴奋", "著名",
+    "极好", "胖", "友好", "有趣", "聪明", "现代",
+    "完美", "流行", "可能", "可爱", "安静",
+    "富有", "特别", "强壮", "温暖", "精彩", "正确",
+    "可怕", "安全", "懒", "有礼貌", "粗鲁", "奇怪",
+    "苗条", "幸运",
 })
 
 # ── Arabic (ar) ───────────────────────────────────────────────────────────────
@@ -533,6 +917,51 @@ _AR_A1: frozenset[str] = frozenset({
     "هنا", "هناك", "اليوم", "أمس", "غدا", "الآن", "قبل", "بعد",
     "دائما", "أبدا", "أيضا", "جدا", "كثيرا", "قليلا",
     "متأخرا", "مبكرا", "بعيدا", "قريبا",
+    # body parts
+    "رأس", "وجه", "عين", "أذن", "أنف", "فم", "سن", "رقبة",
+    "ذراع", "يد", "إصبع", "ساق", "قدم", "ظهر", "بطن", "شعر",
+    # animals (extended)
+    "حصان", "بقرة", "فيل", "ثعبان", "أرنب", "خنزير", "خروف",
+    "أسد", "فأر", "نمر", "دب", "قرد", "بطة", "ثعلب", "ذئب",
+    # food & drink (extended)
+    "موز", "زبدة", "كعكة", "جزر", "جبن", "شوكولاتة", "بيض",
+    "عصير", "بصل", "معكرونة", "بيتزا", "بطاطس", "أرز", "سلطة",
+    "ملح", "شطيرة", "شوربة", "سكر", "طماطم", "عسل", "فطر",
+    "فراولة", "عنب", "ليمون", "فاصوليا", "فلفل",
+    # clothes & accessories
+    "ملابس", "حذاء", "معطف", "فستان", "قبعة", "سترة", "جينز",
+    "قميص", "تنورة", "كنزة", "بنطلون", "مظلة", "جورب", "قفاز",
+    "وشاح", "حزام", "خاتم", "ساعة", "دراجة", "تاكسي",
+    # technology & media
+    "كاميرا", "حاسوب", "بريد", "إنترنت", "هاتف", "راديو",
+    "تلفزيون", "فيديو", "مدونة", "موقع", "مجلة", "جريدة",
+    "برنامج",
+    # places (extended)
+    "مطار", "بار", "مقهى", "سينما", "مزرعة", "نادٍ",
+    "مستشفى", "فندق", "جزيرة", "مكتبة", "متحف", "مسبح",
+    "مطعم", "سوبرماركت", "مسرح", "مصنع", "قلعة", "كنيسة",
+    "مسجد",
+    # people & professions
+    "ممثل", "ممثلة", "بالغ", "فنان", "زبون", "راقص", "سائق",
+    "مزارع", "ممرضة", "لاعب", "شرطي", "عالم", "مغنٍ",
+    "مراهق", "سائح", "زائر", "نادل", "عامل", "كاتب",
+    "رضيع", "طبيب", "طباخ", "مهندس", "طيار", "جندي",
+    # verbs (extended)
+    "بنى", "غير", "اختار", "تسلق", "كلف", "قرر", "مات",
+    "رسم", "شرح", "أصلح", "طار", "نسي", "خمن", "كره",
+    "تضمن", "قدم", "حافظ", "ضحك", "خسر", "تحرك", "دهن",
+    "دفع", "استرخى", "تذكر", "كرر", "ركب", "ركض", "أرسل",
+    "وقف", "سبح", "سافر", "استيقظ", "لبس", "فاز", "باع",
+    "سقط", "كسر", "حلم", "تزوج", "فضل", "وعد", "غنى",
+    "أظهر",
+    # adjectives (extended)
+    "خائف", "مذهل", "غاضب", "أشقر", "ممل", "خطير",
+    "مظلم", "لذيذ", "جاف", "متحمس", "مشهور", "رائع",
+    "سمين", "ودود", "مضحك", "عظيم", "متزوج", "حديث",
+    "مثالي", "شعبي", "ممكن", "هادئ", "حقيقي",
+    "غني", "خاص", "قوي", "دافئ", "رهيب",
+    "آمن", "ذكي", "كسول", "مؤدب", "وقح", "غريب",
+    "نحيف", "محظوظ",
 })
 
 # ── Hebrew (he) ───────────────────────────────────────────────────────────────
@@ -588,6 +1017,53 @@ _HE_A1: frozenset[str] = frozenset({
     "כאן", "שם", "היום", "אתמול", "מחר", "עכשיו", "לפני", "אחרי",
     "תמיד", "אף פעם", "גם", "מאוד", "הרבה", "קצת", "מאוחר",
     "מוקדם", "רחוק", "קרוב",
+    # body parts
+    "ראש", "פנים", "עין", "אוזן", "אף", "פה", "שן", "צוואר",
+    "זרוע", "יד", "אצבע", "רגל", "גב", "בטן", "שיער",
+    # animals (extended)
+    "סוס", "פרה", "פיל", "נחש", "ארנב", "חזיר", "כבש",
+    "אריה", "עכבר", "נמר", "דב", "קוף", "ברווז", "שועל", "זאב",
+    # food & drink (extended)
+    "בננה", "חמאה", "עוגה", "גזר", "גבינה", "שוקולד",
+    "ביצה", "גלידה", "מיץ", "בצל", "פסטה", "פיצה",
+    "אורז", "סלט", "מלח", "כריך", "מרק", "סוכר",
+    "עגבניה", "דבש", "פטרייה", "תות", "ענב", "לימון",
+    "שעועית", "פלפל",
+    # clothes & accessories
+    "בגדים", "מגף", "מעיל", "שמלה", "כובע", "ז'קט", "ג'ינס",
+    "חולצה", "נעל", "חצאית", "סוודר", "מכנסיים",
+    "מטריה", "גרב", "כפפה", "צעיף", "חגורה", "טבעת", "שעון",
+    "אופניים",
+    # technology & media
+    "מצלמה", "מחשב", "אימייל", "אינטרנט", "טלפון", "רדיו",
+    "טלוויזיה", "וידאו", "בלוג", "אתר", "מגזין", "עיתון",
+    "תוכנית", "מונית",
+    # places (extended)
+    "שדה", "בר", "קפה", "קולנוע", "חווה", "מועדון",
+    "מלון", "אי", "ספרייה", "מוזיאון", "בריכה",
+    "מסעדה", "סופרמרקט", "תיאטרון", "מפעל", "טירה",
+    "כנסייה", "מסגד",
+    # people & professions
+    "שחקן", "שחקנית", "מבוגר", "אמן", "לקוח", "רקדן",
+    "נהג", "חקלאי", "אחות", "שוטר", "מדען", "זמר",
+    "מתבגר", "תייר", "מבקר", "מלצר", "פועל", "סופר",
+    "תינוק", "רופא", "טבח", "מהנדס", "טייס", "חייל",
+    # verbs (extended)
+    "בנה", "שינה", "בחר", "טיפס", "עלה", "החליט", "מת",
+    "צייר", "הסביר", "תיקן", "טס", "שכח", "ניחש", "שנא",
+    "כלל", "הציג", "שמר", "צחק", "איבד", "זז", "צבע",
+    "שילם", "נרגע", "זכר", "חזר", "רכב", "רץ", "שלח",
+    "עמד", "שחה", "נסע", "התעורר", "לבש", "ניצח", "מכר",
+    "נפל", "שבר", "חלם", "התחתן", "העדיף", "הבטיח",
+    "שר", "הראה",
+    # adjectives (extended)
+    "מפחד", "מדהים", "כועס", "בלונד", "משעמם", "מסוכן",
+    "חשוך", "טעים", "יבש", "נרגש", "מפורסם", "נפלא",
+    "שמן", "ידידותי", "מצחיק", "נהדר", "קשה", "נשוי",
+    "מודרני", "מושלם", "פופולרי", "אפשרי", "חמוד", "שקט",
+    "אמיתי", "עשיר", "מיוחד", "חזק", "נכון", "חמים",
+    "נורא", "בטוח", "חכם", "עצלן", "מנומס", "גס",
+    "מוזר", "רזה", "מזל",
 })
 
 # ── Public API ────────────────────────────────────────────────────────────────
