@@ -55,6 +55,8 @@ class SentenceDifficultyItem(BaseModel):
     source_title: str | None = None
     # Surrounding sentences for coherent passage display
     passage: list[PassageSentence] = Field(default_factory=list)
+    # True when this sentence continues an in-progress document (next unread passage)
+    is_continuation: bool = False
 
 
 class RecommendTextResponse(BaseModel):
