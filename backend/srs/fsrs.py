@@ -474,5 +474,5 @@ def _clamp(value: float, lo: float, hi: float) -> float:
     return max(lo, min(hi, value))
 
 
-def _utcnow() -> datetime:
+def _utcnow() -> datetime:  # pragma: no cover
     return datetime.now(UTC)

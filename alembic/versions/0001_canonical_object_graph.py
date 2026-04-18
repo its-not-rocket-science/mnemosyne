@@ -24,7 +24,7 @@ from alembic import op
 _NAMESPACE = uuid.UUID("12e3d947-f3c4-4e2b-a9a1-0d3c2e1f5b7a")
 
 revision = "0001"
-down_revision = None
+down_revision = "0000"
 branch_labels = None
 depends_on = None
 

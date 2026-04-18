@@ -11,6 +11,9 @@ test_spanish_spacy.py and ensure es_core_news_sm is installed:
 """
 from __future__ import annotations
 
+import logging
+import types
+
 import pytest
 
 from backend.parsing.canonical import canonical_object_id
@@ -352,3 +355,62 @@ class TestStubLessonStore:
             canonical_form="sol", type="vocabulary", label="sol", lesson_data={}
         )
         assert plugin2.get_lesson(obj_id) is None
+
+
+# ── PluginRegistry edge cases ─────────────────────────────────────────────────
+
+
+class TestPluginRegistryEdgeCases:
+    """Cover the three remaining plugin_loader.py branches."""
+
+    def test_register_duplicate_logs_warning(self, caplog) -> None:
+        """Registering two plugins with the same language code logs a warning
+        and the newer registration wins."""
+        registry = PluginRegistry()
+        p1 = SpanishStubPlugin()
+        p2 = SpanishStubPlugin()
+        registry.register(p1)
+        with caplog.at_level(logging.WARNING, logger="backend.parsing.plugin_loader"):
+            registry.register(p2)
+        assert any("already registered" in r.message for r in caplog.records)
+        assert registry.get("es") is p2
+
+    def test_load_plugins_enabled_languages_filter(self, monkeypatch) -> None:
+        """When ENABLED_LANGUAGES restricts to a single code, only that plugin
+        is registered and the rest are silently skipped."""
+        import backend.parsing.plugin_loader as _loader
+
+        class _FakeSettings:
+            enabled_languages = ["es"]
+            plugin_package = "backend.plugins"
+
+        monkeypatch.setattr(_loader, "get_settings", lambda: _FakeSettings())
+        registry = _loader.load_plugins()
+        registered = set(registry.all().keys())
+        assert "es" in registered
+        assert "en" not in registered
+        assert "fr" not in registered
+
+    def test_load_plugins_records_failed_plugin(self, monkeypatch) -> None:
+        """A plugin whose create_plugin() raises is recorded in failed_plugins()
+        and does not prevent other plugins from loading."""
+        import backend.parsing.plugin_loader as _loader
+
+        def _bad_create():
+            raise RuntimeError("missing model")
+
+        broken_mod = types.SimpleNamespace(
+            __name__="backend.plugins.fake_broken",
+            create_plugin=_bad_create,
+        )
+
+        class _FakeSettings:
+            enabled_languages = None
+            plugin_package = "backend.plugins"
+
+        monkeypatch.setattr(_loader, "_iter_plugin_modules", lambda _: [broken_mod])
+        monkeypatch.setattr(_loader, "get_settings", lambda: _FakeSettings())
+        registry = _loader.load_plugins()
+        failed = registry.failed_plugins()
+        assert "backend.plugins.fake_broken" in failed
+        assert "RuntimeError" in failed["backend.plugins.fake_broken"]

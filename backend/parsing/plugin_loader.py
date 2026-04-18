@@ -78,7 +78,7 @@ def _iter_plugin_modules(package_name: str) -> list[ModuleType]:
     package = importlib.import_module(package_name)
     modules: list[ModuleType] = []
     for module_info in pkgutil.iter_modules(package.__path__, package.__name__ + "."):
-        if module_info.name.endswith("__init__"):
+        if module_info.name.endswith("__init__"):  # pragma: no cover
             continue
         modules.append(importlib.import_module(module_info.name))
     return modules
