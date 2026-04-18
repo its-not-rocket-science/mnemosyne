@@ -43,6 +43,19 @@ alembic upgrade head
 The app will run `alembic upgrade head` automatically on startup, but running
 it manually first gives you a chance to inspect the plan and take a backup.
 
+### Existing databases bootstrapped before alembic was introduced
+
+If the database was created with `Base.metadata.create_all()` (pre-alembic),
+it has no `alembic_version` table and all migrations appear un-applied.
+Stamp the current state as the head revision before running `upgrade head`:
+
+```bash
+alembic stamp head
+```
+
+This records the current revision without executing any migrations.
+Future schema changes will be applied normally from that point forward.
+
 ### Take a backup before migrating
 
 ```bash

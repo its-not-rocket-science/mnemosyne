@@ -36,13 +36,13 @@ class LanguagePlugin(Protocol):
         once.  The parse route calls this method exclusively; ``split_sentences``
         and ``analyze_sentence`` are kept for direct use in tests and tooling.
         """
-        ...
+        ...  # pragma: no cover
 
     def split_sentences(self, text: str) -> list[str]:
-        ...
+        ...  # pragma: no cover
 
     def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
-        ...
+        ...  # pragma: no cover
 
     def get_lesson(self, object_id: str) -> CandidateObject | None:
-        ...
+        ...  # pragma: no cover

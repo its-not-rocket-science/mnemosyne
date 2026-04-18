@@ -118,7 +118,7 @@ def calibrate(
             rmse_sum  += deviation ** 2
             rmse_bins += 1
 
-    if bias_denom == 0.0:
+    if bias_denom == 0.0:  # pragma: no cover  # unreachable: weight > 0 whenever count > 0
         return None
 
     bias   = bias_numer / bias_denom
