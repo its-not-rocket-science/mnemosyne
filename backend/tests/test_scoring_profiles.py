@@ -63,7 +63,7 @@ class TestLanguageScoringProfile:
         """Profiles are immutable dataclasses."""
         profile = LanguageScoringProfile()
         with pytest.raises((AttributeError, TypeError)):
-            profile.grammar_weight_scale = 0.5  # type: ignore[misc]
+            profile.grammar_weight_scale = 0.5  # type: ignore[misc]  # assignment to frozen dataclass field; we're testing it raises at runtime
 
     def test_profile_fields_accessible(self) -> None:
         p = LanguageScoringProfile(

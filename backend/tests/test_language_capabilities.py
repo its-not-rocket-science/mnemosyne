@@ -112,7 +112,7 @@ class TestBestLessonMode:
         ([],                            "dictionary"),  # empty → safest fallback
     ])
     def test_picks_richest_mode(self, modes: list[LessonMode], expected: LessonMode) -> None:
-        assert best_lesson_mode(modes) == expected  # type: ignore[arg-type]
+        assert best_lesson_mode(modes) == expected  # type: ignore[arg-type]  # parametrize passes plain str; Literal narrowing not inferred from pytest params
 
 
 # ── GET /languages ────────────────────────────────────────────────────────────
@@ -701,7 +701,7 @@ class TestPartialCapabilityPluginCompat:
                 return None
 
         registry = PluginRegistry()
-        registry.register(BarePlugin())  # type: ignore[arg-type]
+        registry.register(BarePlugin())  # type: ignore[arg-type]  # test stub satisfies LanguagePlugin structurally but mypy can't verify Protocol compliance without explicit annotation
 
         caps = registry.supported_languages()["xx"]
         assert isinstance(caps, LanguageCapabilities)
@@ -770,7 +770,7 @@ class TestPartialCapabilityPluginCompat:
                 return None
 
         registry = PluginRegistry()
-        registry.register(VocabOnlyPlugin())  # type: ignore[arg-type]
+        registry.register(VocabOnlyPlugin())  # type: ignore[arg-type]  # same: test stub satisfies Protocol structurally but mypy can't verify without explicit annotation
         mode = _mode_for_language(registry, "yy")
         assert mode == "vocabulary"
 
@@ -857,7 +857,7 @@ class TestNewLearnableTypes:
         with pytest.raises(ValidationError):
             CandidateObject(
                 canonical_form="foo",
-                type="unknown_type",  # type: ignore[arg-type]
+                type="unknown_type",  # type: ignore[arg-type]  # intentionally invalid value to verify Pydantic raises ValidationError
                 label="foo",
             )
 
@@ -866,7 +866,7 @@ class TestNewLearnableTypes:
         for t in ("vocabulary", "conjugation", "agreement", "idiom", "grammar", "nuance"):
             obj = CandidateObject(
                 canonical_form="test",
-                type=t,  # type: ignore[arg-type]
+                type=t,  # type: ignore[arg-type]  # loop var t is str; all values are valid LearnableType members, Pydantic validates
                 label="test",
             )
             assert obj.type == t

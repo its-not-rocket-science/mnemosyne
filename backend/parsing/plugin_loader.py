@@ -54,7 +54,7 @@ class PluginRegistry:
                 caps = LanguageCapabilities(
                     code=code,
                     display_name=p.display_name,
-                    direction=p.direction,  # type: ignore[arg-type]
+                    direction=p.direction,  # type: ignore[arg-type]  # pre-capabilities plugins expose direction as plain str; value is always "ltr" or "rtl" in practice
                     script_family="other",
                     tokenization_mode="whitespace",
                     morphology_depth="none",
