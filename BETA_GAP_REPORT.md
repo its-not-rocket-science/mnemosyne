@@ -97,15 +97,23 @@ These are the only items without a completed implementation:
 issues were fixed. A human keyboard-only walkthrough and NVDA/VoiceOver smoke test
 have not been run. See `WCAG_AUDIT.md` for the testing checklist.
 
-**Full morphological plugins for additional languages** — Italian, Korean, Hindi,
+**Full morphological plugins for additional languages** — Korean, Hindi,
 Turkish, Finnish are natural next targets given available spaCy models. Each
 requires NLP research, canonical-form convention decisions (per `PLUGIN_AUTHOR_GUIDE.md`),
 plugin implementation, and tests. This is the main remaining work toward the V6 target.
-**Portuguese (`pt`) is done**: `pt_core_news_sm`; vocabulary, conjugation, agreement,
+
+**Portuguese (`pt`) — done**: `pt_core_news_sm`; vocabulary, conjugation, agreement,
 grammar patterns (ser/estar copula, ter_perfect, ir_near_future, estar_progressive),
-idioms (~30 fixed expressions), nuance (imperfect, subjunctive, conditional, reflexive,
-personal infinitive). 62 token-injection tests in `test_portuguese_spacy.py`.
-Install model: `python -m spacy download pt_core_news_sm`.
+idioms (~30 entries), nuance (imperfect, subjunctive, conditional, reflexive,
+personal infinitive). 62 tests in `test_portuguese_spacy.py`.
+Install: `python -m spacy download pt_core_news_sm`.
+
+**Italian (`it`) — done**: `it_core_news_sm`; vocabulary, conjugation, agreement,
+grammar patterns (essere_copula, avere_perfect, essere_perfect, stare_progressive,
+andare_near_future), idioms (~30 entries), nuance (imperfect, subjunctive,
+conditional, reflexive). avere/essere auxiliary distinction documented.
+60 tests in `test_italian_spacy.py`.
+Install: `python -m spacy download it_core_news_sm`.
 
 **Classical-text lexicon depth** — Latin and Koine Greek are in dictionary mode with
 small curated lexicons (~100–200 entries). Perseus Digital Library integration or a
