@@ -31,7 +31,7 @@ Status markers: **implemented** · **partial** · **planned** · **deferred**
 | `GET /recommend` + `/recommend-text` | implemented | i+1 window; difficulty_label (easy/ideal/hard); progression |
 | `GET /languages` | implemented | Lists active plugins with direction metadata |
 | `GET /health` + `GET /ready` | implemented | Liveness and readiness probes |
-| Alembic migrations | partial | Three migration files exist; `create_all` still runs on fresh startup |
+| Alembic migrations | implemented | `0000_baseline` + migrations 0001–0007; `alembic upgrade head` verified on fresh SQLite DB; production startup uses subprocess alembic only |
 | Accessibility baseline | partial | Focus trap, ARIA live regions, reduced-motion, 44 px targets; WCAG AA not audited end-to-end |
 | RTL layout support | implemented | `dir`/`lang` applied to all text elements in modal; `<bdi>` isolation in drill feedback; CSS uses logical properties throughout |
 | Multi-user architecture | implemented | `X-User-Id` header; `get_current_user` dependency; per-user isolation across all routes; `UserLanguagePreferenceRow` table; `/users/me/*` preference CRUD |
@@ -104,8 +104,8 @@ These follow from the starting vision but require category 1 and 2 to be solid f
 
 ## Quality targets (ongoing)
 
-- [ ] `alembic upgrade head` is the only DB initialisation path (no `create_all` in production)
+- [x] `alembic upgrade head` is the only DB initialisation path (no `create_all` in production)
 - [ ] WCAG 2.1 AA on the core parse → review flow
-- [ ] 90% branch coverage on `backend/srs/` and `backend/parsing/`
+- [x] 90% branch coverage on `backend/srs/` and `backend/parsing/`
 - [ ] Parse time < 2 s for 500 words on the CI runner
 - [ ] Zero `# type: ignore` comments without an explanatory note

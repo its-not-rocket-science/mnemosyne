@@ -27,7 +27,10 @@
       "Bash(docker compose *)",
       "Bash(where docker *)",
       "Bash(docker --version)",
-      "Bash(poetry *)"
+      "Bash(poetry *)",
+      "Bash(DATABASE_URL=\"sqlite+aiosqlite:///tmp_test_migration.db\" alembic upgrade *)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(cmd *)"
     ]
   }
 }
