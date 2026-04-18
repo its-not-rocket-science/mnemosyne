@@ -1,7 +1,11 @@
 # WCAG 2.1 AA Audit — Mnemosyne
 
-**Audit date:** 2026-04-16  
+**Audit date:** 2026-04-18 (updated from 2026-04-16)
 **Scope:** Parse → lesson → review flow; auth panel; RTL and CJK content.
+**Method:** Static code review of all frontend HTML, CSS, and JS (index.html,
+global.css, components.css, mnemosyne-modal.js, mnemosyne-pill.js, main.js,
+auth.js). No automated browser tool was run; a manual keyboard/AT run is still
+recommended before public beta (see the manual testing checklist below).
 
 ---
 
@@ -12,8 +16,11 @@
 | 1 | 4.1.2 Name, Role, Value | Auth tabs lacked roving tabindex — both buttons were `tabindex="0"`, violating the ARIA APG tab pattern. | Set `tabindex="-1"` on inactive tab in HTML; `switchTab()` now updates `.tabIndex` on every switch. |
 | 2 | 2.4.3 Focus Order | Login/logout did not move keyboard focus. After login, focus stayed on the disabled submit button; after logout it stayed on the Sign out button in the now-hidden header. | `showApp({ moveFocus: true })` focuses `#language` on login/register success; `showAuthPanel({ moveFocus: true })` focuses the email input on logout. |
 | 3 | 1.3.1 Info and Relationships / 4.1.2 | Fill-blank drill input had no programmatic label — no `<label>`, `aria-label`, or `aria-labelledby`. | Prompt element given `id="drill-prompt-{index}"`; input given `aria-labelledby` pointing to that id. |
-| 4 | 4.1.2 Name, Role, Value | "Speak" button text was ambiguous without surrounding visual context for AT users (two Speak buttons on screen in the lesson modal). | Example-speak button: `aria-label="Listen to example"`. Shadowing-drill speak button: `aria-label="Speak drill text aloud"`. |
+| 4 | 4.1.2 Name, Role, Value | "Speak" button text was ambiguous without surrounding visual context for AT users (two Speak buttons visible in the lesson modal). | Example-speak button: `aria-label="Speak example aloud"`. Shadowing-drill speak button: `aria-label="Speak drill text aloud"`. (Note: an earlier revision used `aria-label="Listen to example"` on the example-speak button — this violated SC 2.5.3; corrected in fix #8 below.) |
 | 5 | 1.3.1 / 4.1.2 | `#auth-panel` was not `hidden` in HTML — AT could reach it while `#main-content` was visible, and signed-in users saw a flash. | Added `hidden` to `#auth-panel` in HTML; `initAuth()` removes it from the correct panel. |
+| 6 | 1.4.11 Non-text Contrast | Input, textarea, and select borders used `color-mix(in srgb, CanvasText 20%, Canvas)` ≈ #CCC on white ≈ 1.6:1 against Canvas. Button borders in the modal used `color-mix(in srgb, CanvasText 25%, transparent)` ≈ 1.75:1. Both fail the 3:1 minimum required for UI component boundaries. | Introduced `--border-input: color-mix(in srgb, CanvasText 45%, Canvas)` in `:root` (≈ 3.1:1 in light mode; adequate in dark mode). Applied to `input`/`textarea`/`select` (global.css), `.ghost-button`/`.rating-button`/`.script-toggle__btn` (components.css), and all modal shadow-DOM buttons (mnemosyne-modal.js). Pill button borders raised from 35% to 60% of the type reference color — verify in browser per type-color since oklch values cannot be analytically reduced to WCAG luminance without rendering. |
+| 7 | 1.3.1 Info and Relationships | `list-style: none` on `.sentence-card__pills` removes list semantics in Safari VoiceOver without a compensating `role="list"`, depriving AT users of the item count and position. | Added `list.setAttribute('role', 'list')` when building each pill `<ul>` in `renderResults()` (main.js). |
+| 8 | 2.5.3 Label in Name | Example-speak button `aria-label="Listen to example"` did not contain the visible label text "Speak", violating the requirement that the accessible name contains the visible text. Voice-control users who say "click Speak" would fail. | Changed to `aria-label="Speak example aloud"` — "Speak" is now the first word of the accessible name. |
 
 ---
 
@@ -21,77 +28,86 @@
 
 | Criterion | Check | Result |
 |-----------|-------|--------|
-| 1.1.1 Non-text Content | Pill emojis `aria-hidden="true"`; type-badge `aria-hidden="true"`; buttons have text names. | ✓ |
-| 1.3.1 | `<dl>` fields use `<dt>`/`<dd>` pairs; heading hierarchy correct. | ✓ |
-| 1.4.1 Use of Color | Drill feedback uses ✓ / ✗ symbols + text, not color alone. Type is signalled by icon + badge text + color tint. | ✓ |
-| 1.4.4 Resize Text | `clamp()` sizing throughout; no `px` font sizes that would break at 200% zoom. | ✓ |
-| 1.4.10 Reflow | Flex/grid layout reflows to single column; no horizontal scroll at 320px. | Verify manually (see below). |
+| 1.1.1 Non-text Content | Pill emojis `aria-hidden="true"`; type-badge `aria-hidden="true"`; decorative eyebrow `aria-hidden="true"`; offline dot `aria-hidden="true"`; all buttons have text names. | ✓ |
+| 1.3.1 | `<dl>` fields use `<dt>`/`<dd>` pairs; heading hierarchy correct (h1 → h2 per section/modal); all form inputs have `<label for="…">`. | ✓ |
+| 1.3.2 Meaningful Sequence | DOM order matches reading order throughout; no CSS-only reordering that alters meaning. | ✓ |
+| 1.4.1 Use of Color | Drill feedback uses ✓ / ✗ symbols + text, not color alone. Type signalled by icon + badge text + color tint. Rating buttons use text labels (Again/Hard/Good/Easy). | ✓ |
+| 1.4.3 Contrast (text) | `--muted` (60% CanvasText ≈ 5.7:1); `--accent #3557ff` on white (≈ 4.86:1); `--error-color oklch(0.48 0.20 29)` annotated "dark enough for 4.5:1 on light Canvas"; drill feedback green `oklch(0.45 0.15 145)` is dark — verify manually (see below). | ✓ (manual verification recommended for oklch values) |
+| 1.4.4 Resize Text | `clamp()` sizing throughout; no fixed `px` font sizes. | ✓ |
+| 1.4.10 Reflow | Flex/grid layout reflows to single column at 320px; no horizontal scroll. Three specific 320px fixes applied in prior audit. | ✓ (verify manually) |
 | 1.4.13 Content on Hover | No hover-only content. | ✓ |
-| 2.1.1 Keyboard | All interactive elements reachable via Tab; modal focus trap via `inert` + Tab intercept; Escape closes modal; Arrow keys navigate auth tabs. | ✓ |
-| 2.1.2 No Keyboard Trap | Modal releases focus on close (`previouslyFocused.focus()`). Auth panel doesn't trap. | ✓ |
-| 2.4.1 Skip Link | Present; moves focus to `#main`. | ✓ (verify manually — skip link target hidden until auth) |
+| 2.1.1 Keyboard | All interactive elements reachable via Tab; modal focus trap via `inert` + Tab intercept; Escape closes modal; Arrow keys navigate auth tabs. Drill Check button and rating buttons all reachable. | ✓ |
+| 2.1.2 No Keyboard Trap | Modal releases focus on close (`previouslyFocused.focus()`). Auth panel does not trap. | ✓ |
+| 2.4.1 Skip Link | Present; `href="#main"` with `tabindex="-1"` on `<main>` for programmatic focus. | ✓ (verify manually — skip link target is inside `#main-content` which is hidden until auth) |
 | 2.4.2 Page Titled | `<title>Mnemosyne</title>` present. | ✓ |
-| 2.4.4 Link Purpose | Buttons have clear text or `aria-label`. | ✓ |
-| 2.4.7 Focus Visible | All elements have `:focus-visible` with 3px solid accent outline. | ✓ |
-| 2.5.3 Label in Name | Button visible text matches accessible name (or accessible name contains the visible text). | ✓ |
-| 2.5.8 Target Size (2.5.8 — WCAG 2.2) | `min-block-size: 2.75rem` (≈44px) on all interactive elements. | ✓ |
+| 2.4.4 Link Purpose | Buttons have clear text or `aria-label`; privacy link text "Privacy policy" is descriptive; no generic "click here". | ✓ |
+| 2.4.7 Focus Visible | All interactive elements have `:focus-visible` with `3px solid var(--accent)` outline; modal buttons use `3px solid var(--accent, #3557ff)`. Shadow-DOM `.dialog:focus { outline: none }` applies only to programmatic focus (modal open), not Tab navigation. | ✓ |
+| 2.5.3 Label in Name | All button visible text is contained in or equals the accessible name. Fixed in issue #8 above. | ✓ (see fix #8) |
+| 2.5.8 Target Size (WCAG 2.2) | `min-block-size: 2.75rem` (≈ 44 CSS px) on all interactive elements including auth tabs, pill buttons, and modal buttons. | ✓ |
 | 3.1.1 Language of Page | `<html lang="en">`. | ✓ |
-| 3.1.2 Language of Parts | `lang` set on sentence cards, pill buttons, modal title, example text, drill text, fill-blank input. | ✓ |
+| 3.1.2 Language of Parts | `lang` set on sentence cards, pill buttons, modal title, example text, drill text/prompt, fill-blank input via `#applyTargetLang`. | ✓ |
 | 3.2.1 On Focus | No context change on focus. | ✓ |
-| 3.3.1 Error Identification | Auth errors surfaced via `role="status"` live region. | ✓ |
-| 3.3.2 Labels or Instructions | All form inputs have `<label>` with matching `for`; password strength hint linked via `aria-describedby`. | ✓ |
-| 4.1.1 Parsing | HTML uses semantic elements; no duplicate IDs (drill IDs are index-scoped inside shadow DOM). | ✓ |
-| 4.1.3 Status Messages | Parse count, review saved, lesson open, auth messages all use `role="status"` or `role="alert"` live regions. | ✓ |
+| 3.3.1 Error Identification | Auth errors and parse errors surfaced via `role="status"` / `role="alert"` live regions. `aria-invalid="true"` set on textarea when empty on submit. | ✓ |
+| 3.3.2 Labels or Instructions | All form inputs have `<label>` with matching `for`; password strength hint linked via `aria-describedby="pw-hint"`. | ✓ |
+| 4.1.1 Parsing | Semantic elements throughout; no duplicate IDs (drill IDs are index-scoped inside shadow DOM per lesson). | ✓ |
+| 4.1.2 Name, Role, Value | Tablist/tab/tabpanel ARIA pattern correct; progressbar has `aria-valuenow/min/max`; `aria-busy` on select and submit button during async operations; `aria-required="true"` on required inputs; `aria-modal="true"` on dialog. | ✓ |
+| 4.1.3 Status Messages | Parse count, review saved, lesson open, auth messages, file load — all use `role="status"` or `role="alert"` live regions. Clear-then-set pattern (via `queueMicrotask`) re-announces identical messages. | ✓ |
 
 ---
 
 ## Manual testing required
 
-These items cannot be verified statically. They should be tested before the public beta tag.
+These items cannot be verified statically. Run before the public beta tag.
 
 ### Keyboard-only walkthrough
 
-1. **Skip link** — Tab to skip link, activate, verify focus lands on `#language` select (inside `#main`). Note: skip link target is inside `#main-content` which is hidden until auth; after sign-in verify skip link works.
+1. **Skip link** — Tab to skip link, activate, verify focus lands on `#language` select (inside `#main`). Test after sign-in since the target is hidden pre-auth.
 2. **Auth panel** — Tab through Sign in form; Arrow-key navigate to Create account tab; confirm tabpanel switches and focus moves. Tab through register form.
 3. **Language select** — Tab to `#language`; confirm options navigable with arrow keys; confirm `aria-busy` removed after load.
 4. **Parse form** — Tab through all fields; activate "Load .txt file" label; activate "Fetch" button; submit parse form.
 5. **Sentence cards and pills** — Tab through pill buttons; activate a pill with Enter/Space; confirm modal opens.
-6. **Modal focus trap** — Confirm focus is inside modal and Tab does not leave; Shift+Tab wraps correctly; Escape closes and returns focus to activating pill.
-7. **Drill keyboard** — Multiple-choice: Tab to option, Space/Enter to answer. Fill-blank: Tab to input, type, Enter to submit. True/false: same as multiple-choice.
-8. **Rating buttons** — Tab to Again/Hard/Good/Easy; activate with Space/Enter.
+6. **Modal focus trap** — Confirm focus is inside modal and Tab does not leave; Shift+Tab wraps to last focusable; Escape closes and returns focus to activating pill.
+7. **Drill keyboard** — Multiple-choice: Tab to option, Space/Enter to answer. Fill-blank: Tab to input, type, Enter to submit. Shadowing: Tab to Speak button, Enter activates. True/false: same as multiple-choice.
+8. **Rating buttons** — Tab to Again/Hard/Good/Easy; activate with Space/Enter; confirm "Saved" status announced.
 9. **Logout** — Tab to Sign out button; activate; confirm auth panel shows and focus moves to email input.
 
 ### Screen-reader testing (NVDA + Chrome, VoiceOver + Safari)
 
 1. **Auth panel tabs** — Announce as "Sign in, tab, 1 of 2" (NVDA) or "Sign in, selected, tab" (VoiceOver); arrow key announces and activates the other tab.
-2. **Auth errors** — Mistyped password: live region announces the error message.
-3. **Language select `aria-busy`** — NVDA/VoiceOver should announce "Loading languages…" while busy, then announce the selected language after options load.
+2. **Auth errors** — Mistyped password: live region announces the error message without moving focus.
+3. **Language select `aria-busy`** — Should announce "Loading languages…" while busy, then the selected language after options load.
 4. **Parse status** — "3 sentences parsed. Use Tab to navigate the items." announced after successful parse.
-5. **Pill accessible names** — "Vocabulary lesson: gato" (not the emoji or badge alone).
-6. **Modal title** — Dialog is announced with its title when it opens.
-7. **Drill feedback** — "✓ Correct!" / "✗ The answer is …" announced via live region without requiring user action.
-8. **Review saved** — "Saved. Next review in 3 day(s)." announced after rating.
-9. **RTL content** — Arabic/Hebrew example text announced with the correct language voice; fill-blank input IME switches to RTL.
-10. **Logout** — "Sign out button" announced; after click, focus and announcement move to auth panel.
+5. **Pill list** — Announced as a list with item count (e.g. "list, 5 items"); each pill announced as "Vocabulary lesson: gato, button".
+6. **Modal title** — Dialog announced with its title when it opens.
+7. **Drill feedback** — "✓ Correct!" / "✗ The answer is …" announced via polite live region.
+8. **Review saved** — "Saved. Next review in 3 day(s)." announced after rating without focus move.
+9. **RTL content** — Arabic/Hebrew example text announced with correct language voice; fill-blank input IME switches to RTL.
+10. **Logout** — Focus and announcement move to auth panel email input.
 
-### Colour contrast (manual or with browser DevTools)
+### Colour contrast (browser DevTools or contrast analyser)
 
-- Drill feedback green (`oklch(0.45 0.15 145)` on light Canvas): verify ≥ 4.5:1.
-- Drill feedback green dark mode (`oklch(0.70 0.15 145)` on dark Canvas): verify ≥ 4.5:1.
-- `var(--muted)` text (60% CanvasText): on system light/dark backgrounds verify ≥ 4.5:1 for small text, ≥ 3:1 for large.
-- Auth tab active underline (accent colour on surface): verify ≥ 3:1 non-text contrast.
+Verify these oklch/color-mix values in the rendered browser (cannot be analytically confirmed from source):
+
+- **Drill feedback correct (light):** `oklch(0.45 0.15 145)` on Canvas white — need ≥ 4.5:1.
+- **Drill feedback correct (dark):** `oklch(0.70 0.15 145)` on dark Canvas — need ≥ 4.5:1.
+- **Pill button borders:** `color-mix(in oklch, <type-ref> 60%, Canvas)` — verify per type-color (green, blue, amber, purple, yellow, orange, teal, red) in both light and dark mode — need ≥ 3:1 against Canvas.
+- **`--muted` text (60% CanvasText):** On system light/dark backgrounds — need ≥ 4.5:1 for small text, ≥ 3:1 for large text.
+- **Auth tab active underline (`--accent` on `--surface`):** Need ≥ 3:1 non-text contrast.
+- **`--border-input` (45% CanvasText):** Should be ≥ 3:1 against Canvas in default OS light/dark themes.
 
 ### 1.4.10 Reflow at 320px
 
-- Open DevTools, set viewport to 320px wide.
-- Auth panel form fields should stack vertically without overflow.
-- Pill list should wrap; no horizontal scroll introduced.
-- Modal should not exceed viewport width.
+- DevTools viewport at 320px wide.
+- Auth panel form fields stack vertically; no horizontal overflow.
+- Pill list wraps; sentence cards do not scroll horizontally.
+- Modal does not exceed viewport width; `.fields` grid switches to single-column layout.
 
 ---
 
-## Known limitations (deferred to future work)
+## Known limitations (deferred)
 
-- **Screen-reader testing on macOS/iOS** — VoiceOver behaviour with shadow DOM (mnemosyne-modal, mnemosyne-pill) differs between browsers and OS versions. Particularly the `inert` propagation on older Safari. Test with Safari 17+.
-- **Windows High Contrast Mode** — `color-mix(in oklch, …)` may produce unexpected results under forced-color media. Add a `@media (forced-colors: active)` pass to components.css and modal CSS.
-- **Zoom to 400%** — WCAG 2.1 AA only requires 200% reflow; 400% is AAA but worth testing on the modal since `max-block-size: 90dvh` combined with large font sizes may clip content.
+- **Automated tool run not performed.** A Lighthouse or axe-core sweep against the running app (not static source) may surface additional issues, particularly for dynamic content (options populated from `/languages`, cards rendered by `renderResults()`).
+- **Windows High Contrast Mode** — `color-mix(in oklch, …)` may produce unexpected results under forced-color media. A `@media (forced-colors: active)` pass is recommended for components.css and the modal shadow DOM.
+- **Zoom to 400%** — WCAG 2.1 AA requires 200% reflow; 400% (AAA) is worth testing since `max-block-size: 90dvh` on the modal combined with large font sizes may clip content on small viewports.
+- **`inert` and older Safari** — VoiceOver + Safari 16 and earlier may not fully honour `inert` on shadow-DOM siblings. Test with Safari 17+; consider `aria-hidden` as a fallback for older versions if real-world usage warrants it.
+- **Language not updated on page title** — The `<title>` remains "Mnemosyne" regardless of selected language. For multi-page apps this matters more; for this SPA it is an informational note.
