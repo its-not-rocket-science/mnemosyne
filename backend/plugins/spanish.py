@@ -492,8 +492,10 @@ class SpanishPlugin:
 
             construction    = _detect_construction(tok)
             is_reflexive    = _has_reflexive_clitic(tok, tokens)
-            confidence      = self._conj_confidence(tok, feats)
-            confidence_note = _conj_confidence_note(feats, tok.is_oov)
+            # Suppress OOV signal for known A1 lemmas — sm model has no vectors
+            _oov            = tok.is_oov and lemma not in _A1
+            confidence      = self._conj_confidence(tok, feats, _oov)
+            confidence_note = _conj_confidence_note(feats, _oov)
 
             lesson: dict[str, Any] = {
                 "lemma":          lemma,
@@ -555,13 +557,13 @@ class SpanishPlugin:
             feats["verb_form"] = verb_form
         return feats
 
-    def _conj_confidence(self, tok: Any, feats: dict[str, str]) -> float:
+    def _conj_confidence(self, tok: Any, feats: dict[str, str], is_oov: bool | None = None) -> float:
         known = sum(
             1 for k in ("tense", "mood", "person")
             if feats.get(k) not in (None, "unknown")
         )
         base = 0.55 + known * 0.10
-        if tok.is_oov:
+        if (tok.is_oov if is_oov is None else is_oov):
             base -= 0.10
         return round(min(base, 0.85), 2)
 
