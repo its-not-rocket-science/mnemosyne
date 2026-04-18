@@ -34,6 +34,7 @@ from backend.models import (
     SentenceObjectRow,
     SourceChunkRow,
     SourceDocumentRow,
+    SourceProgressionRow,
     UserKnowledgeRow,
 )
 from backend.parsing.canonical import canonical_object_id
@@ -153,6 +154,7 @@ async def ingest_text(
             candidate_results=candidate_results,
             sentences=sentences,
             uuid_to_candidate=uuid_to_candidate,
+            user_id=current_user,
         )
     except Exception as exc:
         persist_exc = exc
@@ -196,6 +198,7 @@ async def _persist_ingest(
     candidate_results: list[CandidateSentenceResult],
     sentences: list[SentenceResult],
     uuid_to_candidate: dict[str, tuple[str, CandidateObject]],
+    user_id: str = DEFAULT_USER_ID,
 ) -> None:
     """Write all rows for one ingest call.
 
@@ -208,6 +211,7 @@ async def _persist_ingest(
       6. SentenceObjects (join table)
       7. ObjectRelations (upsert)
       8. SourceChunk (links SourceDocument → ParsedText)
+      9. SourceProgressionRow (reading continuity — one row per (user, document))
     """
     now = datetime.now(UTC)
 
@@ -282,7 +286,7 @@ async def _persist_ingest(
     if all_ids:
         uk_result = await db.execute(
             select(UserKnowledgeRow).where(
-                UserKnowledgeRow.user_id == DEFAULT_USER_ID,
+                UserKnowledgeRow.user_id == user_id,
                 UserKnowledgeRow.object_id.in_(all_ids),
             )
         )
@@ -294,7 +298,7 @@ async def _persist_ingest(
                 existing_uk[obj_id].last_seen = now
             else:
                 db.add(UserKnowledgeRow(
-                    user_id=DEFAULT_USER_ID,
+                    user_id=user_id,
                     object_id=obj_id,
                     language=payload.language,
                     fsrs_state=None,
@@ -350,6 +354,18 @@ async def _persist_ingest(
         chunk_index=0,
         char_start=0,
         char_end=len(normalized_text),
+    ))
+
+    # 9. SourceProgressionRow — reading continuity tracking.
+    # One row per (user, document); next_position starts at 0 (unread).
+    await db.flush()
+    db.add(SourceProgressionRow(
+        user_id=user_id,
+        source_document_id=source_document_id,
+        next_position=0,
+        sentences_total=len(sentences),
+        avg_comprehension=0.0,
+        completion_fraction=0.0,
     ))
 
     await db.commit()

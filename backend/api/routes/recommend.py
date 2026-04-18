@@ -63,6 +63,7 @@ from backend.models import (
     SentenceObjectRow,
     SourceChunkRow,
     SourceDocumentRow,
+    SourceProgressionRow,
     UserKnowledgeRow,
 )
 from backend.schemas.curriculum import (
@@ -124,6 +125,28 @@ async def recommend_text(
 
     # Load the language-specific scoring calibration.
     profile = get_profile(language)
+
+    # ── 1b. Load in-progress documents for continuation preference ───────────
+    # in_progress maps source_document_id → next_position for documents that
+    # have been started (next_position > 0) but not yet completed.
+    in_progress: dict[str, int] = {}
+    try:
+        prog_result = await db.execute(
+            select(
+                SourceProgressionRow.source_document_id,
+                SourceProgressionRow.next_position,
+                SourceProgressionRow.sentences_total,
+            ).where(
+                SourceProgressionRow.user_id == current_user,
+                SourceProgressionRow.next_position > 0,
+            )
+        )
+        for prog_row in prog_result.all():
+            # Only track documents that are not yet complete.
+            if prog_row.next_position < prog_row.sentences_total:
+                in_progress[prog_row.source_document_id] = prog_row.next_position
+    except Exception:
+        logger.debug("SourceProgressionRow query failed — skipping continuation preference")
 
     # ── 2. Fetch sentences with objects and source-document metadata ──────────
     # LEFT JOIN to SourceChunkRow and SourceDocumentRow so that sentences
@@ -221,7 +244,18 @@ async def recommend_text(
             window[0], window[1], min(limit, len(in_window)), language, total_mastered,
         )
 
-    in_window.sort(key=lambda t: abs(t[2].difficulty - center))
+    # Sort: continuation sentences (from in-progress documents, at or after
+    # next_position) come first, then by closeness to the window centre.
+    def _sort_key(t: tuple[str, str, DifficultyScore]) -> tuple[int, float]:
+        sid, _, ds = t
+        src_doc = sentence_source_doc_ids.get(sid)
+        if src_doc and src_doc in in_progress:
+            next_pos = in_progress[src_doc]
+            if sentence_positions.get(sid, 0) >= next_pos:
+                return (0, abs(ds.difficulty - center))  # continuation first
+        return (1, abs(ds.difficulty - center))
+
+    in_window.sort(key=_sort_key)
     top = in_window[:limit]
 
     # ── 6. Passage context — one extra query for adjacent sentences ───────────
@@ -275,6 +309,12 @@ async def recommend_text(
                             is_focus=(p == focus_pos),
                         ))
 
+        is_continuation = bool(
+            source_doc
+            and source_doc in in_progress
+            and focus_pos >= in_progress[source_doc]
+        )
+
         result_sentences.append(SentenceDifficultyItem(
             sentence_id=sent_id,
             text=text,
@@ -290,6 +330,7 @@ async def recommend_text(
             source_document_id=source_doc,
             source_title=source_ttl,
             passage=passage,
+            is_continuation=is_continuation,
         ))
 
     logger.info(
