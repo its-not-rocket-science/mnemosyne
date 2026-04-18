@@ -18,6 +18,17 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
+    <!--
+      Backend startup warning banner.
+      Hidden until JS detects a degraded /ready response or a startup error header.
+      role="alert" announces the message to screen readers immediately when shown.
+      Placed before the header so it is the first visible content after the skip link.
+    -->
+    <div id="startup-banner" class="startup-banner" role="alert" hidden>
+      <span class="startup-banner__icon" aria-hidden="true">⚠</span>
+      <span id="startup-banner-msg"></span>
+    </div>
+
     <header class="site-header">
       <div class="wrap site-header__inner">
         <div>

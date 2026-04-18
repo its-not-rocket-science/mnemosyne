@@ -291,8 +291,10 @@ if (fetchUrlBtn) {
         body:    JSON.stringify({ source_url: url }),
       })
 
+      handleStartupWarningHeader(response)
       if (!response.ok) {
         const body = await response.json().catch(() => null)
+        if (response.status === 503) checkBackendHealth()
         throw new Error(body?.detail ?? `Fetch failed (${response.status})`)
       }
 
@@ -468,8 +470,10 @@ form.addEventListener('submit', async (event) => {
         headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
         body:    JSON.stringify(payload),
       })
+      handleStartupWarningHeader(response)
       if (!response.ok) {
         const body = await response.json().catch(() => null)
+        if (response.status === 503) checkBackendHealth()
         throw new Error(body?.detail ?? `Parse failed (${response.status})`)
       }
       data = await response.json()
@@ -817,6 +821,16 @@ function speakText(text, langTag) {
 }
 
 
+// ── Startup-warning header helper ────────────────────────────────────────────
+// If any API response carries X-Startup-Warning, surface the banner immediately
+// without waiting for the next /ready poll.
+
+function handleStartupWarningHeader(response) {
+  const warning = response.headers.get('X-Startup-Warning')
+  if (warning) showBackendBanner(warning)
+}
+
+
 // ── HTML escaping ─────────────────────────────────────────────────────────────
 
 function escapeHtml(value) {
@@ -827,6 +841,57 @@ function escapeHtml(value) {
     .replaceAll('"',  '&quot;')
     .replaceAll("'", '&#39;')
 }
+
+
+// ── Backend health check ──────────────────────────────────────────────────────
+// Polls GET /ready on load and after any 503 response to surface startup errors
+// (failed migrations, unreachable DB) as a persistent banner above the header.
+// The banner is dismissed automatically once /ready returns status "ready".
+
+const startupBanner    = document.querySelector('#startup-banner')
+const startupBannerMsg = document.querySelector('#startup-banner-msg')
+
+function showBackendBanner(message) {
+  if (!startupBanner || !startupBannerMsg) return
+  startupBannerMsg.textContent = message
+  startupBanner.hidden = false
+}
+
+function hideBackendBanner() {
+  if (!startupBanner) return
+  startupBanner.hidden = true
+}
+
+async function checkBackendHealth() {
+  try {
+    const response = await fetch(`${API_BASE}/ready`)
+    const data = await response.json().catch(() => null)
+
+    if (!response.ok || data?.status !== 'ready') {
+      // Prefer the first startup_error message; fall back to a generic message.
+      const startupErrors = Array.isArray(data?.startup) ? data.startup : []
+      const msg = startupErrors[0]
+        ?? data?.detail
+        ?? `Backend is degraded (${response.status}). Some features may not work. Reload after the issue is resolved.`
+      showBackendBanner(msg)
+    } else {
+      hideBackendBanner()
+    }
+  } catch {
+    // Network failure — likely the server is still starting up.
+    showBackendBanner(
+      'Cannot reach the backend server. Ensure it is running and reload the page.'
+    )
+  }
+}
+
+// Check immediately on load, and also check the X-Startup-Warning header on
+// any fetch response — if present it means the backend flagged a startup error
+// that /ready would also report.
+checkBackendHealth()
+
+// Expose so the form submit path can surface 503 errors via the banner.
+window.__checkBackendHealth = checkBackendHealth
 
 
 // ── Auth init ─────────────────────────────────────────────────────────────────

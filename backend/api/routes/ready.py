@@ -21,7 +21,7 @@ live I/O against each dependency on every call — it is never cached.
 """
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Request
 from fastapi.responses import JSONResponse
 from sqlalchemy import text
 
@@ -35,10 +35,22 @@ router = APIRouter(tags=["ops"])
 
 @router.get("/ready")
 async def ready(
+    request: Request,
     registry: PluginRegistry = Depends(get_plugin_registry),
 ) -> JSONResponse:
-    report: dict[str, object] = {"db": "unknown", "redis": "unknown", "plugins": "unknown"}
+    report: dict[str, object] = {
+        "db": "unknown",
+        "redis": "unknown",
+        "plugins": "unknown",
+        "startup": "ok",
+    }
     failed = False
+
+    # ── Startup errors (migration failures, DB unreachable at boot) ───────────
+    startup_errors: list[str] = getattr(request.app.state, "startup_errors", [])
+    if startup_errors:
+        report["startup"] = startup_errors
+        failed = True
 
     # ── Database ──────────────────────────────────────────────────────────────
     try:
