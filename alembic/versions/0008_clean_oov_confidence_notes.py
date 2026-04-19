@@ -12,6 +12,7 @@ Revises:     0007
 """
 from __future__ import annotations
 
+import sqlalchemy as sa
 from alembic import op
 
 revision = "0008"
@@ -19,18 +20,19 @@ down_revision = "0007"
 branch_labels = None
 depends_on = None
 
-_STALE_NOTE = "word not found in model vocabulary"
-
 
 def upgrade() -> None:
-    op.execute(
-        f"""
-        UPDATE canonical_objects
-        SET    lesson_data = lesson_data - 'confidence_note'
-        WHERE  lesson_data ? 'confidence_note'
-          AND  lesson_data->>'confidence_note' LIKE '%{_STALE_NOTE}%'
-        """
-    )
+    # lesson_data is stored as JSON (not JSONB), so cast to jsonb for the
+    # key-removal operator (-) and cast back to json when storing.
+    # Using ->>'confidence_note' IS NOT NULL instead of the jsonb ? operator
+    # to avoid both the json-type limitation and asyncpg treating ? as a
+    # positional parameter placeholder.
+    op.execute(sa.text(
+        "UPDATE canonical_objects "
+        "SET    lesson_data = (lesson_data::jsonb - 'confidence_note')::json "
+        "WHERE  lesson_data->>'confidence_note' IS NOT NULL "
+        "  AND  lesson_data->>'confidence_note' LIKE '%word not found in model vocabulary%'"
+    ))
 
 
 def downgrade() -> None:
