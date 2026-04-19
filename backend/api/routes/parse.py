@@ -310,7 +310,10 @@ async def _persist_parse(
 
 def _cache_key(text: str, language: str) -> str:
     digest = hashlib.sha256(f"{language}:{text}".encode("utf-8")).hexdigest()
-    return f"parse:{digest}"
+    # Bump _V when plugin analysis output changes in a backwards-incompatible
+    # way (e.g. confidence_note logic) so stale cached responses are bypassed.
+    _V = "2"
+    return f"parse:v{_V}:{digest}"
 
 
 def _now_utc() -> datetime:
