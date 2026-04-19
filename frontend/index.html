@@ -39,36 +39,17 @@
         </div>
 
         <!--
-          header-controls groups the UI language switcher and user-info so they
-          stay together on the inline-end edge across all viewport widths.
+          Hidden until JS confirms a signed-in session.
+          aria-label gives a meaningful landmark name for the user controls.
         -->
-        <div class="header-controls">
-          <!--
-            UI language switcher — always visible, pre-auth and post-auth.
-            Options are populated by initUiLanguage() in i18n.js from browser
-            language detection; the user can override at any time.
-            The label is visually hidden but available to AT.
-          -->
-          <div class="ui-lang-select">
-            <label for="ui-language" class="sr-only" data-i18n="ui_language_label">Interface language</label>
-            <select id="ui-language" aria-label="Interface language" data-i18n-aria-label="ui_language_label">
-              <!-- populated by initUiLanguage() -->
-            </select>
-          </div>
-
-          <!--
-            Hidden until JS confirms a signed-in session.
-            aria-label gives a meaningful landmark name for the user controls.
-          -->
-          <div id="user-info" class="user-info" hidden
-               data-i18n-aria-label="account_aria" aria-label="Account">
-            <span id="user-email" class="user-info__email"
-                  data-i18n-aria-label="signed_in_as_aria" aria-label="Signed in as"></span>
-            <button type="button" id="logout-btn" class="ghost-button"
-                    data-i18n="sign_out">Sign out</button>
-            <button type="button" id="delete-account-btn" class="ghost-button ghost-button--danger"
-                    data-i18n="delete_account">Delete account</button>
-          </div>
+        <div id="user-info" class="user-info" hidden
+             data-i18n-aria-label="account_aria" aria-label="Account">
+          <span id="user-email" class="user-info__email"
+                data-i18n-aria-label="signed_in_as_aria" aria-label="Signed in as"></span>
+          <button type="button" id="logout-btn" class="ghost-button"
+                  data-i18n="sign_out">Sign out</button>
+          <button type="button" id="delete-account-btn" class="ghost-button ghost-button--danger"
+                  data-i18n="delete_account">Delete account</button>
         </div>
 
         <!--
@@ -353,6 +334,13 @@
     <footer class="site-footer">
       <div class="wrap site-footer__inner">
         <p><a href="./privacy.html" data-i18n="privacy_policy">Privacy policy</a></p>
+        <div class="ui-lang-select">
+          <label for="ui-language" class="ui-lang-select__label"
+                 data-i18n="ui_language_label">Interface language</label>
+          <select id="ui-language">
+            <option value="en">English</option>
+          </select>
+        </div>
       </div>
     </footer>
   </body>

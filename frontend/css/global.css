@@ -685,6 +685,11 @@ select:focus-visible {
 }
 
 .site-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
   font-size: 0.875rem;
   color: var(--muted);
 }
@@ -701,28 +706,27 @@ select:focus-visible {
   color: var(--text);
 }
 
-/* ── Header controls ─────────────────────────────────────────────────────────
-   Groups the UI language switcher and user-info on the inline-end edge.
-   Always visible — the language switcher is accessible pre- and post-auth.  */
-.header-controls {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  flex-wrap: wrap;
-  margin-inline-start: auto;
-}
-
 /* ── UI language switcher ────────────────────────────────────────────────────
    Compact select override — the global input/select rule sets inline-size:100%
    which would stretch it full-width inside the flex row.                     */
 .ui-lang-select {
   display: flex;
   align-items: center;
+  gap: 0.4rem;
+}
+
+.ui-lang-select__label {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  white-space: nowrap;
 }
 
 .ui-lang-select select {
+  /* Explicit width so nested-flex + global inline-size:100% can't collapse it. */
+  width: auto;
+  min-width: 8rem;
   inline-size: auto;
-  padding-block: 0.4rem;
-  padding-inline: 0.5rem 1.8rem;
+  padding-block: 0.35rem;
+  padding-inline: 0.5rem 0.25rem;
   font-size: 0.875rem;
 }
