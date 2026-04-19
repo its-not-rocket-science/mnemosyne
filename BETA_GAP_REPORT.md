@@ -18,8 +18,9 @@ tier.
   `UserFsrsParamsRow` table; `GET/PATCH /users/me/fsrs-params`.
 - **Canonical knowledge layer.** UUID-v5 PKs; the same word in any text always maps to
   the same DB row. Surface forms accumulate. Object relations stored.
-- **Plugin architecture.** Structural typing, no registration step. 10 full plugins + 1
-  stub (English). Drop a file in `backend/plugins/` and the server picks it up.
+- **Plugin architecture.** Structural typing, no registration step. 12 plugins + 1
+  stub (English): 7 full morphological (es/fr/de/ru/ja/pt/it) + 5 dictionary-mode
+  (ar/he/zh/la/grc). Drop a file in `backend/plugins/` and the server picks it up.
 - **Accessibility baseline.** Skip link, focus trap, ARIA live regions, reduced motion,
   44 px targets, roving tabindex, `role="list"` on pill lists. Static WCAG 2.1 AA code
   audit complete — 8 issues found and fixed. See `WCAG_AUDIT.md`.
@@ -28,10 +29,10 @@ tier.
 - **Review event log.** `review_events` append-only table (migration 0006). Written by
   every review. Drives `reviews_today`, `streak_days`, `daily_activity` in `/metrics`
   and FSRS calibration.
-- **Full multilingual stack.** Spanish, French, German, Russian, Japanese: full spaCy
-  morphological pipelines. Arabic, Hebrew, Chinese (jieba + pypinyin), Latin, Koine
-  Greek: dictionary/vocabulary mode with honest capability declarations. 11 registered
-  language codes.
+- **Full multilingual stack.** Spanish, French, German, Russian, Japanese, Portuguese,
+  Italian: full spaCy morphological pipelines. Arabic, Hebrew, Chinese (jieba + pypinyin),
+  Latin, Koine Greek: dictionary/vocabulary mode with honest capability declarations.
+  12 registered language codes (+ English stub = 13 total).
 - **RTL support.** `dir`/`lang` applied throughout modal and sentence cards; logical CSS
   properties; `<bdi>` isolation in drill feedback; 43 non-Latin DB round-trip tests.
 - **Operational baseline.** Health + readiness probes (degraded-plugin reporting).
@@ -39,8 +40,8 @@ tier.
   JWT > X-User-Id > IP). Sentry SDK. Structured `request_id` logging.
 - **Offline + PWA.** Service worker (cache-first app shell), IndexedDB review queue,
   drain-on-reconnect, offline badge. `frontend/manifest.json` enables install.
-- **Background large-text processing.** `POST /parse/jobs` + SSE progress stream.
-  Frontend routes texts > 10 k chars through the job API with a live progress bar.
+- **Background processing.** `POST /parse/jobs` + SSE progress stream. All parses
+  route through the job API with a live progress bar, regardless of text size.
 - **Dictionary + translation enrichment.** Wiktionary gloss enrichment
   (`ENABLE_DICTIONARY_LOOKUP`). LibreTranslate + MyMemory translation
   (`ENABLE_TRANSLATION_ENRICHMENT`). Both run as background tasks post-parse.
@@ -71,7 +72,7 @@ tier.
 | B6. Rate limiting | ✓ done |
 | B7. Privacy policy + `DELETE /users/me` | ✓ done |
 | B8. Error monitoring (Sentry SDK) | ✓ done |
-| B9. Three+ production-quality language plugins | ✓ done — 5 full morphological + 5 dictionary-mode |
+| B9. Three+ production-quality language plugins | ✓ done — 7 full morphological (es/fr/de/ru/ja/pt/it) + 5 dictionary-mode (ar/he/zh/la/grc) + 1 stub (en) |
 
 ---
 
