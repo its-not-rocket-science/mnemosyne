@@ -186,6 +186,7 @@ async def _persist_parse(
         language=payload.language,
         source_text=payload.text,
         source_url=payload.source_url,
+        user_id=user_id,
     )
     db.add(parsed)
     await db.flush()  # materialise parsed.id before FK references

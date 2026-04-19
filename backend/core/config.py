@@ -51,6 +51,9 @@ class Settings(BaseSettings):
     # hour, or day.  Multiple limits can be joined with ";".
     # Examples: "20/minute", "5/second;100/hour".
     rate_limit_parse: str = "20/minute"
+    # Rate limit applied to /auth/register and /auth/login.
+    # Lower than parse to slow brute-force login attempts.
+    rate_limit_auth: str = "5/minute"
     # Dictionary enrichment: when True, vocabulary objects extracted during
     # /parse are enriched with English glosses from Wiktionary in the background.
     # Disabled by default to avoid external network calls in development and CI.

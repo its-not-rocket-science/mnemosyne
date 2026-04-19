@@ -334,7 +334,7 @@ See `.env.example` for the full list including the `POSTGRES_*` variables used b
 ## Known limitations
 
 - **Lesson prose is English-only.** `build_lesson()` always produces English explanations ("The word X is a noun"). There is no `l1_language` parameter yet; learners whose native language is not English see English metalanguage regardless of the target language.
-- **Background parse is in-process.** `POST /parse/jobs` runs NLP in a thread-pool executor inside the same uvicorn process. Multi-worker deployments (`--workers N`) will not share job state across processes; the progress SSE stream works only when the request hits the same worker that started the job.
+- **Background parse is in-process.** `POST /parse/jobs` runs NLP in a thread-pool executor inside the same uvicorn process. Multi-worker deployments (`--workers N > 1`) require sticky sessions (e.g. Nginx `ip_hash`, Traefik sticky cookie) scoped to the job ID so that SSE/polling requests reach the same worker that created the job. Single-worker deployments (`--workers 1`, the default) are unaffected.
 - **Classical lexicons are small.** Latin and Koine Greek are in dictionary mode with ~100–200 curated entries. Coverage of authentic classical texts is limited; most tokens will parse as vocabulary with low confidence.
 - **WCAG 2.1 AA — code audit complete, manual AT test pending.** A static code audit fixed 8 issues. A human keyboard-only walkthrough and NVDA/VoiceOver smoke test have not been run.
 

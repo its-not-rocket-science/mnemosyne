@@ -13,13 +13,15 @@ from __future__ import annotations
 
 import logging
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_db_session
 from backend.auth.passwords import hash_password, verify_password
 from backend.auth.tokens import create_access_token
+from backend.core.config import get_settings
+from backend.core.limiter import limiter
 from backend.models import UserRow
 from backend.schemas.auth import LoginRequest, RegisterRequest, TokenResponse
 
@@ -28,7 +30,9 @@ router = APIRouter(tags=["auth"], prefix="/auth")
 
 
 @router.post("/register", response_model=TokenResponse, status_code=201)
+@limiter.limit(lambda: get_settings().rate_limit_auth)
 async def register(
+    request: Request,
     payload: RegisterRequest,
     db: AsyncSession = Depends(get_db_session),
 ) -> TokenResponse:
@@ -64,7 +68,9 @@ async def register(
 
 
 @router.post("/login", response_model=TokenResponse)
+@limiter.limit(lambda: get_settings().rate_limit_auth)
 async def login(
+    request: Request,
     payload: LoginRequest,
     db: AsyncSession = Depends(get_db_session),
 ) -> TokenResponse:
