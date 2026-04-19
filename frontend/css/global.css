@@ -130,11 +130,10 @@
 }
 
 /* ── RTL layout overrides ────────────────────────────────────────────────────
-   Sentence-card text and pill lists receive dir="rtl" from main.js when the
-   selected language plugin declares direction = "rtl".  The overrides here
-   ensure pill flow and card layout mirror correctly for those elements.
-   The surrounding UI chrome (labels, buttons, navigation) remains LTR
-   because the interface language is always English.                          */
+   When the UI language is Arabic or Hebrew, i18n.js sets dir="rtl" on <html>,
+   flipping all logical-property layouts automatically.  These rules also apply
+   to sentence-card text and pill lists when the content language plugin
+   declares direction = "rtl".                                                */
 
 /* Ensure sentence-card text aligns to the natural reading edge in RTL. */
 [dir="rtl"].sentence-card__text {
@@ -700,4 +699,30 @@ select:focus-visible {
 
 .site-footer__inner a:hover {
   color: var(--text);
+}
+
+/* ── Header controls ─────────────────────────────────────────────────────────
+   Groups the UI language switcher and user-info on the inline-end edge.
+   Always visible — the language switcher is accessible pre- and post-auth.  */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-inline-start: auto;
+}
+
+/* ── UI language switcher ────────────────────────────────────────────────────
+   Compact select override — the global input/select rule sets inline-size:100%
+   which would stretch it full-width inside the flex row.                     */
+.ui-lang-select {
+  display: flex;
+  align-items: center;
+}
+
+.ui-lang-select select {
+  inline-size: auto;
+  padding-block: 0.4rem;
+  padding-inline: 0.5rem 1.8rem;
+  font-size: 0.875rem;
 }
