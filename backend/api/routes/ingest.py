@@ -136,6 +136,25 @@ async def ingest_text(
             sentences.append(SentenceResult(text=cand_result.text, learnable_objects=resolved))
     else:
         sentences = cached_sentences
+        # Cache hit: NLP was skipped so lesson_store may be empty (e.g. after server restart).
+        # Re-populate from DB for any IDs not already present in the store.
+        cache_hit_ids = [lo.id for s in sentences for lo in s.learnable_objects]
+        missing_ids = [oid for oid in cache_hit_ids if oid not in plugin.lesson_store]
+        if missing_ids:
+            try:
+                result_q = await db.execute(
+                    select(CanonicalObjectRow).where(CanonicalObjectRow.id.in_(missing_ids))
+                )
+                for row in result_q.scalars():
+                    plugin.lesson_store[row.id] = CandidateObject(
+                        type=row.type,
+                        label=row.display_label,
+                        canonical_form=row.canonical_form,
+                        lesson_data=row.lesson_data or {},
+                        confidence=row.confidence or 1.0,
+                    )
+            except Exception:
+                logger.debug("lesson_store repopulation from DB failed on cache hit")
 
     # ── 5. Populate plugin lesson_store for DB-unavailable fallback ───────────
     for obj_id, (_, cand) in uuid_to_candidate.items():
