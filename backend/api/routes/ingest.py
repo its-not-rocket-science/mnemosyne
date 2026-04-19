@@ -338,7 +338,7 @@ async def _persist_ingest(
             ))
 
     # 7. Upsert object relations.
-    desired_relations: list[tuple[str, str, str]] = []
+    desired_relations: set[tuple[str, str, str]] = set()
     for cand_result in candidate_results:
         for cand in cand_result.candidates:
             src_id = canonical_object_id(payload.language, cand.type, cand.canonical_form)
@@ -348,7 +348,7 @@ async def _persist_ingest(
                 )
                 if tgt_id not in uuid_to_candidate:
                     continue
-                desired_relations.append((src_id, tgt_id, hint.relation_type))
+                desired_relations.add((src_id, tgt_id, hint.relation_type))
 
     if desired_relations:
         src_ids = list({r[0] for r in desired_relations})
