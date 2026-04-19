@@ -46,7 +46,6 @@ const saveLessonStatus     = document.querySelector('#save-lesson-status')
 const saveLessonCloseBtn   = document.querySelector('#save-lesson-close-btn')
 const saveLessonConfirmBtn = document.querySelector('#save-lesson-confirm-btn')
 
-const MAX_SYNC_CHARS = 10_000
 
 const reviewStateByObject = new Map()
 
@@ -453,35 +452,11 @@ async function doParseText(text) {
   reviewStateByObject.clear()
   showResultsMessage(t('loading'))
   setStatus(t('parsing_status'), 'busy')
+  setJobProgress(2, t('parsing_status'))
 
   try {
     const language = languageSelect.value
-
-    let data
-    if (text.length > MAX_SYNC_CHARS) {
-      data = await parseWithJob(text, language)
-    } else {
-      const payload = {
-        language,
-        text,
-        content_type: currentContentType,
-        title:        null,
-        source_url:   currentSourceUrl || null,
-        filename:     currentFilename  || null,
-      }
-      const response = await fetch(`${API_BASE}/ingest`, {
-        method:  'POST',
-        headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
-        body:    JSON.stringify(payload),
-      })
-      handleStartupWarningHeader(response)
-      if (!response.ok) {
-        const body = await response.json().catch(() => null)
-        if (response.status === 503) checkBackendHealth()
-        throw new Error(body?.detail ?? `${t('parsing_failed')} (${response.status})`)
-      }
-      data = await response.json()
-    }
+    const data = await parseWithJob(text, language)
 
     if (data.sentences.length === 0) {
       showResultsMessage(t('no_items_found'))
@@ -605,7 +580,11 @@ async function parseWithJob(text, language) {
   const jobResp = await fetch(`${API_BASE}/parse/jobs`, {
     method:  'POST',
     headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
-    body:    JSON.stringify({ language, text }),
+    body:    JSON.stringify({
+      language,
+      text,
+      source_url: currentSourceUrl || null,
+    }),
   })
   if (!jobResp.ok) {
     const body = await jobResp.json().catch(() => null)
@@ -633,13 +612,19 @@ async function parseWithJob(text, language) {
       setJobProgress(pct, label)
     }
 
-    if (event.status === 'done')   return event.result
+    if (event.status === 'done') {
+      setJobProgress(100, t('job_done'))
+      return event.result
+    }
     if (event.status === 'failed') throw new Error(event.error ?? t('job_failed'))
   }
 
   const poll = await fetch(`${API_BASE}/parse/jobs/${jobId}`, { headers: getAuthHeaders() })
   const finalJob = await poll.json()
-  if (finalJob.status === 'done')   return finalJob.result
+  if (finalJob.status === 'done') {
+    setJobProgress(100, t('job_done'))
+    return finalJob.result
+  }
   if (finalJob.status === 'failed') throw new Error(finalJob.error ?? t('job_failed'))
   throw new Error(t('job_timeout'))
 }
@@ -660,8 +645,16 @@ function setJobProgress(percent, label) {
   }
   jobProgressPanel.hidden = false
   if (jobProgressFill) {
-    jobProgressFill.style.setProperty('--progress', `${percent}%`)
-    jobProgressFill.setAttribute('aria-valuenow', String(percent))
+    const indeterminate = percent === 'indeterminate'
+    jobProgressFill.classList.toggle('job-progress__bar--indeterminate', indeterminate)
+    if (indeterminate) {
+      jobProgressFill.removeAttribute('aria-valuenow')
+      jobProgressFill.style.removeProperty('--progress')
+    } else {
+      jobProgressFill.classList.remove('job-progress__bar--indeterminate')
+      jobProgressFill.style.setProperty('--progress', `${percent}%`)
+      jobProgressFill.setAttribute('aria-valuenow', String(percent))
+    }
   }
   if (jobProgressLabel) jobProgressLabel.textContent = label ?? ''
 }

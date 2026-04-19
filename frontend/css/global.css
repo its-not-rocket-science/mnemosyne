@@ -562,8 +562,12 @@ select:focus-visible {
   color: var(--error-color);
 }
 
-/* ── Job progress bar ────────────────────────────────────────────────────────
-   Shown while a large text is being processed by the async /parse/jobs API. */
+/* ── Job progress bar ─────────────────────────────────────────────────────── */
+
+@keyframes progress-scan {
+  0%   { inset-inline-start: -35%; inline-size: 35%; }
+  100% { inset-inline-start: 100%; inline-size: 35%; }
+}
 
 .job-progress {
   display: grid;
@@ -587,6 +591,20 @@ select:focus-visible {
   background-color: var(--accent);
   border-radius: inherit;
   transition: inline-size 0.3s ease;
+}
+
+.job-progress__bar--indeterminate::after {
+  animation: progress-scan 1.4s ease-in-out infinite;
+  inline-size: 35%;
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .job-progress__bar--indeterminate::after {
+    animation: none;
+    inline-size: 100%;
+    opacity: 0.35;
+  }
 }
 
 .job-progress__label {

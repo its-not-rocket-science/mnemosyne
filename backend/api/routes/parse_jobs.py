@@ -221,11 +221,11 @@ async def _run_parse_job(
             sentences_total=sentences_total,
         )
 
-        # ── Resolve candidates → LearnableObjects ─────────────────────────────
+        # ── Resolve candidates → LearnableObjects, emitting per-sentence progress
         uuid_to_candidate: dict[str, tuple[str, CandidateObject]] = {}
         sentences: list[SentenceResult] = []
 
-        for cand_result in candidate_results:
+        for i, cand_result in enumerate(candidate_results):
             resolved: list[LearnableObject] = []
             for cand in cand_result.candidates:
                 obj_id = canonical_object_id(
@@ -244,12 +244,20 @@ async def _run_parse_job(
             sentences.append(
                 SentenceResult(text=cand_result.text, learnable_objects=resolved)
             )
+            # Emit incremental progress and yield to the event loop so SSE
+            # events are flushed to the client between each sentence.
+            pct = 0.40 + 0.40 * (i + 1) / sentences_total
+            job_store.update(
+                job, stage="nlp", progress=pct,
+                sentences_done=i + 1, sentences_total=sentences_total,
+            )
+            await asyncio.sleep(0)
 
         # Populate in-session lesson store for fallback when DB is unavailable.
         for obj_id, (_, cand) in uuid_to_candidate.items():
             plugin.lesson_store[obj_id] = cand
 
-        job_store.update(job, stage="persist", progress=0.50)
+        job_store.update(job, stage="persist", progress=0.80)
 
         # ── DB persistence ────────────────────────────────────────────────────
         async with session_factory() as db:
