@@ -16,7 +16,7 @@
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="skip_to_content">Skip to content</a>
 
     <!--
       Backend startup warning banner.
@@ -34,18 +34,43 @@
         <div>
           <!-- aria-hidden: the word is decorative; the h1 is the real page label -->
           <p class="eyebrow" aria-hidden="true">Mnemosyne</p>
-          <h1>Turn text into a living lesson</h1>
-          <p class="lede">Paste text, parse sentences, open micro-lessons, and rate recall.</p>
+          <h1 data-i18n="h1">Turn text into a living lesson</h1>
+          <p class="lede" data-i18n="lede">Paste text, parse sentences, open micro-lessons, and rate recall.</p>
         </div>
+
         <!--
-          Hidden until JS confirms a signed-in session.
-          aria-label gives a meaningful landmark name for the user controls.
+          header-controls groups the UI language switcher and user-info so they
+          stay together on the inline-end edge across all viewport widths.
         -->
-        <div id="user-info" class="user-info" hidden aria-label="Account">
-          <span id="user-email" class="user-info__email" aria-label="Signed in as"></span>
-          <button type="button" id="logout-btn" class="ghost-button">Sign out</button>
-          <button type="button" id="delete-account-btn" class="ghost-button ghost-button--danger">Delete account</button>
+        <div class="header-controls">
+          <!--
+            UI language switcher — always visible, pre-auth and post-auth.
+            Options are populated by initUiLanguage() in i18n.js from browser
+            language detection; the user can override at any time.
+            The label is visually hidden but available to AT.
+          -->
+          <div class="ui-lang-select">
+            <label for="ui-language" class="sr-only" data-i18n="ui_language_label">Interface language</label>
+            <select id="ui-language" aria-label="Interface language" data-i18n-aria-label="ui_language_label">
+              <!-- populated by initUiLanguage() -->
+            </select>
+          </div>
+
+          <!--
+            Hidden until JS confirms a signed-in session.
+            aria-label gives a meaningful landmark name for the user controls.
+          -->
+          <div id="user-info" class="user-info" hidden
+               data-i18n-aria-label="account_aria" aria-label="Account">
+            <span id="user-email" class="user-info__email"
+                  data-i18n-aria-label="signed_in_as_aria" aria-label="Signed in as"></span>
+            <button type="button" id="logout-btn" class="ghost-button"
+                    data-i18n="sign_out">Sign out</button>
+            <button type="button" id="delete-account-btn" class="ghost-button ghost-button--danger"
+                    data-i18n="delete_account">Delete account</button>
+          </div>
         </div>
+
         <!--
           Offline indicator — hidden until JS detects queued reviews.
           aria-live="polite" announces count changes to screen readers without
@@ -53,9 +78,10 @@
         -->
         <p id="offline-badge" class="offline-badge" hidden aria-live="polite">
           <span class="offline-badge__dot" aria-hidden="true"></span>
-          Offline —
+          <span data-i18n="offline_prefix">Offline —</span>
           <span id="offline-count">0</span>
-          review<span id="offline-plural">s</span> queued
+          <span id="offline-review-word" data-i18n="offline_review">review</span><span id="offline-plural">s</span>
+          <span data-i18n="offline_queued">queued</span>
         </p>
       </div>
     </header>
@@ -71,9 +97,11 @@
     -->
     <section id="auth-panel" class="wrap" aria-labelledby="auth-heading" hidden>
       <div class="panel">
-        <h2 id="auth-heading">Sign in to continue</h2>
+        <h2 id="auth-heading" data-i18n="auth_heading">Sign in to continue</h2>
 
-        <div id="auth-tablist" role="tablist" aria-label="Authentication" class="auth-tabs">
+        <div id="auth-tablist" role="tablist"
+             aria-label="Authentication" data-i18n-aria-label="authentication_aria"
+             class="auth-tabs">
           <!--
             role="tab" + aria-selected + aria-controls:
             standard tab pattern (ARIA APG authoring practices).
@@ -84,25 +112,29 @@
             order (tabindex="0"); the other tab is reachable only via arrow
             keys (tabindex="-1").  JS updates tabIndex on every switch.
           -->
-          <button id="tab-signin"   role="tab" aria-selected="true"  aria-controls="login-tab"    class="auth-tab" type="button" tabindex="0">Sign in</button>
-          <button id="tab-register" role="tab" aria-selected="false" aria-controls="register-tab" class="auth-tab" type="button" tabindex="-1">Create account</button>
+          <button id="tab-signin"   role="tab" aria-selected="true"  aria-controls="login-tab"
+                  class="auth-tab" type="button" tabindex="0"
+                  data-i18n="tab_signin">Sign in</button>
+          <button id="tab-register" role="tab" aria-selected="false" aria-controls="register-tab"
+                  class="auth-tab" type="button" tabindex="-1"
+                  data-i18n="tab_register">Create account</button>
         </div>
 
         <!-- Sign-in panel -->
         <div id="login-tab" role="tabpanel" aria-labelledby="tab-signin">
           <form id="login-form" class="stack auth-form" novalidate>
             <div class="field">
-              <label for="login-email">Email</label>
+              <label for="login-email" data-i18n="label_email">Email</label>
               <input id="login-email" type="email" autocomplete="email"
                 required aria-required="true" placeholder="you@example.com">
             </div>
             <div class="field">
-              <label for="login-password">Password</label>
+              <label for="login-password" data-i18n="label_password">Password</label>
               <input id="login-password" type="password" autocomplete="current-password"
                 required aria-required="true" placeholder="••••••••">
             </div>
             <div class="button-row">
-              <button type="submit" class="button-primary">Sign in</button>
+              <button type="submit" class="button-primary" data-i18n="tab_signin">Sign in</button>
             </div>
           </form>
         </div>
@@ -111,24 +143,24 @@
         <div id="register-tab" role="tabpanel" aria-labelledby="tab-register" hidden>
           <form id="register-form" class="stack auth-form" novalidate>
             <div class="field">
-              <label for="reg-email">Email</label>
+              <label for="reg-email" data-i18n="label_email">Email</label>
               <input id="reg-email" type="email" autocomplete="email"
                 required aria-required="true" placeholder="you@example.com">
             </div>
             <div class="field">
-              <label for="reg-password">Password</label>
+              <label for="reg-password" data-i18n="label_password">Password</label>
               <input id="reg-password" type="password" autocomplete="new-password"
                 required aria-required="true" placeholder="••••••••"
                 aria-describedby="pw-hint">
-              <p id="pw-hint" class="field-hint">At least 8 characters.</p>
+              <p id="pw-hint" class="field-hint" data-i18n="pw_hint">At least 8 characters.</p>
             </div>
             <div class="field">
-              <label for="reg-confirm">Confirm password</label>
+              <label for="reg-confirm" data-i18n="label_confirm_password">Confirm password</label>
               <input id="reg-confirm" type="password" autocomplete="new-password"
                 required aria-required="true" placeholder="••••••••">
             </div>
             <div class="button-row">
-              <button type="submit" class="button-primary">Create account</button>
+              <button type="submit" class="button-primary" data-i18n="btn_create_account">Create account</button>
             </div>
           </form>
         </div>
@@ -151,7 +183,7 @@
     <main id="main" tabindex="-1" class="wrap">
 
       <section class="panel" aria-labelledby="parse-heading">
-        <h2 id="parse-heading">Create a lesson from text</h2>
+        <h2 id="parse-heading" data-i18n="parse_heading">Create a lesson from text</h2>
 
         <!--
           novalidate: JS handles validation so the browser's native error
@@ -160,7 +192,7 @@
         <form id="parse-form" class="stack" novalidate>
 
           <div class="field">
-            <label for="language">Language</label>
+            <label for="language" data-i18n="label_language">Language</label>
             <!--
               Options are populated from GET /languages on page load.
               A static fallback option is shown while loading or on error.
@@ -172,8 +204,8 @@
 
           <div class="field">
             <label for="source-title">
-              Title
-              <span class="field-hint">(optional)</span>
+              <span data-i18n="label_title">Title</span>
+              <span class="field-hint" data-i18n="optional">(optional)</span>
             </label>
             <input id="source-title" name="source-title" type="text"
               placeholder="Article or chapter title"
@@ -182,8 +214,8 @@
 
           <div class="field">
             <label for="source-url">
-              Source URL
-              <span class="field-hint">(optional)</span>
+              <span data-i18n="label_source_url">Source URL</span>
+              <span class="field-hint" data-i18n="optional">(optional)</span>
             </label>
             <div class="input-group">
               <input id="source-url" name="source-url" type="url"
@@ -193,10 +225,12 @@
               <!--
                 type="button" prevents this from submitting the form.
                 aria-label gives a full description since the visible
-                text "Fetch" alone is not sufficiently descriptive.
+                text alone is not sufficiently descriptive.
               -->
               <button type="button" id="fetch-url-btn" class="ghost-button"
-                      aria-label="Fetch text from URL">
+                      aria-label="Fetch text from URL"
+                      data-i18n="fetch_btn"
+                      data-i18n-aria-label="fetch_btn_aria">
                 Fetch
               </button>
             </div>
@@ -205,7 +239,8 @@
               errors) without interrupting ongoing announcements.
               Initial text is not announced — only dynamic updates are.
             -->
-            <p id="fetch-url-hint" class="field-hint fetch-url-hint" aria-live="polite">
+            <p id="fetch-url-hint" class="field-hint fetch-url-hint" aria-live="polite"
+               data-i18n="fetch_hint">
               Enter a URL and press Fetch to import its text.
             </p>
           </div>
@@ -216,9 +251,13 @@
               The file input is visually hidden; its <label> acts as the trigger.
             -->
             <div class="field-header">
-              <label for="source-text">Text to parse</label>
+              <label for="source-text" data-i18n="label_text">Text to parse</label>
+              <!--
+                The span wraps the visible text so data-i18n can target it
+                without wiping the hidden <input> child element.
+              -->
               <label class="file-pick-btn" for="file-input">
-                Load .txt file
+                <span data-i18n="load_file">Load .txt file</span>
                 <!--
                   sr-only hides the input visually; the wrapping label triggers it.
                   accept limits the file picker to plain text; JS re-validates.
@@ -244,11 +283,13 @@
               autocorrect="off"
               autocapitalize="off"
               autocomplete="off"
+              data-i18n-placeholder="textarea_placeholder"
               placeholder="Paste text here, or load a .txt file above…"></textarea>
           </div>
 
           <div class="button-row">
-            <button type="submit" class="button-primary" id="parse-submit">
+            <button type="submit" class="button-primary" id="parse-submit"
+                    data-i18n="btn_parse">
               Parse text
             </button>
           </div>
@@ -284,7 +325,7 @@
       </section>
 
       <section class="panel" aria-labelledby="results-heading">
-        <h2 id="results-heading">Sentence lessons</h2>
+        <h2 id="results-heading" data-i18n="results_heading">Sentence lessons</h2>
 
         <!--
           Script view toolbar — hidden until a language with transliteration
@@ -297,7 +338,7 @@
           The #status region announces the summary ("3 sentences parsed").
         -->
         <div id="results" class="results">
-          <p class="results-empty">
+          <p class="results-empty" data-i18n="results_empty">
             Parse some text above to see learnable items here.
           </p>
         </div>
@@ -311,7 +352,7 @@
 
     <footer class="site-footer">
       <div class="wrap site-footer__inner">
-        <p><a href="./privacy.html">Privacy policy</a></p>
+        <p><a href="./privacy.html" data-i18n="privacy_policy">Privacy policy</a></p>
       </div>
     </footer>
   </body>
