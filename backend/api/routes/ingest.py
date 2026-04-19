@@ -254,6 +254,7 @@ async def _persist_ingest(
         language=payload.language,
         source_text=normalized_text,
         source_url=payload.source_url,
+        user_id=user_id,
     )
     db.add(parsed)
     await db.flush()  # materialise parsed.id before FK references
@@ -392,4 +393,5 @@ async def _persist_ingest(
 
 def _cache_key(text: str, language: str) -> str:
     digest = hashlib.sha256(f"{language}:{text}".encode("utf-8")).hexdigest()
-    return f"parse:{digest}"
+    _V = "2"
+    return f"parse:v{_V}:{digest}"

@@ -42,6 +42,10 @@ tier.
   drain-on-reconnect, offline badge. `frontend/manifest.json` enables install.
 - **Background processing.** `POST /parse/jobs` + SSE progress stream. All parses
   route through the job API with a live progress bar, regardless of text size.
+- **Auth rate limiting.** `/auth/register` and `/auth/login` rate-limited via `RATE_LIMIT_AUTH` (default `5/minute`); same slowapi limiter as parse endpoints.
+- **GDPR text deletion.** `DELETE /users/me` now cascades `parsed_texts` (source_text), `sentences`, `sentence_objects`, `source_documents`, and `source_chunks`. `parsed_texts.user_id` column added (migration 0009).
+- **Offline queue 401 handling.** `drainReviewQueue` detects 401 (expired JWT), surfaces localised "Session expired" message in all 11 UI languages, and stops drain without discarding queued reviews.
+- **JWT_SECRET hard-fail in production.** `DEBUG=false` + default `JWT_SECRET` now hard-fails startup (same pattern as CORS wildcard guard).
 - **Dictionary + translation enrichment.** Wiktionary gloss enrichment
   (`ENABLE_DICTIONARY_LOOKUP`). LibreTranslate + MyMemory translation
   (`ENABLE_TRANSLATION_ENRICHMENT`). Both run as background tasks post-parse.
