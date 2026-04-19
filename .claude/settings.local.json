@@ -32,7 +32,10 @@
       "Bash(echo \"EXIT: $?\")",
       "Bash(cmd *)",
       "WebFetch(domain:www.esl-lounge.com)",
-      "Bash(alembic upgrade *)"
+      "Bash(alembic upgrade *)",
+      "Bash(node *)",
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(curl -s http://localhost:8000/css/global.css)"
     ]
   }
 }

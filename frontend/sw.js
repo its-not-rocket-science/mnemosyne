@@ -18,7 +18,7 @@
  * the activate event.
  */
 
-const CACHE_VERSION   = 'v2';
+const CACHE_VERSION   = 'v4';
 const CACHE_NAME      = `mnemosyne-static-${CACHE_VERSION}`;
 
 const STATIC_ASSETS = [
@@ -28,6 +28,7 @@ const STATIC_ASSETS = [
   '/css/components.css',
   '/js/main.js',
   '/js/auth.js',
+  '/js/i18n.js',
   '/js/offline.js',
   '/components/mnemosyne-modal.js',
   '/components/mnemosyne-pill.js',
