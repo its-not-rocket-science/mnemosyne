@@ -7,7 +7,25 @@
 | Python | 3.12 |
 | Poetry | 2.x |
 | Docker + Compose v2 | any recent |
-| spaCy model | `es_core_news_sm` (Spanish tests only) |
+| spaCy models | See below — only models for languages you want to test |
+
+**spaCy model download commands:**
+
+```bash
+# Full morphological plugins (each model ~12–50 MB):
+python -m spacy download es_core_news_sm   # Spanish
+python -m spacy download fr_core_news_sm   # French
+python -m spacy download de_core_news_sm   # German
+python -m spacy download ru_core_news_sm   # Russian
+python -m spacy download ja_core_news_sm   # Japanese  (also: pip install sudachipy sudachidict-small)
+python -m spacy download pt_core_news_sm   # Portuguese
+python -m spacy download it_core_news_sm   # Italian
+
+# Dictionary-mode plugins — no spaCy model needed:
+# Arabic, Hebrew, Chinese (jieba), Latin, Koine Greek
+```
+
+Tests that require a model are auto-skipped when the model is not installed.
 
 ---
 
@@ -181,6 +199,9 @@ The suite requires no running external services:
 | `test_german_spacy.py` | German NLP extraction | **requires `de_core_news_sm`** |
 | `test_russian_spacy.py` | Russian NLP extraction | **requires `ru_core_news_sm`** |
 | `test_japanese_plugin.py` | Japanese plugin (SudachiPy) | **requires `ja_core_news_sm`** |
+| `test_portuguese_spacy.py` | Portuguese NLP extraction | **requires `pt_core_news_sm`** |
+| `test_italian_spacy.py` | Italian NLP extraction | **requires `it_core_news_sm`** |
+| `test_greek_koine_plugin.py` | Koine Greek plugin (dictionary mode) | none |
 
 Tests that require spaCy models are auto-skipped when the model is not installed (each file has a `pytestmark = pytest.mark.skipif(not _model_available(), ...)` guard). Run the full suite without any model installed:
 

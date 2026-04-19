@@ -33,76 +33,66 @@ The five pillars are:
 
 ### Language support
 
-| Plugin | Status | Extracts |
-|--------|--------|---------|
-| Spanish (`es`) | implemented | vocabulary, conjugation (full morph), agreement (gender/number) |
-| English (`en`) stub | partial | vocabulary only; regex-based; no morphology |
-| French (`fr`) stub | partial | vocabulary only; regex-based; stop-word filter; no morphology |
-| German (`de`) | scaffold | capabilities declared; NLP not implemented |
-| Mandarin Chinese (`zh`) | scaffold | CJK segmentation architecture; dictionary mode only |
-| Arabic (`ar`) | scaffold | capabilities declared; dictionary mode only; RTL path tested |
-| Hebrew (`he`) | scaffold | capabilities declared; dictionary mode only; RTL path tested |
-| Latin (`la`) | scaffold | dead-language annotation mode; dictionary lookup only |
+| Language | Code | Plugin type | Extracts | spaCy model |
+|----------|------|-------------|----------|-------------|
+| Spanish | `es` | Full morphological | vocabulary, conjugation, agreement, idiom, grammar, nuance | `es_core_news_sm` |
+| French | `fr` | Full morphological | vocabulary, conjugation, agreement | `fr_core_news_sm` |
+| German | `de` | Full morphological | vocabulary, conjugation, case_agreement, separable verbs | `de_core_news_sm` |
+| Russian | `ru` | Full morphological | vocabulary, conjugation (aspect+gender), case_agreement, idiom, nuance | `ru_core_news_sm` |
+| Japanese | `ja` | Full morphological | vocabulary (+ hiragana readings), particles filtered | `ja_core_news_sm` + SudachiPy |
+| Portuguese | `pt` | Full morphological | vocabulary, conjugation, agreement, grammar patterns, idiom, nuance | `pt_core_news_sm` |
+| Italian | `it` | Full morphological | vocabulary, conjugation, agreement, grammar patterns, idiom, nuance | `it_core_news_sm` |
+| Arabic | `ar` | Dictionary mode | vocabulary (tashkeel-normalised), RTL | none |
+| Hebrew | `he` | Dictionary mode | vocabulary (nikud-normalised), RTL | none |
+| Mandarin Chinese | `zh` | Dictionary mode | vocabulary (jieba segmentation + pinyin) | jieba + pypinyin |
+| Latin | `la` | Dictionary mode | vocabulary (regex tokenisation), dead-language scaffold | none |
+| Koine Greek | `grc` | Dictionary mode | vocabulary (polytonic normalisation + SBL transliteration) | none |
+| English | `en` | Stub | vocabulary (regex only) | none |
 
-**Production-quality** means full morphological extraction with relation hints. Only Spanish qualifies today. French and German are the next targets.
+**Production-quality** means full morphological extraction with relation hints. Seven languages qualify: Spanish, French, German, Russian, Japanese, Portuguese, and Italian.
 
 ### Infrastructure
 
 | Capability | Status | Notes |
 |-----------|--------|-------|
 | Canonical knowledge layer (UUID-v5 PKs, surface_forms, object_relations) | implemented | |
-| Plugin registry with multi-language support | implemented | `ENABLED_LANGUAGES` filter |
-| Alembic migrations | partial | 4 revision files exist (0001–0004); `create_all` still runs on fresh start — not yet replaced with `alembic upgrade head` |
-| RTL layout support | partial | `direction`/`script_family`/`tokenization_mode` on all plugins; sentence card and pill `dir`/`lang` applied dynamically; modal does not yet apply `dir`/`lang` to example text or drill prompts |
-| Multi-user data isolation | implemented | `X-User-Id` header; `get_current_user` dependency; per-user isolation across all routes; `UserLanguagePreferenceRow` table; `/users/me/*` preference CRUD |
-| User authentication (JWT) | deferred | Header-based identity in place; cryptographic verification not yet implemented |
-| Review event log | deferred | Only current FSRS state is stored; no per-review history |
-| Offline / PWA | deferred | |
-| Background processing for large texts | deferred | NLP blocks the request path; `max_chars` guard not yet implemented |
+| Plugin registry with multi-language support | implemented | `ENABLED_LANGUAGES` filter; degraded-plugin reporting in `/ready` |
+| Alembic migrations | implemented | 9 revision files (0000–0008); startup runs `alembic upgrade head`; `create_all` removed |
+| RTL layout support | implemented | `dir`/`lang` applied throughout modal, sentence cards, drill prompts; logical CSS properties; `<bdi>` isolation; 43 non-Latin round-trip tests |
+| Multi-user data isolation | implemented | JWT auth; per-user isolation across all routes; `UserLanguagePreferenceRow` table; `/users/me/*` preference CRUD |
+| User authentication (JWT) | implemented | `/auth/register` + `/auth/login`; HS256 JWT; login/logout UI |
+| Review event log | implemented | `review_events` append-only table (migration 0006); drives metrics and FSRS calibration |
+| Offline / PWA | implemented | Service worker (cache-first app shell); IndexedDB review queue; drain-on-reconnect |
+| Background processing | implemented | `POST /parse/jobs` + SSE progress stream; all texts route through the job API |
+| FSRS per-user calibration | implemented | `UserFsrsParamsRow`; `POST /users/me/calibrate` bias-correction over `ReviewEventRow` |
+| Source progression tracking | implemented | `SourceDocumentRow`; `GET/PATCH /reading/{id}`; `POST /ingest` creates progression row |
 
 ---
 
-## Major gaps
+## Resolved gaps (historical record)
 
-### Gap 1 — One real language
+These were the major open issues when this document was first written. All are resolved.
 
-Only Spanish has a production-quality plugin. English and French stubs extract vocabulary by regex with no morphological understanding. A user learning either of those languages today would get a stripped-down experience.
+**Gap 1 — One real language** → Seven languages now have production-quality full-morphological plugins (es, fr, de, ru, ja, pt, it). Five more are in dictionary mode (ar, he, zh, la, grc).
 
-**Impact:** The multi-language vision is architecturally ready but practically hollow. The infrastructure for a second real language (registry, canonical IDs, per-language dashboard filtering) is in place; the NLP work is not done.
+**Gap 2 — RTL and non-Latin scripts** → `dir`/`lang` applied throughout modal, sentence cards, and drill prompts. Logical CSS properties throughout. `<bdi>` isolation in drill feedback. 43 non-Latin DB round-trip tests. `canonical_form` conventions documented for Arabic, Hebrew, CJK, Cyrillic, and agglutinative languages in `PLUGIN_AUTHOR_GUIDE.md`. Difficulty scorer accepts `word_count_hint` for CJK.
 
-### Gap 2 — RTL and non-Latin scripts
+**Gap 3 — No review event history** → `review_events` append-only table (migration 0006) records every review with quality, mastery_score_before/after, and timestamp. `/metrics` exposes `reviews_today`, `streak_days`, `daily_activity`. FSRS calibration uses this history.
 
-**Partially addressed (2026-04-10):** `GET /languages` now returns full `LanguageCapabilities` objects including `direction`, `script_family`, `tokenization_mode`, and `morphology_depth`. The frontend fetches this on page load, stores a capabilities map, and applies `lang` and `dir` attributes to sentence-card text elements and pill lists. Non-Latin font stacks (Arabic, Hebrew, CJK, Devanagari) are included in `global.css`. RTL layout overrides for sentence cards and pill lists are in place.
+**Gap 4 — Authentication** → JWT authentication implemented. `/auth/register` + `/auth/login`; HS256; `get_current_user` verifies Bearer token; login/logout UI.
 
-**Remaining gaps:**
-- The modal (`mnemosyne-modal.js`) does not yet apply `dir` or `lang` to example text or drill prompts — this is a public beta blocker.
-- There are no integration tests that push an RTL text fixture through the full parse → lesson → render pipeline.
-- The difficulty scorer still uses `text.split()` for word count when `word_count_hint` is not supplied, which is wrong for CJK; the `word_count_hint` parameter exists on `score_sentence` but the recommend route does not yet pass it for segmented-script languages.
-- `canonical_form` conventions are documented only for Latin-script morphology; non-Latin conventions (Arabic root+pattern, CJK disambiguation) are undocumented, creating a risk of incompatible plugin inventions.
+**Gap 5 — NLP in the request path** → All parses route through the async job API (`POST /parse/jobs` + `GET /parse/jobs/{id}/events`). NLP runs in a thread-pool executor. SSE progress stream. `max_chars` guard (413 above limit).
 
-**Impact:** A user pasting Arabic or Hebrew text today will get correct `dir` on the sentence text but the modal will not apply RTL styling to example text or drill prompts. Visual breakage is reduced but not eliminated.
+**Gap 6 — Dead and historic languages** → Latin (`la`) and Koine Greek (`grc`) implemented in dictionary mode with honest capability declarations (no morphology claimed). ~100–200 curated lexicon entries each.
 
-### Gap 3 — No review event history
+---
 
-`user_knowledge` stores only the current FSRS state. There is no table recording when each individual review happened, what the quality rating was, or what the mastery score was at that point. This means:
+## What remains genuinely open
 
-- Retention curves cannot be drawn.
-- Exact time-to-mastery cannot be computed.
-- Per-session statistics (reviews per day, best study time) are unavailable.
-
-`/metrics` approximates these from the snapshot state (current `mastery_score`, `lapses`, `stability`), which is accurate for current-state reporting but useless for trend analysis.
-
-### Gap 4 — Authentication (not data isolation)
-
-Multi-user data isolation is complete: all routes scope knowledge state and recommendations to `current_user`, resolved from the `X-User-Id` header with `"default"` fallback. Per-user language preferences are stored and returned via `/users/me/*`. The remaining gap is cryptographic authentication — the header is not verified, so any caller can impersonate any user on a shared deployment. JWT authentication is the next step; the `get_current_user` dependency is the single injection point for the change.
-
-### Gap 5 — NLP in the request path
-
-`plugin.analyze_text()` is called synchronously inside the FastAPI handler. For a 500-word text this is fast (< 1 s for Spanish on modern hardware), but for longer texts it blocks the event loop and risks timeout. There is a `max_chars` guard proposed in the roadmap but not yet implemented.
-
-### Gap 6 — Dead and historic languages
-
-There is no annotation mode. The system expects a plugin that can extract learnable objects with confidence scores. For Latin or Classical Greek, spaCy models exist but are lower quality than for modern languages. For truly under-resourced languages, the honest approach is a dictionary lookup mode that does not pretend to offer morphological analysis.
+- **Manual keyboard + screen-reader test.** Code audit done; 8 issues fixed. NVDA/VoiceOver smoke test not yet run.
+- **Full morphological plugins for Korean, Hindi, Turkish, Finnish.** Natural next targets; each requires canonical-form convention decisions before first parse.
+- **Classical lexicon depth.** Latin and Greek coverage is limited (~100–200 entries). Perseus/Logeion integration would substantially improve coverage.
+- **Lesson text localisation.** `build_lesson()` produces English prose regardless of target language. No `l1_language` parameter yet.
 
 ---
 
@@ -137,9 +127,11 @@ Every database and Redis operation in the route handlers is wrapped in `try/exce
 
 ## Architectural decisions that currently limit multilingual expansion
 
-### Frontend assumes LTR Latin script
+### RTL and non-Latin scripts — implemented
 
-The frontend CSS uses no `[dir="rtl"]` overrides, no `writing-mode` properties, and no `font-family` abstractions that could accommodate Arabic or CJK glyphs. The pill buttons and modal are tested only with Spanish and English text. Adding Arabic or Hebrew requires a careful audit of every layout primitive.
+The frontend applies `dir` and `lang` attributes dynamically from plugin capabilities. Logical CSS properties (`inline-size`, `margin-inline-start`, etc.) are used throughout. Non-Latin font stacks are declared in `global.css`. The modal applies RTL to example text, drill prompts, and fill-blank inputs. `<bdi>` elements isolate bidirectional strings in feedback. 43 non-Latin DB round-trip tests cover Arabic, Hebrew, Chinese, Russian, and Japanese canonical forms.
+
+**Remaining limitation:** `build_lesson()` produces English metalanguage regardless of target language. Lesson explanations ("The word X is a noun") are always English; there is no `l1_language` parameter yet.
 
 ### Lesson generator is language-agnostic but English-prose-centric
 
@@ -149,9 +141,9 @@ The frontend CSS uses no `[dir="rtl"]` overrides, no `writing-mode` properties, 
 
 The format rules (`lowercase`, `{lemma}:{tense}:{mood}:{person}:{number}`) are documented for Latin-script morphological categories. There is no guidance for tonal languages, agglutinative languages with many more morphological axes, or languages where the lemma is itself a derived form. The UUID derivation will work for any Unicode string, but the form-construction conventions need to be extended.
 
-### No test fixture for non-Latin scripts
+### Non-Latin test coverage — implemented
 
-There are no tests that push a non-ASCII, non-Latin canonical form through `canonical_object_id()`, store it in the database, and retrieve it. Adding such a fixture is cheap and would expose encoding or collation bugs early.
+43 tests in `test_non_latin_roundtrip.py` push Arabic, Hebrew, Chinese, Russian, and Japanese canonical forms through `canonical_object_id()`, SQLite insert, retrieve, and lossless round-trip assertion. API-level RTL pipeline tests are included.
 
 ### Single-pass NLP is spaCy-centric
 
