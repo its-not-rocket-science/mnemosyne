@@ -2,7 +2,7 @@
 
 Paste any text, parse it into sentences, open per-word micro-lessons, and rate your recall. FSRS schedules the next review.
 
-**Current state:** single-user MVP with ten language plugins. Full morphological analysis for Spanish, French, German, Russian, and Japanese; vocabulary/dictionary mode for Arabic, Hebrew, Mandarin Chinese, Latin, and English. RTL layout (Arabic, Hebrew) and CJK segmentation (Chinese, Japanese) are supported. User authentication is planned; see [ROADMAP.md](ROADMAP.md).
+**Current state:** multi-user system with twelve language plugins. Full morphological analysis for Spanish, French, German, Russian, Japanese, Portuguese, and Italian; vocabulary/dictionary mode for Arabic, Hebrew, Mandarin Chinese, Latin, and Koine Greek; regex stub for English. RTL layout (Arabic, Hebrew) and CJK segmentation (Chinese, Japanese) are supported. User authentication is implemented (JWT); see [ROADMAP.md](ROADMAP.md).
 
 ---
 
@@ -49,13 +49,14 @@ python -m spacy download es_core_news_sm
 # Optional — install additional language models as needed:
 # python -m spacy download fr_core_news_sm de_core_news_sm
 # python -m spacy download ru_core_news_sm ja_core_news_sm
+# python -m spacy download pt_core_news_sm it_core_news_sm
 cp .env.example .env     # set DATABASE_URL and REDIS_URL
 psql -h localhost -U postgres -l
 make dev                 # uvicorn --reload on :8000
 python -m http.server 8080 -d frontend
 ```
 
-Tables are created automatically via `create_all` on first startup. For existing databases run `alembic upgrade head` instead.
+Tables are managed by Alembic. On first startup the application runs `alembic upgrade head` automatically. No manual migration step is needed for fresh or existing databases.
 
 
 Windows PowerShell:
@@ -128,6 +129,40 @@ Parses text into sentences and learnable objects. Caches the result in Redis (1 
 `id` is a deterministic UUID-v5 derived from `(language, type, canonical_form)`. The same word in any text always produces the same UUID.
 
 `type` is one of: `vocabulary` `conjugation` `agreement` `idiom` `grammar` `nuance`.
+
+---
+
+### `POST /ingest`
+
+Preferred ingest endpoint. Accepts text plus attribution metadata, runs the same parse pipeline as `/parse`, and additionally persists a `SourceDocument` + `SourceChunk` row for reading-progression tracking.
+
+**Request**
+```json
+{
+  "text": "Hola. Yo hablo español.",
+  "language": "es",
+  "content_type": "article",
+  "title": "Mi primer artículo",
+  "source_url": "https://example.com",
+  "author": null,
+  "filename": null
+}
+```
+
+`content_type`: one of `article`, `book`, `lyrics`, `legal`, `conversation`, `other`.
+
+**Response** — same `sentences` array as `/parse`, plus:
+```json
+{
+  "sentences": [...],
+  "source_document_id": "a1b2c3d4-...",
+  "warnings": []
+}
+```
+
+`source_document_id` is the stable reference for repeated-exposure tracking and reading-progression queries (`GET /reading/{id}`).
+
+`POST /parse` is retained for backward compatibility. New clients should use `/ingest`.
 
 ---
 
@@ -249,9 +284,10 @@ Returns the list of active language plugins.
 
 ```json
 [
-  { "code": "en", "display_name": "English (stub)", "direction": "ltr" },
   { "code": "es", "display_name": "Spanish",        "direction": "ltr" },
-  { "code": "fr", "display_name": "French (stub)",  "direction": "ltr" }
+  { "code": "fr", "display_name": "French",         "direction": "ltr" },
+  { "code": "ar", "display_name": "Arabic",         "direction": "rtl" },
+  { "code": "en", "display_name": "English (stub)", "direction": "ltr" }
 ]
 ```
 
@@ -292,6 +328,15 @@ No external services needed for most tests. See [CONTRIBUTING.md](CONTRIBUTING.m
 `ENABLED_LANGUAGES` is a comma-separated list (e.g. `es,fr`) that restricts which plugins are registered. Unset means load all discovered plugins.
 
 See `.env.example` for the full list including the `POSTGRES_*` variables used by Docker Compose.
+
+---
+
+## Known limitations
+
+- **Lesson prose is English-only.** `build_lesson()` always produces English explanations ("The word X is a noun"). There is no `l1_language` parameter yet; learners whose native language is not English see English metalanguage regardless of the target language.
+- **Background parse is in-process.** `POST /parse/jobs` runs NLP in a thread-pool executor inside the same uvicorn process. Multi-worker deployments (`--workers N`) will not share job state across processes; the progress SSE stream works only when the request hits the same worker that started the job.
+- **Classical lexicons are small.** Latin and Koine Greek are in dictionary mode with ~100–200 curated entries. Coverage of authentic classical texts is limited; most tokens will parse as vocabulary with low confidence.
+- **WCAG 2.1 AA — code audit complete, manual AT test pending.** A static code audit fixed 8 issues. A human keyboard-only walkthrough and NVDA/VoiceOver smoke test have not been run.
 
 ---
 

@@ -17,15 +17,30 @@ Browser
         └── css/
 
 FastAPI (uvicorn)
-  ├── POST /parse
+  ├── POST /ingest                     rich ingest with source-document tracking (preferred)
+  ├── POST /parse                      legacy ingest (backward compat)
+  ├── POST /parse/jobs                 async job submission (all text sizes)
+  ├── GET  /parse/jobs/{id}            job status polling
+  ├── GET  /parse/jobs/{id}/events     SSE progress stream
   ├── GET  /lesson/{id}
   ├── POST /review
   ├── GET  /dashboard
   ├── GET  /metrics
-  ├── GET  /recommend          (alias: /recommend-text)
+  ├── GET  /recommend                  (alias: /recommend-text)
+  ├── GET  /reading/{id}               source progression state
+  ├── PATCH /reading/{id}              advance reading position
   ├── GET  /languages
+  ├── POST /translate
+  ├── POST /auth/register
+  ├── POST /auth/login
+  ├── GET  /users/me
+  ├── DELETE /users/me
+  ├── GET  /users/me/export
+  ├── GET/PATCH /users/me/fsrs-params
+  ├── POST /users/me/calibrate
+  ├── GET/PATCH /users/me/language-preferences
   ├── GET  /health             liveness (process only)
-  └── GET  /ready              readiness (DB + Redis)
+  └── GET  /ready              readiness (DB + Redis + plugins)
 
 PostgreSQL   ←  SQLAlchemy 2.0 async + asyncpg
 Redis        ←  parse-result cache (fault-tolerant, 1 h TTL)
@@ -95,12 +110,11 @@ Loads all `user_knowledge` rows for the default user (optionally filtered by `?l
 
 ### GET /metrics
 
-Loads `user_knowledge` LEFT JOIN `canonical_objects` for type information. Computes in Python:
+Queries `user_knowledge` LEFT JOIN `canonical_objects` for type information, and `review_events` for historical figures. Computes in Python:
 - overall retention, success rate, average FSRS stability
 - per-language and per-type breakdowns
 - weakest-10 reviewed objects (lowest `mastery_score`)
-
-No historical data is stored yet; all figures represent the current snapshot.
+- `reviews_today`, `streak_days`, `daily_activity` from `review_events`
 
 ### GET /recommend (and /recommend-text)
 
@@ -166,9 +180,9 @@ LanguageCapabilities(
 ```
 
 The lesson builder dispatches based on the richest supported mode:
-- `"morphology"` — full conjugation/agreement/tense drills (Spanish)
-- `"vocabulary"` — lemma + POS only; no morphological drills (English/French stubs)
-- `"dictionary"` — word + gloss only (future: minimal-NLP languages)
+- `"morphology"` — full conjugation/agreement/tense drills (Spanish, French, German, Russian, Japanese, Portuguese, Italian)
+- `"vocabulary"` — lemma + POS only; no morphological drills (English stub)
+- `"dictionary"` — word + gloss only (Arabic, Hebrew, Chinese, Latin, Koine Greek)
 
 The difficulty scorer's `score_sentence()` accepts an optional `word_count_hint: int` for languages where `text.split()` is meaningless (CJK, Thai). Pass this from plugin-derived token counts when available.
 
@@ -265,7 +279,7 @@ FACTOR = 19/81 ≈ 0.235,  DECAY = −0.5
 
 `CardState` is `frozen=True`. Every `review()` call returns a **new** object; nothing is mutated. Pass an explicit `now` in tests for deterministic results.
 
-This implementation follows FSRS-5 defaults but is not an exact reproduction. Per-user parameter fitting is not yet implemented.
+This implementation follows FSRS-5 defaults but is not an exact reproduction. Per-user parameter fitting is implemented via `POST /users/me/calibrate`: bias-correction over `ReviewEventRow` history updates `UserFsrsParamsRow`; subsequent reviews use the calibrated `desired_retention`.
 
 ---
 
@@ -314,7 +328,7 @@ sentence_objects   (join table)
   position    int
 
 user_knowledge                     PRIMARY KEY: (user_id, object_id)
-  user_id     string              "default" until auth is implemented
+  user_id     string
   object_id   string              — intentionally no FK to canonical_objects
   language    string | null
   fsrs_state  JSON | null         CardState serialised via to_dict()
@@ -323,21 +337,58 @@ user_knowledge                     PRIMARY KEY: (user_id, object_id)
   last_seen   datetime            updated on every /parse encounter
   total_reviews int
   due_at      datetime            mirrors fsrs_state["due_at"] for indexed queries
+
+review_events                      append-only; never updated
+  id (uuid), user_id, object_id, language
+  quality int, mastery_score_before float, mastery_score_after float
+  reviewed_at datetime
+
+users
+  id (uuid), email, hashed_password, created_at
+
+user_language_preferences
+  user_id, language                PRIMARY KEY (composite)
+  created_at
+
+user_fsrs_params
+  user_id                          PRIMARY KEY
+  desired_retention float, params JSON
+  updated_at
+
+source_documents
+  id (uuid), language, content_type, title, author, source_url, filename
+  char_count int, script_hint str | null, created_at
+
+  source_chunks  (FK → source_documents)
+    id (uuid), source_document_id, parsed_text_id
+    chunk_index int, char_start int, char_end int
+
+source_progression               PRIMARY KEY: (user_id, source_document_id)
+  user_id, source_document_id
+  next_position int, sentences_total int
+  avg_comprehension float, completion_fraction float
+  updated_at
 ```
 
-`user_knowledge.object_id` has no FK constraint. This lets a review be submitted for an object whose `canonical_objects` row was absent during a DB outage, or for an object submitted directly to `/review` without a prior `/parse`.
+`user_knowledge.object_id` has no FK constraint intentionally — reviews can be submitted for objects absent from `canonical_objects` during a DB outage.
 
 ### Migrations
 
-Three Alembic revision files exist:
+Nine Alembic revision files (all in `alembic/versions/`):
 
 | Revision | Content |
 |----------|---------|
-| `0001_canonical_object_graph` | Creates `canonical_objects`, `object_relations`, `sentence_objects`; migrates old `learnable_objects` string PKs to UUID-v5 |
+| `0000_baseline` | Initial `parsed_texts`, `sentences`, `user_knowledge` tables |
+| `0001_canonical_object_graph` | `canonical_objects`, `object_relations`, `sentence_objects`; UUID-v5 PK migration |
 | `0002_surface_forms` | Adds `surface_forms JSON []` to `canonical_objects` |
 | `0003_first_seen` | Adds `first_seen datetime` to `user_knowledge` |
+| `0004_users_auth` | `users` table; JWT auth support |
+| `0005_user_language_prefs` | `user_language_preferences`, `user_fsrs_params` |
+| `0006_review_events` | `review_events` append-only table |
+| `0007_source_documents` | `source_documents`, `source_chunks`, `source_progression` |
+| `0008_jsonb_key_removal` | Casts `lesson_data`/`fsrs_state` from JSON → jsonb for key-removal operators |
 
-`Base.metadata.create_all` still runs at startup for fresh deployments. For existing databases run `alembic upgrade head`. Replacing `create_all` with a mandatory migration check is tracked in the roadmap.
+Startup runs `alembic upgrade head` in a subprocess. `Base.metadata.create_all` is not called in production.
 
 ### Fault tolerance
 
@@ -383,4 +434,6 @@ All live regions use the **clear-then-set** pattern (`textContent = ''` then `qu
 
 ### Multilingual frontend status
 
-The `direction` field is present on every plugin and returned by `GET /languages`. The frontend does not yet apply `[dir="rtl"]` layout overrides. RTL support is a category-2 roadmap item.
+`dir` and `lang` attributes are applied dynamically from plugin capabilities to sentence cards, pill lists, modal title, example text, drill prompts, and fill-blank inputs. `<bdi>` elements isolate bidirectional strings in feedback. Logical CSS properties are used throughout. Non-Latin font stacks declared in `global.css`. RTL tested with Arabic and Hebrew fixtures; 43 non-Latin DB round-trip tests pass.
+
+**Remaining limitation:** lesson explanations (`build_lesson()` output) are always English prose regardless of target language.
