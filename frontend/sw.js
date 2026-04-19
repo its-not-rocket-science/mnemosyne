@@ -18,7 +18,7 @@
  * the activate event.
  */
 
-const CACHE_VERSION   = 'v4';
+const CACHE_VERSION   = 'v5.2';
 const CACHE_NAME      = `mnemosyne-static-${CACHE_VERSION}`;
 
 const STATIC_ASSETS = [

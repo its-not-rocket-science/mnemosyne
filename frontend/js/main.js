@@ -7,7 +7,7 @@ import {
   deleteReview,
   countPendingReviews,
 } from './offline.js'
-import { initUiLanguage, t } from './i18n.js'
+import { initUiLanguage, t, ti } from './i18n.js'
 
 // Initialise UI language before any other rendering.
 // Reads browser language / localStorage, applies translations, and wires
@@ -83,12 +83,12 @@ if (fileInput) {
     // Validate type and size client-side before reading.
     const isPlainText = file.type === 'text/plain' || file.name.endsWith('.txt')
     if (!isPlainText) {
-      setFileInfo('Only .txt files are supported.', 'error')
+      setFileInfo(t('file_type_error'), 'error')
       fileInput.value = ''
       return
     }
     if (file.size > MAX_FILE_BYTES) {
-      setFileInfo(`File is too large (${(file.size / 1024).toFixed(0)} KB). Maximum is 1 MB.`, 'error')
+      setFileInfo(ti('file_too_large', { kb: (file.size / 1024).toFixed(0) }), 'error')
       fileInput.value = ''
       return
     }
@@ -112,7 +112,7 @@ if (fileInput) {
       scheduleLanguageDetection()
     }
     reader.onerror = () => {
-      setFileInfo('Could not read the file. Try copying the text manually.', 'error')
+      setFileInfo(t('file_read_error'), 'error')
       currentContentType = 'pasted_text'
       currentFilename    = null
     }
@@ -159,7 +159,11 @@ async function loadLanguages() {
       ...languages.map((caps) => {
         const opt = document.createElement('option')
         opt.value = caps.code
-        opt.textContent = caps.display_name
+        opt.dataset.lessonLang = caps.code
+        const translated = t('lesson_lang_' + caps.code)
+        opt.textContent = (translated && translated !== 'lesson_lang_' + caps.code)
+          ? translated
+          : caps.display_name
         if (caps.code === current || (!firstSet && current === '')) {
           opt.selected = true
           firstSet = true
@@ -171,10 +175,12 @@ async function loadLanguages() {
     // On error, show a minimal static fallback so the form stays usable.
     languageSelect.removeAttribute('aria-busy')
     languageSelect.replaceChildren()
-    ;[['es', 'Spanish'], ['en', 'English (stub)'], ['fr', 'French (stub)']].forEach(([code, name]) => {
+    ;[['es', 'Spanish'], ['en', 'English (stub)'], ['fr', 'French (stub)']].forEach(([code, fallback]) => {
       const opt = document.createElement('option')
       opt.value = code
-      opt.textContent = name
+      opt.dataset.lessonLang = code
+      const translated = t('lesson_lang_' + code)
+      opt.textContent = (translated && translated !== 'lesson_lang_' + code) ? translated : fallback
       languageSelect.appendChild(opt)
     })
   }
@@ -226,20 +232,18 @@ function buildScriptToggleGroup() {
 
   const label = document.createElement('span')
   label.className = 'script-toggle__label'
-  label.textContent = 'View:'
+  label.dataset.i18n = 'script_view_label'
+  label.textContent = t('script_view_label')
   label.setAttribute('aria-hidden', 'true')
   group.appendChild(label)
 
-  for (const { value, text } of [
-    { value: 'native',    text: 'Script' },
-    { value: 'romanized', text: 'Romanized' },
-    { value: 'both',      text: 'Both' },
-  ]) {
+  for (const value of ['native', 'romanized', 'both']) {
     const btn = document.createElement('button')
     btn.type = 'button'
     btn.className = 'script-toggle__btn'
     btn.dataset.view = value
-    btn.textContent = text
+    btn.dataset.i18n = 'script_' + value
+    btn.textContent = t('script_' + value)
     btn.addEventListener('click', () => {
       scriptView = value
       syncScriptToggleUI(group)
@@ -279,7 +283,7 @@ if (fetchUrlBtn) {
     const url = sourceUrlInput?.value.trim()
     if (!url) {
       sourceUrlInput?.focus()
-      setFetchUrlHint('Enter a URL first.', 'error')
+      setFetchUrlHint(t('url_empty_error'), 'error')
       return
     }
 
@@ -287,8 +291,8 @@ if (fetchUrlBtn) {
     fetchUrlBtn.setAttribute('aria-busy', 'true')
     const originalLabel = fetchUrlBtn.textContent.trim()
     fetchUrlBtn.textContent = t('fetching')
-    setFetchUrlHint('Fetching page\u2026', 'busy')
-    setStatus('Fetching text from URL\u2026', 'busy')
+    setFetchUrlHint(t('fetch_page_busy'), 'busy')
+    setStatus(t('fetch_status_busy'), 'busy')
 
     try {
       const response = await fetch(`${API_BASE}/fetch-url`, {
@@ -301,7 +305,7 @@ if (fetchUrlBtn) {
       if (!response.ok) {
         const body = await response.json().catch(() => null)
         if (response.status === 503) checkBackendHealth()
-        throw new Error(body?.detail ?? `Fetch failed (${response.status})`)
+        throw new Error(body?.detail ?? `${t('fetch_failed')} (${response.status})`)
       }
 
       const data = await response.json()
@@ -326,24 +330,18 @@ if (fetchUrlBtn) {
         if (option) {
           languageSelect.value = data.detected_language
           syncCurrentCaps()
-          setStatus(
-            `Fetched ${chars} characters. Language detected: ${option.text}.`
-          )
+          setStatus(ti('fetched_chars_lang', { n: chars, name: option.text }))
         } else {
-          // Language detected but no plugin — report without changing select.
-          setStatus(
-            `Fetched ${chars} characters. ` +
-            `Detected language '${data.detected_language}' has no plugin.`
-          )
+          setStatus(ti('fetched_chars_no_plugin', { n: chars, lang: data.detected_language }))
         }
       } else {
-        setStatus(`Fetched ${chars} characters.`)
+        setStatus(ti('fetched_chars', { n: chars }))
       }
 
-      setFetchUrlHint(`${chars} characters extracted.`)
+      setFetchUrlHint(ti('chars_extracted', { n: chars }))
       textarea.focus()
     } catch (error) {
-      const msg = error instanceof Error ? error.message : 'Fetch failed.'
+      const msg = error instanceof Error ? error.message : t('fetch_failed')
       setFetchUrlHint(msg, 'error')
       setStatus(msg, 'error')
     } finally {
@@ -394,10 +392,9 @@ async function _runLanguageDetection() {
       languageSelect.value = data.language
       syncCurrentCaps()
       const name = languageSelect.options[languageSelect.selectedIndex]?.text ?? data.language
-      setStatus(`Language detected: ${name}.`)
+      setStatus(ti('lang_detected', { name }))
     } else {
-      // Detected but unsupported — announce without touching the select.
-      setStatus(`Detected language '${data.language}' has no plugin in this deployment.`)
+      setStatus(ti('lang_no_plugin', { lang: data.language }))
     }
   } catch {
     // Detection failure is silent — it is always best-effort.
@@ -440,14 +437,14 @@ form.addEventListener('submit', async (event) => {
   const text = textarea.value.trim()
   if (!text) {
     textarea.setAttribute('aria-invalid', 'true')
-    setStatus('Please enter some text to parse.', 'error')
+    setStatus(t('text_empty_error'), 'error')
     textarea.focus()
     return
   }
 
   reviewStateByObject.clear()
   showResultsMessage(t('loading'))
-  setStatus('Parsing text\u2026', 'busy')
+  setStatus(t('parsing_status'), 'busy')
 
   submitButton.disabled = true
   submitButton.setAttribute('aria-busy', 'true')
@@ -480,14 +477,14 @@ form.addEventListener('submit', async (event) => {
       if (!response.ok) {
         const body = await response.json().catch(() => null)
         if (response.status === 503) checkBackendHealth()
-        throw new Error(body?.detail ?? `Parse failed (${response.status})`)
+        throw new Error(body?.detail ?? `${t('parsing_failed')} (${response.status})`)
       }
       data = await response.json()
     }
 
     if (data.sentences.length === 0) {
-      showResultsMessage('No learnable items found \u2014 try pasting a longer passage.')
-      setStatus('No sentences found.')
+      showResultsMessage(t('no_items_found'))
+      setStatus(t('no_sentences_found'))
       return
     }
 
@@ -495,17 +492,16 @@ form.addEventListener('submit', async (event) => {
     const n = data.sentences.length
 
     // Surface any non-fatal validation warnings (e.g. script mismatch).
+    const parsedMsg = n === 1 ? t('sentence_parsed_1') : ti('sentences_parsed', { n })
     if (data.warnings?.length) {
       setStatus(data.warnings[0], 'error')
-      setTimeout(() => {
-        setStatus(`${n} sentence${n !== 1 ? 's' : ''} parsed. Use Tab to navigate the items.`)
-      }, 4000)
+      setTimeout(() => setStatus(parsedMsg), 4000)
     } else {
-      setStatus(`${n} sentence${n !== 1 ? 's' : ''} parsed. Use Tab to navigate the items.`)
+      setStatus(parsedMsg)
     }
   } catch (error) {
-    showResultsMessage('An error occurred. Please try again.')
-    setStatus(error instanceof Error ? error.message : 'Parsing failed.', 'error')
+    showResultsMessage(t('parse_error_generic'))
+    setStatus(error instanceof Error ? error.message : t('parsing_failed'), 'error')
   } finally {
     submitButton.disabled = false
     submitButton.removeAttribute('aria-busy')
@@ -524,7 +520,7 @@ results.addEventListener('lesson-open', async (event) => {
   const caps   = languageCapabilities.get(language)
   const ttsTag = caps?.tts_lang_tag ?? language
 
-  setStatus('Loading lesson\u2026', 'busy')
+  setStatus(t('loading_lesson'), 'busy')
 
   try {
     const url = `${API_BASE}/lesson/${encodeURIComponent(objectId)}?language=${encodeURIComponent(language)}`
@@ -546,9 +542,9 @@ results.addEventListener('lesson-open', async (event) => {
       onSpeak: (text) => speakText(text, ttsTag),
     })
 
-    setStatus(`Lesson open: ${lesson.title}.`)
+    setStatus(ti('lesson_open', { title: lesson.title }))
   } catch (error) {
-    setStatus(error instanceof Error ? error.message : 'Failed to load lesson.', 'error')
+    setStatus(error instanceof Error ? error.message : t('load_lesson_failed'), 'error')
   }
 })
 
@@ -633,12 +629,12 @@ async function parseWithJob(text, language) {
   })
   if (!jobResp.ok) {
     const body = await jobResp.json().catch(() => null)
-    throw new Error(body?.detail ?? `Job submission failed (${jobResp.status})`)
+    throw new Error(body?.detail ?? `${t('parsing_failed')} (${jobResp.status})`)
   }
   const { job_id: jobId } = await jobResp.json()
 
   // ── 2. Stream SSE progress ─────────────────────────────────────────────────
-  setJobProgress(0, 'Queued\u2026')
+  setJobProgress(0, t('job_queued'))
 
   const eventsResp = await fetch(`${API_BASE}/parse/jobs/${jobId}/events`, {
     headers: getAuthHeaders(),
@@ -653,7 +649,7 @@ async function parseWithJob(text, language) {
       const total = event.sentences_total
       const done  = event.sentences_done
       const label = total
-        ? `Analysing\u2026 ${done}/${total} sentences`
+        ? ti('job_analysing', { done, total })
         : _stageLabel(event.stage)
       setJobProgress(pct, label)
     }
@@ -663,7 +659,7 @@ async function parseWithJob(text, language) {
     }
 
     if (event.status === 'failed') {
-      throw new Error(event.error ?? 'Parse job failed.')
+      throw new Error(event.error ?? t('job_failed'))
     }
   }
 
@@ -673,13 +669,16 @@ async function parseWithJob(text, language) {
   })
   const finalJob = await poll.json()
   if (finalJob.status === 'done')    return finalJob.result
-  if (finalJob.status === 'failed')  throw new Error(finalJob.error ?? 'Parse job failed.')
-  throw new Error('Job did not complete in time. Check back later.')
+  if (finalJob.status === 'failed')  throw new Error(finalJob.error ?? t('job_failed'))
+  throw new Error(t('job_timeout'))
 }
 
 function _stageLabel(stage) {
-  return { nlp: 'Analysing text\u2026', persist: 'Saving\u2026', pending: 'Queued\u2026' }[stage]
-    ?? 'Processing\u2026'
+  return {
+    nlp:     t('job_analysing_text'),
+    persist: t('job_saving'),
+    pending: t('job_queued'),
+  }[stage] ?? t('job_processing')
 }
 
 /** Show/update the job progress bar.  Pass null to hide it. */
