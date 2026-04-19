@@ -277,7 +277,7 @@ async def _persist_parse(
 
     # ── Pass 2: upsert object relations (batched) ───────────────────────────
     # Collect every (src_id, tgt_id, relation_type) triple that should exist.
-    desired_relations: list[tuple[str, str, str]] = []
+    desired_relations: set[tuple[str, str, str]] = set()
     for cand_result in candidate_results:
         for cand in cand_result.candidates:
             src_id = canonical_object_id(payload.language, cand.type, cand.canonical_form)
@@ -287,7 +287,7 @@ async def _persist_parse(
                 )
                 if tgt_id not in uuid_to_candidate:
                     continue  # target not extracted in this parse — skip
-                desired_relations.append((src_id, tgt_id, hint.relation_type))
+                desired_relations.add((src_id, tgt_id, hint.relation_type))
 
     if desired_relations:
         src_ids = list({r[0] for r in desired_relations})
