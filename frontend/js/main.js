@@ -9,25 +9,17 @@ import {
 } from './offline.js'
 import { initUiLanguage, t, ti } from './i18n.js'
 
-// Initialise UI language before any other rendering.
-// Reads browser language / localStorage, applies translations, and wires
-// the #ui-language switcher select.
 initUiLanguage()
 
 const API_BASE = 'http://localhost:8000'
 
 // ── DOM references ────────────────────────────────────────────────────────────
 
-const form           = document.querySelector('#parse-form')
-const languageSelect = document.querySelector('#language')
-const sourceTitleInput = document.querySelector('#source-title')
-const sourceUrlInput = document.querySelector('#source-url')
-const fetchUrlBtn    = document.querySelector('#fetch-url-btn')
-const fetchUrlHint   = document.querySelector('#fetch-url-hint')
-const fileInput      = document.querySelector('#file-input')
-const fileInfo       = document.querySelector('#file-info')
-const textarea          = document.querySelector('#source-text')
-const submitButton      = document.querySelector('#parse-submit')
+const languageSelect    = document.querySelector('#language')
+const chooseTextBtn     = document.querySelector('#choose-text-btn')
+const changeTextBtn     = document.querySelector('#change-text-btn')
+const chosenTextDisplay = document.querySelector('#chosen-text-display')
+const saveLessonBtn     = document.querySelector('#save-lesson-btn')
 const results           = document.querySelector('#results')
 const resultsEmpty      = document.querySelector('.results-empty')
 const status            = document.querySelector('#status')
@@ -37,108 +29,69 @@ const jobProgressPanel  = document.querySelector('#job-progress')
 const jobProgressFill   = document.querySelector('#job-progress-fill')
 const jobProgressLabel  = document.querySelector('#job-progress-label')
 
-// Texts longer than this go through the async job endpoint instead of /ingest.
+// Text-picker dialog
+const textPickerDialog  = document.querySelector('#text-picker')
+const pickerUrlInput    = document.querySelector('#picker-url')
+const pickerFetchUrlBtn = document.querySelector('#picker-fetch-url-btn')
+const pickerTextarea    = document.querySelector('#picker-text')
+const pickerFileInput   = document.querySelector('#picker-file-input')
+const pickerUseBtn      = document.querySelector('#picker-use-btn')
+const pickerStatus      = document.querySelector('#picker-status')
+const pickerCloseBtn    = document.querySelector('#picker-close-btn')
+
+// Save-lesson dialog
+const saveLessonDialog     = document.querySelector('#save-lesson-dialog')
+const saveTitleInput       = document.querySelector('#save-title')
+const saveLessonStatus     = document.querySelector('#save-lesson-status')
+const saveLessonCloseBtn   = document.querySelector('#save-lesson-close-btn')
+const saveLessonConfirmBtn = document.querySelector('#save-lesson-confirm-btn')
+
 const MAX_SYNC_CHARS = 10_000
 
-// Carries FSRS state across multiple ratings of the same object in one session.
 const reviewStateByObject = new Map()
 
-// Tracks whether the current textarea content came from a file upload.
-// Reset to 'pasted_text' whenever the user edits the textarea directly.
-let currentContentType = 'pasted_text'
-let currentFilename    = null
-
-// True once the user has manually changed the language select; prevents
-// auto-detection from overriding an explicit user choice.
-// Reset when new text is imported from a URL or file.
+let currentContentType   = 'pasted_text'
+let currentFilename      = null
+let currentSourceUrl     = null
 let languageUserSelected = false
+let currentText          = ''   // committed text from picker
 
-// ── Language capabilities ─────────────────────────────────────────────────────
-// Populated from GET /languages on page load.
-// Maps language code → LanguageCapabilities object from the backend schema.
 const languageCapabilities = new Map()
-
-// Currently selected language capabilities — updated whenever the select changes.
 let currentCaps = null
-
-// Script view state for the results panel.
-// 'native'    — show source script only (default)
-// 'romanized' — show romanized/transliterated form only
-// 'both'      — show both layers side by side
-// Only active when currentCaps.transliteration_scheme is set.
-let scriptView = 'native'
-
-// ── File input ────────────────────────────────────────────────────────────────
-// Reads a .txt file into the textarea and records the filename for the
-// ingest payload.  The textarea remains the editing surface — the user can
-// review and edit the loaded text before submitting.
+let scriptView  = 'native'
 
 const MAX_FILE_BYTES = 1_048_576  // 1 MiB
 
-if (fileInput) {
-  fileInput.addEventListener('change', () => {
-    const file = fileInput.files?.[0]
-    if (!file) return
 
-    // Validate type and size client-side before reading.
-    const isPlainText = file.type === 'text/plain' || file.name.endsWith('.txt')
-    if (!isPlainText) {
-      setFileInfo(t('file_type_error'), 'error')
-      fileInput.value = ''
-      return
-    }
-    if (file.size > MAX_FILE_BYTES) {
-      setFileInfo(ti('file_too_large', { kb: (file.size / 1024).toFixed(0) }), 'error')
-      fileInput.value = ''
-      return
-    }
+// ── Defocus on pointer interaction ────────────────────────────────────────────
+// Blurs buttons/links after mouse/touch click so focus rings don't linger.
+// pointerup never fires for keyboard events, so keyboard nav is unaffected.
+document.addEventListener('pointerup', () => {
+  setTimeout(() => {
+    const el  = document.activeElement
+    if (!el || el === document.body) return
+    const tag = el.tagName.toLowerCase()
+    if (tag === 'button' || tag === 'a') el.blur()
+  }, 0)
+}, { passive: true })
 
-    const reader = new FileReader()
-    reader.onload = (evt) => {
-      const text = evt.target.result
-      textarea.value = text
-      textarea.removeAttribute('aria-invalid')
-      currentContentType  = 'uploaded_file'
-      currentFilename     = file.name
-      languageUserSelected = false  // fresh import: allow auto-detection
+// Blur select after pointer-driven option selection.
+// change fires on every arrow-key press too, so we only blur when the
+// interaction was initiated by a pointer (tracked via pointerdown).
+const _selectsWithPointerDown = new WeakSet()
+document.addEventListener('pointerdown', e => {
+  if (e.target.tagName.toLowerCase() === 'select') _selectsWithPointerDown.add(e.target)
+}, { passive: true })
+document.addEventListener('change', e => {
+  const el = e.target
+  if (el.tagName.toLowerCase() === 'select' && _selectsWithPointerDown.has(el)) {
+    _selectsWithPointerDown.delete(el)
+    el.blur()
+  }
+})
 
-      // Pre-fill the title with the filename (minus extension) if the user
-      // hasn't already typed a title.
-      if (sourceTitleInput && !sourceTitleInput.value.trim()) {
-        sourceTitleInput.value = file.name.replace(/\.[^.]+$/, '')
-      }
 
-      setFileInfo(`Loaded: ${escapeHtml(file.name)} (${(file.size / 1024).toFixed(1)} KB)`)
-      scheduleLanguageDetection()
-    }
-    reader.onerror = () => {
-      setFileInfo(t('file_read_error'), 'error')
-      currentContentType = 'pasted_text'
-      currentFilename    = null
-    }
-    reader.readAsText(file, 'utf-8')
-  })
-}
-
-// Reset content_type when user edits the textarea directly, then schedule
-// a debounced language-detection call.
-if (textarea) {
-  textarea.addEventListener('input', () => {
-    if (currentContentType === 'uploaded_file') {
-      currentContentType = 'pasted_text'
-      currentFilename    = null
-      setFileInfo('')
-    }
-    scheduleLanguageDetection()
-  })
-}
-
-function setFileInfo(message, state = 'idle') {
-  if (!fileInfo) return
-  fileInfo.textContent = message
-  fileInfo.dataset.state = state  // 'idle' | 'error'
-}
-
+// ── Language capabilities ─────────────────────────────────────────────────────
 
 async function loadLanguages() {
   try {
@@ -150,8 +103,6 @@ async function loadLanguages() {
       languageCapabilities.set(caps.code, caps)
     }
 
-    // Replace the loading placeholder with real options.
-    // Preserve any prior selection; otherwise default to the first in the list.
     const current = languageSelect.value
     let firstSet  = false
     languageSelect.removeAttribute('aria-busy')
@@ -172,7 +123,6 @@ async function loadLanguages() {
       })
     )
   } catch {
-    // On error, show a minimal static fallback so the form stays usable.
     languageSelect.removeAttribute('aria-busy')
     languageSelect.replaceChildren()
     ;[['es', 'Spanish'], ['en', 'English (stub)'], ['fr', 'French (stub)']].forEach(([code, fallback]) => {
@@ -185,17 +135,14 @@ async function loadLanguages() {
     })
   }
 
-  // Sync currentCaps after options are settled.
   syncCurrentCaps()
 }
 
 loadLanguages()
 
-// Re-sync whenever the user changes the language.
-// Mark languageUserSelected so auto-detection respects the manual choice.
 languageSelect.addEventListener('change', () => {
   languageUserSelected = true
-  scriptView = 'native'  // reset view for the new language
+  scriptView = 'native'
   syncCurrentCaps()
 })
 
@@ -206,8 +153,6 @@ function syncCurrentCaps() {
 
 
 // ── Script view toolbar ───────────────────────────────────────────────────────
-// Only shown for languages that declare a transliteration_scheme, since that
-// is the prerequisite for romanized output existing in the lesson data.
 
 function updateScriptViewToolbar() {
   if (!resultsToolbar) return
@@ -215,7 +160,6 @@ function updateScriptViewToolbar() {
   resultsToolbar.hidden = !supported
   if (!supported) return
 
-  // Build toggle group on first show; re-use on subsequent calls.
   let group = resultsToolbar.querySelector('.script-toggle')
   if (!group) {
     group = buildScriptToggleGroup()
@@ -268,96 +212,175 @@ function applyScriptViewToResults() {
 }
 
 
-// ── URL fetch ─────────────────────────────────────────────────────────────────
-// Calls POST /fetch-url to retrieve a page server-side and populate the
-// textarea.  The browser makes no cross-origin request to the remote URL.
+// ── Text-picker dialog ────────────────────────────────────────────────────────
 
-function setFetchUrlHint(message, state = 'idle') {
-  if (!fetchUrlHint) return
-  fetchUrlHint.textContent = message
-  fetchUrlHint.dataset.state = state   // 'idle' | 'busy' | 'error'
+function openPicker() {
+  if (currentText && pickerTextarea) pickerTextarea.value = currentText
+  textPickerDialog?.showModal()
+  pickerTextarea?.focus()
 }
 
-if (fetchUrlBtn) {
-  fetchUrlBtn.addEventListener('click', async () => {
-    const url = sourceUrlInput?.value.trim()
-    if (!url) {
-      sourceUrlInput?.focus()
-      setFetchUrlHint(t('url_empty_error'), 'error')
-      return
+chooseTextBtn?.addEventListener('click', openPicker)
+changeTextBtn?.addEventListener('click', openPicker)
+pickerCloseBtn?.addEventListener('click', () => textPickerDialog?.close())
+
+// File input inside picker
+pickerFileInput?.addEventListener('change', () => {
+  const file = pickerFileInput.files?.[0]
+  if (!file) return
+
+  const isPlainText = file.type === 'text/plain' || file.name.endsWith('.txt')
+  if (!isPlainText) {
+    setPickerStatus(t('file_type_error'), 'error')
+    pickerFileInput.value = ''
+    return
+  }
+  if (file.size > MAX_FILE_BYTES) {
+    setPickerStatus(ti('file_too_large', { kb: (file.size / 1024).toFixed(0) }), 'error')
+    pickerFileInput.value = ''
+    return
+  }
+
+  const reader = new FileReader()
+  reader.onload = evt => {
+    pickerTextarea.value = evt.target.result
+    currentContentType   = 'uploaded_file'
+    currentFilename      = file.name
+    languageUserSelected = false
+    setPickerStatus(`Loaded: ${escapeHtml(file.name)} (${(file.size / 1024).toFixed(1)} KB)`)
+    scheduleLanguageDetection()
+  }
+  reader.onerror = () => {
+    setPickerStatus(t('file_read_error'), 'error')
+    currentContentType = 'pasted_text'
+    currentFilename    = null
+  }
+  reader.readAsText(file, 'utf-8')
+})
+
+// URL fetch inside picker
+pickerFetchUrlBtn?.addEventListener('click', async () => {
+  const url = pickerUrlInput?.value.trim()
+  if (!url) {
+    pickerUrlInput?.focus()
+    setPickerStatus(t('url_empty_error'), 'error')
+    return
+  }
+
+  pickerFetchUrlBtn.disabled = true
+  pickerFetchUrlBtn.setAttribute('aria-busy', 'true')
+  const originalLabel = pickerFetchUrlBtn.textContent.trim()
+  pickerFetchUrlBtn.textContent = t('fetching')
+  setPickerStatus(t('fetch_page_busy'), 'busy')
+
+  try {
+    const response = await fetch(`${API_BASE}/fetch-url`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
+      body:    JSON.stringify({ source_url: url }),
+    })
+    handleStartupWarningHeader(response)
+    if (!response.ok) {
+      const body = await response.json().catch(() => null)
+      if (response.status === 503) checkBackendHealth()
+      throw new Error(body?.detail ?? `${t('fetch_failed')} (${response.status})`)
     }
 
-    fetchUrlBtn.disabled = true
-    fetchUrlBtn.setAttribute('aria-busy', 'true')
-    const originalLabel = fetchUrlBtn.textContent.trim()
-    fetchUrlBtn.textContent = t('fetching')
-    setFetchUrlHint(t('fetch_page_busy'), 'busy')
-    setStatus(t('fetch_status_busy'), 'busy')
+    const data = await response.json()
+    pickerTextarea.value = data.text
+    currentContentType   = 'article'
+    currentFilename      = null
+    languageUserSelected = false
 
-    try {
-      const response = await fetch(`${API_BASE}/fetch-url`, {
-        method:  'POST',
-        headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
-        body:    JSON.stringify({ source_url: url }),
-      })
-
-      handleStartupWarningHeader(response)
-      if (!response.ok) {
-        const body = await response.json().catch(() => null)
-        if (response.status === 503) checkBackendHealth()
-        throw new Error(body?.detail ?? `${t('fetch_failed')} (${response.status})`)
-      }
-
-      const data = await response.json()
-
-      textarea.value = data.text
-      textarea.removeAttribute('aria-invalid')
-      currentContentType   = 'article'
-      currentFilename      = null
-      languageUserSelected = false   // fresh import: allow auto-detection
-      setFileInfo('')
-
-      // Pre-fill the title if the user hasn't typed one and the page has one.
-      if (sourceTitleInput && !sourceTitleInput.value.trim() && data.title) {
-        sourceTitleInput.value = data.title
-      }
-
-      const chars = data.char_count.toLocaleString()
-
-      // Apply the language detection bundled with the fetch result.
-      if (data.detected_language) {
-        const option = [...languageSelect.options].find(o => o.value === data.detected_language)
-        if (option) {
-          languageSelect.value = data.detected_language
-          syncCurrentCaps()
-          setStatus(ti('fetched_chars_lang', { n: chars, name: option.text }))
-        } else {
-          setStatus(ti('fetched_chars_no_plugin', { n: chars, lang: data.detected_language }))
-        }
+    const chars = data.char_count.toLocaleString()
+    if (data.detected_language) {
+      const option = [...languageSelect.options].find(o => o.value === data.detected_language)
+      if (option) {
+        languageSelect.value = data.detected_language
+        syncCurrentCaps()
+        setPickerStatus(ti('fetched_chars_lang', { n: chars, name: option.text }))
       } else {
-        setStatus(ti('fetched_chars', { n: chars }))
+        setPickerStatus(ti('fetched_chars_no_plugin', { n: chars, lang: data.detected_language }))
       }
-
-      setFetchUrlHint(ti('chars_extracted', { n: chars }))
-      textarea.focus()
-    } catch (error) {
-      const msg = error instanceof Error ? error.message : t('fetch_failed')
-      setFetchUrlHint(msg, 'error')
-      setStatus(msg, 'error')
-    } finally {
-      fetchUrlBtn.disabled = false
-      fetchUrlBtn.removeAttribute('aria-busy')
-      fetchUrlBtn.textContent = originalLabel
+    } else {
+      setPickerStatus(ti('fetched_chars', { n: chars }))
     }
-  })
+  } catch (error) {
+    const msg = error instanceof Error ? error.message : t('fetch_failed')
+    setPickerStatus(msg, 'error')
+  } finally {
+    pickerFetchUrlBtn.disabled = false
+    pickerFetchUrlBtn.removeAttribute('aria-busy')
+    pickerFetchUrlBtn.textContent = originalLabel
+  }
+})
+
+// Textarea edits inside picker
+pickerTextarea?.addEventListener('input', () => {
+  if (currentContentType === 'uploaded_file') {
+    currentContentType = 'pasted_text'
+    currentFilename    = null
+  }
+  setPickerStatus('')
+  scheduleLanguageDetection()
+})
+
+// Confirm: "Use this text"
+pickerUseBtn?.addEventListener('click', () => {
+  const text = pickerTextarea?.value.trim() ?? ''
+  if (!text) {
+    setPickerStatus(t('text_empty_error'), 'error')
+    pickerTextarea?.focus()
+    return
+  }
+  currentText      = text
+  currentSourceUrl = pickerUrlInput?.value.trim() || null
+  textPickerDialog?.close()
+  showChosenText(text)
+  doParseText(text)
+})
+
+function setPickerStatus(message, state = 'idle') {
+  if (!pickerStatus) return
+  pickerStatus.textContent = message
+  pickerStatus.dataset.state = state
 }
+
+function showChosenText(text) {
+  if (!chosenTextDisplay) return
+  const preview = text.length > 300 ? text.slice(0, 300) + '\u2026' : text
+  chosenTextDisplay.textContent = preview
+  chosenTextDisplay.hidden = false
+  if (chooseTextBtn) chooseTextBtn.hidden = true
+  if (changeTextBtn) changeTextBtn.hidden = false
+}
+
+
+// ── Save-lesson dialog ────────────────────────────────────────────────────────
+
+saveLessonBtn?.addEventListener('click', () => {
+  saveLessonDialog?.showModal()
+  saveTitleInput?.focus()
+})
+
+saveLessonCloseBtn?.addEventListener('click', () => saveLessonDialog?.close())
+
+saveLessonConfirmBtn?.addEventListener('click', () => {
+  const title = saveTitleInput?.value.trim() ?? ''
+  if (!title) {
+    if (saveLessonStatus) {
+      saveLessonStatus.textContent = t('text_empty_error')
+      saveLessonStatus.dataset.state = 'error'
+    }
+    saveTitleInput?.focus()
+    return
+  }
+  // TODO: implement lesson saving
+  saveLessonDialog?.close()
+})
 
 
 // ── Language auto-detection ───────────────────────────────────────────────────
-// Debounced: fires 600 ms after the last textarea change.
-// Skipped when the user has manually set the language select.
-// Calls POST /detect-language; updates the select only when confidence is
-// high enough and the detected language has a registered plugin.
 
 const _DETECT_DEBOUNCE_MS = 600
 const _DETECT_MIN_CHARS   = 50
@@ -369,7 +392,7 @@ function scheduleLanguageDetection() {
 }
 
 async function _runLanguageDetection() {
-  const text = textarea?.value.trim() ?? ''
+  const text = pickerTextarea?.value.trim() ?? ''
   if (text.length < _DETECT_MIN_CHARS) return
   if (languageUserSelected) return
 
@@ -385,37 +408,34 @@ async function _runLanguageDetection() {
     if (!data.language) return
 
     const currentCode = languageSelect.value
-    if (data.language === currentCode) return  // already correct — no-op
+    if (data.language === currentCode) return
 
     if (data.supported) {
-      // Update the select and announce the change.
       languageSelect.value = data.language
       syncCurrentCaps()
       const name = languageSelect.options[languageSelect.selectedIndex]?.text ?? data.language
-      setStatus(ti('lang_detected', { name }))
+      setPickerStatus(ti('lang_detected', { name }))
     } else {
-      setStatus(ti('lang_no_plugin', { lang: data.language }))
+      setPickerStatus(ti('lang_no_plugin', { lang: data.language }))
     }
   } catch {
-    // Detection failure is silent — it is always best-effort.
+    // Detection failure is silent — always best-effort.
   }
 }
 
 
 // ── Status helper ─────────────────────────────────────────────────────────────
-// Clear-then-set ensures screen readers re-announce even identical messages.
 
 function setStatus(message, state = 'idle') {
   status.textContent = ''
   queueMicrotask(() => {
     status.textContent = message
-    status.dataset.state = state   // 'idle' | 'busy' | 'error'
+    status.dataset.state = state
   })
 }
 
 
 // ── Results empty state ───────────────────────────────────────────────────────
-// resultsEmpty is a persistent orphan node moved in/out of #results.
 
 function showResultsMessage(message) {
   resultsEmpty.textContent = message
@@ -427,46 +447,27 @@ function hideResultsMessage() {
 }
 
 
-// ── Parse form ────────────────────────────────────────────────────────────────
+// ── Parse text ────────────────────────────────────────────────────────────────
 
-form.addEventListener('submit', async (event) => {
-  event.preventDefault()
-
-  textarea.removeAttribute('aria-invalid')
-
-  const text = textarea.value.trim()
-  if (!text) {
-    textarea.setAttribute('aria-invalid', 'true')
-    setStatus(t('text_empty_error'), 'error')
-    textarea.focus()
-    return
-  }
-
+async function doParseText(text) {
   reviewStateByObject.clear()
   showResultsMessage(t('loading'))
   setStatus(t('parsing_status'), 'busy')
-
-  submitButton.disabled = true
-  submitButton.setAttribute('aria-busy', 'true')
-  const originalLabel = submitButton.textContent.trim()
-  submitButton.textContent = t('parsing')
 
   try {
     const language = languageSelect.value
 
     let data
     if (text.length > MAX_SYNC_CHARS) {
-      // Large text — use the async job endpoint with SSE progress reporting.
       data = await parseWithJob(text, language)
     } else {
-      // Small text — use the existing sync /ingest endpoint.
       const payload = {
         language,
         text,
         content_type: currentContentType,
-        title:        sourceTitleInput?.value.trim() || null,
-        source_url:   sourceUrlInput?.value.trim() || null,
-        filename:     currentFilename || null,
+        title:        null,
+        source_url:   currentSourceUrl || null,
+        filename:     currentFilename  || null,
       }
       const response = await fetch(`${API_BASE}/ingest`, {
         method:  'POST',
@@ -485,13 +486,12 @@ form.addEventListener('submit', async (event) => {
     if (data.sentences.length === 0) {
       showResultsMessage(t('no_items_found'))
       setStatus(t('no_sentences_found'))
+      if (saveLessonBtn) saveLessonBtn.hidden = true
       return
     }
 
     renderResults(data.sentences, language)
     const n = data.sentences.length
-
-    // Surface any non-fatal validation warnings (e.g. script mismatch).
     const parsedMsg = n === 1 ? t('sentence_parsed_1') : ti('sentences_parsed', { n })
     if (data.warnings?.length) {
       setStatus(data.warnings[0], 'error')
@@ -499,26 +499,26 @@ form.addEventListener('submit', async (event) => {
     } else {
       setStatus(parsedMsg)
     }
+    if (saveLessonBtn) saveLessonBtn.hidden = false
   } catch (error) {
     showResultsMessage(t('parse_error_generic'))
     setStatus(error instanceof Error ? error.message : t('parsing_failed'), 'error')
   } finally {
-    submitButton.disabled = false
-    submitButton.removeAttribute('aria-busy')
-    submitButton.textContent = originalLabel
-    setJobProgress(null)  // hide progress bar
+    setJobProgress(null)
   }
-})
+}
 
 
 // ── Lesson open ───────────────────────────────────────────────────────────────
-// Delegated to #results; lesson-open is dispatched with composed:true so it
-// crosses the shadow-DOM boundary and reaches the light DOM.
 
 results.addEventListener('lesson-open', async (event) => {
   const { objectId, language } = event.detail
   const caps   = languageCapabilities.get(language)
   const ttsTag = caps?.tts_lang_tag ?? language
+
+  // Blur the pill that triggered the event so focus doesn't return to it
+  // when the modal closes (browsers restore focus to the pre-modal element).
+  document.activeElement?.blur()
 
   setStatus(t('loading_lesson'), 'busy')
 
@@ -552,39 +552,29 @@ results.addEventListener('lesson-open', async (event) => {
 // ── Render sentence cards ─────────────────────────────────────────────────────
 
 function renderResults(sentences, language) {
-  const fragment   = document.createDocumentFragment()
-  const caps       = languageCapabilities.get(language)
-  const dir        = caps?.direction       ?? 'ltr'
-  const tokenMode  = caps?.tokenization_mode ?? 'whitespace'
-  const scriptFam  = caps?.script_family   ?? 'latin'
+  const fragment  = document.createDocumentFragment()
+  const caps      = languageCapabilities.get(language)
+  const dir       = caps?.direction         ?? 'ltr'
+  const tokenMode = caps?.tokenization_mode ?? 'whitespace'
+  const scriptFam = caps?.script_family     ?? 'latin'
 
   for (const sentence of sentences) {
     const article = document.createElement('article')
     article.className = 'sentence-card'
-    // Expose tokenization mode on the card so CSS can adjust pill layout for
-    // segmented scripts (CJK, Thai) where tokens have no natural whitespace.
     article.dataset.tokenization = tokenMode
 
     const textEl = document.createElement('p')
     textEl.className = 'sentence-card__text'
-    textEl.textContent = sentence.text   // textContent — never innerHTML
-    // lang + dir: correct AT announcement, font shaping, and line-breaking.
+    textEl.textContent = sentence.text
     textEl.setAttribute('lang', language)
     textEl.setAttribute('dir',  dir)
-    // data-tokenization: drives word-break CSS for segmented / character scripts.
     textEl.dataset.tokenization = tokenMode
-    // data-script-family: CSS hook for font/layout rules when lang selectors
-    // do not match (e.g. private-use codes like x-rtl-test, x-cjk-test).
     textEl.dataset.scriptFamily = scriptFam
-    // data-layer: consumed by script-view CSS when transliteration is toggled.
     textEl.dataset.layer = 'native'
 
     const list = document.createElement('ul')
     list.className = 'sentence-card__pills'
-    // list-style:none in CSS removes list semantics in Safari VoiceOver;
-    // role="list" restores them (SC 1.3.1).
     list.setAttribute('role', 'list')
-    // Pill labels are target-language text; match text direction.
     list.setAttribute('dir', dir)
 
     for (const item of sentence.learnable_objects) {
@@ -594,7 +584,6 @@ function renderResults(sentences, language) {
       pill.setAttribute('label',     item.label)
       pill.setAttribute('object-id', item.id)
       pill.setAttribute('language',  language)
-      // dir forwarded so the pill can apply correct lang/dir to its button.
       pill.setAttribute('dir',       dir)
       li.appendChild(pill)
       list.appendChild(li)
@@ -605,8 +594,6 @@ function renderResults(sentences, language) {
   }
 
   results.replaceChildren(fragment)
-
-  // Apply current script-view and toolbar state to the new cards.
   applyScriptViewToResults()
   updateScriptViewToolbar()
 }
@@ -614,14 +601,7 @@ function renderResults(sentences, language) {
 
 // ── Large-text async parse (job API + SSE) ────────────────────────────────────
 
-/**
- * Submit text to POST /parse/jobs, stream SSE progress events, and return the
- * final ParseResponse data when the job completes.
- *
- * Throws on network failure or if the job ends in a failed state.
- */
 async function parseWithJob(text, language) {
-  // ── 1. Submit the job ──────────────────────────────────────────────────────
   const jobResp = await fetch(`${API_BASE}/parse/jobs`, {
     method:  'POST',
     headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
@@ -633,7 +613,6 @@ async function parseWithJob(text, language) {
   }
   const { job_id: jobId } = await jobResp.json()
 
-  // ── 2. Stream SSE progress ─────────────────────────────────────────────────
   setJobProgress(0, t('job_queued'))
 
   const eventsResp = await fetch(`${API_BASE}/parse/jobs/${jobId}/events`, {
@@ -654,22 +633,14 @@ async function parseWithJob(text, language) {
       setJobProgress(pct, label)
     }
 
-    if (event.status === 'done') {
-      return event.result   // ParseResponse shape
-    }
-
-    if (event.status === 'failed') {
-      throw new Error(event.error ?? t('job_failed'))
-    }
+    if (event.status === 'done')   return event.result
+    if (event.status === 'failed') throw new Error(event.error ?? t('job_failed'))
   }
 
-  // SSE stream closed before a terminal event — poll once as fallback.
-  const poll = await fetch(`${API_BASE}/parse/jobs/${jobId}`, {
-    headers: getAuthHeaders(),
-  })
+  const poll = await fetch(`${API_BASE}/parse/jobs/${jobId}`, { headers: getAuthHeaders() })
   const finalJob = await poll.json()
-  if (finalJob.status === 'done')    return finalJob.result
-  if (finalJob.status === 'failed')  throw new Error(finalJob.error ?? t('job_failed'))
+  if (finalJob.status === 'done')   return finalJob.result
+  if (finalJob.status === 'failed') throw new Error(finalJob.error ?? t('job_failed'))
   throw new Error(t('job_timeout'))
 }
 
@@ -681,7 +652,6 @@ function _stageLabel(stage) {
   }[stage] ?? t('job_processing')
 }
 
-/** Show/update the job progress bar.  Pass null to hide it. */
 function setJobProgress(percent, label) {
   if (!jobProgressPanel) return
   if (percent === null) {
@@ -696,10 +666,6 @@ function setJobProgress(percent, label) {
   if (jobProgressLabel) jobProgressLabel.textContent = label ?? ''
 }
 
-/**
- * Async generator that reads an SSE response body and yields parsed JSON
- * objects from each "data: {...}" line.  Handles chunked transfer correctly.
- */
 async function* readSseEvents(response) {
   const reader  = response.body.getReader()
   const decoder = new TextDecoder()
@@ -709,9 +675,8 @@ async function* readSseEvents(response) {
     const { done, value } = await reader.read()
     if (done) break
     buffer += decoder.decode(value, { stream: true })
-    // SSE blocks are separated by double newlines.
     const blocks = buffer.split('\n\n')
-    buffer = blocks.pop()  // keep any incomplete trailing block
+    buffer = blocks.pop()
     for (const block of blocks) {
       for (const line of block.split('\n')) {
         if (line.startsWith('data: ')) {
@@ -740,8 +705,6 @@ async function submitReview(objectId, quality) {
       body:    JSON.stringify(body),
     })
   } catch {
-    // Network unreachable — queue locally and return null so the modal shows
-    // "Review saved." rather than an error.
     await queueReview({ ...body, queued_at: Date.now() })
     updateOfflineBadge()
     return null
@@ -760,9 +723,9 @@ async function submitReview(objectId, quality) {
 
 // ── Offline review queue ──────────────────────────────────────────────────────
 
-const offlineBadge      = document.querySelector('#offline-badge')
-const offlineCountEl    = document.querySelector('#offline-count')
-const offlinePluralEl   = document.querySelector('#offline-plural')
+const offlineBadge    = document.querySelector('#offline-badge')
+const offlineCountEl  = document.querySelector('#offline-count')
+const offlinePluralEl = document.querySelector('#offline-plural')
 
 async function updateOfflineBadge() {
   if (!offlineBadge) return
@@ -772,7 +735,6 @@ async function updateOfflineBadge() {
     return
   }
   offlineCountEl.textContent  = String(n)
-  // The 's' plural suffix is English-only; hide it for all other UI languages.
   offlinePluralEl.textContent = (document.documentElement.lang === 'en' && n !== 1) ? 's' : ''
   offlineBadge.hidden = false
 }
@@ -797,39 +759,69 @@ async function drainReviewQueue() {
         await deleteReview(key)
         synced++
       } else {
-        break  // server error — stop and retry later
+        break
       }
     } catch {
-      break  // still offline
+      break
     }
   }
 
   if (synced > 0) updateOfflineBadge()
 }
 
-// Attempt to drain whenever the device goes back online.
 window.addEventListener('online', drainReviewQueue)
-
-// Show badge for any reviews queued in a previous session.
 updateOfflineBadge()
 
 
 // ── Text-to-speech ────────────────────────────────────────────────────────────
-// langTag should be caps.tts_lang_tag ?? language — callers are responsible
-// for resolving the right BCP-47 tag before calling here.
+
+function pickVoice(langTag) {
+  const voices = window.speechSynthesis.getVoices()
+  if (!voices.length) return null
+
+  const lower  = langTag.toLowerCase()
+  const prefix = lower.split('-')[0]
+
+  const quality = v => {
+    const n = v.name.toLowerCase()
+    if (n.includes('google') || n.includes('microsoft')) return 0
+    return 1
+  }
+
+  const candidates = voices
+    .filter(v => v.lang.toLowerCase().startsWith(prefix))
+    .sort((a, b) => {
+      const aExact = a.lang.toLowerCase() === lower ? 0 : 1
+      const bExact = b.lang.toLowerCase() === lower ? 0 : 1
+      if (aExact !== bExact) return aExact - bExact
+      return quality(a) - quality(b)
+    })
+
+  return candidates[0] ?? null
+}
 
 function speakText(text, langTag) {
   if (!text || !('speechSynthesis' in window)) return
-  const utterance = new SpeechSynthesisUtterance(text)
-  if (langTag) utterance.lang = langTag
-  window.speechSynthesis.cancel()   // stop any ongoing speech first
-  window.speechSynthesis.speak(utterance)
+
+  const speak = () => {
+    const utterance = new SpeechSynthesisUtterance(text)
+    if (langTag) utterance.lang = langTag
+    const voice = pickVoice(langTag)
+    if (voice) utterance.voice = voice
+    window.speechSynthesis.cancel()
+    window.speechSynthesis.speak(utterance)
+  }
+
+  if (window.speechSynthesis.getVoices().length > 0) {
+    speak()
+  } else {
+    // Chrome loads voices asynchronously; defer until ready.
+    window.speechSynthesis.addEventListener('voiceschanged', speak, { once: true })
+  }
 }
 
 
-// ── Startup-warning header helper ────────────────────────────────────────────
-// If any API response carries X-Startup-Warning, surface the banner immediately
-// without waiting for the next /ready poll.
+// ── Startup-warning header helper ─────────────────────────────────────────────
 
 function handleStartupWarningHeader(response) {
   const warning = response.headers.get('X-Startup-Warning')
@@ -850,9 +842,6 @@ function escapeHtml(value) {
 
 
 // ── Backend health check ──────────────────────────────────────────────────────
-// Polls GET /ready on load and after any 503 response to surface startup errors
-// (failed migrations, unreachable DB) as a persistent banner above the header.
-// The banner is dismissed automatically once /ready returns status "ready".
 
 const startupBanner    = document.querySelector('#startup-banner')
 const startupBannerMsg = document.querySelector('#startup-banner-msg')
@@ -874,7 +863,6 @@ async function checkBackendHealth() {
     const data = await response.json().catch(() => null)
 
     if (!response.ok || data?.status !== 'ready') {
-      // Prefer the first startup_error message; fall back to a generic message.
       const startupErrors = Array.isArray(data?.startup) ? data.startup : []
       const msg = startupErrors[0]
         ?? data?.detail
@@ -884,24 +872,16 @@ async function checkBackendHealth() {
       hideBackendBanner()
     }
   } catch {
-    // Network failure — likely the server is still starting up.
     showBackendBanner(
       'Cannot reach the backend server. Ensure it is running and reload the page.'
     )
   }
 }
 
-// Check immediately on load, and also check the X-Startup-Warning header on
-// any fetch response — if present it means the backend flagged a startup error
-// that /ready would also report.
 checkBackendHealth()
-
-// Expose so the form submit path can surface 503 errors via the banner.
 window.__checkBackendHealth = checkBackendHealth
 
 
 // ── Auth init ─────────────────────────────────────────────────────────────────
-// Must run after all DOM references above are established.
-// Shows the auth panel or the app depending on sessionStorage state.
 
 initAuth()

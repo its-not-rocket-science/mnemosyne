@@ -166,131 +166,30 @@
       <section class="panel" aria-labelledby="parse-heading">
         <h2 id="parse-heading" data-i18n="parse_heading">Create a lesson from text</h2>
 
-        <!--
-          novalidate: JS handles validation so the browser's native error
-          bubbles don't fire.  aria-required and aria-invalid signal state to AT.
-        -->
-        <form id="parse-form" class="stack" novalidate>
+        <div class="stack">
 
           <div class="field">
             <label for="language" data-i18n="label_language">Language</label>
-            <!--
-              Options are populated from GET /languages on page load.
-              A static fallback option is shown while loading or on error.
-            -->
             <select id="language" name="language" aria-busy="true">
               <option value="" data-i18n="loading_languages">Loading languages…</option>
             </select>
           </div>
 
-          <div class="field">
-            <label for="source-title">
-              <span data-i18n="label_title">Title</span>
-              <span class="field-hint" data-i18n="optional">(optional)</span>
-            </label>
-            <input id="source-title" name="source-title" type="text"
-              placeholder="Article or chapter title"
-              data-i18n-placeholder="placeholder_source_title"
-              autocomplete="off">
-          </div>
-
-          <div class="field">
-            <label for="source-url">
-              <span data-i18n="label_source_url">Source URL</span>
-              <span class="field-hint" data-i18n="optional">(optional)</span>
-            </label>
-            <div class="input-group">
-              <input id="source-url" name="source-url" type="url"
-                placeholder="https://example.com/article"
-                autocomplete="url"
-                aria-describedby="fetch-url-hint">
-              <!--
-                type="button" prevents this from submitting the form.
-                aria-label gives a full description since the visible
-                text alone is not sufficiently descriptive.
-              -->
-              <button type="button" id="fetch-url-btn" class="ghost-button"
-                      aria-label="Fetch text from URL"
-                      data-i18n="fetch_btn"
-                      data-i18n-aria-label="fetch_btn_aria">
-                Fetch
-              </button>
-            </div>
-            <!--
-              aria-live="polite": announces status changes (fetching, done,
-              errors) without interrupting ongoing announcements.
-              Initial text is not announced — only dynamic updates are.
-            -->
-            <p id="fetch-url-hint" class="field-hint fetch-url-hint" aria-live="polite"
-               data-i18n="fetch_hint">
-              Enter a URL and press Fetch to import its text.
-            </p>
-          </div>
-
-          <div class="field">
-            <!--
-              The label row holds both the field label and the file-picker trigger.
-              The file input is visually hidden; its <label> acts as the trigger.
-            -->
-            <div class="field-header">
-              <label for="source-text" data-i18n="label_text">Text to parse</label>
-              <!--
-                The span wraps the visible text so data-i18n can target it
-                without wiping the hidden <input> child element.
-              -->
-              <label class="file-pick-btn" for="file-input">
-                <span data-i18n="load_file">Load .txt file</span>
-                <!--
-                  sr-only hides the input visually; the wrapping label triggers it.
-                  accept limits the file picker to plain text; JS re-validates.
-                -->
-                <input id="file-input" type="file" accept=".txt,text/plain"
-                  class="sr-only" tabindex="-1" aria-hidden="true">
-              </label>
-            </div>
-            <!--
-              aria-live="polite": announces the loaded filename to screen readers
-              without interrupting other announcements.
-            -->
-            <p id="file-info" class="field-hint file-info" aria-live="polite"></p>
-            <!--
-              aria-required: tells AT the field is mandatory.
-              aria-describedby links to both the status region (parse errors) and
-              the file-info paragraph (loaded filename feedback).
-            -->
-            <textarea id="source-text" name="source-text" rows="8"
-              required aria-required="true"
-              aria-describedby="file-info status"
-              spellcheck="false"
-              autocorrect="off"
-              autocapitalize="off"
-              autocomplete="off"
-              data-i18n-placeholder="textarea_placeholder"
-              placeholder="Paste text here, or load a .txt file above…"></textarea>
-          </div>
+          <!-- Non-editable preview of chosen text; shown after text is selected -->
+          <div id="chosen-text-display" class="chosen-text-display" hidden
+               aria-live="polite"></div>
 
           <div class="button-row">
-            <button type="submit" class="button-primary" id="parse-submit"
-                    data-i18n="btn_parse">
-              Parse text
-            </button>
+            <button type="button" id="choose-text-btn" class="button-primary"
+                    data-i18n="choose_text_btn">Choose your text</button>
+            <button type="button" id="change-text-btn" class="ghost-button" hidden
+                    data-i18n="change_text_btn">Change text</button>
           </div>
 
-        </form>
+        </div>
 
-        <!--
-          role="status" implies aria-live="polite" and aria-atomic="true".
-          JS clears then re-sets textContent so identical messages re-announce.
-          Placed after the form so it doesn't interrupt typing.
-        -->
         <p id="status" role="status" aria-atomic="true" class="status"></p>
 
-        <!--
-          Job progress bar — visible only when a large text is being processed
-          via the async /parse/jobs endpoint.  Hidden by default; JS controls
-          visibility via setJobProgress().
-          role="progressbar" + aria-valuenow/max satisfy WCAG 4.1.2.
-        -->
         <div id="job-progress" class="job-progress" hidden>
           <div
             id="job-progress-fill"
@@ -307,7 +206,11 @@
       </section>
 
       <section class="panel" aria-labelledby="results-heading">
-        <h2 id="results-heading" data-i18n="results_heading">Sentence lessons</h2>
+        <div class="results-heading-row">
+          <h2 id="results-heading" data-i18n="results_heading">Sentence lessons</h2>
+          <button type="button" id="save-lesson-btn" class="ghost-button" hidden
+                  data-i18n="save_lesson_btn">Save lesson</button>
+        </div>
 
         <!--
           Script view toolbar — hidden until a language with transliteration
@@ -331,6 +234,70 @@
     </div><!-- /#main-content -->
 
     <mnemosyne-modal id="lesson-modal"></mnemosyne-modal>
+
+    <!-- Text-picker dialog — opened by #choose-text-btn / #change-text-btn -->
+    <dialog id="text-picker" class="picker-dialog" aria-labelledby="picker-heading">
+      <div class="picker-dialog__inner stack">
+        <div class="picker-dialog__header">
+          <h2 id="picker-heading" data-i18n="choose_text_btn">Choose your text</h2>
+          <button type="button" id="picker-close-btn" class="dialog-close-btn"
+                  data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
+        </div>
+        <div class="field">
+          <label for="picker-url" data-i18n="label_source_url">Source URL</label>
+          <div class="input-group">
+            <input id="picker-url" type="url" autocomplete="off"
+                   placeholder="https://…">
+            <button type="button" id="picker-fetch-url-btn" class="ghost-button"
+                    data-i18n="fetch_btn">Fetch</button>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-header">
+            <label for="picker-text" data-i18n="label_text">Text to parse</label>
+            <label class="file-pick-btn" for="picker-file-input">
+              <span data-i18n="load_file">Load .txt file</span>
+              <input id="picker-file-input" type="file" accept=".txt,text/plain"
+                     class="sr-only" tabindex="-1">
+            </label>
+          </div>
+          <textarea id="picker-text" rows="8"
+                    data-i18n-placeholder="textarea_placeholder"
+                    placeholder="Paste text here…"
+                    spellcheck="false"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    autocomplete="off"></textarea>
+        </div>
+        <p id="picker-status" role="status" aria-atomic="true" class="status"></p>
+        <div class="button-row">
+          <button type="button" id="picker-use-btn" class="button-primary"
+                  data-i18n="use_text_btn">Use this text</button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Save-lesson dialog — opened by #save-lesson-btn; no save logic yet -->
+    <dialog id="save-lesson-dialog" class="picker-dialog" aria-labelledby="save-lesson-heading">
+      <div class="picker-dialog__inner stack">
+        <div class="picker-dialog__header">
+          <h2 id="save-lesson-heading" data-i18n="save_lesson_btn">Save lesson</h2>
+          <button type="button" id="save-lesson-close-btn" class="dialog-close-btn"
+                  data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
+        </div>
+        <div class="field">
+          <label for="save-title" data-i18n="label_title">Title</label>
+          <input id="save-title" type="text" required aria-required="true"
+                 data-i18n-placeholder="placeholder_source_title"
+                 placeholder="Article or chapter title">
+        </div>
+        <p id="save-lesson-status" role="status" aria-atomic="true" class="status"></p>
+        <div class="button-row">
+          <button type="button" id="save-lesson-confirm-btn" class="button-primary"
+                  data-i18n="save_lesson_btn">Save lesson</button>
+        </div>
+      </div>
+    </dialog>
 
     <footer class="site-footer">
       <div class="wrap site-footer__inner">
