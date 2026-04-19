@@ -31,7 +31,8 @@
       "Bash(DATABASE_URL=\"sqlite+aiosqlite:///tmp_test_migration.db\" alembic upgrade *)",
       "Bash(echo \"EXIT: $?\")",
       "Bash(cmd *)",
-      "WebFetch(domain:www.esl-lounge.com)"
+      "WebFetch(domain:www.esl-lounge.com)",
+      "Bash(alembic upgrade *)"
     ]
   }
 }
