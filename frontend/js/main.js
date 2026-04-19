@@ -751,7 +751,12 @@ async function drainReviewQueue() {
       if (response.ok) {
         await deleteReview(key)
         synced++
+      } else if (response.status === 401) {
+        // JWT expired while offline — stop drain and notify; keep queue intact.
+        setStatus(t('session_expired_queue'), 'error')
+        break
       } else {
+        // Server error — stop and retry silently on next online event.
         break
       }
     } catch {

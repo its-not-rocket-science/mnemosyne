@@ -66,6 +66,7 @@ class ParsedText(Base):
     language: Mapped[str] = mapped_column(String(10))
     source_text: Mapped[str] = mapped_column(Text)
     source_url: Mapped[str | None] = mapped_column(String, nullable=True)
+    user_id: Mapped[str | None] = mapped_column(String(50), nullable=True, index=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
 
     sentences: Mapped[list[Sentence]] = relationship(

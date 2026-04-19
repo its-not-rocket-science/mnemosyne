@@ -50,7 +50,12 @@ from sqlalchemy.orm import outerjoin
 from backend.api.dependencies import get_current_user, get_db_session
 from backend.models import (
     CanonicalObjectRow,
+    ParsedText,
     ReviewEventRow,
+    Sentence,
+    SentenceObjectRow,
+    SourceChunkRow,
+    SourceDocumentRow,
     SourceProgressionRow,
     UserFsrsParamsRow,
     UserKnowledgeRow,
@@ -397,19 +402,51 @@ async def delete_my_account(
     """Permanently delete all personal data for the current user.
 
     Deletes every row owned by this user across:
-      - ``user_knowledge``           — FSRS state and review history
+      - ``parsed_texts``             — submitted source text (GDPR: user content)
+      - ``sentences``                — sentences derived from parsed_texts
+      - ``sentence_objects``         — join rows for those sentences
+      - ``source_documents``         — attribution metadata (title, author, URL)
+      - ``source_chunks``            — chunks linking source_documents → parsed_texts
+      - ``review_events``            — full review history
+      - ``user_knowledge``           — FSRS state
       - ``user_language_preferences``— study preference overrides
-      - ``source_progression``       — reading progress per source document
-      - ``users``                    — the account row itself (if it exists)
+      - ``source_progression``       — per-document reading progress
+      - ``user_fsrs_params``         — calibration parameters
+      - ``users``                    — the account row itself
 
-    The operation is idempotent: calling it on a user who has already been
-    deleted (or never registered) returns 204 as well.
+    Deletion order respects FK constraints: child rows are removed before
+    parents.  The subqueries are evaluated at SQL execution time so no
+    intermediate state is needed.
 
-    Existing JWTs remain cryptographically valid until they expire.  Any
-    subsequent authenticated request will simply find no data and will not
-    create new rows — the deleted user_id is effectively inert.
+    The operation is idempotent: returns 204 even when the user no longer
+    exists.  Existing JWTs remain cryptographically valid until they expire;
+    subsequent requests will find no data and will not create new rows.
     """
     try:
+        # ── Subquery handles for FK-ordered bulk deletes ──────────────────────
+        pt_ids = select(ParsedText.id).where(ParsedText.user_id == current_user)
+        sent_ids = select(Sentence.id).where(Sentence.parsed_text_id.in_(pt_ids))
+        sd_ids = select(SourceProgressionRow.source_document_id).where(
+            SourceProgressionRow.user_id == current_user
+        )
+
+        # 1. Children of sentences
+        await db.execute(
+            delete(SentenceObjectRow).where(SentenceObjectRow.sentence_id.in_(sent_ids))
+        )
+        # 2. Sentences → parsed_texts
+        await db.execute(delete(Sentence).where(Sentence.parsed_text_id.in_(pt_ids)))
+        await db.execute(delete(ParsedText).where(ParsedText.user_id == current_user))
+
+        # 3. Children of source_documents (chunks ref both source_documents and parsed_texts)
+        await db.execute(
+            delete(SourceChunkRow).where(SourceChunkRow.source_document_id.in_(sd_ids))
+        )
+        await db.execute(
+            delete(SourceDocumentRow).where(SourceDocumentRow.id.in_(sd_ids))
+        )
+
+        # 4. User-keyed tables
         await db.execute(
             delete(ReviewEventRow).where(ReviewEventRow.user_id == current_user)
         )
@@ -429,9 +466,7 @@ async def delete_my_account(
         await db.execute(
             delete(UserFsrsParamsRow).where(UserFsrsParamsRow.user_id == current_user)
         )
-        await db.execute(
-            delete(UserRow).where(UserRow.id == current_user)
-        )
+        await db.execute(delete(UserRow).where(UserRow.id == current_user))
         await db.commit()
     except Exception as exc:
         logger.warning("Account deletion failed for user %r", current_user, exc_info=True)

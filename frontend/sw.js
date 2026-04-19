@@ -18,7 +18,7 @@
  * the activate event.
  */
 
-const CACHE_VERSION   = 'v7.4';
+const CACHE_VERSION   = 'v7.6';
 console.log(`Service worker cache version: ${CACHE_VERSION}`);
 const CACHE_NAME      = `mnemosyne-static-${CACHE_VERSION}`;
 

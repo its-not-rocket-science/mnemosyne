@@ -304,7 +304,7 @@ This implementation follows FSRS-5 defaults but is not an exact reproduction. Pe
 
 ```
 parsed_texts
-  id (uuid), language, source_text, source_url, created_at
+  id (uuid), language, source_text, source_url, user_id (nullable, indexed), created_at
 
   sentences  (FK → parsed_texts, cascade delete)
     id, parsed_text_id, position, text
@@ -387,6 +387,7 @@ Nine Alembic revision files (all in `alembic/versions/`):
 | `0006_review_events` | `review_events` append-only table |
 | `0007_source_documents` | `source_documents`, `source_chunks`, `source_progression` |
 | `0008_jsonb_key_removal` | Casts `lesson_data`/`fsrs_state` from JSON → jsonb for key-removal operators |
+| `0009_parsed_texts_user_id` | Adds nullable `user_id` to `parsed_texts`; indexed for account-deletion cascade |
 
 Startup runs `alembic upgrade head` in a subprocess. `Base.metadata.create_all` is not called in production.
 
