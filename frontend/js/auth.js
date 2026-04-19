@@ -1,3 +1,5 @@
+import { t } from './i18n.js'
+
 /**
  * auth.js — JWT token storage and auth-state UI management.
  *
@@ -235,7 +237,7 @@ loginForm?.addEventListener('submit', async (e) => {
 
   const btn = loginForm.querySelector('button[type="submit"]')
   btn.disabled = true
-  setAuthStatus('Signing in\u2026', 'busy')
+  setAuthStatus(t('signing_in'), 'busy')
 
   try {
     const data = await callAuth('/auth/login', { email, password })
@@ -264,7 +266,7 @@ registerForm?.addEventListener('submit', async (e) => {
 
   const btn = registerForm.querySelector('button[type="submit"]')
   btn.disabled = true
-  setAuthStatus('Creating account\u2026', 'busy')
+  setAuthStatus(t('creating_account'), 'busy')
 
   try {
     const data = await callAuth('/auth/register', { email, password })

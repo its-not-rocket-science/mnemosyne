@@ -7,6 +7,12 @@ import {
   deleteReview,
   countPendingReviews,
 } from './offline.js'
+import { initUiLanguage, t } from './i18n.js'
+
+// Initialise UI language before any other rendering.
+// Reads browser language / localStorage, applies translations, and wires
+// the #ui-language switcher select.
+initUiLanguage()
 
 const API_BASE = 'http://localhost:8000'
 
@@ -280,7 +286,7 @@ if (fetchUrlBtn) {
     fetchUrlBtn.disabled = true
     fetchUrlBtn.setAttribute('aria-busy', 'true')
     const originalLabel = fetchUrlBtn.textContent.trim()
-    fetchUrlBtn.textContent = 'Fetching\u2026'
+    fetchUrlBtn.textContent = t('fetching')
     setFetchUrlHint('Fetching page\u2026', 'busy')
     setStatus('Fetching text from URL\u2026', 'busy')
 
@@ -440,13 +446,13 @@ form.addEventListener('submit', async (event) => {
   }
 
   reviewStateByObject.clear()
-  showResultsMessage('Loading\u2026')
+  showResultsMessage(t('loading'))
   setStatus('Parsing text\u2026', 'busy')
 
   submitButton.disabled = true
   submitButton.setAttribute('aria-busy', 'true')
   const originalLabel = submitButton.textContent.trim()
-  submitButton.textContent = 'Parsing\u2026'
+  submitButton.textContent = t('parsing')
 
   try {
     const language = languageSelect.value
@@ -767,7 +773,8 @@ async function updateOfflineBadge() {
     return
   }
   offlineCountEl.textContent  = String(n)
-  offlinePluralEl.textContent = n === 1 ? '' : 's'
+  // The 's' plural suffix is English-only; hide it for all other UI languages.
+  offlinePluralEl.textContent = (document.documentElement.lang === 'en' && n !== 1) ? 's' : ''
   offlineBadge.hidden = false
 }
 
