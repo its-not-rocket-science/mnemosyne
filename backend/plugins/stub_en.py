@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import re
 
+from backend.dictionary.phrase_families import match_phrase_families
 from backend.parsing.plugin_interface import Token
 from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
@@ -34,7 +35,7 @@ class EnglishStubPlugin:
         tokenization_quality="low",      # regex [A-Za-z']+ — no linguistic awareness
         morphology_quality="none",
         syntax_support=False,
-        idiom_detection=False,
+        idiom_detection=True,
         tts_lang_tag="en",
         transliteration_scheme=None,
     )
@@ -54,8 +55,19 @@ class EnglishStubPlugin:
 
     def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
         tokens = self._tokenize(sentence)
-        candidates = self._extract_vocabulary(tokens)
-        return CandidateSentenceResult(text=sentence, candidates=candidates)
+        phrase_candidates = self._extract_phrase_families(tokens)
+        # Collect token positions consumed by phrase matches so vocabulary
+        # extraction skips those tokens (avoids double-tagging).
+        phrase_surfaces: set[str] = set()
+        for pc in phrase_candidates:
+            if pc.surface_form:
+                for w in pc.surface_form.lower().split():
+                    phrase_surfaces.add(w)
+        vocab_candidates = self._extract_vocabulary(tokens, skip_words=phrase_surfaces)
+        return CandidateSentenceResult(
+            text=sentence,
+            candidates=phrase_candidates + vocab_candidates,
+        )
 
     def get_lesson(self, object_id: str) -> CandidateObject | None:
         return self.lesson_store.get(object_id)
@@ -70,10 +82,20 @@ class EnglishStubPlugin:
             for w in _WORD_RE.findall(sentence)
         ]
 
-    def _extract_vocabulary(self, tokens: list[Token]) -> list[CandidateObject]:
+    def _extract_phrase_families(self, tokens: list[Token]) -> list[CandidateObject]:
+        surfaces = [t.text for t in tokens]
+        return match_phrase_families(surfaces, language="en")
+
+    def _extract_vocabulary(
+        self,
+        tokens: list[Token],
+        skip_words: set[str] | None = None,
+    ) -> list[CandidateObject]:
         seen: set[str] = set()
         candidates: list[CandidateObject] = []
         for token in tokens:
+            if skip_words and token.lemma in skip_words:
+                continue
             if token.lemma in seen:
                 continue
             seen.add(token.lemma)

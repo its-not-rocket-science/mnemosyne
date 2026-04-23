@@ -17,6 +17,8 @@ LearnableType = Literal[
     "transliteration",  # native-form ↔ romanization / phonetic mapping
     # ── v3 types ──────────────────────────────────────────────────────────
     "case_agreement",   # case+gender+number agreement cluster (German, etc.)
+    # ── v4 types ──────────────────────────────────────────────────────────
+    "phrase_family",    # variant-aware idiomatic phrase family (cross-spelling / word-order)
 ]
 
 
