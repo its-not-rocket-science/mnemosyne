@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/components.css">
     <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./components/mnemosyne-detail-pane.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(() => {})
@@ -155,6 +156,7 @@
       revealed by initAuth() in auth.js.
     -->
     <div id="main-content" hidden>
+    <div class="pane-backdrop" id="pane-backdrop" aria-hidden="true"></div>
 
     <!--
       tabindex="-1" makes <main> programmatically focusable so the skip-link
@@ -205,29 +207,45 @@
 
       </section>
 
-      <section class="panel" aria-labelledby="results-heading">
-        <div class="results-heading-row">
-          <h2 id="results-heading" data-i18n="results_heading">Sentence lessons</h2>
-          <button type="button" id="save-lesson-btn" class="ghost-button" hidden
-                  data-i18n="save_lesson_btn">Save lesson</button>
-        </div>
+      <!--
+        concordance-layout: CSS grid that gains a second column (22 rem) when
+        #detail-pane is shown.  JS adds .concordance-layout--open on pane open
+        and removes it on pane close.
+      -->
+      <div class="concordance-layout" id="concordance-layout">
+
+        <section class="panel" aria-labelledby="results-heading">
+          <div class="results-heading-row">
+            <h2 id="results-heading" data-i18n="results_heading">Sentence lessons</h2>
+            <button type="button" id="save-lesson-btn" class="ghost-button" hidden
+                    data-i18n="save_lesson_btn">Save lesson</button>
+          </div>
+
+          <!--
+            Script view toolbar — hidden until a language with transliteration
+            support is selected.  JS populates the toggle button group inside it.
+          -->
+          <div id="results-toolbar" class="results-toolbar" hidden></div>
+
+          <!--
+            No aria-live here — announcing the full card dump is too noisy.
+            The #status region announces the summary ("3 sentences parsed").
+          -->
+          <div id="results" class="results">
+            <p class="results-empty" data-i18n="results_empty">
+              Parse some text above to see learnable items here.
+            </p>
+          </div>
+        </section>
 
         <!--
-          Script view toolbar — hidden until a language with transliteration
-          support is selected.  JS populates the toggle button group inside it.
+          Detail pane — hidden until a pill is clicked.
+          role="complementary" landmark; aria-labelledby points to the pane's
+          internal <h2> (rendered by the component).
         -->
-        <div id="results-toolbar" class="results-toolbar" hidden></div>
+        <mnemosyne-detail-pane id="detail-pane" inert></mnemosyne-detail-pane>
 
-        <!--
-          No aria-live here — announcing the full card dump is too noisy.
-          The #status region announces the summary ("3 sentences parsed").
-        -->
-        <div id="results" class="results">
-          <p class="results-empty" data-i18n="results_empty">
-            Parse some text above to see learnable items here.
-          </p>
-        </div>
-      </section>
+      </div><!-- /.concordance-layout -->
 
     </main>
 
