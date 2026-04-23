@@ -9,8 +9,10 @@ const TYPE_META = {
   grammar:          { icon: '📐', label: 'Grammar',           badge: 'gram',   ref: 'oklch(0.50 0.15  90)' },
   nuance:           { icon: '🎭', label: 'Nuance',            badge: 'nuance', ref: 'oklch(0.50 0.20  20)' },
   // v2 types
-  script:           { icon: '✍️', label: 'Script',           badge: 'script', ref: 'oklch(0.50 0.18 200)' },
-  transliteration:  { icon: '🔤', label: 'Transliteration',  badge: 'roma',   ref: 'oklch(0.50 0.15 170)' },
+  script:           { icon: '✍️', label: 'Script',           badge: 'script',  ref: 'oklch(0.50 0.18 200)' },
+  transliteration:  { icon: '🔤', label: 'Transliteration',  badge: 'roma',    ref: 'oklch(0.50 0.15 170)' },
+  // v4 types
+  phrase_family:    { icon: '🔗', label: 'Phrase family',    badge: 'phrase',  ref: 'oklch(0.50 0.20 330)' },
 }
 
 export class MnemosynePill extends HTMLElement {

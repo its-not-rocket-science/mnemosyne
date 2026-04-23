@@ -40,6 +40,7 @@ LessonTemplate = Literal[
     # Object-type-specific templates — used only in LessonResponse.lesson_mode;
     # never appear in lesson_modes_supported on LanguageCapabilities.
     "idiom",           # fixed-form idiomatic expression
+    "phrase_family",   # variant-aware phrase family with confusables
     "script",          # character / sign lesson (CJK kanji, Arabic letter, …)
     "transliteration", # native-form ↔ romanization / phonetic mapping
 ]
@@ -112,6 +113,7 @@ class LessonResponse(BaseModel):
     - ``"vocabulary"``      — POS recognition + shadowing
     - ``"dictionary"``      — shadowing only
     - ``"idiom"``           — meaning fill-blank + register MC
+    - ``"phrase_family"``   — canonical form, variants, confusables, origin + recognition drills
     - ``"script"``          — reading fill-blank + meaning fill-blank
     - ``"transliteration"`` — bidirectional romanization fill-blank
 
