@@ -18,7 +18,7 @@
  * the activate event.
  */
 
-const CACHE_VERSION   = 'v7.7';
+const CACHE_VERSION   = 'v7.9';
 console.log(`Service worker cache version: ${CACHE_VERSION}`);
 const CACHE_NAME      = `mnemosyne-static-${CACHE_VERSION}`;
 
@@ -33,6 +33,7 @@ const STATIC_ASSETS = [
   '/js/offline.js',
   '/components/mnemosyne-modal.js',
   '/components/mnemosyne-pill.js',
+  '/components/mnemosyne-detail-pane.js',
 ];
 
 // ── Install ───────────────────────────────────────────────────────────────────

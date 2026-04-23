@@ -140,6 +140,8 @@
   background: transparent;
   color: inherit;
   cursor: pointer;
+  /* 2.75 rem ≈ 44 CSS px — WCAG 2.5.8 minimum touch target size. */
+  min-block-size: 2.75rem;
 }
 
 .markdown {
@@ -160,4 +162,76 @@
 
 .markdown ul {
   padding-inline-start: 1.25rem;
+}
+
+/* ── Concordance split-pane layout ────────────────────────────────────────────
+   Wraps the results panel and the detail pane side by side on wide screens.
+   On narrow screens it stacks them.  The --open modifier is added by main.js
+   when detailPane.show() is called.                                           */
+
+.concordance-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: var(--space-4);
+  /* Absorb the bottom margin that .panel normally contributes so the pane's
+     own border provides the visual separation from the footer. */
+  margin-block-end: var(--space-4);
+}
+
+/* Remove the default panel margin-block-end when inside the layout so the
+   layout gap governs spacing instead. */
+.concordance-layout > .panel {
+  margin-block-end: 0;
+}
+
+/* Two-column grid when pane is open — on screens wide enough to show both. */
+@media (min-width: 54rem) {
+  .concordance-layout--open {
+    grid-template-columns: 1fr 22rem;
+  }
+}
+
+/* Sticky detail pane on desktop: stays in viewport while user scrolls cards. */
+@media (min-width: 54rem) {
+  .concordance-layout mnemosyne-detail-pane {
+    position: sticky;
+    top: var(--space-3);
+    /* Fill up to viewport height minus top offset so it never overflows. */
+    max-block-size: calc(100dvh - 2 * var(--space-3));
+  }
+}
+
+/* On mobile, pane is not sticky but capped so it doesn't push content off-screen. */
+@media (max-width: 53.99rem) {
+  .concordance-layout mnemosyne-detail-pane {
+    max-block-size: 75dvh;
+  }
+}
+
+/* ── Backdrop — dims content behind the mobile bottom-sheet pane ─────────────
+   Hidden on desktop (pane is inline, not an overlay).
+   JS adds/removes .is-visible on pane open/close.                            */
+
+.pane-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 199;
+  background: rgb(0 0 0 / 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.32s ease;
+}
+
+.pane-backdrop.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (min-width: 54rem) {
+  .pane-backdrop { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pane-backdrop { transition: none; }
 }

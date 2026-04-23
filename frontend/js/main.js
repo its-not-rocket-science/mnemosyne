@@ -1,5 +1,6 @@
 import '../components/mnemosyne-pill.js'
 import '../components/mnemosyne-modal.js'
+import '../components/mnemosyne-detail-pane.js'
 import { initAuth, getAuthHeaders } from './auth.js'
 import {
   queueReview,
@@ -24,6 +25,9 @@ const results           = document.querySelector('#results')
 const resultsEmpty      = document.querySelector('.results-empty')
 const status            = document.querySelector('#status')
 const modal             = document.querySelector('#lesson-modal')
+const detailPane        = document.querySelector('#detail-pane')
+const concordanceLayout = document.querySelector('#concordance-layout')
+const paneBackdrop      = document.querySelector('#pane-backdrop')
 const resultsToolbar    = document.querySelector('#results-toolbar')
 const jobProgressPanel  = document.querySelector('#job-progress')
 const jobProgressFill   = document.querySelector('#job-progress-fill')
@@ -490,10 +494,12 @@ results.addEventListener('lesson-open', async (event) => {
   const { objectId, language } = event.detail
   const caps   = languageCapabilities.get(language)
   const ttsTag = caps?.tts_lang_tag ?? language
+  const dir    = caps?.direction ?? 'ltr'
 
-  // Blur the pill that triggered the event so focus doesn't return to it
-  // when the modal closes (browsers restore focus to the pre-modal element).
-  document.activeElement?.blur()
+  // Grab the sentence text for the "In Context" tab before blurring.
+  // event.target is the <mnemosyne-pill> host element; traverse light DOM.
+  const sentenceCard = event.target?.closest?.('article.sentence-card')
+  const sentenceText = sentenceCard?.querySelector('.sentence-card__text')?.textContent ?? ''
 
   setStatus(t('loading_lesson'), 'busy')
 
@@ -508,20 +514,53 @@ results.addEventListener('lesson-open', async (event) => {
 
     const lesson = await response.json()
 
-    modal.open({
-      lesson,
-      objectId: lesson.id,
-      caps,
-      language,
-      onRate:  submitReview,
-      onSpeak: (text) => speakText(text, ttsTag),
-    })
+    // Open the detail pane as the primary view.
+    // "Study drills" inside the pane delegates to the existing modal.
+    if (detailPane) {
+      detailPane.show({
+        lesson,
+        sentenceText,
+        language,
+        dir,
+        ttsTag,
+        caps,
+        onSpeak:  (text, lang) => speakText(text, lang ?? ttsTag),
+        onStudy:  () => modal.open({
+          lesson,
+          objectId: lesson.id,
+          caps,
+          language,
+          onRate:  submitReview,
+          onSpeak: (text) => speakText(text, ttsTag),
+        }),
+      })
+      concordanceLayout?.classList.add('concordance-layout--open')
+      paneBackdrop?.classList.add('is-visible')
+    } else {
+      // Fallback: no detail pane in DOM — open modal directly.
+      modal.open({
+        lesson,
+        objectId: lesson.id,
+        caps,
+        language,
+        onRate:  submitReview,
+        onSpeak: (text) => speakText(text, ttsTag),
+      })
+    }
 
     setStatus(ti('lesson_open', { title: lesson.title }))
   } catch (error) {
     setStatus(error instanceof Error ? error.message : t('load_lesson_failed'), 'error')
   }
 })
+
+// Close handler: collapse the split-pane grid when the pane is dismissed.
+detailPane?.addEventListener('pane-close', () => {
+  concordanceLayout?.classList.remove('concordance-layout--open')
+  paneBackdrop?.classList.remove('is-visible')
+})
+
+paneBackdrop?.addEventListener('click', () => detailPane?.hide())
 
 
 // ── Render sentence cards ─────────────────────────────────────────────────────
