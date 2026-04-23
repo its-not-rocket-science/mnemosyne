@@ -664,6 +664,94 @@ def _build_idiom(b: _B) -> LessonResponse:
     )
 
 
+def _build_phrase_family(b: _B) -> LessonResponse:
+    """Lesson for a phrase-family object.
+
+    lesson_data keys (set by phrase_families.py):
+      canonical_form, matched_variant, meaning, register, origin (opt),
+      variants (list[str]), confusables (list[str], opt), variant_note (opt).
+    """
+    canonical    = b.lesson_data.get("canonical_form") or b.canonical_form
+    matched      = b.lesson_data.get("matched_variant") or canonical
+    meaning      = b.lesson_data.get("meaning") or ""
+    register     = b.lesson_data.get("register") or ""
+    origin       = b.lesson_data.get("origin") or ""
+    variants     = b.lesson_data.get("variants") or []
+    confusables  = b.lesson_data.get("confusables") or []
+    variant_note = b.lesson_data.get("variant_note") or ""
+    seed         = b.canonical_form
+
+    is_canonical_match = matched.lower() == canonical.lower()
+    title = f"Phrase family: {canonical}"
+
+    if meaning:
+        explanation = f"\u201c{canonical}\u201d \u2014 {meaning}"
+    else:
+        explanation = f"\u201c{canonical}\u201d is an idiomatic phrase."
+
+    fields: list[LessonField] = [
+        LessonField(label="Canonical form", value=canonical),
+    ]
+    if not is_canonical_match:
+        fields.append(LessonField(label="Matched variant", value=matched))
+        if variant_note:
+            fields.append(LessonField(label="Variant note", value=variant_note))
+    if meaning:
+        fields.append(LessonField(label="Meaning", value=meaning))
+    if register:
+        fields.append(LessonField(label="Register", value=register))
+    if origin:
+        fields.append(LessonField(label="Origin", value=origin))
+    if variants:
+        fields.append(LessonField(label="Known variants", value=" / ".join(variants)))
+    if confusables:
+        fields.append(LessonField(label="Confusable with", value=", ".join(confusables)))
+
+    drills: list[Drill] = [ShadowingDrill(type="shadowing", text=matched)]
+
+    if meaning:
+        drills.append(FillBlankDrill(
+            type="fill_blank",
+            prompt=f"What does \u201c{canonical}\u201d mean?",
+            answer=meaning,
+        ))
+
+    if register:
+        register_pool = ["neutral", "literary", "formal", "informal", "archaic"]
+        mc = _make_mc_drill(
+            seed=seed,
+            prompt=f"What register is \u201c{canonical}\u201d?",
+            correct=register,
+            pool=register_pool,
+        )
+        if mc:
+            drills.append(mc)
+
+    # Recognition drill: is the matched form the canonical one?
+    if not is_canonical_match:
+        drills.append(RecognitionDrill(
+            type="recognition",
+            statement=f"\u201c{matched}\u201d is the most widely cited form of this expression.",
+            correct=False,
+        ))
+    else:
+        drills.append(RecognitionDrill(
+            type="recognition",
+            statement=f"\u201c{canonical}\u201d is the canonical form of this expression.",
+            correct=True,
+        ))
+
+    return LessonResponse(
+        id=b.object_id,
+        type="phrase_family",  # type: ignore[arg-type]
+        title=title,
+        explanation=explanation,
+        fields=fields,
+        examples=[matched],
+        drills=drills,
+    )
+
+
 def _build_grammar(b: _B) -> LessonResponse:
     """Lesson for a periphrastic / structural grammar pattern."""
     pattern_id   = b.lesson_data.get("pattern_id") or b.canonical_form
@@ -876,6 +964,7 @@ _BuilderEntry = tuple[Callable[[_B], LessonResponse], LessonTemplate]
 
 _DEDICATED_BUILDERS: dict[str, _BuilderEntry] = {
     "idiom":           (_build_idiom,          "idiom"),
+    "phrase_family":   (_build_phrase_family,  "phrase_family"),
     "script":          (_build_script,         "script"),
     "transliteration": (_build_transliteration,"transliteration"),
     "grammar":         (_build_grammar,        "morphology"),
