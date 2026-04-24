@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/components.css">
     <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./components/mnemosyne-top-nav.js"></script>
     <script type="module" src="./components/mnemosyne-detail-pane.js"></script>
     <script type="module" src="./components/mnemosyne-player.js"></script>
     <script>
@@ -38,40 +39,32 @@
     <div class="app-shell" id="app-shell">
 
       <!-- ── TopNav region ──────────────────────────────────────────────── -->
-      <header class="app-shell__top-nav site-header" id="app-top-nav">
-        <div class="wrap site-header__inner">
-          <div>
-            <!-- aria-hidden: decorative; h1 is the real page label -->
-            <p class="eyebrow" aria-hidden="true">Mnemosyne</p>
-            <h1 data-i18n="h1">Turn text into a living lesson</h1>
-            <p class="lede" data-i18n="lede">Paste text, parse sentences, open micro-lessons, and rate recall.</p>
-          </div>
-
-          <!--
-            Hidden until JS confirms a signed-in session.
-          -->
-          <div id="user-info" class="user-info" hidden
-               data-i18n-aria-label="account_aria" aria-label="Account">
-            <span id="user-email" class="user-info__email"
-                  data-i18n-aria-label="signed_in_as_aria" aria-label="Signed in as"></span>
-            <button type="button" id="logout-btn" class="ghost-button"
-                    data-i18n="sign_out">Sign out</button>
-            <button type="button" id="delete-account-btn" class="ghost-button ghost-button--danger"
-                    data-i18n="delete_account">Delete account</button>
-          </div>
-
-          <!--
-            Offline indicator — hidden until JS detects queued reviews.
-          -->
-          <p id="offline-badge" class="offline-badge" hidden aria-live="polite">
-            <span class="offline-badge__dot" aria-hidden="true"></span>
-            <span data-i18n="offline_prefix">Offline —</span>
-            <span id="offline-count">0</span>
-            <span id="offline-review-word" data-i18n="offline_review">review</span><span id="offline-plural">s</span>
-            <span data-i18n="offline_queued">queued</span>
-          </p>
+      <mnemosyne-top-nav class="app-shell__top-nav" id="app-top-nav" role="banner">
+        <!-- Slotted into nav__end alongside the expand button -->
+        <div id="user-info" class="user-info" hidden
+             data-i18n-aria-label="account_aria" aria-label="Account">
+          <span id="user-email" class="user-info__email"
+                data-i18n-aria-label="signed_in_as_aria" aria-label="Signed in as"></span>
+          <button type="button" id="logout-btn" class="ghost-button"
+                  data-i18n="sign_out">Sign out</button>
+          <button type="button" id="delete-account-btn" class="ghost-button ghost-button--danger"
+                  data-i18n="delete_account">Delete account</button>
         </div>
-      </header>
+        <p id="offline-badge" class="offline-badge" hidden aria-live="polite">
+          <span class="offline-badge__dot" aria-hidden="true"></span>
+          <span data-i18n="offline_prefix">Offline —</span>
+          <span id="offline-count">0</span>
+          <span id="offline-review-word" data-i18n="offline_review">review</span><span id="offline-plural">s</span>
+          <span data-i18n="offline_queued">queued</span>
+        </p>
+      </mnemosyne-top-nav>
+
+      <!-- Site hero — page title + strapline below the nav bar -->
+      <div class="site-hero wrap" id="site-hero">
+        <p class="eyebrow" aria-hidden="true">Mnemosyne</p>
+        <h1 data-i18n="h1">Turn text into a living lesson</h1>
+        <p class="lede" data-i18n="lede">Paste text, parse sentences, open micro-lessons, and rate recall.</p>
+      </div>
 
       <!-- ── Auth region ────────────────────────────────────────────────────
            Shown when no JWT present; hidden by initAuth() once session confirmed.
