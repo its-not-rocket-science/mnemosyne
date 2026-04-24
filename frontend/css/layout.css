@@ -1,0 +1,168 @@
+/*
+ * layout.css — App Shell Layout
+ *
+ * Named regions (exported from js/layout.js):
+ *   TopNav      — sticky top bar
+ *   FilterBar   — annotation-type chip strip below nav
+ *   TextPanel   — scrollable reading column (left)
+ *   DetailPanel — phrase-detail pane (right on desktop, bottom sheet on mobile)
+ *   NowPlayingBar — persistent playback region (mnemosyne-player inside is position:fixed)
+ *
+ * Desktop (≥54rem / 864px):
+ *   TopNav (sticky)
+ *   └─ body flex-row
+ *        ├─ left column  [flex:1]  FilterBar (sticky) + TextPanel
+ *        └─ DetailPanel  [flex-basis: 0→45%]  slides in via transition
+ *   NowPlayingBar (position:fixed via component)
+ *
+ * Mobile (<54rem):
+ *   Single column. mnemosyne-detail-pane manages its own bottom-sheet
+ *   position/transform at this breakpoint; the container is a passthrough.
+ */
+
+/* ── Z-index bookkeeping ─────────────────────────────────────────────────────
+   Defined here so all layout layers are visible in one place.
+   Components that need these values reference the custom properties.        */
+:root {
+  --z-top-nav:       50;
+  --z-filter-bar:    10;
+  /* mnemosyne-player:      150  (set inside the component) */
+  /* pane-backdrop:         199  (set in components.css)    */
+  /* mnemosyne-detail-pane: 200  (set inside the component, mobile only) */
+}
+
+/* ── TopNav ──────────────────────────────────────────────────────────────────
+   Sticks to the viewport top while the page scrolls.
+   A ResizeObserver in layout.js writes --app-top-nav-h so child regions
+   can offset their own sticky positioning precisely.                        */
+
+.app-shell__top-nav {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: var(--z-top-nav);
+  background: var(--bg);
+}
+
+/* ── Body ────────────────────────────────────────────────────────────────────
+   Flex row on desktop; single column on mobile (flex-direction override).   */
+
+.app-shell__body {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* ── Left column ─────────────────────────────────────────────────────────────
+   Stacks FilterBar above TextPanel; takes all remaining width.              */
+
+.app-shell__left {
+  flex: 1 1 auto;
+  min-inline-size: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── FilterBar ───────────────────────────────────────────────────────────────
+   Annotation chip strip. Sticky below the TopNav; background prevents
+   sentence text showing through when chips scroll into the sticky band.     */
+
+.app-shell__filter-bar {
+  flex: 0 0 auto;
+  position: sticky;
+  inset-block-start: var(--app-top-nav-h, 0px);
+  z-index: var(--z-filter-bar);
+  background: var(--bg);
+}
+
+/* ── TextPanel ───────────────────────────────────────────────────────────────
+   Main reading content; natural document scroll.                            */
+
+.app-shell__text-panel {
+  flex: 1 1 auto;
+}
+
+/* ── DetailPanel ─────────────────────────────────────────────────────────────
+   Hidden by default: flex-basis 0 + overflow hidden collapses the column.
+   .app-shell--detail-open (set by openDetail() in layout.js) expands it.
+
+   Transition timing:
+   • flex-basis: smooth ease — drives the slide-in/out motion.
+   • border-inline-start-width: step — appears the moment the pane starts
+     opening; disappears the moment it finishes closing.                     */
+
+.app-shell__detail-panel {
+  flex: 0 0 0%;
+  overflow: hidden;
+  border-inline-start: 0 solid var(--border);
+  transition:
+    flex-basis                300ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-inline-start-width 1ms   300ms;            /* delay on close */
+}
+
+.app-shell--detail-open .app-shell__detail-panel {
+  flex-basis: 45%;
+  border-inline-start-width: 1px;
+  transition:
+    flex-basis                300ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-inline-start-width 1ms;                    /* immediate on open */
+}
+
+/* Desktop: keep the component rendered so flex-basis can animate on close.
+   Without this, the component's :host(:not([data-open])){display:none}
+   fires immediately, leaving an empty-but-still-wide container shrinking.
+   Visual hiding on close is handled by overflow:hidden + flex-basis:0.
+   External CSS overrides :host() rules per the CSS Scoping specification.  */
+@media (min-width: 54rem) {
+  .app-shell__detail-panel > mnemosyne-detail-pane {
+    display: block;
+    block-size: 100%;
+  }
+
+  /* Stick in viewport as the user scrolls through sentences. */
+  .app-shell__detail-panel {
+    position: sticky;
+    inset-block-start: var(--app-top-nav-h, 0px);
+    align-self: flex-start;
+    max-block-size: calc(100dvh - var(--app-top-nav-h, 0px));
+    overflow-y: auto;
+  }
+}
+
+/* ── NowPlayingBar ───────────────────────────────────────────────────────────
+   Named region anchor. The mnemosyne-player Web Component inside uses
+   position:fixed and manages its own visibility via [hidden].               */
+
+.app-shell__now-playing {
+  /* intentionally empty — named anchor only */
+}
+
+/* ── Mobile (<54rem) ─────────────────────────────────────────────────────────
+   Single column. mnemosyne-detail-pane handles its own bottom-sheet at this
+   breakpoint (position:fixed, z-index:200, translateY transition).
+   The container is kept at zero height so it doesn't affect flow.          */
+
+@media (max-width: 53.99rem) {
+  .app-shell__body {
+    flex-direction: column;
+  }
+
+  /* Container: zero block-size, visible overflow lets the position:fixed
+     component escape the container's stacking context.                     */
+  .app-shell__detail-panel,
+  .app-shell--detail-open .app-shell__detail-panel {
+    flex: none;
+    block-size: 0;
+    overflow: visible;
+    border: none;
+    position: static;
+    transition: none;
+  }
+}
+
+/* ── Reduced motion ──────────────────────────────────────────────────────────
+   Snap detail open/closed instantly.                                        */
+
+@media (prefers-reduced-motion: reduce) {
+  .app-shell__detail-panel {
+    transition: none;
+  }
+}
