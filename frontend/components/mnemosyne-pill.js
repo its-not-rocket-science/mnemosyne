@@ -16,7 +16,7 @@ const TYPE_META = {
 }
 
 export class MnemosynePill extends HTMLElement {
-  static observedAttributes = ['type', 'label', 'object-id', 'language', 'dir']
+  static observedAttributes = ['type', 'label', 'object-id', 'language', 'dir', 'confidence']
 
   constructor() {
     super()
@@ -54,11 +54,20 @@ export class MnemosynePill extends HTMLElement {
 
   render() {
     if (!this.shadowRoot) return
-    const type     = this.getAttribute('type')     || 'vocabulary'
-    const text     = this.getAttribute('label')    || ''
-    const language = this.getAttribute('language') || ''
-    const dir      = this.getAttribute('dir')      || null
-    const meta     = TYPE_META[type] || TYPE_META.vocabulary
+    const type       = this.getAttribute('type')       || 'vocabulary'
+    const text       = this.getAttribute('label')      || ''
+    const language   = this.getAttribute('language')   || ''
+    const dir        = this.getAttribute('dir')        || null
+    const confidence = parseFloat(this.getAttribute('confidence') ?? '1')
+    const meta       = TYPE_META[type] || TYPE_META.vocabulary
+
+    // Confidence tiers used for visual de-emphasis:
+    //   low      < 0.72  — dashed border, reduced opacity
+    //   moderate 0.72–0.87 — slightly reduced opacity
+    //   high     ≥ 0.88  — full display (default)
+    const confTier = confidence < 0.72 ? 'low' : confidence < 0.88 ? 'moderate' : 'high'
+    const opacity  = confTier === 'low' ? '0.65' : confTier === 'moderate' ? '0.82' : '1'
+    const borderStyle = confTier === 'low' ? 'dashed' : 'solid'
 
     // Build the shadow DOM structure.  aria-label is NOT interpolated into
     // the innerHTML string — setAttribute handles all escaping and avoids
@@ -76,7 +85,7 @@ export class MnemosynePill extends HTMLElement {
           /* 60% reference color gives noticeably more contrast against Canvas
              than the prior 35%; exact ratio varies by type color and OS
              Canvas value — verify in browser for each type. SC 1.4.11. */
-          border: 1px solid color-mix(in oklch, ${meta.ref} 60%, Canvas);
+          border: 1px ${borderStyle} color-mix(in oklch, ${meta.ref} 60%, Canvas);
           border-radius: 999px;
           /* 2.75rem ≈ 44 CSS px — WCAG 2.5.8 minimum touch target */
           min-block-size: 2.75rem;
@@ -85,6 +94,7 @@ export class MnemosynePill extends HTMLElement {
           color: CanvasText;
           font: inherit;
           cursor: pointer;
+          opacity: ${opacity};
         }
 
         /* Solid focus ring — semi-transparent outline fails WCAG 2.4.11 3:1
@@ -92,6 +102,8 @@ export class MnemosynePill extends HTMLElement {
         button:focus-visible {
           outline: 3px solid color-mix(in oklch, ${meta.ref} 90%, CanvasText);
           outline-offset: 3px;
+          /* Restore full opacity on focus so the ring is clearly visible. */
+          opacity: 1;
         }
 
         .icon {
