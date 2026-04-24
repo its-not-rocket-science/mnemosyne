@@ -187,8 +187,10 @@ export class MnemosyneDetailPane extends HTMLElement {
 
     const matchedVariant = ld.matched_variant || lesson.label || ''
     const canonical      = ld.canonical_form  || ''
-    const isNonCanonical = canonical && matchedVariant &&
-                           canonical.toLowerCase() !== matchedVariant.toLowerCase()
+    const matchType      = ld.match_type || ''
+    // Use match_type field (authoritative) rather than surface string comparison,
+    // which fails for confusable_not_same where matched surface may equal canonical.
+    const isNonCanonical = Boolean(matchType && matchType !== 'exact')
 
     // ── Assemble shadow DOM ──────────────────────────────────────────────────
     this.shadowRoot.innerHTML = /* html */`
@@ -219,7 +221,7 @@ export class MnemosyneDetailPane extends HTMLElement {
 
         <div class="pane__body">
           ${this._htmlExplanationPanel(lesson, ld, matchedVariant)}
-          ${hasOrigins  ? this._htmlOriginsPanel(isNonCanonical, Boolean(ld.source_text)) : ''}
+          ${hasOrigins  ? this._htmlOriginsPanel(isNonCanonical, Boolean(ld.source_text), matchType) : ''}
           ${this._htmlContextPanel(language, dir)}
           ${hasRelated  ? this._htmlRelatedPanel(ld, canonical, isNonCanonical) : ''}
         </div>
@@ -381,7 +383,8 @@ export class MnemosyneDetailPane extends HTMLElement {
     `
   }
 
-  _htmlOriginsPanel(isNonCanonical, hasSourceText) {
+  _htmlOriginsPanel(isNonCanonical, hasSourceText, matchType = '') {
+    const isConfusable = matchType === 'confusable_not_same'
     return /* html */`
       <section
         id="dp-panel-origins"
@@ -397,10 +400,11 @@ export class MnemosyneDetailPane extends HTMLElement {
         <div class="pane__audio-row">
           ${isNonCanonical ? /* html */`
             <button class="pane__audio-btn" type="button" data-speak="original">
-              <span aria-hidden="true">&#x1F50A;</span> Hear original form
+              <span aria-hidden="true">&#x1F50A;</span>
+              ${isConfusable ? 'Hear this phrase' : 'Hear original form'}
             </button>
-            <button class="pane__audio-btn" type="button" data-speak="modern">
-              <span aria-hidden="true">&#x1F50A;</span> Hear modern form
+            <button class="pane__audio-btn" type="button" data-speak="canonical">
+              <span aria-hidden="true">&#x1F50A;</span> Hear canonical form
             </button>
           ` : /* html */`
             <button class="pane__audio-btn" type="button" data-speak="phrase">
@@ -503,10 +507,10 @@ export class MnemosyneDetailPane extends HTMLElement {
             </ul>
           </section>
         ` : ''}
-        ${isNonCanonical ? /* html */`
+        ${isNonCanonical && ld.match_type !== 'confusable_not_same' ? /* html */`
           <div class="pane__audio-row">
-            <button class="pane__audio-btn" type="button" data-speak="modern">
-              <span aria-hidden="true">&#x1F50A;</span> Hear modern form
+            <button class="pane__audio-btn" type="button" data-speak="canonical">
+              <span aria-hidden="true">&#x1F50A;</span> Hear canonical form
             </button>
           </div>
         ` : ''}
@@ -1043,8 +1047,8 @@ export class MnemosyneDetailPane extends HTMLElement {
 
       .pane__variant-item {
         display: flex;
-        align-items: baseline;
-        gap: 0.4rem;
+        flex-direction: column;
+        gap: 0.25rem;
         padding-block: 0.35rem;
         border-block-end: 1px solid var(--border);
         font-size: 0.875rem;
