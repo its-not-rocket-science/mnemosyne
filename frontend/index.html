@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/components.css">
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./components/mnemosyne-top-nav.js"></script>
+    <script type="module" src="./components/mnemosyne-filter-bar.js"></script>
     <script type="module" src="./components/mnemosyne-detail-pane.js"></script>
     <script type="module" src="./components/mnemosyne-player.js"></script>
     <script>
@@ -158,8 +159,7 @@
                 Annotation-type filter chips — hidden until results are rendered.
                 JS populates chips for every type present in the parsed sentences.
               -->
-              <div id="reader-filters" class="reader-filters" hidden
-                   role="group" aria-label="Filter by annotation type"></div>
+              <mnemosyne-filter-bar id="filter-bar" hidden></mnemosyne-filter-bar>
             </div>
 
             <!-- TextPanel region -->

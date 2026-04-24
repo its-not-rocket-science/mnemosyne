@@ -1,5 +1,6 @@
 import '../components/mnemosyne-pill.js'
 import '../components/mnemosyne-modal.js'
+import '../components/mnemosyne-filter-bar.js'
 import '../components/mnemosyne-detail-pane.js'
 import '../components/mnemosyne-player.js'
 import { initAuth, getAuthHeaders } from './auth.js'
@@ -55,7 +56,7 @@ const saveLessonCloseBtn   = document.querySelector('#save-lesson-close-btn')
 const saveLessonConfirmBtn = document.querySelector('#save-lesson-confirm-btn')
 
 // Reader UI
-const readerFilters    = document.querySelector('#reader-filters')
+const filterBar        = document.querySelector('#filter-bar')
 const readerNowPlaying = document.querySelector('#reader-nowplaying')
 const rnpToggle        = document.querySelector('#rnp-toggle')
 const rnpStop          = document.querySelector('#rnp-stop')
@@ -605,6 +606,11 @@ topNav?.addEventListener('depth-change', ({ detail }) => {
   currentDepth = detail.depth
 })
 
+filterBar?.addEventListener('filter-change', ({ detail }) => {
+  activeFilterTypes = detail.types.length ? new Set(detail.types) : null
+  applyAnnotationFilter()
+})
+
 
 // ── Playback controls ─────────────────────────────────────────────────────────
 
@@ -749,7 +755,15 @@ function renderResults(sentences, language) {
   results.replaceChildren(fragment)
   applyScriptViewToResults()
   updateScriptViewToolbar()
-  renderFilterChips(sentences)
+
+  if (filterBar) {
+    const allTypes = [...new Set(sentences.flatMap(s =>
+      s.learnable_objects.map(o => o.type).filter(Boolean)
+    ))]
+    filterBar.setAvailable(allTypes)
+    filterBar.reset()
+    filterBar.hidden = allTypes.length === 0
+  }
 
   if (playAllBtn) playAllBtn.hidden = !(canSpeak && sentences.length > 0)
 }
@@ -828,73 +842,7 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam) {
 }
 
 
-// ── Annotation filter chips ───────────────────────────────────────────────────
-
-function renderFilterChips(sentences) {
-  if (!readerFilters) return
-
-  const types = new Set()
-  for (const s of sentences) {
-    for (const item of s.learnable_objects) {
-      if (item.type) types.add(item.type)
-    }
-  }
-
-  if (types.size === 0) {
-    readerFilters.hidden = true
-    return
-  }
-
-  activeFilterTypes = null
-  readerFilters.replaceChildren()
-
-  const allChip = document.createElement('button')
-  allChip.type = 'button'
-  allChip.className = 'reader-chip reader-chip--active'
-  allChip.dataset.filterType = ''
-  allChip.setAttribute('aria-pressed', 'true')
-  allChip.textContent = t('filter_all') || 'All'
-  allChip.addEventListener('click', () => {
-    activeFilterTypes = null
-    applyAnnotationFilter()
-    syncFilterChipUI()
-  })
-  readerFilters.appendChild(allChip)
-
-  for (const type of [...types].sort()) {
-    const chip = document.createElement('button')
-    chip.type = 'button'
-    chip.className = 'reader-chip'
-    chip.dataset.filterType = type
-    chip.setAttribute('aria-pressed', 'false')
-    chip.textContent = type.replace(/_/g, '\u00A0')
-    chip.addEventListener('click', () => {
-      if (activeFilterTypes === null) {
-        activeFilterTypes = new Set([type])
-      } else if (activeFilterTypes.has(type)) {
-        activeFilterTypes.delete(type)
-        if (activeFilterTypes.size === 0) activeFilterTypes = null
-      } else {
-        activeFilterTypes.add(type)
-      }
-      applyAnnotationFilter()
-      syncFilterChipUI()
-    })
-    readerFilters.appendChild(chip)
-  }
-
-  readerFilters.hidden = false
-}
-
-function syncFilterChipUI() {
-  if (!readerFilters) return
-  readerFilters.querySelectorAll('.reader-chip').forEach(chip => {
-    const type   = chip.dataset.filterType
-    const active = type === '' ? activeFilterTypes === null : (activeFilterTypes?.has(type) ?? false)
-    chip.classList.toggle('reader-chip--active', active)
-    chip.setAttribute('aria-pressed', String(active))
-  })
-}
+// ── Annotation filter ─────────────────────────────────────────────────────────
 
 function applyAnnotationFilter() {
   results?.querySelectorAll('.reader-annotation').forEach(mark => {
