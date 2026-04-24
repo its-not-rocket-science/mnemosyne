@@ -1,15 +1,17 @@
 /**
  * playback.js — centralised TTS playback engine and voice selection.
  *
- * @typedef {'sentence'|'full-text'|'phrase'} PlaybackScope
- * @typedef {'idle'|'playing'|'paused'} PlaybackState
- * @typedef {{ voice: SpeechSynthesisVoice, langTag: string }} TTSVoice
- * @typedef {'web-speech'|'none'} TTSProvider
- * @typedef {{ text: string, langTag: string, scope: PlaybackScope, index: number }} TTSRequest
+ * Canonical type declarations live in `./types.js`:
+ *   PlaybackState, PlaybackScope, TTSProvider, TTSVoice, TTSRequest, PlaybackStateEvent
  *
- * PlaybackEngine dispatches a 'state-change' CustomEvent with:
- *   detail: { state: PlaybackState, current: TTSRequest|null, index: number, total: number }
+ * @see ./types.js
  */
+
+/** @typedef {import('./types.js').PlaybackState}    PlaybackState    */
+/** @typedef {import('./types.js').PlaybackScope}    PlaybackScope    */
+/** @typedef {import('./types.js').TTSProvider}      TTSProvider      */
+/** @typedef {import('./types.js').TTSRequest}       TTSRequest       */
+/** @typedef {import('./types.js').PlaybackStateEvent} PlaybackStateEvent */
 
 /**
  * Pick the best available Web Speech voice for a BCP-47 language tag.
@@ -43,9 +45,9 @@ export function pickVoice(langTag) {
 }
 
 export class PlaybackEngine extends EventTarget {
-  /** @type {PlaybackState} */ #state = 'idle'
-  /** @type {TTSRequest[]} */  #queue = []
-  /** @type {number} */        #index = -1
+  /** @type {PlaybackState}  */ #state = 'idle'
+  /** @type {TTSRequest[]}   */ #queue = []
+  /** @type {number}         */ #index = -1
 
   /** @returns {PlaybackState} */
   get state()  { return this.#state }
@@ -127,6 +129,11 @@ export class PlaybackEngine extends EventTarget {
     else if (this.#state === 'paused')  this.resume()
   }
 
+  /**
+   * Update state and dispatch to all listeners.
+   * @param {PlaybackState} newState
+   * @fires PlaybackEngine#state-change {PlaybackStateEvent}
+   */
   #setState(newState) {
     this.#state = newState
     this.dispatchEvent(new CustomEvent('state-change', {
