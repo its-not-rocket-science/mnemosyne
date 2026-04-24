@@ -45,9 +45,17 @@ export function pickVoice(langTag) {
 }
 
 export class PlaybackEngine extends EventTarget {
-  /** @type {PlaybackState}  */ #state = 'idle'
-  /** @type {TTSRequest[]}   */ #queue = []
-  /** @type {number}         */ #index = -1
+  /** @type {PlaybackState}          */ #state = 'idle'
+  /** @type {TTSRequest[]}           */ #queue = []
+  /** @type {number}                 */ #index = -1
+  /** @type {number}                 */ #rate  = 1.0
+  /** @type {SpeechSynthesisVoice|null} */ #preferredVoice = null
+
+  get rate() { return this.#rate }
+  set rate(v) { this.#rate = Math.max(0.1, Math.min(10, Number(v) || 1.0)) }
+
+  /** @param {SpeechSynthesisVoice|null} voice */
+  setPreferredVoice(voice) { this.#preferredVoice = voice }
 
   /** @returns {PlaybackState} */
   get state()  { return this.#state }
@@ -156,7 +164,8 @@ export class PlaybackEngine extends EventTarget {
     const go = () => {
       const utt  = new SpeechSynthesisUtterance(req.text)
       utt.lang   = req.langTag
-      const voice = pickVoice(req.langTag)
+      utt.rate   = this.#rate
+      const voice = this.#preferredVoice ?? pickVoice(req.langTag)
       if (voice) utt.voice = voice
 
       utt.onend = () => {
