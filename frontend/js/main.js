@@ -11,6 +11,7 @@ import {
   countPendingReviews,
 } from './offline.js'
 import { initUiLanguage, t, ti } from './i18n.js'
+import { openDetail, closeDetail } from './layout.js'
 
 initUiLanguage()
 
@@ -28,7 +29,6 @@ const resultsEmpty      = document.querySelector('.results-empty')
 const status            = document.querySelector('#status')
 const modal             = document.querySelector('#lesson-modal')
 const detailPane        = document.querySelector('#detail-pane')
-const concordanceLayout = document.querySelector('#concordance-layout')
 const paneBackdrop      = document.querySelector('#pane-backdrop')
 const playAllBtn        = document.querySelector('#play-all-btn')
 const mainPlayer        = document.querySelector('#main-player')
@@ -554,7 +554,7 @@ results.addEventListener('lesson-open', async (event) => {
           onSpeak: (text) => speakText(text, ttsTag),
         }),
       })
-      concordanceLayout?.classList.add('concordance-layout--open')
+      openDetail()
       paneBackdrop?.classList.add('is-visible')
     } else {
       // Fallback: no detail pane in DOM — open modal directly.
@@ -576,7 +576,7 @@ results.addEventListener('lesson-open', async (event) => {
 
 // Close handler: collapse the split-pane grid when the pane is dismissed.
 detailPane?.addEventListener('pane-close', () => {
-  concordanceLayout?.classList.remove('concordance-layout--open')
+  closeDetail()
   paneBackdrop?.classList.remove('is-visible')
 })
 
