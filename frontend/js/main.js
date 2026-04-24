@@ -78,6 +78,8 @@ let currentSourceUrl     = null
 let languageUserSelected = false
 let currentText          = ''   // committed text from picker
 let activeFilterTypes    = null // Set<string> when filtered, null = show all
+let isFollowAlongEnabled = false
+let currentDepth         = 'scholar'
 
 const languageCapabilities = new Map()
 let currentCaps = null
@@ -524,7 +526,7 @@ results.addEventListener('lesson-open', async (event) => {
   setStatus(t('loading_lesson'), 'busy')
 
   try {
-    const url = `${API_BASE}/lesson/${encodeURIComponent(objectId)}?language=${encodeURIComponent(language)}`
+    const url = `${API_BASE}/lesson/${encodeURIComponent(objectId)}?language=${encodeURIComponent(language)}&depth=${encodeURIComponent(currentDepth)}`
     const response = await fetch(url)
 
     if (!response.ok) {
@@ -583,6 +585,27 @@ detailPane?.addEventListener('pane-close', () => {
 paneBackdrop?.addEventListener('click', () => detailPane?.hide())
 
 
+// ── TopNav event wiring ───────────────────────────────────────────────────────
+
+const topNav = document.querySelector('mnemosyne-top-nav')
+
+topNav?.addEventListener('play-text-request', () => {
+  if (currentSentences.length > 0) {
+    playbackEngine.playAll(
+      currentSentences.map(s => ({ text: s.text, langTag: currentTtsTag }))
+    )
+  }
+})
+
+topNav?.addEventListener('follow-change', ({ detail }) => {
+  isFollowAlongEnabled = detail.enabled
+})
+
+topNav?.addEventListener('depth-change', ({ detail }) => {
+  currentDepth = detail.depth
+})
+
+
 // ── Playback controls ─────────────────────────────────────────────────────────
 
 rnpPrev?.addEventListener('click',   () => playbackEngine.prev())
@@ -619,6 +642,12 @@ playbackEngine.addEventListener('state-change', ({ detail: { state, current, ind
   // Play-all button label
   if (playAllBtn) {
     playAllBtn.textContent = state === 'idle' ? '\u25B6 Play all' : '\u23F9 Stop'
+  }
+
+  // Follow-along: scroll active sentence into view
+  if (isFollowAlongEnabled && state === 'playing' && current) {
+    const activeCard = results?.querySelector(`[data-sentence-index="${current.index}"]`)
+    activeCard?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
   }
 
   // Reader now-playing card
