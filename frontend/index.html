@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/components.css">
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./components/mnemosyne-detail-pane.js"></script>
+    <script type="module" src="./components/mnemosyne-player.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(() => {})
@@ -217,8 +218,12 @@
         <section class="panel" aria-labelledby="results-heading">
           <div class="results-heading-row">
             <h2 id="results-heading" data-i18n="results_heading">Sentence lessons</h2>
-            <button type="button" id="save-lesson-btn" class="ghost-button" hidden
-                    data-i18n="save_lesson_btn">Save lesson</button>
+            <div class="results-heading-actions">
+              <button type="button" id="play-all-btn" class="ghost-button" hidden
+                      aria-label="Play all sentences">&#x25B6; Play all</button>
+              <button type="button" id="save-lesson-btn" class="ghost-button" hidden
+                      data-i18n="save_lesson_btn">Save lesson</button>
+            </div>
           </div>
 
           <!--
@@ -316,6 +321,8 @@
         </div>
       </div>
     </dialog>
+
+    <mnemosyne-player id="main-player" hidden></mnemosyne-player>
 
     <footer class="site-footer">
       <div class="wrap site-footer__inner">
