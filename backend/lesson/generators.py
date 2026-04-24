@@ -664,25 +664,49 @@ def _build_idiom(b: _B) -> LessonResponse:
     )
 
 
+_MATCH_TYPE_LABELS: dict[str, str] = {
+    "exact":                "Canonical form",
+    "orthographic_variant": "Spelling variant",
+    "modernized_variant":   "Modernised form",
+    "inflectional_variant": "Inflectional variant",
+    "misquotation":         "Common misquote",
+    "blend":                "Blend / corruption",
+    "allusion":             "Allusion",
+    "confusable_not_same":  "Confusable \u2014 different meaning",
+}
+
+
 def _build_phrase_family(b: _B) -> LessonResponse:
     """Lesson for a phrase-family object.
 
     lesson_data keys (set by phrase_families.py):
-      canonical_form, matched_variant, meaning, register, origin (opt),
-      variants (list[str]), confusables (list[str], opt), variant_note (opt).
+      canonical_form, matched_variant, match_type, match_type_note (opt),
+      meaning, register, origin (opt), source_text (opt), why_it_matters (opt),
+      variants (list[dict] surface/match_type/note),
+      confusable_forms (list[dict] surface/note, opt),
+      confusables (list[str] family IDs, opt).
     """
-    canonical    = b.lesson_data.get("canonical_form") or b.canonical_form
-    matched      = b.lesson_data.get("matched_variant") or canonical
-    meaning      = b.lesson_data.get("meaning") or ""
-    register     = b.lesson_data.get("register") or ""
-    origin       = b.lesson_data.get("origin") or ""
-    variants     = b.lesson_data.get("variants") or []
-    confusables  = b.lesson_data.get("confusables") or []
-    variant_note = b.lesson_data.get("variant_note") or ""
-    seed         = b.canonical_form
+    canonical        = b.lesson_data.get("canonical_form") or b.canonical_form
+    matched          = b.lesson_data.get("matched_variant") or canonical
+    match_type       = b.lesson_data.get("match_type") or "exact"
+    match_type_note  = b.lesson_data.get("match_type_note") or ""
+    meaning          = b.lesson_data.get("meaning") or ""
+    register         = b.lesson_data.get("register") or ""
+    origin           = b.lesson_data.get("origin") or ""
+    source_text      = b.lesson_data.get("source_text") or ""
+    why_it_matters   = b.lesson_data.get("why_it_matters") or ""
+    raw_variants     = b.lesson_data.get("variants") or []
+    confusables      = b.lesson_data.get("confusables") or []
+    seed             = b.canonical_form
 
-    is_canonical_match = matched.lower() == canonical.lower()
-    title = f"Phrase family: {canonical}"
+    # variants may be list[dict] (new) or list[str] (legacy)
+    variant_surfaces: list[str] = [
+        (v["surface"] if isinstance(v, dict) else v) for v in raw_variants
+    ]
+
+    is_exact = match_type == "exact"
+    mt_label = _MATCH_TYPE_LABELS.get(match_type, match_type.replace("_", " ").title())
+    title    = f"Phrase family: {canonical}"
 
     if meaning:
         explanation = f"\u201c{canonical}\u201d \u2014 {meaning}"
@@ -692,18 +716,23 @@ def _build_phrase_family(b: _B) -> LessonResponse:
     fields: list[LessonField] = [
         LessonField(label="Canonical form", value=canonical),
     ]
-    if not is_canonical_match:
+    if not is_exact:
         fields.append(LessonField(label="Matched variant", value=matched))
-        if variant_note:
-            fields.append(LessonField(label="Variant note", value=variant_note))
+        fields.append(LessonField(label="Match type",      value=mt_label))
+        if match_type_note:
+            fields.append(LessonField(label="Note", value=match_type_note))
     if meaning:
         fields.append(LessonField(label="Meaning", value=meaning))
     if register:
         fields.append(LessonField(label="Register", value=register))
+    if source_text:
+        fields.append(LessonField(label="Source", value=source_text))
     if origin:
         fields.append(LessonField(label="Origin", value=origin))
-    if variants:
-        fields.append(LessonField(label="Known variants", value=" / ".join(variants)))
+    if why_it_matters:
+        fields.append(LessonField(label="Why it matters", value=why_it_matters))
+    if variant_surfaces:
+        fields.append(LessonField(label="Known variants", value=" / ".join(variant_surfaces)))
     if confusables:
         fields.append(LessonField(label="Confusable with", value=", ".join(confusables)))
 
@@ -727,8 +756,7 @@ def _build_phrase_family(b: _B) -> LessonResponse:
         if mc:
             drills.append(mc)
 
-    # Recognition drill: is the matched form the canonical one?
-    if not is_canonical_match:
+    if not is_exact:
         drills.append(RecognitionDrill(
             type="recognition",
             statement=f"\u201c{matched}\u201d is the most widely cited form of this expression.",

@@ -1,7 +1,9 @@
 import '../components/mnemosyne-pill.js'
 import '../components/mnemosyne-modal.js'
 import '../components/mnemosyne-detail-pane.js'
+import '../components/mnemosyne-player.js'
 import { initAuth, getAuthHeaders } from './auth.js'
+import { playbackEngine } from './playback.js'
 import {
   queueReview,
   getPendingReviews,
@@ -28,6 +30,8 @@ const modal             = document.querySelector('#lesson-modal')
 const detailPane        = document.querySelector('#detail-pane')
 const concordanceLayout = document.querySelector('#concordance-layout')
 const paneBackdrop      = document.querySelector('#pane-backdrop')
+const playAllBtn        = document.querySelector('#play-all-btn')
+const mainPlayer        = document.querySelector('#main-player')
 const resultsToolbar    = document.querySelector('#results-toolbar')
 const jobProgressPanel  = document.querySelector('#job-progress')
 const jobProgressFill   = document.querySelector('#job-progress-fill')
@@ -52,6 +56,11 @@ const saveLessonConfirmBtn = document.querySelector('#save-lesson-confirm-btn')
 
 
 const reviewStateByObject = new Map()
+const canSpeak = 'speechSynthesis' in window
+
+// Stores the last-rendered sentences and their TTS tag for playback controls.
+let currentSentences = []
+let currentTtsTag    = ''
 
 let currentContentType   = 'pasted_text'
 let currentFilename      = null
@@ -563,6 +572,41 @@ detailPane?.addEventListener('pane-close', () => {
 paneBackdrop?.addEventListener('click', () => detailPane?.hide())
 
 
+// ── Playback controls ─────────────────────────────────────────────────────────
+
+playAllBtn?.addEventListener('click', () => {
+  if (playbackEngine.state === 'idle') {
+    playbackEngine.playAll(
+      currentSentences.map(s => ({ text: s.text, langTag: currentTtsTag }))
+    )
+  } else {
+    playbackEngine.stop()
+  }
+})
+
+playbackEngine.addEventListener('state-change', ({ detail: { state, current } }) => {
+  // Active sentence highlight + per-card button icons
+  results?.querySelectorAll('.sentence-card').forEach((card) => {
+    const cardIdx = parseInt(card.dataset.sentenceIndex ?? '-1', 10)
+    const isActive = state !== 'idle' && current?.index === cardIdx
+    card.classList.toggle('sentence-card--playing', isActive)
+
+    const btn  = card.querySelector('.sentence-card__play-btn')
+    const icon = btn?.querySelector('.play-icon')
+    if (!btn || !icon) return
+    const isPlaying = isActive && state === 'playing'
+    icon.textContent = isPlaying ? '\u23F8' : '\u25B6'
+    btn.setAttribute('aria-label',   isPlaying ? 'Pause' : 'Play sentence')
+    btn.setAttribute('aria-pressed', String(isActive))
+  })
+
+  // Play-all button label
+  if (playAllBtn) {
+    playAllBtn.textContent = state === 'idle' ? '\u25B6 Play all' : '\u23F9 Stop'
+  }
+})
+
+
 // ── Render sentence cards ─────────────────────────────────────────────────────
 
 function renderResults(sentences, language) {
@@ -571,11 +615,21 @@ function renderResults(sentences, language) {
   const dir       = caps?.direction         ?? 'ltr'
   const tokenMode = caps?.tokenization_mode ?? 'whitespace'
   const scriptFam = caps?.script_family     ?? 'latin'
+  const ttsTag    = caps?.tts_lang_tag ?? language
 
-  for (const sentence of sentences) {
+  // Store for playback controls
+  currentSentences = sentences
+  currentTtsTag    = ttsTag
+
+  for (const [sentenceIdx, sentence] of sentences.entries()) {
     const article = document.createElement('article')
     article.className = 'sentence-card'
-    article.dataset.tokenization = tokenMode
+    article.dataset.tokenization  = tokenMode
+    article.dataset.sentenceIndex = sentenceIdx
+
+    // Wrapper row: sentence text + per-card play button
+    const top = document.createElement('div')
+    top.className = 'sentence-card__top'
 
     const textEl = document.createElement('p')
     textEl.className = 'sentence-card__text'
@@ -586,6 +640,28 @@ function renderResults(sentences, language) {
     textEl.dataset.scriptFamily = scriptFam
     textEl.dataset.layer = 'native'
 
+    top.appendChild(textEl)
+
+    if (canSpeak) {
+      const playBtn = document.createElement('button')
+      playBtn.type      = 'button'
+      playBtn.className = 'sentence-card__play-btn'
+      playBtn.setAttribute('aria-label', 'Play sentence')
+      const icon = document.createElement('span')
+      icon.className = 'play-icon'
+      icon.setAttribute('aria-hidden', 'true')
+      icon.textContent = '\u25B6'
+      playBtn.appendChild(icon)
+      playBtn.addEventListener('click', () => {
+        if (playbackEngine.state !== 'idle' && playbackEngine.current?.index === sentenceIdx) {
+          playbackEngine.togglePause()
+        } else {
+          playbackEngine.speak(sentence.text, ttsTag, 'sentence', sentenceIdx)
+        }
+      })
+      top.appendChild(playBtn)
+    }
+
     const list = document.createElement('ul')
     list.className = 'sentence-card__pills'
     list.setAttribute('role', 'list')
@@ -594,22 +670,27 @@ function renderResults(sentences, language) {
     for (const item of sentence.learnable_objects) {
       const li   = document.createElement('li')
       const pill = document.createElement('mnemosyne-pill')
-      pill.setAttribute('type',      item.type)
-      pill.setAttribute('label',     item.label)
-      pill.setAttribute('object-id', item.id)
-      pill.setAttribute('language',  language)
-      pill.setAttribute('dir',       dir)
+      pill.setAttribute('type',       item.type)
+      pill.setAttribute('label',      item.label)
+      pill.setAttribute('object-id',  item.id)
+      pill.setAttribute('language',   language)
+      pill.setAttribute('dir',        dir)
+      if (item.confidence != null) {
+        pill.setAttribute('confidence', String(item.confidence))
+      }
       li.appendChild(pill)
       list.appendChild(li)
     }
 
-    article.append(textEl, list)
+    article.append(top, list)
     fragment.appendChild(article)
   }
 
   results.replaceChildren(fragment)
   applyScriptViewToResults()
   updateScriptViewToolbar()
+
+  if (playAllBtn) playAllBtn.hidden = !(canSpeak && sentences.length > 0)
 }
 
 
@@ -812,49 +893,9 @@ updateOfflineBadge()
 
 // ── Text-to-speech ────────────────────────────────────────────────────────────
 
-function pickVoice(langTag) {
-  const voices = window.speechSynthesis.getVoices()
-  if (!voices.length) return null
-
-  const lower  = langTag.toLowerCase()
-  const prefix = lower.split('-')[0]
-
-  const quality = v => {
-    const n = v.name.toLowerCase()
-    if (n.includes('google') || n.includes('microsoft')) return 0
-    return 1
-  }
-
-  const candidates = voices
-    .filter(v => v.lang.toLowerCase().startsWith(prefix))
-    .sort((a, b) => {
-      const aExact = a.lang.toLowerCase() === lower ? 0 : 1
-      const bExact = b.lang.toLowerCase() === lower ? 0 : 1
-      if (aExact !== bExact) return aExact - bExact
-      return quality(a) - quality(b)
-    })
-
-  return candidates[0] ?? null
-}
-
 function speakText(text, langTag) {
-  if (!text || !('speechSynthesis' in window)) return
-
-  const speak = () => {
-    const utterance = new SpeechSynthesisUtterance(text)
-    if (langTag) utterance.lang = langTag
-    const voice = pickVoice(langTag)
-    if (voice) utterance.voice = voice
-    window.speechSynthesis.cancel()
-    window.speechSynthesis.speak(utterance)
-  }
-
-  if (window.speechSynthesis.getVoices().length > 0) {
-    speak()
-  } else {
-    // Chrome loads voices asynchronously; defer until ready.
-    window.speechSynthesis.addEventListener('voiceschanged', speak, { once: true })
-  }
+  if (!text || !canSpeak) return
+  playbackEngine.speak(text, langTag, 'phrase')
 }
 
 

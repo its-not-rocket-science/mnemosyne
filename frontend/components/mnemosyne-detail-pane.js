@@ -30,11 +30,24 @@ const TYPE_META = {
   phrase_family:   { icon: '🔗', label: 'Phrase family',   ref: 'oklch(0.50 0.20 330)' },
 }
 
-// Field labels shown in the Explanation panel — suppress from the field list
-// because they are rendered in dedicated sections (Related / Origins).
+// Field labels shown in dedicated UI sections — suppress from the generic field list.
 const SUPPRESS_IN_EXPLANATION = new Set([
   'known variants', 'confusable with', 'origin', 'variant note',
+  // phrase_family fields rendered in dedicated sections:
+  'match type', 'note', 'source', 'why it matters',
 ])
+
+// User-friendly labels and CSS modifier classes for MatchType values.
+const MATCH_TYPE_META = {
+  exact:                { label: 'Canonical form',              cls: 'canonical' },
+  orthographic_variant: { label: 'Spelling variant',            cls: 'variant'   },
+  modernized_variant:   { label: 'Modernised form',             cls: 'variant'   },
+  inflectional_variant: { label: 'Inflectional variant',        cls: 'variant'   },
+  misquotation:         { label: 'Common misquote',             cls: 'warning'   },
+  blend:                { label: 'Blend / corruption',          cls: 'warning'   },
+  allusion:             { label: 'Allusion',                    cls: 'allusion'  },
+  confusable_not_same:  { label: 'Confusable \u2014 different meaning', cls: 'danger' },
+}
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -161,10 +174,11 @@ export class MnemosyneDetailPane extends HTMLElement {
     const meta = TYPE_META[type] ?? TYPE_META.vocabulary
 
     // Which optional tabs have data?
-    const hasOrigins = Boolean(ld.origin || ld.etymology)
+    const hasOrigins = Boolean(ld.origin || ld.etymology || ld.source_text)
     const hasRelated = Boolean(
-      (Array.isArray(ld.variants)     && ld.variants.length > 1) ||
-      (Array.isArray(ld.confusables)  && ld.confusables.length > 0)
+      (Array.isArray(ld.variants)         && ld.variants.length > 1) ||
+      (Array.isArray(ld.confusables)      && ld.confusables.length > 0) ||
+      (Array.isArray(ld.confusable_forms) && ld.confusable_forms.length > 0)
     )
 
     this.#visibleTabs = MnemosyneDetailPane.ALL_TABS.filter(
@@ -205,7 +219,7 @@ export class MnemosyneDetailPane extends HTMLElement {
 
         <div class="pane__body">
           ${this._htmlExplanationPanel(lesson, ld, matchedVariant)}
-          ${hasOrigins  ? this._htmlOriginsPanel(isNonCanonical) : ''}
+          ${hasOrigins  ? this._htmlOriginsPanel(isNonCanonical, Boolean(ld.source_text)) : ''}
           ${this._htmlContextPanel(language, dir)}
           ${hasRelated  ? this._htmlRelatedPanel(ld, canonical, isNonCanonical) : ''}
         </div>
@@ -223,9 +237,25 @@ export class MnemosyneDetailPane extends HTMLElement {
     const titleEl = this.shadowRoot.querySelector('#dp-heading')
     if (titleEl) titleEl.textContent = canonical || lesson.title || lesson.label || ''
 
-    // Explanation prose
+    // Explanation: confusable warning banner
+    const confusableWarnEl = this.shadowRoot.querySelector('#dp-panel-explanation .pane__confusable-warning-text')
+    if (confusableWarnEl) {
+      confusableWarnEl.textContent = (ld.match_type_note)
+        ? ld.match_type_note
+        : 'This phrase looks similar to the family but has a different meaning.'
+    }
+
+    // Explanation: match type note
+    const matchNoteEl = this.shadowRoot.querySelector('#dp-panel-explanation .pane__match-note')
+    if (matchNoteEl) matchNoteEl.textContent = ld.match_type_note || ''
+
+    // Explanation: main prose
     const explanationEl = this.shadowRoot.querySelector('#dp-panel-explanation .pane__explanation')
     if (explanationEl) explanationEl.textContent = lesson.explanation || ''
+
+    // Explanation: why it matters
+    const whyEl = this.shadowRoot.querySelector('#dp-panel-explanation .pane__why-it-matters-text')
+    if (whyEl) whyEl.textContent = ld.why_it_matters || ''
 
     // Explanation fields (values only — labels were set in _htmlExplanationPanel)
     const fieldValues = Array.from(
@@ -237,9 +267,13 @@ export class MnemosyneDetailPane extends HTMLElement {
       if (displayFields[i]) el.textContent = displayFields[i].value
     })
 
-    // Origins text
+    // Origins: prose
     const originEl = this.shadowRoot.querySelector('#dp-panel-origins .pane__origin-text')
     if (originEl) originEl.textContent = ld.origin || ld.etymology || ''
+
+    // Origins: source citation
+    const sourceEl = this.shadowRoot.querySelector('#dp-panel-origins .pane__source-citation')
+    if (sourceEl) sourceEl.textContent = ld.source_text || ''
 
     // In Context: highlighted sentence
     const contextEl = this.shadowRoot.querySelector('#dp-panel-context .pane__context-sentence')
@@ -249,34 +283,32 @@ export class MnemosyneDetailPane extends HTMLElement {
       highlightPhrase(contextEl, sentenceText || '', matchedVariant)
     }
 
-    // Related: variant items
-    const variants = Array.isArray(ld.variants) ? ld.variants : []
+    // Related: variant items (dicts with surface/match_type/note, or legacy strings)
+    const rawVariants = Array.isArray(ld.variants) ? ld.variants : []
     this.shadowRoot.querySelectorAll('#dp-panel-related .pane__variant-text').forEach((el, i) => {
-      if (variants[i] != null) el.textContent = variants[i]
+      const v = rawVariants[i]
+      if (v != null) el.textContent = typeof v === 'string' ? v : (v.surface ?? '')
+    })
+    this.shadowRoot.querySelectorAll('#dp-panel-related .pane__variant-note').forEach((el, i) => {
+      const v = rawVariants[i]
+      const note = typeof v === 'object' ? (v?.note ?? '') : ''
+      if (note) { el.textContent = note; el.hidden = false }
     })
 
-    // Related: variant notes
-    const variantNoteEls = this.shadowRoot.querySelectorAll('#dp-panel-related .pane__variant-note')
-    // Notes are stored per-family in lesson_data.variant_notes (map: surface → note)
-    // For now, show the lesson_data.variant_note on the matched variant only.
-    // Future: enrich per-variant notes via expanded lesson_data.
-    const variantNoteText = ld.variant_note || ''
-    if (variantNoteEls.length > 0 && variantNoteText) {
-      // Find index of matched variant in variants list
-      const matchedIdx = variants.findIndex(v =>
-        v.toLowerCase() === matchedVariant.toLowerCase()
-      )
-      if (matchedIdx >= 0 && variantNoteEls[matchedIdx]) {
-        variantNoteEls[matchedIdx].textContent = variantNoteText
-        variantNoteEls[matchedIdx].hidden = false
-      }
-    }
+    // Related: within-family confusable forms
+    const confusableForms = Array.isArray(ld.confusable_forms) ? ld.confusable_forms : []
+    this.shadowRoot.querySelectorAll('#dp-panel-related .pane__confusable-form-surface').forEach((el, i) => {
+      if (confusableForms[i]) el.textContent = confusableForms[i].surface ?? ''
+    })
+    this.shadowRoot.querySelectorAll('#dp-panel-related .pane__confusable-form-note').forEach((el, i) => {
+      const note = confusableForms[i]?.note ?? ''
+      if (note) { el.textContent = note; el.hidden = false }
+    })
 
-    // Related: confusable items
+    // Related: cross-family confusable IDs
     const confusables = Array.isArray(ld.confusables) ? ld.confusables : []
     this.shadowRoot.querySelectorAll('#dp-panel-related .pane__confusable-id').forEach((el, i) => {
       if (confusables[i] != null) {
-        // Convert slug → readable: "of_the_first_water" → "of the first water"
         el.textContent = String(confusables[i]).replace(/_/g, '\u00a0')
       }
     })
@@ -301,7 +333,14 @@ export class MnemosyneDetailPane extends HTMLElement {
       </div>
     `).join('')
 
-    const hasAudio = Boolean(matchedVariant)
+    const hasAudio     = Boolean(matchedVariant)
+    const matchType    = ld.match_type || ''
+    const matchTypeMeta = matchType ? (MATCH_TYPE_META[matchType] ?? { label: matchType, cls: 'variant' }) : null
+    // Show the badge for ALL match types so readers see canonical confirmation too.
+    const showMatchBadge = Boolean(matchTypeMeta)
+    const hasMatchNote = Boolean(ld.match_type_note)
+    const hasWhyItMatters = Boolean(ld.why_it_matters)
+    const isConfusable = matchType === 'confusable_not_same'
 
     return /* html */`
       <section
@@ -310,7 +349,26 @@ export class MnemosyneDetailPane extends HTMLElement {
         aria-labelledby="dp-tab-explanation"
         class="pane__panel"
       >
+        ${isConfusable ? /* html */`
+          <div class="pane__confusable-warning" role="note">
+            <span aria-hidden="true">&#x26A0;&#xFE0F;</span>
+            <span class="pane__confusable-warning-text"></span>
+          </div>
+        ` : ''}
+        ${showMatchBadge ? /* html */`
+          <div class="pane__match-row">
+            <span class="pane__match-badge pane__match-badge--${esc(matchTypeMeta.cls)}">
+              ${esc(matchTypeMeta.label)}
+            </span>
+            ${hasMatchNote ? '<p class="pane__match-note"></p>' : ''}
+          </div>
+        ` : ''}
         <p class="pane__explanation"></p>
+        ${hasWhyItMatters ? /* html */`
+          <blockquote class="pane__why-it-matters">
+            <p class="pane__why-it-matters-text"></p>
+          </blockquote>
+        ` : ''}
         ${displayFields.length ? `<dl class="pane__fields">${fieldsHtml}</dl>` : ''}
         ${hasAudio ? /* html */`
           <div class="pane__audio-row">
@@ -323,7 +381,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     `
   }
 
-  _htmlOriginsPanel(isNonCanonical) {
+  _htmlOriginsPanel(isNonCanonical, hasSourceText) {
     return /* html */`
       <section
         id="dp-panel-origins"
@@ -333,6 +391,9 @@ export class MnemosyneDetailPane extends HTMLElement {
         hidden
       >
         <p class="pane__origin-text"></p>
+        ${hasSourceText ? /* html */`
+          <cite class="pane__source-citation"></cite>
+        ` : ''}
         <div class="pane__audio-row">
           ${isNonCanonical ? /* html */`
             <button class="pane__audio-btn" type="button" data-speak="original">
@@ -374,25 +435,50 @@ export class MnemosyneDetailPane extends HTMLElement {
   }
 
   _htmlRelatedPanel(ld, canonical, isNonCanonical) {
-    const variants    = Array.isArray(ld.variants)    ? ld.variants    : []
-    const confusables = Array.isArray(ld.confusables) ? ld.confusables : []
+    // variants may be list[dict{surface,match_type,note}] or legacy list[str]
+    const rawVariants      = Array.isArray(ld.variants)         ? ld.variants         : []
+    const confusables      = Array.isArray(ld.confusables)      ? ld.confusables      : []
+    const confusableForms  = Array.isArray(ld.confusable_forms) ? ld.confusable_forms : []
 
-    const variantItems = variants.map(v => {
-      const isCanon = canonical && v.toLowerCase() === canonical.toLowerCase()
+    const variantItems = rawVariants.map(v => {
+      const surface  = typeof v === 'string' ? v : (v.surface ?? '')
+      const mt       = typeof v === 'string' ? '' : (v.match_type ?? '')
+      const mtMeta   = mt ? (MATCH_TYPE_META[mt] ?? { label: mt, cls: 'variant' }) : null
+      const hasNote  = typeof v !== 'string' && Boolean(v.note)
+      const isCanon  = canonical && surface.toLowerCase() === canonical.toLowerCase()
       return /* html */`
         <li class="pane__variant-item${isCanon ? ' pane__variant-item--canonical' : ''}">
-          <span class="pane__variant-text"></span>
-          ${isCanon ? '<span class="pane__canonical-star" aria-label="canonical form">&#x2605;</span>' : ''}
-          <span class="pane__variant-note" hidden></span>
+          <span class="pane__variant-surface-row">
+            <span class="pane__variant-text"></span>
+            ${isCanon ? '<span class="pane__canonical-star" aria-label="canonical form">&#x2605;</span>' : ''}
+            ${mtMeta && !isCanon ? /* html */`
+              <span class="pane__match-badge pane__match-badge--${esc(mtMeta.cls)} pane__match-badge--sm">
+                ${esc(mtMeta.label)}
+              </span>
+            ` : ''}
+          </span>
+          ${hasNote ? '<p class="pane__variant-note" hidden></p>' : ''}
         </li>
       `
     }).join('')
+
+    const confusableFormItems = confusableForms.map(() => /* html */`
+      <li class="pane__confusable-form-item">
+        <span class="pane__match-badge pane__match-badge--danger pane__match-badge--sm">
+          ${esc(MATCH_TYPE_META.confusable_not_same.label)}
+        </span>
+        <span class="pane__confusable-form-surface"></span>
+        <p class="pane__confusable-form-note" hidden></p>
+      </li>
+    `).join('')
 
     const confusableItems = confusables.map(() => /* html */`
       <li class="pane__confusable-item">
         <span class="pane__confusable-id"></span>
       </li>
     `).join('')
+
+    const hasAnyConfusables = confusables.length > 0 || confusableForms.length > 0
 
     return /* html */`
       <section
@@ -402,16 +488,19 @@ export class MnemosyneDetailPane extends HTMLElement {
         class="pane__panel"
         hidden
       >
-        ${variants.length ? /* html */`
+        ${rawVariants.length ? /* html */`
           <section class="pane__subsection" aria-labelledby="dp-variants-h">
             <h3 class="pane__section-heading" id="dp-variants-h">Variant forms</h3>
             <ul class="pane__variant-list">${variantItems}</ul>
           </section>
         ` : ''}
-        ${confusables.length ? /* html */`
+        ${hasAnyConfusables ? /* html */`
           <section class="pane__subsection" aria-labelledby="dp-confusables-h">
             <h3 class="pane__section-heading" id="dp-confusables-h">Confusable with</h3>
-            <ul class="pane__confusable-list">${confusableItems}</ul>
+            <ul class="pane__confusable-list">
+              ${confusableFormItems}
+              ${confusableItems}
+            </ul>
           </section>
         ` : ''}
         ${isNonCanonical ? /* html */`
@@ -708,11 +797,109 @@ export class MnemosyneDetailPane extends HTMLElement {
       }
       .pane__panel[hidden] { display: none; }
 
+      /* ── Confusable warning banner ──────────────────────────────────────── */
+      .pane__confusable-warning {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.4rem;
+        background: color-mix(in oklch, oklch(0.55 0.20 29) 10%, Canvas);
+        border: 1px solid color-mix(in oklch, oklch(0.55 0.20 29) 30%, Canvas);
+        border-radius: 0.5rem;
+        padding: 0.5rem 0.65rem;
+        font-size: 0.8125rem;
+        line-height: 1.5;
+        color: color-mix(in oklch, oklch(0.55 0.20 29) 85%, CanvasText);
+      }
+
+      .pane__confusable-warning-text { flex: 1; margin: 0; }
+
+      /* ── Match-type badge row ────────────────────────────────────────────── */
+      .pane__match-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .pane__match-note {
+        margin: 0;
+        font-size: 0.8125rem;
+        color: var(--muted);
+        font-style: italic;
+        line-height: 1.5;
+      }
+
+      /* ── Match-type badges ───────────────────────────────────────────────── */
+      .pane__match-badge {
+        display: inline-flex;
+        align-items: center;
+        font-size: 0.625rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        border-radius: 999px;
+        padding: 0.18rem 0.6rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      /* Small variant for use inside variant list items */
+      .pane__match-badge--sm {
+        font-size: 0.5625rem;
+        padding: 0.1rem 0.45rem;
+      }
+
+      /* canonical — green */
+      .pane__match-badge--canonical {
+        background: color-mix(in oklch, oklch(0.55 0.18 145) 14%, Canvas);
+        color:      color-mix(in oklch, oklch(0.55 0.18 145) 80%, CanvasText);
+        border: 1px solid color-mix(in oklch, oklch(0.55 0.18 145) 30%, Canvas);
+      }
+      /* variant — type accent */
+      .pane__match-badge--variant {
+        background: color-mix(in oklch, ${ref} 14%, Canvas);
+        color:      color-mix(in oklch, ${ref} 80%, CanvasText);
+        border: 1px solid color-mix(in oklch, ${ref} 30%, Canvas);
+      }
+      /* warning — amber */
+      .pane__match-badge--warning {
+        background: color-mix(in oklch, oklch(0.72 0.18 55) 14%, Canvas);
+        color:      color-mix(in oklch, oklch(0.72 0.18 55) 80%, CanvasText);
+        border: 1px solid color-mix(in oklch, oklch(0.72 0.18 55) 30%, Canvas);
+      }
+      /* allusion — violet */
+      .pane__match-badge--allusion {
+        background: color-mix(in oklch, oklch(0.55 0.18 300) 14%, Canvas);
+        color:      color-mix(in oklch, oklch(0.55 0.18 300) 80%, CanvasText);
+        border: 1px solid color-mix(in oklch, oklch(0.55 0.18 300) 30%, Canvas);
+      }
+      /* danger — red (confusable_not_same) */
+      .pane__match-badge--danger {
+        background: color-mix(in oklch, oklch(0.55 0.20 29) 14%, Canvas);
+        color:      color-mix(in oklch, oklch(0.55 0.20 29) 80%, CanvasText);
+        border: 1px solid color-mix(in oklch, oklch(0.55 0.20 29) 30%, Canvas);
+      }
+
       /* ── Explanation prose ──────────────────────────────────────────────── */
       .pane__explanation {
         margin: 0;
         font-size: 0.9375rem;
         line-height: 1.6;
+      }
+
+      /* ── Why it matters ─────────────────────────────────────────────────── */
+      .pane__why-it-matters {
+        margin: 0;
+        padding: 0.6rem 0.75rem;
+        border-inline-start: 3px solid color-mix(in oklch, ${ref} 55%, Canvas);
+        background: color-mix(in oklch, ${ref} 6%, Canvas);
+        border-radius: 0 0.4rem 0.4rem 0;
+      }
+
+      .pane__why-it-matters-text {
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.65;
+        color: var(--text);
       }
 
       /* ── Field list (dl/dt/dd) ──────────────────────────────────────────── */
@@ -793,6 +980,18 @@ export class MnemosyneDetailPane extends HTMLElement {
         color: var(--text);
       }
 
+      .pane__source-citation {
+        display: block;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 600;
+        color: var(--muted);
+        letter-spacing: 0.02em;
+        padding-block-start: 0.35rem;
+        border-block-start: 1px solid var(--border);
+        margin-block-start: 0.25rem;
+      }
+
       /* ── In Context ─────────────────────────────────────────────────────── */
       .pane__context-sentence {
         margin: 0;
@@ -853,9 +1052,17 @@ export class MnemosyneDetailPane extends HTMLElement {
       }
       .pane__variant-item:last-child { border-block-end: none; }
 
-      .pane__variant-text {
+      /* Flex row within each variant item: text + optional match-type badge */
+      .pane__variant-surface-row {
+        display: flex;
+        align-items: baseline;
+        gap: 0.35rem;
+        flex-wrap: wrap;
         flex: 1 1 0;
         min-inline-size: 0;
+      }
+
+      .pane__variant-text {
         overflow-wrap: break-word;
       }
 
@@ -882,6 +1089,30 @@ export class MnemosyneDetailPane extends HTMLElement {
         padding-block: 0.3rem;
         font-size: 0.875rem;
         color: var(--muted);
+      }
+
+      /* Within-family confusable forms (confusable_not_same variants) */
+      .pane__confusable-form-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding-block: 0.4rem;
+        border-block-end: 1px solid var(--border);
+        font-size: 0.875rem;
+      }
+      .pane__confusable-form-item:last-child { border-block-end: none; }
+
+      .pane__confusable-form-surface {
+        font-weight: 500;
+        overflow-wrap: break-word;
+      }
+
+      .pane__confusable-form-note {
+        margin: 0;
+        font-size: 0.75rem;
+        color: var(--muted);
+        font-style: italic;
+        line-height: 1.5;
       }
 
       /* ── Footer ──────────────────────────────────────────────────────────── */

@@ -754,6 +754,20 @@ select:focus-visible {
   margin: 0;
 }
 
+/* Action buttons cluster on the inline-end edge of the results heading row. */
+.results-heading-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-wrap: wrap;
+}
+
+/* Body gains bottom padding while the mini-player is visible so the footer
+   is never permanently obscured. JS adds/removes .player-active on <body>. */
+body.player-active {
+  padding-block-end: 3.5rem;
+}
+
 /* ── Chosen text display ─────────────────────────────────────────────────────
    Non-editable preview of selected text, shown after picker closes.          */
 .chosen-text-display {
