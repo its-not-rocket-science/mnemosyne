@@ -54,6 +54,16 @@ const saveLessonStatus     = document.querySelector('#save-lesson-status')
 const saveLessonCloseBtn   = document.querySelector('#save-lesson-close-btn')
 const saveLessonConfirmBtn = document.querySelector('#save-lesson-confirm-btn')
 
+// Reader UI
+const readerFilters    = document.querySelector('#reader-filters')
+const readerNowPlaying = document.querySelector('#reader-nowplaying')
+const rnpToggle        = document.querySelector('#rnp-toggle')
+const rnpStop          = document.querySelector('#rnp-stop')
+const rnpPrev          = document.querySelector('#rnp-prev')
+const rnpNext          = document.querySelector('#rnp-next')
+const rnpText          = document.querySelector('#reader-nowplaying .reader-nowplaying__text')
+const rnpCounter       = document.querySelector('#reader-nowplaying .reader-nowplaying__counter')
+
 
 const reviewStateByObject = new Map()
 const canSpeak = 'speechSynthesis' in window
@@ -67,6 +77,7 @@ let currentFilename      = null
 let currentSourceUrl     = null
 let languageUserSelected = false
 let currentText          = ''   // committed text from picker
+let activeFilterTypes    = null // Set<string> when filtered, null = show all
 
 const languageCapabilities = new Map()
 let currentCaps = null
@@ -574,6 +585,11 @@ paneBackdrop?.addEventListener('click', () => detailPane?.hide())
 
 // ── Playback controls ─────────────────────────────────────────────────────────
 
+rnpPrev?.addEventListener('click',   () => playbackEngine.prev())
+rnpToggle?.addEventListener('click', () => playbackEngine.togglePause())
+rnpStop?.addEventListener('click',   () => playbackEngine.stop())
+rnpNext?.addEventListener('click',   () => playbackEngine.next())
+
 playAllBtn?.addEventListener('click', () => {
   if (playbackEngine.state === 'idle') {
     playbackEngine.playAll(
@@ -584,7 +600,7 @@ playAllBtn?.addEventListener('click', () => {
   }
 })
 
-playbackEngine.addEventListener('state-change', ({ detail: { state, current } }) => {
+playbackEngine.addEventListener('state-change', ({ detail: { state, current, index, total } }) => {
   // Active sentence highlight + per-card button icons
   results?.querySelectorAll('.sentence-card').forEach((card) => {
     const cardIdx = parseInt(card.dataset.sentenceIndex ?? '-1', 10)
@@ -604,6 +620,21 @@ playbackEngine.addEventListener('state-change', ({ detail: { state, current } })
   if (playAllBtn) {
     playAllBtn.textContent = state === 'idle' ? '\u25B6 Play all' : '\u23F9 Stop'
   }
+
+  // Reader now-playing card
+  if (readerNowPlaying) {
+    const idle = state === 'idle'
+    readerNowPlaying.hidden = idle
+    if (!idle && current) {
+      if (rnpText)    rnpText.textContent    = current.text
+      if (rnpCounter) rnpCounter.textContent = `${index + 1}\u2009/\u2009${total}`
+    }
+    if (rnpToggle) {
+      const isPaused = state === 'paused'
+      rnpToggle.textContent = isPaused ? '\u25B6' : '\u23F8'
+      rnpToggle.setAttribute('aria-label', isPaused ? 'Resume' : 'Pause')
+    }
+  }
 })
 
 
@@ -617,38 +648,29 @@ function renderResults(sentences, language) {
   const scriptFam = caps?.script_family     ?? 'latin'
   const ttsTag    = caps?.tts_lang_tag ?? language
 
-  // Store for playback controls
   currentSentences = sentences
   currentTtsTag    = ttsTag
 
   for (const [sentenceIdx, sentence] of sentences.entries()) {
     const article = document.createElement('article')
-    article.className = 'sentence-card'
+    article.className = 'sentence-card reader-sentence'
     article.dataset.tokenization  = tokenMode
     article.dataset.sentenceIndex = sentenceIdx
 
-    // Wrapper row: sentence text + per-card play button
-    const top = document.createElement('div')
-    top.className = 'sentence-card__top'
+    const layout = document.createElement('div')
+    layout.className = 'reader-sentence__layout'
 
-    const textEl = document.createElement('p')
-    textEl.className = 'sentence-card__text'
-    textEl.textContent = sentence.text
-    textEl.setAttribute('lang', language)
-    textEl.setAttribute('dir',  dir)
-    textEl.dataset.tokenization = tokenMode
-    textEl.dataset.scriptFamily = scriptFam
-    textEl.dataset.layer = 'native'
-
-    top.appendChild(textEl)
+    const gutter = document.createElement('div')
+    gutter.className = 'reader-sentence__gutter'
 
     if (canSpeak) {
       const playBtn = document.createElement('button')
       playBtn.type      = 'button'
-      playBtn.className = 'sentence-card__play-btn'
-      playBtn.setAttribute('aria-label', 'Play sentence')
+      playBtn.className = 'reader-gutter-btn sentence-card__play-btn'
+      playBtn.setAttribute('aria-label',   'Play sentence')
+      playBtn.setAttribute('aria-pressed', 'false')
       const icon = document.createElement('span')
-      icon.className = 'play-icon'
+      icon.className   = 'play-icon'
       icon.setAttribute('aria-hidden', 'true')
       icon.textContent = '\u25B6'
       playBtn.appendChild(icon)
@@ -659,38 +681,201 @@ function renderResults(sentences, language) {
           playbackEngine.speak(sentence.text, ttsTag, 'sentence', sentenceIdx)
         }
       })
-      top.appendChild(playBtn)
+      gutter.appendChild(playBtn)
     }
 
-    const list = document.createElement('ul')
-    list.className = 'sentence-card__pills'
-    list.setAttribute('role', 'list')
-    list.setAttribute('dir', dir)
+    const content = document.createElement('div')
+    content.className = 'reader-sentence__content'
+    content.appendChild(buildAnnotatedText(sentence.text, sentence.learnable_objects, language, dir, tokenMode, scriptFam))
 
-    for (const item of sentence.learnable_objects) {
-      const li   = document.createElement('li')
-      const pill = document.createElement('mnemosyne-pill')
-      pill.setAttribute('type',       item.type)
-      pill.setAttribute('label',      item.label)
-      pill.setAttribute('object-id',  item.id)
-      pill.setAttribute('language',   language)
-      pill.setAttribute('dir',        dir)
-      if (item.confidence != null) {
-        pill.setAttribute('confidence', String(item.confidence))
+    if (sentence.learnable_objects.length > 0) {
+      const list = document.createElement('ul')
+      list.className = 'sentence-card__pills'
+      list.setAttribute('role', 'list')
+      list.setAttribute('dir', dir)
+
+      for (const item of sentence.learnable_objects) {
+        const li   = document.createElement('li')
+        const pill = document.createElement('mnemosyne-pill')
+        pill.setAttribute('type',       item.type)
+        pill.setAttribute('label',      item.label)
+        pill.setAttribute('object-id',  item.id)
+        pill.setAttribute('language',   language)
+        pill.setAttribute('dir',        dir)
+        if (item.confidence != null) {
+          pill.setAttribute('confidence', String(item.confidence))
+        }
+        li.appendChild(pill)
+        list.appendChild(li)
       }
-      li.appendChild(pill)
-      list.appendChild(li)
+
+      content.appendChild(list)
     }
 
-    article.append(top, list)
+    layout.append(gutter, content)
+    article.appendChild(layout)
     fragment.appendChild(article)
   }
 
   results.replaceChildren(fragment)
   applyScriptViewToResults()
   updateScriptViewToolbar()
+  renderFilterChips(sentences)
 
   if (playAllBtn) playAllBtn.hidden = !(canSpeak && sentences.length > 0)
+}
+
+
+// ── Inline annotation builder ─────────────────────────────────────────────────
+
+function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam) {
+  const p = document.createElement('p')
+  p.className = 'sentence-card__text reader-sentence__text'
+  p.setAttribute('lang', language)
+  p.setAttribute('dir',  dir)
+  p.dataset.tokenization = tokenMode
+  p.dataset.scriptFamily = scriptFam
+  p.dataset.layer = 'native'
+
+  if (!items.length) {
+    p.textContent = text
+    return p
+  }
+
+  const lower  = text.toLowerCase()
+  const ranges = []
+
+  for (const item of items) {
+    if (!item.label) continue
+    const needle = item.label.toLowerCase()
+    let pos = 0
+    while (pos < lower.length) {
+      const idx = lower.indexOf(needle, pos)
+      if (idx === -1) break
+      ranges.push({ start: idx, end: idx + item.label.length, item })
+      pos = idx + 1
+    }
+  }
+
+  // Sort by start; prefer longer match at same start
+  ranges.sort((a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start))
+
+  // Greedy non-overlapping selection
+  const selected = []
+  let lastEnd = 0
+  for (const r of ranges) {
+    if (r.start < lastEnd) continue
+    selected.push(r)
+    lastEnd = r.end
+  }
+
+  let cursor = 0
+  for (const { start, end, item } of selected) {
+    if (cursor < start) p.appendChild(document.createTextNode(text.slice(cursor, start)))
+
+    const mark = document.createElement('mark')
+    mark.className = 'reader-annotation'
+    mark.dataset.type = item.type
+    mark.setAttribute('role', 'button')
+    mark.setAttribute('tabindex', '0')
+    mark.setAttribute('aria-label', item.label)
+    mark.textContent = text.slice(start, end)
+    mark.addEventListener('click', () => {
+      mark.dispatchEvent(new CustomEvent('lesson-open', {
+        bubbles: true,
+        detail:  { objectId: item.id, language },
+      }))
+    })
+    mark.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); mark.click() }
+    })
+    p.appendChild(mark)
+    cursor = end
+  }
+
+  if (cursor < text.length) p.appendChild(document.createTextNode(text.slice(cursor)))
+
+  return p
+}
+
+
+// ── Annotation filter chips ───────────────────────────────────────────────────
+
+function renderFilterChips(sentences) {
+  if (!readerFilters) return
+
+  const types = new Set()
+  for (const s of sentences) {
+    for (const item of s.learnable_objects) {
+      if (item.type) types.add(item.type)
+    }
+  }
+
+  if (types.size === 0) {
+    readerFilters.hidden = true
+    return
+  }
+
+  activeFilterTypes = null
+  readerFilters.replaceChildren()
+
+  const allChip = document.createElement('button')
+  allChip.type = 'button'
+  allChip.className = 'reader-chip reader-chip--active'
+  allChip.dataset.filterType = ''
+  allChip.setAttribute('aria-pressed', 'true')
+  allChip.textContent = t('filter_all') || 'All'
+  allChip.addEventListener('click', () => {
+    activeFilterTypes = null
+    applyAnnotationFilter()
+    syncFilterChipUI()
+  })
+  readerFilters.appendChild(allChip)
+
+  for (const type of [...types].sort()) {
+    const chip = document.createElement('button')
+    chip.type = 'button'
+    chip.className = 'reader-chip'
+    chip.dataset.filterType = type
+    chip.setAttribute('aria-pressed', 'false')
+    chip.textContent = type.replace(/_/g, '\u00A0')
+    chip.addEventListener('click', () => {
+      if (activeFilterTypes === null) {
+        activeFilterTypes = new Set([type])
+      } else if (activeFilterTypes.has(type)) {
+        activeFilterTypes.delete(type)
+        if (activeFilterTypes.size === 0) activeFilterTypes = null
+      } else {
+        activeFilterTypes.add(type)
+      }
+      applyAnnotationFilter()
+      syncFilterChipUI()
+    })
+    readerFilters.appendChild(chip)
+  }
+
+  readerFilters.hidden = false
+}
+
+function syncFilterChipUI() {
+  if (!readerFilters) return
+  readerFilters.querySelectorAll('.reader-chip').forEach(chip => {
+    const type   = chip.dataset.filterType
+    const active = type === '' ? activeFilterTypes === null : (activeFilterTypes?.has(type) ?? false)
+    chip.classList.toggle('reader-chip--active', active)
+    chip.setAttribute('aria-pressed', String(active))
+  })
+}
+
+function applyAnnotationFilter() {
+  results?.querySelectorAll('.reader-annotation').forEach(mark => {
+    mark.toggleAttribute('data-filtered', activeFilterTypes !== null && !activeFilterTypes.has(mark.dataset.type))
+  })
+  results?.querySelectorAll('.sentence-card__pills li').forEach(li => {
+    const pill = li.querySelector('mnemosyne-pill')
+    if (!pill) return
+    li.hidden = activeFilterTypes !== null && !activeFilterTypes.has(pill.getAttribute('type'))
+  })
 }
 
 
