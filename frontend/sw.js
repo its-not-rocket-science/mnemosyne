@@ -18,7 +18,7 @@
  * the activate event.
  */
 
-const CACHE_VERSION   = 'v8.7';
+const CACHE_VERSION   = 'v8.8';
 console.log(`Service worker cache version: ${CACHE_VERSION}`);
 const CACHE_NAME      = `mnemosyne-static-${CACHE_VERSION}`;
 
@@ -39,6 +39,7 @@ const STATIC_ASSETS = [
   '/components/mnemosyne-pill.js',
   '/components/mnemosyne-filter-bar.js',
   '/components/mnemosyne-text-panel.js',
+  '/components/mnemosyne-annotation-card.js',
   '/components/mnemosyne-top-nav.js',
   '/components/mnemosyne-detail-pane.js',
   '/components/mnemosyne-player.js',
