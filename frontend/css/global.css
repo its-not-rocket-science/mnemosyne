@@ -854,3 +854,17 @@ body.player-active {
   padding-inline: 0.5rem 0.25rem;
   font-size: 0.875rem;
 }
+
+/* ── Mobile compact header ───────────────────────────────────────────────────
+   On narrow screens shrink header padding and hide the tagline to give more
+   vertical space to the reading column.                                      */
+
+@media (max-width: 53.99rem) {
+  .site-header {
+    padding-block: var(--space-3) var(--space-2);
+  }
+
+  .lede {
+    display: none;
+  }
+}
