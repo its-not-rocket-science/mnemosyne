@@ -233,6 +233,13 @@
           <div id="results-toolbar" class="results-toolbar" hidden></div>
 
           <!--
+            Annotation-type filter chips — hidden until results are rendered.
+            JS populates chips for every type present in the parsed sentences.
+          -->
+          <div id="reader-filters" class="reader-filters" hidden
+               role="group" aria-label="Filter by annotation type"></div>
+
+          <!--
             No aria-live here — announcing the full card dump is too noisy.
             The #status region announces the summary ("3 sentences parsed").
           -->
@@ -241,6 +248,31 @@
               Parse some text above to see learnable items here.
             </p>
           </div>
+
+          <!--
+            Now-playing card — sticky at bottom of reading pane while TTS is
+            active.  Hidden when idle.  Controls mirror the global mini-player
+            but are scoped to the reading column.
+          -->
+          <div id="reader-nowplaying" class="reader-nowplaying" hidden
+               aria-label="Now playing">
+            <div class="reader-nowplaying__info">
+              <span class="reader-nowplaying__counter" aria-hidden="true"></span>
+              <span class="reader-nowplaying__text"></span>
+            </div>
+            <div class="reader-nowplaying__controls"
+                 role="group" aria-label="Playback controls">
+              <button class="reader-nowplaying__btn" id="rnp-prev"
+                      type="button" aria-label="Previous sentence">&#x23EE;</button>
+              <button class="reader-nowplaying__btn" id="rnp-toggle"
+                      type="button" aria-label="Pause">&#x23F8;</button>
+              <button class="reader-nowplaying__btn" id="rnp-stop"
+                      type="button" aria-label="Stop">&#x23F9;</button>
+              <button class="reader-nowplaying__btn" id="rnp-next"
+                      type="button" aria-label="Next sentence">&#x23ED;</button>
+            </div>
+          </div>
+
         </section>
 
         <!--
