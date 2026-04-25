@@ -451,7 +451,7 @@
    (Arabic, Hebrew, CJK, Devanagari) take precedence via source order.
    Scoped to data-script-family="latin" to prevent overriding non-Latin fonts. */
 .reader-sentence__text[data-script-family="latin"] {
-  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-family: var(--font-serif);
 }
 
 .reader-sentence__text {
@@ -501,39 +501,30 @@
   .reader-annotation { transition: none; }
 }
 
-/* One OKLCH ref per type — mirrors mnemosyne-pill.js TYPE_META */
+/* Token-driven annotation highlights — auto-adapt in dark mode via :root overrides */
 .reader-annotation--vocabulary {
-  background: color-mix(in oklch, oklch(0.50 0.20 142) 14%, transparent);
-  text-decoration-color: color-mix(in oklch, oklch(0.50 0.20 142) 50%, CanvasText);
+  background: color-mix(in srgb, var(--accent-vocab) 14%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--accent-vocab) 55%, currentColor);
 }
-.reader-annotation--conjugation {
-  background: color-mix(in oklch, oklch(0.50 0.20 240) 14%, transparent);
-  text-decoration-color: color-mix(in oklch, oklch(0.50 0.20 240) 50%, CanvasText);
-}
-.reader-annotation--agreement {
-  background: color-mix(in oklch, oklch(0.50 0.15 50) 14%, transparent);
-  text-decoration-color: color-mix(in oklch, oklch(0.50 0.15 50) 50%, CanvasText);
+.reader-annotation--conjugation,
+.reader-annotation--agreement,
+.reader-annotation--grammar {
+  background: color-mix(in srgb, var(--accent-grammar) 14%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--accent-grammar) 55%, currentColor);
 }
 .reader-annotation--idiom {
-  background: color-mix(in oklch, oklch(0.50 0.20 300) 14%, transparent);
-  text-decoration-color: color-mix(in oklch, oklch(0.50 0.20 300) 50%, CanvasText);
+  background: color-mix(in srgb, var(--accent-idiom) 14%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--accent-idiom) 55%, currentColor);
 }
-.reader-annotation--grammar {
-  background: color-mix(in oklch, oklch(0.50 0.15 90) 14%, transparent);
-  text-decoration-color: color-mix(in oklch, oklch(0.50 0.15 90) 50%, CanvasText);
-}
-.reader-annotation--nuance {
-  background: color-mix(in oklch, oklch(0.50 0.20 20) 14%, transparent);
-  text-decoration-color: color-mix(in oklch, oklch(0.50 0.20 20) 50%, CanvasText);
-}
+.reader-annotation--nuance,
 .reader-annotation--phrase_family {
-  background: color-mix(in oklch, oklch(0.50 0.20 330) 14%, transparent);
-  text-decoration-color: color-mix(in oklch, oklch(0.50 0.20 330) 50%, CanvasText);
+  background: color-mix(in srgb, var(--accent-literary) 14%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--accent-literary) 55%, currentColor);
 }
 .reader-annotation--script,
 .reader-annotation--transliteration {
-  background: color-mix(in oklch, oklch(0.50 0.18 200) 14%, transparent);
-  text-decoration-color: color-mix(in oklch, oklch(0.50 0.18 200) 50%, CanvasText);
+  background: color-mix(in srgb, var(--accent-etymology) 14%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--accent-etymology) 55%, currentColor);
 }
 
 
