@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from fastapi import APIRouter, Depends
+from fastapi.responses import JSONResponse
 
 from backend.api.dependencies import get_plugin_registry
 from backend.parsing.plugin_loader import PluginRegistry
@@ -12,7 +13,7 @@ router = APIRouter(tags=["languages"])
 @router.get("/languages", response_model=list[LanguageCapabilities])
 async def list_languages(
     registry: PluginRegistry = Depends(get_plugin_registry),
-) -> list[LanguageCapabilities]:
+) -> JSONResponse:
     """Return capability metadata for every active language plugin.
 
     Each entry describes the plugin's rendering requirements (direction,
@@ -26,4 +27,8 @@ async def list_languages(
     Results are sorted alphabetically by language code for stable output.
     """
     caps = registry.supported_languages()
-    return sorted(caps.values(), key=lambda c: c.code)
+    data = sorted(caps.values(), key=lambda c: c.code)
+    return JSONResponse(
+        content=[c.model_dump() for c in data],
+        headers={"Cache-Control": "public, max-age=300"},
+    )
