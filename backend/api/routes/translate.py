@@ -65,11 +65,11 @@ async def translate_text(
         try:
             row = await db.get(CanonicalObjectRow, payload.object_id)
             if row is not None:
-                existing = (row.lesson_data or {}).get("translation")
+                ld = row.lesson_data or {}
+                translations: dict = ld.get("translations") or {}
+                existing = translations.get(payload.target_language)
                 if existing:
-                    stored_provider = (row.lesson_data or {}).get(
-                        "translation_provider", provider
-                    )
+                    stored_provider = ld.get("translation_provider", provider)
                     return TranslateResponse(
                         text=payload.text,
                         translation=existing,
@@ -132,9 +132,10 @@ async def translate_text(
             row = await db.get(CanonicalObjectRow, payload.object_id)
             if row is not None:
                 updated = dict(row.lesson_data or {})
-                updated["translation"] = result
+                translations = dict(updated.get("translations") or {})
+                translations[payload.target_language] = result
+                updated["translations"] = translations
                 updated["translation_provider"] = provider
-                updated["translation_attempted"] = True
                 row.lesson_data = updated
                 await db.commit()
         except Exception:

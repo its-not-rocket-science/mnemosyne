@@ -63,7 +63,7 @@ class Settings(BaseSettings):
     # Options: "none" (disabled), "libretranslate", "mymemory".
     # "none" is the safe default — no external translation calls are made.
     # See backend/dictionary/translation.py for attribution and cost details.
-    translation_provider: str = "none"
+    translation_provider: str = "mymemory"
     # Translation API base URL.  Only relevant when translation_provider is
     # "libretranslate".  Defaults to https://libretranslate.com; point at a
     # self-hosted instance for unlimited free use.

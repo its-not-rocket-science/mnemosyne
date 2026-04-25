@@ -12,7 +12,7 @@ import {
   deleteReview,
   countPendingReviews,
 } from './offline.js'
-import { initUiLanguage, t, ti } from './i18n.js'
+import { initUiLanguage, t, ti, currentUiLang } from './i18n.js'
 import { openDetail, closeDetail } from './layout.js'
 
 initUiLanguage()
@@ -627,6 +627,7 @@ results.addEventListener('lesson-open', async (event) => {
     // Open the detail pane as the primary view.
     // "Study drills" inside the pane delegates to the existing modal.
     if (detailPane) {
+      const uiLang = currentUiLang()
       detailPane.show({
         lesson,
         sentenceText,
@@ -635,6 +636,25 @@ results.addEventListener('lesson-open', async (event) => {
         ttsTag,
         caps,
         depth: currentDepth,
+        uiLang,
+        onTranslate: async (text, sourceLang, targetLang) => {
+          if (!text || sourceLang === targetLang) return null
+          try {
+            const r = await fetch(`${API_BASE}/translate`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                text,
+                source_language: sourceLang,
+                target_language: targetLang,
+                object_id: lesson.type === 'vocabulary' ? lesson.id : undefined,
+              }),
+            })
+            if (!r.ok) return null
+            const d = await r.json()
+            return d.translation ? { text: d.translation, attribution: d.attribution } : null
+          } catch { return null }
+        },
         onSpeak:  (text, lang) => speakText(text, lang ?? ttsTag),
         onStudy:  () => modal.open({
           lesson,
