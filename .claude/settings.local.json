@@ -35,7 +35,8 @@
       "Bash(alembic upgrade *)",
       "Bash(node *)",
       "Bash(curl -s http://localhost:8000/)",
-      "Bash(curl -s http://localhost:8000/css/global.css)"
+      "Bash(curl -s http://localhost:8000/css/global.css)",
+      "Bash(echo \"Exit: $?\")"
     ]
   }
 }

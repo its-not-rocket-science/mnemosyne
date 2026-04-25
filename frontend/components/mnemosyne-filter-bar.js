@@ -28,7 +28,7 @@ const CATEGORIES = [
     id:    'grammar',
     label: 'Grammar',
     color: 'oklch(0.50 0.20 265)',
-    types: ['grammar', 'grammatical_pattern', 'morphology', 'grammar_point', 'syntax'],
+    types: ['grammar', 'grammatical_pattern', 'morphology', 'grammar_point', 'syntax', 'conjugation', 'agreement'],
   },
   {
     id:    'idioms',
