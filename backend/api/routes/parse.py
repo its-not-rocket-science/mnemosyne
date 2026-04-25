@@ -71,7 +71,9 @@ async def parse_text(
         pass  # Redis unavailable — continue without cache
 
     t_nlp = time.perf_counter()
-    candidate_results: list[CandidateSentenceResult] = plugin.analyze_text(payload.text)
+    candidate_results: list[CandidateSentenceResult] = await asyncio.to_thread(
+        plugin.analyze_text, payload.text
+    )
     logger.debug("parse nlp_ms=%.1f sentences=%d", (time.perf_counter() - t_nlp) * 1000, len(candidate_results))
 
     # Resolve candidates → LearnableObjects with stable UUIDs.

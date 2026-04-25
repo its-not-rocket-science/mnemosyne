@@ -28,13 +28,17 @@ from backend.api.routes.ingest import router as ingest_router
 from backend.api.routes.parse import router as parse_router
 from backend.api.routes.parse_jobs import router as parse_jobs_router
 from backend.api.routes.ready import router as ready_router
+from backend.api.routes.vocabulary import router as vocabulary_router
+from backend.api.routes.grammar import router as grammar_router
 from backend.api.routes.reading import router as reading_router
 from backend.api.routes.recommend import router as recommend_router
 from backend.api.routes.review import router as review_router
 from backend.api.routes.translate import router as translate_router
 from backend.api.routes.users import router as users_router
 from backend.core.config import Settings, get_settings
+from backend.core.database import get_session_factory
 from backend.core.logging import RequestIdFilter, request_id_var
+from backend.core.vocab_index import load as load_vocab_index
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 
@@ -168,6 +172,39 @@ def _run_alembic_upgrade() -> None:
         )
 
 
+# ── Plugin warm-up + vocab index ─────────────────────────────────────────────
+
+
+async def _warm_up_plugins(registry) -> None:
+    """Pre-load NLP models for all plugins so the first parse is not slow.
+
+    Each plugin that wraps a spaCy/stanza model exposes it via a
+    ``cached_property`` named ``_nlp``.  Accessing the property in a thread
+    triggers the one-time model load without blocking the event loop.
+    Failures are logged as warnings — a missing model does not crash startup.
+    """
+    plugins = list(registry.all().values())
+
+    async def _warm_one(plugin) -> None:
+        if not hasattr(type(plugin), "_nlp"):
+            return
+        lang = plugin.language_code
+        try:
+            await asyncio.to_thread(lambda: plugin._nlp)  # noqa: B023
+            logger.info("Plugin warm-up complete: %s", lang)
+        except Exception as exc:
+            logger.warning("Plugin warm-up failed for %s: %s", lang, exc)
+
+    await asyncio.gather(*[_warm_one(p) for p in plugins])
+
+
+async def _load_vocab_index_background() -> None:
+    try:
+        await load_vocab_index(get_session_factory())
+    except Exception as exc:
+        logger.warning("Background vocab index load failed: %s", exc)
+
+
 # ── Lifespan ──────────────────────────────────────────────────────────────────
 
 
@@ -204,6 +241,15 @@ async def lifespan(app: FastAPI):
         logger.info("Plugins loaded: %s", loaded)
     else:
         logger.warning("No plugins found in package '%s'.", settings.plugin_package)
+
+    # Block on NLP model warm-up before accepting requests.
+    # All plugins warm in parallel; no thread-safety race with incoming parses.
+    # Adds 10-30s to startup once per process — first parse is then instant.
+    await _warm_up_plugins(registry)
+
+    # Vocab index load is non-critical: degrade gracefully if DB not ready.
+    # Runs in background so it doesn't add to startup time.
+    asyncio.create_task(_load_vocab_index_background())
 
     logger.info("Startup complete. Serving on http://0.0.0.0:8000")
     yield
@@ -278,6 +324,8 @@ app.include_router(languages_router)
 app.include_router(users_router)
 app.include_router(translate_router)
 app.include_router(ready_router)
+app.include_router(vocabulary_router)
+app.include_router(grammar_router)
 
 
 # ── Ops endpoints ─────────────────────────────────────────────────────────────

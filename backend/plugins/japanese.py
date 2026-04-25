@@ -54,6 +54,7 @@ from functools import cached_property
 from typing import Any
 
 from backend.plugins.cefr_vocab import A1 as _CEFR_A1
+from backend.core.vocab_index import get_cefr_level as _get_cefr_level
 from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
@@ -188,8 +189,9 @@ class JapanesePlugin:
                 data["reading"] = reading_hira
             else:
                 data["confidence_note"] = _CONFIDENCE_NOTE_NO_READING
-            if lemma in _A1:
-                data["cefr_level"] = "A1"
+            cefr = _get_cefr_level("ja", lemma) or ("A1" if lemma in _A1 else None)
+            if cefr:
+                data["cefr_level"] = cefr
 
             confidence = self._vocab_confidence(tok, reading_hira)
             candidates.append(CandidateObject(
