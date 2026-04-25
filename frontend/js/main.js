@@ -3,6 +3,7 @@ import '../components/mnemosyne-modal.js'
 import '../components/mnemosyne-filter-bar.js'
 import '../components/mnemosyne-detail-pane.js'
 import '../components/mnemosyne-player.js'
+import '../components/mnemosyne-now-playing-bar.js'
 import { initAuth, getAuthHeaders } from './auth.js'
 import { playbackEngine } from './playback.js'
 import {
@@ -57,6 +58,7 @@ const saveLessonConfirmBtn = document.querySelector('#save-lesson-confirm-btn')
 
 // Reader UI
 const filterBar        = document.querySelector('#filter-bar')
+const nowPlayingBar    = document.querySelector('#now-playing-bar')
 const readerNowPlaying = document.querySelector('#reader-nowplaying')
 const rnpToggle        = document.querySelector('#rnp-toggle')
 const rnpStop          = document.querySelector('#rnp-stop')
@@ -763,6 +765,16 @@ function renderResults(sentences, language) {
     filterBar.setAvailable(allTypes)
     filterBar.reset()
     filterBar.hidden = allTypes.length === 0
+  }
+
+  if (nowPlayingBar) {
+    let trackTitle = ''
+    if (currentSourceUrl) {
+      try { trackTitle = new URL(currentSourceUrl).hostname } catch { /* noop */ }
+    } else if (currentFilename) {
+      trackTitle = currentFilename
+    }
+    nowPlayingBar.setAttribute('track-title', trackTitle)
   }
 
   if (playAllBtn) playAllBtn.hidden = !(canSpeak && sentences.length > 0)

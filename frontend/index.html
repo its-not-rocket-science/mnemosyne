@@ -14,6 +14,7 @@
     <script type="module" src="./components/mnemosyne-filter-bar.js"></script>
     <script type="module" src="./components/mnemosyne-detail-pane.js"></script>
     <script type="module" src="./components/mnemosyne-player.js"></script>
+    <script type="module" src="./components/mnemosyne-now-playing-bar.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(() => {})
@@ -258,6 +259,8 @@
 
               </div><!-- /.wrap -->
             </main>
+
+            <mnemosyne-now-playing-bar id="now-playing-bar" hidden track-title=""></mnemosyne-now-playing-bar>
 
           </div><!-- /.app-shell__left -->
 
