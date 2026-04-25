@@ -90,12 +90,6 @@ class MnemosyneNowPlayingBar extends HTMLElement {
     // Sentence text / counter
     if (current) {
       const meta = `Sentence\u00A0${index + 1}\u00A0of\u00A0${total}`
-      shadow.getElementById('sentence-meta')?.let(el => { el.textContent = meta })
-      const textStr = current.text
-      shadow.getElementById('sentence-text')?.let(el => { el.textContent = textStr })
-      shadow.getElementById('compact-text')?.let(el => { el.textContent = textStr })
-
-      // Manually set since .let() isn't real — use helper
       this.#setText('sentence-meta',  meta)
       this.#setText('sentence-text',  current.text)
       this.#setText('compact-text',   current.text)
@@ -104,7 +98,7 @@ class MnemosyneNowPlayingBar extends HTMLElement {
     // Timer management
     if (playing) {
       if (!this.#wallStart) {
-        this.#estDuration = Math.max((total * 80) / 14, 2)
+        this.#estDuration = Math.max(playbackEngine.totalChars / 14, 2)
         this.#wallStart   = Date.now() - this.#pauseOffset
       }
       this.#startTimer()

@@ -65,6 +65,8 @@ export class PlaybackEngine extends EventTarget {
   get current(){ return this.#queue[this.#index] ?? null }
   /** @returns {number} */
   get total()  { return this.#queue.length }
+  /** @returns {number} */
+  get totalChars() { return this.#queue.reduce((s, r) => s + r.text.length, 0) }
 
   /**
    * Speak a single item immediately, replacing any current queue.

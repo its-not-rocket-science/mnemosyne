@@ -32,7 +32,10 @@ const status            = document.querySelector('#status')
 const modal             = document.querySelector('#lesson-modal')
 const detailPane        = document.querySelector('#detail-pane')
 const paneBackdrop      = document.querySelector('#pane-backdrop')
-const playAllBtn        = document.querySelector('#play-all-btn')
+const resultsTransport  = document.querySelector('#results-transport')
+const resultsPlayBtn    = document.querySelector('#results-play-btn')
+const resultsScrubber   = document.querySelector('#results-scrubber')
+const resultsTimeLabel  = document.querySelector('#results-time-label')
 const mainPlayer        = document.querySelector('#main-player')
 const resultsToolbar    = document.querySelector('#results-toolbar')
 const jobProgressPanel  = document.querySelector('#job-progress')
@@ -58,6 +61,8 @@ const saveLessonConfirmBtn = document.querySelector('#save-lesson-confirm-btn')
 
 // Reader UI
 const filterBar          = document.querySelector('#filter-bar')
+const levelFilter        = document.querySelector('#level-filter')
+const levelFilterBtns    = Array.from(document.querySelectorAll('.level-filter__btn'))
 const nowPlayingBar      = document.querySelector('#now-playing-bar')
 const readingProgress    = document.querySelector('#reading-progress')
 const annotationMinimap  = document.querySelector('#annotation-minimap')
@@ -78,6 +83,47 @@ const rnpCounter       = document.querySelector('#reader-nowplaying .reader-nowp
 const reviewStateByObject = new Map()
 const canSpeak = 'speechSynthesis' in window
 
+// Transport timer state
+let _transportTimerId   = null
+let _transportWallStart = null
+let _transportPauseOff  = 0
+let _transportEstDur    = 0
+
+function _transportFmt(s) {
+  const t = Math.max(0, Math.floor(s))
+  return `${String(Math.floor(t / 60)).padStart(2, '0')}:${String(t % 60).padStart(2, '0')}`
+}
+
+function _transportTick() {
+  if (!_transportWallStart) return
+  const elapsed = (Date.now() - _transportWallStart) / 1000
+  const pct = _transportEstDur > 0 ? Math.min((elapsed / _transportEstDur) * 100, 100) : 0
+  if (resultsScrubber) resultsScrubber.value = String(pct)
+  if (resultsTimeLabel) resultsTimeLabel.textContent =
+    `${_transportFmt(elapsed)}\u2009/\u2009${_transportFmt(_transportEstDur)}`
+}
+
+function _transportStart() {
+  if (_transportTimerId) clearInterval(_transportTimerId)
+  _transportEstDur    = Math.max(playbackEngine.totalChars / 14, 2)
+  _transportWallStart = Date.now() - _transportPauseOff
+  _transportTimerId   = setInterval(_transportTick, 500)
+}
+
+function _transportPause() {
+  _transportPauseOff = Date.now() - (_transportWallStart ?? Date.now())
+  if (_transportTimerId) { clearInterval(_transportTimerId); _transportTimerId = null }
+}
+
+function _transportReset() {
+  if (_transportTimerId) { clearInterval(_transportTimerId); _transportTimerId = null }
+  _transportWallStart = null
+  _transportPauseOff  = 0
+  _transportEstDur    = 0
+  if (resultsScrubber)  resultsScrubber.value = '0'
+  if (resultsTimeLabel) resultsTimeLabel.textContent = '--:--'
+}
+
 // Stores the last-rendered sentences and their TTS tag for playback controls.
 let currentSentences = []
 let currentTtsTag    = ''
@@ -88,6 +134,7 @@ let currentSourceUrl     = null
 let languageUserSelected = false
 let currentText          = ''   // committed text from picker
 let activeFilterTypes    = null // Set<string> when filtered, null = show all
+let currentMinLevel      = 1   // 1=all, 2=grammar+, 3=literary only
 let isFollowAlongEnabled = false
 let currentDepth         = 'scholar'
 
@@ -96,6 +143,33 @@ let currentCaps = null
 let scriptView  = 'native'
 
 const MAX_FILE_BYTES = 1_048_576  // 1 MiB
+
+// ── Annotation type metadata ───────────────────────────────────────────────────
+// TYPE_LABELS: tooltip text shown in the ::before pseudo-element.
+// TYPE_LEVEL : 1=vocabulary, 2=grammar/script, 3=idiom/nuance/literary
+const TYPE_LABELS = {
+  vocabulary:      'Vocab',
+  conjugation:     'Verb',
+  agreement:       'Agree',
+  idiom:           'Idiom',
+  grammar:         'Grammar',
+  nuance:          'Nuance',
+  script:          'Script',
+  transliteration: 'Script',
+  phrase_family:   'Phrase',
+}
+
+const TYPE_LEVEL = {
+  vocabulary:      1,
+  conjugation:     2,
+  agreement:       2,
+  grammar:         2,
+  script:          2,
+  transliteration: 2,
+  idiom:           3,
+  nuance:          3,
+  phrase_family:   3,
+}
 
 
 // ── Defocus on pointer interaction ────────────────────────────────────────────
@@ -502,6 +576,7 @@ async function doParseText(text) {
       return
     }
 
+    if (chosenTextDisplay) chosenTextDisplay.hidden = true
     renderResults(data.sentences, language)
     const n = data.sentences.length
     const parsedMsg = n === 1 ? t('sentence_parsed_1') : ti('sentences_parsed', { n })
@@ -531,7 +606,7 @@ results.addEventListener('lesson-open', async (event) => {
 
   // Grab the sentence text for the "In Context" tab before blurring.
   // event.target is the <mnemosyne-pill> host element; traverse light DOM.
-  const sentenceCard = event.target?.closest?.('article.sentence-card')
+  const sentenceCard = event.target?.closest?.('.sentence-card')
   const sentenceText = sentenceCard?.querySelector('.sentence-card__text')?.textContent ?? ''
 
   const phrase = event.target?.getAttribute?.('aria-label') ?? objectId
@@ -610,17 +685,6 @@ paneBackdrop?.addEventListener('click', () => detailPane?.hide())
 
 const topNav = document.querySelector('mnemosyne-top-nav')
 
-topNav?.addEventListener('play-text-request', () => {
-  if (currentSentences.length > 0) {
-    playbackEngine.playAll(
-      currentSentences.map(s => ({ text: s.text, langTag: currentTtsTag }))
-    )
-  }
-})
-
-topNav?.addEventListener('follow-change', ({ detail }) => {
-  isFollowAlongEnabled = detail.enabled
-})
 
 topNav?.addEventListener('depth-change', ({ detail }) => {
   currentDepth = detail.depth
@@ -630,6 +694,18 @@ topNav?.addEventListener('depth-change', ({ detail }) => {
 filterBar?.addEventListener('filter-change', ({ detail }) => {
   activeFilterTypes = detail.types.length ? new Set(detail.types) : null
   applyAnnotationFilter()
+})
+
+levelFilterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    currentMinLevel = parseInt(btn.dataset.level, 10)
+    levelFilterBtns.forEach(b => {
+      const active = b === btn
+      b.classList.toggle('level-filter__btn--active', active)
+      b.setAttribute('aria-pressed', String(active))
+    })
+    applyLevelFilter()
+  })
 })
 
 
@@ -730,12 +806,6 @@ document.addEventListener('keydown', e => {
       if (!inButton && !e.ctrlKey && !e.metaKey) {
         e.preventDefault()
         isFollowAlongEnabled = !isFollowAlongEnabled
-        // Sync the visual toggle in the top nav (shadow DOM, open mode).
-        const cb = topNav?.shadowRoot?.getElementById('follow-cb')
-        if (cb) {
-          cb.checked = isFollowAlongEnabled
-          cb.setAttribute('aria-checked', String(isFollowAlongEnabled))
-        }
         announce(isFollowAlongEnabled ? 'Follow along enabled' : 'Follow along disabled')
       }
       break
@@ -750,7 +820,7 @@ rnpToggle?.addEventListener('click', () => playbackEngine.togglePause())
 rnpStop?.addEventListener('click',   () => playbackEngine.stop())
 rnpNext?.addEventListener('click',   () => playbackEngine.next())
 
-playAllBtn?.addEventListener('click', () => {
+resultsPlayBtn?.addEventListener('click', () => {
   if (playbackEngine.state === 'idle') {
     playbackEngine.playAll(
       currentSentences.map(s => ({ text: s.text, langTag: currentTtsTag }))
@@ -789,9 +859,20 @@ playbackEngine.addEventListener('state-change', ({ detail: { state, current, ind
     btn.setAttribute('aria-pressed', String(isActive))
   })
 
-  // Play-all button label
-  if (playAllBtn) {
-    playAllBtn.textContent = state === 'idle' ? '\u25B6 Play all' : '\u23F9 Stop'
+  // Results transport sync
+  if (resultsPlayBtn) {
+    const idle = state === 'idle'
+    resultsPlayBtn.innerHTML        = idle ? '&#x25B6;&thinsp;Play all' : '&#x23F9;&thinsp;Stop'
+    resultsPlayBtn.setAttribute('aria-label', idle ? 'Play all sentences' : 'Stop')
+  }
+  if (state === 'playing' && !_transportWallStart) {
+    _transportStart()
+  } else if (state === 'paused') {
+    _transportPause()
+  } else if (state === 'idle') {
+    _transportReset()
+  } else if (state === 'playing' && _transportWallStart && _transportTimerId === null) {
+    _transportStart()
   }
 
   // Follow-along: scroll active sentence into view
@@ -831,16 +912,11 @@ function renderResults(sentences, language) {
   currentTtsTag    = ttsTag
 
   for (const [sentenceIdx, sentence] of sentences.entries()) {
-    const article = document.createElement('article')
-    article.className = 'sentence-card reader-sentence'
-    article.dataset.tokenization  = tokenMode
-    article.dataset.sentenceIndex = sentenceIdx
-
-    const layout = document.createElement('div')
-    layout.className = 'reader-sentence__layout'
-
-    const gutter = document.createElement('div')
-    gutter.className = 'reader-sentence__gutter'
+    // Flat flex row: [play btn?] [annotated paragraph]
+    const row = document.createElement('div')
+    row.className = 'reader-sentence sentence-card'
+    row.dataset.tokenization  = tokenMode
+    row.dataset.sentenceIndex = sentenceIdx
 
     if (canSpeak) {
       const playBtn = document.createElement('button')
@@ -860,40 +936,13 @@ function renderResults(sentences, language) {
           playbackEngine.speak(sentence.text, ttsTag, 'sentence', sentenceIdx)
         }
       })
-      gutter.appendChild(playBtn)
+      row.appendChild(playBtn)
     }
 
-    const content = document.createElement('div')
-    content.className = 'reader-sentence__content'
-    content.appendChild(buildAnnotatedText(sentence.text, sentence.learnable_objects, language, dir, tokenMode, scriptFam))
-
-    if (sentence.learnable_objects.length > 0) {
-      const list = document.createElement('ul')
-      list.className = 'sentence-card__pills'
-      list.setAttribute('role', 'list')
-      list.setAttribute('dir', dir)
-
-      for (const item of sentence.learnable_objects) {
-        const li   = document.createElement('li')
-        const pill = document.createElement('mnemosyne-pill')
-        pill.setAttribute('type',       item.type)
-        pill.setAttribute('label',      item.label)
-        pill.setAttribute('object-id',  item.id)
-        pill.setAttribute('language',   language)
-        pill.setAttribute('dir',        dir)
-        if (item.confidence != null) {
-          pill.setAttribute('confidence', String(item.confidence))
-        }
-        li.appendChild(pill)
-        list.appendChild(li)
-      }
-
-      content.appendChild(list)
-    }
-
-    layout.append(gutter, content)
-    article.appendChild(layout)
-    fragment.appendChild(article)
+    row.appendChild(
+      buildAnnotatedText(sentence.text, sentence.learnable_objects, language, dir, tokenMode, scriptFam)
+    )
+    fragment.appendChild(row)
   }
 
   results.replaceChildren(fragment)
@@ -908,7 +957,10 @@ function renderResults(sentences, language) {
     filterBar.setAvailable(allTypes)
     filterBar.reset()
     filterBar.hidden = allTypes.length === 0
+    if (levelFilter) levelFilter.hidden = allTypes.length === 0
   }
+
+  applyLevelFilter()
 
   if (nowPlayingBar) {
     let trackTitle = ''
@@ -920,7 +972,16 @@ function renderResults(sentences, language) {
     nowPlayingBar.setAttribute('track-title', trackTitle)
   }
 
-  if (playAllBtn) playAllBtn.hidden = !(canSpeak && sentences.length > 0)
+  if (resultsTransport) {
+    const show = canSpeak && sentences.length > 0
+    resultsTransport.hidden = !show
+    if (show && playbackEngine.state === 'idle') {
+      const totalChars = sentences.reduce((s, r) => s + (r.text?.length ?? 0), 0)
+      const estDur = Math.max(totalChars / 14, 2)
+      if (resultsTimeLabel) resultsTimeLabel.textContent = `00:00\u2009/\u2009${_transportFmt(estDur)}`
+      if (resultsScrubber) resultsScrubber.value = '0'
+    }
+  }
 }
 
 
@@ -933,7 +994,8 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam) {
   p.setAttribute('dir',  dir)
   p.dataset.tokenization = tokenMode
   p.dataset.scriptFamily = scriptFam
-  p.dataset.layer = 'native'
+  p.dataset.layer        = 'native'
+  p.style.margin         = '0'
 
   if (!items.length) {
     p.textContent = text
@@ -972,9 +1034,12 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam) {
     if (cursor < start) p.appendChild(document.createTextNode(text.slice(cursor, start)))
 
     const mark = document.createElement('mark')
-    mark.className = 'reader-annotation'
-    mark.dataset.type     = item.type
-    mark.dataset.objectId = item.id
+    mark.className    = 'reader-annotation'
+    if (item.type) mark.classList.add('reader-annotation--' + item.type)
+    mark.dataset.type      = item.type
+    mark.dataset.objectId  = item.id
+    mark.dataset.level     = String(TYPE_LEVEL[item.type] ?? 1)
+    mark.dataset.typeLabel = TYPE_LABELS[item.type] ?? item.type
     mark.setAttribute('role', 'button')
     mark.setAttribute('tabindex', '0')
     mark.setAttribute('aria-label', item.label)
@@ -1018,7 +1083,7 @@ function buildMinimap() {
   if (!annotationMinimap) return
   annotationMinimap.replaceChildren()
 
-  const marks = Array.from(results.querySelectorAll('.reader-annotation:not([data-filtered])'))
+  const marks = Array.from(results.querySelectorAll('.reader-annotation:not([data-filtered]):not([data-level-filtered])'))
   if (!marks.length) { annotationMinimap.hidden = true; return }
 
   const region = annotationMinimap.parentElement
@@ -1043,16 +1108,19 @@ function buildMinimap() {
 }
 
 
-// ── Annotation filter ─────────────────────────────────────────────────────────
+// ── Annotation filters ────────────────────────────────────────────────────────
 
 function applyAnnotationFilter() {
   results?.querySelectorAll('.reader-annotation').forEach(mark => {
     mark.toggleAttribute('data-filtered', activeFilterTypes !== null && !activeFilterTypes.has(mark.dataset.type))
   })
-  results?.querySelectorAll('.sentence-card__pills li').forEach(li => {
-    const pill = li.querySelector('mnemosyne-pill')
-    if (!pill) return
-    li.hidden = activeFilterTypes !== null && !activeFilterTypes.has(pill.getAttribute('type'))
+  requestAnimationFrame(buildMinimap)
+}
+
+function applyLevelFilter() {
+  results?.querySelectorAll('.reader-annotation').forEach(mark => {
+    const lvl = parseInt(mark.dataset.level ?? '1', 10)
+    mark.toggleAttribute('data-level-filtered', lvl < currentMinLevel)
   })
   requestAnimationFrame(buildMinimap)
 }
