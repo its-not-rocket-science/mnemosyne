@@ -101,7 +101,8 @@ function highlightPhrase(container, sentence, phrase) {
 
 export class MnemosyneDetailPane extends HTMLElement {
   // Private state
-  #config         = null   // { lesson, sentenceText, language, dir, ttsTag, caps }
+  #config         = null   // { lesson, sentenceText, language, dir, ttsTag, caps, depth }
+  #lastShowArgs   = null   // stored for updateDepth()
   #activeTab      = 0
   #visibleTabs    = []     // subset of ALL_TABS that are rendered
   #onSpeak        = null
@@ -127,8 +128,9 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   // ── Public API ──────────────────────────────────────────────────────────────
 
-  show({ lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy }) {
-    this.#config        = { lesson, sentenceText, language, dir: dir ?? 'ltr', ttsTag, caps }
+  show({ lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, depth }) {
+    this.#lastShowArgs  = { lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, depth }
+    this.#config        = { lesson, sentenceText, language, dir: dir ?? 'ltr', ttsTag, caps, depth: depth ?? 'scholar' }
     this.#onSpeak       = onSpeak ?? null
     this.#onStudy       = onStudy ?? null
     this.#activeTab     = 0
@@ -175,13 +177,28 @@ export class MnemosyneDetailPane extends HTMLElement {
     this.#previousFocus?.focus?.()
   }
 
+  /** Re-render in place when the user changes depth level while the pane is open. */
+  updateDepth(depth) {
+    if (!this.#lastShowArgs || !this.hasAttribute('data-open')) return
+    this.#config.depth = depth
+    this.#lastShowArgs.depth = depth
+    const prevTab = this.#activeTab
+    this._render()
+    if (prevTab < this.#visibleTabs.length) {
+      this.#activeTab = prevTab
+      this._applyTabState()
+    }
+  }
+
   // ── Rendering ───────────────────────────────────────────────────────────────
 
   _render() {
-    const { lesson, sentenceText, language, dir } = this.#config
+    const { lesson, sentenceText, language, dir, depth } = this.#config
     const ld   = lesson.lesson_data ?? {}
     const type = lesson.type ?? 'vocabulary'
     const meta = TYPE_META[type] ?? TYPE_META.vocabulary
+
+    const depthIdx = { basic: 0, intermediate: 1, scholar: 2 }[depth ?? 'scholar'] ?? 2
 
     // Which optional tabs have data?
     const hasOrigins = Boolean(ld.origin || ld.etymology || ld.source_text)
@@ -191,9 +208,15 @@ export class MnemosyneDetailPane extends HTMLElement {
       (Array.isArray(ld.confusable_forms) && ld.confusable_forms.length > 0)
     )
 
-    this.#visibleTabs = MnemosyneDetailPane.ALL_TABS.filter(
-      t => t.alwaysShow || (t.id === 'origins' && hasOrigins) || (t.id === 'related' && hasRelated)
-    )
+    // Depth controls which tabs are exposed.
+    // basic=0: Explanation only.  intermediate=1: + Origins + Context.  scholar=2: all.
+    this.#visibleTabs = MnemosyneDetailPane.ALL_TABS.filter(t => {
+      if (t.id === 'explanation') return true
+      if (t.id === 'origins')     return depthIdx >= 1 && hasOrigins
+      if (t.id === 'context')     return depthIdx >= 1
+      if (t.id === 'related')     return depthIdx >= 2 && hasRelated
+      return false
+    })
 
     const matchedVariant = ld.matched_variant || lesson.label || ''
     const canonical      = ld.canonical_form  || ''
@@ -214,6 +237,8 @@ export class MnemosyneDetailPane extends HTMLElement {
         <header class="pane__header">
           <div class="pane__badge" aria-hidden="true">${esc(meta.icon)} ${esc(meta.label)}</div>
           <h2 class="pane__title" id="dp-heading"></h2>
+          <button class="pane__share" type="button" aria-label="Copy link to annotation">&#x1F517;</button>
+          <span class="pane__share-hint" aria-live="polite" aria-atomic="true"></span>
           <button class="pane__close" type="button" aria-label="Close details panel">&#x2715;</button>
         </header>
 
@@ -232,10 +257,10 @@ export class MnemosyneDetailPane extends HTMLElement {
         </div>
 
         <div class="pane__body">
-          ${this._htmlExplanationPanel(lesson, ld, matchedVariant)}
-          ${hasOrigins  ? this._htmlOriginsPanel(isNonCanonical, Boolean(ld.source_text), matchType) : ''}
-          ${this._htmlContextPanel(language, dir)}
-          ${hasRelated  ? this._htmlRelatedPanel(ld, canonical, isNonCanonical) : ''}
+          ${this._htmlExplanationPanel(lesson, ld, matchedVariant, depthIdx)}
+          ${depthIdx >= 1 && hasOrigins  ? this._htmlOriginsPanel(isNonCanonical, Boolean(ld.source_text), matchType) : ''}
+          ${depthIdx >= 1               ? this._htmlContextPanel(language, dir) : ''}
+          ${depthIdx >= 2 && hasRelated  ? this._htmlRelatedPanel(ld, canonical, isNonCanonical) : ''}
         </div>
 
         <footer class="pane__footer">
@@ -338,9 +363,11 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   // ── HTML fragment builders ──────────────────────────────────────────────────
 
-  _htmlExplanationPanel(lesson, ld, matchedVariant) {
-    const displayFields = (lesson.fields ?? [])
+  _htmlExplanationPanel(lesson, ld, matchedVariant, depthIdx = 2) {
+    const allFields    = (lesson.fields ?? [])
       .filter(f => !SUPPRESS_IN_EXPLANATION.has(f.label.toLowerCase()))
+    // Scholar (2): show all fields. Basic (0): none. Intermediate (1): all fields.
+    const displayFields = depthIdx >= 1 ? allFields : []
 
     const fieldsHtml = displayFields.map(f => /* html */`
       <div class="pane__field">
@@ -349,14 +376,14 @@ export class MnemosyneDetailPane extends HTMLElement {
       </div>
     `).join('')
 
-    const hasAudio     = Boolean(matchedVariant)
-    const matchType    = ld.match_type || ''
-    const matchTypeMeta = matchType ? (MATCH_TYPE_META[matchType] ?? { label: matchType, cls: 'variant' }) : null
-    // Show the badge for ALL match types so readers see canonical confirmation too.
-    const showMatchBadge = Boolean(matchTypeMeta)
-    const hasMatchNote = Boolean(ld.match_type_note)
-    const hasWhyItMatters = Boolean(ld.why_it_matters)
-    const isConfusable = matchType === 'confusable_not_same'
+    const hasAudio        = Boolean(matchedVariant)
+    const matchType       = ld.match_type || ''
+    const matchTypeMeta   = matchType ? (MATCH_TYPE_META[matchType] ?? { label: matchType, cls: 'variant' }) : null
+    const showMatchBadge  = Boolean(matchTypeMeta)
+    const hasMatchNote    = Boolean(ld.match_type_note)
+    // Why it matters only for Scholar depth
+    const hasWhyItMatters = Boolean(ld.why_it_matters) && depthIdx >= 2
+    const isConfusable    = matchType === 'confusable_not_same'
 
     return /* html */`
       <section
@@ -393,6 +420,17 @@ export class MnemosyneDetailPane extends HTMLElement {
             </button>
           </div>
         ` : ''}
+        <div class="pane__note-section">
+          <p class="pane__note-label">Notes</p>
+          <textarea class="pane__note-input"
+                    placeholder="Add a note about this phrase\u2026"
+                    aria-label="Your note about this annotation"
+                    rows="3"></textarea>
+          <div class="pane__note-actions">
+            <button class="pane__note-save" type="button">Save</button>
+            <button class="pane__note-clear" type="button">Clear</button>
+          </div>
+        </div>
       </section>
     `
   }
@@ -535,7 +573,7 @@ export class MnemosyneDetailPane extends HTMLElement {
   // ── Event wiring ─────────────────────────────────────────────────────────────
 
   _wireEvents(matchedVariant, canonical, sentenceText, isNonCanonical) {
-    const { language, ttsTag } = this.#config
+    const { lesson, language, ttsTag } = this.#config
 
     // Close button
     this.shadowRoot.querySelector('.pane__close')
@@ -588,6 +626,67 @@ export class MnemosyneDetailPane extends HTMLElement {
         if (text) this.#onSpeak(text, ttsTag ?? language)
       })
     })
+
+    // Share button — build a deep-link URL and copy it / use Web Share API
+    const shareBtn  = this.shadowRoot.querySelector('.pane__share')
+    const shareHint = this.shadowRoot.querySelector('.pane__share-hint')
+    shareBtn?.addEventListener('click', () => {
+      const url = new URL(location.href)
+      url.searchParams.set('annotation', lesson.id)
+      url.searchParams.set('language',   language)
+      const shareUrl = url.toString()
+      if (navigator.share) {
+        navigator.share({ url: shareUrl, title: lesson.title || lesson.label || '' }).catch(() => {})
+      } else {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          if (shareHint) {
+            shareHint.textContent = 'Link copied!'
+            setTimeout(() => { shareHint.textContent = '' }, 2200)
+          }
+        }).catch(() => {
+          if (shareHint) {
+            shareHint.textContent = 'Copy: ' + shareUrl
+            setTimeout(() => { shareHint.textContent = '' }, 6000)
+          }
+        })
+      }
+    })
+
+    // Note section — load from localStorage, wire save / clear
+    const noteKey   = `mn-note-${lesson.id}`
+    const noteInput = this.shadowRoot.querySelector('.pane__note-input')
+    const noteSave  = this.shadowRoot.querySelector('.pane__note-save')
+    const noteClear = this.shadowRoot.querySelector('.pane__note-clear')
+    if (noteInput) {
+      noteInput.value = localStorage.getItem(noteKey) ?? ''
+
+      noteSave?.addEventListener('click', () => {
+        const val = noteInput.value.trim()
+        if (val) {
+          localStorage.setItem(noteKey, val)
+        } else {
+          localStorage.removeItem(noteKey)
+        }
+        this.dispatchEvent(new CustomEvent('note-updated', {
+          bubbles: true, composed: true,
+          detail: { objectId: lesson.id, hasNote: Boolean(val) },
+        }))
+        if (noteSave) {
+          const orig = noteSave.textContent
+          noteSave.textContent = 'Saved!'
+          setTimeout(() => { noteSave.textContent = orig }, 1500)
+        }
+      })
+
+      noteClear?.addEventListener('click', () => {
+        noteInput.value = ''
+        localStorage.removeItem(noteKey)
+        this.dispatchEvent(new CustomEvent('note-updated', {
+          bubbles: true, composed: true,
+          detail: { objectId: lesson.id, hasNote: false },
+        }))
+      })
+    }
 
     this.#wireDrag()
   }
@@ -1263,6 +1362,108 @@ export class MnemosyneDetailPane extends HTMLElement {
       }
       @media (prefers-reduced-motion: reduce) {
         .pane__study-btn { transition: none; }
+      }
+
+      /* ── Share button ────────────────────────────────────────────────────── */
+      .pane__share {
+        flex-shrink: 0;
+        background: transparent;
+        border: none;
+        padding: 0;
+        min-block-size: 2.75rem;
+        min-inline-size: 2.75rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font: inherit;
+        font-size: 1rem;
+        color: var(--muted);
+        cursor: pointer;
+        border-radius: 0.4rem;
+      }
+      .pane__share:hover { color: var(--text); background: var(--border); }
+      .pane__share:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+
+      .pane__share-hint {
+        font-size: 0.7rem;
+        color: var(--success);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-inline-size: 10rem;
+        flex-shrink: 1;
+      }
+
+      /* ── Note section ────────────────────────────────────────────────────── */
+      .pane__note-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        border-block-start: 1px solid var(--border);
+        padding-block-start: 0.75rem;
+      }
+
+      .pane__note-label {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .pane__note-input {
+        font: inherit;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        resize: vertical;
+        min-block-size: 4.5rem;
+        border: 1px solid var(--border-input);
+        border-radius: 0.4rem;
+        padding: 0.4rem 0.5rem;
+        background: var(--surface);
+        color: var(--text);
+      }
+      .pane__note-input:focus {
+        outline: 3px solid var(--accent);
+        outline-offset: 1px;
+        border-color: transparent;
+      }
+
+      .pane__note-actions {
+        display: flex;
+        gap: 0.4rem;
+      }
+
+      .pane__note-save,
+      .pane__note-clear {
+        background: transparent;
+        border: 1px solid var(--border-input);
+        border-radius: 999px;
+        padding: 0.25rem 0.65rem;
+        font: inherit;
+        font-size: 0.8rem;
+        cursor: pointer;
+        color: var(--text);
+        min-block-size: 2rem;
+        transition: background 0.1s ease, color 0.1s ease, border-color 0.1s ease;
+      }
+      .pane__note-save:hover  { background: var(--border); }
+      .pane__note-clear:hover {
+        background: color-mix(in srgb, var(--error) 10%, Canvas);
+        color: var(--error);
+        border-color: color-mix(in srgb, var(--error) 40%, Canvas);
+      }
+      .pane__note-save:focus-visible,
+      .pane__note-clear:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .pane__note-save, .pane__note-clear { transition: none; }
       }
     `
   }
