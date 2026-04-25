@@ -145,16 +145,17 @@
     flex-direction: column;
   }
 
-  /* Container: zero block-size, visible overflow lets the position:fixed
-     component escape the container's stacking context.                     */
+  /* Container collapses to zero — detail pane is position:fixed and escapes
+     the stacking context on its own.  No overflow:visible needed.           */
   .app-shell__detail-panel,
   .app-shell--detail-open .app-shell__detail-panel {
     flex: none;
     block-size: 0;
-    overflow: visible;
+    overflow: hidden;
     border: none;
     position: static;
     transition: none;
+    max-block-size: none;
   }
 }
 
