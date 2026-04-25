@@ -200,7 +200,8 @@ class MnemosyneNowPlayingBar extends HTMLElement {
     return /* html */`
 <style>${this.#css()}</style>
 
-<div class="bar" part="bar" data-state="idle" data-expanded="false">
+<div class="bar" part="bar" role="region" aria-label="Audio player"
+     data-state="idle" data-expanded="false">
 
   <!-- ── Mobile compact row (hidden on desktop) ── -->
   <div class="compact">

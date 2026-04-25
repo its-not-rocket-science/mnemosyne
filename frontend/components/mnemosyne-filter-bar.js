@@ -101,7 +101,7 @@ class MnemosyneFilterBar extends HTMLElement {
 
 <div class="bar" part="bar">
   <div class="bar__pills" id="pills"
-       role="group" aria-label="Filter by annotation category">
+       role="group" aria-label="Annotation filters">
     ${pills}
     <button class="pill pill--custom" id="custom-btn" type="button"
             aria-pressed="false" aria-haspopup="dialog" aria-expanded="false"
