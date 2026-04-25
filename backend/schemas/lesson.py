@@ -138,3 +138,11 @@ class LessonResponse(BaseModel):
 
     script_direction: Literal["ltr", "rtl"] | None = None
     """Text direction for the target language.  ``None`` when unknown."""
+
+    lesson_data: dict[str, Any] | None = None
+    """Raw lesson_data dict from the canonical object row.
+
+    Passed through so the frontend can access fields that are not
+    promoted to top-level schema fields (e.g. ``matched_variant``,
+    ``canonical_form``, ``lemma``, ``origin``, ``variants``).
+    """

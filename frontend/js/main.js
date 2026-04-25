@@ -642,7 +642,7 @@ results.addEventListener('lesson-open', async (event) => {
           try {
             const r = await fetch(`${API_BASE}/translate`, {
               method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
+              headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
               body: JSON.stringify({
                 text,
                 source_language: sourceLang,
