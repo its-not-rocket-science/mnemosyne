@@ -161,6 +161,26 @@
                 JS populates chips for every type present in the parsed sentences.
               -->
               <mnemosyne-filter-bar id="filter-bar" hidden></mnemosyne-filter-bar>
+
+              <!--
+                Level filter — hides annotations below the user's proficiency
+                threshold so the text is not overwhelming for advanced readers.
+                All = show every annotation; Grammar+ = hide basic vocabulary;
+                Literary = show only idiom/nuance/phrase-family.
+              -->
+              <div id="level-filter" class="level-filter" role="group"
+                   aria-label="Minimum annotation level" hidden>
+                <span class="level-filter__label" aria-hidden="true">Level</span>
+                <button class="level-filter__btn level-filter__btn--active"
+                        type="button" data-level="1"
+                        aria-pressed="true">All</button>
+                <button class="level-filter__btn"
+                        type="button" data-level="2"
+                        aria-pressed="false">Grammar+</button>
+                <button class="level-filter__btn"
+                        type="button" data-level="3"
+                        aria-pressed="false">Literary</button>
+              </div>
             </div>
 
             <!-- TextPanel region -->
@@ -218,8 +238,18 @@
                   <div class="results-heading-row">
                     <h2 id="results-heading" data-i18n="results_heading">Sentence lessons</h2>
                     <div class="results-heading-actions">
-                      <button type="button" id="play-all-btn" class="ghost-button" hidden
-                              aria-label="Play all sentences">&#x25B6; Play all</button>
+                      <div id="results-transport" class="results-transport" hidden>
+                        <button type="button" id="results-play-btn"
+                                class="results-transport__play ghost-button"
+                                aria-label="Play all sentences">&#x25B6;&thinsp;Play all</button>
+                        <input type="range" id="results-scrubber"
+                               class="results-transport__scrubber"
+                               min="0" max="100" value="0" step="0.5"
+                               aria-label="Playback progress" tabindex="-1" readonly>
+                        <span id="results-time-label"
+                              class="results-transport__time"
+                              aria-hidden="true">--:--</span>
+                      </div>
                       <button type="button" id="save-lesson-btn" class="ghost-button" hidden
                               data-i18n="save_lesson_btn">Save lesson</button>
                     </div>
@@ -232,7 +262,7 @@
                   <div class="results-region">
                     <div id="results" class="results">
                       <p class="results-empty" data-i18n="results_empty">
-                        Parse some text above to see learnable items here.
+                        Choose some text above to see lessons here.
                       </p>
                     </div>
                     <div id="annotation-minimap" class="annotation-minimap"

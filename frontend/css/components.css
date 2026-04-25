@@ -363,74 +363,116 @@
 }
 
 
-/* ── Reader sentence layout ─────────────────────────────────────────────── */
+/* ── Level filter control ────────────────────────────────────────────────── */
 
-/* Replace card box with a minimal reading row */
-.reader-sentence {
+.level-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+
+.level-filter__label {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-inline-end: 0.15rem;
+  white-space: nowrap;
+}
+
+.level-filter__btn {
+  border: 1px solid var(--border-input);
+  border-radius: 999px;
   background: transparent;
-  border: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.55rem;
+  min-block-size: 2rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.1s ease, color 0.1s ease, border-color 0.1s ease;
+}
+
+.level-filter__btn--active,
+.level-filter__btn[aria-pressed="true"] {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.level-filter__btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .level-filter__btn { transition: none; }
+}
+
+
+/* ── Reader sentence layout ──────────────────────────────────────────────── */
+/* Continuous reading flow: each sentence is a flex row [play btn] [text].
+   No card chrome, no nested grid — text reads like a book.                  */
+
+.reader-sentence {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4em;
+  padding-block: 0.55em;
+  border-block-end: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  /* Reset inherited card chrome */
+  background: transparent;
   border-radius: 0;
   box-shadow: none;
-  padding-block: 0.9rem;
-  padding-inline: 0;
-  border-block-end: 1px solid var(--border);
 }
 
 .reader-sentence:last-child { border-block-end: none; }
 
-/* Active highlight during playback: left stripe + subtle tint */
+/* Playback highlight: left accent stripe + gentle tint */
 .reader-sentence.sentence-card--playing {
   border-inline-start: 3px solid var(--accent);
   background: color-mix(in srgb, var(--accent) 3%, var(--bg));
-  padding-inline-start: calc(var(--space-2) - 3px);
+  padding-inline-start: calc(0.4em - 3px);
 }
 
-/* Two-column grid: [gutter]  [text + pills] */
-.reader-sentence__layout {
-  display: grid;
-  grid-template-columns: 2rem 1fr;
-  column-gap: 0.5rem;
-  align-items: start;
-}
-
-/* ── Gutter: speaker button (desktop) ───────────────────────────────────── */
-
-.reader-sentence__gutter {
-  display: flex;
-  justify-content: center;
-  /* Nudge down so the button aligns with the first text baseline */
-  padding-block-start: 0.35rem;
-}
+/* ── Speaker button ──────────────────────────────────────────────────────── */
 
 .reader-gutter-btn {
-  /* Keeps .sentence-card__play-btn selector working for playback-engine state */
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-block-start: 0.25em;   /* align with cap-height of first text line */
   background: transparent;
   border: 1px solid transparent;
   border-radius: 999px;
-  min-block-size: 2rem;
-  min-inline-size: 2rem;
+  min-block-size: 1.75rem;
+  min-inline-size: 1.75rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font: inherit;
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   color: var(--muted);
   cursor: pointer;
   padding: 0;
-  /* Hidden until the row is hovered / focused */
-  opacity: 0;
+  opacity: 0.35;
   transition: opacity 0.15s ease, color 0.1s ease, border-color 0.1s ease;
 }
 
 .reader-sentence:hover .reader-gutter-btn,
-.reader-sentence:focus-within .reader-gutter-btn {
+.reader-sentence:focus-within .reader-gutter-btn,
+.reader-gutter-btn:focus-visible {
   opacity: 1;
 }
 
 .reader-gutter-btn:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 2px;
-  opacity: 1;
 }
 
 .reader-sentence.sentence-card--playing .reader-gutter-btn {
@@ -439,101 +481,124 @@
   border-color: var(--accent);
 }
 
-/* Always visible for reduced-motion users (no hover/opacity animation) */
 @media (prefers-reduced-motion: reduce) {
   .reader-gutter-btn { opacity: 1; transition: none; }
 }
 
 
-/* ── Reading text (serif) ────────────────────────────────────────────────── */
-
-/* Serif only for Latin-script text — global.css lang-attribute overrides
-   (Arabic, Hebrew, CJK, Devanagari) take precedence via source order.
-   Scoped to data-script-family="latin" to prevent overriding non-Latin fonts. */
-.reader-sentence__text[data-script-family="latin"] {
-  font-family: var(--font-serif);
-}
+/* ── Reading text (serif, flowing) ──────────────────────────────────────── */
 
 .reader-sentence__text {
+  flex: 1 1 0;
+  min-inline-size: 0;
+  margin: 0;
   font-size: 1.1rem;
-  line-height: 1.8;
+  /* Extra line-height gives annotation tooltips room above each line. */
+  line-height: 2;
   overflow-wrap: break-word;
-  margin-block-end: var(--space-2);
 }
 
-/* Remove the top margin from .sentence-card__text when it doubles as
-   .reader-sentence__text (the surrounding layout already handles spacing). */
-.reader-sentence__text.sentence-card__text {
-  margin-block-end: var(--space-2);
+/* Serif for Latin-script text (global.css lang-attr overrides take precedence
+   for Arabic, Hebrew, CJK, Devanagari). */
+.reader-sentence__text[data-script-family="latin"] {
+  font-family: var(--font-serif);
 }
 
 
 /* ── Inline annotation highlights ───────────────────────────────────────── */
 
 .reader-annotation {
+  position: relative;          /* anchor for ::before tooltip */
   border-radius: 0.2em;
   padding-inline: 0.12em;
   cursor: pointer;
   text-decoration: underline dotted;
   text-underline-offset: 0.22em;
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 1.5px;
   transition: filter 0.1s ease;
+}
+
+/* Type label tooltip — CSS-only, reads data-type-label attribute */
+.reader-annotation::before {
+  content: attr(data-type-label);
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.12em 0.4em;
+  background: var(--text-primary);
+  color: var(--surface);
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 3px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+  transition: opacity 0.12s ease;
+}
+
+.reader-annotation:hover::before,
+.reader-annotation:focus-visible::before {
+  opacity: 1;
 }
 
 .reader-annotation:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 1px;
-  border-radius: 0.2em;
 }
 
 .reader-annotation:hover { filter: brightness(0.88); }
 
-/* Filtered-out: remove visual annotation but preserve text readability */
-.reader-annotation[data-filtered] {
+/* Suppressed by type filter */
+.reader-annotation[data-filtered],
+.reader-annotation[data-level-filtered] {
   background: none !important;
   text-decoration: none !important;
   cursor: text;
   pointer-events: none;
   filter: none;
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .reader-annotation { transition: none; }
+.reader-annotation[data-filtered]::before,
+.reader-annotation[data-filtered]::after,
+.reader-annotation[data-level-filtered]::before,
+.reader-annotation[data-level-filtered]::after {
+  display: none;
 }
 
-/* Token-driven annotation highlights — auto-adapt in dark mode via :root overrides */
+@media (prefers-reduced-motion: reduce) {
+  .reader-annotation           { transition: none; }
+  .reader-annotation::before   { transition: none; }
+}
+
+/* Type-keyed highlight colours */
 .reader-annotation--vocabulary {
-  background: color-mix(in srgb, var(--accent-vocab) 14%, transparent);
-  text-decoration-color: color-mix(in srgb, var(--accent-vocab) 55%, currentColor);
+  background: color-mix(in srgb, var(--accent-vocab) 16%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--accent-vocab) 60%, currentColor);
 }
 .reader-annotation--conjugation,
 .reader-annotation--agreement,
 .reader-annotation--grammar {
-  background: color-mix(in srgb, var(--accent-grammar) 14%, transparent);
-  text-decoration-color: color-mix(in srgb, var(--accent-grammar) 55%, currentColor);
+  background: color-mix(in srgb, var(--accent-grammar) 16%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--accent-grammar) 60%, currentColor);
 }
 .reader-annotation--idiom {
-  background: color-mix(in srgb, var(--accent-idiom) 14%, transparent);
-  text-decoration-color: color-mix(in srgb, var(--accent-idiom) 55%, currentColor);
+  background: color-mix(in srgb, var(--accent-idiom) 16%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--accent-idiom) 60%, currentColor);
 }
 .reader-annotation--nuance,
 .reader-annotation--phrase_family {
-  background: color-mix(in srgb, var(--accent-literary) 14%, transparent);
-  text-decoration-color: color-mix(in srgb, var(--accent-literary) 55%, currentColor);
+  background: color-mix(in srgb, var(--accent-literary) 16%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--accent-literary) 60%, currentColor);
 }
 .reader-annotation--script,
 .reader-annotation--transliteration {
-  background: color-mix(in srgb, var(--accent-etymology) 14%, transparent);
-  text-decoration-color: color-mix(in srgb, var(--accent-etymology) 55%, currentColor);
-}
-
-
-/* ── Pills (below annotated text) ────────────────────────────────────────── */
-
-.reader-sentence__pills {
-  /* Inherits .sentence-card__pills flex layout; just resets the top margin
-     since the text's margin-block-end already provides the gap. */
-  margin-block-start: 0;
+  background: color-mix(in srgb, var(--accent-etymology) 16%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--accent-etymology) 60%, currentColor);
 }
 
 
@@ -626,39 +691,17 @@ body.player-active .reader-nowplaying {
 /* ── Mobile overrides ────────────────────────────────────────────────────── */
 
 @media (max-width: 53.99rem) {
-  /* On narrow screens, collapse the two-column gutter grid to single column.
-     The gutter button becomes an absolute-positioned control at the
-     inline-end edge of the content column. */
-  .reader-sentence__layout {
-    grid-template-columns: 1fr;
-    position: relative;
-  }
-
-  .reader-sentence__gutter {
-    /* Remove from grid flow; float to top-right of content */
-    position: absolute;
-    inset-block-start: 0.75rem;
-    inset-inline-end: 0;
-    padding-block-start: 0;
-  }
-
-  /* Compact gutter button for mobile */
+  /* Enlarge touch target on mobile; always slightly visible (no hover on touch) */
   .reader-gutter-btn {
-    min-block-size: 2.75rem; /* keep 44px touch target */
+    min-block-size: 2.75rem;
     min-inline-size: 2.75rem;
     font-size: 0.65rem;
-    /* Always slightly visible on mobile — no hover event on touch */
-    opacity: 0.5;
+    opacity: 0.4;
   }
 
   .reader-sentence:focus-within .reader-gutter-btn,
   .reader-sentence.sentence-card--playing .reader-gutter-btn {
     opacity: 1;
-  }
-
-  /* Make room for the absolute-positioned button */
-  .reader-sentence__content {
-    padding-inline-end: 3rem;
   }
 
   /* Compact now-playing on mobile */
@@ -669,15 +712,20 @@ body.player-active .reader-nowplaying {
   .reader-nowplaying__text {
     display: none;
   }
-  /* Show counter + controls only */
   .reader-nowplaying__info {
     flex: 0 0 auto;
   }
 
-  /* Compact filter chips on mobile — slightly smaller */
+  /* Compact filter chips on mobile */
   .reader-chip {
     font-size: 0.65rem;
     padding-inline: 0.5rem;
+    min-block-size: 1.75rem;
+  }
+
+  .level-filter__btn {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.45rem;
     min-block-size: 1.75rem;
   }
 }
