@@ -1,31 +1,99 @@
 :root {
+  /* ── Brand ───────────────────────────────────────────────────────────────── */
+  --brand-purple:       #7C3AED;
+  --brand-purple-light: #EDE9FE;
+
+  /* ── Annotation accent palette ───────────────────────────────────────────── */
+  --accent-vocab:       #3B82F6;   /* blue   — vocabulary                      */
+  --accent-grammar:     #6366F1;   /* indigo — grammar / conjugation           */
+  --accent-idiom:       #F59E0B;   /* amber  — idioms                          */
+  --accent-literary:    #8B5CF6;   /* violet — nuance / phrase family          */
+  --accent-etymology:   #14B8A6;   /* teal   — etymology / script              */
+
+  /* ── Surfaces ────────────────────────────────────────────────────────────── */
+  --surface:            #FFFFFF;   /* card / panel background                  */
+  --surface-secondary:  #F9FAFB;   /* page canvas                              */
+  --border:             #E5E7EB;
+  --border-input:       #6B7280;   /* ≥3:1 on --surface — WCAG SC 1.4.11      */
+
+  /* ── Text ────────────────────────────────────────────────────────────────── */
+  --text-primary:       #111827;
+  --text-secondary:     #6B7280;
+
+  /* ── Feedback ────────────────────────────────────────────────────────────── */
+  --success:            #10B981;
+  --error:              #EF4444;
+
+  /* ── UI accent (derived from brand) ─────────────────────────────────────── */
+  --accent:             var(--brand-purple);
+  --accent-contrast:    #FFFFFF;
+
+  /* ── Typography ──────────────────────────────────────────────────────────── */
+  --font-ui:            Inter, ui-sans-serif, system-ui, sans-serif;
+  /* Used for literary reading text and headings with a bookish feel.          */
+  --font-serif:         Georgia, 'Playfair Display', 'Times New Roman',
+                        'Noto Serif', serif;
+  --font-size-body:     1rem;       /* 16 px */
+  --font-size-ui:       0.875rem;   /* 14 px */
+  --font-size-label:    0.8125rem;  /* 13 px */
+  --line-height-body:   1.6;
+
+  /* ── Spacing ─────────────────────────────────────────────────────────────── */
+  --space-1:  0.5rem;
+  --space-2:  0.75rem;
+  --space-3:  1rem;
+  --space-4:  1.5rem;
+  --space-5:  2rem;
+
+  /* ── Shape / elevation ───────────────────────────────────────────────────── */
+  --radius:   0.9rem;
+  --shadow:   0 0.5rem 1.5rem rgb(0 0 0 / 0.08);
+
+  /* ── Legacy aliases — keep existing components working ───────────────────── */
+  --bg:          var(--surface-secondary);
+  --text:        var(--text-primary);
+  --muted:       var(--text-secondary);
+  --error-color: var(--error);
+
+  /* ── Browser color-scheme hint (form controls, scrollbars) ──────────────── */
   color-scheme: light dark;
-  --bg: Canvas;
-  --surface: color-mix(in srgb, Canvas 92%, CanvasText 8%);
-  --text: CanvasText;
-  --muted: color-mix(in srgb, CanvasText 60%, Canvas 40%);
-  --border: color-mix(in srgb, CanvasText 20%, Canvas 80%);
-  /* Higher-contrast border for interactive controls (inputs, buttons).
-     45% CanvasText achieves ≥ 3:1 against Canvas in both light and dark mode,
-     satisfying WCAG 2.1 SC 1.4.11 (Non-text Contrast). */
-  --border-input: color-mix(in srgb, CanvasText 45%, Canvas);
-  --accent: #3557ff;
-  --accent-contrast: white;
-  --radius: 0.9rem;
-  --space-1: 0.5rem;
-  --space-2: 0.75rem;
-  --space-3: 1rem;
-  --space-4: 1.5rem;
-  --space-5: 2rem;
-  --shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 0.08);
 
-  /* Error color: dark enough for 4.5:1 on a light Canvas. */
-  --error-color: oklch(0.48 0.20 29);
+  font-family: var(--font-ui);
+  font-size:   var(--font-size-body);
+  line-height: var(--line-height-body);
+}
 
-  /* UI chrome font — Latin-optimised.  Target-language text in sentence cards
-     uses system fonts selected by lang+dir to get appropriate shaping. */
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  line-height: 1.5;
+/* ── Dark mode ───────────────────────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Brand — lighter for dark backgrounds */
+    --brand-purple:       #A78BFA;   /* violet-400 */
+    --brand-purple-light: #2E1065;
+
+    /* Annotation accents — lightened for readability on dark surfaces */
+    --accent-vocab:       #60A5FA;   /* blue-400   */
+    --accent-grammar:     #818CF8;   /* indigo-400 */
+    --accent-idiom:       #FCD34D;   /* amber-300  */
+    --accent-literary:    #C4B5FD;   /* violet-300 */
+    --accent-etymology:   #2DD4BF;   /* teal-400   */
+
+    /* Surfaces */
+    --surface:            #1F2937;   /* gray-800 */
+    --surface-secondary:  #111827;   /* gray-900 */
+    --border:             #374151;   /* gray-700 */
+    --border-input:       #9CA3AF;   /* gray-400 — ≥3:1 on gray-800 */
+
+    /* Text */
+    --text-primary:       #F9FAFB;   /* gray-50  */
+    --text-secondary:     #9CA3AF;   /* gray-400 */
+
+    /* Feedback — lightened for dark bg */
+    --success:            #34D399;   /* emerald-400 */
+    --error:              #F87171;   /* red-400     */
+
+    /* Elevation — stronger shadow on dark */
+    --shadow:             0 0.5rem 1.5rem rgb(0 0 0 / 0.4);
+  }
 }
 
 /* ── Script-family font overrides ────────────────────────────────────────────
@@ -146,12 +214,6 @@
   justify-content: flex-start;
 }
 
-/* Lighten the error token for dark-mode backgrounds. */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --error-color: oklch(0.72 0.18 29);
-  }
-}
 
 * {
   box-sizing: border-box;
@@ -354,6 +416,13 @@ h1 {
   /* Scales from 1.5 rem on narrow viewports to 2.25 rem on wide ones,
      so the heading stays readable at 200% zoom without overflowing. */
   font-size: clamp(1.5rem, 3vw + 1rem, 2.25rem);
+}
+
+/* Site hero: serif for a literary / editorial tone. */
+.site-hero h1 {
+  font-family: var(--font-serif);
+  font-weight: 400; /* Georgia at 700 is too heavy */
+  letter-spacing: -0.01em;
 }
 
 h1,
