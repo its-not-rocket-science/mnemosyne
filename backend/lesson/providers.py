@@ -66,12 +66,7 @@ class PronunciationProvider(Protocol):
 # ── Null implementations ──────────────────────────────────────────────────────
 
 class NullGlossProvider:
-    """No-op gloss provider — always returns None.
-
-    Used as the default so the lesson engine works with no external
-    configuration.  The absence of a gloss field is handled gracefully by
-    all builders.
-    """
+    """No-op gloss provider — always returns None."""
 
     def lookup(
         self,
@@ -80,6 +75,26 @@ class NullGlossProvider:
         pos: str | None = None,
     ) -> str | None:
         return None
+
+
+class VocabIndexGlossProvider:
+    """Gloss provider backed by the in-memory vocabulary index.
+
+    Returns the English definition stored in vocabulary_entries (populated by
+    the harvest script from Wiktionary).  Returns None when the word is not in
+    the index or has no definition.
+    """
+
+    def lookup(
+        self,
+        lemma: str,
+        language_code: str | None,
+        pos: str | None = None,
+    ) -> str | None:
+        if not language_code:
+            return None
+        from backend.core.vocab_index import get_definition
+        return get_definition(language_code, lemma)
 
 
 class NullPronunciationProvider:

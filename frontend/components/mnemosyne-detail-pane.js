@@ -101,18 +101,22 @@ function highlightPhrase(container, sentence, phrase) {
 
 export class MnemosyneDetailPane extends HTMLElement {
   // Private state
-  #config         = null   // { lesson, sentenceText, language, dir, ttsTag, caps, depth }
+  #config         = null   // { lesson, sentenceText, language, dir, ttsTag, caps, depth, uiLang }
   #lastShowArgs   = null   // stored for updateDepth()
   #activeTab      = 0
   #visibleTabs    = []     // subset of ALL_TABS that are rendered
   #onSpeak        = null
   #onStudy        = null
+  #onTranslate    = null   // async (text, sourceLang, targetLang) => {text, attribution} | null
   #previousFocus  = null
   #keydownHandler = null
   #snap           = 'half'
   #dragStartY     = 0
   #dragBaseY      = 0
   #dragActive     = false
+  // Translation fetch state (reset on each show())
+  #vocabTranslationFetched   = false
+  #sentenceTranslationFetched = false
 
   static ALL_TABS = [
     { id: 'explanation', label: 'Explanation', alwaysShow: true  },
@@ -128,10 +132,13 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   // ── Public API ──────────────────────────────────────────────────────────────
 
-  show({ lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, depth }) {
-    this.#lastShowArgs  = { lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, depth }
-    this.#config        = { lesson, sentenceText, language, dir: dir ?? 'ltr', ttsTag, caps, depth: depth ?? 'scholar' }
+  show({ lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, onTranslate, depth, uiLang }) {
+    this.#lastShowArgs  = { lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, onTranslate, depth, uiLang }
+    this.#config        = { lesson, sentenceText, language, dir: dir ?? 'ltr', ttsTag, caps, depth: depth ?? 'scholar', uiLang: uiLang ?? 'en' }
     this.#onSpeak       = onSpeak ?? null
+    this.#onTranslate   = onTranslate ?? null
+    this.#vocabTranslationFetched    = false
+    this.#sentenceTranslationFetched = false
     this.#onStudy       = onStudy ?? null
     this.#activeTab     = 0
     this.#previousFocus = document.activeElement
@@ -359,6 +366,9 @@ export class MnemosyneDetailPane extends HTMLElement {
 
     // Wire all interactive events
     this._wireEvents(matchedVariant, canonical, sentenceText || '', isNonCanonical)
+
+    // Explanation tab is active by default — kick off vocab translation immediately.
+    this.#fetchVocabTranslation()
   }
 
   // ── HTML fragment builders ──────────────────────────────────────────────────
@@ -407,6 +417,10 @@ export class MnemosyneDetailPane extends HTMLElement {
           </div>
         ` : ''}
         <p class="pane__explanation"></p>
+        <div class="pane__translation-row" hidden>
+          <p class="pane__translation-text"></p>
+          <small class="pane__translation-attribution"></small>
+        </div>
         ${hasWhyItMatters ? /* html */`
           <blockquote class="pane__why-it-matters">
             <p class="pane__why-it-matters-text"></p>
@@ -481,6 +495,10 @@ export class MnemosyneDetailPane extends HTMLElement {
           ${language ? `lang="${esc(language)}"` : ''}
           ${dir && dir !== 'ltr' ? `dir="${esc(dir)}"` : ''}
         ></p>
+        <div class="pane__sentence-translation-row" hidden>
+          <p class="pane__sentence-translation-text"></p>
+          <small class="pane__sentence-translation-attribution"></small>
+        </div>
         <div class="pane__audio-row">
           <button class="pane__audio-btn" type="button" data-speak="sentence">
             <span aria-hidden="true">&#x1F50A;</span> Hear sentence
@@ -572,6 +590,44 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   // ── Event wiring ─────────────────────────────────────────────────────────────
 
+  // ── Translation fetchers ─────────────────────────────────────────────────────
+
+  async #fetchVocabTranslation() {
+    if (this.#vocabTranslationFetched || !this.#onTranslate) return
+    const { lesson, language, uiLang } = this.#config
+    if (lesson.type !== 'vocabulary' || !uiLang || uiLang === language) return
+    const lemma = lesson.lesson_data?.lemma || lesson.label
+    if (!lemma) return
+    this.#vocabTranslationFetched = true
+    const result = await this.#onTranslate(lemma, language, uiLang)
+    if (!result) return
+    const row  = this.shadowRoot.querySelector('#dp-panel-explanation .pane__translation-row')
+    const text = this.shadowRoot.querySelector('#dp-panel-explanation .pane__translation-text')
+    const attr = this.shadowRoot.querySelector('#dp-panel-explanation .pane__translation-attribution')
+    if (row && text) {
+      text.textContent = result.text
+      if (attr && result.attribution) attr.textContent = result.attribution
+      row.hidden = false
+    }
+  }
+
+  async #fetchSentenceTranslation(sentenceText) {
+    if (this.#sentenceTranslationFetched || !this.#onTranslate) return
+    const { language, uiLang } = this.#config
+    if (!sentenceText || !uiLang || uiLang === language) return
+    this.#sentenceTranslationFetched = true
+    const result = await this.#onTranslate(sentenceText, language, uiLang)
+    if (!result) return
+    const row  = this.shadowRoot.querySelector('#dp-panel-context .pane__sentence-translation-row')
+    const text = this.shadowRoot.querySelector('#dp-panel-context .pane__sentence-translation-text')
+    const attr = this.shadowRoot.querySelector('#dp-panel-context .pane__sentence-translation-attribution')
+    if (row && text) {
+      text.textContent = result.text
+      if (attr && result.attribution) attr.textContent = result.attribution
+      row.hidden = false
+    }
+  }
+
   _wireEvents(matchedVariant, canonical, sentenceText, isNonCanonical) {
     const { lesson, language, ttsTag } = this.#config
 
@@ -592,6 +648,9 @@ export class MnemosyneDetailPane extends HTMLElement {
       tab.addEventListener('click', () => {
         this.#activeTab = i
         this._applyTabState()
+        const tabId = this.#visibleTabs[i]?.id
+        if (tabId === 'explanation') this.#fetchVocabTranslation()
+        if (tabId === 'context')     this.#fetchSentenceTranslation(sentenceText)
       })
       tab.addEventListener('keydown', (e) => {
         let next = null
@@ -1097,6 +1156,31 @@ export class MnemosyneDetailPane extends HTMLElement {
         margin: 0;
         font-size: 0.9375rem;
         line-height: 1.6;
+      }
+
+      /* ── Translation rows ───────────────────────────────────────────────── */
+      .pane__translation-row,
+      .pane__sentence-translation-row {
+        margin-block-start: 0.5rem;
+        padding: 0.45rem 0.6rem;
+        background: color-mix(in oklch, ${ref} 7%, Canvas);
+        border-radius: 0.35rem;
+        border-inline-start: 2px solid color-mix(in oklch, ${ref} 40%, Canvas);
+      }
+
+      .pane__translation-text,
+      .pane__sentence-translation-text {
+        margin: 0;
+        font-size: 0.9rem;
+        line-height: 1.55;
+      }
+
+      .pane__translation-attribution,
+      .pane__sentence-translation-attribution {
+        display: block;
+        margin-block-start: 0.2rem;
+        font-size: 0.7rem;
+        color: var(--text-muted, color-mix(in srgb, CanvasText 55%, Canvas));
       }
 
       /* ── Why it matters ─────────────────────────────────────────────────── */

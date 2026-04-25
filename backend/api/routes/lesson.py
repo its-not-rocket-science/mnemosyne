@@ -8,10 +8,13 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from backend.api.dependencies import get_db_session, get_plugin_registry
 from backend.lesson.context import LessonContext
 from backend.lesson.generators import build_lesson
+from backend.lesson.providers import LessonProviders, VocabIndexGlossProvider
 from backend.models import CanonicalObjectRow
 from backend.parsing.plugin_loader import PluginRegistry
 from backend.schemas.language import LessonMode, best_lesson_mode
 from backend.schemas.lesson import LessonResponse
+
+_PROVIDERS = LessonProviders(gloss=VocabIndexGlossProvider())
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["lesson"])
@@ -70,6 +73,7 @@ async def get_lesson(
                 lesson_data=row.lesson_data or {},
                 lesson_mode=mode,
                 context=context,
+                providers=_PROVIDERS,
             )
     except Exception:
         logger.warning("DB lesson lookup failed for %r", object_id, exc_info=True)
@@ -94,4 +98,5 @@ async def get_lesson(
         lesson_data=lo.lesson_data or {},
         lesson_mode=mode,
         context=context,
+        providers=_PROVIDERS,
     )
