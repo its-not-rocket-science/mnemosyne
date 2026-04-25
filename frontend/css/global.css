@@ -762,6 +762,52 @@ select:focus-visible {
   outline-color: var(--error-color);
 }
 
+/* ── Keyboard shortcut legend ────────────────────────────────────────────────
+   Used inside #shortcuts-dialog.  Also usable anywhere a shortcut is shown.  */
+
+kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 1.6rem;
+  padding-block: 0.1rem;
+  padding-inline: 0.4rem;
+  background: var(--surface-secondary, var(--bg));
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  box-shadow: 0 1px 0 var(--border);
+  font-family: ui-monospace, 'Cascadia Code', 'Fira Code', monospace;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.shortcuts-list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.shortcut-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.shortcut-row dt {
+  min-inline-size: 9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.shortcut-row dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--font-size-ui, 0.875rem);
+}
+
 /* ── Site footer ─────────────────────────────────────────────────────────────
    Slim footer below the main content.  Uses muted text and a top border to
    visually separate it without heavyweight styling.                           */

@@ -147,12 +147,14 @@ export class MnemosyneDetailPane extends HTMLElement {
       this.shadowRoot.querySelector('[role="tab"]')?.focus()
     })
 
-    // Close on Escape.
+    // Close on Escape; trap Tab within the pane while open.
     this.#keydownHandler = (e) => {
       if (e.key === 'Escape') {
         e.preventDefault()
         this.hide()
+        return
       }
+      if (e.key === 'Tab') this.#trapTab(e)
     }
     document.addEventListener('keydown', this.#keydownHandler)
   }
@@ -604,6 +606,29 @@ export class MnemosyneDetailPane extends HTMLElement {
     panelEls.forEach((panel, i) => {
       panel.hidden = i !== this.#activeTab
     })
+  }
+
+  // ── Focus trap ────────────────────────────────────────────────────────────────
+
+  #focusable() {
+    return [...this.shadowRoot.querySelectorAll(
+      'button:not(:disabled), [href], input:not(:disabled), ' +
+      'select:not(:disabled), textarea:not(:disabled), ' +
+      '[tabindex]:not([tabindex="-1"])'
+    )].filter(el => !el.closest('[hidden]') && !el.closest('[inert]'))
+  }
+
+  #trapTab(e) {
+    const els = this.#focusable()
+    if (!els.length) return
+    const first  = els[0]
+    const last   = els[els.length - 1]
+    const active = this.shadowRoot.activeElement
+    if (e.shiftKey) {
+      if (active === first) { e.preventDefault(); last.focus() }
+    } else {
+      if (active === last)  { e.preventDefault(); first.focus() }
+    }
   }
 
   // ── Snap + drag (mobile bottom-sheet) ────────────────────────────────────────
