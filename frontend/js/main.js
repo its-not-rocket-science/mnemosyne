@@ -57,8 +57,10 @@ const saveLessonCloseBtn   = document.querySelector('#save-lesson-close-btn')
 const saveLessonConfirmBtn = document.querySelector('#save-lesson-confirm-btn')
 
 // Reader UI
-const filterBar        = document.querySelector('#filter-bar')
-const nowPlayingBar    = document.querySelector('#now-playing-bar')
+const filterBar          = document.querySelector('#filter-bar')
+const nowPlayingBar      = document.querySelector('#now-playing-bar')
+const readingProgress    = document.querySelector('#reading-progress')
+const annotationMinimap  = document.querySelector('#annotation-minimap')
 
 // Accessibility
 const a11yLive         = document.querySelector('#a11y-live')
@@ -169,6 +171,7 @@ async function loadLanguages() {
   }
 
   syncCurrentCaps()
+  if (_dlAnnotation) _openDeepLink()
 }
 
 loadLanguages()
@@ -556,6 +559,7 @@ results.addEventListener('lesson-open', async (event) => {
         dir,
         ttsTag,
         caps,
+        depth: currentDepth,
         onSpeak:  (text, lang) => speakText(text, lang ?? ttsTag),
         onStudy:  () => modal.open({
           lesson,
@@ -586,6 +590,13 @@ results.addEventListener('lesson-open', async (event) => {
   }
 })
 
+// Sync note badges on annotation marks when note is saved/cleared in the pane.
+detailPane?.addEventListener('note-updated', ({ detail }) => {
+  results.querySelectorAll(`[data-object-id="${CSS.escape(detail.objectId)}"]`).forEach(mark => {
+    mark.toggleAttribute('data-has-note', detail.hasNote)
+  })
+})
+
 // Close handler: collapse the split-pane grid when the pane is dismissed.
 detailPane?.addEventListener('pane-close', () => {
   closeDetail()
@@ -613,6 +624,7 @@ topNav?.addEventListener('follow-change', ({ detail }) => {
 
 topNav?.addEventListener('depth-change', ({ detail }) => {
   currentDepth = detail.depth
+  detailPane?.updateDepth(detail.depth)
 })
 
 filterBar?.addEventListener('filter-change', ({ detail }) => {
@@ -749,6 +761,19 @@ playAllBtn?.addEventListener('click', () => {
 })
 
 playbackEngine.addEventListener('state-change', ({ detail: { state, current, index, total } }) => {
+  // Reading progress bar — show during multi-item playback
+  if (readingProgress) {
+    if (state === 'idle' || total <= 1) {
+      readingProgress.hidden = true
+      readingProgress.style.removeProperty('--progress')
+    } else {
+      const progress = (index + 1) / total
+      readingProgress.style.setProperty('--progress', String(progress))
+      readingProgress.hidden = false
+      readingProgress.setAttribute('aria-valuenow', String(Math.round(progress * 100)))
+    }
+  }
+
   // Active sentence highlight + per-card button icons
   results?.querySelectorAll('.sentence-card').forEach((card) => {
     const cardIdx = parseInt(card.dataset.sentenceIndex ?? '-1', 10)
@@ -874,6 +899,7 @@ function renderResults(sentences, language) {
   results.replaceChildren(fragment)
   applyScriptViewToResults()
   updateScriptViewToolbar()
+  requestAnimationFrame(buildMinimap)
 
   if (filterBar) {
     const allTypes = [...new Set(sentences.flatMap(s =>
@@ -947,11 +973,13 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam) {
 
     const mark = document.createElement('mark')
     mark.className = 'reader-annotation'
-    mark.dataset.type = item.type
+    mark.dataset.type     = item.type
+    mark.dataset.objectId = item.id
     mark.setAttribute('role', 'button')
     mark.setAttribute('tabindex', '0')
     mark.setAttribute('aria-label', item.label)
     mark.textContent = text.slice(start, end)
+    if (localStorage.getItem(`mn-note-${item.id}`)) mark.setAttribute('data-has-note', '')
     mark.addEventListener('click', () => {
       mark.dispatchEvent(new CustomEvent('lesson-open', {
         bubbles: true,
@@ -972,6 +1000,49 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam) {
 }
 
 
+// ── Annotation density minimap ────────────────────────────────────────────────
+
+const _MINIMAP_COLORS = {
+  vocabulary:      'var(--accent-vocab)',
+  conjugation:     'var(--accent-grammar)',
+  agreement:       'var(--accent-grammar)',
+  grammar:         'var(--accent-grammar)',
+  idiom:           'var(--accent-idiom)',
+  nuance:          'var(--accent-literary)',
+  phrase_family:   'var(--accent-literary)',
+  script:          'var(--accent-etymology)',
+  transliteration: 'var(--accent-etymology)',
+}
+
+function buildMinimap() {
+  if (!annotationMinimap) return
+  annotationMinimap.replaceChildren()
+
+  const marks = Array.from(results.querySelectorAll('.reader-annotation:not([data-filtered])'))
+  if (!marks.length) { annotationMinimap.hidden = true; return }
+
+  const region = annotationMinimap.parentElement
+  const regionRect = region.getBoundingClientRect()
+  const regionTop  = regionRect.top + window.scrollY
+  const totalH     = region.offsetHeight
+  if (!totalH) return
+
+  const frag = document.createDocumentFragment()
+  marks.forEach(mark => {
+    const markRect = mark.getBoundingClientRect()
+    const markTop  = markRect.top + window.scrollY
+    const pct      = Math.max(0, Math.min(99, (markTop - regionTop) / totalH * 100))
+    const tick     = document.createElement('div')
+    tick.className = 'annotation-minimap__tick'
+    tick.style.top        = `${pct.toFixed(2)}%`
+    tick.style.background = _MINIMAP_COLORS[mark.dataset.type] ?? 'var(--muted)'
+    frag.appendChild(tick)
+  })
+  annotationMinimap.appendChild(frag)
+  annotationMinimap.hidden = false
+}
+
+
 // ── Annotation filter ─────────────────────────────────────────────────────────
 
 function applyAnnotationFilter() {
@@ -983,6 +1054,7 @@ function applyAnnotationFilter() {
     if (!pill) return
     li.hidden = activeFilterTypes !== null && !activeFilterTypes.has(pill.getAttribute('type'))
   })
+  requestAnimationFrame(buildMinimap)
 }
 
 
@@ -1250,6 +1322,51 @@ async function checkBackendHealth() {
 
 checkBackendHealth()
 window.__checkBackendHealth = checkBackendHealth
+
+
+// ── Deep-link: ?annotation=ID&language=CODE ───────────────────────────────────
+// Allows sharing a direct URL to a specific annotation.
+// Loaded by the share button in the detail pane.  Works without parsed text.
+
+const _dlAnnotation = new URLSearchParams(location.search).get('annotation')
+const _dlLanguage   = new URLSearchParams(location.search).get('language')
+
+async function _openDeepLink() {
+  if (!_dlAnnotation) return
+  const lang   = _dlLanguage || languageSelect.value
+  const caps   = languageCapabilities.get(lang)
+  const ttsTag = caps?.tts_lang_tag ?? lang
+  const dir    = caps?.direction ?? 'ltr'
+
+  try {
+    const url = `${API_BASE}/lesson/${encodeURIComponent(_dlAnnotation)}?language=${encodeURIComponent(lang)}&depth=${encodeURIComponent(currentDepth)}`
+    const response = await fetch(url, { headers: getAuthHeaders() })
+    if (!response.ok) return
+    const lesson = await response.json()
+    if (detailPane) {
+      detailPane.show({
+        lesson,
+        sentenceText: '',
+        language: lang,
+        dir,
+        ttsTag,
+        caps,
+        depth: currentDepth,
+        onSpeak: (text, l) => speakText(text, l ?? ttsTag),
+        onStudy: () => modal.open({
+          lesson,
+          objectId: lesson.id,
+          caps,
+          language: lang,
+          onRate:   submitReview,
+          onSpeak:  (text) => speakText(text, ttsTag),
+        }),
+      })
+      openDetail()
+      paneBackdrop?.classList.add('is-visible')
+    }
+  } catch { /* best-effort — user may not be authed yet */ }
+}
 
 
 // ── Auth init ─────────────────────────────────────────────────────────────────

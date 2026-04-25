@@ -681,3 +681,76 @@ body.player-active .reader-nowplaying {
     min-block-size: 1.75rem;
   }
 }
+
+
+/* ── Feature: Reading progress bar ──────────────────────────────────────────── */
+
+.reading-progress {
+  position: sticky;
+  top: var(--app-top-nav-h, 0px);
+  z-index: calc(var(--z-filter-bar, 10) - 1);
+  height: 3px;
+  background: color-mix(in srgb, var(--accent) 15%, var(--border));
+  overflow: hidden;
+  /* Span the full column width by reaching into .wrap horizontal padding */
+  margin-inline: calc(-1 * clamp(1rem, 4vw, 2rem));
+}
+
+.reading-progress::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: var(--accent);
+  transform-origin: left center;
+  transform: scaleX(var(--progress, 0));
+  transition: transform 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reading-progress::after { transition: none; }
+}
+
+
+/* ── Feature: Annotation density minimap ────────────────────────────────────── */
+
+.results-region {
+  position: relative;
+  /* Reserve inline-end space so the minimap doesn't overlap sentence text. */
+  padding-inline-end: 0.65rem;
+}
+
+.annotation-minimap {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inline-size: 5px;
+  pointer-events: none;
+}
+
+.annotation-minimap[hidden] { display: none; }
+
+.annotation-minimap__tick {
+  position: absolute;
+  inset-inline-start: 0;
+  inline-size: 5px;
+  block-size: 4px;
+  border-radius: 2px;
+  opacity: 0.65;
+}
+
+
+/* ── Feature: Annotation note badge ─────────────────────────────────────────── */
+
+/* A small amber dot signals that a personal note is saved for this annotation. */
+.reader-annotation[data-has-note]::after {
+  content: '';
+  display: inline-block;
+  width:  0.4em;
+  height: 0.4em;
+  background: var(--accent-idiom);
+  border-radius: 50%;
+  vertical-align: super;
+  margin-inline-start: 0.1em;
+  pointer-events: none;
+}

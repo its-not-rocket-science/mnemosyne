@@ -168,6 +168,9 @@
               tabindex="-1" makes <main> programmatically focusable for the skip link.
             -->
             <main id="main" tabindex="-1" class="app-shell__text-panel">
+              <div id="reading-progress" class="reading-progress"
+                   role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                   aria-valuemax="100" aria-label="Audio reading progress" hidden></div>
               <div class="wrap">
 
                 <section class="panel" aria-labelledby="parse-heading">
@@ -226,10 +229,14 @@
                     No aria-live here — announcing the full card dump is too noisy.
                     The #status region announces the summary ("3 sentences parsed").
                   -->
-                  <div id="results" class="results">
-                    <p class="results-empty" data-i18n="results_empty">
-                      Parse some text above to see learnable items here.
-                    </p>
+                  <div class="results-region">
+                    <div id="results" class="results">
+                      <p class="results-empty" data-i18n="results_empty">
+                        Parse some text above to see learnable items here.
+                      </p>
+                    </div>
+                    <div id="annotation-minimap" class="annotation-minimap"
+                         aria-hidden="true" hidden></div>
                   </div>
 
                   <!--
