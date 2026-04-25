@@ -353,6 +353,44 @@
       </div>
     </dialog>
 
+    <!-- Keyboard shortcut legend — opened by ? key or ⚙ button -->
+    <dialog id="shortcuts-dialog" class="picker-dialog"
+            aria-labelledby="shortcuts-heading">
+      <div class="picker-dialog__inner stack">
+        <div class="picker-dialog__header">
+          <h2 id="shortcuts-heading">Keyboard shortcuts</h2>
+          <button type="button" id="shortcuts-close-btn" class="dialog-close-btn"
+                  aria-label="Close">&#x2715;</button>
+        </div>
+        <dl class="shortcuts-list">
+          <div class="shortcut-row">
+            <dt><kbd>Space</kbd></dt>
+            <dd>Play / pause</dd>
+          </div>
+          <div class="shortcut-row">
+            <dt><kbd>&#x2190;</kbd> / <kbd>&#x2192;</kbd></dt>
+            <dd>Previous / next sentence</dd>
+          </div>
+          <div class="shortcut-row">
+            <dt><kbd>Esc</kbd></dt>
+            <dd>Close detail panel</dd>
+          </div>
+          <div class="shortcut-row">
+            <dt><kbd>F</kbd></dt>
+            <dd>Toggle follow-along</dd>
+          </div>
+          <div class="shortcut-row">
+            <dt><kbd>?</kbd></dt>
+            <dd>Show / hide this legend</dd>
+          </div>
+        </dl>
+      </div>
+    </dialog>
+
+    <!-- Screen-reader live region — populated by announce() in main.js -->
+    <div id="a11y-live" role="status" aria-live="polite" aria-atomic="true"
+         class="sr-only"></div>
+
     <footer class="site-footer">
       <div class="wrap site-footer__inner">
         <p><a href="./privacy.html" data-i18n="privacy_policy">Privacy policy</a></p>

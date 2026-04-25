@@ -59,6 +59,11 @@ const saveLessonConfirmBtn = document.querySelector('#save-lesson-confirm-btn')
 // Reader UI
 const filterBar        = document.querySelector('#filter-bar')
 const nowPlayingBar    = document.querySelector('#now-playing-bar')
+
+// Accessibility
+const a11yLive         = document.querySelector('#a11y-live')
+const shortcutsDialog  = document.querySelector('#shortcuts-dialog')
+const shortcutsCloseBtn = document.querySelector('#shortcuts-close-btn')
 const readerNowPlaying = document.querySelector('#reader-nowplaying')
 const rnpToggle        = document.querySelector('#rnp-toggle')
 const rnpStop          = document.querySelector('#rnp-stop')
@@ -526,6 +531,8 @@ results.addEventListener('lesson-open', async (event) => {
   const sentenceCard = event.target?.closest?.('article.sentence-card')
   const sentenceText = sentenceCard?.querySelector('.sentence-card__text')?.textContent ?? ''
 
+  const phrase = event.target?.getAttribute?.('aria-label') ?? objectId
+  announce(`Loading details: ${phrase}`)
   setStatus(t('loading_lesson'), 'busy')
 
   try {
@@ -634,6 +641,94 @@ function _relocateNowPlayingBar(mobile) {
 
 _npMq.addEventListener('change', e => _relocateNowPlayingBar(e.matches))
 _relocateNowPlayingBar(_npMq.matches)
+
+
+// ── Screen-reader announcements ───────────────────────────────────────────────
+
+function announce(msg) {
+  if (!a11yLive) return
+  // Clear first so the same message re-announces if repeated.
+  a11yLive.textContent = ''
+  requestAnimationFrame(() => { a11yLive.textContent = msg })
+}
+
+
+// ── Keyboard shortcut legend ──────────────────────────────────────────────────
+
+shortcutsCloseBtn?.addEventListener('click', () => shortcutsDialog?.close())
+
+function openShortcuts() {
+  shortcutsDialog?.showModal()
+  shortcutsCloseBtn?.focus()
+}
+
+topNav?.addEventListener('settings-open', openShortcuts)
+
+
+// ── Global keyboard shortcuts ─────────────────────────────────────────────────
+// Uses e.composedPath()[0] so the innermost shadow-DOM element is checked,
+// avoiding false positives when focus is inside a Web Component.
+
+document.addEventListener('keydown', e => {
+  // Never intercept when a modal/dialog is open (it handles its own keys).
+  if (shortcutsDialog?.open) return
+
+  // Innermost focused element — pierces Shadow DOM.
+  const target = /** @type {HTMLElement|null} */ (e.composedPath()[0])
+  const tag = target?.tagName?.toLowerCase() ?? ''
+  const inText   = tag === 'input' || tag === 'textarea'
+  const inSelect = tag === 'select'
+  const inButton = tag === 'button' || tag === 'a'
+
+  // Never steal keys from text-entry controls.
+  if (inText || inSelect) return
+
+  switch (e.key) {
+    case '?':
+      if (!inButton) { e.preventDefault(); openShortcuts() }
+      break
+
+    case ' ':
+      // Space activates the focused button natively; only intercept in dead space.
+      if (!inButton && playbackEngine.state !== 'idle') {
+        e.preventDefault()
+        playbackEngine.togglePause()
+        announce(playbackEngine.state === 'playing' ? 'Paused' : 'Resumed')
+      }
+      break
+
+    case 'ArrowLeft':
+      if (!inButton && playbackEngine.state !== 'idle') {
+        e.preventDefault()
+        playbackEngine.prev()
+        announce('Previous sentence')
+      }
+      break
+
+    case 'ArrowRight':
+      if (!inButton && playbackEngine.state !== 'idle') {
+        e.preventDefault()
+        playbackEngine.next()
+        announce('Next sentence')
+      }
+      break
+
+    case 'f':
+    case 'F':
+      if (!inButton && !e.ctrlKey && !e.metaKey) {
+        e.preventDefault()
+        isFollowAlongEnabled = !isFollowAlongEnabled
+        // Sync the visual toggle in the top nav (shadow DOM, open mode).
+        const cb = topNav?.shadowRoot?.getElementById('follow-cb')
+        if (cb) {
+          cb.checked = isFollowAlongEnabled
+          cb.setAttribute('aria-checked', String(isFollowAlongEnabled))
+        }
+        announce(isFollowAlongEnabled ? 'Follow along enabled' : 'Follow along disabled')
+      }
+      break
+  }
+})
 
 
 // ── Playback controls ─────────────────────────────────────────────────────────
@@ -866,6 +961,7 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam) {
     mark.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); mark.click() }
     })
+    mark.addEventListener('focus', () => announce(`Annotation: ${item.label}`))
     p.appendChild(mark)
     cursor = end
   }
