@@ -614,6 +614,28 @@ filterBar?.addEventListener('filter-change', ({ detail }) => {
 })
 
 
+// ── NowPlayingBar teleportation ───────────────────────────────────────────────
+// Mobile: move bar into detail pane's now-playing slot so it appears at the
+// bottom of the bottom sheet. Desktop: return it to .app-shell__left.
+
+const _leftCol = document.querySelector('.app-shell__left')
+const _npMq    = window.matchMedia('(max-width: 53.99rem)')
+
+function _relocateNowPlayingBar(mobile) {
+  if (!nowPlayingBar) return
+  if (mobile) {
+    nowPlayingBar.setAttribute('slot', 'now-playing')
+    detailPane?.appendChild(nowPlayingBar)
+  } else {
+    nowPlayingBar.removeAttribute('slot')
+    _leftCol?.appendChild(nowPlayingBar)
+  }
+}
+
+_npMq.addEventListener('change', e => _relocateNowPlayingBar(e.matches))
+_relocateNowPlayingBar(_npMq.matches)
+
+
 // ── Playback controls ─────────────────────────────────────────────────────────
 
 rnpPrev?.addEventListener('click',   () => playbackEngine.prev())

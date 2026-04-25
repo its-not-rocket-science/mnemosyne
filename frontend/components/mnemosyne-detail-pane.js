@@ -108,6 +108,10 @@ export class MnemosyneDetailPane extends HTMLElement {
   #onStudy        = null
   #previousFocus  = null
   #keydownHandler = null
+  #snap           = 'half'
+  #dragStartY     = 0
+  #dragBaseY      = 0
+  #dragActive     = false
 
   static ALL_TABS = [
     { id: 'explanation', label: 'Explanation', alwaysShow: true  },
@@ -139,6 +143,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     // screen readers announce the newly-visible pane.
     requestAnimationFrame(() => {
       this.setAttribute('data-open', '')
+      this.#setSnap('half')
       this.shadowRoot.querySelector('[role="tab"]')?.focus()
     })
 
@@ -154,6 +159,9 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   hide() {
     this.removeAttribute('data-open')
+    this.removeAttribute('data-snap')
+    this.removeAttribute('data-dragging')
+    this.style.transform = ''
     this.setAttribute('inert', '')
 
     if (this.#keydownHandler) {
@@ -197,7 +205,9 @@ export class MnemosyneDetailPane extends HTMLElement {
       <style>${this._styles(meta)}</style>
       <aside class="pane" role="complementary" aria-labelledby="dp-heading">
 
-        <div class="pane__drag-handle" aria-hidden="true"></div>
+        <div class="pane__drag-handle-area" aria-hidden="true">
+          <div class="pane__drag-handle"></div>
+        </div>
 
         <header class="pane__header">
           <div class="pane__badge" aria-hidden="true">${esc(meta.icon)} ${esc(meta.label)}</div>
@@ -229,6 +239,8 @@ export class MnemosyneDetailPane extends HTMLElement {
         <footer class="pane__footer">
           <button class="pane__study-btn" type="button">Study drills &#x2192;</button>
         </footer>
+
+        <slot name="now-playing"></slot>
 
       </aside>
     `
@@ -574,6 +586,8 @@ export class MnemosyneDetailPane extends HTMLElement {
         if (text) this.#onSpeak(text, ttsTag ?? language)
       })
     })
+
+    this.#wireDrag()
   }
 
   // Apply aria-selected, tabindex, and panel visibility for the active tab.
@@ -590,6 +604,49 @@ export class MnemosyneDetailPane extends HTMLElement {
     panelEls.forEach((panel, i) => {
       panel.hidden = i !== this.#activeTab
     })
+  }
+
+  // ── Snap + drag (mobile bottom-sheet) ────────────────────────────────────────
+
+  #setSnap(snap) {
+    this.#snap = snap
+    this.setAttribute('data-snap', snap)
+  }
+
+  #wireDrag() {
+    const area = this.shadowRoot.querySelector('.pane__drag-handle-area')
+    area?.addEventListener('pointerdown', this.#onDragStart, { passive: true })
+  }
+
+  #onDragStart = (e) => {
+    if (!window.matchMedia('(max-width: 53.99rem)').matches) return
+    this.#dragActive = true
+    this.#dragStartY = e.clientY
+    this.#dragBaseY  = this.#snap === 'full' ? 0 : window.innerHeight * 0.5
+    this.setAttribute('data-dragging', '')
+    document.addEventListener('pointermove', this.#onDragMove, { passive: true })
+    document.addEventListener('pointerup',   this.#onDragEnd)
+  }
+
+  #onDragMove = (e) => {
+    if (!this.#dragActive) return
+    const raw = this.#dragBaseY + (e.clientY - this.#dragStartY)
+    const pct = Math.min(Math.max(raw / window.innerHeight * 100, 0), 110)
+    this.style.transform = `translateY(${pct.toFixed(1)}%)`
+  }
+
+  #onDragEnd = (e) => {
+    if (!this.#dragActive) return
+    this.#dragActive = false
+    document.removeEventListener('pointermove', this.#onDragMove)
+    document.removeEventListener('pointerup',   this.#onDragEnd)
+    this.removeAttribute('data-dragging')
+    this.style.transform = ''
+    const newY  = this.#dragBaseY + (e.clientY - this.#dragStartY)
+    const viewH = window.innerHeight
+    if      (newY > viewH * 0.65) this.hide()
+    else if (newY < viewH * 0.28) this.#setSnap('full')
+    else                          this.#setSnap('half')
   }
 
   // ── Scoped styles ─────────────────────────────────────────────────────────────
@@ -624,21 +681,31 @@ export class MnemosyneDetailPane extends HTMLElement {
           position: fixed;
           inset-inline: 0;
           inset-block-end: 0;
+          block-size: 100dvh;
           z-index: 200;
-          max-block-size: 82dvh;
-          /* Start off-screen; transition to translateY(0) when [data-open] set. */
           transform: translateY(110%);
           transition: transform 0.35s cubic-bezier(0.32, 0, 0.67, 0);
+          pointer-events: none;
         }
 
         :host([data-open]) {
-          transform: translateY(0);
+          pointer-events: auto;
           transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
         }
 
+        /* Half snap: top half of pane visible (drag handle + header + tab + body start) */
+        :host([data-snap="half"]) { transform: translateY(50%); }
+
+        /* Full snap: entire pane fills viewport */
+        :host([data-snap="full"]) { transform: translateY(0); }
+
+        /* No transition while finger is dragging */
+        :host([data-dragging]) { transition: none !important; }
+
         @media (prefers-reduced-motion: reduce) {
-          :host         { transition: none; }
-          :host([data-open]) { transform: translateY(0); }
+          :host                     { transition: none; }
+          :host([data-snap="half"]) { transform: translateY(50%); }
+          :host([data-snap="full"]) { transform: translateY(0); }
         }
       }
 
@@ -666,21 +733,39 @@ export class MnemosyneDetailPane extends HTMLElement {
         }
       }
 
-      /* ── Drag handle (mobile visual affordance) ──────────────────────────── */
-      .pane__drag-handle {
+      /* ── Now-playing slot ────────────────────────────────────────────────── */
+      slot[name="now-playing"] { display: block; flex-shrink: 0; }
+
+      /* Slot is only meaningful inside the mobile sheet */
+      @media (min-width: 54rem) {
+        slot[name="now-playing"] { display: none; }
+      }
+
+      /* ── Drag handle (mobile affordance + generous touch target) ────────── */
+      .pane__drag-handle-area {
         display: none;
       }
 
       @media (max-width: 53.99rem) {
+        .pane__drag-handle-area {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-block-size: 1.5rem;
+          padding-block: 0.55rem 0.2rem;
+          flex-shrink: 0;
+          cursor: grab;
+          touch-action: none;
+          user-select: none;
+        }
+        .pane__drag-handle-area:active { cursor: grabbing; }
+
         .pane__drag-handle {
-          display: block;
           inline-size: 2.5rem;
           block-size: 0.25rem;
-          background: var(--border-input);
+          background: var(--border-input, color-mix(in srgb, CanvasText 28%, Canvas));
           border-radius: 999px;
-          margin-inline: auto;
-          margin-block: 0.55rem 0.25rem;
-          flex-shrink: 0;
+          pointer-events: none;
         }
       }
 
