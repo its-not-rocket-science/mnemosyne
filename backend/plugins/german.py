@@ -115,6 +115,7 @@ from functools import cached_property
 from typing import Any
 
 from backend.plugins.cefr_vocab import A1 as _CEFR_A1
+from backend.core.vocab_index import get_cefr_level as _get_cefr_level
 from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import (
     CandidateObject,
@@ -382,8 +383,9 @@ class GermanPlugin:
             seen.add(lemma)
 
             data: dict[str, Any] = {"lemma": lemma, "pos": tok.pos_}
-            if lemma in _A1:
-                data["cefr_level"] = "A1"
+            cefr = _get_cefr_level("de", lemma) or ("A1" if lemma in _A1 else None)
+            if cefr:
+                data["cefr_level"] = cefr
 
             if tok.pos_ == "NOUN":
                 if noun_gender := _morph_first(tok, "Gender"):

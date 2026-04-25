@@ -36,7 +36,8 @@
       "Bash(node *)",
       "Bash(curl -s http://localhost:8000/)",
       "Bash(curl -s http://localhost:8000/css/global.css)",
-      "Bash(echo \"Exit: $?\")"
+      "Bash(echo \"Exit: $?\")",
+      "Bash(xargs -I {} sh -c 'echo {}')"
     ]
   }
 }

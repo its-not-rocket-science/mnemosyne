@@ -125,6 +125,7 @@ from functools import cached_property
 from typing import Any
 
 from backend.plugins.cefr_vocab import A1 as _CEFR_A1
+from backend.core.vocab_index import get_cefr_level as _get_cefr_level
 from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import (
     CandidateObject,
@@ -424,8 +425,9 @@ class SpanishPlugin:
 
             confidence, confidence_note = self._vocab_confidence(tok, lemma)
             data: dict[str, Any] = {"lemma": lemma, "pos": tok.pos_}
-            if lemma in _A1:
-                data["cefr_level"] = "A1"
+            cefr = _get_cefr_level("es", lemma) or ("A1" if lemma in _A1 else None)
+            if cefr:
+                data["cefr_level"] = cefr
 
             # Gender and number for noun entries help lesson generators frame
             # "el/la" article drills and agree-pattern explanations.

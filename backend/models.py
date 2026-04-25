@@ -23,8 +23,9 @@ from __future__ import annotations
 import uuid
 from datetime import UTC, datetime
 
-from sqlalchemy import Boolean, DateTime, Float, ForeignKey, Integer, String, Text, UniqueConstraint
+from sqlalchemy import BigInteger, Boolean, DateTime, Float, ForeignKey, Integer, String, Text, UniqueConstraint
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.types import JSON
 
 
@@ -424,3 +425,44 @@ class UserLanguagePreferenceRow(Base):
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=_now, onupdate=_now
     )
+
+
+class VocabularyEntry(Base):
+    """CEFR-graded vocabulary harvested from open corpora.
+
+    Uniqueness key: (language, lemma, pos).  The same lemma may appear at
+    different CEFR levels when it has multiple parts of speech.
+    """
+    __tablename__ = "vocabulary_entries"
+    __table_args__ = (UniqueConstraint("language", "lemma", "pos", name="uq_vocab_lang_lemma_pos"),)
+
+    id:             Mapped[int]          = mapped_column(BigInteger, primary_key=True, autoincrement=True)
+    language:       Mapped[str]          = mapped_column(String(10), nullable=False, index=True)
+    lemma:          Mapped[str]          = mapped_column(Text, nullable=False)
+    pos:            Mapped[str | None]   = mapped_column(String(20), nullable=True)
+    cefr_level:     Mapped[str]          = mapped_column(String(2), nullable=False)
+    definition:     Mapped[str | None]   = mapped_column(Text, nullable=True)
+    frequency_rank: Mapped[int | None]   = mapped_column(Integer, nullable=True)
+    source:         Mapped[str]          = mapped_column(String(80), nullable=False)
+    created_at:     Mapped[datetime]     = mapped_column(DateTime(timezone=True), default=_now)
+
+
+class GrammarRule(Base):
+    """CEFR-graded grammar rules per language.
+
+    Each rule belongs to a named category (e.g. 'verb_tenses', 'articles',
+    'cases') and carries a description plus JSON array of examples
+    ({sentence, translation, note}).
+    """
+    __tablename__ = "grammar_rules"
+    __table_args__ = (UniqueConstraint("language", "cefr_level", "name", name="uq_grammar_lang_level_name"),)
+
+    id:          Mapped[int]      = mapped_column(Integer, primary_key=True, autoincrement=True)
+    language:    Mapped[str]      = mapped_column(String(10), nullable=False, index=True)
+    cefr_level:  Mapped[str]      = mapped_column(String(2),  nullable=False)
+    category:    Mapped[str]      = mapped_column(String(80), nullable=False)
+    name:        Mapped[str]      = mapped_column(Text, nullable=False)
+    description: Mapped[str]      = mapped_column(Text, nullable=False)
+    examples:    Mapped[list]     = mapped_column(JSONB, nullable=False, default=list)
+    source:      Mapped[str]      = mapped_column(String(80), nullable=False)
+    created_at:  Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
