@@ -225,8 +225,8 @@ export class MnemosyneDetailPane extends HTMLElement {
       return false
     })
 
-    const matchedVariant = ld.matched_variant || lesson.label || ''
-    const canonical      = ld.canonical_form  || ''
+    const matchedVariant = ld.matched_variant || lesson.examples?.[0] || ''
+    const canonical      = ld.canonical_form  || lesson.examples?.[0] || ''
     const matchType      = ld.match_type || ''
     // Use match_type field (authoritative) rather than surface string comparison,
     // which fails for confusable_not_same where matched surface may equal canonical.
@@ -283,7 +283,7 @@ export class MnemosyneDetailPane extends HTMLElement {
 
     // Header title
     const titleEl = this.shadowRoot.querySelector('#dp-heading')
-    if (titleEl) titleEl.textContent = canonical || lesson.title || lesson.label || ''
+    if (titleEl) titleEl.textContent = canonical || lesson.examples?.[0] || lesson.title || ''
 
     // Explanation: confusable warning banner
     const confusableWarnEl = this.shadowRoot.querySelector('#dp-panel-explanation .pane__confusable-warning-text')
@@ -596,7 +596,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     if (this.#vocabTranslationFetched || !this.#onTranslate) return
     const { lesson, language, uiLang } = this.#config
     if (lesson.type !== 'vocabulary' || !uiLang || uiLang === language) return
-    const lemma = lesson.lesson_data?.lemma || lesson.label
+    const lemma = lesson.lesson_data?.lemma || lesson.examples?.[0]
     if (!lemma) return
     this.#vocabTranslationFetched = true
     const result = await this.#onTranslate(lemma, language, uiLang)

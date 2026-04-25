@@ -218,8 +218,8 @@ def build_lesson(
         response = builder(b)
         effective_mode = "morphology"
 
-    # Stamp the effective template and language context onto the response.
-    update: dict[str, Any] = {"lesson_mode": effective_mode}
+    # Stamp the effective template, language context, and raw lesson_data onto the response.
+    update: dict[str, Any] = {"lesson_mode": effective_mode, "lesson_data": b.lesson_data}
     if ctx.language_code is not None:
         update["language_code"] = ctx.language_code
     if ctx.direction and ctx.language_code is not None:
