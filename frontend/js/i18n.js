@@ -1152,6 +1152,11 @@ export function t(key) {
   return STRINGS[_currentLang]?.[key] ?? STRINGS.en[key] ?? key
 }
 
+/** Return the currently-active UI language code (e.g. "fr", "de"). */
+export function currentUiLang() {
+  return _currentLang
+}
+
 /** Translate a key and substitute {placeholder} tokens from vars. */
 export function ti(key, vars) {
   let s = t(key)
