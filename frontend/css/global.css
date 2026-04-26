@@ -312,38 +312,6 @@ main:focus {
   min-inline-size: 0;
 }
 
-/* ── Offline badge ───────────────────────────────────────────────────────────
-   Shown in the header when reviews are queued locally (network unavailable).
-   Uses a pulsing dot to draw attention without being alarming.              */
-
-.offline-badge {
-  display: flex;
-  align-items: center;
-  gap: var(--space-1);
-  font-size: 0.8125rem;
-  color: var(--muted);
-  margin: 0;
-}
-
-.offline-badge__dot {
-  display: inline-block;
-  inline-size: 0.5rem;
-  block-size: 0.5rem;
-  border-radius: 50%;
-  background-color: oklch(0.72 0.18 55);  /* amber */
-  flex-shrink: 0;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .offline-badge__dot {
-    animation: pulse-dot 2s ease-in-out infinite;
-  }
-}
-
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.35; }
-}
 
 /* ── Auth panel ──────────────────────────────────────────────────────────────
    Displayed when no JWT is in sessionStorage.  Constrained width so the form

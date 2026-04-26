@@ -52,13 +52,6 @@
           <button type="button" id="delete-account-btn" class="ghost-button ghost-button--danger"
                   data-i18n="delete_account">Delete account</button>
         </div>
-        <p id="offline-badge" class="offline-badge" hidden aria-live="polite">
-          <span class="offline-badge__dot" aria-hidden="true"></span>
-          <span data-i18n="offline_prefix">Offline —</span>
-          <span id="offline-count">0</span>
-          <span id="offline-review-word" data-i18n="offline_review">review</span><span id="offline-plural">s</span>
-          <span data-i18n="offline_queued">queued</span>
-        </p>
       </mnemosyne-top-nav>
 
       <!-- Site hero — page title + strapline below the nav bar -->
@@ -148,39 +141,13 @@
           <!-- Left column -->
           <div class="app-shell__left">
 
-            <!-- FilterBar region: script-view toggle + annotation type chips -->
+            <!-- FilterBar region: script-view toggle only -->
             <div id="app-filter-bar" class="app-shell__filter-bar">
               <!--
                 Script-view toolbar — hidden until a language with transliteration
                 support is selected. JS populates the toggle button group inside.
               -->
               <div id="results-toolbar" class="results-toolbar" hidden></div>
-
-              <!--
-                Annotation-type filter chips — hidden until results are rendered.
-                JS populates chips for every type present in the parsed sentences.
-              -->
-              <mnemosyne-filter-bar id="filter-bar" hidden></mnemosyne-filter-bar>
-
-              <!--
-                Level filter — hides annotations below the user's proficiency
-                threshold so the text is not overwhelming for advanced readers.
-                All = show every annotation; Grammar+ = hide basic vocabulary;
-                Literary = show only idiom/nuance/phrase-family.
-              -->
-              <div id="level-filter" class="level-filter" role="group"
-                   aria-label="Minimum annotation level" hidden>
-                <span class="level-filter__label" aria-hidden="true">Level</span>
-                <button class="level-filter__btn level-filter__btn--active"
-                        type="button" data-level="1"
-                        aria-pressed="true">All</button>
-                <button class="level-filter__btn"
-                        type="button" data-level="2"
-                        aria-pressed="false">Grammar+</button>
-                <button class="level-filter__btn"
-                        type="button" data-level="3"
-                        aria-pressed="false">Literary</button>
-              </div>
             </div>
 
             <!-- TextPanel region -->
@@ -234,7 +201,7 @@
                   </div>
                 </section>
 
-                <section class="panel" aria-labelledby="results-heading">
+                <section id="results-section" class="panel" aria-labelledby="results-heading" hidden>
                   <div class="results-heading-row">
                     <h2 id="results-heading" data-i18n="results_heading">Sentence lessons</h2>
                     <div class="results-heading-actions">
@@ -252,6 +219,24 @@
                       </div>
                       <button type="button" id="save-lesson-btn" class="ghost-button" hidden
                               data-i18n="save_lesson_btn">Save lesson</button>
+                    </div>
+                  </div>
+
+                  <!-- Annotation-type chips + level filter — shown once results render -->
+                  <div class="results-filter-row">
+                    <mnemosyne-filter-bar id="filter-bar" hidden></mnemosyne-filter-bar>
+                    <div id="level-filter" class="level-filter" role="group"
+                         aria-label="Minimum annotation level" hidden>
+                      <span class="level-filter__label" aria-hidden="true">Level</span>
+                      <button class="level-filter__btn level-filter__btn--active"
+                              type="button" data-level="1"
+                              aria-pressed="true">All</button>
+                      <button class="level-filter__btn"
+                              type="button" data-level="2"
+                              aria-pressed="false">Grammar+</button>
+                      <button class="level-filter__btn"
+                              type="button" data-level="3"
+                              aria-pressed="false">Literary</button>
                     </div>
                   </div>
 

@@ -37,7 +37,8 @@
       "Bash(curl -s http://localhost:8000/)",
       "Bash(curl -s http://localhost:8000/css/global.css)",
       "Bash(echo \"Exit: $?\")",
-      "Bash(xargs -I {} sh -c 'echo {}')"
+      "Bash(xargs -I {} sh -c 'echo {}')",
+      "Bash(python3 -c ' *)"
     ]
   }
 }

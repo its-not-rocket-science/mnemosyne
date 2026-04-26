@@ -62,13 +62,15 @@ async def ready(
         failed = True
 
     # ── Redis ─────────────────────────────────────────────────────────────────
+    # Redis is used only for caching; the app degrades gracefully without it.
+    # A missing Redis is reported in the report body but does not set failed=True
+    # so deployments without Redis don't show the degraded banner.
     try:
         redis = await get_redis()
         await redis.ping()
         report["redis"] = "ok"
     except Exception as exc:
-        report["redis"] = f"error ({type(exc).__name__})"
-        failed = True
+        report["redis"] = f"unavailable ({type(exc).__name__})"
 
     # ── Plugin health ─────────────────────────────────────────────────────────
     failed_plugins = registry.failed_plugins()
