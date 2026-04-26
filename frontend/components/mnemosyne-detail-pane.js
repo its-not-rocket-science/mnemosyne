@@ -232,6 +232,8 @@ export class MnemosyneDetailPane extends HTMLElement {
     // which fails for confusable_not_same where matched surface may equal canonical.
     const isNonCanonical = Boolean(matchType && matchType !== 'exact')
 
+    const titleText = canonical || lesson.examples?.[0] || lesson.title || ''
+
     // ── Assemble shadow DOM ──────────────────────────────────────────────────
     this.shadowRoot.innerHTML = /* html */`
       <style>${this._styles(meta)}</style>
@@ -243,7 +245,7 @@ export class MnemosyneDetailPane extends HTMLElement {
 
         <header class="pane__header">
           <div class="pane__badge" aria-hidden="true">${esc(meta.icon)} ${esc(meta.label)}</div>
-          <h2 class="pane__title" id="dp-heading"></h2>
+          <h2 class="pane__title" id="dp-heading">${esc(titleText)}</h2>
           <button class="pane__share" type="button" aria-label="Copy link to annotation">&#x1F517;</button>
           <span class="pane__share-hint" aria-live="polite" aria-atomic="true"></span>
           <button class="pane__close" type="button" aria-label="Close details panel">&#x2715;</button>
@@ -265,8 +267,8 @@ export class MnemosyneDetailPane extends HTMLElement {
 
         <div class="pane__body">
           ${this._htmlExplanationPanel(lesson, ld, matchedVariant, depthIdx)}
-          ${depthIdx >= 1 && hasOrigins  ? this._htmlOriginsPanel(isNonCanonical, Boolean(ld.source_text), matchType) : ''}
-          ${depthIdx >= 1               ? this._htmlContextPanel(language, dir) : ''}
+          ${depthIdx >= 1 && hasOrigins  ? this._htmlOriginsPanel(ld, isNonCanonical, Boolean(ld.source_text), matchType) : ''}
+          ${depthIdx >= 1               ? this._htmlContextPanel(sentenceText, language, dir, matchedVariant) : ''}
           ${depthIdx >= 2 && hasRelated  ? this._htmlRelatedPanel(ld, canonical, isNonCanonical) : ''}
         </div>
 
@@ -279,87 +281,9 @@ export class MnemosyneDetailPane extends HTMLElement {
       </aside>
     `
 
-    // ── Populate text content safely (never via innerHTML) ──────────────────
-
-    // Header title
-    const titleEl = this.shadowRoot.querySelector('#dp-heading')
-    if (titleEl) titleEl.textContent = canonical || lesson.examples?.[0] || lesson.title || ''
-
-    // Explanation: confusable warning banner
-    const confusableWarnEl = this.shadowRoot.querySelector('#dp-panel-explanation .pane__confusable-warning-text')
-    if (confusableWarnEl) {
-      confusableWarnEl.textContent = (ld.match_type_note)
-        ? ld.match_type_note
-        : 'This phrase looks similar to the family but has a different meaning.'
-    }
-
-    // Explanation: match type note
-    const matchNoteEl = this.shadowRoot.querySelector('#dp-panel-explanation .pane__match-note')
-    if (matchNoteEl) matchNoteEl.textContent = ld.match_type_note || ''
-
-    // Explanation: main prose
-    const explanationEl = this.shadowRoot.querySelector('#dp-panel-explanation .pane__explanation')
-    if (explanationEl) explanationEl.textContent = lesson.explanation || ''
-
-    // Explanation: why it matters
-    const whyEl = this.shadowRoot.querySelector('#dp-panel-explanation .pane__why-it-matters-text')
-    if (whyEl) whyEl.textContent = ld.why_it_matters || ''
-
-    // Explanation fields (values only — labels were set in _htmlExplanationPanel)
-    const fieldValues = Array.from(
-      this.shadowRoot.querySelectorAll('#dp-panel-explanation .pane__field-value')
-    )
-    const displayFields = (lesson.fields ?? [])
-      .filter(f => !SUPPRESS_IN_EXPLANATION.has(f.label.toLowerCase()))
-    fieldValues.forEach((el, i) => {
-      if (displayFields[i]) el.textContent = displayFields[i].value
-    })
-
-    // Origins: prose
-    const originEl = this.shadowRoot.querySelector('#dp-panel-origins .pane__origin-text')
-    if (originEl) originEl.textContent = ld.origin || ld.etymology || ''
-
-    // Origins: source citation
-    const sourceEl = this.shadowRoot.querySelector('#dp-panel-origins .pane__source-citation')
-    if (sourceEl) sourceEl.textContent = ld.source_text || ''
-
-    // In Context: highlighted sentence
+    // In Context: highlighted sentence (requires DOM node manipulation for <mark> elements)
     const contextEl = this.shadowRoot.querySelector('#dp-panel-context .pane__context-sentence')
-    if (contextEl) {
-      if (language) contextEl.setAttribute('lang', language)
-      if (dir && dir !== 'ltr') contextEl.setAttribute('dir', dir)
-      highlightPhrase(contextEl, sentenceText || '', matchedVariant)
-    }
-
-    // Related: variant items (dicts with surface/match_type/note, or legacy strings)
-    const rawVariants = Array.isArray(ld.variants) ? ld.variants : []
-    this.shadowRoot.querySelectorAll('#dp-panel-related .pane__variant-text').forEach((el, i) => {
-      const v = rawVariants[i]
-      if (v != null) el.textContent = typeof v === 'string' ? v : (v.surface ?? '')
-    })
-    this.shadowRoot.querySelectorAll('#dp-panel-related .pane__variant-note').forEach((el, i) => {
-      const v = rawVariants[i]
-      const note = typeof v === 'object' ? (v?.note ?? '') : ''
-      if (note) { el.textContent = note; el.hidden = false }
-    })
-
-    // Related: within-family confusable forms
-    const confusableForms = Array.isArray(ld.confusable_forms) ? ld.confusable_forms : []
-    this.shadowRoot.querySelectorAll('#dp-panel-related .pane__confusable-form-surface').forEach((el, i) => {
-      if (confusableForms[i]) el.textContent = confusableForms[i].surface ?? ''
-    })
-    this.shadowRoot.querySelectorAll('#dp-panel-related .pane__confusable-form-note').forEach((el, i) => {
-      const note = confusableForms[i]?.note ?? ''
-      if (note) { el.textContent = note; el.hidden = false }
-    })
-
-    // Related: cross-family confusable IDs
-    const confusables = Array.isArray(ld.confusables) ? ld.confusables : []
-    this.shadowRoot.querySelectorAll('#dp-panel-related .pane__confusable-id').forEach((el, i) => {
-      if (confusables[i] != null) {
-        el.textContent = String(confusables[i]).replace(/_/g, '\u00a0')
-      }
-    })
+    if (contextEl) highlightPhrase(contextEl, sentenceText || '', matchedVariant)
 
     // Set initial panel visibility
     this._applyTabState()
@@ -376,13 +300,12 @@ export class MnemosyneDetailPane extends HTMLElement {
   _htmlExplanationPanel(lesson, ld, matchedVariant, depthIdx = 2) {
     const allFields    = (lesson.fields ?? [])
       .filter(f => !SUPPRESS_IN_EXPLANATION.has(f.label.toLowerCase()))
-    // Scholar (2): show all fields. Basic (0): none. Intermediate (1): all fields.
     const displayFields = depthIdx >= 1 ? allFields : []
 
     const fieldsHtml = displayFields.map(f => /* html */`
       <div class="pane__field">
         <dt class="pane__field-label">${esc(f.label)}</dt>
-        <dd class="pane__field-value"></dd>
+        <dd class="pane__field-value">${esc(f.value)}</dd>
       </div>
     `).join('')
 
@@ -390,10 +313,10 @@ export class MnemosyneDetailPane extends HTMLElement {
     const matchType       = ld.match_type || ''
     const matchTypeMeta   = matchType ? (MATCH_TYPE_META[matchType] ?? { label: matchType, cls: 'variant' }) : null
     const showMatchBadge  = Boolean(matchTypeMeta)
-    const hasMatchNote    = Boolean(ld.match_type_note)
-    // Why it matters only for Scholar depth
+    const matchTypeNote   = ld.match_type_note || ''
     const hasWhyItMatters = Boolean(ld.why_it_matters) && depthIdx >= 2
     const isConfusable    = matchType === 'confusable_not_same'
+    const confusableWarning = matchTypeNote || 'This phrase looks similar to the family but has a different meaning.'
 
     return /* html */`
       <section
@@ -405,7 +328,7 @@ export class MnemosyneDetailPane extends HTMLElement {
         ${isConfusable ? /* html */`
           <div class="pane__confusable-warning" role="note">
             <span aria-hidden="true">&#x26A0;&#xFE0F;</span>
-            <span class="pane__confusable-warning-text"></span>
+            <span class="pane__confusable-warning-text">${esc(confusableWarning)}</span>
           </div>
         ` : ''}
         ${showMatchBadge ? /* html */`
@@ -413,17 +336,17 @@ export class MnemosyneDetailPane extends HTMLElement {
             <span class="pane__match-badge pane__match-badge--${esc(matchTypeMeta.cls)}">
               ${esc(matchTypeMeta.label)}
             </span>
-            ${hasMatchNote ? '<p class="pane__match-note"></p>' : ''}
+            ${matchTypeNote ? `<p class="pane__match-note">${esc(matchTypeNote)}</p>` : ''}
           </div>
         ` : ''}
-        <p class="pane__explanation"></p>
+        <p class="pane__explanation">${esc(lesson.explanation || '')}</p>
         <div class="pane__translation-row" hidden>
           <p class="pane__translation-text"></p>
           <small class="pane__translation-attribution"></small>
         </div>
         ${hasWhyItMatters ? /* html */`
           <blockquote class="pane__why-it-matters">
-            <p class="pane__why-it-matters-text"></p>
+            <p class="pane__why-it-matters-text">${esc(ld.why_it_matters)}</p>
           </blockquote>
         ` : ''}
         ${displayFields.length ? `<dl class="pane__fields">${fieldsHtml}</dl>` : ''}
@@ -449,8 +372,10 @@ export class MnemosyneDetailPane extends HTMLElement {
     `
   }
 
-  _htmlOriginsPanel(isNonCanonical, hasSourceText, matchType = '') {
+  _htmlOriginsPanel(ld, isNonCanonical, hasSourceText, matchType = '') {
     const isConfusable = matchType === 'confusable_not_same'
+    const originText   = ld.origin || ld.etymology || ''
+    const sourceText   = ld.source_text || ''
     return /* html */`
       <section
         id="dp-panel-origins"
@@ -459,9 +384,9 @@ export class MnemosyneDetailPane extends HTMLElement {
         class="pane__panel"
         hidden
       >
-        <p class="pane__origin-text"></p>
+        <p class="pane__origin-text">${esc(originText)}</p>
         ${hasSourceText ? /* html */`
-          <cite class="pane__source-citation"></cite>
+          <cite class="pane__source-citation">${esc(sourceText)}</cite>
         ` : ''}
         <div class="pane__audio-row">
           ${isNonCanonical ? /* html */`
@@ -482,7 +407,9 @@ export class MnemosyneDetailPane extends HTMLElement {
     `
   }
 
-  _htmlContextPanel(language, dir) {
+  _htmlContextPanel(sentenceText, language, dir, matchedVariant) {
+    // Sentence text is embedded as plain text here; highlightPhrase() replaces
+    // it with <mark>-wrapped content after innerHTML is set.
     return /* html */`
       <section
         id="dp-panel-context"
@@ -494,7 +421,7 @@ export class MnemosyneDetailPane extends HTMLElement {
         <p class="pane__context-sentence"
           ${language ? `lang="${esc(language)}"` : ''}
           ${dir && dir !== 'ltr' ? `dir="${esc(dir)}"` : ''}
-        ></p>
+        >${esc(sentenceText || '')}</p>
         <div class="pane__sentence-translation-row" hidden>
           <p class="pane__sentence-translation-text"></p>
           <small class="pane__sentence-translation-attribution"></small>
@@ -516,14 +443,14 @@ export class MnemosyneDetailPane extends HTMLElement {
 
     const variantItems = rawVariants.map(v => {
       const surface  = typeof v === 'string' ? v : (v.surface ?? '')
+      const note     = typeof v === 'object' ? (v.note ?? '') : ''
       const mt       = typeof v === 'string' ? '' : (v.match_type ?? '')
       const mtMeta   = mt ? (MATCH_TYPE_META[mt] ?? { label: mt, cls: 'variant' }) : null
-      const hasNote  = typeof v !== 'string' && Boolean(v.note)
       const isCanon  = canonical && surface.toLowerCase() === canonical.toLowerCase()
       return /* html */`
         <li class="pane__variant-item${isCanon ? ' pane__variant-item--canonical' : ''}">
           <span class="pane__variant-surface-row">
-            <span class="pane__variant-text"></span>
+            <span class="pane__variant-text">${esc(surface)}</span>
             ${isCanon ? '<span class="pane__canonical-star" aria-label="canonical form">&#x2605;</span>' : ''}
             ${mtMeta && !isCanon ? /* html */`
               <span class="pane__match-badge pane__match-badge--${esc(mtMeta.cls)} pane__match-badge--sm">
@@ -531,24 +458,24 @@ export class MnemosyneDetailPane extends HTMLElement {
               </span>
             ` : ''}
           </span>
-          ${hasNote ? '<p class="pane__variant-note" hidden></p>' : ''}
+          ${note ? `<p class="pane__variant-note">${esc(note)}</p>` : ''}
         </li>
       `
     }).join('')
 
-    const confusableFormItems = confusableForms.map(() => /* html */`
+    const confusableFormItems = confusableForms.map(cf => /* html */`
       <li class="pane__confusable-form-item">
         <span class="pane__match-badge pane__match-badge--danger pane__match-badge--sm">
           ${esc(MATCH_TYPE_META.confusable_not_same.label)}
         </span>
-        <span class="pane__confusable-form-surface"></span>
-        <p class="pane__confusable-form-note" hidden></p>
+        <span class="pane__confusable-form-surface">${esc(cf.surface ?? '')}</span>
+        ${cf.note ? `<p class="pane__confusable-form-note">${esc(cf.note)}</p>` : ''}
       </li>
     `).join('')
 
-    const confusableItems = confusables.map(() => /* html */`
+    const confusableItems = confusables.map(id => /* html */`
       <li class="pane__confusable-item">
-        <span class="pane__confusable-id"></span>
+        <span class="pane__confusable-id">${esc(String(id).replace(/_/g, '\u00a0'))}</span>
       </li>
     `).join('')
 
@@ -895,6 +822,7 @@ export class MnemosyneDetailPane extends HTMLElement {
       /* ── Pane shell ─────────────────────────────────────────────────────── */
       .pane {
         background: var(--surface);
+        color: var(--text, CanvasText);
         border: 1px solid var(--border);
         border-radius: var(--radius);
         box-shadow: var(--shadow);
