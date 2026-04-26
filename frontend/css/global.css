@@ -473,6 +473,18 @@ textarea[aria-invalid="true"] {
   margin: 0;
 }
 
+.field-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.ghost-button--small {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8125rem;
+  min-block-size: unset;
+}
+
 /* File-pick button — styled like a quiet secondary action.
    It wraps a visually-hidden <input type="file"> so clicking the label
    opens the OS file picker.  min-block-size ensures the 44 px touch target

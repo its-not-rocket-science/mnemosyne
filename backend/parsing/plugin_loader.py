@@ -15,6 +15,8 @@ class PluginRegistry:
         self._plugins: dict[str, LanguagePlugin] = {}
         self._failed: dict[str, str] = {}
         """module_name → error summary for plugins that raised during load."""
+        self._degraded: set[str] = set()
+        """language codes whose NLP model failed warm-up — excluded from /languages."""
 
     def register(self, plugin: LanguagePlugin) -> None:
         code = plugin.language_code.lower().strip()
@@ -37,16 +39,22 @@ class PluginRegistry:
             )
         return self._plugins[normalized]
 
+    def mark_degraded(self, code: str) -> None:
+        """Mark a language as degraded so it is excluded from /languages."""
+        self._degraded.add(code.lower().strip())
+
     def supported_languages(self) -> dict[str, LanguageCapabilities]:
-        """Return full capability metadata for every registered plugin.
+        """Return capability metadata for every registered, non-degraded plugin.
 
         Keys are language codes; values are ``LanguageCapabilities`` objects.
         Plugins that pre-date the capabilities system are synthesised with
         conservative defaults so the rest of the stack always gets a typed
-        object.
+        object.  Languages whose NLP model failed warm-up are excluded.
         """
         result: dict[str, LanguageCapabilities] = {}
         for code, p in self._plugins.items():
+            if code in self._degraded:
+                continue
             caps = getattr(p, "capabilities", None)
             if caps is None:
                 # Backward-compat fallback for plugins written before this

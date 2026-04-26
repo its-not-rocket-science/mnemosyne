@@ -334,11 +334,15 @@
         <div class="field">
           <div class="field-header">
             <label for="picker-text" data-i18n="label_text">Text to parse</label>
-            <label class="file-pick-btn" for="picker-file-input">
-              <span data-i18n="load_file">Load .txt file</span>
-              <input id="picker-file-input" type="file" accept=".txt,text/plain"
-                     class="sr-only" tabindex="-1">
-            </label>
+            <div class="field-header-actions">
+              <button type="button" id="picker-sample-btn" class="ghost-button ghost-button--small"
+                      data-i18n="try_sample_btn">Try a sample</button>
+              <label class="file-pick-btn" for="picker-file-input">
+                <span data-i18n="load_file">Load .txt file</span>
+                <input id="picker-file-input" type="file" accept=".txt,text/plain"
+                       class="sr-only" tabindex="-1">
+              </label>
+            </div>
           </div>
           <textarea id="picker-text" rows="8"
                     data-i18n-placeholder="textarea_placeholder"
