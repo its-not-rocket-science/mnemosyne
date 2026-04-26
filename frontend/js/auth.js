@@ -43,7 +43,7 @@ export function clearToken() {
   sessionStorage.removeItem(USER_KEY)
 }
 
-function getUser() {
+export function getUser() {
   try {
     return JSON.parse(sessionStorage.getItem(USER_KEY) ?? 'null')
   } catch {

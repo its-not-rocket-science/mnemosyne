@@ -4,7 +4,7 @@ import '../components/mnemosyne-filter-bar.js'
 import '../components/mnemosyne-detail-pane.js'
 import '../components/mnemosyne-player.js'
 import '../components/mnemosyne-now-playing-bar.js'
-import { initAuth, getAuthHeaders } from './auth.js'
+import { initAuth, getAuthHeaders, getUser } from './auth.js'
 import { playbackEngine } from './playback.js'
 import {
   queueReview,
@@ -21,9 +21,12 @@ const API_BASE = 'http://localhost:8000'
 
 // ── DOM references ────────────────────────────────────────────────────────────
 
+const OWNER_EMAIL = 'paul_schleifer@hotmail.com'
+
 const languageSelect    = document.querySelector('#language')
 const chooseTextBtn     = document.querySelector('#choose-text-btn')
 const changeTextBtn     = document.querySelector('#change-text-btn')
+const loadLessonBtn     = document.querySelector('#load-lesson-btn')
 const chosenTextDisplay = document.querySelector('#chosen-text-display')
 const saveLessonBtn     = document.querySelector('#save-lesson-btn')
 const results           = document.querySelector('#results')
@@ -58,6 +61,22 @@ const saveTitleInput       = document.querySelector('#save-title')
 const saveLessonStatus     = document.querySelector('#save-lesson-status')
 const saveLessonCloseBtn   = document.querySelector('#save-lesson-close-btn')
 const saveLessonConfirmBtn = document.querySelector('#save-lesson-confirm-btn')
+
+// GDPR dialog
+const gdprDialog       = document.querySelector('#gdpr-dialog')
+const gdprCloseBtn     = document.querySelector('#gdpr-close-btn')
+const gdprOkBtn        = document.querySelector('#gdpr-ok-btn')
+const privacyLink      = document.querySelector('#privacy-link')
+
+// Save unsupported dialog
+const saveUnsupportedDialog   = document.querySelector('#save-unsupported-dialog')
+const saveUnsupportedCloseBtn = document.querySelector('#save-unsupported-close-btn')
+const saveUnsupportedOkBtn    = document.querySelector('#save-unsupported-ok-btn')
+
+// Load lesson dialog
+const loadLessonDialog    = document.querySelector('#load-lesson-dialog')
+const loadLessonCloseBtn  = document.querySelector('#load-lesson-close-btn')
+const loadLessonList      = document.querySelector('#load-lesson-list')
 
 // Reader UI
 const resultsSection     = document.querySelector('#results-section')
@@ -214,9 +233,12 @@ async function loadLanguages() {
     }
 
     const current = languageSelect.value
-    let firstSet  = false
     languageSelect.removeAttribute('aria-busy')
+    const placeholder = document.createElement('option')
+    placeholder.value = ''
+    placeholder.textContent = t('choose_language')
     languageSelect.replaceChildren(
+      placeholder,
       ...languages.map((caps) => {
         const opt = document.createElement('option')
         opt.value = caps.code
@@ -225,10 +247,7 @@ async function loadLanguages() {
         opt.textContent = (translated && translated !== 'lesson_lang_' + caps.code)
           ? translated
           : caps.display_name
-        if (caps.code === current || (!firstSet && current === '')) {
-          opt.selected = true
-          firstSet = true
-        }
+        if (caps.code === current) opt.selected = true
         return opt
       })
     )
@@ -246,6 +265,7 @@ async function loadLanguages() {
   }
 
   syncCurrentCaps()
+  refreshLoadLessonBtn()
   if (_dlAnnotation) _openDeepLink()
 }
 
@@ -255,6 +275,7 @@ languageSelect.addEventListener('change', () => {
   languageUserSelected = true
   scriptView = 'native'
   syncCurrentCaps()
+  refreshLoadLessonBtn()
 })
 
 function syncCurrentCaps() {
@@ -470,13 +491,17 @@ function showChosenText(text) {
 // ── Save-lesson dialog ────────────────────────────────────────────────────────
 
 saveLessonBtn?.addEventListener('click', () => {
+  if (getUser()?.email !== OWNER_EMAIL) {
+    saveUnsupportedDialog?.showModal()
+    return
+  }
   saveLessonDialog?.showModal()
   saveTitleInput?.focus()
 })
 
 saveLessonCloseBtn?.addEventListener('click', () => saveLessonDialog?.close())
 
-saveLessonConfirmBtn?.addEventListener('click', () => {
+saveLessonConfirmBtn?.addEventListener('click', async () => {
   const title = saveTitleInput?.value.trim() ?? ''
   if (!title) {
     if (saveLessonStatus) {
@@ -486,9 +511,115 @@ saveLessonConfirmBtn?.addEventListener('click', () => {
     saveTitleInput?.focus()
     return
   }
-  // TODO: implement lesson saving
-  saveLessonDialog?.close()
+  const language = languageSelect?.value
+  if (!currentText || !language) { saveLessonDialog?.close(); return }
+  try {
+    const resp = await fetch(`${API_BASE}/ingest`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
+      body:    JSON.stringify({ text: currentText, language, title, source_url: currentSourceUrl || null }),
+    })
+    if (!resp.ok) throw new Error(resp.status)
+    saveLessonDialog?.close()
+    refreshLoadLessonBtn()
+  } catch {
+    if (saveLessonStatus) {
+      saveLessonStatus.textContent = t('parse_error_generic')
+      saveLessonStatus.dataset.state = 'error'
+    }
+  }
 })
+
+// ── Save-unsupported dialog ───────────────────────────────────────────────────
+
+saveUnsupportedCloseBtn?.addEventListener('click', () => saveUnsupportedDialog?.close())
+saveUnsupportedOkBtn?.addEventListener('click',    () => saveUnsupportedDialog?.close())
+
+// ── GDPR dialog ───────────────────────────────────────────────────────────────
+
+privacyLink?.addEventListener('click', e => {
+  e.preventDefault()
+  gdprDialog?.showModal()
+})
+gdprCloseBtn?.addEventListener('click', () => gdprDialog?.close())
+gdprOkBtn?.addEventListener('click',    () => gdprDialog?.close())
+
+// ── Load-lesson dialog ────────────────────────────────────────────────────────
+
+loadLessonBtn?.addEventListener('click', async () => {
+  const language = languageSelect?.value || null
+  loadLessonList && (loadLessonList.innerHTML = '')
+  loadLessonDialog?.showModal()
+  try {
+    const url = `${API_BASE}/sources` + (language ? `?language=${language}` : '')
+    const resp = await fetch(url, { headers: getAuthHeaders() })
+    if (!resp.ok) throw new Error(resp.status)
+    const { sources } = await resp.json()
+    if (!sources.length) {
+      const li = document.createElement('li')
+      li.className = 'load-lesson-list__empty'
+      li.textContent = t(language ? 'load_lesson_empty' : 'load_lesson_all_empty')
+      loadLessonList?.appendChild(li)
+      return
+    }
+    for (const src of sources) {
+      const li = document.createElement('li')
+      li.className = 'load-lesson-list__item'
+      const btn = document.createElement('button')
+      btn.type = 'button'
+      btn.className = 'load-lesson-list__btn ghost-button'
+      btn.textContent = src.title || src.language
+      btn.dataset.sourceId  = src.id
+      btn.dataset.sourceLang = src.language
+      btn.addEventListener('click', () => _loadSource(src.id, src.language))
+      li.appendChild(btn)
+      loadLessonList?.appendChild(li)
+    }
+  } catch {
+    const li = document.createElement('li')
+    li.className = 'load-lesson-list__empty'
+    li.textContent = t('parse_error_generic')
+    loadLessonList?.appendChild(li)
+  }
+})
+
+loadLessonCloseBtn?.addEventListener('click', () => loadLessonDialog?.close())
+
+async function _loadSource(sourceId, language) {
+  loadLessonDialog?.close()
+  setStatus(t('loading'))
+  try {
+    const resp = await fetch(`${API_BASE}/sources/${sourceId}`, { headers: getAuthHeaders() })
+    if (!resp.ok) throw new Error(resp.status)
+    const data = await resp.json()
+    // Set language selector to match
+    if (languageSelect && data.language) {
+      languageSelect.value = data.language
+      languageSelect.dispatchEvent(new Event('change'))
+    }
+    renderResults(data.sentences, data.language)
+    setStatus(ti('sentences_parsed', { n: data.sentences.length }))
+    if (saveLessonBtn) saveLessonBtn.hidden = false
+  } catch {
+    setStatus(t('load_lesson_failed'), 'error')
+  }
+}
+
+async function refreshLoadLessonBtn() {
+  if (!loadLessonBtn) return
+  const user = getUser()
+  if (!user) { loadLessonBtn.hidden = true; return }
+  try {
+    const language = languageSelect?.value || null
+    const url = `${API_BASE}/sources` + (language ? `?language=${language}` : '')
+    const resp = await fetch(url, { headers: getAuthHeaders() })
+    if (!resp.ok) throw new Error()
+    const { sources } = await resp.json()
+    loadLessonBtn.hidden = sources.length === 0
+  } catch {
+    loadLessonBtn.hidden = true
+  }
+}
 
 
 // ── Language auto-detection ───────────────────────────────────────────────────
