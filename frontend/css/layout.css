@@ -73,6 +73,19 @@
   background: var(--bg);
 }
 
+/* ── Results filter row ───────────────────────────────────────────────────────
+   Annotation chips (left, scrollable) + level filter (right) in one bar.    */
+
+.results-filter-row {
+  display: flex;
+  align-items: center;
+}
+
+.results-filter-row mnemosyne-filter-bar {
+  flex: 1 1 auto;
+  min-inline-size: 0;
+}
+
 /* ── TextPanel ───────────────────────────────────────────────────────────────
    Main reading content; natural document scroll.                            */
 
@@ -119,6 +132,7 @@
 
   /* Stick in viewport as the user scrolls through sentences. */
   .app-shell__detail-panel {
+    block-size: calc(100dvh - var(--app-top-nav-h, 0px));
     position: sticky;
     inset-block-start: var(--app-top-nav-h, 0px);
     align-self: flex-start;

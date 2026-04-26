@@ -60,6 +60,7 @@ const saveLessonCloseBtn   = document.querySelector('#save-lesson-close-btn')
 const saveLessonConfirmBtn = document.querySelector('#save-lesson-confirm-btn')
 
 // Reader UI
+const resultsSection     = document.querySelector('#results-section')
 const filterBar          = document.querySelector('#filter-bar')
 const levelFilter        = document.querySelector('#level-filter')
 const levelFilterBtns    = Array.from(document.querySelectorAll('.level-filter__btn'))
@@ -970,6 +971,8 @@ function renderResults(sentences, language) {
   updateScriptViewToolbar()
   requestAnimationFrame(buildMinimap)
 
+  if (resultsSection) resultsSection.hidden = false
+
   if (filterBar) {
     const allTypes = [...new Set(sentences.flatMap(s =>
       s.learnable_objects.map(o => o.type).filter(Boolean)
@@ -1288,22 +1291,6 @@ async function submitReview(objectId, quality) {
 
 // ── Offline review queue ──────────────────────────────────────────────────────
 
-const offlineBadge    = document.querySelector('#offline-badge')
-const offlineCountEl  = document.querySelector('#offline-count')
-const offlinePluralEl = document.querySelector('#offline-plural')
-
-async function updateOfflineBadge() {
-  if (!offlineBadge) return
-  const n = await countPendingReviews()
-  if (n === 0) {
-    offlineBadge.hidden = true
-    return
-  }
-  offlineCountEl.textContent  = String(n)
-  offlinePluralEl.textContent = (document.documentElement.lang === 'en' && n !== 1) ? 's' : ''
-  offlineBadge.hidden = false
-}
-
 async function drainReviewQueue() {
   const pending = await getPendingReviews()
   if (!pending.length) return
@@ -1336,11 +1323,9 @@ async function drainReviewQueue() {
     }
   }
 
-  if (synced > 0) updateOfflineBadge()
 }
 
 window.addEventListener('online', drainReviewQueue)
-updateOfflineBadge()
 
 
 // ── Text-to-speech ────────────────────────────────────────────────────────────
