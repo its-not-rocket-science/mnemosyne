@@ -195,6 +195,7 @@ async def _warm_up_plugins(registry) -> None:
             logger.info("Plugin warm-up complete: %s", lang)
         except Exception as exc:
             logger.warning("Plugin warm-up failed for %s: %s", lang, exc)
+            registry.mark_degraded(lang)
 
     await asyncio.gather(*[_warm_one(p) for p in plugins])
 

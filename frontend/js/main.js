@@ -54,6 +54,7 @@ const pickerFileInput   = document.querySelector('#picker-file-input')
 const pickerUseBtn      = document.querySelector('#picker-use-btn')
 const pickerStatus      = document.querySelector('#picker-status')
 const pickerCloseBtn    = document.querySelector('#picker-close-btn')
+const pickerSampleBtn   = document.querySelector('#picker-sample-btn')
 
 // Save-lesson dialog
 const saveLessonDialog     = document.querySelector('#save-lesson-dialog')
@@ -355,6 +356,32 @@ function openPicker() {
 chooseTextBtn?.addEventListener('click', openPicker)
 changeTextBtn?.addEventListener('click', openPicker)
 pickerCloseBtn?.addEventListener('click', () => textPickerDialog?.close())
+
+// Sample texts — one short natural-language paragraph per supported language
+const SAMPLE_TEXTS = {
+  ar: 'في الصباح الباكر، استيقظ الطفل على صوت العصافير تغرد خارج النافذة. نهض بحماس ونظر إلى السماء الزرقاء الصافية، وأدرك أن هذا اليوم سيكون جميلاً.',
+  de: 'Im Sommer verbrachten wir viele Nachmittage am See. Das Wasser war klar und kühl, und die Kinder spielten am Ufer, während die Erwachsenen im Schatten der alten Bäume saßen.',
+  el: 'Την άνοιξη, τα λιβάδια γεμίζουν με αγριολούλουδα κάθε χρώματος. Οι χωρικοί βγαίνουν στα χωράφια πρωί πρωί και εργάζονται μέχρι το ηλιοβασίλεμα, χαίρονται τη φύση γύρω τους.',
+  es: 'El sol brillaba sobre las montañas mientras los viajeros descansaban junto al río. El agua fría refrescaba sus pies cansados después de un largo día de camino.',
+  fr: 'Le soleil se couchait sur la ville lorsque Marie aperçut un inconnu assis sur le banc du jardin. Elle hésita un moment avant de s\'approcher et de lui adresser la parole.',
+  he: 'בבוקר השקט, עלי הסתכל מהחלון על הרחוב הרטוב מגשם הלילה. הוא אהב את השקט הזה שלפני שהעיר מתעוררת, את הרגע הקצר שבו הכל נראה טהור ואפשרי.',
+  it: 'Quella mattina d\'autunno, le foglie cadevano lentamente dagli alberi del parco. Marco sedeva sulla panchina preferita e guardava i bambini giocare, pensando ai tempi in cui anche lui correva su quel prato.',
+  ja: '春の朝、桜の花びらが風に舞っていた。公園のベンチに座った老人は、静かに目を閉じ、長い人生の思い出に浸っていた。',
+  la: 'Antiquis temporibus Roma erat magna urbs et caput mundi. Cives Romani in viis angustis habitabant et multa negotia in foro agebant. Lingua Latina in omnibus partibus imperii audiri poterat.',
+  pt: 'Naquela tarde de verão, Ana caminhou até o mercado do bairro para comprar frutas frescas. O vendedor sorriu ao vê-la e separou as melhores laranjas, sabendo que ela sempre escolhia com cuidado.',
+  ru: 'Поздним вечером, когда город уже засыпал, она открыла старую книгу и начала читать. Слова на пожелтевших страницах казались живыми и наполненными смыслом.',
+  zh: '那个清晨，阳光透过窗帘照进来，照在书桌上那叠厚厚的书上。他拿起最上面的一本，翻到折角的那一页，继续昨晚没有读完的故事。',
+}
+
+pickerSampleBtn?.addEventListener('click', () => {
+  const lang = languageSelect.value
+  const sample = SAMPLE_TEXTS[lang] ?? SAMPLE_TEXTS['es']
+  if (pickerTextarea) {
+    pickerTextarea.value = sample
+    pickerTextarea.dispatchEvent(new Event('input'))
+    pickerTextarea.focus()
+  }
+})
 
 // File input inside picker
 pickerFileInput?.addEventListener('change', () => {
