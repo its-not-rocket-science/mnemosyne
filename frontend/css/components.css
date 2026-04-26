@@ -804,3 +804,59 @@ body.player-active .reader-nowplaying {
   margin-inline-start: 0.1em;
   pointer-events: none;
 }
+
+
+/* ── Load-lesson list ────────────────────────────────────────────────────────── */
+
+.load-lesson-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-block-size: 60vh;
+  overflow-y: auto;
+}
+
+.load-lesson-list__item {
+  display: contents;
+}
+
+.load-lesson-list__btn {
+  inline-size: 100%;
+  text-align: start;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.load-lesson-list__btn:hover {
+  background: var(--surface-secondary);
+}
+
+.load-lesson-list__empty {
+  color: var(--muted);
+  font-size: 0.875rem;
+  padding: 0.5rem 0;
+}
+
+/* ── GDPR dialog content ─────────────────────────────────────────────────────── */
+
+.gdpr-content h3 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-block-end: 0.25rem;
+  color: var(--text-primary);
+}
+
+.gdpr-content ul {
+  padding-inline-start: 1.25rem;
+  margin: 0;
+}
+
+.gdpr-content p,
+.gdpr-content li {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}

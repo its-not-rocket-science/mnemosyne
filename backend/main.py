@@ -31,6 +31,7 @@ from backend.api.routes.ready import router as ready_router
 from backend.api.routes.vocabulary import router as vocabulary_router
 from backend.api.routes.grammar import router as grammar_router
 from backend.api.routes.reading import router as reading_router
+from backend.api.routes.sources import router as sources_router
 from backend.api.routes.recommend import router as recommend_router
 from backend.api.routes.review import router as review_router
 from backend.api.routes.translate import router as translate_router
@@ -319,6 +320,7 @@ app.include_router(review_router)
 app.include_router(dashboard_router)
 app.include_router(metrics_router)
 app.include_router(reading_router)
+app.include_router(sources_router)
 app.include_router(recommend_router)
 app.include_router(languages_router)
 app.include_router(users_router)
