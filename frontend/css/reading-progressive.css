@@ -1,0 +1,106 @@
+/* Progressive reveal + inline preview styling */
+
+.reader-experience-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-block-end: var(--space-2);
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.reader-experience-toolbar__group {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.reader-experience-toolbar__label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.reader-mode-btn,
+.reader-focus-btn {
+  border: 1px solid var(--border-input);
+  border-radius: 999px;
+  background: transparent;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.reader-mode-btn--active,
+.reader-focus-btn--active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* Annotation reveal modes */
+[data-annotation-reveal="subtle"] .reader-annotation {
+  background: none !important;
+  text-decoration-style: dotted;
+  opacity: 0.7;
+}
+
+[data-annotation-reveal="learning"] .reader-annotation {
+  opacity: 1;
+}
+
+[data-annotation-reveal="deep"] .reader-annotation::before {
+  opacity: 1 !important;
+}
+
+/* Focus mode */
+body.reader-focus-mode .site-header,
+body.reader-focus-mode .site-footer,
+body.reader-focus-mode .app-shell__top-nav {
+  opacity: 0.2;
+}
+
+body.reader-focus-mode .app-shell__text-panel {
+  max-inline-size: 72ch;
+  margin-inline: auto;
+}
+
+/* Inline preview */
+.reader-inline-preview {
+  margin-block: 0.4rem 0.6rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--border);
+  background: var(--surface-secondary);
+}
+
+.reader-inline-preview__title {
+  font-size: 0.8rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.reader-inline-preview__body {
+  font-size: 0.8rem;
+  margin: 0 0 0.4rem 0;
+  color: var(--muted);
+}
+
+.reader-inline-preview__actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.reader-inline-preview__actions button {
+  font-size: 0.7rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-experience-toolbar,
+  .reader-inline-preview {
+    transition: none;
+  }
+}
