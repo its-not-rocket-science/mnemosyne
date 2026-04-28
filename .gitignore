@@ -5,3 +5,5 @@ __pycache__/
 bootstrap_db.py
 .coverage
 htmlcov/
+data/lang_capture/raw/
+*.tmp
