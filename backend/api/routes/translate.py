@@ -58,7 +58,7 @@ async def translate_text(
     The ``attribution`` string in the response must be displayed when showing
     translated text to comply with provider terms of service.
     """
-    provider = settings.translation_provider
+    provider = (settings.translation_provider or "none").strip().lower()
 
     # ── Check stored translation first ────────────────────────────────────────
     if payload.object_id:
@@ -66,10 +66,19 @@ async def translate_text(
             row = await db.get(CanonicalObjectRow, payload.object_id)
             if row is not None:
                 ld = row.lesson_data or {}
+                # Support both legacy "translation" and new "translations" format
+                existing = None
+
+                # New format (preferred)
                 translations: dict = ld.get("translations") or {}
                 existing = translations.get(payload.target_language)
+
+                # Legacy format (used in tests + existing DB rows)
+                if not existing:
+                    existing = ld.get("translation")
+
                 if existing:
-                    stored_provider = ld.get("translation_provider", provider)
+                    stored_provider = (ld.get("translation_provider") or provider or "none").strip().lower()
                     return TranslateResponse(
                         text=payload.text,
                         translation=existing,
@@ -87,7 +96,7 @@ async def translate_text(
             )
 
     # ── Provider disabled ─────────────────────────────────────────────────────
-    if provider == "none":
+    if provider in {"none", "", "disabled", "off"}:
         return TranslateResponse(
             text=payload.text,
             translation=None,
