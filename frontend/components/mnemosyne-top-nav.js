@@ -63,7 +63,7 @@ class MnemosyneTopNav extends HTMLElement {
 
   <div class="nav__start">
     <a class="nav__logo" href="/" aria-label="Mnemosyne home">
-      ${TREE}
+      <img src="./mnemosyneThumbnail.png" alt="Mnemosyne logo" width="60" height="60">
       <span class="nav__wordmark">Mnemosyne</span>
     </a>
   </div>
