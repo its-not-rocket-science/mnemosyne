@@ -28,6 +28,8 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.types import JSON
 
+JsonType = JSONB().with_variant(JSON(), "sqlite")
+
 
 def _uuid() -> str:
     return str(uuid.uuid4())
@@ -463,6 +465,6 @@ class GrammarRule(Base):
     category:    Mapped[str]      = mapped_column(String(80), nullable=False)
     name:        Mapped[str]      = mapped_column(Text, nullable=False)
     description: Mapped[str]      = mapped_column(Text, nullable=False)
-    examples:    Mapped[list]     = mapped_column(JSONB, nullable=False, default=list)
+    examples:    Mapped[list]     = mapped_column(JsonType, nullable=False, default=list)
     source:      Mapped[str]      = mapped_column(String(80), nullable=False)
     created_at:  Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
