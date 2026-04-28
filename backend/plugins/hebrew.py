@@ -159,13 +159,18 @@ class HebrewPlugin:
             # Surface form may carry nikud (e.g. "סֵפֶר"); canonical form is
             # the undiacritised version ("ספר").  The lesson builder will
             # display "Base form: ספר" when they differ.
-            lesson_data: dict = {"lemma": canonical}
+            lesson_data = {
+                "lemma": canonical,
+                "pos": "WORD",
+                "confidence_note": _CONFIDENCE_NOTE,
+            }
+
             if canonical in _A1:
                 lesson_data["cefr_level"] = "A1"
                 confidence: float | None = 0.70
             else:
-                lesson_data["confidence_note"] = _CONFIDENCE_NOTE
                 confidence = None
+
             candidates.append(
                 CandidateObject(
                     canonical_form=canonical,
