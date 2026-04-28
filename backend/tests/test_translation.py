@@ -14,10 +14,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_asyn
 
 from backend.api.dependencies import get_current_user, get_db_session
 from backend.core.database import get_session_factory
-from backend.schemas.translate import TranslateRequest, TranslateResponse
 from backend.dictionary.translation import (
-    LIBRETRANSLATE_DEFAULT_URL,
-    MYMEMORY_URL,
     translate,
     translate_libretranslate,
     translate_mymemory,
@@ -25,6 +22,12 @@ from backend.dictionary.translation import (
 from backend.main import app
 from backend.models import Base, CanonicalObjectRow
 from backend.parsing.canonical import canonical_object_id
+
+
+from backend.dictionary.enrichment import enrich_objects
+import backend.dictionary.enrichment as mod
+
+from backend.core.config import get_settings
 
 MOCK_LT = "https://mock-lt.test"
 MOCK_MM = "https://mock-mm.test/get"
@@ -186,9 +189,19 @@ async def client(db_engine):
         async with factory() as session:
             yield session
 
+    class _NoTranslationSettings:
+        rate_limit_parse = "1000/minute"
+        translation_provider = "none"
+        translation_api_url = None
+        translation_api_key = None
+
+    # important: clear leaked overrides from previous tests first
+    app.dependency_overrides.clear()
+
     app.dependency_overrides[get_db_session] = _override_db
     app.dependency_overrides[get_session_factory] = lambda: factory
     app.dependency_overrides[get_current_user] = lambda: "test-user"
+    app.dependency_overrides[get_settings] = lambda: _NoTranslationSettings()
 
     async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as ac:
         yield ac
@@ -257,7 +270,6 @@ async def test_translate_endpoint_calls_provider_and_caches(client, db_session):
         translation_api_url = MOCK_LT
         translation_api_key = None
 
-    from backend.main import app
     app.dependency_overrides[get_settings] = lambda: _FakeSettings()
 
     respx.post(f"{MOCK_LT}/translate").mock(
@@ -281,7 +293,7 @@ async def test_translate_endpoint_calls_provider_and_caches(client, db_session):
             json={"text": "gato2", "source_language": "es", "object_id": obj_id},
         )
     finally:
-        del app.dependency_overrides[get_settings]
+        app.dependency_overrides.pop(get_settings, None)
 
     assert resp.status_code == 200
     data = resp.json()
@@ -293,9 +305,6 @@ async def test_translate_endpoint_calls_provider_and_caches(client, db_session):
 
 @pytest.mark.asyncio
 async def test_enrichment_stores_translation(db_session):
-    from backend.dictionary.enrichment import enrich_objects
-    import backend.dictionary.enrichment as mod
-
     obj_id = canonical_object_id("es", "vocabulary", "perro")
     db_session.add(CanonicalObjectRow(
         id=obj_id,
