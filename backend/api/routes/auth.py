@@ -9,11 +9,10 @@ POST /auth/login
     401 on wrong email or password (deliberately identical message to prevent
     email enumeration).
 """
-from __future__ import annotations
 
 import logging
 
-from fastapi import APIRouter, Depends, HTTPException, Request
+from fastapi import APIRouter, Depends, HTTPException, Request, Body
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -33,7 +32,7 @@ router = APIRouter(tags=["auth"], prefix="/auth")
 @limiter.limit(lambda: get_settings().rate_limit_auth)
 async def register(
     request: Request,
-    payload: RegisterRequest,
+    payload: RegisterRequest = Body(...),
     db: AsyncSession = Depends(get_db_session),
 ) -> TokenResponse:
     """Register a new user account and return a JWT.
@@ -71,7 +70,7 @@ async def register(
 @limiter.limit(lambda: get_settings().rate_limit_auth)
 async def login(
     request: Request,
-    payload: LoginRequest,
+    payload: LoginRequest = Body(...),
     db: AsyncSession = Depends(get_db_session),
 ) -> TokenResponse:
     """Verify credentials and return a JWT.

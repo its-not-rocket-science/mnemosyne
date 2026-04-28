@@ -1,0 +1,518 @@
+{
+  "aspect_pairs": [],
+  "verb_count": 14871,
+  "conjugation_samples": [],
+  "ud_patterns": {
+    "top_verbal_government": [
+      {
+        "verb": "мочь",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 238
+      },
+      {
+        "verb": "быть",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 150
+      },
+      {
+        "verb": "стать",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 128
+      },
+      {
+        "verb": "иметь",
+        "deprel": "obj",
+        "case": "Acc",
+        "count": 112
+      },
+      {
+        "verb": "иметь",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 96
+      },
+      {
+        "verb": "идти",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 86
+      },
+      {
+        "verb": "являться",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 84
+      },
+      {
+        "verb": "нет",
+        "deprel": "nsubj",
+        "case": "Gen",
+        "count": 73
+      },
+      {
+        "verb": "делать",
+        "deprel": "obj",
+        "case": "Acc",
+        "count": 73
+      },
+      {
+        "verb": "сказать",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 73
+      },
+      {
+        "verb": "быть",
+        "deprel": "nsubj",
+        "case": "Gen",
+        "count": 68
+      },
+      {
+        "verb": "сделать",
+        "deprel": "obj",
+        "case": "Acc",
+        "count": 66
+      },
+      {
+        "verb": "быть",
+        "deprel": "obl",
+        "case": "Gen",
+        "count": 64
+      },
+      {
+        "verb": "видеть",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 63
+      },
+      {
+        "verb": "знать",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 60
+      },
+      {
+        "verb": "оказаться",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 59
+      },
+      {
+        "verb": "видеть",
+        "deprel": "obj",
+        "case": "Acc",
+        "count": 58
+      },
+      {
+        "verb": "говорить",
+        "deprel": "obl",
+        "case": "Loc",
+        "count": 55
+      },
+      {
+        "verb": "считать",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 53
+      },
+      {
+        "verb": "говорить",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 50
+      },
+      {
+        "verb": "связать",
+        "deprel": "obl",
+        "case": "Ins",
+        "count": 48
+      },
+      {
+        "verb": "дать",
+        "deprel": "obj",
+        "case": "Acc",
+        "count": 48
+      },
+      {
+        "verb": "хотеть",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 48
+      },
+      {
+        "verb": "использовать",
+        "deprel": "obj",
+        "case": "Acc",
+        "count": 47
+      },
+      {
+        "verb": "получить",
+        "deprel": "obj",
+        "case": "Acc",
+        "count": 41
+      },
+      {
+        "verb": "стоять",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 41
+      },
+      {
+        "verb": "начать",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 38
+      },
+      {
+        "verb": "жить",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 38
+      },
+      {
+        "verb": "существовать",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 37
+      },
+      {
+        "verb": "становиться",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 37
+      },
+      {
+        "verb": "появиться",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 37
+      },
+      {
+        "verb": "мочь",
+        "deprel": "obl",
+        "case": "Loc",
+        "count": 37
+      },
+      {
+        "verb": "иметь",
+        "deprel": "obj",
+        "case": "Gen",
+        "count": 37
+      },
+      {
+        "verb": "происходить",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 36
+      },
+      {
+        "verb": "казаться",
+        "deprel": "iobj",
+        "case": "Dat",
+        "count": 36
+      },
+      {
+        "verb": "получать",
+        "deprel": "obj",
+        "case": "Acc",
+        "count": 36
+      },
+      {
+        "verb": "делать",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 35
+      },
+      {
+        "verb": "дать",
+        "deprel": "iobj",
+        "case": "Dat",
+        "count": 34
+      },
+      {
+        "verb": "находиться",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 34
+      },
+      {
+        "verb": "принять",
+        "deprel": "obj",
+        "case": "Acc",
+        "count": 34
+      },
+      {
+        "verb": "работать",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 34
+      },
+      {
+        "verb": "знать",
+        "deprel": "obj",
+        "case": "Acc",
+        "count": 34
+      },
+      {
+        "verb": "взять",
+        "deprel": "obj",
+        "case": "Acc",
+        "count": 34
+      },
+      {
+        "verb": "находиться",
+        "deprel": "obl",
+        "case": "Loc",
+        "count": 33
+      },
+      {
+        "verb": "заниматься",
+        "deprel": "iobj",
+        "case": "Ins",
+        "count": 32
+      },
+      {
+        "verb": "смотреть",
+        "deprel": "obl",
+        "case": "Acc",
+        "count": 32
+      },
+      {
+        "verb": "дать",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 31
+      },
+      {
+        "verb": "писать",
+        "deprel": "nsubj",
+        "case": "Nom",
+        "count": 31
+      },
+      {
+        "verb": "использовать",
+        "deprel": "obl",
+        "case": "Gen",
+        "count": 30
+      },
+      {
+        "verb": "называть",
+        "deprel": "obj",
+        "case": "Acc",
+        "count": 30
+      }
+    ],
+    "top_dep_relations": [
+      {
+        "deprel": "punct",
+        "count": 14674
+      },
+      {
+        "deprel": "nsubj",
+        "count": 7761
+      },
+      {
+        "deprel": "obl",
+        "count": 7115
+      },
+      {
+        "deprel": "advmod",
+        "count": 6023
+      },
+      {
+        "deprel": "obj",
+        "count": 5397
+      },
+      {
+        "deprel": "conj",
+        "count": 2865
+      },
+      {
+        "deprel": "cc",
+        "count": 2373
+      },
+      {
+        "deprel": "mark",
+        "count": 1787
+      },
+      {
+        "deprel": "xcomp",
+        "count": 1778
+      },
+      {
+        "deprel": "iobj",
+        "count": 1390
+      },
+      {
+        "deprel": "obl:tmod",
+        "count": 1204
+      },
+      {
+        "deprel": "advcl",
+        "count": 1194
+      },
+      {
+        "deprel": "nsubj:pass",
+        "count": 938
+      },
+      {
+        "deprel": "parataxis:discourse",
+        "count": 760
+      },
+      {
+        "deprel": "ccomp",
+        "count": 718
+      },
+      {
+        "deprel": "parataxis",
+        "count": 646
+      },
+      {
+        "deprel": "csubj",
+        "count": 483
+      },
+      {
+        "deprel": "aux:pass",
+        "count": 325
+      },
+      {
+        "deprel": "obl:agent",
+        "count": 267
+      },
+      {
+        "deprel": "aux",
+        "count": 223
+      }
+    ],
+    "top_verb_features": [
+      {
+        "feature": "Voice=Act",
+        "count": 12778
+      },
+      {
+        "feature": "VerbForm=Fin",
+        "count": 12160
+      },
+      {
+        "feature": "Mood=Ind",
+        "count": 11999
+      },
+      {
+        "feature": "Number=Sing",
+        "count": 10374
+      },
+      {
+        "feature": "Aspect=Imp",
+        "count": 9544
+      },
+      {
+        "feature": "Tense=Past",
+        "count": 9202
+      },
+      {
+        "feature": "Aspect=Perf",
+        "count": 7182
+      },
+      {
+        "feature": "Tense=Pres",
+        "count": 5449
+      },
+      {
+        "feature": "Number=Plur",
+        "count": 4368
+      },
+      {
+        "feature": "Person=3",
+        "count": 4094
+      },
+      {
+        "feature": "Gender=Masc",
+        "count": 3795
+      },
+      {
+        "feature": "Voice=Mid",
+        "count": 3413
+      },
+      {
+        "feature": "VerbForm=Inf",
+        "count": 2880
+      },
+      {
+        "feature": "VerbForm=Part",
+        "count": 2582
+      },
+      {
+        "feature": "Voice=Pass",
+        "count": 2084
+      },
+      {
+        "feature": "Gender=Fem",
+        "count": 1671
+      },
+      {
+        "feature": "Gender=Neut",
+        "count": 1627
+      },
+      {
+        "feature": "Case=Nom",
+        "count": 685
+      },
+      {
+        "feature": "Variant=Short",
+        "count": 654
+      },
+      {
+        "feature": "VerbForm=Conv",
+        "count": 653
+      },
+      {
+        "feature": "Tense=Fut",
+        "count": 583
+      },
+      {
+        "feature": "Person=1",
+        "count": 558
+      },
+      {
+        "feature": "Case=Gen",
+        "count": 488
+      },
+      {
+        "feature": "Case=Acc",
+        "count": 359
+      },
+      {
+        "feature": "Person=2",
+        "count": 339
+      },
+      {
+        "feature": "Mood=Cnd",
+        "count": 200
+      },
+      {
+        "feature": "Case=Ins",
+        "count": 195
+      },
+      {
+        "feature": "Animacy=Inan",
+        "count": 192
+      },
+      {
+        "feature": "Mood=Imp",
+        "count": 161
+      },
+      {
+        "feature": "Case=Loc",
+        "count": 110
+      }
+    ],
+    "sentence_count": 8906
+  },
+  "ud_aspect_distribution": {
+    "Imp": 9544,
+    "Perf": 7182
+  }
+}

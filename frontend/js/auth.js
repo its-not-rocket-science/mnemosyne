@@ -77,8 +77,40 @@ const registerTab    = document.querySelector('#register-tab')
 const tabSignIn      = document.querySelector('#tab-signin')
 const tabRegister    = document.querySelector('#tab-register')
 
-const loginForm    = document.querySelector('#login-form')
+// login form
+const loginForm     = document.querySelector('#login-form')
+const loginEmail    = loginForm.querySelector('#login-email')
+const loginPassword = loginForm.querySelector('#login-password')
+const loginSubmit   = loginForm.querySelector('button[type="submit"]')
+
+function updateLoginButtonState() {
+  loginSubmit.disabled = !loginEmail.value.trim() || !loginPassword.value
+}
+
+loginEmail.addEventListener('input', updateLoginButtonState)
+loginPassword .addEventListener('input', updateLoginButtonState)
+
+updateLoginButtonState()
+
+// registration form
 const registerForm = document.querySelector('#register-form')
+const registerEmail    = registerForm.querySelector('#reg-email')
+const registerPassword = registerForm.querySelector('#reg-password')
+const registerConfirm  = registerForm.querySelector('#reg-confirm')
+const registerSubmit = registerForm.querySelector('button[type="submit"]')
+
+function updateRegisterButtonState() {
+  const emailValid    = registerEmail.value.trim() !== ''
+  const passwordValid = registerPassword.value !== ''
+  const confirmValid  = registerConfirm.value !== ''
+  registerSubmit.disabled = !(emailValid && passwordValid && confirmValid)
+}
+
+registerEmail.addEventListener('input', updateRegisterButtonState)
+registerPassword.addEventListener('input', updateRegisterButtonState)
+registerConfirm.addEventListener('input', updateRegisterButtonState)
+
+updateRegisterButtonState()
 
 // ── Tab switching ─────────────────────────────────────────────────────────────
 
@@ -232,11 +264,10 @@ async function callAuth(path, body) {
 
 loginForm?.addEventListener('submit', async (e) => {
   e.preventDefault()
-  const email    = loginForm.querySelector('#login-email').value.trim()
-  const password = loginForm.querySelector('#login-password').value
+  const email    = loginEmail.value.trim()
+  const password = loginPassword.value
 
-  const btn = loginForm.querySelector('button[type="submit"]')
-  btn.disabled = true
+  loginSubmit.disabled = true
   setAuthStatus(t('signing_in'), 'busy')
 
   try {
@@ -245,9 +276,9 @@ loginForm?.addEventListener('submit', async (e) => {
     loginForm.reset()
     showApp(email, { moveFocus: true })
   } catch (err) {
-    setAuthStatus(err.message, 'error')
+    setAuthStatus(getAuthErrorMessage(err), 'error')
   } finally {
-    btn.disabled = false
+    loginSubmit.disabled = false
   }
 })
 
@@ -255,17 +286,15 @@ loginForm?.addEventListener('submit', async (e) => {
 
 registerForm?.addEventListener('submit', async (e) => {
   e.preventDefault()
-  const email    = registerForm.querySelector('#reg-email').value.trim()
-  const password = registerForm.querySelector('#reg-password').value
-  const confirm  = registerForm.querySelector('#reg-confirm').value
+  const email    = registerEmail.value.trim()
+  const password = registerPassword.value
+  const confirm  = registerConfirm.value
 
   if (password !== confirm) {
-    setAuthStatus('Passwords do not match.', 'error')
-    return
+    return setAuthStatus(t('passwords_do_not_match'), 'error')
   }
 
-  const btn = registerForm.querySelector('button[type="submit"]')
-  btn.disabled = true
+  registerSubmit.disabled = true
   setAuthStatus(t('creating_account'), 'busy')
 
   try {
@@ -274,11 +303,28 @@ registerForm?.addEventListener('submit', async (e) => {
     registerForm.reset()
     showApp(email, { moveFocus: true })
   } catch (err) {
-    setAuthStatus(err.message, 'error')
+    setAuthStatus(getAuthErrorMessage(err), 'error')
   } finally {
-    btn.disabled = false
+    registerSubmit.disabled = false
   }
 })
+
+function getAuthErrorMessage(err) {
+  const detail = typeof err?.detail === 'string' ? err.detail : ''
+
+  if (err?.status === 401) return t('invalid_credentials')
+  if (err?.status === 409) return t('email_already_registered')
+  if (err?.status === 422) return t('invalid_auth_request')
+  if (err?.status === 429) return t('auth_rate_limited')
+  if (err?.status === 503) return t('database_unavailable')
+  if (err?.status >= 500) return t('database_unavailable')
+
+  if (detail === 'Invalid email or password.') return t('invalid_credentials')
+  if (detail === 'Email already registered.') return t('email_already_registered')
+  if (detail === 'Database unavailable') return t('database_unavailable')
+
+  return t('auth_failed')
+}
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 
