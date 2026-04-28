@@ -5,9 +5,10 @@ Revises: 0009
 """
 from __future__ import annotations
 
-from alembic import op
 import sqlalchemy as sa
 from sqlalchemy.dialects.postgresql import JSONB
+
+from alembic import op
 
 revision = "0010"
 down_revision = "0009"
@@ -34,6 +35,12 @@ def upgrade() -> None:
     op.execute("CREATE INDEX IF NOT EXISTS ix_vocab_lang_level ON vocabulary_entries(language, cefr_level)")
     op.execute("CREATE INDEX IF NOT EXISTS ix_vocab_lang_lemma ON vocabulary_entries(language, lemma)")
 
+    bind = op.get_bind()
+    if bind.dialect.name == "postgresql":
+        json_type = "JSONB"
+    else:
+        json_type = "JSON"
+    
     op.execute("""
         CREATE TABLE IF NOT EXISTS grammar_rules (
             id          SERIAL PRIMARY KEY,
@@ -43,7 +50,7 @@ def upgrade() -> None:
             category    VARCHAR(80)  NOT NULL,
             name        TEXT         NOT NULL,
             description TEXT         NOT NULL,
-            examples    JSONB        NOT NULL DEFAULT '[]',
+            examples    {json_type}        NOT NULL DEFAULT '[]',
             source      VARCHAR(80)  NOT NULL,
             created_at  TIMESTAMPTZ  NOT NULL DEFAULT NOW(),
             CONSTRAINT uq_grammar_lang_level_name UNIQUE (language, cefr_level, name)

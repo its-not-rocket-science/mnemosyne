@@ -48,6 +48,8 @@ from backend.schemas.parse import (
 )
 from backend.srs.knowledge import DEFAULT_USER_ID
 
+import backend.lesson_extraction.engine as lesson_engine
+
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["ingest"])
 
@@ -116,6 +118,11 @@ async def ingest_text(
         logger.debug(
             "ingest nlp_ms=%.1f sentences=%d",
             (time.perf_counter() - t_nlp) * 1000, len(candidate_results),
+        )
+        candidate_results = lesson_engine.enrich(
+            payload.language,
+            candidate_results,
+            plugin.capabilities,
         )
 
         sentences: list[SentenceResult] = []

@@ -8,7 +8,7 @@ from __future__ import annotations
 import pytest
 from httpx import AsyncClient, ASGITransport
 
-from backend.ingestion.fetcher import _extract, FetchResult
+from backend.ingestion.fetcher import _extract
 from backend.ingestion.language_detect import detect_language, MIN_CONFIDENCE
 from backend.main import app
 
