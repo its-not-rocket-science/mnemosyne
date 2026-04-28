@@ -169,7 +169,10 @@ class ArabicPlugin:
             # Surface form may carry tashkeel (e.g. "كَتَبَ"); canonical
             # form is the undiacritised version ("كتب").  The lesson builder
             # will display "Base form: كتب" when they differ.
-            lesson_data: dict = {"lemma": canonical}
+            lesson_data: dict = {
+                "lemma": canonical,
+                "confidence_note": "Prefix/clitic segmentation is heuristic; attached prefixes may not always be separated correctly."
+            }
             if canonical in _A1:
                 lesson_data["cefr_level"] = "A1"
                 confidence: float | None = 0.70
