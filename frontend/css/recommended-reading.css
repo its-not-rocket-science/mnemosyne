@@ -1,0 +1,61 @@
+/* Recommended reading panel */
+
+.recommended-reading-panel {
+  margin-block: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--surface);
+}
+
+.recommended-reading-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.recommended-reading-panel__eyebrow {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.recommended-reading-panel__summary {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0.4rem 0 0.6rem;
+}
+
+.recommended-reading-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.recommended-reading-card {
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  padding: 0.6rem;
+  background: var(--surface-secondary);
+}
+
+.recommended-reading-card__meta {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 0.65rem;
+  color: var(--muted);
+}
+
+.recommended-reading-card__text {
+  font-size: 0.8rem;
+  margin: 0.3rem 0;
+}
+
+.recommended-reading-card__reason {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.recommended-reading-card__actions {
+  margin-top: 0.4rem;
+}
