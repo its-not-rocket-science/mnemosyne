@@ -349,6 +349,7 @@ function applyScriptViewToResults() {
 
 function openPicker() {
   if (currentText && pickerTextarea) pickerTextarea.value = currentText
+  languageUserSelected = false
   textPickerDialog?.showModal()
   pickerTextarea?.focus()
 }
