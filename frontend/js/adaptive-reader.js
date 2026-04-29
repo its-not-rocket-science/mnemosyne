@@ -1,17 +1,17 @@
 /*
   Adaptive reader memory layer.
 
-  This replaces static known/learning/weak mastery with a decaying memory model:
-  - strength: 0..1 estimated recall strength now
-  - lastReviewed: timestamp of last user signal
-  - nextReview: predicted timestamp for reinforcement
-  - decayRate: exponential decay rate per day
-
-  It remains local-first, but every explicit memory action is also queued through
-  the existing offline review queue contract when an object_id is available.
+  Server-backed when available, local-first when offline:
+  - local memory gives immediate UI adaptation
+  - /dashboard seeds memory from persisted FSRS UserKnowledge rows
+  - explicit actions queue review events through the existing offline queue
+  - reinforcement mode shows weak/fading memory and hides strong memory
 */
 
+import { getAuthHeaders } from './auth.js'
 import { queueReview } from './offline.js'
+
+const API_BASE = 'http://localhost:8000'
 
 const results = document.querySelector('#results')
 const resultsSection = document.querySelector('#results-section')
@@ -52,6 +52,7 @@ const MEMORY_ACTIONS = {
 let adaptiveEnabled = localStorage.getItem(SETTINGS_KEY) !== 'false'
 let reinforcementEnabled = localStorage.getItem(REINFORCEMENT_KEY) === 'true'
 let memory = readMemory()
+let dashboardSyncedAt = null
 
 function readMemory() {
   try {
@@ -59,7 +60,6 @@ function readMemory() {
     if (parsed && typeof parsed === 'object' && Object.keys(parsed).length) return parsed
   } catch {}
 
-  // One-time migration from the earlier static mastery model.
   try {
     const legacy = JSON.parse(localStorage.getItem(LEGACY_STORAGE_KEY) || '{}')
     if (!legacy || typeof legacy !== 'object') return {}
@@ -72,6 +72,7 @@ function readMemory() {
         type: value?.type || '',
         objectId: value?.objectId || null,
         action,
+        source: 'legacy-local',
       })
     }
     localStorage.setItem(STORAGE_KEY, JSON.stringify(migrated))
@@ -93,6 +94,7 @@ function announce(message) {
 
 function annotationKey(annotation) {
   return annotation.dataset.objectId ||
+    annotation.dataset.object_id ||
     annotation.dataset.annotationId ||
     annotation.dataset.canonical ||
     `${annotation.dataset.type || 'annotation'}:${annotation.textContent?.trim() || ''}`
@@ -102,7 +104,7 @@ function annotationObjectId(annotation) {
   return annotation.dataset.objectId || annotation.dataset.object_id || annotation.dataset.annotationId || null
 }
 
-function buildMemoryRecord({ actionKey, label, type, objectId, action }) {
+function buildMemoryRecord({ actionKey, label, type, objectId, action, source = 'local' }) {
   const now = Date.now()
   const nextReview = nextReviewAt(now, action.strength, action.decayRate)
   return {
@@ -114,6 +116,8 @@ function buildMemoryRecord({ actionKey, label, type, objectId, action }) {
     label,
     type,
     objectId,
+    source,
+    syncedAt: source === 'server' ? new Date(now).toISOString() : null,
   }
 }
 
@@ -127,6 +131,8 @@ function defaultMemory(annotation) {
     label: annotation.textContent?.trim() || '',
     type: annotation.dataset.type || annotation.dataset.typeLabel || '',
     objectId: annotationObjectId(annotation),
+    source: 'default',
+    syncedAt: null,
   }
 }
 
@@ -138,7 +144,6 @@ function currentStrength(record) {
 }
 
 function nextReviewAt(fromMs, strength, decayRate) {
-  // Predict when memory falls below the fading threshold.
   const target = 0.62
   if (strength <= target) return fromMs
   const rate = Math.max(decayRate || 0.5, 0.01)
@@ -157,6 +162,62 @@ function memoryFor(annotation) {
   return memory[key] || defaultMemory(annotation)
 }
 
+function actionFromDashboardStatus(status, score) {
+  if (status === 'mastered' || score >= 0.82) return 'known'
+  if (status === 'new' || status === 'forgotten' || score < 0.55) return 'weak'
+  return 'learning'
+}
+
+function decayRateFromScore(score) {
+  if (score >= 0.82) return 0.18
+  if (score >= 0.55) return 0.45
+  return 0.85
+}
+
+function maybeApplyServerRecord(obj) {
+  const key = obj.object_id
+  if (!key) return
+
+  const score = Number.isFinite(obj.mastery_score) ? obj.mastery_score : 0.5
+  const local = memory[key]
+  const serverSeenMs = obj.last_seen ? Date.parse(obj.last_seen) : 0
+  const localSeenMs = local?.lastReviewed ? Date.parse(local.lastReviewed) : 0
+
+  // Do not overwrite fresher local user actions that have not yet synced.
+  if (local && local.source !== 'server' && localSeenMs > serverSeenMs) return
+
+  const actionKey = actionFromDashboardStatus(obj.status, score)
+  memory[key] = {
+    action: actionKey,
+    strength: Math.max(0, Math.min(1, score)),
+    lastReviewed: obj.last_seen || new Date().toISOString(),
+    nextReview: obj.due_at || new Date().toISOString(),
+    decayRate: decayRateFromScore(score),
+    label: local?.label || '',
+    type: local?.type || '',
+    objectId: key,
+    totalReviews: obj.total_reviews || 0,
+    source: 'server',
+    syncedAt: new Date().toISOString(),
+  }
+}
+
+async function syncServerMemory() {
+  try {
+    const response = await fetch(`${API_BASE}/dashboard`, { headers: getAuthHeaders() })
+    if (!response.ok) return
+    const dashboard = await response.json()
+    for (const bucket of ['known', 'weak', 'new', 'due_for_review']) {
+      for (const obj of dashboard[bucket] || []) maybeApplyServerRecord(obj)
+    }
+    dashboardSyncedAt = new Date()
+    writeMemory()
+    enhanceAll()
+  } catch {
+    // Offline/local-only is expected during development and PWA use.
+  }
+}
+
 async function queueMemoryReview(annotation, actionKey, record) {
   const objectId = annotationObjectId(annotation)
   if (!objectId) return
@@ -171,9 +232,7 @@ async function queueMemoryReview(annotation, actionKey, record) {
       memory_strength: record.strength,
       memory_next_review: record.nextReview,
     })
-  } catch {
-    // Local memory still succeeds; queue failure should not block the reader.
-  }
+  } catch {}
 }
 
 function setMemory(annotation, actionKey) {
@@ -185,12 +244,14 @@ function setMemory(annotation, actionKey) {
     type: annotation.dataset.type || annotation.dataset.typeLabel || '',
     objectId: annotationObjectId(annotation),
     action,
+    source: 'local',
   })
   memory[key] = record
   writeMemory()
   applyAnnotationMemory(annotation)
   applyAdaptiveVisibility()
   renderMemoryMinimap()
+  renderIntelligenceSummary()
   queueMemoryReview(annotation, actionKey, record)
   announce(`${record.label || 'Annotation'} marked ${action.label.toLowerCase()}`)
 }
@@ -213,12 +274,11 @@ function applyAnnotationMemory(annotation) {
   annotation.dataset.memoryStrength = strength.toFixed(2)
   annotation.dataset.memoryBand = band
   annotation.dataset.memoryAction = record.action || 'learning'
+  annotation.dataset.memorySource = record.source || 'default'
 
   annotation.classList.toggle('reader-annotation--memory-strong', band === 'strong')
   annotation.classList.toggle('reader-annotation--memory-fading', band === 'fading')
   annotation.classList.toggle('reader-annotation--memory-weak', band === 'weak')
-
-  // Backward-compatible class names for earlier CSS.
   annotation.classList.toggle('reader-annotation--known', band === 'strong')
   annotation.classList.toggle('reader-annotation--weak', band === 'weak')
   annotation.classList.toggle('reader-annotation--learning', band === 'fading')
@@ -267,6 +327,7 @@ function ensureToolbar() {
     localStorage.setItem(SETTINGS_KEY, String(adaptiveEnabled))
     applyAdaptiveVisibility()
     renderMemoryMinimap()
+    renderIntelligenceSummary()
     announce(adaptiveEnabled ? 'Adaptive reader on' : 'Adaptive reader off')
   })
 
@@ -279,30 +340,38 @@ function ensureToolbar() {
     localStorage.setItem(REINFORCEMENT_KEY, String(reinforcementEnabled))
     applyAdaptiveVisibility()
     renderMemoryMinimap()
+    renderIntelligenceSummary()
     announce(reinforcementEnabled ? 'Reinforcement mode on' : 'Reinforcement mode off')
+  })
+
+  const sync = document.createElement('button')
+  sync.type = 'button'
+  sync.className = 'reader-adaptive-sync'
+  sync.textContent = 'Sync memory'
+  sync.addEventListener('click', async () => {
+    await syncServerMemory()
+    announce(dashboardSyncedAt ? 'Server memory synced' : 'Server memory unavailable')
   })
 
   const reset = document.createElement('button')
   reset.type = 'button'
   reset.className = 'reader-adaptive-reset'
-  reset.textContent = 'Reset memory'
+  reset.textContent = 'Reset local memory'
   reset.addEventListener('click', () => {
     memory = {}
     writeMemory()
     document.querySelectorAll('.reader-annotation').forEach(applyAnnotationMemory)
     applyAdaptiveVisibility()
     renderMemoryMinimap()
+    renderIntelligenceSummary()
     announce('Local memory reset')
   })
 
-  toolbar.append(label, toggle, reinforce, reset)
+  toolbar.append(label, toggle, reinforce, sync, reset)
 
   const experienceToolbar = document.querySelector('#reader-experience-toolbar')
-  if (experienceToolbar) {
-    experienceToolbar.insertAdjacentElement('afterend', toolbar)
-  } else {
-    resultsSection.prepend(toolbar)
-  }
+  if (experienceToolbar) experienceToolbar.insertAdjacentElement('afterend', toolbar)
+  else resultsSection.prepend(toolbar)
   return toolbar
 }
 
@@ -349,7 +418,6 @@ function buildMemoryControls(annotation) {
   const strength = document.createElement('span')
   strength.className = 'reader-memory-strength'
   controls.appendChild(strength)
-
   return controls
 }
 
@@ -370,9 +438,10 @@ function syncPreviewControls(annotation) {
   if (strengthEl) {
     const pct = Math.round(strength * 100)
     const next = record.nextReview ? new Date(record.nextReview) : null
+    const source = record.source === 'server' ? 'synced' : 'local'
     strengthEl.textContent = next
-      ? `Memory ${pct}% · next ${next.toLocaleDateString()}`
-      : `Memory ${pct}%`
+      ? `Memory ${pct}% · next ${next.toLocaleDateString()} · ${source}`
+      : `Memory ${pct}% · ${source}`
   }
 }
 
@@ -383,6 +452,46 @@ function injectControlsIntoPreview(preview, annotation) {
   if (actions) actions.insertAdjacentElement('beforebegin', controls)
   else preview.appendChild(controls)
   syncPreviewControls(annotation)
+}
+
+function memoryStats() {
+  const annotations = Array.from(results?.querySelectorAll('.reader-annotation') || [])
+  const stats = { strong: 0, fading: 0, weak: 0, total: annotations.length }
+  for (const annotation of annotations) {
+    const band = memoryBand(currentStrength(memoryFor(annotation)))
+    stats[band] += 1
+  }
+  return stats
+}
+
+function renderIntelligenceSummary() {
+  if (!resultsSection) return
+  let summary = document.querySelector('#reader-intelligence-summary')
+  if (!summary) {
+    summary = document.createElement('aside')
+    summary.id = 'reader-intelligence-summary'
+    summary.className = 'reader-intelligence-summary'
+    summary.setAttribute('aria-label', 'Learning intelligence summary')
+    const toolbar = document.querySelector('#reader-adaptive-toolbar')
+    if (toolbar) toolbar.insertAdjacentElement('afterend', summary)
+    else resultsSection.prepend(summary)
+  }
+
+  const stats = memoryStats()
+  if (!stats.total) {
+    summary.hidden = true
+    return
+  }
+
+  summary.hidden = false
+  const syncText = dashboardSyncedAt ? `Synced ${dashboardSyncedAt.toLocaleTimeString()}` : 'Local memory'
+  summary.innerHTML = `
+    <strong>Memory map</strong>
+    <span><b>${stats.weak}</b> weak</span>
+    <span><b>${stats.fading}</b> fading</span>
+    <span><b>${stats.strong}</b> strong</span>
+    <small>${syncText}</small>
+  `
 }
 
 function renderMemoryMinimap() {
@@ -401,9 +510,9 @@ function renderMemoryMinimap() {
   annotations.forEach(annotation => {
     const card = annotation.closest('.reader-sentence, .sentence-card')
     const index = Math.max(0, cards.indexOf(card))
-    const record = memoryFor(annotation)
-    const strength = currentStrength(record)
+    const strength = currentStrength(memoryFor(annotation))
     const band = memoryBand(strength)
+    if (reinforcementEnabled && band === 'strong') return
 
     const tick = document.createElement('span')
     tick.className = `annotation-minimap__tick annotation-minimap__tick--memory-${band}`
@@ -434,6 +543,7 @@ function enhanceAll(root = document) {
   root.querySelectorAll('.reader-annotation').forEach(enhanceAnnotation)
   applyAdaptiveVisibility()
   renderMemoryMinimap()
+  renderIntelligenceSummary()
 }
 
 function observe() {
@@ -448,7 +558,10 @@ function observe() {
         }
       })
     }
-    if (changed) renderMemoryMinimap()
+    if (changed) {
+      renderMemoryMinimap()
+      renderIntelligenceSummary()
+    }
   })
   observer.observe(results, { childList: true, subtree: true })
 }
@@ -458,11 +571,13 @@ function init() {
   syncToolbar()
   enhanceAll()
   observe()
-  // Decay is time-dependent; refresh periodically during long reading sessions.
+  syncServerMemory()
   setInterval(() => {
     applyAdaptiveVisibility()
     renderMemoryMinimap()
+    renderIntelligenceSummary()
   }, 60_000)
+  setInterval(syncServerMemory, 5 * 60_000)
 }
 
 if (document.readyState === 'loading') {
