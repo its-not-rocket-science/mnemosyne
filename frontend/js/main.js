@@ -800,6 +800,10 @@ results.addEventListener('lesson-open', async (event) => {
         onTranslate: async (text, sourceLang, targetLang) => {
           if (!text || sourceLang === targetLang) return null
           try {
+            // Only cache/retrieve by object_id when translating the lemma itself.
+            // Sentence translations must not reuse the cached word translation.
+            const lemma = lesson.lesson_data?.lemma || lesson.examples?.[0]
+            const isLemma = lesson.type === 'vocabulary' && text === lemma
             const r = await fetch(`${API_BASE}/translate`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
@@ -807,7 +811,7 @@ results.addEventListener('lesson-open', async (event) => {
                 text,
                 source_language: sourceLang,
                 target_language: targetLang,
-                object_id: lesson.type === 'vocabulary' ? lesson.id : undefined,
+                object_id: isLemma ? lesson.id : undefined,
               }),
             })
             if (!r.ok) return null
