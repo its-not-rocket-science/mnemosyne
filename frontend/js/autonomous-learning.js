@@ -1,10 +1,9 @@
 /*
   Autonomous Learning Mode
 
-  Turns Mnemosyne into a continuous reading system:
-  - loads next recommended passage automatically
-  - advances reading progression
-  - removes manual flow
+  Now integrates:
+  - difficulty modulation (what to load)
+  - cognitive pacing (when to load)
 */
 
 import { getAuthHeaders } from './auth.js'
@@ -41,13 +40,14 @@ async function fetchNext() {
   const lang = languageSelect?.value
   if (!lang) return null
 
-  const res = await fetch(`${API}/recommend?language=${lang}&limit=1`, {
+  const res = await fetch(`${API}/recommend?language=${lang}&limit=12`, {
     headers: getAuthHeaders(),
   })
 
   if (!res.ok) return null
   const data = await res.json()
-  return data.sentences?.[0] || null
+
+  return window.mnemosyneDifficulty?.chooseRecommendation?.(data) || data.sentences?.[0] || null
 }
 
 function passageText(item) {
@@ -74,11 +74,12 @@ async function loadNext() {
     return
   }
 
+  document.body.classList.add('mnemosyne-transitioning-passage')
+
   pickerTextarea.value = text
   pickerTextarea.dispatchEvent(new Event('input', { bubbles: true }))
   pickerUseBtn.click()
 
-  // advance reading progression if applicable
   if (next.source_document_id) {
     fetch(`${API}/reading/${next.source_document_id}`, {
       method: 'PATCH',
@@ -89,6 +90,10 @@ async function loadNext() {
       body: JSON.stringify({ sentences_read: 1 }),
     }).catch(() => {})
   }
+
+  setTimeout(() => {
+    document.body.classList.remove('mnemosyne-transitioning-passage')
+  }, 900)
 
   loading = false
 }
@@ -101,7 +106,8 @@ function observeEnd() {
 
   const observer = new IntersectionObserver(entries => {
     if (entries[0].isIntersecting && enabled) {
-      loadNext()
+      const delay = window.mnemosynePacing?.getNextDelayMs?.() || 1800
+      setTimeout(loadNext, delay)
     }
   }, { threshold: 1 })
 
