@@ -30,9 +30,16 @@ from backend.schemas.translate import TranslateRequest, TranslateResponse
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["translate"])
 
+# Increment when translation quality settings change (e.g. mt=1 added to
+# MyMemory).  Cached entries with an older version are re-fetched on the
+# next request, then stored with the new version so subsequent calls hit
+# the cache again.
+_TRANSLATION_CACHE_VERSION = 2
+
 ATTRIBUTION_TEXT: dict[str, str] = {
     "libretranslate": "Powered by LibreTranslate (https://libretranslate.com)",
     "mymemory": "Powered by MyMemory (https://mymemory.translated.net)",
+    "wiktionary": "Definition from Wiktionary (https://en.wiktionary.org)",
     "none": "",
 }
 
@@ -60,24 +67,68 @@ async def translate_text(
     """
     provider = (settings.translation_provider or "none").strip().lower()
 
-    # ── Check stored translation first ────────────────────────────────────────
+    # ── Check stored data (gloss takes priority over cached MT) ──────────────
     if payload.object_id:
         try:
             row = await db.get(CanonicalObjectRow, payload.object_id)
             if row is not None:
                 ld = row.lesson_data or {}
-                # Support both legacy "translation" and new "translations" format
-                existing = None
 
-                # New format (preferred)
+                # Wiktionary gloss is higher quality than any MT provider.
+                # Return it immediately when available, bypassing MT entirely.
+                # If not yet attempted, fetch inline now.
+                if payload.target_language == "en":
+                    gloss = ld.get("gloss", "").strip()
+                    if not gloss and not ld.get("gloss_attempted"):
+                        try:
+                            from backend.dictionary.wiktionary import fetch_definition
+                            gloss = (await fetch_definition(
+                                row.canonical_form, row.language or ""
+                            ) or "").strip()
+                            updated = dict(ld)
+                            updated["gloss_attempted"] = True
+                            if gloss:
+                                updated["gloss"] = gloss
+                            row.lesson_data = updated
+                            await db.commit()
+                            ld = updated
+                            logger.info(
+                                "translate wiktionary inline fetch object_id=%r gloss=%r",
+                                payload.object_id, gloss or None,
+                            )
+                        except Exception:
+                            logger.warning(
+                                "translate wiktionary inline fetch failed object_id=%r",
+                                payload.object_id,
+                                exc_info=True,
+                            )
+                    else:
+                        logger.info(
+                            "translate gloss check object_id=%r gloss=%r attempted=%r",
+                            payload.object_id, gloss or None, ld.get("gloss_attempted"),
+                        )
+                    if gloss:
+                        return TranslateResponse(
+                            text=payload.text,
+                            translation=gloss,
+                            source_language=payload.source_language,
+                            target_language=payload.target_language,
+                            provider="wiktionary",
+                            attribution=ATTRIBUTION_TEXT["wiktionary"],
+                            cached=True,
+                        )
+
+                # Fall back to cached MT translation if version is current.
                 translations: dict = ld.get("translations") or {}
                 existing = translations.get(payload.target_language)
-
-                # Legacy format (used in tests + existing DB rows)
                 if not existing:
                     existing = ld.get("translation")
-
-                if existing:
+                stored_version = ld.get("translation_cache_version", 1)
+                logger.info(
+                    "translate cache check object_id=%r existing=%r version=%r threshold=%r",
+                    payload.object_id, existing, stored_version, _TRANSLATION_CACHE_VERSION,
+                )
+                if existing and stored_version >= _TRANSLATION_CACHE_VERSION:
                     stored_provider = (ld.get("translation_provider") or provider or "none").strip().lower()
                     return TranslateResponse(
                         text=payload.text,
@@ -145,6 +196,7 @@ async def translate_text(
                 translations[payload.target_language] = result
                 updated["translations"] = translations
                 updated["translation_provider"] = provider
+                updated["translation_cache_version"] = _TRANSLATION_CACHE_VERSION
                 row.lesson_data = updated
                 await db.commit()
         except Exception:

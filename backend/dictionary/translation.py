@@ -168,6 +168,9 @@ async def translate_mymemory(
     params: dict[str, str] = {
         "q": text,
         "langpair": f"{source}|{target}",
+        # mt=1: prefer MT engine over crowd-sourced TM entries.
+        # TM entries can be stale or wrong (e.g. fr "incendie" → "lire").
+        "mt": "1",
     }
     if api_key:
         params["de"] = api_key   # MyMemory uses "de" for email/key
@@ -192,6 +195,13 @@ async def translate_mymemory(
             "mymemory status %s for text=%r", data.get("responseStatus"), text[:30]
         )
         return None
+
+    # When mt=1 is set, MyMemory includes the MT-engine result in `mtData`.
+    # Prefer it over `responseData` (crowd-sourced TM): TM entries can be
+    # stale or incorrect (e.g. fr "incendie" → "lire" instead of "fire").
+    mt_text = ((data.get("mtData") or {}).get("translatedText") or "").strip()
+    if mt_text and not mt_text.startswith("PLEASE SELECT"):
+        return mt_text
 
     result = (data.get("responseData") or {}).get("translatedText", "").strip()
     # MyMemory sometimes returns "PLEASE SELECT TWO DISTINCT LANGUAGES" when
