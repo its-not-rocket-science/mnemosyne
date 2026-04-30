@@ -521,7 +521,11 @@
   text-decoration: underline dotted;
   text-underline-offset: 0.22em;
   text-decoration-thickness: 1.5px;
-  transition: filter 0.1s ease;
+  transition:
+    filter 0.1s ease,
+    background-color 0.18s ease,
+    text-decoration-color 0.18s ease,
+    text-decoration-style 0.18s ease;
 }
 
 /* Type label tooltip — CSS-only, reads data-type-label attribute */
@@ -612,6 +616,50 @@
   --_annotation-color: var(--accent-etymology);
   background: color-mix(in srgb, var(--accent-etymology) 7%, transparent);
   text-decoration-color: var(--_annotation-color);
+}
+
+/* ── Tier-based progressive visibility ───────────────────────────────────
+   Specificity (0,2,0) beats type classes (0,1,0), so tier wins the cascade.
+   Tier is set by adaptive-reader.js after memory state is resolved.
+   Without JS (or before JS runs), type classes remain as fallback.         */
+
+/* Tier 1 — primary learning targets: full highlight + solid underline */
+.reader-annotation[data-tier="1"] {
+  background: color-mix(in srgb, var(--_annotation-color) 11%, transparent);
+  text-decoration-style: solid;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: var(--_annotation-color);
+}
+
+/* Tier 2 — secondary: dotted underline, no fill */
+.reader-annotation[data-tier="2"] {
+  background: transparent;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--_annotation-color) 50%, transparent);
+}
+
+/* Tier 3 — ghost (strong memory, already known): barely visible */
+.reader-annotation[data-tier="3"] {
+  background: transparent;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--_annotation-color) 22%, transparent);
+}
+
+/* Hover/focus: fully reveal any tier — no layout shift, just color change */
+.reader-annotation[data-tier="2"]:hover,
+.reader-annotation[data-tier="2"]:focus-visible,
+.reader-annotation[data-tier="3"]:hover,
+.reader-annotation[data-tier="3"]:focus-visible {
+  background: color-mix(in srgb, var(--_annotation-color) 11%, transparent);
+  text-decoration-style: solid;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: var(--_annotation-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-annotation[data-tier] { transition: none; }
 }
 
 
