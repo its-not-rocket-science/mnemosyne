@@ -1,4 +1,4 @@
-import { t } from '../js/i18n.js'
+import { t, currentUiLang } from '../js/i18n.js'
 
 // ── Type metadata (mirrors mnemosyne-pill.js) ─────────────────────────────────
 const TYPE_META = {
@@ -167,7 +167,10 @@ export class MnemosyneDetailPane extends HTMLElement {
     // Re-render when UI language changes while pane is open.
     if (!this.#langChangeHandler) {
       this.#langChangeHandler = () => {
-        if (this.hasAttribute('data-open')) this._render()
+        if (this.hasAttribute('data-open')) {
+          this.#config.uiLang = currentUiLang()
+          this._render()
+        }
       }
       document.addEventListener('mnemosyne:language-changed', this.#langChangeHandler)
     }
