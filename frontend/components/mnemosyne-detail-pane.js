@@ -1,33 +1,16 @@
-/**
- * mnemosyne-detail-pane.js
- *
- * Right-side concordance panel. Opens when a learnable-object pill is clicked;
- * shows four tab sections (Explanation / Origins / In Context / Related) and
- * audio action buttons. "Study drills" delegates to the existing modal.
- *
- * Public API
- * ──────────
- *   detailPane.show({ lesson, sentenceText, language, dir, ttsTag, caps,
- *                     onSpeak, onStudy })
- *   detailPane.hide()
- *
- * Events dispatched (composed, bubbles)
- * ──────────────────────────────────────
- *   pane-close   user dismissed the pane (close button or Escape)
- *   pane-study   user clicked "Study drills" (open modal)
- */
+import { t } from '../js/i18n.js'
 
 // ── Type metadata (mirrors mnemosyne-pill.js) ─────────────────────────────────
 const TYPE_META = {
-  vocabulary:      { icon: '📗', label: 'Vocabulary',     ref: 'oklch(0.50 0.20 142)' },
-  conjugation:     { icon: '🔧', label: 'Verb',            ref: 'oklch(0.50 0.20 240)' },
-  agreement:       { icon: '🧩', label: 'Agreement',       ref: 'oklch(0.50 0.15  50)' },
-  idiom:           { icon: '💬', label: 'Idiom',            ref: 'oklch(0.50 0.20 300)' },
-  grammar:         { icon: '📐', label: 'Grammar',          ref: 'oklch(0.50 0.15  90)' },
-  nuance:          { icon: '🎭', label: 'Nuance',           ref: 'oklch(0.50 0.20  20)' },
-  script:          { icon: '✍️', label: 'Script',          ref: 'oklch(0.50 0.18 200)' },
-  transliteration: { icon: '🔤', label: 'Transliteration', ref: 'oklch(0.50 0.15 170)' },
-  phrase_family:   { icon: '🔗', label: 'Phrase family',   ref: 'oklch(0.50 0.20 330)' },
+  vocabulary:      { icon: '📗', labelKey: 'dp_type_vocabulary',     ref: 'oklch(0.50 0.20 142)' },
+  conjugation:     { icon: '🔧', labelKey: 'dp_type_verb',            ref: 'oklch(0.50 0.20 240)' },
+  agreement:       { icon: '🧩', labelKey: 'dp_type_agreement',       ref: 'oklch(0.50 0.15  50)' },
+  idiom:           { icon: '💬', labelKey: 'dp_type_idiom',            ref: 'oklch(0.50 0.20 300)' },
+  grammar:         { icon: '📐', labelKey: 'dp_type_grammar',          ref: 'oklch(0.50 0.15  90)' },
+  nuance:          { icon: '🎭', labelKey: 'dp_type_nuance',           ref: 'oklch(0.50 0.20  20)' },
+  script:          { icon: '✍️', labelKey: 'dp_type_script',          ref: 'oklch(0.50 0.18 200)' },
+  transliteration: { icon: '🔤', labelKey: 'dp_type_transliteration', ref: 'oklch(0.50 0.15 170)' },
+  phrase_family:   { icon: '🔗', labelKey: 'dp_type_phrase_family',   ref: 'oklch(0.50 0.20 330)' },
 }
 
 // Field labels shown in dedicated UI sections — suppress from the generic field list.
@@ -39,14 +22,36 @@ const SUPPRESS_IN_EXPLANATION = new Set([
 
 // User-friendly labels and CSS modifier classes for MatchType values.
 const MATCH_TYPE_META = {
-  exact:                { label: 'Canonical form',              cls: 'canonical' },
-  orthographic_variant: { label: 'Spelling variant',            cls: 'variant'   },
-  modernized_variant:   { label: 'Modernised form',             cls: 'variant'   },
-  inflectional_variant: { label: 'Inflectional variant',        cls: 'variant'   },
-  misquotation:         { label: 'Common misquote',             cls: 'warning'   },
-  blend:                { label: 'Blend / corruption',          cls: 'warning'   },
-  allusion:             { label: 'Allusion',                    cls: 'allusion'  },
-  confusable_not_same:  { label: 'Confusable \u2014 different meaning', cls: 'danger' },
+  exact:                { labelKey: 'dp_match_canonical',    cls: 'canonical' },
+  orthographic_variant: { labelKey: 'dp_match_variant',      cls: 'variant'   },
+  modernized_variant:   { labelKey: 'dp_match_modern',       cls: 'variant'   },
+  inflectional_variant: { labelKey: 'dp_match_inflectional', cls: 'variant'   },
+  misquotation:         { labelKey: 'dp_match_misquote',     cls: 'warning'   },
+  blend:                { labelKey: 'dp_match_blend',        cls: 'warning'   },
+  allusion:             { labelKey: 'dp_match_allusion',     cls: 'allusion'  },
+  confusable_not_same:  { labelKey: 'dp_match_confusable',   cls: 'danger'    },
+}
+
+// ── Field label / value translation helpers ───────────────────────────────────
+
+function translateFieldLabel(label) {
+  const key = 'fl_' + label.toLowerCase().replace(/ /g, '_')
+  const tr = t(key)
+  return tr !== key ? tr : label
+}
+
+function translateFieldValue(value) {
+  const key = 'fv_' + value.toLowerCase().replace(/ /g, '_')
+  const tr = t(key)
+  if (tr !== key) return tr
+  // Handle "word (type)" pattern — translate just the parenthetical type
+  const m = value.match(/^(.*?)\s+\(([^)]+)\)$/)
+  if (m) {
+    const typeKey = 'fv_' + m[2].toLowerCase().replace(/ /g, '_')
+    const typeT = t(typeKey)
+    if (typeT !== typeKey) return `${m[1]} (${typeT})`
+  }
+  return value
 }
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -109,20 +114,22 @@ export class MnemosyneDetailPane extends HTMLElement {
   #onStudy        = null
   #onTranslate    = null   // async (text, sourceLang, targetLang) => {text, attribution} | null
   #previousFocus  = null
-  #keydownHandler = null
+  #keydownHandler    = null
+  #langChangeHandler = null
   #snap           = 'half'
   #dragStartY     = 0
   #dragBaseY      = 0
   #dragActive     = false
   // Translation fetch state (reset on each show())
-  #vocabTranslationFetched   = false
-  #sentenceTranslationFetched = false
+  #vocabTranslationFetched        = false
+  #sentenceTranslationFetched     = false
+  #explanationTranslationFetched  = false
 
   static ALL_TABS = [
-    { id: 'explanation', label: 'Explanation', alwaysShow: true  },
-    { id: 'origins',     label: 'Origins',     alwaysShow: false },
-    { id: 'context',     label: 'In Context',  alwaysShow: true  },
-    { id: 'related',     label: 'Related',     alwaysShow: false },
+    { id: 'explanation', labelKey: 'dp_tab_explanation', alwaysShow: true  },
+    { id: 'origins',     labelKey: 'dp_tab_origins',     alwaysShow: false },
+    { id: 'context',     labelKey: 'dp_tab_context',     alwaysShow: true  },
+    { id: 'related',     labelKey: 'dp_tab_related',     alwaysShow: false },
   ]
 
   constructor() {
@@ -141,6 +148,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     this.#sentenceTranslationFetched = false
     this.#onStudy       = onStudy ?? null
     this.#activeTab     = 0
+    this.#explanationTranslationFetched = false
     this.#previousFocus = document.activeElement
 
     this.removeAttribute('inert')
@@ -155,6 +163,14 @@ export class MnemosyneDetailPane extends HTMLElement {
       this.#setSnap('half')
       this.shadowRoot.querySelector('[role="tab"]')?.focus()
     })
+
+    // Re-render when UI language changes while pane is open.
+    if (!this.#langChangeHandler) {
+      this.#langChangeHandler = () => {
+        if (this.hasAttribute('data-open')) this._render()
+      }
+      document.addEventListener('mnemosyne:language-changed', this.#langChangeHandler)
+    }
 
     // Close on Escape; trap Tab within the pane while open.
     this.#keydownHandler = (e) => {
@@ -204,6 +220,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     const ld   = lesson.lesson_data ?? {}
     const type = lesson.type ?? 'vocabulary'
     const meta = TYPE_META[type] ?? TYPE_META.vocabulary
+    const metaLabel = t(meta.labelKey) || meta.labelKey
 
     const depthIdx = { basic: 0, intermediate: 1, scholar: 2 }[depth ?? 'scholar'] ?? 2
 
@@ -244,14 +261,14 @@ export class MnemosyneDetailPane extends HTMLElement {
         </div>
 
         <header class="pane__header">
-          <div class="pane__badge" aria-hidden="true">${esc(meta.icon)} ${esc(meta.label)}</div>
+          <div class="pane__badge" aria-hidden="true">${esc(meta.icon)} ${esc(metaLabel)}</div>
           <h2 class="pane__title" id="dp-heading">${esc(titleText)}</h2>
-          <button class="pane__share" type="button" aria-label="Copy link to annotation">&#x1F517;</button>
+          <button class="pane__share" type="button" aria-label="${esc(t('dp_copy_link_aria'))}">&#x1F517;</button>
           <span class="pane__share-hint" aria-live="polite" aria-atomic="true"></span>
-          <button class="pane__close" type="button" aria-label="Close details panel">&#x2715;</button>
+          <button class="pane__close" type="button" aria-label="${esc(t('dp_close_aria'))}">&#x2715;</button>
         </header>
 
-        <div class="pane__tabs" role="tablist" aria-label="Details sections">
+        <div class="pane__tabs" role="tablist" aria-label="${esc(t('dp_tabs_aria'))}">
           ${this.#visibleTabs.map((tab, i) => /* html */`
             <button
               class="pane__tab${i === 0 ? ' pane__tab--active' : ''}"
@@ -261,7 +278,7 @@ export class MnemosyneDetailPane extends HTMLElement {
               aria-controls="dp-panel-${tab.id}"
               tabindex="${i === 0 ? 0 : -1}"
               type="button"
-            >${esc(tab.label)}</button>
+            >${esc(t(tab.labelKey))}</button>
           `).join('')}
         </div>
 
@@ -273,7 +290,7 @@ export class MnemosyneDetailPane extends HTMLElement {
         </div>
 
         <footer class="pane__footer">
-          <button class="pane__study-btn" type="button">Study drills &#x2192;</button>
+          <button class="pane__study-btn" type="button">${esc(t('dp_study_drills'))}</button>
         </footer>
 
         <slot name="now-playing"></slot>
@@ -291,8 +308,12 @@ export class MnemosyneDetailPane extends HTMLElement {
     // Wire all interactive events
     this._wireEvents(matchedVariant, canonical, sentenceText || '', isNonCanonical)
 
-    // Explanation tab is active by default — kick off vocab translation immediately.
+    // Explanation tab active by default — kick off translations immediately.
+    this.#vocabTranslationFetched       = false
+    this.#sentenceTranslationFetched    = false
+    this.#explanationTranslationFetched = false
     this.#fetchVocabTranslation()
+    this.#fetchExplanationTranslation()
   }
 
   // ── HTML fragment builders ──────────────────────────────────────────────────
@@ -304,19 +325,19 @@ export class MnemosyneDetailPane extends HTMLElement {
 
     const fieldsHtml = displayFields.map(f => /* html */`
       <div class="pane__field">
-        <dt class="pane__field-label">${esc(f.label)}</dt>
-        <dd class="pane__field-value">${esc(f.value)}</dd>
+        <dt class="pane__field-label">${esc(translateFieldLabel(f.label))}</dt>
+        <dd class="pane__field-value">${esc(translateFieldValue(f.value))}</dd>
       </div>
     `).join('')
 
     const hasAudio        = Boolean(matchedVariant)
     const matchType       = ld.match_type || ''
-    const matchTypeMeta   = matchType ? (MATCH_TYPE_META[matchType] ?? { label: matchType, cls: 'variant' }) : null
+    const matchTypeMeta   = matchType ? (MATCH_TYPE_META[matchType] ?? { labelKey: null, cls: 'variant' }) : null
     const showMatchBadge  = Boolean(matchTypeMeta)
     const matchTypeNote   = ld.match_type_note || ''
     const hasWhyItMatters = Boolean(ld.why_it_matters) && depthIdx >= 2
     const isConfusable    = matchType === 'confusable_not_same'
-    const confusableWarning = matchTypeNote || 'This phrase looks similar to the family but has a different meaning.'
+    const confusableWarning = matchTypeNote || t('dp_confusable_warning')
 
     return /* html */`
       <section
@@ -334,7 +355,7 @@ export class MnemosyneDetailPane extends HTMLElement {
         ${showMatchBadge ? /* html */`
           <div class="pane__match-row">
             <span class="pane__match-badge pane__match-badge--${esc(matchTypeMeta.cls)}">
-              ${esc(matchTypeMeta.label)}
+              ${esc(matchTypeMeta.labelKey ? t(matchTypeMeta.labelKey) : matchType)}
             </span>
             ${matchTypeNote ? `<p class="pane__match-note">${esc(matchTypeNote)}</p>` : ''}
           </div>
@@ -353,19 +374,19 @@ export class MnemosyneDetailPane extends HTMLElement {
         ${hasAudio ? /* html */`
           <div class="pane__audio-row">
             <button class="pane__audio-btn" type="button" data-speak="phrase">
-              <span aria-hidden="true">&#x1F50A;</span> Hear phrase
+              <span aria-hidden="true">&#x1F50A;</span> ${esc(t('dp_hear_phrase'))}
             </button>
           </div>
         ` : ''}
         <div class="pane__note-section">
-          <p class="pane__note-label">Notes</p>
+          <p class="pane__note-label">${esc(t('dp_notes'))}</p>
           <textarea class="pane__note-input"
-                    placeholder="Add a note about this phrase\u2026"
+                    placeholder="${esc(t('dp_note_placeholder'))}"
                     aria-label="Your note about this annotation"
                     rows="3"></textarea>
           <div class="pane__note-actions">
-            <button class="pane__note-save" type="button">Save</button>
-            <button class="pane__note-clear" type="button">Clear</button>
+            <button class="pane__note-save" type="button">${esc(t('dp_note_save'))}</button>
+            <button class="pane__note-clear" type="button">${esc(t('dp_note_clear'))}</button>
           </div>
         </div>
       </section>
@@ -392,14 +413,14 @@ export class MnemosyneDetailPane extends HTMLElement {
           ${isNonCanonical ? /* html */`
             <button class="pane__audio-btn" type="button" data-speak="original">
               <span aria-hidden="true">&#x1F50A;</span>
-              ${isConfusable ? 'Hear this phrase' : 'Hear original form'}
+              ${isConfusable ? esc(t('dp_hear_this_phrase')) : esc(t('dp_hear_original'))}
             </button>
             <button class="pane__audio-btn" type="button" data-speak="canonical">
-              <span aria-hidden="true">&#x1F50A;</span> Hear canonical form
+              <span aria-hidden="true">&#x1F50A;</span> ${esc(t('dp_hear_canonical'))}
             </button>
           ` : /* html */`
             <button class="pane__audio-btn" type="button" data-speak="phrase">
-              <span aria-hidden="true">&#x1F50A;</span> Hear phrase
+              <span aria-hidden="true">&#x1F50A;</span> ${esc(t('dp_hear_phrase'))}
             </button>
           `}
         </div>
@@ -428,7 +449,7 @@ export class MnemosyneDetailPane extends HTMLElement {
         </div>
         <div class="pane__audio-row">
           <button class="pane__audio-btn" type="button" data-speak="sentence">
-            <span aria-hidden="true">&#x1F50A;</span> Hear sentence
+            <span aria-hidden="true">&#x1F50A;</span> ${esc(t('dp_hear_sentence'))}
           </button>
         </div>
       </section>
@@ -454,7 +475,7 @@ export class MnemosyneDetailPane extends HTMLElement {
             ${isCanon ? '<span class="pane__canonical-star" aria-label="canonical form">&#x2605;</span>' : ''}
             ${mtMeta && !isCanon ? /* html */`
               <span class="pane__match-badge pane__match-badge--${esc(mtMeta.cls)} pane__match-badge--sm">
-                ${esc(mtMeta.label)}
+                ${esc(mtMeta.labelKey ? t(mtMeta.labelKey) : mtMeta.cls)}
               </span>
             ` : ''}
           </span>
@@ -466,7 +487,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     const confusableFormItems = confusableForms.map(cf => /* html */`
       <li class="pane__confusable-form-item">
         <span class="pane__match-badge pane__match-badge--danger pane__match-badge--sm">
-          ${esc(MATCH_TYPE_META.confusable_not_same.label)}
+          ${esc(t(MATCH_TYPE_META.confusable_not_same.labelKey))}
         </span>
         <span class="pane__confusable-form-surface">${esc(cf.surface ?? '')}</span>
         ${cf.note ? `<p class="pane__confusable-form-note">${esc(cf.note)}</p>` : ''}
@@ -491,13 +512,13 @@ export class MnemosyneDetailPane extends HTMLElement {
       >
         ${rawVariants.length ? /* html */`
           <section class="pane__subsection" aria-labelledby="dp-variants-h">
-            <h3 class="pane__section-heading" id="dp-variants-h">Variant forms</h3>
+            <h3 class="pane__section-heading" id="dp-variants-h">${esc(t('dp_variant_forms'))}</h3>
             <ul class="pane__variant-list">${variantItems}</ul>
           </section>
         ` : ''}
         ${hasAnyConfusables ? /* html */`
           <section class="pane__subsection" aria-labelledby="dp-confusables-h">
-            <h3 class="pane__section-heading" id="dp-confusables-h">Confusable with</h3>
+            <h3 class="pane__section-heading" id="dp-confusables-h">${esc(t('dp_confusable_with'))}</h3>
             <ul class="pane__confusable-list">
               ${confusableFormItems}
               ${confusableItems}
@@ -507,7 +528,7 @@ export class MnemosyneDetailPane extends HTMLElement {
         ${isNonCanonical && ld.match_type !== 'confusable_not_same' ? /* html */`
           <div class="pane__audio-row">
             <button class="pane__audio-btn" type="button" data-speak="canonical">
-              <span aria-hidden="true">&#x1F50A;</span> Hear canonical form
+              <span aria-hidden="true">&#x1F50A;</span> ${esc(t('dp_hear_canonical'))}
             </button>
           </div>
         ` : ''}
@@ -536,6 +557,18 @@ export class MnemosyneDetailPane extends HTMLElement {
       if (attr && result.attribution) attr.textContent = result.attribution
       row.hidden = false
     }
+  }
+
+  async #fetchExplanationTranslation() {
+    if (this.#explanationTranslationFetched || !this.#onTranslate) return
+    const { lesson, uiLang } = this.#config
+    const explanation = lesson.explanation
+    if (!explanation || !uiLang || uiLang === 'en') return
+    this.#explanationTranslationFetched = true
+    const result = await this.#onTranslate(explanation, 'en', uiLang)
+    if (!result?.text) return
+    const el = this.shadowRoot.querySelector('.pane__explanation')
+    if (el) el.textContent = result.text
   }
 
   async #fetchSentenceTranslation(sentenceText) {
@@ -626,7 +659,7 @@ export class MnemosyneDetailPane extends HTMLElement {
       } else {
         navigator.clipboard.writeText(shareUrl).then(() => {
           if (shareHint) {
-            shareHint.textContent = 'Link copied!'
+            shareHint.textContent = t('dp_link_copied')
             setTimeout(() => { shareHint.textContent = '' }, 2200)
           }
         }).catch(() => {
@@ -659,7 +692,7 @@ export class MnemosyneDetailPane extends HTMLElement {
         }))
         if (noteSave) {
           const orig = noteSave.textContent
-          noteSave.textContent = 'Saved!'
+          noteSave.textContent = t('dp_note_saved')
           setTimeout(() => { noteSave.textContent = orig }, 1500)
         }
       })

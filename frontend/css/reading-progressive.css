@@ -1,0 +1,300 @@
+/* Progressive reveal + inline preview styling */
+
+.reader-experience-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-block-end: var(--space-2);
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.reader-experience-toolbar__group {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.reader-experience-toolbar__label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.reader-mode-btn,
+.reader-focus-btn {
+  border: 1px solid var(--border-input);
+  border-radius: 999px;
+  background: transparent;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.reader-mode-btn--active,
+.reader-focus-btn--active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* Annotation reveal modes */
+[data-annotation-reveal="subtle"] .reader-annotation {
+  background: none !important;
+  text-decoration-style: dotted;
+  opacity: 0.7;
+}
+
+[data-annotation-reveal="learning"] .reader-annotation {
+  opacity: 1;
+}
+
+[data-annotation-reveal="deep"] .reader-annotation::before {
+  opacity: 1 !important;
+}
+
+/* Focus mode */
+body.reader-focus-mode .site-header,
+body.reader-focus-mode .site-footer,
+body.reader-focus-mode .app-shell__top-nav {
+  opacity: 0.2;
+}
+
+body.reader-focus-mode .app-shell__text-panel {
+  max-inline-size: 72ch;
+  margin-inline: auto;
+}
+
+/* Inline preview */
+.reader-inline-preview {
+  /* Force a new row inside flex containers (.reader-sentence is display:flex). */
+  flex-basis: 100%;
+  margin-block: 0.4rem 0.6rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--border);
+  background: var(--surface-secondary);
+}
+
+.reader-inline-preview__title {
+  font-size: 0.8rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.reader-inline-preview__body {
+  font-size: 0.8rem;
+  margin: 0 0 0.4rem 0;
+  color: var(--muted);
+}
+
+.reader-inline-preview__actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.reader-inline-preview__actions button {
+  font-size: 0.7rem;
+}
+
+/* Adaptive learning bar ---------------------------------------------------- */
+
+.results-adaptive-bar {
+  margin-block-end: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--surface) 92%, var(--accent) 8%);
+}
+
+.results-adaptive-bar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.results-adaptive-bar__heading {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+}
+
+.results-adaptive-bar__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.difficulty-feedback {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.difficulty-feedback__bias {
+  font-size: 0.72rem;
+  min-inline-size: 5ch;
+  text-align: center;
+  color: var(--muted);
+}
+
+.difficulty-feedback__btn {
+  font-size: 0.75rem;
+}
+
+.difficulty-modulation-toggle {
+  font-size: 0.72rem;
+  border-radius: 999px;
+}
+
+.results-adaptive-bar__hint {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-block: var(--space-1) 0;
+  line-height: 1.4;
+}
+
+.results-adaptive-bar__autonomous {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-block-start: var(--space-2);
+  padding-block-start: var(--space-2);
+  border-block-start: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.results-adaptive-bar__autonomous-hint {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+@media (forced-colors: active) {
+  .results-adaptive-bar {
+    border: 1px solid CanvasText;
+    background: Canvas;
+  }
+}
+
+/* Onboarding welcome panel ------------------------------------------------- */
+
+.mnemosyne-onboarding {
+  margin-block-end: var(--space-4);
+}
+
+.mnemosyne-onboarding__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-block-end: var(--space-1);
+}
+
+.mnemosyne-onboarding__eyebrow {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0;
+}
+
+.mnemosyne-onboarding__close {
+  flex-shrink: 0;
+  margin-block-start: -0.15rem;
+}
+
+.mnemosyne-onboarding__headline {
+  font-size: clamp(1.05rem, 1.5vw + 0.8rem, 1.3rem);
+  margin-block: 0 var(--space-2);
+  line-height: 1.3;
+}
+
+.mnemosyne-onboarding__list {
+  margin-block: 0 var(--space-2);
+  padding-inline-start: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.mnemosyne-onboarding__promise {
+  font-style: italic;
+  color: var(--muted);
+  margin-block: 0 var(--space-3);
+}
+
+.mnemosyne-onboarding__actions {
+  margin-block-start: 0;
+}
+
+@keyframes onboarding-dismiss {
+  to { opacity: 0; transform: translateY(-0.4rem); max-block-size: 0; margin: 0; padding: 0; overflow: hidden; }
+}
+
+.mnemosyne-onboarding--dismissed {
+  animation: onboarding-dismiss 0.22s ease forwards;
+}
+
+/* First-run coach tooltip -------------------------------------------------- */
+
+.mnemosyne-first-run-coach {
+  position: fixed;
+  top: var(--coach-top, 50%);
+  left: var(--coach-left, 50%);
+  z-index: 300;
+  max-inline-size: 22rem;
+  padding: var(--space-3);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--elevation-2, 0 4px 16px rgb(0 0 0 / 0.12));
+}
+
+.mnemosyne-first-run-coach h4 {
+  margin: 0 0 var(--space-1);
+  font-size: 0.9rem;
+}
+
+.mnemosyne-first-run-coach p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.mnemosyne-first-run-coach__close {
+  position: absolute;
+  inset-block-start: 0.5rem;
+  inset-inline-end: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-experience-toolbar,
+  .reader-inline-preview {
+    transition: none;
+  }
+
+  .mnemosyne-onboarding--dismissed {
+    animation: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .mnemosyne-first-run-coach {
+    border: 2px solid CanvasText;
+    box-shadow: none;
+  }
+}

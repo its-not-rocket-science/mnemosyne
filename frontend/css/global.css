@@ -3,12 +3,12 @@
   --brand-purple:       #7C3AED;
   --brand-purple-light: #EDE9FE;
 
-  /* ── Annotation accent palette ───────────────────────────────────────────── */
-  --accent-vocab:       #3B82F6;   /* blue   — vocabulary                      */
-  --accent-grammar:     #6366F1;   /* indigo — grammar / conjugation           */
-  --accent-idiom:       #F59E0B;   /* amber  — idioms                          */
-  --accent-literary:    #8B5CF6;   /* violet — nuance / phrase family          */
-  --accent-etymology:   #14B8A6;   /* teal   — etymology / script              */
+  /* ── Annotation accent palette — matches filter-bar pill --_c values ───── */
+  --accent-vocab:       oklch(0.55 0.18 240);   /* blue   — vocabulary         */
+  --accent-grammar:     oklch(0.50 0.20 265);   /* indigo — grammar            */
+  --accent-idiom:       oklch(0.62 0.18  55);   /* amber  — idioms             */
+  --accent-literary:    oklch(0.50 0.22 305);   /* violet — nuance / literary  */
+  --accent-etymology:   oklch(0.52 0.15 195);   /* teal   — etymology / script */
 
   /* ── Surfaces ────────────────────────────────────────────────────────────── */
   --surface:            #FFFFFF;   /* card / panel background                  */
@@ -71,11 +71,11 @@
     --brand-purple-light: #2E1065;
 
     /* Annotation accents — lightened for readability on dark surfaces */
-    --accent-vocab:       #60A5FA;   /* blue-400   */
-    --accent-grammar:     #818CF8;   /* indigo-400 */
-    --accent-idiom:       #FCD34D;   /* amber-300  */
-    --accent-literary:    #C4B5FD;   /* violet-300 */
-    --accent-etymology:   #2DD4BF;   /* teal-400   */
+    --accent-vocab:       oklch(0.72 0.18 240);
+    --accent-grammar:     oklch(0.72 0.20 265);
+    --accent-idiom:       oklch(0.82 0.18  55);
+    --accent-literary:    oklch(0.75 0.22 305);
+    --accent-etymology:   oklch(0.72 0.15 195);
 
     /* Surfaces */
     --surface:            #1F2937;   /* gray-800 */

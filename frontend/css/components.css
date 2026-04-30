@@ -20,6 +20,7 @@
 .sentence-card__top {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin-block-end: var(--space-2);
 }
@@ -425,6 +426,7 @@
 .reader-sentence {
   display: flex;
   align-items: baseline;
+  flex-wrap: wrap;
   gap: 0.4em;
   padding-block: 0.55em;
   border-block-end: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
@@ -510,6 +512,7 @@
 /* ── Inline annotation highlights ───────────────────────────────────────── */
 
 .reader-annotation {
+  --_annotation-color: var(--accent); /* overridden per type below */
   position: relative;          /* anchor for ::before tooltip */
   border-radius: 0.2em;
   padding-inline: 0.12em;
@@ -577,30 +580,35 @@
   .reader-annotation::before   { transition: none; }
 }
 
-/* Type-keyed highlight colours */
+/* Type-keyed highlight colours — --_annotation-color drives decoration + outline */
 .reader-annotation--vocabulary {
-  background: color-mix(in srgb, var(--accent-vocab) 16%, transparent);
-  text-decoration-color: color-mix(in srgb, var(--accent-vocab) 60%, currentColor);
+  --_annotation-color: var(--accent-vocab);
+  background: color-mix(in srgb, var(--accent-vocab) 14%, transparent);
+  text-decoration-color: var(--_annotation-color);
 }
 .reader-annotation--conjugation,
 .reader-annotation--agreement,
 .reader-annotation--grammar {
-  background: color-mix(in srgb, var(--accent-grammar) 16%, transparent);
-  text-decoration-color: color-mix(in srgb, var(--accent-grammar) 60%, currentColor);
+  --_annotation-color: var(--accent-grammar);
+  background: color-mix(in srgb, var(--accent-grammar) 14%, transparent);
+  text-decoration-color: var(--_annotation-color);
 }
 .reader-annotation--idiom {
-  background: color-mix(in srgb, var(--accent-idiom) 16%, transparent);
-  text-decoration-color: color-mix(in srgb, var(--accent-idiom) 60%, currentColor);
+  --_annotation-color: var(--accent-idiom);
+  background: color-mix(in srgb, var(--accent-idiom) 14%, transparent);
+  text-decoration-color: var(--_annotation-color);
 }
 .reader-annotation--nuance,
 .reader-annotation--phrase_family {
-  background: color-mix(in srgb, var(--accent-literary) 16%, transparent);
-  text-decoration-color: color-mix(in srgb, var(--accent-literary) 60%, currentColor);
+  --_annotation-color: var(--accent-literary);
+  background: color-mix(in srgb, var(--accent-literary) 14%, transparent);
+  text-decoration-color: var(--_annotation-color);
 }
 .reader-annotation--script,
 .reader-annotation--transliteration {
-  background: color-mix(in srgb, var(--accent-etymology) 16%, transparent);
-  text-decoration-color: color-mix(in srgb, var(--accent-etymology) 60%, currentColor);
+  --_annotation-color: var(--accent-etymology);
+  background: color-mix(in srgb, var(--accent-etymology) 14%, transparent);
+  text-decoration-color: var(--_annotation-color);
 }
 
 

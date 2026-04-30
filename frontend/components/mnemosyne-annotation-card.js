@@ -1,31 +1,4 @@
-/**
- * mnemosyne-annotation-card.js — Detail card for a selected annotation.
- *
- * Shows word/phrase, type badge, subtitle, definition, in-context excerpt,
- * usage examples, SRS rating buttons, and a sticky footer.
- * Scrolls independently of the text panel.
- *
- * Attributes:
- *   loading  — boolean; shows skeleton while annotation data is fetching
- *
- * Property (object or null):
- *   data ← {
- *     id:          string | number,
- *     phrase:      string,                        — the annotated text
- *     type:        'vocab'|'grammar'|'idiom'|'literary'|'etymology',
- *     subtitle?:   string,                        — e.g. "adjective · from French"
- *     definition?: string,
- *     context?:    { text: string, start: number, end: number },
- *     examples?:   string[],
- *     rating?:     'correct'|'misspelling'|'incorrect'|null,
- *   }
- *
- * Events (bubbles + composed):
- *   ann-close        — user dismissed the card
- *   ann-rate         — { annotationId, rating: 'correct'|'misspelling'|'incorrect' }
- *   ann-add-note     — { annotationId }
- *   ann-more         — { annotationId }
- */
+import { t } from '../js/i18n.js'
 
 // Shared palette with mnemosyne-filter-bar and mnemosyne-text-panel
 const TYPE_COLOR = {
@@ -36,36 +9,18 @@ const TYPE_COLOR = {
   etymology: 'oklch(0.52 0.15 195)',
 }
 
-const TYPE_LABEL = {
-  vocab:     'Vocab',
-  grammar:   'Grammar',
-  idiom:     'Idiom',
-  literary:  'Literary',
-  etymology: 'Etymology',
+const TYPE_LABEL_KEY = {
+  vocab:     'ann_type_vocab',
+  grammar:   'ann_type_grammar',
+  idiom:     'ann_type_idiom',
+  literary:  'ann_type_literary',
+  etymology: 'ann_type_etymology',
 }
 
 const RATINGS = [
-  {
-    id:    'correct',
-    icon:  '\u2713',        // ✓
-    label: 'Correct',
-    desc:  'Knew this well',
-    color: 'oklch(0.52 0.16 145)',
-  },
-  {
-    id:    'misspelling',
-    icon:  '\u2248',        // ≈
-    label: 'Misspelling',
-    desc:  'Right meaning,\u00A0wrong spelling',
-    color: 'oklch(0.60 0.16 68)',
-  },
-  {
-    id:    'incorrect',
-    icon:  '\u2717',        // ✗
-    label: 'Incorrect',
-    desc:  'Didn\u2019t recognise\u00A0this',
-    color: 'oklch(0.52 0.20 25)',
-  },
+  { id: 'correct',     icon: '\u2713', labelKey: 'ann_rating_correct',     descKey: 'ann_rating_correct_desc',     color: 'oklch(0.52 0.16 145)' },
+  { id: 'misspelling', icon: '\u2248', labelKey: 'ann_rating_misspelling',  descKey: 'ann_rating_misspelling_desc', color: 'oklch(0.60 0.16 68)'  },
+  { id: 'incorrect',   icon: '\u2717', labelKey: 'ann_rating_incorrect',    descKey: 'ann_rating_incorrect_desc',   color: 'oklch(0.52 0.20 25)'  },
 ]
 
 class MnemosyneAnnotationCard extends HTMLElement {
@@ -81,6 +36,17 @@ class MnemosyneAnnotationCard extends HTMLElement {
   }
 
   connectedCallback() {
+    this.#shadow.innerHTML = this.#html()
+    this.#wire()
+    this.#syncAll()
+    document.addEventListener('mnemosyne:language-changed', this.#onLangChange)
+  }
+
+  disconnectedCallback() {
+    document.removeEventListener('mnemosyne:language-changed', this.#onLangChange)
+  }
+
+  #onLangChange = () => {
     this.#shadow.innerHTML = this.#html()
     this.#wire()
     this.#syncAll()
@@ -184,7 +150,7 @@ class MnemosyneAnnotationCard extends HTMLElement {
     const sub    = shadow.getElementById('subtitle')
     const color  = TYPE_COLOR[d.type] ?? TYPE_COLOR.vocab
     if (badge) {
-      badge.textContent = TYPE_LABEL[d.type] ?? d.type
+      badge.textContent = t(TYPE_LABEL_KEY[d.type]) || d.type
       badge.style.setProperty('--_c', color)
     }
     if (phrase) phrase.textContent = d.phrase ?? ''
@@ -213,7 +179,7 @@ class MnemosyneAnnotationCard extends HTMLElement {
     const sections = []
 
     if (d.definition) {
-      sections.push(this.#section('Definition', el => {
+      sections.push(this.#section(t('ann_section_definition'), el => {
         const p = document.createElement('p')
         p.className   = 'section__def'
         p.textContent = d.definition
@@ -222,13 +188,13 @@ class MnemosyneAnnotationCard extends HTMLElement {
     }
 
     if (d.context?.text) {
-      sections.push(this.#section('In context', el => {
+      sections.push(this.#section(t('ann_section_context'), el => {
         el.appendChild(this.#buildContext(d.context))
       }))
     }
 
     if (d.examples?.length) {
-      sections.push(this.#section('Examples', el => {
+      sections.push(this.#section(t('ann_section_examples'), el => {
         const list = document.createElement('ol')
         list.className = 'section__examples'
         for (const ex of d.examples) {
@@ -285,7 +251,7 @@ class MnemosyneAnnotationCard extends HTMLElement {
 
     const prompt = document.createElement('p')
     prompt.className   = 'section__rating-prompt'
-    prompt.textContent = 'How well did you know this?'
+    prompt.textContent = t('ann_rating_prompt')
     sec.appendChild(prompt)
 
     const group = document.createElement('div')
@@ -310,11 +276,11 @@ class MnemosyneAnnotationCard extends HTMLElement {
 
       const label = document.createElement('span')
       label.className   = 'rating-btn__label'
-      label.textContent = r.label
+      label.textContent = t(r.labelKey)
 
       const desc = document.createElement('span')
       desc.className   = 'rating-btn__desc'
-      desc.textContent = r.desc
+      desc.textContent = t(r.descKey)
 
       btn.append(icon, label, desc)
       group.appendChild(btn)
@@ -359,7 +325,7 @@ class MnemosyneAnnotationCard extends HTMLElement {
 
   <!-- Sticky footer -->
   <div class="card__footer" part="footer">
-    <button class="card__add-note" id="add-note-btn" type="button">Add Note</button>
+    <button class="card__add-note" id="add-note-btn" type="button">${t('ann_add_note')}</button>
     <button class="card__more"     id="more-btn"     type="button"
             aria-label="More options">&#x22EF;</button>
   </div>
