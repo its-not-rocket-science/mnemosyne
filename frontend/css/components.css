@@ -868,3 +868,128 @@ body.player-active .reader-nowplaying {
   font-size: 0.875rem;
   color: var(--text-secondary);
 }
+
+
+/* ── Recommended Reading Panel ──────────────────────────────────────────────
+   Sits inside the left column (app-shell__left).  container-type lets the
+   card grid switch from 1→2 columns based on the panel's own inline size,
+   so it automatically widens when the detail pane is closed and shrinks when
+   it opens — no JS or class toggling needed.                                 */
+
+.recommended-reading-panel {
+  container-type: inline-size;
+  margin-block: var(--space-4);
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.recommended-reading-panel__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-block-end: var(--space-2);
+}
+
+.recommended-reading-panel__header > div {
+  min-inline-size: 0;
+}
+
+.recommended-reading-panel__eyebrow {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent);
+}
+
+.recommended-reading-panel__header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.recommended-reading-panel__summary,
+.recommended-reading-panel__hint {
+  margin: 0 0 var(--space-2);
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+/* Card list: 1-column by default, 2-column when panel is wide enough.
+   Threshold is 45rem (720px) — detail pane closed on typical desktop easily
+   clears this; opening the pane drops the left column below it.             */
+
+.recommended-reading-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+
+@container (min-inline-size: 45rem) {
+  .recommended-reading-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.recommended-reading-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) * 0.75);
+  background: var(--bg);
+}
+
+.recommended-reading-card--chosen {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 5%, var(--surface));
+}
+
+.recommended-reading-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.recommended-reading-card--chosen .recommended-reading-card__meta {
+  color: var(--accent);
+}
+
+.recommended-reading-card h4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.recommended-reading-card__text {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+  overflow-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recommended-reading-card__reason {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.recommended-reading-card__actions {
+  margin-block-start: auto;
+  padding-block-start: 0.5rem;
+}
