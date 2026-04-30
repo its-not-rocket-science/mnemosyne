@@ -311,12 +311,17 @@ export class MnemosyneDetailPane extends HTMLElement {
     // Wire all interactive events
     this._wireEvents(matchedVariant, canonical, sentenceText || '', isNonCanonical)
 
-    // Explanation tab active by default — kick off translations immediately.
+    // Kick off translations for whichever tab is currently active.
+    // All three flags are reset so re-renders (depth change, language change)
+    // can refetch cleanly without relying on the tab-click path.
     this.#vocabTranslationFetched       = false
     this.#sentenceTranslationFetched    = false
     this.#explanationTranslationFetched = false
     this.#fetchVocabTranslation()
     this.#fetchExplanationTranslation()
+    if (this.#visibleTabs[this.#activeTab]?.id === 'context') {
+      this.#fetchSentenceTranslation(sentenceText || '')
+    }
   }
 
   // ── HTML fragment builders ──────────────────────────────────────────────────
