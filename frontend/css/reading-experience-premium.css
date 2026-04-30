@@ -58,7 +58,8 @@
 .site-hero::before {
   content: '';
   position: absolute;
-  inset: -1rem -1.5rem;
+  inset-block: 0;
+  inset-inline: -1.5rem;
   z-index: -1;
   background:
     radial-gradient(circle at 12% 8%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 34%),
