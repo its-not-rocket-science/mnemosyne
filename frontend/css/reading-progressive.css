@@ -67,8 +67,8 @@ body.reader-focus-mode .app-shell__top-nav {
 
 /* Inline preview */
 .reader-inline-preview {
-  /* Force a new row inside flex containers (.reader-sentence is display:flex). */
-  flex-basis: 100%;
+  /* Span both grid columns so preview sits below the full sentence width */
+  grid-column: 1 / -1;
   margin-block: 0.4rem 0.6rem;
   padding: 0.6rem 0.75rem;
   border-radius: 0.6rem;
