@@ -64,10 +64,6 @@ body.reader-focus-mode .app-shell__top-nav {
   opacity: 0.2;
 }
 
-body.reader-focus-mode .app-shell__text-panel {
-  max-inline-size: 72ch;
-  margin-inline: auto;
-}
 
 /* Inline preview */
 .reader-inline-preview {
