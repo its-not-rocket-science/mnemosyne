@@ -267,6 +267,15 @@ function numericLevel(annotation) {
   return 2
 }
 
+function computeTier(annotation) {
+  const band  = annotation.dataset.memoryBand  // set by applyAnnotationMemory
+  if (band === 'strong') return 3
+  if (band === 'weak')   return 1
+  // fading or unknown: use type/level to split primary vs secondary
+  const level = numericLevel(annotation)
+  return level === 2 ? 2 : 1
+}
+
 function applyAnnotationMemory(annotation) {
   const record = memoryFor(annotation)
   const strength = currentStrength(record)
@@ -283,6 +292,8 @@ function applyAnnotationMemory(annotation) {
   annotation.classList.toggle('reader-annotation--known', band === 'strong')
   annotation.classList.toggle('reader-annotation--weak', band === 'weak')
   annotation.classList.toggle('reader-annotation--learning', band === 'fading')
+
+  annotation.dataset.tier = String(computeTier(annotation))
 }
 
 function applyAdaptiveVisibility() {
