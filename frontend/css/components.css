@@ -420,54 +420,56 @@
 
 
 /* ── Reader sentence layout ──────────────────────────────────────────────── */
-/* Continuous reading flow: each sentence is a flex row [play btn] [text].
-   No card chrome, no nested grid — text reads like a book.                  */
+/* Two-column grid: narrow gutter column for the play button, 1fr for text.
+   Sentences read as continuous prose — no borders, no card chrome.
+   inline-preview spans both columns when inserted by reading-experience.js. */
 
 .reader-sentence {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.4em;
-  padding-block: 0.55em;
-  border-block-end: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
-  /* Reset inherited card chrome */
+  display: grid;
+  grid-template-columns: 1.75rem 1fr;
+  column-gap: 0.4rem;
+  /* Prose rhythm: enough space to see sentence breaks, not enough to feel like a list */
+  margin-block-end: 0.5em;
   background: transparent;
   border-radius: 0;
   box-shadow: none;
 }
 
-.reader-sentence:last-child { border-block-end: none; }
+.reader-sentence:last-child { margin-block-end: 0; }
 
-/* Playback highlight: left accent stripe + gentle tint */
+/* Playback: thin left accent on the full row; gutter + text sit inside it naturally */
 .reader-sentence.sentence-card--playing {
-  border-inline-start: 3px solid var(--accent);
-  background: color-mix(in srgb, var(--accent) 3%, var(--bg));
-  padding-inline-start: calc(0.4em - 3px);
+  border-inline-start: 2px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 3%, transparent);
+  /* Compensate for border so text column doesn't shift */
+  padding-inline-start: 2px;
 }
 
-/* ── Speaker button ──────────────────────────────────────────────────────── */
+/* ── Speaker button (gutter column) ─────────────────────────────────────── */
 
 .reader-gutter-btn {
-  flex-shrink: 0;
-  align-self: flex-start;
-  margin-block-start: 0.25em;   /* align with cap-height of first text line */
+  grid-column: 1;
+  align-self: start;
+  /* Optical nudge: aligns button baseline with cap-height of first text line */
+  margin-block-start: 0.3em;
   background: transparent;
   border: 1px solid transparent;
   border-radius: 999px;
-  min-block-size: 1.75rem;
-  min-inline-size: 1.75rem;
+  min-block-size: 1.5rem;
+  min-inline-size: 1.5rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font: inherit;
-  font-size: 0.55rem;
+  font-size: 0.5rem;
   color: var(--muted);
   cursor: pointer;
   padding: 0;
-  opacity: 0.35;
+  opacity: 0;
   transition: opacity 0.15s ease, color 0.1s ease, border-color 0.1s ease;
 }
 
+/* Reveal on sentence hover/focus — stays invisible at rest so prose reads clean */
 .reader-sentence:hover .reader-gutter-btn,
 .reader-sentence:focus-within .reader-gutter-btn,
 .reader-gutter-btn:focus-visible {
@@ -490,15 +492,14 @@
 }
 
 
-/* ── Reading text (serif, flowing) ──────────────────────────────────────── */
+/* ── Reading text (text column) ─────────────────────────────────────────── */
 
 .reader-sentence__text {
-  flex: 1 1 0;
-  min-inline-size: 0;
+  grid-column: 2;
   margin: 0;
   font-size: 1.1rem;
-  /* Extra line-height gives annotation tooltips room above each line. */
-  line-height: 2;
+  /* Extra line-height gives annotation tooltips vertical clearance */
+  line-height: 1.9;
   overflow-wrap: break-word;
 }
 
@@ -580,34 +581,36 @@
   .reader-annotation::before   { transition: none; }
 }
 
-/* Type-keyed highlight colours — --_annotation-color drives decoration + outline */
+/* Type-keyed highlight colours — --_annotation-color drives decoration + outline.
+   Background at 7% keeps annotations readable in flowing prose without visually
+   fragmenting the text the way heavier fills do.                               */
 .reader-annotation--vocabulary {
   --_annotation-color: var(--accent-vocab);
-  background: color-mix(in srgb, var(--accent-vocab) 14%, transparent);
+  background: color-mix(in srgb, var(--accent-vocab) 7%, transparent);
   text-decoration-color: var(--_annotation-color);
 }
 .reader-annotation--conjugation,
 .reader-annotation--agreement,
 .reader-annotation--grammar {
   --_annotation-color: var(--accent-grammar);
-  background: color-mix(in srgb, var(--accent-grammar) 14%, transparent);
+  background: color-mix(in srgb, var(--accent-grammar) 7%, transparent);
   text-decoration-color: var(--_annotation-color);
 }
 .reader-annotation--idiom {
   --_annotation-color: var(--accent-idiom);
-  background: color-mix(in srgb, var(--accent-idiom) 14%, transparent);
+  background: color-mix(in srgb, var(--accent-idiom) 7%, transparent);
   text-decoration-color: var(--_annotation-color);
 }
 .reader-annotation--nuance,
 .reader-annotation--phrase_family {
   --_annotation-color: var(--accent-literary);
-  background: color-mix(in srgb, var(--accent-literary) 14%, transparent);
+  background: color-mix(in srgb, var(--accent-literary) 7%, transparent);
   text-decoration-color: var(--_annotation-color);
 }
 .reader-annotation--script,
 .reader-annotation--transliteration {
   --_annotation-color: var(--accent-etymology);
-  background: color-mix(in srgb, var(--accent-etymology) 14%, transparent);
+  background: color-mix(in srgb, var(--accent-etymology) 7%, transparent);
   text-decoration-color: var(--_annotation-color);
 }
 
@@ -701,12 +704,18 @@ body.player-active .reader-nowplaying {
 /* ── Mobile overrides ────────────────────────────────────────────────────── */
 
 @media (max-width: 53.99rem) {
-  /* Enlarge touch target on mobile; always slightly visible (no hover on touch) */
+  /* Tighter gutter on mobile — saves horizontal space */
+  .reader-sentence {
+    grid-template-columns: 1.5rem 1fr;
+    column-gap: 0.3rem;
+  }
+
+  /* Touch has no hover — keep button always slightly visible */
   .reader-gutter-btn {
     min-block-size: 2.75rem;
-    min-inline-size: 2.75rem;
+    min-inline-size: 1.5rem;
     font-size: 0.65rem;
-    opacity: 0.4;
+    opacity: 0.3;
   }
 
   .reader-sentence:focus-within .reader-gutter-btn,
