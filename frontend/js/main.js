@@ -880,6 +880,25 @@ filterBar?.addEventListener('filter-change', ({ detail }) => {
   applyAnnotationFilter()
 })
 
+function applyFilterBarLabels() {
+  filterBar?.setLabels?.({
+    vocab:        t('filter_vocab'),
+    grammar:      t('filter_grammar'),
+    idioms:       t('filter_idioms'),
+    literary:     t('filter_literary'),
+    etymology:    t('filter_etymology'),
+    custom:       t('filter_custom'),
+    custom_title: t('filter_custom_title'),
+    custom_hint:  t('filter_custom_hint'),
+    add_btn:      t('filter_add_btn'),
+    placeholder:  t('filter_placeholder'),
+  })
+}
+
+document.addEventListener('mnemosyne:language-changed', applyFilterBarLabels)
+// Apply labels now (initUiLanguage ran before filterBar was defined).
+applyFilterBarLabels()
+
 levelFilterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     currentMinLevel = parseInt(btn.dataset.level, 10)
