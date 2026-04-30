@@ -40,13 +40,13 @@ const CATEGORIES = [
     id:    'literary',
     label: 'Literary',
     color: 'oklch(0.50 0.22 305)',
-    types: ['literary_device', 'rhetoric', 'figure_of_speech', 'literary', 'poetic'],
+    types: ['literary_device', 'rhetoric', 'figure_of_speech', 'literary', 'poetic', 'nuance', 'phrase_family', 'nuance_or_style'],
   },
   {
     id:    'etymology',
     label: 'Etymology',
     color: 'oklch(0.52 0.15 195)',
-    types: ['etymology', 'derivation', 'cognate', 'root'],
+    types: ['etymology', 'derivation', 'cognate', 'root', 'script', 'transliteration'],
   },
 ]
 
@@ -58,6 +58,7 @@ class MnemosyneFilterBar extends HTMLElement {
   #custom    = []         // user-added annotation type terms
   #available = null       // Set<string> | null — types present in current text
   #popOpen   = false
+  #labels    = {}         // label overrides: { vocab, grammar, idioms, literary, etymology, custom }
 
   constructor() {
     super()
@@ -86,6 +87,44 @@ class MnemosyneFilterBar extends HTMLElement {
     this.#syncAllPills()
     this.#renderCustomList()
     this.#dispatch()
+  }
+
+  /**
+   * Update pill and popover labels for i18n.
+   * @param {Object} labels — keys: vocab, grammar, idioms, literary, etymology,
+   *                          custom, custom_title, custom_hint, add_btn, placeholder
+   */
+  setLabels(labels) {
+    this.#labels = labels || {}
+    const $ = id => this.#shadow.getElementById(id)
+
+    // Category pills
+    CATEGORIES.forEach(({ id }) => {
+      const btn = this.#shadow.querySelector(`.pill[data-id="${id}"]`)
+      if (btn && this.#labels[id]) btn.textContent = this.#labels[id]
+    })
+
+    // Custom button label (preserve count suffix if active)
+    const lbl = $('custom-label')
+    if (lbl) {
+      const customWord = this.#labels.custom || 'Custom'
+      lbl.textContent = this.#custom.length > 0
+        ? `${customWord}\u2009(${this.#custom.length})`
+        : customWord
+    }
+
+    // Popover strings
+    const popTitle = this.#shadow.querySelector('.pop__title')
+    if (popTitle && this.#labels.custom_title) popTitle.textContent = this.#labels.custom_title
+
+    const popHint = this.#shadow.querySelector('.pop__hint')
+    if (popHint && this.#labels.custom_hint) popHint.textContent = this.#labels.custom_hint
+
+    const addBtn = $('pop-add-btn')
+    if (addBtn && this.#labels.add_btn) addBtn.textContent = this.#labels.add_btn
+
+    const input = $('pop-input')
+    if (input && this.#labels.placeholder) input.placeholder = this.#labels.placeholder
   }
 
   // ── Template ──────────────────────────────────────────────────────────────────

@@ -1,0 +1,324 @@
+/*
+  Mnemosyne premium reading experience layer.
+
+  Purpose
+  -------
+  This file intentionally sits after global.css, layout.css and components.css.
+  It upgrades perceived quality with layered light, tactile surfaces and richer
+  annotation affordance while preserving the existing semantic HTML, keyboard
+  behaviour, WCAG contrast strategy, reduced-motion support and touch targets.
+*/
+
+:root {
+  /* Layered shadows: realistic light falloff instead of one heavy blur. */
+  --elevation-1:
+    0 1px 2px rgb(0 0 0 / 0.04),
+    0 2px 4px rgb(0 0 0 / 0.03);
+
+  --elevation-2:
+    0 1px 2px rgb(0 0 0 / 0.05),
+    0 4px 8px rgb(0 0 0 / 0.04),
+    0 12px 24px rgb(0 0 0 / 0.05);
+
+  --elevation-3:
+    0 2px 4px rgb(0 0 0 / 0.06),
+    0 8px 18px rgb(0 0 0 / 0.06),
+    0 24px 48px rgb(0 0 0 / 0.08);
+
+  --surface-glass: color-mix(in srgb, var(--surface) 88%, transparent);
+  --surface-raised: color-mix(in srgb, var(--surface) 94%, white 6%);
+  --border-soft: color-mix(in srgb, var(--border) 82%, CanvasText 18%);
+  --reader-measure: 68ch;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface-raised: color-mix(in srgb, var(--surface) 90%, white 4%);
+    --border-soft: color-mix(in srgb, var(--border) 78%, CanvasText 22%);
+  }
+}
+
+/* Global tactile surfaces -------------------------------------------------- */
+
+.panel,
+.picker-dialog__inner,
+.reader-nowplaying {
+  background:
+    linear-gradient(180deg, var(--surface-raised), var(--surface)),
+    var(--surface);
+  border-color: var(--border-soft);
+  box-shadow: var(--elevation-2);
+}
+
+.site-hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.site-hero::before {
+  content: '';
+  position: absolute;
+  inset: -1rem -1.5rem;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 12% 8%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 34%),
+    radial-gradient(circle at 90% 0%, color-mix(in srgb, var(--accent-literary) 10%, transparent), transparent 32%);
+  border-radius: calc(var(--radius) * 1.5);
+  pointer-events: none;
+}
+
+.button-primary,
+.ghost-button,
+.rating-button,
+.script-toggle__btn,
+.level-filter__btn,
+.reader-chip {
+  transition:
+    background-color 0.14s ease,
+    border-color 0.14s ease,
+    color 0.14s ease,
+    box-shadow 0.14s ease,
+    transform 0.14s ease;
+}
+
+.button-primary {
+  box-shadow: var(--elevation-1);
+}
+
+.button-primary:hover:not(:disabled),
+.ghost-button:hover:not(:disabled),
+.rating-button:hover:not(:disabled),
+.script-toggle__btn:hover,
+.level-filter__btn:hover,
+.reader-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--elevation-1);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Reading column ----------------------------------------------------------- */
+
+#results-section.panel {
+  box-shadow: var(--elevation-3);
+}
+
+.results-region {
+  max-inline-size: var(--reader-measure);
+}
+
+.reader-sentence {
+  border-block-end-color: color-mix(in srgb, var(--border) 54%, transparent);
+  border-radius: 0.55rem;
+  margin-inline: -0.4rem;
+  padding-inline: 0.4rem;
+  transition:
+    background-color 0.16s ease,
+    box-shadow 0.16s ease,
+    transform 0.16s ease,
+    border-color 0.16s ease;
+}
+
+.reader-sentence:hover,
+.reader-sentence:focus-within {
+  background: color-mix(in srgb, var(--accent) 3%, var(--surface));
+  box-shadow: var(--elevation-1);
+  transform: translateY(-1px);
+}
+
+.reader-sentence.sentence-card--playing {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--accent) 11%, transparent),
+      color-mix(in srgb, var(--accent) 3%, var(--surface)) 42%,
+      transparent
+    );
+  box-shadow: var(--elevation-1);
+}
+
+.reader-sentence__text {
+  font-size: clamp(1.05rem, 0.35vw + 1rem, 1.22rem);
+  line-height: 2.05;
+  hanging-punctuation: first last;
+  text-wrap: pretty;
+}
+
+/* Annotation affordance ---------------------------------------------------- */
+
+.reader-annotation {
+  border: 1px solid transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+  transition:
+    background-color 0.14s ease,
+    border-color 0.14s ease,
+    box-shadow 0.14s ease,
+    filter 0.14s ease;
+}
+
+.reader-annotation:hover,
+.reader-annotation:focus-visible {
+  border-color: currentColor;
+  box-shadow: 0 0 0 0.18em color-mix(in srgb, currentColor 8%, transparent);
+  filter: none;
+}
+
+.reader-annotation::before {
+  box-shadow: var(--elevation-2);
+}
+
+.reader-annotation--vocabulary {
+  background: color-mix(in srgb, var(--accent-vocab) 13%, transparent);
+}
+
+.reader-annotation--grammar,
+.reader-annotation--agreement,
+.reader-annotation--conjugation {
+  background: color-mix(in srgb, var(--accent-grammar) 13%, transparent);
+}
+
+.reader-annotation--idiom {
+  background: color-mix(in srgb, var(--accent-idiom) 15%, transparent);
+}
+
+.reader-annotation--nuance,
+.reader-annotation--phrase_family {
+  background: color-mix(in srgb, var(--accent-literary) 15%, transparent);
+}
+
+.reader-annotation--script,
+.reader-annotation--transliteration {
+  background: color-mix(in srgb, var(--accent-etymology) 13%, transparent);
+}
+
+.reader-annotation[data-filtered],
+.reader-annotation[data-level-filtered] {
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* Filter controls ---------------------------------------------------------- */
+
+.results-filter-row {
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.4rem;
+  margin-block-end: var(--space-3);
+  border: 1px solid var(--border-soft);
+  border-radius: calc(var(--radius) * 0.9);
+  background: color-mix(in srgb, var(--surface) 88%, var(--bg) 12%);
+  box-shadow: var(--elevation-1);
+}
+
+.reader-chip,
+.level-filter__btn,
+.script-toggle__btn {
+  background: color-mix(in srgb, var(--surface) 82%, var(--bg) 18%);
+}
+
+.reader-chip--active,
+.level-filter__btn--active,
+.level-filter__btn[aria-pressed="true"],
+.script-toggle__btn--active,
+.script-toggle__btn[aria-pressed="true"] {
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.22), var(--elevation-1);
+}
+
+/* Detail pane shell -------------------------------------------------------- */
+
+.app-shell__detail-panel {
+  filter: drop-shadow(0 18px 34px rgb(0 0 0 / 0.12));
+}
+
+mnemosyne-detail-pane {
+  border-radius: calc(var(--radius) * 1.1);
+}
+
+/* Modal and dialog polish -------------------------------------------------- */
+
+.picker-dialog::backdrop,
+dialog::backdrop {
+  background:
+    radial-gradient(circle at center, rgb(0 0 0 / 0.18), rgb(0 0 0 / 0.52));
+  backdrop-filter: blur(3px);
+}
+
+/* Progress and minimap ----------------------------------------------------- */
+
+.reading-progress {
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.annotation-minimap__tick {
+  box-shadow: 0 0 0 1px color-mix(in srgb, Canvas 70%, transparent);
+}
+
+/* High contrast and reduced motion ---------------------------------------- */
+
+@media (forced-colors: active) {
+  .panel,
+  .picker-dialog__inner,
+  .reader-nowplaying,
+  .results-filter-row,
+  .reader-sentence,
+  .reader-annotation {
+    background: Canvas;
+    border-color: CanvasText;
+    box-shadow: none;
+  }
+
+  .reader-annotation {
+    text-decoration: underline;
+  }
+
+  .site-hero::before,
+  .reader-annotation::before {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button-primary,
+  .ghost-button,
+  .rating-button,
+  .script-toggle__btn,
+  .level-filter__btn,
+  .reader-chip,
+  .reader-sentence,
+  .reader-annotation {
+    transition: none;
+  }
+
+  .button-primary:hover:not(:disabled),
+  .ghost-button:hover:not(:disabled),
+  .rating-button:hover:not(:disabled),
+  .script-toggle__btn:hover,
+  .level-filter__btn:hover,
+  .reader-chip:hover,
+  .reader-sentence:hover,
+  .reader-sentence:focus-within {
+    transform: none;
+  }
+}
+
+@media (max-width: 53.99rem) {
+  .results-filter-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .results-region {
+    max-inline-size: none;
+  }
+
+  .reader-sentence {
+    margin-inline: -0.25rem;
+    padding-inline: 0.25rem;
+  }
+}
