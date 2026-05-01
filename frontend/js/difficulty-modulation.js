@@ -75,6 +75,11 @@ function chooseRecommendation(data) {
     chosen.modulation_mode = mode
     chosen.modulation_target = target
     chosen.modulation_bias = userBias
+    if (mode !== 'steady') {
+      document.dispatchEvent(new CustomEvent('mnemosyne:difficulty-adjusted', {
+        detail: { mode, target, bias: userBias },
+      }))
+    }
   }
   return chosen
 }
