@@ -10,6 +10,7 @@
 */
 
 import { t } from './i18n.js'
+import { toggleFlowMode, isFlowMode, syncFlowBtn } from './flow-mode.js'
 
 const results = document.querySelector('#results')
 const resultsSection = document.querySelector('#results-section')
@@ -77,9 +78,18 @@ function ensureToolbar() {
     modeGroup.appendChild(btn)
   }
 
-  // Secondary: focus + settings disclosure
+  // Secondary: flow + focus + settings disclosure
   const secondary = document.createElement('div')
   secondary.className = 'reader-ctrl__secondary'
+
+  const flowBtn = makeButton({
+    text: t('reader_flow_mode'),
+    i18nKey: 'reader_flow_mode',
+    className: 'reader-focus-btn',
+    pressed: isFlowMode(),
+  })
+  flowBtn.id = 'reader-flow-mode-btn'
+  flowBtn.addEventListener('click', () => { toggleFlowMode(); syncFlowBtn() })
 
   const focusBtn = makeButton({
     text: t('reader_focus_mode'),
@@ -107,7 +117,7 @@ function ensureToolbar() {
     settingsBtn.classList.toggle('reader-ctrl__settings-btn--open', opening)
   })
 
-  secondary.append(focusBtn, settingsBtn)
+  secondary.append(flowBtn, focusBtn, settingsBtn)
   row.append(modeGroup, secondary)
 
   // ── System body — populated by adaptive-reader.js ─────────────────────────
@@ -146,6 +156,8 @@ function syncToolbar() {
 
   const settingsBtn = bar.querySelector('#reader-settings-toggle')
   if (settingsBtn) settingsBtn.setAttribute('aria-label', t('reader_settings_aria'))
+
+  syncFlowBtn()
 }
 
 function setMode(mode) {
