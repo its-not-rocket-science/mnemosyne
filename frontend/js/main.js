@@ -829,6 +829,41 @@ results.addEventListener('lesson-open', async (event) => {
           onSpeak: (text) => speakText(text, ttsTag),
         }),
       })
+
+      // ── Visual anchor: link annotation to detail pane ─────────────────────
+      // Mark the source annotation so CSS can accent it and connect it to the
+      // pane's left border.  Also compute the vertical clip origin so the pane
+      // entry animation feels anchored to where the click happened.
+      document.querySelector('[data-detail-source]')?.removeAttribute('data-detail-source')
+      const sourceEl = event.target?.closest?.('.reader-annotation') || event.target
+      if (sourceEl?.classList?.contains('reader-annotation')) {
+        sourceEl.dataset.detailSource = ''
+      }
+
+      const detailPanelEl = document.querySelector('#app-detail-panel')
+      if (detailPanelEl) {
+        const TYPE_ACCENT = {
+          vocabulary: 'var(--accent-vocab)',
+          grammar: 'var(--accent-grammar)', conjugation: 'var(--accent-grammar)', agreement: 'var(--accent-grammar)',
+          idiom: 'var(--accent-idiom)',
+          nuance: 'var(--accent-literary)', phrase_family: 'var(--accent-literary)',
+          script: 'var(--accent-etymology)', transliteration: 'var(--accent-etymology)',
+        }
+        const type = sourceEl?.dataset?.type || lesson.type || ''
+        detailPanelEl.style.setProperty('--detail-accent', TYPE_ACCENT[type] ?? 'var(--accent)')
+
+        const panelRect = detailPanelEl.getBoundingClientRect()
+        const annotRect = sourceEl?.getBoundingClientRect?.() ?? { top: panelRect.top }
+        const fromPct = panelRect.height > 0
+          ? Math.max(0, Math.min(60, ((annotRect.top - panelRect.top) / panelRect.height) * 100))
+          : 0
+        detailPanelEl.style.setProperty('--detail-clip-bottom', `${100 - Math.round(fromPct)}%`)
+      }
+
+      // Force re-run of entry animation alongside show()'s own rAF.
+      detailPane.classList.remove('pane-entry-animate')
+      requestAnimationFrame(() => detailPane.classList.add('pane-entry-animate'))
+
       openDetail()
       paneBackdrop?.classList.add('is-visible')
     } else {
@@ -860,6 +895,9 @@ detailPane?.addEventListener('note-updated', ({ detail }) => {
 detailPane?.addEventListener('pane-close', () => {
   closeDetail()
   paneBackdrop?.classList.remove('is-visible')
+  document.querySelector('[data-detail-source]')?.removeAttribute('data-detail-source')
+  document.querySelector('#app-detail-panel')?.style.removeProperty('--detail-accent')
+  detailPane?.classList.remove('pane-entry-animate')
 })
 
 paneBackdrop?.addEventListener('click', () => detailPane?.hide())

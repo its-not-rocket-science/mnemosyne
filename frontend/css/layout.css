@@ -1,3 +1,10 @@
+/* Registered so clip-path can animate the var() reliably across browsers. */
+@property --detail-clip-bottom {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 65%;
+}
+
 /*
  * layout.css — App Shell Layout
  *
@@ -115,8 +122,10 @@
   flex-basis: 40%;
   max-inline-size: 26rem;
   border-inline-start-width: 1px;
+  border-inline-start-color: var(--detail-accent, var(--border));
   transition:
     flex-basis                300ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-inline-start-color 300ms ease,
     border-inline-start-width 1ms;                    /* immediate on open */
 }
 
@@ -174,11 +183,38 @@
   }
 }
 
+/* ── Detail pane entry animation ─────────────────────────────────────────────
+   Clips from the annotation's vertical position downward, creating the
+   illusion the panel unfurls from the selected word.
+   Only on desktop — mobile uses the bottom-sheet slide instead.              */
+
+@keyframes detail-pane-entry {
+  from {
+    clip-path: inset(0 0 var(--detail-clip-bottom, 65%) 0);
+    opacity: 0.82;
+  }
+  to {
+    clip-path: inset(0 0 0% 0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 54rem) {
+  .app-shell__detail-panel > mnemosyne-detail-pane.pane-entry-animate {
+    animation: detail-pane-entry 280ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
 /* ── Reduced motion ──────────────────────────────────────────────────────────
    Snap detail open/closed instantly.                                        */
 
 @media (prefers-reduced-motion: reduce) {
   .app-shell__detail-panel {
     transition: none;
+  }
+
+  .app-shell__detail-panel > mnemosyne-detail-pane.pane-entry-animate {
+    animation: none;
+    opacity: 1;
   }
 }
