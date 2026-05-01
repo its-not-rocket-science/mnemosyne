@@ -306,14 +306,15 @@ function applyAnnotationMemory(annotation) {
 
 function updateQuietBadge() {
   const quietCount = document.querySelectorAll('.reader-annotation[data-adaptive-reason="known"]').length
-  const toolbar = document.querySelector('#reader-adaptive-toolbar')
   let badge = document.querySelector('#reader-quiet-badge')
 
   if (quietCount === 0) {
     badge?.remove()
     return
   }
-  if (!toolbar) return
+
+  const anchor = document.querySelector('#reader-control-bar') || document.querySelector('#reader-adaptive-toolbar')
+  if (!anchor) return
 
   if (!badge) {
     badge = document.createElement('p')
@@ -339,7 +340,7 @@ function updateQuietBadge() {
     })
 
     badge.append(countEl, revealBtn)
-    toolbar.insertAdjacentElement('afterend', badge)
+    anchor.insertAdjacentElement('afterend', badge)
   }
 
   const countEl = badge.querySelector('.reader-quiet-badge__count')
@@ -388,20 +389,16 @@ function applyAdaptiveVisibility() {
   updateQuietBadge()
 }
 
-function ensureToolbar() {
-  if (!resultsSection) return null
-  let toolbar = document.querySelector('#reader-adaptive-toolbar')
-  if (toolbar) return toolbar
+function populateSystemBody(container) {
+  // Memory group: adaptive toggle + reinforcement
+  const memGroup = document.createElement('div')
+  memGroup.className = 'reader-ctrl__system-group'
 
-  toolbar = document.createElement('section')
-  toolbar.id = 'reader-adaptive-toolbar'
-  toolbar.className = 'reader-adaptive-toolbar'
-  toolbar.setAttribute('aria-label', 'Adaptive learning controls')
-
-  const label = document.createElement('span')
-  label.className = 'reader-adaptive-toolbar__label'
-  label.dataset.i18n = 'adaptive_reader_label'
-  label.textContent = t('adaptive_reader_label')
+  const memLabel = document.createElement('span')
+  memLabel.className = 'reader-ctrl__system-label'
+  memLabel.dataset.i18n = 'adaptive_reader_label'
+  memLabel.textContent = t('adaptive_reader_label')
+  memLabel.setAttribute('aria-hidden', 'true')
 
   const toggle = document.createElement('button')
   toggle.id = 'reader-adaptive-toggle'
@@ -429,6 +426,12 @@ function ensureToolbar() {
     announce(reinforcementEnabled ? t('adaptive_reinforcement_on') : t('adaptive_reinforcement'))
   })
 
+  memGroup.append(memLabel, toggle, reinforce)
+
+  // Action group: sync + reset — pushed to end
+  const actionGroup = document.createElement('div')
+  actionGroup.className = 'reader-ctrl__system-group reader-ctrl__system-group--end'
+
   const sync = document.createElement('button')
   sync.type = 'button'
   sync.className = 'reader-adaptive-sync'
@@ -454,10 +457,32 @@ function ensureToolbar() {
     announce(t('adaptive_reset'))
   })
 
-  toolbar.append(label, toggle, reinforce, sync, reset)
+  actionGroup.append(sync, reset)
+  container.append(memGroup, actionGroup)
+}
 
-  const experienceToolbar = document.querySelector('#reader-experience-toolbar')
-  if (experienceToolbar) experienceToolbar.insertAdjacentElement('afterend', toolbar)
+function ensureToolbar() {
+  // Prefer the unified bar's system-body slot (created by reading-experience.js)
+  const systemBody = document.querySelector('#reader-system-body')
+  if (systemBody) {
+    if (!systemBody.querySelector('#reader-adaptive-toggle')) populateSystemBody(systemBody)
+    return systemBody
+  }
+
+  // Fallback: standalone toolbar when reading-experience.js is absent
+  if (!resultsSection) return null
+  let toolbar = document.querySelector('#reader-adaptive-toolbar')
+  if (toolbar) return toolbar
+
+  toolbar = document.createElement('section')
+  toolbar.id = 'reader-adaptive-toolbar'
+  toolbar.className = 'reader-adaptive-toolbar reader-ctrl__system-body'
+  toolbar.setAttribute('aria-label', 'Adaptive learning controls')
+  toolbar.setAttribute('role', 'group')
+  populateSystemBody(toolbar)
+
+  const controlBar = document.querySelector('#reader-control-bar')
+  if (controlBar) controlBar.insertAdjacentElement('afterend', toolbar)
   else resultsSection.prepend(toolbar)
   return toolbar
 }
