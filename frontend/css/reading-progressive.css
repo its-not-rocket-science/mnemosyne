@@ -179,6 +179,33 @@ body.reader-focus-mode .app-shell__top-nav {
   opacity: 0.2;
 }
 
+/* ── Flow mode ────────────────────────────────────────────────────────────────
+   During playback, inactive sentences dim so the eye stays on the active one.
+   No fading when idle — user browses freely.
+   body.reader-flow-playing is toggled by flow-mode.js on state-change.       */
+
+body.reader-flow-mode.reader-flow-playing .sentence-card {
+  opacity: 0.38;
+  transition: opacity 0.3s ease;
+}
+
+body.reader-flow-mode.reader-flow-playing .sentence-card[data-flow-active] {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.reader-flow-mode .sentence-card {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  body.reader-flow-mode.reader-flow-playing .sentence-card:not([data-flow-active]) {
+    opacity: 0.5;
+  }
+}
+
 
 /* Inline preview */
 .reader-inline-preview {
