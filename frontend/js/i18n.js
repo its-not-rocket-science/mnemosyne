@@ -192,6 +192,7 @@ const STRINGS = {
     reader_focus_mode:        "Focus mode",
     reader_focus_on:          "Focus mode on",
     reader_focus_off:         "Focus mode off",
+    reader_settings_aria:     "Reading settings",
     reader_preview_hint_subtle: "Open the detail pane for the full explanation.",
     reader_preview_hint_default: "Use the detail pane for explanation, context, origin and related forms.",
     reader_open_full_lesson:  "Open full lesson",

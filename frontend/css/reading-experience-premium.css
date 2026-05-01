@@ -204,6 +204,13 @@
   border-color: transparent !important;
 }
 
+/* Reader control bar ------------------------------------------------------- */
+
+.reader-ctrl-bar {
+  border-color: var(--border-soft);
+  box-shadow: var(--elevation-1);
+}
+
 /* Filter controls ---------------------------------------------------------- */
 
 .results-filter-row {
