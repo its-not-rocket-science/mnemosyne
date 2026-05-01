@@ -9,6 +9,8 @@ const ONBOARDING_KEY = 'mnemosyne.onboarding.seen.v2'
 const COACH_KEY = 'mnemosyne.firstRun.coach.dismissed'
 
 let chooseTextBtn, languageSelect, pickerSampleBtn, pickerUseBtn, results, a11yLive
+let coachStep = 0
+let spotlit = null
 
 function announce(message) {
   if (!a11yLive) return
@@ -47,6 +49,24 @@ function dismissPanel() {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) panel.remove()
 }
 
+function spotlightAnnotation(el) {
+  spotlit?.classList.remove('onboarding-spotlight')
+  spotlit = el
+  el.classList.add('onboarding-spotlight')
+  el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' })
+}
+
+function clearSpotlight() {
+  spotlit?.classList.remove('onboarding-spotlight')
+  spotlit = null
+}
+
+function dismissCoach() {
+  document.querySelector('#mnemosyne-first-run-coach')?.remove()
+  clearSpotlight()
+  localStorage.setItem(COACH_KEY, 'true')
+}
+
 function openDemo() {
   markSeen()
   dismissPanel()
@@ -54,14 +74,11 @@ function openDemo() {
   chooseTextBtn?.click()
   setTimeout(() => {
     pickerSampleBtn?.click()
-    pickerUseBtn?.focus()
-    announce('Sample text loaded. Press Use this text to see your first adaptive lesson.')
-    showCoachStep({
-      title: 'One click from the first lesson',
-      body: 'The sample is loaded. Use this text, then Mnemosyne will highlight what can be learned and adapt from there.',
-      target: pickerUseBtn,
-    })
-  }, 250)
+    setTimeout(() => {
+      pickerUseBtn?.click()
+      announce('Sample loading. Highlighted words will appear — tap one to explore it.')
+    }, 150)
+  }, 200)
 }
 
 function startWithOwnText() {
@@ -74,7 +91,6 @@ function startWithOwnText() {
 function ensureOnboarding() {
   if (hasSeenOnboarding()) return
 
-  // Insert above the parse section, inside the authenticated content column.
   const wrap = document.querySelector('#main .wrap')
   if (!wrap) return
 
@@ -83,23 +99,17 @@ function ensureOnboarding() {
   panel.setAttribute('aria-labelledby', 'mnemosyne-onboarding-title')
   panel.innerHTML = `
     <div class="mnemosyne-onboarding__header">
-      <p class="mnemosyne-onboarding__eyebrow">First 30 seconds</p>
+      <p class="mnemosyne-onboarding__eyebrow">Get started</p>
       <button type="button" class="dialog-close-btn mnemosyne-onboarding__close" aria-label="Dismiss introduction">&#x2715;</button>
     </div>
-    <h2 id="mnemosyne-onboarding-title" class="mnemosyne-onboarding__headline">Just read. Mnemosyne handles the rest.</h2>
-    <ol class="mnemosyne-onboarding__list">
-      <li><strong>Memory</strong> — what you know and what is fading.</li>
-      <li><strong>Difficulty</strong> — whether the next passage should be easier or harder.</li>
-      <li><strong>Pace</strong> — whether you are flowing, tired, or overloaded.</li>
-    </ol>
-    <p class="mnemosyne-onboarding__promise">You stay in the text. The system adjusts around you.</p>
+    <h2 id="mnemosyne-onboarding-title" class="mnemosyne-onboarding__headline">Read. Tap a word. Learn.</h2>
+    <p class="mnemosyne-onboarding__lede">Tap any highlighted word — Mnemosyne tracks what you know and adapts as you go.</p>
     <div class="mnemosyne-onboarding__actions button-row">
-      <button class="button-primary" id="onboarding-demo">Try a 30-second demo</button>
+      <button class="button-primary" id="onboarding-demo">Start with a sample →</button>
       <button class="ghost-button" id="onboarding-own-text">Use my own text</button>
     </div>
   `
 
-  // Insert before the first child of .wrap (before the parse panel).
   wrap.insertBefore(panel, wrap.firstElementChild)
 
   panel.querySelector('.mnemosyne-onboarding__close')?.addEventListener('click', () => {
@@ -110,7 +120,7 @@ function ensureOnboarding() {
   panel.querySelector('#onboarding-own-text')?.addEventListener('click', startWithOwnText)
 }
 
-function showCoachStep({ title, body, target }) {
+function showCoachStep({ title, body, target, step }) {
   if (localStorage.getItem(COACH_KEY) === 'true') return
 
   let coach = document.querySelector('#mnemosyne-first-run-coach')
@@ -125,20 +135,49 @@ function showCoachStep({ title, body, target }) {
       <p></p>
     `
     document.body.appendChild(coach)
-    coach.querySelector('.mnemosyne-first-run-coach__close')?.addEventListener('click', () => {
-      localStorage.setItem(COACH_KEY, 'true')
-      coach.remove()
-    })
+    coach.querySelector('.mnemosyne-first-run-coach__close')?.addEventListener('click', dismissCoach)
   }
 
   coach.querySelector('h4').textContent = title
   coach.querySelector('p').textContent = body
+  if (step != null) coach.dataset.step = String(step)
 
   if (target?.getBoundingClientRect) {
     const rect = target.getBoundingClientRect()
-    coach.style.setProperty('--coach-top', `${Math.max(16, rect.bottom + 12)}px`)
-    coach.style.setProperty('--coach-left', `${Math.max(16, Math.min(rect.left, window.innerWidth - 360))}px`)
+    const margin = 16
+    const coachW = 320
+    const top = rect.bottom + 14
+    const left = Math.max(margin, Math.min(rect.left, window.innerWidth - coachW - margin))
+    coach.style.setProperty('--coach-top', `${Math.max(margin, top)}px`)
+    coach.style.setProperty('--coach-left', `${left}px`)
   }
+
+  announce(`${title}. ${body}`)
+}
+
+function observePreviewOpen() {
+  if (!results) return
+  const observer = new MutationObserver(() => {
+    const preview = results.querySelector('.reader-inline-preview')
+    if (!preview) return
+    observer.disconnect()
+    if (coachStep !== 1) return
+    coachStep = 2
+    showCoachStep({
+      title: 'Rate this word',
+      body: 'Weak · Learning · Known — one tap and Mnemosyne remembers it.',
+      target: preview,
+      step: 2,
+    })
+    // Dismiss after first rating tap
+    preview.addEventListener('click', event => {
+      if (event.target.closest('.reader-memory-btn')) {
+        coachStep = 3
+        setTimeout(dismissCoach, 500)
+      }
+    })
+  })
+  observer.observe(results, { childList: true, subtree: true })
 }
 
 function observeFirstLesson() {
@@ -146,12 +185,23 @@ function observeFirstLesson() {
   const observer = new MutationObserver(() => {
     const firstAnnotation = results.querySelector('.reader-annotation')
     if (!firstAnnotation) return
-    showCoachStep({
-      title: 'This is the adaptive moment',
-      body: 'Click a highlighted word or phrase. Mark it weak, learning, or known. Mnemosyne uses that signal to reshape future text.',
-      target: firstAnnotation,
-    })
     observer.disconnect()
+    if (localStorage.getItem(COACH_KEY) === 'true') return
+
+    coachStep = 1
+    spotlightAnnotation(firstAnnotation)
+    showCoachStep({
+      title: 'Tap any highlighted word',
+      body: 'Color shows the type — vocab, grammar, idiom. Tap to explore it.',
+      target: firstAnnotation,
+      step: 1,
+    })
+    observePreviewOpen()
+
+    // Clear spotlight on any annotation interaction
+    results.addEventListener('click', event => {
+      if (event.target.closest('.reader-annotation')) clearSpotlight()
+    }, { once: true })
   })
   observer.observe(results, { childList: true, subtree: true })
 }

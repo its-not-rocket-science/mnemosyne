@@ -295,6 +295,17 @@ body.reader-focus-mode .app-shell__top-nav {
   }
 }
 
+/* Onboarding spotlight ----------------------------------------------------- */
+
+.onboarding-spotlight {
+  animation: onboarding-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes onboarding-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--_annotation-color, var(--accent)) 50%, transparent); }
+  50%       { box-shadow: 0 0 0 5px color-mix(in srgb, var(--_annotation-color, var(--accent)) 20%, transparent); }
+}
+
 /* Onboarding welcome panel ------------------------------------------------- */
 
 .mnemosyne-onboarding {
@@ -336,10 +347,11 @@ body.reader-focus-mode .app-shell__top-nav {
   gap: 0.3rem;
 }
 
-.mnemosyne-onboarding__promise {
-  font-style: italic;
+.mnemosyne-onboarding__lede {
+  font-size: 0.9rem;
   color: var(--muted);
   margin-block: 0 var(--space-3);
+  line-height: 1.5;
 }
 
 .mnemosyne-onboarding__actions {
@@ -358,31 +370,53 @@ body.reader-focus-mode .app-shell__top-nav {
 
 .mnemosyne-first-run-coach {
   position: fixed;
-  top: var(--coach-top, 50%);
-  left: var(--coach-left, 50%);
+  inset-block-start: var(--coach-top, 50%);
+  inset-inline-start: var(--coach-left, 50%);
   z-index: 300;
-  max-inline-size: 22rem;
-  padding: var(--space-3);
+  inline-size: 18rem;
+  padding: var(--space-2) var(--space-3);
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
   border-radius: var(--radius);
   box-shadow: var(--elevation-2, 0 4px 16px rgb(0 0 0 / 0.12));
 }
 
+/* Step dots: ● ○  (step 1) or ○ ●  (step 2) */
+.mnemosyne-first-run-coach::before {
+  content: '';
+  display: block;
+  margin-block-end: var(--space-1);
+  block-size: 0.4rem;
+  background-image:
+    radial-gradient(circle, var(--accent) 0.18rem, transparent 0.18rem),
+    radial-gradient(circle, var(--muted) 0.18rem, transparent 0.18rem);
+  background-size: 0.9rem 0.4rem;
+  background-repeat: no-repeat;
+  background-position: 0 50%, 1rem 50%;
+}
+
+.mnemosyne-first-run-coach[data-step="2"]::before {
+  background-image:
+    radial-gradient(circle, var(--muted) 0.18rem, transparent 0.18rem),
+    radial-gradient(circle, var(--accent) 0.18rem, transparent 0.18rem);
+}
+
 .mnemosyne-first-run-coach h4 {
   margin: 0 0 var(--space-1);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  padding-inline-end: 1.4rem;  /* avoid overlap with close ×  */
 }
 
 .mnemosyne-first-run-coach p {
   margin: 0;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--muted);
+  line-height: 1.45;
 }
 
 .mnemosyne-first-run-coach__close {
   position: absolute;
-  inset-block-start: 0.5rem;
+  inset-block-start: 0.4rem;
   inset-inline-end: 0.5rem;
   background: none;
   border: none;
@@ -390,10 +424,10 @@ body.reader-focus-mode .app-shell__top-nav {
   color: var(--muted);
   font-size: 1rem;
   line-height: 1;
+  padding: 0.1rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reader-experience-toolbar,
   .reader-inline-preview {
     transition: none;
   }
@@ -401,9 +435,20 @@ body.reader-focus-mode .app-shell__top-nav {
   .mnemosyne-onboarding--dismissed {
     animation: none;
   }
+
+  .onboarding-spotlight {
+    animation: none;
+    outline: 2px solid var(--_annotation-color, var(--accent));
+    outline-offset: 2px;
+  }
 }
 
 @media (forced-colors: active) {
+  .onboarding-spotlight {
+    outline: 2px solid Highlight;
+    animation: none;
+  }
+
   .mnemosyne-first-run-coach {
     border: 2px solid CanvasText;
     box-shadow: none;
