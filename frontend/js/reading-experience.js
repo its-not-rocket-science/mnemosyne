@@ -46,25 +46,23 @@ function makeButton({ text, i18nKey, className, pressed, ariaLabel }) {
 
 function ensureToolbar() {
   if (!resultsSection) return null
-  let toolbar = document.querySelector('#reader-experience-toolbar')
-  if (toolbar) return toolbar
+  let bar = document.querySelector('#reader-control-bar')
+  if (bar) return bar
 
-  toolbar = document.createElement('section')
-  toolbar.id = 'reader-experience-toolbar'
-  toolbar.className = 'reader-experience-toolbar'
-  toolbar.setAttribute('aria-label', 'Reading experience controls')
+  bar = document.createElement('section')
+  bar.id = 'reader-control-bar'
+  bar.className = 'reader-ctrl-bar'
+  bar.setAttribute('aria-label', 'Reading controls')
 
-  const density = document.createElement('div')
-  density.className = 'reader-experience-toolbar__group'
-  density.setAttribute('role', 'group')
-  density.setAttribute('aria-label', 'Annotation reveal density')
+  // ── Primary row ───────────────────────────────────────────────────────────
+  const row = document.createElement('div')
+  row.className = 'reader-ctrl__row'
 
-  const label = document.createElement('span')
-  label.className = 'reader-experience-toolbar__label'
-  label.textContent = t('reader_reveal_label')
-  label.dataset.i18n = 'reader_reveal_label'
-  label.setAttribute('aria-hidden', 'true')
-  density.appendChild(label)
+  // Segmented mode selector
+  const modeGroup = document.createElement('div')
+  modeGroup.className = 'reader-ctrl__primary'
+  modeGroup.setAttribute('role', 'group')
+  modeGroup.setAttribute('aria-label', t('reader_reveal_label'))
 
   for (const mode of MODES) {
     const btn = makeButton({
@@ -76,40 +74,78 @@ function ensureToolbar() {
     btn.dataset.mode = mode.value
     btn.title = t(mode.hintKey)
     btn.addEventListener('click', () => setMode(mode.value))
-    density.appendChild(btn)
+    modeGroup.appendChild(btn)
   }
+
+  // Secondary: focus + settings disclosure
+  const secondary = document.createElement('div')
+  secondary.className = 'reader-ctrl__secondary'
 
   const focusBtn = makeButton({
     text: t('reader_focus_mode'),
     i18nKey: 'reader_focus_mode',
     className: 'reader-focus-btn',
     pressed: focusMode,
-    ariaLabel: t('reader_focus_mode'),
   })
   focusBtn.id = 'reader-focus-mode-btn'
   focusBtn.addEventListener('click', () => setFocusMode(!focusMode))
 
-  toolbar.append(density, focusBtn)
-  resultsSection.prepend(toolbar)
-  return toolbar
+  const settingsBtn = document.createElement('button')
+  settingsBtn.type = 'button'
+  settingsBtn.id = 'reader-settings-toggle'
+  settingsBtn.className = 'reader-ctrl__settings-btn'
+  settingsBtn.setAttribute('aria-label', t('reader_settings_aria'))
+  settingsBtn.setAttribute('aria-expanded', 'false')
+  settingsBtn.setAttribute('aria-controls', 'reader-system-body')
+  settingsBtn.innerHTML = '<span aria-hidden="true">⚙</span>'
+  settingsBtn.addEventListener('click', () => {
+    const body = document.querySelector('#reader-system-body')
+    if (!body) return
+    const opening = body.hidden
+    body.hidden = !opening
+    settingsBtn.setAttribute('aria-expanded', String(opening))
+    settingsBtn.classList.toggle('reader-ctrl__settings-btn--open', opening)
+  })
+
+  secondary.append(focusBtn, settingsBtn)
+  row.append(modeGroup, secondary)
+
+  // ── System body — populated by adaptive-reader.js ─────────────────────────
+  const systemBody = document.createElement('div')
+  systemBody.id = 'reader-system-body'
+  systemBody.className = 'reader-ctrl__system-body'
+  systemBody.setAttribute('role', 'group')
+  systemBody.setAttribute('aria-label', t('reader_settings_aria'))
+  systemBody.hidden = true
+
+  bar.append(row, systemBody)
+  resultsSection.prepend(bar)
+  return bar
 }
 
 function syncToolbar() {
-  const toolbar = ensureToolbar()
-  if (!toolbar) return
-  toolbar.querySelectorAll('.reader-mode-btn').forEach(btn => {
+  const bar = document.querySelector('#reader-control-bar')
+  if (!bar) return
+
+  bar.querySelectorAll('.reader-mode-btn').forEach(btn => {
     const active = btn.dataset.mode === currentMode
     btn.setAttribute('aria-pressed', String(active))
     btn.classList.toggle('reader-mode-btn--active', active)
-    // Refresh title in case language changed.
     const mode = MODES.find(m => m.value === btn.dataset.mode)
     if (mode) btn.title = t(mode.hintKey)
   })
-  const focusBtn = toolbar.querySelector('#reader-focus-mode-btn')
+
+  const focusBtn = bar.querySelector('#reader-focus-mode-btn')
   if (focusBtn) {
+    const key = focusMode ? 'reader_focus_on' : 'reader_focus_mode'
+    focusBtn.dataset.i18n = key
+    focusBtn.textContent = t(key)
     focusBtn.setAttribute('aria-pressed', String(focusMode))
     focusBtn.classList.toggle('reader-focus-btn--active', focusMode)
   }
+
+  const settingsBtn = bar.querySelector('#reader-settings-toggle')
+  if (settingsBtn) settingsBtn.setAttribute('aria-label', t('reader_settings_aria'))
 }
 
 function setMode(mode) {
