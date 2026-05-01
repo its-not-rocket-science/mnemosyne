@@ -169,12 +169,17 @@ function renderIndicator() {
   document.body.classList.toggle('mnemosyne-flow-mode', snap.mode === 'flow')
 
   const text = indicator.querySelector('.cognitive-pacing-indicator__text')
-  if (text) {
-    const delaySeconds = Math.round(snap.nextDelayMs / 1000)
-    const modeLabel = t(`pacing_${snap.mode}`) || snap.mode
-    const pauseLabel = t('pacing_next_pause').replace('{n}', delaySeconds)
-    text.textContent = `${t('pacing_label')}: ${modeLabel} · ${pauseLabel}`
+  if (!text) return
+
+  if (snap.mode === 'steady' || snap.mode === 'flow') {
+    indicator.hidden = true
+    text.textContent = ''
+    return
   }
+
+  indicator.hidden = false
+  const hintKey = `pacing_${snap.mode}_hint`
+  text.textContent = t(hintKey)
 }
 
 function installObservers() {

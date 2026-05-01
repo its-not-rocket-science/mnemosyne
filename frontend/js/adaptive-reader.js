@@ -293,7 +293,78 @@ function applyAnnotationMemory(annotation) {
   annotation.classList.toggle('reader-annotation--weak', band === 'weak')
   annotation.classList.toggle('reader-annotation--learning', band === 'fading')
 
+  if (band === 'strong') {
+    annotation.dataset.adaptiveReason = 'known'
+    annotation.title = t('adaptive_hidden_known')
+  } else {
+    delete annotation.dataset.adaptiveReason
+    annotation.removeAttribute('title')
+  }
+
   annotation.dataset.tier = String(computeTier(annotation))
+}
+
+function updateQuietBadge() {
+  const quietCount = document.querySelectorAll('.reader-annotation[data-adaptive-reason="known"]').length
+  const toolbar = document.querySelector('#reader-adaptive-toolbar')
+  let badge = document.querySelector('#reader-quiet-badge')
+
+  if (quietCount === 0) {
+    badge?.remove()
+    return
+  }
+  if (!toolbar) return
+
+  if (!badge) {
+    badge = document.createElement('p')
+    badge.id = 'reader-quiet-badge'
+    badge.className = 'reader-quiet-badge'
+    badge.setAttribute('aria-live', 'polite')
+
+    const countEl = document.createElement('span')
+    countEl.className = 'reader-quiet-badge__count'
+
+    const revealBtn = document.createElement('button')
+    revealBtn.type = 'button'
+    revealBtn.className = 'reader-quiet-badge__reveal'
+    revealBtn.setAttribute('aria-pressed', 'false')
+    revealBtn.dataset.i18n = 'adaptive_quiet_reveal'
+    revealBtn.textContent = t('adaptive_quiet_reveal')
+    revealBtn.addEventListener('click', () => {
+      const revealing = document.body.toggleAttribute('data-reveal-known')
+      revealBtn.setAttribute('aria-pressed', String(revealing))
+      const key = revealing ? 'adaptive_quiet_hide' : 'adaptive_quiet_reveal'
+      revealBtn.dataset.i18n = key
+      revealBtn.textContent = t(key)
+    })
+
+    badge.append(countEl, revealBtn)
+    toolbar.insertAdjacentElement('afterend', badge)
+  }
+
+  const countEl = badge.querySelector('.reader-quiet-badge__count')
+  if (countEl) {
+    countEl.textContent = t('adaptive_quiet_count').replace('{n}', quietCount)
+    countEl.dataset.i18n = 'adaptive_quiet_count'
+    countEl.dataset.i18nCount = String(quietCount)
+  }
+}
+
+function flashDifficultyAdjustment(mode) {
+  const existing = document.querySelector('.reader-difficulty-toast')
+  existing?.remove()
+
+  const key = { flow: 'diff_flow', fatigue: 'diff_fatigue', overload: 'diff_overload' }[mode]
+  if (!key) return
+
+  const toast = document.createElement('p')
+  toast.className = 'reader-difficulty-toast'
+  toast.setAttribute('role', 'status')
+  toast.setAttribute('aria-live', 'polite')
+  toast.textContent = t(key)
+  document.body.appendChild(toast)
+  announce(t(key))
+  toast.addEventListener('animationend', () => toast.remove(), { once: true })
 }
 
 function applyAdaptiveVisibility() {
@@ -314,6 +385,7 @@ function applyAdaptiveVisibility() {
     annotation.toggleAttribute('data-reinforcement-hidden', shouldHideForReinforcement)
   })
   syncToolbar()
+  updateQuietBadge()
 }
 
 function ensureToolbar() {
@@ -597,6 +669,10 @@ function init() {
   document.addEventListener('mnemosyne:language-changed', () => {
     syncToolbar()
     renderIntelligenceSummary()
+    updateQuietBadge()
+  })
+  document.addEventListener('mnemosyne:difficulty-adjusted', ({ detail }) => {
+    flashDifficultyAdjustment(detail.mode)
   })
   setInterval(() => {
     applyAdaptiveVisibility()
