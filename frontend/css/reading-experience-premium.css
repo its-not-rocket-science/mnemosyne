@@ -204,6 +204,28 @@
   border-color: transparent !important;
 }
 
+/* Active source annotation — stronger highlight + right-edge accent bar that
+   visually connects to the detail panel border on the right.
+   Specificity (0,3,0) beats type classes (0,1,0) so no !important needed.   */
+
+.reader-annotation[data-detail-source][data-type] {
+  background: color-mix(in srgb, var(--_annotation-color) 22%, transparent);
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--_annotation-color);
+  box-shadow:
+    inset -2px 0 0 0 var(--_annotation-color),
+    0 0 0 1px color-mix(in srgb, var(--_annotation-color) 18%, transparent);
+  border-color: color-mix(in srgb, var(--_annotation-color) 40%, transparent);
+}
+
+@media (forced-colors: active) {
+  .reader-annotation[data-detail-source][data-type] {
+    outline: 2px solid Highlight;
+    box-shadow: none;
+  }
+}
+
 /* Reader control bar ------------------------------------------------------- */
 
 .reader-ctrl-bar {
