@@ -117,7 +117,16 @@ function ensureToolbar() {
     settingsBtn.classList.toggle('reader-ctrl__settings-btn--open', opening)
   })
 
-  secondary.append(flowBtn, focusBtn, settingsBtn)
+  const adaptiveBtn = document.createElement('button')
+  adaptiveBtn.type = 'button'
+  adaptiveBtn.id = 'reader-adaptive-btn'
+  adaptiveBtn.className = 'reader-focus-btn'
+  adaptiveBtn.dataset.i18n = 'adaptive_btn'
+  adaptiveBtn.textContent = t('adaptive_btn')
+  adaptiveBtn.setAttribute('aria-haspopup', 'dialog')
+  adaptiveBtn.addEventListener('click', () => window.mnemosyneDifficulty?.openDialog?.())
+
+  secondary.append(flowBtn, focusBtn, adaptiveBtn, settingsBtn)
   row.append(modeGroup, secondary)
 
   // ── System body — populated by adaptive-reader.js ─────────────────────────
@@ -156,6 +165,9 @@ function syncToolbar() {
 
   const settingsBtn = bar.querySelector('#reader-settings-toggle')
   if (settingsBtn) settingsBtn.setAttribute('aria-label', t('reader_settings_aria'))
+
+  const adaptiveBtn = bar.querySelector('#reader-adaptive-btn')
+  if (adaptiveBtn) adaptiveBtn.textContent = t('adaptive_btn')
 
   syncFlowBtn()
 }
