@@ -819,7 +819,7 @@ body.player-active .reader-nowplaying {
 
 .reading-progress {
   position: sticky;
-  top: var(--app-top-nav-h, 0px);
+  top: 0;
   z-index: calc(var(--z-filter-bar, 10) - 1);
   height: 3px;
   background: color-mix(in srgb, var(--accent) 15%, var(--border));
