@@ -792,9 +792,10 @@ kbd {
    Slim footer below the main content.  Uses muted text and a top border to
    visually separate it without heavyweight styling.                           */
 .site-footer {
+  flex-shrink: 0;
   padding-block: var(--space-4);
-  margin-block-start: var(--space-5);
   border-block-start: 1px solid var(--border);
+  background: var(--bg);
 }
 
 .site-footer__inner {
@@ -909,9 +910,9 @@ kbd {
   letter-spacing: 0.02em;
 }
 
-/* Body gains bottom padding while the mini-player is visible so the footer
-   is never permanently obscured. JS adds/removes .player-active on <body>. */
-body.player-active {
+/* Scroll area gains bottom padding while the mini-player is visible so
+   content is never permanently obscured by the fixed player overlay.       */
+body.player-active .app-shell__scroll-area {
   padding-block-end: 3.5rem;
 }
 
