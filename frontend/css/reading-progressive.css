@@ -250,14 +250,49 @@ body.reader-flow-mode.reader-flow-playing .sentence-card[data-flow-active] {
   font-size: 0.7rem;
 }
 
-/* Adaptive learning bar ---------------------------------------------------- */
+/* Adaptive settings dialog ------------------------------------------------- */
+
+#adaptive-settings-dialog {
+  position: relative;
+  border: 1px solid var(--border-soft, var(--border));
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--elevation-3, 0 8px 32px rgb(0 0 0 / 0.14));
+  padding: var(--space-3) var(--space-4);
+  max-inline-size: min(28rem, calc(100vw - 2rem));
+  inline-size: max-content;
+  animation: reader-preview-in 0.18s ease both;
+}
+
+#adaptive-settings-dialog::backdrop {
+  background: rgb(0 0 0 / 0.2);
+  backdrop-filter: blur(2px);
+}
+
+.adaptive-settings-dialog__close {
+  position: absolute;
+  inset-block-start: 0.4rem;
+  inset-inline-end: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0.25rem 0.4rem;
+  border-radius: var(--radius);
+}
+
+.adaptive-settings-dialog__close:hover,
+.adaptive-settings-dialog__close:focus-visible {
+  color: var(--text-primary);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+/* Adaptive learning bar (inner content — box provided by the dialog) -------- */
 
 .results-adaptive-bar {
-  margin-block-end: var(--space-3);
-  padding: var(--space-2) var(--space-3);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: color-mix(in srgb, var(--surface) 92%, var(--accent) 8%);
+  /* outer box intentionally absent — dialog shell owns border/bg/padding */
 }
 
 .results-adaptive-bar__header {
@@ -328,9 +363,16 @@ body.reader-flow-mode.reader-flow-playing .sentence-card[data-flow-active] {
 }
 
 @media (forced-colors: active) {
-  .results-adaptive-bar {
+  #adaptive-settings-dialog {
     border: 1px solid CanvasText;
+    box-shadow: none;
     background: Canvas;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #adaptive-settings-dialog {
+    animation: none;
   }
 }
 
