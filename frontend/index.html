@@ -67,6 +67,8 @@
         </div>
       </mnemosyne-top-nav>
 
+      <div class="app-shell__scroll-area">
+
       <!-- Site hero — page title + strapline below the nav bar -->
       <div class="site-hero wrap" id="site-hero">
         <p class="eyebrow" aria-hidden="true">Mnemosyne</p>
@@ -302,6 +304,8 @@
 
       </div><!-- /#main-content -->
 
+      </div><!-- /.app-shell__scroll-area -->
+
       <!-- NowPlayingBar region ─────────────────────────────────────────────────
            mnemosyne-player is position:fixed internally; this div is the named
            region anchor used by layout.js.
@@ -309,6 +313,19 @@
       <div class="app-shell__now-playing" id="app-now-playing">
         <mnemosyne-player id="main-player" hidden></mnemosyne-player>
       </div>
+
+      <footer class="site-footer">
+        <div class="wrap site-footer__inner">
+          <p><a href="./privacy.html" id="privacy-link" data-i18n="privacy_policy">Privacy policy</a></p>
+          <div class="ui-lang-select">
+            <label for="ui-language" class="ui-lang-select__label"
+                   data-i18n="ui_language_label">Interface language</label>
+            <select id="ui-language">
+              <option value="en">English</option>
+            </select>
+          </div>
+        </div>
+      </footer>
 
     </div><!-- /.app-shell -->
 
@@ -475,17 +492,5 @@
     <div id="a11y-live" role="status" aria-live="polite" aria-atomic="true"
          class="sr-only"></div>
 
-    <footer class="site-footer">
-      <div class="wrap site-footer__inner">
-        <p><a href="./privacy.html" id="privacy-link" data-i18n="privacy_policy">Privacy policy</a></p>
-        <div class="ui-lang-select">
-          <label for="ui-language" class="ui-lang-select__label"
-                 data-i18n="ui_language_label">Interface language</label>
-          <select id="ui-language">
-            <option value="en">English</option>
-          </select>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>

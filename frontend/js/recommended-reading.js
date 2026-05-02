@@ -23,6 +23,7 @@ const results = document.querySelector('#results')
 const pickerTextarea = document.querySelector('#picker-text')
 const pickerUseBtn = document.querySelector('#picker-use-btn')
 const a11yLive = document.querySelector('#a11y-live')
+const scrollArea = document.querySelector('.app-shell__scroll-area')
 
 let currentRecommendations = []
 let lastRecommendationData = null
@@ -336,7 +337,7 @@ window.mnemosyneRecommended = {
 
 function init() {
   ensurePanel()
-  window.addEventListener('scroll', onScroll, { passive: true })
+  ;(scrollArea ?? window).addEventListener('scroll', onScroll, { passive: true })
 
   languageSelect?.addEventListener('change', () => {
     resetProgress()

@@ -38,14 +38,36 @@
   /* mnemosyne-detail-pane: 200  (set inside the component, mobile only) */
 }
 
+/* ── Full-height shell ───────────────────────────────────────────────────────
+   html/body fill the viewport and do not scroll. The scroll-area child is
+   the single scroll container, keeping the top-nav and footer always visible. */
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.app-shell {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollable middle section — everything between nav and footer. */
+.app-shell__scroll-area {
+  flex: 1;
+  min-block-size: 0;
+  overflow-y: auto;
+}
+
 /* ── TopNav ──────────────────────────────────────────────────────────────────
-   Sticks to the viewport top while the page scrolls.
+   First flex child of .app-shell — always pinned to the top, no sticky needed.
    A ResizeObserver in layout.js writes --app-top-nav-h so child regions
    can offset their own sticky positioning precisely.                        */
 
 .app-shell__top-nav {
-  position: sticky;
-  inset-block-start: 0;
+  flex-shrink: 0;
   z-index: var(--z-top-nav);
   background: var(--bg);
 }
@@ -69,13 +91,13 @@
 }
 
 /* ── FilterBar ───────────────────────────────────────────────────────────────
-   Annotation chip strip. Sticky below the TopNav; background prevents
-   sentence text showing through when chips scroll into the sticky band.     */
+   Annotation chip strip. Sticky at the top of .app-shell__scroll-area —
+   the nav is outside the scroll area so no offset needed.                   */
 
 .app-shell__filter-bar {
   flex: 0 0 auto;
   position: sticky;
-  inset-block-start: var(--app-top-nav-h, 0px);
+  inset-block-start: 0;
   z-index: var(--z-filter-bar);
   background: var(--bg);
 }
@@ -140,11 +162,12 @@
     block-size: 100%;
   }
 
-  /* Stick in viewport as the user scrolls through sentences. */
+  /* Stick at the top of the scroll area as the user scrolls through sentences.
+     Nav is outside .app-shell__scroll-area so inset-block-start is 0.         */
   .app-shell__detail-panel {
     block-size: calc(100dvh - var(--app-top-nav-h, 0px));
     position: sticky;
-    inset-block-start: var(--app-top-nav-h, 0px);
+    inset-block-start: 0;
     align-self: flex-start;
     max-block-size: calc(100dvh - var(--app-top-nav-h, 0px));
     overflow: hidden;

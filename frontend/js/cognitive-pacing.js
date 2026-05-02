@@ -24,9 +24,11 @@ const a11yLive = document.querySelector('#a11y-live')
 let overloadCount = 0
 let isComputing = false
 
+const scrollArea = document.querySelector('.app-shell__scroll-area')
+
 const state = {
   sessionStartedAt: Date.now(),
-  lastScrollY: window.scrollY,
+  lastScrollY: scrollArea?.scrollTop ?? 0,
   lastScrollAt: Date.now(),
   scrollEvents: 0,
   reverseScrolls: 0,
@@ -183,9 +185,9 @@ function renderIndicator() {
 }
 
 function installObservers() {
-  window.addEventListener('scroll', () => {
+  ;(scrollArea ?? window).addEventListener('scroll', () => {
     const now = Date.now()
-    const currentY = window.scrollY
+    const currentY = scrollArea ? scrollArea.scrollTop : window.scrollY
     if (currentY < state.lastScrollY - 24) state.reverseScrolls += 1
     state.scrollEvents += 1
     state.lastScrollY = currentY
