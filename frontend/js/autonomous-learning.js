@@ -129,21 +129,36 @@ async function loadNext() {
 function observeEnd() {
   if (!resultsSection) return
   const sentinel = document.createElement('div')
+  sentinel.id = 'autonomous-end-sentinel'
   sentinel.style.height = '1px'
   resultsSection.appendChild(sentinel)
 
+  let fired = false
   const observer = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && enabled) {
-      const delay = window.mnemosynePacing?.getNextDelayMs?.() || 1800
-      setTimeout(loadNext, delay)
-    }
+    if (!entries[0].isIntersecting) { fired = false; return }
+    if (fired) return
+    fired = true
+    document.dispatchEvent(new CustomEvent('mnemosyne:passage-end', {
+      detail: { autonomousEnabled: enabled },
+    }))
   }, { threshold: 1 })
 
   observer.observe(sentinel)
+
+  // Re-arm when new results appear so the card can show again after loading.
+  const results = document.querySelector('#results')
+  if (results) {
+    new MutationObserver(() => { fired = false }).observe(results, { childList: true })
+  }
 }
 
 function preloadNext() {
   fetchNext().catch(() => {})
+}
+
+window.mnemosyneAutonomous = {
+  isEnabled: () => enabled,
+  loadNext,
 }
 
 function init() {

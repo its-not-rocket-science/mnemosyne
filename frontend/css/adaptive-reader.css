@@ -235,3 +235,107 @@ body[data-reveal-known] [data-adaptively-quiet] {
   .reader-annotation--known,
   [data-adaptively-quiet] { transition: none; }
 }
+
+/* ── Passage transition card ─────────────────────────────────────────────────
+   Appears after #results-section when the reader scrolls past the sentinel.  */
+
+.passage-transition-card {
+  margin-block-start: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--elevation-1, 0 1px 4px rgb(0 0 0 / 0.05));
+  animation: passage-transition-in 0.25s ease both;
+}
+
+@keyframes passage-transition-in {
+  from { opacity: 0; transform: translateY(0.5rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.passage-transition__reason {
+  margin: 0 0 var(--space-3);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.passage-transition__actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ── Autonomous countdown row ─────────────────────────────────────────────── */
+
+.passage-transition__auto {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-block-start: var(--space-3);
+  padding-block-start: var(--space-2);
+  border-block-start: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.passage-transition__countdown {
+  font-size: 0.8rem;
+  color: var(--muted);
+  flex: 1 1 auto;
+}
+
+.passage-transition__progress {
+  flex: 0 0 6rem;
+  block-size: 0.25rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--border) 60%, transparent);
+  overflow: hidden;
+}
+
+.passage-transition__progress-fill {
+  display: block;
+  block-size: 100%;
+  inline-size: 100%;
+  background: var(--accent);
+  transform-origin: inline-start;
+  transform: scaleX(0);
+}
+
+.passage-transition__progress-fill--running {
+  animation: passage-countdown var(--passage-countdown-duration, 4s) linear forwards;
+}
+
+.passage-transition__progress-fill--paused {
+  animation-play-state: paused;
+}
+
+@keyframes passage-countdown {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .passage-transition-card {
+    animation: none;
+  }
+  .passage-transition__progress-fill--running {
+    animation: none;
+    transform: scaleX(0);
+  }
+}
+
+@media (forced-colors: active) {
+  .passage-transition-card {
+    border: 1px solid CanvasText;
+    box-shadow: none;
+    background: Canvas;
+  }
+  .passage-transition__progress {
+    border: 1px solid ButtonText;
+  }
+  .passage-transition__progress-fill {
+    background: ButtonText;
+  }
+}
