@@ -206,27 +206,49 @@ function closeExistingPreviews() {
   document.querySelectorAll('.reader-inline-preview').forEach(el => el.remove())
 }
 
+function positionPreview(preview, anchor) {
+  const GAP = 8
+  const MARGIN = 8
+  const rect = anchor.getBoundingClientRect()
+
+  // Initial position: below the annotation, left-aligned to it
+  let top = rect.bottom + GAP
+  let left = rect.left
+
+  preview.style.top = `${top}px`
+  preview.style.left = `${left}px`
+
+  // After first paint the preview has real dimensions — correct any overflow
+  requestAnimationFrame(() => {
+    const pr = preview.getBoundingClientRect()
+    const vpW = window.innerWidth
+    const vpH = window.innerHeight
+
+    if (left + pr.width > vpW - MARGIN) left = vpW - pr.width - MARGIN
+    if (left < MARGIN) left = MARGIN
+
+    // Flip above if it would overflow bottom
+    if (top + pr.height > vpH - MARGIN) top = rect.top - pr.height - GAP
+    if (top < MARGIN) top = MARGIN
+
+    preview.style.top = `${top}px`
+    preview.style.left = `${left}px`
+  })
+}
+
 function openInlinePreview(annotation) {
   if (!annotation || annotation.hasAttribute('data-filtered') || annotation.hasAttribute('data-level-filtered')) return
 
-  const sentence = annotation.closest('.reader-sentence, .sentence-card')
-  if (!sentence) return
-
-  // In prose mode the sentence is display:inline — block elements can't go inside.
-  // Insert the preview after the prose container instead.
-  const prose = sentence.closest('.reader-prose')
-  const insertionHost = prose || sentence
-
-  const existing = insertionHost.parentElement?.querySelector(':scope > .reader-inline-preview')
-    || insertionHost.querySelector('.reader-inline-preview')
+  // Toggle: clicking the same annotation again closes the preview
+  const existing = document.querySelector('.reader-inline-preview')
   if (existing) {
+    const wasSame = existing._annotationSource === annotation
     existing.remove()
-    return
+    if (wasSame) return
   }
 
-  closeExistingPreviews()
-
   const preview = document.createElement('aside')
+  preview._annotationSource = annotation
   preview.className = 'reader-inline-preview'
   preview.setAttribute('aria-label', 'Inline lesson preview')
 
@@ -247,7 +269,6 @@ function openInlinePreview(annotation) {
   detailBtn.dataset.i18n = 'reader_open_full_lesson'
   detailBtn.textContent = t('reader_open_full_lesson')
   detailBtn.addEventListener('click', () => {
-    // Mark the annotation so the capture handler lets this click through to lesson-open.
     annotation.dataset.openFullLesson = 'true'
     closeInlinePreview(preview, annotation)
     annotation.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }))
@@ -263,12 +284,8 @@ function openInlinePreview(annotation) {
   actions.append(detailBtn, closeBtn)
   preview.append(title, body, actions)
 
-  if (prose) {
-    prose.insertAdjacentElement('afterend', preview)
-  } else {
-    sentence.appendChild(preview)
-  }
-
+  document.body.appendChild(preview)
+  positionPreview(preview, annotation)
   announce(`Preview opened for ${annotation.textContent?.trim() || 'annotation'}`)
 }
 
