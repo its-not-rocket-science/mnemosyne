@@ -207,15 +207,27 @@ body.reader-flow-mode.reader-flow-playing .sentence-card[data-flow-active] {
 }
 
 
-/* Inline preview */
+/* Inline preview — fixed overlay anchored near the clicked annotation */
 .reader-inline-preview {
-  /* Span both grid columns so preview sits below the full sentence width */
-  grid-column: 1 / -1;
-  margin-block: 0.4rem 0.6rem;
+  position: fixed;
+  z-index: 400;
+  inline-size: max-content;
+  max-inline-size: min(22rem, calc(100vw - 2rem));
   padding: 0.6rem 0.75rem;
   border-radius: 0.6rem;
   border: 1px solid var(--border);
-  background: var(--surface-secondary);
+  background: var(--surface);
+  box-shadow: var(--elevation-2, 0 4px 12px rgb(0 0 0 / 0.10));
+  animation: reader-preview-in 0.14s ease both;
+}
+
+@keyframes reader-preview-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-inline-preview { animation: none; }
 }
 
 .reader-inline-preview__title {
@@ -455,10 +467,6 @@ body.reader-flow-mode.reader-flow-playing .sentence-card[data-flow-active] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reader-inline-preview {
-    transition: none;
-  }
-
   .mnemosyne-onboarding--dismissed {
     animation: none;
   }
