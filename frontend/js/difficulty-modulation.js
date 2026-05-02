@@ -123,18 +123,29 @@ function adjustBias(delta) {
 
 import { t } from './i18n.js'
 
-function ensureBar() {
-  if (document.querySelector('#results-adaptive-bar')) return
-  const resultsSection = document.querySelector('#results-section')
-  if (!resultsSection) return
+let _dialog = null
 
+function ensureDialog() {
+  if (_dialog) return _dialog
+
+  _dialog = document.createElement('dialog')
+  _dialog.id = 'adaptive-settings-dialog'
+  _dialog.className = 'adaptive-settings-dialog'
+
+  const closeBtn = document.createElement('button')
+  closeBtn.type = 'button'
+  closeBtn.className = 'adaptive-settings-dialog__close'
+  closeBtn.setAttribute('aria-label', 'Close')
+  closeBtn.innerHTML = '<span aria-hidden="true">×</span>'
+  closeBtn.addEventListener('click', () => _dialog.close())
+
+  // Inner content div keeps id="results-adaptive-bar" for autonomous-learning.js compat.
   const bar = document.createElement('div')
   bar.id = 'results-adaptive-bar'
   bar.className = 'results-adaptive-bar'
   bar.setAttribute('role', 'group')
   bar.setAttribute('data-i18n-aria-label', 'adaptive_heading')
 
-  // Use data-i18n / data-i18n-aria-label so applyUiLanguage() retranslates on switch.
   bar.innerHTML = `
     <div class="results-adaptive-bar__header">
       <span class="results-adaptive-bar__heading" data-i18n="adaptive_heading"></span>
@@ -162,12 +173,8 @@ function ensureBar() {
     <p class="results-adaptive-bar__hint" data-i18n="adaptive_hint"></p>
   `
 
-  const filterRow = resultsSection.querySelector('.results-filter-row')
-  if (filterRow) {
-    resultsSection.insertBefore(bar, filterRow)
-  } else {
-    resultsSection.appendChild(bar)
-  }
+  _dialog.append(closeBtn, bar)
+  document.body.appendChild(_dialog)
 
   bar.querySelector('#difficulty-too-hard')?.addEventListener('click', () => adjustBias(-0.1))
   bar.querySelector('#difficulty-too-easy')?.addEventListener('click', () => adjustBias(0.1))
@@ -176,15 +183,31 @@ function ensureBar() {
     syncToggle()
   })
 
-  // Trigger initial translation pass for this new subtree.
-  bar.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n) })
-  bar.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
-    el.setAttribute('aria-label', t(el.dataset.i18nAriaLabel))
-  })
+  // Click backdrop to close
+  _dialog.addEventListener('click', e => { if (e.target === _dialog) _dialog.close() })
 
+  retranslateDialog()
   syncToggle()
   syncFeedback()
+  return _dialog
 }
+
+function retranslateDialog() {
+  if (!_dialog) return
+  _dialog.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n) })
+  _dialog.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    el.setAttribute('aria-label', t(el.dataset.i18nAriaLabel))
+  })
+}
+
+function openDialog() {
+  ensureDialog()
+  _dialog.showModal()
+  document.dispatchEvent(new CustomEvent('mnemosyne:adaptive-dialog-opened'))
+}
+
+// Backward-compat alias — autonomous-learning.js waits for #results-adaptive-bar
+const ensureBar = ensureDialog
 
 function syncToggle() {
   const btn = document.querySelector('#difficulty-modulation-toggle')
@@ -216,25 +239,28 @@ window.mnemosyneDifficulty = {
   setBias,
   adjustBias,
   ensureBar,
+  openDialog,
 }
 
 function init() {
-  // Bar is created when results first appear (observed by the results section showing).
+  // Dialog is created eagerly when results appear so autonomous-learning.js
+  // can find #results-adaptive-bar via MutationObserver.
   const resultsSection = document.querySelector('#results-section')
   if (resultsSection && !resultsSection.hidden) {
-    ensureBar()
+    ensureDialog()
   }
 
   const observer = new MutationObserver(() => {
     const rs = document.querySelector('#results-section')
     if (rs && !rs.hidden) {
-      ensureBar()
+      ensureDialog()
       observer.disconnect()
     }
   })
   observer.observe(document.body, { attributes: true, subtree: true, attributeFilter: ['hidden'] })
 
   document.addEventListener('mnemosyne:pacing-updated', syncFeedback)
+  document.addEventListener('mnemosyne:language-changed', retranslateDialog)
 }
 
 if (document.readyState === 'loading') {
