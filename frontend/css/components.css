@@ -509,6 +509,85 @@
   font-family: var(--font-serif);
 }
 
+/* ── Prose container — sentences flow as one continuous paragraph ─────────
+   .reader-prose wraps all .reader-sentence spans. Each span is display:inline
+   so they knit together without card chrome or inter-sentence gutters.
+   The gutter play button is sr-only in prose mode; keyboard-revealed on focus.*/
+
+.reader-prose {
+  display: block;
+  font-size: clamp(1.05rem, 0.35vw + 1rem, 1.22rem);
+  line-height: 2.05;
+  hanging-punctuation: first last;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+
+.reader-prose[data-script-family="latin"],
+.reader-prose .reader-sentence__text[data-script-family="latin"] {
+  font-family: var(--font-serif);
+}
+
+.reader-prose .reader-sentence {
+  display: inline;
+  border: none !important;
+  background: transparent;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0;
+  transform: none !important;
+  transition: background-color 0.16s ease;
+}
+
+.reader-prose .reader-sentence.sentence-card--playing {
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.reader-prose .reader-sentence__text {
+  display: inline;
+  font-size: inherit;
+  line-height: inherit;
+  grid-column: unset;
+  margin: 0;
+}
+
+/* Play button: screen-reader only at rest; pops into flow on keyboard focus */
+.reader-prose .reader-gutter-btn {
+  position: absolute !important;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.reader-prose .reader-gutter-btn:focus-visible {
+  position: static !important;
+  inline-size: auto;
+  block-size: auto;
+  padding: 0.1em 0.5em;
+  margin: 0 0.25em 0 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  pointer-events: auto;
+  opacity: 1;
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-prose .reader-sentence { transition: none; }
+}
+
 
 /* ── Inline annotation highlights ───────────────────────────────────────── */
 
