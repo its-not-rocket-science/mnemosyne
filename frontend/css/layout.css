@@ -147,7 +147,7 @@
     inset-block-start: var(--app-top-nav-h, 0px);
     align-self: flex-start;
     max-block-size: calc(100dvh - var(--app-top-nav-h, 0px));
-    overflow-y: auto;
+    overflow: hidden;
   }
 }
 
