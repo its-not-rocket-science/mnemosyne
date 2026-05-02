@@ -291,11 +291,18 @@ class MnemosyneFilterBar extends HTMLElement {
   }
 
   #syncEmptyState() {
+    let changed = false
     this.#shadow.querySelectorAll('.pill[data-id]').forEach(btn => {
       const cat   = CATEGORIES.find(c => c.id === btn.dataset.id)
       const empty = !!(cat && this.#available && !cat.types.some(t => this.#available.has(t)))
       btn.toggleAttribute('data-empty', empty)
+      if (empty && this.#active.has(btn.dataset.id)) {
+        this.#active.delete(btn.dataset.id)
+        this.#syncPill(btn)
+        changed = true
+      }
     })
+    if (changed) this.#dispatch()
   }
 
   // ── Dispatch ──────────────────────────────────────────────────────────────────
