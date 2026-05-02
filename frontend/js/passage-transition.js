@@ -55,6 +55,14 @@ function loadNextNow() {
 
 function showAlternatives() {
   dismiss()
+  if (window.mnemosyneRecommended) {
+    window.mnemosyneRecommended.show()
+    queueMicrotask(() => {
+      document.querySelector('#recommended-reading-panel')
+        ?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    })
+    return
+  }
   const panel = document.querySelector('#recommended-reading-panel')
   if (!panel) return
   panel.hidden = false
@@ -139,6 +147,9 @@ function buildCard(autonomousEnabled) {
 }
 
 function showTransitionCard({ autonomousEnabled }) {
+  // Suppress if the recommended panel is already visible with content
+  const recPanel = document.querySelector('#recommended-reading-panel')
+  if (recPanel && !recPanel.hidden) return
   dismiss()
   card = buildCard(autonomousEnabled)
   if (resultsSection) {
