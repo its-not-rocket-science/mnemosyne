@@ -72,7 +72,6 @@
 .ghost-button,
 .rating-button,
 .script-toggle__btn,
-.level-filter__btn,
 .reader-chip {
   transition:
     background-color 0.14s ease,
@@ -90,7 +89,6 @@
 .ghost-button:hover:not(:disabled),
 .rating-button:hover:not(:disabled),
 .script-toggle__btn:hover,
-.level-filter__btn:hover,
 .reader-chip:hover {
   transform: translateY(-1px);
   box-shadow: var(--elevation-1);
@@ -185,8 +183,7 @@
   background: color-mix(in srgb, var(--accent-etymology) 13%, transparent);
 }
 
-.reader-annotation[data-filtered],
-.reader-annotation[data-level-filtered] {
+.reader-annotation[data-filtered] {
   box-shadow: none !important;
   border-color: transparent !important;
 }
@@ -234,14 +231,11 @@
 }
 
 .reader-chip,
-.level-filter__btn,
 .script-toggle__btn {
   background: color-mix(in srgb, var(--surface) 82%, var(--bg) 18%);
 }
 
 .reader-chip--active,
-.level-filter__btn--active,
-.level-filter__btn[aria-pressed="true"],
 .script-toggle__btn--active,
 .script-toggle__btn[aria-pressed="true"] {
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.22), var(--elevation-1);
@@ -305,7 +299,6 @@ dialog::backdrop {
   .ghost-button,
   .rating-button,
   .script-toggle__btn,
-  .level-filter__btn,
   .reader-chip,
   .reader-sentence,
   .reader-annotation {
@@ -316,7 +309,6 @@ dialog::backdrop {
   .ghost-button:hover:not(:disabled),
   .rating-button:hover:not(:disabled),
   .script-toggle__btn:hover,
-  .level-filter__btn:hover,
   .reader-chip:hover,
   .reader-sentence:hover,
   .reader-sentence:focus-within {

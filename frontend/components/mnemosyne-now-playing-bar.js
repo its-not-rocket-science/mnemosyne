@@ -277,6 +277,9 @@ class MnemosyneNowPlayingBar extends HTMLElement {
 :host {
   display: block;
   flex-shrink: 0;
+  position: sticky;
+  inset-block-end: 0;
+  z-index: 60;
 }
 
 :host([hidden]) { display: none; }
@@ -284,10 +287,10 @@ class MnemosyneNowPlayingBar extends HTMLElement {
 /* ── Bar shell ───────────────────────────────────────────────────────────── */
 
 .bar {
-  background: var(--bg, Canvas);
+  background: var(--surface, Canvas);
   border-block-start: 1px solid
-    var(--border, color-mix(in srgb, CanvasText 15%, Canvas));
-  box-shadow: 0 -3px 14px rgb(0 0 0 / 0.07);
+    var(--border, color-mix(in srgb, CanvasText 20%, Canvas));
+  box-shadow: 0 -4px 16px rgb(0 0 0 / 0.12);
 }
 
 /* ── Mobile compact row ──────────────────────────────────────────────────── */

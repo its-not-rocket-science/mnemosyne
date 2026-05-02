@@ -11,6 +11,7 @@
 
 import { t } from './i18n.js'
 import { toggleFlowMode, isFlowMode, syncFlowBtn } from './flow-mode.js'
+import { makeHelpButton } from './help-popover.js'
 
 const results = document.querySelector('#results')
 const resultsSection = document.querySelector('#results-section')
@@ -126,7 +127,8 @@ function ensureToolbar() {
   adaptiveBtn.setAttribute('aria-haspopup', 'dialog')
   adaptiveBtn.addEventListener('click', () => window.mnemosyneDifficulty?.openDialog?.())
 
-  secondary.append(flowBtn, focusBtn, adaptiveBtn, settingsBtn)
+  const ctrlHelpBtn = makeHelpButton('help_control_bar')
+  secondary.append(flowBtn, focusBtn, adaptiveBtn, settingsBtn, ctrlHelpBtn)
   row.append(modeGroup, secondary)
 
   // ── System body — populated by adaptive-reader.js ─────────────────────────
@@ -249,7 +251,7 @@ function positionPreview(preview, anchor) {
 }
 
 function openInlinePreview(annotation) {
-  if (!annotation || annotation.hasAttribute('data-filtered') || annotation.hasAttribute('data-level-filtered')) return
+  if (!annotation || annotation.hasAttribute('data-filtered')) return
 
   // Toggle: clicking the same annotation again closes the preview
   const existing = document.querySelector('.reader-inline-preview')

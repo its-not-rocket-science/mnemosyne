@@ -11,6 +11,7 @@
 import { getAuthHeaders } from './auth.js'
 import { queueReview } from './offline.js'
 import { t } from './i18n.js'
+import { makeHelpButton } from './help-popover.js'
 
 const API_BASE = 'http://localhost:8000'
 
@@ -589,6 +590,14 @@ function renderIntelligenceSummary() {
     summary.id = 'reader-intelligence-summary'
     summary.className = 'reader-intelligence-summary'
     summary.setAttribute('aria-label', 'Learning intelligence summary')
+
+    // Help button persists across re-renders; stats live in a child div.
+    const helpBtn = makeHelpButton('help_intelligence_summary')
+    helpBtn.className += ' reader-intelligence-summary__help'
+    const statsDiv = document.createElement('div')
+    statsDiv.className = 'reader-intelligence-summary__stats'
+    summary.append(statsDiv, helpBtn)
+
     const toolbar = document.querySelector('#reader-adaptive-toolbar')
     if (toolbar) toolbar.insertAdjacentElement('afterend', summary)
     else resultsSection.prepend(summary)
@@ -604,7 +613,9 @@ function renderIntelligenceSummary() {
   const syncText = dashboardSyncedAt
     ? `${t('adaptive_synced')} ${dashboardSyncedAt.toLocaleTimeString()}`
     : t('adaptive_local_memory')
-  summary.innerHTML = `
+
+  const statsDiv = summary.querySelector('.reader-intelligence-summary__stats')
+  statsDiv.innerHTML = `
     <strong data-i18n="adaptive_memory_map">${t('adaptive_memory_map')}</strong>
     <span><b>${stats.weak}</b> <span data-i18n="adaptive_memory_weak_stat">${t('adaptive_memory_weak_stat')}</span></span>
     <span><b>${stats.fading}</b> <span data-i18n="adaptive_memory_fading_stat">${t('adaptive_memory_fading_stat')}</span></span>
