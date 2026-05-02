@@ -364,60 +364,6 @@
 }
 
 
-/* ── Level filter control ────────────────────────────────────────────────── */
-
-.level-filter {
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-  flex-shrink: 0;
-  padding-inline: 0.4rem 0.75rem;
-  padding-block: 0.5rem;
-}
-
-.level-filter__label {
-  color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-inline-end: 0.15rem;
-  white-space: nowrap;
-}
-
-.level-filter__btn {
-  border: 1px solid var(--border-input);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--muted);
-  font: inherit;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 0.2rem 0.55rem;
-  min-block-size: 2rem;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.1s ease, color 0.1s ease, border-color 0.1s ease;
-}
-
-.level-filter__btn--active,
-.level-filter__btn[aria-pressed="true"] {
-  background: var(--accent);
-  color: white;
-  border-color: var(--accent);
-}
-
-.level-filter__btn:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 2px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .level-filter__btn { transition: none; }
-}
-
 
 /* ── Reader sentence layout ──────────────────────────────────────────────── */
 /* Two-column grid: narrow gutter column for the play button, 1fr for text.
@@ -644,8 +590,7 @@
 .reader-annotation:hover { filter: brightness(0.88); }
 
 /* Suppressed by type filter */
-.reader-annotation[data-filtered],
-.reader-annotation[data-level-filtered] {
+.reader-annotation[data-filtered] {
   background: none !important;
   text-decoration: none !important;
   cursor: text;
@@ -653,9 +598,7 @@
   filter: none;
 }
 .reader-annotation[data-filtered]::before,
-.reader-annotation[data-filtered]::after,
-.reader-annotation[data-level-filtered]::before,
-.reader-annotation[data-level-filtered]::after {
+.reader-annotation[data-filtered]::after {
   display: none;
 }
 
@@ -869,11 +812,6 @@ body.player-active .reader-nowplaying {
     min-block-size: 1.75rem;
   }
 
-  .level-filter__btn {
-    font-size: 0.65rem;
-    padding: 0.15rem 0.45rem;
-    min-block-size: 1.75rem;
-  }
 }
 
 

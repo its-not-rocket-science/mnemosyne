@@ -83,8 +83,7 @@ const loadLessonList      = document.querySelector('#load-lesson-list')
 const siteHero           = document.querySelector('#site-hero')
 const resultsSection     = document.querySelector('#results-section')
 const filterBar          = document.querySelector('#filter-bar')
-const levelFilter        = document.querySelector('#level-filter')
-const levelFilterBtns    = Array.from(document.querySelectorAll('.level-filter__btn'))
+
 const nowPlayingBar      = document.querySelector('#now-playing-bar')
 const readingProgress    = document.querySelector('#reading-progress')
 const annotationMinimap  = document.querySelector('#annotation-minimap')
@@ -156,7 +155,7 @@ let currentSourceUrl     = null
 let languageUserSelected = false
 let currentText          = ''   // committed text from picker
 let activeFilterTypes    = null // Set<string> when filtered, null = show all
-let currentMinLevel      = 1   // 1=all, 2=grammar+, 3=literary only
+
 let isFollowAlongEnabled = false
 let currentDepth         = 'scholar'
 
@@ -938,18 +937,6 @@ document.addEventListener('mnemosyne:language-changed', applyFilterBarLabels)
 // Apply labels now (initUiLanguage ran before filterBar was defined).
 applyFilterBarLabels()
 
-levelFilterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    currentMinLevel = parseInt(btn.dataset.level, 10)
-    levelFilterBtns.forEach(b => {
-      const active = b === btn
-      b.classList.toggle('level-filter__btn--active', active)
-      b.setAttribute('aria-pressed', String(active))
-    })
-    applyLevelFilter()
-  })
-})
-
 
 // ── NowPlayingBar teleportation ───────────────────────────────────────────────
 // Mobile: move bar into detail pane's now-playing slot so it appears at the
@@ -1211,10 +1198,7 @@ function renderResults(sentences, language) {
     filterBar.setAvailable(allTypes)
     filterBar.reset()
     filterBar.hidden = allTypes.length === 0
-    if (levelFilter) levelFilter.hidden = allTypes.length === 0
   }
-
-  applyLevelFilter()
 
   if (nowPlayingBar) {
     let trackTitle = ''
@@ -1336,7 +1320,7 @@ function buildMinimap() {
   if (!annotationMinimap) return
   annotationMinimap.replaceChildren()
 
-  const marks = Array.from(results.querySelectorAll('.reader-annotation:not([data-filtered]):not([data-level-filtered])'))
+  const marks = Array.from(results.querySelectorAll('.reader-annotation:not([data-filtered])'))
   if (!marks.length) { annotationMinimap.hidden = true; return }
 
   const region = annotationMinimap.parentElement
@@ -1366,14 +1350,6 @@ function buildMinimap() {
 function applyAnnotationFilter() {
   results?.querySelectorAll('.reader-annotation').forEach(mark => {
     mark.toggleAttribute('data-filtered', activeFilterTypes !== null && !activeFilterTypes.has(mark.dataset.type))
-  })
-  requestAnimationFrame(buildMinimap)
-}
-
-function applyLevelFilter() {
-  results?.querySelectorAll('.reader-annotation').forEach(mark => {
-    const lvl = parseInt(mark.dataset.level ?? '1', 10)
-    mark.toggleAttribute('data-level-filtered', lvl < currentMinLevel)
   })
   requestAnimationFrame(buildMinimap)
 }
