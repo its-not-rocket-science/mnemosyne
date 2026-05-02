@@ -376,6 +376,89 @@ body.reader-flow-mode.reader-flow-playing .sentence-card[data-flow-active] {
   }
 }
 
+/* Help buttons and popovers ------------------------------------------------ */
+
+.help-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 1.2rem;
+  block-size: 1.2rem;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--muted);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  flex-shrink: 0;
+  transition: color 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+}
+
+.help-btn:hover,
+.help-btn:focus-visible {
+  color: var(--text-primary);
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.reader-intelligence-summary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2, 0.5rem);
+}
+
+.reader-intelligence-summary__help {
+  margin-inline-start: auto;
+  flex-shrink: 0;
+}
+
+.help-popover {
+  position: fixed;
+  inset: unset;
+  margin: 0;
+  max-inline-size: min(18rem, calc(100vw - 2rem));
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--elevation-2, 0 4px 12px rgb(0 0 0 / 0.10));
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+}
+
+/* Fallback for browsers without Popover API */
+.help-popover:not([popover]) {
+  display: none;
+}
+.help-popover:not([popover]).help-popover--open {
+  display: block;
+}
+
+.reader-intelligence-summary__stats {
+  display: contents;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .help-btn { transition: none; }
+}
+
+@media (forced-colors: active) {
+  .help-btn {
+    border: 1px solid ButtonText;
+    color: ButtonText;
+  }
+  .help-popover {
+    border: 1px solid CanvasText;
+    box-shadow: none;
+    background: Canvas;
+  }
+}
+
 /* Onboarding spotlight ----------------------------------------------------- */
 
 .onboarding-spotlight {
