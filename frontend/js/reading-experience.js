@@ -212,7 +212,13 @@ function openInlinePreview(annotation) {
   const sentence = annotation.closest('.reader-sentence, .sentence-card')
   if (!sentence) return
 
-  const existing = sentence.querySelector('.reader-inline-preview')
+  // In prose mode the sentence is display:inline — block elements can't go inside.
+  // Insert the preview after the prose container instead.
+  const prose = sentence.closest('.reader-prose')
+  const insertionHost = prose || sentence
+
+  const existing = insertionHost.parentElement?.querySelector(':scope > .reader-inline-preview')
+    || insertionHost.querySelector('.reader-inline-preview')
   if (existing) {
     existing.remove()
     return
@@ -256,7 +262,12 @@ function openInlinePreview(annotation) {
 
   actions.append(detailBtn, closeBtn)
   preview.append(title, body, actions)
-  sentence.appendChild(preview)
+
+  if (prose) {
+    prose.insertAdjacentElement('afterend', preview)
+  } else {
+    sentence.appendChild(preview)
+  }
 
   announce(`Preview opened for ${annotation.textContent?.trim() || 'annotation'}`)
 }

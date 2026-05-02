@@ -111,34 +111,21 @@
   max-inline-size: var(--reader-measure);
 }
 
-.reader-sentence {
-  border-block-end-color: color-mix(in srgb, var(--border) 54%, transparent);
-  border-radius: 0.55rem;
-  margin-inline: -0.4rem;
-  padding-inline: 0.4rem;
-  transition:
-    background-color 0.16s ease,
-    box-shadow 0.16s ease,
-    transform 0.16s ease,
-    border-color 0.16s ease;
+/* Prose sentences are display:inline — block effects (shadow, transform) are no-ops. */
+.reader-prose .reader-sentence {
+  transition: background-color 0.16s ease;
 }
 
-.reader-sentence:hover,
-.reader-sentence:focus-within {
-  background: color-mix(in srgb, var(--accent) 3%, var(--surface));
-  box-shadow: var(--elevation-1);
-  transform: translateY(-1px);
+.reader-prose .reader-sentence:hover,
+.reader-prose .reader-sentence:focus-within {
+  background: color-mix(in srgb, var(--accent) 5%, transparent);
+  box-shadow: none;
+  transform: none;
 }
 
-.reader-sentence.sentence-card--playing {
-  background:
-    linear-gradient(
-      90deg,
-      color-mix(in srgb, var(--accent) 11%, transparent),
-      color-mix(in srgb, var(--accent) 3%, var(--surface)) 42%,
-      transparent
-    );
-  box-shadow: var(--elevation-1);
+.reader-prose .reader-sentence.sentence-card--playing {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  box-shadow: none;
 }
 
 .reader-sentence__text {
@@ -347,8 +334,8 @@ dialog::backdrop {
     max-inline-size: none;
   }
 
-  .reader-sentence {
-    margin-inline: -0.25rem;
-    padding-inline: 0.25rem;
+  .reader-prose .reader-sentence {
+    margin-inline: 0;
+    padding-inline: 0;
   }
 }

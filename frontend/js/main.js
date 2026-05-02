@@ -80,6 +80,7 @@ const loadLessonCloseBtn  = document.querySelector('#load-lesson-close-btn')
 const loadLessonList      = document.querySelector('#load-lesson-list')
 
 // Reader UI
+const siteHero           = document.querySelector('#site-hero')
 const resultsSection     = document.querySelector('#results-section')
 const filterBar          = document.querySelector('#filter-bar')
 const levelFilter        = document.querySelector('#level-filter')
@@ -1152,9 +1153,16 @@ function renderResults(sentences, language) {
   currentSentences = sentences
   currentTtsTag    = ttsTag
 
+  // Prose container \u2014 all sentences flow inline as one continuous paragraph.
+  const prose = document.createElement('div')
+  prose.className = 'reader-prose'
+  prose.setAttribute('lang', language)
+  prose.setAttribute('dir',  dir)
+
   for (const [sentenceIdx, sentence] of sentences.entries()) {
-    // Flat flex row: [play btn?] [annotated paragraph]
-    const row = document.createElement('div')
+    if (sentenceIdx > 0) prose.appendChild(document.createTextNode(' '))
+
+    const row = document.createElement('span')
     row.className = 'reader-sentence sentence-card'
     row.dataset.tokenization  = tokenMode
     row.dataset.sentenceIndex = sentenceIdx
@@ -1163,7 +1171,7 @@ function renderResults(sentences, language) {
       const playBtn = document.createElement('button')
       playBtn.type      = 'button'
       playBtn.className = 'reader-gutter-btn sentence-card__play-btn'
-      playBtn.setAttribute('aria-label',   'Play sentence')
+      playBtn.setAttribute('aria-label',   `Play sentence ${sentenceIdx + 1}`)
       playBtn.setAttribute('aria-pressed', 'false')
       const icon = document.createElement('span')
       icon.className   = 'play-icon'
@@ -1183,8 +1191,10 @@ function renderResults(sentences, language) {
     row.appendChild(
       buildAnnotatedText(sentence.text, sentence.learnable_objects, language, dir, tokenMode, scriptFam)
     )
-    fragment.appendChild(row)
+    prose.appendChild(row)
   }
+
+  fragment.appendChild(prose)
 
   results.replaceChildren(fragment)
   applyScriptViewToResults()
@@ -1192,6 +1202,7 @@ function renderResults(sentences, language) {
   requestAnimationFrame(buildMinimap)
 
   if (resultsSection) resultsSection.hidden = false
+  if (siteHero) siteHero.hidden = true
 
   if (filterBar) {
     const allTypes = [...new Set(sentences.flatMap(s =>
@@ -1231,14 +1242,13 @@ function renderResults(sentences, language) {
 // ── Inline annotation builder ─────────────────────────────────────────────────
 
 function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam) {
-  const p = document.createElement('p')
+  const p = document.createElement('span')
   p.className = 'sentence-card__text reader-sentence__text'
   p.setAttribute('lang', language)
   p.setAttribute('dir',  dir)
   p.dataset.tokenization = tokenMode
   p.dataset.scriptFamily = scriptFam
   p.dataset.layer        = 'native'
-  p.style.margin         = '0'
 
   if (!items.length) {
     p.textContent = text
