@@ -339,3 +339,52 @@ body[data-reveal-known] [data-adaptively-quiet] {
     background: ButtonText;
   }
 }
+
+/* ── Recommended reading panel — compact / scroll-triggered ─────────────────── */
+
+.rec-panel {
+  animation: passage-transition-in 0.3s ease both;
+}
+
+.rec-panel__eyebrow {
+  margin-block-end: var(--space-1, 0.25rem);
+}
+
+.rec-panel__rationale {
+  margin: 0 0 var(--space-3, 1rem);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.rec-panel__featured {
+  margin-block-end: var(--space-3, 1rem);
+}
+
+.rec-panel__actions {
+  margin-block-end: 0;
+}
+
+.rec-panel__expand-row {
+  display: flex;
+  justify-content: center;
+  margin-block-start: var(--space-2, 0.5rem);
+  padding-block-start: var(--space-2, 0.5rem);
+  border-block-start: 1px solid var(--border);
+}
+
+.rec-panel__alternatives[hidden] {
+  display: none !important;
+}
+
+.rec-panel__alternatives {
+  margin-block-start: var(--space-3, 1rem);
+}
+
+@media (forced-colors: active) {
+  .rec-panel {
+    border: 1px solid CanvasText;
+    box-shadow: none;
+    background: Canvas;
+  }
+}
