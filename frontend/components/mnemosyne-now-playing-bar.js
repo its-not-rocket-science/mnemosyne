@@ -277,9 +277,6 @@ class MnemosyneNowPlayingBar extends HTMLElement {
 :host {
   display: block;
   flex-shrink: 0;
-  position: sticky;
-  inset-block-end: 0;
-  z-index: 60;
 }
 
 :host([hidden]) { display: none; }
