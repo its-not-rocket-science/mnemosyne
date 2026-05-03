@@ -245,7 +245,7 @@ deleteAccountBtn?.addEventListener('click', async () => {
 
 // ── API helpers ───────────────────────────────────────────────────────────────
 
-const API_BASE = 'http://localhost:8000'
+const API_BASE = ''
 
 async function callAuth(path, body) {
   const response = await fetch(`${API_BASE}${path}`, {
