@@ -63,6 +63,11 @@ const saveLessonStatus     = document.querySelector('#save-lesson-status')
 const saveLessonCloseBtn   = document.querySelector('#save-lesson-close-btn')
 const saveLessonConfirmBtn = document.querySelector('#save-lesson-confirm-btn')
 
+// About dialog
+const aboutDialog    = document.querySelector('#about-dialog')
+const aboutCloseBtn  = document.querySelector('#about-close-btn')
+const aboutBtn       = document.querySelector('#about-btn')
+
 // GDPR dialog
 const gdprDialog       = document.querySelector('#gdpr-dialog')
 const gdprCloseBtn     = document.querySelector('#gdpr-close-btn')
@@ -82,6 +87,9 @@ const loadLessonList      = document.querySelector('#load-lesson-list')
 // Reader UI
 const siteHero           = document.querySelector('#site-hero')
 const resultsSection     = document.querySelector('#results-section')
+const parseDialog        = document.querySelector('#parse-dialog')
+const parseDialogClose   = document.querySelector('#parse-dialog-close')
+const changeLessonBtn    = document.querySelector('#change-lesson-btn')
 const filterBar          = document.querySelector('#filter-bar')
 const appFilterBar       = document.querySelector('#app-filter-bar')
 
@@ -359,6 +367,14 @@ chooseTextBtn?.addEventListener('click', openPicker)
 changeTextBtn?.addEventListener('click', openPicker)
 pickerCloseBtn?.addEventListener('click', () => textPickerDialog?.close())
 
+// Parse dialog — non-modal inline on load, modal when user invokes change-lesson
+parseDialog?.addEventListener('cancel', e => {
+  // Prevent ESC from dismissing when shown non-modal (no results yet)
+  if (!parseDialog.matches(':modal')) e.preventDefault()
+})
+parseDialogClose?.addEventListener('click', () => parseDialog?.close())
+changeLessonBtn?.addEventListener('click', () => parseDialog?.showModal())
+
 // Sample texts — one short natural-language paragraph per supported language
 const SAMPLE_TEXTS = {
   ar: 'في الصباح الباكر، استيقظ الطفل على صوت العصافير تغرد خارج النافذة. نهض بحماس ونظر إلى السماء الزرقاء الصافية، وأدرك أن هذا اليوم سيكون جميلاً.',
@@ -563,6 +579,23 @@ saveLessonConfirmBtn?.addEventListener('click', async () => {
 
 saveUnsupportedCloseBtn?.addEventListener('click', () => saveUnsupportedDialog?.close())
 saveUnsupportedOkBtn?.addEventListener('click',    () => saveUnsupportedDialog?.close())
+
+// ── About dialog ─────────────────────────────────────────────────────────────
+
+aboutBtn?.addEventListener('click', () => aboutDialog?.showModal())
+aboutCloseBtn?.addEventListener('click', () => aboutDialog?.close())
+
+const aboutTabs   = document.querySelectorAll('.about-dialog__tab')
+const aboutPanels = document.querySelectorAll('#about-dialog [role="tabpanel"]')
+aboutTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    aboutTabs.forEach(t => t.setAttribute('aria-selected', 'false'))
+    aboutPanels.forEach(p => { p.hidden = true })
+    tab.setAttribute('aria-selected', 'true')
+    const panel = document.getElementById(tab.getAttribute('aria-controls'))
+    if (panel) panel.hidden = false
+  })
+})
 
 // ── GDPR dialog ───────────────────────────────────────────────────────────────
 
@@ -1191,6 +1224,8 @@ function renderResults(sentences, language) {
 
   if (resultsSection) resultsSection.hidden = false
   if (siteHero) siteHero.hidden = true
+  parseDialog?.close()
+  if (changeLessonBtn) changeLessonBtn.hidden = false
 
   if (filterBar) {
     const allTypes = [...new Set(sentences.flatMap(s =>
