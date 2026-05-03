@@ -176,10 +176,20 @@
                    aria-valuemax="100" aria-label="Audio reading progress" hidden></div>
               <div class="wrap">
 
-                <section class="panel" aria-labelledby="parse-heading">
-                  <h2 id="parse-heading" data-i18n="parse_heading">Create a lesson from text</h2>
-
-                  <div class="stack">
+                <!--
+                  Parse dialog — shown inline (non-modal) before results exist;
+                  opened as a modal via #change-lesson-btn once results are rendered.
+                  The [open] attribute keeps it visible on first load without JS.
+                -->
+                <dialog id="parse-dialog" class="parse-dialog picker-dialog" open
+                        aria-labelledby="parse-heading">
+                  <div class="picker-dialog__inner stack">
+                    <div class="picker-dialog__header">
+                      <h2 id="parse-heading" data-i18n="parse_heading">Create a lesson from text</h2>
+                      <button type="button" id="parse-dialog-close"
+                              class="dialog-close-btn parse-dialog__close"
+                              data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
+                    </div>
 
                     <div class="field">
                       <label for="language" data-i18n="label_language">Language</label>
@@ -201,23 +211,22 @@
                               data-i18n="load_lesson_btn">Load lesson</button>
                     </div>
 
-                  </div>
+                    <p id="status" role="status" aria-atomic="true" class="status"></p>
 
-                  <p id="status" role="status" aria-atomic="true" class="status"></p>
-
-                  <div id="job-progress" class="job-progress" hidden>
-                    <div
-                      id="job-progress-fill"
-                      class="job-progress__bar"
-                      role="progressbar"
-                      aria-label="Parse progress"
-                      aria-valuenow="0"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                    <p id="job-progress-label" class="job-progress__label" aria-live="polite"></p>
+                    <div id="job-progress" class="job-progress" hidden>
+                      <div
+                        id="job-progress-fill"
+                        class="job-progress__bar"
+                        role="progressbar"
+                        aria-label="Parse progress"
+                        aria-valuenow="0"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                      <p id="job-progress-label" class="job-progress__label" aria-live="polite"></p>
+                    </div>
                   </div>
-                </section>
+                </dialog>
 
                 <section id="results-section" class="panel" aria-labelledby="results-heading" hidden>
                   <div class="results-heading-row">
@@ -237,6 +246,8 @@
                       </div>
                       <button type="button" id="save-lesson-btn" class="ghost-button" hidden
                               data-i18n="save_lesson_btn">Save lesson</button>
+                      <button type="button" id="change-lesson-btn" class="ghost-button" hidden
+                              data-i18n="change_lesson_btn">Change lesson</button>
                     </div>
                   </div>
 
@@ -311,7 +322,12 @@
 
       <footer class="site-footer">
         <div class="wrap site-footer__inner">
-          <p><a href="./privacy.html" id="privacy-link" data-i18n="privacy_policy">Privacy policy</a></p>
+          <div class="footer-links">
+            <button type="button" id="about-btn" class="footer-link-btn"
+                    data-i18n="about_btn">About Mnemosyne</button>
+            <a href="./privacy.html" id="privacy-link" class="footer-link-btn"
+               data-i18n="privacy_policy">Privacy policy</a>
+          </div>
           <div class="ui-lang-select">
             <label for="ui-language" class="ui-lang-select__label"
                    data-i18n="ui_language_label">Interface language</label>
@@ -480,6 +496,42 @@
             <dd>Show / hide this legend</dd>
           </div>
         </dl>
+      </div>
+    </dialog>
+
+    <!-- About Mnemosyne dialog — content via data-i18n, tracks UI language automatically -->
+    <dialog id="about-dialog" class="picker-dialog about-dialog" aria-labelledby="about-heading">
+      <div class="picker-dialog__inner about-dialog__inner">
+        <div class="picker-dialog__header">
+          <h2 id="about-heading">Mnemosyne</h2>
+          <button type="button" id="about-close-btn" class="dialog-close-btn"
+                  data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
+        </div>
+        <div class="about-dialog__medallion">
+          <img src="./mnemosyne.png"
+               alt="Mnemosyne — goddess of memory, mother of the Muses. Greek red-figure pottery medallion."
+               class="about-dialog__image" width="200" height="200">
+        </div>
+        <div class="about-dialog__tabs" role="tablist" aria-label="About Mnemosyne">
+          <button role="tab" id="about-tab-principle" class="about-dialog__tab"
+                  aria-selected="true" aria-controls="about-panel-principle"
+                  data-i18n="about_tab_principle">One principle</button>
+          <button role="tab" id="about-tab-why" class="about-dialog__tab"
+                  aria-selected="false" aria-controls="about-panel-why"
+                  data-i18n="why_heading">Why Mnemosyne?</button>
+        </div>
+        <article class="about-dialog__section about-dialog__section--principle"
+                 id="about-panel-principle" role="tabpanel" aria-labelledby="about-tab-principle">
+          <p class="about-dialog__principle" data-i18n="about_principle">One principle: that true language mastery emerges from memory enriched by context, reflection, and use.</p>
+          <p data-i18n="about_body">Mnemosyne is built for learners who want to go beyond recognition and into understanding — to read, think, and ultimately live within another language.</p>
+        </article>
+        <article class="about-dialog__section" hidden
+                 id="about-panel-why" role="tabpanel" aria-labelledby="about-tab-why">
+          <h3 class="about-dialog__section-heading" data-i18n="why_heading">Why Mnemosyne?</h3>
+          <p data-i18n="why_p1">In Greek myth, Mnemosyne — goddess of memory — was mother of the nine Muses: those divine sources of music, poetry, and knowledge. Memory was not merely a record. It was the origin of all creative thought.</p>
+          <p data-i18n="why_p2">Language has the same structure. Before you can express, you must remember. Before you can think in a language, its words, grammar, and idiom must become reflexive — part of who you are, not just what you know.</p>
+          <p data-i18n="why_p3">Mnemosyne is named for that truth: language is not acquired by exposure alone, but by committing meaning to memory — and revisiting it, in context, until recognition becomes fluency.</p>
+        </article>
       </div>
     </dialog>
 
