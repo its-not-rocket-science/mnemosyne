@@ -7,11 +7,11 @@
      Consumed by filter-bar pills (--_c), .reader-annotation highlights,
      minimap ticks, and annotation cards.  --accent-* aliases kept for any
      third-party or legacy code that references the old names.               */
-  --ann-vocab:          oklch(0.55 0.18 240);   /* blue   — vocabulary         */
-  --ann-grammar:        oklch(0.48 0.19 145);   /* green  — grammar            */
-  --ann-idiom:          oklch(0.62 0.18  55);   /* amber  — idioms             */
-  --ann-literary:       oklch(0.50 0.22 305);   /* violet — nuance / literary  */
-  --ann-etymology:      oklch(0.52 0.15 195);   /* teal   — etymology / script */
+  --ann-vocab:          oklch(0.46 0.18 240);   /* blue   — vocabulary         */
+  --ann-grammar:        oklch(0.43 0.18 145);   /* green  — grammar            */
+  --ann-idiom:          oklch(0.46 0.16  42);   /* orange — idioms (hue 42 reads warm at low L) */
+  --ann-literary:       oklch(0.43 0.21 305);   /* violet — nuance / literary  */
+  --ann-etymology:      oklch(0.44 0.14 195);   /* teal   — etymology / script */
   --accent-vocab:       var(--ann-vocab);
   --accent-grammar:     var(--ann-grammar);
   --accent-idiom:       var(--ann-idiom);
@@ -81,7 +81,7 @@
     /* Annotation accents — lightened for readability on dark surfaces */
     --ann-vocab:          oklch(0.72 0.18 240);
     --ann-grammar:        oklch(0.72 0.19 145);
-    --ann-idiom:          oklch(0.82 0.18  55);
+    --ann-idiom:          oklch(0.80 0.17  42);
     --ann-literary:       oklch(0.75 0.22 305);
     --ann-etymology:      oklch(0.72 0.15 195);
 
