@@ -17,7 +17,7 @@ import { openDetail, closeDetail } from './layout.js'
 
 initUiLanguage()
 
-const API_BASE = 'http://localhost:8000'
+const API_BASE = ''
 
 // ── DOM references ────────────────────────────────────────────────────────────
 
