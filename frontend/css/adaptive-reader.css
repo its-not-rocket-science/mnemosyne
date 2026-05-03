@@ -26,12 +26,12 @@
 
 .cognitive-pacing-indicator[data-pacing-mode="fatigue"] .cognitive-pacing-indicator__dot {
   opacity: 0.55;
-  color: var(--accent-grammar, var(--accent));
+  color: var(--ann-grammar, var(--accent));
 }
 
 .cognitive-pacing-indicator[data-pacing-mode="overload"] .cognitive-pacing-indicator__dot {
   opacity: 0.75;
-  color: var(--accent-idiom, var(--accent));
+  color: var(--ann-idiom, var(--accent));
 }
 
 /* ── Quiet-count badge ───────────────────────────────────────────────────── */

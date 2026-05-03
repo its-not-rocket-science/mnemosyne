@@ -8,8 +8,7 @@
 
 import { getAuthHeaders } from './auth.js'
 import { t } from './i18n.js'
-
-const API = ''
+import { API_BASE as API } from './config.js'
 
 let enabled = false
 let loading = false

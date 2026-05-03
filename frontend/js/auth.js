@@ -1,4 +1,5 @@
 import { t } from './i18n.js'
+import { API_BASE } from './config.js'
 
 /**
  * auth.js — JWT token storage and auth-state UI management.
@@ -244,8 +245,6 @@ deleteAccountBtn?.addEventListener('click', async () => {
 })
 
 // ── API helpers ───────────────────────────────────────────────────────────────
-
-const API_BASE = ''
 
 async function callAuth(path, body) {
   const response = await fetch(`${API_BASE}${path}`, {
