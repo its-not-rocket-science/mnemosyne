@@ -679,6 +679,16 @@
   .reader-annotation[data-tier] { transition: none; }
 }
 
+/* ── Selected annotation — linked to the open detail pane ───────────────────
+   Specificity (0,2,0) — placed after tier rules so it wins the cascade.
+   Restores fill and text tint regardless of which tier the annotation is.    */
+.reader-annotation[data-detail-source] {
+  background: color-mix(in srgb, var(--_annotation-color) 28%, transparent);
+  color: color-mix(in srgb, var(--_annotation-color) 45%, var(--text-primary));
+  text-decoration: none;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--_annotation-color) 40%, transparent);
+}
+
 
 /* ── Now-playing card ────────────────────────────────────────────────────── */
 
