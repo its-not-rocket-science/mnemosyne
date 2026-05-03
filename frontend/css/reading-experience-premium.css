@@ -118,7 +118,7 @@
   margin-block-end: 0;
 }
 
-.results-heading-row h2 {
+.results-title {
   font-family: var(--font-serif);
   font-size: clamp(1.2rem, 1.5vw + 0.75rem, 1.6rem);
   font-weight: 400;
