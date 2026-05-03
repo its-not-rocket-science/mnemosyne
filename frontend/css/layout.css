@@ -69,7 +69,6 @@ body {
 .app-shell__top-nav {
   flex-shrink: 0;
   z-index: var(--z-top-nav);
-  background: var(--bg);
 }
 
 /* ── Body ────────────────────────────────────────────────────────────────────
@@ -99,21 +98,12 @@ body {
   position: sticky;
   inset-block-start: 0;
   z-index: var(--z-filter-bar);
-  background: var(--bg);
+  background: var(--surface);
+  border-block-end: 1px solid var(--border);
 }
 
-/* ── Results filter row ───────────────────────────────────────────────────────
-   Annotation chips (left, scrollable) + level filter (right) in one bar.    */
+.app-shell__filter-bar[hidden] { display: none; }
 
-.results-filter-row {
-  display: flex;
-  align-items: center;
-}
-
-.results-filter-row mnemosyne-filter-bar {
-  flex: 1 1 auto;
-  min-inline-size: 0;
-}
 
 /* ── TextPanel ───────────────────────────────────────────────────────────────
    Main reading content; natural document scroll.                            */

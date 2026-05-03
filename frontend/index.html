@@ -156,8 +156,9 @@
           <!-- Left column -->
           <div class="app-shell__left">
 
-            <!-- FilterBar region: script-view toggle only -->
-            <div id="app-filter-bar" class="app-shell__filter-bar">
+            <!-- FilterBar region: sticky annotation chips + script-view toolbar -->
+            <div id="app-filter-bar" class="app-shell__filter-bar" hidden>
+              <mnemosyne-filter-bar id="filter-bar" hidden></mnemosyne-filter-bar>
               <!--
                 Script-view toolbar — hidden until a language with transliteration
                 support is selected. JS populates the toggle button group inside.
@@ -237,12 +238,6 @@
                       <button type="button" id="save-lesson-btn" class="ghost-button" hidden
                               data-i18n="save_lesson_btn">Save lesson</button>
                     </div>
-                  </div>
-
-                  <!-- Annotation-type chips + level filter — shown once results render -->
-                  <div class="results-filter-row">
-                    <mnemosyne-filter-bar id="filter-bar" hidden></mnemosyne-filter-bar>
-
                   </div>
 
                   <!--
