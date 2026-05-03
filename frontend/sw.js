@@ -31,6 +31,7 @@ const STATIC_ASSETS = [
   '/js/main.js',
   '/js/layout.js',
   '/js/auth.js',
+  '/js/config.js',
   '/js/i18n.js',
   '/js/offline.js',
   '/js/playback.js',

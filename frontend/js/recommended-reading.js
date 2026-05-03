@@ -11,8 +11,7 @@
 
 import { getAuthHeaders } from './auth.js'
 import { t } from './i18n.js'
-
-const API_BASE = ''
+import { API_BASE } from './config.js'
 const COUNTDOWN_MS = 4000
 const TRIGGER_PROGRESS = 0.7
 const PREFETCH_PROGRESS = 0.5

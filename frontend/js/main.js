@@ -14,10 +14,9 @@ import {
 } from './offline.js'
 import { initUiLanguage, t, ti, currentUiLang } from './i18n.js'
 import { openDetail, closeDetail } from './layout.js'
+import { API_BASE } from './config.js'
 
 initUiLanguage()
-
-const API_BASE = ''
 
 // ── DOM references ────────────────────────────────────────────────────────────
 
@@ -877,11 +876,11 @@ results.addEventListener('lesson-open', async (event) => {
       const detailPanelEl = document.querySelector('#app-detail-panel')
       if (detailPanelEl) {
         const TYPE_ACCENT = {
-          vocabulary: 'var(--accent-vocab)',
-          grammar: 'var(--accent-grammar)', conjugation: 'var(--accent-grammar)', agreement: 'var(--accent-grammar)',
-          idiom: 'var(--accent-idiom)',
-          nuance: 'var(--accent-literary)', phrase_family: 'var(--accent-literary)',
-          script: 'var(--accent-etymology)', transliteration: 'var(--accent-etymology)',
+          vocabulary: 'var(--ann-vocab)',
+          grammar: 'var(--ann-grammar)', conjugation: 'var(--ann-grammar)', agreement: 'var(--ann-grammar)',
+          idiom: 'var(--ann-idiom)',
+          nuance: 'var(--ann-literary)', phrase_family: 'var(--ann-literary)',
+          script: 'var(--ann-etymology)', transliteration: 'var(--ann-etymology)',
         }
         const type = sourceEl?.dataset?.type || lesson.type || ''
         detailPanelEl.style.setProperty('--detail-accent', TYPE_ACCENT[type] ?? 'var(--accent)')
@@ -1342,15 +1341,15 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam) {
 // ── Annotation density minimap ────────────────────────────────────────────────
 
 const _MINIMAP_COLORS = {
-  vocabulary:      'var(--accent-vocab)',
-  conjugation:     'var(--accent-grammar)',
-  agreement:       'var(--accent-grammar)',
-  grammar:         'var(--accent-grammar)',
-  idiom:           'var(--accent-idiom)',
-  nuance:          'var(--accent-literary)',
-  phrase_family:   'var(--accent-literary)',
-  script:          'var(--accent-etymology)',
-  transliteration: 'var(--accent-etymology)',
+  vocabulary:      'var(--ann-vocab)',
+  conjugation:     'var(--ann-grammar)',
+  agreement:       'var(--ann-grammar)',
+  grammar:         'var(--ann-grammar)',
+  idiom:           'var(--ann-idiom)',
+  nuance:          'var(--ann-literary)',
+  phrase_family:   'var(--ann-literary)',
+  script:          'var(--ann-etymology)',
+  transliteration: 'var(--ann-etymology)',
 }
 
 function buildMinimap() {

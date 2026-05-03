@@ -607,28 +607,28 @@
 /* Type-keyed highlight colours — --_annotation-color drives background + text tint.
    premium.css overrides these with slightly higher values (20-22%) when loaded.  */
 .reader-annotation--vocabulary {
-  --_annotation-color: var(--accent-vocab);
-  background: color-mix(in srgb, var(--accent-vocab) 18%, transparent);
+  --_annotation-color: var(--ann-vocab);
+  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
 }
 .reader-annotation--conjugation,
 .reader-annotation--agreement,
 .reader-annotation--grammar {
-  --_annotation-color: var(--accent-grammar);
-  background: color-mix(in srgb, var(--accent-grammar) 18%, transparent);
+  --_annotation-color: var(--ann-grammar);
+  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
 }
 .reader-annotation--idiom {
-  --_annotation-color: var(--accent-idiom);
-  background: color-mix(in srgb, var(--accent-idiom) 18%, transparent);
+  --_annotation-color: var(--ann-idiom);
+  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
 }
 .reader-annotation--nuance,
 .reader-annotation--phrase_family {
-  --_annotation-color: var(--accent-literary);
-  background: color-mix(in srgb, var(--accent-literary) 18%, transparent);
+  --_annotation-color: var(--ann-literary);
+  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
 }
 .reader-annotation--script,
 .reader-annotation--transliteration {
-  --_annotation-color: var(--accent-etymology);
-  background: color-mix(in srgb, var(--accent-etymology) 18%, transparent);
+  --_annotation-color: var(--ann-etymology);
+  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
 }
 
 /* ── Tier-based progressive visibility ───────────────────────────────────
@@ -859,7 +859,7 @@ body.player-active .reader-nowplaying {
   display: inline-block;
   width:  0.4em;
   height: 0.4em;
-  background: var(--accent-idiom);
+  background: var(--ann-idiom);
   border-radius: 50%;
   vertical-align: super;
   margin-inline-start: 0.1em;
