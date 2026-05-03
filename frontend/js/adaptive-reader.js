@@ -13,7 +13,7 @@ import { queueReview } from './offline.js'
 import { t } from './i18n.js'
 import { makeHelpButton } from './help-popover.js'
 
-const API_BASE = 'http://localhost:8000'
+const API_BASE = ''
 
 const results = document.querySelector('#results')
 const resultsSection = document.querySelector('#results-section')

@@ -9,7 +9,7 @@
 import { getAuthHeaders } from './auth.js'
 import { t } from './i18n.js'
 
-const API = 'http://localhost:8000'
+const API = ''
 
 let enabled = false
 let loading = false
