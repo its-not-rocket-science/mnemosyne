@@ -159,8 +159,7 @@
 
 /* Annotation reveal modes */
 [data-annotation-reveal="subtle"] .reader-annotation {
-  background: none !important;
-  text-decoration-style: dotted;
+  background: color-mix(in srgb, var(--_annotation-color) 10%, transparent) !important;
   opacity: 0.7;
 }
 
