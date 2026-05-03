@@ -402,12 +402,13 @@ class MnemosyneFilterBar extends HTMLElement {
 }
 
 .pill--active {
-  background: var(--_c);
-  color: #fff;
+  background: color-mix(in srgb, var(--_c) 22%, transparent);
+  color: var(--_c);
+  border-width: 2px;
 }
 
 .pill--active:hover:not([data-empty]) {
-  background: color-mix(in srgb, var(--_c) 85%, #000 15%);
+  background: color-mix(in srgb, var(--_c) 30%, transparent);
 }
 
 /* Dims pills whose category has no annotations in the current text */
