@@ -3,12 +3,20 @@
   --brand-purple:       #7C3AED;
   --brand-purple-light: #EDE9FE;
 
-  /* ── Annotation accent palette — matches filter-bar pill --_c values ───── */
-  --accent-vocab:       oklch(0.55 0.18 240);   /* blue   — vocabulary         */
-  --accent-grammar:     oklch(0.48 0.19 145);   /* green  — grammar            */
-  --accent-idiom:       oklch(0.62 0.18  55);   /* amber  — idioms             */
-  --accent-literary:    oklch(0.50 0.22 305);   /* violet — nuance / literary  */
-  --accent-etymology:   oklch(0.52 0.15 195);   /* teal   — etymology / script */
+  /* ── Annotation-type colour tokens — single source of truth ─────────────
+     Consumed by filter-bar pills (--_c), .reader-annotation highlights,
+     minimap ticks, and annotation cards.  --accent-* aliases kept for any
+     third-party or legacy code that references the old names.               */
+  --ann-vocab:          oklch(0.55 0.18 240);   /* blue   — vocabulary         */
+  --ann-grammar:        oklch(0.48 0.19 145);   /* green  — grammar            */
+  --ann-idiom:          oklch(0.62 0.18  55);   /* amber  — idioms             */
+  --ann-literary:       oklch(0.50 0.22 305);   /* violet — nuance / literary  */
+  --ann-etymology:      oklch(0.52 0.15 195);   /* teal   — etymology / script */
+  --accent-vocab:       var(--ann-vocab);
+  --accent-grammar:     var(--ann-grammar);
+  --accent-idiom:       var(--ann-idiom);
+  --accent-literary:    var(--ann-literary);
+  --accent-etymology:   var(--ann-etymology);
 
   /* ── Surfaces ────────────────────────────────────────────────────────────── */
   --surface:            #FFFFFF;   /* card / panel background                  */
@@ -71,11 +79,11 @@
     --brand-purple-light: #2E1065;
 
     /* Annotation accents — lightened for readability on dark surfaces */
-    --accent-vocab:       oklch(0.72 0.18 240);
-    --accent-grammar:     oklch(0.72 0.19 145);
-    --accent-idiom:       oklch(0.82 0.18  55);
-    --accent-literary:    oklch(0.75 0.22 305);
-    --accent-etymology:   oklch(0.72 0.15 195);
+    --ann-vocab:          oklch(0.72 0.18 240);
+    --ann-grammar:        oklch(0.72 0.19 145);
+    --ann-idiom:          oklch(0.82 0.18  55);
+    --ann-literary:       oklch(0.75 0.22 305);
+    --ann-etymology:      oklch(0.72 0.15 195);
 
     /* Surfaces */
     --surface:            #1F2937;   /* gray-800 */

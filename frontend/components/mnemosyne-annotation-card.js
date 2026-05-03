@@ -2,11 +2,11 @@ import { t } from '../js/i18n.js'
 
 // Shared palette with mnemosyne-filter-bar and mnemosyne-text-panel
 const TYPE_COLOR = {
-  vocab:     'var(--accent-vocab)',
-  grammar:   'var(--accent-grammar)',
-  idiom:     'var(--accent-idiom)',
-  literary:  'var(--accent-literary)',
-  etymology: 'var(--accent-etymology)',
+  vocab:     'var(--ann-vocab)',
+  grammar:   'var(--ann-grammar)',
+  idiom:     'var(--ann-idiom)',
+  literary:  'var(--ann-literary)',
+  etymology: 'var(--ann-etymology)',
 }
 
 const TYPE_LABEL_KEY = {

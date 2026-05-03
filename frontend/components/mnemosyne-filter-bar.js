@@ -21,31 +21,31 @@ const CATEGORIES = [
   {
     id:    'vocab',
     label: 'Vocab',
-    color: 'var(--accent-vocab)',
+    color: 'var(--ann-vocab)',
     types: ['vocabulary', 'lexical_item', 'word_form', 'vocab', 'word'],
   },
   {
     id:    'grammar',
     label: 'Grammar',
-    color: 'var(--accent-grammar)',
+    color: 'var(--ann-grammar)',
     types: ['grammar', 'grammatical_pattern', 'morphology', 'grammar_point', 'syntax', 'conjugation', 'agreement'],
   },
   {
     id:    'idioms',
     label: 'Idioms',
-    color: 'var(--accent-idiom)',
+    color: 'var(--ann-idiom)',
     types: ['idiom', 'expression', 'phrase', 'collocation', 'proverb'],
   },
   {
     id:    'literary',
     label: 'Literary',
-    color: 'var(--accent-literary)',
+    color: 'var(--ann-literary)',
     types: ['literary_device', 'rhetoric', 'figure_of_speech', 'literary', 'poetic', 'nuance', 'phrase_family', 'nuance_or_style'],
   },
   {
     id:    'etymology',
     label: 'Etymology',
-    color: 'var(--accent-etymology)',
+    color: 'var(--ann-etymology)',
     types: ['etymology', 'derivation', 'cognate', 'root', 'script', 'transliteration'],
   },
 ]

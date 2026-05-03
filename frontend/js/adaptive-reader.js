@@ -12,8 +12,7 @@ import { getAuthHeaders } from './auth.js'
 import { queueReview } from './offline.js'
 import { t } from './i18n.js'
 import { makeHelpButton } from './help-popover.js'
-
-const API_BASE = ''
+import { API_BASE } from './config.js'
 
 const results = document.querySelector('#results')
 const resultsSection = document.querySelector('#results-section')
