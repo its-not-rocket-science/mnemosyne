@@ -2,11 +2,11 @@ import { t } from '../js/i18n.js'
 
 // Shared palette with mnemosyne-filter-bar and mnemosyne-text-panel
 const TYPE_COLOR = {
-  vocab:     'oklch(0.55 0.18 240)',
-  grammar:   'oklch(0.50 0.20 265)',
-  idiom:     'oklch(0.62 0.18 55)',
-  literary:  'oklch(0.50 0.22 305)',
-  etymology: 'oklch(0.52 0.15 195)',
+  vocab:     'var(--accent-vocab)',
+  grammar:   'var(--accent-grammar)',
+  idiom:     'var(--accent-idiom)',
+  literary:  'var(--accent-literary)',
+  etymology: 'var(--accent-etymology)',
 }
 
 const TYPE_LABEL_KEY = {

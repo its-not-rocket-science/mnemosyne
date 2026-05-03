@@ -5,7 +5,7 @@
 
   /* ── Annotation accent palette — matches filter-bar pill --_c values ───── */
   --accent-vocab:       oklch(0.55 0.18 240);   /* blue   — vocabulary         */
-  --accent-grammar:     oklch(0.50 0.20 265);   /* indigo — grammar            */
+  --accent-grammar:     oklch(0.48 0.19 145);   /* green  — grammar            */
   --accent-idiom:       oklch(0.62 0.18  55);   /* amber  — idioms             */
   --accent-literary:    oklch(0.50 0.22 305);   /* violet — nuance / literary  */
   --accent-etymology:   oklch(0.52 0.15 195);   /* teal   — etymology / script */
@@ -72,7 +72,7 @@
 
     /* Annotation accents — lightened for readability on dark surfaces */
     --accent-vocab:       oklch(0.72 0.18 240);
-    --accent-grammar:     oklch(0.72 0.20 265);
+    --accent-grammar:     oklch(0.72 0.19 145);
     --accent-idiom:       oklch(0.82 0.18  55);
     --accent-literary:    oklch(0.75 0.22 305);
     --accent-etymology:   oklch(0.72 0.15 195);
