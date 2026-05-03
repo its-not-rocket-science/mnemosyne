@@ -235,27 +235,27 @@
 }
 
 .reader-annotation--vocabulary {
-  background: color-mix(in srgb, var(--_annotation-color) 20%, transparent);
+  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
 }
 
 .reader-annotation--grammar,
 .reader-annotation--agreement,
 .reader-annotation--conjugation {
-  background: color-mix(in srgb, var(--_annotation-color) 20%, transparent);
+  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
 }
 
 .reader-annotation--idiom {
-  background: color-mix(in srgb, var(--_annotation-color) 22%, transparent);
+  background: color-mix(in srgb, var(--_annotation-color) 20%, transparent);
 }
 
 .reader-annotation--nuance,
 .reader-annotation--phrase_family {
-  background: color-mix(in srgb, var(--_annotation-color) 22%, transparent);
+  background: color-mix(in srgb, var(--_annotation-color) 20%, transparent);
 }
 
 .reader-annotation--script,
 .reader-annotation--transliteration {
-  background: color-mix(in srgb, var(--_annotation-color) 20%, transparent);
+  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
 }
 
 .reader-annotation[data-filtered] {
