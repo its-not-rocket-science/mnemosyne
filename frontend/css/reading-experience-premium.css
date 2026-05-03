@@ -269,10 +269,12 @@
 
 .reader-annotation[data-detail-source][data-type] {
   background: color-mix(in srgb, var(--_annotation-color) 30%, transparent);
+  color: color-mix(in srgb, var(--_annotation-color) 50%, var(--text-primary));
+  text-decoration: none;
+  border-color: color-mix(in srgb, var(--_annotation-color) 45%, transparent);
   box-shadow:
-    inset -2px 0 0 0 var(--_annotation-color),
-    0 0 0 1px color-mix(in srgb, var(--_annotation-color) 18%, transparent);
-  border-color: color-mix(in srgb, var(--_annotation-color) 40%, transparent);
+    inset -3px 0 0 0 var(--_annotation-color),
+    0 0 0 1px color-mix(in srgb, var(--_annotation-color) 22%, transparent);
 }
 
 @media (forced-colors: active) {
