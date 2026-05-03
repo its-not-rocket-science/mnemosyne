@@ -83,6 +83,7 @@ const loadLessonList      = document.querySelector('#load-lesson-list')
 const siteHero           = document.querySelector('#site-hero')
 const resultsSection     = document.querySelector('#results-section')
 const filterBar          = document.querySelector('#filter-bar')
+const appFilterBar       = document.querySelector('#app-filter-bar')
 
 const nowPlayingBar      = document.querySelector('#now-playing-bar')
 const readingProgress    = document.querySelector('#reading-progress')
@@ -1198,6 +1199,7 @@ function renderResults(sentences, language) {
     filterBar.setAvailable(allTypes)
     filterBar.reset()
     filterBar.hidden = allTypes.length === 0
+    if (appFilterBar) appFilterBar.hidden = allTypes.length === 0
   }
 
   if (nowPlayingBar) {

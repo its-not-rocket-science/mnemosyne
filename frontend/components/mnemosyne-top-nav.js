@@ -27,8 +27,8 @@ const chevron = up => /* html */`
   <path d="${up ? 'M1 5l4-4 4 4' : 'M1 1l4 4 4-4'}"/>
 </svg>`
 
-// URL-encoded SVG chevron for <select> background (neutral gray, works in both themes)
-const SELECT_ARROW = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6' fill='none' stroke='%23888' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M1 1l4 4 4-4'/%3E%3C/svg%3E")`
+// Light chevron for dark nav background
+const SELECT_ARROW = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6' fill='none' stroke='%23c4c2d4' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M1 1l4 4 4-4'/%3E%3C/svg%3E")`
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
@@ -168,6 +168,16 @@ class MnemosyneTopNav extends HTMLElement {
   --_play: oklch(0.46 0.25 293); /* ≈ #7C3AED brand purple */
 }
 
+/* Slotted light-DOM elements (user-info, sign-out, etc.) on dark nav */
+::slotted(*) {
+  color: oklch(0.92 0.02 280);
+}
+
+::slotted(.ghost-button) {
+  border-color: rgb(255 255 255 / 0.25);
+  color: oklch(0.88 0.02 280);
+}
+
 /* ── Nav bar ──────────────────────────────────────────────────────────────── */
 
 .nav {
@@ -177,8 +187,9 @@ class MnemosyneTopNav extends HTMLElement {
   padding-block: 0.45rem;
   padding-inline: 1rem;
   min-block-size: 3.25rem;
-  border-block-end: 1px solid var(--border);
-  background: var(--bg);
+  border-block-end: 1px solid rgb(255 255 255 / 0.08);
+  background: oklch(0.22 0.06 280);
+  color: oklch(0.92 0.02 280);
 }
 
 /* ── Logo ─────────────────────────────────────────────────────────────────── */
@@ -190,7 +201,7 @@ class MnemosyneTopNav extends HTMLElement {
   align-items: center;
   gap: 0.4rem;
   text-decoration: none;
-  color: inherit;
+  color: oklch(0.96 0.01 280);
 }
 
 .nav__logo svg {
@@ -232,7 +243,7 @@ class MnemosyneTopNav extends HTMLElement {
   border-radius: 0.35rem;
   font-size: 0.8rem;
   font-family: inherit;
-  color: var(--text, CanvasText);
+  color: oklch(0.88 0.02 280);
   cursor: pointer;
   padding: 0;
   transition: background 100ms, border-color 100ms;
@@ -240,8 +251,8 @@ class MnemosyneTopNav extends HTMLElement {
 }
 
 .nav__ctrl:hover:not(:disabled) {
-  background: var(--surface);
-  border-color: var(--border);
+  background: rgb(255 255 255 / 0.12);
+  border-color: rgb(255 255 255 / 0.2);
 }
 
 .nav__settings { font-size: 0.95rem; }
@@ -251,18 +262,18 @@ class MnemosyneTopNav extends HTMLElement {
 .nav__pill {
   -webkit-appearance: none;
   appearance: none;
-  background-color: var(--surface);
+  background-color: rgb(255 255 255 / 0.1);
   background-image: ${SELECT_ARROW};
   background-repeat: no-repeat;
   background-position: right 0.4rem center;
   background-size: 0.55rem 0.38rem;
-  border: 1px solid var(--border);
+  border: 1px solid rgb(255 255 255 / 0.18);
   border-radius: 999px;
   padding-block: 0.2rem;
   padding-inline: 0.6rem 1.3rem;
   font-size: 0.76rem;
   font-family: inherit;
-  color: inherit;
+  color: oklch(0.92 0.02 280);
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
@@ -291,10 +302,10 @@ class MnemosyneTopNav extends HTMLElement {
   align-items: center;
   justify-content: center;
   background: none;
-  border: 1px solid var(--border);
+  border: 1px solid rgb(255 255 255 / 0.2);
   border-radius: 0.35rem;
   cursor: pointer;
-  color: inherit;
+  color: oklch(0.88 0.02 280);
   padding: 0;
   flex-shrink: 0;
 }
@@ -310,8 +321,8 @@ class MnemosyneTopNav extends HTMLElement {
   flex-wrap: wrap;
   padding-block: 0.5rem;
   padding-inline: 1rem;
-  border-block-end: 1px solid var(--border);
-  background: var(--surface);
+  border-block-end: 1px solid rgb(255 255 255 / 0.08);
+  background: oklch(0.26 0.05 280);
 }
 
 .nav__xrow[hidden] { display: none; }
