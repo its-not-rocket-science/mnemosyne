@@ -605,30 +605,30 @@
 }
 
 /* Type-keyed highlight colours — --_annotation-color drives background + text tint.
-   premium.css overrides these with slightly higher values (20-22%) when loaded.  */
+   premium.css overrides these with slightly higher values (18-20%) when loaded.  */
 .reader-annotation--vocabulary {
   --_annotation-color: var(--ann-vocab);
-  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
+  background: color-mix(in srgb, var(--_annotation-color) 14%, transparent);
 }
 .reader-annotation--conjugation,
 .reader-annotation--agreement,
 .reader-annotation--grammar {
   --_annotation-color: var(--ann-grammar);
-  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
+  background: color-mix(in srgb, var(--_annotation-color) 14%, transparent);
 }
 .reader-annotation--idiom {
   --_annotation-color: var(--ann-idiom);
-  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
+  background: color-mix(in srgb, var(--_annotation-color) 14%, transparent);
 }
 .reader-annotation--nuance,
 .reader-annotation--phrase_family {
   --_annotation-color: var(--ann-literary);
-  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
+  background: color-mix(in srgb, var(--_annotation-color) 14%, transparent);
 }
 .reader-annotation--script,
 .reader-annotation--transliteration {
   --_annotation-color: var(--ann-etymology);
-  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
+  background: color-mix(in srgb, var(--_annotation-color) 14%, transparent);
 }
 
 /* ── Tier-based progressive visibility ───────────────────────────────────
@@ -636,27 +636,43 @@
    Tier is set by adaptive-reader.js after memory state is resolved.
    Without JS (or before JS runs), type classes remain as fallback.         */
 
-/* Tier 1 — primary learning targets: strongest fill */
+/* Tier 1 — primary learning targets: full fill */
 .reader-annotation[data-tier="1"] {
-  background: color-mix(in srgb, var(--_annotation-color) 22%, transparent);
+  background: color-mix(in srgb, var(--_annotation-color) 24%, transparent);
 }
 
-/* Tier 2 — secondary: mid fill */
+/* Tier 2 — secondary: underline only, no fill */
 .reader-annotation[data-tier="2"] {
-  background: color-mix(in srgb, var(--_annotation-color) 12%, transparent);
+  background: none;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--_annotation-color) 60%, transparent);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1.5px;
 }
 
-/* Tier 3 — ghost (strong memory, already known): subtle fill */
+/* Tier 3 — known: barely visible dotted underline */
 .reader-annotation[data-tier="3"] {
-  background: color-mix(in srgb, var(--_annotation-color) 6%, transparent);
+  background: none;
+  color: inherit;
+  text-decoration: underline dotted;
+  text-decoration-color: color-mix(in srgb, var(--_annotation-color) 28%, transparent);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
 }
 
-/* Hover/focus: fully reveal any tier */
+/* Hover/focus: step up visibility */
 .reader-annotation[data-tier="2"]:hover,
-.reader-annotation[data-tier="2"]:focus-visible,
+.reader-annotation[data-tier="2"]:focus-visible {
+  background: color-mix(in srgb, var(--_annotation-color) 14%, transparent);
+  text-decoration: none;
+}
+
 .reader-annotation[data-tier="3"]:hover,
 .reader-annotation[data-tier="3"]:focus-visible {
-  background: color-mix(in srgb, var(--_annotation-color) 22%, transparent);
+  text-decoration-style: solid;
+  text-decoration-color: color-mix(in srgb, var(--_annotation-color) 55%, transparent);
+  text-decoration-thickness: 1.5px;
 }
 
 @media (prefers-reduced-motion: reduce) {
