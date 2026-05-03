@@ -963,18 +963,34 @@ kbd {
 }
 
 /* ── Results heading row ─────────────────────────────────────────────────────
-   Flex row: section h2 on the inline-start, "Save lesson" button on the end. */
+   Flex row: hgroup (eyebrow + title) on the inline-start, actions on the end. */
 .results-heading-row {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
   gap: var(--space-2);
   flex-wrap: wrap;
   margin-block-end: var(--space-3);
 }
 
-.results-heading-row h2 {
+.results-hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-inline-size: 0;
+}
+
+.results-title {
   margin: 0;
+}
+
+.results-source-eyebrow {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
 }
 
 /* Action buttons cluster on the inline-end edge of the results heading row. */
