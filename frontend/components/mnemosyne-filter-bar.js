@@ -21,36 +21,36 @@ const CATEGORIES = [
   {
     id:    'vocab',
     label: 'Vocab',
-    color: 'oklch(0.55 0.18 240)',
+    color: 'var(--accent-vocab)',
     types: ['vocabulary', 'lexical_item', 'word_form', 'vocab', 'word'],
   },
   {
     id:    'grammar',
     label: 'Grammar',
-    color: 'oklch(0.50 0.20 265)',
+    color: 'var(--accent-grammar)',
     types: ['grammar', 'grammatical_pattern', 'morphology', 'grammar_point', 'syntax', 'conjugation', 'agreement'],
   },
   {
     id:    'idioms',
     label: 'Idioms',
-    color: 'oklch(0.62 0.18 55)',
+    color: 'var(--accent-idiom)',
     types: ['idiom', 'expression', 'phrase', 'collocation', 'proverb'],
   },
   {
     id:    'literary',
     label: 'Literary',
-    color: 'oklch(0.50 0.22 305)',
+    color: 'var(--accent-literary)',
     types: ['literary_device', 'rhetoric', 'figure_of_speech', 'literary', 'poetic', 'nuance', 'phrase_family', 'nuance_or_style'],
   },
   {
     id:    'etymology',
     label: 'Etymology',
-    color: 'oklch(0.52 0.15 195)',
+    color: 'var(--accent-etymology)',
     types: ['etymology', 'derivation', 'cognate', 'root', 'script', 'transliteration'],
   },
 ]
 
-const CUSTOM_COLOR = 'oklch(0.50 0.12 140)'
+const CUSTOM_COLOR = 'var(--accent)'
 
 class MnemosyneFilterBar extends HTMLElement {
   #shadow

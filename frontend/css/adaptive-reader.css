@@ -71,15 +71,11 @@
 /* ── Reveal-known override ───────────────────────────────────────────────── */
 
 body[data-reveal-known] .reader-annotation[data-tier="3"] {
-  background: color-mix(in srgb, var(--_annotation-color) 11%, transparent);
-  text-decoration-style: solid;
-  text-decoration-thickness: 1.5px;
-  text-decoration-color: var(--_annotation-color);
+  background: color-mix(in srgb, var(--_annotation-color) 20%, transparent);
 }
 
 body[data-reveal-known] [data-adaptively-quiet] {
   opacity: 1 !important;
-  text-decoration-style: solid;
 }
 
 /* ── Known-annotation tooltip augmentation ──────────────────────────────── */
@@ -196,12 +192,11 @@ body[data-reveal-known] [data-adaptively-quiet] {
 }
 
 .reader-annotation--weak {
-  outline: 2px solid var(--_annotation-color);
+  outline: 1px solid var(--_annotation-color);
 }
 
 [data-adaptively-quiet] {
   opacity: 0.2 !important;
-  text-decoration-style: dotted;
 }
 
 .reader-mastery-controls {
@@ -226,7 +221,7 @@ body[data-reveal-known] [data-adaptively-quiet] {
 
 @media (forced-colors: active) {
   .reader-annotation--known { opacity: 1; }
-  [data-adaptively-quiet] { opacity: 1 !important; text-decoration-style: solid; }
+  [data-adaptively-quiet] { opacity: 1 !important; text-decoration: underline; }
   .reader-adaptive-toggle--active,
   .reader-mastery-btn--active { border: 2px solid ButtonText; }
 }
