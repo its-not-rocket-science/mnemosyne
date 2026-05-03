@@ -868,7 +868,7 @@ export class MnemosyneDetailPane extends HTMLElement {
         border-radius: var(--radius);
         box-shadow: var(--shadow);
         /* Accent stripe on the inline-start edge, keyed to the object type. */
-        border-inline-start: 3px solid ${ref};
+        border-inline-start: 3px solid var(--detail-accent, ${ref});
         display: flex;
         flex-direction: column;
         overflow: hidden;
@@ -880,7 +880,7 @@ export class MnemosyneDetailPane extends HTMLElement {
       @media (max-width: 53.99rem) {
         .pane {
           border-radius: 1rem 1rem 0 0;
-          border-block-start: 3px solid ${ref};
+          border-block-start: 3px solid var(--detail-accent, ${ref});
           border-inline-start: 1px solid var(--border);
         }
       }
@@ -936,9 +936,9 @@ export class MnemosyneDetailPane extends HTMLElement {
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.07em;
-        color: color-mix(in oklch, ${ref} 80%, CanvasText);
-        background: color-mix(in oklch, ${ref} 14%, Canvas);
-        border: 1px solid color-mix(in oklch, ${ref} 30%, Canvas);
+        color: color-mix(in oklch, var(--detail-accent, ${ref}) 80%, CanvasText);
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 14%, Canvas);
+        border: 1px solid color-mix(in oklch, var(--detail-accent, ${ref}) 30%, Canvas);
         border-radius: 999px;
         padding: 0.15rem 0.55rem;
         white-space: nowrap;
@@ -1011,7 +1011,7 @@ export class MnemosyneDetailPane extends HTMLElement {
       .pane__tab--active,
       .pane__tab[aria-selected="true"] {
         color: var(--text);
-        border-block-end-color: color-mix(in oklch, ${ref} 85%, CanvasText);
+        border-block-end-color: color-mix(in oklch, var(--detail-accent, ${ref}) 85%, CanvasText);
       }
       .pane__tab:focus-visible {
         outline: 3px solid var(--accent);
@@ -1097,9 +1097,9 @@ export class MnemosyneDetailPane extends HTMLElement {
       }
       /* variant — type accent */
       .pane__match-badge--variant {
-        background: color-mix(in oklch, ${ref} 14%, Canvas);
-        color:      color-mix(in oklch, ${ref} 80%, CanvasText);
-        border: 1px solid color-mix(in oklch, ${ref} 30%, Canvas);
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 14%, Canvas);
+        color:      color-mix(in oklch, var(--detail-accent, ${ref}) 80%, CanvasText);
+        border: 1px solid color-mix(in oklch, var(--detail-accent, ${ref}) 30%, Canvas);
       }
       /* warning — amber */
       .pane__match-badge--warning {
@@ -1132,9 +1132,9 @@ export class MnemosyneDetailPane extends HTMLElement {
       .pane__sentence-translation-row {
         margin-block-start: 0.5rem;
         padding: 0.45rem 0.6rem;
-        background: color-mix(in oklch, ${ref} 7%, Canvas);
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 7%, Canvas);
         border-radius: 0.35rem;
-        border-inline-start: 2px solid color-mix(in oklch, ${ref} 40%, Canvas);
+        border-inline-start: 2px solid color-mix(in oklch, var(--detail-accent, ${ref}) 40%, Canvas);
       }
 
       .pane__translation-text,
@@ -1156,8 +1156,8 @@ export class MnemosyneDetailPane extends HTMLElement {
       .pane__why-it-matters {
         margin: 0;
         padding: 0.6rem 0.75rem;
-        border-inline-start: 3px solid color-mix(in oklch, ${ref} 55%, Canvas);
-        background: color-mix(in oklch, ${ref} 6%, Canvas);
+        border-inline-start: 3px solid color-mix(in oklch, var(--detail-accent, ${ref}) 55%, Canvas);
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 6%, Canvas);
         border-radius: 0 0.4rem 0.4rem 0;
       }
 
@@ -1226,8 +1226,8 @@ export class MnemosyneDetailPane extends HTMLElement {
         transition: background 0.1s ease, border-color 0.1s ease;
       }
       .pane__audio-btn:hover {
-        background: color-mix(in oklch, ${ref} 10%, Canvas);
-        border-color: color-mix(in oklch, ${ref} 45%, Canvas);
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 10%, Canvas);
+        border-color: color-mix(in oklch, var(--detail-accent, ${ref}) 45%, Canvas);
       }
       .pane__audio-btn:focus-visible {
         outline: 3px solid var(--accent);
@@ -1271,14 +1271,14 @@ export class MnemosyneDetailPane extends HTMLElement {
        * mark resets UA yellow background; we supply our own color-mix tint.
        */
       .context-highlight {
-        background: color-mix(in oklch, ${ref} 24%, Canvas);
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 24%, Canvas);
         color: inherit;
         border-radius: 0.2em;
         padding-inline: 0.1em;
         text-decoration: underline;
         text-decoration-thickness: 1px;
         text-underline-offset: 0.2em;
-        text-decoration-color: color-mix(in oklch, ${ref} 55%, CanvasText);
+        text-decoration-color: color-mix(in oklch, var(--detail-accent, ${ref}) 55%, CanvasText);
       }
 
       /* ── Related — section headings ─────────────────────────────────────── */
@@ -1339,7 +1339,7 @@ export class MnemosyneDetailPane extends HTMLElement {
       .pane__canonical-star {
         font-size: 0.75rem;
         flex-shrink: 0;
-        color: color-mix(in oklch, ${ref} 75%, CanvasText);
+        color: color-mix(in oklch, var(--detail-accent, ${ref}) 75%, CanvasText);
       }
 
       .pane__variant-note {
