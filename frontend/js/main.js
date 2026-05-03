@@ -86,6 +86,8 @@ const loadLessonList      = document.querySelector('#load-lesson-list')
 // Reader UI
 const siteHero           = document.querySelector('#site-hero')
 const resultsSection     = document.querySelector('#results-section')
+const resultsTitle       = document.querySelector('#results-heading')
+const resultsEyebrow     = document.querySelector('#results-source-eyebrow')
 const parseDialog        = document.querySelector('#parse-dialog')
 const parseDialogClose   = document.querySelector('#parse-dialog-close')
 const changeLessonBtn    = document.querySelector('#change-lesson-btn')
@@ -157,10 +159,13 @@ function _transportReset() {
 let currentSentences = []
 let currentTtsTag    = ''
 
-let currentContentType   = 'pasted_text'
-let currentFilename      = null
-let currentSourceUrl     = null
-let languageUserSelected = false
+let currentContentType    = 'pasted_text'
+let currentFilename       = null
+let currentSourceUrl      = null
+let currentFetchedTitle   = null
+let currentDocumentTitle  = null
+let currentDocumentEyebrow = null
+let languageUserSelected  = false
 let currentText          = ''   // committed text from picker
 let activeFilterTypes    = null // Set<string> when filtered, null = show all
 
@@ -466,6 +471,7 @@ pickerFetchUrlBtn?.addEventListener('click', async () => {
     pickerTextarea.value = data.text
     currentContentType   = 'article'
     currentFilename      = null
+    currentFetchedTitle  = data.title || null
     languageUserSelected = false
 
     const chars = data.char_count.toLocaleString()
@@ -511,6 +517,18 @@ pickerUseBtn?.addEventListener('click', () => {
   }
   currentText      = text
   currentSourceUrl = pickerUrlInput?.value.trim() || null
+
+  if (currentContentType === 'article' && currentSourceUrl) {
+    try { currentDocumentEyebrow = new URL(currentSourceUrl).hostname } catch { currentDocumentEyebrow = null }
+    currentDocumentTitle = currentFetchedTitle || currentDocumentEyebrow
+  } else if (currentContentType === 'uploaded_file' && currentFilename) {
+    currentDocumentTitle  = currentFilename.replace(/\.[^.]+$/, '')
+    currentDocumentEyebrow = null
+  } else {
+    currentDocumentTitle  = null
+    currentDocumentEyebrow = null
+  }
+
   textPickerDialog?.close()
   showChosenText(text)
   doParseText(text)
@@ -658,6 +676,8 @@ async function _loadSource(sourceId, language) {
       languageSelect.value = data.language
       languageSelect.dispatchEvent(new Event('change'))
     }
+    currentDocumentTitle   = data.title || null
+    currentDocumentEyebrow = null
     renderResults(data.sentences, data.language)
     setStatus(ti('sentences_parsed', { n: data.sentences.length }))
     if (saveLessonBtn) saveLessonBtn.hidden = false
@@ -735,6 +755,18 @@ function setStatus(message, state = 'idle') {
     status.textContent = message
     status.dataset.state = state
   })
+}
+
+
+// ── Results heading ───────────────────────────────────────────────────────────
+
+function setResultsHeading(title, eyebrow) {
+  const langName = languageSelect?.options[languageSelect?.selectedIndex]?.text || ''
+  if (resultsTitle) resultsTitle.textContent = title || langName
+  if (resultsEyebrow) {
+    resultsEyebrow.textContent = eyebrow || ''
+    resultsEyebrow.hidden = !eyebrow
+  }
 }
 
 
@@ -1221,6 +1253,7 @@ function renderResults(sentences, language) {
   updateScriptViewToolbar()
   requestAnimationFrame(buildMinimap)
 
+  setResultsHeading(currentDocumentTitle, currentDocumentEyebrow)
   if (resultsSection) resultsSection.hidden = false
   if (siteHero) siteHero.hidden = true
   parseDialog?.close()
