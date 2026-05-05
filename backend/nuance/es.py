@@ -1,0 +1,201 @@
+"""Spanish nuance extractor — ser/estar, por/para, subjunctive, diminutives."""
+from __future__ import annotations
+
+from typing import Any
+
+from backend.schemas.parse import CandidateObject, RelationHint
+
+_DIMINUTIVE_SUFFIXES = (
+    "ito", "ita", "itos", "itas",
+    "illo", "illa", "illos", "illas",
+    "cito", "cita", "citos", "citas",
+    "ecito", "ecita",
+)
+
+
+def _text(tok: Any) -> str:
+    return tok.text if hasattr(tok, "text") else str(tok)
+
+
+class SpanishNuanceExtractor:
+    language = "es"
+
+    def extract_nuance(
+        self,
+        sentence: str,
+        tokens: list[Any],
+        candidates: list[CandidateObject],
+        language: str,
+    ) -> list[CandidateObject]:
+        out: list[CandidateObject] = []
+        seen: set[str] = set()
+        out.extend(self._ser_estar(candidates, seen))
+        out.extend(self._por_para(tokens, seen))
+        out.extend(self._subjunctive(candidates, seen))
+        out.extend(self._diminutive(tokens, seen))
+        return out
+
+    def _ser_estar(
+        self, candidates: list[CandidateObject], seen: set[str]
+    ) -> list[CandidateObject]:
+        out = []
+        for c in candidates:
+            if c.type != "conjugation":
+                continue
+            lemma = c.lesson_data.get("lemma", "")
+            if lemma not in ("ser", "estar"):
+                continue
+            cf = f"nuance:es:ser_estar:{lemma}"
+            if cf in seen:
+                continue
+            seen.add(cf)
+            if lemma == "ser":
+                explanation = (
+                    "«ser» marks stable, defining qualities: identity, origin, occupation, "
+                    "nationality, material. It answers what something fundamentally *is*."
+                )
+            else:
+                explanation = (
+                    "«estar» marks transient states, conditions, locations, and results of "
+                    "change. It describes how something currently *is*, not what it inherently is."
+                )
+            out.append(CandidateObject(
+                canonical_form=cf,
+                surface_form=c.surface_form,
+                type="nuance",
+                label=c.label,
+                lesson_data={
+                    "nuance_type": "ser_estar",
+                    "explanation": explanation,
+                    "register": "neutral",
+                    "learner_level": "A2",
+                    "source": "heuristic",
+                    "lemma": lemma,
+                },
+                confidence=0.85,
+                relation_hints=[RelationHint(
+                    relation_type="nuance_of",
+                    target_canonical_form=lemma,
+                    target_type="vocabulary",
+                )],
+            ))
+        return out
+
+    def _por_para(
+        self, tokens: list[Any], seen: set[str]
+    ) -> list[CandidateObject]:
+        out = []
+        for tok in tokens:
+            surface = _text(tok)
+            low = surface.lower()
+            if low not in ("por", "para"):
+                continue
+            cf = f"nuance:es:por_para:{low}"
+            if cf in seen:
+                continue
+            seen.add(cf)
+            if low == "por":
+                explanation = (
+                    "«por» marks cause/reason, means/instrument, exchange, "
+                    "duration, agent in passives, and movement through a space."
+                )
+            else:
+                explanation = (
+                    "«para» marks purpose/goal, recipient, destination, deadline, "
+                    "and standards or comparisons."
+                )
+            out.append(CandidateObject(
+                canonical_form=cf,
+                surface_form=surface,
+                type="nuance",
+                label=surface,
+                lesson_data={
+                    "nuance_type": "por_para",
+                    "explanation": explanation,
+                    "register": "neutral",
+                    "learner_level": "B1",
+                    "source": "heuristic",
+                    "preposition": low,
+                },
+                confidence=0.80,
+            ))
+        return out
+
+    def _subjunctive(
+        self, candidates: list[CandidateObject], seen: set[str]
+    ) -> list[CandidateObject]:
+        out = []
+        for c in candidates:
+            if c.type != "conjugation":
+                continue
+            mood = str(c.lesson_data.get("mood", "")).lower()
+            mood_raw = str(c.lesson_data.get("mood_raw", ""))
+            if "sub" not in mood and "Sub" not in mood_raw:
+                continue
+            lemma = c.lesson_data.get("lemma", c.canonical_form)
+            cf = f"nuance:es:subjunctive:{lemma}"
+            if cf in seen:
+                continue
+            seen.add(cf)
+            out.append(CandidateObject(
+                canonical_form=cf,
+                surface_form=c.surface_form,
+                type="nuance",
+                label=c.label,
+                lesson_data={
+                    "nuance_type": "subjunctive_trigger",
+                    "explanation": (
+                        "The subjunctive expresses doubt, desire, emotion, or hypothetical "
+                        "situations. It appears in subordinate clauses after triggers like "
+                        "«querer que», «es posible que», «aunque» (hypothetical), "
+                        "«antes de que», «para que»."
+                    ),
+                    "register": "neutral",
+                    "learner_level": "B2",
+                    "source": "heuristic",
+                    "lemma": lemma,
+                },
+                confidence=0.75,
+                relation_hints=[RelationHint(
+                    relation_type="nuance_of",
+                    target_canonical_form=lemma,
+                    target_type="vocabulary",
+                )],
+            ))
+        return out
+
+    def _diminutive(
+        self, tokens: list[Any], seen: set[str]
+    ) -> list[CandidateObject]:
+        out = []
+        for tok in tokens:
+            surface = _text(tok)
+            low = surface.lower()
+            if len(low) < 6:
+                continue
+            if not any(low.endswith(suf) for suf in _DIMINUTIVE_SUFFIXES):
+                continue
+            cf = f"nuance:es:diminutive:{low}"
+            if cf in seen:
+                continue
+            seen.add(cf)
+            out.append(CandidateObject(
+                canonical_form=cf,
+                surface_form=surface,
+                type="nuance",
+                label=surface,
+                lesson_data={
+                    "nuance_type": "diminutive",
+                    "explanation": (
+                        "Spanish diminutive suffixes (-ito/-ita, -illo/-illa) express smallness, "
+                        "affection, or informality, and soften requests in casual speech. "
+                        "They are extremely frequent in conversational Spanish."
+                    ),
+                    "register": "informal",
+                    "learner_level": "B1",
+                    "source": "heuristic",
+                    "surface": surface,
+                },
+                confidence=0.70,
+            ))
+        return out
