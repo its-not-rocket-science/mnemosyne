@@ -467,8 +467,11 @@ export class MnemosyneDetailPane extends HTMLElement {
   _htmlRelatedPanel(ld, canonical, isNonCanonical) {
     // variants may be list[dict{surface,match_type,note}] or legacy list[str]
     const rawVariants      = Array.isArray(ld.variants)         ? ld.variants         : []
-    const confusables      = Array.isArray(ld.confusables)      ? ld.confusables      : []
-    const confusableForms  = Array.isArray(ld.confusable_forms) ? ld.confusable_forms : []
+    const confusableForms    = Array.isArray(ld.confusable_forms)    ? ld.confusable_forms    : []
+    // Prefer rich confusable_families; fall back to raw IDs shaped as minimal refs.
+    const rawConfusables     = Array.isArray(ld.confusables)         ? ld.confusables         : []
+    const confusableFamilies = Array.isArray(ld.confusable_families) ? ld.confusable_families
+      : rawConfusables.map(id => ({ family_id: id }))
 
     const variantItems = rawVariants.map(v => {
       const surface  = typeof v === 'string' ? v : (v.surface ?? '')
@@ -502,13 +505,21 @@ export class MnemosyneDetailPane extends HTMLElement {
       </li>
     `).join('')
 
-    const confusableItems = confusables.map(id => /* html */`
-      <li class="pane__confusable-item">
-        <span class="pane__confusable-id">${esc(String(id).replace(/_/g, '\u00a0'))}</span>
-      </li>
-    `).join('')
+    const confusableItems = confusableFamilies.map(cf => {
+      const familyId = String(cf.family_id ?? '')
+      const display  = cf.canonical_form || familyId.replace(/_/g, '\u00a0')
+      const meaning  = cf.meaning || ''
+      return /* html */`
+        <li class="pane__confusable-item">
+          <button class="pane__confusable-link" type="button" data-family-id="${esc(familyId)}">
+            <span class="pane__confusable-canonical">${esc(display)}</span>
+            ${meaning ? `<span class="pane__confusable-meaning">${esc(meaning)}</span>` : ''}
+          </button>
+        </li>
+      `
+    }).join('')
 
-    const hasAnyConfusables = confusables.length > 0 || confusableForms.length > 0
+    const hasAnyConfusables = confusableFamilies.length > 0 || confusableForms.length > 0
 
     return /* html */`
       <section
@@ -632,6 +643,18 @@ export class MnemosyneDetailPane extends HTMLElement {
           this._applyTabState()
           tabEls[next].focus()
         }
+      })
+    })
+
+    // Confusable family links — navigate to that family's detail panel
+    this.shadowRoot.querySelectorAll('.pane__confusable-link').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const familyId = btn.dataset.familyId
+        if (!familyId) return
+        this.dispatchEvent(new CustomEvent('pane-navigate', {
+          bubbles: true, composed: true,
+          detail: { objectId: familyId, language },
+        }))
       })
     })
 
@@ -1352,9 +1375,43 @@ export class MnemosyneDetailPane extends HTMLElement {
       }
 
       .pane__confusable-item {
-        padding-block: 0.3rem;
+        padding-block: 0.2rem;
+      }
+
+      .pane__confusable-link {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+        inline-size: 100%;
+        background: none;
+        border: none;
+        border-radius: 0.3rem;
+        padding: 0.3rem 0.4rem;
+        text-align: start;
+        cursor: pointer;
+        color: inherit;
+        transition: background 0.12s;
+      }
+      .pane__confusable-link:hover,
+      .pane__confusable-link:focus-visible {
+        background: color-mix(in oklch, var(--accent) 10%, Canvas);
+        outline: 2px solid var(--accent);
+        outline-offset: -2px;
+      }
+
+      .pane__confusable-canonical {
         font-size: 0.875rem;
+        font-weight: 500;
+        overflow-wrap: break-word;
+        color: var(--accent);
+      }
+
+      .pane__confusable-meaning {
+        font-size: 0.75rem;
         color: var(--muted);
+        font-style: italic;
+        line-height: 1.4;
+        overflow-wrap: break-word;
       }
 
       /* Within-family confusable forms (confusable_not_same variants) */

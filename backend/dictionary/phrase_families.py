@@ -470,6 +470,16 @@ def _family_to_candidate(
         lesson_data["why_it_matters"] = fam.why_it_matters
     if fam.confusables:
         lesson_data["confusables"] = list(fam.confusables)
+        lesson_data["confusable_families"] = [
+            {
+                "family_id":      cid,
+                "canonical_form": _FAMILY_CATALOG[cid].canonical_form,
+                "meaning":        _FAMILY_CATALOG[cid].meaning,
+                "register":       _FAMILY_CATALOG[cid].register,
+            }
+            for cid in fam.confusables
+            if cid in _FAMILY_CATALOG
+        ]
     if confusable_form_dicts:
         lesson_data["confusable_forms"] = confusable_form_dicts
     if fam.tags:
@@ -483,3 +493,19 @@ def _family_to_candidate(
         lesson_data=lesson_data,
         confidence=confidence,
     )
+
+
+# ── Direct catalog lookup ─────────────────────────────────────────────────────
+
+def lookup_family_by_id(family_id: str) -> "CandidateObject | None":
+    """Return a CandidateObject for *family_id* without requiring a parse pass.
+
+    Used by plugins to serve confusable-family lesson requests by ID.
+    Returns ``None`` when the ID is not in the catalog.
+    """
+    fam = _FAMILY_CATALOG.get(family_id)
+    if fam is None:
+        return None
+    exact = next((v for v in fam.variants if v.match_type == MatchType.exact), None)
+    surface = exact.surface if exact else fam.canonical_form
+    return _family_to_candidate(fam, surface, exact)
