@@ -1,0 +1,152 @@
+{
+  "language": "de",
+  "plugin_module": "backend.plugins.german",
+  "plugin_class": "GermanPlugin",
+  "nuance_extractor_module": "backend.nuance.de",
+  "nuance_extractor_class": "GermanNuanceExtractor",
+  "tokenizer": "spacy",
+  "capability_assertions": {
+    "idioms": ["partial", "strong", "gold"],
+    "grammar_nuance": ["partial", "strong", "gold"],
+    "formality_register": ["stub", "partial"]
+  },
+  "capability_gaps": {},
+  "cases": [
+    {
+      "id": "de_idiom_01",
+      "category": "idiom",
+      "text": "Auf jeden Fall werde ich morgen früh da sein.",
+      "note": "Idiom 'auf jeden Fall' (in any case, definitely)",
+      "pipeline": "plugin",
+      "assert_types_present": ["idiom"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "auf jeden fall",
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "idiom": ["phrase", "meaning", "register"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_idiom_02",
+      "category": "idiom",
+      "text": "Zum Beispiel könnte man früher anfangen.",
+      "note": "Idiom 'zum Beispiel' (for example) — abbreviation z.B.",
+      "pipeline": "plugin",
+      "assert_types_present": ["idiom"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "zum beispiel",
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "idiom": ["phrase", "meaning", "register"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_extractor_nuance_modal_particle_doch",
+      "category": "grammar_nuance",
+      "text": "Das ist doch nicht so schwer zu verstehen.",
+      "note": "Extractor nuance: 'doch' as modal particle — contradicts assumption",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "modal_particle",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.6,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_extractor_nuance_modal_particle_mal",
+      "category": "grammar_nuance",
+      "text": "Komm mal her und schau dir das an.",
+      "note": "Extractor nuance: 'mal' as modal particle — softens command",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "modal_particle",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.6,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_extractor_nuance_wechselpraep",
+      "category": "grammar_nuance",
+      "text": "Sie legt das Buch auf den Tisch.",
+      "note": "Extractor nuance: 'auf' as Wechselpräposition (two-way preposition, acc for movement)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "two_way_preposition",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.75,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_etymology_vocab_01",
+      "category": "etymology_vocab",
+      "text": "Das Wort Schadenfreude ist auch im Englischen bekannt.",
+      "note": "Vocabulary: 'Schadenfreude' — compound noun in DEFAULT_STORE",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "schadenfreude",
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_false_positive_01",
+      "category": "false_positive",
+      "text": "Der Arzt schreibt ein Rezept für den Patienten.",
+      "note": "Plain sentence: no idiom keywords, no modal particles",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": ["idiom", "grammar"],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": ["modal_particle", "two_way_preposition"],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_vocabulary_keys_01",
+      "category": "vocabulary",
+      "text": "Die Katze schläft ruhig auf dem Sofa.",
+      "note": "All vocabulary candidates must carry lemma and pos",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    }
+  ]
+}

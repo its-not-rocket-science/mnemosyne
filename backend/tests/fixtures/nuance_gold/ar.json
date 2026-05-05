@@ -1,0 +1,115 @@
+{
+  "language": "ar",
+  "plugin_module": "backend.plugins.arabic",
+  "plugin_class": "ArabicPlugin",
+  "nuance_extractor_module": "backend.nuance.ar",
+  "nuance_extractor_class": "ArabicNuanceExtractor",
+  "tokenizer": "words",
+  "capability_assertions": {
+    "idioms": ["none"],
+    "grammar_nuance": ["none"]
+  },
+  "capability_gaps": {
+    "grammar_nuance": "Plugin declares 'none' but extractor provides definite_article and negation nuances"
+  },
+  "cases": [
+    {
+      "id": "ar_extractor_nuance_definite_article",
+      "category": "grammar_nuance",
+      "text": "الكتاب على الطاولة في المكتبة.",
+      "note": "Extractor nuance: ال (al-) definite article prefix present on الكتاب",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "definite_article",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ar_extractor_nuance_negation_lam",
+      "category": "grammar_nuance",
+      "text": "لم يذهب إلى المدرسة أمس.",
+      "note": "Extractor nuance: لم (lam) — past negation requiring jussive mood",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "negation_lam",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ar_extractor_nuance_negation_la",
+      "category": "grammar_nuance",
+      "text": "لا أعرف ما يحدث هناك.",
+      "note": "Extractor nuance: لا (la) — present/future negation and categorical negation",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "negation_la",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ar_etymology_vocab_01",
+      "category": "etymology_vocab",
+      "text": "القلم على المكتب أمام النافذة.",
+      "note": "Vocabulary: 'قلم' (pen) — in DEFAULT_STORE with etymology",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "قلم",
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ar_false_positive_01",
+      "category": "false_positive",
+      "text": "هو يكتب رسالة طويلة.",
+      "note": "Simple sentence without ال prefix or negation particles",
+      "pipeline": "extractor",
+      "assert_types_present": [],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": ["definite_article", "negation_lam", "negation_la"],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ar_no_raw_uuids_01",
+      "category": "vocabulary",
+      "text": "الطالب يقرأ كتاباً في المكتبة.",
+      "note": "Verify no UUID-format strings leak into any lesson_data field",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    }
+  ]
+}

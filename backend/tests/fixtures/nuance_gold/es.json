@@ -1,0 +1,186 @@
+{
+  "language": "es",
+  "plugin_module": "backend.plugins.spanish",
+  "plugin_class": "SpanishPlugin",
+  "nuance_extractor_module": "backend.nuance.es",
+  "nuance_extractor_class": "SpanishNuanceExtractor",
+  "tokenizer": "spacy",
+  "capability_assertions": {
+    "idioms": ["partial", "strong", "gold"],
+    "grammar_nuance": ["partial", "strong", "gold"],
+    "formality_register": ["stub", "partial", "strong", "gold"]
+  },
+  "capability_gaps": {},
+  "cases": [
+    {
+      "id": "es_idiom_01",
+      "category": "idiom",
+      "text": "Sin embargo, no hay tiempo para esto.",
+      "note": "Idiom 'sin embargo' (however) — 2-word surface match at confidence 0.9",
+      "pipeline": "plugin",
+      "assert_types_present": ["idiom"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "sin embargo",
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "idiom": ["phrase", "meaning", "register"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_idiom_02",
+      "category": "phrase_family",
+      "text": "Por supuesto que vendrá a la reunión.",
+      "note": "Idiom 'por supuesto' (of course) — discourse marker",
+      "pipeline": "plugin",
+      "assert_types_present": ["idiom"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "por supuesto",
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "idiom": ["phrase", "meaning", "register"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_grammar_ir_near_future",
+      "category": "grammar_nuance",
+      "text": "Voy a estudiar mañana por la mañana.",
+      "note": "Grammar pattern: ir a + infinitive (near future)",
+      "pipeline": "plugin",
+      "assert_types_present": ["grammar"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "ir_near_future",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "grammar": ["pattern_id", "pattern", "usage", "contrast"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_plugin_nuance_subjunctive",
+      "category": "grammar_nuance",
+      "text": "Quiero que María venga a la fiesta.",
+      "note": "Plugin nuance: subjunctive mood after querer + que",
+      "pipeline": "plugin",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "subjunctive_mood",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.7,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "lemma", "note"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_plugin_nuance_imperfect",
+      "category": "grammar_nuance",
+      "text": "Estaba lloviendo cuando llegué a la estación.",
+      "note": "Plugin nuance: imperfect aspect for background ongoing action",
+      "pipeline": "plugin",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "imperfect_aspect",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.7,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "lemma", "note"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_extractor_nuance_ser_estar",
+      "category": "register",
+      "text": "María es doctora y está muy cansada hoy.",
+      "note": "Extractor nuance: ser (permanent identity) vs estar (transient state) — both present",
+      "pipeline": "both",
+      "assert_types_present": ["grammar", "nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "ser_estar",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.7,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_extractor_nuance_por_para",
+      "category": "grammar_nuance",
+      "text": "Estudio para aprender más, no por obligación.",
+      "note": "Extractor nuance: por/para contrast — purpose (para) vs motive/agent (por)",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "por_para",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.7,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_etymology_vocab_01",
+      "category": "etymology_vocab",
+      "text": "El tiempo vuela cuando te diviertes.",
+      "note": "Vocabulary: 'tiempo' from Latin tempus — both time and weather in Spanish",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "tiempo",
+      "confidence_ge": 0.5,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_false_positive_01",
+      "category": "false_positive",
+      "text": "El médico escribe una receta para el paciente.",
+      "note": "Plain sentence: no ser/estar/ir/haber construction, no idiom keywords",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": ["idiom", "grammar"],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": ["ser_estar", "por_para", "subjunctive_mood"],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_vocabulary_keys_01",
+      "category": "vocabulary",
+      "text": "El gato duerme tranquilo sobre el sofá.",
+      "note": "All vocabulary candidates must carry lemma and pos in lesson_data",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    }
+  ]
+}

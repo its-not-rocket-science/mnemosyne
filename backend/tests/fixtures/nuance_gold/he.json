@@ -1,0 +1,115 @@
+{
+  "language": "he",
+  "plugin_module": "backend.plugins.hebrew",
+  "plugin_class": "HebrewPlugin",
+  "nuance_extractor_module": "backend.nuance.he",
+  "nuance_extractor_class": "HebrewNuanceExtractor",
+  "tokenizer": "words",
+  "capability_assertions": {
+    "idioms": ["none"],
+    "grammar_nuance": ["none"]
+  },
+  "capability_gaps": {
+    "grammar_nuance": "Plugin declares 'none' but extractor provides definite_prefix and waw_conjunction nuances"
+  },
+  "cases": [
+    {
+      "id": "he_extractor_nuance_definite_prefix",
+      "category": "grammar_nuance",
+      "text": "הספר על השולחן ליד החלון.",
+      "note": "Extractor nuance: ה- definite prefix on הספר (the book)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "definite_prefix",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.7,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "he_extractor_nuance_waw_conjunction",
+      "category": "grammar_nuance",
+      "text": "הוא קרא ספר וכתב מכתב ארוך.",
+      "note": "Extractor nuance: ו- (vav) conjunction prefix on וכתב",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "waw_conjunction",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.75,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "he_etymology_vocab_01",
+      "category": "etymology_vocab",
+      "text": "שלום עליכם, מה שלומך היום?",
+      "note": "Vocabulary: 'שלום' (peace/hello) — in DEFAULT_STORE with etymology",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "שלום",
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "he_false_positive_01",
+      "category": "false_positive",
+      "text": "יש כלב בחצר.",
+      "note": "Short existential sentence — no ה- prefix token, no ו- conjunction token",
+      "pipeline": "extractor",
+      "assert_types_present": [],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": ["definite_prefix", "waw_conjunction"],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "he_no_raw_uuids_01",
+      "category": "vocabulary",
+      "text": "הילדה קוראת ספר בחדר.",
+      "note": "Verify no UUID-format strings in any lesson_data field",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "he_vocabulary_keys_01",
+      "category": "vocabulary",
+      "text": "הם אוכלים ארוחת בוקר בבית.",
+      "note": "All vocabulary candidates must carry lemma in lesson_data",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma"]
+      },
+      "no_raw_uuids": true
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "language": "it",
+  "plugin_module": "backend.plugins.italian",
+  "plugin_class": "ItalianPlugin",
+  "nuance_extractor_module": null,
+  "nuance_extractor_class": null,
+  "tokenizer": "spacy",
+  "capability_assertions": {
+    "idioms": ["partial", "strong", "gold"],
+    "grammar_nuance": ["partial", "strong", "gold"],
+    "formality_register": ["stub", "partial"]
+  },
+  "capability_gaps": {},
+  "cases": [
+    {
+      "id": "it_idiom_01",
+      "category": "idiom",
+      "text": "Tuttavia, non possiamo ignorare il problema.",
+      "note": "Idiom 'tuttavia' (however, nonetheless) — discourse connector",
+      "pipeline": "plugin",
+      "assert_types_present": ["idiom"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "tuttavia",
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "idiom": ["phrase", "meaning", "register"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "it_idiom_02",
+      "category": "idiom",
+      "text": "Per esempio, possiamo usare questo metodo.",
+      "note": "Idiom 'per esempio' (for example) — discourse marker",
+      "pipeline": "plugin",
+      "assert_types_present": ["idiom"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "per esempio",
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "idiom": ["phrase", "meaning", "register"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "it_grammar_essere_copula",
+      "category": "grammar_nuance",
+      "text": "Maria è medica e è molto stanca oggi.",
+      "note": "Grammar: essere as copula for permanent identity and transient state",
+      "pipeline": "plugin",
+      "assert_types_present": ["grammar"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "essere_copula",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "grammar": ["pattern_id", "pattern", "usage"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "it_plugin_nuance_subjunctive",
+      "category": "grammar_nuance",
+      "text": "Voglio che tu venga alla festa stasera.",
+      "note": "Plugin nuance: subjunctive mood after volere + che",
+      "pipeline": "plugin",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "subjunctive_mood",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.7,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "lemma", "note"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "it_plugin_nuance_conditional",
+      "category": "grammar_nuance",
+      "text": "Vorrei un caffè, per favore.",
+      "note": "Plugin nuance: condizionale (conditional mood) for polite requests",
+      "pipeline": "plugin",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "conditional_mood",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.7,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "lemma", "note"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "it_etymology_vocab_01",
+      "category": "etymology_vocab",
+      "text": "Il piano suonava dolcemente nella sala.",
+      "note": "Vocabulary: 'piano' from Italian piano — flat, soft; also the instrument",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "piano",
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "it_false_positive_01",
+      "category": "false_positive",
+      "text": "Il medico scrive una ricetta per il paziente.",
+      "note": "Plain sentence: no idiom keywords, no grammar patterns",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": ["idiom", "grammar"],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": ["subjunctive_mood", "conditional_mood"],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "it_vocabulary_keys_01",
+      "category": "vocabulary",
+      "text": "Il gatto dorme tranquillo sul divano.",
+      "note": "All vocabulary candidates must carry lemma and pos",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    }
+  ]
+}
