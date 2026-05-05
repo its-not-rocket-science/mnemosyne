@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import re
 
-from backend.dictionary.phrase_families import match_phrase_families
+from backend.dictionary.phrase_families import lookup_family_by_id, match_phrase_families
 from backend.parsing.plugin_interface import Token
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
@@ -83,7 +83,10 @@ class EnglishStubPlugin:
         )
 
     def get_lesson(self, object_id: str) -> CandidateObject | None:
-        return self.lesson_store.get(object_id)
+        lo = self.lesson_store.get(object_id)
+        if lo is not None:
+            return lo
+        return lookup_family_by_id(object_id)
 
     # ------------------------------------------------------------------
     # Internals

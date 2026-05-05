@@ -999,6 +999,42 @@ detailPane?.addEventListener('pane-close', () => {
 
 paneBackdrop?.addEventListener('click', () => detailPane?.hide())
 
+// Navigate from a confusable-family link inside the detail pane.
+detailPane?.addEventListener('pane-navigate', async (event) => {
+  const { objectId, language } = event.detail
+  if (!objectId || !language) return
+  const caps   = languageCapabilities.get(language)
+  const ttsTag = caps?.tts_lang_tag ?? language
+  const dir    = caps?.direction ?? 'ltr'
+  try {
+    const url = `${API_BASE}/lesson/${encodeURIComponent(objectId)}?language=${encodeURIComponent(language)}&depth=${encodeURIComponent(currentDepth)}`
+    const response = await fetch(url)
+    if (!response.ok) return
+    const lesson = await response.json()
+    if (!detailPane) return
+    const uiLang = currentUiLang()
+    detailPane.show({
+      lesson,
+      sentenceText: '',
+      language,
+      dir,
+      ttsTag,
+      caps,
+      depth: currentDepth,
+      uiLang,
+      onSpeak:  (text, l) => speakText(text, l ?? ttsTag),
+      onStudy:  () => modal.open({
+        lesson,
+        objectId: lesson.id,
+        caps,
+        language,
+        onRate:  submitReview,
+        onSpeak: (text) => speakText(text, ttsTag),
+      }),
+    })
+  } catch { /* ignore — confusable may not be in store yet */ }
+})
+
 
 // ── TopNav event wiring ───────────────────────────────────────────────────────
 
