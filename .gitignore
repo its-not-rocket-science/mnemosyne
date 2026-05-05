@@ -7,3 +7,4 @@ bootstrap_db.py
 htmlcov/
 data/lang_capture/raw/
 *.tmp
+node_modules/
