@@ -17,6 +17,11 @@ v2 fields (all optional / defaulted — existing plugins compile unchanged):
     tts_lang_tag, transliteration_scheme,
     tense_pool, mood_pool
 
+v3 fields (all optional / defaulted):
+    nuance_capabilities — NuanceCapabilities sub-model with 11 per-dimension
+    coverage ratings.  None means the plugin has not declared coverage yet;
+    the frontend treats it the same as all-"none".
+
 The backward-compatibility rule is strict: adding a field to this class
 requires a default value so plugins that declare ``LanguageCapabilities(...)``
 with only the v1 fields continue to load without error.
@@ -101,6 +106,35 @@ transliteration_scheme
     "ipa"               — International Phonetic Alphabet.
     Any other string is accepted; these are communicative labels, not
     controlled vocabulary at the protocol level.
+
+────────────────────────────────────────────────────────────────────────────
+
+v3 field reference (Plugin Interface 3.0)
+─────────────────────────────────────────
+nuance_capabilities
+    A NuanceCapabilities object rating 11 semantic dimensions on a
+    five-level scale: "none" | "stub" | "partial" | "strong" | "gold".
+
+    none    — feature is not implemented at all.
+    stub    — present in code but coverage is superficial or very narrow.
+    partial — meaningful coverage with known gaps.
+    strong  — reliable across typical inputs; only edge cases missing.
+    gold    — production-quality; near-comprehensive coverage.
+
+    Dimensions:
+        idioms                        — multi-word idiomatic expressions.
+        phrase_families               — collocations and related phrase groups.
+        literary_references           — allusions to named literary works.
+        cultural_references           — culture-specific concepts and references.
+        etymology                     — word origin and historical form info.
+        formality_register            — formal / informal / honorific awareness.
+        grammar_nuance                — subtle grammatical distinctions (aspect,
+                                        mood, case agreement, etc.).
+        pronunciation_tts             — text-to-speech pronunciation quality.
+        transliteration               — romanization / script-conversion support.
+        proverb_tradition             — proverbs and traditional sayings.
+        classical_or_scriptural_allusion — allusions to classical or scriptural
+                                        texts (Bible, Quran, Homer, etc.).
 """
 from __future__ import annotations
 
@@ -130,6 +164,33 @@ QualityLevel = Literal[
     "low",     # heuristic; significant error rate
     "none",    # this stage is not performed
 ]
+
+# ── v3 types ──────────────────────────────────────────────────────────────────
+
+NuanceCoverageLevel = Literal["none", "stub", "partial", "strong", "gold"]
+
+
+class NuanceCapabilities(BaseModel):
+    """Per-dimension nuance coverage ratings for a language plugin.
+
+    Each field rates one semantic capability on a five-level scale.
+    The default for all fields is ``"none"`` so that a plugin that
+    does not yet declare nuance capabilities degrades gracefully.
+    """
+
+    idioms:                          NuanceCoverageLevel = "none"
+    phrase_families:                 NuanceCoverageLevel = "none"
+    literary_references:             NuanceCoverageLevel = "none"
+    cultural_references:             NuanceCoverageLevel = "none"
+    etymology:                       NuanceCoverageLevel = "none"
+    formality_register:              NuanceCoverageLevel = "none"
+    grammar_nuance:                  NuanceCoverageLevel = "none"
+    pronunciation_tts:               NuanceCoverageLevel = "none"
+    transliteration:                 NuanceCoverageLevel = "none"
+    proverb_tradition:               NuanceCoverageLevel = "none"
+    classical_or_scriptural_allusion: NuanceCoverageLevel = "none"
+    notes: str | None = None
+
 
 # ── Lesson-mode ranking ───────────────────────────────────────────────────────
 
@@ -207,6 +268,12 @@ class LanguageCapabilities(BaseModel):
 
     Same semantics as ``tense_pool``.  Set to ``None`` to fall back to the
     built-in pool."""
+
+    # ── v3 fields (defaulted — backward-compatible) ───────────────────────────
+
+    nuance_capabilities: NuanceCapabilities | None = None
+    """Per-dimension nuance coverage.  None means the plugin has not yet
+    declared coverage; the frontend treats it as all-"none"."""
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────

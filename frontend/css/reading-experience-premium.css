@@ -272,9 +272,7 @@
   color: color-mix(in srgb, var(--_annotation-color) 50%, var(--text-primary));
   text-decoration: none;
   border-color: color-mix(in srgb, var(--_annotation-color) 45%, transparent);
-  box-shadow:
-    inset -3px 0 0 0 var(--_annotation-color),
-    0 0 0 1px color-mix(in srgb, var(--_annotation-color) 22%, transparent);
+
 }
 
 @media (forced-colors: active) {

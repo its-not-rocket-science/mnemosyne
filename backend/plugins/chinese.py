@@ -47,7 +47,7 @@ from __future__ import annotations
 import re
 
 from backend.plugins.cefr_vocab import A1 as _CEFR_A1
-from backend.schemas.language import LanguageCapabilities
+from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 _A1: frozenset[str] = _CEFR_A1.get("zh", frozenset())
@@ -163,6 +163,19 @@ class MandarinChinesePlugin:
         idiom_detection=False,
         tts_lang_tag="zh-CN",
         transliteration_scheme="pinyin_tone_marks",
+        nuance_capabilities=NuanceCapabilities(
+            idioms="none",
+            phrase_families="none",
+            literary_references="none",
+            cultural_references="none",
+            etymology="none",
+            formality_register="none",
+            grammar_nuance="none",
+            pronunciation_tts="partial",  # zh-CN TTS reliable + pinyin display
+            transliteration="partial",    # pinyin_tone_marks active
+            proverb_tradition="none",
+            classical_or_scriptural_allusion="none",
+        ),
     )
 
     def __init__(self) -> None:

@@ -55,7 +55,7 @@ from typing import Any
 
 from backend.plugins.cefr_vocab import A1 as _CEFR_A1
 from backend.core.vocab_index import get_cefr_level as _get_cefr_level
-from backend.schemas.language import LanguageCapabilities
+from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 logger = logging.getLogger(__name__)
@@ -101,6 +101,19 @@ class JapanesePlugin:
         idiom_detection=False,
         tts_lang_tag="ja",
         transliteration_scheme="hiragana",
+        nuance_capabilities=NuanceCapabilities(
+            idioms="none",
+            phrase_families="none",
+            literary_references="none",
+            cultural_references="none",
+            etymology="none",
+            formality_register="none",
+            grammar_nuance="stub",        # basic verb form via morphology_light
+            pronunciation_tts="partial",  # ja TTS reliable + hiragana reading
+            transliteration="stub",       # hiragana reading only; no full romaji
+            proverb_tradition="none",
+            classical_or_scriptural_allusion="none",
+        ),
     )
 
     def __init__(self) -> None:
