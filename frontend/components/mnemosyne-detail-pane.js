@@ -403,8 +403,10 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   _htmlOriginsPanel(ld, isNonCanonical, hasSourceText, matchType = '') {
     const isConfusable = matchType === 'confusable_not_same'
-    const originText   = ld.origin || ld.etymology || ''
+    const originText   = ld.origin || ''
     const sourceText   = ld.source_text || ''
+    // etymology is a structured object {origin_summary, roots?, cognates?, semantic_shift?}
+    const etym = (ld.etymology && typeof ld.etymology === 'object') ? ld.etymology : null
     return /* html */`
       <section
         id="dp-panel-origins"
@@ -413,7 +415,31 @@ export class MnemosyneDetailPane extends HTMLElement {
         class="pane__panel"
         hidden
       >
-        <p class="pane__origin-text">${esc(originText)}</p>
+        ${originText ? /* html */`
+          <p class="pane__origin-text">${esc(originText)}</p>
+        ` : ''}
+        ${etym ? /* html */`
+          <div class="pane__etymology${originText ? ' pane__etymology--ruled' : ''}">
+            <h3 class="pane__section-heading">${esc(t('dp_etymology_heading'))}</h3>
+            <p class="pane__etymology-summary">${esc(etym.origin_summary || '')}</p>
+            ${(etym.roots?.length || etym.cognates?.length || etym.semantic_shift) ? /* html */`
+              <dl class="pane__etymology-meta">
+                ${etym.roots?.length ? /* html */`
+                  <dt class="pane__etymology-term">${esc(t('dp_etymology_roots'))}</dt>
+                  <dd class="pane__etymology-def">${etym.roots.map(r => esc(r)).join('; ')}</dd>
+                ` : ''}
+                ${etym.cognates?.length ? /* html */`
+                  <dt class="pane__etymology-term">${esc(t('dp_etymology_cognates'))}</dt>
+                  <dd class="pane__etymology-def">${etym.cognates.map(c => esc(c)).join(', ')}</dd>
+                ` : ''}
+                ${etym.semantic_shift ? /* html */`
+                  <dt class="pane__etymology-term">${esc(t('dp_etymology_shift'))}</dt>
+                  <dd class="pane__etymology-def">${esc(etym.semantic_shift)}</dd>
+                ` : ''}
+              </dl>
+            ` : ''}
+          </div>
+        ` : ''}
         ${hasSourceText ? /* html */`
           <cite class="pane__source-citation">${esc(sourceText)}</cite>
         ` : ''}
@@ -1279,6 +1305,43 @@ export class MnemosyneDetailPane extends HTMLElement {
         padding-block-start: 0.35rem;
         border-block-start: 1px solid var(--border);
         margin-block-start: 0.25rem;
+      }
+
+      .pane__etymology--ruled {
+        margin-block-start: 0.75rem;
+        padding-block-start: 0.75rem;
+        border-block-start: 1px solid var(--border);
+      }
+
+      .pane__etymology-summary {
+        margin: 0.25rem 0 0;
+        font-size: 0.9rem;
+        line-height: 1.7;
+        color: var(--text);
+      }
+
+      .pane__etymology-meta {
+        margin: 0.6rem 0 0;
+        display: grid;
+        grid-template-columns: 7rem 1fr;
+        gap: 0.25rem 0.5rem;
+        align-items: baseline;
+      }
+
+      .pane__etymology-term {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .pane__etymology-def {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin: 0;
+        overflow-wrap: break-word;
       }
 
       /* ── In Context ─────────────────────────────────────────────────────── */
