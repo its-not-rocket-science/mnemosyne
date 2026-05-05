@@ -1,0 +1,130 @@
+{
+  "language": "grc",
+  "plugin_module": "backend.plugins.greek_koine",
+  "plugin_class": "KoineGreekPlugin",
+  "nuance_extractor_module": "backend.nuance.grc",
+  "nuance_extractor_class": "AncientGreekNuanceExtractor",
+  "tokenizer": "words",
+  "capability_assertions": {
+    "idioms": ["none"],
+    "grammar_nuance": ["none"]
+  },
+  "capability_gaps": {
+    "grammar_nuance": "Plugin declares 'none' but extractor provides discourse_particle, negation_ou, negation_me, and definite_article nuances"
+  },
+  "cases": [
+    {
+      "id": "grc_extractor_nuance_particle_de",
+      "category": "grammar_nuance",
+      "text": "ὁ δὲ ἄνθρωπος εἶπεν αὐτῷ.",
+      "note": "Extractor nuance: δέ — mild adversative/continuative postpositive particle",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "discourse_particle",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "grc_extractor_nuance_negation_ou",
+      "category": "grammar_nuance",
+      "text": "οὐκ οἶδα τί λέγεις.",
+      "note": "Extractor nuance: οὐκ — negation of indicative (factual assertion)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "negation_ou",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "grc_extractor_nuance_negation_me",
+      "category": "grammar_nuance",
+      "text": "μὴ ποιεῖ τοῦτο ἔτι.",
+      "note": "Extractor nuance: μή — negation of non-indicative moods (imperative here)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "negation_me",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "grc_extractor_nuance_definite_article",
+      "category": "grammar_nuance",
+      "text": "ὁ λόγος ἦν πρὸς τὸν θεόν.",
+      "note": "Extractor nuance: ὁ — definite article (declined for case/number/gender)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "definite_article",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "grc_etymology_vocab_01",
+      "category": "etymology_vocab",
+      "text": "ἐν ἀρχῇ ἦν ὁ λόγος.",
+      "note": "Vocabulary: 'λόγος' — in DEFAULT_STORE with etymology",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "λογος",
+      "confidence_ge": null,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "grc_false_positive_01",
+      "category": "false_positive",
+      "text": "ἄνθρωπός τις κατέβαινεν.",
+      "note": "Short narrative sentence — no οὐ/μή negation, article τις (indefinite) not in definite article set",
+      "pipeline": "extractor",
+      "assert_types_present": [],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": ["negation_ou", "negation_me"],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "grc_no_raw_uuids_01",
+      "category": "vocabulary",
+      "text": "ἡ ἀγάπη οὐδέποτε ἐκπίπτει.",
+      "note": "Verify no UUID-format strings in any lesson_data field",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    }
+  ]
+}
