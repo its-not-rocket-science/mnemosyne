@@ -42,7 +42,8 @@
       "Bash(xargs -I {} basename {})",
       "WebFetch(domain:medium.com)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/health)",
-      "Bash(powershell *)"
+      "Bash(powershell *)",
+      "Bash(PYTHONPATH=. python *)"
     ]
   }
 }
