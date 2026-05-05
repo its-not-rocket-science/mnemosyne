@@ -44,6 +44,17 @@
  */
 
 /**
+ * Rich reference to a cross-family confusable (serialised from _FAMILY_CATALOG).
+ * Included in `PhraseFamilyLessonData.confusable_families`.
+ *
+ * @typedef {Object} ConfusableFamilyRef
+ * @property {string} family_id      - Stable slug used as lesson object_id.
+ * @property {string} canonical_form - Most-cited surface form of that family.
+ * @property {string} meaning        - One-line meaning of that family.
+ * @property {string} register       - Register of that family.
+ */
+
+/**
  * `lesson_data` payload for a `phrase_family` lesson object.
  * Set by `phrase_families._family_to_candidate()`.
  *
@@ -59,8 +70,9 @@
  * @property {string}               [source_text]     - Primary attribution / citation line.
  * @property {string}               [why_it_matters]  - Learner-facing significance.
  * @property {PhraseVariantDict[]}   variants         - All non-confusable variants.
- * @property {ConfusableFormDict[]} [confusable_forms] - Within-family confusable surfaces.
- * @property {string[]}             [confusables]     - IDs of cross-family confusable families.
+ * @property {ConfusableFormDict[]}   [confusable_forms]    - Within-family confusable surfaces.
+ * @property {string[]}               [confusables]         - Raw IDs of cross-family confusables (compatibility).
+ * @property {ConfusableFamilyRef[]}  [confusable_families] - Rich cross-family confusable references.
  * @property {string[]}             [tags]            - Taxonomy tags.
  */
 

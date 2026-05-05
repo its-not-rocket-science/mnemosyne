@@ -24,6 +24,7 @@ from backend.dictionary.phrase_families import (
     _MATCH_TYPE_CONFIDENCE,
     _VARIANT_INDEX,
     _normalise,
+    lookup_family_by_id,
     match_phrase_families,
 )
 from backend.lesson.generators import build_lesson
@@ -669,3 +670,83 @@ class TestLanguageFilter:
         assert len(results) == 1, (
             "Sanity check: English phrase must match with language='en'"
         )
+
+
+# ── confusable_families in lesson_data ───────────────────────────────────────
+
+
+class TestConfusableFamilies:
+    """confusable_families must be a rich list, not raw IDs."""
+
+    def _match(self, phrase: str) -> dict:
+        results = match_phrase_families(_tokens(phrase), "en")
+        assert results, f"No match for: {phrase!r}"
+        return results[0].lesson_data
+
+    def test_confusable_families_present_when_confusables_exist(self) -> None:
+        ld = self._match("all that glisters is not gold")
+        assert "confusable_families" in ld
+
+    def test_confusable_families_have_required_keys(self) -> None:
+        ld = self._match("all that glisters is not gold")
+        for cf in ld["confusable_families"]:
+            assert "family_id"      in cf, f"Missing family_id: {cf}"
+            assert "canonical_form" in cf, f"Missing canonical_form: {cf}"
+            assert "meaning"        in cf, f"Missing meaning: {cf}"
+            assert "register"       in cf, f"Missing register: {cf}"
+
+    def test_confusable_families_canonical_form_nonempty(self) -> None:
+        ld = self._match("all that glisters is not gold")
+        for cf in ld["confusable_families"]:
+            assert cf["canonical_form"], f"Empty canonical_form in: {cf}"
+
+    def test_confusable_families_meaning_nonempty(self) -> None:
+        ld = self._match("all that glisters is not gold")
+        for cf in ld["confusable_families"]:
+            assert cf["meaning"], f"Empty meaning in: {cf}"
+
+    def test_confusable_families_ids_match_raw_confusables(self) -> None:
+        ld = self._match("all that glisters is not gold")
+        raw_ids = set(ld.get("confusables", []))
+        rich_ids = {cf["family_id"] for cf in ld["confusable_families"]}
+        assert rich_ids == raw_ids
+
+    def test_family_without_confusables_omits_confusable_families(self) -> None:
+        ld = self._match("hit the nail on the head")
+        assert "confusable_families" not in ld
+
+    def test_unknown_confusable_id_skipped_not_crashed(self) -> None:
+        fam = _FAMILY_CATALOG["all_that_glitters"]
+        import dataclasses
+        bad_fam = dataclasses.replace(fam, confusables=("nonexistent_id",))
+        from backend.dictionary.phrase_families import _family_to_candidate, PhraseVariant
+        exact = next(v for v in fam.variants if v.match_type == MatchType.exact)
+        obj = _family_to_candidate(bad_fam, exact.surface, exact)
+        # Bad ID skipped — list present but empty.
+        assert obj.lesson_data.get("confusable_families", []) == []
+
+
+# ── lookup_family_by_id ───────────────────────────────────────────────────────
+
+
+class TestLookupFamilyById:
+    def test_known_id_returns_candidate(self) -> None:
+        obj = lookup_family_by_id("all_that_glitters")
+        assert obj is not None
+        assert obj.type == "phrase_family"
+        assert obj.lesson_data["family_id"] == "all_that_glitters"
+
+    def test_unknown_id_returns_none(self) -> None:
+        assert lookup_family_by_id("no_such_family") is None
+
+    def test_returned_candidate_has_confusable_families(self) -> None:
+        obj = lookup_family_by_id("all_that_glitters")
+        assert obj is not None
+        assert "confusable_families" in obj.lesson_data
+
+    def test_surface_is_canonical_exact_variant(self) -> None:
+        obj = lookup_family_by_id("all_that_glitters")
+        assert obj is not None
+        fam = _FAMILY_CATALOG["all_that_glitters"]
+        exact = next(v for v in fam.variants if v.match_type == MatchType.exact)
+        assert obj.surface_form == exact.surface
