@@ -96,7 +96,7 @@ from typing import Any
 
 from backend.plugins.cefr_vocab import A1 as _CEFR_A1
 from backend.core.vocab_index import get_cefr_level as _get_cefr_level
-from backend.schemas.language import LanguageCapabilities
+from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import (
     CandidateObject,
     CandidateSentenceResult,
@@ -278,6 +278,19 @@ class ItalianPlugin:
         transliteration_scheme=None,
         tense_pool=["present", "imperfect", "past", "future", "pluperfect"],
         mood_pool=["indicative", "subjunctive", "conditional", "imperative"],
+        nuance_capabilities=NuanceCapabilities(
+            idioms="partial",            # curated ~30-entry fixed-expression table
+            phrase_families="stub",      # collocations via dep-parse; not grouped
+            literary_references="none",
+            cultural_references="none",
+            etymology="none",
+            formality_register="stub",   # Lei/tu distinction detectable
+            grammar_nuance="partial",    # tense/mood/person/number drilling
+            pronunciation_tts="partial", # browser TTS reliable for it
+            transliteration="none",
+            proverb_tradition="none",
+            classical_or_scriptural_allusion="none",
+        ),
     )
 
     def __init__(self) -> None:

@@ -60,7 +60,7 @@ from __future__ import annotations
 import re
 import unicodedata
 
-from backend.schemas.language import LanguageCapabilities
+from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 # ── Sentence splitting ────────────────────────────────────────────────────────
@@ -598,6 +598,19 @@ class KoineGreekPlugin:
         idiom_detection=False,
         tts_lang_tag="el",           # Modern Greek TTS is the closest available
         transliteration_scheme="sbl-simplified",
+        nuance_capabilities=NuanceCapabilities(
+            idioms="none",
+            phrase_families="none",
+            literary_references="none",
+            cultural_references="none",
+            etymology="none",
+            formality_register="none",
+            grammar_nuance="none",
+            pronunciation_tts="stub",    # el TTS; modern Greek proxy for Koine
+            transliteration="partial",   # sbl-simplified scheme active
+            proverb_tradition="none",
+            classical_or_scriptural_allusion="none",
+        ),
     )
 
     def __init__(self) -> None:

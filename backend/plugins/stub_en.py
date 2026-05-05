@@ -10,7 +10,7 @@ import re
 
 from backend.dictionary.phrase_families import match_phrase_families
 from backend.parsing.plugin_interface import Token
-from backend.schemas.language import LanguageCapabilities
+from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 _SENTENCE_RE = re.compile(r"[^.!?]+[.!?]?")
@@ -38,6 +38,19 @@ class EnglishStubPlugin:
         idiom_detection=True,
         tts_lang_tag="en",
         transliteration_scheme=None,
+        nuance_capabilities=NuanceCapabilities(
+            idioms="stub",               # idiom_detection=True but heuristic only
+            phrase_families="none",
+            literary_references="none",
+            cultural_references="none",
+            etymology="none",
+            formality_register="none",
+            grammar_nuance="none",
+            pronunciation_tts="partial", # en TTS widely available and reliable
+            transliteration="none",
+            proverb_tradition="none",
+            classical_or_scriptural_allusion="none",
+        ),
     )
 
     def __init__(self) -> None:

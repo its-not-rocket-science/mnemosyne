@@ -20,6 +20,7 @@ from backend.schemas.language import (
     AnalysisDepth,
     LanguageCapabilities,
     LessonMode,
+    NuanceCapabilities,
     QualityLevel,
     best_lesson_mode,
     tts_tag_for,
@@ -884,3 +885,154 @@ class TestNewLearnableTypes:
             },
         )
         assert obj.type == "case_agreement"
+
+
+# ── NuanceCapabilities schema ─────────────────────────────────────────────────
+
+
+class TestNuanceCapabilitiesSchema:
+    _VALID_LEVELS = {"none", "stub", "partial", "strong", "gold"}
+    _ALL_FIELDS = {
+        "idioms", "phrase_families", "literary_references",
+        "cultural_references", "etymology", "formality_register",
+        "grammar_nuance", "pronunciation_tts", "transliteration",
+        "proverb_tradition", "classical_or_scriptural_allusion",
+    }
+
+    def test_default_instance_all_none(self) -> None:
+        nc = NuanceCapabilities()
+        for field in self._ALL_FIELDS:
+            assert getattr(nc, field) == "none", f"{field} default is not 'none'"
+
+    def test_all_levels_accepted(self) -> None:
+        for level in self._VALID_LEVELS:
+            nc = NuanceCapabilities(idioms=level)  # type: ignore[arg-type]
+            assert nc.idioms == level
+
+    def test_notes_optional(self) -> None:
+        nc = NuanceCapabilities(notes="stub only — no curated data yet")
+        assert nc.notes == "stub only — no curated data yet"
+
+    def test_notes_defaults_none(self) -> None:
+        assert NuanceCapabilities().notes is None
+
+    def test_language_capabilities_nuance_defaults_none(self) -> None:
+        caps = LanguageCapabilities(
+            code="xx", display_name="X", direction="ltr",
+            script_family="other", tokenization_mode="whitespace",
+            morphology_depth="none", lesson_modes_supported=["dictionary"],
+        )
+        assert caps.nuance_capabilities is None
+
+    def test_language_capabilities_nuance_accepts_model(self) -> None:
+        nc = NuanceCapabilities(idioms="partial", pronunciation_tts="partial")
+        caps = LanguageCapabilities(
+            code="xx", display_name="X", direction="ltr",
+            script_family="other", tokenization_mode="whitespace",
+            morphology_depth="none", lesson_modes_supported=["dictionary"],
+            nuance_capabilities=nc,
+        )
+        assert caps.nuance_capabilities is not None
+        assert caps.nuance_capabilities.idioms == "partial"
+
+    def test_serialises_to_dict_with_nuance(self) -> None:
+        nc = NuanceCapabilities(grammar_nuance="strong")
+        caps = LanguageCapabilities(
+            code="xx", display_name="X", direction="ltr",
+            script_family="other", tokenization_mode="whitespace",
+            morphology_depth="none", lesson_modes_supported=["dictionary"],
+            nuance_capabilities=nc,
+        )
+        d = caps.model_dump()
+        assert d["nuance_capabilities"]["grammar_nuance"] == "strong"
+
+
+# ── GET /languages — v3 nuance_capabilities ───────────────────────────────────
+
+
+_NUANCE_FIELDS = {
+    "idioms", "phrase_families", "literary_references",
+    "cultural_references", "etymology", "formality_register",
+    "grammar_nuance", "pronunciation_tts", "transliteration",
+    "proverb_tradition", "classical_or_scriptural_allusion",
+}
+_NUANCE_LEVELS = {"none", "stub", "partial", "strong", "gold"}
+
+
+class TestLanguagesEndpointV3:
+    def test_nuance_capabilities_field_present(self) -> None:
+        resp = client.get("/languages")
+        for item in resp.json():
+            assert "nuance_capabilities" in item, (
+                f"nuance_capabilities missing for {item['code']}"
+            )
+
+    def test_all_registered_plugins_declare_nuance(self) -> None:
+        """Every plugin in the registry must declare nuance_capabilities (not None)."""
+        resp = client.get("/languages")
+        for item in resp.json():
+            assert item["nuance_capabilities"] is not None, (
+                f"{item['code']} has nuance_capabilities=None; "
+                "all registered plugins must declare coverage"
+            )
+
+    def test_all_eleven_fields_present(self) -> None:
+        resp = client.get("/languages")
+        for item in resp.json():
+            nc = item["nuance_capabilities"]
+            if nc is None:
+                continue
+            for field in _NUANCE_FIELDS:
+                assert field in nc, (
+                    f"nuance field '{field}' missing for {item['code']}"
+                )
+
+    def test_all_field_values_valid_levels(self) -> None:
+        resp = client.get("/languages")
+        for item in resp.json():
+            nc = item["nuance_capabilities"]
+            if nc is None:
+                continue
+            for field in _NUANCE_FIELDS:
+                assert nc[field] in _NUANCE_LEVELS, (
+                    f"{item['code']}.nuance_capabilities.{field} = {nc[field]!r} "
+                    "is not a valid NuanceCoverageLevel"
+                )
+
+    def test_spacy_languages_have_partial_idioms(self) -> None:
+        resp = client.get("/languages")
+        spacy_codes = {"es", "fr", "de", "it", "pt", "ru"}
+        for item in resp.json():
+            if item["code"] not in spacy_codes:
+                continue
+            nc = item["nuance_capabilities"]
+            assert nc is not None
+            assert nc["idioms"] in ("partial", "strong", "gold"), (
+                f"{item['code']} has a curated idiom table but idioms={nc['idioms']!r}"
+            )
+
+    def test_transliteration_languages_declare_it(self) -> None:
+        resp = client.get("/languages")
+        trans_codes = {"zh", "ja", "grc"}
+        for item in resp.json():
+            if item["code"] not in trans_codes:
+                continue
+            nc = item["nuance_capabilities"]
+            assert nc is not None
+            assert nc["transliteration"] in ("stub", "partial", "strong", "gold"), (
+                f"{item['code']} has transliteration_scheme but "
+                f"nuance transliteration={nc['transliteration']!r}"
+            )
+
+    def test_dictionary_only_languages_no_grammar_nuance(self) -> None:
+        resp = client.get("/languages")
+        dict_only = {"ar", "he", "la"}
+        for item in resp.json():
+            if item["code"] not in dict_only:
+                continue
+            nc = item["nuance_capabilities"]
+            assert nc is not None
+            assert nc["grammar_nuance"] == "none", (
+                f"{item['code']} is dictionary-only but declares grammar_nuance="
+                f"{nc['grammar_nuance']!r}"
+            )

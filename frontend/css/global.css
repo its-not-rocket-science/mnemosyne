@@ -1166,6 +1166,44 @@ body.player-active .app-shell__scroll-area {
   font-size: 0.875rem;
 }
 
+/* ── Nuance-coverage indicator ───────────────────────────────────────────────
+   Compact dot-row shown below the language <select> that summarises
+   per-dimension coverage at a glance.  Dots are color-coded by level:
+   none=hidden, stub=muted, partial=amber, strong=green, gold=gold.          */
+
+.lang-nuance-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  margin-block-start: 0.4rem;
+  font-size: 0.7rem;
+  color: var(--muted);
+  line-height: 1.2;
+}
+
+.lang-nuance-bar__dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  white-space: nowrap;
+}
+
+.lang-nuance-bar__dot::before {
+  content: '';
+  display: inline-block;
+  inline-size: 0.5em;
+  block-size: 0.5em;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.lang-nuance-bar__dot[data-level="none"]    { color: transparent; display: none; }
+.lang-nuance-bar__dot[data-level="stub"]    { color: var(--muted); }
+.lang-nuance-bar__dot[data-level="partial"] { color: var(--ann-idiom); }
+.lang-nuance-bar__dot[data-level="strong"]  { color: var(--ann-grammar); }
+.lang-nuance-bar__dot[data-level="gold"]    { color: oklch(0.75 0.18 80); }
+
 /* ── Mobile compact header ───────────────────────────────────────────────────
    On narrow screens shrink header padding and hide the tagline to give more
    vertical space to the reading column.                                      */

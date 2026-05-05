@@ -397,6 +397,16 @@ const STRINGS = {
     fv_indicative:            'indicative',
     fv_subjunctive:           'subjunctive',
     fv_imperative:            'imperative',
+
+    type_vocabulary_short: 'Vocab',
+    type_conjugation_short: 'Verb',
+    type_agreement_short: 'Agree',
+    type_idiom_short: 'Idiom',
+    type_grammar_short: 'Grammar',
+    type_nuance_short: 'Nuance',
+    type_script_short: 'Script',
+    type_phrase_family_short: 'Phrase',
+    type_unknown: 'Note',
   },
 
   es: {
@@ -745,6 +755,16 @@ const STRINGS = {
     fv_indicative           : 'indicativo',
     fv_subjunctive          : 'subjuntivo',
     fv_imperative           : 'imperativo',
+
+    type_vocabulary_short: 'Vocab',
+    type_conjugation_short: 'Verbo',
+    type_agreement_short: 'Concord.',
+    type_idiom_short: 'Modismo',
+    type_grammar_short: 'Gram.',
+    type_nuance_short: 'Matiz',
+    type_script_short: 'Escrit.',
+    type_phrase_family_short: 'Frase',
+    type_unknown: 'Nota',
   },
 
   fr: {
@@ -1093,6 +1113,16 @@ const STRINGS = {
     fv_indicative           : 'indicatif',
     fv_subjunctive          : 'subjonctif',
     fv_imperative           : 'imp\u00e9ratif',
+
+    type_vocabulary_short: 'Vocab',
+    type_conjugation_short: 'Verbe',
+    type_agreement_short: 'Accord',
+    type_idiom_short: 'Idiome',
+    type_grammar_short: 'Gramm.',
+    type_nuance_short: 'Nuance',
+    type_script_short: 'Écriture',
+    type_phrase_family_short: 'Phrase',
+    type_unknown: 'Note',
   },
 
   de: {
@@ -1441,6 +1471,16 @@ const STRINGS = {
     fv_indicative           : 'Indikativ',
     fv_subjunctive          : 'Konjunktiv',
     fv_imperative           : 'Imperativ',
+
+    type_vocabulary_short: 'Wort',
+    type_conjugation_short: 'Verb',
+    type_agreement_short: 'Kongr.',
+    type_idiom_short: 'Redew.',
+    type_grammar_short: 'Gramm.',
+    type_nuance_short: 'Nuance',
+    type_script_short: 'Schrift',
+    type_phrase_family_short: 'Phrase',
+    type_unknown: 'Notiz',
   },
 
   it: {
@@ -1783,6 +1823,16 @@ const STRINGS = {
     fv_indicative           : 'indicativo',
     fv_subjunctive          : 'congiuntivo',
     fv_imperative           : 'imperativo',
+
+    type_vocabulary_short: 'Vocab',
+    type_conjugation_short: 'Verbo',
+    type_agreement_short: 'Accordo',
+    type_idiom_short: 'Idiom.',
+    type_grammar_short: 'Gramm.',
+    type_nuance_short: 'Sfumat.',
+    type_script_short: 'Scritt.',
+    type_phrase_family_short: 'Frase',
+    type_unknown: 'Nota',
   },
 
   pt: {
@@ -2125,6 +2175,16 @@ const STRINGS = {
     fv_indicative           : 'indicativo',
     fv_subjunctive          : 'subjuntivo',
     fv_imperative           : 'imperativo',
+
+    type_vocabulary_short: 'Vocab',
+    type_conjugation_short: 'Verbo',
+    type_agreement_short: 'Concord.',
+    type_idiom_short: 'Express.',
+    type_grammar_short: 'Gram.',
+    type_nuance_short: 'Nuance',
+    type_script_short: 'Escrita',
+    type_phrase_family_short: 'Frase',
+    type_unknown: 'Nota',
   },
 
   ru: {
@@ -2467,6 +2527,16 @@ const STRINGS = {
     fv_indicative           : 'изъявительное',
     fv_subjunctive          : 'сослагательное',
     fv_imperative           : 'повелительное',
+
+    type_vocabulary_short: 'Лекс.',
+    type_conjugation_short: 'Глаг.',
+    type_agreement_short: 'Согл.',
+    type_idiom_short: 'Идиома',
+    type_grammar_short: 'Грам.',
+    type_nuance_short: 'Нюанс',
+    type_script_short: 'Письм.',
+    type_phrase_family_short: 'Фраза',
+    type_unknown: 'Заметка',
   },
 
   ja: {
@@ -2809,6 +2879,16 @@ const STRINGS = {
     fv_indicative           : '直説法',
     fv_subjunctive          : '接続法',
     fv_imperative           : '命令法',
+
+    type_vocabulary_short: '語彙',
+    type_conjugation_short: '動詞',
+    type_agreement_short: '一致',
+    type_idiom_short: '慣用句',
+    type_grammar_short: '文法',
+    type_nuance_short: 'ニュアンス',
+    type_script_short: '文字',
+    type_phrase_family_short: '表現',
+    type_unknown: 'メモ',
   },
 
   zh: {
@@ -3151,6 +3231,16 @@ const STRINGS = {
     fv_indicative           : '陈述语气',
     fv_subjunctive          : '虚拟语气',
     fv_imperative           : '命令语气',
+
+    type_vocabulary_short: '词汇',
+    type_conjugation_short: '动词',
+    type_agreement_short: '一致',
+    type_idiom_short: '习语',
+    type_grammar_short: '语法',
+    type_nuance_short: '细微差别',
+    type_script_short: '文字',
+    type_phrase_family_short: '表达',
+    type_unknown: '备注',
   },
 
   ar: {
@@ -3493,6 +3583,16 @@ const STRINGS = {
     fv_indicative           : 'صيغة الخبر',
     fv_subjunctive          : 'صيغة المنصوب',
     fv_imperative           : 'أمر',
+
+    type_vocabulary_short: 'مفردات',
+    type_conjugation_short: 'فعل',
+    type_agreement_short: 'توافق',
+    type_idiom_short: 'تعبير',
+    type_grammar_short: 'نحو',
+    type_nuance_short: 'دلالة',
+    type_script_short: 'كتابة',
+    type_phrase_family_short: 'عبارة',
+    type_unknown: 'ملاحظة',
   },
 
   he: {
@@ -3835,6 +3935,16 @@ const STRINGS = {
     fv_indicative           : 'ישיר',
     fv_subjunctive          : 'מניע',
     fv_imperative           : 'ציווי',
+
+    type_vocabulary_short: 'אוצר מילים',
+    type_conjugation_short: 'פועל',
+    type_agreement_short: 'התאמה',
+    type_idiom_short: 'ניב',
+    type_grammar_short: 'דקדוק',
+    type_nuance_short: 'ניואנס',
+    type_script_short: 'כתב',
+    type_phrase_family_short: 'ביטוי',
+    type_unknown: 'הערה',
   },
 }
 
@@ -3939,4 +4049,197 @@ export function initUiLanguage() {
   }
 
   applyUiLanguage(initial)
+}
+
+
+// ── Annotation ARIA labels ───────────────────────────────────────────────
+export const ANNOTATION_ARIA_I18N = {
+  en: {
+    annotation_aria_label: '{type} annotation: {text}. Press Enter to open details.',
+    annotation_aria_label_no_text: '{type} annotation. Press Enter to open details.',
+  },
+
+  es: {
+    annotation_aria_label: 'Anotación de {type}: {text}. Pulsa Intro para abrir los detalles.',
+    annotation_aria_label_no_text: 'Anotación de {type}. Pulsa Intro para abrir los detalles.',
+  },
+
+  fr: {
+    annotation_aria_label: 'Annotation de {type} : {text}. Appuyez sur Entrée pour ouvrir les détails.',
+    annotation_aria_label_no_text: 'Annotation de {type}. Appuyez sur Entrée pour ouvrir les détails.',
+  },
+
+  de: {
+    annotation_aria_label: '{type}-Annotation: {text}. Drücken Sie die Eingabetaste, um Details zu öffnen.',
+    annotation_aria_label_no_text: '{type}-Annotation. Drücken Sie die Eingabetaste, um Details zu öffnen.',
+  },
+
+  it: {
+    annotation_aria_label: 'Annotazione di {type}: {text}. Premi Invio per aprire i dettagli.',
+    annotation_aria_label_no_text: 'Annotazione di {type}. Premi Invio per aprire i dettagli.',
+  },
+
+  pt: {
+    annotation_aria_label: 'Anotação de {type}: {text}. Prima Enter para abrir os detalhes.',
+    annotation_aria_label_no_text: 'Anotação de {type}. Prima Enter para abrir os detalhes.',
+  },
+
+  ru: {
+    annotation_aria_label: 'Аннотация типа «{type}»: {text}. Нажмите Enter, чтобы открыть подробности.',
+    annotation_aria_label_no_text: 'Аннотация типа «{type}». Нажмите Enter, чтобы открыть подробности.',
+  },
+
+  ja: {
+    annotation_aria_label: '{type}の注釈: {text}。Enterキーで詳細を開きます。',
+    annotation_aria_label_no_text: '{type}の注釈。Enterキーで詳細を開きます。',
+  },
+
+  zh: {
+    annotation_aria_label: '{type}注释：{text}。按 Enter 打开详情。',
+    annotation_aria_label_no_text: '{type}注释。按 Enter 打开详情。',
+  },
+
+  ar: {
+    annotation_aria_label: 'تعليق {type}: {text}. اضغط Enter لفتح التفاصيل.',
+    annotation_aria_label_no_text: 'تعليق {type}. اضغط Enter لفتح التفاصيل.',
+  },
+
+  he: {
+    annotation_aria_label: 'הערת {type}: {text}. הקש Enter כדי לפתוח פרטים.',
+    annotation_aria_label_no_text: 'הערת {type}. הקש Enter כדי לפתוח פרטים.',
+  },
+}
+
+export const TYPE_LABELS_LONG_I18N = {
+  en: {
+    type_vocabulary_long: 'Vocabulary',
+    type_conjugation_long: 'Verb conjugation',
+    type_agreement_long: 'Agreement',
+    type_idiom_long: 'Idiom',
+    type_grammar_long: 'Grammar',
+    type_nuance_long: 'Nuance',
+    type_script_long: 'Script or writing system',
+    type_phrase_family_long: 'Phrase family',
+    type_unknown_long: 'Learning note',
+  },
+
+  es: {
+    type_vocabulary_long: 'vocabulario',
+    type_conjugation_long: 'conjugación verbal',
+    type_agreement_long: 'concordancia',
+    type_idiom_long: 'modismo',
+    type_grammar_long: 'gramática',
+    type_nuance_long: 'matiz',
+    type_script_long: 'sistema de escritura',
+    type_phrase_family_long: 'familia de expresiones',
+    type_unknown_long: 'nota de aprendizaje',
+  },
+
+  fr: {
+    type_vocabulary_long: 'vocabulaire',
+    type_conjugation_long: 'conjugaison verbale',
+    type_agreement_long: 'accord',
+    type_idiom_long: 'idiome',
+    type_grammar_long: 'grammaire',
+    type_nuance_long: 'nuance',
+    type_script_long: 'système d’écriture',
+    type_phrase_family_long: 'famille d’expressions',
+    type_unknown_long: 'note d’apprentissage',
+  },
+
+  de: {
+    type_vocabulary_long: 'Wortschatz',
+    type_conjugation_long: 'Verbkonjugation',
+    type_agreement_long: 'Kongruenz',
+    type_idiom_long: 'Redewendung',
+    type_grammar_long: 'Grammatik',
+    type_nuance_long: 'Nuance',
+    type_script_long: 'Schriftsystem',
+    type_phrase_family_long: 'Phrasengruppe',
+    type_unknown_long: 'Lernnotiz',
+  },
+
+  it: {
+    type_vocabulary_long: 'vocabolario',
+    type_conjugation_long: 'coniugazione verbale',
+    type_agreement_long: 'accordo',
+    type_idiom_long: 'modo di dire',
+    type_grammar_long: 'grammatica',
+    type_nuance_long: 'sfumatura',
+    type_script_long: 'sistema di scrittura',
+    type_phrase_family_long: 'famiglia di espressioni',
+    type_unknown_long: 'nota di apprendimento',
+  },
+
+  pt: {
+    type_vocabulary_long: 'vocabulário',
+    type_conjugation_long: 'conjugação verbal',
+    type_agreement_long: 'concordância',
+    type_idiom_long: 'expressão idiomática',
+    type_grammar_long: 'gramática',
+    type_nuance_long: 'nuance',
+    type_script_long: 'sistema de escrita',
+    type_phrase_family_long: 'família de expressões',
+    type_unknown_long: 'nota de aprendizagem',
+  },
+
+  ru: {
+    type_vocabulary_long: 'лексика',
+    type_conjugation_long: 'спряжение глагола',
+    type_agreement_long: 'согласование',
+    type_idiom_long: 'идиома',
+    type_grammar_long: 'грамматика',
+    type_nuance_long: 'нюанс',
+    type_script_long: 'система письма',
+    type_phrase_family_long: 'семья выражений',
+    type_unknown_long: 'учебная заметка',
+  },
+
+  ja: {
+    type_vocabulary_long: '語彙',
+    type_conjugation_long: '動詞の活用',
+    type_agreement_long: '一致',
+    type_idiom_long: '慣用句',
+    type_grammar_long: '文法',
+    type_nuance_long: 'ニュアンス',
+    type_script_long: '文字体系',
+    type_phrase_family_long: '表現のまとまり',
+    type_unknown_long: '学習メモ',
+  },
+
+  zh: {
+    type_vocabulary_long: '词汇',
+    type_conjugation_long: '动词变位',
+    type_agreement_long: '一致关系',
+    type_idiom_long: '习语',
+    type_grammar_long: '语法',
+    type_nuance_long: '细微差别',
+    type_script_long: '书写系统',
+    type_phrase_family_long: '表达族',
+    type_unknown_long: '学习备注',
+  },
+
+  ar: {
+    type_vocabulary_long: 'مفردات',
+    type_conjugation_long: 'تصريف الفعل',
+    type_agreement_long: 'مطابقة',
+    type_idiom_long: 'تعبير اصطلاحي',
+    type_grammar_long: 'قواعد',
+    type_nuance_long: 'دلالة دقيقة',
+    type_script_long: 'نظام الكتابة',
+    type_phrase_family_long: 'عائلة عبارات',
+    type_unknown_long: 'ملاحظة تعليمية',
+  },
+
+  he: {
+    type_vocabulary_long: 'אוצר מילים',
+    type_conjugation_long: 'נטיית פועל',
+    type_agreement_long: 'התאמה דקדוקית',
+    type_idiom_long: 'ניב',
+    type_grammar_long: 'דקדוק',
+    type_nuance_long: 'ניואנס',
+    type_script_long: 'מערכת כתב',
+    type_phrase_family_long: 'משפחת ביטויים',
+    type_unknown_long: 'הערת למידה',
+  },
 }

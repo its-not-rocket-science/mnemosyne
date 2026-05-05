@@ -51,7 +51,7 @@ from __future__ import annotations
 import re
 import unicodedata
 
-from backend.schemas.language import LanguageCapabilities
+from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 # ── Sentence splitting ─────────────────────────────────────────────────────────
@@ -487,6 +487,19 @@ class LatinPlugin:
         idiom_detection=False,
         tts_lang_tag="la",                    # browser TTS for Latin (varies)
         transliteration_scheme=None,          # Latin already uses Latin script
+        nuance_capabilities=NuanceCapabilities(
+            idioms="none",
+            phrase_families="none",
+            literary_references="none",
+            cultural_references="none",
+            etymology="none",
+            formality_register="none",
+            grammar_nuance="none",
+            pronunciation_tts="stub",         # la TTS unreliable across browsers
+            transliteration="none",
+            proverb_tradition="none",
+            classical_or_scriptural_allusion="none",
+        ),
     )
 
     def __init__(self) -> None:
