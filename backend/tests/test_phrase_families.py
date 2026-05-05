@@ -13,6 +13,9 @@ from __future__ import annotations
 
 import pytest
 
+import re
+from collections import defaultdict
+
 from backend.dictionary.phrase_families import (
     MatchType,
     PhraseFamily,
@@ -20,6 +23,7 @@ from backend.dictionary.phrase_families import (
     _FAMILY_CATALOG,
     _MATCH_TYPE_CONFIDENCE,
     _VARIANT_INDEX,
+    _normalise,
     match_phrase_families,
 )
 from backend.lesson.generators import build_lesson
@@ -466,3 +470,202 @@ class TestBuildPhraseFamily:
         def make():
             return self._lesson("all that glitters is not gold")
         assert make() == make()
+
+
+# ── Catalog integrity ─────────────────────────────────────────────────────────
+
+
+class TestCatalogIntegrity:
+    """Every entry in _FAMILY_CATALOG must be structurally sound."""
+
+    def test_every_family_id_matches_catalog_key(self) -> None:
+        for key, fam in _FAMILY_CATALOG.items():
+            assert fam.id == key, (
+                f"Family stored under {key!r} has id={fam.id!r}"
+            )
+
+    def test_every_family_has_at_least_one_variant(self) -> None:
+        for fam in _FAMILY_CATALOG.values():
+            assert len(fam.variants) >= 1, (
+                f"Family {fam.id!r} has no variants"
+            )
+
+    def test_every_family_has_exactly_one_exact_variant(self) -> None:
+        for fam in _FAMILY_CATALOG.values():
+            exact = [v for v in fam.variants if v.match_type == MatchType.exact]
+            assert len(exact) == 1, (
+                f"Family {fam.id!r} has {len(exact)} exact variants (expected 1)"
+            )
+
+    def test_canonical_form_matches_exact_variant_surface(self) -> None:
+        for fam in _FAMILY_CATALOG.values():
+            exact = next(v for v in fam.variants if v.match_type == MatchType.exact)
+            assert fam.canonical_form == exact.surface, (
+                f"Family {fam.id!r}: canonical_form={fam.canonical_form!r} "
+                f"!= exact variant surface={exact.surface!r}"
+            )
+
+    def test_all_required_fields_nonempty(self) -> None:
+        for fam in _FAMILY_CATALOG.values():
+            assert fam.id,            f"{fam.id!r} has empty id"
+            assert fam.language,      f"{fam.id!r} has empty language"
+            assert fam.canonical_form, f"{fam.id!r} has empty canonical_form"
+            assert fam.meaning,       f"{fam.id!r} has empty meaning"
+            assert fam.register,      f"{fam.id!r} has empty register"
+
+    def test_all_variant_surfaces_nonempty(self) -> None:
+        for fam in _FAMILY_CATALOG.values():
+            for var in fam.variants:
+                assert var.surface, (
+                    f"Family {fam.id!r} has a variant with empty surface"
+                )
+
+    def test_all_confusable_refs_point_to_existing_families(self) -> None:
+        for fam in _FAMILY_CATALOG.values():
+            for ref in fam.confusables:
+                assert ref in _FAMILY_CATALOG, (
+                    f"Family {fam.id!r} references unknown confusable {ref!r}"
+                )
+
+    def test_no_family_lists_itself_as_confusable(self) -> None:
+        for fam in _FAMILY_CATALOG.values():
+            assert fam.id not in fam.confusables, (
+                f"Family {fam.id!r} lists itself as a confusable"
+            )
+
+    def test_confusable_refs_are_mutual(self) -> None:
+        for fam in _FAMILY_CATALOG.values():
+            for ref in fam.confusables:
+                other = _FAMILY_CATALOG[ref]
+                assert fam.id in other.confusables, (
+                    f"Confusable link {fam.id!r} → {ref!r} is not reciprocated"
+                )
+
+    def test_register_values_are_known(self) -> None:
+        known = {"neutral", "literary", "formal", "informal", "archaic"}
+        for fam in _FAMILY_CATALOG.values():
+            assert fam.register in known, (
+                f"Family {fam.id!r} has unknown register {fam.register!r}"
+            )
+
+    def test_language_values_nonempty_strings(self) -> None:
+        for fam in _FAMILY_CATALOG.values():
+            assert isinstance(fam.language, str) and fam.language, (
+                f"Family {fam.id!r} has invalid language {fam.language!r}"
+            )
+
+
+# ── Normalized-surface collision detection ────────────────────────────────────
+
+
+class TestNormalizedSurfaceCollisions:
+    """No two variants should share a normalized surface within a language.
+
+    A collision causes _VARIANT_INDEX to silently overwrite one entry with
+    the other, making one variant permanently undetectable.
+
+    Add pairs to _ALLOWED_CROSS_FAMILY_COLLISIONS when a collision is
+    genuinely intentional (e.g. two families that are explicit confusables
+    of each other and intentionally share a surface).
+    """
+
+    # Cross-family collisions that are explicitly permitted.
+    # Each entry is frozenset({family_id_a, family_id_b}).
+    _ALLOWED: set[frozenset[str]] = set()
+
+    def _build_norm_index(
+        self,
+    ) -> dict[str, list[tuple[str, str, MatchType]]]:
+        """normalized_surface → [(family_id, display_surface, match_type)]"""
+        idx: dict[str, list[tuple[str, str, MatchType]]] = defaultdict(list)
+        for fam in _FAMILY_CATALOG.values():
+            for var in fam.variants:
+                norm = " ".join(_normalise(var.surface))
+                if norm:
+                    idx[norm].append((fam.id, var.surface, var.match_type))
+        return idx
+
+    def test_no_within_family_duplicate_surface(self) -> None:
+        idx = self._build_norm_index()
+        violations: list[str] = []
+        for norm, entries in idx.items():
+            if len(entries) <= 1:
+                continue
+            by_family: dict[str, list] = defaultdict(list)
+            for fam_id, surface, mt in entries:
+                by_family[fam_id].append((surface, mt))
+            for fam_id, dupes in by_family.items():
+                if len(dupes) > 1:
+                    violations.append(
+                        f"Family {fam_id!r} has two variants with normalized "
+                        f"surface {norm!r}: {[s for s, _ in dupes]}"
+                    )
+        assert not violations, "\n".join(violations)
+
+    def test_no_cross_family_collision(self) -> None:
+        idx = self._build_norm_index()
+        violations: list[str] = []
+        for norm, entries in idx.items():
+            if len(entries) <= 1:
+                continue
+            by_family: dict[str, list] = defaultdict(list)
+            for fam_id, surface, mt in entries:
+                by_family[fam_id].append((surface, mt))
+            if len(by_family) <= 1:
+                continue  # within-family only; other test handles it
+            fam_ids = list(by_family.keys())
+            pair = frozenset(fam_ids)
+            if pair not in self._ALLOWED:
+                violations.append(
+                    f"Normalized surface {norm!r} collides across families "
+                    + ", ".join(
+                        f"{fid!r} ({[s for s, _ in by_family[fid]]})"
+                        for fid in fam_ids
+                    )
+                )
+        assert not violations, "\n".join(violations)
+
+    def test_variant_index_size_equals_total_variants(self) -> None:
+        """_VARIANT_INDEX must contain one slot per variant (no silent overwrites)."""
+        total = sum(len(fam.variants) for fam in _FAMILY_CATALOG.values())
+        assert len(_VARIANT_INDEX) == total, (
+            f"_VARIANT_INDEX has {len(_VARIANT_INDEX)} slots but the catalog "
+            f"defines {total} variants — collision(s) caused silent overwrite(s)."
+        )
+
+
+# ── Language filter ───────────────────────────────────────────────────────────
+
+
+class TestLanguageFilter:
+    """match_phrase_families must return nothing for non-matching language codes."""
+
+    # English phrase tokens that would match if the language were "en".
+    _EN_TOKENS = _tokens("all that glitters is not gold")
+
+    @pytest.mark.parametrize("lang", [
+        "fr", "es", "de", "it", "pt", "ru",
+        "ja", "zh", "ar", "he", "la", "grc",
+        "x-cjk-test", "x-rtl-test",
+    ])
+    def test_no_en_match_for_other_language(self, lang: str) -> None:
+        results = match_phrase_families(self._EN_TOKENS, lang)
+        assert results == [], (
+            f"English phrase matched with language={lang!r}: {results}"
+        )
+
+    def test_case_sensitive_language_code(self) -> None:
+        results = match_phrase_families(self._EN_TOKENS, "EN")
+        assert results == [], (
+            "Language code matching must be case-sensitive; 'EN' != 'en'"
+        )
+
+    def test_empty_language_returns_empty(self) -> None:
+        results = match_phrase_families(self._EN_TOKENS, "")
+        assert results == []
+
+    def test_correct_language_still_matches(self) -> None:
+        results = match_phrase_families(self._EN_TOKENS, "en")
+        assert len(results) == 1, (
+            "Sanity check: English phrase must match with language='en'"
+        )
