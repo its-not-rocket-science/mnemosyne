@@ -1,0 +1,169 @@
+{
+  "language": "fr",
+  "plugin_module": "backend.plugins.french",
+  "plugin_class": "FrenchPlugin",
+  "nuance_extractor_module": "backend.nuance.fr",
+  "nuance_extractor_class": "FrenchNuanceExtractor",
+  "tokenizer": "spacy",
+  "capability_assertions": {
+    "idioms": ["partial", "strong", "gold"],
+    "grammar_nuance": ["partial", "strong", "gold"],
+    "formality_register": ["stub", "partial", "strong", "gold"]
+  },
+  "capability_gaps": {},
+  "cases": [
+    {
+      "id": "fr_idiom_01",
+      "category": "idiom",
+      "text": "Bien sûr, il viendra demain à la réunion.",
+      "note": "Idiom 'bien sûr' (of course) — discourse marker",
+      "pipeline": "plugin",
+      "assert_types_present": ["idiom"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "bien sûr",
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "idiom": ["phrase", "meaning", "register"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fr_idiom_02",
+      "category": "idiom",
+      "text": "En tout cas, nous devons partir maintenant.",
+      "note": "Idiom 'en tout cas' (in any case) — discourse connector",
+      "pipeline": "plugin",
+      "assert_types_present": ["idiom"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "en tout cas",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "idiom": ["phrase", "meaning", "register"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fr_grammar_etre_copula",
+      "category": "grammar_nuance",
+      "text": "Je suis étudiant et je suis fatigué aujourd'hui.",
+      "note": "Grammar: être as copula linking both identity and transient state",
+      "pipeline": "plugin",
+      "assert_types_present": ["grammar"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "être_copula",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "grammar": ["pattern_id", "pattern", "usage"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fr_extractor_nuance_tu_vous_informal",
+      "category": "register",
+      "text": "Tu me parles toujours de tes projets.",
+      "note": "Extractor nuance: tu → tu_vous_register (informal register)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "tu_vous_register",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fr_extractor_nuance_tu_vous_formal",
+      "category": "register",
+      "text": "Vous êtes très aimable, monsieur.",
+      "note": "Extractor nuance: vous → tu_vous_register (formal register)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "tu_vous_register",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fr_extractor_nuance_liaison",
+      "category": "grammar_nuance",
+      "text": "Nous avons mangé ensemble hier soir.",
+      "note": "Extractor nuance: 'nous avons' triggers mandatory liaison (nous before vowel-initial word)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "liaison",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.7,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fr_etymology_vocab_01",
+      "category": "etymology_vocab",
+      "text": "Le château au bord de la rivière est magnifique.",
+      "note": "Vocabulary: 'château' from Latin castellum — fortified place",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "château",
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fr_false_positive_01",
+      "category": "false_positive",
+      "text": "Le chien court dans le parc chaque matin.",
+      "note": "Plain sentence: no idiom keywords, no être/avoir constructions",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": ["idiom", "grammar"],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": ["tu_vous_register", "liaison", "ne_expletif"],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fr_vocabulary_keys_01",
+      "category": "vocabulary",
+      "text": "Le professeur explique le problème aux élèves.",
+      "note": "All vocabulary candidates must carry lemma and pos in lesson_data",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    }
+  ]
+}
