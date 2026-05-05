@@ -203,7 +203,7 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
                 note="\u2018First\u2019 replaced by \u2018finest\u2019; shifts emphasis from rank to quality.",
             ),
         ),
-        confusables=("all_that_glitters",),
+        confusables=(),
         tags=("quality", "gemstone", "archaic-idiom"),
     ),
 
