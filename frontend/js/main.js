@@ -12,7 +12,7 @@ import {
   deleteReview,
   countPendingReviews,
 } from './offline.js'
-import { initUiLanguage, t, ti, currentUiLang } from './i18n.js'
+import { initUiLanguage, t, ti, currentUiLang, TYPE_LABELS_LONG_I18N } from './i18n.js'
 import { openDetail, closeDetail } from './layout.js'
 import { API_BASE } from './config.js'
 
@@ -40,6 +40,7 @@ const resultsScrubber   = document.querySelector('#results-scrubber')
 const resultsTimeLabel  = document.querySelector('#results-time-label')
 const mainPlayer        = document.querySelector('#main-player')
 const resultsToolbar    = document.querySelector('#results-toolbar')
+const langNuanceBar     = document.querySelector('#lang-nuance-bar')
 const jobProgressPanel  = document.querySelector('#job-progress')
 const jobProgressFill   = document.querySelector('#job-progress-fill')
 const jobProgressLabel  = document.querySelector('#job-progress-label')
@@ -179,18 +180,18 @@ let scriptView  = 'native'
 const MAX_FILE_BYTES = 1_048_576  // 1 MiB
 
 // ── Annotation type metadata ───────────────────────────────────────────────────
-// TYPE_LABELS: tooltip text shown in the ::before pseudo-element.
+// TYPE_LABEL_KEYS : tooltip text shown in the ::before pseudo-element.
 // TYPE_LEVEL : 1=vocabulary, 2=grammar/script, 3=idiom/nuance/literary
-const TYPE_LABELS = {
-  vocabulary:      'Vocab',
-  conjugation:     'Verb',
-  agreement:       'Agree',
-  idiom:           'Idiom',
-  grammar:         'Grammar',
-  nuance:          'Nuance',
-  script:          'Script',
-  transliteration: 'Script',
-  phrase_family:   'Phrase',
+const TYPE_LABEL_KEYS = {
+  vocabulary: 'type_vocabulary_short',
+  conjugation: 'type_conjugation_short',
+  agreement: 'type_agreement_short',
+  idiom: 'type_idiom_short',
+  grammar: 'type_grammar_short',
+  nuance: 'type_nuance_short',
+  script: 'type_script_short',
+  transliteration: 'type_script_short',
+  phrase_family: 'type_phrase_family_short',
 }
 
 const TYPE_LEVEL = {
@@ -295,6 +296,37 @@ languageSelect.addEventListener('change', () => {
 function syncCurrentCaps() {
   currentCaps = languageCapabilities.get(languageSelect.value) ?? null
   updateScriptViewToolbar()
+  updateNuanceBar()
+}
+
+// ── Nuance-coverage indicator ─────────────────────────────────────────────────
+
+const _NUANCE_LABELS = {
+  idioms:              'Idioms',
+  grammar_nuance:      'Grammar',
+  pronunciation_tts:   'Pronunciation',
+  transliteration:     'Script',
+  formality_register:  'Register',
+}
+
+function updateNuanceBar() {
+  if (!langNuanceBar) return
+  const nc = currentCaps?.nuance_capabilities
+  if (!nc) { langNuanceBar.hidden = true; return }
+
+  const dots = Object.entries(_NUANCE_LABELS)
+    .filter(([key]) => nc[key] && nc[key] !== 'none')
+    .map(([key, label]) => {
+      const span = document.createElement('span')
+      span.className = 'lang-nuance-bar__dot'
+      span.dataset.level = nc[key]
+      span.textContent = label
+      return span
+    })
+
+  if (dots.length === 0) { langNuanceBar.hidden = true; return }
+  langNuanceBar.replaceChildren(...dots)
+  langNuanceBar.hidden = false
 }
 
 
@@ -1345,10 +1377,13 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam) {
     mark.dataset.type      = item.type
     mark.dataset.objectId  = item.id
     mark.dataset.level     = String(TYPE_LEVEL[item.type] ?? 1)
-    mark.dataset.typeLabel = TYPE_LABELS[item.type] ?? item.type
+    // mark.dataset.typeLabel = TYPE_LABELS[item.type] ?? item.type
+    mark.dataset.typeLabel = t(TYPE_LABEL_KEYS[item.type] ?? 'type_unknown')
     mark.setAttribute('role', 'button')
     mark.setAttribute('tabindex', '0')
-    mark.setAttribute('aria-label', item.label)
+    const typeLong  = TYPE_LABELS_LONG_I18N[currentUiLang()]?.[`type_${item.type}_long`] 
+               ?? TYPE_LABELS_LONG_I18N.en[`type_${item.type}_long`]
+    mark.setAttribute('aria-label', typeLong)
     mark.textContent = text.slice(start, end)
     if (localStorage.getItem(`mn-note-${item.id}`)) mark.setAttribute('data-has-note', '')
     mark.addEventListener('click', () => {

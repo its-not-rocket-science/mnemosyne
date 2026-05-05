@@ -17,11 +17,9 @@ New classes (multilingual engine):
 """
 from __future__ import annotations
 
-import pytest
 
-from backend.lesson.generators import build_lesson, _make_mc_drill, _hash_key
+from backend.lesson.generators import build_lesson, _make_mc_drill
 from backend.lesson.context import LessonContext
-from backend.lesson.providers import LessonProviders, NullGlossProvider
 from backend.schemas.lesson import (
     FillBlankDrill,
     MultipleChoiceDrill,

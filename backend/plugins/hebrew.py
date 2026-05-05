@@ -45,7 +45,7 @@ from __future__ import annotations
 import re
 
 from backend.plugins.cefr_vocab import A1 as _CEFR_A1
-from backend.schemas.language import LanguageCapabilities
+from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 _A1: frozenset[str] = _CEFR_A1.get("he", frozenset())
@@ -127,6 +127,19 @@ class HebrewPlugin:
         idiom_detection=False,
         tts_lang_tag="he",             # browser TTS: modern Hebrew supported.
         transliteration_scheme=None,   # no romanisation in this iteration.
+        nuance_capabilities=NuanceCapabilities(
+            idioms="none",
+            phrase_families="none",
+            literary_references="none",
+            cultural_references="none",
+            etymology="none",
+            formality_register="none",
+            grammar_nuance="none",
+            pronunciation_tts="stub",   # he TTS coverage varies by browser
+            transliteration="none",
+            proverb_tradition="none",
+            classical_or_scriptural_allusion="none",
+        ),
     )
 
     def __init__(self) -> None:

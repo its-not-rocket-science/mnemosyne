@@ -20,7 +20,7 @@ from __future__ import annotations
 
 import re
 
-from backend.schemas.language import LanguageCapabilities
+from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 # Split on ASCII and CJK full-width terminal punctuation.
@@ -59,6 +59,7 @@ class FakeCJKPlugin:
         tts_lang_tag=None,
         # Declare a scheme so the frontend shows the script-view toggle.
         transliteration_scheme="fake_romaji",
+        nuance_capabilities=NuanceCapabilities(),  # all-none: fake plugin, no coverage
     )
 
     def __init__(self) -> None:

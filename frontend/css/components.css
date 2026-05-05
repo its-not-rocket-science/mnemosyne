@@ -686,7 +686,7 @@
   background: color-mix(in srgb, var(--_annotation-color) 28%, transparent);
   color: color-mix(in srgb, var(--_annotation-color) 45%, var(--text-primary));
   text-decoration: none;
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--_annotation-color) 40%, transparent);
+  outline-width: 3px;
 }
 
 
@@ -1057,6 +1057,7 @@ body.player-active .reader-nowplaying {
   overflow-wrap: break-word;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

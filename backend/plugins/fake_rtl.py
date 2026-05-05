@@ -17,7 +17,7 @@ from __future__ import annotations
 
 import re
 
-from backend.schemas.language import LanguageCapabilities
+from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 # Split on standard and Arabic terminal punctuation.
@@ -52,6 +52,7 @@ class FakeRTLPlugin:
         idiom_detection=False,
         tts_lang_tag=None,          # no TTS for a fake plugin
         transliteration_scheme=None,
+        nuance_capabilities=NuanceCapabilities(),  # all-none: fake plugin, no coverage
     )
 
     def __init__(self) -> None:
