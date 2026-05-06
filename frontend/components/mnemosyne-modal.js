@@ -197,7 +197,7 @@ export class MnemosyneModal extends HTMLElement {
         }
 
         .script-toggle__btn {
-          min-block-size: 2rem;
+          min-block-size: 2.75rem;
           padding-inline: 0.65rem;
           font-size: 0.8rem;
           /* Inherits the general button border (45% CanvasText). */
@@ -461,6 +461,11 @@ export class MnemosyneModal extends HTMLElement {
 
         @media (prefers-reduced-motion: reduce) {
           .status { transition: none !important; }
+        }
+
+        @media (forced-colors: active) {
+          .drill-option[data-state="correct"] { outline: 3px solid Highlight; }
+          .drill-option[data-state="wrong"]   { outline: 3px solid Mark; }
         }
       </style>
 

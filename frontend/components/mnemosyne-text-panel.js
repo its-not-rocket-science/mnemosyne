@@ -48,6 +48,14 @@ const TYPE_BADGE = {
   idiom:     '\u{1F4AC}',  // 💬 speech bubble
 }
 
+const TYPE_LABEL = {
+  vocab:     'vocabulary',
+  grammar:   'grammar',
+  idiom:     'idiom',
+  literary:  'literary',
+  etymology: 'etymology',
+}
+
 // Priority for badge ordering (most informative first)
 const BADGE_PRIORITY = ['vocab', 'etymology', 'literary', 'grammar', 'idiom']
 
@@ -373,9 +381,10 @@ class MnemosyneTextPanel extends HTMLElement {
     span.className = 'ann'
     span.dataset.annId = String(ann.id)
     span.dataset.type  = ann.type
+    const typeLabel = TYPE_LABEL[ann.type] ?? ann.type
     span.setAttribute('role', 'button')
     span.setAttribute('tabindex', '0')
-    span.setAttribute('aria-label', phrase)
+    span.setAttribute('aria-label', `${phrase} — ${typeLabel} annotation`)
     span.style.setProperty('--_c', TYPE_COLOR[ann.type] ?? TYPE_COLOR.vocab)
 
     span.appendChild(document.createTextNode(phrase))
@@ -554,9 +563,9 @@ class MnemosyneTextPanel extends HTMLElement {
 
 .line__speak {
   flex-shrink: 0;
-  inline-size: 1.55rem;
-  block-size: 1.55rem;
-  margin-block-start: 0.15rem;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  margin-block-start: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
