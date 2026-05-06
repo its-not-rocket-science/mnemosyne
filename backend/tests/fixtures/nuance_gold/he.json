@@ -7,11 +7,9 @@
   "tokenizer": "words",
   "capability_assertions": {
     "idioms": ["none"],
-    "grammar_nuance": ["none"]
+    "grammar_nuance": ["stub"]
   },
-  "capability_gaps": {
-    "grammar_nuance": "Plugin declares 'none' but extractor provides definite_prefix and waw_conjunction nuances"
-  },
+  "capability_gaps": {},
   "cases": [
     {
       "id": "he_extractor_nuance_definite_prefix",
@@ -108,6 +106,91 @@
       "confidence_ge": null,
       "lesson_data_required_keys": {
         "vocabulary": ["lemma"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "he_prefix_decomposition_bet",
+      "category": "grammar_nuance",
+      "text": "אני קניתי ספר בחנות.",
+      "note": "Extractor nuance: ב- (bet) prefix on בחנות — heuristic fallback fires without HebSpaCy",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "prefix_decomposition",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.75,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source", "prefix"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "he_prefix_decomposition_lamed",
+      "category": "grammar_nuance",
+      "text": "אני רץ לפארק.",
+      "note": "Extractor nuance: ל- (lamed) prefix on לפארק — heuristic fallback fires without HebSpaCy",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "prefix_decomposition",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.75,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source", "prefix"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "he_prefix_decomposition_mem_ha",
+      "category": "grammar_nuance",
+      "text": "אנחנו ירדנו מהרכבת.",
+      "note": "Extractor nuance: מה- (mem+ha) combined prefix on מהרכבת — heuristic fallback",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "prefix_decomposition",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.75,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source", "prefix"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "he_vocabulary_prefix_field_01",
+      "category": "vocabulary",
+      "text": "אני קניתי ספר בחנות.",
+      "note": "All vocabulary candidates must carry lemma and prefix fields (empty string when no prefix)",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma", "prefix"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "he_extractor_biblical_register",
+      "category": "grammar_nuance",
+      "text": "בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים.",
+      "note": "Extractor nuance: cantillation marks (te'amim) trigger biblical_register note — always fires heuristically",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "biblical_register",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.9,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
       },
       "no_raw_uuids": true
     }

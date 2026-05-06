@@ -67,6 +67,8 @@ class ArabicNuanceExtractor:
         out.extend(self._definite_article(tokens, seen))
         out.extend(self._negation_markers(tokens, seen))
         out.extend(self._root_pattern(candidates, seen))
+        out.extend(self._verb_form(candidates, seen))
+        out.extend(self._proclitic(candidates, seen))
         return out
 
     def _definite_article(
@@ -131,6 +133,124 @@ class ArabicNuanceExtractor:
                 },
                 confidence=0.85,
             ))
+        return out
+
+    def _verb_form(
+        self, candidates: list[CandidateObject], seen: set[str]
+    ) -> list[CandidateObject]:
+        """Emit aspect nuance when CAMeL Tools provides aspect data."""
+        _ASPECT_NOTES: dict[str, tuple[str, str]] = {
+            "p": (
+                "perfective_aspect",
+                "Perfective aspect (الماضي) indicates a completed action. "
+                "In Arabic the root-and-pattern system encodes aspect directly: "
+                "فَعَلَ (fa'ala) is the citation form for perfective active. "
+                "The perfective stem is also used in conditional clauses.",
+            ),
+            "i": (
+                "imperfective_aspect",
+                "Imperfective aspect (المضارع) indicates an ongoing or incomplete "
+                "action. The imperfective stem uses person/gender/number prefixes "
+                "(ي-، ت-، ن-، أ-) and suffixes to build the full paradigm.",
+            ),
+            "c": (
+                "imperative_mood",
+                "Imperative (الأمر) is used for direct commands. It is derived from "
+                "the jussive (مجزوم) stem, typically by removing the imperfective "
+                "prefix and adjusting the initial vowel.",
+            ),
+        }
+        out = []
+        for c in candidates:
+            aspect = c.lesson_data.get("aspect", "")
+            if not aspect or aspect not in _ASPECT_NOTES:
+                continue
+            nuance_type, explanation = _ASPECT_NOTES[aspect]
+            cf = f"nuance:ar:{nuance_type}"
+            if cf in seen:
+                continue
+            seen.add(cf)
+            out.append(CandidateObject(
+                canonical_form=cf,
+                surface_form=c.surface_form,
+                type="nuance",
+                label=c.label,
+                lesson_data={
+                    "nuance_type": nuance_type,
+                    "explanation": explanation,
+                    "register": "neutral",
+                    "learner_level": "B1",
+                    "source": "plugin",
+                    "aspect": aspect,
+                },
+                confidence=0.80,
+                relation_hints=[RelationHint(
+                    relation_type="nuance_of",
+                    target_canonical_form=c.canonical_form,
+                    target_type=c.type,
+                )],
+            ))
+        return out
+
+    def _proclitic(
+        self, candidates: list[CandidateObject], seen: set[str]
+    ) -> list[CandidateObject]:
+        """Emit proclitic nuance when CAMeL Tools provides prc1/prc2 data."""
+        _CLITIC_NOTES: dict[str, tuple[str, str]] = {
+            "bi+": (
+                "proclitic_bi",
+                "«بِ» (bi-) is a prepositional proclitic meaning 'in', 'with', or 'by'. "
+                "It attaches to the following word without a space: "
+                "بِالبَيتِ (in the house), بِقَلَمٍ (with a pen).",
+            ),
+            "li+": (
+                "proclitic_li",
+                "«لِ» (li-) is a prepositional proclitic meaning 'for', 'to', or 'of'. "
+                "It attaches to the following word: لِلطَّالِبِ (for the student).",
+            ),
+            "ka+": (
+                "proclitic_ka",
+                "«كَ» (ka-) is a prepositional proclitic meaning 'like' or 'as'. "
+                "It attaches to the following word: كَالأَسَدِ (like a lion).",
+            ),
+            "wa+": (
+                "proclitic_wa",
+                "«وَ» (wa-) is the conjunction 'and' as a proclitic. "
+                "It attaches to the following word: وَالبَيتُ (and the house). "
+                "It is among the most frequent words in Arabic text.",
+            ),
+            "fa+": (
+                "proclitic_fa",
+                "«فَ» (fa-) is a conjunction proclitic meaning 'so', 'then', or 'and then'. "
+                "It marks logical consequence or narrative sequence: فَكَتَبَ (and so he wrote).",
+            ),
+        }
+        out = []
+        for c in candidates:
+            for field in ("prc1", "prc2"):
+                clitic = c.lesson_data.get(field, "")
+                if not clitic or clitic not in _CLITIC_NOTES:
+                    continue
+                nuance_type, explanation = _CLITIC_NOTES[clitic]
+                cf = f"nuance:ar:{nuance_type}"
+                if cf in seen:
+                    continue
+                seen.add(cf)
+                out.append(CandidateObject(
+                    canonical_form=cf,
+                    surface_form=c.surface_form,
+                    type="nuance",
+                    label=c.label,
+                    lesson_data={
+                        "nuance_type": nuance_type,
+                        "explanation": explanation,
+                        "register": "neutral",
+                        "learner_level": "A2",
+                        "source": "plugin",
+                        "clitic": clitic,
+                    },
+                    confidence=0.75,
+                ))
         return out
 
     def _root_pattern(

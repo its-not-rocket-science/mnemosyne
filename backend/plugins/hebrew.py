@@ -1,7 +1,6 @@
-"""Hebrew starter plugin — dictionary mode.
+"""Hebrew plugin — dictionary mode with optional HebSpaCy morphology.
 
 BCP-47 code "he", RTL direction, standard sentence punctuation.
-This plugin provides NO morphological analysis.
 
 What this plugin does reliably
 ──────────────────────────────
@@ -9,41 +8,34 @@ What this plugin does reliably
   - Whitespace tokenisation (modern Hebrew prose is whitespace-delimited).
   - Nikud (vowel-point) stripping for canonical forms, so
     "סֵפֶר" and "ספר" resolve to the same canonical object.
+  - Inseparable-prefix heuristic: ב-, ל-, מ-, כ-, ו-, ה-, ש- (and two-char
+    combinations) are stripped to set lesson_data["prefix"] on each token.
+    This fires the prefix_decomposition nuance signal without HebSpaCy.
   - Correct RTL / hebrew metadata for frontend rendering and font selection.
   - TTS tag "he" (browser SpeechSynthesis covers modern Hebrew).
 
-What this plugin does NOT do
-─────────────────────────────
-  - Root (shoresh) extraction or pattern-based morphological analysis.
-  - Part-of-speech tagging.
-  - Lemmatisation beyond nikud normalisation.
-  - Prefix segmentation (ו-, ב-, ה-, ל-, כ-, מ-, ש-…).
-  - Any claim about word meaning.
+When heb_spacy is installed (optional)
+────────────────────────────────────────
+  Rich vocabulary candidates gain: POS, binyan, tense, person, number,
+  gender, verb_form, and construct state.  The nuance extractor (he.py)
+  uses binyan + tense to fire the verb_template signal.
 
-Upgrade path
-────────────
-  When spacy-he, stanza-he, or a comparable library is available as a
-  dependency, this plugin can be promoted:
-    tokenization_quality → high        (after adding prefix splitting)
-    morphology_depth     → shallow     (after POS tagging)
-    analysis_depth       → morphology_light
-    lesson_modes_supported → ["vocabulary", "dictionary"]
+  Installation:
+    pip install heb-spacy
+    python -m spacy download he_dep_ud_hybrid
 
 Known limitations
 ─────────────────
-  • Hebrew inseparable prepositions and the definite article (ה-) attach
-    directly to their host word.  וְהַסֵּפֶר ("and the book") is one token
-    in normal orthography; the prefixes are not split off here.
-  • Tokenisation quality is rated "medium" for standard prose.  Poetry,
-    abbreviations (ראשי תיבות), and informal text will have higher error rates.
-  • Biblical Hebrew (with cantillation marks) is handled by the nikud
-    stripper at the canonicalisation level; segmentation is not adapted for
-    it beyond that.
+  • Heuristic prefix stripping has false positives for short words and some
+    complete words that begin with a prefix letter (e.g. שלום, כי).
+    HebSpaCy removes these.
+  • Tokenisation quality is rated "medium" for standard prose.
 """
 from __future__ import annotations
 
 import re
 
+from backend.morphology import he_adapter as _he_adapter
 from backend.plugins.cefr_vocab import A1 as _CEFR_A1
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
@@ -134,7 +126,7 @@ class HebrewPlugin:
             cultural_references="none",
             etymology="none",
             formality_register="none",
-            grammar_nuance="none",
+            grammar_nuance="stub",      # prefix_decomposition always; binyan/verb with HebSpaCy
             pronunciation_tts="stub",   # he TTS coverage varies by browser
             transliteration="none",
             proverb_tradition="none",
@@ -163,20 +155,38 @@ class HebrewPlugin:
         candidates: list[CandidateObject] = []
         seen: set[str] = set()
 
-        for word in _WORD_RE.findall(sentence):
-            canonical = _strip_nikud(word)
+        raw_tokens = _WORD_RE.findall(sentence)
+        morph_tokens = _he_adapter.analyze_tokens(raw_tokens)
+
+        for mt in morph_tokens:
+            canonical = _strip_nikud(mt.text)
             if not canonical or canonical in seen:
                 continue
             seen.add(canonical)
 
-            # Surface form may carry nikud (e.g. "סֵפֶר"); canonical form is
-            # the undiacritised version ("ספר").  The lesson builder will
-            # display "Base form: ספר" when they differ.
-            lesson_data = {
-                "lemma": canonical,
-                "pos": "WORD",
-                "confidence_note": _CONFIDENCE_NOTE,
+            lesson_data: dict = {
+                "lemma": _strip_nikud(mt.lemma),
+                "pos": mt.pos,
+                "prefix": mt.prefix,
             }
+
+            if mt.source == "heb_spacy":
+                if mt.binyan:
+                    lesson_data["binyan"] = mt.binyan
+                if mt.tense:
+                    lesson_data["tense"] = mt.tense
+                if mt.person:
+                    lesson_data["person"] = mt.person
+                if mt.number:
+                    lesson_data["number"] = mt.number
+                if mt.gender:
+                    lesson_data["gender"] = mt.gender
+                if mt.verb_form:
+                    lesson_data["verb_form"] = mt.verb_form
+                if mt.construct:
+                    lesson_data["construct"] = mt.construct
+            else:
+                lesson_data["confidence_note"] = _CONFIDENCE_NOTE
 
             if canonical in _A1:
                 lesson_data["cefr_level"] = "A1"
@@ -187,9 +197,9 @@ class HebrewPlugin:
             candidates.append(
                 CandidateObject(
                     canonical_form=canonical,
-                    surface_form=word,
+                    surface_form=mt.text,
                     type="vocabulary",
-                    label=word,
+                    label=mt.text,
                     lesson_data=lesson_data,
                     confidence=confidence,
                 )
