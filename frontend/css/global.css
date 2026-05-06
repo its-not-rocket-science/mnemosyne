@@ -1019,30 +1019,25 @@ kbd {
   inline-size: clamp(4rem, 10vw, 9rem);
   block-size: 3px;
   border-radius: 999px;
+  border: none;
   background: var(--border);
-  outline: none;
-  cursor: default;
   pointer-events: none;
   flex-shrink: 1;
 }
 
-.results-transport__scrubber::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent, #3557ff);
-  cursor: default;
-  box-shadow: 0 0 0 2px var(--bg, Canvas);
+.results-transport__scrubber::-webkit-progress-bar {
+  background: var(--border);
+  border-radius: 999px;
 }
 
-.results-transport__scrubber::-moz-range-thumb {
-  width: 10px;
-  height: 10px;
-  border: none;
-  border-radius: 50%;
+.results-transport__scrubber::-webkit-progress-value {
   background: var(--accent, #3557ff);
-  cursor: default;
+  border-radius: 999px;
+}
+
+.results-transport__scrubber::-moz-progress-bar {
+  background: var(--accent, #3557ff);
+  border-radius: 999px;
 }
 
 .results-transport__time {
