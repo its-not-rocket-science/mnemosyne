@@ -390,7 +390,7 @@ export class MnemosyneDetailPane extends HTMLElement {
           <p class="pane__note-label">${esc(t('dp_notes'))}</p>
           <textarea class="pane__note-input"
                     placeholder="${esc(t('dp_note_placeholder'))}"
-                    aria-label="Your note about this annotation"
+                    aria-label="${esc(t('dp_note_placeholder'))}"
                     rows="3"></textarea>
           <div class="pane__note-actions">
             <button class="pane__note-save" type="button">${esc(t('dp_note_save'))}</button>
@@ -1621,7 +1621,7 @@ export class MnemosyneDetailPane extends HTMLElement {
         font-size: 0.8rem;
         cursor: pointer;
         color: var(--text);
-        min-block-size: 2rem;
+        min-block-size: 2.75rem;
         transition: background 0.1s ease, color 0.1s ease, border-color 0.1s ease;
       }
       .pane__note-save:hover  { background: var(--border); }

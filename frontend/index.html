@@ -240,10 +240,10 @@
                         <button type="button" id="results-play-btn"
                                 class="results-transport__play ghost-button"
                                 aria-label="Play all sentences">&#x25B6;&thinsp;Play all</button>
-                        <input type="range" id="results-scrubber"
-                               class="results-transport__scrubber"
-                               min="0" max="100" value="0" step="0.5"
-                               aria-label="Playback progress" tabindex="-1" readonly>
+                        <progress id="results-scrubber"
+                                  class="results-transport__scrubber"
+                                  max="100" value="0"
+                                  aria-hidden="true"></progress>
                         <span id="results-time-label"
                               class="results-transport__time"
                               aria-hidden="true">--:--</span>
@@ -274,7 +274,7 @@
                     active. Hidden when idle. Controls mirror the global mini-player.
                   -->
                   <div id="reader-nowplaying" class="reader-nowplaying" hidden
-                       aria-label="Now playing">
+                       role="region" aria-label="Now playing" aria-live="polite" aria-atomic="false">
                     <div class="reader-nowplaying__info">
                       <span class="reader-nowplaying__counter" aria-hidden="true"></span>
                       <span class="reader-nowplaying__text"></span>
@@ -465,7 +465,8 @@
           <button type="button" id="load-lesson-close-btn" class="dialog-close-btn"
                   data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
         </div>
-        <ul id="load-lesson-list" class="load-lesson-list" role="list"></ul>
+        <ul id="load-lesson-list" class="load-lesson-list" role="list"
+            aria-live="polite" aria-atomic="false"></ul>
       </div>
     </dialog>
 
@@ -476,7 +477,7 @@
         <div class="picker-dialog__header">
           <h2 id="shortcuts-heading">Keyboard shortcuts</h2>
           <button type="button" id="shortcuts-close-btn" class="dialog-close-btn"
-                  aria-label="Close">&#x2715;</button>
+                  data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
         </div>
         <dl class="shortcuts-list">
           <div class="shortcut-row">
