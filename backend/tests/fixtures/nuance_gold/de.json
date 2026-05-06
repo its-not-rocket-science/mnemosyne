@@ -8,7 +8,9 @@
   "capability_assertions": {
     "idioms": ["partial", "strong", "gold"],
     "grammar_nuance": ["partial", "strong", "gold"],
-    "formality_register": ["stub", "partial"]
+    "formality_register": ["stub", "partial"],
+    "etymology": ["partial", "strong", "gold"],
+    "phrase_families": ["partial", "strong", "gold"]
   },
   "capability_gaps": {},
   "cases": [
@@ -145,6 +147,181 @@
       "confidence_ge": null,
       "lesson_data_required_keys": {
         "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_extractor_etymology_schadenfreude",
+      "category": "etymology",
+      "text": "Das Wort Schadenfreude ist weltweit bekannt.",
+      "note": "Extractor etymology: 'Schadenfreude' compound of Schaden+Freude — borrowed into English",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:schadenfreude",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "etymology", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_extractor_etymology_zeitgeist",
+      "category": "etymology",
+      "text": "Der Zeitgeist der Epoche prägt die Kunst.",
+      "note": "Extractor etymology: 'Zeitgeist' compound of Zeit+Geist — borrowed into English",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:zeitgeist",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "etymology", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_extractor_etymology_angst",
+      "category": "etymology",
+      "text": "Angst lähmt manchmal das klare Denken.",
+      "note": "Extractor etymology: 'Angst' from Proto-Germanic *angustaz — sentence avoids Wechselpräpositionen to prevent co-firing",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:angst",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "etymology", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_extractor_etymology_wanderlust",
+      "category": "etymology",
+      "text": "Seine Wanderlust ist seit Jahren legendär.",
+      "note": "Extractor etymology: 'Wanderlust' compound of wandern+Lust — sentence avoids Wechselpräpositionen to prevent co-firing",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:wanderlust",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "etymology", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_extractor_etymology_kindergarten",
+      "category": "etymology",
+      "text": "Der Kindergarten öffnet täglich um acht Uhr.",
+      "note": "Extractor etymology: 'Kindergarten' coined by Fröbel 1837 — adopted globally unchanged",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:kindergarten",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "etymology", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_phrase_family_kein_wunder",
+      "category": "phrase_family",
+      "text": "Das ist kein Wunder bei dem Wetter.",
+      "note": "Phrase family: 'kein Wunder' (no wonder) — frequent discourse marker",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "de_kein_wunder",
+      "confidence_ge": 0.9,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_phrase_family_unter_vier_augen",
+      "category": "phrase_family",
+      "text": "Wir müssen das unter vier Augen besprechen.",
+      "note": "Phrase family: 'unter vier Augen' (in private, face-to-face)",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "de_unter_vier_augen",
+      "confidence_ge": 0.9,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_phrase_family_schwein_haben",
+      "category": "phrase_family",
+      "text": "Man muss manchmal Schwein haben im Leben.",
+      "note": "Phrase family: 'Schwein haben' (to be lucky) — colloquial idiom",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "de_schwein_haben",
+      "confidence_ge": 0.9,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_phrase_family_auf_dem_holzweg",
+      "category": "phrase_family",
+      "text": "Du bist auf dem Holzweg mit dieser Theorie.",
+      "note": "Phrase family: 'auf dem Holzweg' (on the wrong track) — short-form variant",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "de_auf_dem_holzweg",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_phrase_family_hand_aufs_herz",
+      "category": "phrase_family",
+      "text": "Hand aufs Herz, ich habe das nicht gewusst.",
+      "note": "Phrase family: 'Hand aufs Herz' (hand on heart, honestly)",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "de_hand_aufs_herz",
+      "confidence_ge": 0.9,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
       },
       "no_raw_uuids": true
     }

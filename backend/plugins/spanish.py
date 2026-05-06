@@ -317,10 +317,10 @@ class SpanishPlugin:
         mood_pool=["indicative", "subjunctive", "imperative"],
         nuance_capabilities=NuanceCapabilities(
             idioms="partial",            # curated ~35-entry fixed-expression table
-            phrase_families="stub",      # collocations via dep-parse; not grouped
+            phrase_families="partial",   # 10 families with variants and pedagogical notes
             literary_references="none",
             cultural_references="none",
-            etymology="none",
+            etymology="partial",         # 10 curated entries covering high-frequency learner vocabulary
             formality_register="stub",   # tú/usted distinction detectable
             grammar_nuance="partial",    # tense/mood/person/number drilling
             pronunciation_tts="partial", # browser TTS reliable for es
