@@ -53,6 +53,9 @@ class LessonContext:
     mood_pool: tuple[str, ...] | None = None
     """Language-specific mood labels for MC drill pools.  ``None`` → use global default."""
 
+    l1_language: str = "en"
+    """BCP-47 code for the learner's native language.  Controls explanation prose language."""
+
     # ── Derived properties ────────────────────────────────────────────────────
 
     @property
@@ -68,7 +71,9 @@ class LessonContext:
     # ── Factory helpers ───────────────────────────────────────────────────────
 
     @classmethod
-    def from_capabilities(cls, caps: "LanguageCapabilities") -> "LessonContext":
+    def from_capabilities(
+        cls, caps: "LanguageCapabilities", *, l1_language: str = "en"
+    ) -> "LessonContext":
         """Build a context from a plugin's ``LanguageCapabilities`` object."""
         return cls(
             language_code=caps.code,
@@ -77,13 +82,14 @@ class LessonContext:
             direction=caps.direction,
             tense_pool=tuple(caps.tense_pool) if caps.tense_pool is not None else None,
             mood_pool=tuple(caps.mood_pool) if caps.mood_pool is not None else None,
+            l1_language=l1_language,
         )
 
     @classmethod
-    def unknown(cls) -> "LessonContext":
+    def unknown(cls, *, l1_language: str = "en") -> "LessonContext":
         """Return a context for when no language information is available.
 
         Builders gracefully omit language-specific prose (e.g. "Spanish idiom"
         → "idiomatic expression") rather than asserting unknown language names.
         """
-        return cls()
+        return cls(l1_language=l1_language)
