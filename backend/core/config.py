@@ -75,8 +75,19 @@ class Settings(BaseSettings):
     # When True, vocabulary objects are also enriched with machine translations
     # in the same background pass as dictionary glosses.
     enable_translation_enrichment: bool = False
+    # Auth strictness.  None → inherits DEBUG: dev gets fallback, prod does not.
+    # Set ALLOW_DEV_AUTH_FALLBACK=true/false explicitly to override.
+    # When False: invalid or missing Bearer tokens return 401 on user-private routes.
+    # When True:  invalid tokens fall back to X-User-Id / DEFAULT_USER_ID (dev only).
+    allow_dev_auth_fallback: bool | None = Field(default=None)
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
+
+    @model_validator(mode="after")
+    def _default_allow_dev_auth_fallback(self) -> "Settings":
+        if self.allow_dev_auth_fallback is None:
+            self.allow_dev_auth_fallback = self.debug
+        return self
 
     @model_validator(mode="after")
     def _reject_wildcard_cors_in_production(self) -> "Settings":
