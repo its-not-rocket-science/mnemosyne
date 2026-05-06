@@ -179,6 +179,80 @@ _CURATED: list[EtymologyEntry] = [
         roots=["Latin dicere (to say)"],
         cognates=["French dire", "Italian dire", "English diction"],
     ),
+    EtymologyEntry(
+        language="es", lemma="guerrilla",
+        origin_summary=(
+            "Diminutive of guerra 'war,' from Old High German werra 'strife, discord.' "
+            "Borrowed into English in the early 19th century during the Peninsular War "
+            "to describe Spanish irregular fighters resisting Napoleon's army."
+        ),
+        roots=["Old High German werra (strife, discord)", "Spanish guerra (war)"],
+        cognates=["English war (same Germanic root)", "French guerre"],
+        semantic_shift="'small war' → partisan irregular warfare → any guerrilla force",
+    ),
+    EtymologyEntry(
+        language="es", lemma="mosquito",
+        origin_summary=(
+            "Diminutive of mosca 'fly,' from Latin musca. "
+            "Spanish explorers brought the term to English in the 16th century. "
+            "In Spanish, mosca is the housefly; mosquito is its small biting relative."
+        ),
+        roots=["Latin musca (fly)"],
+        cognates=["French mouche (fly)", "Italian mosca", "English mosquito (borrowed)"],
+        semantic_shift="'little fly' → the biting gnat specifically",
+    ),
+    EtymologyEntry(
+        language="es", lemma="siesta",
+        origin_summary=(
+            "From Latin hora sexta 'the sixth hour,' counting from 6 a.m. — "
+            "meaning noon. Romans rested at midday; the practice became culturally "
+            "associated with the word. English borrowed siesta unchanged."
+        ),
+        roots=["Latin sexta (sixth)", "Latin hora (hour)"],
+        cognates=["Italian sesta", "English siesta (borrowed)"],
+        semantic_shift="'sixth hour of the day' → midday → the afternoon rest taken then",
+    ),
+    EtymologyEntry(
+        language="es", lemma="plaza",
+        origin_summary=(
+            "From Latin plattea 'broad street, open space,' from Greek plateia (hodos) "
+            "'broad (street).' The same Greek root gives English plate, place, and plaza, "
+            "and French place. Spanish plaza spread globally in names like Plaza Mayor."
+        ),
+        roots=["Greek plateia (broad)", "Latin plattea (broad street)"],
+        cognates=["English place, plaza (from same Latin root)", "French place", "Italian piazza"],
+    ),
+    EtymologyEntry(
+        language="es", lemma="fiesta",
+        origin_summary=(
+            "From Latin festa (plural of festum) 'festival, feast days.' "
+            "The Latin root also gives English feast, festival, and festive. "
+            "Borrowed into English as fiesta with the sense of a lively celebration."
+        ),
+        roots=["Latin festum (festival, holiday)"],
+        cognates=["English feast, festival (from same Latin)", "French fête", "Italian festa"],
+    ),
+    EtymologyEntry(
+        language="es", lemma="camino",
+        origin_summary=(
+            "From Late Latin camminus 'path, road,' likely from Celtic "
+            "(compare Breton ken-min, Welsh cam 'step'). "
+            "The Camino de Santiago pilgrimage route preserves the word in English."
+        ),
+        roots=["Celtic *camman or camminus (path, step)"],
+        cognates=["French chemin", "Italian cammino", "English Camino (borrowed)"],
+    ),
+    EtymologyEntry(
+        language="es", lemma="loco",
+        origin_summary=(
+            "Etymology disputed; possibly from Arabic lauqa 'female fool' "
+            "(feminine of alwaq), or from a pre-Roman Iberian substrate. "
+            "English loco (crazy) is borrowed from Spanish. "
+            "Locomotive shares no root — its loco comes from Latin locus 'place.'"
+        ),
+        roots=["Possibly Arabic lauqa (female fool) or pre-Roman Iberian"],
+        cognates=["English loco (borrowed from Spanish)"],
+    ),
 
     # ── French ───────────────────────────────────────────────────────────────
     EtymologyEntry(
@@ -243,6 +317,82 @@ _CURATED: list[EtymologyEntry] = [
         ),
         roots=["Proto-Germanic *weraldiz (world)", "Old High German scouwôn (to look)"],
         cognates=["English worldview (calque)"],
+    ),
+    EtymologyEntry(
+        language="de", lemma="Zeitgeist",
+        origin_summary=(
+            "Compound of Zeit 'time' + Geist 'spirit, mind.' "
+            "Coined in 18th-century German philosophy to describe the intellectual "
+            "and moral spirit of an era. Borrowed into English in the 19th century; "
+            "used freely in journalism and criticism without translation."
+        ),
+        roots=["Proto-Germanic *tīdaz (time)", "Proto-Germanic *gaistaz (spirit, ghost)"],
+        cognates=["English time, tide (related to Zeit)", "English zeitgeist (borrowed)"],
+    ),
+    EtymologyEntry(
+        language="de", lemma="Doppelgänger",
+        origin_summary=(
+            "Compound of Doppel 'double' + Gänger 'walker, goer' (from gehen 'to go'). "
+            "Literally 'double-walker' — a ghostly duplicate of a living person. "
+            "Popularised by Jean Paul's novel Siebenkäs (1796). "
+            "Borrowed into English as a word for any lookalike."
+        ),
+        roots=["Latin duplus → Middle High German doppel (double)", "Old High German gān (to go)"],
+        cognates=["English double (same Latin root)", "English doppelganger (borrowed)"],
+        semantic_shift="'ghostly double' → any lookalike or impersonating double",
+    ),
+    EtymologyEntry(
+        language="de", lemma="Wanderlust",
+        origin_summary=(
+            "Compound of wandern 'to hike, wander' + Lust 'desire, pleasure.' "
+            "Wandern derives from Proto-Germanic *wandrōną. "
+            "Entered English through 20th-century usage; describes a strong "
+            "impulse to travel and explore."
+        ),
+        roots=["Proto-Germanic *wandrōną (to wander)", "Proto-Germanic *lustuz (desire)"],
+        cognates=["English wander (from the same root)", "English lust (from Lust)", "English wanderlust (borrowed)"],
+    ),
+    EtymologyEntry(
+        language="de", lemma="Angst",
+        origin_summary=(
+            "From Proto-Germanic *angustaz 'narrowness, tightness,' related to Latin "
+            "angustus 'narrow.' The chest-tightening feeling of dread gave the word "
+            "its meaning. Borrowed into English via Freudian psychology to describe "
+            "existential anxiety."
+        ),
+        roots=["Proto-Germanic *angustaz (tightness)", "PIE *h₂enǵʰ- (tight, narrow)"],
+        cognates=["English anguish (from Latin angustus)", "French angoisse", "English angst (borrowed)"],
+    ),
+    EtymologyEntry(
+        language="de", lemma="Leitmotiv",
+        origin_summary=(
+            "Compound of leiten 'to lead, guide' + Motiv 'motif, theme.' "
+            "Coined in music criticism — not by Wagner himself — to describe "
+            "recurring themes in his operas. Now used broadly for any recurrent "
+            "symbol or theme in art or discourse."
+        ),
+        roots=["Old High German leitan (to lead)", "Latin motivus (moving)"],
+        cognates=["English lead (related Germanic root)", "English leitmotif/leitmotiv (borrowed)"],
+    ),
+    EtymologyEntry(
+        language="de", lemma="Poltergeist",
+        origin_summary=(
+            "Compound of poltern 'to make a racket, clatter' + Geist 'ghost, spirit.' "
+            "Literally 'noisy ghost.' Entered English through German folklore accounts "
+            "and was widely popularised by the 1982 film Poltergeist."
+        ),
+        roots=["Middle High German boldern/poldern (to rumble)", "Proto-Germanic *gaistaz (spirit)"],
+        cognates=["English ghost (from Geist's cognate)", "English poltergeist (borrowed)"],
+    ),
+    EtymologyEntry(
+        language="de", lemma="Rucksack",
+        origin_summary=(
+            "Compound of Rücken 'back' + Sack 'bag, sack.' "
+            "Literally 'back-bag.' Borrowed into English and used interchangeably "
+            "with backpack in many varieties of English, particularly British English."
+        ),
+        roots=["Proto-Germanic *hrugaz (back)", "Proto-Germanic *sakkaz (bag, sack)"],
+        cognates=["English rucksack (borrowed)", "English sack (from the same root as Sack)"],
     ),
 
     # ── Italian ──────────────────────────────────────────────────────────────
