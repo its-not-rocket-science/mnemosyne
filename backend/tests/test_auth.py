@@ -6,6 +6,8 @@ Covers:
   - JWT token decoding in get_current_user (Bearer header takes priority
     over X-User-Id; invalid token falls back gracefully)
   - Token round-trip: register → use token on /users/me/preferences
+  - Auth strictness: invalid/missing tokens return 401 when
+    allow_dev_auth_fallback=False (production mode)
 
 All tests use an in-memory SQLite database (aiosqlite) via the same
 dependency-override pattern as test_user_isolation.py.
@@ -14,11 +16,14 @@ from __future__ import annotations
 
 import pytest
 import pytest_asyncio
+from fastapi import HTTPException
 from httpx import ASGITransport, AsyncClient
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
+from backend.api import dependencies as dep_module
 from backend.api.dependencies import get_current_user, get_db_session
 from backend.auth.tokens import create_access_token, decode_access_token
+from backend.core.config import Settings
 from backend.main import app
 from backend.models import Base
 
@@ -83,6 +88,7 @@ def test_get_current_user_bearer_takes_priority_over_header() -> None:
 
 
 def test_get_current_user_bearer_invalid_falls_back_to_header() -> None:
+    # This relies on the default dev settings (DEBUG=True → fallback enabled).
     result = get_current_user(
         authorization="Bearer invalid.token.here",
         x_user_id="fallback-user",
@@ -91,9 +97,87 @@ def test_get_current_user_bearer_invalid_falls_back_to_header() -> None:
 
 
 def test_get_current_user_no_auth_returns_default() -> None:
+    # This relies on the default dev settings (DEBUG=True → fallback enabled).
     from backend.srs.knowledge import DEFAULT_USER_ID
     result = get_current_user(authorization=None, x_user_id=None)
     assert result == DEFAULT_USER_ID
+
+
+# ── Strict-mode (allow_dev_auth_fallback=False) ───────────────────────────────
+
+def _strict_settings() -> Settings:
+    """Production-like settings: no wildcard CORS, no auth fallback."""
+    return Settings(
+        debug=False,
+        allow_dev_auth_fallback=False,
+        cors_origins=["https://example.com"],
+    )
+
+
+def test_valid_bearer_works_in_strict_mode(monkeypatch) -> None:
+    user_id = "strict-user-xyz"
+    token = create_access_token(user_id)
+    monkeypatch.setattr(dep_module, "get_settings", _strict_settings)
+    result = get_current_user(authorization=f"Bearer {token}", x_user_id=None)
+    assert result == user_id
+
+
+def test_invalid_bearer_strict_raises_401(monkeypatch) -> None:
+    monkeypatch.setattr(dep_module, "get_settings", _strict_settings)
+    with pytest.raises(HTTPException) as exc_info:
+        get_current_user(authorization="Bearer not.a.real.token", x_user_id=None)
+    assert exc_info.value.status_code == 401
+
+
+def test_missing_auth_strict_raises_401(monkeypatch) -> None:
+    monkeypatch.setattr(dep_module, "get_settings", _strict_settings)
+    with pytest.raises(HTTPException) as exc_info:
+        get_current_user(authorization=None, x_user_id=None)
+    assert exc_info.value.status_code == 401
+
+
+def test_x_user_id_only_strict_raises_401(monkeypatch) -> None:
+    """X-User-Id without Bearer is not accepted in strict mode."""
+    monkeypatch.setattr(dep_module, "get_settings", _strict_settings)
+    with pytest.raises(HTTPException) as exc_info:
+        get_current_user(authorization=None, x_user_id="some-user")
+    assert exc_info.value.status_code == 401
+
+
+def test_invalid_bearer_with_fallback_uses_x_user_id(monkeypatch) -> None:
+    """Dev mode: invalid Bearer falls back to X-User-Id (existing behaviour)."""
+    dev_settings = lambda: Settings(debug=True, allow_dev_auth_fallback=True)  # noqa: E731
+    monkeypatch.setattr(dep_module, "get_settings", dev_settings)
+    result = get_current_user(
+        authorization="Bearer invalid.token.here",
+        x_user_id="fallback-user",
+    )
+    assert result == "fallback-user"
+
+
+def test_allow_dev_auth_fallback_defaults_to_debug() -> None:
+    """allow_dev_auth_fallback mirrors debug when not explicitly set."""
+    dev = Settings(debug=True)
+    prod = Settings(debug=False, cors_origins=["https://example.com"])
+    assert dev.allow_dev_auth_fallback is True
+    assert prod.allow_dev_auth_fallback is False
+
+
+@pytest.mark.asyncio
+async def test_invalid_bearer_returns_401_via_http(async_client, monkeypatch) -> None:
+    monkeypatch.setattr(dep_module, "get_settings", _strict_settings)
+    resp = await async_client.get(
+        "/users/me/preferences",
+        headers={"Authorization": "Bearer totally.invalid.token"},
+    )
+    assert resp.status_code == 401
+
+
+@pytest.mark.asyncio
+async def test_missing_auth_returns_401_via_http(async_client, monkeypatch) -> None:
+    monkeypatch.setattr(dep_module, "get_settings", _strict_settings)
+    resp = await async_client.get("/users/me/preferences")
+    assert resp.status_code == 401
 
 
 # ── Register ─────────────────────────────────────────────────────────────────
