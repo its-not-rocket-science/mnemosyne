@@ -1,7 +1,6 @@
-"""Arabic starter plugin — dictionary mode.
+"""Arabic plugin — dictionary mode with optional CAMeL Tools morphology.
 
 BCP-47 code "ar", RTL direction, Arabic sentence punctuation.
-This plugin provides NO morphological analysis — no CAMeL-Tools dependency.
 
 What this plugin does reliably
 ──────────────────────────────
@@ -12,39 +11,35 @@ What this plugin does reliably
   - Correct RTL / arabic metadata for frontend rendering and font selection.
   - TTS tag "ar" (browser SpeechSynthesis covers MSA on major platforms).
 
-What this plugin does NOT do
-─────────────────────────────
-  - Root extraction or pattern-based morphological analysis.
-  - Part-of-speech tagging.
-  - Lemmatisation beyond tashkeel normalisation.
-  - Dialectal Arabic support (Egyptian, Gulf, Levantine, …).
-  - Clitic segmentation (ال definite article, pronominal clitics, etc.).
-  - Any claim about word meaning.
+When camel-tools is installed (optional)
+─────────────────────────────────────────
+  Rich vocabulary candidates gain: POS, root, pattern, gloss, voice, aspect,
+  mood, and proclitic fields (prc0/1/2).  The nuance extractor (ar.py) uses
+  these to fire root_pattern, verb_form, and proclitic signals.
 
-Upgrade path
-────────────
-  When CAMeL-Tools, Stanza-ar, or a comparable library is available as a
-  dependency, this plugin can be promoted:
-    tokenization_quality → high        (after adding clitic splitting)
-    morphology_depth     → shallow     (after POS tagging)
-    analysis_depth       → morphology_light
-    lesson_modes_supported → ["vocabulary", "dictionary"]
+  Installation:
+    pip install camel-tools
+    camel_data -i morphology-db-msa-r13
+
+Without camel-tools
+───────────────────
+  Vocabulary candidates carry only lemma (= undiacritised surface form).
+  The nuance extractor still fires definite_article and negation signals.
 
 Known limitations
 ─────────────────
   • Arabic proclitics (وَ "and-", بِ "in-", كَ "like-", لِ "for-") attach to
-    the following word without a space in normal orthography.  Whitespace
-    tokenisation will return the combined form as a single token; the clitic
-    is not split off.
-  • Tokenisation quality is rated "medium" for MSA prose.  Poetry, headlines,
-    and dialectal text will have higher error rates.
-  • Sentence splitting is a regex heuristic; Arabic discourse markers and
-    run-on sentences may cause over- or under-splitting.
+    the following word without a space in normal orthography.  Without CAMeL
+    Tools, the combined form is returned as a single token.
+  • Tokenisation quality is rated "medium" for MSA prose.
+  • Sentence splitting is a regex heuristic; discourse markers and run-on
+    sentences may cause over- or under-splitting.
 """
 from __future__ import annotations
 
 import re
 
+from backend.morphology import ar_adapter as _ar_adapter
 from backend.plugins.cefr_vocab import A1 as _CEFR_A1
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
@@ -144,7 +139,7 @@ class ArabicPlugin:
             cultural_references="none",
             etymology="none",
             formality_register="none",
-            grammar_nuance="none",
+            grammar_nuance="stub",      # definite_article + negation always; root/verb with CAMeL
             pronunciation_tts="stub",   # ar TTS coverage varies by browser
             transliteration="none",
             proverb_tradition="none",
@@ -173,31 +168,56 @@ class ArabicPlugin:
         candidates: list[CandidateObject] = []
         seen: set[str] = set()
 
-        for word in _WORD_RE.findall(sentence):
-            canonical = _strip_tashkeel(word)
+        raw_tokens = _WORD_RE.findall(sentence)
+        morph_tokens = _ar_adapter.analyze_tokens(raw_tokens)
+
+        for mt in morph_tokens:
+            # canonical = undiacritised surface form (same logic as before)
+            canonical = _strip_tashkeel(mt.text)
             if not canonical or canonical in seen:
                 continue
             seen.add(canonical)
 
-            # Surface form may carry tashkeel (e.g. "كَتَبَ"); canonical
-            # form is the undiacritised version ("كتب").  The lesson builder
-            # will display "Base form: كتب" when they differ.
             lesson_data: dict = {
-                "lemma": canonical,
-                "confidence_note": "Prefix/clitic segmentation is heuristic; attached prefixes may not always be separated correctly."
+                # Strip tashkeel from CAMeL lemma too for consistency
+                "lemma": _strip_tashkeel(mt.lemma),
             }
+
+            if mt.source == "camel_tools":
+                lesson_data["pos"] = mt.pos
+                if mt.root:
+                    lesson_data["root"] = mt.root
+                if mt.pattern:
+                    lesson_data["pattern"] = mt.pattern
+                if mt.gloss:
+                    lesson_data["gloss"] = mt.gloss
+                if mt.voice:
+                    lesson_data["voice"] = mt.voice
+                if mt.aspect:
+                    lesson_data["aspect"] = mt.aspect
+                if mt.mood:
+                    lesson_data["mood"] = mt.mood
+                if mt.prc0:
+                    lesson_data["prc0"] = mt.prc0
+                if mt.prc1:
+                    lesson_data["prc1"] = mt.prc1
+                if mt.prc2:
+                    lesson_data["prc2"] = mt.prc2
+            else:
+                lesson_data["confidence_note"] = _CONFIDENCE_NOTE
+
             if canonical in _A1:
                 lesson_data["cefr_level"] = "A1"
                 confidence: float | None = 0.70
             else:
-                lesson_data["confidence_note"] = _CONFIDENCE_NOTE
                 confidence = None
+
             candidates.append(
                 CandidateObject(
                     canonical_form=canonical,
-                    surface_form=word,
+                    surface_form=mt.text,
                     type="vocabulary",
-                    label=word,
+                    label=mt.text,
                     lesson_data=lesson_data,
                     confidence=confidence,
                 )
