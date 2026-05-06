@@ -14,7 +14,7 @@ Separating explanation text from the builder logic lets:
   3. Future localisation of explanation prose is confined to this module.
 
 All functions return plain-text strings with Unicode quotation marks
-(\\u201c / \\u201d) for typographic consistency.  No HTML or markdown.
+(“ / ”) for typographic consistency.  No HTML or markdown.
 
 Graceful degradation
 ────────────────────
@@ -26,13 +26,14 @@ correct:
 """
 from __future__ import annotations
 
+import backend.lesson.l10n as l10n
 from backend.lesson.context import LessonContext
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
-_L  = "\u201c"   # left double quotation mark
-_R  = "\u201d"   # right double quotation mark
-_EM = "\u2014"   # em dash
+_L  = "“"   # left double quotation mark
+_R  = "”"   # right double quotation mark
+_EM = "—"   # em dash
 
 
 def _q(text: str) -> str:
@@ -49,12 +50,14 @@ def vocabulary_explanation(
     context: LessonContext,
 ) -> str:
     """One-sentence explanation for a vocabulary / open-class word."""
+    l1 = context.l1_language
+    pos_phrase = l10n.pos_label(pos, l1)
     if display_label.lower() != lemma.lower():
-        return (
-            f"{_q(display_label)} is a {pos}. "
-            f"Its base form (lemma) is {_q(lemma)}."
+        return l10n.t(
+            "vocab.with_lemma", l1,
+            word=_q(display_label), pos=pos_phrase, lemma=_q(lemma),
         )
-    return f"{_q(display_label)} is a {pos}."
+    return l10n.t("vocab.simple", l1, word=_q(display_label), pos=pos_phrase)
 
 
 def conjugation_explanation(
@@ -67,12 +70,14 @@ def conjugation_explanation(
     context: LessonContext,
 ) -> str:
     """One-sentence explanation for a conjugated verb form."""
+    l1 = context.l1_language
     if tense != "unknown" and mood != "unknown":
-        return (
-            f"{_q(surface)} is the {person_label}-person {number_label} "
-            f"{tense} {mood} form of {_q(lemma)}."
+        return l10n.t(
+            "conj.full", l1,
+            word=_q(surface), person=person_label, number=number_label,
+            tense=tense, mood=mood, lemma=_q(lemma),
         )
-    return f"{_q(surface)} is a conjugated form of {_q(lemma)}."
+    return l10n.t("conj.simple", l1, word=_q(surface), lemma=_q(lemma))
 
 
 def agreement_explanation(
@@ -85,13 +90,15 @@ def agreement_explanation(
     context: LessonContext,
 ) -> str:
     """One-sentence explanation for a gender/number agreement pair."""
+    l1 = context.l1_language
     confirmed_str = (
         " and ".join(confirmed_features) if confirmed_features
-        else "morphological features"
+        else l10n.features_fallback(l1)
     )
-    return (
-        f"{_q(modifier)} ({modifier_pos_display}) and {_q(noun)} agree in "
-        f"{confirmed_str}. The noun {_q(noun)} is {gender_display} {number_display}."
+    return l10n.t(
+        "agree.main", l1,
+        mod=_q(modifier), mod_pos=modifier_pos_display, noun=_q(noun),
+        features=confirmed_str, gender=gender_display, number=number_display,
     )
 
 
@@ -106,14 +113,16 @@ def case_agreement_explanation(
     context: LessonContext,
 ) -> str:
     """One-sentence explanation for a case+gender+number agreement cluster."""
+    l1 = context.l1_language
     confirmed_str = (
         " and ".join(confirmed_features) if confirmed_features
-        else "morphological features"
+        else l10n.features_fallback(l1)
     )
-    return (
-        f"{_q(modifier)} ({modifier_pos_display}) and {_q(noun)} agree in "
-        f"{confirmed_str}. The noun {_q(noun)} is {gender_display} "
-        f"{number_display} in the {case_display} case."
+    return l10n.t(
+        "case.main", l1,
+        mod=_q(modifier), mod_pos=modifier_pos_display, noun=_q(noun),
+        features=confirmed_str, gender=gender_display,
+        number=number_display, case=case_display,
     )
 
 
@@ -122,22 +131,19 @@ def idiom_explanation(
     meaning: str,
     context: LessonContext,
 ) -> str:
-    """One-sentence explanation for an idiomatic expression.
-
-    Uses ``context.language_name`` when available so the explanation reads
-    "a Spanish idiom" rather than the old hardcoded string.  Falls back to
-    grammatically correct language-neutral phrasing when the language is
-    unknown.
-    """
-    if context.language_name:
-        lang = context.language_name
-        if meaning:
-            return f"{_q(phrase)} is a {lang} idiom meaning {_q(meaning)}."
-        return f"{_q(phrase)} is a {lang} idiomatic expression."
-    # Unknown language — omit the language name for grammatical correctness.
+    """One-sentence explanation for an idiomatic expression."""
+    l1 = context.l1_language
+    lang_loc = l10n.lang_name(context.language_name, l1)
+    if lang_loc and meaning:
+        return l10n.t(
+            "idiom.with_lang_and_meaning", l1,
+            word=_q(phrase), lang=lang_loc, meaning=_q(meaning),
+        )
+    if lang_loc:
+        return l10n.t("idiom.with_lang", l1, word=_q(phrase), lang=lang_loc)
     if meaning:
-        return f"{_q(phrase)} means {_q(meaning)}."
-    return f"{_q(phrase)} is an idiomatic expression."
+        return l10n.t("idiom.meaning_only", l1, word=_q(phrase), meaning=_q(meaning))
+    return l10n.t("idiom.plain", l1, word=_q(phrase))
 
 
 def grammar_explanation(
@@ -146,9 +152,10 @@ def grammar_explanation(
     context: LessonContext,
 ) -> str:
     """One-sentence explanation for a structural grammar pattern."""
+    l1 = context.l1_language
     if usage:
-        return f"The pattern {_q(pattern)}: {usage}"
-    return f"The grammatical pattern {_q(pattern)}."
+        return l10n.t("grammar.with_usage", l1, pattern=_q(pattern), usage=usage)
+    return l10n.t("grammar.plain", l1, pattern=_q(pattern))
 
 
 def nuance_explanation(
@@ -160,7 +167,8 @@ def nuance_explanation(
     """One-sentence explanation for an aspect/mood nuance observation."""
     if note:
         return note
-    return f"{_q(surface)} exhibits {type_label.lower()}."
+    l1 = context.l1_language
+    return l10n.t("nuance.exhibits", l1, word=_q(surface), type_label=type_label.lower())
 
 
 def script_explanation(
@@ -169,9 +177,10 @@ def script_explanation(
     context: LessonContext,
 ) -> str:
     """One-sentence explanation for a script character or sign."""
+    l1 = context.l1_language
     if meaning:
-        return f"{_q(character)} {_EM} {meaning}."
-    return f"{_q(character)}"
+        return l10n.t("script.with_meaning", l1, char=_q(character), meaning=meaning)
+    return l10n.t("script.plain", l1, char=_q(character))
 
 
 def dictionary_explanation(
@@ -189,11 +198,13 @@ def dictionary_explanation(
     Deliberately terse — the lesson fields carry the structural detail.
     Does not claim grammatical completeness.
     """
+    l1 = context.l1_language
     if gloss:
-        return f"{_q(token)} {_EM} {gloss}."
-    if context.language_name:
-        return f"{_q(token)} {_EM} {context.language_name} vocabulary."
-    return f"{_q(token)}"
+        return l10n.t("dict.with_gloss", l1, word=_q(token), gloss=gloss)
+    lang_loc = l10n.lang_name(context.language_name, l1)
+    if lang_loc:
+        return l10n.t("dict.with_lang", l1, word=_q(token), lang=lang_loc)
+    return l10n.t("dict.plain", l1, word=_q(token))
 
 
 def transliteration_explanation(
@@ -204,10 +215,15 @@ def transliteration_explanation(
     context: LessonContext,
 ) -> str:
     """One-sentence explanation for a native ↔ romanization pair."""
+    l1 = context.l1_language
     scheme_note = f" ({scheme})" if scheme else ""
     if meaning:
-        return (
-            f"{_q(native_form)} is romanized as {_q(romanized)}"
-            f"{scheme_note} and means {_q(meaning)}."
+        return l10n.t(
+            "translit.with_meaning", l1,
+            native=_q(native_form), roman=_q(romanized),
+            scheme=scheme_note, meaning=_q(meaning),
         )
-    return f"{_q(native_form)} is romanized as {_q(romanized)}{scheme_note}."
+    return l10n.t(
+        "translit.plain", l1,
+        native=_q(native_form), roman=_q(romanized), scheme=scheme_note,
+    )

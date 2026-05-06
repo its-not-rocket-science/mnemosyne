@@ -36,7 +36,9 @@ def _mode_for_language(registry: PluginRegistry, language: str) -> LessonMode:
     return "morphology"
 
 
-def _context_for_language(registry: PluginRegistry, language: str) -> LessonContext:
+def _context_for_language(
+    registry: PluginRegistry, language: str, l1_language: str = "en"
+) -> LessonContext:
     """Build a ``LessonContext`` from the registered plugin's capabilities.
 
     Falls back to ``LessonContext.unknown()`` when the language is not
@@ -46,16 +48,17 @@ def _context_for_language(registry: PluginRegistry, language: str) -> LessonCont
         plugin = registry.get(language)
         caps = getattr(plugin, "capabilities", None)
         if caps is not None:
-            return LessonContext.from_capabilities(caps)
+            return LessonContext.from_capabilities(caps, l1_language=l1_language)
     except KeyError:
         pass
-    return LessonContext.unknown()
+    return LessonContext.unknown(l1_language=l1_language)
 
 
 @router.get("/lesson/{object_id}", response_model=LessonResponse)
 async def get_lesson(
     object_id: str,
     language: str,
+    l1_language: str = "en",
     registry: PluginRegistry = Depends(get_plugin_registry),
     db: AsyncSession = Depends(get_db_session),
 ) -> LessonResponse:
@@ -64,7 +67,7 @@ async def get_lesson(
         row = await db.get(CanonicalObjectRow, object_id)
         if row is not None:
             mode    = _mode_for_language(registry, row.language)
-            context = _context_for_language(registry, row.language)
+            context = _context_for_language(registry, row.language, l1_language)
             return build_lesson(
                 object_id=row.id,
                 obj_type=row.type,
@@ -89,7 +92,7 @@ async def get_lesson(
         raise HTTPException(status_code=404, detail="Lesson object not found")
 
     mode    = _mode_for_language(registry, language)
-    context = _context_for_language(registry, language)
+    context = _context_for_language(registry, language, l1_language)
     return build_lesson(
         object_id=object_id,
         obj_type=lo.type,
