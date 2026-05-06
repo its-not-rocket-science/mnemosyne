@@ -7,11 +7,9 @@
   "tokenizer": "words",
   "capability_assertions": {
     "idioms": ["none"],
-    "grammar_nuance": ["none"]
+    "grammar_nuance": ["stub"]
   },
-  "capability_gaps": {
-    "grammar_nuance": "Plugin declares 'none' but extractor provides definite_article and negation nuances"
-  },
+  "capability_gaps": {},
   "cases": [
     {
       "id": "ar_extractor_nuance_definite_article",
@@ -109,6 +107,91 @@
       "assert_canonical_contains": null,
       "confidence_ge": null,
       "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ar_extractor_nuance_negation_lan",
+      "category": "grammar_nuance",
+      "text": "لن أذهب إلى المدرسة غداً.",
+      "note": "Extractor nuance: لن (lan) — emphatic future negation requiring subjunctive mood",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "negation_lan",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ar_extractor_nuance_negation_ma",
+      "category": "grammar_nuance",
+      "text": "ما فهمتُ الدرس جيداً.",
+      "note": "Extractor nuance: ما (ma) — literary/Classical negation of past verb",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "negation_ma",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ar_extractor_nuance_negation_laysa",
+      "category": "grammar_nuance",
+      "text": "ليس هذا كتابي.",
+      "note": "Extractor nuance: ليس (laysa) — defective verb negating nominal sentence",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "negation_laysa",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ar_vocabulary_keys_01",
+      "category": "vocabulary",
+      "text": "البيت كبير ونظيف.",
+      "note": "All vocabulary candidates must carry lemma in lesson_data",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ar_extractor_cofire_negation_definite",
+      "category": "grammar_nuance",
+      "text": "لم أجد الكتاب اليوم.",
+      "note": "Extractor co-fire: لم (negation_lam) and الكتاب (definite_article) both fire",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "negation_lam",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
       "no_raw_uuids": true
     }
   ]

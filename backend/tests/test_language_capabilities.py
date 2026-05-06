@@ -1024,15 +1024,23 @@ class TestLanguagesEndpointV3:
                 f"nuance transliteration={nc['transliteration']!r}"
             )
 
-    def test_dictionary_only_languages_no_grammar_nuance(self) -> None:
+    def test_dictionary_only_languages_grammar_nuance_ceiling(self) -> None:
+        # ar and he have heuristic grammar signals (definite article, negation,
+        # prefix decomposition) so they can declare up to "stub".
+        # la has no grammar signals and must stay "none".
         resp = client.get("/languages")
-        dict_only = {"ar", "he", "la"}
+        ceiling: dict[str, set[str]] = {
+            "ar": {"none", "stub"},
+            "he": {"none", "stub"},
+            "la": {"none"},
+        }
         for item in resp.json():
-            if item["code"] not in dict_only:
+            if item["code"] not in ceiling:
                 continue
             nc = item["nuance_capabilities"]
             assert nc is not None
-            assert nc["grammar_nuance"] == "none", (
-                f"{item['code']} is dictionary-only but declares grammar_nuance="
-                f"{nc['grammar_nuance']!r}"
+            allowed = ceiling[item["code"]]
+            assert nc["grammar_nuance"] in allowed, (
+                f"{item['code']} grammar_nuance={nc['grammar_nuance']!r} "
+                f"not in allowed set {allowed}"
             )
