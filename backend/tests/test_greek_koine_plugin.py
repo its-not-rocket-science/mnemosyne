@@ -219,14 +219,16 @@ class TestLexiconLookup:
         assert result.candidates[0].confidence > 0.5
 
     def test_unknown_word_has_confidence_note(self, plugin):
-        result = plugin.analyze_sentence("ἐλαλήσαμεν")  # inflected form, not in lexicon
+        # Inflected forms now resolve via the inflection table; use a
+        # wholly invented token that cannot be in any Greek lexicon.
+        result = plugin.analyze_sentence("ξυζζυω")
         assert len(result.candidates) == 1
         cand = result.candidates[0]
         assert "confidence_note" in cand.lesson_data
         assert cand.confidence is None
 
     def test_unknown_word_still_has_romanized(self, plugin):
-        result = plugin.analyze_sentence("ἐλαλήσαμεν")
+        result = plugin.analyze_sentence("ξυζζυω")
         cand = result.candidates[0]
         assert "romanized" in cand.lesson_data
         assert len(cand.lesson_data["romanized"]) > 0

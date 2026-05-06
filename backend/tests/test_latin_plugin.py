@@ -223,21 +223,21 @@ class TestKnownWords:
 
 class TestUnknownWords:
     def test_inflected_form_emitted_without_gloss(self, plugin: LatinPlugin) -> None:
-        # "amat" (he loves) is an inflected form not in the lexicon.
-        result = plugin.analyze_sentence("amat")
+        # Inflected forms now resolve via the inflection table; only truly
+        # absent tokens (not in lemmas or inflections) emit without a gloss.
+        result = plugin.analyze_sentence("xyzzy")
         assert len(result.candidates) == 1
         c = result.candidates[0]
         assert c.lesson_data.get("gloss") is None
 
     def test_unknown_word_has_confidence_note(self, plugin: LatinPlugin) -> None:
-        result = plugin.analyze_sentence("amat")
+        result = plugin.analyze_sentence("xyzzy")
         c = result.candidates[0]
         assert "confidence_note" in c.lesson_data
-        assert "citation forms" in c.lesson_data["confidence_note"].lower() or \
-               "scaffold" in c.lesson_data["confidence_note"].lower()
+        assert "scaffold" in c.lesson_data["confidence_note"].lower()
 
     def test_unknown_word_has_no_confidence_score(self, plugin: LatinPlugin) -> None:
-        result = plugin.analyze_sentence("puellam")  # accusative of puella
+        result = plugin.analyze_sentence("xyzzy")
         c = result.candidates[0]
         assert c.confidence is None
 
@@ -302,11 +302,10 @@ class TestLexicon:
             assert len(entry) == 4, f"Entry {key!r} does not have 4 fields"
 
     def test_all_entries_have_nonempty_fields(self) -> None:
-        for key, (citation, gloss, grammar, pos) in _LEXICON.items():
-            assert citation, f"Entry {key!r}: empty citation"
-            assert gloss, f"Entry {key!r}: empty gloss"
-            assert grammar, f"Entry {key!r}: empty grammar"
-            assert pos, f"Entry {key!r}: empty pos"
+        for key, entry in _LEXICON.items():
+            assert entry["citation"], f"Entry {key!r}: empty citation"
+            assert entry["gloss"], f"Entry {key!r}: empty gloss"
+            assert entry["pos"], f"Entry {key!r}: empty pos"
 
     def test_all_keys_are_normalised(self) -> None:
         # Every lexicon key should already be macron-free and lowercase.
@@ -314,10 +313,9 @@ class TestLexicon:
             assert key == _normalise(key), f"Key {key!r} is not normalised"
 
     def test_pos_values_are_known(self) -> None:
-        known_pos = {"noun", "verb", "adjective", "pronoun", "preposition",
-                     "conjunction", "adverb", "numeral"}
-        for key, (_, _, _, pos) in _LEXICON.items():
-            assert pos in known_pos, f"Entry {key!r} has unknown pos {pos!r}"
+        known_pos = {"noun", "verb", "adj", "pron", "prep", "conj", "adv", "num", "det", "particle", "intj"}
+        for key, entry in _LEXICON.items():
+            assert entry["pos"] in known_pos, f"Entry {key!r} has unknown pos {entry['pos']!r}"
 
     def test_common_nouns_present(self) -> None:
         for word in ["amor", "terra", "vita", "rex", "pax", "homo", "corpus"]:
