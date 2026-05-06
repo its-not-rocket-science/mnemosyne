@@ -6,5 +6,6 @@ bootstrap_db.py
 .coverage
 htmlcov/
 data/lang_capture/raw/
+data/lexicons/*_inflections.json
 *.tmp
 node_modules/
