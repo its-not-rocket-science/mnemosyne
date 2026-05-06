@@ -101,6 +101,136 @@
       "no_raw_uuids": true
     },
     {
+      "id": "ja_yoji_isseki_nicho",
+      "category": "idiom",
+      "text": "一石二鳥のアイデアで二つの問題を解決できた。",
+      "note": "Yojijukugo: 一石二鳥 — spaCy splits this compound; pre-scan on sentence string must detect it",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "yojijukugo",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "一石二鳥",
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ja_yoji_ichigo_ichie",
+      "category": "idiom",
+      "text": "この出会いは一期一会だと思う。",
+      "note": "Yojijukugo: 一期一会 — once-in-a-lifetime encounter",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "yojijukugo",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "一期一会",
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ja_yoji_jigou_jitoku",
+      "category": "idiom",
+      "text": "自業自得だから誰も助けてくれない。",
+      "note": "Yojijukugo: 自業自得 — reap what you sow",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "yojijukugo",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "自業自得",
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ja_yoji_shimen_soka",
+      "category": "idiom",
+      "text": "四面楚歌の状況でも彼は諦めなかった。",
+      "note": "Yojijukugo: 四面楚歌 — surrounded by enemies; spaCy often splits into 四面+楚歌",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "yojijukugo",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "四面楚歌",
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ja_yoji_rinki_ouhen",
+      "category": "idiom",
+      "text": "彼女は臨機応変に対応することが得意だ。",
+      "note": "Yojijukugo: 臨機応変 — adapting flexibly to circumstances",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "yojijukugo",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "臨機応変",
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ja_yoji_fp_plain_sentence",
+      "category": "false_positive",
+      "text": "今日は天気がとても良い。",
+      "note": "False-positive guard: no kanji sequence matches any yojijukugo in the dictionary",
+      "pipeline": "extractor",
+      "assert_types_present": [],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": ["yojijukugo"],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ja_yoji_fp_four_kanji_not_yoji",
+      "category": "false_positive",
+      "text": "法律事務所でアドバイスをもらった。",
+      "note": "False-positive guard: 法律事務 is four kanji in a row but NOT a yojijukugo",
+      "pipeline": "extractor",
+      "assert_types_present": [],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": ["yojijukugo"],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ja_yoji_fp_partial_overlap",
+      "category": "false_positive",
+      "text": "一石二三の計算で答えを出した。",
+      "note": "False-positive guard: 一石二三 shares first 3 chars with 一石二鳥 but 4th char differs — must NOT fire",
+      "pipeline": "extractor",
+      "assert_types_present": [],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": ["yojijukugo"],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
       "id": "ja_false_positive_01",
       "category": "false_positive",
       "text": "空が青い。",

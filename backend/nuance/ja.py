@@ -1,4 +1,13 @@
-"""Japanese nuance extractor — keigo (politeness levels), particles, yojijukugo."""
+"""Japanese nuance extractor — keigo (politeness levels), particles, yojijukugo.
+
+Yojijukugo detection uses a two-pass hybrid:
+  1. Pre-scan the raw sentence string left-to-right in 4-char windows.
+     This catches compounds that SudachiPy splits into sub-tokens (e.g.
+     一石二鳥 → [一石][二鳥]).  Advance by 4 on a match, 1 otherwise.
+  2. Token-surface fallback — fires when spaCy keeps the compound intact.
+
+The two passes share a `seen` set so the same compound is never emitted twice.
+"""
 from __future__ import annotations
 
 from typing import Any
@@ -38,16 +47,34 @@ _PARTICLES: dict[str, str] = {
 }
 
 _YOJIJUKUGO: dict[str, str] = {
+    # perseverance / effort
     "一石二鳥": "kill two birds with one stone",
-    "七転八起": "fall seven times, rise eight — perseverance",
-    "以心伝心": "unspoken mutual understanding; telepathic communication",
-    "四面楚歌": "surrounded by enemies on all sides",
-    "自業自得": "reap what you sow",
-    "十人十色": "to each their own; everyone differs",
-    "弱肉強食": "survival of the fittest",
-    "臨機応変": "adapting flexibly to circumstances",
-    "一期一会": "once-in-a-lifetime encounter; treasure the moment",
-    "無我夢中": "absorbed in something; losing oneself in an activity",
+    "七転八起": "fall seven times, rise eight — perseverance through adversity",
+    "臥薪嘗胆": "endure hardship for a greater goal; bide one's time for revenge",
+    "不撓不屈": "indomitable spirit; never giving up no matter how hard",
+    # fate / consequences
+    "自業自得": "reap what you sow; face the consequences of one's own actions",
+    "因果応報": "karma; good and bad deeds return to the doer",
+    "一期一会": "once-in-a-lifetime encounter; treasure every meeting",
+    # situation / environment
+    "四面楚歌": "surrounded by enemies on all sides; completely isolated",
+    "風前灯火": "a candle in the wind; precarious situation on the verge of extinction",
+    "前途多難": "a long and difficult road ahead; the future is full of obstacles",
+    # communication / understanding
+    "以心伝心": "unspoken mutual understanding; heart-to-heart communication",
+    "言語道断": "beyond words; utterly outrageous; inexcusable",
+    # diversity / individuality
+    "十人十色": "to each their own; ten people, ten colors — everyone differs",
+    "千差万別": "infinite variety; great diversity among things or people",
+    # adaptability / skill
+    "臨機応変": "adapting flexibly to circumstances; thinking on one's feet",
+    "融通無碍": "complete freedom and adaptability; no obstacles to free movement",
+    # absorption / dedication
+    "無我夢中": "completely absorbed in something; losing oneself in an activity",
+    "一心不乱": "with single-minded focus; undivided concentration",
+    # power / competition
+    "弱肉強食": "survival of the fittest; the strong prey on the weak",
+    "天下無双": "unrivaled under heaven; the best in the world",
 }
 
 
@@ -73,7 +100,7 @@ class JapaneseNuanceExtractor:
         seen: set[str] = set()
         out.extend(self._keigo(tokens, seen))
         out.extend(self._particles(tokens, seen))
-        out.extend(self._yojijukugo(tokens, seen))
+        out.extend(self._yojijukugo(sentence, tokens, seen))
         return out
 
     def _keigo(
@@ -158,37 +185,58 @@ class JapaneseNuanceExtractor:
         return out
 
     def _yojijukugo(
-        self, tokens: list[Any], seen: set[str]
+        self, sentence: str, tokens: list[Any], seen: set[str]
     ) -> list[CandidateObject]:
         out = []
+
+        # Pass 1 — sentence-string pre-scan (left-to-right, 4-char windows).
+        # Catches compounds SudachiPy splits into sub-tokens (e.g. 一石|二鳥).
+        i = 0
+        n = len(sentence)
+        while i <= n - 4:
+            chunk = sentence[i:i + 4]
+            if chunk in _YOJIJUKUGO:
+                cf = f"nuance:ja:yojijukugo:{chunk}"
+                if cf not in seen:
+                    seen.add(cf)
+                    out.append(self._make_yoji_candidate(chunk))
+                i += 4  # skip the matched span — no overlap possible at same offset
+            else:
+                i += 1
+
+        # Pass 2 — token-surface fallback.
+        # Fires when spaCy happens to preserve the compound as a single token.
         for tok in tokens:
             surface = _text(tok)
             if len(surface) != 4 or surface not in _YOJIJUKUGO:
                 continue
             cf = f"nuance:ja:yojijukugo:{surface}"
-            if cf in seen:
-                continue
-            seen.add(cf)
-            gloss = _YOJIJUKUGO[surface]
-            out.append(CandidateObject(
-                canonical_form=cf,
-                surface_form=surface,
-                type="nuance",
-                label=surface,
-                lesson_data={
-                    "nuance_type": "yojijukugo",
-                    "explanation": (
-                        f"«{surface}» is a yojijukugo (四字熟語), a four-character compound "
-                        f"with the meaning: '{gloss}'. "
-                        "These compounds, often of Chinese origin, function as fixed expressions "
-                        "carrying cultural and literary weight in Japanese."
-                    ),
-                    "register": "literary",
-                    "learner_level": "C1",
-                    "source": "heuristic",
-                    "yojijukugo": surface,
-                    "gloss": gloss,
-                },
-                confidence=0.90,
-            ))
+            if cf not in seen:
+                seen.add(cf)
+                out.append(self._make_yoji_candidate(surface))
+
         return out
+
+    def _make_yoji_candidate(self, surface: str) -> CandidateObject:
+        gloss = _YOJIJUKUGO[surface]
+        return CandidateObject(
+            canonical_form=f"nuance:ja:yojijukugo:{surface}",
+            surface_form=surface,
+            type="nuance",
+            label=surface,
+            lesson_data={
+                "nuance_type": "yojijukugo",
+                "explanation": (
+                    f"«{surface}» is a yojijukugo (四字熟語), a four-character compound "
+                    f"with the meaning: '{gloss}'. "
+                    "These compounds, often of Chinese origin, function as fixed expressions "
+                    "carrying cultural and literary weight in Japanese."
+                ),
+                "register": "literary",
+                "learner_level": "C1",
+                "source": "heuristic",
+                "yojijukugo": surface,
+                "gloss": gloss,
+            },
+            confidence=0.90,
+        )
