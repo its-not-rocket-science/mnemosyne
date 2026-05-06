@@ -7,9 +7,16 @@ makes a cross-origin request for the remote page.
 Security notes
 --------------
 Only http and https schemes are accepted.  A hard connect+read timeout and a
-response-size cap prevent DoS via slow or enormous responses.  Full SSRF
-protection (blocking RFC-1918 and link-local egress) is not implemented here;
-deploy behind a network perimeter that enforces egress rules in production.
+response-size cap prevent DoS via slow or enormous responses.
+
+SSRF protection is implemented in :mod:`backend.ingestion.ssrf`.  Every
+outbound request (including requests following redirects) is validated against
+blocked address ranges (loopback, RFC-1918 private, link-local, multicast,
+CGNAT, and the IPv6 equivalents) before the TCP connection is opened.  The
+guard runs both on the initial URL and on every redirect destination, so a
+redirect chain cannot be used to pivot to an internal address.
+
+See ``ssrf.py`` for the known limitation regarding DNS-rebinding attacks.
 """
 from __future__ import annotations
 
@@ -18,6 +25,8 @@ from dataclasses import dataclass
 
 import httpx
 from bs4 import BeautifulSoup
+
+from backend.ingestion.ssrf import SSRFBlockedError, validate_url_ssrf  # noqa: F401 — re-exported
 
 # Maximum raw response body accepted; larger responses are sliced before parsing.
 _MAX_RESPONSE_BYTES: int = 2 * 1024 * 1024  # 2 MiB
@@ -70,15 +79,14 @@ async def fetch_and_extract(url: str) -> FetchResult:
 
     Raises:
         ValueError: The URL scheme is not http or https.
+        SSRFBlockedError: The URL (or a redirect destination) resolves to a
+            blocked private or reserved address.
         httpx.HTTPStatusError: The server returned a 4xx or 5xx response.
         httpx.TimeoutException: No response within ``_FETCH_TIMEOUT`` seconds.
         httpx.RequestError: Any other network-level error.
     """
-    scheme = url.split("://", 1)[0].lower() if "://" in url else ""
-    if scheme not in {"http", "https"}:
-        raise ValueError(
-            f"Only http and https URLs are supported (got scheme {scheme!r})."
-        )
+    # Pre-flight SSRF check on the initial URL.
+    await validate_url_ssrf(url)
 
     headers = {
         "User-Agent": (
@@ -88,10 +96,15 @@ async def fetch_and_extract(url: str) -> FetchResult:
         "Accept-Language": "en,*;q=0.5",
     }
 
+    async def _guard_request(request: httpx.Request) -> None:
+        """Re-validate every request httpx makes, catching redirect pivots."""
+        await validate_url_ssrf(str(request.url))
+
     async with httpx.AsyncClient(
         follow_redirects=True,
         timeout=httpx.Timeout(_FETCH_TIMEOUT),
         headers=headers,
+        event_hooks={"request": [_guard_request]},
     ) as client:
         response = await client.get(url)
         response.raise_for_status()
