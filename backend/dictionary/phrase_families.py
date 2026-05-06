@@ -346,6 +346,462 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
         confusables=("all_that_glitters",),
         tags=("shakespeare", "excess", "embellishment", "misquotation"),
     ),
+
+    # \u2500\u2500 Spanish catalog \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+
+    "es_meter_la_pata": PhraseFamily(
+        id="es_meter_la_pata",
+        language="es",
+        canonical_form="meter la pata",
+        meaning="To make a blunder; to put one\u2019s foot in one\u2019s mouth.",
+        register="informal",
+        origin=(
+            "The image is of a foot (pata = paw/foot/leg) stepping into a trap or "
+            "stumbling. Shifted from literal misstep to any social or verbal gaffe."
+        ),
+        why_it_matters=(
+            "One of the most common Spanish colloquialisms for making a mistake. "
+            "Learners frequently produce hacer un error instead \u2014 "
+            "meter la pata is far more natural in speech."
+        ),
+        variants=(
+            PhraseVariant("meter la pata", MatchType.exact),
+            PhraseVariant("met\u00ed la pata", MatchType.inflectional_variant,
+                          note="1st-person preterite: I put my foot in it."),
+            PhraseVariant("meti\u00f3 la pata", MatchType.inflectional_variant,
+                          note="3rd-person preterite: she/he put their foot in it."),
+            PhraseVariant("metemos la pata", MatchType.inflectional_variant,
+                          note="1st-person plural present: we put our foot in it."),
+        ),
+        tags=("blunder", "informal", "colloquial"),
+    ),
+
+    "es_hacer_las_paces": PhraseFamily(
+        id="es_hacer_las_paces",
+        language="es",
+        canonical_form="hacer las paces",
+        meaning="To make peace; to reconcile after a quarrel.",
+        register="neutral",
+        origin=(
+            "From Latin pacem facere \u2018to make peace.\u2019 "
+            "The plural las paces (rather than la paz) is idiomatic \u2014 "
+            "la paz refers to political or international peace; "
+            "las paces is always interpersonal reconciliation."
+        ),
+        why_it_matters=(
+            "The plural las paces is grammatically fixed in this idiom. "
+            "Saying *hacer la paz in a personal context sounds formal or political."
+        ),
+        variants=(
+            PhraseVariant("hacer las paces", MatchType.exact),
+            PhraseVariant("hicieron las paces", MatchType.inflectional_variant,
+                          note="3rd-person plural preterite."),
+            PhraseVariant("hizo las paces", MatchType.inflectional_variant,
+                          note="3rd-person singular preterite."),
+            PhraseVariant("hacer la paz", MatchType.confusable_not_same,
+                          note="Refers to political or formal peace, not personal reconciliation."),
+        ),
+        tags=("reconciliation", "fixed-plural"),
+    ),
+
+    "es_matar_dos_pajaros": PhraseFamily(
+        id="es_matar_dos_pajaros",
+        language="es",
+        canonical_form="matar dos p\u00e1jaros de un tiro",
+        meaning="To kill two birds with one stone; to achieve two goals with one action.",
+        register="neutral",
+        origin=(
+            "A pan-European idiom attested across Romance and Germanic languages. "
+            "The Spanish phrase is the direct equivalent of the English idiom."
+        ),
+        source_text="Common European idiom; attested in Spanish from the 17th century",
+        variants=(
+            PhraseVariant("matar dos p\u00e1jaros de un tiro", MatchType.exact),
+            PhraseVariant("matar dos p\u00e1jaros de un solo tiro", MatchType.blend,
+                          note="\u2018Solo\u2019 (single) inserted as an intensifier."),
+            PhraseVariant("matar dos p\u00e1jaros de un golpe", MatchType.orthographic_variant,
+                          note="\u2018Golpe\u2019 (blow) replaces \u2018tiro\u2019 (shot)."),
+        ),
+        tags=("efficiency", "proverb", "universal-idiom"),
+    ),
+
+    "es_ser_pan_comido": PhraseFamily(
+        id="es_ser_pan_comido",
+        language="es",
+        canonical_form="ser pan comido",
+        meaning="To be a piece of cake; to be very easy.",
+        register="informal",
+        origin=(
+            "Pan comido literally means \u2018eaten bread\u2019 \u2014 something "
+            "already consumed, no longer a challenge. "
+            "Parallels English \u2018piece of cake\u2019 (something trivially consumed)."
+        ),
+        why_it_matters=(
+            "Always uses ser (permanent attribute), not estar, because ease is framed "
+            "as an inherent quality of the task rather than a transient state."
+        ),
+        variants=(
+            PhraseVariant("ser pan comido", MatchType.exact),
+            PhraseVariant("es pan comido", MatchType.inflectional_variant,
+                          note="Present 3rd-person: \u2018it is a piece of cake.\u2019"),
+            PhraseVariant("fue pan comido", MatchType.inflectional_variant,
+                          note="Preterite: \u2018it was a piece of cake.\u2019"),
+        ),
+        tags=("easiness", "colloquial", "food-metaphor"),
+    ),
+
+    "es_ponerse_las_pilas": PhraseFamily(
+        id="es_ponerse_las_pilas",
+        language="es",
+        canonical_form="ponerse las pilas",
+        meaning="To get one\u2019s act together; to buckle down; to shape up.",
+        register="informal",
+        origin=(
+            "Pilas are batteries. The image is of inserting fresh batteries: "
+            "re-energising oneself to resume work. Common in Spain and Latin America."
+        ),
+        variants=(
+            PhraseVariant("ponerse las pilas", MatchType.exact),
+            PhraseVariant("ponte las pilas", MatchType.inflectional_variant,
+                          note="T\u00fa imperative: \u2018get it together.\u2019"),
+            PhraseVariant("ponerte las pilas", MatchType.inflectional_variant,
+                          note="Infinitive with 2nd-person clitic: \u2018(you need) to get it together.\u2019"),
+            PhraseVariant("p\u00f3ngase las pilas", MatchType.inflectional_variant,
+                          note="Usted imperative (formal)."),
+        ),
+        tags=("motivation", "colloquial", "batteries-metaphor"),
+    ),
+
+    "es_costar_un_ojo": PhraseFamily(
+        id="es_costar_un_ojo",
+        language="es",
+        canonical_form="costar un ojo de la cara",
+        meaning="To cost an arm and a leg; to be outrageously expensive.",
+        register="informal",
+        origin=(
+            "The face is intimate and irreplaceable; the eye (ojo) its most precious "
+            "part. Paying \u2018an eye from one\u2019s face\u2019 is a hyperbole for "
+            "extreme cost."
+        ),
+        variants=(
+            PhraseVariant("costar un ojo de la cara", MatchType.exact),
+            PhraseVariant("cuesta un ojo de la cara", MatchType.inflectional_variant,
+                          note="Present 3rd-person: \u2018it costs an arm and a leg.\u2019"),
+            PhraseVariant("cost\u00f3 un ojo de la cara", MatchType.inflectional_variant,
+                          note="Preterite: \u2018it cost an arm and a leg.\u2019"),
+            PhraseVariant("costar un ri\u00f1\u00f3n", MatchType.orthographic_variant,
+                          note="\u2018Ri\u00f1\u00f3n\u2019 (kidney) substituted for \u2018ojo de la cara\u2019; same meaning."),
+        ),
+        tags=("expense", "hyperbole", "body-metaphor"),
+    ),
+
+    "es_no_hay_mal_por_bien": PhraseFamily(
+        id="es_no_hay_mal_por_bien",
+        language="es",
+        canonical_form="no hay mal que por bien no venga",
+        meaning="Every cloud has a silver lining; bad things can lead to good outcomes.",
+        register="neutral",
+        origin=(
+            "A Spanish proverb of Latin origin, parallel to English \u2018every cloud "
+            "has a silver lining.\u2019 Widely used as consolation in peninsular and "
+            "Latin American Spanish."
+        ),
+        source_text="Spanish proverb; parallel to Latin \u2018Nullum malum sine aliquo bono\u2019",
+        variants=(
+            PhraseVariant("no hay mal que por bien no venga", MatchType.exact),
+            PhraseVariant("no hay mal que no venga por bien", MatchType.misquotation,
+                          note="Word order of the relative clause inverted; meaning unchanged."),
+        ),
+        tags=("proverb", "consolation", "optimism"),
+    ),
+
+    "es_no_hay_rosa": PhraseFamily(
+        id="es_no_hay_rosa",
+        language="es",
+        canonical_form="no hay rosa sin espinas",
+        meaning="There is no rose without thorns; every good thing comes with some difficulty.",
+        register="neutral",
+        origin=(
+            "A universal proverb found in Latin (Rosa sine spinis esse non potest), "
+            "Spanish, French (il n\u2019y a pas de roses sans \u00e9pines), and English. "
+            "Used to acknowledge that good things carry their difficulties."
+        ),
+        source_text="Universal proverb; attested in Latin and Romance languages",
+        variants=(
+            PhraseVariant("no hay rosa sin espinas", MatchType.exact),
+            PhraseVariant("no existe rosa sin espinas", MatchType.orthographic_variant,
+                          note="\u2018Existe\u2019 replaces \u2018hay\u2019; slightly more literary."),
+        ),
+        tags=("proverb", "hardship", "beauty"),
+    ),
+
+    "es_echar_agua_al_mar": PhraseFamily(
+        id="es_echar_agua_al_mar",
+        language="es",
+        canonical_form="echar agua al mar",
+        meaning="To carry coals to Newcastle; to do something completely unnecessary.",
+        register="neutral",
+        origin=(
+            "The sea already has all the water it needs. "
+            "The Spanish equivalent of the English idiom \u2018carry coals to Newcastle\u2019 "
+            "\u2014 doing something absurdly redundant."
+        ),
+        variants=(
+            PhraseVariant("echar agua al mar", MatchType.exact),
+            PhraseVariant("llevar agua al mar", MatchType.orthographic_variant,
+                          note="\u2018Llevar\u2019 (to carry/bring) replaces \u2018echar\u2019 (to throw/pour); same meaning."),
+        ),
+        tags=("redundancy", "proverb"),
+    ),
+
+    "es_llevar_la_contraria": PhraseFamily(
+        id="es_llevar_la_contraria",
+        language="es",
+        canonical_form="llevar la contraria",
+        meaning="To go against someone; to contradict or oppose for its own sake.",
+        register="neutral",
+        origin=(
+            "La contraria is a substantivised adjective: \u2018the contrary [position].\u2019 "
+            "Llevar (to carry/bear) the contrary position means habitually taking the "
+            "opposing stance regardless of merit."
+        ),
+        why_it_matters=(
+            "Unlike contradecir (to contradict a specific claim), llevar la contraria "
+            "implies a habitual or petty contrariness \u2014 opposing for its own sake."
+        ),
+        variants=(
+            PhraseVariant("llevar la contraria", MatchType.exact),
+            PhraseVariant("lleva la contraria", MatchType.inflectional_variant,
+                          note="Present 3rd-person singular."),
+            PhraseVariant("llevas la contraria", MatchType.inflectional_variant,
+                          note="Present 2nd-person singular (t\u00fa)."),
+        ),
+        tags=("contradiction", "stubbornness", "colloquial"),
+    ),
+
+    # \u2500\u2500 German catalog \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+
+    "de_schwein_haben": PhraseFamily(
+        id="de_schwein_haben",
+        language="de",
+        canonical_form="Schwein haben",
+        meaning="To be lucky; to get away with something by sheer luck.",
+        register="informal",
+        origin=(
+            "Medieval fair custom: the last-place finisher in a contest received a pig "
+            "(Schwein) as a consolation prize. Any lucky outcome came to be called "
+            "\u2018Schwein haben.\u2019 The porcine association with luck persists in "
+            "German gift-giving (Gl\u00fccksschwein \u2014 lucky pig)."
+        ),
+        why_it_matters=(
+            "A frequent colloquialism. Learners mistake it for a negative idiom; "
+            "Schwein (pig) carries no negative connotation here \u2014 it is pure luck."
+        ),
+        variants=(
+            PhraseVariant("Schwein haben", MatchType.exact),
+            PhraseVariant("Schwein gehabt", MatchType.inflectional_variant,
+                          note="Past participle construction: \u2018got lucky.\u2019"),
+            PhraseVariant("Schwein gehabt haben", MatchType.inflectional_variant,
+                          note="Perfect infinitive."),
+            PhraseVariant("Gl\u00fcck haben", MatchType.confusable_not_same,
+                          note="\u2018Gl\u00fcck haben\u2019 (to be lucky) is the neutral synonym; Schwein haben is more colloquial."),
+        ),
+        tags=("luck", "informal", "colloquial"),
+    ),
+
+    "de_die_nase_voll_haben": PhraseFamily(
+        id="de_die_nase_voll_haben",
+        language="de",
+        canonical_form="die Nase voll haben",
+        meaning="To be fed up; to have had enough of something.",
+        register="informal",
+        origin=(
+            "The nose (Nase) as a metaphor for disgust \u2014 a nose \u2018full\u2019 "
+            "of something repugnant. Parallel to English \u2018up to here with it\u2019 "
+            "and French \u2018en avoir plein le dos.\u2019"
+        ),
+        variants=(
+            PhraseVariant("die Nase voll haben", MatchType.exact),
+            PhraseVariant("die Nase voll", MatchType.inflectional_variant,
+                          note="Short form in context, e.g. \u2018Ich habe die Nase voll.\u2019"),
+            PhraseVariant("die Schnauze voll haben", MatchType.orthographic_variant,
+                          note="Cruder register: Schnauze (snout) for Nase (nose)."),
+        ),
+        tags=("exasperation", "informal", "body-metaphor"),
+    ),
+
+    "de_unter_vier_augen": PhraseFamily(
+        id="de_unter_vier_augen",
+        language="de",
+        canonical_form="unter vier Augen",
+        meaning="In private; face-to-face and confidentially.",
+        register="neutral",
+        origin=(
+            "Two people have four eyes between them. Meeting \u2018under four eyes\u2019 "
+            "means privately \u2014 only those four eyes are present. "
+            "Attested from the 17th century."
+        ),
+        source_text="Attested in German from the 17th century",
+        variants=(
+            PhraseVariant("unter vier Augen", MatchType.exact),
+            PhraseVariant("unter 4 Augen", MatchType.orthographic_variant,
+                          note="Numeral form used in informal writing."),
+        ),
+        tags=("privacy", "directness"),
+    ),
+
+    "de_auf_dem_holzweg": PhraseFamily(
+        id="de_auf_dem_holzweg",
+        language="de",
+        canonical_form="auf dem Holzweg sein",
+        meaning="To be on the wrong track; to be completely mistaken.",
+        register="neutral",
+        origin=(
+            "Holzweg (literally \u2018wood path\u2019) was a forestry term for a dead-end "
+            "track leading only to a logging site with no through-road. "
+            "Travelers who took such a path were heading nowhere useful."
+        ),
+        why_it_matters=(
+            "A productive verb idiom: the \u2018sein\u2019 (to be) conjugates freely "
+            "while the \u2018auf dem Holzweg\u2019 core remains fixed."
+        ),
+        variants=(
+            PhraseVariant("auf dem Holzweg sein", MatchType.exact),
+            PhraseVariant("auf dem Holzweg", MatchType.inflectional_variant,
+                          note="Short form \u2014 \u2018sein\u2019 omitted or conjugated separately."),
+            PhraseVariant("auf dem falschen Weg", MatchType.confusable_not_same,
+                          note="Literally \u2018on the wrong path\u2019; less idiomatic, weaker image."),
+        ),
+        tags=("mistake", "error", "forestry-metaphor"),
+    ),
+
+    "de_ins_schwarze_treffen": PhraseFamily(
+        id="de_ins_schwarze_treffen",
+        language="de",
+        canonical_form="ins Schwarze treffen",
+        meaning="To hit the bull\u2019s-eye; to be exactly right.",
+        register="neutral",
+        origin=(
+            "Das Schwarze is the black circle at the center of a target. "
+            "Hitting the black center means a perfect shot. "
+            "Used figuratively for any observation or action that is precisely on target."
+        ),
+        variants=(
+            PhraseVariant("ins Schwarze treffen", MatchType.exact),
+            PhraseVariant("ins Schwarze getroffen", MatchType.inflectional_variant,
+                          note="Perfect participle form."),
+            PhraseVariant("ins Schwarze", MatchType.inflectional_variant,
+                          note="Short form \u2014 verb omitted or elsewhere in clause."),
+        ),
+        confusables=("de_den_nagel_treffen",),
+        tags=("accuracy", "precision", "target"),
+    ),
+
+    "de_katz_und_maus": PhraseFamily(
+        id="de_katz_und_maus",
+        language="de",
+        canonical_form="Katz und Maus spielen",
+        meaning="To play cat and mouse; to tease or toy with someone before acting.",
+        register="neutral",
+        origin=(
+            "Direct parallel to the international idiom. "
+            "The cat\u2019s habit of catching and releasing prey before the kill "
+            "became a universal metaphor for drawn-out pursuits."
+        ),
+        variants=(
+            PhraseVariant("Katz und Maus spielen", MatchType.exact),
+            PhraseVariant("Katz und Maus", MatchType.inflectional_variant,
+                          note="Short form \u2014 spielen omitted or conjugated separately."),
+            PhraseVariant("Katze und Maus spielen", MatchType.orthographic_variant,
+                          note="Full noun Katze instead of clipped Katz."),
+        ),
+        tags=("power", "teasing", "universal-idiom"),
+    ),
+
+    "de_auf_den_punkt": PhraseFamily(
+        id="de_auf_den_punkt",
+        language="de",
+        canonical_form="auf den Punkt bringen",
+        meaning="To get to the point; to summarise clearly and precisely.",
+        register="neutral",
+        origin=(
+            "Der Punkt (the point, the dot) as the essential core of a matter. "
+            "\u2018Bringing something to the point\u2019 means distilling it to its "
+            "essence. Common in academic, journalistic, and everyday speech."
+        ),
+        variants=(
+            PhraseVariant("auf den Punkt bringen", MatchType.exact),
+            PhraseVariant("auf den Punkt gebracht", MatchType.inflectional_variant,
+                          note="Past participle: \u2018put succinctly.\u2019"),
+            PhraseVariant("auf den Punkt", MatchType.inflectional_variant,
+                          note="Short form \u2014 bringen omitted or elsewhere in clause."),
+        ),
+        tags=("clarity", "precision"),
+    ),
+
+    "de_den_nagel_treffen": PhraseFamily(
+        id="de_den_nagel_treffen",
+        language="de",
+        canonical_form="den Nagel auf den Kopf treffen",
+        meaning="To hit the nail on the head; to say or do exactly the right thing.",
+        register="neutral",
+        origin=(
+            "Direct parallel to the English idiom \u2018hit the nail on the head.\u2019 "
+            "The carpenter\u2019s image: a well-aimed hammer blow that drives the nail "
+            "squarely into the wood."
+        ),
+        source_text="Pan-European idiom; attested in German from the 18th century",
+        variants=(
+            PhraseVariant("den Nagel auf den Kopf treffen", MatchType.exact),
+            PhraseVariant("den Nagel auf den Kopf getroffen", MatchType.inflectional_variant,
+                          note="Perfect participle."),
+            PhraseVariant("den Nagel auf den Kopf", MatchType.inflectional_variant,
+                          note="Short form \u2014 treffen omitted or elsewhere in clause."),
+        ),
+        confusables=("de_ins_schwarze_treffen",),
+        tags=("accuracy", "precision", "carpentry"),
+    ),
+
+    "de_kein_wunder": PhraseFamily(
+        id="de_kein_wunder",
+        language="de",
+        canonical_form="kein Wunder",
+        meaning="No wonder; it is not surprising.",
+        register="neutral",
+        origin=(
+            "Wunder (wonder, miracle) from Old High German wuntar. "
+            "The construction \u2018kein Wunder, dass...\u2019 is one of the most "
+            "frequent discourse markers in everyday German speech."
+        ),
+        variants=(
+            PhraseVariant("kein Wunder", MatchType.exact),
+            PhraseVariant("kein Wunder, dass", MatchType.inflectional_variant,
+                          note="Full construction with subordinate clause: \u2018no wonder that...\u2019"),
+            PhraseVariant("kein Wunder, wenn", MatchType.inflectional_variant,
+                          note="Conditional variant: \u2018no wonder if...\u2019"),
+        ),
+        tags=("discourse-marker", "unsurprising"),
+    ),
+
+    "de_hand_aufs_herz": PhraseFamily(
+        id="de_hand_aufs_herz",
+        language="de",
+        canonical_form="Hand aufs Herz",
+        meaning="Honestly; hand on heart; speaking sincerely.",
+        register="neutral",
+        origin=(
+            "The gesture of placing one\u2019s hand over the heart as a pledge of "
+            "sincerity. Parallel to English \u2018hand on heart\u2019 and French "
+            "\u2018la main sur le c\u0153ur.\u2019 Used to preface an honest admission."
+        ),
+        source_text="Pan-European gesture idiom; attested from the 17th century",
+        variants=(
+            PhraseVariant("Hand aufs Herz", MatchType.exact),
+            PhraseVariant("Hand auf Herz", MatchType.orthographic_variant,
+                          note="Omission of definite article (colloquial)."),
+        ),
+        tags=("honesty", "sincerity", "gesture-idiom"),
+    ),
 }
 
 

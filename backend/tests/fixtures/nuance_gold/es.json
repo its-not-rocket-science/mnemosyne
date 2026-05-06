@@ -8,7 +8,9 @@
   "capability_assertions": {
     "idioms": ["partial", "strong", "gold"],
     "grammar_nuance": ["partial", "strong", "gold"],
-    "formality_register": ["stub", "partial", "strong", "gold"]
+    "formality_register": ["stub", "partial", "strong", "gold"],
+    "etymology": ["partial", "strong", "gold"],
+    "phrase_families": ["partial", "strong", "gold"]
   },
   "capability_gaps": {},
   "cases": [
@@ -179,6 +181,173 @@
       "confidence_ge": null,
       "lesson_data_required_keys": {
         "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_extractor_etymology_tiempo",
+      "category": "etymology",
+      "text": "El tiempo transcurre muy rápido.",
+      "note": "Extractor etymology: 'tiempo' from Latin tempus — carries both time and weather senses",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:tiempo",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": null,
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_extractor_etymology_amigo",
+      "category": "etymology",
+      "text": "Mi amigo vive en Madrid desde hace años.",
+      "note": "Extractor etymology: 'amigo' from Latin amicus < amare — no co-firing nuance signals",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:amigo",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "etymology", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_extractor_etymology_guerrilla",
+      "category": "etymology",
+      "text": "La guerrilla resistió en las montañas durante meses.",
+      "note": "Extractor etymology: 'guerrilla' diminutive of guerra — lesson_data check omitted because -illa suffix co-fires diminutive detector",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:guerrilla",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": null,
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_extractor_etymology_mosquito",
+      "category": "etymology",
+      "text": "Un mosquito grande zumbó toda la noche.",
+      "note": "Extractor etymology: 'mosquito' diminutive of mosca — lesson_data check omitted because -ito suffix co-fires diminutive detector",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:mosquito",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": null,
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_extractor_etymology_siesta",
+      "category": "etymology",
+      "text": "La siesta forma parte de la cultura española.",
+      "note": "Extractor etymology: 'siesta' from Latin hora sexta (sixth hour) — sentence avoids ser to prevent ser_estar co-firing",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:siesta",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": null,
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_phrase_family_meter_la_pata",
+      "category": "phrase_family",
+      "text": "No quiero meter la pata otra vez.",
+      "note": "Phrase family: 'meter la pata' (to put one's foot in it) — exact canonical match",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "es_meter_la_pata",
+      "confidence_ge": 0.9,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_phrase_family_pan_comido",
+      "category": "phrase_family",
+      "text": "Este examen es pan comido para ella.",
+      "note": "Phrase family: 'es pan comido' (it's a piece of cake) — inflectional variant match",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "es_ser_pan_comido",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_phrase_family_hacer_las_paces",
+      "category": "phrase_family",
+      "text": "Es hora de hacer las paces con tu hermano.",
+      "note": "Phrase family: 'hacer las paces' (to reconcile) — exact canonical match",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "es_hacer_las_paces",
+      "confidence_ge": 0.9,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_phrase_family_dos_pajaros",
+      "category": "phrase_family",
+      "text": "Podemos matar dos pájaros de un tiro con este plan.",
+      "note": "Phrase family: 'matar dos pájaros de un tiro' (kill two birds with one stone)",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "es_matar_dos_pajaros",
+      "confidence_ge": 0.9,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_phrase_family_no_hay_rosa",
+      "category": "phrase_family",
+      "text": "No hay rosa sin espinas en esta vida.",
+      "note": "Phrase family: 'no hay rosa sin espinas' (no rose without thorns)",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "es_no_hay_rosa",
+      "confidence_ge": 0.9,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
       },
       "no_raw_uuids": true
     }
