@@ -1,41 +1,37 @@
-"""In-process async job store for long-running parse jobs.
+"""Job store interface, in-memory implementation, and factory.
 
-Architecture
-────────────
-Jobs are kept in a module-level dict so all routes in the same process share
-state.  This is intentional for the single-worker development setup.
-
-In a multi-worker production deployment (Gunicorn + multiple Uvicorn workers)
-each worker has its own in-process store.  Clients should be directed to the
-same worker for the lifetime of a job (sticky sessions), or the store should
-be replaced with a Redis-backed implementation.  A Redis backend is left as a
-future improvement; for now an operator note in the relevant route documents
-the limitation.
+``get_job_store()`` returns ``RedisJobStore`` when Redis is reachable,
+``InMemoryJobStore`` when ``DEBUG=true`` and Redis is unavailable.
+Raises ``RuntimeError`` in production when Redis is unreachable.
 
 Job lifecycle
 ─────────────
   pending → running → done
                     → failed
 
-Cleanup
-───────
-Completed jobs are retained for ``JOB_TTL_SECONDS`` after completion, then
-purged lazily on the next ``create()`` call.  This prevents unbounded memory
-growth in long-running processes without requiring a background thread.
+TTL / eviction
+──────────────
+InMemoryJobStore evicts completed jobs lazily on ``create()``.
+RedisJobStore sets Redis key TTLs automatically.
 """
+from __future__ import annotations
 
 import asyncio
-import json
 import logging
+from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from typing import Any
 
+from backend.core.config import get_settings
+
 logger = logging.getLogger(__name__)
 
-JOB_TTL_SECONDS = 3600  # 1 hour
-MAX_JOBS = 500          # hard cap; oldest completed jobs are evicted first
+JOB_TTL_SECONDS = 3600  # 1 hour — used by both backends
+MAX_JOBS = 500           # hard cap for InMemoryJobStore only
 
+
+# ── Data model ─────────────────────────────────────────────────────────────────
 
 @dataclass
 class ParseJob:
@@ -50,7 +46,7 @@ class ParseJob:
     error: str | None = None
     created_at: datetime = field(default_factory=lambda: datetime.now(UTC))
     updated_at: datetime = field(default_factory=lambda: datetime.now(UTC))
-    # Private: SSE subscriber queues.  Not serialised.
+    # In-memory SSE fan-out only.  Not persisted.
     _subscribers: list[asyncio.Queue] = field(default_factory=list, repr=False)
 
     def public_dict(self) -> dict[str, Any]:
@@ -68,28 +64,51 @@ class ParseJob:
         }
 
 
-class JobStore:
-    """Thread-safe (asyncio-safe) in-process job registry."""
+# ── Interface ──────────────────────────────────────────────────────────────────
+
+class AbstractJobStore(ABC):
+    """Async interface shared by InMemoryJobStore and RedisJobStore."""
+
+    @abstractmethod
+    async def create(self, job_id: str, user_id: str) -> ParseJob: ...
+
+    @abstractmethod
+    async def get(self, job_id: str) -> ParseJob | None: ...
+
+    @abstractmethod
+    async def update(self, job: ParseJob, **kwargs: Any) -> None: ...
+
+    @abstractmethod
+    async def finish(self, job: ParseJob, result: dict[str, Any]) -> None: ...
+
+    @abstractmethod
+    async def fail(self, job: ParseJob, error: str) -> None: ...
+
+    @abstractmethod
+    async def subscribe(self, job: ParseJob) -> asyncio.Queue: ...
+
+    @abstractmethod
+    async def unsubscribe(self, job: ParseJob, q: asyncio.Queue) -> None: ...
+
+
+# ── In-memory backend ──────────────────────────────────────────────────────────
+
+class InMemoryJobStore(AbstractJobStore):
+    """Single-process in-process job registry (dev / fallback)."""
 
     def __init__(self) -> None:
         self._jobs: dict[str, ParseJob] = {}
 
-    # ── CRUD ──────────────────────────────────────────────────────────────────
-
-    def create(self, job_id: str, user_id: str) -> ParseJob:
-        """Register a new job and return it.  Evicts stale completed jobs."""
+    async def create(self, job_id: str, user_id: str) -> ParseJob:
         self._evict_stale()
         job = ParseJob(id=job_id, user_id=user_id)
         self._jobs[job_id] = job
         return job
 
-    def get(self, job_id: str) -> ParseJob | None:
+    async def get(self, job_id: str) -> ParseJob | None:
         return self._jobs.get(job_id)
 
-    # ── State transitions ─────────────────────────────────────────────────────
-
-    def update(self, job: ParseJob, **kwargs: Any) -> None:
-        """Apply keyword updates to *job* and fan-out a progress event."""
+    async def update(self, job: ParseJob, **kwargs: Any) -> None:
         for key, value in kwargs.items():
             setattr(job, key, value)
         job.updated_at = datetime.now(UTC)
@@ -97,45 +116,37 @@ class JobStore:
         for q in list(job._subscribers):
             q.put_nowait(snapshot)
 
-    def finish(self, job: ParseJob, result: dict[str, Any]) -> None:
-        """Mark job as done, attach full result, and notify all subscribers."""
-        job.result   = result
-        job.status   = "done"
-        job.stage    = "done"
+    async def finish(self, job: ParseJob, result: dict[str, Any]) -> None:
+        job.result = result
+        job.status = "done"
+        job.stage = "done"
         job.progress = 1.0
         job.updated_at = datetime.now(UTC)
         snapshot = {**job.public_dict(), "result": result}
         for q in list(job._subscribers):
             q.put_nowait(snapshot)
 
-    def fail(self, job: ParseJob, error: str) -> None:
-        """Mark job as failed and notify all subscribers."""
-        job.status   = "failed"
-        job.stage    = "failed"
-        job.error    = error
+    async def fail(self, job: ParseJob, error: str) -> None:
+        job.status = "failed"
+        job.stage = "failed"
+        job.error = error
         job.updated_at = datetime.now(UTC)
         snapshot = job.public_dict()
         for q in list(job._subscribers):
             q.put_nowait(snapshot)
 
-    # ── SSE subscription ──────────────────────────────────────────────────────
-
-    def subscribe(self, job: ParseJob) -> asyncio.Queue:
-        """Return a new asyncio.Queue that receives every update for *job*."""
+    async def subscribe(self, job: ParseJob) -> asyncio.Queue:
         q: asyncio.Queue = asyncio.Queue()
         job._subscribers.append(q)
         return q
 
-    def unsubscribe(self, job: ParseJob, q: asyncio.Queue) -> None:
+    async def unsubscribe(self, job: ParseJob, q: asyncio.Queue) -> None:
         try:
             job._subscribers.remove(q)
         except ValueError:
             pass
 
-    # ── Housekeeping ──────────────────────────────────────────────────────────
-
     def _evict_stale(self) -> None:
-        """Remove completed/failed jobs older than JOB_TTL_SECONDS."""
         if len(self._jobs) < MAX_JOBS:
             return
         now = datetime.now(UTC)
@@ -146,7 +157,6 @@ class JobStore:
         ]
         for jid in to_delete:
             del self._jobs[jid]
-        # If still too many, evict oldest completed jobs regardless of TTL.
         if len(self._jobs) >= MAX_JOBS:
             completed = sorted(
                 [(jid, j) for jid, j in self._jobs.items()
@@ -157,5 +167,40 @@ class JobStore:
                 del self._jobs[jid]
 
 
-# Module-level singleton — imported by route modules.
-job_store = JobStore()
+# ── Factory ────────────────────────────────────────────────────────────────────
+
+_store: AbstractJobStore | None = None
+_store_lock = asyncio.Lock()
+
+
+async def get_job_store() -> AbstractJobStore:
+    """Return the singleton job store, initialising on first call.
+
+    Selection order:
+    1. Redis (``RedisJobStore``) — preferred in all environments.
+    2. InMemoryJobStore — only when ``DEBUG=true`` and Redis is unreachable.
+    3. RuntimeError — when ``DEBUG=false`` and Redis is unreachable.
+    """
+    global _store
+    if _store is not None:
+        return _store
+    async with _store_lock:
+        if _store is not None:
+            return _store
+        settings = get_settings()
+        try:
+            from backend.core.jobs_redis import RedisJobStore
+            _store = await RedisJobStore.probe()
+            logger.info("job store: Redis (%s)", settings.redis_url)
+        except Exception as exc:
+            if settings.debug:
+                logger.warning(
+                    "Redis unavailable; falling back to in-memory job store "
+                    "(debug mode — not suitable for multi-worker): %s", exc
+                )
+                _store = InMemoryJobStore()
+            else:
+                raise RuntimeError(
+                    f"Redis job store is unavailable in production mode: {exc}"
+                ) from exc
+        return _store  # type: ignore[return-value]
