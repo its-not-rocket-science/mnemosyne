@@ -10,12 +10,11 @@ Endpoints
   GET  /parse/jobs/{id}             Poll job status / result.
   GET  /parse/jobs/{id}/events      SSE stream of progress events.
 
-Multi-worker note
-─────────────────
-The job store is in-process.  In a multi-worker deployment clients must be
-directed to the same worker for the lifetime of the job (sticky sessions or a
-load balancer routing on the job-id cookie).  Replacing ``job_store`` with a
-Redis-backed implementation would remove this constraint.
+Multi-worker
+────────────
+The job store is Redis-backed when Redis is available, providing SSE fan-out
+and status access across all workers without sticky sessions.  In debug mode
+with no Redis, an in-process fallback is used instead (sticky sessions only).
 """
 
 import asyncio
@@ -29,7 +28,7 @@ from fastapi.responses import StreamingResponse
 from backend.api.dependencies import get_current_user, get_plugin_registry
 from backend.core.config import Settings, get_settings
 from backend.core.database import get_session_factory
-from backend.core.jobs import ParseJob, job_store
+from backend.core.jobs import ParseJob, get_job_store
 from backend.core.limiter import limiter
 from backend.parsing.canonical import canonical_object_id
 from backend.parsing.plugin_loader import PluginRegistry
@@ -89,7 +88,8 @@ async def create_parse_job(
         raise HTTPException(status_code=404, detail=str(exc)) from exc
 
     job_id = uuid.uuid4().hex
-    job = job_store.create(job_id, current_user)
+    store = await get_job_store()
+    await store.create(job_id, current_user)
 
     background_tasks.add_task(
         _run_parse_job,
@@ -116,7 +116,7 @@ async def get_parse_job(
     current_user: str = Depends(get_current_user),
 ) -> ParseJobStatus:
     """Return the current status (and result when done) for a parse job."""
-    job = _get_owned_job(job_id, current_user)
+    job = await _get_owned_job(job_id, current_user)
     return _job_to_schema(job)
 
 
@@ -139,7 +139,7 @@ async def parse_job_events(
     The stream ends automatically when status reaches ``done`` or ``failed``.
     Periodic ``ping`` events keep the connection alive through proxies.
     """
-    job = _get_owned_job(job_id, current_user)
+    job = await _get_owned_job(job_id, current_user)
     return StreamingResponse(
         _event_generator(job),
         media_type="text/event-stream",
@@ -155,16 +155,18 @@ async def parse_job_events(
 
 async def _event_generator(job: ParseJob):
     """Async generator that yields SSE-formatted bytes for *job* updates."""
-    q = job_store.subscribe(job)
+    store = await get_job_store()
+    q = await store.subscribe(job)
     try:
-        # Send the current snapshot immediately so the client gets state even
-        # if it subscribes after the job has already made progress.
-        snapshot = job.public_dict()
-        if job.status == "done" and job.result is not None:
-            snapshot["result"] = job.result
+        # Re-fetch so we don't miss events that fired between _get_owned_job()
+        # and subscribe().  For InMemoryJobStore this is a no-op (same object).
+        fresh = await store.get(job.id) or job
+        snapshot = fresh.public_dict()
+        if fresh.status == "done" and fresh.result is not None:
+            snapshot["result"] = fresh.result
         yield _sse(snapshot)
 
-        if job.status in ("done", "failed"):
+        if fresh.status in ("done", "failed"):
             return
 
         while True:
@@ -177,7 +179,7 @@ async def _event_generator(job: ParseJob):
                 # Send a keepalive comment so proxies don't close the connection.
                 yield b": ping\n\n"
     finally:
-        job_store.unsubscribe(job, q)
+        await store.unsubscribe(job, q)
 
 
 def _sse(data: dict) -> bytes:
@@ -202,11 +204,12 @@ async def _run_parse_job(
     """
     from backend.api.routes.parse import _persist_parse
 
-    job = job_store.get(job_id)
+    store = await get_job_store()
+    job = await store.get(job_id)
     if job is None:
         return
 
-    job_store.update(job, status="running", stage="nlp", progress=0.05)
+    await store.update(job, status="running", stage="nlp", progress=0.05)
 
     try:
         # ── NLP (CPU-bound — run in thread pool) ──────────────────────────────
@@ -216,7 +219,7 @@ async def _run_parse_job(
         )
 
         sentences_total = len(candidate_results)
-        job_store.update(
+        await store.update(
             job, stage="nlp", progress=0.40,
             sentences_total=sentences_total,
         )
@@ -247,7 +250,7 @@ async def _run_parse_job(
             # Emit incremental progress and yield to the event loop so SSE
             # events are flushed to the client between each sentence.
             pct = 0.40 + 0.40 * (i + 1) / sentences_total
-            job_store.update(
+            await store.update(
                 job, stage="nlp", progress=pct,
                 sentences_done=i + 1, sentences_total=sentences_total,
             )
@@ -257,7 +260,7 @@ async def _run_parse_job(
         for obj_id, (_, cand) in uuid_to_candidate.items():
             plugin.lesson_store[obj_id] = cand
 
-        job_store.update(job, stage="persist", progress=0.80)
+        await store.update(job, stage="persist", progress=0.80)
 
         # ── DB persistence ────────────────────────────────────────────────────
         async with session_factory() as db:
@@ -265,7 +268,7 @@ async def _run_parse_job(
                 db, payload, candidate_results, sentences, uuid_to_candidate, user_id
             )
 
-        job_store.update(
+        await store.update(
             job,
             stage="persist",
             progress=0.90,
@@ -296,7 +299,7 @@ async def _run_parse_job(
 
         # ── Done ──────────────────────────────────────────────────────────────
         response = ParseResponse(sentences=sentences)
-        job_store.finish(job, response.model_dump(mode="json"))
+        await store.finish(job, response.model_dump(mode="json"))
         logger.info(
             "parse_job done job_id=%s sentences=%d objects=%d",
             job_id, sentences_total, len(uuid_to_candidate),
@@ -304,14 +307,15 @@ async def _run_parse_job(
 
     except Exception as exc:
         logger.error("parse_job failed job_id=%s: %s", job_id, exc, exc_info=True)
-        job_store.fail(job, str(exc))
+        await store.fail(job, str(exc))
 
 
 # ── Utility ───────────────────────────────────────────────────────────────────
 
-def _get_owned_job(job_id: str, user_id: str) -> ParseJob:
+async def _get_owned_job(job_id: str, user_id: str) -> ParseJob:
     """Return the job or raise 404.  Prevents one user from seeing another's job."""
-    job = job_store.get(job_id)
+    store = await get_job_store()
+    job = await store.get(job_id)
     if job is None or job.user_id != user_id:
         raise HTTPException(status_code=404, detail="Job not found.")
     return job
