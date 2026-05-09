@@ -279,6 +279,7 @@ class KoineGreekPlugin:
             entry = _lookup(key)
             if entry is not None:
                 lesson_data: dict[str, Any] = {
+                    "lemma":         entry["citation"],
                     "citation_form": entry["citation"],
                     "gloss":         entry["gloss"],
                     "grammar_note":  entry.get("grammar_note", ""),
@@ -288,6 +289,7 @@ class KoineGreekPlugin:
                 confidence: float | None = 0.85
             else:
                 lesson_data = {
+                    "lemma":           key,
                     "confidence_note": _UNKNOWN_NOTE,
                     "romanized":       romanized,
                 }

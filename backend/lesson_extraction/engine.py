@@ -29,6 +29,7 @@ def enrich(language: str, candidate_results: list[CandidateSentenceResult], capa
             existing = adapter.enrich_existing(list(sent.candidates), sent.text)
             derived = adapter.derive_additional(existing, sent.text)
             candidates = _dedupe_merge([*existing, *derived])
+            candidates = _drop_vocab_consumed_by_phrases(candidates)
         except Exception:
             logger.warning("lesson extraction failed lang=%s sentence=%r", language, sent.text[:120], exc_info=True)
             candidates = list(sent.candidates)
@@ -71,3 +72,30 @@ def _dedupe_merge(candidates: Iterable[CandidateObject]) -> list[CandidateObject
         )
 
     return list(by_key.values())
+
+
+_PHRASE_CONSUMING: frozenset[str] = frozenset({"phrase_family", "idiom"})
+
+
+def _drop_vocab_consumed_by_phrases(candidates: list[CandidateObject]) -> list[CandidateObject]:
+    """Remove vocabulary candidates whose surface token is part of a phrase_family or idiom.
+
+    When the nuance extractor adds a phrase_family/idiom after the plugin already
+    emitted vocabulary for individual tokens, this prevents double-tagging the same
+    surface word as both a phrase component and a standalone vocabulary card.
+    """
+    consumed: set[str] = set()
+    for obj in candidates:
+        if obj.type in _PHRASE_CONSUMING and obj.surface_form:
+            for word in obj.surface_form.lower().split():
+                consumed.add(word)
+    if not consumed:
+        return candidates
+    return [
+        obj for obj in candidates
+        if not (
+            obj.type == "vocabulary"
+            and obj.surface_form
+            and obj.surface_form.lower() in consumed
+        )
+    ]

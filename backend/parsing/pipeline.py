@@ -23,6 +23,7 @@ from dataclasses import dataclass, field
 import backend.lesson_extraction.engine as lesson_engine
 from backend.core.cache import get_json, set_json
 from backend.parsing.canonical import canonical_object_id
+from backend.parsing.contract import CONTRACT_CHECK, validate_result as _validate_result
 from backend.schemas.parse import (
     CandidateObject,
     CandidateSentenceResult,
@@ -94,6 +95,16 @@ async def run_pipeline(
         language,
         len(candidate_results),
     )
+
+    # 2a. Contract validation (opt-in; set MNEMOSYNE_CONTRACT_CHECK=1).
+    if CONTRACT_CHECK:
+        for cr in candidate_results:
+            report = _validate_result(cr, plugin, input_sentence=cr.text)
+            if not report.ok:
+                logger.warning(
+                    "contract violations lang=%s sentence=%r\n%s",
+                    language, cr.text, report,
+                )
 
     # 3. Lesson enrichment — normalise, augment, and deduplicate candidates.
     candidate_results = lesson_engine.enrich(language, candidate_results, plugin.capabilities)

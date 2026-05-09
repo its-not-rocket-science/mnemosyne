@@ -207,8 +207,9 @@ class MandarinChinesePlugin:
             seen_canonical.add(canonical)
 
             lesson_data: dict = {
-                "word": canonical,
-                "pos":  "WORD",
+                "lemma": canonical,
+                "word":  canonical,
+                "pos":   "WORD",
             }
             if pinyin := _pinyin_for(canonical):
                 lesson_data["pinyin"] = pinyin
