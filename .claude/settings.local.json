@@ -58,7 +58,11 @@
       "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python -m pytest tests/ -x -q --tb=short 2>&1 | Select-Object -Last 40)",
       "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python -m pytest backend/tests/test_nuance_extractors.py backend/tests/test_etymology.py backend/tests/test_stub_fr.py backend/tests/test_nuance_gold.py -x -q --tb=short 2>&1 | Select-Object -Last 40)",
       "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python -m pytest backend/tests/test_nuance_gold.py -k \"fr_\" -x -q --tb=short 2>&1 | Select-Object -Last 40)",
-      "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python -m pytest backend/tests/test_nuance_extractors.py backend/tests/test_etymology.py backend/tests/test_stub_fr.py backend/tests/test_nuance_gold.py backend/tests/test_plugin_contract.py -q --tb=short 2>&1 | Select-Object -Last 15)"
+      "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python -m pytest backend/tests/test_nuance_extractors.py backend/tests/test_etymology.py backend/tests/test_stub_fr.py backend/tests/test_nuance_gold.py backend/tests/test_plugin_contract.py -q --tb=short 2>&1 | Select-Object -Last 15)",
+      "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python -m pytest backend/tests/test_nuance_gold.py -k \"fr_\" -q --tb=short 2>&1 | Select-Object -Last 15)",
+      "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python -m pytest backend/tests/test_nuance_gold.py -k \"it_ or pt_\" -x -q --tb=short 2>&1 | Select-Object -Last 30)",
+      "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python -m pytest backend/tests/test_nuance_gold.py backend/tests/test_nuance_extractors.py backend/tests/test_plugin_contract.py -q --tb=short 2>&1 | Select-Object -Last 10)",
+      "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python -m pytest backend/tests/test_nuance_extractors.py -q --tb=short 2>&1 | Select-Object -Last 10)"
     ]
   }
 }
