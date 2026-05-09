@@ -50,7 +50,9 @@
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\" -Recurse -Directory)",
       "Bash(Select-Object FullName)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\\\\backend\\\\plugins\" -File)",
-      "Bash(Select-Object Name)"
+      "Bash(Select-Object Name)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\" -Directory)",
+      "Bash(Select-Object -ExpandProperty Name)"
     ]
   }
 }
