@@ -1,7 +1,4 @@
-"""Russian nuance extractor — motion verbs (uni/multidirectional), verbal government.
-
-Complements the plugin's aspect-pair nuance (already extracted in RussianPlugin).
-"""
+"""Russian nuance extractor — motion verbs, verbal government, etymology, phrase families."""
 from __future__ import annotations
 
 from typing import Any
@@ -69,6 +66,8 @@ class RussianNuanceExtractor:
         seen: set[str] = set()
         out.extend(self._motion_verbs(candidates, seen))
         out.extend(self._verbal_government(candidates, seen))
+        out.extend(self._etymology(candidates, seen))
+        out.extend(self._phrase_families(tokens))
         return out
 
     def _motion_verbs(
@@ -171,3 +170,47 @@ class RussianNuanceExtractor:
                 )],
             ))
         return out
+
+    def _etymology(
+        self, candidates: list[CandidateObject], seen: set[str]
+    ) -> list[CandidateObject]:
+        from backend.dictionary.etymology import DEFAULT_STORE
+        out = []
+        for c in candidates:
+            if c.type != "vocabulary":
+                continue
+            lemma = c.lesson_data.get("lemma") or c.canonical_form
+            entry = DEFAULT_STORE.get(self.language, lemma)
+            if not entry:
+                continue
+            cf = f"nuance:{self.language}:etymology:{lemma.lower()}"
+            if cf in seen:
+                continue
+            seen.add(cf)
+            out.append(CandidateObject(
+                canonical_form=cf,
+                surface_form=c.surface_form,
+                type="nuance",
+                label=c.label,
+                lesson_data={
+                    "nuance_type": "etymology",
+                    "explanation": entry.origin_summary,
+                    "register": "neutral",
+                    "learner_level": "B1",
+                    "source": entry.source_type,
+                    "etymology": entry.to_lesson_data(),
+                },
+                confidence=0.85,
+                relation_hints=[RelationHint(
+                    relation_type="nuance_of",
+                    target_canonical_form=lemma,
+                    target_type="vocabulary",
+                )],
+            ))
+        return out
+
+    def _phrase_families(self, tokens: list[Any]) -> list[CandidateObject]:
+        from backend.dictionary.phrase_families import match_phrase_families
+        def _text(tok: Any) -> str:
+            return tok.text if hasattr(tok, "text") else str(tok)
+        return match_phrase_families([_text(t) for t in tokens], self.language)

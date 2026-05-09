@@ -26,9 +26,9 @@ table from live plugin declarations.
 | es (Spanish) | partial | **partial** | **partial** | partial | stub | partial | none | none | **26** |
 | fr (French) | partial | **partial** | **partial** | partial | **partial** | partial | none | none | **15** |
 | de (German) | partial | **partial** | **partial** | partial | stub | partial | none | none | **24** |
-| it (Italian) | partial | stub | none | partial | stub | partial | none | none | 8 |
-| pt (Portuguese) | partial | stub | none | partial | stub | partial | none | none | 8 |
-| ru (Russian) | partial | stub | none | partial | stub | partial | none | none | 8 |
+| it (Italian) | partial | stub | **stub** | partial | **partial** | partial | none | none | **10** |
+| pt (Portuguese) | partial | stub | **stub** | partial | **partial** | partial | none | none | **11** |
+| ru (Russian) | partial | stub | **stub** | partial | stub | partial | none | none | **8** |
 | ar (Arabic) | none | none | none | none | none | stub | none | none | 6 |
 | he (Hebrew) | none | none | none | none | none | stub | none | none | 6 |
 | zh (Chinese) | none | none | none | none | none | partial | partial | none | 8 |
@@ -76,7 +76,9 @@ candidates independently.  No extractor is registered for `en`, `it`, or `pt`.
 | es | ser/estar distinction · por/para contrast · subjunctive mood triggers · diminutive suffixes (-ito/-ita) · **etymology (16 lemmas)** · **phrase families (15 families)** |
 | fr | tu/vous register · *ne* explétif · subjunctive mood · liaison triggers · **etymology (52 lemmas)** · **phrase families (20 families)** |
 | de | modal particles (doch, mal, ja, eigentlich, wohl, …) · separable-verb prefixes · Wechselpräpositionen · **etymology (20 lemmas)** · **phrase families (15 families)** |
-| ru | motion-verb direction (идти vs ходить) · verbal government (любить + acc, etc.) |
+| it | Lei/tu register · essere/avere auxiliary · subjunctive triggers · diminutives (-ino/-etta/-ello) · **etymology (19 lemmas)** |
+| pt | você/tu register · ser/estar distinction · subjunctive triggers · diminutives (-inho/-zinho) · personal infinitive · **etymology (18 lemmas)** |
+| ru | motion-verb direction (идти vs ходить) · verbal government (любить + acc, etc.) · **etymology (17 lemmas)** |
 | zh | aspect particles (了 le · 过 guò · 着 zhe) · measure words (量词) · chengyu (4-char idioms) |
 | ja | keigo types (sonkeigo · kenjogo · teineigo) · case particles (は · が · を · に · で · から · まで …) · yojijukugo (4-char set phrases) |
 | ar | definite article ال · negation markers (لا · لم · لن · ما · ليس) · root-pattern annotation (when candidate carries root metadata) |
@@ -104,7 +106,7 @@ classifiers or embedding-based detectors in the current codebase.
 ## Known limitations
 
 ### Universal
-- No etymology data beyond Spanish, French, and German: all other plugins declare `etymology="none"`.
+- No etymology data beyond Spanish, French, German, Italian, Portuguese, and Russian.
 - No literary/cultural references: `literary_references`, `cultural_references`,
   `proverb_tradition`, and `classical_or_scriptural_allusion` are all `none`.
 - Phrase families `stub` for Italian, Portuguese, Russian; `partial` for Spanish, French, and German.
