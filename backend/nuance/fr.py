@@ -1,4 +1,4 @@
-"""French nuance extractor — tu/vous register, ne explétif, subjunctive, liaison."""
+"""French nuance extractor — tu/vous register, ne explétif, subjunctive, liaison, etymology."""
 from __future__ import annotations
 
 from typing import Any
@@ -40,7 +40,46 @@ class FrenchNuanceExtractor:
         out.extend(self._ne_expletif(tokens, seen))
         out.extend(self._subjunctive(candidates, seen))
         out.extend(self._liaison(tokens, seen))
+        out.extend(self._etymology(candidates, seen))
         out.extend(self._phrase_families(tokens))
+        return out
+
+    def _etymology(
+        self, candidates: list[CandidateObject], seen: set[str]
+    ) -> list[CandidateObject]:
+        from backend.dictionary.etymology import DEFAULT_STORE
+        out = []
+        for c in candidates:
+            if c.type != "vocabulary":
+                continue
+            lemma = c.lesson_data.get("lemma") or c.canonical_form
+            entry = DEFAULT_STORE.get(self.language, lemma)
+            if not entry:
+                continue
+            cf = f"nuance:{self.language}:etymology:{lemma.lower()}"
+            if cf in seen:
+                continue
+            seen.add(cf)
+            out.append(CandidateObject(
+                canonical_form=cf,
+                surface_form=c.surface_form,
+                type="nuance",
+                label=c.label,
+                lesson_data={
+                    "nuance_type": "etymology",
+                    "explanation": entry.origin_summary,
+                    "register": "neutral",
+                    "learner_level": "B1",
+                    "source": entry.source_type,
+                    "etymology": entry.to_lesson_data(),
+                },
+                confidence=0.85,
+                relation_hints=[RelationHint(
+                    relation_type="nuance_of",
+                    target_canonical_form=lemma,
+                    target_type="vocabulary",
+                )],
+            ))
         return out
 
     def _phrase_families(self, tokens: list[Any]) -> list[CandidateObject]:
