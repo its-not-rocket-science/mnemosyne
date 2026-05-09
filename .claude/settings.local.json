@@ -52,7 +52,13 @@
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\\\\backend\\\\plugins\" -File)",
       "Bash(Select-Object Name)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\" -Directory)",
-      "Bash(Select-Object -ExpandProperty Name)"
+      "Bash(Select-Object -ExpandProperty Name)",
+      "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python -c \"from backend.dictionary.etymology import DEFAULT_STORE; print\\(list\\(DEFAULT_STORE._data.keys\\(\\)\\)\\)\")",
+      "PowerShell(tail *)",
+      "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python -m pytest tests/ -x -q --tb=short 2>&1 | Select-Object -Last 40)",
+      "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python -m pytest backend/tests/test_nuance_extractors.py backend/tests/test_etymology.py backend/tests/test_stub_fr.py backend/tests/test_nuance_gold.py -x -q --tb=short 2>&1 | Select-Object -Last 40)",
+      "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python -m pytest backend/tests/test_nuance_gold.py -k \"fr_\" -x -q --tb=short 2>&1 | Select-Object -Last 40)",
+      "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python -m pytest backend/tests/test_nuance_extractors.py backend/tests/test_etymology.py backend/tests/test_stub_fr.py backend/tests/test_nuance_gold.py backend/tests/test_plugin_contract.py -q --tb=short 2>&1 | Select-Object -Last 15)"
     ]
   }
 }
