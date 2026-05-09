@@ -22,11 +22,9 @@ def disable_redis_cache(monkeypatch):
     async def _noop_set(key: str, value, ttl_seconds: int = 3600) -> None:  # noqa: ANN001
         pass
 
-    # Patch in each consuming module's namespace (they import the name directly).
-    monkeypatch.setattr("backend.api.routes.parse.get_json", _no_cache)
-    monkeypatch.setattr("backend.api.routes.parse.set_json", _noop_set)
-    monkeypatch.setattr("backend.api.routes.ingest.get_json", _no_cache)
-    monkeypatch.setattr("backend.api.routes.ingest.set_json", _noop_set)
+    # Both routes delegate to pipeline.py, which imports these names directly.
+    monkeypatch.setattr("backend.parsing.pipeline.get_json", _no_cache)
+    monkeypatch.setattr("backend.parsing.pipeline.set_json", _noop_set)
 
 
 @pytest.fixture(autouse=True)

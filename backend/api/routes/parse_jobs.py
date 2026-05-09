@@ -28,6 +28,7 @@ from fastapi.responses import StreamingResponse
 from backend.api.dependencies import get_current_user, get_plugin_registry
 from backend.core.config import Settings, get_settings
 from backend.core.database import get_session_factory
+import backend.lesson_extraction.engine as lesson_engine
 from backend.core.jobs import ParseJob, get_job_store
 from backend.core.limiter import limiter
 from backend.parsing.canonical import canonical_object_id
@@ -216,6 +217,11 @@ async def _run_parse_job(
         loop = asyncio.get_event_loop()
         candidate_results: list[CandidateSentenceResult] = await loop.run_in_executor(
             None, plugin.analyze_text, payload.text
+        )
+
+        # Lesson enrichment — same pass as /parse and /ingest.
+        candidate_results = lesson_engine.enrich(
+            payload.language, candidate_results, plugin.capabilities
         )
 
         sentences_total = len(candidate_results)

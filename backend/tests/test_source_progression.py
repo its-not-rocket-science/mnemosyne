@@ -424,8 +424,8 @@ async def test_ingest_creates_progression_row(async_client, db_session) -> None:
     ]
 
     with (
-        patch("backend.api.routes.ingest.get_json", new_callable=AsyncMock, return_value=None),
-        patch("backend.api.routes.ingest.set_json", new_callable=AsyncMock),
+        patch("backend.parsing.pipeline.get_json", new_callable=AsyncMock, return_value=None),
+        patch("backend.parsing.pipeline.set_json", new_callable=AsyncMock),
     ):
         # Patch the plugin registry to return a fake plugin.
         from backend.parsing.plugin_loader import PluginRegistry

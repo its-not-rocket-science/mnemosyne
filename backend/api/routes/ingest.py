@@ -10,8 +10,6 @@ repeated-exposure tracking, recommendation, and reading-progression features.
 ``POST /parse`` remains unchanged for backward compatibility.  New clients
 should prefer ``/ingest``.
 """
-import asyncio
-import hashlib
 import logging
 import time
 import uuid
@@ -22,7 +20,6 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session, get_plugin_registry
-from backend.core.cache import get_json, set_json
 from backend.core.config import Settings, get_settings
 from backend.core.limiter import limiter
 from backend.ingestion.validator import detect_dominant_script, validate_ingest_text
@@ -38,17 +35,15 @@ from backend.models import (
     UserKnowledgeRow,
 )
 from backend.parsing.canonical import canonical_object_id
+from backend.parsing.pipeline import PipelineResult, pipeline_cache_key, run_pipeline
 from backend.parsing.plugin_loader import PluginRegistry
 from backend.schemas.ingest import IngestRequest, IngestResponse
 from backend.schemas.parse import (
     CandidateObject,
     CandidateSentenceResult,
-    LearnableObject,
     SentenceResult,
 )
 from backend.srs.knowledge import DEFAULT_USER_ID
-
-import backend.lesson_extraction.engine as lesson_engine
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["ingest"])
@@ -91,60 +86,20 @@ async def ingest_text(
 
     t0 = time.perf_counter()
 
-    # ── 3. Cache check — keyed on normalized text so re-submits are fast ─────
-    cache_key = _cache_key(normalized_text, payload.language)
-    cached_sentences: list[SentenceResult] | None = None
-    try:
-        cached = await get_json(cache_key)
-        if cached is not None:
-            from backend.schemas.parse import ParseResponse
-            parsed_cached = ParseResponse.model_validate(cached)
-            cached_sentences = parsed_cached.sentences
-            logger.debug(
-                "ingest cache=HIT lang=%s chars=%d elapsed_ms=%.1f",
-                payload.language, len(normalized_text),
-                (time.perf_counter() - t0) * 1000,
-            )
-    except Exception:
-        pass  # Redis unavailable — continue without cache
+    # ── 3. Shared pipeline: cache → NLP → enrich → resolve → lesson_store ────
+    result: PipelineResult = await run_pipeline(
+        text=normalized_text,
+        language=payload.language,
+        plugin=plugin,
+        cache_key=pipeline_cache_key(normalized_text, payload.language),
+    )
 
-    # ── 4. NLP analysis (skip when cache hit) ────────────────────────────────
-    uuid_to_candidate: dict[str, tuple[str, CandidateObject]] = {}
-    candidate_results: list[CandidateSentenceResult] = []
+    sentences = result.sentences
+    candidate_results = result.candidate_results
+    uuid_to_candidate = result.uuid_to_candidate
 
-    if cached_sentences is None:
-        t_nlp = time.perf_counter()
-        candidate_results = plugin.analyze_text(normalized_text)
-        logger.debug(
-            "ingest nlp_ms=%.1f sentences=%d",
-            (time.perf_counter() - t_nlp) * 1000, len(candidate_results),
-        )
-        candidate_results = lesson_engine.enrich(
-            payload.language,
-            candidate_results,
-            plugin.capabilities,
-        )
-
-        sentences: list[SentenceResult] = []
-        for cand_result in candidate_results:
-            resolved: list[LearnableObject] = []
-            for cand in cand_result.candidates:
-                obj_id = canonical_object_id(payload.language, cand.type, cand.canonical_form)
-                lo = LearnableObject(
-                    id=obj_id,
-                    language=payload.language,
-                    type=cand.type,
-                    label=cand.label,
-                    lesson_data=cand.lesson_data,
-                    confidence=cand.confidence,
-                )
-                resolved.append(lo)
-                uuid_to_candidate[obj_id] = (cand.canonical_form, cand)
-            sentences.append(SentenceResult(text=cand_result.text, learnable_objects=resolved))
-    else:
-        sentences = cached_sentences
-        # Cache hit: NLP was skipped so lesson_store may be empty (e.g. after server restart).
-        # Re-populate from DB for any IDs not already present in the store.
+    # ── 4. Cache-hit: lesson_store may be empty after a server restart ────────
+    if result.cache_hit:
         cache_hit_ids = [lo.id for s in sentences for lo in s.learnable_objects]
         missing_ids = [oid for oid in cache_hit_ids if oid not in plugin.lesson_store]
         if missing_ids:
@@ -163,11 +118,7 @@ async def ingest_text(
             except Exception:
                 logger.debug("lesson_store repopulation from DB failed on cache hit")
 
-    # ── 5. Populate plugin lesson_store for DB-unavailable fallback ───────────
-    for obj_id, (_, cand) in uuid_to_candidate.items():
-        plugin.lesson_store[obj_id] = cand
-
-    # ── 6. Persist: source document + parse records ───────────────────────────
+    # ── 5. Persist: source document + parse records ───────────────────────────
     source_document_id = str(uuid.uuid4())
     persist_exc: Exception | None = None
     try:
@@ -184,16 +135,6 @@ async def ingest_text(
         )
     except Exception as exc:
         persist_exc = exc
-
-    # ── 7. Cache write (background, non-fatal) ────────────────────────────────
-    if cached_sentences is None:
-        from backend.schemas.parse import ParseResponse
-        response_json = ParseResponse(sentences=sentences).model_dump(mode="json")
-        cache_task = asyncio.ensure_future(set_json(cache_key, response_json))
-        try:
-            await cache_task
-        except Exception:
-            pass
 
     if persist_exc is not None:
         logger.warning("DB persistence failed for /ingest", exc_info=persist_exc)
@@ -384,7 +325,6 @@ async def _persist_ingest(
     ))
 
     # 9. SourceProgressionRow — reading continuity tracking.
-    # One row per (user, document); next_position starts at 0 (unread).
     await db.flush()
     db.add(SourceProgressionRow(
         user_id=user_id,
@@ -396,9 +336,3 @@ async def _persist_ingest(
     ))
 
     await db.commit()
-
-
-def _cache_key(text: str, language: str) -> str:
-    digest = hashlib.sha256(f"{language}:{text}".encode("utf-8")).hexdigest()
-    _V = "2"
-    return f"parse:v{_V}:{digest}"
