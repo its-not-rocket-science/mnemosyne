@@ -802,6 +802,285 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
         ),
         tags=("honesty", "sincerity", "gesture-idiom"),
     ),
+
+    # \u2500\u2500 Spanish catalog \u2014 extended \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+
+    "es_valer_la_pena": PhraseFamily(
+        id="es_valer_la_pena",
+        language="es",
+        canonical_form="valer la pena",
+        meaning="To be worth it; to be worthwhile.",
+        register="neutral",
+        origin=(
+            "Pena originally meant \u2018toil, suffering, effort.\u2019 "
+            "\u2018Valer la pena\u2019 asks whether something is worth the suffering or effort. "
+            "A pan-Hispanic idiom of very high frequency."
+        ),
+        why_it_matters=(
+            "One of the most frequent collocations in Spanish. "
+            "The idiom is stable: pena does not shift to other body-cost nouns. "
+            "The infinitive valer la pena serves as a gerund, infinitive, and nominal freely."
+        ),
+        variants=(
+            PhraseVariant("valer la pena", MatchType.exact),
+            PhraseVariant("vale la pena", MatchType.inflectional_variant,
+                          note="3rd-person singular present: \u2018it is worth it.\u2019"),
+            PhraseVariant("vali\u00f3 la pena", MatchType.inflectional_variant,
+                          note="3rd-person singular preterite: \u2018it was worth it.\u2019"),
+            PhraseVariant("valdr\u00e1 la pena", MatchType.inflectional_variant,
+                          note="Future: \u2018it will be worth it.\u2019"),
+            PhraseVariant("merecer la pena", MatchType.confusable_not_same,
+                          note="Synonym in Peninsular Spanish; less common in Latin America."),
+        ),
+        tags=("value", "effort", "neutral"),
+    ),
+
+    "es_quedarse_en_blanco": PhraseFamily(
+        id="es_quedarse_en_blanco",
+        language="es",
+        canonical_form="quedarse en blanco",
+        meaning="To go blank; to draw a blank; to suddenly forget something entirely.",
+        register="neutral",
+        origin=(
+            "Blanco (blank, white) as the metaphor for an empty mind: "
+            "the white page equals total absence of thought or memory."
+        ),
+        variants=(
+            PhraseVariant("quedarse en blanco", MatchType.exact),
+            PhraseVariant("qued\u00e9 en blanco", MatchType.inflectional_variant,
+                          note="1st-person preterite: \u2018I went blank.\u2019"),
+            PhraseVariant("qued\u00f3 en blanco", MatchType.inflectional_variant,
+                          note="3rd-person preterite: \u2018she/he went blank.\u2019"),
+            PhraseVariant("me qued\u00e9 en blanco", MatchType.inflectional_variant,
+                          note="With explicit reflexive pronoun, 1st person."),
+        ),
+        tags=("memory", "confusion", "neutral"),
+    ),
+
+    "es_andarse_por_las_ramas": PhraseFamily(
+        id="es_andarse_por_las_ramas",
+        language="es",
+        canonical_form="andarse por las ramas",
+        meaning="To beat around the bush; to avoid getting to the point.",
+        register="neutral",
+        origin=(
+            "The image of wandering among the branches (ramas) of a tree "
+            "rather than going straight to the trunk. "
+            "Parallel to English \u2018beat around the bush.\u2019"
+        ),
+        variants=(
+            PhraseVariant("andarse por las ramas", MatchType.exact),
+            PhraseVariant("andarte por las ramas", MatchType.inflectional_variant,
+                          note="2nd-person reflexive (t\u00fa)."),
+            PhraseVariant("ir por las ramas", MatchType.orthographic_variant,
+                          note="\u2018Ir\u2019 replaces \u2018andarse\u2019; slightly more neutral."),
+        ),
+        tags=("indirectness", "avoidance"),
+    ),
+
+    "es_tener_mano_izquierda": PhraseFamily(
+        id="es_tener_mano_izquierda",
+        language="es",
+        canonical_form="tener mano izquierda",
+        meaning="To be tactful; to handle delicate situations with skill and diplomacy.",
+        register="neutral",
+        origin=(
+            "In fencing and horsemanship the left hand (mano izquierda) guided with subtle "
+            "finesse while the right acted overtly. Figurative: skill at handling people or "
+            "difficult situations delicately."
+        ),
+        why_it_matters=(
+            "Distinct from \u2018tener mano dura\u2019 (to rule with an iron fist) or "
+            "\u2018tener buena mano\u2019 (to be skilled with one\u2019s hands). "
+            "The left-hand quality specifically connotes indirect, diplomatic skill."
+        ),
+        variants=(
+            PhraseVariant("tener mano izquierda", MatchType.exact),
+            PhraseVariant("tiene mano izquierda", MatchType.inflectional_variant,
+                          note="3rd-person singular present."),
+            PhraseVariant("tener mano dura", MatchType.confusable_not_same,
+                          note="\u2018Mano dura\u2019 (iron fist) means strict or harsh authority, not tact."),
+        ),
+        tags=("diplomacy", "tact", "body-metaphor"),
+    ),
+
+    "es_entre_la_espada_y_la_pared": PhraseFamily(
+        id="es_entre_la_espada_y_la_pared",
+        language="es",
+        canonical_form="entre la espada y la pared",
+        meaning="Between a rock and a hard place; caught between two equally bad options.",
+        register="neutral",
+        origin=(
+            "A vivid martial image: standing with a sword at your front and a wall at your back, "
+            "with no way out. First widely attested in Quevedo (17th c.). "
+            "The English equivalent \u2018between a rock and a hard place\u2019 emerged later."
+        ),
+        source_text="Attested in Spanish from the 17th century; cf. Quevedo",
+        variants=(
+            PhraseVariant("entre la espada y la pared", MatchType.exact),
+            PhraseVariant("entre la espada y el muro", MatchType.orthographic_variant,
+                          note="\u2018Muro\u2019 (wall) for \u2018pared\u2019; less common but attested."),
+        ),
+        tags=("dilemma", "difficulty", "military-metaphor"),
+    ),
+
+    "es_poner_al_dia": PhraseFamily(
+        id="es_poner_al_dia",
+        language="es",
+        canonical_form="ponerse al d\u00eda",
+        meaning="To get up to speed; to catch up on information or tasks.",
+        register="neutral",
+        origin=(
+            "\u2018Al d\u00eda\u2019 (up to the day) means current. "
+            "\u2018Ponerse al d\u00eda\u2019 means putting oneself back in sync with the present. "
+            "Common in professional and academic contexts."
+        ),
+        variants=(
+            PhraseVariant("ponerse al d\u00eda", MatchType.exact),
+            PhraseVariant("poner al d\u00eda", MatchType.inflectional_variant,
+                          note="Transitive form: \u2018to bring someone up to speed.\u2019"),
+            PhraseVariant("ponerse al corriente", MatchType.confusable_not_same,
+                          note="Synonym; \u2018al corriente\u2019 also collocates with bills and accounts."),
+        ),
+        tags=("information", "currency", "everyday"),
+    ),
+
+    # \u2500\u2500 German catalog \u2014 extended \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+
+    "de_mit_dem_feuer_spielen": PhraseFamily(
+        id="de_mit_dem_feuer_spielen",
+        language="de",
+        canonical_form="mit dem Feuer spielen",
+        meaning="To play with fire; to take dangerous risks carelessly.",
+        register="neutral",
+        origin=(
+            "A direct parallel to the English idiom, attested in German from the 19th century. "
+            "The image of children playing with matches as a symbol of reckless provocation of danger."
+        ),
+        variants=(
+            PhraseVariant("mit dem Feuer spielen", MatchType.exact),
+            PhraseVariant("mit dem Feuer spielt", MatchType.inflectional_variant,
+                          note="3rd-person singular present."),
+            PhraseVariant("mit dem Feuer gespielt", MatchType.inflectional_variant,
+                          note="Past participle."),
+        ),
+        tags=("danger", "recklessness", "universal-idiom"),
+    ),
+
+    "de_eulen_nach_athen": PhraseFamily(
+        id="de_eulen_nach_athen",
+        language="de",
+        canonical_form="Eulen nach Athen tragen",
+        meaning="To carry coals to Newcastle; to do something completely redundant.",
+        register="neutral",
+        origin=(
+            "Owls (Eulen) were sacred to Athena and the symbol of Athens; "
+            "sending owls there would be pointless. "
+            "The expression originates with Aristophanes and entered German via Erasmus\u2019s Adages (1500)."
+        ),
+        source_text="Aristophanes, Birds (414\u202fBCE); Erasmus, Adages (1500); in German from the 16th century",
+        why_it_matters=(
+            "German\u2019s equivalent of English \u2018carry coals to Newcastle\u2019 and "
+            "Spanish \u2018echar agua al mar\u2019. All three cultures use superfluous transportation "
+            "as their rhetorical image, but from different local resources (coal, water, owls)."
+        ),
+        variants=(
+            PhraseVariant("Eulen nach Athen tragen", MatchType.exact),
+            PhraseVariant("Eulen nach Athen", MatchType.inflectional_variant,
+                          note="Short form \u2014 tragen omitted or conjugated separately."),
+        ),
+        tags=("redundancy", "proverb", "classical-allusion"),
+    ),
+
+    "de_auf_gutem_fuss": PhraseFamily(
+        id="de_auf_gutem_fuss",
+        language="de",
+        canonical_form="auf gutem Fu\u00df stehen",
+        meaning="To be on good terms with someone; to have a positive relationship.",
+        register="neutral",
+        origin=(
+            "Fu\u00df (foot) as the foundation of a relationship. "
+            "Standing on a \u2018good foot\u2019 with someone means the ground between you is stable. "
+            "Attested from the 17th century."
+        ),
+        variants=(
+            PhraseVariant("auf gutem Fu\u00df stehen", MatchType.exact),
+            PhraseVariant("auf gutem Fu\u00df", MatchType.inflectional_variant,
+                          note="Short form \u2014 stehen conjugated separately."),
+            PhraseVariant("auf gutem Fuss stehen", MatchType.orthographic_variant,
+                          note="Swiss/Austrian spelling without \u00df."),
+            PhraseVariant("auf schlechtem Fu\u00df stehen", MatchType.confusable_not_same,
+                          note="\u2018Schlechter Fu\u00df\u2019 = on bad terms \u2014 inverse meaning."),
+        ),
+        tags=("relationship", "diplomacy", "body-metaphor"),
+    ),
+
+    "de_mit_allen_wassern_gewaschen": PhraseFamily(
+        id="de_mit_allen_wassern_gewaschen",
+        language="de",
+        canonical_form="mit allen Wassern gewaschen",
+        meaning="Streetwise; experienced in all tricks; cunning and not easily fooled.",
+        register="neutral",
+        origin=(
+            "A sailor who had sailed all the world\u2019s waters was assumed to have encountered "
+            "every trick and hazard. Washed in all waters = hardened by all experiences. "
+            "Sailors\u2019 idiom, attested from the 18th century."
+        ),
+        source_text="Sailors\u2019 idiom; attested in German from the 18th century",
+        variants=(
+            PhraseVariant("mit allen Wassern gewaschen", MatchType.exact),
+            PhraseVariant("mit allen Wassern gewaschen sein", MatchType.inflectional_variant,
+                          note="With copula: \u2018to be streetwise.\u2019"),
+        ),
+        tags=("cunning", "experience", "sailors-idiom"),
+    ),
+
+    "de_den_mund_aufmachen": PhraseFamily(
+        id="de_den_mund_aufmachen",
+        language="de",
+        canonical_form="den Mund aufmachen",
+        meaning="To speak up; to open one\u2019s mouth; to say something.",
+        register="neutral",
+        origin=(
+            "Aufmachen (to open) applied to Mund (mouth) \u2014 a direct bodily image for breaking silence. "
+            "Contrasted with \u2018den Mund halten\u2019 (to keep quiet)."
+        ),
+        variants=(
+            PhraseVariant("den Mund aufmachen", MatchType.exact),
+            PhraseVariant("den Mund aufgemacht", MatchType.inflectional_variant,
+                          note="Past participle."),
+            PhraseVariant("den Mund halten", MatchType.confusable_not_same,
+                          note="\u2018Den Mund halten\u2019 = to keep quiet \u2014 the direct opposite."),
+        ),
+        tags=("speech", "courage", "silence"),
+    ),
+
+    "de_im_dunkeln_tappen": PhraseFamily(
+        id="de_im_dunkeln_tappen",
+        language="de",
+        canonical_form="im Dunkeln tappen",
+        meaning="To be in the dark; to proceed without information; to grope for answers.",
+        register="neutral",
+        origin=(
+            "Tappen originally meant to walk carefully while groping in the dark. "
+            "\u2018Im Dunkeln tappen\u2019 describes acting without sufficient knowledge \u2014 fumbling blindly."
+        ),
+        why_it_matters=(
+            "Distinct from \u2018im Dunkeln lassen\u2019 (to leave someone in the dark, i.e. to withhold "
+            "information from them). \u2018Im Dunkeln tappen\u2019 = one\u2019s own ignorance; "
+            "\u2018im Dunkeln lassen\u2019 = someone else\u2019s deliberate withholding."
+        ),
+        variants=(
+            PhraseVariant("im Dunkeln tappen", MatchType.exact),
+            PhraseVariant("tappen im Dunkeln", MatchType.inflectional_variant,
+                          note="V2 word order \u2014 verb in second position."),
+            PhraseVariant("tappt im Dunkeln", MatchType.inflectional_variant,
+                          note="3rd-person singular, V2."),
+            PhraseVariant("im Dunkeln lassen", MatchType.confusable_not_same,
+                          note="\u2018Im Dunkeln lassen\u2019 = to leave someone in the dark (withhold information)."),
+        ),
+        tags=("ignorance", "uncertainty", "darkness-metaphor"),
+    ),
 }
 
 

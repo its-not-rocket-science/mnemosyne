@@ -324,6 +324,110 @@
         "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
       },
       "no_raw_uuids": true
+    },
+    {
+      "id": "de_phrase_family_mit_dem_feuer_spielen",
+      "category": "phrase_family",
+      "text": "Wer mit dem Feuer spielt, verbrennt sich die Finger.",
+      "note": "Phrase family: 'mit dem Feuer spielt' (plays with fire) — inflectional variant",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "de_mit_dem_feuer_spielen",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_phrase_family_eulen_nach_athen",
+      "category": "phrase_family",
+      "text": "Das wäre wie Eulen nach Athen tragen.",
+      "note": "Phrase family: 'Eulen nach Athen tragen' (carry coals to Newcastle) — exact canonical match",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "de_eulen_nach_athen",
+      "confidence_ge": 0.9,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_phrase_family_auf_gutem_fuss",
+      "category": "phrase_family",
+      "text": "Er will auf gutem Fuß stehen mit allen Kollegen.",
+      "note": "Phrase family: 'auf gutem Fuß stehen' (be on good terms) — exact canonical match",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "de_auf_gutem_fuss",
+      "confidence_ge": 0.9,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_phrase_family_im_dunkeln_tappen",
+      "category": "phrase_family",
+      "text": "Die Ermittler tappen im Dunkeln ohne neue Beweise.",
+      "note": "Phrase family: 'tappen im Dunkeln' (be in the dark) — V2 word-order inflectional variant",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "de_im_dunkeln_tappen",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_extractor_etymology_fernweh",
+      "category": "etymology",
+      "text": "Sein Fernweh ließ ihm keine Ruhe.",
+      "note": "Extractor etymology: 'Fernweh' (far-ache — longing to travel) — opposite of Heimweh; sentence avoids Wechselpräpositionen",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:fernweh",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "etymology", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "de_extractor_etymology_buch",
+      "category": "etymology",
+      "text": "Das Buch liegt aufgeschlagen auf dem Tisch.",
+      "note": "Extractor etymology: 'Buch' from Proto-Germanic *bōkō (beech tree) — same root as English 'book' and 'beech'",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:buch",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": null,
+      "no_raw_uuids": true
     }
   ]
 }
