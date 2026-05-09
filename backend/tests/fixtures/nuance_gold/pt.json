@@ -2,13 +2,13 @@
   "language": "pt",
   "plugin_module": "backend.plugins.portuguese",
   "plugin_class": "PortuguesePlugin",
-  "nuance_extractor_module": null,
-  "nuance_extractor_class": null,
+  "nuance_extractor_module": "backend.nuance.pt",
+  "nuance_extractor_class": "PortugueseNuanceExtractor",
   "tokenizer": "spacy",
   "capability_assertions": {
     "idioms": ["partial", "strong", "gold"],
     "grammar_nuance": ["partial", "strong", "gold"],
-    "formality_register": ["stub", "partial"]
+    "formality_register": ["partial", "strong", "gold"]
   },
   "capability_gaps": {},
   "cases": [
@@ -98,6 +98,57 @@
       "no_raw_uuids": true
     },
     {
+      "id": "pt_extractor_nuance_register_informal",
+      "category": "register",
+      "text": "Tu falas sempre de teu irmão.",
+      "note": "Extractor nuance: tu → voce_tu_register (informal register)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "voce_tu_register",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "pt_extractor_nuance_register_formal",
+      "category": "register",
+      "text": "Você é muito gentil, obrigado.",
+      "note": "Extractor nuance: você → voce_tu_register (formal register in EP, neutral in BP)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "voce_tu_register",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "pt_extractor_nuance_ser_estar",
+      "category": "grammar_nuance",
+      "text": "Ela é médica e está muito cansada hoje.",
+      "note": "Extractor nuance: ser (permanent) and estar (transient) both present",
+      "pipeline": "both",
+      "assert_types_present": ["grammar", "nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "ser_estar",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
       "id": "pt_etymology_vocab_01",
       "category": "etymology_vocab",
       "text": "A saudade é um sentimento tipicamente português.",
@@ -118,12 +169,12 @@
       "id": "pt_false_positive_01",
       "category": "false_positive",
       "text": "O médico escreve uma receita para o paciente.",
-      "note": "Plain sentence: no idiom keywords, no ser/estar/querer patterns",
+      "note": "Plain sentence: no idiom keywords, no ser/estar/querer patterns, no register pronouns",
       "pipeline": "plugin",
       "assert_types_present": ["vocabulary"],
       "assert_types_absent": ["idiom", "grammar"],
       "assert_nuance_type": null,
-      "assert_nuance_types_absent": ["subjunctive_mood", "conditional_mood"],
+      "assert_nuance_types_absent": ["subjunctive_mood", "conditional_mood", "voce_tu_register"],
       "assert_canonical_contains": null,
       "confidence_ge": null,
       "lesson_data_required_keys": {

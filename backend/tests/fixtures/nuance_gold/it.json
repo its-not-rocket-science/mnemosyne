@@ -2,13 +2,13 @@
   "language": "it",
   "plugin_module": "backend.plugins.italian",
   "plugin_class": "ItalianPlugin",
-  "nuance_extractor_module": null,
-  "nuance_extractor_class": null,
+  "nuance_extractor_module": "backend.nuance.it",
+  "nuance_extractor_class": "ItalianNuanceExtractor",
   "tokenizer": "spacy",
   "capability_assertions": {
     "idioms": ["partial", "strong", "gold"],
     "grammar_nuance": ["partial", "strong", "gold"],
-    "formality_register": ["stub", "partial"]
+    "formality_register": ["partial", "strong", "gold"]
   },
   "capability_gaps": {},
   "cases": [
@@ -98,6 +98,40 @@
       "no_raw_uuids": true
     },
     {
+      "id": "it_extractor_nuance_register_informal",
+      "category": "register",
+      "text": "Tu parli sempre di tuo fratello.",
+      "note": "Extractor nuance: tu → lei_tu_register (informal register)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "lei_tu_register",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "it_extractor_nuance_register_formal",
+      "category": "register",
+      "text": "Lei è molto gentile, signore.",
+      "note": "Extractor nuance: Lei → lei_tu_register (formal register)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "lei_tu_register",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
       "id": "it_etymology_vocab_01",
       "category": "etymology_vocab",
       "text": "Il piano suonava dolcemente nella sala.",
@@ -118,12 +152,12 @@
       "id": "it_false_positive_01",
       "category": "false_positive",
       "text": "Il medico scrive una ricetta per il paziente.",
-      "note": "Plain sentence: no idiom keywords, no grammar patterns",
+      "note": "Plain sentence: no idiom keywords, no grammar patterns, no register pronouns",
       "pipeline": "plugin",
       "assert_types_present": ["vocabulary"],
       "assert_types_absent": ["idiom", "grammar"],
       "assert_nuance_type": null,
-      "assert_nuance_types_absent": ["subjunctive_mood", "conditional_mood"],
+      "assert_nuance_types_absent": ["subjunctive_mood", "conditional_mood", "lei_tu_register"],
       "assert_canonical_contains": null,
       "confidence_ge": null,
       "lesson_data_required_keys": {

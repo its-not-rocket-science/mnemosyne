@@ -24,7 +24,7 @@ table from live plugin declarations.
 |----------|--------|-----------------|-----------|----------------|--------------------|-------------------|-----------------|-------------------|-------|
 | en (English) | stub | stub | none | none | none | partial | none | none | 8 |
 | es (Spanish) | partial | **partial** | **partial** | partial | stub | partial | none | none | **26** |
-| fr (French) | partial | stub | none | partial | stub | partial | none | none | 9 |
+| fr (French) | partial | **partial** | **partial** | partial | **partial** | partial | none | none | **15** |
 | de (German) | partial | **partial** | **partial** | partial | stub | partial | none | none | **24** |
 | it (Italian) | partial | stub | none | partial | stub | partial | none | none | 8 |
 | pt (Portuguese) | partial | stub | none | partial | stub | partial | none | none | 8 |
@@ -74,7 +74,7 @@ candidates independently.  No extractor is registered for `en`, `it`, or `pt`.
 | Language | Extractor detects |
 |----------|------------------|
 | es | ser/estar distinction · por/para contrast · subjunctive mood triggers · diminutive suffixes (-ito/-ita) · **etymology (16 lemmas)** · **phrase families (15 families)** |
-| fr | tu/vous register · *ne* explétif · subjunctive mood · liaison triggers |
+| fr | tu/vous register · *ne* explétif · subjunctive mood · liaison triggers · **etymology (52 lemmas)** · **phrase families (20 families)** |
 | de | modal particles (doch, mal, ja, eigentlich, wohl, …) · separable-verb prefixes · Wechselpräpositionen · **etymology (20 lemmas)** · **phrase families (15 families)** |
 | ru | motion-verb direction (идти vs ходить) · verbal government (любить + acc, etc.) |
 | zh | aspect particles (了 le · 过 guò · 着 zhe) · measure words (量词) · chengyu (4-char idioms) |
@@ -104,10 +104,10 @@ classifiers or embedding-based detectors in the current codebase.
 ## Known limitations
 
 ### Universal
-- No etymology data beyond Spanish and German: all other plugins declare `etymology="none"`.
+- No etymology data beyond Spanish, French, and German: all other plugins declare `etymology="none"`.
 - No literary/cultural references: `literary_references`, `cultural_references`,
   `proverb_tradition`, and `classical_or_scriptural_allusion` are all `none`.
-- Phrase families `stub` for French, Italian, Portuguese, Russian; `partial` for Spanish and German only.
+- Phrase families `stub` for Italian, Portuguese, Russian; `partial` for Spanish, French, and German.
 
 ### English
 - `EnglishStubPlugin` is a scaffold.  Idiom detection is heuristic and fires
@@ -357,16 +357,16 @@ Priority order based on pedagogical impact vs implementation cost:
    Etymology and phrase-family infrastructure already exists; just needs
    curated data and a registered extractor class.
 
-2. **Etymology store expansion** — Spanish and German have ~16 and ~20 entries
-   respectively.  Expanding to 100 high-frequency lemmas per language (with
-   cross-language cognate chains) would bring both to `strong`.
-   French, Italian, Portuguese, and Russian have zero entries; a 20-lemma
-   starter per language would bring each to `stub`.
+2. **Etymology store expansion** — Spanish, French, and German have ~16, ~52, and ~20 entries
+   respectively.  Expanding each to 100 high-frequency lemmas (with cross-language cognate
+   chains) would bring all three to `strong`.
+   Italian, Portuguese, and Russian have zero entries; a 20-lemma starter per language
+   would bring each to `stub`.
 
-3. **Phrase family catalog expansion** — Spanish and German now have 15 families
-   each (`partial`).  Expanding to 50+ would approach `strong`.
-   French, Italian, Portuguese, and Russian declare `stub`; a 15-family
-   starter each would upgrade all four to `partial`.
+3. **Phrase family catalog expansion** — Spanish, French, and German now have 15, 20, and 15
+   families each (`partial`).  Expanding to 50+ would approach `strong`.
+   Italian, Portuguese, and Russian declare `stub`; a 15-family starter each would upgrade
+   all three to `partial`.
 
 4. **ar / he morphological upgrade** — replace dictionary-mode plugins with
    Stanza or Camel-Tools (Arabic) and YAP/HebSpacy (Hebrew).  Unlocks

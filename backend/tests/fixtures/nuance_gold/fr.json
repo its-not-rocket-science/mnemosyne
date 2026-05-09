@@ -8,7 +8,9 @@
   "capability_assertions": {
     "idioms": ["partial", "strong", "gold"],
     "grammar_nuance": ["partial", "strong", "gold"],
-    "formality_register": ["stub", "partial", "strong", "gold"]
+    "formality_register": ["partial", "strong", "gold"],
+    "phrase_families": ["partial", "strong", "gold"],
+    "etymology": ["partial", "strong", "gold"]
   },
   "capability_gaps": {},
   "cases": [

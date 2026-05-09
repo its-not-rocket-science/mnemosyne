@@ -272,11 +272,11 @@ class PortuguesePlugin:
         mood_pool=["indicative", "subjunctive", "conditional", "imperative"],
         nuance_capabilities=NuanceCapabilities(
             idioms="partial",            # curated ~30-entry fixed-expression table
-            phrase_families="stub",      # collocations via dep-parse; not grouped
+            phrase_families="stub",      # no phrase catalog yet; extractor wired
             literary_references="none",
             cultural_references="none",
             etymology="none",
-            formality_register="stub",   # você/tu distinction detectable
+            formality_register="partial", # você/tu distinction; extractor wired
             grammar_nuance="partial",    # tense/mood/person/number drilling
             pronunciation_tts="partial", # browser TTS reliable for pt
             transliteration="none",
