@@ -350,6 +350,110 @@
         "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
       },
       "no_raw_uuids": true
+    },
+    {
+      "id": "es_phrase_family_valer_la_pena",
+      "category": "phrase_family",
+      "text": "No vale la pena discutir esto ahora.",
+      "note": "Phrase family: 'vale la pena' (it is worth it) — inflectional variant of canonical",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "es_valer_la_pena",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_phrase_family_quedarse_en_blanco",
+      "category": "phrase_family",
+      "text": "Me quedé en blanco durante el examen final.",
+      "note": "Phrase family: 'quedé en blanco' (I went blank) — inflectional variant match",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "es_quedarse_en_blanco",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_phrase_family_andarse_por_las_ramas",
+      "category": "phrase_family",
+      "text": "Deja de andarte por las ramas y explícame el problema.",
+      "note": "Phrase family: 'andarte por las ramas' (beat around the bush) — tú inflectional variant",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "es_andarse_por_las_ramas",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_phrase_family_entre_espada_pared",
+      "category": "phrase_family",
+      "text": "Estoy entre la espada y la pared con esta decisión.",
+      "note": "Phrase family: 'entre la espada y la pared' (between a rock and a hard place) — exact match",
+      "pipeline": "extractor",
+      "tokenizer_override": "words",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "es_entre_la_espada_y_la_pared",
+      "confidence_ge": 0.9,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register", "variants"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_extractor_etymology_agua",
+      "category": "etymology",
+      "text": "El agua fría del río refresca el cuerpo en verano.",
+      "note": "Extractor etymology: 'agua' from Latin aqua — unique masculine article behaviour in Spanish",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:agua",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "etymology", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "es_extractor_etymology_escuela",
+      "category": "etymology",
+      "text": "La escuela abre a las ocho de la mañana.",
+      "note": "Extractor etymology: 'escuela' from Greek skholē (leisure) → Latin schola — semantic shift to place of learning",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:escuela",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": null,
+      "no_raw_uuids": true
     }
   ]
 }
