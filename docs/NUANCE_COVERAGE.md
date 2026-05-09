@@ -23,9 +23,9 @@ table from live plugin declarations.
 | Language | Idioms | Phrase families | Etymology | Grammar nuance | Formality/register | Pronunciation TTS | Transliteration | Literary/cultural | Tests |
 |----------|--------|-----------------|-----------|----------------|--------------------|-------------------|-----------------|-------------------|-------|
 | en (English) | stub | none | none | none | none | partial | none | none | 8 |
-| es (Spanish) | partial | stub | none | partial | stub | partial | none | none | 10 |
+| es (Spanish) | partial | **partial** | **partial** | partial | stub | partial | none | none | **26** |
 | fr (French) | partial | stub | none | partial | stub | partial | none | none | 9 |
-| de (German) | partial | stub | none | partial | stub | partial | none | none | 8 |
+| de (German) | partial | **partial** | **partial** | partial | stub | partial | none | none | **24** |
 | it (Italian) | partial | stub | none | partial | stub | partial | none | none | 8 |
 | pt (Portuguese) | partial | stub | none | partial | stub | partial | none | none | 8 |
 | ru (Russian) | partial | stub | none | partial | stub | partial | none | none | 8 |
@@ -73,9 +73,9 @@ candidates independently.  No extractor is registered for `en`, `it`, or `pt`.
 
 | Language | Extractor detects |
 |----------|------------------|
-| es | ser/estar distinction · por/para contrast · subjunctive mood triggers · diminutive suffixes (-ito/-ita) |
+| es | ser/estar distinction · por/para contrast · subjunctive mood triggers · diminutive suffixes (-ito/-ita) · **etymology (16 lemmas)** · **phrase families (15 families)** |
 | fr | tu/vous register · *ne* explétif · subjunctive mood · liaison triggers |
-| de | modal particles (doch, mal, ja, eigentlich, wohl, …) · separable-verb prefixes · Wechselpräpositionen |
+| de | modal particles (doch, mal, ja, eigentlich, wohl, …) · separable-verb prefixes · Wechselpräpositionen · **etymology (20 lemmas)** · **phrase families (15 families)** |
 | ru | motion-verb direction (идти vs ходить) · verbal government (любить + acc, etc.) |
 | zh | aspect particles (了 le · 过 guò · 着 zhe) · measure words (量词) · chengyu (4-char idioms) |
 | ja | keigo types (sonkeigo · kenjogo · teineigo) · case particles (は · が · を · に · で · から · まで …) · yojijukugo (4-char set phrases) |
@@ -104,12 +104,10 @@ classifiers or embedding-based detectors in the current codebase.
 ## Known limitations
 
 ### Universal
-- No etymology data: all plugins declare `etymology="none"`.  A shared etymology
-  store is planned but not built.
+- No etymology data beyond Spanish and German: all other plugins declare `etymology="none"`.
 - No literary/cultural references: `literary_references`, `cultural_references`,
   `proverb_tradition`, and `classical_or_scriptural_allusion` are all `none`.
-- Phrase families declared `stub` for Romance/Germanic/Russian; the dep-parse
-  collocation grouper exists but phrase groups are not yet catalogued.
+- Phrase families `stub` for French, Italian, Portuguese, Russian; `partial` for Spanish and German only.
 
 ### English
 - `EnglishStubPlugin` is a scaffold.  Idiom detection is heuristic and fires
@@ -198,6 +196,28 @@ Input:  "Ella es profesora y está muy cansada."
 Signal: nuance · ser_copula (permanent role) · estar_predicate (transient state)
 ```
 
+### Spanish — phrase family (exact match)
+```
+Input:  "No quiero meter la pata otra vez."
+Signal: phrase_family · es_meter_la_pata · 'meter la pata' · confidence 0.95
+        lesson_data: meaning='To make a blunder', register='informal', variants=[…]
+```
+
+### Spanish — phrase family (inflectional variant)
+```
+Input:  "No vale la pena discutir esto ahora."
+Signal: phrase_family · es_valer_la_pena · 'vale la pena' · confidence 0.85
+        matched_variant='vale la pena' · match_type='inflectional_variant'
+```
+
+### Spanish — etymology
+```
+Input:  "Mi amigo vive en Madrid."
+Signal: nuance · etymology · nuance:es:etymology:amigo · confidence 0.85
+        explanation='From Latin amicus … amare "to love"'
+        etymology.cognates=['French ami', 'Italian amico', 'English amicable']
+```
+
 ### French — register (tu/vous)
 ```
 Input:  "Tu veux venir avec nous ce soir ?"
@@ -208,6 +228,21 @@ Signal: nuance · tu_vous_informal · confidence 0.90
 ```
 Input:  "Das ist doch klar."
 Signal: nuance · modal_particle · doch · "speaker assumes shared knowledge" · confidence 0.65
+```
+
+### German — phrase family (exact match)
+```
+Input:  "Das wäre wie Eulen nach Athen tragen."
+Signal: phrase_family · de_eulen_nach_athen · 'Eulen nach Athen tragen' · confidence 0.95
+        meaning='To carry coals to Newcastle' · origin='Aristophanes, Birds (414 BCE)'
+```
+
+### German — etymology
+```
+Input:  "Das Wort Schadenfreude ist weltweit bekannt."
+Signal: nuance · etymology · nuance:de:etymology:schadenfreude · confidence 0.85
+        explanation='Compound of Schaden "harm" + Freude "joy" … borrowed into English'
+        etymology.roots=['Old High German scado (harm)', 'Old High German frewida (joy)']
 ```
 
 ### Italian — subjunctive mood
@@ -292,14 +327,14 @@ Each fixture covers:
 | False positive | Named nuance types absent from plain control sentences |
 | Capability | `plugin.capabilities.nuance_capabilities.<dim>` in declared allowed set |
 
-Total: **132 parametrized test cases** across 13 languages (as of 2026-05-05).
+Total: **~202 parametrized test cases** across 13 languages (as of 2026-05-09).
 
 | Language | Cases | Capability assertions |
 |----------|-------|-----------------------|
 | en | 8 | 3 |
-| es | 10 | 3 |
+| es | 26 | 5 |
 | fr | 9 | 3 |
-| de | 8 | 3 |
+| de | 24 | 5 |
 | it | 8 | 3 |
 | pt | 8 | 3 |
 | ru | 8 | 3 |
@@ -316,26 +351,30 @@ Total: **132 parametrized test cases** across 13 languages (as of 2026-05-05).
 
 Priority order based on pedagogical impact vs implementation cost:
 
-1. **Etymology store** — shared JSON/DB table keyed by `(language, lemma)`.
-   All plugins at `etymology="none"`; even a 500-word starter per language
-   would unlock etymology drills for Romance + Greek/Latin roots.
-
-2. **it / pt nuance extractors** — Italian and Portuguese have full spaCy
+1. **it / pt nuance extractors** — Italian and Portuguese have full spaCy
    pipelines but no registered extractor.  Minimum viable: ser/estar (pt),
    essere copula (it), subjunctive triggers (both), register (Lei/você).
+   Etymology and phrase-family infrastructure already exists; just needs
+   curated data and a registered extractor class.
 
-3. **ar / he morphological upgrade** — replace dictionary-mode plugins with
+2. **Etymology store expansion** — Spanish and German have ~16 and ~20 entries
+   respectively.  Expanding to 100 high-frequency lemmas per language (with
+   cross-language cognate chains) would bring both to `strong`.
+   French, Italian, Portuguese, and Russian have zero entries; a 20-lemma
+   starter per language would bring each to `stub`.
+
+3. **Phrase family catalog expansion** — Spanish and German now have 15 families
+   each (`partial`).  Expanding to 50+ would approach `strong`.
+   French, Italian, Portuguese, and Russian declare `stub`; a 15-family
+   starter each would upgrade all four to `partial`.
+
+4. **ar / he morphological upgrade** — replace dictionary-mode plugins with
    Stanza or Camel-Tools (Arabic) and YAP/HebSpacy (Hebrew).  Unlocks
    grammar\_nuance, formality\_register, and root/binyan signals.
 
-4. **ja yojijukugo** — extractor detects them but spaCy splits all common
+5. **ja yojijukugo** — extractor detects them but spaCy splits all common
    4-char compounds.  Workaround: pre-scan sentence for dictionary matches
    before passing to spaCy, or use `custom_tokenizer` to protect compounds.
-
-5. **Phrase family catalogs** — Romance + Germanic plugins declare
-   `phrase_families="stub"` but the grouper is not populated.  A 50-family
-   starter per language (verb+preposition clusters, adjective collocations)
-   would upgrade to `partial`.
 
 6. **ru verbal government** — current table has ~10 verbs.  Expanding to
    100+ high-frequency verbs would meaningfully improve grammar\_nuance

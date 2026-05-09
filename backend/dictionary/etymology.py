@@ -452,6 +452,252 @@ _CURATED: list[EtymologyEntry] = [
         cognates=["Spanish hado", "French fée (fairy)", "English fate, fatal"],
     ),
 
+    # ── Spanish — extended ───────────────────────────────────────────────────
+    EtymologyEntry(
+        language="es", lemma="agua",
+        origin_summary=(
+            "From Latin aqua 'water.' One of the most productive Latin roots: "
+            "gives English aquatic, aqueduct, aquarium, and aquifer. "
+            "In Spanish, agua uniquely triggers masculine articles in the singular "
+            "(el agua, un agua) to avoid the double-a clash — yet it remains "
+            "grammatically feminine (las aguas frías)."
+        ),
+        roots=["Latin aqua (water)"],
+        cognates=["English aquatic, aqueduct, aquarium (all from aqua)", "Italian acqua", "Portuguese água"],
+    ),
+    EtymologyEntry(
+        language="es", lemma="escuela",
+        origin_summary=(
+            "From Latin schola, borrowed from Greek skholē 'leisure, rest, free time.' "
+            "For ancient Greeks, learning was the proper use of leisure. "
+            "The semantic chain: leisure → philosophical discussion → place for teaching. "
+            "Gives English school, scholar, and scholarship."
+        ),
+        roots=["Greek skholē (leisure, rest)", "Latin schola (school)"],
+        cognates=["English school, scholar (from same Greek root)", "French école", "Italian scuola"],
+        semantic_shift="'leisure, free time' → 'philosophical discussion in leisure' → 'place of learning'",
+    ),
+    EtymologyEntry(
+        language="es", lemma="libro",
+        origin_summary=(
+            "From Latin liber, originally meaning the inner bark of a tree — "
+            "the surface on which Romans wrote before papyrus became common. "
+            "The same word gave English library, libel, and the name Liber (a Roman deity). "
+        ),
+        roots=["Latin liber (inner bark of tree, book)"],
+        cognates=["English library, libel (from same Latin root)", "French livre", "Italian libro"],
+        semantic_shift="'inner bark (writing surface)' → 'written document' → 'book'",
+    ),
+    EtymologyEntry(
+        language="es", lemma="hablar",
+        origin_summary=(
+            "From Latin fabulare 'to tell stories, to converse,' from fabula 'story, tale.' "
+            "The same root gives English fable, fabulous, and confabulate. "
+            "In Spanish, fabulare became hablar (speech); fabular survives as a literary verb "
+            "for 'to tell fables.'"
+        ),
+        roots=["Latin fabula (story, tale)", "Latin fabulare (to tell stories)"],
+        cognates=["English fable, fabulous (from fabula)", "Italian favellare (archaic 'to speak')"],
+        semantic_shift="'to tell fables/stories' → 'to speak, converse'",
+    ),
+    EtymologyEntry(
+        language="es", lemma="flor",
+        origin_summary=(
+            "From Latin flos, floris 'flower.' One of the most productive Latin roots: "
+            "gives English flower, flour (fine-ground grain — once called 'the flower of wheat'), "
+            "flora, floral, flourish, and Florence (Florentia 'the flourishing one')."
+        ),
+        roots=["Latin flos / floris (flower)"],
+        cognates=["English flower, flour, flora, flourish (all from flos)", "French fleur", "Italian fiore"],
+        semantic_shift="English flour: 'the flower (finest part) of the grain'",
+    ),
+    EtymologyEntry(
+        language="es", lemma="ciudad",
+        origin_summary=(
+            "From Latin civitas 'citizenship, community of citizens, city-state,' "
+            "derived from civis 'citizen.' "
+            "The same root gives English city, citizen, civic, civil, and civilization. "
+            "Spanish ciudad preserves the abstract sense of a human community, not merely a place."
+        ),
+        roots=["Latin civis (citizen)", "Latin civitas (citizenship, city-state)"],
+        cognates=["English city, civic, civil, civilization (all from civis)", "French cité", "Italian città"],
+    ),
+    EtymologyEntry(
+        language="es", lemma="palabra",
+        origin_summary=(
+            "From Latin parabola 'comparison, parable,' itself from Greek parabolē "
+            "'comparison, analogy' (para- 'beside' + ballein 'to throw'). "
+            "In Late Latin, parabola shifted from 'comparison' to 'word, speech.' "
+            "English borrowed the same word as parable (religious story) and parabola "
+            "(the mathematical curve). Spanish kept the 'speech' sense."
+        ),
+        roots=["Greek parabolē (comparison, analogy)", "Latin parabola (comparison → word, speech)"],
+        cognates=["English parable, parabola (from same Greek source)", "French parole (word)", "Italian parola"],
+        semantic_shift="'thrown alongside (comparison)' → 'parable' → 'word, speech'",
+    ),
+    EtymologyEntry(
+        language="es", lemma="caballo",
+        origin_summary=(
+            "From Latin caballus 'a workhorse, nag' — a pre-Latin word, probably Gaulish or Iberian. "
+            "While equus was the classical word for horse, caballus was the working horse of soldiers "
+            "and farmers; it displaced equus in all Romance languages. "
+            "Gives English cavalier, cavalry, cavalcade, and chivalry (via French chevalier)."
+        ),
+        roots=["Latin caballus (workhorse, nag) — pre-Latin origin"],
+        cognates=["English cavalry, cavalier, chivalry (via French chevalier)", "French cheval", "Italian cavallo"],
+        semantic_shift="'working horse, nag' → general 'horse' as equus fell out of vernacular use",
+    ),
+    EtymologyEntry(
+        language="es", lemma="sol",
+        origin_summary=(
+            "From Latin sol 'sun,' from Proto-Indo-European *sóh₂wl̥. "
+            "One of the most ancient words in the Indo-European family: "
+            "gives English solar, solstice, parasol, and underlies Sunday "
+            "(Old English Sunnandæg 'Sun's day'). "
+            "The Peruvian monetary unit sol is named after the sun."
+        ),
+        roots=["PIE *sóh₂wl̥ (sun)", "Latin sol (sun)"],
+        cognates=["English solar, solstice, Sunday (all from the same root)", "French soleil", "Italian sole"],
+    ),
+    EtymologyEntry(
+        language="es", lemma="noche",
+        origin_summary=(
+            "From Latin nox, noctis 'night,' from Proto-Indo-European *nókʷts. "
+            "Gives English nocturnal, equinox (nox + aequus 'equal night'), and nocturn. "
+            "The same PIE root gives English night, German Nacht, and Greek nyx — "
+            "demonstrating remarkable stability across 5,000 years of language change."
+        ),
+        roots=["PIE *nókʷts (night)", "Latin nox / noctis (night)"],
+        cognates=["English night, nocturnal, equinox (from nox)", "French nuit", "Italian notte", "German Nacht"],
+    ),
+
+    # ── German — extended ─────────────────────────────────────────────────────
+    EtymologyEntry(
+        language="de", lemma="Fernweh",
+        origin_summary=(
+            "Compound of fern 'far, distant' + Weh 'ache, pain.' "
+            "Literally 'far-ache' — a longing to travel to distant places. "
+            "The opposite of Heimweh (homesickness). "
+            "Both words exploit the same German pain-metaphor for emotional longing. "
+            "English has no direct equivalent; wanderlust is related but emphasises restlessness "
+            "rather than longing for a specific distant place."
+        ),
+        roots=["Proto-Germanic *ferrana (far, distant)", "Proto-Germanic *wai- (pain, woe) — Old High German wē"],
+        cognates=["English woe (from the same Weh root)", "German Heimweh (homesickness — opposite)"],
+    ),
+    EtymologyEntry(
+        language="de", lemma="Heimweh",
+        origin_summary=(
+            "Compound of Heim 'home' + Weh 'ache, pain.' "
+            "Coined in Swiss German (Heimwehe) around 1650 by Johannes Hofer "
+            "as the medical diagnosis for what soldiers and students suffered when far from home. "
+            "English 'homesick' is a calque of Heimweh. "
+            "The Weh suffix (pain, woe) is the same root as English woe."
+        ),
+        roots=["Proto-Germanic *haimaz (home, village)", "Proto-Germanic *wai- (pain, woe)"],
+        cognates=["English homesick (calque of Heimweh)", "English woe (from Weh)", "English home (from Heim)"],
+        semantic_shift="Medical diagnosis for soldiers' nostalgia → general word for homesickness",
+    ),
+    EtymologyEntry(
+        language="de", lemma="Weltschmerz",
+        origin_summary=(
+            "Compound of Welt 'world' + Schmerz 'pain, ache.' "
+            "Coined by the German Romantic writer Jean Paul (1763–1825) in his novel Selina (1827) "
+            "to describe the pain caused by the world failing to match one's ideals. "
+            "Borrowed into English as a loanword in the 19th century. "
+            "Related: Weltanschauung (worldview), Weltgeist (world spirit)."
+        ),
+        roots=["Proto-Germanic *weraldiz (world)", "Proto-Germanic *smertaz (pain)"],
+        cognates=["English smart (pain sense — same root as Schmerz)", "English weltschmerz (borrowed)"],
+    ),
+    EtymologyEntry(
+        language="de", lemma="Fingerspitzengefühl",
+        origin_summary=(
+            "Compound of Fingerspitze 'fingertip' (Finger + Spitze 'tip, point') + "
+            "Gefühl 'feeling, sense.' "
+            "Literally 'fingertip feeling': intuitive sensitivity and delicate handling — "
+            "the ability to gauge a situation with a surgeon's precision. "
+            "Used in German for political, social, and artistic finesse. "
+            "No clean English single-word equivalent exists."
+        ),
+        roots=["Proto-Germanic *fingraz (finger)", "Proto-Germanic *fōlijaną (to feel)"],
+        cognates=["English finger, feel (same Germanic roots)"],
+    ),
+    EtymologyEntry(
+        language="de", lemma="Bildung",
+        origin_summary=(
+            "From bilden 'to form, shape, educate,' from Bild 'image, form' (Proto-Germanic *bilþam). "
+            "In German philosophical tradition (Hegel, Schiller, Goethe) Bildung describes "
+            "the process of self-cultivation: not merely acquiring knowledge but forming one's "
+            "character and humanity through culture. "
+            "Gives English Bildungsroman (novel of formation) as a borrowed compound."
+        ),
+        roots=["Proto-Germanic *bilþam (image, form)", "Old High German bilōn (to form)"],
+        cognates=["English build (from the same Germanic root *bilþam)", "English Bildungsroman (borrowed)"],
+        semantic_shift="'to give form/shape' → 'to educate' → 'cultivation of the complete human being'",
+    ),
+    EtymologyEntry(
+        language="de", lemma="Buch",
+        origin_summary=(
+            "From Proto-Germanic *bōkō, originally meaning 'beech tree.' "
+            "Ancient Germanic peoples carved runes into beech boards for writing; "
+            "the beech tree became the writing surface, and the writing surface became the book. "
+            "English book and beech are cognates from the same root — both derive from *bōkō."
+        ),
+        roots=["Proto-Germanic *bōkō (beech tree → writing tablet → book)"],
+        cognates=["English book (same root)", "English beech tree (same root — both from beech-as-writing-surface)"],
+        semantic_shift="'beech tree' → 'beech-bark writing tablet' → 'book'",
+    ),
+    EtymologyEntry(
+        language="de", lemma="Zeit",
+        origin_summary=(
+            "From Proto-Germanic *tīdaz 'time, period,' related to Old English tīd. "
+            "English tide originally meant 'time, season, period' (Yuletide, Christmastide, eventide) "
+            "before narrowing to the rise and fall of the sea. "
+            "The compound Zeitgeist (Zeit + Geist) 'spirit of the time' was borrowed into English intact."
+        ),
+        roots=["Proto-Germanic *tīdaz (time, period)"],
+        cognates=["English tide (originally 'time' — same root)", "English Yuletide, Christmastide"],
+        semantic_shift="English tide: 'time, season' → specifically 'tidal movement of the sea'",
+    ),
+    EtymologyEntry(
+        language="de", lemma="Geist",
+        origin_summary=(
+            "From Proto-Germanic *gaistaz 'spirit, ghost.' "
+            "The word appears in Zeitgeist, Weltgeist, Poltergeist, and Heiliger Geist (Holy Spirit). "
+            "English ghost is the direct cognate — Old English gāst meant both 'spirit' and 'ghost.' "
+            "The h in ghost was added during early printing through Dutch spelling influence (geest)."
+        ),
+        roots=["Proto-Germanic *gaistaz (spirit, ghost)"],
+        cognates=["English ghost (direct cognate)", "English aghast (frightened by a spirit — same root)"],
+    ),
+    EtymologyEntry(
+        language="de", lemma="Mut",
+        origin_summary=(
+            "From Proto-Germanic *mōdaz 'spirit, courage, mood, mind.' "
+            "In Old High German muot meant the mind or spirit broadly; "
+            "the meaning narrowed to 'courage' in modern German. "
+            "English mood is the direct cognate, preserving the broader emotional sense. "
+            "Related compounds: Übermut (overconfidence), Wehmut (melancholy), Hochmut (arrogance)."
+        ),
+        roots=["Proto-Germanic *mōdaz (mind, spirit, mood)"],
+        cognates=["English mood (direct cognate — same Germanic root)", "English moody (from the same)"],
+        semantic_shift="'mind, spirit, emotional state' → 'courage' in German; 'emotional disposition' in English",
+    ),
+    EtymologyEntry(
+        language="de", lemma="Verschlimmbessern",
+        origin_summary=(
+            "A 19th-century blend of verschlimmern 'to make worse' and verbessern 'to improve.' "
+            "Describes making something worse in the process of trying to improve it. "
+            "German's capacity for compound words allows this precise concept: "
+            "the schlimm (bad) element from verschlimmern hijacks the bessern (improve) "
+            "structure of verbessern. No single English equivalent exists."
+        ),
+        roots=["verschlimmern (to worsen) + verbessern (to improve)", "schlimm (bad) + besser (better)"],
+        cognates=["English 'making things worse by fixing them' — no single-word equivalent"],
+        semantic_shift="Playful blend; the 'improvement' root is ironically dominated by the 'worsening' element",
+    ),
+
     # ── Russian ──────────────────────────────────────────────────────────────
     EtymologyEntry(
         language="ru", lemma="тоска",
