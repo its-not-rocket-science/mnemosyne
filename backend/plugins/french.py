@@ -298,11 +298,11 @@ class FrenchPlugin:
         mood_pool=["indicative", "subjunctive", "conditional", "imperative"],
         nuance_capabilities=NuanceCapabilities(
             idioms="partial",            # curated ~35-entry fixed-expression table
-            phrase_families="stub",      # collocations via dep-parse; not grouped
+            phrase_families="partial",   # 20-family curated catalog; extractor wired
             literary_references="none",
             cultural_references="none",
-            etymology="none",
-            formality_register="stub",   # tu/vous distinction detectable
+            etymology="partial",         # 52-entry catalog; extractor wired
+            formality_register="partial", # tu/vous distinction; extractor wired
             grammar_nuance="partial",    # tense/mood/person/number drilling
             pronunciation_tts="partial", # browser TTS reliable for fr
             transliteration="none",
