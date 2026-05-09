@@ -287,6 +287,7 @@ class LatinPlugin:
             entry = _lookup(key)
             if entry is not None:
                 lesson_data: dict[str, Any] = {
+                    "lemma":         entry["citation"],
                     "citation_form": entry["citation"],
                     "gloss":         entry["gloss"],
                     "grammar_note":  entry.get("grammar_note", ""),
@@ -294,7 +295,7 @@ class LatinPlugin:
                 }
                 confidence: float | None = 0.85
             else:
-                lesson_data = {"confidence_note": _UNKNOWN_NOTE}
+                lesson_data = {"lemma": key, "confidence_note": _UNKNOWN_NOTE}
                 confidence = None
 
             candidates.append(CandidateObject(

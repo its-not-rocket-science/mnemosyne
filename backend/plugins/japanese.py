@@ -198,9 +198,11 @@ class JapanesePlugin:
                 "lemma": lemma,
                 "pos":   tok.pos_,
             }
+            if tok.pos_ == "PROPN":
+                data["confidence_note"] = "proper noun — may not generalise to common vocabulary"
             if reading_hira:
                 data["reading"] = reading_hira
-            else:
+            elif "confidence_note" not in data:
                 data["confidence_note"] = _CONFIDENCE_NOTE_NO_READING
             cefr = _get_cefr_level("ja", lemma) or ("A1" if lemma in _A1 else None)
             if cefr:

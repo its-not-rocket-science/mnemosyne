@@ -385,13 +385,22 @@ class SpanishPlugin:
 
         candidates: list[CandidateObject] = []
 
-        # Conjugation runs first to populate seen_vocab before vocabulary
-        # extraction consults it.
+        # Idioms run first so their surface tokens can be excluded from vocabulary
+        # extraction (C4: a token inside an idiom must not also be a vocabulary card).
+        idiom_candidates = self._extract_idioms(tokens)
+        idiom_surfaces: set[str] = {
+            word
+            for ic in idiom_candidates
+            if ic.surface_form
+            for word in ic.surface_form.lower().split()
+        }
+
+        # Conjugation pre-populates seen_vocab with verb lemmas before vocabulary.
         conj_candidates = self._extract_conjugations(tokens, seen_conj, seen_vocab)
         candidates.extend(conj_candidates)
-        candidates.extend(self._extract_vocabulary(tokens, seen_vocab))
+        candidates.extend(self._extract_vocabulary(tokens, seen_vocab, skip_surfaces=idiom_surfaces))
         candidates.extend(self._extract_agreements(tokens))
-        candidates.extend(self._extract_idioms(tokens))
+        candidates.extend(idiom_candidates)
 
         # Grammar and nuance objects are derived from the already-extracted
         # conjugation results — no second pass over raw tokens required.
@@ -413,10 +422,15 @@ class SpanishPlugin:
         self,
         tokens: list[Any],
         seen: set[str],
+        skip_surfaces: set[str] | None = None,
     ) -> list[CandidateObject]:
         candidates: list[CandidateObject] = []
         for tok in tokens:
             if tok.pos_ in _SKIP_POS or tok.is_punct or tok.is_space:
+                continue
+
+            # Skip tokens consumed by an idiom candidate (C4).
+            if skip_surfaces and tok.text.lower() in skip_surfaces:
                 continue
 
             verb_form = _morph_first(tok, "VerbForm")
