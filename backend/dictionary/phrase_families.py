@@ -1081,6 +1081,589 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
         ),
         tags=("ignorance", "uncertainty", "darkness-metaphor"),
     ),
+
+    # \u2500\u2500 French catalog \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+
+    "fr_casser_les_pieds": PhraseFamily(
+        id="fr_casser_les_pieds",
+        language="fr",
+        canonical_form="casser les pieds \u00e0 quelqu\u2019un",
+        meaning="To annoy or bore someone intensely; to be a pain.",
+        register="informal",
+        origin=(
+            "The image is of stamping on someone\u2019s feet \u2014 an intrusive, "
+            "physical imposition. Casser (to break) intensifies the metaphor beyond "
+            "mere nuisance. A fixture of everyday colloquial French since the 19th century."
+        ),
+        why_it_matters=(
+            "Learners reach for ennuyer or agacer as neutral equivalents, but those "
+            "lack the emphatic, exasperated register of casser les pieds. "
+            "The indirect object (\u00e0 quelqu\u2019un) inflects freely; "
+            "the feet phrase stays fixed."
+        ),
+        variants=(
+            PhraseVariant("casser les pieds \u00e0 quelqu\u2019un", MatchType.exact),
+            PhraseVariant("tu me casses les pieds", MatchType.inflectional_variant,
+                          note="You\u2019re really annoying me \u2014 direct 2nd-person address."),
+            PhraseVariant("il me casse les pieds", MatchType.inflectional_variant,
+                          note="3rd-person singular, 1st-person indirect object."),
+            PhraseVariant("elle m\u2019a cass\u00e9 les pieds", MatchType.inflectional_variant,
+                          note="Past: she really got on my nerves."),
+            PhraseVariant("casser les oreilles", MatchType.confusable_not_same,
+                          note="\u2018Casser les oreilles\u2019 = to make an unbearable noise, not to bore/annoy."),
+        ),
+        tags=("annoyance", "informal", "body-metaphor"),
+    ),
+
+    "fr_poser_un_lapin": PhraseFamily(
+        id="fr_poser_un_lapin",
+        language="fr",
+        canonical_form="poser un lapin \u00e0 quelqu\u2019un",
+        meaning="To stand someone up; to fail to show for an appointment.",
+        register="informal",
+        origin=(
+            "19th-century French slang: lapin (rabbit) was argot for a debt unpaid "
+            "or a service rendered without payment. \u2018Poser un lapin\u2019 originally "
+            "meant to leave without paying; by extension it shifted to leaving someone "
+            "waiting \u2014 i.e., abandoning them. Attested from c.\u202f1880."
+        ),
+        source_text="Argot attested from c.\u202f1880; cf. \u00c9mile Zola\u2019s correspondence",
+        why_it_matters=(
+            "The rabbit has nothing to do with the meaning \u2014 this is pure argot. "
+            "Learners who parse it literally will be baffled. "
+            "The indirect object (\u00e0 quelqu\u2019un) is essential; "
+            "\u2018poser un lapin\u2019 without it is incomplete."
+        ),
+        variants=(
+            PhraseVariant("poser un lapin \u00e0 quelqu\u2019un", MatchType.exact),
+            PhraseVariant("il m\u2019a pos\u00e9 un lapin", MatchType.inflectional_variant,
+                          note="He stood me up \u2014 past tense, 1st-person object."),
+            PhraseVariant("elle lui a pos\u00e9 un lapin", MatchType.inflectional_variant,
+                          note="She stood him/her up \u2014 3rd-person past."),
+            PhraseVariant("se faire poser un lapin", MatchType.inflectional_variant,
+                          note="Passive construction: to get stood up."),
+        ),
+        tags=("appointment", "slang", "argot", "rabbit"),
+    ),
+
+    "fr_avoir_le_cafard": PhraseFamily(
+        id="fr_avoir_le_cafard",
+        language="fr",
+        canonical_form="avoir le cafard",
+        meaning="To feel down, depressed, or blue.",
+        register="neutral",
+        origin=(
+            "Cafard (cockroach) entered this sense through Charles Baudelaire\u2019s "
+            "Les Fleurs du Mal (1857), where the insect symbolised the oppressive "
+            "ennui and spleen of modern life. The poet\u2019s usage fixed the metaphor "
+            "in French. Cafard also separately means \u2018snitch\u2019 (from Arabic kaffir, "
+            "infidel, via colonial usage) \u2014 an unrelated homograph."
+        ),
+        source_text="Popularised by Baudelaire, Les Fleurs du Mal (1857)",
+        why_it_matters=(
+            "The cockroach-depression metaphor is opaque to learners who know cafard "
+            "only as \u2018snitch.\u2019 Context resolves ambiguity: avoir le cafard "
+            "is always the emotional state. The two senses never overlap in practice."
+        ),
+        variants=(
+            PhraseVariant("avoir le cafard", MatchType.exact),
+            PhraseVariant("j\u2019ai le cafard", MatchType.inflectional_variant,
+                          note="1st-person: I\u2019m feeling blue."),
+            PhraseVariant("il a le cafard", MatchType.inflectional_variant,
+                          note="3rd-person singular present."),
+            PhraseVariant("avoir le blues", MatchType.confusable_not_same,
+                          note="Anglicism with the same meaning; more recent and informal."),
+        ),
+        tags=("depression", "emotion", "baudelaire", "informal"),
+    ),
+
+    "fr_tomber_dans_les_pommes": PhraseFamily(
+        id="fr_tomber_dans_les_pommes",
+        language="fr",
+        canonical_form="tomber dans les pommes",
+        meaning="To faint; to pass out.",
+        register="informal",
+        origin=(
+            "Origin disputed. One credible theory: from a letter by George Sand "
+            "(c.\u202f1833) using \u2018\u00eatre dans les pommes cuites\u2019 (to be in cooked "
+            "apples) to describe extreme exhaustion \u2014 the soft, pulpy texture "
+            "suggesting complete limpness. The expression contracted and shifted to "
+            "the act of fainting by the late 19th century."
+        ),
+        source_text="Possibly related to George Sand\u2019s correspondence, c.\u202f1833; "
+                    "attested as a fainting idiom by the late 19th century",
+        why_it_matters=(
+            "One of the most colourful French idioms for fainting, alongside "
+            "s\u2019\u00e9vanouir (neutral medical term) and tourner de l\u2019\u0153il "
+            "(also informal). Tomber dans les pommes is distinctly colloquial "
+            "and conveys surprise or drama around the event."
+        ),
+        variants=(
+            PhraseVariant("tomber dans les pommes", MatchType.exact),
+            PhraseVariant("elle est tomb\u00e9e dans les pommes", MatchType.inflectional_variant,
+                          note="3rd-person feminine past: she fainted."),
+            PhraseVariant("il est tomb\u00e9 dans les pommes", MatchType.inflectional_variant,
+                          note="3rd-person masculine past: he fainted."),
+            PhraseVariant("tomber dans les vapes", MatchType.confusable_not_same,
+                          note="Even more informal synonym; vapes = vapours (dizziness)."),
+        ),
+        tags=("fainting", "informal", "colloquial", "food-metaphor"),
+    ),
+
+    "fr_revenons_a_nos_moutons": PhraseFamily(
+        id="fr_revenons_a_nos_moutons",
+        language="fr",
+        canonical_form="revenons \u00e0 nos moutons",
+        meaning="Let\u2019s get back to the subject; back to the matter at hand.",
+        register="neutral",
+        origin=(
+            "From La Farce de Ma\u00eetre Pathelin (c.\u202f1460), a medieval French comedy "
+            "in which a judge repeatedly interrupts a lawsuit to redirect a confused "
+            "witness: \u201cMais revenons \u00e0 ces moutons\u201d "
+            "(but let us return to these sheep). The sheep were the original subject "
+            "of the dispute. The phrase entered general use as a discourse marker "
+            "for returning to the point."
+        ),
+        source_text="La Farce de Ma\u00eetre Pathelin, c.\u202f1460",
+        why_it_matters=(
+            "One of the oldest documented French idioms, still fully alive in "
+            "contemporary speech and writing. The moutons (sheep) are purely "
+            "historical \u2014 the phrase is a discourse marker with no animal connotation today. "
+            "The imperative form revenons is fixed; the phrase is highly formulaic."
+        ),
+        variants=(
+            PhraseVariant("revenons \u00e0 nos moutons", MatchType.exact),
+            PhraseVariant("revenons \u00e0 nos moutons", MatchType.exact),
+            PhraseVariant("mais revenons \u00e0 ces moutons", MatchType.modernized_variant,
+                          note="The original medieval form with \u2018ces\u2019 (these) for \u2018nos\u2019 (our)."),
+            PhraseVariant("revenons au sujet", MatchType.confusable_not_same,
+                          note="Neutral paraphrase; lacks the idiomatic flavour."),
+        ),
+        confusables=("fr_noyer_le_poisson",),
+        tags=("discourse-marker", "subject", "medieval", "sheep"),
+    ),
+
+    "fr_noyer_le_poisson": PhraseFamily(
+        id="fr_noyer_le_poisson",
+        language="fr",
+        canonical_form="noyer le poisson",
+        meaning="To muddy the waters; to dodge an issue by creating confusion.",
+        register="neutral",
+        origin=(
+            "The angler\u2019s technique of exhausting a fish by playing it on the "
+            "line until it is too tired to resist \u2014 drowning it in its own "
+            "element by keeping it struggling. Figurative: wearing down an opponent "
+            "or obscuring an issue by generating so much complexity that the real "
+            "point is lost."
+        ),
+        why_it_matters=(
+            "Often confused with \u2018revenons \u00e0 nos moutons\u2019 because both involve "
+            "digression. But noyer le poisson is deliberate obfuscation \u2014 an active "
+            "strategy \u2014 while \u2018revenons\u2019 is a neutral call to refocus."
+        ),
+        variants=(
+            PhraseVariant("noyer le poisson", MatchType.exact),
+            PhraseVariant("il noie le poisson", MatchType.inflectional_variant,
+                          note="3rd-person singular present: he\u2019s dodging the issue."),
+            PhraseVariant("noyant le poisson", MatchType.inflectional_variant,
+                          note="Participial form."),
+            PhraseVariant("noyer le poisson dans l\u2019eau", MatchType.blend,
+                          note="Pleonastic extension sometimes heard in speech; non-standard."),
+        ),
+        confusables=("fr_revenons_a_nos_moutons",),
+        tags=("obfuscation", "deception", "fishing-metaphor"),
+    ),
+
+    "fr_avoir_du_pain_sur_la_planche": PhraseFamily(
+        id="fr_avoir_du_pain_sur_la_planche",
+        language="fr",
+        canonical_form="avoir du pain sur la planche",
+        meaning="To have a lot of work ahead; to have a lot on one\u2019s plate.",
+        register="neutral",
+        origin=(
+            "Originally (18th century) the phrase meant to have resources stored "
+            "for the future \u2014 bread on the board was a sign of prosperity and "
+            "security. By the 20th century the meaning reversed: the bread now "
+            "represents work awaiting completion rather than wealth in reserve. "
+            "A rare case of semantic inversion without formal change."
+        ),
+        source_text="Attested in its modern sense from the early 20th century; "
+                    "original sense (prosperity) is 18th century",
+        why_it_matters=(
+            "The semantic reversal is a trap: historical texts use the phrase to "
+            "mean \u2018well-provided for,\u2019 while modern texts use it for "
+            "\u2018overwhelmed with work.\u2019 Always context-check when reading texts "
+            "from different eras."
+        ),
+        variants=(
+            PhraseVariant("avoir du pain sur la planche", MatchType.exact),
+            PhraseVariant("j\u2019ai du pain sur la planche", MatchType.inflectional_variant,
+                          note="1st-person: I have a lot to do."),
+            PhraseVariant("on a du pain sur la planche", MatchType.inflectional_variant,
+                          note="Collective: we have a lot on our plate."),
+            PhraseVariant("avoir beaucoup de pain sur la planche", MatchType.blend,
+                          note="\u2018Beaucoup\u2019 inserted as intensifier; heard in speech."),
+        ),
+        tags=("workload", "bread-metaphor", "semantic-inversion"),
+    ),
+
+    "fr_les_carottes_sont_cuites": PhraseFamily(
+        id="fr_les_carottes_sont_cuites",
+        language="fr",
+        canonical_form="les carottes sont cuites",
+        meaning="It\u2019s all over; the die is cast; there\u2019s no way out now.",
+        register="informal",
+        origin=(
+            "A cooked carrot cannot be un-cooked: the irreversibility of the culinary "
+            "transformation became a metaphor for any situation that has passed the "
+            "point of no return. Popularised in France during WWII as the code phrase "
+            "used by the BBC French Service on 5 June 1944 to signal that D-Day "
+            "was imminent. This historical use cemented the phrase in French memory."
+        ),
+        source_text="BBC French Service, 5 June 1944 (D-Day code phrase); "
+                    "in general figurative use from the 19th century",
+        why_it_matters=(
+            "The WWII radio context means the phrase carries historical resonance "
+            "beyond its literal meaning. Learners who know this will understand "
+            "why it appears in historical fiction and films set in the Occupation."
+        ),
+        variants=(
+            PhraseVariant("les carottes sont cuites", MatchType.exact),
+            PhraseVariant("c\u2019est cuit", MatchType.modernized_variant,
+                          note="Shortened modern form: it\u2019s done for."),
+            PhraseVariant("les jeux sont faits", MatchType.confusable_not_same,
+                          note="\u2018Les jeux sont faits\u2019 = the bets are placed (gambling); similar finality but different register."),
+        ),
+        tags=("finality", "WWII", "food-metaphor", "irreversibility"),
+    ),
+
+    "fr_mettre_les_pieds_dans_le_plat": PhraseFamily(
+        id="fr_mettre_les_pieds_dans_le_plat",
+        language="fr",
+        canonical_form="mettre les pieds dans le plat",
+        meaning="To put one\u2019s foot in it; to blunder tactlessly into a sensitive situation.",
+        register="informal",
+        origin=(
+            "The image of stepping (pieds = feet) into a serving dish (plat = dish, plate): "
+            "an act of gross clumsiness at table, the ultimate social faux pas. "
+            "The idiom generalised from literal gaucherie to any tactless intrusion."
+        ),
+        why_it_matters=(
+            "Distinct from \u2018casser les pieds\u2019 (to annoy someone deliberately): "
+            "mettre les pieds dans le plat implies unintentional blundering, not malice. "
+            "Both involve pieds (feet) \u2014 a common source of confusion for learners."
+        ),
+        variants=(
+            PhraseVariant("mettre les pieds dans le plat", MatchType.exact),
+            PhraseVariant("il a mis les pieds dans le plat", MatchType.inflectional_variant,
+                          note="He put his foot in it \u2014 past tense."),
+            PhraseVariant("elle a mis les pieds dans le plat", MatchType.inflectional_variant,
+                          note="She put her foot in it \u2014 past tense."),
+            PhraseVariant("en mettant les pieds dans le plat", MatchType.inflectional_variant,
+                          note="Gerund: by blundering in."),
+            PhraseVariant("casser les pieds", MatchType.confusable_not_same,
+                          note="\u2018Casser les pieds\u2019 = to annoy intentionally; not the same blunder idiom."),
+        ),
+        confusables=("fr_casser_les_pieds",),
+        tags=("blunder", "tact", "informal", "body-metaphor"),
+    ),
+
+    "fr_avoir_dautres_chats": PhraseFamily(
+        id="fr_avoir_dautres_chats",
+        language="fr",
+        canonical_form="avoir d\u2019autres chats \u00e0 fouetter",
+        meaning="To have bigger fish to fry; to have more important things to deal with.",
+        register="neutral",
+        origin=(
+            "Fouetter (to whip) applied to chats (cats): the image of a person with "
+            "so many cats to whip that the current one can wait. "
+            "The idiom appears as early as the 17th century in French and was noted "
+            "by Henri Estienne. The English equivalent uses fish rather than cats."
+        ),
+        source_text="Attested in French from the 17th century; noted by Henri Estienne",
+        variants=(
+            PhraseVariant("avoir d\u2019autres chats \u00e0 fouetter", MatchType.exact),
+            PhraseVariant("j\u2019ai d\u2019autres chats \u00e0 fouetter", MatchType.inflectional_variant,
+                          note="1st-person: I have more important things to do."),
+            PhraseVariant("on a d\u2019autres chats \u00e0 fouetter", MatchType.inflectional_variant,
+                          note="Collective 1st-person."),
+            PhraseVariant("avoir d\u2019autres poissons \u00e0 frire", MatchType.confusable_not_same,
+                          note="Calque of the English idiom; less idiomatic in French."),
+        ),
+        tags=("priority", "dismissal", "cat-metaphor"),
+    ),
+
+    "fr_cest_la_croix_et_la_banniere": PhraseFamily(
+        id="fr_cest_la_croix_et_la_banniere",
+        language="fr",
+        canonical_form="c\u2019est la croix et la banni\u00e8re",
+        meaning="It\u2019s a real ordeal; it takes enormous effort to get something done.",
+        register="informal",
+        origin=(
+            "In medieval religious processions, the cross and banner were the most "
+            "ceremonially elaborate elements \u2014 heavy, difficult to carry, and "
+            "requiring special effort to deploy. Getting the cross and banner out "
+            "came to mean mounting a disproportionate effort for something that "
+            "should be simple."
+        ),
+        why_it_matters=(
+            "A vivid hyperbolic idiom with no English structural equivalent. "
+            "Learners need to understand the religious-procession origin to "
+            "appreciate why two church objects signal extreme difficulty."
+        ),
+        variants=(
+            PhraseVariant("c\u2019est la croix et la banni\u00e8re", MatchType.exact),
+            PhraseVariant("c\u2019\u00e9tait la croix et la banni\u00e8re", MatchType.inflectional_variant,
+                          note="Past tense: it was a real ordeal."),
+            PhraseVariant("quelle croix et banni\u00e8re", MatchType.modernized_variant,
+                          note="Exclamatory ellipsis common in speech."),
+        ),
+        tags=("effort", "ordeal", "religious-origin", "informal"),
+    ),
+
+    "fr_ne_pas_vendre_la_peau": PhraseFamily(
+        id="fr_ne_pas_vendre_la_peau",
+        language="fr",
+        canonical_form="il ne faut pas vendre la peau de l\u2019ours avant de l\u2019avoir tu\u00e9",
+        meaning="Don\u2019t count your chickens before they hatch; don\u2019t sell the bearskin before you\u2019ve killed the bear.",
+        register="neutral",
+        origin=(
+            "A fable-derived proverb. La Fontaine\u2019s L\u2019Ours et les deux Compagnons "
+            "(Fables, V.20, 1668) tells of two men who sell a bear\u2019s skin before "
+            "hunting it, then nearly die in the attempt. The moral gave French its "
+            "canonical form of this universal proverb."
+        ),
+        source_text="La Fontaine, Fables V.20 (1668)",
+        why_it_matters=(
+            "Contrasts instructively with the English \u2018count your chickens\u2019: "
+            "same lesson, completely different animal. Knowing the La Fontaine source "
+            "gives learners insight into how French proverbs often trace back to "
+            "classical fable tradition."
+        ),
+        variants=(
+            PhraseVariant(
+                "il ne faut pas vendre la peau de l\u2019ours avant de l\u2019avoir tu\u00e9",
+                MatchType.exact,
+            ),
+            PhraseVariant(
+                "vendre la peau de l\u2019ours",
+                MatchType.inflectional_variant,
+                note="Short form \u2014 full proverb implied by context.",
+            ),
+            PhraseVariant(
+                "ne vendons pas la peau de l\u2019ours",
+                MatchType.inflectional_variant,
+                note="Hortative: let\u2019s not count our chickens.",
+            ),
+        ),
+        tags=("proverb", "la-fontaine", "caution", "anticipation"),
+    ),
+
+    "fr_tenir_la_chandelle": PhraseFamily(
+        id="fr_tenir_la_chandelle",
+        language="fr",
+        canonical_form="tenir la chandelle",
+        meaning="To be a third wheel; to be the unwanted extra presence when two people want to be alone.",
+        register="informal",
+        origin=(
+            "Before electric lighting, a servant holding a candle (chandelle) was "
+            "present in intimate situations not from choice but from necessity. "
+            "The holder of the candle was an awkward, passive witness. "
+            "The idiom transferred to anyone who occupies a similarly unwanted "
+            "role in a romantic context."
+        ),
+        why_it_matters=(
+            "The English \u2018third wheel\u2019 and the French \u2018tenir la chandelle\u2019 "
+            "share the same social dynamic but completely different images. "
+            "The French version emphasises passive witnessing; the English emphasises "
+            "mechanical redundancy."
+        ),
+        variants=(
+            PhraseVariant("tenir la chandelle", MatchType.exact),
+            PhraseVariant("je tiens la chandelle", MatchType.inflectional_variant,
+                          note="1st-person: I\u2019m the third wheel here."),
+            PhraseVariant("tenu la chandelle", MatchType.inflectional_variant,
+                          note="Past participle."),
+            PhraseVariant("tenir le bougeoir", MatchType.orthographic_variant,
+                          note="Bougeoir (candlestick holder) for chandelle; rare variant."),
+        ),
+        tags=("romance", "social", "candle-metaphor", "informal"),
+    ),
+
+    "fr_avoir_le_vent_en_poupe": PhraseFamily(
+        id="fr_avoir_le_vent_en_poupe",
+        language="fr",
+        canonical_form="avoir le vent en poupe",
+        meaning="To have the wind in one\u2019s sails; to be riding high; to be on a roll.",
+        register="neutral",
+        origin=(
+            "Poupe (poop deck, the stern of a ship) catches the wind from behind, "
+            "propelling the vessel without effort. A ship with the wind en poupe "
+            "sails effortlessly. Figuratively: circumstances are favourable and "
+            "progress comes without resistance."
+        ),
+        why_it_matters=(
+            "A nautical idiom that remains common in journalism and formal writing, "
+            "unlike many sailing metaphors that have become archaic. "
+            "Learners should recognise it in economic and political contexts: "
+            "\u2018l\u2019\u00e9conomie a le vent en poupe\u2019 = the economy is booming."
+        ),
+        variants=(
+            PhraseVariant("avoir le vent en poupe", MatchType.exact),
+            PhraseVariant("il a le vent en poupe", MatchType.inflectional_variant,
+                          note="3rd-person singular: he\u2019s on a roll."),
+            PhraseVariant("l\u2019entreprise a le vent en poupe", MatchType.inflectional_variant,
+                          note="Institutional subject: the company is doing well."),
+            PhraseVariant("avoir le vent favorable", MatchType.confusable_not_same,
+                          note="Literal sailing phrase; lacks the idiomatic sense of sustained success."),
+        ),
+        tags=("success", "momentum", "nautical-metaphor"),
+    ),
+
+    "fr_prendre_ses_jambes_a_son_cou": PhraseFamily(
+        id="fr_prendre_ses_jambes_a_son_cou",
+        language="fr",
+        canonical_form="prendre ses jambes \u00e0 son cou",
+        meaning="To take to one\u2019s heels; to run away as fast as possible.",
+        register="neutral",
+        origin=(
+            "The image is physically impossible and deliberately so: wrapping one\u2019s "
+            "legs around one\u2019s own neck to run faster. The absurdity of the image "
+            "communicates the urgency and desperation of the flight. "
+            "Attested in French from the 17th century."
+        ),
+        source_text="Attested in French from the 17th century",
+        variants=(
+            PhraseVariant("prendre ses jambes \u00e0 son cou", MatchType.exact),
+            PhraseVariant("il a pris ses jambes \u00e0 son cou", MatchType.inflectional_variant,
+                          note="He took to his heels \u2014 past tense."),
+            PhraseVariant("elle a pris ses jambes \u00e0 son cou", MatchType.inflectional_variant,
+                          note="She took to her heels \u2014 past tense."),
+            PhraseVariant("prendre la fuite", MatchType.confusable_not_same,
+                          note="Neutral synonym \u2018to flee\u2019; lacks the vividness of the leg-neck image."),
+        ),
+        tags=("flight", "speed", "body-metaphor", "urgency"),
+    ),
+
+    "fr_il_pleut_des_cordes": PhraseFamily(
+        id="fr_il_pleut_des_cordes",
+        language="fr",
+        canonical_form="il pleut des cordes",
+        meaning="It\u2019s raining cats and dogs; it\u2019s pouring heavily.",
+        register="neutral",
+        origin=(
+            "Cordes (ropes) evoke the thick, vertical columns of heavy rain: "
+            "sheets of water falling as straight and dense as ropes. "
+            "The image is one of the most widespread in European weather idioms "
+            "and appears in French from the 17th century."
+        ),
+        why_it_matters=(
+            "French uses ropes where English uses cats and dogs and German uses "
+            "ropes too (es regnet Stricke). Cross-language comparison reveals that "
+            "the \u2018rope\u2019 image is pan-European; the English version is the outlier."
+        ),
+        variants=(
+            PhraseVariant("il pleut des cordes", MatchType.exact),
+            PhraseVariant("il pleut \u00e0 cordes", MatchType.orthographic_variant,
+                          note="Without \u2018des\u2019 \u2014 older form; slightly archaic."),
+            PhraseVariant("il pleut des hallebardes", MatchType.orthographic_variant,
+                          note="\u2018Hallebardes\u2019 (halberds, polearms) for cordes; more vivid and archaic."),
+            PhraseVariant("il tombe des cordes", MatchType.inflectional_variant,
+                          note="\u2018Tomber\u2019 for \u2018pleuvoir\u2019; common regional variant."),
+        ),
+        tags=("weather", "rain", "universal-idiom", "rope-metaphor"),
+    ),
+
+    "fr_faire_la_fine_bouche": PhraseFamily(
+        id="fr_faire_la_fine_bouche",
+        language="fr",
+        canonical_form="faire la fine bouche",
+        meaning="To be picky or fussy; to turn one\u2019s nose up at something.",
+        register="neutral",
+        origin=(
+            "Fine bouche (refined mouth) describes a person who purses their lips "
+            "in delicate disdain, refusing what is offered. Originally a culinary "
+            "metaphor for a finicky eater; extended to any fastidious refusal. "
+            "Often used with negation in a persuasive context: "
+            "\u2018ne faites pas la fine bouche\u2019 = don\u2019t be difficult."
+        ),
+        variants=(
+            PhraseVariant("faire la fine bouche", MatchType.exact),
+            PhraseVariant("ne faites pas la fine bouche", MatchType.inflectional_variant,
+                          note="Imperative with negation: don\u2019t be fussy."),
+            PhraseVariant("il fait la fine bouche", MatchType.inflectional_variant,
+                          note="3rd-person: he\u2019s being picky."),
+            PhraseVariant("elle fait la fine bouche", MatchType.inflectional_variant,
+                          note="3rd-person feminine."),
+            PhraseVariant("faire le difficile", MatchType.confusable_not_same,
+                          note="Neutral synonym; less vivid, no food connotation."),
+        ),
+        tags=("fussiness", "food-metaphor", "register", "refusal"),
+    ),
+
+    "fr_avoir_coeur_sur_main": PhraseFamily(
+        id="fr_avoir_coeur_sur_main",
+        language="fr",
+        canonical_form="avoir le c\u0153ur sur la main",
+        meaning="To be very generous; to be open-handed; to give freely.",
+        register="neutral",
+        origin=(
+            "The heart (c\u0153ur) held in or upon the open hand (main): "
+            "an image of offering one\u2019s innermost self freely to others. "
+            "Parallels the German \u2018Hand aufs Herz\u2019 but inverts the direction: "
+            "in the French idiom the heart is given outward; in the German the "
+            "hand pledges inward sincerity."
+        ),
+        why_it_matters=(
+            "Cross-language comparison with German \u2018Hand aufs Herz\u2019 reveals "
+            "how both cultures use the heart-hand combination for sincerity, "
+            "but in opposite directions. French = outward generosity; "
+            "German = inward pledge."
+        ),
+        variants=(
+            PhraseVariant("avoir le c\u0153ur sur la main", MatchType.exact),
+            PhraseVariant("il a le c\u0153ur sur la main", MatchType.inflectional_variant,
+                          note="3rd-person singular: he\u2019s very generous."),
+            PhraseVariant("elle a le c\u0153ur sur la main", MatchType.inflectional_variant,
+                          note="3rd-person feminine."),
+            PhraseVariant("avoir la main sur le c\u0153ur", MatchType.confusable_not_same,
+                          note="Inverted form; less standard. Can mean the same but sometimes signals formality pledge (cf. German Hand aufs Herz)."),
+        ),
+        confusables=("de_hand_aufs_herz",),
+        tags=("generosity", "heart-metaphor", "sincerity"),
+    ),
+
+    "fr_poser_les_jalons": PhraseFamily(
+        id="fr_poser_les_jalons",
+        language="fr",
+        canonical_form="poser les jalons",
+        meaning="To lay the groundwork; to set the stage; to prepare the foundation for something.",
+        register="neutral",
+        origin=(
+            "Jalons are surveying stakes \u2014 the markers driven into the ground to "
+            "define a line before construction begins. \u2018Poser les jalons\u2019 "
+            "entered figurative use in the 19th century for any preparatory action "
+            "that defines the path of a project. Common in political, journalistic, "
+            "and business French."
+        ),
+        why_it_matters=(
+            "A formal-neutral idiom with no quirky image: it simply means laying "
+            "groundwork. Learners often reach for pr\u00e9parer le terrain (prepare "
+            "the ground) instead, which is an acceptable synonym \u2014 but poser les jalons "
+            "is more specific to marking out a planned path."
+        ),
+        variants=(
+            PhraseVariant("poser les jalons", MatchType.exact),
+            PhraseVariant("poser les jalons de", MatchType.inflectional_variant,
+                          note="With genitive complement: \u2018lay the groundwork for X.\u2019"),
+            PhraseVariant("il a pos\u00e9 les jalons", MatchType.inflectional_variant,
+                          note="Past: he laid the groundwork."),
+            PhraseVariant("pr\u00e9parer le terrain", MatchType.confusable_not_same,
+                          note="Near-synonym \u2018prepare the ground\u2019; less precise about "
+                               "marking a specific path."),
+        ),
+        tags=("preparation", "planning", "formal", "surveying-metaphor"),
+    ),
 }
 
 

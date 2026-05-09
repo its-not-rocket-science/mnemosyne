@@ -208,6 +208,187 @@ class TestFrenchNuance:
         nuance = next(c for c in results if c.lesson_data.get("nuance_type") == "tu_vous_register")
         assert nuance.confidence == pytest.approx(0.90)
 
+    # ── Phrase families ───────────────────────────────────────────────────────
+
+    def test_phrase_family_casser_les_pieds(self, ext):
+        tokens = [_tok("tu"), _tok("me"), _tok("casses"), _tok("les"), _tok("pieds")]
+        results = ext.extract_nuance("tu me casses les pieds", tokens, [], "fr")
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(c.lesson_data["family_id"] == "fr_casser_les_pieds" for c in pf)
+
+    def test_phrase_family_poser_un_lapin(self, ext):
+        # m'a must be a single token so it normalises to "ma" and matches the variant
+        tokens = [_tok("il"), _tok("m'a"), _tok("posé"), _tok("un"), _tok("lapin")]
+        results = ext.extract_nuance("il m'a posé un lapin", tokens, [], "fr")
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(c.lesson_data["family_id"] == "fr_poser_un_lapin" for c in pf)
+
+    def test_phrase_family_avoir_le_cafard(self, ext):
+        # use canonical infinitive form to avoid j'/ai split issue
+        tokens = [_tok("avoir"), _tok("le"), _tok("cafard")]
+        results = ext.extract_nuance("avoir le cafard", tokens, [], "fr")
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(c.lesson_data["family_id"] == "fr_avoir_le_cafard" for c in pf)
+
+    def test_phrase_family_tomber_dans_les_pommes(self, ext):
+        tokens = [_tok("elle"), _tok("est"), _tok("tombée"), _tok("dans"),
+                  _tok("les"), _tok("pommes")]
+        results = ext.extract_nuance(
+            "elle est tombée dans les pommes", tokens, [], "fr"
+        )
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(c.lesson_data["family_id"] == "fr_tomber_dans_les_pommes" for c in pf)
+
+    def test_phrase_family_revenons_a_nos_moutons(self, ext):
+        tokens = [_tok("revenons"), _tok("à"), _tok("nos"), _tok("moutons")]
+        results = ext.extract_nuance("revenons à nos moutons", tokens, [], "fr")
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(c.lesson_data["family_id"] == "fr_revenons_a_nos_moutons" for c in pf)
+
+    def test_phrase_family_noyer_le_poisson(self, ext):
+        tokens = [_tok("il"), _tok("noie"), _tok("le"), _tok("poisson")]
+        results = ext.extract_nuance("il noie le poisson", tokens, [], "fr")
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(c.lesson_data["family_id"] == "fr_noyer_le_poisson" for c in pf)
+
+    def test_phrase_family_pain_sur_la_planche(self, ext):
+        tokens = [_tok("on"), _tok("a"), _tok("du"), _tok("pain"),
+                  _tok("sur"), _tok("la"), _tok("planche")]
+        results = ext.extract_nuance(
+            "on a du pain sur la planche", tokens, [], "fr"
+        )
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(
+            c.lesson_data["family_id"] == "fr_avoir_du_pain_sur_la_planche"
+            for c in pf
+        )
+
+    def test_phrase_family_carottes_cuites(self, ext):
+        tokens = [_tok("les"), _tok("carottes"), _tok("sont"), _tok("cuites")]
+        results = ext.extract_nuance("les carottes sont cuites", tokens, [], "fr")
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(
+            c.lesson_data["family_id"] == "fr_les_carottes_sont_cuites" for c in pf
+        )
+
+    def test_phrase_family_pieds_dans_le_plat(self, ext):
+        tokens = [_tok("il"), _tok("a"), _tok("mis"), _tok("les"), _tok("pieds"),
+                  _tok("dans"), _tok("le"), _tok("plat")]
+        results = ext.extract_nuance(
+            "il a mis les pieds dans le plat", tokens, [], "fr"
+        )
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(
+            c.lesson_data["family_id"] == "fr_mettre_les_pieds_dans_le_plat"
+            for c in pf
+        )
+
+    def test_phrase_family_autres_chats(self, ext):
+        # j'ai and d'autres must be single tokens so apostrophes normalise correctly
+        tokens = [_tok("j'ai"), _tok("d'autres"), _tok("chats"), _tok("à"), _tok("fouetter")]
+        results = ext.extract_nuance(
+            "j'ai d'autres chats à fouetter", tokens, [], "fr"
+        )
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(
+            c.lesson_data["family_id"] == "fr_avoir_dautres_chats" for c in pf
+        )
+
+    def test_phrase_family_croix_et_banniere(self, ext):
+        # c'est as single token normalises to "cest" matching the variant key
+        tokens = [_tok("c'est"), _tok("la"), _tok("croix"),
+                  _tok("et"), _tok("la"), _tok("bannière")]
+        results = ext.extract_nuance(
+            "c'est la croix et la bannière", tokens, [], "fr"
+        )
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(
+            c.lesson_data["family_id"] == "fr_cest_la_croix_et_la_banniere"
+            for c in pf
+        )
+
+    def test_phrase_family_peau_de_lours(self, ext):
+        # l'ours as single token normalises to "lours" matching the variant key
+        tokens = [_tok("vendre"), _tok("la"), _tok("peau"), _tok("de"), _tok("l'ours")]
+        results = ext.extract_nuance(
+            "vendre la peau de l'ours", tokens, [], "fr"
+        )
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(
+            c.lesson_data["family_id"] == "fr_ne_pas_vendre_la_peau" for c in pf
+        )
+
+    def test_phrase_family_tenir_la_chandelle(self, ext):
+        tokens = [_tok("je"), _tok("tiens"), _tok("la"), _tok("chandelle")]
+        results = ext.extract_nuance("je tiens la chandelle", tokens, [], "fr")
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(
+            c.lesson_data["family_id"] == "fr_tenir_la_chandelle" for c in pf
+        )
+
+    def test_phrase_family_vent_en_poupe(self, ext):
+        tokens = [_tok("il"), _tok("a"), _tok("le"), _tok("vent"),
+                  _tok("en"), _tok("poupe")]
+        results = ext.extract_nuance("il a le vent en poupe", tokens, [], "fr")
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(
+            c.lesson_data["family_id"] == "fr_avoir_le_vent_en_poupe" for c in pf
+        )
+
+    def test_phrase_family_jambes_a_son_cou(self, ext):
+        tokens = [_tok("il"), _tok("a"), _tok("pris"), _tok("ses"),
+                  _tok("jambes"), _tok("à"), _tok("son"), _tok("cou")]
+        results = ext.extract_nuance(
+            "il a pris ses jambes à son cou", tokens, [], "fr"
+        )
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(
+            c.lesson_data["family_id"] == "fr_prendre_ses_jambes_a_son_cou"
+            for c in pf
+        )
+
+    def test_phrase_family_pleut_des_cordes(self, ext):
+        tokens = [_tok("il"), _tok("pleut"), _tok("des"), _tok("cordes")]
+        results = ext.extract_nuance("il pleut des cordes", tokens, [], "fr")
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(
+            c.lesson_data["family_id"] == "fr_il_pleut_des_cordes" for c in pf
+        )
+
+    def test_phrase_family_fine_bouche(self, ext):
+        tokens = [_tok("il"), _tok("fait"), _tok("la"), _tok("fine"), _tok("bouche")]
+        results = ext.extract_nuance("il fait la fine bouche", tokens, [], "fr")
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(
+            c.lesson_data["family_id"] == "fr_faire_la_fine_bouche" for c in pf
+        )
+
+    def test_phrase_family_coeur_sur_main(self, ext):
+        tokens = [_tok("il"), _tok("a"), _tok("le"), _tok("cœur"),
+                  _tok("sur"), _tok("la"), _tok("main")]
+        results = ext.extract_nuance(
+            "il a le cœur sur la main", tokens, [], "fr"
+        )
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(
+            c.lesson_data["family_id"] == "fr_avoir_coeur_sur_main" for c in pf
+        )
+
+    def test_phrase_family_poser_les_jalons(self, ext):
+        tokens = [_tok("il"), _tok("a"), _tok("posé"), _tok("les"), _tok("jalons")]
+        results = ext.extract_nuance("il a posé les jalons", tokens, [], "fr")
+        pf = [c for c in results if c.type == "phrase_family"]
+        assert any(
+            c.lesson_data["family_id"] == "fr_poser_les_jalons" for c in pf
+        )
+
+    def test_phrase_family_cross_confusable_registered(self, ext):
+        # fr_avoir_coeur_sur_main declares de_hand_aufs_herz as confusable
+        from backend.dictionary.phrase_families import lookup_family_by_id
+        fam = lookup_family_by_id("fr_avoir_coeur_sur_main")
+        assert fam is not None
+        assert "de_hand_aufs_herz" in fam.lesson_data.get("confusables", [])
+
 
 # ── German ────────────────────────────────────────────────────────────────────
 
