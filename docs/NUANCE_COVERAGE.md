@@ -22,7 +22,7 @@ table from live plugin declarations.
 
 | Language | Idioms | Phrase families | Etymology | Grammar nuance | Formality/register | Pronunciation TTS | Transliteration | Literary/cultural | Tests |
 |----------|--------|-----------------|-----------|----------------|--------------------|-------------------|-----------------|-------------------|-------|
-| en (English) | stub | none | none | none | none | partial | none | none | 8 |
+| en (English) | stub | stub | none | none | none | partial | none | none | 8 |
 | es (Spanish) | partial | **partial** | **partial** | partial | stub | partial | none | none | **26** |
 | fr (French) | partial | stub | none | partial | stub | partial | none | none | 9 |
 | de (German) | partial | **partial** | **partial** | partial | stub | partial | none | none | **24** |
