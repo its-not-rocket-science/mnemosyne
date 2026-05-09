@@ -275,7 +275,7 @@ class PortuguesePlugin:
             phrase_families="stub",      # no phrase catalog yet; extractor wired
             literary_references="none",
             cultural_references="none",
-            etymology="none",
+            etymology="stub",            # 18-entry catalog; extractor wired
             formality_register="partial", # você/tu distinction; extractor wired
             grammar_nuance="partial",    # tense/mood/person/number drilling
             pronunciation_tts="partial", # browser TTS reliable for pt
