@@ -638,12 +638,29 @@ const aboutTabs   = document.querySelectorAll('.about-dialog__tab')
 const aboutPanels = document.querySelectorAll('#about-dialog [role="tabpanel"]')
 aboutTabs.forEach(tab => {
   tab.addEventListener('click', () => {
-    aboutTabs.forEach(t => t.setAttribute('aria-selected', 'false'))
+    aboutTabs.forEach(t => {
+      t.setAttribute('aria-selected', 'false')
+      t.tabIndex = -1
+    })
     aboutPanels.forEach(p => { p.hidden = true })
     tab.setAttribute('aria-selected', 'true')
+    tab.tabIndex = 0
     const panel = document.getElementById(tab.getAttribute('aria-controls'))
     if (panel) panel.hidden = false
   })
+})
+
+// Arrow-key navigation inside the about-dialog tablist (APG tab pattern).
+document.querySelector('.about-dialog__tabs')?.addEventListener('keydown', (e) => {
+  const tabs = [...aboutTabs]
+  const idx  = tabs.indexOf(document.activeElement)
+  if (idx === -1) return
+  if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+    e.preventDefault()
+    const next = tabs[(idx + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length]
+    next.focus()
+    next.click()
+  }
 })
 
 // ── GDPR dialog ───────────────────────────────────────────────────────────────
