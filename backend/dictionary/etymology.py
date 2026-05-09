@@ -1037,6 +1037,182 @@ _CURATED: list[EtymologyEntry] = [
         cognates=["French fiasco", "English fiasco (borrowed)", "German Flasche (bottle)"],
         semantic_shift="'glass bottle' → 'complete failure or disaster'",
     ),
+    EtymologyEntry(
+        language="it", lemma="strada",
+        origin_summary=(
+            "From Latin strata (via) 'paved road,' past participle of sternere 'to lay flat, to pave.' "
+            "The same root gives English street (via Old English stræt) and the German Straße."
+        ),
+        roots=["Latin strata via (paved road)", "Latin sternere (to lay flat, spread out)"],
+        cognates=["English street", "German Straße", "Spanish estrada", "French route (divergent)"],
+        semantic_shift="'paved surface' → 'road, street'",
+    ),
+    EtymologyEntry(
+        language="it", lemma="parola",
+        origin_summary=(
+            "From Late Latin parabola 'speech, saying,' itself from Greek parabolē 'comparison, parable.' "
+            "The Greek original is para (beside) + bolē (throw) — a 'throwing beside' or comparison. "
+            "French parole (word, speech) and Spanish palabra share this origin."
+        ),
+        roots=["Greek parabolē (comparison, parable)", "Latin parabola (speech)"],
+        cognates=["French parole (word)", "Spanish palabra", "English parable, parabola (same Greek root)"],
+        semantic_shift="'comparison, parable' → 'speech' → 'word'",
+    ),
+    EtymologyEntry(
+        language="it", lemma="influenza",
+        origin_summary=(
+            "From Medieval Latin influentia 'flowing in,' from influere 'to flow into.' "
+            "Medieval astrologers attributed disease epidemics to the 'influence' of stars. "
+            "English borrowed the word during the 1743 epidemic; the abbreviation flu dates to 1839."
+        ),
+        roots=["Latin influere (to flow in)", "Latin fluere (to flow)"],
+        cognates=["English influenza, flu, influence (all from same root)", "French grippe (different)"],
+        semantic_shift="'flowing in (of celestial bodies)' → 'epidemic caused by stellar influence' → 'the disease itself'",
+    ),
+    EtymologyEntry(
+        language="it", lemma="malaria",
+        origin_summary=(
+            "Compound of Italian mala 'bad' + aria 'air.' Before germ theory, "
+            "the disease was believed to come from swamp vapors. "
+            "The word entered English in the 18th century; the actual cause (Plasmodium parasite) "
+            "was not identified until 1880."
+        ),
+        roots=["Latin mala (bad, evil)", "Latin aer/aria (air)"],
+        cognates=["English malaria (borrowed directly)", "Italian aria (also means melody in music)"],
+        semantic_shift="'bad air (miasma)' → the disease itself",
+    ),
+    EtymologyEntry(
+        language="it", lemma="bravo",
+        origin_summary=(
+            "From Italian bravo 'brave, skilled, bold,' possibly from Latin barbarus 'foreign, barbarous.' "
+            "Bravo is the masculine form; brava is used for female performers. "
+            "In 16th-century Italian, bravo meant a hired assassin — the 'brave' one for hire."
+        ),
+        roots=["Possibly Latin barbarus (foreign, barbarous)"],
+        cognates=["Spanish bravo (fierce, brave)", "French brave", "English brave"],
+        semantic_shift="'barbarous, ferocious' → 'brave' → 'exclamation of praise'",
+    ),
+    EtymologyEntry(
+        language="it", lemma="vendetta",
+        origin_summary=(
+            "From Italian vendetta 'revenge,' from Latin vindicta 'vengeance, protection.' "
+            "Vindicta shares its root with vindicare 'to claim, avenge' — the source of "
+            "English vindicate, vindictive, and avenge."
+        ),
+        roots=["Latin vindicta (vengeance, protection)", "Latin vindicare (to claim, avenge)"],
+        cognates=["English vindictive, vindicate (same Latin root)", "Spanish venganza (different)"],
+        semantic_shift="'legal vengeance' → 'blood feud between families'",
+    ),
+    EtymologyEntry(
+        language="it", lemma="diva",
+        origin_summary=(
+            "From Latin diva 'goddess,' feminine of divus 'divine, god.' "
+            "Applied to great opera singers in the 19th century as a term of reverence. "
+            "Modern usage extended to any dominant female performer or demanding celebrity."
+        ),
+        roots=["Latin divus/diva (divine, god/goddess)"],
+        cognates=["English divine, deity (related)", "Spanish diva", "French diva"],
+        semantic_shift="'goddess' → 'celebrated opera soprano' → 'demanding celebrity'",
+    ),
+    EtymologyEntry(
+        language="it", lemma="graffiti",
+        origin_summary=(
+            "Plural of graffito 'little scratch,' from graffio 'scratch,' from graffiare 'to scratch.' "
+            "Ultimately from Greek graphein 'to write' — the same root as graph, biography, and paragraph. "
+            "Archaeological graffiti survive from Pompeii."
+        ),
+        roots=["Greek graphein (to write, scratch)", "Italian graffio (scratch)"],
+        cognates=["English graph, biography, paragraph (all from graphein)", "French graffiti (borrowed)"],
+        semantic_shift="'scratched inscription' → 'unauthorized public drawing or writing'",
+    ),
+    EtymologyEntry(
+        language="it", lemma="soprano",
+        origin_summary=(
+            "From Italian soprano 'above, uppermost,' from sopra 'above,' from Latin supra. "
+            "Applied to the highest vocal register in the 16th century. "
+            "Latin supra also gives supranational, suprarenal, and the French sur-."
+        ),
+        roots=["Latin supra (above, over)"],
+        cognates=["English supreme, supranational (from Latin supra)", "French sur- (prefix)"],
+        semantic_shift="'uppermost' → 'highest singing voice'",
+    ),
+    EtymologyEntry(
+        language="it", lemma="imbroglio",
+        origin_summary=(
+            "From Italian imbrogliare 'to tangle, to confuse,' from in- + broglio 'tangle, muddle.' "
+            "Entered English in the 18th century to mean a complicated misunderstanding or political tangle. "
+            "Broglio itself may derive from Old French brouiller 'to mix up.'"
+        ),
+        roots=["Italian broglio (tangle, muddle)", "Old French brouiller (to mix up)"],
+        cognates=["English embroil (from same Old French root)", "French embrouiller (to tangle)"],
+        semantic_shift="'physical tangle' → 'confused situation, political scandal'",
+    ),
+    EtymologyEntry(
+        language="it", lemma="casino",
+        origin_summary=(
+            "Diminutive of Italian casa 'house,' from Latin casa 'cottage, hut.' "
+            "Originally a small country house or social club. In 18th-century Venice, "
+            "casini were private clubs for gambling. English borrowed the gambling sense in the 19th century."
+        ),
+        roots=["Latin casa (cottage, hut)", "Italian casa (house)"],
+        cognates=["Spanish casa (house)", "French maison (different origin)", "English casino (borrowed)"],
+        semantic_shift="'little house' → 'private social club' → 'gambling establishment'",
+    ),
+    EtymologyEntry(
+        language="it", lemma="balcone",
+        origin_summary=(
+            "From Italian balcone 'large window, scaffold,' from Langobardic *balko 'beam.' "
+            "The same Germanic root gives English balk and German Balken (beam). "
+            "English balcony was borrowed from Italian in the 17th century."
+        ),
+        roots=["Langobardic *balko (beam)", "Germanic root *balk-"],
+        cognates=["English balcony (borrowed), balk", "German Balken (beam)"],
+        semantic_shift="'beam (construction)' → 'elevated platform on a building'",
+    ),
+    EtymologyEntry(
+        language="it", lemma="bello",
+        origin_summary=(
+            "From Latin bellus 'beautiful, fine, handsome,' a diminutive of bonus 'good.' "
+            "In Vulgar Latin it replaced the classical pulcher/pulchra. "
+            "The root gives Spanish bello/bella and French belle, as well as English belle and belladonna."
+        ),
+        roots=["Latin bellus (beautiful)", "Latin bonus (good)"],
+        cognates=["Spanish bello/bella", "French belle", "English belle, belladonna (deadly nightshade = 'beautiful lady')"],
+        semantic_shift="'good (diminutive)' → 'pretty, beautiful'",
+    ),
+    EtymologyEntry(
+        language="it", lemma="chiesa",
+        origin_summary=(
+            "From Latin ecclesia, borrowed from Greek ekklēsia 'assembly of citizens,' "
+            "from ek (out) + kalein (to call) — those 'called out' to assemble. "
+            "Gives Spanish iglesia, French église, and the English prefix ecclesi- (ecclesiastical)."
+        ),
+        roots=["Greek ekklēsia (assembly)", "Greek ek + kalein (to call out)"],
+        cognates=["Spanish iglesia", "French église", "English ecclesiastical"],
+        semantic_shift="'civic assembly (called out)' → 'Christian congregation' → 'church building'",
+    ),
+    EtymologyEntry(
+        language="it", lemma="soldato",
+        origin_summary=(
+            "From Late Latin solidatus 'one paid in solidi,' from solidus, the gold coin of the Roman Empire. "
+            "A soldier was literally someone paid in solid gold coins. "
+            "English soldier came via Old French soldat from the same Latin root."
+        ),
+        roots=["Latin solidus (gold coin)", "Late Latin solidatus (paid in solidi)"],
+        cognates=["English soldier (via French)", "Spanish soldado", "French soldat"],
+        semantic_shift="'one paid a solidus' → 'fighting man' → 'soldier'",
+    ),
+    EtymologyEntry(
+        language="it", lemma="mascara",
+        origin_summary=(
+            "From Italian maschera 'mask,' from Medieval Latin masca or Arabic maskharah 'buffoon, mockery.' "
+            "Mascara was originally theatrical face paint. "
+            "Italian masquerade and English mask share this root."
+        ),
+        roots=["Arabic maskharah (buffoon, mockery)", "Medieval Latin masca (mask)"],
+        cognates=["English mask, masquerade (same root)", "Spanish máscara", "French masque"],
+        semantic_shift="'buffoon, mockery' → 'face mask' → 'eye cosmetic'",
+    ),
 
     # ── Portuguese ───────────────────────────────────────────────────────────
     EtymologyEntry(
@@ -1059,6 +1235,180 @@ _CURATED: list[EtymologyEntry] = [
         ),
         roots=["Latin fatum (fate)", "Latin fari (to speak)"],
         cognates=["Spanish hado", "French fée (fairy)", "English fate, fatal"],
+    ),
+    EtymologyEntry(
+        language="pt", lemma="amor",
+        origin_summary=(
+            "From Latin amor 'love,' from amare 'to love.' "
+            "One of the most productive Latin roots: gives English amorous, enamour, amateur "
+            "(one who does something for love), and the name Amos. "
+            "The Roman god Amor is the equivalent of Greek Eros."
+        ),
+        roots=["Latin amor (love)", "Latin amare (to love)"],
+        cognates=["Spanish amor", "French amour", "Italian amore", "English amorous, amateur"],
+        semantic_shift="'love (noun)' — extremely stable across 2000 years",
+    ),
+    EtymologyEntry(
+        language="pt", lemma="pessoa",
+        origin_summary=(
+            "From Latin persona 'mask worn by an actor,' then 'character,' then 'person.' "
+            "Greek prosopon meant the theatrical mask; persona was the Latin translation. "
+            "Gives English person, personal, personnel, persona. "
+            "Fernando Pessoa, Portugal's great modernist poet, bore this common noun as a surname."
+        ),
+        roots=["Latin persona (actor's mask, character)", "Possibly Etruscan phersu (mask)"],
+        cognates=["English person, personal, personnel, persona", "Spanish persona", "French personne"],
+        semantic_shift="'actor's mask' → 'role played' → 'individual human being'",
+    ),
+    EtymologyEntry(
+        language="pt", lemma="falar",
+        origin_summary=(
+            "From Latin fabulare 'to tell stories, to converse,' from fabula 'story, tale.' "
+            "Classical Latin loqui/dicere were replaced in Vulgar Latin by fabulare in Iberia. "
+            "The same root gives English fable, fabulous, and confabulate."
+        ),
+        roots=["Latin fabulare (to tell stories)", "Latin fabula (story, tale)"],
+        cognates=["English fable, fabulous (same Latin root)", "Spanish hablar (same root)"],
+        semantic_shift="'to tell fables/stories' → 'to speak, to talk'",
+    ),
+    EtymologyEntry(
+        language="pt", lemma="trabalho",
+        origin_summary=(
+            "From Latin tripalium, a torture instrument made of three stakes (tri + palus). "
+            "To 'tripaliate' originally meant to suffer or torture; it shifted to 'to labor hard.' "
+            "French travail shares this origin, as does English travel — medieval journeys were an ordeal."
+        ),
+        roots=["Latin tripalium (three-stake torture instrument)", "Latin tri (three) + palus (stake)"],
+        cognates=["French travail (work)", "English travel (same root — journeys as ordeal)", "Spanish trabajo"],
+        semantic_shift="'torture instrument' → 'to suffer' → 'to work hard'",
+    ),
+    EtymologyEntry(
+        language="pt", lemma="guerra",
+        origin_summary=(
+            "From Frankish *werra 'strife, confusion,' from a Germanic root related to English war. "
+            "Classical Latin had bellum for war; Germanic *werra displaced it in Vulgar Latin, "
+            "giving rise to Spanish guerra, Italian guerra, and French guerre."
+        ),
+        roots=["Frankish *werra (strife, confusion)", "Germanic *werraz (to confuse)"],
+        cognates=["English war (from same Germanic root)", "Spanish guerra", "Italian guerra", "French guerre"],
+        semantic_shift="'strife, confusion' → 'armed conflict'",
+    ),
+    EtymologyEntry(
+        language="pt", lemma="coração",
+        origin_summary=(
+            "From Latin cor, cordis 'heart.' The diminutive coratione entered Vulgar Latin. "
+            "The root cor/cord- appears in English cordial (from the heart), courage (from cœur), "
+            "accord, discord, and even record (to 'take to heart')."
+        ),
+        roots=["Latin cor, cordis (heart)", "Latin coratione (little heart)"],
+        cognates=["English cordial, courage, accord, discord, record (all from cor/cœur)", "Spanish corazón", "Italian cuore"],
+    ),
+    EtymologyEntry(
+        language="pt", lemma="mundo",
+        origin_summary=(
+            "From Latin mundus 'world, universe,' possibly borrowed from Etruscan. "
+            "In classical Latin, mundus also meant 'clean, elegant' (mundus as adjective). "
+            "The same root gives English mundane (worldly, ordinary)."
+        ),
+        roots=["Latin mundus (world, universe; also: clean, elegant)"],
+        cognates=["English mundane (worldly)", "Spanish mundo", "Italian mondo", "French monde"],
+        semantic_shift="'clean, ordered' → 'the ordered cosmos' → 'the world'",
+    ),
+    EtymologyEntry(
+        language="pt", lemma="escola",
+        origin_summary=(
+            "From Latin schola, borrowed from Greek skholē 'leisure, free time.' "
+            "For ancient Greeks, philosophical discussion was the proper use of leisure. "
+            "Gives English school, scholar; the semantic journey from 'leisure' to 'learning' "
+            "reflects the Greek ideal of intellectual freedom."
+        ),
+        roots=["Greek skholē (leisure, rest)", "Latin schola (school)"],
+        cognates=["English school, scholar (same Greek root)", "Spanish escuela", "Italian scuola"],
+        semantic_shift="'leisure, free time' → 'philosophical discussion' → 'place of learning'",
+    ),
+    EtymologyEntry(
+        language="pt", lemma="livro",
+        origin_summary=(
+            "From Latin liber 'book,' originally meaning the inner bark of a tree — "
+            "the surface on which Romans wrote before papyrus became widespread. "
+            "The same root gives English library, libel, and the name Liber (a Roman god)."
+        ),
+        roots=["Latin liber (inner bark, book)"],
+        cognates=["English library (from liber)", "Spanish libro", "Italian libro", "French livre"],
+        semantic_shift="'inner bark (writing surface)' → 'written document' → 'book'",
+    ),
+    EtymologyEntry(
+        language="pt", lemma="nome",
+        origin_summary=(
+            "From Latin nomen 'name, noun,' from Proto-Indo-European *h₃neh₃mn. "
+            "One of the most ancient words in the language: the PIE root appears in "
+            "Greek onoma (name), Sanskrit nāman, English name, and German Name."
+        ),
+        roots=["Latin nomen (name, noun)", "Proto-Indo-European *h₃neh₃mn (name)"],
+        cognates=["English name, noun, nominal (same root)", "Spanish nombre", "French nom", "Italian nome"],
+    ),
+    EtymologyEntry(
+        language="pt", lemma="mar",
+        origin_summary=(
+            "From Latin mare 'sea.' Portugal's identity as a seafaring nation makes this "
+            "one of its most culturally weighted words. The root gives English marine, "
+            "maritime, mermaid (literally 'sea-maid'), and the name Mary/Maria."
+        ),
+        roots=["Latin mare (sea)"],
+        cognates=["English marine, maritime, mermaid (sea + maid)", "Spanish mar", "Italian mare", "French mer"],
+    ),
+    EtymologyEntry(
+        language="pt", lemma="tempo",
+        origin_summary=(
+            "From Latin tempus 'time, season,' from Proto-Indo-European *temp- 'to stretch.' "
+            "Like Spanish tiempo, Portuguese tempo covers both 'time' and 'weather.' "
+            "The root gives English temporal, temporary, contemporary, and the musical term tempo."
+        ),
+        roots=["Latin tempus (time, season)", "Proto-Indo-European *temp- (to stretch)"],
+        cognates=["English temporal, temporary, tempo (all from tempus)", "Spanish tiempo", "Italian tempo"],
+        semantic_shift="'stretched span' → 'time' (and in Iberian languages, also 'weather')",
+    ),
+    EtymologyEntry(
+        language="pt", lemma="mão",
+        origin_summary=(
+            "From Latin manus 'hand.' One of the most productive Latin roots: gives "
+            "English manual, manufacture (hand-made), mandate, manuscript (hand-written), "
+            "manipulate, maintain, and manage."
+        ),
+        roots=["Latin manus (hand)"],
+        cognates=["English manual, manufacture, manuscript, manipulate (all from manus)", "Spanish mano", "Italian mano"],
+    ),
+    EtymologyEntry(
+        language="pt", lemma="saber",
+        origin_summary=(
+            "From Latin sapere 'to taste, to have good taste, to be wise.' "
+            "The same root gives English sapient (wise), sage (the wise person), "
+            "and savor. The semantic link is tasting → judging → knowing."
+        ),
+        roots=["Latin sapere (to taste, to be wise)"],
+        cognates=["English sapient, sage, savor (same root)", "Spanish saber", "Italian sapere"],
+        semantic_shift="'to taste' → 'to discern flavors' → 'to know, to be wise'",
+    ),
+    EtymologyEntry(
+        language="pt", lemma="noite",
+        origin_summary=(
+            "From Latin noctem (accusative of nox) 'night.' "
+            "One of the oldest words: the PIE root *nókʷts appears in Greek nyx, "
+            "English night, German Nacht, and Sanskrit nakti."
+        ),
+        roots=["Latin nox/noctem (night)", "Proto-Indo-European *nókʷts (night)"],
+        cognates=["English night, nocturnal (from nox)", "Spanish noche", "Italian notte", "French nuit"],
+    ),
+    EtymologyEntry(
+        language="pt", lemma="querer",
+        origin_summary=(
+            "From Latin quaerere 'to seek, to inquire, to ask.' "
+            "The shift from 'to seek' to 'to want' is semantic narrowing. "
+            "The same Latin root gives English query, quest, question, inquest, and acquire."
+        ),
+        roots=["Latin quaerere (to seek, inquire)"],
+        cognates=["English query, quest, question, inquest, acquire (all from quaerere)", "Spanish querer"],
+        semantic_shift="'to seek, to inquire' → 'to desire, to want'",
     ),
 
     # ── Spanish — extended ───────────────────────────────────────────────────
@@ -1337,6 +1687,164 @@ _CURATED: list[EtymologyEntry] = [
         ),
         roots=["Turkic tavar (goods, wares)"],
         semantic_shift="'merchant's travel companion' → 'political comrade'",
+    ),
+    EtymologyEntry(
+        language="ru", lemma="душа",
+        origin_summary=(
+            "From Proto-Slavic *duša 'soul, breath,' related to *duxъ 'spirit, breath.' "
+            "In Russian culture, душа carries far more weight than the English 'soul' — "
+            "it denotes the innermost emotional self, the seat of authentic feeling. "
+            "Russian широкая душа ('wide soul') means generosity and openness."
+        ),
+        roots=["Proto-Slavic *duša (soul, breath)", "Proto-Slavic *duxъ (spirit, breath)"],
+        cognates=["Polish dusza", "Czech duše", "Serbian duša"],
+        semantic_shift="'breath' → 'animating spirit' → 'inner emotional self'",
+    ),
+    EtymologyEntry(
+        language="ru", lemma="слово",
+        origin_summary=(
+            "From Proto-Slavic *slovo 'word,' related to *slava 'glory, fame' and *slušati 'to listen.' "
+            "The cluster *slav- is at the root of Slav and Slavic: the Slavs were 'those who speak [our language].' "
+            "The related slava appears in names like Yaroslav, Vladislav, and Stanislav."
+        ),
+        roots=["Proto-Slavic *slovo (word)", "Proto-Slavic *slava (glory, fame)"],
+        cognates=["Polish słowo", "Czech slovo", "Slavic names ending in -slav (glory in words)"],
+    ),
+    EtymologyEntry(
+        language="ru", lemma="мир",
+        origin_summary=(
+            "A uniquely ambiguous word: before the 1918 spelling reform, мiръ meant 'world/commune' "
+            "and миръ meant 'peace.' The reform merged both spellings into мир. "
+            "Tolstoy's War and Peace (Война и мiръ) originally meant 'War and Society' — "
+            "modern readers often read 'war and peace.' The ambiguity is irreducible."
+        ),
+        roots=["Proto-Slavic *mirъ (commune, agreement, peace)"],
+        cognates=["Polish mir (peace)", "Czech mír (peace)", "Serbian мир"],
+        semantic_shift="'commune, community agreement' → both 'peace' and 'the world/society'",
+    ),
+    EtymologyEntry(
+        language="ru", lemma="хлеб",
+        origin_summary=(
+            "Borrowed from Proto-Germanic *hlaibaz 'loaf of bread' — the same root as "
+            "English loaf and German Laib (loaf). The borrowing happened in early medieval contact "
+            "between Slavic and Germanic peoples. In Russian culture, bread (хлеб) represents "
+            "life itself; хлеб-соль (bread-and-salt) is the traditional welcoming gift."
+        ),
+        roots=["Proto-Germanic *hlaibaz (loaf of bread)"],
+        cognates=["English loaf (same Germanic root)", "German Laib (loaf)", "Polish chleb", "Ukrainian хліб"],
+        semantic_shift="Germanic 'loaf' → Slavic 'bread (general)'",
+    ),
+    EtymologyEntry(
+        language="ru", lemma="самовар",
+        origin_summary=(
+            "Compound of Russian само (self) + варить (to boil): literally 'self-boiler.' "
+            "The samovar heated water by an internal charcoal tube and kept tea hot for hours. "
+            "It became a symbol of Russian domestic life and hospitality. "
+            "The first Russian samovar workshops appeared in Tula in the 18th century."
+        ),
+        roots=["Russian само (self) + варить (to boil/cook)", "Cognate with English warm"],
+        cognates=["English warm (from the same PIE root as варить)", "German wärmen"],
+        semantic_shift="'self-boiling vessel' → symbol of Russian domestic hospitality",
+    ),
+    EtymologyEntry(
+        language="ru", lemma="воля",
+        origin_summary=(
+            "From Proto-Slavic *volja 'will, freedom,' from *velěti 'to command, to wish.' "
+            "Воля in Russian encompasses both 'will' (strength of determination) and 'freedom' "
+            "(liberty) — a duality that reflects the historical tension between individual autonomy "
+            "and collective authority in Russian culture."
+        ),
+        roots=["Proto-Slavic *volja (will, freedom)", "Proto-Slavic *velěti (to command, to wish)"],
+        cognates=["Polish wola (will)", "Czech vůle (will)", "English well (as in 'to will')"],
+        semantic_shift="'wish, command' → 'will (determination)' and 'freedom (liberation)'",
+    ),
+    EtymologyEntry(
+        language="ru", lemma="судьба",
+        origin_summary=(
+            "From суд 'judgment, court,' from Proto-Slavic *sǫdъ 'judgment.' "
+            "Судьба literally means 'that which has been judged (fated).' "
+            "The root *sǫd- appears in суд (court), судья (judge), and осудить (to condemn)."
+        ),
+        roots=["Proto-Slavic *sǫdъ (judgment)", "Russian суд (court, judgment)"],
+        cognates=["Polish sąd (court)", "Czech soud (court)", "Serbian суд"],
+        semantic_shift="'judgment (legal verdict)' → 'fate, destiny'",
+    ),
+    EtymologyEntry(
+        language="ru", lemma="путь",
+        origin_summary=(
+            "From Proto-Slavic *pǫtь 'path, way,' related to *pati 'to go.' "
+            "In Russian, путь has both literal (road, route) and philosophical (life's path, "
+            "spiritual journey) meanings. The Soviet-era Sputnik ('fellow traveler') contains "
+            "the same root: s- (with) + put' (path)."
+        ),
+        roots=["Proto-Slavic *pǫtь (path, way)"],
+        cognates=["Sputnik (s + put' = fellow traveler)", "Polish podróż (journey)", "Serbian пут"],
+        semantic_shift="'physical path/road' → 'life journey, spiritual way'",
+    ),
+    EtymologyEntry(
+        language="ru", lemma="земля",
+        origin_summary=(
+            "From Proto-Slavic *zemlja 'earth, ground, land,' from Proto-Indo-European *dʰéǵʰōm. "
+            "The same ancient root gives Latin humus (soil), homo (human — 'earthling'), "
+            "Greek khthōn (earth), English humble and human."
+        ),
+        roots=["Proto-Slavic *zemlja (earth, land)", "Proto-Indo-European *dʰéǵʰōm (earth)"],
+        cognates=["Latin humus (soil), homo (human)", "English humble, human (same PIE root)", "Polish ziemia", "Czech země"],
+    ),
+    EtymologyEntry(
+        language="ru", lemma="небо",
+        origin_summary=(
+            "From Proto-Slavic *nebo 'sky, heaven,' from Proto-Indo-European *nebʰos 'cloud, mist.' "
+            "The same root gives Greek nephos (cloud), Latin nebula (mist, fog), "
+            "and German Nebel (fog). In Russian, небо covers both the physical sky and heaven."
+        ),
+        roots=["Proto-Slavic *nebo (sky)", "Proto-Indo-European *nebʰos (cloud, mist)"],
+        cognates=["Latin nebula (cloud, mist)", "Greek nephos (cloud)", "English nebula (borrowed from Latin)"],
+        semantic_shift="'cloud, mist (sky)' → 'sky' and 'heaven'",
+    ),
+    EtymologyEntry(
+        language="ru", lemma="дружба",
+        origin_summary=(
+            "From друг 'friend' + suffix -ба (forming abstract nouns), from Proto-Slavic *drugъ "
+            "'companion, other person.' The Slavic root *drug- originally meant 'another' — "
+            "a friend is quite literally 'another (person like oneself).' "
+            "Related to Russian другой (another, different)."
+        ),
+        roots=["Proto-Slavic *drugъ (companion, another person)"],
+        cognates=["Polish druh (friend, companion)", "Czech druh (companion)", "Russian другой (another, different)"],
+        semantic_shift="'another (person)' → 'companion, friend' → abstract 'friendship'",
+    ),
+    EtymologyEntry(
+        language="ru", lemma="ночь",
+        origin_summary=(
+            "From Proto-Slavic *noktь 'night,' from Proto-Indo-European *nókʷts. "
+            "One of the oldest words in the language: appears virtually unchanged across "
+            "all Indo-European branches: Greek nyx, Latin nox, English night, German Nacht."
+        ),
+        roots=["Proto-Slavic *noktь (night)", "Proto-Indo-European *nókʷts (night)"],
+        cognates=["English night (same PIE root)", "Latin nox/nocturnal", "German Nacht", "Greek nyx"],
+    ),
+    EtymologyEntry(
+        language="ru", lemma="степь",
+        origin_summary=(
+            "Of uncertain origin; often attributed to Turkic or early Iranian contact. "
+            "The степь (steppe) is the vast Eurasian grassland that shaped Russian history — "
+            "the route of nomadic invasions, the frontier of expansion, and the landscape "
+            "of Cossack culture. English steppe was borrowed from Russian."
+        ),
+        roots=["Possibly Turkic or Iranian; exact origin disputed"],
+        cognates=["English steppe (borrowed from Russian)", "German Steppe (borrowed)", "French steppe (borrowed)"],
+    ),
+    EtymologyEntry(
+        language="ru", lemma="сила",
+        origin_summary=(
+            "From Proto-Slavic *sila 'strength, power,' from Proto-Indo-European *sel- 'to take.' "
+            "In Russian, сила permeates proverbs and culture: 'не в силе Бог, а в правде' "
+            "('God is not in power but in truth' — Alexander Nevsky). "
+            "The same root appears in насилие (violence) and усилие (effort)."
+        ),
+        roots=["Proto-Slavic *sila (strength, force)"],
+        cognates=["Polish siła (strength)", "Czech síla", "Serbian сила"],
     ),
 
     # ── Arabic ───────────────────────────────────────────────────────────────

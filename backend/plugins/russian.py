@@ -190,10 +190,10 @@ class RussianPlugin:
         transliteration_scheme=None,   # no romanisation in this iteration
         nuance_capabilities=NuanceCapabilities(
             idioms="partial",            # curated ~35-entry fixed-expression table
-            phrase_families="stub",      # collocations via dep-parse; not grouped
+            phrase_families="stub",      # no phrase catalog yet; extractor wired
             literary_references="none",
             cultural_references="none",
-            etymology="none",
+            etymology="stub",            # 17-entry catalog; extractor wired
             formality_register="stub",   # formal/informal verb forms detectable
             grammar_nuance="partial",    # aspect/tense/case drilling
             pronunciation_tts="partial", # browser TTS reliable for ru
