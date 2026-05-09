@@ -287,6 +287,615 @@ _CURATED: list[EtymologyEntry] = [
         cognates=["Spanish ya", "Italian già"],
     ),
 
+    # ── French — Arabic borrowings ───────────────────────────────────────────
+    EtymologyEntry(
+        language="fr", lemma="alcool",
+        origin_summary=(
+            "From Arabic al-kuhul 'antimony powder used as eye makeup.' "
+            "Arab alchemists extended the term to any fine purified substance, then to "
+            "distilled spirits. Medieval Latin alcohole → French alcool. "
+            "English borrowed alcohol from the same Arabic root via French."
+        ),
+        roots=["Arabic al-kuhul (fine antimony powder)"],
+        cognates=["English alcohol (same Arabic source)", "Spanish alcohol"],
+        semantic_shift="'fine eye-makeup powder' → 'any pure distillate' → 'ethyl alcohol'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="algèbre",
+        origin_summary=(
+            "From Arabic al-jabr 'the reunion of broken parts' — the operation of moving "
+            "terms across an equation. The word comes from Muhammad al-Khwarizmi's 9th-century "
+            "treatise title Kitāb al-mukhtaṣar fī ḥisāb al-jabr wa-l-muqābala. "
+            "His name also gives English algorithm."
+        ),
+        roots=["Arabic al-jabr (reunion of broken parts)"],
+        cognates=["English algebra (same Arabic source)", "Spanish álgebra"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="hasard",
+        origin_summary=(
+            "From Arabic az-zahr 'the dice,' via Spanish azar 'chance, bad luck.' "
+            "Dice games spread through the medieval Mediterranean; the Arabic word for "
+            "the die entered French as the general word for chance or risk. "
+            "English hazard is borrowed from Old French hasard."
+        ),
+        roots=["Arabic az-zahr (the dice)", "Spanish azar (chance, misfortune)"],
+        cognates=["English hazard (from Old French hasard)"],
+        semantic_shift="'dice (game piece)' → 'chance, luck' → 'risk, danger'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="coton",
+        origin_summary=(
+            "From Arabic qutn (also spelled qutun), the standard Arabic term for the cotton plant. "
+            "Spread through medieval Mediterranean trade via Italian cotone and Spanish algodón. "
+            "English cotton derives from the same Arabic root via Old French coton."
+        ),
+        roots=["Arabic qutn (cotton plant)"],
+        cognates=["English cotton (from Old French coton)", "Italian cotone", "Spanish algodón"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="sofa",
+        origin_summary=(
+            "From Arabic suffah 'a low wooden platform or bench,' often raised and carpeted. "
+            "Via Ottoman Turkish sofa (a furnished platform or sitting area). "
+            "Entered European languages through contact with Ottoman culture in the 17th century. "
+            "English sofa is borrowed from French."
+        ),
+        roots=["Arabic suffah (raised bench, platform)"],
+        cognates=["English sofa (same Arabic origin via Turkish)", "Spanish sofá"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="sirop",
+        origin_summary=(
+            "From Arabic sharab 'a drink, something drunk,' from shariba 'to drink.' "
+            "Medieval contact gave French sirop and English syrup. "
+            "The same root gives English sherbet (via Turkish/Persian şerbet) "
+            "and shrub (the drink — via Arabic sharab)."
+        ),
+        roots=["Arabic sharab (a drink)", "Arabic shariba (to drink)"],
+        cognates=["English syrup (same Arabic source)", "English sherbet", "Turkish şerbet"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="jupe",
+        origin_summary=(
+            "From Arabic jubba, a long outer garment with wide sleeves, worn in the Near East. "
+            "Via medieval Mediterranean trade: Arabic jubba → Italian giubba → Old French jupe. "
+            "The original meaning 'long robe' narrowed in French to 'skirt.' "
+            "English 'jumper' (the garment) may derive from the same Arabic source via French jupon."
+        ),
+        roots=["Arabic jubba (long outer garment with wide sleeves)"],
+        cognates=["Italian giubba", "English jumper (possibly via French jupon — disputed)"],
+        semantic_shift="'full-length robe' → 'undershirt or bodice' → 'skirt' (modern French)",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="café",
+        origin_summary=(
+            "From Arabic qahwa 'a kind of wine, coffee,' via Turkish kahve → French café. "
+            "English coffee came independently via Turkish kahve or Dutch koffie. "
+            "English café is borrowed directly from French, preserving the 'coffeehouse' sense "
+            "that Arabic qahwa extended to when coffee replaced wine."
+        ),
+        roots=["Arabic qahwa (coffee, a brewed drink)"],
+        cognates=["English coffee (same Arabic root via Turkish/Dutch)", "Italian caffè", "Turkish kahve"],
+        semantic_shift="'wine-like drink' → 'coffee' → 'place where coffee is served'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="chimie",
+        origin_summary=(
+            "From Arabic al-kīmiyāʾ 'the transmutation art,' itself from Greek khymeia "
+            "'the art of alloying metals' or from Coptic/Egyptian kēme 'black earth' (Egypt). "
+            "Arabic al-kīmiyāʾ → Medieval Latin alchimia → French alchimie/chimie. "
+            "Gives English alchemy and chemistry — same word, different moment in the discipline's history."
+        ),
+        roots=["Arabic al-kīmiyāʾ (art of transmutation)", "possibly Coptic kēme (black earth — Egypt)"],
+        cognates=["English alchemy (the mystical stage)", "English chemistry (the scientific stage)"],
+        semantic_shift="'alchemical transmutation art' → 'experimental science of matter'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="zéro",
+        origin_summary=(
+            "From Arabic sifr 'empty, nothing,' the Arabic word for the absence of quantity. "
+            "Via Medieval Latin zephirum (early 13th c.) and Italian zero. "
+            "Arabic sifr also gives English cipher — both 'zero' and 'secret code' "
+            "stem from the revolutionary concept of representing nothing with a symbol."
+        ),
+        roots=["Arabic sifr (empty, nothing, zero)"],
+        cognates=["English zero (same Arabic source)", "English cipher (from the same sifr)"],
+    ),
+
+    # ── French — Frankish/Germanic substratum ─────────────────────────────────
+    EtymologyEntry(
+        language="fr", lemma="guerre",
+        origin_summary=(
+            "From Old High German/Frankish werra 'strife, discord.' "
+            "The conquering Franks displaced Latin bellum with their vernacular word for conflict. "
+            "English war derives from the same Germanic root via Norman French guerre. "
+            "The parallel Latin word bellum survives in English as bellicose, belligerent, rebel."
+        ),
+        roots=["Frankish/Old High German werra (strife, discord)"],
+        cognates=["English war (same Germanic root via Norman French)", "Spanish guerra"],
+        semantic_shift="'strife, discord between neighbors' → 'organised armed conflict'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="garder",
+        origin_summary=(
+            "From Frankish *wardōn 'to watch over, guard,' from the same Germanic root "
+            "as English ward, warden, and guard. "
+            "Ward entered English directly from Old English; guard entered via French garder. "
+            "Both paths lead to the same Frankish verb — a doubled borrowing."
+        ),
+        roots=["Frankish *wardōn (to watch, guard)"],
+        cognates=["English guard (from French garder)", "English ward (direct from Old English, same root)"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="blanc",
+        origin_summary=(
+            "From Proto-Germanic *blankaz 'shining, white.' "
+            "The same root gives English blank (a white or unmarked surface) and "
+            "blanch (to whiten). German blank means 'shiny, clean.' "
+            "The French feminine blanche gave the name Blanche — 'the white one.'"
+        ),
+        roots=["Proto-Germanic *blankaz (shining, gleaming, white)"],
+        cognates=["English blank (same root)", "English blanch (to whiten)", "German blank (shiny)"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="riche",
+        origin_summary=(
+            "From Frankish *rīkī 'powerful, mighty,' related to Proto-Germanic *rīkijaz. "
+            "In Frankish society, power and wealth were inseparable; the meaning shifted to 'wealthy.' "
+            "Gives English rich (via Old English rīce, same root), realm (via Latin regnum — cognate), "
+            "and German Reich 'empire.'"
+        ),
+        roots=["Frankish *rīkī (powerful, mighty)"],
+        cognates=["English rich (same Germanic root via Old English)", "German Reich (empire)"],
+        semantic_shift="'powerful, ruling' → 'wealthy, well-provisioned'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="garçon",
+        origin_summary=(
+            "From Frankish *wrakjo 'vagabond, wanderer, exile.' "
+            "The social trajectory: wanderer → menial servant → young male servant → boy. "
+            "The meaning 'waiter' is a metonymy from 'boy (who serves).' "
+            "English has no direct cognate; the German Recke 'warrior, hero' shares the root but "
+            "went in the opposite social direction."
+        ),
+        roots=["Frankish *wrakjo (vagabond, wanderer, exile)"],
+        semantic_shift="'vagrant, exile' → 'menial servant' → 'boy' → 'waiter'",
+    ),
+
+    # ── French — Latin with semantic shift ────────────────────────────────────
+    EtymologyEntry(
+        language="fr", lemma="tête",
+        origin_summary=(
+            "From Latin testa 'earthenware pot, shell, skull.' "
+            "Classical Latin used caput for 'head' (giving English capital, captain, chapter). "
+            "Testa began as colloquial slang — the hard skull likened to a clay pot. "
+            "Over time testa displaced caput entirely in spoken Latin, giving French tête. "
+            "English test (as in assay by crucible) comes from the same Latin testa."
+        ),
+        roots=["Latin testa (earthenware pot, tile, shell)"],
+        cognates=["English test (assay crucible — same Latin root)", "Italian testa (head)"],
+        semantic_shift="'clay pot, hard shell' → slang for 'skull' → 'head' (replacing caput)",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="fenêtre",
+        origin_summary=(
+            "From Latin fenestra 'window, opening for light.' "
+            "Latin fenestra possibly borrowed from Etruscan. "
+            "Gives English fenestration (the arrangement of windows in a building) and "
+            "defenestration (the act of throwing someone out of a window — coined for the "
+            "1618 Defenestration of Prague)."
+        ),
+        roots=["Latin fenestra (window, opening for light) — possibly Etruscan"],
+        cognates=["English fenestration, defenestration (learned Latin borrowings)"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="voix",
+        origin_summary=(
+            "From Latin vox, vocis 'voice, sound, word.' "
+            "One of the most productive Latin roots in French and English: "
+            "gives English voice (via Norman French voix), vocal, vocabulary, vowel "
+            "(the voiced letters), invoke, revoke, advocate, vocation — all from vox."
+        ),
+        roots=["Latin vox / vocis (voice, sound)"],
+        cognates=["English voice (from French voix)", "English vocal, vowel, invoke, vocation (all from vox)"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="argent",
+        origin_summary=(
+            "From Latin argentum 'silver.' The chemical symbol Ag comes from argentum. "
+            "Latin used argentum for both the metal and coined money (since early coins were silver). "
+            "French inherited both senses; argent now primarily means 'money.' "
+            "English keeps the metal sense in Argentina (Río de la Plata — 'silver river'), "
+            "and argent in heraldry (the silver tincture)."
+        ),
+        roots=["PIE *h₂erǵ- (shining, silver)", "Latin argentum (silver)"],
+        cognates=["English argent (heraldry — silver)", "Italian argento", "Argentina (the country)"],
+        semantic_shift="'the metal silver' → 'silver coinage' → 'money in general'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="travail",
+        origin_summary=(
+            "From Medieval Latin tripalium 'a three-staked instrument of torture,' "
+            "used to restrain horses and oxen for shoeing. "
+            "To work (travailler) was equated with being bound to the tripalium. "
+            "English travel is the same word — to travel was to toil, to undergo hardship. "
+            "Both English travail (labor, hardship) and travel descend from the same Latin root."
+        ),
+        roots=["Medieval Latin tripalium (three-stake restraint for animals)", "tri- (three) + palus (stake)"],
+        cognates=["English travail (hard labor — same word)", "English travel (same word — toil of the road)"],
+        semantic_shift="'torture device' → 'to toil, labor' → 'to journey (with hardship)'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="rival",
+        origin_summary=(
+            "From Latin rivalis 'one who shares a stream,' from rivus 'stream, brook.' "
+            "Neighbors drawing from the same irrigation stream were natural rivals for its water. "
+            "The word river also comes from rivus — so rivals are literally river-sharers. "
+            "English borrowed both rival (unchanged) and river (via Old French rivière)."
+        ),
+        roots=["Latin rivus (stream, brook)", "Latin rivalis (one who shares a stream)"],
+        cognates=["English rival (from Latin rivalis)", "English river (from Old French rivière, same root)"],
+        semantic_shift="'one who shares a stream (and competes for its water)' → 'competitor in any domain'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="hôpital",
+        origin_summary=(
+            "From Latin hospitale 'guest quarters,' from hospes 'host, guest' — "
+            "a word that means both at once, since host and guest are two roles in one relationship. "
+            "Medieval hospitals were first and foremost pilgrim hostels. "
+            "The same root gives English hospital, hotel (from hôtel), hostel, hospice, hospitable, host."
+        ),
+        roots=["Latin hospes (host and guest in one word)", "Latin hospitale (guest quarters)"],
+        cognates=["English hospital, hotel, hostel, hospice, host (all from hospes)"],
+        semantic_shift="'guest quarters, place of hospitality' → 'place for the sick and infirm'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="joie",
+        origin_summary=(
+            "From Latin gaudia, the plural of gaudium 'joy, pleasure.' "
+            "The plural form gaudia (joys) was used in Late Latin as a singular collective. "
+            "English joy is borrowed from Old French joie. "
+            "The root also gives English enjoy (en + joie) and rejoice."
+        ),
+        roots=["Latin gaudium (joy, delight)", "Latin gaudēre (to rejoice)"],
+        cognates=["English joy, enjoy, rejoice (all from Old French joie/Latin gaudia)"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="main",
+        origin_summary=(
+            "From Latin manus 'hand.' One of the most productive Latin roots: "
+            "gives English manual, manipulate, manufacture (manu + facere = to make by hand), "
+            "manage (via Italian maneggiare), maneuver (manu + operare = to work by hand), "
+            "manicure, and maintain. "
+            "The French derivative maintenir (to maintain) literally means 'to hold in hand.'"
+        ),
+        roots=["Latin manus (hand)"],
+        cognates=["English manual, manipulate, manufacture, maneuver, maintain (all from manus)"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="nuance",
+        origin_summary=(
+            "From Old French nuer 'to shade (colors),' from Latin nubes 'cloud.' "
+            "A nuance is literally 'a cloudlike shading' — a subtle gradation of color, "
+            "then meaning, then feeling. "
+            "English borrowed nuance from French in the 18th century, retaining the sense "
+            "of subtle distinction too fine for a single word."
+        ),
+        roots=["Latin nubes (cloud)", "Old French nuer (to shade, to cloud)"],
+        cognates=["English nuance (borrowed from French)", "English nebula (from Latin nubes cognate)"],
+        semantic_shift="'cloud' → 'gradation of shade in color' → 'subtle distinction in meaning'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="bureau",
+        origin_summary=(
+            "From Old French burel, a coarse dark woolen cloth used to cover writing desks. "
+            "The cloth → the desk it covered → the room containing the desk → the office → "
+            "the government department. English bureaucracy (bureau + Greek kratos 'rule') "
+            "was coined in the 18th century, satirising the desk-bound machinery of administration."
+        ),
+        roots=["Old French burel (coarse woolen cloth)", "Late Latin burra (shaggy cloth)"],
+        cognates=["English bureau, bureaucracy (from French bureau)"],
+        semantic_shift="'coarse desk-cloth' → 'writing desk' → 'office room' → 'government department'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="voilà",
+        origin_summary=(
+            "Contraction of vois là 'see there' — imperative of voir (to see) + là (there). "
+            "From Latin vide illac 'look there.' "
+            "The parallel voici (see here) = vois + ici. "
+            "English borrowed voilà as an exclamation of presentation; "
+            "it is frequently misspelled viola (the instrument) in English."
+        ),
+        roots=["Latin vidēre (to see)", "Latin illac (there)"],
+        cognates=["English voilà (borrowed)", "Italian eccolo (see it there — parallel structure)"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="journée",
+        origin_summary=(
+            "From Latin diurnus 'of the day,' from dies 'day.' "
+            "The Latin root gives French jour (day), journée (a day's length or events), "
+            "journal (daily record), and journey — English borrowed journey as 'a day's travel.' "
+            "The same Latin dies gives English diary, dial (sundial), and dismal (dies mali, 'evil days')."
+        ),
+        roots=["Latin dies (day)", "Latin diurnus (daily)"],
+        cognates=["English journey (from French journée — a day's travel)", "English journal, diary (from dies)"],
+        semantic_shift="'a day's duration' → 'a day's work or travel' → 'trip' (in English journey)",
+    ),
+
+    # ── French — faux amis (false cognates) ──────────────────────────────────
+    EtymologyEntry(
+        language="fr", lemma="librairie",
+        origin_summary=(
+            "From Latin librarium 'place for books,' from liber 'book' (originally 'inner bark'). "
+            "A librairie is a bookshop — where books are sold. "
+            "A bibliothèque is a library — where books are lent. "
+            "English 'library' came from the same Latin root via Old French but shifted to mean "
+            "the lending institution; French kept the commercial sense for librairie."
+        ),
+        roots=["Latin liber (book, inner bark of tree)", "Latin librarium (book-place)"],
+        cognates=["English library (same Latin root — but means lending library, not bookshop)"],
+        semantic_shift="Latin librarium → French: bookshop; Latin libraria → English: lending library",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="sensible",
+        origin_summary=(
+            "From Latin sensibilis 'able to perceive through the senses, sensitive.' "
+            "In French, sensible = emotionally sensitive, perceptive, capable of feeling. "
+            "In English, 'sensible' shifted to mean 'reasonable, practical, showing good sense.' "
+            "This is a classic faux ami: a French sensible person feels deeply; "
+            "an English sensible person acts practically — nearly opposite emphases."
+        ),
+        roots=["Latin sensibilis (able to feel, perceptible)", "Latin sensus (sense, feeling)"],
+        cognates=["English sensible (false friend — now means 'reasonable' not 'sensitive')", "English sensitive (closer to French sensible)"],
+        semantic_shift="'capable of feeling' → French: 'emotionally perceptive'; English: 'showing practical good sense'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="actuellement",
+        origin_summary=(
+            "From French actuel 'current, present,' from Latin actualis 'active, practical.' "
+            "Actuellement = currently, at this moment in time. "
+            "English 'actually' shifted from 'in active reality' to 'in truth, as a matter of fact.' "
+            "The faux ami trap: 'actuellement, je travaille' = 'I'm currently working,' "
+            "not 'I'm actually working' (which implies correction or surprise)."
+        ),
+        roots=["Latin actualis (relating to acts, practical)", "Latin actus (action, deed)"],
+        cognates=["English actually (false friend — means 'in truth/fact,' not 'currently')"],
+        semantic_shift="'in the present moment' (French) vs. 'in reality, as a corrective' (English)",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="location",
+        origin_summary=(
+            "From Latin locatio 'a letting, renting,' from locare 'to let, to hire out' (from locus 'place'). "
+            "In French, location = rental (voiture de location = rental car). "
+            "English 'location' kept the spatial sense 'a place.' "
+            "The faux ami trap: a French location is a financial arrangement; an English location is a place."
+        ),
+        roots=["Latin locus (place)", "Latin locare (to let, rent out)", "Latin locatio (rental)"],
+        cognates=["English location (false friend — means 'a place,' not 'a rental')", "English local, locate (same root)"],
+        semantic_shift="French: 'rental transaction'; English: 'the place where something is'",
+    ),
+
+    # ── French — cultural and historical etymology ────────────────────────────
+    EtymologyEntry(
+        language="fr", lemma="grève",
+        origin_summary=(
+            "From Old French grève 'gravel bank, sandy riverbank,' from Latin grava 'gravel.' "
+            "The Place de Grève — a graveled riverside square beside the Seine in Paris — "
+            "was where day-laborers gathered to be hired. 'Faire grève' (to go to the Grève) "
+            "came to mean withholding one's labor. The square is now Place de l'Hôtel de Ville; "
+            "the word grève lives on as the French word for 'strike.'"
+        ),
+        roots=["Latin grava (gravel, coarse sand)", "Old French grève (gravel bank)"],
+        cognates=["English gravel (from Old French gravele, same root)"],
+        semantic_shift="'gravel riverbank (the Place de Grève)' → 'labor market meeting point' → 'work stoppage'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="silhouette",
+        origin_summary=(
+            "Eponym from Étienne de Silhouette (1709–1767), French finance minister under Louis XV. "
+            "His severe austerity measures made him notorious; cheap black profile portraits "
+            "— made quickly, without depth or detail — were mockingly named after him. "
+            "A silhouette portrait was, like his policies, a mere outline, stripped to essentials. "
+            "English borrowed both the word and its meaning unchanged."
+        ),
+        roots=["Étienne de Silhouette (1709–1767), French finance minister"],
+        cognates=["English silhouette (borrowed from French)"],
+        semantic_shift="Proper name → 'cheap black-profile portrait' → 'any dark outline against light'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="cliché",
+        origin_summary=(
+            "From cliquer 'to click,' imitating the sound of a stereotype printing plate being cast. "
+            "In 19th-century typography, a cliché (or stereotype) was a metal plate cast from a mold "
+            "of set type, allowing unlimited reprinting of the same image or text. "
+            "The plate's repetitive use extended metaphorically to any overused phrase or idea. "
+            "English borrowed cliché in the sense of a hackneyed expression."
+        ),
+        roots=["Old French cliquer (to click — imitative of the casting sound)"],
+        cognates=["English cliché (borrowed)", "English stereotype (same printing origin — stereos 'solid' + typos 'impression')"],
+        semantic_shift="'cast printing plate (for reprinting)' → 'any formulaic, overused expression'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="boulevard",
+        origin_summary=(
+            "From Middle Dutch bolwerk 'bulwark' (bol 'plank' + werk 'work, structure'). "
+            "Paris's grand boulevards were built in the 17th century on the filled-in medieval "
+            "city ramparts — literally atop the old defensive bulwarks. "
+            "English borrowed boulevard from French and bulwark directly from Middle Dutch/Low German — "
+            "both words trace to the same source."
+        ),
+        roots=["Middle Dutch bolwerk (bulwark, defensive rampart)", "bol (plank) + werk (structure)"],
+        cognates=["English boulevard (from French)", "English bulwark (from the same Dutch source — same word, different path)"],
+        semantic_shift="'defensive rampart' → 'promenade built atop the leveled ramparts' → 'wide urban avenue'",
+    ),
+
+    # ── French — Norman borrowings preserved in English ───────────────────────
+    EtymologyEntry(
+        language="fr", lemma="bœuf",
+        origin_summary=(
+            "From Latin bos, bovis 'ox, cattle.' "
+            "After the Norman Conquest (1066), French-speaking lords ate the animals tended "
+            "by Anglo-Saxon peasants: the peasant kept the cow (Old English cū); "
+            "the lord ate the beef (Norman French bœuf). "
+            "The same split applies: porc/pork, mouton/mutton, veau/veal, cerf/venison."
+        ),
+        roots=["Latin bos / bovis (ox, cattle)"],
+        cognates=["English beef (from Norman French bœuf)", "English bovine (from the same Latin root)"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="mouton",
+        origin_summary=(
+            "From Gaulish Celtic multo 'sheep,' possibly pre-Celtic. "
+            "After 1066: Anglo-Saxon farmers kept sheep (Old English scēap); "
+            "Norman lords ate mutton (Old French mouton). "
+            "Mouton also gives English mutton-chop (the lamb cut, then the whisker style) "
+            "and mouton (sheepskin processed as fake fur)."
+        ),
+        roots=["Gaulish multo (sheep — pre-Latin Gaulish word)"],
+        cognates=["English mutton (from Norman French mouton)", "English mutton-chop (same)"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="porc",
+        origin_summary=(
+            "From Latin porcus 'pig, hog.' "
+            "The Norman layer: Saxon farmers kept pigs (Old English picga); "
+            "Norman lords ate pork (Old French porc). "
+            "The same Latin porcus gives English porcupine (literally 'spiny pig,' from porcus + spina) "
+            "and porcelain (from Italian porcellana — the pig-cowrie shell whose shape it resembled)."
+        ),
+        roots=["Latin porcus (pig)"],
+        cognates=["English pork (from Norman French porc)", "English porcupine, porcelain (from the same Latin root)"],
+    ),
+
+    # ── French — borrowings from Italian ─────────────────────────────────────
+    EtymologyEntry(
+        language="fr", lemma="ballet",
+        origin_summary=(
+            "From Italian balletto, diminutive of ballo 'dance,' from ballare 'to dance.' "
+            "Italian court dance came to France through Catherine de' Medici (c. 1533–1589). "
+            "French masters refined and codified the art form, then exported it to the world "
+            "with French terminology (plié, arabesque, entrechat, pas de deux) — "
+            "all French, despite the Italian origin of the word ballet."
+        ),
+        roots=["Italian ballare (to dance)", "Italian ballo (dance)", "Italian balletto (little dance)"],
+        cognates=["English ballet (borrowed via French)", "English ball (formal dance — same Italian root)"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="camarade",
+        origin_summary=(
+            "From Spanish camarada 'chamber-mate, room-sharer,' from cámara 'chamber, room,' "
+            "from Latin camera 'vaulted room.' "
+            "Soldiers billeted together in a camera (room) were camaradas. "
+            "French adopted camarade; English comrade came via Dutch kameraad from the same Spanish source. "
+            "Camera also gives English camera obscura (dark chamber) and, through that, the camera."
+        ),
+        roots=["Latin camera (vaulted room, chamber)", "Spanish camarada (room-sharer)"],
+        cognates=["English comrade (via Dutch kameraad, same Spanish source)", "English camera (same Latin root)"],
+    ),
+
+    # ── French — borrowings from Greek ────────────────────────────────────────
+    EtymologyEntry(
+        language="fr", lemma="bibliothèque",
+        origin_summary=(
+            "From Greek bibliothēkē 'book-chest' (biblion 'book' + thēkē 'chest, container'). "
+            "Biblion itself comes from byblos — the ancient Phoenician city of Byblos (modern Jbeil, Lebanon) "
+            "was the major papyrus trade hub. "
+            "Gives English Bible (the book), bibliography (list of books), bibliophile. "
+            "Note the faux ami: French bibliothèque = library; librairie = bookshop."
+        ),
+        roots=["Greek byblos (papyrus, from city Byblos)", "Greek biblion (book)", "Greek thēkē (box, container)"],
+        cognates=["English Bible, bibliography, bibliophile (all from Greek biblion)"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="catastrophe",
+        origin_summary=(
+            "From Greek katastrophē 'overturning, sudden end,' from kata 'down' + strephein 'to turn.' "
+            "Originally a theater term for the final reversal in a Greek play — the tragic turning point. "
+            "Aristotle used it in Poetics. French and English both borrowed it in the 16th century "
+            "for any sudden disastrous reversal, theatrical or real."
+        ),
+        roots=["Greek kata (down, against)", "Greek strephein (to turn)"],
+        cognates=["English catastrophe, catastrophic (from Greek via French and Latin)"],
+        semantic_shift="'final overturning scene in a play' → 'any sudden disastrous event'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="enthousiasme",
+        origin_summary=(
+            "From Greek enthousiazein 'to be inspired by a god,' from entheos 'god-within' "
+            "(en 'in' + theos 'god'). "
+            "Being enthusiastic originally meant being divinely possessed — seized by a deity. "
+            "Early English uses of enthusiasm (17th century) described religious frenzy, "
+            "often as a term of mockery. Only later did it acquire its positive secular meaning."
+        ),
+        roots=["Greek en (in)", "Greek theos (god)", "Greek entheos (divinely inspired)"],
+        cognates=["English enthusiasm, enthusiast (from Greek via French and Latin)"],
+        semantic_shift="'seized by a god, divinely possessed' → 'religious fervor' → 'intense eagerness'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="mystère",
+        origin_summary=(
+            "From Greek mysterion 'secret rite,' from myein 'to close the lips (or eyes).' "
+            "Initiates of Greek mystery cults were sworn to silence about the rites they witnessed. "
+            "The word entered Latin as mysterium, then Old French as mistere, "
+            "also giving the medieval mystery play (a dramatization of scripture — from the same source). "
+            "English borrowed both mystery and mystic."
+        ),
+        roots=["Greek myein (to close eyes or lips)", "Greek mysterion (secret rite)"],
+        cognates=["English mystery, mystic, mysterious (from Greek mysterion via Latin)"],
+        semantic_shift="'sworn-secret religious rite' → 'anything hidden or unexplained'",
+    ),
+
+    # ── French — miscellaneous high-value entries ─────────────────────────────
+    EtymologyEntry(
+        language="fr", lemma="bizarre",
+        origin_summary=(
+            "Disputed. Likely from Spanish bizarro 'brave, bold, extravagant,' itself possibly "
+            "from Basque bizar 'beard' — bearded soldiers were seen as fierce and bold. "
+            "The meaning shifted in French from 'bold, extravagant' to 'strange, odd.' "
+            "English borrowed bizarre from French in the 17th century with the 'strange' sense already fixed."
+        ),
+        roots=["Spanish bizarro (brave, bold, extravagant)", "possibly Basque bizar (beard)"],
+        cognates=["English bizarre (borrowed from French)"],
+        semantic_shift="'brave, bold (beard-as-warrior marker)' → 'extravagant' → 'strange, odd'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="genre",
+        origin_summary=(
+            "From Latin genus, generis 'kind, type, birth, origin,' from gignere 'to beget.' "
+            "In French, genre covers both 'literary/artistic category' and 'grammatical gender' — "
+            "the same word. English borrowed genre for the artistic category and kept gender "
+            "(from the same Latin root) for the grammatical/biological sense. "
+            "Also gives English genus, generic, generate, degenerate."
+        ),
+        roots=["Latin gignere (to beget, to give birth)", "Latin genus / generis (kind, type, birth)"],
+        cognates=["English genre (artistic type)", "English gender (grammatical/biological — same Latin root)", "English genus, generate"],
+    ),
+    EtymologyEntry(
+        language="fr", lemma="souvenir",
+        origin_summary=(
+            "From Latin subvenire 'to come to mind, to come to one's aid' (sub 'up from below' + venire 'to come'). "
+            "A souvenir is literally something that 'comes up' into memory. "
+            "In French, souvenir (verb) = to remember; (noun) = a memory or keepsake. "
+            "English borrowed the noun in the 18th century, narrowing it to a purchased memento."
+        ),
+        roots=["Latin sub (up from below, toward)", "Latin venire (to come)", "Latin subvenire (to come to mind)"],
+        cognates=["English souvenir (borrowed)", "English convene, venture, prevent (all from venire)"],
+        semantic_shift="'to come up into the mind' → 'a memory' → 'a purchased keepsake'",
+    ),
+    EtymologyEntry(
+        language="fr", lemma="fête",
+        origin_summary=(
+            "From Latin festa, plural of festum 'festival day, holiday.' "
+            "The same root gives English feast (via Norman French feste), festival, festive, festivity. "
+            "English has borrowed fête directly from French to describe outdoor public celebrations, "
+            "preserving the French word alongside the English feast — "
+            "another case of the same Latin word arriving by two different historical routes."
+        ),
+        roots=["Latin festum (festival, holiday)", "Latin festa (plural: festival days)"],
+        cognates=["English feast (from Norman French feste — same Latin root)", "English festival, festive (from Latin festa)"],
+    ),
+
     # ── German ───────────────────────────────────────────────────────────────
     EtymologyEntry(
         language="de", lemma="Schadenfreude",
