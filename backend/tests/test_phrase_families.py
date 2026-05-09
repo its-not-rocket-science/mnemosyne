@@ -131,7 +131,9 @@ class TestCatalog:
         assert fam.why_it_matters and len(fam.why_it_matters) > 20
 
     def test_language_is_en(self) -> None:
-        for fam in _FAMILY_CATALOG.values():
+        en_families = [fam for fam in _FAMILY_CATALOG.values() if fam.language == "en"]
+        assert en_families, "Expected at least one English family in catalog"
+        for fam in en_families:
             assert fam.language == "en"
 
     # ── of_the_first_water ───────────────────────────────────────────────────

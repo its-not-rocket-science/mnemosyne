@@ -476,6 +476,7 @@ class TestLanguagesEndpointV2:
         assert en["analysis_depth"] == "dictionary"
         assert en["syntax_support"] is False
         assert en["morphology_quality"] == "none"
+        assert en["idiom_detection"] is False
 
     def test_french_full_analysis(self) -> None:
         resp = client.get("/languages")

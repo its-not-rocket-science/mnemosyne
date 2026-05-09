@@ -35,12 +35,12 @@ class EnglishStubPlugin:
         tokenization_quality="low",      # regex [A-Za-z']+ — no linguistic awareness
         morphology_quality="none",
         syntax_support=False,
-        idiom_detection=True,
+        idiom_detection=False,
         tts_lang_tag="en",
         transliteration_scheme=None,
         nuance_capabilities=NuanceCapabilities(
-            idioms="stub",               # idiom_detection=True but heuristic only
-            phrase_families="none",
+            idioms="stub",
+            phrase_families="stub",
             literary_references="none",
             cultural_references="none",
             etymology="none",

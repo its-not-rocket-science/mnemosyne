@@ -1,11 +1,11 @@
-"""Tests for the French stub plugin (backend/plugins/stub_fr.py).
+"""Tests for the French stub plugin (backend/tests/plugins/stub_fr.py).
 
 These tests verify that the stub satisfies the LanguagePlugin protocol and
 produces structurally valid output.  They do not test linguistic correctness —
 the stub uses regex heuristics, not a real NLP model.
 
-Note: the stub is no longer registered by the plugin loader (create_plugin()
-has been removed from stub_fr.py).  The real French plugin is in french.py.
+Note: the stub is not registered by the plugin loader (no create_plugin()).
+The real French plugin is in backend/plugins/french.py.
 These tests are kept to verify that the stub class itself remains valid as
 a minimal reference for the LanguagePlugin protocol.
 """
@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import pytest
 
-from backend.plugins.stub_fr import FrenchStubPlugin
+from backend.tests.plugins.stub_fr import FrenchStubPlugin
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 
