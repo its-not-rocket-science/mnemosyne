@@ -106,10 +106,26 @@ def load_plugins() -> PluginRegistry:
             continue
         try:
             plugin = plugin_factory()
-            if allowed is not None and plugin.language_code.lower() not in allowed:
+            code = plugin.language_code.lower()
+
+            # Block test-only plugins in production. Two independent checks:
+            # explicit flag (catches any test plugin) and x-* code prefix
+            # (BCP-47 private-use; belt-and-suspenders if flag is forgotten).
+            if not settings.debug:
+                is_test_flagged = getattr(plugin, "test_only", False)
+                is_x_code       = code.startswith("x-")
+                if is_test_flagged or is_x_code:
+                    logger.warning(
+                        "Refusing to register test plugin %r (language %r) "
+                        "in production (DEBUG=False).",
+                        module.__name__, code,
+                    )
+                    continue
+
+            if allowed is not None and code not in allowed:
                 logger.debug(
                     "Skipping plugin %r (language %r not in ENABLED_LANGUAGES).",
-                    module.__name__, plugin.language_code,
+                    module.__name__, code,
                 )
                 continue
             registry.register(plugin)
