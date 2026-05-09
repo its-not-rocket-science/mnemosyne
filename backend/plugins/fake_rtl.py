@@ -35,6 +35,7 @@ class FakeRTLPlugin:
     language_code = "x-rtl-test"
     display_name  = "RTL Test (fake — UI only)"
     direction     = "rtl"
+    test_only     = True  # excluded from production registry (DEBUG=False)
     capabilities  = LanguageCapabilities(
         code="x-rtl-test",
         display_name="RTL Test (fake — UI only)",

@@ -41,6 +41,7 @@ class FakeCJKPlugin:
     language_code = "x-cjk-test"
     display_name  = "CJK Test (fake — UI only)"
     direction     = "ltr"
+    test_only     = True  # excluded from production registry (DEBUG=False)
     capabilities  = LanguageCapabilities(
         code="x-cjk-test",
         display_name="CJK Test (fake — UI only)",
