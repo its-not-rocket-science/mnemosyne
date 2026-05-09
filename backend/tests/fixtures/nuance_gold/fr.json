@@ -132,6 +132,55 @@
       "no_raw_uuids": true
     },
     {
+      "id": "fr_extractor_etymology_cafe",
+      "category": "etymology",
+      "text": "Je bois un café chaque matin avant de partir.",
+      "note": "Extractor etymology: 'café' from Arabic qahwa via Ottoman Turkish kahve",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:café",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "etymology", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fr_extractor_etymology_bureau",
+      "category": "etymology",
+      "text": "Mon bureau est toujours bien rangé.",
+      "note": "Extractor etymology: 'bureau' from Old French burel (coarse wool cloth) → covered table → office",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:bureau",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": null,
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fr_extractor_etymology_nuance",
+      "category": "etymology",
+      "text": "Il y a une nuance importante entre ces deux mots.",
+      "note": "Extractor etymology: 'nuance' from Latin nubes (cloud) via Old French nuer — subtle shading",
+      "pipeline": "both",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "etymology",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "etymology:nuance",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "etymology", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
       "id": "fr_false_positive_01",
       "category": "false_positive",
       "text": "Le chien court dans le parc chaque matin.",
