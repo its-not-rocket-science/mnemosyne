@@ -122,7 +122,7 @@ def test_parse_at_limit_returns_200() -> None:
 def test_parse_cache_read_error_still_returns_result() -> None:
     """A Redis read error must not bubble up to the caller."""
     with mock.patch(
-        "backend.api.routes.parse.get_json",
+        "backend.parsing.pipeline.get_json",
         side_effect=ConnectionError("redis down"),
     ):
         resp = _parse("The bird sings.")
@@ -134,11 +134,11 @@ def test_parse_cache_write_error_still_returns_result() -> None:
     """A Redis write error must not bubble up to the caller."""
     with (
         mock.patch(
-            "backend.api.routes.parse.get_json",
+            "backend.parsing.pipeline.get_json",
             return_value=None,   # cache miss
         ),
         mock.patch(
-            "backend.api.routes.parse.set_json",
+            "backend.parsing.pipeline.set_json",
             side_effect=ConnectionError("redis down"),
         ),
     ):
@@ -156,7 +156,7 @@ def test_parse_cache_hit_returns_same_shape() -> None:
 
     # Simulate a cache hit by returning the first response body
     with mock.patch(
-        "backend.api.routes.parse.get_json",
+        "backend.parsing.pipeline.get_json",
         return_value=first.json(),
     ):
         second = _parse(text)

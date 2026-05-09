@@ -1,5 +1,3 @@
-import asyncio
-import hashlib
 import logging
 import time
 from datetime import UTC, datetime
@@ -9,12 +7,12 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_plugin_registry
-from backend.core.cache import get_json, set_json
 from backend.core.config import Settings, get_settings
 from backend.core.database import get_session_factory
 from backend.core.limiter import limiter
 from backend.models import CanonicalObjectRow, ObjectRelationRow, ParsedText, Sentence, SentenceObjectRow, UserKnowledgeRow
 from backend.parsing.canonical import canonical_object_id
+from backend.parsing.pipeline import PipelineResult, pipeline_cache_key, run_pipeline
 from backend.parsing.plugin_loader import PluginRegistry
 from backend.schemas.parse import (
     CandidateObject,
@@ -57,78 +55,31 @@ async def parse_text(
 
     t0 = time.perf_counter()
 
-    cache_key = _cache_key(payload.text, payload.language)
-    try:
-        cached = await get_json(cache_key)
-        if cached is not None:
-            logger.debug(
-                "parse cache=HIT lang=%s chars=%d elapsed_ms=%.1f",
-                payload.language, len(payload.text),
-                (time.perf_counter() - t0) * 1000,
-            )
-            return ParseResponse.model_validate(cached)
-    except Exception:
-        pass  # Redis unavailable — continue without cache
-
-    t_nlp = time.perf_counter()
-    candidate_results: list[CandidateSentenceResult] = await asyncio.to_thread(
-        plugin.analyze_text, payload.text
+    result: PipelineResult = await run_pipeline(
+        text=payload.text,
+        language=payload.language,
+        plugin=plugin,
+        cache_key=pipeline_cache_key(payload.text, payload.language),
     )
-    logger.debug("parse nlp_ms=%.1f sentences=%d", (time.perf_counter() - t_nlp) * 1000, len(candidate_results))
 
-    # Resolve candidates → LearnableObjects with stable UUIDs.
-    # uuid_to_candidate tracks (canonical_form, CandidateObject) for DB persistence.
-    uuid_to_candidate: dict[str, tuple[str, CandidateObject]] = {}
-    sentences: list[SentenceResult] = []
+    if result.cache_hit:
+        return ParseResponse(sentences=result.sentences)
 
-    for cand_result in candidate_results:
-        resolved: list[LearnableObject] = []
-        for cand in cand_result.candidates:
-            obj_id = canonical_object_id(payload.language, cand.type, cand.canonical_form)
-            lo = LearnableObject(
-                id=obj_id,
-                language=payload.language,
-                type=cand.type,
-                label=cand.label,
-                lesson_data=cand.lesson_data,
-                confidence=cand.confidence,
-            )
-            resolved.append(lo)
-            uuid_to_candidate[obj_id] = (cand.canonical_form, cand)
-        sentences.append(SentenceResult(text=cand_result.text, learnable_objects=resolved))
-
-    # Populate the plugin's lesson_store for fallback when the DB is unavailable.
-    # Store the CandidateObject directly — it carries canonical_form, which the
-    # lesson endpoint needs to call build_lesson() correctly.
-    for obj_id, (_, cand) in uuid_to_candidate.items():
-        plugin.lesson_store[obj_id] = cand
-
-    response = ParseResponse(sentences=sentences)
-    response_json = response.model_dump(mode="json")
-
-    # Schedule DB persist as a background task so the response is returned
-    # to the client immediately after NLP + cache write.  The background task
-    # opens its own session — the request-scoped session is not safe to use
-    # after the response is sent.
     background_tasks.add_task(
         _persist_parse_background,
-        session_factory, payload, candidate_results, sentences, uuid_to_candidate, current_user,
+        session_factory, payload, result.candidate_results,
+        result.sentences, result.uuid_to_candidate, current_user,
     )
-
-    try:
-        await asyncio.ensure_future(set_json(cache_key, response_json))
-    except Exception:
-        pass  # Redis unavailable — return result uncached
 
     logger.info(
         "parse lang=%s chars=%d sentences=%d objects=%d elapsed_ms=%.1f",
         payload.language,
         len(payload.text),
-        len(sentences),
-        len(uuid_to_candidate),
+        len(result.sentences),
+        len(result.uuid_to_candidate),
         (time.perf_counter() - t0) * 1000,
     )
-    return response
+    return ParseResponse(sentences=result.sentences)
 
 
 async def _persist_parse_background(
@@ -240,9 +191,6 @@ async def _persist_parse(
     await db.flush()  # canonical objects must exist before relations and join rows
 
     # ── User knowledge — seed new objects as unseen ──────────────────────────
-    # Creates a UserKnowledgeRow (total_reviews=0) the first time this user
-    # encounters a canonical object via /parse.  Existing rows are left
-    # untouched except for updating last_seen, so review history is never lost.
     uk_result = await db.execute(
         select(UserKnowledgeRow).where(
             UserKnowledgeRow.user_id == user_id,
@@ -279,7 +227,6 @@ async def _persist_parse(
             ))
 
     # ── Pass 2: upsert object relations (batched) ───────────────────────────
-    # Collect every (src_id, tgt_id, relation_type) triple that should exist.
     desired_relations: set[tuple[str, str, str]] = set()
     for cand_result in candidate_results:
         for cand in cand_result.candidates:
@@ -309,14 +256,6 @@ async def _persist_parse(
                 ))
 
     await db.commit()
-
-
-def _cache_key(text: str, language: str) -> str:
-    digest = hashlib.sha256(f"{language}:{text}".encode("utf-8")).hexdigest()
-    # Bump _V when plugin analysis output changes in a backwards-incompatible
-    # way (e.g. confidence_note logic) so stale cached responses are bypassed.
-    _V = "2"
-    return f"parse:v{_V}:{digest}"
 
 
 def _now_utc() -> datetime:
