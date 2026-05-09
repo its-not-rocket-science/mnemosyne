@@ -18,7 +18,7 @@ import pytest
 
 from backend.parsing.canonical import canonical_object_id
 from backend.parsing.plugin_loader import PluginRegistry, load_plugins
-from backend.plugins.spanish_stub import SpanishStubPlugin
+from backend.tests.plugins.spanish_stub import SpanishStubPlugin
 from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
@@ -381,8 +381,9 @@ class TestPluginRegistryEdgeCases:
         import backend.parsing.plugin_loader as _loader
 
         class _FakeSettings:
+            debug             = True   # suppress production gate
             enabled_languages = ["es"]
-            plugin_package = "backend.plugins"
+            plugin_package    = "backend.plugins"
 
         monkeypatch.setattr(_loader, "get_settings", lambda: _FakeSettings())
         registry = _loader.load_plugins()
@@ -405,8 +406,9 @@ class TestPluginRegistryEdgeCases:
         )
 
         class _FakeSettings:
+            debug             = True   # suppress production gate
             enabled_languages = None
-            plugin_package = "backend.plugins"
+            plugin_package    = "backend.plugins"
 
         monkeypatch.setattr(_loader, "_iter_plugin_modules", lambda _: [broken_mod])
         monkeypatch.setattr(_loader, "get_settings", lambda: _FakeSettings())
