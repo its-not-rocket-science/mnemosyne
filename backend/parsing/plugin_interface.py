@@ -19,6 +19,9 @@ class LanguagePlugin(Protocol):
     language_code: str
     display_name: str
     direction: str  # kept for backward compatibility; mirrors capabilities.direction
+    # Plugins with test_only=True are never registered when DEBUG=False.
+    # Omitting the attribute is equivalent to False (getattr default in loader).
+    test_only: bool
 
     # Rich capability metadata — replaces the bare ``direction`` string for
     # any code that needs to know how to render or score this language.
