@@ -40,7 +40,12 @@ class FrenchNuanceExtractor:
         out.extend(self._ne_expletif(tokens, seen))
         out.extend(self._subjunctive(candidates, seen))
         out.extend(self._liaison(tokens, seen))
+        out.extend(self._phrase_families(tokens))
         return out
+
+    def _phrase_families(self, tokens: list[Any]) -> list[CandidateObject]:
+        from backend.dictionary.phrase_families import match_phrase_families
+        return match_phrase_families([_text(t) for t in tokens], self.language)
 
     def _tu_vous(
         self, tokens: list[Any], seen: set[str]
