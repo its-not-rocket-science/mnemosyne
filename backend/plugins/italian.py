@@ -283,7 +283,7 @@ class ItalianPlugin:
             phrase_families="partial",   # 15-family curated catalog; extractor wired
             literary_references="none",
             cultural_references="none",
-            etymology="stub",            # 20-entry catalog; extractor wired
+            etymology="partial",         # 50-entry curated catalog; music/art/food terms well-covered
             formality_register="partial", # Lei/tu distinction; extractor wired
             grammar_nuance="partial",    # tense/mood/person/number drilling
             pronunciation_tts="partial", # browser TTS reliable for it

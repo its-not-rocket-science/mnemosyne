@@ -23,12 +23,12 @@ table from live plugin declarations.
 | Language | Idioms | Phrase families | Etymology | Grammar nuance | Formality/register | Pronunciation TTS | Transliteration | Literary/cultural | Tests |
 |----------|--------|-----------------|-----------|----------------|--------------------|-------------------|-----------------|-------------------|-------|
 | en (English) | stub | stub | none | none | none | partial | none | none | 8 |
-| es (Spanish) | partial | **partial** | **partial** | partial | stub | partial | none | none | **26** |
-| fr (French) | partial | **partial** | **partial** | partial | **partial** | partial | none | none | **15** |
-| de (German) | partial | **partial** | **partial** | partial | stub | partial | none | none | **24** |
-| it (Italian) | partial | **partial** | **stub** | partial | **partial** | partial | none | none | **11** |
-| pt (Portuguese) | partial | **partial** | **stub** | partial | **partial** | partial | none | none | **12** |
-| ru (Russian) | partial | **partial** | **stub** | partial | stub | partial | none | none | **9** |
+| es (Spanish) | partial | **partial** | **strong** | partial | stub | partial | none | none | **26** |
+| fr (French) | partial | **partial** | **strong** | partial | **partial** | partial | none | none | **15** |
+| de (German) | partial | **partial** | **strong** | partial | stub | partial | none | none | **24** |
+| it (Italian) | partial | **partial** | **partial** | partial | **partial** | partial | none | none | **11** |
+| pt (Portuguese) | partial | **partial** | **partial** | partial | **partial** | partial | none | none | **12** |
+| ru (Russian) | partial | **partial** | **partial** | partial | stub | partial | none | none | **9** |
 | ar (Arabic) | none | **partial** | none | **partial** | none | stub | none | none | **13** |
 | he (Hebrew) | none | **partial** | none | **partial** | none | stub | none | none | **13** |
 | zh (Chinese) | none | none | none | none | none | partial | partial | none | 8 |
@@ -73,12 +73,12 @@ candidates independently.  No extractor is registered for `en`, `it`, or `pt`.
 
 | Language | Extractor detects |
 |----------|------------------|
-| es | ser/estar distinction · por/para contrast · subjunctive mood triggers · diminutive suffixes (-ito/-ita) · **etymology (16 lemmas)** · **phrase families (15 families)** |
-| fr | tu/vous register · *ne* explétif · subjunctive mood · liaison triggers · **etymology (52 lemmas)** · **phrase families (20 families)** |
-| de | modal particles (doch, mal, ja, eigentlich, wohl, …) · separable-verb prefixes · Wechselpräpositionen · **etymology (20 lemmas)** · **phrase families (15 families)** |
-| it | Lei/tu register · essere/avere auxiliary · subjunctive triggers · diminutives (-ino/-etta/-ello) · **etymology (19 lemmas)** · **phrase families (15 families)** |
-| pt | você/tu register · ser/estar distinction · subjunctive triggers · diminutives (-inho/-zinho) · personal infinitive · **etymology (18 lemmas)** · **phrase families (13 families)** |
-| ru | motion-verb direction (идти vs ходить) · verbal government (любить + acc, etc.) · **etymology (17 lemmas)** · **phrase families (14 families)** |
+| es | ser/estar distinction · por/para contrast · subjunctive mood triggers · diminutive suffixes (-ito/-ita) · **etymology (100 lemmas)** · **phrase families (15 families)** |
+| fr | tu/vous register · *ne* explétif · subjunctive mood · liaison triggers · **etymology (100 lemmas)** · **phrase families (20 families)** |
+| de | modal particles (doch, mal, ja, eigentlich, wohl, …) · separable-verb prefixes · Wechselpräpositionen · **etymology (100 lemmas)** · **phrase families (15 families)** |
+| it | Lei/tu register · essere/avere auxiliary · subjunctive triggers · diminutives (-ino/-etta/-ello) · **etymology (50 lemmas)** · **phrase families (15 families)** |
+| pt | você/tu register · ser/estar distinction · subjunctive triggers · diminutives (-inho/-zinho) · personal infinitive · **etymology (50 lemmas)** · **phrase families (13 families)** |
+| ru | motion-verb direction (идти vs ходить) · verbal government (любить + acc, etc.) · **etymology (50 lemmas)** · **phrase families (14 families)** |
 | zh | aspect particles (了 le · 过 guò · 着 zhe) · measure words (量词) · chengyu (4-char idioms) |
 | ja | keigo types (sonkeigo · kenjogo · teineigo) · case particles (は · が · を · に · で · から · まで …) · yojijukugo (4-char set phrases) |
 | ar | **phrase families (10 families)** · definite article ال · negation markers (لا · لم · لن · ما · ليس) · root-pattern annotation (when candidate carries root metadata) |
@@ -110,6 +110,7 @@ classifiers or embedding-based detectors in the current codebase.
 - No literary/cultural references: `literary_references`, `cultural_references`,
   `proverb_tradition`, and `classical_or_scriptural_allusion` are all `none`.
 - Phrase families `partial` for all 8 languages with extractors (15/20/15/15/13/14/10/10 families for ES/FR/DE/IT/PT/RU/AR/HE respectively).
+- Etymology `strong` for ES/FR/DE (100 curated entries each); `partial` for IT/PT/RU (50 entries each).
 
 ### English
 - `EnglishStubPlugin` is a scaffold.  Idiom detection is heuristic and fires

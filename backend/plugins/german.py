@@ -246,7 +246,7 @@ class GermanPlugin:
             phrase_families="partial",   # 10 families with variants and pedagogical notes
             literary_references="none",
             cultural_references="none",
-            etymology="partial",         # 10 curated entries; exported loanwords well-covered
+            etymology="strong",          # 100-entry curated catalog; core vocabulary + loanwords covered
             formality_register="stub",   # formal/informal verb forms detectable
             grammar_nuance="partial",    # case detection via dep-parse + drilling
             pronunciation_tts="partial", # browser TTS reliable for de
