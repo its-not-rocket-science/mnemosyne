@@ -14,14 +14,14 @@ What this plugin does reliably
   - Correct RTL / hebrew metadata for frontend rendering and font selection.
   - TTS tag "he" (browser SpeechSynthesis covers modern Hebrew).
 
-When heb_spacy is installed (optional)
-────────────────────────────────────────
+When he_dep_ud_hybrid spaCy model is installed (optional)
+──────────────────────────────────────────────────────────
   Rich vocabulary candidates gain: POS, binyan, tense, person, number,
   gender, verb_form, and construct state.  The nuance extractor (he.py)
   uses binyan + tense to fire the verb_template signal.
 
-  Installation:
-    pip install heb-spacy
+  Install the he_dep_ud_hybrid model via whatever channel the Hebrew NLP
+  community provides; the adapter gates on spacy.load() succeeding.
     python -m spacy download he_dep_ud_hybrid
 
 Known limitations
