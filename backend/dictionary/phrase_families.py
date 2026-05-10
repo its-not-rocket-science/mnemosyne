@@ -3353,6 +3353,5769 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
         ),
         tags=("amazement", "irony", "informal", "slang", "semantic-reversal", "B1"),
     ),
+    # ── De (generated) ────────────────────────────────────────
+
+    "de_den_spiess_umdrehen": PhraseFamily(
+        id="de_den_spiess_umdrehen",
+        language="de",
+        canonical_form="den Spieß umdrehen",
+        meaning="To turn the tables; to reverse the argument against one's opponent.",
+        register="neutral",
+        origin=(
+            "Spieß (spear or spit): reversing the pointed weapon so it faces the "
+            "attacker. Military imagery applied to argumentation. Attested in German "
+            "since the early modern period."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="den Spieß umdrehen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="den Spieß umkehren",
+                match_type=MatchType.inflectional_variant,
+                note="Variant with 'umkehren' (to reverse) instead of 'umdrehen'.",
+            ),
+            PhraseVariant(
+                surface="er hat den Spieß umgedreht",
+                match_type=MatchType.inflectional_variant,
+                note="He turned the tables — past tense.",
+            ),
+        ),
+    ),
+
+    "de_einen_korb_geben": PhraseFamily(
+        id="de_einen_korb_geben",
+        language="de",
+        canonical_form="jemandem einen Korb geben",
+        meaning="To reject someone; to turn someone down romantically.",
+        register="neutral",
+        origin=(
+            "Medieval legend: a woman lowering a suitor in a basket (Korb) through a "
+            "window, then leaving him dangling — giving him the basket (rejection). "
+            "The image entered German as a standard expression for romantic refusal."
+        ),
+        why_it_matters=(
+            "One of the most common German expressions for rejection. Understanding "
+            "the basket image makes the phrase memorable."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="jemandem einen Korb geben",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="einen Korb bekommen",
+                match_type=MatchType.inflectional_variant,
+                note="To get the basket — to be rejected (passive perspective).",
+            ),
+            PhraseVariant(
+                surface="sie hat ihm einen Korb gegeben",
+                match_type=MatchType.inflectional_variant,
+                note="She turned him down — past tense.",
+            ),
+        ),
+    ),
+
+    "de_das_handtuch_werfen": PhraseFamily(
+        id="de_das_handtuch_werfen",
+        language="de",
+        canonical_form="das Handtuch werfen",
+        meaning="To throw in the towel; to give up.",
+        register="neutral",
+        origin=(
+            "From boxing: a trainer throwing a towel into the ring concedes the "
+            "match. Borrowed directly from English boxing culture into German, "
+            "retaining the same image."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="das Handtuch werfen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="er hat das Handtuch geworfen",
+                match_type=MatchType.inflectional_variant,
+                note="He threw in the towel — past tense.",
+            ),
+            PhraseVariant(
+                surface="das Handtuch schmeißen",
+                match_type=MatchType.inflectional_variant,
+                note="Colloquial variant with 'schmeißen' (to chuck).",
+            ),
+        ),
+    ),
+
+    "de_ins_fettnaepfchen_treten": PhraseFamily(
+        id="de_ins_fettnaepfchen_treten",
+        language="de",
+        canonical_form="ins Fettnäpfchen treten",
+        meaning="To put one's foot in it; to make an embarrassing blunder.",
+        register="neutral",
+        origin=(
+            "Fettnäpfchen (small grease dish): small pots of grease were placed near "
+            "doors or under chairs for polishing boots. Stepping into one was a "
+            "social embarrassment — the word stuck as a metaphor for unintentional "
+            "offense."
+        ),
+        why_it_matters=(
+            "A quintessentially German idiom with no clean English parallel. The "
+            "Fettnäpfchen image is opaque and impossible to guess — a learner who "
+            "knows it has unlocked genuine cultural vocabulary."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ins Fettnäpfchen treten",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="er ist ins Fettnäpfchen getreten",
+                match_type=MatchType.inflectional_variant,
+                note="He put his foot in it — past tense.",
+            ),
+        ),
+    ),
+
+    "de_blau_machen": PhraseFamily(
+        id="de_blau_machen",
+        language="de",
+        canonical_form="blaumachen",
+        meaning="To skip work; to play hooky; to take an unauthorized day off.",
+        register="informal",
+        origin=(
+            "Possibly from woad dyeing (Blaufärben), where cloth soaked in blue dye "
+            "had to rest — workers could take the day off while the vat sat idle. "
+            "Alternatively, from Blue Monday (Saint Monday), the tradition of taking "
+            "Mondays off."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="blaumachen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="blau machen",
+                match_type=MatchType.orthographic_variant,
+                note="Written as two words — both spellings are common.",
+            ),
+            PhraseVariant(
+                surface="er macht heute blau",
+                match_type=MatchType.inflectional_variant,
+                note="He's taking the day off — present tense.",
+            ),
+        ),
+    ),
+
+    "de_seinen_senf_dazugeben": PhraseFamily(
+        id="de_seinen_senf_dazugeben",
+        language="de",
+        canonical_form="seinen Senf dazugeben",
+        meaning="To give one's two cents; to add an unsolicited opinion.",
+        register="informal",
+        origin=(
+            "Mustard (Senf) was a pungent, widely used condiment that was added to "
+            "food even when unwanted. 'Adding your mustard' to a conversation "
+            "suggests imposing a strong-flavored opinion where it wasn't sought."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="seinen Senf dazugeben",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="seinen Senf hinzufügen",
+                match_type=MatchType.inflectional_variant,
+                note="To add one's mustard — slightly more formal verb.",
+            ),
+            PhraseVariant(
+                surface="muss er immer seinen Senf dazugeben",
+                match_type=MatchType.inflectional_variant,
+                note="He always has to put his two cents in.",
+            ),
+        ),
+    ),
+
+    "de_tomaten_auf_den_augen": PhraseFamily(
+        id="de_tomaten_auf_den_augen",
+        language="de",
+        canonical_form="Tomaten auf den Augen haben",
+        meaning="To be blind to what's obvious; to not see what's right in front of one.",
+        register="informal",
+        origin=(
+            "Tomatoes (Tomaten) on the eyes — large round objects blocking the view. "
+            "A comic image emphasizing willful or oblivious blindness. More colorful "
+            "than the English 'scales on one's eyes.'"
+        ),
+        why_it_matters=(
+            "Strikingly visual and playful. Unique to German among major European "
+            "languages. Learning it builds awareness of German's penchant for "
+            "vegetable-based idiom."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Tomaten auf den Augen haben",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="du hast wohl Tomaten auf den Augen",
+                match_type=MatchType.inflectional_variant,
+                note="You must have tomatoes on your eyes — direct address, exasperated.",
+            ),
+        ),
+    ),
+
+    "de_um_den_heissen_brei": PhraseFamily(
+        id="de_um_den_heissen_brei",
+        language="de",
+        canonical_form="um den heißen Brei herumreden",
+        meaning="To beat around the hot porridge; to avoid the subject.",
+        register="neutral",
+        origin=(
+            "Hot porridge (heißer Brei) cannot be eaten immediately — one circles "
+            "around it, blowing on it, waiting. The image of circling without "
+            "committing is used for evasive speech. Compare French 'tourner autour du "
+            "pot'."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="um den heißen Brei herumreden",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="um den heißen Brei herumgehen",
+                match_type=MatchType.inflectional_variant,
+                note="To walk around the hot porridge — motion variant.",
+            ),
+            PhraseVariant(
+                surface="rede nicht um den heißen Brei herum",
+                match_type=MatchType.inflectional_variant,
+                note="Don't beat around the bush — imperative.",
+            ),
+        ),
+    ),
+
+    "de_durch_dick_und_dunn": PhraseFamily(
+        id="de_durch_dick_und_dunn",
+        language="de",
+        canonical_form="durch dick und dünn",
+        meaning="Through thick and thin; in good times and bad.",
+        register="neutral",
+        origin=(
+            "Thick (dick) and thin (dünn) referred to thick and thin forest terrain — "
+            "alternating dense thicket and open paths. Through both kinds of terrain "
+            "suggests loyalty regardless of conditions. Parallel to English 'through "
+            "thick and thin.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="durch dick und dünn",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="durch dick und dünn gehen",
+                match_type=MatchType.inflectional_variant,
+                note="To go through thick and thin — with verb.",
+            ),
+        ),
+    ),
+
+    "de_das_fuenfte_rad_am_wagen": PhraseFamily(
+        id="de_das_fuenfte_rad_am_wagen",
+        language="de",
+        canonical_form="das fünfte Rad am Wagen",
+        meaning="The fifth wheel; an unnecessary person.",
+        register="neutral",
+        origin=(
+            "A wagon needs four wheels — a fifth is purely superfluous. The "
+            "expression captures the feeling of being unwanted or redundant in a "
+            "group. Found in early modern German. The English 'fifth wheel' shares "
+            "the same image."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="das fünfte Rad am Wagen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="das fünfte Rad am Wagen sein",
+                match_type=MatchType.inflectional_variant,
+                note="To be the fifth wheel — with sein (to be).",
+            ),
+            PhraseVariant(
+                surface="er ist das fünfte Rad am Wagen",
+                match_type=MatchType.inflectional_variant,
+                note="He's the odd one out.",
+            ),
+        ),
+    ),
+
+    "de_hinter_dem_mond": PhraseFamily(
+        id="de_hinter_dem_mond",
+        language="de",
+        canonical_form="hinter dem Mond leben",
+        meaning="To live behind the moon; to be out of touch with reality.",
+        register="informal",
+        origin=(
+            "The moon's far side (the dark side) was invisible — living there means "
+            "existing beyond what the world can see or know. A person 'behind the "
+            "moon' is ignorant of current events and modern life."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="hinter dem Mond leben",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="du lebst wohl hinter dem Mond",
+                match_type=MatchType.inflectional_variant,
+                note="You must be living on the moon — direct address.",
+            ),
+            PhraseVariant(
+                surface="hinterm Mond leben",
+                match_type=MatchType.inflectional_variant,
+                note="Colloquial contraction with 'hinterm'.",
+            ),
+        ),
+    ),
+
+    "de_wie_aus_der_pistole": PhraseFamily(
+        id="de_wie_aus_der_pistole",
+        language="de",
+        canonical_form="wie aus der Pistole geschossen",
+        meaning="Like a shot from a pistol; immediately; instantaneously.",
+        register="neutral",
+        origin=(
+            "The speed of a bullet fired from a pistol: as fast as possible. Used to "
+            "describe instant responses, especially verbal ones. 'Er antwortete wie "
+            "aus der Pistole geschossen' — he answered without a moment's hesitation."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="wie aus der Pistole geschossen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="er antwortete wie aus der Pistole geschossen",
+                match_type=MatchType.inflectional_variant,
+                note="He answered like a shot.",
+            ),
+        ),
+    ),
+
+    "de_auf_der_kippe_stehen": PhraseFamily(
+        id="de_auf_der_kippe_stehen",
+        language="de",
+        canonical_form="auf der Kippe stehen",
+        meaning="To hang in the balance; to be on the verge; to be uncertain.",
+        register="neutral",
+        origin=(
+            "Kippe can mean a tipping point, a see-saw, or the edge of a surface. "
+            "Something balanced on the Kippe can fall either way — an apt metaphor "
+            "for an undecided situation."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="auf der Kippe stehen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="es steht auf der Kippe",
+                match_type=MatchType.inflectional_variant,
+                note="It's hanging in the balance.",
+            ),
+            PhraseVariant(
+                surface="auf Kante stehen",
+                match_type=MatchType.inflectional_variant,
+                note="Variant using Kante (edge) — same meaning.",
+            ),
+        ),
+    ),
+
+    "de_die_katze_im_sack": PhraseFamily(
+        id="de_die_katze_im_sack",
+        language="de",
+        canonical_form="die Katze im Sack kaufen",
+        meaning="To buy a pig in a poke; to buy something without examining it first.",
+        register="neutral",
+        origin=(
+            "Medieval market fraud: merchants sold a (presumably valuable) cat in a "
+            "bag instead of the promised pig. Letting the cat out of the bag (den "
+            "Braten riechen) revealed the trick. Compare English 'pig in a poke' and "
+            "French 'acheter chat en poche.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="die Katze im Sack kaufen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="eine Katze im Sack kaufen",
+                match_type=MatchType.inflectional_variant,
+                note="Indefinite article variant — slightly more generic.",
+            ),
+        ),
+    ),
+
+    "de_einen_zahn_zulegen": PhraseFamily(
+        id="de_einen_zahn_zulegen",
+        language="de",
+        canonical_form="einen Zahn zulegen",
+        meaning="To step on the gas; to speed up; to increase effort.",
+        register="informal",
+        origin=(
+            "Zahn (tooth) as slang for speed — possibly from cycling, where adding a "
+            "gear (Zahn = tooth on a cog) means pedaling faster. The image is "
+            "mechanical: adding a cog increases velocity."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="einen Zahn zulegen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="leg mal einen Zahn zu",
+                match_type=MatchType.inflectional_variant,
+                note="Speed it up — imperative.",
+            ),
+            PhraseVariant(
+                surface="noch einen Zahn zulegen",
+                match_type=MatchType.inflectional_variant,
+                note="To step it up a notch further.",
+            ),
+        ),
+    ),
+
+    "de_zwei_fliegen_mit_einer_klappe": PhraseFamily(
+        id="de_zwei_fliegen_mit_einer_klappe",
+        language="de",
+        canonical_form="zwei Fliegen mit einer Klappe schlagen",
+        meaning="To kill two birds with one stone.",
+        register="neutral",
+        origin=(
+            "Klappe (flap, shutter) rather than stone: German uses a fly swatter or "
+            "door flap hitting two flies. The same concept as English but with an "
+            "indoor domestic image. Also attested in Dutch and other Germanic "
+            "languages."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="zwei Fliegen mit einer Klappe schlagen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="zwei Fliegen mit einer Klappe",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical — the verb often dropped in parenthetical use.",
+            ),
+        ),
+    ),
+
+    "de_alle_ueber_einen_kamm": PhraseFamily(
+        id="de_alle_ueber_einen_kamm",
+        language="de",
+        canonical_form="alle über einen Kamm scheren",
+        meaning=(
+            "To tar everyone with the same brush; to treat everyone identically"
+            "without distinction."
+        ),
+        register="neutral",
+        origin=(
+            "Scheren (to shear, to comb) + Kamm (comb): running one comb over "
+            "everyone flattens all differences. The shearing image evokes sheep — "
+            "treating people as undifferentiated flock."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="alle über einen Kamm scheren",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="alle über einen Kamm",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical — verb dropped in informal use.",
+            ),
+            PhraseVariant(
+                surface="man kann nicht alle über einen Kamm scheren",
+                match_type=MatchType.inflectional_variant,
+                note="You can't treat everyone the same — negated form.",
+            ),
+        ),
+    ),
+
+    "de_ins_wasser_fallen": PhraseFamily(
+        id="de_ins_wasser_fallen",
+        language="de",
+        canonical_form="ins Wasser fallen",
+        meaning="To fall through; to not happen; to come to nothing.",
+        register="neutral",
+        origin=(
+            "Something that falls into water disappears or is ruined — a plan 'fallen "
+            "into water' has dissolved. The aquatic metaphor for failure is common "
+            "across Germanic languages."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ins Wasser fallen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="der Plan ist ins Wasser gefallen",
+                match_type=MatchType.inflectional_variant,
+                note="The plan fell through — past tense.",
+            ),
+            PhraseVariant(
+                surface="ins Wasser gefallen",
+                match_type=MatchType.inflectional_variant,
+                note="Fallen through — participial use.",
+            ),
+        ),
+    ),
+
+    "de_die_kuh_vom_eis": PhraseFamily(
+        id="de_die_kuh_vom_eis",
+        language="de",
+        canonical_form="die Kuh vom Eis bringen",
+        meaning="To get the cow off the ice; to solve a tricky problem.",
+        register="neutral",
+        origin=(
+            "A cow on ice is in a precarious, almost comic predicament — heavy, "
+            "unstable, unable to walk safely. Getting it off requires ingenuity and "
+            "care. The image encodes both the difficulty and the urgency of problem- "
+            "solving."
+        ),
+        why_it_matters=(
+            "Unique to German. Learners of German often encounter it and find it "
+            "initially baffling — a perfect example of opaque cultural metaphor."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="die Kuh vom Eis bringen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="wir müssen die Kuh vom Eis bringen",
+                match_type=MatchType.inflectional_variant,
+                note="We need to get the cow off the ice — urgent form.",
+            ),
+            PhraseVariant(
+                surface="die Kuh ist vom Eis",
+                match_type=MatchType.inflectional_variant,
+                note="The cow is off the ice — the problem is solved.",
+            ),
+        ),
+    ),
+
+    "de_mit_kanonen_auf_spatzen": PhraseFamily(
+        id="de_mit_kanonen_auf_spatzen",
+        language="de",
+        canonical_form="mit Kanonen auf Spatzen schießen",
+        meaning="To use a sledgehammer to crack a nut; to use disproportionate means.",
+        register="neutral",
+        origin=(
+            "Firing a cannon (Kanone) at sparrows (Spatzen) is absurdly excessive. "
+            "The expression critiques the mismatch between powerful means and trivial "
+            "ends. Common in business, politics, and everyday critique."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="mit Kanonen auf Spatzen schießen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="mit Kanonen auf Spatzen",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical parenthetical.",
+            ),
+            PhraseVariant(
+                surface="das ist mit Kanonen auf Spatzen geschossen",
+                match_type=MatchType.inflectional_variant,
+                note="That's using a sledgehammer to crack a nut.",
+            ),
+        ),
+    ),
+
+    "de_auf_grossem_fuss": PhraseFamily(
+        id="de_auf_grossem_fuss",
+        language="de",
+        canonical_form="auf großem Fuß leben",
+        meaning="To live large; to live extravagantly; to live beyond one's means.",
+        register="neutral",
+        origin=(
+            "In medieval times, long pointed shoe tips (Schnabelschuhe) indicated "
+            "social rank — longer tips = higher status. Living on a 'large foot' "
+            "referenced the conspicuous luxury of aristocratic footwear."
+        ),
+        why_it_matters=(
+            "Contrast with 'auf gutem Fuß stehen' (to be on good terms with someone) "
+            "— same Fuß, different meaning. Distinguishing these builds lexical "
+            "precision."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="auf großem Fuß leben",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="auf großem Fuße leben",
+                match_type=MatchType.orthographic_variant,
+                note="With dative -e ending — older, still seen in formal writing.",
+            ),
+            PhraseVariant(
+                surface="er lebt auf großem Fuß",
+                match_type=MatchType.inflectional_variant,
+                note="He's living large.",
+            ),
+        ),
+    ),
+
+    "de_jemandem_den_daumen_drucken": PhraseFamily(
+        id="de_jemandem_den_daumen_drucken",
+        language="de",
+        canonical_form="jemandem den Daumen drücken",
+        meaning="To keep one's fingers crossed for someone; to wish someone luck.",
+        register="neutral",
+        origin=(
+            "In Roman gladiatorial combat, pressing the thumb down (or closing the "
+            "fist around it) was a gesture of mercy or good will. The Germanic "
+            "tradition adopted the thumb-pressing gesture as a luck charm. Compare "
+            "English 'fingers crossed.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="jemandem den Daumen drücken",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ich drücke dir den Daumen",
+                match_type=MatchType.inflectional_variant,
+                note="I'm crossing my fingers for you.",
+            ),
+            PhraseVariant(
+                surface="Daumen drücken",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical imperative or standalone expression.",
+            ),
+        ),
+    ),
+
+    "de_das_kind_beim_namen": PhraseFamily(
+        id="de_das_kind_beim_namen",
+        language="de",
+        canonical_form="das Kind beim Namen nennen",
+        meaning="To call a spade a spade; to name something clearly and directly.",
+        register="neutral",
+        origin=(
+            "Naming the child (das Kind) by its name — a metaphor for honest, direct "
+            "identification of something others might hesitate to name. Attested in "
+            "early modern German and parallel to Erasmian humanist rhetoric about "
+            "plain speech."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="das Kind beim Namen nennen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="das Kind beim richtigen Namen nennen",
+                match_type=MatchType.inflectional_variant,
+                note="Call the child by its right name — with emphasis on 'right'.",
+            ),
+        ),
+    ),
+
+    "de_auf_dem_sprung": PhraseFamily(
+        id="de_auf_dem_sprung",
+        language="de",
+        canonical_form="auf dem Sprung sein",
+        meaning="To be on the go; to be about to leave; to be in a hurry.",
+        register="neutral",
+        origin=(
+            "Sprung (jump, leap) — being on the verge of jumping suggests imminent "
+            "motion. The expression captures a moment of readiness before departure, "
+            "widely used in casual German."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="auf dem Sprung sein",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ich bin auf dem Sprung",
+                match_type=MatchType.inflectional_variant,
+                note="I'm just on my way out.",
+            ),
+            PhraseVariant(
+                surface="er ist auf dem Sprung",
+                match_type=MatchType.inflectional_variant,
+                note="He's about to leave.",
+            ),
+        ),
+    ),
+
+    "de_keinen_finger_krumm_machen": PhraseFamily(
+        id="de_keinen_finger_krumm_machen",
+        language="de",
+        canonical_form="keinen Finger krumm machen",
+        meaning="Not to lift a finger; to make no effort whatsoever.",
+        register="informal",
+        origin=(
+            "Making a finger crooked (krumm machen) is the smallest possible physical "
+            "movement. Refusing even that gesture emphasizes total passivity. The "
+            "negation 'keinen' + minimal action = maximal laziness."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="keinen Finger krumm machen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="er macht keinen Finger krumm",
+                match_type=MatchType.inflectional_variant,
+                note="He won't lift a finger.",
+            ),
+        ),
+    ),
+
+    "de_die_flinte_ins_korn_werfen": PhraseFamily(
+        id="de_die_flinte_ins_korn_werfen",
+        language="de",
+        canonical_form="die Flinte ins Korn werfen",
+        meaning="To give up; to throw in the towel; to abandon one's efforts.",
+        register="neutral",
+        origin=(
+            "Flinte (musket, rifle) + Korn (grain field): a soldier who throws their "
+            "weapon into a grain field has surrendered or deserted. The battlefield "
+            "image evokes hopeless retreat. More vivid than English 'throw in the "
+            "towel.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="die Flinte ins Korn werfen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="er hat die Flinte ins Korn geworfen",
+                match_type=MatchType.inflectional_variant,
+                note="He's given up — past tense.",
+            ),
+            PhraseVariant(
+                surface="wirf nicht gleich die Flinte ins Korn",
+                match_type=MatchType.inflectional_variant,
+                note="Don't give up so quickly — imperative.",
+            ),
+        ),
+    ),
+
+    "de_jemanden_auf_dem_kieker": PhraseFamily(
+        id="de_jemanden_auf_dem_kieker",
+        language="de",
+        canonical_form="jemanden auf dem Kieker haben",
+        meaning=(
+            "To have someone in one's sights; to be watching someone closely with"
+            "suspicion."
+        ),
+        register="informal",
+        origin=(
+            "Kieker (telescope, binoculars) from maritime and military use. 'Having "
+            "someone through the telescope' means tracking them closely. The "
+            "expression implies sustained surveillance and mild hostility."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="jemanden auf dem Kieker haben",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="er hat mich auf dem Kieker",
+                match_type=MatchType.inflectional_variant,
+                note="He's got me in his sights.",
+            ),
+        ),
+    ),
+
+    "de_sich_in_die_nesseln_setzen": PhraseFamily(
+        id="de_sich_in_die_nesseln_setzen",
+        language="de",
+        canonical_form="sich in die Nesseln setzen",
+        meaning="To get oneself into a mess; to land oneself in trouble.",
+        register="informal",
+        origin=(
+            "Nesseln (stinging nettles): sitting down in a nettle patch causes "
+            "immediate, painful consequences. A visceral image for the result of "
+            "reckless action. Common in Austrian and South German usage."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="sich in die Nesseln setzen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="er hat sich in die Nesseln gesetzt",
+                match_type=MatchType.inflectional_variant,
+                note="He got himself into trouble.",
+            ),
+        ),
+    ),
+
+    "de_den_braten_riechen": PhraseFamily(
+        id="de_den_braten_riechen",
+        language="de",
+        canonical_form="den Braten riechen",
+        meaning="To smell a rat; to sense that something is not right.",
+        register="neutral",
+        origin=(
+            "Braten (roast meat): the smell of something cooking alerts you to what "
+            "is happening before you see it. 'Smelling the roast' = detecting a "
+            "situation before it is revealed. Related to the 'cat in the bag' cluster "
+            "of medieval marketplace fraud idioms."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="den Braten riechen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ich habe den Braten gerochen",
+                match_type=MatchType.inflectional_variant,
+                note="I smelled a rat — past tense.",
+            ),
+            PhraseVariant(
+                surface="er hat den Braten schnell gerochen",
+                match_type=MatchType.inflectional_variant,
+                note="He caught on quickly.",
+            ),
+        ),
+    ),
+
+    "de_eine_lanze_brechen": PhraseFamily(
+        id="de_eine_lanze_brechen",
+        language="de",
+        canonical_form="eine Lanze für jemanden brechen",
+        meaning=(
+            "To go to bat for someone; to stand up for someone; to make a case on"
+            "their behalf."
+        ),
+        register="neutral",
+        origin=(
+            "Medieval jousting: breaking a lance in tournament combat for someone's "
+            "honor was an act of personal advocacy and loyalty. The expression "
+            "retains the chivalric register of active, public defense of another."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="eine Lanze für jemanden brechen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="eine Lanze für ihn brechen",
+                match_type=MatchType.inflectional_variant,
+                note="Go to bat for him — with pronoun.",
+            ),
+            PhraseVariant(
+                surface="er brach eine Lanze für sie",
+                match_type=MatchType.inflectional_variant,
+                note="He stood up for her — past tense.",
+            ),
+        ),
+    ),
+
+    "de_mit_haut_und_haaren": PhraseFamily(
+        id="de_mit_haut_und_haaren",
+        language="de",
+        canonical_form="mit Haut und Haaren",
+        meaning="Hook, line, and sinker; completely; lock, stock, and barrel.",
+        register="neutral",
+        origin=(
+            "Skin (Haut) and hair (Haare) represent the whole person — external "
+            "covering included. 'With skin and hair' = entirely, without leaving "
+            "anything behind. Used of both consuming something completely and being "
+            "completely ensnared."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="mit Haut und Haaren",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="er hat es mit Haut und Haaren geglaubt",
+                match_type=MatchType.inflectional_variant,
+                note="He swallowed it hook, line, and sinker.",
+            ),
+            PhraseVariant(
+                surface="sie ist mit Haut und Haaren verliebt",
+                match_type=MatchType.inflectional_variant,
+                note="She's head over heels in love.",
+            ),
+        ),
+    ),
+
+    "de_ueber_den_berg_sein": PhraseFamily(
+        id="de_ueber_den_berg_sein",
+        language="de",
+        canonical_form="über den Berg sein",
+        meaning="To be over the worst; to be out of the woods; to have passed the crisis.",
+        register="neutral",
+        origin=(
+            "The mountain (Berg) as an obstacle to be surmounted: once you're over "
+            "the peak, the worst of the climb is behind you. Applied to illness, "
+            "crisis, and difficulty. Compare English 'over the hill' (though German's "
+            "meaning is more positive)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="über den Berg sein",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="er ist über den Berg",
+                match_type=MatchType.inflectional_variant,
+                note="He's over the worst.",
+            ),
+            PhraseVariant(
+                surface="noch nicht über den Berg",
+                match_type=MatchType.inflectional_variant,
+                note="Not out of the woods yet.",
+            ),
+        ),
+    ),
+
+    "de_auf_den_leim_gehen": PhraseFamily(
+        id="de_auf_den_leim_gehen",
+        language="de",
+        canonical_form="auf den Leim gehen",
+        meaning="To be taken in; to fall for a trick; to be fooled.",
+        register="neutral",
+        origin=(
+            "Leim (glue, birdlime): hunters coated branches with sticky birdlime to "
+            "catch birds — they landed and stuck. 'Going onto the glue' = being "
+            "trapped by a deception. The image is ancient and appears across European "
+            "languages."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="auf den Leim gehen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="er ist auf den Leim gegangen",
+                match_type=MatchType.inflectional_variant,
+                note="He fell for it — past tense.",
+            ),
+            PhraseVariant(
+                surface="jemandem auf den Leim gehen",
+                match_type=MatchType.inflectional_variant,
+                note="To be taken in by someone — with dative agent.",
+            ),
+        ),
+    ),
+
+    "de_auf_dem_trockenen_sitzen": PhraseFamily(
+        id="de_auf_dem_trockenen_sitzen",
+        language="de",
+        canonical_form="auf dem Trockenen sitzen",
+        meaning="To be stranded; to be in a fix; to have run out of resources.",
+        register="neutral",
+        origin=(
+            "Trockenen (dry land): a fish or boat stranded on dry land cannot move. "
+            "The image captures helplessness from lack of the usual medium — a sailor "
+            "without water, or a person without money or support."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="auf dem Trockenen sitzen",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="auf dem Trocknen sitzen",
+                match_type=MatchType.orthographic_variant,
+                note="Contracted form without -en, also common.",
+            ),
+            PhraseVariant(
+                surface="er sitzt auf dem Trockenen",
+                match_type=MatchType.inflectional_variant,
+                note="He's high and dry.",
+            ),
+        ),
+    ),
+
+    # ── Es (generated) ────────────────────────────────────────
+
+    "es_a_buenas_horas": PhraseFamily(
+        id="es_a_buenas_horas",
+        language="es",
+        canonical_form="a buenas horas mangas verdes",
+        meaning=(
+            "Too little, too late. Help or action that comes when it is no longer"
+            "useful."
+        ),
+        register="informal",
+        origin=(
+            "Historical reference to the Holy Brotherhood (Santa Hermandad), rural "
+            "police who arrived too late to prevent crimes. Their green sleeves "
+            "(mangas verdes) became a symbol of belated intervention."
+        ),
+        why_it_matters=(
+            "Used ironically when help or a solution arrives after the problem has "
+            "passed."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="a buenas horas mangas verdes",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ya a buenas horas",
+                match_type=MatchType.allusion,
+                note="Shortened form omitting mangas verdes.",
+            ),
+        ),
+    ),
+
+    "es_a_quien_madruga": PhraseFamily(
+        id="es_a_quien_madruga",
+        language="es",
+        canonical_form="a quien madruga dios le ayuda",
+        meaning="The early bird catches the worm. God helps those who rise early.",
+        register="neutral",
+        origin=(
+            "Spanish proverb attested since the medieval period. Reflects the "
+            "agricultural value of rising at dawn."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="a quien madruga dios le ayuda",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="el que madruga dios le ayuda",
+                match_type=MatchType.orthographic_variant,
+                note="Alternative pronoun form.",
+            ),
+        ),
+    ),
+
+    "es_al_pan_pan": PhraseFamily(
+        id="es_al_pan_pan",
+        language="es",
+        canonical_form="al pan pan y al vino vino",
+        meaning="Call a spade a spade. Speak plainly and directly.",
+        register="neutral",
+        origin=(
+            "Ancient proverb found in Cervantes and earlier sources. The parallelism "
+            "(bread is bread, wine is wine) insists on calling things by their true "
+            "name."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="al pan pan y al vino vino",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="llamar al pan pan y al vino vino",
+                match_type=MatchType.inflectional_variant,
+                note="With explicit verb llamar.",
+            ),
+        ),
+    ),
+
+    "es_buscar_tres_pies": PhraseFamily(
+        id="es_buscar_tres_pies",
+        language="es",
+        canonical_form="buscar tres pies al gato",
+        meaning="Look for trouble; overcomplicate something that is simple.",
+        register="informal",
+        origin=(
+            "A cat has four paws; looking for only three means ignoring reality and "
+            "creating unnecessary difficulty."
+        ),
+        why_it_matters=(
+            "Used as a warning not to overthink or complicate straightforward "
+            "matters."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="buscar tres pies al gato",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="buscarle tres pies al gato",
+                match_type=MatchType.inflectional_variant,
+                note="With clitic le (dative).",
+            ),
+        ),
+    ),
+
+    "es_caer_chuzos": PhraseFamily(
+        id="es_caer_chuzos",
+        language="es",
+        canonical_form="caer chuzos de punta",
+        meaning="Rain cats and dogs; pour down heavily.",
+        register="informal",
+        origin=(
+            "Chuzo is a pointed pike or spike. Raining pointed spikes emphasizes the "
+            "violence and intensity of the downpour."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="caer chuzos de punta",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="llover chuzos",
+                match_type=MatchType.orthographic_variant,
+                note="With llover (to rain) instead of caer.",
+            ),
+        ),
+    ),
+
+    "es_coger_el_toro": PhraseFamily(
+        id="es_coger_el_toro",
+        language="es",
+        canonical_form="coger el toro por los cuernos",
+        meaning="Take the bull by the horns; deal with a difficult problem head-on.",
+        register="neutral",
+        variants=(
+            PhraseVariant(
+                surface="coger el toro por los cuernos",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="agarrar el toro por los cuernos",
+                match_type=MatchType.orthographic_variant,
+                note="agarrar preferred in Latin America over coger.",
+            ),
+        ),
+    ),
+
+    "es_dar_en_el_clavo": PhraseFamily(
+        id="es_dar_en_el_clavo",
+        language="es",
+        canonical_form="dar en el clavo",
+        meaning="Hit the nail on the head; be exactly right.",
+        register="neutral",
+        origin=(
+            "Carpentry metaphor: hitting the nail precisely versus bending it. "
+            "Cervantes used it in Don Quijote."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="dar en el clavo",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="dar en el clavo con algo",
+                match_type=MatchType.inflectional_variant,
+                note="With prepositional complement.",
+            ),
+        ),
+    ),
+
+    "es_echar_en_saco_roto": PhraseFamily(
+        id="es_echar_en_saco_roto",
+        language="es",
+        canonical_form="echar en saco roto",
+        meaning="In one ear and out the other; pay no attention to advice.",
+        register="neutral",
+        origin=(
+            "A broken sack (saco roto) cannot hold what is put in it — advice or "
+            "information poured in leaks straight out."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="echar en saco roto",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="caer en saco roto",
+                match_type=MatchType.orthographic_variant,
+                note="With caer (to fall); same meaning.",
+            ),
+        ),
+    ),
+
+    "es_el_que_rie_ultimo": PhraseFamily(
+        id="es_el_que_rie_ultimo",
+        language="es",
+        canonical_form="el que ríe último ríe mejor",
+        meaning="He who laughs last laughs best.",
+        register="neutral",
+        variants=(
+            PhraseVariant(
+                surface="el que ríe último ríe mejor",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="quien ríe último ríe mejor",
+                match_type=MatchType.orthographic_variant,
+                note="quien instead of el que.",
+            ),
+        ),
+    ),
+
+    "es_en_boca_cerrada": PhraseFamily(
+        id="es_en_boca_cerrada",
+        language="es",
+        canonical_form="en boca cerrada no entran moscas",
+        meaning="Silence is golden; loose lips sink ships. Keeping quiet avoids trouble.",
+        register="neutral",
+        origin=(
+            "Flies cannot enter a closed mouth — silence prevents unwanted intrusions "
+            "and regrettable words."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="en boca cerrada no entran moscas",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="boca cerrada no entran moscas",
+                match_type=MatchType.orthographic_variant,
+                note="Without introductory en.",
+            ),
+        ),
+    ),
+
+    "es_estar_en_las_nubes": PhraseFamily(
+        id="es_estar_en_las_nubes",
+        language="es",
+        canonical_form="estar en las nubes",
+        meaning="Have one's head in the clouds; be daydreaming or distracted.",
+        register="informal",
+        variants=(
+            PhraseVariant(
+                surface="estar en las nubes",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="andar en las nubes",
+                match_type=MatchType.orthographic_variant,
+                note="andar instead of estar; implies ongoing state.",
+            ),
+        ),
+    ),
+
+    "es_hacer_de_tripas_corazon": PhraseFamily(
+        id="es_hacer_de_tripas_corazon",
+        language="es",
+        canonical_form="hacer de tripas corazón",
+        meaning="Put on a brave face; summon courage despite fear or difficulty.",
+        register="informal",
+        origin=(
+            "Transform intestines (tripas, associated with fear and nausea) into a "
+            "heart (corazón, associated with courage). Making bravery out of fear."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="hacer de tripas corazón",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "es_hablar_por_los_codos": PhraseFamily(
+        id="es_hablar_por_los_codos",
+        language="es",
+        canonical_form="hablar por los codos",
+        meaning="Talk an ear off; be a chatterbox; talk excessively.",
+        register="informal",
+        origin=(
+            "Speaking through one's elbows (codos) implies uncontrolled, overflowing "
+            "speech that comes from every part of the body."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="hablar por los codos",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="habla por los codos",
+                match_type=MatchType.inflectional_variant,
+                note="Third-person present indicative.",
+            ),
+        ),
+    ),
+
+    "es_ir_al_grano": PhraseFamily(
+        id="es_ir_al_grano",
+        language="es",
+        canonical_form="ir al grano",
+        meaning="Get to the point; cut to the chase.",
+        register="neutral",
+        origin=(
+            "Grain (grano) is the essential part of wheat after the husk is removed. "
+            "Going to the grain means getting to the essential matter."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ir al grano",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="vamos al grano",
+                match_type=MatchType.inflectional_variant,
+                note="Let's get to the point (first person plural).",
+            ),
+        ),
+    ),
+
+    "es_la_gota_que_colma": PhraseFamily(
+        id="es_la_gota_que_colma",
+        language="es",
+        canonical_form="la gota que colmó el vaso",
+        meaning=(
+            "The straw that broke the camel's back; the final thing that made a bad"
+            "situation unbearable."
+        ),
+        register="neutral",
+        origin=(
+            "A drop that overflows a full glass. The vessel was already full; any "
+            "additional drop causes overflow."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="la gota que colmó el vaso",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="la gota que derramó el vaso",
+                match_type=MatchType.orthographic_variant,
+                note="With derramar (to spill) instead of colmar.",
+            ),
+            PhraseVariant(
+                surface="la última gota",
+                match_type=MatchType.allusion,
+                note="Shortened allusion.",
+            ),
+        ),
+    ),
+
+    "es_no_hay_dos_sin_tres": PhraseFamily(
+        id="es_no_hay_dos_sin_tres",
+        language="es",
+        canonical_form="no hay dos sin tres",
+        meaning="Things come in threes; bad luck or events tend to happen three times.",
+        register="neutral",
+        variants=(
+            PhraseVariant(
+                surface="no hay dos sin tres",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "es_pagar_los_platos_rotos": PhraseFamily(
+        id="es_pagar_los_platos_rotos",
+        language="es",
+        canonical_form="pagar los platos rotos",
+        meaning="Take the blame; be the scapegoat; pay for someone else's mistakes.",
+        register="informal",
+        origin=(
+            "Paying for broken plates even when you did not break them — suffering "
+            "the consequences of others' actions."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="pagar los platos rotos",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="pagar el pato",
+                match_type=MatchType.allusion,
+                note="Separate but related idiom also meaning to take the blame.",
+            ),
+        ),
+    ),
+
+    "es_perder_los_papeles": PhraseFamily(
+        id="es_perder_los_papeles",
+        language="es",
+        canonical_form="perder los papeles",
+        meaning="Lose one's cool; lose self-control; go off the rails.",
+        register="informal",
+        origin=(
+            "Losing one's papers (documents) means losing one's identity or "
+            "credentials. Metaphorically, losing control of oneself."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="perder los papeles",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="se le fueron los papeles",
+                match_type=MatchType.inflectional_variant,
+                note="Third person — he/she lost it.",
+            ),
+        ),
+    ),
+
+    "es_poner_los_puntos": PhraseFamily(
+        id="es_poner_los_puntos",
+        language="es",
+        canonical_form="poner los puntos sobre las íes",
+        meaning="Dot the i's and cross the t's; be precise and leave nothing to chance.",
+        register="neutral",
+        variants=(
+            PhraseVariant(
+                surface="poner los puntos sobre las íes",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="poner los puntos sobre las ies",
+                match_type=MatchType.orthographic_variant,
+                note="Without accent on í.",
+            ),
+        ),
+    ),
+
+    "es_querer_es_poder": PhraseFamily(
+        id="es_querer_es_poder",
+        language="es",
+        canonical_form="querer es poder",
+        meaning="Where there is a will there is a way.",
+        register="neutral",
+        variants=(
+            PhraseVariant(
+                surface="querer es poder",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "es_salir_el_tiro": PhraseFamily(
+        id="es_salir_el_tiro",
+        language="es",
+        canonical_form="salir el tiro por la culata",
+        meaning="Backfire; have the opposite of the intended effect.",
+        register="informal",
+        origin=(
+            "A gun that fires backward through the stock (culata) instead of forward "
+            "harms the shooter. Plans that backfire follow the same logic."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="salir el tiro por la culata",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="le salió el tiro por la culata",
+                match_type=MatchType.inflectional_variant,
+                note="Third person — it backfired on him/her.",
+            ),
+        ),
+    ),
+
+    "es_ser_una_y_carne": PhraseFamily(
+        id="es_ser_una_y_carne",
+        language="es",
+        canonical_form="ser uña y carne",
+        meaning="Be thick as thieves; be inseparable.",
+        register="informal",
+        origin=(
+            "Nail (uña) and flesh (carne) are so close they cannot be separated "
+            "without pain."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ser uña y carne",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="son uña y carne",
+                match_type=MatchType.inflectional_variant,
+                note="Third person plural.",
+            ),
+        ),
+    ),
+
+    "es_tener_la_sarten": PhraseFamily(
+        id="es_tener_la_sarten",
+        language="es",
+        canonical_form="tener la sartén por el mango",
+        meaning="Hold the reins; call the shots; be the one in control.",
+        register="informal",
+        origin=(
+            "Holding the handle (mango) of a frying pan (sartén) gives control over "
+            "its direction. Whoever holds the handle decides where it goes."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="tener la sartén por el mango",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="llevar la sartén por el mango",
+                match_type=MatchType.orthographic_variant,
+                note="llevar (to carry) instead of tener.",
+            ),
+        ),
+    ),
+
+    "es_tirar_la_toalla": PhraseFamily(
+        id="es_tirar_la_toalla",
+        language="es",
+        canonical_form="tirar la toalla",
+        meaning="Throw in the towel; give up; admit defeat.",
+        register="neutral",
+        origin=(
+            "Boxing term: a trainer throws a towel into the ring to stop a fight and "
+            "concede defeat."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="tirar la toalla",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="arrojar la toalla",
+                match_type=MatchType.orthographic_variant,
+                note="arrojar (to throw) instead of tirar.",
+            ),
+        ),
+    ),
+
+    "es_tomar_el_pelo": PhraseFamily(
+        id="es_tomar_el_pelo",
+        language="es",
+        canonical_form="tomar el pelo",
+        meaning="Pull someone's leg; tease or make fun of someone.",
+        register="informal",
+        origin=(
+            "Taking someone's hair (pelo) is an annoyance and mockery. "
+            "Metaphorically, to mess with someone playfully or deceitfully."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="tomar el pelo",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="me está tomando el pelo",
+                match_type=MatchType.inflectional_variant,
+                note="He/she is pulling my leg.",
+            ),
+        ),
+    ),
+
+    "es_ver_los_toros_desde_la_barrera": PhraseFamily(
+        id="es_ver_los_toros_desde_la_barrera",
+        language="es",
+        canonical_form="ver los toros desde la barrera",
+        meaning="Watch from the sidelines; stay safe while others take risks.",
+        register="neutral",
+        origin=(
+            "Bullfighting metaphor: watching from behind the protective barrier "
+            "(barrera) rather than entering the ring with the bull."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ver los toros desde la barrera",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ver los toros desde fuera",
+                match_type=MatchType.allusion,
+                note="Simplified form without barrera.",
+            ),
+        ),
+    ),
+
+    "es_vivir_de_las_rentas": PhraseFamily(
+        id="es_vivir_de_las_rentas",
+        language="es",
+        canonical_form="vivir de las rentas",
+        meaning="Live off one's laurels; rely on past achievements without new effort.",
+        register="neutral",
+        origin=(
+            "Living off rental income (rentas) without working — extended "
+            "metaphorically to coasting on past successes."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="vivir de las rentas",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "es_a_mal_tiempo_buena_cara": PhraseFamily(
+        id="es_a_mal_tiempo_buena_cara",
+        language="es",
+        canonical_form="a mal tiempo buena cara",
+        meaning="Keep smiling in adversity; put on a brave face when things go wrong.",
+        register="neutral",
+        variants=(
+            PhraseVariant(
+                surface="a mal tiempo buena cara",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ante el mal tiempo buena cara",
+                match_type=MatchType.orthographic_variant,
+                note="With ante instead of a.",
+            ),
+        ),
+    ),
+
+    "es_de_mal_en_peor": PhraseFamily(
+        id="es_de_mal_en_peor",
+        language="es",
+        canonical_form="ir de mal en peor",
+        meaning="Go from bad to worse; deteriorate steadily.",
+        register="neutral",
+        variants=(
+            PhraseVariant(
+                surface="ir de mal en peor",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="de mal en peor",
+                match_type=MatchType.allusion,
+                note="Shortened form without verb.",
+            ),
+        ),
+    ),
+
+    "es_quedarse_con_las_ganas": PhraseFamily(
+        id="es_quedarse_con_las_ganas",
+        language="es",
+        canonical_form="quedarse con las ganas",
+        meaning="Be left wanting; not get what you hoped for.",
+        register="informal",
+        variants=(
+            PhraseVariant(
+                surface="quedarse con las ganas",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="me quedé con las ganas",
+                match_type=MatchType.inflectional_variant,
+                note="First person past — I was left wanting.",
+            ),
+        ),
+    ),
+
+    "es_no_dar_pie_con_bola": PhraseFamily(
+        id="es_no_dar_pie_con_bola",
+        language="es",
+        canonical_form="no dar pie con bola",
+        meaning="Not get anything right; mess everything up.",
+        register="informal",
+        origin=(
+            "Football/ball-game metaphor: not even managing to kick (dar pie) the "
+            "ball (bola) — missing completely."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="no dar pie con bola",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="no doy pie con bola",
+                match_type=MatchType.inflectional_variant,
+                note="First person — I can't get anything right.",
+            ),
+        ),
+    ),
+
+    "es_echar_balones_fuera": PhraseFamily(
+        id="es_echar_balones_fuera",
+        language="es",
+        canonical_form="echar balones fuera",
+        meaning="Dodge the question; avoid responsibility; deflect blame.",
+        register="informal",
+        origin=(
+            "Football term: kicking the ball out of bounds to relieve pressure. "
+            "Metaphorically, evading a difficult topic."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="echar balones fuera",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "es_poner_el_dedo_en_la_llaga": PhraseFamily(
+        id="es_poner_el_dedo_en_la_llaga",
+        language="es",
+        canonical_form="poner el dedo en la llaga",
+        meaning="Put one's finger on the sore spot; touch on a painful truth.",
+        register="neutral",
+        origin=(
+            "Biblical reference to doubting Thomas touching Christ's wounds (llagas). "
+            "Pointing to the exact painful or sensitive issue."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="poner el dedo en la llaga",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="tocar la llaga",
+                match_type=MatchType.allusion,
+                note="Shorter form — to touch the wound.",
+            ),
+        ),
+    ),
+
+    "es_a_falta_de_pan": PhraseFamily(
+        id="es_a_falta_de_pan",
+        language="es",
+        canonical_form="a falta de pan buenas son tortas",
+        meaning="Beggars can't be choosers; make do with what you have.",
+        register="neutral",
+        origin=(
+            "If there is no bread, corn cakes (tortas) are welcome. Accept what is "
+            "available."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="a falta de pan buenas son tortas",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="a falta de pan tortas",
+                match_type=MatchType.allusion,
+                note="Shortened proverb form.",
+            ),
+        ),
+    ),
+
+    # ── Fr (generated) ────────────────────────────────────────
+
+    "fr_cest_du_gateau": PhraseFamily(
+        id="fr_cest_du_gateau",
+        language="fr",
+        canonical_form="c'est du gâteau",
+        meaning="It's a piece of cake; it's easy.",
+        register="informal",
+        origin=(
+            "Gâteau (cake) as a metaphor for something pleasurable and easily "
+            "obtained dates to 19th-century French slang. Cake requires no effort to "
+            "eat, so 'it's cake' came to mean effortless."
+        ),
+        why_it_matters=(
+            "The exact parallel to English 'piece of cake' makes this idiom "
+            "accessible, but French uses 'c'est du gâteau' (uncountable) rather than "
+            "'un morceau de gâteau'."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="c'est du gâteau",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="c'est du gateau",
+                match_type=MatchType.orthographic_variant,
+                note="Without the circumflex, common in informal digital writing.",
+            ),
+            PhraseVariant(
+                surface="c'est pas du gâteau",
+                match_type=MatchType.inflectional_variant,
+                note="Negation: it's no picnic; it's harder than it looks.",
+            ),
+        ),
+    ),
+
+    "fr_avoir_la_tete_dans_les_nuages": PhraseFamily(
+        id="fr_avoir_la_tete_dans_les_nuages",
+        language="fr",
+        canonical_form="avoir la tête dans les nuages",
+        meaning="To have one's head in the clouds; to be a daydreamer.",
+        register="neutral",
+        origin=(
+            "Clouds as a symbol of vagueness and unreality is cross-cultural. The "
+            "French expression maps directly onto the English idiom, both rooted in "
+            "the image of someone whose thoughts float above the mundane world."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="avoir la tête dans les nuages",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="la tête dans les nuages",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical form, predicate position.",
+            ),
+            PhraseVariant(
+                surface="il a la tête dans les nuages",
+                match_type=MatchType.inflectional_variant,
+                note="Third-person conjugated form.",
+            ),
+        ),
+    ),
+
+    "fr_en_avoir_ras_le_bol": PhraseFamily(
+        id="fr_en_avoir_ras_le_bol",
+        language="fr",
+        canonical_form="en avoir ras le bol",
+        meaning="To be fed up; to have had it up to here.",
+        register="informal",
+        origin=(
+            "Bol (bowl) filled to the brim (ras = level with the edge): the bowl of "
+            "patience is completely full. Emerged in 20th-century colloquial French, "
+            "used across France and Quebec."
+        ),
+        why_it_matters=(
+            "Very high frequency in spoken French. The intensified form 'ras-le-bol' "
+            "is also used as a noun ('un ras-le-bol général') meaning widespread "
+            "discontent."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="en avoir ras le bol",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="j'en ai ras le bol",
+                match_type=MatchType.inflectional_variant,
+                note="First-person: I've had it up to here.",
+            ),
+            PhraseVariant(
+                surface="ras-le-bol",
+                match_type=MatchType.inflectional_variant,
+                note="Noun form: widespread exasperation.",
+            ),
+        ),
+    ),
+
+    "fr_vendre_la_meche": PhraseFamily(
+        id="fr_vendre_la_meche",
+        language="fr",
+        canonical_form="vendre la mèche",
+        meaning="To spill the beans; to let the cat out of the bag; to reveal a secret.",
+        register="informal",
+        origin=(
+            "Mèche (fuse, or wick) referred to the fuse on a bomb or cannon. 'Selling "
+            "the fuse' to the enemy would reveal the plan of attack. The expression "
+            "entered civilian speech as a metaphor for betraying a secret."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="vendre la mèche",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="vendre la meche",
+                match_type=MatchType.orthographic_variant,
+                note="Without accent, common in informal writing.",
+            ),
+            PhraseVariant(
+                surface="a vendu la mèche",
+                match_type=MatchType.inflectional_variant,
+                note="He/she sold the fuse — past tense usage.",
+            ),
+        ),
+    ),
+
+    "fr_sauter_du_coq_a_lane": PhraseFamily(
+        id="fr_sauter_du_coq_a_lane",
+        language="fr",
+        canonical_form="sauter du coq à l'âne",
+        meaning="To jump from topic to topic; to change subjects abruptly.",
+        register="neutral",
+        origin=(
+            "From coq (rooster) to âne (donkey): two unrelated animals, emphasizing "
+            "the absurdity of the leap. The expression appears in Rabelais (16th "
+            "century) and reflects medieval comic traditions of nonsense discourse."
+        ),
+        why_it_matters=(
+            "A colorful image with no direct English equivalent. Reveals how French "
+            "idioms often use barnyard animals as vehicles for abstract ideas."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="sauter du coq à l'âne",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="sauter du coq a l'ane",
+                match_type=MatchType.orthographic_variant,
+                note="Without grave accent.",
+            ),
+            PhraseVariant(
+                surface="passer du coq à l'âne",
+                match_type=MatchType.inflectional_variant,
+                note="Variant using 'passer' (to pass) instead of 'sauter'.",
+            ),
+        ),
+    ),
+
+    "fr_faire_dune_pierre_deux_coups": PhraseFamily(
+        id="fr_faire_dune_pierre_deux_coups",
+        language="fr",
+        canonical_form="faire d'une pierre deux coups",
+        meaning="To kill two birds with one stone.",
+        register="neutral",
+        origin=(
+            "Strikingly parallel to English. Both French and English use the image of "
+            "a single projectile achieving two results. The stone (pierre) replaces "
+            "the English bird metaphor with a more tool-oriented image."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="faire d'une pierre deux coups",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="d'une pierre deux coups",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical form, often used as a parenthetical.",
+            ),
+            PhraseVariant(
+                surface="faire une pierre deux coups",
+                match_type=MatchType.orthographic_variant,
+                note="Without the elided 'de', rare but attested.",
+            ),
+        ),
+    ),
+
+    "fr_mettre_son_grain_de_sel": PhraseFamily(
+        id="fr_mettre_son_grain_de_sel",
+        language="fr",
+        canonical_form="mettre son grain de sel",
+        meaning="To put in one's two cents; to add an unwanted opinion.",
+        register="neutral",
+        origin=(
+            "Salt was a valuable commodity in medieval France (gabelle = salt tax). A "
+            "grain of salt (grain de sel) is the smallest addition. To sprinkle one's "
+            "salt onto others' conversations suggests unsolicited seasoning of the "
+            "discussion."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="mettre son grain de sel",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="il faut toujours qu'il mette son grain de sel",
+                match_type=MatchType.inflectional_variant,
+                note="He always has to put his two cents in.",
+            ),
+        ),
+    ),
+
+    "fr_avoir_le_bras_long": PhraseFamily(
+        id="fr_avoir_le_bras_long",
+        language="fr",
+        canonical_form="avoir le bras long",
+        meaning="To have a long arm; to be well-connected; to have influence.",
+        register="neutral",
+        origin=(
+            "A long arm reaches further — an image of power and access. Common in "
+            "French since the 17th century. Parallel expressions exist in Italian "
+            "('avere le mani lunghe') and Spanish ('tener mucho brazo')."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="avoir le bras long",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="il a le bras long",
+                match_type=MatchType.inflectional_variant,
+                note="He has connections — most common contextualized form.",
+            ),
+        ),
+    ),
+
+    "fr_ramener_sa_fraise": PhraseFamily(
+        id="fr_ramener_sa_fraise",
+        language="fr",
+        canonical_form="ramener sa fraise",
+        meaning="To butt in; to show one's face where uninvited; to impose oneself.",
+        register="informal",
+        origin=(
+            "Fraise (strawberry, but also an archaic ruff collar) was slang for "
+            "'face' or 'head' in 19th-century argot. 'Ramener sa fraise' means "
+            "literally 'bring one's face along' into a situation where it wasn't "
+            "requested."
+        ),
+        why_it_matters=(
+            "A distinctly argot expression that illustrates how French slang often "
+            "repurposes object names for body parts. Very colloquial and typically "
+            "humorous."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ramener sa fraise",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ramène pas ta fraise",
+                match_type=MatchType.inflectional_variant,
+                note="Don't show your face here — imperative negation.",
+            ),
+        ),
+    ),
+
+    "fr_ne_pas_tourner_autour_du_pot": PhraseFamily(
+        id="fr_ne_pas_tourner_autour_du_pot",
+        language="fr",
+        canonical_form="ne pas tourner autour du pot",
+        meaning="To not beat around the bush; to get straight to the point.",
+        register="neutral",
+        origin=(
+            "Pot (cooking pot): circling around the pot without touching it suggests "
+            "approaching something without committing. Attested since the 16th "
+            "century in French. Compare English 'beat around the bush' (stirring up "
+            "game without entering the bush)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ne pas tourner autour du pot",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="tourner autour du pot",
+                match_type=MatchType.inflectional_variant,
+                note="Positive form: to beat around the bush (pejorative).",
+            ),
+            PhraseVariant(
+                surface="sans tourner autour du pot",
+                match_type=MatchType.inflectional_variant,
+                note="Without beating around the bush.",
+            ),
+        ),
+    ),
+
+    "fr_avoir_un_poil_dans_la_main": PhraseFamily(
+        id="fr_avoir_un_poil_dans_la_main",
+        language="fr",
+        canonical_form="avoir un poil dans la main",
+        meaning="To be lazy; to have hands not used to work.",
+        register="informal",
+        origin=(
+            "The idea that someone so unaccustomed to work has grown a hair (poil) in "
+            "their hand. A comic image implying that the hand has not been clenched "
+            "in useful effort long enough to prevent the growth. Typically French in "
+            "its earthy sarcasm."
+        ),
+        why_it_matters=(
+            "One of the most characteristic French expressions for laziness. The "
+            "image is absurdist and impossible to guess — a classic example of opaque "
+            "idiom."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="avoir un poil dans la main",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="il a un poil dans la main",
+                match_type=MatchType.inflectional_variant,
+                note="He's got a hair in his hand — he's lazy.",
+            ),
+        ),
+    ),
+
+    "fr_mettre_les_voiles": PhraseFamily(
+        id="fr_mettre_les_voiles",
+        language="fr",
+        canonical_form="mettre les voiles",
+        meaning="To clear off; to take off; to make oneself scarce.",
+        register="informal",
+        origin=(
+            "Voiles (sails): setting sail suggests departure. The maritime image "
+            "became general slang for leaving quickly. Related to 'se faire la voile' "
+            "(same meaning). Common in contemporary spoken French."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="mettre les voiles",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="il a mis les voiles",
+                match_type=MatchType.inflectional_variant,
+                note="He took off — past tense.",
+            ),
+            PhraseVariant(
+                surface="je vais mettre les voiles",
+                match_type=MatchType.inflectional_variant,
+                note="I'm going to split — future intent.",
+            ),
+        ),
+    ),
+
+    "fr_battre_le_fer": PhraseFamily(
+        id="fr_battre_le_fer",
+        language="fr",
+        canonical_form="battre le fer pendant qu'il est chaud",
+        meaning="Strike while the iron is hot; act at the opportune moment.",
+        register="neutral",
+        origin=(
+            "Blacksmiths must hammer iron while it's hot enough to shape. Ancient "
+            "proverb with parallels in Latin ('Dum ferrum candet, tundito'), attested "
+            "in French at least since the 14th century. Identical in form to the "
+            "English expression."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="battre le fer pendant qu'il est chaud",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="battre le fer quand il est chaud",
+                match_type=MatchType.inflectional_variant,
+                note="Shortened form, still common.",
+            ),
+            PhraseVariant(
+                surface="il faut battre le fer",
+                match_type=MatchType.inflectional_variant,
+                note="One must strike the iron — directive phrasing.",
+            ),
+        ),
+    ),
+
+    "fr_se_lever_du_pied_gauche": PhraseFamily(
+        id="fr_se_lever_du_pied_gauche",
+        language="fr",
+        canonical_form="se lever du pied gauche",
+        meaning="To get up on the wrong side of the bed; to start the day in a bad mood.",
+        register="neutral",
+        origin=(
+            "The left side (gauche) carried negative connotations across European "
+            "cultures — from Latin 'sinister' (left = ominous) to folk belief that "
+            "getting out of bed on the left foot would bring bad luck to the day."
+        ),
+        why_it_matters=(
+            "Reveals the deep cultural history of left-handedness stigma encoded in "
+            "idiom. Gauche in French also means 'awkward' — the double meaning "
+            "enriches the phrase."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="se lever du pied gauche",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="il s'est levé du pied gauche",
+                match_type=MatchType.inflectional_variant,
+                note="He got up on the wrong side — past tense.",
+            ),
+            PhraseVariant(
+                surface="levé du mauvais pied",
+                match_type=MatchType.inflectional_variant,
+                note="Variant using 'mauvais pied' instead of 'pied gauche'.",
+            ),
+        ),
+    ),
+
+    "fr_faire_la_tete": PhraseFamily(
+        id="fr_faire_la_tete",
+        language="fr",
+        canonical_form="faire la tête",
+        meaning="To sulk; to give someone the silent treatment; to pout.",
+        register="informal",
+        origin=(
+            "Literally 'make the head' — a visual image of the sulker presenting a "
+            "stiff or turned-away head. The expression captures the physical posture "
+            "of sulking and is widely used in casual French speech."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="faire la tête",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="faire la tete",
+                match_type=MatchType.orthographic_variant,
+                note="Without circumflex, common in digital writing.",
+            ),
+            PhraseVariant(
+                surface="il fait la tête",
+                match_type=MatchType.inflectional_variant,
+                note="He's sulking — present tense.",
+            ),
+            PhraseVariant(
+                surface="arrête de faire la tête",
+                match_type=MatchType.inflectional_variant,
+                note="Stop sulking — imperative.",
+            ),
+        ),
+    ),
+
+    "fr_casser_du_sucre": PhraseFamily(
+        id="fr_casser_du_sucre",
+        language="fr",
+        canonical_form="casser du sucre sur le dos de quelqu'un",
+        meaning=(
+            "To badmouth someone behind their back; to speak ill of someone in their"
+            "absence."
+        ),
+        register="informal",
+        origin=(
+            "Sucre (sugar) was a precious, brittle commodity. Breaking sugar on "
+            "someone's back is a vivid image of crushing something valuable against "
+            "another person — a physical metaphor for verbal attack done covertly."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="casser du sucre sur le dos de quelqu'un",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="casser du sucre sur son dos",
+                match_type=MatchType.inflectional_variant,
+                note="Shortened form with pronoun.",
+            ),
+            PhraseVariant(
+                surface="ils cassent du sucre sur son dos",
+                match_type=MatchType.inflectional_variant,
+                note="They're talking behind his back.",
+            ),
+        ),
+    ),
+
+    "fr_tourner_de_loeil": PhraseFamily(
+        id="fr_tourner_de_loeil",
+        language="fr",
+        canonical_form="tourner de l'œil",
+        meaning="To faint; to pass out.",
+        register="informal",
+        origin=(
+            "The eye 'turning' (rotating) refers to the roll of the eyes that often "
+            "precedes fainting. The expression captures the visible physiological "
+            "sign of loss of consciousness in a striking image."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="tourner de l'œil",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="tourner de l'oeil",
+                match_type=MatchType.orthographic_variant,
+                note="Without the ligature œ, common in informal writing.",
+            ),
+            PhraseVariant(
+                surface="il a tourné de l'œil",
+                match_type=MatchType.inflectional_variant,
+                note="He fainted — past tense.",
+            ),
+        ),
+    ),
+
+    "fr_prendre_la_tangente": PhraseFamily(
+        id="fr_prendre_la_tangente",
+        language="fr",
+        canonical_form="prendre la tangente",
+        meaning="To dodge; to take the easy way out; to slip away.",
+        register="neutral",
+        origin=(
+            "From mathematics: a tangent line touches a curve at one point then flies "
+            "off. Prendre la tangente = to take the line of least resistance and veer "
+            "away from the main issue. Common in educated and general French."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="prendre la tangente",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="il a pris la tangente",
+                match_type=MatchType.inflectional_variant,
+                note="He dodged the issue — past tense.",
+            ),
+        ),
+    ),
+
+    "fr_avoir_les_pieds_sur_terre": PhraseFamily(
+        id="fr_avoir_les_pieds_sur_terre",
+        language="fr",
+        canonical_form="avoir les pieds sur terre",
+        meaning="To be down-to-earth; to be realistic and practical.",
+        register="neutral",
+        origin=(
+            "Feet firmly on the ground as a positive contrast to 'avoir la tête dans "
+            "les nuages' (head in the clouds). The binary opposition — earth vs. "
+            "clouds — organizes a broader conceptual field of realism vs. fantasy."
+        ),
+        why_it_matters=(
+            "Often paired with or contrasted against 'avoir la tête dans les nuages'. "
+            "Learners who know both can immediately grasp the French conceptual axis "
+            "between grounded and dreamy."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="avoir les pieds sur terre",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="les pieds sur terre",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical predicate use.",
+            ),
+            PhraseVariant(
+                surface="rester les pieds sur terre",
+                match_type=MatchType.inflectional_variant,
+                note="To stay grounded — with rester.",
+            ),
+        ),
+    ),
+
+    "fr_manger_les_pissenlits": PhraseFamily(
+        id="fr_manger_les_pissenlits",
+        language="fr",
+        canonical_form="manger les pissenlits par la racine",
+        meaning="To push up daisies; to be dead and buried.",
+        register="informal",
+        origin=(
+            "Pissenlit (dandelion, literally 'wet-the-bed') grows above ground — but "
+            "someone buried beneath would be eating its roots from below. A dark "
+            "comic image of death expressed through the perspective of the corpse."
+        ),
+        why_it_matters=(
+            "Distinctly French in its macabre humor. The word 'pissenlit' itself is "
+            "already colloquial and earthy, which sets the register. No direct "
+            "English equivalent uses the same image."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="manger les pissenlits par la racine",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="bouffer les pissenlits par la racine",
+                match_type=MatchType.inflectional_variant,
+                note="More vulgar form with 'bouffer' (to scoff).",
+            ),
+        ),
+    ),
+
+    "fr_ne_pas_casser_trois_pattes": PhraseFamily(
+        id="fr_ne_pas_casser_trois_pattes",
+        language="fr",
+        canonical_form="ne pas casser trois pattes à un canard",
+        meaning=(
+            "Nothing special; not particularly impressive; won't set the world on"
+            "fire."
+        ),
+        register="informal",
+        origin=(
+            "A duck has two legs — breaking three is impossible. The expression "
+            "implies that something isn't even accomplishing the impossible, i.e., "
+            "it's quite ordinary. The image highlights underachievement through "
+            "impossible arithmetic."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ne pas casser trois pattes à un canard",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ça ne casse pas trois pattes à un canard",
+                match_type=MatchType.inflectional_variant,
+                note="It won't set the world on fire.",
+            ),
+            PhraseVariant(
+                surface="ça casse pas des briques",
+                match_type=MatchType.inflectional_variant,
+                note="Variant using bricks instead of duck legs — same meaning, more common in modern speech.",
+            ),
+        ),
+    ),
+
+    "fr_avoir_mal_aux_cheveux": PhraseFamily(
+        id="fr_avoir_mal_aux_cheveux",
+        language="fr",
+        canonical_form="avoir mal aux cheveux",
+        meaning="To have a hangover; to have aching hair (from drinking).",
+        register="informal",
+        origin=(
+            "A playful, hyperbolic complaint: even one's hair hurts after a night of "
+            "drinking. Hair normally feels no pain — the absurdity signals the excess "
+            "of the situation. A classically French understatement-through- "
+            "exaggeration."
+        ),
+        why_it_matters=(
+            "A charming idiom for learners. The literal meaning 'my hair hurts' is "
+            "obviously comic, and understanding it builds confidence with French "
+            "comic logic."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="avoir mal aux cheveux",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="j'ai mal aux cheveux",
+                match_type=MatchType.inflectional_variant,
+                note="My hair hurts — I'm hungover.",
+            ),
+        ),
+    ),
+
+    "fr_faire_les_yeux_doux": PhraseFamily(
+        id="fr_faire_les_yeux_doux",
+        language="fr",
+        canonical_form="faire les yeux doux",
+        meaning="To make eyes at someone; to look at someone with desire or flattery.",
+        register="neutral",
+        origin=(
+            "Doux (soft, gentle) applied to eyes suggests a softened, inviting gaze. "
+            "The expression captures the physical act of flirting through eye "
+            "contact. Attested since at least the 17th century in French literature."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="faire les yeux doux",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="il lui fait les yeux doux",
+                match_type=MatchType.inflectional_variant,
+                note="He's making eyes at her.",
+            ),
+        ),
+    ),
+
+    "fr_casser_la_croute": PhraseFamily(
+        id="fr_casser_la_croute",
+        language="fr",
+        canonical_form="casser la croûte",
+        meaning="To have a bite to eat; to grab a snack.",
+        register="informal",
+        origin=(
+            "Croûte (crust) is the hardest part of bread, requiring effort to break. "
+            "'Breaking the crust' was the act of beginning a meal when bread was the "
+            "staple. The expression preserves the old physicality of eating in a "
+            "modern casual idiom."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="casser la croûte",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="casser la croute",
+                match_type=MatchType.orthographic_variant,
+                note="Without circumflex.",
+            ),
+            PhraseVariant(
+                surface="on va casser la croûte",
+                match_type=MatchType.inflectional_variant,
+                note="We're going to grab a bite.",
+            ),
+        ),
+    ),
+
+    "fr_aller_a_la_peche": PhraseFamily(
+        id="fr_aller_a_la_peche",
+        language="fr",
+        canonical_form="aller à la pêche",
+        meaning="To go fishing for something; to fish for compliments or information.",
+        register="neutral",
+        origin=(
+            "Pêche (fishing) as a metaphor for seeking something indirectly. 'Aller à "
+            "la pêche aux compliments' (fishing for compliments) is a common "
+            "elaboration. The image implies patience and indirectness in obtaining "
+            "something."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="aller à la pêche",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="aller a la peche",
+                match_type=MatchType.orthographic_variant,
+                note="Without accents.",
+            ),
+            PhraseVariant(
+                surface="pêcher des compliments",
+                match_type=MatchType.inflectional_variant,
+                note="To fish for compliments — verb form.",
+            ),
+        ),
+    ),
+
+    "fr_avoir_du_bol": PhraseFamily(
+        id="fr_avoir_du_bol",
+        language="fr",
+        canonical_form="avoir du bol",
+        meaning="To be lucky; to have good fortune.",
+        register="informal",
+        origin=(
+            "Bol (bowl) as slang for luck derives from bol as rhyming slang or from "
+            "the earlier sense of 'portion' — your share of fortune. Common in French "
+            "slang since the 20th century. 'Avoir du pot' is a synonymous expression."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="avoir du bol",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="t'as du bol!",
+                match_type=MatchType.inflectional_variant,
+                note="You're lucky! — exclamatory.",
+            ),
+            PhraseVariant(
+                surface="pas de bol",
+                match_type=MatchType.inflectional_variant,
+                note="No luck; bad luck — negated form used as an interjection.",
+            ),
+        ),
+    ),
+
+    "fr_cest_du_chinois": PhraseFamily(
+        id="fr_cest_du_chinois",
+        language="fr",
+        canonical_form="c'est du chinois",
+        meaning="It's all Greek to me; it's incomprehensible.",
+        register="informal",
+        origin=(
+            "Where English uses Greek as the paradigmatic incomprehensible language, "
+            "French uses Chinese (chinois). Both reflect 18th–19th century European "
+            "attitudes toward distant linguistic systems. Compare Italian 'è tutto "
+            "greco' and Spanish 'es chino para mí'."
+        ),
+        why_it_matters=(
+            "The cross-linguistic comparison (English: Greek / French: Chinese) "
+            "illustrates how idioms encode cultural reference points differently "
+            "across languages while expressing the same concept."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="c'est du chinois",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="pour moi c'est du chinois",
+                match_type=MatchType.inflectional_variant,
+                note="To me, it's all Chinese — with personal framing.",
+            ),
+            PhraseVariant(
+                surface="c'est du charabia",
+                match_type=MatchType.inflectional_variant,
+                note="It's gibberish — synonym using charabia (from Turkish).",
+            ),
+        ),
+    ),
+
+    "fr_se_casser_la_tete": PhraseFamily(
+        id="fr_se_casser_la_tete",
+        language="fr",
+        canonical_form="se casser la tête",
+        meaning="To rack one's brain; to think hard about something.",
+        register="neutral",
+        origin=(
+            "Casser (to break) applied to the head suggests the strain of intense "
+            "thought — thinking so hard it feels like breaking something. A visceral "
+            "metaphor for cognitive effort, widely used across registers."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="se casser la tête",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="je me casse la tête",
+                match_type=MatchType.inflectional_variant,
+                note="I'm racking my brain.",
+            ),
+            PhraseVariant(
+                surface="ne te casse pas la tête",
+                match_type=MatchType.inflectional_variant,
+                note="Don't overthink it — imperative.",
+            ),
+        ),
+    ),
+
+    "fr_ne_pas_avoir_froid_aux_yeux": PhraseFamily(
+        id="fr_ne_pas_avoir_froid_aux_yeux",
+        language="fr",
+        canonical_form="ne pas avoir froid aux yeux",
+        meaning="To be bold; to have nerve; to not be faint-hearted.",
+        register="neutral",
+        origin=(
+            "Cold in the eyes = fear causing the gaze to freeze. Someone who does not "
+            "have cold in their eyes faces situations with unwavering gaze. The "
+            "metaphor connects physical sensation (cold, fear) with ocular expression "
+            "of courage."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ne pas avoir froid aux yeux",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="il n'a pas froid aux yeux",
+                match_type=MatchType.inflectional_variant,
+                note="He doesn't lack nerve.",
+            ),
+            PhraseVariant(
+                surface="elle n'a pas froid aux yeux",
+                match_type=MatchType.inflectional_variant,
+                note="She's fearless.",
+            ),
+        ),
+    ),
+
+    "fr_arriver_comme_un_cheveu_sur_la_soupe": PhraseFamily(
+        id="fr_arriver_comme_un_cheveu_sur_la_soupe",
+        language="fr",
+        canonical_form="arriver comme un cheveu sur la soupe",
+        meaning=(
+            "To turn up at the wrong moment; to arrive inopportunely; to come out of"
+            "nowhere."
+        ),
+        register="informal",
+        origin=(
+            "A hair in the soup (cheveu sur la soupe) is an unwelcome intrusion into "
+            "something otherwise pleasant. Someone who 'arrives like a hair in the "
+            "soup' is similarly misplaced and unwelcome."
+        ),
+        why_it_matters=(
+            "Highly image-driven and memorable. The hygiene-disgust image is "
+            "instantly visceral. Illustrates how French idiom encodes social "
+            "awkwardness through concrete domestic scenes."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="arriver comme un cheveu sur la soupe",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="tomber comme un cheveu sur la soupe",
+                match_type=MatchType.inflectional_variant,
+                note="Fall like a hair in the soup — with tomber.",
+            ),
+            PhraseVariant(
+                surface="comme un cheveu sur la soupe",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical: like a hair in the soup — adverbial use.",
+            ),
+        ),
+    ),
+
+    "fr_se_jeter_dans_la_gueule_du_loup": PhraseFamily(
+        id="fr_se_jeter_dans_la_gueule_du_loup",
+        language="fr",
+        canonical_form="se jeter dans la gueule du loup",
+        meaning="To jump into the lion's den; to walk knowingly into danger.",
+        register="neutral",
+        origin=(
+            "Gueule du loup (wolf's mouth): throwing oneself into the wolf's open "
+            "jaws — a vivid image of deliberately entering a dangerous situation. "
+            "Compare English 'into the lion's den' and 'beard the lion.' French uses "
+            "the wolf, a historically more feared predator in rural France than the "
+            "lion."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="se jeter dans la gueule du loup",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="entrer dans la gueule du loup",
+                match_type=MatchType.inflectional_variant,
+                note="To walk into the lion's den — with entrer instead of se jeter.",
+            ),
+        ),
+    ),
+
+    # ── It (generated) ────────────────────────────────────────
+
+    "it_avere_le_mani_bucate": PhraseFamily(
+        id="it_avere_le_mani_bucate",
+        language="it",
+        canonical_form="avere le mani bucate",
+        meaning="To be a spendthrift; to have money slip through one's fingers.",
+        register="informal",
+        origin=(
+            "Literally 'to have holes in one's hands' — money falls out as if through "
+            "holes in the palms. A vivid tactile image for someone who cannot hold "
+            "onto money. Compare English 'money burns a hole in one's pocket.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="avere le mani bucate",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ha le mani bucate",
+                match_type=MatchType.inflectional_variant,
+                note="He/she has holes in their hands — most common contextualized form.",
+            ),
+        ),
+    ),
+
+    "it_togliersi_un_sassolino": PhraseFamily(
+        id="it_togliersi_un_sassolino",
+        language="it",
+        canonical_form="togliersi un sassolino dalla scarpa",
+        meaning="To get something off one's chest; to remove a grievance.",
+        register="neutral",
+        origin=(
+            "Sassolino (small stone): a pebble in the shoe is a small but persistent "
+            "irritation. Removing it brings relief. The expression captures the "
+            "satisfaction of finally airing a minor grievance that has been bothering "
+            "you."
+        ),
+        why_it_matters=(
+            "Uniquely Italian in its image. The diminutive sassolino emphasizes the "
+            "pettiness of the grievance, adding a self-aware, slightly ironic "
+            "register."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="togliersi un sassolino dalla scarpa",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="mi tolgo un sassolino dalla scarpa",
+                match_type=MatchType.inflectional_variant,
+                note="I need to get something off my chest — first person.",
+            ),
+        ),
+    ),
+
+    "it_andare_a_vuoto": PhraseFamily(
+        id="it_andare_a_vuoto",
+        language="it",
+        canonical_form="andare a vuoto",
+        meaning="To come to nothing; to draw a blank; to fail to achieve a result.",
+        register="neutral",
+        origin=(
+            "Vuoto (empty, void): to go toward emptiness — an action that leads "
+            "nowhere. A neutral, versatile expression for any failed effort or "
+            "unproductive attempt."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="andare a vuoto",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="il tentativo è andato a vuoto",
+                match_type=MatchType.inflectional_variant,
+                note="The attempt came to nothing — past tense.",
+            ),
+            PhraseVariant(
+                surface="andare a vuoto di nuovo",
+                match_type=MatchType.inflectional_variant,
+                note="To draw a blank again.",
+            ),
+        ),
+    ),
+
+    "it_prendere_fischi_per_fiaschi": PhraseFamily(
+        id="it_prendere_fischi_per_fiaschi",
+        language="it",
+        canonical_form="prendere fischi per fiaschi",
+        meaning=(
+            "To get hold of the wrong end of the stick; to confuse two things"
+            "completely."
+        ),
+        register="informal",
+        origin=(
+            "Fischi (whistles/hisses) vs fiaschi (flasks/failures): the near-rhyme of "
+            "the two words (typical Italian wordplay) captures the confusion of "
+            "mistaking one thing for another. Fiasco also means failure — the "
+            "expression plays on dual resonance."
+        ),
+        why_it_matters=(
+            "A memorable phonetic play. The near-rhyme fischi/fiaschi is "
+            "untranslatable — the expression teaches the Italian ear for wordplay "
+            "built into idiom."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="prendere fischi per fiaschi",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="scambiare fischi per fiaschi",
+                match_type=MatchType.inflectional_variant,
+                note="Variant with 'scambiare' (to swap) — same meaning.",
+            ),
+        ),
+    ),
+
+    "it_rompere_il_ghiaccio": PhraseFamily(
+        id="it_rompere_il_ghiaccio",
+        language="it",
+        canonical_form="rompere il ghiaccio",
+        meaning="To break the ice; to ease tension in a new social situation.",
+        register="neutral",
+        origin=(
+            "The image of breaking through ice to allow passage is shared across "
+            "European languages — from Latin sources through French and Italian. In "
+            "all versions, the frozen surface represents awkward social stiffness."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="rompere il ghiaccio",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ha rotto il ghiaccio",
+                match_type=MatchType.inflectional_variant,
+                note="He/she broke the ice — past tense.",
+            ),
+            PhraseVariant(
+                surface="serve qualcosa per rompere il ghiaccio",
+                match_type=MatchType.inflectional_variant,
+                note="Something is needed to break the ice.",
+            ),
+        ),
+    ),
+
+    "it_fare_orecchie_da_mercante": PhraseFamily(
+        id="it_fare_orecchie_da_mercante",
+        language="it",
+        canonical_form="fare orecchie da mercante",
+        meaning="To turn a deaf ear; to pretend not to hear.",
+        register="neutral",
+        origin=(
+            "Mercante (merchant): a merchant at market would selectively hear only "
+            "what suited him — ignoring pleas, complaints, and unfavorable "
+            "information. The expression captures deliberate rather than accidental "
+            "deafness."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="fare orecchie da mercante",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="fa orecchie da mercante",
+                match_type=MatchType.inflectional_variant,
+                note="He/she turns a deaf ear — present tense.",
+            ),
+        ),
+    ),
+
+    "it_avere_il_dente_avvelenato": PhraseFamily(
+        id="it_avere_il_dente_avvelenato",
+        language="it",
+        canonical_form="avere il dente avvelenato",
+        meaning="To bear a grudge; to have poisoned feelings toward someone.",
+        register="neutral",
+        origin=(
+            "Dente avvelenato (poisoned tooth): like a snake's venom-delivering fang, "
+            "the person with a poisoned tooth harbors hidden hostility. The "
+            "expression implies resentment that has been nursing quietly."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="avere il dente avvelenato",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ce l'ha con me — ha il dente avvelenato",
+                match_type=MatchType.inflectional_variant,
+                note="He has it in for me — he's holding a grudge.",
+            ),
+        ),
+    ),
+
+    "it_essere_tra_lincudine_e_il_martello": PhraseFamily(
+        id="it_essere_tra_lincudine_e_il_martello",
+        language="it",
+        canonical_form="essere tra l'incudine e il martello",
+        meaning=(
+            "To be between the anvil and the hammer; to be between a rock and a hard"
+            "place."
+        ),
+        register="neutral",
+        origin=(
+            "The blacksmith's anvil (incudine) below and hammer (martello) above — "
+            "someone caught between them is struck from both sides. A more vivid "
+            "mechanistic image than the English 'rock and a hard place.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="essere tra l'incudine e il martello",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="tra l'incudine e il martello",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical — predicative use.",
+            ),
+            PhraseVariant(
+                surface="mi trovo tra l'incudine e il martello",
+                match_type=MatchType.inflectional_variant,
+                note="I'm caught between the devil and the deep blue sea.",
+            ),
+        ),
+    ),
+
+    "it_gettare_la_spugna": PhraseFamily(
+        id="it_gettare_la_spugna",
+        language="it",
+        canonical_form="gettare la spugna",
+        meaning="To throw in the sponge; to give up.",
+        register="neutral",
+        origin=(
+            "From boxing: the sponge (spugna) used to clean a fighter's wounds — "
+            "throwing it in signals surrender. Italian borrowed this directly from "
+            "English boxing culture. Note: Italian uses spugna (sponge) where German "
+            "uses Handtuch (towel)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="gettare la spugna",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ha gettato la spugna",
+                match_type=MatchType.inflectional_variant,
+                note="He threw in the sponge — past tense.",
+            ),
+            PhraseVariant(
+                surface="buttare la spugna",
+                match_type=MatchType.inflectional_variant,
+                note="Colloquial variant with 'buttare' (to throw/chuck).",
+            ),
+        ),
+    ),
+
+    "it_vedere_tutto_rosa": PhraseFamily(
+        id="it_vedere_tutto_rosa",
+        language="it",
+        canonical_form="vedere tutto rosa",
+        meaning="To see everything through rose-colored glasses; to be overly optimistic.",
+        register="neutral",
+        origin=(
+            "Rosa (pink/rose) as the color of optimism and idealism — seeing the "
+            "world through a rosy filter. The expression parallels English 'rose- "
+            "tinted glasses' and French 'voir la vie en rose.' The cultural root is "
+            "the same Romantic-era metaphor."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="vedere tutto rosa",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="vede tutto rosa",
+                match_type=MatchType.inflectional_variant,
+                note="He/she sees everything through rose-colored glasses.",
+            ),
+            PhraseVariant(
+                surface="non tutto è rosa e fiori",
+                match_type=MatchType.inflectional_variant,
+                note="Not everything is rosy — negated contrast form.",
+            ),
+        ),
+    ),
+
+    "it_tirare_acqua_al_proprio_mulino": PhraseFamily(
+        id="it_tirare_acqua_al_proprio_mulino",
+        language="it",
+        canonical_form="tirare acqua al proprio mulino",
+        meaning="To feather one's nest; to advance one's own interests.",
+        register="neutral",
+        origin=(
+            "Mulino (mill): water diverted to one's own mill powers it at others' "
+            "expense. Mills were a central economic institution in medieval Italy; "
+            "control of water rights was literally a matter of prosperity."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="tirare acqua al proprio mulino",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="portare acqua al proprio mulino",
+                match_type=MatchType.inflectional_variant,
+                note="Variant with portare (to bring) — same meaning.",
+            ),
+            PhraseVariant(
+                surface="tira sempre acqua al suo mulino",
+                match_type=MatchType.inflectional_variant,
+                note="He always looks out for himself.",
+            ),
+        ),
+    ),
+
+    "it_avere_la_coda_di_paglia": PhraseFamily(
+        id="it_avere_la_coda_di_paglia",
+        language="it",
+        canonical_form="avere la coda di paglia",
+        meaning="To have a guilty conscience; to feel accused by innocent remarks.",
+        register="neutral",
+        origin=(
+            "Coda di paglia (tail of straw): a tail that catches fire easily — "
+            "someone sensitive to accusation, quick to feel targeted by any mention "
+            "of wrongdoing, because they know they've done wrong."
+        ),
+        why_it_matters=(
+            "Uniquely Italian. The straw-tail image has no English equivalent. "
+            "Understanding it builds cultural fluency around how Italians encode "
+            "guilt and sensitivity."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="avere la coda di paglia",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ha la coda di paglia",
+                match_type=MatchType.inflectional_variant,
+                note="He/she is overly defensive — has a guilty conscience.",
+            ),
+        ),
+    ),
+
+    "it_buttare_il_bambino_con_lacqua": PhraseFamily(
+        id="it_buttare_il_bambino_con_lacqua",
+        language="it",
+        canonical_form="buttare il bambino con l'acqua sporca",
+        meaning="To throw the baby out with the bathwater.",
+        register="neutral",
+        origin=(
+            "Shared proverb across European languages — traced to Thomas Murner's "
+            "1512 German pamphlet but quickly absorbed into Italian usage. The image "
+            "is identical: discarding the valuable (child) along with the wasteable "
+            "(dirty bathwater)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="buttare il bambino con l'acqua sporca",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="non buttiamo il bambino con l'acqua sporca",
+                match_type=MatchType.inflectional_variant,
+                note="Let's not throw the baby out with the bathwater — negated warning.",
+            ),
+            PhraseVariant(
+                surface="gettare il bambino con l'acqua sporca",
+                match_type=MatchType.inflectional_variant,
+                note="Variant with gettare instead of buttare.",
+            ),
+        ),
+    ),
+
+    "it_fare_il_passo_piu_lungo_della_gamba": PhraseFamily(
+        id="it_fare_il_passo_piu_lungo_della_gamba",
+        language="it",
+        canonical_form="fare il passo più lungo della gamba",
+        meaning="To bite off more than one can chew; to overextend oneself.",
+        register="neutral",
+        origin=(
+            "Taking a step (passo) longer than one's leg (gamba) can reach will cause "
+            "a fall. The image is physically immediate: overreach in a literal stride "
+            "becomes a metaphor for any overambitious action."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="fare il passo più lungo della gamba",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ha fatto il passo più lungo della gamba",
+                match_type=MatchType.inflectional_variant,
+                note="He bit off more than he could chew — past tense.",
+            ),
+        ),
+    ),
+
+    "it_non_ce_due_senza_tre": PhraseFamily(
+        id="it_non_ce_due_senza_tre",
+        language="it",
+        canonical_form="non c'è due senza tre",
+        meaning="There's no two without three; things always happen in threes.",
+        register="neutral",
+        origin=(
+            "The folk belief that events — especially misfortunes — come in threes is "
+            "widespread across European cultures. Italian encodes it in this pithy "
+            "formula. Compare English 'bad things come in threes' and similar "
+            "expressions in French and German."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="non c'è due senza tre",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "it_dare_i_numeri": PhraseFamily(
+        id="it_dare_i_numeri",
+        language="it",
+        canonical_form="dare i numeri",
+        meaning="To be off one's rocker; to act crazy; to give out random numbers.",
+        register="informal",
+        origin=(
+            "Dare i numeri (to give numbers): the image of randomly calling out "
+            "numbers suggests disordered thinking. May derive from lotto number- "
+            "calling, where random numbers follow no logical sequence."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="dare i numeri",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="stai dando i numeri",
+                match_type=MatchType.inflectional_variant,
+                note="You're going crazy — second person.",
+            ),
+            PhraseVariant(
+                surface="da i numeri",
+                match_type=MatchType.inflectional_variant,
+                note="He's acting mad — present tense.",
+            ),
+        ),
+    ),
+
+    "it_andare_a_gonfie_vele": PhraseFamily(
+        id="it_andare_a_gonfie_vele",
+        language="it",
+        canonical_form="andare a gonfie vele",
+        meaning="To be going swimmingly; to proceed smoothly and successfully.",
+        register="neutral",
+        origin=(
+            "Gonfie vele (full sails): a ship sailing with full, billowing sails is "
+            "making maximum progress in ideal conditions. Italy's long maritime "
+            "tradition makes nautical imagery especially natural in everyday speech."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="andare a gonfie vele",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="le cose vanno a gonfie vele",
+                match_type=MatchType.inflectional_variant,
+                note="Things are going smoothly.",
+            ),
+            PhraseVariant(
+                surface="procede a gonfie vele",
+                match_type=MatchType.inflectional_variant,
+                note="It's proceeding swimmingly.",
+            ),
+        ),
+    ),
+
+    "it_mettersi_nei_panni": PhraseFamily(
+        id="it_mettersi_nei_panni",
+        language="it",
+        canonical_form="mettersi nei panni di qualcuno",
+        meaning="To put oneself in someone else's shoes.",
+        register="neutral",
+        origin=(
+            "Panni (clothes, garments): putting on someone's clothes = inhabiting "
+            "their situation. Italian uses garments (panni) where English uses shoes "
+            "— both capture the idea of inhabiting another perspective through "
+            "physical substitution."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="mettersi nei panni di qualcuno",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="mettiti nei miei panni",
+                match_type=MatchType.inflectional_variant,
+                note="Put yourself in my shoes — direct address.",
+            ),
+            PhraseVariant(
+                surface="non riesco a mettermi nei suoi panni",
+                match_type=MatchType.inflectional_variant,
+                note="I can't imagine what it's like for them.",
+            ),
+        ),
+    ),
+
+    "it_lavarsi_le_mani": PhraseFamily(
+        id="it_lavarsi_le_mani",
+        language="it",
+        canonical_form="lavarsi le mani di qualcosa",
+        meaning="To wash one's hands of something; to disclaim responsibility.",
+        register="neutral",
+        origin=(
+            "From the Gospel account of Pontius Pilate washing his hands before the "
+            "crowd — a gesture of disclaiming responsibility for Jesus's execution. "
+            "The biblical reference gave the expression immediate cultural currency "
+            "across Catholic Europe."
+        ),
+        why_it_matters=(
+            "Directly traceable to a specific biblical scene, giving learners "
+            "cultural-historical depth. The expression is used across all major "
+            "European languages in nearly identical form."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="lavarsi le mani di qualcosa",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="me ne lavo le mani",
+                match_type=MatchType.inflectional_variant,
+                note="I wash my hands of it — first person.",
+            ),
+            PhraseVariant(
+                surface="se ne è lavato le mani",
+                match_type=MatchType.inflectional_variant,
+                note="He/she washed their hands of it — past tense.",
+            ),
+        ),
+    ),
+
+    "it_non_fare_una_piega": PhraseFamily(
+        id="it_non_fare_una_piega",
+        language="it",
+        canonical_form="non fare una piega",
+        meaning=(
+            "Not to bat an eye; to remain completely unperturbed; to be perfectly"
+            "smooth."
+        ),
+        register="neutral",
+        origin=(
+            "Piega (fold, crease): a perfectly ironed garment has no wrinkles. "
+            "'Without making a fold' = without showing any sign of disturbance. A "
+            "cool, unruffled composure — literally and metaphorically smooth."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="non fare una piega",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="non ha fatto una piega",
+                match_type=MatchType.inflectional_variant,
+                note="He/she didn't bat an eye — past tense.",
+            ),
+            PhraseVariant(
+                surface="senza fare una piega",
+                match_type=MatchType.inflectional_variant,
+                note="Without batting an eye — adverbial.",
+            ),
+        ),
+    ),
+
+    "it_avere_un_diavolo_per_capello": PhraseFamily(
+        id="it_avere_un_diavolo_per_capello",
+        language="it",
+        canonical_form="avere un diavolo per capello",
+        meaning="To be furious; to be in a foul mood; to have the devil in every hair.",
+        register="informal",
+        origin=(
+            "Capello (hair, single strand): every hair harboring a devil — an image "
+            "of total possession by anger, so many devils that even individual hairs "
+            "are inhabited. A vivid hyperbole of extreme bad temper."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="avere un diavolo per capello",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="aveva un diavolo per capello",
+                match_type=MatchType.inflectional_variant,
+                note="She was furious — past tense.",
+            ),
+            PhraseVariant(
+                surface="con un diavolo per capello",
+                match_type=MatchType.inflectional_variant,
+                note="Fuming — adverbial phrase.",
+            ),
+        ),
+    ),
+
+    "it_cadere_dalla_padella_nella_brace": PhraseFamily(
+        id="it_cadere_dalla_padella_nella_brace",
+        language="it",
+        canonical_form="cadere dalla padella nella brace",
+        meaning="Out of the frying pan into the fire.",
+        register="neutral",
+        origin=(
+            "Padella (frying pan) → brace (embers): Italian uses the same physical "
+            "cooking metaphor as English. Both involve escaping one source of heat "
+            "only to land in a worse one. The image is ancient and cross-cultural."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="cadere dalla padella nella brace",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="dalla padella nella brace",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical — often used as a standalone commentary.",
+            ),
+            PhraseVariant(
+                surface="è caduto dalla padella nella brace",
+                match_type=MatchType.inflectional_variant,
+                note="He went from the frying pan into the fire — past tense.",
+            ),
+        ),
+    ),
+
+    "it_fare_buon_viso_a_cattivo_gioco": PhraseFamily(
+        id="it_fare_buon_viso_a_cattivo_gioco",
+        language="it",
+        canonical_form="fare buon viso a cattivo gioco",
+        meaning="To put a brave face on a bad situation; to grin and bear it.",
+        register="neutral",
+        origin=(
+            "Card-playing imagery: gioco (game/hand of cards) — making a good face "
+            "(buon viso) despite holding bad cards (cattivo gioco). The gambling "
+            "metaphor for facing adversity stoically is widely used in Italian."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="fare buon viso a cattivo gioco",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ha fatto buon viso a cattivo gioco",
+                match_type=MatchType.inflectional_variant,
+                note="He put a brave face on it — past tense.",
+            ),
+        ),
+    ),
+
+    "it_avere_i_grilli_per_la_testa": PhraseFamily(
+        id="it_avere_i_grilli_per_la_testa",
+        language="it",
+        canonical_form="avere i grilli per la testa",
+        meaning="To be full of fancies; to have bees in one's bonnet; to be whimsical.",
+        register="neutral",
+        origin=(
+            "Grillo (cricket): crickets in the head produce incessant, distracting "
+            "noise — the chirping of restless thoughts or unrealistic ideas. Italian "
+            "uses crickets where English uses bees; both capture the buzzing of idle "
+            "fancy."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="avere i grilli per la testa",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ha sempre i grilli per la testa",
+                match_type=MatchType.inflectional_variant,
+                note="He's always full of whims.",
+            ),
+        ),
+    ),
+
+    "it_camminare_sulle_uova": PhraseFamily(
+        id="it_camminare_sulle_uova",
+        language="it",
+        canonical_form="camminare sulle uova",
+        meaning="To tread on eggshells; to walk carefully around a sensitive topic.",
+        register="neutral",
+        origin=(
+            "Uova (eggs): eggs break under the slightest misstep — walking on them "
+            "requires extreme delicacy. The expression parallels English 'walking on "
+            "eggshells' exactly, suggesting a common metaphorical logic across "
+            "cultures."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="camminare sulle uova",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ci cammino sulle uova",
+                match_type=MatchType.inflectional_variant,
+                note="I'm treading on eggshells here.",
+            ),
+            PhraseVariant(
+                surface="stare sulle uova",
+                match_type=MatchType.inflectional_variant,
+                note="To be on eggshells — with stare (to stay/be).",
+            ),
+        ),
+    ),
+
+    "it_menare_il_can_per_laia": PhraseFamily(
+        id="it_menare_il_can_per_laia",
+        language="it",
+        canonical_form="menare il can per l'aia",
+        meaning="To beat around the bush; to avoid coming to the point.",
+        register="neutral",
+        origin=(
+            "Aia (threshing floor) + can (dog): leading a dog around the threshing "
+            "floor endlessly without accomplishing anything. The rural agricultural "
+            "setting roots the expression in peasant life — circular, unproductive "
+            "motion."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="menare il can per l'aia",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="non menare il can per l'aia",
+                match_type=MatchType.inflectional_variant,
+                note="Don't beat around the bush — negated imperative.",
+            ),
+            PhraseVariant(
+                surface="smettila di menare il can per l'aia",
+                match_type=MatchType.inflectional_variant,
+                note="Stop going around in circles.",
+            ),
+        ),
+    ),
+
+    "it_toccata_e_fuga": PhraseFamily(
+        id="it_toccata_e_fuga",
+        language="it",
+        canonical_form="toccata e fuga",
+        meaning="A fleeting visit; in and out; a brief and swift appearance.",
+        register="neutral",
+        origin=(
+            "A direct borrowing from musical terminology: the toccata-and-fugue form "
+            "(toccata = touch, fuga = flight) suggests a brief touch followed by "
+            "rapid departure. The musical connotation adds a cultured, slightly "
+            "ironic register."
+        ),
+        why_it_matters=(
+            "A beautiful example of Italian using musical vocabulary in everyday "
+            "metaphor — showing the depth of Italy's musical culture on the language."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="toccata e fuga",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="è stata una toccata e fuga",
+                match_type=MatchType.inflectional_variant,
+                note="It was a flying visit.",
+            ),
+        ),
+    ),
+
+    "it_finire_in_bellezza": PhraseFamily(
+        id="it_finire_in_bellezza",
+        language="it",
+        canonical_form="finire in bellezza",
+        meaning="To end on a high note; to finish beautifully.",
+        register="neutral",
+        origin=(
+            "Bellezza (beauty) as the ideal culmination — finishing in beauty means "
+            "ending at one's best. Often used ironically when something ends badly: "
+            "'abbiamo finito in bellezza' after a disaster."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="finire in bellezza",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="abbiamo finito in bellezza",
+                match_type=MatchType.inflectional_variant,
+                note="We finished in style — often ironic.",
+            ),
+            PhraseVariant(
+                surface="chiudere in bellezza",
+                match_type=MatchType.inflectional_variant,
+                note="Variant with chiudere (to close) — to close on a high note.",
+            ),
+        ),
+    ),
+
+    "it_partire_in_quarta": PhraseFamily(
+        id="it_partire_in_quarta",
+        language="it",
+        canonical_form="partire in quarta",
+        meaning="To start at full speed; to come out of the gate strong.",
+        register="informal",
+        origin=(
+            "Quarta (fourth gear): starting in fourth gear (the highest on older "
+            "manual transmissions) means launching immediately at maximum speed. A "
+            "20th-century idiom rooted in car culture."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="partire in quarta",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="è partito in quarta",
+                match_type=MatchType.inflectional_variant,
+                note="He came out of the gate at full speed — past tense.",
+            ),
+            PhraseVariant(
+                surface="parte sempre in quarta",
+                match_type=MatchType.inflectional_variant,
+                note="He always jumps in headfirst.",
+            ),
+        ),
+    ),
+
+    "it_essere_in_ballo": PhraseFamily(
+        id="it_essere_in_ballo",
+        language="it",
+        canonical_form="essere in ballo",
+        meaning="To be involved; to be committed; once you're in, you're in.",
+        register="neutral",
+        origin=(
+            "Ballo (ball, dance): once on the dance floor, you can't easily leave — "
+            "the dance must be finished. The expression encodes commitment through "
+            "the social obligation of the dance, a central institution in Italian "
+            "social life."
+        ),
+        why_it_matters=(
+            "Often used in the proverb 'chi è in ballo deve ballare' — if you're in "
+            "the dance, you must dance. Knowing the fuller form enriches the "
+            "standalone idiom."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="essere in ballo",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ci sono in ballo molti interessi",
+                match_type=MatchType.inflectional_variant,
+                note="Many interests are at stake.",
+            ),
+            PhraseVariant(
+                surface="chi è in ballo deve ballare",
+                match_type=MatchType.inflectional_variant,
+                note="If you're in, you're in — the full proverb form.",
+            ),
+        ),
+    ),
+
+    "it_stare_fresco": PhraseFamily(
+        id="it_stare_fresco",
+        language="it",
+        canonical_form="stare fresco",
+        meaning=(
+            "To be kidding oneself; to be in for a nasty surprise; to have another"
+            "thing coming."
+        ),
+        register="informal",
+        origin=(
+            "Fresco (cool, fresh) used ironically: the 'coolness' is delusional "
+            "comfort that will soon be shattered. Used to warn someone that their "
+            "optimism is misplaced — 'stai fresco se credi che funziona' (you're "
+            "dreaming if you think that works)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="stare fresco",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="stai fresco!",
+                match_type=MatchType.inflectional_variant,
+                note="You've got another thing coming! — exclamatory warning.",
+            ),
+            PhraseVariant(
+                surface="se aspetta quello, sta fresco",
+                match_type=MatchType.inflectional_variant,
+                note="If he's waiting for that, he's dreaming.",
+            ),
+        ),
+    ),
+
+    "it_mandare_a_monte": PhraseFamily(
+        id="it_mandare_a_monte",
+        language="it",
+        canonical_form="mandare a monte",
+        meaning="To cause to fall through; to wreck a plan.",
+        register="neutral",
+        origin=(
+            "Monte (mountain): sending something up the mountain — away from its goal "
+            "— means scuppering it. A deal 'sent to the mountain' never returns to "
+            "fruition. Widely used in business and everyday speech."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="mandare a monte",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ha mandato tutto a monte",
+                match_type=MatchType.inflectional_variant,
+                note="He wrecked everything — past tense.",
+            ),
+            PhraseVariant(
+                surface="andare a monte",
+                match_type=MatchType.inflectional_variant,
+                note="To fall through — intransitive (the plan itself fails).",
+            ),
+        ),
+    ),
+
+    "it_aria_fritta": PhraseFamily(
+        id="it_aria_fritta",
+        language="it",
+        canonical_form="aria fritta",
+        meaning="Fried air; empty talk; nothing substantial.",
+        register="informal",
+        origin=(
+            "Aria (air) + fritta (fried): you cannot fry air — it has no substance. "
+            "'Selling fried air' means offering empty words, hollow promises, or "
+            "useless content. A biting dismissal of verbosity without content."
+        ),
+        why_it_matters=(
+            "Captures the Italian cultural value of substance over form — a culture "
+            "with strong rhetorical tradition also has sharp idioms for calling out "
+            "its absence."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="aria fritta",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="vendere aria fritta",
+                match_type=MatchType.inflectional_variant,
+                note="To sell fried air — to peddle empty promises.",
+            ),
+            PhraseVariant(
+                surface="è tutta aria fritta",
+                match_type=MatchType.inflectional_variant,
+                note="It's all hot air.",
+            ),
+        ),
+    ),
+
+    "it_fare_la_cresta": PhraseFamily(
+        id="it_fare_la_cresta",
+        language="it",
+        canonical_form="fare la cresta sul burro",
+        meaning="To skim off the top; to pocket a small cut; to help oneself quietly.",
+        register="informal",
+        origin=(
+            "Cresta (crest, ridge) + burro (butter): when buying butter by weight, a "
+            "dishonest vendor would build up a crest of extra butter, pocket it, and "
+            "return the rest. The expression describes small-scale dishonest "
+            "extraction — skimming without being caught."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="fare la cresta sul burro",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="fare la cresta",
+                match_type=MatchType.inflectional_variant,
+                note="Shortened form — to take a little cut.",
+            ),
+        ),
+    ),
+
+    "it_avere_scheletri_nell_armadio": PhraseFamily(
+        id="it_avere_scheletri_nell_armadio",
+        language="it",
+        canonical_form="avere scheletri nell'armadio",
+        meaning="To have skeletons in the closet; to have shameful secrets.",
+        register="neutral",
+        origin=(
+            "Scheletri nell'armadio (skeletons in the wardrobe): an image borrowed "
+            "from English 'skeletons in the closet' — hidden shameful secrets. The "
+            "Italian form uses 'armadio' (wardrobe/cupboard) rather than 'closet,' "
+            "reflecting Italian domestic architecture."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="avere scheletri nell'armadio",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ha degli scheletri nell'armadio",
+                match_type=MatchType.inflectional_variant,
+                note="He/she has skeletons in the closet.",
+            ),
+            PhraseVariant(
+                surface="scheletri nell'armadio",
+                match_type=MatchType.inflectional_variant,
+                note="Noun-phrase form — closet skeletons.",
+            ),
+        ),
+    ),
+
+    # ── Pt (generated) ────────────────────────────────────────
+
+    "pt_agua_mole_em_pedra_dura": PhraseFamily(
+        id="pt_agua_mole_em_pedra_dura",
+        language="pt",
+        canonical_form="água mole em pedra dura tanto bate até que fura",
+        meaning=(
+            "Persistence wears away resistance; soft water on hard stone will"
+            "eventually bore through."
+        ),
+        register="neutral",
+        origin=(
+            "A proverb encoding the physical truth that water, though soft, erodes "
+            "stone over time. Widely used in Portuguese and Brazilian culture to "
+            "encourage perseverance. Parallel to English 'constant dripping wears "
+            "away the stone.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="água mole em pedra dura tanto bate até que fura",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="água mole em pedra dura",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical — the first half alone, understood to imply the full proverb.",
+            ),
+        ),
+    ),
+
+    "pt_nao_ha_bela_sem_serao": PhraseFamily(
+        id="pt_nao_ha_bela_sem_serao",
+        language="pt",
+        canonical_form="não há bela sem senão",
+        meaning="Every rose has its thorn; nothing is perfect.",
+        register="neutral",
+        origin=(
+            "Bela (beautiful) + senão (but/however): every beautiful thing has a "
+            "'but.' The wordplay — bela/senão forming a near-rhyme — makes this a "
+            "memorable proverb. Common in Portugal and Brazil."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="não há bela sem senão",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="nao ha bela sem senao",
+                match_type=MatchType.orthographic_variant,
+                note="Without diacritics, common in informal digital writing.",
+            ),
+        ),
+    ),
+
+    "pt_dar_com_a_lingua_nos_dentes": PhraseFamily(
+        id="pt_dar_com_a_lingua_nos_dentes",
+        language="pt",
+        canonical_form="dar com a língua nos dentes",
+        meaning="To let the cat out of the bag; to reveal a secret inadvertently.",
+        register="informal",
+        origin=(
+            "Língua (tongue) + dentes (teeth): the tongue hits the teeth and produces "
+            "sound — involuntary speech that gives away information. The "
+            "physiological image captures how secrets escape through uncontrolled "
+            "talking."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="dar com a língua nos dentes",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="deu com a língua nos dentes",
+                match_type=MatchType.inflectional_variant,
+                note="He/she let the cat out of the bag — past tense.",
+            ),
+            PhraseVariant(
+                surface="não vás dar com a língua nos dentes",
+                match_type=MatchType.inflectional_variant,
+                note="Don't go spilling the beans — warning.",
+            ),
+        ),
+    ),
+
+    "pt_falar_pelos_cotovelos": PhraseFamily(
+        id="pt_falar_pelos_cotovelos",
+        language="pt",
+        canonical_form="falar pelos cotovelos",
+        meaning="To talk one's ear off; to be a chatterbox.",
+        register="informal",
+        origin=(
+            "Cotovelos (elbows): talking through one's elbows suggests such a volume "
+            "of speech that it comes out from unexpected parts of the body. Spanish "
+            "has the same image ('hablar por los codos'). Both Iberian languages "
+            "share this vivid hyperbole."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="falar pelos cotovelos",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ela fala pelos cotovelos",
+                match_type=MatchType.inflectional_variant,
+                note="She never stops talking.",
+            ),
+        ),
+    ),
+
+    "pt_estar_com_os_azeites": PhraseFamily(
+        id="pt_estar_com_os_azeites",
+        language="pt",
+        canonical_form="estar com os azeites",
+        meaning="To be in a bad mood; to be irritable.",
+        register="informal",
+        origin=(
+            "Azeites (olive oils): the expression is specifically Portuguese in "
+            "origin. Olive oil turns rancid and becomes sharp and unpleasant — 'being "
+            "with the oils' means being in a sour, irritable state."
+        ),
+        why_it_matters=(
+            "Exclusively European Portuguese. Brazilian Portuguese uses different "
+            "expressions for the same mood. Useful for learners differentiating "
+            "registers across the two standard varieties."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="estar com os azeites",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="hoje está com os azeites",
+                match_type=MatchType.inflectional_variant,
+                note="He/she's in a foul mood today.",
+            ),
+        ),
+    ),
+
+    "pt_em_bocas_fechadas_nao_entram_moscas": PhraseFamily(
+        id="pt_em_bocas_fechadas_nao_entram_moscas",
+        language="pt",
+        canonical_form="em bocas fechadas não entram moscas",
+        meaning="Loose lips sink ships; into closed mouths flies don't enter.",
+        register="neutral",
+        origin=(
+            "Moscas (flies) + boca fechada (closed mouth): closing your mouth keeps "
+            "out flies — and prevents you from saying things better left unsaid. A "
+            "universal proverb found across Romance languages: Spanish 'en boca "
+            "cerrada no entran moscas.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="em bocas fechadas não entram moscas",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="boca fechada não pega mosca",
+                match_type=MatchType.inflectional_variant,
+                note="Brazilian variant — a closed mouth catches no flies.",
+            ),
+        ),
+    ),
+
+    "pt_comprar_gato_por_lebre": PhraseFamily(
+        id="pt_comprar_gato_por_lebre",
+        language="pt",
+        canonical_form="comprar gato por lebre",
+        meaning=(
+            "To buy a pig in a poke; to be fooled into buying something other than"
+            "what was promised."
+        ),
+        register="neutral",
+        origin=(
+            "Gato (cat) for lebre (hare): a swindler substituting a worthless cat for "
+            "a prized hare. This is the same medieval market-fraud scenario as German "
+            "'die Katze im Sack kaufen' — each language uses local animals to encode "
+            "the deception."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="comprar gato por lebre",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="vender gato por lebre",
+                match_type=MatchType.inflectional_variant,
+                note="To sell cat for hare — from the deceiver's perspective.",
+            ),
+        ),
+    ),
+
+    "pt_nao_ha_fumo_sem_fogo": PhraseFamily(
+        id="pt_nao_ha_fumo_sem_fogo",
+        language="pt",
+        canonical_form="não há fumo sem fogo",
+        meaning="There's no smoke without fire.",
+        register="neutral",
+        origin=(
+            "A universal proverb found in virtually all European languages. "
+            "Portuguese is 'não há fumo sem fogo,' matching English, French ('il n'y "
+            "a pas de fumée sans feu'), and Spanish ('no hay humo sin fuego') exactly "
+            "in structure."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="não há fumo sem fogo",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="nao ha fumo sem fogo",
+                match_type=MatchType.orthographic_variant,
+                note="Without diacritics.",
+            ),
+        ),
+    ),
+
+    "pt_fazer_tempestade_num_copo_dagua": PhraseFamily(
+        id="pt_fazer_tempestade_num_copo_dagua",
+        language="pt",
+        canonical_form="fazer tempestade num copo d'água",
+        meaning="To make a mountain out of a molehill; to make a storm in a teacup.",
+        register="neutral",
+        origin=(
+            "Tempestade (storm) in a copo d'água (glass of water): the impossibility "
+            "of a storm in a glass emphasizes the absurd exaggeration of the fuss. "
+            "Compare English 'storm in a teacup,' French 'tempête dans un verre "
+            "d'eau.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="fazer tempestade num copo d'água",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="tempestade em copo d'água",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical noun-phrase form.",
+            ),
+        ),
+    ),
+
+    "pt_o_habito_nao_faz_o_monge": PhraseFamily(
+        id="pt_o_habito_nao_faz_o_monge",
+        language="pt",
+        canonical_form="o hábito não faz o monge",
+        meaning="The habit does not make the monk; don't judge a book by its cover.",
+        register="neutral",
+        origin=(
+            "A medieval European proverb in many languages: wearing a monk's habit "
+            "doesn't make someone pious. The Latin source ('cucullus non facit "
+            "monachum') was rendered into Portuguese as a warning against surface- "
+            "level judgment."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="o hábito não faz o monge",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="o habito nao faz o monge",
+                match_type=MatchType.orthographic_variant,
+                note="Without diacritics.",
+            ),
+        ),
+    ),
+
+    "pt_quem_semeia_ventos_colhe_tempestades": PhraseFamily(
+        id="pt_quem_semeia_ventos_colhe_tempestades",
+        language="pt",
+        canonical_form="quem semeia ventos colhe tempestades",
+        meaning=(
+            "Sow the wind, reap the whirlwind; reckless actions bring severe"
+            "consequences."
+        ),
+        register="neutral",
+        origin=(
+            "Biblical origin (Hosea 8:7). The agricultural metaphor of sowing and "
+            "reaping — what you plant grows — applied to moral causality. Identical "
+            "in structure across Romance languages."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="quem semeia ventos colhe tempestades",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="semear ventos, colher tempestades",
+                match_type=MatchType.inflectional_variant,
+                note="Infinitive form used as a title or heading.",
+            ),
+        ),
+    ),
+
+    "pt_dor_de_cotovelo": PhraseFamily(
+        id="pt_dor_de_cotovelo",
+        language="pt",
+        canonical_form="dor de cotovelo",
+        meaning="Jealousy; heartburn of envy (especially romantic); feeling sidelined.",
+        register="informal",
+        origin=(
+            "Cotovelo (elbow): 'elbow pain' — from the image of watching others "
+            "succeed from the sidelines, leaning on your elbow. Primarily used in "
+            "Brazil; the expression encodes envy, especially at another's success in "
+            "love or career."
+        ),
+        why_it_matters=(
+            "Quintessentially Brazilian in usage. 'Dor de cotovelo' music is a whole "
+            "genre of sentimental Brazilian songs about heartbreak and jealousy."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="dor de cotovelo",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="está com dor de cotovelo",
+                match_type=MatchType.inflectional_variant,
+                note="He/she is green with envy.",
+            ),
+            PhraseVariant(
+                surface="música de dor de cotovelo",
+                match_type=MatchType.inflectional_variant,
+                note="Heartbreak music — extended collocational use.",
+            ),
+        ),
+    ),
+
+    "pt_meter_a_colher": PhraseFamily(
+        id="pt_meter_a_colher",
+        language="pt",
+        canonical_form="meter a colher",
+        meaning="To stick one's oar in; to butt in; to interfere in others' business.",
+        register="informal",
+        origin=(
+            "Colher (spoon, ladle): inserting a spoon into someone else's cooking — "
+            "interfering where you haven't been invited. The domestic kitchen image "
+            "captures unwanted involvement in others' affairs."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="meter a colher",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="não metas a colher",
+                match_type=MatchType.inflectional_variant,
+                note="Don't stick your nose in — imperative.",
+            ),
+            PhraseVariant(
+                surface="sempre a meter a colher",
+                match_type=MatchType.inflectional_variant,
+                note="Always butting in.",
+            ),
+        ),
+    ),
+
+    "pt_bater_a_bota": PhraseFamily(
+        id="pt_bater_a_bota",
+        language="pt",
+        canonical_form="bater a bota",
+        meaning="To kick the bucket; to die.",
+        register="informal",
+        origin=(
+            "Bota (boot): 'to hit the boot' is Portuguese slang for dying, parallel "
+            "to English 'kick the bucket.' The exact origin of the boot image is "
+            "uncertain, but it functions as an informal euphemism for death in both "
+            "varieties of Portuguese."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="bater a bota",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="bateu a bota",
+                match_type=MatchType.inflectional_variant,
+                note="He/she kicked the bucket — past tense.",
+            ),
+        ),
+    ),
+
+    "pt_estar_nas_nuvens": PhraseFamily(
+        id="pt_estar_nas_nuvens",
+        language="pt",
+        canonical_form="estar nas nuvens",
+        meaning="To have one's head in the clouds; to be daydreaming.",
+        register="neutral",
+        origin=(
+            "Nuvens (clouds): to be in the clouds = to be mentally absent, floating "
+            "above the practical world. Parallel expressions exist in Spanish ('estar "
+            "en las nubes'), French ('avoir la tête dans les nuages'), and Italian."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="estar nas nuvens",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="está nas nuvens",
+                match_type=MatchType.inflectional_variant,
+                note="He/she is daydreaming — present tense.",
+            ),
+            PhraseVariant(
+                surface="anda nas nuvens",
+                match_type=MatchType.inflectional_variant,
+                note="He/she walks with head in clouds — with andar (to walk/go).",
+            ),
+        ),
+    ),
+
+    "pt_mais_vale_um_passaro_na_mao": PhraseFamily(
+        id="pt_mais_vale_um_passaro_na_mao",
+        language="pt",
+        canonical_form="mais vale um pássaro na mão do que dois a voar",
+        meaning="A bird in the hand is worth two in the bush.",
+        register="neutral",
+        origin=(
+            "Portuguese version of the universal proverb. Pássaro (bird) + mão (hand) "
+            "+ voar (flying): a secure possession is more valuable than uncertain "
+            "prospects. Identical in logic to English, French, Spanish, and Italian "
+            "equivalents."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="mais vale um pássaro na mão do que dois a voar",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="mais vale um passaro na mao",
+                match_type=MatchType.orthographic_variant,
+                note="Elliptical form without diacritics.",
+            ),
+        ),
+    ),
+
+    "pt_dar_voltas_ao_miolo": PhraseFamily(
+        id="pt_dar_voltas_ao_miolo",
+        language="pt",
+        canonical_form="dar voltas ao miolo",
+        meaning="To rack one's brain; to think hard and go in circles.",
+        register="informal",
+        origin=(
+            "Miolo (brain, crumb): 'turning the brain around' — the mental spinning "
+            "of trying to solve a difficult problem. Miolo colloquially means both "
+            "brain and the soft interior of bread, giving the expression earthy, "
+            "familiar quality."
+        ),
+        why_it_matters=(
+            "Characteristically Portuguese. The word miolo (instead of the more "
+            "formal cérebro) anchors the expression in informal, everyday speech."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="dar voltas ao miolo",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="dei muitas voltas ao miolo",
+                match_type=MatchType.inflectional_variant,
+                note="I racked my brain a lot — past tense.",
+            ),
+        ),
+    ),
+
+    "pt_por_em_pratos_limpos": PhraseFamily(
+        id="pt_por_em_pratos_limpos",
+        language="pt",
+        canonical_form="pôr em pratos limpos",
+        meaning="To lay the cards on the table; to clear things up; to get to the truth.",
+        register="neutral",
+        origin=(
+            "Pratos limpos (clean plates): serving on clean plates means presenting "
+            "things clearly, without the residue of prior meals/conversations "
+            "clouding the view. A metaphor for clarity and directness."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="pôr em pratos limpos",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="por em pratos limpos",
+                match_type=MatchType.orthographic_variant,
+                note="Without the circumflex on 'por' — common in informal writing.",
+            ),
+            PhraseVariant(
+                surface="vamos pôr isto em pratos limpos",
+                match_type=MatchType.inflectional_variant,
+                note="Let's lay this on the table.",
+            ),
+        ),
+    ),
+
+    "pt_de_mal_a_pior": PhraseFamily(
+        id="pt_de_mal_a_pior",
+        language="pt",
+        canonical_form="de mal a pior",
+        meaning="From bad to worse.",
+        register="neutral",
+        origin=(
+            "A direct and concise expression of deterioration. Parallel to English, "
+            "French ('de mal en pis'), Spanish ('de mal en peor'). The simplicity of "
+            "the phrase gives it wide applicability across contexts."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="de mal a pior",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="vai de mal a pior",
+                match_type=MatchType.inflectional_variant,
+                note="It keeps going from bad to worse.",
+            ),
+        ),
+    ),
+
+    "pt_bater_o_pe": PhraseFamily(
+        id="pt_bater_o_pe",
+        language="pt",
+        canonical_form="bater o pé",
+        meaning="To put one's foot down; to insist firmly; to refuse to budge.",
+        register="neutral",
+        origin=(
+            "Pé (foot): stomping one's foot is a universal physical gesture of "
+            "insistence and refusal to yield. The expression captures the determined "
+            "physical act as a metaphor for resolute verbal assertion."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="bater o pé",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="bate o pé",
+                match_type=MatchType.inflectional_variant,
+                note="He/she is putting their foot down — present tense.",
+            ),
+            PhraseVariant(
+                surface="bateu o pé",
+                match_type=MatchType.inflectional_variant,
+                note="He/she put their foot down — past tense.",
+            ),
+        ),
+    ),
+
+    "pt_estar_com_a_corda_no_pescoco": PhraseFamily(
+        id="pt_estar_com_a_corda_no_pescoco",
+        language="pt",
+        canonical_form="estar com a corda no pescoço",
+        meaning="To have a noose around one's neck; to be in a very tight spot.",
+        register="neutral",
+        origin=(
+            "Corda no pescoço (rope around the neck): the image of imminent hanging — "
+            "extreme pressure or danger. Used for financial crises, impossible "
+            "deadlines, or hopeless situations. More vivid than English 'between a "
+            "rock and a hard place.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="estar com a corda no pescoço",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="está com a corda no pescoço",
+                match_type=MatchType.inflectional_variant,
+                note="He/she is in a real bind.",
+            ),
+        ),
+    ),
+
+    "pt_pregar_uma_rasteira": PhraseFamily(
+        id="pt_pregar_uma_rasteira",
+        language="pt",
+        canonical_form="pregar uma rasteira",
+        meaning="To trip someone up; to trick someone; to do something underhand.",
+        register="informal",
+        origin=(
+            "Rasteira (trip, leg sweep): a fighting move that sweeps someone's legs "
+            "from under them. Metaphorically, causing someone to fall or fail by "
+            "means they didn't see coming — sabotage or treachery."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="pregar uma rasteira",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="pregou-me uma rasteira",
+                match_type=MatchType.inflectional_variant,
+                note="He tripped me up / pulled a fast one on me.",
+            ),
+            PhraseVariant(
+                surface="dar uma rasteira",
+                match_type=MatchType.inflectional_variant,
+                note="To trip up — with dar instead of pregar.",
+            ),
+        ),
+    ),
+
+    "pt_a_cavalo_dado_nao_se_olha_o_dente": PhraseFamily(
+        id="pt_a_cavalo_dado_nao_se_olha_o_dente",
+        language="pt",
+        canonical_form="a cavalo dado não se olha o dente",
+        meaning="Don't look a gift horse in the mouth.",
+        register="neutral",
+        origin=(
+            "Cavalo (horse) + dente (tooth): a horse's age and health are assessed by "
+            "its teeth — inspecting a gift horse's teeth implies ingratitude. "
+            "Universal proverb: Latin 'noli equi dentes inspicere donati,' French 'à "
+            "cheval donné on ne regarde pas les dents.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="a cavalo dado não se olha o dente",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="a cavalo dado nao se olha o dente",
+                match_type=MatchType.orthographic_variant,
+                note="Without diacritics.",
+            ),
+        ),
+    ),
+
+    "pt_virar_a_mesa": PhraseFamily(
+        id="pt_virar_a_mesa",
+        language="pt",
+        canonical_form="virar a mesa",
+        meaning="To turn the tables; to completely reverse a situation.",
+        register="neutral",
+        origin=(
+            "Mesa (table): to flip/turn the table — a dramatic reversal. Associated "
+            "with card games or negotiations where overturning the table resets all "
+            "terms. Common in Brazilian Portuguese especially in sports and business "
+            "contexts."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="virar a mesa",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="virou a mesa",
+                match_type=MatchType.inflectional_variant,
+                note="He/she turned the tables — past tense.",
+            ),
+        ),
+    ),
+
+    "pt_caiu_o_pano": PhraseFamily(
+        id="pt_caiu_o_pano",
+        language="pt",
+        canonical_form="caiu o pano",
+        meaning="The curtain fell; it's all over; the show is finished.",
+        register="neutral",
+        origin=(
+            "Pano (curtain, cloth): theatrical metaphor — when the curtain drops, the "
+            "performance ends. 'O pano caiu' signals an irreversible conclusion to "
+            "any situation, not just theatrical ones."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="caiu o pano",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="o pano caiu",
+                match_type=MatchType.inflectional_variant,
+                note="The curtain has fallen — word-order variant, same meaning.",
+            ),
+        ),
+    ),
+
+    "pt_pagar_com_a_mesma_moeda": PhraseFamily(
+        id="pt_pagar_com_a_mesma_moeda",
+        language="pt",
+        canonical_form="pagar com a mesma moeda",
+        meaning="To pay someone back in kind; tit for tat.",
+        register="neutral",
+        origin=(
+            "Moeda (coin, currency): repaying with the same denomination — returning "
+            "the exact same treatment received. The financial metaphor for "
+            "reciprocity is universal across European languages."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="pagar com a mesma moeda",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="pagou-lhe com a mesma moeda",
+                match_type=MatchType.inflectional_variant,
+                note="He paid him back in kind — past tense.",
+            ),
+        ),
+    ),
+
+    "pt_ir_ao_fundo_da_questao": PhraseFamily(
+        id="pt_ir_ao_fundo_da_questao",
+        language="pt",
+        canonical_form="ir ao fundo da questão",
+        meaning="To get to the bottom of the matter; to investigate thoroughly.",
+        register="neutral",
+        origin=(
+            "Fundo (bottom, depth): the bottom of the question is where the truth "
+            "lies. The spatial metaphor — depth = truth — is common across European "
+            "languages. 'Getting to the bottom' implies rigorous investigation."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ir ao fundo da questão",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ir ao fundo do assunto",
+                match_type=MatchType.inflectional_variant,
+                note="Variant with 'assunto' (matter/subject) instead of 'questão'.",
+            ),
+            PhraseVariant(
+                surface="chegou ao fundo da questão",
+                match_type=MatchType.inflectional_variant,
+                note="He/she got to the bottom of it — past tense.",
+            ),
+        ),
+    ),
+
+    "pt_ter_os_nervos_a_flor_da_pele": PhraseFamily(
+        id="pt_ter_os_nervos_a_flor_da_pele",
+        language="pt",
+        canonical_form="ter os nervos à flor da pele",
+        meaning=(
+            "To be on edge; to be hypersensitive; to have one's nerves right at the"
+            "skin's surface."
+        ),
+        register="neutral",
+        origin=(
+            "Flor da pele (flower of the skin, skin's surface): nerves so close to "
+            "the surface that any touch triggers a reaction. A beautiful anatomical "
+            "metaphor for heightened emotional sensitivity. The flor (flower) image "
+            "adds a delicate quality to what is essentially raw vulnerability."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ter os nervos à flor da pele",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="com os nervos à flor da pele",
+                match_type=MatchType.inflectional_variant,
+                note="With nerves on edge — adverbial.",
+            ),
+            PhraseVariant(
+                surface="está com os nervos à flor da pele",
+                match_type=MatchType.inflectional_variant,
+                note="He/she is on edge.",
+            ),
+        ),
+    ),
+
+    "pt_estar_de_pedra_e_cal": PhraseFamily(
+        id="pt_estar_de_pedra_e_cal",
+        language="pt",
+        canonical_form="estar de pedra e cal",
+        meaning="To be set in stone; absolutely certain; fixed and immovable.",
+        register="neutral",
+        origin=(
+            "Pedra e cal (stone and lime mortar): the combination used to build walls "
+            "that last centuries. Something 'of stone and mortar' cannot be shifted. "
+            "The construction metaphor conveys absolute permanence of a decision or "
+            "fact."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="estar de pedra e cal",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="é de pedra e cal",
+                match_type=MatchType.inflectional_variant,
+                note="It's set in stone.",
+            ),
+            PhraseVariant(
+                surface="isso é pedra e cal",
+                match_type=MatchType.inflectional_variant,
+                note="That's final — emphatic.",
+            ),
+        ),
+    ),
+
+    "pt_nem_de_proposito": PhraseFamily(
+        id="pt_nem_de_proposito",
+        language="pt",
+        canonical_form="nem de propósito",
+        meaning=(
+            "As if on purpose; what a coincidence; it couldn't have been planned"
+            "better."
+        ),
+        register="informal",
+        origin=(
+            "Propósito (purpose, intention): 'not even on purpose' describes a "
+            "coincidence so perfect it seems intentional. Often used with exclamation "
+            "to express surprised delight or irony at an apt coincidence."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="nem de propósito",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="nem de proposito",
+                match_type=MatchType.orthographic_variant,
+                note="Without accent — common in digital writing.",
+            ),
+            PhraseVariant(
+                surface="parece que foi de propósito",
+                match_type=MatchType.inflectional_variant,
+                note="It seems like it was done on purpose — related expression.",
+            ),
+        ),
+    ),
+
+    "pt_andar_na_crista_da_onda": PhraseFamily(
+        id="pt_andar_na_crista_da_onda",
+        language="pt",
+        canonical_form="andar na crista da onda",
+        meaning="To be riding the crest of a wave; to be at the top of one's game.",
+        register="neutral",
+        origin=(
+            "Crista da onda (wave crest): surfing on the highest point of a wave — "
+            "maximum momentum and visibility. Portugal's Atlantic coastline makes "
+            "wave imagery natural and resonant. Used of careers, trends, and "
+            "popularity."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="andar na crista da onda",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="está na crista da onda",
+                match_type=MatchType.inflectional_variant,
+                note="He/she is on top of the world right now.",
+            ),
+        ),
+    ),
+
+    "pt_quem_nao_chora_nao_mama": PhraseFamily(
+        id="pt_quem_nao_chora_nao_mama",
+        language="pt",
+        canonical_form="quem não chora não mama",
+        meaning="The squeaky wheel gets the grease; you have to ask for what you want.",
+        register="neutral",
+        origin=(
+            "Mamar (to nurse/suckle): the baby who doesn't cry doesn't get fed. A "
+            "proverb about the necessity of expressing needs. Common in Brazil "
+            "especially. Contrasts with more reserved cultural ideals about not "
+            "complaining."
+        ),
+        why_it_matters=(
+            "A particularly useful expression for learners navigating Brazilian "
+            "professional culture, where self-advocacy is important."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="quem não chora não mama",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="quem nao chora nao mama",
+                match_type=MatchType.orthographic_variant,
+                note="Without diacritics.",
+            ),
+        ),
+    ),
+
+    "pt_tirar_o_sono": PhraseFamily(
+        id="pt_tirar_o_sono",
+        language="pt",
+        canonical_form="tirar o sono a alguém",
+        meaning="To keep someone up at night; to worry someone greatly.",
+        register="neutral",
+        origin=(
+            "Sono (sleep): to remove someone's sleep = to be a source of such anxiety "
+            "that they cannot rest. The expression captures both the physiological "
+            "(sleeplessness) and emotional (worry) dimensions of a problem."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="tirar o sono a alguém",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="isso tira-me o sono",
+                match_type=MatchType.inflectional_variant,
+                note="That keeps me up at night.",
+            ),
+            PhraseVariant(
+                surface="não vou deixar isso tirar-me o sono",
+                match_type=MatchType.inflectional_variant,
+                note="I won't lose sleep over it.",
+            ),
+        ),
+    ),
+
+    "pt_colocar_os_pontos_nos_is": PhraseFamily(
+        id="pt_colocar_os_pontos_nos_is",
+        language="pt",
+        canonical_form="colocar os pontos nos i's",
+        meaning="To dot the i's and cross the t's; to be precise and thorough.",
+        register="neutral",
+        origin=(
+            "Pontos nos i's (dots on the i's): the typographic act of completing "
+            "letters carefully. In Portuguese, only the i's are mentioned (unlike "
+            "English 'dot the i's and cross the t's'), but the meaning — thoroughness "
+            "— is identical."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="colocar os pontos nos i's",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="pôr os pontos nos i's",
+                match_type=MatchType.inflectional_variant,
+                note="Variant with pôr (to put) instead of colocar.",
+            ),
+        ),
+    ),
+
+    "pt_dar_a_volta_por_cima": PhraseFamily(
+        id="pt_dar_a_volta_por_cima",
+        language="pt",
+        canonical_form="dar a volta por cima",
+        meaning="To bounce back; to make a comeback after a setback.",
+        register="neutral",
+        origin=(
+            "Volta por cima (turn from above): overcoming the obstacle by rising "
+            "above it and coming out on top. Specifically Brazilian in flavor, "
+            "associated with resilience and comeback narratives in sports, politics, "
+            "and personal life."
+        ),
+        why_it_matters=(
+            "Highly frequent in Brazilian media and everyday speech. Captures the "
+            "Brazilian cultural value of resilience and positivity in the face of "
+            "adversity — closely related to the concept of jogo bonito."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="dar a volta por cima",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="deu a volta por cima",
+                match_type=MatchType.inflectional_variant,
+                note="He/she bounced back — past tense.",
+            ),
+        ),
+    ),
+
+    "pt_estar_entre_a_espada_e_a_parede": PhraseFamily(
+        id="pt_estar_entre_a_espada_e_a_parede",
+        language="pt",
+        canonical_form="estar entre a espada e a parede",
+        meaning="To be between a rock and a hard place; caught between two bad options.",
+        register="neutral",
+        origin=(
+            "Espada (sword) + parede (wall): pressed against a wall with a sword at "
+            "your front — no escape route, forced to choose the lesser of two "
+            "dangers. More physically vivid than English's geological metaphor."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="estar entre a espada e a parede",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="entre a espada e a parede",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical predicative use.",
+            ),
+            PhraseVariant(
+                surface="estou entre a espada e a parede",
+                match_type=MatchType.inflectional_variant,
+                note="I'm between a rock and a hard place.",
+            ),
+        ),
+    ),
+
+    "pt_mandar_as_favas": PhraseFamily(
+        id="pt_mandar_as_favas",
+        language="pt",
+        canonical_form="mandar às favas",
+        meaning="To tell someone to get lost; to dismiss rudely.",
+        register="informal",
+        origin=(
+            "Favas (broad beans): a remote, insignificant place associated with "
+            "peasant food. Sending someone 'to the beans' dismisses them as "
+            "worthless. Parallel to English 'go fly a kite' or Spanish 'mandar a "
+            "paseo.' The bean imagery is distinctively Iberian."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="mandar às favas",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="vai às favas",
+                match_type=MatchType.inflectional_variant,
+                note="Get lost — imperative.",
+            ),
+            PhraseVariant(
+                surface="mandou-o às favas",
+                match_type=MatchType.inflectional_variant,
+                note="He/she told him to get lost — past tense.",
+            ),
+        ),
+    ),
+
+    # ── Ru (generated) ────────────────────────────────────────
+
+    "ru_sdelat_iz_mukhi_slona": PhraseFamily(
+        id="ru_sdelat_iz_mukhi_slona",
+        language="ru",
+        canonical_form="делать из мухи слона",
+        meaning=(
+            "To make a mountain out of a molehill; to blow something out of"
+            "proportion."
+        ),
+        register="informal",
+        origin=(
+            "Муха (fly) → слон (elephant): turning the tiniest insect into the "
+            "largest land animal. A satirical image of grotesque exaggeration. "
+            "Attributed to Lucian of Samosata (2nd century AD) in his essay 'The Fly' "
+            "— one of the oldest recorded idioms still in common use."
+        ),
+        why_it_matters=(
+            "One of the most beloved Russian idioms. The extreme contrast (fly vs. "
+            "elephant) makes it instantly memorable. The animal pairing reflects "
+            "Russian fondness for vivid, asymmetric animal-based metaphors."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="делать из мухи слона",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="делает из мухи слона",
+                match_type=MatchType.inflectional_variant,
+                note="He/she makes a mountain out of a molehill — present tense.",
+            ),
+            PhraseVariant(
+                surface="не надо делать из мухи слона",
+                match_type=MatchType.inflectional_variant,
+                note="Don't blow it out of proportion.",
+            ),
+        ),
+    ),
+
+    "ru_vyvesti_na_chistuyu_vodu": PhraseFamily(
+        id="ru_vyvesti_na_chistuyu_vodu",
+        language="ru",
+        canonical_form="вывести на чистую воду",
+        meaning="To bring to light; to expose someone's wrongdoing; to unmask.",
+        register="neutral",
+        origin=(
+            "Чистая вода (clean water): bringing something out of murky depths into "
+            "clear, transparent water where it can be seen clearly. The fishing "
+            "metaphor — pulling hidden things to the surface — implies that deception "
+            "cannot survive scrutiny."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="вывести на чистую воду",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="вывел его на чистую воду",
+                match_type=MatchType.inflectional_variant,
+                note="He exposed him — past tense.",
+            ),
+        ),
+    ),
+
+    "ru_kak_grom_sredi_yasnogo_neba": PhraseFamily(
+        id="ru_kak_grom_sredi_yasnogo_neba",
+        language="ru",
+        canonical_form="как гром среди ясного неба",
+        meaning="Like a bolt from the blue; completely unexpected.",
+        register="neutral",
+        origin=(
+            "Гром (thunder) среди ясного неба (clear sky): thunder without visible "
+            "clouds is impossible — a natural impossibility used to describe total "
+            "surprise. Parallel to English 'bolt from the blue.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="как гром среди ясного неба",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="гром среди ясного неба",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical — without the simile marker 'как'.",
+            ),
+            PhraseVariant(
+                surface="как гром с ясного неба",
+                match_type=MatchType.inflectional_variant,
+                note="Variant with genitive 'с ясного неба' — from a clear sky.",
+            ),
+        ),
+    ),
+
+    "ru_khorosho_smeyotsya_kto_smeyotsya_posled": PhraseFamily(
+        id="ru_khorosho_smeyotsya_kto_smeyotsya_posled",
+        language="ru",
+        canonical_form="хорошо смеётся тот, кто смеётся последним",
+        meaning="He who laughs last laughs best.",
+        register="neutral",
+        origin=(
+            "A proverb warning against premature celebration. Found across European "
+            "languages. The Russian form emphasizes the quality of the final laugh "
+            "('хорошо смеётся' = laughs well) rather than just its timing."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="хорошо смеётся тот, кто смеётся последним",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="смеётся тот, кто смеётся последним",
+                match_type=MatchType.inflectional_variant,
+                note="Shortened form without 'хорошо'.",
+            ),
+        ),
+    ),
+
+    "ru_ne_pluy_v_kolodets": PhraseFamily(
+        id="ru_ne_pluy_v_kolodets",
+        language="ru",
+        canonical_form="не плюй в колодец — пригодится воды напиться",
+        meaning=(
+            "Don't bite the hand that feeds you; don't spit in the well you may need"
+            "to drink from."
+        ),
+        register="neutral",
+        origin=(
+            "Колодец (well): the village well was a common resource — fouling it "
+            "harmed everyone, including yourself. The proverb encodes prudence and "
+            "community interdependence. The folk wisdom is almost universally "
+            "recognized in Russian culture."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="не плюй в колодец — пригодится воды напиться",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="не плюй в колодец",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical — the first half alone, well understood.",
+            ),
+        ),
+    ),
+
+    "ru_snyat_slivki": PhraseFamily(
+        id="ru_snyat_slivki",
+        language="ru",
+        canonical_form="снять сливки",
+        meaning="To skim the cream; to take the best part for oneself.",
+        register="neutral",
+        origin=(
+            "Сливки (cream): cream rises to the top of fresh milk. Skimming it off "
+            "first gets the richest, most valuable portion. The expression applies to "
+            "taking the best opportunities, the most profitable deals, or the most "
+            "desirable partners."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="снять сливки",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="снял сливки",
+                match_type=MatchType.inflectional_variant,
+                note="He skimmed the cream — took the best for himself.",
+            ),
+            PhraseVariant(
+                surface="снимать сливки",
+                match_type=MatchType.inflectional_variant,
+                note="Imperfective form — habitually skimming.",
+            ),
+        ),
+    ),
+
+    "ru_okazatsya_u_razbitogo_koryta": PhraseFamily(
+        id="ru_okazatsya_u_razbitogo_koryta",
+        language="ru",
+        canonical_form="оказаться у разбитого корыта",
+        meaning=(
+            "To end up back at square one with nothing; to be left with a broken"
+            "trough."
+        ),
+        register="neutral",
+        origin=(
+            "From Pushkin's 'The Tale of the Fisherman and the Fish' (1833): the "
+            "greedy old woman demands ever more from the magic fish until it takes "
+            "everything back, leaving her at the broken trough (разбитое корыто) she "
+            "started with."
+        ),
+        why_it_matters=(
+            "Directly from Pushkin — one of the most literate Russian idioms. Knowing "
+            "its source shows the depth of classical literature in Russian everyday "
+            "speech."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="оказаться у разбитого корыта",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="у разбитого корыта",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical — back to square one, having lost everything.",
+            ),
+            PhraseVariant(
+                surface="остаться у разбитого корыта",
+                match_type=MatchType.inflectional_variant,
+                note="To be left with nothing — with 'остаться' (to be left).",
+            ),
+        ),
+    ),
+
+    "ru_toloch_vodu_v_stupe": PhraseFamily(
+        id="ru_toloch_vodu_v_stupe",
+        language="ru",
+        canonical_form="толочь воду в ступе",
+        meaning="To pound water in a mortar; to do pointless, unproductive work.",
+        register="neutral",
+        origin=(
+            "Ступа (mortar): pounding water — which cannot be ground — is the "
+            "ultimate futile task. The image is ancient, appearing in Erasmus's "
+            "Adages ('in aqua scribis') and Russian folk usage. The mortar evokes "
+            "traditional village life."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="толочь воду в ступе",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="это всё равно что толочь воду в ступе",
+                match_type=MatchType.inflectional_variant,
+                note="It's like pounding water in a mortar — this is useless.",
+            ),
+        ),
+    ),
+
+    "ru_kak_syr_v_masle": PhraseFamily(
+        id="ru_kak_syr_v_masle",
+        language="ru",
+        canonical_form="как сыр в масле кататься",
+        meaning="Like cheese rolling in butter; to live in luxury and comfort.",
+        register="informal",
+        origin=(
+            "Сыр (cheese) rolling in масло (butter) — immersed in richness, "
+            "effortlessly gliding through plenty. A deliciously food-centered image "
+            "of prosperity. The verb 'кататься' (to roll/ride) suggests effortless "
+            "movement through wealth."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="как сыр в масле кататься",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="живёт как сыр в масле",
+                match_type=MatchType.inflectional_variant,
+                note="He/she lives like a king — like cheese in butter.",
+            ),
+            PhraseVariant(
+                surface="как сыр в масле",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical adverbial form.",
+            ),
+        ),
+    ),
+
+    "ru_myt_kosti": PhraseFamily(
+        id="ru_myt_kosti",
+        language="ru",
+        canonical_form="мыть кости",
+        meaning="To gossip about someone; to wash someone's bones behind their back.",
+        register="informal",
+        origin=(
+            "From the ancient ritual of washing the bones of the dead before reburial "
+            "— a practice that involved the whole community discussing the deceased's "
+            "life and character. 'Washing bones' transferred to talking about living "
+            "people behind their backs."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="мыть кости",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="перемывать кости",
+                match_type=MatchType.inflectional_variant,
+                note="To re-wash the bones — to gossip repeatedly, more intensive form.",
+            ),
+            PhraseVariant(
+                surface="моют ему кости",
+                match_type=MatchType.inflectional_variant,
+                note="They're gossiping about him.",
+            ),
+        ),
+    ),
+
+    "ru_ne_v_konya_korm": PhraseFamily(
+        id="ru_ne_v_konya_korm",
+        language="ru",
+        canonical_form="не в коня корм",
+        meaning=(
+            "The fodder is wasted on that horse; effort wasted on someone who doesn't"
+            "appreciate it."
+        ),
+        register="informal",
+        origin=(
+            "Конь (horse) + корм (fodder/feed): expensive feed given to a horse that "
+            "cannot benefit from it is wasted. The expression implies that education, "
+            "generosity, or quality are squandered on someone unworthy or "
+            "unappreciative."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="не в коня корм",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ему не в коня корм",
+                match_type=MatchType.inflectional_variant,
+                note="It's wasted on him — he doesn't appreciate it.",
+            ),
+        ),
+    ),
+
+    "ru_rezat_pravdu_matku": PhraseFamily(
+        id="ru_rezat_pravdu_matku",
+        language="ru",
+        canonical_form="резать правду-матку",
+        meaning="To tell it like it is; to speak blunt, unvarnished truth.",
+        register="informal",
+        origin=(
+            "Правда-матка: 'mother truth' — the raw, unembellished truth in its most "
+            "potent form. 'Резать' (to cut) suggests the sharpness and directness of "
+            "such speech. A characteristically Russian valorization of blunt honesty "
+            "over diplomatic softening."
+        ),
+        why_it_matters=(
+            "The compound 'правда-матка' is itself culturally rich — matka (mother) "
+            "here suggests the pure, original form of truth, not dressed up or "
+            "softened."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="резать правду-матку",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="режет правду-матку",
+                match_type=MatchType.inflectional_variant,
+                note="He/she tells it straight — present tense.",
+            ),
+            PhraseVariant(
+                surface="говорить правду-матку в глаза",
+                match_type=MatchType.inflectional_variant,
+                note="To tell the truth to someone's face — direct confrontation form.",
+            ),
+        ),
+    ),
+
+    "ru_kogda_rak_na_gore_svistnet": PhraseFamily(
+        id="ru_kogda_rak_na_gore_svistnet",
+        language="ru",
+        canonical_form="когда рак на горе свистнет",
+        meaning="When pigs fly; when the crayfish whistles on the mountain.",
+        register="informal",
+        origin=(
+            "Рак (crayfish) + гора (mountain) + свистнуть (to whistle): crayfish "
+            "cannot whistle, especially not on a mountain (their natural habitat is "
+            "water). An impossible scenario encodes 'never.' Compare English 'when "
+            "pigs fly,' German 'wenn Schweine fliegen.'"
+        ),
+        why_it_matters=(
+            "Each culture has its own 'impossible animal scenario' for 'never.' The "
+            "Russian crayfish is one of the most recognizable and beloved. It "
+            "highlights how absurdist animal imagery is a cross-cultural mechanism "
+            "for expressing impossibility."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="когда рак на горе свистнет",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="когда рак свистнет",
+                match_type=MatchType.inflectional_variant,
+                note="Shortened form — when the crayfish whistles.",
+            ),
+        ),
+    ),
+
+    "ru_brosit_perchatku": PhraseFamily(
+        id="ru_brosit_perchatku",
+        language="ru",
+        canonical_form="бросить перчатку",
+        meaning="To throw down the gauntlet; to issue a challenge.",
+        register="neutral",
+        origin=(
+            "Перчатка (glove, gauntlet): in medieval European knight culture, "
+            "throwing a glove was a formal challenge to a duel. The expression "
+            "entered Russian via French chivalric culture and retains its combative "
+            "connotation in modern usage."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="бросить перчатку",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="бросить кому-то перчатку",
+                match_type=MatchType.inflectional_variant,
+                note="To throw down the gauntlet to someone — with dative recipient.",
+            ),
+            PhraseVariant(
+                surface="подобрать перчатку",
+                match_type=MatchType.inflectional_variant,
+                note="To pick up the gauntlet — to accept the challenge.",
+            ),
+        ),
+    ),
+
+    "ru_za_dvumya_zaycami": PhraseFamily(
+        id="ru_za_dvumya_zaycami",
+        language="ru",
+        canonical_form="за двумя зайцами погонишься — ни одного не поймаешь",
+        meaning=(
+            "Chase two hares and you'll catch neither; don't try to do two things at"
+            "once."
+        ),
+        register="neutral",
+        origin=(
+            "Заяц (hare): a fast, evasive animal. Chasing two simultaneously splits "
+            "one's focus and dooms both pursuits. A proverb of singular focus and the "
+            "danger of divided attention. Parallel to Chinese and Latin proverbial "
+            "wisdom on the same theme."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="за двумя зайцами погонишься — ни одного не поймаешь",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="за двумя зайцами",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical — the first clause alone, understood to imply the full proverb.",
+            ),
+            PhraseVariant(
+                surface="гнаться за двумя зайцами",
+                match_type=MatchType.inflectional_variant,
+                note="To chase two hares — infinitive form.",
+            ),
+        ),
+    ),
+
+    "ru_staraya_pesnya_na_novyy_lad": PhraseFamily(
+        id="ru_staraya_pesnya_na_novyy_lad",
+        language="ru",
+        canonical_form="старая песня на новый лад",
+        meaning="Old wine in new bottles; the same old story in a new guise.",
+        register="neutral",
+        origin=(
+            "Старая песня (old song) на новый лад (in a new style/tune): the song "
+            "hasn't changed, only its arrangement. The expression captures "
+            "superficial novelty over fundamental sameness — a new style masking "
+            "unchanged content."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="старая песня на новый лад",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="всё та же старая песня",
+                match_type=MatchType.inflectional_variant,
+                note="Same old story — same old song.",
+            ),
+        ),
+    ),
+
+    "ru_golyi_kak_sokol": PhraseFamily(
+        id="ru_golyi_kak_sokol",
+        language="ru",
+        canonical_form="гол как сокол",
+        meaning="Stone broke; penniless; bare as a falcon.",
+        register="informal",
+        origin=(
+            "Сокол (falcon) + гол (naked/bare): falcons have smooth, streamlined "
+            "plumage — nothing hidden in their feathers. But the expression may also "
+            "derive from 'сокол' as a medieval battering ram of bare metal. Either "
+            "way, 'bare as a falcon' = having nothing."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="гол как сокол",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="гол как сокол остался",
+                match_type=MatchType.inflectional_variant,
+                note="Left without a penny to his name.",
+            ),
+        ),
+    ),
+
+    "ru_v_tikhom_omute_cherti_vodyatsya": PhraseFamily(
+        id="ru_v_tikhom_omute_cherti_vodyatsya",
+        language="ru",
+        canonical_form="в тихом омуте черти водятся",
+        meaning="Still waters run deep; beware the quiet ones.",
+        register="neutral",
+        origin=(
+            "Омут (still pool, deep water) + черти (devils): in Russian folklore, "
+            "devils and water spirits (водяные) lurk in deep, still pools — not in "
+            "noisy rapids. The expression warns that quiet exteriors hide dark "
+            "depths."
+        ),
+        why_it_matters=(
+            "The Russian version is notably darker than English 'still waters run "
+            "deep' — explicitly mentioning devils. It reveals the folk-superstition "
+            "layer underlying everyday Russian idiom."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="в тихом омуте черти водятся",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="в тихом омуте черти",
+                match_type=MatchType.inflectional_variant,
+                note="Elliptical — still waters run deep.",
+            ),
+        ),
+    ),
+
+    "ru_u_semi_nyanek_ditya_bez_glaza": PhraseFamily(
+        id="ru_u_semi_nyanek_ditya_bez_glaza",
+        language="ru",
+        canonical_form="у семи нянек дитя без глаза",
+        meaning=(
+            "Too many cooks spoil the broth; with seven nannies the child is left"
+            "unsupervised."
+        ),
+        register="neutral",
+        origin=(
+            "Нянька (nanny) + дитя (child): seven nannies for one child — each "
+            "assumes the others are watching, and the child is left without "
+            "supervision. The proverb encodes collective irresponsibility through "
+            "distributed accountability."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="у семи нянек дитя без глаза",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="семь нянек",
+                match_type=MatchType.inflectional_variant,
+                note="Shorthand reference — seven nannies (implying the full proverb).",
+            ),
+        ),
+    ),
+
+    "ru_rvat_na_sebe_volosy": PhraseFamily(
+        id="ru_rvat_na_sebe_volosy",
+        language="ru",
+        canonical_form="рвать на себе волосы",
+        meaning="To tear one's hair out; to be in extreme distress or regret.",
+        register="neutral",
+        origin=(
+            "Physically tearing one's hair is an ancient grief gesture documented "
+            "across Middle Eastern and classical cultures (Jeremiah, Ezra, Homer). "
+            "Russian preserves the image as a metaphor for any extreme self-reproach "
+            "or regret."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="рвать на себе волосы",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="рвёт на себе волосы",
+                match_type=MatchType.inflectional_variant,
+                note="He/she is tearing their hair out — present tense.",
+            ),
+            PhraseVariant(
+                surface="теперь рви на себе волосы",
+                match_type=MatchType.inflectional_variant,
+                note="Now you can tear your hair out — done out of regret.",
+            ),
+        ),
+    ),
+
+    "ru_sidet_na_dvukh_stulyakh": PhraseFamily(
+        id="ru_sidet_na_dvukh_stulyakh",
+        language="ru",
+        canonical_form="сидеть на двух стульях",
+        meaning=(
+            "To sit on two chairs; to try to please two opposing parties; to have it"
+            "both ways."
+        ),
+        register="neutral",
+        origin=(
+            "Стул (chair): sitting between two chairs — with each buttock on a "
+            "different seat — is physically precarious and ultimately untenable. The "
+            "image captures the impossibility of simultaneously serving two "
+            "incompatible masters."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="сидеть на двух стульях",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="нельзя сидеть на двух стульях",
+                match_type=MatchType.inflectional_variant,
+                note="You can't have it both ways — negated form.",
+            ),
+            PhraseVariant(
+                surface="сидит на двух стульях",
+                match_type=MatchType.inflectional_variant,
+                note="He's trying to please everyone.",
+            ),
+        ),
+    ),
+
+    "ru_stavit_telegu_vperedi_loshadi": PhraseFamily(
+        id="ru_stavit_telegu_vperedi_loshadi",
+        language="ru",
+        canonical_form="ставить телегу впереди лошади",
+        meaning="To put the cart before the horse.",
+        register="neutral",
+        origin=(
+            "Телега (cart) + лошадь (horse): placing the cart before the horse "
+            "reverses the proper order. Russian shares this proverb with virtually "
+            "all European languages — a logical error made vivid through concrete "
+            "imagery."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ставить телегу впереди лошади",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="телегу поставил впереди лошади",
+                match_type=MatchType.inflectional_variant,
+                note="He put the cart before the horse — past tense.",
+            ),
+        ),
+    ),
+
+    "ru_net_dyma_bez_ognya": PhraseFamily(
+        id="ru_net_dyma_bez_ognya",
+        language="ru",
+        canonical_form="нет дыма без огня",
+        meaning="There's no smoke without fire.",
+        register="neutral",
+        origin=(
+            "A universal European proverb. Дым (smoke) + огонь (fire): smoke cannot "
+            "exist without fire — rumors typically have some basis in truth. The "
+            "Russian form exactly parallels English, French, German, Spanish, "
+            "Italian, and Portuguese equivalents."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="нет дыма без огня",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="без огня дыма не бывает",
+                match_type=MatchType.inflectional_variant,
+                note="Variant word order: without fire there is no smoke.",
+            ),
+        ),
+    ),
+
+    "ru_ne_govori_gop": PhraseFamily(
+        id="ru_ne_govori_gop",
+        language="ru",
+        canonical_form="не говори «гоп», пока не перепрыгнешь",
+        meaning=(
+            "Don't count your chickens before they hatch; don't say 'hop' until"
+            "you've jumped."
+        ),
+        register="neutral",
+        origin=(
+            "Гоп (hop) is the exclamation made when jumping over an obstacle. Saying "
+            "it before completing the jump tempts fate — the proverb warns against "
+            "premature celebration of future success."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="не говори «гоп», пока не перепрыгнешь",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="не говори гоп",
+                match_type=MatchType.inflectional_variant,
+                note="Shortened imperative — don't count your chickens.",
+            ),
+        ),
+    ),
+
+    "ru_za_semiyu_zamkami": PhraseFamily(
+        id="ru_za_semiyu_zamkami",
+        language="ru",
+        canonical_form="за семью замками",
+        meaning="Under seven locks; deeply secret; heavily guarded.",
+        register="neutral",
+        origin=(
+            "Семь замков (seven locks): seven is the number of completeness in Slavic "
+            "folk tradition. Something sealed with seven locks is maximally secured — "
+            "the number emphasizes total inaccessibility rather than a literal count "
+            "of locks."
+        ),
+        why_it_matters=(
+            "The number seven recurs in Russian folklore ('за семью морями,' 'семь "
+            "пятниц') in ways that differ from English. Understanding this helps "
+            "learners recognize the cultural weight of 'семь' in Russian idiom."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="за семью замками",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="держать за семью замками",
+                match_type=MatchType.inflectional_variant,
+                note="To keep under seven locks — to keep deeply secret.",
+            ),
+            PhraseVariant(
+                surface="под семью замками",
+                match_type=MatchType.inflectional_variant,
+                note="Under seven locks — variant with 'под' (under).",
+            ),
+        ),
+    ),
+
+    "ru_razbit_v_pukh_i_prak": PhraseFamily(
+        id="ru_razbit_v_pukh_i_prak",
+        language="ru",
+        canonical_form="разбить в пух и прах",
+        meaning="To smash to smithereens; to utterly destroy or defeat.",
+        register="neutral",
+        origin=(
+            "Пух (down, fluff) + прах (dust, ashes): reducing something to feathers "
+            "and ash — the lightest, most dissipated substances. A total destruction "
+            "so complete nothing substantial remains. Used of military defeats, "
+            "arguments, and business failures."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="разбить в пух и прах",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="разнести в пух и прах",
+                match_type=MatchType.inflectional_variant,
+                note="Variant with 'разнести' (to scatter/blast) — same meaning.",
+            ),
+            PhraseVariant(
+                surface="разбит в пух и прах",
+                match_type=MatchType.inflectional_variant,
+                note="Was smashed to smithereens — passive/past.",
+            ),
+        ),
+    ),
+
+    "ru_odin_v_pole_ne_voin": PhraseFamily(
+        id="ru_odin_v_pole_ne_voin",
+        language="ru",
+        canonical_form="один в поле не воин",
+        meaning="One man in a field is not a warrior; no man is an island.",
+        register="neutral",
+        origin=(
+            "A military proverb: a single soldier on a battlefield cannot fight "
+            "effectively alone. The expression encodes the cultural value of "
+            "collective action over individual heroism — a recurring theme in Russian "
+            "communal tradition."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="один в поле не воин",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="один в поле не воин, а в добрых людях — сила",
+                match_type=MatchType.inflectional_variant,
+                note="Extended form: one alone is not a warrior, but in good people lies strength.",
+            ),
+        ),
+    ),
+
+    "ru_sem_pyatnic_na_nedele": PhraseFamily(
+        id="ru_sem_pyatnic_na_nedele",
+        language="ru",
+        canonical_form="семь пятниц на неделе",
+        meaning="Seven Fridays in a week; someone who constantly changes their mind.",
+        register="informal",
+        origin=(
+            "Пятница (Friday): in old Russian markets, Friday was the traditional day "
+            "for settling debts and completing deals. Someone with 'seven Fridays a "
+            "week' constantly renegotiated — a scathing characterization of "
+            "unreliability. The number seven again signals completeness/excess."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="семь пятниц на неделе",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="у него семь пятниц на неделе",
+                match_type=MatchType.inflectional_variant,
+                note="He changes his mind all the time.",
+            ),
+        ),
+    ),
+
+    "ru_v_chuzhom_glazu_solominku": PhraseFamily(
+        id="ru_v_chuzhom_glazu_solominku",
+        language="ru",
+        canonical_form="в чужом глазу соломинку видишь, а в своём бревна не замечаешь",
+        meaning="You see the mote in another's eye but not the beam in your own.",
+        register="neutral",
+        origin=(
+            "From the Sermon on the Mount (Matthew 7:3-5). Соломинка (straw) in "
+            "another's eye vs. бревно (log/beam) in one's own — the biblical contrast "
+            "between hypocritical perception of others' small faults while ignoring "
+            "one's own enormous ones. Universally known in Orthodox Christian "
+            "culture."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="в чужом глазу соломинку видишь, а в своём бревна не замечаешь",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="в чужом глазу соломинку видит",
+                match_type=MatchType.inflectional_variant,
+                note="He sees the speck in another's eye — third person, truncated.",
+            ),
+        ),
+    ),
+
+    "ru_delit_shkuru_neubitogo_medvedya": PhraseFamily(
+        id="ru_delit_shkuru_neubitogo_medvedya",
+        language="ru",
+        canonical_form="делить шкуру неубитого медведя",
+        meaning=(
+            "To count one's chickens before they hatch; to divide the skin of an"
+            "unshot bear."
+        ),
+        register="neutral",
+        origin=(
+            "Медведь (bear) + шкура (skin/pelt): dividing the bear's valuable fur "
+            "before it has been killed. The bear-hunting context is distinctly "
+            "Russian — replacing the general European 'counting chickens' with a "
+            "vivid image from the forest economy."
+        ),
+        why_it_matters=(
+            "The bear is Russia's iconic animal — its appearance here is not "
+            "accidental. The phrase connects to a deep cultural layer of bear-hunting "
+            "folklore and the practical economy of the Russian forest."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="делить шкуру неубитого медведя",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="не дели шкуру неубитого медведя",
+                match_type=MatchType.inflectional_variant,
+                note="Don't count your chickens — imperative.",
+            ),
+            PhraseVariant(
+                surface="продавать шкуру неубитого медведя",
+                match_type=MatchType.inflectional_variant,
+                note="Variant with 'продавать' (to sell) — to sell the bear's skin before it's caught.",
+            ),
+        ),
+    ),
+
+    "ru_ne_vse_zoloto_chto_blestit": PhraseFamily(
+        id="ru_ne_vse_zoloto_chto_blestit",
+        language="ru",
+        canonical_form="не всё золото, что блестит",
+        meaning="All that glitters is not gold.",
+        register="neutral",
+        origin=(
+            "From a medieval Latin proverb ('non omne quod nitet aurum est'), "
+            "popularized in Western Europe by Chaucer and Shakespeare. The Russian "
+            "version is identical in meaning and is equally universal. The image "
+            "warns against mistaking surface appeal for genuine value."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="не всё золото, что блестит",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="не всё то золото, что блестит",
+                match_type=MatchType.inflectional_variant,
+                note="Variant with emphatic 'то' — not everything that gleams is gold.",
+            ),
+        ),
+    ),
+
+    "ru_veshat_sobak": PhraseFamily(
+        id="ru_veshat_sobak",
+        language="ru",
+        canonical_form="вешать собак на кого-то",
+        meaning="To lay the blame on someone; to put the dogs on someone.",
+        register="informal",
+        origin=(
+            "Собака (dog): 'hanging dogs' on someone — loading them with accusations. "
+            "The image is of dogs being strapped to a person as a form of punishment "
+            "or humiliation. Historically, being beaten with a dead dog was a ritual "
+            "public shaming."
+        ),
+        why_it_matters=(
+            "Learners often confuse this with 'вешать лапшу на уши' (to bamboozle). "
+            "The verbs overlap but the objects (собаки vs. лапша) signal completely "
+            "different meanings: blame vs. deception."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="вешать собак на кого-то",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="на меня вешают собак",
+                match_type=MatchType.inflectional_variant,
+                note="They're pinning the blame on me.",
+            ),
+            PhraseVariant(
+                surface="навешали собак",
+                match_type=MatchType.inflectional_variant,
+                note="They laid all the blame — perfective past.",
+            ),
+        ),
+    ),
+
+    "ru_na_miru_i_smert_krasna": PhraseFamily(
+        id="ru_na_miru_i_smert_krasna",
+        language="ru",
+        canonical_form="на миру и смерть красна",
+        meaning=(
+            "Even death is beautiful in company; there is strength and dignity in"
+            "shared fate."
+        ),
+        register="neutral",
+        origin=(
+            "Мир (here: community, world): a proverb encoding the Russian cultural "
+            "value of collective solidarity. Even the most terrible experience "
+            "(death) becomes bearable — even beautiful — when shared. A deep "
+            "expression of communal ethos over individualism."
+        ),
+        why_it_matters=(
+            "Encodes one of the most fundamental values in Russian folk culture: "
+            "collective over individual. Understanding it gives insight into how "
+            "Russian culture frames suffering and heroism differently from "
+            "individualist Western norms."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="на миру и смерть красна",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ru_perevesti_dukh": PhraseFamily(
+        id="ru_perevesti_dukh",
+        language="ru",
+        canonical_form="перевести дух",
+        meaning="To catch one's breath; to take a breather; to pause and recover.",
+        register="neutral",
+        origin=(
+            "Дух (spirit, breath): 'translating' or shifting one's breath — a pause "
+            "that allows recovery. The verb перевести (to transfer, to translate) "
+            "applied to breath creates a subtle image of breath moving from exertion "
+            "to rest."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="перевести дух",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="дайте перевести дух",
+                match_type=MatchType.inflectional_variant,
+                note="Let me catch my breath — first-person request.",
+            ),
+            PhraseVariant(
+                surface="едва успел перевести дух",
+                match_type=MatchType.inflectional_variant,
+                note="Barely had time to catch his breath.",
+            ),
+        ),
+    ),
+
+    "ru_vezet_kak_utoplenniku": PhraseFamily(
+        id="ru_vezet_kak_utoplenniku",
+        language="ru",
+        canonical_form="везёт как утопленнику",
+        meaning="As lucky as a drowned man; having terrible luck.",
+        register="informal",
+        origin=(
+            "Утопленник (drowned man): a drowned man's fate is the worst possible — "
+            "ironic understatement for terrible luck. Russian has a tradition of "
+            "dark, ironic expressions of misfortune. The expression uses the same "
+            "'везти' (to be lucky) as positive luck expressions, inverting them "
+            "sardonically."
+        ),
+        why_it_matters=(
+            "Russian irony often works by using positive vocabulary in maximally "
+            "negative contexts. 'Везёт' (lucky) applied to a drowned man epitomizes "
+            "this darkly comic register."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="везёт как утопленнику",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="везёт ему как утопленнику",
+                match_type=MatchType.inflectional_variant,
+                note="He's as lucky as a drowned man — with explicit subject.",
+            ),
+        ),
+    ),
+
+    "ru_zhit_kak_koshka_s_sobakou": PhraseFamily(
+        id="ru_zhit_kak_koshka_s_sobakou",
+        language="ru",
+        canonical_form="жить как кошка с собакой",
+        meaning="To live like cat and dog; to be constantly at odds.",
+        register="informal",
+        origin=(
+            "Кошка (cat) + собака (dog): the proverbial enmity of cats and dogs is a "
+            "cross-cultural metaphor for constant quarreling. Russian uses the same "
+            "animal pairing as English and most European languages to encode domestic "
+            "conflict."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="жить как кошка с собакой",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="живут как кошка с собакой",
+                match_type=MatchType.inflectional_variant,
+                note="They live like cat and dog — constant fighting.",
+            ),
+            PhraseVariant(
+                surface="как кошка с собакой",
+                match_type=MatchType.inflectional_variant,
+                note="Like cat and dog — adverbial shorthand.",
+            ),
+        ),
+    ),
+
 }
 
 

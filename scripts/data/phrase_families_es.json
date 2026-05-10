@@ -1,0 +1,365 @@
+[
+  {
+    "id": "es_a_buenas_horas",
+    "canonical": "a buenas horas mangas verdes",
+    "meaning": "Too little, too late. Help or action that comes when it is no longer useful.",
+    "register": "colloquial",
+    "origin": "Historical reference to the Holy Brotherhood (Santa Hermandad), rural police who arrived too late to prevent crimes. Their green sleeves (mangas verdes) became a symbol of belated intervention.",
+    "why_it_matters": "Used ironically when help or a solution arrives after the problem has passed.",
+    "variants": [
+      {"surface": "a buenas horas mangas verdes", "type": "exact"},
+      {"surface": "ya a buenas horas", "type": "allusion", "note": "Shortened form omitting mangas verdes."}
+    ]
+  },
+  {
+    "id": "es_a_quien_madruga",
+    "canonical": "a quien madruga dios le ayuda",
+    "meaning": "The early bird catches the worm. God helps those who rise early.",
+    "register": "neutral",
+    "origin": "Spanish proverb attested since the medieval period. Reflects the agricultural value of rising at dawn.",
+    "variants": [
+      {"surface": "a quien madruga dios le ayuda", "type": "exact"},
+      {"surface": "el que madruga dios le ayuda", "type": "orthographic_variant", "note": "Alternative pronoun form."}
+    ]
+  },
+  {
+    "id": "es_al_pan_pan",
+    "canonical": "al pan pan y al vino vino",
+    "meaning": "Call a spade a spade. Speak plainly and directly.",
+    "register": "neutral",
+    "origin": "Ancient proverb found in Cervantes and earlier sources. The parallelism (bread is bread, wine is wine) insists on calling things by their true name.",
+    "variants": [
+      {"surface": "al pan pan y al vino vino", "type": "exact"},
+      {"surface": "llamar al pan pan y al vino vino", "type": "inflectional_variant", "note": "With explicit verb llamar."}
+    ]
+  },
+  {
+    "id": "es_buscar_tres_pies",
+    "canonical": "buscar tres pies al gato",
+    "meaning": "Look for trouble; overcomplicate something that is simple.",
+    "register": "colloquial",
+    "origin": "A cat has four paws; looking for only three means ignoring reality and creating unnecessary difficulty.",
+    "why_it_matters": "Used as a warning not to overthink or complicate straightforward matters.",
+    "variants": [
+      {"surface": "buscar tres pies al gato", "type": "exact"},
+      {"surface": "buscarle tres pies al gato", "type": "inflectional_variant", "note": "With clitic le (dative)."}
+    ]
+  },
+  {
+    "id": "es_caer_chuzos",
+    "canonical": "caer chuzos de punta",
+    "meaning": "Rain cats and dogs; pour down heavily.",
+    "register": "colloquial",
+    "origin": "Chuzo is a pointed pike or spike. Raining pointed spikes emphasizes the violence and intensity of the downpour.",
+    "variants": [
+      {"surface": "caer chuzos de punta", "type": "exact"},
+      {"surface": "llover chuzos", "type": "orthographic_variant", "note": "With llover (to rain) instead of caer."}
+    ]
+  },
+  {
+    "id": "es_coger_el_toro",
+    "canonical": "coger el toro por los cuernos",
+    "meaning": "Take the bull by the horns; deal with a difficult problem head-on.",
+    "register": "neutral",
+    "variants": [
+      {"surface": "coger el toro por los cuernos", "type": "exact"},
+      {"surface": "agarrar el toro por los cuernos", "type": "orthographic_variant", "note": "agarrar preferred in Latin America over coger."}
+    ]
+  },
+  {
+    "id": "es_dar_en_el_clavo",
+    "canonical": "dar en el clavo",
+    "meaning": "Hit the nail on the head; be exactly right.",
+    "register": "neutral",
+    "origin": "Carpentry metaphor: hitting the nail precisely versus bending it. Cervantes used it in Don Quijote.",
+    "variants": [
+      {"surface": "dar en el clavo", "type": "exact"},
+      {"surface": "dar en el clavo con algo", "type": "inflectional_variant", "note": "With prepositional complement."}
+    ]
+  },
+  {
+    "id": "es_echar_en_saco_roto",
+    "canonical": "echar en saco roto",
+    "meaning": "In one ear and out the other; pay no attention to advice.",
+    "register": "neutral",
+    "origin": "A broken sack (saco roto) cannot hold what is put in it — advice or information poured in leaks straight out.",
+    "variants": [
+      {"surface": "echar en saco roto", "type": "exact"},
+      {"surface": "caer en saco roto", "type": "orthographic_variant", "note": "With caer (to fall); same meaning."}
+    ]
+  },
+  {
+    "id": "es_el_que_rie_ultimo",
+    "canonical": "el que ríe último ríe mejor",
+    "meaning": "He who laughs last laughs best.",
+    "register": "neutral",
+    "variants": [
+      {"surface": "el que ríe último ríe mejor", "type": "exact"},
+      {"surface": "quien ríe último ríe mejor", "type": "orthographic_variant", "note": "quien instead of el que."}
+    ]
+  },
+  {
+    "id": "es_en_boca_cerrada",
+    "canonical": "en boca cerrada no entran moscas",
+    "meaning": "Silence is golden; loose lips sink ships. Keeping quiet avoids trouble.",
+    "register": "neutral",
+    "origin": "Flies cannot enter a closed mouth — silence prevents unwanted intrusions and regrettable words.",
+    "variants": [
+      {"surface": "en boca cerrada no entran moscas", "type": "exact"},
+      {"surface": "boca cerrada no entran moscas", "type": "orthographic_variant", "note": "Without introductory en."}
+    ]
+  },
+  {
+    "id": "es_estar_en_las_nubes",
+    "canonical": "estar en las nubes",
+    "meaning": "Have one's head in the clouds; be daydreaming or distracted.",
+    "register": "colloquial",
+    "variants": [
+      {"surface": "estar en las nubes", "type": "exact"},
+      {"surface": "andar en las nubes", "type": "orthographic_variant", "note": "andar instead of estar; implies ongoing state."}
+    ]
+  },
+  {
+    "id": "es_hacer_de_tripas_corazon",
+    "canonical": "hacer de tripas corazón",
+    "meaning": "Put on a brave face; summon courage despite fear or difficulty.",
+    "register": "colloquial",
+    "origin": "Transform intestines (tripas, associated with fear and nausea) into a heart (corazón, associated with courage). Making bravery out of fear.",
+    "variants": [
+      {"surface": "hacer de tripas corazón", "type": "exact"}
+    ]
+  },
+  {
+    "id": "es_hablar_por_los_codos",
+    "canonical": "hablar por los codos",
+    "meaning": "Talk an ear off; be a chatterbox; talk excessively.",
+    "register": "colloquial",
+    "origin": "Speaking through one's elbows (codos) implies uncontrolled, overflowing speech that comes from every part of the body.",
+    "variants": [
+      {"surface": "hablar por los codos", "type": "exact"},
+      {"surface": "habla por los codos", "type": "inflectional_variant", "note": "Third-person present indicative."}
+    ]
+  },
+  {
+    "id": "es_ir_al_grano",
+    "canonical": "ir al grano",
+    "meaning": "Get to the point; cut to the chase.",
+    "register": "neutral",
+    "origin": "Grain (grano) is the essential part of wheat after the husk is removed. Going to the grain means getting to the essential matter.",
+    "variants": [
+      {"surface": "ir al grano", "type": "exact"},
+      {"surface": "vamos al grano", "type": "inflectional_variant", "note": "Let's get to the point (first person plural)."}
+    ]
+  },
+  {
+    "id": "es_la_gota_que_colma",
+    "canonical": "la gota que colmó el vaso",
+    "meaning": "The straw that broke the camel's back; the final thing that made a bad situation unbearable.",
+    "register": "neutral",
+    "origin": "A drop that overflows a full glass. The vessel was already full; any additional drop causes overflow.",
+    "variants": [
+      {"surface": "la gota que colmó el vaso", "type": "exact"},
+      {"surface": "la gota que derramó el vaso", "type": "orthographic_variant", "note": "With derramar (to spill) instead of colmar."},
+      {"surface": "la última gota", "type": "allusion", "note": "Shortened allusion."}
+    ]
+  },
+  {
+    "id": "es_no_hay_dos_sin_tres",
+    "canonical": "no hay dos sin tres",
+    "meaning": "Things come in threes; bad luck or events tend to happen three times.",
+    "register": "neutral",
+    "variants": [
+      {"surface": "no hay dos sin tres", "type": "exact"}
+    ]
+  },
+  {
+    "id": "es_pagar_los_platos_rotos",
+    "canonical": "pagar los platos rotos",
+    "meaning": "Take the blame; be the scapegoat; pay for someone else's mistakes.",
+    "register": "colloquial",
+    "origin": "Paying for broken plates even when you did not break them — suffering the consequences of others' actions.",
+    "variants": [
+      {"surface": "pagar los platos rotos", "type": "exact"},
+      {"surface": "pagar el pato", "type": "allusion", "note": "Separate but related idiom also meaning to take the blame."}
+    ]
+  },
+  {
+    "id": "es_perder_los_papeles",
+    "canonical": "perder los papeles",
+    "meaning": "Lose one's cool; lose self-control; go off the rails.",
+    "register": "colloquial",
+    "origin": "Losing one's papers (documents) means losing one's identity or credentials. Metaphorically, losing control of oneself.",
+    "variants": [
+      {"surface": "perder los papeles", "type": "exact"},
+      {"surface": "se le fueron los papeles", "type": "inflectional_variant", "note": "Third person — he/she lost it."}
+    ]
+  },
+  {
+    "id": "es_poner_los_puntos",
+    "canonical": "poner los puntos sobre las íes",
+    "meaning": "Dot the i's and cross the t's; be precise and leave nothing to chance.",
+    "register": "neutral",
+    "variants": [
+      {"surface": "poner los puntos sobre las íes", "type": "exact"},
+      {"surface": "poner los puntos sobre las ies", "type": "orthographic_variant", "note": "Without accent on í."}
+    ]
+  },
+  {
+    "id": "es_querer_es_poder",
+    "canonical": "querer es poder",
+    "meaning": "Where there is a will there is a way.",
+    "register": "neutral",
+    "variants": [
+      {"surface": "querer es poder", "type": "exact"}
+    ]
+  },
+  {
+    "id": "es_salir_el_tiro",
+    "canonical": "salir el tiro por la culata",
+    "meaning": "Backfire; have the opposite of the intended effect.",
+    "register": "colloquial",
+    "origin": "A gun that fires backward through the stock (culata) instead of forward harms the shooter. Plans that backfire follow the same logic.",
+    "variants": [
+      {"surface": "salir el tiro por la culata", "type": "exact"},
+      {"surface": "le salió el tiro por la culata", "type": "inflectional_variant", "note": "Third person — it backfired on him/her."}
+    ]
+  },
+  {
+    "id": "es_ser_una_y_carne",
+    "canonical": "ser uña y carne",
+    "meaning": "Be thick as thieves; be inseparable.",
+    "register": "colloquial",
+    "origin": "Nail (uña) and flesh (carne) are so close they cannot be separated without pain.",
+    "variants": [
+      {"surface": "ser uña y carne", "type": "exact"},
+      {"surface": "son uña y carne", "type": "inflectional_variant", "note": "Third person plural."}
+    ]
+  },
+  {
+    "id": "es_tener_la_sarten",
+    "canonical": "tener la sartén por el mango",
+    "meaning": "Hold the reins; call the shots; be the one in control.",
+    "register": "colloquial",
+    "origin": "Holding the handle (mango) of a frying pan (sartén) gives control over its direction. Whoever holds the handle decides where it goes.",
+    "variants": [
+      {"surface": "tener la sartén por el mango", "type": "exact"},
+      {"surface": "llevar la sartén por el mango", "type": "orthographic_variant", "note": "llevar (to carry) instead of tener."}
+    ]
+  },
+  {
+    "id": "es_tirar_la_toalla",
+    "canonical": "tirar la toalla",
+    "meaning": "Throw in the towel; give up; admit defeat.",
+    "register": "neutral",
+    "origin": "Boxing term: a trainer throws a towel into the ring to stop a fight and concede defeat.",
+    "variants": [
+      {"surface": "tirar la toalla", "type": "exact"},
+      {"surface": "arrojar la toalla", "type": "orthographic_variant", "note": "arrojar (to throw) instead of tirar."}
+    ]
+  },
+  {
+    "id": "es_tomar_el_pelo",
+    "canonical": "tomar el pelo",
+    "meaning": "Pull someone's leg; tease or make fun of someone.",
+    "register": "colloquial",
+    "origin": "Taking someone's hair (pelo) is an annoyance and mockery. Metaphorically, to mess with someone playfully or deceitfully.",
+    "variants": [
+      {"surface": "tomar el pelo", "type": "exact"},
+      {"surface": "me está tomando el pelo", "type": "inflectional_variant", "note": "He/she is pulling my leg."}
+    ]
+  },
+  {
+    "id": "es_ver_los_toros_desde_la_barrera",
+    "canonical": "ver los toros desde la barrera",
+    "meaning": "Watch from the sidelines; stay safe while others take risks.",
+    "register": "neutral",
+    "origin": "Bullfighting metaphor: watching from behind the protective barrier (barrera) rather than entering the ring with the bull.",
+    "variants": [
+      {"surface": "ver los toros desde la barrera", "type": "exact"},
+      {"surface": "ver los toros desde fuera", "type": "allusion", "note": "Simplified form without barrera."}
+    ]
+  },
+  {
+    "id": "es_vivir_de_las_rentas",
+    "canonical": "vivir de las rentas",
+    "meaning": "Live off one's laurels; rely on past achievements without new effort.",
+    "register": "neutral",
+    "origin": "Living off rental income (rentas) without working — extended metaphorically to coasting on past successes.",
+    "variants": [
+      {"surface": "vivir de las rentas", "type": "exact"}
+    ]
+  },
+  {
+    "id": "es_a_mal_tiempo_buena_cara",
+    "canonical": "a mal tiempo buena cara",
+    "meaning": "Keep smiling in adversity; put on a brave face when things go wrong.",
+    "register": "neutral",
+    "variants": [
+      {"surface": "a mal tiempo buena cara", "type": "exact"},
+      {"surface": "ante el mal tiempo buena cara", "type": "orthographic_variant", "note": "With ante instead of a."}
+    ]
+  },
+  {
+    "id": "es_de_mal_en_peor",
+    "canonical": "ir de mal en peor",
+    "meaning": "Go from bad to worse; deteriorate steadily.",
+    "register": "neutral",
+    "variants": [
+      {"surface": "ir de mal en peor", "type": "exact"},
+      {"surface": "de mal en peor", "type": "allusion", "note": "Shortened form without verb."}
+    ]
+  },
+  {
+    "id": "es_quedarse_con_las_ganas",
+    "canonical": "quedarse con las ganas",
+    "meaning": "Be left wanting; not get what you hoped for.",
+    "register": "colloquial",
+    "variants": [
+      {"surface": "quedarse con las ganas", "type": "exact"},
+      {"surface": "me quedé con las ganas", "type": "inflectional_variant", "note": "First person past — I was left wanting."}
+    ]
+  },
+  {
+    "id": "es_no_dar_pie_con_bola",
+    "canonical": "no dar pie con bola",
+    "meaning": "Not get anything right; mess everything up.",
+    "register": "colloquial",
+    "origin": "Football/ball-game metaphor: not even managing to kick (dar pie) the ball (bola) — missing completely.",
+    "variants": [
+      {"surface": "no dar pie con bola", "type": "exact"},
+      {"surface": "no doy pie con bola", "type": "inflectional_variant", "note": "First person — I can't get anything right."}
+    ]
+  },
+  {
+    "id": "es_echar_balones_fuera",
+    "canonical": "echar balones fuera",
+    "meaning": "Dodge the question; avoid responsibility; deflect blame.",
+    "register": "colloquial",
+    "origin": "Football term: kicking the ball out of bounds to relieve pressure. Metaphorically, evading a difficult topic.",
+    "variants": [
+      {"surface": "echar balones fuera", "type": "exact"}
+    ]
+  },
+  {
+    "id": "es_poner_el_dedo_en_la_llaga",
+    "canonical": "poner el dedo en la llaga",
+    "meaning": "Put one's finger on the sore spot; touch on a painful truth.",
+    "register": "neutral",
+    "origin": "Biblical reference to doubting Thomas touching Christ's wounds (llagas). Pointing to the exact painful or sensitive issue.",
+    "variants": [
+      {"surface": "poner el dedo en la llaga", "type": "exact"},
+      {"surface": "tocar la llaga", "type": "allusion", "note": "Shorter form — to touch the wound."}
+    ]
+  },
+  {
+    "id": "es_a_falta_de_pan",
+    "canonical": "a falta de pan buenas son tortas",
+    "meaning": "Beggars can't be choosers; make do with what you have.",
+    "register": "neutral",
+    "origin": "If there is no bread, corn cakes (tortas) are welcome. Accept what is available.",
+    "variants": [
+      {"surface": "a falta de pan buenas son tortas", "type": "exact"},
+      {"surface": "a falta de pan tortas", "type": "allusion", "note": "Shortened proverb form."}
+    ]
+  }
+]

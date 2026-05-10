@@ -1,0 +1,451 @@
+[
+  {
+    "id": "it_avere_le_mani_bucate",
+    "canonical": "avere le mani bucate",
+    "meaning": "To be a spendthrift; to have money slip through one's fingers.",
+    "register": "informal",
+    "origin": "Literally 'to have holes in one's hands' — money falls out as if through holes in the palms. A vivid tactile image for someone who cannot hold onto money. Compare English 'money burns a hole in one's pocket.'",
+    "variants": [
+      {"surface": "avere le mani bucate", "type": "exact"},
+      {"surface": "ha le mani bucate", "type": "inflectional_variant", "note": "He/she has holes in their hands — most common contextualized form."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_togliersi_un_sassolino",
+    "canonical": "togliersi un sassolino dalla scarpa",
+    "meaning": "To get something off one's chest; to remove a grievance.",
+    "register": "neutral",
+    "origin": "Sassolino (small stone): a pebble in the shoe is a small but persistent irritation. Removing it brings relief. The expression captures the satisfaction of finally airing a minor grievance that has been bothering you.",
+    "why_it_matters": "Uniquely Italian in its image. The diminutive sassolino emphasizes the pettiness of the grievance, adding a self-aware, slightly ironic register.",
+    "variants": [
+      {"surface": "togliersi un sassolino dalla scarpa", "type": "exact"},
+      {"surface": "mi tolgo un sassolino dalla scarpa", "type": "inflectional_variant", "note": "I need to get something off my chest — first person."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_andare_a_vuoto",
+    "canonical": "andare a vuoto",
+    "meaning": "To come to nothing; to draw a blank; to fail to achieve a result.",
+    "register": "neutral",
+    "origin": "Vuoto (empty, void): to go toward emptiness — an action that leads nowhere. A neutral, versatile expression for any failed effort or unproductive attempt.",
+    "variants": [
+      {"surface": "andare a vuoto", "type": "exact"},
+      {"surface": "il tentativo è andato a vuoto", "type": "inflectional_variant", "note": "The attempt came to nothing — past tense."},
+      {"surface": "andare a vuoto di nuovo", "type": "inflectional_variant", "note": "To draw a blank again."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_prendere_fischi_per_fiaschi",
+    "canonical": "prendere fischi per fiaschi",
+    "meaning": "To get hold of the wrong end of the stick; to confuse two things completely.",
+    "register": "informal",
+    "origin": "Fischi (whistles/hisses) vs fiaschi (flasks/failures): the near-rhyme of the two words (typical Italian wordplay) captures the confusion of mistaking one thing for another. Fiasco also means failure — the expression plays on dual resonance.",
+    "why_it_matters": "A memorable phonetic play. The near-rhyme fischi/fiaschi is untranslatable — the expression teaches the Italian ear for wordplay built into idiom.",
+    "variants": [
+      {"surface": "prendere fischi per fiaschi", "type": "exact"},
+      {"surface": "scambiare fischi per fiaschi", "type": "inflectional_variant", "note": "Variant with 'scambiare' (to swap) — same meaning."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_rompere_il_ghiaccio",
+    "canonical": "rompere il ghiaccio",
+    "meaning": "To break the ice; to ease tension in a new social situation.",
+    "register": "neutral",
+    "origin": "The image of breaking through ice to allow passage is shared across European languages — from Latin sources through French and Italian. In all versions, the frozen surface represents awkward social stiffness.",
+    "variants": [
+      {"surface": "rompere il ghiaccio", "type": "exact"},
+      {"surface": "ha rotto il ghiaccio", "type": "inflectional_variant", "note": "He/she broke the ice — past tense."},
+      {"surface": "serve qualcosa per rompere il ghiaccio", "type": "inflectional_variant", "note": "Something is needed to break the ice."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_fare_orecchie_da_mercante",
+    "canonical": "fare orecchie da mercante",
+    "meaning": "To turn a deaf ear; to pretend not to hear.",
+    "register": "neutral",
+    "origin": "Mercante (merchant): a merchant at market would selectively hear only what suited him — ignoring pleas, complaints, and unfavorable information. The expression captures deliberate rather than accidental deafness.",
+    "variants": [
+      {"surface": "fare orecchie da mercante", "type": "exact"},
+      {"surface": "fa orecchie da mercante", "type": "inflectional_variant", "note": "He/she turns a deaf ear — present tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_avere_il_dente_avvelenato",
+    "canonical": "avere il dente avvelenato",
+    "meaning": "To bear a grudge; to have poisoned feelings toward someone.",
+    "register": "neutral",
+    "origin": "Dente avvelenato (poisoned tooth): like a snake's venom-delivering fang, the person with a poisoned tooth harbors hidden hostility. The expression implies resentment that has been nursing quietly.",
+    "variants": [
+      {"surface": "avere il dente avvelenato", "type": "exact"},
+      {"surface": "ce l'ha con me — ha il dente avvelenato", "type": "inflectional_variant", "note": "He has it in for me — he's holding a grudge."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_essere_tra_lincudine_e_il_martello",
+    "canonical": "essere tra l'incudine e il martello",
+    "meaning": "To be between the anvil and the hammer; to be between a rock and a hard place.",
+    "register": "neutral",
+    "origin": "The blacksmith's anvil (incudine) below and hammer (martello) above — someone caught between them is struck from both sides. A more vivid mechanistic image than the English 'rock and a hard place.'",
+    "variants": [
+      {"surface": "essere tra l'incudine e il martello", "type": "exact"},
+      {"surface": "tra l'incudine e il martello", "type": "inflectional_variant", "note": "Elliptical — predicative use."},
+      {"surface": "mi trovo tra l'incudine e il martello", "type": "inflectional_variant", "note": "I'm caught between the devil and the deep blue sea."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_gettare_la_spugna",
+    "canonical": "gettare la spugna",
+    "meaning": "To throw in the sponge; to give up.",
+    "register": "neutral",
+    "origin": "From boxing: the sponge (spugna) used to clean a fighter's wounds — throwing it in signals surrender. Italian borrowed this directly from English boxing culture. Note: Italian uses spugna (sponge) where German uses Handtuch (towel).",
+    "variants": [
+      {"surface": "gettare la spugna", "type": "exact"},
+      {"surface": "ha gettato la spugna", "type": "inflectional_variant", "note": "He threw in the sponge — past tense."},
+      {"surface": "buttare la spugna", "type": "inflectional_variant", "note": "Colloquial variant with 'buttare' (to throw/chuck)."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_vedere_tutto_rosa",
+    "canonical": "vedere tutto rosa",
+    "meaning": "To see everything through rose-colored glasses; to be overly optimistic.",
+    "register": "neutral",
+    "origin": "Rosa (pink/rose) as the color of optimism and idealism — seeing the world through a rosy filter. The expression parallels English 'rose-tinted glasses' and French 'voir la vie en rose.' The cultural root is the same Romantic-era metaphor.",
+    "variants": [
+      {"surface": "vedere tutto rosa", "type": "exact"},
+      {"surface": "vede tutto rosa", "type": "inflectional_variant", "note": "He/she sees everything through rose-colored glasses."},
+      {"surface": "non tutto è rosa e fiori", "type": "inflectional_variant", "note": "Not everything is rosy — negated contrast form."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_tirare_acqua_al_proprio_mulino",
+    "canonical": "tirare acqua al proprio mulino",
+    "meaning": "To feather one's nest; to advance one's own interests.",
+    "register": "neutral",
+    "origin": "Mulino (mill): water diverted to one's own mill powers it at others' expense. Mills were a central economic institution in medieval Italy; control of water rights was literally a matter of prosperity.",
+    "variants": [
+      {"surface": "tirare acqua al proprio mulino", "type": "exact"},
+      {"surface": "portare acqua al proprio mulino", "type": "inflectional_variant", "note": "Variant with portare (to bring) — same meaning."},
+      {"surface": "tira sempre acqua al suo mulino", "type": "inflectional_variant", "note": "He always looks out for himself."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_avere_la_coda_di_paglia",
+    "canonical": "avere la coda di paglia",
+    "meaning": "To have a guilty conscience; to feel accused by innocent remarks.",
+    "register": "neutral",
+    "origin": "Coda di paglia (tail of straw): a tail that catches fire easily — someone sensitive to accusation, quick to feel targeted by any mention of wrongdoing, because they know they've done wrong.",
+    "why_it_matters": "Uniquely Italian. The straw-tail image has no English equivalent. Understanding it builds cultural fluency around how Italians encode guilt and sensitivity.",
+    "variants": [
+      {"surface": "avere la coda di paglia", "type": "exact"},
+      {"surface": "ha la coda di paglia", "type": "inflectional_variant", "note": "He/she is overly defensive — has a guilty conscience."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_buttare_il_bambino_con_lacqua",
+    "canonical": "buttare il bambino con l'acqua sporca",
+    "meaning": "To throw the baby out with the bathwater.",
+    "register": "neutral",
+    "origin": "Shared proverb across European languages — traced to Thomas Murner's 1512 German pamphlet but quickly absorbed into Italian usage. The image is identical: discarding the valuable (child) along with the wasteable (dirty bathwater).",
+    "variants": [
+      {"surface": "buttare il bambino con l'acqua sporca", "type": "exact"},
+      {"surface": "non buttiamo il bambino con l'acqua sporca", "type": "inflectional_variant", "note": "Let's not throw the baby out with the bathwater — negated warning."},
+      {"surface": "gettare il bambino con l'acqua sporca", "type": "inflectional_variant", "note": "Variant with gettare instead of buttare."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_fare_il_passo_piu_lungo_della_gamba",
+    "canonical": "fare il passo più lungo della gamba",
+    "meaning": "To bite off more than one can chew; to overextend oneself.",
+    "register": "neutral",
+    "origin": "Taking a step (passo) longer than one's leg (gamba) can reach will cause a fall. The image is physically immediate: overreach in a literal stride becomes a metaphor for any overambitious action.",
+    "variants": [
+      {"surface": "fare il passo più lungo della gamba", "type": "exact"},
+      {"surface": "ha fatto il passo più lungo della gamba", "type": "inflectional_variant", "note": "He bit off more than he could chew — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_non_ce_due_senza_tre",
+    "canonical": "non c'è due senza tre",
+    "meaning": "There's no two without three; things always happen in threes.",
+    "register": "neutral",
+    "origin": "The folk belief that events — especially misfortunes — come in threes is widespread across European cultures. Italian encodes it in this pithy formula. Compare English 'bad things come in threes' and similar expressions in French and German.",
+    "variants": [
+      {"surface": "non c'è due senza tre", "type": "exact"}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_dare_i_numeri",
+    "canonical": "dare i numeri",
+    "meaning": "To be off one's rocker; to act crazy; to give out random numbers.",
+    "register": "informal",
+    "origin": "Dare i numeri (to give numbers): the image of randomly calling out numbers suggests disordered thinking. May derive from lotto number-calling, where random numbers follow no logical sequence.",
+    "variants": [
+      {"surface": "dare i numeri", "type": "exact"},
+      {"surface": "stai dando i numeri", "type": "inflectional_variant", "note": "You're going crazy — second person."},
+      {"surface": "da i numeri", "type": "inflectional_variant", "note": "He's acting mad — present tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_andare_a_gonfie_vele",
+    "canonical": "andare a gonfie vele",
+    "meaning": "To be going swimmingly; to proceed smoothly and successfully.",
+    "register": "neutral",
+    "origin": "Gonfie vele (full sails): a ship sailing with full, billowing sails is making maximum progress in ideal conditions. Italy's long maritime tradition makes nautical imagery especially natural in everyday speech.",
+    "variants": [
+      {"surface": "andare a gonfie vele", "type": "exact"},
+      {"surface": "le cose vanno a gonfie vele", "type": "inflectional_variant", "note": "Things are going smoothly."},
+      {"surface": "procede a gonfie vele", "type": "inflectional_variant", "note": "It's proceeding swimmingly."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_mettersi_nei_panni",
+    "canonical": "mettersi nei panni di qualcuno",
+    "meaning": "To put oneself in someone else's shoes.",
+    "register": "neutral",
+    "origin": "Panni (clothes, garments): putting on someone's clothes = inhabiting their situation. Italian uses garments (panni) where English uses shoes — both capture the idea of inhabiting another perspective through physical substitution.",
+    "variants": [
+      {"surface": "mettersi nei panni di qualcuno", "type": "exact"},
+      {"surface": "mettiti nei miei panni", "type": "inflectional_variant", "note": "Put yourself in my shoes — direct address."},
+      {"surface": "non riesco a mettermi nei suoi panni", "type": "inflectional_variant", "note": "I can't imagine what it's like for them."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_lavarsi_le_mani",
+    "canonical": "lavarsi le mani di qualcosa",
+    "meaning": "To wash one's hands of something; to disclaim responsibility.",
+    "register": "neutral",
+    "origin": "From the Gospel account of Pontius Pilate washing his hands before the crowd — a gesture of disclaiming responsibility for Jesus's execution. The biblical reference gave the expression immediate cultural currency across Catholic Europe.",
+    "why_it_matters": "Directly traceable to a specific biblical scene, giving learners cultural-historical depth. The expression is used across all major European languages in nearly identical form.",
+    "variants": [
+      {"surface": "lavarsi le mani di qualcosa", "type": "exact"},
+      {"surface": "me ne lavo le mani", "type": "inflectional_variant", "note": "I wash my hands of it — first person."},
+      {"surface": "se ne è lavato le mani", "type": "inflectional_variant", "note": "He/she washed their hands of it — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_non_fare_una_piega",
+    "canonical": "non fare una piega",
+    "meaning": "Not to bat an eye; to remain completely unperturbed; to be perfectly smooth.",
+    "register": "neutral",
+    "origin": "Piega (fold, crease): a perfectly ironed garment has no wrinkles. 'Without making a fold' = without showing any sign of disturbance. A cool, unruffled composure — literally and metaphorically smooth.",
+    "variants": [
+      {"surface": "non fare una piega", "type": "exact"},
+      {"surface": "non ha fatto una piega", "type": "inflectional_variant", "note": "He/she didn't bat an eye — past tense."},
+      {"surface": "senza fare una piega", "type": "inflectional_variant", "note": "Without batting an eye — adverbial."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_avere_un_diavolo_per_capello",
+    "canonical": "avere un diavolo per capello",
+    "meaning": "To be furious; to be in a foul mood; to have the devil in every hair.",
+    "register": "informal",
+    "origin": "Capello (hair, single strand): every hair harboring a devil — an image of total possession by anger, so many devils that even individual hairs are inhabited. A vivid hyperbole of extreme bad temper.",
+    "variants": [
+      {"surface": "avere un diavolo per capello", "type": "exact"},
+      {"surface": "aveva un diavolo per capello", "type": "inflectional_variant", "note": "She was furious — past tense."},
+      {"surface": "con un diavolo per capello", "type": "inflectional_variant", "note": "Fuming — adverbial phrase."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_cadere_dalla_padella_nella_brace",
+    "canonical": "cadere dalla padella nella brace",
+    "meaning": "Out of the frying pan into the fire.",
+    "register": "neutral",
+    "origin": "Padella (frying pan) → brace (embers): Italian uses the same physical cooking metaphor as English. Both involve escaping one source of heat only to land in a worse one. The image is ancient and cross-cultural.",
+    "variants": [
+      {"surface": "cadere dalla padella nella brace", "type": "exact"},
+      {"surface": "dalla padella nella brace", "type": "inflectional_variant", "note": "Elliptical — often used as a standalone commentary."},
+      {"surface": "è caduto dalla padella nella brace", "type": "inflectional_variant", "note": "He went from the frying pan into the fire — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_fare_buon_viso_a_cattivo_gioco",
+    "canonical": "fare buon viso a cattivo gioco",
+    "meaning": "To put a brave face on a bad situation; to grin and bear it.",
+    "register": "neutral",
+    "origin": "Card-playing imagery: gioco (game/hand of cards) — making a good face (buon viso) despite holding bad cards (cattivo gioco). The gambling metaphor for facing adversity stoically is widely used in Italian.",
+    "variants": [
+      {"surface": "fare buon viso a cattivo gioco", "type": "exact"},
+      {"surface": "ha fatto buon viso a cattivo gioco", "type": "inflectional_variant", "note": "He put a brave face on it — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_avere_i_grilli_per_la_testa",
+    "canonical": "avere i grilli per la testa",
+    "meaning": "To be full of fancies; to have bees in one's bonnet; to be whimsical.",
+    "register": "neutral",
+    "origin": "Grillo (cricket): crickets in the head produce incessant, distracting noise — the chirping of restless thoughts or unrealistic ideas. Italian uses crickets where English uses bees; both capture the buzzing of idle fancy.",
+    "variants": [
+      {"surface": "avere i grilli per la testa", "type": "exact"},
+      {"surface": "ha sempre i grilli per la testa", "type": "inflectional_variant", "note": "He's always full of whims."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_camminare_sulle_uova",
+    "canonical": "camminare sulle uova",
+    "meaning": "To tread on eggshells; to walk carefully around a sensitive topic.",
+    "register": "neutral",
+    "origin": "Uova (eggs): eggs break under the slightest misstep — walking on them requires extreme delicacy. The expression parallels English 'walking on eggshells' exactly, suggesting a common metaphorical logic across cultures.",
+    "variants": [
+      {"surface": "camminare sulle uova", "type": "exact"},
+      {"surface": "ci cammino sulle uova", "type": "inflectional_variant", "note": "I'm treading on eggshells here."},
+      {"surface": "stare sulle uova", "type": "inflectional_variant", "note": "To be on eggshells — with stare (to stay/be)."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_menare_il_can_per_laia",
+    "canonical": "menare il can per l'aia",
+    "meaning": "To beat around the bush; to avoid coming to the point.",
+    "register": "neutral",
+    "origin": "Aia (threshing floor) + can (dog): leading a dog around the threshing floor endlessly without accomplishing anything. The rural agricultural setting roots the expression in peasant life — circular, unproductive motion.",
+    "variants": [
+      {"surface": "menare il can per l'aia", "type": "exact"},
+      {"surface": "non menare il can per l'aia", "type": "inflectional_variant", "note": "Don't beat around the bush — negated imperative."},
+      {"surface": "smettila di menare il can per l'aia", "type": "inflectional_variant", "note": "Stop going around in circles."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_toccata_e_fuga",
+    "canonical": "toccata e fuga",
+    "meaning": "A fleeting visit; in and out; a brief and swift appearance.",
+    "register": "neutral",
+    "origin": "A direct borrowing from musical terminology: the toccata-and-fugue form (toccata = touch, fuga = flight) suggests a brief touch followed by rapid departure. The musical connotation adds a cultured, slightly ironic register.",
+    "why_it_matters": "A beautiful example of Italian using musical vocabulary in everyday metaphor — showing the depth of Italy's musical culture on the language.",
+    "variants": [
+      {"surface": "toccata e fuga", "type": "exact"},
+      {"surface": "è stata una toccata e fuga", "type": "inflectional_variant", "note": "It was a flying visit."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_finire_in_bellezza",
+    "canonical": "finire in bellezza",
+    "meaning": "To end on a high note; to finish beautifully.",
+    "register": "neutral",
+    "origin": "Bellezza (beauty) as the ideal culmination — finishing in beauty means ending at one's best. Often used ironically when something ends badly: 'abbiamo finito in bellezza' after a disaster.",
+    "variants": [
+      {"surface": "finire in bellezza", "type": "exact"},
+      {"surface": "abbiamo finito in bellezza", "type": "inflectional_variant", "note": "We finished in style — often ironic."},
+      {"surface": "chiudere in bellezza", "type": "inflectional_variant", "note": "Variant with chiudere (to close) — to close on a high note."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_partire_in_quarta",
+    "canonical": "partire in quarta",
+    "meaning": "To start at full speed; to come out of the gate strong.",
+    "register": "informal",
+    "origin": "Quarta (fourth gear): starting in fourth gear (the highest on older manual transmissions) means launching immediately at maximum speed. A 20th-century idiom rooted in car culture.",
+    "variants": [
+      {"surface": "partire in quarta", "type": "exact"},
+      {"surface": "è partito in quarta", "type": "inflectional_variant", "note": "He came out of the gate at full speed — past tense."},
+      {"surface": "parte sempre in quarta", "type": "inflectional_variant", "note": "He always jumps in headfirst."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_essere_in_ballo",
+    "canonical": "essere in ballo",
+    "meaning": "To be involved; to be committed; once you're in, you're in.",
+    "register": "neutral",
+    "origin": "Ballo (ball, dance): once on the dance floor, you can't easily leave — the dance must be finished. The expression encodes commitment through the social obligation of the dance, a central institution in Italian social life.",
+    "why_it_matters": "Often used in the proverb 'chi è in ballo deve ballare' — if you're in the dance, you must dance. Knowing the fuller form enriches the standalone idiom.",
+    "variants": [
+      {"surface": "essere in ballo", "type": "exact"},
+      {"surface": "ci sono in ballo molti interessi", "type": "inflectional_variant", "note": "Many interests are at stake."},
+      {"surface": "chi è in ballo deve ballare", "type": "inflectional_variant", "note": "If you're in, you're in — the full proverb form."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_stare_fresco",
+    "canonical": "stare fresco",
+    "meaning": "To be kidding oneself; to be in for a nasty surprise; to have another thing coming.",
+    "register": "informal",
+    "origin": "Fresco (cool, fresh) used ironically: the 'coolness' is delusional comfort that will soon be shattered. Used to warn someone that their optimism is misplaced — 'stai fresco se credi che funziona' (you're dreaming if you think that works).",
+    "variants": [
+      {"surface": "stare fresco", "type": "exact"},
+      {"surface": "stai fresco!", "type": "inflectional_variant", "note": "You've got another thing coming! — exclamatory warning."},
+      {"surface": "se aspetta quello, sta fresco", "type": "inflectional_variant", "note": "If he's waiting for that, he's dreaming."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_mandare_a_monte",
+    "canonical": "mandare a monte",
+    "meaning": "To cause to fall through; to wreck a plan.",
+    "register": "neutral",
+    "origin": "Monte (mountain): sending something up the mountain — away from its goal — means scuppering it. A deal 'sent to the mountain' never returns to fruition. Widely used in business and everyday speech.",
+    "variants": [
+      {"surface": "mandare a monte", "type": "exact"},
+      {"surface": "ha mandato tutto a monte", "type": "inflectional_variant", "note": "He wrecked everything — past tense."},
+      {"surface": "andare a monte", "type": "inflectional_variant", "note": "To fall through — intransitive (the plan itself fails)."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_aria_fritta",
+    "canonical": "aria fritta",
+    "meaning": "Fried air; empty talk; nothing substantial.",
+    "register": "informal",
+    "origin": "Aria (air) + fritta (fried): you cannot fry air — it has no substance. 'Selling fried air' means offering empty words, hollow promises, or useless content. A biting dismissal of verbosity without content.",
+    "why_it_matters": "Captures the Italian cultural value of substance over form — a culture with strong rhetorical tradition also has sharp idioms for calling out its absence.",
+    "variants": [
+      {"surface": "aria fritta", "type": "exact"},
+      {"surface": "vendere aria fritta", "type": "inflectional_variant", "note": "To sell fried air — to peddle empty promises."},
+      {"surface": "è tutta aria fritta", "type": "inflectional_variant", "note": "It's all hot air."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_fare_la_cresta",
+    "canonical": "fare la cresta sul burro",
+    "meaning": "To skim off the top; to pocket a small cut; to help oneself quietly.",
+    "register": "informal",
+    "origin": "Cresta (crest, ridge) + burro (butter): when buying butter by weight, a dishonest vendor would build up a crest of extra butter, pocket it, and return the rest. The expression describes small-scale dishonest extraction — skimming without being caught.",
+    "variants": [
+      {"surface": "fare la cresta sul burro", "type": "exact"},
+      {"surface": "fare la cresta", "type": "inflectional_variant", "note": "Shortened form — to take a little cut."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "it_avere_scheletri_nell_armadio",
+    "canonical": "avere scheletri nell'armadio",
+    "meaning": "To have skeletons in the closet; to have shameful secrets.",
+    "register": "neutral",
+    "origin": "Scheletri nell'armadio (skeletons in the wardrobe): an image borrowed from English 'skeletons in the closet' — hidden shameful secrets. The Italian form uses 'armadio' (wardrobe/cupboard) rather than 'closet,' reflecting Italian domestic architecture.",
+    "variants": [
+      {"surface": "avere scheletri nell'armadio", "type": "exact"},
+      {"surface": "ha degli scheletri nell'armadio", "type": "inflectional_variant", "note": "He/she has skeletons in the closet."},
+      {"surface": "scheletri nell'armadio", "type": "inflectional_variant", "note": "Noun-phrase form — closet skeletons."}
+    ],
+    "confusables": []
+  }
+]
