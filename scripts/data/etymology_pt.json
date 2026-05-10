@@ -1,0 +1,378 @@
+[
+  {
+    "language": "pt", "lemma": "saudade",
+    "origin_summary": "NOTE: saudade is already in the etymology store. This entry should be skipped. Included here as a placeholder — the generator will skip it as a duplicate.",
+    "roots": ["placeholder"],
+    "cognates": []
+  },
+  {
+    "language": "pt", "lemma": "caju",
+    "origin_summary": "NOTE: caju is already in the etymology store. Placeholder — skip.",
+    "roots": ["placeholder"],
+    "cognates": []
+  },
+  {
+    "language": "pt", "lemma": "solidão",
+    "origin_summary": "From Latin solitudo/solitudinis (loneliness, wilderness, solitude), from solus (alone). Solidão (loneliness, solitude) contrasts culturally with the Portuguese saudade — both describe forms of absence, but solidão is the absence of company, while saudade is the longing for what was once present. The word passed through Old Portuguese unchanged in meaning.",
+    "roots": ["Latin solitudo (loneliness, desert, solitude)", "Latin solus (alone, only)"],
+    "cognates": ["English 'solitude' (from the same Latin root)", "English 'sole' (from Latin solus)", "Spanish 'soledad' (loneliness, cognate)"],
+    "semantic_shift": "'state of being alone' → philosophical and poetic concept of solitude"
+  },
+  {
+    "language": "pt", "lemma": "boato",
+    "origin_summary": "From Latin boatus (a roaring, a bellowing), from boare (to shout, to roar). A boato is a rumor, a piece of gossip — etymologically, a loud shout that spreads through a crowd. The journey from 'roar' to 'rumor' captures how news travels through a community noisily.",
+    "roots": ["Latin boare (to shout, to roar, to bellow)", "Latin boatus (a roaring sound)"],
+    "cognates": ["English 'boisterous' (possibly from the same root via Old French)", "Portuguese 'brado' (a shout, related)"],
+    "semantic_shift": "'a roar, a shout' → a rumor that spreads loudly through a community"
+  },
+  {
+    "language": "pt", "lemma": "cobiça",
+    "origin_summary": "From Latin cupiditas (desire, greed), from cupere (to desire), the same root as Cupid (the god of desire). Portuguese cobiça means greed, covetousness, or strong desire for material things. The word entered Old Portuguese from Vulgar Latin and preserved the meaning of consuming desire.",
+    "roots": ["Latin cupiditas (desire, greed, lust)", "Latin cupere (to desire, to long for)"],
+    "cognates": ["English 'covet' (from Old French coveitier, same Latin root)", "English 'cupidity' (greed, from Latin cupiditas)", "Spanish 'codicia' (greed, same root)"],
+    "semantic_shift": "'strong desire, longing' → covetousness, greed for material things"
+  },
+  {
+    "language": "pt", "lemma": "madrugada",
+    "origin_summary": "From Spanish madrugada (the early hours before dawn), from madrugar (to rise early), from Latin matutinus (of the morning), from Matuta (the Roman goddess of dawn). Madrugada denotes the hours between midnight and dawn — a word that exists in both Portuguese and Spanish with no equivalent single word in English ('the small hours' comes close).",
+    "roots": ["Latin matutinus (of the morning)", "Roman deity Matuta (goddess of dawn and early morning light)"],
+    "cognates": ["English 'matins' (morning prayers, from the same Latin root)", "Spanish 'madrugada' (early morning hours)", "English 'mature' (from a related sense of Latin maturus — timely)"],
+    "semantic_shift": "'morning goddess/morning time' → the specific period between midnight and dawn"
+  },
+  {
+    "language": "pt", "lemma": "sombra",
+    "origin_summary": "From Latin subumbra (under the shade) or from Vulgar Latin *sumbra, from umbra (shadow, shade). Sombra is shadow, shade, or dark — a fundamental word in Portuguese and Spanish visual vocabulary. The metaphorical uses (estar na sombra = to be in the shade/background) extend from the physical shadow.",
+    "roots": ["Latin umbra (shadow, shade, ghost)"],
+    "cognates": ["English 'umbrella' (via Italian ombrella — from the same Latin umbra)", "English 'umbrage' (offense, shade)", "Spanish 'sombra' (shadow, same word)"],
+    "semantic_shift": "'shade, shadow' → background, obscurity; also shade for protection from sun"
+  },
+  {
+    "language": "pt", "lemma": "aldrabão",
+    "origin_summary": "From aldrava (a door knocker, a latch), from Arabic ad-darrāba (a door knocker), from daraba (to knock, to strike). Originally a person who played with the door latch — one who loiters; evolved to mean a trickster, a deceiver, a charlatan. The Arabic import path through the Moorish period left numerous Portuguese words in everyday domestic vocabulary.",
+    "roots": ["Arabic ad-darrāba (a door knocker)", "Arabic daraba (to knock, to strike, to hit)"],
+    "cognates": ["Portuguese 'aldrava' (a door latch, door knocker)"],
+    "semantic_shift": "'door latch/knocker' → someone who fiddles with the latch (loiterer) → a trickster or charlatan"
+  },
+  {
+    "language": "pt", "lemma": "garfo",
+    "origin_summary": "From Arabic ghārfūn or from Latin graphium (a stylus for writing), from Greek grapheion (a writing tool). Some derivations trace it to a Germanic root *garba (a bundle, tines). A garfo (fork) entered common use in Portugal earlier than in other European countries — Portugal's table culture was influenced by contact with the Arab world and the Renaissance.",
+    "roots": ["possibly from Arabic gárfu or from Latin graphium (stylus, pointed tool)"],
+    "cognates": ["Spanish 'garfio' (a hook, a grappling iron)", "English 'graph' (from Greek graphein, the same root if Latin graphium is the source)"],
+    "semantic_shift": "'pointed writing tool or hook' → a table utensil with tines"
+  },
+  {
+    "language": "pt", "lemma": "coragem",
+    "origin_summary": "From Old French corage (heart, spirit, courage), from Latin cor (heart). The Old French form corage entered Portuguese and Spanish — the heart as the seat of bravery and moral strength. The metaphor 'heart = courage' is ancient and cross-cultural: Latin cor, Greek kardia, Sanskrit hṛd all mean both heart and the core of courage.",
+    "roots": ["Latin cor/cordis (heart)", "Old French corage (heart, spirit, courage)"],
+    "cognates": ["English 'courage' (from Old French corage, same origin)", "English 'cordial' (from the heart — from cor)", "Spanish 'coraje' (courage, anger — same root)"],
+    "semantic_shift": "'heart' → the quality of heart (spirit, bravery) → courage"
+  },
+  {
+    "language": "pt", "lemma": "berço",
+    "origin_summary": "From Medieval Latin *bertium or from a Germanic root *bēra- (a bed frame, a bier). A berço is a cradle — the first bed of an infant. Metaphorically, o berço da civilização (the cradle of civilization) follows the same path as English 'cradle.' The word entered Portuguese in the early medieval period.",
+    "roots": ["possibly from Germanic *bēra- (a bier, a carrying frame)", "Medieval Latin *bertium (uncertain)"],
+    "cognates": ["English 'bier' (a frame for carrying a coffin, from the same Germanic root)", "German 'Bahre' (a stretcher, bier)"],
+    "semantic_shift": "'a carrying frame, a bed frame' → a baby's cradle → the birthplace of something"
+  },
+  {
+    "language": "pt", "lemma": "alfaiate",
+    "origin_summary": "From Arabic al-khayyāṭ (the tailor), from khāṭa (to sew). The Arabic definite article al- fused with the noun khāyyāt to give Portuguese alfaiate (tailor). This is one of hundreds of Arabic loanwords that entered Portuguese during the Moorish period (711–1249 AD) and remain in everyday use.",
+    "roots": ["Arabic al-khayyāṭ (the tailor)", "Arabic khāṭa (to sew, to stitch)"],
+    "cognates": ["Spanish 'sastre' (tailor — different origin)", "Portuguese 'alfândega' (customs house — another Arabic loanword with al-)"],
+    "semantic_shift": "Arabic 'the tailor' → Portuguese word for a professional tailor"
+  },
+  {
+    "language": "pt", "lemma": "algodão",
+    "origin_summary": "From Arabic al-quṭn (the cotton), from a Semitic root quṭn (cotton, fine fiber). Cotton cultivation and trade spread from the Arab world into Iberia during the Moorish period. The Arabic article al- fused with quṭn to give Portuguese algodão. Compare Spanish algodón (same origin).",
+    "roots": ["Arabic al-quṭn (the cotton)", "Semitic root for cotton fiber"],
+    "cognates": ["Spanish 'algodón' (cotton, same Arabic root)", "English 'cotton' (via Old Italian cotone, from Arabic quṭn without the article)"],
+    "semantic_shift": "Arabic name for the cotton plant → Portuguese word for cotton fiber and fabric"
+  },
+  {
+    "language": "pt", "lemma": "laranja",
+    "origin_summary": "From Arabic nāranj (an orange), from Persian nārang, from Sanskrit nāraṅga (orange tree), possibly from a Dravidian root. The Arabic nāranj lost its initial n- in Portuguese because the n was reanalyzed as part of the article uma n'aranja → uma laranja. The orange fruit traveled westward along trade routes from Southeast Asia through Persia, Arabia, and into Europe.",
+    "roots": ["Sanskrit nāraṅga (orange tree)", "Persian nārang (orange)", "Arabic nāranj (orange)"],
+    "cognates": ["English 'orange' (same Sanskrit root, via Arabic, then Old French orenge with the n- lost differently)", "Spanish 'naranja' (orange — retained the initial n)", "Italian 'arancia' (orange, also from Arabic)"],
+    "semantic_shift": "Sanskrit plant name → Persian → Arabic → Portuguese, with loss of initial n- through misdivision"
+  },
+  {
+    "language": "pt", "lemma": "açúcar",
+    "origin_summary": "From Arabic as-sukkar (the sugar), from Sanskrit śarkarā (grit, gravel, sugar crystals). The Arabic article as- fused with sukkar to give Old Portuguese açúcar. Sugar reached Europe through Arab traders who cultivated it in Iberia and Sicily. Portuguese sailors established the Atlantic sugar trade via the Azores, Madeira, and eventually Brazil.",
+    "roots": ["Sanskrit śarkarā (grit, gravel, crystalline sugar)", "Arabic as-sukkar (the sugar)"],
+    "cognates": ["English 'sugar' (via Old French sucre, from Arabic without the article)", "Spanish 'azúcar' (sugar, same Arabic root)", "English 'saccharine' (from Greek sakkharon, same ultimate root)"],
+    "semantic_shift": "Sanskrit word for grit/gravel crystals → sugar crystals → the commodity"
+  },
+  {
+    "language": "pt", "lemma": "azinheira",
+    "origin_summary": "From Portuguese azinha (the holm oak acorn) + suffix -eira (tree). Azinha derives from Latin acina (a grape berry, a small fruit), misapplied to the acorn. The holm oak (Quercus ilex) and the cork oak (Quercus suber) define the montado/dehesa landscape of the Iberian Peninsula — one of Europe's most biodiverse habitats.",
+    "roots": ["Latin acina (a berry, small fruit)", "Portuguese -eira (feminine suffix for trees)"],
+    "cognates": ["Spanish 'encina' (holm oak, same Latin root via Vulgar Latin *ilicina)"],
+    "semantic_shift": "'berry-tree' (fruit-bearing tree) → the holm oak specifically"
+  },
+  {
+    "language": "pt", "lemma": "bandeira",
+    "origin_summary": "From Old Provençal bandiera or from a Germanic root *band- (a band, a stripe, a sign), from Proto-Germanic *bandwō (a sign, a banner). A bandeira (flag, banner) shares its root with 'banner' and 'band.' In Brazilian history, the bandeiras were colonial expeditions that explored the interior — the explorers were called bandeirantes.",
+    "roots": ["Germanic *bandwō (a sign, a banner, a signal)"],
+    "cognates": ["English 'banner' (from Old French baniere, same Germanic root)", "English 'band' (a stripe, a group — related)", "Spanish 'bandera' (flag, same root)"],
+    "semantic_shift": "'a band, a stripe (as a signal)' → a flag; in Brazil, also a colonial exploring expedition"
+  },
+  {
+    "language": "pt", "lemma": "cachoeira",
+    "origin_summary": "Origin disputed: possibly from Tupi caguera (waterfall, from ca = water + guera = fall), or from Portuguese cachão (a violent flow of water, rapids), related to cascar (to cascade). Cachoeira designates a waterfall or rapids — a fundamental geographic feature in Brazil, where the word is extremely common in place names.",
+    "roots": ["possibly Tupi caguera (waterfall)", "alternatively Portuguese cachão (rushing water)"],
+    "cognates": ["Portuguese 'cascata' (waterfall — from Italian cascata)", "English 'cascade' (via French, from Italian)"],
+    "semantic_shift": "either Tupi or Portuguese word for rushing water → any waterfall or rapids"
+  },
+  {
+    "language": "pt", "lemma": "capanga",
+    "origin_summary": "From Tupi ka'apãg (a forest thicket, dense undergrowth) or from African languages (possibly Kimbundu or Yoruba). In Brazilian Portuguese, a capanga is a hired thug, a bodyguard, or a strongman working for a local boss. The word traveled through the social history of rural Brazil — the fazenda (plantation) culture of private armed retinues.",
+    "roots": ["possibly Tupi ka'apãg (forest undergrowth)", "or of African linguistic origin"],
+    "cognates": [],
+    "semantic_shift": "uncertain origin → in Brazilian Portuguese: a hired thug, rural strong-arm man"
+  },
+  {
+    "language": "pt", "lemma": "mandinga",
+    "origin_summary": "From the Mandingo/Mande people of West Africa, brought to Brazil through the slave trade. In Brazilian Portuguese, mandinga means a spell, a charm, or black magic — reflecting the religious and magical practices that enslaved West Africans brought to Brazil, which were both feared and absorbed into popular culture.",
+    "roots": ["Mandingo/Mande ethnonym (West African people)"],
+    "cognates": ["Brazilian 'mandingueiro' (a sorcerer, someone who practices mandinga)"],
+    "semantic_shift": "name of a West African people → magical practices associated with them → any spell or charm"
+  },
+  {
+    "language": "pt", "lemma": "saúde",
+    "origin_summary": "From Latin salus/salutis (safety, health, salvation, greeting), from salvus (safe, whole, unharmed). Saúde means health, and is used as a toast (the equivalent of 'cheers' — wishing health). The Roman greeting salve (be well) and the Portuguese saúde as a toast share the same PIE root *sol- (whole, healthy).",
+    "roots": ["Latin salus (health, safety, greeting)", "Latin salvus (safe, whole)"],
+    "cognates": ["English 'salute' (a greeting, from Latin salutare)", "English 'salvation' (spiritual health/wholeness)", "Spanish '¡Salud!' (cheers — the same toast)"],
+    "semantic_shift": "'wholeness, safety, health' → a wish of good health (toast); also the state of health"
+  },
+  {
+    "language": "pt", "lemma": "esperança",
+    "origin_summary": "From Latin sperare (to hope, to expect), via the present participle sperantem, substantivized as esperança. Sperare comes from the same root as Greek elpis (hope). Esperança is one of the three theological virtues alongside fé (faith) and caridade (charity) — hope as an active expectation of good.",
+    "roots": ["Latin sperare (to hope, to expect)", "Latin spes (hope)"],
+    "cognates": ["English 'Esperanto' (the invented language named 'hopeful' by its creator)", "Spanish 'esperanza' (hope)", "French 'espérer' (to hope)"],
+    "semantic_shift": "'to hope, to expect (something good)' → hope as a virtue and lived attitude"
+  },
+  {
+    "language": "pt", "lemma": "destino",
+    "origin_summary": "From Latin destinare (to make fast, to determine, to aim at), from de- (thoroughly) + stanare (related to stare, to stand). Destino means fate, destination, or destiny — the place or outcome toward which something is aimed and fixed. Both 'destination' (a place aimed at) and 'destiny' (a fixed outcome) come from the same Latin source.",
+    "roots": ["Latin destinare (to determine, to aim at, to fix firmly)", "Latin stare (to stand, to be fixed)"],
+    "cognates": ["English 'destination' (from the same Latin root)", "English 'destiny' (fixed outcome, same root)", "Spanish 'destino' (fate, destination)"],
+    "semantic_shift": "'firmly aimed at, fixed' → a predetermined fate; also a place one is heading toward"
+  },
+  {
+    "language": "pt", "lemma": "riqueza",
+    "origin_summary": "From Old French richece (riches), from riche (rich), from Frankish *rīki (powerful, rich), from a Germanic root related to 'realm' and 'rich.' The wealth vocabulary of early medieval Europe was largely Germanic — rulers (riks = king) defined wealth. Riqueza entered Old Portuguese through French influence.",
+    "roots": ["Frankish *rīki (powerful, ruling, wealthy)", "Proto-Germanic *rīkijaz (powerful)"],
+    "cognates": ["English 'rich' (from Old English rīce, same Germanic root)", "English 'realm' (from Old French reaume, from the same base as riche)", "Spanish 'riqueza' (wealth, same root)"],
+    "semantic_shift": "'powerful, ruling' (the king's quality) → possessing great resources → wealth as abundance"
+  },
+  {
+    "language": "pt", "lemma": "greve",
+    "origin_summary": "From French grève (a bank of sand or gravel, a riverside beach). La Grève was the name of the Place de Grève in Paris, where workers gathered to be hired and where public executions took place. When workers gathered there to refuse work, 'faire la grève' (to do the Grève) became the term for a labor strike. The word entered Portuguese from French socialist labor vocabulary.",
+    "roots": ["Old French grève (a sandy riverside bank)", "Place de Grève, Paris (the historic square by the Seine)"],
+    "cognates": ["French 'grève' (strike)", "Spanish 'huelga' (strike — different origin)", "English 'strike' (a work stoppage — different metaphor)"],
+    "semantic_shift": "a Parisian square where workers gathered → 'to go on strike' → labor strike generally"
+  },
+  {
+    "language": "pt", "lemma": "chafariz",
+    "origin_summary": "From Arabic as-sāqiya (the water channel, the irrigation channel), or alternatively from Arabic shadharwān (a cascading fountain). Chafariz is a public fountain or water basin — essential infrastructure in Portuguese cities before modern plumbing. Arabic hydraulic engineering vocabulary permeates Iberian Portuguese.",
+    "roots": ["Arabic as-sāqiya (water channel, irrigation system) or Arabic shadharwān (a fountain spillway)"],
+    "cognates": ["Portuguese 'aljube' (a cistern — another Arabic hydraulic term)", "Spanish 'acequia' (an irrigation canal — from Arabic as-sāqiya)"],
+    "semantic_shift": "Arabic water-management term → a public ornamental fountain in Portuguese cities"
+  },
+  {
+    "language": "pt", "lemma": "feitiço",
+    "origin_summary": "From Latin facticius (made by art, artificial), from facere (to make, to do). A feitiço is a spell, a charm, or a fetish — literally 'something made (by art).' Portuguese sailors brought the word to West Africa in the 15th–16th centuries, where it was applied to ritual objects; English and French borrowed 'fetish' from the Portuguese, making feitiço one of the most globally traveled words in the language.",
+    "roots": ["Latin facticius (artificial, made by craft)", "Latin facere (to make, to do)"],
+    "cognates": ["English 'fetish' (from Portuguese feitiço, via French fétiche)", "English 'factitious' (artificially made)", "English 'fact' (from the same Latin facere)"],
+    "semantic_shift": "'made by craft/art' → a crafted magical object or spell → religious ritual object (in West African context) → obsessive fixation"
+  },
+  {
+    "language": "pt", "lemma": "mocidade",
+    "origin_summary": "From Portuguese moço (a young person, a servant), possibly from Latin *musteus (fresh, young — from mustum = must, new wine) or from an uncertain Late Latin root. Mocidade means youth, the period of being young. Moço and moça (young man, young woman) are everyday words in both Portugal and Brazil.",
+    "roots": ["possibly Latin *musteus (fresh, new — from mustum, new wine)", "or a Late Latin root of uncertain origin"],
+    "cognates": ["Spanish 'mozo/moza' (a young person, a waiter)", "Portuguese 'moçada' (a group of young people)"],
+    "semantic_shift": "'fresh, new' (like new wine) → a young person → the state of being young (youth)"
+  },
+  {
+    "language": "pt", "lemma": "toalha",
+    "origin_summary": "From Frankish *thwahlja (a cloth for washing), from *thwahan (to wash). A toalha is a towel — the functional cloth for drying. The same Frankish root gives French serviette via a different derivation. The word entered Iberian Romance through contact with Germanic peoples in the early medieval period.",
+    "roots": ["Frankish *thwahlja (a washing cloth)", "Frankish *thwahan (to wash)"],
+    "cognates": ["German 'Zwehle' (a towel, archaic)", "English 'towel' (via Old French toaille, same Frankish root)", "Spanish 'toalla' (towel, same root)"],
+    "semantic_shift": "'a cloth for washing' → a towel for drying"
+  },
+  {
+    "language": "pt", "lemma": "xadrez",
+    "origin_summary": "From Arabic ash-shaṭranj, from Persian chatrang/chaturanga, from Sanskrit chaturanga (four-limbed, four divisions) — catur (four) + anga (limb/body). The game of chess was invented in India, moved to Persia as chatrang, then to the Arab world as shaṭranj, and then to Europe via the Iberian Peninsula. Portuguese xadrez is one of the closest to the Arabic form.",
+    "roots": ["Sanskrit chaturanga (four-limbed — the four divisions of an army: infantry, cavalry, elephants, chariots)", "Persian chatrang (chess)", "Arabic shaṭranj (chess)"],
+    "cognates": ["English 'chess' (via Old French esches — from the same Persian/Arabic root, differently clipped)", "Spanish 'ajedrez' (chess, from Arabic ash-shaṭranj)"],
+    "semantic_shift": "'four-limbed (four army divisions)' → the Indian battle-simulation game → chess"
+  },
+  {
+    "language": "pt", "lemma": "gaveta",
+    "origin_summary": "From Old French gaveite or from a Germanic root related to 'give' or 'container.' A gaveta is a drawer (in furniture) — a sliding storage compartment. The word is used across Portugal and Brazil in the same sense. The functional furniture vocabulary of Romance languages often comes from Germanic craftsmen's terms.",
+    "roots": ["possibly Old French gaveite (a small compartment)", "or Germanic root related to storage containers"],
+    "cognates": ["Spanish 'gaveta' (a small drawer)", "French 'gavette' (a small coffer, archaic)"],
+    "semantic_shift": "'a small container or compartment' → a sliding drawer in furniture"
+  },
+  {
+    "language": "pt", "lemma": "quilombo",
+    "origin_summary": "From Kimbundu kilombo (a settlement of warriors, a military camp), from Mbundu kilumbu (a camp, an enclosure). Quilombo entered Brazilian Portuguese as the word for settlements founded by escaped enslaved Africans — the most famous being Quilombo dos Palmares. The word carries immense historical weight as a symbol of Black Brazilian resistance.",
+    "roots": ["Kimbundu kilombo (military encampment)", "Mbundu kilumbu (an enclosed settlement)"],
+    "cognates": ["Brazilian 'quilombola' (a person of quilombo heritage)"],
+    "semantic_shift": "Kimbundu word for a warrior settlement → Brazilian word for communities of escaped slaves; symbol of Black resistance"
+  },
+  {
+    "language": "pt", "lemma": "caipira",
+    "origin_summary": "From Tupi caa-pira (one who cuts or clears the forest) or from a Tupi root meaning 'forest dweller.' In Brazilian Portuguese, caipira describes a rural person from the interior — roughly equivalent to 'country bumpkin.' The caipirinha cocktail (lime, cachaça, sugar) is named after this word, suggesting something rural and down-to-earth.",
+    "roots": ["Tupi caa (forest, the mato) + pira (a cutting or clearing)"],
+    "cognates": ["Brazilian 'caipirinha' (the cocktail — a 'little caipira' thing)"],
+    "semantic_shift": "Tupi 'forest-clearer' → a rural dweller from the Brazilian interior → a rustic person"
+  },
+  {
+    "language": "pt", "lemma": "lusofonia",
+    "origin_summary": "From Lusus (a son of Bacchus, legendary ancestor of the Lusitanians/Portuguese, from Latin Lusitania — the Roman province comprising modern Portugal) + Greek phonē (voice, language). Lusofonia denotes the community of Portuguese-speaking nations — Portugal, Brazil, Angola, Mozambique, Cape Verde, and others. A modern coinage modeling itself on 'Francophonie.'",
+    "roots": ["Latin Lusitania (Roman province, ancestor of Portugal)", "Greek phonē (voice, sound, language)"],
+    "cognates": ["French 'Francophonie' (the French-speaking world — same structural model)", "English 'phone/phonics' (from Greek phonē)"],
+    "semantic_shift": "Roman provincial name + Greek 'voice' → the global community of Portuguese speakers"
+  },
+  {
+    "language": "pt", "lemma": "pelourinho",
+    "origin_summary": "From Latin pilarium (a pillar), from pila (a pillar, a pier). A pelourinho was a stone pillar or post in a town square where criminals were publicly punished — stocks, flogging, and humiliation. In Brazil, the Pelourinho district of Salvador da Bahia is named for the pillory that stood there during the slave trade. Now it is a UNESCO World Heritage site of colonial architecture.",
+    "roots": ["Latin pila (pillar, pier)", "Latin pilarium (a column)"],
+    "cognates": ["Spanish 'picota' (a pillory — different word, same object)", "English 'pillar' (from the same Latin pila)"],
+    "semantic_shift": "'pillar' → a punishment pillar/pillory → by extension, a town square with such a pillar; now a historic district name"
+  },
+  {
+    "language": "pt", "lemma": "cachaça",
+    "origin_summary": "From Portuguese cachace (the dregs of pressed grape wine) or from cachazar (to crush, to press), ultimately uncertain. Cachaça is a distilled spirit made from fermented sugarcane juice — Brazil's national spirit and the base of the caipirinha. The word is distinctively Brazilian and Afro-Brazilian in origin, associated with the sugar plantation economy.",
+    "roots": ["origin uncertain; possibly from Portuguese cachace (dregs, the waste of wine pressing)"],
+    "cognates": ["Brazilian 'cana' (sugarcane — the raw material)", "Brazilian 'pinga' (an informal name for cachaça)"],
+    "semantic_shift": "uncertain origin → sugarcane spirit; the national distilled drink of Brazil"
+  },
+  {
+    "language": "pt", "lemma": "amendoim",
+    "origin_summary": "From Tupi manduí (peanut), via Old Portuguese manduim with prefixed a- (through influence of Arabic a- words or Portuguese phonological change). The peanut is native to South America and was named in Tupi. Portuguese colonizers spread the peanut globally — it is now a major crop in West Africa, Asia, and North America — and the Tupi name traveled with it.",
+    "roots": ["Tupi manduí (peanut, groundnut)"],
+    "cognates": ["Spanish 'maní' (peanut, from the same Tupi root via a different path)", "English 'peanut' (different naming — based on the pod/nut appearance)"],
+    "semantic_shift": "Tupi name for the groundnut → Portuguese, then spread globally with the crop"
+  },
+  {
+    "language": "pt", "lemma": "lambada",
+    "origin_summary": "From Portuguese lambar (to lash, to whip), from a root related to Spanish lamber/lamer (to lick). Lambada (a lash, a slap) became the name of a sensual Brazilian dance in the 1980s, known for its close-contact hip movements — the dance is 'a lash' or 'a slap' of energy and contact. It briefly dominated international pop music in 1989.",
+    "roots": ["Portuguese lambar (to lash, to strike with a strap)"],
+    "cognates": ["Portuguese 'açoite' (a whip — related concept)", "Spanish 'lamer' (to lick — possible shared root)"],
+    "semantic_shift": "'a lashing, a whipping' → a vigorous dance characterized by close hip contact"
+  },
+  {
+    "language": "pt", "lemma": "butim",
+    "origin_summary": "From French butin (booty, plunder), from Old Low German bute (an exchange, a share), related to English 'booty.' Butim entered Portuguese through military/naval vocabulary during the Age of Discoveries — the spoils of conquest. The Portuguese word for plunder captures the economic logic of maritime expansion.",
+    "roots": ["Old Low German bute (an exchange, a share)", "French butin (plunder, spoils)"],
+    "cognates": ["English 'booty' (spoils — from the same Germanic root via French)", "English 'bootleg' (originally goods sold illegally, same root family)"],
+    "semantic_shift": "'an exchange, a share taken' → spoils of war, plunder; in Portuguese particularly associated with maritime conquest"
+  },
+  {
+    "language": "pt", "lemma": "patavina",
+    "origin_summary": "From Latin Patavina, the feminine adjective of Patavium (Padua, a city in Northern Italy). The phrase não perceber (entender) patavina (to not understand a single thing) may derive from Paduans' reputation in Lisbon for speaking Italian-influenced Portuguese that no one could understand — or from Italian commedia dell'arte characters from Padua. The exact etymology is disputed but geographically grounded.",
+    "roots": ["Latin Patavium (the Roman name for Padua, Italy)"],
+    "cognates": ["Italian 'padovano' (Paduan — the adjective from the same city name)"],
+    "semantic_shift": "'of Padua' → in Portuguese idiom: não perceber patavina = to not understand a single thing"
+  },
+  {
+    "language": "pt", "lemma": "cangaço",
+    "origin_summary": "From cangalha (a wooden frame for carrying loads on donkeys), from Latin canalis (a channel, pipe) or from a pre-Latin Iberian root. Cangaço was the term for the violent banditry culture of the northeastern Brazilian sertão (backlands) in the 19th–early 20th centuries. The cangaceiros (bandits) carried heavy loads of weapons — the frame for bearing arms gave the movement its name.",
+    "roots": ["cangalha (a donkey's pack-frame, a wooden yoke)", "Latin canalis (a channel, tube — possibly cognate)"],
+    "cognates": ["Brazilian 'cangaceiro' (a bandit of the sertão, a member of the cangaço movement)"],
+    "semantic_shift": "'a load-bearing wooden frame' → the culture of armed banditry in the Brazilian backlands"
+  },
+  {
+    "language": "pt", "lemma": "picareta",
+    "origin_summary": "Diminutive of pica (a pickaxe, a pike), from picar (to prick, to pierce), from a Gallo-Romance root *piccare (to pierce), related to Italian piccare and French piquer. A picareta is a pickaxe. In colloquial Brazilian Portuguese, picareta also means a swindler or charlatan — the connotation of someone who 'picks away' dishonestly.",
+    "roots": ["Gallo-Romance *piccare (to pierce, to prick)", "Latin *piccus (a woodpecker — related image of pecking)"],
+    "cognates": ["English 'pike' (a long spear — from piquer/piccare)", "English 'picket' (from the same root)", "English 'pick/pickaxe' (related)"],
+    "semantic_shift": "'a pickaxe' → in Brazilian slang: a swindler, someone who extracts dishonestly"
+  },
+  {
+    "language": "pt", "lemma": "vaidade",
+    "origin_summary": "From Latin vanitas/vanitatis (emptiness, worthlessness, vanity), from vanus (empty, hollow, vain). A vaidade is vanity — excessive pride in appearance or achievements, but also theological emptiness (vanitas vanitatum, 'vanity of vanities' from Ecclesiastes). The moral/aesthetic word and the biblical philosophical term share the same Latin emptiness.",
+    "roots": ["Latin vanus (empty, hollow, without substance)", "Latin vanitas (emptiness, futility)"],
+    "cognates": ["English 'vain' (from Latin vanus)", "English 'vanity' (from Latin vanitas)", "English 'evanescent' (fading away — from evanescere, related to vanere)"],
+    "semantic_shift": "'emptiness, hollowness' → moral emptiness (pride that is hollow) → excessive vanity about appearance"
+  },
+  {
+    "language": "pt", "lemma": "azar",
+    "origin_summary": "From Arabic az-zahr (the dice, the flower), from zahr (a die, a flower blossom). Arabic az-zahr referred to dice used in games of chance; the uncertainty of dice rolls gave the word its sense of chance and luck. In Portuguese, azar specifically means bad luck or misfortune — the unlucky throw of the dice. Spanish azar preserves the neutral meaning of chance; Portuguese narrowed it to ill fortune.",
+    "roots": ["Arabic az-zahr (the dice, the flower)", "Arabic zahr (a die; also a flower or blossom)"],
+    "cognates": ["Spanish 'azar' (chance, fate — broader in meaning)", "French 'hasard' (chance, risk — from the same Arabic root via Spanish)", "English 'hazard' (a danger, a risk — from Old French hasard, same source)"],
+    "semantic_shift": "Arabic 'dice (instrument of chance)' → the result of a bad throw → bad luck, misfortune"
+  },
+  {
+    "language": "pt", "lemma": "azulejo",
+    "origin_summary": "From Arabic az-zulayj (a small polished stone), from zulayja (a polished tile), from Lapis lazuli (the blue stone) — though some derive it from Arabic al-lazaward (lapis lazuli, a deep blue). Azulejo is the hand-painted ceramic tile used decoratively throughout Portugal — the blue-and-white panels on church facades, train stations, and palace walls are among Portugal's most distinctive art forms.",
+    "roots": ["Arabic az-zulayj (a small polished stone tile)", "possibly from Arabic al-lazaward (lapis lazuli, the blue mineral)"],
+    "cognates": ["Spanish 'azulejo' (a decorative tile, same word)", "English 'lapis lazuli' (deep blue stone — from the same Arabic-Persian root)"],
+    "semantic_shift": "Arabic 'small polished stone' → a glazed ceramic tile → Portugal's iconic decorative tile art"
+  },
+  {
+    "language": "pt", "lemma": "aldeia",
+    "origin_summary": "From Arabic al-ḍayʿa (the estate, the rural village), from ḍayʿa (a village, a landed estate). Aldeia (a small village, a rural settlement) is one of hundreds of Portuguese words from Arabic that reflect Moorish rural and agricultural organization. The Arabic definite article al- fused with the noun to create the Portuguese form.",
+    "roots": ["Arabic al-ḍayʿa (the rural estate, the village)"],
+    "cognates": ["Spanish 'aldea' (a village — same Arabic root)", "Portuguese 'aldrabão' (a trickster — another Portuguese word with fused Arabic al-)"],
+    "semantic_shift": "Arabic 'rural estate' → a small Portuguese village"
+  },
+  {
+    "language": "pt", "lemma": "almofada",
+    "origin_summary": "From Arabic al-mukhadda (the pillow, the cushion), from khādd (a cheek — the body part one rests on a pillow). Almofada (a cushion, a pillow) entered Portuguese during the Moorish period. The Arabic term for a pillow is literally 'the cheek-rest.' Many Portuguese domestic comfort words — bedding, cushions, furniture — entered the language from Arabic.",
+    "roots": ["Arabic al-mukhadda (the pillow)", "Arabic khādd (cheek — the anatomical root)"],
+    "cognates": ["Spanish 'almohada' (pillow — same Arabic root)", "Portuguese 'almofadinha' (a small cushion, an affectionate term)"],
+    "semantic_shift": "Arabic 'cheek-rest' → a pillow or cushion for any surface"
+  },
+  {
+    "language": "pt", "lemma": "fado",
+    "origin_summary": "From Latin fatum (fate, destiny, that which has been spoken), from fari (to speak, to say). Fado is both fate and the Portuguese music genre that expresses saudade, longing, and fatalistic acceptance. The word captures the Portuguese worldview that life's sorrows are the lot of fate — to sing fado is to give voice to what fate has decreed. Fado was declared a UNESCO Intangible Cultural Heritage in 2011.",
+    "roots": ["Latin fatum (fate, destiny)", "Latin fari (to speak, to say — fate as what has been spoken by the gods)"],
+    "cognates": ["English 'fate' (from Latin fatum)", "English 'fatal' (related to fate, from fatum)", "Italian 'fato' (fate)", "Spanish 'hado' (fate — an archaic form from the same root)"],
+    "semantic_shift": "Latin 'that which has been spoken (by the Fates)' → destiny, fate → the Portuguese music genre of fatalistic longing"
+  },
+  {
+    "language": "pt", "lemma": "tabaco",
+    "origin_summary": "From Taíno tabaco (a tube or pipe used for inhaling smoke), the name given by the indigenous people of the Caribbean to both the plant and the Y-shaped pipe used to smoke it. Christopher Columbus encountered tobacco in 1492; Portuguese sailors spread the plant globally through their trade networks. By the 16th century, tabaco had entered all major European languages from the Taíno word.",
+    "roots": ["Taíno tabaco (a smoking pipe; the tobacco plant)"],
+    "cognates": ["English 'tobacco' (from the same Taíno word via Spanish)", "French 'tabac' (tobacco)", "German 'Tabak' (tobacco)"],
+    "semantic_shift": "Taíno name for a smoking pipe → the plant itself → the processed leaf commodity"
+  },
+  {
+    "language": "pt", "lemma": "milho",
+    "origin_summary": "From Latin milium (millet, a small-grained cereal), from Proto-Indo-European *mel- (to crush, to grind). When Portuguese explorers encountered maize/corn in the Americas, they applied the familiar word milho (which had meant millet) to the new crop. European milho (millet) and American milho (maize) are etymologically identical words for two different grains — a classic case of semantic transfer upon contact.",
+    "roots": ["Latin milium (millet)", "Proto-Indo-European *mel- (to grind, to crush)"],
+    "cognates": ["English 'millet' (from Old French millet, from Latin milium)", "English 'mill' (from the same PIE root *mel- via Latin mola)", "Spanish 'mijo' (millet — the old crop, whereas 'maíz' is used for corn)"],
+    "semantic_shift": "'millet (the Old World grain)' → in Portuguese, transferred to mean maize/corn upon contact with the Americas"
+  },
+  {
+    "language": "pt", "lemma": "naufrágio",
+    "origin_summary": "From Latin naufragium (a shipwreck), from navis (a ship) + frangere (to break). A naufrágio is a shipwreck — literally 'ship-breaking.' The Latin compound navis + frangere captures the catastrophe in its parts. Portugal's maritime empire was built on ships that navigated the most dangerous seas in the world; naufrágio was not a hypothetical word but a constant reality of the Age of Discovery.",
+    "roots": ["Latin navis (a ship)", "Latin frangere (to break, to shatter)"],
+    "cognates": ["English 'nave' (the central hall of a church — shaped like an inverted ship)", "English 'navigate' (from navis + agere)", "English 'fracture' (from frangere)", "Spanish 'naufragio' (shipwreck, same Latin compound)"],
+    "semantic_shift": "'ship-breaking event' → a shipwreck; by extension, any catastrophic failure or ruin"
+  },
+  {
+    "language": "pt", "lemma": "esquerda",
+    "origin_summary": "From Basque ezker (left hand, the left side), borrowed into Ibero-Romance languages during the medieval period. The Latin sinister (left) was displaced in Iberian Portuguese and Spanish by the Basque loanword — perhaps because sinister had accumulated too many ominous connotations. Esquerda (left, the political left) entered Portuguese from a pre-Indo-European Basque substrate.",
+    "roots": ["Basque ezker (the left hand, the left side)"],
+    "cognates": ["Spanish 'izquierda' (left — from the same Basque ezker)", "Portuguese 'direita' (right — from Latin directa, by contrast)"],
+    "semantic_shift": "Basque 'left hand' → left direction → the political left"
+  },
+  {
+    "language": "pt", "lemma": "marmelada",
+    "origin_summary": "From Portuguese marmelo (quince) + -ada (a preparation made from), from Latin melimelum (honey-apple), from Greek melímēlon (a sweet apple grafted onto quince), from méli (honey) + mēlon (apple). The English word 'marmalade' was borrowed directly from Portuguese marmelada — originally a quince paste. When the British began making it with oranges, they kept the Portuguese word but changed the fruit.",
+    "roots": ["Greek melímēlon (honey-apple — a quince grafted with an apple)", "Greek méli (honey) + mēlon (an apple)", "Latin melimelum (honey-apple, sweet apple)"],
+    "cognates": ["English 'marmalade' (borrowed directly from Portuguese marmelada, now made with citrus)", "English 'melon' (from the same Greek mēlon)"],
+    "semantic_shift": "'honey-apple (a grafted quince)' → quince paste (marmelada) → English borrowed it for any citrus preserve"
+  },
+  {
+    "language": "pt", "lemma": "calçada",
+    "origin_summary": "From Latin calciata (paved with limestone), from calx/calcis (limestone, chalk). Calçada is a paved road, a cobbled pavement, or a sidewalk. The famous Calçada Portuguesa — hand-laid black and white limestone cobblestone patterns — is one of Portugal's most distinctive art forms, found on Lisbon's streets, Copacabana beach in Rio, and Portuguese communities worldwide.",
+    "roots": ["Latin calx/calcis (limestone, chalk)", "Latin calciata (paved with lime-stone)"],
+    "cognates": ["English 'calcium' (from Latin calx, the same limestone)", "English 'chalk' (from Latin calx, via Germanic)", "Portuguese 'cal' (lime — directly from Latin calx)"],
+    "semantic_shift": "'paved with limestone' → a paved road or cobbled surface; specifically the Portuguese decorative stone pavement art"
+  }
+]
