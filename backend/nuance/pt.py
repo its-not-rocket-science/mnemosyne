@@ -17,7 +17,55 @@ _FORMAL_PRONOUNS = frozenset({"você", "voce", "o senhor", "a senhora", "vossa"}
 _PERSONAL_INF_SUFFIXES = ("ares", "ermos", "erdes", "erem", "irmos", "irdes", "irem", "armos", "ardes", "arem")
 
 # Verbal government — populate via gen_verbal_government.py.
-_VERBAL_GOV: dict[str, tuple[str, str]] = {}
+_VERBAL_GOV: dict[str, tuple[str, str]] = {
+    # ── PT additions (gen_verbal_government.py) ──
+    'gostar de': ('de', "«gostar de» (like) takes 'de': gosto de café (I like coffee). Portuguese requires 'de' where Spanish gustar uses dative inversion"),
+    'depender de': ('de', "«depender de» (depend on) takes 'de': depende de você (it depends on you)"),
+    'precisar de': ('de', "«precisar de» (need) takes 'de' (PT-PT) or no preposition (BR): preciso de ajuda (I need help). BR usage often drops 'de': preciso ajuda"),
+    'lembrar-se de': ('de', "«lembrar-se de» (remember) takes 'de': lembro-me de você (I remember you). Reflexive — non-reflexive lembrar uses no preposition"),
+    'esquecer-se de': ('de', "«esquecer-se de» (forget) takes 'de': esqueci-me da chave (I forgot the key). Reflexive"),
+    'queixar-se de': ('de', "«queixar-se de» (complain about) takes 'de': queixa-se do trabalho (he complains about work). Reflexive"),
+    'despedir-se de': ('de', "«despedir-se de» (say goodbye to) takes 'de': despediu-se da família (he said goodbye to the family). Reflexive"),
+    'aproveitar-se de': ('de', "«aproveitar-se de» (take advantage of) takes 'de': aproveitou-se da situação (he took advantage of the situation). Reflexive"),
+    'rir-se de': ('de', "«rir-se de» (laugh at) takes 'de': ri-se de mim (he laughed at me). Reflexive — non-reflexive rir uses 'de' too"),
+    'abusar de': ('de', "«abusar de» (abuse, overuse) takes 'de': não abuse do álcool (don't abuse alcohol)"),
+    'desistir de': ('de+infinitive', "«desistir de» (give up) takes 'de + infinitive': desistiu de tentar (he gave up trying)"),
+    'parar de': ('de+infinitive', "«parar de» (stop doing) takes 'de + infinitive': parou de fumar (he stopped smoking)"),
+    'deixar de': ('de+infinitive', "«deixar de» (stop, cease to) takes 'de + infinitive': deixou de chover (it stopped raining)"),
+    'terminar de': ('de+infinitive', "«terminar de» (finish doing) takes 'de + infinitive': terminei de comer (I finished eating)"),
+    'acabar de': ('de+infinitive', "«acabar de» (have just done) takes 'de + infinitive': acabo de chegar (I just arrived). Idiomatic recent-past"),
+    'tratar de': ('de+infinitive', "«tratar de» (try to / deal with) takes 'de + infinitive': trate de estudar (try to study). Also: tratar de + noun (handle)"),
+    'pensar em': ('em', "«pensar em» (think of/about) takes 'em': penso em você (I think of you). Distinguish from pensar de (have an opinion)"),
+    'acreditar em': ('em', "«acreditar em» (believe in) takes 'em': acredito em você (I believe in you)"),
+    'confiar em': ('em', "«confiar em» (trust) takes 'em': confio em você (I trust you)"),
+    'insistir em': ('em', "«insistir em» (insist on) takes 'em': insiste em pagar (he insists on paying)"),
+    'consistir em': ('em', "«consistir em» (consist of) takes 'em': consiste em frutas (it consists of fruits)"),
+    'tocar em': ('em', "«tocar em» (touch / bring up) takes 'em': não toque em mim (don't touch me), tocar no assunto (raise the topic)"),
+    'contar com': ('com', "«contar com» (count on) takes 'com': conto com você (I count on you)"),
+    'casar com': ('com', "«casar com» (marry) takes 'com': casou-se com Maria (he married Maria). Spanish casarse con — same pattern"),
+    'comparar com': ('com', "«comparar com» (compare with) takes 'com': compare com isto (compare with this). Also comparar a (more formal)"),
+    'sonhar com': ('com', "«sonhar com» (dream of) takes 'com': sonhei contigo (I dreamed of you). Same pattern as Spanish soñar con"),
+    'preocupar-se com': ('com', "«preocupar-se com» (worry about) takes 'com': preocupo-me com você (I worry about you). Reflexive"),
+    'dar-se com': ('com', "«dar-se com» (get along with) takes 'com': dou-me bem com ele (I get along well with him). Reflexive"),
+    'dirigir-se a': ('a', "«dirigir-se a» (address oneself to / head to) takes 'a': dirigiu-se ao público (he addressed the public). Reflexive"),
+    'recorrer a': ('a', "«recorrer a» (resort to) takes 'a': recorreu à violência (he resorted to violence)"),
+    'dedicar-se a': ('a', "«dedicar-se a» (dedicate oneself to) takes 'a': dedica-se à música (he dedicates himself to music). Reflexive"),
+    'habituar-se a': ('a', "«habituar-se a» (get used to) takes 'a': habituei-me ao clima (I got used to the climate). Reflexive"),
+    'atrever-se a': ('a+infinitive', "«atrever-se a» (dare to) takes 'a + infinitive': atreveu-se a falar (he dared to speak). Reflexive"),
+    'começar a': ('a+infinitive', "«começar a» (start to) takes 'a + infinitive': começou a chover (it started raining)"),
+    'ensinar a': ('a+infinitive', "«ensinar a» (teach to) takes 'a + infinitive': ensinou-me a cozinhar (he taught me to cook)"),
+    'aprender a': ('a+infinitive', "«aprender a» (learn to) takes 'a + infinitive': aprendi a nadar (I learned to swim)"),
+    'ajudar a': ('a+infinitive', "«ajudar a» (help to) takes 'a + infinitive': ajudo-te a estudar (I help you study)"),
+    'obrigar a': ('a+infinitive', "«obrigar a» (force to) takes 'a + infinitive': obrigou-me a partir (he forced me to leave)"),
+    'decidir-se a': ('a+infinitive', "«decidir-se a» (decide to) takes 'a + infinitive': decidiu-se a viajar (he decided to travel). Reflexive — distinguish from decidir + infinitive (no prep)"),
+    'esforçar-se por': ('por+infinitive', "«esforçar-se por» (strive to) takes 'por + infinitive': esforça-se por aprender (he strives to learn). Reflexive — alternative: esforçar-se em"),
+    'optar por': ('por', "«optar por» (opt for) takes 'por': optou pelo silêncio (he opted for silence)"),
+    'lutar por': ('por', "«lutar por» (fight for) takes 'por': luta pela liberdade (she fights for freedom)"),
+    'esperar por': ('por', "«esperar por» (wait for) takes 'por': espero por ti (I'm waiting for you). Distinguish from esperar (hope) without prep"),
+    'interessar-se por': ('por', "«interessar-se por» (be interested in) takes 'por': interessa-se por arte (he is interested in art). Reflexive"),
+    'perguntar por': ('por', "«perguntar por» (ask about/after) takes 'por': perguntou por ti (he asked about you). Distinguish from perguntar a alguém (ask someone)"),
+    'orgulhar-se de': ('de', "«orgulhar-se de» (be proud of) takes 'de': orgulha-se dos filhos (he is proud of his children). Reflexive"),
+}
 
 
 def _text(tok: Any) -> str:

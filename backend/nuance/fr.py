@@ -20,7 +20,53 @@ _LIAISON_TRIGGERS = frozenset({
 _VOWELS = frozenset("aeiouéàèùêîôûœæ")
 
 # Verbal government — populate via gen_verbal_government.py.
-_VERBAL_GOV: dict[str, tuple[str, str]] = {}
+_VERBAL_GOV: dict[str, tuple[str, str]] = {
+    # ── FR additions (gen_verbal_government.py) ──
+    'penser à': ('à', "«penser à» (think of) takes 'à': je pense à toi (I think of you). Distinguish from penser de (have an opinion about): que penses-tu de ce film? (what do you think of this film?)"),
+    'réfléchir à': ('à', "«réfléchir à» (reflect on) takes 'à': je réfléchis à la question (I'm thinking about the question). Stronger and more deliberate than penser à"),
+    'jouer à': ('à', "«jouer à» (play a game) takes 'à': jouer au tennis, à la corde (play tennis, jump rope). Distinguish from jouer de + instrument (play music)"),
+    'jouer de': ('de', "«jouer de» (play an instrument) takes 'de': jouer du piano (play piano), jouer de la guitare. Mirror of jouer à"),
+    'croire à': ('à', "«croire à» (believe in the existence of) takes 'à': croire au père Noël (believe in Santa). Distinguish from croire en (have faith in): croire en Dieu, en soi-même"),
+    'ressembler à': ('à', "«ressembler à» (resemble) takes 'à': il ressemble à son père (he looks like his father)"),
+    'faire attention à': ('à', "«faire attention à» (pay attention to) takes 'à': fais attention à toi (take care of yourself)"),
+    "s'attendre à": ('à', "«s'attendre à» (expect) takes 'à': je m'attendais à mieux (I expected better). Reflexive — distinguish from attendre + COD (wait for)"),
+    "s'habituer à": ('à', "«s'habituer à» (get used to) takes 'à': je m'habitue au climat (I'm getting used to the climate). Reflexive"),
+    "s'intéresser à": ('à', "«s'intéresser à» (be interested in) takes 'à': il s'intéresse à la musique (he is interested in music). Reflexive"),
+    'tenir à': ('à', "«tenir à» (be attached to / insist on) takes 'à': je tiens à toi (I care about you), je tiens à le faire (I insist on doing it)"),
+    'renoncer à': ('à', "«renoncer à» (give up) takes 'à': il a renoncé à son rêve (he gave up his dream)"),
+    'réussir à': ('à+infinitive', "«réussir à» (succeed in) takes 'à + infinitive': il a réussi à finir (he managed to finish). With noun: réussir un examen (no preposition)"),
+    'parvenir à': ('à+infinitive', "«parvenir à» (manage to / reach) takes 'à': je parviens à comprendre (I manage to understand). Formal register"),
+    'hésiter à': ('à+infinitive', "«hésiter à» (hesitate to) takes 'à + infinitive': il hésite à parler (he hesitates to speak)"),
+    'commencer à': ('à+infinitive', "«commencer à» (begin to) takes 'à + infinitive': il commence à pleuvoir (it's starting to rain). Also commencer par + infinitive (begin by)"),
+    'apprendre à': ('à+infinitive', "«apprendre à» (learn to) takes 'à + infinitive': il apprend à nager (he is learning to swim)"),
+    'aider à': ('à+infinitive', "«aider à» (help to) takes 'à + infinitive': je l'aide à étudier (I help him study)"),
+    'inviter à': ('à+infinitive', "«inviter à» (invite to) takes 'à + infinitive': il m'a invité à dîner (he invited me to dinner)"),
+    'obliger à': ('à+infinitive', "«obliger à» (force to) takes 'à + infinitive': il m'oblige à partir (he forces me to leave)"),
+    'parler de': ('de', "«parler de» (talk about) takes 'de': nous parlons de politique (we're talking about politics). Distinguish from parler à (speak to a person)"),
+    'rêver de': ('de', "«rêver de» (dream of) takes 'de': il rêve de partir (he dreams of leaving)"),
+    'profiter de': ('de', "«profiter de» (take advantage of) takes 'de': profite des vacances (enjoy your vacation)"),
+    'douter de': ('de', "«douter de» (doubt) takes 'de': je doute de ses paroles (I doubt his words). Distinguish from se douter de (suspect)"),
+    'se servir de': ('de', "«se servir de» (use) takes 'de': je me sers d'un ordinateur (I use a computer). Reflexive"),
+    'se souvenir de': ('de', "«se souvenir de» (remember) takes 'de': je me souviens de toi (I remember you). Reflexive"),
+    'se moquer de': ('de', "«se moquer de» (make fun of) takes 'de': il se moque de moi (he's making fun of me). Reflexive"),
+    "s'occuper de": ('de', "«s'occuper de» (take care of) takes 'de': il s'occupe des enfants (he takes care of the children). Reflexive"),
+    'se rendre compte de': ('de', "«se rendre compte de» (realize) takes 'de': je me rends compte de l'erreur (I realize the error). Reflexive"),
+    'avoir besoin de': ('de', "«avoir besoin de» (need) takes 'de': j'ai besoin de toi (I need you). Idiomatic possessive construction"),
+    'avoir envie de': ('de', "«avoir envie de» (feel like / want) takes 'de': j'ai envie de partir (I feel like leaving)"),
+    'finir de': ('de+infinitive', "«finir de» (finish) takes 'de + infinitive': j'ai fini de manger (I finished eating). Distinguish from finir par (end up doing)"),
+    'essayer de': ('de+infinitive', "«essayer de» (try to) takes 'de + infinitive': j'essaie de comprendre (I try to understand)"),
+    'décider de': ('de+infinitive', "«décider de» (decide to) takes 'de + infinitive': il a décidé de partir (he decided to leave). Reflexive form se décider à uses 'à'"),
+    'refuser de': ('de+infinitive', "«refuser de» (refuse to) takes 'de + infinitive': il refuse de parler (he refuses to speak)"),
+    'regretter de': ('de+infinitive', "«regretter de» (regret) takes 'de + infinitive': je regrette de l'avoir dit (I regret having said it)"),
+    'venir de': ('de+infinitive', "«venir de» (have just done) takes 'de + infinitive': je viens d'arriver (I just arrived). Idiomatic recent-past construction"),
+    'manquer de': ('de', "«manquer de» (lack) takes 'de': je manque de temps (I lack time). Distinguish from manquer à (miss someone)"),
+    'compter sur': ('sur', "«compter sur» (count on) takes 'sur': je compte sur toi (I'm counting on you). Distinguish from compter + COD (count, calculate)"),
+    'insister sur': ('sur', "«insister sur» (insist on) takes 'sur': il insiste sur ce point (he insists on this point)"),
+    'donner sur': ('sur', "«donner sur» (look out onto) takes 'sur': la fenêtre donne sur le jardin (the window opens onto the garden)"),
+    'voter pour': ('pour', "«voter pour» (vote for) takes 'pour': il a voté pour Macron (he voted for Macron). Mirror of voter contre"),
+    'se battre pour': ('pour', "«se battre pour» (fight for) takes 'pour': elle se bat pour ses droits (she fights for her rights). Reflexive"),
+    'se passionner pour': ('pour', "«se passionner pour» (be passionate about) takes 'pour': il se passionne pour le cinéma (he is passionate about cinema). Reflexive"),
+}
 
 
 def _text(tok: Any) -> str:
