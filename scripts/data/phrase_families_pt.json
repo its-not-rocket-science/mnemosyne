@@ -1,0 +1,465 @@
+[
+  {
+    "id": "pt_agua_mole_em_pedra_dura",
+    "canonical": "água mole em pedra dura tanto bate até que fura",
+    "meaning": "Persistence wears away resistance; soft water on hard stone will eventually bore through.",
+    "register": "neutral",
+    "origin": "A proverb encoding the physical truth that water, though soft, erodes stone over time. Widely used in Portuguese and Brazilian culture to encourage perseverance. Parallel to English 'constant dripping wears away the stone.'",
+    "variants": [
+      {"surface": "água mole em pedra dura tanto bate até que fura", "type": "exact"},
+      {"surface": "água mole em pedra dura", "type": "inflectional_variant", "note": "Elliptical — the first half alone, understood to imply the full proverb."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_nao_ha_bela_sem_serao",
+    "canonical": "não há bela sem senão",
+    "meaning": "Every rose has its thorn; nothing is perfect.",
+    "register": "neutral",
+    "origin": "Bela (beautiful) + senão (but/however): every beautiful thing has a 'but.' The wordplay — bela/senão forming a near-rhyme — makes this a memorable proverb. Common in Portugal and Brazil.",
+    "variants": [
+      {"surface": "não há bela sem senão", "type": "exact"},
+      {"surface": "nao ha bela sem senao", "type": "orthographic_variant", "note": "Without diacritics, common in informal digital writing."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_dar_com_a_lingua_nos_dentes",
+    "canonical": "dar com a língua nos dentes",
+    "meaning": "To let the cat out of the bag; to reveal a secret inadvertently.",
+    "register": "informal",
+    "origin": "Língua (tongue) + dentes (teeth): the tongue hits the teeth and produces sound — involuntary speech that gives away information. The physiological image captures how secrets escape through uncontrolled talking.",
+    "variants": [
+      {"surface": "dar com a língua nos dentes", "type": "exact"},
+      {"surface": "deu com a língua nos dentes", "type": "inflectional_variant", "note": "He/she let the cat out of the bag — past tense."},
+      {"surface": "não vás dar com a língua nos dentes", "type": "inflectional_variant", "note": "Don't go spilling the beans — warning."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_falar_pelos_cotovelos",
+    "canonical": "falar pelos cotovelos",
+    "meaning": "To talk one's ear off; to be a chatterbox.",
+    "register": "informal",
+    "origin": "Cotovelos (elbows): talking through one's elbows suggests such a volume of speech that it comes out from unexpected parts of the body. Spanish has the same image ('hablar por los codos'). Both Iberian languages share this vivid hyperbole.",
+    "variants": [
+      {"surface": "falar pelos cotovelos", "type": "exact"},
+      {"surface": "ela fala pelos cotovelos", "type": "inflectional_variant", "note": "She never stops talking."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_estar_com_os_azeites",
+    "canonical": "estar com os azeites",
+    "meaning": "To be in a bad mood; to be irritable.",
+    "register": "informal",
+    "origin": "Azeites (olive oils): the expression is specifically Portuguese in origin. Olive oil turns rancid and becomes sharp and unpleasant — 'being with the oils' means being in a sour, irritable state.",
+    "why_it_matters": "Exclusively European Portuguese. Brazilian Portuguese uses different expressions for the same mood. Useful for learners differentiating registers across the two standard varieties.",
+    "variants": [
+      {"surface": "estar com os azeites", "type": "exact"},
+      {"surface": "hoje está com os azeites", "type": "inflectional_variant", "note": "He/she's in a foul mood today."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_em_bocas_fechadas_nao_entram_moscas",
+    "canonical": "em bocas fechadas não entram moscas",
+    "meaning": "Loose lips sink ships; into closed mouths flies don't enter.",
+    "register": "neutral",
+    "origin": "Moscas (flies) + boca fechada (closed mouth): closing your mouth keeps out flies — and prevents you from saying things better left unsaid. A universal proverb found across Romance languages: Spanish 'en boca cerrada no entran moscas.'",
+    "variants": [
+      {"surface": "em bocas fechadas não entram moscas", "type": "exact"},
+      {"surface": "boca fechada não pega mosca", "type": "inflectional_variant", "note": "Brazilian variant — a closed mouth catches no flies."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_comprar_gato_por_lebre",
+    "canonical": "comprar gato por lebre",
+    "meaning": "To buy a pig in a poke; to be fooled into buying something other than what was promised.",
+    "register": "neutral",
+    "origin": "Gato (cat) for lebre (hare): a swindler substituting a worthless cat for a prized hare. This is the same medieval market-fraud scenario as German 'die Katze im Sack kaufen' — each language uses local animals to encode the deception.",
+    "variants": [
+      {"surface": "comprar gato por lebre", "type": "exact"},
+      {"surface": "vender gato por lebre", "type": "inflectional_variant", "note": "To sell cat for hare — from the deceiver's perspective."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_nao_ha_fumo_sem_fogo",
+    "canonical": "não há fumo sem fogo",
+    "meaning": "There's no smoke without fire.",
+    "register": "neutral",
+    "origin": "A universal proverb found in virtually all European languages. Portuguese is 'não há fumo sem fogo,' matching English, French ('il n'y a pas de fumée sans feu'), and Spanish ('no hay humo sin fuego') exactly in structure.",
+    "variants": [
+      {"surface": "não há fumo sem fogo", "type": "exact"},
+      {"surface": "nao ha fumo sem fogo", "type": "orthographic_variant", "note": "Without diacritics."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_fazer_tempestade_num_copo_dagua",
+    "canonical": "fazer tempestade num copo d'água",
+    "meaning": "To make a mountain out of a molehill; to make a storm in a teacup.",
+    "register": "neutral",
+    "origin": "Tempestade (storm) in a copo d'água (glass of water): the impossibility of a storm in a glass emphasizes the absurd exaggeration of the fuss. Compare English 'storm in a teacup,' French 'tempête dans un verre d'eau.'",
+    "variants": [
+      {"surface": "fazer tempestade num copo d'água", "type": "exact"},
+      {"surface": "tempestade em copo d'água", "type": "inflectional_variant", "note": "Elliptical noun-phrase form."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_o_habito_nao_faz_o_monge",
+    "canonical": "o hábito não faz o monge",
+    "meaning": "The habit does not make the monk; don't judge a book by its cover.",
+    "register": "neutral",
+    "origin": "A medieval European proverb in many languages: wearing a monk's habit doesn't make someone pious. The Latin source ('cucullus non facit monachum') was rendered into Portuguese as a warning against surface-level judgment.",
+    "variants": [
+      {"surface": "o hábito não faz o monge", "type": "exact"},
+      {"surface": "o habito nao faz o monge", "type": "orthographic_variant", "note": "Without diacritics."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_quem_semeia_ventos_colhe_tempestades",
+    "canonical": "quem semeia ventos colhe tempestades",
+    "meaning": "Sow the wind, reap the whirlwind; reckless actions bring severe consequences.",
+    "register": "neutral",
+    "origin": "Biblical origin (Hosea 8:7). The agricultural metaphor of sowing and reaping — what you plant grows — applied to moral causality. Identical in structure across Romance languages.",
+    "variants": [
+      {"surface": "quem semeia ventos colhe tempestades", "type": "exact"},
+      {"surface": "semear ventos, colher tempestades", "type": "inflectional_variant", "note": "Infinitive form used as a title or heading."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_dor_de_cotovelo",
+    "canonical": "dor de cotovelo",
+    "meaning": "Jealousy; heartburn of envy (especially romantic); feeling sidelined.",
+    "register": "informal",
+    "origin": "Cotovelo (elbow): 'elbow pain' — from the image of watching others succeed from the sidelines, leaning on your elbow. Primarily used in Brazil; the expression encodes envy, especially at another's success in love or career.",
+    "why_it_matters": "Quintessentially Brazilian in usage. 'Dor de cotovelo' music is a whole genre of sentimental Brazilian songs about heartbreak and jealousy.",
+    "variants": [
+      {"surface": "dor de cotovelo", "type": "exact"},
+      {"surface": "está com dor de cotovelo", "type": "inflectional_variant", "note": "He/she is green with envy."},
+      {"surface": "música de dor de cotovelo", "type": "inflectional_variant", "note": "Heartbreak music — extended collocational use."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_meter_a_colher",
+    "canonical": "meter a colher",
+    "meaning": "To stick one's oar in; to butt in; to interfere in others' business.",
+    "register": "informal",
+    "origin": "Colher (spoon, ladle): inserting a spoon into someone else's cooking — interfering where you haven't been invited. The domestic kitchen image captures unwanted involvement in others' affairs.",
+    "variants": [
+      {"surface": "meter a colher", "type": "exact"},
+      {"surface": "não metas a colher", "type": "inflectional_variant", "note": "Don't stick your nose in — imperative."},
+      {"surface": "sempre a meter a colher", "type": "inflectional_variant", "note": "Always butting in."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_bater_a_bota",
+    "canonical": "bater a bota",
+    "meaning": "To kick the bucket; to die.",
+    "register": "informal",
+    "origin": "Bota (boot): 'to hit the boot' is Portuguese slang for dying, parallel to English 'kick the bucket.' The exact origin of the boot image is uncertain, but it functions as an informal euphemism for death in both varieties of Portuguese.",
+    "variants": [
+      {"surface": "bater a bota", "type": "exact"},
+      {"surface": "bateu a bota", "type": "inflectional_variant", "note": "He/she kicked the bucket — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_estar_nas_nuvens",
+    "canonical": "estar nas nuvens",
+    "meaning": "To have one's head in the clouds; to be daydreaming.",
+    "register": "neutral",
+    "origin": "Nuvens (clouds): to be in the clouds = to be mentally absent, floating above the practical world. Parallel expressions exist in Spanish ('estar en las nubes'), French ('avoir la tête dans les nuages'), and Italian.",
+    "variants": [
+      {"surface": "estar nas nuvens", "type": "exact"},
+      {"surface": "está nas nuvens", "type": "inflectional_variant", "note": "He/she is daydreaming — present tense."},
+      {"surface": "anda nas nuvens", "type": "inflectional_variant", "note": "He/she walks with head in clouds — with andar (to walk/go)."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_mais_vale_um_passaro_na_mao",
+    "canonical": "mais vale um pássaro na mão do que dois a voar",
+    "meaning": "A bird in the hand is worth two in the bush.",
+    "register": "neutral",
+    "origin": "Portuguese version of the universal proverb. Pássaro (bird) + mão (hand) + voar (flying): a secure possession is more valuable than uncertain prospects. Identical in logic to English, French, Spanish, and Italian equivalents.",
+    "variants": [
+      {"surface": "mais vale um pássaro na mão do que dois a voar", "type": "exact"},
+      {"surface": "mais vale um passaro na mao", "type": "orthographic_variant", "note": "Elliptical form without diacritics."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_dar_voltas_ao_miolo",
+    "canonical": "dar voltas ao miolo",
+    "meaning": "To rack one's brain; to think hard and go in circles.",
+    "register": "informal",
+    "origin": "Miolo (brain, crumb): 'turning the brain around' — the mental spinning of trying to solve a difficult problem. Miolo colloquially means both brain and the soft interior of bread, giving the expression earthy, familiar quality.",
+    "why_it_matters": "Characteristically Portuguese. The word miolo (instead of the more formal cérebro) anchors the expression in informal, everyday speech.",
+    "variants": [
+      {"surface": "dar voltas ao miolo", "type": "exact"},
+      {"surface": "dei muitas voltas ao miolo", "type": "inflectional_variant", "note": "I racked my brain a lot — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_por_em_pratos_limpos",
+    "canonical": "pôr em pratos limpos",
+    "meaning": "To lay the cards on the table; to clear things up; to get to the truth.",
+    "register": "neutral",
+    "origin": "Pratos limpos (clean plates): serving on clean plates means presenting things clearly, without the residue of prior meals/conversations clouding the view. A metaphor for clarity and directness.",
+    "variants": [
+      {"surface": "pôr em pratos limpos", "type": "exact"},
+      {"surface": "por em pratos limpos", "type": "orthographic_variant", "note": "Without the circumflex on 'por' — common in informal writing."},
+      {"surface": "vamos pôr isto em pratos limpos", "type": "inflectional_variant", "note": "Let's lay this on the table."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_de_mal_a_pior",
+    "canonical": "de mal a pior",
+    "meaning": "From bad to worse.",
+    "register": "neutral",
+    "origin": "A direct and concise expression of deterioration. Parallel to English, French ('de mal en pis'), Spanish ('de mal en peor'). The simplicity of the phrase gives it wide applicability across contexts.",
+    "variants": [
+      {"surface": "de mal a pior", "type": "exact"},
+      {"surface": "vai de mal a pior", "type": "inflectional_variant", "note": "It keeps going from bad to worse."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_bater_o_pe",
+    "canonical": "bater o pé",
+    "meaning": "To put one's foot down; to insist firmly; to refuse to budge.",
+    "register": "neutral",
+    "origin": "Pé (foot): stomping one's foot is a universal physical gesture of insistence and refusal to yield. The expression captures the determined physical act as a metaphor for resolute verbal assertion.",
+    "variants": [
+      {"surface": "bater o pé", "type": "exact"},
+      {"surface": "bate o pé", "type": "inflectional_variant", "note": "He/she is putting their foot down — present tense."},
+      {"surface": "bateu o pé", "type": "inflectional_variant", "note": "He/she put their foot down — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_estar_com_a_corda_no_pescoco",
+    "canonical": "estar com a corda no pescoço",
+    "meaning": "To have a noose around one's neck; to be in a very tight spot.",
+    "register": "neutral",
+    "origin": "Corda no pescoço (rope around the neck): the image of imminent hanging — extreme pressure or danger. Used for financial crises, impossible deadlines, or hopeless situations. More vivid than English 'between a rock and a hard place.'",
+    "variants": [
+      {"surface": "estar com a corda no pescoço", "type": "exact"},
+      {"surface": "está com a corda no pescoço", "type": "inflectional_variant", "note": "He/she is in a real bind."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_pregar_uma_rasteira",
+    "canonical": "pregar uma rasteira",
+    "meaning": "To trip someone up; to trick someone; to do something underhand.",
+    "register": "informal",
+    "origin": "Rasteira (trip, leg sweep): a fighting move that sweeps someone's legs from under them. Metaphorically, causing someone to fall or fail by means they didn't see coming — sabotage or treachery.",
+    "variants": [
+      {"surface": "pregar uma rasteira", "type": "exact"},
+      {"surface": "pregou-me uma rasteira", "type": "inflectional_variant", "note": "He tripped me up / pulled a fast one on me."},
+      {"surface": "dar uma rasteira", "type": "inflectional_variant", "note": "To trip up — with dar instead of pregar."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_a_cavalo_dado_nao_se_olha_o_dente",
+    "canonical": "a cavalo dado não se olha o dente",
+    "meaning": "Don't look a gift horse in the mouth.",
+    "register": "neutral",
+    "origin": "Cavalo (horse) + dente (tooth): a horse's age and health are assessed by its teeth — inspecting a gift horse's teeth implies ingratitude. Universal proverb: Latin 'noli equi dentes inspicere donati,' French 'à cheval donné on ne regarde pas les dents.'",
+    "variants": [
+      {"surface": "a cavalo dado não se olha o dente", "type": "exact"},
+      {"surface": "a cavalo dado nao se olha o dente", "type": "orthographic_variant", "note": "Without diacritics."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_virar_a_mesa",
+    "canonical": "virar a mesa",
+    "meaning": "To turn the tables; to completely reverse a situation.",
+    "register": "neutral",
+    "origin": "Mesa (table): to flip/turn the table — a dramatic reversal. Associated with card games or negotiations where overturning the table resets all terms. Common in Brazilian Portuguese especially in sports and business contexts.",
+    "variants": [
+      {"surface": "virar a mesa", "type": "exact"},
+      {"surface": "virou a mesa", "type": "inflectional_variant", "note": "He/she turned the tables — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_caiu_o_pano",
+    "canonical": "caiu o pano",
+    "meaning": "The curtain fell; it's all over; the show is finished.",
+    "register": "neutral",
+    "origin": "Pano (curtain, cloth): theatrical metaphor — when the curtain drops, the performance ends. 'O pano caiu' signals an irreversible conclusion to any situation, not just theatrical ones.",
+    "variants": [
+      {"surface": "caiu o pano", "type": "exact"},
+      {"surface": "o pano caiu", "type": "inflectional_variant", "note": "The curtain has fallen — word-order variant, same meaning."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_pagar_com_a_mesma_moeda",
+    "canonical": "pagar com a mesma moeda",
+    "meaning": "To pay someone back in kind; tit for tat.",
+    "register": "neutral",
+    "origin": "Moeda (coin, currency): repaying with the same denomination — returning the exact same treatment received. The financial metaphor for reciprocity is universal across European languages.",
+    "variants": [
+      {"surface": "pagar com a mesma moeda", "type": "exact"},
+      {"surface": "pagou-lhe com a mesma moeda", "type": "inflectional_variant", "note": "He paid him back in kind — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_ir_ao_fundo_da_questao",
+    "canonical": "ir ao fundo da questão",
+    "meaning": "To get to the bottom of the matter; to investigate thoroughly.",
+    "register": "neutral",
+    "origin": "Fundo (bottom, depth): the bottom of the question is where the truth lies. The spatial metaphor — depth = truth — is common across European languages. 'Getting to the bottom' implies rigorous investigation.",
+    "variants": [
+      {"surface": "ir ao fundo da questão", "type": "exact"},
+      {"surface": "ir ao fundo do assunto", "type": "inflectional_variant", "note": "Variant with 'assunto' (matter/subject) instead of 'questão'."},
+      {"surface": "chegou ao fundo da questão", "type": "inflectional_variant", "note": "He/she got to the bottom of it — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_ter_os_nervos_a_flor_da_pele",
+    "canonical": "ter os nervos à flor da pele",
+    "meaning": "To be on edge; to be hypersensitive; to have one's nerves right at the skin's surface.",
+    "register": "neutral",
+    "origin": "Flor da pele (flower of the skin, skin's surface): nerves so close to the surface that any touch triggers a reaction. A beautiful anatomical metaphor for heightened emotional sensitivity. The flor (flower) image adds a delicate quality to what is essentially raw vulnerability.",
+    "variants": [
+      {"surface": "ter os nervos à flor da pele", "type": "exact"},
+      {"surface": "com os nervos à flor da pele", "type": "inflectional_variant", "note": "With nerves on edge — adverbial."},
+      {"surface": "está com os nervos à flor da pele", "type": "inflectional_variant", "note": "He/she is on edge."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_estar_de_pedra_e_cal",
+    "canonical": "estar de pedra e cal",
+    "meaning": "To be set in stone; absolutely certain; fixed and immovable.",
+    "register": "neutral",
+    "origin": "Pedra e cal (stone and lime mortar): the combination used to build walls that last centuries. Something 'of stone and mortar' cannot be shifted. The construction metaphor conveys absolute permanence of a decision or fact.",
+    "variants": [
+      {"surface": "estar de pedra e cal", "type": "exact"},
+      {"surface": "é de pedra e cal", "type": "inflectional_variant", "note": "It's set in stone."},
+      {"surface": "isso é pedra e cal", "type": "inflectional_variant", "note": "That's final — emphatic."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_nem_de_proposito",
+    "canonical": "nem de propósito",
+    "meaning": "As if on purpose; what a coincidence; it couldn't have been planned better.",
+    "register": "informal",
+    "origin": "Propósito (purpose, intention): 'not even on purpose' describes a coincidence so perfect it seems intentional. Often used with exclamation to express surprised delight or irony at an apt coincidence.",
+    "variants": [
+      {"surface": "nem de propósito", "type": "exact"},
+      {"surface": "nem de proposito", "type": "orthographic_variant", "note": "Without accent — common in digital writing."},
+      {"surface": "parece que foi de propósito", "type": "inflectional_variant", "note": "It seems like it was done on purpose — related expression."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_andar_na_crista_da_onda",
+    "canonical": "andar na crista da onda",
+    "meaning": "To be riding the crest of a wave; to be at the top of one's game.",
+    "register": "neutral",
+    "origin": "Crista da onda (wave crest): surfing on the highest point of a wave — maximum momentum and visibility. Portugal's Atlantic coastline makes wave imagery natural and resonant. Used of careers, trends, and popularity.",
+    "variants": [
+      {"surface": "andar na crista da onda", "type": "exact"},
+      {"surface": "está na crista da onda", "type": "inflectional_variant", "note": "He/she is on top of the world right now."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_quem_nao_chora_nao_mama",
+    "canonical": "quem não chora não mama",
+    "meaning": "The squeaky wheel gets the grease; you have to ask for what you want.",
+    "register": "neutral",
+    "origin": "Mamar (to nurse/suckle): the baby who doesn't cry doesn't get fed. A proverb about the necessity of expressing needs. Common in Brazil especially. Contrasts with more reserved cultural ideals about not complaining.",
+    "why_it_matters": "A particularly useful expression for learners navigating Brazilian professional culture, where self-advocacy is important.",
+    "variants": [
+      {"surface": "quem não chora não mama", "type": "exact"},
+      {"surface": "quem nao chora nao mama", "type": "orthographic_variant", "note": "Without diacritics."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_tirar_o_sono",
+    "canonical": "tirar o sono a alguém",
+    "meaning": "To keep someone up at night; to worry someone greatly.",
+    "register": "neutral",
+    "origin": "Sono (sleep): to remove someone's sleep = to be a source of such anxiety that they cannot rest. The expression captures both the physiological (sleeplessness) and emotional (worry) dimensions of a problem.",
+    "variants": [
+      {"surface": "tirar o sono a alguém", "type": "exact"},
+      {"surface": "isso tira-me o sono", "type": "inflectional_variant", "note": "That keeps me up at night."},
+      {"surface": "não vou deixar isso tirar-me o sono", "type": "inflectional_variant", "note": "I won't lose sleep over it."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_colocar_os_pontos_nos_is",
+    "canonical": "colocar os pontos nos i's",
+    "meaning": "To dot the i's and cross the t's; to be precise and thorough.",
+    "register": "neutral",
+    "origin": "Pontos nos i's (dots on the i's): the typographic act of completing letters carefully. In Portuguese, only the i's are mentioned (unlike English 'dot the i's and cross the t's'), but the meaning — thoroughness — is identical.",
+    "variants": [
+      {"surface": "colocar os pontos nos i's", "type": "exact"},
+      {"surface": "pôr os pontos nos i's", "type": "inflectional_variant", "note": "Variant with pôr (to put) instead of colocar."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_dar_a_volta_por_cima",
+    "canonical": "dar a volta por cima",
+    "meaning": "To bounce back; to make a comeback after a setback.",
+    "register": "neutral",
+    "origin": "Volta por cima (turn from above): overcoming the obstacle by rising above it and coming out on top. Specifically Brazilian in flavor, associated with resilience and comeback narratives in sports, politics, and personal life.",
+    "why_it_matters": "Highly frequent in Brazilian media and everyday speech. Captures the Brazilian cultural value of resilience and positivity in the face of adversity — closely related to the concept of jogo bonito.",
+    "variants": [
+      {"surface": "dar a volta por cima", "type": "exact"},
+      {"surface": "deu a volta por cima", "type": "inflectional_variant", "note": "He/she bounced back — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_estar_entre_a_espada_e_a_parede",
+    "canonical": "estar entre a espada e a parede",
+    "meaning": "To be between a rock and a hard place; caught between two bad options.",
+    "register": "neutral",
+    "origin": "Espada (sword) + parede (wall): pressed against a wall with a sword at your front — no escape route, forced to choose the lesser of two dangers. More physically vivid than English's geological metaphor.",
+    "variants": [
+      {"surface": "estar entre a espada e a parede", "type": "exact"},
+      {"surface": "entre a espada e a parede", "type": "inflectional_variant", "note": "Elliptical predicative use."},
+      {"surface": "estou entre a espada e a parede", "type": "inflectional_variant", "note": "I'm between a rock and a hard place."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "pt_mandar_as_favas",
+    "canonical": "mandar às favas",
+    "meaning": "To tell someone to get lost; to dismiss rudely.",
+    "register": "informal",
+    "origin": "Favas (broad beans): a remote, insignificant place associated with peasant food. Sending someone 'to the beans' dismisses them as worthless. Parallel to English 'go fly a kite' or Spanish 'mandar a paseo.' The bean imagery is distinctively Iberian.",
+    "variants": [
+      {"surface": "mandar às favas", "type": "exact"},
+      {"surface": "vai às favas", "type": "inflectional_variant", "note": "Get lost — imperative."},
+      {"surface": "mandou-o às favas", "type": "inflectional_variant", "note": "He/she told him to get lost — past tense."}
+    ],
+    "confusables": []
+  }
+]

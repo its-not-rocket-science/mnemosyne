@@ -1,0 +1,460 @@
+[
+  {
+    "id": "ru_sdelat_iz_mukhi_slona",
+    "canonical": "делать из мухи слона",
+    "meaning": "To make a mountain out of a molehill; to blow something out of proportion.",
+    "register": "informal",
+    "origin": "Муха (fly) → слон (elephant): turning the tiniest insect into the largest land animal. A satirical image of grotesque exaggeration. Attributed to Lucian of Samosata (2nd century AD) in his essay 'The Fly' — one of the oldest recorded idioms still in common use.",
+    "why_it_matters": "One of the most beloved Russian idioms. The extreme contrast (fly vs. elephant) makes it instantly memorable. The animal pairing reflects Russian fondness for vivid, asymmetric animal-based metaphors.",
+    "variants": [
+      {"surface": "делать из мухи слона", "type": "exact"},
+      {"surface": "делает из мухи слона", "type": "inflectional_variant", "note": "He/she makes a mountain out of a molehill — present tense."},
+      {"surface": "не надо делать из мухи слона", "type": "inflectional_variant", "note": "Don't blow it out of proportion."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_vyvesti_na_chistuyu_vodu",
+    "canonical": "вывести на чистую воду",
+    "meaning": "To bring to light; to expose someone's wrongdoing; to unmask.",
+    "register": "neutral",
+    "origin": "Чистая вода (clean water): bringing something out of murky depths into clear, transparent water where it can be seen clearly. The fishing metaphor — pulling hidden things to the surface — implies that deception cannot survive scrutiny.",
+    "variants": [
+      {"surface": "вывести на чистую воду", "type": "exact"},
+      {"surface": "вывел его на чистую воду", "type": "inflectional_variant", "note": "He exposed him — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_kak_grom_sredi_yasnogo_neba",
+    "canonical": "как гром среди ясного неба",
+    "meaning": "Like a bolt from the blue; completely unexpected.",
+    "register": "neutral",
+    "origin": "Гром (thunder) среди ясного неба (clear sky): thunder without visible clouds is impossible — a natural impossibility used to describe total surprise. Parallel to English 'bolt from the blue.'",
+    "variants": [
+      {"surface": "как гром среди ясного неба", "type": "exact"},
+      {"surface": "гром среди ясного неба", "type": "inflectional_variant", "note": "Elliptical — without the simile marker 'как'."},
+      {"surface": "как гром с ясного неба", "type": "inflectional_variant", "note": "Variant with genitive 'с ясного неба' — from a clear sky."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_khorosho_smeyotsya_kto_smeyotsya_posled",
+    "canonical": "хорошо смеётся тот, кто смеётся последним",
+    "meaning": "He who laughs last laughs best.",
+    "register": "neutral",
+    "origin": "A proverb warning against premature celebration. Found across European languages. The Russian form emphasizes the quality of the final laugh ('хорошо смеётся' = laughs well) rather than just its timing.",
+    "variants": [
+      {"surface": "хорошо смеётся тот, кто смеётся последним", "type": "exact"},
+      {"surface": "смеётся тот, кто смеётся последним", "type": "inflectional_variant", "note": "Shortened form without 'хорошо'."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_ne_pluy_v_kolodets",
+    "canonical": "не плюй в колодец — пригодится воды напиться",
+    "meaning": "Don't bite the hand that feeds you; don't spit in the well you may need to drink from.",
+    "register": "neutral",
+    "origin": "Колодец (well): the village well was a common resource — fouling it harmed everyone, including yourself. The proverb encodes prudence and community interdependence. The folk wisdom is almost universally recognized in Russian culture.",
+    "variants": [
+      {"surface": "не плюй в колодец — пригодится воды напиться", "type": "exact"},
+      {"surface": "не плюй в колодец", "type": "inflectional_variant", "note": "Elliptical — the first half alone, well understood."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_snyat_slivki",
+    "canonical": "снять сливки",
+    "meaning": "To skim the cream; to take the best part for oneself.",
+    "register": "neutral",
+    "origin": "Сливки (cream): cream rises to the top of fresh milk. Skimming it off first gets the richest, most valuable portion. The expression applies to taking the best opportunities, the most profitable deals, or the most desirable partners.",
+    "variants": [
+      {"surface": "снять сливки", "type": "exact"},
+      {"surface": "снял сливки", "type": "inflectional_variant", "note": "He skimmed the cream — took the best for himself."},
+      {"surface": "снимать сливки", "type": "inflectional_variant", "note": "Imperfective form — habitually skimming."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_okazatsya_u_razbitogo_koryta",
+    "canonical": "оказаться у разбитого корыта",
+    "meaning": "To end up back at square one with nothing; to be left with a broken trough.",
+    "register": "neutral",
+    "origin": "From Pushkin's 'The Tale of the Fisherman and the Fish' (1833): the greedy old woman demands ever more from the magic fish until it takes everything back, leaving her at the broken trough (разбитое корыто) she started with.",
+    "why_it_matters": "Directly from Pushkin — one of the most literate Russian idioms. Knowing its source shows the depth of classical literature in Russian everyday speech.",
+    "variants": [
+      {"surface": "оказаться у разбитого корыта", "type": "exact"},
+      {"surface": "у разбитого корыта", "type": "inflectional_variant", "note": "Elliptical — back to square one, having lost everything."},
+      {"surface": "остаться у разбитого корыта", "type": "inflectional_variant", "note": "To be left with nothing — with 'остаться' (to be left)."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_toloch_vodu_v_stupe",
+    "canonical": "толочь воду в ступе",
+    "meaning": "To pound water in a mortar; to do pointless, unproductive work.",
+    "register": "neutral",
+    "origin": "Ступа (mortar): pounding water — which cannot be ground — is the ultimate futile task. The image is ancient, appearing in Erasmus's Adages ('in aqua scribis') and Russian folk usage. The mortar evokes traditional village life.",
+    "variants": [
+      {"surface": "толочь воду в ступе", "type": "exact"},
+      {"surface": "это всё равно что толочь воду в ступе", "type": "inflectional_variant", "note": "It's like pounding water in a mortar — this is useless."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_kak_syr_v_masle",
+    "canonical": "как сыр в масле кататься",
+    "meaning": "Like cheese rolling in butter; to live in luxury and comfort.",
+    "register": "informal",
+    "origin": "Сыр (cheese) rolling in масло (butter) — immersed in richness, effortlessly gliding through plenty. A deliciously food-centered image of prosperity. The verb 'кататься' (to roll/ride) suggests effortless movement through wealth.",
+    "variants": [
+      {"surface": "как сыр в масле кататься", "type": "exact"},
+      {"surface": "живёт как сыр в масле", "type": "inflectional_variant", "note": "He/she lives like a king — like cheese in butter."},
+      {"surface": "как сыр в масле", "type": "inflectional_variant", "note": "Elliptical adverbial form."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_myt_kosti",
+    "canonical": "мыть кости",
+    "meaning": "To gossip about someone; to wash someone's bones behind their back.",
+    "register": "informal",
+    "origin": "From the ancient ritual of washing the bones of the dead before reburial — a practice that involved the whole community discussing the deceased's life and character. 'Washing bones' transferred to talking about living people behind their backs.",
+    "variants": [
+      {"surface": "мыть кости", "type": "exact"},
+      {"surface": "перемывать кости", "type": "inflectional_variant", "note": "To re-wash the bones — to gossip repeatedly, more intensive form."},
+      {"surface": "моют ему кости", "type": "inflectional_variant", "note": "They're gossiping about him."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_ne_v_konya_korm",
+    "canonical": "не в коня корм",
+    "meaning": "The fodder is wasted on that horse; effort wasted on someone who doesn't appreciate it.",
+    "register": "informal",
+    "origin": "Конь (horse) + корм (fodder/feed): expensive feed given to a horse that cannot benefit from it is wasted. The expression implies that education, generosity, or quality are squandered on someone unworthy or unappreciative.",
+    "variants": [
+      {"surface": "не в коня корм", "type": "exact"},
+      {"surface": "ему не в коня корм", "type": "inflectional_variant", "note": "It's wasted on him — he doesn't appreciate it."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_rezat_pravdu_matku",
+    "canonical": "резать правду-матку",
+    "meaning": "To tell it like it is; to speak blunt, unvarnished truth.",
+    "register": "informal",
+    "origin": "Правда-матка: 'mother truth' — the raw, unembellished truth in its most potent form. 'Резать' (to cut) suggests the sharpness and directness of such speech. A characteristically Russian valorization of blunt honesty over diplomatic softening.",
+    "why_it_matters": "The compound 'правда-матка' is itself culturally rich — matka (mother) here suggests the pure, original form of truth, not dressed up or softened.",
+    "variants": [
+      {"surface": "резать правду-матку", "type": "exact"},
+      {"surface": "режет правду-матку", "type": "inflectional_variant", "note": "He/she tells it straight — present tense."},
+      {"surface": "говорить правду-матку в глаза", "type": "inflectional_variant", "note": "To tell the truth to someone's face — direct confrontation form."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_kogda_rak_na_gore_svistnet",
+    "canonical": "когда рак на горе свистнет",
+    "meaning": "When pigs fly; when the crayfish whistles on the mountain.",
+    "register": "informal",
+    "origin": "Рак (crayfish) + гора (mountain) + свистнуть (to whistle): crayfish cannot whistle, especially not on a mountain (their natural habitat is water). An impossible scenario encodes 'never.' Compare English 'when pigs fly,' German 'wenn Schweine fliegen.'",
+    "why_it_matters": "Each culture has its own 'impossible animal scenario' for 'never.' The Russian crayfish is one of the most recognizable and beloved. It highlights how absurdist animal imagery is a cross-cultural mechanism for expressing impossibility.",
+    "variants": [
+      {"surface": "когда рак на горе свистнет", "type": "exact"},
+      {"surface": "когда рак свистнет", "type": "inflectional_variant", "note": "Shortened form — when the crayfish whistles."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_brosit_perchatku",
+    "canonical": "бросить перчатку",
+    "meaning": "To throw down the gauntlet; to issue a challenge.",
+    "register": "neutral",
+    "origin": "Перчатка (glove, gauntlet): in medieval European knight culture, throwing a glove was a formal challenge to a duel. The expression entered Russian via French chivalric culture and retains its combative connotation in modern usage.",
+    "variants": [
+      {"surface": "бросить перчатку", "type": "exact"},
+      {"surface": "бросить кому-то перчатку", "type": "inflectional_variant", "note": "To throw down the gauntlet to someone — with dative recipient."},
+      {"surface": "подобрать перчатку", "type": "inflectional_variant", "note": "To pick up the gauntlet — to accept the challenge."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_za_dvumya_zaycami",
+    "canonical": "за двумя зайцами погонишься — ни одного не поймаешь",
+    "meaning": "Chase two hares and you'll catch neither; don't try to do two things at once.",
+    "register": "neutral",
+    "origin": "Заяц (hare): a fast, evasive animal. Chasing two simultaneously splits one's focus and dooms both pursuits. A proverb of singular focus and the danger of divided attention. Parallel to Chinese and Latin proverbial wisdom on the same theme.",
+    "variants": [
+      {"surface": "за двумя зайцами погонишься — ни одного не поймаешь", "type": "exact"},
+      {"surface": "за двумя зайцами", "type": "inflectional_variant", "note": "Elliptical — the first clause alone, understood to imply the full proverb."},
+      {"surface": "гнаться за двумя зайцами", "type": "inflectional_variant", "note": "To chase two hares — infinitive form."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_staraya_pesnya_na_novyy_lad",
+    "canonical": "старая песня на новый лад",
+    "meaning": "Old wine in new bottles; the same old story in a new guise.",
+    "register": "neutral",
+    "origin": "Старая песня (old song) на новый лад (in a new style/tune): the song hasn't changed, only its arrangement. The expression captures superficial novelty over fundamental sameness — a new style masking unchanged content.",
+    "variants": [
+      {"surface": "старая песня на новый лад", "type": "exact"},
+      {"surface": "всё та же старая песня", "type": "inflectional_variant", "note": "Same old story — same old song."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_golyi_kak_sokol",
+    "canonical": "гол как сокол",
+    "meaning": "Stone broke; penniless; bare as a falcon.",
+    "register": "informal",
+    "origin": "Сокол (falcon) + гол (naked/bare): falcons have smooth, streamlined plumage — nothing hidden in their feathers. But the expression may also derive from 'сокол' as a medieval battering ram of bare metal. Either way, 'bare as a falcon' = having nothing.",
+    "variants": [
+      {"surface": "гол как сокол", "type": "exact"},
+      {"surface": "гол как сокол остался", "type": "inflectional_variant", "note": "Left without a penny to his name."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_v_tikhom_omute_cherti_vodyatsya",
+    "canonical": "в тихом омуте черти водятся",
+    "meaning": "Still waters run deep; beware the quiet ones.",
+    "register": "neutral",
+    "origin": "Омут (still pool, deep water) + черти (devils): in Russian folklore, devils and water spirits (водяные) lurk in deep, still pools — not in noisy rapids. The expression warns that quiet exteriors hide dark depths.",
+    "why_it_matters": "The Russian version is notably darker than English 'still waters run deep' — explicitly mentioning devils. It reveals the folk-superstition layer underlying everyday Russian idiom.",
+    "variants": [
+      {"surface": "в тихом омуте черти водятся", "type": "exact"},
+      {"surface": "в тихом омуте черти", "type": "inflectional_variant", "note": "Elliptical — still waters run deep."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_u_semi_nyanek_ditya_bez_glaza",
+    "canonical": "у семи нянек дитя без глаза",
+    "meaning": "Too many cooks spoil the broth; with seven nannies the child is left unsupervised.",
+    "register": "neutral",
+    "origin": "Нянька (nanny) + дитя (child): seven nannies for one child — each assumes the others are watching, and the child is left without supervision. The proverb encodes collective irresponsibility through distributed accountability.",
+    "variants": [
+      {"surface": "у семи нянек дитя без глаза", "type": "exact"},
+      {"surface": "семь нянек", "type": "inflectional_variant", "note": "Shorthand reference — seven nannies (implying the full proverb)."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_rvat_na_sebe_volosy",
+    "canonical": "рвать на себе волосы",
+    "meaning": "To tear one's hair out; to be in extreme distress or regret.",
+    "register": "neutral",
+    "origin": "Physically tearing one's hair is an ancient grief gesture documented across Middle Eastern and classical cultures (Jeremiah, Ezra, Homer). Russian preserves the image as a metaphor for any extreme self-reproach or regret.",
+    "variants": [
+      {"surface": "рвать на себе волосы", "type": "exact"},
+      {"surface": "рвёт на себе волосы", "type": "inflectional_variant", "note": "He/she is tearing their hair out — present tense."},
+      {"surface": "теперь рви на себе волосы", "type": "inflectional_variant", "note": "Now you can tear your hair out — done out of regret."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_sidet_na_dvukh_stulyakh",
+    "canonical": "сидеть на двух стульях",
+    "meaning": "To sit on two chairs; to try to please two opposing parties; to have it both ways.",
+    "register": "neutral",
+    "origin": "Стул (chair): sitting between two chairs — with each buttock on a different seat — is physically precarious and ultimately untenable. The image captures the impossibility of simultaneously serving two incompatible masters.",
+    "variants": [
+      {"surface": "сидеть на двух стульях", "type": "exact"},
+      {"surface": "нельзя сидеть на двух стульях", "type": "inflectional_variant", "note": "You can't have it both ways — negated form."},
+      {"surface": "сидит на двух стульях", "type": "inflectional_variant", "note": "He's trying to please everyone."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_stavit_telegu_vperedi_loshadi",
+    "canonical": "ставить телегу впереди лошади",
+    "meaning": "To put the cart before the horse.",
+    "register": "neutral",
+    "origin": "Телега (cart) + лошадь (horse): placing the cart before the horse reverses the proper order. Russian shares this proverb with virtually all European languages — a logical error made vivid through concrete imagery.",
+    "variants": [
+      {"surface": "ставить телегу впереди лошади", "type": "exact"},
+      {"surface": "телегу поставил впереди лошади", "type": "inflectional_variant", "note": "He put the cart before the horse — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_net_dyma_bez_ognya",
+    "canonical": "нет дыма без огня",
+    "meaning": "There's no smoke without fire.",
+    "register": "neutral",
+    "origin": "A universal European proverb. Дым (smoke) + огонь (fire): smoke cannot exist without fire — rumors typically have some basis in truth. The Russian form exactly parallels English, French, German, Spanish, Italian, and Portuguese equivalents.",
+    "variants": [
+      {"surface": "нет дыма без огня", "type": "exact"},
+      {"surface": "без огня дыма не бывает", "type": "inflectional_variant", "note": "Variant word order: without fire there is no smoke."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_ne_govori_gop",
+    "canonical": "не говори «гоп», пока не перепрыгнешь",
+    "meaning": "Don't count your chickens before they hatch; don't say 'hop' until you've jumped.",
+    "register": "neutral",
+    "origin": "Гоп (hop) is the exclamation made when jumping over an obstacle. Saying it before completing the jump tempts fate — the proverb warns against premature celebration of future success.",
+    "variants": [
+      {"surface": "не говори «гоп», пока не перепрыгнешь", "type": "exact"},
+      {"surface": "не говори гоп", "type": "inflectional_variant", "note": "Shortened imperative — don't count your chickens."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_za_semiyu_zamkami",
+    "canonical": "за семью замками",
+    "meaning": "Under seven locks; deeply secret; heavily guarded.",
+    "register": "neutral",
+    "origin": "Семь замков (seven locks): seven is the number of completeness in Slavic folk tradition. Something sealed with seven locks is maximally secured — the number emphasizes total inaccessibility rather than a literal count of locks.",
+    "why_it_matters": "The number seven recurs in Russian folklore ('за семью морями,' 'семь пятниц') in ways that differ from English. Understanding this helps learners recognize the cultural weight of 'семь' in Russian idiom.",
+    "variants": [
+      {"surface": "за семью замками", "type": "exact"},
+      {"surface": "держать за семью замками", "type": "inflectional_variant", "note": "To keep under seven locks — to keep deeply secret."},
+      {"surface": "под семью замками", "type": "inflectional_variant", "note": "Under seven locks — variant with 'под' (under)."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_razbit_v_pukh_i_prak",
+    "canonical": "разбить в пух и прах",
+    "meaning": "To smash to smithereens; to utterly destroy or defeat.",
+    "register": "neutral",
+    "origin": "Пух (down, fluff) + прах (dust, ashes): reducing something to feathers and ash — the lightest, most dissipated substances. A total destruction so complete nothing substantial remains. Used of military defeats, arguments, and business failures.",
+    "variants": [
+      {"surface": "разбить в пух и прах", "type": "exact"},
+      {"surface": "разнести в пух и прах", "type": "inflectional_variant", "note": "Variant with 'разнести' (to scatter/blast) — same meaning."},
+      {"surface": "разбит в пух и прах", "type": "inflectional_variant", "note": "Was smashed to smithereens — passive/past."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_odin_v_pole_ne_voin",
+    "canonical": "один в поле не воин",
+    "meaning": "One man in a field is not a warrior; no man is an island.",
+    "register": "neutral",
+    "origin": "A military proverb: a single soldier on a battlefield cannot fight effectively alone. The expression encodes the cultural value of collective action over individual heroism — a recurring theme in Russian communal tradition.",
+    "variants": [
+      {"surface": "один в поле не воин", "type": "exact"},
+      {"surface": "один в поле не воин, а в добрых людях — сила", "type": "inflectional_variant", "note": "Extended form: one alone is not a warrior, but in good people lies strength."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_sem_pyatnic_na_nedele",
+    "canonical": "семь пятниц на неделе",
+    "meaning": "Seven Fridays in a week; someone who constantly changes their mind.",
+    "register": "informal",
+    "origin": "Пятница (Friday): in old Russian markets, Friday was the traditional day for settling debts and completing deals. Someone with 'seven Fridays a week' constantly renegotiated — a scathing characterization of unreliability. The number seven again signals completeness/excess.",
+    "variants": [
+      {"surface": "семь пятниц на неделе", "type": "exact"},
+      {"surface": "у него семь пятниц на неделе", "type": "inflectional_variant", "note": "He changes his mind all the time."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_v_chuzhom_glazu_solominku",
+    "canonical": "в чужом глазу соломинку видишь, а в своём бревна не замечаешь",
+    "meaning": "You see the mote in another's eye but not the beam in your own.",
+    "register": "neutral",
+    "origin": "From the Sermon on the Mount (Matthew 7:3-5). Соломинка (straw) in another's eye vs. бревно (log/beam) in one's own — the biblical contrast between hypocritical perception of others' small faults while ignoring one's own enormous ones. Universally known in Orthodox Christian culture.",
+    "variants": [
+      {"surface": "в чужом глазу соломинку видишь, а в своём бревна не замечаешь", "type": "exact"},
+      {"surface": "в чужом глазу соломинку видит", "type": "inflectional_variant", "note": "He sees the speck in another's eye — third person, truncated."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_delit_shkuru_neubitogo_medvedya",
+    "canonical": "делить шкуру неубитого медведя",
+    "meaning": "To count one's chickens before they hatch; to divide the skin of an unshot bear.",
+    "register": "neutral",
+    "origin": "Медведь (bear) + шкура (skin/pelt): dividing the bear's valuable fur before it has been killed. The bear-hunting context is distinctly Russian — replacing the general European 'counting chickens' with a vivid image from the forest economy.",
+    "why_it_matters": "The bear is Russia's iconic animal — its appearance here is not accidental. The phrase connects to a deep cultural layer of bear-hunting folklore and the practical economy of the Russian forest.",
+    "variants": [
+      {"surface": "делить шкуру неубитого медведя", "type": "exact"},
+      {"surface": "не дели шкуру неубитого медведя", "type": "inflectional_variant", "note": "Don't count your chickens — imperative."},
+      {"surface": "продавать шкуру неубитого медведя", "type": "inflectional_variant", "note": "Variant with 'продавать' (to sell) — to sell the bear's skin before it's caught."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_ne_vse_zoloto_chto_blestit",
+    "canonical": "не всё золото, что блестит",
+    "meaning": "All that glitters is not gold.",
+    "register": "neutral",
+    "origin": "From a medieval Latin proverb ('non omne quod nitet aurum est'), popularized in Western Europe by Chaucer and Shakespeare. The Russian version is identical in meaning and is equally universal. The image warns against mistaking surface appeal for genuine value.",
+    "variants": [
+      {"surface": "не всё золото, что блестит", "type": "exact"},
+      {"surface": "не всё то золото, что блестит", "type": "inflectional_variant", "note": "Variant with emphatic 'то' — not everything that gleams is gold."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_veshat_sobak",
+    "canonical": "вешать собак на кого-то",
+    "meaning": "To lay the blame on someone; to put the dogs on someone.",
+    "register": "informal",
+    "origin": "Собака (dog): 'hanging dogs' on someone — loading them with accusations. The image is of dogs being strapped to a person as a form of punishment or humiliation. Historically, being beaten with a dead dog was a ritual public shaming.",
+    "why_it_matters": "Learners often confuse this with 'вешать лапшу на уши' (to bamboozle). The verbs overlap but the objects (собаки vs. лапша) signal completely different meanings: blame vs. deception.",
+    "variants": [
+      {"surface": "вешать собак на кого-то", "type": "exact"},
+      {"surface": "на меня вешают собак", "type": "inflectional_variant", "note": "They're pinning the blame on me."},
+      {"surface": "навешали собак", "type": "inflectional_variant", "note": "They laid all the blame — perfective past."}
+    ],
+    "confusables": ["ru_veshat_lapshu_na_ushi"]
+  },
+  {
+    "id": "ru_na_miru_i_smert_krasna",
+    "canonical": "на миру и смерть красна",
+    "meaning": "Even death is beautiful in company; there is strength and dignity in shared fate.",
+    "register": "neutral",
+    "origin": "Мир (here: community, world): a proverb encoding the Russian cultural value of collective solidarity. Even the most terrible experience (death) becomes bearable — even beautiful — when shared. A deep expression of communal ethos over individualism.",
+    "why_it_matters": "Encodes one of the most fundamental values in Russian folk culture: collective over individual. Understanding it gives insight into how Russian culture frames suffering and heroism differently from individualist Western norms.",
+    "variants": [
+      {"surface": "на миру и смерть красна", "type": "exact"}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_perevesti_dukh",
+    "canonical": "перевести дух",
+    "meaning": "To catch one's breath; to take a breather; to pause and recover.",
+    "register": "neutral",
+    "origin": "Дух (spirit, breath): 'translating' or shifting one's breath — a pause that allows recovery. The verb перевести (to transfer, to translate) applied to breath creates a subtle image of breath moving from exertion to rest.",
+    "variants": [
+      {"surface": "перевести дух", "type": "exact"},
+      {"surface": "дайте перевести дух", "type": "inflectional_variant", "note": "Let me catch my breath — first-person request."},
+      {"surface": "едва успел перевести дух", "type": "inflectional_variant", "note": "Barely had time to catch his breath."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_vezet_kak_utoplenniku",
+    "canonical": "везёт как утопленнику",
+    "meaning": "As lucky as a drowned man; having terrible luck.",
+    "register": "informal",
+    "origin": "Утопленник (drowned man): a drowned man's fate is the worst possible — ironic understatement for terrible luck. Russian has a tradition of dark, ironic expressions of misfortune. The expression uses the same 'везти' (to be lucky) as positive luck expressions, inverting them sardonically.",
+    "why_it_matters": "Russian irony often works by using positive vocabulary in maximally negative contexts. 'Везёт' (lucky) applied to a drowned man epitomizes this darkly comic register.",
+    "variants": [
+      {"surface": "везёт как утопленнику", "type": "exact"},
+      {"surface": "везёт ему как утопленнику", "type": "inflectional_variant", "note": "He's as lucky as a drowned man — with explicit subject."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "ru_zhit_kak_koshka_s_sobakou",
+    "canonical": "жить как кошка с собакой",
+    "meaning": "To live like cat and dog; to be constantly at odds.",
+    "register": "informal",
+    "origin": "Кошка (cat) + собака (dog): the proverbial enmity of cats and dogs is a cross-cultural metaphor for constant quarreling. Russian uses the same animal pairing as English and most European languages to encode domestic conflict.",
+    "variants": [
+      {"surface": "жить как кошка с собакой", "type": "exact"},
+      {"surface": "живут как кошка с собакой", "type": "inflectional_variant", "note": "They live like cat and dog — constant fighting."},
+      {"surface": "как кошка с собакой", "type": "inflectional_variant", "note": "Like cat and dog — adverbial shorthand."}
+    ],
+    "confusables": []
+  }
+]
