@@ -800,6 +800,7 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
             PhraseVariant("Hand auf Herz", MatchType.orthographic_variant,
                           note="Omission of definite article (colloquial)."),
         ),
+        confusables=("fr_avoir_coeur_sur_main",),
         tags=("honesty", "sincerity", "gesture-idiom"),
     ),
 
@@ -1112,6 +1113,7 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
             PhraseVariant("casser les oreilles", MatchType.confusable_not_same,
                           note="\u2018Casser les oreilles\u2019 = to make an unbearable noise, not to bore/annoy."),
         ),
+        confusables=("fr_mettre_les_pieds_dans_le_plat",),
         tags=("annoyance", "informal", "body-metaphor"),
     ),
 
@@ -1232,7 +1234,6 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
             "The imperative form revenons is fixed; the phrase is highly formulaic."
         ),
         variants=(
-            PhraseVariant("revenons \u00e0 nos moutons", MatchType.exact),
             PhraseVariant("revenons \u00e0 nos moutons", MatchType.exact),
             PhraseVariant("mais revenons \u00e0 ces moutons", MatchType.modernized_variant,
                           note="The original medieval form with \u2018ces\u2019 (these) for \u2018nos\u2019 (our)."),
@@ -1663,6 +1664,1694 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
                                "marking a specific path."),
         ),
         tags=("preparation", "planning", "formal", "surveying-metaphor"),
+    ),
+
+    # ── Italian catalog ───────────────────────────────────────────────────────
+
+    "it_fare_bella_figura": PhraseFamily(
+        id="it_fare_bella_figura",
+        language="it",
+        canonical_form="fare bella figura",
+        meaning="To make a good impression; to appear competent, elegant, or gracious.",
+        register="neutral",
+        origin=(
+            "Figura in Italian means both 'figure/shape' and 'impression/appearance.' "
+            "Making a bella (beautiful) figura is a cornerstone of Italian social values — "
+            "the awareness of how one appears to others. Its opposite, fare brutta figura, "
+            "is equally powerful and equally common."
+        ),
+        why_it_matters=(
+            "This expression is untranslatable in a single English phrase. "
+            "It captures a cultural priority: performing well for one's audience "
+            "in dress, manner, speech, and gesture. Learners need both versions to navigate "
+            "Italian social commentary."
+        ),
+        variants=(
+            PhraseVariant("fare bella figura", MatchType.exact),
+            PhraseVariant("fa bella figura", MatchType.inflectional_variant,
+                          note="3rd-person present: he/she makes a good impression."),
+            PhraseVariant("fare una bella figura", MatchType.inflectional_variant,
+                          note="With indefinite article — equally common."),
+        ),
+        confusables=("it_fare_brutta_figura",),
+        tags=("impression", "appearance", "culture", "social"),
+    ),
+
+    "it_fare_brutta_figura": PhraseFamily(
+        id="it_fare_brutta_figura",
+        language="it",
+        canonical_form="fare brutta figura",
+        meaning="To make a bad impression; to embarrass oneself in public.",
+        register="neutral",
+        origin=(
+            "The direct opposite of fare bella figura. Brutta (ugly, bad) figura "
+            "(impression) — appearing poorly dressed, ill-mannered, or incompetent. "
+            "Both expressions are neutral register and used constantly in Italian conversation."
+        ),
+        why_it_matters=(
+            "Equally important as its opposite. Italian speakers use these two expressions "
+            "to comment on virtually any social performance. Learners who know only one half "
+            "of the pair miss half the cultural commentary."
+        ),
+        variants=(
+            PhraseVariant("fare brutta figura", MatchType.exact),
+            PhraseVariant("fa brutta figura", MatchType.inflectional_variant,
+                          note="3rd-person present: he/she makes a bad impression."),
+            PhraseVariant("fare una brutta figura", MatchType.inflectional_variant,
+                          note="With indefinite article — equally common."),
+        ),
+        confusables=("it_fare_bella_figura",),
+        tags=("embarrassment", "impression", "culture", "social"),
+    ),
+
+    "it_essere_al_verde": PhraseFamily(
+        id="it_essere_al_verde",
+        language="it",
+        canonical_form="essere al verde",
+        meaning="To be broke; to have no money.",
+        register="informal",
+        origin=(
+            "From medieval candles: the candle stub near the green (verde) painted base "
+            "meant the candle — and the money — had nearly run out. "
+            "The image of the green marking on the lowest part of the candle gave rise "
+            "to this expression for financial exhaustion."
+        ),
+        why_it_matters=(
+            "One of the most common informal expressions for lacking money. "
+            "Non-compositional: al verde has no obvious meaning from its parts, "
+            "making it a classic learner trap. The color verde is the key cultural cue."
+        ),
+        variants=(
+            PhraseVariant("essere al verde", MatchType.exact),
+            PhraseVariant("sono al verde", MatchType.inflectional_variant,
+                          note="1st-person: I'm broke."),
+            PhraseVariant("è al verde", MatchType.inflectional_variant,
+                          note="3rd-person: he/she is broke."),
+            PhraseVariant("restare al verde", MatchType.inflectional_variant,
+                          note="To end up broke."),
+        ),
+        tags=("money", "informal", "colloquial", "financial"),
+    ),
+
+    "it_non_vedo_lora": PhraseFamily(
+        id="it_non_vedo_lora",
+        language="it",
+        canonical_form="non vedo l'ora",
+        meaning="I can't wait; I'm looking forward to it eagerly.",
+        register="neutral",
+        origin=(
+            "Literally 'I don't see the hour' — time seems to not pass when one is "
+            "eagerly anticipating something. The expression is ancient; the hour "
+            "being invisible because impatience makes waiting unbearable."
+        ),
+        why_it_matters=(
+            "An extremely common expression of eager anticipation. The literal meaning "
+            "('I don't see the hour') is confusing for learners expecting a logical "
+            "construction. It must be learned as a fixed unit."
+        ),
+        variants=(
+            PhraseVariant("non vedo l'ora", MatchType.exact),
+            PhraseVariant("non vedo l'ora di", MatchType.inflectional_variant,
+                          note="Followed by infinitive: non vedo l'ora di vederti (I can't wait to see you)."),
+            PhraseVariant("non vedevo l'ora", MatchType.inflectional_variant,
+                          note="Imperfect: I couldn't wait / I had been looking forward to it."),
+        ),
+        tags=("anticipation", "enthusiasm", "neutral", "time"),
+    ),
+
+    "it_in_bocca_al_lupo": PhraseFamily(
+        id="it_in_bocca_al_lupo",
+        language="it",
+        canonical_form="in bocca al lupo",
+        meaning="Good luck! (literally: into the wolf's mouth)",
+        register="informal",
+        origin=(
+            "Hunters' expression: going into the wolf's mouth meant a successful hunt. "
+            "The ritual response is 'Crepi (il lupo)!' — 'May the wolf die!' "
+            "Saying 'grazie' instead is considered bad luck. The expression is used "
+            "before exams, performances, and any challenging endeavor."
+        ),
+        why_it_matters=(
+            "The standard colloquial way to wish someone luck. Learners who say "
+            "'buona fortuna' instead are understood but sound formal or foreign. "
+            "The ritual response 'Crepi!' is equally important to know."
+        ),
+        variants=(
+            PhraseVariant("in bocca al lupo", MatchType.exact),
+            PhraseVariant("Crepi!", MatchType.allusion,
+                          note="Ritual response: 'May the wolf die!' — required to complete the exchange."),
+        ),
+        tags=("good-luck", "informal", "ritual", "hunters"),
+    ),
+
+    "it_dare_una_mano": PhraseFamily(
+        id="it_dare_una_mano",
+        language="it",
+        canonical_form="dare una mano",
+        meaning="To give someone a hand; to help.",
+        register="neutral",
+        origin=(
+            "Direct calque of the giving-of-hands concept found across European languages. "
+            "Italian mano (hand) derives from Latin manus. "
+            "Dar una mano in Spanish, donner un coup de main in French share the same image."
+        ),
+        why_it_matters=(
+            "An extremely common and natural way to offer or request help. "
+            "Learners often use aiutare (to help) which is correct but less idiomatic "
+            "in casual speech. Dare una mano sounds more natural in everyday situations."
+        ),
+        variants=(
+            PhraseVariant("dare una mano", MatchType.exact),
+            PhraseVariant("mi dai una mano?", MatchType.inflectional_variant,
+                          note="Can you give me a hand? — very common request form."),
+            PhraseVariant("ti do una mano", MatchType.inflectional_variant,
+                          note="I'll give you a hand — offer form."),
+            PhraseVariant("dare una mano a", MatchType.inflectional_variant,
+                          note="With dative complement: dare una mano a qualcuno."),
+        ),
+        tags=("help", "assistance", "neutral", "everyday"),
+    ),
+
+    "it_perdere_la_testa": PhraseFamily(
+        id="it_perdere_la_testa",
+        language="it",
+        canonical_form="perdere la testa",
+        meaning="To lose one's head; to become infatuated or to act irrationally.",
+        register="neutral",
+        origin=(
+            "The image of 'losing the head' is pan-European, but in Italian it has "
+            "two distinct uses: losing rational control (acting recklessly) and falling "
+            "deeply in love (perdere la testa per qualcuno). Context disambiguates."
+        ),
+        why_it_matters=(
+            "The romantic sense (to fall head over heels for someone) is extremely common "
+            "in Italian songs and literature. Learners often encounter it in love songs "
+            "before understanding the dual meaning."
+        ),
+        variants=(
+            PhraseVariant("perdere la testa", MatchType.exact),
+            PhraseVariant("ho perso la testa", MatchType.inflectional_variant,
+                          note="I've lost my head / I've fallen head over heels."),
+            PhraseVariant("perdere la testa per", MatchType.inflectional_variant,
+                          note="To lose one's head over someone: perdere la testa per lei."),
+            PhraseVariant("perdo la testa", MatchType.inflectional_variant,
+                          note="Present: I'm losing my mind / I'm head over heels."),
+        ),
+        tags=("love", "irrationality", "neutral", "emotion"),
+    ),
+
+    "it_costare_un_occhio": PhraseFamily(
+        id="it_costare_un_occhio",
+        language="it",
+        canonical_form="costare un occhio della testa",
+        meaning="To cost an arm and a leg; to be extremely expensive.",
+        register="informal",
+        origin=(
+            "The eye (occhio) is treated as one of the most precious things one possesses; "
+            "paying 'an eye of the head' (un occhio della testa) signifies an absurd, "
+            "body-depleting price. A parallel to English 'cost an arm and a leg.'"
+        ),
+        why_it_matters=(
+            "The standard informal hyperbole for expressing that something is very "
+            "expensive. Learners need to recognise both the full form and the common "
+            "shortening costare un occhio."
+        ),
+        variants=(
+            PhraseVariant("costare un occhio della testa", MatchType.exact),
+            PhraseVariant("costa un occhio della testa", MatchType.inflectional_variant,
+                          note="It costs an arm and a leg."),
+            PhraseVariant("costare un occhio", MatchType.inflectional_variant,
+                          note="Shortened form — equally common in speech."),
+            PhraseVariant("costa un patrimonio", MatchType.confusable_not_same,
+                          note="Near-synonym: costs a fortune — more literal, less vivid."),
+        ),
+        tags=("expense", "hyperbole", "informal", "money"),
+    ),
+
+    "it_prendere_due_piccioni": PhraseFamily(
+        id="it_prendere_due_piccioni",
+        language="it",
+        canonical_form="prendere due piccioni con una fava",
+        meaning="To kill two birds with one stone (literally: to catch two pigeons with one bean).",
+        register="neutral",
+        origin=(
+            "Unlike the English bird-killing image, Italian uses pigeons (piccioni) "
+            "and a fava bean as bait for a trap. The bean catches both birds simultaneously. "
+            "The image reflects Italian pragmatism about resourcefulness."
+        ),
+        why_it_matters=(
+            "Learners who translate from English say 'uccidere due uccelli con una pietra' — "
+            "this is understood but sounds foreign. The piccioni/fava version is the "
+            "authentic Italian expression."
+        ),
+        variants=(
+            PhraseVariant("prendere due piccioni con una fava", MatchType.exact),
+            PhraseVariant("ho preso due piccioni con una fava", MatchType.inflectional_variant,
+                          note="Past: I killed two birds with one stone."),
+            PhraseVariant("uccidere due uccelli con una pietra", MatchType.confusable_not_same,
+                          note="Literal translation from English — understood but foreign-sounding."),
+        ),
+        tags=("efficiency", "resourcefulness", "neutral", "proverb"),
+    ),
+
+    "it_avere_le_mani_in_pasta": PhraseFamily(
+        id="it_avere_le_mani_in_pasta",
+        language="it",
+        canonical_form="avere le mani in pasta",
+        meaning="To have a hand in something; to be deeply involved in a matter.",
+        register="neutral",
+        origin=(
+            "The image is of hands kneading dough (pasta = dough, not pasta the food here) — "
+            "deeply embedded in the process. 'Avere le mani in pasta' implies both involvement "
+            "and influence, often with a slight connotation of insider knowledge or pulling strings."
+        ),
+        why_it_matters=(
+            "The word pasta misleads learners into thinking of the food. "
+            "Here pasta means 'dough' — the original meaning. Understanding the "
+            "bread-making image unlocks the metaphor: hands deep in dough = deep involvement."
+        ),
+        variants=(
+            PhraseVariant("avere le mani in pasta", MatchType.exact),
+            PhraseVariant("ha le mani in pasta", MatchType.inflectional_variant,
+                          note="He/she has a hand in it — most common form."),
+            PhraseVariant("mettere le mani in pasta", MatchType.inflectional_variant,
+                          note="To get involved, to put one's hands in (begin involvement)."),
+        ),
+        tags=("involvement", "influence", "neutral", "insider"),
+    ),
+
+    "it_essere_fuori_strada": PhraseFamily(
+        id="it_essere_fuori_strada",
+        language="it",
+        canonical_form="essere fuori strada",
+        meaning="To be on the wrong track; to be mistaken or misguided.",
+        register="neutral",
+        origin=(
+            "Literally 'to be off the road' — the image of having left the intended "
+            "path. Used both literally (wrong direction) and figuratively (wrong approach "
+            "or mistaken belief). Common in arguments, debates, and reasoning contexts."
+        ),
+        why_it_matters=(
+            "A versatile expression for calling out errors in reasoning or approach. "
+            "Learners often use sbagliato (wrong/mistaken) — fuori strada is more vivid "
+            "and idiomatic when describing someone's direction of thinking."
+        ),
+        variants=(
+            PhraseVariant("essere fuori strada", MatchType.exact),
+            PhraseVariant("sei fuori strada", MatchType.inflectional_variant,
+                          note="You're on the wrong track."),
+            PhraseVariant("è fuori strada", MatchType.inflectional_variant,
+                          note="He/she is on the wrong track."),
+            PhraseVariant("andare fuori strada", MatchType.inflectional_variant,
+                          note="To go off track — often used for going astray gradually."),
+        ),
+        tags=("error", "reasoning", "neutral", "direction"),
+    ),
+
+    "it_avere_la_luna_di_traverso": PhraseFamily(
+        id="it_avere_la_luna_di_traverso",
+        language="it",
+        canonical_form="avere la luna di traverso",
+        meaning="To be in a foul mood; to be cross or irritable (literally: to have the moon sideways).",
+        register="informal",
+        origin=(
+            "The moon (luna) controls moods in Italian superstition; when it's 'sideways' "
+            "(di traverso), things go wrong. Also expressed as alzarsi con la luna storta "
+            "(to get up with the crooked moon). Directly related to the word lunatic, "
+            "which derives from luna."
+        ),
+        why_it_matters=(
+            "The word luna (moon) explaining bad moods connects to lunatic in a way "
+            "learners find memorable. A rich cultural footnote for advanced learners: "
+            "the same belief that gave English lunatic drives this Italian idiom."
+        ),
+        variants=(
+            PhraseVariant("avere la luna di traverso", MatchType.exact),
+            PhraseVariant("ha la luna di traverso", MatchType.inflectional_variant,
+                          note="He/she is in a foul mood."),
+            PhraseVariant("alzarsi con la luna storta", MatchType.inflectional_variant,
+                          note="To get up on the wrong side of the bed — lit. 'crooked moon.'"),
+            PhraseVariant("avere la luna storta", MatchType.inflectional_variant,
+                          note="Variant with storta (crooked) instead of di traverso."),
+        ),
+        tags=("mood", "irritability", "informal", "moon-superstition"),
+    ),
+
+    "it_tirare_il_fiato": PhraseFamily(
+        id="it_tirare_il_fiato",
+        language="it",
+        canonical_form="tirare il fiato",
+        meaning="To catch one's breath; to take a moment to rest or recover.",
+        register="neutral",
+        origin=(
+            "Fiato (breath) from Latin flatus 'blowing, breath.' "
+            "Tirare il fiato literally means 'to pull/draw the breath' — "
+            "the image of deliberately drawing in air after exertion. "
+            "Also used figuratively for a brief respite from stress or pressure."
+        ),
+        why_it_matters=(
+            "Common in both physical and metaphorical contexts. Learners often use "
+            "riposarsi (to rest) — tirare il fiato is more idiomatic for a brief pause "
+            "rather than full rest."
+        ),
+        variants=(
+            PhraseVariant("tirare il fiato", MatchType.exact),
+            PhraseVariant("tiro il fiato", MatchType.inflectional_variant,
+                          note="I'm catching my breath."),
+            PhraseVariant("prendere fiato", MatchType.inflectional_variant,
+                          note="Near-synonym: to take a breath / catch one's breath."),
+            PhraseVariant("non avere fiato", MatchType.confusable_not_same,
+                          note="To be out of breath — different meaning."),
+        ),
+        tags=("rest", "breathing", "neutral", "recovery"),
+    ),
+
+    "it_dormire_sugli_allori": PhraseFamily(
+        id="it_dormire_sugli_allori",
+        language="it",
+        canonical_form="dormire sugli allori",
+        meaning="To rest on one's laurels; to stop making effort after initial success.",
+        register="neutral",
+        origin=(
+            "Allori (laurels) were the crowns awarded to Greek and Roman victors and poets. "
+            "The Italian expression, like the English equivalent, warns against using "
+            "past success as an excuse for present complacency. Common in motivational "
+            "and critical contexts."
+        ),
+        why_it_matters=(
+            "A direct parallel to the English 'rest on one's laurels' — the shared "
+            "classical origin makes this an ideal bridge for learners. The allori image "
+            "also connects to the historical weight of the laurel in Italian culture "
+            "(the laureate / laurea university degree)."
+        ),
+        variants=(
+            PhraseVariant("dormire sugli allori", MatchType.exact),
+            PhraseVariant("riposare sugli allori", MatchType.inflectional_variant,
+                          note="Variant with riposare (to rest) — equally common."),
+            PhraseVariant("non dormire sugli allori", MatchType.inflectional_variant,
+                          note="Not to rest on one's laurels — often used as encouragement."),
+        ),
+        tags=("complacency", "success", "neutral", "classical"),
+    ),
+
+    "it_mettere_il_carro_davanti_ai_buoi": PhraseFamily(
+        id="it_mettere_il_carro_davanti_ai_buoi",
+        language="it",
+        canonical_form="mettere il carro davanti ai buoi",
+        meaning="To put the cart before the ox; to do things in the wrong order.",
+        register="neutral",
+        origin=(
+            "The Italian version uses buoi (oxen) rather than the English 'horse.' "
+            "Historically oxen, not horses, pulled carts in Italian agriculture. "
+            "The expression warns against reversing the logical order of things — "
+            "acting before planning, or enjoying results before doing the work."
+        ),
+        why_it_matters=(
+            "A common proverb-like expression in planning discussions and arguments. "
+            "The oxen (buoi) detail is a useful reminder that Italian idioms often "
+            "reflect the agricultural reality of pre-industrial Italy."
+        ),
+        variants=(
+            PhraseVariant("mettere il carro davanti ai buoi", MatchType.exact),
+            PhraseVariant("metti il carro davanti ai buoi", MatchType.inflectional_variant,
+                          note="You're putting the cart before the ox."),
+            PhraseVariant("il carro davanti ai buoi", MatchType.inflectional_variant,
+                          note="Elliptical — just the image, commonly understood."),
+        ),
+        tags=("order", "planning", "neutral", "proverb", "agricultural"),
+    ),
+
+    # ── Portuguese catalog ────────────────────────────────────────────────────
+
+    "pt_fazer_vista_grossa": PhraseFamily(
+        id="pt_fazer_vista_grossa",
+        language="pt",
+        canonical_form="fazer vista grossa",
+        meaning="To turn a blind eye; to deliberately overlook something.",
+        register="neutral",
+        origin=(
+            "Vista (sight/view) + grossa (thick, coarse): to make one's view 'thick' "
+            "or blurry — seeing something but choosing not to see it clearly. "
+            "Used in both Brazilian and European Portuguese, especially in contexts "
+            "of authority looking away from wrongdoing."
+        ),
+        why_it_matters=(
+            "Common in journalistic and political language. Learners often use "
+            "ignorar (to ignore) which is correct but less idiomatic. "
+            "Fazer vista grossa implies deliberate choice, not mere inattention."
+        ),
+        variants=(
+            PhraseVariant("fazer vista grossa", MatchType.exact),
+            PhraseVariant("fez vista grossa", MatchType.inflectional_variant,
+                          note="Past: turned a blind eye."),
+            PhraseVariant("fazer vista grossa para", MatchType.inflectional_variant,
+                          note="With complement: to turn a blind eye to something."),
+        ),
+        tags=("complicity", "oversight", "neutral", "authority"),
+    ),
+
+    "pt_ficar_a_ver_navios": PhraseFamily(
+        id="pt_ficar_a_ver_navios",
+        language="pt",
+        canonical_form="ficar a ver navios",
+        meaning="To be left empty-handed; to miss out (literally: to be left watching ships sail away).",
+        register="informal",
+        origin=(
+            "The image of standing at the dock watching ships leave — the goods, "
+            "the opportunity, or the person you expected has departed. "
+            "A uniquely Portuguese expression reflecting the nation's seafaring history "
+            "and the poignancy of watching departures."
+        ),
+        why_it_matters=(
+            "This expression has no direct English equivalent and is deeply Portuguese — "
+            "the ship imagery connects to the Age of Discovery and the emotional weight "
+            "of watching departures (related to saudade). A cultural gem."
+        ),
+        variants=(
+            PhraseVariant("ficar a ver navios", MatchType.exact),
+            PhraseVariant("ficou a ver navios", MatchType.inflectional_variant,
+                          note="He/she was left empty-handed."),
+            PhraseVariant("fiquei a ver navios", MatchType.inflectional_variant,
+                          note="I was left watching ships / I missed out."),
+        ),
+        tags=("disappointment", "missing-out", "informal", "seafaring", "cultural"),
+    ),
+
+    "pt_cair_como_uma_luva": PhraseFamily(
+        id="pt_cair_como_uma_luva",
+        language="pt",
+        canonical_form="cair como uma luva",
+        meaning="To fit like a glove; to be perfectly suited.",
+        register="neutral",
+        origin=(
+            "Luva (glove) from Germanic *lofa (palm of the hand). "
+            "The glove that fits perfectly is the pan-European image of exact suitability. "
+            "Used in Brazilian and European Portuguese for anything — clothes, plans, "
+            "people — that fits a situation exactly."
+        ),
+        why_it_matters=(
+            "A direct parallel to the English 'fits like a glove.' The Portuguese verb "
+            "cair (to fall/drop) is the key difference from English: something 'falls' "
+            "perfectly into place, rather than 'fitting.'"
+        ),
+        variants=(
+            PhraseVariant("cair como uma luva", MatchType.exact),
+            PhraseVariant("caiu como uma luva", MatchType.inflectional_variant,
+                          note="It fit like a glove (past)."),
+            PhraseVariant("serve como uma luva", MatchType.inflectional_variant,
+                          note="Near-synonym with servir (to serve/fit) — also common."),
+        ),
+        tags=("suitability", "perfect-fit", "neutral", "clothes"),
+    ),
+
+    "pt_pagar_o_pato": PhraseFamily(
+        id="pt_pagar_o_pato",
+        language="pt",
+        canonical_form="pagar o pato",
+        meaning="To pay the price for something; to take the blame or face consequences.",
+        register="informal",
+        origin=(
+            "Pato (duck) possibly from a historical story about an innocent duck "
+            "that suffered for another's mistake. Alternatively, pato may derive from "
+            "an older sense of 'misfortune.' Common in Brazil; also used in Portugal "
+            "though less frequently."
+        ),
+        why_it_matters=(
+            "The duck (pato) makes this expression memorable and non-compositional. "
+            "Learners cannot guess the meaning from the words alone. "
+            "A good marker of informal register and Brazilian Portuguese in particular."
+        ),
+        variants=(
+            PhraseVariant("pagar o pato", MatchType.exact),
+            PhraseVariant("paguei o pato", MatchType.inflectional_variant,
+                          note="I paid the price / I took the blame."),
+            PhraseVariant("vai pagar o pato", MatchType.inflectional_variant,
+                          note="He/she will face the consequences."),
+        ),
+        tags=("consequences", "blame", "informal", "Brazilian"),
+    ),
+
+    "pt_meter_os_pes_pelas_maos": PhraseFamily(
+        id="pt_meter_os_pes_pelas_maos",
+        language="pt",
+        canonical_form="meter os pés pelas mãos",
+        meaning="To make a mess of things; to bungle; to put one's foot in it.",
+        register="informal",
+        origin=(
+            "Literally 'to put feet through/by hands' — the confusion of feet and hands "
+            "creates a vivid image of total coordination failure. "
+            "Primarily European Portuguese; Brazilian Portuguese prefers meter os pés "
+            "pelas mãos or cometer uma gafe."
+        ),
+        why_it_matters=(
+            "The feet-and-hands confusion is visually funny and memorable. "
+            "An important informal expression for blundering. "
+            "Learners need this alongside English 'put one's foot in one's mouth.'"
+        ),
+        variants=(
+            PhraseVariant("meter os pés pelas mãos", MatchType.exact),
+            PhraseVariant("meteu os pés pelas mãos", MatchType.inflectional_variant,
+                          note="He/she bungled it."),
+            PhraseVariant("meteu o pé", MatchType.inflectional_variant,
+                          note="Shortened form — put their foot in it."),
+        ),
+        tags=("blunder", "mistake", "informal", "coordination"),
+    ),
+
+    "pt_matar_dois_coelhos": PhraseFamily(
+        id="pt_matar_dois_coelhos",
+        language="pt",
+        canonical_form="matar dois coelhos de uma cajadada",
+        meaning="To kill two birds with one stone (literally: to kill two rabbits with one blow of a staff).",
+        register="neutral",
+        origin=(
+            "Portuguese uses coelhos (rabbits) and cajadada (blow of a shepherd's staff), "
+            "not birds and stones. The shepherd's crook image reflects the pastoral "
+            "tradition of the Iberian Peninsula. Similar to the Spanish version "
+            "but with distinct vocabulary."
+        ),
+        why_it_matters=(
+            "The rabbits-and-staff version sounds strange to English learners who expect "
+            "'birds and stones.' Learning this phrase teaches learners that idioms are "
+            "language-specific, not universal."
+        ),
+        variants=(
+            PhraseVariant("matar dois coelhos de uma cajadada", MatchType.exact),
+            PhraseVariant("matar dois coelhos de uma cajadada só", MatchType.inflectional_variant,
+                          note="With só (only) for emphasis — very common."),
+            PhraseVariant("matar dois pássaros de uma cajadada", MatchType.inflectional_variant,
+                          note="Variant with pássaros (birds) — less common."),
+        ),
+        tags=("efficiency", "resourcefulness", "neutral", "proverb"),
+    ),
+
+    "pt_dar_uma_mao": PhraseFamily(
+        id="pt_dar_uma_mao",
+        language="pt",
+        canonical_form="dar uma mão",
+        meaning="To give someone a hand; to help.",
+        register="neutral",
+        origin=(
+            "Mão from Latin manus (hand). The giving-of-the-hand as a metaphor for "
+            "help is pan-European. Portuguese dar uma mão parallels Italian dare una mano, "
+            "Spanish dar una mano, and French donner un coup de main."
+        ),
+        why_it_matters=(
+            "The most natural way to offer or ask for help in informal speech. "
+            "Learners who use only ajudar (to help) are understood but miss "
+            "the warmer, more colloquial tone of dar uma mão."
+        ),
+        variants=(
+            PhraseVariant("dar uma mão", MatchType.exact),
+            PhraseVariant("me dás uma mão?", MatchType.inflectional_variant,
+                          note="EP: Can you give me a hand?"),
+            PhraseVariant("me dá uma mão?", MatchType.inflectional_variant,
+                          note="BP: Can you give me a hand?"),
+            PhraseVariant("dou-te uma mão", MatchType.inflectional_variant,
+                          note="EP: I'll give you a hand."),
+        ),
+        tags=("help", "assistance", "neutral", "everyday"),
+    ),
+
+    "pt_engolir_em_seco": PhraseFamily(
+        id="pt_engolir_em_seco",
+        language="pt",
+        canonical_form="engolir em seco",
+        meaning="To swallow hard; to react with shock or discomfort without speaking.",
+        register="neutral",
+        origin=(
+            "Literally 'to swallow dry' — the involuntary swallow of anxiety or shock "
+            "when the mouth goes dry. Used to describe the physical reaction to bad news, "
+            "an uncomfortable situation, or suppressed emotion."
+        ),
+        why_it_matters=(
+            "A precise expression for a very specific physical-emotional moment. "
+            "No English single-phrase equivalent captures both the physical sensation "
+            "and the emotional suppression. Common in narrative writing and speech."
+        ),
+        variants=(
+            PhraseVariant("engolir em seco", MatchType.exact),
+            PhraseVariant("engoliu em seco", MatchType.inflectional_variant,
+                          note="He/she swallowed hard (past)."),
+            PhraseVariant("engoli em seco", MatchType.inflectional_variant,
+                          note="I swallowed hard (past)."),
+        ),
+        tags=("shock", "anxiety", "physical-reaction", "neutral"),
+    ),
+
+    "pt_tirar_o_cavalinho_da_chuva": PhraseFamily(
+        id="pt_tirar_o_cavalinho_da_chuva",
+        language="pt",
+        canonical_form="tirar o cavalinho da chuva",
+        meaning="To give up on an unrealistic hope; to abandon a vain expectation.",
+        register="informal",
+        origin=(
+            "Literally 'take the little horse out of the rain' — a vivid image of "
+            "letting go of something you'd prepared for but that isn't going to happen. "
+            "The diminutive cavalinho (little horse) adds a tone of gentle resignation. "
+            "Primarily Brazilian Portuguese."
+        ),
+        why_it_matters=(
+            "The diminutive cavalinho makes this expression particularly charming and Brazilian. "
+            "No English equivalent captures the gentle, pragmatic resignation. "
+            "The image of the rain-soaked horse awaiting a journey that won't happen "
+            "is both funny and melancholy."
+        ),
+        variants=(
+            PhraseVariant("tirar o cavalinho da chuva", MatchType.exact),
+            PhraseVariant("pode tirar o cavalinho da chuva", MatchType.inflectional_variant,
+                          note="You can forget about it — you can take the horse out of the rain."),
+            PhraseVariant("tira o cavalinho da chuva", MatchType.inflectional_variant,
+                          note="Imperative: give up that hope."),
+        ),
+        tags=("resignation", "expectation", "informal", "Brazilian", "diminutive"),
+    ),
+
+    "pt_por_a_boca_no_trombone": PhraseFamily(
+        id="pt_por_a_boca_no_trombone",
+        language="pt",
+        canonical_form="pôr a boca no trombone",
+        meaning="To speak out publicly; to blow the whistle; to make noise about something.",
+        register="informal",
+        origin=(
+            "Literally 'to put one's mouth to the trombone' — the image of a musician "
+            "blowing a loud instrument to be heard. Used for speaking out, complaining "
+            "publicly, or raising an alarm. Common in Brazilian Portuguese."
+        ),
+        why_it_matters=(
+            "A colorful Brazilian expression with no direct English equivalent. "
+            "The trombone image makes the loudness and deliberateness of the speech "
+            "vivid. Contrasts with the silence of engolir em seco."
+        ),
+        variants=(
+            PhraseVariant("pôr a boca no trombone", MatchType.exact),
+            PhraseVariant("botar a boca no trombone", MatchType.inflectional_variant,
+                          note="BP variant: botar instead of pôr — very common in Brazil."),
+            PhraseVariant("pôs a boca no trombone", MatchType.inflectional_variant,
+                          note="Past: spoke out publicly."),
+        ),
+        tags=("speaking-out", "protest", "informal", "Brazilian"),
+    ),
+
+    "pt_fazer_as_pazes": PhraseFamily(
+        id="pt_fazer_as_pazes",
+        language="pt",
+        canonical_form="fazer as pazes",
+        meaning="To make peace; to reconcile after a quarrel.",
+        register="neutral",
+        origin=(
+            "From Latin pacem facere. The plural as pazes (rather than a paz) is idiomatic — "
+            "a paz refers to general/political peace, while as pazes always refers to "
+            "interpersonal reconciliation. Identical construction to Spanish hacer las paces."
+        ),
+        why_it_matters=(
+            "The plural is essential — fazer a paz would refer to bringing about world peace, "
+            "not patching up a friendship. This distinction trips up learners who translate "
+            "literally from English 'make peace.'"
+        ),
+        variants=(
+            PhraseVariant("fazer as pazes", MatchType.exact),
+            PhraseVariant("fizemos as pazes", MatchType.inflectional_variant,
+                          note="We made up / we reconciled."),
+            PhraseVariant("fazer as pazes com", MatchType.inflectional_variant,
+                          note="To make up with someone: fazer as pazes com ela."),
+            PhraseVariant("fazer a paz", MatchType.confusable_not_same,
+                          note="To make (political) peace — not interpersonal reconciliation."),
+        ),
+        tags=("reconciliation", "friendship", "neutral", "conflict"),
+    ),
+
+    "pt_quem_nao_arrisca_nao_petisca": PhraseFamily(
+        id="pt_quem_nao_arrisca_nao_petisca",
+        language="pt",
+        canonical_form="quem não arrisca não petisca",
+        meaning="Nothing ventured, nothing gained (literally: who doesn't risk doesn't snack).",
+        register="informal",
+        origin=(
+            "A rhyming proverb: arrisca (risks) rhymes with petisca (nibbles/snacks). "
+            "The food imagery is quintessentially Portuguese — reward framed as snacking. "
+            "A uniquely playful take on the universal risk-reward principle."
+        ),
+        why_it_matters=(
+            "The rhyme makes it instantly memorable. The petisco (snack) framing "
+            "connects to Portuguese food culture — petiscos are the Portuguese equivalent "
+            "of tapas. The proverb is fun, colloquial, and very quotable."
+        ),
+        variants=(
+            PhraseVariant("quem não arrisca não petisca", MatchType.exact),
+        ),
+        tags=("risk", "reward", "proverb", "rhyme", "informal", "food"),
+    ),
+
+    "pt_deixar_para_amanha": PhraseFamily(
+        id="pt_deixar_para_amanha",
+        language="pt",
+        canonical_form="deixar para amanhã",
+        meaning="To put off until tomorrow; to procrastinate.",
+        register="neutral",
+        origin=(
+            "Often quoted alongside the full proverb: 'Não deixes para amanhã o que "
+            "podes fazer hoje' (Don't leave for tomorrow what you can do today). "
+            "The short form is widely used alone to describe procrastination."
+        ),
+        why_it_matters=(
+            "The full proverb is the Portuguese equivalent of 'Don't put off until tomorrow.' "
+            "Learning the short form first helps learners recognise the full proverb when encountered. "
+            "The amanhã (tomorrow) links to the concept of saudade — Portuguese relationship with time."
+        ),
+        variants=(
+            PhraseVariant("deixar para amanhã", MatchType.exact),
+            PhraseVariant("não deixes para amanhã", MatchType.inflectional_variant,
+                          note="Don't leave it for tomorrow — the imperative/advice form."),
+            PhraseVariant("não deixe para amanhã o que pode fazer hoje", MatchType.inflectional_variant,
+                          note="Full proverb form."),
+        ),
+        tags=("procrastination", "time", "proverb", "neutral"),
+    ),
+
+    # ── Russian catalog ───────────────────────────────────────────────────────
+
+    "ru_veshat_lapshu_na_ushi": PhraseFamily(
+        id="ru_veshat_lapshu_na_ushi",
+        language="ru",
+        canonical_form="вешать лапшу на уши",
+        meaning="To pull someone's leg; to feed someone nonsense; to deceive with false stories.",
+        register="informal",
+        origin=(
+            "Literally 'to hang noodles on ears' — the image of noodles stuck to ears "
+            "suggests cluttering someone's hearing with nonsense. "
+            "Origin disputed: possibly from theatrical slang or 20th-century colloquial speech. "
+            "The expression is vivid, informal, and very Russian in its absurdist image."
+        ),
+        why_it_matters=(
+            "One of the most characteristic Russian idioms for deception through talk. "
+            "The noodle-on-ears image has no English equivalent. Knowing this expression "
+            "gives learners insight into Russian colloquial humor and wordplay."
+        ),
+        variants=(
+            PhraseVariant("вешать лапшу на уши", MatchType.exact),
+            PhraseVariant("не вешай мне лапшу на уши", MatchType.inflectional_variant,
+                          note="Don't feed me nonsense — common direct challenge."),
+            PhraseVariant("повесил лапшу на уши", MatchType.inflectional_variant,
+                          note="Past perfective: he hung noodles on ears (he deceived them)."),
+            PhraseVariant("вешал лапшу на уши", MatchType.inflectional_variant,
+                          note="Past imperfective: he was feeding them nonsense (ongoing)."),
+        ),
+        tags=("deception", "nonsense", "informal", "colloquial", "absurdist"),
+    ),
+
+    "ru_bit_baklushi": PhraseFamily(
+        id="ru_bit_baklushi",
+        language="ru",
+        canonical_form="бить баклуши",
+        meaning="To loaf; to idle; to do nothing productive.",
+        register="informal",
+        origin=(
+            "Баклуши were rough wooden blocks knocked from a log before being shaped "
+            "into spoons or ladles — the easiest, most unskilled stage of the work. "
+            "Someone given баклуши to knock (бить) was doing the most trivial job. "
+            "The expression may also derive from the sounds of billiard balls (billiard = "
+            "баллярд) or from splitting kindling."
+        ),
+        why_it_matters=(
+            "The etymology is uncertain but the image — trivial knocking work — gives "
+            "the metaphor meaning. One of several Russian idioms where the origin "
+            "illuminates the industrial or craft history of the country."
+        ),
+        variants=(
+            PhraseVariant("бить баклуши", MatchType.exact),
+            PhraseVariant("бьёт баклуши", MatchType.inflectional_variant,
+                          note="He/she is loafing (present imperfective)."),
+            PhraseVariant("бил баклуши", MatchType.inflectional_variant,
+                          note="He was idling (past masculine)."),
+            PhraseVariant("перестать бить баклуши", MatchType.inflectional_variant,
+                          note="To stop loafing — often used as an imperative."),
+        ),
+        tags=("idleness", "laziness", "informal", "colloquial"),
+    ),
+
+    "ru_vodit_za_nos": PhraseFamily(
+        id="ru_vodit_za_nos",
+        language="ru",
+        canonical_form="водить за нос",
+        meaning="To lead by the nose; to deceive or manipulate someone.",
+        register="neutral",
+        origin=(
+            "The image of leading an animal by a ring through its nose — the animal "
+            "follows without understanding where it's going. Used for deliberate, "
+            "sustained deception or manipulation, not a one-time lie."
+        ),
+        why_it_matters=(
+            "A vivid metaphor shared with English 'lead by the nose' — the parallel "
+            "makes it easy to learn. The imperfective verb водить (to lead repeatedly) "
+            "emphasizes the ongoing nature of the deception, reinforcing the aspect "
+            "system for learners."
+        ),
+        variants=(
+            PhraseVariant("водить за нос", MatchType.exact),
+            PhraseVariant("водит за нос", MatchType.inflectional_variant,
+                          note="He/she is leading them by the nose (present ongoing)."),
+            PhraseVariant("не дай водить себя за нос", MatchType.inflectional_variant,
+                          note="Don't let yourself be led by the nose."),
+            PhraseVariant("провести за нос", MatchType.inflectional_variant,
+                          note="Perfective: to have successfully deceived — a completed act."),
+        ),
+        tags=("deception", "manipulation", "neutral", "aspect"),
+    ),
+
+    "ru_kak_kot_naplakal": PhraseFamily(
+        id="ru_kak_kot_naplakal",
+        language="ru",
+        canonical_form="как кот наплакал",
+        meaning="Next to nothing; a tiny amount (literally: as much as a cat cried).",
+        register="informal",
+        origin=(
+            "Cats don't cry — so 'as much as a cat cried' is zero or as good as zero. "
+            "The perfect aspect наплакал (has cried, completely) makes the absence "
+            "total and definitive. A memorably absurdist image for scarcity."
+        ),
+        why_it_matters=(
+            "This expression is loved by Russian speakers and sounds authentically "
+            "colloquial. The cat image makes it memorable. It also demonstrates the "
+            "perfective aspect (наплакал) used to indicate a completed null quantity."
+        ),
+        variants=(
+            PhraseVariant("как кот наплакал", MatchType.exact),
+            PhraseVariant("денег — как кот наплакал", MatchType.inflectional_variant,
+                          note="Money — next to nothing (with the thing being measured named first)."),
+        ),
+        tags=("scarcity", "quantity", "informal", "absurdist", "humorous"),
+    ),
+
+    "ru_ni_ryba_ni_myaso": PhraseFamily(
+        id="ru_ni_ryba_ni_myaso",
+        language="ru",
+        canonical_form="ни рыба ни мясо",
+        meaning="Neither fish nor fowl; someone or something without a distinct character.",
+        register="neutral",
+        origin=(
+            "The fish-and-meat binary was historically significant in Russian Orthodox "
+            "culture: fish was the permitted food on fast days; meat was allowed otherwise. "
+            "Something that was neither fish nor meat fell outside both categories — "
+            "useless and undefined."
+        ),
+        why_it_matters=(
+            "The English 'neither fish nor fowl' shares the same conceptual origin "
+            "(religious dietary categories), making the parallel memorable. "
+            "The Russian version uses рыба/мясо (fish/meat) instead of fish/fowl, "
+            "reflecting Orthodox fasting traditions."
+        ),
+        variants=(
+            PhraseVariant("ни рыба ни мясо", MatchType.exact),
+            PhraseVariant("он ни рыба ни мясо", MatchType.inflectional_variant,
+                          note="He is neither fish nor fowl."),
+        ),
+        tags=("indecision", "blandness", "neutral", "Orthodox-culture"),
+    ),
+
+    "ru_lomat_golovu": PhraseFamily(
+        id="ru_lomat_golovu",
+        language="ru",
+        canonical_form="ломать голову",
+        meaning="To rack one's brains; to think hard about a difficult problem.",
+        register="neutral",
+        origin=(
+            "Literally 'to break the head' — intensive mental effort as a kind of "
+            "physical breaking. The imperfective ломать suggests ongoing, prolonged "
+            "effort. Found in Pushkin and other classic Russian literature."
+        ),
+        why_it_matters=(
+            "One of the most common expressions for difficult thinking. "
+            "The 'breaking' image parallels English 'rack one's brains' (rack = stretch on a rack). "
+            "Both metaphors treat hard thinking as physical suffering."
+        ),
+        variants=(
+            PhraseVariant("ломать голову", MatchType.exact),
+            PhraseVariant("ломаю голову", MatchType.inflectional_variant,
+                          note="I'm racking my brains (present, ongoing effort)."),
+            PhraseVariant("ломал голову над", MatchType.inflectional_variant,
+                          note="Was racking brains over [problem] — imperfective past."),
+            PhraseVariant("сломал голову", MatchType.inflectional_variant,
+                          note="Perfective: broke head completely — exhausted thinking about it."),
+        ),
+        tags=("thinking", "difficulty", "neutral", "mental-effort", "aspect"),
+    ),
+
+    "ru_brat_byka_za_roga": PhraseFamily(
+        id="ru_brat_byka_za_roga",
+        language="ru",
+        canonical_form="брать быка за рога",
+        meaning="To take the bull by the horns; to tackle a problem head-on.",
+        register="neutral",
+        origin=(
+            "The bull-by-the-horns image is shared with English, Spanish, and French. "
+            "In Russian the imperfective брать emphasizes the ongoing resolve to "
+            "tackle problems directly. The perfective взять быка за рога is used "
+            "for a completed decisive action."
+        ),
+        why_it_matters=(
+            "The English parallel makes this easy to learn. The aspect distinction "
+            "(брать / взять) is a perfect teaching example: imperfective = ongoing "
+            "tendency to act decisively; perfective = specific decisive action taken."
+        ),
+        variants=(
+            PhraseVariant("брать быка за рога", MatchType.exact),
+            PhraseVariant("взять быка за рога", MatchType.inflectional_variant,
+                          note="Perfective: to have taken the bull by the horns (one decisive act)."),
+            PhraseVariant("берём быка за рога", MatchType.inflectional_variant,
+                          note="We take the bull by the horns — determination statement."),
+        ),
+        tags=("decisiveness", "action", "neutral", "aspect"),
+    ),
+
+    "ru_iz_ognya_da_v_polymya": PhraseFamily(
+        id="ru_iz_ognya_da_v_polymya",
+        language="ru",
+        canonical_form="из огня да в полымя",
+        meaning="Out of the frying pan into the fire (literally: from the fire into the flame).",
+        register="neutral",
+        origin=(
+            "Полымя is an archaic word for open flame (related to пламя, modern word). "
+            "The expression uses the old dative/locative form полымя. "
+            "Moving from fire (огонь) into flame (полымя/пламя) means going to "
+            "something even worse. The archaic word gives the phrase a proverb-like quality."
+        ),
+        why_it_matters=(
+            "The archaic полымя makes this sound proverbial. Learners who know "
+            "только хуже (only worse) can describe the situation, but "
+            "из огня да в полымя is far more idiomatic. "
+            "The old vocab makes it memorable."
+        ),
+        variants=(
+            PhraseVariant("из огня да в полымя", MatchType.exact),
+            PhraseVariant("из огня да в пламя", MatchType.modernized_variant,
+                          note="With modern пламя instead of archaic полымя — less common."),
+            PhraseVariant("попасть из огня да в полымя", MatchType.inflectional_variant,
+                          note="To end up from the fire into the flame — completed misfortune."),
+        ),
+        tags=("misfortune", "worsening", "neutral", "proverb", "archaic"),
+    ),
+
+    "ru_kot_v_meshke": PhraseFamily(
+        id="ru_kot_v_meshke",
+        language="ru",
+        canonical_form="кот в мешке",
+        meaning="A pig in a poke; something bought/accepted without knowing what it is.",
+        register="neutral",
+        origin=(
+            "Literally 'a cat in a sack.' The Russian version uses a cat (кот) where "
+            "English uses a pig (pig in a poke). Both refer to the medieval market fraud "
+            "of selling a cat in a sack instead of the promised suckling pig. "
+            "The Russian прoverb покупать кота в мешке means to buy without examining."
+        ),
+        why_it_matters=(
+            "The cat vs. pig difference is a useful lesson in parallel but distinct idioms. "
+            "Both languages have the same medieval fraud as origin. "
+            "The Russian кот (male cat) is common, specific, and gendered — "
+            "a detail worth noting."
+        ),
+        variants=(
+            PhraseVariant("кот в мешке", MatchType.exact),
+            PhraseVariant("покупать кота в мешке", MatchType.inflectional_variant,
+                          note="To buy a pig in a poke — the fuller verbal form."),
+            PhraseVariant("купил кота в мешке", MatchType.inflectional_variant,
+                          note="Perfective past: bought without knowing what they got."),
+        ),
+        tags=("deception", "purchase", "neutral", "proverb"),
+    ),
+
+    "ru_derzhat_v_kurse": PhraseFamily(
+        id="ru_derzhat_v_kurse",
+        language="ru",
+        canonical_form="держать в курсе",
+        meaning="To keep someone in the loop; to keep informed.",
+        register="neutral",
+        origin=(
+            "Курс was borrowed from French cours or German Kurs (course, direction). "
+            "Держать в курсе means to keep someone 'on course' — updated and oriented. "
+            "A modern, professional expression used widely in business, journalism, "
+            "and everyday communication."
+        ),
+        why_it_matters=(
+            "Essential for professional communication. The phrase держать в курсе "
+            "is extremely common in emails and meetings. Learning it gives learners "
+            "access to Russian workplace idiom. The курс (course) etymology connects "
+            "to the nautical/directional sense."
+        ),
+        variants=(
+            PhraseVariant("держать в курсе", MatchType.exact),
+            PhraseVariant("держать в курсе дел", MatchType.inflectional_variant,
+                          note="Keep in the loop about things — fuller form."),
+            PhraseVariant("держи меня в курсе", MatchType.inflectional_variant,
+                          note="Keep me posted — common request."),
+            PhraseVariant("быть в курсе", MatchType.inflectional_variant,
+                          note="To be in the loop (state) — different verb."),
+        ),
+        tags=("communication", "information", "neutral", "professional"),
+    ),
+
+    "ru_mezhdu_molotom_i_nakovalnei": PhraseFamily(
+        id="ru_mezhdu_molotom_i_nakovalnei",
+        language="ru",
+        canonical_form="между молотом и наковальней",
+        meaning="Between a rock and a hard place; in an impossible position.",
+        register="neutral",
+        origin=(
+            "Literally 'between the hammer and the anvil.' The blacksmithing image — "
+            "compressed between the striking hammer and the unyielding anvil — "
+            "is common across European languages. It was the title of a famous "
+            "novel by Friedrich Spielhagen (1868), widely translated."
+        ),
+        why_it_matters=(
+            "The hammer-and-anvil image is more vivid than the English 'rock and hard place.' "
+            "Both describe entrapment between two forces. Learning this phrase also "
+            "connects to the industrial/craft vocabulary (молот, наковальня) that appears "
+            "in Russian songs and literature."
+        ),
+        variants=(
+            PhraseVariant("между молотом и наковальней", MatchType.exact),
+            PhraseVariant("оказаться между молотом и наковальней", MatchType.inflectional_variant,
+                          note="To find oneself between the hammer and anvil."),
+            PhraseVariant("быть между молотом и наковальней", MatchType.inflectional_variant,
+                          note="To be in an impossible position."),
+        ),
+        tags=("dilemma", "impossible-choice", "neutral", "smithing"),
+    ),
+
+    "ru_ne_v_brov_a_v_glaz": PhraseFamily(
+        id="ru_ne_v_brov_a_v_glaz",
+        language="ru",
+        canonical_form="не в бровь а в глаз",
+        meaning="To hit the nail on the head; to say something precisely and aptly.",
+        register="neutral",
+        origin=(
+            "Literally 'not in the eyebrow but in the eye' — aiming for the eyebrow "
+            "but hitting the eye is actually more accurate, not a mistake. "
+            "Used to praise a remark that lands exactly right, cuts to the truth, "
+            "or precisely describes a situation."
+        ),
+        why_it_matters=(
+            "The anatomy-of-the-face image is characteristically Russian. The paradox "
+            "(missing the eyebrow = hitting the eye = success) makes it memorable. "
+            "It's used to praise wit or precision, equivalent to 'you hit the nail on the head.'"
+        ),
+        variants=(
+            PhraseVariant("не в бровь а в глаз", MatchType.exact),
+            PhraseVariant("попасть не в бровь а в глаз", MatchType.inflectional_variant,
+                          note="To hit it not in the eyebrow but in the eye — nailed it."),
+        ),
+        tags=("accuracy", "wit", "neutral", "praise", "anatomy"),
+    ),
+
+    "ru_podnyat_na_smekh": PhraseFamily(
+        id="ru_podnyat_na_smekh",
+        language="ru",
+        canonical_form="поднять на смех",
+        meaning="To make fun of; to ridicule; to hold up to public laughter.",
+        register="neutral",
+        origin=(
+            "Literally 'to raise/lift onto laughter' — to hold someone up for others "
+            "to laugh at. The perfective поднять suggests a single deliberate act of "
+            "public humiliation through mockery. "
+            "Used in contexts of ridicule, satire, or social shaming."
+        ),
+        why_it_matters=(
+            "An important expression for social humiliation by laughter. "
+            "The aspect is always perfective (поднять, not поднимать) — "
+            "the ridicule is a complete, decisive event. "
+            "Learners often use смеяться над (to laugh at) — поднять на смех "
+            "emphasizes the public, collective nature of the mockery."
+        ),
+        variants=(
+            PhraseVariant("поднять на смех", MatchType.exact),
+            PhraseVariant("подняли на смех", MatchType.inflectional_variant,
+                          note="They ridiculed him/her (past, 3rd plural)."),
+            PhraseVariant("подняли на смех всем классом", MatchType.inflectional_variant,
+                          note="The whole class laughed at them — with collective subject."),
+        ),
+        tags=("ridicule", "mockery", "neutral", "social", "aspect"),
+    ),
+
+    "ru_rubit_s_plecha": PhraseFamily(
+        id="ru_rubit_s_plecha",
+        language="ru",
+        canonical_form="рубить с плеча",
+        meaning="To act rashly; to decide or speak without thinking (literally: to chop from the shoulder).",
+        register="neutral",
+        origin=(
+            "Literally 'to chop/hack from the shoulder' — a broad, uncontrolled axe-blow "
+            "from the shoulder rather than a careful, precise cut. "
+            "The image is of undisciplined, powerful action without subtlety. "
+            "Used for rash decisions, hasty judgments, or blunt speech."
+        ),
+        why_it_matters=(
+            "The axe imagery connects to Russian cultural history. "
+            "The imperfective рубить emphasizes habitual rash behaviour (a character trait) "
+            "while рубануть с плеча would describe one specific rash act. "
+            "A useful aspect teaching example."
+        ),
+        variants=(
+            PhraseVariant("рубить с плеча", MatchType.exact),
+            PhraseVariant("не рубит с плеча", MatchType.inflectional_variant,
+                          note="He/she doesn't act rashly — often used as praise."),
+            PhraseVariant("рубанул с плеча", MatchType.inflectional_variant,
+                          note="Perfective: he made one rash decision."),
+            PhraseVariant("рубить сплеча", MatchType.orthographic_variant,
+                          note="Merged spelling — also encountered."),
+        ),
+        tags=("rashness", "impulsiveness", "neutral", "aspect", "axe"),
+    ),
+
+    # ── Arabic ───────────────────────────────────────────────────────────────
+
+    "ar_darb_usfourayn": PhraseFamily(
+        id="ar_darb_usfourayn",
+        language="ar",
+        canonical_form="ضرب عصفورين بحجر",
+        meaning="To kill two birds with one stone; to accomplish two goals with one action.",
+        register="neutral",
+        origin=(
+            "Literally 'to strike two sparrows with one stone'. "
+            "A universal idiom of efficiency existing in Arabic, English, Persian, and other languages. "
+            "The verb ضرب (daraba) is one of the most productive roots in Arabic (ض-ر-ب), "
+            "appearing in dozens of idioms and fixed phrases."
+        ),
+        why_it_matters=(
+            "A high-frequency idiom in MSA prose and speech. "
+            "The dual form عصفورين (usfourayn — two sparrows) is a grammatical feature unique to Arabic, "
+            "making this phrase a useful hook for teaching the dual number suffix -ayn. "
+            "Learning this phrase also anchors the root ض-ر-ب, which yields ضرب (to strike), "
+            "مضروب (struck/product in math), ضريبة (tax — something imposed), and more."
+        ),
+        variants=(
+            PhraseVariant("ضرب عصفورين بحجر", MatchType.exact),
+            PhraseVariant("ضرب عصفورين بحجر واحد", MatchType.inflectional_variant,
+                          note="With 'one stone' explicit — emphasises the single action."),
+        ),
+        tags=("efficiency", "decision", "neutral", "dual", "root-pattern"),
+    ),
+
+    "ar_ghamdat_ain": PhraseFamily(
+        id="ar_ghamdat_ain",
+        language="ar",
+        canonical_form="في غمضة عين",
+        meaning="In the blink of an eye; in an instant; in a very short time.",
+        register="neutral",
+        origin=(
+            "Literally 'in the closing of an eye' — غمضة (ghamda) is the act of lowering the eyelid. "
+            "The image of a blink as a unit of very short time is ancient, appearing in Classical "
+            "Arabic poetry and the Quran-era literature. A universal temporal metaphor."
+        ),
+        why_it_matters=(
+            "A common temporal idiom in MSA and literary Arabic. "
+            "The construction في + مصدر (in + verbal noun) is a productive Arabic pattern "
+            "for 'in the act of X'. غمضة is from root غ-م-ض (to close one's eyes), "
+            "which also yields أغمض (to close the eyes) and غامض (obscure, dark — "
+            "eyes-shut sense extended to mystery). A single phrase reveals root morphology."
+        ),
+        variants=(
+            PhraseVariant("في غمضة عين", MatchType.exact),
+            PhraseVariant("في لمح البصر", MatchType.inflectional_variant,
+                          note="'In the glance of the eye' — a common near-synonym in MSA."),
+        ),
+        tags=("time", "speed", "neutral", "idiom", "literary"),
+    ),
+
+    "ar_ala_rasi": PhraseFamily(
+        id="ar_ala_rasi",
+        language="ar",
+        canonical_form="على رأسي",
+        meaning="On my head; gladly; absolutely; I am honoured to do it.",
+        register="informal",
+        origin=(
+            "Literally 'on my head' — carrying something on the head is a gesture of the highest "
+            "respect and willingness in Arab cultural tradition. "
+            "The extended form على رأسي وعيني (on my head and my eye) intensifies the expression."
+        ),
+        why_it_matters=(
+            "An essential politeness formula in spoken Arabic across dialects. "
+            "The body-part metaphor (head/eye) for deference and honour is culturally important. "
+            "على + رأس + possessive suffix ي demonstrates the Arabic suffix-pronoun system. "
+            "Understanding this phrase illuminates why رأس (head) appears in رئيس (president — "
+            "lit. head person) and رأسمال (capital — lit. head of money)."
+        ),
+        variants=(
+            PhraseVariant("على رأسي", MatchType.exact),
+            PhraseVariant("على رأسي وعيني", MatchType.inflectional_variant,
+                          note="'On my head and my eye' — intensified, extremely willing."),
+        ),
+        tags=("politeness", "acceptance", "informal", "cultural", "body-metaphor"),
+    ),
+
+    "ar_insha_allah": PhraseFamily(
+        id="ar_insha_allah",
+        language="ar",
+        canonical_form="إن شاء الله",
+        meaning="If God wills; God willing; hopefully (expresses hope or polite uncertainty about a future event).",
+        register="neutral",
+        confusables=("ar_masha_allah",),
+        origin=(
+            "From إن (if) + شاء (he willed, past of شاء) + الله (God). "
+            "The phrase reflects the Islamic principle that all future events are subject to God's will. "
+            "It appears in the Quran (Surah Al-Kahf 18:23–24) as a command to always say it "
+            "when speaking of future plans."
+        ),
+        why_it_matters=(
+            "One of the most culturally essential Arabic expressions. In practice it ranges "
+            "from sincere hope to polite deflection. "
+            "The verb شاء (to will) uses the hollow root ش-ي-أ — an irregular paradigm "
+            "that learners must recognise. Confusable with ما شاء الله (admiration) — "
+            "both contain شاء الله but differ in إن (if) vs ما (what)."
+        ),
+        variants=(
+            PhraseVariant("إن شاء الله", MatchType.exact),
+            PhraseVariant("ان شاء الله", MatchType.orthographic_variant,
+                          note="Without hamza on إن — common informal spelling."),
+        ),
+        tags=("future", "religious", "neutral", "formulaic", "Islamic"),
+    ),
+
+    "ar_alhamdulillah": PhraseFamily(
+        id="ar_alhamdulillah",
+        language="ar",
+        canonical_form="الحمد لله",
+        meaning="Praise be to God; thank God; I am grateful (response to 'how are you?' and more).",
+        register="neutral",
+        origin=(
+            "الحمد (al-hamd — the praise) + لله (lillāh — for God, contraction of ل + الله). "
+            "Opens Surah Al-Fatiha (the first chapter of the Quran) and is "
+            "one of the most frequently spoken phrases in the Arabic-speaking world."
+        ),
+        why_it_matters=(
+            "Standard response to كيف حالك (how are you?) — الحمد لله means both 'fine' and 'thank God'. "
+            "The لام preposition contracts with الله: ل + الله → لله. "
+            "Demonstrates Arabic definite article usage: الحمد (al-hamd — the praise). "
+            "The root ح-م-د also yields محمود (praiseworthy), أحمد (more praiseworthy — a name), "
+            "and حامد (one who praises) — all anchored by learning this phrase."
+        ),
+        variants=(
+            PhraseVariant("الحمد لله", MatchType.exact),
+            PhraseVariant("الحمد لله رب العالمين", MatchType.inflectional_variant,
+                          note="Full opening of Al-Fatiha: 'praise be to God, Lord of the worlds'."),
+        ),
+        tags=("gratitude", "religious", "neutral", "formulaic", "Islamic"),
+    ),
+
+    "ar_masha_allah": PhraseFamily(
+        id="ar_masha_allah",
+        language="ar",
+        canonical_form="ما شاء الله",
+        meaning="What God has willed; how wonderful (expression of admiration, also wards off evil eye).",
+        register="neutral",
+        confusables=("ar_insha_allah",),
+        origin=(
+            "From ما (what) + شاء (he willed) + الله (God): 'what God has willed'. "
+            "Used to express admiration while acknowledging God as the source of all good. "
+            "Culturally, saying ما شاء الله protects the admired person from the evil eye (عين الحسد)."
+        ),
+        why_it_matters=(
+            "Confusable with إن شاء الله: both contain شاء الله but differ in ما vs إن. "
+            "ما شاء الله = what God has willed (past admiration of something seen). "
+            "إن شاء الله = if God wills (future hope/uncertainty). "
+            "The distinction between ما (relative 'what') and إن (conditional 'if') is critical. "
+            "Both share the hollow-root verb شاء — a useful paradigm anchor."
+        ),
+        variants=(
+            PhraseVariant("ما شاء الله", MatchType.exact),
+            PhraseVariant("ماشاء الله", MatchType.orthographic_variant,
+                          note="Common merged spelling — same pronunciation."),
+        ),
+        tags=("admiration", "religious", "neutral", "formulaic", "Islamic"),
+    ),
+
+    "ar_khalas": PhraseFamily(
+        id="ar_khalas",
+        language="ar",
+        canonical_form="خلاص",
+        meaning="That's it; enough; it's done; finished; let's stop.",
+        register="informal",
+        origin=(
+            "From root خ-ل-ص (to be free of, to finish). خلاص (khalāṣ) is the noun/interjection "
+            "meaning 'liberation/completion'. Originally Classical Arabic (خلص — to be free), "
+            "now ubiquitous across all spoken dialects."
+        ),
+        why_it_matters=(
+            "One of the most common words in everyday Arabic across all dialects. "
+            "Functions as interjection, sentence adverb, and discourse particle. "
+            "The root خ-ل-ص also yields مخلص (sincere, loyal), خلاصة (summary/essence), "
+            "and إخلاص (devotion/sincerity) — all sharing the 'free of impurity / complete' meaning. "
+            "A key A2-level word for learners."
+        ),
+        variants=(
+            PhraseVariant("خلاص", MatchType.exact),
+            PhraseVariant("خلاص بس", MatchType.inflectional_variant,
+                          note="With intensifier بس (just/enough) — very emphatic closure."),
+        ),
+        tags=("closure", "informal", "colloquial", "interjection", "A2"),
+    ),
+
+    "ar_yalla": PhraseFamily(
+        id="ar_yalla",
+        language="ar",
+        canonical_form="يلا",
+        meaning="Let's go; come on; hurry up (general expression of encouragement or impatience).",
+        register="informal",
+        origin=(
+            "Contracted from يا الله (ya Allah — O God) used as an exclamation to encourage action. "
+            "The contraction يلا is now pan-dialectal Arabic, and has been borrowed into "
+            "Turkish, Hebrew (יאלה), and other regional languages."
+        ),
+        why_it_matters=(
+            "An essential colloquial Arabic expression heard in virtually all spoken Arabic contexts. "
+            "Illustrates contraction and grammaticalisation: يا (vocative) + الله → يالله → يلا. "
+            "Its diffusion into Turkish and Hebrew demonstrates Arabic's cultural reach. "
+            "Learners encounter it immediately in natural conversation."
+        ),
+        variants=(
+            PhraseVariant("يلا", MatchType.exact),
+            PhraseVariant("يالله", MatchType.orthographic_variant,
+                          note="Fuller/older form — 'O God' used as encouragement."),
+            PhraseVariant("يلا بينا", MatchType.inflectional_variant,
+                          note="'Let's go together' — common in Levantine dialects."),
+        ),
+        tags=("encouragement", "informal", "colloquial", "interjection", "A1"),
+    ),
+
+    "ar_mabrook": PhraseFamily(
+        id="ar_mabrook",
+        language="ar",
+        canonical_form="مبروك",
+        meaning="Congratulations; blessings upon you (on good news, achievements, or happy occasions).",
+        register="neutral",
+        origin=(
+            "Passive participle of بارك (bāraka — to bless), from root ب-ر-ك (to kneel; to be blessed). "
+            "مبروك = 'blessed'. Close variant of مبارك (mubārak — blessed), the more formal form."
+        ),
+        why_it_matters=(
+            "The most common spoken-Arabic congratulation across all dialects. "
+            "مبارك is the formal MSA equivalent (same root ب-ر-ك, different morphological pattern). "
+            "The root also yields بركة (blessing) and the name مبارك. "
+            "Teaching this family reveals the مفعول/مُفاعَل passive-participle contrast "
+            "and shows how one root can produce both informal and formal registers."
+        ),
+        variants=(
+            PhraseVariant("مبروك", MatchType.exact),
+            PhraseVariant("مبارك", MatchType.inflectional_variant,
+                          note="MSA/formal variant — same root, more formal morphological pattern."),
+            PhraseVariant("مبروك عليك", MatchType.inflectional_variant,
+                          note="'Congratulations to you' — with dative pronoun suffix."),
+        ),
+        tags=("congratulations", "celebration", "neutral", "blessing", "formulaic"),
+    ),
+
+    "ar_sabr_jamil": PhraseFamily(
+        id="ar_sabr_jamil",
+        language="ar",
+        canonical_form="صبر جميل",
+        meaning="Beautiful patience; patient endurance is the noble response (counsel of patience).",
+        register="formal",
+        origin=(
+            "From Surah Yusuf (12:18, 12:83): فَصَبْرٌ جَمِيلٌ (fa-ṣabrun jamīl — so patience is beautiful). "
+            "The phrase is spoken by the Prophet Jacob when he learns of misfortune. "
+            "It entered common Arabic usage as a proverbial counsel to accept hardship with grace."
+        ),
+        why_it_matters=(
+            "A Quranic phrase widely used as everyday counsel. "
+            "صبر (ṣabr — patience/endurance) is culturally central in Islamic ethics. "
+            "Root ص-ب-ر yields صابر (patient person), صبور (very patient), "
+            "and الصبور (the Patient One — a name of God). "
+            "جميل (jamīl — beautiful) shares root ج-م-ل with جمال (jamāl — beauty). "
+            "The phrase is a minimal nominal clause: 'patience [is] beautiful [thing]' — "
+            "a pedagogically clear example of Arabic's verbless equational sentence."
+        ),
+        variants=(
+            PhraseVariant("صبر جميل", MatchType.exact),
+            PhraseVariant("فصبر جميل", MatchType.inflectional_variant,
+                          note="Quranic form with the fa- consequence/then particle."),
+        ),
+        tags=("patience", "religious", "formal", "Quranic", "ethics"),
+    ),
+
+    # ── Hebrew ───────────────────────────────────────────────────────────────
+
+    "he_kol_hakavod": PhraseFamily(
+        id="he_kol_hakavod",
+        language="he",
+        canonical_form="כל הכבוד",
+        meaning="Well done; bravo; hats off (literally: all the honor/respect).",
+        register="neutral",
+        origin=(
+            "כל (kol — all) + הכבוד (ha-kavod — the honor/respect). "
+            "כבוד (kavod) is a key Hebrew concept: honor, dignity, and respect. "
+            "Closely related to the biblical כָּבֵד (kaved — heavy, weighty, thus worthy). "
+            "The phrase expresses sincere praise or admiration for an achievement."
+        ),
+        why_it_matters=(
+            "The standard Israeli Hebrew expression for 'well done'. "
+            "כבוד appears across contexts: כבוד הרב (honor of the rabbi), כבוד האדם (human dignity). "
+            "Root כ-ב-ד also yields כבד (heavy), כָּבֵד (liver — the 'heavy' organ), "
+            "and כיבוד (refreshments — honoring guests with food). A highly productive root."
+        ),
+        variants=(
+            PhraseVariant("כל הכבוד", MatchType.exact),
+            PhraseVariant("כל הכבוד לך", MatchType.inflectional_variant,
+                          note="'All the honor to you' — addressing a specific person."),
+        ),
+        tags=("praise", "encouragement", "neutral", "honor", "culture"),
+    ),
+
+    "he_mazal_tov": PhraseFamily(
+        id="he_mazal_tov",
+        language="he",
+        canonical_form="מזל טוב",
+        meaning="Congratulations; good luck (literally: good fortune/star).",
+        register="neutral",
+        origin=(
+            "מזל (mazal — luck, fortune, constellation) + טוב (tov — good). "
+            "מזל originally referred to the zodiac sign under which one was born — "
+            "'good star = good fortune'. Used across all Jewish cultures worldwide "
+            "and borrowed into many European languages."
+        ),
+        why_it_matters=(
+            "One of the most internationally recognised Hebrew phrases. "
+            "מזל (mazal) reached English via Yiddish (as in 'moxie'). "
+            "טוב (tov — good) is among the highest-frequency Hebrew adjectives: "
+            "טוב מאוד (very good), לילה טוב (good night). "
+            "The construct state מזל טוב (good fortune) vs. definite מזל הטוב "
+            "demonstrates the smichut (construct) pattern."
+        ),
+        variants=(
+            PhraseVariant("מזל טוב", MatchType.exact),
+        ),
+        tags=("congratulations", "celebration", "neutral", "Jewish culture", "A1"),
+    ),
+
+    "he_shabbat_shalom": PhraseFamily(
+        id="he_shabbat_shalom",
+        language="he",
+        canonical_form="שבת שלום",
+        meaning="A peaceful Sabbath (traditional Friday/Saturday greeting).",
+        register="neutral",
+        origin=(
+            "שבת (shabbat — Sabbath, the day of rest) + שלום (shalom — peace/wholeness/hello). "
+            "The Shabbat (Friday sunset to Saturday nightfall) is the central Jewish weekly observance. "
+            "The greeting expresses the wish for a meaningful, peaceful day of rest."
+        ),
+        why_it_matters=(
+            "An essential greeting in Israeli life and Jewish culture worldwide. "
+            "שלום is from root ש-ל-ם (wholeness/completion) — also yielding שלם (whole/paid), "
+            "לשלם (to pay), שלמות (perfection), and ירושלים (Jerusalem — city of peace). "
+            "Understanding שלום as 'wholeness' not just 'hello' is a key insight for Hebrew learners."
+        ),
+        variants=(
+            PhraseVariant("שבת שלום", MatchType.exact),
+            PhraseVariant("שבת שלום ומבורך", MatchType.inflectional_variant,
+                          note="'A peaceful and blessed Sabbath' — more traditional/religious form."),
+        ),
+        tags=("greeting", "religious", "Jewish culture", "Shabbat", "A1"),
+    ),
+
+    "he_lo_norah": PhraseFamily(
+        id="he_lo_norah",
+        language="he",
+        canonical_form="לא נורא",
+        meaning="Not terrible; it's okay; never mind; don't worry (understated reassurance or dismissal).",
+        register="informal",
+        origin=(
+            "Literally לא (lo — not) + נורא (nora — terrible/awful/fearful). "
+            "נורא comes from root י-ר-א (to fear); the adjective originally meant 'fearful, awe-inspiring' "
+            "(cf. נוֹרָא עֲלִילוֹת — awesome in deeds, from Rosh Hashana liturgy). "
+            "In Modern Hebrew נורא shifted to 'terrible', and its negation became an understated 'it's fine'."
+        ),
+        why_it_matters=(
+            "An everyday Israeli expression for casual reassurance — a classic litotes (understatement). "
+            "נורא itself is highly versatile: as intensifier it means 'very' (נורא טוב — very good); "
+            "as adjective it means 'terrible'. This dual modern usage is a key feature of spoken Hebrew. "
+            "Learners who know נורא = terrible are initially confused by לא נורא = it's fine."
+        ),
+        variants=(
+            PhraseVariant("לא נורא", MatchType.exact),
+            PhraseVariant("לא נורא בכלל", MatchType.inflectional_variant,
+                          note="'Not terrible at all' — stronger reassurance."),
+        ),
+        tags=("reassurance", "informal", "colloquial", "litotes", "A2"),
+    ),
+
+    "he_yihyeh_beseder": PhraseFamily(
+        id="he_yihyeh_beseder",
+        language="he",
+        canonical_form="יהיה בסדר",
+        meaning="It will be okay; everything will work out; don't worry.",
+        register="informal",
+        origin=(
+            "יהיה (yihyeh — it will be, future of להיות) + בסדר (b'seder — in order, okay). "
+            "סדר (seder — order/arrangement) also names the Passover Seder ceremony. "
+            "The phrase reflects a distinctly Israeli cultural optimism that things will work out."
+        ),
+        why_it_matters=(
+            "A cornerstone of Israeli communication style. "
+            "יהיה is the future of the highly irregular verb להיות (to be): "
+            "its conjugation (אהיה / תהיה / יהיה / נהיה / יהיו) is essential grammar. "
+            "בסדר is used standalone as 'okay/fine/alright' in many contexts. "
+            "Together they form one of the most culturally representative Israeli expressions."
+        ),
+        variants=(
+            PhraseVariant("יהיה בסדר", MatchType.exact),
+            PhraseVariant("הכל יהיה בסדר", MatchType.inflectional_variant,
+                          note="'Everything will be okay' — more emphatic reassurance."),
+        ),
+        tags=("optimism", "reassurance", "informal", "colloquial", "A2"),
+    ),
+
+    "he_en_breira": PhraseFamily(
+        id="he_en_breira",
+        language="he",
+        canonical_form="אין ברירה",
+        meaning="There's no choice; what can you do; we have no option.",
+        register="neutral",
+        origin=(
+            "אין (ayn — there is no/none) + ברירה (breirah — choice/option). "
+            "ברירה is from root ב-ר-ר (to sift, to select, to make clear). "
+            "The existential אין is the negation of יש (there is). "
+            "The phrase expresses resigned acceptance of an unavoidable situation."
+        ),
+        why_it_matters=(
+            "The existential pair יש / אין (there is / there is no) is fundamental Hebrew grammar — "
+            "Hebrew uses these words rather than a form of 'to be' for existence. "
+            "אין ברירה also carries cultural resonance: stoic acceptance associated with "
+            "Israeli pragmatism and the concept of ein breira as historical necessity. "
+            "ברירה shares root ב-ר-ר with ברור (clear, obvious) — both about 'sifting out' clarity."
+        ),
+        variants=(
+            PhraseVariant("אין ברירה", MatchType.exact),
+            PhraseVariant("אין לי ברירה", MatchType.inflectional_variant,
+                          note="'I have no choice' — with personal dative pronoun."),
+        ),
+        tags=("resignation", "pragmatism", "neutral", "existential", "A2"),
+    ),
+
+    "he_davka": PhraseFamily(
+        id="he_davka",
+        language="he",
+        canonical_form="דווקא",
+        meaning="Specifically; precisely; out of spite; actually (nuance word without a single English equivalent).",
+        register="informal",
+        origin=(
+            "From Aramaic דַּוְקָא (davqa — precisely, exactly) — entered Hebrew via "
+            "the Talmudic/rabbinical tradition. In Modern Hebrew it expanded to express "
+            "spite, contrariness, or emphasis: 'I'll do it specifically because you don't want me to'."
+        ),
+        why_it_matters=(
+            "דווקא is famously difficult to translate — it carries at least three senses: "
+            "1. Emphasis/specificity: דווקא אתה (YOU specifically, not someone else). "
+            "2. Spite/contrariness: אני דווקא הולך (I'm going precisely because you told me not to). "
+            "3. Unexpectedness: דווקא הוא צדק (it turned out HE was the one who was right). "
+            "Mastering דווקא is considered a milestone in Hebrew fluency and cultural comprehension."
+        ),
+        variants=(
+            PhraseVariant("דווקא", MatchType.exact),
+        ),
+        tags=("emphasis", "spite", "informal", "cultural", "untranslatable", "B1"),
+    ),
+
+    "he_balagan": PhraseFamily(
+        id="he_balagan",
+        language="he",
+        canonical_form="בלגן",
+        meaning="Chaos; mess; disorder; a big confused situation.",
+        register="informal",
+        origin=(
+            "Borrowed from Russian балаган (balagan — fairground booth, noisy spectacle), "
+            "itself from Persian بالاخانه (bālākhāna — upper room/balcony). "
+            "In Hebrew it shifted to mean general chaos/mess, becoming one of the most "
+            "common colloquial words in Israeli Hebrew."
+        ),
+        why_it_matters=(
+            "A classic example of a borrowed word fully integrated into Hebrew. "
+            "Its Russian origin reflects the large Ashkenazi immigration waves of the 20th century. "
+            "בלגן functions as noun (יש פה בלגן — there's a mess here), attributive adjective "
+            "(מצב בלגן — a messy situation), and denominative verb (לבלגן — to make a mess). "
+            "Understanding borrowed words helps learners recognise Hebrew's multilingual layers."
+        ),
+        variants=(
+            PhraseVariant("בלגן", MatchType.exact),
+            PhraseVariant("בלגן גדול", MatchType.inflectional_variant,
+                          note="'Big chaos' — a very common collocation."),
+        ),
+        tags=("chaos", "informal", "colloquial", "borrowed", "Russian", "A2"),
+    ),
+
+    "he_sababa": PhraseFamily(
+        id="he_sababa",
+        language="he",
+        canonical_form="סבבה",
+        meaning="All good; cool; great; fine (informal approval or positive response).",
+        register="informal",
+        origin=(
+            "Borrowed from Arabic سبابة (sabbāba — index finger) via the colloquial expression "
+            "كله سبابة (everything's index finger = everything's pointing up = everything's fine). "
+            "In Israeli slang it became a general positive response, especially in youth speech."
+        ),
+        why_it_matters=(
+            "An essential Israeli slang term borrowed from Arabic — illustrating the "
+            "Arabic-Hebrew cultural and linguistic interchange in Israeli society. "
+            "Like English 'cool', it functions as a multi-purpose positive response. "
+            "Learners of colloquial Israeli Hebrew encounter it immediately in informal speech "
+            "and text messages. Its Arabic origin points to a wider set of Arabic loanwords in Hebrew."
+        ),
+        variants=(
+            PhraseVariant("סבבה", MatchType.exact),
+            PhraseVariant("סבבה גמור", MatchType.inflectional_variant,
+                          note="'Completely fine/great' — with intensifier גמור (total/complete)."),
+        ),
+        tags=("approval", "informal", "slang", "borrowed", "Arabic", "A2"),
+    ),
+
+    "he_chaval_al_hazman": PhraseFamily(
+        id="he_chaval_al_hazman",
+        language="he",
+        canonical_form="חבל על הזמן",
+        meaning="Amazing/incredible (slang) — literally 'a pity about the time'; has undergone ironic reversal.",
+        register="informal",
+        origin=(
+            "Literally חבל (chaval — a pity/shame) + על (al — about) + הזמן (ha-zman — the time). "
+            "'A pity about the time' was originally used negatively. In Modern Israeli slang "
+            "it underwent ironic reversal — so amazing it's a pity to experience only once. "
+            "Both sincere and sarcastic uses are common."
+        ),
+        why_it_matters=(
+            "A classic example of semantic reversal in Israeli slang — like 'sick' or 'wicked' "
+            "in English youth speech. Understanding that חבל על הזמן can mean 'incredible' "
+            "is essential for comprehending native speech. "
+            "חבל (pity) also appears in חבל שלא (it's a shame that not) and חבל על הכסף "
+            "(not worth the money). The homonym חֶבֶל (rope/cord) can confuse learners."
+        ),
+        variants=(
+            PhraseVariant("חבל על הזמן", MatchType.exact),
+            PhraseVariant("חבל על הזמן שלא", MatchType.inflectional_variant,
+                          note="'It's a shame that not…' — original negative sense."),
+        ),
+        tags=("amazement", "irony", "informal", "slang", "semantic-reversal", "B1"),
     ),
 }
 

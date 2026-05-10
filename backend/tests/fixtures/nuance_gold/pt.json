@@ -8,7 +8,8 @@
   "capability_assertions": {
     "idioms": ["partial", "strong", "gold"],
     "grammar_nuance": ["partial", "strong", "gold"],
-    "formality_register": ["partial", "strong", "gold"]
+    "formality_register": ["partial", "strong", "gold"],
+    "phrase_families": ["partial", "strong", "gold"]
   },
   "capability_gaps": {},
   "cases": [
@@ -179,6 +180,23 @@
       "confidence_ge": null,
       "lesson_data_required_keys": {
         "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "pt_extractor_phrase_family_dar_mao",
+      "category": "phrase_family",
+      "text": "Podes dar uma mão a isso?",
+      "note": "Extractor: 'dar uma mão' → phrase_family match (pt_dar_uma_mao)",
+      "pipeline": "extractor",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "pt_dar_uma_mao",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register"]
       },
       "no_raw_uuids": true
     },

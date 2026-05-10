@@ -1026,13 +1026,14 @@ class TestLanguagesEndpointV3:
             )
 
     def test_dictionary_only_languages_grammar_nuance_ceiling(self) -> None:
-        # ar and he have heuristic grammar signals (definite article, negation,
-        # prefix decomposition) so they can declare up to "stub".
+        # ar has 6 curated grammar signals (definite article + 5 negation particles) → up to "partial".
+        # he has 4 curated heuristic signals (definite_prefix, waw_conjunction,
+        # prefix_decomposition, biblical_register) → up to "partial".
         # la has no grammar signals and must stay "none".
         resp = client.get("/languages")
         ceiling: dict[str, set[str]] = {
-            "ar": {"none", "stub"},
-            "he": {"none", "stub"},
+            "ar": {"none", "stub", "partial"},
+            "he": {"none", "stub", "partial"},
             "la": {"none"},
         }
         for item in resp.json():

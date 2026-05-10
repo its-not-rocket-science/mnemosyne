@@ -121,12 +121,12 @@ class HebrewPlugin:
         transliteration_scheme=None,   # no romanisation in this iteration.
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
-            phrase_families="none",
+            phrase_families="partial",  # 10-family curated catalog; extractor wired
             literary_references="none",
             cultural_references="none",
             etymology="none",
             formality_register="none",
-            grammar_nuance="stub",      # prefix_decomposition always; binyan/verb with HebSpaCy
+            grammar_nuance="partial",   # definite_prefix + waw_conjunction + prefix_decomposition + biblical_register always; binyan/verb with HebSpaCy
             pronunciation_tts="stub",   # he TTS coverage varies by browser
             transliteration="none",
             proverb_tradition="none",

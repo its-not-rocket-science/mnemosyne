@@ -34,6 +34,7 @@ class HebrewNuanceExtractor:
     ) -> list[CandidateObject]:
         out: list[CandidateObject] = []
         seen: set[str] = set()
+        out.extend(self._phrase_families(tokens))
         out.extend(self._definite_prefix(tokens, seen))
         out.extend(self._waw_conjunction(tokens, seen))
         out.extend(self._prefix_decomposition(candidates, seen))
@@ -41,6 +42,10 @@ class HebrewNuanceExtractor:
         out.extend(self._verb_template(candidates, seen))
         out.extend(self._biblical_register(sentence, seen))
         return out
+
+    def _phrase_families(self, tokens: list[Any]) -> list[CandidateObject]:
+        from backend.dictionary.phrase_families import match_phrase_families
+        return match_phrase_families([_tok_text(t) for t in tokens], self.language)
 
     def _definite_prefix(
         self, tokens: list[Any], seen: set[str]
