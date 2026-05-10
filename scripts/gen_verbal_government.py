@@ -117,6 +117,115 @@ LANG_CONFIG: dict[str, dict] = {
         }),
         "lemma_chars": r"\w؀-ۿ ـ",
     },
+    # ── Romance languages (no morphological case; "case" labels are prepositions) ──
+    "es": {
+        "target": "backend/nuance/es.py",
+        "dict_name": "_VERBAL_GOV",
+        "valid_cases": frozenset({
+            "direct_object", "indirect_object",
+            "a", "de", "en", "con", "por", "para",
+            "sobre", "contra", "hacia", "hasta", "tras", "ante", "bajo",
+            "a+infinitive", "de+infinitive", "en+infinitive",
+            "con+infinitive", "por+infinitive", "para+infinitive",
+            "que+subjunctive", "que+indicative",
+        }),
+        "lemma_chars": r"\wáéíóúñüÁÉÍÓÚÑÜ ",
+    },
+    "fr": {
+        "target": "backend/nuance/fr.py",
+        "dict_name": "_VERBAL_GOV",
+        "valid_cases": frozenset({
+            "direct_object", "indirect_object",
+            "à", "de", "en", "avec", "par", "pour",
+            "sur", "contre", "vers", "jusqu'à", "dans", "chez",
+            "à+infinitive", "de+infinitive", "par+infinitive", "pour+infinitive",
+            "que+subjunctive", "que+indicative",
+        }),
+        "lemma_chars": r"\wàâäéèêëïîôöùûüÿçÀÂÄÉÈÊËÏÎÔÖÙÛÜŸÇ '",
+    },
+    "it": {
+        "target": "backend/nuance/it.py",
+        "dict_name": "_VERBAL_GOV",
+        "valid_cases": frozenset({
+            "direct_object", "indirect_object",
+            "a", "di", "in", "con", "per", "su",
+            "tra", "fra", "da", "contro", "verso",
+            "a+infinitive", "di+infinitive", "da+infinitive",
+            "per+infinitive",
+            "che+subjunctive", "che+indicative",
+        }),
+        "lemma_chars": r"\wàèéìíîòóùúÀÈÉÌÍÎÒÓÙÚ '",
+    },
+    "pt": {
+        "target": "backend/nuance/pt.py",
+        "dict_name": "_VERBAL_GOV",
+        "valid_cases": frozenset({
+            "direct_object", "indirect_object",
+            "a", "de", "em", "com", "por", "para",
+            "sobre", "contra", "até", "perante", "ante",
+            "a+infinitive", "de+infinitive", "em+infinitive",
+            "para+infinitive", "por+infinitive",
+            "que+subjunctive", "que+indicative",
+        }),
+        "lemma_chars": r"\wáâãàçéêíóôõúüÁÂÃÀÇÉÊÍÓÔÕÚÜ ",
+    },
+    # ── Hebrew (prep system; some pronominal/inflected preps) ──
+    "he": {
+        "target": "backend/nuance/he.py",
+        "dict_name": "_VERBAL_GOV",
+        "valid_cases": frozenset({
+            "direct_object", "indirect_object",
+            "et",                # accusative marker את
+            "be", "le", "mi",    # ב, ל, מ — prefixed prepositions
+            "al", "el", "im",    # על, אל, עם
+            "min", "ad", "neged",
+            "shel",              # של (genitive marker)
+            "le+infinitive",
+        }),
+        "lemma_chars": r"\w֐-׿ ",
+    },
+    # ── East Asian languages (particle / coverb systems) ──
+    "ja": {
+        "target": "backend/nuance/ja.py",
+        "dict_name": "_VERBAL_GOV",
+        "valid_cases": frozenset({
+            "ga", "wo", "ni", "de", "e", "to",
+            "kara", "made", "yori", "no",
+            "ni+wo", "wo+ni", "to+wo",
+            "ni+naru", "to+naru",
+        }),
+        "lemma_chars": r"\w぀-ゟ゠-ヿ一-鿿 ",
+    },
+    "ko": {
+        "target": "backend/nuance/ko.py",
+        "dict_name": "_VERBAL_GOV",
+        "valid_cases": frozenset({
+            "i_ga", "eul_reul",        # 이/가 nominative; 을/를 accusative
+            "e", "eseo",                # 에, 에서
+            "ege", "eseo",              # 에게, 에서
+            "wa_gwa",                   # 와/과
+            "euro_ro",                  # 으로/로
+            "buteo", "kkaji",           # 부터, 까지
+            "ui",                       # 의
+            "eun_neun",                 # 은/는 (topic)
+            "do",                       # 도
+        }),
+        "lemma_chars": r"\w가-힯ᄀ-ᇿ ",
+    },
+    "zh": {
+        "target": "backend/nuance/zh.py",
+        "dict_name": "_VERBAL_GOV",
+        "valid_cases": frozenset({
+            "direct_object",
+            "gei", "dui", "gen", "he",      # 给, 对, 跟, 和
+            "zai", "cong", "dao",            # 在, 从, 到
+            "ba", "bei",                     # 把, 被 (object-fronting / passive)
+            "wei", "wèile",                  # 为, 为了
+            "yu", "guanyu",                  # 于, 关于
+            "xiang",                         # 向
+        }),
+        "lemma_chars": r"\w一-鿿 ",
+    },
 }
 
 

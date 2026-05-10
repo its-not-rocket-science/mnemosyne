@@ -16,9 +16,16 @@ _DIMINUTIVE_SUFFIXES = (
 _INFORMAL_PRONOUNS = frozenset({"tu", "ti", "tuo", "tua", "tuoi", "tue", "te"})
 _FORMAL_PRONOUNS = frozenset({"lei", "ella", "suo", "sua", "suoi", "sue"})
 
+# Verbal government — populate via gen_verbal_government.py.
+_VERBAL_GOV: dict[str, tuple[str, str]] = {}
+
 
 def _text(tok: Any) -> str:
     return tok.text if hasattr(tok, "text") else str(tok)
+
+
+def _lemma(c: CandidateObject) -> str:
+    return c.lesson_data.get("lemma", c.canonical_form)
 
 
 class ItalianNuanceExtractor:
@@ -37,8 +44,52 @@ class ItalianNuanceExtractor:
         out.extend(self._essere_avere(candidates, seen))
         out.extend(self._subjunctive(candidates, seen))
         out.extend(self._diminutive(tokens, seen))
+        out.extend(self._verbal_government(candidates, seen))
         out.extend(self._etymology(candidates, seen))
         out.extend(self._phrase_families(tokens))
+        return out
+
+    def _verbal_government(
+        self, candidates: list[CandidateObject], seen: set[str]
+    ) -> list[CandidateObject]:
+        out = []
+        for c in candidates:
+            if c.type not in ("vocabulary", "conjugation"):
+                continue
+            lemma = _lemma(c)
+            if lemma not in _VERBAL_GOV:
+                continue
+            required_case, example = _VERBAL_GOV[lemma]
+            cf = f"nuance:it:verbal_government:{lemma}"
+            if cf in seen:
+                continue
+            seen.add(cf)
+            out.append(CandidateObject(
+                canonical_form=cf,
+                surface_form=c.surface_form,
+                type="nuance",
+                label=c.label,
+                lesson_data={
+                    "nuance_type": "verbal_government",
+                    "explanation": (
+                        f"{example}. "
+                        "Italian prepositional verbs select a fixed preposition (a, di, in, …) "
+                        "that often shifts meaning. Infinitive complements with a vs. di are a "
+                        f"persistent learner stumbling block. Required structure: {required_case}."
+                    ),
+                    "register": "neutral",
+                    "learner_level": "B1",
+                    "source": "heuristic",
+                    "lemma": lemma,
+                    "required_case": required_case,
+                },
+                confidence=0.85,
+                relation_hints=[RelationHint(
+                    relation_type="nuance_of",
+                    target_canonical_form=lemma,
+                    target_type="vocabulary",
+                )],
+            ))
         return out
 
     def _register(

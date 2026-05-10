@@ -109,6 +109,14 @@ _LONG_NEG_NEXT: dict[str, str] = {
 
 _HONORIFIC_EP = frozenset({"시", "으시"})
 
+# Verbal government — verb + particle pairs. Populate via
+# gen_verbal_government.py.
+_VERBAL_GOV: dict[str, tuple[str, str]] = {}
+
+
+def _lemma(c: CandidateObject) -> str:
+    return c.lesson_data.get("lemma", c.canonical_form)
+
 
 class KoreanNuanceExtractor:
     language = "ko"
@@ -134,6 +142,51 @@ class KoreanNuanceExtractor:
             out.extend(self._particles_heuristic(sentence, seen))
             out.extend(self._negation_heuristic(tokens, seen))
 
+        out.extend(self._verbal_government(candidates, seen))
+        return out
+
+    def _verbal_government(
+        self, candidates: list[CandidateObject], seen: set[str]
+    ) -> list[CandidateObject]:
+        out = []
+        for c in candidates:
+            if c.type not in ("vocabulary", "conjugation"):
+                continue
+            lemma = _lemma(c)
+            if lemma not in _VERBAL_GOV:
+                continue
+            required_case, example = _VERBAL_GOV[lemma]
+            cf = f"nuance:ko:verbal_government:{lemma}"
+            if cf in seen:
+                continue
+            seen.add(cf)
+            out.append(CandidateObject(
+                canonical_form=cf,
+                surface_form=c.surface_form,
+                type="nuance",
+                label=c.label,
+                lesson_data={
+                    "nuance_type": "verbal_government",
+                    "explanation": (
+                        f"{example}. "
+                        "Korean verbs require specific case particles for their arguments — "
+                        "이/가 (subject), 을/를 (object), 에 (location/time), 에서 (source/"
+                        "location of action), 에게 (animate goal). Vowel/consonant allomorphy "
+                        f"determines particle form. Required structure: {required_case}."
+                    ),
+                    "register": "neutral",
+                    "learner_level": "B1",
+                    "source": "heuristic",
+                    "lemma": lemma,
+                    "required_case": required_case,
+                },
+                confidence=0.85,
+                relation_hints=[RelationHint(
+                    relation_type="nuance_of",
+                    target_canonical_form=lemma,
+                    target_type="vocabulary",
+                )],
+            ))
         return out
 
     # ------------------------------------------------------------------
