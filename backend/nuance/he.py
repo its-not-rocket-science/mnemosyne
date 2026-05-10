@@ -14,7 +14,53 @@ _NIKUD_RE = re.compile(
 _HEBREW_CONSONANTS = frozenset("אבגדהוזחטיכלמנסעפצקרשת")
 
 # Verbal government — populate via gen_verbal_government.py.
-_VERBAL_GOV: dict[str, tuple[str, str]] = {}
+_VERBAL_GOV: dict[str, tuple[str, str]] = {
+    # ── HE additions (gen_verbal_government.py) ──
+    'חשב על': ('al', "«חשב על» (ḥashav 'al, to think about) takes על + noun: חשבתי עליך (I thought about you), חושב על העתיד (thinks about the future)"),
+    'דיבר על': ('al', "«דיבר על» (dibber 'al, to speak about) takes על + noun: מדברים על פוליטיקה (we're talking about politics)"),
+    'שמע על': ('al', "«שמע על» (shama 'al, to hear about) takes על + noun: שמעתי עליו (I heard about him). Distinguish from שמע ב (obey)"),
+    'סיפר על': ('al', "«סיפר על» (sipper 'al, to tell about) takes על + noun: סיפר לי על המסע (he told me about the trip)"),
+    'כתב על': ('al', "«כתב על» (katav 'al, to write about/on) takes על + noun: כותב על המלחמה (writes about the war)"),
+    'הסתכל על': ('al', "«הסתכל על» (histakkel 'al, to look at) takes על + noun: הסתכל עליי (he looked at me). Reflexive form of התפעל binyan"),
+    'שמר על': ('al', "«שמר על» (shamar 'al, to guard / preserve) takes על + noun: שומר על הילדים (watches the children)"),
+    'ויתר על': ('al', "«ויתר על» (vitter 'al, to give up / forgo) takes על + noun: ויתרתי על הזכות (I gave up the right)"),
+    'התגבר על': ('al', "«התגבר על» (hitgabber 'al, to overcome) takes על + noun: התגבר על הקושי (he overcame the difficulty)"),
+    'השפיע על': ('al', "«השפיע על» (hishpia 'al, to influence) takes על + noun: השפיע על ההחלטה (it influenced the decision)"),
+    'הגן על': ('al', "«הגן על» (hegen 'al, to defend) takes על + noun: הגן על המולדת (he defended the homeland)"),
+    'ענה על': ('al', "«ענה על» (ana 'al, to answer) takes על + noun: ענה על השאלה (he answered the question). Also: ענה ל (answer to a person)"),
+    'הסכים ל': ('le', "«הסכים ל» (hiskim le-, to agree to) takes ל + noun: הסכמתי להצעה (I agreed to the proposal)"),
+    'אמר ל': ('le', "«אמר ל» (amar le-, to say to) takes ל + recipient: אמרתי לך (I told you). The recipient is in dative-like ל"),
+    'הסביר ל': ('le', "«הסביר ל» (hisbir le-, to explain to) takes ל + recipient: הסבירו לי את הסיבה (they explained the reason to me). Two-object verb"),
+    'עזר ל': ('le', "«עזר ל» (azar le-, to help) takes ל + recipient: עזר לי ללמוד (he helped me to study). Distinguish from English 'help someone' (no preposition)"),
+    'הודיע ל': ('le', "«הודיע ל» (hodi'a le-, to inform) takes ל + recipient: הודיע למשפחה (he informed the family)"),
+    'נתן ל': ('le', "«נתן ל» (natan le-, to give to) takes ל + recipient: נתן לי ספר (he gave me a book). Two-object verb: ל + recipient + accusative + thing"),
+    'הציע ל': ('le', "«הציע ל» (hitzia le-, to offer/suggest to) takes ל + recipient: הציע לי עבודה (he offered me a job)"),
+    'התקרב ל': ('le', "«התקרב ל» (hitkarev le-, to approach) takes ל + noun: התקרב לבית (he approached the house). Reflexive"),
+    'התרגל ל': ('le', "«התרגל ל» (hitragel le-, to get used to) takes ל + noun: התרגלתי למזג האוויר (I got used to the weather)"),
+    'הגיע ל': ('le', "«הגיע ל» (higgia le-, to arrive at) takes ל + place: הגעתי לעיר (I arrived in the city)"),
+    'חיכה ל': ('le', "«חיכה ל» (ḥikka le-, to wait for) takes ל + object: חיכיתי לך (I waited for you). Distinguish from English 'wait for' (no preposition required in Hebrew without ל)"),
+    'קיווה ל': ('le', "«קיווה ל» (kivva le-, to hope for) takes ל + noun: מקווה לשלום (hopes for peace)"),
+    'התכוון ל': ('le+infinitive', "«התכוון ל» (hitkavven le-, to intend to) takes ל + infinitive: התכוונתי לבוא (I intended to come)"),
+    'השתמש ב': ('be', "«השתמש ב» (hishtammesh be-, to use) takes ב + noun: השתמש במחשב (he used the computer). Reflexive of שימש"),
+    'נגע ב': ('be', "«נגע ב» (naga be-, to touch) takes ב + noun: נגע בידי (he touched my hand). Distinguish from נגע ל (concern someone)"),
+    'זכה ב': ('be', "«זכה ב» (zakha be-, to win) takes ב + prize: זכה בפרס (he won a prize). Compare זכה ל (deserve)"),
+    'בחר ב': ('be', "«בחר ב» (baḥar be-, to choose) takes ב + chosen: בחרו בך (they chose you). Election usage"),
+    'בטח ב': ('be', "«בטח ב» (batḥach be-, to trust) takes ב + person: אני בוטח בך (I trust you)"),
+    'התעניין ב': ('be', "«התעניין ב» (hit'annyen be-, to be interested in) takes ב + topic: מתעניין במוזיקה (he is interested in music). Reflexive"),
+    'השתתף ב': ('be', "«השתתף ב» (hishtatef be-, to participate in) takes ב + activity: השתתף בכנס (he participated in the conference)"),
+    'התחיל ב': ('be', "«התחיל ב» (hitḥil be-, to begin with) takes ב + topic: נתחיל בקריאה (let's begin with reading)"),
+    'פגש ב': ('be', "«פגש ב» (pagash be-, to meet) takes ב + person (more literary): פגש בחבר (he met a friend). Modern Hebrew often uses direct object: פגש את חברו"),
+    'פחד מ': ('mi', "«פחד מ» (paḥad mi-, to fear) takes מ + feared object: פוחד מכלבים (afraid of dogs). Equivalent to English 'be afraid of'"),
+    'נמנע מ': ('mi', "«נמנע מ» (nimna mi-, to avoid) takes מ + avoided thing: נמנע מסכסוך (he avoided conflict). Reflexive of mn'"),
+    'חשש מ': ('mi', "«חשש מ» (ḥashash mi-, to be wary of) takes מ + feared object: חשש מהשלכות (he feared consequences). Stronger/more formal than פחד מ"),
+    'נהנה מ': ('mi', "«נהנה מ» (nehene mi-, to enjoy) takes מ + source: נהניתי מהסרט (I enjoyed the film). Niphal binyan"),
+    'קיבל מ': ('mi', "«קיבל מ» (kibbel mi-, to receive from) takes מ + source: קיבלתי מתנה ממנה (I received a gift from her)"),
+    'למד מ': ('mi', "«למד מ» (lamad mi-, to learn from) takes מ + source: לומד ממורהו (learns from his teacher)"),
+    'התרחק מ': ('mi', "«התרחק מ» (hitraḥek mi-, to move away from) takes מ + noun: התרחק מהבעיה (he moved away from the problem)"),
+    'פגש את': ('et', "«פגש את» (pagash et, to meet — modern usage) takes את + direct object: פגשתי אותו (I met him). את marks definite direct object"),
+    'אהב את': ('et', "«אהב את» (ahav et, to love) takes את + definite direct object: אני אוהב אותך (I love you). את is the accusative marker for definite objects"),
+    'ראה את': ('et', "«ראה את» (ra'a et, to see) takes את + definite direct object: ראיתי את הספר (I saw the book)"),
+}
 
 
 def _strip(s: str) -> str:
