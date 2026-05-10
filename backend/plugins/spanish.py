@@ -320,7 +320,7 @@ class SpanishPlugin:
             phrase_families="partial",   # 10 families with variants and pedagogical notes
             literary_references="none",
             cultural_references="none",
-            etymology="partial",         # 10 curated entries covering high-frequency learner vocabulary
+            etymology="strong",          # 100-entry curated catalog; Arabic/Nahuatl/Latin layers covered
             formality_register="stub",   # tú/usted distinction detectable
             grammar_nuance="partial",    # tense/mood/person/number drilling
             pronunciation_tts="partial", # browser TTS reliable for es

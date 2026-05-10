@@ -6,10 +6,30 @@
   "nuance_extractor_class": "RussianNuanceExtractor",
   "tokenizer": "spacy",
   "capability_assertions": {
-    "idioms": ["partial", "strong", "gold"],
-    "grammar_nuance": ["partial", "strong", "gold"],
-    "formality_register": ["stub", "partial"],
-    "phrase_families": ["partial", "strong", "gold"]
+    "idioms": [
+      "partial",
+      "strong",
+      "gold"
+    ],
+    "grammar_nuance": [
+      "partial",
+      "strong",
+      "gold"
+    ],
+    "formality_register": [
+      "stub",
+      "partial"
+    ],
+    "phrase_families": [
+      "partial",
+      "strong",
+      "gold"
+    ],
+    "etymology": [
+      "partial",
+      "strong",
+      "gold"
+    ]
   },
   "capability_gaps": {},
   "cases": [
@@ -19,14 +39,20 @@
       "text": "Конечно, мы придём на встречу завтра.",
       "note": "Idiom 'конечно' (of course) — discourse marker",
       "pipeline": "plugin",
-      "assert_types_present": ["idiom"],
+      "assert_types_present": [
+        "idiom"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": "конечно",
       "confidence_ge": 0.85,
       "lesson_data_required_keys": {
-        "idiom": ["phrase", "meaning", "register"]
+        "idiom": [
+          "phrase",
+          "meaning",
+          "register"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -36,14 +62,20 @@
       "text": "Тем не менее, ситуация остаётся сложной.",
       "note": "Idiom 'тем не менее' (nevertheless) — concessive discourse marker",
       "pipeline": "plugin",
-      "assert_types_present": ["idiom"],
+      "assert_types_present": [
+        "idiom"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": "тем не менее",
       "confidence_ge": 0.85,
       "lesson_data_required_keys": {
-        "idiom": ["phrase", "meaning", "register"]
+        "idiom": [
+          "phrase",
+          "meaning",
+          "register"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -53,14 +85,20 @@
       "text": "Она читала книгу, когда позвонил телефон.",
       "note": "Plugin nuance: imperfective aspect (читала) for background ongoing action",
       "pipeline": "plugin",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "imperfective_aspect",
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": 0.7,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "lemma", "note"]
+        "nuance": [
+          "nuance_type",
+          "lemma",
+          "note"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -70,14 +108,18 @@
       "text": "Он идёт в библиотеку прямо сейчас.",
       "note": "Extractor nuance: 'идти' (unidirectional motion — single trip right now)",
       "pipeline": "both",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "motion_verb",
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": 0.8,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type"]
+        "nuance": [
+          "nuance_type"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -87,14 +129,18 @@
       "text": "Она ходит в библиотеку каждую субботу.",
       "note": "Extractor nuance: 'ходить' (multidirectional — habitual repeated movement)",
       "pipeline": "both",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "motion_verb",
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": 0.8,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type"]
+        "nuance": [
+          "nuance_type"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -104,14 +150,19 @@
       "text": "Правда всегда выходит наружу в конце концов.",
       "note": "Vocabulary: 'правда' — in DEFAULT_STORE with etymology",
       "pipeline": "plugin",
-      "assert_types_present": ["vocabulary"],
+      "assert_types_present": [
+        "vocabulary"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": "правда",
       "confidence_ge": null,
       "lesson_data_required_keys": {
-        "vocabulary": ["lemma", "pos"]
+        "vocabulary": [
+          "lemma",
+          "pos"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -121,14 +172,25 @@
       "text": "Врач пишет рецепт для пациента.",
       "note": "Plain sentence: no idiom keywords, no aspect/motion triggers",
       "pipeline": "plugin",
-      "assert_types_present": ["vocabulary"],
-      "assert_types_absent": ["idiom", "grammar"],
+      "assert_types_present": [
+        "vocabulary"
+      ],
+      "assert_types_absent": [
+        "idiom",
+        "grammar"
+      ],
       "assert_nuance_type": null,
-      "assert_nuance_types_absent": ["motion_verb", "verbal_government"],
+      "assert_nuance_types_absent": [
+        "motion_verb",
+        "verbal_government"
+      ],
       "assert_canonical_contains": null,
       "confidence_ge": null,
       "lesson_data_required_keys": {
-        "vocabulary": ["lemma", "pos"]
+        "vocabulary": [
+          "lemma",
+          "pos"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -138,14 +200,21 @@
       "text": "Не стоит ломать голову над этой задачей.",
       "note": "Extractor: 'ломать голову' → phrase_family match (ru_lomat_golovu)",
       "pipeline": "extractor",
-      "assert_types_present": ["phrase_family"],
+      "assert_types_present": [
+        "phrase_family"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": "ru_lomat_golovu",
       "confidence_ge": 0.8,
       "lesson_data_required_keys": {
-        "phrase_family": ["family_id", "canonical_form", "meaning", "register"]
+        "phrase_family": [
+          "family_id",
+          "canonical_form",
+          "meaning",
+          "register"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -155,14 +224,19 @@
       "text": "Кошка спокойно спит на диване.",
       "note": "All vocabulary candidates must carry lemma and pos",
       "pipeline": "plugin",
-      "assert_types_present": ["vocabulary"],
+      "assert_types_present": [
+        "vocabulary"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": null,
       "lesson_data_required_keys": {
-        "vocabulary": ["lemma", "pos"]
+        "vocabulary": [
+          "lemma",
+          "pos"
+        ]
       },
       "no_raw_uuids": true
     }
