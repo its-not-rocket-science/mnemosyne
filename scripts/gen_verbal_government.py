@@ -115,7 +115,7 @@ LANG_CONFIG: dict[str, dict] = {
             "ala+genitive", "ma'a+genitive",
             "double+accusative",
         }),
-        "lemma_chars": r"\w؀-ۿ",
+        "lemma_chars": r"\w؀-ۿ ـ",
     },
 }
 
