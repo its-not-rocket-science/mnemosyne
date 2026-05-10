@@ -139,6 +139,11 @@ def _escape(s: str | None) -> str:
     return f'"{s}"'
 
 
+def _esc(s: str) -> str:
+    """Escape backslash and double-quote for inclusion inside a Python "..." literal."""
+    return s.replace("\\", "\\\\").replace('"', '\\"')
+
+
 def _render_family(fam: dict) -> str:
     fid = fam["id"]
     lang = fid.split("_")[0]
@@ -153,39 +158,39 @@ def _render_family(fam: dict) -> str:
     lines.append(f'    "{fid}": PhraseFamily(')
     lines.append(f'        id="{fid}",')
     lines.append(f'        language="{lang}",')
-    lines.append(f'        canonical_form="{canonical}",')
+    lines.append(f'        canonical_form="{_esc(canonical)}",')
     # meaning — wrap at 80 chars
     wrapped_meaning = textwrap.fill(meaning, width=72, subsequent_indent="            ")
     if "\n" in wrapped_meaning:
         lines.append(f'        meaning=(')
         for part in textwrap.wrap(meaning, width=72):
-            lines.append(f'            "{part}"')
+            lines.append(f'            "{_esc(part)}"')
         lines.append(f'        ),')
     else:
-        lines.append(f'        meaning="{meaning}",')
+        lines.append(f'        meaning="{_esc(meaning)}",')
     lines.append(f'        register="{register}",')
     if origin:
         wrapped = textwrap.wrap(origin, width=72)
         if len(wrapped) == 1:
-            lines.append(f'        origin="{origin}",')
+            lines.append(f'        origin="{_esc(origin)}",')
         else:
             lines.append(f'        origin=(')
             for i, part in enumerate(wrapped):
                 sep = "" if i == len(wrapped) - 1 else " "
-                lines.append(f'            "{part}{sep}"')
+                lines.append(f'            "{_esc(part)}{sep}"')
             lines.append(f'        ),')
     if why:
         wrapped = textwrap.wrap(why, width=72)
         if len(wrapped) == 1:
-            lines.append(f'        why_it_matters="{why}",')
+            lines.append(f'        why_it_matters="{_esc(why)}",')
         else:
             lines.append(f'        why_it_matters=(')
             for i, part in enumerate(wrapped):
                 sep = "" if i == len(wrapped) - 1 else " "
-                lines.append(f'            "{part}{sep}"')
+                lines.append(f'            "{_esc(part)}{sep}"')
             lines.append(f'        ),')
     if confusables:
-        conf_str = ", ".join(f'"{c}"' for c in confusables)
+        conf_str = ", ".join(f'"{_esc(c)}"' for c in confusables)
         lines.append(f'        confusables=({conf_str},),')
     lines.append(f'        variants=(')
     for v in fam["variants"]:
@@ -193,10 +198,10 @@ def _render_family(fam: dict) -> str:
         mt = v["type"]
         note = v.get("note")
         lines.append(f'            PhraseVariant(')
-        lines.append(f'                surface="{surface}",')
+        lines.append(f'                surface="{_esc(surface)}",')
         lines.append(f'                match_type=MatchType.{mt},')
         if note:
-            lines.append(f'                note="{note}",')
+            lines.append(f'                note="{_esc(note)}",')
         lines.append(f'            ),')
     lines.append(f'        ),')
     lines.append(f'    ),')
