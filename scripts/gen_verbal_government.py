@@ -76,8 +76,9 @@ LANG_CONFIG: dict[str, dict] = {
             "gegen+accusative", "ohne+accusative", "durch+accusative",
             "wegen+genitive", "trotz+genitive",
             "während+genitive", "statt+genitive",
+            "double+accusative",
         }),
-        "lemma_chars": r"\wäöüÄÖÜß",
+        "lemma_chars": r"\wäöüÄÖÜß ",
     },
     "la": {
         "target": "backend/nuance/la.py",
