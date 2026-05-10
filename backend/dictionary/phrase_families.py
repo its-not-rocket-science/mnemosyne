@@ -9116,6 +9116,2285 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
         ),
     ),
 
+    # ── Ar (generated) ────────────────────────────────────────
+
+    "ar_min_alfammi_ila_aludhun": PhraseFamily(
+        id="ar_min_alfammi_ila_aludhun",
+        language="ar",
+        canonical_form="من الفم إلى الأذن",
+        meaning=(
+            "From the mouth to the ear — said of secrets passed quietly between"
+            "trusted parties."
+        ),
+        register="neutral",
+        origin="Common Arabic idiom across MSA and dialects.",
+        variants=(
+            PhraseVariant(
+                surface="من الفم إلى الأذن",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_albaytu_baytuk": PhraseFamily(
+        id="ar_albaytu_baytuk",
+        language="ar",
+        canonical_form="البيت بيتك",
+        meaning=(
+            "The house is your house — formal Arabic hospitality phrase, mirror of"
+            "Spanish 'mi casa es tu casa.'"
+        ),
+        register="neutral",
+        origin=(
+            "Pan-Arab hospitality formula; the welcoming host's standard utterance to "
+            "a guest."
+        ),
+        why_it_matters="Captures Arab hospitality (ḍiyāfa) as a cultural norm.",
+        variants=(
+            PhraseVariant(
+                surface="البيت بيتك",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_sahtain": PhraseFamily(
+        id="ar_sahtain",
+        language="ar",
+        canonical_form="صحتين",
+        meaning=(
+            "Double health — said before/after meals, equivalent to bon appétit and"
+            "'cheers to your health.'"
+        ),
+        register="informal",
+        origin=(
+            "Dialectal Arabic (especially Levantine and Egyptian); literally 'two "
+            "healths' — wishing the eater double the benefit."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="صحتين",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="صحة",
+                match_type=MatchType.allusion,
+                note="Single-word health-wish (Maghrebi).",
+            ),
+        ),
+    ),
+
+    "ar_haram_alayk": PhraseFamily(
+        id="ar_haram_alayk",
+        language="ar",
+        canonical_form="حرام عليك",
+        meaning=(
+            "Shame on you / it's a sin on you — moral reproach with religious"
+            "overtones."
+        ),
+        register="informal",
+        origin=(
+            "Common spoken Arabic across regions; ḥarām invokes the religious sense "
+            "of forbidden."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="حرام عليك",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="حرام عليكي",
+                match_type=MatchType.inflectional_variant,
+                note="Feminine-addressee form.",
+            ),
+        ),
+    ),
+
+    "ar_law_samaht": PhraseFamily(
+        id="ar_law_samaht",
+        language="ar",
+        canonical_form="لو سمحت",
+        meaning="If you would permit / please.",
+        register="formal",
+        origin="Formal polite request formula in MSA and most dialects.",
+        variants=(
+            PhraseVariant(
+                surface="لو سمحت",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="لو سمحتي",
+                match_type=MatchType.inflectional_variant,
+                note="Feminine-addressee form.",
+            ),
+        ),
+    ),
+
+    "ar_min_fadlak": PhraseFamily(
+        id="ar_min_fadlak",
+        language="ar",
+        canonical_form="من فضلك",
+        meaning="From your favor / please. Slightly more elevated than law samaḥt.",
+        register="formal",
+        origin="Standard Arabic polite request formula; faḍl = favor/grace.",
+        variants=(
+            PhraseVariant(
+                surface="من فضلك",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="من فضلكم",
+                match_type=MatchType.inflectional_variant,
+                note="Plural/respectful form.",
+            ),
+        ),
+    ),
+
+    "ar_taht_amrak": PhraseFamily(
+        id="ar_taht_amrak",
+        language="ar",
+        canonical_form="تحت أمرك",
+        meaning="Under your command / at your service. Formal courtesy.",
+        register="formal",
+        origin="Levantine and Egyptian Arabic; literally 'beneath your order.'",
+        variants=(
+            PhraseVariant(
+                surface="تحت أمرك",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_kif_halak": PhraseFamily(
+        id="ar_kif_halak",
+        language="ar",
+        canonical_form="كيف حالك",
+        meaning="How is your state / how are you.",
+        register="neutral",
+        origin="MSA and dialectal greeting; ḥāl = state, condition.",
+        variants=(
+            PhraseVariant(
+                surface="كيف حالك",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="كيف الحال",
+                match_type=MatchType.inflectional_variant,
+                note="Without explicit 2nd-person possessive.",
+            ),
+        ),
+    ),
+
+    "ar_ala_kaifak": PhraseFamily(
+        id="ar_ala_kaifak",
+        language="ar",
+        canonical_form="على كيفك",
+        meaning="As you like / suit yourself / take it easy.",
+        register="informal",
+        origin=(
+            "Levantine and Egyptian Arabic; kayf = mood, pleasure (also gives English "
+            "'kif')."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="على كيفك",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_walaw": PhraseFamily(
+        id="ar_walaw",
+        language="ar",
+        canonical_form="ولو",
+        meaning="Even so / even if / used as deflective 'don't mention it.'",
+        register="informal",
+        origin="Common conversational Arabic; literally 'and-if.'",
+        variants=(
+            PhraseVariant(
+                surface="ولو",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_la_taqlaq": PhraseFamily(
+        id="ar_la_taqlaq",
+        language="ar",
+        canonical_form="لا تقلق",
+        meaning="Don't worry.",
+        register="neutral",
+        origin="MSA and dialectal reassurance.",
+        variants=(
+            PhraseVariant(
+                surface="لا تقلق",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ما تقلقش",
+                match_type=MatchType.inflectional_variant,
+                note="Egyptian dialectal negation.",
+            ),
+        ),
+    ),
+
+    "ar_kullu_shay_tamam": PhraseFamily(
+        id="ar_kullu_shay_tamam",
+        language="ar",
+        canonical_form="كل شيء تمام",
+        meaning="Everything is fine/complete.",
+        register="informal",
+        origin="Egyptian and Levantine Arabic; tamām = complete, perfect.",
+        variants=(
+            PhraseVariant(
+                surface="كل شيء تمام",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_ala_alhabba_walhabbatain": PhraseFamily(
+        id="ar_ala_alhabba_walhabbatain",
+        language="ar",
+        canonical_form="على الحبة والحبتين",
+        meaning="Down to the last grain — exhaustively, thoroughly.",
+        register="informal",
+        origin="Egyptian Arabic; literally 'on one bean and two beans.'",
+        variants=(
+            PhraseVariant(
+                surface="على الحبة والحبتين",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_ya_salam": PhraseFamily(
+        id="ar_ya_salam",
+        language="ar",
+        canonical_form="يا سلام",
+        meaning="O peace! — exclamation of admiration or surprise.",
+        register="informal",
+        origin="Pan-Arab exclamation.",
+        variants=(
+            PhraseVariant(
+                surface="يا سلام",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_walla_balla": PhraseFamily(
+        id="ar_walla_balla",
+        language="ar",
+        canonical_form="والله بالله",
+        meaning="By God by God — strong oath/affirmation.",
+        register="informal",
+        origin=(
+            "Levantine spoken Arabic; rhyming intensifier of the standard 'wallahi' "
+            "oath."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="والله بالله",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_la_hawla_wa_la_quwwata_illa_billah": PhraseFamily(
+        id="ar_la_hawla_wa_la_quwwata_illa_billah",
+        language="ar",
+        canonical_form="لا حول ولا قوة إلا بالله",
+        meaning="There is no power and no strength except in God.",
+        register="formal",
+        origin=(
+            "Quranic-style invocation said in moments of distress or witnessing "
+            "trouble."
+        ),
+        why_it_matters="Religiously potent expression of fatalistic acceptance.",
+        variants=(
+            PhraseVariant(
+                surface="لا حول ولا قوة إلا بالله",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="لا حول ولا قوة",
+                match_type=MatchType.allusion,
+                note="Shortened form.",
+            ),
+        ),
+    ),
+
+    "ar_baraka_allahu_fik": PhraseFamily(
+        id="ar_baraka_allahu_fik",
+        language="ar",
+        canonical_form="بارك الله فيك",
+        meaning="May God bless you in/through you. Formal thanks/blessing.",
+        register="formal",
+        origin="Quranic-style blessing formula.",
+        variants=(
+            PhraseVariant(
+                surface="بارك الله فيك",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="بارك الله فيكم",
+                match_type=MatchType.inflectional_variant,
+                note="Plural form.",
+            ),
+        ),
+    ),
+
+    "ar_alhamdu_lillah_ala_kulli_hal": PhraseFamily(
+        id="ar_alhamdu_lillah_ala_kulli_hal",
+        language="ar",
+        canonical_form="الحمد لله على كل حال",
+        meaning="Praise be to God in every state — gratitude in good and bad alike.",
+        register="formal",
+        origin="Pan-Islamic theological formula expressing acceptance.",
+        variants=(
+            PhraseVariant(
+                surface="الحمد لله على كل حال",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_in_kana_kheir": PhraseFamily(
+        id="ar_in_kana_kheir",
+        language="ar",
+        canonical_form="إن كان خير",
+        meaning=(
+            "If it be good / hopefully it is good — said when mentioning a planned"
+            "event whose outcome depends on God."
+        ),
+        register="informal",
+        origin="Levantine Arabic; cultural marker of fatalistic optimism.",
+        variants=(
+            PhraseVariant(
+                surface="إن كان خير",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_kullu_aam_wa_anta_bikhair": PhraseFamily(
+        id="ar_kullu_aam_wa_anta_bikhair",
+        language="ar",
+        canonical_form="كل عام وأنت بخير",
+        meaning=(
+            "Every year, and you in good health — universal Arabic greeting for"
+            "holidays, birthdays, anniversaries."
+        ),
+        register="neutral",
+        origin="Standard Arabic festive greeting.",
+        variants=(
+            PhraseVariant(
+                surface="كل عام وأنت بخير",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="كل سنة وأنت طيب",
+                match_type=MatchType.modernized_variant,
+                note="Egyptian dialectal form.",
+            ),
+        ),
+    ),
+
+    "ar_aakidan": PhraseFamily(
+        id="ar_aakidan",
+        language="ar",
+        canonical_form="أكيدا",
+        meaning="Certainly / for sure.",
+        register="neutral",
+        origin="MSA emphatic.",
+        variants=(
+            PhraseVariant(
+                surface="أكيدا",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="أكيد",
+                match_type=MatchType.inflectional_variant,
+                note="Adjective form.",
+            ),
+        ),
+    ),
+
+    "ar_ala_fikra": PhraseFamily(
+        id="ar_ala_fikra",
+        language="ar",
+        canonical_form="على فكرة",
+        meaning="By the way / incidentally.",
+        register="informal",
+        origin="Pan-Arab spoken; literally 'on a thought.'",
+        variants=(
+            PhraseVariant(
+                surface="على فكرة",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_ya_rabb": PhraseFamily(
+        id="ar_ya_rabb",
+        language="ar",
+        canonical_form="يا رب",
+        meaning="O Lord! — exclamation of plea or distress.",
+        register="informal",
+        origin="Pan-Arab; rabb is one of the names of God.",
+        variants=(
+            PhraseVariant(
+                surface="يا رب",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_wallahil_aazim": PhraseFamily(
+        id="ar_wallahil_aazim",
+        language="ar",
+        canonical_form="والله العظيم",
+        meaning="By God the Great — strongest oath form.",
+        register="formal",
+        origin="Strongest Arabic oath formula, often used in serious assertions.",
+        variants=(
+            PhraseVariant(
+                surface="والله العظيم",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_min_zaman": PhraseFamily(
+        id="ar_min_zaman",
+        language="ar",
+        canonical_form="من زمان",
+        meaning=(
+            "From a long time / it's been ages — said when meeting someone after a"
+            "long separation."
+        ),
+        register="informal",
+        origin="Pan-Arab spoken.",
+        variants=(
+            PhraseVariant(
+                surface="من زمان",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_ish_wallah": PhraseFamily(
+        id="ar_ish_wallah",
+        language="ar",
+        canonical_form="إيش والله",
+        meaning="What, by God! — exclamation of surprise.",
+        register="informal",
+        origin="Levantine and Gulf dialect; ish = what (dialectal).",
+        variants=(
+            PhraseVariant(
+                surface="إيش والله",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_inta_jad": PhraseFamily(
+        id="ar_inta_jad",
+        language="ar",
+        canonical_form="إنت جاد",
+        meaning="Are you serious? / really?",
+        register="informal",
+        origin="Pan-Arab spoken; jadd = serious/grandfather.",
+        variants=(
+            PhraseVariant(
+                surface="إنت جاد",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="أنت جاد",
+                match_type=MatchType.orthographic_variant,
+                note="MSA formal pronoun.",
+            ),
+        ),
+    ),
+
+    "ar_yaani": PhraseFamily(
+        id="ar_yaani",
+        language="ar",
+        canonical_form="يعني",
+        meaning="I mean / so / sort of — pervasive discourse filler in spoken Arabic.",
+        register="informal",
+        origin="Pan-Arab discourse particle from yaʿnī (literally 'it means').",
+        why_it_matters="Yaʿnī fills the same conversational role as English 'like' or 'I mean.'",
+        variants=(
+            PhraseVariant(
+                surface="يعني",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_alhayat_hilwa": PhraseFamily(
+        id="ar_alhayat_hilwa",
+        language="ar",
+        canonical_form="الحياة حلوة",
+        meaning="Life is sweet — affirmation of life's goodness.",
+        register="informal",
+        origin=(
+            "Egyptian Arabic; cultural attitude of finding sweetness in life despite "
+            "hardship."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="الحياة حلوة",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_safi_wa_yali": PhraseFamily(
+        id="ar_safi_wa_yali",
+        language="ar",
+        canonical_form="صافي ويالي",
+        meaning="Clear and that's it — done, settled, agreed.",
+        register="informal",
+        origin="Levantine/Gulf spoken Arabic.",
+        variants=(
+            PhraseVariant(
+                surface="صافي ويالي",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_la_baas": PhraseFamily(
+        id="ar_la_baas",
+        language="ar",
+        canonical_form="لا بأس",
+        meaning="No harm / not bad.",
+        register="neutral",
+        origin="MSA standard reassurance.",
+        variants=(
+            PhraseVariant(
+                surface="لا بأس",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_ahlan_wa_sahlan": PhraseFamily(
+        id="ar_ahlan_wa_sahlan",
+        language="ar",
+        canonical_form="أهلا وسهلا",
+        meaning="Welcome / be at ease — formal welcome formula.",
+        register="neutral",
+        origin="Pan-Arab formal welcoming phrase, very ancient.",
+        variants=(
+            PhraseVariant(
+                surface="أهلا وسهلا",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="أهلا",
+                match_type=MatchType.allusion,
+                note="Shortened informal greeting.",
+            ),
+        ),
+    ),
+
+    "ar_marhaba": PhraseFamily(
+        id="ar_marhaba",
+        language="ar",
+        canonical_form="مرحبا",
+        meaning="Welcome / hello.",
+        register="neutral",
+        origin="Pan-Arab universal greeting.",
+        variants=(
+            PhraseVariant(
+                surface="مرحبا",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="مرحبتين",
+                match_type=MatchType.inflectional_variant,
+                note="Doubled form: 'two welcomes'.",
+            ),
+        ),
+    ),
+
+    "ar_aalik_yatba": PhraseFamily(
+        id="ar_aalik_yatba",
+        language="ar",
+        canonical_form="عليك يا طبا",
+        meaning="Said as encouragement / 'come on, you can do it!'",
+        register="informal",
+        origin="Levantine cheering phrase.",
+        variants=(
+            PhraseVariant(
+                surface="عليك يا طبا",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_lan_yansak": PhraseFamily(
+        id="ar_lan_yansak",
+        language="ar",
+        canonical_form="لن ينساك",
+        meaning=(
+            "He/it will not forget you — said as comforting reassurance, especially"
+            "of God's care."
+        ),
+        register="literary",
+        origin="Quranic-style reassurance.",
+        variants=(
+            PhraseVariant(
+                surface="لن ينساك",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_kullu_shai_qadar": PhraseFamily(
+        id="ar_kullu_shai_qadar",
+        language="ar",
+        canonical_form="كل شيء قدر",
+        meaning="Everything is fate.",
+        register="neutral",
+        origin="Theological/cultural attitude expressing acceptance of God's decree.",
+        variants=(
+            PhraseVariant(
+                surface="كل شيء قدر",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="كل شي قدر",
+                match_type=MatchType.orthographic_variant,
+                note="Dialectal spelling of 'shay' as 'shi'.",
+            ),
+        ),
+    ),
+
+    "ar_inna_lillahi_wa_inna_ilayhi_rajiun": PhraseFamily(
+        id="ar_inna_lillahi_wa_inna_ilayhi_rajiun",
+        language="ar",
+        canonical_form="إنا لله وإنا إليه راجعون",
+        meaning=(
+            "We belong to God and to Him we return — Quranic verse 2:156, said upon"
+            "hearing of a death."
+        ),
+        register="formal",
+        origin="Quran 2:156; the standard Islamic phrase upon learning of death.",
+        why_it_matters="Religiously prescribed; universally recognized across Muslims.",
+        variants=(
+            PhraseVariant(
+                surface="إنا لله وإنا إليه راجعون",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="إنا لله",
+                match_type=MatchType.allusion,
+                note="Shortened form, very common.",
+            ),
+        ),
+    ),
+
+    "ar_jazaka_allahu_khairan": PhraseFamily(
+        id="ar_jazaka_allahu_khairan",
+        language="ar",
+        canonical_form="جزاك الله خيرا",
+        meaning="May God reward you with good — religious thanks formula.",
+        register="formal",
+        origin="Hadith-derived; preferred by religious speakers over plain 'shukran.'",
+        variants=(
+            PhraseVariant(
+                surface="جزاك الله خيرا",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="جزاك الله",
+                match_type=MatchType.allusion,
+                note="Shortened form.",
+            ),
+        ),
+    ),
+
+    "ar_la_ilaha_illa_allah": PhraseFamily(
+        id="ar_la_ilaha_illa_allah",
+        language="ar",
+        canonical_form="لا إله إلا الله",
+        meaning="There is no god but God — first half of the shahāda (Islamic creed).",
+        register="formal",
+        origin="Quran 47:19; the foundational Islamic creedal statement.",
+        why_it_matters="Most foundational sentence in Islam; tawḥīd (oneness of God) condensed.",
+        variants=(
+            PhraseVariant(
+                surface="لا إله إلا الله",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_subhana_allah": PhraseFamily(
+        id="ar_subhana_allah",
+        language="ar",
+        canonical_form="سبحان الله",
+        meaning="Glory to God — pious exclamation upon witnessing something amazing.",
+        register="formal",
+        origin="Quranic phrase; standard pious utterance.",
+        variants=(
+            PhraseVariant(
+                surface="سبحان الله",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_allahu_akbar": PhraseFamily(
+        id="ar_allahu_akbar",
+        language="ar",
+        canonical_form="الله أكبر",
+        meaning=(
+            "God is greater — the takbīr; said in prayer, in moments of awe, victory,"
+            "or distress."
+        ),
+        register="formal",
+        origin="Foundational Islamic phrase; opens the call to prayer.",
+        why_it_matters=(
+            "Universally recognized Islamic phrase; theologically asserts God's "
+            "greatness over all things."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="الله أكبر",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    # ── He (generated) ────────────────────────────────────────
+
+    "he_ein_li_musag": PhraseFamily(
+        id="he_ein_li_musag",
+        language="he",
+        canonical_form="אין לי מושג",
+        meaning="I have no idea / no clue.",
+        register="informal",
+        origin="Modern Hebrew idiom; musag = concept.",
+        variants=(
+            PhraseVariant(
+                surface="אין לי מושג",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_lehitraot": PhraseFamily(
+        id="he_lehitraot",
+        language="he",
+        canonical_form="להתראות",
+        meaning="See you / goodbye (literally 'to see each other').",
+        register="neutral",
+        origin="Modern Hebrew standard farewell; reflexive form of l'rot (to see).",
+        variants=(
+            PhraseVariant(
+                surface="להתראות",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_boker_tov": PhraseFamily(
+        id="he_boker_tov",
+        language="he",
+        canonical_form="בוקר טוב",
+        meaning="Good morning.",
+        register="neutral",
+        origin="Standard morning greeting.",
+        variants=(
+            PhraseVariant(
+                surface="בוקר טוב",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="בוקר אור",
+                match_type=MatchType.inflectional_variant,
+                note="Response form: 'morning of light.'",
+            ),
+        ),
+    ),
+
+    "he_layla_tov": PhraseFamily(
+        id="he_layla_tov",
+        language="he",
+        canonical_form="לילה טוב",
+        meaning="Good night.",
+        register="neutral",
+        origin="Standard night farewell.",
+        variants=(
+            PhraseVariant(
+                surface="לילה טוב",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_toda_raba": PhraseFamily(
+        id="he_toda_raba",
+        language="he",
+        canonical_form="תודה רבה",
+        meaning="Many thanks (literally 'much thanks').",
+        register="neutral",
+        origin="Standard Hebrew thanks; raba = many/much (feminine).",
+        variants=(
+            PhraseVariant(
+                surface="תודה רבה",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="תודה",
+                match_type=MatchType.allusion,
+                note="Shortened standalone form.",
+            ),
+        ),
+    ),
+
+    "he_bevakasha": PhraseFamily(
+        id="he_bevakasha",
+        language="he",
+        canonical_form="בבקשה",
+        meaning="Please / you're welcome (used both ways).",
+        register="neutral",
+        origin="Modern Hebrew formula; literally 'in request.'",
+        variants=(
+            PhraseVariant(
+                surface="בבקשה",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_slicha": PhraseFamily(
+        id="he_slicha",
+        language="he",
+        canonical_form="סליחה",
+        meaning="Excuse me / sorry / pardon.",
+        register="neutral",
+        origin=(
+            "Hebrew slicha = forgiveness; productive in everyday apology and "
+            "attention-getting."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="סליחה",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_betei_hen": PhraseFamily(
+        id="he_betei_hen",
+        language="he",
+        canonical_form="תני חן",
+        meaning="Look favorably / smile upon — 'find grace in your eyes.'",
+        register="literary",
+        origin="Biblical idiom: matza ḥen be-eineiha (he found favor in her eyes).",
+        variants=(
+            PhraseVariant(
+                surface="תני חן",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_sof_sof": PhraseFamily(
+        id="he_sof_sof",
+        language="he",
+        canonical_form="סוף סוף",
+        meaning="Finally / at last (literally 'end-end').",
+        register="informal",
+        origin="Modern Hebrew reduplication; reduplication for emphasis is common.",
+        variants=(
+            PhraseVariant(
+                surface="סוף סוף",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_lo_baseder": PhraseFamily(
+        id="he_lo_baseder",
+        language="he",
+        canonical_form="לא בסדר",
+        meaning="Not okay / not right.",
+        register="informal",
+        origin="Mirror of 'beseder' (okay); literally 'not in order.'",
+        variants=(
+            PhraseVariant(
+                surface="לא בסדר",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_eich_holech": PhraseFamily(
+        id="he_eich_holech",
+        language="he",
+        canonical_form="איך הולך",
+        meaning="How's it going (literally 'how does it go').",
+        register="informal",
+        origin="Modern Hebrew casual greeting.",
+        variants=(
+            PhraseVariant(
+                surface="איך הולך",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="מה נשמע",
+                match_type=MatchType.inflectional_variant,
+                note="Alternative greeting: 'what is heard.'",
+            ),
+        ),
+    ),
+
+    "he_yom_yom": PhraseFamily(
+        id="he_yom_yom",
+        language="he",
+        canonical_form="יום יום",
+        meaning="Day-day / daily / every day.",
+        register="informal",
+        origin="Reduplication for distributive meaning.",
+        variants=(
+            PhraseVariant(
+                surface="יום יום",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_ein_dvarim_kaeleh": PhraseFamily(
+        id="he_ein_dvarim_kaeleh",
+        language="he",
+        canonical_form="אין דברים כאלה",
+        meaning="No such things — used as denial/rejection.",
+        register="informal",
+        origin="Modern Hebrew dismissive idiom.",
+        variants=(
+            PhraseVariant(
+                surface="אין דברים כאלה",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_az_ma": PhraseFamily(
+        id="he_az_ma",
+        language="he",
+        canonical_form="אז מה",
+        meaning="So what / what now.",
+        register="informal",
+        origin="Modern Hebrew dismissive/inquisitive.",
+        variants=(
+            PhraseVariant(
+                surface="אז מה",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_ma_inyanim": PhraseFamily(
+        id="he_ma_inyanim",
+        language="he",
+        canonical_form="מה עניינים",
+        meaning="What's up / how are things (literally 'what matters').",
+        register="informal",
+        origin="Modern Hebrew greeting; inyanim = matters/affairs.",
+        variants=(
+            PhraseVariant(
+                surface="מה עניינים",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_yalla_balagan": PhraseFamily(
+        id="he_yalla_balagan",
+        language="he",
+        canonical_form="יאללה בלגן",
+        meaning="Come on, chaos! — said when accepting that things will be messy.",
+        register="informal",
+        origin=(
+            "Modern Hebrew slang combining Arabic-derived yalla (let's go) and "
+            "Russian/Yiddish-derived balagan (chaos)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="יאללה בלגן",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_betsel": PhraseFamily(
+        id="he_betsel",
+        language="he",
+        canonical_form="בצל",
+        meaning=(
+            "Onion — but idiomatically 'in the shade' (b'tsel) or 'small thing.'"
+            "Note: same surface for two unrelated meanings."
+        ),
+        register="informal",
+        origin="Hebrew homograph; context distinguishes.",
+        variants=(
+            PhraseVariant(
+                surface="בצל",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_ein_li_koach": PhraseFamily(
+        id="he_ein_li_koach",
+        language="he",
+        canonical_form="אין לי כוח",
+        meaning="I have no strength / I can't be bothered.",
+        register="informal",
+        origin="Modern Hebrew exhaustion idiom.",
+        variants=(
+            PhraseVariant(
+                surface="אין לי כוח",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_ze_lo_kashe": PhraseFamily(
+        id="he_ze_lo_kashe",
+        language="he",
+        canonical_form="זה לא קשה",
+        meaning="It's not hard.",
+        register="informal",
+        origin="Modern Hebrew reassurance.",
+        variants=(
+            PhraseVariant(
+                surface="זה לא קשה",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_kol_tuv": PhraseFamily(
+        id="he_kol_tuv",
+        language="he",
+        canonical_form="כל טוב",
+        meaning="All good / all the best — farewell/well-wishing.",
+        register="neutral",
+        origin="Modern Hebrew farewell.",
+        variants=(
+            PhraseVariant(
+                surface="כל טוב",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_be_atzlachah": PhraseFamily(
+        id="he_be_atzlachah",
+        language="he",
+        canonical_form="בהצלחה",
+        meaning="With success / good luck (literally 'in success').",
+        register="neutral",
+        origin="Standard Hebrew well-wishing for ventures.",
+        variants=(
+            PhraseVariant(
+                surface="בהצלחה",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_refuah_shlemah": PhraseFamily(
+        id="he_refuah_shlemah",
+        language="he",
+        canonical_form="רפואה שלמה",
+        meaning="Complete recovery — said to the sick.",
+        register="neutral",
+        origin="Traditional Jewish blessing; refuah = healing, shleimah = complete.",
+        variants=(
+            PhraseVariant(
+                surface="רפואה שלמה",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_be_ezrat_hashem": PhraseFamily(
+        id="he_be_ezrat_hashem",
+        language="he",
+        canonical_form="בעזרת השם",
+        meaning="With God's help — pious phrase before mentioning a future event.",
+        register="formal",
+        origin="Religious Hebrew phrase, parallel to Arabic in shā' Allāh.",
+        variants=(
+            PhraseVariant(
+                surface="בעזרת השם",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="בעז\"ה",
+                match_type=MatchType.orthographic_variant,
+                note="Common abbreviation.",
+            ),
+        ),
+    ),
+
+    "he_baruch_hashem": PhraseFamily(
+        id="he_baruch_hashem",
+        language="he",
+        canonical_form="ברוך השם",
+        meaning="Blessed is the Name (of God) — 'thank God' / 'praise God.'",
+        register="formal",
+        origin="Religious Hebrew gratitude phrase, parallel to Arabic alhamdulillah.",
+        variants=(
+            PhraseVariant(
+                surface="ברוך השם",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ב\"ה",
+                match_type=MatchType.orthographic_variant,
+                note="Common abbreviation.",
+            ),
+        ),
+    ),
+
+    "he_im_yirtzeh_hashem": PhraseFamily(
+        id="he_im_yirtzeh_hashem",
+        language="he",
+        canonical_form="אם ירצה השם",
+        meaning="If God wills — pious conditional.",
+        register="formal",
+        origin="Religious Hebrew, parallel to Arabic in shā' Allāh.",
+        variants=(
+            PhraseVariant(
+                surface="אם ירצה השם",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="אי\"ה",
+                match_type=MatchType.orthographic_variant,
+                note="Common abbreviation.",
+            ),
+        ),
+    ),
+
+    "he_le_chaim": PhraseFamily(
+        id="he_le_chaim",
+        language="he",
+        canonical_form="לחיים",
+        meaning="To life! — toast.",
+        register="neutral",
+        origin="Traditional Jewish toast; le-ḥayyim = 'to lives' (always plural).",
+        why_it_matters="Universally recognized Jewish toast.",
+        variants=(
+            PhraseVariant(
+                surface="לחיים",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_chag_sameach": PhraseFamily(
+        id="he_chag_sameach",
+        language="he",
+        canonical_form="חג שמח",
+        meaning="Happy holiday.",
+        register="neutral",
+        origin="Standard Hebrew holiday greeting; ḥag = pilgrimage festival.",
+        variants=(
+            PhraseVariant(
+                surface="חג שמח",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_shana_tova": PhraseFamily(
+        id="he_shana_tova",
+        language="he",
+        canonical_form="שנה טובה",
+        meaning="Good year — Rosh Hashanah greeting.",
+        register="neutral",
+        origin="Standard Jewish New Year greeting.",
+        variants=(
+            PhraseVariant(
+                surface="שנה טובה",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="שנה טובה ומתוקה",
+                match_type=MatchType.inflectional_variant,
+                note="Extended form: 'good and sweet year.'",
+            ),
+        ),
+    ),
+
+    "he_lehitraot_macheraim": PhraseFamily(
+        id="he_lehitraot_macheraim",
+        language="he",
+        canonical_form="להתראות מחר",
+        meaning="See you tomorrow.",
+        register="neutral",
+        origin="Modern Hebrew farewell with temporal specifier.",
+        variants=(
+            PhraseVariant(
+                surface="להתראות מחר",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_be_kef": PhraseFamily(
+        id="he_be_kef",
+        language="he",
+        canonical_form="בכיף",
+        meaning="With pleasure / no problem (literally 'in fun').",
+        register="informal",
+        origin="Modern Hebrew slang; kef from Arabic kayf (mood, pleasure).",
+        variants=(
+            PhraseVariant(
+                surface="בכיף",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_titzaref": PhraseFamily(
+        id="he_titzaref",
+        language="he",
+        canonical_form="תצטרף",
+        meaning="Join us / join in.",
+        register="informal",
+        origin="Modern Hebrew imperative; reflexive of tziraf (to join).",
+        variants=(
+            PhraseVariant(
+                surface="תצטרף",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_pashut": PhraseFamily(
+        id="he_pashut",
+        language="he",
+        canonical_form="פשוט",
+        meaning="Simply / it's simple.",
+        register="informal",
+        origin="Modern Hebrew adverb; root p-sh-t (simple, plain).",
+        variants=(
+            PhraseVariant(
+                surface="פשוט",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_taluy": PhraseFamily(
+        id="he_taluy",
+        language="he",
+        canonical_form="תלוי",
+        meaning="It depends.",
+        register="informal",
+        origin="Modern Hebrew; root t-l-h (to hang, depend).",
+        variants=(
+            PhraseVariant(
+                surface="תלוי",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_eich_zot": PhraseFamily(
+        id="he_eich_zot",
+        language="he",
+        canonical_form="איך זאת",
+        meaning="How so / what do you mean?",
+        register="informal",
+        origin="Modern Hebrew interrogative.",
+        variants=(
+            PhraseVariant(
+                surface="איך זאת",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_zeh_ze": PhraseFamily(
+        id="he_zeh_ze",
+        language="he",
+        canonical_form="זה זה",
+        meaning="This is it / that's the thing.",
+        register="informal",
+        origin="Modern Hebrew demonstrative reduplication.",
+        variants=(
+            PhraseVariant(
+                surface="זה זה",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_yofi": PhraseFamily(
+        id="he_yofi",
+        language="he",
+        canonical_form="יופי",
+        meaning="Great / beauty / nice work.",
+        register="informal",
+        origin="Modern Hebrew exclamation; yofi = beauty.",
+        variants=(
+            PhraseVariant(
+                surface="יופי",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_eze_hatza_atza": PhraseFamily(
+        id="he_eze_hatza_atza",
+        language="he",
+        canonical_form="איזה הצעה",
+        meaning="What an offer / what a deal — exclamation.",
+        register="informal",
+        origin="Modern Hebrew exclamatory pattern.",
+        variants=(
+            PhraseVariant(
+                surface="איזה הצעה",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_ein_breiyra_acheret": PhraseFamily(
+        id="he_ein_breiyra_acheret",
+        language="he",
+        canonical_form="אין ברירה אחרת",
+        meaning="There is no other choice — fuller form of ein breira.",
+        register="neutral",
+        origin="Modern Hebrew fatalistic formula; breira = choice.",
+        variants=(
+            PhraseVariant(
+                surface="אין ברירה אחרת",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_ze_taluyi_bi": PhraseFamily(
+        id="he_ze_taluyi_bi",
+        language="he",
+        canonical_form="זה תלוי בי",
+        meaning="It depends on me.",
+        register="informal",
+        origin="Modern Hebrew first-person dependency.",
+        variants=(
+            PhraseVariant(
+                surface="זה תלוי בי",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_eshtdaeshtdaef": PhraseFamily(
+        id="he_eshtdaeshtdaef",
+        language="he",
+        canonical_form="אשתדל",
+        meaning="I'll try.",
+        register="informal",
+        origin="Modern Hebrew first-person future of hishtadel (to try).",
+        variants=(
+            PhraseVariant(
+                surface="אשתדל",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_kacha_ze": PhraseFamily(
+        id="he_kacha_ze",
+        language="he",
+        canonical_form="ככה זה",
+        meaning="That's how it is — fatalistic acceptance.",
+        register="informal",
+        origin="Modern Hebrew fatalism formula.",
+        variants=(
+            PhraseVariant(
+                surface="ככה זה",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    # ── En (generated) ────────────────────────────────────────
+
+    "en_a_stitch_in_time": PhraseFamily(
+        id="en_a_stitch_in_time",
+        language="en",
+        canonical_form="a stitch in time saves nine",
+        meaning="Timely correction prevents bigger problems later.",
+        register="neutral",
+        origin=(
+            "Recorded since Thomas Fuller's Gnomologia, 1732. Sewing metaphor: one "
+            "stitch now spares nine repairs later."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="a stitch in time saves nine",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_dont_count_your_chickens": PhraseFamily(
+        id="en_dont_count_your_chickens",
+        language="en",
+        canonical_form="don't count your chickens before they hatch",
+        meaning="Don't assume success before it has happened.",
+        register="neutral",
+        origin="Aesopian fable tradition; English form attested since the 16th century.",
+        variants=(
+            PhraseVariant(
+                surface="don't count your chickens before they hatch",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="counting chickens",
+                match_type=MatchType.allusion,
+                note="Allusive shortening, used to chide premature claims.",
+            ),
+        ),
+    ),
+
+    "en_the_early_bird": PhraseFamily(
+        id="en_the_early_bird",
+        language="en",
+        canonical_form="the early bird catches the worm",
+        meaning="Those who act first gain the advantage.",
+        register="neutral",
+        origin="Recorded since 1605 in William Camden's Remains.",
+        variants=(
+            PhraseVariant(
+                surface="the early bird catches the worm",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="the early bird",
+                match_type=MatchType.allusion,
+                note="Allusive shortening: 'be the early bird.'",
+            ),
+        ),
+    ),
+
+    "en_when_in_rome": PhraseFamily(
+        id="en_when_in_rome",
+        language="en",
+        canonical_form="when in Rome do as the Romans do",
+        meaning="Adapt to local customs.",
+        register="neutral",
+        origin=(
+            "Attributed to St. Ambrose's advice to Augustine (4th c.); the proverbial "
+            "English form by 17th c."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="when in Rome do as the Romans do",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="when in Rome",
+                match_type=MatchType.allusion,
+                note="Allusive shortening, very common.",
+            ),
+        ),
+    ),
+
+    "en_the_pen_is_mightier": PhraseFamily(
+        id="en_the_pen_is_mightier",
+        language="en",
+        canonical_form="the pen is mightier than the sword",
+        meaning="Writing/argument has greater power than violence.",
+        register="literary",
+        origin="Edward Bulwer-Lytton, Richelieu (1839). Now globally proverbial.",
+        variants=(
+            PhraseVariant(
+                surface="the pen is mightier than the sword",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_actions_speak_louder": PhraseFamily(
+        id="en_actions_speak_louder",
+        language="en",
+        canonical_form="actions speak louder than words",
+        meaning="Behavior reveals more than rhetoric.",
+        register="neutral",
+        origin="Attested since 1736; possibly from St. Anthony of Padua.",
+        variants=(
+            PhraseVariant(
+                surface="actions speak louder than words",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_a_picture_is_worth": PhraseFamily(
+        id="en_a_picture_is_worth",
+        language="en",
+        canonical_form="a picture is worth a thousand words",
+        meaning="Visual information conveys more than verbal description.",
+        register="neutral",
+        origin=(
+            "Attributed to Frederick R. Barnard, 1921 (advertising). Often "
+            "misattributed to Confucius."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="a picture is worth a thousand words",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_too_many_cooks": PhraseFamily(
+        id="en_too_many_cooks",
+        language="en",
+        canonical_form="too many cooks spoil the broth",
+        meaning="Too many people involved leads to bad results.",
+        register="neutral",
+        origin="Attested since 1575; English proverb.",
+        variants=(
+            PhraseVariant(
+                surface="too many cooks spoil the broth",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="too many cooks",
+                match_type=MatchType.allusion,
+                note="Allusive shortening.",
+            ),
+        ),
+    ),
+
+    "en_dont_put_all_eggs": PhraseFamily(
+        id="en_dont_put_all_eggs",
+        language="en",
+        canonical_form="don't put all your eggs in one basket",
+        meaning="Diversify; don't risk everything on one bet.",
+        register="neutral",
+        origin=(
+            "Spanish origin (Don Quixote, 1605: 'no aventures todo tu caudal a una "
+            "galera'); English by 17th c."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="don't put all your eggs in one basket",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_better_late_than_never": PhraseFamily(
+        id="en_better_late_than_never",
+        language="en",
+        canonical_form="better late than never",
+        meaning="Late action is preferable to no action.",
+        register="neutral",
+        origin="Attested since Chaucer (Canterbury Tales).",
+        variants=(
+            PhraseVariant(
+                surface="better late than never",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_blood_is_thicker": PhraseFamily(
+        id="en_blood_is_thicker",
+        language="en",
+        canonical_form="blood is thicker than water",
+        meaning="Family bonds outweigh other ties.",
+        register="neutral",
+        origin=(
+            "Attested since 12th c. in Reynard the Fox tradition; the modern reading "
+            "prioritizes family."
+        ),
+        why_it_matters=(
+            "Some etymological folklore claims original meaning was opposite ('blood "
+            "of the covenant is thicker than water of the womb'); historians dispute "
+            "this revisionist claim."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="blood is thicker than water",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_a_rolling_stone": PhraseFamily(
+        id="en_a_rolling_stone",
+        language="en",
+        canonical_form="a rolling stone gathers no moss",
+        meaning=(
+            "Constant movement prevents accumulation (interpreted positively or"
+            "negatively)."
+        ),
+        register="neutral",
+        origin=(
+            "Erasmus, Adagia (1500); from earlier Greek source. Famously ambiguous — "
+            "moss as good (achievement) or bad (stagnation)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="a rolling stone gathers no moss",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="rolling stone",
+                match_type=MatchType.allusion,
+                note="The Rolling Stones band; the magazine.",
+            ),
+        ),
+    ),
+
+    "en_birds_of_a_feather": PhraseFamily(
+        id="en_birds_of_a_feather",
+        language="en",
+        canonical_form="birds of a feather flock together",
+        meaning="Similar people associate with each other.",
+        register="neutral",
+        origin="16th c. English proverb.",
+        variants=(
+            PhraseVariant(
+                surface="birds of a feather flock together",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="birds of a feather",
+                match_type=MatchType.allusion,
+                note="Allusive shortening.",
+            ),
+        ),
+    ),
+
+    "en_the_grass_is_always_greener": PhraseFamily(
+        id="en_the_grass_is_always_greener",
+        language="en",
+        canonical_form="the grass is always greener on the other side",
+        meaning="Other people's situations seem better than your own.",
+        register="neutral",
+        origin="Modern English proverb; 20th c. crystallization.",
+        variants=(
+            PhraseVariant(
+                surface="the grass is always greener on the other side",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="the grass is always greener",
+                match_type=MatchType.allusion,
+                note="Allusive shortening.",
+            ),
+        ),
+    ),
+
+    "en_let_sleeping_dogs_lie": PhraseFamily(
+        id="en_let_sleeping_dogs_lie",
+        language="en",
+        canonical_form="let sleeping dogs lie",
+        meaning="Don't disturb a settled situation.",
+        register="neutral",
+        origin="Chaucer (Troilus and Criseyde); proverbial since.",
+        variants=(
+            PhraseVariant(
+                surface="let sleeping dogs lie",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_kill_two_birds": PhraseFamily(
+        id="en_kill_two_birds",
+        language="en",
+        canonical_form="kill two birds with one stone",
+        meaning="Accomplish two goals with one action.",
+        register="neutral",
+        origin="Attested since the 17th century; likely earlier.",
+        variants=(
+            PhraseVariant(
+                surface="kill two birds with one stone",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_the_last_straw": PhraseFamily(
+        id="en_the_last_straw",
+        language="en",
+        canonical_form="the last straw that broke the camel's back",
+        meaning="The final small thing that causes a system to collapse.",
+        register="neutral",
+        origin=(
+            "Attested since 1755 (Charles Dickens used it); from Arabic-Persian "
+            "camel-loading metaphor."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="the last straw that broke the camel's back",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="the last straw",
+                match_type=MatchType.allusion,
+                note="Allusive shortening, very common.",
+            ),
+            PhraseVariant(
+                surface="straw that broke the camel's back",
+                match_type=MatchType.inflectional_variant,
+            ),
+        ),
+    ),
+
+    "en_speak_of_the_devil": PhraseFamily(
+        id="en_speak_of_the_devil",
+        language="en",
+        canonical_form="speak of the devil and he shall appear",
+        meaning="When you mention someone, they often appear.",
+        register="neutral",
+        origin=(
+            "16th-c. English proverb; the religious tone has been lost in modern "
+            "usage."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="speak of the devil and he shall appear",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="speak of the devil",
+                match_type=MatchType.allusion,
+                note="Most common modern shortening.",
+            ),
+        ),
+    ),
+
+    "en_break_a_leg": PhraseFamily(
+        id="en_break_a_leg",
+        language="en",
+        canonical_form="break a leg",
+        meaning="Good luck (theatrical superstition).",
+        register="informal",
+        origin=(
+            "Theater superstition; multiple competing etymologies (1920s-30s American "
+            "theatre, possibly from Yiddish 'hatslokhe un brokhe')."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="break a leg",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_jumping_the_shark": PhraseFamily(
+        id="en_jumping_the_shark",
+        language="en",
+        canonical_form="jumping the shark",
+        meaning="The moment a TV show / cultural phenomenon declines into absurdity.",
+        register="informal",
+        origin=(
+            "Coined 1985 by radio personality Jon Hein referring to a 1977 Happy Days "
+            "episode where Fonzie jumped a shark on water skis. Now standard "
+            "cultural-criticism vocabulary."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="jumping the shark",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="jumped the shark",
+                match_type=MatchType.inflectional_variant,
+                note="Past-tense form, the most common usage.",
+            ),
+        ),
+    ),
+
+    "en_paint_the_town_red": PhraseFamily(
+        id="en_paint_the_town_red",
+        language="en",
+        canonical_form="paint the town red",
+        meaning="Go out and have a wild time, often involving drinking.",
+        register="informal",
+        origin=(
+            "Late 19th-c. American slang; possibly from the Marquis of Waterford's "
+            "1837 drunken rampage in Melton Mowbray, where buildings were literally "
+            "painted red."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="paint the town red",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_under_the_weather": PhraseFamily(
+        id="en_under_the_weather",
+        language="en",
+        canonical_form="under the weather",
+        meaning="Feeling slightly ill.",
+        register="informal",
+        origin=(
+            "Nautical: sailors who were ill were sent below deck (under the weather "
+            "rail)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="under the weather",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_burn_the_midnight_oil": PhraseFamily(
+        id="en_burn_the_midnight_oil",
+        language="en",
+        canonical_form="burn the midnight oil",
+        meaning="Work or study late into the night.",
+        register="neutral",
+        origin=(
+            "Francis Quarles (1635); from the era when scholars literally burned oil "
+            "lamps for nighttime reading."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="burn the midnight oil",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="burning the midnight oil",
+                match_type=MatchType.inflectional_variant,
+            ),
+        ),
+    ),
+
+    "en_cut_to_the_chase": PhraseFamily(
+        id="en_cut_to_the_chase",
+        language="en",
+        canonical_form="cut to the chase",
+        meaning="Get to the point; skip preliminaries.",
+        register="informal",
+        origin=(
+            "Hollywood film editing slang from the silent-era practice of cutting "
+            "straight to the action/chase scene. Recorded since 1929."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="cut to the chase",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_pull_someones_leg": PhraseFamily(
+        id="en_pull_someones_leg",
+        language="en",
+        canonical_form="pull someone's leg",
+        meaning="Tease, deceive playfully.",
+        register="informal",
+        origin=(
+            "Recorded since the 1880s; etymological origin uncertain (one theory: "
+            "18th-c. London thieves tripping victims)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="pull someone's leg",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="pulling your leg",
+                match_type=MatchType.inflectional_variant,
+                note="Common second-person form.",
+            ),
+        ),
+    ),
+
+    "en_caught_red_handed": PhraseFamily(
+        id="en_caught_red_handed",
+        language="en",
+        canonical_form="caught red-handed",
+        meaning="Caught in the act, with evidence on you.",
+        register="neutral",
+        origin=(
+            "Scottish legal term 'red-hand,' attested since 15th c. — caught with the "
+            "victim's blood still on the murderer's hands."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="caught red-handed",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="caught red handed",
+                match_type=MatchType.orthographic_variant,
+                note="Without hyphen.",
+            ),
+        ),
+    ),
+
+    "en_devils_advocate": PhraseFamily(
+        id="en_devils_advocate",
+        language="en",
+        canonical_form="devil's advocate",
+        meaning="One who argues a contrary position for the sake of debate.",
+        register="neutral",
+        origin=(
+            "From the Catholic Church's pre-1983 'advocatus diaboli' role, who argued "
+            "against canonization of saints."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="devil's advocate",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_through_the_grapevine": PhraseFamily(
+        id="en_through_the_grapevine",
+        language="en",
+        canonical_form="heard it through the grapevine",
+        meaning="Learned through informal channels / gossip.",
+        register="informal",
+        origin=(
+            "American Civil War-era; 'grapevine telegraph' was the informal soldiers' "
+            "news network."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="heard it through the grapevine",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="through the grapevine",
+                match_type=MatchType.allusion,
+            ),
+        ),
+    ),
+
+    "en_jump_on_the_bandwagon": PhraseFamily(
+        id="en_jump_on_the_bandwagon",
+        language="en",
+        canonical_form="jump on the bandwagon",
+        meaning="Adopt a popular position once it has clearly succeeded.",
+        register="neutral",
+        origin=(
+            "American 19th-c. political campaigning: literal bandwagons led parades; "
+            "politicians jumped on to associate with momentum."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="jump on the bandwagon",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_back_to_the_drawing_board": PhraseFamily(
+        id="en_back_to_the_drawing_board",
+        language="en",
+        canonical_form="back to the drawing board",
+        meaning="Time to start over.",
+        register="informal",
+        origin=(
+            "1941 New Yorker cartoon by Peter Arno: an engineer carrying his rolled "
+            "plans walks away from a crashed plane, saying the line."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="back to the drawing board",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_at_the_drop_of_a_hat": PhraseFamily(
+        id="en_at_the_drop_of_a_hat",
+        language="en",
+        canonical_form="at the drop of a hat",
+        meaning="Without hesitation; at the slightest provocation.",
+        register="informal",
+        origin=(
+            "American 19th c.; dropping a hat was a starter signal for a fight or "
+            "race."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="at the drop of a hat",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_costs_an_arm_and_a_leg": PhraseFamily(
+        id="en_costs_an_arm_and_a_leg",
+        language="en",
+        canonical_form="costs an arm and a leg",
+        meaning="Is very expensive.",
+        register="informal",
+        origin="American post-WWII; possibly from veteran-pension language.",
+        variants=(
+            PhraseVariant(
+                surface="costs an arm and a leg",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="an arm and a leg",
+                match_type=MatchType.allusion,
+            ),
+        ),
+    ),
+
+    "en_piece_of_cake": PhraseFamily(
+        id="en_piece_of_cake",
+        language="en",
+        canonical_form="piece of cake",
+        meaning="Very easy.",
+        register="informal",
+        origin=(
+            "1930s American slang; possibly from the cakewalk dance contests where "
+            "the prize was a cake."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="piece of cake",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_when_pigs_fly": PhraseFamily(
+        id="en_when_pigs_fly",
+        language="en",
+        canonical_form="when pigs fly",
+        meaning="Never (used to express skepticism).",
+        register="informal",
+        origin="16th-c. English; the impossible scenario as the marker of 'never.'",
+        variants=(
+            PhraseVariant(
+                surface="when pigs fly",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="pigs might fly",
+                match_type=MatchType.inflectional_variant,
+                note="British variant.",
+            ),
+        ),
+    ),
+
+    "en_curiosity_killed_the_cat": PhraseFamily(
+        id="en_curiosity_killed_the_cat",
+        language="en",
+        canonical_form="curiosity killed the cat",
+        meaning="Excessive curiosity leads to harm.",
+        register="neutral",
+        origin=(
+            "Modern proverb (early 20th c.); evolved from older 'care killed the cat' "
+            "(Shakespeare, Much Ado About Nothing)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="curiosity killed the cat",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_close_but_no_cigar": PhraseFamily(
+        id="en_close_but_no_cigar",
+        language="en",
+        canonical_form="close but no cigar",
+        meaning="Almost succeeded, but not quite.",
+        register="informal",
+        origin=(
+            "American 20th c.; from carnival games where cigars were prizes for "
+            "hitting a target."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="close but no cigar",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_like_two_peas_in_a_pod": PhraseFamily(
+        id="en_like_two_peas_in_a_pod",
+        language="en",
+        canonical_form="like two peas in a pod",
+        meaning="Strikingly similar; inseparable.",
+        register="neutral",
+        origin="Attested since 16th c.; the visual metaphor of identical peas.",
+        variants=(
+            PhraseVariant(
+                surface="like two peas in a pod",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="two peas in a pod",
+                match_type=MatchType.allusion,
+            ),
+        ),
+    ),
+
+    "en_the_devil_is_in_the_details": PhraseFamily(
+        id="en_the_devil_is_in_the_details",
+        language="en",
+        canonical_form="the devil is in the details",
+        meaning="Small details cause problems / matter most.",
+        register="neutral",
+        origin=(
+            "Attributed to architect Mies van der Rohe (\"God is in the details\") — "
+            "the devil version is a 20th-c. inversion."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="the devil is in the details",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_throw_in_the_towel": PhraseFamily(
+        id="en_throw_in_the_towel",
+        language="en",
+        canonical_form="throw in the towel",
+        meaning="Give up / concede defeat.",
+        register="informal",
+        origin=(
+            "Boxing terminology: the cornerman throws a towel into the ring to signal "
+            "surrender."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="throw in the towel",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="throwing in the towel",
+                match_type=MatchType.inflectional_variant,
+            ),
+        ),
+    ),
+
+    "en_a_blessing_in_disguise": PhraseFamily(
+        id="en_a_blessing_in_disguise",
+        language="en",
+        canonical_form="a blessing in disguise",
+        meaning="Something seemingly bad that turns out beneficial.",
+        register="neutral",
+        origin="James Hervey's 1746 hymn; entered general English use.",
+        variants=(
+            PhraseVariant(
+                surface="a blessing in disguise",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "en_elephant_in_the_room": PhraseFamily(
+        id="en_elephant_in_the_room",
+        language="en",
+        canonical_form="the elephant in the room",
+        meaning="An obvious problem everyone is avoiding discussing.",
+        register="neutral",
+        origin=(
+            "Mid-20th-c. American; the obvious-but-unspoken thing as a giant "
+            "elephant."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="the elephant in the room",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="elephant in the room",
+                match_type=MatchType.allusion,
+            ),
+        ),
+    ),
+
+    "en_burn_bridges": PhraseFamily(
+        id="en_burn_bridges",
+        language="en",
+        canonical_form="burn bridges",
+        meaning="Cut off relationships permanently; eliminate retreat options.",
+        register="neutral",
+        origin=(
+            "Military strategy of burning bridges to prevent retreat (Caesar at the "
+            "Rubicon, Cortés in Mexico)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="burn bridges",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="burning bridges",
+                match_type=MatchType.inflectional_variant,
+            ),
+        ),
+    ),
+
+    "en_cant_judge_a_book": PhraseFamily(
+        id="en_cant_judge_a_book",
+        language="en",
+        canonical_form="you can't judge a book by its cover",
+        meaning="Don't form opinions based on appearance.",
+        register="neutral",
+        origin=(
+            "Mid-20th c. English; before mass-market book covers, this would have "
+            "made little sense."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="you can't judge a book by its cover",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="don't judge a book by its cover",
+                match_type=MatchType.inflectional_variant,
+            ),
+        ),
+    ),
+
+    "en_easier_said_than_done": PhraseFamily(
+        id="en_easier_said_than_done",
+        language="en",
+        canonical_form="easier said than done",
+        meaning="It's harder to do than to talk about.",
+        register="neutral",
+        origin="Attested since 15th c.",
+        variants=(
+            PhraseVariant(
+                surface="easier said than done",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
 }
 
 
