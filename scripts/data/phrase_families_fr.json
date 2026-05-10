@@ -1,0 +1,408 @@
+[
+  {
+    "id": "fr_cest_du_gateau",
+    "canonical": "c'est du gâteau",
+    "meaning": "It's a piece of cake; it's easy.",
+    "register": "informal",
+    "origin": "Gâteau (cake) as a metaphor for something pleasurable and easily obtained dates to 19th-century French slang. Cake requires no effort to eat, so 'it's cake' came to mean effortless.",
+    "why_it_matters": "The exact parallel to English 'piece of cake' makes this idiom accessible, but French uses 'c'est du gâteau' (uncountable) rather than 'un morceau de gâteau'.",
+    "variants": [
+      {"surface": "c'est du gâteau", "type": "exact"},
+      {"surface": "c'est du gateau", "type": "orthographic_variant", "note": "Without the circumflex, common in informal digital writing."},
+      {"surface": "c'est pas du gâteau", "type": "inflectional_variant", "note": "Negation: it's no picnic; it's harder than it looks."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_avoir_la_tete_dans_les_nuages",
+    "canonical": "avoir la tête dans les nuages",
+    "meaning": "To have one's head in the clouds; to be a daydreamer.",
+    "register": "neutral",
+    "origin": "Clouds as a symbol of vagueness and unreality is cross-cultural. The French expression maps directly onto the English idiom, both rooted in the image of someone whose thoughts float above the mundane world.",
+    "variants": [
+      {"surface": "avoir la tête dans les nuages", "type": "exact"},
+      {"surface": "la tête dans les nuages", "type": "inflectional_variant", "note": "Elliptical form, predicate position."},
+      {"surface": "il a la tête dans les nuages", "type": "inflectional_variant", "note": "Third-person conjugated form."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_en_avoir_ras_le_bol",
+    "canonical": "en avoir ras le bol",
+    "meaning": "To be fed up; to have had it up to here.",
+    "register": "informal",
+    "origin": "Bol (bowl) filled to the brim (ras = level with the edge): the bowl of patience is completely full. Emerged in 20th-century colloquial French, used across France and Quebec.",
+    "why_it_matters": "Very high frequency in spoken French. The intensified form 'ras-le-bol' is also used as a noun ('un ras-le-bol général') meaning widespread discontent.",
+    "variants": [
+      {"surface": "en avoir ras le bol", "type": "exact"},
+      {"surface": "j'en ai ras le bol", "type": "inflectional_variant", "note": "First-person: I've had it up to here."},
+      {"surface": "ras-le-bol", "type": "inflectional_variant", "note": "Noun form: widespread exasperation."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_vendre_la_meche",
+    "canonical": "vendre la mèche",
+    "meaning": "To spill the beans; to let the cat out of the bag; to reveal a secret.",
+    "register": "informal",
+    "origin": "Mèche (fuse, or wick) referred to the fuse on a bomb or cannon. 'Selling the fuse' to the enemy would reveal the plan of attack. The expression entered civilian speech as a metaphor for betraying a secret.",
+    "variants": [
+      {"surface": "vendre la mèche", "type": "exact"},
+      {"surface": "vendre la meche", "type": "orthographic_variant", "note": "Without accent, common in informal writing."},
+      {"surface": "a vendu la mèche", "type": "inflectional_variant", "note": "He/she sold the fuse — past tense usage."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_sauter_du_coq_a_lane",
+    "canonical": "sauter du coq à l'âne",
+    "meaning": "To jump from topic to topic; to change subjects abruptly.",
+    "register": "neutral",
+    "origin": "From coq (rooster) to âne (donkey): two unrelated animals, emphasizing the absurdity of the leap. The expression appears in Rabelais (16th century) and reflects medieval comic traditions of nonsense discourse.",
+    "why_it_matters": "A colorful image with no direct English equivalent. Reveals how French idioms often use barnyard animals as vehicles for abstract ideas.",
+    "variants": [
+      {"surface": "sauter du coq à l'âne", "type": "exact"},
+      {"surface": "sauter du coq a l'ane", "type": "orthographic_variant", "note": "Without grave accent."},
+      {"surface": "passer du coq à l'âne", "type": "inflectional_variant", "note": "Variant using 'passer' (to pass) instead of 'sauter'."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_faire_dune_pierre_deux_coups",
+    "canonical": "faire d'une pierre deux coups",
+    "meaning": "To kill two birds with one stone.",
+    "register": "neutral",
+    "origin": "Strikingly parallel to English. Both French and English use the image of a single projectile achieving two results. The stone (pierre) replaces the English bird metaphor with a more tool-oriented image.",
+    "variants": [
+      {"surface": "faire d'une pierre deux coups", "type": "exact"},
+      {"surface": "d'une pierre deux coups", "type": "inflectional_variant", "note": "Elliptical form, often used as a parenthetical."},
+      {"surface": "faire une pierre deux coups", "type": "orthographic_variant", "note": "Without the elided 'de', rare but attested."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_mettre_son_grain_de_sel",
+    "canonical": "mettre son grain de sel",
+    "meaning": "To put in one's two cents; to add an unwanted opinion.",
+    "register": "neutral",
+    "origin": "Salt was a valuable commodity in medieval France (gabelle = salt tax). A grain of salt (grain de sel) is the smallest addition. To sprinkle one's salt onto others' conversations suggests unsolicited seasoning of the discussion.",
+    "variants": [
+      {"surface": "mettre son grain de sel", "type": "exact"},
+      {"surface": "il faut toujours qu'il mette son grain de sel", "type": "inflectional_variant", "note": "He always has to put his two cents in."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_avoir_le_bras_long",
+    "canonical": "avoir le bras long",
+    "meaning": "To have a long arm; to be well-connected; to have influence.",
+    "register": "neutral",
+    "origin": "A long arm reaches further — an image of power and access. Common in French since the 17th century. Parallel expressions exist in Italian ('avere le mani lunghe') and Spanish ('tener mucho brazo').",
+    "variants": [
+      {"surface": "avoir le bras long", "type": "exact"},
+      {"surface": "il a le bras long", "type": "inflectional_variant", "note": "He has connections — most common contextualized form."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_ramener_sa_fraise",
+    "canonical": "ramener sa fraise",
+    "meaning": "To butt in; to show one's face where uninvited; to impose oneself.",
+    "register": "informal",
+    "origin": "Fraise (strawberry, but also an archaic ruff collar) was slang for 'face' or 'head' in 19th-century argot. 'Ramener sa fraise' means literally 'bring one's face along' into a situation where it wasn't requested.",
+    "why_it_matters": "A distinctly argot expression that illustrates how French slang often repurposes object names for body parts. Very colloquial and typically humorous.",
+    "variants": [
+      {"surface": "ramener sa fraise", "type": "exact"},
+      {"surface": "ramène pas ta fraise", "type": "inflectional_variant", "note": "Don't show your face here — imperative negation."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_ne_pas_tourner_autour_du_pot",
+    "canonical": "ne pas tourner autour du pot",
+    "meaning": "To not beat around the bush; to get straight to the point.",
+    "register": "neutral",
+    "origin": "Pot (cooking pot): circling around the pot without touching it suggests approaching something without committing. Attested since the 16th century in French. Compare English 'beat around the bush' (stirring up game without entering the bush).",
+    "variants": [
+      {"surface": "ne pas tourner autour du pot", "type": "exact"},
+      {"surface": "tourner autour du pot", "type": "inflectional_variant", "note": "Positive form: to beat around the bush (pejorative)."},
+      {"surface": "sans tourner autour du pot", "type": "inflectional_variant", "note": "Without beating around the bush."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_avoir_un_poil_dans_la_main",
+    "canonical": "avoir un poil dans la main",
+    "meaning": "To be lazy; to have hands not used to work.",
+    "register": "informal",
+    "origin": "The idea that someone so unaccustomed to work has grown a hair (poil) in their hand. A comic image implying that the hand has not been clenched in useful effort long enough to prevent the growth. Typically French in its earthy sarcasm.",
+    "why_it_matters": "One of the most characteristic French expressions for laziness. The image is absurdist and impossible to guess — a classic example of opaque idiom.",
+    "variants": [
+      {"surface": "avoir un poil dans la main", "type": "exact"},
+      {"surface": "il a un poil dans la main", "type": "inflectional_variant", "note": "He's got a hair in his hand — he's lazy."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_mettre_les_voiles",
+    "canonical": "mettre les voiles",
+    "meaning": "To clear off; to take off; to make oneself scarce.",
+    "register": "informal",
+    "origin": "Voiles (sails): setting sail suggests departure. The maritime image became general slang for leaving quickly. Related to 'se faire la voile' (same meaning). Common in contemporary spoken French.",
+    "variants": [
+      {"surface": "mettre les voiles", "type": "exact"},
+      {"surface": "il a mis les voiles", "type": "inflectional_variant", "note": "He took off — past tense."},
+      {"surface": "je vais mettre les voiles", "type": "inflectional_variant", "note": "I'm going to split — future intent."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_battre_le_fer",
+    "canonical": "battre le fer pendant qu'il est chaud",
+    "meaning": "Strike while the iron is hot; act at the opportune moment.",
+    "register": "neutral",
+    "origin": "Blacksmiths must hammer iron while it's hot enough to shape. Ancient proverb with parallels in Latin ('Dum ferrum candet, tundito'), attested in French at least since the 14th century. Identical in form to the English expression.",
+    "variants": [
+      {"surface": "battre le fer pendant qu'il est chaud", "type": "exact"},
+      {"surface": "battre le fer quand il est chaud", "type": "inflectional_variant", "note": "Shortened form, still common."},
+      {"surface": "il faut battre le fer", "type": "inflectional_variant", "note": "One must strike the iron — directive phrasing."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_se_lever_du_pied_gauche",
+    "canonical": "se lever du pied gauche",
+    "meaning": "To get up on the wrong side of the bed; to start the day in a bad mood.",
+    "register": "neutral",
+    "origin": "The left side (gauche) carried negative connotations across European cultures — from Latin 'sinister' (left = ominous) to folk belief that getting out of bed on the left foot would bring bad luck to the day.",
+    "why_it_matters": "Reveals the deep cultural history of left-handedness stigma encoded in idiom. Gauche in French also means 'awkward' — the double meaning enriches the phrase.",
+    "variants": [
+      {"surface": "se lever du pied gauche", "type": "exact"},
+      {"surface": "il s'est levé du pied gauche", "type": "inflectional_variant", "note": "He got up on the wrong side — past tense."},
+      {"surface": "levé du mauvais pied", "type": "inflectional_variant", "note": "Variant using 'mauvais pied' instead of 'pied gauche'."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_faire_la_tete",
+    "canonical": "faire la tête",
+    "meaning": "To sulk; to give someone the silent treatment; to pout.",
+    "register": "informal",
+    "origin": "Literally 'make the head' — a visual image of the sulker presenting a stiff or turned-away head. The expression captures the physical posture of sulking and is widely used in casual French speech.",
+    "variants": [
+      {"surface": "faire la tête", "type": "exact"},
+      {"surface": "faire la tete", "type": "orthographic_variant", "note": "Without circumflex, common in digital writing."},
+      {"surface": "il fait la tête", "type": "inflectional_variant", "note": "He's sulking — present tense."},
+      {"surface": "arrête de faire la tête", "type": "inflectional_variant", "note": "Stop sulking — imperative."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_casser_du_sucre",
+    "canonical": "casser du sucre sur le dos de quelqu'un",
+    "meaning": "To badmouth someone behind their back; to speak ill of someone in their absence.",
+    "register": "informal",
+    "origin": "Sucre (sugar) was a precious, brittle commodity. Breaking sugar on someone's back is a vivid image of crushing something valuable against another person — a physical metaphor for verbal attack done covertly.",
+    "variants": [
+      {"surface": "casser du sucre sur le dos de quelqu'un", "type": "exact"},
+      {"surface": "casser du sucre sur son dos", "type": "inflectional_variant", "note": "Shortened form with pronoun."},
+      {"surface": "ils cassent du sucre sur son dos", "type": "inflectional_variant", "note": "They're talking behind his back."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_tourner_de_loeil",
+    "canonical": "tourner de l'œil",
+    "meaning": "To faint; to pass out.",
+    "register": "informal",
+    "origin": "The eye 'turning' (rotating) refers to the roll of the eyes that often precedes fainting. The expression captures the visible physiological sign of loss of consciousness in a striking image.",
+    "variants": [
+      {"surface": "tourner de l'œil", "type": "exact"},
+      {"surface": "tourner de l'oeil", "type": "orthographic_variant", "note": "Without the ligature œ, common in informal writing."},
+      {"surface": "il a tourné de l'œil", "type": "inflectional_variant", "note": "He fainted — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_prendre_la_tangente",
+    "canonical": "prendre la tangente",
+    "meaning": "To dodge; to take the easy way out; to slip away.",
+    "register": "neutral",
+    "origin": "From mathematics: a tangent line touches a curve at one point then flies off. Prendre la tangente = to take the line of least resistance and veer away from the main issue. Common in educated and general French.",
+    "variants": [
+      {"surface": "prendre la tangente", "type": "exact"},
+      {"surface": "il a pris la tangente", "type": "inflectional_variant", "note": "He dodged the issue — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_avoir_les_pieds_sur_terre",
+    "canonical": "avoir les pieds sur terre",
+    "meaning": "To be down-to-earth; to be realistic and practical.",
+    "register": "neutral",
+    "origin": "Feet firmly on the ground as a positive contrast to 'avoir la tête dans les nuages' (head in the clouds). The binary opposition — earth vs. clouds — organizes a broader conceptual field of realism vs. fantasy.",
+    "why_it_matters": "Often paired with or contrasted against 'avoir la tête dans les nuages'. Learners who know both can immediately grasp the French conceptual axis between grounded and dreamy.",
+    "variants": [
+      {"surface": "avoir les pieds sur terre", "type": "exact"},
+      {"surface": "les pieds sur terre", "type": "inflectional_variant", "note": "Elliptical predicate use."},
+      {"surface": "rester les pieds sur terre", "type": "inflectional_variant", "note": "To stay grounded — with rester."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_manger_les_pissenlits",
+    "canonical": "manger les pissenlits par la racine",
+    "meaning": "To push up daisies; to be dead and buried.",
+    "register": "informal",
+    "origin": "Pissenlit (dandelion, literally 'wet-the-bed') grows above ground — but someone buried beneath would be eating its roots from below. A dark comic image of death expressed through the perspective of the corpse.",
+    "why_it_matters": "Distinctly French in its macabre humor. The word 'pissenlit' itself is already colloquial and earthy, which sets the register. No direct English equivalent uses the same image.",
+    "variants": [
+      {"surface": "manger les pissenlits par la racine", "type": "exact"},
+      {"surface": "bouffer les pissenlits par la racine", "type": "inflectional_variant", "note": "More vulgar form with 'bouffer' (to scoff)."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_ne_pas_casser_trois_pattes",
+    "canonical": "ne pas casser trois pattes à un canard",
+    "meaning": "Nothing special; not particularly impressive; won't set the world on fire.",
+    "register": "informal",
+    "origin": "A duck has two legs — breaking three is impossible. The expression implies that something isn't even accomplishing the impossible, i.e., it's quite ordinary. The image highlights underachievement through impossible arithmetic.",
+    "variants": [
+      {"surface": "ne pas casser trois pattes à un canard", "type": "exact"},
+      {"surface": "ça ne casse pas trois pattes à un canard", "type": "inflectional_variant", "note": "It won't set the world on fire."},
+      {"surface": "ça casse pas des briques", "type": "inflectional_variant", "note": "Variant using bricks instead of duck legs — same meaning, more common in modern speech."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_avoir_mal_aux_cheveux",
+    "canonical": "avoir mal aux cheveux",
+    "meaning": "To have a hangover; to have aching hair (from drinking).",
+    "register": "informal",
+    "origin": "A playful, hyperbolic complaint: even one's hair hurts after a night of drinking. Hair normally feels no pain — the absurdity signals the excess of the situation. A classically French understatement-through-exaggeration.",
+    "why_it_matters": "A charming idiom for learners. The literal meaning 'my hair hurts' is obviously comic, and understanding it builds confidence with French comic logic.",
+    "variants": [
+      {"surface": "avoir mal aux cheveux", "type": "exact"},
+      {"surface": "j'ai mal aux cheveux", "type": "inflectional_variant", "note": "My hair hurts — I'm hungover."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_faire_les_yeux_doux",
+    "canonical": "faire les yeux doux",
+    "meaning": "To make eyes at someone; to look at someone with desire or flattery.",
+    "register": "neutral",
+    "origin": "Doux (soft, gentle) applied to eyes suggests a softened, inviting gaze. The expression captures the physical act of flirting through eye contact. Attested since at least the 17th century in French literature.",
+    "variants": [
+      {"surface": "faire les yeux doux", "type": "exact"},
+      {"surface": "il lui fait les yeux doux", "type": "inflectional_variant", "note": "He's making eyes at her."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_casser_la_croute",
+    "canonical": "casser la croûte",
+    "meaning": "To have a bite to eat; to grab a snack.",
+    "register": "informal",
+    "origin": "Croûte (crust) is the hardest part of bread, requiring effort to break. 'Breaking the crust' was the act of beginning a meal when bread was the staple. The expression preserves the old physicality of eating in a modern casual idiom.",
+    "variants": [
+      {"surface": "casser la croûte", "type": "exact"},
+      {"surface": "casser la croute", "type": "orthographic_variant", "note": "Without circumflex."},
+      {"surface": "on va casser la croûte", "type": "inflectional_variant", "note": "We're going to grab a bite."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_aller_a_la_peche",
+    "canonical": "aller à la pêche",
+    "meaning": "To go fishing for something; to fish for compliments or information.",
+    "register": "neutral",
+    "origin": "Pêche (fishing) as a metaphor for seeking something indirectly. 'Aller à la pêche aux compliments' (fishing for compliments) is a common elaboration. The image implies patience and indirectness in obtaining something.",
+    "variants": [
+      {"surface": "aller à la pêche", "type": "exact"},
+      {"surface": "aller a la peche", "type": "orthographic_variant", "note": "Without accents."},
+      {"surface": "pêcher des compliments", "type": "inflectional_variant", "note": "To fish for compliments — verb form."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_avoir_du_bol",
+    "canonical": "avoir du bol",
+    "meaning": "To be lucky; to have good fortune.",
+    "register": "informal",
+    "origin": "Bol (bowl) as slang for luck derives from bol as rhyming slang or from the earlier sense of 'portion' — your share of fortune. Common in French slang since the 20th century. 'Avoir du pot' is a synonymous expression.",
+    "variants": [
+      {"surface": "avoir du bol", "type": "exact"},
+      {"surface": "t'as du bol!", "type": "inflectional_variant", "note": "You're lucky! — exclamatory."},
+      {"surface": "pas de bol", "type": "inflectional_variant", "note": "No luck; bad luck — negated form used as an interjection."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_cest_du_chinois",
+    "canonical": "c'est du chinois",
+    "meaning": "It's all Greek to me; it's incomprehensible.",
+    "register": "informal",
+    "origin": "Where English uses Greek as the paradigmatic incomprehensible language, French uses Chinese (chinois). Both reflect 18th–19th century European attitudes toward distant linguistic systems. Compare Italian 'è tutto greco' and Spanish 'es chino para mí'.",
+    "why_it_matters": "The cross-linguistic comparison (English: Greek / French: Chinese) illustrates how idioms encode cultural reference points differently across languages while expressing the same concept.",
+    "variants": [
+      {"surface": "c'est du chinois", "type": "exact"},
+      {"surface": "pour moi c'est du chinois", "type": "inflectional_variant", "note": "To me, it's all Chinese — with personal framing."},
+      {"surface": "c'est du charabia", "type": "inflectional_variant", "note": "It's gibberish — synonym using charabia (from Turkish)."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_se_casser_la_tete",
+    "canonical": "se casser la tête",
+    "meaning": "To rack one's brain; to think hard about something.",
+    "register": "neutral",
+    "origin": "Casser (to break) applied to the head suggests the strain of intense thought — thinking so hard it feels like breaking something. A visceral metaphor for cognitive effort, widely used across registers.",
+    "variants": [
+      {"surface": "se casser la tête", "type": "exact"},
+      {"surface": "je me casse la tête", "type": "inflectional_variant", "note": "I'm racking my brain."},
+      {"surface": "ne te casse pas la tête", "type": "inflectional_variant", "note": "Don't overthink it — imperative."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_ne_pas_avoir_froid_aux_yeux",
+    "canonical": "ne pas avoir froid aux yeux",
+    "meaning": "To be bold; to have nerve; to not be faint-hearted.",
+    "register": "neutral",
+    "origin": "Cold in the eyes = fear causing the gaze to freeze. Someone who does not have cold in their eyes faces situations with unwavering gaze. The metaphor connects physical sensation (cold, fear) with ocular expression of courage.",
+    "variants": [
+      {"surface": "ne pas avoir froid aux yeux", "type": "exact"},
+      {"surface": "il n'a pas froid aux yeux", "type": "inflectional_variant", "note": "He doesn't lack nerve."},
+      {"surface": "elle n'a pas froid aux yeux", "type": "inflectional_variant", "note": "She's fearless."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_arriver_comme_un_cheveu_sur_la_soupe",
+    "canonical": "arriver comme un cheveu sur la soupe",
+    "meaning": "To turn up at the wrong moment; to arrive inopportunely; to come out of nowhere.",
+    "register": "informal",
+    "origin": "A hair in the soup (cheveu sur la soupe) is an unwelcome intrusion into something otherwise pleasant. Someone who 'arrives like a hair in the soup' is similarly misplaced and unwelcome.",
+    "why_it_matters": "Highly image-driven and memorable. The hygiene-disgust image is instantly visceral. Illustrates how French idiom encodes social awkwardness through concrete domestic scenes.",
+    "variants": [
+      {"surface": "arriver comme un cheveu sur la soupe", "type": "exact"},
+      {"surface": "tomber comme un cheveu sur la soupe", "type": "inflectional_variant", "note": "Fall like a hair in the soup — with tomber."},
+      {"surface": "comme un cheveu sur la soupe", "type": "inflectional_variant", "note": "Elliptical: like a hair in the soup — adverbial use."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "fr_se_jeter_dans_la_gueule_du_loup",
+    "canonical": "se jeter dans la gueule du loup",
+    "meaning": "To jump into the lion's den; to walk knowingly into danger.",
+    "register": "neutral",
+    "origin": "Gueule du loup (wolf's mouth): throwing oneself into the wolf's open jaws — a vivid image of deliberately entering a dangerous situation. Compare English 'into the lion's den' and 'beard the lion.' French uses the wolf, a historically more feared predator in rural France than the lion.",
+    "variants": [
+      {"surface": "se jeter dans la gueule du loup", "type": "exact"},
+      {"surface": "entrer dans la gueule du loup", "type": "inflectional_variant", "note": "To walk into the lion's den — with entrer instead of se jeter."}
+    ],
+    "confusables": []
+  }
+]

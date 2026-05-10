@@ -1,0 +1,439 @@
+[
+  {
+    "id": "de_den_spiess_umdrehen",
+    "canonical": "den Spieß umdrehen",
+    "meaning": "To turn the tables; to reverse the argument against one's opponent.",
+    "register": "neutral",
+    "origin": "Spieß (spear or spit): reversing the pointed weapon so it faces the attacker. Military imagery applied to argumentation. Attested in German since the early modern period.",
+    "variants": [
+      {"surface": "den Spieß umdrehen", "type": "exact"},
+      {"surface": "den Spieß umkehren", "type": "inflectional_variant", "note": "Variant with 'umkehren' (to reverse) instead of 'umdrehen'."},
+      {"surface": "er hat den Spieß umgedreht", "type": "inflectional_variant", "note": "He turned the tables — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_einen_korb_geben",
+    "canonical": "jemandem einen Korb geben",
+    "meaning": "To reject someone; to turn someone down romantically.",
+    "register": "neutral",
+    "origin": "Medieval legend: a woman lowering a suitor in a basket (Korb) through a window, then leaving him dangling — giving him the basket (rejection). The image entered German as a standard expression for romantic refusal.",
+    "why_it_matters": "One of the most common German expressions for rejection. Understanding the basket image makes the phrase memorable.",
+    "variants": [
+      {"surface": "jemandem einen Korb geben", "type": "exact"},
+      {"surface": "einen Korb bekommen", "type": "inflectional_variant", "note": "To get the basket — to be rejected (passive perspective)."},
+      {"surface": "sie hat ihm einen Korb gegeben", "type": "inflectional_variant", "note": "She turned him down — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_das_handtuch_werfen",
+    "canonical": "das Handtuch werfen",
+    "meaning": "To throw in the towel; to give up.",
+    "register": "neutral",
+    "origin": "From boxing: a trainer throwing a towel into the ring concedes the match. Borrowed directly from English boxing culture into German, retaining the same image.",
+    "variants": [
+      {"surface": "das Handtuch werfen", "type": "exact"},
+      {"surface": "er hat das Handtuch geworfen", "type": "inflectional_variant", "note": "He threw in the towel — past tense."},
+      {"surface": "das Handtuch schmeißen", "type": "inflectional_variant", "note": "Colloquial variant with 'schmeißen' (to chuck)."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_ins_fettnaepfchen_treten",
+    "canonical": "ins Fettnäpfchen treten",
+    "meaning": "To put one's foot in it; to make an embarrassing blunder.",
+    "register": "neutral",
+    "origin": "Fettnäpfchen (small grease dish): small pots of grease were placed near doors or under chairs for polishing boots. Stepping into one was a social embarrassment — the word stuck as a metaphor for unintentional offense.",
+    "why_it_matters": "A quintessentially German idiom with no clean English parallel. The Fettnäpfchen image is opaque and impossible to guess — a learner who knows it has unlocked genuine cultural vocabulary.",
+    "variants": [
+      {"surface": "ins Fettnäpfchen treten", "type": "exact"},
+      {"surface": "er ist ins Fettnäpfchen getreten", "type": "inflectional_variant", "note": "He put his foot in it — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_blau_machen",
+    "canonical": "blaumachen",
+    "meaning": "To skip work; to play hooky; to take an unauthorized day off.",
+    "register": "informal",
+    "origin": "Possibly from woad dyeing (Blaufärben), where cloth soaked in blue dye had to rest — workers could take the day off while the vat sat idle. Alternatively, from Blue Monday (Saint Monday), the tradition of taking Mondays off.",
+    "variants": [
+      {"surface": "blaumachen", "type": "exact"},
+      {"surface": "blau machen", "type": "orthographic_variant", "note": "Written as two words — both spellings are common."},
+      {"surface": "er macht heute blau", "type": "inflectional_variant", "note": "He's taking the day off — present tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_seinen_senf_dazugeben",
+    "canonical": "seinen Senf dazugeben",
+    "meaning": "To give one's two cents; to add an unsolicited opinion.",
+    "register": "informal",
+    "origin": "Mustard (Senf) was a pungent, widely used condiment that was added to food even when unwanted. 'Adding your mustard' to a conversation suggests imposing a strong-flavored opinion where it wasn't sought.",
+    "variants": [
+      {"surface": "seinen Senf dazugeben", "type": "exact"},
+      {"surface": "seinen Senf hinzufügen", "type": "inflectional_variant", "note": "To add one's mustard — slightly more formal verb."},
+      {"surface": "muss er immer seinen Senf dazugeben", "type": "inflectional_variant", "note": "He always has to put his two cents in."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_tomaten_auf_den_augen",
+    "canonical": "Tomaten auf den Augen haben",
+    "meaning": "To be blind to what's obvious; to not see what's right in front of one.",
+    "register": "informal",
+    "origin": "Tomatoes (Tomaten) on the eyes — large round objects blocking the view. A comic image emphasizing willful or oblivious blindness. More colorful than the English 'scales on one's eyes.'",
+    "why_it_matters": "Strikingly visual and playful. Unique to German among major European languages. Learning it builds awareness of German's penchant for vegetable-based idiom.",
+    "variants": [
+      {"surface": "Tomaten auf den Augen haben", "type": "exact"},
+      {"surface": "du hast wohl Tomaten auf den Augen", "type": "inflectional_variant", "note": "You must have tomatoes on your eyes — direct address, exasperated."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_um_den_heissen_brei",
+    "canonical": "um den heißen Brei herumreden",
+    "meaning": "To beat around the hot porridge; to avoid the subject.",
+    "register": "neutral",
+    "origin": "Hot porridge (heißer Brei) cannot be eaten immediately — one circles around it, blowing on it, waiting. The image of circling without committing is used for evasive speech. Compare French 'tourner autour du pot'.",
+    "variants": [
+      {"surface": "um den heißen Brei herumreden", "type": "exact"},
+      {"surface": "um den heißen Brei herumgehen", "type": "inflectional_variant", "note": "To walk around the hot porridge — motion variant."},
+      {"surface": "rede nicht um den heißen Brei herum", "type": "inflectional_variant", "note": "Don't beat around the bush — imperative."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_durch_dick_und_dunn",
+    "canonical": "durch dick und dünn",
+    "meaning": "Through thick and thin; in good times and bad.",
+    "register": "neutral",
+    "origin": "Thick (dick) and thin (dünn) referred to thick and thin forest terrain — alternating dense thicket and open paths. Through both kinds of terrain suggests loyalty regardless of conditions. Parallel to English 'through thick and thin.'",
+    "variants": [
+      {"surface": "durch dick und dünn", "type": "exact"},
+      {"surface": "durch dick und dünn gehen", "type": "inflectional_variant", "note": "To go through thick and thin — with verb."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_das_fuenfte_rad_am_wagen",
+    "canonical": "das fünfte Rad am Wagen",
+    "meaning": "The fifth wheel; an unnecessary person.",
+    "register": "neutral",
+    "origin": "A wagon needs four wheels — a fifth is purely superfluous. The expression captures the feeling of being unwanted or redundant in a group. Found in early modern German. The English 'fifth wheel' shares the same image.",
+    "variants": [
+      {"surface": "das fünfte Rad am Wagen", "type": "exact"},
+      {"surface": "das fünfte Rad am Wagen sein", "type": "inflectional_variant", "note": "To be the fifth wheel — with sein (to be)."},
+      {"surface": "er ist das fünfte Rad am Wagen", "type": "inflectional_variant", "note": "He's the odd one out."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_hinter_dem_mond",
+    "canonical": "hinter dem Mond leben",
+    "meaning": "To live behind the moon; to be out of touch with reality.",
+    "register": "informal",
+    "origin": "The moon's far side (the dark side) was invisible — living there means existing beyond what the world can see or know. A person 'behind the moon' is ignorant of current events and modern life.",
+    "variants": [
+      {"surface": "hinter dem Mond leben", "type": "exact"},
+      {"surface": "du lebst wohl hinter dem Mond", "type": "inflectional_variant", "note": "You must be living on the moon — direct address."},
+      {"surface": "hinterm Mond leben", "type": "inflectional_variant", "note": "Colloquial contraction with 'hinterm'."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_wie_aus_der_pistole",
+    "canonical": "wie aus der Pistole geschossen",
+    "meaning": "Like a shot from a pistol; immediately; instantaneously.",
+    "register": "neutral",
+    "origin": "The speed of a bullet fired from a pistol: as fast as possible. Used to describe instant responses, especially verbal ones. 'Er antwortete wie aus der Pistole geschossen' — he answered without a moment's hesitation.",
+    "variants": [
+      {"surface": "wie aus der Pistole geschossen", "type": "exact"},
+      {"surface": "er antwortete wie aus der Pistole geschossen", "type": "inflectional_variant", "note": "He answered like a shot."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_auf_der_kippe_stehen",
+    "canonical": "auf der Kippe stehen",
+    "meaning": "To hang in the balance; to be on the verge; to be uncertain.",
+    "register": "neutral",
+    "origin": "Kippe can mean a tipping point, a see-saw, or the edge of a surface. Something balanced on the Kippe can fall either way — an apt metaphor for an undecided situation.",
+    "variants": [
+      {"surface": "auf der Kippe stehen", "type": "exact"},
+      {"surface": "es steht auf der Kippe", "type": "inflectional_variant", "note": "It's hanging in the balance."},
+      {"surface": "auf Kante stehen", "type": "inflectional_variant", "note": "Variant using Kante (edge) — same meaning."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_die_katze_im_sack",
+    "canonical": "die Katze im Sack kaufen",
+    "meaning": "To buy a pig in a poke; to buy something without examining it first.",
+    "register": "neutral",
+    "origin": "Medieval market fraud: merchants sold a (presumably valuable) cat in a bag instead of the promised pig. Letting the cat out of the bag (den Braten riechen) revealed the trick. Compare English 'pig in a poke' and French 'acheter chat en poche.'",
+    "variants": [
+      {"surface": "die Katze im Sack kaufen", "type": "exact"},
+      {"surface": "eine Katze im Sack kaufen", "type": "inflectional_variant", "note": "Indefinite article variant — slightly more generic."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_einen_zahn_zulegen",
+    "canonical": "einen Zahn zulegen",
+    "meaning": "To step on the gas; to speed up; to increase effort.",
+    "register": "informal",
+    "origin": "Zahn (tooth) as slang for speed — possibly from cycling, where adding a gear (Zahn = tooth on a cog) means pedaling faster. The image is mechanical: adding a cog increases velocity.",
+    "variants": [
+      {"surface": "einen Zahn zulegen", "type": "exact"},
+      {"surface": "leg mal einen Zahn zu", "type": "inflectional_variant", "note": "Speed it up — imperative."},
+      {"surface": "noch einen Zahn zulegen", "type": "inflectional_variant", "note": "To step it up a notch further."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_zwei_fliegen_mit_einer_klappe",
+    "canonical": "zwei Fliegen mit einer Klappe schlagen",
+    "meaning": "To kill two birds with one stone.",
+    "register": "neutral",
+    "origin": "Klappe (flap, shutter) rather than stone: German uses a fly swatter or door flap hitting two flies. The same concept as English but with an indoor domestic image. Also attested in Dutch and other Germanic languages.",
+    "variants": [
+      {"surface": "zwei Fliegen mit einer Klappe schlagen", "type": "exact"},
+      {"surface": "zwei Fliegen mit einer Klappe", "type": "inflectional_variant", "note": "Elliptical — the verb often dropped in parenthetical use."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_alle_ueber_einen_kamm",
+    "canonical": "alle über einen Kamm scheren",
+    "meaning": "To tar everyone with the same brush; to treat everyone identically without distinction.",
+    "register": "neutral",
+    "origin": "Scheren (to shear, to comb) + Kamm (comb): running one comb over everyone flattens all differences. The shearing image evokes sheep — treating people as undifferentiated flock.",
+    "variants": [
+      {"surface": "alle über einen Kamm scheren", "type": "exact"},
+      {"surface": "alle über einen Kamm", "type": "inflectional_variant", "note": "Elliptical — verb dropped in informal use."},
+      {"surface": "man kann nicht alle über einen Kamm scheren", "type": "inflectional_variant", "note": "You can't treat everyone the same — negated form."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_ins_wasser_fallen",
+    "canonical": "ins Wasser fallen",
+    "meaning": "To fall through; to not happen; to come to nothing.",
+    "register": "neutral",
+    "origin": "Something that falls into water disappears or is ruined — a plan 'fallen into water' has dissolved. The aquatic metaphor for failure is common across Germanic languages.",
+    "variants": [
+      {"surface": "ins Wasser fallen", "type": "exact"},
+      {"surface": "der Plan ist ins Wasser gefallen", "type": "inflectional_variant", "note": "The plan fell through — past tense."},
+      {"surface": "ins Wasser gefallen", "type": "inflectional_variant", "note": "Fallen through — participial use."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_die_kuh_vom_eis",
+    "canonical": "die Kuh vom Eis bringen",
+    "meaning": "To get the cow off the ice; to solve a tricky problem.",
+    "register": "neutral",
+    "origin": "A cow on ice is in a precarious, almost comic predicament — heavy, unstable, unable to walk safely. Getting it off requires ingenuity and care. The image encodes both the difficulty and the urgency of problem-solving.",
+    "why_it_matters": "Unique to German. Learners of German often encounter it and find it initially baffling — a perfect example of opaque cultural metaphor.",
+    "variants": [
+      {"surface": "die Kuh vom Eis bringen", "type": "exact"},
+      {"surface": "wir müssen die Kuh vom Eis bringen", "type": "inflectional_variant", "note": "We need to get the cow off the ice — urgent form."},
+      {"surface": "die Kuh ist vom Eis", "type": "inflectional_variant", "note": "The cow is off the ice — the problem is solved."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_mit_kanonen_auf_spatzen",
+    "canonical": "mit Kanonen auf Spatzen schießen",
+    "meaning": "To use a sledgehammer to crack a nut; to use disproportionate means.",
+    "register": "neutral",
+    "origin": "Firing a cannon (Kanone) at sparrows (Spatzen) is absurdly excessive. The expression critiques the mismatch between powerful means and trivial ends. Common in business, politics, and everyday critique.",
+    "variants": [
+      {"surface": "mit Kanonen auf Spatzen schießen", "type": "exact"},
+      {"surface": "mit Kanonen auf Spatzen", "type": "inflectional_variant", "note": "Elliptical parenthetical."},
+      {"surface": "das ist mit Kanonen auf Spatzen geschossen", "type": "inflectional_variant", "note": "That's using a sledgehammer to crack a nut."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_auf_grossem_fuss",
+    "canonical": "auf großem Fuß leben",
+    "meaning": "To live large; to live extravagantly; to live beyond one's means.",
+    "register": "neutral",
+    "origin": "In medieval times, long pointed shoe tips (Schnabelschuhe) indicated social rank — longer tips = higher status. Living on a 'large foot' referenced the conspicuous luxury of aristocratic footwear.",
+    "why_it_matters": "Contrast with 'auf gutem Fuß stehen' (to be on good terms with someone) — same Fuß, different meaning. Distinguishing these builds lexical precision.",
+    "variants": [
+      {"surface": "auf großem Fuß leben", "type": "exact"},
+      {"surface": "auf großem Fuße leben", "type": "orthographic_variant", "note": "With dative -e ending — older, still seen in formal writing."},
+      {"surface": "er lebt auf großem Fuß", "type": "inflectional_variant", "note": "He's living large."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_jemandem_den_daumen_drucken",
+    "canonical": "jemandem den Daumen drücken",
+    "meaning": "To keep one's fingers crossed for someone; to wish someone luck.",
+    "register": "neutral",
+    "origin": "In Roman gladiatorial combat, pressing the thumb down (or closing the fist around it) was a gesture of mercy or good will. The Germanic tradition adopted the thumb-pressing gesture as a luck charm. Compare English 'fingers crossed.'",
+    "variants": [
+      {"surface": "jemandem den Daumen drücken", "type": "exact"},
+      {"surface": "ich drücke dir den Daumen", "type": "inflectional_variant", "note": "I'm crossing my fingers for you."},
+      {"surface": "Daumen drücken", "type": "inflectional_variant", "note": "Elliptical imperative or standalone expression."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_das_kind_beim_namen",
+    "canonical": "das Kind beim Namen nennen",
+    "meaning": "To call a spade a spade; to name something clearly and directly.",
+    "register": "neutral",
+    "origin": "Naming the child (das Kind) by its name — a metaphor for honest, direct identification of something others might hesitate to name. Attested in early modern German and parallel to Erasmian humanist rhetoric about plain speech.",
+    "variants": [
+      {"surface": "das Kind beim Namen nennen", "type": "exact"},
+      {"surface": "das Kind beim richtigen Namen nennen", "type": "inflectional_variant", "note": "Call the child by its right name — with emphasis on 'right'."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_auf_dem_sprung",
+    "canonical": "auf dem Sprung sein",
+    "meaning": "To be on the go; to be about to leave; to be in a hurry.",
+    "register": "neutral",
+    "origin": "Sprung (jump, leap) — being on the verge of jumping suggests imminent motion. The expression captures a moment of readiness before departure, widely used in casual German.",
+    "variants": [
+      {"surface": "auf dem Sprung sein", "type": "exact"},
+      {"surface": "ich bin auf dem Sprung", "type": "inflectional_variant", "note": "I'm just on my way out."},
+      {"surface": "er ist auf dem Sprung", "type": "inflectional_variant", "note": "He's about to leave."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_keinen_finger_krumm_machen",
+    "canonical": "keinen Finger krumm machen",
+    "meaning": "Not to lift a finger; to make no effort whatsoever.",
+    "register": "informal",
+    "origin": "Making a finger crooked (krumm machen) is the smallest possible physical movement. Refusing even that gesture emphasizes total passivity. The negation 'keinen' + minimal action = maximal laziness.",
+    "variants": [
+      {"surface": "keinen Finger krumm machen", "type": "exact"},
+      {"surface": "er macht keinen Finger krumm", "type": "inflectional_variant", "note": "He won't lift a finger."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_die_flinte_ins_korn_werfen",
+    "canonical": "die Flinte ins Korn werfen",
+    "meaning": "To give up; to throw in the towel; to abandon one's efforts.",
+    "register": "neutral",
+    "origin": "Flinte (musket, rifle) + Korn (grain field): a soldier who throws their weapon into a grain field has surrendered or deserted. The battlefield image evokes hopeless retreat. More vivid than English 'throw in the towel.'",
+    "variants": [
+      {"surface": "die Flinte ins Korn werfen", "type": "exact"},
+      {"surface": "er hat die Flinte ins Korn geworfen", "type": "inflectional_variant", "note": "He's given up — past tense."},
+      {"surface": "wirf nicht gleich die Flinte ins Korn", "type": "inflectional_variant", "note": "Don't give up so quickly — imperative."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_jemanden_auf_dem_kieker",
+    "canonical": "jemanden auf dem Kieker haben",
+    "meaning": "To have someone in one's sights; to be watching someone closely with suspicion.",
+    "register": "informal",
+    "origin": "Kieker (telescope, binoculars) from maritime and military use. 'Having someone through the telescope' means tracking them closely. The expression implies sustained surveillance and mild hostility.",
+    "variants": [
+      {"surface": "jemanden auf dem Kieker haben", "type": "exact"},
+      {"surface": "er hat mich auf dem Kieker", "type": "inflectional_variant", "note": "He's got me in his sights."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_sich_in_die_nesseln_setzen",
+    "canonical": "sich in die Nesseln setzen",
+    "meaning": "To get oneself into a mess; to land oneself in trouble.",
+    "register": "informal",
+    "origin": "Nesseln (stinging nettles): sitting down in a nettle patch causes immediate, painful consequences. A visceral image for the result of reckless action. Common in Austrian and South German usage.",
+    "variants": [
+      {"surface": "sich in die Nesseln setzen", "type": "exact"},
+      {"surface": "er hat sich in die Nesseln gesetzt", "type": "inflectional_variant", "note": "He got himself into trouble."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_den_braten_riechen",
+    "canonical": "den Braten riechen",
+    "meaning": "To smell a rat; to sense that something is not right.",
+    "register": "neutral",
+    "origin": "Braten (roast meat): the smell of something cooking alerts you to what is happening before you see it. 'Smelling the roast' = detecting a situation before it is revealed. Related to the 'cat in the bag' cluster of medieval marketplace fraud idioms.",
+    "variants": [
+      {"surface": "den Braten riechen", "type": "exact"},
+      {"surface": "ich habe den Braten gerochen", "type": "inflectional_variant", "note": "I smelled a rat — past tense."},
+      {"surface": "er hat den Braten schnell gerochen", "type": "inflectional_variant", "note": "He caught on quickly."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_eine_lanze_brechen",
+    "canonical": "eine Lanze für jemanden brechen",
+    "meaning": "To go to bat for someone; to stand up for someone; to make a case on their behalf.",
+    "register": "neutral",
+    "origin": "Medieval jousting: breaking a lance in tournament combat for someone's honor was an act of personal advocacy and loyalty. The expression retains the chivalric register of active, public defense of another.",
+    "variants": [
+      {"surface": "eine Lanze für jemanden brechen", "type": "exact"},
+      {"surface": "eine Lanze für ihn brechen", "type": "inflectional_variant", "note": "Go to bat for him — with pronoun."},
+      {"surface": "er brach eine Lanze für sie", "type": "inflectional_variant", "note": "He stood up for her — past tense."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_mit_haut_und_haaren",
+    "canonical": "mit Haut und Haaren",
+    "meaning": "Hook, line, and sinker; completely; lock, stock, and barrel.",
+    "register": "neutral",
+    "origin": "Skin (Haut) and hair (Haare) represent the whole person — external covering included. 'With skin and hair' = entirely, without leaving anything behind. Used of both consuming something completely and being completely ensnared.",
+    "variants": [
+      {"surface": "mit Haut und Haaren", "type": "exact"},
+      {"surface": "er hat es mit Haut und Haaren geglaubt", "type": "inflectional_variant", "note": "He swallowed it hook, line, and sinker."},
+      {"surface": "sie ist mit Haut und Haaren verliebt", "type": "inflectional_variant", "note": "She's head over heels in love."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_ueber_den_berg_sein",
+    "canonical": "über den Berg sein",
+    "meaning": "To be over the worst; to be out of the woods; to have passed the crisis.",
+    "register": "neutral",
+    "origin": "The mountain (Berg) as an obstacle to be surmounted: once you're over the peak, the worst of the climb is behind you. Applied to illness, crisis, and difficulty. Compare English 'over the hill' (though German's meaning is more positive).",
+    "variants": [
+      {"surface": "über den Berg sein", "type": "exact"},
+      {"surface": "er ist über den Berg", "type": "inflectional_variant", "note": "He's over the worst."},
+      {"surface": "noch nicht über den Berg", "type": "inflectional_variant", "note": "Not out of the woods yet."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_auf_den_leim_gehen",
+    "canonical": "auf den Leim gehen",
+    "meaning": "To be taken in; to fall for a trick; to be fooled.",
+    "register": "neutral",
+    "origin": "Leim (glue, birdlime): hunters coated branches with sticky birdlime to catch birds — they landed and stuck. 'Going onto the glue' = being trapped by a deception. The image is ancient and appears across European languages.",
+    "variants": [
+      {"surface": "auf den Leim gehen", "type": "exact"},
+      {"surface": "er ist auf den Leim gegangen", "type": "inflectional_variant", "note": "He fell for it — past tense."},
+      {"surface": "jemandem auf den Leim gehen", "type": "inflectional_variant", "note": "To be taken in by someone — with dative agent."}
+    ],
+    "confusables": []
+  },
+  {
+    "id": "de_auf_dem_trockenen_sitzen",
+    "canonical": "auf dem Trockenen sitzen",
+    "meaning": "To be stranded; to be in a fix; to have run out of resources.",
+    "register": "neutral",
+    "origin": "Trockenen (dry land): a fish or boat stranded on dry land cannot move. The image captures helplessness from lack of the usual medium — a sailor without water, or a person without money or support.",
+    "variants": [
+      {"surface": "auf dem Trockenen sitzen", "type": "exact"},
+      {"surface": "auf dem Trocknen sitzen", "type": "orthographic_variant", "note": "Contracted form without -en, also common."},
+      {"surface": "er sitzt auf dem Trockenen", "type": "inflectional_variant", "note": "He's high and dry."}
+    ],
+    "confusables": []
+  }
+]
