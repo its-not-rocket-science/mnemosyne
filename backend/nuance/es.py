@@ -14,7 +14,53 @@ _DIMINUTIVE_SUFFIXES = (
 
 # Verbal government — populate via gen_verbal_government.py.
 # Keys: verb lemma (or "verb + preposition" for prepositional verbs).
-_VERBAL_GOV: dict[str, tuple[str, str]] = {}
+_VERBAL_GOV: dict[str, tuple[str, str]] = {
+    # ── ES additions (gen_verbal_government.py) ──
+    'depender de': ('de', "«depender de» (depend on) takes 'de': depende de ti (it depends on you), todo depende del tiempo (everything depends on the weather)"),
+    'hablar de': ('de', "«hablar de» (talk about) takes 'de': hablamos de política (we talked about politics). Compare hablar con (talk with) and hablar a (speak to)"),
+    'acordarse de': ('de', "«acordarse de» (remember) takes 'de': me acuerdo de ti (I remember you). Reflexive — distinguish from recordar + acc (also: to remember, but transitive)"),
+    'olvidarse de': ('de', "«olvidarse de» (forget) takes 'de': me olvidé de la cita (I forgot the appointment). Reflexive — mirror of acordarse de"),
+    'darse cuenta de': ('de', "«darse cuenta de» (realize) takes 'de': me di cuenta del error (I realized the error). High-frequency idiomatic phrase"),
+    'enamorarse de': ('de', "«enamorarse de» (fall in love with) takes 'de': se enamoró de ella (he fell in love with her). Reflexive"),
+    'alegrarse de': ('de', "«alegrarse de» (be glad about) takes 'de': me alegro de verte (I'm happy to see you). Reflexive"),
+    'quejarse de': ('de', "«quejarse de» (complain about) takes 'de': se queja del trabajo (he complains about work). Reflexive"),
+    'arrepentirse de': ('de', "«arrepentirse de» (regret) takes 'de': me arrepiento de mis palabras (I regret my words). Reflexive — moral/religious register"),
+    'burlarse de': ('de', "«burlarse de» (mock) takes 'de': se burla de todos (he mocks everyone). Reflexive"),
+    'tratarse de': ('de', "«tratarse de» (be a question of) takes 'de': se trata de un error (it's a matter of an error). Impersonal reflexive"),
+    'encargarse de': ('de', "«encargarse de» (take charge of) takes 'de': me encargo de los pagos (I handle the payments). Reflexive"),
+    'atreverse a': ('a+infinitive', "«atreverse a» (dare to) takes 'a + infinitive': se atreve a decirlo (he dares to say it). Reflexive"),
+    'decidirse a': ('a+infinitive', "«decidirse a» (decide to) takes 'a + infinitive': se decidió a viajar (he decided to travel). Reflexive — distinguish from decidir + infinitive (no preposition)"),
+    'comenzar a': ('a+infinitive', "«comenzar a» (begin to) takes 'a + infinitive': comencé a llover (it began to rain). Same pattern as empezar a"),
+    'empezar a': ('a+infinitive', "«empezar a» (start to) takes 'a + infinitive': empezó a llover (it started to rain)"),
+    'aprender a': ('a+infinitive', "«aprender a» (learn to) takes 'a + infinitive': aprendió a nadar (he learned to swim)"),
+    'enseñar a': ('a+infinitive', "«enseñar a» (teach to) takes 'a + infinitive': me enseñó a cocinar (he taught me to cook)"),
+    'ayudar a': ('a+infinitive', "«ayudar a» (help to) takes 'a + infinitive': te ayudo a estudiar (I'll help you study)"),
+    'negarse a': ('a+infinitive', "«negarse a» (refuse to) takes 'a + infinitive': se negó a hablar (he refused to speak). Reflexive"),
+    'acostumbrarse a': ('a+infinitive', "«acostumbrarse a» (get used to) takes 'a + infinitive' or 'a + noun': me acostumbré al frío (I got used to the cold). Reflexive"),
+    'tratar de': ('de+infinitive', "«tratar de» (try to) takes 'de + infinitive': trato de entender (I try to understand). Distinguish from tratarse de (be about)"),
+    'dejar de': ('de+infinitive', "«dejar de» (stop) takes 'de + infinitive': dejó de fumar (he stopped smoking)"),
+    'terminar de': ('de+infinitive', "«terminar de» (finish) takes 'de + infinitive': terminé de leer (I finished reading)"),
+    'acabar de': ('de+infinitive', "«acabar de» (have just done) takes 'de + infinitive': acabo de llegar (I just arrived). Idiomatic recent-past construction"),
+    'consistir en': ('en', "«consistir en» (consist of) takes 'en': la dieta consiste en frutas (the diet consists of fruits)"),
+    'pensar en': ('en', "«pensar en» (think of/about) takes 'en': pienso en ti (I think of you). Distinguish from pensar de (have an opinion about) and pensar + infinitive (intend to)"),
+    'confiar en': ('en', "«confiar en» (trust) takes 'en': confío en ti (I trust you)"),
+    'insistir en': ('en', "«insistir en» (insist on) takes 'en': insiste en pagar (he insists on paying)"),
+    'fijarse en': ('en', "«fijarse en» (notice) takes 'en': fíjate en eso (notice that). Reflexive"),
+    'tardar en': ('en+infinitive', "«tardar en» (take long to) takes 'en + infinitive': tardó en llegar (he took a long time to arrive)"),
+    'casarse con': ('con', "«casarse con» (marry) takes 'con': se casó con María (he married María). Reflexive — note: marry WITH, not marry someone direct"),
+    'soñar con': ('con', "«soñar con» (dream of) takes 'con': sueña con viajar (he dreams of traveling). Distinguish from English 'dream OF' (preposition differs)"),
+    'contar con': ('con', "«contar con» (count on) takes 'con': cuento contigo (I count on you)"),
+    'encontrarse con': ('con', "«encontrarse con» (run into, meet) takes 'con': me encontré con Juan (I ran into Juan). Reflexive"),
+    'preocuparse por': ('por', "«preocuparse por» (worry about) takes 'por': me preocupo por ti (I worry about you). Reflexive"),
+    'interesarse por': ('por', "«interesarse por» (be interested in) takes 'por': se interesa por la música (he is interested in music). Reflexive"),
+    'luchar por': ('por', "«luchar por» (fight for) takes 'por': lucha por la libertad (he fights for freedom)"),
+    'esforzarse por': ('por', "«esforzarse por» (strive to) takes 'por + infinitive': se esfuerza por mejorar (he strives to improve). Reflexive"),
+    'asistir a': ('a', "«asistir a» (attend) takes 'a': asistí al concierto (I attended the concert). Spanish 'asistir' = attend, NOT assist (false friend warning)"),
+    'renunciar a': ('a', "«renunciar a» (give up, renounce) takes 'a': renunció al cargo (he resigned from the post)"),
+    'oler a': ('a', "«oler a» (smell of) takes 'a': huele a café (it smells of coffee)"),
+    'saber a': ('a', "«saber a» (taste of) takes 'a': sabe a limón (it tastes of lemon)"),
+    'parecerse a': ('a', "«parecerse a» (resemble) takes 'a': se parece a su padre (he looks like his father). Reflexive"),
+}
 
 
 def _text(tok: Any) -> str:

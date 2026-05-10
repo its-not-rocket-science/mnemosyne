@@ -111,7 +111,52 @@ _HONORIFIC_EP = frozenset({"시", "으시"})
 
 # Verbal government — verb + particle pairs. Populate via
 # gen_verbal_government.py.
-_VERBAL_GOV: dict[str, tuple[str, str]] = {}
+_VERBAL_GOV: dict[str, tuple[str, str]] = {
+    # ── KO additions (gen_verbal_government.py) ──
+    '가다': ('e', "「가다」(gada, to go) takes 에 + destination: 학교에 가다 (go to school). Distinguish from 에서 (location of action)"),
+    '오다': ('e', "「오다」(oda, to come) takes 에 + destination: 집에 오다 (come home). Mirror of 가다"),
+    '도착하다': ('e', "「도착하다」(dochakhada, to arrive) takes 에 + place: 공항에 도착했다 (I arrived at the airport)"),
+    '들어가다': ('e', "「들어가다」(deureogada, to enter) takes 에 + place: 방에 들어가다 (enter the room). Compound of 들다 + 가다"),
+    '살다': ('e', "「살다」(salda, to live) takes 에 + location: 서울에 살다 (live in Seoul). Permanent residence takes 에"),
+    '가입하다': ('e', "「가입하다」(gaipada, to join) takes 에 + group: 동아리에 가입하다 (join a club)"),
+    '참가하다': ('e', "「참가하다」(chamgahada, to participate in) takes 에 + event: 회의에 참가하다 (participate in the meeting)"),
+    '관심이 있다': ('e', "「관심이 있다」(gwansim-i itda, to be interested in) takes 에 + topic: 음악에 관심이 있다 (interested in music)"),
+    '익숙하다': ('e', "「익숙하다」(iksukhada, to be accustomed to) takes 에 + habituated thing: 한국 음식에 익숙하다 (used to Korean food)"),
+    '적응하다': ('e', "「적응하다」(jeokeunghada, to adapt to) takes 에 + new context: 새 환경에 적응하다 (adapt to a new environment)"),
+    '의지하다': ('e', "「의지하다」(uijihada, to rely on) takes 에 + supporter: 친구에 의지하다 (rely on a friend)"),
+    '열중하다': ('e', "「열중하다」(yeoljunghada, to concentrate on) takes 에 + activity: 공부에 열중하다 (concentrate on study)"),
+    '성공하다': ('e', "「성공하다」(seonggonghada, to succeed in) takes 에 + endeavor: 사업에 성공하다 (succeed in business)"),
+    '실패하다': ('e', "「실패하다」(silpaehada, to fail in) takes 에 + endeavor: 시험에 실패하다 (fail in the exam). Mirror of 성공하다"),
+    '공부하다': ('eseo', "「공부하다」(gongbuhada, to study) takes 에서 for location of action: 도서관에서 공부하다 (study at the library). Distinguish from 에 (static residence)"),
+    '일하다': ('eseo', "「일하다」(ilhada, to work) takes 에서 + workplace: 회사에서 일하다 (work at a company)"),
+    '출발하다': ('eseo', "「출발하다」(chulbalhada, to depart) takes 에서 + origin: 서울에서 출발하다 (depart from Seoul). Mirror: 도착하다 + 에"),
+    '오다 에서': ('eseo', "「오다」alternate: 에서 + origin: 미국에서 왔다 (came from America). Source/origin takes 에서"),
+    '왔다': ('buteo', "「부터」particle pattern: 9시부터 시작했다 (started from 9 o'clock). Temporal origin takes 부터"),
+    '보다': ('eul_reul', "「보다」(boda, to see/watch) takes 을/를 + direct object: 영화를 보다 (watch a movie). Standard transitive"),
+    '먹다': ('eul_reul', "「먹다」(meokda, to eat) takes 을/를: 밥을 먹다 (eat rice/a meal). Direct object marker"),
+    '마시다': ('eul_reul', "「마시다」(masida, to drink) takes 을/를: 커피를 마시다 (drink coffee)"),
+    '읽다': ('eul_reul', "「읽다」(ikda, to read) takes 을/를: 책을 읽다 (read a book)"),
+    '쓰다': ('eul_reul', "「쓰다」(sseuda, to write) takes 을/를: 편지를 쓰다 (write a letter). Multi-meaning verb: also 'use', 'wear (hat)', 'be bitter'"),
+    '좋아하다': ('eul_reul', "「좋아하다」(joahada, to like) takes 을/를 — NOT 이/가: 음악을 좋아하다 (like music). Distinct from descriptive 좋다 (be good) which takes 이/가"),
+    '싫어하다': ('eul_reul', "「싫어하다」(silhohada, to dislike) takes 을/를: 운동을 싫어하다 (dislike exercise). Mirror of 좋아하다"),
+    '원하다': ('eul_reul', "「원하다」(wonhada, to want) takes 을/를: 평화를 원하다 (want peace)"),
+    '기다리다': ('eul_reul', "「기다리다」(gidarida, to wait for) takes 을/를: 친구를 기다리다 (wait for a friend). Direct object — not Korean equivalent of 'for'"),
+    '결혼하다': ('wa_gwa', "「결혼하다」(gyeolhonhada, to marry) takes 와/과 + partner: 그녀와 결혼하다 (marry her). Same pattern as Japanese と"),
+    '만나다': ('wa_gwa', "「만나다」(mannada, to meet) often takes 와/과: 친구와 만나다 (meet with a friend). Also takes 을/를 directly: 친구를 만나다"),
+    '싸우다': ('wa_gwa', "「싸우다」(ssauda, to fight) takes 와/과 + opponent: 친구와 싸웠다 (fought with a friend)"),
+    '비교하다': ('wa_gwa', "「비교하다」(bigyohada, to compare) takes 을/를 + 와/과: A를 B와 비교하다 (compare A with B). Two-object structure"),
+    '이야기하다': ('wa_gwa', "「이야기하다」(iyagihada, to talk with) takes 와/과 + interlocutor: 친구와 이야기하다 (talk with a friend)"),
+    '약속하다': ('wa_gwa', "「약속하다」(yaksokhada, to promise / make appointment with) takes 와/과 + person: 친구와 약속하다 (make a promise with a friend)"),
+    '헤어지다': ('wa_gwa', "「헤어지다」(heeojida, to part with / break up) takes 와/과: 그와 헤어졌다 (broke up with him)"),
+    '가다 로': ('euro_ro', "「가다」alternate: 으로/로 + means/direction: 버스로 가다 (go by bus), 학교로 가다 (head toward school). Means/instrumental case"),
+    '만들다': ('euro_ro', "「만들다」(mandeulda, to make from) takes 으로/로 + material: 나무로 만들다 (make from wood)"),
+    '변하다': ('euro_ro', "「변하다」(byeonhada, to change into) takes 으로/로 + new state: 어른으로 변하다 (change into an adult)"),
+    '주다': ('ege', "「주다」(juda, to give) takes 에게 + recipient + 을/를 + thing: 친구에게 책을 주다 (give a book to a friend). Two-object pattern with 에게 for animate recipients"),
+    '보내다': ('ege', "「보내다」(bonaeda, to send) takes 에게 + recipient: 어머니에게 편지를 보내다 (send a letter to mother). Animate recipient takes 에게"),
+    '말하다': ('ege', "「말하다」(malhada, to say to) takes 에게 + recipient: 친구에게 말하다 (tell a friend). Distinguish from 와/과 (talk WITH)"),
+    '전화하다': ('ege', "「전화하다」(jeonhwahada, to call/phone) takes 에게: 친구에게 전화하다 (call a friend)"),
+    '묻다': ('ege', "「묻다」(mutda, to ask) takes 에게 + person + 을/를 + thing: 친구에게 길을 묻다 (ask a friend for directions)"),
+}
 
 
 def _lemma(c: CandidateObject) -> str:

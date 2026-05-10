@@ -167,7 +167,7 @@ LANG_CONFIG: dict[str, dict] = {
             "para+infinitive", "por+infinitive",
             "que+subjunctive", "que+indicative",
         }),
-        "lemma_chars": r"\wáâãàçéêíóôõúüÁÂÃÀÇÉÊÍÓÔÕÚÜ ",
+        "lemma_chars": r"\wáâãàçéêíóôõúüÁÂÃÀÇÉÊÍÓÔÕÚÜ \-",
     },
     # ── Hebrew (prep system; some pronominal/inflected preps) ──
     "he": {

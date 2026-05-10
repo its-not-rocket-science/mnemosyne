@@ -17,7 +17,54 @@ _INFORMAL_PRONOUNS = frozenset({"tu", "ti", "tuo", "tua", "tuoi", "tue", "te"})
 _FORMAL_PRONOUNS = frozenset({"lei", "ella", "suo", "sua", "suoi", "sue"})
 
 # Verbal government — populate via gen_verbal_government.py.
-_VERBAL_GOV: dict[str, tuple[str, str]] = {}
+_VERBAL_GOV: dict[str, tuple[str, str]] = {
+    # ── IT additions (gen_verbal_government.py) ──
+    'pensare a': ('a', "«pensare a» (think of) takes 'a': penso a te (I think of you). Distinguish from pensare di + infinitive (intend to): penso di partire (I plan to leave)"),
+    'credere a': ('a', "«credere a» (believe in/trust) takes 'a': non credo a queste storie (I don't believe these stories). Distinguish from credere in (have faith in): credere in Dio"),
+    'giocare a': ('a', "«giocare a» (play a game) takes 'a': gioco a tennis (I play tennis). Distinguish from suonare (play music) — Italian splits the verbs unlike English/French"),
+    'assomigliare a': ('a', "«assomigliare a» (resemble) takes 'a': assomiglia a sua madre (he resembles his mother)"),
+    'rivolgersi a': ('a', "«rivolgersi a» (turn to / address oneself to) takes 'a': mi rivolgo a te (I'm addressing you). Reflexive"),
+    'abituarsi a': ('a', "«abituarsi a» (get used to) takes 'a': mi sono abituato al freddo (I got used to the cold). Reflexive"),
+    'appartenere a': ('a', "«appartenere a» (belong to) takes 'a': questo libro appartiene a me (this book belongs to me)"),
+    'rinunciare a': ('a', "«rinunciare a» (give up) takes 'a': ha rinunciato al lavoro (he gave up the job)"),
+    'partecipare a': ('a', "«partecipare a» (participate in) takes 'a': partecipo alla riunione (I'm participating in the meeting)"),
+    'assistere a': ('a', "«assistere a» (attend, witness) takes 'a': ho assistito al concerto (I attended the concert). Italian assistere is mostly attendance, not assistance"),
+    'riuscire a': ('a+infinitive', "«riuscire a» (succeed in) takes 'a + infinitive': sono riuscito a finire (I managed to finish)"),
+    'decidersi a': ('a+infinitive', "«decidersi a» (decide to) takes 'a + infinitive': si è deciso a parlare (he decided to speak). Reflexive — distinguish from decidere di (no reflexive)"),
+    'cominciare a': ('a+infinitive', "«cominciare a» (begin to) takes 'a + infinitive': comincia a piovere (it's starting to rain). Same as iniziare a"),
+    'imparare a': ('a+infinitive', "«imparare a» (learn to) takes 'a + infinitive': imparo a nuotare (I'm learning to swim)"),
+    'insegnare a': ('a+infinitive', "«insegnare a» (teach to) takes 'a + infinitive': mi ha insegnato a cucinare (he taught me to cook)"),
+    'aiutare a': ('a+infinitive', "«aiutare a» (help to) takes 'a + infinitive': ti aiuto a studiare (I'll help you study)"),
+    'invitare a': ('a+infinitive', "«invitare a» (invite to) takes 'a + infinitive': mi ha invitato a cena (he invited me to dinner)"),
+    'andare a': ('a+infinitive', "«andare a» (go to do) takes 'a + infinitive': vado a comprare il pane (I'm going to buy bread)"),
+    'venire a': ('a+infinitive', "«venire a» (come to do) takes 'a + infinitive': è venuto a trovarmi (he came to visit me)"),
+    'provare a': ('a+infinitive', "«provare a» (try to) takes 'a + infinitive': prova a capire (try to understand). Distinguish from provare + COD (try a thing)"),
+    'mettersi a': ('a+infinitive', "«mettersi a» (set about doing) takes 'a + infinitive': si è messo a piangere (he started crying). Reflexive — emphasizes onset"),
+    'costringere a': ('a+infinitive', "«costringere a» (force to) takes 'a + infinitive': mi ha costretto a partire (he forced me to leave)"),
+    'parlare di': ('di', "«parlare di» (talk about) takes 'di': parliamo di politica (we're talking about politics). Compare parlare a (speak to) and parlare con (speak with)"),
+    'ricordarsi di': ('di', "«ricordarsi di» (remember) takes 'di': mi ricordo di te (I remember you). Reflexive — also: ricordare + COD without reflexive"),
+    'dimenticarsi di': ('di', "«dimenticarsi di» (forget) takes 'di': mi sono dimenticato dell'appuntamento (I forgot the appointment). Reflexive form"),
+    'rendersi conto di': ('di', "«rendersi conto di» (realize) takes 'di': mi rendo conto dell'errore (I realize the error). Reflexive idiom"),
+    'accorgersi di': ('di', "«accorgersi di» (notice) takes 'di': mi sono accorto del rumore (I noticed the noise). Reflexive"),
+    'fidarsi di': ('di', "«fidarsi di» (trust) takes 'di': mi fido di te (I trust you). Reflexive"),
+    'occuparsi di': ('di', "«occuparsi di» (take care of, deal with) takes 'di': mi occupo dei bambini (I take care of the children). Reflexive"),
+    'lamentarsi di': ('di', "«lamentarsi di» (complain about) takes 'di': si lamenta del lavoro (he complains about work). Reflexive"),
+    'vergognarsi di': ('di', "«vergognarsi di» (be ashamed of) takes 'di': mi vergogno di me stesso (I'm ashamed of myself). Reflexive"),
+    'vantarsi di': ('di', "«vantarsi di» (boast about) takes 'di': si vanta della sua ricchezza (he boasts of his wealth). Reflexive"),
+    'innamorarsi di': ('di', "«innamorarsi di» (fall in love with) takes 'di': si è innamorato di lei (he fell in love with her). Reflexive"),
+    'finire di': ('di+infinitive', "«finire di» (finish doing) takes 'di + infinitive': ho finito di lavorare (I finished working)"),
+    'smettere di': ('di+infinitive', "«smettere di» (stop doing) takes 'di + infinitive': ha smesso di fumare (he stopped smoking)"),
+    'cercare di': ('di+infinitive', "«cercare di» (try to) takes 'di + infinitive': cerco di capire (I try to understand). Distinguish from cercare + COD (look for)"),
+    'decidere di': ('di+infinitive', "«decidere di» (decide to) takes 'di + infinitive': ho deciso di partire (I decided to leave). Mirror of decidersi a (reflexive)"),
+    'sperare di': ('di+infinitive', "«sperare di» (hope to) takes 'di + infinitive': spero di rivederti (I hope to see you again)"),
+    'evitare di': ('di+infinitive', "«evitare di» (avoid doing) takes 'di + infinitive': evito di parlarne (I avoid talking about it)"),
+    'credere di': ('di+infinitive', "«credere di» (believe one is/does) takes 'di + infinitive' for same-subject belief: credo di averlo visto (I believe I saw him)"),
+    'contare su': ('su', "«contare su» (count on) takes 'su': conto su di te (I count on you). Note: 'su di te' with personal pronouns, 'su' alone with nouns"),
+    'riflettere su': ('su', "«riflettere su» (reflect on) takes 'su': rifletto sulla questione (I reflect on the question)"),
+    'scommettere su': ('su', "«scommettere su» (bet on) takes 'su': scommetto su di lui (I bet on him)"),
+    'sperare in': ('in', "«sperare in» (hope for) takes 'in': spero in un cambiamento (I hope for change). Distinct from sperare di + infinitive"),
+    'credere in': ('in', "«credere in» (have faith in) takes 'in': credo in Dio (I believe in God). Mirror of credere a (give credence to)"),
+}
 
 
 def _text(tok: Any) -> str:
