@@ -193,7 +193,7 @@ class RussianPlugin:
             phrase_families="partial",   # 14-family curated catalog; extractor wired
             literary_references="none",
             cultural_references="none",
-            etymology="stub",            # 17-entry catalog; extractor wired
+            etymology="partial",         # 50-entry curated catalog; Proto-Slavic/PIE chains covered
             formality_register="stub",   # formal/informal verb forms detectable
             grammar_nuance="partial",    # aspect/tense/case drilling
             pronunciation_tts="partial", # browser TTS reliable for ru

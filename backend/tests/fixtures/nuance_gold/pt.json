@@ -6,10 +6,31 @@
   "nuance_extractor_class": "PortugueseNuanceExtractor",
   "tokenizer": "spacy",
   "capability_assertions": {
-    "idioms": ["partial", "strong", "gold"],
-    "grammar_nuance": ["partial", "strong", "gold"],
-    "formality_register": ["partial", "strong", "gold"],
-    "phrase_families": ["partial", "strong", "gold"]
+    "idioms": [
+      "partial",
+      "strong",
+      "gold"
+    ],
+    "grammar_nuance": [
+      "partial",
+      "strong",
+      "gold"
+    ],
+    "formality_register": [
+      "partial",
+      "strong",
+      "gold"
+    ],
+    "phrase_families": [
+      "partial",
+      "strong",
+      "gold"
+    ],
+    "etymology": [
+      "partial",
+      "strong",
+      "gold"
+    ]
   },
   "capability_gaps": {},
   "cases": [
@@ -19,14 +40,20 @@
       "text": "No entanto, precisamos de mais tempo para decidir.",
       "note": "Idiom 'no entanto' (however, nevertheless) — discourse connector",
       "pipeline": "plugin",
-      "assert_types_present": ["idiom"],
+      "assert_types_present": [
+        "idiom"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": "no entanto",
       "confidence_ge": 0.85,
       "lesson_data_required_keys": {
-        "idiom": ["phrase", "meaning", "register"]
+        "idiom": [
+          "phrase",
+          "meaning",
+          "register"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -36,14 +63,20 @@
       "text": "Além disso, temos outros problemas para resolver.",
       "note": "Idiom 'além disso' (furthermore, besides) — additive discourse marker",
       "pipeline": "plugin",
-      "assert_types_present": ["idiom"],
+      "assert_types_present": [
+        "idiom"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": "além disso",
       "confidence_ge": 0.85,
       "lesson_data_required_keys": {
-        "idiom": ["phrase", "meaning", "register"]
+        "idiom": [
+          "phrase",
+          "meaning",
+          "register"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -53,14 +86,20 @@
       "text": "Ela é professora e está muito cansada hoje.",
       "note": "Grammar: ser vs estar — permanent identity (é) vs transient state (está)",
       "pipeline": "plugin",
-      "assert_types_present": ["grammar"],
+      "assert_types_present": [
+        "grammar"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": "ser_copula",
       "confidence_ge": 0.8,
       "lesson_data_required_keys": {
-        "grammar": ["pattern_id", "pattern", "usage"]
+        "grammar": [
+          "pattern_id",
+          "pattern",
+          "usage"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -70,14 +109,20 @@
       "text": "Quero que ele venha à reunião amanhã.",
       "note": "Plugin nuance: subjunctive mood after querer + que",
       "pipeline": "plugin",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "subjunctive_mood",
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": 0.7,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "lemma", "note"]
+        "nuance": [
+          "nuance_type",
+          "lemma",
+          "note"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -87,14 +132,20 @@
       "text": "Eu faria isso se tivesse tempo suficiente.",
       "note": "Plugin nuance: conditional mood (faria = fazer conditional) + subjunctive (tivesse = ter subjunctive)",
       "pipeline": "plugin",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "conditional_mood",
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": 0.7,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "lemma", "note"]
+        "nuance": [
+          "nuance_type",
+          "lemma",
+          "note"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -104,14 +155,22 @@
       "text": "Tu falas sempre de teu irmão.",
       "note": "Extractor nuance: tu → voce_tu_register (informal register)",
       "pipeline": "extractor",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "voce_tu_register",
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": 0.8,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+        "nuance": [
+          "nuance_type",
+          "explanation",
+          "register",
+          "learner_level",
+          "source"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -121,14 +180,22 @@
       "text": "Você é muito gentil, obrigado.",
       "note": "Extractor nuance: você → voce_tu_register (formal register in EP, neutral in BP)",
       "pipeline": "extractor",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "voce_tu_register",
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": 0.8,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+        "nuance": [
+          "nuance_type",
+          "explanation",
+          "register",
+          "learner_level",
+          "source"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -138,14 +205,23 @@
       "text": "Ela é médica e está muito cansada hoje.",
       "note": "Extractor nuance: ser (permanent) and estar (transient) both present",
       "pipeline": "both",
-      "assert_types_present": ["grammar", "nuance"],
+      "assert_types_present": [
+        "grammar",
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "ser_estar",
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": 0.8,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+        "nuance": [
+          "nuance_type",
+          "explanation",
+          "register",
+          "learner_level",
+          "source"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -155,14 +231,19 @@
       "text": "A saudade é um sentimento tipicamente português.",
       "note": "Vocabulary: 'saudade' — in DEFAULT_STORE with rich etymology",
       "pipeline": "plugin",
-      "assert_types_present": ["vocabulary"],
+      "assert_types_present": [
+        "vocabulary"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": "saudade",
       "confidence_ge": null,
       "lesson_data_required_keys": {
-        "vocabulary": ["lemma", "pos"]
+        "vocabulary": [
+          "lemma",
+          "pos"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -172,14 +253,26 @@
       "text": "O médico escreve uma receita para o paciente.",
       "note": "Plain sentence: no idiom keywords, no ser/estar/querer patterns, no register pronouns",
       "pipeline": "plugin",
-      "assert_types_present": ["vocabulary"],
-      "assert_types_absent": ["idiom", "grammar"],
+      "assert_types_present": [
+        "vocabulary"
+      ],
+      "assert_types_absent": [
+        "idiom",
+        "grammar"
+      ],
       "assert_nuance_type": null,
-      "assert_nuance_types_absent": ["subjunctive_mood", "conditional_mood", "voce_tu_register"],
+      "assert_nuance_types_absent": [
+        "subjunctive_mood",
+        "conditional_mood",
+        "voce_tu_register"
+      ],
       "assert_canonical_contains": null,
       "confidence_ge": null,
       "lesson_data_required_keys": {
-        "vocabulary": ["lemma", "pos"]
+        "vocabulary": [
+          "lemma",
+          "pos"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -189,14 +282,21 @@
       "text": "Podes dar uma mão a isso?",
       "note": "Extractor: 'dar uma mão' → phrase_family match (pt_dar_uma_mao)",
       "pipeline": "extractor",
-      "assert_types_present": ["phrase_family"],
+      "assert_types_present": [
+        "phrase_family"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": "pt_dar_uma_mao",
       "confidence_ge": 0.8,
       "lesson_data_required_keys": {
-        "phrase_family": ["family_id", "canonical_form", "meaning", "register"]
+        "phrase_family": [
+          "family_id",
+          "canonical_form",
+          "meaning",
+          "register"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -206,14 +306,19 @@
       "text": "O gato dorme tranquilo no sofá.",
       "note": "All vocabulary candidates must carry lemma and pos",
       "pipeline": "plugin",
-      "assert_types_present": ["vocabulary"],
+      "assert_types_present": [
+        "vocabulary"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": null,
       "lesson_data_required_keys": {
-        "vocabulary": ["lemma", "pos"]
+        "vocabulary": [
+          "lemma",
+          "pos"
+        ]
       },
       "no_raw_uuids": true
     }
