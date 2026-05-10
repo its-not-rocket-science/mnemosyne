@@ -190,7 +190,7 @@ class RussianPlugin:
         transliteration_scheme=None,   # no romanisation in this iteration
         nuance_capabilities=NuanceCapabilities(
             idioms="partial",            # curated ~35-entry fixed-expression table
-            phrase_families="stub",      # no phrase catalog yet; extractor wired
+            phrase_families="partial",   # 14-family curated catalog; extractor wired
             literary_references="none",
             cultural_references="none",
             etymology="stub",            # 17-entry catalog; extractor wired

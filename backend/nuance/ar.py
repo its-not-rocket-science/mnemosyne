@@ -64,12 +64,17 @@ class ArabicNuanceExtractor:
     ) -> list[CandidateObject]:
         out: list[CandidateObject] = []
         seen: set[str] = set()
+        out.extend(self._phrase_families(tokens))
         out.extend(self._definite_article(tokens, seen))
         out.extend(self._negation_markers(tokens, seen))
         out.extend(self._root_pattern(candidates, seen))
         out.extend(self._verb_form(candidates, seen))
         out.extend(self._proclitic(candidates, seen))
         return out
+
+    def _phrase_families(self, tokens: list[Any]) -> list[CandidateObject]:
+        from backend.dictionary.phrase_families import match_phrase_families
+        return match_phrase_families([_tok_text(t) for t in tokens], self.language)
 
     def _definite_article(
         self, tokens: list[Any], seen: set[str]

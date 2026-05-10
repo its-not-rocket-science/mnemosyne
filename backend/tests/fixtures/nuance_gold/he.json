@@ -7,7 +7,8 @@
   "tokenizer": "words",
   "capability_assertions": {
     "idioms": ["none"],
-    "grammar_nuance": ["stub"]
+    "grammar_nuance": ["partial", "strong", "gold"],
+    "phrase_families": ["partial", "strong", "gold"]
   },
   "capability_gaps": {},
   "cases": [
@@ -191,6 +192,23 @@
       "confidence_ge": 0.9,
       "lesson_data_required_keys": {
         "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "he_extractor_phrase_family_kol_hakavod",
+      "category": "phrase_family",
+      "text": "כל הכבוד לך על הפרויקט המצוין.",
+      "note": "Extractor: 'כל הכבוד' → phrase_family match (he_kol_hakavod)",
+      "pipeline": "extractor",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "he_kol_hakavod",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register"]
       },
       "no_raw_uuids": true
     }
