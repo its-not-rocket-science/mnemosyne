@@ -281,6 +281,9 @@ class TestLessonData:
             assert c.lesson_data["lemma"] == c.canonical_form
 
     def test_lesson_data_has_confidence_note(self, plugin: ArabicPlugin) -> None:
+        from backend.morphology import ar_adapter as _ar_adapter
+        if _ar_adapter.is_available():
+            pytest.skip("CAMeL Tools active: morphological analysis replaces dictionary-mode fallback note")
         result = plugin.analyze_sentence("الكتاب الجميل")
         for c in result.candidates:
             assert "confidence_note" in c.lesson_data
@@ -288,6 +291,9 @@ class TestLessonData:
             assert isinstance(note, str) and len(note) > 0
 
     def test_confidence_note_mentions_clitic_limitation(self, plugin: ArabicPlugin) -> None:
+        from backend.morphology import ar_adapter as _ar_adapter
+        if _ar_adapter.is_available():
+            pytest.skip("CAMeL Tools active: clitics split via prc0/prc1/prc2; dictionary-mode note no longer applies")
         result = plugin.analyze_sentence("كتاب")
         for c in result.candidates:
             note = c.lesson_data.get("confidence_note", "")
