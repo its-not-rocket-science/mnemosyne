@@ -243,7 +243,12 @@ async def test_translate_endpoint_serves_cached_translation(client, db_session):
         type="vocabulary",
         canonical_form="gato",
         display_label="gato",
-        lesson_data={"translation": "cat", "translation_provider": "mymemory"},
+        lesson_data={
+            "translation": "cat",
+            "translation_provider": "mymemory",
+            "translation_cache_version": 2,
+            "gloss_attempted": True,
+        },
     ))
     await db_session.commit()
 
