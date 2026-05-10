@@ -134,12 +134,12 @@ class ArabicPlugin:
         transliteration_scheme=None,   # no romanisation in this iteration.
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
-            phrase_families="none",
+            phrase_families="partial",  # 10-family curated catalog; extractor wired
             literary_references="none",
             cultural_references="none",
             etymology="none",
             formality_register="none",
-            grammar_nuance="stub",      # definite_article + negation always; root/verb with CAMeL
+            grammar_nuance="partial",   # definite_article + 5 negation particles always; root/verb/proclitic with CAMeL
             pronunciation_tts="stub",   # ar TTS coverage varies by browser
             transliteration="none",
             proverb_tradition="none",

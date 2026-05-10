@@ -26,11 +26,11 @@ table from live plugin declarations.
 | es (Spanish) | partial | **partial** | **partial** | partial | stub | partial | none | none | **26** |
 | fr (French) | partial | **partial** | **partial** | partial | **partial** | partial | none | none | **15** |
 | de (German) | partial | **partial** | **partial** | partial | stub | partial | none | none | **24** |
-| it (Italian) | partial | stub | **stub** | partial | **partial** | partial | none | none | **10** |
-| pt (Portuguese) | partial | stub | **stub** | partial | **partial** | partial | none | none | **11** |
-| ru (Russian) | partial | stub | **stub** | partial | stub | partial | none | none | **8** |
-| ar (Arabic) | none | none | none | none | none | stub | none | none | 6 |
-| he (Hebrew) | none | none | none | none | none | stub | none | none | 6 |
+| it (Italian) | partial | **partial** | **stub** | partial | **partial** | partial | none | none | **11** |
+| pt (Portuguese) | partial | **partial** | **stub** | partial | **partial** | partial | none | none | **12** |
+| ru (Russian) | partial | **partial** | **stub** | partial | stub | partial | none | none | **9** |
+| ar (Arabic) | none | **partial** | none | **partial** | none | stub | none | none | **13** |
+| he (Hebrew) | none | **partial** | none | **partial** | none | stub | none | none | **13** |
 | zh (Chinese) | none | none | none | none | none | partial | partial | none | 8 |
 | ja (Japanese) | none | none | none | stub | none | partial | stub | none | 7 |
 | la (Latin) | none | none | none | none | none | stub | none | none | 7 |
@@ -76,13 +76,13 @@ candidates independently.  No extractor is registered for `en`, `it`, or `pt`.
 | es | ser/estar distinction · por/para contrast · subjunctive mood triggers · diminutive suffixes (-ito/-ita) · **etymology (16 lemmas)** · **phrase families (15 families)** |
 | fr | tu/vous register · *ne* explétif · subjunctive mood · liaison triggers · **etymology (52 lemmas)** · **phrase families (20 families)** |
 | de | modal particles (doch, mal, ja, eigentlich, wohl, …) · separable-verb prefixes · Wechselpräpositionen · **etymology (20 lemmas)** · **phrase families (15 families)** |
-| it | Lei/tu register · essere/avere auxiliary · subjunctive triggers · diminutives (-ino/-etta/-ello) · **etymology (19 lemmas)** |
-| pt | você/tu register · ser/estar distinction · subjunctive triggers · diminutives (-inho/-zinho) · personal infinitive · **etymology (18 lemmas)** |
-| ru | motion-verb direction (идти vs ходить) · verbal government (любить + acc, etc.) · **etymology (17 lemmas)** |
+| it | Lei/tu register · essere/avere auxiliary · subjunctive triggers · diminutives (-ino/-etta/-ello) · **etymology (19 lemmas)** · **phrase families (15 families)** |
+| pt | você/tu register · ser/estar distinction · subjunctive triggers · diminutives (-inho/-zinho) · personal infinitive · **etymology (18 lemmas)** · **phrase families (13 families)** |
+| ru | motion-verb direction (идти vs ходить) · verbal government (любить + acc, etc.) · **etymology (17 lemmas)** · **phrase families (14 families)** |
 | zh | aspect particles (了 le · 过 guò · 着 zhe) · measure words (量词) · chengyu (4-char idioms) |
 | ja | keigo types (sonkeigo · kenjogo · teineigo) · case particles (は · が · を · に · で · から · まで …) · yojijukugo (4-char set phrases) |
-| ar | definite article ال · negation markers (لا · لم · لن · ما · ليس) · root-pattern annotation (when candidate carries root metadata) |
-| he | definite prefix ה- · waw conjunction ו- · binyan annotation (when candidate carries binyan metadata) · biblical register (cantillation marks) |
+| ar | **phrase families (10 families)** · definite article ال · negation markers (لا · لم · لن · ما · ليس) · root-pattern annotation (when candidate carries root metadata) |
+| he | **phrase families (10 families)** · definite prefix ה- · waw conjunction ו- · prefix decomposition (ב- ל- כ- מ- ש-) · binyan annotation (when candidate carries binyan metadata) · biblical register (cantillation marks) |
 | la | discourse particles (autem · igitur · ergo · tamen · enim · sed · nam · …) · enclitic -que · classical register (macrons in sentence) |
 | grc | discourse particles (δέ · γάρ · οὖν · μέν · ἀλλά · …) · οὐ/μή negation distinction · definite article forms |
 
@@ -109,7 +109,7 @@ classifiers or embedding-based detectors in the current codebase.
 - No etymology data beyond Spanish, French, German, Italian, Portuguese, and Russian.
 - No literary/cultural references: `literary_references`, `cultural_references`,
   `proverb_tradition`, and `classical_or_scriptural_allusion` are all `none`.
-- Phrase families `stub` for Italian, Portuguese, Russian; `partial` for Spanish, French, and German.
+- Phrase families `partial` for all 8 languages with extractors (15/20/15/15/13/14/10/10 families for ES/FR/DE/IT/PT/RU/AR/HE respectively).
 
 ### English
 - `EnglishStubPlugin` is a scaffold.  Idiom detection is heuristic and fires
@@ -150,9 +150,11 @@ classifiers or embedding-based detectors in the current codebase.
 
 ### Hebrew
 - Dictionary-mode plugin; no morphological analysis.  Binyan nuance fires only
-  when a candidate carries `binyan` metadata.
-- Inseparable preposition prefixes (ב-, ל-, כ-, מ-, ש-) are stripped for
-  dictionary lookup but the stripping is not exposed as a nuance signal.
+  when a candidate carries `binyan` metadata (requires HebSpaCy).
+- Inseparable preposition prefixes (ב-, ל-, כ-, מ-, ש-) are stripped heuristically
+  and exposed as `prefix_decomposition` nuance signals via the extractor.
+- Heuristic prefix stripping has false positives for short words and some
+  complete words that begin with a prefix letter (e.g., שלום, כי).
 
 ### Chinese
 - chengyu detection requires jieba segmentation; character-level tokenization
@@ -329,7 +331,7 @@ Each fixture covers:
 | False positive | Named nuance types absent from plain control sentences |
 | Capability | `plugin.capabilities.nuance_capabilities.<dim>` in declared allowed set |
 
-Total: **~202 parametrized test cases** across 13 languages (as of 2026-05-09).
+Total: **~222 parametrized test cases** across 13 languages (as of 2026-05-10).
 
 | Language | Cases | Capability assertions |
 |----------|-------|-----------------------|
@@ -337,11 +339,11 @@ Total: **~202 parametrized test cases** across 13 languages (as of 2026-05-09).
 | es | 26 | 5 |
 | fr | 9 | 3 |
 | de | 24 | 5 |
-| it | 8 | 3 |
-| pt | 8 | 3 |
-| ru | 8 | 3 |
-| ar | 6 | 2 |
-| he | 6 | 2 |
+| it | 11 | 4 |
+| pt | 12 | 4 |
+| ru | 9 | 4 |
+| ar | 12 | 3 |
+| he | 12 | 3 |
 | zh | 8 | 2 |
 | ja | 7 | 3 |
 | la | 7 | 2 |
@@ -353,39 +355,33 @@ Total: **~202 parametrized test cases** across 13 languages (as of 2026-05-09).
 
 Priority order based on pedagogical impact vs implementation cost:
 
-1. **it / pt nuance extractors** — Italian and Portuguese have full spaCy
-   pipelines but no registered extractor.  Minimum viable: ser/estar (pt),
-   essere copula (it), subjunctive triggers (both), register (Lei/você).
-   Etymology and phrase-family infrastructure already exists; just needs
-   curated data and a registered extractor class.
-
-2. **Etymology store expansion** — Spanish, French, and German have ~16, ~52, and ~20 entries
+1. **Etymology store expansion** — Spanish, French, and German have ~16, ~52, and ~20 entries
    respectively.  Expanding each to 100 high-frequency lemmas (with cross-language cognate
    chains) would bring all three to `strong`.
-   Italian, Portuguese, and Russian have zero entries; a 20-lemma starter per language
-   would bring each to `stub`.
+   Italian (19), Portuguese (18), and Russian (17) are at `stub`; expanding to 50+ would
+   reach `partial`.
 
-3. **Phrase family catalog expansion** — Spanish, French, and German now have 15, 20, and 15
-   families each (`partial`).  Expanding to 50+ would approach `strong`.
-   Italian, Portuguese, and Russian declare `stub`; a 15-family starter each would upgrade
-   all three to `partial`.
+2. **Phrase family catalog expansion** — all 8 active-extractor languages now at `partial`
+   (15/20/15/15/13/14/10/10 for ES/FR/DE/IT/PT/RU/AR/HE).  Expanding each to 50+
+   families would approach `strong`.
 
-4. **ar / he morphological upgrade** — replace dictionary-mode plugins with
-   Stanza or Camel-Tools (Arabic) and YAP/HebSpacy (Hebrew).  Unlocks
-   grammar\_nuance, formality\_register, and root/binyan signals.
+3. **ar / he morphological upgrade** — install CAMeL Tools (Arabic) and HebSpaCy (Hebrew)
+   to unlock root-pattern, verb-form, proclitic (AR) and binyan, verb-template (HE) signals.
+   The adapter code and extractor methods are already in place; this is a deployment step.
+   Grammar\_nuance would advance from `partial` to `strong` for both languages.
 
-5. **ja yojijukugo** — extractor detects them but spaCy splits all common
+4. **ja yojijukugo** — extractor detects them but spaCy splits all common
    4-char compounds.  Workaround: pre-scan sentence for dictionary matches
    before passing to spaCy, or use `custom_tokenizer` to protect compounds.
 
-6. **ru verbal government** — current table has ~10 verbs.  Expanding to
+5. **ru verbal government** — current table has ~10 verbs.  Expanding to
    100+ high-frequency verbs would meaningfully improve grammar\_nuance
    quality; partner with a Russian valency lexicon (RuVallex).
 
-7. **proverb\_tradition** — no language has this.  A curated 20-proverb
+6. **proverb\_tradition** — no language has this.  A curated 20-proverb
    starter for each language is achievable without tooling changes.
 
-8. **classical\_or\_scriptural\_allusion for la / grc** — both plugins are
+7. **classical\_or\_scriptural\_allusion for la / grc** — both plugins are
    scaffold-only but the extractor infrastructure exists.  A 50-phrase NT
    Greek / Ciceronian Latin allusion table would bring grc to `partial`
    and la to `stub`.

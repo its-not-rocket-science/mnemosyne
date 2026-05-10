@@ -280,7 +280,7 @@ class ItalianPlugin:
         mood_pool=["indicative", "subjunctive", "conditional", "imperative"],
         nuance_capabilities=NuanceCapabilities(
             idioms="partial",            # curated ~30-entry fixed-expression table
-            phrase_families="stub",      # no phrase catalog yet; extractor wired
+            phrase_families="partial",   # 15-family curated catalog; extractor wired
             literary_references="none",
             cultural_references="none",
             etymology="stub",            # 20-entry catalog; extractor wired

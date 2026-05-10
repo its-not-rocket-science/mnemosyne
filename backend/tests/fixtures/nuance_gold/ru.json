@@ -8,7 +8,8 @@
   "capability_assertions": {
     "idioms": ["partial", "strong", "gold"],
     "grammar_nuance": ["partial", "strong", "gold"],
-    "formality_register": ["stub", "partial"]
+    "formality_register": ["stub", "partial"],
+    "phrase_families": ["partial", "strong", "gold"]
   },
   "capability_gaps": {},
   "cases": [
@@ -128,6 +129,23 @@
       "confidence_ge": null,
       "lesson_data_required_keys": {
         "vocabulary": ["lemma", "pos"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "ru_extractor_phrase_family_lomat_golovu",
+      "category": "phrase_family",
+      "text": "Не стоит ломать голову над этой задачей.",
+      "note": "Extractor: 'ломать голову' → phrase_family match (ru_lomat_golovu)",
+      "pipeline": "extractor",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "ru_lomat_golovu",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register"]
       },
       "no_raw_uuids": true
     },
