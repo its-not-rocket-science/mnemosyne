@@ -13,6 +13,9 @@ _NIKUD_RE = re.compile(
 
 _HEBREW_CONSONANTS = frozenset("אבגדהוזחטיכלמנסעפצקרשת")
 
+# Verbal government — populate via gen_verbal_government.py.
+_VERBAL_GOV: dict[str, tuple[str, str]] = {}
+
 
 def _strip(s: str) -> str:
     return _NIKUD_RE.sub("", s)
@@ -20,6 +23,10 @@ def _strip(s: str) -> str:
 
 def _tok_text(tok: Any) -> str:
     return tok.text if hasattr(tok, "text") else str(tok)
+
+
+def _lemma(c: CandidateObject) -> str:
+    return c.lesson_data.get("lemma", c.canonical_form)
 
 
 class HebrewNuanceExtractor:
@@ -40,7 +47,52 @@ class HebrewNuanceExtractor:
         out.extend(self._prefix_decomposition(candidates, seen))
         out.extend(self._binyan_note(candidates, seen))
         out.extend(self._verb_template(candidates, seen))
+        out.extend(self._verbal_government(candidates, seen))
         out.extend(self._biblical_register(sentence, seen))
+        return out
+
+    def _verbal_government(
+        self, candidates: list[CandidateObject], seen: set[str]
+    ) -> list[CandidateObject]:
+        out = []
+        for c in candidates:
+            if c.type not in ("vocabulary", "conjugation"):
+                continue
+            lemma = _lemma(c)
+            if lemma not in _VERBAL_GOV:
+                continue
+            required_case, example = _VERBAL_GOV[lemma]
+            cf = f"nuance:he:verbal_government:{lemma}"
+            if cf in seen:
+                continue
+            seen.add(cf)
+            out.append(CandidateObject(
+                canonical_form=cf,
+                surface_form=c.surface_form,
+                type="nuance",
+                label=c.label,
+                lesson_data={
+                    "nuance_type": "verbal_government",
+                    "explanation": (
+                        f"{example}. "
+                        "Hebrew verbs often select a specific preposition (ב, ל, על, מ, …) — "
+                        "the prepositions are inflected for pronoun objects (לי, לך, לו) "
+                        "and the choice is lexically tied to the verb. Required structure: "
+                        f"{required_case}."
+                    ),
+                    "register": "neutral",
+                    "learner_level": "B1",
+                    "source": "heuristic",
+                    "lemma": lemma,
+                    "required_case": required_case,
+                },
+                confidence=0.85,
+                relation_hints=[RelationHint(
+                    relation_type="nuance_of",
+                    target_canonical_form=lemma,
+                    target_type="vocabulary",
+                )],
+            ))
         return out
 
     def _phrase_families(self, tokens: list[Any]) -> list[CandidateObject]:

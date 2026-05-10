@@ -71,6 +71,15 @@ def _text(tok: Any) -> str:
     return tok.text if hasattr(tok, "text") else str(tok)
 
 
+def _lemma(c: CandidateObject) -> str:
+    return c.lesson_data.get("lemma", c.canonical_form)
+
+
+# Verbal government — verb + coverb/preposition pairs. Populate via
+# gen_verbal_government.py.
+_VERBAL_GOV: dict[str, tuple[str, str]] = {}
+
+
 class ChineseNuanceExtractor:
     language = "zh"
 
@@ -85,7 +94,52 @@ class ChineseNuanceExtractor:
         seen: set[str] = set()
         out.extend(self._aspect_particles(tokens, seen))
         out.extend(self._measure_words(tokens, seen))
+        out.extend(self._verbal_government(candidates, seen))
         out.extend(self._chengyu(tokens, seen))
+        return out
+
+    def _verbal_government(
+        self, candidates: list[CandidateObject], seen: set[str]
+    ) -> list[CandidateObject]:
+        out = []
+        for c in candidates:
+            if c.type not in ("vocabulary", "conjugation"):
+                continue
+            lemma = _lemma(c)
+            if lemma not in _VERBAL_GOV:
+                continue
+            required_case, example = _VERBAL_GOV[lemma]
+            cf = f"nuance:zh:verbal_government:{lemma}"
+            if cf in seen:
+                continue
+            seen.add(cf)
+            out.append(CandidateObject(
+                canonical_form=cf,
+                surface_form=c.surface_form,
+                type="nuance",
+                label=c.label,
+                lesson_data={
+                    "nuance_type": "verbal_government",
+                    "explanation": (
+                        f"{example}. "
+                        "Chinese verbs combine with coverbs (prepositional verbs: 给 gěi, 对 duì, "
+                        "跟 gēn, 在 zài, 从 cóng, 到 dào, 把 bǎ, 被 bèi) to mark the role "
+                        "of arguments. The 把-construction fronts the affected object; the "
+                        f"被-construction marks passive. Required structure: {required_case}."
+                    ),
+                    "register": "neutral",
+                    "learner_level": "B1",
+                    "source": "heuristic",
+                    "lemma": lemma,
+                    "required_case": required_case,
+                },
+                confidence=0.85,
+                relation_hints=[RelationHint(
+                    relation_type="nuance_of",
+                    target_canonical_form=lemma,
+                    target_type="vocabulary",
+                )],
+            ))
         return out
 
     def _aspect_particles(
