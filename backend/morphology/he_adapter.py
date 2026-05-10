@@ -9,9 +9,9 @@ the fallback applies heuristic inseparable-prefix stripping to populate
 the `prefix` field.  This is sufficient for the prefix_decomposition
 nuance signal in backend.nuance.he.
 
-Installation (optional):
-    pip install heb-spacy
-    python -m spacy download he_dep_ud_hybrid
+Installation (optional — install the he_dep_ud_hybrid spaCy model by whatever
+distribution the Hebrew NLP community provides; the adapter gates solely on
+whether spacy.load("he_dep_ud_hybrid") succeeds):
 
 Inseparable Hebrew prefixes handled by the fallback:
     Single-char  ב (be-), ו (ve-), ה (ha-), ל (le-), כ (ke-), מ (me-), ש (she-)
@@ -35,12 +35,11 @@ from dataclasses import dataclass
 from typing import Any
 
 try:
-    import heb_spacy as _heb_spacy_mod    # noqa: F401 — import confirms package present
     import spacy as _spacy_mod
-    _HEBSPACY_MODULE_AVAILABLE = True
+    _SPACY_AVAILABLE = True
 except ImportError:
-    _spacy_mod = None                     # type: ignore[assignment]
-    _HEBSPACY_MODULE_AVAILABLE = False
+    _spacy_mod = None   # type: ignore[assignment]
+    _SPACY_AVAILABLE = False
 
 _SENTINEL = object()
 _nlp: Any = _SENTINEL   # module-level singleton; _SENTINEL = not yet attempted
@@ -91,7 +90,7 @@ def _extract_prefix(token: str) -> tuple[str, str]:
 
 
 def _try_load_nlp() -> Any:
-    if not _HEBSPACY_MODULE_AVAILABLE:
+    if not _SPACY_AVAILABLE:
         return None
     try:
         return _spacy_mod.load("he_dep_ud_hybrid")
