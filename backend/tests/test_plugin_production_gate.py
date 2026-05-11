@@ -55,8 +55,8 @@ def test_test_plugins_present_in_debug():
 def test_real_plugins_still_load_in_production():
     reg = _registry(debug=False)
     codes = reg.all().keys()
-    # English stub is always available, no model download needed.
-    assert "en" in codes, "EnglishStubPlugin should load in production"
+    # English plugin is always available, no model download needed.
+    assert "en" in codes, "EnglishPlugin should load in production"
 
 
 # ── Direct instantiation unaffected ──────────────────────────────────────────

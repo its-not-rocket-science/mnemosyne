@@ -6,7 +6,7 @@ a live PostgreSQL or Redis instance.
 
 Language convention
 ───────────────────
-  "en" (EnglishStubPlugin) — always available, no model download needed.
+  "en" (EnglishPlugin) — always available, no model download needed.
        Used for tests that exercise route behaviour, not language extraction.
   "es" (SpanishPlugin)      — requires es_core_news_sm.  Only used where
        the test is specifically about the Spanish extraction pipeline.

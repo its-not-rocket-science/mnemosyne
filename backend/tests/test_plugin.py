@@ -127,18 +127,18 @@ class TestPluginRegistry:
         assert caps.tts_lang_tag == "es"
         assert caps.transliteration_scheme is None
 
-    def test_english_stub_capabilities_no_morphology(self) -> None:
+    def test_english_capabilities_no_morphology(self) -> None:
         registry = load_plugins()
         caps = registry.supported_languages()["en"]
-        assert caps.morphology_depth == "none"
-        assert caps.lesson_modes_supported == ["vocabulary"]
+        assert caps.morphology_depth == "rich"
+        assert "morphology" in caps.lesson_modes_supported
 
-    def test_english_stub_capabilities_v2_fields(self) -> None:
+    def test_english_capabilities_v2_fields(self) -> None:
         registry = load_plugins()
         caps = registry.supported_languages()["en"]
-        assert caps.analysis_depth == "dictionary"
-        assert caps.morphology_quality == "none"
-        assert caps.syntax_support is False
+        assert caps.analysis_depth == "full"
+        assert caps.morphology_quality == "medium"
+        assert caps.syntax_support is True
         assert caps.tts_lang_tag == "en"
 
     def test_french_capabilities_morphology(self) -> None:
