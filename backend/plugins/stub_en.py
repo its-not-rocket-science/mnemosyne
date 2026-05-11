@@ -19,11 +19,11 @@ _WORD_RE = re.compile(r"[A-Za-z']+")
 
 class EnglishStubPlugin:
     language_code = "en"
-    display_name  = "English (stub)"
+    display_name  = "English"
     direction     = "ltr"
     capabilities  = LanguageCapabilities(
         code="en",
-        display_name="English (stub)",
+        display_name="English",
         direction="ltr",
         script_family="latin",
         tokenization_mode="whitespace",
@@ -39,8 +39,8 @@ class EnglishStubPlugin:
         tts_lang_tag="en",
         transliteration_scheme=None,
         nuance_capabilities=NuanceCapabilities(
-            idioms="stub",
-            phrase_families="stub",
+            idioms="partial",
+            phrase_families="partial",
             literary_references="none",
             cultural_references="none",
             etymology="none",
