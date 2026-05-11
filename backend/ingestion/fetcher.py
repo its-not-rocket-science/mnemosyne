@@ -169,13 +169,15 @@ def _extract(html: str, url: str) -> FetchResult:
         tag.decompose()
 
     # ── Locate the primary content region ────────────────────────────────────
-    content_root: Tag | None = None
+    selector_candidates: list[Tag] = []
     for selector in _CONTENT_SELECTORS:
-        content_root = soup.select_one(selector)
-        if content_root:
-            break
-    if content_root is None:
-        content_root = _best_content_block(soup) or soup.body or soup
+        node = soup.select_one(selector)
+        if node:
+            selector_candidates.append(node)
+
+    best_overall = _best_content_block(soup)
+    ranked_candidates = [*selector_candidates, *( [best_overall] if best_overall else [])]
+    content_root = max(ranked_candidates, key=_node_content_score, default=None) or soup.body or soup
 
     # ── Extract and normalise plain text ─────────────────────────────────────
     text = _extract_readable_text(content_root)
@@ -193,14 +195,35 @@ def _best_content_block(soup: BeautifulSoup) -> Tag | None:
 
     best: tuple[float, Tag] | None = None
     for node in candidates:
-        p_count = len(node.find_all("p"))
-        text_len = len(node.get_text(" ", strip=True))
-        link_len = len(" ".join(a.get_text(" ", strip=True) for a in node.find_all("a")))
-        density = link_len / max(text_len, 1)
-        score = (p_count * 40) + text_len - (density * 500)
+        score = _node_content_score(node)
         if best is None or score > best[0]:
             best = (score, node)
     return best[1] if best else None
+
+
+def _node_content_score(node: Tag) -> float:
+    p_count = len(node.find_all("p"))
+    text_len = len(node.get_text(" ", strip=True))
+    link_len = len(" ".join(a.get_text(" ", strip=True) for a in node.find_all("a")))
+    density = link_len / max(text_len, 1)
+    score = (p_count * 40) + text_len - (density * 500)
+    if _looks_like_footnotes(node):
+        score -= 2000
+    return score
+
+
+def _looks_like_footnotes(node: Tag) -> bool:
+    attrs = " ".join(
+        str(x).lower()
+        for x in [node.get("id", ""), " ".join(node.get("class", []))]
+        if x
+    )
+    if any(k in attrs for k in ("footnote", "notes", "endnote")):
+        return True
+    headings = " ".join(
+        h.get_text(" ", strip=True).lower() for h in node.find_all(["h1", "h2", "h3"], limit=3)
+    )
+    return "footnote" in headings or "notes" == headings.strip()
 
 
 def _extract_readable_text(node: Tag) -> str:
