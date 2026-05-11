@@ -55,6 +55,7 @@ const pickerUseBtn      = document.querySelector('#picker-use-btn')
 const pickerStatus      = document.querySelector('#picker-status')
 const pickerCloseBtn    = document.querySelector('#picker-close-btn')
 const pickerSampleBtn   = document.querySelector('#picker-sample-btn')
+const pickerSampleLanguageSelect = document.querySelector('#picker-sample-language')
 const pickerCharCount   = document.querySelector('#picker-char-count')
 
 // Save-lesson dialog
@@ -287,6 +288,7 @@ async function loadLanguages() {
   }
 
   syncCurrentCaps()
+  populateSampleLanguageSelect()
   refreshLoadLessonBtn()
   if (_dlAnnotation) _openDeepLink()
 }
@@ -313,6 +315,7 @@ languageSelect.addEventListener('change', () => {
   languageUserSelected = true
   scriptView = 'native'
   syncCurrentCaps()
+  populateSampleLanguageSelect()
   refreshLoadLessonBtn()
 })
 
@@ -451,13 +454,55 @@ const SAMPLE_TEXTS = {
   zh: '那个清晨，阳光透过窗帘照进来，照在书桌上那叠厚厚的书上。他拿起最上面的一本，翻到折角的那一页，继续昨晚没有读完的故事。',
 }
 
+const EXCLUDED_SAMPLE_LANGUAGES = new Set(['x-cjk-test', 'x-rtl-test'])
+
+function populateSampleLanguageSelect() {
+  if (!pickerSampleLanguageSelect) return
+  const activeLang = pickerSampleLanguageSelect.value || languageSelect.value || 'es'
+  const options = [...languageSelect.options]
+    .filter((opt) => opt.value && !EXCLUDED_SAMPLE_LANGUAGES.has(opt.value))
+
+  pickerSampleLanguageSelect.replaceChildren(
+    ...options.map((opt) => {
+      const sampleOption = document.createElement('option')
+      sampleOption.value = opt.value
+      sampleOption.textContent = opt.textContent
+      return sampleOption
+    })
+  )
+
+  pickerSampleLanguageSelect.value = options.some((opt) => opt.value === activeLang)
+    ? activeLang
+    : (options[0]?.value ?? 'es')
+}
+
 pickerSampleBtn?.addEventListener('click', () => {
-  const lang = languageSelect.value
-  const sample = SAMPLE_TEXTS[lang] ?? SAMPLE_TEXTS['es']
+  const selectedSampleLang = pickerSampleLanguageSelect?.value || languageSelect.value
+  const fallbackLang = languageSelect.value || 'es'
+  const sample = SAMPLE_TEXTS[selectedSampleLang] ?? SAMPLE_TEXTS[fallbackLang] ?? SAMPLE_TEXTS.es
+
+  if (!SAMPLE_TEXTS[selectedSampleLang]) {
+    const fallbackLabel = languageSelect?.options[languageSelect.selectedIndex]?.text || fallbackLang
+    setPickerStatus(ti('sample_missing_fallback', { language: fallbackLabel }))
+  } else {
+    setPickerStatus('')
+  }
+
   if (pickerTextarea) {
     pickerTextarea.value = sample
     pickerTextarea.dispatchEvent(new Event('input'))
     pickerTextarea.focus()
+  }
+  if (languageSelect && selectedSampleLang) {
+    languageSelect.value = selectedSampleLang
+    languageSelect.dispatchEvent(new Event('change'))
+  }
+})
+
+pickerSampleLanguageSelect?.addEventListener('change', () => {
+  if (pickerSampleLanguageSelect?.value) {
+    languageSelect.value = pickerSampleLanguageSelect.value
+    languageSelect.dispatchEvent(new Event('change'))
   }
 })
 
