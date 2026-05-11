@@ -201,6 +201,32 @@ class TestHtmlExtraction:
         assert "Project Gutenberg License" not in result.text
         assert "End of the Project Gutenberg eBook" not in result.text
 
+    def test_gutenberg_fragment_does_not_select_footnotes_only(self):
+        html = """
+        <html><body>
+          <div id="content" class="footnotes">
+            <h2>FOOTNOTES</h2>
+            <p>[1] This is a footnote.</p>
+            <p>[2] This is another footnote.</p>
+          </div>
+          <div id="main-content">
+            <p>*** START OF THE PROJECT GUTENBERG EBOOK NOTRE-DAME DE PARIS ***</p>
+            <h2>LIVRE PREMIER</h2>
+            <p>Il y a aujourd'hui trois cent quarante-huit ans six mois et dix-neuf jours.</p>
+            <p>Il y avait alors dans le parvis de Notre-Dame.</p>
+            <p>*** END OF THE PROJECT GUTENBERG EBOOK NOTRE-DAME DE PARIS ***</p>
+          </div>
+        </body></html>
+        """
+        result = _extract(
+            html,
+            "https://www.gutenberg.org/files/19657/19657-h/19657-h.htm#I",
+        )
+        assert "LIVRE PREMIER" in result.text
+        assert "Il y a aujourd'hui trois cent quarante-huit ans" in result.text
+        assert "[1] This is a footnote." not in result.text
+        assert "[2] This is another footnote." not in result.text
+
     def test_article_like_layout_skips_nav_and_ads(self):
         html = """
         <html><body>
