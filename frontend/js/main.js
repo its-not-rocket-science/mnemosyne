@@ -466,33 +466,27 @@ pickerFileInput?.addEventListener('change', () => {
   const file = pickerFileInput.files?.[0]
   if (!file) return
 
-  const isPlainText = file.type === 'text/plain' || file.name.endsWith('.txt')
-  if (!isPlainText) {
-    setPickerStatus(t('file_type_error'), 'error')
-    pickerFileInput.value = ''
-    return
-  }
+  pickerFileInput.setAttribute('accept', ACCEPT_ATTRIBUTE)
   if (file.size > MAX_FILE_BYTES) {
     setPickerStatus(ti('file_too_large', { kb: (file.size / 1024).toFixed(0) }), 'error')
     pickerFileInput.value = ''
     return
   }
 
-  const reader = new FileReader()
-  reader.onload = evt => {
-    pickerTextarea.value = evt.target.result
+  extractTextFromFile(file).then(text => {
+    pickerTextarea.value = text
     currentContentType   = 'uploaded_file'
     currentFilename      = file.name
     languageUserSelected = false
     setPickerStatus(`Loaded: ${escapeHtml(file.name)} (${(file.size / 1024).toFixed(1)} KB)`)
     scheduleLanguageDetection()
-  }
-  reader.onerror = () => {
-    setPickerStatus(t('file_read_error'), 'error')
+  }).catch(error => {
+    const key = error instanceof Error ? error.message : 'file_read_error'
+    const translatable = ['unsupported_file_type', 'encrypted_pdf', 'corrupt_file', 'no_extractable_text', 'file_read_error']
+    setPickerStatus(t(translatable.includes(key) ? key : 'file_read_error'), 'error')
     currentContentType = 'pasted_text'
     currentFilename    = null
-  }
-  reader.readAsText(file, 'utf-8')
+  })
 })
 
 // URL fetch inside picker
