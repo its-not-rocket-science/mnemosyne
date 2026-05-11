@@ -453,7 +453,14 @@ select {
 }
 
 textarea {
+  box-sizing: border-box;
   resize: vertical;
+}
+
+#picker-text {
+  overflow: auto;
+  scrollbar-gutter: stable;
+  padding-inline-end: calc(0.75rem + 0.25rem);
 }
 
 /* Highlight the invalid state visually and for AT (aria-invalid="true" set
