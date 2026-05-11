@@ -110,11 +110,11 @@ class ArabicPlugin:
     """
 
     language_code = "ar"
-    display_name  = "Arabic (starter — dictionary mode)"
+    display_name  = "Arabic (dictionary foundations)"
     direction     = "rtl"
     capabilities  = LanguageCapabilities(
         code="ar",
-        display_name="Arabic (starter — dictionary mode)",
+        display_name="Arabic (dictionary foundations)",
         direction="rtl",
         script_family="arabic",
         tokenization_mode="whitespace",
