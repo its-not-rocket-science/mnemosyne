@@ -177,6 +177,32 @@ async def test_create_job_413_when_too_long(client):
 
 
 @pytest.mark.asyncio
+async def test_create_job_202_at_exact_limit(client):
+    from backend.core.config import get_settings
+    app.dependency_overrides[get_settings] = lambda: _tiny_settings(max_job_chars=10)
+    try:
+        resp = await client.post(
+            "/parse/jobs",
+            json={"language": "es", "text": "x" * 10},
+        )
+    finally:
+        del app.dependency_overrides[get_settings]
+    assert resp.status_code == 202
+
+
+@pytest.mark.asyncio
+async def test_parse_limits_uses_settings(client):
+    from backend.core.config import get_settings
+    app.dependency_overrides[get_settings] = lambda: _tiny_settings(max_parse_chars=12, max_job_chars=34)
+    try:
+        resp = await client.get("/parse/limits")
+    finally:
+        del app.dependency_overrides[get_settings]
+    assert resp.status_code == 200
+    assert resp.json() == {"max_parse_chars": 12, "max_job_chars": 34}
+
+
+@pytest.mark.asyncio
 async def test_create_job_404_unknown_language(client):
     resp = await client.post(
         "/parse/jobs",

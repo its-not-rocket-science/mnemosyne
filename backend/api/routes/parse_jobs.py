@@ -50,6 +50,15 @@ router = APIRouter(tags=["parse"])
 _SSE_PING_INTERVAL = 20
 
 
+@router.get("/parse/limits")
+async def parse_limits(settings: Settings = Depends(get_settings)) -> dict[str, int]:
+    """Expose parse character limits for frontend validation."""
+    return {
+        "max_parse_chars": settings.max_parse_chars,
+        "max_job_chars": settings.max_job_chars,
+    }
+
+
 # ── POST /parse/jobs ──────────────────────────────────────────────────────────
 
 @router.post("/parse/jobs", response_model=ParseJobCreated, status_code=202)
