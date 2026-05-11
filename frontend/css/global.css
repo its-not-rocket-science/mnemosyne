@@ -507,6 +507,16 @@ textarea[aria-invalid="true"] {
   min-block-size: unset;
 }
 
+.ghost-select--small {
+  font-size: 0.8125rem;
+  padding: 0.3rem 0.4rem;
+  min-block-size: 2rem;
+}
+
+.picker-sample-language-label {
+  font-size: 0.8125rem;
+}
+
 /* File-pick button — styled like a quiet secondary action.
    It wraps a visually-hidden <input type="file"> so clicking the label
    opens the OS file picker.  min-block-size ensures the 44 px touch target
