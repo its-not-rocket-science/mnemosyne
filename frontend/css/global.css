@@ -480,7 +480,7 @@ textarea[aria-invalid="true"] {
   justify-content: space-between;
   gap: var(--space-2);
   flex-wrap: wrap;
-  margin-block-end: 0.25rem;
+  margin-block-end: 0.6rem;
 }
 
 /* Suppress the default label block display inside the flex container. */
@@ -492,6 +492,13 @@ textarea[aria-invalid="true"] {
   display: flex;
   align-items: center;
   gap: var(--space-2);
+  row-gap: var(--space-1);
+}
+
+@media (max-width: 40rem) {
+  .field-header-actions {
+    inline-size: 100%;
+  }
 }
 
 .ghost-button--small {
