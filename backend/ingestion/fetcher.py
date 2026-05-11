@@ -27,6 +27,7 @@ from urllib.parse import urlparse
 import httpx
 from bs4 import BeautifulSoup
 from bs4.element import Tag
+from bs4.dammit import UnicodeDammit
 
 from backend.ingestion.ssrf import SSRFBlockedError, validate_url_ssrf  # noqa: F401 — re-exported
 
@@ -183,6 +184,7 @@ def _extract(html: str, url: str) -> FetchResult:
     text = _extract_readable_text(content_root)
     if _is_gutenberg_url(url):
         text = _clean_gutenberg_text(text)
+    text = _clean_extracted_text(text)
     text = text.strip()
 
     return FetchResult(title=title, text=text, final_url=url)
@@ -238,6 +240,78 @@ def _extract_readable_text(node: Tag) -> str:
         fallback = re.sub(r"[ \t]+", " ", fallback)
         return re.sub(r"\n{3,}", "\n\n", fallback).strip()
     return "\n\n".join(blocks).strip()
+
+
+def _clean_extracted_text(text: str) -> str:
+    text = _decode_mojibake(text)
+    text = _drop_promotional_lines(text)
+    text = _normalize_reference_tokens(text)
+    text = _drop_disclosure_markers(text)
+    text = _dedupe_lines(text)
+    return re.sub(r"\n{3,}", "\n\n", text).strip()
+
+
+def _decode_mojibake(text: str) -> str:
+    # Attempt a latin-1 round-trip when we detect common UTF-8 mojibake markers.
+    if not re.search(r"[ÃÂâ€]", text):
+        return text
+    try:
+        repaired = text.encode("latin-1", errors="strict").decode("utf-8", errors="strict")
+        if "�" not in repaired:
+            return UnicodeDammit(repaired).unicode_markup
+    except UnicodeError:
+        pass
+    return UnicodeDammit(text).unicode_markup
+
+
+def _drop_promotional_lines(text: str) -> str:
+    blocked_patterns = (
+        r"^advertisement$",
+        r"^receive a weekly dose of discovery in your inbox",
+        r"^sign up to our .*newsletter",
+        r"^subscribe to .*new scientist",
+    )
+    kept: list[str] = []
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            kept.append("")
+            continue
+        if any(re.search(p, stripped, flags=re.IGNORECASE) for p in blocked_patterns):
+            continue
+        kept.append(line)
+    return "\n".join(kept)
+
+
+def _normalize_reference_tokens(text: str) -> str:
+    text = re.sub(r"(10)\s*\.\s*(\d{4,9})\s*/\s*([A-Za-z0-9._;()/:+-]+)", r"\1.\2/\3", text)
+    text = re.sub(r"(arXiv)\s*\.\s*(\d{4}\.\d{4,5})", r"\1.\2", text, flags=re.IGNORECASE)
+    text = re.sub(r"(arXiv)\s*:\s*(\d{4}\.\d{4,5})", r"\1:\2", text, flags=re.IGNORECASE)
+    text = re.sub(r"(10\.\d{4,9}/arXiv)\s*[\s.]+\s*(\d{4}\.\d{4,5})", r"\1.\2", text, flags=re.IGNORECASE)
+    return text
+
+
+def _drop_disclosure_markers(text: str) -> str:
+    lines = []
+    for line in text.splitlines():
+        cleaned = re.sub(r"(^|\s)[▶►▸]\s*", " ", line).strip()
+        lines.append(re.sub(r"\s{2,}", " ", cleaned))
+    return "\n".join(lines)
+
+
+def _dedupe_lines(text: str) -> str:
+    seen: set[str] = set()
+    out: list[str] = []
+    for line in text.splitlines():
+        key = line.strip()
+        if not key:
+            out.append("")
+            continue
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(line)
+    return "\n".join(out)
 
 
 def _is_gutenberg_url(url: str) -> bool:

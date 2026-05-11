@@ -249,6 +249,30 @@ class TestHtmlExtraction:
         assert "Home" not in result.text
         assert "Advertisement" not in result.text
 
+    def test_new_scientist_regression_cleanup_and_doi_integrity(self):
+        html = """
+        <html><body>
+          <article>
+            <h1>How government use of AI could hurt democracy</h1>
+            <p>Advertisement</p>
+            <p>Receive a weekly dose of discovery in your inbox...</p>
+            <p>Researchers warned that “opaque systems” can erode trust – especially in elections.</p>
+            <p>Reference arXiv DOI: 10 . 48550 / arXiv . 2505.01085</p>
+            <p>▶ Reference arXiv DOI: 10.48550/arXiv.2505.01085</p>
+          </article>
+        </body></html>
+        """
+        result = _extract(
+            html,
+            "https://www.newscientist.com/article/2488095-how-government-use-of-ai-could-hurt-democracy/",
+        )
+        assert "Advertisement" not in result.text
+        assert "Receive a weekly dose of discovery in your inbox" not in result.text
+        assert "“opaque systems” can erode trust – especially in elections." in result.text
+        assert "Reference arXiv DOI: 10.48550/arXiv.2505.01085" in result.text
+        assert result.text.count("Reference arXiv DOI: 10.48550/arXiv.2505.01085") == 1
+        assert "▶" not in result.text
+
 
 # ── Language detection unit tests ─────────────────────────────────────────────
 
