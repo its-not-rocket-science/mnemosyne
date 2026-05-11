@@ -277,7 +277,7 @@ async function loadLanguages() {
   } catch {
     languageSelect.removeAttribute('aria-busy')
     languageSelect.replaceChildren()
-    ;[['es', 'Spanish'], ['en', 'English (stub)'], ['fr', 'French (stub)']].forEach(([code, fallback]) => {
+    ;[['en', 'English'], ['es', 'Spanish'], ['fr', 'French (stub)']].forEach(([code, fallback]) => {
       const opt = document.createElement('option')
       opt.value = code
       opt.dataset.lessonLang = code
