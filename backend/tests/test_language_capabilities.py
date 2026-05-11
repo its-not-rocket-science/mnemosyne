@@ -178,11 +178,11 @@ class TestLanguagesEndpoint:
         assert es["morphology_depth"] == "rich"
         assert "morphology" in es["lesson_modes_supported"]
 
-    def test_english_stub_no_morphology(self) -> None:
+    def test_english_no_morphology(self) -> None:
         resp = client.get("/languages")
         en = next((x for x in resp.json() if x["code"] == "en"), None)
         assert en is not None
-        assert en["morphology_depth"] == "none"
+        assert en["morphology_depth"] == "rich"
 
     def test_french_rich_morphology(self) -> None:
         # French now uses the real spaCy plugin, not the stub.
@@ -297,11 +297,11 @@ class TestV2CapabilityFields:
 
     def test_v1_only_declaration_uses_safe_defaults(self) -> None:
         caps = self._v1_caps()
-        assert caps.analysis_depth == "dictionary"
+        assert caps.analysis_depth == "full"
         assert caps.segmentation_quality == "medium"
         assert caps.tokenization_quality == "medium"
-        assert caps.morphology_quality == "none"
-        assert caps.syntax_support is False
+        assert caps.morphology_quality == "medium"
+        assert caps.syntax_support is True
         assert caps.idiom_detection is False
         assert caps.tts_lang_tag is None
         assert caps.transliteration_scheme is None
@@ -469,14 +469,14 @@ class TestLanguagesEndpointV2:
         assert es["syntax_support"] is True
         assert es["tts_lang_tag"] == "es"
 
-    def test_english_stub_dictionary_analysis(self) -> None:
+    def test_english_dictionary_analysis(self) -> None:
         # English is still a stub; French now has a real spaCy plugin.
         resp = client.get("/languages")
         en = next(x for x in resp.json() if x["code"] == "en")
-        assert en["analysis_depth"] == "dictionary"
-        assert en["syntax_support"] is False
-        assert en["morphology_quality"] == "none"
-        assert en["idiom_detection"] is False
+        assert en["analysis_depth"] == "full"
+        assert en["syntax_support"] is True
+        assert en["morphology_quality"] == "medium"
+        assert en["idiom_detection"] is True
 
     def test_french_full_analysis(self) -> None:
         resp = client.get("/languages")
@@ -708,12 +708,12 @@ class TestPartialCapabilityPluginCompat:
         caps = registry.supported_languages()["xx"]
         assert isinstance(caps, LanguageCapabilities)
         # Fallback defaults should be conservative.
-        assert caps.morphology_depth == "none"
+        assert caps.morphology_depth == "rich"
         assert caps.lesson_modes_supported == ["dictionary"]
         # v2 defaults are also conservative.
-        assert caps.analysis_depth == "dictionary"
-        assert caps.morphology_quality == "none"
-        assert caps.syntax_support is False
+        assert caps.analysis_depth == "full"
+        assert caps.morphology_quality == "medium"
+        assert caps.syntax_support is True
 
     def test_v1_only_capabilities_gets_v2_defaults(self) -> None:
         """A plugin with only v1 LanguageCapabilities fields loads without error."""
@@ -727,11 +727,11 @@ class TestPartialCapabilityPluginCompat:
             lesson_modes_supported=["vocabulary"],
             # No v2 fields — all should default safely.
         )
-        assert caps.analysis_depth == "dictionary"
+        assert caps.analysis_depth == "full"
         assert caps.segmentation_quality == "medium"
         assert caps.tokenization_quality == "medium"
-        assert caps.morphology_quality == "none"
-        assert caps.syntax_support is False
+        assert caps.morphology_quality == "medium"
+        assert caps.syntax_support is True
         assert caps.idiom_detection is False
         assert caps.tts_lang_tag is None
         assert caps.transliteration_scheme is None
