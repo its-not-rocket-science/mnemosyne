@@ -55,6 +55,7 @@ const pickerUseBtn      = document.querySelector('#picker-use-btn')
 const pickerStatus      = document.querySelector('#picker-status')
 const pickerCloseBtn    = document.querySelector('#picker-close-btn')
 const pickerSampleBtn   = document.querySelector('#picker-sample-btn')
+const pickerCharCount   = document.querySelector('#picker-char-count')
 
 // Save-lesson dialog
 const saveLessonDialog     = document.querySelector('#save-lesson-dialog')
@@ -178,6 +179,8 @@ let currentCaps = null
 let scriptView  = 'native'
 
 const MAX_FILE_BYTES = 1_048_576  // 1 MiB
+const DEFAULT_MAX_JOB_CHARS = 100_000
+let maxJobChars = DEFAULT_MAX_JOB_CHARS
 
 // ── Annotation type metadata ───────────────────────────────────────────────────
 // TYPE_LABEL_KEYS : tooltip text shown in the ::before pseudo-element.
@@ -288,6 +291,22 @@ async function loadLanguages() {
   if (_dlAnnotation) _openDeepLink()
 }
 
+async function loadParseLimits() {
+  try {
+    const response = await fetch(`${API_BASE}/parse/limits`, { headers: getAuthHeaders() })
+    if (!response.ok) return
+    const data = await response.json()
+    if (typeof data.max_job_chars === 'number' && data.max_job_chars > 0) {
+      maxJobChars = data.max_job_chars
+    }
+  } catch {
+    // Fallback to DEFAULT_MAX_JOB_CHARS.
+  } finally {
+    updatePickerCharCount()
+  }
+}
+
+loadParseLimits()
 loadLanguages()
 
 languageSelect.addEventListener('change', () => {
@@ -400,6 +419,7 @@ function openPicker() {
   if (currentText && pickerTextarea) pickerTextarea.value = currentText
   languageUserSelected = false
   textPickerDialog?.showModal()
+  updatePickerCharCount()
   pickerTextarea?.focus()
 }
 
@@ -540,12 +560,31 @@ pickerTextarea?.addEventListener('input', () => {
     currentFilename    = null
   }
   setPickerStatus('')
+  updatePickerCharCount()
   scheduleLanguageDetection()
 })
+
+function updatePickerCharCount() {
+  if (!pickerTextarea || !pickerCharCount || !pickerUseBtn) return
+  const textLength = pickerTextarea.value.length
+  const overLimit = textLength > maxJobChars
+  pickerCharCount.textContent = ti('picker_char_count', {
+    count: textLength.toLocaleString(),
+    limit: maxJobChars.toLocaleString(),
+  })
+  pickerCharCount.dataset.state = overLimit ? 'error' : 'idle'
+  pickerTextarea.setAttribute('aria-invalid', String(overLimit))
+  pickerUseBtn.disabled = overLimit
+}
 
 // Confirm: "Use this text"
 pickerUseBtn?.addEventListener('click', () => {
   const text = pickerTextarea?.value.trim() ?? ''
+  if (text.length > maxJobChars) {
+    setPickerStatus(ti('picker_text_too_long', { limit: maxJobChars.toLocaleString() }), 'error')
+    pickerTextarea?.focus()
+    return
+  }
   if (!text) {
     setPickerStatus(t('text_empty_error'), 'error')
     pickerTextarea?.focus()
