@@ -98,11 +98,11 @@ class HebrewPlugin:
     """
 
     language_code = "he"
-    display_name  = "Hebrew (starter — dictionary mode)"
+    display_name  = "Hebrew (dictionary foundations)"
     direction     = "rtl"
     capabilities  = LanguageCapabilities(
         code="he",
-        display_name="Hebrew (starter — dictionary mode)",
+        display_name="Hebrew (dictionary foundations)",
         direction="rtl",
         script_family="hebrew",
         tokenization_mode="whitespace",
