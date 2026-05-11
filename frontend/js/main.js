@@ -247,6 +247,10 @@ async function loadLanguages() {
       languageCapabilities.set(caps.code, caps)
     }
 
+    // Hide QA/dev-only fake locales from the initial picker.
+    // They remain available via direct QA flows/API usage.
+    const initialPickerLanguages = languages.filter((caps) => !['x-cjk-test', 'x-rtl-test'].includes(caps.code))
+
     const current = languageSelect.value
     languageSelect.removeAttribute('aria-busy')
     const placeholder = document.createElement('option')
@@ -254,7 +258,7 @@ async function loadLanguages() {
     placeholder.textContent = t('choose_language')
     languageSelect.replaceChildren(
       placeholder,
-      ...languages.map((caps) => {
+      ...initialPickerLanguages.map((caps) => {
         const opt = document.createElement('option')
         opt.value = caps.code
         opt.dataset.lessonLang = caps.code

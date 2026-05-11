@@ -210,7 +210,7 @@ def _lookup(key: str) -> dict[str, str] | None:
 # ── Unknown-token note ────────────────────────────────────────────────────────
 
 _UNKNOWN_NOTE = (
-    "Koine Greek dictionary scaffold — citation (lexical) forms only. "
+    "Koine Greek dictionary foundations — citation (lexical) forms only. "
     "Inflected forms not in the lexicon cannot be lemmatised. "
     "Use CLTK or Morpheus for full morphological parsing."
 )
@@ -220,11 +220,11 @@ _UNKNOWN_NOTE = (
 
 class KoineGreekPlugin:
     language_code = "grc"
-    display_name  = "Koine Greek (NT Greek — dictionary scaffold)"
+    display_name  = "Koine Greek (NT Greek — citation forms)"
     direction     = "ltr"
     capabilities  = LanguageCapabilities(
         code="grc",
-        display_name="Koine Greek (NT Greek — dictionary scaffold)",
+        display_name="Koine Greek (NT Greek — citation forms)",
         direction="ltr",
         script_family="greek",
         tokenization_mode="whitespace",

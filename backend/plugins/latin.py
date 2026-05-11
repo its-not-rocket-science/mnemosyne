@@ -219,7 +219,7 @@ def _lookup(key: str) -> dict[str, str] | None:
 # ── Unknown-token note ────────────────────────────────────────────────────────
 
 _UNKNOWN_NOTE = (
-    "Latin dictionary scaffold — citation forms only. "
+    "Latin dictionary foundations — citation forms only. "
     "Inflected forms not in the lexicon cannot be lemmatised. "
     "Use CLTK or Whitaker's Words for full morphological parsing."
 )
@@ -229,11 +229,11 @@ _UNKNOWN_NOTE = (
 
 class LatinPlugin:
     language_code = "la"
-    display_name  = "Latin (Classical — dictionary scaffold)"
+    display_name  = "Latin (Classical — citation forms)"
     direction     = "ltr"
     capabilities  = LanguageCapabilities(
         code="la",
-        display_name="Latin (Classical — dictionary scaffold)",
+        display_name="Latin (Classical — citation forms)",
         direction="ltr",
         script_family="latin",
         tokenization_mode="whitespace",
