@@ -22,9 +22,11 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
+from urllib.parse import urlparse
 
 import httpx
 from bs4 import BeautifulSoup
+from bs4.element import Tag
 
 from backend.ingestion.ssrf import SSRFBlockedError, validate_url_ssrf  # noqa: F401 — re-exported
 
@@ -58,6 +60,18 @@ _CONTENT_SELECTORS: list[str] = [
     "#content",
     "#main-content",
 ]
+
+_GUTENBERG_START_MARKERS: tuple[str, ...] = (
+    "*** START OF THE PROJECT GUTENBERG EBOOK",
+    "***START OF THE PROJECT GUTENBERG EBOOK",
+    "START OF THE PROJECT GUTENBERG EBOOK",
+)
+_GUTENBERG_END_MARKERS: tuple[str, ...] = (
+    "*** END OF THE PROJECT GUTENBERG EBOOK",
+    "***END OF THE PROJECT GUTENBERG EBOOK",
+    "END OF THE PROJECT GUTENBERG EBOOK",
+    "End of the Project Gutenberg eBook",
+)
 
 
 @dataclass(slots=True)
@@ -155,20 +169,70 @@ def _extract(html: str, url: str) -> FetchResult:
         tag.decompose()
 
     # ── Locate the primary content region ────────────────────────────────────
-    content_root = None
+    content_root: Tag | None = None
     for selector in _CONTENT_SELECTORS:
         content_root = soup.select_one(selector)
         if content_root:
             break
     if content_root is None:
-        content_root = soup.body or soup
+        content_root = _best_content_block(soup) or soup.body or soup
 
     # ── Extract and normalise plain text ─────────────────────────────────────
-    raw_text = content_root.get_text(separator=" ")
-    # Collapse non-newline whitespace runs into a single space.
-    text = re.sub(r"[^\S\n]+", " ", raw_text)
-    # Collapse three or more newlines into a paragraph break.
-    text = re.sub(r"\n{3,}", "\n\n", text)
+    text = _extract_readable_text(content_root)
+    if _is_gutenberg_url(url):
+        text = _clean_gutenberg_text(text)
     text = text.strip()
 
     return FetchResult(title=title, text=text, final_url=url)
+
+
+def _best_content_block(soup: BeautifulSoup) -> Tag | None:
+    candidates = soup.find_all(["article", "section", "div", "main"])
+    if not candidates:
+        return None
+
+    best: tuple[float, Tag] | None = None
+    for node in candidates:
+        p_count = len(node.find_all("p"))
+        text_len = len(node.get_text(" ", strip=True))
+        link_len = len(" ".join(a.get_text(" ", strip=True) for a in node.find_all("a")))
+        density = link_len / max(text_len, 1)
+        score = (p_count * 40) + text_len - (density * 500)
+        if best is None or score > best[0]:
+            best = (score, node)
+    return best[1] if best else None
+
+
+def _extract_readable_text(node: Tag) -> str:
+    blocks: list[str] = []
+    for elem in node.find_all(["h1", "h2", "h3", "h4", "p", "li", "blockquote"]):
+        line = elem.get_text(" ", strip=True)
+        if not line:
+            continue
+        blocks.append(re.sub(r"[ \t]+", " ", line))
+    if not blocks:
+        fallback = node.get_text("\n", strip=True)
+        fallback = re.sub(r"[ \t]+", " ", fallback)
+        return re.sub(r"\n{3,}", "\n\n", fallback).strip()
+    return "\n\n".join(blocks).strip()
+
+
+def _is_gutenberg_url(url: str) -> bool:
+    return "gutenberg.org" in (urlparse(url).netloc or "").lower()
+
+
+def _clean_gutenberg_text(text: str) -> str:
+    start_idx = 0
+    for marker in _GUTENBERG_START_MARKERS:
+        idx = text.find(marker)
+        if idx != -1:
+            nl = text.find("\n", idx)
+            start_idx = nl + 1 if nl != -1 else idx + len(marker)
+            break
+    if start_idx:
+        text = text[start_idx:]
+
+    end_positions = [text.find(marker) for marker in _GUTENBERG_END_MARKERS if text.find(marker) != -1]
+    if end_positions:
+        text = text[: min(end_positions)]
+    return text.strip()
