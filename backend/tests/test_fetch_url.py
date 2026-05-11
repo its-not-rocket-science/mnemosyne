@@ -179,6 +179,50 @@ class TestHtmlExtraction:
         result = _extract(html, "https://example.com")
         assert result.text.strip() == ""
 
+    def test_gutenberg_boilerplate_removed(self):
+        html = """
+        <html><body>
+          <div id="pg-header">Project Gutenberg License and Header Noise</div>
+          <div id="content">
+            <p>*** START OF THE PROJECT GUTENBERG EBOOK NOTRE-DAME DE PARIS ***</p>
+            <p>NOTRE-DAME DE PARIS</p>
+            <p>LIVRE PREMIER</p>
+            <p>Il y a aujourd'hui trois cent quarante-huit ans six mois et dix-neuf jours.</p>
+            <p>*** END OF THE PROJECT GUTENBERG EBOOK NOTRE-DAME DE PARIS ***</p>
+            <p>End of the Project Gutenberg eBook of Notre-Dame de Paris</p>
+          </div>
+        </body></html>
+        """
+        result = _extract(
+            html,
+            "https://www.gutenberg.org/files/19657/19657-h/19657-h.htm#I",
+        )
+        assert result.text.startswith("NOTRE-DAME DE PARIS")
+        assert "Project Gutenberg License" not in result.text
+        assert "End of the Project Gutenberg eBook" not in result.text
+
+    def test_article_like_layout_skips_nav_and_ads(self):
+        html = """
+        <html><body>
+          <header><p>Site Header</p></header>
+          <main>
+            <div class="top-nav"><a href="/home">Home</a><a href="/news">News</a></div>
+            <div class="article-content">
+              <h1>Breaking Story</h1>
+              <p>First paragraph with meaningful details.</p>
+              <p>Second paragraph with context and quotes.</p>
+            </div>
+            <aside><p>Advertisement: Buy now!</p></aside>
+          </main>
+          <footer><p>Footer links</p></footer>
+        </body></html>
+        """
+        result = _extract(html, "https://example.com/news/123")
+        assert "Breaking Story" in result.text
+        assert "First paragraph with meaningful details." in result.text
+        assert "Home" not in result.text
+        assert "Advertisement" not in result.text
+
 
 # ── Language detection unit tests ─────────────────────────────────────────────
 
