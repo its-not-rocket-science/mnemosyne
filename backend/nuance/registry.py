@@ -7,10 +7,11 @@ _REGISTRY: dict[str, NuanceExtractor] | None = None
 
 
 def _build() -> dict[str, NuanceExtractor]:
-    from backend.nuance import ar, de, es, fr, grc, he, it, ja, ko, la, pt, ru, zh
+    from backend.nuance import ar, de, en, es, fr, grc, he, it, ja, ko, la, pt, ru, zh
     return {
         "ar":  ar.ArabicNuanceExtractor(),
         "de":  de.GermanNuanceExtractor(),
+        "en":  en.EnglishNuanceExtractor(),
         "es":  es.SpanishNuanceExtractor(),
         "fr":  fr.FrenchNuanceExtractor(),
         "grc": grc.AncientGreekNuanceExtractor(),
