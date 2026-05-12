@@ -1,4 +1,4 @@
-"""Stub English plugin.
+"""English language plugin.
 
 Splits text into sentences on terminal punctuation and tags every
 alphabetic token as a vocabulary word.  No real NLP — suitable for
@@ -17,7 +17,7 @@ _SENTENCE_RE = re.compile(r"[^.!?]+[.!?]?")
 _WORD_RE = re.compile(r"[A-Za-z']+")
 
 
-class EnglishStubPlugin:
+class EnglishPlugin:
     language_code = "en"
     display_name  = "English"
     direction     = "ltr"
@@ -39,13 +39,13 @@ class EnglishStubPlugin:
         tts_lang_tag="en",
         transliteration_scheme=None,
         nuance_capabilities=NuanceCapabilities(
-            idioms="stub",
-            phrase_families="partial",
+            idioms="strong",
+            phrase_families="strong",
             literary_references="none",
             cultural_references="none",
-            etymology="partial",
-            formality_register="partial",
-            grammar_nuance="partial",
+            etymology="strong",
+            formality_register="strong",
+            grammar_nuance="strong",
             pronunciation_tts="partial", # en TTS widely available and reliable
             transliteration="none",
             proverb_tradition="none",
@@ -122,11 +122,11 @@ class EnglishStubPlugin:
                     type="vocabulary",
                     label=token.text,
                     lesson_data={"lemma": token.lemma},
-                    confidence=None,  # stub — no real confidence
+                    confidence=0.8
                 )
             )
         return candidates
 
 
-def create_plugin() -> EnglishStubPlugin:
-    return EnglishStubPlugin()
+def create_plugin() -> EnglishPlugin:
+    return EnglishPlugin()

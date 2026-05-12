@@ -454,7 +454,7 @@ ADJ/NOUN after noun subjects.  These are silently under-extracted.
 
 ### English (`en`) — Minimal Stub
 
-`backend/plugins/stub_en.py` — regex tokenisation, no NLP:
+`backend/plugins/english.py` — regex tokenisation, no NLP:
 
 - `analysis_depth="dictionary"`, `lesson_modes_supported=["vocabulary"]`
 - Whitespace-split tokens, no POS or morphology
@@ -653,7 +653,7 @@ If full NLP is not yet available for your language, start with a stub that
 returns vocabulary objects with `pos="WORD"` and no morphology.  Set
 `lesson_modes_supported=["dictionary"]` and `morphology_depth="none"`.
 
-The English stub (`backend/plugins/stub_en.py`) is the reference for
+The English plugin (`backend/plugins/english.py`) is the reference for
 this pattern.  It demonstrates:
 
 - `analysis_depth="dictionary"` capability
