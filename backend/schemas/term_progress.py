@@ -17,6 +17,7 @@ class TermProgressOut(BaseModel):
     incorrect_count: int
     mastery_score: float
     next_review_at: datetime | None = None
+    review_bucket: str
     source_lesson_ids: list[str] = Field(default_factory=list)
 
 
