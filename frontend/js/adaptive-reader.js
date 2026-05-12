@@ -1,6 +1,10 @@
 /*
   Adaptive reader memory layer.
 
+  IMPORTANT: this is an inferred exposure model, not direct assessment.
+  The bands (weak/fading/strong) are derived from local decay heuristics
+  plus dashboard FSRS state when available; they are not quiz/test grades.
+
   Server-backed when available, local-first when offline:
   - local memory gives immediate UI adaptation
   - /dashboard seeds memory from persisted FSRS UserKnowledge rows
@@ -152,6 +156,7 @@ function nextReviewAt(fromMs, strength, decayRate) {
   return fromMs + Math.max(0, days) * DAY_MS
 }
 
+// UI banding uses inferred strength only; no direct correctness signal is read here.
 function memoryBand(strength) {
   if (strength >= 0.82) return 'strong'
   if (strength >= 0.55) return 'fading'
@@ -163,6 +168,8 @@ function memoryFor(annotation) {
   return memory[key] || defaultMemory(annotation)
 }
 
+// Maps dashboard status/mastery into local action buckets for UI adaptation.
+// This consumes FSRS-derived probabilities, not explicit drill correctness events.
 function actionFromDashboardStatus(status, score) {
   if (status === 'mastered' || score >= 0.82) return 'known'
   if (status === 'new' || status === 'forgotten' || score < 0.55) return 'weak'
@@ -557,8 +564,8 @@ function syncPreviewControls(annotation) {
     const next = record.nextReview ? new Date(record.nextReview) : null
     const source = record.source === 'server' ? t('adaptive_synced') : t('adaptive_local_memory')
     strengthEl.textContent = next
-      ? `Memory ${pct}% · next ${next.toLocaleDateString()} · ${source}`
-      : `Memory ${pct}% · ${source}`
+      ? `Exposure ${pct}% · next ${next.toLocaleDateString()} · ${source}`
+      : `Exposure ${pct}% · ${source}`
   }
 }
 
@@ -588,7 +595,7 @@ function renderIntelligenceSummary() {
     summary = document.createElement('aside')
     summary.id = 'reader-intelligence-summary'
     summary.className = 'reader-intelligence-summary'
-    summary.setAttribute('aria-label', 'Learning intelligence summary')
+    summary.setAttribute('aria-label', 'Exposure-map summary')
 
     // Help button persists across re-renders; stats live in a child div.
     const helpBtn = makeHelpButton('help_intelligence_summary')
@@ -646,7 +653,7 @@ function renderMemoryMinimap() {
     const tick = document.createElement('span')
     tick.className = `annotation-minimap__tick annotation-minimap__tick--memory-${band}`
     tick.style.top = `${(index / total) * 100}%`
-    tick.title = `${annotation.textContent?.trim() || 'Annotation'} · ${Math.round(strength * 100)}% memory`
+    tick.title = `${annotation.textContent?.trim() || 'Annotation'} · ${Math.round(strength * 100)}% inferred exposure`
     frag.appendChild(tick)
   })
 
