@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from datetime import UTC, datetime, timedelta
+
 import pytest
 import pytest_asyncio
 from httpx import ASGITransport, AsyncClient
@@ -64,6 +66,7 @@ async def test_term_progress_persists_and_updates(async_client) -> None:
     assert data["incorrect_count"] == 1
     assert data["mastery_score"] == 0.0
     assert data["next_review_at"] is not None
+    assert data["review_bucket"] == "due"
 
 
 @pytest.mark.asyncio
@@ -75,3 +78,34 @@ async def test_term_progress_is_language_specific(async_client) -> None:
     de_rows = await async_client.get("/term-progress/de")
     assert len(en_rows.json()) == 1
     assert len(de_rows.json()) == 1
+
+
+@pytest.mark.asyncio
+async def test_term_progress_correct_review_increases_mastery_and_interval(async_client) -> None:
+    first = await async_client.post("/term-progress", json={"term": "hablo", "language": "es"})
+    assert first.status_code == 200
+    reviewed = await async_client.post(
+        "/term-progress",
+        json={"term": "hablo", "language": "es", "seen": False, "reviewed": True, "correct": True},
+    )
+    assert reviewed.status_code == 200
+    data = reviewed.json()
+    assert data["mastery_score"] > 0.0
+    assert data["next_review_at"] is not None
+    assert data["review_bucket"] in {"learning", "well_learned"}
+
+
+@pytest.mark.asyncio
+async def test_term_progress_repeated_success_can_become_well_learned(async_client) -> None:
+    await async_client.post("/term-progress", json={"term": "être", "language": "fr"})
+    last = None
+    for _ in range(6):
+        resp = await async_client.post(
+            "/term-progress",
+            json={"term": "être", "language": "fr", "seen": False, "reviewed": True, "correct": True},
+        )
+        assert resp.status_code == 200
+        last = resp.json()
+    assert last is not None
+    assert last["mastery_score"] >= 0.85
+    assert last["review_bucket"] == "well_learned"
