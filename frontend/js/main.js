@@ -669,7 +669,7 @@ pickerUseBtn?.addEventListener('click', () => {
     pickerTextarea?.focus()
     return
   }
-  currentText      = text
+  currentText      = normalizeParseInput(text)
   currentSourceUrl = pickerUrlInput?.value.trim() || null
 
   if (currentContentType === 'article' && currentSourceUrl) {
@@ -684,8 +684,8 @@ pickerUseBtn?.addEventListener('click', () => {
   }
 
   textPickerDialog?.close()
-  showChosenText(text)
-  doParseText(text)
+  showChosenText(currentText)
+  doParseText(currentText)
 })
 
 function setPickerStatus(message, state = 'idle') {
@@ -955,7 +955,20 @@ function hideResultsMessage() {
 
 // ── Parse text ────────────────────────────────────────────────────────────────
 
+
+function normalizeParseInput(rawText) {
+  const text = (rawText ?? '').trim()
+  if (!text) return ''
+  const looksLikeHtml = /<[^>]+>/.test(text) && /<\/(div|span|mark|p|article|section|main)>/i.test(text)
+  if (!looksLikeHtml) return text
+
+  const doc = new DOMParser().parseFromString(text, 'text/html')
+  doc.querySelectorAll('script, style, noscript').forEach(el => el.remove())
+  return (doc.body?.textContent || '').replace(/\s+/g, ' ').trim()
+}
+
 async function doParseText(text) {
+  const normalizedText = normalizeParseInput(text)
   reviewStateByObject.clear()
   showResultsMessage(t('loading'))
   setStatus(t('parsing_status'), 'busy')
@@ -963,7 +976,7 @@ async function doParseText(text) {
 
   try {
     const language = languageSelect.value
-    const data = await parseWithJob(text, language)
+    const data = await parseWithJob(normalizedText, language)
 
     if (data.sentences.length === 0) {
       showResultsMessage(t('no_items_found'))
