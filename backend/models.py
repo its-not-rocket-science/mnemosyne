@@ -382,6 +382,30 @@ class UserFsrsParamsRow(Base):
     )
 
 
+class TermProgressRow(Base):
+    """Per-user, per-language progress for highlighted terms.
+
+    This model is independent from canonical object IDs so the UI can track
+    literal highlighted terms and their normalized lemmas directly.
+    """
+    __tablename__ = "term_progress"
+
+    user_id: Mapped[str] = mapped_column(String(50), primary_key=True)
+    language: Mapped[str] = mapped_column(String(10), primary_key=True)
+    term: Mapped[str] = mapped_column(String, primary_key=True)
+
+    lemma: Mapped[str | None] = mapped_column(String, nullable=True)
+    first_seen: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+    last_seen: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+    exposure_count: Mapped[int] = mapped_column(Integer, default=0)
+    review_count: Mapped[int] = mapped_column(Integer, default=0)
+    correct_count: Mapped[int] = mapped_column(Integer, default=0)
+    incorrect_count: Mapped[int] = mapped_column(Integer, default=0)
+    mastery_score: Mapped[float] = mapped_column(Float, default=0.0)
+    next_review_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    source_lesson_ids: Mapped[list] = mapped_column(JSON, default=list)
+
+
 class UserLanguagePreferenceRow(Base):
     """Per-user, per-language study preferences.
 
