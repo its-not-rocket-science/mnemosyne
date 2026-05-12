@@ -21,7 +21,7 @@ from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 # ── Protocol conformance ──────────────────────────────────────────────────────
 
 
-class TestEnglishStubProtocol:
+class TestEnglishPluginProtocol:
     def setup_method(self) -> None:
         self.plugin = EnglishPlugin()
 
@@ -61,7 +61,7 @@ class TestEnglishStubProtocol:
 # ── Sentence splitting ────────────────────────────────────────────────────────
 
 
-class TestEnglishStubSentenceSplitting:
+class TestEnglishPluginSentenceSplitting:
     def setup_method(self) -> None:
         self.plugin = EnglishPlugin()
 
@@ -92,7 +92,7 @@ class TestEnglishStubSentenceSplitting:
 # ── Vocabulary extraction ─────────────────────────────────────────────────────
 
 
-class TestEnglishStubVocabulary:
+class TestEnglishPluginVocabulary:
     def setup_method(self) -> None:
         self.plugin = EnglishPlugin()
 
@@ -130,9 +130,9 @@ class TestEnglishStubVocabulary:
         for obj in self._vocab("The river flows."):
             assert obj.lesson_data["lemma"] == obj.canonical_form
 
-    def test_confidence_is_none(self) -> None:
+    def test_confidence_is_scored(self) -> None:
         for obj in self._vocab("Simple sentence here."):
-            assert obj.confidence is None
+            assert obj.confidence is not None
 
     def test_type_is_vocabulary(self) -> None:
         for obj in self._vocab("One two three."):
@@ -142,7 +142,7 @@ class TestEnglishStubVocabulary:
 # ── Phrase-family integration ─────────────────────────────────────────────────
 
 
-class TestEnglishStubPhrases:
+class TestEnglishPluginPhrases:
     def setup_method(self) -> None:
         self.plugin = EnglishPlugin()
 
@@ -198,7 +198,7 @@ class TestEnglishStubPhrases:
 # ── lesson_store isolation ────────────────────────────────────────────────────
 
 
-class TestEnglishStubLessonStore:
+class TestEnglishPluginLessonStore:
     def setup_method(self) -> None:
         self.plugin = EnglishPlugin()
 
@@ -226,3 +226,28 @@ class TestEnglishStubLessonStore:
             lesson_data={},
         )
         assert plugin2.get_lesson(obj_id) is None
+
+
+class TestEnglishPluginNuanceIntegration:
+    def setup_method(self) -> None:
+        self.plugin = EnglishPlugin()
+
+    def _nuance_types(self, sentence: str) -> set[str]:
+        result = self.plugin.analyze_sentence(sentence)
+        return {c.lesson_data.get("nuance_type") for c in result.candidates if c.type == "nuance"}
+
+    def test_includes_nuance_from_backend_nuance_en(self) -> None:
+        types = self._nuance_types("Could you help, please?")
+        assert "politeness" in types
+
+    def test_phrase_family_from_nuance_removes_phrase_tokens_from_vocab(self) -> None:
+        result = self.plugin.analyze_sentence("All that glitters is not gold.")
+        phrase_words = {
+            w.lower()
+            for c in result.candidates
+            if c.type in {"phrase_family", "idiom"} and c.surface_form
+            for w in c.surface_form.split()
+        }
+        vocab_lemmas = {c.canonical_form for c in result.candidates if c.type == "vocabulary"}
+        assert phrase_words.isdisjoint(vocab_lemmas)
+

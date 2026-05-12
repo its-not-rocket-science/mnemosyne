@@ -155,6 +155,22 @@ class TestPluginRegistry:
         assert caps.morphology_quality == "medium"
         assert caps.tts_lang_tag == "fr"
 
+
+    def test_english_nuance_capabilities_match_spanish_and_french(self) -> None:
+        registry = load_plugins()
+        en = registry.supported_languages()["en"].nuance_capabilities
+        es = registry.supported_languages()["es"].nuance_capabilities
+        fr = registry.supported_languages()["fr"].nuance_capabilities
+        assert en is not None and es is not None and fr is not None
+
+        assert en.idioms in {"strong", "gold"}
+        assert en.phrase_families in {"strong", "gold"}
+        assert en.etymology in {"strong", "gold"}
+
+        rank = {"none": 0, "stub": 1, "partial": 2, "strong": 3, "gold": 4}
+        assert rank[en.grammar_nuance] >= rank[es.grammar_nuance]
+        assert rank[en.grammar_nuance] >= rank[fr.grammar_nuance]
+
     def test_german_capabilities_morphology(self) -> None:
         registry = load_plugins()
         caps = registry.supported_languages()["de"]
