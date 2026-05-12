@@ -39,7 +39,7 @@ class EnglishStubPlugin:
         tts_lang_tag="en",
         transliteration_scheme=None,
         nuance_capabilities=NuanceCapabilities(
-            idioms="supported",
+            idioms="stub",
             phrase_families="partial",
             literary_references="none",
             cultural_references="none",
