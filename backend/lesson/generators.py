@@ -78,7 +78,7 @@ _POS_DISPLAY: dict[str, str] = {
     "ADJ":   "adjective",
     "ADV":   "adverb",
     "PROPN": "proper noun",
-    "WORD":  "word",       # EnglishStubPlugin
+    "WORD":  "word",       # EnglishPlugin
 }
 
 _POS_OPTIONS: list[str] = [

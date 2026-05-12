@@ -470,7 +470,7 @@ class TestLanguagesEndpointV2:
         assert es["tts_lang_tag"] == "es"
 
     def test_english_dictionary_analysis(self) -> None:
-        # English is still a stub; French now has a real spaCy plugin.
+        # English now has a full plugin; French also has a real spaCy plugin.
         resp = client.get("/languages")
         en = next(x for x in resp.json() if x["code"] == "en")
         assert en["analysis_depth"] == "full"
