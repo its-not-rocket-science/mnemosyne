@@ -634,7 +634,28 @@ function renderIntelligenceSummary() {
     helpBtn.className += ' reader-intelligence-summary__help'
     const statsDiv = document.createElement('div')
     statsDiv.className = 'reader-intelligence-summary__stats'
-    summary.append(statsDiv, helpBtn)
+
+    const howWorks = document.createElement('details')
+    howWorks.className = 'reader-intelligence-summary__how'
+    const howWorksSummary = document.createElement('summary')
+    howWorksSummary.className = 'reader-intelligence-summary__how-summary'
+    howWorksSummary.dataset.i18n = 'adaptive_how_works_label'
+    howWorksSummary.textContent = t('adaptive_how_works_label')
+
+    const howWorksBody = document.createElement('div')
+    howWorksBody.className = 'reader-intelligence-summary__how-body'
+    howWorksBody.innerHTML = `
+      <p data-i18n="adaptive_how_works_body">${t('adaptive_how_works_body')}</p>
+      <ul>
+        <li data-i18n="adaptive_how_works_tracked">${t('adaptive_how_works_tracked')}</li>
+        <li data-i18n="adaptive_how_works_status">${t('adaptive_how_works_status')}</li>
+        <li data-i18n="adaptive_how_works_progress">${t('adaptive_how_works_progress')}</li>
+        <li data-i18n="adaptive_how_works_strengthen">${t('adaptive_how_works_strengthen')}</li>
+      </ul>
+    `
+    howWorks.append(howWorksSummary, howWorksBody)
+
+    summary.append(statsDiv, howWorks, helpBtn)
 
     const toolbar = document.querySelector('#reader-adaptive-toolbar')
     if (toolbar) toolbar.insertAdjacentElement('afterend', summary)
@@ -660,6 +681,24 @@ function renderIntelligenceSummary() {
     <span><b>${stats.strong}</b> <span data-i18n="adaptive_memory_strong_stat">${t('adaptive_memory_strong_stat')}</span></span>
     <small>${syncText}</small>
   `
+
+  const howWorksSummary = summary.querySelector('.reader-intelligence-summary__how-summary')
+  if (howWorksSummary) {
+    howWorksSummary.textContent = t('adaptive_how_works_label')
+  }
+
+  const howWorksBody = summary.querySelector('.reader-intelligence-summary__how-body')
+  if (howWorksBody) {
+    howWorksBody.innerHTML = `
+      <p data-i18n="adaptive_how_works_body">${t('adaptive_how_works_body')}</p>
+      <ul>
+        <li data-i18n="adaptive_how_works_tracked">${t('adaptive_how_works_tracked')}</li>
+        <li data-i18n="adaptive_how_works_status">${t('adaptive_how_works_status')}</li>
+        <li data-i18n="adaptive_how_works_progress">${t('adaptive_how_works_progress')}</li>
+        <li data-i18n="adaptive_how_works_strengthen">${t('adaptive_how_works_strengthen')}</li>
+      </ul>
+    `
+  }
 }
 
 function renderMemoryMinimap() {
