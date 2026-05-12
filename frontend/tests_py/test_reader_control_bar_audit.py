@@ -101,3 +101,67 @@ def test_focus_mode_keyboard_and_viewport_tracking_are_wired():
     assert "document.addEventListener('focusin'" in READING
     assert "document.addEventListener('scroll', scheduleViewportFocusBlock" in READING
     assert "if (event.key.toLowerCase() === 'f'" in READING
+
+
+def test_flow_plus_focus_combination_stays_predictable():
+    assert "if (isFlowMode()) return" in READING
+    assert "document.addEventListener('mnemosyne:flow-mode-changed'" in READING
+    assert "if (isFlowMode() && getActiveSentenceIndex() < 0) stepFlowSentence(1)" in READING
+    assert "body.reader-focus-mode.reader-flow-mode .sentence-card[data-flow-active]" in READING_CSS
+
+
+def test_adaptive_and_advanced_overrides_are_composed_and_persisted():
+    assert "const ADAPTIVE_OVERRIDE_KEY = 'mnemosyne.reader.adaptive.overrides.v1'" in ADAPTIVE
+    assert "function overrideStorageKey()" in ADAPTIVE
+    assert "const userId = getUser()?.id || 'guest'" in ADAPTIVE
+    assert "function effectiveAdaptiveValue(key)" in ADAPTIVE
+    assert "return adaptiveOverrides[key] || adaptiveProfile?.[key]" in ADAPTIVE
+    assert "adaptiveOverrides[cat] = cb.checked; writeAdaptiveOverrides(); applyAdaptiveVisibility()" in ADAPTIVE
+    assert "const categoryHidden = ANNOTATION_CATEGORIES.some(cat => !categoryEnabled(cat) && isCategoryVisible(annotation, cat))" in ADAPTIVE
+
+
+def test_subtle_learning_deep_modes_drive_annotation_filtering_categories():
+    assert "const MODE_DEFAULTS = {" in ADAPTIVE
+    for mode in ("subtle", "learning", "deep"):
+        assert f"{mode}:" in ADAPTIVE
+    assert "function readerMode()" in ADAPTIVE
+    assert "const defaults = MODE_DEFAULTS[mode] || MODE_DEFAULTS.learning" in ADAPTIVE
+    assert "return adaptiveOverrides[category] ?? defaults[category] ?? true" in ADAPTIVE
+    assert "annotation.toggleAttribute('data-category-hidden', categoryHidden)" in ADAPTIVE
+
+
+def test_reader_control_modes_and_adaptive_settings_persist_across_session_reload():
+    assert "let currentMode = localStorage.getItem(STORAGE_MODE_KEY) || 'learning'" in READING
+    assert "let focusMode = localStorage.getItem(STORAGE_FOCUS_KEY) === 'true'" in READING
+    assert "let adaptiveEnabled = localStorage.getItem(SETTINGS_KEY) !== 'false'" in ADAPTIVE
+    assert "let reinforcementEnabled = localStorage.getItem(REINFORCEMENT_KEY) === 'true'" in ADAPTIVE
+    assert "let adaptiveOverrides = readAdaptiveOverrides()" in ADAPTIVE
+
+
+def test_localized_reader_control_labels_exist_in_all_locale_blocks():
+    import re
+
+    localized_keys = [
+        "reader_mode_subtle", "reader_mode_learning", "reader_mode_deep",
+        "reader_flow_mode", "reader_focus_mode", "adaptive_btn", "reader_flow_shortcuts",
+    ]
+    for key in localized_keys:
+        occurrences = len(re.findall(rf"\b{key}\s*:\s*", I18N))
+        assert occurrences >= 10, f"Missing or sparse translations for {key}: {occurrences}"
+
+    # These labels are currently shared fallback strings; ensure they still exist
+    # so untranslated locales fail loudly at lookup-time tests.
+    assert "reader_settings_aria" in I18N
+    assert "reader_adv_mode_hint" in I18N
+
+
+def test_keyboard_navigation_and_aria_states_are_explicitly_wired():
+    assert "flowPrevBtn.addEventListener('click', () => stepFlowSentence(-1))" in READING
+    assert "flowNextBtn.addEventListener('click', () => stepFlowSentence(1))" in READING
+    assert "btn.setAttribute('aria-pressed', String(active))" in READING
+    assert "focusBtn.setAttribute('aria-pressed', String(focusMode))" in READING
+    assert "btn.setAttribute('aria-disabled', String(!flowEnabled))" in READING
+    assert "settingsBtn.setAttribute('aria-expanded', String(opening))" in READING
+    assert "explainerToggle.setAttribute('aria-expanded', String(opening))" in READING
+    assert "toggle.setAttribute('aria-pressed', String(adaptiveEnabled))" in ADAPTIVE
+    assert "reinforce.setAttribute('aria-pressed', String(reinforcementEnabled))" in ADAPTIVE
