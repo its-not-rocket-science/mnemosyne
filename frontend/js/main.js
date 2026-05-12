@@ -512,6 +512,7 @@ pickerSampleBtn?.addEventListener('click', () => {
     languageSelect.value = selectedSampleLang
     languageSelect.dispatchEvent(new Event('change'))
   }
+  pickerSampleDialog?.close()
 })
 
 pickerSampleLanguageSelect?.addEventListener('change', () => {
