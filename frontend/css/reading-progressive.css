@@ -218,6 +218,10 @@ body.reader-flow-mode.reader-flow-playing .sentence-card[data-flow-active] {
   transition: opacity 0.2s ease;
 }
 
+body.reader-flow-mode .reader-annotation[data-flow-hidden] {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   body.reader-flow-mode .sentence-card {
     transition: none;
