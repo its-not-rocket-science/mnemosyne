@@ -1466,15 +1466,19 @@ function renderResults(sentences, language) {
       row.appendChild(playBtn)
     }
 
+    const debugRanges = []
     row.appendChild(
-      buildAnnotatedText(sentence.text, sentence.learnable_objects, language, dir, tokenMode, scriptFam)
+      buildAnnotatedText(sentence.text, sentence.learnable_objects, language, dir, tokenMode, scriptFam, debugRanges)
     )
+    row.dataset.debugRanges = JSON.stringify(debugRanges)
+    if (debugRanges.some(r => r.status !== 'selected')) row.dataset.debugIssue = 'true'
     prose.appendChild(row)
   }
 
   fragment.appendChild(prose)
 
   results.replaceChildren(fragment)
+  renderParseDebugSummary(sentences, language)
   applyScriptViewToResults()
   updateScriptViewToolbar()
   requestAnimationFrame(buildMinimap)
@@ -1520,7 +1524,7 @@ function renderResults(sentences, language) {
 
 // ── Inline annotation builder ─────────────────────────────────────────────────
 
-function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam) {
+function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam, debugRanges = []) {
   const p = document.createElement('span')
   p.className = 'sentence-card__text reader-sentence__text'
   p.setAttribute('lang', language)
@@ -1545,6 +1549,7 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam) {
       const idx = lower.indexOf(needle, pos)
       if (idx === -1) break
       ranges.push({ start: idx, end: idx + item.label.length, item })
+      debugRanges.push({ label: item.label, type: item.type, start: idx, end: idx + item.label.length, status: 'candidate' })
       pos = idx + 1
     }
   }
@@ -1556,8 +1561,14 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam) {
   const selected = []
   let lastEnd = 0
   for (const r of ranges) {
-    if (r.start < lastEnd) continue
+    if (r.start < lastEnd) {
+      const match = debugRanges.find(x => x.start === r.start && x.end === r.end && x.label === r.item.label)
+      if (match) match.status = 'overlap_skipped'
+      continue
+    }
     selected.push(r)
+    const match = debugRanges.find(x => x.start === r.start && x.end === r.end && x.label === r.item.label)
+    if (match) match.status = 'selected'
     lastEnd = r.end
   }
 
@@ -1597,6 +1608,24 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam) {
   if (cursor < text.length) p.appendChild(document.createTextNode(text.slice(cursor)))
 
   return p
+}
+
+function renderParseDebugSummary(sentences, language) {
+  const sentenceDebug = Array.from(results.querySelectorAll('.reader-sentence')).map((row, index) => ({
+    index,
+    text: sentences[index]?.text ?? '',
+    ranges: JSON.parse(row.dataset.debugRanges || '[]'),
+  }))
+  const payload = {
+    language,
+    tokenization: languageCapabilities.get(language)?.tokenization_mode ?? 'unknown',
+    sentenceCount: sentences.length,
+    objectCount: sentences.reduce((sum, s) => sum + (s.learnable_objects?.length ?? 0), 0),
+    sentenceDebug,
+  }
+  console.groupCollapsed('[mnemosyne] parse debug')
+  console.log(payload)
+  console.groupEnd()
 }
 
 
