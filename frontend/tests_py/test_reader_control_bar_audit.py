@@ -23,6 +23,9 @@ def test_flow_mode_is_wired_to_state_ui_and_persistence():
     assert "localStorage.setItem(STORAGE_KEY, String(flowMode))" in FLOW
     assert "new CustomEvent('mnemosyne:flow-mode-changed'" in FLOW
     assert "#reader-flow-mode-btn" in FLOW
+    assert "export function stepFlowSentence" in FLOW
+    assert "syncAnnotationsForActiveSentence" in FLOW
+    assert "mark.toggleAttribute('data-flow-hidden', shouldHide)" in FLOW
 
 
 def test_focus_mode_is_wired_to_state_ui_and_persistence():
@@ -70,3 +73,17 @@ def test_i18n_help_text_matches_expected_control_descriptions():
     assert "Flow reads sentence-by-sentence" in I18N
     assert "Focus dims the page" in I18N
     assert "Adaptive tunes difficulty" in I18N
+
+
+def test_flow_navigation_controls_and_shortcuts_are_wired():
+    assert "reader-flow-prev-btn" in READING
+    assert "reader-flow-next-btn" in READING
+    assert "reader_flow_shortcuts" in READING
+    assert "event.key === 'ArrowRight' || event.key === 'n' || event.key === 'N'" in READING
+    assert "event.key === 'ArrowLeft' || event.key === 'p' || event.key === 'P'" in READING
+
+
+def test_flow_i18n_keys_exist():
+    assert "reader_flow_prev" in I18N
+    assert "reader_flow_next" in I18N
+    assert "reader_flow_shortcuts" in I18N
