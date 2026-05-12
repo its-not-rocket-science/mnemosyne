@@ -564,8 +564,8 @@ function syncPreviewControls(annotation) {
     const next = record.nextReview ? new Date(record.nextReview) : null
     const source = record.source === 'server' ? t('adaptive_synced') : t('adaptive_local_memory')
     strengthEl.textContent = next
-      ? `Exposure ${pct}% · next ${next.toLocaleDateString()} · ${source}`
-      : `Exposure ${pct}% · ${source}`
+      ? t('adaptive_exposure_status_next').replace('{pct}', pct).replace('{date}', next.toLocaleDateString()).replace('{source}', source)
+      : t('adaptive_exposure_status').replace('{pct}', pct).replace('{source}', source)
   }
 }
 
@@ -595,7 +595,7 @@ function renderIntelligenceSummary() {
     summary = document.createElement('aside')
     summary.id = 'reader-intelligence-summary'
     summary.className = 'reader-intelligence-summary'
-    summary.setAttribute('aria-label', 'Exposure-map summary')
+    summary.setAttribute('aria-label', t('adaptive_summary_aria'))
 
     // Help button persists across re-renders; stats live in a child div.
     const helpBtn = makeHelpButton('help_intelligence_summary')
@@ -653,7 +653,9 @@ function renderMemoryMinimap() {
     const tick = document.createElement('span')
     tick.className = `annotation-minimap__tick annotation-minimap__tick--memory-${band}`
     tick.style.top = `${(index / total) * 100}%`
-    tick.title = `${annotation.textContent?.trim() || 'Annotation'} · ${Math.round(strength * 100)}% inferred exposure`
+    tick.title = t('adaptive_tick_title')
+      .replace('{label}', annotation.textContent?.trim() || t('adaptive_annotation_label'))
+      .replace('{pct}', Math.round(strength * 100))
     frag.appendChild(tick)
   })
 
