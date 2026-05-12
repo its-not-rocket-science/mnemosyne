@@ -554,6 +554,7 @@ textarea[aria-invalid="true"] {
   display: flex;
   gap: var(--space-1);
   align-items: stretch;
+  margin-block-start: 0.35rem;
 }
 
 .input-group > input,

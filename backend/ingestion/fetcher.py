@@ -176,6 +176,9 @@ def _extract(html: str, url: str) -> FetchResult:
         if node:
             selector_candidates.append(node)
 
+    if _is_gutenberg_url(url):
+        selector_candidates = [node for node in selector_candidates if not _looks_like_footnotes(node)]
+
     best_overall = _best_content_block(soup)
     ranked_candidates = [*selector_candidates, *( [best_overall] if best_overall else [])]
     content_root = max(ranked_candidates, key=_node_content_score, default=None) or soup.body or soup
