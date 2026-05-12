@@ -171,6 +171,12 @@ def _extract(html: str, url: str) -> FetchResult:
         tag.decompose()
 
     # ── Locate the primary content region ────────────────────────────────────
+    if _is_gutenberg_url(url):
+        gutenberg_text = _extract_gutenberg_body_pre(soup)
+        if gutenberg_text:
+            text = _clean_extracted_text(_clean_gutenberg_text(gutenberg_text)).strip()
+            return FetchResult(title=title, text=text, final_url=url)
+
     selector_candidates: list[Tag] = []
     for selector in _CONTENT_SELECTORS:
         node = soup.select_one(selector)
@@ -326,6 +332,28 @@ def _dedupe_lines(text: str) -> str:
 
 def _is_gutenberg_url(url: str) -> bool:
     return "gutenberg.org" in (urlparse(url).netloc or "").lower()
+
+
+def _extract_gutenberg_body_pre(soup: BeautifulSoup) -> str | None:
+    body = soup.body
+    if body is None:
+        return None
+
+    pre = body.select_one("pre:nth-child(1)")
+    if pre is None:
+        return None
+
+    chunks: list[str] = []
+    for sibling in pre.next_siblings:
+        if not isinstance(sibling, Tag):
+            continue
+        classes = {str(x).lower() for x in sibling.get("class", [])}
+        if "footnotes" in classes:
+            break
+        chunks.append(_extract_readable_text(sibling))
+
+    text = "\n\n".join(chunk for chunk in chunks if chunk).strip()
+    return text or None
 
 
 def _clean_gutenberg_text(text: str) -> str:

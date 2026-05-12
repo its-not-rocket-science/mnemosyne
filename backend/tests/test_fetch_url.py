@@ -227,6 +227,26 @@ class TestHtmlExtraction:
         assert "[1] This is a footnote." not in result.text
         assert "[2] This is another footnote." not in result.text
 
+    def test_gutenberg_prefers_content_after_first_pre_until_footnotes(self):
+        html = """
+        <html><body>
+          <pre>header metadata</pre>
+          <h2>CHAPTER I</h2>
+          <p>First chapter paragraph.</p>
+          <h2>CHAPTER II</h2>
+          <p>Second chapter paragraph.</p>
+          <div class="footnotes">
+            <p>[1] note</p>
+          </div>
+          <p>Should not be included.</p>
+        </body></html>
+        """
+        result = _extract(html, "https://www.gutenberg.org/files/19657/19657-h/19657-h.htm#I")
+        assert "CHAPTER I" in result.text
+        assert "Second chapter paragraph." in result.text
+        assert "[1] note" not in result.text
+        assert "Should not be included." not in result.text
+
     def test_article_like_layout_skips_nav_and_ads(self):
         html = """
         <html><body>
