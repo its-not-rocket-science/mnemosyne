@@ -127,9 +127,38 @@ function ensureToolbar() {
   adaptiveBtn.setAttribute('aria-haspopup', 'dialog')
   adaptiveBtn.addEventListener('click', () => window.mnemosyneDifficulty?.openDialog?.())
 
-  const ctrlHelpBtn = makeHelpButton('help_control_bar')
+  const ctrlHelpBtn = makeHelpButton('help_control_bar_tooltip')
   secondary.append(flowBtn, focusBtn, adaptiveBtn, settingsBtn, ctrlHelpBtn)
   row.append(modeGroup, secondary)
+
+  const explainerWrap = document.createElement('div')
+  explainerWrap.className = 'reader-ctrl__explainer'
+
+  const explainerToggle = document.createElement('button')
+  explainerToggle.type = 'button'
+  explainerToggle.id = 'reader-modes-help-toggle'
+  explainerToggle.className = 'reader-ctrl__explainer-toggle'
+  explainerToggle.dataset.i18n = 'reader_modes_help_title'
+  explainerToggle.textContent = t('reader_modes_help_title')
+  explainerToggle.setAttribute('aria-expanded', 'false')
+  explainerToggle.setAttribute('aria-controls', 'reader-modes-help-panel')
+  explainerToggle.setAttribute('aria-label', t('reader_modes_help_aria'))
+
+  const explainerPanel = document.createElement('div')
+  explainerPanel.id = 'reader-modes-help-panel'
+  explainerPanel.className = 'reader-ctrl__explainer-panel'
+  explainerPanel.hidden = true
+  explainerPanel.setAttribute('role', 'region')
+  explainerPanel.setAttribute('aria-label', t('reader_modes_help_title'))
+  explainerPanel.dataset.i18n = 'reader_modes_help_body'
+  explainerPanel.textContent = t('reader_modes_help_body')
+
+  explainerToggle.addEventListener('click', () => {
+    const opening = explainerPanel.hidden
+    explainerPanel.hidden = !opening
+    explainerToggle.setAttribute('aria-expanded', String(opening))
+  })
+  explainerWrap.append(explainerToggle, explainerPanel)
 
   // ── System body — populated by adaptive-reader.js ─────────────────────────
   const systemBody = document.createElement('div')
@@ -139,7 +168,7 @@ function ensureToolbar() {
   systemBody.setAttribute('aria-label', t('reader_settings_aria'))
   systemBody.hidden = true
 
-  bar.append(row, systemBody)
+  bar.append(row, explainerWrap, systemBody)
   resultsSection.prepend(bar)
   return bar
 }
@@ -170,6 +199,17 @@ function syncToolbar() {
 
   const adaptiveBtn = bar.querySelector('#reader-adaptive-btn')
   if (adaptiveBtn) adaptiveBtn.textContent = t('adaptive_btn')
+
+  const explainerToggle = bar.querySelector('#reader-modes-help-toggle')
+  if (explainerToggle) {
+    explainerToggle.textContent = t('reader_modes_help_title')
+    explainerToggle.setAttribute('aria-label', t('reader_modes_help_aria'))
+  }
+  const explainerPanel = bar.querySelector('#reader-modes-help-panel')
+  if (explainerPanel) {
+    explainerPanel.setAttribute('aria-label', t('reader_modes_help_title'))
+    explainerPanel.textContent = t('reader_modes_help_body')
+  }
 
   syncFlowBtn()
 }
