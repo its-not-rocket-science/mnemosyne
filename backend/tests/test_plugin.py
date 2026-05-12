@@ -46,6 +46,19 @@ class TestPluginRegistry:
         registry = load_plugins()
         assert "en" in registry.all()
 
+    def test_en_plugin_is_real_non_stub_plugin(self) -> None:
+        registry = load_plugins()
+        plugin = registry.get("en")
+        assert plugin.__class__.__module__ == "backend.plugins.english"
+        assert plugin.__class__.__name__ == "EnglishPlugin"
+
+    def test_en_plugin_not_routed_through_stub_module(self) -> None:
+        registry = load_plugins()
+        plugin = registry.get("en")
+        module_name = plugin.__class__.__module__.lower()
+        assert "stub" not in module_name
+        assert "stub_en" not in module_name
+
     def test_fr_plugin_registered(self) -> None:
         registry = load_plugins()
         assert "fr" in registry.all()
@@ -61,6 +74,12 @@ class TestPluginRegistry:
         assert "en" in langs
         assert "fr" in langs
         assert "de" in langs
+
+    def test_english_available_where_spanish_and_french_are_available(self) -> None:
+        registry = load_plugins()
+        langs = registry.supported_languages()
+        if "es" in langs and "fr" in langs:
+            assert "en" in langs
 
     def test_supported_languages_returns_capabilities_objects(self) -> None:
         registry = load_plugins()
@@ -141,6 +160,14 @@ class TestPluginRegistry:
         assert caps.syntax_support is True
         assert caps.tts_lang_tag == "en"
 
+    def test_english_display_name_is_english_not_stub(self) -> None:
+        registry = load_plugins()
+        caps = registry.supported_languages()["en"]
+        assert caps.display_name == "English"
+        assert "stub" not in caps.display_name.lower()
+        assert "fake" not in caps.display_name.lower()
+        assert "incomplete" not in caps.display_name.lower()
+
     def test_french_capabilities_morphology(self) -> None:
         # French now uses the real spaCy plugin (fr_core_news_sm), not the stub.
         registry = load_plugins()
@@ -170,6 +197,13 @@ class TestPluginRegistry:
         rank = {"none": 0, "stub": 1, "partial": 2, "strong": 3, "gold": 4}
         assert rank[en.grammar_nuance] >= rank[es.grammar_nuance]
         assert rank[en.grammar_nuance] >= rank[fr.grammar_nuance]
+
+    def test_english_nuance_module_populated(self) -> None:
+        sentence = "Could you please make a decision?"
+        result = load_plugins().get("en").analyze_sentence(sentence)
+        nuance = [c for c in result.candidates if c.type == "nuance"]
+        assert nuance, "Expected non-empty nuance output from English plugin"
+        assert any(c.lesson_data.get("nuance_type") == "politeness" for c in nuance)
 
     def test_german_capabilities_morphology(self) -> None:
         registry = load_plugins()
