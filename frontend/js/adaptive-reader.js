@@ -1,9 +1,9 @@
 /*
   Adaptive reader memory layer.
 
-  IMPORTANT: this is an inferred exposure model, not direct assessment.
-  The bands (weak/fading/strong) are derived from local decay heuristics
-  plus dashboard FSRS state when available; they are not quiz/test grades.
+  Status bands prioritize persisted review outcomes when available and use
+  local recency/decay as a fallback. This keeps the Memory Map grounded in
+  real learner interactions while still behaving sensibly offline.
 
   Server-backed when available, local-first when offline:
   - local memory gives immediate UI adaptation
@@ -137,6 +137,9 @@ function defaultMemory(annotation) {
     type: annotation.dataset.type || annotation.dataset.typeLabel || '',
     objectId: annotationObjectId(annotation),
     source: 'default',
+    totalReviews: 0,
+    successfulReviews: 0,
+    failedReviews: 0,
     syncedAt: null,
   }
 }
@@ -205,9 +208,38 @@ function maybeApplyServerRecord(obj) {
     type: local?.type || '',
     objectId: key,
     totalReviews: obj.total_reviews || 0,
+    successfulReviews: obj.successful_reviews || 0,
+    failedReviews: obj.failed_reviews || 0,
     source: 'server',
     syncedAt: new Date().toISOString(),
   }
+}
+
+function hasReviewHistory(record) {
+  return Number(record?.totalReviews || 0) > 0
+}
+
+function isDue(record) {
+  const dueAt = record?.nextReview ? Date.parse(record.nextReview) : NaN
+  return Number.isFinite(dueAt) && dueAt <= Date.now()
+}
+
+function memoryBandFromRecord(record) {
+  const strength = currentStrength(record)
+  const successes = Number(record?.successfulReviews || 0)
+  const failures = Number(record?.failedReviews || 0)
+  const hasHistory = hasReviewHistory(record)
+  const due = isDue(record)
+
+  if (!hasHistory) {
+    if (strength < 0.55) return 'weak'
+    if (due || strength < 0.82) return 'fading'
+    return 'strong'
+  }
+
+  if (successes < 2 || failures > successes) return 'weak'
+  if (due || failures > 0 || strength < 0.82) return 'fading'
+  return 'strong'
 }
 
 async function syncServerMemory() {
@@ -286,7 +318,7 @@ function computeTier(annotation) {
 function applyAnnotationMemory(annotation) {
   const record = memoryFor(annotation)
   const strength = currentStrength(record)
-  const band = memoryBand(strength)
+  const band = memoryBandFromRecord(record)
 
   annotation.dataset.memoryStrength = strength.toFixed(2)
   annotation.dataset.memoryBand = band
@@ -384,7 +416,7 @@ function applyAdaptiveVisibility() {
     const record = memoryFor(annotation)
     const strength = currentStrength(record)
     const level = numericLevel(annotation)
-    const band = memoryBand(strength)
+    const band = memoryBandFromRecord(record)
 
     const shouldQuiet = adaptiveEnabled && strength >= 0.82 && level <= 2
     const shouldHideForReinforcement = reinforcementEnabled && band === 'strong'
@@ -582,7 +614,7 @@ function memoryStats() {
   const annotations = Array.from(results?.querySelectorAll('.reader-annotation') || [])
   const stats = { strong: 0, fading: 0, weak: 0, total: annotations.length }
   for (const annotation of annotations) {
-    const band = memoryBand(currentStrength(memoryFor(annotation)))
+    const band = memoryBandFromRecord(memoryFor(annotation))
     stats[band] += 1
   }
   return stats
@@ -618,7 +650,7 @@ function renderIntelligenceSummary() {
   summary.hidden = false
   const syncText = dashboardSyncedAt
     ? `${t('adaptive_synced')} ${dashboardSyncedAt.toLocaleTimeString()}`
-    : t('adaptive_local_memory')
+    : t('adaptive_memory_fallback')
 
   const statsDiv = summary.querySelector('.reader-intelligence-summary__stats')
   statsDiv.innerHTML = `
@@ -647,7 +679,7 @@ function renderMemoryMinimap() {
     const card = annotation.closest('.reader-sentence, .sentence-card')
     const index = Math.max(0, cards.indexOf(card))
     const strength = currentStrength(memoryFor(annotation))
-    const band = memoryBand(strength)
+    const band = memoryBandFromRecord(memoryFor(annotation))
     if (reinforcementEnabled && band === 'strong') return
 
     const tick = document.createElement('span')
