@@ -584,6 +584,7 @@ pickerFetchUrlBtn?.addEventListener('click', async () => {
     currentFilename      = null
     currentFetchedTitle  = data.title || null
     languageUserSelected = false
+    updatePickerCharCount()
 
     const chars = data.char_count.toLocaleString()
     if (data.detected_language) {
