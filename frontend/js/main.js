@@ -176,7 +176,9 @@ let currentText          = ''   // committed text from picker
 let activeFilterTypes    = null // Set<string> when filtered, null = show all
 
 let isFollowAlongEnabled = false
-let currentDepth         = 'scholar'
+const ANNOTATION_DEPTH_KEY = 'mn-annotation-depth'
+const DEPTH_FALLBACK = 'learning'
+let currentDepth = localStorage.getItem(ANNOTATION_DEPTH_KEY) || DEPTH_FALLBACK
 
 const languageCapabilities = new Map()
 let currentCaps = null
@@ -212,6 +214,27 @@ const TYPE_LEVEL = {
   nuance:          3,
   phrase_family:   3,
 }
+
+const ANNOTATION_DEPTH_MODEL = {
+  subtle: new Set(['vocabulary']),
+  learning: new Set(['vocabulary', 'conjugation', 'agreement', 'grammar']),
+  deep: new Set([
+    'vocabulary',
+    'conjugation',
+    'agreement',
+    'grammar',
+    'script',
+    'transliteration',
+    'idiom',
+    'nuance',
+    'phrase_family',
+    'etymology',
+    'memory_map',
+    'cultural_note',
+  ]),
+}
+
+if (!ANNOTATION_DEPTH_MODEL[currentDepth]) currentDepth = DEPTH_FALLBACK
 
 
 // ── Defocus on pointer interaction ────────────────────────────────────────────
@@ -1158,11 +1181,14 @@ detailPane?.addEventListener('pane-navigate', async (event) => {
 // ── TopNav event wiring ───────────────────────────────────────────────────────
 
 const topNav = document.querySelector('mnemosyne-top-nav')
+if (topNav && currentDepth) topNav.depth = currentDepth
 
 
 topNav?.addEventListener('depth-change', ({ detail }) => {
   currentDepth = detail.depth
+  localStorage.setItem(ANNOTATION_DEPTH_KEY, currentDepth)
   detailPane?.updateDepth(detail.depth)
+  applyAnnotationFilter()
 })
 
 filterBar?.addEventListener('filter-change', ({ detail }) => {
@@ -1607,8 +1633,11 @@ function buildMinimap() {
 // ── Annotation filters ────────────────────────────────────────────────────────
 
 function applyAnnotationFilter() {
+  const depthTypes = ANNOTATION_DEPTH_MODEL[currentDepth] ?? ANNOTATION_DEPTH_MODEL[DEPTH_FALLBACK]
   results?.querySelectorAll('.reader-annotation').forEach(mark => {
-    mark.toggleAttribute('data-filtered', activeFilterTypes !== null && !activeFilterTypes.has(mark.dataset.type))
+    const typeAllowedByDepth = depthTypes.has(mark.dataset.type)
+    const typeAllowedByUserFilter = activeFilterTypes === null || activeFilterTypes.has(mark.dataset.type)
+    mark.toggleAttribute('data-filtered', !(typeAllowedByDepth && typeAllowedByUserFilter))
   })
   requestAnimationFrame(buildMinimap)
 }

@@ -141,7 +141,7 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   show({ lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, onTranslate, depth, uiLang }) {
     this.#lastShowArgs  = { lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, onTranslate, depth, uiLang }
-    this.#config        = { lesson, sentenceText, language, dir: dir ?? 'ltr', ttsTag, caps, depth: depth ?? 'scholar', uiLang: uiLang ?? 'en' }
+    this.#config        = { lesson, sentenceText, language, dir: dir ?? 'ltr', ttsTag, caps, depth: depth ?? 'deep', uiLang: uiLang ?? 'en' }
     this.#onSpeak       = onSpeak ?? null
     this.#onTranslate   = onTranslate ?? null
     this.#vocabTranslationFetched    = false
@@ -225,7 +225,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     const meta = TYPE_META[type] ?? TYPE_META.vocabulary
     const metaLabel = t(meta.labelKey) || meta.labelKey
 
-    const depthIdx = { basic: 0, intermediate: 1, scholar: 2 }[depth ?? 'scholar'] ?? 2
+    const depthIdx = { subtle: 0, learning: 1, deep: 2 }[depth ?? 'deep'] ?? 2
 
     // Which optional tabs have data?
     const hasOrigins = Boolean(ld.origin || ld.etymology || ld.source_text)
@@ -236,7 +236,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     )
 
     // Depth controls which tabs are exposed.
-    // basic=0: Explanation only.  intermediate=1: + Origins + Context.  scholar=2: all.
+    // subtle=0: Explanation only. learning=1: + Origins + Context. deep=2: all.
     this.#visibleTabs = MnemosyneDetailPane.ALL_TABS.filter(t => {
       if (t.id === 'explanation') return true
       if (t.id === 'origins')     return depthIdx >= 1 && hasOrigins

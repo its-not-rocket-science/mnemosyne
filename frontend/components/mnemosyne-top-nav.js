@@ -35,7 +35,7 @@ const SELECT_ARROW = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/20
 class MnemosyneTopNav extends HTMLElement {
   #shadow
   #expanded = false
-  #depth    = 'scholar'
+  #depth    = 'learning'
 
   constructor() {
     super()
@@ -52,6 +52,16 @@ class MnemosyneTopNav extends HTMLElement {
   // ── Public getters ──────────────────────────────────────────────────────────
 
   get depth() { return this.#depth }
+  set depth(value) {
+    if (!['subtle', 'learning', 'deep'].includes(value)) return
+    this.#depth = value
+    if (!this.#shadow) return
+    for (const id of ['depth-select', 'xdepth']) {
+      const el = this.#shadow.getElementById(id)
+      if (el) el.value = value
+    }
+    this.#updateModeIndicator()
+  }
 
   // ── Template ────────────────────────────────────────────────────────────────
 
@@ -70,12 +80,12 @@ class MnemosyneTopNav extends HTMLElement {
 
   <div class="nav__mid">
 
-    <select class="nav__pill" id="depth-select" aria-label="Lesson depth">
-      <option value="" disabled hidden>Depth</option>
-      <option value="quick">Quick</option>
-      <option value="learner">Learner</option>
-      <option value="scholar">Scholar</option>
+    <select class="nav__pill" id="depth-select" aria-label="Annotation depth">
+      <option value="subtle">Subtle</option>
+      <option value="learning">Learning</option>
+      <option value="deep">Deep</option>
     </select>
+    <span class="nav__mode-indicator" id="mode-indicator" aria-live="polite">Mode: Learning</span>
 
     <button class="nav__ctrl nav__settings" id="settings-btn"
             type="button" aria-label="Settings">&#x2699;&#xFE0E;</button>
@@ -95,11 +105,10 @@ class MnemosyneTopNav extends HTMLElement {
 
 <!-- Expanded row: depth + settings (mobile only) -->
 <div class="nav__xrow" id="xrow" hidden>
-  <select class="nav__pill" id="xdepth" aria-label="Lesson depth">
-    <option value="" disabled hidden>Depth</option>
-    <option value="quick">Quick</option>
-    <option value="learner">Learner</option>
-    <option value="scholar">Scholar</option>
+  <select class="nav__pill" id="xdepth" aria-label="Annotation depth">
+    <option value="subtle">Subtle</option>
+    <option value="learning">Learning</option>
+    <option value="deep">Deep</option>
   </select>
   <button class="nav__ctrl nav__settings" id="xsettings"
           type="button" aria-label="Settings">&#x2699;&#xFE0E;</button>
@@ -120,7 +129,7 @@ class MnemosyneTopNav extends HTMLElement {
           bubbles: true, composed: true,
           detail: { depth: this.#depth },
         }))
-        requestAnimationFrame(() => { e.target.value = '' })
+        this.#updateModeIndicator()
       })
     }
 
@@ -130,10 +139,10 @@ class MnemosyneTopNav extends HTMLElement {
     $('settings-btn').addEventListener('click', openSettings)
     $('xsettings').addEventListener('click', openSettings)
 
-    // Reset pill selects to placeholder (shows label, not last value)
     for (const id of ['depth-select', 'xdepth']) {
-      const el = $(id); if (el) el.value = ''
+      const el = $(id); if (el) el.value = this.#depth
     }
+    this.#updateModeIndicator()
 
     // Expand / collapse
     $('expand-btn').addEventListener('click', () => this.#toggleExpand())
@@ -143,6 +152,12 @@ class MnemosyneTopNav extends HTMLElement {
   #syncSelect(idA, idB, changedId, value) {
     const other = this.#shadow.getElementById(changedId === idA ? idB : idA)
     if (other) other.value = value
+  }
+
+  #updateModeIndicator() {
+    const label = this.#depth.charAt(0).toUpperCase() + this.#depth.slice(1)
+    const indicator = this.#shadow.getElementById('mode-indicator')
+    if (indicator) indicator.textContent = `Mode: ${label}`
   }
 
   // ── Mobile expand ────────────────────────────────────────────────────────────
@@ -256,6 +271,15 @@ class MnemosyneTopNav extends HTMLElement {
 }
 
 .nav__settings { font-size: 0.95rem; }
+
+.nav__mode-indicator {
+  font-size: 0.74rem;
+  color: oklch(0.86 0.02 280);
+  border: 1px solid rgb(255 255 255 / 0.2);
+  border-radius: 999px;
+  padding: 0.1rem 0.45rem;
+  white-space: nowrap;
+}
 
 /* ── Pill selects ─────────────────────────────────────────────────────────── */
 
