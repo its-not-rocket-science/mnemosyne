@@ -459,6 +459,11 @@ const SAMPLE_TEXTS = {
 
 const EXCLUDED_SAMPLE_LANGUAGES = new Set(['x-cjk-test', 'x-rtl-test'])
 
+
+function syncSampleLanguagePickerOptions() {
+  populateSampleLanguageSelect()
+}
+
 function populateSampleLanguageSelect() {
   if (!pickerSampleLanguageSelect) return
   const activeLang = pickerSampleLanguageSelect.value || languageSelect.value || 'es'

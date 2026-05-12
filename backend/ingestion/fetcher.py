@@ -23,6 +23,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 from urllib.parse import urlparse
+from copy import deepcopy
 
 import httpx
 from bs4 import BeautifulSoup
@@ -176,12 +177,18 @@ def _extract(html: str, url: str) -> FetchResult:
         if node:
             selector_candidates.append(node)
 
+    analysis_soup = soup
     if _is_gutenberg_url(url):
+        # Gutenberg pages often append footnotes at the bottom; remove them before
+        # scoring candidate content roots so chapter text wins.
+        analysis_soup = deepcopy(soup)
+        for node in analysis_soup.find_all(_looks_like_footnotes):
+            node.decompose()
         selector_candidates = [node for node in selector_candidates if not _looks_like_footnotes(node)]
 
-    best_overall = _best_content_block(soup)
+    best_overall = _best_content_block(analysis_soup)
     ranked_candidates = [*selector_candidates, *( [best_overall] if best_overall else [])]
-    content_root = max(ranked_candidates, key=_node_content_score, default=None) or soup.body or soup
+    content_root = max(ranked_candidates, key=_node_content_score, default=None) or analysis_soup.body or analysis_soup
 
     # ── Extract and normalise plain text ─────────────────────────────────────
     text = _extract_readable_text(content_root)
@@ -223,7 +230,7 @@ def _looks_like_footnotes(node: Tag) -> bool:
         for x in [node.get("id", ""), " ".join(node.get("class", []))]
         if x
     )
-    if any(k in attrs for k in ("footnote", "notes", "endnote")):
+    if re.search(r"\b(footnotes?|endnotes?)\b", attrs):
         return True
     headings = " ".join(
         h.get_text(" ", strip=True).lower() for h in node.find_all(["h1", "h2", "h3"], limit=3)
