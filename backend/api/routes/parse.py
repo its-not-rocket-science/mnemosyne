@@ -2,7 +2,7 @@ import logging
 import time
 from datetime import UTC, datetime
 
-from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Request
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Request, Response
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -31,6 +31,7 @@ router = APIRouter(tags=["parse"])
 @limiter.limit(lambda: get_settings().rate_limit_parse)
 async def parse_text(
     request: Request,
+    response: Response,
     payload: ParseRequest,
     background_tasks: BackgroundTasks,
     registry: PluginRegistry = Depends(get_plugin_registry),
@@ -62,7 +63,13 @@ async def parse_text(
         cache_key=pipeline_cache_key(payload.text, payload.language),
     )
 
+    debug_id = f"parse-{int(time.time() * 1000)}"
+    response.headers["X-Mnemosyne-Parse-Debug-Id"] = debug_id
     if result.cache_hit:
+        logger.info(
+            "parse_debug id=%s cache_hit=true lang=%s chars=%d sentences=%d",
+            debug_id, payload.language, len(payload.text), len(result.sentences),
+        )
         return ParseResponse(sentences=result.sentences)
 
     background_tasks.add_task(
@@ -78,6 +85,19 @@ async def parse_text(
         len(result.sentences),
         len(result.uuid_to_candidate),
         (time.perf_counter() - t0) * 1000,
+    )
+    candidate_preview = [
+        {
+            "sentence": c.text,
+            "candidates": [{"label": o.label, "type": o.type, "canonical_form": o.canonical_form} for o in c.candidates],
+        }
+        for c in result.candidate_results[:3]
+    ]
+    logger.info(
+        "parse_debug id=%s cache_hit=false tokenization=%s preview=%s",
+        debug_id,
+        getattr(plugin.capabilities, "tokenization_mode", "unknown"),
+        candidate_preview,
     )
     return ParseResponse(sentences=result.sentences)
 
