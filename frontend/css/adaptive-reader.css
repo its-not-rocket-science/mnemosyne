@@ -199,6 +199,18 @@ body[data-reveal-known] [data-adaptively-quiet] {
   opacity: 0.2 !important;
 }
 
+[data-category-hidden] {
+  display: none !important;
+}
+
+.reader-ctrl__system-group--categories {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
 .reader-mastery-controls {
   display: flex;
   gap: 0.3rem;
