@@ -427,6 +427,15 @@ label {
   font-weight: 600;
 }
 
+/* Keep focus outlines from colliding with labels when controls receive focus.
+   Applies to stacked field layouts (label on one line, control below). */
+.field > label + input,
+.field > label + textarea,
+.field > label + select,
+.field > label + .input-group {
+  margin-block-start: 0.4rem;
+}
+
 .field-hint {
   font-weight: 400;
   color: var(--muted);
