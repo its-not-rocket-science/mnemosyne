@@ -415,6 +415,33 @@ body.reader-flow-mode.reader-flow-playing .sentence-card[data-flow-active] {
   flex-shrink: 0;
 }
 
+.reader-intelligence-summary__how {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.35rem 0.6rem;
+  background: var(--surface);
+}
+
+.reader-intelligence-summary__how-summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.reader-intelligence-summary__how-body {
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.reader-intelligence-summary__how-body p {
+  margin: 0 0 0.35rem;
+}
+
+.reader-intelligence-summary__how-body ul {
+  margin: 0;
+  padding-inline-start: 1.1rem;
+}
+
 .help-popover {
   position: fixed;
   inset: unset;
