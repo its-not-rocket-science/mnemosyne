@@ -8,7 +8,8 @@ from __future__ import annotations
 
 import re
 
-from backend.dictionary.phrase_families import lookup_family_by_id, match_phrase_families
+from backend.dictionary.phrase_families import lookup_family_by_id
+from backend.nuance.en import EnglishNuanceExtractor
 from backend.parsing.plugin_interface import Token
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
@@ -55,6 +56,7 @@ class EnglishPlugin:
 
     def __init__(self) -> None:
         self.lesson_store: dict[str, CandidateObject] = {}
+        self.nuance_extractor = EnglishNuanceExtractor()
 
     # ------------------------------------------------------------------
     # LanguagePlugin protocol
@@ -68,18 +70,25 @@ class EnglishPlugin:
 
     def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
         tokens = self._tokenize(sentence)
-        phrase_candidates = self._extract_phrase_families(tokens)
-        # Collect token positions consumed by phrase matches so vocabulary
-        # extraction skips those tokens (avoids double-tagging).
-        phrase_surfaces: set[str] = set()
-        for pc in phrase_candidates:
-            if pc.surface_form:
-                for w in pc.surface_form.lower().split():
-                    phrase_surfaces.add(w)
-        vocab_candidates = self._extract_vocabulary(tokens, skip_words=phrase_surfaces)
+        vocab_candidates = self._extract_vocabulary(tokens)
+        nuance_candidates = self.nuance_extractor.extract_nuance(
+            sentence=sentence,
+            tokens=tokens,
+            candidates=vocab_candidates,
+            language=self.language_code,
+        )
+        skip_words = self._phrase_surface_words(nuance_candidates)
+        if skip_words:
+            vocab_candidates = self._extract_vocabulary(tokens, skip_words=skip_words)
+            nuance_candidates = self.nuance_extractor.extract_nuance(
+                sentence=sentence,
+                tokens=tokens,
+                candidates=vocab_candidates,
+                language=self.language_code,
+            )
         return CandidateSentenceResult(
             text=sentence,
-            candidates=phrase_candidates + vocab_candidates,
+            candidates=nuance_candidates + vocab_candidates,
         )
 
     def get_lesson(self, object_id: str) -> CandidateObject | None:
@@ -98,9 +107,15 @@ class EnglishPlugin:
             for w in _WORD_RE.findall(sentence)
         ]
 
-    def _extract_phrase_families(self, tokens: list[Token]) -> list[CandidateObject]:
-        surfaces = [t.text for t in tokens]
-        return match_phrase_families(surfaces, language="en")
+    def _phrase_surface_words(self, candidates: list[CandidateObject]) -> set[str]:
+        skip: set[str] = set()
+        for candidate in candidates:
+            if candidate.type not in {"phrase_family", "idiom"}:
+                continue
+            if not candidate.surface_form:
+                continue
+            skip.update(word.lower() for word in candidate.surface_form.split())
+        return skip
 
     def _extract_vocabulary(
         self,
