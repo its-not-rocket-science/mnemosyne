@@ -1554,22 +1554,51 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam, de
     }
   }
 
-  // Sort by start; prefer longer match at same start
-  ranges.sort((a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start))
+  const typePriority = {
+    conjugation: 6,
+    vocabulary: 5,
+    nuance: 4,
+    grammar: 4,
+    idiom: 3,
+    phrase_family: 3,
+    agreement: 2,
+    case_agreement: 2,
+  }
+  const priorityOf = (r) => typePriority[r?.item?.type] ?? 1
 
-  // Greedy non-overlapping selection
+  // Sort by start, then pedagogical priority, then longer match.
+  ranges.sort((a, b) => (
+    a.start - b.start
+    || priorityOf(b) - priorityOf(a)
+    || (b.end - b.start) - (a.end - a.start)
+  ))
+
+  // Greedy non-overlapping selection with replacement if a higher-priority
+  // span competes with the most-recent selected span.
   const selected = []
-  let lastEnd = 0
   for (const r of ranges) {
-    if (r.start < lastEnd) {
-      const match = debugRanges.find(x => x.start === r.start && x.end === r.end && x.label === r.item.label)
-      if (match) match.status = 'overlap_skipped'
+    const prev = selected[selected.length - 1]
+    const overlapsPrev = Boolean(prev) && r.start < prev.end
+    if (overlapsPrev) {
+      const better = priorityOf(r) > priorityOf(prev)
+      const samePriLonger = priorityOf(r) === priorityOf(prev)
+        && (r.end - r.start) > (prev.end - prev.start)
+      if (better || samePriLonger) {
+        const prevMatch = debugRanges.find(x => x.start === prev.start && x.end === prev.end && x.label === prev.item.label)
+        if (prevMatch) prevMatch.status = 'overlap_skipped'
+        selected[selected.length - 1] = r
+        const match = debugRanges.find(x => x.start === r.start && x.end === r.end && x.label === r.item.label)
+        if (match) match.status = 'selected'
+      } else {
+        const match = debugRanges.find(x => x.start === r.start && x.end === r.end && x.label === r.item.label)
+        if (match) match.status = 'overlap_skipped'
+      }
       continue
     }
+
     selected.push(r)
     const match = debugRanges.find(x => x.start === r.start && x.end === r.end && x.label === r.item.label)
     if (match) match.status = 'selected'
-    lastEnd = r.end
   }
 
   let cursor = 0
