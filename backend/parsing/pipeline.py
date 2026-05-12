@@ -34,6 +34,26 @@ from backend.schemas.parse import (
 
 logger = logging.getLogger(__name__)
 
+
+def _restore_sentence_texts(text: str, plugin, candidate_results: list[CandidateSentenceResult]) -> list[CandidateSentenceResult]:
+    """Restore sentence surface text from the source passage when possible.
+
+    Some plugin/extractor stacks may accidentally emit term-only strings in
+    ``CandidateSentenceResult.text``.  Reader rendering must always use the
+    original passage sentence text, so we align by sentence index when plugin
+    sentence splitting is available and lengths match.
+    """
+    try:
+        source_sentences = plugin.split_sentences(text)
+    except Exception:
+        return candidate_results
+    if len(source_sentences) != len(candidate_results):
+        return candidate_results
+    return [
+        cr.model_copy(update={"text": source_sentences[i]})
+        for i, cr in enumerate(candidate_results)
+    ]
+
 # Bump when pipeline output changes incompatibly so stale cached responses are
 # automatically bypassed.  v3 adds lesson_engine enrichment to all callers.
 _CACHE_VERSION = "3"
@@ -95,6 +115,7 @@ async def run_pipeline(
         language,
         len(candidate_results),
     )
+    candidate_results = _restore_sentence_texts(text, plugin, candidate_results)
 
     # 2a. Contract validation (opt-in; set MNEMOSYNE_CONTRACT_CHECK=1).
     if CONTRACT_CHECK:

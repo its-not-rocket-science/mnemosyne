@@ -210,3 +210,26 @@ async def test_object_ids_are_stable_across_calls(client, mock_plugin):
     ids1 = [lo["id"] for s in r1.json()["sentences"] for lo in s["learnable_objects"]]
     ids2 = [lo["id"] for s in r2.json()["sentences"] for lo in s["learnable_objects"]]
     assert ids1 == ids2
+
+
+@pytest.mark.asyncio
+async def test_spanish_sample_preserves_full_sentence_text_even_if_plugin_text_is_corrupted(client, mock_plugin):
+    sample = (
+        "El sol brillaba sobre las montañas mientras los viajeros descansaban junto al río. "
+        "El agua fría refrescaba sus pies cansados después de un largo día de camino."
+    )
+    corrupted = [
+        CandidateSentenceResult(text="sobre mientras .", candidates=[]),
+        CandidateSentenceResult(text="El de un de .", candidates=[]),
+    ]
+    mock_plugin.analyze_text.return_value = corrupted
+    mock_plugin.split_sentences.return_value = [
+        "El sol brillaba sobre las montañas mientras los viajeros descansaban junto al río.",
+        "El agua fría refrescaba sus pies cansados después de un largo día de camino.",
+    ]
+
+    resp = await client.post("/parse", json={"language": LANGUAGE, "text": sample})
+    assert resp.status_code == 200, resp.text
+
+    sentences = resp.json()["sentences"]
+    assert [s["text"] for s in sentences] == mock_plugin.split_sentences.return_value
