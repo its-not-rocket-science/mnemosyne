@@ -17,6 +17,7 @@ import { queueReview } from './offline.js'
 import { t } from './i18n.js'
 import { makeHelpButton } from './help-popover.js'
 import { API_BASE } from './config.js'
+import { computeAdaptiveProfile } from './adaptive-policy.js'
 
 const results = document.querySelector('#results')
 const resultsSection = document.querySelector('#results-section')
@@ -58,6 +59,9 @@ let adaptiveEnabled = localStorage.getItem(SETTINGS_KEY) !== 'false'
 let reinforcementEnabled = localStorage.getItem(REINFORCEMENT_KEY) === 'true'
 let memory = readMemory()
 let dashboardSyncedAt = null
+const ADAPTIVE_OVERRIDE_KEY = 'mnemosyne.reader.adaptive.overrides.v1'
+let adaptiveOverrides = readAdaptiveOverrides()
+let adaptiveProfile = null
 
 function readMemory() {
   try {
@@ -85,6 +89,43 @@ function readMemory() {
   } catch {
     return {}
   }
+}
+
+
+function readAdaptiveOverrides() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(ADAPTIVE_OVERRIDE_KEY) || '{}')
+    return parsed && typeof parsed === 'object' ? parsed : {}
+  } catch {
+    return {}
+  }
+}
+
+function writeAdaptiveOverrides() {
+  localStorage.setItem(ADAPTIVE_OVERRIDE_KEY, JSON.stringify(adaptiveOverrides))
+}
+
+function selectedReaderLevel() {
+  return localStorage.getItem('mnemosyne.cefr.level') || localStorage.getItem('mn-cefr-level') || ''
+}
+
+function computeAdaptiveState() {
+  const stats = memoryStats()
+  const reviewed = Object.values(memory).filter(hasReviewHistory)
+  const totalReviews = reviewed.reduce((n, r) => n + Number(r.totalReviews || 0), 0)
+  const successes = reviewed.reduce((n, r) => n + Number(r.successfulReviews || 0), 0)
+  const accuracy = totalReviews > 0 ? successes / totalReviews : 0.5
+  adaptiveProfile = computeAdaptiveProfile({
+    level: selectedReaderLevel(),
+    memory: stats,
+    reviews: { total: totalReviews, accuracy },
+    annotationUsage: reviewed.length,
+  })
+  return adaptiveProfile
+}
+
+function effectiveAdaptiveValue(key) {
+  return adaptiveOverrides[key] || adaptiveProfile?.[key]
 }
 
 function writeMemory() {
@@ -408,6 +449,7 @@ function flashDifficultyAdjustment(mode) {
 }
 
 function applyAdaptiveVisibility() {
+  computeAdaptiveState()
   document.body.classList.toggle('reader-adaptive-enabled', adaptiveEnabled)
   document.body.classList.toggle('reader-reinforcement-enabled', reinforcementEnabled)
 
@@ -418,7 +460,9 @@ function applyAdaptiveVisibility() {
     const level = numericLevel(annotation)
     const band = memoryBandFromRecord(record)
 
-    const shouldQuiet = adaptiveEnabled && strength >= 0.82 && level <= 2
+    const density = effectiveAdaptiveValue('annotationDensity')
+    const quietThreshold = density === 'guided' ? 0.92 : density === 'light' ? 0.7 : 0.82
+    const shouldQuiet = adaptiveEnabled && strength >= quietThreshold && level <= 2
     const shouldHideForReinforcement = reinforcementEnabled && band === 'strong'
 
     annotation.toggleAttribute('data-adaptively-quiet', shouldQuiet)
@@ -496,7 +540,23 @@ function populateSystemBody(container) {
     announce(t('adaptive_reset'))
   })
 
-  actionGroup.append(sync, reset)
+  const override = document.createElement('select')
+  override.className = 'reader-adaptive-override'
+  ;['', 'guided', 'balanced', 'light'].forEach(val => {
+    const opt = document.createElement('option')
+    opt.value = val
+    opt.textContent = val || t('adaptive_on')
+    override.appendChild(opt)
+  })
+  override.value = adaptiveOverrides.annotationDensity || ''
+  override.addEventListener('change', () => {
+    if (override.value) adaptiveOverrides.annotationDensity = override.value
+    else delete adaptiveOverrides.annotationDensity
+    writeAdaptiveOverrides()
+    applyAdaptiveVisibility()
+    renderIntelligenceSummary()
+  })
+  actionGroup.append(override, sync, reset)
   container.append(memGroup, actionGroup)
 }
 
@@ -672,6 +732,8 @@ function renderIntelligenceSummary() {
   const syncText = dashboardSyncedAt
     ? `${t('adaptive_synced')} ${dashboardSyncedAt.toLocaleTimeString()}`
     : t('adaptive_memory_fallback')
+  const profile = computeAdaptiveState()
+  const reasons = (profile?.reasons || []).join(', ')
 
   const statsDiv = summary.querySelector('.reader-intelligence-summary__stats')
   statsDiv.innerHTML = `
@@ -680,6 +742,7 @@ function renderIntelligenceSummary() {
     <span><b>${stats.fading}</b> <span data-i18n="adaptive_memory_fading_stat">${t('adaptive_memory_fading_stat')}</span></span>
     <span><b>${stats.strong}</b> <span data-i18n="adaptive_memory_strong_stat">${t('adaptive_memory_strong_stat')}</span></span>
     <small>${syncText}</small>
+    <small>${t('adaptive_path_label')}: ${effectiveAdaptiveValue('annotationDensity') || 'balanced'}${reasons ? ` · ${reasons}` : ''}</small>
   `
 
   const howWorksSummary = summary.querySelector('.reader-intelligence-summary__how-summary')
