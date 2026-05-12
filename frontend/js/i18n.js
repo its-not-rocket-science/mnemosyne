@@ -219,7 +219,7 @@ const STRINGS = {
     reader_open_full_lesson:  "Open full lesson",
     // Help popovers
     help_btn_aria:            "Help",
-    help_intelligence_summary: "Tracks how well you know each highlighted term. Weak = new or forgotten; Fading = due for review; Strong = well learned.",
+    help_intelligence_summary: "Memory Map is an inferred exposure signal, not a graded test score. Weak/Fading/Strong come from recency + review scheduling + your manual labels.",
     help_control_bar:         "Subtle hides most annotations; Learning shows key terms; Deep reveals all. Flow reads sentence-by-sentence. Focus dims the page. Adaptive tunes difficulty. ⚙ opens advanced settings.",
     // Adaptive reader toolbar
     adaptive_reader_label:    "Adaptive",
@@ -232,7 +232,7 @@ const STRINGS = {
     adaptive_memory_weak:     "Weak",
     adaptive_memory_learning: "Learning",
     adaptive_memory_known:    "Known",
-    adaptive_memory_map:      "Memory map",
+    adaptive_memory_map:      "Exposure map",
     adaptive_memory_weak_stat:"weak",
     adaptive_memory_fading_stat:"fading",
     adaptive_memory_strong_stat:"strong",
