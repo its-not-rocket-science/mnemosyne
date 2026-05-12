@@ -29,6 +29,50 @@ const MODES = [
 let currentMode = localStorage.getItem(STORAGE_MODE_KEY) || 'learning'
 let focusMode = localStorage.getItem(STORAGE_FOCUS_KEY) === 'true'
 
+let focusTicking = false
+
+function clearFocusBlock() {
+  results?.querySelectorAll('[data-focus-block]').forEach(el => {
+    el.removeAttribute('data-focus-block')
+    el.removeAttribute('aria-current')
+  })
+}
+
+function setFocusBlock(target) {
+  if (!(target instanceof HTMLElement)) return
+  const card = target.closest('.sentence-card')
+  if (!(card instanceof HTMLElement)) return
+  clearFocusBlock()
+  card.setAttribute('data-focus-block', 'true')
+  card.setAttribute('aria-current', 'true')
+}
+
+function updateViewportFocusBlock() {
+  if (!focusMode || !results) return
+  if (isFlowMode()) return
+  const cards = [...results.querySelectorAll('.sentence-card')]
+  if (!cards.length) return
+  const center = window.innerHeight * 0.42
+  let best = cards[0]
+  let bestDist = Number.POSITIVE_INFINITY
+  for (const card of cards) {
+    const rect = card.getBoundingClientRect()
+    if (rect.bottom < 0 || rect.top > window.innerHeight) continue
+    const dist = Math.abs(((rect.top + rect.bottom) / 2) - center)
+    if (dist < bestDist) { bestDist = dist; best = card }
+  }
+  setFocusBlock(best)
+}
+
+function scheduleViewportFocusBlock() {
+  if (focusTicking) return
+  focusTicking = true
+  requestAnimationFrame(() => {
+    focusTicking = false
+    updateViewportFocusBlock()
+  })
+}
+
 function announce(message) {
   if (!a11yLive) return
   a11yLive.textContent = ''
@@ -264,7 +308,16 @@ document.addEventListener('keydown', (event) => {
 document.addEventListener('mnemosyne:flow-mode-changed', () => {
   syncToolbar()
   if (isFlowMode() && getActiveSentenceIndex() < 0) stepFlowSentence(1)
+  scheduleViewportFocusBlock()
 })
+
+document.addEventListener('scroll', scheduleViewportFocusBlock, { passive: true })
+document.addEventListener('focusin', (event) => {
+  if (!focusMode) return
+  if (isFlowMode()) return
+  setFocusBlock(event.target)
+})
+document.addEventListener('mnemosyne:render-complete', scheduleViewportFocusBlock)
 
 function setMode(mode) {
   if (!MODES.some(m => m.value === mode)) mode = 'learning'
@@ -279,6 +332,8 @@ function setFocusMode(next) {
   focusMode = Boolean(next)
   localStorage.setItem(STORAGE_FOCUS_KEY, String(focusMode))
   document.body.classList.toggle('reader-focus-mode', focusMode)
+  if (!focusMode) clearFocusBlock()
+  else scheduleViewportFocusBlock()
   syncToolbar()
   announce(focusMode ? t('reader_focus_on') : t('reader_focus_off'))
 }
@@ -455,6 +510,7 @@ function observeResults() {
       })
     }
     ensureToolbar()
+    scheduleViewportFocusBlock()
   })
   observer.observe(results, { childList: true, subtree: true })
   enhanceAnnotations(results)
