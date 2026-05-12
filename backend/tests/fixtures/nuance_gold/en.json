@@ -1,7 +1,7 @@
 {
   "language": "en",
-  "plugin_module": "backend.plugins.stub_en",
-  "plugin_class": "EnglishStubPlugin",
+  "plugin_module": "backend.plugins.english",
+  "plugin_class": "EnglishPlugin",
   "nuance_extractor_module": null,
   "nuance_extractor_class": null,
   "tokenizer": "words",

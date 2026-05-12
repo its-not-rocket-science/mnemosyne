@@ -1,4 +1,4 @@
-"""Tests for the English stub plugin (EnglishStubPlugin).
+"""Tests for the English plugin (EnglishPlugin).
 
 Covers:
 - LanguagePlugin protocol conformance
@@ -13,7 +13,7 @@ from __future__ import annotations
 import pytest
 
 from backend.parsing.canonical import canonical_object_id
-from backend.plugins.stub_en import EnglishStubPlugin
+from backend.plugins.english import EnglishPlugin
 from backend.schemas.language import LanguageCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
@@ -23,7 +23,7 @@ from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 class TestEnglishStubProtocol:
     def setup_method(self) -> None:
-        self.plugin = EnglishStubPlugin()
+        self.plugin = EnglishPlugin()
 
     def test_language_code_is_en(self) -> None:
         assert self.plugin.language_code == "en"
@@ -63,7 +63,7 @@ class TestEnglishStubProtocol:
 
 class TestEnglishStubSentenceSplitting:
     def setup_method(self) -> None:
-        self.plugin = EnglishStubPlugin()
+        self.plugin = EnglishPlugin()
 
     def test_single_sentence_returns_one_item(self) -> None:
         assert len(self.plugin.split_sentences("The cat sat.")) == 1
@@ -94,7 +94,7 @@ class TestEnglishStubSentenceSplitting:
 
 class TestEnglishStubVocabulary:
     def setup_method(self) -> None:
-        self.plugin = EnglishStubPlugin()
+        self.plugin = EnglishPlugin()
 
     def _vocab(self, sentence: str) -> list[CandidateObject]:
         result = self.plugin.analyze_sentence(sentence)
@@ -144,7 +144,7 @@ class TestEnglishStubVocabulary:
 
 class TestEnglishStubPhrases:
     def setup_method(self) -> None:
-        self.plugin = EnglishStubPlugin()
+        self.plugin = EnglishPlugin()
 
     def _candidates(self, sentence: str) -> list[CandidateObject]:
         return self.plugin.analyze_sentence(sentence).candidates
@@ -200,7 +200,7 @@ class TestEnglishStubPhrases:
 
 class TestEnglishStubLessonStore:
     def setup_method(self) -> None:
-        self.plugin = EnglishStubPlugin()
+        self.plugin = EnglishPlugin()
 
     def test_missing_id_returns_none(self) -> None:
         assert self.plugin.get_lesson("nonexistent-uuid") is None
@@ -219,7 +219,7 @@ class TestEnglishStubLessonStore:
         assert stored.canonical_form == "gold"
 
     def test_lesson_store_independent_across_instances(self) -> None:
-        plugin2 = EnglishStubPlugin()
+        plugin2 = EnglishPlugin()
         obj_id = canonical_object_id("en", "vocabulary", "silver")
         self.plugin.lesson_store[obj_id] = CandidateObject(
             canonical_form="silver", type="vocabulary", label="silver",
