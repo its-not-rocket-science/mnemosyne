@@ -10,7 +10,7 @@
 */
 
 import { t } from './i18n.js'
-import { toggleFlowMode, isFlowMode, syncFlowBtn } from './flow-mode.js'
+import { toggleFlowMode, isFlowMode, syncFlowBtn, stepFlowSentence, getActiveSentenceIndex } from './flow-mode.js'
 import { makeHelpButton } from './help-popover.js'
 
 const results = document.querySelector('#results')
@@ -128,7 +128,29 @@ function ensureToolbar() {
   adaptiveBtn.addEventListener('click', () => window.mnemosyneDifficulty?.openDialog?.())
 
   const ctrlHelpBtn = makeHelpButton('help_control_bar_tooltip')
-  secondary.append(flowBtn, focusBtn, adaptiveBtn, settingsBtn, ctrlHelpBtn)
+  const flowPrevBtn = makeButton({
+    text: t('reader_flow_prev'),
+    i18nKey: 'reader_flow_prev',
+    className: 'reader-focus-btn',
+  })
+  flowPrevBtn.id = 'reader-flow-prev-btn'
+  flowPrevBtn.addEventListener('click', () => stepFlowSentence(-1))
+
+  const flowNextBtn = makeButton({
+    text: t('reader_flow_next'),
+    i18nKey: 'reader_flow_next',
+    className: 'reader-focus-btn',
+  })
+  flowNextBtn.id = 'reader-flow-next-btn'
+  flowNextBtn.addEventListener('click', () => stepFlowSentence(1))
+
+  const flowShortcut = document.createElement('span')
+  flowShortcut.id = 'reader-flow-shortcuts'
+  flowShortcut.dataset.i18n = 'reader_flow_shortcuts'
+  flowShortcut.textContent = t('reader_flow_shortcuts')
+  flowShortcut.className = 'reader-ctrl__hint'
+
+  secondary.append(flowBtn, flowPrevBtn, flowNextBtn, flowShortcut, focusBtn, adaptiveBtn, settingsBtn, ctrlHelpBtn)
   row.append(modeGroup, secondary)
 
   const explainerWrap = document.createElement('div')
@@ -199,6 +221,8 @@ function syncToolbar() {
 
   const adaptiveBtn = bar.querySelector('#reader-adaptive-btn')
   if (adaptiveBtn) adaptiveBtn.textContent = t('adaptive_btn')
+  const flowHint = bar.querySelector('#reader-flow-shortcuts')
+  if (flowHint) flowHint.textContent = t('reader_flow_shortcuts')
 
   const explainerToggle = bar.querySelector('#reader-modes-help-toggle')
   if (explainerToggle) {
@@ -212,7 +236,35 @@ function syncToolbar() {
   }
 
   syncFlowBtn()
+
+  const flowEnabled = isFlowMode()
+  for (const id of ['#reader-flow-prev-btn', '#reader-flow-next-btn']) {
+    const btn = bar.querySelector(id)
+    if (!btn) continue
+    btn.toggleAttribute('disabled', !flowEnabled)
+    btn.setAttribute('aria-disabled', String(!flowEnabled))
+  }
 }
+
+document.addEventListener('keydown', (event) => {
+  if (!isFlowMode()) return
+  const inInput = event.target instanceof HTMLElement && event.target.closest('input, textarea, [contenteditable="true"]')
+  if (inInput || event.altKey || event.metaKey || event.ctrlKey) return
+  if (event.key === 'ArrowRight' || event.key === 'n' || event.key === 'N') {
+    event.preventDefault()
+    stepFlowSentence(1)
+    announce(t('reader_flow_next'))
+  } else if (event.key === 'ArrowLeft' || event.key === 'p' || event.key === 'P') {
+    event.preventDefault()
+    stepFlowSentence(-1)
+    announce(t('reader_flow_prev'))
+  }
+})
+
+document.addEventListener('mnemosyne:flow-mode-changed', () => {
+  syncToolbar()
+  if (isFlowMode() && getActiveSentenceIndex() < 0) stepFlowSentence(1)
+})
 
 function setMode(mode) {
   if (!MODES.some(m => m.value === mode)) mode = 'learning'

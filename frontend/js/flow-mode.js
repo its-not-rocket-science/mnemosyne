@@ -20,6 +20,7 @@ const results = document.querySelector('#results')
 
 let flowMode = localStorage.getItem(STORAGE_KEY) === 'true'
 let _pacingMode = 'steady'
+let activeSentenceIndex = -1
 
 // TTS rate mapped from cognitive-pacing mode.
 const PACING_RATE = { flow: 1.15, steady: 1.0, fatigue: 0.85, overload: 0.7 }
@@ -29,9 +30,14 @@ function reducedMotion() {
 }
 
 function setActiveCard(sentenceIndex) {
+  activeSentenceIndex = sentenceIndex
   results?.querySelectorAll('.sentence-card').forEach(card => {
-    card.toggleAttribute('data-flow-active', card.dataset.sentenceIndex === String(sentenceIndex))
+    const active = card.dataset.sentenceIndex === String(sentenceIndex)
+    card.toggleAttribute('data-flow-active', active)
+    card.setAttribute('aria-current', active ? 'true' : 'false')
   })
+
+  syncAnnotationsForActiveSentence()
 
   if (sentenceIndex < 0) return
   const card = results?.querySelector(`[data-sentence-index="${sentenceIndex}"]`)
@@ -39,6 +45,23 @@ function setActiveCard(sentenceIndex) {
     behavior: reducedMotion() ? 'instant' : 'smooth',
     block: 'center',
     inline: 'nearest',
+  })
+}
+
+function syncAnnotationsForActiveSentence() {
+  const marks = results?.querySelectorAll('.reader-annotation') || []
+  marks.forEach((mark) => {
+    const sentence = mark.closest('.sentence-card')
+    const isActiveSentence = sentence?.dataset.sentenceIndex === String(activeSentenceIndex)
+    const shouldHide = flowMode && activeSentenceIndex >= 0 && !isActiveSentence
+    mark.toggleAttribute('data-flow-hidden', shouldHide)
+    if (shouldHide) {
+      mark.setAttribute('aria-hidden', 'true')
+      mark.setAttribute('tabindex', '-1')
+    } else {
+      mark.removeAttribute('aria-hidden')
+      mark.setAttribute('tabindex', '0')
+    }
   })
 }
 
@@ -53,9 +76,23 @@ function applyFlowMode() {
     document.body.classList.remove('reader-flow-playing')
     results?.querySelectorAll('[data-flow-active]').forEach(el => el.removeAttribute('data-flow-active'))
     playbackEngine.rate = 1.0
+    activeSentenceIndex = -1
+    syncAnnotationsForActiveSentence()
   } else {
     applyPacingRate()
+    syncAnnotationsForActiveSentence()
   }
+}
+
+export function getActiveSentenceIndex() { return activeSentenceIndex }
+
+export function stepFlowSentence(direction = 1) {
+  const cards = Array.from(results?.querySelectorAll('.sentence-card') || [])
+  if (!cards.length) return
+  const maxIndex = cards.length - 1
+  const current = activeSentenceIndex >= 0 ? activeSentenceIndex : 0
+  const next = Math.max(0, Math.min(maxIndex, current + direction))
+  setActiveCard(next)
 }
 
 export function isFlowMode() { return flowMode }
