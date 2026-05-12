@@ -12,7 +12,7 @@
   - reinforcement mode shows weak/fading memory and hides strong memory
 */
 
-import { getAuthHeaders } from './auth.js'
+import { getAuthHeaders, getUser } from './auth.js'
 import { queueReview } from './offline.js'
 import { t } from './i18n.js'
 import { makeHelpButton } from './help-popover.js'
@@ -60,6 +60,18 @@ let reinforcementEnabled = localStorage.getItem(REINFORCEMENT_KEY) === 'true'
 let memory = readMemory()
 let dashboardSyncedAt = null
 const ADAPTIVE_OVERRIDE_KEY = 'mnemosyne.reader.adaptive.overrides.v1'
+
+const ANNOTATION_CATEGORIES = [
+  'vocabulary', 'grammar', 'translations', 'pronunciation',
+  'cultural_notes', 'nuance', 'memory_map_status', 'difficulty_hints',
+]
+
+const MODE_DEFAULTS = {
+  subtle:   { vocabulary:true, grammar:false, translations:false, pronunciation:false, cultural_notes:false, nuance:false, memory_map_status:false, difficulty_hints:false },
+  learning: { vocabulary:true, grammar:true,  translations:true,  pronunciation:true,  cultural_notes:false, nuance:true,  memory_map_status:true,  difficulty_hints:true },
+  deep:     { vocabulary:true, grammar:true,  translations:true,  pronunciation:true,  cultural_notes:true,  nuance:true,  memory_map_status:true,  difficulty_hints:true },
+}
+
 let adaptiveOverrides = readAdaptiveOverrides()
 let adaptiveProfile = null
 
@@ -92,9 +104,16 @@ function readMemory() {
 }
 
 
+
+
+function overrideStorageKey() {
+  const userId = getUser()?.id || 'guest'
+  return `${ADAPTIVE_OVERRIDE_KEY}.${userId}`
+}
+
 function readAdaptiveOverrides() {
   try {
-    const parsed = JSON.parse(localStorage.getItem(ADAPTIVE_OVERRIDE_KEY) || '{}')
+    const parsed = JSON.parse(localStorage.getItem(overrideStorageKey()) || '{}')
     return parsed && typeof parsed === 'object' ? parsed : {}
   } catch {
     return {}
@@ -102,7 +121,7 @@ function readAdaptiveOverrides() {
 }
 
 function writeAdaptiveOverrides() {
-  localStorage.setItem(ADAPTIVE_OVERRIDE_KEY, JSON.stringify(adaptiveOverrides))
+  localStorage.setItem(overrideStorageKey(), JSON.stringify(adaptiveOverrides))
 }
 
 function selectedReaderLevel() {
@@ -431,6 +450,33 @@ function updateQuietBadge() {
   }
 }
 
+function readerMode() {
+  return localStorage.getItem('mnemosyne.reader.annotationMode') || 'learning'
+}
+
+function normalizedType(annotation) {
+  return String(annotation.dataset.type || '').toLowerCase()
+}
+
+function categoryEnabled(category) {
+  const mode = readerMode()
+  const defaults = MODE_DEFAULTS[mode] || MODE_DEFAULTS.learning
+  return adaptiveOverrides[category] ?? defaults[category] ?? true
+}
+
+function isCategoryVisible(annotation, category) {
+  const type = normalizedType(annotation)
+  if (category === 'vocabulary') return ['vocabulary','vocab','word','word_form','lexical_item'].includes(type)
+  if (category === 'grammar') return ['grammar','syntax','morphology','conjugation','agreement','grammar_point'].includes(type)
+  if (category === 'translations') return ['translation','translations'].includes(type)
+  if (category === 'pronunciation') return ['pronunciation','phonetics'].includes(type)
+  if (category === 'cultural_notes') return ['cultural_note','culture','cultural'].includes(type)
+  if (category === 'nuance') return ['nuance','nuance_or_style','phrase_family','idiom','literary_device'].includes(type)
+  if (category === 'memory_map_status') return true
+  if (category === 'difficulty_hints') return true
+  return true
+}
+
 function flashDifficultyAdjustment(mode) {
   const existing = document.querySelector('.reader-difficulty-toast')
   existing?.remove()
@@ -464,9 +510,11 @@ function applyAdaptiveVisibility() {
     const quietThreshold = density === 'guided' ? 0.92 : density === 'light' ? 0.7 : 0.82
     const shouldQuiet = adaptiveEnabled && strength >= quietThreshold && level <= 2
     const shouldHideForReinforcement = reinforcementEnabled && band === 'strong'
+    const categoryHidden = ANNOTATION_CATEGORIES.some(cat => !categoryEnabled(cat) && isCategoryVisible(annotation, cat))
 
     annotation.toggleAttribute('data-adaptively-quiet', shouldQuiet)
     annotation.toggleAttribute('data-reinforcement-hidden', shouldHideForReinforcement)
+    annotation.toggleAttribute('data-category-hidden', categoryHidden)
   })
   syncToolbar()
   updateQuietBadge()
@@ -510,6 +558,32 @@ function populateSystemBody(container) {
   })
 
   memGroup.append(memLabel, toggle, reinforce)
+
+  const categoryGroup = document.createElement('fieldset')
+  categoryGroup.className = 'reader-ctrl__system-group reader-ctrl__system-group--categories'
+  const legend = document.createElement('legend')
+  legend.dataset.i18n = 'reader_adv_categories_title'
+  legend.textContent = t('reader_adv_categories_title')
+  categoryGroup.appendChild(legend)
+
+  const modeHint = document.createElement('p')
+  modeHint.className = 'reader-ctrl__hint'
+  modeHint.dataset.i18n = 'reader_adv_mode_hint'
+  modeHint.textContent = t('reader_adv_mode_hint')
+  categoryGroup.appendChild(modeHint)
+
+  for (const cat of ANNOTATION_CATEGORIES) {
+    const label = document.createElement('label')
+    const cb = document.createElement('input')
+    cb.type = 'checkbox'
+    cb.checked = categoryEnabled(cat)
+    cb.addEventListener('change', () => { adaptiveOverrides[cat] = cb.checked; writeAdaptiveOverrides(); applyAdaptiveVisibility() })
+    const text = document.createElement('span')
+    text.dataset.i18n = `reader_adv_${cat}_label`
+    text.textContent = t(`reader_adv_${cat}_label`)
+    label.append(cb, text)
+    categoryGroup.appendChild(label)
+  }
 
   // Action group: sync + reset — pushed to end
   const actionGroup = document.createElement('div')
@@ -556,8 +630,22 @@ function populateSystemBody(container) {
     applyAdaptiveVisibility()
     renderIntelligenceSummary()
   })
-  actionGroup.append(override, sync, reset)
-  container.append(memGroup, actionGroup)
+  const resetModeDefaults = document.createElement('button')
+  resetModeDefaults.type = 'button'
+  resetModeDefaults.dataset.i18n = 'reader_adv_reset_mode_defaults'
+  resetModeDefaults.textContent = t('reader_adv_reset_mode_defaults')
+  resetModeDefaults.addEventListener('click', () => {
+    const mode = readerMode()
+    const defaults = MODE_DEFAULTS[mode] || MODE_DEFAULTS.learning
+    for (const cat of ANNOTATION_CATEGORIES) adaptiveOverrides[cat] = defaults[cat]
+    writeAdaptiveOverrides()
+    categoryGroup.querySelectorAll('input[type=checkbox]').forEach((cb, i) => { cb.checked = defaults[ANNOTATION_CATEGORIES[i]] })
+    applyAdaptiveVisibility()
+    announce(t('reader_adv_reset_mode_defaults'))
+  })
+
+  actionGroup.append(override, resetModeDefaults, sync, reset)
+  container.append(memGroup, categoryGroup, actionGroup)
 }
 
 function ensureToolbar() {
