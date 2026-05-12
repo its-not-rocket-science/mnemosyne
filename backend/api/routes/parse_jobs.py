@@ -32,6 +32,7 @@ import backend.lesson_extraction.engine as lesson_engine
 from backend.core.jobs import ParseJob, get_job_store
 from backend.core.limiter import limiter
 from backend.parsing.canonical import canonical_object_id
+from backend.parsing.pipeline import _restore_sentence_texts
 from backend.parsing.plugin_loader import PluginRegistry
 from backend.schemas.jobs import ParseJobCreated, ParseJobStatus
 from backend.schemas.parse import (
@@ -227,6 +228,7 @@ async def _run_parse_job(
         candidate_results: list[CandidateSentenceResult] = await loop.run_in_executor(
             None, plugin.analyze_text, payload.text
         )
+        candidate_results = _restore_sentence_texts(payload.text, plugin, candidate_results)
 
         # Lesson enrichment — same pass as /parse and /ingest.
         candidate_results = lesson_engine.enrich(
