@@ -12,6 +12,7 @@ from __future__ import annotations
 import pytest
 
 from backend.schemas.parse import CandidateObject, RelationHint
+from backend.nuance.en import EnglishNuanceExtractor
 from backend.nuance.es import SpanishNuanceExtractor
 from backend.nuance.fr import FrenchNuanceExtractor
 from backend.nuance.de import GermanNuanceExtractor
@@ -76,6 +77,42 @@ def _vocab(lemma: str, surface: str = "") -> CandidateObject:
 def _nuance_types(results: list[CandidateObject]) -> set[str]:
     return {c.lesson_data.get("nuance_type", "") for c in results if c.type == "nuance"}
 
+
+
+
+# ── English ───────────────────────────────────────────────────────────────────
+
+class TestEnglishNuance:
+    @pytest.fixture()
+    def ext(self):
+        return EnglishNuanceExtractor()
+
+    def test_register_formal_detected(self, ext):
+        results = ext.extract_nuance("Therefore we proceed.", [_tok("Therefore")], [], "en")
+        assert "register" in _nuance_types(results)
+
+    def test_politeness_detected(self, ext):
+        results = ext.extract_nuance("Could you help, please?", [_tok("Could"), _tok("please")], [], "en")
+        assert "politeness" in _nuance_types(results)
+
+    def test_ambiguity_detected(self, ext):
+        results = ext.extract_nuance("Since he left, we waited.", [_tok("Since")], [], "en")
+        assert "ambiguity" in _nuance_types(results)
+
+    def test_collocation_detected(self, ext):
+        toks = [_tok("make"), _tok("a"), _tok("decision")]
+        results = ext.extract_nuance("make a decision", toks, [], "en")
+        assert "collocation" in _nuance_types(results)
+
+    def test_regional_variation_detected(self, ext):
+        results = ext.extract_nuance("The apartment is small.", [_tok("apartment")], [], "en")
+        assert "regional_variation" in _nuance_types(results)
+
+    def test_required_keys_present(self, ext):
+        results = ext.extract_nuance("please", [_tok("please")], [], "en")
+        n = next(c for c in results if c.lesson_data.get("nuance_type") == "politeness")
+        for key in ("nuance_type", "explanation", "register", "learner_level", "source"):
+            assert key in n.lesson_data
 
 # ── Spanish ───────────────────────────────────────────────────────────────────
 
@@ -847,7 +884,7 @@ class TestAncientGreekNuance:
 
 class TestRegistry:
     @pytest.mark.parametrize("lang", [
-        "es", "fr", "de", "ru", "zh", "ja", "ar", "he", "la", "grc",
+        "en", "es", "fr", "de", "ru", "zh", "ja", "ar", "he", "la", "grc",
     ])
     def test_get_extractor_returns_extractor(self, lang):
         ext = get_extractor(lang)
