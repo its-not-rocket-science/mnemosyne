@@ -203,6 +203,56 @@ body.reader-focus-mode .app-shell__top-nav {
   opacity: 0.2;
 }
 
+body.reader-focus-mode .sentence-card {
+  opacity: 0.52;
+  transition: opacity 0.2s ease;
+}
+
+body.reader-focus-mode .sentence-card[data-focus-block="true"],
+body.reader-focus-mode.reader-flow-mode .sentence-card[data-flow-active] {
+  opacity: 1;
+}
+
+body.reader-focus-mode.reader-flow-mode .sentence-card:not([data-flow-active]) {
+  opacity: 0.42;
+}
+
+body.reader-focus-mode #results-section {
+  position: relative;
+}
+
+body.reader-focus-mode #results-section::before,
+body.reader-focus-mode #results-section::after {
+  content: '';
+  position: sticky;
+  display: block;
+  inset-inline: 0;
+  block-size: clamp(3rem, 11vh, 7rem);
+  pointer-events: none;
+  z-index: 2;
+}
+
+body.reader-focus-mode #results-section::before {
+  inset-block-start: 0;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.24), rgb(0 0 0 / 0));
+}
+
+body.reader-focus-mode #results-section::after {
+  inset-block-end: 0;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.24), rgb(0 0 0 / 0));
+}
+
+@media (forced-colors: active) {
+  body.reader-focus-mode .sentence-card { opacity: 0.75; }
+  body.reader-focus-mode .sentence-card[data-focus-block="true"],
+  body.reader-focus-mode.reader-flow-mode .sentence-card[data-flow-active] {
+    outline: 2px solid Highlight;
+    outline-offset: 0.15rem;
+  }
+  body.reader-focus-mode #results-section::before,
+  body.reader-focus-mode #results-section::after { display: none; }
+}
+
 /* ── Flow mode ────────────────────────────────────────────────────────────────
    During playback, inactive sentences dim so the eye stays on the active one.
    No fading when idle — user browses freely.

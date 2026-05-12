@@ -6,6 +6,7 @@ FLOW = (ROOT / 'frontend/js/flow-mode.js').read_text(encoding='utf-8')
 ADAPTIVE = (ROOT / 'frontend/js/adaptive-reader.js').read_text(encoding='utf-8')
 DIFFICULTY = (ROOT / 'frontend/js/difficulty-modulation.js').read_text(encoding='utf-8')
 I18N = (ROOT / 'frontend/js/i18n.js').read_text(encoding='utf-8')
+READING_CSS = (ROOT / 'frontend/css/reading-progressive.css').read_text(encoding='utf-8')
 
 
 def test_subtle_learning_deep_modes_are_wired_and_persisted():
@@ -87,3 +88,16 @@ def test_flow_i18n_keys_exist():
     assert "reader_flow_prev" in I18N
     assert "reader_flow_next" in I18N
     assert "reader_flow_shortcuts" in I18N
+
+
+def test_focus_mode_styles_cover_flow_and_viewport_blocks():
+    assert 'body.reader-focus-mode .sentence-card[data-focus-block="true"]' in READING_CSS
+    assert 'body.reader-focus-mode.reader-flow-mode .sentence-card[data-flow-active]' in READING_CSS
+    assert 'body.reader-focus-mode #results-section::before' in READING_CSS
+    assert 'forced-colors: active' in READING_CSS
+
+
+def test_focus_mode_keyboard_and_viewport_tracking_are_wired():
+    assert "document.addEventListener('focusin'" in READING
+    assert "document.addEventListener('scroll', scheduleViewportFocusBlock" in READING
+    assert "if (event.key.toLowerCase() === 'f'" in READING
