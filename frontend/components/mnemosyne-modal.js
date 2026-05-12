@@ -31,7 +31,7 @@ export class MnemosyneModal extends HTMLElement {
     this.render()
   }
 
-  open({ lesson, objectId, caps, language, onRate, onSpeak }) {
+  open({ lesson, objectId, caps, language, onRate, onSpeak, onCheckResult }) {
     // Resolve language metadata from caps with safe fallbacks.
     this.#language   = language ?? null
     this.#dir        = caps?.direction ?? 'ltr'
@@ -40,7 +40,7 @@ export class MnemosyneModal extends HTMLElement {
 
     this.isOpen = true
     this.previouslyFocused = document.activeElement
-    this.render({ lesson, objectId, caps, language, onRate, onSpeak })
+    this.render({ lesson, objectId, caps, language, onRate, onSpeak, onCheckResult })
     document.body.style.overflow = 'hidden'
     document.addEventListener('keydown', this.onKeydown)
 
@@ -106,7 +106,7 @@ export class MnemosyneModal extends HTMLElement {
       return
     }
 
-    const { lesson, objectId, caps, onRate, onSpeak } = state
+    const { lesson, objectId, caps, onRate, onSpeak, onCheckResult } = state
     const canSpeak  = 'speechSynthesis' in window
     const hasTranslit = Boolean(caps?.transliteration_scheme)
     const exampleText = lesson.examples?.[0] ?? lesson.title
@@ -586,7 +586,7 @@ export class MnemosyneModal extends HTMLElement {
     // Drills.
     const drillsContainer = sr.querySelector('.drills-list')
     for (let i = 0; i < (lesson.drills ?? []).length; i++) {
-      const drillEl = this.#renderDrill(lesson.drills[i], i, onSpeak)
+      const drillEl = this.#renderDrill(lesson.drills[i], i, onSpeak, onCheckResult)
       if (drillEl) drillsContainer.appendChild(drillEl)
     }
 
@@ -668,12 +668,12 @@ export class MnemosyneModal extends HTMLElement {
   // Answer data (answer_index, answer, correct) is kept in JS closure —
   // never embedded in data-attributes to avoid trivial DOM inspection.
 
-  #renderDrill(drill, index, onSpeak) {
+  #renderDrill(drill, index, onSpeak, onCheckResult) {
     switch (drill.type) {
       case 'shadowing':       return this.#renderShadowing(drill, index, onSpeak)
-      case 'multiple_choice': return this.#renderMultipleChoice(drill, index)
-      case 'fill_blank':      return this.#renderFillBlank(drill, index)
-      case 'recognition':     return this.#renderRecognition(drill, index)
+      case 'multiple_choice': return this.#renderMultipleChoice(drill, index, onCheckResult)
+      case 'fill_blank':      return this.#renderFillBlank(drill, index, onCheckResult)
+      case 'recognition':     return this.#renderRecognition(drill, index, onCheckResult)
       default:                return null
     }
   }
@@ -706,7 +706,7 @@ export class MnemosyneModal extends HTMLElement {
     return el
   }
 
-  #renderMultipleChoice(drill, index) {
+  #renderMultipleChoice(drill, index, onCheckResult) {
     const el = document.createElement('div')
     el.className = 'drill drill--mc'
     el.setAttribute('aria-label', `Practice drill ${index + 1}: multiple choice`)
@@ -756,6 +756,7 @@ export class MnemosyneModal extends HTMLElement {
           feedback.textContent = ''
           feedback.append('\u2717 The answer is \u201c', bdi, '\u201d.')
         }
+        onCheckResult?.({ index, type: 'multiple_choice', correct: isCorrect, answeredAt: new Date().toISOString() })
       })
       group.appendChild(btn)
     })
@@ -764,7 +765,7 @@ export class MnemosyneModal extends HTMLElement {
     return el
   }
 
-  #renderFillBlank(drill, index) {
+  #renderFillBlank(drill, index, onCheckResult) {
     const el = document.createElement('div')
     el.className = 'drill drill--fill'
     el.setAttribute('aria-label', `Practice drill ${index + 1}: fill in the blank`)
@@ -834,6 +835,7 @@ export class MnemosyneModal extends HTMLElement {
         hint.textContent = ''
         hint.append('\u2717 The answer is \u201c', bdi, '\u201d.')
       }
+      onCheckResult?.({ index, type: 'fill_blank', correct: isCorrect, answeredAt: new Date().toISOString() })
     }
 
     checkBtn.addEventListener('click', check)
@@ -846,7 +848,7 @@ export class MnemosyneModal extends HTMLElement {
     return el
   }
 
-  #renderRecognition(drill, index) {
+  #renderRecognition(drill, index, onCheckResult) {
     const el = document.createElement('div')
     el.className = 'drill drill--rec'
     el.setAttribute('aria-label', `Practice drill ${index + 1}: true or false`)
@@ -888,6 +890,7 @@ export class MnemosyneModal extends HTMLElement {
         feedback.textContent = isCorrect
           ? '\u2713 Correct!'
           : `\u2717 That\u2019s ${drill.correct ? 'true' : 'false'}.`
+        onCheckResult?.({ index, type: 'recognition', correct: isCorrect, answeredAt: new Date().toISOString() })
       })
       group.appendChild(btn)
     })

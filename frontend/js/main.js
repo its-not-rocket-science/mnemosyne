@@ -1040,6 +1040,7 @@ results.addEventListener('lesson-open', async (event) => {
           language,
           onRate:  submitReview,
           onSpeak: (text) => speakText(text, ttsTag),
+          onCheckResult: (check) => { void submitLessonCheck(lesson, language, check) },
         }),
       })
 
@@ -1088,6 +1089,7 @@ results.addEventListener('lesson-open', async (event) => {
         language,
         onRate:  submitReview,
         onSpeak: (text) => speakText(text, ttsTag),
+        onCheckResult: (check) => { void submitLessonCheck(lesson, language, check) },
       })
     }
 
@@ -1146,6 +1148,7 @@ detailPane?.addEventListener('pane-navigate', async (event) => {
         language,
         onRate:  submitReview,
         onSpeak: (text) => speakText(text, ttsTag),
+        onCheckResult: (check) => { void submitLessonCheck(lesson, language, check) },
       }),
     })
   } catch { /* ignore — confusable may not be in store yet */ }
@@ -1750,6 +1753,25 @@ async function submitReview(objectId, quality) {
   return payload
 }
 
+async function submitLessonCheck(lesson, language, check) {
+  const term = lesson?.lesson_data?.lemma || lesson?.examples?.[0] || lesson?.title
+  if (!term || !language || !check) return
+  await fetch(`${API_BASE}/term-progress`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
+    body: JSON.stringify({
+      term,
+      lemma: lesson?.lesson_data?.lemma || term,
+      language,
+      seen: true,
+      reviewed: true,
+      correct: Boolean(check.correct),
+      mastery_delta: check.correct ? 0.08 : -0.06,
+      source_lesson_id: lesson.id,
+    }),
+  })
+}
+
 
 // ── Offline review queue ──────────────────────────────────────────────────────
 
@@ -1895,6 +1917,7 @@ async function _openDeepLink() {
           language: lang,
           onRate:   submitReview,
           onSpeak:  (text) => speakText(text, ttsTag),
+          onCheckResult: (check) => { void submitLessonCheck(lesson, lang, check) },
         }),
       })
       openDetail()
