@@ -54,7 +54,10 @@ const pickerFileInput   = document.querySelector('#picker-file-input')
 const pickerUseBtn      = document.querySelector('#picker-use-btn')
 const pickerStatus      = document.querySelector('#picker-status')
 const pickerCloseBtn    = document.querySelector('#picker-close-btn')
+const pickerSampleOpenBtn = document.querySelector('#picker-sample-open-btn')
 const pickerSampleBtn   = document.querySelector('#picker-sample-btn')
+const pickerSampleDialog = document.querySelector('#picker-sample-dialog')
+const pickerSampleCloseBtn = document.querySelector('#picker-sample-close-btn')
 const pickerSampleLanguageSelect = document.querySelector('#picker-sample-language')
 const pickerCharCount   = document.querySelector('#picker-char-count')
 
@@ -475,6 +478,13 @@ function populateSampleLanguageSelect() {
     ? activeLang
     : (options[0]?.value ?? 'es')
 }
+
+pickerSampleOpenBtn?.addEventListener('click', () => {
+  syncSampleLanguagePickerOptions()
+  pickerSampleDialog?.showModal()
+})
+
+pickerSampleCloseBtn?.addEventListener('click', () => pickerSampleDialog?.close())
 
 pickerSampleBtn?.addEventListener('click', () => {
   const selectedSampleLang = pickerSampleLanguageSelect?.value || languageSelect.value

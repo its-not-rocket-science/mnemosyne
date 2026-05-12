@@ -367,11 +367,7 @@
           <div class="field-header">
             <label for="picker-text" data-i18n="label_text">Text to parse</label>
             <div class="field-header-actions">
-              <label for="picker-sample-language" class="picker-sample-language-label"
-                     data-i18n="sample_language_label">Sample language</label>
-              <select id="picker-sample-language" class="ghost-select ghost-select--small"
-                      aria-label="Sample language"></select>
-              <button type="button" id="picker-sample-btn" class="ghost-button ghost-button--small"
+              <button type="button" id="picker-sample-open-btn" class="ghost-button ghost-button--small"
                       data-i18n="try_sample_btn">Try a sample</button>
               <label class="file-pick-btn" for="picker-file-input">
                 <span data-i18n="load_file">Load .txt file</span>
@@ -397,6 +393,24 @@
         <div class="button-row">
           <button type="button" id="picker-use-btn" class="button-primary"
                   data-i18n="use_text_btn">Use this text</button>
+        </div>
+      </div>
+    </dialog>
+
+
+    <dialog id="picker-sample-dialog" class="picker-dialog" aria-labelledby="picker-sample-heading">
+      <div class="picker-dialog__inner stack">
+        <div class="picker-dialog__header">
+          <h2 id="picker-sample-heading" data-i18n="try_sample_btn">Try a sample</h2>
+          <button type="button" id="picker-sample-close-btn" class="dialog-close-btn"
+                  data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
+        </div>
+        <div class="field">
+          <label for="picker-sample-language" class="picker-sample-language-label" data-i18n="sample_language_label">Sample language</label>
+          <select id="picker-sample-language" class="ghost-select ghost-select--small" aria-label="Sample language"></select>
+        </div>
+        <div class="button-row">
+          <button type="button" id="picker-sample-btn" class="button-primary" data-i18n="try_sample_btn">Try a sample</button>
         </div>
       </div>
     </dialog>
