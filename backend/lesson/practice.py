@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Literal
 
+from backend.lesson.practice_hooks import hooks_for_language
 from backend.schemas.lesson import LessonField, LessonResponse, PracticeActivity
 
 
@@ -38,31 +39,33 @@ def build_practice_activities(
     lp = learner_progress or {}
     difficulty = _difficulty_from_progress(lp)
 
-    target_term = terms[0] if terms else lesson.title
+    hooks = hooks_for_language(lesson.language_code)
+    target_term = hooks.normalize_term(terms[0] if terms else lesson.title)
     sentence_basis = _sentence_for_term(lesson.examples, target_term) or text_basis
     comprehension_checks = _build_comprehension_checks(lesson, difficulty, sentence_basis, target_term)
+    fb = hooks.feedback_text
     activities: list[PracticeActivity] = [
         *comprehension_checks,
         _activity(
             "sentence_level_vocabulary_recall", lesson, difficulty, target_term,
             prompt=f"Type the highlighted term that best completes this sentence context: {sentence_basis}",
             expected=target_term,
-            alternatives=_answer_forms(target_term, _first_field_value(lesson.fields, "Lemma")),
-            feedback="If recall is hard, rehearse the example sentence aloud once, then retry.",
+            alternatives=hooks.answer_variants(target_term, _first_field_value(lesson.fields, "Lemma")),
+            feedback=fb("sentence_level_vocabulary_recall", "If recall is hard, rehearse the example sentence aloud once, then retry."),
         ),
         _activity(
             "cloze_completion", lesson, difficulty, target_term,
-            prompt=_cloze_prompt(sentence_basis, target_term),
+            prompt=hooks.cloze_prompt(sentence_basis, target_term),
             expected=target_term,
-            alternatives=_answer_forms(target_term, _first_field_value(lesson.fields, "Lemma")),
-            feedback="Use agreement/tense cues from surrounding words to fill the blank.",
+            alternatives=hooks.answer_variants(target_term, _first_field_value(lesson.fields, "Lemma")),
+            feedback=fb("cloze_completion", "Use agreement/tense cues from surrounding words to fill the blank."),
         ),
         _activity(
             "term_to_meaning_matching", lesson, difficulty, target_term,
             prompt=f"Match '{target_term}' to its meaning.",
             expected=_first_field_value(lesson.fields, "Translation") or _first_field_value(lesson.fields, "Gloss") or lesson.explanation,
-            alternatives=[lesson.explanation],
-            feedback="Prioritize contextual meaning from this lesson, not every dictionary sense.",
+            alternatives=hooks.distractors(target_term, lesson.explanation, text_basis),
+            feedback=fb("term_to_meaning_matching", "Prioritize contextual meaning from this lesson, not every dictionary sense."),
         ),
         _activity(
             "sentence_recombination", lesson, difficulty, target_term,
@@ -87,7 +90,7 @@ def build_practice_activities(
         ),
     ]
 
-    activities.extend(_build_pattern_drills(lesson, difficulty, anns, lesson.examples, lp))
+    activities.extend(_build_pattern_drills(lesson, difficulty, anns, lesson.examples, lp, hooks.detect_pattern))
 
     return activities
 
@@ -100,8 +103,9 @@ def _build_pattern_drills(
     annotations: list[str],
     examples: list[str],
     learner_progress: dict[str, Any],
+    detect_pattern: Any,
 ) -> list[PracticeActivity]:
-    pattern = _detect_pattern_from_annotations(annotations)
+    pattern = detect_pattern(annotations)
     if not pattern:
         return []
 
