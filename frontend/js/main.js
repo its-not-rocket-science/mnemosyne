@@ -1478,7 +1478,6 @@ function renderResults(sentences, language) {
   fragment.appendChild(prose)
 
   results.replaceChildren(fragment)
-  renderParseDebugSummary(sentences, language)
   applyScriptViewToResults()
   updateScriptViewToolbar()
   requestAnimationFrame(buildMinimap)
@@ -1637,24 +1636,6 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam, de
   if (cursor < text.length) p.appendChild(document.createTextNode(text.slice(cursor)))
 
   return p
-}
-
-function renderParseDebugSummary(sentences, language) {
-  const sentenceDebug = Array.from(results.querySelectorAll('.reader-sentence')).map((row, index) => ({
-    index,
-    text: sentences[index]?.text ?? '',
-    ranges: JSON.parse(row.dataset.debugRanges || '[]'),
-  }))
-  const payload = {
-    language,
-    tokenization: languageCapabilities.get(language)?.tokenization_mode ?? 'unknown',
-    sentenceCount: sentences.length,
-    objectCount: sentences.reduce((sum, s) => sum + (s.learnable_objects?.length ?? 0), 0),
-    sentenceDebug,
-  }
-  console.groupCollapsed('[mnemosyne] parse debug')
-  console.log(payload)
-  console.groupEnd()
 }
 
 
