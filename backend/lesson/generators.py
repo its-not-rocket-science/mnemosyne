@@ -56,6 +56,7 @@ from typing import Any, Callable, Literal
 
 import backend.lesson.formatters as fmt
 from backend.lesson.context import LessonContext
+from backend.lesson.practice import build_practice_activities
 from backend.lesson.providers import LessonProviders
 from backend.schemas.language import LessonMode
 from backend.schemas.lesson import (
@@ -225,7 +226,8 @@ def build_lesson(
     if ctx.direction and ctx.language_code is not None:
         update["script_direction"] = ctx.direction
 
-    return response.model_copy(update=update)
+    stamped = response.model_copy(update=update)
+    return stamped.model_copy(update={"practice_activities": build_practice_activities(stamped)})
 
 
 # ── Type-specific builders ────────────────────────────────────────────────────

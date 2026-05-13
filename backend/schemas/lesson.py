@@ -95,6 +95,25 @@ Drill = Annotated[
 ]
 
 
+
+
+class PracticeActivity(BaseModel):
+    type: Literal[
+        "comprehension_questions",
+        "sentence_level_vocabulary_recall",
+        "cloze_completion",
+        "term_to_meaning_matching",
+        "sentence_recombination",
+        "transformation_drills",
+        "short_retell_prompts",
+    ]
+    language: str
+    difficulty: str
+    target_term_or_pattern: str
+    prompt: str
+    expected_answer: str
+    acceptable_alternatives: list[str] = Field(default_factory=list)
+    feedback_text: str
 class LessonResponse(BaseModel):
     """Structured lesson returned by GET /lesson/{object_id}.
 
@@ -140,6 +159,7 @@ class LessonResponse(BaseModel):
     """Text direction for the target language.  ``None`` when unknown."""
 
     lesson_data: dict[str, Any] | None = None
+    practice_activities: list[PracticeActivity] = Field(default_factory=list)
     """Raw lesson_data dict from the canonical object row.
 
     Passed through so the frontend can access fields that are not
