@@ -442,11 +442,11 @@ function openInlinePreview(annotation) {
     const objectId = annotationObjectId(annotation)
     if (!objectId || !language) return
 
-    // Route through the existing annotation click handler so lesson-open
-    // preserves the same source target/metadata path used elsewhere.
-    annotation.dataset.openFullLesson = 'true'
     closeInlinePreview(preview, annotation)
-    annotation.click()
+    annotation.dispatchEvent(new CustomEvent('lesson-open', {
+      bubbles: true,
+      detail: { objectId, language },
+    }))
   })
 
   const closeBtn = document.createElement('button')
@@ -490,11 +490,6 @@ function installGlobalHandlers() {
   document.addEventListener('click', event => {
     const annotation = event.target.closest?.('.reader-annotation')
     if (annotation) {
-      if (annotation.dataset.openFullLesson) {
-        // "Open full lesson" button set this flag — let click through to lesson-open.
-        delete annotation.dataset.openFullLesson
-        return
-      }
       event.stopPropagation()
       openInlinePreview(annotation)
       return
