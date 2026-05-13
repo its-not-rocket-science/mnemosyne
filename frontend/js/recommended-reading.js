@@ -47,9 +47,20 @@ function escapeHtml(value) {
     .replace(/'/g, '&#039;')
 }
 
+function normalizeMojibake(text) {
+  const raw = String(text ?? '')
+  if (!raw) return ''
+  return raw
+    .replaceAll('‚Äú', '“')
+    .replaceAll('‚Äù', '”')
+    .replaceAll('‚Äô', '’')
+    .replaceAll('‚Äî', '—')
+    .replaceAll('‚Äì', '–')
+}
+
 function passageText(item) {
-  if (Array.isArray(item.passage) && item.passage.length) return item.passage.map(s => s.text).join(' ')
-  return item.text || ''
+  if (Array.isArray(item.passage) && item.passage.length) return normalizeMojibake(item.passage.map(s => s.text).join(' '))
+  return normalizeMojibake(item.text || '')
 }
 
 function reasonFor(item) {
@@ -311,10 +322,12 @@ function onScroll() {
 
 function canUseRecommendationItem(item, language) {
   if (!item || typeof item !== 'object') return false
-  const text = (item.text || passageText(item) || '').trim()
+  const text = normalizeMojibake(item.text || passageText(item) || '').trim()
   if (!text) return false
   const itemLanguage = typeof item.language === 'string' ? item.language.trim() : ''
-  return !itemLanguage || itemLanguage === language
+  if (itemLanguage) return itemLanguage === language
+  if (language === 'es') return /[ñáéíóúü¿¡]|\b(el|la|los|las|una|uno|para|pero|como|todo|hola|mundo)\b/i.test(text)
+  return true
 }
 
 function applyRecommendationData(data, language) {
