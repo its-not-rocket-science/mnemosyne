@@ -1056,6 +1056,7 @@ results.addEventListener('lesson-open', async (event) => {
     // "Study drills" inside the pane delegates to the existing modal.
     if (detailPane) {
       const uiLang = currentUiLang()
+
       detailPane.show({
         lesson,
         sentenceText,
@@ -1194,6 +1195,9 @@ detailPane?.addEventListener('pane-navigate', async (event) => {
     const dueQueue = progressRows.filter((row) => row.review_bucket === 'due').slice(0, 8)
     if (!detailPane) return
     const uiLang = currentUiLang()
+    openDetail()
+    paneBackdrop?.classList.add('is-visible')
+
     detailPane.show({
       lesson,
       sentenceText: '',
