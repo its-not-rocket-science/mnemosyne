@@ -119,6 +119,7 @@ const rnpCounter       = document.querySelector('#reader-nowplaying .reader-nowp
 
 
 const reviewStateByObject = new Map()
+const termProgressByLanguage = new Map()
 const canSpeak = 'speechSynthesis' in window
 
 // Transport timer state
@@ -1045,6 +1046,11 @@ results.addEventListener('lesson-open', async (event) => {
     }
 
     const lesson = await response.json()
+    const progressRows = await getTermProgress(language)
+    const dueQueue = progressRows
+      .filter((row) => row.review_bucket === 'due')
+      .sort((a, b) => Date.parse(a.next_review_at || '') - Date.parse(b.next_review_at || ''))
+      .slice(0, 8)
 
     // Open the detail pane as the primary view.
     // "Study drills" inside the pane delegates to the existing modal.
@@ -1081,6 +1087,7 @@ results.addEventListener('lesson-open', async (event) => {
             return d.translation ? { text: d.translation, attribution: d.attribution } : null
           } catch { return null }
         },
+        reviewQueue: dueQueue,
         onSpeak:  (text, lang) => speakText(text, lang ?? ttsTag),
         onStudy:  () => modal.open({
           lesson,
@@ -1183,6 +1190,8 @@ detailPane?.addEventListener('pane-navigate', async (event) => {
     const response = await fetch(url)
     if (!response.ok) return
     const lesson = await response.json()
+    const progressRows = await getTermProgress(language)
+    const dueQueue = progressRows.filter((row) => row.review_bucket === 'due').slice(0, 8)
     if (!detailPane) return
     const uiLang = currentUiLang()
     detailPane.show({
@@ -1194,6 +1203,7 @@ detailPane?.addEventListener('pane-navigate', async (event) => {
       caps,
       depth: currentDepth,
       uiLang,
+      reviewQueue: dueQueue,
       onSpeak:  (text, l) => speakText(text, l ?? ttsTag),
       onStudy:  () => modal.open({
         lesson,
@@ -1871,6 +1881,23 @@ async function submitLessonCheck(lesson, language, check) {
       source_lesson_id: lesson.id,
     }),
   })
+  termProgressByLanguage.delete(language)
+}
+
+async function getTermProgress(language) {
+  if (!language) return []
+  if (termProgressByLanguage.has(language)) return termProgressByLanguage.get(language) || []
+  try {
+    const response = await fetch(`${API_BASE}/term-progress/${encodeURIComponent(language)}?limit=300`, {
+      headers: { ...getAuthHeaders() },
+    })
+    if (!response.ok) return []
+    const rows = await response.json()
+    termProgressByLanguage.set(language, rows)
+    return rows
+  } catch {
+    return []
+  }
 }
 
 
@@ -2001,6 +2028,8 @@ async function _openDeepLink() {
     const response = await fetch(url, { headers: getAuthHeaders() })
     if (!response.ok) return
     const lesson = await response.json()
+    const progressRows = await getTermProgress(lang)
+    const dueQueue = progressRows.filter((row) => row.review_bucket === 'due').slice(0, 8)
     if (detailPane) {
       detailPane.show({
         lesson,
@@ -2010,6 +2039,7 @@ async function _openDeepLink() {
         ttsTag,
         caps,
         depth: currentDepth,
+        reviewQueue: dueQueue,
         onSpeak: (text, l) => speakText(text, l ?? ttsTag),
         onStudy: () => modal.open({
           lesson,

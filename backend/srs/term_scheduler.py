@@ -38,7 +38,9 @@ def classify_term(
     if next_review_at is not None and next_review_at <= now:
         return "due"
     if mastery_score >= cfg.mastery_well_learned_threshold:
-        return "well_learned"
+        return "strong"
+    if mastery_score >= 0.60:
+        return "fading"
     return "learning"
 
 

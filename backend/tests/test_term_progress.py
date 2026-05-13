@@ -92,11 +92,11 @@ async def test_term_progress_correct_review_increases_mastery_and_interval(async
     data = reviewed.json()
     assert data["mastery_score"] > 0.0
     assert data["next_review_at"] is not None
-    assert data["review_bucket"] in {"learning", "well_learned"}
+    assert data["review_bucket"] in {"learning", "fading", "strong"}
 
 
 @pytest.mark.asyncio
-async def test_term_progress_repeated_success_can_become_well_learned(async_client) -> None:
+async def test_term_progress_repeated_success_can_become_strong(async_client) -> None:
     await async_client.post("/term-progress", json={"term": "être", "language": "fr"})
     last = None
     for _ in range(6):
@@ -108,4 +108,4 @@ async def test_term_progress_repeated_success_can_become_well_learned(async_clie
         last = resp.json()
     assert last is not None
     assert last["mastery_score"] >= 0.85
-    assert last["review_bucket"] == "well_learned"
+    assert last["review_bucket"] == "strong"
