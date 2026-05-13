@@ -1962,5 +1962,3 @@ export class MnemosyneDetailPane extends HTMLElement {
 }
 
 customElements.define('mnemosyne-detail-pane', MnemosyneDetailPane)
-    const reviewQueue = Array.isArray(this.#config?.reviewQueue) ? this.#config.reviewQueue : []
-    const dueItems = reviewQueue.slice(0, 5)
