@@ -9,6 +9,7 @@ from __future__ import annotations
 import re
 
 from backend.dictionary.phrase_families import lookup_family_by_id
+from backend.lesson.practice_hooks import hooks_for_language
 from backend.nuance.en import EnglishNuanceExtractor
 from backend.parsing.plugin_interface import Token
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
@@ -97,6 +98,9 @@ class EnglishPlugin:
             return lo
         return lookup_family_by_id(object_id)
 
+
+    def practice_hooks(self):
+        return hooks_for_language("en")
     # ------------------------------------------------------------------
     # Internals
     # ------------------------------------------------------------------
