@@ -76,6 +76,20 @@ function normalizeForLanguage(text, language = 'und') {
   return language === 'de' ? folded.replace(/ß/g, 'ss') : folded
 }
 
+
+function tokenSet(text, language = 'und') {
+  return new Set(normalizeForLanguage(text, language).split(/[^\p{L}\p{N}]+/u).filter((w) => w.length >= 3))
+}
+
+function compareMeaning(candidate, reference, language = 'und') {
+  const mine = tokenSet(candidate, language)
+  const target = tokenSet(reference, language)
+  if (!mine.size || !target.size) return { overlap: 0, ratio: 0 }
+  let overlap = 0
+  for (const token of mine) if (target.has(token)) overlap += 1
+  return { overlap, ratio: overlap / Math.max(1, target.size) }
+}
+
 /**
  * Populate `container` with the sentence text, wrapping any occurrence of
  * `phrase` in a <mark class="context-highlight"> element.
@@ -604,6 +618,8 @@ export class MnemosyneDetailPane extends HTMLElement {
     const checks = (lesson.practice_activities || [])
       .filter((a) => a?.type === 'comprehension_questions' && a.prompt && a.expected_answer)
       .slice(0, 3)
+    const sentenceText = this.#config?.sentenceText || ''
+    const canRetell = sentenceText.trim().split(/\s+/).length >= 8
     const checksHtml = checks.map((a, idx) => {
       const options = [a.expected_answer, ...(a.acceptable_alternatives || [])]
         .filter(Boolean)
@@ -643,6 +659,33 @@ export class MnemosyneDetailPane extends HTMLElement {
             </article>
           `).join('')}
           ${checksHtml}
+
+          ${canRetell ? /* html */`
+            <article class="pane__check pane__check--typed" data-retell-mode="recall">
+              <p class="pane__check-prompt">Recall challenge: without looking, write key details from this passage.</p>
+              <form class="pane__typed-form">
+                <input class="pane__typed-input" type="text" autocomplete="off" />
+                <button type="submit" class="pane__check-option">${esc(tr('dp_practice_submit', 'Check'))}</button>
+              </form>
+              <p class="pane__muted pane__check-feedback" aria-live="polite"></p>
+            </article>
+            ${[
+              ['target_language', 'Retell in the target language.'],
+              ['interface_language', 'Retell in your interface language.'],
+              ['three_facts', 'List 3 key facts from the passage.'],
+              ['continue_story', 'Continue the story in 1–2 sentences.'],
+            ].map(([mode, prompt]) => `
+              <article class="pane__check pane__check--typed" data-retell-mode="${mode}">
+                <p class="pane__check-prompt">${esc(prompt)}</p>
+                <form class="pane__typed-form">
+                  <input class="pane__typed-input" type="text" autocomplete="off" />
+                  <button type="submit" class="pane__check-option">${esc(tr('dp_practice_submit', 'Check'))}</button>
+                </form>
+                <p class="pane__muted pane__check-feedback" aria-live="polite"></p>
+              </article>
+            `).join('')}
+          ` : ''}
+
         </section>
       </section>
     `
@@ -721,12 +764,31 @@ export class MnemosyneDetailPane extends HTMLElement {
         const idx = Number(checkEl.dataset.drillIndex)
         const drill = (lesson.practice_activities || [])
           .filter((a) => ['sentence_level_vocabulary_recall', 'cloze_completion'].includes(a?.type))[idx]
+        const retellMode = checkEl.dataset.retellMode
         const input = checkEl.querySelector('.pane__typed-input')
         let attempts = 0
         typedForm.addEventListener('submit', (event) => {
           event.preventDefault()
           attempts += 1
           const typed = input?.value || ''
+          if (retellMode) {
+            const reference = [sentenceText, lesson.explanation, ...(lesson.examples || [])].filter(Boolean).join(' ')
+            const { overlap, ratio } = compareMeaning(typed, reference, language)
+            const meaningFocused = ratio >= 0.22
+            if (feedback) feedback.textContent = meaningFocused
+              ? `✓ Good meaning recall. You captured ${overlap} key ideas from the lesson.`
+              : 'Try again focusing on main ideas: who/what happened, and why it matters.'
+            const historyKey = `mn-retell-history-${lesson.id}`
+            const prior = JSON.parse(localStorage.getItem(historyKey) || '[]')
+            prior.push({ mode: retellMode, answer: typed, overlap, ratio, meaningFocused, answeredAt: new Date().toISOString() })
+            localStorage.setItem(historyKey, JSON.stringify(prior.slice(-25)))
+            this.dispatchEvent(new CustomEvent('pane-practice-check', {
+              bubbles: true,
+              composed: true,
+              detail: { type: `retell_${retellMode}`, correct: meaningFocused, answeredAt: new Date().toISOString(), lesson, language, term: lesson.lesson_data?.lemma || lesson.title, attempts },
+            }))
+            return
+          }
           const accepted = [drill?.expected_answer, ...(drill?.acceptable_alternatives || [])].filter(Boolean)
           const correct = accepted.some((ans) => normalizeForLanguage(ans, language) === normalizeForLanguage(typed, language))
           if (feedback) feedback.textContent = correct ? tr('dp_practice_correct', '✓ Correct.') : `✗ ${drill?.feedback_text || tr('dp_practice_try_again', 'Try again.')}`
