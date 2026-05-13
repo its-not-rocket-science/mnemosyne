@@ -102,3 +102,19 @@ def test_notice_pattern_drills_not_generated_without_suitable_examples():
         context=LessonContext(language_code="en", language_name="English", direction="ltr"),
     )
     assert all(a.type != "notice_the_pattern" for a in lesson.practice_activities)
+
+
+def test_spanish_and_french_use_language_variants_for_answers():
+    es = _build_fixture("es", "hablarse", "hablarse", "to speak")
+    fr = _build_fixture("fr", "se parler", "se parler", "to speak")
+    es_recall = next(a for a in es.practice_activities if a.type == "sentence_level_vocabulary_recall")
+    fr_recall = next(a for a in fr.practice_activities if a.type == "sentence_level_vocabulary_recall")
+    assert "hablar" in es_recall.acceptable_alternatives
+    assert any(v in fr_recall.acceptable_alternatives for v in ["se parler", "parler"])
+
+
+def test_unsupported_language_uses_safe_default_practice_hooks():
+    lesson = _build_fixture("xx", "token", "Token", "token meaning")
+    cloze = next(a for a in lesson.practice_activities if a.type == "cloze_completion")
+    assert "____" in cloze.prompt
+    assert any("Not:" in alt for alt in next(a for a in lesson.practice_activities if a.type == "term_to_meaning_matching").acceptable_alternatives)

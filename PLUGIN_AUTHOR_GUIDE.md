@@ -79,6 +79,21 @@ the plugin's `code` when absent.
 
 ---
 
+
+## Practice-generation hooks
+
+Plugins can optionally expose `practice_hooks()` to customize lesson practice generation.
+The hook bundle supports:
+- term normalization
+- acceptable answer variants
+- cloze generation
+- distractor generation
+- grammar-pattern detection
+- feedback text tuning
+
+If omitted, the lesson engine uses safe default hooks so unsupported languages still get
+basic comprehension and retrieval activities.
+
 ## Object Types
 
 Each `CandidateObject` has a `type` field.  The built-in lesson builders
