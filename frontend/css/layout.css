@@ -110,6 +110,7 @@ body {
 
 .app-shell__text-panel {
   flex: 1 1 auto;
+  min-inline-size: min(42rem, 100%);
 }
 
 /* ── DetailPanel ─────────────────────────────────────────────────────────────
@@ -131,8 +132,9 @@ body {
 }
 
 .app-shell--detail-open .app-shell__detail-panel {
-  flex-basis: 40%;
-  max-inline-size: 26rem;
+  flex-basis: 46%;
+  max-inline-size: 34rem;
+  min-inline-size: 22rem;
   border-inline-start-width: 1px;
   border-inline-start-color: var(--detail-accent, var(--border));
   transition:
@@ -193,6 +195,7 @@ body {
     position: static;
     transition: none;
     max-block-size: none;
+    min-inline-size: 0;
   }
 }
 
