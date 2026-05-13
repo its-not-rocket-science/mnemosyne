@@ -430,9 +430,11 @@ function openInlinePreview(annotation) {
   detailBtn.dataset.i18n = 'reader_open_full_lesson'
   detailBtn.textContent = t('reader_open_full_lesson')
   detailBtn.addEventListener('click', () => {
-    annotation.dataset.openFullLesson = 'true'
     closeInlinePreview(preview, annotation)
-    annotation.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }))
+    annotation.dispatchEvent(new CustomEvent('lesson-open', {
+      bubbles: true,
+      detail: { objectId: annotation.dataset.objectId },
+    }))
   })
 
   const closeBtn = document.createElement('button')
