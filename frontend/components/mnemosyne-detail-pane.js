@@ -130,6 +130,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     { id: 'origins',     labelKey: 'dp_tab_origins',     alwaysShow: false },
     { id: 'context',     labelKey: 'dp_tab_context',     alwaysShow: true  },
     { id: 'related',     labelKey: 'dp_tab_related',     alwaysShow: false },
+    { id: 'practice',    labelKey: 'dp_tab_practice',    alwaysShow: true  },
   ]
 
   constructor() {
@@ -242,6 +243,7 @@ export class MnemosyneDetailPane extends HTMLElement {
       if (t.id === 'origins')     return depthIdx >= 1 && hasOrigins
       if (t.id === 'context')     return depthIdx >= 1
       if (t.id === 'related')     return depthIdx >= 2 && hasRelated
+      if (t.id === 'practice')    return depthIdx >= 1
       return false
     })
 
@@ -290,6 +292,7 @@ export class MnemosyneDetailPane extends HTMLElement {
           ${depthIdx >= 1 && hasOrigins  ? this._htmlOriginsPanel(ld, isNonCanonical, Boolean(ld.source_text), matchType) : ''}
           ${depthIdx >= 1               ? this._htmlContextPanel(sentenceText, language, dir, matchedVariant) : ''}
           ${depthIdx >= 2 && hasRelated  ? this._htmlRelatedPanel(ld, canonical, isNonCanonical) : ''}
+          ${this._htmlPracticePanel()}
         </div>
 
         <footer class="pane__footer">
@@ -581,6 +584,25 @@ export class MnemosyneDetailPane extends HTMLElement {
     `
   }
 
+  _htmlPracticePanel() {
+    return /* html */`
+      <section
+        id="dp-panel-practice"
+        role="tabpanel"
+        aria-labelledby="dp-tab-practice"
+        class="pane__panel"
+        hidden
+      >
+        <section class="pane__subsection" aria-labelledby="dp-practice-h">
+          <h3 class="pane__section-heading" id="dp-practice-h">${esc(t('dp_practice_heading'))}</h3>
+          <p class="pane__muted">${esc(t('dp_practice_description'))}</p>
+          <button class="pane__study-btn pane__study-btn--inline" type="button">${esc(t('dp_practice_start_btn'))}</button>
+          <p class="pane__muted">${esc(t('dp_practice_tip'))}</p>
+        </section>
+      </section>
+    `
+  }
+
   // ── Event wiring ─────────────────────────────────────────────────────────────
 
   // ── Translation fetchers ─────────────────────────────────────────────────────
@@ -640,12 +662,12 @@ export class MnemosyneDetailPane extends HTMLElement {
     this.shadowRoot.querySelector('.pane__close')
       ?.addEventListener('click', () => this.hide())
 
-    // Study drills button
-    this.shadowRoot.querySelector('.pane__study-btn')
-      ?.addEventListener('click', () => {
+    // Study drills buttons (footer + practice tab CTA)
+    this.shadowRoot.querySelectorAll('.pane__study-btn')
+      .forEach((btn) => btn.addEventListener('click', () => {
         this.dispatchEvent(new CustomEvent('pane-study', { bubbles: true, composed: true }))
         this.#onStudy?.()
-      })
+      }))
 
     // Tab keyboard navigation (ARIA APG roving-tabindex pattern)
     const tabEls = Array.from(this.shadowRoot.querySelectorAll('[role="tab"]'))
@@ -1532,6 +1554,15 @@ export class MnemosyneDetailPane extends HTMLElement {
       .pane__study-btn:focus-visible {
         outline: 3px solid var(--accent);
         outline-offset: 3px;
+      }
+      .pane__study-btn--inline {
+        align-self: flex-start;
+      }
+      .pane__muted {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.8125rem;
+        line-height: 1.55;
       }
       @media (prefers-reduced-motion: reduce) {
         .pane__study-btn { transition: none; }
