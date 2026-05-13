@@ -59,6 +59,7 @@ function normalizeMojibake(text) {
 }
 
 function passageText(item) {
+  console.log('Extracting passage text from item:', item)
   if (Array.isArray(item.passage) && item.passage.length) return normalizeMojibake(item.passage.map(s => s.text).join(' '))
   return normalizeMojibake(item.text || '')
 }
@@ -132,7 +133,7 @@ function renderAlternatives(listEl, alternatives) {
     card.className = 'recommended-reading-card'
     card.setAttribute('role', 'listitem')
     const title = item.source_title || (item.is_continuation ? t('rec_continue_reading') : t('rec_suggested'))
-    const focusSentence = item.text || passageText(item)
+    const focusSentence = passageText(item)
     card.innerHTML = `
       <div class="recommended-reading-card__meta">
         <span>${escapeHtml(item.is_continuation ? t('rec_continue') : t('rec_option'))}</span>
@@ -165,7 +166,8 @@ function renderPanel() {
   const alternatives = currentRecommendations.slice(1)
   const autonomousEnabled = window.mnemosyneAutonomous?.isEnabled?.() || false
   const title = chosen.source_title || (chosen.is_continuation ? t('rec_continue_reading') : t('rec_suggested'))
-  const focusSentence = chosen.text || passageText(chosen)
+  const focusSentence = passageText(chosen)
+  console.log("focusSentence:", focusSentence)
 
   p.innerHTML = `
     <p class="recommended-reading-panel__eyebrow rec-panel__eyebrow" id="rec-panel-eyebrow">${escapeHtml(t('rec_next_up'))}</p>
