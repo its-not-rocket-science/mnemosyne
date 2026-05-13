@@ -136,9 +136,16 @@ async def recommend_text(
                 SourceProgressionRow.source_document_id,
                 SourceProgressionRow.next_position,
                 SourceProgressionRow.sentences_total,
-            ).where(
+            )
+            .select_from(SourceProgressionRow)
+            .join(
+                SourceDocumentRow,
+                SourceDocumentRow.id == SourceProgressionRow.source_document_id,
+            )
+            .where(
                 SourceProgressionRow.user_id == current_user,
                 SourceProgressionRow.next_position > 0,
+                SourceDocumentRow.language == language,
             )
         )
         for prog_row in prog_result.all():
