@@ -441,11 +441,12 @@ function openInlinePreview(annotation) {
       || document.querySelector('#language')?.value
     const objectId = annotationObjectId(annotation)
     if (!objectId || !language) return
+
+    // Route through the existing annotation click handler so lesson-open
+    // preserves the same source target/metadata path used elsewhere.
+    annotation.dataset.openFullLesson = 'true'
     closeInlinePreview(preview, annotation)
-    annotation.dispatchEvent(new CustomEvent('lesson-open', {
-      bubbles: true,
-      detail: { objectId, language },
-    }))
+    annotation.click()
   })
 
   const closeBtn = document.createElement('button')
