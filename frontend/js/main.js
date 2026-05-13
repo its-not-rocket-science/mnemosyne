@@ -217,7 +217,7 @@ const TYPE_LEVEL = {
 }
 
 const ANNOTATION_DEPTH_MODEL = {
-  subtle: new Set(['vocabulary']),
+  subtle: new Set(['vocabulary', 'conjugation', 'agreement', 'grammar', 'script', 'transliteration', 'idiom', 'nuance', 'phrase_family']),
   learning: new Set(['vocabulary', 'conjugation', 'agreement', 'grammar']),
   deep: new Set([
     'vocabulary',
