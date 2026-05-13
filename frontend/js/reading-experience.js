@@ -31,6 +31,13 @@ let focusMode = localStorage.getItem(STORAGE_FOCUS_KEY) === 'true'
 
 let focusTicking = false
 
+function annotationObjectId(annotation) {
+  return annotation?.dataset?.objectId
+    || annotation?.dataset?.object_id
+    || annotation?.dataset?.annotationId
+    || null
+}
+
 function clearFocusBlock() {
   results?.querySelectorAll('[data-focus-block]').forEach(el => {
     el.removeAttribute('data-focus-block')
@@ -431,10 +438,13 @@ function openInlinePreview(annotation) {
   detailBtn.textContent = t('reader_open_full_lesson')
   detailBtn.addEventListener('click', () => {
     const language = annotation.closest('[lang]')?.getAttribute('lang')
+      || document.querySelector('#language')?.value
+    const objectId = annotationObjectId(annotation)
+    if (!objectId || !language) return
     closeInlinePreview(preview, annotation)
     annotation.dispatchEvent(new CustomEvent('lesson-open', {
       bubbles: true,
-      detail: { objectId: annotation.dataset.objectId, language },
+      detail: { objectId, language },
     }))
   })
 
