@@ -113,6 +113,24 @@
  * @property {string}      [language_code]
  * @property {string}      [script_direction]
  * @property {Object}      [lesson_data]      - Raw lesson_data blob (type-specific).
+ * @property {PracticeActivity[]} [practice_activities]
+ */
+
+
+/**
+ * @typedef {'comprehension_questions'|'sentence_level_vocabulary_recall'|'cloze_completion'|'term_to_meaning_matching'|'sentence_recombination'|'transformation_drills'|'short_retell_prompts'} PracticeActivityType
+ */
+
+/**
+ * @typedef {Object} PracticeActivity
+ * @property {PracticeActivityType} type
+ * @property {string} language
+ * @property {string} difficulty
+ * @property {string} target_term_or_pattern
+ * @property {string} prompt
+ * @property {string} expected_answer
+ * @property {string[]} acceptable_alternatives
+ * @property {string} feedback_text
  */
 
 // ── Playback system ───────────────────────────────────────────────────────────
