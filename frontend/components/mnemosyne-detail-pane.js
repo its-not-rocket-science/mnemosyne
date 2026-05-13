@@ -67,6 +67,14 @@ function esc(s) {
 function normalize(text) {
   return String(text ?? '').trim().toLowerCase()
 }
+function tr(key, fallback) {
+  const v = t(key)
+  return v === key ? fallback : v
+}
+function normalizeForLanguage(text, language = 'und') {
+  const folded = normalize(text).normalize('NFD').replace(/\p{M}+/gu, '')
+  return language === 'de' ? folded.replace(/ß/g, 'ss') : folded
+}
 
 /**
  * Populate `container` with the sentence text, wrapping any occurrence of
@@ -590,6 +598,9 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   _htmlPracticePanel() {
     const lesson = this.#config?.lesson || {}
+    const sentenceDrills = (lesson.practice_activities || [])
+      .filter((a) => ['sentence_level_vocabulary_recall', 'cloze_completion'].includes(a?.type) && a.prompt && a.expected_answer)
+      .slice(0, 2)
     const checks = (lesson.practice_activities || [])
       .filter((a) => a?.type === 'comprehension_questions' && a.prompt && a.expected_answer)
       .slice(0, 3)
@@ -621,6 +632,16 @@ export class MnemosyneDetailPane extends HTMLElement {
           <p class="pane__muted">${esc(t('dp_practice_description'))}</p>
           <button class="pane__study-btn pane__study-btn--inline" type="button">${esc(t('dp_practice_start_btn'))}</button>
           <p class="pane__muted">${esc(t('dp_practice_tip'))}</p>
+          ${sentenceDrills.map((a, idx) => /* html */`
+            <article class="pane__check pane__check--typed" data-drill-index="${idx}">
+              <p class="pane__check-prompt">${esc(a.prompt)}</p>
+              <form class="pane__typed-form">
+                <input class="pane__typed-input" type="text" autocomplete="off" />
+                <button type="submit" class="pane__check-option">${esc(tr('dp_practice_submit', 'Check'))}</button>
+              </form>
+              <p class="pane__muted pane__check-feedback" aria-live="polite"></p>
+            </article>
+          `).join('')}
           ${checksHtml}
         </section>
       </section>
@@ -695,6 +716,29 @@ export class MnemosyneDetailPane extends HTMLElement {
 
     this.shadowRoot.querySelectorAll('.pane__check').forEach((checkEl) => {
       const feedback = checkEl.querySelector('.pane__check-feedback')
+      const typedForm = checkEl.querySelector('.pane__typed-form')
+      if (typedForm) {
+        const idx = Number(checkEl.dataset.drillIndex)
+        const drill = (lesson.practice_activities || [])
+          .filter((a) => ['sentence_level_vocabulary_recall', 'cloze_completion'].includes(a?.type))[idx]
+        const input = checkEl.querySelector('.pane__typed-input')
+        let attempts = 0
+        typedForm.addEventListener('submit', (event) => {
+          event.preventDefault()
+          attempts += 1
+          const typed = input?.value || ''
+          const accepted = [drill?.expected_answer, ...(drill?.acceptable_alternatives || [])].filter(Boolean)
+          const correct = accepted.some((ans) => normalizeForLanguage(ans, language) === normalizeForLanguage(typed, language))
+          if (feedback) feedback.textContent = correct ? tr('dp_practice_correct', '✓ Correct.') : `✗ ${drill?.feedback_text || tr('dp_practice_try_again', 'Try again.')}`
+          this.dispatchEvent(new CustomEvent('pane-practice-check', {
+            bubbles: true,
+            composed: true,
+            detail: { type: drill?.type, correct, answeredAt: new Date().toISOString(), lesson, language, term: drill?.target_term_or_pattern, attempts },
+          }))
+          if (correct && input) input.disabled = true
+        })
+        return
+      }
       const buttons = checkEl.querySelectorAll('.pane__check-option')
       let answered = false
       buttons.forEach((btn) => btn.addEventListener('click', () => {

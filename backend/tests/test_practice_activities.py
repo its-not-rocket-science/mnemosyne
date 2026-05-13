@@ -34,6 +34,12 @@ def test_practice_activities_generated_from_lesson_content_spanish():
     assert "cloze_completion" in types
     assert "term_to_meaning_matching" in types
     assert all(a.expected_answer for a in lesson.practice_activities)
+    cloze = next(a for a in lesson.practice_activities if a.type == "cloze_completion")
+    assert "____" in cloze.prompt
+    assert "sample sentence" in cloze.prompt
+    recall = next(a for a in lesson.practice_activities if a.type == "sentence_level_vocabulary_recall")
+    assert "sentence context" in recall.prompt
+    assert "hablar" in recall.acceptable_alternatives
 
 
 def test_practice_activities_generated_from_lesson_content_french():
