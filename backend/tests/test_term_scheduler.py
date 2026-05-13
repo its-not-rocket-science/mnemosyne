@@ -8,10 +8,12 @@ from backend.srs.term_scheduler import classify_term, schedule_after_review
 NOW = datetime(2026, 1, 1, tzinfo=UTC)
 
 
-def test_classify_new_due_and_well_learned() -> None:
+def test_classify_new_due_learning_fading_and_strong() -> None:
     assert classify_term(review_count=0, mastery_score=0.0, next_review_at=None, now=NOW) == "new"
     assert classify_term(review_count=2, mastery_score=0.4, next_review_at=NOW - timedelta(days=1), now=NOW) == "due"
-    assert classify_term(review_count=4, mastery_score=0.9, next_review_at=NOW + timedelta(days=2), now=NOW) == "well_learned"
+    assert classify_term(review_count=1, mastery_score=0.4, next_review_at=NOW + timedelta(days=1), now=NOW) == "learning"
+    assert classify_term(review_count=3, mastery_score=0.7, next_review_at=NOW + timedelta(days=1), now=NOW) == "fading"
+    assert classify_term(review_count=4, mastery_score=0.9, next_review_at=NOW + timedelta(days=2), now=NOW) == "strong"
 
 
 def test_incorrect_review_reduces_mastery_and_schedules_early() -> None:
