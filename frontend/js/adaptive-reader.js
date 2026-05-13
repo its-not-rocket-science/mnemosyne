@@ -472,9 +472,9 @@ function isCategoryVisible(annotation, category) {
   if (category === 'pronunciation') return ['pronunciation','phonetics'].includes(type)
   if (category === 'cultural_notes') return ['cultural_note','culture','cultural'].includes(type)
   if (category === 'nuance') return ['nuance','nuance_or_style','phrase_family','idiom','literary_device'].includes(type)
-  if (category === 'memory_map_status') return true
-  if (category === 'difficulty_hints') return true
-  return true
+  if (category === 'memory_map_status') return false
+  if (category === 'difficulty_hints') return false
+  return false
 }
 
 function flashDifficultyAdjustment(mode) {
