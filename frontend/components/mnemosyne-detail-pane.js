@@ -166,9 +166,9 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   // ── Public API ──────────────────────────────────────────────────────────────
 
-  show({ lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, onTranslate, depth, uiLang }) {
-    this.#lastShowArgs  = { lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, onTranslate, depth, uiLang }
-    this.#config        = { lesson, sentenceText, language, dir: dir ?? 'ltr', ttsTag, caps, depth: depth ?? 'deep', uiLang: uiLang ?? 'en' }
+  show({ lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, onTranslate, depth, uiLang, reviewQueue = [] }) {
+    this.#lastShowArgs  = { lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, onTranslate, depth, uiLang, reviewQueue }
+    this.#config        = { lesson, sentenceText, language, dir: dir ?? 'ltr', ttsTag, caps, depth: depth ?? 'deep', uiLang: uiLang ?? 'en', reviewQueue }
     this.#onSpeak       = onSpeak ?? null
     this.#onTranslate   = onTranslate ?? null
     this.#vocabTranslationFetched    = false
@@ -612,6 +612,8 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   _htmlPracticePanel() {
     const lesson = this.#config?.lesson || {}
+    const reviewQueue = Array.isArray(this.#config?.reviewQueue) ? this.#config.reviewQueue : []
+    const dueItems = reviewQueue.slice(0, 5)
     const sentenceDrills = (lesson.practice_activities || [])
       .filter((a) => ['sentence_level_vocabulary_recall', 'cloze_completion'].includes(a?.type) && a.prompt && a.expected_answer)
       .slice(0, 2)
@@ -648,6 +650,14 @@ export class MnemosyneDetailPane extends HTMLElement {
           <p class="pane__muted">${esc(t('dp_practice_description'))}</p>
           <button class="pane__study-btn pane__study-btn--inline" type="button">${esc(t('dp_practice_start_btn'))}</button>
           <p class="pane__muted">${esc(t('dp_practice_tip'))}</p>
+          ${dueItems.length ? /* html */`
+            <article class="pane__check">
+              <p class="pane__check-prompt"><strong>Due now</strong></p>
+              <ul class="pane__variant-list">
+                ${dueItems.map((item) => `<li class="pane__variant-item"><span class="pane__variant-text">${esc(item.lemma || item.term)}</span></li>`).join('')}
+              </ul>
+            </article>
+          ` : ''}
           ${sentenceDrills.map((a, idx) => /* html */`
             <article class="pane__check pane__check--typed" data-drill-index="${idx}">
               <p class="pane__check-prompt">${esc(a.prompt)}</p>
@@ -1826,3 +1836,5 @@ export class MnemosyneDetailPane extends HTMLElement {
 }
 
 customElements.define('mnemosyne-detail-pane', MnemosyneDetailPane)
+    const reviewQueue = Array.isArray(this.#config?.reviewQueue) ? this.#config.reviewQueue : []
+    const dueItems = reviewQueue.slice(0, 5)
