@@ -13,6 +13,7 @@ ActivityType = Literal[
     "sentence_recombination",
     "transformation_drills",
     "short_retell_prompts",
+    "notice_the_pattern",
 ]
 
 
@@ -86,8 +87,79 @@ def build_practice_activities(
         ),
     ]
 
+    activities.extend(_build_pattern_drills(lesson, difficulty, anns, lesson.examples, lp))
+
     return activities
 
+
+
+
+def _build_pattern_drills(
+    lesson: LessonResponse,
+    difficulty: str,
+    annotations: list[str],
+    examples: list[str],
+    learner_progress: dict[str, Any],
+) -> list[PracticeActivity]:
+    pattern = _detect_pattern_from_annotations(annotations)
+    if not pattern:
+        return []
+
+    matching_examples = [s for s in examples if pattern.lower() in s.lower()]
+    if len(matching_examples) < 2:
+        return []
+
+    contrast = next((s for s in examples if s not in matching_examples), matching_examples[0])
+    progress_hint = ""
+    if learner_progress.get("pattern_progress_supported"):
+        progress_hint = " Your result can update this pattern's progress."
+
+    base_feedback = f"Pattern '{pattern}' marks a meaning choice in context; notice how it changes interpretation rather than isolated grammar.{progress_hint}"
+
+    return [
+        _activity(
+            "notice_the_pattern", lesson, difficulty, pattern,
+            prompt=(
+                f"Notice the pattern: '{pattern}'. Which sentence uses it? "
+                f"A) {matching_examples[0]} B) {contrast}"
+            ),
+            expected=matching_examples[0],
+            alternatives=[contrast],
+            feedback=base_feedback,
+        ),
+        _activity(
+            "notice_the_pattern", lesson, difficulty, pattern,
+            prompt=(
+                f"Highlight the repeated structure '{pattern}' in these examples: "
+                f"{matching_examples[0]} | {matching_examples[1]}"
+            ),
+            expected=pattern,
+            alternatives=[matching_examples[0], matching_examples[1]],
+            feedback=f"The repeated structure '{pattern}' signals a recurring meaning relationship in the passage.",
+        ),
+        _activity(
+            "notice_the_pattern", lesson, difficulty, pattern,
+            prompt=f"Compare: '{matching_examples[0]}' vs '{contrast}'. What changed in meaning when '{pattern}' appears?",
+            expected=f"{pattern} adds a distinct meaning nuance in context.",
+            alternatives=["No meaning change", "Only punctuation changed"],
+            feedback=f"Tie your answer to comprehension: '{pattern}' changes how the message is understood.",
+        ),
+    ]
+
+
+def _detect_pattern_from_annotations(annotations: list[str]) -> str | None:
+    for annotation in annotations:
+        tokens = [tok.strip(".,;:!?()[]{}\"'") for tok in annotation.split()]
+        counts: dict[str, int] = {}
+        for tok in tokens:
+            low = tok.lower()
+            if len(low) < 2:
+                continue
+            counts[low] = counts.get(low, 0) + 1
+        repeated = [tok for tok, count in counts.items() if count > 1]
+        if repeated:
+            return repeated[0]
+    return None
 
 def _build_comprehension_checks(lesson: LessonResponse, difficulty: str, text_basis: str, target_term: str) -> list[PracticeActivity]:
     meaning = _first_field_value(lesson.fields, "Translation") or _first_field_value(lesson.fields, "Gloss") or lesson.explanation

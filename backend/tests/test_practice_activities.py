@@ -58,3 +58,47 @@ def test_missing_plugin_support_falls_back_gracefully():
     )
     assert len(lesson.practice_activities) == 9
     assert all(a.language for a in lesson.practice_activities)
+
+
+def test_notice_pattern_drills_generated_when_examples_support_pattern():
+    lesson = build_lesson(
+        object_id="obj-pattern",
+        obj_type="vocabulary",
+        canonical_form="hablar",
+        display_label="hablar",
+        lesson_data={
+            "lemma": "hablar",
+            "pos": "VERB",
+            "translation": "to speak",
+            "examples": [
+                "Yo voy a hablar ahora.",
+                "Ella va a hablar mañana.",
+                "Nosotros comemos luego.",
+            ],
+            "annotations": ["Pattern note: a a marks infinitive framing a"],
+        },
+        context=LessonContext(language_code="es", language_name="Spanish", direction="ltr"),
+    )
+    pattern_activities = [a for a in lesson.practice_activities if a.type == "notice_the_pattern"]
+    assert len(pattern_activities) == 3
+    assert any("Which sentence uses it" in a.prompt for a in pattern_activities)
+    assert any("Highlight the repeated structure" in a.prompt for a in pattern_activities)
+    assert any("What changed in meaning" in a.prompt for a in pattern_activities)
+
+
+def test_notice_pattern_drills_not_generated_without_suitable_examples():
+    lesson = build_lesson(
+        object_id="obj-no-pattern",
+        obj_type="vocabulary",
+        canonical_form="speak",
+        display_label="speak",
+        lesson_data={
+            "lemma": "speak",
+            "pos": "VERB",
+            "translation": "to talk",
+            "examples": ["I speak now.", "We talk later."],
+            "annotations": ["No repeated token here."],
+        },
+        context=LessonContext(language_code="en", language_name="English", direction="ltr"),
+    )
+    assert all(a.type != "notice_the_pattern" for a in lesson.practice_activities)
