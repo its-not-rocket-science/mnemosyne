@@ -59,7 +59,6 @@ function normalizeMojibake(text) {
 }
 
 function passageText(item) {
-  console.log('Extracting passage text from item:', item)
   if (Array.isArray(item.passage) && item.passage.length) return normalizeMojibake(item.passage.map(s => s.text).join(' '))
   return normalizeMojibake(item.text || '')
 }
@@ -167,7 +166,6 @@ function renderPanel() {
   const autonomousEnabled = window.mnemosyneAutonomous?.isEnabled?.() || false
   const title = chosen.source_title || (chosen.is_continuation ? t('rec_continue_reading') : t('rec_suggested'))
   const focusSentence = passageText(chosen)
-  console.log("focusSentence:", focusSentence)
 
   p.innerHTML = `
     <p class="recommended-reading-panel__eyebrow rec-panel__eyebrow" id="rec-panel-eyebrow">${escapeHtml(t('rec_next_up'))}</p>
