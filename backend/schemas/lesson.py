@@ -106,6 +106,7 @@ class PracticeActivity(BaseModel):
         "sentence_recombination",
         "transformation_drills",
         "short_retell_prompts",
+        "notice_the_pattern",
     ]
     language: str
     difficulty: str
