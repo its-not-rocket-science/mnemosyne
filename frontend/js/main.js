@@ -1855,7 +1855,7 @@ async function submitReview(objectId, quality) {
 }
 
 async function submitLessonCheck(lesson, language, check) {
-  const term = lesson?.lesson_data?.lemma || lesson?.examples?.[0] || lesson?.title
+  const term = check?.term || lesson?.lesson_data?.lemma || lesson?.examples?.[0] || lesson?.title
   if (!term || !language || !check) return
   await fetch(`${API_BASE}/term-progress`, {
     method: 'POST',
@@ -1867,7 +1867,7 @@ async function submitLessonCheck(lesson, language, check) {
       seen: true,
       reviewed: true,
       correct: Boolean(check.correct),
-      mastery_delta: check.correct ? 0.08 : -0.06,
+      mastery_delta: check.correct ? 0.08 : -0.1,
       source_lesson_id: lesson.id,
     }),
   })
