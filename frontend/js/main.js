@@ -15,6 +15,7 @@ import {
 import { initUiLanguage, t, ti, currentUiLang, TYPE_LABELS_LONG_I18N } from './i18n.js'
 import { openDetail, closeDetail } from './layout.js'
 import { API_BASE } from './config.js'
+import { buildLessonPipelinePayload, validateLessonPipelinePayload } from './lesson-pipeline.js'
 
 initUiLanguage()
 
@@ -850,7 +851,12 @@ async function _loadSource(sourceId, language) {
     }
     currentDocumentTitle   = data.title || null
     currentDocumentEyebrow = null
-    renderResults(data.sentences, data.language)
+    renderResults(buildLessonPipelinePayload({
+      sourceText: data.sentences.map(s => s.text).join(" "),
+      normalizedText: data.sentences.map(s => s.text).join(" "),
+      parseData: data,
+      suggestedNextPassage: null,
+    }), data.language)
     setStatus(ti('sentences_parsed', { n: data.sentences.length }))
     if (saveLessonBtn) saveLessonBtn.hidden = false
   } catch {
@@ -978,8 +984,14 @@ async function doParseText(text) {
   try {
     const language = languageSelect.value
     const data = await parseWithJob(normalizedText, language)
+    const pipelinePayload = buildLessonPipelinePayload({
+      sourceText: text,
+      normalizedText,
+      parseData: data,
+      suggestedNextPassage: null,
+    })
 
-    if (data.sentences.length === 0) {
+    if (pipelinePayload.sentences.length === 0) {
       showResultsMessage(t('no_items_found'))
       setStatus(t('no_sentences_found'))
       if (saveLessonBtn) saveLessonBtn.hidden = true
@@ -987,8 +999,8 @@ async function doParseText(text) {
     }
 
     if (chosenTextDisplay) chosenTextDisplay.hidden = true
-    renderResults(data.sentences, language)
-    const n = data.sentences.length
+    renderResults(pipelinePayload, language)
+    const n = pipelinePayload.sentences.length
     const parsedMsg = n === 1 ? t('sentence_parsed_1') : ti('sentences_parsed', { n })
     if (data.warnings?.length) {
       setStatus(data.warnings[0], 'error')
@@ -1421,7 +1433,9 @@ playbackEngine.addEventListener('state-change', ({ detail: { state, current, ind
 
 // ── Render sentence cards ─────────────────────────────────────────────────────
 
-function renderResults(sentences, language) {
+function renderResults(pipelinePayload, language) {
+  const payload = validateLessonPipelinePayload(pipelinePayload)
+  const sentences = payload.sentences
   const fragment  = document.createDocumentFragment()
   const caps      = languageCapabilities.get(language)
   const dir       = caps?.direction         ?? 'ltr'
