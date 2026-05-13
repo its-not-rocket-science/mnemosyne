@@ -378,6 +378,8 @@ function init() {
   if (results) {
     new MutationObserver(mutations => {
       if (mutations.some(m => m.addedNodes.length)) {
+        // A fresh parse means previous recommendation cards are stale.
+        clearRecommendations()
         resetProgress()
         // Re-evaluate after DOM settles (handles short passages fully in viewport)
         queueMicrotask(onScroll)
