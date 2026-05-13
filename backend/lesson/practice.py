@@ -38,14 +38,9 @@ def build_practice_activities(
     difficulty = _difficulty_from_progress(lp)
 
     target_term = terms[0] if terms else lesson.canonical_form if hasattr(lesson, "canonical_form") else lesson.title
+    comprehension_checks = _build_comprehension_checks(lesson, difficulty, text_basis, target_term)
     activities: list[PracticeActivity] = [
-        _activity(
-            "comprehension_questions", lesson, difficulty, target_term,
-            prompt=f"What is the main meaning of: {text_basis}?",
-            expected=_first_field_value(lesson.fields, "Translation") or _first_field_value(lesson.fields, "Gloss") or lesson.explanation,
-            alternatives=[lesson.explanation],
-            feedback="Check the explanation and meaning field; focus on core idea over literal wording.",
-        ),
+        *comprehension_checks,
         _activity(
             "sentence_level_vocabulary_recall", lesson, difficulty, target_term,
             prompt=f"Recall the term used in this lesson for: {(_first_field_value(lesson.fields, 'Translation') or 'the target meaning')}",
@@ -91,6 +86,34 @@ def build_practice_activities(
     ]
 
     return activities
+
+
+def _build_comprehension_checks(lesson: LessonResponse, difficulty: str, text_basis: str, target_term: str) -> list[PracticeActivity]:
+    meaning = _first_field_value(lesson.fields, "Translation") or _first_field_value(lesson.fields, "Gloss") or lesson.explanation
+    checks = [
+        _activity(
+            "comprehension_questions", lesson, difficulty, target_term,
+            prompt=f"Who did what? Pick the best meaning for: {text_basis}",
+            expected=meaning,
+            alternatives=[lesson.explanation, text_basis],
+            feedback="Focus on the actor/action meaning before grammar details.",
+        ),
+        _activity(
+            "comprehension_questions", lesson, difficulty, target_term,
+            prompt=f"Choose the best summary of this passage: {text_basis}",
+            expected=lesson.explanation or meaning,
+            alternatives=[meaning, f"Only grammar is being explained here."],
+            feedback="A good summary keeps the core message in one short idea.",
+        ),
+        _activity(
+            "comprehension_questions", lesson, difficulty, target_term,
+            prompt=f"True or false: this sentence means \"{meaning}\".",
+            expected="True",
+            alternatives=["False"],
+            feedback="Check whether the statement matches the lesson meaning.",
+        ),
+    ]
+    return checks
 
 
 def _activity(t: ActivityType, lesson: LessonResponse, difficulty: str, target: str, *, prompt: str, expected: str, alternatives: list[str], feedback: str) -> PracticeActivity:
