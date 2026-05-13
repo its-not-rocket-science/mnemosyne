@@ -90,6 +90,15 @@ function compareMeaning(candidate, reference, language = 'und') {
   return { overlap, ratio: overlap / Math.max(1, target.size) }
 }
 
+function shuffled(array) {
+  const out = [...array]
+  for (let i = out.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[out[i], out[j]] = [out[j], out[i]]
+  }
+  return out
+}
+
 /**
  * Populate `container` with the sentence text, wrapping any occurrence of
  * `phrase` in a <mark class="context-highlight"> element.
@@ -637,6 +646,17 @@ export class MnemosyneDetailPane extends HTMLElement {
         </article>
       `
     }).join('')
+    const quizItems = this.#buildMiniQuizItems(lesson, reviewQueue).slice(0, 8)
+    const quizItemsHtml = quizItems.map((q, idx) => /* html */`
+      <article class="pane__check pane__check--typed" data-quiz-index="${idx}">
+        <p class="pane__check-prompt"><strong>${esc(tr(`dp_quiz_type_${q.kind}`, 'Quiz'))}</strong> · ${esc(q.prompt)}</p>
+        <form class="pane__typed-form">
+          <input class="pane__typed-input" type="text" autocomplete="off" />
+          <button type="submit" class="pane__check-option">${esc(tr('dp_practice_submit', 'Check'))}</button>
+        </form>
+        <p class="pane__muted pane__check-feedback" aria-live="polite"></p>
+      </article>
+    `).join('')
     return /* html */`
       <section
         id="dp-panel-practice"
@@ -669,6 +689,21 @@ export class MnemosyneDetailPane extends HTMLElement {
             </article>
           `).join('')}
           ${checksHtml}
+          ${quizItems.length >= 5 ? /* html */`
+            <article class="pane__check">
+              <p class="pane__check-prompt"><strong>${esc(tr('dp_quiz_heading', 'Mini-quiz'))}</strong></p>
+              <p class="pane__muted">${esc(tr('dp_quiz_description', 'Optional mixed review across current and older terms.'))}</p>
+              <details>
+                <summary>${esc(tr('dp_quiz_start', 'Start short quiz'))}</summary>
+                <div class="pane__quiz" data-quiz-items='${esc(JSON.stringify(quizItems))}'>
+                  ${quizItemsHtml}
+                  <button type="button" class="pane__check-option" data-quiz-finish>${esc(tr('dp_quiz_finish', 'Finish quiz'))}</button>
+                  <p class="pane__muted pane__quiz-progress" aria-live="polite"></p>
+                  <div class="pane__quiz-mistakes"></div>
+                </div>
+              </details>
+            </article>
+          ` : ''}
 
           ${canRetell ? /* html */`
             <article class="pane__check pane__check--typed" data-retell-mode="recall">
@@ -699,6 +734,41 @@ export class MnemosyneDetailPane extends HTMLElement {
         </section>
       </section>
     `
+  }
+
+  #buildMiniQuizItems(lesson, reviewQueue) {
+    const activities = Array.isArray(lesson.practice_activities) ? lesson.practice_activities : []
+    const currentTerm = lesson.lesson_data?.lemma || lesson.title || ''
+    const dueTerms = reviewQueue
+      .filter((row) => row.review_bucket === 'due' || row.review_bucket === 'weak')
+      .map((row) => row.lemma || row.term)
+      .filter(Boolean)
+    const weightedDue = [...dueTerms, ...dueTerms]
+    const questions = []
+    if (currentTerm && lesson.explanation) {
+      questions.push({
+        kind: 'term',
+        prompt: tr('dp_quiz_prompt_current', `Type the current lesson term for this meaning: ${lesson.explanation}`),
+        answers: [currentTerm],
+      })
+    }
+    for (const term of weightedDue.slice(0, 4)) {
+      questions.push({
+        kind: 'due',
+        prompt: tr('dp_quiz_prompt_due', `Type this review term: ${term}`),
+        answers: [term],
+      })
+    }
+    for (const a of activities.filter((x) => x?.type === 'comprehension_questions').slice(0, 2)) {
+      questions.push({ kind: 'comprehension', prompt: a.prompt, answers: [a.expected_answer, ...(a.acceptable_alternatives || [])].filter(Boolean) })
+    }
+    for (const a of activities.filter((x) => x?.type === 'cloze_completion').slice(0, 2)) {
+      questions.push({ kind: 'cloze', prompt: a.prompt, answers: [a.expected_answer, ...(a.acceptable_alternatives || [])].filter(Boolean) })
+    }
+    for (const a of activities.filter((x) => x?.type === 'notice_the_pattern' || x?.type === 'transformation_drills').slice(0, 2)) {
+      questions.push({ kind: 'grammar', prompt: a.prompt, answers: [a.expected_answer, ...(a.acceptable_alternatives || [])].filter(Boolean) })
+    }
+    return shuffled(questions).filter((q) => q.answers.length > 0)
   }
 
   // ── Event wiring ─────────────────────────────────────────────────────────────
@@ -830,6 +900,56 @@ export class MnemosyneDetailPane extends HTMLElement {
         }))
       }))
     })
+
+    const quizContainer = this.shadowRoot.querySelector('.pane__quiz')
+    if (quizContainer) {
+      const quizItems = JSON.parse(quizContainer.dataset.quizItems || '[]')
+      const state = { answered: 0, correct: 0, mistakes: [] }
+      const progressEl = quizContainer.querySelector('.pane__quiz-progress')
+      const mistakesEl = quizContainer.querySelector('.pane__quiz-mistakes')
+      const updateProgress = () => {
+        if (!progressEl) return
+        progressEl.textContent = tr(
+          'dp_quiz_progress',
+          `Progress: ${state.answered}/${quizItems.length} · Score: ${state.correct}`
+        )
+      }
+      updateProgress()
+      quizContainer.querySelectorAll('[data-quiz-index]').forEach((rowEl) => {
+        const idx = Number(rowEl.dataset.quizIndex)
+        const item = quizItems[idx]
+        const form = rowEl.querySelector('.pane__typed-form')
+        const input = rowEl.querySelector('.pane__typed-input')
+        const feedback = rowEl.querySelector('.pane__check-feedback')
+        let done = false
+        form?.addEventListener('submit', (event) => {
+          event.preventDefault()
+          if (done) return
+          done = true
+          state.answered += 1
+          const typed = input?.value || ''
+          const correct = (item?.answers || []).some((ans) => normalizeForLanguage(ans, language) === normalizeForLanguage(typed, language))
+          if (correct) state.correct += 1
+          else state.mistakes.push({ prompt: item.prompt, expected: item.answers?.[0] || '' })
+          if (feedback) feedback.textContent = correct ? tr('dp_practice_correct', '✓ Correct.') : `✗ ${tr('dp_quiz_try_again', 'Review this one after finishing.')}`
+          if (input) input.disabled = true
+          updateProgress()
+          this.dispatchEvent(new CustomEvent('pane-practice-check', {
+            bubbles: true, composed: true,
+            detail: { type: `mini_quiz_${item?.kind || 'item'}`, correct, answeredAt: new Date().toISOString(), lesson, language, term: lesson.lesson_data?.lemma || lesson.title },
+          }))
+        })
+      })
+      quizContainer.querySelector('[data-quiz-finish]')?.addEventListener('click', () => {
+        if (!progressEl) return
+        progressEl.textContent = tr('dp_quiz_done', `Quiz complete: ${state.correct}/${quizItems.length}.`)
+        if (mistakesEl) {
+          mistakesEl.innerHTML = state.mistakes.length
+            ? `<p class="pane__muted"><strong>${esc(tr('dp_quiz_review_mistakes', 'Review mistakes'))}</strong></p><ul class="pane__variant-list">${state.mistakes.map((m) => `<li class="pane__variant-item">${esc(m.prompt)} → <strong>${esc(m.expected)}</strong></li>`).join('')}</ul>`
+            : `<p class="pane__muted">${esc(tr('dp_quiz_perfect', 'No mistakes this round.'))}</p>`
+        }
+      })
+    }
 
     // Tab keyboard navigation (ARIA APG roving-tabindex pattern)
     const tabEls = Array.from(this.shadowRoot.querySelectorAll('[role="tab"]'))
