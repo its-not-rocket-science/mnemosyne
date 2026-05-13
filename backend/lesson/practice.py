@@ -37,22 +37,23 @@ def build_practice_activities(
     lp = learner_progress or {}
     difficulty = _difficulty_from_progress(lp)
 
-    target_term = terms[0] if terms else lesson.canonical_form if hasattr(lesson, "canonical_form") else lesson.title
-    comprehension_checks = _build_comprehension_checks(lesson, difficulty, text_basis, target_term)
+    target_term = terms[0] if terms else lesson.title
+    sentence_basis = _sentence_for_term(lesson.examples, target_term) or text_basis
+    comprehension_checks = _build_comprehension_checks(lesson, difficulty, sentence_basis, target_term)
     activities: list[PracticeActivity] = [
         *comprehension_checks,
         _activity(
             "sentence_level_vocabulary_recall", lesson, difficulty, target_term,
-            prompt=f"Recall the term used in this lesson for: {(_first_field_value(lesson.fields, 'Translation') or 'the target meaning')}",
+            prompt=f"Type the highlighted term that best completes this sentence context: {sentence_basis}",
             expected=target_term,
-            alternatives=[_first_field_value(lesson.fields, "Lemma") or target_term],
+            alternatives=_answer_forms(target_term, _first_field_value(lesson.fields, "Lemma")),
             feedback="If recall is hard, rehearse the example sentence aloud once, then retry.",
         ),
         _activity(
             "cloze_completion", lesson, difficulty, target_term,
-            prompt=_cloze_prompt(text_basis, target_term),
+            prompt=_cloze_prompt(sentence_basis, target_term),
             expected=target_term,
-            alternatives=[_first_field_value(lesson.fields, "Lemma") or target_term],
+            alternatives=_answer_forms(target_term, _first_field_value(lesson.fields, "Lemma")),
             feedback="Use agreement/tense cues from surrounding words to fill the blank.",
         ),
         _activity(
@@ -176,3 +177,19 @@ def _cloze_prompt(text: str, answer: str) -> str:
     if answer and answer in text:
         return text.replace(answer, "____", 1)
     return f"Complete the blank: ____ ({answer})"
+
+
+def _sentence_for_term(examples: list[str], term: str) -> str | None:
+    if not examples:
+        return None
+    for sentence in examples:
+        if term and term.lower() in sentence.lower():
+            return sentence
+    return examples[0]
+
+
+def _answer_forms(term: str, lemma: str | None) -> list[str]:
+    forms = [term]
+    if lemma and lemma not in forms:
+        forms.append(lemma)
+    return forms
