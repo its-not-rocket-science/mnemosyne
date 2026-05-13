@@ -26,6 +26,8 @@ const scrollArea = document.querySelector('.app-shell__scroll-area')
 
 let currentRecommendations = []
 let lastRecommendationData = null
+let activeRecommendationLanguage = ''
+let recommendationRequestId = 0
 let progressShown = false
 let prefetchStarted = false
 let panel = null
@@ -278,6 +280,11 @@ function dismiss() {
   if (panel) panel.hidden = true
 }
 
+function clearRecommendations() {
+  lastRecommendationData = null
+  currentRecommendations = []
+}
+
 function resetProgress() {
   progressShown = false
   prefetchStarted = false
@@ -302,9 +309,27 @@ function onScroll() {
   }
 }
 
+function canUseRecommendationItem(item, language) {
+  if (!item || typeof item !== 'object') return false
+  const text = (item.text || passageText(item) || '').trim()
+  if (!text) return false
+  const itemLanguage = typeof item.language === 'string' ? item.language.trim() : ''
+  return !itemLanguage || itemLanguage === language
+}
+
+function applyRecommendationData(data, language) {
+  if (language !== activeRecommendationLanguage) return false
+  const filtered = (data?.sentences || []).filter(item => canUseRecommendationItem(item, language))
+  lastRecommendationData = data
+  currentRecommendations = orderRecommendations({ ...data, sentences: filtered })
+  return true
+}
+
 async function loadRecommendations() {
   const language = languageSelect?.value
   if (!language) return
+  activeRecommendationLanguage = language
+  const requestId = ++recommendationRequestId
   try {
     const response = await fetch(
       `${API_BASE}/recommend?language=${encodeURIComponent(language)}&limit=12`,
@@ -312,8 +337,8 @@ async function loadRecommendations() {
     )
     if (!response.ok) return
     const data = await response.json()
-    lastRecommendationData = data
-    currentRecommendations = orderRecommendations(data)
+    if (requestId !== recommendationRequestId) return
+    if (!applyRecommendationData(data, language)) return
     // If progress already triggered but panel was empty, render now
     if (progressShown && panel?.hidden !== false) showPanel()
   } catch {
@@ -338,16 +363,16 @@ function init() {
   ensurePanel()
   ;(scrollArea ?? window).addEventListener('scroll', onScroll, { passive: true })
 
-  languageSelect?.addEventListener('change', () => {
+  function refreshForLanguageChange() {
+    recommendationRequestId += 1
+    activeRecommendationLanguage = languageSelect?.value || ''
+    clearRecommendations()
     resetProgress()
-    lastRecommendationData = null
-    currentRecommendations = []
-  })
-  document.addEventListener('mnemosyne:language-changed', () => {
-    resetProgress()
-    lastRecommendationData = null
-    currentRecommendations = []
-  })
+    queueMicrotask(onScroll)
+  }
+
+  languageSelect?.addEventListener('change', refreshForLanguageChange)
+  document.addEventListener('mnemosyne:language-changed', refreshForLanguageChange)
 
   // Reset and re-check when new results load
   if (results) {
