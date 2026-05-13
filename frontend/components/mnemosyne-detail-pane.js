@@ -668,6 +668,12 @@ export class MnemosyneDetailPane extends HTMLElement {
         <section class="pane__subsection" aria-labelledby="dp-practice-h">
           <h3 class="pane__section-heading" id="dp-practice-h">${esc(t('dp_practice_heading'))}</h3>
           <p class="pane__muted">${esc(t('dp_practice_description'))}</p>
+          <article class="pane__check" aria-labelledby="dp-practice-why-h">
+            <p class="pane__check-prompt" id="dp-practice-why-h"><strong>${esc(tr('dp_practice_explain_title', 'Why practice?'))}</strong></p>
+            <p class="pane__muted">${esc(tr('dp_practice_explain_body', 'Practice helps turn reading into memory. Start with comprehension checks, then try vocabulary recall and pattern activities. Missed terms come back later for review, while strong terms appear less often.'))}</p>
+            <p class="pane__muted">${esc(tr('dp_practice_explain_optional', 'Practice is optional—you can skip it anytime and keep reading.'))}</p>
+            <p class="pane__muted">${esc(tr('dp_practice_explain_memory_map', 'Practice updates your Memory Map by strengthening terms you answer well and resurfacing terms you miss.'))}</p>
+          </article>
           <button class="pane__study-btn pane__study-btn--inline" type="button">${esc(t('dp_practice_start_btn'))}</button>
           <p class="pane__muted">${esc(t('dp_practice_tip'))}</p>
           ${dueItems.length ? /* html */`
