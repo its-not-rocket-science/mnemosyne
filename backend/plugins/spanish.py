@@ -127,6 +127,7 @@ from typing import Any
 from backend.plugins.cefr_vocab import A1 as _CEFR_A1
 from backend.core.vocab_index import get_cefr_level as _get_cefr_level
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
+from backend.lesson.practice_hooks import hooks_for_language
 from backend.schemas.parse import (
     CandidateObject,
     CandidateSentenceResult,
@@ -1125,5 +1126,8 @@ def _agreement_confidence_note(
     return "agreement inferred from adjacency — morphology incomplete"
 
 
+
+    def practice_hooks(self):
+        return hooks_for_language("es")
 def create_plugin() -> SpanishPlugin:
     return SpanishPlugin()
