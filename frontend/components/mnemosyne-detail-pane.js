@@ -64,6 +64,10 @@ function esc(s) {
     .replace(/"/g, '&quot;')
 }
 
+function normalize(text) {
+  return String(text ?? '').trim().toLowerCase()
+}
+
 /**
  * Populate `container` with the sentence text, wrapping any occurrence of
  * `phrase` in a <mark class="context-highlight"> element.
@@ -585,6 +589,25 @@ export class MnemosyneDetailPane extends HTMLElement {
   }
 
   _htmlPracticePanel() {
+    const lesson = this.#config?.lesson || {}
+    const checks = (lesson.practice_activities || [])
+      .filter((a) => a?.type === 'comprehension_questions' && a.prompt && a.expected_answer)
+      .slice(0, 3)
+    const checksHtml = checks.map((a, idx) => {
+      const options = [a.expected_answer, ...(a.acceptable_alternatives || [])]
+        .filter(Boolean)
+        .slice(0, 3)
+      const uniq = [...new Set(options)]
+      return /* html */`
+        <article class="pane__check" data-check-index="${idx}">
+          <p class="pane__check-prompt">${esc(a.prompt)}</p>
+          <div class="pane__check-options">
+            ${uniq.map((opt) => `<button type="button" class="pane__check-option" data-answer="${esc(opt)}">${esc(opt)}</button>`).join('')}
+          </div>
+          <p class="pane__muted pane__check-feedback" aria-live="polite"></p>
+        </article>
+      `
+    }).join('')
     return /* html */`
       <section
         id="dp-panel-practice"
@@ -598,6 +621,7 @@ export class MnemosyneDetailPane extends HTMLElement {
           <p class="pane__muted">${esc(t('dp_practice_description'))}</p>
           <button class="pane__study-btn pane__study-btn--inline" type="button">${esc(t('dp_practice_start_btn'))}</button>
           <p class="pane__muted">${esc(t('dp_practice_tip'))}</p>
+          ${checksHtml}
         </section>
       </section>
     `
@@ -668,6 +692,28 @@ export class MnemosyneDetailPane extends HTMLElement {
         this.dispatchEvent(new CustomEvent('pane-study', { bubbles: true, composed: true }))
         this.#onStudy?.()
       }))
+
+    this.shadowRoot.querySelectorAll('.pane__check').forEach((checkEl) => {
+      const feedback = checkEl.querySelector('.pane__check-feedback')
+      const buttons = checkEl.querySelectorAll('.pane__check-option')
+      let answered = false
+      buttons.forEach((btn) => btn.addEventListener('click', () => {
+        if (answered) return
+        answered = true
+        const expected = buttons[0]?.dataset.answer || ''
+        const selected = btn.dataset.answer || ''
+        const correct = normalize(selected) === normalize(expected)
+        buttons.forEach((b) => { b.disabled = true })
+        if (feedback) {
+          feedback.textContent = correct ? '✓ Correct.' : `✗ ${lesson.practice_activities?.[Number(checkEl.dataset.checkIndex)]?.feedback_text || 'Try reading the sentence again.'}`
+        }
+        this.dispatchEvent(new CustomEvent('pane-practice-check', {
+          bubbles: true,
+          composed: true,
+          detail: { type: 'comprehension_questions', correct, answeredAt: new Date().toISOString(), lesson, language },
+        }))
+      }))
+    })
 
     // Tab keyboard navigation (ARIA APG roving-tabindex pattern)
     const tabEls = Array.from(this.shadowRoot.querySelectorAll('[role="tab"]'))

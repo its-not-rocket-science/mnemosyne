@@ -1164,6 +1164,11 @@ detailPane?.addEventListener('pane-close', () => {
   detailPane?.classList.remove('pane-entry-animate')
 })
 
+detailPane?.addEventListener('pane-practice-check', ({ detail }) => {
+  if (!detail?.lesson || !detail?.language) return
+  void submitLessonCheck(detail.lesson, detail.language, detail)
+})
+
 paneBackdrop?.addEventListener('click', () => detailPane?.hide())
 
 // Navigate from a confusable-family link inside the detail pane.
