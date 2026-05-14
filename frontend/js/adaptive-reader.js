@@ -803,7 +803,7 @@ function renderIntelligenceSummary() {
     `
     howWorks.append(howWorksSummary, howWorksBody)
 
-    summary.append(statsDiv, howWorks, helpBtn)
+    summary.append(statsDiv, helpBtn, howWorks)
 
     const toolbar = document.querySelector('#reader-adaptive-toolbar')
     if (toolbar) toolbar.insertAdjacentElement('afterend', summary)
