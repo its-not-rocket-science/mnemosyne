@@ -188,6 +188,151 @@ export class MnemosyneDetailPane extends HTMLElement {
     this.#previousFocus = document.activeElement
 
     this.removeAttribute('inert')
+
+    // Delegated handlers on the shadow root — wired once, survive innerHTML replacement.
+    if (!this._delegateWired) {
+      this._delegateWired = true
+
+      this.shadowRoot.addEventListener('click', (e) => {
+        // Tab switch
+        const tab = e.target.closest('[role="tab"]')
+        if (tab) {
+          const tabEls = Array.from(this.shadowRoot.querySelectorAll('[role="tab"]'))
+          const i = tabEls.indexOf(tab)
+          if (i < 0) return
+          this.#activeTab = i
+          this._applyTabState()
+          const tabId = this.#visibleTabs[i]?.id
+          if (tabId === 'explanation') this.#fetchVocabTranslation()
+          if (tabId === 'context') this.#fetchSentenceTranslation(this.#config.sentenceText || '')
+          return
+        }
+
+        // Close
+        if (e.target.closest('.pane__close')) { this.hide(); return }
+
+        // Study drills (footer + practice tab CTA)
+        if (e.target.closest('.pane__study-btn')) {
+          this.dispatchEvent(new CustomEvent('pane-study', { bubbles: true, composed: true }))
+          this.#onStudy?.()
+          return
+        }
+
+        // Audio
+        const speakBtn = e.target.closest('[data-speak]')
+        if (speakBtn) {
+          if (!this.#onSpeak) return
+          const { lesson, language, ttsTag } = this.#config
+          const ld = lesson.lesson_data ?? {}
+          const matchedVariant = ld.matched_variant || lesson.examples?.[0] || ''
+          const canonical      = ld.canonical_form  || lesson.examples?.[0] || ''
+          const mode = speakBtn.dataset.speak
+          let text = ''
+          switch (mode) {
+            case 'phrase':    text = matchedVariant || canonical; break
+            case 'original':  text = matchedVariant;              break
+            case 'modern':    text = canonical || matchedVariant; break
+            case 'sentence':  text = this.#config.sentenceText || ''; break
+            case 'canonical': text = canonical; break
+          }
+          if (text) this.#onSpeak(text, ttsTag ?? language)
+          return
+        }
+
+        // Confusable family links
+        const confusableBtn = e.target.closest('.pane__confusable-link')
+        if (confusableBtn) {
+          const familyId = confusableBtn.dataset.familyId
+          if (!familyId) return
+          this.dispatchEvent(new CustomEvent('pane-navigate', {
+            bubbles: true, composed: true,
+            detail: { objectId: familyId, language: this.#config.language },
+          }))
+          return
+        }
+
+        // Share
+        if (e.target.closest('.pane__share')) {
+          const { lesson, language } = this.#config
+          const shareHint = this.shadowRoot.querySelector('.pane__share-hint')
+          const url = new URL(location.href)
+          url.searchParams.set('annotation', lesson.id)
+          url.searchParams.set('language',   language)
+          const shareUrl = url.toString()
+          if (navigator.share) {
+            navigator.share({ url: shareUrl, title: lesson.title || lesson.label || '' }).catch(() => {})
+          } else {
+            navigator.clipboard.writeText(shareUrl).then(() => {
+              if (shareHint) {
+                shareHint.textContent = t('dp_link_copied')
+                setTimeout(() => { shareHint.textContent = '' }, 2200)
+              }
+            }).catch(() => {
+              if (shareHint) {
+                shareHint.textContent = 'Copy: ' + shareUrl
+                setTimeout(() => { shareHint.textContent = '' }, 6000)
+              }
+            })
+          }
+          return
+        }
+
+        // Note — save
+        if (e.target.closest('.pane__note-save')) {
+          const { lesson } = this.#config
+          const noteKey   = `mn-note-${lesson.id}`
+          const noteInput = this.shadowRoot.querySelector('.pane__note-input')
+          if (!noteInput) return
+          const val = noteInput.value.trim()
+          if (val) localStorage.setItem(noteKey, val)
+          else     localStorage.removeItem(noteKey)
+          this.dispatchEvent(new CustomEvent('note-updated', {
+            bubbles: true, composed: true,
+            detail: { objectId: lesson.id, hasNote: Boolean(val) },
+          }))
+          const saveBtn = e.target.closest('.pane__note-save')
+          const orig = saveBtn.textContent
+          saveBtn.textContent = t('dp_note_saved')
+          setTimeout(() => { saveBtn.textContent = orig }, 1500)
+          return
+        }
+
+        // Note — clear
+        if (e.target.closest('.pane__note-clear')) {
+          const { lesson } = this.#config
+          const noteKey   = `mn-note-${lesson.id}`
+          const noteInput = this.shadowRoot.querySelector('.pane__note-input')
+          if (noteInput) noteInput.value = ''
+          localStorage.removeItem(noteKey)
+          this.dispatchEvent(new CustomEvent('note-updated', {
+            bubbles: true, composed: true,
+            detail: { objectId: lesson.id, hasNote: false },
+          }))
+          return
+        }
+      })
+
+      // Tab keyboard navigation — delegated for same reason as click
+      this.shadowRoot.addEventListener('keydown', (e) => {
+        const tab = e.target.closest('[role="tab"]')
+        if (!tab) return
+        const tabEls = Array.from(this.shadowRoot.querySelectorAll('[role="tab"]'))
+        const i = tabEls.indexOf(tab)
+        if (i < 0) return
+        let next = null
+        if (e.key === 'ArrowRight') next = (i + 1) % tabEls.length
+        if (e.key === 'ArrowLeft')  next = (i - 1 + tabEls.length) % tabEls.length
+        if (e.key === 'Home')       next = 0
+        if (e.key === 'End')        next = tabEls.length - 1
+        if (next !== null) {
+          e.preventDefault()
+          this.#activeTab = next
+          this._applyTabState()
+          tabEls[next].focus()
+        }
+      })
+    }
+
     this._render()
 
     // Deferred to the next frame so the browser registers the pre-animation
@@ -196,7 +341,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     // screen readers announce the newly-visible pane.
     requestAnimationFrame(() => {
       this.setAttribute('data-open', '')
-      this.#setSnap('half')
+      this.#setSnap('full')
       this.shadowRoot.querySelector('[role="tab"]')?.focus()
     })
 
@@ -212,6 +357,9 @@ export class MnemosyneDetailPane extends HTMLElement {
     }
 
     // Close on Escape; trap Tab within the pane while open.
+    if (this.#keydownHandler) {
+      document.removeEventListener('keydown', this.#keydownHandler)
+    }
     this.#keydownHandler = (e) => {
       if (e.key === 'Escape') {
         e.preventDefault()
@@ -831,17 +979,8 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   _wireEvents(matchedVariant, canonical, sentenceText, isNonCanonical) {
     const { lesson, language, ttsTag } = this.#config
-
-    // Close button
-    this.shadowRoot.querySelector('.pane__close')
-      ?.addEventListener('click', () => this.hide())
-
-    // Study drills buttons (footer + practice tab CTA)
-    this.shadowRoot.querySelectorAll('.pane__study-btn')
-      .forEach((btn) => btn.addEventListener('click', () => {
-        this.dispatchEvent(new CustomEvent('pane-study', { bubbles: true, composed: true }))
-        this.#onStudy?.()
-      }))
+    const _dbgTabs   = this.shadowRoot.querySelectorAll('[role="tab"]')
+    const _dbgPanels = this.shadowRoot.querySelectorAll('[role="tabpanel"]')
 
     this.shadowRoot.querySelectorAll('.pane__check').forEach((checkEl) => {
       const feedback = checkEl.querySelector('.pane__check-feedback')
@@ -957,121 +1096,10 @@ export class MnemosyneDetailPane extends HTMLElement {
       })
     }
 
-    // Tab keyboard navigation (ARIA APG roving-tabindex pattern)
-    const tabEls = Array.from(this.shadowRoot.querySelectorAll('[role="tab"]'))
-    tabEls.forEach((tab, i) => {
-      tab.addEventListener('click', () => {
-        this.#activeTab = i
-        this._applyTabState()
-        const tabId = this.#visibleTabs[i]?.id
-        if (tabId === 'explanation') this.#fetchVocabTranslation()
-        if (tabId === 'context')     this.#fetchSentenceTranslation(sentenceText)
-      })
-      tab.addEventListener('keydown', (e) => {
-        let next = null
-        if (e.key === 'ArrowRight') next = (i + 1) % tabEls.length
-        if (e.key === 'ArrowLeft')  next = (i - 1 + tabEls.length) % tabEls.length
-        if (e.key === 'Home')       next = 0
-        if (e.key === 'End')        next = tabEls.length - 1
-        if (next !== null) {
-          e.preventDefault()
-          this.#activeTab = next
-          this._applyTabState()
-          tabEls[next].focus()
-        }
-      })
-    })
-
-    // Confusable family links — navigate to that family's detail panel
-    this.shadowRoot.querySelectorAll('.pane__confusable-link').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const familyId = btn.dataset.familyId
-        if (!familyId) return
-        this.dispatchEvent(new CustomEvent('pane-navigate', {
-          bubbles: true, composed: true,
-          detail: { objectId: familyId, language },
-        }))
-      })
-    })
-
-    // Audio buttons
-    this.shadowRoot.querySelectorAll('[data-speak]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (!this.#onSpeak) return
-        const mode = btn.dataset.speak
-        let text = ''
-        switch (mode) {
-          case 'phrase':    text = matchedVariant || canonical;  break
-          // "original" = the non-canonical matched form (e.g. the Shakespeare spelling)
-          case 'original':  text = matchedVariant;               break
-          // "modern" = the canonical / most-cited form
-          case 'modern':    text = canonical || matchedVariant;  break
-          case 'sentence':  text = sentenceText;                 break
-          case 'canonical': text = canonical;                    break
-        }
-        if (text) this.#onSpeak(text, ttsTag ?? language)
-      })
-    })
-
-    // Share button — build a deep-link URL and copy it / use Web Share API
-    const shareBtn  = this.shadowRoot.querySelector('.pane__share')
-    const shareHint = this.shadowRoot.querySelector('.pane__share-hint')
-    shareBtn?.addEventListener('click', () => {
-      const url = new URL(location.href)
-      url.searchParams.set('annotation', lesson.id)
-      url.searchParams.set('language',   language)
-      const shareUrl = url.toString()
-      if (navigator.share) {
-        navigator.share({ url: shareUrl, title: lesson.title || lesson.label || '' }).catch(() => {})
-      } else {
-        navigator.clipboard.writeText(shareUrl).then(() => {
-          if (shareHint) {
-            shareHint.textContent = t('dp_link_copied')
-            setTimeout(() => { shareHint.textContent = '' }, 2200)
-          }
-        }).catch(() => {
-          if (shareHint) {
-            shareHint.textContent = 'Copy: ' + shareUrl
-            setTimeout(() => { shareHint.textContent = '' }, 6000)
-          }
-        })
-      }
-    })
-
-    // Note section — load from localStorage, wire save / clear
-    const noteKey   = `mn-note-${lesson.id}`
+    // Note — restore saved value from localStorage on each render
     const noteInput = this.shadowRoot.querySelector('.pane__note-input')
-    const noteSave  = this.shadowRoot.querySelector('.pane__note-save')
-    const noteClear = this.shadowRoot.querySelector('.pane__note-clear')
     if (noteInput) {
-      noteInput.value = localStorage.getItem(noteKey) ?? ''
-
-      noteSave?.addEventListener('click', () => {
-        const val = noteInput.value.trim()
-        if (val) {
-          localStorage.setItem(noteKey, val)
-        } else {
-          localStorage.removeItem(noteKey)
-        }
-        this.dispatchEvent(new CustomEvent('note-updated', {
-          bubbles: true, composed: true,
-          detail: { objectId: lesson.id, hasNote: Boolean(val) },
-        }))
-        if (noteSave) {
-          const orig = noteSave.textContent
-          noteSave.textContent = t('dp_note_saved')
-          setTimeout(() => { noteSave.textContent = orig }, 1500)
-        }
-      })
-
-      noteClear?.addEventListener('click', () => {
-        noteInput.value = ''
-        localStorage.removeItem(noteKey)
-        this.dispatchEvent(new CustomEvent('note-updated', {
-          bubbles: true, composed: true,
-          detail: { objectId: lesson.id, hasNote: false },
-        }))
-      })
+      noteInput.value = localStorage.getItem(`mn-note-${lesson.id}`) ?? ''
     }
 
     this.#wireDrag()

@@ -443,9 +443,13 @@ function openInlinePreview(annotation) {
     if (!objectId || !language) return
 
     closeInlinePreview(preview, annotation)
-    annotation.dispatchEvent(new CustomEvent('lesson-open', {
+    // Dispatch on #results directly so the lesson-open listener fires
+    // regardless of the annotation's bubble path. Pass the source annotation
+    // in detail so the listener can still resolve the visual anchor.
+    const target = results ?? annotation
+    target.dispatchEvent(new CustomEvent('lesson-open', {
       bubbles: true,
-      detail: { objectId, language },
+      detail: { objectId, language, source: annotation },
     }))
   })
 

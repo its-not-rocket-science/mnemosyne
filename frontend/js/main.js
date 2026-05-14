@@ -1019,20 +1019,52 @@ async function doParseText(text) {
 }
 
 
+// ── Translation callback factory ─────────────────────────────────────────────
+
+function makeTranslateCallback(lesson) {
+  return async (text, sourceLang, targetLang) => {
+    if (!text || sourceLang === targetLang) return null
+    try {
+      // Only cache/retrieve by object_id when translating the lemma itself.
+      // Sentence translations must not reuse the cached word translation.
+      const lemma = lesson.lesson_data?.lemma || lesson.examples?.[0]
+      const isLemma = lesson.type === 'vocabulary' && text === lemma
+      const r = await fetch(`${API_BASE}/translate`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
+        body: JSON.stringify({
+          text,
+          source_language: sourceLang,
+          target_language: targetLang,
+          object_id: isLemma ? lesson.id : undefined,
+        }),
+      })
+      if (!r.ok) return null
+      const d = await r.json()
+      return d.translation ? { text: d.translation, attribution: d.attribution } : null
+    } catch { return null }
+  }
+}
+
+
 // ── Lesson open ───────────────────────────────────────────────────────────────
 
 results.addEventListener('lesson-open', async (event) => {
-  const { objectId, language } = event.detail
+  const { objectId, language, source } = event.detail
   const caps   = languageCapabilities.get(language)
   const ttsTag = caps?.tts_lang_tag ?? language
   const dir    = caps?.direction ?? 'ltr'
 
-  // Grab the sentence text for the "In Context" tab before blurring.
-  // event.target is the <mnemosyne-pill> host element; traverse light DOM.
-  const sentenceCard = event.target?.closest?.('.sentence-card')
+  // Resolve the originating annotation: prefer detail.source (set by the
+  // inline preview CTA when dispatching on #results), then event.target's
+  // own closest annotation, then event.target itself.
+  const originEl = source
+    ?? event.target?.closest?.('.reader-annotation')
+    ?? event.target
+  const sentenceCard = originEl?.closest?.('.sentence-card')
   const sentenceText = sentenceCard?.querySelector('.sentence-card__text')?.textContent ?? ''
 
-  const phrase = event.target?.getAttribute?.('aria-label') ?? objectId
+  const phrase = originEl?.getAttribute?.('aria-label') ?? objectId
   announce(`Loading details: ${phrase}`)
   setStatus(t('loading_lesson'), 'busy')
 
@@ -1057,6 +1089,11 @@ results.addEventListener('lesson-open', async (event) => {
     if (detailPane) {
       const uiLang = currentUiLang()
 
+      // Open the shell column FIRST so the pane has non-zero width to animate
+      // into. Mirrors the ordering used by other call sites (e.g. recommended
+      // reading), where show() runs after openDetail().
+      openDetail()
+
       detailPane.show({
         lesson,
         sentenceText,
@@ -1066,28 +1103,7 @@ results.addEventListener('lesson-open', async (event) => {
         caps,
         depth: currentDepth,
         uiLang,
-        onTranslate: async (text, sourceLang, targetLang) => {
-          if (!text || sourceLang === targetLang) return null
-          try {
-            // Only cache/retrieve by object_id when translating the lemma itself.
-            // Sentence translations must not reuse the cached word translation.
-            const lemma = lesson.lesson_data?.lemma || lesson.examples?.[0]
-            const isLemma = lesson.type === 'vocabulary' && text === lemma
-            const r = await fetch(`${API_BASE}/translate`, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
-              body: JSON.stringify({
-                text,
-                source_language: sourceLang,
-                target_language: targetLang,
-                object_id: isLemma ? lesson.id : undefined,
-              }),
-            })
-            if (!r.ok) return null
-            const d = await r.json()
-            return d.translation ? { text: d.translation, attribution: d.attribution } : null
-          } catch { return null }
-        },
+        onTranslate: makeTranslateCallback(lesson),
         reviewQueue: dueQueue,
         onSpeak:  (text, lang) => speakText(text, lang ?? ttsTag),
         onStudy:  () => modal.open({
@@ -1106,7 +1122,7 @@ results.addEventListener('lesson-open', async (event) => {
       // pane's left border.  Also compute the vertical clip origin so the pane
       // entry animation feels anchored to where the click happened.
       document.querySelector('[data-detail-source]')?.removeAttribute('data-detail-source')
-      const sourceEl = event.target?.closest?.('.reader-annotation') || event.target
+      const sourceEl = originEl
       if (sourceEl?.classList?.contains('reader-annotation')) {
         sourceEl.dataset.detailSource = ''
       }
@@ -1123,20 +1139,17 @@ results.addEventListener('lesson-open', async (event) => {
         const type = sourceEl?.dataset?.type || lesson.type || ''
         detailPanelEl.style.setProperty('--detail-accent', TYPE_ACCENT[type] ?? 'var(--accent)')
 
-        const panelRect = detailPanelEl.getBoundingClientRect()
-        const annotRect = sourceEl?.getBoundingClientRect?.() ?? { top: panelRect.top }
-        const fromPct = panelRect.height > 0
-          ? Math.max(0, Math.min(60, ((annotRect.top - panelRect.top) / panelRect.height) * 100))
-          : 0
-        detailPanelEl.style.setProperty('--detail-clip-bottom', `${100 - Math.round(fromPct)}%`)
       }
 
-      // Force re-run of entry animation alongside show()'s own rAF.
+      // Force re-run of entry animation. Run in the same rAF as show()'s
+      // data-open set so the backdrop only becomes pointer-active after the
+      // pane already has pointer-events:auto (avoids a click-through window
+      // on mobile where the backdrop would intercept and immediately close).
       detailPane.classList.remove('pane-entry-animate')
-      requestAnimationFrame(() => detailPane.classList.add('pane-entry-animate'))
-
-      openDetail()
-      paneBackdrop?.classList.add('is-visible')
+      requestAnimationFrame(() => {
+        paneBackdrop?.classList.add('is-visible')
+        detailPane.classList.add('pane-entry-animate')
+      })
     } else {
       // Fallback: no detail pane in DOM — open modal directly.
       modal.open({
@@ -1158,6 +1171,7 @@ results.addEventListener('lesson-open', async (event) => {
 
 // Sync note badges on annotation marks when note is saved/cleared in the pane.
 detailPane?.addEventListener('note-updated', ({ detail }) => {
+  console.log('pane__note-note-updated', detail);
   results.querySelectorAll(`[data-object-id="${CSS.escape(detail.objectId)}"]`).forEach(mark => {
     mark.toggleAttribute('data-has-note', detail.hasNote)
   })
@@ -1207,6 +1221,7 @@ detailPane?.addEventListener('pane-navigate', async (event) => {
       caps,
       depth: currentDepth,
       uiLang,
+      onTranslate: makeTranslateCallback(lesson),
       reviewQueue: dueQueue,
       onSpeak:  (text, l) => speakText(text, l ?? ttsTag),
       onStudy:  () => modal.open({
@@ -2035,6 +2050,8 @@ async function _openDeepLink() {
     const progressRows = await getTermProgress(lang)
     const dueQueue = progressRows.filter((row) => row.review_bucket === 'due').slice(0, 8)
     if (detailPane) {
+      const uiLang = currentUiLang()
+      openDetail()
       detailPane.show({
         lesson,
         sentenceText: '',
@@ -2043,6 +2060,8 @@ async function _openDeepLink() {
         ttsTag,
         caps,
         depth: currentDepth,
+        uiLang,
+        onTranslate: makeTranslateCallback(lesson),
         reviewQueue: dueQueue,
         onSpeak: (text, l) => speakText(text, l ?? ttsTag),
         onStudy: () => modal.open({
@@ -2055,7 +2074,6 @@ async function _openDeepLink() {
           onCheckResult: (check) => { void submitLessonCheck(lesson, lang, check) },
         }),
       })
-      openDetail()
       paneBackdrop?.classList.add('is-visible')
     }
   } catch { /* best-effort — user may not be authed yet */ }
