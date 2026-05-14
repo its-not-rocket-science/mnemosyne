@@ -5,7 +5,14 @@
  * in each module.  Layout state (detail open/closed) is centralised here.
  */
 
-const _shell = /** @type {HTMLElement|null} */ (document.querySelector('#app-shell'))
+let _shell = /** @type {HTMLElement|null} */ (document.querySelector('#app-shell'))
+
+function getShell() {
+  if (!_shell || !_shell.isConnected) {
+    _shell = /** @type {HTMLElement|null} */ (document.querySelector('#app-shell'))
+  }
+  return _shell
+}
 
 // ── Named regions ─────────────────────────────────────────────────────────────
 
@@ -72,15 +79,15 @@ if (TopNav) {
  *          is driven by the component's own data-open attribute + transform.
  */
 export function openDetail() {
-  _shell?.classList.add('app-shell--detail-open')
+  getShell()?.classList.add('app-shell--detail-open')
 }
 
 /** Close the detail panel (reverses the flex-basis transition on desktop). */
 export function closeDetail() {
-  _shell?.classList.remove('app-shell--detail-open')
+  getShell()?.classList.remove('app-shell--detail-open')
 }
 
 /** @returns {boolean} Whether the detail panel is currently open. */
 export function isDetailOpen() {
-  return _shell?.classList.contains('app-shell--detail-open') ?? false
+  return getShell()?.classList.contains('app-shell--detail-open') ?? false
 }
