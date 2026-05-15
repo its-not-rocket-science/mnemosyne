@@ -58,8 +58,16 @@ KNOWN LIMITATIONS
   are not extracted because they carry little pedagogical value.
 - Grammar detection is heuristic window-scan, not full dependency analysis.
   "has been running" emits be_progressive rather than perfect-progressive.
-- Idiom table in EnglishNuanceExtractor covers only two fixed phrases;
-  extending it is low-effort.
+- Idiom table covers only two fixed phrases (kick the bucket, piece of cake);
+  emits type="nuance" not type="idiom", so idiom_detection=False.
+- phrase_families=none: match_phrase_families returns [] for "en" — the
+  phrase family catalog has no English entries yet.
+- etymology=none: etymology store has no English entries yet.  The
+  _etymology() method always returns an empty list for English input.
+- formality_register=partial: 12 curated markers (formal/informal);
+  most formal/informal vocabulary is not covered.
+- grammar_nuance=partial: 5 construction patterns (progressive, passive,
+  perfect, modal, going-to) plus tone/politeness markers.
 """
 from __future__ import annotations
 
@@ -137,23 +145,23 @@ class EnglishPlugin:
         tokenization_mode="whitespace",
         morphology_depth="shallow",      # English has limited morphology; spaCy covers what exists
         lesson_modes_supported=["morphology", "vocabulary", "dictionary"],
-        analysis_depth="full",
+        analysis_depth="full",           # spaCy pipeline: POS + dep parse + nuance
         segmentation_quality="medium",   # en_core_web_sm sentence splits are reliable
         tokenization_quality="high",     # spaCy English tokenisation is excellent
-        morphology_quality="low",         # tense/number covered; English morphology is minimal
+        morphology_quality="low",        # English morphology is minimal; tense/number only
         syntax_support=True,             # dep parse used for grammar construction detection
-        idiom_detection=True,            # idioms via EnglishNuanceExtractor + phrase families
+        idiom_detection=False,           # emits nuance type for idioms, not type="idiom"
         tts_lang_tag="en",
         transliteration_scheme=None,
         nuance_capabilities=NuanceCapabilities(
-            idioms="strong",
-            phrase_families="strong",
+            idioms="stub",               # 2 hardcoded phrases only (kick the bucket, piece of cake)
+            phrase_families="none",      # match_phrase_families returns [] for 'en' — no catalog entries
             literary_references="none",
             cultural_references="none",
-            etymology="strong",
-            formality_register="strong",
-            grammar_nuance="strong",
-            pronunciation_tts="partial",
+            etymology="none",            # etymology store has 0 English entries
+            formality_register="partial",# 12 curated formal/informal markers; significant gaps
+            grammar_nuance="partial",    # 5 construction patterns + tone/politeness markers
+            pronunciation_tts="partial", # browser TTS via lang="en" tag
             transliteration="none",
             proverb_tradition="none",
             classical_or_scriptural_allusion="none",
