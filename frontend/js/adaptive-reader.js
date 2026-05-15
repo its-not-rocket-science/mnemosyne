@@ -520,6 +520,17 @@ function applyAdaptiveVisibility() {
   updateQuietBadge()
 }
 
+function toggleAdaptiveEnabled() {
+  adaptiveEnabled = !adaptiveEnabled
+  localStorage.setItem(SETTINGS_KEY, String(adaptiveEnabled))
+  applyAdaptiveVisibility()
+  renderMemoryMinimap()
+  renderIntelligenceSummary()
+  syncToolbar()
+  announce(adaptiveEnabled ? t('adaptive_reader_on') : t('adaptive_reader_off'))
+  document.dispatchEvent(new CustomEvent('mnemosyne:adaptive-reader-changed', { detail: { adaptiveEnabled } }))
+}
+
 function populateSystemBody(container) {
   // Memory group: adaptive toggle + reinforcement
   const memGroup = document.createElement('div')
@@ -536,12 +547,7 @@ function populateSystemBody(container) {
   toggle.type = 'button'
   toggle.className = 'reader-adaptive-toggle'
   toggle.addEventListener('click', () => {
-    adaptiveEnabled = !adaptiveEnabled
-    localStorage.setItem(SETTINGS_KEY, String(adaptiveEnabled))
-    applyAdaptiveVisibility()
-    renderMemoryMinimap()
-    renderIntelligenceSummary()
-    announce(adaptiveEnabled ? t('adaptive_reader_on') : t('adaptive_reader_off'))
+    toggleAdaptiveEnabled()
   })
 
   const reinforce = document.createElement('button')
@@ -644,7 +650,14 @@ function populateSystemBody(container) {
     announce(t('reader_adv_reset_mode_defaults'))
   })
 
-  actionGroup.append(override, resetModeDefaults, sync, reset)
+  const diffSettings = document.createElement('button')
+  diffSettings.type = 'button'
+  diffSettings.className = 'reader-adaptive-sync'
+  diffSettings.dataset.i18n = 'adaptive_difficulty_settings'
+  diffSettings.textContent = t('adaptive_difficulty_settings')
+  diffSettings.addEventListener('click', () => window.mnemosyneDifficulty?.openDialog?.())
+
+  actionGroup.append(override, resetModeDefaults, diffSettings, sync, reset)
   container.append(memGroup, categoryGroup, actionGroup)
 }
 
@@ -943,6 +956,7 @@ function init() {
   document.addEventListener('mnemosyne:difficulty-adjusted', ({ detail }) => {
     flashDifficultyAdjustment(detail.mode)
   })
+  document.addEventListener('mnemosyne:toggle-adaptive-reader', toggleAdaptiveEnabled)
   setInterval(() => {
     applyAdaptiveVisibility()
     renderMemoryMinimap()
@@ -950,6 +964,8 @@ function init() {
   }, 60_000)
   setInterval(syncServerMemory, 5 * 60_000)
 }
+
+window.mnemosyneAdaptive = { isEnabled: () => adaptiveEnabled }
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init, { once: true })
