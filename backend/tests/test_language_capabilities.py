@@ -178,11 +178,12 @@ class TestLanguagesEndpoint:
         assert es["morphology_depth"] == "rich"
         assert "morphology" in es["lesson_modes_supported"]
 
-    def test_english_no_morphology(self) -> None:
+    def test_english_morphology(self) -> None:
         resp = client.get("/languages")
         en = next((x for x in resp.json() if x["code"] == "en"), None)
         assert en is not None
-        assert en["morphology_depth"] == "rich"
+        # English has minimal morphology; spaCy en_core_web_sm covers what exists.
+        assert en["morphology_depth"] == "shallow"
 
     def test_french_rich_morphology(self) -> None:
         # French now uses the real spaCy plugin, not the stub.
@@ -475,7 +476,7 @@ class TestLanguagesEndpointV2:
         en = next(x for x in resp.json() if x["code"] == "en")
         assert en["analysis_depth"] == "full"
         assert en["syntax_support"] is True
-        assert en["morphology_quality"] == "medium"
+        assert en["morphology_quality"] == "low"
         assert en["idiom_detection"] is True
 
     def test_french_full_analysis(self) -> None:
