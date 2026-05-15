@@ -1,17 +1,22 @@
 """Multilingual text validation and normalization for Mnemosyne ingestion.
 
-Call ``validate_ingest_text(text, language)`` before handing text to the
-parse pipeline.  It returns ``(normalized_text, warnings)`` where warnings
-are non-fatal cautions (e.g. probable script mismatch) intended for the
-client.  Hard failures (empty text, oversized) raise ``ValueError``.
+Call ``validate_ingest_text(text, language, max_chars=settings.max_xxx_chars)``
+before handing text to the parse pipeline.  It returns
+``(normalized_text, warnings)`` where warnings are non-fatal cautions
+(e.g. probable script mismatch) intended for the client.  Hard failures
+(empty text, oversized) raise ``ValueError``.
+
+The ``max_chars`` limit must come from ``Settings`` (single source of truth
+via ``GET /parse/limits``).  Pass ``Settings.max_parse_chars`` for the sync
+``/parse`` and ``/ingest`` routes, or ``Settings.max_job_chars`` for the
+async ``POST /parse/jobs`` pipeline.  ``None`` (the default) skips the
+length check and is safe when the calling route has already enforced the
+limit before invoking this function.
 """
 from __future__ import annotations
 
 import unicodedata
 from collections import Counter
-
-# Hard upper bound on accepted text length.
-MAX_TEXT_CHARS = 50_000
 
 # Unicode code-point ranges mapped to script-family labels.
 # Only letter characters (Unicode category L*) are counted; digits,
@@ -189,7 +194,7 @@ def validate_ingest_text(
     text: str,
     language: str,
     *,
-    max_chars: int = MAX_TEXT_CHARS,
+    max_chars: int | None = None,
 ) -> tuple[str, list[str]]:
     """Normalize and validate *text* for ingestion.
 
@@ -197,6 +202,9 @@ def validate_ingest_text(
         text:      Raw input text from the client.
         language:  BCP-47 language code declared by the client.
         max_chars: Hard upper bound on the normalized character count.
+                   Pass ``Settings.max_parse_chars`` or ``Settings.max_job_chars``
+                   from the calling route.  ``None`` skips the length check
+                   (safe when the route has already enforced a limit).
 
     Returns:
         ``(normalized_text, warnings)`` — *warnings* are non-fatal cautions
@@ -210,7 +218,7 @@ def validate_ingest_text(
     if not normalized:
         raise ValueError("Text is empty after normalization.")
 
-    if len(normalized) > max_chars:
+    if max_chars is not None and len(normalized) > max_chars:
         raise ValueError(
             f"Text is too long: {len(normalized):,} characters "
             f"(maximum {max_chars:,})."

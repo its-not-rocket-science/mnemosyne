@@ -193,8 +193,8 @@ class TestPluginRegistry:
 
         # 2 hardcoded idiom phrases only — stub, not strong.
         assert en.idioms in {"stub", "partial", "strong", "gold"}
-        # No English entries in phrase family catalog or etymology store.
-        assert en.phrase_families == "none"
+        # 49 English phrase families in catalog; no etymology entries yet.
+        assert en.phrase_families in {"partial", "strong", "gold"}
         assert en.etymology == "none"
 
         # Grammar nuance parity: English partial >= ES/FR partial.
