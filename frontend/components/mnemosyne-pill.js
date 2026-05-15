@@ -1,18 +1,20 @@
+import { t, ti } from '../js/i18n.js'
+
 // One OKLCH reference color per type.
 // color-mix blends it with the system Canvas color so pills adapt to
 // both light and dark mode without any media-query duplication.
 const TYPE_META = {
-  vocabulary:       { icon: '📗', label: 'Vocabulary',      badge: 'vocab',  ref: 'oklch(0.50 0.20 142)' },
-  conjugation:      { icon: '🔧', label: 'Verb',             badge: 'verb',   ref: 'oklch(0.50 0.20 240)' },
-  agreement:        { icon: '🧩', label: 'Agreement',        badge: 'agr',    ref: 'oklch(0.50 0.15  50)' },
-  idiom:            { icon: '💬', label: 'Idiom',             badge: 'idiom',  ref: 'oklch(0.50 0.20 300)' },
-  grammar:          { icon: '📐', label: 'Grammar',           badge: 'gram',   ref: 'oklch(0.50 0.15  90)' },
-  nuance:           { icon: '🎭', label: 'Nuance',            badge: 'nuance', ref: 'oklch(0.50 0.20  20)' },
+  vocabulary:       { icon: '📗', labelKey: 'dp_type_vocabulary',      badge: 'vocab',  ref: 'oklch(0.50 0.20 142)' },
+  conjugation:      { icon: '🔧', labelKey: 'dp_type_verb',             badge: 'verb',   ref: 'oklch(0.50 0.20 240)' },
+  agreement:        { icon: '🧩', labelKey: 'dp_type_agreement',        badge: 'agr',    ref: 'oklch(0.50 0.15  50)' },
+  idiom:            { icon: '💬', labelKey: 'dp_type_idiom',             badge: 'idiom',  ref: 'oklch(0.50 0.20 300)' },
+  grammar:          { icon: '📐', labelKey: 'dp_type_grammar',           badge: 'gram',   ref: 'oklch(0.50 0.15  90)' },
+  nuance:           { icon: '🎭', labelKey: 'dp_type_nuance',            badge: 'nuance', ref: 'oklch(0.50 0.20  20)' },
   // v2 types
-  script:           { icon: '✍️', label: 'Script',           badge: 'script',  ref: 'oklch(0.50 0.18 200)' },
-  transliteration:  { icon: '🔤', label: 'Transliteration',  badge: 'roma',    ref: 'oklch(0.50 0.15 170)' },
+  script:           { icon: '✍️', labelKey: 'dp_type_script',           badge: 'script',  ref: 'oklch(0.50 0.18 200)' },
+  transliteration:  { icon: '🔤', labelKey: 'dp_type_transliteration',  badge: 'roma',    ref: 'oklch(0.50 0.15 170)' },
   // v4 types
-  phrase_family:    { icon: '🔗', label: 'Phrase family',    badge: 'phrase',  ref: 'oklch(0.50 0.20 330)' },
+  phrase_family:    { icon: '🔗', labelKey: 'dp_type_phrase_family',    badge: 'phrase',  ref: 'oklch(0.50 0.20 330)' },
 }
 
 export class MnemosynePill extends HTMLElement {
@@ -144,7 +146,7 @@ export class MnemosynePill extends HTMLElement {
     // Set text content and aria-label via DOM (never via innerHTML) to avoid
     // any risk of injection if the label value contains markup characters.
     labelEl.textContent = text
-    btn.setAttribute('aria-label', `${meta.label} lesson: ${text}`)
+    btn.setAttribute('aria-label', ti('pill_aria_label', { type: t(meta.labelKey), label: text }))
 
     // lang on the button so AT announces the accessible name in the correct
     // language / with the correct TTS voice.
