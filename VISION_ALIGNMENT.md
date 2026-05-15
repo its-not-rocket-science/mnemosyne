@@ -85,6 +85,10 @@ These were the major open issues when this document was first written. All are r
 
 **Gap 6 — Dead and historic languages** → Latin (`la`) and Koine Greek (`grc`) implemented in dictionary mode with honest capability declarations (no morphology claimed). ~100–200 curated lexicon entries each.
 
+**Gap 7 — Lesson text localisation** → `backend/lesson/l10n.py` renders `build_lesson()` explanations in the learner's native language for all 12 UI locales. Static templates; zero-latency; deterministic. 326 tests in `test_l10n.py`. Untranslated L1 codes fall back to English.
+
+**Gap 8 — Frontend UI string localisation** → all hardcoded English strings in frontend components replaced with `t()`/`ti()` calls in `frontend/js/i18n.js`. Covers `mnemosyne-modal`, `mnemosyne-pill`, `mnemosyne-text-panel`, `mnemosyne-top-nav`, and `main.js`. The grammatical terminal label values from `generators.py` (e.g. `"third"`, `"singular"`, `"present"`) remain untranslated.
+
 ---
 
 ## What remains genuinely open
@@ -92,7 +96,7 @@ These were the major open issues when this document was first written. All are r
 - **Manual keyboard + screen-reader test.** Code audit done; 8 issues fixed. NVDA/VoiceOver smoke test not yet run.
 - **Full morphological plugins for Korean, Hindi, Turkish, Finnish.** Natural next targets; each requires canonical-form convention decisions before first parse.
 - **Classical lexicon depth.** Latin and Greek coverage is limited (~100–200 entries). Perseus/Logeion integration would substantially improve coverage.
-- **Lesson text localisation.** `build_lesson()` produces English prose regardless of target language. No `l1_language` parameter yet.
+- **Grammatical label localisation.** `build_lesson()` prose is now in the learner's language, but the terminal label values (`"third"`, `"singular"`, `"present"`, `"indicative"`) produced by `backend/lesson/generators.py` remain English strings. A second lookup table in `l10n.py` is needed to translate these.
 
 ---
 
@@ -131,11 +135,11 @@ Every database and Redis operation in the route handlers is wrapped in `try/exce
 
 The frontend applies `dir` and `lang` attributes dynamically from plugin capabilities. Logical CSS properties (`inline-size`, `margin-inline-start`, etc.) are used throughout. Non-Latin font stacks are declared in `global.css`. The modal applies RTL to example text, drill prompts, and fill-blank inputs. `<bdi>` elements isolate bidirectional strings in feedback. 43 non-Latin DB round-trip tests cover Arabic, Hebrew, Chinese, Russian, and Japanese canonical forms.
 
-**Remaining limitation:** `build_lesson()` produces English metalanguage regardless of target language. Lesson explanations ("The word X is a noun") are always English; there is no `l1_language` parameter yet.
+**Remaining limitation:** `build_lesson()` prose is now in the learner's language via `backend/lesson/l10n.py`, but the terminal grammatical label values (`"third"`, `"singular"`, `"present"`, `"indicative"`) produced by `generators.py` remain English strings. For most learners the mixed output is adequate; full label translation requires a second lookup table in `l10n.py`.
 
-### Lesson generator is language-agnostic but English-prose-centric
+### Lesson generator — prose localised; grammatical labels remain English
 
-`backend/lesson/generators.py` produces lesson text with English phrasing like "The word *X* is a noun." For languages with significantly different grammatical concepts (verb classes, classifier systems, tone) this framing will not translate. The lesson generator needs a pluggable template layer.
+`backend/lesson/generators.py` produces grammatical category labels as bare English strings (`"third"`, `"singular"`, `"present"`, `"indicative"`). The surrounding prose is now localised via `l10n.py`, but these terminal values are not yet run through a translation table. For languages with significantly different grammatical concepts (verb classes, classifier systems, tone) the label framing may also need adaptation.
 
 ### `canonical_form` string format is Latin-script-centric in practice
 

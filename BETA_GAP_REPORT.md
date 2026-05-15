@@ -49,6 +49,13 @@ tier.
   native language for all 12 UI locales (en/es/fr/de/ru/ja/pt/it/ar/he/zh/ko) via
   `backend/lesson/l10n.py`. Static templates, zero-latency, deterministic. Untranslated
   L1 codes fall back to English. 326 tests in `test_l10n.py`.
+- **Frontend UI string localisation.** All hardcoded English strings in frontend
+  components replaced with `t()`/`ti()` calls from `frontend/js/i18n.js`. Covers
+  `mnemosyne-modal` (drill feedback, rating labels, aria-labels), `mnemosyne-pill`
+  (type labels, aria-label), `mnemosyne-text-panel` (empty state, play-line aria),
+  `mnemosyne-top-nav` (all aria-labels, mode indicator), and `main.js` (all
+  aria-announces and dynamic labels). True/False drill comparison updated to use
+  `data-bool-value` so it survives translation.
 - **GDPR text deletion.** `DELETE /users/me` now cascades `parsed_texts` (source_text), `sentences`, `sentence_objects`, `source_documents`, and `source_chunks`. `parsed_texts.user_id` column added (migration 0009).
 - **Offline queue 401 handling.** `drainReviewQueue` detects 401 (expired JWT), surfaces localised "Session expired" message in all 11 UI languages, and stops drain without discarding queued reviews.
 - **JWT_SECRET hard-fail in production.** `DEBUG=false` + default `JWT_SECRET` now hard-fails startup (same pattern as CORS wildcard guard).
@@ -140,11 +147,12 @@ in-progress documents and sorts continuation sentences (at or after
 `next_position`) first within the difficulty window, with an `is_continuation`
 flag in each response item. 14 new tests in `test_source_progression.py`.
 
-**Grammatical label localisation** — Per-explanation prose is now in the learner's
-language but the terminal label values (person "third", number "singular", tense
-"present", mood "indicative") originate from `generators.py` as English strings and
-are not yet localised. For most learners the mixed output ("troisième-person singular")
-is adequate; full label localisation would require a second lookup table in `l10n.py`.
+**Grammatical label localisation** — Both lesson prose (`backend/lesson/l10n.py`) and
+frontend UI strings (`frontend/js/i18n.js`) are now localised. The one remaining
+English-only layer is the terminal grammatical label values (person `"third"`, number
+`"singular"`, tense `"present"`, mood `"indicative"`) produced by `generators.py`.
+For most learners the mixed output is adequate; full label localisation would require a
+second lookup table in `l10n.py`.
 
 ---
 
