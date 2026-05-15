@@ -1,4 +1,4 @@
-"""End-to-end loop: practice answer → /review → TermProgressRow synced → Memory Map correct.
+"""End-to-end loop: practice answer → /term-progress or /review → Memory Map correct.
 
 Verifies:
   1. POST /review for a known canonical object writes UserKnowledgeRow.
@@ -6,6 +6,10 @@ Verifies:
   3. Correct answer → review_bucket leaves "new"; incorrect → stays reviewable.
   4. Repeated correct reviews accumulate mastery and push next_review_at forward.
   5. The same loop works for an object not yet in CanonicalObjectRow (graceful skip).
+  6. POST /term-progress response carries all fields consumed by the frontend
+     mnemosyne:practice-result event (mastery_score, next_review_at, review_bucket,
+     review_count, correct_count, incorrect_count).
+  7. Mastery accumulates via repeated direct /term-progress POSTs.
 """
 from __future__ import annotations
 
@@ -213,3 +217,95 @@ async def test_second_review_increments_counters(
     assert tp.correct_count == 2
     # source_lesson_ids deduped — only one entry for the same object_id
     assert len(tp.source_lesson_ids) == 1
+
+
+# ── Direct /term-progress POST (frontend submitLessonCheck path) ───────────────
+
+
+@pytest.mark.asyncio
+async def test_term_progress_post_response_has_memory_map_fields(
+    client: AsyncClient,
+) -> None:
+    """POST /term-progress response must carry every field consumed by the
+    frontend mnemosyne:practice-result event in adaptive-reader.js."""
+    resp = await client.post(
+        "/term-progress",
+        json={
+            "term": "hola",
+            "lemma": "hola",
+            "language": _LANGUAGE,
+            "seen": True,
+            "reviewed": True,
+            "correct": True,
+        },
+    )
+    assert resp.status_code == 200
+    data = resp.json()
+
+    required = ("mastery_score", "next_review_at", "review_count",
+                "correct_count", "incorrect_count", "review_bucket")
+    for field in required:
+        assert field in data, f"Missing Memory Map field in /term-progress response: {field}"
+
+    assert isinstance(data["mastery_score"], float)
+    assert 0.0 <= data["mastery_score"] <= 1.0
+    assert data["review_count"] == 1
+    assert data["correct_count"] == 1
+    assert data["incorrect_count"] == 0
+    assert data["review_bucket"] in {"new", "due", "learning", "fading", "strong"}
+
+
+@pytest.mark.asyncio
+async def test_term_progress_mastery_accumulates_and_bucket_advances(
+    client: AsyncClient,
+) -> None:
+    """Repeated correct practice checks via /term-progress push mastery up and
+    eventually move review_bucket to 'fading' or 'strong'."""
+    payload = {
+        "term": "casa",
+        "lemma": "casa",
+        "language": _LANGUAGE,
+        "seen": True,
+        "reviewed": True,
+        "correct": True,
+    }
+
+    r1 = await client.post("/term-progress", json=payload)
+    assert r1.status_code == 200
+    assert r1.json()["review_bucket"] != "strong", "Bucket must not be 'strong' after one check"
+
+    for _ in range(6):
+        await client.post("/term-progress", json=payload)
+
+    r_final = await client.post("/term-progress", json=payload)
+    assert r_final.status_code == 200
+    final = r_final.json()
+    assert final["review_count"] == 8
+    assert final["correct_count"] == 8
+    assert final["mastery_score"] >= 0.5
+    assert final["review_bucket"] in {"fading", "strong"}
+
+
+@pytest.mark.asyncio
+async def test_term_progress_incorrect_check_increments_incorrect_count(
+    client: AsyncClient,
+) -> None:
+    """An incorrect practice check via /term-progress increments incorrect_count
+    and next_review_at is set (term stays reviewable)."""
+    resp = await client.post(
+        "/term-progress",
+        json={
+            "term": "mal",
+            "lemma": "malo",
+            "language": _LANGUAGE,
+            "seen": True,
+            "reviewed": True,
+            "correct": False,
+        },
+    )
+    assert resp.status_code == 200
+    data = resp.json()
+    assert data["incorrect_count"] == 1
+    assert data["correct_count"] == 0
+    assert data["next_review_at"] is not None
+    assert data["review_bucket"] in {"new", "due", "learning"}

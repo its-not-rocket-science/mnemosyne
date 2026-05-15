@@ -74,7 +74,11 @@
       "Bash(Select-Object -ExpandProperty FullName)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\" -Recurse -Include \"*.js\", \"*.html\", \"*.json\")",
       "Bash(Select-Object -First 50 FullName)",
-      "Bash(del *)"
+      "Bash(del *)",
+      "Bash(practice)",
+      "Bash(review\")",
+      "Bash(Get-Content \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\\\\frontend\\\\js\\\\adaptive-reader.js\")",
+      "Bash(Select-Object -Last 120)"
     ]
   }
 }

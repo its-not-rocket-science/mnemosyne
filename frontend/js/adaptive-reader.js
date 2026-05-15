@@ -950,6 +950,31 @@ function init() {
     flashDifficultyAdjustment(detail.mode)
   })
   document.addEventListener('mnemosyne:toggle-adaptive-reader', toggleAdaptiveEnabled)
+
+  window.addEventListener('mnemosyne:practice-result', ({ detail }) => {
+    const { objectId, masteryScore, nextReviewAt, reviewCount, correctCount, incorrectCount } = detail
+    if (!objectId) return
+    const existing = memory[objectId] || {}
+    memory[objectId] = {
+      ...existing,
+      action:           actionFromDashboardStatus('learning', masteryScore),
+      strength:         Math.max(0, Math.min(1, masteryScore)),
+      lastReviewed:     new Date().toISOString(),
+      nextReview:       nextReviewAt || new Date().toISOString(),
+      decayRate:        decayRateFromScore(masteryScore),
+      totalReviews:     reviewCount,
+      successfulReviews: correctCount,
+      failedReviews:    incorrectCount,
+      source:           'practice',
+      syncedAt:         new Date().toISOString(),
+    }
+    writeMemory()
+    document.querySelectorAll(`[data-object-id="${CSS.escape(objectId)}"]`).forEach(applyAnnotationMemory)
+    applyAdaptiveVisibility()
+    renderMemoryMinimap()
+    renderIntelligenceSummary()
+  })
+
   setInterval(() => {
     applyAdaptiveVisibility()
     renderMemoryMinimap()

@@ -1896,7 +1896,7 @@ async function submitReview(objectId, quality) {
 async function submitLessonCheck(lesson, language, check) {
   const term = check?.term || lesson?.lesson_data?.lemma || lesson?.examples?.[0] || lesson?.title
   if (!term || !language || !check) return
-  await fetch(`${API_BASE}/term-progress`, {
+  const response = await fetch(`${API_BASE}/term-progress`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
     body: JSON.stringify({
@@ -1911,6 +1911,22 @@ async function submitLessonCheck(lesson, language, check) {
     }),
   })
   termProgressByLanguage.delete(language)
+  if (response.ok && lesson?.id) {
+    try {
+      const tp = await response.json()
+      window.dispatchEvent(new CustomEvent('mnemosyne:practice-result', {
+        detail: {
+          objectId:      lesson.id,
+          masteryScore:  tp.mastery_score,
+          nextReviewAt:  tp.next_review_at,
+          reviewCount:   tp.review_count,
+          correctCount:  tp.correct_count,
+          incorrectCount: tp.incorrect_count,
+          reviewBucket:  tp.review_bucket,
+        },
+      }))
+    } catch {}
+  }
 }
 
 async function getTermProgress(language) {
