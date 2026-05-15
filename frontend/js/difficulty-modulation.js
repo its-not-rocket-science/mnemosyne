@@ -123,44 +123,33 @@ function adjustBias(delta) {
 
 import { t } from './i18n.js'
 
-let _dialog = null
+function ensureBar() {
+  if (document.querySelector('#results-adaptive-bar')) return
 
-function ensureDialog() {
-  if (_dialog) return _dialog
+  const resultsSection = document.querySelector('#results-section')
+  if (!resultsSection) return
 
-  _dialog = document.createElement('dialog')
-  _dialog.id = 'adaptive-settings-dialog'
-  _dialog.className = 'adaptive-settings-dialog'
-
-  const closeBtn = document.createElement('button')
-  closeBtn.type = 'button'
-  closeBtn.className = 'adaptive-settings-dialog__close'
-  closeBtn.setAttribute('aria-label', 'Close')
-  closeBtn.innerHTML = '<span aria-hidden="true">×</span>'
-  closeBtn.addEventListener('click', () => _dialog.close())
-
-  // Inner content div keeps id="results-adaptive-bar" for autonomous-learning.js compat.
   const bar = document.createElement('div')
   bar.id = 'results-adaptive-bar'
   bar.className = 'results-adaptive-bar'
   bar.setAttribute('role', 'group')
-  bar.setAttribute('data-i18n-aria-label', 'adaptive_heading')
+  bar.setAttribute('aria-label', t('adaptive_heading'))
 
   bar.innerHTML = `
     <div class="results-adaptive-bar__header">
       <span class="results-adaptive-bar__heading" data-i18n="adaptive_heading"></span>
       <div class="results-adaptive-bar__controls">
-        <div class="difficulty-feedback" role="group" data-i18n-aria-label="adaptive_heading">
+        <div class="difficulty-feedback" role="group" aria-label="${t('adaptive_heading')}">
           <button type="button" id="difficulty-too-hard"
                   class="ghost-button ghost-button--small difficulty-feedback__btn"
-                  data-i18n-aria-label="adaptive_too_hard">
+                  aria-label="${t('adaptive_too_hard')}">
             <span aria-hidden="true">↓</span>
             <span data-i18n="adaptive_too_hard"></span>
           </button>
           <span class="difficulty-feedback__bias" aria-live="polite"></span>
           <button type="button" id="difficulty-too-easy"
                   class="ghost-button ghost-button--small difficulty-feedback__btn"
-                  data-i18n-aria-label="adaptive_too_easy">
+                  aria-label="${t('adaptive_too_easy')}">
             <span data-i18n="adaptive_too_easy"></span>
             <span aria-hidden="true">↑</span>
           </button>
@@ -173,8 +162,7 @@ function ensureDialog() {
     <p class="results-adaptive-bar__hint" data-i18n="adaptive_hint"></p>
   `
 
-  _dialog.append(closeBtn, bar)
-  document.body.appendChild(_dialog)
+  resultsSection.appendChild(bar)
 
   bar.querySelector('#difficulty-too-hard')?.addEventListener('click', () => adjustBias(-0.1))
   bar.querySelector('#difficulty-too-easy')?.addEventListener('click', () => adjustBias(0.1))
@@ -183,31 +171,24 @@ function ensureDialog() {
     syncToggle()
   })
 
-  // Click backdrop to close
-  _dialog.addEventListener('click', e => { if (e.target === _dialog) _dialog.close() })
-
-  retranslateDialog()
+  retranslateBar()
   syncToggle()
   syncFeedback()
-  return _dialog
 }
 
-function retranslateDialog() {
-  if (!_dialog) return
-  _dialog.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n) })
-  _dialog.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
-    el.setAttribute('aria-label', t(el.dataset.i18nAriaLabel))
-  })
+function retranslateBar() {
+  const bar = document.querySelector('#results-adaptive-bar')
+  if (!bar) return
+  bar.setAttribute('aria-label', t('adaptive_heading'))
+  bar.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n) })
 }
 
+// openDialog retained for API compat — scrolls to the inline bar instead of opening a modal.
 function openDialog() {
-  ensureDialog()
-  _dialog.showModal()
+  ensureBar()
+  document.querySelector('#results-adaptive-bar')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
   document.dispatchEvent(new CustomEvent('mnemosyne:adaptive-dialog-opened'))
 }
-
-// Backward-compat alias — autonomous-learning.js waits for #results-adaptive-bar
-const ensureBar = ensureDialog
 
 function syncToggle() {
   const btn = document.querySelector('#difficulty-modulation-toggle')
@@ -243,24 +224,24 @@ window.mnemosyneDifficulty = {
 }
 
 function init() {
-  // Dialog is created eagerly when results appear so autonomous-learning.js
+  // Bar is created eagerly when results appear so autonomous-learning.js
   // can find #results-adaptive-bar via MutationObserver.
   const resultsSection = document.querySelector('#results-section')
   if (resultsSection && !resultsSection.hidden) {
-    ensureDialog()
+    ensureBar()
   }
 
   const observer = new MutationObserver(() => {
     const rs = document.querySelector('#results-section')
     if (rs && !rs.hidden) {
-      ensureDialog()
+      ensureBar()
       observer.disconnect()
     }
   })
   observer.observe(document.body, { attributes: true, subtree: true, attributeFilter: ['hidden'] })
 
   document.addEventListener('mnemosyne:pacing-updated', syncFeedback)
-  document.addEventListener('mnemosyne:language-changed', retranslateDialog)
+  document.addEventListener('mnemosyne:language-changed', retranslateBar)
 }
 
 if (document.readyState === 'loading') {

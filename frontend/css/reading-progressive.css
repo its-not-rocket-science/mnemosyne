@@ -328,49 +328,12 @@ body.reader-flow-mode .reader-annotation[data-flow-hidden] {
   font-size: 0.7rem;
 }
 
-/* Adaptive settings dialog ------------------------------------------------- */
-
-#adaptive-settings-dialog {
-  position: relative;
-  border: 1px solid var(--border-soft, var(--border));
-  border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: var(--elevation-3, 0 8px 32px rgb(0 0 0 / 0.14));
-  padding: var(--space-3) var(--space-4);
-  max-inline-size: min(28rem, calc(100vw - 2rem));
-  inline-size: max-content;
-  animation: reader-preview-in 0.18s ease both;
-}
-
-#adaptive-settings-dialog::backdrop {
-  background: rgb(0 0 0 / 0.2);
-  backdrop-filter: blur(2px);
-}
-
-.adaptive-settings-dialog__close {
-  position: absolute;
-  inset-block-start: 0.4rem;
-  inset-inline-end: 0.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--muted);
-  font-size: 1.1rem;
-  line-height: 1;
-  padding: 0.25rem 0.4rem;
-  border-radius: var(--radius);
-}
-
-.adaptive-settings-dialog__close:hover,
-.adaptive-settings-dialog__close:focus-visible {
-  color: var(--text-primary);
-  background: color-mix(in srgb, var(--accent) 8%, transparent);
-}
-
-/* Adaptive learning bar (inner content — box provided by the dialog) -------- */
+/* Adaptive learning bar — inline reading feedback below the text panel ----- */
 
 .results-adaptive-bar {
-  /* outer box intentionally absent — dialog shell owns border/bg/padding */
+  border-block-start: 1px solid var(--border-soft, var(--border));
+  padding: var(--space-3) var(--space-4);
+  margin-block-start: var(--space-4);
 }
 
 .results-adaptive-bar__header {
@@ -438,20 +401,6 @@ body.reader-flow-mode .reader-annotation[data-flow-hidden] {
 .results-adaptive-bar__autonomous-hint {
   font-size: 0.75rem;
   color: var(--muted);
-}
-
-@media (forced-colors: active) {
-  #adaptive-settings-dialog {
-    border: 1px solid CanvasText;
-    box-shadow: none;
-    background: Canvas;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #adaptive-settings-dialog {
-    animation: none;
-  }
 }
 
 /* Help buttons and popovers ------------------------------------------------ */

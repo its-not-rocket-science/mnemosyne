@@ -650,14 +650,7 @@ function populateSystemBody(container) {
     announce(t('reader_adv_reset_mode_defaults'))
   })
 
-  const diffSettings = document.createElement('button')
-  diffSettings.type = 'button'
-  diffSettings.className = 'reader-adaptive-sync'
-  diffSettings.dataset.i18n = 'adaptive_difficulty_settings'
-  diffSettings.textContent = t('adaptive_difficulty_settings')
-  diffSettings.addEventListener('click', () => window.mnemosyneDifficulty?.openDialog?.())
-
-  actionGroup.append(override, resetModeDefaults, diffSettings, sync, reset)
+  actionGroup.append(override, resetModeDefaults, sync, reset)
   container.append(memGroup, categoryGroup, actionGroup)
 }
 
