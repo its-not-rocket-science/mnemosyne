@@ -146,17 +146,18 @@ class TestPluginRegistry:
         assert caps.tts_lang_tag == "es"
         assert caps.transliteration_scheme is None
 
-    def test_english_capabilities_no_morphology(self) -> None:
+    def test_english_capabilities_morphology(self) -> None:
         registry = load_plugins()
         caps = registry.supported_languages()["en"]
-        assert caps.morphology_depth == "rich"
+        # English has minimal morphology; spaCy en_core_web_sm covers what exists.
+        assert caps.morphology_depth == "shallow"
         assert "morphology" in caps.lesson_modes_supported
 
     def test_english_capabilities_v2_fields(self) -> None:
         registry = load_plugins()
         caps = registry.supported_languages()["en"]
         assert caps.analysis_depth == "full"
-        assert caps.morphology_quality == "medium"
+        assert caps.morphology_quality == "low"
         assert caps.syntax_support is True
         assert caps.tts_lang_tag == "en"
 

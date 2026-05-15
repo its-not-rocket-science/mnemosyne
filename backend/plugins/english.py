@@ -1,12 +1,71 @@
-"""English language plugin.
+"""English language plugin — spaCy ``en_core_web_sm``.
 
-Splits text into sentences on terminal punctuation and tags every
-alphabetic token as a vocabulary word.  No real NLP — suitable for
-integration tests and as a template for real plugins.
+Registers as ``language_code = "en"``.
+
+─────────────────────────────────────────────────────────────────────────────
+WHAT THE PLUGIN EXTRACTS
+─────────────────────────────────────────────────────────────────────────────
+
+**Vocabulary** — open-class content words (NOUN, PROPN, ADJ, ADV, non-finite
+VERB).  Finite verbs are excluded here; they are captured via grammar
+constructions.  Cross-tracking (``seen_vocab``) prevents the same lemma
+from appearing twice in the same sentence.
+
+  lesson_data keys: lemma, pos
+
+**Grammar** — periphrastic construction objects derived by scanning spaCy
+AUX and MD tokens.  One object per distinct construction type per sentence.
+Covers:
+
+  be_progressive       be + -ing       (is running)
+  be_passive           be + VBN        (was written)
+  have_perfect         have + VBN      (has finished)
+  modal_verb           MD + VB         (should leave)
+  going_to_future      going to + VB   (going to rain)
+
+  lesson_data keys: pattern_id, pattern, usage, contrast, surface_verb
+
+**Nuance** — via EnglishNuanceExtractor: register (formal/informal markers),
+tone (hedging, intensifiers), politeness softeners, idiom transparency
+(kick the bucket, etc.), lexical ambiguity, false-friend pitfalls, natural
+collocations, regional variation (US/UK), etymology, and phrase families.
+
+  lesson_data keys: nuance_type, explanation, register, learner_level,
+                    source, plus type-specific keys
+
+─────────────────────────────────────────────────────────────────────────────
+CONFIDENCE SCORES
+─────────────────────────────────────────────────────────────────────────────
+
+  0.90  learner pitfalls (false friends) — high-confidence heuristic
+  0.88  register markers — curated closed sets
+  0.87  collocations — surface pattern match
+  0.86  politeness softeners
+  0.85  vocabulary (non-PROPN), grammar constructions, nuance/etymology
+  0.84  tone markers (hedging, intensifiers)
+  0.83  regional variation
+  0.82  idiom transparency
+  0.80  ambiguity annotations
+  0.65  PROPN vocabulary — may not generalise
+
+─────────────────────────────────────────────────────────────────────────────
+KNOWN LIMITATIONS
+─────────────────────────────────────────────────────────────────────────────
+
+- ``en_core_web_sm`` is a small model (~12 MB).  Morphology is sparse for
+  irregular forms; POS errors occur in ambiguous constructions.
+- English has minimal morphology; conjugation objects (tense/person/number)
+  are not extracted because they carry little pedagogical value.
+- Grammar detection is heuristic window-scan, not full dependency analysis.
+  "has been running" emits be_progressive rather than perfect-progressive.
+- Idiom table in EnglishNuanceExtractor covers only two fixed phrases;
+  extending it is low-effort.
 """
 from __future__ import annotations
 
-import re
+import logging
+from functools import cached_property
+from typing import Any
 
 from backend.dictionary.phrase_families import lookup_family_by_id
 from backend.lesson.practice_hooks import hooks_for_language
@@ -15,8 +74,55 @@ from backend.parsing.plugin_interface import Token
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
-_SENTENCE_RE = re.compile(r"[^.!?]+[.!?]?")
-_WORD_RE = re.compile(r"[A-Za-z']+")
+logger = logging.getLogger(__name__)
+
+# Universal-Dependencies POS tags excluded from vocabulary extraction.
+_SKIP_POS = frozenset({
+    "DET", "ADP", "CCONJ", "SCONJ", "CONJ", "PUNCT", "SPACE",
+    "X", "SYM", "NUM", "PRON", "AUX", "PART", "INTJ",
+})
+
+# VerbForm values that classify a VERB token as non-finite.
+_NON_FINITE_FORMS = frozenset({"Inf", "Part", "Ger"})
+
+# Grammar patterns: id → (label, usage, contrast)
+_GRAMMAR_PATTERNS: dict[str, tuple[str, str, str]] = {
+    "be_progressive": (
+        "be + [verb-ing]",
+        "Expresses an action in progress at a particular moment "
+        "(e.g. 'is running' — the action is ongoing now).",
+        "The simple present or past describes habitual or completed actions "
+        "without emphasising their duration.",
+    ),
+    "be_passive": (
+        "be + [past participle] (passive voice)",
+        "Expresses a passive construction where the subject receives the "
+        "action (e.g. 'was written by Shakespeare').",
+        "The active voice ('Shakespeare wrote it') is more direct; passive "
+        "is preferred when the agent is unknown or unimportant.",
+    ),
+    "have_perfect": (
+        "have + [past participle]",
+        "Expresses a past action with present relevance "
+        "(e.g. 'has finished' — the result is still relevant now).",
+        "The simple past ('finished') marks a completed event at a specific "
+        "past time with no implied present connection.",
+    ),
+    "modal_verb": (
+        "[modal] + [base verb]",
+        "Expresses modality — ability, permission, obligation, or possibility "
+        "(e.g. 'can run', 'should finish', 'must leave').",
+        "Different modals carry distinct nuances: 'can' = ability, 'must' = "
+        "strong obligation, 'should' = advice, 'might' = weak possibility.",
+    ),
+    "going_to_future": (
+        "going to + [base verb]",
+        "Expresses a planned or near-future action "
+        "(e.g. 'going to leave' — the intention is already formed).",
+        "The 'will' future is more spontaneous or predictive; 'going to' "
+        "implies existing intention or visible evidence.",
+    ),
+}
 
 
 class EnglishPlugin:
@@ -29,15 +135,14 @@ class EnglishPlugin:
         direction="ltr",
         script_family="latin",
         tokenization_mode="whitespace",
-        morphology_depth="rich",
+        morphology_depth="shallow",      # English has limited morphology; spaCy covers what exists
         lesson_modes_supported=["morphology", "vocabulary", "dictionary"],
-        # v2 fields
         analysis_depth="full",
-        segmentation_quality="high",
-        tokenization_quality="medium",
-        morphology_quality="medium",
-        syntax_support=True,
-        idiom_detection=True,
+        segmentation_quality="medium",   # en_core_web_sm sentence splits are reliable
+        tokenization_quality="high",     # spaCy English tokenisation is excellent
+        morphology_quality="low",         # tense/number covered; English morphology is minimal
+        syntax_support=True,             # dep parse used for grammar construction detection
+        idiom_detection=True,            # idioms via EnglishNuanceExtractor + phrase families
         tts_lang_tag="en",
         transliteration_scheme=None,
         nuance_capabilities=NuanceCapabilities(
@@ -48,7 +153,7 @@ class EnglishPlugin:
             etymology="strong",
             formality_register="strong",
             grammar_nuance="strong",
-            pronunciation_tts="partial", # en TTS widely available and reliable
+            pronunciation_tts="partial",
             transliteration="none",
             proverb_tradition="none",
             classical_or_scriptural_allusion="none",
@@ -60,37 +165,46 @@ class EnglishPlugin:
         self.nuance_extractor = EnglishNuanceExtractor()
 
     # ------------------------------------------------------------------
+    # Model — lazy, loaded at most once per process via cached_property
+    # ------------------------------------------------------------------
+
+    @cached_property
+    def _nlp(self) -> Any:
+        try:
+            import spacy  # noqa: PLC0415
+            return spacy.load("en_core_web_sm", disable=["ner"])
+        except ImportError as exc:
+            raise RuntimeError(
+                "spaCy is not installed.  Run: pip install spacy"
+            ) from exc
+        except OSError as exc:
+            raise RuntimeError(
+                "spaCy model 'en_core_web_sm' not found. "
+                "Run: python -m spacy download en_core_web_sm"
+            ) from exc
+
+    # ------------------------------------------------------------------
     # LanguagePlugin protocol
     # ------------------------------------------------------------------
 
     def analyze_text(self, text: str) -> list[CandidateSentenceResult]:
-        return [self.analyze_sentence(s) for s in self.split_sentences(text)]
+        """Parse full text in a single spaCy call; return one result per sentence."""
+        doc = self._nlp(text.strip())
+        results = []
+        for sent in doc.sents:
+            sent_text = sent.text.strip()
+            if not sent_text:
+                continue
+            results.append(self._analyze_tokens(sent_text, list(sent)))
+        return results
 
     def split_sentences(self, text: str) -> list[str]:
-        return [m.group(0).strip() for m in _SENTENCE_RE.finditer(text) if m.group(0).strip()]
+        doc = self._nlp(text.strip())
+        return [s.text.strip() for s in doc.sents if s.text.strip()]
 
     def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
-        tokens = self._tokenize(sentence)
-        vocab_candidates = self._extract_vocabulary(tokens)
-        nuance_candidates = self.nuance_extractor.extract_nuance(
-            sentence=sentence,
-            tokens=tokens,
-            candidates=vocab_candidates,
-            language=self.language_code,
-        )
-        skip_words = self._phrase_surface_words(nuance_candidates)
-        if skip_words:
-            vocab_candidates = self._extract_vocabulary(tokens, skip_words=skip_words)
-            nuance_candidates = self.nuance_extractor.extract_nuance(
-                sentence=sentence,
-                tokens=tokens,
-                candidates=vocab_candidates,
-                language=self.language_code,
-            )
-        return CandidateSentenceResult(
-            text=sentence,
-            candidates=nuance_candidates + vocab_candidates,
-        )
+        doc = self._nlp(sentence)
+        return self._analyze_tokens(sentence, list(doc))
 
     def get_lesson(self, object_id: str) -> CandidateObject | None:
         lo = self.lesson_store.get(object_id)
@@ -98,53 +212,206 @@ class EnglishPlugin:
             return lo
         return lookup_family_by_id(object_id)
 
-
     def practice_hooks(self):
         return hooks_for_language("en")
+
     # ------------------------------------------------------------------
-    # Internals
+    # Analysis
     # ------------------------------------------------------------------
 
-    def _tokenize(self, sentence: str) -> list[Token]:
-        return [
-            Token(text=w, lemma=w.lower(), pos="WORD", morph={})
-            for w in _WORD_RE.findall(sentence)
+    def _analyze_tokens(
+        self, sentence: str, tokens: list[Any]
+    ) -> CandidateSentenceResult:
+        # Grammar runs first; its surface tokens may overlap vocabulary.
+        grammar_candidates = self._extract_grammar(tokens)
+
+        # Build Token objects for nuance extractor compatibility.
+        token_objs = [
+            Token(text=t.text, lemma=t.lemma_, pos=t.pos_, morph=t.morph.to_dict())
+            for t in tokens
         ]
+
+        seen_vocab: set[str] = set()
+        vocab_candidates = self._extract_vocabulary(tokens, seen_vocab)
+
+        nuance_candidates = self.nuance_extractor.extract_nuance(
+            sentence=sentence,
+            tokens=token_objs,
+            candidates=vocab_candidates,
+            language=self.language_code,
+        )
+
+        # Re-extract vocabulary, skipping words already covered by phrases/idioms.
+        skip_words = self._phrase_surface_words(grammar_candidates + nuance_candidates)
+        if skip_words:
+            seen_vocab.clear()
+            vocab_candidates = self._extract_vocabulary(tokens, seen_vocab, skip_words=skip_words)
+            nuance_candidates = self.nuance_extractor.extract_nuance(
+                sentence=sentence,
+                tokens=token_objs,
+                candidates=vocab_candidates,
+                language=self.language_code,
+            )
+
+        return CandidateSentenceResult(
+            text=sentence,
+            candidates=grammar_candidates + nuance_candidates + vocab_candidates,
+        )
+
+    def _extract_vocabulary(
+        self,
+        tokens: list[Any],
+        seen: set[str],
+        skip_words: set[str] | None = None,
+    ) -> list[CandidateObject]:
+        candidates: list[CandidateObject] = []
+        for token in tokens:
+            pos = token.pos_
+            if pos in _SKIP_POS:
+                continue
+            if pos == "VERB":
+                verb_form = (token.morph.get("VerbForm") or [""])[0]
+                if verb_form not in _NON_FINITE_FORMS:
+                    continue
+            lemma = token.lemma_.lower()
+            if not lemma or not lemma.isalpha():
+                continue
+            if skip_words and (lemma in skip_words or token.text.lower() in skip_words):
+                continue
+            if lemma in seen:
+                continue
+            seen.add(lemma)
+            lesson: dict[str, Any] = {"lemma": lemma, "pos": pos}
+            confidence = 0.85
+            if pos == "PROPN":
+                confidence = 0.72
+                lesson["confidence_note"] = "proper noun — may not generalise across contexts"
+            candidates.append(CandidateObject(
+                canonical_form=lemma,
+                surface_form=token.text,
+                type="vocabulary",
+                label=token.text,
+                lesson_data=lesson,
+                confidence=confidence,
+            ))
+        return candidates
+
+    def _extract_grammar(self, tokens: list[Any]) -> list[CandidateObject]:
+        seen: set[str] = set()
+        grammar: list[CandidateObject] = []
+        n = len(tokens)
+        toks = [(t.lemma_.lower(), t.pos_, t.tag_) for t in tokens]
+
+        # Pre-pass: going-to future — must run before progressive so that
+        # "is going to run" does not also emit be_progressive.
+        going_to_vbg: set[int] = set()
+        for i, t in enumerate(tokens):
+            if (
+                t.lemma_.lower() == "go"
+                and t.tag_ == "VBG"
+                and i + 2 < n
+                and tokens[i + 1].tag_ == "TO"
+                and tokens[i + 2].tag_ == "VB"
+            ):
+                going_to_vbg.add(i)
+                if "going_to_future" not in seen:
+                    seen.add("going_to_future")
+                    grammar.append(self._emit_grammar(
+                        "going_to_future",
+                        f"{t.text} to {tokens[i + 2].text}",
+                    ))
+
+        # Main pass
+        for i, (lemma, pos, tag) in enumerate(toks):
+            # Modal: MD + (adv/neg)* + VB
+            if tag == "MD":
+                for k in range(i + 1, min(i + 5, n)):
+                    if toks[k][2] == "VB":
+                        if "modal_verb" not in seen:
+                            seen.add("modal_verb")
+                            grammar.append(self._emit_grammar(
+                                "modal_verb",
+                                f"{tokens[i].text} {tokens[k].text}",
+                            ))
+                        break
+                    if toks[k][1] not in ("ADV", "PART"):
+                        break
+                continue
+
+            if pos != "AUX":
+                continue
+
+            # Scan ahead for the nearest relevant verb form.
+            found_k: int | None = None
+            found_vtag: str | None = None
+            for k in range(i + 1, min(i + 5, n)):
+                if toks[k][2] in ("VBG", "VBN"):
+                    found_k = k
+                    found_vtag = toks[k][2]
+                    break
+                if toks[k][1] not in ("ADV", "PART"):
+                    break
+
+            if found_k is None:
+                continue
+
+            found_lemma = toks[found_k][0]
+
+            # Progressive: [be] + VBG — skip going-to indices
+            if lemma == "be" and found_vtag == "VBG" and found_k not in going_to_vbg:
+                if "be_progressive" not in seen:
+                    seen.add("be_progressive")
+                    grammar.append(self._emit_grammar(
+                        "be_progressive",
+                        f"{tokens[i].text} {tokens[found_k].text}",
+                    ))
+
+            # Passive: [be] + VBN (exclude 'been', which is part of perfect-passive)
+            elif lemma == "be" and found_vtag == "VBN" and found_lemma != "be":
+                if "be_passive" not in seen:
+                    seen.add("be_passive")
+                    grammar.append(self._emit_grammar(
+                        "be_passive",
+                        f"{tokens[i].text} {tokens[found_k].text}",
+                    ))
+
+            # Perfect: [have] + VBN (exclude 'been' → perfect-progressive/passive handled above)
+            elif lemma == "have" and found_vtag == "VBN" and found_lemma != "be":
+                if "have_perfect" not in seen:
+                    seen.add("have_perfect")
+                    grammar.append(self._emit_grammar(
+                        "have_perfect",
+                        f"{tokens[i].text} {tokens[found_k].text}",
+                    ))
+
+        return grammar
+
+    def _emit_grammar(self, pattern_id: str, surface: str) -> CandidateObject:
+        label, usage, contrast = _GRAMMAR_PATTERNS[pattern_id]
+        return CandidateObject(
+            canonical_form=f"grammar:{pattern_id}",
+            surface_form=surface,
+            type="grammar",
+            label=label,
+            lesson_data={
+                "pattern_id": pattern_id,
+                "pattern": label,
+                "usage": usage,
+                "contrast": contrast,
+                "surface_verb": surface,
+            },
+            confidence=0.85,
+        )
 
     def _phrase_surface_words(self, candidates: list[CandidateObject]) -> set[str]:
         skip: set[str] = set()
         for candidate in candidates:
-            if candidate.type not in {"phrase_family", "idiom"}:
+            if candidate.type not in {"phrase_family", "idiom", "grammar"}:
                 continue
             if not candidate.surface_form:
                 continue
             skip.update(word.lower() for word in candidate.surface_form.split())
         return skip
-
-    def _extract_vocabulary(
-        self,
-        tokens: list[Token],
-        skip_words: set[str] | None = None,
-    ) -> list[CandidateObject]:
-        seen: set[str] = set()
-        candidates: list[CandidateObject] = []
-        for token in tokens:
-            if skip_words and token.lemma in skip_words:
-                continue
-            if token.lemma in seen:
-                continue
-            seen.add(token.lemma)
-            candidates.append(
-                CandidateObject(
-                    canonical_form=token.lemma,
-                    surface_form=token.text,
-                    type="vocabulary",
-                    label=token.text,
-                    lesson_data={"lemma": token.lemma},
-                    confidence=0.8
-                )
-            )
-        return candidates
 
 
 def create_plugin() -> EnglishPlugin:
