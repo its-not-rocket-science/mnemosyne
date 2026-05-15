@@ -1188,7 +1188,16 @@ detailPane?.addEventListener('pane-close', () => {
 
 detailPane?.addEventListener('pane-practice-check', ({ detail }) => {
   if (!detail?.lesson || !detail?.language) return
-  void submitLessonCheck(detail.lesson, detail.language, detail)
+  const objectId = detail.objectId ?? detail.lesson?.id
+  if (!objectId) return
+  const quality = detail.correct ? ((detail.attempts ?? 1) <= 1 ? 4 : 3) : 1
+  void submitReview(objectId, quality).then((payload) => {
+    if (!payload) return
+    termProgressByLanguage.delete(detail.language)
+    detailPane.dispatchEvent(new CustomEvent('review-submitted', {
+      detail: { objectId, quality, nextIntervalDays: payload.next_interval_days },
+    }))
+  })
 })
 
 paneBackdrop?.addEventListener('click', () => detailPane?.hide())
