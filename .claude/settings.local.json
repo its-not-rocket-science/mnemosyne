@@ -71,7 +71,10 @@
       "Bash(PYTHONIOENCODING=utf-8 python *)",
       "Bash(tasklist)",
       "Bash(psql *)",
-      "Bash(Select-Object -ExpandProperty FullName)"
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\" -Recurse -Include \"*.js\", \"*.html\", \"*.json\")",
+      "Bash(Select-Object -First 50 FullName)",
+      "Bash(del *)"
     ]
   }
 }

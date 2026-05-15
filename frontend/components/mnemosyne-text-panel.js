@@ -29,6 +29,8 @@
  *   line-speak         — { lineId, text }
  */
 
+import { t } from '../js/i18n.js'
+
 const VIRT_THRESHOLD = 200
 
 // Matches mnemosyne-filter-bar palette exactly
@@ -264,7 +266,7 @@ class MnemosyneTextPanel extends HTMLElement {
     if (!this.#lines.length) {
       const empty = document.createElement('p')
       empty.className = 'panel__empty'
-      empty.textContent = 'No text to display.'
+      empty.textContent = t('text_panel_empty')
       body.appendChild(empty)
       return
     }
@@ -312,7 +314,7 @@ class MnemosyneTextPanel extends HTMLElement {
     const btn = document.createElement('button')
     btn.type      = 'button'
     btn.className = 'line__speak'
-    btn.setAttribute('aria-label', 'Play this line')
+    btn.setAttribute('aria-label', t('text_panel_play_line'))
     btn.innerHTML = SPEAKER_SVG
     btn.addEventListener('click', e => {
       e.stopPropagation()

@@ -86,7 +86,7 @@ class MnemosyneTopNav extends HTMLElement {
 <nav class="nav" part="nav">
 
   <div class="nav__start">
-    <a class="nav__logo" href="/" aria-label="Mnemosyne home">
+    <a class="nav__logo" href="/" aria-label="${t('nav_home_aria')}">
       <img src="./mnemosyneThumbnail.png" alt="Mnemosyne logo" width="60" height="60">
       <span class="nav__wordmark">Mnemosyne</span>
     </a>
@@ -94,22 +94,22 @@ class MnemosyneTopNav extends HTMLElement {
 
   <div class="nav__mid">
 
-    <select class="nav__pill" id="depth-select" aria-label="Annotation depth">
+    <select class="nav__pill" id="depth-select" aria-label="${t('nav_depth_aria')}">
       <option value="subtle">${t('nav_depth_subtle')}</option>
       <option value="learning">${t('nav_depth_learning')}</option>
       <option value="deep">${t('nav_depth_deep')}</option>
     </select>
-    <span class="nav__mode-indicator" id="mode-indicator" aria-live="polite">Mode: Learning</span>
+    <span class="nav__mode-indicator" id="mode-indicator" aria-live="polite">${t('nav_mode_label')}: ${t('nav_depth_learning')}</span>
 
     <button class="nav__ctrl nav__settings" id="settings-btn"
-            type="button" aria-label="Settings">&#x2699;&#xFE0E;</button>
+            type="button" aria-label="${t('nav_settings_aria')}">&#x2699;&#xFE0E;</button>
 
   </div><!-- /.nav__mid -->
 
   <div class="nav__end">
     <slot></slot>
     <button class="nav__expand" id="expand-btn" type="button"
-            aria-label="Show playback controls"
+            aria-label="${t('nav_expand_show')}"
             aria-expanded="false" aria-controls="xrow">
       ${chevron(false)}
     </button>
@@ -119,13 +119,13 @@ class MnemosyneTopNav extends HTMLElement {
 
 <!-- Expanded row: depth + settings (mobile only) -->
 <div class="nav__xrow" id="xrow" hidden>
-  <select class="nav__pill" id="xdepth" aria-label="Annotation depth">
+  <select class="nav__pill" id="xdepth" aria-label="${t('nav_depth_aria')}">
     <option value="subtle">${t('nav_depth_subtle')}</option>
     <option value="learning">${t('nav_depth_learning')}</option>
     <option value="deep">${t('nav_depth_deep')}</option>
   </select>
   <button class="nav__ctrl nav__settings" id="xsettings"
-          type="button" aria-label="Settings">&#x2699;&#xFE0E;</button>
+          type="button" aria-label="${t('nav_settings_aria')}">&#x2699;&#xFE0E;</button>
 </div>`
   }
 
@@ -183,7 +183,7 @@ class MnemosyneTopNav extends HTMLElement {
     row.hidden = !this.#expanded
     btn.setAttribute('aria-expanded', String(this.#expanded))
     btn.setAttribute('aria-label',
-      this.#expanded ? 'Hide playback controls' : 'Show playback controls')
+      this.#expanded ? t('nav_expand_hide') : t('nav_expand_show'))
     btn.innerHTML = chevron(this.#expanded)
   }
 

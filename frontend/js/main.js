@@ -405,7 +405,7 @@ function buildScriptToggleGroup() {
   const group = document.createElement('div')
   group.className = 'script-toggle'
   group.setAttribute('role', 'group')
-  group.setAttribute('aria-label', 'Script view')
+  group.setAttribute('aria-label', t('aria_script_view_group'))
 
   const label = document.createElement('span')
   label.className = 'script-toggle__label'
@@ -1066,7 +1066,7 @@ results.addEventListener('lesson-open', async (event) => {
   const sentenceText = sentenceCard?.querySelector('.sentence-card__text')?.textContent ?? ''
 
   const phrase = originEl?.getAttribute?.('aria-label') ?? objectId
-  announce(`Loading details: ${phrase}`)
+  announce(ti('aria_loading_details', { phrase }))
   setStatus(t('loading_lesson'), 'busy')
 
   try {
@@ -1358,7 +1358,7 @@ document.addEventListener('keydown', e => {
       if (!inButton && playbackEngine.state !== 'idle') {
         e.preventDefault()
         playbackEngine.togglePause()
-        announce(playbackEngine.state === 'playing' ? 'Paused' : 'Resumed')
+        announce(playbackEngine.state === 'playing' ? t('aria_paused') : t('aria_resumed'))
       }
       break
 
@@ -1366,7 +1366,7 @@ document.addEventListener('keydown', e => {
       if (!inButton && playbackEngine.state !== 'idle') {
         e.preventDefault()
         playbackEngine.prev()
-        announce('Previous sentence')
+        announce(t('aria_prev_sentence'))
       }
       break
 
@@ -1374,7 +1374,7 @@ document.addEventListener('keydown', e => {
       if (!inButton && playbackEngine.state !== 'idle') {
         e.preventDefault()
         playbackEngine.next()
-        announce('Next sentence')
+        announce(t('aria_next_sentence'))
       }
       break
 
@@ -1383,7 +1383,7 @@ document.addEventListener('keydown', e => {
       if (!inButton && !e.ctrlKey && !e.metaKey) {
         e.preventDefault()
         isFollowAlongEnabled = !isFollowAlongEnabled
-        announce(isFollowAlongEnabled ? 'Follow along enabled' : 'Follow along disabled')
+        announce(isFollowAlongEnabled ? t('aria_follow_along_on') : t('aria_follow_along_off'))
       }
       break
   }
@@ -1432,15 +1432,15 @@ playbackEngine.addEventListener('state-change', ({ detail: { state, current, ind
     if (!btn || !icon) return
     const isPlaying = isActive && state === 'playing'
     icon.textContent = isPlaying ? '\u23F8' : '\u25B6'
-    btn.setAttribute('aria-label',   isPlaying ? 'Pause' : 'Play sentence')
+    btn.setAttribute('aria-label',   isPlaying ? t('aria_pause') : t('aria_play_sentence'))
     btn.setAttribute('aria-pressed', String(isActive))
   })
 
   // Results transport sync
   if (resultsPlayBtn) {
     const idle = state === 'idle'
-    resultsPlayBtn.innerHTML        = idle ? '&#x25B6;&thinsp;Play all' : '&#x23F9;&thinsp;Stop'
-    resultsPlayBtn.setAttribute('aria-label', idle ? 'Play all sentences' : 'Stop')
+    resultsPlayBtn.innerHTML        = idle ? `&#x25B6;&thinsp;${t('aria_play_all_sentences')}` : `&#x23F9;&thinsp;${t('aria_stop')}`
+    resultsPlayBtn.setAttribute('aria-label', idle ? t('aria_play_all_sentences') : t('aria_stop'))
   }
   if (state === 'playing' && !_transportWallStart) {
     _transportStart()
@@ -1469,7 +1469,7 @@ playbackEngine.addEventListener('state-change', ({ detail: { state, current, ind
     if (rnpToggle) {
       const isPaused = state === 'paused'
       rnpToggle.textContent = isPaused ? '\u25B6' : '\u23F8'
-      rnpToggle.setAttribute('aria-label', isPaused ? 'Resume' : 'Pause')
+      rnpToggle.setAttribute('aria-label', isPaused ? t('aria_resume') : t('aria_pause'))
     }
   }
 })
@@ -1508,7 +1508,7 @@ function renderResults(pipelinePayload, language) {
       const playBtn = document.createElement('button')
       playBtn.type      = 'button'
       playBtn.className = 'reader-gutter-btn sentence-card__play-btn'
-      playBtn.setAttribute('aria-label',   `Play sentence ${sentenceIdx + 1}`)
+      playBtn.setAttribute('aria-label',   ti('aria_play_sentence_n', { n: sentenceIdx + 1 }))
       playBtn.setAttribute('aria-pressed', 'false')
       const icon = document.createElement('span')
       icon.className   = 'play-icon'
@@ -1687,7 +1687,7 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam, de
     mark.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); mark.click() }
     })
-    mark.addEventListener('focus', () => announce(`Annotation: ${item.label}`))
+    mark.addEventListener('focus', () => announce(ti('aria_annotation_focus', { label: item.label })))
     p.appendChild(mark)
     cursor = end
   }

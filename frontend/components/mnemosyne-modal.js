@@ -1,3 +1,5 @@
+import { t, ti } from '../js/i18n.js'
+
 // Field labels (lower-cased) whose values are romanized / transliterated text.
 // Used to assign data-layer="romanized" so the script-view toggle can hide them.
 const ROMANIZED_LABELS = new Set(['romanized', 'readings'])
@@ -475,15 +477,15 @@ export class MnemosyneModal extends HTMLElement {
 
           <div class="header">
             <h2 id="modal-title"></h2>
-            <button type="button" class="close" data-close>Close</button>
+            <button type="button" class="close" data-close>${t('close_btn_aria')}</button>
           </div>
 
           ${hasTranslit ? `
-          <div class="script-toggle" role="group" aria-label="Script view">
-            <span class="script-toggle__label" aria-hidden="true">View:</span>
-            <button type="button" class="script-toggle__btn" data-view="native">Script</button>
-            <button type="button" class="script-toggle__btn" data-view="romanized">Romanized</button>
-            <button type="button" class="script-toggle__btn" data-view="both">Both</button>
+          <div class="script-toggle" role="group" aria-label="${t('aria_script_view_group')}">
+            <span class="script-toggle__label" aria-hidden="true">${t('script_view_label')}</span>
+            <button type="button" class="script-toggle__btn" data-view="native">${t('script_native')}</button>
+            <button type="button" class="script-toggle__btn" data-view="romanized">${t('script_romanized')}</button>
+            <button type="button" class="script-toggle__btn" data-view="both">${t('script_both')}</button>
           </div>` : ''}
 
           <div class="lesson-body">
@@ -496,21 +498,21 @@ export class MnemosyneModal extends HTMLElement {
             <div class="examples">
               <p class="example-text"></p>
               <button type="button" class="btn-speak"
-                aria-label="Speak example aloud"
-                ${!canSpeak ? 'disabled' : ''}>Speak</button>
+                aria-label="${t('modal_aria_speak_example')}"
+                ${!canSpeak ? 'disabled' : ''}>${t('modal_btn_speak')}</button>
             </div>
 
-            <section class="drills-section" aria-label="Practice drills">
-              <p class="drills-heading" aria-hidden="true">Practice</p>
+            <section class="drills-section" aria-label="${t('modal_aria_practice')}">
+              <p class="drills-heading" aria-hidden="true">${t('modal_drills_heading')}</p>
               <div class="drills-list"></div>
             </section>
           </div>
 
-          <div class="ratings" role="group" aria-label="Rate your recall">
-            <button type="button" data-rate="1">Again <span class="sr-only">(did not remember)</span></button>
-            <button type="button" data-rate="2">Hard  <span class="sr-only">(remembered with difficulty)</span></button>
-            <button type="button" data-rate="3">Good  <span class="sr-only">(remembered correctly)</span></button>
-            <button type="button" data-rate="4">Easy  <span class="sr-only">(remembered effortlessly)</span></button>
+          <div class="ratings" role="group" aria-label="${t('modal_aria_rate')}">
+            <button type="button" data-rate="1">${t('modal_btn_rate_1')} <span class="sr-only">${t('modal_btn_rate_1_sr')}</span></button>
+            <button type="button" data-rate="2">${t('modal_btn_rate_2')} <span class="sr-only">${t('modal_btn_rate_2_sr')}</span></button>
+            <button type="button" data-rate="3">${t('modal_btn_rate_3')} <span class="sr-only">${t('modal_btn_rate_3_sr')}</span></button>
+            <button type="button" data-rate="4">${t('modal_btn_rate_4')} <span class="sr-only">${t('modal_btn_rate_4_sr')}</span></button>
           </div>
 
           <p class="status"       role="status" aria-atomic="true"></p>
@@ -535,7 +537,7 @@ export class MnemosyneModal extends HTMLElement {
     // performed without hiding any of the lesson content.
     const modeNote = sr.querySelector('.mode-note')
     if (lesson.lesson_mode === 'dictionary') {
-      modeNote.textContent = 'dictionary lookup \u2014 no full parse'
+      modeNote.textContent = t('modal_dict_mode_note')
       modeNote.removeAttribute('hidden')
     }
 
@@ -625,18 +627,18 @@ export class MnemosyneModal extends HTMLElement {
         ratingButtons.forEach((b) => { b.disabled = true })
         errorEl.textContent  = ''
         statusEl.textContent = ''
-        queueMicrotask(() => { statusEl.textContent = 'Saving\u2026' })
+        queueMicrotask(() => { statusEl.textContent = t('job_saving') })
 
         try {
           const result = await onRate?.(objectId, Number(button.dataset.rate))
           const msg = result
-            ? `Saved. Next review in ${result.next_interval_days} day(s).`
-            : 'Review saved.'
+            ? ti('modal_review_saved_next', { n: result.next_interval_days })
+            : t('modal_review_saved')
           statusEl.textContent = ''
           queueMicrotask(() => { statusEl.textContent = msg })
         } catch (error) {
           statusEl.textContent = ''
-          const msg = error instanceof Error ? error.message : 'Review failed.'
+          const msg = error instanceof Error ? error.message : t('modal_review_failed')
           errorEl.textContent  = ''
           queueMicrotask(() => { errorEl.textContent = msg })
         } finally {
@@ -682,11 +684,11 @@ export class MnemosyneModal extends HTMLElement {
     const canSpeak = 'speechSynthesis' in window
     const el = document.createElement('div')
     el.className = 'drill drill--shadowing'
-    el.setAttribute('aria-label', `Practice drill ${index + 1}: shadowing`)
+    el.setAttribute('aria-label', ti('modal_aria_drill_shadowing', { n: index + 1 }))
 
     const prompt = document.createElement('p')
     prompt.className = 'drill-prompt'
-    prompt.textContent = 'Say aloud:'
+    prompt.textContent = t('modal_say_aloud')
 
     const text = document.createElement('p')
     text.className = 'drill-text'
@@ -698,8 +700,8 @@ export class MnemosyneModal extends HTMLElement {
     btn.type = 'button'
     btn.className = 'btn-speak'
     btn.disabled = !canSpeak
-    btn.textContent = 'Speak'
-    btn.setAttribute('aria-label', 'Speak drill text aloud')
+    btn.textContent = t('modal_btn_speak')
+    btn.setAttribute('aria-label', t('modal_aria_speak_drill'))
     btn.addEventListener('click', () => onSpeak?.(drill.text))
 
     el.append(prompt, text, btn)
@@ -709,7 +711,7 @@ export class MnemosyneModal extends HTMLElement {
   #renderMultipleChoice(drill, index, onCheckResult) {
     const el = document.createElement('div')
     el.className = 'drill drill--mc'
-    el.setAttribute('aria-label', `Practice drill ${index + 1}: multiple choice`)
+    el.setAttribute('aria-label', ti('modal_aria_drill_mc', { n: index + 1 }))
 
     const prompt = document.createElement('p')
     prompt.className = 'drill-prompt'
@@ -720,7 +722,7 @@ export class MnemosyneModal extends HTMLElement {
     const group = document.createElement('div')
     group.className = 'drill-options'
     group.setAttribute('role', 'group')
-    group.setAttribute('aria-label', 'Choose one')
+    group.setAttribute('aria-label', t('modal_aria_choose_one'))
 
     const feedback = document.createElement('p')
     feedback.className = 'drill-feedback'
@@ -746,7 +748,7 @@ export class MnemosyneModal extends HTMLElement {
 
         feedback.dataset.result = isCorrect ? 'correct' : 'wrong'
         if (isCorrect) {
-          feedback.textContent = '\u2713 Correct!'
+          feedback.textContent = t('modal_feedback_correct')
         } else {
           // Wrap the answer in <bdi> so the Unicode bidi algorithm treats it
           // as an isolated run — prevents RTL answers from pushing the
@@ -754,7 +756,7 @@ export class MnemosyneModal extends HTMLElement {
           const bdi = document.createElement('bdi')
           bdi.textContent = drill.options[drill.answer_index]
           feedback.textContent = ''
-          feedback.append('\u2717 The answer is \u201c', bdi, '\u201d.')
+          feedback.append(t('modal_feedback_wrong_intro'), bdi, t('modal_feedback_wrong_outro'))
         }
         onCheckResult?.({ index, type: 'multiple_choice', correct: isCorrect, answeredAt: new Date().toISOString() })
       })
@@ -768,7 +770,7 @@ export class MnemosyneModal extends HTMLElement {
   #renderFillBlank(drill, index, onCheckResult) {
     const el = document.createElement('div')
     el.className = 'drill drill--fill'
-    el.setAttribute('aria-label', `Practice drill ${index + 1}: fill in the blank`)
+    el.setAttribute('aria-label', ti('modal_aria_drill_fill', { n: index + 1 }))
 
     const promptId = `drill-prompt-${index}`
     const prompt = document.createElement('p')
@@ -789,7 +791,7 @@ export class MnemosyneModal extends HTMLElement {
     // aria-labelledby associates the fill-blank prompt as the accessible name
     // for this input (SC 1.3.1 / 4.1.2).
     input.setAttribute('aria-labelledby', promptId)
-    input.setAttribute('placeholder', 'Type your answer')
+    input.setAttribute('placeholder', t('modal_input_placeholder'))
     input.setAttribute('autocomplete', 'off')
     input.setAttribute('autocorrect', 'off')
     input.setAttribute('spellcheck', 'false')
@@ -799,7 +801,7 @@ export class MnemosyneModal extends HTMLElement {
     const checkBtn = document.createElement('button')
     checkBtn.type = 'button'
     checkBtn.className = 'drill-check'
-    checkBtn.textContent = 'Check'
+    checkBtn.textContent = t('modal_btn_check')
 
     const hint = document.createElement('p')
     hint.className = 'drill-feedback'
@@ -826,14 +828,14 @@ export class MnemosyneModal extends HTMLElement {
       const isCorrect = value.toLowerCase() === drill.answer.toLowerCase()
       hint.dataset.result = isCorrect ? 'correct' : 'wrong'
       if (isCorrect) {
-        hint.textContent = '\u2713 Correct!'
+        hint.textContent = t('modal_feedback_correct')
       } else {
         // <bdi> isolates the target-language answer from the LTR wrapper so
         // typographic quotes don't flip sides for RTL answer strings.
         const bdi = document.createElement('bdi')
         bdi.textContent = drill.answer
         hint.textContent = ''
-        hint.append('\u2717 The answer is \u201c', bdi, '\u201d.')
+        hint.append(t('modal_feedback_wrong_intro'), bdi, t('modal_feedback_wrong_outro'))
       }
       onCheckResult?.({ index, type: 'fill_blank', correct: isCorrect, answeredAt: new Date().toISOString() })
     }
@@ -851,7 +853,7 @@ export class MnemosyneModal extends HTMLElement {
   #renderRecognition(drill, index, onCheckResult) {
     const el = document.createElement('div')
     el.className = 'drill drill--rec'
-    el.setAttribute('aria-label', `Practice drill ${index + 1}: true or false`)
+    el.setAttribute('aria-label', ti('modal_aria_drill_recognition', { n: index + 1 }))
 
     const prompt = document.createElement('p')
     prompt.className = 'drill-prompt'
@@ -861,7 +863,7 @@ export class MnemosyneModal extends HTMLElement {
     const group = document.createElement('div')
     group.className = 'drill-options'
     group.setAttribute('role', 'group')
-    group.setAttribute('aria-label', 'True or false?')
+    group.setAttribute('aria-label', t('modal_aria_true_false'))
 
     const feedback = document.createElement('p')
     feedback.className = 'drill-feedback'
@@ -869,11 +871,12 @@ export class MnemosyneModal extends HTMLElement {
     feedback.setAttribute('aria-atomic', 'true')
 
     let answered = false
-    ;[{ label: 'True', value: true }, { label: 'False', value: false }].forEach(({ label, value }) => {
+    ;[{ label: t('modal_true'), value: true }, { label: t('modal_false'), value: false }].forEach(({ label, value }) => {
       const btn = document.createElement('button')
       btn.type = 'button'
       btn.className = 'drill-option'
       btn.textContent = label
+      btn.dataset.boolValue = String(value)
       btn.addEventListener('click', () => {
         if (answered) return
         answered = true
@@ -881,15 +884,15 @@ export class MnemosyneModal extends HTMLElement {
 
         group.querySelectorAll('.drill-option').forEach((b) => {
           b.disabled = true
-          const btnValue = b.textContent === 'True'
+          const btnValue = b.dataset.boolValue === 'true'
           if (btnValue === drill.correct) b.dataset.state = 'correct'
           else if (btnValue === value && !isCorrect) b.dataset.state = 'wrong'
         })
 
         feedback.dataset.result = isCorrect ? 'correct' : 'wrong'
         feedback.textContent = isCorrect
-          ? '\u2713 Correct!'
-          : `\u2717 That\u2019s ${drill.correct ? 'true' : 'false'}.`
+          ? t('modal_feedback_correct')
+          : (drill.correct ? t('modal_feedback_rec_true') : t('modal_feedback_rec_false'))
         onCheckResult?.({ index, type: 'recognition', correct: isCorrect, answeredAt: new Date().toISOString() })
       })
       group.appendChild(btn)

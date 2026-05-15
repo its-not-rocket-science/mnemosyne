@@ -36,5 +36,5 @@ def test_depth_selection_is_persisted_across_sessions() -> None:
 def test_active_mode_has_visual_indicator() -> None:
     text = _read(TOP_NAV_JS)
     assert 'id="mode-indicator"' in text
-    assert "Mode: Learning" in text
+    assert "nav_mode_label" in text
     assert "this.#updateModeIndicator()" in text
