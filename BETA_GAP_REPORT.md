@@ -1,6 +1,6 @@
 # Beta Gap Report — Mnemosyne
 
-*Originally written 2026-04-15. Updated 2026-04-18 to reflect current `main` branch state.*
+*Originally written 2026-04-15. Updated 2026-05-15 to reflect current `main` branch state.*
 
 All private alpha and public beta blockers are resolved. All vision items V1–V5 are
 implemented. The system is at or beyond the original 12-week plan. This document is
@@ -12,15 +12,17 @@ tier.
 ## What is solid (do not second-guess)
 
 - **Core loop.** Parse → lesson → review → recommend is complete, tested, and persistent.
-  1 555 tests collected and passing.
+  2 807 tests collected; 2 766 passing (14 pre-existing failures unrelated to core loop; 27 skipped).
+- **Practice activities.** Detail pane exposes scored retell, typed drill, comprehension, and
+  mini-quiz practice panels. Every practice check dispatches `pane-practice-check` → `submitReview(objectId, quality)` → FSRS `/review` endpoint, so practice directly updates spaced-repetition state. Session score and next-interval feedback shown inline.
 - **FSRS-5.** Pure Python, deterministic, no external dependencies. Per-user calibration
   via `POST /users/me/calibrate` (bias-correction over `ReviewEventRow` history).
   `UserFsrsParamsRow` table; `GET/PATCH /users/me/fsrs-params`.
 - **Canonical knowledge layer.** UUID-v5 PKs; the same word in any text always maps to
   the same DB row. Surface forms accumulate. Object relations stored.
-- **Plugin architecture.** Structural typing, no registration step. 12 plugins + 1
-  stub (English): 7 full morphological (es/fr/de/ru/ja/pt/it) + 5 dictionary-mode
-  (ar/he/zh/la/grc). Drop a file in `backend/plugins/` and the server picks it up.
+- **Plugin architecture.** Structural typing, no registration step. 14 production plugins:
+  8 full morphological (es/fr/de/ru/ja/pt/it/**en**) + 5 dictionary-mode
+  (ar/he/zh/la/grc) + 1 morphology-light (ko, kiwipiepy). Drop a file in `backend/plugins/` and the server picks it up.
 - **Accessibility baseline.** Skip link, focus trap, ARIA live regions, reduced motion,
   44 px targets, roving tabindex, `role="list"` on pill lists. Static WCAG 2.1 AA code
   audit complete — 8 issues found and fixed. See `WCAG_AUDIT.md`.
@@ -32,7 +34,7 @@ tier.
 - **Full multilingual stack.** Spanish, French, German, Russian, Japanese, Portuguese,
   Italian: full spaCy morphological pipelines. Arabic, Hebrew, Chinese (jieba + pypinyin),
   Latin, Koine Greek: dictionary/vocabulary mode with honest capability declarations.
-  12 registered language codes (+ English stub = 13 total).
+  14 registered language codes.
 - **RTL support.** `dir`/`lang` applied throughout modal and sentence cards; logical CSS
   properties; `<bdi>` isolation in drill feedback; 43 non-Latin DB round-trip tests.
 - **Operational baseline.** Health + readiness probes (degraded-plugin reporting).
@@ -76,7 +78,7 @@ tier.
 | B6. Rate limiting | ✓ done |
 | B7. Privacy policy + `DELETE /users/me` | ✓ done |
 | B8. Error monitoring (Sentry SDK) | ✓ done |
-| B9. Three+ production-quality language plugins | ✓ done — 7 full morphological (es/fr/de/ru/ja/pt/it) + 5 dictionary-mode (ar/he/zh/la/grc) + 1 stub (en) |
+| B9. Three+ production-quality language plugins | ✓ done — 8 full morphological (es/fr/de/ru/ja/pt/it/en) + 5 dictionary-mode (ar/he/zh/la/grc) + 1 morphology-light (ko) |
 
 ---
 
@@ -89,7 +91,7 @@ tier.
 | V3. Real dictionary integration | ✓ done (Wiktionary) |
 | V4. FSRS parameter fitting | ✓ done (per-user calibration via `ReviewEventRow`) |
 | V5. PWA and offline mode | ✓ done |
-| V6. 10+ production-quality language plugins | ~ partial — 5 full morphological (es/fr/de/ru/ja), 5 dictionary-mode (ar/he/zh/la/grc), 1 stub (en). Full morphological coverage for Portuguese, Italian, Korean, Hindi etc. remains open. |
+| V6. 10+ production-quality language plugins | ~ partial — 8 full morphological (es/fr/de/ru/ja/pt/it/en), 5 dictionary-mode (ar/he/zh/la/grc), 1 morphology-light (ko) = 14 total. Hindi, Turkish, Finnish remain open. |
 | V7. Dead and historic language annotation mode | ~ partial — Latin, Arabic, Koine Greek implemented in dictionary mode with honest capability declarations. Classical Arabic lexicon and Perseus-backed Latin morphology remain open. |
 
 ---
@@ -102,10 +104,11 @@ These are the only items without a completed implementation:
 issues were fixed. A human keyboard-only walkthrough and NVDA/VoiceOver smoke test
 have not been run. See `WCAG_AUDIT.md` for the testing checklist.
 
-**Full morphological plugins for additional languages** — Korean, Hindi,
-Turkish, Finnish are natural next targets given available spaCy models. Each
-requires NLP research, canonical-form convention decisions (per `PLUGIN_AUTHOR_GUIDE.md`),
-plugin implementation, and tests. This is the main remaining work toward the V6 target.
+**Full morphological plugins for additional languages** — Hindi, Turkish,
+Finnish are natural next targets given available spaCy models. (Korean is done;
+see morphology-light `ko` plugin using kiwipiepy.) Each requires NLP research,
+canonical-form convention decisions (per `PLUGIN_AUTHOR_GUIDE.md`), plugin
+implementation, and tests. This is the main remaining work toward the V6 target.
 
 **Portuguese (`pt`) — done**: `pt_core_news_sm`; vocabulary, conjugation, agreement,
 grammar patterns (ser/estar copula, ter_perfect, ir_near_future, estar_progressive),
@@ -133,10 +136,11 @@ in-progress documents and sorts continuation sentences (at or after
 `next_position`) first within the difficulty window, with an `is_continuation`
 flag in each response item. 14 new tests in `test_source_progression.py`.
 
-**Lesson text localisation** — `build_lesson()` produces English prose regardless of
-target language. The template layer is pluggable (`tense_pool`/`mood_pool` on
-`LanguageCapabilities`) but lesson explanations ("The word X is a noun") are always
-English. For learners whose native language is not English this is a friction point.
+**Lesson text localisation** — `build_lesson()` prose is now localised for English and
+Spanish L1 learners via `backend/lesson/l10n.py` (static parameterised templates,
+zero-latency, deterministic). Untranslated L1 codes fall back to English safely.
+Full coverage across remaining UI languages (fr/de/ru/ja/pt/it/ar/he/zh/ko and others)
+remains open — adding a language requires entries in `_TEMPLATES` and `_POS_LABELS`.
 
 ---
 
