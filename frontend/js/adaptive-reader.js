@@ -619,7 +619,7 @@ function populateSystemBody(container) {
   ;['', 'guided', 'balanced', 'light'].forEach(val => {
     const opt = document.createElement('option')
     opt.value = val
-    opt.textContent = val || t('adaptive_on')
+    opt.textContent = val ? t(`adaptive_path_${val}`) : t('adaptive_on')
     override.appendChild(opt)
   })
   override.value = adaptiveOverrides.annotationDensity || ''
@@ -821,7 +821,10 @@ function renderIntelligenceSummary() {
     ? `${t('adaptive_synced')} ${dashboardSyncedAt.toLocaleTimeString()}`
     : t('adaptive_memory_fallback')
   const profile = computeAdaptiveState()
-  const reasons = (profile?.reasons || []).join(', ')
+  const rawReasons = profile?.reasons || []
+  const reasons = rawReasons.map(r => t(`adaptive_reason_${r}`) || r).join(', ')
+  const densityVal = effectiveAdaptiveValue('annotationDensity')
+  const densityLabel = densityVal ? t(`adaptive_path_${densityVal}`) || densityVal : t('adaptive_path_balanced')
 
   const statsDiv = summary.querySelector('.reader-intelligence-summary__stats')
   statsDiv.innerHTML = `
@@ -830,7 +833,7 @@ function renderIntelligenceSummary() {
     <span><b>${stats.fading}</b> <span data-i18n="adaptive_memory_fading_stat">${t('adaptive_memory_fading_stat')}</span></span>
     <span><b>${stats.strong}</b> <span data-i18n="adaptive_memory_strong_stat">${t('adaptive_memory_strong_stat')}</span></span>
     <small>${syncText}</small>
-    <small>${t('adaptive_path_label')}: ${effectiveAdaptiveValue('annotationDensity') || 'balanced'}${reasons ? ` · ${reasons}` : ''}</small>
+    <small>${t('adaptive_path_label')}: ${densityLabel}${reasons ? ` · ${reasons}` : ''}</small>
   `
 
   const howWorksSummary = summary.querySelector('.reader-intelligence-summary__how-summary')
