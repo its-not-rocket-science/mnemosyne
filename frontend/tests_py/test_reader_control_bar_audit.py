@@ -67,8 +67,6 @@ def test_adaptive_difficulty_events_exist_and_reader_button_wires_to_toggle():
     assert "mnemosyne:toggle-adaptive-reader" in adaptive_button_section
     assert "adaptiveEnabled" not in adaptive_button_section
     assert "reinforcementEnabled" not in adaptive_button_section
-    # Difficulty dialog access is now inside the ⚙ system body (adaptive-reader.js).
-    assert "window.mnemosyneDifficulty?.openDialog?.()" in ADAPTIVE
 
 
 def test_i18n_help_text_matches_expected_control_descriptions():
@@ -157,6 +155,15 @@ def test_localized_reader_control_labels_exist_in_all_locale_blocks():
     # so untranslated locales fail loudly at lookup-time tests.
     assert "reader_settings_aria" in I18N
     assert "reader_adv_mode_hint" in I18N
+
+
+def test_difficulty_bar_is_inline_not_dialog():
+    assert "resultsSection.appendChild(bar)" in DIFFICULTY
+    assert "document.createElement('dialog')" not in DIFFICULTY
+    assert "showModal()" not in DIFFICULTY
+    assert "#results-adaptive-bar" in DIFFICULTY
+    assert "results-adaptive-bar" in READING_CSS
+    assert "adaptive-settings-dialog" not in READING_CSS
 
 
 def test_keyboard_navigation_and_aria_states_are_explicitly_wired():
