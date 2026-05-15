@@ -155,6 +155,8 @@ export class MnemosyneDetailPane extends HTMLElement {
   #dragStartY     = 0
   #dragBaseY      = 0
   #dragActive     = false
+  #practiceSession   = { correct: 0, total: 0 }
+  #reviewFlashTimer  = null
   // Translation fetch state (reset on each show())
   #vocabTranslationFetched        = false
   #sentenceTranslationFetched     = false
@@ -185,6 +187,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     this.#onStudy       = onStudy ?? null
     this.#activeTab     = 0
     this.#explanationTranslationFetched = false
+    this.#practiceSession = { correct: 0, total: 0 }
     this.#previousFocus = document.activeElement
 
     this.removeAttribute('inert')
@@ -310,6 +313,21 @@ export class MnemosyneDetailPane extends HTMLElement {
           }))
           return
         }
+      })
+
+      // Review confirmed by main.js — show synced status in practice panel
+      this.addEventListener('review-submitted', ({ detail }) => {
+        const el = this.shadowRoot?.querySelector('.pane__session-score')
+        if (!el) return
+        const { correct, total } = this.#practiceSession
+        const base = total > 0 ? tr('dp_session_score', `Session: ${correct}/${total}`) : ''
+        const days = detail?.nextIntervalDays
+        const note = days != null
+          ? tr('dp_mm_synced_interval', `✓ synced · next in ${days}d`)
+          : tr('dp_mm_synced', '✓ Memory Map updated')
+        el.textContent = base ? `${base} · ${note}` : note
+        clearTimeout(this.#reviewFlashTimer)
+        this.#reviewFlashTimer = setTimeout(() => this._renderSessionScore(), 3000)
       })
 
       // Tab keyboard navigation — delegated for same reason as click
@@ -826,6 +844,7 @@ export class MnemosyneDetailPane extends HTMLElement {
           </article>
           <button class="pane__study-btn pane__study-btn--inline" type="button">${esc(t('dp_practice_start_btn'))}</button>
           <p class="pane__muted">${esc(t('dp_practice_tip'))}</p>
+          <p class="pane__muted pane__session-score" aria-live="polite" aria-atomic="true"></p>
           ${dueItems.length ? /* html */`
             <article class="pane__check">
               <p class="pane__check-prompt"><strong>${esc(tr('dp_due_now', 'Due now'))}</strong></p>
@@ -1012,8 +1031,9 @@ export class MnemosyneDetailPane extends HTMLElement {
             this.dispatchEvent(new CustomEvent('pane-practice-check', {
               bubbles: true,
               composed: true,
-              detail: { type: `retell_${retellMode}`, correct: meaningFocused, answeredAt: new Date().toISOString(), lesson, language, term: lesson.lesson_data?.lemma || lesson.title, attempts },
+              detail: { type: `retell_${retellMode}`, correct: meaningFocused, answeredAt: new Date().toISOString(), lesson, language, objectId: lesson.id, term: lesson.lesson_data?.lemma || lesson.title, attempts },
             }))
+            this._updatePracticeScore(meaningFocused)
             return
           }
           const accepted = [drill?.expected_answer, ...(drill?.acceptable_alternatives || [])].filter(Boolean)
@@ -1022,8 +1042,9 @@ export class MnemosyneDetailPane extends HTMLElement {
           this.dispatchEvent(new CustomEvent('pane-practice-check', {
             bubbles: true,
             composed: true,
-            detail: { type: drill?.type, correct, answeredAt: new Date().toISOString(), lesson, language, term: drill?.target_term_or_pattern, attempts },
+            detail: { type: drill?.type, correct, answeredAt: new Date().toISOString(), lesson, language, objectId: lesson.id, term: drill?.target_term_or_pattern, attempts },
           }))
+          this._updatePracticeScore(correct)
           if (correct && input) input.disabled = true
         })
         return
@@ -1043,8 +1064,9 @@ export class MnemosyneDetailPane extends HTMLElement {
         this.dispatchEvent(new CustomEvent('pane-practice-check', {
           bubbles: true,
           composed: true,
-          detail: { type: 'comprehension_questions', correct, answeredAt: new Date().toISOString(), lesson, language },
+          detail: { type: 'comprehension_questions', correct, answeredAt: new Date().toISOString(), lesson, language, objectId: lesson.id, attempts: 1 },
         }))
+        this._updatePracticeScore(correct)
       }))
     })
 
@@ -1083,8 +1105,9 @@ export class MnemosyneDetailPane extends HTMLElement {
           updateProgress()
           this.dispatchEvent(new CustomEvent('pane-practice-check', {
             bubbles: true, composed: true,
-            detail: { type: `mini_quiz_${item?.kind || 'item'}`, correct, answeredAt: new Date().toISOString(), lesson, language, term: lesson.lesson_data?.lemma || lesson.title },
+            detail: { type: `mini_quiz_${item?.kind || 'item'}`, correct, answeredAt: new Date().toISOString(), lesson, language, objectId: lesson.id, term: lesson.lesson_data?.lemma || lesson.title, attempts: 1 },
           }))
+          this._updatePracticeScore(correct)
         })
       })
       quizContainer.querySelector('[data-quiz-finish]')?.addEventListener('click', () => {
@@ -1105,6 +1128,19 @@ export class MnemosyneDetailPane extends HTMLElement {
     }
 
     this.#wireDrag()
+  }
+
+  _updatePracticeScore(correct) {
+    this.#practiceSession.total += 1
+    if (correct) this.#practiceSession.correct += 1
+    this._renderSessionScore()
+  }
+
+  _renderSessionScore() {
+    const el = this.shadowRoot?.querySelector('.pane__session-score')
+    if (!el) return
+    const { correct, total } = this.#practiceSession
+    el.textContent = total > 0 ? tr('dp_session_score', `Session: ${correct}/${total}`) : ''
   }
 
   // Apply aria-selected, tabindex, and panel visibility for the active tab.
