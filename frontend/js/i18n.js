@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i18n.js — Minimal UI localisation for Mnemosyne.
  *
  * Supports 11 languages matching the backend plugin set.
@@ -522,8 +522,8 @@ adaptive_too_hard:        "Too hard",
     modal_feedback_correct:       '✓ Correct!',
     modal_feedback_wrong_intro:   '✗ The answer is “',
     modal_feedback_wrong_outro:   '”.',
-    modal_feedback_rec_true:      ‘✗ That’s true.’,
-    modal_feedback_rec_false:     ‘✗ That’s false.’,
+    modal_feedback_rec_true:      '✗ That’s true.',
+    modal_feedback_rec_false:     '✗ That’s false.',
     modal_true:                   'True',
     modal_false:                  'False',
     modal_input_placeholder:      'Type your answer',
