@@ -99,7 +99,7 @@ class MnemosyneTopNav extends HTMLElement {
       <option value="learning">${t('nav_depth_learning')}</option>
       <option value="deep">${t('nav_depth_deep')}</option>
     </select>
-    <span class="nav__mode-indicator" id="mode-indicator" aria-live="polite"></span>
+    <span class="nav__mode-indicator" id="mode-indicator" aria-live="polite">Mode: Learning</span>
 
     <button class="nav__ctrl nav__settings" id="settings-btn"
             type="button" aria-label="Settings">&#x2699;&#xFE0E;</button>
