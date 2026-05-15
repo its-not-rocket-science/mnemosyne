@@ -350,6 +350,8 @@ export class MnemosyneDetailPane extends HTMLElement {
       this.#langChangeHandler = () => {
         if (this.hasAttribute('data-open')) {
           this.#config.uiLang = currentUiLang()
+          this.#explanationTranslationFetched = false
+          this.#sentenceTranslationFetched = false
           this._render()
         }
       }
@@ -826,7 +828,7 @@ export class MnemosyneDetailPane extends HTMLElement {
           <p class="pane__muted">${esc(t('dp_practice_tip'))}</p>
           ${dueItems.length ? /* html */`
             <article class="pane__check">
-              <p class="pane__check-prompt"><strong>Due now</strong></p>
+              <p class="pane__check-prompt"><strong>${esc(tr('dp_due_now', 'Due now'))}</strong></p>
               <ul class="pane__variant-list">
                 ${dueItems.map((item) => `<li class="pane__variant-item"><span class="pane__variant-text">${esc(item.lemma || item.term)}</span></li>`).join('')}
               </ul>
@@ -861,7 +863,7 @@ export class MnemosyneDetailPane extends HTMLElement {
 
           ${canRetell ? /* html */`
             <article class="pane__check pane__check--typed" data-retell-mode="recall">
-              <p class="pane__check-prompt">Recall challenge: without looking, write key details from this passage.</p>
+              <p class="pane__check-prompt">${esc(tr('dp_recall_challenge', 'Recall challenge: without looking, write key details from this passage.'))}</p>
               <form class="pane__typed-form">
                 <input class="pane__typed-input" type="text" autocomplete="off" />
                 <button type="submit" class="pane__check-option">${esc(tr('dp_practice_submit', 'Check'))}</button>
@@ -869,10 +871,10 @@ export class MnemosyneDetailPane extends HTMLElement {
               <p class="pane__muted pane__check-feedback" aria-live="polite"></p>
             </article>
             ${[
-              ['target_language', 'Retell in the target language.'],
-              ['interface_language', 'Retell in your interface language.'],
-              ['three_facts', 'List 3 key facts from the passage.'],
-              ['continue_story', 'Continue the story in 1–2 sentences.'],
+              ['target_language', tr('dp_retell_target_language', 'Retell in the target language.')],
+              ['interface_language', tr('dp_retell_interface_language', 'Retell in your interface language.')],
+              ['three_facts', tr('dp_retell_three_facts', 'List 3 key facts from the passage.')],
+              ['continue_story', tr('dp_retell_continue_story', 'Continue the story in 1–2 sentences.')],
             ].map(([mode, prompt]) => `
               <article class="pane__check pane__check--typed" data-retell-mode="${mode}">
                 <p class="pane__check-prompt">${esc(prompt)}</p>

@@ -171,6 +171,17 @@ function init() {
   document.addEventListener('mnemosyne:passage-end', ({ detail }) => {
     showTransitionCard({ autonomousEnabled: Boolean(detail?.autonomousEnabled) })
   })
+  document.addEventListener('mnemosyne:language-changed', () => {
+    if (!card) return
+    const autonomousEnabled = card.querySelector('.passage-transition__auto') !== null
+    dismiss()
+    card = buildCard(autonomousEnabled)
+    if (resultsSection) {
+      resultsSection.insertAdjacentElement('afterend', card)
+    } else {
+      document.body.appendChild(card)
+    }
+  })
   observeNewPassage()
 }
 

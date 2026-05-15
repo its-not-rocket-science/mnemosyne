@@ -11,6 +11,8 @@
  *   settings-open      — user hit ⚙
  */
 
+import { t } from '../js/i18n.js'
+
 // ── SVG assets ────────────────────────────────────────────────────────────────
 
 const TREE = /* html */`
@@ -42,12 +44,24 @@ class MnemosyneTopNav extends HTMLElement {
     this.#shadow = this.attachShadow({ mode: 'open' })
   }
 
+  #langHandler = null
+
   connectedCallback() {
     this.#shadow.innerHTML = this.#html()
     this.#wire()
+    this.#langHandler = () => {
+      this.#shadow.innerHTML = this.#html()
+      this.#wire()
+    }
+    document.addEventListener('mnemosyne:language-changed', this.#langHandler)
   }
 
-  disconnectedCallback() {}
+  disconnectedCallback() {
+    if (this.#langHandler) {
+      document.removeEventListener('mnemosyne:language-changed', this.#langHandler)
+      this.#langHandler = null
+    }
+  }
 
   // ── Public getters ──────────────────────────────────────────────────────────
 
@@ -81,11 +95,11 @@ class MnemosyneTopNav extends HTMLElement {
   <div class="nav__mid">
 
     <select class="nav__pill" id="depth-select" aria-label="Annotation depth">
-      <option value="subtle">Subtle</option>
-      <option value="learning">Learning</option>
-      <option value="deep">Deep</option>
+      <option value="subtle">${t('nav_depth_subtle')}</option>
+      <option value="learning">${t('nav_depth_learning')}</option>
+      <option value="deep">${t('nav_depth_deep')}</option>
     </select>
-    <span class="nav__mode-indicator" id="mode-indicator" aria-live="polite">Mode: Learning</span>
+    <span class="nav__mode-indicator" id="mode-indicator" aria-live="polite"></span>
 
     <button class="nav__ctrl nav__settings" id="settings-btn"
             type="button" aria-label="Settings">&#x2699;&#xFE0E;</button>
@@ -106,9 +120,9 @@ class MnemosyneTopNav extends HTMLElement {
 <!-- Expanded row: depth + settings (mobile only) -->
 <div class="nav__xrow" id="xrow" hidden>
   <select class="nav__pill" id="xdepth" aria-label="Annotation depth">
-    <option value="subtle">Subtle</option>
-    <option value="learning">Learning</option>
-    <option value="deep">Deep</option>
+    <option value="subtle">${t('nav_depth_subtle')}</option>
+    <option value="learning">${t('nav_depth_learning')}</option>
+    <option value="deep">${t('nav_depth_deep')}</option>
   </select>
   <button class="nav__ctrl nav__settings" id="xsettings"
           type="button" aria-label="Settings">&#x2699;&#xFE0E;</button>
@@ -155,9 +169,9 @@ class MnemosyneTopNav extends HTMLElement {
   }
 
   #updateModeIndicator() {
-    const label = this.#depth.charAt(0).toUpperCase() + this.#depth.slice(1)
+    const label = t(`nav_depth_${this.#depth}`)
     const indicator = this.#shadow.getElementById('mode-indicator')
-    if (indicator) indicator.textContent = `Mode: ${label}`
+    if (indicator) indicator.textContent = `${t('nav_mode_label')}: ${label}`
   }
 
   // ── Mobile expand ────────────────────────────────────────────────────────────

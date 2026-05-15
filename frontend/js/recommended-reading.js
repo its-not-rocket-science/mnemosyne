@@ -137,7 +137,7 @@ function renderAlternatives(listEl, alternatives) {
     card.innerHTML = `
       <div class="recommended-reading-card__meta">
         <span>${escapeHtml(item.is_continuation ? t('rec_continue') : t('rec_option'))}</span>
-        <span>${escapeHtml(item.difficulty_label || t('rec_matched'))}</span>
+        <span>${escapeHtml(item.difficulty_label ? t(`difficulty_${item.difficulty_label}`) || item.difficulty_label : t('rec_matched'))}</span>
         <span>${Number(item.difficulty || 0).toFixed(2)}</span>
       </div>
       <h4>${escapeHtml(title)}</h4>
