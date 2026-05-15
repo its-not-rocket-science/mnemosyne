@@ -60,8 +60,8 @@ KNOWN LIMITATIONS
   "has been running" emits be_progressive rather than perfect-progressive.
 - Idiom table covers only two fixed phrases (kick the bucket, piece of cake);
   emits type="nuance" not type="idiom", so idiom_detection=False.
-- phrase_families=none: match_phrase_families returns [] for "en" — the
-  phrase family catalog has no English entries yet.
+- phrase_families=partial: 49 English entries in the phrase family catalog
+  covering common idioms, proverbs, and literary misquotations.
 - etymology=none: etymology store has no English entries yet.  The
   _etymology() method always returns an empty list for English input.
 - formality_register=partial: 12 curated markers (formal/informal);
@@ -155,7 +155,7 @@ class EnglishPlugin:
         transliteration_scheme=None,
         nuance_capabilities=NuanceCapabilities(
             idioms="stub",               # 2 hardcoded phrases only (kick the bucket, piece of cake)
-            phrase_families="none",      # match_phrase_families returns [] for 'en' — no catalog entries
+            phrase_families="partial",    # 49 English families in catalog; common idioms and proverbs
             literary_references="none",
             cultural_references="none",
             etymology="none",            # etymology store has 0 English entries

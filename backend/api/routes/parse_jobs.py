@@ -224,7 +224,9 @@ async def _run_parse_job(
     await store.update(job, status="running", stage="nlp", progress=0.05)
 
     try:
-        _, job_warnings = validate_ingest_text(payload.text, payload.language)
+        _, job_warnings = validate_ingest_text(
+            payload.text, payload.language, max_chars=settings.max_job_chars
+        )
 
         # ── NLP (CPU-bound — run in thread pool) ──────────────────────────────
         loop = asyncio.get_event_loop()
