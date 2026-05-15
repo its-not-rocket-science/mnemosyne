@@ -48,8 +48,14 @@ def _romance_variants(term: str, lemma: str | None) -> list[str]:
     base = _latin_normalize(term)
     lem = _latin_normalize(lemma or "")
     variants = [base, lem]
+    # Spanish: hablarse → hablar (clitic appended)
     if base.endswith("se"):
         variants.append(base.removesuffix("se"))
+    # French: se parler → parler, s'aimer → aimer (clitic prepended)
+    if base.startswith("se "):
+        variants.append(base.removeprefix("se "))
+    elif base.startswith("s'"):
+        variants.append(base.removeprefix("s'"))
     return [v for v in dict.fromkeys(variants) if v]
 
 

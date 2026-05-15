@@ -76,7 +76,7 @@ async def upsert_term_progress(
             correct_count=0,
             incorrect_count=0,
             mastery_score=0.0,
-            next_review_at=payload.next_review_at or now,
+            next_review_at=payload.next_review_at,
             source_lesson_ids=[],
         )
         db.add(row)
