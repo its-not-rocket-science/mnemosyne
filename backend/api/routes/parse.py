@@ -10,6 +10,7 @@ from backend.api.dependencies import get_current_user, get_plugin_registry
 from backend.core.config import Settings, get_settings
 from backend.core.database import get_session_factory
 from backend.core.limiter import limiter
+from backend.ingestion.validator import validate_ingest_text
 from backend.models import CanonicalObjectRow, ObjectRelationRow, ParsedText, Sentence, SentenceObjectRow, UserKnowledgeRow
 from backend.parsing.canonical import canonical_object_id
 from backend.parsing.pipeline import PipelineResult, pipeline_cache_key, run_pipeline
@@ -54,6 +55,8 @@ async def parse_text(
     except KeyError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
 
+    _, parse_warnings = validate_ingest_text(payload.text, payload.language)
+
     t0 = time.perf_counter()
 
     result: PipelineResult = await run_pipeline(
@@ -70,7 +73,7 @@ async def parse_text(
             "parse_debug id=%s cache_hit=true lang=%s chars=%d sentences=%d",
             debug_id, payload.language, len(payload.text), len(result.sentences),
         )
-        return ParseResponse(sentences=result.sentences)
+        return ParseResponse(sentences=result.sentences, warnings=parse_warnings)
 
     background_tasks.add_task(
         _persist_parse_background,
@@ -99,7 +102,7 @@ async def parse_text(
         getattr(plugin.capabilities, "tokenization_mode", "unknown"),
         candidate_preview,
     )
-    return ParseResponse(sentences=result.sentences)
+    return ParseResponse(sentences=result.sentences, warnings=parse_warnings)
 
 
 async def _persist_parse_background(

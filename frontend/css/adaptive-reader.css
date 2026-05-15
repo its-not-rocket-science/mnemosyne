@@ -364,6 +364,13 @@ body[data-reveal-known] [data-adaptively-quiet] {
   line-height: 1.5;
 }
 
+.rec-panel__no-content {
+  font-size: 0.9rem;
+  color: var(--muted, color-mix(in srgb, CanvasText 55%, Canvas));
+  line-height: 1.5;
+  margin: 0;
+}
+
 .rec-panel__featured {
   margin-block-end: var(--space-3, 1rem);
 }

@@ -276,6 +276,7 @@ const STRINGS = {
     // Recommended reading
     rec_heading:              "Recommended next reads",
     rec_next_up:              "Next up",
+    rec_no_content:           "No passages available yet for this language. Upload a text to get started.",
     rec_show_more:            "Show more",
     rec_show_less:            "Show less",
     rec_refresh:              "Refresh",

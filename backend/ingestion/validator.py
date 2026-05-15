@@ -65,8 +65,34 @@ _SCRIPT_RANGES: list[tuple[int, int, str]] = [
 ]
 
 # Expected dominant script family for a BCP-47 language prefix.
-# Omit languages that routinely mix scripts (e.g. Japanese mixing CJK + Latin).
+# Latin-script languages are listed explicitly so that non-Latin text submitted
+# under a Latin language code is caught by the script check.
 _LANG_EXPECTED_SCRIPT: dict[str, str] = {
+    # Latin-script languages
+    "en": "latin",
+    "es": "latin",
+    "fr": "latin",
+    "de": "latin",
+    "it": "latin",
+    "pt": "latin",
+    "nl": "latin",
+    "pl": "latin",
+    "sv": "latin",
+    "no": "latin",
+    "da": "latin",
+    "fi": "latin",
+    "ro": "latin",
+    "cs": "latin",
+    "sk": "latin",
+    "hr": "latin",
+    "sl": "latin",
+    "hu": "latin",
+    "tr": "latin",
+    "id": "latin",
+    "ms": "latin",
+    "vi": "latin",
+    "la": "latin",
+    # Non-Latin scripts
     "ar": "arabic",
     "fa": "arabic",
     "ur": "arabic",
@@ -124,6 +150,41 @@ def detect_dominant_script(text: str) -> str | None:
     return counts.most_common(1)[0][0]
 
 
+def _detect_latin_language(text: str, declared_language: str) -> str | None:
+    """Return a warning when langdetect is confident the text is a different Latin-script language.
+
+    Only fires for Latin-script languages — non-Latin mismatches are already
+    caught by the script-family check in ``validate_ingest_text``.
+    Requires at least 60 characters and >= 80% confidence to avoid false positives.
+    Returns ``None`` when detection is inconclusive or languages match.
+    """
+    if len(text) < 60:
+        return None
+    lang_prefix = declared_language[:2].lower()
+    # Only run for Latin-script languages — non-Latin mismatches are caught by script check.
+    if _LANG_EXPECTED_SCRIPT.get(lang_prefix) != "latin":
+        return None
+    try:
+        from langdetect import detect_langs  # noqa: PLC0415
+        results = detect_langs(text)
+        if not results:
+            return None
+        top = results[0]
+        if top.prob < 0.80:
+            return None
+        detected = top.lang.split("-")[0]  # strip region suffix (e.g. zh-cn → zh)
+        if detected == lang_prefix:
+            return None
+        return (
+            f"Text appears to be '{detected}' "
+            f"({top.prob:.0%} confidence), "
+            f"but '{declared_language}' was selected. "
+            "Verify your language selection."
+        )
+    except Exception:
+        return None
+
+
 def validate_ingest_text(
     text: str,
     language: str,
@@ -156,20 +217,27 @@ def validate_ingest_text(
         )
 
     warnings: list[str] = []
-    detected = detect_dominant_script(normalized)
+    detected_script = detect_dominant_script(normalized)
 
-    if detected is not None:
+    if detected_script is not None:
         lang_prefix = language[:2].lower()
         expected = _LANG_EXPECTED_SCRIPT.get(lang_prefix)
 
         # Only warn when we have a clear expectation and the detected script
         # differs.  Skip the check for Latin because transliterated text is
         # common (e.g. romanized Japanese, Pinyin for Chinese).
-        if expected is not None and detected != expected and detected != "latin":
+        if expected is not None and detected_script != expected and detected_script != "latin":
             warnings.append(
-                f"Text appears to be predominantly {detected} script, "
-                f"but language \u2018{language}\u2019 typically uses "
+                f"Text appears to be predominantly {detected_script} script, "
+                f"but language '{language}' typically uses "
                 f"{expected} script. Verify your language selection."
             )
+
+    # Same-script language detection (e.g. French text submitted as Spanish).
+    # Only runs when the script check found no issue.
+    if not warnings:
+        hint = _detect_latin_language(normalized, language)
+        if hint:
+            warnings.append(hint)
 
     return normalized, warnings

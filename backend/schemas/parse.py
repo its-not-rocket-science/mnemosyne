@@ -49,6 +49,7 @@ class ParseRequest(BaseModel):
 
 class ParseResponse(BaseModel):
     sentences: list[SentenceResult]
+    warnings: list[str] = Field(default_factory=list)
 
 
 class ReviewRequest(BaseModel):

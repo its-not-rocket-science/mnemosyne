@@ -33,6 +33,7 @@ let prefetchStarted = false
 let panel = null
 let countdownTimer = null
 let altExpanded = false
+let noContentForLanguage = false
 
 function announce(msg) {
   if (!a11yLive) return
@@ -276,9 +277,13 @@ function renderPanel() {
   }
 }
 
-function showPanel() {
+function showPanel(showEmpty = false) {
   const p = ensurePanel()
-  if (!p || !currentRecommendations.length) return
+  if (!p) return
+  if (!currentRecommendations.length) {
+    if (showEmpty && noContentForLanguage) renderEmptyState()
+    return
+  }
   altExpanded = false
   stopCountdown()
   renderPanel()
@@ -294,6 +299,7 @@ function dismiss() {
 function clearRecommendations() {
   lastRecommendationData = null
   currentRecommendations = []
+  noContentForLanguage = false
 }
 
 function resetProgress() {
@@ -335,10 +341,21 @@ function applyRecommendationData(data, language) {
   const filtered = (data?.sentences || []).filter(item => canUseRecommendationItem(item, language))
   lastRecommendationData = data
   currentRecommendations = orderRecommendations({ ...data, sentences: filtered })
+  noContentForLanguage = filtered.length === 0
   return true
 }
 
-async function loadRecommendations() {
+function renderEmptyState() {
+  const p = ensurePanel()
+  if (!p) return
+  p.innerHTML = `
+    <p class="recommended-reading-panel__eyebrow rec-panel__eyebrow" id="rec-panel-eyebrow">${escapeHtml(t('rec_next_up'))}</p>
+    <p class="rec-panel__no-content">${escapeHtml(t('rec_no_content'))}</p>
+  `
+  p.hidden = false
+}
+
+async function loadRecommendations(showEmpty = false) {
   const language = languageSelect?.value
   if (!language) return
   activeRecommendationLanguage = language
@@ -352,8 +369,8 @@ async function loadRecommendations() {
     const data = await response.json()
     if (requestId !== recommendationRequestId) return
     if (!applyRecommendationData(data, language)) return
-    // If progress already triggered but panel was empty, render now
-    if (progressShown && panel?.hidden !== false) showPanel()
+    // If progress already triggered but panel was hidden, render now
+    if (progressShown && panel?.hidden !== false) showPanel(showEmpty)
   } catch {
     // silent — panel stays hidden
   }
@@ -365,9 +382,9 @@ window.mnemosyneRecommended = {
     progressShown = true
     if (!prefetchStarted) {
       prefetchStarted = true
-      loadRecommendations()
+      loadRecommendations(true)
     } else {
-      showPanel()
+      showPanel(true)
     }
   },
 }
