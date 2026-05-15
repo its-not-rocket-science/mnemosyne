@@ -29,6 +29,12 @@ class Settings(BaseSettings):
     # endpoint).  Must be >= max_parse_chars.  Texts between the two limits
     # must use the job endpoint; texts above this limit are always rejected.
     max_job_chars: int = 100_000
+    # Maximum wall-clock seconds the NLP thread-pool executor is allowed to run
+    # for a single parse job before it is cancelled with a 'timed out' failure.
+    # The thread itself cannot be killed (Python limitation), but the job is
+    # marked failed and the slot is freed.  Set higher for very slow hardware
+    # or unusually complex texts; set lower to fail fast on abuse.
+    job_timeout_seconds: int = 120
     # JWT authentication settings.
     # jwt_secret MUST be overridden in production via the JWT_SECRET env var.
     # The default is intentionally weak so it fails loudly if deployed as-is.
