@@ -36,9 +36,11 @@ def test_focus_mode_is_wired_to_state_ui_and_persistence():
     assert "#reader-focus-mode-btn" in READING
 
 
-def test_adaptive_primary_button_opens_difficulty_dialog_only():
+def test_adaptive_primary_button_is_real_toggle():
     assert "reader-adaptive-btn" in READING
-    assert "window.mnemosyneDifficulty?.openDialog?.()" in READING
+    assert "mnemosyne:toggle-adaptive-reader" in READING
+    assert "window.mnemosyneAdaptive?.isEnabled?.()" in READING
+    assert "mnemosyne:adaptive-reader-changed" in READING
 
 
 def test_adaptive_system_toggles_are_wired_and_persisted():
@@ -57,14 +59,16 @@ def test_settings_button_only_discloses_system_body():
     assert "reader-ctrl__settings-btn--open" in READING
 
 
-def test_adaptive_difficulty_events_exist_but_not_reader_control_button_path():
+def test_adaptive_difficulty_events_exist_and_reader_button_wires_to_toggle():
     assert "mnemosyne:difficulty-adjusted" in ADAPTIVE
     assert "flashDifficultyAdjustment(detail.mode)" in ADAPTIVE
-    # The reader control bar adaptive button itself only opens dialog and does not
-    # directly mutate adaptiveEnabled/reinforcementEnabled.
+    # Adaptive button dispatches toggle event; state mutation lives in adaptive-reader.js.
     adaptive_button_section = READING.split("const adaptiveBtn =", 1)[1].split("secondary.append", 1)[0]
+    assert "mnemosyne:toggle-adaptive-reader" in adaptive_button_section
     assert "adaptiveEnabled" not in adaptive_button_section
     assert "reinforcementEnabled" not in adaptive_button_section
+    # Difficulty dialog access is now inside the ⚙ system body (adaptive-reader.js).
+    assert "window.mnemosyneDifficulty?.openDialog?.()" in ADAPTIVE
 
 
 def test_i18n_help_text_matches_expected_control_descriptions():
@@ -73,7 +77,7 @@ def test_i18n_help_text_matches_expected_control_descriptions():
     assert "Deep reveals all" in I18N
     assert "Flow reads sentence-by-sentence" in I18N
     assert "Focus dims the page" in I18N
-    assert "Adaptive tunes difficulty" in I18N
+    assert "Adaptive shows or hides terms you already know" in I18N
 
 
 def test_flow_navigation_controls_and_shortcuts_are_wired():

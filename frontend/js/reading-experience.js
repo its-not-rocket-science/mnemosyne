@@ -175,8 +175,10 @@ function ensureToolbar() {
   adaptiveBtn.className = 'reader-focus-btn'
   adaptiveBtn.dataset.i18n = 'adaptive_btn'
   adaptiveBtn.textContent = t('adaptive_btn')
-  adaptiveBtn.setAttribute('aria-haspopup', 'dialog')
-  adaptiveBtn.addEventListener('click', () => window.mnemosyneDifficulty?.openDialog?.())
+  adaptiveBtn.setAttribute('aria-pressed', String(window.mnemosyneAdaptive?.isEnabled?.() ?? true))
+  adaptiveBtn.addEventListener('click', () => {
+    document.dispatchEvent(new CustomEvent('mnemosyne:toggle-adaptive-reader'))
+  })
 
   const ctrlHelpBtn = makeHelpButton('help_control_bar_tooltip')
   const flowPrevBtn = makeButton({
@@ -271,7 +273,12 @@ function syncToolbar() {
   if (settingsBtn) settingsBtn.setAttribute('aria-label', t('reader_settings_aria'))
 
   const adaptiveBtn = bar.querySelector('#reader-adaptive-btn')
-  if (adaptiveBtn) adaptiveBtn.textContent = t('adaptive_btn')
+  if (adaptiveBtn) {
+    adaptiveBtn.textContent = t('adaptive_btn')
+    const enabled = window.mnemosyneAdaptive?.isEnabled?.() ?? true
+    adaptiveBtn.setAttribute('aria-pressed', String(enabled))
+    adaptiveBtn.classList.toggle('reader-focus-btn--active', enabled)
+  }
   const flowHint = bar.querySelector('#reader-flow-shortcuts')
   if (flowHint) flowHint.textContent = t('reader_flow_shortcuts')
 
@@ -537,6 +544,7 @@ function init() {
   observeResults()
   installGlobalHandlers()
   document.addEventListener('mnemosyne:language-changed', syncToolbar)
+  document.addEventListener('mnemosyne:adaptive-reader-changed', syncToolbar)
 }
 
 if (document.readyState === 'loading') {

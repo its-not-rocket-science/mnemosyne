@@ -45,12 +45,12 @@ This audit covers controls in `#reader-control-bar`: **Subtle, Learning, Deep, F
 - **Notes:** meaningful and wired.
 
 ### 6) Adaptive (main bar button)
-- **State changed:** none directly in this module.
-- **Persistence:** none directly from button click.
-- **UI changed:** opens external difficulty dialog via `window.mnemosyneDifficulty?.openDialog?.()`.
-- **Lesson/annotation rendering:** none directly.
-- **Difficulty impact:** potential, delegated to difficulty dialog module.
-- **Notes:** **incomplete from this control alone**; it is a launcher, not a direct toggle.
+- **State changed:** toggles `adaptiveEnabled` in `adaptive-reader.js` via `mnemosyne:toggle-adaptive-reader` event.
+- **Persistence:** `mnemosyne.reader.adaptive.enabled` written by adaptive-reader.js handler.
+- **UI changed:** `aria-pressed` + active class updated; annotation visibility changes on next render cycle.
+- **Lesson/annotation rendering:** directly affects annotation quieting based on memory strength.
+- **Difficulty impact:** none; difficulty settings are in ⚙ Advanced settings.
+- **Notes:** properly wired — button reflects real adaptive state. Difficulty dialog moved to ⚙ system body.
 
 ### 7) ⚙ Advanced settings
 - **State changed:** toggles visibility of `#reader-system-body` (`hidden` flag).
@@ -78,20 +78,18 @@ These are populated by `adaptive-reader.js` and are the controls that actually a
   - Sync refreshes memory from `/dashboard`.
   - Reset clears local adaptive memory state.
 
-## Gaps, cosmetic controls, duplication, wiring findings
+## Notes
 
-1. **Adaptive appears in two places conceptually:**
-   - Main-bar **Adaptive** button = dialog launcher.
-   - Advanced/system-body **Adaptive toggle** = actual feature state.
-   - This is functional but conceptually duplicated and can confuse users.
+1. **Adaptive button is now a real toggle:**
+   - Dispatches `mnemosyne:toggle-adaptive-reader`; `adaptive-reader.js` handles state mutation, persistence, and render.
+   - `aria-pressed` reflects `adaptiveEnabled` state; `reader-focus-btn--active` class applied when on.
+   - `reading-experience.js` re-syncs the button on `mnemosyne:adaptive-reader-changed`.
 
-2. **⚙ gear is disclosure-only (cosmetic relative to learning behavior):**
+2. **Difficulty settings are in ⚙ Advanced settings:**
+   - "Difficulty settings…" button in the system body opens the modulation dialog.
+   - No longer accessible from the main bar (correct: it is an advanced preference, not a reading mode).
+
+3. **⚙ gear is disclosure-only (cosmetic relative to learning behavior):**
    - It does not alter lesson or difficulty itself; it only reveals controls that do.
 
-3. **Adaptive button itself is incomplete as a behavior control:**
-   - No local state mutation, no persistence, no announce; behavior is delegated to an external dialog API.
-   - If `window.mnemosyneDifficulty` is unavailable, click is effectively no-op.
-
-4. **Potential fallback duplication path exists by design:**
-   - `adaptive-reader.js` can create `#reader-adaptive-toolbar` fallback when unified system body is absent; in normal integrated path it populates `#reader-system-body`.
-   - This is not active duplication at runtime when unified bar exists, but it is dual code path complexity.
+4. **Fallback toolbar path (`#reader-adaptive-toolbar`) remains for offline/no-control-bar contexts.**
