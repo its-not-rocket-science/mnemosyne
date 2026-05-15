@@ -230,9 +230,17 @@ async def _run_parse_job(
 
         # ── NLP (CPU-bound — run in thread pool) ──────────────────────────────
         loop = asyncio.get_event_loop()
-        candidate_results: list[CandidateSentenceResult] = await loop.run_in_executor(
-            None, plugin.analyze_text, payload.text
-        )
+        try:
+            candidate_results: list[CandidateSentenceResult] = await asyncio.wait_for(
+                loop.run_in_executor(None, plugin.analyze_text, payload.text),
+                timeout=settings.job_timeout_seconds,
+            )
+        except asyncio.TimeoutError:
+            raise RuntimeError(
+                f"NLP processing timed out after {settings.job_timeout_seconds}s. "
+                "The text may be too long or complex — try splitting it into "
+                "shorter passages."
+            )
         candidate_results = _restore_sentence_texts(payload.text, plugin, candidate_results)
 
         # Lesson enrichment — same pass as /parse and /ingest.

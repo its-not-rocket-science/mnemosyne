@@ -8,6 +8,7 @@ Tests cover:
   - GET /parse/jobs/{id} pending / done / failed states
   - GET /parse/jobs/{id} 404 for unknown / other-user job
   - SSE event stream receives progress and final done event
+  - NLP executor timeout marks job failed with a descriptive message
 """
 from __future__ import annotations
 
@@ -305,6 +306,53 @@ async def test_sse_receives_progress_then_done(client, store):
     assert any(e.get("status") == "done" for e in events)
 
 
+# ── NLP executor timeout ──────────────────────────────────────────────────────
+
+@pytest.mark.asyncio
+async def test_nlp_timeout_marks_job_failed(client, store):
+    """When the NLP executor exceeds job_timeout_seconds the job must be marked
+    failed with a descriptive message — the event loop must not hang."""
+    from unittest.mock import patch
+    from backend.core.config import get_settings
+
+    # Override settings to use a 0.01-second timeout (effectively immediate).
+    app.dependency_overrides[get_settings] = lambda: _tiny_settings(job_timeout_seconds=0.01)
+
+    # Replace analyze_text with a function that sleeps longer than the timeout.
+    def _slow_analyze(text):
+        import time
+        time.sleep(5)  # Much longer than 0.01 s — will be timed out
+        return []
+
+    from backend.api.dependencies import get_plugin_registry
+    registry = get_plugin_registry()
+    real_plugin = registry.get("es")
+    with patch.object(real_plugin, "analyze_text", _slow_analyze):
+        resp = await client.post(
+            "/parse/jobs",
+            json={"language": "es", "text": "El gato come pescado."},
+        )
+    app.dependency_overrides.pop(get_settings, None)
+
+    assert resp.status_code == 202
+    job_id = resp.json()["job_id"]
+
+    # Wait for the background task to complete (it must time out quickly).
+    for _ in range(30):
+        await asyncio.sleep(0.05)
+        status_resp = await client.get(f"/parse/jobs/{job_id}")
+        if status_resp.json()["status"] == "failed":
+            break
+
+    data = status_resp.json()
+    assert data["status"] == "failed", (
+        f"Expected job to be failed after timeout; got status={data['status']!r}"
+    )
+    assert "timed out" in (data.get("error") or "").lower(), (
+        f"Expected 'timed out' in error message; got: {data.get('error')!r}"
+    )
+
+
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def _parse_sse_body(body: str) -> list[dict]:
@@ -323,8 +371,9 @@ class _tiny_settings:
         from backend.core.config import get_settings
         base = get_settings()
         self.rate_limit_parse              = base.rate_limit_parse
-        self.max_parse_chars               = base.max_parse_chars
+        self.max_parse_chars               = kw.get("max_parse_chars", base.max_parse_chars)
         self.max_job_chars                 = kw.get("max_job_chars", base.max_job_chars)
+        self.job_timeout_seconds           = kw.get("job_timeout_seconds", base.job_timeout_seconds)
         self.enable_dictionary_lookup      = False
         self.enable_translation_enrichment = False
         self.translation_provider          = "none"
