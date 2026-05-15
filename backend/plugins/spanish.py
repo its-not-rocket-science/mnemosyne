@@ -415,6 +415,9 @@ class SpanishPlugin:
     def get_lesson(self, object_id: str) -> CandidateObject | None:
         return self.lesson_store.get(object_id)
 
+    def practice_hooks(self):
+        return hooks_for_language("es")
+
     # ------------------------------------------------------------------
     # Vocabulary
     # ------------------------------------------------------------------
@@ -1126,8 +1129,5 @@ def _agreement_confidence_note(
     return "agreement inferred from adjacency — morphology incomplete"
 
 
-
-    def practice_hooks(self):
-        return hooks_for_language("es")
 def create_plugin() -> SpanishPlugin:
     return SpanishPlugin()

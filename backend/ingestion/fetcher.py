@@ -231,6 +231,8 @@ def _node_content_score(node: Tag) -> float:
 
 
 def _looks_like_footnotes(node: Tag) -> bool:
+    if node.name in ("html", "body"):
+        return False
     attrs = " ".join(
         str(x).lower()
         for x in [node.get("id", ""), " ".join(node.get("class", []))]
@@ -310,7 +312,7 @@ def _normalize_reference_tokens(text: str) -> str:
 def _drop_disclosure_markers(text: str) -> str:
     lines = []
     for line in text.splitlines():
-        cleaned = re.sub(r"(^|\s)[▶►▸]\s*", " ", line).strip()
+        cleaned = re.sub(r"[▶►▸]\s*", " ", line).strip()
         lines.append(re.sub(r"\s{2,}", " ", cleaned))
     return "\n".join(lines)
 

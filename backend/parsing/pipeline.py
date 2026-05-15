@@ -41,18 +41,71 @@ def _restore_sentence_texts(text: str, plugin, candidate_results: list[Candidate
     Some plugin/extractor stacks may accidentally emit term-only strings in
     ``CandidateSentenceResult.text``.  Reader rendering must always use the
     original passage sentence text, so we align by sentence index when plugin
-    sentence splitting is available and lengths match.
+    sentence splitting is available.
+
+    When source and candidate counts match, we do a direct index-for-index
+    replacement.  When they differ (e.g. the model over-splits a passage into
+    many single-token "sentences"), we merge the over-split candidate results
+    back onto the source sentences so the reader never shows word-per-card
+    gibberish.
     """
     try:
         source_sentences = plugin.split_sentences(text)
     except Exception:
         return candidate_results
-    if len(source_sentences) != len(candidate_results):
+
+    n_src = len(source_sentences)
+    n_cand = len(candidate_results)
+
+    if n_src == 0 or n_cand == 0:
         return candidate_results
-    return [
+
+    # Fast path: counts match — straightforward index replacement.
+    if n_src == n_cand:
+        return [
+            cr.model_copy(update={"text": source_sentences[i]})
+            for i, cr in enumerate(candidate_results)
+        ]
+
+    # Slow path: plugin over-split (n_cand > n_src).
+    # Distribute candidate results across source sentences by greedy prefix
+    # matching: assign each candidate result to the source sentence whose
+    # prefix best overlaps with the candidate text.  When in doubt, pack
+    # into the fewest source sentences to avoid losing candidates.
+    if n_cand > n_src:
+        # Build a mapping: source_idx → merged CandidateSentenceResult.
+        # Score each candidate against each source sentence by word overlap.
+        buckets: list[list[CandidateSentenceResult]] = [[] for _ in range(n_src)]
+        src_word_sets = [
+            set(s.lower().split()) for s in source_sentences
+        ]
+        for cr in candidate_results:
+            cand_words = set((cr.text or "").lower().split())
+            best = 0
+            best_score = -1
+            for si, src_words in enumerate(src_word_sets):
+                score = len(cand_words & src_words)
+                if score > best_score:
+                    best_score = score
+                    best = si
+            buckets[best].append(cr)
+        merged: list[CandidateSentenceResult] = []
+        for si, (src_text, bucket) in enumerate(zip(source_sentences, buckets)):
+            if not bucket:
+                # No candidates mapped here — emit an empty sentence.
+                merged.append(CandidateSentenceResult(text=src_text, candidates=[]))
+            else:
+                all_candidates = [c for cr in bucket for c in cr.candidates]
+                merged.append(bucket[0].model_copy(update={"text": src_text, "candidates": all_candidates}))
+        return merged
+
+    # Plugin under-split (n_cand < n_src): can't safely expand; just restore
+    # what we can and leave the tail as-is.
+    restored = [
         cr.model_copy(update={"text": source_sentences[i]})
         for i, cr in enumerate(candidate_results)
     ]
+    return restored
 
 # Bump when pipeline output changes incompatibly so stale cached responses are
 # automatically bypassed.  v3 adds lesson_engine enrichment to all callers.
