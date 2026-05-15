@@ -31,6 +31,7 @@ from backend.core.database import get_session_factory
 import backend.lesson_extraction.engine as lesson_engine
 from backend.core.jobs import ParseJob, get_job_store
 from backend.core.limiter import limiter
+from backend.ingestion.validator import validate_ingest_text
 from backend.parsing.canonical import canonical_object_id
 from backend.parsing.pipeline import _restore_sentence_texts
 from backend.parsing.plugin_loader import PluginRegistry
@@ -223,6 +224,8 @@ async def _run_parse_job(
     await store.update(job, status="running", stage="nlp", progress=0.05)
 
     try:
+        _, job_warnings = validate_ingest_text(payload.text, payload.language)
+
         # ── NLP (CPU-bound — run in thread pool) ──────────────────────────────
         loop = asyncio.get_event_loop()
         candidate_results: list[CandidateSentenceResult] = await loop.run_in_executor(
@@ -315,7 +318,7 @@ async def _run_parse_job(
                 )
 
         # ── Done ──────────────────────────────────────────────────────────────
-        response = ParseResponse(sentences=sentences)
+        response = ParseResponse(sentences=sentences, warnings=job_warnings)
         await store.finish(job, response.model_dump(mode="json"))
         logger.info(
             "parse_job done job_id=%s sentences=%d objects=%d",

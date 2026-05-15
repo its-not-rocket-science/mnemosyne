@@ -1047,6 +1047,21 @@ data = ["language-data (>=1.2)"]
 test = ["pytest", "pytest-cov"]
 
 [[package]]
+name = "langdetect"
+version = "1.0.9"
+description = "Language detection library ported from Google's language-detection."
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "langdetect-1.0.9-py2-none-any.whl", hash = "sha256:7cbc0746252f19e76f77c0b1690aadf01963be835ef0cd4b56dddf2a8f1dfc2a"},
+    {file = "langdetect-1.0.9.tar.gz", hash = "sha256:cbc1fef89f8d062739774bd51eda3da3274006b3661d199c2655f6b3f6d605a0"},
+]
+
+[package.dependencies]
+six = "*"
+
+[[package]]
 name = "librt"
 version = "0.9.0"
 description = "Mypyc runtime library"
@@ -3206,4 +3221,4 @@ cjk = ["jieba", "pypinyin"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "a708bc92311b127c2a926002b05e05dd2d0427fd4b5bba8d30e4ddfe35acdb0b"
+content-hash = "6973fa24e56af9d6f106dfa9c449fdfa2e4fa58ef97e82883221433fdbcf622f"

@@ -58,6 +58,7 @@ from backend.difficulty.scorer import (
 )
 from backend.models import (
     CanonicalObjectRow,
+    ContentGapSignalRow,
     ParsedText,
     Sentence,
     SentenceObjectRow,
@@ -230,6 +231,20 @@ async def recommend_text(
         scored.append((sent_id, sent_text, ds))
 
     if not scored:
+        logger.warning(
+            "content_gap language=%s user=%s has_parsed_texts=%s",
+            language, current_user, bool(rows),
+        )
+        try:
+            db.add(ContentGapSignalRow(
+                language=language,
+                user_id=current_user,
+                has_parsed_texts=bool(rows),
+            ))
+            await db.commit()
+        except Exception:
+            await db.rollback()
+            logger.debug("content_gap signal insert failed — non-fatal")
         return RecommendTextResponse(
             sentences=[],
             target_difficulty_min=window[0],
@@ -263,7 +278,23 @@ async def recommend_text(
         return (1, abs(ds.difficulty - center))
 
     in_window.sort(key=_sort_key)
-    top = in_window[:limit]
+
+    # Drop sentences too close to a better-ranked sentence in the same parsed
+    # text.  Two focus sentences within (2 × radius + 1) positions produce
+    # overlapping passage windows, so the reader sees the same text twice.
+    _min_gap = 2 * _PASSAGE_CONTEXT_RADIUS + 1
+    _kept_positions: dict[str, list[int]] = defaultdict(list)
+    deduped: list[tuple[str, str, DifficultyScore]] = []
+    for _sid, _text, _ds in in_window:
+        _ptext = sentence_parsed_text_ids.get(_sid)
+        _pos   = sentence_positions.get(_sid, 0)
+        if _ptext and any(abs(_pos - _p) < _min_gap for _p in _kept_positions[_ptext]):
+            continue
+        deduped.append((_sid, _text, _ds))
+        if _ptext:
+            _kept_positions[_ptext].append(_pos)
+
+    top = deduped[:limit]
 
     # ── 6. Passage context — one extra query for adjacent sentences ───────────
     # Collect the unique parsed_text_ids from the selected sentences.

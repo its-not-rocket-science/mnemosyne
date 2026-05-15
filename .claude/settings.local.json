@@ -69,7 +69,8 @@
       "PowerShell(cd C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne; $env:PYTHONIOENCODING=\"utf-8\"; python -m pytest backend/tests/ -q --tb=short 2>&1 | Select-Object -Last 20)",
       "PowerShell(cd C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne; $env:PYTHONIOENCODING=\"utf-8\"; python -m pytest backend/tests/test_translation.py::test_translate_endpoint_serves_cached_translation -v --tb=long 2>&1 | Select-Object -Last 30)",
       "Bash(PYTHONIOENCODING=utf-8 python *)",
-      "Bash(tasklist)"
+      "Bash(tasklist)",
+      "Bash(psql *)"
     ]
   }
 }

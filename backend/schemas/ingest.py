@@ -74,10 +74,8 @@ class IngestResponse(ParseResponse):
     document and is the stable reference for recommendation, repeated
     exposure, and reading-progression features.
 
-    ``warnings`` carries non-fatal validation notices — for example, a
-    probable script mismatch between the declared language and the detected
-    Unicode script family.  The frontend should display these to the user
-    without blocking lesson display.
+    ``warnings`` is inherited from ``ParseResponse`` and carries non-fatal
+    validation notices — for example, a probable language or script mismatch.
+    The frontend should display these to the user without blocking lesson display.
     """
     source_document_id: str
-    warnings: list[str] = Field(default_factory=list)

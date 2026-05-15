@@ -473,6 +473,21 @@ class VocabularyEntry(Base):
     created_at:     Mapped[datetime]     = mapped_column(DateTime(timezone=True), default=_now)
 
 
+class ContentGapSignalRow(Base):
+    """Append-only log of /recommend calls that returned zero results.
+
+    Used to identify which languages need more ingested source texts.
+    Query: SELECT language, COUNT(*) FROM content_gap_signal GROUP BY language ORDER BY 2 DESC
+    """
+    __tablename__ = "content_gap_signal"
+
+    id:               Mapped[str]      = mapped_column(String(36), primary_key=True, default=_uuid)
+    language:         Mapped[str]      = mapped_column(String(20), nullable=False, index=True)
+    user_id:          Mapped[str]      = mapped_column(String(50), nullable=False)
+    has_parsed_texts: Mapped[bool]     = mapped_column(Boolean, nullable=False)
+    requested_at:     Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+
 class GrammarRule(Base):
     """CEFR-graded grammar rules per language.
 
