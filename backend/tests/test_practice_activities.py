@@ -75,7 +75,7 @@ def test_notice_pattern_drills_generated_when_examples_support_pattern():
                 "Ella va a hablar mañana.",
                 "Nosotros comemos luego.",
             ],
-            "annotations": ["Pattern note: a a marks infinitive framing a"],
+            "annotations": ["Pattern: hablar hablar marks infinitive construction in Spanish"],
         },
         context=LessonContext(language_code="es", language_name="Spanish", direction="ltr"),
     )

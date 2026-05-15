@@ -201,7 +201,7 @@ def _activity(t: ActivityType, lesson: LessonResponse, difficulty: str, target: 
         target_term_or_pattern=target,
         prompt=prompt,
         expected_answer=expected,
-        acceptable_alternatives=[a for a in alternatives if a and a != expected],
+        acceptable_alternatives=[a for a in alternatives if a],
         feedback_text=feedback,
     )
 
@@ -258,9 +258,9 @@ def _cloze_prompt(text: str, answer: str) -> str:
 def _sentence_for_term(examples: list[str], term: str) -> str | None:
     if not examples:
         return None
-    for sentence in examples:
-        if term and term.lower() in sentence.lower():
-            return sentence
+    matches = [s for s in examples if term and term.lower() in s.lower()]
+    if matches:
+        return max(matches, key=len)
     return examples[0]
 
 

@@ -284,13 +284,17 @@ def _build_vocabulary(b: _B) -> LessonResponse:
             answer=lemma,
         ))
 
+    sentence_examples = [
+        e for e in (b.lesson_data.get("examples") or [])
+        if e and e != b.display_label
+    ]
     return LessonResponse(
         id=b.object_id,
         type="vocabulary",
         title=f"Vocabulary: {b.display_label}",
         explanation=explanation,
         fields=fields,
-        examples=[b.display_label],
+        examples=[b.display_label] + sentence_examples,
         drills=drills,
     )
 

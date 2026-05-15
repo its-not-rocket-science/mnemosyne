@@ -8,7 +8,13 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session
-from backend.models import ReviewEventRow, UserFsrsParamsRow, UserKnowledgeRow
+from backend.models import (
+    CanonicalObjectRow,
+    ReviewEventRow,
+    TermProgressRow,
+    UserFsrsParamsRow,
+    UserKnowledgeRow,
+)
 from backend.schemas.parse import ReviewRequest, ReviewResponse
 from backend.srs.fsrs import DESIRED_RETENTION, review
 from backend.srs.knowledge import mastery_score
@@ -109,6 +115,50 @@ async def submit_review(
     except Exception:
         logger.warning(
             "DB knowledge persist failed for %r", payload.object_id, exc_info=True
+        )
+
+    # Sync TermProgressRow so Memory Map reflects this review.
+    # Runs after the FSRS commit; failure here is non-fatal.
+    try:
+        canonical_obj = await db.get(CanonicalObjectRow, payload.object_id)
+        if canonical_obj is not None:
+            correct = payload.quality >= 3
+            tp_row = await db.get(
+                TermProgressRow,
+                (current_user, canonical_obj.language, canonical_obj.display_label),
+            )
+            if tp_row is None:
+                tp_row = TermProgressRow(
+                    user_id=current_user,
+                    language=canonical_obj.language,
+                    term=canonical_obj.display_label,
+                    lemma=canonical_obj.canonical_form,
+                    first_seen=now,
+                    last_seen=now,
+                    exposure_count=1,
+                    review_count=1,
+                    correct_count=1 if correct else 0,
+                    incorrect_count=0 if correct else 1,
+                    mastery_score=round(score, 4),
+                    next_review_at=due_at,
+                    source_lesson_ids=[payload.object_id],
+                )
+                db.add(tp_row)
+            else:
+                tp_row.last_seen = now
+                tp_row.review_count += 1
+                if correct:
+                    tp_row.correct_count += 1
+                else:
+                    tp_row.incorrect_count += 1
+                tp_row.mastery_score = round(score, 4)
+                tp_row.next_review_at = due_at
+                if payload.object_id not in (tp_row.source_lesson_ids or []):
+                    tp_row.source_lesson_ids = list(tp_row.source_lesson_ids or []) + [payload.object_id]
+            await db.commit()
+    except Exception:
+        logger.warning(
+            "TermProgress sync failed for %r", payload.object_id, exc_info=True
         )
 
     return ReviewResponse(

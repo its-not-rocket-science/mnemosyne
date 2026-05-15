@@ -33,8 +33,16 @@ def classify_term(
     now: datetime,
     cfg: TermSchedulerConfig = DEFAULT_TERM_SCHEDULER_CONFIG,
 ) -> str:
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=UTC)
+    if next_review_at is not None and next_review_at.tzinfo is None:
+        next_review_at = next_review_at.replace(tzinfo=UTC)
     if review_count == 0:
         return "new"
+    # Zero mastery after at least one review means the term was answered wrong
+    # and has nothing retained — always surface it for immediate re-practice.
+    if mastery_score <= 0.0:
+        return "due"
     if next_review_at is not None and next_review_at <= now:
         return "due"
     if mastery_score >= cfg.mastery_well_learned_threshold:
