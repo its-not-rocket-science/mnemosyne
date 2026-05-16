@@ -309,3 +309,159 @@ class TestFormattersIntegration:
         ctx = LessonContext(language_code="ar", language_name="Arabic", l1_language="ar")
         result = fmt.grammar_explanation("be_progressive", "ongoing action", ctx)
         assert "النمط" in result  # النمط
+
+
+class TestGramLabel:
+    """Tests for gram_label() and localize_features()."""
+
+    # ── gram_label ────────────────────────────────────────────────────────────
+
+    def test_english_identity(self) -> None:
+        assert l10n.gram_label("tense", "present", "en") == "present"
+
+    def test_unknown_l1_falls_back_to_english(self) -> None:
+        assert l10n.gram_label("tense", "present", "xx") == "present"
+
+    def test_unknown_category_falls_back_to_value(self) -> None:
+        assert l10n.gram_label("invalid_cat", "foo", "es") == "foo"
+
+    def test_unknown_value_falls_back_to_value(self) -> None:
+        assert l10n.gram_label("tense", "nonexistent_tense", "es") == "nonexistent_tense"
+
+    # ── person ────────────────────────────────────────────────────────────────
+
+    def test_person_first_spanish(self) -> None:
+        assert l10n.gram_label("person", "first", "es") == "primera"
+
+    def test_person_second_french(self) -> None:
+        assert l10n.gram_label("person", "second", "fr") == "deuxième"
+
+    def test_person_third_german(self) -> None:
+        assert l10n.gram_label("person", "third", "de") == "dritte"
+
+    def test_person_russian_uses_ordinal_numeral(self) -> None:
+        assert l10n.gram_label("person", "third", "ru") == "3-е"
+
+    def test_person_portuguese_first(self) -> None:
+        assert l10n.gram_label("person", "first", "pt") == "primeira"
+
+    def test_person_italian_second(self) -> None:
+        assert l10n.gram_label("person", "second", "it") == "seconda"
+
+    # ── number ───────────────────────────────────────────────────────────────
+
+    def test_number_singular_french(self) -> None:
+        assert l10n.gram_label("number", "singular", "fr") == "singulier"
+
+    def test_number_plural_german(self) -> None:
+        assert l10n.gram_label("number", "plural", "de") == "Plural"
+
+    def test_number_singular_russian(self) -> None:
+        assert l10n.gram_label("number", "singular", "ru") == "единственное"
+
+    def test_number_plural_italian(self) -> None:
+        assert l10n.gram_label("number", "plural", "it") == "plurale"
+
+    # ── tense ────────────────────────────────────────────────────────────────
+
+    def test_tense_present_spanish(self) -> None:
+        assert l10n.gram_label("tense", "present", "es") == "presente"
+
+    def test_tense_imperfect_french(self) -> None:
+        assert l10n.gram_label("tense", "imperfect", "fr") == "imparfait"
+
+    def test_tense_future_german(self) -> None:
+        assert l10n.gram_label("tense", "future", "de") == "Futur"
+
+    def test_tense_past_russian(self) -> None:
+        assert l10n.gram_label("tense", "past", "ru") == "прошедшее"
+
+    def test_tense_pluperfect_portuguese(self) -> None:
+        assert l10n.gram_label("tense", "pluperfect", "pt") == "mais-que-perfeito"
+
+    def test_tense_preterite_italian(self) -> None:
+        assert l10n.gram_label("tense", "preterite", "it") == "passato remoto"
+
+    # ── mood ─────────────────────────────────────────────────────────────────
+
+    def test_mood_indicative_spanish(self) -> None:
+        assert l10n.gram_label("mood", "indicative", "es") == "indicativo"
+
+    def test_mood_subjunctive_french(self) -> None:
+        assert l10n.gram_label("mood", "subjunctive", "fr") == "subjonctif"
+
+    def test_mood_imperative_german(self) -> None:
+        assert l10n.gram_label("mood", "imperative", "de") == "Imperativ"
+
+    def test_mood_indicative_russian(self) -> None:
+        assert l10n.gram_label("mood", "indicative", "ru") == "изъявительное"
+
+    def test_mood_conditional_italian(self) -> None:
+        assert l10n.gram_label("mood", "conditional", "it") == "condizionale"
+
+    # ── gender ───────────────────────────────────────────────────────────────
+
+    def test_gender_masculine_spanish(self) -> None:
+        assert l10n.gram_label("gender", "masculine", "es") == "masculino"
+
+    def test_gender_feminine_french(self) -> None:
+        assert l10n.gram_label("gender", "feminine", "fr") == "féminin"
+
+    def test_gender_neuter_german(self) -> None:
+        assert l10n.gram_label("gender", "neuter", "de") == "neutral"
+
+    def test_gender_masculine_russian(self) -> None:
+        assert l10n.gram_label("gender", "masculine", "ru") == "мужской"
+
+    # ── case ─────────────────────────────────────────────────────────────────
+
+    def test_case_nominative_german(self) -> None:
+        assert l10n.gram_label("case", "nominative", "de") == "Nominativ"
+
+    def test_case_accusative_russian(self) -> None:
+        assert l10n.gram_label("case", "accusative", "ru") == "винительный"
+
+    def test_case_dative_spanish(self) -> None:
+        assert l10n.gram_label("case", "dative", "es") == "dativo"
+
+    def test_case_instrumental_italian(self) -> None:
+        assert l10n.gram_label("case", "instrumental", "it") == "strumentale"
+
+    # ── aspect ───────────────────────────────────────────────────────────────
+
+    def test_aspect_perfective_russian(self) -> None:
+        assert l10n.gram_label("aspect", "perfective", "ru") == "совершенный"
+
+    def test_aspect_imperfective_spanish(self) -> None:
+        assert l10n.gram_label("aspect", "imperfective", "es") == "imperfectivo"
+
+    # ── localize_features ─────────────────────────────────────────────────────
+
+    def test_localize_features_empty_returns_fallback(self) -> None:
+        result = l10n.localize_features([], "es")
+        assert result == l10n.features_fallback("es")
+
+    def test_localize_features_single_spanish(self) -> None:
+        assert l10n.localize_features(["gender"], "es") == "género"
+
+    def test_localize_features_two_spanish(self) -> None:
+        result = l10n.localize_features(["gender", "number"], "es")
+        assert result == "género y número"
+
+    def test_localize_features_three_french(self) -> None:
+        result = l10n.localize_features(["case", "gender", "number"], "fr")
+        assert "et" in result
+        assert "cas" in result
+        assert "genre" in result
+
+    def test_localize_features_russian_conjunction(self) -> None:
+        result = l10n.localize_features(["gender", "number"], "ru")
+        assert "и" in result
+
+    def test_localize_features_english_identity(self) -> None:
+        result = l10n.localize_features(["gender", "number"], "en")
+        assert result == "gender and number"
+
+    def test_localize_features_unknown_l1_uses_english(self) -> None:
+        result = l10n.localize_features(["gender"], "xx")
+        assert result == "gender"

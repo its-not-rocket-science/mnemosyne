@@ -28,9 +28,9 @@ Adding a new L1
 2. Optionally add entries to _LANG_NAMES and _CONFIRMED_FEATURES_LABEL.
 Untranslated entries silently fall back to English.
 
-Grammatical labels (person, number, tense, mood) remain English strings at
-this layer — they originate from generators.py and are not yet localized.
-The prose *structure* and connecting words are in the L1 language.
+Grammatical labels (person, number, tense, mood, gender, case) are now
+localized via ``gram_label()`` / ``localize_features()``.  The prose
+structure, label values, and feature-category names are all in L1.
 """
 from __future__ import annotations
 
@@ -410,6 +410,105 @@ def features_fallback(l1: str) -> str:
     return _FEATURES_FALLBACK.get(l1, _FEATURES_FALLBACK["en"])
 
 
+# ── Grammatical terminal labels ────────────────────────────────────────────────
+# Each category maps English canonical values → per-L1 display strings.
+# Falls back to the English value when a translation is absent.
+# Extend each inner dict to add more L1 coverage.
+
+_GRAM_LABELS: dict[str, dict[str, dict[str, str]]] = {
+    # person — ordinal label inserted before "persona / Person / лицо / …"
+    "person": {
+        "first":  {"es": "primera",  "fr": "première",  "de": "erste",  "ru": "1-е",  "pt": "primeira",  "it": "prima"},
+        "second": {"es": "segunda",  "fr": "deuxième",  "de": "zweite", "ru": "2-е",  "pt": "segunda",   "it": "seconda"},
+        "third":  {"es": "tercera",  "fr": "troisième", "de": "dritte", "ru": "3-е",  "pt": "terceira",  "it": "terza"},
+    },
+    # number
+    "number": {
+        "singular": {"es": "singular",     "fr": "singulier", "de": "Singular",     "ru": "единственное",  "pt": "singular",  "it": "singolare"},
+        "plural":   {"es": "plural",       "fr": "pluriel",   "de": "Plural",       "ru": "множественное", "pt": "plural",    "it": "plurale"},
+    },
+    # tense
+    "tense": {
+        "present":      {"es": "presente",         "fr": "présent",          "de": "Präsens",         "ru": "настоящее",        "pt": "presente",          "it": "presente"},
+        "preterite":    {"es": "pretérito",        "fr": "prétérit",         "de": "Präteritum",      "ru": "прошедшее",        "pt": "pretérito",         "it": "passato remoto"},
+        "imperfect":    {"es": "imperfecto",       "fr": "imparfait",        "de": "Imperfekt",       "ru": "имперфект",        "pt": "imperfeito",        "it": "imperfetto"},
+        "future":       {"es": "futuro",           "fr": "futur",            "de": "Futur",           "ru": "будущее",          "pt": "futuro",            "it": "futuro"},
+        "conditional":  {"es": "condicional",      "fr": "conditionnel",     "de": "Konjunktiv II",   "ru": "условное",         "pt": "condicional",       "it": "condizionale"},
+        "past":         {"es": "pasado",           "fr": "passé",            "de": "Präteritum",      "ru": "прошедшее",        "pt": "passado",           "it": "passato"},
+        "perfect":      {"es": "perfecto",         "fr": "passé composé",    "de": "Perfekt",         "ru": "перфект",          "pt": "perfeito",          "it": "passato prossimo"},
+        "pluperfect":   {"es": "pluscuamperfecto", "fr": "plus-que-parfait", "de": "Plusquamperfekt", "ru": "плюсквамперфект",  "pt": "mais-que-perfeito", "it": "piuccheperfetto"},
+        "past perfect": {"es": "pluscuamperfecto", "fr": "plus-que-parfait", "de": "Plusquamperfekt", "ru": "плюсквамперфект",  "pt": "mais-que-perfeito", "it": "piuccheperfetto"},
+    },
+    # mood
+    "mood": {
+        "indicative":  {"es": "indicativo",  "fr": "indicatif",   "de": "Indikativ",    "ru": "изъявительное",  "pt": "indicativo",  "it": "indicativo"},
+        "subjunctive": {"es": "subjuntivo",  "fr": "subjonctif",  "de": "Konjunktiv I", "ru": "сослагательное", "pt": "subjuntivo",  "it": "congiuntivo"},
+        "imperative":  {"es": "imperativo",  "fr": "impératif",   "de": "Imperativ",    "ru": "повелительное",  "pt": "imperativo",  "it": "imperativo"},
+        "conditional": {"es": "condicional", "fr": "conditionnel","de": "Konjunktiv II","ru": "условное",       "pt": "condicional", "it": "condizionale"},
+    },
+    # gender
+    "gender": {
+        "masculine": {"es": "masculino", "fr": "masculin", "de": "maskulin", "ru": "мужской",  "pt": "masculino", "it": "maschile"},
+        "feminine":  {"es": "femenino",  "fr": "féminin",  "de": "feminin",  "ru": "женский",  "pt": "feminino",  "it": "femminile"},
+        "neuter":    {"es": "neutro",    "fr": "neutre",   "de": "neutral",  "ru": "средний",  "pt": "neutro",    "it": "neutro"},
+    },
+    # case
+    "case": {
+        "nominative":   {"es": "nominativo",   "fr": "nominatif",    "de": "Nominativ",      "ru": "именительный",  "pt": "nominativo",   "it": "nominativo"},
+        "accusative":   {"es": "acusativo",    "fr": "accusatif",    "de": "Akkusativ",      "ru": "винительный",   "pt": "acusativo",    "it": "accusativo"},
+        "dative":       {"es": "dativo",       "fr": "datif",        "de": "Dativ",          "ru": "дательный",     "pt": "dativo",       "it": "dativo"},
+        "genitive":     {"es": "genitivo",     "fr": "génitif",      "de": "Genitiv",        "ru": "родительный",   "pt": "genitivo",     "it": "genitivo"},
+        "instrumental": {"es": "instrumental", "fr": "instrumental", "de": "Instrumental",   "ru": "творительный",  "pt": "instrumental", "it": "strumentale"},
+        "locative":     {"es": "locativo",     "fr": "locatif",      "de": "Lokativ",        "ru": "предложный",    "pt": "locativo",     "it": "locativo"},
+    },
+    # aspect (Russian, Slavic)
+    "aspect": {
+        "imperfective": {"es": "imperfectivo", "fr": "imperfectif", "de": "imperfektiv", "ru": "несовершенный", "pt": "imperfectivo", "it": "imperfettivo"},
+        "perfective":   {"es": "perfectivo",   "fr": "perfectif",   "de": "perfektiv",   "ru": "совершенный",   "pt": "perfectivo",   "it": "perfettivo"},
+    },
+    # feature category names (used in "agree in gender and number" phrases)
+    "feature": {
+        "gender": {"es": "género",  "fr": "genre",  "de": "Genus",   "ru": "роде",   "pt": "gênero", "it": "genere"},
+        "number": {"es": "número",  "fr": "nombre", "de": "Numerus", "ru": "числе",  "pt": "número", "it": "numero"},
+        "case":   {"es": "caso",    "fr": "cas",    "de": "Kasus",   "ru": "падеже", "pt": "caso",   "it": "caso"},
+    },
+}
+
+# Conjunction "and" for joining feature names in each L1.
+_AND: dict[str, str] = {
+    "en": "and", "es": "y", "fr": "et", "de": "und",
+    "ru": "и",   "pt": "e", "it": "e",
+    "ja": "と",  "ar": "و", "he": "ו", "zh": "和",  "ko": "와",
+}
+
+
+def gram_label(category: str, value_en: str, l1: str) -> str:
+    """Localized grammatical terminal label for *l1*, falling back to *value_en*.
+
+    Args:
+        category: One of ``"person"``, ``"number"``, ``"tense"``, ``"mood"``,
+                  ``"gender"``, ``"case"``, ``"aspect"``, ``"feature"``.
+        value_en: English canonical label (e.g. ``"third"``, ``"present"``).
+        l1:       BCP-47 learner-language code (e.g. ``"es"``).
+    """
+    return _GRAM_LABELS.get(category, {}).get(value_en, {}).get(l1) or value_en
+
+
+def localize_features(features: list[str], l1: str) -> str:
+    """Translate and join a list of grammatical feature category names for *l1*.
+
+    E.g. ``["gender", "number"]`` → ``"género y número"`` for ``l1="es"``.
+    Returns ``features_fallback(l1)`` when *features* is empty.
+    """
+    if not features:
+        return features_fallback(l1)
+    localized = [gram_label("feature", f, l1) for f in features]
+    conj = _AND.get(l1, "and")
+    if len(localized) == 1:
+        return localized[0]
+    return ", ".join(localized[:-1]) + f" {conj} " + localized[-1]
+
+
 # ── Sentence templates ─────────────────────────────────────────────────────────
 # Keys: <builder>.<variant>  (builder matches the formatter function name).
 # Values: Python .format() strings; parameter names are documented inline.
@@ -417,8 +516,8 @@ def features_fallback(l1: str) -> str:
 # IMPORTANT: English templates MUST produce output identical to the
 # pre-l10n hardcoded strings so that l1="en" is a no-op behaviour change.
 #
-# Grammatical label values ({person}, {number}, {tense}, {mood}) are English
-# strings from generators.py and are NOT yet localized at this layer.
+# Grammatical label values ({person}, {number}, {tense}, {mood}, {gender},
+# {case}) are now localized via gram_label() before being passed here.
 
 _TEMPLATES: dict[str, dict[str, str]] = {
 
@@ -456,14 +555,14 @@ _TEMPLATES: dict[str, dict[str, str]] = {
     },
 
     # ── conjugation ────────────────────────────────────────────────────────────
-    # {word}, {person} (e.g. "third"), {number} (e.g. "singular"),
-    # {tense}, {mood}, {lemma} — grammatical label values remain English
+    # {word}, {person} (localized ordinal), {number} (localized),
+    # {tense}, {mood} (localized), {lemma}
     "conj.full": {
         "en": "{word} is the {person}-person {number} {tense} {mood} form of {lemma}.",
         "es": "{word} es la forma {tense} {mood} de {person} persona {number} de {lemma}.",
         "fr": "{word} est la forme de {person} personne {number}, {tense} {mood}, de {lemma}.",
         "de": "{word} ist die {tense} {mood}-Form der {person} Person {number} von {lemma}.",
-        "ru": "{word} — форма {person} лица {number} числа, {tense} {mood}, от {lemma}.",
+        "ru": "{word} — форма глагола {lemma} ({person} лицо, {number} число, {tense}, {mood}).",
         "ja": "{word}は{lemma}の{person}人称{number}、{tense} {mood}の活用形です。",
         "pt": "{word} é a forma {tense} {mood} de {person} pessoa {number} de {lemma}.",
         "it": "{word} è la forma {tense} {mood} della {person} persona {number} di {lemma}.",
@@ -494,7 +593,7 @@ _TEMPLATES: dict[str, dict[str, str]] = {
         "es": "{mod} ({mod_pos}) y {noun} concuerdan en {features}. El sustantivo {noun} es {gender} {number}.",
         "fr": "{mod} ({mod_pos}) et {noun} s'accordent en {features}. Le nom {noun} est {gender} {number}.",
         "de": "{mod} ({mod_pos}) und {noun} stimmen in {features} überein. Das Substantiv {noun} ist {gender} {number}.",
-        "ru": "{mod} ({mod_pos}) и {noun} согласуются в {features}. Существительное {noun} — {gender} рода, {number} числа.",
+        "ru": "{mod} ({mod_pos}) и {noun} согласуются в {features}. Существительное {noun}: {gender} род, {number} число.",
         "ja": "{mod}（{mod_pos}）と{noun}は{features}で一致します。名詞{noun}は{gender}の{number}です。",
         "pt": "{mod} ({mod_pos}) e {noun} concordam em {features}. O substantivo {noun} é {gender} {number}.",
         "it": "{mod} ({mod_pos}) e {noun} concordano in {features}. Il sostantivo {noun} è {gender} {number}.",
@@ -511,7 +610,7 @@ _TEMPLATES: dict[str, dict[str, str]] = {
         "es": "{mod} ({mod_pos}) y {noun} concuerdan en {features}. El sustantivo {noun} es {gender} {number} en caso {case}.",
         "fr": "{mod} ({mod_pos}) et {noun} s'accordent en {features}. Le nom {noun} est {gender} {number} au cas {case}.",
         "de": "{mod} ({mod_pos}) und {noun} stimmen in {features} überein. Das Substantiv {noun} ist {gender} {number} im {case}.",
-        "ru": "{mod} ({mod_pos}) и {noun} согласуются в {features}. Существительное {noun} — {gender} рода, {number} числа, в {case} падеже.",
+        "ru": "{mod} ({mod_pos}) и {noun} согласуются в {features}. Существительное {noun}: {gender} род, {number} число, {case} падеж.",
         "ja": "{mod}（{mod_pos}）と{noun}は{features}で一致します。名詞{noun}は{gender}の{number}で{case}格です。",
         "pt": "{mod} ({mod_pos}) e {noun} concordam em {features}. O substantivo {noun} é {gender} {number} no caso {case}.",
         "it": "{mod} ({mod_pos}) e {noun} concordano in {features}. Il sostantivo {noun} è {gender} {number} nel caso {case}.",
