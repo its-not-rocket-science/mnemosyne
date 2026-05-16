@@ -71,6 +71,9 @@ function tr(key, fallback) {
   const v = t(key)
   return v === key ? fallback : v
 }
+function _setFeedback(el, correct, text) {
+  el.innerHTML = `<span aria-hidden="true">${correct ? '✓' : '✗'}</span> ${esc(text)}`
+}
 function normalizeForLanguage(text, language = 'und') {
   const folded = normalize(text).normalize('NFD').replace(/\p{M}+/gu, '')
   return language === 'de' ? folded.replace(/ß/g, 'ss') : folded
@@ -322,10 +325,11 @@ export class MnemosyneDetailPane extends HTMLElement {
         const { correct, total } = this.#practiceSession
         const base = total > 0 ? tr('dp_session_score', `Session: ${correct}/${total}`) : ''
         const days = detail?.nextIntervalDays
-        const note = days != null
-          ? tr('dp_mm_synced_interval', `✓ synced · next in ${days}d`)
-          : tr('dp_mm_synced', '✓ Memory Map updated')
-        el.textContent = base ? `${base} · ${note}` : note
+        const noteText = days != null
+          ? tr('dp_mm_synced_interval', `synced · next in ${days}d`)
+          : tr('dp_mm_synced', 'Memory Map updated')
+        const note = `<span aria-hidden="true">✓</span> ${esc(noteText)}`
+        el.innerHTML = base ? `${esc(base)} · ${note}` : note
         clearTimeout(this.#reviewFlashTimer)
         this.#reviewFlashTimer = setTimeout(() => this._renderSessionScore(), 3000)
       })
@@ -803,26 +807,26 @@ export class MnemosyneDetailPane extends HTMLElement {
       const options = [a.expected_answer, ...(a.acceptable_alternatives || [])]
         .filter(Boolean)
         .slice(0, 3)
-      const uniq = [...new Set(options)]
+      const uniq = [...new Set(options)].sort(() => Math.random() - 0.5)
       return /* html */`
-        <article class="pane__check" data-check-index="${idx}">
-          <p class="pane__check-prompt">${esc(a.prompt)}</p>
-          <div class="pane__check-options">
+        <article class="pane__check" data-check-index="${idx}" data-expected="${esc(a.expected_answer)}">
+          <p class="pane__check-prompt" id="dp-ck-${idx}-prompt">${esc(a.prompt)}</p>
+          <div class="pane__check-options" role="group" aria-labelledby="dp-ck-${idx}-prompt">
             ${uniq.map((opt) => `<button type="button" class="pane__check-option" data-answer="${esc(opt)}">${esc(opt)}</button>`).join('')}
           </div>
-          <p class="pane__muted pane__check-feedback" aria-live="polite"></p>
+          <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
         </article>
       `
     }).join('')
     const quizItems = this.#buildMiniQuizItems(lesson, reviewQueue).slice(0, 8)
     const quizItemsHtml = quizItems.map((q, idx) => /* html */`
       <article class="pane__check pane__check--typed" data-quiz-index="${idx}">
-        <p class="pane__check-prompt"><strong>${esc(tr(`dp_quiz_type_${q.kind}`, 'Quiz'))}</strong> · ${esc(q.prompt)}</p>
+        <p class="pane__check-prompt" id="dp-qi-${idx}-prompt"><strong>${esc(tr(`dp_quiz_type_${q.kind}`, 'Quiz'))}</strong> · ${esc(q.prompt)}</p>
         <form class="pane__typed-form">
-          <input class="pane__typed-input" type="text" autocomplete="off" />
-          <button type="submit" class="pane__check-option">${esc(tr('dp_practice_submit', 'Check'))}</button>
+          <input class="pane__typed-input" type="text" autocomplete="off" aria-labelledby="dp-qi-${idx}-prompt" />
+          <button type="submit" class="pane__check-option" aria-describedby="dp-qi-${idx}-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
         </form>
-        <p class="pane__muted pane__check-feedback" aria-live="polite"></p>
+        <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
       </article>
     `).join('')
     return /* html */`
@@ -855,12 +859,12 @@ export class MnemosyneDetailPane extends HTMLElement {
           ` : ''}
           ${sentenceDrills.map((a, idx) => /* html */`
             <article class="pane__check pane__check--typed" data-drill-index="${idx}">
-              <p class="pane__check-prompt">${esc(a.prompt)}</p>
+              <p class="pane__check-prompt" id="dp-sd-${idx}-prompt">${esc(a.prompt)}</p>
               <form class="pane__typed-form">
-                <input class="pane__typed-input" type="text" autocomplete="off" />
-                <button type="submit" class="pane__check-option">${esc(tr('dp_practice_submit', 'Check'))}</button>
+                <input class="pane__typed-input" type="text" autocomplete="off" aria-labelledby="dp-sd-${idx}-prompt" />
+                <button type="submit" class="pane__check-option" aria-describedby="dp-sd-${idx}-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
               </form>
-              <p class="pane__muted pane__check-feedback" aria-live="polite"></p>
+              <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
             </article>
           `).join('')}
           ${checksHtml}
@@ -873,7 +877,7 @@ export class MnemosyneDetailPane extends HTMLElement {
                 <div class="pane__quiz" data-quiz-items='${esc(JSON.stringify(quizItems))}'>
                   ${quizItemsHtml}
                   <button type="button" class="pane__check-option" data-quiz-finish>${esc(tr('dp_quiz_finish', 'Finish quiz'))}</button>
-                  <p class="pane__muted pane__quiz-progress" aria-live="polite"></p>
+                  <p class="pane__muted pane__quiz-progress" aria-live="polite" aria-atomic="true"></p>
                   <div class="pane__quiz-mistakes"></div>
                 </div>
               </details>
@@ -882,12 +886,12 @@ export class MnemosyneDetailPane extends HTMLElement {
 
           ${canRetell ? /* html */`
             <article class="pane__check pane__check--typed" data-retell-mode="recall">
-              <p class="pane__check-prompt">${esc(tr('dp_recall_challenge', 'Recall challenge: without looking, write key details from this passage.'))}</p>
+              <p class="pane__check-prompt" id="dp-retell-recall-prompt">${esc(tr('dp_recall_challenge', 'Recall challenge: without looking, write key details from this passage.'))}</p>
               <form class="pane__typed-form">
-                <input class="pane__typed-input" type="text" autocomplete="off" />
-                <button type="submit" class="pane__check-option">${esc(tr('dp_practice_submit', 'Check'))}</button>
+                <input class="pane__typed-input" type="text" autocomplete="off" aria-labelledby="dp-retell-recall-prompt" />
+                <button type="submit" class="pane__check-option" aria-describedby="dp-retell-recall-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
               </form>
-              <p class="pane__muted pane__check-feedback" aria-live="polite"></p>
+              <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
             </article>
             ${[
               ['target_language', tr('dp_retell_target_language', 'Retell in the target language.')],
@@ -896,12 +900,12 @@ export class MnemosyneDetailPane extends HTMLElement {
               ['continue_story', tr('dp_retell_continue_story', 'Continue the story in 1–2 sentences.')],
             ].map(([mode, prompt]) => `
               <article class="pane__check pane__check--typed" data-retell-mode="${mode}">
-                <p class="pane__check-prompt">${esc(prompt)}</p>
+                <p class="pane__check-prompt" id="dp-retell-${mode}-prompt">${esc(prompt)}</p>
                 <form class="pane__typed-form">
-                  <input class="pane__typed-input" type="text" autocomplete="off" />
-                  <button type="submit" class="pane__check-option">${esc(tr('dp_practice_submit', 'Check'))}</button>
+                  <input class="pane__typed-input" type="text" autocomplete="off" aria-labelledby="dp-retell-${mode}-prompt" />
+                  <button type="submit" class="pane__check-option" aria-describedby="dp-retell-${mode}-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
                 </form>
-                <p class="pane__muted pane__check-feedback" aria-live="polite"></p>
+                <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
               </article>
             `).join('')}
           ` : ''}
@@ -1000,8 +1004,6 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   _wireEvents(matchedVariant, canonical, sentenceText, isNonCanonical) {
     const { lesson, language, ttsTag } = this.#config
-    const _dbgTabs   = this.shadowRoot.querySelectorAll('[role="tab"]')
-    const _dbgPanels = this.shadowRoot.querySelectorAll('[role="tabpanel"]')
 
     this.shadowRoot.querySelectorAll('.pane__check').forEach((checkEl) => {
       const feedback = checkEl.querySelector('.pane__check-feedback')
@@ -1021,9 +1023,10 @@ export class MnemosyneDetailPane extends HTMLElement {
             const reference = [sentenceText, lesson.explanation, ...(lesson.examples || [])].filter(Boolean).join(' ')
             const { overlap, ratio } = compareMeaning(typed, reference, language)
             const meaningFocused = ratio >= 0.22
-            if (feedback) feedback.textContent = meaningFocused
-              ? `✓ Good meaning recall. You captured ${overlap} key ideas from the lesson.`
-              : 'Try again focusing on main ideas: who/what happened, and why it matters.'
+            if (feedback) _setFeedback(feedback, meaningFocused,
+              tr('dp_retell_correct', 'Good meaning recall.'),
+              tr('dp_retell_try_again', 'Try again. Focus on main ideas: who/what happened, and why it matters.')
+            )
             const historyKey = `mn-retell-history-${lesson.id}`
             const prior = JSON.parse(localStorage.getItem(historyKey) || '[]')
             prior.push({ mode: retellMode, answer: typed, overlap, ratio, meaningFocused, answeredAt: new Date().toISOString() })
@@ -1038,7 +1041,10 @@ export class MnemosyneDetailPane extends HTMLElement {
           }
           const accepted = [drill?.expected_answer, ...(drill?.acceptable_alternatives || [])].filter(Boolean)
           const correct = accepted.some((ans) => normalizeForLanguage(ans, language) === normalizeForLanguage(typed, language))
-          if (feedback) feedback.textContent = correct ? tr('dp_practice_correct', '✓ Correct.') : `✗ ${drill?.feedback_text || tr('dp_practice_try_again', 'Try again.')}`
+          if (feedback) _setFeedback(feedback, correct,
+            tr('dp_practice_correct', 'Correct.'),
+            drill?.feedback_text || tr('dp_practice_try_again', 'Try again.')
+          )
           this.dispatchEvent(new CustomEvent('pane-practice-check', {
             bubbles: true,
             composed: true,
@@ -1054,12 +1060,15 @@ export class MnemosyneDetailPane extends HTMLElement {
       buttons.forEach((btn) => btn.addEventListener('click', () => {
         if (answered) return
         answered = true
-        const expected = buttons[0]?.dataset.answer || ''
+        const expected = checkEl.dataset.expected || ''
         const selected = btn.dataset.answer || ''
         const correct = normalize(selected) === normalize(expected)
         buttons.forEach((b) => { b.disabled = true })
         if (feedback) {
-          feedback.textContent = correct ? '✓ Correct.' : `✗ ${lesson.practice_activities?.[Number(checkEl.dataset.checkIndex)]?.feedback_text || 'Try reading the sentence again.'}`
+          _setFeedback(feedback, correct,
+            tr('dp_practice_correct', 'Correct.'),
+            lesson.practice_activities?.[Number(checkEl.dataset.checkIndex)]?.feedback_text || tr('dp_practice_try_again', 'Try again.')
+          )
         }
         this.dispatchEvent(new CustomEvent('pane-practice-check', {
           bubbles: true,
@@ -1100,7 +1109,10 @@ export class MnemosyneDetailPane extends HTMLElement {
           const correct = (item?.answers || []).some((ans) => normalizeForLanguage(ans, language) === normalizeForLanguage(typed, language))
           if (correct) state.correct += 1
           else state.mistakes.push({ prompt: item.prompt, expected: item.answers?.[0] || '' })
-          if (feedback) feedback.textContent = correct ? tr('dp_practice_correct', '✓ Correct.') : `✗ ${tr('dp_quiz_try_again', 'Review this one after finishing.')}`
+          if (feedback) _setFeedback(feedback, correct,
+            tr('dp_practice_correct', 'Correct.'),
+            tr('dp_quiz_try_again', 'Review this one after finishing.')
+          )
           if (input) input.disabled = true
           updateProgress()
           this.dispatchEvent(new CustomEvent('pane-practice-check', {
