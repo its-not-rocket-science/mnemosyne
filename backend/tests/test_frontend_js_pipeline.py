@@ -7,10 +7,16 @@ Test files:
   lesson-pipeline.test.mjs          — payload-builder invariants (word salad, URL,
                                        French leakage, pill attribute shape)
   recommended-reading-language-guard.test.mjs — next-up panel language isolation
+  recommended-reading-render.test.mjs — next-up panel HTML structure, escapeHtml,
+                                         normalizeMojibake, passageText, reasonFor,
+                                         scroll thresholds, public API shape
   adaptive-policy.test.mjs          — adaptive reader policy computations
   reader-render.test.mjs            — DOM-level rendering: mnemosyne-pill and
                                        mnemosyne-text-panel rendered structure,
                                        events, RTL, confidence tiers, overlaps
+  detail-pane.test.mjs              — DOM-level rendering: mnemosyne-detail-pane
+                                       badge, title, explanation, depth-gated tabs,
+                                       context highlight, hide/show, events
 """
 from __future__ import annotations
 
@@ -58,3 +64,18 @@ def test_reader_render() -> None:
     """DOM-level rendering: pill badges, labels, events, RTL, confidence tiers;
     text-panel line structure, annotation spans, gaps, events, setActiveLine."""
     _assert_passes(TESTS_DIR / "reader-render.test.mjs")
+
+
+def test_detail_pane_render() -> None:
+    """DOM-level rendering: mnemosyne-detail-pane badge, title, explanation,
+    depth-gated tabs (subtle/learning/deep), origins/related conditional tabs,
+    context sentence highlight, hide/show lifecycle, close/study events."""
+    _assert_passes(TESTS_DIR / "detail-pane.test.mjs")
+
+
+def test_recommended_reading_render() -> None:
+    """Next Up panel structure: escapeHtml XSS safety, normalizeMojibake sequences,
+    passageText array/text forms, reasonFor rationale, panel HTML invariants
+    (eyebrow key, featured card, buttons, hidden alternatives, dismiss, thresholds,
+    countdown, public API, aria-labelledby)."""
+    _assert_passes(TESTS_DIR / "recommended-reading-render.test.mjs")
