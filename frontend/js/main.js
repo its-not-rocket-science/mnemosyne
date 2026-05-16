@@ -1089,6 +1089,7 @@ results.addEventListener('lesson-open', async (event) => {
     // "Study drills" inside the pane delegates to the existing modal.
     if (detailPane) {
       const uiLang = currentUiLang()
+      const termProgress = progressRows.find(row => row.source_lesson_ids?.includes(lesson.id)) ?? null
 
       // Open the shell column FIRST so the pane has non-zero width to animate
       // into. Mirrors the ordering used by other call sites (e.g. recommended
@@ -1106,6 +1107,7 @@ results.addEventListener('lesson-open', async (event) => {
         uiLang,
         onTranslate: makeTranslateCallback(lesson),
         reviewQueue: dueQueue,
+        termProgress,
         onSpeak:  (text, lang) => speakText(text, lang ?? ttsTag),
         onStudy:  () => modal.open({
           lesson,
@@ -1195,8 +1197,32 @@ detailPane?.addEventListener('pane-practice-check', ({ detail }) => {
   void submitReview(objectId, quality).then((payload) => {
     if (!payload) return
     termProgressByLanguage.delete(detail.language)
+
+    // Update adaptive-reader memory + minimap immediately using FSRS-derived data.
+    if (payload.mastery_score != null) {
+      window.dispatchEvent(new CustomEvent('mnemosyne:practice-result', {
+        detail: {
+          objectId,
+          masteryScore:   payload.mastery_score,
+          nextReviewAt:   payload.next_review_at,
+          reviewCount:    payload.review_count,
+          correctCount:   payload.correct_count,
+          incorrectCount: payload.incorrect_count,
+          reviewBucket:   payload.review_bucket,
+        },
+      }))
+    }
+
     detailPane.dispatchEvent(new CustomEvent('review-submitted', {
-      detail: { objectId, quality, nextIntervalDays: payload.next_interval_days },
+      detail: {
+        objectId,
+        quality,
+        correct:           detail.correct,
+        nextIntervalDays:  payload.next_interval_days,
+        masteryBefore:     payload.mastery_score_before,
+        masteryAfter:      payload.mastery_score,
+        reviewBucket:      payload.review_bucket,
+      },
     }))
   })
 })
@@ -1219,6 +1245,7 @@ detailPane?.addEventListener('pane-navigate', async (event) => {
     const dueQueue = progressRows.filter((row) => row.review_bucket === 'due').slice(0, 8)
     if (!detailPane) return
     const uiLang = currentUiLang()
+    const termProgress = progressRows.find(row => row.source_lesson_ids?.includes(lesson.id)) ?? null
     openDetail()
     paneBackdrop?.classList.add('is-visible')
 
@@ -1233,6 +1260,7 @@ detailPane?.addEventListener('pane-navigate', async (event) => {
       uiLang,
       onTranslate: makeTranslateCallback(lesson),
       reviewQueue: dueQueue,
+      termProgress,
       onSpeak:  (text, l) => speakText(text, l ?? ttsTag),
       onStudy:  () => modal.open({
         lesson,
@@ -2077,6 +2105,7 @@ async function _openDeepLink() {
     const dueQueue = progressRows.filter((row) => row.review_bucket === 'due').slice(0, 8)
     if (detailPane) {
       const uiLang = currentUiLang()
+      const termProgress = progressRows.find(row => row.source_lesson_ids?.includes(lesson.id)) ?? null
       openDetail()
       detailPane.show({
         lesson,
@@ -2089,6 +2118,7 @@ async function _openDeepLink() {
         uiLang,
         onTranslate: makeTranslateCallback(lesson),
         reviewQueue: dueQueue,
+        termProgress,
         onSpeak: (text, l) => speakText(text, l ?? ttsTag),
         onStudy: () => modal.open({
           lesson,
