@@ -188,7 +188,7 @@ let scriptView  = 'native'
 
 const MAX_FILE_BYTES = 1_048_576  // 1 MiB
 // Fallback used before GET /parse/limits responds.  Must match Settings.max_job_chars default.
-const DEFAULT_MAX_JOB_CHARS = 100_000
+const DEFAULT_MAX_JOB_CHARS = 500_000
 let maxJobChars = DEFAULT_MAX_JOB_CHARS
 
 // ── Annotation type metadata ───────────────────────────────────────────────────
