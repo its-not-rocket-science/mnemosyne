@@ -72,11 +72,19 @@ def conjugation_explanation(
     """One-sentence explanation for a conjugated verb form."""
     l1 = context.l1_language
     if tense != "unknown" and mood != "unknown":
+        if person_label != "unknown" and number_label != "unknown":
+            return l10n.t(
+                "conj.full", l1,
+                word=_q(surface),
+                person=l10n.gram_label("person", person_label, l1),
+                number=l10n.gram_label("number", number_label, l1),
+                tense=l10n.gram_label("tense", tense, l1),
+                mood=l10n.gram_label("mood", mood, l1),
+                lemma=_q(lemma),
+            )
         return l10n.t(
-            "conj.full", l1,
+            "conj.tense_only", l1,
             word=_q(surface),
-            person=l10n.gram_label("person", person_label, l1),
-            number=l10n.gram_label("number", number_label, l1),
             tense=l10n.gram_label("tense", tense, l1),
             mood=l10n.gram_label("mood", mood, l1),
             lemma=_q(lemma),

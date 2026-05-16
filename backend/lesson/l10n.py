@@ -571,6 +571,22 @@ _TEMPLATES: dict[str, dict[str, str]] = {
         "zh": "{word}是{lemma}的{person}人称{number}、{tense}{mood}形式。",
         "ko": "{word}은(는) {lemma}의 {person}인칭 {number} {tense} {mood} 활용형입니다.",
     },
+    # {word}, {tense}, {mood}, {lemma} — used when person/number are unknown
+    # (e.g. English past tense, which is uninflected for person and number)
+    "conj.tense_only": {
+        "en": "{word} is the {tense} {mood} form of {lemma}.",
+        "es": "{word} es la forma {tense} {mood} de {lemma}.",
+        "fr": "{word} est la forme {tense} {mood} de {lemma}.",
+        "de": "{word} ist die {tense} {mood}-Form von {lemma}.",
+        "ru": "{word} — форма глагола {lemma} ({tense}, {mood}).",
+        "ja": "{word}は{lemma}の{tense} {mood}の活用形です。",
+        "pt": "{word} é a forma {tense} {mood} de {lemma}.",
+        "it": "{word} è la forma {tense} {mood} di {lemma}.",
+        "ar": "{word} هو صيغة {tense} {mood} من {lemma}.",
+        "he": "{word} היא צורת {tense} {mood} של {lemma}.",
+        "zh": "{word}是{lemma}的{tense}{mood}形式。",
+        "ko": "{word}은(는) {lemma}의 {tense} {mood} 활용형입니다.",
+    },
     "conj.simple": {
         "en": "{word} is a conjugated form of {lemma}.",
         "es": "{word} es una forma conjugada de {lemma}.",
