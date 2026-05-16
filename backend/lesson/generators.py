@@ -238,6 +238,7 @@ def _build_vocabulary(b: _B) -> LessonResponse:
     pos_raw = b.lesson_data.get("pos") or "WORD"
     pos     = _POS_DISPLAY.get(pos_raw, pos_raw.lower())
     seed    = b.canonical_form
+    l1      = b.ctx.l1_language
 
     explanation = fmt.vocabulary_explanation(b.display_label, pos, lemma, b.ctx)
 
@@ -271,7 +272,7 @@ def _build_vocabulary(b: _B) -> LessonResponse:
 
     mc = _make_mc_drill(
         seed=seed,
-        prompt=f"\u201c{b.display_label}\u201d is a \u2014\u2014\u2014",
+        prompt=l10n.t("drill.pos_blank", l1, word=b.display_label),
         correct=pos,
         pool=_POS_OPTIONS,
     )
@@ -281,7 +282,7 @@ def _build_vocabulary(b: _B) -> LessonResponse:
     if b.display_label.lower() != lemma.lower():
         drills.append(FillBlankDrill(
             type="fill_blank",
-            prompt=f"The base form (lemma) of \u201c{b.display_label}\u201d is \u2014\u2014\u2014.",
+            prompt=l10n.t("drill.lemma_blank", l1, word=b.display_label),
             answer=lemma,
         ))
 
@@ -292,7 +293,7 @@ def _build_vocabulary(b: _B) -> LessonResponse:
     return LessonResponse(
         id=b.object_id,
         type="vocabulary",
-        title=f"Vocabulary: {b.display_label}",
+        title=l10n.t("drill.vocab_title", l1, word=b.display_label),
         explanation=explanation,
         fields=fields,
         examples=[b.display_label] + sentence_examples,
@@ -352,7 +353,7 @@ def _build_conjugation(b: _B) -> LessonResponse:
 
     drills.append(FillBlankDrill(
         type="fill_blank",
-        prompt=f"\u201c{surface}\u201d is a form of the verb \u2014\u2014\u2014.",
+        prompt=l10n.t("drill.verb_form_blank", l1, word=surface),
         answer=lemma,
     ))
 
@@ -361,7 +362,7 @@ def _build_conjugation(b: _B) -> LessonResponse:
         tense_pool_loc = [l10n.gram_label("tense", v, l1) for v in tense_pool_en]
         mc = _make_mc_drill(
             seed=seed,
-            prompt=f"What tense is \u201c{surface}\u201d?",
+            prompt=l10n.t("drill.what_tense", l1, word=surface),
             correct=tense_loc,
             pool=tense_pool_loc,
         )
@@ -373,7 +374,7 @@ def _build_conjugation(b: _B) -> LessonResponse:
         mood_pool_loc = [l10n.gram_label("mood", v, l1) for v in mood_pool_en]
         mc_mood = _make_mc_drill(
             seed=seed + "mood",
-            prompt=f"What mood is \u201c{surface}\u201d?",
+            prompt=l10n.t("drill.what_mood", l1, word=surface),
             correct=mood_loc,
             pool=mood_pool_loc,
         )
@@ -383,14 +384,14 @@ def _build_conjugation(b: _B) -> LessonResponse:
     if b.lesson_data.get("is_reflexive") is not None:
         drills.append(RecognitionDrill(
             type="recognition",
-            statement=f"\u201c{surface}\u201d uses a reflexive pronoun.",
+            statement=l10n.t("drill.reflexive_stmt", l1, word=surface),
             correct=bool(b.lesson_data["is_reflexive"]),
         ))
 
     return LessonResponse(
         id=b.object_id,
         type="conjugation",
-        title=f"Conjugation: {surface}",
+        title=l10n.t("drill.conj_title", l1, word=surface),
         explanation=explanation,
         fields=fields,
         examples=[surface],
@@ -442,7 +443,7 @@ def _build_agreement(b: _B) -> LessonResponse:
     if gender_match is True:
         drills.append(RecognitionDrill(
             type="recognition",
-            statement=f"\u201c{modifier}\u201d and \u201c{noun}\u201d agree in gender.",
+            statement=l10n.t("drill.agree_gender_stmt", l1, mod=modifier, noun=noun),
             correct=True,
         ))
 
@@ -450,7 +451,7 @@ def _build_agreement(b: _B) -> LessonResponse:
     gender_options_loc = [l10n.gram_label("gender", v, l1) for v in gender_options_en]
     mc = _make_mc_drill(
         seed=seed,
-        prompt=f"What gender is \u201c{noun}\u201d?",
+        prompt=l10n.t("drill.what_gender", l1, word=noun),
         correct=gender_loc,
         pool=gender_options_loc,
     )
@@ -460,7 +461,7 @@ def _build_agreement(b: _B) -> LessonResponse:
     return LessonResponse(
         id=b.object_id,
         type="agreement",
-        title=f"Agreement: {b.display_label}",
+        title=l10n.t("drill.agree_title", l1, word=b.display_label),
         explanation=explanation,
         fields=fields,
         examples=[b.display_label],
@@ -956,7 +957,7 @@ def _build_case_agreement(b: _B) -> LessonResponse:
         case_options_loc = [l10n.gram_label("case", v, l1) for v in _CASE_OPTIONS]
         mc = _make_mc_drill(
             seed=seed,
-            prompt=f"What case is \u201c{modifier}\u201d \u2026 \u201c{noun}\u201d in?",
+            prompt=l10n.t("drill.what_case", l1, mod=modifier, noun=noun),
             correct=case_loc,
             pool=case_options_loc,
         )
@@ -968,7 +969,7 @@ def _build_case_agreement(b: _B) -> LessonResponse:
         gender_options_loc = [l10n.gram_label("gender", v, l1) for v in gender_options_en]
         mc_g = _make_mc_drill(
             seed=seed + "gender",
-            prompt=f"What gender is \u201c{noun}\u201d?",
+            prompt=l10n.t("drill.what_gender", l1, word=noun),
             correct=gender_loc,
             pool=gender_options_loc,
         )
@@ -978,7 +979,7 @@ def _build_case_agreement(b: _B) -> LessonResponse:
     return LessonResponse(
         id=b.object_id,
         type="case_agreement",  # type: ignore[arg-type]  # "case_agreement" ∈ LearnableType; same mypy narrowing limitation
-        title=f"Case agreement: {b.display_label}",
+        title=l10n.t("drill.case_agree_title", l1, word=b.display_label),
         explanation=explanation,
         fields=fields,
         examples=[b.display_label],
