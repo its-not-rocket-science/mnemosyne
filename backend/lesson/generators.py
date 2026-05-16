@@ -55,6 +55,7 @@ from dataclasses import dataclass
 from typing import Any, Callable, Literal
 
 import backend.lesson.formatters as fmt
+import backend.lesson.l10n as l10n
 from backend.lesson.context import LessonContext
 from backend.lesson.practice import build_practice_activities
 from backend.lesson.providers import LessonProviders
@@ -307,9 +308,16 @@ def _build_conjugation(b: _B) -> LessonResponse:
     person  = b.lesson_data.get("person") or "unknown"
     number  = b.lesson_data.get("number") or "unknown"
     seed    = b.canonical_form
+    l1      = b.ctx.l1_language
 
     person_label = _PERSON_LABELS.get(str(person), str(person))
     number_label = _NUMBER_LABELS.get(str(number), str(number))
+
+    # Localized display values for field cards and drill options.
+    person_loc = l10n.gram_label("person", person_label, l1)
+    number_loc = l10n.gram_label("number", number_label, l1)
+    tense_loc  = l10n.gram_label("tense",  tense,        l1)
+    mood_loc   = l10n.gram_label("mood",   mood,         l1)
 
     explanation = fmt.conjugation_explanation(
         surface, person_label, number_label, tense, mood, lemma, b.ctx
@@ -320,13 +328,13 @@ def _build_conjugation(b: _B) -> LessonResponse:
         LessonField(label="Surface form", value=surface),
     ]
     if tense != "unknown":
-        fields.append(LessonField(label="Tense", value=tense))
+        fields.append(LessonField(label="Tense", value=tense_loc))
     if mood != "unknown":
-        fields.append(LessonField(label="Mood", value=mood))
+        fields.append(LessonField(label="Mood", value=mood_loc))
     if person != "unknown":
-        fields.append(LessonField(label="Person", value=person_label))
+        fields.append(LessonField(label="Person", value=person_loc))
     if number != "unknown":
-        fields.append(LessonField(label="Number", value=number_label))
+        fields.append(LessonField(label="Number", value=number_loc))
     if construction := b.lesson_data.get("construction"):
         fields.append(LessonField(label="Construction", value=construction))
     if b.lesson_data.get("is_reflexive"):
@@ -349,23 +357,25 @@ def _build_conjugation(b: _B) -> LessonResponse:
     ))
 
     if tense != "unknown":
-        tense_pool = list(b.ctx.tense_pool) if b.ctx.tense_pool else _TENSE_OPTIONS
+        tense_pool_en = list(b.ctx.tense_pool) if b.ctx.tense_pool else _TENSE_OPTIONS
+        tense_pool_loc = [l10n.gram_label("tense", v, l1) for v in tense_pool_en]
         mc = _make_mc_drill(
             seed=seed,
             prompt=f"What tense is \u201c{surface}\u201d?",
-            correct=tense,
-            pool=tense_pool,
+            correct=tense_loc,
+            pool=tense_pool_loc,
         )
         if mc:
             drills.append(mc)
 
     if mood != "unknown":
-        mood_pool = list(b.ctx.mood_pool) if b.ctx.mood_pool else _MOOD_OPTIONS
+        mood_pool_en = list(b.ctx.mood_pool) if b.ctx.mood_pool else _MOOD_OPTIONS
+        mood_pool_loc = [l10n.gram_label("mood", v, l1) for v in mood_pool_en]
         mc_mood = _make_mc_drill(
             seed=seed + "mood",
             prompt=f"What mood is \u201c{surface}\u201d?",
-            correct=mood,
-            pool=mood_pool,
+            correct=mood_loc,
+            pool=mood_pool_loc,
         )
         if mc_mood:
             drills.append(mc_mood)
@@ -401,6 +411,10 @@ def _build_agreement(b: _B) -> LessonResponse:
     gender_display = {"Masc": "masculine", "Fem": "feminine"}.get(gender, gender.lower())
     number_display = {"Sing": "singular", "Plur": "plural"}.get(number, number.lower())
     pos_display    = _POS_DISPLAY.get(modifier_pos, modifier_pos.lower())
+    l1             = b.ctx.l1_language
+
+    gender_loc = l10n.gram_label("gender", gender_display, l1)
+    number_loc = l10n.gram_label("number", number_display, l1)
 
     confirmed: list[str] = []
     if gender_match is True:
@@ -415,8 +429,8 @@ def _build_agreement(b: _B) -> LessonResponse:
     fields: list[LessonField] = [
         LessonField(label="Modifier", value=f"{modifier} ({pos_display})"),
         LessonField(label="Noun", value=noun),
-        LessonField(label="Gender", value=gender_display),
-        LessonField(label="Number", value=number_display),
+        LessonField(label="Gender", value=gender_loc),
+        LessonField(label="Number", value=number_loc),
     ]
     if gender_match is not None:
         fields.append(LessonField(label="Gender match", value="yes" if gender_match else "no"))
@@ -432,12 +446,13 @@ def _build_agreement(b: _B) -> LessonResponse:
             correct=True,
         ))
 
-    gender_options = ["masculine", "feminine", "unknown"]
+    gender_options_en = ["masculine", "feminine", "unknown"]
+    gender_options_loc = [l10n.gram_label("gender", v, l1) for v in gender_options_en]
     mc = _make_mc_drill(
         seed=seed,
         prompt=f"What gender is \u201c{noun}\u201d?",
-        correct=gender_display,
-        pool=gender_options,
+        correct=gender_loc,
+        pool=gender_options_loc,
     )
     if mc:
         drills.append(mc)
@@ -902,6 +917,11 @@ def _build_case_agreement(b: _B) -> LessonResponse:
     )
     number_display = {"Sing": "singular", "Plur": "plural"}.get(number, number.lower())
     pos_display    = _POS_DISPLAY.get(modifier_pos, modifier_pos.lower())
+    l1             = b.ctx.l1_language
+
+    case_loc   = l10n.gram_label("case",   case_display,   l1)
+    gender_loc = l10n.gram_label("gender", gender_display, l1)
+    number_loc = l10n.gram_label("number", number_display, l1)
 
     confirmed: list[str] = []
     if case_match is True:
@@ -919,9 +939,9 @@ def _build_case_agreement(b: _B) -> LessonResponse:
     fields: list[LessonField] = [
         LessonField(label="Modifier", value=f"{modifier} ({pos_display})"),
         LessonField(label="Noun",     value=noun),
-        LessonField(label="Case",     value=case_display),
-        LessonField(label="Gender",   value=gender_display),
-        LessonField(label="Number",   value=number_display),
+        LessonField(label="Case",     value=case_loc),
+        LessonField(label="Gender",   value=gender_loc),
+        LessonField(label="Number",   value=number_loc),
     ]
     if case_match is not None:
         fields.append(LessonField(label="Case match",   value="yes" if case_match else "no"))
@@ -933,22 +953,24 @@ def _build_case_agreement(b: _B) -> LessonResponse:
     drills: list[Drill] = [ShadowingDrill(type="shadowing", text=b.display_label)]
 
     if case_display != "unknown":
+        case_options_loc = [l10n.gram_label("case", v, l1) for v in _CASE_OPTIONS]
         mc = _make_mc_drill(
             seed=seed,
             prompt=f"What case is \u201c{modifier}\u201d \u2026 \u201c{noun}\u201d in?",
-            correct=case_display,
-            pool=_CASE_OPTIONS,
+            correct=case_loc,
+            pool=case_options_loc,
         )
         if mc:
             drills.append(mc)
 
-    gender_options = ["masculine", "feminine", "neuter"]
-    if gender_display in gender_options:
+    gender_options_en = ["masculine", "feminine", "neuter"]
+    if gender_display in gender_options_en:
+        gender_options_loc = [l10n.gram_label("gender", v, l1) for v in gender_options_en]
         mc_g = _make_mc_drill(
             seed=seed + "gender",
             prompt=f"What gender is \u201c{noun}\u201d?",
-            correct=gender_display,
-            pool=gender_options,
+            correct=gender_loc,
+            pool=gender_options_loc,
         )
         if mc_g:
             drills.append(mc_g)

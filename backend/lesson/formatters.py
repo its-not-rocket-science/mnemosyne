@@ -74,8 +74,12 @@ def conjugation_explanation(
     if tense != "unknown" and mood != "unknown":
         return l10n.t(
             "conj.full", l1,
-            word=_q(surface), person=person_label, number=number_label,
-            tense=tense, mood=mood, lemma=_q(lemma),
+            word=_q(surface),
+            person=l10n.gram_label("person", person_label, l1),
+            number=l10n.gram_label("number", number_label, l1),
+            tense=l10n.gram_label("tense", tense, l1),
+            mood=l10n.gram_label("mood", mood, l1),
+            lemma=_q(lemma),
         )
     return l10n.t("conj.simple", l1, word=_q(surface), lemma=_q(lemma))
 
@@ -91,14 +95,12 @@ def agreement_explanation(
 ) -> str:
     """One-sentence explanation for a gender/number agreement pair."""
     l1 = context.l1_language
-    confirmed_str = (
-        " and ".join(confirmed_features) if confirmed_features
-        else l10n.features_fallback(l1)
-    )
     return l10n.t(
         "agree.main", l1,
         mod=_q(modifier), mod_pos=modifier_pos_display, noun=_q(noun),
-        features=confirmed_str, gender=gender_display, number=number_display,
+        features=l10n.localize_features(confirmed_features, l1),
+        gender=l10n.gram_label("gender", gender_display, l1),
+        number=l10n.gram_label("number", number_display, l1),
     )
 
 
@@ -114,15 +116,13 @@ def case_agreement_explanation(
 ) -> str:
     """One-sentence explanation for a case+gender+number agreement cluster."""
     l1 = context.l1_language
-    confirmed_str = (
-        " and ".join(confirmed_features) if confirmed_features
-        else l10n.features_fallback(l1)
-    )
     return l10n.t(
         "case.main", l1,
         mod=_q(modifier), mod_pos=modifier_pos_display, noun=_q(noun),
-        features=confirmed_str, gender=gender_display,
-        number=number_display, case=case_display,
+        features=l10n.localize_features(confirmed_features, l1),
+        gender=l10n.gram_label("gender", gender_display, l1),
+        number=l10n.gram_label("number", number_display, l1),
+        case=l10n.gram_label("case", case_display, l1),
     )
 
 
