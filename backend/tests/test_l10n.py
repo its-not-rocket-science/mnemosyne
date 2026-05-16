@@ -7,7 +7,7 @@ ALL_L1 = ["en", "es", "fr", "de", "ru", "ja", "pt", "it", "ar", "he", "zh", "ko"
 ALL_POS = ["noun", "verb", "adjective", "adverb", "auxiliary verb", "proper noun", "word"]
 ALL_TEMPLATE_KEYS = [
     "vocab.simple", "vocab.with_lemma",
-    "conj.full", "conj.simple",
+    "conj.full", "conj.tense_only", "conj.simple",
     "agree.main", "case.main",
     "idiom.with_lang_and_meaning", "idiom.with_lang", "idiom.meaning_only", "idiom.plain",
     "grammar.with_usage", "grammar.plain",
@@ -23,6 +23,7 @@ _KWARGS: dict[str, dict[str, str]] = {
     "vocab.with_lemma":             {"word": "x", "pos": "a noun", "lemma": "y"},
     "conj.full":                    {"word": "x", "person": "third", "number": "singular",
                                      "tense": "present", "mood": "indicative", "lemma": "y"},
+    "conj.tense_only":              {"word": "x", "tense": "past", "mood": "indicative", "lemma": "y"},
     "conj.simple":                  {"word": "x", "lemma": "y"},
     "agree.main":                   {"mod": "x", "mod_pos": "adjective", "noun": "y",
                                      "features": "gender and number", "gender": "masculine",

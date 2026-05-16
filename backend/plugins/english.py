@@ -7,11 +7,23 @@ WHAT THE PLUGIN EXTRACTS
 ─────────────────────────────────────────────────────────────────────────────
 
 **Vocabulary** — open-class content words (NOUN, PROPN, ADJ, ADV, non-finite
-VERB).  Finite verbs are excluded here; they are captured via grammar
-constructions.  Cross-tracking (``seen_vocab``) prevents the same lemma
-from appearing twice in the same sentence.
+VERB).  Cross-tracking (``seen_vocab``) prevents the same lemma from
+appearing twice in the same sentence.
 
   lesson_data keys: lemma, pos
+
+**Conjugation** — finite verb forms where the surface differs from the lemma
+(i.e., forms that require morphological knowledge: irregular past tense,
+3rd-person singular present, and irregular copula/auxiliary forms).
+
+  Covers:   ran → run (past), went → go (past), am/is/are/was/were → be
+            walks → walk (3rd-sg present), has → have (3rd-sg present)
+  Skips:    regular -ed forms that are already covered by grammar constructions
+            (e.g., "was written" tokens are claimed by be_passive)
+  Tenses:   present, past only — English has no synthetic future or
+            subjunctive inflection.
+
+  lesson_data keys: lemma, surface, tense, mood, person, number, morph_complete
 
 **Grammar** — periphrastic construction objects derived by scanning spaCy
 AUX and MD tokens.  One object per distinct construction type per sentence.
@@ -43,7 +55,7 @@ CONFIDENCE SCORES
   0.86  politeness softeners
   0.85  vocabulary (non-PROPN), grammar constructions, nuance/etymology
   0.84  tone markers (hedging, intensifiers)
-  0.83  regional variation
+  0.83  regional variation, conjugation (irregular/marked finite forms)
   0.82  idiom transparency
   0.80  ambiguity annotations
   0.65  PROPN vocabulary — may not generalise
@@ -54,16 +66,20 @@ KNOWN LIMITATIONS
 
 - ``en_core_web_sm`` is a small model (~12 MB).  Morphology is sparse for
   irregular forms; POS errors occur in ambiguous constructions.
-- English has minimal morphology; conjugation objects (tense/person/number)
-  are not extracted because they carry little pedagogical value.
+- Conjugation extraction targets only surface ≠ lemma forms; regular -ed
+  past tense verbs whose surface already equals lemma+"ed" are still
+  extracted (surface "walked" ≠ lemma "walk"), but their lesson content is
+  thin.  Focus is on irregular verbs (went, ran, was, etc.) where the
+  surface-to-lemma mapping is non-obvious.
+- Tense pool is limited to ["present", "past"] — English has no inflectional
+  future or subjunctive; those are expressed periphrastically (will, might).
 - Grammar detection is heuristic window-scan, not full dependency analysis.
   "has been running" emits be_progressive rather than perfect-progressive.
 - Idiom table covers only two fixed phrases (kick the bucket, piece of cake);
   emits type="nuance" not type="idiom", so idiom_detection=False.
 - phrase_families=partial: 49 English entries in the phrase family catalog
   covering common idioms, proverbs, and literary misquotations.
-- etymology=none: etymology store has no English entries yet.  The
-  _etymology() method always returns an empty list for English input.
+- etymology=none: etymology store has no English entries yet.
 - formality_register=partial: 12 curated markers (formal/informal);
   most formal/informal vocabulary is not covered.
 - grammar_nuance=partial: 5 construction patterns (progressive, passive,
@@ -92,6 +108,15 @@ _SKIP_POS = frozenset({
 
 # VerbForm values that classify a VERB token as non-finite.
 _NON_FINITE_FORMS = frozenset({"Inf", "Part", "Ger"})
+
+# Tense code → English display label (English only has two synthetic tenses).
+_TENSE_DISPLAY: dict[str, str] = {
+    "Past": "past",
+    "Pres": "present",
+}
+
+# AUX lemmas that are interesting enough to emit as conjugation objects.
+_INTERESTING_AUX = frozenset({"be", "have"})
 
 # Grammar patterns: id → (label, usage, contrast)
 _GRAMMAR_PATTERNS: dict[str, tuple[str, str, str]] = {
@@ -143,19 +168,21 @@ class EnglishPlugin:
         direction="ltr",
         script_family="latin",
         tokenization_mode="whitespace",
-        morphology_depth="shallow",      # English has limited morphology; spaCy covers what exists
+        morphology_depth="shallow",      # present / past only; no inflectional future or subjunctive
         lesson_modes_supported=["morphology", "vocabulary", "dictionary"],
         analysis_depth="full",           # spaCy pipeline: POS + dep parse + nuance
         segmentation_quality="medium",   # en_core_web_sm sentence splits are reliable
         tokenization_quality="high",     # spaCy English tokenisation is excellent
-        morphology_quality="low",        # English morphology is minimal; tense/number only
+        morphology_quality="low",        # two tenses, 3rd-sg marking only; agreement absent
         syntax_support=True,             # dep parse used for grammar construction detection
         idiom_detection=False,           # emits nuance type for idioms, not type="idiom"
         tts_lang_tag="en",
         transliteration_scheme=None,
+        tense_pool=["present", "past"],  # only two inflectional tenses in English
+        mood_pool=["indicative"],        # no inflectional subjunctive; modals handled separately
         nuance_capabilities=NuanceCapabilities(
             idioms="stub",               # 2 hardcoded phrases only (kick the bucket, piece of cake)
-            phrase_families="partial",    # 49 English families in catalog; common idioms and proverbs
+            phrase_families="partial",   # 49 English families in catalog; common idioms and proverbs
             literary_references="none",
             cultural_references="none",
             etymology="none",            # etymology store has 0 English entries
@@ -230,8 +257,12 @@ class EnglishPlugin:
     def _analyze_tokens(
         self, sentence: str, tokens: list[Any]
     ) -> CandidateSentenceResult:
-        # Grammar runs first; its surface tokens may overlap vocabulary.
+        # Grammar runs first; its surface tokens may overlap with conjugation.
         grammar_candidates = self._extract_grammar(tokens)
+        grammar_surfaces = self._phrase_surface_words(grammar_candidates)
+
+        # Conjugation: finite verb forms not already claimed by grammar patterns.
+        conj_candidates = self._extract_conjugations(tokens, grammar_surfaces)
 
         # Build Token objects for nuance extractor compatibility.
         token_objs = [
@@ -263,8 +294,82 @@ class EnglishPlugin:
 
         return CandidateSentenceResult(
             text=sentence,
-            candidates=grammar_candidates + nuance_candidates + vocab_candidates,
+            candidates=grammar_candidates + conj_candidates + nuance_candidates + vocab_candidates,
         )
+
+    def _extract_conjugations(
+        self,
+        tokens: list[Any],
+        skip_surfaces: set[str],
+    ) -> list[CandidateObject]:
+        """Extract finite verb forms as conjugation objects.
+
+        Targets forms where the surface differs from the lemma — irregular
+        past tense (went, ran, was), 3rd-person singular present (walks,
+        has), and irregular copula/auxiliary forms (am, is, are, were).
+        Tokens already claimed by grammar constructions are skipped.
+        """
+        seen_lemmas: set[str] = set()
+        candidates: list[CandidateObject] = []
+
+        for token in tokens:
+            pos = token.pos_
+
+            if pos not in ("VERB", "AUX"):
+                continue
+
+            verb_form = (token.morph.get("VerbForm") or [""])[0]
+            if verb_form != "Fin":
+                continue
+
+            # Only extract interesting auxiliary verbs (be, have).
+            if pos == "AUX" and token.lemma_.lower() not in _INTERESTING_AUX:
+                continue
+
+            surface = token.text.lower()
+            lemma   = token.lemma_.lower()
+
+            # Only emit when morphology adds information (surface ≠ lemma).
+            if surface == lemma:
+                continue
+
+            # Skip if the surface word is claimed by a grammar construction.
+            if surface in skip_surfaces:
+                continue
+
+            # Deduplicate by lemma within the sentence.
+            if lemma in seen_lemmas:
+                continue
+            seen_lemmas.add(lemma)
+
+            tense_code  = (token.morph.get("Tense")  or [""])[0]
+            person_code = (token.morph.get("Person") or [""])[0]
+            number_code = (token.morph.get("Number") or [""])[0]
+
+            tense = _TENSE_DISPLAY.get(tense_code, "unknown")
+            mood  = "indicative" if tense != "unknown" else "unknown"
+
+            morph_complete = bool(tense_code and person_code and number_code)
+            canonical = f"{lemma}:{tense}:{mood}:{person_code}:{number_code}"
+
+            candidates.append(CandidateObject(
+                canonical_form=canonical,
+                surface_form=token.text,
+                type="conjugation",
+                label=token.text,
+                lesson_data={
+                    "lemma":          lemma,
+                    "surface":        token.text,
+                    "tense":          tense if tense != "unknown" else None,
+                    "mood":           mood  if mood  != "unknown" else None,
+                    "person":         person_code or None,
+                    "number":         number_code or None,
+                    "morph_complete": morph_complete,
+                },
+                confidence=0.83,
+            ))
+
+        return candidates
 
     def _extract_vocabulary(
         self,
