@@ -251,3 +251,229 @@ class TestEnglishPluginNuanceIntegration:
         vocab_lemmas = {c.canonical_form for c in result.candidates if c.type == "vocabulary"}
         assert phrase_words.isdisjoint(vocab_lemmas)
 
+
+# ── Grammar construction detection ───────────────────────────────────────────
+
+
+class TestEnglishPluginGrammar:
+    def setup_method(self) -> None:
+        self.plugin = EnglishPlugin()
+
+    def _grammar(self, sentence: str) -> list[CandidateObject]:
+        return [c for c in self.plugin.analyze_sentence(sentence).candidates if c.type == "grammar"]
+
+    def _pattern_ids(self, sentence: str) -> set[str]:
+        return {c.lesson_data["pattern_id"] for c in self._grammar(sentence)}
+
+    def test_be_progressive_detected(self) -> None:
+        assert "be_progressive" in self._pattern_ids("The dog is running in the park.")
+
+    def test_be_passive_detected(self) -> None:
+        assert "be_passive" in self._pattern_ids("The letter was written by her.")
+
+    def test_have_perfect_detected(self) -> None:
+        assert "have_perfect" in self._pattern_ids("She has finished the work.")
+
+    def test_modal_verb_detected(self) -> None:
+        assert "modal_verb" in self._pattern_ids("You should leave now.")
+
+    def test_modal_with_negation_detected(self) -> None:
+        assert "modal_verb" in self._pattern_ids("You should not leave now.")
+
+    def test_going_to_future_detected(self) -> None:
+        assert "going_to_future" in self._pattern_ids("She is going to leave early.")
+
+    def test_going_to_does_not_emit_be_progressive(self) -> None:
+        ids = self._pattern_ids("She is going to leave early.")
+        assert "be_progressive" not in ids
+
+    def test_at_most_one_object_per_pattern_type(self) -> None:
+        objs = self._grammar("He is running and she is walking.")
+        prog_count = sum(1 for o in objs if o.lesson_data["pattern_id"] == "be_progressive")
+        assert prog_count <= 1
+
+    def test_multiple_construction_types_in_one_sentence(self) -> None:
+        ids = self._pattern_ids("You should leave because she has finished.")
+        assert "modal_verb" in ids
+        assert "have_perfect" in ids
+
+    def test_grammar_canonical_form_prefix(self) -> None:
+        for obj in self._grammar("You should leave now."):
+            assert obj.canonical_form.startswith("grammar:")
+
+    def test_grammar_lesson_data_keys_present(self) -> None:
+        required = {"pattern_id", "pattern", "usage", "contrast", "surface_verb"}
+        for obj in self._grammar("She has finished the work."):
+            assert required.issubset(obj.lesson_data.keys())
+
+    def test_progressive_surface_verb_contains_participle(self) -> None:
+        objs = self._grammar("The dog is running in the park.")
+        prog = next(o for o in objs if o.lesson_data["pattern_id"] == "be_progressive")
+        assert "running" in prog.lesson_data["surface_verb"]
+
+    def test_passive_surface_verb_contains_participle(self) -> None:
+        objs = self._grammar("The letter was written by her.")
+        passive = next(o for o in objs if o.lesson_data["pattern_id"] == "be_passive")
+        assert "written" in passive.lesson_data["surface_verb"]
+
+    def test_perfect_surface_verb_contains_participle(self) -> None:
+        objs = self._grammar("She has finished the work.")
+        perfect = next(o for o in objs if o.lesson_data["pattern_id"] == "have_perfect")
+        assert "finished" in perfect.lesson_data["surface_verb"]
+
+
+# ── Irregular conjugation extraction ─────────────────────────────────────────
+
+
+class TestEnglishPluginConjugation:
+    def setup_method(self) -> None:
+        self.plugin = EnglishPlugin()
+
+    def _conj(self, sentence: str) -> list[CandidateObject]:
+        return [c for c in self.plugin.analyze_sentence(sentence).candidates if c.type == "conjugation"]
+
+    def _by_lemma(self, sentence: str, lemma: str) -> CandidateObject | None:
+        return next(
+            (c for c in self._conj(sentence) if c.lesson_data.get("lemma") == lemma),
+            None,
+        )
+
+    def test_irregular_past_ran(self) -> None:
+        obj = self._by_lemma("She ran away.", "run")
+        assert obj is not None
+        assert obj.lesson_data["tense"] == "past"
+
+    def test_irregular_past_went(self) -> None:
+        obj = self._by_lemma("He went home yesterday.", "go")
+        assert obj is not None
+        assert obj.lesson_data["tense"] == "past"
+
+    def test_copula_was_past(self) -> None:
+        obj = self._by_lemma("She was very happy.", "be")
+        assert obj is not None
+        assert obj.lesson_data["tense"] == "past"
+
+    def test_copula_is_present(self) -> None:
+        obj = self._by_lemma("She is very happy.", "be")
+        assert obj is not None
+        assert obj.lesson_data["tense"] == "present"
+
+    def test_third_sg_present_walks(self) -> None:
+        obj = self._by_lemma("She walks to school.", "walk")
+        assert obj is not None
+        assert obj.lesson_data["tense"] == "present"
+
+    def test_have_auxiliary_has(self) -> None:
+        obj = self._by_lemma("She has a book.", "have")
+        assert obj is not None
+
+    def test_surface_form_preserved_in_lesson_data(self) -> None:
+        obj = self._by_lemma("She ran home.", "run")
+        assert obj is not None
+        assert obj.lesson_data["surface"].lower() == "ran"
+
+    def test_surface_form_attribute_set(self) -> None:
+        obj = self._by_lemma("She ran home.", "run")
+        assert obj is not None
+        assert obj.surface_form is not None
+        assert obj.surface_form.lower() == "ran"
+
+    def test_no_duplicate_lemma_within_sentence(self) -> None:
+        objs = self._conj("She ran and ran again.")
+        lemmas = [o.lesson_data["lemma"] for o in objs]
+        assert len(lemmas) == len(set(lemmas))
+
+    def test_required_lesson_data_keys_present(self) -> None:
+        for obj in self._conj("She ran away."):
+            assert "lemma" in obj.lesson_data
+            assert "surface" in obj.lesson_data
+            assert "tense" in obj.lesson_data
+
+    def test_grammar_claimed_surface_not_in_conjugation(self) -> None:
+        # "was" claimed by be_passive grammar; conjugation for "be" should be absent
+        objs = self._conj("The letter was written by her.")
+        be_conj = [o for o in objs if o.lesson_data.get("lemma") == "be"]
+        assert be_conj == []
+
+    def test_type_is_conjugation(self) -> None:
+        for obj in self._conj("She ran away."):
+            assert obj.type == "conjugation"
+
+
+# ── No duplicate vocabulary overlap ──────────────────────────────────────────
+
+
+class TestEnglishPluginNoOverlap:
+    def setup_method(self) -> None:
+        self.plugin = EnglishPlugin()
+
+    def _candidates(self, sentence: str) -> list[CandidateObject]:
+        return self.plugin.analyze_sentence(sentence).candidates
+
+    def _by_type(self, candidates: list[CandidateObject], typ: str) -> list[CandidateObject]:
+        return [c for c in candidates if c.type == typ]
+
+    def _grammar_surface_words(self, candidates: list[CandidateObject]) -> set[str]:
+        return {
+            w.lower()
+            for c in self._by_type(candidates, "grammar") if c.surface_form
+            for w in c.surface_form.split()
+        }
+
+    def test_progressive_surface_words_not_in_vocabulary(self) -> None:
+        cands = self._candidates("The dog is running in the park.")
+        grammar_words = self._grammar_surface_words(cands)
+        vocab_lemmas = {c.canonical_form for c in self._by_type(cands, "vocabulary")}
+        assert grammar_words.isdisjoint(vocab_lemmas), (
+            f"Grammar words leaked into vocabulary: {grammar_words & vocab_lemmas}"
+        )
+
+    def test_passive_surface_words_not_in_vocabulary(self) -> None:
+        cands = self._candidates("The letter was written by her.")
+        grammar_words = self._grammar_surface_words(cands)
+        vocab_lemmas = {c.canonical_form for c in self._by_type(cands, "vocabulary")}
+        assert grammar_words.isdisjoint(vocab_lemmas), (
+            f"Grammar words leaked into vocabulary: {grammar_words & vocab_lemmas}"
+        )
+
+    def test_perfect_surface_words_not_in_vocabulary(self) -> None:
+        cands = self._candidates("She has finished the work.")
+        grammar_words = self._grammar_surface_words(cands)
+        vocab_lemmas = {c.canonical_form for c in self._by_type(cands, "vocabulary")}
+        assert grammar_words.isdisjoint(vocab_lemmas), (
+            f"Grammar words leaked into vocabulary: {grammar_words & vocab_lemmas}"
+        )
+
+    def test_conjugation_lemma_not_in_vocabulary(self) -> None:
+        # "ran" → conjugation for "run"; "run" should not also appear as vocabulary
+        cands = self._candidates("She ran away quickly.")
+        conj_lemmas = {c.lesson_data["lemma"] for c in self._by_type(cands, "conjugation")}
+        vocab_canonicals = {c.canonical_form for c in self._by_type(cands, "vocabulary")}
+        assert conj_lemmas.isdisjoint(vocab_canonicals), (
+            f"Conjugation lemmas double-listed as vocabulary: {conj_lemmas & vocab_canonicals}"
+        )
+
+    def test_no_canonical_form_appears_in_two_types(self) -> None:
+        # Same canonical form must not appear in both vocabulary and conjugation
+        cands = self._candidates("She ran away and felt the cold wind.")
+        vocab_cf = {c.canonical_form for c in self._by_type(cands, "vocabulary")}
+        conj_cf  = {c.canonical_form for c in self._by_type(cands, "conjugation")}
+        overlap = vocab_cf & conj_cf
+        assert not overlap, f"Canonical forms in both vocab and conjugation: {overlap}"
+
+    def test_grammar_surface_words_not_in_vocabulary_modal(self) -> None:
+        cands = self._candidates("You should leave now.")
+        grammar_words = self._grammar_surface_words(cands)
+        vocab_lemmas = {c.canonical_form for c in self._by_type(cands, "vocabulary")}
+        assert grammar_words.isdisjoint(vocab_lemmas), (
+            f"Grammar words leaked into vocabulary: {grammar_words & vocab_lemmas}"
+        )
+
+    def test_going_to_surface_words_not_in_vocabulary(self) -> None:
+        cands = self._candidates("She is going to leave early.")
+        grammar_words = self._grammar_surface_words(cands)
+        vocab_lemmas = {c.canonical_form for c in self._by_type(cands, "vocabulary")}
+        assert grammar_words.isdisjoint(vocab_lemmas), (
+            f"Grammar words leaked into vocabulary: {grammar_words & vocab_lemmas}"
+        )
+
