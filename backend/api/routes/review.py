@@ -18,6 +18,7 @@ from backend.models import (
 from backend.schemas.parse import ReviewRequest, ReviewResponse
 from backend.srs.fsrs import DESIRED_RETENTION, review
 from backend.srs.knowledge import mastery_score
+from backend.srs.term_scheduler import classify_term
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["review"])
@@ -119,6 +120,7 @@ async def submit_review(
 
     # Sync TermProgressRow so Memory Map reflects this review.
     # Runs after the FSRS commit; failure here is non-fatal.
+    tp_synced: TermProgressRow | None = None
     try:
         canonical_obj = await db.get(CanonicalObjectRow, payload.object_id)
         if canonical_obj is not None:
@@ -156,13 +158,30 @@ async def submit_review(
                 if payload.object_id not in (tp_row.source_lesson_ids or []):
                     tp_row.source_lesson_ids = list(tp_row.source_lesson_ids or []) + [payload.object_id]
             await db.commit()
+            tp_synced = tp_row
     except Exception:
         logger.warning(
             "TermProgress sync failed for %r", payload.object_id, exc_info=True
+        )
+
+    review_bucket: str | None = None
+    if tp_synced is not None:
+        review_bucket = classify_term(
+            review_count=tp_synced.review_count,
+            mastery_score=tp_synced.mastery_score,
+            next_review_at=tp_synced.next_review_at,
+            now=now,
         )
 
     return ReviewResponse(
         object_id=payload.object_id,
         next_interval_days=next_days,
         review_state=updated_state,
+        mastery_score_before=round(score_before, 4),
+        mastery_score=round(score, 4),
+        next_review_at=due_at.isoformat(),
+        review_count=tp_synced.review_count if tp_synced else None,
+        correct_count=tp_synced.correct_count if tp_synced else None,
+        incorrect_count=tp_synced.incorrect_count if tp_synced else None,
+        review_bucket=review_bucket,
     )

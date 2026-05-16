@@ -62,6 +62,16 @@ class ReviewResponse(BaseModel):
     object_id: str
     next_interval_days: int
     review_state: dict[str, Any]
+    # FSRS-derived progress snapshot — always present; lets the frontend
+    # dispatch mnemosyne:practice-result without a second round-trip.
+    mastery_score_before: float | None = None
+    mastery_score: float | None = None
+    next_review_at: str | None = None  # ISO-format datetime
+    # TermProgress-derived counts — present when the DB sync succeeded.
+    review_count: int | None = None
+    correct_count: int | None = None
+    incorrect_count: int | None = None
+    review_bucket: str | None = None
 
 
 # ── Plugin-facing types (internal; plugins return these) ──────────────────────

@@ -159,7 +159,6 @@ export class MnemosyneDetailPane extends HTMLElement {
   #dragBaseY      = 0
   #dragActive     = false
   #practiceSession   = { correct: 0, total: 0 }
-  #reviewFlashTimer  = null
   // Translation fetch state (reset on each show())
   #vocabTranslationFetched        = false
   #sentenceTranslationFetched     = false
@@ -180,9 +179,9 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   // ── Public API ──────────────────────────────────────────────────────────────
 
-  show({ lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, onTranslate, depth, uiLang, reviewQueue = [] }) {
-    this.#lastShowArgs  = { lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, onTranslate, depth, uiLang, reviewQueue }
-    this.#config        = { lesson, sentenceText, language, dir: dir ?? 'ltr', ttsTag, caps, depth: depth ?? 'deep', uiLang: uiLang ?? 'en', reviewQueue }
+  show({ lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, onTranslate, depth, uiLang, reviewQueue = [], termProgress = null }) {
+    this.#lastShowArgs  = { lesson, sentenceText, language, dir, ttsTag, caps, onSpeak, onStudy, onTranslate, depth, uiLang, reviewQueue, termProgress }
+    this.#config        = { lesson, sentenceText, language, dir: dir ?? 'ltr', ttsTag, caps, depth: depth ?? 'deep', uiLang: uiLang ?? 'en', reviewQueue, termProgress }
     this.#onSpeak       = onSpeak ?? null
     this.#onTranslate   = onTranslate ?? null
     this.#vocabTranslationFetched    = false
@@ -318,20 +317,28 @@ export class MnemosyneDetailPane extends HTMLElement {
         }
       })
 
-      // Review confirmed by main.js — show synced status in practice panel
+      // Review confirmed by main.js — update term-state block and session score persistently
       this.addEventListener('review-submitted', ({ detail }) => {
-        const el = this.shadowRoot?.querySelector('.pane__session-score')
-        if (!el) return
-        const { correct, total } = this.#practiceSession
-        const base = total > 0 ? tr('dp_session_score', `Session: ${correct}/${total}`) : ''
-        const days = detail?.nextIntervalDays
-        const noteText = days != null
-          ? tr('dp_mm_synced_interval', `synced · next in ${days}d`)
-          : tr('dp_mm_synced', 'Memory Map updated')
-        const note = `<span aria-hidden="true">✓</span> ${esc(noteText)}`
-        el.innerHTML = base ? `${esc(base)} · ${note}` : note
-        clearTimeout(this.#reviewFlashTimer)
-        this.#reviewFlashTimer = setTimeout(() => this._renderSessionScore(), 3000)
+        const stateEl = this.shadowRoot?.querySelector('.pane__term-state')
+        if (stateEl && detail?.reviewBucket) {
+          const meta = this.#bucketMeta(detail.reviewBucket)
+          const days = detail.nextIntervalDays
+          const nextText = days != null
+            ? tr('dp_mm_next_interval', `next in ${days}d`)
+            : ''
+          stateEl.dataset.bucket = detail.reviewBucket
+          stateEl.innerHTML = /* html */`
+            <span class="pane__term-state-badge">${meta.icon} ${esc(meta.label)}</span>
+            ${nextText ? `<span class="pane__term-state-next">${esc(nextText)}</span>` : ''}
+          `
+        }
+        const scoreEl = this.shadowRoot?.querySelector('.pane__session-score')
+        if (scoreEl) {
+          const { correct, total } = this.#practiceSession
+          const base = total > 0 ? tr('dp_session_score', `Session: ${correct}/${total}`) : ''
+          const note = `<span aria-hidden="true">✓</span> ${esc(tr('dp_mm_synced', 'Memory Map updated'))}`
+          scoreEl.innerHTML = base ? `${esc(base)} · ${note}` : note
+        }
       })
 
       // Tab keyboard navigation — delegated for same reason as click
@@ -829,6 +836,25 @@ export class MnemosyneDetailPane extends HTMLElement {
         <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
       </article>
     `).join('')
+    const termStateHtml = (() => {
+      const tp = this.#config?.termProgress
+      if (!tp?.review_bucket) return ''
+      const meta = this.#bucketMeta(tp.review_bucket)
+      const days = tp.next_review_at
+        ? Math.ceil((Date.parse(tp.next_review_at) - Date.now()) / 86400000)
+        : null
+      const nextText = days != null && days > 0
+        ? tr('dp_mm_next_interval', `next in ${days}d`)
+        : days != null && days <= 0
+          ? tr('dp_bucket_due', 'due')
+          : ''
+      return /* html */`
+        <div class="pane__term-state" data-bucket="${esc(tp.review_bucket)}">
+          <span class="pane__term-state-badge">${meta.icon} ${esc(meta.label)}</span>
+          ${nextText ? `<span class="pane__term-state-next">${esc(nextText)}</span>` : ''}
+        </div>
+      `
+    })()
     return /* html */`
       <section
         id="dp-panel-practice"
@@ -840,6 +866,7 @@ export class MnemosyneDetailPane extends HTMLElement {
         <section class="pane__subsection" aria-labelledby="dp-practice-h">
           <h3 class="pane__section-heading" id="dp-practice-h">${esc(t('dp_practice_heading'))}</h3>
           <p class="pane__muted">${esc(t('dp_practice_description'))}</p>
+          ${termStateHtml}
           <article class="pane__check" aria-labelledby="dp-practice-why-h">
             <p class="pane__check-prompt" id="dp-practice-why-h"><strong>${esc(tr('dp_practice_explain_title', 'Why practice?'))}</strong></p>
             <p class="pane__muted">${esc(tr('dp_practice_explain_body', 'Practice helps turn reading into memory. Start with comprehension checks, then try vocabulary recall and pattern activities. Missed terms come back later for review, while strong terms appear less often.'))}</p>
@@ -1153,6 +1180,17 @@ export class MnemosyneDetailPane extends HTMLElement {
     if (!el) return
     const { correct, total } = this.#practiceSession
     el.textContent = total > 0 ? tr('dp_session_score', `Session: ${correct}/${total}`) : ''
+  }
+
+  #bucketMeta(bucket) {
+    const map = {
+      new:      { icon: '✦', label: tr('adaptive_memory_weak_stat', 'new') },
+      due:      { icon: '⏰', label: tr('dp_bucket_due', 'due') },
+      learning: { icon: '📖', label: tr('dp_bucket_learning', 'learning') },
+      fading:   { icon: '📉', label: tr('adaptive_memory_fading_stat', 'needs review') },
+      strong:   { icon: '⭐', label: tr('adaptive_memory_strong_stat', 'strong') },
+    }
+    return map[bucket] ?? { icon: '○', label: bucket }
   }
 
   // Apply aria-selected, tabindex, and panel visibility for the active tab.
@@ -1924,6 +1962,37 @@ export class MnemosyneDetailPane extends HTMLElement {
       .pane__study-btn--inline {
         align-self: flex-start;
       }
+
+      /* ── Term memory-state chip (practice tab) ──────────────────────────── */
+      .pane__term-state {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.3rem 0.6rem;
+        border-radius: 0.35rem;
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 8%, Canvas);
+        border: 1px solid color-mix(in oklch, var(--detail-accent, ${ref}) 20%, Canvas);
+        font-size: 0.8125rem;
+      }
+      .pane__term-state-badge { font-weight: 500; }
+      .pane__term-state-next {
+        color: var(--muted, color-mix(in srgb, CanvasText 55%, Canvas));
+      }
+      .pane__term-state[data-bucket="new"],
+      .pane__term-state[data-bucket="learning"] {
+        background: color-mix(in oklch, oklch(0.55 0.18 145) 8%, Canvas);
+        border-color: color-mix(in oklch, oklch(0.55 0.18 145) 25%, Canvas);
+      }
+      .pane__term-state[data-bucket="due"],
+      .pane__term-state[data-bucket="fading"] {
+        background: color-mix(in oklch, oklch(0.72 0.18 55) 8%, Canvas);
+        border-color: color-mix(in oklch, oklch(0.72 0.18 55) 25%, Canvas);
+      }
+      .pane__term-state[data-bucket="strong"] {
+        background: color-mix(in oklch, oklch(0.55 0.18 145) 8%, Canvas);
+        border-color: color-mix(in oklch, oklch(0.55 0.18 145) 25%, Canvas);
+      }
+
       .pane__muted {
         margin: 0;
         color: var(--muted);
