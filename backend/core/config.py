@@ -28,7 +28,10 @@ class Settings(BaseSettings):
     # Maximum characters accepted by POST /parse/jobs (the async large-text
     # endpoint).  Must be >= max_parse_chars.  Texts between the two limits
     # must use the job endpoint; texts above this limit are always rejected.
-    max_job_chars: int = 100_000
+    # Set MAX_JOB_CHARS in .env to override.  The effective ceiling is the
+    # job_timeout_seconds safety valve — at ~5 000 chars/s (conservative
+    # spaCy estimate) 500 000 chars completes in ~100 s on slow hardware.
+    max_job_chars: int = 500_000
     # Maximum wall-clock seconds the NLP thread-pool executor is allowed to run
     # for a single parse job before it is cancelled with a 'timed out' failure.
     # The thread itself cannot be killed (Python limitation), but the job is
