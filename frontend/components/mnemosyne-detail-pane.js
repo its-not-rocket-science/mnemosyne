@@ -71,7 +71,8 @@ function tr(key, fallback) {
   const v = t(key)
   return v === key ? fallback : v
 }
-function _setFeedback(el, correct, text) {
+function _setFeedback(el, correct, correctText, incorrectText) {
+  const text = correct ? correctText : (incorrectText ?? correctText)
   el.innerHTML = `<span aria-hidden="true">${correct ? '✓' : '✗'}</span> ${esc(text)}`
 }
 function normalizeForLanguage(text, language = 'und') {
@@ -1183,14 +1184,15 @@ export class MnemosyneDetailPane extends HTMLElement {
   }
 
   #bucketMeta(bucket) {
+    const i = (ch) => `<span aria-hidden="true">${ch}</span>`
     const map = {
-      new:      { icon: '✦', label: tr('adaptive_memory_weak_stat', 'new') },
-      due:      { icon: '⏰', label: tr('dp_bucket_due', 'due') },
-      learning: { icon: '📖', label: tr('dp_bucket_learning', 'learning') },
-      fading:   { icon: '📉', label: tr('adaptive_memory_fading_stat', 'needs review') },
-      strong:   { icon: '⭐', label: tr('adaptive_memory_strong_stat', 'strong') },
+      new:      { icon: i('✦'), label: tr('adaptive_memory_weak_stat', 'new') },
+      due:      { icon: i('⏰'), label: tr('dp_bucket_due', 'due') },
+      learning: { icon: i('📖'), label: tr('dp_bucket_learning', 'learning') },
+      fading:   { icon: i('📉'), label: tr('adaptive_memory_fading_stat', 'needs review') },
+      strong:   { icon: i('⭐'), label: tr('adaptive_memory_strong_stat', 'strong') },
     }
-    return map[bucket] ?? { icon: '○', label: bucket }
+    return map[bucket] ?? { icon: '', label: bucket }
   }
 
   // Apply aria-selected, tabindex, and panel visibility for the active tab.
