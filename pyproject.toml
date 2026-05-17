@@ -33,9 +33,15 @@ python-jose = { version = "^3.3", extras = ["cryptography"] }
 jieba    = { version = "^0.42", optional = true }
 pypinyin = { version = "^0.50", optional = true }
 langdetect = "^1.0.9"
+typer = ">=0.13"
+rich = "^13.0"
+pyyaml = "^6.0"
 
 [tool.poetry.extras]
 cjk = ["jieba", "pypinyin"]
+
+[tool.poetry.scripts]
+mnemosyne-corpus = "backend.corpus.cli:app"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.0"

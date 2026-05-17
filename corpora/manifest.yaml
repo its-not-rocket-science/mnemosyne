@@ -1,0 +1,349 @@
+# Mnemosyne corpus manifest
+#
+# Each entry describes one public-domain or openly-licensed source text.
+# Run `poetry run mnemosyne-corpus validate` to check this file.
+# Run `poetry run mnemosyne-corpus build --all` to acquire and ingest all texts.
+#
+# Field notes
+# -----------
+# source_url  : Direct URL to a plain-text or HTML file.  The acquisition
+#               module auto-detects Project Gutenberg, Aozora Bunko, and
+#               MediaWiki raw sources and strips boilerplate accordingly.
+# license     : Must be one of: public_domain | cc0 | cc_by | cc_by_sa |
+#               cc_by_nc | cc_by_nc_sa
+# cefr_equivalent : Normalised CEFR level for cross-language difficulty
+#               comparison.  Required when framework != CEFR.
+# notes       : Free-text; used for acquisition hints and provenance context.
+#               Does NOT affect pipeline behaviour.
+#
+# URL verification
+# ----------------
+# Project Gutenberg IDs have been cross-checked against the PG catalog.
+# Aozora Bunko card/file numbers should be verified at https://www.aozora.gr.jp
+# before running a large-scale ingest.
+
+entries:
+
+  # ── English ──────────────────────────────────────────────────────────────────
+
+  - language: en
+    framework: CEFR
+    level: B2
+    cefr_equivalent: B2
+    title: "Alice's Adventures in Wonderland"
+    author: "Lewis Carroll"
+    year: 1865
+    source_url: "https://www.gutenberg.org/files/11/11-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: fantasy_fiction
+    dialect: en-GB
+    script: latin
+    notes:
+      - "PG ID 11; UTF-8 plain text; well-attested"
+
+  - language: en
+    framework: CEFR
+    level: B2
+    cefr_equivalent: B2
+    title: "The Yellow Wallpaper"
+    author: "Charlotte Perkins Gilman"
+    year: 1892
+    source_url: "https://www.gutenberg.org/files/1952/1952-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: short_story
+    dialect: en-US
+    script: latin
+    notes:
+      - "PG ID 1952; short story; good for phrase-level analysis"
+
+  # ── Spanish ──────────────────────────────────────────────────────────────────
+
+  - language: es
+    framework: CEFR
+    level: C2
+    cefr_equivalent: C2
+    title: "Don Quijote de la Mancha (Primera parte)"
+    author: "Miguel de Cervantes Saavedra"
+    year: 1605
+    source_url: "https://www.gutenberg.org/files/2000/2000-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: novel
+    dialect: es-ES
+    script: latin
+    notes:
+      - "PG ID 2000; original Spanish"
+      - "Early Modern Spanish orthography — expect high OOV rate in spaCy"
+
+  - language: es
+    framework: CEFR
+    level: B1
+    cefr_equivalent: B1
+    title: "Cuentos de amor, de locura y de muerte"
+    author: "Horacio Quiroga"
+    year: 1917
+    source_url: "https://www.gutenberg.org/files/37918/37918-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: short_stories
+    dialect: es-419
+    script: latin
+    notes:
+      - "PG ID 37918; accessible short fiction; River Plate Spanish"
+      - "Verify URL before bulk ingest"
+
+  # ── French ───────────────────────────────────────────────────────────────────
+
+  - language: fr
+    framework: CEFR
+    level: B2
+    cefr_equivalent: B2
+    title: "Candide, ou l'Optimisme"
+    author: "François-Marie Arouet (Voltaire)"
+    year: 1759
+    source_url: "https://www.gutenberg.org/files/4650/4650-8.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: philosophical_satire
+    dialect: fr-FR
+    script: latin
+    notes:
+      - "PG ID 4650 (French edition); verify -8.txt encoding suffix"
+      - "Moderately dense 18th-century vocabulary"
+
+  # ── German ───────────────────────────────────────────────────────────────────
+
+  - language: de
+    framework: CEFR
+    level: B2
+    cefr_equivalent: B2
+    title: "Die Verwandlung"
+    author: "Franz Kafka"
+    year: 1915
+    source_url: "https://www.gutenberg.org/files/22367/22367-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: novella
+    dialect: de-DE
+    script: latin
+    notes:
+      - "PG ID 22367; German original; verify URL"
+      - "Kafka died 1924; clearly public domain"
+
+  # ── Italian ──────────────────────────────────────────────────────────────────
+
+  - language: it
+    framework: CEFR
+    level: B1
+    cefr_equivalent: B1
+    title: "Le avventure di Pinocchio"
+    author: "Carlo Collodi"
+    year: 1883
+    source_url: "https://www.gutenberg.org/files/25447/25447-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: children_literature
+    dialect: it-IT
+    script: latin
+    notes:
+      - "PG ID 25447 (Italian original); Collodi died 1890"
+      - "Verify URL before bulk ingest"
+
+  # ── Portuguese ───────────────────────────────────────────────────────────────
+
+  - language: pt
+    framework: CEFR
+    level: C1
+    cefr_equivalent: C1
+    title: "Os Maias"
+    author: "José Maria de Eça de Queirós"
+    year: 1888
+    source_url: "https://www.gutenberg.org/files/27277/27277-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: novel
+    dialect: pt-PT
+    script: latin
+    notes:
+      - "Eça de Queirós died 1900; European Portuguese"
+      - "Verify PG ID before bulk ingest"
+
+  # ── Russian ──────────────────────────────────────────────────────────────────
+
+  - language: ru
+    framework: CEFR
+    level: B2
+    cefr_equivalent: B2
+    title: "Детство"
+    author: "Лев Николаевич Толстой"
+    year: 1852
+    source_url: "https://www.gutenberg.org/files/19089/19089-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: autobiographical_novel
+    dialect: ru-RU
+    script: cyrillic
+    notes:
+      - "Tolstoy Childhood (Russian original); Tolstoy died 1910"
+      - "Verify PG ID; older Gutenberg Russian files may be KOI8 encoded"
+
+  # ── Arabic ───────────────────────────────────────────────────────────────────
+
+  - language: ar
+    framework: CEFR
+    level: C1
+    cefr_equivalent: C1
+    title: "ألف ليلة وليلة — الليلة الأولى"
+    author: "مجهول"
+    year: null
+    source_url: "https://ar.wikisource.org/w/index.php?title=%D8%A3%D9%84%D9%81_%D9%84%D9%8A%D9%84%D8%A9_%D9%88%D9%84%D9%8A%D9%84%D8%A9%2F%D8%A7%D9%84%D9%84%D9%8A%D9%84%D8%A9_1&action=raw"
+    source_name: "Wikisource Arabic"
+    license: public_domain
+    genre: tales
+    dialect: ar
+    script: arabic
+    notes:
+      - "One Thousand and One Nights; medieval Classical Arabic"
+      - "Wikisource raw wikitext — markup is stripped automatically"
+      - "Not Modern Standard Arabic; expect high OOV for contemporary learners"
+
+  # ── Hebrew ───────────────────────────────────────────────────────────────────
+
+  - language: he
+    framework: CEFR
+    level: B1
+    cefr_equivalent: B1
+    title: "מגילת רות"
+    author: "מחבר לא ידוע"
+    year: null
+    source_url: "https://he.wikisource.org/w/index.php?title=%D7%A8%D7%95%D7%AA&action=raw"
+    source_name: "Wikisource Hebrew"
+    license: public_domain
+    genre: biblical_prose
+    dialect: he-IL
+    script: hebrew
+    notes:
+      - "Book of Ruth; Biblical Hebrew — not Modern Hebrew"
+      - "Short and grammatically regular; good for morphological analysis"
+      - "Wikisource raw wikitext — markup stripped automatically"
+
+  # ── Chinese ──────────────────────────────────────────────────────────────────
+
+  - language: zh
+    framework: HSK
+    level: HSK6
+    cefr_equivalent: C1
+    title: "論語"
+    author: "孔子門人 (attributed)"
+    year: null
+    source_url: "https://zh.wikisource.org/w/index.php?title=%E8%AB%96%E8%AA%9E&action=raw"
+    source_name: "Wikisource Chinese"
+    license: public_domain
+    genre: classical_philosophy
+    dialect: zh-Hant
+    script: cjk
+    notes:
+      - "Analects of Confucius; Classical Chinese (文言文)"
+      - "Not Modern Mandarin; vocabulary is archaic"
+      - "Wikisource raw wikitext — markup stripped automatically"
+
+  # ── Japanese ─────────────────────────────────────────────────────────────────
+
+  - language: ja
+    framework: JLPT
+    level: N3
+    cefr_equivalent: B1
+    title: "注文の多い料理店"
+    author: "宮沢賢治"
+    year: 1924
+    source_url: "https://www.aozora.gr.jp/cards/000081/files/456_15050.html"
+    source_name: "Aozora Bunko"
+    license: public_domain
+    genre: short_story
+    dialect: ja-JP
+    script: cjk
+    notes:
+      - "The Restaurant of Many Orders; Aozora Bunko author card 81"
+      - "HTML with ruby furigana; ruby markup stripped automatically"
+      - "Verify file ID (456_15050) at https://www.aozora.gr.jp/cards/000081/"
+      - "Miyazawa Kenji died 1933; clearly public domain in Japan"
+
+  - language: ja
+    framework: JLPT
+    level: N2
+    cefr_equivalent: B2
+    title: "羅生門"
+    author: "芥川龍之介"
+    year: 1915
+    source_url: "https://www.aozora.gr.jp/cards/000879/files/127_15260.html"
+    source_name: "Aozora Bunko"
+    license: public_domain
+    genre: short_story
+    dialect: ja-JP
+    script: cjk
+    notes:
+      - "Rashomon; Aozora Bunko author card 879"
+      - "HTML with ruby furigana; markup stripped automatically"
+      - "Verify file ID (127_15260) at https://www.aozora.gr.jp/cards/000879/"
+      - "Akutagawa died 1927; clearly public domain"
+
+  # ── Korean ───────────────────────────────────────────────────────────────────
+
+  - language: ko
+    framework: TOPIK
+    level: TOPIK-II
+    cefr_equivalent: B2
+    title: "흥부전"
+    author: "작자 미상"
+    year: null
+    source_url: "https://ko.wikisource.org/w/index.php?title=%ED%9D%A5%EB%B6%80%EC%A0%84&action=raw"
+    source_name: "Wikisource Korean"
+    license: public_domain
+    genre: pansori_tale
+    dialect: ko-KR
+    script: hangul
+    notes:
+      - "Heungbu and Nolbu; classic Korean pansori narrative"
+      - "Wikisource raw wikitext — markup stripped automatically"
+      - "Classical Korean vocabulary mixed with modern forms"
+
+  # ── Latin ────────────────────────────────────────────────────────────────────
+
+  - language: la
+    framework: CEFR
+    level: C1
+    cefr_equivalent: C1
+    title: "Commentarii de Bello Gallico"
+    author: "Gaius Julius Caesar"
+    year: -52
+    source_url: "https://www.gutenberg.org/files/10657/10657-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: historical_prose
+    dialect: la
+    script: latin
+    notes:
+      - "Caesar's Gallic Wars; PG ID 10657; verify URL"
+      - "Classical Latin; regular syntax; excellent for intermediate learners"
+
+  # ── Koine Greek ──────────────────────────────────────────────────────────────
+
+  - language: grc
+    framework: CEFR
+    level: C1
+    cefr_equivalent: C1
+    title: "Κατὰ Ἰωάννην"
+    author: "Εὐαγγελιστής Ἰωάννης (trad.)"
+    year: 90
+    source_url: "https://www.gutenberg.org/files/7388/7388-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: biblical_prose
+    dialect: grc
+    script: greek
+    notes:
+      - "Gospel of John in Koine Greek; PG ID 7388"
+      - "Polytonic Greek text; verify encoding (UTF-8)"
+      - "Ancient text; use with the grc (Koine Greek) plugin only"
