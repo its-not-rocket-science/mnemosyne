@@ -1,8 +1,9 @@
 """Download and extract plain text from corpus source URLs.
 
-Handles three source types automatically:
+Handles source types automatically:
   - Project Gutenberg plain text (strips PG header/footer boilerplate)
   - Aozora Bunko HTML (strips ruby/furigana markup, extracts main_text div)
+  - Wikisource HTML (extracts #mw-content-text .mw-parser-output)
   - MediaWiki raw wikitext (strips templates, links, headings)
   - Generic HTML (BeautifulSoup get_text fallback)
   - Plain text (used as-is after encoding normalisation)
@@ -22,6 +23,12 @@ logger = logging.getLogger(__name__)
 
 _REQUEST_TIMEOUT = 30  # seconds
 _MAX_RESPONSE_BYTES = 20 * 1024 * 1024  # 20 MB hard cap
+
+# Wikimedia policy requires a descriptive User-Agent with contact information.
+_USER_AGENT = (
+    "MnemosyneCorpus/0.1 "
+    "(https://github.com/example/mnemosyne; corpus-pipeline bot)"
+)
 
 # Project Gutenberg boilerplate markers (matched case-insensitively).
 _PG_START_MARKERS = (
@@ -81,6 +88,31 @@ def _strip_aozora_html(html: str) -> str:
     return (body or soup).get_text("\n", strip=True)
 
 
+def _strip_wikisource_html(html: str) -> str:
+    """Extract article text from a Wikisource HTML page.
+
+    Targets ``#mw-content-text .mw-parser-output``, removes edit-section links
+    and other chrome that MediaWiki injects inside the content div.
+    """
+    from bs4 import BeautifulSoup  # noqa: PLC0415
+
+    soup = BeautifulSoup(html, "html.parser")
+    for tag in soup.find_all(["script", "style", "nav", "header", "footer"]):
+        tag.decompose()
+    for cls in ("mw-editsection", "mw-references-wrap", "catlinks", "printfooter",
+                "noprint", "mw-jump-link"):
+        for tag in soup.find_all(class_=cls):
+            tag.decompose()
+
+    content = soup.find(id="mw-content-text")
+    if content:
+        parser_output = content.find(class_="mw-parser-output")
+        target = parser_output or content
+        return target.get_text("\n", strip=True)
+
+    return soup.get_text("\n", strip=True)
+
+
 def _strip_mediawiki(text: str) -> str:
     """Strip common MediaWiki markup from a ``?action=raw`` response."""
     # Templates: {{...}} (non-greedy, may nest shallowly)
@@ -113,10 +145,13 @@ def _generic_html(html: str) -> str:
 
 
 def _detect_format(content: str, url: str, content_type_header: str) -> str:
-    """Return one of: 'aozora_html', 'html', 'mediawiki', 'gutenberg', 'plain'."""
-    if "aozora.gr.jp" in url and ("<html" in content[:2000].lower()):
+    """Return one of: 'aozora_html', 'wikisource_html', 'html', 'mediawiki', 'gutenberg', 'plain'."""
+    is_html = "<html" in content[:2000].lower()
+    if "aozora.gr.jp" in url and is_html:
         return "aozora_html"
-    if content.lstrip().startswith("<") and "<html" in content[:1000].lower():
+    if "wikisource.org" in url and is_html:
+        return "wikisource_html"
+    if content.lstrip().startswith("<") and is_html:
         return "html"
     if "{{" in content[:500] or content.lstrip().startswith("{{"):
         return "mediawiki"
@@ -129,11 +164,12 @@ def _detect_format(content: str, url: str, content_type_header: str) -> str:
 
 
 _EXTRACTORS: dict[str, Callable[[str], str]] = {
-    "aozora_html": _strip_aozora_html,
-    "html":        _generic_html,
-    "mediawiki":   _strip_mediawiki,
-    "gutenberg":   _strip_gutenberg,
-    "plain":       lambda t: t,
+    "aozora_html":    _strip_aozora_html,
+    "wikisource_html": _strip_wikisource_html,
+    "html":           _generic_html,
+    "mediawiki":      _strip_mediawiki,
+    "gutenberg":      _strip_gutenberg,
+    "plain":          lambda t: t,
 }
 
 
@@ -146,7 +182,8 @@ def fetch_text(url: str) -> str:
         ValueError:            if the response body exceeds the size cap.
     """
     logger.info("corpus acquire url=%s", url)
-    with httpx.Client(timeout=_REQUEST_TIMEOUT, follow_redirects=True) as client:
+    headers = {"User-Agent": _USER_AGENT}
+    with httpx.Client(timeout=_REQUEST_TIMEOUT, follow_redirects=True, headers=headers) as client:
         response = client.get(url)
         response.raise_for_status()
 

@@ -194,18 +194,17 @@ entries:
     framework: CEFR
     level: C1
     cefr_equivalent: C1
-    title: "ألف ليلة وليلة — الليلة الأولى"
+    title: "ألف ليلة وليلة (الجزء الأول)"
     author: "مجهول"
     year: null
-    source_url: "https://ar.wikisource.org/w/index.php?title=%D8%A3%D9%84%D9%81_%D9%84%D9%8A%D9%84%D8%A9_%D9%88%D9%84%D9%8A%D9%84%D8%A9%2F%D8%A7%D9%84%D9%84%D9%8A%D9%84%D8%A9_1&action=raw"
+    source_url: "https://ar.wikisource.org/wiki/%D8%A3%D9%84%D9%81_%D9%84%D9%8A%D9%84%D8%A9_%D9%88%D9%84%D9%8A%D9%84%D8%A9/%D8%A7%D9%84%D8%AC%D8%B2%D8%A1_%D8%A7%D9%84%D8%A3%D9%88%D9%84"
     source_name: "Wikisource Arabic"
     license: public_domain
     genre: tales
     dialect: ar
     script: arabic
     notes:
-      - "One Thousand and One Nights; medieval Classical Arabic"
-      - "Wikisource raw wikitext — markup is stripped automatically"
+      - "One Thousand and One Nights, Part 1; medieval Classical Arabic"
       - "Not Modern Standard Arabic; expect high OOV for contemporary learners"
 
   # ── Hebrew ───────────────────────────────────────────────────────────────────
@@ -217,7 +216,7 @@ entries:
     title: "מגילת רות"
     author: "מחבר לא ידוע"
     year: null
-    source_url: "https://he.wikisource.org/w/index.php?title=%D7%A8%D7%95%D7%AA&action=raw"
+    source_url: "https://he.wikisource.org/wiki/%D7%A8%D7%95%D7%AA"
     source_name: "Wikisource Hebrew"
     license: public_domain
     genre: biblical_prose
@@ -226,7 +225,6 @@ entries:
     notes:
       - "Book of Ruth; Biblical Hebrew — not Modern Hebrew"
       - "Short and grammatically regular; good for morphological analysis"
-      - "Wikisource raw wikitext — markup stripped automatically"
 
   # ── Chinese ──────────────────────────────────────────────────────────────────
 
@@ -237,7 +235,7 @@ entries:
     title: "論語"
     author: "孔子門人 (attributed)"
     year: null
-    source_url: "https://zh.wikisource.org/w/index.php?title=%E8%AB%96%E8%AA%9E&action=raw"
+    source_url: "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E"
     source_name: "Wikisource Chinese"
     license: public_domain
     genre: classical_philosophy
@@ -246,7 +244,6 @@ entries:
     notes:
       - "Analects of Confucius; Classical Chinese (文言文)"
       - "Not Modern Mandarin; vocabulary is archaic"
-      - "Wikisource raw wikitext — markup stripped automatically"
 
   # ── Japanese ─────────────────────────────────────────────────────────────────
 
@@ -297,7 +294,7 @@ entries:
     title: "흥부전"
     author: "작자 미상"
     year: null
-    source_url: "https://ko.wikisource.org/w/index.php?title=%ED%9D%A5%EB%B6%80%EC%A0%84&action=raw"
+    source_url: "https://ko.wikisource.org/wiki/%ED%9D%A5%EB%B6%80%EC%A0%84"
     source_name: "Wikisource Korean"
     license: public_domain
     genre: pansori_tale
@@ -305,7 +302,6 @@ entries:
     script: hangul
     notes:
       - "Heungbu and Nolbu; classic Korean pansori narrative"
-      - "Wikisource raw wikitext — markup stripped automatically"
       - "Classical Korean vocabulary mixed with modern forms"
 
   # ── Latin ────────────────────────────────────────────────────────────────────

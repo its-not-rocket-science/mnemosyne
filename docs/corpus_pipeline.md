@@ -222,6 +222,7 @@ The acquisition module auto-detects source format and strips boilerplate:
 |--------|-----------|------------|
 | Project Gutenberg | `*** START OF THE PROJECT GUTENBERG EBOOK` marker | Strips header and footer boilerplate; returns body text only |
 | Aozora Bunko | `aozora.gr.jp` in URL + HTML | Strips `<rt>` / `<rp>` (furigana); extracts `.main_text` div |
+| Wikisource | `wikisource.org` in URL + HTML | Extracts `#mw-content-text .mw-parser-output`; removes edit links, ref sections, category chrome |
 | MediaWiki `?action=raw` | `{{` or `[[` near start of file | Strips templates, links, headings, bold/italic markup |
 | Generic HTML | `<html` near start | BeautifulSoup `get_text()`; drops script/style/nav |
 | Plain text | Everything else | Used as-is after encoding normalisation |
@@ -300,10 +301,10 @@ before a bulk ingest.
 ### Wikitext stripping is shallow
 
 The MediaWiki stripper handles the most common markup patterns (templates,
-links, headings, bold/italic).  Heavily templated pages from Wikisource (e.g.
-pages that use complex `{{#if:}}` constructs or nested tables) may leave markup
-fragments in the extracted text.  Inspect the cache file after acquisition and
-clean manually if needed before running `ingest`.
+links, headings, bold/italic) for any `action=raw` URL you add manually.  The
+manifest's Wikisource entries use regular HTML URLs, which go through the
+dedicated Wikisource extractor (`#mw-content-text .mw-parser-output`) instead
+of the wikitext stripper, so markup leakage is not a concern for those entries.
 
 ### Classical vs. modern language mismatch
 
