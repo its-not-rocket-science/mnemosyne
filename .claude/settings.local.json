@@ -83,7 +83,9 @@
       "Bash(Remove-Item *)",
       "Skill(update-config)",
       "WebSearch",
-      "WebFetch(domain:www.gutenberg.org)"
+      "WebFetch(domain:www.gutenberg.org)",
+      "WebFetch(domain:zh.wikisource.org)",
+      "WebFetch(domain:ar.wikisource.org)"
     ]
   }
 }
