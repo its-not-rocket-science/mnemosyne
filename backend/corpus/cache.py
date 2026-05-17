@@ -17,10 +17,19 @@ DEFAULT_CACHE_DIR = Path("data/corpus_cache")
 
 
 def _slugify(text: str) -> str:
-    """Convert *text* to a safe ASCII filename slug."""
+    """Convert *text* to a safe ASCII filename slug.
+
+    Non-ASCII titles (CJK, Arabic, Hebrew, Greek, Cyrillic that fully drops out)
+    fall back to a SHA-1 prefix so entries never collide on an empty slug.
+    """
+    import hashlib  # stdlib, lazy import fine here
+
     nfkd = unicodedata.normalize("NFKD", text)
     ascii_text = nfkd.encode("ascii", "ignore").decode("ascii")
-    return re.sub(r"[^a-z0-9]+", "_", ascii_text.lower()).strip("_")[:80]
+    slug = re.sub(r"[^a-z0-9]+", "_", ascii_text.lower()).strip("_")[:80]
+    if not slug:
+        slug = hashlib.sha1(text.encode("utf-8")).hexdigest()[:16]
+    return slug
 
 
 def cache_path(language: str, title: str, cache_dir: Path = DEFAULT_CACHE_DIR) -> Path:
