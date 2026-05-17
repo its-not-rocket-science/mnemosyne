@@ -84,15 +84,14 @@ entries:
     title: "Cuentos de amor, de locura y de muerte"
     author: "Horacio Quiroga"
     year: 1917
-    source_url: "https://www.gutenberg.org/files/37918/37918-0.txt"
+    source_url: "https://www.gutenberg.org/files/13507/13507-0.txt"
     source_name: "Project Gutenberg"
     license: public_domain
     genre: short_stories
     dialect: es-419
     script: latin
     notes:
-      - "PG ID 37918; accessible short fiction; River Plate Spanish"
-      - "Verify URL before bulk ingest"
+      - "PG ID 13507; accessible short fiction; River Plate Spanish"
 
   # ── French ───────────────────────────────────────────────────────────────────
 
