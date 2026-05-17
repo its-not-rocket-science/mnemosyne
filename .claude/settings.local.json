@@ -85,7 +85,12 @@
       "WebSearch",
       "WebFetch(domain:www.gutenberg.org)",
       "WebFetch(domain:zh.wikisource.org)",
-      "WebFetch(domain:ar.wikisource.org)"
+      "WebFetch(domain:ar.wikisource.org)",
+      "WebFetch(domain:grc.wikisource.org)",
+      "WebFetch(domain:el.wikisource.org)",
+      "WebFetch(domain:wiki.digitalclassicist.org)",
+      "WebFetch(domain:he.wikisource.org)",
+      "WebFetch(domain:ru.wikisource.org)"
     ]
   }
 }
