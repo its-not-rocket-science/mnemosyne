@@ -81,7 +81,9 @@
       "Bash(Select-Object -Last 120)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\" -Recurse -Depth 2 -Directory)",
       "Bash(Remove-Item *)",
-      "Skill(update-config)"
+      "Skill(update-config)",
+      "WebSearch",
+      "WebFetch(domain:www.gutenberg.org)"
     ]
   }
 }
