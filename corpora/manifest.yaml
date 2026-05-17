@@ -102,14 +102,14 @@ entries:
     title: "Candide, ou l'Optimisme"
     author: "François-Marie Arouet (Voltaire)"
     year: 1759
-    source_url: "https://www.gutenberg.org/files/4650/4650-8.txt"
+    source_url: "https://www.gutenberg.org/cache/epub/4650/pg4650.txt"
     source_name: "Project Gutenberg"
     license: public_domain
     genre: philosophical_satire
     dialect: fr-FR
     script: latin
     notes:
-      - "PG ID 4650 (French edition); verify -8.txt encoding suffix"
+      - "PG ID 4650 (French edition)"
       - "Moderately dense 18th-century vocabulary"
 
   # ── German ───────────────────────────────────────────────────────────────────
@@ -121,15 +121,14 @@ entries:
     title: "Die Verwandlung"
     author: "Franz Kafka"
     year: 1915
-    source_url: "https://www.gutenberg.org/files/22367/22367-0.txt"
+    source_url: "https://www.gutenberg.org/cache/epub/22367/pg22367.txt"
     source_name: "Project Gutenberg"
     license: public_domain
     genre: novella
     dialect: de-DE
     script: latin
     notes:
-      - "PG ID 22367; German original; verify URL"
-      - "Kafka died 1924; clearly public domain"
+      - "PG ID 22367; German original; Kafka died 1924"
 
   # ── Italian ──────────────────────────────────────────────────────────────────
 
@@ -159,14 +158,14 @@ entries:
     title: "Os Maias"
     author: "José Maria de Eça de Queirós"
     year: 1888
-    source_url: "https://www.gutenberg.org/files/27277/27277-0.txt"
+    source_url: "https://www.gutenberg.org/files/40409/40409-0.txt"
     source_name: "Project Gutenberg"
     license: public_domain
     genre: novel
     dialect: pt-PT
     script: latin
     notes:
-      - "Eça de Queirós died 1900; European Portuguese"
+      - "PG ID 40409; Eça de Queirós died 1900; European Portuguese"
       - "Verify PG ID before bulk ingest"
 
   # ── Russian ──────────────────────────────────────────────────────────────────
@@ -175,18 +174,18 @@ entries:
     framework: CEFR
     level: B2
     cefr_equivalent: B2
-    title: "Детство"
-    author: "Лев Николаевич Толстой"
-    year: 1852
-    source_url: "https://www.gutenberg.org/files/19089/19089-0.txt"
-    source_name: "Project Gutenberg"
+    title: "Дама с собачкой"
+    author: "Антон Павлович Чехов"
+    year: 1899
+    source_url: "https://ru.wikisource.org/wiki/%D0%94%D0%B0%D0%BC%D0%B0_%D1%81_%D1%81%D0%BE%D0%B1%D0%B0%D1%87%D0%BA%D0%BE%D0%B9_(%D0%A7%D0%B5%D1%85%D0%BE%D0%B2)"
+    source_name: "Wikisource Russian"
     license: public_domain
-    genre: autobiographical_novel
+    genre: short_story
     dialect: ru-RU
     script: cyrillic
     notes:
-      - "Tolstoy Childhood (Russian original); Tolstoy died 1910"
-      - "Verify PG ID; older Gutenberg Russian files may be KOI8 encoded"
+      - "The Lady with the Dog; full text on single Wikisource page (~120k chars)"
+      - "Chekhov died 1904; PG Russian section is audio-only, hence Wikisource"
 
   # ── Arabic ───────────────────────────────────────────────────────────────────
 
@@ -216,15 +215,16 @@ entries:
     title: "מגילת רות"
     author: "מחבר לא ידוע"
     year: null
-    source_url: "https://he.wikisource.org/wiki/%D7%A8%D7%95%D7%AA"
+    source_url: "https://he.wikisource.org/wiki/%D7%9E%D7%92%D7%99%D7%9C%D7%AA_%D7%A8%D7%95%D7%AA/%D7%98%D7%A2%D7%9E%D7%99%D7%9D"
     source_name: "Wikisource Hebrew"
     license: public_domain
     genre: biblical_prose
     dialect: he-IL
     script: hebrew
     notes:
-      - "Book of Ruth; Biblical Hebrew — not Modern Hebrew"
+      - "Book of Ruth all 4 chapters with cantillation; Biblical Hebrew — not Modern Hebrew"
       - "Short and grammatically regular; good for morphological analysis"
+      - "Previous URL (wiki/רות) was a disambiguation page returning 254 chars"
 
   # ── Chinese ──────────────────────────────────────────────────────────────────
 
@@ -232,18 +232,19 @@ entries:
     framework: HSK
     level: HSK6
     cefr_equivalent: C1
-    title: "論語"
-    author: "孔子門人 (attributed)"
-    year: null
-    source_url: "https://zh.wikisource.org/wiki/%E8%AB%96%E8%AA%9E"
+    title: "大學章句"
+    author: "朱熹 (commentary); 曾子門人 (text, attributed)"
+    year: 1190
+    source_url: "https://zh.wikisource.org/wiki/%E5%A4%A7%E5%AD%B8%E7%AB%A0%E5%8F%A5"
     source_name: "Wikisource Chinese"
     license: public_domain
     genre: classical_philosophy
     dialect: zh-Hant
     script: cjk
     notes:
-      - "Analects of Confucius; Classical Chinese (文言文)"
+      - "Great Learning with Zhu Xi commentary; Classical Chinese (文言文); ~5000 chars on single page"
       - "Not Modern Mandarin; vocabulary is archaic"
+      - "Previously 論語 — changed because zh.wikisource.org/wiki/論語 is an index page only"
 
   # ── Japanese ─────────────────────────────────────────────────────────────────
 
@@ -332,13 +333,12 @@ entries:
     title: "Κατὰ Ἰωάννην"
     author: "Εὐαγγελιστής Ἰωάννης (trad.)"
     year: 90
-    source_url: "https://www.gutenberg.org/files/7388/7388-0.txt"
-    source_name: "Project Gutenberg"
+    source_url: "https://el.wikisource.org/wiki/%CE%9A%CE%B1%CF%84%CE%AC_%CE%99%CF%89%CE%AC%CE%BD%CE%BD%CE%B7%CE%BD"
+    source_name: "Wikisource Greek"
     license: public_domain
     genre: biblical_prose
     dialect: grc
     script: greek
     notes:
-      - "Gospel of John in Koine Greek; PG ID 7388"
-      - "Polytonic Greek text; verify encoding (UTF-8)"
-      - "Ancient text; use with the grc (Koine Greek) plugin only"
+      - "Gospel of John; Koine Greek; full text confirmed on Greek Wikisource"
+      - "Polytonic Greek; use with the grc (Koine Greek) plugin only"
