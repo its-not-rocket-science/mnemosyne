@@ -80,7 +80,8 @@
       "Bash(Get-Content \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\\\\frontend\\\\js\\\\adaptive-reader.js\")",
       "Bash(Select-Object -Last 120)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\" -Recurse -Depth 2 -Directory)",
-      "Bash(Remove-Item *)"
+      "Bash(Remove-Item *)",
+      "Skill(update-config)"
     ]
   }
 }
