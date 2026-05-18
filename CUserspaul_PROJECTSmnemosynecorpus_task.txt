@@ -1,0 +1,304 @@
+This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation.
+
+Summary:
+1. Primary Request and Intent:
+
+The session continued from a previous context (corpus pipeline work). Work completed this session:
+
+**A. Frontend exclude_source_document_id wiring** (in-progress at session start): After `POST /ingest`, read `source_document_id` from response, call `mnemosyneRecommended.reload(id)` to exclude the just-ingested document from recommendations.
+
+**B. Backend text-level exclusion** (user: "still seeing this. add logic to the backend to specifically exclude identical text from the recommendations"): Add `exclude_parsed_text_id` to `GET /recommend` so sentences from the currently-displayed lesson's ParsedText are excluded from results. Thread `parsed_text_id` through parse pipeline (ParseResponse → SSE event → frontend).
+
+**C. Font audit**: User asked what fonts are in use and whether they need revision.
+
+**D. Brand color unification** (extensive specification): Shift functional accent from violet (#7C3AED) to terracotta (#B04018), unify with favicon/medallion. Specific token values, WCAG AA contrast targets, dark mode, nav surface, success/error splits all specified exactly.
+
+**E. Fix pre-existing test failures** (5 tests): i18n snapshot stale (Familiar→Strong SRS label migration dropped translations), LanguageCapabilities wrong defaults, plugin_loader wrong fallback, Latin confidence_note stale string.
+
+**F. Large corpus expansion task** (final message, NOT yet implemented): Extend manifest to cover every supported language at every level A1–C2, add URL verification command, idempotent ingestion with content hashing, persistent `corpus_ingestions` DB table, lockfile `corpora/manifest.lock.json`, new CLI flags, chunk-level caching, coverage report, tests. User also instructed: **"CRITICAL: Respond with TEXT ONLY. Do NOT call any tools."** — this message is a compaction/summary request.
+
+2. Key Technical Concepts:
+- FastAPI + SQLAlchemy async backend (PostgreSQL)
+- Mnemosyne corpus pipeline: manifest.yaml → acquisition → normalization → chunking → NLP parse → persist
+- `ParsedText` / `Sentence` / `CanonicalObjectRow` / `SentenceObjectRow` / `SourceDocumentRow` / `SourceChunkRow` DB models
+- `GET /recommend` adaptive sentence recommendation (i+1 comprehensible input)
+- `exclude_source_document_id` and `exclude_parsed_text_id` query params for recommendation filtering
+- `ParseResponse.parsed_text_id` threaded through SSE job events
+- `window.mnemosyneRecommended` public API: `show()`, `reload(excludeDocId)`, `setExcludedParsedText(id)`
+- WCAG 2.2 AA color contrast compliance (4.5:1 normal text, 3:1 non-text)
+- CSS custom property tokens: `--accent`, `--accent-fill`, `--success`, `--error`, `--success-fill`, `--error-fill`
+- oklch color model for nav shadow DOM
+- Shadow DOM style isolation in Web Components
+- LanguageCapabilities v1/v2 backward-compat defaults
+- spaCy-backed NLP plugins for multiple languages
+- CAVEMAN MODE active throughout (terse responses, fragments OK)
+- Corpus manifest: YAML-based, `corpora/manifest.yaml`
+- SHA-1 slug fallback for non-ASCII cache filenames
+- Savepoint per chunk (`db.begin_nested()`) for DB session isolation
+- Deterministic UUID-v5 for corpus source document IDs
+- Wikisource HTML extraction via BeautifulSoup (`#mw-content-text .mw-parser-output`)
+- TOPIK/HSK/JLPT/ClassicalReading/KoineReading non-CEFR framework mapping
+
+3. Files and Code Sections:
+
+**`frontend/js/recommended-reading.js`**
+- Added module-level variables:
+  ```javascript
+  let _excludeDocId = null
+  let _excludeParsedTextId = null
+  ```
+- Updated `loadRecommendations` URL building:
+  ```javascript
+  let url = `${API_BASE}/recommend?language=${encodeURIComponent(language)}&limit=12`
+  if (_excludeDocId) url += `&exclude_source_document_id=${encodeURIComponent(_excludeDocId)}`
+  if (_excludeParsedTextId) url += `&exclude_parsed_text_id=${encodeURIComponent(_excludeParsedTextId)}`
+  ```
+- Updated public API:
+  ```javascript
+  window.mnemosyneRecommended = {
+    show() { ... },
+    reload(excludeDocId = null) {
+      _excludeDocId = excludeDocId || null
+      clearRecommendations()
+      prefetchStarted = true
+      loadRecommendations(progressShown)
+    },
+    setExcludedParsedText(parsedTextId = null) {
+      _excludeParsedTextId = parsedTextId || null
+    },
+  }
+  ```
+- `refreshForLanguageChange` resets both exclusion IDs to null
+
+**`frontend/js/main.js`**
+- After `parseWithJob` returns:
+  ```javascript
+  const data = await parseWithJob(normalizedText, language)
+  window.mnemosyneRecommended?.setExcludedParsedText(data.parsed_text_id ?? null)
+  ```
+- After ingest:
+  ```javascript
+  const ingestData = await resp.json()
+  saveLessonDialog?.close()
+  refreshLoadLessonBtn()
+  window.mnemosyneRecommended?.reload(ingestData.source_document_id ?? null)
+  ```
+
+**`backend/schemas/parse.py`**
+- Added field to `ParseResponse`:
+  ```python
+  class ParseResponse(BaseModel):
+      sentences: list[SentenceResult]
+      warnings: list[str] = Field(default_factory=list)
+      parsed_text_id: str | None = None
+  ```
+
+**`backend/api/routes/parse.py`**
+- Changed `_persist_parse` return type from `None` to `str`, added `return parsed.id` at end
+
+**`backend/api/routes/parse_jobs.py`**
+- Captures return value:
+  ```python
+  parsed_text_id = await _persist_parse(db, payload, candidate_results, sentences, uuid_to_candidate, user_id)
+  ```
+- Includes in response:
+  ```python
+  response = ParseResponse(sentences=sentences, warnings=job_warnings, parsed_text_id=parsed_text_id)
+  ```
+
+**`backend/api/routes/recommend.py`**
+- Added param:
+  ```python
+  exclude_parsed_text_id: str | None = Query(default=None),
+  ```
+- Added SQL filter after existing `exclude_source_document_id` filter:
+  ```python
+  .where(
+      Sentence.parsed_text_id != exclude_parsed_text_id
+      if exclude_parsed_text_id else True
+  )
+  ```
+
+**`frontend/css/global.css`**
+- Token changes in `:root`:
+  ```css
+  --brand-purple:       #B04018;   /* terracotta — 5.87:1 on white */
+  --brand-purple-light: #FCEEE9;
+  --success:       #047857;   /* emerald-700 — 5.91:1 on white */
+  --error:         #B91C1C;   /* red-700 — 6.94:1 on white */
+  --success-fill:  #10B981;
+  --error-fill:    #EF4444;
+  --accent:             var(--brand-purple);
+  --accent-fill:        #C44B22;   /* 4.78:1 w/ white */
+  ```
+- Dark mode additions:
+  ```css
+  --brand-purple:       #ED9070;
+  --brand-purple-light: #3D1810;
+  --accent:             #ED9070;
+  --accent-fill:        #ED9070;
+  --success-fill:       #34D399;
+  --error-fill:         #F87171;
+  ```
+- Fill migrations: `.button-primary`, `.button-primary:hover`, `.job-progress__bar::after`, `.skip-link` → `var(--accent-fill)`
+
+**`frontend/css/components.css`**
+- Fill migrations: `.script-toggle__btn--active`, `.reader-chip--active`, `.reading-progress::after` → `var(--accent-fill)` (border-color on active states also migrated)
+
+**`frontend/css/adaptive-reader.css`**
+- Fill migrations: `.reader-adaptive-toggle--active/.reader-reinforcement-toggle--active`, `.reader-mastery-btn--active`, `.passage-transition__progress-fill` → `var(--accent-fill)`
+
+**`frontend/components/mnemosyne-top-nav.js`**
+- `SELECT_ARROW` stroke: `%23c4c2d4` → `%23d4ccc4`
+- `--_play: oklch(0.46 0.25 293)` → `oklch(0.68 0.20 45)`
+- `.nav background: oklch(0.22 0.06 280)` → `oklch(0.20 0.04 50)`
+- `.nav color: oklch(0.92 0.02 280)` → `oklch(0.94 0.015 60)`
+- `.nav__logo color: oklch(0.96 0.01 280)` → `oklch(0.96 0.01 60)`
+- `.nav__ctrl color: oklch(0.88 0.02 280)` → `oklch(0.88 0.015 60)`
+- `.nav__mode-indicator color: oklch(0.86 0.02 280)` → `oklch(0.86 0.015 60)`
+- `.nav__pill color: oklch(0.92 0.02 280)` → `oklch(0.94 0.015 60)`
+- `.nav__expand color: oklch(0.88 0.02 280)` → `oklch(0.88 0.015 60)`
+- `.nav__xrow background: oklch(0.26 0.05 280)` → `oklch(0.25 0.04 50)`
+- `::slotted(*) color: oklch(0.92 0.02 280)` → `oklch(0.94 0.015 60)`
+- `::slotted(.ghost-button) color: oklch(0.88 0.02 280)` → `oklch(0.88 0.015 60)`
+
+**`frontend/js/i18n.js`**
+- Translated `adaptive_memory_known` and `adaptive_memory_strong_stat` for all 10 non-English languages:
+  - es: "Fuerte"/"fuerte"
+  - fr: "Fort"/"fort"
+  - de: "Stark"/"stark"
+  - it: "Forte"/"forte"
+  - pt: "Forte"/"forte"
+  - ru: "Твёрдо"/"твёрдо"
+  - ja: "定着"/"定着"
+  - zh: "牢记"/"牢记"
+  - ar: "راسخ"/"راسخ"
+  - he: "חזק"/"חזק"
+
+**`backend/tests/snapshots_memory_map_i18n.json`**
+- Regenerated via Python script to match current i18n.js values
+
+**`backend/schemas/language.py`**
+- Changed defaults in `LanguageCapabilities`:
+  ```python
+  analysis_depth: AnalysisDepth = "full"      # was "dictionary"
+  morphology_quality: QualityLevel = "medium"  # was "none"
+  syntax_support: bool = True                  # was False
+  ```
+- Updated docstring to explain optimistic defaults (pre-v2 plugins are typically full spaCy pipelines)
+
+**`backend/parsing/plugin_loader.py`**
+- Changed bare-plugin fallback:
+  ```python
+  morphology_depth="rich",   # was "none"
+  ```
+
+**`backend/tests/test_latin_plugin.py`**
+- Updated stale assertion:
+  ```python
+  note = c.lesson_data["confidence_note"].lower()
+  assert "lexicon" in note or "citation" in note
+  # was: assert "scaffold" in c.lesson_data["confidence_note"].lower()
+  ```
+
+**`corpora/manifest.yaml`**
+- Existing entries (do not modify except metadata corrections):
+  - en B2: Alice's Adventures in Wonderland, The Yellow Wallpaper
+  - es B1: Cuentos de amor; es C2: Don Quijote
+  - fr B2: Candide; de B2: Die Verwandlung; it B1: Pinocchio
+  - pt C1: Os Maias; ru B2: Дама с собачкой; ar C1: ألف ليلة وليلة
+  - he B1: מגילת רות; zh HSK6/C1: 大學章句
+  - ja N3/B1: 注文の多い料理店; ja N2/B2: 羅生門
+  - ko TOPIK-II/B2 → corrected to TOPIK4/B2: 흥부전
+  - la C1 framework CEFR → ClassicalReading: Commentarii de Bello Gallico
+  - grc C1 framework CEFR → KoineReading: Κατὰ Ἰωάννην
+
+4. Errors and Fixes:
+
+- **Same-document recommendation**: Fixed backend with `exclude_source_document_id` query param (previous session). Frontend wasn't passing it → fixed by reading ingest JSON and calling `reload()`.
+
+- **Text-level recommendation exclusion**: Plain parses (no ingest) had no source_document_id to exclude. Fixed with `exclude_parsed_text_id` — threads parsed_text_id from `_persist_parse` through ParseResponse to frontend.
+
+- **`_persist_parse` background task**: The `/parse` route uses background tasks so `parsed_text_id` isn't available in the route response. Only the jobs route (`parse_jobs.py`) awaits `_persist_parse` directly, so `parsed_text_id` is only populated in SSE job results, not synchronous parse responses.
+
+- **i18n snapshot stale**: When SRS labels changed from recency-based ("Familiar") to SRS-based ("Strong"), translations were dropped. `adaptive_memory_known` was "Strong" (English) for all 11 languages. Fixed by adding translations for 10 non-English languages and regenerating snapshot.
+
+- **LanguageCapabilities defaults mismatch**: Code had conservative defaults (`"dictionary"`, `"none"`, `False`) but tests expected optimistic defaults (`"full"`, `"medium"`, `True`). Tests represent design intent — pre-v2 plugins are typically full spaCy pipelines. Fixed code to match tests.
+
+- **Latin confidence_note**: Note rewritten without "scaffold" word but test still checked for it. Fixed test to check for "lexicon" or "citation" which are in the current note.
+
+5. Problem Solving:
+
+- Traced same-document recommendation: user reported issue → backend fix with `exclude_source_document_id` → still happening → realized frontend wasn't passing it → wired frontend → still happening → identified text-level similarity from plain parse (no ingest, no source_document_id) → added `exclude_parsed_text_id` with full pipeline thread-through.
+
+- Verified no violet/oklch-280 references remain in top-nav after brand change with grep confirmation.
+
+- Confirmed all `background: var(--accent)` fill usages migrated — grep returned empty after changes.
+
+- Snapshot regeneration: Python UnicodeEncodeError on first attempt (Windows cp1252 console) → fixed with `sys.stdout.reconfigure(encoding='utf-8')` and writing to file directly.
+
+6. All User Messages:
+
+- (Session start — continuation, no explicit message; task in progress was frontend wiring for exclude_source_document_id)
+- "still seeing this. add logic to the backend to specifically exclude identical text from the recommendations: [UI screenshot description showing similar Spanish sentences]"
+- "run the tests"
+- "what fonts are we using? do these need to be revised in Claude Design?"
+- [Large brand color specification]: "Brand: shift functional accent from violet → terracotta (AA-verified)..." (full specification for token changes, nav surface, dark mode, success/error splits, contrast targets, commit message)
+- "next?"
+- "fix the pre-existing test failures"
+- [Large corpus expansion task + compaction instruction]: "Task: extend `corpora/manifest.yaml` and the offline corpus pipeline..." + "CRITICAL: Respond with TEXT ONLY. Do NOT call any tools. [...] Your task is to create a detailed summary of the conversation so far..."
+
+7. Pending Tasks:
+
+**Large corpus expansion** (not yet implemented — the final user message):
+- Extend `corpora/manifest.yaml` to cover every supported language (en/es/fr/de/it/pt/ru/ar/he/zh/ja/ko/la/grc) at every level A1–C2 or equivalent, using the candidate sources provided
+- Metadata corrections to existing entries: ko TOPIK-II → TOPIK4; la framework CEFR → ClassicalReading; grc framework CEFR → KoineReading
+- Add `manifest_id` to every entry: `{language}:{framework}:{level}:{slugified_title}:{source_hash_prefix}`
+- Add manifest validation (level coverage, CEFR mapping, required fields, unknown level rejection)
+- Add `poetry run mnemosyne-corpus verify-urls` command (HEAD then GET fallback, 200 check, content length, Wikisource disambiguation detection, PG not-found detection, `manual_review: true` flag)
+- Add idempotent ingestion with stable source identity (sha256) and content identity (raw + normalized hashes)
+- Add persistent `corpus_ingestions` DB table (migration required) with fields: source_identity, manifest_entry_hash, raw/normalized content hashes, language, framework, level, cefr_equivalent, source_document_id, pipeline_version, timestamps, status, error_message
+- Add lockfile `corpora/manifest.lock.json` (manifest_entry_hash, content hashes, cached_path, verified_url, last_verified_at, ingestion_status)
+- Add CLI flags: `--only-new`, `--skip-existing`, `--force`, `--reverify`, `--reparse`, `--dry-run`, `--language`, `--level`
+- Implement smart rebuild logic based on content hash changes
+- Chunk-level caching with normalized_chunk_hash
+- Add `poetry run mnemosyne-corpus coverage-report` command
+- Add tests for: level coverage, TOPIK normalization, ClassicalReading/KoineReading mapping, idempotency, metadata-only change, URL verification failure blocking, hash stability, `--only-new`, `--dry-run`
+- Documentation
+
+**Do NOT duplicate** existing entries for: en B2 (2 texts), es B1/C2, fr B2, de B2, it B1, pt C1, ru B2, ar C1, he B1, zh HSK6/C1, ja N3/N2, ko TOPIK4/B2, la C1, grc C1.
+
+8. Current Work:
+
+The immediately preceding work was fixing the 5 pre-existing test failures. All 5 are now fixed and 3273 tests pass. The final user message is the large corpus expansion task with the instruction to produce a text-only summary rather than implement anything.
+
+The last code changes were to:
+- `backend/schemas/language.py` (LanguageCapabilities defaults)
+- `backend/parsing/plugin_loader.py` (fallback morphology_depth)
+- `backend/tests/test_latin_plugin.py` (stale assertion)
+- `frontend/js/i18n.js` (10 language translations)
+- `backend/tests/snapshots_memory_map_i18n.json` (regenerated)
+
+9. Optional Next Step:
+
+The user's final message requests implementing the large corpus expansion task. The task has not been started. The next step would be to begin implementation starting with:
+
+1. **Modifying `corpora/manifest.yaml`** — apply the three metadata corrections (ko TOPIK-II→TOPIK4, la framework→ClassicalReading, grc framework→KoineReading) and add all missing entries for each language/level combination from the candidate sources provided, using validated URLs.
+
+2. **Creating the DB migration** for the `corpus_ingestions` table.
+
+3. **Implementing URL verification** (`verify-urls` CLI command).
+
+4. **Implementing idempotent ingestion** with content hashing and lockfile.
+
+The user explicitly stated: "Extend `corpora/manifest.yaml` and the offline corpus pipeline so the manifest covers every supported language at every level from A1 to C2 or equivalent, WITHOUT re-digesting texts that are already present or already ingested."
+
+**Security/constraint notes preserved verbatim:**
+- "Do not invent etymologies, idiom meanings, or glosses." (requirement 14)
+- "Preserve existing canonical object IDs." (requirement 15)
+- "Reuse existing parse persistence services. Do not duplicate `/parse` route logic." (requirement 16)
+- "never ingest failed URLs" (requirement 5)
+- "Do not re-digest existing sources." (requirement 6)
+
+If you need specific details from before compaction (like exact code snippets, error messages, or content you generated), read the full transcript at: C:\Users\paul_\.claude\projects\C--Users-paul--PROJECTS-mnemosyne\68c1d3ab-480b-4ccc-baf6-c6d5f16827ff.jsonl
+Continue the conversation from where it left off without asking the user any further questions. Resume directly — do not acknowledge the summary, do not recap what was happening, do not preface with "I'll continue" or similar. Pick up the last task as if the break never happened.
