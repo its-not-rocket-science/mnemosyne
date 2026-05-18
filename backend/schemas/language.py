@@ -208,10 +208,11 @@ class LanguageCapabilities(BaseModel):
 
     Backward compatibility guarantee: all v2 fields carry defaults.  A plugin
     that constructs ``LanguageCapabilities`` with only v1 positional / keyword
-    arguments will continue to load without modification.  The defaults are
-    deliberately conservative (``analysis_depth="dictionary"``, all quality
-    indicators at ``"none"`` or ``False``) so unknown plugins degrade to the
-    safest lesson template rather than claiming capabilities they may lack.
+    arguments will continue to load without modification.  The defaults assume
+    a capable spaCy-backed pipeline (``analysis_depth="full"``,
+    ``syntax_support=True``, ``morphology_quality="medium"``) because pre-v2
+    plugins are typically full NLP pipelines; plugins with weaker analysis
+    explicitly override these fields.
     """
 
     # ── v1 fields (required) ──────────────────────────────────────────────────
@@ -229,7 +230,7 @@ class LanguageCapabilities(BaseModel):
 
     # ── v2 fields (defaulted — backward-compatible) ───────────────────────────
 
-    analysis_depth: AnalysisDepth = "dictionary"
+    analysis_depth: AnalysisDepth = "full"
     """Overall pipeline depth the plugin implements.  See module docstring."""
 
     segmentation_quality: QualityLevel = "medium"
@@ -238,10 +239,10 @@ class LanguageCapabilities(BaseModel):
     tokenization_quality: QualityLevel = "medium"
     """Reliability of word / morpheme tokenization."""
 
-    morphology_quality: QualityLevel = "none"
+    morphology_quality: QualityLevel = "medium"
     """Reliability of morphological analysis (tense, mood, person, …)."""
 
-    syntax_support: bool = False
+    syntax_support: bool = True
     """True when the plugin provides syntactic role / dependency information."""
 
     idiom_detection: bool = False

@@ -234,7 +234,9 @@ class TestUnknownWords:
         result = plugin.analyze_sentence("xyzzy")
         c = result.candidates[0]
         assert "confidence_note" in c.lesson_data
-        assert "scaffold" in c.lesson_data["confidence_note"].lower()
+        # Note warns about limited analysis for words not in the lexicon.
+        note = c.lesson_data["confidence_note"].lower()
+        assert "lexicon" in note or "citation" in note
 
     def test_unknown_word_has_no_confidence_score(self, plugin: LatinPlugin) -> None:
         result = plugin.analyze_sentence("xyzzy")
