@@ -147,9 +147,9 @@ body[data-reveal-known] [data-adaptively-quiet] {
 
 .reader-adaptive-toggle--active,
 .reader-reinforcement-toggle--active {
-  background: var(--accent);
+  background: var(--accent-fill);
   color: white;
-  border-color: var(--accent);
+  border-color: var(--accent-fill);
 }
 
 .reader-adaptive-sync {
@@ -227,7 +227,7 @@ body[data-reveal-known] [data-adaptively-quiet] {
 }
 
 .reader-mastery-btn--active {
-  background: var(--accent);
+  background: var(--accent-fill);
   color: white;
 }
 
@@ -305,7 +305,7 @@ body[data-reveal-known] [data-adaptively-quiet] {
   display: block;
   block-size: 100%;
   inline-size: 100%;
-  background: var(--accent);
+  background: var(--accent-fill);
   transform-origin: inline-start;
   transform: scaleX(0);
 }

@@ -160,9 +160,9 @@
 /* Active state signalled by both class (immediate) and aria-pressed (AT). */
 .script-toggle__btn--active,
 .script-toggle__btn[aria-pressed="true"] {
-  background: var(--accent);
+  background: var(--accent-fill);
   color: var(--accent-contrast);
-  border-color: var(--accent);
+  border-color: var(--accent-fill);
 }
 
 /* ── Script-view layer visibility — sentence cards ───────────────────────────
@@ -349,9 +349,9 @@
 }
 
 .reader-chip--active {
-  background: var(--accent);
+  background: var(--accent-fill);
   color: white;
-  border-color: var(--accent);
+  border-color: var(--accent-fill);
 }
 
 .reader-chip:focus-visible {
@@ -838,7 +838,7 @@ body.player-active .reader-nowplaying {
   display: block;
   height: 100%;
   width: 100%;
-  background: var(--accent);
+  background: var(--accent-fill);
   transform-origin: left center;
   transform: scaleX(var(--progress, 0));
   transition: transform 0.35s ease;
