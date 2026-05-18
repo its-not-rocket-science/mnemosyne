@@ -294,7 +294,7 @@ async def _run_parse_job(
 
         # ── DB persistence ────────────────────────────────────────────────────
         async with session_factory() as db:
-            await _persist_parse(
+            parsed_text_id = await _persist_parse(
                 db, payload, candidate_results, sentences, uuid_to_candidate, user_id
             )
 
@@ -328,7 +328,7 @@ async def _run_parse_job(
                 )
 
         # ── Done ──────────────────────────────────────────────────────────────
-        response = ParseResponse(sentences=sentences, warnings=job_warnings)
+        response = ParseResponse(sentences=sentences, warnings=job_warnings, parsed_text_id=parsed_text_id)
         await store.finish(job, response.model_dump(mode="json"))
         logger.info(
             "parse_job done job_id=%s sentences=%d objects=%d",

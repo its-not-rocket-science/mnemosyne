@@ -43,7 +43,7 @@ import logging
 from collections import defaultdict
 
 from fastapi import APIRouter, Depends, Query
-from sqlalchemy import select
+from sqlalchemy import or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session
@@ -90,6 +90,8 @@ _PASSAGE_CONTEXT_RADIUS: int = 1
 async def recommend_text(
     language: str,
     limit: int = Query(default=10, ge=1, le=50),
+    exclude_source_document_id: str | None = Query(default=None),
+    exclude_parsed_text_id: str | None = Query(default=None),
     db: AsyncSession = Depends(get_db_session),
     current_user: str = Depends(get_current_user),
 ) -> RecommendTextResponse:
@@ -177,6 +179,17 @@ async def recommend_text(
         .outerjoin(SourceChunkRow,    SourceChunkRow.parsed_text_id == Sentence.parsed_text_id)
         .outerjoin(SourceDocumentRow, SourceDocumentRow.id == SourceChunkRow.source_document_id)
         .where(ParsedText.language == language)
+        .where(
+            or_(
+                SourceDocumentRow.id.is_(None),
+                SourceDocumentRow.id != exclude_source_document_id,
+            )
+            if exclude_source_document_id else True
+        )
+        .where(
+            Sentence.parsed_text_id != exclude_parsed_text_id
+            if exclude_parsed_text_id else True
+        )
         .order_by(Sentence.id)
     )
     rows = rows_result.all()

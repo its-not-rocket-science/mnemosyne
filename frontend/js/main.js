@@ -740,8 +740,10 @@ saveLessonConfirmBtn?.addEventListener('click', async () => {
       body:    JSON.stringify({ text: currentText, language, title, source_url: currentSourceUrl || null }),
     })
     if (!resp.ok) throw new Error(resp.status)
+    const ingestData = await resp.json()
     saveLessonDialog?.close()
     refreshLoadLessonBtn()
+    window.mnemosyneRecommended?.reload(ingestData.source_document_id ?? null)
   } catch {
     if (saveLessonStatus) {
       saveLessonStatus.textContent = t('parse_error_generic')
@@ -986,6 +988,7 @@ async function doParseText(text) {
   try {
     const language = languageSelect.value
     const data = await parseWithJob(normalizedText, language)
+    window.mnemosyneRecommended?.setExcludedParsedText(data.parsed_text_id ?? null)
     const pipelinePayload = buildLessonPipelinePayload({
       sourceText: text,
       normalizedText,
