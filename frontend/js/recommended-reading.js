@@ -30,6 +30,8 @@ let activeRecommendationLanguage = ''
 let recommendationRequestId = 0
 let progressShown = false
 let prefetchStarted = false
+let _excludeDocId = null
+let _excludeParsedTextId = null
 let panel = null
 let countdownTimer = null
 let altExpanded = false
@@ -361,10 +363,10 @@ async function loadRecommendations(showEmpty = false) {
   activeRecommendationLanguage = language
   const requestId = ++recommendationRequestId
   try {
-    const response = await fetch(
-      `${API_BASE}/recommend?language=${encodeURIComponent(language)}&limit=12`,
-      { headers: getAuthHeaders() },
-    )
+    let url = `${API_BASE}/recommend?language=${encodeURIComponent(language)}&limit=12`
+    if (_excludeDocId) url += `&exclude_source_document_id=${encodeURIComponent(_excludeDocId)}`
+    if (_excludeParsedTextId) url += `&exclude_parsed_text_id=${encodeURIComponent(_excludeParsedTextId)}`
+    const response = await fetch(url, { headers: getAuthHeaders() })
     if (!response.ok) return
     const data = await response.json()
     if (requestId !== recommendationRequestId) return
@@ -387,6 +389,15 @@ window.mnemosyneRecommended = {
       showPanel(true)
     }
   },
+  reload(excludeDocId = null) {
+    _excludeDocId = excludeDocId || null
+    clearRecommendations()
+    prefetchStarted = true
+    loadRecommendations(progressShown)
+  },
+  setExcludedParsedText(parsedTextId = null) {
+    _excludeParsedTextId = parsedTextId || null
+  },
 }
 
 function init() {
@@ -396,6 +407,8 @@ function init() {
   function refreshForLanguageChange() {
     recommendationRequestId += 1
     activeRecommendationLanguage = languageSelect?.value || ''
+    _excludeDocId = null
+    _excludeParsedTextId = null
     clearRecommendations()
     resetProgress()
     queueMicrotask(onScroll)

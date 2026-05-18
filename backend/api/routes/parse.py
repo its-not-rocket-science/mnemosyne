@@ -156,8 +156,11 @@ async def _persist_parse(
     sentences: list[SentenceResult],
     uuid_to_candidate: dict[str, tuple[str, CandidateObject]],
     user_id: str,
-) -> None:
-    """Write ParsedText, Sentences, upsert CanonicalObjects, and record relations."""
+) -> str:
+    """Write ParsedText, Sentences, upsert CanonicalObjects, and record relations.
+
+    Returns the parsed_text_id of the newly created ParsedText row.
+    """
     parsed = ParsedText(
         language=payload.language,
         source_text=payload.text,
@@ -279,6 +282,7 @@ async def _persist_parse(
                 ))
 
     await db.commit()
+    return parsed.id
 
 
 def _now_utc() -> datetime:
