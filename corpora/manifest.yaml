@@ -13,6 +13,9 @@
 #               cc_by_nc | cc_by_nc_sa
 # cefr_equivalent : Normalised CEFR level for cross-language difficulty
 #               comparison.  Required when framework != CEFR.
+# manifest_id : Auto-generated stable ID if omitted.  Format:
+#               {language}:{framework}:{level}:{slug}:{url_hash8}
+# manual_review : true = URL or content needs human check before ingestion.
 # notes       : Free-text; used for acquisition hints and provenance context.
 #               Does NOT affect pipeline behaviour.
 #
@@ -21,10 +24,61 @@
 # Project Gutenberg IDs have been cross-checked against the PG catalog.
 # Aozora Bunko card/file numbers should be verified at https://www.aozora.gr.jp
 # before running a large-scale ingest.
+# thelatinlibrary.com entries are marked manual_review: true because the
+# acquisition module uses generic HTML extraction for that domain.
 
 entries:
 
   # ── English ──────────────────────────────────────────────────────────────────
+
+  - language: en
+    framework: CEFR
+    level: A1
+    cefr_equivalent: A1
+    title: "Aesop's Fables"
+    author: "Aesop (trans. George Fyler Townsend)"
+    year: 1867
+    source_url: "https://www.gutenberg.org/files/11339/11339-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: fables
+    dialect: en
+    script: latin
+    notes:
+      - "PG ID 11339; short moral fables; simple vocabulary suitable for A1"
+
+  - language: en
+    framework: CEFR
+    level: A2
+    cefr_equivalent: A2
+    title: "The Tale of Peter Rabbit"
+    author: "Beatrix Potter"
+    year: 1902
+    source_url: "https://en.wikisource.org/wiki/The_Tale_of_Peter_Rabbit"
+    source_name: "Wikisource English"
+    license: public_domain
+    genre: children_literature
+    dialect: en-GB
+    script: latin
+    notes:
+      - "Classic picture book; simple declarative sentences; died 1943"
+      - "Text only; no illustrations in Wikisource version"
+
+  - language: en
+    framework: CEFR
+    level: B1
+    cefr_equivalent: B1
+    title: "The Wind in the Willows"
+    author: "Kenneth Grahame"
+    year: 1908
+    source_url: "https://www.gutenberg.org/files/289/289-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: fiction
+    dialect: en-GB
+    script: latin
+    notes:
+      - "PG ID 289; accessible Edwardian prose; Grahame died 1932"
 
   - language: en
     framework: CEFR
@@ -58,7 +112,121 @@ entries:
     notes:
       - "PG ID 1952; short story; good for phrase-level analysis"
 
+  - language: en
+    framework: CEFR
+    level: C1
+    cefr_equivalent: C1
+    title: "Pride and Prejudice"
+    author: "Jane Austen"
+    year: 1813
+    source_url: "https://www.gutenberg.org/files/1342/1342-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: novel
+    dialect: en-GB
+    script: latin
+    notes:
+      - "PG ID 1342; Austen died 1817; rich subordinate clauses and irony"
+
+  - language: en
+    framework: CEFR
+    level: C2
+    cefr_equivalent: C2
+    title: "Moby-Dick"
+    author: "Herman Melville"
+    year: 1851
+    source_url: "https://www.gutenberg.org/files/2701/2701-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: novel
+    dialect: en-US
+    script: latin
+    notes:
+      - "PG ID 2701; Melville died 1891; highly complex syntax and archaic vocabulary"
+
   # ── Spanish ──────────────────────────────────────────────────────────────────
+
+  - language: es
+    framework: CEFR
+    level: A1
+    cefr_equivalent: A1
+    title: "Fábulas de Samaniego"
+    author: "Félix María de Samaniego"
+    year: 1781
+    source_url: "https://es.wikisource.org/wiki/F%C3%A1bulas_(Samaniego)"
+    source_name: "Wikisource Spanish"
+    license: public_domain
+    genre: fables
+    dialect: es-ES
+    script: latin
+    notes:
+      - "Short rhyming fables in clear standard Spanish; Samaniego died 1801"
+
+  - language: es
+    framework: CEFR
+    level: A2
+    cefr_equivalent: A2
+    title: "Platero y yo"
+    author: "Juan Ramón Jiménez"
+    year: 1914
+    source_url: "https://www.gutenberg.org/files/9980/9980-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: prose_poem
+    dialect: es-ES
+    script: latin
+    notes:
+      - "PG ID 9980; lyrical short chapters; Jiménez died 1958 (PD in US)"
+      - "Simple present-tense descriptive prose; excellent for A2"
+
+  - language: es
+    framework: CEFR
+    level: B1
+    cefr_equivalent: B1
+    title: "Cuentos de amor, de locura y de muerte"
+    author: "Horacio Quiroga"
+    year: 1917
+    source_url: "https://www.gutenberg.org/files/13507/13507-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: short_stories
+    dialect: es-419
+    script: latin
+    notes:
+      - "PG ID 13507; accessible short fiction; River Plate Spanish"
+
+  - language: es
+    framework: CEFR
+    level: B2
+    cefr_equivalent: B2
+    title: "Lazarillo de Tormes"
+    author: "Anónimo"
+    year: 1554
+    source_url: "https://es.wikisource.org/wiki/La_vida_de_Lazarillo_de_Tormes_y_de_sus_fortunas_y_adversidades"
+    source_name: "Wikisource Spanish"
+    license: public_domain
+    genre: picaresque_novel
+    dialect: es-ES
+    script: latin
+    notes:
+      - "First picaresque novel; archaic 16th-century Spanish orthography"
+      - "Short; excellent B2 challenge for vocabulary and register"
+
+  - language: es
+    framework: CEFR
+    level: C1
+    cefr_equivalent: C1
+    title: "La Regenta"
+    author: "Leopoldo Alas (Clarín)"
+    year: 1884
+    source_url: "https://es.wikisource.org/wiki/La_Regenta"
+    source_name: "Wikisource Spanish"
+    license: public_domain
+    genre: novel
+    dialect: es-ES
+    script: latin
+    notes:
+      - "Clarín died 1901; dense psychological realism; large lexicon"
 
   - language: es
     framework: CEFR
@@ -77,23 +245,55 @@ entries:
       - "PG ID 2000; original Spanish"
       - "Early Modern Spanish orthography — expect high OOV rate in spaCy"
 
-  - language: es
+  # ── French ───────────────────────────────────────────────────────────────────
+
+  - language: fr
+    framework: CEFR
+    level: A1
+    cefr_equivalent: A1
+    title: "Contes de Perrault"
+    author: "Charles Perrault"
+    year: 1697
+    source_url: "https://fr.wikisource.org/wiki/Contes_de_Perrault"
+    source_name: "Wikisource French"
+    license: public_domain
+    genre: fairy_tales
+    dialect: fr-FR
+    script: latin
+    notes:
+      - "Classic fairy tales; clear narrative prose; Perrault died 1703"
+
+  - language: fr
+    framework: CEFR
+    level: A2
+    cefr_equivalent: A2
+    title: "Fables de La Fontaine"
+    author: "Jean de La Fontaine"
+    year: 1668
+    source_url: "https://fr.wikisource.org/wiki/Fables_de_La_Fontaine"
+    source_name: "Wikisource French"
+    license: public_domain
+    genre: fables
+    dialect: fr-FR
+    script: latin
+    notes:
+      - "Short verse fables; La Fontaine died 1695; classic school text"
+
+  - language: fr
     framework: CEFR
     level: B1
     cefr_equivalent: B1
-    title: "Cuentos de amor, de locura y de muerte"
-    author: "Horacio Quiroga"
-    year: 1917
-    source_url: "https://www.gutenberg.org/files/13507/13507-0.txt"
+    title: "Le Tour du monde en quatre-vingts jours"
+    author: "Jules Verne"
+    year: 1872
+    source_url: "https://www.gutenberg.org/cache/epub/800/pg800.txt"
     source_name: "Project Gutenberg"
     license: public_domain
-    genre: short_stories
-    dialect: es-419
+    genre: adventure_fiction
+    dialect: fr-FR
     script: latin
     notes:
-      - "PG ID 13507; accessible short fiction; River Plate Spanish"
-
-  # ── French ───────────────────────────────────────────────────────────────────
+      - "PG ID 800 (French edition); Verne died 1905; accessible adventure prose"
 
   - language: fr
     framework: CEFR
@@ -112,7 +312,88 @@ entries:
       - "PG ID 4650 (French edition)"
       - "Moderately dense 18th-century vocabulary"
 
+  - language: fr
+    framework: CEFR
+    level: C1
+    cefr_equivalent: C1
+    title: "Madame Bovary"
+    author: "Gustave Flaubert"
+    year: 1857
+    source_url: "https://fr.wikisource.org/wiki/Madame_Bovary"
+    source_name: "Wikisource French"
+    license: public_domain
+    genre: novel
+    dialect: fr-FR
+    script: latin
+    notes:
+      - "Flaubert died 1880; dense free indirect discourse; rich vocabulary"
+
+  - language: fr
+    framework: CEFR
+    level: C2
+    cefr_equivalent: C2
+    title: "Du côté de chez Swann"
+    author: "Marcel Proust"
+    year: 1913
+    source_url: "https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann"
+    source_name: "Wikisource French"
+    license: public_domain
+    genre: novel
+    dialect: fr-FR
+    script: latin
+    notes:
+      - "Proust died 1922; characteristically long complex sentences"
+      - "Highest syntactic complexity of the French corpus set"
+
   # ── German ───────────────────────────────────────────────────────────────────
+
+  - language: de
+    framework: CEFR
+    level: A1
+    cefr_equivalent: A1
+    title: "Kinder- und Hausmärchen"
+    author: "Jacob Grimm und Wilhelm Grimm"
+    year: 1812
+    source_url: "https://de.wikisource.org/wiki/Kinder-_und_Haus-M%C3%A4rchen"
+    source_name: "Wikisource German"
+    license: public_domain
+    genre: fairy_tales
+    dialect: de-DE
+    script: latin
+    notes:
+      - "Grimm Brothers fairy tales; simple narrative past tense; died 1863/1859"
+
+  - language: de
+    framework: CEFR
+    level: A2
+    cefr_equivalent: A2
+    title: "Der Struwwelpeter"
+    author: "Heinrich Hoffmann"
+    year: 1845
+    source_url: "https://de.wikisource.org/wiki/Der_Struwwelpeter"
+    source_name: "Wikisource German"
+    license: public_domain
+    genre: children_literature
+    dialect: de-DE
+    script: latin
+    notes:
+      - "Rhyming cautionary tales; very short; Hoffmann died 1894"
+
+  - language: de
+    framework: CEFR
+    level: B1
+    cefr_equivalent: B1
+    title: "Heidis Lehr- und Wanderjahre"
+    author: "Johanna Spyri"
+    year: 1880
+    source_url: "https://de.wikisource.org/wiki/Heidis_Lehr-_und_Wanderjahre"
+    source_name: "Wikisource German"
+    license: public_domain
+    genre: children_literature
+    dialect: de-DE
+    script: latin
+    notes:
+      - "Heidi (part 1); Spyri died 1901; accessible narrative prose"
 
   - language: de
     framework: CEFR
@@ -130,7 +411,71 @@ entries:
     notes:
       - "PG ID 22367; German original; Kafka died 1924"
 
+  - language: de
+    framework: CEFR
+    level: C1
+    cefr_equivalent: C1
+    title: "Effi Briest"
+    author: "Theodor Fontane"
+    year: 1896
+    source_url: "https://de.wikisource.org/wiki/Effi_Briest"
+    source_name: "Wikisource German"
+    license: public_domain
+    genre: novel
+    dialect: de-DE
+    script: latin
+    notes:
+      - "Fontane died 1898; social realism; dense dialogue and irony"
+
+  - language: de
+    framework: CEFR
+    level: C2
+    cefr_equivalent: C2
+    title: "Faust — Der Tragödie erster Teil"
+    author: "Johann Wolfgang von Goethe"
+    year: 1808
+    source_url: "https://de.wikisource.org/wiki/Faust_-_Der_Trag%C3%B6die_erster_Teil"
+    source_name: "Wikisource German"
+    license: public_domain
+    genre: drama
+    dialect: de-DE
+    script: latin
+    notes:
+      - "Goethe died 1832; verse drama; archaic grammar and elevated register"
+
   # ── Italian ──────────────────────────────────────────────────────────────────
+
+  - language: it
+    framework: CEFR
+    level: A1
+    cefr_equivalent: A1
+    title: "Favole di Esopo"
+    author: "Esopo (trad. italianan)"
+    year: null
+    source_url: "https://it.wikisource.org/wiki/Favole_di_Esopo"
+    source_name: "Wikisource Italian"
+    license: public_domain
+    genre: fables
+    dialect: it-IT
+    script: latin
+    notes:
+      - "Italian Aesop fables; simple declarative sentences; classical source"
+
+  - language: it
+    framework: CEFR
+    level: A2
+    cefr_equivalent: A2
+    title: "Cuore"
+    author: "Edmondo De Amicis"
+    year: 1886
+    source_url: "https://it.wikisource.org/wiki/Cuore"
+    source_name: "Wikisource Italian"
+    license: public_domain
+    genre: children_literature
+    dialect: it-IT
+    script: latin
+    notes:
+      - "De Amicis died 1908; school diary format; accessible narrative"
 
   - language: it
     framework: CEFR
@@ -149,7 +494,120 @@ entries:
       - "PG ID 25447 (Italian original); Collodi died 1890"
       - "Verify URL before bulk ingest"
 
+  - language: it
+    framework: CEFR
+    level: B2
+    cefr_equivalent: B2
+    title: "Vita dei campi"
+    author: "Giovanni Verga"
+    year: 1880
+    source_url: "https://it.wikisource.org/wiki/Vita_dei_campi"
+    source_name: "Wikisource Italian"
+    license: public_domain
+    genre: short_stories
+    dialect: it-IT
+    script: latin
+    notes:
+      - "Verga died 1922; verismo short stories; Sicilian-inflected dialogue"
+
+  - language: it
+    framework: CEFR
+    level: C1
+    cefr_equivalent: C1
+    title: "I promessi sposi"
+    author: "Alessandro Manzoni"
+    year: 1842
+    source_url: "https://it.wikisource.org/wiki/I_promessi_sposi"
+    source_name: "Wikisource Italian"
+    license: public_domain
+    genre: novel
+    dialect: it-IT
+    script: latin
+    notes:
+      - "Manzoni died 1873; foundational Italian literary novel; rich syntax"
+
+  - language: it
+    framework: CEFR
+    level: C2
+    cefr_equivalent: C2
+    title: "Divina Commedia"
+    author: "Dante Alighieri"
+    year: 1320
+    source_url: "https://it.wikisource.org/wiki/Divina_Commedia"
+    source_name: "Wikisource Italian"
+    license: public_domain
+    genre: epic_poem
+    dialect: it-IT
+    script: latin
+    notes:
+      - "Dante died 1321; medieval Tuscan Italian; highest difficulty"
+      - "Terza rima verse; requires advanced vocabulary and historical knowledge"
+
   # ── Portuguese ───────────────────────────────────────────────────────────────
+
+  - language: pt
+    framework: CEFR
+    level: A1
+    cefr_equivalent: A1
+    title: "Contos populares portugueses"
+    author: "Adolfo Coelho"
+    year: 1879
+    source_url: "https://pt.wikisource.org/wiki/Contos_populares_portugueses"
+    source_name: "Wikisource Portuguese"
+    license: public_domain
+    genre: folk_tales
+    dialect: pt-PT
+    script: latin
+    notes:
+      - "Coelho died 1919; short folk tales; clear narrative Portuguese"
+
+  - language: pt
+    framework: CEFR
+    level: A2
+    cefr_equivalent: A2
+    title: "Histórias da Avozinha"
+    author: "Ana de Castro Osório"
+    year: 1897
+    source_url: "https://pt.wikisource.org/wiki/Hist%C3%B3rias_da_Avozinha"
+    source_name: "Wikisource Portuguese"
+    license: public_domain
+    genre: children_literature
+    dialect: pt-PT
+    script: latin
+    notes:
+      - "Osório died 1935; gentle stories for children; accessible A2 prose"
+
+  - language: pt
+    framework: CEFR
+    level: B1
+    cefr_equivalent: B1
+    title: "A Cartomante"
+    author: "Joaquim Maria Machado de Assis"
+    year: 1884
+    source_url: "https://pt.wikisource.org/wiki/A_Cartomante"
+    source_name: "Wikisource Portuguese"
+    license: public_domain
+    genre: short_story
+    dialect: pt-BR
+    script: latin
+    notes:
+      - "Machado de Assis died 1908; Brazilian Portuguese; short story"
+
+  - language: pt
+    framework: CEFR
+    level: B2
+    cefr_equivalent: B2
+    title: "O Alienista"
+    author: "Joaquim Maria Machado de Assis"
+    year: 1882
+    source_url: "https://pt.wikisource.org/wiki/O_Alienista"
+    source_name: "Wikisource Portuguese"
+    license: public_domain
+    genre: novella
+    dialect: pt-BR
+    script: latin
+    notes:
+      - "Machado de Assis died 1908; satirical novella; moderate complexity"
 
   - language: pt
     framework: CEFR
@@ -168,7 +626,74 @@ entries:
       - "PG ID 40409; Eça de Queirós died 1900; European Portuguese"
       - "Verify PG ID before bulk ingest"
 
+  - language: pt
+    framework: CEFR
+    level: C2
+    cefr_equivalent: C2
+    title: "Os Lusíadas"
+    author: "Luís de Camões"
+    year: 1572
+    source_url: "https://pt.wikisource.org/wiki/Os_Lus%C3%ADadas"
+    source_name: "Wikisource Portuguese"
+    license: public_domain
+    genre: epic_poem
+    dialect: pt-PT
+    script: latin
+    notes:
+      - "Camões died 1580; Renaissance epic verse; archaic Portuguese"
+
   # ── Russian ──────────────────────────────────────────────────────────────────
+
+  - language: ru
+    framework: CEFR
+    level: A1
+    cefr_equivalent: A1
+    title: "Филипок"
+    author: "Лев Николаевич Толстой"
+    year: 1875
+    source_url: "https://ru.wikisource.org/wiki/%D0%A4%D0%B8%D0%BB%D0%B8%D0%BF%D0%BE%D0%BA_(%D0%A2%D0%BE%D0%BB%D1%81%D1%82%D0%BE%D0%B9)"
+    source_name: "Wikisource Russian"
+    license: public_domain
+    genre: children_story
+    dialect: ru-RU
+    script: cyrillic
+    notes:
+      - "Filipok; Tolstoy died 1910; very short story for children"
+      - "Simple present and past tense; minimal vocabulary"
+
+  - language: ru
+    framework: CEFR
+    level: A2
+    cefr_equivalent: A2
+    title: "Колобок"
+    author: "мчбул"
+    year: null
+    source_url: "https://ru.wikisource.org/wiki/%D0%9A%D0%BE%D0%BB%D0%BE%D0%B1%D0%BE%D0%BA"
+    source_name: "Wikisource Russian"
+    license: public_domain
+    genre: folk_tale
+    dialect: ru-RU
+    script: cyrillic
+    notes:
+      - "Kolobok; traditional Russian folk tale; repetitive structure ideal for A2"
+      - "Author listed as anonymous (народная сказка)"
+
+  - language: ru
+    framework: CEFR
+    level: B1
+    cefr_equivalent: B1
+    title: "Каштанка"
+    author: "Антон Павлович Чехов"
+    year: 1887
+    source_url: "https://ru.wikisource.org/wiki/%D0%9A%D0%B0%D1%88%D1%82%D0%B0%D0%BD%D0%BA%D0%B0_(%D0%A7%D0%B5%D1%85%D0%BE%D0%B2)"
+    source_name: "Wikisource Russian"
+    license: public_domain
+    genre: short_story
+    dialect: ru-RU
+    script: cyrillic
+    notes:
+      - "Kashtanka; Chekhov died 1904; gentle story about a dog"
+      - "Clear narrative past tense; manageable B1 vocabulary"
 
   - language: ru
     framework: CEFR
@@ -187,7 +712,108 @@ entries:
       - "The Lady with the Dog; full text on single Wikisource page (~120k chars)"
       - "Chekhov died 1904; PG Russian section is audio-only, hence Wikisource"
 
+  - language: ru
+    framework: CEFR
+    level: C1
+    cefr_equivalent: C1
+    title: "Преступление и наказание"
+    author: "Фёдор Михайлович Достоевский"
+    year: 1866
+    source_url: "https://ru.wikisource.org/wiki/%D0%9F%D1%80%D0%B5%D1%81%D1%82%D1%83%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B8_%D0%BD%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D0%B8%D0%B5"
+    source_name: "Wikisource Russian"
+    license: public_domain
+    genre: novel
+    dialect: ru-RU
+    script: cyrillic
+    notes:
+      - "Crime and Punishment; Dostoyevsky died 1881; dense psychology"
+
+  - language: ru
+    framework: CEFR
+    level: C2
+    cefr_equivalent: C2
+    title: "Война и мир"
+    author: "Лев Николаевич Толстой"
+    year: 1869
+    source_url: "https://ru.wikisource.org/wiki/%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%B8_%D0%BC%D0%B8%D1%80"
+    source_name: "Wikisource Russian"
+    license: public_domain
+    genre: novel
+    dialect: ru-RU
+    script: cyrillic
+    notes:
+      - "War and Peace; Tolstoy died 1910; French passages interspersed"
+      - "Acquisition will yield a very large text (~580k words)"
+
   # ── Arabic ───────────────────────────────────────────────────────────────────
+
+  - language: ar
+    framework: CEFR
+    level: A1
+    cefr_equivalent: A1
+    title: "الأسد والفأر"
+    author: "مجهول (نقل عن إيسوب)"
+    year: null
+    source_url: "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D8%A3%D8%B3%D8%AF_%D9%88%D8%A7%D9%84%D9%81%D8%A3%D8%B1"
+    source_name: "Wikisource Arabic"
+    license: public_domain
+    genre: fable
+    dialect: ar
+    script: arabic
+    notes:
+      - "The Lion and the Mouse; Aesop fable in Arabic; very short"
+      - "Manual review recommended — page content may be brief"
+    manual_review: true
+
+  - language: ar
+    framework: CEFR
+    level: A2
+    cefr_equivalent: A2
+    title: "حكايات إيسوب"
+    author: "مجهول (نقل عن إيسوب)"
+    year: null
+    source_url: "https://ar.wikisource.org/wiki/%D8%AD%D9%83%D8%A7%D9%8A%D8%A7%D8%AA_%D8%A5%D9%8A%D8%B3%D9%88%D8%A8"
+    source_name: "Wikisource Arabic"
+    license: public_domain
+    genre: fables
+    dialect: ar
+    script: arabic
+    notes:
+      - "Aesop's fables in Arabic; simple vocabulary; manual review recommended"
+    manual_review: true
+
+  - language: ar
+    framework: CEFR
+    level: B1
+    cefr_equivalent: B1
+    title: "كليلة ودمنة"
+    author: "ابن المقفع"
+    year: 750
+    source_url: "https://ar.wikisource.org/wiki/%D9%83%D9%84%D9%8A%D9%84%D8%A9_%D9%88%D8%AF%D9%85%D9%86%D8%A9"
+    source_name: "Wikisource Arabic"
+    license: public_domain
+    genre: wisdom_literature
+    dialect: ar
+    script: arabic
+    notes:
+      - "Kalila and Dimna; Ibn al-Muqaffa died ~757; fable-based wisdom literature"
+      - "Classical Arabic; manageable narrative structure"
+
+  - language: ar
+    framework: CEFR
+    level: B2
+    cefr_equivalent: B2
+    title: "قصص الأنبياء"
+    author: "ابن كثير"
+    year: 1370
+    source_url: "https://ar.wikisource.org/wiki/%D9%82%D8%B5%D8%B5_%D8%A7%D9%84%D8%A3%D9%86%D8%A8%D9%8A%D8%A7%D8%A1"
+    source_name: "Wikisource Arabic"
+    license: public_domain
+    genre: religious_literature
+    dialect: ar
+    script: arabic
+    notes:
+      - "Stories of the Prophets; Ibn Kathir died 1373; Classical Arabic narrative"
 
   - language: ar
     framework: CEFR
@@ -206,7 +832,57 @@ entries:
       - "One Thousand and One Nights, Part 1; medieval Classical Arabic"
       - "Not Modern Standard Arabic; expect high OOV for contemporary learners"
 
+  - language: ar
+    framework: CEFR
+    level: C2
+    cefr_equivalent: C2
+    title: "مقدمة ابن خلدون"
+    author: "ابن خلدون"
+    year: 1377
+    source_url: "https://ar.wikisource.org/wiki/%D9%85%D9%82%D8%AF%D9%85%D8%A9_%D8%A7%D8%A8%D9%86_%D8%AE%D9%84%D8%AF%D9%88%D9%86"
+    source_name: "Wikisource Arabic"
+    license: public_domain
+    genre: historical_philosophy
+    dialect: ar
+    script: arabic
+    notes:
+      - "Muqaddimah; Ibn Khaldun died 1406; densest classical Arabic prose"
+      - "Encyclopaedic in scope; highest difficulty for Arabic learners"
+
   # ── Hebrew ───────────────────────────────────────────────────────────────────
+
+  - language: he
+    framework: CEFR
+    level: A1
+    cefr_equivalent: A1
+    title: "בראשית א"
+    author: "מחבר לא ידוע"
+    year: null
+    source_url: "https://he.wikisource.org/wiki/%D7%91%D7%A8%D7%90%D7%A9%D7%99%D7%AA_%D7%90"
+    source_name: "Wikisource Hebrew"
+    license: public_domain
+    genre: biblical_prose
+    dialect: he-IL
+    script: hebrew
+    notes:
+      - "Genesis chapter 1; Biblical Hebrew; very short; repetitive structure"
+      - "Excellent for introducing waw-consecutive and simple verbal patterns"
+
+  - language: he
+    framework: CEFR
+    level: A2
+    cefr_equivalent: A2
+    title: "ספר יונה"
+    author: "מחבר לא ידוע"
+    year: null
+    source_url: "https://he.wikisource.org/wiki/%D7%99%D7%95%D7%A0%D7%94"
+    source_name: "Wikisource Hebrew"
+    license: public_domain
+    genre: biblical_prose
+    dialect: he-IL
+    script: hebrew
+    notes:
+      - "Book of Jonah; 4 short chapters; clear narrative Biblical Hebrew"
 
   - language: he
     framework: CEFR
@@ -226,7 +902,139 @@ entries:
       - "Short and grammatically regular; good for morphological analysis"
       - "Previous URL (wiki/רות) was a disambiguation page returning 254 chars"
 
+  - language: he
+    framework: CEFR
+    level: B2
+    cefr_equivalent: B2
+    title: "מגילת אסתר"
+    author: "מחבר לא ידוע"
+    year: null
+    source_url: "https://he.wikisource.org/wiki/%D7%90%D7%A1%D7%AA%D7%A8"
+    source_name: "Wikisource Hebrew"
+    license: public_domain
+    genre: biblical_prose
+    dialect: he-IL
+    script: hebrew
+    notes:
+      - "Book of Esther; 10 chapters; more complex narrative and dialogue"
+
+  - language: he
+    framework: CEFR
+    level: C1
+    cefr_equivalent: C1
+    title: "קהלת"
+    author: "מחבר לא ידוע"
+    year: null
+    source_url: "https://he.wikisource.org/wiki/%D7%A7%D7%94%D7%9C%D7%AA"
+    source_name: "Wikisource Hebrew"
+    license: public_domain
+    genre: biblical_wisdom
+    dialect: he-IL
+    script: hebrew
+    notes:
+      - "Ecclesiastes; philosophical Biblical Hebrew; unusual Late Biblical vocabulary"
+
+  - language: he
+    framework: CEFR
+    level: C2
+    cefr_equivalent: C2
+    title: "ישעיהו"
+    author: "מחבר לא ידוע"
+    year: null
+    source_url: "https://he.wikisource.org/wiki/%D7%99%D7%A9%D7%A2%D7%99%D7%94%D7%95"
+    source_name: "Wikisource Hebrew"
+    license: public_domain
+    genre: biblical_poetry
+    dialect: he-IL
+    script: hebrew
+    notes:
+      - "Isaiah; 66 chapters; highly poetic Biblical Hebrew; densest vocabulary"
+
   # ── Chinese ──────────────────────────────────────────────────────────────────
+
+  - language: zh
+    framework: HSK
+    level: HSK1
+    cefr_equivalent: A1
+    title: "百家姓"
+    author: "作者不詳"
+    year: 960
+    source_url: "https://zh.wikisource.org/wiki/%E7%99%BE%E5%AE%B6%E5%A7%93"
+    source_name: "Wikisource Chinese"
+    license: public_domain
+    genre: classical_list
+    dialect: zh-Hant
+    script: cjk
+    notes:
+      - "Hundred Family Surnames; rhyming list of Chinese surnames; ~500 characters"
+      - "Repetitive structure; minimal syntax; excellent for character recognition"
+
+  - language: zh
+    framework: HSK
+    level: HSK2
+    cefr_equivalent: A2
+    title: "三字經"
+    author: "王應麟 (attribution)"
+    year: 1200
+    source_url: "https://zh.wikisource.org/wiki/%E4%B8%89%E5%AD%97%E7%B6%93"
+    source_name: "Wikisource Chinese"
+    license: public_domain
+    genre: classical_primer
+    dialect: zh-Hant
+    script: cjk
+    notes:
+      - "Three Character Classic; 3-character rhyming lines; classical primer"
+      - "Very dense; ~1000 characters; standard entry text for Classical Chinese"
+
+  - language: zh
+    framework: HSK
+    level: HSK3
+    cefr_equivalent: B1
+    title: "弟子規"
+    author: "李毓秀"
+    year: 1700
+    source_url: "https://zh.wikisource.org/wiki/%E5%BC%9F%E5%AD%90%E8%A6%8F"
+    source_name: "Wikisource Chinese"
+    license: public_domain
+    genre: classical_primer
+    dialect: zh-Hant
+    script: cjk
+    notes:
+      - "Standards for Students; Li Yuxiu died 1738; 4-character couplets"
+
+  - language: zh
+    framework: HSK
+    level: HSK4
+    cefr_equivalent: B1
+    title: "阿Q正傳"
+    author: "魯迅"
+    year: 1921
+    source_url: "https://zh.wikisource.org/wiki/%E9%98%BFQ%E6%AD%A3%E5%82%B3"
+    source_name: "Wikisource Chinese"
+    license: public_domain
+    genre: novella
+    dialect: zh-Hans
+    script: cjk
+    notes:
+      - "The True Story of Ah Q; Lu Xun died 1936; modern vernacular Chinese"
+      - "Early baihua (vernacular) prose; good bridge from classical"
+
+  - language: zh
+    framework: HSK
+    level: HSK5
+    cefr_equivalent: B2
+    title: "狂人日記"
+    author: "魯迅"
+    year: 1918
+    source_url: "https://zh.wikisource.org/wiki/%E7%8B%82%E4%BA%BA%E6%97%A5%E8%A8%98"
+    source_name: "Wikisource Chinese"
+    license: public_domain
+    genre: short_story
+    dialect: zh-Hans
+    script: cjk
+    notes:
+      - "A Madman's Diary; Lu Xun; first major modern Chinese short story"
+      - "Vernacular with classical allusions; some archaic vocabulary"
 
   - language: zh
     framework: HSK
@@ -246,7 +1054,60 @@ entries:
       - "Not Modern Mandarin; vocabulary is archaic"
       - "Previously 論語 — changed because zh.wikisource.org/wiki/論語 is an index page only"
 
+  - language: zh
+    framework: custom
+    level: C2
+    cefr_equivalent: C2
+    title: "史記 · 五帝本紀"
+    author: "司馬遷"
+    year: -91
+    source_url: "https://zh.wikisource.org/wiki/%E5%8F%B2%E8%A8%98/%E4%BA%94%E5%B8%9D%E6%9C%AC%E7%B4%80"
+    source_name: "Wikisource Chinese"
+    license: public_domain
+    genre: historical_chronicle
+    dialect: zh-Hant
+    script: cjk
+    notes:
+      - "Shiji — Annals of the Five Emperors; Sima Qian died ~86 BC"
+      - "Classical Chinese prose; densest historical vocabulary in the corpus"
+      - "Beyond HSK scale; URL points to specific chapter — verify before ingestion"
+    manual_review: true
+
   # ── Japanese ─────────────────────────────────────────────────────────────────
+
+  - language: ja
+    framework: JLPT
+    level: N5
+    cefr_equivalent: A1
+    title: "桃太郎"
+    author: "作者不明 (民話)"
+    year: null
+    source_url: "https://ja.wikisource.org/wiki/%E6%A1%83%E5%A4%AA%E9%83%8E"
+    source_name: "Wikisource Japanese"
+    license: public_domain
+    genre: folk_tale
+    dialect: ja-JP
+    script: cjk
+    notes:
+      - "Momotaro (Peach Boy); classic Japanese folk tale; very short"
+      - "Simple past-tense narrative; hiragana-dominated vocabulary"
+
+  - language: ja
+    framework: JLPT
+    level: N4
+    cefr_equivalent: A2
+    title: "蜘蛛の糸"
+    author: "芥川龍之介"
+    year: 1918
+    source_url: "https://www.aozora.gr.jp/cards/000879/files/92_14545.html"
+    source_name: "Aozora Bunko"
+    license: public_domain
+    genre: short_story
+    dialect: ja-JP
+    script: cjk
+    notes:
+      - "The Spider's Thread; Akutagawa died 1927; short morality tale"
+      - "HTML with ruby furigana; markup stripped automatically"
 
   - language: ja
     framework: JLPT
@@ -286,11 +1147,97 @@ entries:
       - "Verify file ID (127_15260) at https://www.aozora.gr.jp/cards/000879/"
       - "Akutagawa died 1927; clearly public domain"
 
+  - language: ja
+    framework: JLPT
+    level: N1
+    cefr_equivalent: C1
+    title: "こころ"
+    author: "夏目漱石"
+    year: 1914
+    source_url: "https://www.aozora.gr.jp/cards/000148/files/773_14560.html"
+    source_name: "Aozora Bunko"
+    license: public_domain
+    genre: novel
+    dialect: ja-JP
+    script: cjk
+    notes:
+      - "Kokoro; Natsume Soseki died 1916; deeply psychological prose"
+      - "HTML with ruby furigana; markup stripped automatically"
+      - "Verify file ID (773_14560) at https://www.aozora.gr.jp/cards/000148/"
+
+  - language: ja
+    framework: custom
+    level: C2
+    cefr_equivalent: C2
+    title: "吾輩は猫である"
+    author: "夏目漱石"
+    year: 1905
+    source_url: "https://www.aozora.gr.jp/cards/000148/files/789_14547.html"
+    source_name: "Aozora Bunko"
+    license: public_domain
+    genre: novel
+    dialect: ja-JP
+    script: cjk
+    notes:
+      - "I Am a Cat; Natsume Soseki died 1916; satirical novel"
+      - "HTML with ruby furigana; markup stripped automatically"
+      - "Beyond standard JLPT N1 range; complex satirical register and archaic vocabulary"
+      - "Verify file ID (789_14547) at https://www.aozora.gr.jp/cards/000148/"
+
   # ── Korean ───────────────────────────────────────────────────────────────────
 
   - language: ko
     framework: TOPIK
-    level: TOPIK-II
+    level: TOPIK1
+    cefr_equivalent: A1
+    title: "해와 달이 된 오누이"
+    author: "작자 미상"
+    year: null
+    source_url: "https://ko.wikisource.org/wiki/%ED%95%B4%EC%99%80_%EB%8B%AC%EC%9D%B4_%EB%90%9C_%EC%98%A4%EB%88%A0%EC%9D%B4"
+    source_name: "Wikisource Korean"
+    license: public_domain
+    genre: folk_tale
+    dialect: ko-KR
+    script: hangul
+    notes:
+      - "The Sun and Moon Siblings; classic Korean folk tale; very short"
+      - "Simple narrative; good for introducing basic Korean sentence structure"
+
+  - language: ko
+    framework: TOPIK
+    level: TOPIK2
+    cefr_equivalent: A2
+    title: "콩쥐팥쥐전"
+    author: "작자 미상"
+    year: null
+    source_url: "https://ko.wikisource.org/wiki/%EC%BD%A9%EC%A5%90%ED%8C%A5%EC%A5%90%EC%A0%84"
+    source_name: "Wikisource Korean"
+    license: public_domain
+    genre: folk_tale
+    dialect: ko-KR
+    script: hangul
+    notes:
+      - "Kongjwi and Patjwi; Korean Cinderella tale; accessible narrative"
+
+  - language: ko
+    framework: TOPIK
+    level: TOPIK3
+    cefr_equivalent: B1
+    title: "심청전"
+    author: "작자 미상"
+    year: null
+    source_url: "https://ko.wikisource.org/wiki/%EC%8B%AC%EC%B2%AD%EC%A0%84"
+    source_name: "Wikisource Korean"
+    license: public_domain
+    genre: pansori_tale
+    dialect: ko-KR
+    script: hangul
+    notes:
+      - "Shim Cheong; classic pansori tale; moderate classical Korean"
+
+  - language: ko
+    framework: TOPIK
+    level: TOPIK4
     cefr_equivalent: B2
     title: "흥부전 (경판 25장본)"
     author: "작자 미상"
@@ -305,10 +1252,115 @@ entries:
       - "Heungbu and Nolbu; Gyeongpan 25-chapter edition; classical Korean (옛한글)"
       - "Previous URL (wiki/흥부전) was edition-selector index returning 133 chars"
 
+  - language: ko
+    framework: TOPIK
+    level: TOPIK5
+    cefr_equivalent: C1
+    title: "춘향전"
+    author: "작자 미상"
+    year: null
+    source_url: "https://ko.wikisource.org/wiki/%EC%B6%98%ED%96%A5%EC%A0%84"
+    source_name: "Wikisource Korean"
+    license: public_domain
+    genre: pansori_tale
+    dialect: ko-KR
+    script: hangul
+    notes:
+      - "Chunhyangjeon; classic love story pansori; complex classical Korean"
+
+  - language: ko
+    framework: TOPIK
+    level: TOPIK6
+    cefr_equivalent: C2
+    title: "삼국사기"
+    author: "김부식"
+    year: 1145
+    source_url: "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0"
+    source_name: "Wikisource Korean"
+    license: public_domain
+    genre: historical_chronicle
+    dialect: ko-KR
+    script: hangul
+    notes:
+      - "Samguk Sagi; Kim Busik died 1151; earliest extant Korean history"
+      - "Mixed Sino-Korean (漢文) passages; highest difficulty"
+
   # ── Latin ────────────────────────────────────────────────────────────────────
 
   - language: la
-    framework: CEFR
+    framework: ClassicalReading
+    level: A1
+    cefr_equivalent: A1
+    title: "Fabulae Faciles"
+    author: "Francis Ritchie (ed.)"
+    year: 1884
+    source_url: "https://www.gutenberg.org/files/8997/8997-0.txt"
+    source_name: "Project Gutenberg"
+    license: public_domain
+    genre: adapted_fables
+    dialect: la
+    script: latin
+    notes:
+      - "PG ID 8997; simplified Latin myths; standard beginner reader"
+      - "Ritchie adapted classical stories for classroom use"
+
+  - language: la
+    framework: ClassicalReading
+    level: A2
+    cefr_equivalent: A2
+    title: "Fabulae Phaedri"
+    author: "Gaius Julius Phaedrus"
+    year: 20
+    source_url: "https://www.thelatinlibrary.com/phaedrus.html"
+    source_name: "The Latin Library"
+    license: public_domain
+    genre: fables
+    dialect: la
+    script: latin
+    notes:
+      - "Phaedrus Fables; iambic senarii; accessible Latin verse"
+      - "The Latin Library uses generic HTML extraction — verify content"
+    manual_review: true
+
+  - language: la
+    framework: ClassicalReading
+    level: B1
+    cefr_equivalent: B1
+    title: "Commentarii de Bello Gallico (Liber I)"
+    author: "Gaius Julius Caesar"
+    year: -58
+    source_url: "https://www.thelatinlibrary.com/caesar/gall1.shtml"
+    source_name: "The Latin Library"
+    license: public_domain
+    genre: historical_prose
+    dialect: la
+    script: latin
+    notes:
+      - "Caesar's Gallic Wars, Book I only; clear periodic style"
+      - "Overlaps subject matter with the C1 entry (all-books PG) but different URL and scope"
+      - "The Latin Library uses generic HTML extraction — verify content"
+    manual_review: true
+
+  - language: la
+    framework: ClassicalReading
+    level: B2
+    cefr_equivalent: B2
+    title: "Vitae Excellentium Imperatorum (selecta)"
+    author: "Cornelius Nepos"
+    year: -35
+    source_url: "https://www.thelatinlibrary.com/nepos.html"
+    source_name: "The Latin Library"
+    license: public_domain
+    genre: biography
+    dialect: la
+    script: latin
+    notes:
+      - "Lives of the Great Commanders; Nepos died ~24 BC; accessible biography"
+      - "The Latin Library index page — acquisition will capture multiple vitae"
+    manual_review: true
+
+  - language: la
+    framework: ClassicalReading
     level: C1
     cefr_equivalent: C1
     title: "Commentarii de Bello Gallico"
@@ -324,12 +1376,48 @@ entries:
       - "Caesar's Gallic Wars; PG ID 10657; verify URL"
       - "Classical Latin; regular syntax; excellent for intermediate learners"
 
+  - language: la
+    framework: ClassicalReading
+    level: C2
+    cefr_equivalent: C2
+    title: "Annales (Liber I)"
+    author: "Publius Cornelius Tacitus"
+    year: 117
+    source_url: "https://www.thelatinlibrary.com/tacitus/tac.ann1.shtml"
+    source_name: "The Latin Library"
+    license: public_domain
+    genre: historical_prose
+    dialect: la
+    script: latin
+    notes:
+      - "Tacitus Annals Book I; dense and allusive; highest difficulty"
+      - "Tacitean brevitas requires advanced syntactic parsing"
+      - "The Latin Library uses generic HTML extraction — verify content"
+    manual_review: true
+
   # ── Koine Greek ──────────────────────────────────────────────────────────────
 
   - language: grc
-    framework: CEFR
-    level: C1
-    cefr_equivalent: C1
+    framework: KoineReading
+    level: A1
+    cefr_equivalent: A1
+    title: "Ἰωάννου Αʹ"
+    author: "Εὐαγγελιστής Ἰωάννης (trad.)"
+    year: 90
+    source_url: "https://el.wikisource.org/wiki/%CE%99%CF%89%CE%AC%CE%BD%CE%BD%CE%BF%CF%85_%CE%91%CE%84"
+    source_name: "Wikisource Greek"
+    license: public_domain
+    genre: biblical_epistle
+    dialect: grc
+    script: greek
+    notes:
+      - "1 John; 5 short chapters; simplest vocabulary in the Johannine corpus"
+      - "Polytonic Greek; repetitive theological vocabulary; ideal A1 entry"
+
+  - language: grc
+    framework: KoineReading
+    level: A2
+    cefr_equivalent: A2
     title: "Κατὰ Ἰωάννην"
     author: "Εὐαγγελιστής Ἰωάννης (trad.)"
     year: 90
@@ -342,3 +1430,74 @@ entries:
     notes:
       - "Gospel of John; Koine Greek; full text confirmed on Greek Wikisource"
       - "Polytonic Greek; use with the grc (Koine Greek) plugin only"
+      - "Reclassified A2 under KoineReading framework (was C1 under CEFR)"
+      - "Metadata-only migration: reparse not required if already ingested"
+
+  - language: grc
+    framework: KoineReading
+    level: B1
+    cefr_equivalent: B1
+    title: "Κατὰ Μᾶρκον"
+    author: "Εὐαγγελιστής Μᾶρκος (trad.)"
+    year: 70
+    source_url: "https://el.wikisource.org/wiki/%CE%9A%CE%B1%CF%84%CE%AC_%CE%9C%CE%AC%CF%81%CE%BA%CE%BF%CE%BD"
+    source_name: "Wikisource Greek"
+    license: public_domain
+    genre: biblical_prose
+    dialect: grc
+    script: greek
+    notes:
+      - "Gospel of Mark; shortest gospel; paratactic narrative style"
+      - "More complex than John; introduces aorist passives and indirect speech"
+
+  - language: grc
+    framework: KoineReading
+    level: B2
+    cefr_equivalent: B2
+    title: "Πράξεις τῶν Ἀποστόλων"
+    author: "Λουκᾶς Εὐαγγελιστής (trad.)"
+    year: 85
+    source_url: "https://el.wikisource.org/wiki/%CE%A0%CF%81%CE%AC%CE%BE%CE%B5%CE%B9%CF%82_%CF%84%CF%89%CE%BD_%CE%91%CF%80%CE%BF%CF%83%CF%84%CF%8C%CE%BB%CF%89%CE%BD"
+    source_name: "Wikisource Greek"
+    license: public_domain
+    genre: biblical_narrative
+    dialect: grc
+    script: greek
+    notes:
+      - "Acts of the Apostles; Luke; longest narrative NT book"
+      - "Varied vocabulary; speeches and legal discourse"
+
+  - language: grc
+    framework: KoineReading
+    level: C1
+    cefr_equivalent: C1
+    title: "Πρὸς Ἑβραίους"
+    author: "ἄγνωστος (trad. Παῦλος)"
+    year: 70
+    source_url: "https://el.wikisource.org/wiki/%CE%A0%CF%81%CE%BF%CF%82_%CE%95%CE%B2%CF%81%CE%B1%CE%AF%CE%BF%CF%85%CF%82"
+    source_name: "Wikisource Greek"
+    license: public_domain
+    genre: biblical_epistle
+    dialect: grc
+    script: greek
+    notes:
+      - "Epistle to the Hebrews; most literary Greek in the NT"
+      - "Dense LXX allusions; complex subordinate clauses; sophisticated rhetoric"
+
+  - language: grc
+    framework: KoineReading
+    level: C2
+    cefr_equivalent: C2
+    title: "Γένεσις (Μετάφρασις Ο΄)"
+    author: "μεταφρασταί Ο΄ (70 interpreters)"
+    year: -250
+    source_url: "https://el.wikisource.org/wiki/%CE%93%CE%AD%CE%BD%CE%B5%CF%83%CE%B9%CF%82"
+    source_name: "Wikisource Greek"
+    license: public_domain
+    genre: biblical_prose
+    dialect: grc
+    script: greek
+    notes:
+      - "Septuagint Genesis; earliest extant Greek translation of Hebrew scriptures"
+      - "Semitic translation Greek; some non-standard constructions"
+      - "Highest vocabulary breadth in the grc corpus set"

@@ -4,13 +4,15 @@ Usage
 -----
     poetry run mnemosyne-corpus list-languages
     poetry run mnemosyne-corpus list-sources
-    poetry run mnemosyne-corpus validate
+    poetry run mnemosyne-corpus validate [--full-coverage]
     poetry run mnemosyne-corpus acquire --language es
     poetry run mnemosyne-corpus acquire --all
-    poetry run mnemosyne-corpus ingest --language ja
-    poetry run mnemosyne-corpus ingest --all [--dry-run]
-    poetry run mnemosyne-corpus build --language de
-    poetry run mnemosyne-corpus build --all [--dry-run] [--force]
+    poetry run mnemosyne-corpus ingest --language ja [--only-new] [--skip-existing]
+    poetry run mnemosyne-corpus ingest --all [--dry-run] [--force]
+    poetry run mnemosyne-corpus build --language de [--level B2]
+    poetry run mnemosyne-corpus build --all [--dry-run] [--force] [--only-new]
+    poetry run mnemosyne-corpus verify-urls [--language la]
+    poetry run mnemosyne-corpus coverage-report
     poetry run mnemosyne-corpus report
 
 All commands respect the manifest at ``corpora/manifest.yaml`` by default.
@@ -33,9 +35,11 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_asyn
 from backend.corpus.build import BuildResult, acquire_entry, build_entry
 from backend.corpus.chunking import DEFAULT_MAX_CHUNK_CHARS
 from backend.corpus.levels import difficulty_rank
+from backend.corpus.lockfile import DEFAULT_LOCKFILE, load_lockfile, update_lock_entry, save_lockfile
 from backend.corpus.manifest import CorpusManifest, CorpusEntry, load_manifest
 from backend.corpus.quality import check_manifest
 from backend.corpus.reports import generate_stats
+from backend.corpus.verifier import VerifyResult, verify_entry
 from backend.core.config import get_settings
 from backend.parsing.plugin_loader import load_plugins
 
@@ -87,6 +91,7 @@ def _resolve_entries(
     manifest: CorpusManifest,
     language: str | None,
     all_languages: bool,
+    level: str | None = None,
 ) -> list[CorpusEntry]:
     if all_languages:
         entries = manifest.entries
@@ -98,6 +103,17 @@ def _resolve_entries(
     else:
         console.print("[red]Specify --language LANG or --all.[/red]")
         raise typer.Exit(code=1)
+
+    if level:
+        # Filter by CEFR equivalent level.
+        entries = [
+            e for e in entries
+            if (e.cefr_equivalent or e.level).upper() == level.upper()
+        ]
+        if not entries:
+            console.print(f"[yellow]No entries at level '{level}'.[/yellow]")
+            raise typer.Exit(code=0)
+
     return sorted(entries, key=lambda e: (difficulty_rank(e.framework.value, e.level), e.title))
 
 
@@ -145,6 +161,7 @@ def list_sources(
 def validate(
     manifest_path: Path = typer.Option(DEFAULT_MANIFEST_PATH, "--manifest", "-m"),
     check_plugins: bool = typer.Option(False, "--check-plugins", help="Verify plugin availability"),
+    full_coverage: bool = typer.Option(False, "--full-coverage", help="Warn if any CEFR level missing per language"),
 ) -> None:
     """Validate the manifest structure and check for quality issues."""
     manifest = _load_manifest_or_exit(manifest_path)
@@ -154,7 +171,11 @@ def validate(
         registry = load_plugins()
         supported = set(registry.supported_languages().keys())
 
-    report = check_manifest(manifest, supported_languages=supported)
+    report = check_manifest(
+        manifest,
+        supported_languages=supported,
+        require_full_cefr_coverage=full_coverage,
+    )
 
     if not report.issues:
         console.print(f"[green]OK[/green] Manifest OK - {len(manifest.entries)} entries, no issues.")
@@ -169,6 +190,64 @@ def validate(
         f"\n{len(report.errors)} error(s), {len(report.warnings)} warning(s)."
     )
     if report.errors:
+        raise typer.Exit(code=1)
+
+
+@app.command("verify-urls")
+def verify_urls(
+    language: str | None = typer.Option(None, "--language", "-l", help="Filter by language"),
+    manifest_path: Path = typer.Option(DEFAULT_MANIFEST_PATH, "--manifest", "-m"),
+    lockfile_path: Path = typer.Option(DEFAULT_LOCKFILE, "--lockfile"),
+    reverify: bool = typer.Option(False, "--reverify", help="Re-check URLs already verified in lockfile"),
+) -> None:
+    """Verify each manifest URL is reachable and returns usable content.
+
+    Results are written to the lockfile.  Entries marked manual_review=True
+    are skipped (they require human verification).
+    """
+    manifest = _load_manifest_or_exit(manifest_path)
+    entries = manifest.for_language(language) if language else manifest.entries
+
+    lock_data = load_lockfile(lockfile_path)
+
+    results: list[VerifyResult] = []
+    for entry in entries:
+        mid = entry.manifest_id or ""
+        if not reverify and lock_data.get(mid, {}).get("last_verified_at"):
+            console.print(f"[dim]--[/dim] [{entry.language}] {entry.title}: already verified (use --reverify to re-check)")
+            continue
+
+        console.print(f"   [{entry.language}] {entry.title} ...", end="")
+        result = verify_entry(entry)
+        results.append(result)
+
+        if result.status == "ok":
+            console.print(f"  [green]OK[/green] {result.content_bytes:,} bytes")
+            update_lock_entry(
+                lock_data, mid,
+                verified_url=result.url,
+                verify=True,
+            )
+        elif result.status == "manual":
+            console.print(f"  [yellow]SKIP[/yellow] manual_review=True")
+        elif result.status == "short":
+            console.print(f"  [yellow]SHORT[/yellow] {result.message}")
+            update_lock_entry(lock_data, mid, verify=True)
+        elif result.status == "not_found":
+            console.print(f"  [red]404[/red] {result.message}")
+        else:
+            console.print(f"  [red]ERR[/red] {result.message}")
+
+    save_lockfile(lock_data, lockfile_path)
+
+    ok = sum(1 for r in results if r.status == "ok")
+    bad = sum(1 for r in results if r.status in ("not_found", "error"))
+    manual = sum(1 for r in results if r.status == "manual")
+    short = sum(1 for r in results if r.status == "short")
+    console.print(
+        f"\nVerified: {ok} ok, {short} short, {bad} failed, {manual} manual-review."
+    )
+    if bad:
         raise typer.Exit(code=1)
 
 
@@ -204,13 +283,18 @@ def ingest(
     all_languages: bool = typer.Option(False, "--all"),
     dry_run: bool = typer.Option(False, "--dry-run"),
     force: bool = typer.Option(False, "--force"),
+    only_new: bool = typer.Option(False, "--only-new", help="Skip entries that have any prior ingestion record"),
+    skip_existing: bool = typer.Option(False, "--skip-existing", help="Skip entries already in the DB (default behaviour)"),
+    reparse: bool = typer.Option(False, "--reparse", help="Re-run NLP parse even if content hash unchanged"),
+    level: str | None = typer.Option(None, "--level", help="Filter by CEFR equivalent level (e.g. B1)"),
     manifest_path: Path = typer.Option(DEFAULT_MANIFEST_PATH, "--manifest", "-m"),
     cache_dir: Path = typer.Option(Path("data/corpus_cache"), "--cache-dir"),
     max_chunk_chars: int = typer.Option(DEFAULT_MAX_CHUNK_CHARS, "--max-chunk-chars"),
+    lockfile_path: Path = typer.Option(DEFAULT_LOCKFILE, "--lockfile"),
 ) -> None:
     """Parse cached texts and persist to the database."""
     manifest = _load_manifest_or_exit(manifest_path)
-    entries = _resolve_entries(manifest, language, all_languages)
+    entries = _resolve_entries(manifest, language, all_languages, level=level)
     registry = load_plugins()
 
     async def _run() -> None:
@@ -219,9 +303,11 @@ def ingest(
                 result: BuildResult = await build_entry(
                     entry, registry, db,
                     dry_run=dry_run,
-                    force=force,
+                    force=force or reparse,
+                    only_new=only_new,
                     cache_dir=cache_dir,
                     max_chunk_chars=max_chunk_chars,
+                    lockfile_path=lockfile_path,
                 )
                 _print_result(result)
 
@@ -234,13 +320,19 @@ def build(
     all_languages: bool = typer.Option(False, "--all"),
     dry_run: bool = typer.Option(False, "--dry-run"),
     force: bool = typer.Option(False, "--force"),
+    only_new: bool = typer.Option(False, "--only-new", help="Skip entries with any prior ingestion record"),
+    skip_existing: bool = typer.Option(False, "--skip-existing", help="Skip entries already in DB"),
+    reparse: bool = typer.Option(False, "--reparse", help="Re-run NLP parse even if content hash unchanged"),
+    reverify: bool = typer.Option(False, "--reverify", help="Re-verify URLs before building"),
+    level: str | None = typer.Option(None, "--level", help="Filter by CEFR equivalent level (e.g. B1)"),
     manifest_path: Path = typer.Option(DEFAULT_MANIFEST_PATH, "--manifest", "-m"),
     cache_dir: Path = typer.Option(Path("data/corpus_cache"), "--cache-dir"),
     max_chunk_chars: int = typer.Option(DEFAULT_MAX_CHUNK_CHARS, "--max-chunk-chars"),
+    lockfile_path: Path = typer.Option(DEFAULT_LOCKFILE, "--lockfile"),
 ) -> None:
     """Acquire + parse + persist in one step (acquire then ingest)."""
     manifest = _load_manifest_or_exit(manifest_path)
-    entries = _resolve_entries(manifest, language, all_languages)
+    entries = _resolve_entries(manifest, language, all_languages, level=level)
     registry = load_plugins()
 
     async def _run() -> None:
@@ -249,13 +341,88 @@ def build(
                 result: BuildResult = await build_entry(
                     entry, registry, db,
                     dry_run=dry_run,
-                    force=force,
+                    force=force or reparse,
+                    only_new=only_new,
                     cache_dir=cache_dir,
                     max_chunk_chars=max_chunk_chars,
+                    lockfile_path=lockfile_path,
                 )
                 _print_result(result)
 
     asyncio.run(_run())
+
+
+@app.command("coverage-report")
+def coverage_report(
+    manifest_path: Path = typer.Option(DEFAULT_MANIFEST_PATH, "--manifest", "-m"),
+    lockfile_path: Path = typer.Option(DEFAULT_LOCKFILE, "--lockfile"),
+) -> None:
+    """Print per-language CEFR coverage and ingestion status from the lockfile."""
+    manifest = _load_manifest_or_exit(manifest_path)
+    lock_data = load_lockfile(lockfile_path)
+
+    table = Table(title="Corpus coverage report", show_header=True)
+    table.add_column("Lang", style="cyan", width=6)
+    table.add_column("A1", justify="center", width=5)
+    table.add_column("A2", justify="center", width=5)
+    table.add_column("B1", justify="center", width=5)
+    table.add_column("B2", justify="center", width=5)
+    table.add_column("C1", justify="center", width=5)
+    table.add_column("C2", justify="center", width=5)
+    table.add_column("Entries", justify="right", width=8)
+
+    _STATUS_ICON = {
+        "ok": "[green]✓[/green]",
+        "metadata_only": "[cyan]M[/cyan]",
+        "skipped": "[dim]S[/dim]",
+        "failed": "[red]✗[/red]",
+        "pending": "[yellow]·[/yellow]",
+        None: "[dim]—[/dim]",
+    }
+
+    for lang in manifest.languages():
+        entries = manifest.for_language(lang)
+        row_cells: dict[str, str] = {lvl: "[dim]—[/dim]" for lvl in ("A1", "A2", "B1", "B2", "C1", "C2")}
+
+        for entry in entries:
+            cefr = entry.cefr_equivalent or (entry.level if entry.framework.value == "CEFR" else None)
+            if not cefr:
+                continue
+            mid = entry.manifest_id or ""
+            status = lock_data.get(mid, {}).get("ingestion_status")
+            icon = _STATUS_ICON.get(status, "[dim]—[/dim]")
+            # Prefer OK over pending for the same level slot.
+            if row_cells[cefr] == "[dim]—[/dim]" or status == "ok":
+                row_cells[cefr] = icon
+
+        table.add_row(
+            lang,
+            row_cells["A1"], row_cells["A2"],
+            row_cells["B1"], row_cells["B2"],
+            row_cells["C1"], row_cells["C2"],
+            str(len(entries)),
+        )
+
+    console.print(table)
+
+    # Summary stats from lockfile.
+    statuses = [v.get("ingestion_status") for v in lock_data.values()]
+    ok_count      = statuses.count("ok")
+    failed_count  = statuses.count("failed")
+    meta_count    = statuses.count("metadata_only")
+    skipped_count = statuses.count("skipped")
+    pending_count = statuses.count("pending") + statuses.count(None)
+    console.print(
+        f"\nLockfile: {ok_count} ok, {meta_count} metadata-only, "
+        f"{skipped_count} skipped, {failed_count} failed, {pending_count} pending."
+    )
+
+    # Manual review entries.
+    manual = [e for e in manifest.entries if e.manual_review]
+    if manual:
+        console.print(f"\n[yellow]Manual-review entries ({len(manual)}):[/yellow]")
+        for e in manual:
+            console.print(f"  [{e.language}] {e.title}")
 
 
 @app.command("report")
@@ -308,6 +475,8 @@ def _print_result(result: BuildResult) -> None:
     prefix = f"[{entry.language}] {entry.title}"
     if result.status == "skipped":
         console.print(f"[dim]--[/dim] {prefix}: already ingested (skipped)")
+    elif result.status == "metadata_only":
+        console.print(f"[cyan]M[/cyan]  {prefix}: metadata updated (no reparse)")
     elif result.status == "dry_run":
         console.print(f"[blue]DRY[/blue] {prefix}: {'; '.join(result.warnings)}")
     elif result.status == "ingested":

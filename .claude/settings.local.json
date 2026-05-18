@@ -91,7 +91,8 @@
       "WebFetch(domain:wiki.digitalclassicist.org)",
       "WebFetch(domain:he.wikisource.org)",
       "WebFetch(domain:ru.wikisource.org)",
-      "WebFetch(domain:ko.wikisource.org)"
+      "WebFetch(domain:ko.wikisource.org)",
+      "Bash(findstr /n \".\")"
     ]
   }
 }

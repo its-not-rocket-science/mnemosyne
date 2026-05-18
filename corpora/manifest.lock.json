@@ -1,0 +1,8 @@
+{
+  "en:CEFR:B2:test-story:d1dc6321": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "4c19e613dbea11d938ac37d8b57c12e369a00e90faa0e20d09b2144092cbb8bd",
+    "normalized_content_hash": "aa3ec16e6acc809d8b2818662276256abfd2f1b441cb51574933f3d4bd115d11",
+    "raw_content_hash": "aa3ec16e6acc809d8b2818662276256abfd2f1b441cb51574933f3d4bd115d11"
+  }
+}

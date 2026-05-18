@@ -507,3 +507,34 @@ class GrammarRule(Base):
     examples:    Mapped[list]     = mapped_column(JsonType, nullable=False, default=list)
     source:      Mapped[str]      = mapped_column(String(80), nullable=False)
     created_at:  Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+
+class CorpusIngestionRow(Base):
+    """Persistent record of every corpus ingestion attempt.
+
+    Enables idempotent re-runs: if a source_identity + raw_content_hash pair
+    already exists with status='ok', the build pipeline skips re-ingestion.
+    When content changes (different raw_content_hash) the pipeline re-ingests
+    and updates this record.
+    """
+    __tablename__ = "corpus_ingestions"
+
+    id:                    Mapped[str]           = mapped_column(String(36), primary_key=True, default=_uuid)
+    source_identity:       Mapped[str]           = mapped_column(String(64), nullable=False, index=True)
+    """sha256(language + framework + level + normalized_url + normalized_title + author)[:64]"""
+    manifest_entry_hash:   Mapped[str]           = mapped_column(String(64), nullable=False)
+    """sha256 of the full manifest entry YAML (for detecting metadata-only changes)."""
+    raw_content_hash:      Mapped[str | None]    = mapped_column(String(64), nullable=True)
+    normalized_content_hash: Mapped[str | None]  = mapped_column(String(64), nullable=True)
+    language:              Mapped[str]           = mapped_column(String(20), nullable=False)
+    framework:             Mapped[str]           = mapped_column(String(30), nullable=False)
+    level:                 Mapped[str]           = mapped_column(String(20), nullable=False)
+    cefr_equivalent:       Mapped[str | None]    = mapped_column(String(2),  nullable=True)
+    source_document_id:    Mapped[str | None]    = mapped_column(String(36), nullable=True)
+    pipeline_version:      Mapped[str]           = mapped_column(String(20), nullable=False, default="1.0")
+    acquired_at:           Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    normalized_at:         Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    ingested_at:           Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    status:                Mapped[str]           = mapped_column(String(20), nullable=False, default="pending")
+    """pending | ok | failed | skipped | metadata_only"""
+    error_message:         Mapped[str | None]    = mapped_column(Text, nullable=True)
