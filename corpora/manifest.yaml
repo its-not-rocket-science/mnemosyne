@@ -292,18 +292,18 @@ entries:
     framework: TOPIK
     level: TOPIK-II
     cefr_equivalent: B2
-    title: "흥부전"
+    title: "흥부전 (경판 25장본)"
     author: "작자 미상"
-    year: null
-    source_url: "https://ko.wikisource.org/wiki/%ED%9D%A5%EB%B6%80%EC%A0%84"
+    year: 1865
+    source_url: "https://ko.wikisource.org/wiki/%ED%9D%A5%EB%B6%80%EC%A0%84_(%EA%B2%BD%ED%8C%90_25%EC%9E%A5%EB%B3%B8)"
     source_name: "Wikisource Korean"
     license: public_domain
     genre: pansori_tale
     dialect: ko-KR
     script: hangul
     notes:
-      - "Heungbu and Nolbu; classic Korean pansori narrative"
-      - "Classical Korean vocabulary mixed with modern forms"
+      - "Heungbu and Nolbu; Gyeongpan 25-chapter edition; classical Korean (옛한글)"
+      - "Previous URL (wiki/흥부전) was edition-selector index returning 133 chars"
 
   # ── Latin ────────────────────────────────────────────────────────────────────
 
