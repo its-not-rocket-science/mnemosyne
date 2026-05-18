@@ -65,7 +65,7 @@ class PluginRegistry:
                     direction=p.direction,  # type: ignore[arg-type]  # pre-capabilities plugins expose direction as plain str; value is always "ltr" or "rtl" in practice
                     script_family="other",
                     tokenization_mode="whitespace",
-                    morphology_depth="none",
+                    morphology_depth="rich",
                     lesson_modes_supported=["dictionary"],
                 )
             result[code] = caps

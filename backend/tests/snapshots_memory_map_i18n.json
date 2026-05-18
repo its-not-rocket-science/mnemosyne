@@ -1,101 +1,101 @@
 {
   "en": {
-    "help_intelligence_summary": "Shows your recent exposure to highlighted terms. New = newly seen or rarely reviewed; Needs review = not seen recently; Familiar = seen often. These are estimates, not test results.",
+    "help_intelligence_summary": "Memory Map uses your saved review outcomes when available. New/Weak = little or no successful recall; Needs review/Fading = previously learned but due or recently missed; Strong = repeated successful recall and not yet due. If you have no review history yet, Mnemosyne shows a recency-based fallback until drills/checks are recorded.",
     "adaptive_memory_weak": "New",
     "adaptive_memory_learning": "Needs review",
-    "adaptive_memory_known": "Familiar",
+    "adaptive_memory_known": "Strong",
     "adaptive_memory_weak_stat": "new",
     "adaptive_memory_fading_stat": "needs review",
-    "adaptive_memory_strong_stat": "familiar"
+    "adaptive_memory_strong_stat": "strong"
   },
   "es": {
-    "help_intelligence_summary": "Muestra tu exposición reciente a los términos resaltados. Nuevo = visto por primera vez o repasado rara vez; Necesita repaso = no visto recientemente; Familiar = visto con frecuencia. Son estimaciones, no resultados de pruebas.",
+    "help_intelligence_summary": "Memory Map uses your saved review outcomes when available. New/Weak = little or no successful recall; Needs review/Fading = previously learned but due or recently missed; Strong = repeated successful recall and not yet due. If you have no review history yet, Mnemosyne shows a recency-based fallback until drills/checks are recorded.",
     "adaptive_memory_weak": "Nuevo",
     "adaptive_memory_learning": "Necesita repaso",
-    "adaptive_memory_known": "Familiar",
+    "adaptive_memory_known": "Fuerte",
     "adaptive_memory_weak_stat": "nuevo",
     "adaptive_memory_fading_stat": "necesita repaso",
-    "adaptive_memory_strong_stat": "familiar"
+    "adaptive_memory_strong_stat": "fuerte"
   },
   "fr": {
-    "help_intelligence_summary": "Affiche votre exposition récente aux termes mis en évidence. Nouveau = vu récemment pour la première fois ou rarement révisé ; À revoir = non vu récemment ; Familier = vu souvent. Ce sont des estimations, pas des résultats de test.",
+    "help_intelligence_summary": "Memory Map uses your saved review outcomes when available. New/Weak = little or no successful recall; Needs review/Fading = previously learned but due or recently missed; Strong = repeated successful recall and not yet due. If you have no review history yet, Mnemosyne shows a recency-based fallback until drills/checks are recorded.",
     "adaptive_memory_weak": "Nouveau",
     "adaptive_memory_learning": "À revoir",
-    "adaptive_memory_known": "Familier",
+    "adaptive_memory_known": "Fort",
     "adaptive_memory_weak_stat": "nouveau",
     "adaptive_memory_fading_stat": "à revoir",
-    "adaptive_memory_strong_stat": "familier"
+    "adaptive_memory_strong_stat": "fort"
   },
   "de": {
-    "help_intelligence_summary": "Zeigt deine jüngste Begegnung mit markierten Begriffen. Neu = neu gesehen oder selten wiederholt; Überprüfen = kürzlich nicht gesehen; Vertraut = häufig gesehen. Das sind Schätzungen, keine Testergebnisse.",
+    "help_intelligence_summary": "Memory Map uses your saved review outcomes when available. New/Weak = little or no successful recall; Needs review/Fading = previously learned but due or recently missed; Strong = repeated successful recall and not yet due. If you have no review history yet, Mnemosyne shows a recency-based fallback until drills/checks are recorded.",
     "adaptive_memory_weak": "Neu",
     "adaptive_memory_learning": "Überprüfen",
-    "adaptive_memory_known": "Vertraut",
+    "adaptive_memory_known": "Stark",
     "adaptive_memory_weak_stat": "neu",
     "adaptive_memory_fading_stat": "überprüfen",
-    "adaptive_memory_strong_stat": "vertraut"
+    "adaptive_memory_strong_stat": "stark"
   },
   "it": {
-    "help_intelligence_summary": "Mostra la tua esposizione recente ai termini evidenziati. Nuovo = visto da poco per la prima volta o ripassato raramente; Da ripassare = non visto di recente; Familiare = visto spesso. Sono stime, non risultati di test.",
+    "help_intelligence_summary": "Memory Map uses your saved review outcomes when available. New/Weak = little or no successful recall; Needs review/Fading = previously learned but due or recently missed; Strong = repeated successful recall and not yet due. If you have no review history yet, Mnemosyne shows a recency-based fallback until drills/checks are recorded.",
     "adaptive_memory_weak": "Nuovo",
     "adaptive_memory_learning": "Da ripassare",
-    "adaptive_memory_known": "Familiare",
+    "adaptive_memory_known": "Forte",
     "adaptive_memory_weak_stat": "nuovo",
     "adaptive_memory_fading_stat": "da ripassare",
-    "adaptive_memory_strong_stat": "familiare"
+    "adaptive_memory_strong_stat": "forte"
   },
   "pt": {
-    "help_intelligence_summary": "Mostra a tua exposição recente aos termos destacados. Novo = visto pela primeira vez ou revisto raramente; Precisa de revisão = não visto recentemente; Familiar = visto com frequência. Estas são estimativas, não resultados de teste.",
+    "help_intelligence_summary": "Memory Map uses your saved review outcomes when available. New/Weak = little or no successful recall; Needs review/Fading = previously learned but due or recently missed; Strong = repeated successful recall and not yet due. If you have no review history yet, Mnemosyne shows a recency-based fallback until drills/checks are recorded.",
     "adaptive_memory_weak": "Novo",
     "adaptive_memory_learning": "Precisa de revisão",
-    "adaptive_memory_known": "Familiar",
+    "adaptive_memory_known": "Forte",
     "adaptive_memory_weak_stat": "novo",
     "adaptive_memory_fading_stat": "precisa de revisão",
-    "adaptive_memory_strong_stat": "familiar"
+    "adaptive_memory_strong_stat": "forte"
   },
   "ru": {
-    "help_intelligence_summary": "Показывает вашу недавнюю встречаемость выделенных терминов. Новое = недавно встречено впервые или редко повторяется; Нужен повтор = давно не встречалось; Знакомое = встречается часто. Это оценки, а не результаты теста.",
+    "help_intelligence_summary": "Memory Map uses your saved review outcomes when available. New/Weak = little or no successful recall; Needs review/Fading = previously learned but due or recently missed; Strong = repeated successful recall and not yet due. If you have no review history yet, Mnemosyne shows a recency-based fallback until drills/checks are recorded.",
     "adaptive_memory_weak": "Новое",
     "adaptive_memory_learning": "Нужен повтор",
-    "adaptive_memory_known": "Знакомое",
+    "adaptive_memory_known": "Твёрдо",
     "adaptive_memory_weak_stat": "новых",
     "adaptive_memory_fading_stat": "нужен повтор",
-    "adaptive_memory_strong_stat": "знакомых"
+    "adaptive_memory_strong_stat": "твёрдо"
   },
   "ja": {
-    "help_intelligence_summary": "ハイライト語への最近の接触状況を表示します。新規 = 新しく見た、または復習が少ない；要復習 = 最近見ていない；馴染みあり = よく見ている。これは推定であり、テスト結果ではありません。",
+    "help_intelligence_summary": "Memory Map uses your saved review outcomes when available. New/Weak = little or no successful recall; Needs review/Fading = previously learned but due or recently missed; Strong = repeated successful recall and not yet due. If you have no review history yet, Mnemosyne shows a recency-based fallback until drills/checks are recorded.",
     "adaptive_memory_weak": "新規",
     "adaptive_memory_learning": "要復習",
-    "adaptive_memory_known": "馴染みあり",
+    "adaptive_memory_known": "定着",
     "adaptive_memory_weak_stat": "新規",
     "adaptive_memory_fading_stat": "要復習",
-    "adaptive_memory_strong_stat": "馴染みあり"
+    "adaptive_memory_strong_stat": "定着"
   },
   "zh": {
-    "help_intelligence_summary": "显示你最近接触高亮词语的情况。新词 = 新见到或很少复习；需复习 = 最近没见过；熟悉 = 经常见到。这些是估计值，不是测试结果。",
+    "help_intelligence_summary": "Memory Map uses your saved review outcomes when available. New/Weak = little or no successful recall; Needs review/Fading = previously learned but due or recently missed; Strong = repeated successful recall and not yet due. If you have no review history yet, Mnemosyne shows a recency-based fallback until drills/checks are recorded.",
     "adaptive_memory_weak": "新词",
     "adaptive_memory_learning": "需复习",
-    "adaptive_memory_known": "熟悉",
+    "adaptive_memory_known": "牢记",
     "adaptive_memory_weak_stat": "新词",
     "adaptive_memory_fading_stat": "需复习",
-    "adaptive_memory_strong_stat": "熟悉"
+    "adaptive_memory_strong_stat": "牢记"
   },
   "ar": {
-    "help_intelligence_summary": "تعرض مدى تعرّضك الأخير للمصطلحات المميزة. جديد = شوهد حديثًا لأول مرة أو نادر المراجعة؛ يحتاج مراجعة = لم يُرَ مؤخرًا؛ مألوف = يُرى كثيرًا. هذه تقديرات وليست نتائج اختبار.",
+    "help_intelligence_summary": "Memory Map uses your saved review outcomes when available. New/Weak = little or no successful recall; Needs review/Fading = previously learned but due or recently missed; Strong = repeated successful recall and not yet due. If you have no review history yet, Mnemosyne shows a recency-based fallback until drills/checks are recorded.",
     "adaptive_memory_weak": "جديد",
     "adaptive_memory_learning": "يحتاج مراجعة",
-    "adaptive_memory_known": "مألوف",
+    "adaptive_memory_known": "راسخ",
     "adaptive_memory_weak_stat": "جديد",
     "adaptive_memory_fading_stat": "يحتاج مراجعة",
-    "adaptive_memory_strong_stat": "مألوف"
+    "adaptive_memory_strong_stat": "راسخ"
   },
   "he": {
-    "help_intelligence_summary": "מציג את החשיפה האחרונה שלך למונחים מודגשים. חדש = נראה לאחרונה לראשונה או נבדק לעיתים רחוקות; דורש חזרה = לא נראה לאחרונה; מוכר = נראה לעיתים קרובות. אלו הערכות, לא תוצאות מבחן.",
+    "help_intelligence_summary": "Memory Map uses your saved review outcomes when available. New/Weak = little or no successful recall; Needs review/Fading = previously learned but due or recently missed; Strong = repeated successful recall and not yet due. If you have no review history yet, Mnemosyne shows a recency-based fallback until drills/checks are recorded.",
     "adaptive_memory_weak": "חדש",
     "adaptive_memory_learning": "דורש חזרה",
-    "adaptive_memory_known": "מוכר",
+    "adaptive_memory_known": "חזק",
     "adaptive_memory_weak_stat": "חדש",
     "adaptive_memory_fading_stat": "דורש חזרה",
-    "adaptive_memory_strong_stat": "מוכר"
+    "adaptive_memory_strong_stat": "חזק"
   }
 }
