@@ -1,7 +1,7 @@
 :root {
   /* ── Brand ───────────────────────────────────────────────────────────────── */
-  --brand-purple:       #7C3AED;
-  --brand-purple-light: #EDE9FE;
+  --brand-purple:       #B04018;   /* terracotta — 5.87:1 on white, AA normal text */
+  --brand-purple-light: #FCEEE9;   /* light terracotta tint */
 
   /* ── Annotation-type colour tokens — single source of truth ─────────────
      Consumed by filter-bar pills (--_c), .reader-annotation highlights,
@@ -29,11 +29,14 @@
   --text-secondary:     #6B7280;
 
   /* ── Feedback ────────────────────────────────────────────────────────────── */
-  --success:            #10B981;
-  --error:              #EF4444;
+  --success:       #047857;   /* emerald-700 — 5.91:1 on white, text-safe */
+  --error:         #B91C1C;   /* red-700     — 6.94:1 on white, text-safe */
+  --success-fill:  #10B981;   /* emerald-500 — decorative dots/icons only */
+  --error-fill:    #EF4444;   /* red-500     — decorative dots/icons only */
 
   /* ── UI accent (derived from brand) ─────────────────────────────────────── */
-  --accent:             var(--brand-purple);
+  --accent:             var(--brand-purple);   /* borders, outlines, focus rings, link text */
+  --accent-fill:        #C44B22;               /* button/chip/bar backgrounds (4.78:1 w/ white) */
   --accent-contrast:    #FFFFFF;
 
   /* ── Typography ──────────────────────────────────────────────────────────── */
@@ -74,9 +77,11 @@
 /* ── Dark mode ───────────────────────────────────────────────────────────────── */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Brand — lighter for dark backgrounds */
-    --brand-purple:       #A78BFA;   /* violet-400 */
-    --brand-purple-light: #2E1065;
+    /* Brand — peachy terracotta for dark backgrounds */
+    --brand-purple:       #ED9070;   /* peachy terracotta — 6.10:1 on gray-800 */
+    --brand-purple-light: #3D1810;   /* deep warm brown tint */
+    --accent:             #ED9070;
+    --accent-fill:        #ED9070;
 
     /* Annotation accents — lightened for readability on dark surfaces */
     --ann-vocab:          oklch(0.72 0.18 240);
@@ -95,9 +100,11 @@
     --text-primary:       #F9FAFB;   /* gray-50  */
     --text-secondary:     #9CA3AF;   /* gray-400 */
 
-    /* Feedback — lightened for dark bg */
+    /* Feedback — lightened for dark bg; fills reuse readable values */
     --success:            #34D399;   /* emerald-400 */
     --error:              #F87171;   /* red-400     */
+    --success-fill:       #34D399;
+    --error-fill:         #F87171;
 
     /* Elevation — stronger shadow on dark */
     --shadow:             0 0.5rem 1.5rem rgb(0 0 0 / 0.4);
@@ -614,7 +621,7 @@ textarea[aria-invalid="true"] {
 .button-primary {
   border: none;
   border-radius: 999px;
-  background: var(--accent);
+  background: var(--accent-fill);
   color: var(--accent-contrast);
   padding-inline: 1.2rem;
   /* 2.75 rem ≈ 44 CSS px — WCAG 2.5.8 minimum touch target size. */
@@ -624,7 +631,7 @@ textarea[aria-invalid="true"] {
 }
 
 .button-primary:hover:not(:disabled) {
-  background: color-mix(in srgb, var(--accent) 85%, black);
+  background: color-mix(in srgb, var(--accent-fill) 85%, black);
 }
 
 /* Solid focus rings — color-mix with transparent fails WCAG 2.4.11 3:1
@@ -684,7 +691,7 @@ select:focus-visible {
   inset-block: 0;
   inset-inline-start: 0;
   inline-size: var(--progress, 0%);
-  background-color: var(--accent);
+  background-color: var(--accent-fill);
   border-radius: inherit;
   transition: inline-size 0.3s ease;
 }
@@ -720,7 +727,7 @@ select:focus-visible {
   position: fixed;
   inset-inline-start: 1rem;
   inset-block-start: 1rem;
-  background: var(--accent);
+  background: var(--accent-fill);
   color: var(--accent-contrast);
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
