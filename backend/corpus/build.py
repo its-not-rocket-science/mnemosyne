@@ -16,7 +16,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Literal
 
-from sqlalchemy import select
+from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.corpus.acquisition import fetch_text
@@ -212,6 +212,13 @@ async def build_entry(
 
     script_hint = detect_dominant_script(normalised)
 
+    # --force: delete existing document (and cascade) before re-inserting.
+    if force:
+        await db.execute(
+            delete(SourceDocumentRow).where(SourceDocumentRow.id == source_document_id)
+        )
+        await db.flush()
+
     # Create SourceDocumentRow once, before iterating chunks.
     await create_source_document_row(
         db,
@@ -244,21 +251,24 @@ async def build_entry(
             )
             continue
 
+        # Savepoint isolates each chunk: a failed flush won't invalidate the
+        # outer transaction or poison subsequent chunks.
         try:
-            await persist_chunk(
-                db,
-                source_document_id=source_document_id,
-                language=entry.language,
-                chunk_index=chunk.chunk_index,
-                char_start=chunk.char_start,
-                char_end=chunk.char_end,
-                chunk_text=chunk.text,
-                source_url=entry.source_url,
-                candidate_results=pipeline_result.candidate_results,
-                sentences=pipeline_result.sentences,
-                uuid_to_candidate=pipeline_result.uuid_to_candidate,
-                user_id=user_id,
-            )
+            async with db.begin_nested():
+                await persist_chunk(
+                    db,
+                    source_document_id=source_document_id,
+                    language=entry.language,
+                    chunk_index=chunk.chunk_index,
+                    char_start=chunk.char_start,
+                    char_end=chunk.char_end,
+                    chunk_text=chunk.text,
+                    source_url=entry.source_url,
+                    candidate_results=pipeline_result.candidate_results,
+                    sentences=pipeline_result.sentences,
+                    uuid_to_candidate=pipeline_result.uuid_to_candidate,
+                    user_id=user_id,
+                )
         except Exception as exc:
             logger.warning(
                 "corpus persist error lang=%s title=%r chunk=%d: %s",
