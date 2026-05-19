@@ -31,8 +31,13 @@
   --reader-measure: 68ch;
 }
 
+:root[data-theme="dark"] {
+  --surface-raised: color-mix(in srgb, var(--surface) 90%, white 4%);
+  --border-soft: color-mix(in srgb, var(--border) 78%, CanvasText 22%);
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root[data-theme="auto"] {
     --surface-raised: color-mix(in srgb, var(--surface) 90%, white 4%);
     --border-soft: color-mix(in srgb, var(--border) 78%, CanvasText 22%);
   }

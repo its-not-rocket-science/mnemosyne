@@ -101,8 +101,20 @@
 }
 
 /* Dark mode brand — lighter terracotta readable on dark surfaces */
+:root[data-theme="dark"] {
+  --brand-purple:       var(--tc-300);  /* bright on dark bg — 5.18:1 ✓ AA */
+  --brand-purple-light: var(--tc-800);
+
+  --surface:           #221A14;   /* warm dark card surface               */
+  --surface-secondary: #17100A;   /* warm dark canvas                     */
+  --border:            #3B2D24;   /* warm dark border                     */
+
+  --text-primary:      #F7EDE4;   /* warm near-white — high contrast ✓    */
+  --text-secondary:    var(--wn-400);
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root[data-theme="auto"] {
     --brand-purple:       var(--tc-300);  /* bright on dark bg — 5.18:1 ✓ AA */
     --brand-purple-light: var(--tc-800);
 
@@ -180,8 +192,47 @@
 }
 
 /* Dark mode — flip the light/dark roles; no warm highlight above */
+:root[data-theme="dark"] {
+  --shadow-panel:
+    0 -1px  3px  rgba(30, 10,  3,  0.80),
+    0  4px  20px rgba(0,   0,  0,  0.45),
+    0  1px   4px rgba(0,   0,  0,  0.30);
+
+  --shadow-card:
+    0 -1px  2px  rgba(30, 10,  3,  0.70),
+    0  2px  10px rgba(0,   0,  0,  0.38),
+    0  1px   3px rgba(0,   0,  0,  0.22);
+
+  --shadow-card-hover:
+    0 -2px  4px  rgba(30, 10,  3,  0.80),
+    0  6px  20px rgba(0,   0,  0,  0.50),
+    0  1px   4px rgba(0,   0,  0,  0.28);
+
+  --shadow-dialog:
+    0 -1px  4px  rgba(30, 10,  3,  0.90),
+    0  8px  40px rgba(0,   0,  0,  0.60),
+    0  2px  10px rgba(0,   0,  0,  0.35);
+
+  --shadow-button:
+    0 -1px  2px  rgba(30, 10,  3,  0.80),
+    0  2px   8px rgba(0,   0,  0,  0.42),
+    0  1px   3px rgba(0,   0,  0,  0.28);
+
+  --shadow-button-hover:
+    0 -2px  4px  rgba(30, 10,  3,  0.90),
+    0  4px  14px rgba(0,   0,  0,  0.55),
+    0  1px   4px rgba(0,   0,  0,  0.32);
+
+  --shadow-button-active:
+    0  0    1px  rgba(30, 10,  3,  0.60),
+    0  1px   4px rgba(0,   0,  0,  0.32),
+    inset 0 1px 4px rgba(0, 0, 0, 0.38);
+
+  --shadow: var(--shadow-panel);
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root[data-theme="auto"] {
     --shadow-panel:
       0 -1px  3px  rgba(30, 10,  3,  0.80),
       0  4px  20px rgba(0,   0,  0,  0.45),
@@ -253,8 +304,18 @@
   pointer-events: none;
 }
 
+:root[data-theme="dark"] .panel::before {
+  background: linear-gradient(
+    to right,
+    transparent 5%,
+    rgba(255, 255, 255, 0.05) 30%,
+    rgba(255, 255, 255, 0.05) 70%,
+    transparent 95%
+  );
+}
+
 @media (prefers-color-scheme: dark) {
-  .panel::before {
+  :root[data-theme="auto"] .panel::before {
     background: linear-gradient(
       to right,
       transparent 5%,
@@ -359,16 +420,30 @@
     0  2px 6px rgba(61,  15,  6,  0.13);
 }
 
+:root[data-theme="dark"] .ghost-button,
+:root[data-theme="dark"] .rating-button {
+  box-shadow:
+    0 -1px 1px rgba(30, 10, 3, 0.65),
+    0  1px 3px rgba(0,   0, 0, 0.28);
+}
+
+:root[data-theme="dark"] .ghost-button:hover:not(:disabled),
+:root[data-theme="dark"] .rating-button:hover:not(:disabled) {
+  box-shadow:
+    0 -1px 2px rgba(30, 10, 3, 0.75),
+    0  2px 6px rgba(0,   0, 0, 0.38);
+}
+
 @media (prefers-color-scheme: dark) {
-  .ghost-button,
-  .rating-button {
+  :root[data-theme="auto"] .ghost-button,
+  :root[data-theme="auto"] .rating-button {
     box-shadow:
       0 -1px 1px rgba(30, 10, 3, 0.65),
       0  1px 3px rgba(0,   0, 0, 0.28);
   }
 
-  .ghost-button:hover:not(:disabled),
-  .rating-button:hover:not(:disabled) {
+  :root[data-theme="auto"] .ghost-button:hover:not(:disabled),
+  :root[data-theme="auto"] .rating-button:hover:not(:disabled) {
     box-shadow:
       0 -1px 2px rgba(30, 10, 3, 0.75),
       0  2px 6px rgba(0,   0, 0, 0.38);
@@ -457,8 +532,14 @@ select:focus-visible {
   border-block-end: 1px solid var(--border);
 }
 
+:root[data-theme="dark"] .app-shell__top-nav {
+  box-shadow:
+    0 1px 8px rgba(0, 0, 0, 0.30),
+    0 2px 4px rgba(0, 0, 0, 0.20);
+}
+
 @media (prefers-color-scheme: dark) {
-  .app-shell__top-nav {
+  :root[data-theme="auto"] .app-shell__top-nav {
     box-shadow:
       0 1px 8px rgba(0, 0, 0, 0.30),
       0 2px 4px rgba(0, 0, 0, 0.20);

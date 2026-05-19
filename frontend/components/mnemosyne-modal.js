@@ -356,11 +356,17 @@ export class MnemosyneModal extends HTMLElement {
         }
 
         @media (prefers-color-scheme: dark) {
-          .drill-option[data-state="correct"] {
+          :host-context(:root[data-theme="auto"]) .drill-option[data-state="correct"] {
             background: oklch(0.30 0.10 145);
             border-color: oklch(0.55 0.18 145);
             color: oklch(0.85 0.08 145);
           }
+        }
+
+        :host-context(:root[data-theme="dark"]) .drill-option[data-state="correct"] {
+          background: oklch(0.30 0.10 145);
+          border-color: oklch(0.55 0.18 145);
+          color: oklch(0.85 0.08 145);
         }
 
         .drill-option[data-state="wrong"] {
@@ -416,8 +422,10 @@ export class MnemosyneModal extends HTMLElement {
         .drill-feedback[data-result="wrong"]   { color: var(--error-color, oklch(0.50 0.2 29)); }
 
         @media (prefers-color-scheme: dark) {
-          .drill-feedback[data-result="correct"] { color: oklch(0.70 0.15 145); }
+          :host-context(:root[data-theme="auto"]) .drill-feedback[data-result="correct"] { color: oklch(0.70 0.15 145); }
         }
+
+        :host-context(:root[data-theme="dark"]) .drill-feedback[data-result="correct"] { color: oklch(0.70 0.15 145); }
 
         /* ── recall ratings ── */
         .ratings {
