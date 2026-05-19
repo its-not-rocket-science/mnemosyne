@@ -265,6 +265,11 @@ def acquire(
 
     async def _run() -> None:
         for entry in entries:
+            if entry.manual_review:
+                console.print(
+                    f"[yellow]SKIP[/yellow] [{entry.language}] {entry.title}: manual_review=True"
+                )
+                continue
             try:
                 text = await acquire_entry(entry, force=force, cache_dir=cache_dir)
                 console.print(

@@ -412,3 +412,31 @@ def test_build_entry_only_new_skips_existing(tmp_path: Path):
     import asyncio
     result = asyncio.run(_run())
     assert result.status == "skipped"
+
+
+# ── manual_review flag ────────────────────────────────────────────────────────
+
+def test_build_entry_manual_review_skips(tmp_path: Path):
+    """build_entry skips entries with manual_review=True without touching network or DB."""
+    from backend.corpus.build import build_entry
+
+    entry = _entry(language="en", source_url="https://example.com/test.txt",
+                   manual_review=True)
+    registry = MagicMock()
+    registry.get.return_value = MagicMock()
+    db = AsyncMock()
+
+    async def _run():
+        return await build_entry(
+            entry, registry, db,
+            dry_run=False,
+            force=False,
+            cache_dir=tmp_path / "cache",
+            lockfile_path=tmp_path / "manifest.lock.json",
+        )
+
+    import asyncio
+    result = asyncio.run(_run())
+    assert result.status == "skipped"
+    assert any("manual_review" in w for w in result.warnings)
+    db.execute.assert_not_called()

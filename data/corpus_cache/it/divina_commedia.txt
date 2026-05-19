@@ -1,0 +1,233 @@
+Questo testo è
+completo
+.
+<dc:title> Divina Commedia </dc:title>
+<dc:creator opt:role="aut">Dante Alighieri</dc:creator>
+<dc:date>XIV secolo</dc:date>
+<dc:subject>Poemi</dc:subject>
+<dc:rights>
+CC BY-SA 3.0
+</dc:rights>
+<dc:rights>
+GFDL
+</dc:rights>
+<dc:relation></dc:relation>
+<dc:identifier>//it.wikisource.org/w/index.php?title=Divina_Commedia&oldid=-</dc:identifier>
+<dc:revisiondatestamp>20260424212557</dc:revisiondatestamp>
+//it.wikisource.org/w/index.php?title=Divina_Commedia&oldid=-
+20260424212557
+Divina Commedia
+Dante Alighieri
+XIV secolo
+Divina Commedia
+Dante Alighieri
+XIV secolo
+Indice
+Inferno
+Canto I
+Incomincia la Comedia di Dante Alleghieri di Fiorenza, ne la quale tratta de le pene e punimenti de’ vizi e de’ meriti e premi de le virtù. Comincia il canto primo de la prima parte la quale si chiama Inferno, nel qual l’auttore fa proemio a tutta l’opera.
+Canto II
+Canto secondo de la prima parte ne la quale fa proemio a la prima cantica cioè a la prima parte di questo libro solamente, e in questo canto tratta l’auttore come trovò Virgilio, il quale il fece sicuro del cammino per le tre donne che di lui aveano cura ne la corte del cielo.
+Canto III
+Canto terzo, nel quale tratta de la porta e de l’entrata de l’inferno e del fiume d’Acheronte, de la pena di coloro che vissero sanza opere di fama degne, e come il demonio Caron li trae in sua nave e come elli parlò a l’auttore; e tocca qui questo vizio ne la persona di papa Cilestino.
+Canto IV
+Canto quarto, nel quale mostra del primo cerchio de l’inferno, luogo detto Limbo, e quivi tratta de la pena de’ non battezzati e de’ valenti uomini, li quali moriron innanzi l’avvenimento di Gesù Cristo e non conobbero debitamente Idio; e come Iesù Cristo trasse di questo luogo molte anime.
+Canto V
+Canto quinto, nel quale mostra del secondo cerchio de l’inferno, e tratta de la pena del vizio de la lussuria ne la persona di più famosi gentili uomini.
+Canto VI
+Canto sesto, nel quale mostra del terzo cerchio de l’inferno e tratta del punimento del vizio de la gola, e massimamente in persona d’un fiorentino chiamato Ciacco; in confusione di tutt’i buffoni tratta del dimonio Cerbero e narra in forma di predicere più cose a divenire a la città di Fiorenza.
+Canto VII
+Canto settimo, dove si dimostra del quarto cerchio de l’inferno e alquanto del quinto; qui pone la pena del peccato de l’avarizia e del vizio de la prodigalità; e del dimonio Pluto; e quello che è fortuna.
+Canto VIII
+Canto ottavo, ove tratta del quinto cerchio de l’inferno e alquanto del sesto, e de la pena del peccato de l’ira, massimamente in persona d’uno cavaliere fiorentino chiamato messer Filippo Argenti, e del dimonio Flegias e de la palude di Stige e del pervenire a la città d’inferno detta Dite.
+Canto IX
+Canto nono, ove tratta e dimostra de la cittade c’ha nome Dite, la qual si è nel sesto cerchio de l’inferno e vedesi messa la qualità de le pene de li eretici; e dichiara in questo canto Virgilio a Dante una questione, e rendelo sicuro dicendo sé esservi stato dentro altra fiata.
+Canto X
+Canto decimo, ove tratta del sesto cerchio de l’inferno e de la pena de li eretici, e in forma d’indovinare in persona di messer Farinata predice molte cose e di quelle che avvennero a Dante, e solve una questione.
+Canto XI
+Canto undecimo, nel quale tratta de’ tre cerchi disotto d’inferno, e distingue de le genti che dentro vi sono punite, e che quivi più che altrove; e solve una questione.
+Canto XII
+Canto XII, ove tratta del discendimento nel settimo cerchio d’inferno, e de le pene di quelli che fecero forza in persona de’ tiranni, e qui tratta di Minotauro e del fiume del sangue, e come per uno centauro furono scorti e guidati sicuri oltre il fiume.
+Canto XIII
+Canto XIII, ove tratta de l’esenzia del secondo girone ch’è nel settimo circulo, dove punisce coloro ch’ebbero contra sé medesimi violenta mano, ovvero non uccidendo sé ma guastando i loro beni.
+Canto XIV
+Canto XIV, ove tratta de la qualità del terzo girone, contento nel settimo circulo; e quivi si puniscono coloro che fanno forza ne la deitade, negando e bestemmiando quella; e nomina qui spezialmente il re Capaneo scelleratissimo in questo preditto peccato.
+Canto XV
+Canto XV, ove tratta di quello medesimo girone e di quello medesimo cerchio; e qui sono puniti coloro che fanno forza ne la deitade, spregiando natura e sua bontade, sì come sono li soddomiti.
+Canto XVI
+Canto XVI, ove tratta di quello medesimo girone e di quello medesimo cerchio e di quello medesimo peccato.
+Canto XVII
+Canto XVII, nel quale si tratta del discendimento nel luogo detto Malebolge, che è l’ottavo cerchio de l’inferno; ancora fa proemio alquanto di quelli che sono nel settimo circulo; e quivi si truova il demonio Gerione sopra ’l quale passaro il fiume; e quivi parlò Dante ad alcuni prestatori e usurai del settimo cerchio.
+Canto XVIII
+Canto XVIII, ove si descrive come è fatto il luogo di Malebolge e tratta de’ ruffiani e ingannatori e lusinghieri, ove dinomina in questa setta messer Venedico Caccianemico da Bologna e Giasone greco e Alessio de li Interminelli da Lucca, e tratta come sono state loro pene.
+Canto XIX
+Canto XIX, nel quale sgrida contra li simoniachi in persona di Simone Mago, che fu al tempo di san Pietro e di santo Paulo, e contra tutti coloro che simonia seguitano, e qui pone le pene che sono concedute a coloro che seguitano il sopradetto vizio, e dinomaci entro papa Niccola de li Orsini di Roma perché seguitò simonia; e pone de la terza bolgia de l’inferno.
+Canto XX
+Canto XX, dove si tratta de l’indovini e sortilegi e de l’incantatori, e de l’origine di Mantova, di che trattare diede cagione Manto incantatrice; e di loro pene e miseria e de la condizione loro misera, ne la quarta bolgia, in persona di Michele di Scozia e di più altri.
+Canto XXI
+Canto XXI, il quale tratta de le pene ne le quali sono puniti coloro che commisero baratteria, nel quale vizio abbomina li lucchesi; e qui tratta di dieci demoni, ministri a l’offizio di questo luogo; e cogliesi qui il tempo che fue compilata per Dante questa opera.
+Canto XXII
+Canto XXII, nel quale abomina quelli di Sardigna e tratta alcuna cosa de la sagacitade de’ barattieri in persona d’uno navarrese, e de’ barattieri medesimi questo canta.
+Canto XXIII
+Canto XXIII, nel quale tratta de la divina vendetta contra l’ipocriti; del quale peccato sotto il vocabulo di due cittadini di Bologna abomina l’auttore li bolognesi, e li giudei sotto il nome d’Anna e di Caifas; e qui è la sesta bolgia.
+Canto XXIV
+Canto XXIV, nel quale tratta de le pene che puniscono li furti, dove trattando de’ ladroni sgrida contro a’ Pistolesi sotto il vocabulo di Vanni Fucci, per la cui lingua antidice del tempo futuro; ed è la settima bolgia.
+Canto XXV
+Canto XXV, dove si tratta di quella medesima materia che detta è nel capitolo dinanzi a questo, e tratta contr’ a’ fiorentini, ma in prima sgrida contro a la città di Pistoia; ed è quella medesima bolgia.
+Canto XXVI
+Canto XXVI, nel quale si tratta de l’ottava bolgia contro a quelli che mettono aguati e danno frodolenti consigli; e in prima sgrida contro a’ fiorentini e tacitamente predice del futuro e in persona d’Ulisse e Diomedes pone loro pene.
+Canto XXVII
+Canto XXVII, dove tratta di que’ medesimi aguatatori e falsi consiglieri d’inganni in persona del conte Guido da Montefeltro.
+Canto XXVIII
+Canto XXVIII, nel quale tratta le qualitadi de la nona bolgia, dove l’auttore vide punire coloro che commisero scandali, e’ seminatori di scisma e discordia e d’ogne altro male operare.
+Canto XXIX
+Canto XXIX, ove tratta de la decima bolgia, dove si puniscono i falsi fabricatori di qualunque opera, e isgrida e riprende l’autore i Sanesi.
+Canto XXX
+Canto XXX, ove tratta di quella medesima materia e gente.
+Canto XXXI
+Canto XXXI, ove tratta de’ giganti che guardano il pozzo de l’inferno, ed è il nono cerchio.
+Canto XXXII
+Canto XXXII, nel quale tratta de’ traditori di loro schiatta e de’ traditori de la loro patria, che sono nel pozzo de l’inferno.
+Canto XXXIII
+Canto XXXIII, ove tratta di quelli che tradirono coloro che in loro tutto si fidavano, e coloro da cui erano stati promossi a dignità e grande stato; e riprende qui i Pisani e i Genovesi.
+Canto XXXIV
+Canto XXXIV e ultimo de la prima cantica di Dante Alleghieri di Fiorenza, nel qual canto tratta di Belzebù principe de’ dimoni e de’ traditori di loro signori, e narra come uscie de l’inferno.
+Purgatorio
+Canto I
+Comincia la seconda parte overo cantica de la Comedia di Dante Allaghieri di Firenze, ne la quale parte si purgano li commessi peccati e vizi de’ quali l’uomo è confesso e pentuto con animo di sodisfazione; e contiene XXXIII canti. Qui sono quelli che sperano di venire quando che sia a le beate genti.
+Canto II
+Canto secondo, nel quale tratta de la prima qualitade cioè dilettazione di vanitade, nel quale peccato inviluppati sono puniti proprio fuori del purgatorio in uno piano, e in persona di costoro nomina il Casella, uomo di corte.
+Canto III
+Canto III, nel quale si tratta de la seconda qualitade, cioè di coloro che per cagione d’alcuna violenza che ricevettero, tardaro di qui a loro fine a pentersi e confessarsi de’ loro falli, sì come sono quelli che muoiono in contumacia di Santa Chiesa scomunicati, li quali sono puniti in quel piano. In essempro di cotali peccatori nomina tra costoro il re Manfredi.
+Canto IV
+Canto IV, dove si tratta de la soprascritta seconda qualitade, dove si purga chi per negligenza di qui a la morte si tardòe a confessare; tra i quali si nomina il Belacqua, uomo di corte.
+Canto V
+Canto V, ove si tratta de la terza qualitade, cioè di coloro che per cagione di vendicarsi d’alcuna ingiuria insino a la morte mettono in non calere di riconoscere sé esser peccatori e soddisfare a Dio; de li quali nomina in persona messer Iacopo di Fano e Bonconte di Montefeltro.
+Canto VI
+Canto VI, dove si tratta di quella medesima qualitade, dove si purga la predetta mala volontà di vendicare la ’ngiuria, e per questo si ritarda sua confessione, e dove truova e nomina Sordella da Mantua.
+Canto VII
+Canto VII, dove si purga la quarta qualitade di coloro che, per propria negligenza, di die in die di qui all’ultimo giorno di loro vita tardaro indebitamente loro confessione; li quali si purgano in uno vallone intra fiori ed erbe; dove nomina il re Carlo e molti altri.
+Canto VIII
+Canto VIII, dove si tratta de la quinta qualitade, cioè di coloro che, per timore di non perdere onore e signoria e offizi e massimalmente per non ritrarre le mani da l’utilità de la pecunia, si tardaro a confessare di qui a l’ultima ora di loro vita e non facendo penitenza di lor peccati; dove nomina iudice Nino e Currado marchese Malespini.
+Canto IX
+Canto IX, nel quale pone l’auttore uno suo significativo sogno; e poi come pervennero a l’entrata del purgatorio proprio, descrivendo come ne l’entrata di purgatorio trovoe uno angelo che con la punta de la spada che portava in mano scrisse ne la fronte di Dante sette P.
+Canto X
+Canto X, dove si tratta del primo girone del proprio purgatorio, il quale luogo discrive l’auttore sotto certi intagli d’antiche imagini; e qui si purga la colpa de la superbia.
+Canto XI
+Canto XI, nel quale si tratta del sopradetto primo girone e de’ superbi medesimi, e qui si purga la vana gloria ch’è uno de’ rami de la superbia; dove nomina il conte Uberto da Santafiore e messer Provenzano Salvani di Siena e molti altri.
+Canto XII
+Canto XII, ove si tratta del secondo girone dove si sono intagliate certe imagini antiche de’ superbi; e quivi si puniscono li superbi medesimi.
+Canto XIII
+Canto XIII, dove si tratta del sopradetto girone secondo, e quivi si punisce la colpa della invidia; dove nomina madonna Sapìa, moglie di messer Viviano de’ Ghinibaldi da Siena, e molti altri.
+Canto XIV
+Canto XIV, dove si tratta del sopradetto girone, e qui si purga la sopradetta colpa della invidia; dove nomina messer Rinieri da Calvoli e molti altri.
+Canto XV
+Canto XV, il quale tratta de la essenza del terzo girone, luogo diputato a purgare la colpa e peccato de l’ira; e dichiara Virgilio a Dante uno dubbio nato di parole dette nel precedente canto da Guido del Duca, e una visione ch’aparve in sogno a l’auttore, cioè Dante.
+Canto XVI
+Canto XVI, dove si tratta del sopradetto terzo girone e del purgare la detta colpa de l’ira; e qui Marco Lombardo solve uno dubbio a Dante.
+Canto XVII
+Canto XVII, dove tratta de la qualità del quarto girone, dove si purga la colpa de la accidia, dove si ristora l’amore de lo imperfetto bene; e qui dichiara una questione che indi nasce.
+Canto XVIII
+Canto XVIII, il quale tratta del sopradetto quarto girone, ove si purga la soprascritta colpa e peccato de l’accidia; e qui mostra Virgilio che è perfetto amore; dove nomina l’abate da San Zeno di Verona.
+Canto XIX
+Canto XIX, ove tratta de la essenza del quinto girone e qui si purga la colpa de l’avarizia; dove nomina papa Adriano nato di Genova de’ conti da Lavagna.
+Canto XX
+Canto XX, ove si tratta del sopradetto girone e de la sopradetta colpa de l’avarizia.
+Canto XXI
+Canto XXI, ove si tratta del sopradetto quinto girone, dove si punisce e purga la predetta colpa de l’avarizia e la colpa de la prodigalitade; dove truova Stazio poeta tolosano.
+Canto XXII
+Canto XXII, dove tratta de la qualità del sesto girone, dove si punisce e purga la colpa e vizio de la gola; e qui narra Stazio sua purgazione e sua conversione a la cristiana fede.
+Canto XXIII
+Canto XXIII, dove si tratta del sopradetto girone e di quella medesima colpa de la gola, e sgrida contro a le donne fiorentine; dove truova Forese de’ Donati di Fiorenze col quale molto parla.
+Canto XXIV
+Canto XXIV nel quale si tratta del sopradetto sesto girone e di quelli che si purgano del predetto peccato e vizio de la gola; e predicesi qui alcune cose a venire de la città lucana.
+Canto XXV
+Canto XXV, lo quale tratta de l’essenzia del settimo girone, dove si punisce la colpa e peccato contro a natura ed ermafrodito sotto il vizio de la lussuria; e prima tratta alquanto del precedente purgamento de’ ghiotti, dove Stazio poeta fae una distinzione sopra la natura umana.
+Canto XXVI
+Canto XXVI, dove tratta di quello medesimo girone e del purgamento de’ predetti peccati e vizi lussuriosi; dove nomina messer Guido Guinizzelli da Bologna e molti altri.
+Canto XXVII
+Canto XXVII, dove tratta d’una visione che apparve a Dante in sogno, o come pervennero a la sommità del monte ed entraro nel Paradiso Terrestre chiamato paradiso delitiarum.
+Canto XXVIII
+Canto XXVIII, ove si tratta come la vita attiva distingue a l’auttore la natura del fiume di Letè, il quale trovò nel detto Paradiso, ove molto dimostra de la felicitade e del peccato di Adamo, e del modo e ordine del detto luogo.
+Canto XXIX
+Canto XXIX, dove si tratta sì come l’auttore contristato si conduoleva e come vide li sette doni del Santo Spirito e Cristo e la celestiale corte in forma di certe figure.
+Canto XXX
+Canto XXX, dove narra come Beatrice apparve a Dante e Virgilio il lasciò, e lo recitare per l’alta donna de la incostanza e difetto di Dante, e qui l’auttore piange i suoi difetti con vergogna compuntiva.
+Canto XXXI
+Canto XXXI, ove si tratta sì come Beatrice riprende l’auttore de le commesse colpe, e come la donna che avante li apparve il bagna.
+Canto XXXII
+Canto XXXII, dove si tratta come Beatrice comandò a l’auttore che scrivesse li miracoli che vide in quel luogo, e come elli con le donne seguio il carro, e l’aguglia percosse il carro, e una volpe sen fuggio, e de la puttana e del gigante.
+Canto XXXIII
+Canto XXXIII, il quale si è l’ultimo de la seconda cantica, ove si racconta sì come Beatrice dichiaroe a Dante quelle cose ch’elli vide, trattando e dimostrando le future vendette e de la ingiuria nel predetto carro del grifone; e infine, veduti li quattro fiumi del Paradiso, escono verso il cielo.
+Paradiso
+Canto I
+Comincia la terza cantica de la Commedia di Dante Alaghiere di Fiorenza, ne la quale si tratta de’ beati e de la celestiale gloria e de’ meriti e premi de’ santi, e dividesi in nove parti. Canto primo, nel cui principio l’auttore proemizza a la seguente cantica; e sono ne lo elemento del fuoco e Beatrice solve a l’auttore una questione; nel quale canto l’auttore promette di trattare de le cose divine invocando la scienza poetica, cioè Appollo chiamato il deo de la Sapienza.
+Canto II
+Canto secondo, ove tratta come Beatrice e l’auttore pervegnono al cielo de la Luna, aprendo la veritade de l’ombra ch’appare in essa; e qui comincia questa terza parte de la Commedia quanto al proprio dire.
+Canto III
+Canto terzo, nel quale si tratta di quello medesimo cielo de la Luna e di certi spiriti che appariro in esso; e solve qui una questione: cioè se li spiriti che sono in cielo di sotto vorrebbero esser più sù ch’elli siano.
+Canto IV
+Canto IV, dove in quello medesimo cielo due veritadi si manifestano da Beatrice: l’una è del luogo de’ beati, e l’altra si è de la voluntate mista e de la obsuluta; e propone terza questione del voto e se si puote satisfare al voto rotto e non osservato.
+Canto V
+Canto V, nel quale solve una questione premessa nel precedente canto e ammaestra li cristiani intorno a li voti ch’elli fanno a Dio; ed entrasi nel cielo di Mercurio, e qui comincia la seconda parte di questa cantica.
+Canto VI
+Canto VI, dove, nel cielo di Mercurio, Iustiniano imperadore sotto brevità narra tutti li grandi fatti operati per li Romani sotto la ’nsegna de l’aquila, da l’avvenimento di Enea in Italia infino al tempo di Longobardi; e alcune cose si dicono qui in laude di Romeo visconte del conte Ramondo Berlinghieri di Proenza.
+Canto VII
+Canto VII, nel quale Beatrice mostra come la vendetta fatta per Tito de la morte di Gesù Cristo nostro Salvatore fue giusta, essendo la morte di Gesù Cristo giusta per ricomperamento de l’umana generazione e solvimento del peccato del primo padre.
+Canto VIII
+Canto VIII, nel quale si manifestano alcune questioni per Carlo giovane, re d’Ungheria, il quale si mostroe nel circulo di Venere; e qui comincia la terza parte di questa cantica.
+Canto IX
+Canto IX, nel quale parla madonna Cunizza di Romano, antidicendo alcuna cosa de la Marca di Trevigi; e parla Folco di Marsilia che fue vescovo d’essa.
+Canto X
+Canto X, nel quale santo Tommaso d’Aquino de l’ordine de’ Frati Predicatori parla nel cielo del Sole; e qui comincia la quarta parte.
+Canto XI
+Canto XI, nel quale il detto frate in gloria di san Francesco sotto brevitate racconta la sua vita tutta, e riprende i suoi frati, ché pochi sono quelli che ’1 seguitino.
+Canto XII
+Canto XII, nel quale frate Bonaventura da Bagnoregio in gloria di santo Dominico parla e brevemente la sua vita narra.
+Canto XIII
+Canto XIII, nel quale san Tommaso d’Aquino, de l’ordine d’i frati predicatori solve una questione toccata di sopra da Salamone.
+Canto XIV
+Canto XIV, nel quale Salamone solve alcuna cosa dubitata; e montasi ne la stella di Marte. La quinta parte comincia qui.
+Canto XV
+Canto XV, nel quale messere Cacciaguida fiorentino parla laudando l’antico costume di Fiorenza, in vituperio del presente vivere d’essa cittade di Fiorenza.
+Canto XVI
+Canto XVI, nel quale il sopradetto messer Cacciaguida racconta intorno di quaranta famiglie onorabili al suo tempo ne la cittade di Fiorenza, de le quali al presente non è ricordo né fama.
+Canto XVII
+Canto XVII, nel quale il predetto messer Cacciaguida solve l’animo de l’auttore da una paura e confortalo a fare questa opera.
+Canto XVIII
+Canto XVIII, nel quale si monta ne la stella di Giove, e narrasi come li luminari spirituali figuravano mirabilmente.
+Canto XIX
+Canto XIX, nel quale li spiriti ch’erano ne la stella di Iove insieme conglutinati in forma d’aguglia, ad una voce solvono uno grande dubbio, e abominano e infamano tutti li re cristiani che regnavano ne l’anno di Cristo MCCC.
+Canto XX
+Canto XX, nel quale ancora suonano nel becco de l’Aquila certe parole per le quali apprende di conoscere alcuni di quelli spirti de li quali quella Aquila è composta.
+Canto XXI
+Canto XXI, nel quale si monta ne la stella di Saturno, che è il settimo pianeto; e qui comincia la settima parte, e come Pietro Dammiano solve alcune questioni.
+Canto XXII
+Canto XXII, nel quale si tratta di quelli medesimi che nel precedente capitolo, qui sotto il titolo di Santo Maccario e di Santo Romoaldo; e infine dispitta il mondo e la sua picciolezza e le cose mondane, ripetendo e mostrando tutti li pianeti per li quali è intrato; ed entra con Beatrice nel segno d’i Gemini; e qui prende l’ottava parte di questa terza cantica.
+Canto XXIII
+Canto XXIII, dove si tratta come l’auttore vide la Beata Virgine Maria e li abitatori de la celestiale corte, de la quale mirabilemente favella in questo canto; e qui si prende la nona parte di questa terza cantica.
+Canto XXIV
+Canto XXIV, dove si tratta de la nona e ultima parte di questa ultima cantica; ne la quale san Pietro Appostolo a priego di Beatrice essamina l’auttore sopra la fede cattolica.
+Canto XXV
+Canto XXV, che tratta come l’auttore parla con Beatrice e con santo Iacopo Maggiore sopra certe questioni de le quali santo Iacopo solve la prima.
+Canto XXVI
+Canto XXVI, nel quale l’auttore ne conforta seguitare lo innefabile amore, e dove trova Adamo il nostro primo padre, dicente a lui il tempo de la sua felicitade e infelicitade.
+Canto XXVII
+Canto XXVII, dove tratta sì come santo Pietro appostolo, proverbiando li suoi successori papi, adempie l’animo de l’auttore di questo libro.
+Canto XXVIII
+Canto XXVIII, nel quale Beatrice distingue a l’auttore li nove ordini de li angeli gloriosi che sono nel nono cielo e il loro offizio.
+Canto XXIX
+Canto XXIX, ove si tratta de la superbia e cacciamento de li rei e malvagi angeli e de la dilezione e gloria de’ buoni; e infine si riprende tutti coloro che predicando si partono dal santo Evangelio e dicono favole; e contiencisi in questo canto certe declaragioni di certe oscuritadi del celestiale regno.
+Canto XXX
+Canto XXX, ove narra come l’auttore vidde per conducimento di Beatrice li splendori de la divinità e le seggie de l’anime de li uomini, tra le quali vide già collocata quella de lo imperadore Arrigo di Lunzimborgo con la sua corona.
+Canto XXXI
+Canto XXXI, il quale tratta come l’auttore fue lasciato da Beatrice e trovò Santo Bernardo, per lo cui conducimento rivide Beatrice ne la sua gloria; poi pone una orazione che Dante fece a Beatrice che pregasse per lui lo nostro Segnore Iddio e la nostra Donna sua Madre; e come vide la Divina Maestà.
+Canto XXXII
+Canto XXXII, ove tratta come santo Bernardo mostrò a Dante ordinatamente li luoghi de’ beati del Vecchio e del Nuovo Testamento; e come a la voce de l’Arcangelo Gabriello laudavano nostra Madonna, cioè la Virgine Maria.
+Canto XXXIII
+Canto XXXIII, il quale è l’ultimo de la terza cantica e ultima; nel quale canto santo Bernardo in figura de l’auttore fa una orazione a la Vergine Maria, pregandola che sé e la Divina Maestade si lasci vedere visibilemente.
+Altri progetti
+Wikipedia
+Wikiquote
+Commons
+Wikibooks

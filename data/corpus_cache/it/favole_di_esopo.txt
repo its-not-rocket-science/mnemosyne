@@ -1,0 +1,428 @@
+Questo testo è
+riletto e controllato
+.
+<dc:title> Favole di Esopo </dc:title>
+<dc:creator opt:role="aut">Esopo</dc:creator>
+<dc:date>Antichità</dc:date>
+<dc:subject>favole</dc:subject>
+<dc:rights>
+CC BY-SA 3.0
+</dc:rights>
+<dc:rights>
+GFDL
+</dc:rights>
+<dc:relation>Indice:Landi - Vita di Esopo, 1805.djvu</dc:relation>
+<dc:identifier>//it.wikisource.org/w/index.php?title=Favole_di_Esopo&oldid=-</dc:identifier>
+<dc:revisiondatestamp>20260424224612</dc:revisiondatestamp>
+//it.wikisource.org/w/index.php?title=Favole_di_Esopo&oldid=-
+20260424224612
+Favole di Esopo
+Esopo
+Giulio Landi
+Antichità
+Landi - Vita di Esopo, 1805.djvu
+Favole di Esopo
+Esopo
+Traduzione dal greco 
+                                    di
+Giulio Landi
+(1545)
+Antichità
+F A V O L E
+DI
+E S O P O
+F R I G I O
+Con la Vita del medesimo,
+Tradotta, ed ornata
+DAL SIGNOR CONTE
+GIULIO LANDI
+Edizione nuova, e corretta
+Illustrata di vaghe figure, con
+aggiunta di molte Favole
+d’insigni Autori.
+IN NAPOLI MDCCCV.
+Con licenza de’ Superiori
+Indice
+Vita di Esopo Frigio
+, traduzione dal greco di
+Giulio Landi
+(
+1545
+)
+Della Volpe, ed il Leopardo
+Della Volpe, e del Becco
+Di una Gatta, e Venere
+D'un Contadino, ed i suoi figliuoli
+Di una Donna, ed una Gallina
+Di due Giovani
+Di due Amici, ed un Orso
+Della Canna, e l'Oliva
+Di un Trombetta
+Di un Cane, ed un Macellaro
+Dell'Asino, ed il Lupo
+Di un Medico, ed un'Infermo
+Del Mare, e d'un Pastore
+Della Volpe, ed il Leone
+De' Galli, e la Starna
+Di una Volpe, ed una testa di Lupo di Marmo
+Di un Carbonaro, ed un Nettapanni
+Di un'uomo Borioso
+Di Apollo, ed un Uomo
+Di un Pescatore, ed un Pesce piccolo
+Di un Uomo morsicato da un Cane
+Di un Asino, ed un Cavallo
+Di un Satiro, ed un Uomo
+Di un Villano ed i suoi Cani
+Del Tonno, e del Delfino
+Di un'Ucellatore, ed un Palombo
+Di un figliuolo, e la Madre
+Di un Indovinatore
+Di un'Ucellatore, ed un Merlo
+Di Giove, ed un Villano
+Di un Figliuolo, ed il Padre
+Di un Calvo
+Di uno, che prometteva agli Dei cose impossibili
+Di due Rane
+Di un Cane, ed un Gallo
+Di un'Orso, ed un Leone
+Del Pavone, e la Gaza
+Della Nottola, lo Spino, ed il Mergo
+Di uno Schirato, ed una Volpe
+Di una Lodola
+Di un Cerviotto
+Di un Avaro
+Dell'Oche, e le Grue
+Della Tartaruga, e l'Aquila
+Di una Cerva
+Di una Cerva, ed un Leone
+Di una Cerva, ed una Vite
+Dell'Asino, il Leone, ed il Gallo
+Di un Porco, ed un Cane
+Di un Cane, ed un Ortolano
+Della Porca, e la Cagna
+Del Serpente, ed il Grancio
+Del Pastore, ed il Lupo
+Del Leone, ed il Lupo
+Di un Imbriaco, e la sua Donna
+Di un Cigno, ed un'Oca
+Della Rondinella, e la Cornacchia
+Del Moro
+Della Civetta, e della Nottola
+Delle Lumache
+Di una Vedova, e le fantesche
+Di una Donna incantatrice
+Di un Villano, e della Fortuna
+Di due Peregrini
+Di due Rane
+Dell'Api
+Dell'Alcione
+Di un Pescatore
+Delle Mosche
+Di una Simia, e il Delfino
+Di Mercurio, e uno Statuario
+Di un Mercurio, e Tiresia indovinatore
+Di due Cani
+Del Marito, e la Moglie
+Dell'Agnello, ed il Lupo
+Il Grancio, e la Volpe
+Di un Musico ignorante
+De' Ladri
+Di Mercurio, ed il Sarto
+Di Giove
+Di Giove, e gli animali
+Del Lupo, e la pecora
+Delle Lepri
+Della Formica
+Della Nottola, e la Donnola
+De' Pellegrini
+Dell'asino Salvatico
+Degli Asini
+Dell'Asino, e la Volpe
+Dell'Asino, e le Rane
+Dell'Asino, ed il Corvo
+Dell'Asino, e la Volpe
+Della Gallina, e la Rondinella
+Del Camello
+Del Serpente
+Della Colomba, e la Cornacchia
+Della Colomba
+Di un Uomo ricco
+D'un Pastore
+Di un Pastore
+Dell'Aquila
+Di una Gallina, che faceva l'ova d'Oro
+Del Verme, e la Volpe
+Del Lupo, ed una Vecchia
+Del Gallo
+Del Leone, ed il Pulce
+Del Lupo, e dell'Agnello
+Del Sorcio, e la Rana
+Del Cane, e l'ombra sua
+Del Leone, ed altri animali
+Del Villano, e del Serpente
+Del Lupo, e la Grua
+Dell'Asino, e del Porco Cignale
+Del Sorcio domestico, ed il salvatico
+Dell'Aquila, e la Cornacchia
+Del Corvo, e la Volpe
+Del Leone invecchiato
+Del Cane, e dell'Asino
+Del Leone, ed il Sorcio
+Del Nibbio
+Della Rondinella, ed altri ucelli
+Delle Rane, e loro Re
+Delle Colombe, e lo Sparviero
+Del Ladro, e del Cane
+Del Lupo, e la Pecora
+Del parto del Monte
+Di un Cane Vecchio sprezzato dal Padrone
+Delle Lepri che temevano senza causa
+Del Capretto, e del Lupo
+Del Cervo, e della Pecora
+Del Corvo, e delli Pavoni
+Del Villano, e del Serpente
+Della Volpe, e della Cicogna
+Della Mosca, e della Formica
+Delle Rane, e del Bue
+Del Cavallo, e del Leone
+Del Cavallo, e dell'Asino
+Degli Ucelli, e degli animali da quattro piedi
+Del Cervo
+Del Lupo, e della Volpe
+Del Serpente, e della Lima
+De' Lupi, e delle Pecore
+Di tutti i membri del Corpo, e del Ventre
+Della Selva, ed il Villano
+Della Simia, e della Volpe
+Del Cervo, e delli Buoi
+Del Leone, e della Volpe
+Della Volpe, e la Donnola
+Del Cavallo, e del Corvo
+Della Volpe, e dell'Aquila
+Del Villano, e della Cicogna
+Del Cane, e della Pecora
+Del Gatto, e del Gallo
+Dell'Aquila, e del Corvo
+Dell'Agnello, e del Lupo
+Del Cane, e del Bue
+Di un fanciullo, e di alcuni Villani
+Della Cornacchia, e della Pecora
+Del Pavone, e del Rosignuolo
+Della Donnola, e de' Sorci
+Favola del Mantovano
+Del Leone, e della Rana
+Della Formica
+Del Leone, dell'Asino, e della Volpe
+Dell'Agnello, e del Lupo
+Dell'Asino
+Dell'Asino, e del Cavallo
+Del Leone, e della Capra
+Dell'Avoltojo, e degl'altri Uccelli
+Di Giove, e della Simia
+Della Formica, e della Cicala
+Del Becco, e del Toro
+Del Gambaro, Madre, e figliuolo
+Di un Cane mordace
+Di due Pignate
+Del Pavone, e della Grua
+Del Tigre, e del Cacciatore
+Dei Tori, e del Leone
+Degli Abeti, e degli Spini
+Dell'Uccello, e de' suoi figliuoli
+Dell'Avaro, e dell'Invidioso
+Del Leone, e del Cacciatore
+Della Cornacchia assetata
+Di un fanciullo, ed un Ladro
+Di un Villano, e d'un Giovenco
+Di un Porco, ed un Villano
+Di un Toro, ed un Sorcio
+Della Scimia, e di due suoi figliuoli
+Di un Villano, ed Ercole
+Di un Bue, ed un Giovenco
+Di un Cane, e d'un Leone
+De' Pesci
+Dell'Aquila, e della Volpe
+Del Rosignuolo, e dello Sparviero
+Di una Volpe senza coda
+Della Volpe, e de' Cacciatori
+Della Volpe, e dello Spino
+Di un Uomo, e di un'Idolo di legno
+Di un Cane chiamato a Cena
+Di un Villano
+Di alcuni Pescatori
+Di un Pescatore
+Di un pover'Uomo infermo
+Di alcuni Pescatori
+Di una Donna, e di un Medico
+Di un Vecchio, che chiamava la Morte
+Di due Nimici
+Di un Fanciullo, e della Fortuna
+Della Simia, e della Volpe
+De' Sorci, ed un Gatto
+Del Corvo
+Di un Fabro, ed un Cane
+Di una Mula
+Di un Medico
+Del Castore
+Di un Cane, ed un Lupo
+Del Leone, e del Toro
+Di un Leone innamorato della Figliuola di un Villano
+Della Leonessa, e della Volpe
+Del Lupo, e dell'Agnello
+Di due Galli
+Dell'Api, e di Giove
+Della Mosca, e della Pentola
+Di un Giocatore, ed una Rondine
+Di un Legnajuolo, e di Mercurio
+Del Serpente, ed un Villano
+Di una Gallina, ed una Volpe
+Di una Volpe
+Di un Fanciullo ed un Scorpione
+Di un'Ucellatore, ed una Pernice
+Di un Pulce
+Di un Marito, ed una Moglie
+Di un Asino, e due Viandanti
+Della Civetta, e degli altri Ucelli
+Della Zucca
+Del Corvo, dei Lupi
+Del Ragno, e della Podagra
+Favola d'Arione, ed un Delfino
+Di un Sorcio nato in una cesta
+Di un Villano, che voleva, che nascesse il grano senza spiche
+Di uno Sparviero, che seguitava un Colombo
+Del Ragno, e della Rondine
+Di un Villano, che voleva passare un Torrente
+Della Colomba, e della Pica
+Del Cuculo, e dello Sparviero
+Dell'Asino, e del Vitello
+Della Volpe, e di alcune Donne, che mangiavano le Galline
+Dei Caponi grassi, ed uno magro
+Di un Trave tirato da' Buoi
+Degli Alberi brutti, e Belli
+Del Cigno, e della Cicogna
+Di una Donna, che piangeva la morte del suo Marito, ed il Padre che la consolava
+Del Pavone, e d'un Soldato
+Di un Tordo preso al Vischio
+Di un Avaro, e de' Pomi
+Di un Avaro, e d'un Campo fertile
+Di una Moglie, ed un Marito
+Dell'Aquila, dello Sparviero, e del Nibbio
+Di un Pazzo
+Di un Porcello
+Di un Villano
+Di un Lupo invecchiato
+Di una Volpe, e di un Villano
+Di due porci
+Del Consiglio de' Sorci
+Di un Soldato
+Del Bifolco, e de' Buoi
+Della Fortuna, ed un Uomo
+Di una moglie savia, e d'un Marito pazzo
+Di un Meretrice
+Di una Mosca
+Dell'Anguilla, e del Serpente
+Dell'Asino, Simia, e Talpa
+De' Pesci
+Degli Animali da quattro piedi, e gli Ucelli
+Di un'Avaro
+Di un Giovane, e un Vecchio
+Di un Vecchio, e una Fanciulla
+Dell'Aquila, e la pica
+Del Tordo, e la Rondine
+Di un Villano, ed un Sorcio
+Di un Servo
+De' Cani
+Del Demonio, ed una Vecchia
+Della Upupa
+Di un Goloso
+Del Porco, ed il Cavallo
+Di un Eremita, ed un Soldato
+Di un Villano, che volle diventar Soldato
+Dell'Asino, ed il Buffone
+Degli Ucelli
+Della Moglie, ed il Marito
+Di un Figliuolo, e la Madre morta
+Di un geloso di sua Moglie
+Di un Tedesco, che non voleva Cristieri
+Dell'Asino, ed i Lupi
+Della Noce, l'Asino, e la Donna
+Dell'Asino, che non trovava fine alle sue fatiche
+Di un Asino ch'aveva Padrone ingrato
+Di un Lupo, ed un Riccio
+De' Sorci, ed un Gatto
+Del Sorcio, ed il Nibbio
+Della Tartaruca, e Giove
+Del Riccio, ed il Serpente
+Della Lepre, e della Volpe
+Di un Villano, ed un Poeta
+Di un Padre, ed un Figliuolo
+Di un Pastore, ed un Cane
+Di un Montone, ed un Toro
+Di una Vedova, ed un'Asino verde
+Dell'Aquila, ed il Coniglio
+Del Lucio, e del Delfino
+Della Pecora, ed il Pastore
+Di uno, che provò i suoi Amici
+Della Volpe, e del Cane
+Della Volpe, e la Lepre
+Dei cavalli, che correvano al Pallio
+Di un Villano, ed un Agnello
+Di un Giovine, ed un Lupo
+Di un Vecchio, e di un Giovane
+Del Rosignuolo, e dello Sparviero
+Dell'Ape, e del Pulce
+Del Leone, l'Asino, e le Lepri
+Dei Sparvieri che insieme combattevano
+Di un Marito, ed una Moglie
+Di una Podestà, ch'aveva rubbato alla Provincia
+Di un Vecchio, e della Morte
+Di un Avaro, e de' suoi danari
+Di un Ricco, e la Fortuna
+Di un Marito, e la Moglie
+Del Papagallo
+Dell'Aquila, ed il Pavone
+Del Cane, e l'Asino
+Di un Povero, che trovò un Tesoro
+Della virtù, e de' Danari
+Dell'Aquila, e 'l Bubone
+Dell'Asino, e del Porco
+Di un Marito, e la Moglie
+Del Gallo preso dalla Volpe
+Del Porco Cignale, e l'Asino
+Di un Ucellatore, ed un suo Fanciullo
+Di un Gramatico, ed un Asino
+Di un Lupo invecchiato
+Di un Uomo, ed un Serpente
+Di un Gallo, ed una Volpe
+Della Gallina, ed i Pulcini
+Del Lupo, e la Volpe
+Della Volpe presa dal Cane
+Di un Orso, e sua Moglie
+Del Leone, e del Cervo
+Del Cane, e l'Asino
+Della Volpe, ed una Gallina Chioccia
+Di un Lupo, e due Cani
+Di un Pover'Uomo, ed un Asino
+Della Pica, ed il Cocullo
+Di un Asino, ed un Servo
+Del Porco, e le Pecore
+Di un Merlo, ed il Tordo
+Di un Liberale, ed alcuni Ladroni
+Di un Villano, e l'Api
+Di un giovane, che voleva pigliar Moglie
+Del Papagallo
+Di un Filosofo battuto
+Del Bue, e Giove
+Di un Padre vecchio, ed un Figliuolo
+Di un Fanciullo, che non voleva imparare
+Della Cornacchia, ed il Corvo
+Di un Corvo, ed un Serpente
+Di una Cornacchia, e le Colombe
+Di una Cornacchia
+Di un Lupo, ed un Cane
+Del Leopardo, e la Simia
+Della Volpe caduta in un Pozzo
+Della Gatta, e del formaggio
+Di un Cane che temeva la pioggia
+Dell'Ortolano ed il Topo
+Delle Galline, ed il Cane

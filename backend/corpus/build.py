@@ -230,6 +230,15 @@ async def build_entry(
         logger.warning("corpus build skip lang=%s — no plugin: %s", entry.language, exc)
         return result
 
+    # manual_review entries must be resolved by a human before ingestion.
+    if entry.manual_review:
+        result.status = "skipped"
+        result.warnings.append("manual_review=True; fix URL before ingesting")
+        logger.info(
+            "corpus skip manual_review lang=%s title=%r", entry.language, entry.title,
+        )
+        return result
+
     # --only-new: skip if lockfile has any prior record.
     if only_new and lock_entry.get("ingestion_status") in ("ok", "skipped", "metadata_only"):
         result.status = "skipped"
