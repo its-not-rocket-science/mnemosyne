@@ -1,8 +1,219 @@
 {
+  "ar:CEFR:B1::e4f43d77": {
+    "last_verified_at": "2026-05-19T00:25:30.118736+00:00"
+  },
+  "ar:CEFR:C1::ee20fa5a": {
+    "last_verified_at": "2026-05-19T00:25:32.114245+00:00"
+  },
+  "ar:CEFR:C2::30582c79": {
+    "last_verified_at": "2026-05-19T00:25:32.902037+00:00"
+  },
+  "de:CEFR:A2:der-struwwelpeter:c888874a": {
+    "last_verified_at": "2026-05-19T00:25:07.694069+00:00"
+  },
+  "de:CEFR:B2:die-verwandlung:7db11b82": {
+    "last_verified_at": "2026-05-19T00:25:09.930508+00:00",
+    "verified_url": "https://www.gutenberg.org/cache/epub/22367/pg22367.txt"
+  },
+  "de:CEFR:C2:faust-der-tragodie-erster-teil:8f957bf5": {
+    "last_verified_at": "2026-05-19T00:25:11.431488+00:00"
+  },
+  "en:CEFR:A1:aesop-s-fables:bef533ba": {
+    "last_verified_at": "2026-05-19T00:24:41.977344+00:00",
+    "verified_url": "https://www.gutenberg.org/files/11339/11339-0.txt"
+  },
+  "en:CEFR:A2:the-tale-of-peter-rabbit:be068a97": {
+    "last_verified_at": "2026-05-19T00:24:42.587752+00:00"
+  },
+  "en:CEFR:B1:the-wind-in-the-willows:76604ff2": {
+    "last_verified_at": "2026-05-19T00:24:44.010047+00:00",
+    "verified_url": "https://www.gutenberg.org/files/289/289-0.txt"
+  },
+  "en:CEFR:B2:alice-s-adventures-in-wonderland:0869a165": {
+    "last_verified_at": "2026-05-19T00:24:45.323093+00:00",
+    "verified_url": "https://www.gutenberg.org/files/11/11-0.txt"
+  },
   "en:CEFR:B2:test-story:d1dc6321": {
     "ingestion_status": "ok",
     "manifest_entry_hash": "4c19e613dbea11d938ac37d8b57c12e369a00e90faa0e20d09b2144092cbb8bd",
     "normalized_content_hash": "aa3ec16e6acc809d8b2818662276256abfd2f1b441cb51574933f3d4bd115d11",
     "raw_content_hash": "aa3ec16e6acc809d8b2818662276256abfd2f1b441cb51574933f3d4bd115d11"
+  },
+  "en:CEFR:B2:the-yellow-wallpaper:6fd01954": {
+    "last_verified_at": "2026-05-19T00:24:46.382010+00:00",
+    "verified_url": "https://www.gutenberg.org/files/1952/1952-0.txt"
+  },
+  "en:CEFR:C1:pride-and-prejudice:a4d0344a": {
+    "last_verified_at": "2026-05-19T00:24:48.027604+00:00",
+    "verified_url": "https://www.gutenberg.org/files/1342/1342-0.txt"
+  },
+  "en:CEFR:C2:moby-dick:cc5a6b51": {
+    "last_verified_at": "2026-05-19T00:24:51.276892+00:00",
+    "verified_url": "https://www.gutenberg.org/files/2701/2701-0.txt"
+  },
+  "es:CEFR:B1:cuentos-de-amor-de-locura-y-de-muerte:79ed0947": {
+    "last_verified_at": "2026-05-19T00:24:55.464673+00:00",
+    "verified_url": "https://www.gutenberg.org/files/13507/13507-0.txt"
+  },
+  "es:CEFR:C1:la-regenta:ba2ba9c4": {
+    "last_verified_at": "2026-05-19T00:24:56.994691+00:00"
+  },
+  "es:CEFR:C2:don-quijote-de-la-mancha-primera-parte:ad26b019": {
+    "last_verified_at": "2026-05-19T00:24:58.767580+00:00",
+    "verified_url": "https://www.gutenberg.org/files/2000/2000-0.txt"
+  },
+  "fr:CEFR:A2:fables-de-la-fontaine:8d0bd915": {
+    "last_verified_at": "2026-05-19T00:25:00.454189+00:00"
+  },
+  "fr:CEFR:B1:le-tour-du-monde-en-quatre-vingts-jours:507123e3": {
+    "last_verified_at": "2026-05-19T00:25:02.869151+00:00",
+    "verified_url": "https://www.gutenberg.org/cache/epub/800/pg800.txt"
+  },
+  "fr:CEFR:B2:candide-ou-l-optimisme:6ebaf7ad": {
+    "last_verified_at": "2026-05-19T00:25:04.751806+00:00",
+    "verified_url": "https://www.gutenberg.org/cache/epub/4650/pg4650.txt"
+  },
+  "fr:CEFR:C1:madame-bovary:c5f68787": {
+    "last_verified_at": "2026-05-19T00:25:05.330770+00:00"
+  },
+  "fr:CEFR:C2:du-cote-de-chez-swann:96561775": {
+    "last_verified_at": "2026-05-19T00:25:06.247475+00:00"
+  },
+  "grc:KoineReading:A2::019c9bd4": {
+    "last_verified_at": "2026-05-19T00:26:17.804984+00:00"
+  },
+  "grc:KoineReading:B1::978da51f": {
+    "last_verified_at": "2026-05-19T00:26:18.809054+00:00"
+  },
+  "grc:KoineReading:B2::59806bfc": {
+    "last_verified_at": "2026-05-19T00:26:19.444714+00:00"
+  },
+  "grc:KoineReading:C1::92cc63ed": {
+    "last_verified_at": "2026-05-19T00:26:21.275794+00:00"
+  },
+  "grc:KoineReading:C2::b3b91ca6": {
+    "last_verified_at": "2026-05-19T00:26:22.301888+00:00"
+  },
+  "he:CEFR:A1::c5c686ef": {
+    "last_verified_at": "2026-05-19T00:25:33.496301+00:00"
+  },
+  "he:CEFR:A2::be0d783d": {
+    "last_verified_at": "2026-05-19T00:25:34.471286+00:00"
+  },
+  "he:CEFR:B1::000968d7": {
+    "last_verified_at": "2026-05-19T00:25:35.060526+00:00"
+  },
+  "he:CEFR:B2::38e3176f": {
+    "last_verified_at": "2026-05-19T00:25:35.828510+00:00"
+  },
+  "he:CEFR:C1::1261f935": {
+    "last_verified_at": "2026-05-19T00:25:36.634888+00:00"
+  },
+  "he:CEFR:C2::a8875939": {
+    "last_verified_at": "2026-05-19T00:25:37.719279+00:00"
+  },
+  "it:CEFR:A1:favole-di-esopo:88467edf": {
+    "last_verified_at": "2026-05-19T00:25:12.465610+00:00"
+  },
+  "it:CEFR:A2:cuore:5a3c5eea": {
+    "last_verified_at": "2026-05-19T00:25:13.263960+00:00"
+  },
+  "it:CEFR:B1:le-avventure-di-pinocchio:0da3720b": {
+    "last_verified_at": "2026-05-19T00:25:15.353402+00:00",
+    "verified_url": "https://www.gutenberg.org/files/25447/25447-0.txt"
+  },
+  "it:CEFR:B2:vita-dei-campi:48244adb": {
+    "last_verified_at": "2026-05-19T00:25:16.066062+00:00"
+  },
+  "it:CEFR:C1:i-promessi-sposi:3fcde9b1": {
+    "last_verified_at": "2026-05-19T00:25:16.777296+00:00"
+  },
+  "it:CEFR:C2:divina-commedia:bf840cce": {
+    "last_verified_at": "2026-05-19T00:25:17.787261+00:00"
+  },
+  "ja:JLPT:N1::84477ac5": {
+    "last_verified_at": "2026-05-19T00:26:00.409307+00:00",
+    "verified_url": "https://www.aozora.gr.jp/cards/000148/files/773_14560.html"
+  },
+  "ja:JLPT:N2::8ae76028": {
+    "last_verified_at": "2026-05-19T00:25:55.125136+00:00",
+    "verified_url": "https://www.aozora.gr.jp/cards/000879/files/127_15260.html"
+  },
+  "ja:JLPT:N3::e641151d": {
+    "last_verified_at": "2026-05-19T00:25:53.043724+00:00",
+    "verified_url": "https://www.aozora.gr.jp/cards/000081/files/456_15050.html"
+  },
+  "ja:JLPT:N4::77856024": {
+    "last_verified_at": "2026-05-19T00:25:48.781846+00:00",
+    "verified_url": "https://www.aozora.gr.jp/cards/000879/files/92_14545.html"
+  },
+  "ja:JLPT:N5::a2a2ce0d": {
+    "last_verified_at": "2026-05-19T00:25:43.988043+00:00"
+  },
+  "ja:custom:C2::d5cdfb29": {
+    "last_verified_at": "2026-05-19T00:26:07.266482+00:00",
+    "verified_url": "https://www.aozora.gr.jp/cards/000148/files/789_14547.html"
+  },
+  "ko:TOPIK:TOPIK3::b9c5e970": {
+    "last_verified_at": "2026-05-19T00:26:09.818060+00:00"
+  },
+  "ko:TOPIK:TOPIK4:25:4a1443f1": {
+    "last_verified_at": "2026-05-19T00:26:10.416478+00:00"
+  },
+  "ko:TOPIK:TOPIK6::af4c19d2": {
+    "last_verified_at": "2026-05-19T00:26:12.516405+00:00"
+  },
+  "la:ClassicalReading:C1:commentarii-de-bello-gallico:849107a5": {
+    "last_verified_at": "2026-05-19T00:26:16.033899+00:00",
+    "verified_url": "https://www.gutenberg.org/files/10657/10657-0.txt"
+  },
+  "pt:CEFR:B1:a-cartomante:546ac686": {
+    "last_verified_at": "2026-05-19T00:25:20.495432+00:00"
+  },
+  "pt:CEFR:B2:o-alienista:d96f09a1": {
+    "last_verified_at": "2026-05-19T00:25:21.281620+00:00"
+  },
+  "pt:CEFR:C1:os-maias:6b7c8608": {
+    "last_verified_at": "2026-05-19T00:25:23.187129+00:00",
+    "verified_url": "https://www.gutenberg.org/files/40409/40409-0.txt"
+  },
+  "pt:CEFR:C2:os-lusiadas:f65f28ad": {
+    "last_verified_at": "2026-05-19T00:25:24.077130+00:00"
+  },
+  "ru:CEFR:A1::7090d0e0": {
+    "last_verified_at": "2026-05-19T00:25:25.082171+00:00"
+  },
+  "ru:CEFR:A2::5bb88942": {
+    "last_verified_at": "2026-05-19T00:25:25.684239+00:00"
+  },
+  "ru:CEFR:B1::a6240b00": {
+    "last_verified_at": "2026-05-19T00:25:26.749232+00:00"
+  },
+  "ru:CEFR:B2::da6f47ec": {
+    "last_verified_at": "2026-05-19T00:25:27.575577+00:00"
+  },
+  "ru:CEFR:C1::baf63670": {
+    "last_verified_at": "2026-05-19T00:25:28.394201+00:00"
+  },
+  "ru:CEFR:C2::43c00a13": {
+    "last_verified_at": "2026-05-19T00:25:29.398145+00:00"
+  },
+  "zh:HSK:HSK1::ca81dc20": {
+    "last_verified_at": "2026-05-19T00:25:38.306222+00:00"
+  },
+  "zh:HSK:HSK2::eed1df46": {
+    "last_verified_at": "2026-05-19T00:25:38.873768+00:00"
+  },
+  "zh:HSK:HSK3::3b736d19": {
+    "last_verified_at": "2026-05-19T00:25:39.959120+00:00"
+  },
+  "zh:HSK:HSK4:q:4ae1624a": {
+    "last_verified_at": "2026-05-19T00:25:41.354722+00:00"
+  },
+  "zh:HSK:HSK5::aa7cb415": {
+    "last_verified_at": "2026-05-19T00:25:42.187434+00:00"
+  },
+  "zh:HSK:HSK6::d37e720f": {
+    "last_verified_at": "2026-05-19T00:25:42.975710+00:00"
   }
 }
