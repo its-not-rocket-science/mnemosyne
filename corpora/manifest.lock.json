@@ -143,6 +143,12 @@
     "normalized_content_hash": "b26b7630525767bfe2b3d25bce0371039b8f43c9a7753911f752022861fec357",
     "raw_content_hash": "b26b7630525767bfe2b3d25bce0371039b8f43c9a7753911f752022861fec357"
   },
+  "es:CEFR:A1:fabulas-de-samaniego:b44b8968": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "fe30a0ec21cd545ef36ef12c0776ab85756f55b545c3d452800fd27587124f94",
+    "normalized_content_hash": "613ee5b2c78add8baea6bb46cf853472a16c79502c2b8b541a938219ce698d46",
+    "raw_content_hash": "613ee5b2c78add8baea6bb46cf853472a16c79502c2b8b541a938219ce698d46"
+  },
   "es:CEFR:A2:platero-y-yo:39f26d98": {
     "ingestion_status": "metadata_only",
     "manifest_entry_hash": "22597dbbecfce223a9c761d7ffd42e467e15cc2a5c5467921bfc6cf24ab579f9",
@@ -179,6 +185,12 @@
     "last_verified_at": "2026-05-19T00:24:58.767580+00:00",
     "manifest_entry_hash": "6ebfdcd21025f6b9163ee72df8f3fa7d2c20ff9501a2fc44e60bc6d15720107b",
     "verified_url": "https://www.gutenberg.org/files/2000/2000-0.txt"
+  },
+  "fr:CEFR:A1:cendrillon:aba8bab8": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "ebac2675c42d1fae4cf3dc2679e830961ed685708ebcd9eda944802bb4fbdfe8",
+    "normalized_content_hash": "fd34c384de2984b16b24fafc4dcf6499bc891076ecb5308832d2f53c7d1008ec",
+    "raw_content_hash": "fd34c384de2984b16b24fafc4dcf6499bc891076ecb5308832d2f53c7d1008ec"
   },
   "fr:CEFR:A1:contes-de-perrault:df211688": {
     "ingestion_status": "ok",
@@ -441,6 +453,12 @@
     "normalized_content_hash": "2708243f4f150f7554060e6a68f45dfbcd42486f4ed28a85b2ae1608b6651229",
     "raw_content_hash": "2708243f4f150f7554060e6a68f45dfbcd42486f4ed28a85b2ae1608b6651229"
   },
+  "la:ClassicalReading:A2:fabulae-phaedri:5b078a38": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "47ec61473d65154828d5a00003b0cf90a8dbcb6e81d2fb77b6f059084b4f6694",
+    "normalized_content_hash": "a381fa89a84d17c1e2572e65bf65edf2d73c9c58b76b96f410e409f792ae7960",
+    "raw_content_hash": "a381fa89a84d17c1e2572e65bf65edf2d73c9c58b76b96f410e409f792ae7960"
+  },
   "la:ClassicalReading:B1:commentarii-de-bello-gallico-liber-i:82b8e57b": {
     "ingestion_status": "metadata_only",
     "manifest_entry_hash": "b8de6fde6ac2bdd9b7228ea5f8bc35a889f1d0a3712bbb647ecd0e7a7141a393",
@@ -452,6 +470,12 @@
     "manifest_entry_hash": "ab44d630e1baf5f00b8322b7c59c3216cee9f170af9e9f91bd139a6276edd403",
     "normalized_content_hash": "2cdd18ec10c51a21df3d5d7c21650ed4c1a15d017c4f2da1c31015b66601f13f",
     "raw_content_hash": "2cdd18ec10c51a21df3d5d7c21650ed4c1a15d017c4f2da1c31015b66601f13f"
+  },
+  "la:ClassicalReading:B2:vitae-excellentium-imperatorum-selecta:8280c69b": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "a767028c61df656ca191cac03fbc717808b4eb284361f0d334a7517a0a7601bf",
+    "normalized_content_hash": "fcde14ca6fc4d9df52dbd7bb18fef16b8a503259c3c6b143b4ace77c2e3116d1",
+    "raw_content_hash": "fcde14ca6fc4d9df52dbd7bb18fef16b8a503259c3c6b143b4ace77c2e3116d1"
   },
   "la:ClassicalReading:B2:vitae-excellentium-imperatorum-selecta:8c4d773b": {
     "ingestion_status": "ok",
@@ -488,6 +512,12 @@
     "manifest_entry_hash": "61935e44c7d284f8d7df9edd6132e1321f4f657cb0e0b1d2eaf7925d7bbb784e",
     "normalized_content_hash": "80ccb934c7c67ed02985b8fa6388ccd67b052ca38d2dda0f53956ebeb9c97d46",
     "raw_content_hash": "80ccb934c7c67ed02985b8fa6388ccd67b052ca38d2dda0f53956ebeb9c97d46"
+  },
+  "pt:CEFR:A2:amor-de-perdicao:99bb5e90": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "bc417c99e44674bee6ef8828d14169f95684615abdb503a4b1cd4e0d150206fa",
+    "normalized_content_hash": "1fdf83c4183218eb42f4a38776a706dc6b9bffb3ec1a81ac30ed0dee23efca6b",
+    "raw_content_hash": "1fdf83c4183218eb42f4a38776a706dc6b9bffb3ec1a81ac30ed0dee23efca6b"
   },
   "pt:CEFR:B1:a-cartomante:546ac686": {
     "ingestion_status": "ok",

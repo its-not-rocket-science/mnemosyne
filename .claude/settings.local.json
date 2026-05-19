@@ -92,7 +92,14 @@
       "WebFetch(domain:he.wikisource.org)",
       "WebFetch(domain:ru.wikisource.org)",
       "WebFetch(domain:ko.wikisource.org)",
-      "Bash(findstr /n \".\")"
+      "Bash(findstr /n \".\")",
+      "WebFetch(domain:la.wikisource.org)",
+      "WebFetch(domain:de.wikisource.org)",
+      "WebFetch(domain:pt.wikisource.org)",
+      "WebFetch(domain:es.wikisource.org)",
+      "WebFetch(domain:fr.wikisource.org)",
+      "WebFetch(domain:www.thelatinlibrary.com)",
+      "Bash(Write-Output \"Deleted 9 wrong cache files\")"
     ]
   }
 }
