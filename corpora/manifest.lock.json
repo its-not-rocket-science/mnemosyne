@@ -513,6 +513,12 @@
     "normalized_content_hash": "b59649eb937c13ad9144e9bd0c63a343fd048e6a02cf003ee9ac42d5091b265f",
     "raw_content_hash": "b59649eb937c13ad9144e9bd0c63a343fd048e6a02cf003ee9ac42d5091b265f"
   },
+  "pt:CEFR:A1:era-uma-vez:c0fb368b": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "b310496641644346d1ef77d395773fdc61d1a894a31d50949fb472cf77aa3c5f",
+    "normalized_content_hash": "735c7e05522b3f0fbacf6f109694b0e6afb8d626f4b7f99e38bdcb4e783b21ae",
+    "raw_content_hash": "735c7e05522b3f0fbacf6f109694b0e6afb8d626f4b7f99e38bdcb4e783b21ae"
+  },
   "pt:CEFR:A2:amor-de-perdicao:961f1a8c": {
     "ingestion_status": "ok",
     "manifest_entry_hash": "61935e44c7d284f8d7df9edd6132e1321f4f657cb0e0b1d2eaf7925d7bbb784e",

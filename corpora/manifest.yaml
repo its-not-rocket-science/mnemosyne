@@ -549,18 +549,18 @@ entries:
     framework: CEFR
     level: A1
     cefr_equivalent: A1
-    title: "Contos populares portugueses"
-    author: "Adolfo Coelho"
-    year: 1879
-    source_url: "https://www.gutenberg.org/cache/epub/32754/pg32754.txt"
+    title: "Era uma vez..."
+    author: "Júlia Lopes de Almeida"
+    year: 1917
+    source_url: "https://www.gutenberg.org/cache/epub/69239/pg69239.txt"
     source_name: "Project Gutenberg"
     license: public_domain
-    genre: folk_tales
-    dialect: pt-PT
+    genre: fairy_tales
+    dialect: pt-BR
     script: latin
-    manual_review: true
     notes:
-      - "PG 32754 = wrong book (sci-fi English); pt.wikisource.org/wiki/Contos_Populares_Portuguezes is index-only; need single-page Portuguese source"
+      - "PG 69239: Brazilian Portuguese fairy tales; subjects: Fairy tales, Princesses — Juvenile fiction"
+      - "Júlia Lopes de Almeida (1862–1934); dialect is pt-BR but vocabulary suitable for A1 learners of any Portuguese"
 
   - language: pt
     framework: CEFR
@@ -752,18 +752,18 @@ entries:
     framework: CEFR
     level: A1
     cefr_equivalent: A1
-    title: "حكم العرب وأمثالهم"
-    author: "مؤلف مجهول"
-    year: null
-    source_url: "https://www.gutenberg.org/cache/epub/32441/pg32441.txt"
-    source_name: "Project Gutenberg"
+    title: "كليلة ودمنة / باب الجرذ والسنور"
+    author: "ابن المقفع"
+    year: 750
+    source_url: "https://ar.wikisource.org/wiki/%D9%83%D9%84%D9%8A%D9%84%D8%A9_%D9%88%D8%AF%D9%85%D9%86%D8%A9/%D8%A8%D8%A7%D8%A8_%D8%A7%D9%84%D8%AC%D8%B1%D8%B0_%D9%88%D8%A7%D9%84%D8%B3%D9%86%D9%88%D8%B1"
+    source_name: "Wikisource Arabic"
     license: public_domain
-    genre: proverbs
+    genre: wisdom_literature
     dialect: ar
     script: arabic
-    manual_review: true
     notes:
-      - "PG 32441 = wrong book (Italian novel Il Colore del Tempo); need verified Arabic A1 source URL"
+      - "Chapter of the Rat and the Cat; ~6k chars; shortest standalone fable in the collection"
+      - "Simpler than the A2 entry (باب الحمامة المطوقة); same framing device scaffolds vocabulary progression"
 
   - language: ar
     framework: CEFR
