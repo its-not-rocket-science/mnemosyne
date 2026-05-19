@@ -1,10 +1,28 @@
 {
+  "ar:CEFR:A1::9e957e7b": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "e048968e1e26b27b0a83500888a8ea95d7ed3c25540ef9fad35e90c250454845",
+    "normalized_content_hash": "3d990266a54bdccae8b5aafb7840068644e5a88c9818ee50f2822e60d3c9283f",
+    "raw_content_hash": "3d990266a54bdccae8b5aafb7840068644e5a88c9818ee50f2822e60d3c9283f"
+  },
+  "ar:CEFR:A2::c0d5e34f": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "3a6ba1f373ce0da752bda8352ee5eca5f7ec807f63cd7459b57412bcc1003ba1",
+    "normalized_content_hash": "5f73d35a2ca533bb39b3bf3d31fdc5dc12632705492fd91507a279083783e244",
+    "raw_content_hash": "5f73d35a2ca533bb39b3bf3d31fdc5dc12632705492fd91507a279083783e244"
+  },
   "ar:CEFR:B1::e4f43d77": {
     "ingestion_status": "ok",
     "last_verified_at": "2026-05-19T00:25:30.118736+00:00",
     "manifest_entry_hash": "9748aef28387ed8dc3e3b63df21fe0732cc32a2d2cd29f7236558260da85b2e6",
     "normalized_content_hash": "e9703204ace91546fa167df52721dd9b3502e9e96e30224d5c41dc81d47d11a4",
     "raw_content_hash": "e9703204ace91546fa167df52721dd9b3502e9e96e30224d5c41dc81d47d11a4"
+  },
+  "ar:CEFR:B2::f9032ee8": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "d8f3c3c5dc9aa1b874820ee65bb54e34edbefb85180a8640bc7d030e233f6813",
+    "normalized_content_hash": "1d1b77fe3b19287595581fef9140bd9907dad6b73d02951559ec08870eb804dc",
+    "raw_content_hash": "1d1b77fe3b19287595581fef9140bd9907dad6b73d02951559ec08870eb804dc"
   },
   "ar:CEFR:C1::ee20fa5a": {
     "ingestion_status": "metadata_only",
@@ -17,6 +35,12 @@
     "manifest_entry_hash": "46b13758eeb2c23f91370de24c6a16c43fb5ef11a7ec4fe0b684a2dc1142c1be",
     "normalized_content_hash": "3194bbf069dea0a2cb4bbfaba8b123f034e7cbdbb13c37750d0ba7432a0439f1",
     "raw_content_hash": "3194bbf069dea0a2cb4bbfaba8b123f034e7cbdbb13c37750d0ba7432a0439f1"
+  },
+  "de:CEFR:A1:kinder-und-hausmarchen:73bd2bcd": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "97680dc4fda7f900ec17b9722828aa647f7487652e4cdb786c080857232ecaaf",
+    "normalized_content_hash": "873ace446f2c617a46ccd238e7c627127b5ae09c19585afa1542be6ddef6f16a",
+    "raw_content_hash": "873ace446f2c617a46ccd238e7c627127b5ae09c19585afa1542be6ddef6f16a"
   },
   "de:CEFR:A1:kinder-und-hausmarchen:bd126c36": {
     "ingestion_status": "ok",
@@ -32,8 +56,8 @@
     "raw_content_hash": "59e2de7979dbc7b5f91596a25a8e341e4ab599e2619ce88d923967c5047c4293"
   },
   "de:CEFR:B1:heidis-lehr-und-wanderjahre:9c6c126f": {
-    "ingestion_status": "ok",
-    "manifest_entry_hash": "bee38a7917372c424c2f0d2a98c4aa8e37be9ddf76a41f58f80741211933ea54",
+    "ingestion_status": "metadata_only",
+    "manifest_entry_hash": "8a8d43d0df36c817b6809361a5382a89e1438e463ffe0f9b0fe94780b3b01c58",
     "normalized_content_hash": "a2080ff803d5a68ef4ba4249c5f2ea9332320cd9ace37e394486e8c840478e67",
     "raw_content_hash": "a2080ff803d5a68ef4ba4249c5f2ea9332320cd9ace37e394486e8c840478e67"
   },
@@ -42,6 +66,12 @@
     "last_verified_at": "2026-05-19T00:25:09.930508+00:00",
     "manifest_entry_hash": "e3cb1e244700b4d3ffb9f4f5985323a1a16ae47cdc7f7b82f63ffd7e3f8e1179",
     "verified_url": "https://www.gutenberg.org/cache/epub/22367/pg22367.txt"
+  },
+  "de:CEFR:C1:effi-briest:d53260a8": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "731cd0018ded80d845987e3c2a12b737d282df823a082cd0478b30cb22b1f1e3",
+    "normalized_content_hash": "d63d589cf33989dcf31b8b275b2af79de8c86da4156a6ff3a19bb9c78fb5d47b",
+    "raw_content_hash": "d63d589cf33989dcf31b8b275b2af79de8c86da4156a6ff3a19bb9c78fb5d47b"
   },
   "de:CEFR:C2:faust-der-tragodie-erster-teil:8f957bf5": {
     "ingestion_status": "ok",
@@ -107,9 +137,15 @@
     "raw_content_hash": "ebd1c0141b4cf038232421fe24937beba1d729cd0f7e44f686b4c700239f7ea7",
     "verified_url": "https://www.gutenberg.org/files/2701/2701-0.txt"
   },
-  "es:CEFR:A2:platero-y-yo:39f26d98": {
+  "es:CEFR:A1:fabulas-de-samaniego:1006db09": {
     "ingestion_status": "ok",
-    "manifest_entry_hash": "8ab18c889679985ccc72d6872a826d7ee9374ffe9e2251e4be44eb2af6da0c89",
+    "manifest_entry_hash": "b52203d28aa1bdea9ae43b288c2bb74b30849cf52f620898d6401f228ec08599",
+    "normalized_content_hash": "b26b7630525767bfe2b3d25bce0371039b8f43c9a7753911f752022861fec357",
+    "raw_content_hash": "b26b7630525767bfe2b3d25bce0371039b8f43c9a7753911f752022861fec357"
+  },
+  "es:CEFR:A2:platero-y-yo:39f26d98": {
+    "ingestion_status": "metadata_only",
+    "manifest_entry_hash": "22597dbbecfce223a9c761d7ffd42e467e15cc2a5c5467921bfc6cf24ab579f9",
     "normalized_content_hash": "102280ec97e15f90b610ff2271747bf060dfa2f2c541a3198c5a27ff7c6c93a7",
     "raw_content_hash": "102280ec97e15f90b610ff2271747bf060dfa2f2c541a3198c5a27ff7c6c93a7"
   },
@@ -118,6 +154,12 @@
     "last_verified_at": "2026-05-19T00:24:55.464673+00:00",
     "manifest_entry_hash": "4cc31b4ef8aab41b54552a7c40d072ae4735ec852c02ed61f3505da6475d5894",
     "verified_url": "https://www.gutenberg.org/files/13507/13507-0.txt"
+  },
+  "es:CEFR:B2:lazarillo-de-tormes:24024bb8": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "57af41fbea0c6378f970b75d20a7b93ac424068a9b8d6d6c4f5175a80f127d01",
+    "normalized_content_hash": "796efc181defcbb30127a57de5590144e42539e944a7d61c65e9f4d9d258fdc9",
+    "raw_content_hash": "796efc181defcbb30127a57de5590144e42539e944a7d61c65e9f4d9d258fdc9"
   },
   "es:CEFR:B2:lazarillo-de-tormes:fa614673": {
     "ingestion_status": "ok",
@@ -137,6 +179,12 @@
     "last_verified_at": "2026-05-19T00:24:58.767580+00:00",
     "manifest_entry_hash": "6ebfdcd21025f6b9163ee72df8f3fa7d2c20ff9501a2fc44e60bc6d15720107b",
     "verified_url": "https://www.gutenberg.org/files/2000/2000-0.txt"
+  },
+  "fr:CEFR:A1:contes-de-perrault:df211688": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "cdf5c205d14aa5562dc36d7e5d7e5af5f21eca15909d9ee45ccd4ea437c32788",
+    "normalized_content_hash": "171f05cc8ab84cb88a9c4935681becfc8bfccda80955bf51f8a4780bd97427d4",
+    "raw_content_hash": "171f05cc8ab84cb88a9c4935681becfc8bfccda80955bf51f8a4780bd97427d4"
   },
   "fr:CEFR:A2:fables-de-la-fontaine:8d0bd915": {
     "ingestion_status": "ok",
@@ -172,6 +220,12 @@
     "manifest_entry_hash": "e1e969dd76f450db367a4b5e2c2590b573c7619010378f36e254162bfcc7eecd",
     "normalized_content_hash": "a038362e0b54961ef14cc85484c532e129ad82bf65c6319ba6e042ee40b3e7d7",
     "raw_content_hash": "a038362e0b54961ef14cc85484c532e129ad82bf65c6319ba6e042ee40b3e7d7"
+  },
+  "grc:KoineReading:A1::d9dfa016": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "f8424e9ecdcd614703f16ebe1eb0e3ed7a05e07a9b46646914bb4f38a51cfd8b",
+    "normalized_content_hash": "97b9a0bb9705851c455757710fe769c83aae68e6b1baad4653dad93fb8e00bd3",
+    "raw_content_hash": "97b9a0bb9705851c455757710fe769c83aae68e6b1baad4653dad93fb8e00bd3"
   },
   "grc:KoineReading:A2::019c9bd4": {
     "ingestion_status": "metadata_only",
@@ -330,6 +384,18 @@
     "raw_content_hash": "280dc2e337f09ed153187d433b2aac0708dd0c4a5d9a3f5d1e98b1b7b9534cde",
     "verified_url": "https://www.aozora.gr.jp/cards/000148/files/789_14547.html"
   },
+  "ko:TOPIK:TOPIK1::3ab61734": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "895f9660d2839d3418280d57b19884f718246fbf5440d2943d83e60917713df4",
+    "normalized_content_hash": "80d5ca534da4262edff4b86a27b146791da53fccaa26af68fd76d03a1444eb9e",
+    "raw_content_hash": "80d5ca534da4262edff4b86a27b146791da53fccaa26af68fd76d03a1444eb9e"
+  },
+  "ko:TOPIK:TOPIK2::52efae11": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "9e1cc49dfcd0b2237ef81dcfc8b6019c43b4dfdab9ad2eb76ce8e8b9508fc7e2",
+    "normalized_content_hash": "80ec819f896f6af7c8631a65a7bee8987cd243a14c8b1c6d40aa0a764a13db77",
+    "raw_content_hash": "80ec819f896f6af7c8631a65a7bee8987cd243a14c8b1c6d40aa0a764a13db77"
+  },
   "ko:TOPIK:TOPIK3::b9c5e970": {
     "ingestion_status": "ok",
     "last_verified_at": "2026-05-19T00:26:09.818060+00:00",
@@ -344,6 +410,12 @@
     "normalized_content_hash": "a7328e048a3b526206b75123f84b7613ec1d8ac914f986eaf949c39eea2a8020",
     "raw_content_hash": "a7328e048a3b526206b75123f84b7613ec1d8ac914f986eaf949c39eea2a8020"
   },
+  "ko:TOPIK:TOPIK5::d66069d1": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "d82c68f0734fff716da34bfe20f8388361ac72a937be943cc64fbebd57f83c3b",
+    "normalized_content_hash": "73082c78a7440be5d9c5975bd930040c9390df40e87d42fb6d488b0283f8f905",
+    "raw_content_hash": "73082c78a7440be5d9c5975bd930040c9390df40e87d42fb6d488b0283f8f905"
+  },
   "ko:TOPIK:TOPIK6::af4c19d2": {
     "ingestion_status": "ok",
     "last_verified_at": "2026-05-19T00:26:12.516405+00:00",
@@ -352,10 +424,16 @@
     "raw_content_hash": "dbb0e1106aa888f9b510649d5d2ee82771584fc053d40091bcb7013eca1aea2d"
   },
   "la:ClassicalReading:A1:fabulae-faciles:1fb452e8": {
-    "ingestion_status": "ok",
-    "manifest_entry_hash": "084da77ba091a6ba327d8d8ab5da4da04039039798bf97191875d82455b97f33",
+    "ingestion_status": "metadata_only",
+    "manifest_entry_hash": "cc4e1b8b1e24c8cc0cc74afd3ba6485f68fe34a4b622353063bb2016db689b60",
     "normalized_content_hash": "dff388fa095ffe28af8b71b29d4a13b63650da3a32407794966a5cc33aaa48f1",
     "raw_content_hash": "dff388fa095ffe28af8b71b29d4a13b63650da3a32407794966a5cc33aaa48f1"
+  },
+  "la:ClassicalReading:A2:fabulae-phaedri:4323005a": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "61536d6f4d2479c890741ca07c71dbaaf9c0d752c2fbb1046aabec800b7da881",
+    "normalized_content_hash": "2708243f4f150f7554060e6a68f45dfbcd42486f4ed28a85b2ae1608b6651229",
+    "raw_content_hash": "2708243f4f150f7554060e6a68f45dfbcd42486f4ed28a85b2ae1608b6651229"
   },
   "la:ClassicalReading:A2:fabulae-phaedri:56f97b0b": {
     "ingestion_status": "ok",
@@ -364,14 +442,20 @@
     "raw_content_hash": "2708243f4f150f7554060e6a68f45dfbcd42486f4ed28a85b2ae1608b6651229"
   },
   "la:ClassicalReading:B1:commentarii-de-bello-gallico-liber-i:82b8e57b": {
-    "ingestion_status": "ok",
-    "manifest_entry_hash": "3797ed27cf8941bc8309e15df75a809db65de26ff02483817765d52ea93af4da",
+    "ingestion_status": "metadata_only",
+    "manifest_entry_hash": "b8de6fde6ac2bdd9b7228ea5f8bc35a889f1d0a3712bbb647ecd0e7a7141a393",
     "normalized_content_hash": "220e71c63c6aa40bf506f22dc06d8cd1fb745797e86d6a465fdcbefe39f0ed58",
     "raw_content_hash": "220e71c63c6aa40bf506f22dc06d8cd1fb745797e86d6a465fdcbefe39f0ed58"
   },
   "la:ClassicalReading:B2:vitae-excellentium-imperatorum-selecta:3cff476f": {
     "ingestion_status": "ok",
     "manifest_entry_hash": "ab44d630e1baf5f00b8322b7c59c3216cee9f170af9e9f91bd139a6276edd403",
+    "normalized_content_hash": "2cdd18ec10c51a21df3d5d7c21650ed4c1a15d017c4f2da1c31015b66601f13f",
+    "raw_content_hash": "2cdd18ec10c51a21df3d5d7c21650ed4c1a15d017c4f2da1c31015b66601f13f"
+  },
+  "la:ClassicalReading:B2:vitae-excellentium-imperatorum-selecta:8c4d773b": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "a224ac8fea02f24b83b7dc484383a10826dec526eb90f777db007cb673c1e8d8",
     "normalized_content_hash": "2cdd18ec10c51a21df3d5d7c21650ed4c1a15d017c4f2da1c31015b66601f13f",
     "raw_content_hash": "2cdd18ec10c51a21df3d5d7c21650ed4c1a15d017c4f2da1c31015b66601f13f"
   },
@@ -386,6 +470,24 @@
     "manifest_entry_hash": "d6522da9a7c66b3e1212857ca6e8ccf1701da0051274a3d14782b9342cc22324",
     "normalized_content_hash": "5e1d1c8b835db4648c36fe645dbc49a756449ed155506839f3d57854503e3caa",
     "raw_content_hash": "5e1d1c8b835db4648c36fe645dbc49a756449ed155506839f3d57854503e3caa"
+  },
+  "la:ClassicalReading:C2:annales-liber-i:ea0ece79": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "97ea17e6c8502d4453414bdede6b8e6fdfd167b56b992961f07b60b280f94a21",
+    "normalized_content_hash": "5e1d1c8b835db4648c36fe645dbc49a756449ed155506839f3d57854503e3caa",
+    "raw_content_hash": "5e1d1c8b835db4648c36fe645dbc49a756449ed155506839f3d57854503e3caa"
+  },
+  "pt:CEFR:A1:contos-populares-portugueses:496640f4": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "01f4429f10d4d73fb11afc92b9329da541c98eed3517520deaabb5b0994874c8",
+    "normalized_content_hash": "b59649eb937c13ad9144e9bd0c63a343fd048e6a02cf003ee9ac42d5091b265f",
+    "raw_content_hash": "b59649eb937c13ad9144e9bd0c63a343fd048e6a02cf003ee9ac42d5091b265f"
+  },
+  "pt:CEFR:A2:amor-de-perdicao:961f1a8c": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "61935e44c7d284f8d7df9edd6132e1321f4f657cb0e0b1d2eaf7925d7bbb784e",
+    "normalized_content_hash": "80ccb934c7c67ed02985b8fa6388ccd67b052ca38d2dda0f53956ebeb9c97d46",
+    "raw_content_hash": "80ccb934c7c67ed02985b8fa6388ccd67b052ca38d2dda0f53956ebeb9c97d46"
   },
   "pt:CEFR:B1:a-cartomante:546ac686": {
     "ingestion_status": "ok",
@@ -493,5 +595,11 @@
     "ingestion_status": "metadata_only",
     "last_verified_at": "2026-05-19T00:25:42.975710+00:00",
     "manifest_entry_hash": "d69d018fa342e0c8c065f914934c9c996ba86b4f0ee07f51d59ce47a09df81db"
+  },
+  "zh:custom:C2::32aea2bb": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "152b2641327e63c8c4e8797379d2d2606143bc261abd701672eb4470405933a8",
+    "normalized_content_hash": "5496a5e1597937551fa7972b23eb968e934f1d2b936e7edb487044ca8e6eec9c",
+    "raw_content_hash": "5496a5e1597937551fa7972b23eb968e934f1d2b936e7edb487044ca8e6eec9c"
   }
 }
