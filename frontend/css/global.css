@@ -75,8 +75,42 @@
 }
 
 /* ── Dark mode ───────────────────────────────────────────────────────────────── */
+:root[data-theme="dark"] {
+    /* Brand — peachy terracotta for dark backgrounds */
+    --brand-purple:       #ED9070;   /* peachy terracotta — 6.10:1 on gray-800 */
+    --brand-purple-light: #3D1810;   /* deep warm brown tint */
+    --accent:             #ED9070;
+    --accent-fill:        #ED9070;
+
+    /* Annotation accents — lightened for readability on dark surfaces */
+    --ann-vocab:          oklch(0.72 0.18 240);
+    --ann-grammar:        oklch(0.72 0.19 145);
+    --ann-idiom:          oklch(0.80 0.17  42);
+    --ann-literary:       oklch(0.75 0.22 305);
+    --ann-etymology:      oklch(0.72 0.15 195);
+
+    /* Surfaces */
+    --surface:            #1F2937;   /* gray-800 */
+    --surface-secondary:  #111827;   /* gray-900 */
+    --border:             #374151;   /* gray-700 */
+    --border-input:       #9CA3AF;   /* gray-400 — ≥3:1 on gray-800 */
+
+    /* Text */
+    --text-primary:       #F9FAFB;   /* gray-50  */
+    --text-secondary:     #9CA3AF;   /* gray-400 */
+
+    /* Feedback — lightened for dark bg; fills reuse readable values */
+    --success:            #34D399;   /* emerald-400 */
+    --error:              #F87171;   /* red-400     */
+    --success-fill:       #34D399;
+    --error-fill:         #F87171;
+
+    /* Elevation — stronger shadow on dark */
+    --shadow:             0 0.5rem 1.5rem rgb(0 0 0 / 0.4);
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root[data-theme="auto"] {
     /* Brand — peachy terracotta for dark backgrounds */
     --brand-purple:       #ED9070;   /* peachy terracotta — 6.10:1 on gray-800 */
     --brand-purple-light: #3D1810;   /* deep warm brown tint */

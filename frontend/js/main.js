@@ -19,6 +19,19 @@ import { buildLessonPipelinePayload, validateLessonPipelinePayload } from './les
 
 initUiLanguage()
 
+// ── OS theme tracking (auto mode) ─────────────────────────────────────────────
+// When the user has chosen 'auto', mirror OS preference changes in real time.
+;(function () {
+  const mq = window.matchMedia('(prefers-color-scheme: dark)')
+  mq.addEventListener('change', () => {
+    if ((document.documentElement.getAttribute('data-theme') || 'auto') === 'auto') {
+      document.dispatchEvent(new CustomEvent('mnemosyne:theme-changed', {
+        detail: { theme: 'auto' }, bubbles: false,
+      }))
+    }
+  })
+})()
+
 // ── DOM references ────────────────────────────────────────────────────────────
 
 const OWNER_EMAIL = 'paul_schleifer@hotmail.com'

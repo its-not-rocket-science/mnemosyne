@@ -13,6 +13,24 @@
 
 import { t } from '../js/i18n.js'
 
+// ── Theme helpers ─────────────────────────────────────────────────────────────
+
+const THEME_ICON = { auto: '◑', light: '☼', dark: '☾' }
+const THEME_NEXT = { auto: 'light', light: 'dark', dark: 'auto' }
+const LS_THEME   = 'mnemosyne_theme'
+
+function _currentTheme() {
+  return document.documentElement.getAttribute('data-theme') || 'auto'
+}
+
+function _applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme)
+  try { localStorage.setItem(LS_THEME, theme) } catch (_) {}
+  document.dispatchEvent(new CustomEvent('mnemosyne:theme-changed', {
+    detail: { theme }, bubbles: false,
+  }))
+}
+
 // ── SVG assets ────────────────────────────────────────────────────────────────
 
 const TREE = /* html */`
@@ -38,28 +56,40 @@ class MnemosyneTopNav extends HTMLElement {
   #shadow
   #expanded = false
   #depth    = 'learning'
+  #theme    = 'auto'
 
   constructor() {
     super()
     this.#shadow = this.attachShadow({ mode: 'open' })
   }
 
-  #langHandler = null
+  #langHandler  = null
+  #themeHandler = null
 
   connectedCallback() {
+    this.#theme = _currentTheme()
     this.#shadow.innerHTML = this.#html()
     this.#wire()
     this.#langHandler = () => {
       this.#shadow.innerHTML = this.#html()
       this.#wire()
     }
+    this.#themeHandler = (e) => {
+      this.#theme = e.detail?.theme || _currentTheme()
+      this.#updateThemeBtn()
+    }
     document.addEventListener('mnemosyne:language-changed', this.#langHandler)
+    document.addEventListener('mnemosyne:theme-changed', this.#themeHandler)
   }
 
   disconnectedCallback() {
     if (this.#langHandler) {
       document.removeEventListener('mnemosyne:language-changed', this.#langHandler)
       this.#langHandler = null
+    }
+    if (this.#themeHandler) {
+      document.removeEventListener('mnemosyne:theme-changed', this.#themeHandler)
+      this.#themeHandler = null
     }
   }
 
@@ -101,6 +131,13 @@ class MnemosyneTopNav extends HTMLElement {
     </select>
     <span class="nav__mode-indicator" id="mode-indicator" aria-live="polite">${t('nav_mode_label')}: ${t('nav_depth_learning')}</span>
 
+    <button class="nav__ctrl nav__theme" id="theme-btn"
+            type="button"
+            aria-label="${t('nav_theme_aria')}: ${t(`nav_theme_${this.#theme}`)}"
+            title="${t('nav_theme_aria')}">
+      <span id="theme-icon" aria-hidden="true">${THEME_ICON[this.#theme] ?? '◑'}</span>
+    </button>
+
     <button class="nav__ctrl nav__settings" id="settings-btn"
             type="button" aria-label="${t('nav_settings_aria')}">&#x2699;&#xFE0E;</button>
 
@@ -124,6 +161,12 @@ class MnemosyneTopNav extends HTMLElement {
     <option value="learning">${t('nav_depth_learning')}</option>
     <option value="deep">${t('nav_depth_deep')}</option>
   </select>
+  <button class="nav__ctrl nav__theme" id="xtheme"
+          type="button"
+          aria-label="${t('nav_theme_aria')}: ${t(`nav_theme_${this.#theme}`)}"
+          title="${t('nav_theme_aria')}">
+    <span id="xtheme-icon" aria-hidden="true">${THEME_ICON[this.#theme] ?? '◑'}</span>
+  </button>
   <button class="nav__ctrl nav__settings" id="xsettings"
           type="button" aria-label="${t('nav_settings_aria')}">&#x2699;&#xFE0E;</button>
 </div>`
@@ -146,6 +189,15 @@ class MnemosyneTopNav extends HTMLElement {
         this.#updateModeIndicator()
       })
     }
+
+    // Theme toggle
+    const cycleTheme = () => {
+      this.#theme = THEME_NEXT[this.#theme] || 'auto'
+      _applyTheme(this.#theme)
+      this.#updateThemeBtn()
+    }
+    $('theme-btn')?.addEventListener('click', cycleTheme)
+    $('xtheme')?.addEventListener('click', cycleTheme)
 
     // Settings
     const openSettings = () =>
@@ -172,6 +224,17 @@ class MnemosyneTopNav extends HTMLElement {
     const label = t(`nav_depth_${this.#depth}`)
     const indicator = this.#shadow.getElementById('mode-indicator')
     if (indicator) indicator.textContent = `${t('nav_mode_label')}: ${label}`
+  }
+
+  #updateThemeBtn() {
+    const icon  = THEME_ICON[this.#theme] ?? '◑'
+    const label = `${t('nav_theme_aria')}: ${t(`nav_theme_${this.#theme}`)}`
+    for (const [btnId, iconId] of [['theme-btn', 'theme-icon'], ['xtheme', 'xtheme-icon']]) {
+      const btn = this.#shadow.getElementById(btnId)
+      const ico = this.#shadow.getElementById(iconId)
+      if (btn) btn.setAttribute('aria-label', label)
+      if (ico) ico.textContent = icon
+    }
   }
 
   // ── Mobile expand ────────────────────────────────────────────────────────────
@@ -285,6 +348,7 @@ class MnemosyneTopNav extends HTMLElement {
 }
 
 .nav__settings { font-size: 0.95rem; }
+.nav__theme    { font-size: 0.95rem; }
 
 .nav__mode-indicator {
   font-size: 0.74rem;
@@ -370,8 +434,9 @@ class MnemosyneTopNav extends HTMLElement {
 @media (max-width: 53.99rem) {
   .nav__expand { display: inline-flex; }
 
-  /* Hide desktop-only depth + settings in main bar; show in xrow instead */
+  /* Hide desktop-only depth + settings + theme in main bar; show in xrow instead */
   #depth-select,
+  #theme-btn,
   #settings-btn { display: none; }
 }
 `
