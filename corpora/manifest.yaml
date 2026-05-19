@@ -351,18 +351,17 @@ entries:
     framework: CEFR
     level: A1
     cefr_equivalent: A1
-    title: "Hänsel und Gretel"
+    title: "Kinder- und Hausmärchen"
     author: "Jacob Grimm und Wilhelm Grimm"
     year: 1812
-    source_url: "https://de.wikisource.org/wiki/Kinder-_und_Haus-M%C3%A4rchen_Band_1_(1857)/H%C3%A4nsel_und_Gretel"
-    source_name: "Wikisource German"
+    source_url: "https://www.gutenberg.org/cache/epub/77905/pg77905.txt"
+    source_name: "Project Gutenberg"
     license: public_domain
     genre: fairy_tales
     dialect: de-DE
     script: latin
-    manual_review: true
     notes:
-      - "URL 404'd; try https://de.wikisource.org/wiki/H%C3%A4nsel_und_Gretel or browse de.wikisource.org/wiki/Kinder-_und_Haus-M%C3%A4rchen_Band_1_(1857) for correct tale subpage"
+      - "PG 77905: full Grimm collection (Deutsche Märchen), contains Hänsel und Gretel and ~200 other tales"
 
   - language: de
     framework: CEFR
