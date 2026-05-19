@@ -145,7 +145,7 @@ def check_manifest(
                     language=lang,
                     issue_type="missing_cefr_level",
                     message=f"Missing CEFR levels: {missing}",
-                    severity="warning",
+                    severity="error",
                 ))
 
     return report

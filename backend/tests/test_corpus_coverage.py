@@ -304,7 +304,7 @@ def test_lockfile_update_preserves_other_keys(tmp_path: Path):
 
 # ── Quality: coverage check ───────────────────────────────────────────────────
 
-def test_check_manifest_coverage_warns_on_missing_level():
+def test_check_manifest_coverage_errors_on_missing_level():
     from backend.corpus.quality import check_manifest
 
     entries = [
@@ -315,10 +315,10 @@ def test_check_manifest_coverage_warns_on_missing_level():
     ]
     manifest = CorpusManifest.model_validate({"entries": entries})
     report = check_manifest(manifest, require_full_cefr_coverage=True)
-    coverage_warnings = [i for i in report.warnings if i.issue_type == "missing_cefr_level"]
-    assert len(coverage_warnings) == 1
-    assert "fr" == coverage_warnings[0].language
-    assert "A1" in coverage_warnings[0].message
+    coverage_errors = [i for i in report.errors if i.issue_type == "missing_cefr_level"]
+    assert len(coverage_errors) == 1
+    assert "fr" == coverage_errors[0].language
+    assert "A1" in coverage_errors[0].message
 
 
 def test_check_manifest_coverage_ok_when_complete():

@@ -67,6 +67,12 @@
     "manifest_entry_hash": "e3cb1e244700b4d3ffb9f4f5985323a1a16ae47cdc7f7b82f63ffd7e3f8e1179",
     "verified_url": "https://www.gutenberg.org/cache/epub/22367/pg22367.txt"
   },
+  "de:CEFR:C1:effi-briest:6daad22b": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "fe8da9b51f523039bfac2738c7994a5c0f3b15a1726d93cba00b110a9b3422cf",
+    "normalized_content_hash": "6a39a490941f8ba013c202328be33d044dcfc9cd25d1686cecc4567b529c9700",
+    "raw_content_hash": "6a39a490941f8ba013c202328be33d044dcfc9cd25d1686cecc4567b529c9700"
+  },
   "de:CEFR:C1:effi-briest:d53260a8": {
     "ingestion_status": "ok",
     "manifest_entry_hash": "731cd0018ded80d845987e3c2a12b737d282df823a082cd0478b30cb22b1f1e3",
