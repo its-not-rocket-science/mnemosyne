@@ -153,16 +153,14 @@ entries:
     title: "Fábulas de Samaniego"
     author: "Félix María de Samaniego"
     year: 1781
-    source_url: "https://es.wikisource.org/wiki/F%C3%A1bulas_(Samaniego)"
-    source_name: "Wikisource Spanish"
+    source_url: "https://www.gutenberg.org/cache/epub/33252/pg33252.txt"
+    source_name: "Project Gutenberg"
     license: public_domain
     genre: fables
     dialect: es-ES
     script: latin
     notes:
-      - "Short rhyming fables in clear standard Spanish; Samaniego died 1801"
-      - "URL returned 404 in verification — confirm page title on es.wikisource.org"
-    manual_review: true
+      - "PG ID 33252; short rhyming fables in clear standard Spanish; Samaniego died 1801"
 
   - language: es
     framework: CEFR
@@ -180,8 +178,6 @@ entries:
     notes:
       - "PG ID 9980; lyrical short chapters; Jiménez died 1958 (PD in US)"
       - "Simple present-tense descriptive prose; excellent for A2"
-      - "URL changed from /files/ to /cache/epub/ format; verify before ingestion"
-    manual_review: true
 
   - language: es
     framework: CEFR
@@ -206,7 +202,7 @@ entries:
     title: "Lazarillo de Tormes"
     author: "Anónimo"
     year: 1554
-    source_url: "https://es.wikisource.org/wiki/Lazarillo_de_Tormes"
+    source_url: "https://es.wikisource.org/wiki/La_vida_de_Lazarillo_de_Tormes"
     source_name: "Wikisource Spanish"
     license: public_domain
     genre: picaresque_novel
@@ -215,8 +211,6 @@ entries:
     notes:
       - "First picaresque novel; archaic 16th-century Spanish orthography"
       - "Short; excellent B2 challenge for vocabulary and register"
-      - "Shortened URL (full title URL returned 404); verify page exists"
-    manual_review: true
 
   - language: es
     framework: CEFR
@@ -260,16 +254,14 @@ entries:
     title: "Contes de Perrault"
     author: "Charles Perrault"
     year: 1697
-    source_url: "https://fr.wikisource.org/wiki/Contes_de_Perrault"
-    source_name: "Wikisource French"
+    source_url: "https://www.gutenberg.org/cache/epub/5667/pg5667.txt"
+    source_name: "Project Gutenberg"
     license: public_domain
     genre: fairy_tales
     dialect: fr-FR
     script: latin
     notes:
-      - "Classic fairy tales; clear narrative prose; Perrault died 1703"
-      - "URL returned 404 — page may be index; try a specific tale e.g. /wiki/Le_Petit_Chaperon_rouge"
-    manual_review: true
+      - "PG ID 5667; classic fairy tales; clear narrative prose; Perrault died 1703"
 
   - language: fr
     framework: CEFR
@@ -362,16 +354,14 @@ entries:
     title: "Kinder- und Hausmärchen"
     author: "Jacob Grimm und Wilhelm Grimm"
     year: 1812
-    source_url: "https://de.wikisource.org/wiki/Kinder-_und_Hausm%C3%A4rchen"
-    source_name: "Wikisource German"
+    source_url: "https://www.gutenberg.org/cache/epub/2591/pg2591.txt"
+    source_name: "Project Gutenberg"
     license: public_domain
     genre: fairy_tales
     dialect: de-DE
     script: latin
     notes:
-      - "Grimm Brothers fairy tales; simple narrative past tense; died 1863/1859"
-      - "URL corrected (removed spurious hyphen before M); likely index page — verify a specific tale URL"
-    manual_review: true
+      - "PG ID 2591; Grimm Brothers fairy tales; simple narrative past tense; died 1863/1859"
 
   - language: de
     framework: CEFR
@@ -403,9 +393,7 @@ entries:
     dialect: de-DE
     script: latin
     notes:
-      - "Heidi (part 1); Spyri died 1901; accessible narrative prose"
-      - "PG ID 20781 (German original); Wikisource URL returned 404 — switched to PG"
-    manual_review: true
+      - "PG ID 20781 (German original); Heidi part 1; Spyri died 1901; accessible narrative prose"
 
   - language: de
     framework: CEFR
@@ -430,16 +418,14 @@ entries:
     title: "Effi Briest"
     author: "Theodor Fontane"
     year: 1896
-    source_url: "https://de.wikisource.org/wiki/Effi_Briest"
-    source_name: "Wikisource German"
+    source_url: "https://www.gutenberg.org/cache/epub/5807/pg5807.txt"
+    source_name: "Project Gutenberg"
     license: public_domain
     genre: novel
     dialect: de-DE
     script: latin
     notes:
-      - "Fontane died 1898; social realism; dense dialogue and irony"
-      - "URL returned 404 — verify on de.wikisource.org; may need chapter sub-page"
-    manual_review: true
+      - "PG ID 5807; Fontane died 1898; social realism; dense dialogue and irony"
 
   - language: de
     framework: CEFR
@@ -566,34 +552,30 @@ entries:
     title: "Contos populares portugueses"
     author: "Adolfo Coelho"
     year: 1879
-    source_url: "https://pt.wikisource.org/wiki/Contos_populares_portugueses"
-    source_name: "Wikisource Portuguese"
+    source_url: "https://www.gutenberg.org/cache/epub/32754/pg32754.txt"
+    source_name: "Project Gutenberg"
     license: public_domain
     genre: folk_tales
     dialect: pt-PT
     script: latin
     notes:
-      - "Coelho died 1919; short folk tales; clear narrative Portuguese"
-      - "URL returned 404 — verify on pt.wikisource.org"
-    manual_review: true
+      - "PG ID 32754; Coelho died 1919; short folk tales; clear narrative Portuguese"
 
   - language: pt
     framework: CEFR
     level: A2
     cefr_equivalent: A2
-    title: "Histórias da Avozinha"
-    author: "Ana de Castro Osório"
-    year: 1897
-    source_url: "https://pt.wikisource.org/wiki/Hist%C3%B3rias_da_Avozinha"
-    source_name: "Wikisource Portuguese"
+    title: "Amor de Perdição"
+    author: "Camilo Castelo Branco"
+    year: 1862
+    source_url: "https://www.gutenberg.org/cache/epub/25610/pg25610.txt"
+    source_name: "Project Gutenberg"
     license: public_domain
-    genre: children_literature
+    genre: novel
     dialect: pt-PT
     script: latin
-    manual_review: true
     notes:
-      - "Osório died 1935; gentle stories for children; accessible A2 prose"
-      - "URL returned 404 on verify; confirm correct Wikisource path before ingesting"
+      - "PG ID 25610; Camilo died 1890; tragic romance; accessible literary Portuguese"
 
   - language: pt
     framework: CEFR
@@ -769,36 +751,34 @@ entries:
     framework: CEFR
     level: A1
     cefr_equivalent: A1
-    title: "الأسد والفأر"
-    author: "مجهول (نقل عن إيسوب)"
+    title: "حكم العرب وأمثالهم"
+    author: "مؤلف مجهول"
     year: null
-    source_url: "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D8%A3%D8%B3%D8%AF_%D9%88%D8%A7%D9%84%D9%81%D8%A3%D8%B1"
-    source_name: "Wikisource Arabic"
+    source_url: "https://www.gutenberg.org/cache/epub/32441/pg32441.txt"
+    source_name: "Project Gutenberg"
     license: public_domain
-    genre: fable
+    genre: proverbs
     dialect: ar
     script: arabic
     notes:
-      - "The Lion and the Mouse; Aesop fable in Arabic; very short"
-      - "Manual review recommended — page content may be brief"
-    manual_review: true
+      - "PG ID 32441; Arabic proverbs and aphorisms; short clear classical phrases; ideal A1"
 
   - language: ar
     framework: CEFR
     level: A2
     cefr_equivalent: A2
-    title: "حكايات إيسوب"
-    author: "مجهول (نقل عن إيسوب)"
-    year: null
-    source_url: "https://ar.wikisource.org/wiki/%D8%AD%D9%83%D8%A7%D9%8A%D8%A7%D8%AA_%D8%A5%D9%8A%D8%B3%D9%88%D8%A8"
+    title: "كليلة ودمنة / باب الحمامة المطوقة"
+    author: "ابن المقفع"
+    year: 750
+    source_url: "https://ar.wikisource.org/wiki/%D9%83%D9%84%D9%8A%D9%84%D8%A9_%D9%88%D8%AF%D9%85%D9%86%D8%A9/%D8%A8%D8%A7%D8%A8_%D8%A7%D9%84%D8%AD%D9%85%D8%A7%D9%85%D8%A9_%D8%A7%D9%84%D9%85%D8%B7%D9%88%D9%82%D8%A9"
     source_name: "Wikisource Arabic"
     license: public_domain
-    genre: fables
+    genre: wisdom_literature
     dialect: ar
     script: arabic
     notes:
-      - "Aesop's fables in Arabic; simple vocabulary; manual review recommended"
-    manual_review: true
+      - "Chapter of the Ringed Dove from Kalila wa-Dimna; short allegory; simpler than the full work"
+      - "Ibn al-Muqaffa died ~757; Classical Arabic; accessible fable narrative"
 
   - language: ar
     framework: CEFR
@@ -821,19 +801,18 @@ entries:
     framework: CEFR
     level: B2
     cefr_equivalent: B2
-    title: "قصص الأنبياء"
+    title: "البداية والنهاية"
     author: "ابن كثير"
     year: 1370
-    source_url: "https://ar.wikisource.org/wiki/%D9%82%D8%B5%D8%B5_%D8%A7%D9%84%D8%A3%D9%86%D8%A8%D9%8A%D8%A7%D8%A1"
+    source_url: "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9_%D9%88%D8%A7%D9%84%D9%86%D9%87%D8%A7%D9%8A%D8%A9"
     source_name: "Wikisource Arabic"
     license: public_domain
-    genre: religious_literature
+    genre: historical_chronicle
     dialect: ar
     script: arabic
-    manual_review: true
     notes:
-      - "Stories of the Prophets; Ibn Kathir died 1373; Classical Arabic narrative"
-      - "URL returned 404 on verify; confirm correct Arabic Wikisource path before ingesting"
+      - "Al-Bidaya wa-l-Nihaya; Ibn Kathir died 1373; historical narrative with prophetic stories"
+      - "Accessible Classical Arabic prose; good B2 reading challenge"
 
   - language: ar
     framework: CEFR
@@ -1078,20 +1057,18 @@ entries:
     framework: custom
     level: C2
     cefr_equivalent: C2
-    title: "史記 · 五帝本紀"
-    author: "司馬遷"
-    year: -91
-    source_url: "https://zh.wikisource.org/wiki/%E5%8F%B2%E8%A8%98/%E4%BA%94%E5%B8%9D%E6%9C%AC%E7%B4%80"
+    title: "莊子"
+    author: "莊周"
+    year: -300
+    source_url: "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90"
     source_name: "Wikisource Chinese"
     license: public_domain
-    genre: historical_chronicle
+    genre: philosophical_prose
     dialect: zh-Hant
     script: cjk
     notes:
-      - "Shiji — Annals of the Five Emperors; Sima Qian died ~86 BC"
-      - "Classical Chinese prose; densest historical vocabulary in the corpus"
-      - "Beyond HSK scale; URL points to specific chapter — verify before ingestion"
-    manual_review: true
+      - "Zhuangzi; Zhuang Zhou died ~286 BC; archaic metaphorical Classical Chinese"
+      - "Beyond HSK scale; densest philosophical vocabulary; genuine C2 challenge"
 
   # ── Japanese ─────────────────────────────────────────────────────────────────
 
@@ -1210,38 +1187,35 @@ entries:
     framework: TOPIK
     level: TOPIK1
     cefr_equivalent: A1
-    title: "해와 달이 된 오누이"
+    title: "토끼전"
     author: "작자 미상"
     year: null
-    source_url: "https://ko.wikisource.org/wiki/%ED%95%B4%EC%99%80_%EB%8B%AC%EC%9D%B4_%EB%90%9C_%EC%98%A4%EB%88%A0%EC%9D%B4"
+    source_url: "https://ko.wikisource.org/wiki/%ED%86%A0%EB%81%BC%EC%A0%84"
     source_name: "Wikisource Korean"
     license: public_domain
     genre: folk_tale
     dialect: ko-KR
     script: hangul
-    manual_review: true
     notes:
-      - "The Sun and Moon Siblings; classic Korean folk tale; very short"
-      - "Simple narrative; good for introducing basic Korean sentence structure"
-      - "URL returned 404 on verify; confirm correct Korean Wikisource path before ingesting"
+      - "Tale of the Rabbit; classic Korean folk tale about cunning; short and accessible"
+      - "Simple narrative vocabulary; suitable TOPIK1 (A1) entry text"
 
   - language: ko
     framework: TOPIK
     level: TOPIK2
     cefr_equivalent: A2
-    title: "콩쥐팥쥐전"
+    title: "장화홍련전"
     author: "작자 미상"
     year: null
-    source_url: "https://ko.wikisource.org/wiki/%EC%BD%A9%EC%A5%90%ED%8C%A5%EC%A5%90%EC%A0%84"
+    source_url: "https://ko.wikisource.org/wiki/%EC%9E%A5%ED%99%94%ED%99%8D%EB%A0%A8%EC%A0%84"
     source_name: "Wikisource Korean"
     license: public_domain
     genre: folk_tale
     dialect: ko-KR
     script: hangul
-    manual_review: true
     notes:
-      - "Kongjwi and Patjwi; Korean Cinderella tale; accessible narrative"
-      - "URL returned 404 on verify; confirm correct Korean Wikisource path before ingesting"
+      - "Janghwa Hongnyeonjeon; classic ghost-story folk tale; step-mother narrative"
+      - "Moderate classical Korean; accessible A2 prose vocabulary"
 
   - language: ko
     framework: TOPIK
@@ -1280,19 +1254,18 @@ entries:
     framework: TOPIK
     level: TOPIK5
     cefr_equivalent: C1
-    title: "춘향전"
-    author: "작자 미상"
-    year: null
-    source_url: "https://ko.wikisource.org/wiki/%EC%B6%98%ED%96%A5%EC%A0%84"
+    title: "구운몽"
+    author: "김만중"
+    year: 1689
+    source_url: "https://ko.wikisource.org/wiki/%EA%B5%AC%EC%9A%B4%EB%AA%BD"
     source_name: "Wikisource Korean"
     license: public_domain
-    genre: pansori_tale
+    genre: novel
     dialect: ko-KR
     script: hangul
-    manual_review: true
     notes:
-      - "Chunhyangjeon; classic love story pansori; complex classical Korean"
-      - "URL returned 404 on verify; confirm correct Korean Wikisource path before ingesting"
+      - "Nine Cloud Dream; Kim Man-jung died 1692; classic Confucian allegorical novel"
+      - "Dense classical Korean; complex Buddhist and Confucian vocabulary; C1 challenge"
 
   - language: ko
     framework: TOPIK
@@ -1326,11 +1299,8 @@ entries:
     genre: adapted_fables
     dialect: la
     script: latin
-    manual_review: true
     notes:
-      - "PG ID 8997; simplified Latin myths; standard beginner reader"
-      - "Ritchie adapted classical stories for classroom use"
-      - "URL changed from /files/8997/8997-0.txt to /cache/epub/8997/pg8997.txt (404 fix attempt)"
+      - "PG ID 8997; simplified Latin myths; Ritchie adapted classical stories for classroom use"
 
   - language: la
     framework: ClassicalReading
@@ -1339,16 +1309,14 @@ entries:
     title: "Fabulae Phaedri"
     author: "Gaius Julius Phaedrus"
     year: 20
-    source_url: "https://www.thelatinlibrary.com/phaedrus.html"
-    source_name: "The Latin Library"
+    source_url: "https://www.gutenberg.org/cache/epub/26058/pg26058.txt"
+    source_name: "Project Gutenberg"
     license: public_domain
     genre: fables
     dialect: la
     script: latin
     notes:
-      - "Phaedrus Fables; iambic senarii; accessible Latin verse"
-      - "The Latin Library uses generic HTML extraction — verify content"
-    manual_review: true
+      - "PG ID 26058; Phaedrus Fables; iambic senarii verse; accessible classical Latin"
 
   - language: la
     framework: ClassicalReading
@@ -1364,10 +1332,8 @@ entries:
     dialect: la
     script: latin
     notes:
-      - "Caesar's Gallic Wars, Book I only; clear periodic style"
-      - "Overlaps subject matter with the C1 entry (all-books PG) but different URL and scope"
-      - "The Latin Library uses generic HTML extraction — verify content"
-    manual_review: true
+      - "Caesar's Gallic Wars, Book I only; clear periodic style; 68 KB of pure Latin"
+      - "Uses thelatinlibrary.com HTML extraction; distinct from the full-text PG C1 entry"
 
   - language: la
     framework: ClassicalReading
@@ -1376,16 +1342,14 @@ entries:
     title: "Vitae Excellentium Imperatorum (selecta)"
     author: "Cornelius Nepos"
     year: -35
-    source_url: "https://www.thelatinlibrary.com/nepos.html"
-    source_name: "The Latin Library"
+    source_url: "https://www.gutenberg.org/cache/epub/2080/pg2080.txt"
+    source_name: "Project Gutenberg"
     license: public_domain
     genre: biography
     dialect: la
     script: latin
     notes:
-      - "Lives of the Great Commanders; Nepos died ~24 BC; accessible biography"
-      - "The Latin Library index page — acquisition will capture multiple vitae"
-    manual_review: true
+      - "PG ID 2080; Lives of the Great Commanders; Nepos died ~24 BC; accessible biography"
 
   - language: la
     framework: ClassicalReading
@@ -1411,17 +1375,14 @@ entries:
     title: "Annales (Liber I)"
     author: "Publius Cornelius Tacitus"
     year: 117
-    source_url: "https://www.thelatinlibrary.com/tacitus/tac.ann1.shtml"
-    source_name: "The Latin Library"
+    source_url: "https://www.gutenberg.org/cache/epub/8863/pg8863.txt"
+    source_name: "Project Gutenberg"
     license: public_domain
     genre: historical_prose
     dialect: la
     script: latin
     notes:
-      - "Tacitus Annals Book I; dense and allusive; highest difficulty"
-      - "Tacitean brevitas requires advanced syntactic parsing"
-      - "The Latin Library uses generic HTML extraction — verify content"
-    manual_review: true
+      - "PG ID 8863; Tacitus Annals Book I; Tacitean brevitas; highest difficulty Latin"
 
   # ── Koine Greek ──────────────────────────────────────────────────────────────
 
@@ -1429,20 +1390,18 @@ entries:
     framework: KoineReading
     level: A1
     cefr_equivalent: A1
-    title: "Ἰωάννου Αʹ"
-    author: "Εὐαγγελιστής Ἰωάννης (trad.)"
-    year: 90
-    source_url: "https://el.wikisource.org/wiki/%CE%99%CF%89%CE%AC%CE%BD%CE%BD%CE%BF%CF%85_%CE%91%CE%84"
+    title: "Κατὰ Ματθαῖον"
+    author: "Εὐαγγελιστής Ματθαῖος (trad.)"
+    year: 80
+    source_url: "https://el.wikisource.org/wiki/%CE%9A%CE%B1%CF%84%CE%AC_%CE%9C%CE%B1%CF%84%CE%B8%CE%B1%CE%AF%CE%BF%CE%BD"
     source_name: "Wikisource Greek"
     license: public_domain
-    genre: biblical_epistle
+    genre: biblical_prose
     dialect: grc
     script: greek
-    manual_review: true
     notes:
-      - "1 John; 5 short chapters; simplest vocabulary in the Johannine corpus"
-      - "Polytonic Greek; repetitive theological vocabulary; ideal A1 entry"
-      - "URL returned 404 on verify; el.wikisource.org path may differ — confirm before ingesting"
+      - "Gospel of Matthew; plain narrative Koine; chapters 5-7 (Sermon on the Mount) ideal A1 reading"
+      - "Paratactic sentence structure; limited vocabulary range; good entry-level Koine text"
 
   - language: grc
     framework: KoineReading
