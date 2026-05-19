@@ -153,14 +153,14 @@ entries:
     title: "Fábulas de Samaniego"
     author: "Félix María de Samaniego"
     year: 1781
-    source_url: "https://www.gutenberg.org/cache/epub/33252/pg33252.txt"
+    source_url: "https://www.gutenberg.org/cache/epub/55206/pg55206.txt"
     source_name: "Project Gutenberg"
     license: public_domain
     genre: fables
     dialect: es-ES
     script: latin
     notes:
-      - "PG ID 33252; short rhyming fables in clear standard Spanish; Samaniego died 1801"
+      - "PG ID 55206 (verified Spanish); short rhyming fables in clear standard Spanish; Samaniego died 1801"
 
   - language: es
     framework: CEFR
@@ -251,17 +251,17 @@ entries:
     framework: CEFR
     level: A1
     cefr_equivalent: A1
-    title: "Contes de Perrault"
+    title: "Cendrillon"
     author: "Charles Perrault"
     year: 1697
-    source_url: "https://www.gutenberg.org/cache/epub/5667/pg5667.txt"
-    source_name: "Project Gutenberg"
+    source_url: "https://fr.wikisource.org/wiki/Contes_de_Perrault_(%C3%A9d._1902)/Cendrillon_ou_la_petite_Pantoufle_de_verre"
+    source_name: "Wikisource French"
     license: public_domain
     genre: fairy_tales
     dialect: fr-FR
     script: latin
     notes:
-      - "PG ID 5667; classic fairy tales; clear narrative prose; Perrault died 1703"
+      - "Wikisource 1902 edition (verified in search); Cendrillon tale; clear narrative prose; Perrault died 1703"
 
   - language: fr
     framework: CEFR
@@ -351,17 +351,18 @@ entries:
     framework: CEFR
     level: A1
     cefr_equivalent: A1
-    title: "Kinder- und Hausmärchen"
+    title: "Hänsel und Gretel"
     author: "Jacob Grimm und Wilhelm Grimm"
     year: 1812
-    source_url: "https://www.gutenberg.org/cache/epub/2591/pg2591.txt"
-    source_name: "Project Gutenberg"
+    source_url: "https://de.wikisource.org/wiki/Kinder-_und_Haus-M%C3%A4rchen_Band_1_(1857)/H%C3%A4nsel_und_Gretel"
+    source_name: "Wikisource German"
     license: public_domain
     genre: fairy_tales
     dialect: de-DE
     script: latin
+    manual_review: true
     notes:
-      - "PG ID 2591; Grimm Brothers fairy tales; simple narrative past tense; died 1863/1859"
+      - "URL 404'd; try https://de.wikisource.org/wiki/H%C3%A4nsel_und_Gretel or browse de.wikisource.org/wiki/Kinder-_und_Haus-M%C3%A4rchen_Band_1_(1857) for correct tale subpage"
 
   - language: de
     framework: CEFR
@@ -418,14 +419,14 @@ entries:
     title: "Effi Briest"
     author: "Theodor Fontane"
     year: 1896
-    source_url: "https://www.gutenberg.org/cache/epub/5807/pg5807.txt"
+    source_url: "https://www.gutenberg.org/cache/epub/5323/pg5323.txt"
     source_name: "Project Gutenberg"
     license: public_domain
     genre: novel
     dialect: de-DE
     script: latin
     notes:
-      - "PG ID 5807; Fontane died 1898; social realism; dense dialogue and irony"
+      - "PG ID 5323 (verified German); Fontane died 1898; social realism; dense dialogue and irony"
 
   - language: de
     framework: CEFR
@@ -558,8 +559,9 @@ entries:
     genre: folk_tales
     dialect: pt-PT
     script: latin
+    manual_review: true
     notes:
-      - "PG ID 32754; Coelho died 1919; short folk tales; clear narrative Portuguese"
+      - "PG 32754 = wrong book (sci-fi English); pt.wikisource.org/wiki/Contos_Populares_Portuguezes is index-only; need single-page Portuguese source"
 
   - language: pt
     framework: CEFR
@@ -568,7 +570,7 @@ entries:
     title: "Amor de Perdição"
     author: "Camilo Castelo Branco"
     year: 1862
-    source_url: "https://www.gutenberg.org/cache/epub/25610/pg25610.txt"
+    source_url: "https://www.gutenberg.org/cache/epub/16425/pg16425.txt"
     source_name: "Project Gutenberg"
     license: public_domain
     genre: novel
@@ -760,8 +762,9 @@ entries:
     genre: proverbs
     dialect: ar
     script: arabic
+    manual_review: true
     notes:
-      - "PG ID 32441; Arabic proverbs and aphorisms; short clear classical phrases; ideal A1"
+      - "PG 32441 = wrong book (Italian novel Il Colore del Tempo); need verified Arabic A1 source URL"
 
   - language: ar
     framework: CEFR
@@ -1309,14 +1312,14 @@ entries:
     title: "Fabulae Phaedri"
     author: "Gaius Julius Phaedrus"
     year: 20
-    source_url: "https://www.gutenberg.org/cache/epub/26058/pg26058.txt"
-    source_name: "Project Gutenberg"
+    source_url: "https://la.wikisource.org/wiki/Fabulae_(Phaedrus)/Liber_I"
+    source_name: "Wikisource Latin"
     license: public_domain
     genre: fables
     dialect: la
     script: latin
     notes:
-      - "PG ID 26058; Phaedrus Fables; iambic senarii verse; accessible classical Latin"
+      - "Wikisource Latin; Liber I (31 fables confirmed); iambic senarii verse; accessible classical Latin"
 
   - language: la
     framework: ClassicalReading
@@ -1342,14 +1345,14 @@ entries:
     title: "Vitae Excellentium Imperatorum (selecta)"
     author: "Cornelius Nepos"
     year: -35
-    source_url: "https://www.gutenberg.org/cache/epub/2080/pg2080.txt"
-    source_name: "Project Gutenberg"
+    source_url: "https://la.wikisource.org/wiki/De_viris_illustribus_(Cornelius_Nepos)/Liber_de_excellentibus_ducibus_exterarum_gentium/Epaminondas"
+    source_name: "Wikisource Latin"
     license: public_domain
     genre: biography
     dialect: la
     script: latin
     notes:
-      - "PG ID 2080; Lives of the Great Commanders; Nepos died ~24 BC; accessible biography"
+      - "Wikisource Latin; Epaminondas biography (URL from search results); Nepos died ~24 BC; accessible biography"
 
   - language: la
     framework: ClassicalReading
