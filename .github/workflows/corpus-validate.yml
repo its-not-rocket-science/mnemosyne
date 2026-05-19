@@ -1,0 +1,32 @@
+name: corpus-validate
+
+on:
+  push:
+    paths:
+      - "corpora/manifest.yaml"
+      - "backend/corpus/quality.py"
+      - "backend/corpus/manifest.py"
+  pull_request:
+    paths:
+      - "corpora/manifest.yaml"
+      - "backend/corpus/quality.py"
+      - "backend/corpus/manifest.py"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Poetry
+        run: pip install poetry
+
+      - name: Install dependencies
+        run: poetry install --no-root --only main
+
+      - name: Validate manifest (full CEFR coverage)
+        run: poetry run mnemosyne-corpus validate --full-coverage
