@@ -101,7 +101,8 @@
       "WebFetch(domain:www.thelatinlibrary.com)",
       "Bash(Write-Output \"Deleted 9 wrong cache files\")",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\\\\frontend\" -Recurse -File)",
-      "Bash(Get-ChildItem *)"
+      "Bash(Get-ChildItem *)",
+      "Bash(Sort-Object)"
     ]
   }
 }
