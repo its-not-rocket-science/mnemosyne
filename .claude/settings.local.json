@@ -102,7 +102,9 @@
       "Bash(Write-Output \"Deleted 9 wrong cache files\")",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\\\\frontend\" -Recurse -File)",
       "Bash(Get-ChildItem *)",
-      "Bash(Sort-Object)"
+      "Bash(Sort-Object)",
+      "Bash(Select-Object -First 20)",
+      "PowerShell(head *)"
     ]
   }
 }
