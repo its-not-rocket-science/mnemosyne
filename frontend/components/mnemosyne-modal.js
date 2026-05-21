@@ -448,6 +448,132 @@ export class MnemosyneModal extends HTMLElement {
         .status-error { color: var(--error-color, oklch(0.50 0.2 29)); }
         .status-error:empty { display: none; }
 
+        /* ── enrichment sections ── */
+        .enrichment-section {
+          margin-block-start: 1rem;
+          font-size: 0.875rem;
+        }
+
+        .enrichment-heading {
+          font-size: 0.7rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: var(--muted, GrayText);
+          margin: 0 0 0.5rem;
+        }
+
+        .paradigm-wrap {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          margin-block-end: 0.75rem;
+        }
+
+        .paradigm-wrap summary {
+          cursor: pointer;
+          font-size: 0.8rem;
+          color: var(--muted, GrayText);
+          padding-block: 0.25rem;
+          user-select: none;
+        }
+
+        .paradigm-table {
+          border-collapse: collapse;
+          font-size: 0.8rem;
+          margin-block-start: 0.4rem;
+        }
+
+        .paradigm-table th,
+        .paradigm-table td {
+          border: 1px solid color-mix(in srgb, CanvasText 20%, Canvas);
+          padding: 0.3rem 0.5rem;
+          text-align: center;
+          vertical-align: top;
+        }
+
+        .paradigm-table th {
+          font-weight: 700;
+          font-size: 0.65rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: var(--muted, GrayText);
+          background: color-mix(in srgb, CanvasText 4%, Canvas);
+        }
+
+        .paradigm-cell--current {
+          background: color-mix(in srgb, var(--accent, #3557ff) 14%, Canvas);
+          font-weight: 600;
+          outline: 2px solid color-mix(in srgb, var(--accent, #3557ff) 50%, Canvas);
+          outline-offset: -2px;
+        }
+
+        .equiv-card {
+          border-inline-start: 3px solid color-mix(in srgb, var(--accent, #3557ff) 50%, transparent);
+          padding-inline-start: 0.6rem;
+          margin-block-end: 0.4rem;
+        }
+
+        .equiv-construction {
+          font-weight: 600;
+          overflow-wrap: break-word;
+        }
+
+        .equiv-note {
+          font-size: 0.8rem;
+          color: var(--muted, GrayText);
+          margin: 0;
+        }
+
+        .contrast-card {
+          background: color-mix(in srgb, oklch(0.72 0.18 55) 8%, Canvas);
+          border: 1px solid color-mix(in srgb, oklch(0.72 0.18 55) 30%, Canvas);
+          border-radius: 0.4rem;
+          padding: 0.4rem 0.6rem;
+          margin-block-end: 0.35rem;
+          font-size: 0.8125rem;
+        }
+
+        .contrast-forms {
+          font-weight: 600;
+          margin-block-end: 0.2rem;
+        }
+
+        .contrast-vs {
+          font-weight: 400;
+          color: var(--muted, GrayText);
+          margin-inline: 0.25rem;
+          font-size: 0.75rem;
+        }
+
+        .contrast-note {
+          margin: 0;
+          line-height: 1.5;
+        }
+
+        .vocab-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 0.2rem;
+        }
+
+        .vocab-item {
+          display: flex;
+          align-items: baseline;
+          gap: 0.4rem;
+          flex-wrap: wrap;
+          padding-block: 0.2rem;
+          border-block-end: 1px solid color-mix(in srgb, CanvasText 10%, Canvas);
+          font-size: 0.875rem;
+        }
+        .vocab-item:last-child { border-block-end: none; }
+
+        .vocab-form  { font-weight: 600; overflow-wrap: break-word; }
+        .vocab-lemma { font-size: 0.8rem; color: var(--muted, GrayText); }
+        .vocab-gloss { font-size: 0.8rem; color: var(--muted, GrayText); }
+
         /* ── Narrow-screen overrides (≤ 320 px viewport) ── */
         @media (max-width: 20rem) {
           /* Switch the definition list from a two-column grid to a stacked layout
@@ -598,6 +724,219 @@ export class MnemosyneModal extends HTMLElement {
     for (let i = 0; i < (lesson.drills ?? []).length; i++) {
       const drillEl = this.#renderDrill(lesson.drills[i], i, onSpeak, onCheckResult)
       if (drillEl) drillsContainer.appendChild(drillEl)
+    }
+
+    // ── Enrichment sections (appended after drills) ────────────────────────────
+    const lessonBody = sr.querySelector('.lesson-body')
+
+    // Morphology axes — append as a compact definition section if present.
+    const axes = lesson.morphology_axes ?? []
+    if (axes.length) {
+      const sec = document.createElement('section')
+      sec.className = 'enrichment-section'
+      const h = document.createElement('p')
+      h.className = 'enrichment-heading'
+      h.setAttribute('aria-hidden', 'true')
+      h.textContent = t('modal_morphology_heading') || 'Morphology'
+      const dl = document.createElement('dl')
+      dl.className = 'fields'
+      for (const ax of axes) {
+        const dt = document.createElement('dt')
+        dt.className = 'field-label'
+        dt.textContent = ax.axis
+        const dd = document.createElement('dd')
+        dd.className = 'field-value'
+        dd.textContent = ax.label || ax.value
+        if (ax.gloss) {
+          const small = document.createElement('small')
+          small.style.color = 'var(--muted, GrayText)'
+          small.style.display = 'block'
+          small.style.fontSize = '0.75em'
+          small.textContent = ax.gloss
+          dd.appendChild(small)
+        }
+        dl.append(dt, dd)
+      }
+      sec.append(h, dl)
+      lessonBody.appendChild(sec)
+    }
+
+    // Paradigms — each as a collapsible table.
+    const paradigms = lesson.paradigms ?? []
+    if (paradigms.length) {
+      const sec = document.createElement('section')
+      sec.className = 'enrichment-section'
+      const h = document.createElement('p')
+      h.className = 'enrichment-heading'
+      h.setAttribute('aria-hidden', 'true')
+      h.textContent = t('modal_paradigms_heading') || 'Paradigm'
+      sec.appendChild(h)
+      for (const p of paradigms) {
+        const details = document.createElement('details')
+        details.className = 'paradigm-wrap'
+        const summary = document.createElement('summary')
+        summary.textContent = p.title || (t('modal_paradigm_show') || 'Show paradigm')
+        details.appendChild(summary)
+        const cells = Array.isArray(p.cells) ? p.cells : []
+        const rowAxis = p.row_axis
+        const colAxis = p.col_axis
+        if (rowAxis && colAxis && cells.length) {
+          const rowVals = [], colVals = []
+          for (const cell of cells) {
+            const rv = cell.axes?.[rowAxis] || ''
+            const cv = cell.axes?.[colAxis] || ''
+            if (rv && !rowVals.includes(rv)) rowVals.push(rv)
+            if (cv && !colVals.includes(cv)) colVals.push(cv)
+          }
+          const lookup = new Map(cells.map(c => [`${c.axes?.[rowAxis] || ''}|${c.axes?.[colAxis] || ''}`, c]))
+          const table = document.createElement('table')
+          table.className = 'paradigm-table'
+          const thead = table.createTHead()
+          const headRow = thead.insertRow()
+          headRow.insertCell().scope = 'col'
+          for (const cv of colVals) {
+            const th = document.createElement('th')
+            th.scope = 'col'
+            th.textContent = cv
+            headRow.appendChild(th)
+          }
+          const tbody = table.createTBody()
+          for (const rv of rowVals) {
+            const tr = tbody.insertRow()
+            const rowHead = document.createElement('th')
+            rowHead.scope = 'row'
+            rowHead.textContent = rv
+            tr.appendChild(rowHead)
+            for (const cv of colVals) {
+              const cell = lookup.get(`${rv}|${cv}`)
+              const td = tr.insertCell()
+              if (!cell) {
+                td.textContent = '—'
+              } else {
+                td.className = cell.is_highlighted ? 'paradigm-cell--current' : ''
+                const span = document.createElement('span')
+                span.textContent = cell.form
+                this.#applyTargetLang(span)
+                td.appendChild(span)
+                if (cell.is_highlighted) {
+                  const sr2 = document.createElement('span')
+                  sr2.setAttribute('style', 'position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%)')
+                  sr2.textContent = ` (${t('modal_current_form') || 'current form'})`
+                  td.appendChild(sr2)
+                }
+              }
+            }
+          }
+          details.appendChild(table)
+        }
+        sec.appendChild(details)
+      }
+      lessonBody.appendChild(sec)
+    }
+
+    // Equivalents — compact list.
+    const equivalents = lesson.equivalents ?? []
+    if (equivalents.length) {
+      const sec = document.createElement('section')
+      sec.className = 'enrichment-section'
+      const h = document.createElement('p')
+      h.className = 'enrichment-heading'
+      h.setAttribute('aria-hidden', 'true')
+      h.textContent = t('modal_equivalents_heading') || 'Also expressed as'
+      sec.appendChild(h)
+      for (const eq of equivalents) {
+        const card = document.createElement('div')
+        card.className = 'equiv-card'
+        const con = document.createElement('p')
+        con.className = 'equiv-construction'
+        con.textContent = eq.construction
+        const langCode = eq.language_code || this.#language
+        if (langCode) con.setAttribute('lang', langCode)
+        card.appendChild(con)
+        if (eq.note) {
+          const note = document.createElement('p')
+          note.className = 'equiv-note'
+          note.textContent = eq.note
+          card.appendChild(note)
+        }
+        sec.appendChild(card)
+      }
+      lessonBody.appendChild(sec)
+    }
+
+    // Contrasts — "don't confuse" warning cards.
+    const contrasts = lesson.contrasts ?? []
+    if (contrasts.length) {
+      const sec = document.createElement('section')
+      sec.className = 'enrichment-section'
+      const h = document.createElement('p')
+      h.className = 'enrichment-heading'
+      h.setAttribute('aria-hidden', 'true')
+      h.textContent = t('modal_contrasts_heading') || "Don't confuse with"
+      sec.appendChild(h)
+      for (const c of contrasts) {
+        const card = document.createElement('div')
+        card.className = 'contrast-card'
+        const forms = document.createElement('div')
+        forms.className = 'contrast-forms'
+        const fa = document.createElement('bdi')
+        fa.textContent = c.form_a
+        this.#applyTargetLang(fa)
+        const vs = document.createElement('span')
+        vs.className = 'contrast-vs'
+        vs.setAttribute('aria-hidden', 'true')
+        vs.textContent = 'vs'
+        const fb = document.createElement('bdi')
+        fb.textContent = c.form_b
+        this.#applyTargetLang(fb)
+        forms.append(fa, vs, fb)
+        const note = document.createElement('p')
+        note.className = 'contrast-note'
+        note.textContent = c.note
+        card.append(forms, note)
+        sec.appendChild(card)
+      }
+      lessonBody.appendChild(sec)
+    }
+
+    // Encountered vocabulary — compact gloss list.
+    const encVocab = lesson.encountered_vocabulary ?? []
+    if (encVocab.length) {
+      const sec = document.createElement('section')
+      sec.className = 'enrichment-section'
+      const h = document.createElement('p')
+      h.className = 'enrichment-heading'
+      h.setAttribute('aria-hidden', 'true')
+      h.textContent = t('modal_vocab_heading') || 'Context vocabulary'
+      sec.appendChild(h)
+      const ul = document.createElement('ul')
+      ul.className = 'vocab-list'
+      ul.setAttribute('aria-label', t('modal_vocab_heading') || 'Context vocabulary')
+      for (const v of encVocab) {
+        const li = document.createElement('li')
+        li.className = 'vocab-item'
+        const form = document.createElement('span')
+        form.className = 'vocab-form'
+        form.textContent = v.form
+        this.#applyTargetLang(form)
+        li.appendChild(form)
+        if (v.lemma && v.lemma !== v.form) {
+          const lemma = document.createElement('span')
+          lemma.className = 'vocab-lemma'
+          lemma.textContent = `(${v.lemma})`
+          this.#applyTargetLang(lemma)
+          li.appendChild(lemma)
+        }
+        if (v.gloss) {
+          const gloss = document.createElement('span')
+          gloss.className = 'vocab-gloss'
+          gloss.textContent = `– ${v.gloss}`
+          li.appendChild(gloss)
+        }
+        ul.appendChild(li)
+      }
+      sec.appendChild(ul)
+      lessonBody.appendChild(sec)
     }
 
     // ── Script view toggle wiring ─────────────────────────────────────────────

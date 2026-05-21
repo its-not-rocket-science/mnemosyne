@@ -166,11 +166,15 @@ export class MnemosyneDetailPane extends HTMLElement {
   #explanationTranslationFetched  = false
 
   static ALL_TABS = [
-    { id: 'explanation', labelKey: 'dp_tab_explanation', alwaysShow: true  },
-    { id: 'origins',     labelKey: 'dp_tab_origins',     alwaysShow: false },
-    { id: 'context',     labelKey: 'dp_tab_context',     alwaysShow: true  },
-    { id: 'related',     labelKey: 'dp_tab_related',     alwaysShow: false },
-    { id: 'practice',    labelKey: 'dp_tab_practice',    alwaysShow: true  },
+    { id: 'explanation',  labelKey: 'dp_tab_explanation',  alwaysShow: true  },
+    { id: 'form',         labelKey: 'dp_tab_form',         alwaysShow: false },
+    { id: 'paradigm',     labelKey: 'dp_tab_paradigm',     alwaysShow: false },
+    { id: 'equivalents',  labelKey: 'dp_tab_equivalents',  alwaysShow: false },
+    { id: 'memory',       labelKey: 'dp_tab_memory',       alwaysShow: false },
+    { id: 'origins',      labelKey: 'dp_tab_origins',      alwaysShow: false },
+    { id: 'context',      labelKey: 'dp_tab_context',      alwaysShow: true  },
+    { id: 'related',      labelKey: 'dp_tab_related',      alwaysShow: false },
+    { id: 'practice',     labelKey: 'dp_tab_practice',     alwaysShow: true  },
   ]
 
   constructor() {
@@ -451,14 +455,23 @@ export class MnemosyneDetailPane extends HTMLElement {
       (Array.isArray(ld.confusable_forms) && ld.confusable_forms.length > 0)
     )
 
+    const hasForm       = (lesson.morphology_axes?.length > 0 || lesson.contrasts?.length > 0)
+    const hasParadigm   = lesson.paradigms?.length > 0
+    const hasEquivs     = lesson.equivalents?.length > 0
+    const hasMemory     = lesson.encountered_vocabulary?.length > 0
+
     // Depth controls which tabs are exposed.
     // subtle=0: Explanation only. learning=1: + Origins + Context. deep=2: all.
-    this.#visibleTabs = MnemosyneDetailPane.ALL_TABS.filter(t => {
-      if (t.id === 'explanation') return true
-      if (t.id === 'origins')     return depthIdx >= 1 && hasOrigins
-      if (t.id === 'context')     return depthIdx >= 1
-      if (t.id === 'related')     return depthIdx >= 2 && hasRelated
-      if (t.id === 'practice')    return depthIdx >= 1
+    this.#visibleTabs = MnemosyneDetailPane.ALL_TABS.filter(tab => {
+      if (tab.id === 'explanation')  return true
+      if (tab.id === 'form')         return hasForm
+      if (tab.id === 'paradigm')     return hasParadigm
+      if (tab.id === 'equivalents')  return hasEquivs
+      if (tab.id === 'memory')       return hasMemory
+      if (tab.id === 'origins')      return depthIdx >= 1 && hasOrigins
+      if (tab.id === 'context')      return depthIdx >= 1
+      if (tab.id === 'related')      return depthIdx >= 2 && hasRelated
+      if (tab.id === 'practice')     return depthIdx >= 1
       return false
     })
 
@@ -504,6 +517,10 @@ export class MnemosyneDetailPane extends HTMLElement {
 
         <div class="pane__body">
           ${this._htmlExplanationPanel(lesson, ld, matchedVariant, depthIdx)}
+          ${hasForm      ? this._htmlFormPanel(lesson, dir)       : ''}
+          ${hasParadigm  ? this._htmlParadigmPanel(lesson, dir)   : ''}
+          ${hasEquivs    ? this._htmlEquivalentsPanel(lesson)     : ''}
+          ${hasMemory    ? this._htmlMemoryPanel(lesson)          : ''}
           ${depthIdx >= 1 && hasOrigins  ? this._htmlOriginsPanel(ld, isNonCanonical, Boolean(ld.source_text), matchType) : ''}
           ${depthIdx >= 1               ? this._htmlContextPanel(sentenceText, language, dir, matchedVariant) : ''}
           ${depthIdx >= 2 && hasRelated  ? this._htmlRelatedPanel(ld, canonical, isNonCanonical) : ''}
@@ -615,6 +632,243 @@ export class MnemosyneDetailPane extends HTMLElement {
             <button class="pane__note-clear" type="button">${esc(t('dp_note_clear'))}</button>
           </div>
         </div>
+      </section>
+    `
+  }
+
+  // ── Form tab ──────────────────────────────────────────────────────────────────
+  // Renders morphology_axes (each as a labelled row) and contrasts ("don't confuse with").
+
+  _htmlFormPanel(lesson, dir) {
+    const axes      = Array.isArray(lesson.morphology_axes) ? lesson.morphology_axes : []
+    const contrasts = Array.isArray(lesson.contrasts)       ? lesson.contrasts       : []
+    const language  = this.#config?.language || ''
+    const langAttr  = language ? `lang="${esc(language)}"` : ''
+    const dirAttr   = dir && dir !== 'ltr' ? `dir="${esc(dir)}"` : ''
+
+    const axesHtml = axes.length ? /* html */`
+      <section class="pane__subsection" aria-labelledby="dp-form-axes-h">
+        <h3 class="pane__section-heading" id="dp-form-axes-h">${esc(tr('dp_form_axes_heading', 'Morphology'))}</h3>
+        <dl class="pane__axes-list">
+          ${axes.map(ax => /* html */`
+            <div class="pane__axis-row">
+              <dt class="pane__axis-label">${esc(ax.axis)}</dt>
+              <dd class="pane__axis-value">
+                <span ${langAttr} ${dirAttr}>${esc(ax.label || ax.value)}</span>
+                ${ax.gloss ? `<span class="pane__axis-gloss">${esc(ax.gloss)}</span>` : ''}
+              </dd>
+            </div>
+          `).join('')}
+        </dl>
+      </section>
+    ` : ''
+
+    const contrastsHtml = contrasts.length ? /* html */`
+      <section class="pane__subsection" aria-labelledby="dp-form-contrasts-h">
+        <h3 class="pane__section-heading" id="dp-form-contrasts-h">${esc(tr('dp_contrasts_heading', "Don't confuse with"))}</h3>
+        ${contrasts.map((c, ci) => /* html */`
+          <article class="pane__contrast-card" aria-labelledby="dp-contrast-${ci}-label">
+            <p class="pane__contrast-forms" id="dp-contrast-${ci}-label">
+              <span class="pane__contrast-form" ${langAttr} ${dirAttr}>${esc(c.form_a)}</span>
+              <span class="pane__contrast-sep" aria-hidden="true"> vs </span>
+              <span class="pane__contrast-form" ${langAttr} ${dirAttr}>${esc(c.form_b)}</span>
+            </p>
+            <p class="pane__contrast-note">${esc(c.note)}</p>
+            ${c.example_a ? `<p class="pane__contrast-example" ${langAttr} ${dirAttr}>${esc(c.example_a)}</p>` : ''}
+            ${c.example_b ? `<p class="pane__contrast-example" ${langAttr} ${dirAttr}>${esc(c.example_b)}</p>` : ''}
+          </article>
+        `).join('')}
+      </section>
+    ` : ''
+
+    return /* html */`
+      <section
+        id="dp-panel-form"
+        role="tabpanel"
+        aria-labelledby="dp-tab-form"
+        class="pane__panel"
+        hidden
+      >
+        ${axesHtml}
+        ${contrastsHtml}
+      </section>
+    `
+  }
+
+  // ── Paradigm tab ──────────────────────────────────────────────────────────────
+  // Renders paradigm tables; current form is visually highlighted.
+
+  _htmlParadigmPanel(lesson, dir) {
+    const paradigms = Array.isArray(lesson.paradigms) ? lesson.paradigms : []
+    const language  = this.#config?.language || ''
+    const langAttr  = language ? `lang="${esc(language)}"` : ''
+    const dirAttr   = dir && dir !== 'ltr' ? `dir="${esc(dir)}"` : ''
+
+    const tablesHtml = paradigms.map((p, pi) => {
+      const cells   = Array.isArray(p.cells) ? p.cells : []
+      const title   = p.title ? /* html */`<h3 class="pane__section-heading">${esc(p.title)}</h3>` : ''
+      const tableHtml = this.#paradigmTableHtml(p, cells, langAttr, dirAttr, pi)
+      return `${title}${tableHtml}`
+    }).join('')
+
+    return /* html */`
+      <section
+        id="dp-panel-paradigm"
+        role="tabpanel"
+        aria-labelledby="dp-tab-paradigm"
+        class="pane__panel"
+        hidden
+      >
+        ${tablesHtml || `<p class="pane__muted">${esc(tr('dp_paradigm_empty', 'No paradigm data available.'))}</p>`}
+      </section>
+    `
+  }
+
+  #paradigmTableHtml(paradigm, cells, langAttr, dirAttr, idx) {
+    if (!cells.length) return ''
+    const rowAxis = paradigm.row_axis
+    const colAxis = paradigm.col_axis
+
+    if (!rowAxis || !colAxis) {
+      // Flat grid — no row/col structure available.
+      const items = cells.map(cell => /* html */`
+        <div class="pane__paradigm-item${cell.is_highlighted ? ' pane__paradigm-item--current' : ''}">
+          <span class="pane__paradigm-form" ${langAttr} ${dirAttr}>${esc(cell.form)}</span>
+          ${cell.is_highlighted ? `<span class="pane__paradigm-current-label" aria-label="${esc(tr('dp_paradigm_current_form', 'current form'))}" aria-hidden="true">&#x25CF;</span>` : ''}
+          ${cell.gloss ? `<span class="pane__paradigm-gloss">${esc(cell.gloss)}</span>` : ''}
+        </div>
+      `).join('')
+      return `<div class="pane__paradigm-grid">${items}</div>`
+    }
+
+    // Build a 2D table.
+    const rowVals = []
+    const colVals = []
+    for (const cell of cells) {
+      const rv = cell.axes?.[rowAxis] || ''
+      const cv = cell.axes?.[colAxis] || ''
+      if (rv && !rowVals.includes(rv)) rowVals.push(rv)
+      if (cv && !colVals.includes(cv)) colVals.push(cv)
+    }
+
+    const cellLookup = new Map()
+    for (const cell of cells) {
+      const rv = cell.axes?.[rowAxis] || ''
+      const cv = cell.axes?.[colAxis] || ''
+      cellLookup.set(`${rv}|${cv}`, cell)
+    }
+
+    const colHeads = colVals.map(cv => `<th scope="col" class="pane__paradigm-colhead">${esc(cv)}</th>`).join('')
+    const rows = rowVals.map(rv => {
+      const tds = colVals.map(cv => {
+        const cell = cellLookup.get(`${rv}|${cv}`)
+        if (!cell) return `<td class="pane__paradigm-cell pane__paradigm-cell--empty" aria-label="${esc(tr('dp_paradigm_empty_cell', 'not applicable'))}">—</td>`
+        const highlightClass = cell.is_highlighted ? ' pane__paradigm-cell--current' : ''
+        const srLabel = cell.is_highlighted ? ` <span class="pane__sr-only">(${esc(tr('dp_paradigm_current_form', 'current form'))})</span>` : ''
+        const glossHtml = cell.gloss ? `<span class="pane__paradigm-gloss">${esc(cell.gloss)}</span>` : ''
+        return /* html */`
+          <td class="pane__paradigm-cell${highlightClass}">
+            <span class="pane__paradigm-form" ${langAttr} ${dirAttr}>${esc(cell.form)}</span>${srLabel}
+            ${glossHtml}
+          </td>
+        `
+      }).join('')
+      return `<tr><th scope="row" class="pane__paradigm-rowhead">${esc(rv)}</th>${tds}</tr>`
+    }).join('')
+
+    const tableLabel = paradigm.title || tr('dp_paradigm_table_label', 'Paradigm table')
+    return /* html */`
+      <div class="pane__paradigm-table-wrap" role="region" aria-label="${esc(tableLabel)}">
+        <table class="pane__paradigm-table">
+          <thead><tr><th scope="col"></th>${colHeads}</tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    `
+  }
+
+  // ── Equivalents tab ──────────────────────────────────────────────────────────
+  // Renders equivalent constructions (alternative ways to express the same meaning).
+
+  _htmlEquivalentsPanel(lesson) {
+    const equivalents = Array.isArray(lesson.equivalents) ? lesson.equivalents : []
+
+    const cards = equivalents.map((eq, ei) => {
+      const noteHtml     = eq.note     ? `<p class="pane__equiv-note">${esc(eq.note)}</p>` : ''
+      const registerHtml = eq.register ? /* html */`
+        <span class="pane__equiv-register pane__equiv-register--${esc(eq.register)}">${esc(eq.register)}</span>
+      ` : ''
+      const langCode    = eq.language_code || this.#config?.language || ''
+      const langAttr    = langCode ? `lang="${esc(langCode)}"` : ''
+      return /* html */`
+        <article class="pane__equiv-card" aria-labelledby="dp-equiv-${ei}-construction">
+          <p class="pane__equiv-construction" id="dp-equiv-${ei}-construction" ${langAttr}>${esc(eq.construction)}</p>
+          ${registerHtml}
+          ${noteHtml}
+        </article>
+      `
+    }).join('')
+
+    return /* html */`
+      <section
+        id="dp-panel-equivalents"
+        role="tabpanel"
+        aria-labelledby="dp-tab-equivalents"
+        class="pane__panel"
+        hidden
+      >
+        <section class="pane__subsection" aria-labelledby="dp-equiv-h">
+          <h3 class="pane__section-heading" id="dp-equiv-h">${esc(tr('dp_equivalents_heading', 'Equivalent constructions'))}</h3>
+          <p class="pane__muted">${esc(tr('dp_equivalents_desc', 'Alternative ways to express the same meaning or function.'))}</p>
+          ${cards}
+        </section>
+      </section>
+    `
+  }
+
+  // ── Memory tab ───────────────────────────────────────────────────────────────
+  // Renders encountered_vocabulary — context vocabulary with gloss summaries.
+
+  _htmlMemoryPanel(lesson) {
+    const vocab    = Array.isArray(lesson.encountered_vocabulary) ? lesson.encountered_vocabulary : []
+    const language = this.#config?.language || ''
+    const dir      = this.#config?.dir || 'ltr'
+    const langAttr = language ? `lang="${esc(language)}"` : ''
+    const dirAttr  = dir !== 'ltr' ? `dir="${esc(dir)}"` : ''
+
+    const cards = vocab.map(v => {
+      const formAndLemma = (v.lemma && v.lemma !== v.form)
+        ? `${esc(v.form)} <span class="pane__vocab-lemma">(${esc(v.lemma)})</span>`
+        : esc(v.form)
+      const freqBadge = v.is_high_frequency ? /* html */`
+        <span class="pane__vocab-freq" title="${esc(tr('dp_vocab_high_freq_title', 'High-frequency word'))}" aria-label="${esc(tr('dp_vocab_high_freq_aria', 'high frequency'))}">&#x2605;</span>
+      ` : ''
+      const posHtml  = v.pos  ? `<span class="pane__vocab-pos">${esc(v.pos)}</span>` : ''
+      const glossHtml = v.gloss ? `<p class="pane__vocab-gloss">${esc(v.gloss)}</p>` : ''
+      return /* html */`
+        <article class="pane__vocab-card">
+          <div class="pane__vocab-head">
+            <span class="pane__vocab-form" ${langAttr} ${dirAttr}>${formAndLemma}${freqBadge}</span>
+            ${posHtml}
+          </div>
+          ${glossHtml}
+        </article>
+      `
+    }).join('')
+
+    return /* html */`
+      <section
+        id="dp-panel-memory"
+        role="tabpanel"
+        aria-labelledby="dp-tab-memory"
+        class="pane__panel"
+        hidden
+      >
+        <section class="pane__subsection" aria-labelledby="dp-memory-h">
+          <h3 class="pane__section-heading" id="dp-memory-h">${esc(tr('dp_memory_heading', 'Context vocabulary'))}</h3>
+          <p class="pane__muted">${esc(tr('dp_memory_desc', 'Vocabulary encountered in the context of this lesson.'))}</p>
+          ${cards}
+        </section>
       </section>
     `
   }
@@ -2105,6 +2359,300 @@ export class MnemosyneDetailPane extends HTMLElement {
       }
       @media (prefers-reduced-motion: reduce) {
         .pane__note-save, .pane__note-clear { transition: none; }
+      }
+
+      /* ── Screen-reader-only utility ─────────────────────────────────────────── */
+      .pane__sr-only {
+        position: absolute;
+        inline-size: 1px; block-size: 1px;
+        padding: 0; margin: -1px;
+        overflow: hidden; clip-path: inset(50%);
+        white-space: nowrap; border: 0;
+      }
+
+      /* ── Morphology axes (Form tab) ──────────────────────────────────────────── */
+      .pane__axes-list {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        border-block-start: 1px solid var(--border);
+      }
+
+      .pane__axis-row {
+        display: grid;
+        grid-template-columns: 8rem 1fr;
+        gap: 0.4rem;
+        align-items: baseline;
+        padding-block: 0.4rem;
+        border-block-end: 1px solid var(--border);
+      }
+
+      .pane__axis-label {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--muted);
+        line-height: 1.4;
+      }
+
+      .pane__axis-value {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+      }
+
+      .pane__axis-gloss {
+        font-size: 0.75rem;
+        color: var(--muted);
+        font-style: italic;
+        line-height: 1.4;
+      }
+
+      /* ── Contrast cards (Form tab) ───────────────────────────────────────────── */
+      .pane__contrast-card {
+        border: 1px solid color-mix(in oklch, oklch(0.72 0.18 55) 30%, Canvas);
+        background: color-mix(in oklch, oklch(0.72 0.18 55) 6%, Canvas);
+        border-radius: 0.5rem;
+        padding: 0.65rem 0.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .pane__contrast-forms {
+        margin: 0;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        line-height: 1.4;
+        overflow-wrap: break-word;
+      }
+
+      .pane__contrast-sep {
+        font-weight: 400;
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin-inline: 0.25rem;
+      }
+
+      .pane__contrast-note {
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.55;
+        color: var(--text);
+      }
+
+      .pane__contrast-example {
+        margin: 0;
+        font-size: 0.8125rem;
+        line-height: 1.6;
+        color: var(--muted);
+        font-style: italic;
+        overflow-wrap: break-word;
+      }
+
+      /* ── Paradigm table (Paradigm tab) ───────────────────────────────────────── */
+      .pane__paradigm-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 0.4rem;
+        border: 1px solid var(--border);
+      }
+
+      .pane__paradigm-table {
+        border-collapse: collapse;
+        inline-size: 100%;
+        font-size: 0.875rem;
+        line-height: 1.5;
+      }
+
+      .pane__paradigm-table th,
+      .pane__paradigm-table td {
+        padding: 0.4rem 0.6rem;
+        border: 1px solid var(--border);
+        vertical-align: top;
+      }
+
+      .pane__paradigm-colhead,
+      .pane__paradigm-rowhead {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+        background: color-mix(in srgb, CanvasText 3%, Canvas);
+        white-space: nowrap;
+      }
+
+      .pane__paradigm-cell {
+        text-align: center;
+      }
+
+      .pane__paradigm-cell--current {
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 16%, Canvas);
+        font-weight: 600;
+        outline: 2px solid color-mix(in oklch, var(--detail-accent, ${ref}) 60%, Canvas);
+        outline-offset: -2px;
+      }
+
+      .pane__paradigm-cell--empty {
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .pane__paradigm-form {
+        display: block;
+        overflow-wrap: break-word;
+      }
+
+      .pane__paradigm-gloss {
+        display: block;
+        font-size: 0.7rem;
+        color: var(--muted);
+        font-style: italic;
+        margin-block-start: 0.1rem;
+      }
+
+      .pane__paradigm-current-label {
+        font-size: 0.6rem;
+        color: color-mix(in oklch, var(--detail-accent, ${ref}) 75%, CanvasText);
+        margin-inline-start: 0.2em;
+        vertical-align: middle;
+      }
+
+      .pane__paradigm-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+        gap: 0.4rem;
+      }
+
+      .pane__paradigm-item {
+        border: 1px solid var(--border);
+        border-radius: 0.3rem;
+        padding: 0.35rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        text-align: center;
+      }
+
+      .pane__paradigm-item--current {
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 16%, Canvas);
+        border-color: color-mix(in oklch, var(--detail-accent, ${ref}) 60%, Canvas);
+        font-weight: 600;
+      }
+
+      /* ── Equivalent constructions (Equivalents tab) ──────────────────────────── */
+      .pane__equiv-card {
+        border: 1px solid var(--border);
+        border-inline-start: 3px solid color-mix(in oklch, var(--detail-accent, ${ref}) 60%, Canvas);
+        border-radius: 0 0.4rem 0.4rem 0;
+        padding: 0.55rem 0.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 4%, Canvas);
+      }
+
+      .pane__equiv-construction {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.4;
+        overflow-wrap: break-word;
+      }
+
+      .pane__equiv-note {
+        margin: 0;
+        font-size: 0.8125rem;
+        line-height: 1.55;
+        color: var(--muted);
+      }
+
+      .pane__equiv-register {
+        display: inline-flex;
+        align-items: center;
+        font-size: 0.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        border-radius: 999px;
+        padding: 0.1rem 0.4rem;
+        border: 1px solid;
+        align-self: flex-start;
+      }
+
+      .pane__equiv-register--formal {
+        background: color-mix(in oklch, oklch(0.55 0.18 240) 10%, Canvas);
+        color: color-mix(in oklch, oklch(0.55 0.18 240) 80%, CanvasText);
+        border-color: color-mix(in oklch, oklch(0.55 0.18 240) 30%, Canvas);
+      }
+      .pane__equiv-register--informal,
+      .pane__equiv-register--colloquial {
+        background: color-mix(in oklch, oklch(0.72 0.18 55) 10%, Canvas);
+        color: color-mix(in oklch, oklch(0.72 0.18 55) 80%, CanvasText);
+        border-color: color-mix(in oklch, oklch(0.72 0.18 55) 30%, Canvas);
+      }
+
+      /* ── Context vocabulary (Memory tab) ─────────────────────────────────────── */
+      .pane__vocab-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        padding-block: 0.4rem;
+        border-block-end: 1px solid var(--border);
+      }
+      .pane__vocab-card:last-child { border-block-end: none; }
+
+      .pane__vocab-head {
+        display: flex;
+        align-items: baseline;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+      }
+
+      .pane__vocab-form {
+        font-size: 0.9375rem;
+        font-weight: 600;
+        line-height: 1.4;
+        overflow-wrap: break-word;
+      }
+
+      .pane__vocab-lemma {
+        font-size: 0.8125rem;
+        font-weight: 400;
+        color: var(--muted);
+      }
+
+      .pane__vocab-freq {
+        font-size: 0.7rem;
+        color: color-mix(in oklch, oklch(0.72 0.18 55) 80%, CanvasText);
+        margin-inline-start: 0.1em;
+        vertical-align: text-top;
+      }
+
+      .pane__vocab-pos {
+        font-size: 0.625rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: color-mix(in oklch, var(--detail-accent, ${ref}) 80%, CanvasText);
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 10%, Canvas);
+        border: 1px solid color-mix(in oklch, var(--detail-accent, ${ref}) 25%, Canvas);
+        border-radius: 999px;
+        padding: 0.1rem 0.35rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .pane__vocab-gloss {
+        margin: 0;
+        font-size: 0.8125rem;
+        line-height: 1.55;
+        color: var(--muted);
       }
     `
   }
