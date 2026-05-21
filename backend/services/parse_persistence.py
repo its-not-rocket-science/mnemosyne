@@ -27,6 +27,7 @@ from backend.models import (
     SourceChunkRow,
     SourceDocumentRow,
     SourceProgressionRow,
+    TermProgressRow,
     UserKnowledgeRow,
 )
 from backend.parsing.canonical import canonical_object_id
@@ -38,6 +39,9 @@ from backend.schemas.parse import (
 from backend.srs.knowledge import DEFAULT_USER_ID
 
 logger = logging.getLogger(__name__)
+
+# Learnable types where encounter tracking is meaningful at the surface-form level.
+_VOCAB_LIKE_TYPES: frozenset[str] = frozenset({"vocabulary", "conjugation", "inflection"})
 
 
 async def create_source_document_row(
@@ -169,6 +173,51 @@ async def persist_chunk(
                     last_seen=now,
                     total_reviews=0,
                     due_at=now,
+                ))
+
+    # Upsert TermProgressRow for vocabulary-like objects.
+    vocab_info: dict[str, dict] = {}  # term → {lemma, obj_ids}
+    for obj_id, (canonical_form, cand) in uuid_to_candidate.items():
+        if cand.type not in _VOCAB_LIKE_TYPES:
+            continue
+        term = cand.surface_form or cand.label
+        lemma = cand.lesson_data.get("lemma") or canonical_form
+        if term not in vocab_info:
+            vocab_info[term] = {"lemma": lemma, "obj_ids": [obj_id]}
+        elif obj_id not in vocab_info[term]["obj_ids"]:
+            vocab_info[term]["obj_ids"].append(obj_id)
+
+    if vocab_info:
+        tp_result = await db.execute(
+            select(TermProgressRow).where(
+                TermProgressRow.user_id == user_id,
+                TermProgressRow.language == language,
+                TermProgressRow.term.in_(list(vocab_info.keys())),
+            )
+        )
+        existing_tp: dict[str, TermProgressRow] = {
+            row.term: row for row in tp_result.scalars()
+        }
+        for term, info in vocab_info.items():
+            if term in existing_tp:
+                row = existing_tp[term]
+                row.exposure_count = (row.exposure_count or 0) + 1
+                row.last_seen = now
+                current_ids: list[str] = list(row.source_lesson_ids or [])
+                for oid in info["obj_ids"]:
+                    if oid not in current_ids:
+                        current_ids.append(oid)
+                row.source_lesson_ids = current_ids
+            else:
+                db.add(TermProgressRow(
+                    user_id=user_id,
+                    language=language,
+                    term=term,
+                    lemma=info["lemma"],
+                    exposure_count=1,
+                    first_seen=now,
+                    last_seen=now,
+                    source_lesson_ids=list(info["obj_ids"]),
                 ))
 
     # Sentence–object join rows.
