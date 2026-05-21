@@ -488,6 +488,7 @@ const SAMPLE_TEXTS = {
   el: 'Την άνοιξη, τα λιβάδια γεμίζουν με αγριολούλουδα κάθε χρώματος. Οι χωρικοί βγαίνουν στα χωράφια πρωί πρωί και εργάζονται μέχρι το ηλιοβασίλεμα, χαίρονται τη φύση γύρω τους.',
   es: 'El sol brillaba sobre las montañas mientras los viajeros descansaban junto al río. El agua fría refrescaba sus pies cansados después de un largo día de camino.',
   fr: 'Le soleil se couchait sur la ville lorsque Marie aperçut un inconnu assis sur le banc du jardin. Elle hésita un moment avant de s\'approcher et de lui adresser la parole.',
+  grc: 'Οὕτως γὰρ ἠγάπησεν ὁ θεὸς τὸν κόσμον, ὥστε τὸν υἱὸν τὸν μονογενῆ ἔδωκεν, ἵνα πᾶς ὁ πιστεύων εἰς αὐτὸν μὴ ἀπόληται ἀλλ᾽ ἔχῃ ζωὴν αἰώνιον. οὐ γὰρ ἀπέστειλεν ὁ θεὸς τὸν υἱὸν εἰς τὸν κόσμον ἵνα κρίνῃ τὸν κόσμον, ἀλλ᾽ ἵνα σωθῇ ὁ κόσμος δι᾽ αὐτοῦ.',
   he: 'בבוקר השקט, עלי הסתכל מהחלון על הרחוב הרטוב מגשם הלילה. הוא אהב את השקט הזה שלפני שהעיר מתעוררת, את הרגע הקצר שבו הכל נראה טהור ואפשרי.',
   it: 'Quella mattina d\'autunno, le foglie cadevano lentamente dagli alberi del parco. Marco sedeva sulla panchina preferita e guardava i bambini giocare, pensando ai tempi in cui anche lui correva su quel prato.',
   ja: '春の朝、桜の花びらが風に舞っていた。公園のベンチに座った老人は、静かに目を閉じ、長い人生の思い出に浸っていた。',
