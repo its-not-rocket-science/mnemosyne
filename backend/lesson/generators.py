@@ -61,12 +61,17 @@ from backend.lesson.practice import build_practice_activities
 from backend.lesson.providers import LessonProviders
 from backend.schemas.language import LessonMode
 from backend.schemas.lesson import (
+    ContrastNote,
     Drill,
+    EquivalentConstruction,
     FillBlankDrill,
     LessonField,
     LessonResponse,
     LessonTemplate,
+    MorphologyAxis,
+    MorphologyParadigm,
     MultipleChoiceDrill,
+    ParadigmCell,
     RecognitionDrill,
     ShadowingDrill,
 )
@@ -102,8 +107,18 @@ _CASE_DISPLAY: dict[str, str] = {
     "Acc": "accusative",
     "Dat": "dative",
     "Gen": "genitive",
+    "Abl": "ablative",
+    "Voc": "vocative",
+    "Ins": "instrumental",
+    "Loc": "locative",
 }
 _CASE_OPTIONS: list[str] = ["nominative", "accusative", "dative", "genitive"]
+
+# Extended case pool for declension systems with more than 4 cases (Latin, Russian, Greek).
+_CASE_OPTIONS_EXTENDED: list[str] = [
+    "nominative", "accusative", "dative", "genitive",
+    "ablative", "vocative", "instrumental", "locative",
+]
 
 _MOOD_OPTIONS: list[str] = [
     "indicative", "subjunctive", "imperative",
@@ -119,6 +134,194 @@ _NUMBER_LABELS: dict[str, str] = {
     "Sing": "singular",
     "Plur": "plural",
 }
+
+_ASPECT_OPTIONS: list[str] = ["imperfective", "perfective"]
+
+_GENDER_DISPLAY: dict[str, str] = {
+    "Masc": "masculine",
+    "Fem":  "feminine",
+    "Neut": "neuter",
+}
+
+
+# ── Morphology data extractors ────────────────────────────────────────────────
+
+def _morphology_axes_from_lesson_data(ld: dict) -> list[MorphologyAxis]:
+    """Extract MorphologyAxis list from *ld*.
+
+    Tries ``ld["morphology"]["axes"]`` first; falls back to reading the flat
+    tense/mood/person/number/gender/case/aspect/voice/polarity keys.
+    Returns an empty list when no morphological data is present.
+    """
+    morph = ld.get("morphology")
+    if isinstance(morph, dict):
+        raw_axes = morph.get("axes")
+        if isinstance(raw_axes, list):
+            result: list[MorphologyAxis] = []
+            for a in raw_axes:
+                if isinstance(a, dict) and a.get("axis") and a.get("value"):
+                    result.append(MorphologyAxis(
+                        axis=str(a["axis"]),
+                        value=str(a["value"]),
+                        label=a.get("label"),
+                        gloss=a.get("gloss"),
+                    ))
+            if result:
+                return result
+
+    # Flat fallback — normalise spaCy-style tag strings to canonical values.
+    _norm: dict[str, dict[str, str]] = {
+        "person": _PERSON_LABELS,
+        "number": _NUMBER_LABELS,
+        "gender": _GENDER_DISPLAY,
+        "case":   _CASE_DISPLAY,
+        "aspect": {"Imp": "imperfective", "Perf": "perfective"},
+    }
+    axes: list[MorphologyAxis] = []
+    for axis_key in ("tense", "aspect", "mood", "person", "number", "gender", "case", "voice", "polarity"):
+        raw = ld.get(axis_key)
+        if not raw or str(raw) == "unknown":
+            continue
+        val_str = str(raw)
+        normalized = _norm.get(axis_key, {}).get(val_str, val_str.lower())
+        axes.append(MorphologyAxis(axis=axis_key, value=normalized))
+    # Russian past tense reports gender instead of person under "person_or_gender"
+    if "person_or_gender" in ld and not any(ax.axis == "person" for ax in axes):
+        pg = str(ld["person_or_gender"])
+        norm_pg = {**_GENDER_DISPLAY, "1": "first", "2": "second", "3": "third"}.get(pg, pg.lower())
+        axes.append(MorphologyAxis(axis="person", value=norm_pg))
+    return axes
+
+
+def _paradigms_from_lesson_data(ld: dict) -> list[MorphologyParadigm]:
+    """Extract MorphologyParadigm list from *ld*.
+
+    Tries ``ld["morphology"]["paradigms"]`` first; falls back to
+    ``ld["paradigm"]`` (a flat list of cell dicts).
+    """
+    morph = ld.get("morphology")
+    if isinstance(morph, dict):
+        raw_paradigms = morph.get("paradigms")
+        if isinstance(raw_paradigms, list):
+            result: list[MorphologyParadigm] = []
+            for p in raw_paradigms:
+                if not isinstance(p, dict):
+                    continue
+                cells: list[ParadigmCell] = []
+                for c in (p.get("cells") or []):
+                    if isinstance(c, dict) and c.get("form"):
+                        cells.append(ParadigmCell(
+                            form=str(c["form"]),
+                            axes={k: str(v) for k, v in c.get("axes", {}).items()},
+                            is_highlighted=bool(c.get("is_highlighted", False)),
+                            gloss=c.get("gloss"),
+                        ))
+                result.append(MorphologyParadigm(
+                    title=p.get("title"),
+                    row_axis=p.get("row_axis"),
+                    col_axis=p.get("col_axis"),
+                    cells=cells,
+                ))
+            if result:
+                return result
+
+    # Flat "paradigm" key (list of cell dicts with mixed keys)
+    raw = ld.get("paradigm")
+    if isinstance(raw, list):
+        cells = []
+        for c in raw:
+            if isinstance(c, dict) and c.get("form"):
+                axes_dict = {
+                    k: str(v) for k, v in c.items()
+                    if k not in ("form", "is_highlighted", "gloss") and isinstance(v, str)
+                }
+                cells.append(ParadigmCell(
+                    form=str(c["form"]),
+                    axes=axes_dict,
+                    is_highlighted=bool(c.get("is_highlighted", False)),
+                    gloss=c.get("gloss"),
+                ))
+        if cells:
+            return [MorphologyParadigm(cells=cells)]
+    return []
+
+
+def _equivalents_from_lesson_data(ld: dict) -> list[EquivalentConstruction]:
+    """Extract EquivalentConstruction list from *ld*.
+
+    Tries ``ld["morphology"]["equivalents"]`` first; falls back to
+    ``ld["equivalents"]`` (list of str or dict).
+    """
+    morph = ld.get("morphology")
+    if isinstance(morph, dict):
+        raw = morph.get("equivalents")
+        if isinstance(raw, list):
+            result: list[EquivalentConstruction] = []
+            for e in raw:
+                if isinstance(e, dict) and e.get("construction"):
+                    result.append(EquivalentConstruction(
+                        construction=str(e["construction"]),
+                        language_code=e.get("language_code"),
+                        note=e.get("note"),
+                        register=e.get("register"),
+                    ))
+            if result:
+                return result
+
+    raw = ld.get("equivalents")
+    if not isinstance(raw, list):
+        return []
+    result = []
+    for e in raw:
+        if isinstance(e, str) and e:
+            result.append(EquivalentConstruction(construction=e))
+        elif isinstance(e, dict) and e.get("construction"):
+            result.append(EquivalentConstruction(
+                construction=str(e["construction"]),
+                language_code=e.get("language_code"),
+                note=e.get("note"),
+                register=e.get("register"),
+            ))
+    return result
+
+
+def _contrast_notes_from_lesson_data(ld: dict) -> list[ContrastNote]:
+    """Extract ContrastNote list from *ld*.
+
+    Tries ``ld["morphology"]["contrasts"]`` first; falls back to
+    ``ld["contrasts"]`` (list of dicts with form_a/form_b/note keys).
+    """
+    morph = ld.get("morphology")
+    if isinstance(morph, dict):
+        raw = morph.get("contrasts")
+        if isinstance(raw, list):
+            result: list[ContrastNote] = []
+            for c in raw:
+                if isinstance(c, dict) and c.get("form_a") and c.get("form_b") and c.get("note"):
+                    result.append(ContrastNote(
+                        form_a=str(c["form_a"]),
+                        form_b=str(c["form_b"]),
+                        note=str(c["note"]),
+                        example_a=c.get("example_a"),
+                        example_b=c.get("example_b"),
+                    ))
+            if result:
+                return result
+
+    raw = ld.get("contrasts")
+    if not isinstance(raw, list):
+        return []
+    result = []
+    for c in raw:
+        if isinstance(c, dict) and c.get("form_a") and c.get("form_b") and c.get("note"):
+            result.append(ContrastNote(
+                form_a=str(c["form_a"]),
+                form_b=str(c["form_b"]),
+                note=str(c["note"]),
+                example_a=c.get("example_a"),
+                example_b=c.get("example_b"),
+            ))
+    return result
 
 
 # ── Build bundle ──────────────────────────────────────────────────────────────
@@ -320,6 +523,12 @@ def _build_conjugation(b: _B) -> LessonResponse:
     tense_loc  = l10n.gram_label("tense",  tense,        l1)
     mood_loc   = l10n.gram_label("mood",   mood,         l1)
 
+    # \u2500\u2500 Morphology extension data \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+    axes        = _morphology_axes_from_lesson_data(b.lesson_data)
+    paradigms   = _paradigms_from_lesson_data(b.lesson_data)
+    equivalents = _equivalents_from_lesson_data(b.lesson_data)
+    contrasts   = _contrast_notes_from_lesson_data(b.lesson_data)
+
     explanation = fmt.conjugation_explanation(
         surface, person_label, number_label, tense, mood, lemma, b.ctx
     )
@@ -336,6 +545,19 @@ def _build_conjugation(b: _B) -> LessonResponse:
         fields.append(LessonField(label="Person", value=person_loc))
     if number != "unknown":
         fields.append(LessonField(label="Number", value=number_loc))
+
+    # Aspect (Russian/Slavic languages)
+    aspect_raw = b.lesson_data.get("aspect")
+    if aspect_raw and str(aspect_raw) != "unknown":
+        aspect_en = {"Imp": "imperfective", "Perf": "perfective"}.get(
+            str(aspect_raw), str(aspect_raw).lower()
+        )
+        aspect_loc = l10n.gram_label("aspect", aspect_en, l1)
+        fields.append(LessonField(label="Aspect", value=aspect_loc))
+    else:
+        aspect_en = None
+        aspect_loc = None
+
     if construction := b.lesson_data.get("construction"):
         fields.append(LessonField(label="Construction", value=construction))
     if b.lesson_data.get("is_reflexive"):
@@ -351,12 +573,14 @@ def _build_conjugation(b: _B) -> LessonResponse:
 
     drills: list[Drill] = [ShadowingDrill(type="shadowing", text=surface)]
 
+    # Lemma recall
     drills.append(FillBlankDrill(
         type="fill_blank",
         prompt=l10n.t("drill.verb_form_blank", l1, word=surface),
         answer=lemma,
     ))
 
+    # Tense MC
     if tense != "unknown":
         tense_pool_en = list(b.ctx.tense_pool) if b.ctx.tense_pool else _TENSE_OPTIONS
         tense_pool_loc = [l10n.gram_label("tense", v, l1) for v in tense_pool_en]
@@ -369,6 +593,7 @@ def _build_conjugation(b: _B) -> LessonResponse:
         if mc:
             drills.append(mc)
 
+    # Mood MC
     if mood != "unknown":
         mood_pool_en = list(b.ctx.mood_pool) if b.ctx.mood_pool else _MOOD_OPTIONS
         mood_pool_loc = [l10n.gram_label("mood", v, l1) for v in mood_pool_en]
@@ -381,12 +606,53 @@ def _build_conjugation(b: _B) -> LessonResponse:
         if mc_mood:
             drills.append(mc_mood)
 
+    # Reflexive recognition
     if b.lesson_data.get("is_reflexive") is not None:
         drills.append(RecognitionDrill(
             type="recognition",
             statement=l10n.t("drill.reflexive_stmt", l1, word=surface),
             correct=bool(b.lesson_data["is_reflexive"]),
         ))
+
+    # \u2500\u2500 New morphology drills \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+
+    # Aspect MC (Russian/Slavic)
+    if aspect_en:
+        asp_pool_loc = [l10n.gram_label("aspect", v, l1) for v in _ASPECT_OPTIONS]
+        mc_asp = _make_mc_drill(
+            seed=seed + "aspect",
+            prompt=l10n.t("drill.what_aspect", l1, word=surface),
+            correct=aspect_loc,
+            pool=asp_pool_loc,
+            n_wrong=1,
+        )
+        if mc_asp:
+            drills.append(mc_asp)
+
+    # Form recall \u2014 learner produces the surface form given its feature description
+    recall_parts: list[str] = []
+    if person_label not in ("unknown", ""):
+        recall_parts.append(person_loc)
+    if number_label not in ("unknown", ""):
+        recall_parts.append(number_loc)
+    if tense not in ("unknown", ""):
+        recall_parts.append(tense_loc)
+    if mood not in ("unknown", ""):
+        recall_parts.append(mood_loc)
+    d_recall = _make_form_recall_drill(seed, surface, lemma, " ".join(recall_parts), l1)
+    if d_recall:
+        drills.append(d_recall)
+
+    # Paradigm-cell drills (at most 2 non-highlighted cells)
+    drills.extend(_make_paradigm_drills(seed, paradigms, lemma, l1, limit=2))
+
+    # Equivalent construction choice
+    eq_drill = _make_equivalent_drill(seed, equivalents, surface, l1)
+    if eq_drill:
+        drills.append(eq_drill)
+
+    # Contrastive recognition (first contrast only)
+    drills.extend(_make_contrast_drills(contrasts[:1]))
 
     return LessonResponse(
         id=b.object_id,
@@ -396,6 +662,10 @@ def _build_conjugation(b: _B) -> LessonResponse:
         fields=fields,
         examples=[surface],
         drills=drills,
+        morphology_axes=axes,
+        paradigms=paradigms,
+        equivalents=equivalents,
+        contrasts=contrasts,
     )
 
 
@@ -438,6 +708,8 @@ def _build_agreement(b: _B) -> LessonResponse:
     if number_match is not None:
         fields.append(LessonField(label="Number match", value="yes" if number_match else "no"))
 
+    axes = _morphology_axes_from_lesson_data(b.lesson_data)
+
     drills: list[Drill] = [ShadowingDrill(type="shadowing", text=b.display_label)]
 
     if gender_match is True:
@@ -447,7 +719,7 @@ def _build_agreement(b: _B) -> LessonResponse:
             correct=True,
         ))
 
-    gender_options_en = ["masculine", "feminine", "unknown"]
+    gender_options_en = ["masculine", "feminine", "neuter", "unknown"]
     gender_options_loc = [l10n.gram_label("gender", v, l1) for v in gender_options_en]
     mc = _make_mc_drill(
         seed=seed,
@@ -466,6 +738,7 @@ def _build_agreement(b: _B) -> LessonResponse:
         fields=fields,
         examples=[b.display_label],
         drills=drills,
+        morphology_axes=axes,
     )
 
 
@@ -951,6 +1224,9 @@ def _build_case_agreement(b: _B) -> LessonResponse:
     if number_match is not None:
         fields.append(LessonField(label="Number match", value="yes" if number_match else "no"))
 
+    axes      = _morphology_axes_from_lesson_data(b.lesson_data)
+    contrasts = _contrast_notes_from_lesson_data(b.lesson_data)
+
     drills: list[Drill] = [ShadowingDrill(type="shadowing", text=b.display_label)]
 
     if case_display != "unknown":
@@ -976,6 +1252,8 @@ def _build_case_agreement(b: _B) -> LessonResponse:
         if mc_g:
             drills.append(mc_g)
 
+    drills.extend(_make_contrast_drills(contrasts[:1]))
+
     return LessonResponse(
         id=b.object_id,
         type="case_agreement",  # type: ignore[arg-type]  # "case_agreement" ∈ LearnableType; same mypy narrowing limitation
@@ -984,6 +1262,132 @@ def _build_case_agreement(b: _B) -> LessonResponse:
         fields=fields,
         examples=[b.display_label],
         drills=drills,
+        morphology_axes=axes,
+        contrasts=contrasts,
+    )
+
+
+def _build_inflection(b: _B) -> LessonResponse:
+    """Lesson for a declined nominal (noun/adjective/pronoun) form.
+
+    Expected lesson_data keys:
+      lemma (req), surface (req), case, gender, number, pos,
+      declension_class (opt), translation (opt), voice (opt),
+      tense (opt — for participles), confidence_note (opt).
+      morphology (opt) — rich extension sub-object.
+    """
+    lemma   = b.lesson_data.get("lemma") or b.canonical_form
+    surface = b.lesson_data.get("surface") or b.display_label
+    case    = b.lesson_data.get("case") or "unknown"
+    gender  = b.lesson_data.get("gender") or "unknown"
+    number  = b.lesson_data.get("number") or "unknown"
+    pos_raw = b.lesson_data.get("pos") or "NOUN"
+    pos     = _POS_DISPLAY.get(pos_raw, pos_raw.lower())
+    seed    = b.canonical_form
+    l1      = b.ctx.l1_language
+
+    case_display   = _CASE_DISPLAY.get(str(case),   str(case).lower())
+    gender_display = _GENDER_DISPLAY.get(str(gender), str(gender).lower())
+    number_display = _NUMBER_LABELS.get(str(number),  str(number).lower())
+
+    case_loc   = l10n.gram_label("case",   case_display,   l1)
+    gender_loc = l10n.gram_label("gender", gender_display, l1)
+    number_loc = l10n.gram_label("number", number_display, l1)
+
+    # ── Morphology extension data ─────────────────────────────────────────────
+    axes        = _morphology_axes_from_lesson_data(b.lesson_data)
+    paradigms   = _paradigms_from_lesson_data(b.lesson_data)
+    equivalents = _equivalents_from_lesson_data(b.lesson_data)
+    contrasts   = _contrast_notes_from_lesson_data(b.lesson_data)
+
+    explanation = fmt.inflection_explanation(
+        surface, pos, case_display, gender_display, number_display, lemma, b.ctx
+    )
+
+    fields: list[LessonField] = [
+        LessonField(label="Lemma", value=lemma),
+        LessonField(label="Surface form", value=surface),
+        LessonField(label="Part of speech", value=pos),
+    ]
+    if case_display not in ("unknown", ""):
+        fields.append(LessonField(label="Case", value=case_loc))
+    if gender_display not in ("unknown", ""):
+        fields.append(LessonField(label="Gender", value=gender_loc))
+    if number_display not in ("unknown", ""):
+        fields.append(LessonField(label="Number", value=number_loc))
+    if decl := b.lesson_data.get("declension_class"):
+        fields.append(LessonField(label="Declension", value=str(decl)))
+    if translation := b.lesson_data.get("translation"):
+        fields.append(LessonField(label="Translation", value=str(translation)))
+    if note := b.lesson_data.get("confidence_note"):
+        fields.append(LessonField(label="Note", value=note))
+
+    drills: list[Drill] = [ShadowingDrill(type="shadowing", text=surface)]
+
+    # Lemma recall
+    if surface.lower() != lemma.lower():
+        drills.append(FillBlankDrill(
+            type="fill_blank",
+            prompt=l10n.t("drill.lemma_blank", l1, word=surface),
+            answer=lemma,
+        ))
+
+    # Case MC — use extended pool for rich declension systems (Latin, Russian, …)
+    if case_display not in ("unknown", ""):
+        case_pool_loc = [l10n.gram_label("case", v, l1) for v in _CASE_OPTIONS_EXTENDED]
+        mc_case = _make_mc_drill(
+            seed=seed,
+            prompt=l10n.t("drill.what_case", l1, mod=surface, noun=lemma),
+            correct=case_loc,
+            pool=case_pool_loc,
+        )
+        if mc_case:
+            drills.append(mc_case)
+
+    # Gender MC
+    if gender_display not in ("unknown", ""):
+        g_options_en = ["masculine", "feminine", "neuter"] if gender_display == "neuter" \
+                       else ["masculine", "feminine"]
+        g_options_loc = [l10n.gram_label("gender", v, l1) for v in g_options_en]
+        mc_g = _make_mc_drill(
+            seed=seed + "gender",
+            prompt=l10n.t("drill.what_gender", l1, word=lemma),
+            correct=gender_loc,
+            pool=g_options_loc,
+        )
+        if mc_g:
+            drills.append(mc_g)
+
+    # Form recall
+    recall_parts: list[str] = []
+    if case_display not in ("unknown", ""):
+        recall_parts.append(case_loc)
+    if number_display not in ("unknown", ""):
+        recall_parts.append(number_loc)
+    if gender_display not in ("unknown", ""):
+        recall_parts.append(gender_loc)
+    d_recall = _make_form_recall_drill(seed, surface, lemma, " ".join(recall_parts), l1)
+    if d_recall:
+        drills.append(d_recall)
+
+    # Paradigm-cell drills (at most 2 non-highlighted cells)
+    drills.extend(_make_paradigm_drills(seed, paradigms, lemma, l1, limit=2))
+
+    # Contrastive recognition
+    drills.extend(_make_contrast_drills(contrasts[:1]))
+
+    return LessonResponse(
+        id=b.object_id,
+        type="inflection",  # type: ignore[arg-type]
+        title=l10n.t("drill.inflection_title", l1, word=surface),
+        explanation=explanation,
+        fields=fields,
+        examples=[surface],
+        drills=drills,
+        morphology_axes=axes,
+        paradigms=paradigms,
+        equivalents=equivalents,
+        contrasts=contrasts,
     )
 
 
@@ -1033,6 +1437,7 @@ _MORPHOLOGY_BUILDERS: dict[str, Callable[[_B], LessonResponse]] = {
     "vocabulary":  _build_vocabulary,
     "conjugation": _build_conjugation,
     "agreement":   _build_agreement,
+    "inflection":  _build_inflection,
 }
 
 
@@ -1071,3 +1476,104 @@ def _make_mc_drill(
         options=all_options,
         answer_index=all_options.index(correct),
     )
+
+
+# ── Morphology drill factories ────────────────────────────────────────────────
+
+def _make_form_recall_drill(
+    seed: str,
+    surface: str,
+    lemma: str,
+    features_str: str,
+    l1: str,
+) -> FillBlankDrill | None:
+    """Fill-blank asking the learner to produce *surface* given a features description.
+
+    Returns None when *features_str* is empty (nothing meaningful to describe).
+    """
+    if not features_str:
+        return None
+    prompt = l10n.t(
+        "drill.form_recall", l1,
+        features=features_str,
+        lemma=f"“{lemma}”",
+    )
+    if not prompt:
+        return None
+    return FillBlankDrill(type="fill_blank", prompt=prompt, answer=surface)
+
+
+def _make_paradigm_drills(
+    seed: str,
+    paradigms: list[MorphologyParadigm],
+    lemma: str,
+    l1: str,
+    *,
+    limit: int = 2,
+) -> list[Drill]:
+    """Fill-blank drills for *limit* deterministically chosen non-highlighted cells."""
+    result: list[Drill] = []
+    for paradigm in paradigms:
+        if len(result) >= limit:
+            break
+        non_highlighted = [c for c in paradigm.cells if not c.is_highlighted and c.form]
+        sorted_cells = sorted(non_highlighted, key=lambda c: _hash_key(seed + "par", c.form))
+        for cell in sorted_cells:
+            if len(result) >= limit:
+                break
+            axes_desc = " ".join(
+                f"{k} {v}"
+                for k, v in sorted(cell.axes.items())
+                if k in ("person", "number", "tense", "mood", "case", "gender")
+            )
+            if not axes_desc:
+                continue
+            prompt = l10n.t(
+                "drill.paradigm_cell", l1,
+                features=axes_desc,
+                lemma=f"“{lemma}”",
+            )
+            if not prompt:
+                prompt = f"Give the {axes_desc} form of “{lemma}”."
+            result.append(FillBlankDrill(type="fill_blank", prompt=prompt, answer=cell.form))
+    return result
+
+
+def _make_equivalent_drill(
+    seed: str,
+    equivalents: list[EquivalentConstruction],
+    surface: str,
+    l1: str,
+) -> MultipleChoiceDrill | None:
+    """MC drill asking the learner to identify an equivalent construction.
+
+    Returns None when the pool cannot support 3 distinct wrong options.
+    """
+    if not equivalents:
+        return None
+    correct = equivalents[0].construction
+    # Pool: all equivalent constructions + the surface form itself (always wrong).
+    pool = [e.construction for e in equivalents] + [surface]
+    prompt = l10n.t("drill.choose_equivalent", l1, word=f"“{surface}”")
+    if not prompt:
+        return None
+    return _make_mc_drill(seed=seed + "equiv", prompt=prompt, correct=correct, pool=pool)
+
+
+def _make_contrast_drills(contrasts: list[ContrastNote]) -> list[RecognitionDrill]:
+    """One RecognitionDrill (correct=False) per contrast pair.
+
+    The statement claims the two forms are interchangeable; the correct answer
+    is False because they differ — that is the pedagogical point.
+    """
+    return [
+        RecognitionDrill(
+            type="recognition",
+            statement=(
+                f"“{c.form_a}” and “{c.form_b}” "
+                f"are interchangeable in all contexts."
+            ),
+            correct=False,
+        )
+        for c in contrasts
+    ]

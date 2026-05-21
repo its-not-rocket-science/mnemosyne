@@ -19,6 +19,8 @@ LearnableType = Literal[
     "case_agreement",   # case+gender+number agreement cluster (German, etc.)
     # ── v4 types ──────────────────────────────────────────────────────────
     "phrase_family",    # variant-aware idiomatic phrase family (cross-spelling / word-order)
+    # ── v5 types ──────────────────────────────────────────────────────────
+    "inflection",       # nominal / adjectival / pronominal declension form
 ]
 
 

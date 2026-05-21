@@ -215,6 +215,28 @@ def dictionary_explanation(
     return l10n.t("dict.plain", l1, word=_q(token))
 
 
+def inflection_explanation(
+    surface: str,
+    pos: str,
+    case: str,
+    gender: str,
+    number: str,
+    lemma: str,
+    context: LessonContext,
+) -> str:
+    """One-sentence explanation for a declined nominal form."""
+    l1 = context.l1_language
+    if case != "unknown" and number != "unknown":
+        return l10n.t(
+            "inflect.case_number", l1,
+            word=_q(surface),
+            case=l10n.gram_label("case", case, l1),
+            number=l10n.gram_label("number", number, l1),
+            lemma=_q(lemma),
+        )
+    return l10n.t("inflect.simple", l1, word=_q(surface), lemma=_q(lemma))
+
+
 def transliteration_explanation(
     native_form: str,
     romanized: str,
