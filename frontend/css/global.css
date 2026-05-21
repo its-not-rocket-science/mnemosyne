@@ -75,7 +75,17 @@
 }
 
 /* ── Dark mode ───────────────────────────────────────────────────────────────── */
+/* Explicit light: override colour-scheme so system colours (Canvas/CanvasText)
+   stay light even if the OS is in dark mode. */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
 :root[data-theme="dark"] {
+  /* Tell the browser the document is dark so system colours (Canvas, CanvasText,
+     form controls) adapt correctly even when the OS is in light mode. */
+  color-scheme: dark;
+
     /* Brand — peachy terracotta for dark backgrounds */
     --brand-purple:       #ED9070;   /* peachy terracotta — 6.10:1 on gray-800 */
     --brand-purple-light: #3D1810;   /* deep warm brown tint */
@@ -111,6 +121,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root[data-theme="auto"] {
+    color-scheme: dark;
+
     /* Brand — peachy terracotta for dark backgrounds */
     --brand-purple:       #ED9070;   /* peachy terracotta — 6.10:1 on gray-800 */
     --brand-purple-light: #3D1810;   /* deep warm brown tint */
