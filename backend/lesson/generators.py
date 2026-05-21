@@ -57,6 +57,7 @@ from typing import Any, Callable, Literal
 import backend.lesson.formatters as fmt
 import backend.lesson.l10n as l10n
 from backend.lesson.context import LessonContext
+from backend.lesson.enrichment import LessonEnrichmentContext
 from backend.lesson.practice import build_practice_activities
 from backend.lesson.providers import LessonProviders
 from backend.schemas.language import LessonMode
@@ -355,6 +356,7 @@ def build_lesson(
     lesson_mode: LessonMode = "morphology",
     context: LessonContext | None = None,
     providers: LessonProviders | None = None,
+    enrichment: LessonEnrichmentContext | None = None,
 ) -> LessonResponse:
     """Build a structured lesson for any canonical object type.
 
@@ -429,9 +431,21 @@ def build_lesson(
         update["language_code"] = ctx.language_code
     if ctx.direction and ctx.language_code is not None:
         update["script_direction"] = ctx.direction
+    if enrichment is not None and enrichment.related_vocabulary:
+        update["encountered_vocabulary"] = enrichment.related_vocabulary
 
     stamped = response.model_copy(update=update)
-    return stamped.model_copy(update={"practice_activities": build_practice_activities(stamped)})
+
+    # Build learner_progress dict for practice activity difficulty tuning.
+    lp: dict[str, Any] | None = None
+    if enrichment is not None:
+        lp = {"exposure_count": enrichment.exposure_count}
+        if enrichment.mastery_score is not None:
+            lp["mastery_score"] = enrichment.mastery_score
+
+    return stamped.model_copy(update={
+        "practice_activities": build_practice_activities(stamped, learner_progress=lp),
+    })
 
 
 # ── Type-specific builders ────────────────────────────────────────────────────

@@ -3,18 +3,26 @@ from __future__ import annotations
 import logging
 
 from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.api.dependencies import get_db_session, get_plugin_registry
+from backend.api.dependencies import get_current_user, get_db_session, get_plugin_registry
 from backend.lesson.context import LessonContext
+from backend.lesson.enrichment import LessonEnrichmentContext
 from backend.lesson.generators import build_lesson
 from backend.lesson.providers import LessonProviders, VocabIndexGlossProvider
-from backend.models import CanonicalObjectRow
+from backend.models import (
+    CanonicalObjectRow,
+    ObjectRelationRow,
+    TermProgressRow,
+    UserKnowledgeRow,
+)
 from backend.parsing.plugin_loader import PluginRegistry
 from backend.schemas.language import LessonMode, best_lesson_mode
-from backend.schemas.lesson import LessonResponse
+from backend.schemas.lesson import EncounteredVocabularySummary, LessonResponse
 
 _PROVIDERS = LessonProviders(gloss=VocabIndexGlossProvider())
+_VOCAB_RELATION_TYPES = frozenset({"conjugation_of", "agreement_of", "nuance_of"})
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["lesson"])
@@ -54,6 +62,58 @@ def _context_for_language(
     return LessonContext.unknown(l1_language=l1_language)
 
 
+async def _load_enrichment(
+    db: AsyncSession,
+    row: CanonicalObjectRow,
+    user_id: str,
+) -> LessonEnrichmentContext:
+    """Load user-specific progress data for *row* from the database.
+
+    Queries UserKnowledgeRow (FSRS mastery), TermProgressRow (exposure
+    count), and ObjectRelationRow (linked vocabulary for
+    encountered_vocabulary).  All queries are scoped to *user_id* so
+    no cross-user data can leak.
+    """
+    # FSRS mastery for this exact object.
+    uk = await db.get(UserKnowledgeRow, (user_id, row.id))
+    mastery_score: float | None = uk.mastery_score if uk is not None else None
+
+    # Exposure count from term-level tracking (keyed on display_label as the term).
+    tp = await db.get(TermProgressRow, (user_id, row.language, row.display_label))
+    exposure_count: int = (tp.exposure_count or 0) if tp is not None else 0
+
+    # Relation-linked vocabulary objects (lemmas, base forms, …).
+    rel_result = await db.execute(
+        select(ObjectRelationRow).where(
+            ObjectRelationRow.source_id == row.id,
+            ObjectRelationRow.relation_type.in_(list(_VOCAB_RELATION_TYPES)),
+        )
+    )
+    rel_rows = list(rel_result.scalars())
+
+    related: list[EncounteredVocabularySummary] = []
+    if rel_rows:
+        target_ids = [r.target_id for r in rel_rows]
+        tgt_result = await db.execute(
+            select(CanonicalObjectRow).where(CanonicalObjectRow.id.in_(target_ids))
+        )
+        for tgt in tgt_result.scalars():
+            ld = tgt.lesson_data or {}
+            related.append(EncounteredVocabularySummary(
+                form=tgt.display_label,
+                lemma=ld.get("lemma") or tgt.canonical_form,
+                gloss=ld.get("gloss") or ld.get("translation"),
+                pos=ld.get("pos"),
+                is_high_frequency=bool(ld.get("is_high_frequency")),
+            ))
+
+    return LessonEnrichmentContext(
+        mastery_score=mastery_score,
+        exposure_count=exposure_count,
+        related_vocabulary=related,
+    )
+
+
 @router.get("/lesson/{object_id}", response_model=LessonResponse)
 async def get_lesson(
     object_id: str,
@@ -61,6 +121,7 @@ async def get_lesson(
     l1_language: str = "en",
     registry: PluginRegistry = Depends(get_plugin_registry),
     db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
 ) -> LessonResponse:
     # 1. Database lookup — authoritative when the object has been parsed.
     try:
@@ -68,6 +129,14 @@ async def get_lesson(
         if row is not None:
             mode    = _mode_for_language(registry, row.language)
             context = _context_for_language(registry, row.language, l1_language)
+            enrichment: LessonEnrichmentContext | None = None
+            try:
+                enrichment = await _load_enrichment(db, row, current_user)
+            except Exception:
+                logger.warning(
+                    "Enrichment load failed for object %r / user %r",
+                    object_id, current_user, exc_info=True,
+                )
             return build_lesson(
                 object_id=row.id,
                 obj_type=row.type,
@@ -77,6 +146,7 @@ async def get_lesson(
                 lesson_mode=mode,
                 context=context,
                 providers=_PROVIDERS,
+                enrichment=enrichment,
             )
     except Exception:
         logger.warning("DB lesson lookup failed for %r", object_id, exc_info=True)
@@ -102,4 +172,5 @@ async def get_lesson(
         lesson_mode=mode,
         context=context,
         providers=_PROVIDERS,
+        # No enrichment on plugin fallback path — no DB row to query against.
     )
