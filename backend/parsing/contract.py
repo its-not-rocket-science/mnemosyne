@@ -168,6 +168,11 @@ VALID_RELATION_TYPES: frozenset[str] = frozenset({
     "nuance_of",
 })
 
+VALID_MORPHOLOGY_AXES: frozenset[str] = frozenset({
+    "tense", "aspect", "mood", "person", "number",
+    "gender", "case", "voice", "polarity",
+})
+
 # Minimum lesson_data keys required per type.  Plugins may add more.
 REQUIRED_LESSON_KEYS: dict[str, frozenset[str]] = {
     "vocabulary":      frozenset({"lemma"}),
@@ -192,24 +197,117 @@ class ContractViolation:
 
 
 @dataclass
+class ContractWarning:
+    """Non-fatal advisory issued for malformed optional morphology/paradigm data."""
+    rule: str                         # e.g. "M1"
+    message: str
+    object_index: int | None = None
+    canonical_form: str | None = None
+
+
+@dataclass
 class ContractReport:
     language_code: str = ""
     violations: list[ContractViolation] = field(default_factory=list)
+    warnings: list[ContractWarning] = field(default_factory=list)
 
     @property
     def ok(self) -> bool:
         return not self.violations
 
     def __str__(self) -> str:
-        if self.ok:
+        if self.ok and not self.warnings:
             return "OK"
-        lines = [
-            f"  [{v.rule}] obj[{v.object_index}] {v.canonical_form!r}: {v.message}"
-            if v.object_index is not None
-            else f"  [{v.rule}] {v.message}"
-            for v in self.violations
-        ]
-        return "\n".join(lines)
+        lines = []
+        for v in self.violations:
+            prefix = f"  [{v.rule}] obj[{v.object_index}] {v.canonical_form!r}: " if v.object_index is not None else f"  [{v.rule}] "
+            lines.append(f"VIOLATION {prefix}{v.message}")
+        for w in self.warnings:
+            prefix = f"  [{w.rule}] obj[{w.object_index}] {w.canonical_form!r}: " if w.object_index is not None else f"  [{w.rule}] "
+            lines.append(f"WARNING   {prefix}{w.message}")
+        return "\n".join(lines) if lines else "OK"
+
+
+def _validate_morphology(
+    morphology: object,
+    object_index: int,
+    canonical_form: str,
+) -> list[ContractWarning]:
+    """Validate the optional lesson_data['morphology'] sub-object.
+
+    Returns a (possibly empty) list of ContractWarning.  Never raises.
+    All checks are advisory — malformed morphology data is skipped at
+    build time rather than rejecting the whole object.
+
+    M1  morphology must be a dict.
+    M2  morphology.axes, .paradigms, .equivalents, .contrasts must be lists when present.
+    M3  Each axis entry must be a dict with non-empty 'axis' and 'value' strings.
+    M4  axis names should be drawn from VALID_MORPHOLOGY_AXES (unknown axes warned).
+    M5  Each paradigm entry must be a dict; its 'cells' key, when present, must be a list.
+    M6  Each equivalent entry must be a dict with a non-empty 'construction' string.
+    M7  Each contrast entry must be a dict with non-empty 'form_a', 'form_b', 'note' strings.
+    """
+    ws: list[ContractWarning] = []
+
+    def warn(rule: str, msg: str) -> None:
+        ws.append(ContractWarning(rule, msg, object_index=object_index, canonical_form=canonical_form))
+
+    if not isinstance(morphology, dict):
+        warn("M1", f"lesson_data['morphology'] must be a dict, got {type(morphology).__name__!r}")
+        return ws
+
+    # M2 — top-level list fields
+    for key in ("axes", "paradigms", "equivalents", "contrasts"):
+        val = morphology.get(key)
+        if val is not None and not isinstance(val, list):
+            warn("M2", f"morphology[{key!r}] must be a list, got {type(val).__name__!r}")
+
+    # M3, M4 — axes entries
+    axes_val = morphology.get("axes")
+    for idx, entry in enumerate(axes_val if isinstance(axes_val, list) else []):
+        if not isinstance(entry, dict):
+            warn("M3", f"morphology.axes[{idx}] must be a dict")
+            continue
+        for key in ("axis", "value"):
+            v = entry.get(key)
+            if not isinstance(v, str) or not v.strip():
+                warn("M3", f"morphology.axes[{idx}][{key!r}] must be a non-empty string")
+        axis_name = entry.get("axis", "")
+        if isinstance(axis_name, str) and axis_name and axis_name not in VALID_MORPHOLOGY_AXES:
+            warn("M4", f"Unknown morphology axis {axis_name!r} — expected one of {sorted(VALID_MORPHOLOGY_AXES)}")
+
+    # M5 — paradigm entries
+    paradigms_val = morphology.get("paradigms")
+    for idx, entry in enumerate(paradigms_val if isinstance(paradigms_val, list) else []):
+        if not isinstance(entry, dict):
+            warn("M5", f"morphology.paradigms[{idx}] must be a dict")
+            continue
+        cells = entry.get("cells")
+        if cells is not None and not isinstance(cells, list):
+            warn("M5", f"morphology.paradigms[{idx}]['cells'] must be a list")
+
+    # M6 — equivalent entries
+    equivalents_val = morphology.get("equivalents")
+    for idx, entry in enumerate(equivalents_val if isinstance(equivalents_val, list) else []):
+        if not isinstance(entry, dict):
+            warn("M6", f"morphology.equivalents[{idx}] must be a dict")
+            continue
+        c = entry.get("construction")
+        if not isinstance(c, str) or not c.strip():
+            warn("M6", f"morphology.equivalents[{idx}]['construction'] must be a non-empty string")
+
+    # M7 — contrast entries
+    contrasts_val = morphology.get("contrasts")
+    for idx, entry in enumerate(contrasts_val if isinstance(contrasts_val, list) else []):
+        if not isinstance(entry, dict):
+            warn("M7", f"morphology.contrasts[{idx}] must be a dict")
+            continue
+        for key in ("form_a", "form_b", "note"):
+            v = entry.get(key)
+            if not isinstance(v, str) or not v.strip():
+                warn("M7", f"morphology.contrasts[{idx}][{key!r}] must be a non-empty string")
+
+    return ws
 
 
 def validate_result(
@@ -294,6 +392,12 @@ def validate_result(
                     "target_canonical_form in RelationHint is empty",
                     object_index=i, canonical_form=cf,
                 ))
+
+        # M1–M7 — optional morphology sub-object (warnings, not violations)
+        if "morphology" in obj.lesson_data:
+            report.warnings.extend(
+                _validate_morphology(obj.lesson_data["morphology"], i, cf)
+            )
 
         # C9
         required = REQUIRED_LESSON_KEYS.get(obj.type, frozenset())
