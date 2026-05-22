@@ -145,7 +145,16 @@ class TestMorphologyFields:
         data = lesson.model_dump()
         restored = LessonResponse(**data)
         assert restored.equivalents[0].construction == "λύειν"
-        assert restored.equivalents[0].register == "formal"
+        assert restored.equivalents[0].usage_register == "formal"
+
+    def test_equivalents_alias_serialisation(self):
+        eq = EquivalentConstruction(construction="λύειν", register="formal")
+        lesson = LessonResponse(**_minimal_lesson(equivalents=[eq]))
+        aliased = lesson.model_dump(by_alias=True)
+        eq_dict = aliased["equivalents"][0]
+        assert "register" in eq_dict
+        assert eq_dict["register"] == "formal"
+        assert "usage_register" not in eq_dict
 
     def test_contrasts_round_trip(self):
         note = ContrastNote(form_a="λύω", form_b="λύομαι", note="active vs middle voice")
