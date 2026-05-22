@@ -629,7 +629,8 @@ export class MnemosyneDetailPane extends HTMLElement {
           <textarea class="pane__note-input"
                     placeholder="${esc(t('dp_note_placeholder'))}"
                     aria-label="${esc(t('dp_note_placeholder'))}"
-                    rows="3"></textarea>
+                    rows="3"
+                    spellcheck="false" autocorrect="off" autocapitalize="off"></textarea>
           <div class="pane__note-actions">
             <button class="pane__note-save" type="button">${esc(t('dp_note_save'))}</button>
             <button class="pane__note-clear" type="button">${esc(t('dp_note_clear'))}</button>
@@ -1088,7 +1089,7 @@ export class MnemosyneDetailPane extends HTMLElement {
       <article class="pane__check pane__check--typed" data-quiz-index="${idx}">
         <p class="pane__check-prompt" id="dp-qi-${idx}-prompt"><strong>${esc(tr(`dp_quiz_type_${q.kind}`, 'Quiz'))}</strong> · ${esc(q.prompt)}</p>
         <form class="pane__typed-form">
-          <input class="pane__typed-input" type="text" autocomplete="off" aria-labelledby="dp-qi-${idx}-prompt" />
+          <input class="pane__typed-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" aria-labelledby="dp-qi-${idx}-prompt" />
           <button type="submit" class="pane__check-option" aria-describedby="dp-qi-${idx}-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
         </form>
         <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
@@ -1146,7 +1147,7 @@ export class MnemosyneDetailPane extends HTMLElement {
             <article class="pane__check pane__check--typed" data-drill-index="${idx}">
               <p class="pane__check-prompt" id="dp-sd-${idx}-prompt">${esc(a.prompt)}</p>
               <form class="pane__typed-form">
-                <input class="pane__typed-input" type="text" autocomplete="off" aria-labelledby="dp-sd-${idx}-prompt" />
+                <input class="pane__typed-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" aria-labelledby="dp-sd-${idx}-prompt" />
                 <button type="submit" class="pane__check-option" aria-describedby="dp-sd-${idx}-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
               </form>
               <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
@@ -1173,7 +1174,7 @@ export class MnemosyneDetailPane extends HTMLElement {
             <article class="pane__check pane__check--typed" data-retell-mode="recall">
               <p class="pane__check-prompt" id="dp-retell-recall-prompt">${esc(tr('dp_recall_challenge', 'Recall challenge: without looking, write key details from this passage.'))}</p>
               <form class="pane__typed-form">
-                <input class="pane__typed-input" type="text" autocomplete="off" aria-labelledby="dp-retell-recall-prompt" />
+                <input class="pane__typed-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" aria-labelledby="dp-retell-recall-prompt" />
                 <button type="submit" class="pane__check-option" aria-describedby="dp-retell-recall-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
               </form>
               <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
@@ -1187,7 +1188,7 @@ export class MnemosyneDetailPane extends HTMLElement {
               <article class="pane__check pane__check--typed" data-retell-mode="${mode}">
                 <p class="pane__check-prompt" id="dp-retell-${mode}-prompt">${esc(prompt)}</p>
                 <form class="pane__typed-form">
-                  <input class="pane__typed-input" type="text" autocomplete="off" aria-labelledby="dp-retell-${mode}-prompt" />
+                  <input class="pane__typed-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" aria-labelledby="dp-retell-${mode}-prompt" />
                   <button type="submit" class="pane__check-option" aria-describedby="dp-retell-${mode}-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
                 </form>
                 <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
