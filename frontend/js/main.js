@@ -1088,7 +1088,7 @@ results.addEventListener('lesson-open', async (event) => {
 
   try {
     const url = `${API_BASE}/lesson/${encodeURIComponent(objectId)}?language=${encodeURIComponent(language)}&depth=${encodeURIComponent(currentDepth)}`
-    const response = await fetch(url)
+    const response = await fetch(url, { headers: getAuthHeaders() })
 
     if (!response.ok) {
       const body = await response.json().catch(() => null)
@@ -1255,7 +1255,7 @@ detailPane?.addEventListener('pane-navigate', async (event) => {
   const dir    = caps?.direction ?? 'ltr'
   try {
     const url = `${API_BASE}/lesson/${encodeURIComponent(objectId)}?language=${encodeURIComponent(language)}&depth=${encodeURIComponent(currentDepth)}`
-    const response = await fetch(url)
+    const response = await fetch(url, { headers: getAuthHeaders() })
     if (!response.ok) return
     const lesson = await response.json()
     const progressRows = await getTermProgress(language)
