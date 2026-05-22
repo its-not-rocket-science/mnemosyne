@@ -211,6 +211,7 @@ const TYPE_LABEL_KEYS = {
   vocabulary: 'type_vocabulary_short',
   conjugation: 'type_conjugation_short',
   agreement: 'type_agreement_short',
+  inflection: 'type_inflection_short',
   idiom: 'type_idiom_short',
   grammar: 'type_grammar_short',
   nuance: 'type_nuance_short',
@@ -223,6 +224,7 @@ const TYPE_LEVEL = {
   vocabulary:      1,
   conjugation:     2,
   agreement:       2,
+  inflection:      2,
   grammar:         2,
   script:          2,
   transliteration: 2,
@@ -233,11 +235,12 @@ const TYPE_LEVEL = {
 
 const ANNOTATION_DEPTH_MODEL = {
   subtle: new Set(['vocabulary']),
-  learning: new Set(['vocabulary', 'conjugation', 'agreement', 'grammar']),
+  learning: new Set(['vocabulary', 'conjugation', 'agreement', 'inflection', 'grammar']),
   deep: new Set([
     'vocabulary',
     'conjugation',
     'agreement',
+    'inflection',
     'grammar',
     'script',
     'transliteration',
@@ -1659,6 +1662,7 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam, de
 
   const typePriority = {
     conjugation: 6,
+    inflection: 5,
     vocabulary: 5,
     nuance: 4,
     grammar: 4,
@@ -1749,6 +1753,7 @@ const _MINIMAP_COLORS = {
   vocabulary:      'var(--ann-vocab)',
   conjugation:     'var(--ann-grammar)',
   agreement:       'var(--ann-grammar)',
+  inflection:      'var(--ann-grammar)',
   grammar:         'var(--ann-grammar)',
   idiom:           'var(--ann-idiom)',
   nuance:          'var(--ann-literary)',
