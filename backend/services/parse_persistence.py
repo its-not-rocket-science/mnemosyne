@@ -176,16 +176,22 @@ async def persist_chunk(
                 ))
 
     # Upsert TermProgressRow for vocabulary-like objects.
-    vocab_info: dict[str, dict] = {}  # term → {lemma, obj_ids}
-    for obj_id, (canonical_form, cand) in uuid_to_candidate.items():
-        if cand.type not in _VOCAB_LIKE_TYPES:
-            continue
-        term = cand.surface_form or cand.label
-        lemma = cand.lesson_data.get("lemma") or canonical_form
-        if term not in vocab_info:
-            vocab_info[term] = {"lemma": lemma, "obj_ids": [obj_id]}
-        elif obj_id not in vocab_info[term]["obj_ids"]:
-            vocab_info[term]["obj_ids"].append(obj_id)
+    # Iterate candidate_results (one entry per sentence occurrence) so that a
+    # term appearing in N sentences within this chunk increments exposure_count
+    # by N, not by the number of unique canonical objects.
+    vocab_info: dict[str, dict] = {}  # term → {lemma, obj_ids, count}
+    for cand_result in candidate_results:
+        for cand in cand_result.candidates:
+            if cand.type not in _VOCAB_LIKE_TYPES:
+                continue
+            term = cand.surface_form or cand.label
+            lemma = cand.lesson_data.get("lemma") or cand.canonical_form
+            obj_id = canonical_object_id(language, cand.type, cand.canonical_form)
+            if term not in vocab_info:
+                vocab_info[term] = {"lemma": lemma, "obj_ids": [], "count": 0}
+            vocab_info[term]["count"] += 1
+            if obj_id not in vocab_info[term]["obj_ids"]:
+                vocab_info[term]["obj_ids"].append(obj_id)
 
     if vocab_info:
         tp_result = await db.execute(
@@ -201,7 +207,7 @@ async def persist_chunk(
         for term, info in vocab_info.items():
             if term in existing_tp:
                 row = existing_tp[term]
-                row.exposure_count = (row.exposure_count or 0) + 1
+                row.exposure_count = (row.exposure_count or 0) + info["count"]
                 row.last_seen = now
                 current_ids: list[str] = list(row.source_lesson_ids or [])
                 for oid in info["obj_ids"]:
@@ -214,7 +220,7 @@ async def persist_chunk(
                     language=language,
                     term=term,
                     lemma=info["lemma"],
-                    exposure_count=1,
+                    exposure_count=info["count"],
                     first_seen=now,
                     last_seen=now,
                     source_lesson_ids=list(info["obj_ids"]),

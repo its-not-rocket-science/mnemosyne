@@ -14,6 +14,7 @@ from backend.lesson.providers import LessonProviders, VocabIndexGlossProvider
 from backend.models import (
     CanonicalObjectRow,
     ObjectRelationRow,
+    SentenceObjectRow,
     TermProgressRow,
     UserKnowledgeRow,
 )
@@ -23,6 +24,7 @@ from backend.schemas.lesson import EncounteredVocabularySummary, LessonResponse
 
 _PROVIDERS = LessonProviders(gloss=VocabIndexGlossProvider())
 _VOCAB_RELATION_TYPES = frozenset({"conjugation_of", "agreement_of", "nuance_of"})
+_SENTENCE_VOCAB_TYPES = frozenset({"vocabulary", "conjugation", "inflection"})
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["lesson"])
@@ -92,8 +94,10 @@ async def _load_enrichment(
     rel_rows = list(rel_result.scalars())
 
     related: list[EncounteredVocabularySummary] = []
+    relation_target_ids: set[str] = set()
     if rel_rows:
         target_ids = [r.target_id for r in rel_rows]
+        relation_target_ids = set(target_ids)
         tgt_result = await db.execute(
             select(CanonicalObjectRow).where(CanonicalObjectRow.id.in_(target_ids))
         )
@@ -106,6 +110,44 @@ async def _load_enrichment(
                 pos=ld.get("pos"),
                 is_high_frequency=bool(ld.get("is_high_frequency")),
             ))
+
+    # Sentence-context vocabulary — objects co-occurring in the same sentence(s).
+    sent_q = await db.execute(
+        select(SentenceObjectRow.sentence_id).where(
+            SentenceObjectRow.object_id == row.id
+        )
+    )
+    sentence_ids = list(sent_q.scalars())
+
+    if sentence_ids:
+        co_q = await db.execute(
+            select(SentenceObjectRow.object_id).where(
+                SentenceObjectRow.sentence_id.in_(sentence_ids),
+                SentenceObjectRow.object_id != row.id,
+            )
+        )
+        # Deduplicate by object_id; exclude objects already covered by relations.
+        co_ids = [
+            oid for oid in {oid for oid in co_q.scalars()}
+            if oid not in relation_target_ids
+        ]
+
+        if co_ids:
+            co_rows_q = await db.execute(
+                select(CanonicalObjectRow).where(
+                    CanonicalObjectRow.id.in_(co_ids),
+                    CanonicalObjectRow.type.in_(list(_SENTENCE_VOCAB_TYPES)),
+                )
+            )
+            for tgt in co_rows_q.scalars():
+                ld = tgt.lesson_data or {}
+                related.append(EncounteredVocabularySummary(
+                    form=tgt.display_label,
+                    lemma=ld.get("lemma") or tgt.canonical_form,
+                    gloss=ld.get("gloss") or ld.get("translation"),
+                    pos=ld.get("pos"),
+                    is_high_frequency=bool(ld.get("is_high_frequency")),
+                ))
 
     return LessonEnrichmentContext(
         mastery_score=mastery_score,

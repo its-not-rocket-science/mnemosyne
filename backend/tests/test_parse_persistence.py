@@ -205,3 +205,108 @@ async def test_inflection_type_tracked(db):
     row = await db.get(TermProgressRow, ("test-user", "la", "lupi"))
     assert row is not None
     assert row.lemma == "lupus"
+
+
+@pytest.mark.asyncio
+async def test_duplicate_in_one_sentence_counts_twice(db):
+    """Same term twice in one CandidateSentenceResult → exposure_count == 2."""
+    cand = _vocab_cand("casa", "casa")
+    sdid = str(uuid.uuid4())
+    uuid_to_candidate = {
+        canonical_object_id("es", cand.type, cand.canonical_form): (cand.canonical_form, cand)
+    }
+    candidate_results = [CandidateSentenceResult(text="casa y casa", candidates=[cand, cand])]
+    await persist_ingest(
+        db,
+        language="es",
+        content_type="text",
+        normalized_text="casa y casa",
+        script_hint=None,
+        source_document_id=sdid,
+        candidate_results=candidate_results,
+        sentences=[],
+        uuid_to_candidate=uuid_to_candidate,
+        user_id="test-user",
+    )
+
+    row = await db.get(TermProgressRow, ("test-user", "es", "casa"))
+    assert row is not None
+    assert row.exposure_count == 2
+
+
+@pytest.mark.asyncio
+async def test_same_term_across_two_sentences_counts_twice(db):
+    """Same term in two separate CandidateSentenceResult entries → exposure_count == 2."""
+    cand = _vocab_cand("casa", "casa")
+    sdid = str(uuid.uuid4())
+    uuid_to_candidate = {
+        canonical_object_id("es", cand.type, cand.canonical_form): (cand.canonical_form, cand)
+    }
+    candidate_results = [
+        CandidateSentenceResult(text="La casa.", candidates=[cand]),
+        CandidateSentenceResult(text="Una casa.", candidates=[cand]),
+    ]
+    await persist_ingest(
+        db,
+        language="es",
+        content_type="text",
+        normalized_text="La casa. Una casa.",
+        script_hint=None,
+        source_document_id=sdid,
+        candidate_results=candidate_results,
+        sentences=[],
+        uuid_to_candidate=uuid_to_candidate,
+        user_id="test-user",
+    )
+
+    row = await db.get(TermProgressRow, ("test-user", "es", "casa"))
+    assert row is not None
+    assert row.exposure_count == 2
+
+
+@pytest.mark.asyncio
+async def test_multi_occurrence_source_lesson_ids_deduplicated(db):
+    """Term appearing 3 times in one parse → exposure_count==3, obj_id in source_lesson_ids once."""
+    cand = _vocab_cand("casa", "casa")
+    obj_id = canonical_object_id("es", cand.type, cand.canonical_form)
+    sdid = str(uuid.uuid4())
+    uuid_to_candidate = {obj_id: (cand.canonical_form, cand)}
+    candidate_results = [
+        CandidateSentenceResult(text="casa.", candidates=[cand]),
+        CandidateSentenceResult(text="casa.", candidates=[cand]),
+        CandidateSentenceResult(text="casa.", candidates=[cand]),
+    ]
+    await persist_ingest(
+        db,
+        language="es",
+        content_type="text",
+        normalized_text="casa. casa. casa.",
+        script_hint=None,
+        source_document_id=sdid,
+        candidate_results=candidate_results,
+        sentences=[],
+        uuid_to_candidate=uuid_to_candidate,
+        user_id="test-user",
+    )
+
+    row = await db.get(TermProgressRow, ("test-user", "es", "casa"))
+    assert row is not None
+    assert row.exposure_count == 3
+    assert row.source_lesson_ids.count(obj_id) == 1
+
+
+@pytest.mark.asyncio
+async def test_different_surface_forms_same_lemma_separate_rows(db):
+    """Different surface forms of the same lemma create distinct TermProgressRow entries."""
+    cand1 = _vocab_cand("corrió", "correr", canonical="correr:pret:3:Sing", type_="conjugation")
+    cand2 = _vocab_cand("corría", "correr", canonical="correr:imperf:3:Sing", type_="conjugation")
+    await persist_ingest(db, **_build_ingest_args([cand1, cand2], "es"))
+
+    row1 = await db.get(TermProgressRow, ("test-user", "es", "corrió"))
+    row2 = await db.get(TermProgressRow, ("test-user", "es", "corría"))
+    assert row1 is not None
+    assert row2 is not None
+    assert row1.lemma == "correr"
+    assert row2.lemma == "correr"
+    assert row1.exposure_count == 1
+    assert row2.exposure_count == 1
