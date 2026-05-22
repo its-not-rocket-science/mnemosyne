@@ -26,6 +26,9 @@ from backend.models import (
     Base,
     CanonicalObjectRow,
     ObjectRelationRow,
+    ParsedText,
+    Sentence,
+    SentenceObjectRow,
     TermProgressRow,
     UserKnowledgeRow,
 )
@@ -41,6 +44,14 @@ _LANG          = "es"
 _USER_A        = "lesson-user-alice"
 _USER_B        = "lesson-user-bob"
 _NOW           = datetime.now(UTC)
+
+# Sentence-context test objects.
+_CURR_SC_OBJ   = "11111111-aaaa-bbbb-cccc-dddddddddddd"
+_CO_OBJ        = "22222222-aaaa-bbbb-cccc-dddddddddddd"
+_CO_OBJ2       = "33333333-aaaa-bbbb-cccc-dddddddddddd"  # second co-occurring object
+_PT_A          = "44444444-aaaa-bbbb-cccc-dddddddddddd"
+_SENT_A        = "55555555-aaaa-bbbb-cccc-dddddddddddd"
+_SENT_B        = "66666666-aaaa-bbbb-cccc-dddddddddddd"
 
 
 # ── Fixtures ──────────────────────────────────────────────────────────────────
@@ -272,3 +283,188 @@ async def test_build_lesson_deterministic_with_enrichment():
     # encountered_vocabulary populated
     assert len(result_a.encountered_vocabulary) == 1
     assert result_a.encountered_vocabulary[0].form == "hablar"
+
+
+# ── Sentence-context vocabulary tests ─────────────────────────────────────────
+
+
+def _make_co_vocab(obj_id: str, form: str, gloss: str) -> CanonicalObjectRow:
+    return CanonicalObjectRow(
+        id=obj_id,
+        language=_LANG,
+        type="vocabulary",
+        canonical_form=form,
+        display_label=form,
+        surface_forms=[form],
+        lesson_data={"lemma": form, "pos": "NOUN", "gloss": gloss},
+    )
+
+
+def _seed_sentence(
+    parsed_text_id: str,
+    sentence_id: str,
+    sentence_text: str,
+    object_ids: list[str],
+) -> list:
+    """Return ORM rows: ParsedText, Sentence, SentenceObjectRows."""
+    rows: list = [
+        ParsedText(id=parsed_text_id, language=_LANG, source_text=sentence_text),
+        Sentence(id=sentence_id, parsed_text_id=parsed_text_id, position=0, text=sentence_text),
+    ]
+    for pos, oid in enumerate(object_ids):
+        rows.append(SentenceObjectRow(sentence_id=sentence_id, object_id=oid, position=pos))
+    return rows
+
+
+@pytest.mark.asyncio
+async def test_sentence_context_vocabulary_included(db, session_factory):
+    """Object co-occurring in the same sentence appears in encountered_vocabulary."""
+    curr = _make_vocab_row(_CURR_SC_OBJ)
+    curr.canonical_form = "grande"
+    curr.display_label = "grande"
+    curr.lesson_data = {"lemma": "grande", "pos": "ADJ"}
+
+    other = _make_co_vocab(_CO_OBJ, "casa", "house")
+
+    for row in [curr, other] + _seed_sentence(
+        _PT_A, _SENT_A, "La casa es grande.", [_CURR_SC_OBJ, _CO_OBJ]
+    ):
+        db.add(row)
+    await db.commit()
+
+    async with _as_user(session_factory, _USER_A) as client:
+        resp = await client.get(f"/lesson/{_CURR_SC_OBJ}?language={_LANG}")
+
+    assert resp.status_code == 200
+    vocab_list = resp.json().get("encountered_vocabulary", [])
+    forms = [v["form"] for v in vocab_list]
+    assert "casa" in forms
+
+
+@pytest.mark.asyncio
+async def test_sentence_context_deduplication_across_sentences(db, session_factory):
+    """Same co-occurring object in two sentences appears only once."""
+    curr = _make_vocab_row(_CURR_SC_OBJ)
+    curr.canonical_form = "grande"
+    curr.display_label = "grande"
+    curr.lesson_data = {"lemma": "grande", "pos": "ADJ"}
+
+    other = _make_co_vocab(_CO_OBJ, "casa", "house")
+
+    pt2_id = str(uuid.uuid4())
+    sent2_id = str(uuid.uuid4())
+
+    for row in (
+        [curr, other]
+        + _seed_sentence(_PT_A, _SENT_A, "La casa es grande.", [_CURR_SC_OBJ, _CO_OBJ])
+        + _seed_sentence(pt2_id, sent2_id, "La casa grande.", [_CURR_SC_OBJ, _CO_OBJ])
+    ):
+        db.add(row)
+    await db.commit()
+
+    async with _as_user(session_factory, _USER_A) as client:
+        resp = await client.get(f"/lesson/{_CURR_SC_OBJ}?language={_LANG}")
+
+    assert resp.status_code == 200
+    vocab_list = resp.json().get("encountered_vocabulary", [])
+    forms = [v["form"] for v in vocab_list]
+    assert forms.count("casa") == 1
+
+
+@pytest.mark.asyncio
+async def test_relation_and_sentence_context_merge_no_duplicates(db, session_factory):
+    """Relation-linked object also in sentence → appears exactly once."""
+    conj = CanonicalObjectRow(
+        id=_CONJ_OBJ_ID,
+        language=_LANG,
+        type="conjugation",
+        canonical_form="hablar:present:indicative:1:Sing",
+        display_label="hablo",
+        surface_forms=["hablo"],
+        lesson_data={"lemma": "hablar"},
+    )
+    lemma = CanonicalObjectRow(
+        id=_LEMMA_OBJ_ID,
+        language=_LANG,
+        type="vocabulary",
+        canonical_form="hablar",
+        display_label="hablar",
+        surface_forms=["hablar"],
+        lesson_data={"lemma": "hablar", "pos": "VERB", "gloss": "to speak"},
+    )
+    rel = ObjectRelationRow(
+        id=str(uuid.uuid4()),
+        source_id=_CONJ_OBJ_ID,
+        target_id=_LEMMA_OBJ_ID,
+        relation_type="conjugation_of",
+    )
+    # Both objects are also in the same sentence.
+    for row in (
+        [conj, lemma, rel]
+        + _seed_sentence(_PT_A, _SENT_A, "Yo hablo.", [_CONJ_OBJ_ID, _LEMMA_OBJ_ID])
+    ):
+        db.add(row)
+    await db.commit()
+
+    async with _as_user(session_factory, _USER_A) as client:
+        resp = await client.get(f"/lesson/{_CONJ_OBJ_ID}?language={_LANG}")
+
+    assert resp.status_code == 200
+    vocab_list = resp.json().get("encountered_vocabulary", [])
+    forms = [v["form"] for v in vocab_list]
+    assert forms.count("hablar") == 1
+
+
+@pytest.mark.asyncio
+async def test_sentence_context_other_user_term_progress_not_leaked(db, session_factory):
+    """User B gets correct sentence-context vocabulary; user A's TermProgress is not injected."""
+    curr = _make_vocab_row(_CURR_SC_OBJ)
+    curr.canonical_form = "grande"
+    curr.display_label = "grande"
+    curr.lesson_data = {"lemma": "grande", "pos": "ADJ"}
+
+    other = _make_co_vocab(_CO_OBJ, "casa", "house")
+
+    # User A has high exposure to "casa" — must not affect user B's lesson.
+    tp_a = TermProgressRow(
+        user_id=_USER_A,
+        language=_LANG,
+        term="casa",
+        lemma="casa",
+        exposure_count=999,
+        first_seen=_NOW,
+        last_seen=_NOW,
+        source_lesson_ids=[],
+    )
+
+    for row in [curr, other, tp_a] + _seed_sentence(
+        _PT_A, _SENT_A, "La casa es grande.", [_CURR_SC_OBJ, _CO_OBJ]
+    ):
+        db.add(row)
+    await db.commit()
+
+    # User B has no knowledge rows — difficulty must be easy.
+    async with _as_user(session_factory, _USER_B) as client:
+        resp = await client.get(f"/lesson/{_CURR_SC_OBJ}?language={_LANG}")
+
+    assert resp.status_code == 200
+    data = resp.json()
+    # Sentence-context vocabulary still available to user B.
+    forms = [v["form"] for v in data.get("encountered_vocabulary", [])]
+    assert "casa" in forms
+    # User B has no mastery → easy difficulty.
+    assert all(a["difficulty"] == "easy" for a in data.get("practice_activities", []))
+
+
+@pytest.mark.asyncio
+async def test_build_lesson_without_enrichment_empty_vocabulary():
+    """Plugin fallback path (no enrichment) yields empty encountered_vocabulary."""
+    result = build_lesson(
+        object_id="no-enrichment-id",
+        obj_type="vocabulary",
+        canonical_form="mesa",
+        display_label="mesa",
+        lesson_data={"lemma": "mesa", "pos": "NOUN"},
+        # enrichment omitted → None
+    )
+    assert result.encountered_vocabulary == []
