@@ -15,6 +15,9 @@ ActivityType = Literal[
     "transformation_drills",
     "short_retell_prompts",
     "notice_the_pattern",
+    "chunk_recall",
+    "grammar_discrimination",
+    "constrained_free_production",
 ]
 
 
@@ -91,6 +94,9 @@ def build_practice_activities(
     ]
 
     activities.extend(_build_pattern_drills(lesson, difficulty, anns, lesson.examples, lp, hooks.detect_pattern))
+    activities.extend(_build_chunk_recall(lesson, difficulty, hooks))
+    activities.extend(_build_grammar_discrimination(lesson, difficulty))
+    activities.extend(_build_constrained_production(lesson, difficulty, target_term, sentence_basis))
 
     return activities
 
@@ -164,6 +170,120 @@ def _detect_pattern_from_annotations(annotations: list[str]) -> str | None:
         if repeated:
             return repeated[0]
     return None
+
+def _build_chunk_recall(
+    lesson: LessonResponse,
+    difficulty: str,
+    hooks: Any,
+) -> list[PracticeActivity]:
+    ld = lesson.lesson_data or {}
+    if lesson.type not in {"idiom", "phrase_family", "grammar"}:
+        return []
+    canonical = ld.get("canonical_form") or lesson.title
+    if not canonical:
+        return []
+    words = canonical.split()
+    if len(words) < 2:
+        return []
+    mid = max(1, len(words) // 2)
+    cue = " ".join(words[:mid])
+    completion = " ".join(words[mid:])
+    results = [
+        _activity(
+            "chunk_recall", lesson, difficulty, canonical,
+            prompt=f'Complete this phrase: "{cue} ___"',
+            expected=completion,
+            alternatives=[canonical],
+            feedback="Recall the full chunk as a unit — don't translate word by word.",
+        )
+    ]
+    gloss = _first_field_value(lesson.fields, "Translation") or _first_field_value(lesson.fields, "Gloss")
+    if gloss and gloss != canonical:
+        results.append(
+            _activity(
+                "chunk_recall", lesson, difficulty, canonical,
+                prompt=f'Type the phrase that means: "{gloss}"',
+                expected=canonical,
+                alternatives=[completion],
+                feedback="Focus on the canonical form as a whole chunk.",
+            )
+        )
+    return results[:2]
+
+
+def _build_grammar_discrimination(
+    lesson: LessonResponse,
+    difficulty: str,
+) -> list[PracticeActivity]:
+    if not lesson.paradigms:
+        return []
+    highlighted = [
+        cell for p in lesson.paradigms for cell in p.cells if cell.is_highlighted
+    ]
+    if not highlighted:
+        return []
+    target = highlighted[0]
+    distractors = [
+        cell.form
+        for p in lesson.paradigms
+        for cell in p.cells
+        if not cell.is_highlighted and cell.form != target.form
+    ][:3]
+    if not distractors:
+        return []
+    axes = lesson.morphology_axes or []
+    axis_desc = ", ".join(
+        a.label or a.value for a in axes[:2] if (a.label or a.value)
+    )
+    gloss_suffix = f" ({target.gloss})" if target.gloss else ""
+    axis_suffix = f" [{axis_desc}]" if axis_desc else ""
+    return [
+        _activity(
+            "grammar_discrimination", lesson, difficulty, target.form,
+            prompt=f"Which form is correct for this context{gloss_suffix}{axis_suffix}?",
+            expected=target.form,
+            alternatives=distractors,
+            feedback="Compare person, number, and tense markers — not just the stem.",
+        )
+    ]
+
+
+def _build_constrained_production(
+    lesson: LessonResponse,
+    difficulty: str,
+    target_term: str,
+    sentence_basis: str,
+) -> list[PracticeActivity]:
+    if not target_term:
+        return []
+    ld = lesson.lesson_data or {}
+    axes = lesson.morphology_axes or []
+    if lesson.type in {"conjugation", "inflection", "agreement"} and axes:
+        axis_desc = ", ".join(
+            f"{a.axis} ({a.label or a.value})"
+            for a in axes[:2]
+            if (a.label or a.value)
+        )
+        prompt = f"Write one original sentence using this form of '{target_term}' ({axis_desc})."
+    elif lesson.type == "idiom":
+        prompt = f"Write one sentence using this idiom: '{target_term}'."
+    elif lesson.type == "grammar":
+        concept = ld.get("concept_name") or target_term
+        prompt = f"Write one sentence that demonstrates this grammar rule: '{concept}'."
+    elif lesson.type in {"conjugation", "inflection", "agreement"}:
+        prompt = f"Write one sentence using this grammatical form of '{target_term}'."
+    else:
+        prompt = f"Write one sentence using '{target_term}' in a meaningful context."
+    return [
+        _activity(
+            "constrained_free_production", lesson, difficulty, target_term,
+            prompt=prompt,
+            expected=sentence_basis,
+            alternatives=[lesson.explanation] if lesson.explanation else [],
+            feedback="Any grammatically correct, contextually appropriate sentence counts. Compare to the example.",
+        )
+    ]
+
 
 def _build_comprehension_checks(lesson: LessonResponse, difficulty: str, text_basis: str, target_term: str) -> list[PracticeActivity]:
     meaning = _first_field_value(lesson.fields, "Translation") or _first_field_value(lesson.fields, "Gloss") or lesson.explanation
