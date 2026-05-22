@@ -1309,6 +1309,11 @@ topNav?.addEventListener('depth-change', ({ detail }) => {
   applyAnnotationFilter()
 })
 
+document.addEventListener('mnemosyne:mode-changed', ({ detail }) => {
+  currentDepth = detail.mode
+  applyAnnotationFilter()
+})
+
 filterBar?.addEventListener('filter-change', ({ detail }) => {
   activeFilterTypes = detail.types.length ? new Set(detail.types) : null
   applyAnnotationFilter()

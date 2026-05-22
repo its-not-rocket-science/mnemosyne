@@ -451,7 +451,7 @@ function updateQuietBadge() {
 }
 
 function readerMode() {
-  return localStorage.getItem('mnemosyne.reader.annotationMode') || 'learning'
+  return localStorage.getItem('mn-annotation-depth') || localStorage.getItem('mnemosyne.reader.annotationMode') || 'learning'
 }
 
 function normalizedType(annotation) {
@@ -950,6 +950,7 @@ function init() {
     flashDifficultyAdjustment(detail.mode)
   })
   document.addEventListener('mnemosyne:toggle-adaptive-reader', toggleAdaptiveEnabled)
+  document.addEventListener('mnemosyne:mode-changed', applyAdaptiveVisibility)
 
   window.addEventListener('mnemosyne:practice-result', ({ detail }) => {
     const { objectId, masteryScore, nextReviewAt, reviewCount, correctCount, incorrectCount } = detail

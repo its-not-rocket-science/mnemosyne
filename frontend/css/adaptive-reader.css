@@ -200,7 +200,18 @@ body[data-reveal-known] [data-adaptively-quiet] {
 }
 
 [data-category-hidden] {
-  display: none !important;
+  background: none !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: text;
+  pointer-events: none;
+  filter: none;
+  outline: none !important;
+}
+
+[data-category-hidden]::before,
+[data-category-hidden]::after {
+  display: none;
 }
 
 .reader-ctrl__system-group--categories {
