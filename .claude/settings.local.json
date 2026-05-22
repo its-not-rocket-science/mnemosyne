@@ -108,7 +108,8 @@
       "Bash(Select-Object -Property FullName)",
       "Bash(Sort-Object FullName)",
       "Bash(Select-Object -Property Name, PSIsContainer)",
-      "Bash(Format-List)"
+      "Bash(Format-List)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\" -Recurse -Directory | ForEach-Object {$_.FullName} | Select-Object -First 60)"
     ]
   }
 }

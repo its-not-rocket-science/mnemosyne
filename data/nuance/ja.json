@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "language": "ja",
+  "sets": [
+    {
+      "concept": "wa_vs_ga",
+      "title": "は (wa) vs が (ga)",
+      "dimension": "information_structure",
+      "description": "は marks the topic — what the sentence is about. が marks the grammatical subject — what performs the action or bears the property. The choice changes information structure, not core grammar.",
+      "cefr_level": "B2",
+      "pairs": [
+        {
+          "sentence_a": "象は鼻が長い。",
+          "sentence_b": "象が来た。",
+          "label_a": "topic (what we're talking about)",
+          "label_b": "subject (who actually did it)",
+          "question": "Which sentence introduces the elephant as new, prominent information in the scene?",
+          "answer": "b",
+          "dimension": "information_structure",
+          "explanation": "「象は」(wa) establishes the elephant as the topic of a general statement — \"As for elephants, (their) noses are long.\" The elephant is background. 「象が」(ga) presents the elephant as the focal new subject — the very thing that came. が highlights the noun as the specific answer to an implicit \"who?\" question.",
+          "cefr_level": "B2"
+        },
+        {
+          "sentence_a": "田中さんは来た。",
+          "sentence_b": "田中さんが来た。",
+          "label_a": "about Tanaka (topic sentence)",
+          "label_b": "Tanaka specifically (contrastive / exhaustive)",
+          "question": "Which sentence implies Tanaka was the one who came (others may not have)?",
+          "answer": "b",
+          "dimension": "information_structure",
+          "explanation": "「田中さんは来た」(wa) says: speaking of Tanaka, he came — it doesn't exclude others. 「田中さんが来た」(ga) says: it was Tanaka who came — が has an exhaustive or contrastive nuance that singles out Tanaka as the specific person. This distinction is invisible in most English translations.",
+          "cefr_level": "B2"
+        }
+      ]
+    },
+    {
+      "concept": "te_iru_aspect",
+      "title": "〜ている — Ongoing Action vs Resultant State",
+      "dimension": "aspect",
+      "description": "〜ている has two main readings depending on the verb type: with activity verbs it marks ongoing action; with change-of-state verbs it marks the state that results from a completed change.",
+      "cefr_level": "B2",
+      "pairs": [
+        {
+          "sentence_a": "彼女は走っている。",
+          "sentence_b": "彼女は結婚している。",
+          "label_a": "ongoing activity",
+          "label_b": "resultant state",
+          "question": "Which sentence describes a permanent (or long-lasting) condition rather than an activity in progress?",
+          "answer": "b",
+          "dimension": "aspect",
+          "explanation": "「走っている」uses 走る (to run) — an activity verb. ている marks it as in progress: she is running right now. 「結婚している」uses 結婚する (to get married) — a change-of-state verb. ている marks the resulting state: she is married (the wedding happened, and the result persists). Same grammar, different aspect reading.",
+          "cefr_level": "B2"
+        }
+      ]
+    }
+  ]
+}

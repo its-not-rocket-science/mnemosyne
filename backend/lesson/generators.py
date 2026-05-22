@@ -58,11 +58,17 @@ import backend.lesson.formatters as fmt
 import backend.lesson.l10n as l10n
 from backend.lesson.context import LessonContext
 from backend.lesson.enrichment import LessonEnrichmentContext
+from backend.lesson.nuance_pairs import (
+    build_discrimination_drills,
+    get_nuance_sets_for_pattern,
+    get_nuance_sets_for_type,
+)
 from backend.lesson.practice import build_practice_activities
 from backend.lesson.providers import LessonProviders
 from backend.schemas.language import LessonMode
 from backend.schemas.lesson import (
     ContrastNote,
+    DiscriminationDrill,
     Drill,
     EquivalentConstruction,
     FillBlankDrill,
@@ -72,6 +78,7 @@ from backend.schemas.lesson import (
     MorphologyAxis,
     MorphologyParadigm,
     MultipleChoiceDrill,
+    NuanceSet,
     ParadigmCell,
     RecognitionDrill,
     ShadowingDrill,
@@ -1096,6 +1103,7 @@ def _build_grammar(b: _B) -> LessonResponse:
     usage        = b.lesson_data.get("usage") or ""
     contrast     = b.lesson_data.get("contrast") or ""
     surface_verb = b.lesson_data.get("surface_verb") or b.display_label
+    lang         = b.ctx.language_code or ""
 
     explanation = fmt.grammar_explanation(pattern, usage, b.ctx)
 
@@ -1110,16 +1118,23 @@ def _build_grammar(b: _B) -> LessonResponse:
     if usage:
         drills.append(RecognitionDrill(
             type="recognition",
-            statement=f"The pattern \u201c{pattern}\u201d is used for: {usage[:80]}{'...' if len(usage) > 80 else ''}",
+            statement=f"The pattern “{pattern}” is used for: {usage[:80]}{'...' if len(usage) > 80 else ''}",
             correct=True,
         ))
 
     if contrast:
         drills.append(RecognitionDrill(
             type="recognition",
-            statement=f"The pattern \u201c{pattern}\u201d can replace a related construction without any meaning difference.",
+            statement=f"The pattern “{pattern}” can replace a related construction without any meaning difference.",
             correct=False,
         ))
+
+    # Meaning-discrimination drills from curated minimal-pair data.
+    if lang:
+        drills.extend(build_discrimination_drills(lang, pattern_id=pattern_id))
+
+    # Nuance sets for the UI "Nuance" tab.
+    nuance_sets: list[NuanceSet] = get_nuance_sets_for_pattern(lang, pattern_id) if lang else []
 
     return LessonResponse(
         id=b.object_id,
@@ -1129,8 +1144,8 @@ def _build_grammar(b: _B) -> LessonResponse:
         fields=fields,
         examples=[surface_verb],
         drills=drills,
+        nuance_sets=nuance_sets,
     )
-
 
 def _build_nuance(b: _B) -> LessonResponse:
     """Lesson for an aspect, mood, or verb-type nuance observation."""
@@ -1139,11 +1154,14 @@ def _build_nuance(b: _B) -> LessonResponse:
     surface        = b.lesson_data.get("surface") or b.display_label
     note           = b.lesson_data.get("note") or ""
     contrast_tense = b.lesson_data.get("contrast_tense") or ""
+    lang           = b.ctx.language_code or ""
 
     _type_labels: dict[str, str] = {
-        "imperfect_aspect": "Imperfect aspect",
-        "subjunctive_mood": "Subjunctive mood",
-        "reflexive_verb":   "Reflexive / pronominal verb",
+        "imperfect_aspect":           "Imperfect aspect",
+        "subjunctive_mood":           "Subjunctive mood",
+        "reflexive_verb":             "Reflexive / pronominal verb",
+        "russian_aspect":             "Aspect",
+        "perfective_vs_imperfective": "Aspect",
     }
     type_label = _type_labels.get(nuance_type, nuance_type.replace("_", " ").title())
 
@@ -1164,16 +1182,23 @@ def _build_nuance(b: _B) -> LessonResponse:
     if note:
         drills.append(RecognitionDrill(
             type="recognition",
-            statement=f"\u201c{surface}\u201d ({type_label}) describes a completed, one-time past event.",
+            statement=f"“{surface}” ({type_label}) describes a completed, one-time past event.",
             correct=(nuance_type != "imperfect_aspect"),
         ))
 
     if contrast_tense:
         drills.append(FillBlankDrill(
             type="fill_blank",
-            prompt=f"The tense that contrasts with the imperfect for a single completed event is the \u2014\u2014\u2014.",
+            prompt=f"The tense that contrasts with the imperfect for a single completed event is the ———.",
             answer=contrast_tense,
         ))
+
+    # Meaning-discrimination drills from curated minimal-pair data.
+    if lang:
+        drills.extend(build_discrimination_drills(lang, nuance_type=nuance_type))
+
+    # Nuance sets for the UI "Nuance" tab.
+    nuance_sets: list[NuanceSet] = get_nuance_sets_for_type(lang, nuance_type) if lang else []
 
     return LessonResponse(
         id=b.object_id,
@@ -1183,8 +1208,8 @@ def _build_nuance(b: _B) -> LessonResponse:
         fields=fields,
         examples=[surface],
         drills=drills,
+        nuance_sets=nuance_sets,
     )
-
 
 def _build_case_agreement(b: _B) -> LessonResponse:
     """Lesson for a German-style case+gender+number agreement cluster."""

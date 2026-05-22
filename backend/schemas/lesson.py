@@ -96,9 +96,40 @@ class ShadowingDrill(BaseModel):
     text: str                   # text to read aloud
 
 
+class DiscriminationDrill(BaseModel):
+    """A meaning-discrimination drill: learner identifies the semantic or pragmatic
+    difference between two forms, sentences, or structures.
+
+    Designed to teach *why* native speakers choose one form instead of another —
+    not just which form is grammatically correct.
+    """
+    type: Literal["discrimination"]
+    concept: str
+    """Machine-readable concept ID (e.g. ``"preterite_vs_imperfect"``)."""
+    dimension: str
+    """Discriminating axis: ``"temporal"``, ``"aspect"``, ``"register"``,
+    ``"certainty"``, ``"implication"``, ``"formality"``, ``"information_structure"``."""
+    sentence_a: str
+    """First candidate sentence or form."""
+    sentence_b: str
+    """Second candidate sentence or form."""
+    question: str
+    """What the learner should identify (e.g. ``"Which describes a completed action?"``).
+    Phrased as an interpretive question, not a grammar label."""
+    answer: Literal["a", "b"]
+    """Which sentence best illustrates the stated dimension."""
+    label_a: str | None = None
+    """Brief semantic label for sentence A (e.g. ``"completed event"``)."""
+    label_b: str | None = None
+    """Brief semantic label for sentence B (e.g. ``"habitual past"``)."""
+    explanation: str = ""
+    """Full prose explanation revealed after the learner responds."""
+    cefr_level: str | None = None
+
+
 # Pydantic v2 discriminated union — serialises/deserialises via "type" field.
 Drill = Annotated[
-    MultipleChoiceDrill | FillBlankDrill | RecognitionDrill | ShadowingDrill,
+    MultipleChoiceDrill | FillBlankDrill | RecognitionDrill | ShadowingDrill | DiscriminationDrill,
     Field(discriminator="type"),
 ]
 
@@ -210,6 +241,54 @@ class EncounteredVocabularySummary(BaseModel):
     """``True`` when the word is in the top-1 000 most frequent for this language."""
 
 
+# ── Nuance discrimination models ─────────────────────────────────────────────
+
+
+class NuancePair(BaseModel):
+    """One minimal pair for meaning discrimination.
+
+    Two sentences that differ by a single grammatical choice, accompanied by
+    a question, labels, and an explanation that reveals the semantic stake.
+    """
+    sentence_a: str
+    sentence_b: str
+    label_a: str | None = None
+    """Brief semantic label for sentence A (e.g. ``"completed event"``)."""
+    label_b: str | None = None
+    """Brief semantic label for sentence B (e.g. ``"habitual past"``)."""
+    question: str
+    """Interpretive prompt: what to observe, not a grammar label."""
+    answer: Literal["a", "b"]
+    """Which sentence best illustrates the stated dimension."""
+    dimension: str
+    """Discriminating axis (``"temporal"``, ``"aspect"``, ``"certainty"``, …)."""
+    explanation: str
+    """Full prose explanation revealed after the learner responds."""
+    cefr_level: str | None = None
+
+
+class NuanceSet(BaseModel):
+    """A curated cluster of minimal pairs teaching one grammatical distinction.
+
+    Groups two or more ``NuancePair`` instances around a single concept
+    (e.g. *preterite vs imperfect*).  Rendered as an exploratory, non-quiz
+    section in the lesson UI so learners can compare sentences and develop
+    intuition about *why* native speakers choose one form instead of another.
+    """
+    concept: str
+    """Machine-readable concept ID (e.g. ``"preterite_vs_imperfect"``)."""
+    title: str
+    """Display title (e.g. ``"Preterite vs Imperfect"``)."""
+    dimension: str
+    """Primary discriminating axis for this set."""
+    description: str
+    """One sentence that explains the distinction for the learner."""
+    cefr_level: str = "B1"
+    grammar_concept: str | None = None
+    """Optional link to a ``GrammarRule.name`` for cross-referencing."""
+    pairs: list[NuancePair] = Field(default_factory=list)
+
+
 # ── Practice activities ───────────────────────────────────────────────────────
 
 
@@ -302,3 +381,11 @@ class LessonResponse(BaseModel):
 
     encountered_vocabulary: list[EncounteredVocabularySummary] = Field(default_factory=list)
     """Vocabulary items present in the lesson's context sentence(s)."""
+
+    nuance_sets: list[NuanceSet] = Field(default_factory=list)
+    """Curated minimal-pair clusters for meaning discrimination.
+
+    Each set targets one grammatical distinction (e.g. preterite vs imperfect)
+    and contains two or more sentence pairs that let the learner observe how
+    the same structural choice changes implication, tone, or temporal reading.
+    """
