@@ -25,7 +25,9 @@
     <link rel="stylesheet" href="./css/reading-experience-premium.css">
     <link rel="stylesheet" href="./css/reading-progressive.css">
     <link rel="stylesheet" href="./css/adaptive-reader.css">
+    <link rel="stylesheet" href="./css/review.css">
     <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./components/mnemosyne-review-pane.js"></script>
     <script type="module" src="./components/mnemosyne-top-nav.js"></script>
     <script type="module" src="./components/mnemosyne-filter-bar.js"></script>
     <script type="module" src="./components/mnemosyne-detail-pane.js"></script>
@@ -160,6 +162,27 @@
       -->
       <div id="main-content" class="app-shell__authenticated" hidden>
         <div class="pane-backdrop" id="pane-backdrop" aria-hidden="true"></div>
+
+        <!-- ── Review panel ──────────────────────────────────────────────────
+             Hidden until the user opens a review session.
+             mnemosyne-review-pane fetches and renders sentence review items.
+        -->
+        <section id="review-panel" aria-label="Sentence review session" hidden>
+          <mnemosyne-review-pane id="review-pane"></mnemosyne-review-pane>
+        </section>
+
+        <!-- ── Review quick-access bar ───────────────────────────────────────
+             Shown inside the authenticated shell so only signed-in users see it.
+             JS populates the due-count badge and wires the button.
+        -->
+        <div class="wrap" id="review-bar" style="padding-block-start:0.5rem" hidden>
+          <button type="button" id="open-review-btn" class="ghost-button review-quick-btn"
+                  aria-controls="review-panel"
+                  aria-expanded="false">
+            Review queue
+            <span id="review-due-badge" class="review-due-count" hidden aria-live="polite"></span>
+          </button>
+        </div>
 
         <!-- App body: left (FilterBar + TextPanel) + right (DetailPanel) -->
         <div class="app-shell__body">

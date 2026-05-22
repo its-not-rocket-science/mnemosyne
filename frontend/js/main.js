@@ -13,6 +13,7 @@ import {
   countPendingReviews,
 } from './offline.js'
 import { initUiLanguage, t, ti, currentUiLang, TYPE_LABELS_LONG_I18N } from './i18n.js'
+import { initReviewSession } from './review-session.js'
 import { openDetail, closeDetail } from './layout.js'
 import { API_BASE } from './config.js'
 import { buildLessonPipelinePayload, validateLessonPipelinePayload } from './lesson-pipeline.js'
@@ -2166,3 +2167,14 @@ async function _openDeepLink() {
 // ── Auth init ─────────────────────────────────────────────────────────────────
 
 initAuth()
+
+// ── Review session init (runs once #main-content becomes visible) ─────────────
+;(function () {
+  const mc = document.querySelector('#main-content')
+  if (!mc) return
+  function _maybeInit() {
+    if (!mc.hidden) initReviewSession()
+  }
+  _maybeInit()
+  new MutationObserver(_maybeInit).observe(mc, { attributes: true, attributeFilter: ['hidden'] })
+})()

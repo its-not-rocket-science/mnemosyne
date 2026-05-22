@@ -106,7 +106,9 @@
       "Bash(Select-Object -First 20)",
       "PowerShell(head *)",
       "Bash(Select-Object -Property FullName)",
-      "Bash(Sort-Object FullName)"
+      "Bash(Sort-Object FullName)",
+      "Bash(Select-Object -Property Name, PSIsContainer)",
+      "Bash(Format-List)"
     ]
   }
 }

@@ -1,0 +1,74 @@
+/* ── Review panel — light-DOM wrapper styles ────────────────────────────────
+   mnemosyne-review-pane handles its own shadow-DOM styles; this sheet
+   handles the *container* that shows/hides the component in the page layout.
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* ── Trigger button + badge ─────────────────────────────────────────────────── */
+
+.review-trigger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.review-badge {
+  /* Circular count pill; hidden when count is 0 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 1.25rem;
+  block-size: 1.25rem;
+  padding-inline: 0.25rem;
+  border-radius: 999px;
+  background: var(--accent, #3557ff);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.review-badge[hidden] { display: none; }
+
+/* ── Review panel container ─────────────────────────────────────────────────── */
+
+#review-panel {
+  padding-block: 1rem;
+  padding-inline: var(--wrap-padding, 1rem);
+  max-inline-size: var(--wrap-max, 56rem);
+  margin-inline: auto;
+}
+
+#review-panel[hidden] { display: none; }
+
+/* Smooth entrance when shown (respects reduced motion). */
+@media (prefers-reduced-motion: no-preference) {
+  #review-panel:not([hidden]) {
+    animation: review-panel-in 0.2s ease both;
+  }
+}
+
+@keyframes review-panel-in {
+  from { opacity: 0; translate: 0 -0.5rem; }
+  to   { opacity: 1; translate: 0 0; }
+}
+
+/* ── "Review" quick-access button in the main authenticated area ─────────────── */
+
+.review-quick-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* Inherits ghost-button base styles from components.css */
+}
+
+.review-quick-btn .review-due-count {
+  font-size: 0.75rem;
+  background: var(--accent, #3557ff);
+  color: white;
+  border-radius: 999px;
+  padding: 0.05em 0.45em;
+  font-weight: 700;
+}
+
+.review-quick-btn .review-due-count[hidden] { display: none; }
