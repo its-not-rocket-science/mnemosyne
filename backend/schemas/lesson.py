@@ -32,7 +32,7 @@ from __future__ import annotations
 
 from typing import Annotated, Any, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 from backend.schemas.language import LessonMode
 from backend.schemas.parse import LearnableType
@@ -164,6 +164,8 @@ class EquivalentConstruction(BaseModel):
     Spanish *estar* + gerund alongside the simple present for ongoing
     actions, or the Latin periphrastic future alongside the synthetic form.
     """
+    model_config = ConfigDict(populate_by_name=True)
+
     construction: str
     """The equivalent form or construction string."""
     language_code: str | None = None
@@ -171,7 +173,7 @@ class EquivalentConstruction(BaseModel):
     ``None`` = same language as the lesson."""
     note: str | None = None
     """When or why to use this construction."""
-    register: str | None = None
+    usage_register: str | None = Field(None, alias="register")
     """Stylistic register: ``"formal"``, ``"informal"``, ``"colloquial"``, …"""
 
 
