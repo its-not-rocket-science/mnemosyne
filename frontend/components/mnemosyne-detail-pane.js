@@ -5,6 +5,7 @@ const TYPE_META = {
   vocabulary:      { icon: '📗', labelKey: 'dp_type_vocabulary',     ref: 'oklch(0.50 0.20 142)' },
   conjugation:     { icon: '🔧', labelKey: 'dp_type_verb',            ref: 'oklch(0.50 0.20 240)' },
   agreement:       { icon: '🧩', labelKey: 'dp_type_agreement',       ref: 'oklch(0.50 0.15  50)' },
+  inflection:      { icon: '🧬', labelKey: 'dp_type_inflection',      ref: 'oklch(0.50 0.18 160)' },
   idiom:           { icon: '💬', labelKey: 'dp_type_idiom',            ref: 'oklch(0.50 0.20 300)' },
   grammar:         { icon: '📐', labelKey: 'dp_type_grammar',          ref: 'oklch(0.50 0.15  90)' },
   nuance:          { icon: '🎭', labelKey: 'dp_type_nuance',           ref: 'oklch(0.50 0.20  20)' },

@@ -612,6 +612,7 @@
 }
 .reader-annotation--conjugation,
 .reader-annotation--agreement,
+.reader-annotation--inflection,
 .reader-annotation--grammar {
   --_annotation-color: var(--ann-grammar);
   background: color-mix(in srgb, var(--_annotation-color) 14%, transparent);
