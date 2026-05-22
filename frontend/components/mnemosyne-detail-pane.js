@@ -165,6 +165,7 @@ export class MnemosyneDetailPane extends HTMLElement {
   #vocabTranslationFetched        = false
   #sentenceTranslationFetched     = false
   #explanationTranslationFetched  = false
+  #matchedVariant = ''
 
   static ALL_TABS = [
     { id: 'explanation',  labelKey: 'dp_tab_explanation',  alwaysShow: true  },
@@ -477,6 +478,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     })
 
     const matchedVariant = ld.matched_variant || lesson.examples?.[0] || ''
+    this.#matchedVariant = matchedVariant
     const canonical      = ld.canonical_form  || lesson.examples?.[0] || ''
     const matchType      = ld.match_type || ''
     // Use match_type field (authoritative) rather than surface string comparison,
@@ -1273,16 +1275,53 @@ export class MnemosyneDetailPane extends HTMLElement {
     const { language, uiLang } = this.#config
     if (!sentenceText || !uiLang || uiLang === language) return
     this.#sentenceTranslationFetched = true
-    const result = await this.#onTranslate(sentenceText, language, uiLang)
+
+    // Wrap the matched phrase in the source sentence with rare Unicode bracket
+    // markers before sending to MT. Most MT engines pass through characters
+    // they cannot translate, so the markers survive and identify the phrase
+    // boundary in the output — giving us the contextual translation of the
+    // exact phrase rather than an out-of-context word translation.
+    const phrase = this.#matchedVariant
+    const OPEN = '⟪'  // ⟪  Mathematical Left Double Angle Bracket
+    const CLOSE = '⟫' // ⟫  Mathematical Right Double Angle Bracket
+    let markedSentence = sentenceText
+    let useMarkers = false
+    if (phrase) {
+      const re = new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i')
+      if (re.test(sentenceText)) {
+        markedSentence = sentenceText.replace(re, m => `${OPEN}${m}${CLOSE}`)
+        useMarkers = true
+      }
+    }
+
+    const result = await this.#onTranslate(markedSentence, language, uiLang)
     if (!result) return
+
     const row  = this.shadowRoot.querySelector('#dp-panel-context .pane__sentence-translation-row')
     const text = this.shadowRoot.querySelector('#dp-panel-context .pane__sentence-translation-text')
     const attr = this.shadowRoot.querySelector('#dp-panel-context .pane__sentence-translation-attribution')
-    if (row && text) {
-      text.textContent = result.text
-      if (attr && result.attribution) attr.textContent = result.attribution
-      row.hidden = false
+    if (!row || !text) return
+
+    let translatedText = result.text
+    let highlight = ''
+
+    if (useMarkers) {
+      // Extract the phrase the MT placed between the markers.
+      const markerRe = new RegExp(`⟪([^⟫]*)⟫`)
+      const m = markerRe.exec(translatedText)
+      if (m) {
+        highlight = m[1]
+        // Remove markers, keep extracted phrase in place.
+        translatedText = translatedText.slice(0, m.index) + m[1] + translatedText.slice(m.index + m[0].length)
+      } else {
+        // Markers lost — strip any stray marker chars and degrade gracefully.
+        translatedText = translatedText.replace(/[⟪⟫]/g, '')
+      }
     }
+
+    highlightPhrase(text, translatedText, highlight)
+    if (attr && result.attribution) attr.textContent = result.attribution
+    row.hidden = false
   }
 
   _wireEvents(matchedVariant, canonical, sentenceText, isNonCanonical) {
