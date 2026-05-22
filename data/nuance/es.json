@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "language": "es",
+  "sets": [
+    {
+      "concept": "preterite_vs_imperfect",
+      "title": "Preterite vs Imperfect",
+      "dimension": "temporal",
+      "description": "Both are past tenses, but the choice encodes how the speaker frames the action: as a bounded event (preterite) or as ongoing, habitual, or background state (imperfect).",
+      "cefr_level": "B1",
+      "grammar_concept": "preterite",
+      "pairs": [
+        {
+          "sentence_a": "Ayer comí una manzana.",
+          "sentence_b": "De niño, comía manzanas todos los días.",
+          "label_a": "completed event",
+          "label_b": "habitual past",
+          "question": "Which sentence describes a single finished action?",
+          "answer": "a",
+          "dimension": "temporal",
+          "explanation": "\"Comí\" (preterite) presents the eating as a discrete, completed event at a specific past moment. \"Comía\" (imperfect) presents it as a recurring habit — not a single event but an ongoing pattern. Same verb, different viewpoints on time.",
+          "cefr_level": "B1"
+        },
+        {
+          "sentence_a": "Cuando entré, María leía un libro.",
+          "sentence_b": "Cuando entré, María leyó un libro.",
+          "label_a": "background action",
+          "label_b": "two sequential events",
+          "question": "Which sentence implies María was already in the middle of reading when you arrived?",
+          "answer": "a",
+          "dimension": "temporal",
+          "explanation": "\"Leía\" (imperfect) sets a background scene — the reading was already in progress. \"Leyó\" (preterite) presents a second completed event, as if entering and reading were sequential steps. The imperfect is the camera that pans across the scene; the preterite is the plot point.",
+          "cefr_level": "B1"
+        },
+        {
+          "sentence_a": "El verano pasado, visitamos tres países.",
+          "sentence_b": "Cada verano, visitábamos a los abuelos.",
+          "label_a": "bounded trip",
+          "label_b": "recurring custom",
+          "question": "Which sentence describes something that happened repeatedly over many years?",
+          "answer": "b",
+          "dimension": "temporal",
+          "explanation": "\"Visitamos\" (preterite) counts three countries as a completed tally. \"Visitábamos\" (imperfect) describes an annual ritual — no single occasion, but a pattern that stretched across years.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "ser_vs_estar",
+      "title": "Ser vs Estar",
+      "dimension": "ontological",
+      "description": "Both translate as \"to be\", but ser expresses inherent identity or permanent categories, while estar expresses condition, state, or location — things that can change.",
+      "cefr_level": "A2",
+      "grammar_concept": "ser_copula",
+      "pairs": [
+        {
+          "sentence_a": "El café es frío.",
+          "sentence_b": "El café está frío.",
+          "label_a": "defining property",
+          "label_b": "current condition",
+          "question": "Which sentence says the coffee has been left to cool down (not normally cold)?",
+          "answer": "b",
+          "dimension": "ontological",
+          "explanation": "\"Es frío\" (ser) declares cold as an inherent, defining quality — like a cold brew. \"Está frío\" (estar) reports a current condition: the coffee was once hot and has since cooled. The estar sentence implies change; the ser sentence implies nature.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "Es aburrido.",
+          "sentence_b": "Está aburrido.",
+          "label_a": "boring person",
+          "label_b": "bored person",
+          "question": "Which sentence means the person is experiencing boredom right now?",
+          "answer": "b",
+          "dimension": "ontological",
+          "explanation": "\"Es aburrido\" (ser) characterizes the person — they are boring by nature. \"Está aburrido\" (estar) reports an emotional state — they are bored at this moment. The same adjective carries opposite meanings depending on the copula.",
+          "cefr_level": "A2"
+        }
+      ]
+    },
+    {
+      "concept": "subjunctive_vs_indicative",
+      "title": "Subjunctive vs Indicative",
+      "dimension": "certainty",
+      "description": "The indicative reports facts; the subjunctive encodes doubt, desire, emotion, or unreality. The choice changes what the speaker claims about the world.",
+      "cefr_level": "B2",
+      "grammar_concept": "subjunctive_mood",
+      "pairs": [
+        {
+          "sentence_a": "Busco un apartamento que tenga balcón.",
+          "sentence_b": "Busco el apartamento que tiene balcón.",
+          "label_a": "hypothetical (may not exist)",
+          "label_b": "specific known place",
+          "question": "Which speaker has a specific apartment in mind?",
+          "answer": "b",
+          "dimension": "certainty",
+          "explanation": "\"Tenga\" (subjunctive) expresses that the apartment is not yet identified — it may not even exist. \"Tiene\" (indicative) signals the speaker knows which apartment. One word shifts the meaning from searching for any candidate to referring to a specific one.",
+          "cefr_level": "B2"
+        },
+        {
+          "sentence_a": "Espero que venga.",
+          "sentence_b": "Creo que viene.",
+          "label_a": "hope / wish",
+          "label_b": "belief / expectation",
+          "question": "Which sentence expresses a personal hope rather than a belief?",
+          "answer": "a",
+          "dimension": "certainty",
+          "explanation": "\"Espero que venga\" (subjunctive) encodes desire — the speaker wants the person to come but cannot assert it. \"Creo que viene\" (indicative) encodes a belief — the speaker thinks it will happen. Hope vs. prediction.",
+          "cefr_level": "B2"
+        }
+      ]
+    },
+    {
+      "concept": "por_vs_para",
+      "title": "Por vs Para",
+      "dimension": "purpose_cause",
+      "description": "Both translate loosely as \"for\", but por looks backward (cause, exchange, duration, agent) while para looks forward (purpose, recipient, destination, deadline).",
+      "cefr_level": "B2",
+      "pairs": [
+        {
+          "sentence_a": "Lo hice por ti.",
+          "sentence_b": "Lo hice para ti.",
+          "label_a": "because of you / on your behalf",
+          "label_b": "intended for you",
+          "question": "Which sentence means you were the reason or motivation for the action?",
+          "answer": "a",
+          "dimension": "purpose_cause",
+          "explanation": "\"Por ti\" (por) means because of you — you were the cause or the pressure that motivated it. \"Para ti\" (para) means intended for you — you are the recipient or beneficiary. Same words, opposite directions of time and agency.",
+          "cefr_level": "B2"
+        },
+        {
+          "sentence_a": "Estudia por el examen.",
+          "sentence_b": "Estudia para el examen.",
+          "label_a": "studying because of exam pressure",
+          "label_b": "studying in preparation for the exam",
+          "question": "Which sentence implies the exam is an upcoming goal?",
+          "answer": "b",
+          "dimension": "purpose_cause",
+          "explanation": "\"Para el examen\" (para) frames the exam as a future target — all effort is aimed at it. \"Por el examen\" (por) suggests the exam is a cause of stress that drives the studying. Goal-directed vs. cause-driven.",
+          "cefr_level": "B2"
+        }
+      ]
+    }
+  ]
+}

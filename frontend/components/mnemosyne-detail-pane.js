@@ -172,6 +172,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     { id: 'form',         labelKey: 'dp_tab_form',         alwaysShow: false },
     { id: 'paradigm',     labelKey: 'dp_tab_paradigm',     alwaysShow: false },
     { id: 'equivalents',  labelKey: 'dp_tab_equivalents',  alwaysShow: false },
+    { id: 'nuance',       labelKey: 'dp_tab_nuance',       alwaysShow: false },
     { id: 'memory',       labelKey: 'dp_tab_memory',       alwaysShow: false },
     { id: 'origins',      labelKey: 'dp_tab_origins',      alwaysShow: false },
     { id: 'context',      labelKey: 'dp_tab_context',      alwaysShow: true  },
@@ -460,6 +461,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     const hasForm       = (lesson.morphology_axes?.length > 0 || lesson.contrasts?.length > 0)
     const hasParadigm   = lesson.paradigms?.length > 0
     const hasEquivs     = lesson.equivalents?.length > 0
+    const hasNuance     = Array.isArray(lesson.nuance_sets) && lesson.nuance_sets.length > 0
     const hasMemory     = lesson.encountered_vocabulary?.length > 0
 
     // Depth controls which tabs are exposed.
@@ -469,6 +471,7 @@ export class MnemosyneDetailPane extends HTMLElement {
       if (tab.id === 'form')         return hasForm
       if (tab.id === 'paradigm')     return hasParadigm
       if (tab.id === 'equivalents')  return hasEquivs
+      if (tab.id === 'nuance')       return hasNuance
       if (tab.id === 'memory')       return hasMemory
       if (tab.id === 'origins')      return depthIdx >= 1 && hasOrigins
       if (tab.id === 'context')      return depthIdx >= 1
@@ -523,6 +526,7 @@ export class MnemosyneDetailPane extends HTMLElement {
           ${hasForm      ? this._htmlFormPanel(lesson, dir)       : ''}
           ${hasParadigm  ? this._htmlParadigmPanel(lesson, dir)   : ''}
           ${hasEquivs    ? this._htmlEquivalentsPanel(lesson)     : ''}
+          ${hasNuance    ? this._htmlNuancePanel(lesson, dir)     : ''}
           ${hasMemory    ? this._htmlMemoryPanel(lesson)          : ''}
           ${depthIdx >= 1 && hasOrigins  ? this._htmlOriginsPanel(ld, isNonCanonical, Boolean(ld.source_text), matchType) : ''}
           ${depthIdx >= 1               ? this._htmlContextPanel(sentenceText, language, dir, matchedVariant) : ''}
@@ -826,6 +830,97 @@ export class MnemosyneDetailPane extends HTMLElement {
           <p class="pane__muted">${esc(tr('dp_equivalents_desc', 'Alternative ways to express the same meaning or function.'))}</p>
           ${cards}
         </section>
+      </section>
+    `
+  }
+
+  // ── Nuance tab ───────────────────────────────────────────────────────────────
+  // Renders curated minimal-pair clusters for meaning discrimination.
+  // Exploratory — not scored as right/wrong until the learner chooses,
+  // then the explanation reveals.
+
+  _htmlNuancePanel(lesson, dir) {
+    const sets     = Array.isArray(lesson.nuance_sets) ? lesson.nuance_sets : []
+    const language = this.#config?.language || ''
+    const langAttr = language ? `lang="${esc(language)}"` : ''
+    const dirAttr  = dir && dir !== 'ltr' ? `dir="${esc(dir)}"` : ''
+
+    const DIMENSION_LABELS = {
+      temporal:              'temporal interpretation',
+      aspect:                'aspect',
+      ontological:           'identity vs condition',
+      certainty:             'certainty / mood',
+      purpose_cause:         'purpose vs cause',
+      motion_vs_location:    'motion vs location',
+      formality:             'formality',
+      information_structure: 'information structure',
+      register:              'register',
+      implication:           'implication',
+    }
+
+    const setsHtml = sets.map((ns, si) => {
+      const dimLabel = DIMENSION_LABELS[ns.dimension] || ns.dimension.replace(/_/g, ' ')
+      const pairsHtml = (ns.pairs || []).map((pair, pi) => /* html */`
+        <article
+          class="pane__nuance-pair"
+          data-set-index="${si}"
+          data-pair-index="${pi}"
+          data-answer="${esc(pair.answer)}"
+          aria-labelledby="dp-np-${si}-${pi}-q"
+        >
+          <p class="pane__nuance-question" id="dp-np-${si}-${pi}-q">${esc(pair.question)}</p>
+          <div class="pane__nuance-choices" role="group" aria-labelledby="dp-np-${si}-${pi}-q">
+            <button
+              class="pane__nuance-choice"
+              type="button"
+              data-choice="a"
+              aria-describedby="dp-np-${si}-${pi}-a"
+            >
+              <span class="pane__nuance-choice-label" aria-hidden="true">A</span>
+              <span class="pane__nuance-sentence" ${langAttr} ${dirAttr} id="dp-np-${si}-${pi}-a">${esc(pair.sentence_a)}</span>
+              ${pair.label_a ? `<span class="pane__nuance-hint" aria-hidden="true">${esc(pair.label_a)}</span>` : ''}
+            </button>
+            <button
+              class="pane__nuance-choice"
+              type="button"
+              data-choice="b"
+              aria-describedby="dp-np-${si}-${pi}-b"
+            >
+              <span class="pane__nuance-choice-label" aria-hidden="true">B</span>
+              <span class="pane__nuance-sentence" ${langAttr} ${dirAttr} id="dp-np-${si}-${pi}-b">${esc(pair.sentence_b)}</span>
+              ${pair.label_b ? `<span class="pane__nuance-hint" aria-hidden="true">${esc(pair.label_b)}</span>` : ''}
+            </button>
+          </div>
+          <div class="pane__nuance-reveal" hidden>
+            <p class="pane__nuance-explanation">${esc(pair.explanation)}</p>
+          </div>
+          <p class="pane__nuance-feedback" aria-live="polite" aria-atomic="true"></p>
+        </article>
+      `).join('')
+
+      return /* html */`
+        <section class="pane__nuance-set pane__subsection" aria-labelledby="dp-ns-${si}-h">
+          <h3 class="pane__section-heading" id="dp-ns-${si}-h">${esc(ns.title)}</h3>
+          <div class="pane__nuance-meta">
+            <span class="pane__nuance-dim-badge">${esc(dimLabel)}</span>
+            ${ns.cefr_level ? `<span class="pane__nuance-cefr">${esc(ns.cefr_level)}</span>` : ''}
+          </div>
+          <p class="pane__muted">${esc(ns.description)}</p>
+          ${pairsHtml}
+        </section>
+      `
+    }).join('')
+
+    return /* html */`
+      <section
+        id="dp-panel-nuance"
+        role="tabpanel"
+        aria-labelledby="dp-tab-nuance"
+        class="pane__panel"
+        hidden
+      >
+        <p class="pane__muted pane__nuance-intro">${esc(tr('dp_nuance_intro', 'Observe what changes when a native speaker chooses one form instead of another. Select the sentence that fits each description, then read the explanation.'))}</p>
+        ${setsHtml}
       </section>
     `
   }
@@ -1654,6 +1749,56 @@ export class MnemosyneDetailPane extends HTMLElement {
     if (noteInput) {
       noteInput.value = localStorage.getItem(`mn-note-${lesson.id}`) ?? ''
     }
+
+    // Nuance pair choice buttons — reveal explanation after selection.
+    this.shadowRoot.querySelectorAll('.pane__nuance-pair').forEach((pairEl) => {
+      const feedback  = pairEl.querySelector('.pane__nuance-feedback')
+      const reveal    = pairEl.querySelector('.pane__nuance-reveal')
+      const correct   = pairEl.dataset.answer
+      let answered    = false
+
+      pairEl.querySelectorAll('.pane__nuance-choice').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          if (answered) return
+          answered = true
+          const chosen  = btn.dataset.choice
+          const isRight = chosen === correct
+
+          pairEl.querySelectorAll('.pane__nuance-choice').forEach((b) => {
+            b.disabled = true
+            if (b.dataset.choice === correct) b.classList.add('pane__nuance-choice--correct')
+            else b.classList.add('pane__nuance-choice--wrong')
+          })
+
+          if (reveal) reveal.hidden = false
+
+          if (feedback) {
+            feedback.textContent = ''
+            queueMicrotask(() => {
+              feedback.textContent = isRight
+                ? tr('dp_nuance_correct', 'Right — read the explanation below.')
+                : tr('dp_nuance_wrong',   'Not quite — read the explanation to see why.')
+            })
+          }
+
+          this.dispatchEvent(new CustomEvent('pane-practice-check', {
+            bubbles: true,
+            composed: true,
+            detail: {
+              type: 'nuance_discrimination',
+              correct: isRight,
+              answeredAt: new Date().toISOString(),
+              lesson,
+              language,
+              objectId: lesson.id,
+              term: lesson.lesson_data?.nuance_type || lesson.title,
+              attempts: 1,
+            },
+          }))
+          this._updatePracticeScore(isRight)
+        })
+      })
+    })
 
     this.#wireDrag()
   }
@@ -2829,6 +2974,149 @@ export class MnemosyneDetailPane extends HTMLElement {
         background: color-mix(in oklch, oklch(0.72 0.18 55) 10%, Canvas);
         color: color-mix(in oklch, oklch(0.72 0.18 55) 80%, CanvasText);
         border-color: color-mix(in oklch, oklch(0.72 0.18 55) 30%, Canvas);
+      }
+
+      /* ── Nuance pairs (Nuance tab) ───────────────────────────────────────────── */
+      .pane__nuance-intro {
+        margin-block-end: 0.75rem;
+      }
+
+      .pane__nuance-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        align-items: center;
+        margin-block-end: 0.5rem;
+      }
+
+      .pane__nuance-dim-badge {
+        display: inline-flex;
+        align-items: center;
+        font-size: 0.625rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        padding: 0.15rem 0.5rem;
+        border-radius: 999px;
+        background: color-mix(in oklch, var(--detail-accent, oklch(0.50 0.20 20)) 12%, Canvas);
+        color: color-mix(in oklch, var(--detail-accent, oklch(0.50 0.20 20)) 85%, CanvasText);
+        border: 1px solid color-mix(in oklch, var(--detail-accent, oklch(0.50 0.20 20)) 25%, Canvas);
+      }
+
+      .pane__nuance-cefr {
+        font-size: 0.625rem;
+        font-weight: 600;
+        color: var(--muted);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 0.1rem 0.4rem;
+      }
+
+      .pane__nuance-pair {
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+        margin-block: 0.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        background: color-mix(in oklch, Canvas 96%, var(--detail-accent, oklch(0.50 0.20 20)));
+      }
+
+      .pane__nuance-question {
+        margin: 0;
+        font-size: 0.9rem;
+        font-weight: 600;
+        line-height: 1.45;
+      }
+
+      .pane__nuance-choices {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+      }
+
+      @media (max-width: 380px) {
+        .pane__nuance-choices { grid-template-columns: 1fr; }
+      }
+
+      .pane__nuance-choice {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        padding: 0.6rem 0.75rem;
+        border: 1.5px solid var(--border);
+        border-radius: 0.4rem;
+        background: Canvas;
+        cursor: pointer;
+        text-align: start;
+        transition: border-color 0.12s, background 0.12s;
+        min-block-size: 2.75rem;
+        color: inherit;
+      }
+
+      .pane__nuance-choice:hover:not(:disabled) {
+        border-color: color-mix(in oklch, var(--detail-accent, oklch(0.50 0.20 20)) 55%, Canvas);
+        background: color-mix(in oklch, var(--detail-accent, oklch(0.50 0.20 20)) 5%, Canvas);
+      }
+
+      .pane__nuance-choice:focus-visible {
+        outline: 2px solid var(--detail-accent, oklch(0.50 0.20 20));
+        outline-offset: 2px;
+      }
+
+      .pane__nuance-choice--correct {
+        border-color: oklch(0.52 0.18 142);
+        background: color-mix(in oklch, oklch(0.52 0.18 142) 8%, Canvas);
+      }
+
+      .pane__nuance-choice--wrong {
+        border-color: oklch(0.52 0.20 25);
+        background: color-mix(in oklch, oklch(0.52 0.20 25) 6%, Canvas);
+        opacity: 0.75;
+      }
+
+      .pane__nuance-choice-label {
+        font-size: 0.6rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--muted);
+        align-self: flex-start;
+      }
+
+      .pane__nuance-sentence {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        overflow-wrap: break-word;
+      }
+
+      .pane__nuance-hint {
+        font-size: 0.7rem;
+        font-style: italic;
+        color: var(--muted);
+        line-height: 1.3;
+      }
+
+      .pane__nuance-reveal {
+        margin-block-start: 0.25rem;
+        padding: 0.6rem 0.75rem;
+        border-inline-start: 3px solid oklch(0.52 0.18 142);
+        background: color-mix(in oklch, oklch(0.52 0.18 142) 5%, Canvas);
+        border-radius: 0 0.35rem 0.35rem 0;
+      }
+
+      .pane__nuance-explanation {
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.6;
+      }
+
+      .pane__nuance-feedback {
+        margin: 0;
+        font-size: 0.8125rem;
+        min-block-size: 1.2em;
+        color: var(--muted);
       }
 
       /* ── Context vocabulary (Memory tab) ─────────────────────────────────────── */

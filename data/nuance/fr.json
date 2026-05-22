@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "language": "fr",
+  "sets": [
+    {
+      "concept": "passe_compose_vs_imparfait",
+      "title": "Passé Composé vs Imparfait",
+      "dimension": "temporal",
+      "description": "Passé composé presents past events as completed and countable; imparfait presents them as ongoing, habitual, or as background. The distinction is about viewpoint, not distance in time.",
+      "cefr_level": "B1",
+      "grammar_concept": "passe_compose",
+      "pairs": [
+        {
+          "sentence_a": "Il pleuvait quand je suis sorti.",
+          "sentence_b": "Il a plu et je suis sorti.",
+          "label_a": "rain as background scene",
+          "label_b": "rain then departure (sequence)",
+          "question": "Which sentence says it was already raining when you stepped out?",
+          "answer": "a",
+          "dimension": "temporal",
+          "explanation": "\"Pleuvait\" (imparfait) sets the weather as a continuous background — it was already raining, and into that scene you stepped out. \"A plu\" (passé composé) makes the rain a discrete event in sequence before leaving. Imparfait = backdrop; passé composé = plot point.",
+          "cefr_level": "B1"
+        },
+        {
+          "sentence_a": "Quand j'étais enfant, je lisais beaucoup.",
+          "sentence_b": "Hier, j'ai lu un roman entier.",
+          "label_a": "childhood habit",
+          "label_b": "single completed achievement",
+          "question": "Which sentence describes a specific day's accomplishment?",
+          "answer": "b",
+          "dimension": "temporal",
+          "explanation": "\"Lisais\" (imparfait) describes a habit across an indefinite stretch of childhood — no single event, just a pattern. \"Ai lu\" (passé composé) pins a concrete completion to yesterday — one book, one day, fully read.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "subjunctif_vs_indicatif",
+      "title": "Subjonctif vs Indicatif",
+      "dimension": "certainty",
+      "description": "The indicatif reports facts and expectations; the subjonctif encodes doubt, wish, necessity, or attitude. The governing verb or expression determines which mood follows.",
+      "cefr_level": "B2",
+      "pairs": [
+        {
+          "sentence_a": "Je pense qu'il vient.",
+          "sentence_b": "Je ne pense pas qu'il vienne.",
+          "label_a": "confident expectation",
+          "label_b": "doubt / negation triggers subjonctif",
+          "question": "Which sentence expresses doubt about his coming?",
+          "answer": "b",
+          "dimension": "certainty",
+          "explanation": "\"Vient\" (indicatif) follows an affirmative penser and reports a likely fact. \"Vienne\" (subjonctif) follows a negated penser — doubt is introduced, and French marks that doubt morphologically. Negating a verb of thought often shifts its complement into subjonctif.",
+          "cefr_level": "B2"
+        },
+        {
+          "sentence_a": "Il faut qu'elle parte.",
+          "sentence_b": "Il est certain qu'elle part.",
+          "label_a": "necessity",
+          "label_b": "factual certainty",
+          "question": "Which sentence states a fact about her departure?",
+          "answer": "b",
+          "dimension": "certainty",
+          "explanation": "\"Parte\" (subjonctif) follows il faut — necessity does not assert the event as real, only as required. \"Part\" (indicatif) follows il est certain — certainty asserts the event as real. Subjonctif = world as it should be; indicatif = world as it is.",
+          "cefr_level": "B2"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "language": "de",
+  "sets": [
+    {
+      "concept": "two_way_prepositions",
+      "title": "Accusative vs Dative with Two-Way Prepositions",
+      "dimension": "motion_vs_location",
+      "description": "Prepositions like in, an, auf take accusative for directed motion (where to?) and dative for static location (where?). Same preposition, completely different meaning.",
+      "cefr_level": "B1",
+      "pairs": [
+        {
+          "sentence_a": "Sie legt das Buch auf den Tisch.",
+          "sentence_b": "Das Buch liegt auf dem Tisch.",
+          "label_a": "movement onto (accusative)",
+          "label_b": "resting on (dative)",
+          "question": "Which sentence describes where something already is?",
+          "answer": "b",
+          "dimension": "motion_vs_location",
+          "explanation": "\"Auf den Tisch\" (accusative) follows a motion verb (legen) — the book is being directed to the table. \"Auf dem Tisch\" (dative) follows a state verb (liegen) — the book is already there. Accusative answers \"where to?\"; dative answers \"where?\".",
+          "cefr_level": "B1"
+        },
+        {
+          "sentence_a": "Er geht in die Küche.",
+          "sentence_b": "Er kocht in der Küche.",
+          "label_a": "moving into",
+          "label_b": "located in",
+          "question": "Which sentence describes being already inside the kitchen?",
+          "answer": "b",
+          "dimension": "motion_vs_location",
+          "explanation": "\"In die Küche\" (accusative) marks entry — direction of movement. \"In der Küche\" (dative) marks position — already inside. The verb (gehen vs. kochen) drives the choice, but you can use the case itself to check: if you're asking \"where to?\" use accusative; \"where?\" use dative.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "konjunktiv_ii_usage",
+      "title": "Konjunktiv II — Hypothetical & Polite",
+      "dimension": "certainty",
+      "description": "Konjunktiv II marks statements as counterfactual or politely distanced from reality. It is the key register marker for hypothesis and soft requests in German.",
+      "cefr_level": "B2",
+      "pairs": [
+        {
+          "sentence_a": "Wenn ich Zeit habe, komme ich.",
+          "sentence_b": "Wenn ich Zeit hätte, käme ich.",
+          "label_a": "genuine possibility",
+          "label_b": "hypothetical / unlikely",
+          "question": "Which sentence implies the speaker probably won't have time?",
+          "answer": "b",
+          "dimension": "certainty",
+          "explanation": "\"Habe / komme\" (indicative) treats the time as a real possibility — if the condition is met, the visit happens. \"Hätte / käme\" (Konjunktiv II) distances the speaker from reality — the speaker signals the condition is unlikely or imaginary. Same structure, opposite epistemic stance.",
+          "cefr_level": "B2"
+        },
+        {
+          "sentence_a": "Können Sie mir helfen?",
+          "sentence_b": "Könnten Sie mir helfen?",
+          "label_a": "direct question",
+          "label_b": "polite / softened request",
+          "question": "Which version is more formal and polite?",
+          "answer": "b",
+          "dimension": "formality",
+          "explanation": "\"Können\" (indicative) asks directly — it can feel abrupt. \"Könnten\" (Konjunktiv II) adds distance and deference — the speaker is asking hypothetically, which in German signifies politeness. This is the same mechanism as English \"could you\" vs \"can you\".",
+          "cefr_level": "B2"
+        }
+      ]
+    }
+  ]
+}
