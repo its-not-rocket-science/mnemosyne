@@ -509,6 +509,80 @@ class GrammarRule(Base):
     created_at:  Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
 
 
+class SentenceReviewItemRow(Base):
+    """One mined review item anchored to a specific sentence.
+
+    The uniqueness constraint (sentence_id, item_type, target_span) makes
+    mining idempotent — re-mining the same sentence produces no duplicates.
+
+    ``target_object_ids`` is a JSON list of canonical-object UUIDs involved in
+    this item (usually one, occasionally two for discrimination items).  No FK
+    constraint so items survive object-row deletions without breaking reviews.
+    """
+    __tablename__ = "sentence_review_items"
+    __table_args__ = (
+        UniqueConstraint("sentence_id", "item_type", "target_span", name="uq_sentence_review_item"),
+    )
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    sentence_id: Mapped[str] = mapped_column(String(36), ForeignKey("sentences.id"), nullable=False, index=True)
+    language: Mapped[str] = mapped_column(String(10), nullable=False, index=True)
+
+    #: "cloze" | "chunk_recall" | "grammar_transform" | "meaning_discrimination"
+    item_type: Mapped[str] = mapped_column(String(30), nullable=False)
+
+    #: Human-readable prompt displayed to the learner.
+    prompt: Mapped[str] = mapped_column(Text, nullable=False)
+
+    #: The word/phrase targeted by this item (used as idempotency key with sentence+type).
+    target_span: Mapped[str] = mapped_column(String(500), nullable=False)
+
+    #: Expected answer (compared case-insensitively for cloze/chunk items).
+    answer: Mapped[str] = mapped_column(Text, nullable=False)
+
+    #: Optional distractor strings for meaning-discrimination items.
+    distractors: Mapped[list] = mapped_column(JsonType, default=list)
+
+    #: Optional learner hint (e.g. lemma, grammar note).
+    hint: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    #: Grammar concept tag for transform/discrimination items (e.g. "preterite_imperfect").
+    grammar_concept: Mapped[str | None] = mapped_column(String(100), nullable=True)
+
+    #: CEFR level of the target vocabulary/structure (e.g. "B1").
+    cefr_level: Mapped[str | None] = mapped_column(String(2), nullable=True)
+
+    #: Difficulty ∈ [0, 1]; higher = harder.  Derived from object confidence.
+    difficulty_score: Mapped[float | None] = mapped_column(Float, nullable=True)
+
+    #: JSON list of canonical-object UUIDs involved in this item.
+    target_object_ids: Mapped[list] = mapped_column(JsonType, default=list)
+
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+
+class UserSentenceReviewRow(Base):
+    """FSRS scheduling state for one (user, sentence review item) pair.
+
+    Parallel to ``UserKnowledgeRow`` but scoped to sentence-level items.
+    No FK on ``item_id`` — consistent with the FK-free design in
+    ``UserKnowledgeRow`` for resilience during outages.
+
+    ``streak`` counts consecutive successful reviews (quality ≥ 3) without
+    an "Again" (quality 1) — used by the frontend mastery visualisation.
+    """
+    __tablename__ = "user_sentence_review"
+
+    user_id: Mapped[str] = mapped_column(String(50), primary_key=True)
+    item_id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    fsrs_state: Mapped[dict | None] = mapped_column(JsonType, nullable=True)
+    mastery_score: Mapped[float] = mapped_column(Float, default=0.0)
+    total_reviews: Mapped[int] = mapped_column(Integer, default=0)
+    due_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now, index=True)
+    last_reviewed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    streak: Mapped[int] = mapped_column(Integer, default=0)
+
+
 class CorpusIngestionRow(Base):
     """Persistent record of every corpus ingestion attempt.
 
