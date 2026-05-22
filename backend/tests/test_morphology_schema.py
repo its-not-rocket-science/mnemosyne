@@ -298,3 +298,154 @@ class TestValidateResultMorphologyIntegration:
         s = str(report)
         assert "WARNING" in s
         assert "M4" in s
+
+
+# ── 6. Inflection type — C9 required keys and C11 morphology_depth gate ───────
+
+def _inflection_cand(**overrides) -> CandidateObject:
+    defaults: dict = dict(
+        canonical_form="lupi",
+        type="inflection",
+        label="lupi",
+        lesson_data={"lemma": "lupus", "surface": "lupi"},
+    )
+    defaults.update(overrides)
+    return CandidateObject(**defaults)
+
+
+class _NoMorphCaps:
+    code = "la"
+    direction = "ltr"
+    idiom_detection = False
+    morphology_depth = "none"
+    nuance_capabilities = None
+
+
+class _BasicMorphCaps:
+    code = "la"
+    direction = "ltr"
+    idiom_detection = False
+    morphology_depth = "basic"
+    nuance_capabilities = None
+
+
+class _FullMorphCaps:
+    code = "la"
+    direction = "ltr"
+    idiom_detection = False
+    morphology_depth = "full"
+    nuance_capabilities = None
+
+
+class _NoMorphPlugin:
+    language_code = "la"
+    direction = "ltr"
+    capabilities = _NoMorphCaps()
+
+
+class _BasicMorphPlugin:
+    language_code = "la"
+    direction = "ltr"
+    capabilities = _BasicMorphCaps()
+
+
+class _FullMorphPlugin:
+    language_code = "la"
+    direction = "ltr"
+    capabilities = _FullMorphCaps()
+
+
+class TestInflectionContract:
+
+    # C9 — required lesson_data keys
+
+    def test_c9_inflection_missing_lemma_triggers_violation(self):
+        cand = _inflection_cand(lesson_data={"surface": "lupi"})
+        result = _result(cand)
+        report = validate_result(result, _FullMorphPlugin(), input_sentence="lupi.")
+        assert not report.ok
+        c9 = [v for v in report.violations if v.rule == "C9"]
+        assert len(c9) == 1
+        assert "lemma" in c9[0].message
+
+    def test_c9_inflection_missing_surface_triggers_violation(self):
+        cand = _inflection_cand(lesson_data={"lemma": "lupus"})
+        result = _result(cand)
+        report = validate_result(result, _FullMorphPlugin(), input_sentence="lupi.")
+        assert not report.ok
+        c9 = [v for v in report.violations if v.rule == "C9"]
+        assert len(c9) == 1
+        assert "surface" in c9[0].message
+
+    def test_c9_inflection_missing_both_triggers_one_violation(self):
+        cand = _inflection_cand(lesson_data={})
+        result = _result(cand)
+        report = validate_result(result, _FullMorphPlugin(), input_sentence="lupi.")
+        assert not report.ok
+        c9 = [v for v in report.violations if v.rule == "C9"]
+        assert len(c9) == 1
+        assert "lemma" in c9[0].message
+        assert "surface" in c9[0].message
+
+    def test_c9_inflection_with_lemma_and_surface_passes(self):
+        cand = _inflection_cand()
+        result = _result(cand)
+        report = validate_result(result, _FullMorphPlugin(), input_sentence="lupi.")
+        c9 = [v for v in report.violations if v.rule == "C9"]
+        assert c9 == []
+
+    def test_c9_inflection_extra_keys_allowed(self):
+        cand = _inflection_cand(lesson_data={
+            "lemma": "lupus", "surface": "lupi",
+            "case": "Gen", "number": "Sing", "declension_class": "2nd",
+        })
+        result = _result(cand)
+        report = validate_result(result, _FullMorphPlugin(), input_sentence="lupi.")
+        c9 = [v for v in report.violations if v.rule == "C9"]
+        assert c9 == []
+
+    # C11 — morphology_depth gate
+
+    def test_c11_inflection_with_morphology_depth_none_triggers_violation(self):
+        cand = _inflection_cand()
+        result = _result(cand)
+        report = validate_result(result, _NoMorphPlugin(), input_sentence="lupi.")
+        assert not report.ok
+        c11 = [v for v in report.violations if v.rule == "C11"]
+        assert len(c11) == 1
+        assert "inflection" in c11[0].message
+
+    def test_c11_inflection_with_morphology_depth_basic_passes(self):
+        cand = _inflection_cand()
+        result = _result(cand)
+        report = validate_result(result, _BasicMorphPlugin(), input_sentence="lupi.")
+        c11 = [v for v in report.violations if v.rule == "C11"]
+        assert c11 == []
+
+    def test_c11_inflection_with_morphology_depth_full_passes(self):
+        cand = _inflection_cand()
+        result = _result(cand)
+        report = validate_result(result, _FullMorphPlugin(), input_sentence="lupi.")
+        c11 = [v for v in report.violations if v.rule == "C11"]
+        assert c11 == []
+
+    def test_c11_conjugation_still_blocked_by_none_depth(self):
+        """Regression: existing C11 behaviour for conjugation must be unchanged."""
+        cand = _candidate()  # type=conjugation, lesson_data has tense+mood
+        result = CandidateSentenceResult(text="lupi.", candidates=[cand])
+        report = validate_result(result, _NoMorphPlugin(), input_sentence="lupi.")
+        c11 = [v for v in report.violations if v.rule == "C11"]
+        assert len(c11) == 1
+
+    def test_c11_vocabulary_never_blocked_regardless_of_depth(self):
+        """vocabulary type must not be affected by C11 regardless of morphology_depth."""
+        cand = CandidateObject(
+            canonical_form="lupus",
+            type="vocabulary",
+            label="lupus",
+            lesson_data={"lemma": "lupus"},
+        )
+        result = CandidateSentenceResult(text="lupi.", candidates=[cand])
+        report = validate_result(result, _NoMorphPlugin(), input_sentence="lupi.")
+        c11 = [v for v in report.violations if v.rule == "C11"]
+        assert c11 == []
