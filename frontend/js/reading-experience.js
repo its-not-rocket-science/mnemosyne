@@ -26,7 +26,7 @@ const MODES = [
   { value: 'deep',     labelKey: 'reader_mode_deep',     hintKey: 'reader_mode_deep_hint' },
 ]
 
-let currentMode = localStorage.getItem(STORAGE_MODE_KEY) || 'learning'
+let currentMode = localStorage.getItem('mn-annotation-depth') || localStorage.getItem(STORAGE_MODE_KEY) || 'learning'
 let focusMode = localStorage.getItem(STORAGE_FOCUS_KEY) === 'true'
 
 let focusTicking = false
@@ -335,11 +335,14 @@ document.addEventListener('mnemosyne:render-complete', scheduleViewportFocusBloc
 
 function setMode(mode) {
   if (!MODES.some(m => m.value === mode)) mode = 'learning'
+  if (currentMode === mode) return
   currentMode = mode
   localStorage.setItem(STORAGE_MODE_KEY, currentMode)
+  localStorage.setItem('mn-annotation-depth', currentMode)
   applyMode()
   syncToolbar()
   announce(t(`reader_mode_${mode}`) || mode)
+  document.dispatchEvent(new CustomEvent('mnemosyne:mode-changed', { detail: { mode } }))
 }
 
 function setFocusMode(next) {
@@ -545,6 +548,8 @@ function init() {
   installGlobalHandlers()
   document.addEventListener('mnemosyne:language-changed', syncToolbar)
   document.addEventListener('mnemosyne:adaptive-reader-changed', syncToolbar)
+  // Sync when top nav depth select changes (composed:true bubbles out of shadow DOM).
+  document.addEventListener('depth-change', ({ detail }) => setMode(detail.depth))
 }
 
 if (document.readyState === 'loading') {
