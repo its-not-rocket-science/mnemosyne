@@ -223,6 +223,9 @@ class PracticeActivity(BaseModel):
         "transformation_drills",
         "short_retell_prompts",
         "notice_the_pattern",
+        "chunk_recall",
+        "grammar_discrimination",
+        "constrained_free_production",
     ]
     language: str
     difficulty: str

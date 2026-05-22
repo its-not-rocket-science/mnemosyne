@@ -1059,42 +1059,38 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   _htmlPracticePanel() {
     const lesson = this.#config?.lesson || {}
+    const activities = Array.isArray(lesson.practice_activities) ? lesson.practice_activities : []
     const reviewQueue = Array.isArray(this.#config?.reviewQueue) ? this.#config.reviewQueue : []
     const dueItems = reviewQueue.slice(0, 5)
-    const sentenceDrills = (lesson.practice_activities || [])
-      .filter((a) => ['sentence_level_vocabulary_recall', 'cloze_completion'].includes(a?.type) && a.prompt && a.expected_answer)
-      .slice(0, 2)
-    const checks = (lesson.practice_activities || [])
-      .filter((a) => a?.type === 'comprehension_questions' && a.prompt && a.expected_answer)
-      .slice(0, 3)
     const sentenceText = this.#config?.sentenceText || ''
+
+    const checks = activities
+      .filter(a => a?.type === 'comprehension_questions' && a.prompt && a.expected_answer)
+      .slice(0, 2)
+
+    const sentenceDrills = activities
+      .filter(a => ['sentence_level_vocabulary_recall', 'cloze_completion'].includes(a?.type) && a.prompt && a.expected_answer)
+      .slice(0, 2)
+
+    const chunkDrills = activities
+      .filter(a => a?.type === 'chunk_recall' && a.prompt && a.expected_answer)
+      .slice(0, 2)
+
+    const discItems = activities
+      .filter(a => a?.type === 'grammar_discrimination' && a.prompt && a.expected_answer)
+      .slice(0, 2)
+
+    const transformDrills = activities
+      .filter(a => a?.type === 'transformation_drills' && a.prompt && a.expected_answer)
+      .slice(0, 2)
+
+    const productionItems = activities
+      .filter(a => a?.type === 'constrained_free_production' && a.prompt)
+      .slice(0, 1)
+
     const canRetell = sentenceText.trim().split(/\s+/).length >= 8
-    const checksHtml = checks.map((a, idx) => {
-      const options = [a.expected_answer, ...(a.acceptable_alternatives || [])]
-        .filter(Boolean)
-        .slice(0, 3)
-      const uniq = [...new Set(options)].sort(() => Math.random() - 0.5)
-      return /* html */`
-        <article class="pane__check" data-check-index="${idx}" data-expected="${esc(a.expected_answer)}">
-          <p class="pane__check-prompt" id="dp-ck-${idx}-prompt">${esc(a.prompt)}</p>
-          <div class="pane__check-options" role="group" aria-labelledby="dp-ck-${idx}-prompt">
-            ${uniq.map((opt) => `<button type="button" class="pane__check-option" data-answer="${esc(opt)}">${esc(opt)}</button>`).join('')}
-          </div>
-          <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
-        </article>
-      `
-    }).join('')
     const quizItems = this.#buildMiniQuizItems(lesson, reviewQueue).slice(0, 8)
-    const quizItemsHtml = quizItems.map((q, idx) => /* html */`
-      <article class="pane__check pane__check--typed" data-quiz-index="${idx}">
-        <p class="pane__check-prompt" id="dp-qi-${idx}-prompt"><strong>${esc(tr(`dp_quiz_type_${q.kind}`, 'Quiz'))}</strong> · ${esc(q.prompt)}</p>
-        <form class="pane__typed-form">
-          <input class="pane__typed-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" aria-labelledby="dp-qi-${idx}-prompt" />
-          <button type="submit" class="pane__check-option" aria-describedby="dp-qi-${idx}-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
-        </form>
-        <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
-      </article>
-    `).join('')
+
     const termStateHtml = (() => {
       const tp = this.#config?.termProgress
       if (!tp?.review_bucket) return ''
@@ -1114,6 +1110,142 @@ export class MnemosyneDetailPane extends HTMLElement {
         </div>
       `
     })()
+
+    // ── Section: Comprehension (MC) ──────────────────────────────────────────
+    const checksHtml = checks.map((a, idx) => {
+      const opts = [a.expected_answer, ...(a.acceptable_alternatives || [])].filter(Boolean).slice(0, 4)
+      const uniq = [...new Set(opts)].sort(() => Math.random() - 0.5)
+      return /* html */`
+        <article class="pane__check" data-check-index="${idx}" data-check-type="comprehension_questions" data-expected="${esc(a.expected_answer)}">
+          <p class="pane__check-prompt" id="dp-ck-${idx}-prompt">${esc(a.prompt)}</p>
+          <div class="pane__check-options" role="group" aria-labelledby="dp-ck-${idx}-prompt">
+            ${uniq.map(opt => `<button type="button" class="pane__check-option" data-answer="${esc(opt)}">${esc(opt)}</button>`).join('')}
+          </div>
+          <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
+        </article>
+      `
+    }).join('')
+
+    // ── Section: Cloze / vocabulary recall (typed) ───────────────────────────
+    const sentenceDrillsHtml = sentenceDrills.map((a, idx) => /* html */`
+      <article class="pane__check pane__check--typed" data-drill-index="${idx}">
+        <p class="pane__check-prompt" id="dp-sd-${idx}-prompt">${esc(a.prompt)}</p>
+        <form class="pane__typed-form">
+          <input class="pane__typed-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" aria-labelledby="dp-sd-${idx}-prompt" />
+          <button type="submit" class="pane__check-option" aria-describedby="dp-sd-${idx}-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
+        </form>
+        <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
+      </article>
+    `).join('')
+
+    // ── Section: Chunk recall (idioms / phrases) ─────────────────────────────
+    const chunkHtml = chunkDrills.map((a, idx) => /* html */`
+      <article class="pane__check pane__check--typed" data-chunk-index="${idx}">
+        <p class="pane__drill-section-label">${esc(tr('dp_drill_type_chunk_recall', 'Chunk recall'))}</p>
+        <p class="pane__check-prompt" id="dp-chunk-${idx}-prompt">${esc(a.prompt)}</p>
+        <form class="pane__typed-form">
+          <input class="pane__typed-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" aria-labelledby="dp-chunk-${idx}-prompt" />
+          <button type="submit" class="pane__check-option" aria-describedby="dp-chunk-${idx}-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
+        </form>
+        <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
+      </article>
+    `).join('')
+
+    // ── Section: Grammar discrimination (MC — pick the right form) ───────────
+    const discHtml = discItems.map((a, idx) => {
+      const opts = [a.expected_answer, ...(a.acceptable_alternatives || [])].filter(Boolean).slice(0, 4)
+      const uniq = [...new Set(opts)].sort(() => Math.random() - 0.5)
+      return /* html */`
+        <article class="pane__check" data-check-index="${idx}" data-check-type="grammar_discrimination" data-expected="${esc(a.expected_answer)}">
+          <p class="pane__drill-section-label">${esc(tr('dp_drill_type_grammar_discrimination', 'Grammar discrimination'))}</p>
+          <p class="pane__check-prompt" id="dp-disc-${idx}-prompt">${esc(a.prompt)}</p>
+          <div class="pane__check-options" role="group" aria-labelledby="dp-disc-${idx}-prompt">
+            ${uniq.map(opt => `<button type="button" class="pane__check-option" data-answer="${esc(opt)}">${esc(opt)}</button>`).join('')}
+          </div>
+          <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
+        </article>
+      `
+    }).join('')
+
+    // ── Section: Transformation drills (typed, first-class) ──────────────────
+    const transformHtml = transformDrills.map((a, idx) => /* html */`
+      <article class="pane__check pane__check--typed" data-transform-index="${idx}">
+        <p class="pane__drill-section-label">${esc(tr('dp_drill_type_transformation', 'Transform'))}</p>
+        <p class="pane__check-prompt" id="dp-tr-${idx}-prompt">${esc(a.prompt)}</p>
+        <form class="pane__typed-form">
+          <input class="pane__typed-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" aria-labelledby="dp-tr-${idx}-prompt" />
+          <button type="submit" class="pane__check-option" aria-describedby="dp-tr-${idx}-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
+        </form>
+        <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
+      </article>
+    `).join('')
+
+    // ── Section: Constrained free production (text + self-rate) ─────────────
+    const productionHtml = productionItems.map((a, idx) => /* html */`
+      <article class="pane__check pane__check--production" data-production-index="${idx}">
+        <p class="pane__drill-section-label">${esc(tr('dp_drill_type_constrained_production', 'Free production'))}</p>
+        <p class="pane__check-prompt" id="dp-prod-${idx}-prompt">${esc(a.prompt)}</p>
+        <div class="pane__production-area">
+          <textarea class="pane__typed-input pane__typed-input--area" rows="2"
+                    spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"
+                    aria-labelledby="dp-prod-${idx}-prompt"></textarea>
+          <button type="button" class="pane__reveal-btn" aria-controls="dp-prod-${idx}-reveal">
+            ${esc(tr('dp_reveal_example', 'Reveal example'))}
+          </button>
+        </div>
+        <div class="pane__example-reveal" id="dp-prod-${idx}-reveal" hidden>
+          <p class="pane__muted"><strong>${esc(tr('dp_example_label', 'Example:'))}</strong> ${esc(a.expected_answer)}</p>
+          <p class="pane__muted" id="dp-prod-${idx}-rate-lbl">${esc(tr('dp_self_rate_heading', 'How did you do?'))}</p>
+          <div class="pane__self-rate" role="group" aria-labelledby="dp-prod-${idx}-rate-lbl">
+            <button type="button" class="pane__self-rate-btn pane__self-rate-btn--again" data-quality="1">${esc(tr('dp_self_rate_again', 'Again'))}</button>
+            <button type="button" class="pane__self-rate-btn pane__self-rate-btn--hard"  data-quality="2">${esc(tr('dp_self_rate_hard',  'Hard'))}</button>
+            <button type="button" class="pane__self-rate-btn pane__self-rate-btn--good"  data-quality="3">${esc(tr('dp_self_rate_good',  'Good'))}</button>
+            <button type="button" class="pane__self-rate-btn pane__self-rate-btn--easy"  data-quality="4">${esc(tr('dp_self_rate_easy',  'Easy'))}</button>
+          </div>
+        </div>
+        <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
+      </article>
+    `).join('')
+
+    // ── Section: Retrieval retell ─────────────────────────────────────────────
+    const retellHtml = !canRetell ? '' : /* html */`
+      <article class="pane__check pane__check--typed" data-retell-mode="recall">
+        <p class="pane__check-prompt" id="dp-retell-recall-prompt">${esc(tr('dp_recall_challenge', 'Recall challenge: without looking, write key details from this passage.'))}</p>
+        <form class="pane__typed-form">
+          <input class="pane__typed-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" aria-labelledby="dp-retell-recall-prompt" />
+          <button type="submit" class="pane__check-option" aria-describedby="dp-retell-recall-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
+        </form>
+        <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
+      </article>
+      ${[
+        ['target_language',    tr('dp_retell_target_language',    'Retell in the target language.')],
+        ['interface_language', tr('dp_retell_interface_language', 'Retell in your interface language.')],
+        ['three_facts',        tr('dp_retell_three_facts',        'List 3 key facts from the passage.')],
+        ['continue_story',     tr('dp_retell_continue_story',     'Continue the story in 1–2 sentences.')],
+      ].map(([mode, prompt]) => /* html */`
+        <article class="pane__check pane__check--typed" data-retell-mode="${mode}">
+          <p class="pane__check-prompt" id="dp-retell-${mode}-prompt">${esc(prompt)}</p>
+          <form class="pane__typed-form">
+            <input class="pane__typed-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" aria-labelledby="dp-retell-${mode}-prompt" />
+            <button type="submit" class="pane__check-option" aria-describedby="dp-retell-${mode}-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
+          </form>
+          <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
+        </article>
+      `).join('')}
+    `
+
+    // ── Mini-quiz ─────────────────────────────────────────────────────────────
+    const quizItemsHtml = quizItems.map((q, idx) => /* html */`
+      <article class="pane__check pane__check--typed" data-quiz-index="${idx}">
+        <p class="pane__check-prompt" id="dp-qi-${idx}-prompt"><strong>${esc(tr(`dp_quiz_type_${q.kind}`, 'Quiz'))}</strong> · ${esc(q.prompt)}</p>
+        <form class="pane__typed-form">
+          <input class="pane__typed-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" aria-labelledby="dp-qi-${idx}-prompt" />
+          <button type="submit" class="pane__check-option" aria-describedby="dp-qi-${idx}-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
+        </form>
+        <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
+      </article>
+    `).join('')
+
     return /* html */`
       <section
         id="dp-panel-practice"
@@ -1135,25 +1267,62 @@ export class MnemosyneDetailPane extends HTMLElement {
           <button class="pane__study-btn pane__study-btn--inline" type="button">${esc(t('dp_practice_start_btn'))}</button>
           <p class="pane__muted">${esc(t('dp_practice_tip'))}</p>
           <p class="pane__muted pane__session-score" aria-live="polite" aria-atomic="true"></p>
+
           ${dueItems.length ? /* html */`
             <article class="pane__check">
               <p class="pane__check-prompt"><strong>${esc(tr('dp_due_now', 'Due now'))}</strong></p>
               <ul class="pane__variant-list">
-                ${dueItems.map((item) => `<li class="pane__variant-item"><span class="pane__variant-text">${esc(item.lemma || item.term)}</span></li>`).join('')}
+                ${dueItems.map(item => `<li class="pane__variant-item"><span class="pane__variant-text">${esc(item.lemma || item.term)}</span></li>`).join('')}
               </ul>
             </article>
           ` : ''}
-          ${sentenceDrills.map((a, idx) => /* html */`
-            <article class="pane__check pane__check--typed" data-drill-index="${idx}">
-              <p class="pane__check-prompt" id="dp-sd-${idx}-prompt">${esc(a.prompt)}</p>
-              <form class="pane__typed-form">
-                <input class="pane__typed-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" aria-labelledby="dp-sd-${idx}-prompt" />
-                <button type="submit" class="pane__check-option" aria-describedby="dp-sd-${idx}-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
-              </form>
-              <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
-            </article>
-          `).join('')}
-          ${checksHtml}
+
+          ${checksHtml ? /* html */`
+            <div class="pane__drill-section" data-drill-section="comprehension">
+              <p class="pane__drill-section-label">${esc(tr('dp_drill_section_comprehension', 'Comprehension'))}</p>
+              ${checksHtml}
+            </div>
+          ` : ''}
+
+          ${sentenceDrillsHtml ? /* html */`
+            <div class="pane__drill-section" data-drill-section="cloze">
+              <p class="pane__drill-section-label">${esc(tr('dp_drill_section_cloze', 'Vocabulary & Cloze'))}</p>
+              ${sentenceDrillsHtml}
+            </div>
+          ` : ''}
+
+          ${chunkHtml ? /* html */`
+            <div class="pane__drill-section" data-drill-section="chunk">
+              ${chunkHtml}
+            </div>
+          ` : ''}
+
+          ${discHtml ? /* html */`
+            <div class="pane__drill-section" data-drill-section="discrimination">
+              ${discHtml}
+            </div>
+          ` : ''}
+
+          ${transformHtml ? /* html */`
+            <div class="pane__drill-section" data-drill-section="transform">
+              <p class="pane__drill-section-label">${esc(tr('dp_drill_section_transform', 'Transformation'))}</p>
+              ${transformHtml}
+            </div>
+          ` : ''}
+
+          ${productionHtml ? /* html */`
+            <div class="pane__drill-section" data-drill-section="production">
+              ${productionHtml}
+            </div>
+          ` : ''}
+
+          ${retellHtml ? /* html */`
+            <div class="pane__drill-section" data-drill-section="retell">
+              <p class="pane__drill-section-label">${esc(tr('dp_drill_section_retell', 'Retrieval & Retell'))}</p>
+              ${retellHtml}
+            </div>
+          ` : ''}
+
           ${quizItems.length >= 5 ? /* html */`
             <article class="pane__check">
               <p class="pane__check-prompt"><strong>${esc(tr('dp_quiz_heading', 'Mini-quiz'))}</strong></p>
@@ -1168,32 +1337,6 @@ export class MnemosyneDetailPane extends HTMLElement {
                 </div>
               </details>
             </article>
-          ` : ''}
-
-          ${canRetell ? /* html */`
-            <article class="pane__check pane__check--typed" data-retell-mode="recall">
-              <p class="pane__check-prompt" id="dp-retell-recall-prompt">${esc(tr('dp_recall_challenge', 'Recall challenge: without looking, write key details from this passage.'))}</p>
-              <form class="pane__typed-form">
-                <input class="pane__typed-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" aria-labelledby="dp-retell-recall-prompt" />
-                <button type="submit" class="pane__check-option" aria-describedby="dp-retell-recall-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
-              </form>
-              <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
-            </article>
-            ${[
-              ['target_language', tr('dp_retell_target_language', 'Retell in the target language.')],
-              ['interface_language', tr('dp_retell_interface_language', 'Retell in your interface language.')],
-              ['three_facts', tr('dp_retell_three_facts', 'List 3 key facts from the passage.')],
-              ['continue_story', tr('dp_retell_continue_story', 'Continue the story in 1–2 sentences.')],
-            ].map(([mode, prompt]) => `
-              <article class="pane__check pane__check--typed" data-retell-mode="${mode}">
-                <p class="pane__check-prompt" id="dp-retell-${mode}-prompt">${esc(prompt)}</p>
-                <form class="pane__typed-form">
-                  <input class="pane__typed-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" aria-labelledby="dp-retell-${mode}-prompt" />
-                  <button type="submit" class="pane__check-option" aria-describedby="dp-retell-${mode}-prompt">${esc(tr('dp_practice_submit', 'Check'))}</button>
-                </form>
-                <p class="pane__muted pane__check-feedback" aria-live="polite" aria-atomic="true"></p>
-              </article>
-            `).join('')}
           ` : ''}
 
         </section>
@@ -1232,6 +1375,9 @@ export class MnemosyneDetailPane extends HTMLElement {
     }
     for (const a of activities.filter((x) => x?.type === 'notice_the_pattern' || x?.type === 'transformation_drills').slice(0, 2)) {
       questions.push({ kind: 'grammar', prompt: a.prompt, answers: [a.expected_answer, ...(a.acceptable_alternatives || [])].filter(Boolean) })
+    }
+    for (const a of activities.filter((x) => x?.type === 'chunk_recall').slice(0, 1)) {
+      questions.push({ kind: 'chunk', prompt: a.prompt, answers: [a.expected_answer, ...(a.acceptable_alternatives || [])].filter(Boolean) })
     }
     return shuffled(questions).filter((q) => q.answers.length > 0)
   }
@@ -1329,13 +1475,23 @@ export class MnemosyneDetailPane extends HTMLElement {
     const { lesson, language, ttsTag } = this.#config
 
     this.shadowRoot.querySelectorAll('.pane__check').forEach((checkEl) => {
+      if (checkEl.closest('.pane__quiz')) return  // handled by quizContainer block
       const feedback = checkEl.querySelector('.pane__check-feedback')
       const typedForm = checkEl.querySelector('.pane__typed-form')
       if (typedForm) {
-        const idx = Number(checkEl.dataset.drillIndex)
-        const drill = (lesson.practice_activities || [])
-          .filter((a) => ['sentence_level_vocabulary_recall', 'cloze_completion'].includes(a?.type))[idx]
         const retellMode = checkEl.dataset.retellMode
+        let activeDrill = null
+        if (checkEl.dataset.drillIndex !== undefined) {
+          const idx = Number(checkEl.dataset.drillIndex)
+          activeDrill = (lesson.practice_activities || [])
+            .filter(a => ['sentence_level_vocabulary_recall', 'cloze_completion'].includes(a?.type))[idx]
+        } else if (checkEl.dataset.chunkIndex !== undefined) {
+          activeDrill = (lesson.practice_activities || [])
+            .filter(a => a?.type === 'chunk_recall')[Number(checkEl.dataset.chunkIndex)]
+        } else if (checkEl.dataset.transformIndex !== undefined) {
+          activeDrill = (lesson.practice_activities || [])
+            .filter(a => a?.type === 'transformation_drills')[Number(checkEl.dataset.transformIndex)]
+        }
         const input = checkEl.querySelector('.pane__typed-input')
         let attempts = 0
         typedForm.addEventListener('submit', (event) => {
@@ -1362,16 +1518,16 @@ export class MnemosyneDetailPane extends HTMLElement {
             this._updatePracticeScore(meaningFocused)
             return
           }
-          const accepted = [drill?.expected_answer, ...(drill?.acceptable_alternatives || [])].filter(Boolean)
+          const accepted = [activeDrill?.expected_answer, ...(activeDrill?.acceptable_alternatives || [])].filter(Boolean)
           const correct = accepted.some((ans) => normalizeForLanguage(ans, language) === normalizeForLanguage(typed, language))
           if (feedback) _setFeedback(feedback, correct,
             tr('dp_practice_correct', 'Correct.'),
-            drill?.feedback_text || tr('dp_practice_try_again', 'Try again.')
+            activeDrill?.feedback_text || tr('dp_practice_try_again', 'Try again.')
           )
           this.dispatchEvent(new CustomEvent('pane-practice-check', {
             bubbles: true,
             composed: true,
-            detail: { type: drill?.type, correct, answeredAt: new Date().toISOString(), lesson, language, objectId: lesson.id, term: drill?.target_term_or_pattern, attempts },
+            detail: { type: activeDrill?.type || 'typed', correct, answeredAt: new Date().toISOString(), lesson, language, objectId: lesson.id, term: activeDrill?.target_term_or_pattern, attempts },
           }))
           this._updatePracticeScore(correct)
           if (correct && input) input.disabled = true
@@ -1387,16 +1543,21 @@ export class MnemosyneDetailPane extends HTMLElement {
         const selected = btn.dataset.answer || ''
         const correct = normalize(selected) === normalize(expected)
         buttons.forEach((b) => { b.disabled = true })
+        const checkType = checkEl.dataset.checkType || 'comprehension_questions'
+        const checkIdx = Number(checkEl.dataset.checkIndex ?? -1)
+        const mcActivity = checkIdx >= 0
+          ? (lesson.practice_activities || []).filter(a => a?.type === checkType)[checkIdx]
+          : null
         if (feedback) {
           _setFeedback(feedback, correct,
             tr('dp_practice_correct', 'Correct.'),
-            lesson.practice_activities?.[Number(checkEl.dataset.checkIndex)]?.feedback_text || tr('dp_practice_try_again', 'Try again.')
+            mcActivity?.feedback_text || tr('dp_practice_try_again', 'Try again.')
           )
         }
         this.dispatchEvent(new CustomEvent('pane-practice-check', {
           bubbles: true,
           composed: true,
-          detail: { type: 'comprehension_questions', correct, answeredAt: new Date().toISOString(), lesson, language, objectId: lesson.id, attempts: 1 },
+          detail: { type: checkType, correct, answeredAt: new Date().toISOString(), lesson, language, objectId: lesson.id, term: mcActivity?.target_term_or_pattern, attempts: 1 },
         }))
         this._updatePracticeScore(correct)
       }))
@@ -1455,6 +1616,38 @@ export class MnemosyneDetailPane extends HTMLElement {
         }
       })
     }
+
+    // Constrained free production — reveal + self-rate
+    this.shadowRoot.querySelectorAll('[data-production-index]').forEach((prodEl) => {
+      const prodIdx = Number(prodEl.dataset.productionIndex)
+      const activity = (lesson.practice_activities || [])
+        .filter(a => a?.type === 'constrained_free_production')[prodIdx]
+      const revealBtn = prodEl.querySelector('.pane__reveal-btn')
+      const revealArea = prodEl.querySelector('.pane__example-reveal')
+      const feedback = prodEl.querySelector('.pane__check-feedback')
+
+      revealBtn?.addEventListener('click', () => {
+        if (revealArea) revealArea.hidden = false
+        if (revealBtn) revealBtn.disabled = true
+      })
+
+      prodEl.querySelectorAll('.pane__self-rate-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const quality = Number(btn.dataset.quality)
+          const correct = quality >= 3
+          if (feedback) _setFeedback(feedback, correct,
+            tr('dp_practice_correct', 'Correct.'),
+            activity?.feedback_text || tr('dp_practice_try_again', 'Try again.')
+          )
+          prodEl.querySelectorAll('.pane__self-rate-btn').forEach(b => { b.disabled = true })
+          this.dispatchEvent(new CustomEvent('pane-practice-check', {
+            bubbles: true, composed: true,
+            detail: { type: 'constrained_free_production', correct, quality, answeredAt: new Date().toISOString(), lesson, language, objectId: lesson.id, term: activity?.target_term_or_pattern, attempts: 1 },
+          }))
+          this._updatePracticeScore(correct)
+        })
+      })
+    })
 
     // Note — restore saved value from localStorage on each render
     const noteInput = this.shadowRoot.querySelector('.pane__note-input')
@@ -2694,6 +2887,210 @@ export class MnemosyneDetailPane extends HTMLElement {
         font-size: 0.8125rem;
         line-height: 1.55;
         color: var(--muted);
+      }
+
+      /* ── Practice check cards ──────────────────────────────────────────────── */
+      .pane__check {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.6rem 0.65rem;
+        border: 1px solid var(--border);
+        border-radius: 0.45rem;
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 3%, Canvas);
+      }
+
+      .pane__check-prompt {
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.55;
+      }
+
+      .pane__check-options {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+
+      .pane__check-option {
+        background: transparent;
+        border: 1px solid var(--border-input);
+        border-radius: 0.4rem;
+        padding: 0.35rem 0.65rem;
+        font: inherit;
+        font-size: 0.8125rem;
+        color: var(--text);
+        cursor: pointer;
+        text-align: start;
+        min-block-size: 2.75rem;
+        transition: background 0.1s ease, border-color 0.1s ease;
+      }
+      .pane__check-option:hover:not(:disabled) {
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 10%, Canvas);
+        border-color: color-mix(in oklch, var(--detail-accent, ${ref}) 45%, Canvas);
+      }
+      .pane__check-option:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+      .pane__check-option:disabled { opacity: 0.65; cursor: not-allowed; }
+      @media (prefers-reduced-motion: reduce) {
+        .pane__check-option { transition: none; }
+      }
+
+      /* ── Typed form (input + submit inline) ──────────────────────────────── */
+      .pane__typed-form {
+        display: flex;
+        gap: 0.4rem;
+        align-items: stretch;
+      }
+
+      .pane__typed-input {
+        flex: 1 1 0;
+        font: inherit;
+        font-size: 0.875rem;
+        border: 1px solid var(--border-input);
+        border-radius: 0.4rem;
+        padding: 0.35rem 0.5rem;
+        background: var(--surface);
+        color: var(--text);
+        min-block-size: 2.75rem;
+        min-inline-size: 0;
+      }
+      .pane__typed-input:focus {
+        outline: 3px solid var(--accent);
+        outline-offset: 1px;
+        border-color: transparent;
+      }
+
+      .pane__typed-input--area {
+        resize: vertical;
+        min-block-size: 3.5rem;
+        flex: none;
+        inline-size: 100%;
+        box-sizing: border-box;
+      }
+
+      /* ── Drill section grouping ──────────────────────────────────────────── */
+      .pane__drill-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+        border-block-start: 1px solid var(--border);
+        padding-block-start: 0.7rem;
+        margin-block-start: 0.1rem;
+      }
+
+      .pane__drill-section-label {
+        font-size: 0.625rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        color: color-mix(in oklch, var(--detail-accent, ${ref}) 80%, CanvasText);
+        margin: 0;
+      }
+
+      /* ── Constrained free production ─────────────────────────────────────── */
+      .pane__production-area {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .pane__reveal-btn {
+        align-self: flex-start;
+        background: transparent;
+        border: 1px solid var(--border-input);
+        border-radius: 999px;
+        padding: 0.3rem 0.75rem;
+        font: inherit;
+        font-size: 0.8rem;
+        color: var(--text);
+        cursor: pointer;
+        min-block-size: 2.75rem;
+        transition: background 0.1s ease, border-color 0.1s ease;
+      }
+      .pane__reveal-btn:hover:not(:disabled) {
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 10%, Canvas);
+        border-color: color-mix(in oklch, var(--detail-accent, ${ref}) 45%, Canvas);
+      }
+      .pane__reveal-btn:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+      .pane__reveal-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+      @media (prefers-reduced-motion: reduce) {
+        .pane__reveal-btn { transition: none; }
+      }
+
+      .pane__example-reveal {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        padding: 0.5rem 0.65rem;
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 6%, Canvas);
+        border: 1px solid color-mix(in oklch, var(--detail-accent, ${ref}) 22%, Canvas);
+        border-radius: 0.4rem;
+      }
+
+      /* ── Self-rate quality buttons ───────────────────────────────────────── */
+      .pane__self-rate {
+        display: flex;
+        gap: 0.3rem;
+        flex-wrap: wrap;
+      }
+
+      .pane__self-rate-btn {
+        flex: 1 1 auto;
+        min-inline-size: 3rem;
+        background: transparent;
+        border: 1px solid var(--border-input);
+        border-radius: 0.4rem;
+        padding: 0.3rem 0.4rem;
+        font: inherit;
+        font-size: 0.75rem;
+        font-weight: 600;
+        cursor: pointer;
+        min-block-size: 2.75rem;
+        text-align: center;
+        transition: background 0.1s ease, border-color 0.1s ease, color 0.1s ease;
+      }
+      .pane__self-rate-btn:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+      .pane__self-rate-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+      .pane__self-rate-btn--again {
+        color: oklch(0.55 0.20 29);
+        border-color: color-mix(in oklch, oklch(0.55 0.20 29) 35%, Canvas);
+      }
+      .pane__self-rate-btn--again:hover:not(:disabled) {
+        background: color-mix(in oklch, oklch(0.55 0.20 29) 10%, Canvas);
+      }
+      .pane__self-rate-btn--hard {
+        color: oklch(0.62 0.16 55);
+        border-color: color-mix(in oklch, oklch(0.62 0.16 55) 35%, Canvas);
+      }
+      .pane__self-rate-btn--hard:hover:not(:disabled) {
+        background: color-mix(in oklch, oklch(0.62 0.16 55) 10%, Canvas);
+      }
+      .pane__self-rate-btn--good {
+        color: oklch(0.55 0.18 145);
+        border-color: color-mix(in oklch, oklch(0.55 0.18 145) 35%, Canvas);
+      }
+      .pane__self-rate-btn--good:hover:not(:disabled) {
+        background: color-mix(in oklch, oklch(0.55 0.18 145) 10%, Canvas);
+      }
+      .pane__self-rate-btn--easy {
+        color: oklch(0.55 0.18 240);
+        border-color: color-mix(in oklch, oklch(0.55 0.18 240) 35%, Canvas);
+      }
+      .pane__self-rate-btn--easy:hover:not(:disabled) {
+        background: color-mix(in oklch, oklch(0.55 0.18 240) 10%, Canvas);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .pane__self-rate-btn { transition: none; }
       }
     `
   }
