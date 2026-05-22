@@ -203,8 +203,6 @@ body[data-reveal-known] [data-adaptively-quiet] {
   background: none !important;
   text-decoration: none !important;
   color: inherit !important;
-  cursor: text;
-  pointer-events: none;
   filter: none;
   outline: none !important;
 }
