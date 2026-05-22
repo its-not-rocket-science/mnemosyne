@@ -18,9 +18,9 @@ C3  No two CandidateObjects in one CandidateSentenceResult share a canonical_for
 
 C4  Surface tokens consumed by phrase_family or idiom candidates must not also
     appear as vocabulary candidates.  Conjugation, agreement, case_agreement,
-    grammar, and nuance types are explicitly EXEMPT — those are orthogonal
-    learning goals (inflection lesson ≠ vocabulary lesson) and co-occurrence is
-    intentional.
+    inflection, grammar, and nuance types are explicitly EXEMPT — those are
+    orthogonal learning goals (inflection lesson ≠ vocabulary lesson) and
+    co-occurrence is intentional.
     Rationale: an idiom/phrase_family lesson covers "all that glitters" as a
     unit; individual token vocabulary cards for "all", "that", etc. inside the
     phrase create redundant and conflicting lesson flows.  A conjugation lesson
@@ -54,7 +54,7 @@ C10 If capabilities.idiom_detection is False, the plugin must not emit
     produce visible UI breakage.
 
 C11 If capabilities.morphology_depth == "none", the plugin must not emit
-    type="conjugation", "agreement", or "case_agreement" objects.
+    type="conjugation", "agreement", "case_agreement", or "inflection" objects.
     Rationale: morphology_depth="none" is a contract to the frontend that no
     morphological drills will be generated for this language.
 
@@ -179,6 +179,7 @@ REQUIRED_LESSON_KEYS: dict[str, frozenset[str]] = {
     "conjugation":     frozenset({"tense", "mood"}),
     "agreement":       frozenset({"noun"}),
     "case_agreement":  frozenset({"noun"}),
+    "inflection":      frozenset({"lemma", "surface"}),
     "idiom":           frozenset({"meaning"}),
     "phrase_family":   frozenset({"meaning"}),
     "nuance":          frozenset({"nuance_type"}),
@@ -418,7 +419,7 @@ def validate_result(
             ))
 
         # C11
-        if obj.type in ("conjugation", "agreement", "case_agreement"):
+        if obj.type in ("conjugation", "agreement", "case_agreement", "inflection"):
             if caps.morphology_depth == "none":
                 report.violations.append(ContractViolation(
                     "C11",
