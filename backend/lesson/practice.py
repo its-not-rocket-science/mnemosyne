@@ -1,8 +1,11 @@
 from __future__ import annotations
 
+import hashlib
 from typing import Any, Literal
 
+from backend.lesson.cloze import build_cloze_prompt
 from backend.lesson.practice_hooks import hooks_for_language
+from backend.lesson.transformations import build_transformation_specs
 from backend.schemas.lesson import LessonField, LessonResponse, PracticeActivity
 
 
@@ -31,9 +34,8 @@ def build_practice_activities(
 ) -> list[PracticeActivity]:
     """Build language-scoped practice activities from lesson content.
 
-    The function is deterministic and only uses data present on the lesson model,
-    plus optional enrichment lists (which may be unavailable when plugin support
-    is missing). Missing optional data degrades gracefully.
+    Deterministic and only uses data present on the lesson model plus optional
+    enrichment lists. Missing optional data degrades gracefully.
     """
     text_basis = " ".join(lesson.examples) if lesson.examples else lesson.title
     terms = [t for t in (highlighted_terms or _terms_from_fields(lesson.fields)) if t]
@@ -47,6 +49,14 @@ def build_practice_activities(
     sentence_basis = _sentence_for_term(lesson.examples, target_term) or text_basis
     comprehension_checks = _build_comprehension_checks(lesson, difficulty, sentence_basis, target_term)
     fb = hooks.feedback_text
+
+    cloze_prompt_text, morph_hint = build_cloze_prompt(
+        sentence_basis, target_term, lesson.morphology_axes or []
+    )
+    cloze_display = f"{cloze_prompt_text} [{morph_hint}]" if morph_hint else cloze_prompt_text
+
+    tokens = _shuffle_tokens(text_basis, target_term)
+
     activities: list[PracticeActivity] = [
         *comprehension_checks,
         _activity(
@@ -58,7 +68,7 @@ def build_practice_activities(
         ),
         _activity(
             "cloze_completion", lesson, difficulty, target_term,
-            prompt=hooks.cloze_prompt(sentence_basis, target_term),
+            prompt=cloze_display,
             expected=target_term,
             alternatives=hooks.answer_variants(target_term, _first_field_value(lesson.fields, "Lemma")),
             feedback=fb("cloze_completion", "Use agreement/tense cues from surrounding words to fill the blank."),
@@ -72,17 +82,10 @@ def build_practice_activities(
         ),
         _activity(
             "sentence_recombination", lesson, difficulty, target_term,
-            prompt=f"Recombine these elements into the lesson sentence: {text_basis}",
+            prompt=f"Arrange these words to form the sentence: {' | '.join(tokens)}",
             expected=text_basis,
-            alternatives=[s for s in lesson.examples if s != text_basis],
+            alternatives=tokens,
             feedback="Keep original meaning and grammar; minor punctuation variation is acceptable.",
-        ),
-        _activity(
-            "transformation_drills", lesson, difficulty, notes[0] if notes else target_term,
-            prompt=(f"Transform the sentence using this grammar note: {notes[0]}" if notes else f"Transform '{text_basis}' to a close paraphrase."),
-            expected=(notes[0] if notes else text_basis),
-            alternatives=notes[1:3] if len(notes) > 1 else [text_basis],
-            feedback="Maintain meaning while applying the requested morphology/syntax change.",
         ),
         _activity(
             "short_retell_prompts", lesson, difficulty, target_term,
@@ -97,10 +100,38 @@ def build_practice_activities(
     activities.extend(_build_chunk_recall(lesson, difficulty, hooks))
     activities.extend(_build_grammar_discrimination(lesson, difficulty))
     activities.extend(_build_constrained_production(lesson, difficulty, target_term, sentence_basis))
+    activities.extend(_build_transformation_drills(lesson, difficulty, target_term))
 
     return activities
 
 
+def _build_transformation_drills(
+    lesson: LessonResponse,
+    difficulty: str,
+    target_term: str,
+) -> list[PracticeActivity]:
+    """Emit real transformation drills from paradigm/contrast/equivalent data.
+
+    Returns [] when no verifiable source data is available — never emits
+    placeholder drills with expected_answer = instruction text.
+    """
+    lemma = _first_field_value(lesson.fields, "Lemma") or target_term
+    specs = build_transformation_specs(
+        lesson.paradigms,
+        lesson.contrasts,
+        lesson.equivalents,
+        lemma=lemma,
+    )
+    return [
+        _activity(
+            "transformation_drills", lesson, difficulty, target_term,
+            prompt=spec.prompt,
+            expected=spec.expected,
+            alternatives=spec.alternatives,
+            feedback="Maintain meaning while applying the requested morphology/syntax change.",
+        )
+        for spec in specs
+    ]
 
 
 def _build_pattern_drills(
@@ -369,10 +400,13 @@ def _first_field_value(fields: list[LessonField], label: str) -> str | None:
     return None
 
 
-def _cloze_prompt(text: str, answer: str) -> str:
-    if answer and answer in text:
-        return text.replace(answer, "____", 1)
-    return f"Complete the blank: ____ ({answer})"
+def _shuffle_tokens(sentence: str, seed: str) -> list[str]:
+    words = sentence.split()
+    if len(words) <= 2:
+        return words
+    def key(w: str) -> int:
+        return int(hashlib.sha256(f"{seed}\x00{w}".encode()).hexdigest()[:8], 16)
+    return sorted(words, key=key)
 
 
 def _sentence_for_term(examples: list[str], term: str) -> str | None:

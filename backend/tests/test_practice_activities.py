@@ -44,8 +44,12 @@ def test_practice_activities_generated_from_lesson_content_spanish():
 
 def test_practice_activities_generated_from_lesson_content_french():
     lesson = _build_fixture("fr", "parler", "parler", "to speak")
-    transform = next(a for a in lesson.practice_activities if a.type == "transformation_drills")
-    assert "Use present tense" in transform.prompt or "Use present tense" in transform.expected_answer
+    # No paradigm, contrast, or equivalent data in the basic fixture.
+    # Transformation drills are only emitted when real morphological data is present.
+    assert all(a.type != "transformation_drills" for a in lesson.practice_activities)
+    types = {a.type for a in lesson.practice_activities}
+    assert "cloze_completion" in types
+    assert "sentence_level_vocabulary_recall" in types
 
 
 def test_missing_plugin_support_falls_back_gracefully():
