@@ -72,3 +72,26 @@
 }
 
 .review-quick-btn .review-due-count[hidden] { display: none; }
+
+/* ── Weakness / learning profile disclosure ───────────────────────────────── */
+
+.weakness-graph-disclosure {
+  margin-block-start: 0.25rem;
+}
+
+.weakness-graph-disclosure__summary {
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--text-muted, #666);
+  user-select: none;
+  padding-block: 0.25rem;
+}
+
+.weakness-graph-disclosure__summary:focus-visible {
+  outline: 2px solid var(--accent, #3557ff);
+  outline-offset: 2px;
+}
+
+@media (forced-colors: active) {
+  .weakness-graph-disclosure__summary { color: ButtonText; }
+}

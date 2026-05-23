@@ -16,6 +16,9 @@ from backend.models import (
     UserKnowledgeRow,
 )
 from backend.schemas.parse import ReviewRequest, ReviewResponse
+from backend.srs.adaptive_progression import advance_stage
+from backend.srs.concept_scheduler import apply_concept_type_adjustment, concept_label
+from backend.srs.confusion_tracker import record_confusion
 from backend.srs.fsrs import DESIRED_RETENTION, review
 from backend.srs.knowledge import mastery_score
 from backend.srs.term_scheduler import classify_term
@@ -72,13 +75,36 @@ async def submit_review(
     )
 
     score = mastery_score(updated_state, now)
+
+    # Look up object type for concept-type-aware scheduling.
+    obj_type: str | None = None
+    try:
+        canonical_obj = await db.get(CanonicalObjectRow, payload.object_id)
+        if canonical_obj is not None:
+            obj_type = canonical_obj.type
+    except Exception:
+        logger.warning(
+            "Canonical object lookup failed for %r", payload.object_id, exc_info=True
+        )
+
+    # Apply concept-type interval multiplier (e.g. nuance = 0.5× normal interval).
+    if obj_type:
+        next_days, updated_state = apply_concept_type_adjustment(
+            next_days, updated_state, obj_type, now
+        )
+
     due_at = datetime.fromisoformat(updated_state["due_at"])
+
+    # Advance acquisition stage if mastery threshold met.
+    current_stage = (
+        (getattr(row, "progression_stage", None) or "recognition")
+        if row else "recognition"
+    )
+    new_stage = advance_stage(current_stage, score)
 
     try:
         if row is None:
-            # No existing row — create a fresh one.
-            # (row may be None either because the object was never parsed or
-            #  because the DB was unavailable above; both paths are safe here)
+            # Re-check DB in case a concurrent request created the row.
             result2 = await db.execute(
                 select(UserKnowledgeRow).where(
                     UserKnowledgeRow.user_id == current_user,
@@ -91,12 +117,14 @@ async def submit_review(
             db.add(UserKnowledgeRow(
                 user_id=current_user,
                 object_id=payload.object_id,
+                language=canonical_obj.language if canonical_obj else None,
                 fsrs_state=updated_state,
                 mastery_score=score,
                 first_seen=now,
                 last_seen=now,
                 total_reviews=updated_state["reviews"],
                 due_at=due_at,
+                progression_stage=new_stage,
             ))
         else:
             row.fsrs_state = updated_state
@@ -104,6 +132,8 @@ async def submit_review(
             row.last_seen = now
             row.total_reviews = updated_state["reviews"]
             row.due_at = due_at
+            row.progression_stage = new_stage
+
         db.add(ReviewEventRow(
             user_id=current_user,
             object_id=payload.object_id,
@@ -111,6 +141,8 @@ async def submit_review(
             mastery_score_before=round(score_before, 4),
             mastery_score_after=round(score, 4),
             reviewed_at=now,
+            wrong_answer=payload.wrong_answer,
+            concept_type=obj_type,
         ))
         await db.commit()
     except Exception:
@@ -118,11 +150,17 @@ async def submit_review(
             "DB knowledge persist failed for %r", payload.object_id, exc_info=True
         )
 
+    # Track confusion pair when learner chose a wrong answer.
+    if payload.wrong_answer and payload.quality < 3:
+        await record_confusion(
+            db, current_user, payload.object_id, payload.wrong_answer, now
+        )
+
     # Sync TermProgressRow so Memory Map reflects this review.
-    # Runs after the FSRS commit; failure here is non-fatal.
     tp_synced: TermProgressRow | None = None
     try:
-        canonical_obj = await db.get(CanonicalObjectRow, payload.object_id)
+        if canonical_obj is None:
+            canonical_obj = await db.get(CanonicalObjectRow, payload.object_id)
         if canonical_obj is not None:
             correct = payload.quality >= 3
             tp_row = await db.get(
@@ -184,4 +222,5 @@ async def submit_review(
         correct_count=tp_synced.correct_count if tp_synced else None,
         incorrect_count=tp_synced.incorrect_count if tp_synced else None,
         review_bucket=review_bucket,
+        progression_stage=new_stage,
     )

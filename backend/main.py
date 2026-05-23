@@ -38,6 +38,7 @@ from backend.api.routes.translate import router as translate_router
 from backend.api.routes.term_progress import router as term_progress_router
 from backend.api.routes.sentence_review import router as sentence_review_router
 from backend.api.routes.users import router as users_router
+from backend.api.routes.weakness import router as weakness_router
 from backend.core.config import Settings, get_settings
 from backend.core.database import get_session_factory
 from backend.core.logging import RequestIdFilter, request_id_var
@@ -333,6 +334,7 @@ app.include_router(vocabulary_router)
 app.include_router(grammar_router)
 app.include_router(term_progress_router)
 app.include_router(sentence_review_router)
+app.include_router(weakness_router)
 
 
 # ── Ops endpoints ─────────────────────────────────────────────────────────────

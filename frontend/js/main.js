@@ -1215,7 +1215,8 @@ detailPane?.addEventListener('pane-practice-check', ({ detail }) => {
   const objectId = detail.objectId ?? detail.lesson?.id
   if (!objectId) return
   const quality = detail.correct ? ((detail.attempts ?? 1) <= 1 ? 4 : 3) : 1
-  void submitReview(objectId, quality).then((payload) => {
+  const wrongAnswer = !detail.correct && detail.wrongAnswer ? detail.wrongAnswer : null
+  void submitReview(objectId, quality, wrongAnswer).then((payload) => {
     if (!payload) return
     termProgressByLanguage.delete(detail.language)
 
@@ -1919,11 +1920,12 @@ async function* readSseEvents(response) {
 
 // ── Review submission ─────────────────────────────────────────────────────────
 
-async function submitReview(objectId, quality) {
+async function submitReview(objectId, quality, wrongAnswer = null) {
   const body = {
     object_id:    objectId,
     quality,
     review_state: reviewStateByObject.get(objectId) ?? null,
+    ...(wrongAnswer ? { wrong_answer: wrongAnswer } : {}),
   }
 
   let response
