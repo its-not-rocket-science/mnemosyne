@@ -37,6 +37,67 @@ class TestGetNuanceSets:
         sets = get_nuance_sets("ja")
         assert len(sets) >= 1
 
+    def test_arabic_loads(self):
+        sets = get_nuance_sets("ar")
+        assert len(sets) >= 1
+
+    def test_arabic_negation_concept(self):
+        sets = get_nuance_sets("ar", concept="negation_particles")
+        assert len(sets) == 1
+        assert sets[0].concept == "negation_particles"
+        assert len(sets[0].pairs) >= 1
+
+    def test_chinese_loads(self):
+        sets = get_nuance_sets("zh")
+        assert len(sets) >= 1
+
+    def test_chinese_aspect_concept(self):
+        sets = get_nuance_sets("zh", concept="aspect_particles")
+        assert len(sets) == 1
+        assert len(sets[0].pairs) >= 2
+
+    def test_korean_loads(self):
+        sets = get_nuance_sets("ko")
+        assert len(sets) >= 1
+
+    def test_korean_speech_levels(self):
+        sets = get_nuance_sets("ko", concept="speech_levels")
+        assert len(sets) == 1
+
+    def test_italian_loads(self):
+        sets = get_nuance_sets("it")
+        assert len(sets) >= 1
+
+    def test_italian_congiuntivo(self):
+        sets = get_nuance_sets("it", concept="congiuntivo_vs_indicativo")
+        assert len(sets) == 1
+
+    def test_portuguese_loads(self):
+        sets = get_nuance_sets("pt")
+        assert len(sets) >= 1
+
+    def test_portuguese_ser_estar_ficar(self):
+        sets = get_nuance_sets("pt", concept="ser_estar_ficar")
+        assert len(sets) == 1
+        assert len(sets[0].pairs) >= 2
+
+    def test_latin_loads(self):
+        sets = get_nuance_sets("la")
+        assert len(sets) >= 1
+
+    def test_latin_indicative_vs_subjunctive(self):
+        sets = get_nuance_sets("la", concept="indicative_vs_subjunctive")
+        assert len(sets) == 1
+
+    def test_greek_loads(self):
+        sets = get_nuance_sets("grc")
+        assert len(sets) >= 1
+
+    def test_greek_ou_vs_me(self):
+        sets = get_nuance_sets("grc", concept="ou_vs_me")
+        assert len(sets) == 1
+        assert len(sets[0].pairs) >= 2
+
     def test_unknown_language_returns_empty(self):
         sets = get_nuance_sets("xx")
         assert sets == []
@@ -149,6 +210,38 @@ class TestBuildDiscriminationDrills:
         for d in drills:
             assert d.sentence_a
             assert d.sentence_b
+
+    def test_arabic_negation_drills(self):
+        drills = build_discrimination_drills("ar", nuance_type="negation_la")
+        assert len(drills) >= 1
+        assert all(d.concept == "negation_particles" for d in drills)
+
+    def test_chinese_aspect_drills(self):
+        drills = build_discrimination_drills("zh", nuance_type="aspect_le")
+        assert len(drills) >= 1
+        assert all(d.concept == "aspect_particles" for d in drills)
+
+    def test_korean_politeness_drills(self):
+        drills = build_discrimination_drills("ko", nuance_type="politeness")
+        assert len(drills) >= 1
+        assert all(d.concept == "speech_levels" for d in drills)
+
+    def test_italian_congiuntivo_drills(self):
+        drills = build_discrimination_drills("it", nuance_type="congiuntivo")
+        assert len(drills) >= 1
+
+    def test_portuguese_personal_infinitive_drills(self):
+        drills = build_discrimination_drills("pt", nuance_type="personal_infinitive")
+        assert len(drills) >= 1
+
+    def test_latin_subjunctive_drills(self):
+        drills = build_discrimination_drills("la", nuance_type="discourse_particle_la")
+        assert len(drills) >= 1
+
+    def test_greek_negation_drills(self):
+        drills = build_discrimination_drills("grc", nuance_type="negation_ou")
+        assert len(drills) >= 1
+        assert all(d.concept == "ou_vs_me" for d in drills)
 
 
 class TestNuanceSchemaPydantic:

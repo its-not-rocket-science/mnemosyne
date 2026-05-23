@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "language": "la",
+  "sets": [
+    {
+      "concept": "indicative_vs_subjunctive",
+      "title": "Indicative vs Subjunctive",
+      "dimension": "mood",
+      "description": "Latin uses the subjunctive in many subordinate clause types that use the indicative in English: purpose clauses (ut + subj), result clauses (ut + subj), indirect command (ut + subj), circumstantial cum-clauses, and after verbs of fearing.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "Venit ut videret.",
+          "sentence_b": "Venit ut vidit.",
+          "label_a": "purpose clause: he came in order to see",
+          "label_b": "result clause reading (unusual) or incorrect for purpose",
+          "question": "Which expresses that coming was *in order to* see something?",
+          "answer": "a",
+          "dimension": "mood",
+          "explanation": "Purpose clauses in Latin require ut + subjunctive (videret). «ut vidit» uses the indicative — which is used in certain result or comparative clauses, but not purpose. The subjunctive mood in purpose clauses signals that the seeing is the goal, not a reported fact. This is one of Latin's most consistent subjunctive uses.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "Cum Caesar veniret, milites laeti erant.",
+          "sentence_b": "Cum Caesar venit, milites laeti erant.",
+          "label_a": "circumstantial cum + imperfect subjunctive (attendant circumstances)",
+          "label_b": "temporal cum + indicative (simple time statement)",
+          "question": "Which sentence uses the cum-clause to set the broader circumstances around the event?",
+          "answer": "a",
+          "dimension": "mood",
+          "explanation": "Cum with the imperfect subjunctive (veniret) is the 'circumstantial' or 'causal' cum — it gives the attendant circumstances or reason, often translatable as 'since', 'because', or 'when (in the fuller narrative sense)'. Cum with the indicative (venit) is purely temporal: 'when Caesar came' — a bare time marker. The indicative cum-clause is called 'temporal' or 'inversum'; the subjunctive cum-clause is 'circumstantial'.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "ablative_uses",
+      "title": "Ablative Case Uses",
+      "dimension": "case",
+      "description": "The Latin ablative is a multifunctional case used for means (instrumental), manner, accompaniment, separation, agent (with passive), cause, time, comparison, and the ablative absolute construction.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "Gladio interfectus est.",
+          "sentence_b": "A gladiatore interfectus est.",
+          "label_a": "killed by means of a sword (ablative of means — no preposition)",
+          "label_b": "killed by a gladiator (ablative of agent — preposition a/ab required)",
+          "question": "Which sentence says the weapon (sword) was used as the means of killing?",
+          "answer": "a",
+          "dimension": "case",
+          "explanation": "Ablative of means uses no preposition: «gladio» (by means of a sword). Ablative of agent requires the preposition a/ab: «a gladiatore» (by a gladiator). This is one of Latin's famous distinctions: the instrument that acts on its own requires nothing; the person (agent) who acts requires a/ab. Confusing the two is a reliable error marker.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "Caesar Gallis fortior erat.",
+          "sentence_b": "Caesar fortior quam Galli erat.",
+          "label_a": "comparative with ablative of comparison (no quam)",
+          "label_b": "comparative with quam + nominative",
+          "question": "Which uses the ablative as a comparison rather than the conjunction quam?",
+          "answer": "a",
+          "dimension": "case",
+          "explanation": "Latin comparative adjectives can trigger the ablative of comparison (Gallis = than the Gauls) without the conjunction quam. This ablative of comparison replaces quam + the nominative/accusative of the compared element. Both constructions are classical; the ablative is more concise and literary.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "indirect_statement",
+      "title": "Indirect Statement: Accusative + Infinitive",
+      "dimension": "valency",
+      "description": "Latin uses accusative subject + infinitive (not a conjunction clause) for indirect statement after verbs of saying, thinking, knowing, perceiving.",
+      "cefr_level": "B1",
+      "pairs": [
+        {
+          "sentence_a": "Dicit eum venire.",
+          "sentence_b": "Dicit quod venit.",
+          "label_a": "classical Latin indirect statement (accusative + infinitive)",
+          "label_b": "late/Medieval Latin with quod-clause",
+          "question": "Which is the standard Classical Latin construction for 'he says that he is coming'?",
+          "answer": "a",
+          "dimension": "valency",
+          "explanation": "Classical Latin uses accusative + infinitive for indirect statement: eum (accusative subject) + venire (infinitive). This is mandatory in Classical prose (Caesar, Cicero, Livy). The quod-clause construction appears only in late Latin, Vulgate, and Medieval texts. Learning the ACI (accusativus cum infinitivo) is essential for reading classical authors.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "gerund_vs_gerundive",
+      "title": "Gerund vs Gerundive",
+      "dimension": "valency",
+      "description": "The gerund is a verbal noun (amandi = of loving); the gerundive is a verbal adjective implying obligation (liber legendus = a book to be read / a book that ought to be read). They look similar but function differently.",
+      "cefr_level": "B2",
+      "pairs": [
+        {
+          "sentence_a": "Ars amandi.",
+          "sentence_b": "Puella amanda.",
+          "label_a": "the art of loving (gerund: verbal noun, genitive)",
+          "label_b": "a girl to be loved / a loveable girl (gerundive: verbal adjective on the noun)",
+          "question": "Which uses the form as a verbal noun rather than a verbal adjective?",
+          "answer": "a",
+          "dimension": "valency",
+          "explanation": "«amandi» in «ars amandi» is the gerund (genitive case of the verbal noun) — translated 'of loving'. «amanda» in «puella amanda» is the gerundive — a verbal adjective agreeing with puella in gender/number/case, expressing obligation or fitness: 'a girl who ought to be loved' or 'a lovable girl'. The forms look similar but their functions diverge: the gerund is a noun; the gerundive is an adjective.",
+          "cefr_level": "B2"
+        }
+      ]
+    },
+    {
+      "concept": "latin_aspect",
+      "title": "Perfect vs Imperfect Aspect",
+      "dimension": "aspect",
+      "description": "Latin perfect encodes completed action or present state resulting from past action. Latin imperfect encodes ongoing, continuous, or repeated past action.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "Romani Carthaginem vicerant.",
+          "sentence_b": "Romani Carthaginem vincebant.",
+          "label_a": "the Romans had conquered Carthage (completed result)",
+          "label_b": "the Romans were conquering Carthage (ongoing process)",
+          "question": "Which sentence presents the conquest as an ongoing struggle, not a completed result?",
+          "answer": "b",
+          "dimension": "aspect",
+          "explanation": "«vicerant» (pluperfect = perfect stem) presents a completed prior action — the conquest is accomplished. «vincebant» (imperfect) presents conquest as an ongoing, continuous process — the Romans were in the act of conquering. The same aspectual distinction seen in Spanish and Russian: imperfect = camera panning across action; perfect = plot point reached.",
+          "cefr_level": "A2"
+        }
+      ]
+    }
+  ]
+}

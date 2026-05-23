@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "language": "pt",
+  "sets": [
+    {
+      "concept": "ser_estar_ficar",
+      "title": "Ser vs Estar vs Ficar",
+      "dimension": "mood",
+      "description": "Portuguese has three copulas where Spanish has two: ser (permanent/defining), estar (temporary state/location), and ficar (become/remain/stay). Ficar is especially prominent in Brazilian Portuguese.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "O café está frio.",
+          "sentence_b": "O café ficou frio.",
+          "label_a": "the coffee is cold (current state)",
+          "label_b": "the coffee became/got cold (change of state)",
+          "question": "Which sentence emphasises the transition — the coffee was once hot and has now cooled?",
+          "answer": "b",
+          "dimension": "mood",
+          "explanation": "«Está frio» (estar) reports the current condition — the coffee is cold right now. «Ficou frio» (ficar) highlights the change of state — it became cold, implying it was previously warm. Ficar is the change-of-state copula in Portuguese; in Brazilian Portuguese it often replaces estar in many contexts: fiquei preocupado (I got worried / I am worried).",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "Ela é professora.",
+          "sentence_b": "Ela está professora.",
+          "label_a": "she is a teacher (profession — defining)",
+          "label_b": "unnatural: professions use ser, not estar",
+          "question": "Which sentence correctly expresses someone's profession in Portuguese?",
+          "answer": "a",
+          "dimension": "mood",
+          "explanation": "Professions, nationality, and identity use ser in Portuguese, just as in Spanish. «Ela está professora» is ungrammatical — estar is not used for professional identity. The distinction follows the same principle as Spanish ser/estar: ser for essential characteristics, estar for states.",
+          "cefr_level": "A2"
+        }
+      ]
+    },
+    {
+      "concept": "personal_infinitive",
+      "title": "Personal Infinitive (Infinitivo Pessoal)",
+      "dimension": "valency",
+      "description": "Portuguese uniquely inflects the infinitive for person and number. The personal infinitive is required when the infinitive has a different subject from the main verb, especially after prepositions.",
+      "cefr_level": "B2",
+      "pairs": [
+        {
+          "sentence_a": "É importante eles fazerem isso.",
+          "sentence_b": "É importante eles fazer isso.",
+          "label_a": "personal infinitive (inflected: fazerem, 3rd person plural)",
+          "label_b": "bare infinitive (uninflected: fazer)",
+          "question": "Which is the standard European Portuguese form when the infinitive has an explicit subject?",
+          "answer": "a",
+          "dimension": "valency",
+          "explanation": "«fazerem» is the personal infinitive: inflected for 3rd person plural (eles). When the infinitive subject is specified or differs from the main clause subject, European Portuguese consistently uses the personal infinitive. Brazilian Portuguese accepts the bare infinitive more freely in colloquial speech, but the personal infinitive is always available and preferred in formal writing.",
+          "cefr_level": "B2"
+        },
+        {
+          "sentence_a": "Para poderes entrar, precisas de um bilhete.",
+          "sentence_b": "Para poder entrar, precisas de um bilhete.",
+          "label_a": "personal infinitive: for you to be able to enter",
+          "label_b": "bare infinitive: to be able to enter (subject unclear)",
+          "question": "Which makes explicit that it is *you* who must be able to enter?",
+          "answer": "a",
+          "dimension": "valency",
+          "explanation": "«Para poderes» (personal infinitive, 2nd person singular) specifies you as the subject of 'being able'. «Para poder» leaves the subject implicit. In European Portuguese, especially after para (for/in order to), the personal infinitive clarifies that the clause has the same or a specified subject — preventing ambiguity in complex sentences.",
+          "cefr_level": "B2"
+        }
+      ]
+    },
+    {
+      "concept": "future_subjunctive",
+      "title": "Future Subjunctive (Futuro do Subjuntivo)",
+      "dimension": "mood",
+      "description": "Portuguese preserves an active future subjunctive used in conditional and temporal clauses about uncertain future events. Spanish has lost this form, replacing it with the present subjunctive; Portuguese keeps it.",
+      "cefr_level": "B2",
+      "pairs": [
+        {
+          "sentence_a": "Se eu for ao mercado, comprarei pão.",
+          "sentence_b": "Se eu fosse ao mercado, compraria pão.",
+          "label_a": "real future condition (future subjunctive): if I go (and I might)",
+          "label_b": "counterfactual condition (imperfect subjunctive): if I were to go (but I'm not)",
+          "question": "Which sentence expresses a genuinely possible future scenario?",
+          "answer": "a",
+          "dimension": "mood",
+          "explanation": "«Se eu for» uses the future subjunctive (ir → for) — a real open condition about the future. «Se eu fosse» uses the imperfect subjunctive — a hypothetical or counterfactual situation. This is a crucial distinction: the future subjunctive for open futures (Se ficar bom tempo, vamos à praia) is a key grammatical feature that distinguishes Portuguese from Spanish.",
+          "cefr_level": "B2"
+        },
+        {
+          "sentence_a": "Quando chegares, liga para mim.",
+          "sentence_b": "Quando chegas, liga para mim.",
+          "label_a": "future subjunctive in temporal clause (correct)",
+          "label_b": "present indicative in temporal clause (incorrect for future reference)",
+          "question": "Which is grammatically correct in European Portuguese for a future action?",
+          "answer": "a",
+          "dimension": "mood",
+          "explanation": "After quando (when) referring to a future event, Portuguese requires the future subjunctive (chegares). Using the present indicative (chegas) is a learner error that sounds unnatural to native speakers. In Spanish, the present subjunctive is used after cuando for future reference; Portuguese goes further and uses the future subjunctive.",
+          "cefr_level": "B2"
+        }
+      ]
+    },
+    {
+      "concept": "preterito_perfeito_vs_imperfeito",
+      "title": "Pretérito Perfeito vs Pretérito Imperfeito",
+      "dimension": "aspect",
+      "description": "The same aspectual contrast as in Spanish: perfeito (completed, bounded event) vs. imperfeito (ongoing, habitual, background state).",
+      "cefr_level": "B1",
+      "pairs": [
+        {
+          "sentence_a": "Ontem comi uma maçã.",
+          "sentence_b": "Em criança, comia uma maçã por dia.",
+          "label_a": "completed past event (yesterday)",
+          "label_b": "habitual past action (as a child)",
+          "question": "Which sentence describes a repeated childhood habit?",
+          "answer": "b",
+          "dimension": "aspect",
+          "explanation": "«Comi» (perfeito simples) presents a completed, one-time event in the past. «Comia» (imperfeito) frames the eating as a habitual routine — not one event but a pattern. The imperfeito is the tense for background description and habitual past; the perfeito is the tense for plot-moving events.",
+          "cefr_level": "B1"
+        }
+      ]
+    }
+  ]
+}

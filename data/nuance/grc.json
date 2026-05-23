@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "language": "grc",
+  "sets": [
+    {
+      "concept": "greek_aspect",
+      "title": "Verbal Aspect: Aorist vs Present/Imperfect vs Perfect",
+      "dimension": "aspect",
+      "description": "Greek aspect is the primary verbal category. Aorist presents action as a summary or single event (punctiliar view). Present/Imperfect presents action as ongoing or in progress. Perfect presents a past action with present ongoing relevance or resultant state.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "ἔγραψεν ἐπιστολήν.",
+          "sentence_b": "ἔγραφεν ἐπιστολήν.",
+          "label_a": "aorist: he wrote the letter (action viewed as a whole, completed)",
+          "label_b": "imperfect: he was writing the letter (action viewed as ongoing)",
+          "question": "Which sentence presents the writing as an ongoing, unfinished process?",
+          "answer": "b",
+          "dimension": "aspect",
+          "explanation": "«ἔγραψεν» (aorist) presents the writing as a completed, summarised event — a historical plot point. «ἔγραφεν» (imperfect) presents it as ongoing background action — the process, not the result. This is the core Greek aspectual contrast: aorist = camera shutter (snapshot); imperfect = camera rolling (film). Greek aspect is primary; tense (past/present/future) is secondary.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "γέγραπται ὅτι…",
+          "sentence_b": "ἐγράφη ὅτι…",
+          "label_a": "perfect: it stands written (present relevance of past action)",
+          "label_b": "aorist passive: it was written (completed past event, no present relevance asserted)",
+          "question": "Which form asserts that the writing still stands as authoritative — has ongoing present force?",
+          "answer": "a",
+          "dimension": "aspect",
+          "explanation": "«γέγραπται» (perfect passive, 'it stands written') is a classic New Testament formula emphasising that the scripture has present, binding authority — the act of writing is past, but its result and force are present now. «ἐγράφη» (aorist passive) simply reports that it was written at some past time, without implying present relevance. The perfect is an aspect, not merely a tense; it always asserts current state.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "ou_vs_me",
+      "title": "οὐ vs μή Negation",
+      "dimension": "negation",
+      "description": "Greek uses two negation words: οὐ (οὐκ/οὐχ) negates indicative assertions of fact; μή negates non-indicative moods (subjunctive, optative, imperative, infinitive, and participle) and introduces negated purpose clauses.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "οὐκ οἶδα.",
+          "sentence_b": "μὴ ποίει τοῦτο.",
+          "label_a": "indicative negation: I do not know",
+          "label_b": "imperative negation: do not do this",
+          "question": "Which sentence negates an imperative command?",
+          "answer": "b",
+          "dimension": "negation",
+          "explanation": "«οὐκ οἶδα» negates an indicative verb (I know → I do not know). «μὴ ποίει» negates a present imperative (do! → do not do!). The rule is systematic: οὐ for factual indicative assertions; μή for everything else. Using οὐ with an imperative or μή with an indicative is a classical Greek error that marks non-native composition.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "ἦλθεν ἵνα μὴ ἀποθάνωμεν.",
+          "sentence_b": "ἦλθεν ἵνα οὐκ ἀποθάνωμεν.",
+          "label_a": "correct: purpose clause takes μή",
+          "label_b": "incorrect: οὐ does not negate purpose clauses",
+          "question": "Which correctly negates the purpose clause 'so that we might not die'?",
+          "answer": "a",
+          "dimension": "negation",
+          "explanation": "Purpose clauses (ἵνα + subjunctive) take μή as their negation. «ἵνα μὴ» = 'so that not / lest'. «ἵνα οὐκ» is ungrammatical — οὐ never negates purpose clauses. This extends the rule: μή governs all non-indicative contexts, including the subjunctive mood within subordinate clauses.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "conditional_types",
+      "title": "Greek Conditional Types",
+      "dimension": "mood",
+      "description": "Greek has four distinct conditional types that encode the speaker's assessment of probability: (1) simple/general, (2) future more vivid, (3) future less vivid, (4) contrary-to-fact.",
+      "cefr_level": "B1",
+      "pairs": [
+        {
+          "sentence_a": "ἐὰν ἔλθῃς, χαρήσομαι.",
+          "sentence_b": "εἰ ἔλθοις, χαίροιμι ἄν.",
+          "label_a": "future more vivid: if you come (and you might), I will rejoice",
+          "label_b": "future less vivid: if you should come (less likely), I would rejoice",
+          "question": "Which sentence treats the coming as genuinely likely?",
+          "answer": "a",
+          "dimension": "mood",
+          "explanation": "«ἐὰν + subjunctive» (future more vivid) presents the condition as a real open possibility — you might actually come. «εἰ + optative» (future less vivid) presents it as more remote or tentative — a polite or uncertain framing. The future more vivid is the 'normal' future condition for events the speaker thinks could happen; the less vivid is for lower probability or formal politeness.",
+          "cefr_level": "B1"
+        },
+        {
+          "sentence_a": "εἰ ἦλθες, εἶδες ἄν.",
+          "sentence_b": "εἰ ἔλθοις, ἴδοις ἄν.",
+          "label_a": "contrary-to-fact (past): if you had come, you would have seen",
+          "label_b": "future less vivid: if you should come, you would see",
+          "question": "Which sentence describes a condition that did NOT happen in the past?",
+          "answer": "a",
+          "dimension": "mood",
+          "explanation": "«εἰ + indicative past + ἄν» is the contrary-to-fact (past) conditional — the condition is presented as contrary to fact: you did not come. «εἰ + optative + ἄν» is the future less vivid — still about the future. The presence of ἄν in the apodosis (result clause) marks the condition as counterfactual or less vivid; the tense of the indicative distinguishes past from present counterfactual.",
+          "cefr_level": "B2"
+        }
+      ]
+    },
+    {
+      "concept": "article_functions",
+      "title": "The Greek Article: Definite Marker and More",
+      "dimension": "definiteness",
+      "description": "The Greek article (ὁ/ἡ/τό) marks definiteness but has additional functions: it can introduce substantivized participles (ὁ λέγων = the one who speaks), serve as a weak demonstrative, and appears in the μέν…δέ construction.",
+      "cefr_level": "A1",
+      "pairs": [
+        {
+          "sentence_a": "ὁ ἄνθρωπος λέγει.",
+          "sentence_b": "ἄνθρωπος λέγει.",
+          "label_a": "the man speaks (definite — specific known individual)",
+          "label_b": "a man speaks / man speaks (indefinite or generic)",
+          "question": "Which refers to a specific, already-identified person?",
+          "answer": "a",
+          "dimension": "definiteness",
+          "explanation": "«ὁ ἄνθρωπος» is definite — the man, a specific person the discourse has identified. «ἄνθρωπος» without the article is indefinite (a man) or generic (man in general). Greek does not have an indefinite article like English 'a/an'; indefiniteness is simply the absence of the article. This contrasts with Latin, which also lacks an article entirely.",
+          "cefr_level": "A1"
+        },
+        {
+          "sentence_a": "ὁ μὲν ἔφυγεν, ὁ δὲ ἔμεινεν.",
+          "sentence_b": "ἀνὴρ μὲν ἔφυγεν, γυνὴ δὲ ἔμεινεν.",
+          "label_a": "the one fled, the other stayed (article as pronoun in μέν-δέ)",
+          "label_b": "a man fled, a woman stayed (nouns in μέν-δέ)",
+          "question": "Which sentence uses the article as a stand-alone pronoun meaning 'the one…the other'?",
+          "answer": "a",
+          "dimension": "definiteness",
+          "explanation": "«ὁ μέν…ὁ δέ» uses the article without a noun — the article functions as a demonstrative pronoun meaning 'the one…the other'. This is a distinctive Greek construction that has no direct Latin equivalent. The article-as-pronoun is common in Classical Greek and appears frequently in the New Testament.",
+          "cefr_level": "B1"
+        }
+      ]
+    }
+  ]
+}
