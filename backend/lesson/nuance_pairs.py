@@ -26,17 +26,64 @@ _DATA_DIR = Path(__file__).parent.parent.parent / "data" / "nuance"
 
 # Map plugin nuance_type values → JSON concept IDs.
 NUANCE_TYPE_TO_CONCEPT: dict[str, str] = {
-    "imperfect_aspect":   "preterite_vs_imperfect",
-    "subjunctive_mood":   "subjunctive_vs_indicative",
-    "reflexive_verb":     "ser_vs_estar",
-    "russian_aspect":     "perfective_vs_imperfective",
+    # Spanish
+    "imperfect_aspect":         "preterite_vs_imperfect",
+    "subjunctive_mood":         "subjunctive_vs_indicative",
+    "subjunctive_trigger":      "subjunctive_vs_indicative",
+    "reflexive_verb":           "ser_vs_estar",
+    "ser_estar":                "ser_vs_estar",
+    "por_para":                 "por_vs_para",
+    # Russian
+    "russian_aspect":           "perfective_vs_imperfective",
+    "perfective_vs_imperfective": "perfective_vs_imperfective",
+    # Arabic
+    "negation_la":              "negation_particles",
+    "negation_lam":             "negation_particles",
+    "negation_lan":             "negation_particles",
+    "negation_ma":              "negation_particles",
+    "negation_laysa":           "negation_particles",
+    # Chinese
+    "aspect_le":                "aspect_particles",
+    "aspect_guo":               "aspect_particles",
+    "aspect_zhe":               "aspect_particles",
+    "measure_word":             "measure_words",
+    # Korean
+    "politeness":               "speech_levels",
+    "negation":                 "negation_forms",
+    "honorific":                "speech_levels",
+    "particle":                 "topic_subject_contrast",
+    # Italian
+    "congiuntivo":              "congiuntivo_vs_indicativo",
+    # Portuguese
+    "personal_infinitive":      "personal_infinitive",
+    "future_subjunctive":       "future_subjunctive",
+    # Latin
+    "discourse_particle_la":    "indicative_vs_subjunctive",
+    # Greek
+    "negation_ou":              "ou_vs_me",
+    "negation_me":              "ou_vs_me",
+    # French
+    "passe_compose":            "passe_compose_vs_imparfait",
+    "imparfait":                "passe_compose_vs_imparfait",
+    # German
+    "modal_particle":           "modal_particles",
+    # Japanese
+    "keigo":                    "keigo_levels",
+    "yojijukugo":               "keigo_levels",
 }
 
 # Map grammar pattern_id values → JSON concept IDs.
 PATTERN_TO_CONCEPT: dict[str, str] = {
-    "ser_copula":          "ser_vs_estar",
-    "estar_copula":        "ser_vs_estar",
-    "estar_progressive":   "preterite_vs_imperfect",
+    # Spanish
+    "ser_copula":              "ser_vs_estar",
+    "estar_copula":            "ser_vs_estar",
+    "estar_progressive":       "preterite_vs_imperfect",
+    # Italian
+    "essere_copula":           "congiuntivo_vs_indicativo",
+    # Portuguese
+    "ser_copula_pt":           "ser_estar_ficar",
+    "estar_copula_pt":         "ser_estar_ficar",
+    "ficar_copula":            "ser_estar_ficar",
 }
 
 

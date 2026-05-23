@@ -603,6 +603,162 @@ export class MnemosyneModal extends HTMLElement {
           .drill-option[data-state="correct"] { outline: 3px solid Highlight; }
           .drill-option[data-state="wrong"]   { outline: 3px solid Mark; }
         }
+
+        /* ── discrimination drill ── */
+        .disc-sentences {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0.5rem;
+          margin-block: 0.5rem;
+        }
+
+        @media (max-width: 28rem) {
+          .disc-sentences { grid-template-columns: 1fr; }
+        }
+
+        .disc-sentence-box {
+          background: color-mix(in srgb, CanvasText 5%, transparent);
+          border-radius: 0.4rem;
+          padding: 0.5rem 0.65rem;
+        }
+
+        .disc-label-tag {
+          display: inline-block;
+          font-size: 0.7rem;
+          font-weight: 700;
+          color: var(--muted, GrayText);
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          margin-block-end: 0.2rem;
+        }
+
+        .disc-sentence-text {
+          margin: 0;
+          font-size: 1rem;
+          font-weight: 600;
+          overflow-wrap: break-word;
+        }
+
+        .disc-reveal {
+          margin-block-start: 0.6rem;
+          border-inline-start: 3px solid color-mix(in srgb, var(--accent, #3557ff) 50%, transparent);
+          padding-inline-start: 0.6rem;
+        }
+
+        .disc-reveal-label {
+          margin: 0 0 0.15rem;
+          font-size: 0.8rem;
+          color: var(--muted, GrayText);
+        }
+
+        .disc-reveal-explanation {
+          margin: 0.4rem 0 0;
+          font-size: 0.85rem;
+          line-height: 1.5;
+        }
+
+        /* ── nuance sets section ── */
+        .nuance-set {
+          border: 1px solid color-mix(in srgb, CanvasText 15%, Canvas);
+          border-radius: 0.5rem;
+          margin-block-end: 0.5rem;
+          overflow: hidden;
+        }
+
+        .nuance-set-summary {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+          cursor: pointer;
+          padding: 0.6rem 0.75rem;
+          font-size: 0.875rem;
+          font-weight: 600;
+          user-select: none;
+          list-style: none;
+        }
+
+        .nuance-set-summary::-webkit-details-marker { display: none; }
+        .nuance-set-summary::marker { display: none; }
+
+        .nuance-set-summary::before {
+          content: '▶';
+          font-size: 0.6rem;
+          color: var(--muted, GrayText);
+          transition: transform 0.15s;
+          flex-shrink: 0;
+        }
+
+        .nuance-set[open] > .nuance-set-summary::before { transform: rotate(90deg); }
+
+        @media (prefers-reduced-motion: reduce) {
+          .nuance-set-summary::before { transition: none; }
+        }
+
+        .nuance-cefr-badge {
+          font-size: 0.65rem;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+          padding: 0.1em 0.5em;
+          border-radius: 999px;
+          border: 1px solid color-mix(in srgb, CanvasText 25%, transparent);
+          color: var(--muted, GrayText);
+        }
+
+        .nuance-set-body {
+          padding: 0.5rem 0.75rem 0.75rem;
+        }
+
+        .nuance-set-desc {
+          margin: 0 0 0.75rem;
+          font-size: 0.8rem;
+          color: var(--muted, GrayText);
+          line-height: 1.5;
+        }
+
+        .nuance-pair {
+          border-block-start: 1px solid color-mix(in srgb, CanvasText 10%, Canvas);
+          padding-block-start: 0.6rem;
+          margin-block-start: 0.6rem;
+        }
+
+        .nuance-pair:first-child {
+          border-block-start: none;
+          padding-block-start: 0;
+          margin-block-start: 0;
+        }
+
+        .nuance-pair-label {
+          margin: 0.2rem 0 0;
+          font-size: 0.75rem;
+          color: var(--muted, GrayText);
+          font-style: italic;
+        }
+
+        .nuance-pair-question {
+          margin: 0.4rem 0 0;
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+
+        .nuance-pair-exp-wrap {
+          margin-block-start: 0.35rem;
+        }
+
+        .nuance-pair-exp-wrap > summary {
+          cursor: pointer;
+          font-size: 0.75rem;
+          color: var(--muted, GrayText);
+          padding-block: 0.15rem;
+          user-select: none;
+        }
+
+        .nuance-pair-explanation {
+          margin: 0.35rem 0 0;
+          font-size: 0.8rem;
+          line-height: 1.55;
+          color: var(--muted, GrayText);
+        }
       </style>
 
       <div class="overlay" data-overlay>
@@ -899,6 +1055,100 @@ export class MnemosyneModal extends HTMLElement {
       lessonBody.appendChild(sec)
     }
 
+    // Nuance sets — side-by-side sentence contrast pairs.
+    const nuanceSets = lesson.nuance_sets ?? []
+    if (nuanceSets.length) {
+      const sec = document.createElement('section')
+      sec.className = 'enrichment-section nuance-section'
+      const h = document.createElement('p')
+      h.className = 'enrichment-heading'
+      h.setAttribute('aria-hidden', 'true')
+      h.textContent = 'Contrast pairs'
+      sec.appendChild(h)
+
+      for (const ns of nuanceSets) {
+        const details = document.createElement('details')
+        details.className = 'nuance-set'
+        const summary = document.createElement('summary')
+        summary.className = 'nuance-set-summary'
+        summary.textContent = ns.title
+        if (ns.cefr_level) {
+          const badge = document.createElement('span')
+          badge.className = 'nuance-cefr-badge'
+          badge.textContent = ns.cefr_level
+          summary.appendChild(badge)
+        }
+        details.appendChild(summary)
+
+        const body = document.createElement('div')
+        body.className = 'nuance-set-body'
+
+        if (ns.description) {
+          const desc = document.createElement('p')
+          desc.className = 'nuance-set-desc'
+          desc.textContent = ns.description
+          body.appendChild(desc)
+        }
+
+        for (const pair of ns.pairs ?? []) {
+          const pairEl = document.createElement('div')
+          pairEl.className = 'nuance-pair'
+
+          const sentences = document.createElement('div')
+          sentences.className = 'disc-sentences'
+          for (const [key, text, label] of [
+            ['A', pair.sentence_a, pair.label_a],
+            ['B', pair.sentence_b, pair.label_b],
+          ]) {
+            const box = document.createElement('div')
+            box.className = 'disc-sentence-box'
+            const tag = document.createElement('span')
+            tag.className = 'disc-label-tag'
+            tag.setAttribute('aria-hidden', 'true')
+            tag.textContent = key
+            const sentText = document.createElement('p')
+            sentText.className = 'disc-sentence-text'
+            sentText.textContent = text
+            this.#applyTargetLang(sentText)
+            box.append(tag, sentText)
+            if (label) {
+              const lbl = document.createElement('p')
+              lbl.className = 'nuance-pair-label'
+              lbl.textContent = label
+              box.appendChild(lbl)
+            }
+            sentences.appendChild(box)
+          }
+          pairEl.appendChild(sentences)
+
+          if (pair.question) {
+            const q = document.createElement('p')
+            q.className = 'nuance-pair-question'
+            q.textContent = pair.question
+            pairEl.appendChild(q)
+          }
+
+          if (pair.explanation) {
+            const expDetails = document.createElement('details')
+            expDetails.className = 'nuance-pair-exp-wrap'
+            const expSummary = document.createElement('summary')
+            expSummary.textContent = 'Explanation'
+            const expText = document.createElement('p')
+            expText.className = 'nuance-pair-explanation'
+            expText.textContent = pair.explanation
+            expDetails.append(expSummary, expText)
+            pairEl.appendChild(expDetails)
+          }
+
+          body.appendChild(pairEl)
+        }
+
+        details.appendChild(body)
+        sec.appendChild(details)
+      }
+      lessonBody.appendChild(sec)
+    }
+
     // Encountered vocabulary — compact gloss list.
     const encVocab = lesson.encountered_vocabulary ?? []
     if (encVocab.length) {
@@ -1023,6 +1273,7 @@ export class MnemosyneModal extends HTMLElement {
       case 'multiple_choice': return this.#renderMultipleChoice(drill, index, onCheckResult)
       case 'fill_blank':      return this.#renderFillBlank(drill, index, onCheckResult)
       case 'recognition':     return this.#renderRecognition(drill, index, onCheckResult)
+      case 'discrimination':  return this.#renderDiscrimination(drill, index, onCheckResult)
       default:                return null
     }
   }
@@ -1246,6 +1497,89 @@ export class MnemosyneModal extends HTMLElement {
     })
 
     el.append(prompt, group, feedback)
+    return el
+  }
+
+  #renderDiscrimination(drill, index, onCheckResult) {
+    const el = document.createElement('div')
+    el.className = 'drill drill--disc'
+    el.setAttribute('aria-label', `Practice drill ${index + 1}: discrimination`)
+
+    const question = document.createElement('p')
+    question.className = 'drill-prompt'
+    question.textContent = drill.question
+
+    const sentences = document.createElement('div')
+    sentences.className = 'disc-sentences'
+    for (const [key, text] of [['A', drill.sentence_a], ['B', drill.sentence_b]]) {
+      const box = document.createElement('div')
+      box.className = 'disc-sentence-box'
+      const tag = document.createElement('span')
+      tag.className = 'disc-label-tag'
+      tag.setAttribute('aria-hidden', 'true')
+      tag.textContent = key
+      const sentText = document.createElement('p')
+      sentText.className = 'disc-sentence-text'
+      sentText.textContent = text
+      this.#applyTargetLang(sentText)
+      box.append(tag, sentText)
+      sentences.appendChild(box)
+    }
+
+    const group = document.createElement('div')
+    group.className = 'drill-options'
+    group.setAttribute('role', 'group')
+    group.setAttribute('aria-label', 'Choose A or B')
+
+    const feedback = document.createElement('p')
+    feedback.className = 'drill-feedback'
+    feedback.setAttribute('aria-live', 'polite')
+    feedback.setAttribute('aria-atomic', 'true')
+
+    const reveal = document.createElement('div')
+    reveal.className = 'disc-reveal'
+    reveal.hidden = true
+
+    let answered = false
+    for (const key of ['a', 'b']) {
+      const btn = document.createElement('button')
+      btn.type = 'button'
+      btn.className = 'drill-option'
+      btn.textContent = key.toUpperCase()
+      btn.addEventListener('click', () => {
+        if (answered) return
+        answered = true
+        const isCorrect = key === drill.answer
+
+        group.querySelectorAll('.drill-option').forEach((b) => {
+          b.disabled = true
+          if (b.textContent.toLowerCase() === drill.answer) b.dataset.state = 'correct'
+          else if (b.textContent.toLowerCase() === key && !isCorrect) b.dataset.state = 'wrong'
+        })
+
+        feedback.dataset.result = isCorrect ? 'correct' : 'wrong'
+        feedback.textContent = isCorrect
+          ? t('modal_feedback_correct')
+          : `${t('modal_feedback_wrong_intro')}${drill.answer.toUpperCase()}${t('modal_feedback_wrong_outro')}`
+
+        reveal.hidden = false
+        const labelA = document.createElement('p')
+        labelA.className = 'disc-reveal-label'
+        labelA.textContent = `A: ${drill.label_a}`
+        const labelB = document.createElement('p')
+        labelB.className = 'disc-reveal-label'
+        labelB.textContent = `B: ${drill.label_b}`
+        const explanation = document.createElement('p')
+        explanation.className = 'disc-reveal-explanation'
+        explanation.textContent = drill.explanation
+        reveal.append(labelA, labelB, explanation)
+
+        onCheckResult?.({ index, type: 'discrimination', correct: isCorrect, answeredAt: new Date().toISOString() })
+      })
+      group.appendChild(btn)
+    }
+
+    el.append(question, sentences, group, feedback, reveal)
     return el
   }
 }

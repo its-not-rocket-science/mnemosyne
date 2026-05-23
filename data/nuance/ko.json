@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "language": "ko",
+  "sets": [
+    {
+      "concept": "speech_levels",
+      "title": "Speech Levels: 합쇼체 / 해요체 / 해체",
+      "dimension": "politeness",
+      "description": "Korean encodes social relationship directly in verb endings. The same propositional content is expressed differently depending on formality and the speaker's relationship to the listener.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "어디에 가십니까?",
+          "sentence_b": "어디에 가요?",
+          "label_a": "formal polite (합쇼체) — news broadcast, official address",
+          "label_b": "informal polite (해요체) — everyday adult register",
+          "question": "Which sentence would a news anchor use when addressing the public?",
+          "answer": "a",
+          "dimension": "politeness",
+          "explanation": "«가십니까» (합쇼체) uses the highest everyday formal register — appropriate for news, official contexts, and addressing large audiences. «가요» (해요체) is the default adult polite register for strangers, shops, and teachers. Using 합쇼체 in casual conversation sounds stiff; using 해요체 in a formal broadcast sounds unprofessional.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "밥 먹었어?",
+          "sentence_b": "밥 드셨어요?",
+          "label_a": "plain informal (해체) — close friends only",
+          "label_b": "informal polite with subject honorific — to an elder",
+          "question": "Which sentence is appropriate to ask an older relative if they have eaten?",
+          "answer": "b",
+          "dimension": "politeness",
+          "explanation": "«먹었어?» (해체 plain informal) is used with close friends and younger people. «드셨어요?» elevates the elder's eating using the honorific verb 드시다 (eat, honorific of 먹다) and the polite 해요체 ending. Using plain speech with an elder is considered rude; using ordinary 먹다 instead of 드시다 fails to honor them even if you use polite endings.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "topic_subject_contrast",
+      "title": "은/는 (Topic/Contrast) vs 이/가 (Subject/Focus)",
+      "dimension": "topic_focus",
+      "description": "은/는 marks the sentence topic or a contrastive element; 이/가 marks the neutral grammatical subject or new information. The same sentence can have different pragmatic meaning depending on which marker is used.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "저는 학생이에요.",
+          "sentence_b": "제가 학생이에요.",
+          "label_a": "I (topic) am a student — self-introduction",
+          "label_b": "I (focus) am the student — contrastive emphasis",
+          "question": "Which sentence would you use to introduce yourself as a student?",
+          "answer": "a",
+          "dimension": "topic_focus",
+          "explanation": "«저는» (topic marker 은/는) introduces the speaker as the topic of the sentence — the standard self-introduction frame. «제가» (subject marker 이/가) emphasises the subject contrastively, implying 'I am the one who is the student (not someone else)'. Using 제가 in a neutral self-introduction sounds oddly emphatic — as if you're clarifying a misunderstanding.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "누가 했어요?",
+          "sentence_b": "누구는 했어요?",
+          "label_a": "who did it? (open question)",
+          "label_b": "who (among them) did it? (contrastive — odd as an open question)",
+          "question": "Which is the natural way to ask 'Who did it?' with no presuppositions?",
+          "answer": "a",
+          "dimension": "topic_focus",
+          "explanation": "«누가» uses 이/가 because the subject is new information and the answer is unknown — a genuine open question. «누구는» would imply 'as for who, [they] did it', suggesting a contrast: maybe implying that someone did it while others didn't. This sounds marked and presupposes some prior context. In bare wh-questions about a subject, 이/가 is standard.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "negation_forms",
+      "title": "Short Negation (안/못) vs Long Negation (-지 않다/-지 못하다)",
+      "dimension": "negation",
+      "description": "안 marks volitional negation (choosing not to); 못 marks inability. Each has a long form (-지 않다 / -지 못하다) that is more formal and versatile.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "저는 고기를 안 먹어요.",
+          "sentence_b": "저는 고기를 못 먹어요.",
+          "label_a": "I don't eat meat (by choice)",
+          "label_b": "I can't eat meat (inability or prohibition)",
+          "question": "Which sentence implies you are a vegetarian by choice?",
+          "answer": "a",
+          "dimension": "negation",
+          "explanation": "«안 먹어요» signals volitional non-action — you choose not to eat meat, perhaps for dietary or ethical reasons. «못 먹어요» signals inability — you cannot eat it, perhaps due to an allergy, a religious restriction, or an outside prohibition. Using 못 when you simply prefer not to sounds like you're claiming an inability you don't have.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "오늘 못 왔어요.",
+          "sentence_b": "오늘 안 왔어요.",
+          "label_a": "couldn't come today (external constraint)",
+          "label_b": "didn't come today (chose not to)",
+          "question": "Which sentence excuses an absence as being beyond the speaker's control?",
+          "answer": "a",
+          "dimension": "negation",
+          "explanation": "«못 왔어요» (못 + past) implies the speaker was prevented from coming — traffic, illness, work emergency. It is an implicit apology or excuse. «안 왔어요» simply states the speaker did not come, without implying external constraint — it can sound like an intentional absence. In Korean social contexts, the 안/못 distinction carries significant weight.",
+          "cefr_level": "A2"
+        }
+      ]
+    },
+    {
+      "concept": "object_subject_verbs",
+      "title": "좋아하다 (을/를) vs 좋다 (이/가)",
+      "dimension": "argument_marking",
+      "description": "English 'like' maps to two different Korean constructions: 좋아하다 (transitive verb, takes object marker 을/를) and 좋다 (descriptive verb, takes subject marker 이/가). The structure change reflects different predicates.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "저는 음악을 좋아해요.",
+          "sentence_b": "저는 음악이 좋아요.",
+          "label_a": "I like music (active verb: 좋아하다)",
+          "label_b": "Music is good to me / I find music good (stative: 좋다)",
+          "question": "Which sentence uses the transitive verb construction?",
+          "answer": "a",
+          "dimension": "argument_marking",
+          "explanation": "«음악을 좋아해요» treats liking as an action — 좋아하다 is a transitive verb, so 음악 takes the object marker 을/를. «음악이 좋아요» treats goodness as a property the speaker experiences — 좋다 is a descriptive (adjectival) verb, so 음악 is the grammatical subject marked with 이/가. Both are correct and natural, but differ in the speaker's grammatical framing: are you an agent who likes, or is music the entity that 'is good' to you?",
+          "cefr_level": "A2"
+        }
+      ]
+    }
+  ]
+}

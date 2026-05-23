@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "language": "it",
+  "sets": [
+    {
+      "concept": "congiuntivo_vs_indicativo",
+      "title": "Congiuntivo vs Indicativo",
+      "dimension": "mood",
+      "description": "The congiuntivo (subjunctive) is required after triggers of doubt, will, emotion, and impersonal expressions. It disappears in colloquial speech but is expected in writing and formal contexts.",
+      "cefr_level": "B2",
+      "grammar_concept": "congiuntivo",
+      "pairs": [
+        {
+          "sentence_a": "Penso che venga domani.",
+          "sentence_b": "Penso che viene domani.",
+          "label_a": "standard written Italian (congiuntivo)",
+          "label_b": "colloquial spoken Italian (indicativo)",
+          "question": "Which sentence is standard in written Italian after 'penso che'?",
+          "answer": "a",
+          "dimension": "mood",
+          "explanation": "After penso che (I think that), standard Italian requires the congiuntivo (venga). Using the indicativo (viene) is heard in informal spoken Italian, especially in Northern Italy, but is marked as non-standard in writing and formal speech. The congiuntivo is not optional when the main clause expresses opinion, doubt, or will.",
+          "cefr_level": "B2"
+        },
+        {
+          "sentence_a": "Cerco un appartamento che abbia il balcone.",
+          "sentence_b": "Cerco l'appartamento che ha il balcone.",
+          "label_a": "any apartment with a balcony (hypothetical)",
+          "label_b": "the specific apartment I know that has a balcony",
+          "question": "Which sentence implies the speaker has a specific apartment in mind?",
+          "answer": "b",
+          "dimension": "mood",
+          "explanation": "«abbia» (congiuntivo) marks the apartment as hypothetical — I'm looking for one, it may not exist yet. «ha» (indicativo) identifies a specific, known apartment. This mirrors the Spanish subjunctive/indicative distinction in relative clauses. The congiuntivo encodes unreality or non-specificity; the indicativo encodes factual reference.",
+          "cefr_level": "B2"
+        }
+      ]
+    },
+    {
+      "concept": "passato_prossimo_vs_remoto",
+      "title": "Passato Prossimo vs Passato Remoto",
+      "dimension": "tense",
+      "description": "Both encode past events, but use varies regionally and stylistically: passato prossimo is standard for recent or relevant events (dominant in Northern Italy and writing); passato remoto is standard for historical or distant events (dominant in Southern Italy and literary narrative).",
+      "cefr_level": "B1",
+      "pairs": [
+        {
+          "sentence_a": "Dante nacque a Firenze nel 1265.",
+          "sentence_b": "Dante è nato a Firenze nel 1265.",
+          "label_a": "historical narrative (passato remoto)",
+          "label_b": "modern spoken phrasing (passato prossimo)",
+          "question": "Which is the standard choice in literary and historical Italian narrative?",
+          "answer": "a",
+          "dimension": "tense",
+          "explanation": "«nacque» (passato remoto) is consistently used for historical narrative, literary texts, and events remote from the present. «è nato» (passato prossimo) sounds informal or conversational in this context. In Southern Italy and Sicily, passato remoto is even used for recent events; in Northern Italy, passato prossimo dominates even for distant past. Both are grammatically correct.",
+          "cefr_level": "B1"
+        },
+        {
+          "sentence_a": "Ho mangiato troppo ieri sera.",
+          "sentence_b": "Mangiai troppo ieri sera.",
+          "label_a": "natural Northern Italian phrasing for recent past",
+          "label_b": "Southern Italian or literary register for the same event",
+          "question": "Which is the everyday spoken form in Milan or Turin?",
+          "answer": "a",
+          "dimension": "tense",
+          "explanation": "In Northern Italy, passato prossimo (ho mangiato) is the default for all past events, even distant ones. In the south, passato remoto (mangiai) is natural for personal recent experience. Neither is wrong — learners should know both and adjust by region and register.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "lei_vs_tu",
+      "title": "Lei (Formal) vs Tu (Informal)",
+      "dimension": "politeness",
+      "description": "Italian uses third-person singular Lei as the formal address form, and second-person tu as informal. Lei agreement is grammatically third-person even though you are speaking to the person.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "Scusi, Lei è il professore Rossi?",
+          "sentence_b": "Scusa, tu sei il professor Rossi?",
+          "label_a": "formal address (Lei) — appropriate for a professor",
+          "label_b": "informal address (tu) — inappropriate with a stranger/authority",
+          "question": "Which is appropriate when speaking to a professor you have just met?",
+          "answer": "a",
+          "dimension": "politeness",
+          "explanation": "«Scusi / Lei» uses formal register — Scusi is the Lei-form imperative of scusarsi. «Scusa / tu» is informal and would be socially marked as rude or overly familiar with a professor or unfamiliar adult. In Italian workplaces and academia, vouvoiement (Lei) is expected unless explicitly invited to use tu.",
+          "cefr_level": "A2"
+        }
+      ]
+    },
+    {
+      "concept": "essere_vs_avere",
+      "title": "Essere vs Avere as Compound Auxiliary",
+      "dimension": "valency",
+      "description": "Italian compound tenses use essere (to be) or avere (to have) as the auxiliary. Intransitive verbs of motion and change of state take essere; most transitive verbs take avere. Reflexive verbs always take essere.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "Sono andato al mercato.",
+          "sentence_b": "Ho andato al mercato.",
+          "label_a": "correct: andare takes essere",
+          "label_b": "incorrect: avere cannot be used with intransitive motion verbs",
+          "question": "Which sentence correctly forms the passato prossimo of 'andare'?",
+          "answer": "a",
+          "dimension": "valency",
+          "explanation": "«Sono andato» is correct — andare is an intransitive motion verb and takes essere in compound tenses. The past participle (andato) agrees in gender and number with the subject (masculine singular here). «Ho andato» is a classic learner error; avere cannot be used with verbs of motion/change-of-state. With essere, the participle must agree: sono andata (feminine speaker), siamo andati (plural).",
+          "cefr_level": "A2"
+        }
+      ]
+    },
+    {
+      "concept": "si_constructions",
+      "title": "Si Passivante vs Si Impersonale",
+      "dimension": "diathesis",
+      "description": "The pronoun si can mark passive (si vende — is for sale) or impersonal constructions (si fa — one does / it is done). Context and verb agreement disambiguate.",
+      "cefr_level": "B1",
+      "pairs": [
+        {
+          "sentence_a": "Si vendono molti libri qui.",
+          "sentence_b": "Si vende molto qui.",
+          "label_a": "si passivante: many books are sold here (verb agrees with plural subject)",
+          "label_b": "si impersonale: one sells a lot here / there is a lot of selling (no specific subject)",
+          "question": "Which sentence uses si with a plural subject that the verb agrees with?",
+          "answer": "a",
+          "dimension": "diathesis",
+          "explanation": "«Si vendono molti libri» is si passivante — libri is the real (underlying) subject, and the verb agrees in number (vendono = plural). «Si vende molto» is si impersonale — there is no explicit subject; vende stays singular regardless of what is being sold. The agreement test distinguishes them: if you can make the verb agree with a noun, it is si passivante.",
+          "cefr_level": "B1"
+        }
+      ]
+    }
+  ]
+}

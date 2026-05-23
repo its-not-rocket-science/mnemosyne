@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "language": "ar",
+  "sets": [
+    {
+      "concept": "perfect_vs_imperfect",
+      "title": "Perfect vs Imperfect Verb",
+      "dimension": "aspect",
+      "description": "Arabic verbs in the perfect (الماضي) present a completed action; verbs in the imperfect (المضارع) present ongoing, habitual, or future actions. Tense meaning is often determined by context and particles.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "ذَهَبَ أحمدُ إلى المدرسةِ.",
+          "sentence_b": "يَذْهَبُ أحمدُ إلى المدرسةِ كلَّ يوم.",
+          "label_a": "completed past event",
+          "label_b": "habitual present action",
+          "question": "Which sentence describes something Ahmad does regularly?",
+          "answer": "b",
+          "dimension": "aspect",
+          "explanation": "«ذَهَبَ» (perfect) presents a completed past action: Ahmad went. «يَذْهَبُ» (imperfect) describes a habitual routine: Ahmad goes. The imperfect covers present habits, general truths, and future events — the Arabic distinction is aspect-first, not tense-first.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "كَتَبَتِ الطالبةُ الواجبَ.",
+          "sentence_b": "تَكْتُبُ الطالبةُ الواجبَ الآنَ.",
+          "label_a": "completed writing",
+          "label_b": "writing in progress",
+          "question": "Which sentence tells us the homework is already finished?",
+          "answer": "a",
+          "dimension": "aspect",
+          "explanation": "«كَتَبَتْ» (perfect) reports the homework as done. «تَكْتُبُ الآن» (imperfect + الآن) marks an ongoing action in the present. Adding الآن (now) anchors the imperfect to the present moment.",
+          "cefr_level": "A2"
+        }
+      ]
+    },
+    {
+      "concept": "negation_particles",
+      "title": "Negation Particles: لا / لم / لن",
+      "dimension": "negation",
+      "description": "Arabic uses different negation particles depending on tense and mood: لا negates present/habitual and future, لم negates past (and requires jussive mood), لن emphatically negates future (and requires subjunctive mood).",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "لَمْ يَذْهَبْ إلى العملِ أمسِ.",
+          "sentence_b": "لَنْ يَذْهَبَ إلى العملِ غداً.",
+          "label_a": "negated past event",
+          "label_b": "emphatic future negation",
+          "question": "Which sentence talks about something that will definitely not happen tomorrow?",
+          "answer": "b",
+          "dimension": "negation",
+          "explanation": "«لَمْ يَذْهَبْ» (لم + jussive) negates a past action — the jussive mood يَذْهَبْ has a sukun on the final consonant. «لَنْ يَذْهَبَ» (لن + subjunctive) emphatically negates the future — stronger than لا + imperfect. Each particle triggers a different verb form.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "لا أُحِبُّ القهوةَ.",
+          "sentence_b": "لَسْتُ أُحِبُّ القهوةَ.",
+          "label_a": "habitual present negation",
+          "label_b": "formal/classical present negation",
+          "question": "Which sentence is the standard everyday way to say 'I don't like coffee'?",
+          "answer": "a",
+          "dimension": "negation",
+          "explanation": "«لا أُحِبُّ» is the natural MSA and colloquial negation of a present-tense verbal sentence. «لَسْتُ + verb» is a classical/formal construction rarely used in modern speech; it treats the verbal phrase as a nominal predicate of the defective verb ليس.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "definiteness",
+      "title": "Definite vs Indefinite — Article and Agreement",
+      "dimension": "definiteness",
+      "description": "The definite article ال (al-) marks specificity. In Arabic, definiteness must be marked on both the noun and any attributive adjective. Predicate nouns in equational sentences are typically indefinite.",
+      "cefr_level": "A1",
+      "pairs": [
+        {
+          "sentence_a": "هذا كِتَابٌ كَبِيرٌ.",
+          "sentence_b": "هذا الكِتَابُ الكَبِيرُ.",
+          "label_a": "a big book (indefinite noun phrase)",
+          "label_b": "the big book (definite noun phrase as topic)",
+          "question": "Which sentence refers to a specific, already-identified book?",
+          "answer": "b",
+          "dimension": "definiteness",
+          "explanation": "«كِتَابٌ كَبِيرٌ» is indefinite — an unspecified big book. «الكِتَابُ الكَبِيرُ» is definite — both noun and adjective carry the article, and the tanwin (nunation) disappears. In Arabic, the adjective must mirror the noun's definiteness; mismatching them creates a relative clause meaning (a book that is big) rather than an attributive phrase.",
+          "cefr_level": "A1"
+        },
+        {
+          "sentence_a": "البيتُ كبيرٌ.",
+          "sentence_b": "البيتُ الكبيرُ.",
+          "label_a": "predicate sentence: the house is big",
+          "label_b": "definite noun phrase: the big house (incomplete — needs a predicate)",
+          "question": "Which forms a complete sentence meaning 'The house is big'?",
+          "answer": "a",
+          "dimension": "definiteness",
+          "explanation": "«البيتُ كبيرٌ» is a complete equational sentence: definite subject + indefinite predicate adjective = 'The house is big.' «البيتُ الكبيرُ» is a noun phrase (the big house) — both elements are definite, so there is no predicate, only a referential expression. This is one of the most consistent rules in Arabic grammar.",
+          "cefr_level": "A1"
+        }
+      ]
+    },
+    {
+      "concept": "dual_number",
+      "title": "Singular / Dual / Plural",
+      "dimension": "number",
+      "description": "Arabic distinguishes three numbers: singular, dual (exactly two), and plural (three or more). Dual is formed with a regular suffix; plural is often irregular ('broken plural').",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "اشتريتُ كِتَابَيْنِ.",
+          "sentence_b": "اشتريتُ كُتُباً كثيرةً.",
+          "label_a": "exactly two books",
+          "label_b": "many books (plural)",
+          "question": "Which sentence says you bought exactly two books?",
+          "answer": "a",
+          "dimension": "number",
+          "explanation": "«كِتَابَيْنِ» is the dual of كِتَاب — the suffix ـَيْنِ (oblique case) marks exactly two. Using the plural «كُتُباً» for two books is grammatically incorrect in formal Arabic and sounds unnatural to native speakers. Dual is productive and mandatory in MSA for all countable nouns.",
+          "cefr_level": "A2"
+        }
+      ]
+    },
+    {
+      "concept": "broken_plural",
+      "title": "Broken Plural vs Sound Plural",
+      "dimension": "number",
+      "description": "Arabic nouns form plurals either via irregular internal vowel changes ('broken plural') or regular suffixes (sound masculine -ون/-ين, sound feminine -ات). Broken plurals must be memorised; they often follow predictable patterns.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "على الطاولةِ أَقْلامٌ كثيرةٌ.",
+          "sentence_b": "على الطاولةِ قَلَماتٌ كثيرةٌ.",
+          "label_a": "correct broken plural: pens",
+          "label_b": "incorrect invented form",
+          "question": "Which sentence uses the correct Arabic plural of قَلَم (pen)?",
+          "answer": "a",
+          "dimension": "number",
+          "explanation": "The correct plural of قَلَم is أَقْلام (broken plural, pattern أَفْعَال). The form «قَلَماتٌ» is not a real word — Arabic does not apply the feminine sound plural suffix to masculine inanimate nouns without checking the dictionary. Learners must memorise the correct plural pattern for each noun.",
+          "cefr_level": "A2"
+        }
+      ]
+    }
+  ]
+}

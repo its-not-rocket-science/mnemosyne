@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "language": "zh",
+  "sets": [
+    {
+      "concept": "aspect_particles",
+      "title": "Aspect Particles: 了 / 着 / 过",
+      "dimension": "aspect",
+      "description": "Mandarin has no tense morphology but three aspect particles that mark the viewpoint on an event: 了 (completion or change of state), 着 (ongoing/durative state), 过 (experiential — occurred at some point in life).",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "我吃了饭。",
+          "sentence_b": "我吃过北京烤鸭。",
+          "label_a": "I ate / I've finished eating",
+          "label_b": "I have (at some point) eaten Peking duck",
+          "question": "Which sentence tells us about a life experience rather than a specific recent event?",
+          "answer": "b",
+          "dimension": "aspect",
+          "explanation": "«吃了» (completion aspect) reports a finished action, often with relevance to now — 'I've eaten, so I'm not hungry.' «吃过» (experiential aspect) reports a life experience without specifying when — 'I've had Peking duck before.' 过 is typically used when someone asks about your experiences, not when reporting what just happened.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "他站着看书。",
+          "sentence_b": "他站了看书。",
+          "label_a": "he stands there reading (durative state)",
+          "label_b": "unnatural — 了 incompatible with simultaneous state",
+          "question": "Which sentence naturally describes someone who is standing and reading at the same time?",
+          "answer": "a",
+          "dimension": "aspect",
+          "explanation": "«站着» uses the durative aspect 着 to describe a simultaneous background state: he stood (and was still standing) while reading. «站了» sounds odd here because 了 marks a change of state or completion, not a sustained background posture. 着 is the particle for concurrent, persistent states.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "ba_construction",
+      "title": "把 Construction (Disposal)",
+      "dimension": "diathesis",
+      "description": "The 把 (bǎ) construction fronts the affected object before the verb to emphasize what happens to it. It requires a resultative or directional complement — the object must be 'disposed of' in some way.",
+      "cefr_level": "B1",
+      "pairs": [
+        {
+          "sentence_a": "我把书放在桌子上了。",
+          "sentence_b": "我放书在桌子上了。",
+          "label_a": "I put the book on the table (把-construction: object fronted)",
+          "label_b": "unnatural word order in Mandarin",
+          "question": "Which sentence uses the natural Mandarin word order to say 'I put the book on the table'?",
+          "answer": "a",
+          "dimension": "diathesis",
+          "explanation": "«把书放在桌子上» is the natural construction when the verb has a directional/resultative complement (放在…上). Without 把, placing the location phrase after the verb requires a different structure. The 把-construction is not optional when the verb indicates a transformation or placement of the object — omitting it here sounds clumsy.",
+          "cefr_level": "B1"
+        },
+        {
+          "sentence_a": "请把门关上。",
+          "sentence_b": "请关上门。",
+          "label_a": "please close the door (把-construction)",
+          "label_b": "please close the door (standard SVO)",
+          "question": "Which sentence places more emphasis on what happens to the door?",
+          "answer": "a",
+          "dimension": "diathesis",
+          "explanation": "Both are grammatical and natural. «把门关上» foregrounds the door as the entity being disposed of; 把 focuses attention on the door's change of state (from open to shut). «关上门» follows standard SVO order. In commands, 把 often appears when the action is more deliberate or when a specific object is implied.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "bei_passive",
+      "title": "被 Passive (Adversative)",
+      "dimension": "diathesis",
+      "description": "被 (bèi) marks passive constructions and typically carries an adversative (unfortunate or unexpected) connotation. Using 被 for positive events sounds ironic or marked.",
+      "cefr_level": "B1",
+      "pairs": [
+        {
+          "sentence_a": "我的手机被偷了。",
+          "sentence_b": "我的手机被找到了。",
+          "label_a": "my phone was stolen (naturally adversative)",
+          "label_b": "my phone was found (positive — 被 sounds marked)",
+          "question": "Which sentence uses 被 in its most natural, expected context?",
+          "answer": "a",
+          "dimension": "diathesis",
+          "explanation": "«被偷了» — phone was stolen — is the classic 被 context: an undesirable action suffered by the subject. «被找到了» — phone was found — is grammatically fine but sounds mildly unusual because it uses 被 for a positive outcome. Native speakers more naturally say 手机找到了 (the phone was found) without 被 when the event is welcome.",
+          "cefr_level": "B1"
+        }
+      ]
+    },
+    {
+      "concept": "topic_prominence",
+      "title": "Topic Prominence",
+      "dimension": "topic_focus",
+      "description": "Mandarin is a topic-prominent language. The sentence topic (what the sentence is about) need not be the grammatical subject; it can be an object, location, or any salient element moved to sentence-initial position.",
+      "cefr_level": "B2",
+      "pairs": [
+        {
+          "sentence_a": "那本书我已经看完了。",
+          "sentence_b": "我已经看完那本书了。",
+          "label_a": "that book — I've already finished it (topic-prominent)",
+          "label_b": "I've already finished that book (subject-prominent)",
+          "question": "Which sentence frames 'that book' as the topic being discussed?",
+          "answer": "a",
+          "dimension": "topic_focus",
+          "explanation": "«那本书我已经看完了» — 'that book' is fronted as the sentence topic, signalling 'as for that book, I've finished it.' This structure is very common in Mandarin for contrasting or introducing a topic. The SVO version is equally grammatical but doesn't signal that 'that book' is the discourse topic. Fronted topics are common in response to questions like '那本书怎么样?'",
+          "cefr_level": "B2"
+        }
+      ]
+    },
+    {
+      "concept": "degree_adverbs",
+      "title": "Degree Adverbs: 很 / 太 / 挺 / 有点 / 非常",
+      "dimension": "semantic_field",
+      "description": "Different degree adverbs encode both intensity and the speaker's evaluation. 挺 implies pleasant surprise or approval; 有点 adds a slightly negative or reluctant tone; 太 implies excess; 非常 is neutral high intensity.",
+      "cefr_level": "A2",
+      "pairs": [
+        {
+          "sentence_a": "这个菜有点咸。",
+          "sentence_b": "这个菜挺咸的。",
+          "label_a": "this dish is a bit salty (negative evaluation)",
+          "label_b": "this dish is quite salty (neutral-to-positive surprise)",
+          "question": "Which sentence implies the speaker is mildly complaining about the saltiness?",
+          "answer": "a",
+          "dimension": "semantic_field",
+          "explanation": "«有点咸» implies the saltiness is slightly unwelcome — 有点 commonly introduces a mild complaint or reluctant acknowledgement. «挺咸的» (with the sentence-final 的 for emphasis) presents the saltiness as a notable characteristic, often with mild approval or neutral observation. Native speakers hear a clear evaluative difference between these two sentences.",
+          "cefr_level": "A2"
+        }
+      ]
+    }
+  ]
+}

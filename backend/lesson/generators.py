@@ -63,6 +63,7 @@ from backend.lesson.nuance_pairs import (
     get_nuance_sets_for_pattern,
     get_nuance_sets_for_type,
 )
+from backend.nuance.dimensions import get_inventory, get_system
 from backend.lesson.practice import build_practice_activities
 from backend.lesson.providers import LessonProviders
 from backend.schemas.language import LessonMode
@@ -1147,68 +1148,239 @@ def _build_grammar(b: _B) -> LessonResponse:
         nuance_sets=nuance_sets,
     )
 
+_NUANCE_TYPE_LABELS: dict[str, str] = {
+    # Spanish
+    “imperfect_aspect”:           “Imperfect aspect”,
+    “subjunctive_mood”:           “Subjunctive mood”,
+    “subjunctive_trigger”:        “Subjunctive mood”,
+    “reflexive_verb”:             “Reflexive / pronominal verb”,
+    “ser_estar”:                  “Ser vs Estar”,
+    “por_para”:                   “Por vs Para”,
+    “diminutive”:                 “Diminutive suffix”,
+    “verbal_government”:          “Prepositional government”,
+    “etymology”:                  “Etymology”,
+    # Russian
+    “russian_aspect”:             “Aspect”,
+    “perfective_vs_imperfective”: “Aspect”,
+    # Arabic
+    “negation_la”:                “Negation — لا”,
+    “negation_lam”:               “Negation — لم”,
+    “negation_lan”:               “Negation — لن”,
+    “negation_ma”:                “Negation — ما”,
+    “negation_laysa”:             “Negation — ليس”,
+    # Chinese
+    “aspect_le”:                  “Aspect particle 了”,
+    “aspect_guo”:                 “Aspect particle 过”,
+    “aspect_zhe”:                 “Aspect particle 着”,
+    “measure_word”:               “Measure word”,
+    “chengyu”:                    “Chengyu (四字熟語)”,
+    # Japanese
+    “keigo”:                      “Keigo (敬語)”,
+    “particle”:                   “Particle (助詞)”,
+    “yojijukugo”:                 “Yojijukugo (四字熟語)”,
+    # Korean
+    “politeness”:                 “Speech level (경어법)”,
+    “negation”:                   “Negation”,
+    “honorific”:                  “Subject honorific (주체 높임)”,
+    # German
+    “modal_particle”:             “Modal particle (Modalpartikel)”,
+    # Latin / Greek
+    “discourse_particle”:         “Discourse particle”,
+}
+
+
+def _cefr_scaled_explanation(
+    explanation: str,
+    learner_level: str,
+    system_description: str,
+    discourse_effects: list[str],
+    advanced_notes: str | None,
+) -> str:
+    “””Return an explanation scaled to the learner's declared CEFR level.
+
+    A1/A2: intuitive meaning — what the form conveys in plain English.
+    B1/B2: contrastive interpretation — how it differs from the alternative.
+    C1/C2: discourse effect, stylistic implication, pragmatic significance.
+    “””
+    lvl = (learner_level or “B1”).upper()
+    if lvl in (“A1”, “A2”):
+        # Intuitive meaning — just the core fact
+        return explanation
+    if lvl in (“B1”, “B2”):
+        # Add system description as contrastive context
+        if system_description and system_description not in explanation:
+            return f”{explanation} {system_description}”
+        return explanation
+    # C1/C2 — discourse effect + advanced notes
+    parts = [explanation]
+    if discourse_effects:
+        parts.append(discourse_effects[0])
+    if advanced_notes:
+        parts.append(advanced_notes)
+    return “ “.join(parts)
+
+
 def _build_nuance(b: _B) -> LessonResponse:
-    """Lesson for an aspect, mood, or verb-type nuance observation."""
-    nuance_type    = b.lesson_data.get("nuance_type") or b.obj_type
-    lemma          = b.lesson_data.get("lemma") or b.canonical_form
-    surface        = b.lesson_data.get("surface") or b.display_label
-    note           = b.lesson_data.get("note") or ""
-    contrast_tense = b.lesson_data.get("contrast_tense") or ""
-    lang           = b.ctx.language_code or ""
+    “””Lesson for a nuance observation — aspect, mood, register, particle, etc.
 
-    _type_labels: dict[str, str] = {
-        "imperfect_aspect":           "Imperfect aspect",
-        "subjunctive_mood":           "Subjunctive mood",
-        "reflexive_verb":             "Reflexive / pronominal verb",
-        "russian_aspect":             "Aspect",
-        "perfective_vs_imperfective": "Aspect",
-    }
-    type_label = _type_labels.get(nuance_type, nuance_type.replace("_", " ").title())
+    Enrichment layers (all backward-compatible):
+    - CEFR-scaled explanation (intuitive → contrastive → discourse effects)
+    - NuanceSystem inventory data: native_term, description, discourse_effects
+    - ContrastNotes derived from discourse_effects
+    - RecognitionDrills for native-speaker preference facts
+    - DiscriminationDrills from curated minimal-pair data
+    - NuanceSets for the UI Nuance tab
+    “””
+    nuance_type    = b.lesson_data.get(“nuance_type”) or b.obj_type
+    lemma          = b.lesson_data.get(“lemma”) or b.canonical_form
+    surface        = b.lesson_data.get(“surface”) or b.display_label
+    note           = b.lesson_data.get(“note”) or “”
+    contrast_tense = b.lesson_data.get(“contrast_tense”) or “”
+    register       = b.lesson_data.get(“register”) or “”
+    learner_level  = b.lesson_data.get(“learner_level”) or “B1”
+    lang           = b.ctx.language_code or “”
 
-    explanation = fmt.nuance_explanation(surface, type_label, note, b.ctx)
+    type_label = _NUANCE_TYPE_LABELS.get(
+        nuance_type, nuance_type.replace(“_”, “ “).title()
+    )
 
-    fields: list[LessonField] = [
-        LessonField(label="Type", value=type_label),
-        LessonField(label="Verb", value=lemma),
-        LessonField(label="Surface form", value=surface),
-    ]
+    # ── Pull NuanceSystem metadata if available ───────────────────────────────
+    # Look up by nuance_type directly or via the nuance pairs concept mapping.
+    from backend.lesson.nuance_pairs import NUANCE_TYPE_TO_CONCEPT
+    concept_id = NUANCE_TYPE_TO_CONCEPT.get(nuance_type)
+    nuance_system = get_system(lang, concept_id) if (lang and concept_id) else None
+    if nuance_system is None:
+        # Fallback: scan inventory for first matching dimension
+        inventory = get_inventory(lang)
+        for sys in inventory:
+            if sys.contrast_concept == concept_id:
+                nuance_system = sys
+                break
+
+    system_description = nuance_system.description if nuance_system else “”
+    discourse_effects  = nuance_system.discourse_effects if nuance_system else []
+    advanced_notes     = nuance_system.advanced_notes if nuance_system else None
+    native_term        = nuance_system.native_term if nuance_system else None
+    cefr_min           = nuance_system.cefr_range[0] if nuance_system else learner_level
+
+    # ── Explanation ───────────────────────────────────────────────────────────
+    base_explanation = b.lesson_data.get(“explanation”) or \
+        fmt.nuance_explanation(surface, type_label, note, b.ctx)
+
+    explanation = _cefr_scaled_explanation(
+        base_explanation, learner_level,
+        system_description, discourse_effects, advanced_notes,
+    )
+
+    # ── Fields ────────────────────────────────────────────────────────────────
+    fields: list[LessonField] = [LessonField(label=”Type”, value=type_label)]
+    if native_term:
+        fields.append(LessonField(label=”Native term”, value=native_term))
+    if lemma and lemma != surface:
+        fields.append(LessonField(label=”Verb”, value=lemma))
+    if surface:
+        fields.append(LessonField(label=”Surface form”, value=surface))
+    if register and register != “neutral”:
+        fields.append(LessonField(label=”Register”, value=register))
+    if nuance_system:
+        fields.append(LessonField(label=”CEFR”, value=f”{nuance_system.cefr_range[0]}–{nuance_system.cefr_range[1]}”))
     if note:
-        fields.append(LessonField(label="Note", value=note))
+        fields.append(LessonField(label=”Note”, value=note))
     if contrast_tense:
-        fields.append(LessonField(label="Contrast tense", value=contrast_tense))
+        fields.append(LessonField(label=”Contrasts with”, value=contrast_tense))
 
-    drills: list[Drill] = [ShadowingDrill(type="shadowing", text=surface)]
+    # Add any extra lesson_data fields (particle, required_case, measure_word, etc.)
+    _EXTRA_FIELD_KEYS = {
+        “particle”: “Particle”,
+        “required_case”: “Required case / particle”,
+        “measure_word”: “Measure word”,
+        “preposition”: “Preposition”,
+        “keigo_type”: “Keigo type”,
+        “negation_type”: “Negation type”,
+        “register_label”: “Register”,
+        “chengyu”: “Chengyu”,
+        “yojijukugo”: “Yojijukugo”,
+    }
+    for key, label in _EXTRA_FIELD_KEYS.items():
+        val = b.lesson_data.get(key)
+        if val and not any(f.label == label for f in fields):
+            fields.append(LessonField(label=label, value=str(val)))
 
-    if note:
+    # ── ContrastNotes from discourse_effects ─────────────────────────────────
+    contrasts: list[ContrastNote] = []
+    if discourse_effects and len(discourse_effects) >= 2:
+        contrasts.append(ContrastNote(
+            form_a=surface or type_label,
+            form_b=”incorrect/absent form”,
+            note=discourse_effects[0],
+        ))
+    elif discourse_effects:
+        # Single effect — still include as a contrast note
+        contrasts.append(ContrastNote(
+            form_a=surface or type_label,
+            form_b=”wrong choice”,
+            note=discourse_effects[0],
+        ))
+
+    # ── Drills ────────────────────────────────────────────────────────────────
+    drills: list[Drill] = []
+    if surface:
+        drills.append(ShadowingDrill(type=”shadowing”, text=surface))
+
+    # Aspect/tense completeness recognition
+    if nuance_type in (“imperfect_aspect”, “aspect_le”, “aspect_guo”, “aspect_zhe”):
         drills.append(RecognitionDrill(
-            type="recognition",
-            statement=f"“{surface}” ({type_label}) describes a completed, one-time past event.",
-            correct=(nuance_type != "imperfect_aspect"),
+            type=”recognition”,
+            statement=f””{surface}” describes a completed, one-time past event.”,
+            correct=(nuance_type not in (“imperfect_aspect”, “aspect_zhe”)),
         ))
 
     if contrast_tense:
         drills.append(FillBlankDrill(
-            type="fill_blank",
-            prompt=f"The tense that contrasts with the imperfect for a single completed event is the ———.",
+            type=”fill_blank”,
+            prompt=f”The tense that contrasts with the imperfect for a single completed event is the ———.”,
             answer=contrast_tense,
+        ))
+
+    # Politeness/register recognition drill
+    if nuance_type in (“keigo”, “politeness”) and register and register != “neutral”:
+        drills.append(RecognitionDrill(
+            type=”recognition”,
+            statement=f”This form is appropriate in formal or business contexts.”,
+            correct=(register in (“formal”, “literary”)),
+        ))
+
+    # Discourse effect recognition drills (B2+ content)
+    if discourse_effects and learner_level in (“B2”, “C1”, “C2”):
+        drills.append(RecognitionDrill(
+            type=”recognition”,
+            statement=discourse_effects[0] if len(discourse_effects[0]) < 150
+                      else discourse_effects[0][:147] + “…”,
+            correct=True,
         ))
 
     # Meaning-discrimination drills from curated minimal-pair data.
     if lang:
         drills.extend(build_discrimination_drills(lang, nuance_type=nuance_type))
 
-    # Nuance sets for the UI "Nuance" tab.
+    # Nuance sets for the UI “Nuance” tab.
     nuance_sets: list[NuanceSet] = get_nuance_sets_for_type(lang, nuance_type) if lang else []
+
+    # Add more sets from the inventory system if none found via type
+    if not nuance_sets and lang and concept_id:
+        from backend.lesson.nuance_pairs import get_nuance_sets
+        nuance_sets = get_nuance_sets(lang, concept=concept_id)
 
     return LessonResponse(
         id=b.object_id,
-        type="nuance",  # type: ignore[arg-type]  # "nuance" ∈ LearnableType; same mypy narrowing limitation
-        title=f"{type_label}: {surface}",
+        type=”nuance”,  # type: ignore[arg-type]
+        title=f”{type_label}: {surface}” if surface else type_label,
         explanation=explanation,
         fields=fields,
-        examples=[surface],
+        examples=[surface] if surface else [],
         drills=drills,
         nuance_sets=nuance_sets,
+        contrasts=contrasts,
     )
 
 def _build_case_agreement(b: _B) -> LessonResponse:
