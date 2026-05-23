@@ -1,0 +1,62 @@
+name: test
+
+on:
+  push:
+    paths:
+      - "backend/**"
+      - "frontend/**"
+      - "pyproject.toml"
+      - "poetry.lock"
+  pull_request:
+    paths:
+      - "backend/**"
+      - "frontend/**"
+      - "pyproject.toml"
+      - "poetry.lock"
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Poetry
+        run: pip install poetry
+
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Download spaCy models
+        run: |
+          poetry run python -m spacy download es_core_news_sm
+          poetry run python -m spacy download fr_core_news_sm
+          poetry run python -m spacy download de_core_news_sm
+          poetry run python -m spacy download it_core_news_sm
+          poetry run python -m spacy download pt_core_news_sm
+          poetry run python -m spacy download ru_core_news_sm
+
+      - name: Run tests
+        run: poetry run pytest -x -q
+
+  frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm install
+
+      - name: Run frontend tests
+        working-directory: frontend
+        run: npm test

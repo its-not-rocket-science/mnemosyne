@@ -1,5 +1,8 @@
 {
   "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.mjs"
+  },
   "devDependencies": {
     "linkedom": "^0.18.12"
   }

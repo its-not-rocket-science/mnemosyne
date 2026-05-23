@@ -15,7 +15,7 @@ from backend.nuance.dimensions import (
     get_system,
 )
 
-EXPECTED_LANGUAGES = {"es", "fr", "de", "ru", "ar", "ja", "zh", "ko", "it", "pt", "la", "grc"}
+EXPECTED_LANGUAGES = {"es", "fr", "de", "ru", "ar", "ja", "zh", "ko", "it", "pt", "la", "grc", "he", "en"}
 
 
 class TestInventoryCoverage:
@@ -28,6 +28,12 @@ class TestInventoryCoverage:
         langs = set(all_languages())
         missing = EXPECTED_LANGUAGES - langs
         assert not missing, f"missing languages: {missing}"
+
+    def test_no_undeclared_languages(self):
+        """Every language in the inventory must appear in EXPECTED_LANGUAGES."""
+        langs = set(all_languages())
+        undeclared = langs - EXPECTED_LANGUAGES
+        assert not undeclared, f"inventory has undeclared languages: {undeclared}"
 
     @pytest.mark.parametrize("lang", sorted(EXPECTED_LANGUAGES))
     def test_language_has_inventory(self, lang):
@@ -115,12 +121,36 @@ class TestDiscourseEffects:
         ("es", "ser_vs_estar"),
         ("ru", "perfective_vs_imperfective"),
         ("ja", "keigo_levels"),
+        ("de", "modal_particles"),
+        ("fr", "tu_vs_vous"),
+        ("ko", "speech_levels"),
+        ("ar", "negation_particles"),
+        ("zh", "aspect_particles"),
+        ("it", "congiuntivo_vs_indicativo"),
     ])
     def test_discourse_effects_present(self, lang, concept):
         sys = get_system(lang, concept)
         if sys is None:
             pytest.skip(f"{lang}/{concept} not in inventory")
         assert isinstance(sys.discourse_effects, list)
+
+    @pytest.mark.parametrize("lang,concept", [
+        ("es", "ser_vs_estar"),
+        ("ru", "perfective_vs_imperfective"),
+        ("de", "modal_particles"),
+        ("fr", "tu_vs_vous"),
+        ("ja", "keigo_levels"),
+        ("ko", "speech_levels"),
+        ("ar", "negation_particles"),
+        ("zh", "aspect_particles"),
+    ])
+    def test_discourse_effects_nonempty(self, lang, concept):
+        sys = get_system(lang, concept)
+        if sys is None:
+            pytest.skip(f"{lang}/{concept} not in inventory")
+        assert len(sys.discourse_effects) >= 1, (
+            f"{lang}/{concept}: discourse_effects is empty"
+        )
 
 
 class TestDimensionVariety:
@@ -130,4 +160,51 @@ class TestDimensionVariety:
     def test_multiple_dimensions(self, lang):
         inv = get_inventory(lang)
         dims = {item.dimension for item in inv}
-        assert len(dims) >= 1, f"{lang}: only one dimension covered"
+        assert len(dims) >= 2, f"{lang}: fewer than two dimensions covered ({dims})"
+
+
+class TestCrossLanguage:
+    """Structural invariants that must hold across the full inventory."""
+
+    def test_no_duplicate_contrast_concepts_within_language(self):
+        for lang in all_languages():
+            concepts = [
+                s.contrast_concept
+                for s in get_inventory(lang)
+                if s.contrast_concept is not None
+            ]
+            seen: set[str] = set()
+            dups = []
+            for c in concepts:
+                if c in seen:
+                    dups.append(c)
+                seen.add(c)
+            assert not dups, f"{lang}: duplicate contrast_concept keys: {dups}"
+
+    def test_cefr_range_lo_le_hi(self):
+        order = ["A1", "A2", "B1", "B2", "C1", "C2"]
+        for lang in all_languages():
+            for s in get_inventory(lang):
+                lo, hi = s.cefr_range
+                assert order.index(lo) <= order.index(hi), (
+                    f"{lang}/{s.name}: cefr_range lo={lo!r} > hi={hi!r}"
+                )
+
+    def test_aspect_dimension_covered_by_most_languages(self):
+        """Aspect is grammatically relevant in all target languages — verify coverage."""
+        langs_with_aspect = {
+            lang
+            for lang in all_languages()
+            if any(s.dimension == "aspect" for s in get_inventory(lang))
+        }
+        assert len(langs_with_aspect) >= 8, (
+            f"only {len(langs_with_aspect)} languages cover aspect: {langs_with_aspect}"
+        )
+
+    def test_all_languages_have_contrast_concept(self):
+        """Every language must expose at least one contrast_concept (links to data files)."""
+        for lang in all_languages():
+            has_concept = any(
+                s.contrast_concept is not None for s in get_inventory(lang)
+            )
+            assert has_concept, f"{lang}: no system has a contrast_concept"
