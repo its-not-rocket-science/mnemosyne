@@ -59,6 +59,9 @@ class ReviewRequest(BaseModel):
     object_id: str
     quality: int = Field(ge=1, le=4)
     review_state: dict[str, Any] | None = None
+    # Optional: label of the wrong answer chosen by the learner.
+    # When provided with quality < 3, a confusion pair record is written.
+    wrong_answer: str | None = None
 
 
 class ReviewResponse(BaseModel):
@@ -75,6 +78,8 @@ class ReviewResponse(BaseModel):
     correct_count: int | None = None
     incorrect_count: int | None = None
     review_bucket: str | None = None
+    # Acquisition stage after this review.
+    progression_stage: str | None = None
 
 
 # ── Plugin-facing types (internal; plugins return these) ──────────────────────

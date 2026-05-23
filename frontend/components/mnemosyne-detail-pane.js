@@ -1,4 +1,5 @@
 import { t, currentUiLang } from '../js/i18n.js'
+import { API_BASE } from '../js/config.js'
 
 // ── Type metadata (mirrors mnemosyne-pill.js) ─────────────────────────────────
 const TYPE_META = {
@@ -165,6 +166,7 @@ export class MnemosyneDetailPane extends HTMLElement {
   #vocabTranslationFetched        = false
   #sentenceTranslationFetched     = false
   #explanationTranslationFetched  = false
+  #reviewStatusFetched            = false
   #matchedVariant = ''
 
   static ALL_TABS = [
@@ -178,6 +180,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     { id: 'context',      labelKey: 'dp_tab_context',      alwaysShow: true  },
     { id: 'related',      labelKey: 'dp_tab_related',      alwaysShow: false },
     { id: 'practice',     labelKey: 'dp_tab_practice',     alwaysShow: true  },
+    { id: 'review',       labelKey: 'dp_tab_review',       alwaysShow: false },
   ]
 
   constructor() {
@@ -194,6 +197,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     this.#onTranslate   = onTranslate ?? null
     this.#vocabTranslationFetched    = false
     this.#sentenceTranslationFetched = false
+    this.#reviewStatusFetched        = false
     this.#onStudy       = onStudy ?? null
     this.#activeTab     = 0
     this.#explanationTranslationFetched = false
@@ -218,6 +222,7 @@ export class MnemosyneDetailPane extends HTMLElement {
           const tabId = this.#visibleTabs[i]?.id
           if (tabId === 'explanation') this.#fetchVocabTranslation()
           if (tabId === 'context') this.#fetchSentenceTranslation(this.#config.sentenceText || '')
+          if (tabId === 'review') this.#fetchReviewStatus()
           return
         }
 
@@ -477,6 +482,7 @@ export class MnemosyneDetailPane extends HTMLElement {
       if (tab.id === 'context')      return depthIdx >= 1
       if (tab.id === 'related')      return depthIdx >= 2 && hasRelated
       if (tab.id === 'practice')     return depthIdx >= 1
+      if (tab.id === 'review')       return depthIdx >= 1
       return false
     })
 
@@ -532,6 +538,7 @@ export class MnemosyneDetailPane extends HTMLElement {
           ${depthIdx >= 1               ? this._htmlContextPanel(sentenceText, language, dir, matchedVariant) : ''}
           ${depthIdx >= 2 && hasRelated  ? this._htmlRelatedPanel(ld, canonical, isNonCanonical) : ''}
           ${this._htmlPracticePanel()}
+          ${this._htmlReviewPanel()}
         </div>
 
         <footer class="pane__footer">
@@ -559,6 +566,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     this.#vocabTranslationFetched       = false
     this.#sentenceTranslationFetched    = false
     this.#explanationTranslationFetched = false
+    this.#reviewStatusFetched           = false
     this.#fetchVocabTranslation()
     this.#fetchExplanationTranslation()
     if (this.#visibleTabs[this.#activeTab]?.id === 'context') {
@@ -1477,6 +1485,171 @@ export class MnemosyneDetailPane extends HTMLElement {
     return shuffled(questions).filter((q) => q.answers.length > 0)
   }
 
+  // ── Review tab ────────────────────────────────────────────────────────────────
+
+  _htmlReviewPanel() {
+    return /* html */`
+      <section
+        id="dp-panel-review"
+        role="tabpanel"
+        aria-labelledby="dp-tab-review"
+        class="pane__panel"
+        hidden
+      >
+        <div id="dp-review-status" class="pane__review-status" aria-live="polite" aria-atomic="false">
+          <p class="pane__muted">${esc(tr('dp_review_tab_intro', 'Select this tab to load your review status for this item.'))}</p>
+        </div>
+      </section>
+    `
+  }
+
+  async #fetchReviewStatus() {
+    if (this.#reviewStatusFetched) return
+    const el = this.shadowRoot?.querySelector('#dp-review-status')
+    if (!el) return
+    const { lesson } = this.#config
+    const objectId = lesson?.id
+    if (!objectId) return
+
+    this.#reviewStatusFetched = true
+    el.innerHTML = `<p class="pane__muted" aria-live="polite">${esc(tr('dp_review_loading', 'Loading review status…'))}</p>`
+
+    try {
+      const token = localStorage.getItem('mnemosyne_token')
+      const resp = await fetch(
+        `${API_BASE}/weakness/object/${encodeURIComponent(objectId)}`,
+        { headers: token ? { Authorization: `Bearer ${token}` } : {} }
+      )
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
+      const status = await resp.json()
+      el.innerHTML = this.#renderReviewStatus(status)
+    } catch (_err) {
+      this.#reviewStatusFetched = false
+      el.innerHTML = `<p class="pane__muted">${esc(tr('dp_review_error', 'Review status unavailable. Sign in to track your progress.'))}</p>`
+    }
+  }
+
+  #renderReviewStatus(status) {
+    const STAGE_LABELS = {
+      recognition:               tr('dp_stage_recognition',               'Recognition'),
+      guided_recall:             tr('dp_stage_guided_recall',             'Guided recall'),
+      partial_production:        tr('dp_stage_partial_production',        'Partial production'),
+      transformation:            tr('dp_stage_transformation',            'Transformation'),
+      free_production:           tr('dp_stage_free_production',           'Free production'),
+      contextual_interpretation: tr('dp_stage_contextual_interpretation', 'Contextual interpretation'),
+    }
+    const STAGE_DESCS = {
+      recognition:               tr('dp_stage_desc_recognition',               'Identifying this item on encounter.'),
+      guided_recall:             tr('dp_stage_desc_guided_recall',             'Recalling with contextual support.'),
+      partial_production:        tr('dp_stage_desc_partial_production',        'Producing with scaffolding.'),
+      transformation:            tr('dp_stage_desc_transformation',            'Applying patterns under instruction.'),
+      free_production:           tr('dp_stage_desc_free_production',           'Using this item independently in context.'),
+      contextual_interpretation: tr('dp_stage_desc_contextual_interpretation', 'Interpreting subtle discourse nuances.'),
+    }
+    const STAGE_ORDER = [
+      'recognition', 'guided_recall', 'partial_production',
+      'transformation', 'free_production', 'contextual_interpretation',
+    ]
+
+    const stage = status.progression_stage || 'recognition'
+    const stageIdx = STAGE_ORDER.indexOf(stage)
+    const masteryPct = Math.round((status.mastery_score || 0) * 100)
+
+    const daysUntil = status.days_until_due
+    const daysText = daysUntil != null
+      ? (daysUntil <= 0
+          ? tr('dp_due_now', 'Due now')
+          : tr('dp_due_in_days', `Due in ${daysUntil}d`))
+      : ''
+
+    const stepsHtml = STAGE_ORDER.map((s, i) => {
+      const done = i < stageIdx
+      const current = i === stageIdx
+      const marker = done ? '✓' : current ? '●' : '○'
+      return /* html */`
+        <li class="pane__stage-step${done ? ' pane__stage-step--done' : ''}${current ? ' pane__stage-step--current' : ''}">
+          <span class="pane__stage-marker" aria-hidden="true">${marker}</span>
+          <span class="pane__stage-name">${esc(STAGE_LABELS[s] || s)}</span>
+        </li>
+      `
+    }).join('')
+
+    const confusionHtml = (status.confusion_pairs || []).map(pair => /* html */`
+      <li class="pane__confusion-item">
+        <span class="pane__confusion-form">${esc(pair.confused_with)}</span>
+        <span class="pane__confusion-count" aria-label="${pair.confusion_count} time${pair.confusion_count !== 1 ? 's' : ''}">${pair.confusion_count}×</span>
+      </li>
+    `).join('')
+
+    const masteryBar = /* html */`
+      <div class="pane__mastery-bar" role="progressbar" aria-valuenow="${masteryPct}" aria-valuemin="0" aria-valuemax="100" aria-label="${esc(tr('dp_review_mastery', 'Mastery'))} ${masteryPct}%">
+        <div class="pane__mastery-bar-fill" style="inline-size:${masteryPct}%"></div>
+      </div>
+    `
+
+    return /* html */`
+      <section class="pane__subsection" aria-labelledby="dp-review-stage-h">
+        <h3 class="pane__section-heading" id="dp-review-stage-h">${esc(tr('dp_review_acquisition_stage', 'Acquisition stage'))}</h3>
+        <div class="pane__stage-badge" data-stage="${esc(stage)}">${esc(STAGE_LABELS[stage] || stage)}</div>
+        <p class="pane__muted">${esc(STAGE_DESCS[stage] || '')}</p>
+        <ol class="pane__stage-steps" aria-label="${esc(tr('dp_stage_progress_label', 'Progress through acquisition stages'))}">
+          ${stepsHtml}
+        </ol>
+      </section>
+
+      <section class="pane__subsection" aria-labelledby="dp-review-schedule-h">
+        <h3 class="pane__section-heading" id="dp-review-schedule-h">${esc(tr('dp_review_schedule', 'Schedule'))}</h3>
+        ${masteryBar}
+        <dl class="pane__fields">
+          <div class="pane__field">
+            <dt class="pane__field-label">${esc(tr('dp_review_mastery', 'Mastery'))}</dt>
+            <dd class="pane__field-value">${masteryPct}%</dd>
+          </div>
+          ${daysText ? /* html */`
+          <div class="pane__field">
+            <dt class="pane__field-label">${esc(tr('dp_review_next_review', 'Next review'))}</dt>
+            <dd class="pane__field-value">${esc(daysText)}</dd>
+          </div>
+          ` : ''}
+          ${status.total_reviews ? /* html */`
+          <div class="pane__field">
+            <dt class="pane__field-label">${esc(tr('dp_review_total_reviews', 'Reviews'))}</dt>
+            <dd class="pane__field-value">${status.total_reviews}</dd>
+          </div>
+          ` : ''}
+          ${status.concept_type_label ? /* html */`
+          <div class="pane__field">
+            <dt class="pane__field-label">${esc(tr('dp_review_concept_type', 'Concept type'))}</dt>
+            <dd class="pane__field-value">${esc(status.concept_type_label)}</dd>
+          </div>
+          ` : ''}
+          ${status.stability != null ? /* html */`
+          <div class="pane__field">
+            <dt class="pane__field-label">${esc(tr('dp_review_stability', 'Stability'))}</dt>
+            <dd class="pane__field-value">${Math.round(status.stability)}d</dd>
+          </div>
+          ` : ''}
+          ${status.lapses != null && status.lapses > 0 ? /* html */`
+          <div class="pane__field">
+            <dt class="pane__field-label">${esc(tr('dp_review_lapses', 'Lapses'))}</dt>
+            <dd class="pane__field-value">${status.lapses}</dd>
+          </div>
+          ` : ''}
+        </dl>
+      </section>
+
+      ${status.confusion_pairs?.length ? /* html */`
+      <section class="pane__subsection" aria-labelledby="dp-review-confusion-h">
+        <h3 class="pane__section-heading" id="dp-review-confusion-h">${esc(tr('dp_review_confusion_pairs', 'Confusion pairs'))}</h3>
+        <p class="pane__muted">${esc(tr('dp_review_confusion_desc', 'Items you have confused with this one. These are scheduled for contrast practice.'))}</p>
+        <ul class="pane__confusion-list">
+          ${confusionHtml}
+        </ul>
+      </section>
+      ` : ''}
+    `
+  }
+
   // ── Event wiring ─────────────────────────────────────────────────────────────
 
   // ── Translation fetchers ─────────────────────────────────────────────────────
@@ -1652,7 +1825,17 @@ export class MnemosyneDetailPane extends HTMLElement {
         this.dispatchEvent(new CustomEvent('pane-practice-check', {
           bubbles: true,
           composed: true,
-          detail: { type: checkType, correct, answeredAt: new Date().toISOString(), lesson, language, objectId: lesson.id, term: mcActivity?.target_term_or_pattern, attempts: 1 },
+          detail: {
+            type: checkType,
+            correct,
+            wrongAnswer: correct ? null : selected,
+            answeredAt: new Date().toISOString(),
+            lesson,
+            language,
+            objectId: lesson.id,
+            term: mcActivity?.target_term_or_pattern,
+            attempts: 1,
+          },
         }))
         this._updatePracticeScore(correct)
       }))
@@ -3379,6 +3562,109 @@ export class MnemosyneDetailPane extends HTMLElement {
       }
       @media (prefers-reduced-motion: reduce) {
         .pane__self-rate-btn { transition: none; }
+      }
+
+      /* ── Review tab ──────────────────────────────────────────────────────────── */
+      .pane__review-status { }
+
+      .pane__stage-badge {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        padding: 0.2em 0.65em;
+        border-radius: 999px;
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 12%, Canvas);
+        border: 1px solid color-mix(in oklch, var(--detail-accent, ${ref}) 30%, Canvas);
+        color: var(--text);
+        margin-block-end: 0.4rem;
+      }
+
+      .pane__stage-steps {
+        list-style: none;
+        padding: 0;
+        margin: 0.6rem 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+
+      .pane__stage-step {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+        padding: 0.15rem 0;
+      }
+
+      .pane__stage-step--done { color: oklch(0.55 0.15 145); }
+
+      .pane__stage-step--current {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .pane__stage-marker {
+        font-size: 0.7rem;
+        inline-size: 1.1em;
+        flex-shrink: 0;
+      }
+
+      .pane__mastery-bar {
+        block-size: 5px;
+        background: color-mix(in oklch, CanvasText 12%, Canvas);
+        border-radius: 999px;
+        overflow: hidden;
+        margin-block: 0.5rem;
+      }
+
+      .pane__mastery-bar-fill {
+        block-size: 100%;
+        background: var(--detail-accent, ${ref});
+        border-radius: 999px;
+        transition: inline-size 0.4s ease;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .pane__mastery-bar-fill { transition: none; }
+      }
+
+      .pane__confusion-list {
+        list-style: none;
+        padding: 0;
+        margin: 0.4rem 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+
+      .pane__confusion-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        padding: 0.3rem 0.5rem;
+        border-radius: 0.35rem;
+        background: color-mix(in oklch, oklch(0.55 0.20 29) 6%, Canvas);
+        border: 1px solid color-mix(in oklch, oklch(0.55 0.20 29) 18%, Canvas);
+      }
+
+      .pane__confusion-form {
+        flex: 1;
+        font-weight: 500;
+      }
+
+      .pane__confusion-count {
+        font-size: 0.75rem;
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+      }
+
+      @media (forced-colors: active) {
+        .pane__stage-badge { border: 1px solid ButtonText; }
+        .pane__mastery-bar-fill { forced-color-adjust: none; background: Highlight; }
+        .pane__confusion-item { border: 1px solid ButtonText; }
       }
     `
   }

@@ -41,6 +41,7 @@
     <script type="module" src="./js/autonomous-learning.js"></script>
     <script type="module" src="./js/passage-transition.js"></script>
     <script type="module" src="./js/onboarding.js"></script>
+    <script type="module" src="./components/mnemosyne-weakness-graph.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(() => {})
@@ -182,6 +183,16 @@
             Review queue
             <span id="review-due-badge" class="review-due-count" hidden aria-live="polite"></span>
           </button>
+        </div>
+
+        <!-- ── Weakness / learning profile ───────────────────────────────────
+             Collapsed by default; JS shows and loads on auth + language change.
+        -->
+        <div class="wrap" id="weakness-graph-bar" hidden>
+          <details id="weakness-graph-details" class="weakness-graph-disclosure">
+            <summary class="weakness-graph-disclosure__summary">Learning profile</summary>
+            <mnemosyne-weakness-graph id="weakness-graph"></mnemosyne-weakness-graph>
+          </details>
         </div>
 
         <!-- App body: left (FilterBar + TextPanel) + right (DetailPanel) -->

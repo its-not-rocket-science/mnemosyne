@@ -18,11 +18,27 @@ export function initReviewSession() {
   const reviewBar = document.getElementById('review-bar')
   const reviewPane = document.getElementById('review-pane')
   const badge = document.getElementById('review-due-badge')
+  const weaknessBar = document.getElementById('weakness-graph-bar')
+  const weaknessGraph = document.getElementById('weakness-graph')
 
   if (!openBtn || !reviewPanel || !reviewPane) return
 
   // Show the review bar once auth is confirmed
   reviewBar?.removeAttribute('hidden')
+
+  // Show weakness graph bar and load profile for current language
+  if (weaknessBar && weaknessGraph) {
+    weaknessBar.removeAttribute('hidden')
+    const langSel = document.getElementById('language')
+    const lang = langSel?.value || null
+    if (lang) weaknessGraph.load?.(lang)
+
+    // Reload when language changes
+    langSel?.addEventListener('change', () => {
+      const newLang = langSel.value || null
+      if (newLang) weaknessGraph.load?.(newLang)
+    })
+  }
 
   // Fetch stats and update badge
   async function refreshBadge() {

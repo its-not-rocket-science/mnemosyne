@@ -304,6 +304,11 @@ class UserKnowledgeRow(Base):
     ``due_at`` mirrors ``fsrs_state["due_at"]`` as a proper datetime column
     so that the daily review queue query is a single indexed comparison
     instead of a JSON extraction.
+
+    ``progression_stage`` tracks the learner's current acquisition stage for
+    this item: recognition → guided_recall → partial_production →
+    transformation → free_production → contextual_interpretation.
+    Advances when mastery score meets the stage threshold; never regresses.
     """
     __tablename__ = "user_knowledge"
 
@@ -316,6 +321,9 @@ class UserKnowledgeRow(Base):
     last_seen: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
     total_reviews: Mapped[int] = mapped_column(Integer, default=0)
     due_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+    progression_stage: Mapped[str] = mapped_column(
+        String(30), default="recognition", server_default="recognition"
+    )
 
 
 class ReviewEventRow(Base):
@@ -327,6 +335,12 @@ class ReviewEventRow(Base):
     ``mastery_score_before`` and ``mastery_score_after`` are the FSRS
     retrievability R(t, S) computed just before and just after the review so
     that retention curves can be reconstructed without re-running the scheduler.
+
+    ``wrong_answer`` is the label/form the learner chose when quality < 3.
+    Used to mine confusion pairs for targeted contrast drilling.
+
+    ``concept_type`` mirrors ``CanonicalObjectRow.type`` so that accuracy
+    can be analysed per linguistic concept category without joins.
 
     No FK constraints on ``user_id`` or ``object_id`` — consistent with
     ``UserKnowledgeRow`` so reviews can be logged even when canonical_objects
@@ -343,6 +357,8 @@ class ReviewEventRow(Base):
     reviewed_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=_now, nullable=False, index=True
     )
+    wrong_answer: Mapped[str | None] = mapped_column(Text, nullable=True)
+    concept_type: Mapped[str | None] = mapped_column(String(30), nullable=True)
 
 
 class UserFsrsParamsRow(Base):
@@ -612,3 +628,55 @@ class CorpusIngestionRow(Base):
     status:                Mapped[str]           = mapped_column(String(20), nullable=False, default="pending")
     """pending | ok | failed | skipped | metadata_only"""
     error_message:         Mapped[str | None]    = mapped_column(Text, nullable=True)
+
+
+class ConfusionPairRow(Base):
+    """Records which items a learner confuses with each other.
+
+    Written when a review is submitted with quality < 3 and a ``wrong_answer``
+    is included in the payload.  The PK (user_id, object_id, confused_with)
+    makes upserts safe and idempotent.
+
+    ``confused_with`` is the display label of the wrong answer chosen, not an
+    object_id, because wrong answers may come from arbitrary distractors that
+    do not map to canonical objects.
+
+    ``next_contrast_at`` is set to 2 days after each confusion event; the
+    weakness endpoint surfaces items where this is in the past so the UI can
+    prompt targeted contrast drilling.
+    """
+    __tablename__ = "confusion_pairs"
+
+    user_id: Mapped[str] = mapped_column(String(50), primary_key=True)
+    object_id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    confused_with: Mapped[str] = mapped_column(Text, primary_key=True)
+    confusion_count: Mapped[int] = mapped_column(Integer, default=1)
+    last_confused_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+    next_contrast_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+
+class WeaknessClusterRow(Base):
+    """Aggregated learner confusion patterns grouped by linguistic category.
+
+    Populated by the weakness profile endpoint.  Stores pre-computed cluster
+    analysis so the profile endpoint can return fast without scanning all
+    review events on each request.
+
+    ``cluster_type`` is one of: morphology_errors, tense_confusion,
+    aspect_confusion, register_confusion, particle_confusion, article_case.
+
+    ``labels`` is a JSON list of canonical_form strings (or display labels)
+    belonging to this cluster.
+
+    ``strength`` ∈ [0, 1]: how strong/persistent the confusion cluster is.
+    Decays toward 0 as the learner masters the distinctions.
+    """
+    __tablename__ = "weakness_clusters"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    user_id: Mapped[str] = mapped_column(String(50), nullable=False, index=True)
+    language: Mapped[str] = mapped_column(String(10), nullable=False)
+    cluster_type: Mapped[str] = mapped_column(String(50), nullable=False)
+    labels: Mapped[list] = mapped_column(JSON, default=list)
+    strength: Mapped[float] = mapped_column(Float, default=0.0)
+    last_updated: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
