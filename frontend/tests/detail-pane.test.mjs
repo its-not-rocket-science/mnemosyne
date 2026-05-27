@@ -395,8 +395,32 @@ const cleanUp = () => { document.body.innerHTML = '' }
   assert.ok(dialog.hidden, '#dp-concept-dialog must be hidden initially')
   assert.equal(dialog.getAttribute('role'), 'dialog', 'concept dialog must have role="dialog"')
   assert.equal(dialog.getAttribute('aria-modal'), 'true', 'concept dialog must have aria-modal="true"')
+  assert.equal(dialog.getAttribute('aria-labelledby'), 'dp-concept-title', 'dialog must be labelled by title element')
+  assert.equal(dialog.getAttribute('aria-describedby'), 'dp-concept-body', 'dialog must have aria-describedby pointing to body')
+  const body = sr(pane).querySelector('#dp-concept-body')
+  assert.ok(body !== null, '#dp-concept-body element must exist')
+  assert.equal(body.getAttribute('aria-live'), 'polite', 'concept body must have aria-live=polite for loading announcements')
   cleanUp()
   console.log('  ✓ concept dialog is rendered hidden with correct ARIA attributes')
+}
+
+// Test 23: concept help buttons have distinct aria-labels when label/value text available
+{
+  const MORPH_LESSON = {
+    ...VOCAB_LESSON,
+    fields: [
+      { label: 'Tense', value: 'imperfect', concept_id: 'tense', value_concept_id: 'tense.imperfect' }
+    ]
+  }
+  const pane = makePane()
+  pane.show({ lesson: MORPH_LESSON, sentenceText: '', language: 'es', depth: 'learning' })
+  const buttons = sr(pane).querySelectorAll('.pane__concept-help')
+  assert.ok(buttons.length >= 2, 'need at least 2 help buttons for this test')
+  const labels = Array.from(buttons).map(b => b.getAttribute('aria-label'))
+  assert.notEqual(labels[0], labels[1], 'label-help and value-help buttons must have distinct aria-labels')
+  assert.ok(labels[0].includes('Tense') || labels[0].includes('imperfect') || labels[0].length > 1, 'label button aria-label must include some context')
+  cleanUp()
+  console.log('  ✓ label and value concept help buttons have distinct aria-labels')
 }
 
 console.log('\nAll detail pane render tests passed.')

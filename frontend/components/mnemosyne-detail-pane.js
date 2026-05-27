@@ -649,8 +649,10 @@ export class MnemosyneDetailPane extends HTMLElement {
     const displayFields = depthIdx >= 1 ? allFields : []
 
     const fieldsHtml = displayFields.map(f => {
-      const labelBtn = f.concept_id ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(f.concept_id)}" aria-label="${esc(t('dp_explain_concept'))}" title="${esc(t('dp_explain_concept'))}">?</button>` : ''
-      const valueBtn = f.value_concept_id ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(f.value_concept_id)}" aria-label="${esc(t('dp_explain_concept'))}" title="${esc(t('dp_explain_concept'))}">?</button>` : ''
+      const labelTip = f.label ? `${esc(t('dp_explain_concept'))}: ${esc(translateFieldLabel(f.label))}` : esc(t('dp_explain_concept'))
+      const valueTip = f.value ? `${esc(t('dp_explain_concept'))}: ${esc(translateFieldValue(f.value))}` : esc(t('dp_explain_concept'))
+      const labelBtn = f.concept_id ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(f.concept_id)}" aria-label="${labelTip}" title="${labelTip}">?</button>` : ''
+      const valueBtn = f.value_concept_id ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(f.value_concept_id)}" aria-label="${valueTip}" title="${valueTip}">?</button>` : ''
       return /* html */`
         <div class="pane__field">
           <dt class="pane__field-label">${esc(translateFieldLabel(f.label))}${labelBtn}</dt>
@@ -738,8 +740,10 @@ export class MnemosyneDetailPane extends HTMLElement {
         <h3 class="pane__section-heading" id="dp-form-axes-h">${esc(tr('dp_form_axes_heading', 'Morphology'))}</h3>
         <dl class="pane__axes-list">
           ${axes.map(ax => {
-            const axisBtn = ax.axis_concept_id ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(ax.axis_concept_id)}" aria-label="${esc(t('dp_explain_concept'))}" title="${esc(t('dp_explain_concept'))}">?</button>` : ''
-            const valueBtn = ax.value_concept_id ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(ax.value_concept_id)}" aria-label="${esc(t('dp_explain_concept'))}" title="${esc(t('dp_explain_concept'))}">?</button>` : ''
+            const axisTip  = ax.axis  ? `${esc(t('dp_explain_concept'))}: ${esc(ax.axis)}`          : esc(t('dp_explain_concept'))
+            const valTip   = ax.label ? `${esc(t('dp_explain_concept'))}: ${esc(ax.label || ax.value)}` : esc(t('dp_explain_concept'))
+            const axisBtn = ax.axis_concept_id ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(ax.axis_concept_id)}" aria-label="${axisTip}" title="${axisTip}">?</button>` : ''
+            const valueBtn = ax.value_concept_id ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(ax.value_concept_id)}" aria-label="${valTip}" title="${valTip}">?</button>` : ''
             return /* html */`
               <div class="pane__axis-row">
                 <dt class="pane__axis-label">${esc(ax.axis)}${axisBtn}</dt>
@@ -1588,6 +1592,7 @@ export class MnemosyneDetailPane extends HTMLElement {
            role="dialog"
            aria-modal="true"
            aria-labelledby="dp-concept-title"
+           aria-describedby="dp-concept-body"
            hidden>
         <div class="pane__concept-dialog-inner">
           <header class="pane__concept-dialog-header">
@@ -1597,7 +1602,10 @@ export class MnemosyneDetailPane extends HTMLElement {
             <button class="pane__concept-dialog-close" type="button"
                     aria-label="${esc(t('dp_concept_dialog_close'))}">&#x2715;</button>
           </header>
-          <div class="pane__concept-dialog-body"></div>
+          <div id="dp-concept-body"
+               class="pane__concept-dialog-body"
+               aria-live="polite"
+               aria-atomic="false"></div>
         </div>
       </div>
     `
