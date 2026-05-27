@@ -296,6 +296,7 @@ class HindiPlugin:
             elif is_function:
                 obj_type = "vocabulary"
                 lesson_data = {
+                    "lemma":        token,
                     "surface_form": token,
                     "romanized":    romanised,
                     "pos":          "function_word",
@@ -304,8 +305,9 @@ class HindiPlugin:
             else:
                 obj_type = "vocabulary"
                 lesson_data = {
-                    "surface_form": token,
-                    "romanized":    romanised,
+                    "lemma":           token,
+                    "surface_form":    token,
+                    "romanized":       romanised,
                     "confidence_note": _CONFIDENCE_NOTE,
                 }
                 if morph:
@@ -325,18 +327,20 @@ class HindiPlugin:
 
         # Latin tokens (loanwords/numerals) as low-confidence vocabulary
         for token in latin_tokens:
-            if token in seen or not token.isalpha():
+            canonical_latin = token.lower()
+            if canonical_latin in seen or not token.isalpha():
                 continue
-            seen.add(token)
+            seen.add(canonical_latin)
             candidates.append(
                 CandidateObject(
-                    canonical_form=token.lower(),
+                    canonical_form=canonical_latin,
                     surface_form=token,
                     type="vocabulary",
                     label=token,
                     lesson_data={
+                        "lemma":        canonical_latin,
                         "surface_form": token,
-                        "note": "Latin-script loanword or technical term.",
+                        "note":         "Latin-script loanword or technical term.",
                     },
                     confidence=None,
                 )

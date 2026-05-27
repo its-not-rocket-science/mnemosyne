@@ -270,7 +270,7 @@ class KoineGreekPlugin:
             cultural_references="none",
             etymology="none",
             formality_register="none",
-            grammar_nuance="stub",
+            grammar_nuance="none",
             pronunciation_tts="stub",
             transliteration="partial",
             proverb_tradition="none",
