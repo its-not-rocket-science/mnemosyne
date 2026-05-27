@@ -112,7 +112,14 @@
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\" -Recurse -Directory | ForEach-Object {$_.FullName} | Select-Object -First 60)",
       "Bash(Select-Object Name, PSIsContainer)",
       "Bash(Sort-Object PSIsContainer -Descending)",
-      "Bash(Select-Object BaseName)"
+      "Bash(Select-Object BaseName)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\" -Recurse -Directory | Where-Object { $_.Name -match \"\\(l10n|locale|i18n\\)\" })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\\\\frontend\" -Recurse -File | Where-Object { $_.Extension -match \"\\\\.\\(json|js|ts\\)$\" } | Select-Object -First 100 | Format-Table Name, FullName)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\\\\frontend\" -Recurse -File | Where-Object { $_.FullName -match \"\\(locale|translation|i18n|lang\\)\" } | Select-Object FullName)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne\\\\frontend\\\\public\" -Recurse -File 2>/dev/null | Format-Table Name, FullName)",
+      "Bash(python3 *)",
+      "Bash(sed -n '890,905p' \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne/frontend/components/mnemosyne-modal.js\")",
+      "Bash(sed -n '1155,1170p' \"C:\\\\Users\\\\paul_\\\\PROJECTS\\\\mnemosyne/frontend/components/mnemosyne-modal.js\")"
     ]
   }
 }
