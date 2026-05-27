@@ -36,6 +36,9 @@ SUPPORTED_LANGUAGES: list[tuple[str, str, str]] = [
     ("ja",  "backend.plugins.japanese",      "JapanesePlugin"),
     ("la",  "backend.plugins.latin",         "LatinPlugin"),
     ("grc", "backend.plugins.greek_koine",   "KoineGreekPlugin"),
+    ("hi",  "backend.plugins.hindi",         "HindiPlugin"),
+    ("tr",  "backend.plugins.turkish",       "TurkishPlugin"),
+    ("fi",  "backend.plugins.finnish",       "FinnishPlugin"),
 ]
 
 FIXTURE_DIR = Path(__file__).parent.parent / "backend" / "tests" / "fixtures" / "nuance_gold"

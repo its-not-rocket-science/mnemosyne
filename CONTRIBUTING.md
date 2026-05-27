@@ -192,7 +192,7 @@ The suite requires no running external services:
 | `test_non_latin_roundtrip.py` | Non-Latin DB round-trip + RTL API pipeline | in-memory SQLite |
 | `test_arabic_plugin.py` | Arabic plugin (dictionary mode) | none |
 | `test_hebrew_plugin.py` | Hebrew plugin (dictionary mode) | none |
-| `test_latin_plugin.py` | Latin plugin (dictionary mode) | none |
+| `test_latin_plugin.py` | Latin plugin (morphology-light mode) | none |
 | `test_chinese_plugin.py` | Chinese plugin (jieba segmentation) | none |
 | `test_spanish_spacy.py` | Spanish NLP extraction | **requires `es_core_news_sm`** |
 | `test_french_spacy.py` | French NLP extraction | **requires `fr_core_news_sm`** |
@@ -201,7 +201,9 @@ The suite requires no running external services:
 | `test_japanese_plugin.py` | Japanese plugin (SudachiPy) | **requires `ja_core_news_sm`** |
 | `test_portuguese_spacy.py` | Portuguese NLP extraction | **requires `pt_core_news_sm`** |
 | `test_italian_spacy.py` | Italian NLP extraction | **requires `it_core_news_sm`** |
-| `test_greek_koine_plugin.py` | Koine Greek plugin (dictionary mode) | none |
+| `test_greek_koine_plugin.py` | Koine Greek plugin (morphology-light mode) | none |
+| `test_hindi_turkish_finnish_plugins.py` | Hindi, Turkish, Finnish suffix-rule plugins | none |
+| `test_classical_morph.py` | Latin/Greek morphological index structure + plugin integration | none |
 
 Tests that require spaCy models are auto-skipped when the model is not installed (each file has a `pytestmark = pytest.mark.skipif(not _model_available(), ...)` guard). Run the full suite without any model installed:
 
