@@ -17,12 +17,12 @@ def test_depth_modes_define_distinct_annotation_categories() -> None:
 
     assert "const ANNOTATION_DEPTH_MODEL = {" in text
     assert "subtle: new Set(['vocabulary'])" in text
-    assert "learning: new Set(['vocabulary', 'conjugation', 'agreement', 'grammar'])" in text
+    assert "learning: new Set(['vocabulary', 'conjugation', 'agreement', 'inflection', 'grammar'])" in text
     assert "'nuance'" in text and "'phrase_family'" in text and "'cultural_note'" in text
 
     # Explicit non-alias guarantees in canonical model.
     assert "subtle: new Set(['vocabulary'])" in text
-    assert "learning: new Set(['vocabulary', 'conjugation', 'agreement', 'grammar'])" in text
+    assert "learning: new Set(['vocabulary', 'conjugation', 'agreement', 'inflection', 'grammar'])" in text
     assert "deep: new Set([" in text
 
 

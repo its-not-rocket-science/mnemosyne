@@ -401,6 +401,27 @@ export class MnemosyneDetailPane extends HTMLElement {
           }
         }
 
+        // Focus trap inside concept dialog
+        if (e.key === 'Tab') {
+          const dialog = this.shadowRoot.querySelector('#dp-concept-dialog')
+          if (dialog && !dialog.hidden) {
+            const focusable = Array.from(dialog.querySelectorAll(
+              'button:not([hidden]):not([disabled]), [tabindex]:not([hidden]):not([tabindex="-1"])'
+            ))
+            if (focusable.length) {
+              const active = this.shadowRoot.activeElement
+              const first  = focusable[0]
+              const last   = focusable[focusable.length - 1]
+              if (e.shiftKey && active === first) {
+                e.preventDefault(); last.focus()
+              } else if (!e.shiftKey && active === last) {
+                e.preventDefault(); first.focus()
+              }
+            }
+            return
+          }
+        }
+
         const tab = e.target.closest('[role="tab"]')
         if (!tab) return
         const tabEls = Array.from(this.shadowRoot.querySelectorAll('[role="tab"]'))
@@ -628,12 +649,12 @@ export class MnemosyneDetailPane extends HTMLElement {
     const displayFields = depthIdx >= 1 ? allFields : []
 
     const fieldsHtml = displayFields.map(f => {
-      const cid = f.value_concept_id || f.concept_id || null
-      const helpBtn = cid ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(cid)}" aria-label="${esc(t('dp_explain_concept'))}" title="${esc(t('dp_explain_concept'))}">?</button>` : ''
+      const labelBtn = f.concept_id ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(f.concept_id)}" aria-label="${esc(t('dp_explain_concept'))}" title="${esc(t('dp_explain_concept'))}">?</button>` : ''
+      const valueBtn = f.value_concept_id ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(f.value_concept_id)}" aria-label="${esc(t('dp_explain_concept'))}" title="${esc(t('dp_explain_concept'))}">?</button>` : ''
       return /* html */`
         <div class="pane__field">
-          <dt class="pane__field-label">${esc(translateFieldLabel(f.label))}</dt>
-          <dd class="pane__field-value">${esc(translateFieldValue(f.value))}${helpBtn}</dd>
+          <dt class="pane__field-label">${esc(translateFieldLabel(f.label))}${labelBtn}</dt>
+          <dd class="pane__field-value">${esc(translateFieldValue(f.value))}${valueBtn}</dd>
         </div>
       `
     }).join('')
@@ -717,15 +738,15 @@ export class MnemosyneDetailPane extends HTMLElement {
         <h3 class="pane__section-heading" id="dp-form-axes-h">${esc(tr('dp_form_axes_heading', 'Morphology'))}</h3>
         <dl class="pane__axes-list">
           ${axes.map(ax => {
-            const cid = ax.value_concept_id || ax.axis_concept_id || null
-            const helpBtn = cid ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(cid)}" aria-label="${esc(t('dp_explain_concept'))}" title="${esc(t('dp_explain_concept'))}">?</button>` : ''
+            const axisBtn = ax.axis_concept_id ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(ax.axis_concept_id)}" aria-label="${esc(t('dp_explain_concept'))}" title="${esc(t('dp_explain_concept'))}">?</button>` : ''
+            const valueBtn = ax.value_concept_id ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(ax.value_concept_id)}" aria-label="${esc(t('dp_explain_concept'))}" title="${esc(t('dp_explain_concept'))}">?</button>` : ''
             return /* html */`
               <div class="pane__axis-row">
-                <dt class="pane__axis-label">${esc(ax.axis)}</dt>
+                <dt class="pane__axis-label">${esc(ax.axis)}${axisBtn}</dt>
                 <dd class="pane__axis-value">
                   <span ${langAttr} ${dirAttr}>${esc(ax.label || ax.value)}</span>
                   ${ax.gloss ? `<span class="pane__axis-gloss">${esc(ax.gloss)}</span>` : ''}
-                  ${helpBtn}
+                  ${valueBtn}
                 </dd>
               </div>
             `
