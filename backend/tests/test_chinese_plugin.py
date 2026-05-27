@@ -205,10 +205,14 @@ class TestAnalyzeSentence:
             assert "word" in c.lesson_data
             assert c.lesson_data["word"] == c.canonical_form
 
-    def test_lesson_data_has_pos_word(self, plugin: MandarinChinesePlugin) -> None:
+    def test_lesson_data_has_pos_key(self, plugin: MandarinChinesePlugin) -> None:
+        # When posseg is unavailable pos is "WORD"; when available it is a
+        # real POS label.  Either way the key must be present.
         result = plugin.analyze_sentence("你好")
         for c in result.candidates:
-            assert c.lesson_data.get("pos") == "WORD"
+            if c.type == "vocabulary":
+                assert "pos" in c.lesson_data
+                assert isinstance(c.lesson_data["pos"], str)
 
     def test_confidence_is_float(self, plugin: MandarinChinesePlugin) -> None:
         result = plugin.analyze_sentence("你好")
@@ -439,7 +443,190 @@ class TestMultilingualArchitecture:
         # Should not raise
         uuid.UUID(raw)
 
-    def test_zh_type_is_vocabulary_only(self, plugin: MandarinChinesePlugin) -> None:
+    def test_zh_no_conjugation_or_agreement_types(self, plugin: MandarinChinesePlugin) -> None:
         result = plugin.analyze_sentence("我喜欢学习中文。")
         types = {c.type for c in result.candidates}
-        assert types == {"vocabulary"}  # no conjugation, agreement, etc.
+        # Chinese never produces conjugation or agreement candidates.
+        assert "conjugation" not in types
+        assert "agreement" not in types
+
+
+# ── POS tag mapping ───────────────────────────────────────────────────────────
+
+class TestPosTagMapping:
+    """Tests that use mocked posseg output to verify the jieba→Mnemosyne POS map."""
+
+    def test_noun_tag_maps_to_noun(self, plugin: MandarinChinesePlugin) -> None:
+        from unittest.mock import patch, MagicMock
+        import backend.plugins.chinese as _mod
+
+        mock_pair = MagicMock()
+        mock_pair.word  = "书"
+        mock_pair.flag  = "n"
+
+        with patch.object(_mod, "_HAS_POSSEG", True), \
+             patch.object(_mod, "_posseg") as mp:
+            mp.cut.return_value = [mock_pair]
+            result = plugin.analyze_sentence("书")
+
+        vocab = [c for c in result.candidates if c.type == "vocabulary"]
+        assert any(c.lesson_data.get("pos") == "NOUN" for c in vocab)
+
+    def test_verb_tag_maps_to_verb(self, plugin: MandarinChinesePlugin) -> None:
+        from unittest.mock import patch, MagicMock
+        import backend.plugins.chinese as _mod
+
+        mock_pair = MagicMock()
+        mock_pair.word  = "跑"
+        mock_pair.flag  = "v"
+
+        with patch.object(_mod, "_HAS_POSSEG", True), \
+             patch.object(_mod, "_posseg") as mp:
+            mp.cut.return_value = [mock_pair]
+            result = plugin.analyze_sentence("跑")
+
+        vocab = [c for c in result.candidates if c.type == "vocabulary"]
+        assert any(c.lesson_data.get("pos") == "VERB" for c in vocab)
+
+    def test_adjective_tag_maps_to_adj(self, plugin: MandarinChinesePlugin) -> None:
+        from unittest.mock import patch, MagicMock
+        import backend.plugins.chinese as _mod
+
+        mock_pair = MagicMock()
+        mock_pair.word  = "美"
+        mock_pair.flag  = "a"
+
+        with patch.object(_mod, "_HAS_POSSEG", True), \
+             patch.object(_mod, "_posseg") as mp:
+            mp.cut.return_value = [mock_pair]
+            result = plugin.analyze_sentence("美")
+
+        vocab = [c for c in result.candidates if c.type == "vocabulary"]
+        assert any(c.lesson_data.get("pos") == "ADJ" for c in vocab)
+
+    def test_particle_tag_maps_to_particle(self, plugin: MandarinChinesePlugin) -> None:
+        from unittest.mock import patch, MagicMock
+        import backend.plugins.chinese as _mod
+
+        mock_pair = MagicMock()
+        mock_pair.word  = "一下"
+        mock_pair.flag  = "u"
+
+        with patch.object(_mod, "_HAS_POSSEG", True), \
+             patch.object(_mod, "_posseg") as mp:
+            mp.cut.return_value = [mock_pair]
+            result = plugin.analyze_sentence("一下")
+
+        # Generic particle that is not in the aspect/structural particle list
+        vocab = [c for c in result.candidates if c.type == "vocabulary"]
+        assert any(c.lesson_data.get("pos") == "PARTICLE" for c in vocab)
+
+    def test_classifier_tag_emits_grammar_candidate(self, plugin: MandarinChinesePlugin) -> None:
+        from unittest.mock import patch, MagicMock
+        import backend.plugins.chinese as _mod
+
+        mock_pair = MagicMock()
+        mock_pair.word  = "个"
+        mock_pair.flag  = "q"
+
+        with patch.object(_mod, "_HAS_POSSEG", True), \
+             patch.object(_mod, "_posseg") as mp:
+            mp.cut.return_value = [mock_pair]
+            result = plugin.analyze_sentence("个")
+
+        gram = [c for c in result.candidates if c.type == "grammar"]
+        assert len(gram) >= 1
+        assert gram[0].lesson_data.get("concept_id") == "zh.classifier"
+
+    def test_propn_tags_map_to_propn(self, plugin: MandarinChinesePlugin) -> None:
+        from unittest.mock import patch, MagicMock
+        import backend.plugins.chinese as _mod
+
+        for flag in ("nr", "ns"):
+            mock_pair = MagicMock()
+            mock_pair.word  = "北京"
+            mock_pair.flag  = flag
+
+            with patch.object(_mod, "_HAS_POSSEG", True), \
+                 patch.object(_mod, "_posseg") as mp:
+                mp.cut.return_value = [mock_pair]
+                result = plugin.analyze_sentence("北京")
+
+            vocab = [c for c in result.candidates if c.type == "vocabulary"]
+            assert any(c.lesson_data.get("pos") == "PROPN" for c in vocab), \
+                f"flag {flag!r} should map to PROPN"
+
+    def test_no_tense_person_number_morphology(self, plugin: MandarinChinesePlugin) -> None:
+        """Chinese vocabulary lessons must never claim tense/person/number morphology."""
+        result = plugin.analyze_sentence("我学习中文。")
+        for c in result.candidates:
+            if c.type == "vocabulary":
+                for forbidden in ("tense", "person", "number", "mood"):
+                    assert forbidden not in c.lesson_data, (
+                        f"Chinese lesson_data must not include {forbidden!r}"
+                    )
+
+
+# ── Aspect particle candidates ─────────────────────────────────────────────────
+
+class TestAspectParticleCandidates:
+    def test_le_emits_grammar_candidate(self, plugin: MandarinChinesePlugin) -> None:
+        result = plugin.analyze_sentence("我吃了。")
+        gram = [c for c in result.candidates if c.type == "grammar" and c.canonical_form == "了"]
+        assert len(gram) == 1
+
+    def test_le_candidate_has_concept_id(self, plugin: MandarinChinesePlugin) -> None:
+        result = plugin.analyze_sentence("他来了。")
+        gram = next(c for c in result.candidates if c.canonical_form == "了")
+        assert gram.lesson_data.get("concept_id") == "zh.aspect_particle.le"
+
+    def test_guo_emits_grammar_candidate(self, plugin: MandarinChinesePlugin) -> None:
+        # Jieba may merge "去过" into one token; inject 过 standalone to test detection.
+        from unittest.mock import patch, MagicMock
+        import backend.plugins.chinese as _mod
+
+        pairs = []
+        for word, flag in [("我", "r"), ("过", "u"), ("北京", "ns")]:
+            m = MagicMock(); m.word = word; m.flag = flag
+            pairs.append(m)
+
+        with patch.object(_mod, "_HAS_POSSEG", True), \
+             patch.object(_mod, "_posseg") as mp:
+            mp.cut.return_value = pairs
+            result = plugin.analyze_sentence("我过北京。")
+
+        gram = [c for c in result.candidates if c.type == "grammar" and c.canonical_form == "过"]
+        assert len(gram) == 1
+
+    def test_zhe_emits_grammar_candidate(self, plugin: MandarinChinesePlugin) -> None:
+        result = plugin.analyze_sentence("他坐着。")
+        gram = [c for c in result.candidates if c.type == "grammar" and c.canonical_form == "着"]
+        assert len(gram) == 1
+
+    def test_structural_de_emits_grammar_candidate(self, plugin: MandarinChinesePlugin) -> None:
+        result = plugin.analyze_sentence("漂亮的书。")
+        gram = [c for c in result.candidates if c.type == "grammar" and c.canonical_form == "的"]
+        assert len(gram) == 1
+
+    def test_particle_not_duplicated_in_sentence(self, plugin: MandarinChinesePlugin) -> None:
+        # Multiple 了 in one sentence should yield only one grammar candidate.
+        result = plugin.analyze_sentence("他来了，她也来了。")
+        le_cands = [c for c in result.candidates if c.canonical_form == "了"]
+        assert len(le_cands) == 1
+
+    def test_grammar_candidate_has_usage(self, plugin: MandarinChinesePlugin) -> None:
+        result = plugin.analyze_sentence("他来了。")
+        gram = next(c for c in result.candidates if c.canonical_form == "了")
+        assert "usage" in gram.lesson_data
+        assert gram.lesson_data["usage"]
+
+    def test_grammar_candidate_has_contrast(self, plugin: MandarinChinesePlugin) -> None:
+        result = plugin.analyze_sentence("他来了。")
+        gram = next(c for c in result.candidates if c.canonical_form == "了")
+        assert "contrast" in gram.lesson_data
+
+    def test_no_morphology_claimed_in_grammar_candidate(self, plugin: MandarinChinesePlugin) -> None:
+        result = plugin.analyze_sentence("他来了。")
+        gram = next(c for c in result.candidates if c.canonical_form == "了")
+        for forbidden in ("tense", "person", "number", "gender"):
+            assert forbidden not in gram.lesson_data

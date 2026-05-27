@@ -85,6 +85,62 @@ from backend.schemas.lesson import (
     ShadowingDrill,
 )
 
+# ── Concept ID maps ───────────────────────────────────────────────────────────
+
+# Maps axis name → concept_id for the axis itself.
+_AXIS_CONCEPT: dict[str, str] = {
+    "lemma":          "axis.lemma",
+    "surface_form":   "axis.surface_form",
+    "part_of_speech": "axis.part_of_speech",
+    "tense":          "axis.tense",
+    "mood":           "axis.mood",
+    "person":         "axis.person",
+    "number":         "axis.number",
+    "gender":         "axis.gender",
+    "case":           "axis.case",
+    "aspect":         "axis.aspect",
+    "voice":          "axis.voice",
+    "romanized":      "axis.romanized",
+    "construction":   "axis.construction",
+}
+
+# Maps (axis, value) → concept_id for the value.
+_VALUE_CONCEPT: dict[tuple[str, str], str] = {
+    ("tense",   "present"):      "tense.present",
+    ("tense",   "preterite"):    "tense.preterite",
+    ("tense",   "imperfect"):    "tense.imperfect",
+    ("tense",   "future"):       "tense.future",
+    ("tense",   "conditional"):  "tense.conditional",
+    ("mood",    "indicative"):   "mood.indicative",
+    ("mood",    "subjunctive"):  "mood.subjunctive",
+    ("mood",    "imperative"):   "mood.imperative",
+    ("person",  "first"):        "person.first",
+    ("person",  "second"):       "person.second",
+    ("person",  "third"):        "person.third",
+    ("number",  "singular"):     "number.singular",
+    ("number",  "plural"):       "number.plural",
+    ("gender",  "masculine"):    "gender.masculine",
+    ("gender",  "feminine"):     "gender.feminine",
+    ("gender",  "neuter"):       "gender.neuter",
+    ("aspect",  "perfective"):   "aspect.perfective",
+    ("aspect",  "imperfective"): "aspect.imperfective",
+    ("part_of_speech", "noun"):           "pos.noun",
+    ("part_of_speech", "verb"):           "pos.verb",
+    ("part_of_speech", "adjective"):      "pos.adjective",
+    ("part_of_speech", "adverb"):         "pos.adverb",
+    ("part_of_speech", "auxiliary verb"): "pos.auxiliary_verb",
+    ("part_of_speech", "proper noun"):    "pos.proper_noun",
+}
+
+
+def _axis_cid(axis: str) -> str | None:
+    return _AXIS_CONCEPT.get(axis)
+
+
+def _value_cid(axis: str, value: str) -> str | None:
+    return _VALUE_CONCEPT.get((axis, value.lower()))
+
+
 # ── POS display ───────────────────────────────────────────────────────────────
 
 _POS_DISPLAY: dict[str, str] = {
@@ -169,11 +225,15 @@ def _morphology_axes_from_lesson_data(ld: dict) -> list[MorphologyAxis]:
             result: list[MorphologyAxis] = []
             for a in raw_axes:
                 if isinstance(a, dict) and a.get("axis") and a.get("value"):
+                    _ax  = str(a["axis"])
+                    _val = str(a["value"])
                     result.append(MorphologyAxis(
-                        axis=str(a["axis"]),
-                        value=str(a["value"]),
+                        axis=_ax,
+                        value=_val,
                         label=a.get("label"),
                         gloss=a.get("gloss"),
+                        axis_concept_id=_axis_cid(_ax),
+                        value_concept_id=_value_cid(_ax, _val),
                     ))
             if result:
                 return result
@@ -193,12 +253,20 @@ def _morphology_axes_from_lesson_data(ld: dict) -> list[MorphologyAxis]:
             continue
         val_str = str(raw)
         normalized = _norm.get(axis_key, {}).get(val_str, val_str.lower())
-        axes.append(MorphologyAxis(axis=axis_key, value=normalized))
+        axes.append(MorphologyAxis(
+            axis=axis_key, value=normalized,
+            axis_concept_id=_axis_cid(axis_key),
+            value_concept_id=_value_cid(axis_key, normalized),
+        ))
     # Russian past tense reports gender instead of person under "person_or_gender"
     if "person_or_gender" in ld and not any(ax.axis == "person" for ax in axes):
         pg = str(ld["person_or_gender"])
         norm_pg = {**_GENDER_DISPLAY, "1": "first", "2": "second", "3": "third"}.get(pg, pg.lower())
-        axes.append(MorphologyAxis(axis="person", value=norm_pg))
+        axes.append(MorphologyAxis(
+            axis="person", value=norm_pg,
+            axis_concept_id=_axis_cid("person"),
+            value_concept_id=_value_cid("person", norm_pg),
+        ))
     return axes
 
 
@@ -468,13 +536,39 @@ def _build_vocabulary(b: _B) -> LessonResponse:
     explanation = fmt.vocabulary_explanation(b.display_label, pos, lemma, b.ctx)
 
     fields: list[LessonField] = [
-        LessonField(label="Lemma", value=lemma),
-        LessonField(label="Part of speech", value=pos),
+        LessonField(label="Lemma", value=lemma, concept_id="axis.lemma"),
+        LessonField(label="Part of speech", value=pos,
+                    concept_id="axis.part_of_speech",
+                    value_concept_id=_value_cid("part_of_speech", pos)),
     ]
+
+    # Noun gender and number (Spanish and other inflecting languages)
+    if pos_raw == "NOUN":
+        gender_raw = b.lesson_data.get("gender")
+        if gender_raw and str(gender_raw) not in ("unknown", ""):
+            gender_display = _GENDER_DISPLAY.get(str(gender_raw), str(gender_raw).lower())
+            fields.append(LessonField(
+                label="Gender",
+                value=gender_display,
+                concept_id="axis.gender",
+                value_concept_id=_value_cid("gender", gender_display),
+            ))
+        number_raw = b.lesson_data.get("number")
+        if number_raw and str(number_raw) not in ("unknown", ""):
+            number_display = _NUMBER_LABELS.get(str(number_raw), str(number_raw).lower())
+            fields.append(LessonField(
+                label="Number",
+                value=number_display,
+                concept_id="axis.number",
+                value_concept_id=_value_cid("number", number_display),
+            ))
+
     if pinyin := b.lesson_data.get("pinyin"):
         # CJK romanization — tagged "Romanized" so the script-view toggle can
         # hide/show it.  The modal's ROMANIZED_LABELS set matches on "romanized".
-        fields.append(LessonField(label="Romanized", value=pinyin))
+        fields.append(LessonField(label="Romanized", value=pinyin,
+                                  concept_id="axis.romanized",
+                                  value_concept_id="zh.pinyin"))
     if verb_form := b.lesson_data.get("verb_form"):
         fields.append(LessonField(label="Form", value=verb_form.lower()))
 
@@ -556,17 +650,25 @@ def _build_conjugation(b: _B) -> LessonResponse:
     )
 
     fields: list[LessonField] = [
-        LessonField(label="Lemma", value=lemma),
-        LessonField(label="Surface form", value=surface),
+        LessonField(label="Lemma", value=lemma, concept_id="axis.lemma"),
+        LessonField(label="Surface form", value=surface, concept_id="axis.surface_form"),
     ]
     if tense != "unknown":
-        fields.append(LessonField(label="Tense", value=tense_loc))
+        fields.append(LessonField(label="Tense", value=tense_loc,
+                                  concept_id="axis.tense",
+                                  value_concept_id=_value_cid("tense", tense)))
     if mood != "unknown":
-        fields.append(LessonField(label="Mood", value=mood_loc))
+        fields.append(LessonField(label="Mood", value=mood_loc,
+                                  concept_id="axis.mood",
+                                  value_concept_id=_value_cid("mood", mood)))
     if person != "unknown":
-        fields.append(LessonField(label="Person", value=person_loc))
+        fields.append(LessonField(label="Person", value=person_loc,
+                                  concept_id="axis.person",
+                                  value_concept_id=_value_cid("person", person_label)))
     if number != "unknown":
-        fields.append(LessonField(label="Number", value=number_loc))
+        fields.append(LessonField(label="Number", value=number_loc,
+                                  concept_id="axis.number",
+                                  value_concept_id=_value_cid("number", number_label)))
 
     # Aspect (Russian/Slavic languages)
     aspect_raw = b.lesson_data.get("aspect")
