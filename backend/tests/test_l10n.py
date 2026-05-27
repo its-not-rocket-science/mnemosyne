@@ -466,3 +466,97 @@ class TestGramLabel:
     def test_localize_features_unknown_l1_uses_english(self) -> None:
         result = l10n.localize_features(["gender"], "xx")
         assert result == "gender"
+
+
+class TestGramLabelEastAsianRTL:
+    """gram_label coverage for ja / zh / ar / he."""
+
+    def test_person_first_japanese(self) -> None:
+        assert l10n.gram_label("person", "first", "ja") == "一人称"
+
+    def test_person_second_chinese(self) -> None:
+        assert l10n.gram_label("person", "second", "zh") == "第二"
+
+    def test_person_third_arabic(self) -> None:
+        assert l10n.gram_label("person", "third", "ar") == "ثالث"
+
+    def test_person_first_hebrew(self) -> None:
+        assert l10n.gram_label("person", "first", "he") == "ראשון"
+
+    def test_number_singular_japanese(self) -> None:
+        assert l10n.gram_label("number", "singular", "ja") == "単数"
+
+    def test_number_plural_chinese(self) -> None:
+        assert l10n.gram_label("number", "plural", "zh") == "复数"
+
+    def test_tense_present_japanese(self) -> None:
+        assert l10n.gram_label("tense", "present", "ja") == "現在"
+
+    def test_tense_past_arabic(self) -> None:
+        assert l10n.gram_label("tense", "past", "ar") == "ماضٍ"
+
+    def test_tense_future_hebrew(self) -> None:
+        assert l10n.gram_label("tense", "future", "he") == "עתיד"
+
+    def test_tense_imperfect_chinese(self) -> None:
+        assert l10n.gram_label("tense", "imperfect", "zh") == "未完成过去时"
+
+    def test_tense_aorist_japanese(self) -> None:
+        assert l10n.gram_label("tense", "aorist", "ja") == "アオリスト"
+
+    def test_tense_aorist_arabic(self) -> None:
+        assert l10n.gram_label("tense", "aorist", "ar") == "ماضٍ مطلق"
+
+    def test_mood_indicative_japanese(self) -> None:
+        assert l10n.gram_label("mood", "indicative", "ja") == "直説法"
+
+    def test_mood_imperative_arabic(self) -> None:
+        assert l10n.gram_label("mood", "imperative", "ar") == "أمر"
+
+    def test_mood_subjunctive_hebrew(self) -> None:
+        assert l10n.gram_label("mood", "subjunctive", "he") == "מניע"
+
+    def test_gender_masculine_japanese(self) -> None:
+        assert l10n.gram_label("gender", "masculine", "ja") == "男性"
+
+    def test_gender_feminine_arabic(self) -> None:
+        assert l10n.gram_label("gender", "feminine", "ar") == "مؤنث"
+
+    def test_case_nominative_japanese(self) -> None:
+        assert l10n.gram_label("case", "nominative", "ja") == "主格"
+
+    def test_case_accusative_chinese(self) -> None:
+        assert l10n.gram_label("case", "accusative", "zh") == "宾格"
+
+    def test_case_dative_arabic(self) -> None:
+        assert l10n.gram_label("case", "dative", "ar") == "مفعول غير مباشر"
+
+    def test_case_oblique_japanese(self) -> None:
+        assert l10n.gram_label("case", "oblique", "ja") == "斜格"
+
+    def test_case_oblique_hebrew(self) -> None:
+        assert l10n.gram_label("case", "oblique", "he") == "אוֹבְלִיק"
+
+    def test_aspect_perfective_japanese(self) -> None:
+        assert l10n.gram_label("aspect", "perfective", "ja") == "完了体"
+
+    def test_aspect_imperfective_arabic(self) -> None:
+        assert l10n.gram_label("aspect", "imperfective", "ar") == "مستمر"
+
+    def test_voice_active_japanese(self) -> None:
+        assert l10n.gram_label("voice", "active", "ja") == "能動"
+
+    def test_voice_passive_chinese(self) -> None:
+        assert l10n.gram_label("voice", "passive", "zh") == "被动"
+
+    def test_voice_middle_hebrew(self) -> None:
+        assert l10n.gram_label("voice", "middle", "he") == "אמצעי"
+
+    def test_feature_gender_japanese(self) -> None:
+        assert l10n.gram_label("feature", "gender", "ja") == "性"
+
+    def test_feature_case_arabic(self) -> None:
+        assert l10n.gram_label("feature", "case", "ar") == "الإعراب"
+
+    def test_feature_number_hebrew(self) -> None:
+        assert l10n.gram_label("feature", "number", "he") == "מספר"
