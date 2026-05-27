@@ -7,11 +7,11 @@
   "tokenizer": "jieba",
   "capability_assertions": {
     "idioms": ["none"],
-    "grammar_nuance": ["none"]
+    "grammar_nuance": ["none", "partial"]
   },
   "capability_gaps": {
     "idioms": "Plugin declares 'none' but extractor provides chengyu (4-char classical idioms)",
-    "grammar_nuance": "Plugin declares 'none' but extractor provides aspect particle and measure word nuances"
+    "grammar_nuance": "Plugin now declares 'partial' (aspect/structural particles via jieba.posseg); extractor provides measure word nuances beyond plugin scope"
   },
   "cases": [
     {

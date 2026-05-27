@@ -372,11 +372,11 @@ class TestEquivalentsNormalization:
         eq = r.equivalents[0]
         assert eq.construction == "estoy hablando"
         assert eq.note == "present progressive"
-        assert eq.register == "informal"
+        assert eq.usage_register == "informal"
 
     def test_equivalents_frontend_shape_in_json(self):
         r = self._conj_with({"equivalents": [{"construction": "estoy hablando"}]})
-        data = json.loads(r.model_dump_json())
+        data = json.loads(r.model_dump_json(by_alias=True))
         eq = data["equivalents"][0]
         assert "construction" in eq
         assert "note" in eq
