@@ -37,21 +37,22 @@ class TestCapabilities:
     def test_tokenization_mode_whitespace(self, plugin):
         assert plugin.capabilities.tokenization_mode == "whitespace"
 
-    def test_morphology_depth_none(self, plugin):
-        assert plugin.capabilities.morphology_depth == "none"
+    def test_morphology_depth_shallow(self, plugin):
+        assert plugin.capabilities.morphology_depth == "shallow"
 
-    def test_analysis_depth_dictionary(self, plugin):
-        assert plugin.capabilities.analysis_depth == "dictionary"
+    def test_analysis_depth_morphology_light(self, plugin):
+        assert plugin.capabilities.analysis_depth == "morphology_light"
 
-    def test_lesson_modes_dictionary_only(self, plugin):
-        assert plugin.capabilities.lesson_modes_supported == ["dictionary"]
+    def test_lesson_modes_includes_vocabulary(self, plugin):
+        assert "vocabulary" in plugin.capabilities.lesson_modes_supported
+        assert "dictionary" in plugin.capabilities.lesson_modes_supported
 
     def test_transliteration_scheme_set(self, plugin):
         # Koine Greek needs romanization for script-view toggle.
         assert plugin.capabilities.transliteration_scheme is not None
 
-    def test_no_morphology_quality(self, plugin):
-        assert plugin.capabilities.morphology_quality == "none"
+    def test_morphology_quality_low(self, plugin):
+        assert plugin.capabilities.morphology_quality == "low"
 
     def test_no_syntax_support(self, plugin):
         assert plugin.capabilities.syntax_support is False
