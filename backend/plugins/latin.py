@@ -283,7 +283,7 @@ class LatinPlugin:
             cultural_references="none",
             etymology="none",
             formality_register="none",
-            grammar_nuance="stub",
+            grammar_nuance="none",
             pronunciation_tts="stub",
             transliteration="none",
             proverb_tradition="none",

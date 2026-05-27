@@ -248,6 +248,7 @@ class TurkishPlugin:
             harmony = _last_vowel_harmony(token)
 
             lesson_data: dict = {
+                "lemma":          canonical,
                 "surface_form":   token,
                 "vowel_harmony":  harmony,
             }

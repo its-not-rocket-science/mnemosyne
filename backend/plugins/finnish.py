@@ -234,6 +234,7 @@ class FinnishPlugin:
             harmony = _vowel_harmony(token)
 
             lesson_data: dict = {
+                "lemma":         canonical,
                 "surface_form":  token,
                 "vowel_harmony": harmony,
             }
