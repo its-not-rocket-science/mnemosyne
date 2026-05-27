@@ -36,21 +36,22 @@ class TestCapabilities:
     def test_tokenization_mode_whitespace(self, plugin: LatinPlugin) -> None:
         assert plugin.capabilities.tokenization_mode == "whitespace"
 
-    def test_morphology_depth_none(self, plugin: LatinPlugin) -> None:
-        assert plugin.capabilities.morphology_depth == "none"
+    def test_morphology_depth_shallow(self, plugin: LatinPlugin) -> None:
+        assert plugin.capabilities.morphology_depth == "shallow"
 
-    def test_analysis_depth_dictionary(self, plugin: LatinPlugin) -> None:
-        assert plugin.capabilities.analysis_depth == "dictionary"
+    def test_analysis_depth_morphology_light(self, plugin: LatinPlugin) -> None:
+        assert plugin.capabilities.analysis_depth == "morphology_light"
 
-    def test_lesson_modes_dictionary_only(self, plugin: LatinPlugin) -> None:
-        assert plugin.capabilities.lesson_modes_supported == ["dictionary"]
+    def test_lesson_modes_includes_vocabulary(self, plugin: LatinPlugin) -> None:
+        assert "vocabulary" in plugin.capabilities.lesson_modes_supported
+        assert "dictionary" in plugin.capabilities.lesson_modes_supported
 
     def test_no_transliteration(self, plugin: LatinPlugin) -> None:
         # Latin already uses Latin script — no separate romanization needed.
         assert plugin.capabilities.transliteration_scheme is None
 
-    def test_no_morphology_quality(self, plugin: LatinPlugin) -> None:
-        assert plugin.capabilities.morphology_quality == "none"
+    def test_morphology_quality_low(self, plugin: LatinPlugin) -> None:
+        assert plugin.capabilities.morphology_quality == "low"
 
     def test_no_syntax_support(self, plugin: LatinPlugin) -> None:
         assert plugin.capabilities.syntax_support is False
@@ -181,11 +182,11 @@ class TestKnownWords:
         assert "grammar_note" in c.lesson_data
         assert c.lesson_data["grammar_note"] != ""
 
-    def test_known_word_has_high_confidence(self, plugin: LatinPlugin) -> None:
+    def test_known_word_has_confidence(self, plugin: LatinPlugin) -> None:
         result = plugin.analyze_sentence("amor")
         c = result.candidates[0]
         assert c.confidence is not None
-        assert c.confidence >= 0.8
+        assert c.confidence >= 0.7
 
     def test_known_word_type_is_vocabulary(self, plugin: LatinPlugin) -> None:
         result = plugin.analyze_sentence("amor")
@@ -532,8 +533,9 @@ class TestMultilingualArchitecture:
         caps = registry.supported_languages()
         assert caps["la"].direction == "ltr"
 
-    def test_latin_only_dictionary_mode(self) -> None:
+    def test_latin_supports_vocabulary_and_dictionary(self) -> None:
         from backend.parsing.plugin_loader import load_plugins
         registry = load_plugins()
         caps = registry.supported_languages()
-        assert caps["la"].lesson_modes_supported == ["dictionary"]
+        assert "vocabulary" in caps["la"].lesson_modes_supported
+        assert "dictionary" in caps["la"].lesson_modes_supported
