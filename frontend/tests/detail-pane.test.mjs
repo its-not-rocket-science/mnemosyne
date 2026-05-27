@@ -306,7 +306,7 @@ const cleanUp = () => { document.body.innerHTML = '' }
   console.log('  ✓ study button fires pane-study event')
 }
 
-// 18. Field with concept_id renders a concept help button
+// 18. Field with both concept_id and value_concept_id renders two separate help buttons
 {
   const withConcept = {
     ...VOCAB_LESSON,
@@ -318,15 +318,38 @@ const cleanUp = () => { document.body.innerHTML = '' }
   const pane = makePane()
   pane.show({ lesson: withConcept, sentenceText: '', language: 'es', depth: 'deep' })
   const helpBtns = sr(pane).querySelectorAll('.pane__concept-help')
-  assert.equal(helpBtns.length, 1,
-    'exactly one .pane__concept-help button must appear for field with concept_id')
-  assert.equal(helpBtns[0].dataset.conceptId, 'pos.noun',
-    'help button must use value_concept_id when present')
+  assert.equal(helpBtns.length, 2,
+    'two .pane__concept-help buttons must appear when both concept_id and value_concept_id present')
+  const labelBtn = sr(pane).querySelector('dt .pane__concept-help')
+  const valueBtn = sr(pane).querySelector('dd .pane__concept-help')
+  assert.ok(labelBtn !== null, 'label help button must be inside <dt>')
+  assert.ok(valueBtn !== null, 'value help button must be inside <dd>')
+  assert.equal(labelBtn.dataset.conceptId, 'axis.part_of_speech',
+    'label help button must use concept_id (axis concept)')
+  assert.equal(valueBtn.dataset.conceptId, 'pos.noun',
+    'value help button must use value_concept_id (value concept)')
   cleanUp()
-  console.log('  ✓ field with concept_id renders .pane__concept-help button')
+  console.log('  ✓ field with both concept IDs renders separate label and value help buttons')
 }
 
-// 19. Field without concept_id renders no help button
+// 19. Field with only concept_id renders one label help button, no value button
+{
+  const labelOnly = {
+    ...VOCAB_LESSON,
+    fields: [{ label: 'Lemma', value: 'hablar', concept_id: 'axis.lemma' }],
+  }
+  const pane = makePane()
+  pane.show({ lesson: labelOnly, sentenceText: '', language: 'es', depth: 'deep' })
+  const labelBtn = sr(pane).querySelector('dt .pane__concept-help')
+  const valueBtn = sr(pane).querySelector('dd .pane__concept-help')
+  assert.ok(labelBtn !== null, 'label help button must render when concept_id set')
+  assert.equal(valueBtn, null, 'no value help button when value_concept_id absent')
+  assert.equal(labelBtn.dataset.conceptId, 'axis.lemma')
+  cleanUp()
+  console.log('  ✓ field with only concept_id renders label help button, no value button')
+}
+
+// 20. Field without concept IDs renders no help buttons
 {
   const noConcept = {
     ...VOCAB_LESSON,
@@ -338,10 +361,10 @@ const cleanUp = () => { document.body.innerHTML = '' }
   assert.equal(helpBtns.length, 0,
     'no .pane__concept-help buttons must appear when no concept IDs are set')
   cleanUp()
-  console.log('  ✓ field without concept_id renders no help button')
+  console.log('  ✓ field without concept IDs renders no help buttons')
 }
 
-// 20. Morphology axis with axis_concept_id renders a concept help button
+// 21. Morphology axis renders separate axis and value help buttons
 {
   const withAxes = {
     ...VOCAB_LESSON,
@@ -352,15 +375,15 @@ const cleanUp = () => { document.body.innerHTML = '' }
   }
   const pane = makePane()
   pane.show({ lesson: withAxes, sentenceText: '', language: 'es', depth: 'deep' })
-  const helpBtns = sr(pane).querySelectorAll('.pane__concept-help')
-  assert.equal(helpBtns.length, 2,
-    'two .pane__concept-help buttons must appear for two axes with concept IDs')
-  assert.equal(helpBtns[0].dataset.conceptId, 'tense.imperfect',
-    'first help button must use value_concept_id when both IDs are present')
-  assert.equal(helpBtns[1].dataset.conceptId, 'axis.person',
-    'second help button falls back to axis_concept_id when no value_concept_id')
+  const dtBtns = sr(pane).querySelectorAll('.pane__axis-label .pane__concept-help')
+  const ddBtns = sr(pane).querySelectorAll('.pane__axis-value .pane__concept-help')
+  assert.equal(dtBtns.length, 2, 'both axis label buttons rendered (axis_concept_id on each dt)')
+  assert.equal(ddBtns.length, 1, 'one axis value button (only first axis has value_concept_id)')
+  assert.equal(dtBtns[0].dataset.conceptId, 'axis.tense')
+  assert.equal(ddBtns[0].dataset.conceptId, 'tense.imperfect')
+  assert.equal(dtBtns[1].dataset.conceptId, 'axis.person')
   cleanUp()
-  console.log('  ✓ morphology axes with concept IDs render .pane__concept-help buttons')
+  console.log('  ✓ morphology axes render separate axis and value concept help buttons')
 }
 
 // 21. Concept dialog is present but hidden initially
