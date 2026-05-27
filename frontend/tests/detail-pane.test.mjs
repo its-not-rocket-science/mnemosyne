@@ -306,4 +306,74 @@ const cleanUp = () => { document.body.innerHTML = '' }
   console.log('  ✓ study button fires pane-study event')
 }
 
+// 18. Field with concept_id renders a concept help button
+{
+  const withConcept = {
+    ...VOCAB_LESSON,
+    fields: [
+      { label: 'Part of speech', value: 'Noun', concept_id: 'axis.part_of_speech', value_concept_id: 'pos.noun' },
+      { label: 'definition', value: 'to speak' },
+    ],
+  }
+  const pane = makePane()
+  pane.show({ lesson: withConcept, sentenceText: '', language: 'es', depth: 'deep' })
+  const helpBtns = sr(pane).querySelectorAll('.pane__concept-help')
+  assert.equal(helpBtns.length, 1,
+    'exactly one .pane__concept-help button must appear for field with concept_id')
+  assert.equal(helpBtns[0].dataset.conceptId, 'pos.noun',
+    'help button must use value_concept_id when present')
+  cleanUp()
+  console.log('  ✓ field with concept_id renders .pane__concept-help button')
+}
+
+// 19. Field without concept_id renders no help button
+{
+  const noConcept = {
+    ...VOCAB_LESSON,
+    fields: [{ label: 'definition', value: 'to speak' }],
+  }
+  const pane = makePane()
+  pane.show({ lesson: noConcept, sentenceText: '', language: 'es', depth: 'deep' })
+  const helpBtns = sr(pane).querySelectorAll('.pane__concept-help')
+  assert.equal(helpBtns.length, 0,
+    'no .pane__concept-help buttons must appear when no concept IDs are set')
+  cleanUp()
+  console.log('  ✓ field without concept_id renders no help button')
+}
+
+// 20. Morphology axis with axis_concept_id renders a concept help button
+{
+  const withAxes = {
+    ...VOCAB_LESSON,
+    morphology_axes: [
+      { axis: 'Tense', value: 'imperfect', axis_concept_id: 'axis.tense', value_concept_id: 'tense.imperfect' },
+      { axis: 'Person', value: '3', axis_concept_id: 'axis.person' },
+    ],
+  }
+  const pane = makePane()
+  pane.show({ lesson: withAxes, sentenceText: '', language: 'es', depth: 'deep' })
+  const helpBtns = sr(pane).querySelectorAll('.pane__concept-help')
+  assert.equal(helpBtns.length, 2,
+    'two .pane__concept-help buttons must appear for two axes with concept IDs')
+  assert.equal(helpBtns[0].dataset.conceptId, 'tense.imperfect',
+    'first help button must use value_concept_id when both IDs are present')
+  assert.equal(helpBtns[1].dataset.conceptId, 'axis.person',
+    'second help button falls back to axis_concept_id when no value_concept_id')
+  cleanUp()
+  console.log('  ✓ morphology axes with concept IDs render .pane__concept-help buttons')
+}
+
+// 21. Concept dialog is present but hidden initially
+{
+  const pane = makePane()
+  pane.show({ lesson: VOCAB_LESSON, sentenceText: '', language: 'es', depth: 'deep' })
+  const dialog = sr(pane).querySelector('#dp-concept-dialog')
+  assert.ok(dialog !== null, '#dp-concept-dialog must be rendered')
+  assert.ok(dialog.hidden, '#dp-concept-dialog must be hidden initially')
+  assert.equal(dialog.getAttribute('role'), 'dialog', 'concept dialog must have role="dialog"')
+  assert.equal(dialog.getAttribute('aria-modal'), 'true', 'concept dialog must have aria-modal="true"')
+  cleanUp()
+  console.log('  ✓ concept dialog is rendered hidden with correct ARIA attributes')
+}
+
 console.log('\nAll detail pane render tests passed.')
