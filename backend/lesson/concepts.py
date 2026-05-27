@@ -15,7 +15,7 @@ from __future__ import annotations
 
 from copy import deepcopy
 
-from backend.schemas.lesson import GrammarConceptExplanation
+from backend.schemas.lesson import ConceptRef, GrammarConceptExplanation
 
 # ── Base catalogue ────────────────────────────────────────────────────────────
 # Maps concept_id → dict of constructor kwargs (without target_language_note
@@ -819,6 +819,15 @@ def resolve_concept(
     l1_cmp = _L1_COMPARISONS.get((concept_id, l1_language))
     if l1_cmp:
         data["l1_comparison"] = l1_cmp
+
+    # Resolve related concept IDs to ConceptRef objects with display titles.
+    raw_related: list[str] = data.get("related_concepts") or []
+    resolved: list[ConceptRef] = []
+    for rid in raw_related:
+        ref_base = _BASE.get(rid)
+        if ref_base:
+            resolved.append(ConceptRef(concept_id=rid, title=ref_base["title"]))
+    data["related_concepts"] = resolved
 
     return GrammarConceptExplanation(**data)
 

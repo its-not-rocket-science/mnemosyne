@@ -168,6 +168,7 @@ export class MnemosyneDetailPane extends HTMLElement {
   #explanationTranslationFetched  = false
   #reviewStatusFetched            = false
   #conceptDialogTrigger           = null
+  #conceptDialogHistory           = []   // [{concept_id, title}] stack for back navigation
   #matchedVariant = ''
 
   static ALL_TABS = [
@@ -330,11 +331,26 @@ export class MnemosyneDetailPane extends HTMLElement {
           return
         }
 
-        // Concept help button
+        // Concept help button (field/axis "?" triggers)
         const helpBtn = e.target.closest('[data-concept-id]')
         if (helpBtn) {
           const conceptId = helpBtn.dataset.conceptId
           if (conceptId) this.#openConceptDialog(conceptId, helpBtn)
+          return
+        }
+
+        // Related concept link inside the dialog — push current to history
+        const relatedBtn = e.target.closest('[data-related-concept-id]')
+        if (relatedBtn) {
+          const conceptId = relatedBtn.dataset.relatedConceptId
+          if (conceptId) this.#openConceptDialog(conceptId, null, true)
+          return
+        }
+
+        // Concept dialog back button — pop history
+        if (e.target.closest('.pane__concept-dialog-back')) {
+          const prev = this.#conceptDialogHistory.pop()
+          if (prev) this.#openConceptDialog(prev.concept_id, null, false)
           return
         }
 
@@ -1554,6 +1570,8 @@ export class MnemosyneDetailPane extends HTMLElement {
            hidden>
         <div class="pane__concept-dialog-inner">
           <header class="pane__concept-dialog-header">
+            <button class="pane__concept-dialog-back" type="button"
+                    aria-label="${esc(t('dp_concept_back'))}" hidden>&#x2190;</button>
             <h3 id="dp-concept-title" class="pane__concept-dialog-title"></h3>
             <button class="pane__concept-dialog-close" type="button"
                     aria-label="${esc(t('dp_concept_dialog_close'))}">&#x2715;</button>
@@ -1564,16 +1582,34 @@ export class MnemosyneDetailPane extends HTMLElement {
     `
   }
 
-  async #openConceptDialog(conceptId, triggerEl) {
+  async #openConceptDialog(conceptId, triggerEl, pushHistory = false) {
     const dialog  = this.shadowRoot?.querySelector('#dp-concept-dialog')
     if (!dialog) return
-    this.#conceptDialogTrigger = triggerEl
+
+    if (triggerEl !== null) this.#conceptDialogTrigger = triggerEl
 
     const titleEl = dialog.querySelector('#dp-concept-title')
     const bodyEl  = dialog.querySelector('.pane__concept-dialog-body')
+    const backBtn = dialog.querySelector('.pane__concept-dialog-back')
+
+    if (pushHistory) {
+      const currentTitle = titleEl?.textContent || ''
+      const currentId    = dialog.dataset.conceptId || ''
+      if (currentId) this.#conceptDialogHistory.push({ concept_id: currentId, title: currentTitle })
+    }
+
     if (titleEl) titleEl.textContent = '…'
     if (bodyEl)  bodyEl.innerHTML = ''
+    dialog.dataset.conceptId = conceptId
     dialog.hidden = false
+
+    if (backBtn) backBtn.hidden = this.#conceptDialogHistory.length === 0
+    if (backBtn && this.#conceptDialogHistory.length > 0) {
+      const prev = this.#conceptDialogHistory[this.#conceptDialogHistory.length - 1]
+      backBtn.textContent = `← ${prev.title}`
+      backBtn.setAttribute('aria-label', `${t('dp_concept_back')}: ${prev.title}`)
+    }
+
     dialog.querySelector('.pane__concept-dialog-close')?.focus()
 
     try {
@@ -1615,7 +1651,12 @@ export class MnemosyneDetailPane extends HTMLElement {
       parts.push(`<p class="pane__concept-section-label">${esc(t('dp_concept_examples'))}</p><ul class="pane__concept-examples">${items}</ul>`)
     }
     if (Array.isArray(concept.related_concepts) && concept.related_concepts.length) {
-      const items = concept.related_concepts.map(rc => `<li>${esc(rc)}</li>`).join('')
+      const items = concept.related_concepts.map(rc => /* html */`
+        <li>
+          <button class="pane__concept-related-btn" type="button"
+                  data-related-concept-id="${esc(rc.concept_id)}">${esc(rc.title)}</button>
+        </li>
+      `).join('')
       parts.push(`<p class="pane__concept-section-label">${esc(t('dp_concept_related'))}</p><ul class="pane__concept-related">${items}</ul>`)
     }
     return parts.join('')
@@ -1623,7 +1664,11 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   #closeConceptDialog() {
     const dialog = this.shadowRoot?.querySelector('#dp-concept-dialog')
-    if (dialog) dialog.hidden = true
+    if (dialog) {
+      dialog.hidden = true
+      dialog.dataset.conceptId = ''
+    }
+    this.#conceptDialogHistory = []
     const trigger = this.#conceptDialogTrigger
     this.#conceptDialogTrigger = null
     if (trigger) trigger.focus()
@@ -3873,6 +3918,33 @@ export class MnemosyneDetailPane extends HTMLElement {
         line-height: 1.3;
         overflow-wrap: break-word;
       }
+      .pane__concept-dialog-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        color: var(--muted);
+        font: inherit;
+        font-size: 0.8rem;
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.35rem;
+        flex-shrink: 0;
+        max-inline-size: 8rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        transition: background 0.1s ease, color 0.1s ease;
+      }
+      .pane__concept-dialog-back:hover {
+        background: color-mix(in oklch, var(--muted) 12%, Canvas);
+        color: var(--text);
+      }
+      .pane__concept-dialog-back:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
       .pane__concept-dialog-close {
         display: inline-flex;
         align-items: center;
@@ -3934,18 +4006,47 @@ export class MnemosyneDetailPane extends HTMLElement {
         letter-spacing: 0.07em;
         color: var(--muted);
       }
-      .pane__concept-examples,
-      .pane__concept-related {
+      .pane__concept-examples {
         margin: 0;
         padding-inline-start: 1.25rem;
         display: flex;
         flex-direction: column;
         gap: 0.2rem;
       }
-      .pane__concept-example-item,
-      .pane__concept-related li {
+      .pane__concept-related {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+      .pane__concept-example-item {
         font-size: 0.8125rem;
         line-height: 1.5;
+      }
+      .pane__concept-related-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        background: transparent;
+        border: 1px solid var(--border-input);
+        border-radius: 0.35rem;
+        padding: 0.2rem 0.5rem;
+        font: inherit;
+        font-size: 0.8125rem;
+        color: var(--text);
+        cursor: pointer;
+        transition: background 0.1s ease, border-color 0.1s ease;
+      }
+      .pane__concept-related-btn::after { content: ' →'; color: var(--muted); }
+      .pane__concept-related-btn:hover {
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 10%, Canvas);
+        border-color: color-mix(in oklch, var(--detail-accent, ${ref}) 45%, Canvas);
+      }
+      .pane__concept-related-btn:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
       }
       @media (forced-colors: active) {
         .pane__concept-dialog-inner { border: 2px solid ButtonText; }
