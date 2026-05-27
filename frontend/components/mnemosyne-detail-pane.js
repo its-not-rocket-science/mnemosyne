@@ -167,6 +167,7 @@ export class MnemosyneDetailPane extends HTMLElement {
   #sentenceTranslationFetched     = false
   #explanationTranslationFetched  = false
   #reviewStatusFetched            = false
+  #conceptDialogTrigger           = null
   #matchedVariant = ''
 
   static ALL_TABS = [
@@ -328,6 +329,24 @@ export class MnemosyneDetailPane extends HTMLElement {
           }))
           return
         }
+
+        // Concept help button
+        const helpBtn = e.target.closest('[data-concept-id]')
+        if (helpBtn) {
+          const conceptId = helpBtn.dataset.conceptId
+          if (conceptId) this.#openConceptDialog(conceptId, helpBtn)
+          return
+        }
+
+        // Concept dialog close (button or backdrop click)
+        if (e.target.closest('.pane__concept-dialog-close')) {
+          this.#closeConceptDialog()
+          return
+        }
+        if (e.target.classList.contains('pane__concept-dialog')) {
+          this.#closeConceptDialog()
+          return
+        }
       })
 
       // Review confirmed by main.js — update term-state block and session score persistently
@@ -356,6 +375,16 @@ export class MnemosyneDetailPane extends HTMLElement {
 
       // Tab keyboard navigation — delegated for same reason as click
       this.shadowRoot.addEventListener('keydown', (e) => {
+        // Escape closes the concept dialog when it is open
+        if (e.key === 'Escape') {
+          const dialog = this.shadowRoot.querySelector('#dp-concept-dialog')
+          if (dialog && !dialog.hidden) {
+            e.stopPropagation()
+            this.#closeConceptDialog()
+            return
+          }
+        }
+
         const tab = e.target.closest('[role="tab"]')
         if (!tab) return
         const tabEls = Array.from(this.shadowRoot.querySelectorAll('[role="tab"]'))
@@ -547,6 +576,7 @@ export class MnemosyneDetailPane extends HTMLElement {
 
         <slot name="now-playing"></slot>
 
+        ${this._htmlConceptDialog()}
       </aside>
     `
 
@@ -581,12 +611,16 @@ export class MnemosyneDetailPane extends HTMLElement {
       .filter(f => !SUPPRESS_IN_EXPLANATION.has(f.label.toLowerCase()))
     const displayFields = depthIdx >= 1 ? allFields : []
 
-    const fieldsHtml = displayFields.map(f => /* html */`
-      <div class="pane__field">
-        <dt class="pane__field-label">${esc(translateFieldLabel(f.label))}</dt>
-        <dd class="pane__field-value">${esc(translateFieldValue(f.value))}</dd>
-      </div>
-    `).join('')
+    const fieldsHtml = displayFields.map(f => {
+      const cid = f.value_concept_id || f.concept_id || null
+      const helpBtn = cid ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(cid)}" aria-label="${esc(t('dp_explain_concept'))}" title="${esc(t('dp_explain_concept'))}">?</button>` : ''
+      return /* html */`
+        <div class="pane__field">
+          <dt class="pane__field-label">${esc(translateFieldLabel(f.label))}</dt>
+          <dd class="pane__field-value">${esc(translateFieldValue(f.value))}${helpBtn}</dd>
+        </div>
+      `
+    }).join('')
 
     const hasAudio        = Boolean(matchedVariant)
     const matchType       = ld.match_type || ''
@@ -666,15 +700,20 @@ export class MnemosyneDetailPane extends HTMLElement {
       <section class="pane__subsection" aria-labelledby="dp-form-axes-h">
         <h3 class="pane__section-heading" id="dp-form-axes-h">${esc(tr('dp_form_axes_heading', 'Morphology'))}</h3>
         <dl class="pane__axes-list">
-          ${axes.map(ax => /* html */`
-            <div class="pane__axis-row">
-              <dt class="pane__axis-label">${esc(ax.axis)}</dt>
-              <dd class="pane__axis-value">
-                <span ${langAttr} ${dirAttr}>${esc(ax.label || ax.value)}</span>
-                ${ax.gloss ? `<span class="pane__axis-gloss">${esc(ax.gloss)}</span>` : ''}
-              </dd>
-            </div>
-          `).join('')}
+          ${axes.map(ax => {
+            const cid = ax.value_concept_id || ax.axis_concept_id || null
+            const helpBtn = cid ? /* html */`<button class="pane__concept-help" type="button" data-concept-id="${esc(cid)}" aria-label="${esc(t('dp_explain_concept'))}" title="${esc(t('dp_explain_concept'))}">?</button>` : ''
+            return /* html */`
+              <div class="pane__axis-row">
+                <dt class="pane__axis-label">${esc(ax.axis)}</dt>
+                <dd class="pane__axis-value">
+                  <span ${langAttr} ${dirAttr}>${esc(ax.label || ax.value)}</span>
+                  ${ax.gloss ? `<span class="pane__axis-gloss">${esc(ax.gloss)}</span>` : ''}
+                  ${helpBtn}
+                </dd>
+              </div>
+            `
+          }).join('')}
         </dl>
       </section>
     ` : ''
@@ -1501,6 +1540,93 @@ export class MnemosyneDetailPane extends HTMLElement {
         </div>
       </section>
     `
+  }
+
+  // ── Concept help dialog ───────────────────────────────────────────────────────
+
+  _htmlConceptDialog() {
+    return /* html */`
+      <div id="dp-concept-dialog"
+           class="pane__concept-dialog"
+           role="dialog"
+           aria-modal="true"
+           aria-labelledby="dp-concept-title"
+           hidden>
+        <div class="pane__concept-dialog-inner">
+          <header class="pane__concept-dialog-header">
+            <h3 id="dp-concept-title" class="pane__concept-dialog-title"></h3>
+            <button class="pane__concept-dialog-close" type="button"
+                    aria-label="${esc(t('dp_concept_dialog_close'))}">&#x2715;</button>
+          </header>
+          <div class="pane__concept-dialog-body"></div>
+        </div>
+      </div>
+    `
+  }
+
+  async #openConceptDialog(conceptId, triggerEl) {
+    const dialog  = this.shadowRoot?.querySelector('#dp-concept-dialog')
+    if (!dialog) return
+    this.#conceptDialogTrigger = triggerEl
+
+    const titleEl = dialog.querySelector('#dp-concept-title')
+    const bodyEl  = dialog.querySelector('.pane__concept-dialog-body')
+    if (titleEl) titleEl.textContent = '…'
+    if (bodyEl)  bodyEl.innerHTML = ''
+    dialog.hidden = false
+    dialog.querySelector('.pane__concept-dialog-close')?.focus()
+
+    try {
+      const { language, uiLang } = this.#config || {}
+      const params = new URLSearchParams()
+      if (language) params.set('language_code', language)
+      if (uiLang)   params.set('l1_language', uiLang)
+      const token = localStorage.getItem('mnemosyne_token')
+      const resp = await fetch(
+        `${API_BASE}/lesson/concepts/${encodeURIComponent(conceptId)}?${params}`,
+        { headers: token ? { Authorization: `Bearer ${token}` } : {} },
+      )
+      if (!resp.ok) throw new Error(`${resp.status}`)
+      const concept = await resp.json()
+      if (titleEl) titleEl.textContent = concept.title || conceptId
+      if (bodyEl)  bodyEl.innerHTML = this.#renderConceptDialogBody(concept)
+    } catch {
+      if (titleEl) titleEl.textContent = t('dp_concept_unavailable')
+      if (bodyEl)  bodyEl.innerHTML = ''
+    }
+  }
+
+  #renderConceptDialogBody(concept) {
+    const parts = []
+    if (concept.short_definition) {
+      parts.push(`<p class="pane__concept-def">${esc(concept.short_definition)}</p>`)
+    }
+    if (concept.learner_explanation) {
+      parts.push(`<p class="pane__concept-body">${esc(concept.learner_explanation)}</p>`)
+    }
+    if (concept.target_language_note) {
+      parts.push(`<p class="pane__concept-note">${esc(concept.target_language_note)}</p>`)
+    }
+    if (concept.l1_comparison) {
+      parts.push(`<p class="pane__concept-note pane__concept-note--l1">${esc(concept.l1_comparison)}</p>`)
+    }
+    if (Array.isArray(concept.examples) && concept.examples.length) {
+      const items = concept.examples.map(ex => `<li class="pane__concept-example-item">${esc(ex)}</li>`).join('')
+      parts.push(`<p class="pane__concept-section-label">${esc(t('dp_concept_examples'))}</p><ul class="pane__concept-examples">${items}</ul>`)
+    }
+    if (Array.isArray(concept.related_concepts) && concept.related_concepts.length) {
+      const items = concept.related_concepts.map(rc => `<li>${esc(rc)}</li>`).join('')
+      parts.push(`<p class="pane__concept-section-label">${esc(t('dp_concept_related'))}</p><ul class="pane__concept-related">${items}</ul>`)
+    }
+    return parts.join('')
+  }
+
+  #closeConceptDialog() {
+    const dialog = this.shadowRoot?.querySelector('#dp-concept-dialog')
+    if (dialog) dialog.hidden = true
+    const trigger = this.#conceptDialogTrigger
+    this.#conceptDialogTrigger = null
+    if (trigger) trigger.focus()
   }
 
   async #fetchReviewStatus() {
@@ -3665,6 +3791,165 @@ export class MnemosyneDetailPane extends HTMLElement {
         .pane__stage-badge { border: 1px solid ButtonText; }
         .pane__mastery-bar-fill { forced-color-adjust: none; background: Highlight; }
         .pane__confusion-item { border: 1px solid ButtonText; }
+      }
+
+      /* ── Concept help button (inline "?" next to field values) ─────────── */
+      .pane__concept-help {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        inline-size: 1.25rem;
+        block-size: 1.25rem;
+        border-radius: 50%;
+        border: 1px solid var(--border-input);
+        background: transparent;
+        color: var(--muted);
+        font: 600 0.65rem/1 inherit;
+        cursor: pointer;
+        margin-inline-start: 0.35rem;
+        vertical-align: middle;
+        flex-shrink: 0;
+        transition: background 0.1s ease, color 0.1s ease, border-color 0.1s ease;
+      }
+      .pane__concept-help:hover {
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 12%, Canvas);
+        border-color: color-mix(in oklch, var(--detail-accent, ${ref}) 50%, Canvas);
+        color: var(--text);
+      }
+      .pane__concept-help:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .pane__concept-help { transition: none; }
+      }
+      @media (forced-colors: active) {
+        .pane__concept-help { border: 1px solid ButtonText; color: ButtonText; background: ButtonFace; }
+      }
+
+      /* ── Concept help dialog (floating over the pane body) ──────────────── */
+      .pane__concept-dialog {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        background: color-mix(in oklch, CanvasText 30%, transparent);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-block-start: 4rem;
+        padding-inline: 0.75rem;
+      }
+      .pane__concept-dialog[hidden] {
+        display: none;
+      }
+      .pane__concept-dialog-inner {
+        background: var(--surface, Canvas);
+        border: 1px solid var(--border);
+        border-radius: 0.75rem;
+        box-shadow: 0 8px 24px color-mix(in oklch, Canvas 10%, transparent);
+        inline-size: 100%;
+        max-inline-size: 28rem;
+        max-block-size: 70vh;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .pane__concept-dialog-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.85rem 1rem 0.6rem;
+        border-block-end: 1px solid var(--border);
+        position: sticky;
+        inset-block-start: 0;
+        background: var(--surface, Canvas);
+        z-index: 1;
+      }
+      .pane__concept-dialog-title {
+        flex: 1;
+        margin: 0;
+        font-size: 0.9375rem;
+        font-weight: 700;
+        line-height: 1.3;
+        overflow-wrap: break-word;
+      }
+      .pane__concept-dialog-close {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        inline-size: 2rem;
+        block-size: 2rem;
+        border-radius: 50%;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        color: var(--muted);
+        font-size: 0.9rem;
+        flex-shrink: 0;
+        transition: background 0.1s ease, color 0.1s ease;
+      }
+      .pane__concept-dialog-close:hover {
+        background: color-mix(in oklch, var(--muted) 12%, Canvas);
+        color: var(--text);
+      }
+      .pane__concept-dialog-close:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+      .pane__concept-dialog-body {
+        padding: 0.75rem 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .pane__concept-def {
+        margin: 0;
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+      .pane__concept-body {
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.6;
+      }
+      .pane__concept-note {
+        margin: 0;
+        font-size: 0.8125rem;
+        line-height: 1.55;
+        color: var(--muted);
+        font-style: italic;
+      }
+      .pane__concept-note--l1 {
+        color: var(--text);
+        font-style: normal;
+        border-inline-start: 2px solid color-mix(in oklch, var(--detail-accent, ${ref}) 40%, Canvas);
+        padding-inline-start: 0.5rem;
+      }
+      .pane__concept-section-label {
+        margin: 0.25rem 0 0.1rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--muted);
+      }
+      .pane__concept-examples,
+      .pane__concept-related {
+        margin: 0;
+        padding-inline-start: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+      .pane__concept-example-item,
+      .pane__concept-related li {
+        font-size: 0.8125rem;
+        line-height: 1.5;
+      }
+      @media (forced-colors: active) {
+        .pane__concept-dialog-inner { border: 2px solid ButtonText; }
+        .pane__concept-dialog-close { border: 1px solid ButtonText; }
       }
     `
   }
