@@ -93,9 +93,9 @@ These were the major open issues when this document was first written. All are r
 
 ## What remains genuinely open
 
-- **Manual keyboard + screen-reader test.** Code audit done; 8 issues fixed. NVDA/VoiceOver smoke test not yet run.
-- **Full morphological plugins for Korean, Hindi, Turkish, Finnish.** Natural next targets; each requires canonical-form convention decisions before first parse.
-- **Classical lexicon depth.** Latin and Greek coverage is limited (~100–200 entries). Perseus/Logeion integration would substantially improve coverage.
+- **Manual keyboard + screen-reader test.** Static audit done (11 issues found and fixed, incl. concept dialog ARIA); NVDA/VoiceOver smoke test not yet run; see `MANUAL_ACCESSIBILITY_TEST.md`.
+- **Shallow morphological plugins for Hindi, Turkish, Finnish — done.** Suffix-rule `morphology_light` plugins added (2026-05-27). Full spaCy-model morphology for Korean and deeper per-language coverage remains planned.
+- **Classical lexicon depth — partially done.** Latin (~3 400 forms) and Koine Greek (~27 000 forms) now have offline treebank morphological annotations. Perseus/Logeion integration would cover unattested forms.
 - **Grammatical label localisation.** `build_lesson()` prose is now in the learner's language, but the terminal label values (`"third"`, `"singular"`, `"present"`, `"indicative"`) produced by `backend/lesson/generators.py` remain English strings. A second lookup table in `l10n.py` is needed to translate these.
 
 ---

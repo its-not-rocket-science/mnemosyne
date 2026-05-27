@@ -2,7 +2,7 @@
 
 Paste any text, parse it into sentences, open per-word micro-lessons, and rate your recall. FSRS schedules the next review.
 
-**Current state:** multi-user system with twelve language plugins. Full morphological analysis for Spanish, French, German, Russian, Japanese, Portuguese, and Italian; vocabulary/dictionary mode for Arabic, Hebrew, Mandarin Chinese, Latin, and Koine Greek; regex stub for English. RTL layout (Arabic, Hebrew) and CJK segmentation (Chinese, Japanese) are supported. User authentication is implemented (JWT); see [ROADMAP.md](ROADMAP.md).
+**Current state:** multi-user system with fifteen language plugins. Full morphological analysis for Spanish, French, German, Russian, Japanese, Portuguese, and Italian; morphology-light mode (offline treebank annotations) for Latin and Koine Greek; vocabulary/dictionary mode for Arabic, Hebrew, and Mandarin Chinese; shallow suffix-based morphology for Hindi, Turkish, and Finnish; regex stub for English. RTL layout (Arabic, Hebrew) and CJK segmentation (Chinese, Japanese) are supported. User authentication is implemented (JWT); see [ROADMAP.md](ROADMAP.md).
 
 ---
 
@@ -335,8 +335,8 @@ See `.env.example` for the full list including the `POSTGRES_*` variables used b
 
 - **Lesson prose is English-only.** `build_lesson()` always produces English explanations ("The word X is a noun"). There is no `l1_language` parameter yet; learners whose native language is not English see English metalanguage regardless of the target language.
 - **Background parse is in-process.** `POST /parse/jobs` runs NLP in a thread-pool executor inside the same uvicorn process. Multi-worker deployments (`--workers N > 1`) require sticky sessions (e.g. Nginx `ip_hash`, Traefik sticky cookie) scoped to the job ID so that SSE/polling requests reach the same worker that created the job. Single-worker deployments (`--workers 1`, the default) are unaffected.
-- **Classical lexicons are small.** Latin and Koine Greek are in dictionary mode with ~100–200 curated entries. Coverage of authentic classical texts is limited; most tokens will parse as vocabulary with low confidence.
-- **WCAG 2.2 AA — static audit and structural tests pass; manual AT test pending.** Static checks run via `pytest backend/tests/test_accessibility_static.py`. A human keyboard-only walkthrough and NVDA/VoiceOver smoke test have not been run; see `docs/ACCESSIBILITY_MANUAL_TEST.md` for the checklist.
+- **Classical morphology is shallow.** Latin and Koine Greek use offline treebank annotations (Universal Dependencies ITTB/PROIEL + MorphGNT) for morphological features. Coverage is limited to attested forms in those corpora (~3 400 Latin, ~27 000 Greek forms). Unattested forms fall back to the curated dictionary with lower confidence. Run `python -m scripts.ingest_classical_morph --lang all` to rebuild the indices from updated corpora.
+- **WCAG 2.1 AA — static audit passes; manual AT test pending.** Static checks run via `pytest backend/tests/test_accessibility_static.py`. A human keyboard-only walkthrough and NVDA/VoiceOver smoke test have not been run; see `MANUAL_ACCESSIBILITY_TEST.md` and `WCAG_AUDIT.md` for the checklist and full audit.
 
 ---
 
@@ -346,3 +346,7 @@ See `.env.example` for the full list including the `POSTGRES_*` variables used b
 - [CONTRIBUTING.md](CONTRIBUTING.md) — setup, coding standards, how to write a language plugin
 - [ROADMAP.md](ROADMAP.md) — what is done and what is next
 - [VISION_ALIGNMENT.md](VISION_ALIGNMENT.md) — vision, current state, gaps, and design principles
+- [WCAG_AUDIT.md](WCAG_AUDIT.md) — WCAG 2.1 AA static audit findings and manual test instructions
+- [MANUAL_ACCESSIBILITY_TEST.md](MANUAL_ACCESSIBILITY_TEST.md) — step-by-step keyboard/AT manual test script
+- [docs/offline_scripts.md](docs/offline_scripts.md) — offline data pipeline scripts reference
+- [docs/corpus_pipeline.md](docs/corpus_pipeline.md) — offline corpus ingestion pipeline
