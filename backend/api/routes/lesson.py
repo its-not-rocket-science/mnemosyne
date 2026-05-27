@@ -7,6 +7,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session, get_plugin_registry
+from backend.lesson.concepts import resolve_concept
 from backend.lesson.context import LessonContext
 from backend.lesson.enrichment import LessonEnrichmentContext
 from backend.lesson.generators import build_lesson
@@ -20,7 +21,11 @@ from backend.models import (
 )
 from backend.parsing.plugin_loader import PluginRegistry
 from backend.schemas.language import LessonMode, best_lesson_mode
-from backend.schemas.lesson import EncounteredVocabularySummary, LessonResponse
+from backend.schemas.lesson import (
+    EncounteredVocabularySummary,
+    GrammarConceptExplanation,
+    LessonResponse,
+)
 
 _PROVIDERS = LessonProviders(gloss=VocabIndexGlossProvider())
 _VOCAB_RELATION_TYPES = frozenset({"conjugation_of", "agreement_of", "nuance_of"})
@@ -154,6 +159,19 @@ async def _load_enrichment(
         exposure_count=exposure_count,
         related_vocabulary=related,
     )
+
+
+@router.get("/lesson/concepts/{concept_id}", response_model=GrammarConceptExplanation)
+async def get_concept(
+    concept_id: str,
+    language_code: str | None = None,
+    l1_language: str = "en",
+    _: str = Depends(get_current_user),
+) -> GrammarConceptExplanation:
+    concept = resolve_concept(concept_id, language_code=language_code, l1_language=l1_language)
+    if concept is None:
+        raise HTTPException(status_code=404, detail=f"Unknown concept: {concept_id!r}")
+    return concept
 
 
 @router.get("/lesson/{object_id}", response_model=LessonResponse)

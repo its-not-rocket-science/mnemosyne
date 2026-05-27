@@ -65,10 +65,33 @@ template used*, which may differ when a dedicated builder was invoked.
 """
 
 
+class GrammarConceptExplanation(BaseModel):
+    """Deterministic explanation of a grammatical concept or axis value.
+
+    Returned by ``GET /lesson/concepts/{concept_id}``.  All content is
+    authored in the catalogue — no LLM call at runtime.
+    """
+    concept_id: str
+    axis: str | None = None
+    value: str | None = None
+    title: str
+    short_definition: str
+    learner_explanation: str
+    target_language_note: str | None = None
+    l1_comparison: str | None = None
+    examples: list[str] = Field(default_factory=list)
+    related_concepts: list[str] = Field(default_factory=list)
+    practice_tags: list[str] = Field(default_factory=list)
+
+
 class LessonField(BaseModel):
     """One fact about a learnable object, rendered as a key-value row."""
     label: str
     value: str
+    concept_id: str | None = None
+    """Concept ID for the axis/label (e.g. ``"axis.tense"``)."""
+    value_concept_id: str | None = None
+    """Concept ID for the displayed value (e.g. ``"tense.imperfect"``)."""
 
 
 class MultipleChoiceDrill(BaseModel):
@@ -157,6 +180,10 @@ class MorphologyAxis(BaseModel):
     """Display label for the value, suitable for a key-value row."""
     gloss: str | None = None
     """Brief human-readable explanation of what this value means."""
+    axis_concept_id: str | None = None
+    """Concept ID for this axis (e.g. ``"axis.tense"``)."""
+    value_concept_id: str | None = None
+    """Concept ID for the value (e.g. ``"tense.imperfect"``)."""
 
 
 class ParadigmCell(BaseModel):
