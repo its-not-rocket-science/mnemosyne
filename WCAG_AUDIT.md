@@ -1,11 +1,11 @@
 # WCAG 2.1 AA Audit — Mnemosyne
 
-**Audit date:** 2026-04-18 (updated from 2026-04-16)
-**Scope:** Parse → lesson → review flow; auth panel; RTL and CJK content.
+**Audit date:** 2026-05-27 (updated from 2026-04-18)
+**Scope:** Parse → lesson → detail pane → concept help dialog → review flow; auth panel; RTL and CJK content.
 **Method:** Static code review of all frontend HTML, CSS, and JS (index.html,
-global.css, components.css, mnemosyne-modal.js, mnemosyne-pill.js, main.js,
-auth.js). No automated browser tool was run; a manual keyboard/AT run is still
-recommended before public beta (see the manual testing checklist below).
+global.css, components.css, mnemosyne-modal.js, mnemosyne-pill.js,
+mnemosyne-detail-pane.js, main.js, auth.js). No automated browser tool was run;
+see `MANUAL_ACCESSIBILITY_TEST.md` for the full manual keyboard/AT test script.
 
 ---
 
@@ -55,6 +55,28 @@ recommended before public beta (see the manual testing checklist below).
 
 ---
 
+## Automated / static audit — 2026-05-27 additions (concept help dialog)
+
+| # | Criterion | Issue | Fix applied |
+|---|-----------|-------|-------------|
+| 9 | 4.1.2 Name, Role, Value | Concept help dialog body was not linked to the `role="dialog"` element via `aria-describedby`, so AT had no programmatic association to the explanatory body text. | Added `id="dp-concept-body"` to the body `<div>`; added `aria-describedby="dp-concept-body"` to `#dp-concept-dialog`. |
+| 10 | 4.1.3 Status Messages | When user navigates to a related concept inside the dialog, the body content updates but no live region announces the change, leaving AT users without confirmation that the view changed. | Added `aria-live="polite" aria-atomic="false"` to the concept dialog body element, so screen readers announce new concept text on update. |
+| 11 | 2.4.6 Headings and Labels / 4.1.2 | All concept help `?` buttons had the same accessible name ("Explain concept"), making it impossible for AT users to distinguish the label-help button from the value-help button without surrounding visual context. | Label-help button `aria-label` now includes the field label (e.g. "Explain concept: Grammatical Case"); value-help button includes the field value (e.g. "Explain concept: nominative"). Same fix applied to morphology axis help buttons in the Form tab. |
+
+---
+
+## Automated / static audit — no issues found (concept dialog)
+
+| Criterion | Check | Result |
+|-----------|-------|--------|
+| 2.1.1 Keyboard | Concept dialog has a focus trap: Tab cycles only through dialog's focusable elements; Escape closes dialog and returns focus to the triggering `?` button (not the detail pane close). | ✓ |
+| 2.1.2 No Keyboard Trap | Dialog releases focus to trigger button on close. | ✓ |
+| 1.3.1 Info and Relationships | Dialog uses `role="dialog"`, `aria-modal="true"`, `aria-labelledby="dp-concept-title"`, `aria-describedby="dp-concept-body"`. | ✓ |
+| 2.4.3 Focus Order | On open: focus moves into dialog. On Escape/close-button: focus returns to trigger. On related-concept navigate: focus stays in dialog; body updates in-place. | ✓ |
+| 4.1.2 Name, Role, Value | Close button has `aria-label="Close concept explanation"`. Back button has `aria-label="Back to previous concept"`. | ✓ (verify labels match final implementation) |
+
+---
+
 ## Manual testing required
 
 These items cannot be verified statically. Run before the public beta tag.
@@ -65,11 +87,13 @@ These items cannot be verified statically. Run before the public beta tag.
 2. **Auth panel** — Tab through Sign in form; Arrow-key navigate to Create account tab; confirm tabpanel switches and focus moves. Tab through register form.
 3. **Language select** — Tab to `#language`; confirm options navigable with arrow keys; confirm `aria-busy` removed after load.
 4. **Parse form** — Tab through all fields; activate "Load .txt file" label; activate "Fetch" button; submit parse form.
-5. **Sentence cards and pills** — Tab through pill buttons; activate a pill with Enter/Space; confirm modal opens.
-6. **Modal focus trap** — Confirm focus is inside modal and Tab does not leave; Shift+Tab wraps to last focusable; Escape closes and returns focus to activating pill.
-7. **Drill keyboard** — Multiple-choice: Tab to option, Space/Enter to answer. Fill-blank: Tab to input, type, Enter to submit. Shadowing: Tab to Speak button, Enter activates. True/false: same as multiple-choice.
-8. **Rating buttons** — Tab to Again/Hard/Good/Easy; activate with Space/Enter; confirm "Saved" status announced.
-9. **Logout** — Tab to Sign out button; activate; confirm auth panel shows and focus moves to email input.
+5. **Sentence cards and pills** — Tab through pill buttons; activate a pill with Enter/Space; confirm detail pane opens.
+6. **Detail pane tabs** — Arrow keys navigate tabs; Escape closes pane and returns focus to pill.
+7. **Concept help dialog** — Tab to a `?` button; press Enter; confirm dialog opens with focus inside; Tab cycles within dialog only; Escape closes dialog (not pane) and focus returns to `?` button. Confirm label-help and value-help buttons have distinct `aria-label` values.
+8. **Modal focus trap** — Confirm focus is inside modal and Tab does not leave; Shift+Tab wraps to last focusable; Escape closes and returns focus to activating pill.
+9. **Drill keyboard** — Multiple-choice: Tab to option, Space/Enter to answer. Fill-blank: Tab to input, type, Enter to submit. Shadowing: Tab to Speak button, Enter activates. True/false: same as multiple-choice.
+10. **Rating buttons** — Tab to Again/Hard/Good/Easy; activate with Space/Enter; confirm "Saved" status announced.
+11. **Logout** — Tab to Sign out button; activate; confirm auth panel shows and focus moves to email input.
 
 ### Screen-reader testing (NVDA + Chrome, VoiceOver + Safari)
 
@@ -79,10 +103,12 @@ These items cannot be verified statically. Run before the public beta tag.
 4. **Parse status** — "3 sentences parsed. Use Tab to navigate the items." announced after successful parse.
 5. **Pill list** — Announced as a list with item count (e.g. "list, 5 items"); each pill announced as "Vocabulary lesson: gato, button".
 6. **Modal title** — Dialog announced with its title when it opens.
-7. **Drill feedback** — "✓ Correct!" / "✗ The answer is …" announced via polite live region.
-8. **Review saved** — "Saved. Next review in 3 day(s)." announced after rating without focus move.
-9. **RTL content** — Arabic/Hebrew example text announced with correct language voice; fill-blank input IME switches to RTL.
-10. **Logout** — Focus and announcement move to auth panel email input.
+7. **Concept help dialog** — Activating a `?` button announces dialog title and body text (via `aria-describedby`). Navigating to related concepts announces new body text via `aria-live="polite"`. Escape closes and focus returns to trigger button.
+8. **Distinct concept button labels** — Two `?` buttons on the same field must announce different labels (field name vs field value). Tab between them to confirm no duplicate announcement.
+9. **Drill feedback** — "✓ Correct!" / "✗ The answer is …" announced via polite live region.
+10. **Review saved** — "Saved. Next review in 3 day(s)." announced after rating without focus move.
+11. **RTL content** — Arabic/Hebrew example text announced with correct language voice; fill-blank input IME switches to RTL.
+12. **Logout** — Focus and announcement move to auth panel email input.
 
 ### Colour contrast (browser DevTools or contrast analyser)
 
