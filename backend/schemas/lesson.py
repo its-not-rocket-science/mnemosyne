@@ -65,6 +65,12 @@ template used*, which may differ when a dedicated builder was invoked.
 """
 
 
+class ConceptRef(BaseModel):
+    """A reference to a related grammar concept, with its display title resolved."""
+    concept_id: str
+    title: str
+
+
 class GrammarConceptExplanation(BaseModel):
     """Deterministic explanation of a grammatical concept or axis value.
 
@@ -80,7 +86,7 @@ class GrammarConceptExplanation(BaseModel):
     target_language_note: str | None = None
     l1_comparison: str | None = None
     examples: list[str] = Field(default_factory=list)
-    related_concepts: list[str] = Field(default_factory=list)
+    related_concepts: list[ConceptRef] = Field(default_factory=list)
     practice_tags: list[str] = Field(default_factory=list)
 
 
