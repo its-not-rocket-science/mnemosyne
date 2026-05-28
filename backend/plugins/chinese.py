@@ -67,12 +67,13 @@ from __future__ import annotations
 
 import re
 
-from backend.plugins.cefr_vocab import A1 as _CEFR_A1, A2 as _CEFR_A2
+from backend.plugins.cefr_vocab import A1 as _CEFR_A1, A2 as _CEFR_A2, B1 as _CEFR_B1
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 _A1: frozenset[str] = _CEFR_A1.get("zh", frozenset())
 _A2: frozenset[str] = _CEFR_A2.get("zh", frozenset())
+_B1: frozenset[str] = _CEFR_B1.get("zh", frozenset())
 
 # ── Optional heavy imports ─────────────────────────────────────────────────────
 
@@ -408,6 +409,8 @@ class MandarinChinesePlugin:
                 lesson_data["cefr_level"] = "A1"
             elif canonical in _A2:
                 lesson_data["cefr_level"] = "A2"
+            elif canonical in _B1:
+                lesson_data["cefr_level"] = "B1"
             if not _HAS_JIEBA:
                 lesson_data["confidence_note"] = (
                     "character-level fallback — install jieba for word-level segmentation"

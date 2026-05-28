@@ -111,7 +111,7 @@ import logging
 from functools import cached_property
 from typing import Any
 
-from backend.plugins.cefr_vocab import A1 as _CEFR_A1, A2 as _CEFR_A2
+from backend.plugins.cefr_vocab import A1 as _CEFR_A1, A2 as _CEFR_A2, B1 as _CEFR_B1
 from backend.core.vocab_index import get_cefr_level as _get_cefr_level
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.lesson.practice_hooks import hooks_for_language
@@ -125,6 +125,7 @@ logger = logging.getLogger(__name__)
 
 _A1 = _CEFR_A1.get("fr", frozenset())
 _A2 = _CEFR_A2.get("fr", frozenset())
+_B1 = _CEFR_B1.get("fr", frozenset())
 
 # ── POS filter ────────────────────────────────────────────────────────────────
 
@@ -415,7 +416,7 @@ class FrenchPlugin:
 
             confidence, confidence_note = self._vocab_confidence(tok, lemma)
             data: dict[str, Any] = {"lemma": lemma, "pos": tok.pos_}
-            cefr = _get_cefr_level("fr", lemma) or ("A1" if lemma in _A1 else "A2" if lemma in _A2 else None)
+            cefr = _get_cefr_level("fr", lemma) or ("A1" if lemma in _A1 else "A2" if lemma in _A2 else "B1" if lemma in _B1 else None)
             if cefr:
                 data["cefr_level"] = cefr
 
@@ -448,6 +449,8 @@ class FrenchPlugin:
             return 0.90, None  # known word — suppress is_oov false-positive
         if lemma in _A2:
             return 0.88, None  # known A2 word
+        if lemma in _B1:
+            return 0.86, None  # known B1 word
         if tok.is_oov:
             return 0.50, "word not found in model vocabulary — form may be incorrect"
         return 0.85, None

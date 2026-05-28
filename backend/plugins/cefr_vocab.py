@@ -24,6 +24,10 @@ Usage in plugins
       return 0.50, "word not found in model vocabulary ..."
   return 0.85, None
 
+A1 tables added at project start.
+A2 tables added 2026-05-28.  Plugin priority: A1 (0.90) → A2 (0.88) → in-vocab (0.85) → OOV (0.50)
+B1 tables added 2026-05-28.  Plugin priority: A1 (0.90) → A2 (0.88) → B1 (0.86) → in-vocab (0.85) → OOV (0.50)
+
   # In _extract_vocabulary():
   if lemma in _A1:
       data["cefr_level"] = "A1"
@@ -1821,4 +1825,888 @@ A2: dict[str, frozenset[str]] = {
     "zh": _ZH_A2,
     "ar": _AR_A2,
     "he": _HE_A2,
+}
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# B1 — Threshold (intermediate) vocabulary
+# ═══════════════════════════════════════════════════════════════════════════════
+# B1 covers abstract concepts, opinions/argumentation, news/current affairs,
+# environment, social issues, and extended cognitive/communicative vocabulary.
+# ~380 lemmas per language.  No item may appear in A1 or A2 for the same lang.
+
+# ── Spanish B1 (es) ───────────────────────────────────────────────────────────
+_ES_B1: frozenset[str] = frozenset({
+    # abstract concepts & nouns
+    "opinión", "situación", "solución", "resultado", "relación",
+    "oportunidad", "decisión", "razón", "detalle", "hecho",
+    "diferencia", "desarrollo", "efecto", "ventaja",
+    "desventaja", "propósito", "valor", "papel", "calidad",
+    "proceso", "método", "nivel", "atención", "esfuerzo",
+    "posibilidad", "responsabilidad", "importancia", "aspecto",
+    "causa", "condición", "contexto", "dificultad", "evidencia",
+    "función", "impacto", "influencia", "asunto", "conocimiento",
+    "límite", "pérdida", "significado", "necesidad", "período",
+    "presión", "principio", "progreso", "tasa", "sentido",
+    "etapa", "estructura", "sistema", "término", "perspectiva",
+    "conclusión", "teoría", "afirmación", "análisis", "crítica",
+    "propuesta", "alternativa", "tendencia", "consecuencia",
+    "suposición", "hipótesis", "argumento",
+    # opinions & debate
+    "debate", "discusión", "punto de vista", "juicio",
+    "recomendación", "evaluación", "acuerdo", "desacuerdo",
+    # work & professional (B1 depth)
+    "presentación", "solicitud", "entrevista", "departamento",
+    "habilidad", "calificación", "formación", "objetivo",
+    "estrategia", "presupuesto", "beneficio", "recurso",
+    "colaboración", "rendimiento", "desempeño", "logro",
+    "retroalimentación", "capacitación", "liderazgo",
+    # news & current affairs
+    "anuncio", "elección", "conflicto",
+    "acontecimiento", "crisis", "desafío", "protesta", "reforma",
+    "campaña", "política", "gobierno", "sociedad", "economía",
+    "estadística", "encuesta", "titular", "fuente", "cobertura",
+    "declaración", "acuerdo internacional", "tratado",
+    # technology & digital (B1 depth)
+    "software", "dispositivo", "red", "datos", "seguridad",
+    "privacidad", "plataforma", "programa", "interfaz",
+    "usuario", "base de datos", "almacenamiento", "actualización",
+    "aplicación móvil", "inteligencia artificial", "automatización",
+    # health & medicine (extended)
+    "tratamiento", "síntoma", "diagnóstico", "terapia",
+    "rehabilitación", "vacuna", "antibiótico", "especialista",
+    "dosis", "efecto secundario", "prevención", "cronicidad",
+    "bienestar mental", "estrés", "burnout",
+    # environment & sustainability
+    "clima", "medio ambiente", "contaminación", "sostenible",
+    "recurso natural", "especie", "hábitat", "emisión",
+    "huella de carbono", "biodiversidad", "sequía", "inundación",
+    "deforestación", "calentamiento global", "reciclable",
+    "residuo", "impacto ambiental", "energía solar",
+    "energía eólica", "panel solar", "transición energética",
+    # education & learning (B1 depth)
+    "investigación", "tesis", "beca",
+    "taller", "seminario", "metodología", "institución",
+    "academia", "matrícula", "resultado académico",
+    "aprendizaje autónomo", "competencia",
+    # social issues & society
+    "igualdad", "diversidad", "inclusión", "discriminación",
+    "prejuicio", "pobreza", "desigualdad", "justicia",
+    "derechos", "obligación", "ciudadanía", "integración",
+    "migración", "refugiado", "comunidad", "voluntariado",
+    "solidaridad", "bienestar", "cohesión social", "tolerancia",
+    "equidad", "marginación", "exclusión", "accesibilidad",
+    # extended abstract adjectives
+    "complejo", "sencillo", "general", "específico", "particular",
+    "cierto", "evidente", "normal", "original", "reciente",
+    "grave", "similar", "típico", "variado", "eficiente",
+    "eficaz", "flexible", "innovador", "creativo", "crítico",
+    "lógico", "abstracto", "concreto", "fundamental", "relevante",
+    "significativo", "notable", "considerable", "excepcional",
+    "moderado", "intenso", "permanente", "temporal", "global",
+    "nacional", "internacional", "público", "privado",
+    "oficial", "formal", "informal", "urgente", "inevitable",
+    "razonable", "adecuado", "insuficiente", "excesivo",
+    # extended verbs (cognitive & communicative)
+    "considerar", "analizar", "interpretar", "debatir",
+    "argumentar", "dudar", "reconocer", "percibir",
+    "reflexionar", "evaluar", "justificar", "demostrar",
+    "comprobar", "investigar", "resolver", "implementar",
+    "adaptar", "transformar", "contribuir", "participar",
+    "colaborar", "comunicar", "negociar", "gestionar",
+    "coordinar", "establecer", "determinar", "identificar",
+    "priorizar", "supervisar", "promover", "apoyar",
+    "defender", "cuestionar", "criticar", "influir",
+    "prevenir", "reducir", "aumentar",
+    # extended adverbs & discourse connectors
+    "sin embargo", "aunque", "por lo tanto", "por otro lado",
+    "en cambio", "a pesar de", "no obstante", "en consecuencia",
+    "en resumen", "anteriormente", "actualmente", "próximamente",
+    "claramente", "evidentemente",
+    "en términos generales", "en particular", "al contrario",
+    "de hecho", "por supuesto", "en cuanto a", "con respecto a"
+})
+# ── French B1 (fr) ────────────────────────────────────────────────────────────
+_FR_B1: frozenset[str] = frozenset({
+    # abstract concepts & nouns
+    "opinion", "situation", "solution", "résultat", "relation",
+    "opportunité", "décision", "raison", "détail", "fait",
+    "différence", "changement", "développement", "effet", "avantage",
+    "inconvénient", "valeur", "rôle", "qualité",
+    "processus", "méthode", "niveau", "attention", "effort",
+    "possibilité", "responsabilité", "importance", "aspect",
+    "cause", "condition", "contexte", "difficulté", "preuve",
+    "fonction", "impact", "influence", "connaissance",
+    "limite", "perte", "signification", "besoin", "période",
+    "pression", "principe", "progrès", "sens",
+    "étape", "structure", "système", "terme", "perspective",
+    "conclusion", "théorie", "affirmation", "analyse", "critique",
+    "proposition", "alternative", "tendance", "conséquence",
+    "supposition", "hypothèse", "argument",
+    # opinions & debate
+    "débat", "discussion", "point de vue", "jugement",
+    "recommandation", "évaluation", "accord", "désaccord",
+    # work & professional (B1 depth)
+    "présentation", "candidature", "entretien", "département",
+    "compétence", "qualification", "formation", "objectif",
+    "stratégie", "budget", "bénéfice", "ressource",
+    "collaboration", "performance", "rendement", "réalisation",
+    "retour d'information", "leadership",
+    # news & current affairs
+    "annonce", "élection", "conflit",
+    "événement", "crise", "défi", "manifestation", "réforme",
+    "campagne", "politique", "gouvernement", "société", "économie",
+    "statistique", "sondage", "titre", "source", "couverture",
+    "déclaration", "traité",
+    # technology & digital (B1 depth)
+    "logiciel", "appareil", "réseau", "données", "sécurité",
+    "confidentialité", "plateforme", "interface",
+    "utilisateur", "base de données", "stockage", "mise à jour",
+    "application mobile", "intelligence artificielle", "automatisation",
+    # health & medicine (extended)
+    "traitement", "symptôme", "diagnostic", "thérapie",
+    "rééducation", "vaccin", "antibiotique", "spécialiste",
+    "dose", "effet secondaire", "prévention", "chronicité",
+    "santé mentale", "stress", "épuisement professionnel",
+    # environment & sustainability
+    "climat", "environnement", "pollution", "durable",
+    "ressource naturelle", "habitat", "émission",
+    "empreinte carbone", "biodiversité", "sécheresse", "inondation",
+    "déforestation", "réchauffement climatique", "recyclable",
+    "déchet", "impact environnemental", "énergie solaire",
+    "énergie éolienne", "transition énergétique",
+    # education & learning (B1 depth)
+    "recherche", "mémoire", "bourse",
+    "atelier", "séminaire", "méthodologie", "institution",
+    "académie", "inscription", "résultat scolaire",
+    "apprentissage autonome", "compétence",
+    # social issues & society
+    "égalité", "diversité", "inclusion", "discrimination",
+    "préjugé", "pauvreté", "inégalité", "justice",
+    "droits", "obligation", "citoyenneté", "intégration",
+    "migration", "réfugié", "communauté", "bénévolat",
+    "solidarité", "bien-être", "cohésion sociale", "tolérance",
+    "équité", "marginalisation", "exclusion", "accessibilité",
+    # extended abstract adjectives
+    "complexe", "simple", "général", "spécifique", "particulier",
+    "certain", "évident", "normal", "original", "récent",
+    "grave", "similaire", "typique", "varié", "efficace",
+    "flexible", "innovant", "créatif", "critique", "logique",
+    "abstrait", "concret", "fondamental", "pertinent",
+    "significatif", "notable", "considérable", "exceptionnel",
+    "modéré", "intense", "permanent", "temporaire", "mondial",
+    "national", "international", "officiel", "formel", "informel",
+    "urgent", "inévitable", "raisonnable", "adéquat",
+    "insuffisant", "excessif",
+    # extended verbs (cognitive & communicative)
+    "considérer", "analyser", "interpréter", "débattre",
+    "argumenter", "douter", "reconnaître", "percevoir",
+    "réfléchir", "évaluer", "justifier", "démontrer",
+    "vérifier", "enquêter", "résoudre", "mettre en œuvre",
+    "adapter", "transformer", "contribuer", "participer",
+    "collaborer", "communiquer", "négocier", "gérer",
+    "coordonner", "établir", "déterminer", "identifier",
+    "superviser", "promouvoir", "soutenir", "défendre",
+    "remettre en question", "critiquer", "influencer",
+    "prévenir", "réduire", "augmenter",
+    # extended adverbs & discourse connectors
+    "cependant", "bien que", "donc", "en outre",
+    "d'autre part", "en revanche", "malgré", "néanmoins",
+    "par conséquent", "en résumé", "auparavant", "actuellement",
+    "prochainement", "clairement", "évidemment",
+    "en général", "en particulier",
+    "au contraire", "en fait", "bien sûr", "quant à"
+})
+# ── German B1 (de) ────────────────────────────────────────────────────────────
+# Nouns Title-cased; verbs/adjectives/adverbs lowercase.
+_DE_B1: frozenset[str] = frozenset({
+    # abstract nouns (Title-cased)
+    "Meinung", "Situation", "Lösung", "Beziehung",
+    "Gelegenheit", "Entscheidung", "Grund", "Detail", "Tatsache",
+    "Unterschied", "Änderung", "Entwicklung", "Wirkung", "Vorteil",
+    "Nachteil", "Zweck", "Wert", "Rolle", "Qualität",
+    "Prozess", "Methode", "Niveau", "Aufmerksamkeit", "Anstrengung",
+    "Möglichkeit", "Verantwortung", "Wichtigkeit", "Aspekt",
+    "Ursache", "Bedingung", "Kontext", "Schwierigkeit", "Beweis",
+    "Funktion", "Auswirkung", "Einfluss", "Angelegenheit", "Wissen",
+    "Grenze", "Verlust", "Bedeutung", "Bedürfnis", "Zeitraum",
+    "Druck", "Grundsatz", "Fortschritt", "Sinn",
+    "Stufe", "Struktur", "System", "Begriff", "Perspektive",
+    "Schlussfolgerung", "Theorie", "Aussage", "Analyse", "Kritik",
+    "Vorschlag", "Alternative", "Tendenz", "Konsequenz",
+    "Annahme", "Hypothese", "Argument",
+    # debate & opinion nouns
+    "Debatte", "Diskussion", "Standpunkt", "Urteil",
+    "Empfehlung", "Bewertung", "Einigkeit", "Meinungsverschiedenheit",
+    # work & professional nouns (B1 depth)
+    "Präsentation", "Bewerbung", "Vorstellungsgespräch", "Abteilung",
+    "Fähigkeit", "Qualifikation", "Ausbildung", "Ziel",
+    "Strategie", "Budget", "Nutzen", "Ressource",
+    "Zusammenarbeit", "Leistung", "Führung", "Rückmeldung",
+    # news & current affairs nouns
+    "Ankündigung", "Wahl", "Konflikt",
+    "Ereignis", "Krise", "Herausforderung", "Protest", "Reform",
+    "Kampagne", "Regierung", "Gesellschaft", "Wirtschaft",
+    "Statistik", "Umfrage", "Schlagzeile", "Quelle",
+    "Erklärung",
+    # technology nouns
+    "Software", "Gerät", "Netzwerk", "Daten", "Sicherheit",
+    "Datenschutz", "Plattform", "Schnittstelle",
+    "Benutzer", "Datenbank", "Speicherung", "Aktualisierung",
+    "Künstliche Intelligenz", "Automatisierung",
+    # health nouns
+    "Behandlung", "Symptom", "Diagnose", "Therapie",
+    "Rehabilitation", "Impfstoff", "Antibiotikum", "Spezialist",
+    "Dosis", "Nebenwirkung", "Vorbeugung", "Burnout",
+    # environment nouns
+    "Klima", "Umwelt", "Verschmutzung", "Ressource",
+    "Art", "Lebensraum", "Emission", "Biodiversität",
+    "Dürre", "Überschwemmung", "Abholzung", "Klimawandel",
+    "Abfall", "Solarenergie", "Windenergie",
+    # education nouns
+    "Forschung", "These", "Stipendium", "Konferenz",
+    "Workshop", "Seminar", "Methodik", "Institution",
+    "Akademie", "Einschreibung", "Kompetenz",
+    # social issues nouns
+    "Gleichheit", "Vielfalt", "Inklusion", "Diskriminierung",
+    "Vorurteil", "Armut", "Ungerechtigkeit", "Gerechtigkeit",
+    "Pflicht", "Staatsbürgerschaft", "Integration",
+    "Migration", "Flüchtling", "Gemeinschaft", "Ehrenamt",
+    "Solidarität", "Wohlbefinden", "Toleranz", "Zugänglichkeit",
+    # abstract adjectives (lowercase)
+    "komplex", "allgemein", "spezifisch",
+    "offensichtlich", "ursprünglich",
+    "ähnlich", "typisch", "vielfältig", "effizient",
+    "wirksam", "flexibel", "innovativ", "kreativ",
+    "kritisch", "logisch", "abstrakt", "konkret",
+    "grundlegend", "relevant", "bedeutsam", "bemerkenswert",
+    "erheblich", "außergewöhnlich", "gemäßigt", "intensiv",
+    "dauerhaft", "vorübergehend", "global", "lokal",
+    "öffentlich", "privat", "offiziell", "formell", "informell",
+    "dringend", "unvermeidlich", "angemessen", "unzureichend",
+    # verbs (lowercase)
+    "betrachten", "analysieren", "interpretieren", "debattieren",
+    "argumentieren", "zweifeln", "wahrnehmen",
+    "nachdenken", "bewerten", "rechtfertigen", "beweisen",
+    "überprüfen", "untersuchen", "lösen", "umsetzen",
+    "anpassen", "transformieren", "beitragen", "teilnehmen",
+    "verhandeln", "verwalten", "koordinieren", "feststellen",
+    "bestimmen", "identifizieren", "beaufsichtigen", "fördern",
+    "verteidigen", "hinterfragen", "beeinflussen",
+    "verhindern", "reduzieren", "erhöhen",
+    # adverbs & connectors (lowercase)
+    "jedoch", "deshalb", "außerdem", "andererseits",
+    "im Gegensatz dazu", "trotzdem", "folglich",
+    "zusammenfassend", "zuvor", "gegenwärtig", "demnächst",
+    "eindeutig", "offensichtlich",
+    "im Allgemeinen", "insbesondere", "im Gegenteil",
+    "tatsächlich", "natürlich"
+})
+# ── Italian B1 (it) ───────────────────────────────────────────────────────────
+_IT_B1: frozenset[str] = frozenset({
+    # abstract concepts & nouns
+    "opinione", "situazione", "soluzione", "risultato", "relazione",
+    "opportunità", "decisione", "ragione", "dettaglio", "fatto",
+    "differenza", "cambiamento", "sviluppo", "effetto", "vantaggio",
+    "svantaggio", "scopo", "valore", "ruolo", "qualità",
+    "processo", "metodo", "livello", "attenzione", "sforzo",
+    "possibilità", "responsabilità", "importanza", "aspetto",
+    "causa", "condizione", "contesto", "difficoltà", "prova",
+    "funzione", "impatto", "questione", "conoscenza",
+    "limite", "perdita", "significato", "necessità", "periodo",
+    "pressione", "principio", "progresso", "senso",
+    "fase", "struttura", "sistema", "termine", "prospettiva",
+    "conclusione", "teoria", "affermazione", "analisi", "critica",
+    "proposta", "alternativa", "tendenza", "conseguenza",
+    "ipotesi", "argomento",
+    # opinions & debate
+    "dibattito", "discussione", "punto di vista", "giudizio",
+    "raccomandazione", "valutazione", "accordo", "disaccordo",
+    # work & professional (B1 depth)
+    "presentazione", "candidatura", "colloquio", "dipartimento",
+    "abilità", "qualificazione", "formazione", "obiettivo",
+    "strategia", "budget", "beneficio", "risorsa",
+    "collaborazione", "prestazione", "rendimento", "leadership",
+    "retroazione", "capacità",
+    # news & current affairs
+    "annuncio", "elezione", "conflitto",
+    "evento", "crisi", "sfida", "protesta", "riforma",
+    "campagna", "politica", "governo", "società", "economia",
+    "statistica", "sondaggio", "fonte", "trattato",
+    # technology & digital (B1 depth)
+    "software", "dispositivo", "rete", "dati", "sicurezza",
+    "privacy", "piattaforma", "interfaccia",
+    "utente", "database", "archiviazione", "aggiornamento",
+    "intelligenza artificiale", "automazione",
+    # health & medicine (extended)
+    "trattamento", "sintomo", "diagnosi", "terapia",
+    "riabilitazione", "vaccino", "antibiotico", "specialista",
+    "dose", "effetto collaterale", "prevenzione", "burnout",
+    # environment & sustainability
+    "clima", "ambiente", "inquinamento", "sostenibile",
+    "risorsa naturale", "specie", "habitat", "emissione",
+    "impronta di carbonio", "biodiversità", "siccità", "alluvione",
+    "deforestazione", "cambiamento climatico", "riciclabile",
+    "rifiuto", "impatto ambientale", "energia solare",
+    "energia eolica", "transizione energetica",
+    # education & learning (B1 depth)
+    "ricerca", "tesi", "borsa di studio",
+    "laboratorio", "seminario", "metodologia", "istituzione",
+    "accademia", "iscrizione", "competenza",
+    "apprendimento autonomo",
+    # social issues & society
+    "uguaglianza", "diversità", "inclusione", "discriminazione",
+    "pregiudizio", "povertà", "disuguaglianza", "giustizia",
+    "diritti", "obbligo", "cittadinanza", "integrazione",
+    "migrazione", "rifugiato", "comunità", "volontariato",
+    "solidarietà", "benessere", "coesione sociale", "tolleranza",
+    "equità", "marginalizzazione", "esclusione", "accessibilità",
+    # extended abstract adjectives
+    "complesso", "semplice", "generale", "specifico", "particolare",
+    "certo", "evidente", "normale", "originale", "recente",
+    "simile", "tipico", "vario", "efficiente",
+    "flessibile", "innovativo", "creativo", "critico", "logico",
+    "astratto", "concreto", "fondamentale", "pertinente",
+    "significativo", "notevole", "considerevole", "eccezionale",
+    "moderato", "intenso", "permanente", "temporaneo", "globale",
+    "nazionale", "internazionale", "ufficiale", "formale", "informale",
+    "urgente", "inevitabile", "ragionevole", "adeguato",
+    "insufficiente", "eccessivo",
+    # extended verbs (cognitive & communicative)
+    "considerare", "analizzare", "interpretare", "dibattere",
+    "argomentare", "dubitare", "riconoscere", "percepire",
+    "riflettere", "valutare", "giustificare", "dimostrare",
+    "verificare", "indagare", "risolvere", "implementare",
+    "adattare", "trasformare", "contribuire", "partecipare",
+    "collaborare", "comunicare", "negoziare", "gestire",
+    "coordinare", "stabilire", "determinare", "identificare",
+    "supervisionare", "promuovere", "sostenere", "difendere",
+    "mettere in discussione", "influenzare",
+    "prevenire", "ridurre", "aumentare",
+    # extended adverbs & discourse connectors
+    "tuttavia", "sebbene", "quindi", "inoltre",
+    "d'altra parte", "al contrario", "nonostante", "di conseguenza",
+    "in sintesi", "in precedenza", "attualmente", "prossimamente",
+    "chiaramente", "evidentemente", "soprattutto",
+    "in generale", "in particolare", "in effetti", "certamente"
+})
+# ── Portuguese B1 (pt) ────────────────────────────────────────────────────────
+_PT_B1: frozenset[str] = frozenset({
+    # abstract concepts & nouns
+    "opinião", "situação", "solução", "resultado", "relação",
+    "oportunidade", "decisão", "razão", "detalhe", "facto",
+    "diferença", "mudança", "desenvolvimento", "efeito", "vantagem",
+    "desvantagem", "propósito", "valor", "papel", "qualidade",
+    "processo", "método", "nível", "atenção", "esforço",
+    "possibilidade", "responsabilidade", "importância", "aspeto",
+    "causa", "condição", "contexto", "dificuldade", "evidência",
+    "função", "impacto", "influência", "assunto", "conhecimento",
+    "limite", "perda", "significado", "necessidade", "período",
+    "pressão", "princípio", "progresso", "sentido",
+    "fase", "estrutura", "sistema", "termo", "perspetiva",
+    "conclusão", "teoria", "afirmação", "análise", "crítica",
+    "proposta", "alternativa", "tendência", "consequência",
+    "hipótese", "argumento",
+    # opinions & debate
+    "debate", "discussão", "ponto de vista", "julgamento",
+    "recomendação", "avaliação", "acordo", "desacordo",
+    # work & professional (B1 depth)
+    "apresentação", "candidatura", "entrevista", "departamento",
+    "habilidade", "qualificação", "formação", "objetivo",
+    "estratégia", "orçamento", "benefício", "recurso",
+    "colaboração", "desempenho", "rendimento", "liderança",
+    "feedback", "capacidade",
+    # news & current affairs
+    "anúncio", "eleição", "conflito",
+    "evento", "crise", "desafio", "protesto", "reforma",
+    "campanha", "política", "governo", "sociedade", "economia",
+    "estatística", "sondagem", "fonte", "tratado",
+    # technology & digital (B1 depth)
+    "software", "dispositivo", "rede", "dados", "segurança",
+    "privacidade", "interface",
+    "utilizador", "base de dados", "armazenamento", "atualização",
+    "inteligência artificial", "automação",
+    # health & medicine (extended)
+    "tratamento", "sintoma", "diagnóstico", "terapia",
+    "reabilitação", "vacina", "antibiótico", "especialista",
+    "dose", "efeito secundário", "prevenção", "burnout",
+    # environment & sustainability
+    "clima", "ambiente", "poluição", "sustentável",
+    "recurso natural", "espécie", "hábitat", "emissão",
+    "pegada de carbono", "biodiversidade", "seca", "inundação",
+    "desflorestação", "aquecimento global", "reciclável",
+    "resíduo", "impacto ambiental", "energia solar",
+    "energia eólica", "transição energética",
+    # education & learning (B1 depth)
+    "investigação", "dissertação", "bolsa",
+    "oficina", "seminário", "metodologia", "instituição",
+    "academia", "matrícula", "competência",
+    "aprendizagem autónoma",
+    # social issues & society
+    "igualdade", "diversidade", "inclusão", "discriminação",
+    "preconceito", "pobreza", "desigualdade", "justiça",
+    "direitos", "obrigação", "cidadania", "integração",
+    "migração", "refugiado", "comunidade", "voluntariado",
+    "solidariedade", "bem-estar", "coesão social", "tolerância",
+    "equidade", "marginalização", "exclusão", "acessibilidade",
+    # extended abstract adjectives
+    "complexo", "simples", "geral", "específico", "particular",
+    "certo", "evidente", "normal", "original", "recente",
+    "semelhante", "típico", "variado", "eficiente",
+    "flexível", "inovador", "criativo", "crítico", "lógico",
+    "abstrato", "concreto", "fundamental", "relevante",
+    "significativo", "notável", "considerável", "excecional",
+    "moderado", "intenso", "permanente", "temporário", "global",
+    "nacional", "internacional", "oficial", "formal", "informal",
+    "urgente", "inevitável", "razoável", "adequado",
+    "insuficiente", "excessivo",
+    # extended verbs (cognitive & communicative)
+    "considerar", "analisar", "interpretar", "debater",
+    "argumentar", "duvidar", "reconhecer", "perceber",
+    "refletir", "avaliar", "justificar", "demonstrar",
+    "verificar", "investigar", "resolver", "implementar",
+    "adaptar", "transformar", "contribuir", "participar",
+    "colaborar", "comunicar", "negociar", "gerir",
+    "coordenar", "estabelecer", "determinar", "identificar",
+    "supervisionar", "promover", "apoiar", "defender",
+    "questionar", "criticar", "influenciar",
+    "prevenir", "reduzir", "aumentar",
+    # extended adverbs & discourse connectors
+    "contudo", "embora", "portanto", "além disso",
+    "por outro lado", "ao contrário", "apesar de", "no entanto",
+    "consequentemente", "em resumo", "anteriormente", "atualmente",
+    "proximamente", "claramente", "evidentemente",
+    "em geral", "em particular",
+    "na verdade", "certamente"
+})
+# ── Russian B1 (ru) ───────────────────────────────────────────────────────────
+_RU_B1: frozenset[str] = frozenset({
+    # abstract concepts & nouns
+    "мнение", "ситуация", "решение", "результат", "отношение",
+    "возможность", "причина", "деталь", "факт",
+    "различие", "изменение", "развитие", "эффект", "преимущество",
+    "недостаток", "цель", "ценность", "роль", "качество",
+    "процесс", "метод", "уровень", "внимание", "усилие",
+    "ответственность", "важность", "аспект",
+    "условие", "контекст", "трудность", "доказательство",
+    "функция", "влияние", "знание",
+    "потеря", "смысл", "потребность", "период",
+    "давление", "принцип", "прогресс",
+    "этап", "структура", "система", "термин", "перспектива",
+    "вывод", "теория", "утверждение", "анализ", "критика",
+    "предложение", "альтернатива", "тенденция", "последствие",
+    "предположение", "гипотеза", "аргумент",
+    # opinions & debate
+    "дискуссия", "обсуждение", "точка зрения", "суждение",
+    "рекомендация", "согласие", "несогласие",
+    # work & professional (B1 depth)
+    "презентация", "заявка", "собеседование", "отдел",
+    "навык", "квалификация", "обучение", "стратегия",
+    "бюджет", "выгода", "ресурс",
+    "сотрудничество", "производительность", "руководство",
+    "обратная связь", "способность",
+    # news & current affairs
+    "доклад", "объявление", "выборы", "конфликт",
+    "событие", "кризис", "вызов", "протест", "реформа",
+    "кампания", "политика", "правительство", "общество", "экономика",
+    "статистика", "опрос", "заголовок", "источник", "договор",
+    # technology & digital (B1 depth)
+    "программное обеспечение", "устройство", "сеть", "данные",
+    "безопасность", "конфиденциальность", "платформа",
+    "интерфейс", "пользователь", "база данных", "хранение",
+    "обновление", "искусственный интеллект", "автоматизация",
+    # health & medicine (extended)
+    "лечение", "симптом", "диагноз", "терапия",
+    "реабилитация", "вакцина", "антибиотик", "специалист",
+    "доза", "побочный эффект", "профилактика", "выгорание",
+    # environment & sustainability
+    "климат", "окружающая среда", "загрязнение", "устойчивый",
+    "природный ресурс", "вид", "среда обитания", "выброс",
+    "углеродный след", "биоразнообразие", "засуха", "наводнение",
+    "вырубка лесов", "глобальное потепление", "перерабатываемый",
+    "отходы", "экологическое воздействие", "солнечная энергия",
+    "ветровая энергия",
+    # education & learning (B1 depth)
+    "исследование", "диссертация", "стипендия", "конференция",
+    "мастер-класс", "семинар", "методология", "учреждение",
+    "академия", "компетентность",
+    # social issues & society
+    "равенство", "разнообразие", "включённость", "дискриминация",
+    "предрассудок", "бедность", "неравенство", "справедливость",
+    "права", "обязанность", "гражданство", "интеграция",
+    "миграция", "беженец", "сообщество", "волонтёрство",
+    "солидарность", "благополучие", "толерантность", "доступность",
+    # extended abstract adjectives
+    "сложный", "простой", "общий", "конкретный", "особый",
+    "определённый", "очевидный", "нормальный", "оригинальный",
+    "недавний", "похожий", "типичный", "разнообразный",
+    "эффективный", "гибкий", "инновационный", "творческий",
+    "критический", "логический", "абстрактный", "фундаментальный",
+    "актуальный", "значимый", "заметный", "значительный",
+    "исключительный", "умеренный", "интенсивный", "постоянный",
+    "временный", "глобальный", "национальный", "международный",
+    "официальный", "формальный", "неформальный",
+    "срочный", "неизбежный", "разумный", "достаточный",
+    # extended verbs (cognitive & communicative)
+    "рассматривать", "анализировать", "интерпретировать",
+    "дискутировать", "аргументировать", "сомневаться",
+    "признавать", "воспринимать", "размышлять",
+    "оценивать", "обосновывать", "доказывать",
+    "проверять", "исследовать", "разрешать", "внедрять",
+    "адаптировать", "преобразовывать", "вносить вклад",
+    "участвовать", "сотрудничать", "переговариваться",
+    "управлять", "координировать", "устанавливать",
+    "определять", "идентифицировать", "продвигать",
+    "поддерживать", "защищать", "подвергать сомнению",
+    "влиять", "предотвращать", "уменьшать", "увеличивать",
+    # extended adverbs & discourse connectors
+    "однако", "хотя", "поэтому", "кроме того",
+    "с другой стороны", "напротив", "несмотря на", "тем не менее",
+    "следовательно", "в итоге", "ранее", "в настоящее время",
+    "в ближайшее время", "ясно", "очевидно",
+    "в целом", "в частности",
+    "на самом деле", "конечно"
+})
+# ── Japanese B1 (ja) ──────────────────────────────────────────────────────────
+_JA_B1: frozenset[str] = frozenset({
+    # abstract concepts & nouns
+    "意見", "状況", "解決策", "結果", "関係",
+    "機会", "決定", "理由", "詳細", "事実",
+    "違い", "変化", "発展", "効果", "利点",
+    "欠点", "目的", "価値", "役割", "品質",
+    "プロセス", "方法", "レベル", "注意", "努力",
+    "可能性", "責任", "重要性", "側面",
+    "原因", "条件", "文脈", "困難", "証拠",
+    "機能", "影響", "知識",
+    "損失", "意味", "必要性", "期間",
+    "圧力", "原則", "進歩", "感覚",
+    "段階", "構造", "システム", "用語", "視点",
+    "結論", "理論", "主張", "分析", "批判",
+    "提案", "代替案", "傾向", "結果", "仮説",
+    # opinions & debate
+    "議論", "討論", "観点", "判断",
+    "勧告", "評価", "合意", "不一致",
+    # work & professional (B1 depth)
+    "プレゼンテーション", "申請", "面接", "部門",
+    "スキル", "資格", "目標",
+    "戦略", "予算", "メリット", "リソース",
+    "コラボレーション", "パフォーマンス", "リーダーシップ",
+    "フィードバック", "能力",
+    # news & current affairs
+    "発表", "選挙", "紛争",
+    "出来事", "危機", "課題", "抗議", "改革",
+    "キャンペーン", "政治", "政府", "社会", "経済",
+    "統計", "世論調査", "見出し", "出典", "条約",
+    # technology & digital (B1 depth)
+    "ソフトウェア", "デバイス", "ネットワーク", "データ",
+    "セキュリティ", "プライバシー", "プラットフォーム",
+    "インターフェース", "ユーザー", "データベース",
+    "ストレージ", "人工知能", "自動化",
+    # health & medicine (extended)
+    "治療", "症状", "診断", "療法",
+    "リハビリ", "ワクチン", "抗生物質", "専門医",
+    "投与量", "副作用", "予防", "燃え尽き症候群",
+    # environment & sustainability
+    "気候", "環境", "汚染", "持続可能",
+    "自然資源", "種", "生息地", "排出",
+    "炭素フットプリント", "生物多様性", "干ばつ", "洪水",
+    "森林伐採", "地球温暖化", "再生可能",
+    "廃棄物", "環境への影響", "太陽エネルギー",
+    "風力エネルギー", "エネルギー転換",
+    # education & learning (B1 depth)
+    "研究", "論文", "奨学金",
+    "ワークショップ", "セミナー", "方法論", "機関",
+    "アカデミー", "登録", "能力",
+    # social issues & society
+    "平等", "多様性", "包括性", "差別",
+    "偏見", "貧困", "不平等", "公正",
+    "権利", "義務", "市民権", "統合",
+    "移住", "難民", "コミュニティ", "ボランティア活動",
+    "連帯", "幸福", "寛容", "アクセシビリティ",
+    # extended abstract adjectives
+    "複雑な", "一般的な", "具体的な", "特定の",
+    "明確な", "通常の", "独自の", "最近の",
+    "深刻な", "類似した", "典型的な", "様々な",
+    "効率的な", "柔軟な", "革新的な", "創造的な",
+    "批判的な", "論理的な", "抽象的な", "根本的な",
+    "関連した", "重要な", "注目に値する", "相当な",
+    "例外的な", "穏やかな", "激しい", "永続的な",
+    "一時的な", "国際的な", "公式の", "非公式の",
+    # extended verbs (cognitive & communicative)
+    "検討する", "分析する", "解釈する", "議論する",
+    "主張する", "疑う", "認識する", "感知する",
+    "反省する", "評価する", "正当化する", "証明する",
+    "調査する", "実施する", "適応する", "変革する",
+    "貢献する", "参加する", "協力する", "交渉する",
+    "管理する", "調整する", "確立する", "特定する",
+    "監督する", "推進する", "支持する", "反論する",
+    "影響を与える", "防止する", "削減する", "増加させる",
+    # extended adverbs & discourse connectors
+    "しかし", "したがって", "また", "一方",
+    "それにもかかわらず", "その結果", "以前", "現在",
+    "近いうちに", "明確に", "明らかに",
+    "一般的に", "具体的には",
+    "実際には", "もちろん"
+})
+# ── Chinese B1 (zh) ───────────────────────────────────────────────────────────
+_ZH_B1: frozenset[str] = frozenset({
+    # abstract concepts & nouns
+    "意见", "情况", "解决方案", "结果", "关系",
+    "机会", "原因", "细节", "事实",
+    "区别", "变化", "发展", "效果", "优势",
+    "劣势", "目的", "价值", "作用", "质量",
+    "过程", "方法", "层次", "注意力", "努力",
+    "可能性", "责任", "重要性", "方面",
+    "原因", "条件", "背景", "困难", "证据",
+    "功能", "影响", "知识",
+    "损失", "意义", "需求", "时期",
+    "压力", "原则", "进步", "意义",
+    "阶段", "结构", "系统", "术语", "视角",
+    "结论", "理论", "主张", "分析", "批评",
+    "提议", "替代方案", "趋势", "后果",
+    "假设", "论点",
+    # opinions & debate
+    "辩论", "讨论", "观点", "判断",
+    "评估", "同意", "不同意",
+    # work & professional (B1 depth)
+    "演示", "申请", "面试", "部门",
+    "技能", "资格", "培训", "目标",
+    "战略", "预算", "收益", "资源",
+    "合作", "绩效", "领导力",
+    "反馈", "能力",
+    # news & current affairs
+    "公告", "选举", "冲突",
+    "事件", "危机", "挑战", "抗议", "改革",
+    "运动", "政策", "政府", "社会", "经济",
+    "统计数据", "民意调查", "标题", "来源", "条约",
+    # technology & digital (B1 depth)
+    "软件", "设备", "数据",
+    "隐私", "平台", "程序", "界面",
+    "用户", "数据库", "存储",
+    "人工智能", "自动化",
+    # health & medicine (extended)
+    "治疗", "症状", "诊断", "疗法",
+    "康复", "疫苗", "抗生素", "专科医生",
+    "剂量", "副作用", "预防", "职业倦怠",
+    # environment & sustainability
+    "气候", "环境", "污染", "可持续",
+    "自然资源", "物种", "栖息地", "排放",
+    "碳足迹", "生物多样性", "干旱", "洪水",
+    "森林砍伐", "全球变暖", "可回收",
+    "废物", "环境影响", "太阳能",
+    "风能", "能源转型",
+    # education & learning (B1 depth)
+    "研究", "论文", "奖学金",
+    "研讨会", "方法论", "机构",
+    "学院", "注册", "能力",
+    # social issues & society
+    "平等", "多样性", "包容性", "歧视",
+    "偏见", "贫困", "不平等", "正义",
+    "权利", "义务", "公民权", "融合",
+    "移民", "难民", "社区", "志愿活动",
+    "团结", "福祉", "宽容", "无障碍",
+    # extended abstract adjectives
+    "复杂", "简单", "一般", "具体", "特定",
+    "明确", "正常", "独特", "近期",
+    "严重", "相似", "典型", "多样",
+    "高效", "灵活", "创新", "有创意",
+    "批判性", "合理的", "抽象", "根本",
+    "相关", "显著",
+    "特殊", "温和", "激烈", "持久",
+    "临时", "国际", "官方", "正式", "非正式",
+    # extended verbs (cognitive & communicative)
+    "考虑", "分析", "辩论",
+    "论证", "怀疑", "承认", "感知",
+    "反思", "评估", "证明", "核实",
+    "调查", "执行", "适应", "转变",
+    "促进", "谈判", "协调", "确立",
+    "确定", "监督", "推广", "支持",
+    "挑战", "影响", "预防", "减少", "增加",
+    # extended adverbs & discourse connectors
+    "然而", "因此", "此外", "另一方面",
+    "相反", "尽管", "不过", "因此",
+    "总的来说", "目前", "不久后",
+    "明显地", "尤其是",
+    "具体地", "实际上", "当然"
+})
+# ── Arabic B1 (ar) ────────────────────────────────────────────────────────────
+# Unvocalised forms matching arabic.py's _strip_tashkeel() output.
+_AR_B1: frozenset[str] = frozenset({
+    # abstract concepts & nouns
+    "رأي", "حالة", "حل", "علاقة",
+    "فرصة", "قرار", "سبب", "تفصيل", "حقيقة",
+    "فرق", "تغيير", "تطور", "أثر", "ميزة",
+    "عيب", "قيمة", "دور", "جودة",
+    "أسلوب", "مستوى", "انتباه", "جهد",
+    "إمكانية", "مسؤولية", "أهمية", "جانب",
+    "سبب", "شرط", "سياق", "صعوبة", "دليل",
+    "وظيفة", "تأثير", "معرفة",
+    "خسارة", "معنى", "حاجة", "مرحلة",
+    "ضغط", "مبدأ", "تقدم", "مفهوم",
+    "هيكل", "نظام", "مصطلح", "منظور",
+    "استنتاج", "نظرية", "تصريح", "تحليل", "نقد",
+    "مقترح", "بديل", "اتجاه", "عواقب",
+    "افتراض", "فرضية", "حجة",
+    # opinions & debate
+    "نقاش", "مناقشة", "وجهة نظر", "حكم",
+    "توصية", "تقييم", "اتفاق", "خلاف",
+    # work & professional (B1 depth)
+    "عرض تقديمي", "طلب", "مقابلة", "قسم",
+    "مهارة", "تأهيل", "غاية",
+    "استراتيجية", "ميزانية", "فائدة", "مورد",
+    "تعاون", "أداء", "قيادة",
+    "تغذية راجعة", "كفاءة",
+    # news & current affairs
+    "إعلان", "انتخابات", "صراع",
+    "حدث", "أزمة", "تحدي", "احتجاج", "إصلاح",
+    "حملة", "سياسة", "حكومة", "مجتمع", "اقتصاد",
+    "إحصاء", "استطلاع", "مصدر", "معاهدة",
+    # technology & digital (B1 depth)
+    "جهاز", "شبكة", "بيانات", "أمان",
+    "خصوصية", "منصة", "واجهة",
+    "مستخدم", "قاعدة بيانات", "تخزين",
+    "ذكاء اصطناعي", "أتمتة",
+    # health & medicine (extended)
+    "علاج", "أعراض", "تشخيص", "علاج طبيعي",
+    "تأهيل", "لقاح", "مضاد حيوي", "متخصص",
+    "جرعة", "أعراض جانبية", "وقاية", "إرهاق",
+    # environment & sustainability
+    "مناخ", "بيئة", "تلوث", "مستدام",
+    "مورد طبيعي", "نوع", "موطن", "انبعاثات",
+    "بصمة الكربون", "تنوع بيولوجي", "جفاف", "فيضان",
+    "إزالة الغابات", "الاحترار العالمي", "قابل للتدوير",
+    "نفايات", "أثر بيئي", "طاقة شمسية",
+    "طاقة رياح", "تحول طاقوي",
+    # education & learning (B1 depth)
+    "منحة", "مؤتمر",
+    "ورشة", "ندوة", "منهجية", "مؤسسة",
+    "أكاديمية", "تسجيل", "كفاءة",
+    # social issues & society
+    "مساواة", "تنوع", "شمول", "تمييز",
+    "تحيز", "فقر", "عدم مساواة", "عدالة",
+    "جنسية", "اندماج",
+    "هجرة", "لاجئ", "مجتمع", "تطوع",
+    "تضامن", "رفاهية", "تسامح",
+    # extended abstract adjectives
+    "معقد", "بسيط", "محدد",
+    "واضح", "طبيعي", "أصيل",
+    "مشابه", "نموذجي", "متنوع",
+    "فعال", "مرن", "مبتكر", "إبداعي",
+    "نقدي", "منطقي", "مجرد", "أساسي",
+    "ذو صلة", "ملحوظ",
+    "استثنائي", "معتدل", "مكثف", "دائم",
+    "مؤقت", "عالمي", "دولي", "رسمي", "غير رسمي",
+    # extended verbs (cognitive & communicative)
+    "يراعي", "يحلل", "يفسر", "يناقش",
+    "يجادل", "يشكك", "يعترف", "يدرك",
+    "يفكر", "يقيم", "يبرر", "يثبت",
+    "يتحقق", "يبحث", "يحل", "ينفذ",
+    "يكيف", "يحول", "يساهم", "يشارك",
+    "يتعاون", "يتواصل", "يتفاوض", "يدير",
+    "ينسق", "يحدد", "يشرف", "يروج",
+    "يدعم", "يدافع", "يتحدى", "يؤثر",
+    "يمنع", "يقلل", "يزيد",
+    # extended adverbs & discourse connectors
+    "ومع ذلك", "لذلك", "علاوة على ذلك",
+    "من ناحية أخرى", "على العكس", "بالرغم من",
+    "نتيجة لذلك", "باختصار", "سابقاً",
+    "حالياً", "قريباً", "بوضوح", "من الواضح",
+    "بشكل رئيسي", "عموماً",
+    "بالتحديد", "في الواقع", "بالطبع"
+})
+# ── Hebrew B1 (he) ────────────────────────────────────────────────────────────
+# Unvocalised consonantal forms matching hebrew.py's _strip_nikud() output.
+_HE_B1: frozenset[str] = frozenset({
+    # abstract concepts & nouns
+    "דעה", "מצב", "פתרון", "קשר",
+    "הזדמנות", "החלטה", "סיבה", "פרט", "עובדה",
+    "הבדל", "שינוי", "התפתחות", "השפעה", "יתרון",
+    "חיסרון", "מטרה", "ערך", "תפקיד", "איכות",
+    "תהליך", "שיטה", "רמה", "תשומת לב", "מאמץ",
+    "אפשרות", "אחריות", "חשיבות", "היבט",
+    "גורם", "תנאי", "הקשר", "קושי", "ראיה",
+    "תפקוד",
+    "אובדן", "משמעות", "צורך", "תקופה",
+    "לחץ", "עיקרון", "התקדמות", "תחושה",
+    "שלב", "מבנה", "מערכת", "מונח", "נקודת מבט",
+    "מסקנה", "תיאוריה", "טענה", "ביקורת",
+    "הצעה", "חלופה", "מגמה", "השלכה",
+    "השערה", "טיעון",
+    # opinions & debate
+    "ויכוח", "דיון", "השקפה", "שיפוט",
+    "המלצה", "הערכה", "הסכמה", "אי הסכמה",
+    # work & professional (B1 depth)
+    "מצגת", "בקשה", "ראיון", "מחלקה",
+    "כישרון", "כישורים", "הכשרה", "יעד",
+    "אסטרטגיה", "תקציב", "תועלת", "משאב",
+    "שיתוף פעולה", "ביצועים", "מנהיגות",
+    "משוב", "יכולת",
+    # news & current affairs
+    "הכרזה", "בחירות", "סכסוך",
+    "אירוע", "משבר", "אתגר", "מחאה", "רפורמה",
+    "קמפיין", "פוליטיקה", "ממשלה", "כלכלה",
+    "נתונים סטטיסטיים", "סקר", "כותרת", "מקור", "הסכם",
+    # technology & digital (B1 depth)
+    "תוכנה", "מכשיר", "רשת", "נתונים", "אבטחה",
+    "פרטיות", "פלטפורמה", "ממשק",
+    "משתמש", "מסד נתונים", "אחסון", "עדכון",
+    "בינה מלאכותית", "אוטומציה",
+    # health & medicine (extended)
+    "טיפול", "תסמין", "אבחנה", "טיפול רפואי",
+    "שיקום", "חיסון", "אנטיביוטיקה", "מומחה",
+    "מינון", "תופעת לוואי", "מניעה", "שחיקה",
+    # environment & sustainability
+    "אקלים", "סביבה", "זיהום", "בר קיימא",
+    "משאב טבעי", "מין", "בית גידול", "פליטה",
+    "טביעת רגל פחמנית", "מגוון ביולוגי", "בצורת", "שיטפון",
+    "כריתת יערות", "התחממות עולמית", "ניתן למחזר",
+    "פסולת", "השפעה סביבתית", "אנרגיה סולארית",
+    "אנרגיה רוחית", "מעבר אנרגטי",
+    # education & learning (B1 depth)
+    "מחקר", "עבודת גמר", "מלגה", "כנס",
+    "סדנה", "סמינר", "מתודולוגיה", "מוסד",
+    "אקדמיה", "הרשמה", "כשירות",
+    # social issues & society
+    "שוויון", "גיוון", "הכלה", "אפליה",
+    "דעה קדומה", "עוני", "אי שוויון", "צדק",
+    "זכויות", "חובה", "אזרחות", "שילוב",
+    "הגירה", "פליט", "קהילה", "התנדבות",
+    "סולידריות", "רווחה", "סובלנות", "נגישות",
+    # extended abstract adjectives
+    "מורכב", "פשוט", "כללי", "ספציפי",
+    "ברור", "רגיל", "מקורי",
+    "חמור", "דומה", "טיפוסי", "מגוון",
+    "יעיל", "גמיש", "חדשני", "יצירתי",
+    "ביקורתי", "הגיוני", "מופשט", "בסיסי",
+    "רלוונטי", "משמעותי", "בולט", "ניכר",
+    "יוצא דופן", "מתון", "עצים", "קבוע",
+    "זמני", "בינלאומי", "רשמי", "בלתי רשמי",
+    # extended verbs (cognitive & communicative)
+    "לשקול", "לנתח", "לפרש", "לדון",
+    "לטעון", "לפקפק", "להכיר", "לתפוס",
+    "להרהר", "להעריך", "להצדיק", "להוכיח",
+    "לאמת", "לחקור", "לפתור", "ליישם",
+    "להתאים", "לשנות", "לתרום", "להשתתף",
+    "לשתף פעולה", "לתקשר", "לנהל משא ומתן",
+    "לנהל", "לתאם", "לבסס", "לזהות",
+    "לפקח", "לקדם", "לתמוך", "להגן",
+    "לערער", "להשפיע", "למנוע", "להפחית",
+    # extended adverbs & discourse connectors
+    "עם זאת", "לכן", "בנוסף",
+    "מצד שני", "להיפך", "למרות", "בכל זאת",
+    "כתוצאה", "בקצרה", "בעבר",
+    "כיום", "בקרוב", "בבירור", "ברור",
+    "בפרט", "למעשה", "כמובן"
+})
+#: Map from language code to frozenset of B1 lemmas (excludes A1 and A2 items).
+B1: dict[str, frozenset[str]] = {
+    "es": _ES_B1,
+    "fr": _FR_B1,
+    "de": _DE_B1,
+    "it": _IT_B1,
+    "pt": _PT_B1,
+    "ru": _RU_B1,
+    "ja": _JA_B1,
+    "zh": _ZH_B1,
+    "ar": _AR_B1,
+    "he": _HE_B1,
 }
