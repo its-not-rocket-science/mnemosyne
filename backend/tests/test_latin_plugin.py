@@ -51,8 +51,8 @@ class TestCapabilities:
         # Latin already uses Latin script — no separate romanization needed.
         assert plugin.capabilities.transliteration_scheme is None
 
-    def test_morphology_quality_low(self, plugin: LatinPlugin) -> None:
-        assert plugin.capabilities.morphology_quality == "low"
+    def test_morphology_quality_medium(self, plugin: LatinPlugin) -> None:
+        assert plugin.capabilities.morphology_quality == "medium"
 
     def test_no_syntax_support(self, plugin: LatinPlugin) -> None:
         assert plugin.capabilities.syntax_support is False
