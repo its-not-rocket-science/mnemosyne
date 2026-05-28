@@ -10,11 +10,18 @@ What this plugin does reliably
     cluster with attached matras, chandrabindu, and anusvara so that
     combining marks are never separated from their base character.
   - ASCII-only Latin loanwords are preserved as separate tokens.
-  - Basic morphology hints extracted by suffix pattern matching:
-    • Verb aspect/tense: infinitive -ना, past m/f -ा/-ी, habitual m/f -ता/-ती,
-      future m/f -एगा/-एगी, subjunctive -ए/-ें, imperative -ो/-ओ/-इए.
-    • Noun/adjective gender/number: oblique -े/-ों, plural -एं/-ें, vocative -ो.
-    • Postposition detection: ने/को/से/में/पर/के/की/का/एक/कि/यह/वह/है/हैं/था/थे.
+  - Postposition detection:
+    • Single-word postpositions (ने, को, से, में, पर, के, की, का, …)
+      identified from a closed-class list.
+    • Common multi-word postpositions (के लिए, के बाद, के पहले, के साथ, …)
+      detected by scanning sentence bigrams and trigrams.
+  - Verb form detection with conjugation type:
+    Words where suffix rules match a tense/mood/aspect feature are emitted
+    as "conjugation" objects with morphological fields, not bare vocabulary.
+    Detected forms: future (m/f sg/pl), habitual/imperfective (m/f),
+    past perfective (m/f), infinitive, subjunctive, imperative, participle.
+  - Noun/adjective gender/number hints: oblique, plural, vocative.
+  - Function word (copula, auxiliaries, pronouns, particles) identification.
   - Romanisation using a simplified IAST-style scheme (informational; not
     phonetically precise for all dialects).
 
@@ -29,6 +36,7 @@ Known limitations
   • No CEFR level data available for Hindi in this release.
   • Analysis quality: morphology_light — do not rely on morphological fields
     for precise linguistic annotation.
+  • Lemmatisation is NOT performed; canonical_form uses the surface form.
 """
 from __future__ import annotations
 
@@ -60,13 +68,28 @@ _DEVA_WORD_RE = re.compile(
 _LATIN_WORD_RE = re.compile(r"[A-Za-z0-9]+")
 
 # ── Postpositions (case markers / function words) ─────────────────────────────
-# These attach to noun phrases and mark grammatical relations; surface always
-# as separate orthographic words in modern standard Hindi.
+# Single-word postpositions that follow nouns and mark grammatical relations.
 _POSTPOSITIONS: frozenset[str] = frozenset({
     "ने", "को", "से", "में", "पर", "के", "की", "का",
-    "के लिए", "तक", "के बाद", "के पहले", "के साथ",
-    "के बारे में", "के ऊपर", "के नीचे",
+    "तक", "द्वारा", "बिना", "जैसे", "सामने",
 })
+
+# Multi-word postpositions (bigrams and trigrams).
+# Each is a tuple of tokens to match as a consecutive sequence.
+_MULTI_WORD_POSTPOSITIONS: list[tuple[str, ...]] = [
+    ("के", "लिए"),
+    ("के", "बाद"),
+    ("के", "पहले"),
+    ("के", "साथ"),
+    ("के", "ऊपर"),
+    ("के", "नीचे"),
+    ("के", "अंदर"),
+    ("के", "बाहर"),
+    ("के", "बिना"),
+    ("के", "बारे", "में"),
+    ("की", "तरफ"),
+    ("की", "ओर"),
+]
 
 # Function words — copula/auxiliaries worth tagging.
 _FUNCTION_WORDS: frozenset[str] = frozenset({
@@ -74,38 +97,42 @@ _FUNCTION_WORDS: frozenset[str] = frozenset({
     "होगा", "होगी", "होंगे", "होंगी", "हो", "हों",
     "यह", "वह", "वे", "ये", "मैं", "तुम", "आप", "हम",
     "एक", "कि", "और", "या", "भी", "नहीं", "मत",
+    "जो", "सो", "तो", "फिर", "अब", "यहाँ", "वहाँ",
+    "क्या", "कौन", "कहाँ", "कब", "कैसे", "कितना",
 })
 
 # ── Morphology hints (verb suffixes) ─────────────────────────────────────────
 # Ordered longest-match first to avoid partial matches.
+# Returns (feature_dict, is_verb_form) where is_verb_form signals conjugation.
 _VERB_SUFFIXES: list[tuple[str, dict]] = [
-    # Future
-    ("एगा",  {"tense": "future", "gender": "masculine", "number": "singular"}),
-    ("एगी",  {"tense": "future", "gender": "feminine",  "number": "singular"}),
-    ("एंगे", {"tense": "future", "gender": "masculine", "number": "plural"}),
+    # Future (4-way gender × number)
     ("एंगी", {"tense": "future", "gender": "feminine",  "number": "plural"}),
-    # Habitual / imperfective
-    ("ता है", {"tense": "present_habitual", "gender": "masculine", "number": "singular"}),
-    ("ती है", {"tense": "present_habitual", "gender": "feminine",  "number": "singular"}),
-    ("ते हैं", {"tense": "present_habitual", "gender": "masculine", "number": "plural"}),
+    ("एंगे", {"tense": "future", "gender": "masculine", "number": "plural"}),
+    ("एगी",  {"tense": "future", "gender": "feminine",  "number": "singular"}),
+    ("एगा",  {"tense": "future", "gender": "masculine", "number": "singular"}),
+    # Habitual + auxiliary (longer forms first)
     ("ती हैं", {"tense": "present_habitual", "gender": "feminine",  "number": "plural"}),
-    ("ता",   {"aspect": "habitual", "gender": "masculine"}),
-    ("ती",   {"aspect": "habitual", "gender": "feminine"}),
+    ("ते हैं", {"tense": "present_habitual", "gender": "masculine", "number": "plural"}),
+    ("ती है", {"tense": "present_habitual", "gender": "feminine",  "number": "singular"}),
+    ("ता है", {"tense": "present_habitual", "gender": "masculine", "number": "singular"}),
+    # Past perfective auxiliary forms
+    ("आए",   {"tense": "past", "gender": "masculine", "number": "plural",   "aspect": "perfective"}),
+    ("आई",   {"tense": "past", "gender": "feminine",  "aspect": "perfective"}),
+    ("आया",  {"tense": "past", "gender": "masculine", "number": "singular", "aspect": "perfective"}),
+    # Habitual / imperfective (bare)
     ("ते",   {"aspect": "habitual", "gender": "masculine", "number": "plural"}),
-    # Past perfective
-    ("आया",  {"tense": "past", "gender": "masculine"}),
-    ("आई",   {"tense": "past", "gender": "feminine"}),
-    ("आए",   {"tense": "past", "gender": "masculine", "number": "plural"}),
+    ("ती",   {"aspect": "habitual", "gender": "feminine"}),
+    ("ता",   {"aspect": "habitual", "gender": "masculine"}),
     # Infinitive
     ("ना",   {"verb_form": "infinitive"}),
-    # Subjunctive / imperative
-    ("ए",    {"mood": "subjunctive_or_imperative"}),
-    ("ओ",    {"mood": "imperative", "person": "second"}),
+    # Imperative
     ("इए",   {"mood": "imperative", "register": "formal"}),
-    ("ो",    {"mood": "imperative_or_oblique"}),
-    # Perfective participle
-    ("ा",    {"verb_form": "perfective_participle", "gender": "masculine"}),
+    ("ओ",    {"mood": "imperative", "person": "second"}),
+    # Subjunctive / polite imperative
+    ("ए",    {"mood": "subjunctive_or_imperative"}),
+    # Perfective participle (noun-like; omit oblique "ो" to avoid false pos)
     ("ी",    {"verb_form": "perfective_participle", "gender": "feminine"}),
+    ("ा",    {"verb_form": "perfective_participle", "gender": "masculine"}),
 ]
 
 # ── Noun/adjective suffix hints ───────────────────────────────────────────────
@@ -117,8 +144,6 @@ _NOUN_SUFFIXES: list[tuple[str, dict]] = [
 ]
 
 # ── Simplified IAST-style romanisation ───────────────────────────────────────
-# Maps each relevant Devanagari code point to its approximate romanisation.
-# This is informational only — not a full phonemic transcription.
 _IAST: dict[str, str] = {
     "अ": "a",  "आ": "ā",  "इ": "i",  "ई": "ī",  "उ": "u",  "ऊ": "ū",
     "ए": "e",  "ऐ": "ai", "ओ": "o",  "औ": "au", "ऋ": "ṛ",  "ॠ": "ṝ",
@@ -130,88 +155,87 @@ _IAST: dict[str, str] = {
     "य": "y",  "र": "r",  "ल": "l",  "व": "v",
     "श": "ś",  "ष": "ṣ",  "स": "s",  "ह": "h",
     "ळ": "ḷ",
-    # Matras (vowel signs — attached to consonants)
+    # Matras (vowel signs)
     "ा": "ā",  "ि": "i",  "ी": "ī",  "ु": "u",  "ू": "ū",
     "े": "e",  "ै": "ai", "ो": "o",  "ौ": "au",
     "ं": "ṃ",  "ः": "ḥ",  "ँ": "m̐",  "ऽ": "'",
-    "्": "",   # virama — suppresses inherent a
+    "्": "",
     "ऩ": "n",  "ऱ": "r",  "ऴ": "ẓ",  "ॽ": "'",
-    # Nukta variants (for Urdu-origin sounds)
+    # Nukta variants (Urdu-origin sounds)
     "क़": "q",  "ख़": "x",  "ग़": "ġ",  "ज़": "z",  "ड़": "ṛ",  "ढ़": "ṛh",
-    "फ़": "f",  "य़": "ẏ",  "ऱ": "r",
+    "फ़": "f",  "य़": "ẏ",
 }
 
 
 def _romanise(word: str) -> str:
     """Approximate IAST romanisation of a single Devanagari token."""
     parts: list[str] = []
-    prev_consonant = False
     for ch in word:
         if unicodedata.category(ch) == "Mn":
-            # Combining mark — matra or virama
             r = _IAST.get(ch, "")
-            if r == "" and ch == "्":
-                # virama removes the inherent 'a' from previous consonant
-                if parts and parts[-1] == "a":
-                    parts.pop()
-                prev_consonant = False
+            if ch == "्":
+                if parts and parts[-1].endswith("a"):
+                    parts[-1] = parts[-1][:-1]
                 continue
             if r:
-                # Replace implicit 'a' written for previous consonant
-                if parts and parts[-1] == "a":
-                    parts[-1] = r
+                if parts and parts[-1].endswith("a"):
+                    parts[-1] = parts[-1][:-1] + r
                 else:
                     parts.append(r)
-            prev_consonant = False
         else:
             r = _IAST.get(ch)
             if r is not None:
                 if unicodedata.category(ch).startswith("L"):
-                    # Consonant — add with implicit 'a'
                     parts.append(r + "a")
-                    prev_consonant = True
                 else:
                     parts.append(r)
-                    prev_consonant = False
             else:
                 parts.append(ch)
-                prev_consonant = False
-    # Remove trailing implicit 'a' on final consonant (common in citation forms)
-    if parts and parts[-1].endswith("a") and len(parts[-1]) > 1:
-        # only remove if it seems to be a trailing inherent vowel
-        pass  # conservative: leave it
     return "".join(parts)
 
 
-def _extract_morph(token: str) -> dict:
-    """Apply suffix pattern rules; return morphology dict (may be empty)."""
-    morph: dict = {}
+def _extract_verb_morph(token: str) -> dict | None:
+    """Return verb morphology if a verb suffix matches, else None."""
     for suffix, features in _VERB_SUFFIXES:
         if token.endswith(suffix) and len(token) > len(suffix):
-            morph.update(features)
-            morph["pos"] = "verb"
-            break
-    if not morph:
-        for suffix, features in _NOUN_SUFFIXES:
-            if token.endswith(suffix) and len(token) > len(suffix):
-                morph.update(features)
-                morph["pos"] = "noun_or_adjective"
-                break
-    return morph
+            return dict(features)
+    return None
+
+
+def _extract_noun_morph(token: str) -> dict:
+    """Return noun/adjective morphology hints; empty dict if no match."""
+    for suffix, features in _NOUN_SUFFIXES:
+        if token.endswith(suffix) and len(token) > len(suffix):
+            return dict(features)
+    return {}
+
+
+def _find_multi_word_postpositions(tokens: list[str]) -> set[int]:
+    """Return indices consumed by multi-word postpositions."""
+    consumed: set[int] = set()
+    for mwp in _MULTI_WORD_POSTPOSITIONS:
+        length = len(mwp)
+        for i in range(len(tokens) - length + 1):
+            if tuple(tokens[i:i + length]) == mwp:
+                for j in range(i, i + length):
+                    consumed.add(j)
+    return consumed
 
 
 _CONFIDENCE_NOTE = (
     "Hindi morphology-light: suffix-pattern heuristics only. "
     "Morphological features (tense, gender, case) are probable, not certain. "
-    "No compound-verb decomposition, sandhi resolution, or loanword analysis."
+    "No compound-verb decomposition, sandhi resolution, or loanword analysis. "
+    "Lemmatisation not performed; canonical_form is the surface form."
 )
 
 
 class HindiPlugin:
     """Hindi morphology-light plugin.
 
-    Provides Devanagari tokenisation, suffix-based morphology hints,
-    and approximate IAST romanisation. Capabilities honestly declared.
+    Provides Devanagari tokenisation, suffix-based morphology hints with
+    conjugation-type emission for detected verb forms, multi-word postposition
+    detection, and approximate IAST romanisation. Capabilities honestly declared.
     """
 
     language_code = "hi"
@@ -233,6 +257,8 @@ class HindiPlugin:
         idiom_detection=False,
         tts_lang_tag="hi",
         transliteration_scheme="iast_approximate",
+        tense_pool=["present_habitual", "past", "future"],
+        mood_pool=["imperative", "subjunctive_or_imperative"],
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="none",
@@ -247,8 +273,9 @@ class HindiPlugin:
             classical_or_scriptural_allusion="none",
             notes=(
                 "Morphology-light: verb tense/aspect/gender and noun case hints "
-                "derived from suffix patterns only. No trained model. Postpositions "
-                "and function words identified by closed-class list."
+                "derived from suffix patterns only. Detected verb forms emitted as "
+                "conjugation objects. Multi-word postpositions detected via bigram/"
+                "trigram scan. No trained model."
             ),
         ),
     )
@@ -273,57 +300,127 @@ class HindiPlugin:
         deva_tokens = _DEVA_WORD_RE.findall(sentence)
         latin_tokens = _LATIN_WORD_RE.findall(sentence) if re.search(r"[A-Za-z]", sentence) else []
 
-        for token in deva_tokens:
+        # Multi-word postposition scan — mark indices consumed by MWPs
+        mwp_consumed = _find_multi_word_postpositions(deva_tokens)
+
+        for idx, token in enumerate(deva_tokens):
             if token in seen:
                 continue
-            seen.add(token)
 
             romanised = _romanise(token)
-            morph = _extract_morph(token)
+
+            # Multi-word postposition participant
+            if idx in mwp_consumed:
+                # Emit the full sequence only on the first token of each MWP
+                # (subsequent tokens within the same MWP are skipped as "seen")
+                # Find which MWP starts here
+                mwp_surface: str | None = None
+                for mwp in _MULTI_WORD_POSTPOSITIONS:
+                    if len(mwp) <= len(deva_tokens) - idx:
+                        if tuple(deva_tokens[idx:idx + len(mwp)]) == mwp:
+                            mwp_surface = " ".join(mwp)
+                            canonical = mwp_surface
+                            break
+                if mwp_surface and canonical not in seen:
+                    seen.add(canonical)
+                    # Mark component tokens so they aren't re-emitted
+                    for mwp in _MULTI_WORD_POSTPOSITIONS:
+                        if len(mwp) <= len(deva_tokens) - idx:
+                            if tuple(deva_tokens[idx:idx + len(mwp)]) == mwp:
+                                for j in range(1, len(mwp)):
+                                    seen.add(deva_tokens[idx + j])
+                                break
+                    candidates.append(CandidateObject(
+                        canonical_form=canonical,
+                        surface_form=mwp_surface,
+                        type="grammar",
+                        label=mwp_surface,
+                        lesson_data={
+                            "surface_form": mwp_surface,
+                            "romanized":    _romanise("".join(mwp)),
+                            "pos":          "postposition",
+                            "note":         "Multi-word grammatical postposition.",
+                            "confidence_note": _CONFIDENCE_NOTE,
+                        },
+                        confidence=0.80,
+                    ))
+                elif token not in seen:
+                    seen.add(token)
+                continue
+
+            seen.add(token)
 
             is_postposition = token in _POSTPOSITIONS
             is_function     = token in _FUNCTION_WORDS
 
             if is_postposition:
-                obj_type = "grammar"
-                lesson_data: dict = {
-                    "surface_form": token,
-                    "romanized":    romanised,
-                    "pos":          "postposition",
-                    "note":         "Grammatical postposition (case marker).",
-                }
-                confidence: float | None = 0.85
-            elif is_function:
-                obj_type = "vocabulary"
-                lesson_data = {
-                    "lemma":        token,
-                    "surface_form": token,
-                    "romanized":    romanised,
-                    "pos":          "function_word",
-                }
-                confidence = 0.80
-            else:
-                obj_type = "vocabulary"
-                lesson_data = {
-                    "lemma":           token,
-                    "surface_form":    token,
-                    "romanized":       romanised,
-                    "confidence_note": _CONFIDENCE_NOTE,
-                }
-                if morph:
-                    lesson_data.update(morph)
-                confidence = 0.45 if morph else None
-
-            candidates.append(
-                CandidateObject(
+                candidates.append(CandidateObject(
                     canonical_form=token,
                     surface_form=token,
-                    type=obj_type,
+                    type="grammar",
                     label=token,
-                    lesson_data=lesson_data,
-                    confidence=confidence,
-                )
-            )
+                    lesson_data={
+                        "surface_form":    token,
+                        "romanized":       romanised,
+                        "pos":             "postposition",
+                        "note":            "Grammatical postposition (case marker).",
+                        "confidence_note": _CONFIDENCE_NOTE,
+                    },
+                    confidence=0.85,
+                ))
+            elif is_function:
+                candidates.append(CandidateObject(
+                    canonical_form=token,
+                    surface_form=token,
+                    type="vocabulary",
+                    label=token,
+                    lesson_data={
+                        "lemma":        token,
+                        "surface_form": token,
+                        "romanized":    romanised,
+                        "pos":          "function_word",
+                    },
+                    confidence=0.80,
+                ))
+            else:
+                verb_morph = _extract_verb_morph(token)
+                if verb_morph:
+                    # Emit as conjugation — verb form with morphological analysis
+                    morph_tag = ":".join(f"{k}={v}" for k, v in sorted(verb_morph.items()))
+                    canonical = f"{token}:{morph_tag}"
+                    lesson_data: dict = {
+                        "surface_form":    token,
+                        "romanized":       romanised,
+                        "pos":             "verb",
+                        "confidence_note": _CONFIDENCE_NOTE,
+                    }
+                    lesson_data.update(verb_morph)
+                    candidates.append(CandidateObject(
+                        canonical_form=canonical,
+                        surface_form=token,
+                        type="conjugation",
+                        label=token,
+                        lesson_data=lesson_data,
+                        confidence=0.45,
+                    ))
+                else:
+                    noun_morph = _extract_noun_morph(token)
+                    lesson_data = {
+                        "lemma":           token,
+                        "surface_form":    token,
+                        "romanized":       romanised,
+                        "confidence_note": _CONFIDENCE_NOTE,
+                    }
+                    if noun_morph:
+                        lesson_data.update(noun_morph)
+                    candidates.append(CandidateObject(
+                        canonical_form=token,
+                        surface_form=token,
+                        type="vocabulary",
+                        label=token,
+                        lesson_data=lesson_data,
+                        confidence=0.45 if noun_morph else None,
+                    ))
 
         # Latin tokens (loanwords/numerals) as low-confidence vocabulary
         for token in latin_tokens:

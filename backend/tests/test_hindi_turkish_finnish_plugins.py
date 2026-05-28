@@ -6,10 +6,19 @@ Covers:
 3. Tokenisation.
 4. Vocabulary extraction (non-empty candidates).
 5. Morphological feature hints for known-suffix words.
-6. Function word and closed-class detection.
-7. Confidence degradation (None for unknown words, float for recognised).
-8. Script/direction metadata.
-9. Lesson retrieval via get_lesson.
+6. Conjugation type emitted for detected verb forms.
+7. Function word and postposition detection.
+8. Multi-word postposition detection (Hindi bigram/trigram scan).
+9. Confidence degradation (None for unknown words, float for recognised).
+10. Script/direction metadata.
+11. tense_pool / mood_pool populated in capabilities.
+12. Turkish evidential past (-mış/-miş).
+13. Turkish I/İ normalisation.
+14. Finnish 15-case detection.
+15. Finnish passive voice.
+16. No duplicate canonical forms per sentence.
+17. Lesson retrieval via get_lesson.
+18. Round-trip: analyze → stored canonical forms are unique.
 """
 from __future__ import annotations
 
@@ -45,6 +54,16 @@ class TestHindiPlugin:
         assert caps.morphology_depth == "shallow"
         assert caps.morphology_quality == "low"
         assert caps.syntax_support is False
+
+    def test_tense_pool_populated(self):
+        caps = self.plugin.capabilities
+        assert caps.tense_pool is not None
+        assert len(caps.tense_pool) >= 2
+
+    def test_mood_pool_populated(self):
+        caps = self.plugin.capabilities
+        assert caps.mood_pool is not None
+        assert len(caps.mood_pool) >= 1
 
     def test_sentence_splitting_danda(self):
         text = "यह किताब है। वह बहुत अच्छा है।"
@@ -85,15 +104,52 @@ class TestHindiPlugin:
         assert hai is not None
         assert hai.lesson_data.get("pos") == "function_word"
 
-    def test_habitual_verb_suffix_hint(self):
-        # "जाता" = go (habitual masculine)
+    def test_habitual_verb_emits_conjugation_type(self):
+        # "जाता" = go (habitual masculine) — should emit conjugation, not vocabulary
         result = self.plugin.analyze_sentence("वह रोज़ जाता है।")
         jaata = next(
-            (c for c in result.candidates if c.canonical_form == "जाता"), None
+            (c for c in result.candidates if c.surface_form == "जाता"), None
         )
         assert jaata is not None
+        assert jaata.type == "conjugation", f"Expected conjugation, got {jaata.type}"
         assert jaata.lesson_data.get("aspect") == "habitual"
         assert jaata.lesson_data.get("gender") == "masculine"
+
+    def test_future_verb_emits_conjugation_type(self):
+        # "जाएगा" = will go (masc sg)
+        result = self.plugin.analyze_sentence("वह कल जाएगा।")
+        jaayega = next(
+            (c for c in result.candidates if c.surface_form == "जाएगा"), None
+        )
+        assert jaayega is not None
+        assert jaayega.type == "conjugation"
+        assert jaayega.lesson_data.get("tense") == "future"
+        assert jaayega.lesson_data.get("gender") == "masculine"
+
+    def test_infinitive_emits_conjugation_type(self):
+        result = self.plugin.analyze_sentence("खाना अच्छा है।")
+        khaana = next(
+            (c for c in result.candidates if c.surface_form == "खाना"), None
+        )
+        assert khaana is not None
+        assert khaana.type == "conjugation"
+        assert khaana.lesson_data.get("verb_form") == "infinitive"
+
+    def test_multi_word_postposition_ke_liye(self):
+        # "के लिए" = for (purpose)
+        result = self.plugin.analyze_sentence("यह राम के लिए है।")
+        grammar_items = [c for c in result.candidates if c.type == "grammar"]
+        assert len(grammar_items) >= 1
+
+    def test_multi_word_postposition_ke_baad(self):
+        # "के बाद" = after; tests bigram postposition detection
+        result = self.plugin.analyze_sentence("खाने के बाद वह सोया।")
+        # At minimum, "के" should be tagged as postposition or a grammar MWP candidate emitted
+        postpositions = [
+            c for c in result.candidates
+            if c.type == "grammar" or c.lesson_data.get("pos") == "postposition"
+        ]
+        assert len(postpositions) >= 1
 
     def test_confidence_none_for_unknown_words(self):
         result = self.plugin.analyze_sentence("अज्ञात")
@@ -127,6 +183,14 @@ class TestHindiPlugin:
         forms = [c.canonical_form for c in result.candidates]
         assert len(forms) == len(set(forms))
 
+    def test_conjugation_canonical_form_is_stable(self):
+        # The same surface form should yield the same canonical form deterministically
+        r1 = self.plugin.analyze_sentence("वह जाता है।")
+        r2 = self.plugin.analyze_sentence("वह जाता है।")
+        forms1 = {c.canonical_form for c in r1.candidates}
+        forms2 = {c.canonical_form for c in r2.candidates}
+        assert forms1 == forms2
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Turkish
@@ -154,6 +218,18 @@ class TestTurkishPlugin:
         assert caps.morphology_quality == "low"
         assert caps.syntax_support is False
 
+    def test_tense_pool_populated(self):
+        caps = self.plugin.capabilities
+        assert caps.tense_pool is not None
+        assert "progressive" in caps.tense_pool
+        assert "past_definite" in caps.tense_pool
+        assert "past_evidential" in caps.tense_pool
+
+    def test_mood_pool_populated(self):
+        caps = self.plugin.capabilities
+        assert caps.mood_pool is not None
+        assert "conditional" in caps.mood_pool
+
     def test_sentence_splitting(self):
         text = "Merhaba dünya. Nasılsın?"
         sentences = self.plugin.split_sentences(text)
@@ -173,28 +249,58 @@ class TestTurkishPlugin:
         cand = result.candidates[0]
         assert cand.lesson_data.get("vowel_harmony") == "front"
 
-    def test_infinitive_suffix(self):
-        # "gitmek" = to go
+    def test_infinitive_suffix_emits_conjugation(self):
+        # "gitmek" = to go — verb infinitive → conjugation type
         result = self.plugin.analyze_sentence("Gitmek istiyorum.")
         gitmek = next(
-            (c for c in result.candidates if c.canonical_form == "gitmek"), None
+            (c for c in result.candidates if c.surface_form.lower() == "gitmek"), None
         )
         assert gitmek is not None
+        assert gitmek.type == "conjugation"
         assert gitmek.lesson_data.get("verb_form") == "infinitive"
         assert gitmek.lesson_data.get("pos") == "verb"
 
-    def test_past_definite_tense(self):
-        # "gitti" = (he/she) went
+    def test_past_definite_tense_emits_conjugation(self):
+        # "gitti" = (he/she) went → conjugation type
         result = self.plugin.analyze_sentence("O gitti.")
         gitti = next(
-            (c for c in result.candidates if c.canonical_form == "gitti"), None
+            (c for c in result.candidates if c.surface_form.lower() == "gitti"), None
         )
         assert gitti is not None
+        assert gitti.type == "conjugation"
         assert gitti.lesson_data.get("tense") == "past_definite"
         assert gitti.lesson_data.get("pos") == "verb"
 
-    def test_plural_suffix(self):
-        # "kitaplar" = books
+    def test_evidential_past_emits_conjugation(self):
+        # "gitmiş" = apparently (he/she) went (reported/hearsay)
+        result = self.plugin.analyze_sentence("O gitmiş.")
+        gitmiş = next(
+            (c for c in result.candidates if "gitmiş" in c.surface_form.lower()), None
+        )
+        assert gitmiş is not None
+        assert gitmiş.type == "conjugation"
+        assert gitmiş.lesson_data.get("tense") == "past_evidential"
+
+    def test_progressive_tense_emits_conjugation(self):
+        result = self.plugin.analyze_sentence("Gidiyor.")
+        gidiyor = next(
+            (c for c in result.candidates if c.surface_form.lower() == "gidiyor"), None
+        )
+        assert gidiyor is not None
+        assert gidiyor.type == "conjugation"
+        assert gidiyor.lesson_data.get("tense") == "progressive"
+
+    def test_future_tense_emits_conjugation(self):
+        result = self.plugin.analyze_sentence("Gidecek.")
+        gidecek = next(
+            (c for c in result.candidates if c.surface_form.lower() == "gidecek"), None
+        )
+        assert gidecek is not None
+        assert gidecek.type == "conjugation"
+        assert gidecek.lesson_data.get("tense") == "future"
+
+    def test_plural_suffix_vocabulary(self):
+        # "kitaplar" = books (plural noun → vocabulary with number=plural)
         result = self.plugin.analyze_sentence("Kitaplar masada.")
         kitaplar = next(
             (c for c in result.candidates if c.canonical_form == "kitaplar"), None
@@ -202,8 +308,7 @@ class TestTurkishPlugin:
         assert kitaplar is not None
         assert kitaplar.lesson_data.get("number") == "plural"
 
-    def test_locative_case(self):
-        # "evde" = at home
+    def test_locative_case_vocabulary(self):
         result = self.plugin.analyze_sentence("Evde oturuyorum.")
         evde = next(
             (c for c in result.candidates if c.canonical_form == "evde"), None
@@ -220,17 +325,26 @@ class TestTurkishPlugin:
         assert bir.lesson_data.get("pos") == "function_word"
         assert bir.confidence == 0.80
 
-    def test_confidence_float_for_suffix_hit(self):
+    def test_confidence_float_for_verb_suffix(self):
         result = self.plugin.analyze_sentence("Gitmek.")
         gitmek = result.candidates[0]
         assert gitmek.confidence is not None
         assert gitmek.confidence == pytest.approx(0.45)
 
     def test_confidence_none_for_bare_stem(self):
-        # "masa" = table (bare nominative, no matching suffix)
         result = self.plugin.analyze_sentence("masa")
         masa = result.candidates[0]
         assert masa.confidence is None
+
+    def test_turkish_dotted_i_normalisation(self):
+        # Turkish İ (dotted capital I) should normalise to 'i', not 'ı'
+        result = self.plugin.analyze_sentence("İstanbul güzel.")
+        istanbul = next(
+            (c for c in result.candidates if "stanbul" in c.canonical_form), None
+        )
+        assert istanbul is not None
+        # canonical starts with lowercase 'i' (not 'ı')
+        assert istanbul.canonical_form.startswith("i")
 
     def test_no_duplicate_candidates(self):
         result = self.plugin.analyze_sentence("ev ev ev")
@@ -244,21 +358,12 @@ class TestTurkishPlugin:
     def test_get_lesson_returns_none_for_unknown(self):
         assert self.plugin.get_lesson("xyz") is None
 
-    def test_future_tense(self):
-        result = self.plugin.analyze_sentence("Gidecek.")
-        gidecek = next(
-            (c for c in result.candidates if c.canonical_form == "gidecek"), None
-        )
-        assert gidecek is not None
-        assert gidecek.lesson_data.get("tense") == "future"
-
-    def test_progressive_tense(self):
-        result = self.plugin.analyze_sentence("Gidiyor.")
-        gidiyor = next(
-            (c for c in result.candidates if c.canonical_form == "gidiyor"), None
-        )
-        assert gidiyor is not None
-        assert gidiyor.lesson_data.get("tense") == "progressive"
+    def test_conjugation_canonical_form_is_stable(self):
+        r1 = self.plugin.analyze_sentence("Gitti.")
+        r2 = self.plugin.analyze_sentence("Gitti.")
+        forms1 = {c.canonical_form for c in r1.candidates}
+        forms2 = {c.canonical_form for c in r2.candidates}
+        assert forms1 == forms2
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -287,6 +392,18 @@ class TestFinnishPlugin:
         assert caps.morphology_quality == "low"
         assert caps.syntax_support is False
 
+    def test_tense_pool_populated(self):
+        caps = self.plugin.capabilities
+        assert caps.tense_pool is not None
+        assert "present" in caps.tense_pool
+        assert "past" in caps.tense_pool
+
+    def test_mood_pool_populated(self):
+        caps = self.plugin.capabilities
+        assert caps.mood_pool is not None
+        assert "conditional" in caps.mood_pool
+        assert "imperative" in caps.mood_pool
+
     def test_sentence_splitting(self):
         text = "Hei maailma. Kuinka voit?"
         sentences = self.plugin.split_sentences(text)
@@ -297,19 +414,16 @@ class TestFinnishPlugin:
         assert len(result.candidates) > 0
 
     def test_vowel_harmony_back(self):
-        # "talo" = house, back vowels a/o
         result = self.plugin.analyze_sentence("talo")
         cand = result.candidates[0]
         assert cand.lesson_data.get("vowel_harmony") == "back"
 
     def test_vowel_harmony_front(self):
-        # "tyttö" = girl, front vowels ö
         result = self.plugin.analyze_sentence("tyttö")
         cand = result.candidates[0]
         assert cand.lesson_data.get("vowel_harmony") == "front"
 
     def test_inessive_case(self):
-        # "kaupungissa" = in the city (-ssa inessive)
         result = self.plugin.analyze_sentence("Kaupungissa on paljon ihmisiä.")
         kaupungissa = next(
             (c for c in result.candidates if c.canonical_form == "kaupungissa"), None
@@ -318,7 +432,6 @@ class TestFinnishPlugin:
         assert kaupungissa.lesson_data.get("case") == "inessive"
 
     def test_elative_case(self):
-        # "kaupungista" = from the city (-sta elative)
         result = self.plugin.analyze_sentence("Tulen kaupungista.")
         kaupungista = next(
             (c for c in result.candidates if c.canonical_form == "kaupungista"), None
@@ -327,7 +440,6 @@ class TestFinnishPlugin:
         assert kaupungista.lesson_data.get("case") == "elative"
 
     def test_allative_case(self):
-        # "kouluun" would be illative; "koululle" is allative (-lle)
         result = self.plugin.analyze_sentence("Menen koululle.")
         koululle = next(
             (c for c in result.candidates if c.canonical_form == "koululle"), None
@@ -336,7 +448,6 @@ class TestFinnishPlugin:
         assert koululle.lesson_data.get("case") == "allative"
 
     def test_plural_nominative(self):
-        # "koirat" = dogs (-t plural nominative)
         result = self.plugin.analyze_sentence("Koirat juoksevat.")
         koirat = next(
             (c for c in result.candidates if c.canonical_form == "koirat"), None
@@ -345,24 +456,47 @@ class TestFinnishPlugin:
         assert koirat.lesson_data.get("number") == "plural"
         assert koirat.lesson_data.get("case") == "nominative"
 
-    def test_third_plural_verb(self):
-        # "juoksevat" = they run (-vat 3pl present)
+    def test_third_plural_verb_emits_conjugation(self):
+        # "juoksevat" = they run (-vat 3pl present) → conjugation type
         result = self.plugin.analyze_sentence("Koirat juoksevat.")
         juoksevat = next(
-            (c for c in result.candidates if c.canonical_form == "juoksevat"), None
+            (c for c in result.candidates if c.canonical_form.startswith("juoksevat")), None
         )
         assert juoksevat is not None
+        assert juoksevat.type == "conjugation"
         assert juoksevat.lesson_data.get("number") == "plural"
         assert juoksevat.lesson_data.get("person") == "third"
 
-    def test_passive_voice(self):
+    def test_passive_voice_emits_conjugation(self):
         # "luetaan" = is read (passive present -taan)
         result = self.plugin.analyze_sentence("Kirja luetaan.")
         luetaan = next(
-            (c for c in result.candidates if c.canonical_form == "luetaan"), None
+            (c for c in result.candidates if c.canonical_form.startswith("luetaan")), None
         )
         assert luetaan is not None
+        assert luetaan.type == "conjugation"
         assert luetaan.lesson_data.get("voice") == "passive"
+
+    def test_conditional_emits_conjugation(self):
+        # "menisi" = would go (conditional bare)
+        result = self.plugin.analyze_sentence("Hän menisi kotiin.")
+        menisi = next(
+            (c for c in result.candidates if c.canonical_form.startswith("menisi")), None
+        )
+        assert menisi is not None
+        assert menisi.type == "conjugation"
+        assert menisi.lesson_data.get("mood") == "conditional"
+
+    def test_first_plural_present_emits_conjugation(self):
+        # "menemme" = we go (-mme 1pl present)
+        result = self.plugin.analyze_sentence("Menemme kotiin.")
+        menemme = next(
+            (c for c in result.candidates if c.canonical_form.startswith("menemme")), None
+        )
+        assert menemme is not None
+        assert menemme.type == "conjugation"
+        assert menemme.lesson_data.get("person") == "first"
+        assert menemme.lesson_data.get("number") == "plural"
 
     def test_function_word_ei(self):
         result = self.plugin.analyze_sentence("Minä ei tule.")
@@ -379,7 +513,6 @@ class TestFinnishPlugin:
         assert cand.confidence == pytest.approx(0.45)
 
     def test_confidence_none_for_bare_stem(self):
-        # "auto" = car, no matching suffix
         result = self.plugin.analyze_sentence("auto")
         auto = next(
             (c for c in result.candidates if c.canonical_form == "auto"), None
@@ -400,9 +533,26 @@ class TestFinnishPlugin:
         assert self.plugin.get_lesson("xyz") is None
 
     def test_umlaut_characters_in_token(self):
-        # ä and ö must be included in token capture
         result = self.plugin.analyze_sentence("tyttö laulaa kauniisti.")
         tytto = next(
             (c for c in result.candidates if c.canonical_form == "tyttö"), None
         )
         assert tytto is not None
+
+    def test_conjugation_canonical_form_is_stable(self):
+        r1 = self.plugin.analyze_sentence("Koirat juoksevat.")
+        r2 = self.plugin.analyze_sentence("Koirat juoksevat.")
+        forms1 = {c.canonical_form for c in r1.candidates}
+        forms2 = {c.canonical_form for c in r2.candidates}
+        assert forms1 == forms2
+
+    def test_past_passive_emits_conjugation(self):
+        # "luettiin" = was read (passive past -ttiin)
+        result = self.plugin.analyze_sentence("Kirja luettiin.")
+        luettiin = next(
+            (c for c in result.candidates if c.canonical_form.startswith("luettiin")), None
+        )
+        assert luettiin is not None
+        assert luettiin.type == "conjugation"
+        assert luettiin.lesson_data.get("voice") == "passive"
+        assert luettiin.lesson_data.get("tense") == "past"

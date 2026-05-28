@@ -1,38 +1,40 @@
 """Turkish plugin — morphology-light with agglutinative suffix analysis.
 
-BCP-47 code "tr", LTR, Latin script.
+BCP-47 code "tr", LTR, Latin script with Turkish special characters.
 
 What this plugin does reliably
 ──────────────────────────────
   - Sentence splitting on standard terminal punctuation and newlines.
   - Whitespace tokenisation (Turkish is whitespace-delimited).
+  - Turkish dotted-I normalisation (İ→i, I→ı for case folding).
   - Vowel harmony classification: back (a/ı/o/u) vs. front (e/i/ö/ü).
     Most Turkish suffixes alternate based on the last vowel in the stem.
-  - Suffix chain hints for common morphological features:
-    • Plural: -lar/-ler
-    • Case: accusative -ı/-i/-u/-ü, dative -a/-e,
-            locative -da/-de/-ta/-te, ablative -dan/-den/-tan/-ten,
-            genitive -ın/-in/-un/-ün, instrumental -la/-le
-    • Negation: -me/-ma (verbal)
+  - Suffix chain hints for morphological features (longest-match first):
     • Infinitive: -mak/-mek
-    • Verbal tenses: aorist -r/-ar/-er, progressive -iyor,
-                     past -dı/-di/-du/-dü, future -ecek/-acak
-    • Person/number endings: -im/-ım (1sg), -sin/-sın (2sg), -iz/-ız (1pl),
-                              -siniz (2pl), -ler/-lar (3pl)
-  - Detection of common Turkish function words and particles.
+    • Negation + progressive: -mıyor/-miyor/-muyor/-müyor
+    • Progressive present: -ıyor/-iyor/-uyor/-üyor
+    • Definite past: -dı/-di/-du/-dü/-tı/-ti/-tu/-tü (+ person markings)
+    • Evidential/reported past: -mış/-miş/-muş/-müş
+    • Future: -ecek/-acak (+ person markings)
+    • Conditional: -sak/-sek
+    • Plural noun + case: -lardan/-lerden, -larda/-lerde, etc.
+    • Singular case: ablative, locative, genitive, comitative/instrumental
+    • Aorist 3sg: -ar/-er
+  - Words with verb morphology emitted as "conjugation" type with
+    tense/mood/person/number fields.
+  - Common Turkish function words and particles identified.
 
 Known limitations
 ─────────────────
   • Turkish agglutinative morphology stacks multiple suffixes on one stem.
-    This plugin strips only the outermost suffix; inner suffixes are not
-    decomposed (e.g. "evlerimden" → stem "ev" + PL + POSS + ABL not resolved).
+    This plugin strips only the outermost suffix; inner suffixes (possessive,
+    aspect, evidentiality stacking) are not decomposed.
   • Vowel harmony disambiguation on ambiguous stems may be incorrect.
-  • Consonant mutation (t→d, k→ğ after vowel) is partially handled but not
-    exhaustively.
+  • Consonant mutation (t→d, k→ğ after vowel) partially handled.
   • No nominal/verbal compound resolution.
   • No trained NLP model available for Turkish in this deployment.
-  • Analysis quality: morphology_light — do not rely on morphological fields
-    for precise linguistic annotation.
+  • Lemmatisation is NOT performed; canonical_form for conjugations uses
+    surface form + morphology tag.
 """
 from __future__ import annotations
 
@@ -60,7 +62,17 @@ def _last_vowel_harmony(word: str) -> str:
             return "back"
         if ch in _FRONT_VOWELS:
             return "front"
-    return "back"  # default
+    return "back"
+
+
+def _normalise_turkish(token: str) -> str:
+    """Lowercase with Turkish dotted-I correction.
+
+    Turkish has two i-like letters: dotted İ/i and dotless I/ı.
+    Python's str.lower() maps I→i, but in Turkish I should map to ı.
+    This function applies the Turkish-correct lowercasing for these characters.
+    """
+    return token.replace("İ", "i").replace("I", "ı").lower()
 
 
 # ── Function words / closed-class items ──────────────────────────────────────
@@ -70,17 +82,28 @@ _FUNCTION_WORDS: frozenset[str] = frozenset({
     "hem", "ne", "değil", "var", "yok", "gibi", "kadar", "için",
     "mi", "mı", "mu", "mü",
     "de", "da", "dahi", "bile",
+    "en", "çok", "az", "daha", "hep", "her", "hiç",
 })
 
 # ── Morphological suffix rules (longest match first) ─────────────────────────
 # Each entry: (suffix_lower, feature_dict)
-# Case endings are the innermost suffix after plural/possessive; we check
-# the whole surface form and accept a "probable" tag.
+# Verb features → emitted as "conjugation"; noun/adj features → "vocabulary".
 _SUFFIX_RULES: list[tuple[str, dict]] = [
-    # Infinitive (always -mak/-mek)
+    # Infinitive
     ("mak",    {"verb_form": "infinitive", "pos": "verb"}),
     ("mek",    {"verb_form": "infinitive", "pos": "verb"}),
-    # Negation -ma/-me (verb stem + negation)
+    # Evidential/reported past -mış/-miş/-muş/-müş (+ person markings)
+    ("mışım",  {"tense": "past_evidential", "person": "first",  "number": "singular", "pos": "verb"}),
+    ("mişim",  {"tense": "past_evidential", "person": "first",  "number": "singular", "pos": "verb"}),
+    ("muşum",  {"tense": "past_evidential", "person": "first",  "number": "singular", "pos": "verb"}),
+    ("müşüm",  {"tense": "past_evidential", "person": "first",  "number": "singular", "pos": "verb"}),
+    ("mışsın", {"tense": "past_evidential", "person": "second", "number": "singular", "pos": "verb"}),
+    ("mişsin", {"tense": "past_evidential", "person": "second", "number": "singular", "pos": "verb"}),
+    ("mış",    {"tense": "past_evidential", "pos": "verb"}),
+    ("miş",    {"tense": "past_evidential", "pos": "verb"}),
+    ("muş",    {"tense": "past_evidential", "pos": "verb"}),
+    ("müş",    {"tense": "past_evidential", "pos": "verb"}),
+    # Negation + progressive
     ("mıyor",  {"tense": "progressive", "polarity": "negative", "pos": "verb"}),
     ("miyor",  {"tense": "progressive", "polarity": "negative", "pos": "verb"}),
     ("muyor",  {"tense": "progressive", "polarity": "negative", "pos": "verb"}),
@@ -90,7 +113,7 @@ _SUFFIX_RULES: list[tuple[str, dict]] = [
     ("iyor",   {"tense": "progressive", "polarity": "affirmative", "pos": "verb"}),
     ("uyor",   {"tense": "progressive", "polarity": "affirmative", "pos": "verb"}),
     ("üyor",   {"tense": "progressive", "polarity": "affirmative", "pos": "verb"}),
-    # Definite past -dı/-di/-du/-dü/-tı/-ti/-tu/-tü
+    # Definite past -dı/-di/-du/-dü/-tı/-ti/-tu/-tü (+ person)
     ("dım",    {"tense": "past_definite", "person": "first",  "number": "singular", "pos": "verb"}),
     ("dim",    {"tense": "past_definite", "person": "first",  "number": "singular", "pos": "verb"}),
     ("dum",    {"tense": "past_definite", "person": "first",  "number": "singular", "pos": "verb"}),
@@ -107,67 +130,63 @@ _SUFFIX_RULES: list[tuple[str, dict]] = [
     ("ti",     {"tense": "past_definite", "person": "third",  "number": "singular", "pos": "verb"}),
     ("tu",     {"tense": "past_definite", "person": "third",  "number": "singular", "pos": "verb"}),
     ("tü",     {"tense": "past_definite", "person": "third",  "number": "singular", "pos": "verb"}),
-    # Future -ecek/-acak (+ person endings; here we detect the tense marker)
+    # Future -ecek/-acak (+ person endings)
     ("eceksin", {"tense": "future", "person": "second", "number": "singular", "pos": "verb"}),
     ("acaksın", {"tense": "future", "person": "second", "number": "singular", "pos": "verb"}),
     ("eceğim",  {"tense": "future", "person": "first",  "number": "singular", "pos": "verb"}),
     ("acağım",  {"tense": "future", "person": "first",  "number": "singular", "pos": "verb"}),
     ("ecek",    {"tense": "future", "pos": "verb"}),
     ("acak",    {"tense": "future", "pos": "verb"}),
-    # Conditional -sa/-se (only unambiguous person-marked forms; bare -sa/-se
-    # are too short and trigger false positives on nominative nouns ending in -sa/-se)
+    # Conditional -sa/-se (person-marked only to avoid false positives)
     ("sak",    {"mood": "conditional", "person": "first", "number": "plural", "pos": "verb"}),
     ("sek",    {"mood": "conditional", "person": "first", "number": "plural", "pos": "verb"}),
-    # Case suffixes (plural forms must come before bare -ar/-er to avoid
-    # mislabelling "kitaplar" as aorist 3sg instead of plural nominative)
-    ("lardan",  {"number": "plural", "case": "ablative", "pos": "noun"}),
-    ("lerden",  {"number": "plural", "case": "ablative", "pos": "noun"}),
-    ("larda",   {"number": "plural", "case": "locative",  "pos": "noun"}),
-    ("lerde",   {"number": "plural", "case": "locative",  "pos": "noun"}),
-    ("larla",   {"number": "plural", "case": "comitative", "pos": "noun"}),
-    ("lerle",   {"number": "plural", "case": "comitative", "pos": "noun"}),
-    ("ların",   {"number": "plural", "case": "genitive",   "pos": "noun"}),
-    ("lerin",   {"number": "plural", "case": "genitive",   "pos": "noun"}),
+    # Plural noun + case (must precede bare case suffixes to avoid shadowing)
+    ("lardan",  {"number": "plural", "case": "ablative",    "pos": "noun"}),
+    ("lerden",  {"number": "plural", "case": "ablative",    "pos": "noun"}),
+    ("larda",   {"number": "plural", "case": "locative",    "pos": "noun"}),
+    ("lerde",   {"number": "plural", "case": "locative",    "pos": "noun"}),
+    ("larla",   {"number": "plural", "case": "comitative",  "pos": "noun"}),
+    ("lerle",   {"number": "plural", "case": "comitative",  "pos": "noun"}),
+    ("ların",   {"number": "plural", "case": "genitive",    "pos": "noun"}),
+    ("lerin",   {"number": "plural", "case": "genitive",    "pos": "noun"}),
     ("ları",    {"number": "plural", "case": "accusative",  "pos": "noun"}),
     ("leri",    {"number": "plural", "case": "accusative",  "pos": "noun"}),
-    ("lara",    {"number": "plural", "case": "dative",     "pos": "noun"}),
-    ("lere",    {"number": "plural", "case": "dative",     "pos": "noun"}),
+    ("lara",    {"number": "plural", "case": "dative",      "pos": "noun"}),
+    ("lere",    {"number": "plural", "case": "dative",      "pos": "noun"}),
     ("lar",     {"number": "plural", "pos": "noun"}),
     ("ler",     {"number": "plural", "pos": "noun"}),
     # Singular cases
-    ("dan",    {"case": "ablative", "pos": "noun_or_adjective"}),
-    ("den",    {"case": "ablative", "pos": "noun_or_adjective"}),
-    ("tan",    {"case": "ablative", "pos": "noun_or_adjective"}),
-    ("ten",    {"case": "ablative", "pos": "noun_or_adjective"}),
-    ("da",     {"case": "locative", "pos": "noun_or_adjective"}),
-    ("de",     {"case": "locative", "pos": "noun_or_adjective"}),
-    ("ta",     {"case": "locative", "pos": "noun_or_adjective"}),
-    ("te",     {"case": "locative", "pos": "noun_or_adjective"}),
-    ("ın",     {"case": "genitive", "pos": "noun"}),
-    ("in",     {"case": "genitive", "pos": "noun"}),
-    ("un",     {"case": "genitive", "pos": "noun"}),
-    ("ün",     {"case": "genitive", "pos": "noun"}),
-    # Single-char accusative (-ı/-i/-u/-ü) and dative (-a/-e) omitted:
-    # their false-positive rate is too high (almost every word stem ends with
-    # a vowel).  Use the 2+char forms above for reliable detection.
+    ("dan",    {"case": "ablative",              "pos": "noun_or_adjective"}),
+    ("den",    {"case": "ablative",              "pos": "noun_or_adjective"}),
+    ("tan",    {"case": "ablative",              "pos": "noun_or_adjective"}),
+    ("ten",    {"case": "ablative",              "pos": "noun_or_adjective"}),
+    ("da",     {"case": "locative",              "pos": "noun_or_adjective"}),
+    ("de",     {"case": "locative",              "pos": "noun_or_adjective"}),
+    ("ta",     {"case": "locative",              "pos": "noun_or_adjective"}),
+    ("te",     {"case": "locative",              "pos": "noun_or_adjective"}),
+    ("ın",     {"case": "genitive",              "pos": "noun"}),
+    ("in",     {"case": "genitive",              "pos": "noun"}),
+    ("un",     {"case": "genitive",              "pos": "noun"}),
+    ("ün",     {"case": "genitive",              "pos": "noun"}),
     ("la",     {"case": "comitative_instrumental", "pos": "noun"}),
     ("le",     {"case": "comitative_instrumental", "pos": "noun"}),
-    # Aorist 3sg -ar/-er (placed last; shorter than plural -lar/-ler so must
-    # not shadow them — e.g. "kitaplar" must match "lar" not "ar")
+    # Aorist 3sg -ar/-er (shorter; must follow plural -lar/-ler)
     ("ar",     {"tense": "aorist", "person": "third", "number": "singular", "pos": "verb"}),
     ("er",     {"tense": "aorist", "person": "third", "number": "singular", "pos": "verb"}),
 ]
 
 _CONFIDENCE_NOTE = (
     "Turkish morphology-light: outermost suffix stripped for feature hints. "
-    "Inner suffix layers (possessive, aspect, evidentiality) not analysed. "
-    "No trained NLP model used."
+    "Inner suffix layers (possessive, aspect stacking, evidentiality) not analysed. "
+    "No trained NLP model used. Canonical form uses surface form + morphology tag."
 )
+
+_VERB_POS = frozenset({"verb"})
 
 
 def _extract_morph(token: str) -> dict:
     """Return morphology hints by longest-suffix match."""
-    lower = token.lower()
+    lower = _normalise_turkish(token)
     for suffix, features in _SUFFIX_RULES:
         if lower.endswith(suffix) and len(lower) > len(suffix) + 1:
             return dict(features)
@@ -177,8 +196,9 @@ def _extract_morph(token: str) -> dict:
 class TurkishPlugin:
     """Turkish morphology-light plugin.
 
-    Provides whitespace tokenisation and agglutinative suffix hinting.
-    Capabilities honestly declared.
+    Provides whitespace tokenisation, Turkish-correct I/İ normalisation,
+    agglutinative suffix hinting, and conjugation-type emission for detected
+    verb forms. Capabilities honestly declared.
     """
 
     language_code = "tr"
@@ -200,6 +220,8 @@ class TurkishPlugin:
         idiom_detection=False,
         tts_lang_tag="tr",
         transliteration_scheme=None,
+        tense_pool=["aorist", "progressive", "past_definite", "past_evidential", "future"],
+        mood_pool=["conditional"],
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="none",
@@ -213,8 +235,9 @@ class TurkishPlugin:
             proverb_tradition="none",
             classical_or_scriptural_allusion="none",
             notes=(
-                "Morphology-light: outermost suffix only for case, tense, "
-                "plural. Vowel harmony detected but not used for lemmatisation. "
+                "Morphology-light: outermost suffix only for case, tense, plural. "
+                "Evidential past (-mış) added. Detected verb forms emitted as "
+                "conjugation objects. Vowel harmony detected. "
                 "No trained Turkish NLP model in this deployment."
             ),
         ),
@@ -238,7 +261,7 @@ class TurkishPlugin:
         seen: set[str] = set()
 
         for token in _WORD_RE.findall(sentence):
-            canonical = token.lower().replace("i̇", "i")  # dotted-I normalisation
+            canonical = _normalise_turkish(token)
             if canonical in seen:
                 continue
             seen.add(canonical)
@@ -246,33 +269,59 @@ class TurkishPlugin:
             is_function = canonical in _FUNCTION_WORDS
             morph = _extract_morph(token)
             harmony = _last_vowel_harmony(token)
+            is_verb = morph.get("pos") in _VERB_POS
 
-            lesson_data: dict = {
-                "lemma":          canonical,
-                "surface_form":   token,
-                "vowel_harmony":  harmony,
-            }
             if is_function:
-                lesson_data["pos"] = "function_word"
-                confidence: float | None = 0.80
-            elif morph:
+                candidates.append(CandidateObject(
+                    canonical_form=canonical,
+                    surface_form=token,
+                    type="vocabulary",
+                    label=token,
+                    lesson_data={
+                        "lemma":         canonical,
+                        "surface_form":  token,
+                        "vowel_harmony": harmony,
+                        "pos":           "function_word",
+                    },
+                    confidence=0.80,
+                ))
+            elif is_verb and morph:
+                # Emit as conjugation with morphological fields
+                morph_tag = ":".join(f"{k}={v}" for k, v in sorted(morph.items()))
+                conj_canonical = f"{canonical}:{morph_tag}"
+                lesson_data: dict = {
+                    "surface_form":    token,
+                    "vowel_harmony":   harmony,
+                    "confidence_note": _CONFIDENCE_NOTE,
+                }
                 lesson_data.update(morph)
-                lesson_data["confidence_note"] = _CONFIDENCE_NOTE
-                confidence = 0.45
+                candidates.append(CandidateObject(
+                    canonical_form=conj_canonical,
+                    surface_form=token,
+                    type="conjugation",
+                    label=token,
+                    lesson_data=lesson_data,
+                    confidence=0.45,
+                ))
             else:
-                lesson_data["confidence_note"] = _CONFIDENCE_NOTE
-                confidence = None
-
-            candidates.append(
-                CandidateObject(
+                lesson_data = {
+                    "lemma":         canonical,
+                    "surface_form":  token,
+                    "vowel_harmony": harmony,
+                }
+                if morph:
+                    lesson_data.update(morph)
+                    lesson_data["confidence_note"] = _CONFIDENCE_NOTE
+                else:
+                    lesson_data["confidence_note"] = _CONFIDENCE_NOTE
+                candidates.append(CandidateObject(
                     canonical_form=canonical,
                     surface_form=token,
                     type="vocabulary",
                     label=token,
                     lesson_data=lesson_data,
-                    confidence=confidence,
-                )
-            )
+                    confidence=0.45 if morph else None,
+                ))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
