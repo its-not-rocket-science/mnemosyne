@@ -64,6 +64,30 @@ The lesson route selects the first supported mode unless the client overrides.
 The `morphology` builder dispatches by object type; `vocabulary` always uses
 the vocabulary builder; `dictionary` is the minimal word + gloss template.
 
+### `analysis_depth` — internal vs user-facing labels
+
+`analysis_depth` is a **machine-readable ID** used internally and in the API.
+It is **not** shown directly to learners. The mapping to user-facing display
+text is in `backend/schemas/language.py`:
+
+```python
+ANALYSIS_DEPTH_USER_LABELS = {
+    "full":              "Detailed grammar analysis",
+    "morphology_light":  "Basic grammar hints",
+    "dictionary":        "Vocabulary lookup",
+    "segmentation_only": "Text segmentation only",
+}
+```
+
+`LanguageCapabilities` exposes `analysis_depth_label` as a computed field —
+use that in any UI or API response that surfaces language quality to learners.
+Frontend localisation of these labels is in `CAPABILITY_LABELS_I18N` in
+`frontend/js/i18n.js`.
+
+**Do not invent new `analysis_depth` values.** If your plugin falls between
+"full" and "morphology_light", use `morphology_light` and add a
+`confidence_note` in `lesson_data` explaining the actual coverage.
+
 ### `transliteration_scheme`
 
 Set this to a non-`None` string when the plugin emits romanized forms

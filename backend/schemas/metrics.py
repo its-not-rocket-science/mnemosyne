@@ -89,3 +89,21 @@ class MetricsResponse(BaseModel):
         default_factory=list,
         description="Per-day review counts for the last 30 days (newest first)",
     )
+
+
+class LearningEventSummary(BaseModel):
+    event_type: str
+    language: str | None
+    total_count: int
+    event_rows: int
+
+
+class LearningEventsResponse(BaseModel):
+    """Dev endpoint response: aggregate learning event counts (DEBUG mode only).
+
+    No per-user event records are exposed — only aggregate totals grouped
+    by (event_type, language).  Intended for local development visibility.
+    """
+    total_event_rows: int
+    opt_out_users: int
+    by_event_type: list[LearningEventSummary]

@@ -53,6 +53,11 @@ class UserRow(Base):
     Keeping auth in a separate table from the rest of the knowledge schema
     means the auth layer can be swapped (e.g. SSO) without touching any
     knowledge-state tables.
+
+    ``analytics_opt_out`` — when True, no LearningEventRow rows are written
+    for this user.  Defaults False (opted-in) because events are aggregate,
+    non-identifiable session counts.  Users can toggle at any time; past
+    events are retained until explicit deletion or account deletion.
     """
     __tablename__ = "users"
 
@@ -60,6 +65,7 @@ class UserRow(Base):
     email: Mapped[str] = mapped_column(String(254), unique=True, nullable=False, index=True)
     hashed_password: Mapped[str] = mapped_column(String(128), nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+    analytics_opt_out: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
 
 
 class ParsedText(Base):
@@ -680,3 +686,41 @@ class WeaknessClusterRow(Base):
     labels: Mapped[list] = mapped_column(JSON, default=list)
     strength: Mapped[float] = mapped_column(Float, default=0.0)
     last_updated: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+
+class LearningEventRow(Base):
+    """Privacy-conscious aggregate learning event.
+
+    Stores non-identifiable session-level counts (not raw answers, not
+    text snippets) to power aggregate progress analytics and detect
+    feature engagement without personal-data exposure.
+
+    ``event_type`` enum (enforced by application layer):
+      review_session   — user completed a review session (count of items)
+      text_ingested    — user ingested a text for parsing
+      recommend_served — recommendation engine returned results
+      practice_drill   — user completed a drill (count of correct answers)
+
+    GDPR compliance:
+      - No FK to users table; ``user_id`` is an opaque identifier.
+      - On account deletion, application MUST delete rows WHERE user_id = ?
+        (cascade in application code, not DB FK, for resilience).
+      - When analytics_opt_out=True on UserRow, no events are written.
+      - Rows older than 365 days may be purged by a maintenance job without
+        user notification (aggregate retention policy).
+
+    ``metadata_json`` holds non-identifiable context (e.g. language, count).
+    It MUST NOT contain: text snippets, canonical_form values, or
+    anything that could identify a specific review item.
+    """
+    __tablename__ = "learning_events"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    user_id: Mapped[str] = mapped_column(String(50), nullable=False, index=True)
+    event_type: Mapped[str] = mapped_column(String(50), nullable=False, index=True)
+    language: Mapped[str | None] = mapped_column(String(10), nullable=True, index=True)
+    count: Mapped[int] = mapped_column(Integer, default=1)
+    metadata_json: Mapped[dict | None] = mapped_column(JsonType, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=_now, index=True
+    )

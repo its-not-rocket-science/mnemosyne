@@ -57,6 +57,11 @@ class SentenceDifficultyItem(BaseModel):
     passage: list[PassageSentence] = Field(default_factory=list)
     # True when this sentence continues an in-progress document (next unread passage)
     is_continuation: bool = False
+    # Corpus metadata — populated when sentence came from the offline corpus pipeline
+    cefr_level: str | None = Field(default=None, description="CEFR level tag from corpus manifest, e.g. 'A2'")
+    provenance: str | None = Field(default=None, description="Human-readable attribution: author and/or source URL")
+    # Why this sentence was recommended
+    recommendation_reason: str = Field(default="level_match", description="level_match | continuing | closest_match")
 
 
 class RecommendTextResponse(BaseModel):

@@ -140,7 +140,7 @@ from __future__ import annotations
 
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, computed_field
 
 # ── v1 types ──────────────────────────────────────────────────────────────────
 
@@ -190,6 +190,21 @@ class NuanceCapabilities(BaseModel):
     proverb_tradition:               NuanceCoverageLevel = "none"
     classical_or_scriptural_allusion: NuanceCoverageLevel = "none"
     notes: str | None = None
+
+
+# ── User-facing capability labels ────────────────────────────────────────────
+#
+# Internal `analysis_depth` values are stable machine-readable IDs.
+# These are the corresponding learner-facing English display strings.
+# Translations live in frontend/js/i18n.js under CAPABILITY_LABELS_I18N.
+# The `morphology_light` ID intentionally kept internal; users see "Basic grammar hints".
+
+ANALYSIS_DEPTH_USER_LABELS: dict[str, str] = {
+    "full":              "Detailed grammar analysis",
+    "morphology_light":  "Basic grammar hints",
+    "dictionary":        "Vocabulary lookup",
+    "segmentation_only": "Text segmentation only",
+}
 
 
 # ── Lesson-mode ranking ───────────────────────────────────────────────────────
@@ -275,6 +290,20 @@ class LanguageCapabilities(BaseModel):
     nuance_capabilities: NuanceCapabilities | None = None
     """Per-dimension nuance coverage.  None means the plugin has not yet
     declared coverage; the frontend treats it as all-"none"."""
+
+    # ── Computed / derived fields ─────────────────────────────────────────────
+
+    @computed_field  # type: ignore[misc]
+    @property
+    def analysis_depth_label(self) -> str:
+        """Learner-facing English label for this plugin's analysis depth.
+
+        Internal ``analysis_depth`` values (e.g. "morphology_light") are stable
+        machine-readable IDs.  This field translates them to a friendlier string
+        for display in language pickers and capability summaries.
+        Localised equivalents are in frontend/js/i18n.js CAPABILITY_LABELS_I18N.
+        """
+        return ANALYSIS_DEPTH_USER_LABELS.get(self.analysis_depth, self.analysis_depth)
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────

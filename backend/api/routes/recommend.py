@@ -59,6 +59,7 @@ from backend.difficulty.scorer import (
 from backend.models import (
     CanonicalObjectRow,
     ContentGapSignalRow,
+    CorpusIngestionRow,
     ParsedText,
     Sentence,
     SentenceObjectRow,
@@ -92,6 +93,9 @@ async def recommend_text(
     limit: int = Query(default=10, ge=1, le=50),
     exclude_source_document_id: str | None = Query(default=None),
     exclude_parsed_text_id: str | None = Query(default=None),
+    continuation: bool = Query(default=False, description="Only return continuation sentences from in-progress documents"),
+    cefr: str | None = Query(default=None, description="Filter to sentences from corpus chunks at this CEFR level, e.g. 'B1'"),
+    max_words: int | None = Query(default=None, ge=1, le=500, description="Exclude sentences longer than this many whitespace tokens"),
     db: AsyncSession = Depends(get_db_session),
     current_user: str = Depends(get_current_user),
 ) -> RecommendTextResponse:
@@ -171,6 +175,9 @@ async def recommend_text(
             CanonicalObjectRow.type.label("obj_type"),
             SourceDocumentRow.id.label("source_document_id"),
             SourceDocumentRow.title.label("source_title"),
+            SourceDocumentRow.author.label("source_author"),
+            SourceDocumentRow.source_url.label("source_url"),
+            CorpusIngestionRow.cefr_equivalent.label("cefr_equivalent"),
         )
         .select_from(Sentence)
         .join(ParsedText,         Sentence.parsed_text_id == ParsedText.id)
@@ -178,6 +185,7 @@ async def recommend_text(
         .join(CanonicalObjectRow, CanonicalObjectRow.id == SentenceObjectRow.object_id)
         .outerjoin(SourceChunkRow,    SourceChunkRow.parsed_text_id == Sentence.parsed_text_id)
         .outerjoin(SourceDocumentRow, SourceDocumentRow.id == SourceChunkRow.source_document_id)
+        .outerjoin(CorpusIngestionRow, CorpusIngestionRow.source_document_id == SourceDocumentRow.id)
         .where(ParsedText.language == language)
         .where(
             or_(
@@ -200,6 +208,8 @@ async def recommend_text(
     sentence_parsed_text_ids: dict[str, str]       = {}
     sentence_source_doc_ids:  dict[str, str | None] = {}
     sentence_source_titles:   dict[str, str | None] = {}
+    sentence_cefr_levels:     dict[str, str | None] = {}
+    sentence_provenances:     dict[str, str | None] = {}
     sentence_objects:         dict[str, list[ObjectMastery]] = defaultdict(list)
 
     for row in rows:
@@ -211,6 +221,19 @@ async def recommend_text(
         # chunks (shouldn't happen, but be defensive with last-write-wins).
         sentence_source_doc_ids[sid]  = row.source_document_id
         sentence_source_titles[sid]   = row.source_title
+        if sid not in sentence_cefr_levels or sentence_cefr_levels[sid] is None:
+            sentence_cefr_levels[sid] = getattr(row, "cefr_equivalent", None)
+        if sid not in sentence_provenances or sentence_provenances[sid] is None:
+            author    = getattr(row, "source_author", None)
+            source_url = getattr(row, "source_url", None)
+            if author and source_url:
+                sentence_provenances[sid] = f"{author} · {source_url}"
+            elif author:
+                sentence_provenances[sid] = author
+            elif source_url:
+                sentence_provenances[sid] = source_url
+            else:
+                sentence_provenances[sid] = None
 
         ms, rev = mastery.get(row.object_id, (0.0, 0))
         sentence_objects[sid].append(
@@ -267,12 +290,35 @@ async def recommend_text(
             total_seen=total_seen,
         )
 
+    # ── 4b. Apply optional pre-filters ───────────────────────────────────────
+    if max_words is not None:
+        scored = [
+            (sid, text, ds) for sid, text, ds in scored
+            if len(text.split()) <= max_words
+        ]
+    if cefr is not None:
+        scored = [
+            (sid, text, ds) for sid, text, ds in scored
+            if sentence_cefr_levels.get(sid) == cefr
+        ]
+    if continuation:
+        scored = [
+            (sid, text, ds) for sid, text, ds in scored
+            if (
+                sentence_source_doc_ids.get(sid)
+                and sentence_source_doc_ids[sid] in in_progress
+                and sentence_positions.get(sid, 0) >= in_progress[sentence_source_doc_ids[sid]]
+            )
+        ]
+
     # ── 5. Filter to target window; fall back to closest ─────────────────────
     center = (window[0] + window[1]) / 2.0
 
     in_window = [t for t in scored if window[0] <= t[2].difficulty <= window[1]]
+    _fallback_used = False
     if not in_window:
         in_window = sorted(scored, key=lambda t: abs(t[2].difficulty - center))
+        _fallback_used = True
         logger.debug(
             "recommend_text: no sentences in window [%.2f, %.2f]; "
             "returning %d closest (lang=%s, mastered=%d)",
@@ -366,6 +412,14 @@ async def recommend_text(
             and focus_pos >= in_progress[source_doc]
         )
 
+        reason: str
+        if is_continuation:
+            reason = "continuing"
+        elif _fallback_used:
+            reason = "closest_match"
+        else:
+            reason = "level_match"
+
         result_sentences.append(SentenceDifficultyItem(
             sentence_id=sent_id,
             text=text,
@@ -382,6 +436,9 @@ async def recommend_text(
             source_title=source_ttl,
             passage=passage,
             is_continuation=is_continuation,
+            cefr_level=sentence_cefr_levels.get(sent_id),
+            provenance=sentence_provenances.get(sent_id),
+            recommendation_reason=reason,
         ))
 
     logger.info(

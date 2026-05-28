@@ -173,13 +173,22 @@ classifiers or embedding-based detectors in the current codebase.
 - No pitch-accent information.
 
 ### Latin
-- 90-entry embedded lexicon covers common prose vocabulary only; inflected
-  forms not in the lexicon receive only a `confidence_note`.
+- Morph index: ~3 400 forms from UD ITTB treebank. Forms in the morph index
+  receive tense/mood/voice/person/number from the annotation.
+- Noun suffix hint (`_extract_latin_noun_suffix_hint`): forms not in the
+  morph index receive heuristic `case_hint`, `number_hint`, `gender_hint`,
+  and optional `ambiguity_note` from a 15-entry suffix table.
 - Macron normalization strips length distinctions that differentiate words
   (e.g., malum "apple" vs mālum "evil").
+- `confidence_note` = `_NOUN_SUFFIX_NOTE` for heuristic noun hints, making
+  ambiguity explicit rather than hiding it.
 
 ### Koine Greek
-- 100-entry lexicon biased toward New Testament vocabulary.
+- Morph index: ~27 000 forms from UD PROIEL + MorphGNT. Covers most of the
+  Greek New Testament for verb, noun, article, and particle forms.
+- Article agreement bigrams (`_ARTICLE_FORMS`): a pre-pass over each sentence
+  detects article + following-token pairs and adds `article_agrees_with:
+  {case, gender, number}` to the following token's `lesson_data`.
 - Diacritic normalization (NFD + strip combining) means canonical forms lose
   accent information needed to distinguish oxytone/barytone pairs.
 - Modern Greek TTS (el) used as a proxy; pronunciation differs from

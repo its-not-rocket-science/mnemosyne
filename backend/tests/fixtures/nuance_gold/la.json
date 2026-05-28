@@ -123,6 +123,38 @@
       "confidence_ge": null,
       "lesson_data_required_keys": {},
       "no_raw_uuids": true
+    },
+    {
+      "id": "la_morph_index_verb_conjugation",
+      "category": "morphology",
+      "text": "Discipuli magistrum amant.",
+      "note": "'amant' — 3rd person plural present active; morph index or suffix rules should produce tense+mood when available",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.85,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "la_imperfect_suffix_fallback",
+      "category": "morphology",
+      "text": "Romani Graecia delebant.",
+      "note": "'delebant' — imperfect active; suffix -bant should trigger tense=imperfect hint via suffix rules",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.85,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
     }
   ]
 }

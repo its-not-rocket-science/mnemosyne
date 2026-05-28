@@ -1,8 +1,12 @@
-"""Static structural accessibility checks for frontend/index.html.
+"""Static structural accessibility checks for frontend/index.html and CSS.
 
 No browser, no Playwright, no axe — just HTML parsing via stdlib.
 Verifies the minimum ARIA contract that would be invisible to unit
 tests but caught immediately by any AT user.
+
+NOTE: Automation here does NOT replace manual AT validation. See
+MANUAL_ACCESSIBILITY_TEST.md for the human tester script and session
+results template.
 """
 from __future__ import annotations
 
@@ -271,3 +275,181 @@ class TestLandmarks:
     def test_footer_exists(self, page):
         footers = page.by_tag("footer")
         assert footers, "No <footer> element found"
+
+
+# ── CSS Reduced-Motion Coverage ───────────────────────────────────────────────
+
+_FRONTEND = pathlib.Path(__file__).parents[2] / "frontend"
+_CSS_FILES = list(_FRONTEND.glob("css/*.css"))
+_COMPONENT_JS = list(_FRONTEND.glob("components/*.js"))
+
+
+class TestReducedMotionCSS:
+    """Verify that key CSS files honour prefers-reduced-motion.
+
+    This is a smoke test: it checks that the media query is present in
+    files known to contain animations/transitions.  It does NOT verify
+    every individual rule — that requires manual inspection (Test 13).
+    """
+
+    def test_global_css_has_reduced_motion(self):
+        src = (_FRONTEND / "css" / "global.css").read_text(encoding="utf-8")
+        assert "prefers-reduced-motion" in src, (
+            "frontend/css/global.css has no prefers-reduced-motion media query"
+        )
+
+    def test_components_css_has_reduced_motion(self):
+        src = (_FRONTEND / "css" / "components.css").read_text(encoding="utf-8")
+        assert "prefers-reduced-motion" in src, (
+            "frontend/css/components.css has no prefers-reduced-motion media query"
+        )
+
+    def test_enhanced_accessibility_css_has_reduced_motion(self):
+        path = _FRONTEND / "css" / "enhanced-accessibility.css"
+        if not path.exists():
+            return  # optional file
+        src = path.read_text(encoding="utf-8")
+        assert "prefers-reduced-motion" in src
+
+    def test_detail_pane_js_has_reduced_motion(self):
+        path = _FRONTEND / "components" / "mnemosyne-detail-pane.js"
+        src = path.read_text(encoding="utf-8")
+        assert "prefers-reduced-motion" in src, (
+            "mnemosyne-detail-pane.js has no prefers-reduced-motion rule "
+            "(animated transitions must respect the user preference)"
+        )
+
+    def test_modal_js_has_reduced_motion(self):
+        path = _FRONTEND / "components" / "mnemosyne-modal.js"
+        src = path.read_text(encoding="utf-8")
+        assert "prefers-reduced-motion" in src, (
+            "mnemosyne-modal.js has no prefers-reduced-motion rule"
+        )
+
+
+# ── Concept Help Dialog Structure ─────────────────────────────────────────────
+
+class TestConceptDialogStructure:
+    """Verify the concept help dialog in mnemosyne-detail-pane.js has the
+    required ARIA attributes.
+
+    The concept dialog lives in the detail pane shadow DOM, not the modal.
+    We check the component source JS because it is dynamically rendered.
+    """
+
+    @pytest.fixture(scope="class")
+    def pane_src(self) -> str:
+        return (_FRONTEND / "components" / "mnemosyne-detail-pane.js").read_text(encoding="utf-8")
+
+    def test_dialog_has_role_dialog(self, pane_src):
+        assert 'role="dialog"' in pane_src, (
+            "mnemosyne-detail-pane.js concept dialog template missing role=\"dialog\""
+        )
+
+    def test_dialog_has_aria_modal(self, pane_src):
+        assert 'aria-modal="true"' in pane_src, (
+            "mnemosyne-detail-pane.js concept dialog missing aria-modal=\"true\""
+        )
+
+    def test_dialog_has_aria_labelledby(self, pane_src):
+        assert "aria-labelledby" in pane_src, (
+            "mnemosyne-detail-pane.js concept dialog missing aria-labelledby"
+        )
+
+    def test_dialog_body_has_aria_live(self, pane_src):
+        assert "aria-live" in pane_src, (
+            "mnemosyne-detail-pane.js concept dialog body missing aria-live "
+            "— new concept content must be announced"
+        )
+
+    def test_dialog_loading_has_aria_busy(self, pane_src):
+        assert "aria-busy" in pane_src, (
+            "mnemosyne-detail-pane.js missing aria-busy on loading state "
+            "— loading state must be announced to AT users (Test 4a in manual script)"
+        )
+
+    def test_dialog_error_has_role_alert(self, pane_src):
+        assert 'role="alert"' in pane_src, (
+            "mnemosyne-detail-pane.js missing role=\"alert\" on error state "
+            "— error must be announced assertively (Test 4b in manual script)"
+        )
+
+
+# ── Practice Tab Input Structure ──────────────────────────────────────────────
+
+class TestPracticeTabInputs:
+    """Verify that practice drill inputs in mnemosyne-modal are labelled,
+    and that pane-practice-check is dispatched from mnemosyne-detail-pane.js.
+
+    The fill-blank drill creates an <input> at runtime. We check the JS
+    source sets aria-labelledby on it (SC 1.3.1 / 4.1.2).
+    """
+
+    @pytest.fixture(scope="class")
+    def modal_src(self) -> str:
+        return (_FRONTEND / "components" / "mnemosyne-modal.js").read_text(encoding="utf-8")
+
+    @pytest.fixture(scope="class")
+    def pane_src(self) -> str:
+        return (_FRONTEND / "components" / "mnemosyne-detail-pane.js").read_text(encoding="utf-8")
+
+    def test_fill_blank_input_has_aria_labelledby(self, modal_src):
+        assert "aria-labelledby" in modal_src, (
+            "mnemosyne-modal.js does not set aria-labelledby on drill inputs"
+        )
+
+    def test_fill_blank_input_has_autocomplete_off(self, modal_src):
+        assert 'autocomplete' in modal_src and 'off' in modal_src, (
+            "mnemosyne-modal.js drill input missing autocomplete='off' — "
+            "autocomplete suggestions could obscure drill feedback"
+        )
+
+    def test_rating_buttons_exist_in_pane(self, pane_src):
+        # Practice check event dispatched from detail pane (FSRS review)
+        assert "pane-practice-check" in pane_src, (
+            "mnemosyne-detail-pane.js missing pane-practice-check event dispatch "
+            "— practice drills must submit to FSRS review"
+        )
+
+
+# ── Live Region Completeness ───────────────────────────────────────────────────
+
+class TestLiveRegionCompleteness:
+    """Extended checks beyond the basic TestLiveRegions class above.
+
+    These verify specific live-region patterns required for the flows
+    in MANUAL_ACCESSIBILITY_TEST.md that are hard to cover otherwise.
+    """
+
+    def test_multiple_polite_live_regions(self, page):
+        live_els = [
+            el for el in page.elements
+            if el["attrs"].get("aria-live") == "polite"
+        ]
+        assert len(live_els) >= 2, (
+            f"Expected multiple polite live regions, found {len(live_els)}. "
+            "Parse status, drill feedback, and review save confirmation each "
+            "need a live region announcement."
+        )
+
+    def test_no_assertive_live_on_non_error_elements(self, page):
+        # Only error/alert elements should use aria-live=assertive.
+        # Everything else must be polite to avoid interrupting AT users.
+        assertive = [
+            el for el in page.elements
+            if el["attrs"].get("aria-live") == "assertive"
+        ]
+        for el in assertive:
+            role = el["attrs"].get("role", "")
+            assert role in ("alert", ""), (
+                f"Element {el['tag']} has aria-live=assertive but role={role!r}; "
+                "only role=alert elements should use assertive live regions"
+            )
+
+    def test_a11y_live_region_is_aria_atomic(self, page):
+        live = page.by_id("a11y-live")
+        assert live is not None
+        assert live["attrs"].get("aria-atomic") == "true", (
+            "#a11y-live must have aria-atomic=true so messages replace "
+            "rather than append (prevents double-announcement)"
+        )

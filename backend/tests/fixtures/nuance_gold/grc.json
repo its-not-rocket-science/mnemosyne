@@ -125,6 +125,39 @@
       "confidence_ge": null,
       "lesson_data_required_keys": {},
       "no_raw_uuids": true
+    },
+    {
+      "id": "grc_morph_index_verb_form",
+      "category": "morphology",
+      "text": "ὁ κύριος ἔλεγεν αὐτοῖς.",
+      "note": "'ἔλεγεν' — 3rd sg imperfect active; morph index should provide tense/mood/person when available",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.85,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "grc_vocabulary_coverage_multiple",
+      "category": "vocabulary",
+      "text": "πίστις ἐλπὶς ἀγάπη.",
+      "note": "Three common NT vocabulary words — should produce at least 3 vocabulary candidates",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "assert_min_vocabulary_count": 2,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.85,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
     }
   ]
 }

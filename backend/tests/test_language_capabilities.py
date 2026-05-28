@@ -17,6 +17,7 @@ from fastapi.testclient import TestClient
 
 from backend.main import app
 from backend.schemas.language import (
+    ANALYSIS_DEPTH_USER_LABELS,
     AnalysisDepth,
     LanguageCapabilities,
     LessonMode,
@@ -1047,3 +1048,129 @@ class TestLanguagesEndpointV3:
                 f"{item['code']} grammar_nuance={nc['grammar_nuance']!r} "
                 f"not in allowed set {allowed}"
             )
+
+
+# ── Capability label tests ────────────────────────────────────────────────────
+
+
+class TestAnalysisDepthUserLabels:
+    """ANALYSIS_DEPTH_USER_LABELS covers all AnalysisDepth literals and
+    the computed field surfaces them in the API response."""
+
+    def test_all_analysis_depths_have_labels(self) -> None:
+        for depth in ("full", "morphology_light", "dictionary", "segmentation_only"):
+            assert depth in ANALYSIS_DEPTH_USER_LABELS, (
+                f"ANALYSIS_DEPTH_USER_LABELS missing entry for {depth!r}"
+            )
+
+    def test_no_internal_id_leaks_into_labels(self) -> None:
+        for depth, label in ANALYSIS_DEPTH_USER_LABELS.items():
+            assert "morphology_light" not in label, (
+                f"Label for {depth!r} contains internal ID 'morphology_light': {label!r}"
+            )
+            assert "stub" not in label, (
+                f"Label for {depth!r} contains internal ID 'stub': {label!r}"
+            )
+            assert "_" not in label, (
+                f"Label for {depth!r} looks like an internal identifier (contains '_'): {label!r}"
+            )
+
+    def test_computed_field_full(self) -> None:
+        caps = LanguageCapabilities(
+            code="es", display_name="Spanish", direction="ltr",
+            script_family="latin", tokenization_mode="whitespace",
+            morphology_depth="rich", lesson_modes_supported=["morphology"],
+            analysis_depth="full",
+        )
+        assert caps.analysis_depth_label == "Detailed grammar analysis"
+
+    def test_computed_field_morphology_light(self) -> None:
+        caps = LanguageCapabilities(
+            code="hi", display_name="Hindi", direction="ltr",
+            script_family="devanagari", tokenization_mode="whitespace",
+            morphology_depth="shallow", lesson_modes_supported=["vocabulary"],
+            analysis_depth="morphology_light",
+        )
+        assert caps.analysis_depth_label == "Basic grammar hints"
+        assert "morphology_light" not in caps.analysis_depth_label
+
+    def test_computed_field_dictionary(self) -> None:
+        caps = LanguageCapabilities(
+            code="ar", display_name="Arabic", direction="rtl",
+            script_family="arabic", tokenization_mode="whitespace",
+            morphology_depth="none", lesson_modes_supported=["dictionary"],
+            analysis_depth="dictionary",
+        )
+        assert caps.analysis_depth_label == "Vocabulary lookup"
+
+    def test_computed_field_segmentation_only(self) -> None:
+        caps = LanguageCapabilities(
+            code="xx", display_name="Test", direction="ltr",
+            script_family="other", tokenization_mode="segmented",
+            morphology_depth="none", lesson_modes_supported=["dictionary"],
+            analysis_depth="segmentation_only",
+        )
+        assert caps.analysis_depth_label == "Text segmentation only"
+
+    def test_label_included_in_model_dump(self) -> None:
+        caps = LanguageCapabilities(
+            code="fr", display_name="French", direction="ltr",
+            script_family="latin", tokenization_mode="whitespace",
+            morphology_depth="rich", lesson_modes_supported=["morphology"],
+            analysis_depth="full",
+        )
+        dumped = caps.model_dump()
+        assert "analysis_depth_label" in dumped
+        assert dumped["analysis_depth_label"] == "Detailed grammar analysis"
+
+    def test_label_present_in_api_response(self) -> None:
+        resp = client.get("/languages")
+        assert resp.status_code == 200
+        for item in resp.json():
+            assert "analysis_depth_label" in item, (
+                f"Language {item['code']!r} missing analysis_depth_label in API response"
+            )
+
+    def test_morphology_light_languages_show_basic_hints_label(self) -> None:
+        resp = client.get("/languages")
+        # ja/zh/grc/la are morphology_light (suffix rules, no full spaCy pipeline)
+        morphology_light_codes = {"hi", "tr", "fi", "ko", "ja", "zh", "grc", "la"}
+        for item in resp.json():
+            if item["code"] in morphology_light_codes:
+                assert item["analysis_depth_label"] == "Basic grammar hints", (
+                    f"{item['code']} analysis_depth_label should be 'Basic grammar hints', "
+                    f"got {item['analysis_depth_label']!r}"
+                )
+
+    def test_dictionary_languages_show_vocabulary_lookup_label(self) -> None:
+        resp = client.get("/languages")
+        # Only ar and he are analysis_depth="dictionary"
+        dictionary_codes = {"ar", "he"}
+        for item in resp.json():
+            if item["code"] in dictionary_codes:
+                assert item["analysis_depth_label"] == "Vocabulary lookup", (
+                    f"{item['code']} analysis_depth_label should be 'Vocabulary lookup', "
+                    f"got {item['analysis_depth_label']!r}"
+                )
+
+    def test_full_morphology_languages_show_detailed_grammar_label(self) -> None:
+        resp = client.get("/languages")
+        # Full spaCy pipeline languages
+        full_codes = {"es", "fr", "de", "ru", "pt", "it", "en"}
+        for item in resp.json():
+            if item["code"] in full_codes:
+                assert item["analysis_depth_label"] == "Detailed grammar analysis", (
+                    f"{item['code']} analysis_depth_label should be 'Detailed grammar analysis', "
+                    f"got {item['analysis_depth_label']!r}"
+                )
+
+    def test_no_raw_internal_id_in_any_api_label(self) -> None:
+        resp = client.get("/languages")
+        banned = {"morphology_light", "stub", "segmentation_only"}
+        for item in resp.json():
+            label = item.get("analysis_depth_label", "")
+            for bad in banned:
+                assert bad not in label, (
+                    f"Internal ID {bad!r} leaked into analysis_depth_label for "
+                    f"{item['code']!r}: {label!r}"
+                )

@@ -6696,6 +6696,80 @@ export const ANNOTATION_ARIA_I18N = {
   },
 }
 
+// ── Language capability labels ───────────────────────────────────────────────
+// User-facing translations of analysis_depth values.
+// Internal IDs (full, morphology_light, dictionary, segmentation_only) must
+// NOT be shown to users — use these display strings instead.
+export const CAPABILITY_LABELS_I18N = {
+  en: {
+    cap_label_full:              'Detailed grammar analysis',
+    cap_label_morphology_light:  'Basic grammar hints',
+    cap_label_dictionary:        'Vocabulary lookup',
+    cap_label_segmentation_only: 'Text segmentation only',
+  },
+  es: {
+    cap_label_full:              'Análisis gramatical detallado',
+    cap_label_morphology_light:  'Sugerencias gramaticales básicas',
+    cap_label_dictionary:        'Búsqueda de vocabulario',
+    cap_label_segmentation_only: 'Segmentación de texto únicamente',
+  },
+  fr: {
+    cap_label_full:              'Analyse grammaticale détaillée',
+    cap_label_morphology_light:  'Indications grammaticales de base',
+    cap_label_dictionary:        'Recherche de vocabulaire',
+    cap_label_segmentation_only: 'Segmentation du texte uniquement',
+  },
+  de: {
+    cap_label_full:              'Detaillierte Grammatikanalyse',
+    cap_label_morphology_light:  'Einfache Grammatikhinweise',
+    cap_label_dictionary:        'Wortschatz-Suche',
+    cap_label_segmentation_only: 'Nur Textsegmentierung',
+  },
+  it: {
+    cap_label_full:              'Analisi grammaticale dettagliata',
+    cap_label_morphology_light:  'Suggerimenti grammaticali di base',
+    cap_label_dictionary:        'Ricerca del vocabolario',
+    cap_label_segmentation_only: 'Solo segmentazione del testo',
+  },
+  pt: {
+    cap_label_full:              'Análise gramatical detalhada',
+    cap_label_morphology_light:  'Dicas gramaticais básicas',
+    cap_label_dictionary:        'Pesquisa de vocabulário',
+    cap_label_segmentation_only: 'Somente segmentação de texto',
+  },
+  ru: {
+    cap_label_full:              'Подробный грамматический анализ',
+    cap_label_morphology_light:  'Основные грамматические подсказки',
+    cap_label_dictionary:        'Поиск по словарю',
+    cap_label_segmentation_only: 'Только сегментация текста',
+  },
+  ja: {
+    cap_label_full:              '詳細な文法分析',
+    cap_label_morphology_light:  '基本的な文法ヒント',
+    cap_label_dictionary:        '語彙検索',
+    cap_label_segmentation_only: 'テキスト分割のみ',
+  },
+  zh: {
+    cap_label_full:              '详细语法分析',
+    cap_label_morphology_light:  '基本语法提示',
+    cap_label_dictionary:        '词汇查找',
+    cap_label_segmentation_only: '仅文本分词',
+  },
+  ar: {
+    cap_label_full:              'تحليل نحوي مفصّل',
+    cap_label_morphology_light:  'تلميحات نحوية أساسية',
+    cap_label_dictionary:        'البحث في المفردات',
+    cap_label_segmentation_only: 'تقسيم النص فقط',
+  },
+  he: {
+    cap_label_full:              'ניתוח דקדוקי מפורט',
+    cap_label_morphology_light:  'רמזים דקדוקיים בסיסיים',
+    cap_label_dictionary:        'חיפוש אוצר מילים',
+    cap_label_segmentation_only: 'פילוח טקסט בלבד',
+  },
+}
+
+
 export const TYPE_LABELS_LONG_I18N = {
   en: {
     type_vocabulary_long: 'Vocabulary',
@@ -6838,5 +6912,118 @@ export const TYPE_LABELS_LONG_I18N = {
     type_script_long: 'מערכת כתב',
     type_phrase_family_long: 'משפחת ביטויים',
     type_unknown_long: 'הערת למידה',
+  },
+}
+
+export const RECOMMEND_UI_I18N = {
+  en: {
+    reason_level_match:   'Matched your level',
+    reason_continuing:    'Continuing this text',
+    reason_closest_match: 'Closest to your level',
+    cefr_label:           'Level',
+    provenance_label:     'Source',
+    filter_continuation:  'In-progress only',
+    filter_cefr:          'CEFR level',
+    filter_max_words:     'Max sentence length',
+  },
+  es: {
+    reason_level_match:   'Adaptado a tu nivel',
+    reason_continuing:    'Continuando este texto',
+    reason_closest_match: 'Más cercano a tu nivel',
+    cefr_label:           'Nivel',
+    provenance_label:     'Fuente',
+    filter_continuation:  'Solo en progreso',
+    filter_cefr:          'Nivel MCER',
+    filter_max_words:     'Longitud máxima',
+  },
+  fr: {
+    reason_level_match:   'Adapté à votre niveau',
+    reason_continuing:    'Continuer ce texte',
+    reason_closest_match: 'Le plus proche de votre niveau',
+    cefr_label:           'Niveau',
+    provenance_label:     'Source',
+    filter_continuation:  'En cours seulement',
+    filter_cefr:          'Niveau CECRL',
+    filter_max_words:     'Longueur maximale',
+  },
+  de: {
+    reason_level_match:   'Ihrem Niveau angepasst',
+    reason_continuing:    'Diesen Text fortsetzen',
+    reason_closest_match: 'Am nächsten an Ihrem Niveau',
+    cefr_label:           'Niveau',
+    provenance_label:     'Quelle',
+    filter_continuation:  'Nur laufende Texte',
+    filter_cefr:          'GER-Niveau',
+    filter_max_words:     'Max. Satzlänge',
+  },
+  it: {
+    reason_level_match:   'Adatto al tuo livello',
+    reason_continuing:    'Continuare questo testo',
+    reason_closest_match: 'Più vicino al tuo livello',
+    cefr_label:           'Livello',
+    provenance_label:     'Fonte',
+    filter_continuation:  'Solo in corso',
+    filter_cefr:          'Livello QCER',
+    filter_max_words:     'Lunghezza massima',
+  },
+  pt: {
+    reason_level_match:   'Adequado ao seu nível',
+    reason_continuing:    'Continuando este texto',
+    reason_closest_match: 'Mais próximo do seu nível',
+    cefr_label:           'Nível',
+    provenance_label:     'Fonte',
+    filter_continuation:  'Apenas em andamento',
+    filter_cefr:          'Nível QECR',
+    filter_max_words:     'Comprimento máximo',
+  },
+  ru: {
+    reason_level_match:   'Соответствует вашему уровню',
+    reason_continuing:    'Продолжить этот текст',
+    reason_closest_match: 'Ближайший к вашему уровню',
+    cefr_label:           'Уровень',
+    provenance_label:     'Источник',
+    filter_continuation:  'Только незавершённые',
+    filter_cefr:          'Уровень CEFR',
+    filter_max_words:     'Макс. длина предложения',
+  },
+  ja: {
+    reason_level_match:   'あなたのレベルに合っています',
+    reason_continuing:    'このテキストを続ける',
+    reason_closest_match: 'あなたのレベルに最も近い',
+    cefr_label:           'レベル',
+    provenance_label:     'ソース',
+    filter_continuation:  '進行中のみ',
+    filter_cefr:          'CEFRレベル',
+    filter_max_words:     '最大文の長さ',
+  },
+  zh: {
+    reason_level_match:   '符合您的水平',
+    reason_continuing:    '继续阅读此文本',
+    reason_closest_match: '最接近您的水平',
+    cefr_label:           '级别',
+    provenance_label:     '来源',
+    filter_continuation:  '仅进行中',
+    filter_cefr:          'CEFR级别',
+    filter_max_words:     '最大句子长度',
+  },
+  ar: {
+    reason_level_match:   'مناسب لمستواك',
+    reason_continuing:    'متابعة هذا النص',
+    reason_closest_match: 'الأقرب لمستواك',
+    cefr_label:           'المستوى',
+    provenance_label:     'المصدر',
+    filter_continuation:  'قيد التقدم فقط',
+    filter_cefr:          'مستوى CEFR',
+    filter_max_words:     'الحد الأقصى لطول الجملة',
+  },
+  he: {
+    reason_level_match:   'מותאם לרמתך',
+    reason_continuing:    'המשך טקסט זה',
+    reason_closest_match: 'הקרוב ביותר לרמתך',
+    cefr_label:           'רמה',
+    provenance_label:     'מקור',
+    filter_continuation:  'בתהליך בלבד',
+    filter_cefr:          'רמת CEFR',
+    filter_max_words:     'אורך משפט מקסימלי',
   },
 }

@@ -243,6 +243,37 @@ _DICT_ONLY_NOTE = (
     "features not available for this specific inflected form."
 )
 
+# ── Article bigram agreement ──────────────────────────────────────────────────
+# Maps normalized article form → {case, gender, number}.
+# Used to annotate the immediately following token with article agreement hints.
+_ARTICLE_FORMS: dict[str, dict] = {
+    # Singular
+    "ο":    {"case": "nominative",             "gender": "masculine",           "number": "singular"},
+    "η":    {"case": "nominative",             "gender": "feminine",            "number": "singular"},
+    "το":   {"case": "nominative_or_accusative","gender": "neuter",             "number": "singular"},
+    "του":  {"case": "genitive",               "gender": "masculine_or_neuter", "number": "singular"},
+    "της":  {"case": "genitive",               "gender": "feminine",            "number": "singular"},
+    "τω":   {"case": "dative",                 "gender": "masculine_or_neuter", "number": "singular"},
+    "τη":   {"case": "dative",                 "gender": "feminine",            "number": "singular"},
+    "τον":  {"case": "accusative",             "gender": "masculine",           "number": "singular"},
+    "την":  {"case": "accusative",             "gender": "feminine",            "number": "singular"},
+    # Plural
+    "οι":   {"case": "nominative",             "gender": "masculine",           "number": "plural"},
+    "αι":   {"case": "nominative",             "gender": "feminine",            "number": "plural"},
+    "τα":   {"case": "nominative_or_accusative","gender": "neuter",             "number": "plural"},
+    "των":  {"case": "genitive",               "gender": "any",                 "number": "plural"},
+    "τοις": {"case": "dative",                 "gender": "masculine_or_neuter", "number": "plural"},
+    "ταις": {"case": "dative",                 "gender": "feminine",            "number": "plural"},
+    "τους": {"case": "accusative",             "gender": "masculine",           "number": "plural"},
+    "τας":  {"case": "accusative",             "gender": "feminine",            "number": "plural"},
+}
+
+_ARTICLE_AGREEMENT_NOTE = (
+    "Greek article agreement: the immediately preceding article constrains "
+    "the case/gender/number of this form. Features are from the article, "
+    "not from morphological parsing of this word."
+)
+
 
 # ── Plugin ────────────────────────────────────────────────────────────────────
 
@@ -302,6 +333,21 @@ class KoineGreekPlugin:
         candidates: list[CandidateObject] = []
         seen: set[str] = set()
 
+        # Pre-pass: build article-agreement context for bigram annotation.
+        # article_context maps normalized token → article features for the
+        # article that immediately precedes it in the sentence.
+        article_context: dict[str, dict] = {}
+        raw_tokens = [
+            _STRIP_PUNCT.sub("", t) for t in sentence.split()
+        ]
+        for i, tok in enumerate(raw_tokens[:-1]):
+            art_key = normalize_greek(tok)
+            if art_key in _ARTICLE_FORMS:
+                next_tok = raw_tokens[i + 1]
+                next_key = normalize_greek(next_tok)
+                if next_key:
+                    article_context[next_key] = _ARTICLE_FORMS[art_key]
+
         for raw in sentence.split():
             token = _STRIP_PUNCT.sub("", raw)
             if not token:
@@ -356,6 +402,11 @@ class KoineGreekPlugin:
                 else:
                     lesson_data["confidence_note"] = _DICT_ONLY_NOTE
                     confidence = 0.70
+                art = article_context.get(key)
+                if art and pos not in _GRAMMAR_POS:
+                    lesson_data["article_agrees_with"] = dict(art)
+                    if "confidence_note" not in lesson_data:
+                        lesson_data["confidence_note"] = _ARTICLE_AGREEMENT_NOTE
                 candidates.append(CandidateObject(
                     canonical_form=key,
                     surface_form=token,
@@ -374,6 +425,9 @@ class KoineGreekPlugin:
                 for field in _MORPH_FIELDS:
                     if field in morph_entry:
                         lesson_data[field] = morph_entry[field]
+                art = article_context.get(key)
+                if art:
+                    lesson_data["article_agrees_with"] = dict(art)
                 candidates.append(CandidateObject(
                     canonical_form=key,
                     surface_form=token,
@@ -384,16 +438,21 @@ class KoineGreekPlugin:
                 ))
 
             else:
+                lesson_data = {
+                    "lemma":           key,
+                    "confidence_note": _UNKNOWN_NOTE,
+                    "romanized":       romanized,
+                }
+                art = article_context.get(key)
+                if art:
+                    lesson_data["article_agrees_with"] = dict(art)
+                    lesson_data["confidence_note"] = _ARTICLE_AGREEMENT_NOTE
                 candidates.append(CandidateObject(
                     canonical_form=key,
                     surface_form=token,
                     type="vocabulary",
                     label=token,
-                    lesson_data={
-                        "lemma":           key,
-                        "confidence_note": _UNKNOWN_NOTE,
-                        "romanized":       romanized,
-                    },
+                    lesson_data=lesson_data,
                     confidence=None,
                 ))
 

@@ -302,6 +302,56 @@ def _extract_latin_verb_morph(key: str) -> dict | None:
     return None
 
 
+# ── Noun / adjective suffix hints ────────────────────────────────────────────
+# Used when a form is not in the morph index to give case/number/gender hints.
+# Listed longest-match first. Confidence is intentionally low (heuristic only).
+# Many Latin forms are ambiguous across multiple cases; ambiguous_note is set
+# where two or more common case interpretations share the same ending.
+_LATIN_NOUN_SUFFIXES: list[tuple[str, dict, str | None]] = [
+    # (suffix, features, ambiguous_note or None)
+    # Longest suffixes first to prevent shorter rules from shadowing them.
+    # 1st–2nd declension genitive plural (-arum, -orum)
+    ("arum",  {"case": "genitive",  "number": "plural",   "gender": "feminine"},  None),
+    ("orum",  {"case": "genitive",  "number": "plural"},   None),
+    # 3rd declension dative/ablative plural (-ibus) — before -us/-is
+    ("ibus",  {"case": "dative_or_ablative", "number": "plural"}, "Ambiguous: dat pl / abl pl"),
+    # 1st declension genitive/dative singular and plural (-ae)
+    ("ae",    {"case": "genitive_or_dative_or_nominative_plural", "number": "singular_or_plural", "gender": "feminine"}, "Ambiguous: gen sg / dat sg / nom pl for 1st decl nouns"),
+    # Genitive singular / nominative-vocative plural (-is)
+    ("is",    {"case": "genitive_or_dative", "number": "singular"}, "Ambiguous: genitive sg (1st/2nd decl) or nominative/vocative pl (3rd decl)"),
+    # Accusative plural feminine (-as), accusative singular feminine (-am)
+    ("as",    {"case": "accusative", "number": "plural",   "gender": "feminine"},  None),
+    ("am",    {"case": "accusative", "number": "singular", "gender": "feminine"},  None),
+    # 2nd declension accusative plural masculine (-os), accusative/genitive/neuter (-um)
+    ("os",    {"case": "accusative", "number": "plural",   "gender": "masculine"}, None),
+    ("um",    {"case": "accusative_or_genitive_plural_or_nominative_neuter", "number": "singular_or_plural"}, "Ambiguous: acc sg masc, gen pl (2nd decl), nom/acc sg neut"),
+    # 3rd declension accusative singular (-em), nom/acc plural (-es)
+    ("em",    {"case": "accusative", "number": "singular"}, None),
+    ("es",    {"case": "nominative_or_accusative", "number": "plural"}, "Ambiguous: nom pl / acc pl (3rd decl i-stem)"),
+    # 2nd declension nominative singular masculine (-us) — after -ibus
+    ("us",    {"case": "nominative", "number": "singular", "gender": "masculine"}, None),
+    # 2nd declension genitive sg / nominative plural (-i)
+    ("i",     {"case": "genitive_or_nominative_plural", "number": "singular_or_plural", "gender": "masculine"}, "Ambiguous: gen sg (2nd decl) or nom pl (2nd decl)"),
+    # Short vowel endings — last (most ambiguous)
+    ("a",     {"case": "ablative_or_nominative", "number": "singular"}, "Ambiguous: ablative sg / nominative sg (1st decl)"),
+    ("o",     {"case": "dative_or_ablative", "number": "singular"}, "Ambiguous: dat sg / abl sg (2nd decl)"),
+]
+
+_NOUN_SUFFIX_NOTE = (
+    "Latin noun suffix hint (heuristic): case/number assignment is probable based on "
+    "ending pattern only. Latin has significant case syncretism; consult a full "
+    "morphological parser (CLTK, Whitaker's Words) for definitive analysis."
+)
+
+
+def _extract_latin_noun_suffix_hint(key: str) -> tuple[dict, str | None] | None:
+    """Return (features, ambiguous_note) for a Latin noun suffix, or None."""
+    for suffix, features, amb_note in _LATIN_NOUN_SUFFIXES:
+        if key.endswith(suffix) and len(key) > len(suffix) + 1:
+            return dict(features), amb_note
+    return None
+
+
 # ── Plugin ────────────────────────────────────────────────────────────────────
 
 class LatinPlugin:
@@ -477,6 +527,19 @@ class LatinPlugin:
                             lesson_data[field] = morph_entry[field]
                     confidence = 0.70
                 else:
+                    # No morph entry — add noun suffix hint if applicable
+                    noun_hint = _extract_latin_noun_suffix_hint(key)
+                    if noun_hint:
+                        hint_feats, amb_note = noun_hint
+                        if "case" in hint_feats and "case" not in lesson_data:
+                            lesson_data["case_hint"]   = hint_feats["case"]
+                        if "number" in hint_feats and "number" not in lesson_data:
+                            lesson_data["number_hint"] = hint_feats["number"]
+                        if "gender" in hint_feats and "gender" not in lesson_data:
+                            lesson_data["gender_hint"] = hint_feats["gender"]
+                        if amb_note:
+                            lesson_data["ambiguity_note"] = amb_note
+                        lesson_data["confidence_note"] = _NOUN_SUFFIX_NOTE
                     confidence = 0.60
                 candidates.append(CandidateObject(
                     canonical_form=key,
@@ -502,12 +565,25 @@ class LatinPlugin:
                 ))
 
             else:
+                lesson_data = {"lemma": key, "confidence_note": _UNKNOWN_NOTE}
+                noun_hint = _extract_latin_noun_suffix_hint(key)
+                if noun_hint:
+                    hint_feats, amb_note = noun_hint
+                    if "case" in hint_feats:
+                        lesson_data["case_hint"]   = hint_feats["case"]
+                    if "number" in hint_feats:
+                        lesson_data["number_hint"] = hint_feats["number"]
+                    if "gender" in hint_feats:
+                        lesson_data["gender_hint"] = hint_feats["gender"]
+                    if amb_note:
+                        lesson_data["ambiguity_note"] = amb_note
+                    lesson_data["confidence_note"] = _NOUN_SUFFIX_NOTE
                 candidates.append(CandidateObject(
                     canonical_form=key,
                     surface_form=token,
                     type="vocabulary",
                     label=token,
-                    lesson_data={"lemma": key, "confidence_note": _UNKNOWN_NOTE},
+                    lesson_data=lesson_data,
                     confidence=None,
                 ))
 

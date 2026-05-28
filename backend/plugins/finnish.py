@@ -144,19 +144,56 @@ _SUFFIX_RULES: list[tuple[str, dict]] = [
 
 _CONFIDENCE_NOTE = (
     "Finnish morphology-light: outermost suffix analysis only. "
-    "Consonant gradation and inner suffix layers (possessive, clitics) not parsed. "
-    "Lemmatisation not attempted. Canonical form uses surface form + morphology tag "
-    "for conjugations. No trained NLP model used."
+    "Consonant gradation (k→∅, p→v, t→d) not resolved — lemmatisation unreliable. "
+    "Inner suffix layers (possessive -ni/-si/-nsa, clitics -ko/-kin) not parsed. "
+    "Canonical form uses surface form + morphology tag for conjugations. "
+    "No trained NLP model (fi_core_news_sm) used."
 )
+
+# Possessive suffix patterns (appear after case suffix in Finnish).
+# We detect them as a hint when the portion before the case suffix ends in one.
+_POSSESSIVE_ENDINGS: list[tuple[str, str]] = [
+    ("ni",  "first_sg"),
+    ("si",  "second_sg"),
+    ("nsa", "third_any"),
+    ("nsä", "third_any"),
+    ("mme", "first_pl"),
+    ("nne", "second_pl"),
+]
+
+# Function words that should NOT receive case suffix analysis even if the
+# word superficially matches a suffix pattern.
+_INESSIVE_GUARD: frozenset[str] = frozenset({
+    "missa", "minussa", "sinussa", "meissä", "teissä", "heissä",
+    "hänessä", "siinä", "tässä", "tuossa", "siellä", "täällä",
+})
 
 _VERB_POS = frozenset({"verb"})
 
 
+def _detect_possessive(stem: str) -> str | None:
+    """Return possessive person label if stem ends in a possessive suffix, else None."""
+    lower = stem.lower()
+    for ending, person in _POSSESSIVE_ENDINGS:
+        if lower.endswith(ending) and len(lower) > len(ending):
+            return person
+    return None
+
+
 def _extract_morph(token: str) -> dict:
     lower = token.lower()
+    # Guard: known false-positive forms for inessive
+    if lower in _INESSIVE_GUARD:
+        return {}
     for suffix, features in _SUFFIX_RULES:
         if lower.endswith(suffix) and len(lower) > len(suffix) + 1:
-            return dict(features)
+            result = dict(features)
+            # Check if the stem (before this suffix) ends in a possessive marker
+            stem = lower[: len(lower) - len(suffix)]
+            possessive = _detect_possessive(stem)
+            if possessive:
+                result["possessive_hint"] = possessive
+            return result
     return {}
 
 

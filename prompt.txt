@@ -1,0 +1,418 @@
+You are working in the repo:
+
+https://github.com/its-not-rocket-science/mnemosyne
+
+Goal: continue feature development maturity before deployment or user testing.
+
+Important context:
+- Do not deploy.
+- Do not prepare public beta release tasks.
+- Do not add onboarding yet.
+- Do not run supervised user testing yet.
+- The repo recently completed a major post-beta quality pass: the audit commit reports 4194 passed, 48 skipped, 0 failures; 17 plugins; Hindi/Turkish/Finnish morphology-light; Latin/Koine Greek deepened; offline harvest pipeline extended; and docs updated. Use the current repo as source of truth, not assumptions. :contentReference[oaicite:0]{index=0}
+- The next phase is feature maturity: accessibility validation support, linguistic quality, corpus/product depth, learner analytics, and accurate capability labelling.
+
+Scan the whole repo before editing, especially:
+- backend/plugins/
+- backend/lesson/
+- backend/schemas/
+- frontend/components/
+- frontend/js/i18n.js
+- scripts/
+- data/
+- docs/
+- BETA_GAP_REPORT.md
+- ROADMAP.md
+- ARCHITECTURE.md
+- PLUGIN_AUTHOR_GUIDE.md
+- WCAG_AUDIT.md
+- MANUAL_ACCESSIBILITY_TEST.md
+- docs/offline_scripts.md
+
+Work in priority order.
+
+---
+
+# Priority 1 — Complete real manual accessibility validation support
+
+The repo has a strong automated/code-level accessibility baseline, but manual AT validation still needs to become a repeatable, evidence-recording workflow.
+
+Tasks:
+1. Review existing accessibility docs and tests.
+2. Ensure there is a single canonical manual accessibility validation document or clearly linked set of documents.
+3. Add a structured results template for each manual test pass:
+   - date
+   - tester
+   - browser
+   - OS
+   - AT tool
+   - viewport/zoom
+   - language direction tested
+   - pass/fail/notes
+   - linked issue IDs for defects
+4. Ensure the manual test plan covers:
+   - keyboard-only navigation
+   - NVDA
+   - VoiceOver
+   - focus order
+   - focus trapping
+   - Escape behaviour
+   - concept help dialog
+   - Practice tab
+   - review flow
+   - offline/error states
+   - RTL layouts
+   - 200% and 400% zoom/reflow
+   - reduced motion
+5. Add any missing automated smoke tests that are practical, but clearly state that automation does not replace manual AT validation.
+6. Fix any obvious a11y defects found while reviewing.
+
+Acceptance criteria:
+- The repo has a clear repeatable manual accessibility validation process.
+- Results can be recorded without inventing a process later.
+- Concept help, full lesson pane, Practice tab, and RTL layouts are explicitly included.
+- Docs distinguish:
+  - automated accessibility coverage
+  - code audit
+  - manual AT validation
+- Tests pass.
+
+---
+
+# Priority 2 — Correct and improve language capability labels
+
+The current label “morphology-light” is technically useful but not necessarily learner-facing or product-polished. Update language labels and capability displays so users understand what each language can do without seeing overly technical or misleading wording.
+
+Tasks:
+1. Audit all user-facing language capability labels:
+   - language picker
+   - language info/status badges
+   - plugin capability summaries
+   - documentation tables
+   - frontend i18n labels
+   - API capability payloads if exposed directly
+2. Keep internal machine-readable values stable where needed:
+   - `morphology_light`
+   - `dictionary`
+   - `full`
+   - `partial`
+   - etc.
+3. Add user-facing display labels separate from internal capability IDs.
+
+Suggested user-facing wording:
+- `full` / rich morphology: “Detailed grammar analysis”
+- `morphology_light`: “Basic grammar hints”
+- `dictionary`: “Vocabulary lookup”
+- `none`: “No grammar analysis”
+- `partial`: “Partial coverage”
+- `stub`: avoid showing this to users; use “Limited coverage” or “Experimental coverage” where appropriate.
+4. Make labels honest for each language:
+   - Hindi/Turkish/Finnish should not look equivalent to Spanish/German/Russian full morphology.
+   - Latin/Koine Greek should communicate classical-text support with partial morphology/lexicon caveats.
+   - Chinese should communicate segmentation/Pinyin/POS/particle support without implying full morphology.
+5. Localise the labels in all supported UI languages.
+6. Update docs so developer-facing terms and user-facing terms are clearly separated.
+7. Add tests ensuring:
+   - internal capability IDs are unchanged;
+   - displayed labels are localised;
+   - morphology-light languages show “Basic grammar hints” or equivalent;
+   - dictionary-only languages do not imply full grammar analysis;
+   - no raw `morphology_light`, `stub`, or similar implementation labels leak into normal user-facing UI.
+
+Acceptance criteria:
+- Technical capability values remain stable.
+- User-facing language labels are clearer and less jargon-heavy.
+- “morphology-light” is replaced or supplemented with friendlier display wording where appropriate.
+- Tests pass.
+
+---
+
+# Priority 3 — Build language-by-language linguistic quality validation
+
+The app now supports many languages structurally, but feature maturity depends on quality, not only test count.
+
+Create a stronger linguistic validation layer.
+
+Tasks:
+1. For each supported language, create or extend gold-sentence fixtures.
+2. Each fixture should include:
+   - source sentence
+   - expected tokenisation/segmentation where relevant
+   - expected vocabulary candidates
+   - expected grammar candidates
+   - expected morphology axes
+   - expected concept IDs
+   - expected confidence range
+   - expected “must not emit” false-positive cases
+3. Prioritise:
+   - Spanish
+   - English
+   - French
+   - German
+   - Russian
+   - Chinese
+   - Japanese
+   - Arabic
+   - Hebrew
+   - Korean
+   - Latin
+   - Koine Greek
+   - Hindi
+   - Turkish
+   - Finnish
+4. Add special validation for:
+   - suffix false positives in Turkish/Finnish/Hindi
+   - Chinese particles/classifiers
+   - Japanese particles/conjugations
+   - Arabic/Hebrew RTL and morphology confidence
+   - Latin/Greek ambiguous inflected forms
+   - Russian aspect
+   - German cases
+   - Romance tense/mood/person/number/gender
+5. Add negative fixtures:
+   - forms that look like grammar markers but are not
+   - ambiguous short tokens
+   - names/proper nouns
+   - punctuation-heavy literary text
+   - mixed-script snippets
+6. Add a test runner or extend the existing multilingual test framework to report per-language quality coverage.
+7. Documentation should explain the difference between:
+   - structural plugin contract tests
+   - linguistic gold tests
+   - corpus/integration tests
+
+Acceptance criteria:
+- Each supported language has meaningful gold-sentence coverage.
+- Tests catch false positives as well as missing annotations.
+- Confidence behaviour is tested.
+- The report makes uneven language quality visible rather than hidden.
+- Tests pass.
+
+---
+
+# Priority 4 — Improve morphology-light languages where feasible
+
+Hindi, Turkish, and Finnish have morphology-light support. Improve them carefully without overclaiming.
+
+Do not replace honest low-confidence behaviour with brittle certainty.
+
+Tasks:
+1. Audit the Hindi, Turkish, and Finnish plugins and tests.
+2. Identify the most common false positives and false negatives.
+3. Improve heuristic rules only where they are reliable.
+4. Investigate optional offline/local morphology resources:
+   - Turkish finite-state morphology options
+   - Finnish Omorfi or comparable resources
+   - Hindi lemmatisation/postposition/compound-verb resources
+5. Do not add runtime network dependencies.
+6. If a resource is usable:
+   - add an offline ingestion script or extend an existing one;
+   - document licence/provenance;
+   - add graceful fallback when resource is absent.
+7. Improve language-specific handling:
+   - Hindi:
+     - postpositions
+     - compound verbs
+     - ergative/perfective constructions where feasible
+     - gender/number agreement hints
+     - transliteration consistency
+   - Turkish:
+     - vowel harmony
+     - case suffixes
+     - evidential/past/conditional forms
+     - possessive/person endings
+     - agglutinative suffix chains
+   - Finnish:
+     - case ambiguity
+     - consonant gradation caveats
+     - verb form hints
+     - possessive suffixes
+     - front/back vowel harmony
+8. Keep capability labels honest. If still morphology-light, keep internal capability as morphology-light and user-facing label as “Basic grammar hints” or equivalent.
+
+Acceptance criteria:
+- Hindi/Turkish/Finnish improve measurably against gold tests.
+- False positives are reduced.
+- Confidence notes are clearer.
+- Capabilities remain honest.
+- Tests pass.
+
+---
+
+# Priority 5 — Deepen Latin and Koine Greek classical support
+
+Latin and Koine Greek have been deepened beyond tiny dictionary mode, but they still need better disambiguation, lexicon depth, and learner-facing clarity.
+
+Tasks:
+1. Audit current Latin and Koine Greek plugins, morph-index data, tests, and offline scripts.
+2. Improve ambiguous-form handling:
+   - multiple possible parses;
+   - confidence-ranked alternatives;
+   - UI-safe representation of ambiguity;
+   - no pretending a single parse is certain when it is not.
+3. Improve Latin:
+   - noun/adjective case-number-gender disambiguation where possible;
+   - verb tense/mood/voice/person/number;
+   - declension/conjugation class where reliable;
+   - common irregular forms;
+   - classical vs medieval/ecclesiastical caveats if relevant.
+4. Improve Koine Greek:
+   - noun/adjective case-number-gender;
+   - verb tense/aspect/mood/voice/person/number;
+   - article agreement;
+   - common particles/prepositions;
+   - transliteration consistency;
+   - New Testament vs broader Greek caveats.
+5. Add source-aware capability notes:
+   - Latin: classical/medieval/ecclesiastical coverage limitations.
+   - Greek: Koine/New Testament coverage limitations.
+6. Expand gold fixtures using public-domain or licence-compatible examples.
+7. Ensure offline resources have clear provenance/licensing docs.
+8. Keep runtime deterministic and local.
+
+Acceptance criteria:
+- Ambiguous forms are handled honestly.
+- Classical support feels meaningfully deeper in lessons.
+- Confidence/caveat notes are visible.
+- Offline resources remain documented.
+- Tests pass.
+
+---
+
+# Priority 6 — Turn the offline corpus into a stronger product feature
+
+The offline corpus and CEFR/proficiency text pipeline are substantial. Use them more fully inside the learning experience before deployment.
+
+Tasks:
+1. Audit corpus scripts, generated artefacts, docs, and frontend exposure.
+2. Build or improve a text selection experience:
+   - choose a text by language;
+   - filter by level/proficiency;
+   - filter by length;
+   - show source/title/author where available;
+   - show why this text is suitable;
+   - show caveats for classical or non-CEFR languages.
+3. Integrate with learner progress:
+   - recommend texts using encountered vocabulary;
+   - avoid recommending the exact current text;
+   - prefer texts with useful but not overwhelming new material;
+   - consider grammar/concept exposure, not just vocabulary.
+4. Add continuation support:
+   - saved reading position;
+   - next passage/chapter from the same source;
+   - “continue this work” option.
+5. Make corpus provenance visible enough for trust:
+   - source;
+   - licence/public-domain status;
+   - level/proficiency assignment source or heuristic.
+6. Add tests for:
+   - corpus manifest loading;
+   - filtering by language and level;
+   - recommendation exclusions;
+   - continuation logic;
+   - missing/invalid corpus entries;
+   - non-Latin and RTL titles.
+
+Acceptance criteria:
+- The corpus becomes a guided reading feature, not only an offline pipeline.
+- Users can choose suitable texts inside the app.
+- Recommendations use learner state where available.
+- Provenance is documented.
+- Tests pass.
+
+---
+
+# Priority 7 — Add privacy-conscious learning/product analytics
+
+Before external user testing, add internal analytics/events so that future testing can be interpreted. This is not deployment work; it is instrumentation readiness.
+
+Tasks:
+1. Audit existing metrics/review/progress/event tables and endpoints.
+2. Add privacy-conscious event tracking for learning interactions:
+   - parse started/completed/failed
+   - language selected
+   - text source selected
+   - lesson opened
+   - tab opened
+   - concept help opened
+   - related concept clicked
+   - practice attempted
+   - practice completed
+   - review submitted
+   - recommendation accepted/skipped
+   - annotation-density setting changed
+3. Avoid storing unnecessary raw text.
+4. Prefer aggregate-safe identifiers:
+   - language
+   - lesson type
+   - concept ID
+   - object ID where already canonicalised
+   - event timestamp
+   - user ID only where needed for personal progress
+5. Add opt-out/config switch where appropriate.
+6. Add dashboard/admin/dev endpoint or script to summarise:
+   - most used languages
+   - lesson opens by type
+   - concept help usage
+   - practice completion
+   - parse failure rates
+   - empty recommendation rates
+7. Add tests for:
+   - event writing
+   - opt-out
+   - no raw text leakage
+   - aggregation correctness
+   - deletion/GDPR cascade if user deletes account
+
+Acceptance criteria:
+- Future user testing can be measured.
+- Analytics do not collect unnecessary personal content.
+- Account deletion removes user-linked analytics where appropriate.
+- Tests pass.
+
+---
+
+# Priority 8 — Final documentation and maturity audit
+
+After implementing the above, update docs to reflect the new maturity level.
+
+Tasks:
+1. Update:
+   - BETA_GAP_REPORT.md
+   - ROADMAP.md
+   - ARCHITECTURE.md
+   - PLUGIN_AUTHOR_GUIDE.md
+   - WCAG_AUDIT.md
+   - MANUAL_ACCESSIBILITY_TEST.md
+   - docs/offline_scripts.md
+   - any language capability docs
+2. Clearly distinguish:
+   - internally feature-complete
+   - mature enough for controlled beta
+   - still not deployed
+   - still not user-tested
+   - language-depth limitations
+3. Update language capability tables with:
+   - internal capability ID
+   - user-facing capability label
+   - confidence level
+   - known caveats
+4. Add a final “what remains before deployment/user testing” section, but do not implement deployment/user-testing tasks.
+5. Run the full test suite and record results in docs.
+
+Acceptance criteria:
+- Docs match the code.
+- Capability labels are clear and honest.
+- Remaining limitations are explicit.
+- Full test results are recorded.
+- Tests pass.
+
+---
+
+Final output expected:
+1. Code changes.
+2. Tests.
+3. Updated docs.
+4. A concise implementation summary.
+5. A list of honest remaining limitations.
+6. Confirmation that no deployment, public beta checklist, onboarding flow, or supervised user-testing workflow was implemented in this pass.
