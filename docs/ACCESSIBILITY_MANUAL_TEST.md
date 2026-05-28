@@ -3,8 +3,11 @@
 Manual validation for WCAG 2.2 AA.  Run after any change touching HTML
 structure, ARIA attributes, focus management, or live regions.
 
-Code-level audit completed 2026-05-09.  Manual AT tests below are the
-remaining validation gate before claiming WCAG 2.2 AA.
+Code-level audit completed 2026-05-09; concept help dialog additions audited 2026-05-27.
+Automated structural smoke tests: `pytest backend/tests/test_accessibility_static.py` (index.html ARIA contract).
+Automated component tests (detail pane, concept dialog): `node --test frontend/tests/detail-pane.test.mjs` — 30 tests, covers ARIA attributes, focus trap, Escape, loading/error states.
+
+**Manual AT tests below are the remaining validation gate before claiming WCAG 2.2 AA.  Automated tests do not replace AT testing.**
 
 ---
 
@@ -69,6 +72,25 @@ Use only Tab / Shift+Tab / Enter / Space / Arrow keys / Escape.
 - [ ] Tab from tab bar → moves into the tab panel content, not to the next tab
 - [ ] Shift+Tab from first panel element → returns to tab bar
 
+### 1.5a Concept help dialog (CRITICAL — grammar concept `?` buttons)
+
+Run after opening any lesson that has a field with a `?` button (e.g. a Spanish verb with Tense/Person/Number fields).
+
+- [ ] Tab to a label-help `?` button — `aria-label` includes the field name (e.g. "Explain concept: Grammatical Case")
+- [ ] Tab to the adjacent value-help `?` button — `aria-label` includes the field value (e.g. "Explain concept: nominative") and differs from the label-help button
+- [ ] Enter on any `?` button → concept dialog opens, focus moves inside dialog
+- [ ] While dialog is open: Tab cycles only within the dialog (close button → back button → related concept links); Tab does NOT leave the dialog
+- [ ] Shift+Tab from close button → wraps to last focusable element inside dialog
+- [ ] While dialog is loading: body shows "Loading…" text; `aria-busy="true"` is present on the loading element
+- [ ] If fetch fails: body shows error text; error element has `role="alert"` so AT announces it assertively
+- [ ] Escape while concept dialog is open → concept dialog closes; focus returns to the `?` button that opened it; detail pane remains open (Escape must NOT close the pane here)
+- [ ] Escape while concept dialog is closed → detail pane closes; focus returns to the triggering annotation mark
+- [ ] Activate a related concept link inside the dialog → body updates in-place; `aria-live="polite"` on body announces new content; title updates; Back button appears
+- [ ] Back button → returns to previous concept; Back button hidden when no history
+- [ ] Close (×) button → dialog closes; focus returns to trigger `?` button
+- [ ] Practice CTA ("Practice this concept") — present when concept has practice tags; activating it closes the dialog and switches to the Practice tab
+- [ ] In Form tab: morphology axis `?` buttons have distinct `aria-label` values for axis name vs. axis value; same dialog behaviour as above
+
 ### 1.6 Lesson modal (mnemosyne-modal)
 
 - [ ] "Study" button in detail pane → modal opens, focus on dialog container
@@ -126,12 +148,17 @@ NVDA browse mode (arrow) and application/forms mode (NVDA+Space).
 | Drill feedback (aria-live=polite) | Answer selected | "✓ Correct!" or "✗ The answer is …" |
 | Modal status (role=status) | Rating saved | "Saved. Next review in N day(s)." |
 | Modal error (role=alert) | Rating fails | error message announced immediately |
+| Concept body (aria-live=polite) | `?` button activated | "Loading…" announced; on resolve, concept explanation announced |
+| Concept body (aria-live=polite) | Related concept activated | New concept title and body announced without focus move |
+| Concept error (role=alert) | Fetch fails | Error message announced assertively |
 
 ### 2.3 Dialogs
 
 - [ ] Native `<dialog>` opens → NVDA announces dialog role and accessible name (h2 text)
 - [ ] Escape closes dialog → NVDA reads the page content the trigger was on
 - [ ] `mnemosyne-modal` (shadow DOM) → NVDA reads "dialog, [word]" on open
+- [ ] Concept help dialog (shadow DOM): activating a `?` button announces the dialog title; body text is available via `aria-describedby`; two `?` buttons on the same field have different announcements (field name vs. field value)
+- [ ] Escape while concept dialog open → dialog closes; NVDA focus returns to the `?` button (not the lesson modal close)
 
 ### 2.4 Forms
 
@@ -163,6 +190,15 @@ Use VO+U for rotor, VO+Left/Right to navigate, VO+Space to activate.
 - [ ] Lesson modal opens → VoiceOver announces "web dialog [word]"
 - [ ] VO+Tab cycles within the modal shadow DOM
 - [ ] Escape closes, VoiceOver returns to trigger element
+
+### 3.2a Concept help dialog (VoiceOver)
+
+- [ ] Activating a `?` button → VoiceOver announces dialog title when dialog opens
+- [ ] VO+Tab cycles only within the concept dialog; does not escape to the detail pane
+- [ ] Two-finger scrub (Z gesture) or Escape → concept dialog closes; VoiceOver focus returns to `?` button
+- [ ] Loading text ("Loading…") announced via polite live region on `?` activate
+- [ ] Fetch error text announced assertively (role="alert" on error paragraph)
+- [ ] Related concept navigation: body updates in-place; new content announced via polite live region
 
 ### 3.3 Custom elements as buttons
 

@@ -68,6 +68,8 @@ This flow tests the grammar concept help dialog introduced after the initial aud
 | 2 | Tab to the label-help `?` button (left of the two). | Button aria-label includes the field name (e.g. "Explain concept: Grammatical Case"). |
 | 3 | Tab to the value-help `?` button (right of the two). | Button aria-label includes the field value (e.g. "Explain concept: nominative"). Label and value buttons have DISTINCT aria-labels. |
 | 4 | Press Enter on the value-help button. | Concept dialog opens. Focus moves into dialog. Dialog has role="dialog", aria-modal="true", aria-labelledby pointing to title. |
+| 4a | While dialog is loading (observe briefly after step 4). | Body shows "Loading…" text. AT announces "Loading…" via polite live region (`aria-live="polite"` on body). `aria-busy="true"` present on loading element. |
+| 4b | DevTools → Network → set to Offline; activate a `?` button. | Body shows localised error message. AT announces error immediately (error paragraph has `role="alert"`). |
 | 5 | Read the dialog title with AT. | Title announced on open (e.g. "nominative"). |
 | 6 | Tab through dialog controls. | Tab order: close button → back button (if history) → related concept links → body text. Focus does NOT leave dialog. |
 | 7 | Press Escape. | Concept dialog closes. Focus returns to the `?` button that opened it. Detail pane remains open. |
@@ -75,6 +77,7 @@ This flow tests the grammar concept help dialog introduced after the initial aud
 | 9 | Activate the Back button (if shown). | Dialog body reverts to previous concept. Back button hidden when no history. |
 | 10 | Activate the close (×) button. | Dialog closes. Focus returns to trigger button. |
 | 11 | Open concept dialog; Shift+Tab from first interactive element in dialog. | Focus wraps to last focusable element inside dialog (does not escape to pane). |
+| 12 | Open a concept that has a "Practice this concept" CTA button (concept with practice_tags). | CTA button visible with non-empty label. Tab reaches it. Activating it closes dialog and switches detail pane to Practice tab. |
 
 ---
 
@@ -128,6 +131,8 @@ Perform with NVDA in Browse mode initially; switch to Forms mode for inputs.
 | 6 | Pill button | "Vocabulary lesson: [word], button" |
 | 7 | Detail pane tab | "[Tab name], tab, [N] of 3, selected" |
 | 8 | Concept dialog open | "[Dialog title], dialog" on open; description text available via describedby |
+| 8a | Concept dialog loading state | "Loading…" announced via polite live region immediately on open |
+| 8b | Concept dialog error state (go offline first) | Error message announced assertively (role=alert on error paragraph) |
 | 9 | Related concept activated | New concept text announced via polite live region (aria-live on body) |
 | 10 | Concept dialog close | Focus returns to `?` button; no announcement of closed state required (dialog removed from DOM) |
 | 11 | Drill feedback | "✓ Correct!" or "✗ The answer is …" via polite live region |
