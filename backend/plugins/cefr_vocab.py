@@ -24,16 +24,13 @@ Usage in plugins
       return 0.50, "word not found in model vocabulary ..."
   return 0.85, None
 
-A1 tables added at project start.
-A2 tables added 2026-05-28.  Plugin priority: A1 (0.90) → A2 (0.88) → in-vocab (0.85) → OOV (0.50)
-B1 tables added 2026-05-28.  Plugin priority: A1 (0.90) → A2 (0.88) → B1 (0.86) → in-vocab (0.85) → OOV (0.50)
+Priority chain (confidence returned by _vocab_confidence):
+  A1 (0.90) → A2 (0.88) → B1 (0.86) → in-vocab (0.85)
+  → B2/C1/C2 only suppress OOV: B2 (0.84) → C1 (0.82) → C2 (0.80) → OOV (0.50)
 
   # In _extract_vocabulary():
   if lemma in _A1:
       data["cefr_level"] = "A1"
-
-A2 tables added 2026-05-28.  Plugin priority:
-  A1 (0.90) → A2 (0.88) → in-vocab (0.85) → OOV (0.50)
 """
 from __future__ import annotations
 
@@ -166,7 +163,7 @@ _FR_A1: frozenset[str] = frozenset({
     "jardin", "parc", "plage", "montagne", "chien", "chat", "oiseau",
     "fleur", "arbre",
     # adjectives
-    "bon", "mauvais", "grand", "petit", "nouveau", "vieux", "jeune",
+    "bon", "mauvais", "petit", "nouveau", "vieux", "jeune",
     "beau", "laid", "haut", "bas", "long", "court", "large", "étroit",
     "facile", "difficile", "rapide", "lent", "chaud", "froid",
     "bon marché", "cher", "libre", "occupé", "ouvert", "fermé",
@@ -232,8 +229,7 @@ _FR_A1: frozenset[str] = frozenset({
     "courir", "vendre", "nager", "tomber", "casser", "rêver",
     "marier", "préférer", "promettre", "chanter", "montrer",
     # adjectives (extended)
-    "effrayé", "incroyable", "colère", "blond", "ennuyeux", "dangereux",
-    "sombre", "délicieux", "sec", "excité", "célèbre", "fantastique",
+    "effrayé", "incroyable", "colère", "blond", "ennuyeux", "dangereux", "délicieux", "sec", "excité", "célèbre", "fantastique",
     "gros", "sympa", "drôle", "génial", "dur", "marié", "moderne",
     "parfait", "populaire", "possible", "joli", "calme", "réel",
     "riche", "spécial", "fort", "vrai", "merveilleux", "correct",
@@ -274,7 +270,7 @@ _DE_A1: frozenset[str] = frozenset({
     "kalt", "billig", "teuer", "frei", "besetzt", "offen", "geschlossen",
     "sauber", "schmutzig", "voll", "leer", "erst", "letzt", "gleich",
     "ander", "ganz", "wichtig", "verschieden", "richtig", "falsch",
-    "glücklich", "traurig", "müde", "krank", "gesund", "hungrig", "durstig",
+    "glücklich", "müde", "krank", "gesund", "hungrig", "durstig",
     # numbers
     "ein", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht",
     "neun", "zehn", "elf", "zwölf", "dreizehn", "vierzehn", "fünfzehn",
@@ -333,14 +329,13 @@ _DE_A1: frozenset[str] = frozenset({
     "zeichnen", "erklären", "reparieren", "vergessen", "raten", "hassen",
     "einschließen", "vorstellen", "behalten", "lachen", "verlieren",
     "meinen", "vermissen", "bewegen", "malen", "bezahlen", "entspannen",
-    "erinnern", "wiederholen", "reiten", "rennen", "schicken", "stehen",
+    "erinnern", "reiten", "rennen", "schicken", "stehen",
     "schwimmen", "reisen", "aufwachen", "tragen", "gewinnen",
     "verkaufen", "fallen", "brechen", "träumen", "heiraten",
     "bevorzugen", "versprechen", "singen", "zeigen",
     # adjectives (lowercase)
     "ängstlich", "erstaunlich", "wütend", "blond", "langweilig",
-    "gefährlich", "dunkel", "lecker", "trocken", "aufgeregt", "berühmt",
-    "fantastisch", "dick", "freundlich", "lustig", "großartig", "hart",
+    "gefährlich", "dunkel", "lecker", "trocken", "aufgeregt", "fantastisch", "dick", "freundlich", "lustig", "großartig", "hart",
     "verheiratet", "modern", "perfekt", "beliebt", "möglich", "hübsch",
     "ruhig", "echt", "reich", "sicher", "speziell", "stark", "wahr",
     "wunderbar", "schrecklich", "klug", "faul", "höflich", "unhöflich",
@@ -659,7 +654,7 @@ _RU_A1: frozenset[str] = frozenset({
     "решать", "умирать", "рисовать", "объяснять", "чинить", "летать",
     "забывать", "угадывать", "ненавидеть", "включать", "представлять",
     "сохранять", "смеяться", "терять", "двигаться", "красить",
-    "платить", "отдыхать", "помнить", "повторять", "ехать", "бегать",
+    "платить", "отдыхать", "помнить", "ехать", "бегать",
     "посылать", "стоять", "плавать", "путешествовать", "просыпаться",
     "носить", "выигрывать", "продавать", "падать", "ломать", "мечтать",
     "жениться", "предпочитать", "обещать", "петь", "показывать",
@@ -754,7 +749,7 @@ _JA_A1: frozenset[str] = frozenset({
     # verbs (extended)
     "建てる", "変える", "選ぶ", "登る", "かかる", "決める", "死ぬ",
     "描く", "説明する", "直す", "飛ぶ", "忘れる", "笑う", "失う",
-    "動く", "払う", "覚える", "繰り返す", "走る", "送る", "立つ",
+    "動く", "払う", "覚える", "走る", "送る", "立つ",
     "泳ぐ", "旅行する", "着る", "勝つ", "売る", "転ぶ", "壊す",
     "夢見る", "結婚する", "好む", "約束する", "歌う", "見せる",
     # i-adjectives (extended)
@@ -848,7 +843,7 @@ _ZH_A1: frozenset[str] = frozenset({
     "婴儿", "医生", "厨师", "牙医", "工程师", "飞行员", "士兵",
     # verbs (extended)
     "建造", "改变", "选择", "爬", "花费", "决定", "死",
-    "画", "解释", "修理", "飞", "忘记", "猜", "恨",
+    "画", "修理", "飞", "忘记", "猜", "恨",
     "包括", "介绍", "保持", "笑", "失去", "移动",
     "支付", "放松", "记得", "重复", "骑", "发送",
     "游泳", "旅行", "醒来", "穿", "赢", "卖",
@@ -856,7 +851,7 @@ _ZH_A1: frozenset[str] = frozenset({
     "唱", "展示",
     # adjectives (extended)
     "害怕", "令人惊讶", "生气", "美丽", "无聊",
-    "危险", "黑暗", "美味", "干燥", "兴奋", "著名",
+    "危险", "美味", "干燥", "兴奋", "著名",
     "极好", "胖", "友好", "有趣", "聪明", "现代",
     "完美", "流行", "可能", "可爱", "安静",
     "富有", "特别", "强壮", "温暖", "精彩", "正确",
@@ -897,7 +892,7 @@ _AR_A1: frozenset[str] = frozenset({
     # nouns — nature & animals
     "كلب", "قطة", "طائر", "زهرة", "شجرة",
     # adjectives
-    "جيد", "سيئ", "كبير", "صغير", "جديد", "قديم", "شاب", "جميل",
+    "جيد", "سيئ", "كبير", "صغير", "جديد", "شاب", "جميل",
     "طويل", "قصير", "واسع", "ضيق", "سهل", "صعب", "سريع", "بطيء",
     "حار", "بارد", "رخيص", "غالي", "نظيف", "وسخ", "ممتلئ", "فارغ",
     "أول", "ثاني", "أخير", "مهم", "مختلف", "سعيد", "حزين", "تعبان",
@@ -946,7 +941,7 @@ _AR_A1: frozenset[str] = frozenset({
     # people & professions
     "ممثل", "ممثلة", "بالغ", "فنان", "زبون", "راقص", "سائق",
     "مزارع", "ممرضة", "لاعب", "شرطي", "عالم", "مغنٍ",
-    "مراهق", "سائح", "زائر", "نادل", "عامل", "كاتب",
+    "مراهق", "سائح", "زائر", "نادل", "كاتب",
     "رضيع", "طبيب", "طباخ", "مهندس", "طيار", "جندي",
     # verbs (extended)
     "بنى", "غير", "اختار", "تسلق", "كلف", "قرر", "مات",
@@ -958,7 +953,7 @@ _AR_A1: frozenset[str] = frozenset({
     "أظهر",
     # adjectives (extended)
     "خائف", "مذهل", "غاضب", "أشقر", "ممل", "خطير",
-    "مظلم", "لذيذ", "جاف", "متحمس", "مشهور", "رائع",
+    "مظلم", "لذيذ", "جاف", "مشهور", "رائع",
     "سمين", "ودود", "مضحك", "عظيم", "متزوج", "حديث",
     "مثالي", "شعبي", "ممكن", "هادئ", "حقيقي",
     "غني", "خاص", "قوي", "دافئ", "رهيب",
@@ -971,7 +966,7 @@ _AR_A1: frozenset[str] = frozenset({
 # hebrew.py's _strip_nikud() exactly.
 _HE_A1: frozenset[str] = frozenset({
     # core verbs (infinitive / common conjugation stem)
-    "היה", "עשה", "הלך", "בא", "יכול", "רצה", "ידע", "אמר",
+    "היה", "עשה", "הלך", "בא", "יכול", "רצה", "אמר",
     "ראה", "נתן", "לקח", "חשב", "הבין", "מצא", "חיפש", "פתח",
     "סגר", "עזר", "שיחק", "כתב", "קרא", "שמע", "למד", "עבד",
     "גר", "אהב", "קנה", "אכל", "שתה", "ישן", "התחיל", "סיים",
@@ -1002,7 +997,7 @@ _HE_A1: frozenset[str] = frozenset({
     "גבוה", "נמוך", "ארוך", "קצר", "רחב", "צר", "קל", "קשה",
     "מהיר", "איטי", "חם", "קר", "זול", "יקר", "נקי", "מלוכלך",
     "מלא", "ריק", "ראשון", "שני", "אחרון", "חשוב", "שונה",
-    "שמח", "עצוב", "עייף", "חולה", "בריא",
+    "שמח", "עייף", "חולה", "בריא",
     # numbers
     "אחד", "שניים", "שלושה", "ארבעה", "חמישה", "שישה", "שבעה",
     "שמונה", "תשעה", "עשרה", "אחד עשר", "שנים עשר", "עשרים",
@@ -1077,8 +1072,7 @@ _ES_A2: frozenset[str] = frozenset({
     "compañero", "conocido",
     # extended workplace & school
     "oficina", "reunión", "jefe", "jefa", "empleado", "empresa", "negocio",
-    "proyecto", "informe", "plazo", "sueldo", "salario", "contrato",
-    "asignatura", "examen", "nota", "deberes", "tarea", "carrera", "título",
+    "proyecto", "informe", "plazo", "sueldo", "salario", "asignatura", "examen", "nota", "deberes", "tarea", "carrera", "título",
     "materia", "conferencia", "pizarra", "cuaderno",
     # extended travel & transport
     "pasaporte", "billete", "reserva", "maleta", "equipaje", "aduanas",
@@ -1099,8 +1093,7 @@ _ES_A2: frozenset[str] = frozenset({
     "ambulancia", "herida", "alergia", "cita",
     # shopping & money
     "recibo", "descuento", "oferta", "talla", "probador", "marca",
-    "cartera", "tarjeta", "cuenta", "factura", "cambio", "efectivo",
-    "bolsa", "etiqueta", "devolución",
+    "cartera", "tarjeta", "cuenta", "factura", "cambio", "bolsa", "etiqueta", "devolución",
     # food & cooking
     "receta", "ingrediente", "sabor", "menú", "plato", "postre",
     "primer plato", "aperitivo", "propina", "mezclar", "hervir",
@@ -1150,7 +1143,7 @@ _FR_A2: frozenset[str] = frozenset({
     "camarade",
     # extended workplace & school
     "bureau", "réunion", "chef", "employé", "entreprise", "affaire",
-    "projet", "rapport", "délai", "salaire", "contrat", "promotion",
+    "projet", "rapport", "délai", "salaire", "promotion",
     "matière", "examen", "note", "carrière", "diplôme",
     "conférence", "tableau", "cahier",
     # extended travel & transport
@@ -1202,8 +1195,7 @@ _FR_A2: frozenset[str] = frozenset({
     "jaloux", "passionnant", "relaxant", "utile", "inutile",
     # extended verbs
     "suggérer", "accepter", "refuser", "se plaindre",
-    "recommander", "décrire", "imaginer", "espérer", "planifier",
-    "organiser", "comparer", "convaincre", "inviter", "célébrer",
+    "recommander", "décrire", "imaginer", "espérer", "organiser", "comparer", "convaincre", "inviter", "célébrer",
     "féliciter", "s'excuser", "remercier", "profiter", "améliorer",
     "continuer", "appartenir", "consister",
     # extended adverbs
@@ -1277,8 +1269,7 @@ _DE_A2: frozenset[str] = frozenset({
     "nutzlos", "verfügbar",
     # extended verbs (lowercase)
     "vorschlagen", "akzeptieren", "ablehnen", "sich beschweren",
-    "empfehlen", "beschreiben", "hoffen", "planen",
-    "organisieren", "vergleichen", "überzeugen", "einladen",
+    "empfehlen", "beschreiben", "hoffen", "planen", "vergleichen", "überzeugen", "einladen",
     "feiern", "gratulieren", "sich entschuldigen", "danken", "genießen",
     "verbessern", "fortsetzen", "gehören", "bestehen",
     # extended adverbs
@@ -1296,12 +1287,10 @@ _IT_A2: frozenset[str] = frozenset({
     "compagno", "conoscente",
     # extended workplace & school
     "ufficio", "riunione", "capo", "dipendente", "azienda", "affare",
-    "progetto", "rapporto", "scadenza", "stipendio", "contratto",
-    "materia", "esame", "voto", "compito", "carriera", "titolo",
+    "progetto", "rapporto", "scadenza", "stipendio", "materia", "esame", "voto", "compito", "carriera", "titolo",
     "conferenza", "lavagna", "quaderno",
     # extended travel & transport
-    "passaporto", "biglietto", "prenotazione", "valigia", "bagaglio",
-    "dogana", "check-in", "carta d'imbarco", "arrivo", "partenza",
+    "passaporto", "biglietto", "prenotazione", "valigia", "dogana", "check-in", "carta d'imbarco", "arrivo", "partenza",
     "binario", "autostrada", "ingorgo", "parcheggio", "fermata",
     "traghetto", "crociera", "gita", "turismo", "alloggio",
     # extended home & furniture
@@ -1349,8 +1338,7 @@ _IT_A2: frozenset[str] = frozenset({
     "inutile", "disponibile",
     # extended verbs
     "suggerire", "accettare", "rifiutare", "lamentarsi",
-    "consigliare", "descrivere", "immaginare", "sperare", "pianificare",
-    "organizzare", "confrontare", "convincere", "invitare",
+    "consigliare", "descrivere", "immaginare", "sperare", "organizzare", "confrontare", "convincere", "invitare",
     "festeggiare", "congratularsi", "scusarsi", "ringraziare", "godere",
     "migliorare", "continuare", "appartenere",
     # extended adverbs
@@ -1369,11 +1357,11 @@ _PT_A2: frozenset[str] = frozenset({
     "vizinha", "companheiro", "conhecido",
     # extended workplace & school
     "escritório", "reunião", "chefe", "funcionário", "empresa", "negócio",
-    "projeto", "relatório", "prazo", "salário", "contrato", "promoção",
+    "projeto", "relatório", "prazo", "salário", "promoção",
     "disciplina", "exame", "nota", "tarefa", "carreira", "título",
     "conferência", "quadro", "caderno",
     # extended travel & transport
-    "passaporte", "bilhete", "reserva", "mala", "bagagem", "alfândega",
+    "passaporte", "bilhete", "reserva", "mala", "alfândega",
     "check-in", "cartão de embarque", "chegada", "partida", "plataforma",
     "autoestrada", "engarrafamento", "estacionamento", "paragem",
     "ferryboat", "cruzeiro", "excursão", "turismo", "alojamento",
@@ -1567,8 +1555,7 @@ _JA_A2: frozenset[str] = frozenset({
     "役に立つ", "役に立たない",
     # extended verbs
     "提案する", "受け入れる", "断る", "文句を言う",
-    "勧める", "描写する", "想像する", "希望する", "計画する",
-    "整理する", "比べる", "納得させる", "招待する",
+    "勧める", "描写する", "想像する", "希望する", "計画する", "比べる", "納得させる", "招待する",
     "祝う", "おめでとうと言う", "謝る", "感謝する", "楽しむ",
     "改善する", "続ける", "属する",
     # extended adverbs
@@ -1641,9 +1628,8 @@ _ZH_A2: frozenset[str] = frozenset({
     # extended verbs
     "建议", "接受", "拒绝", "抱怨",
     "推荐", "描述", "想象", "希望", "计划",
-    "组织", "比较", "说服", "邀请",
-    "庆祝", "祝贺", "道歉", "感谢", "享受",
-    "改善", "继续", "属于",
+    "组织", "说服", "邀请",
+    "庆祝", "祝贺", "道歉", "感谢", "享受", "继续", "属于",
     # extended adverbs
     "肯定", "也许", "特别是", "主要",
     "通常", "有时", "很少", "几乎", "相当",
@@ -1694,8 +1680,7 @@ _AR_A2: frozenset[str] = frozenset({
     "حبكة", "مشهد", "تذكرة", "مهرجان", "معرض فني",
     "مقالة", "رواية", "قصيدة",
     # sport & hobbies
-    "فريق", "بطولة", "مباراة", "دوري", "نتيجة", "هدف",
-    "تدريب", "مدرب", "مشجع", "رياضي",
+    "فريق", "بطولة", "مباراة", "دوري", "تدريب", "مدرب", "مشجع", "رياضي",
     "سباحة", "ركوب الدراجات", "مشي لمسافات طويلة", "بستنة",
     "تصوير فوتوغرافي", "طبخ", "موسيقى", "رقص",
     # communication & technology
@@ -1756,7 +1741,7 @@ _HE_A2: frozenset[str] = frozenset({
     "תרופה", "כדור", "ניתוח", "חירום", "אמבולנס", "פצע",
     "אלרגיה", "תור",
     # shopping & money
-    "קבלה", "הנחה", "מבצע", "מידה", "חדר הלבשה", "מותג",
+    "קבלה", "מבצע", "מידה", "חדר הלבשה", "מותג",
     "ארנק", "כרטיס", "חשבון", "חשבונית", "עודף", "מזומן",
     "שקית", "תווית", "החזרה",
     # food & cooking
@@ -1768,7 +1753,7 @@ _HE_A2: frozenset[str] = frozenset({
     "עלילה", "סצנה", "כרטיס", "פסטיבל", "גלריה",
     "מאמר", "פרק", "רומן", "שיר",
     # sport & hobbies
-    "קבוצה", "אליפות", "משחק", "טורניר", "תוצאה", "שער",
+    "קבוצה", "אליפות", "משחק", "טורניר", "שער",
     "אימון", "מאמן", "אוהד", "ספורטאי",
     "שחייה", "רכיבה על אופניים", "טיול רגלי", "גינון",
     "צילום", "ציור", "בישול", "מוזיקה", "ריקוד",
@@ -1837,33 +1822,26 @@ A2: dict[str, frozenset[str]] = {
 # ── Spanish B1 (es) ───────────────────────────────────────────────────────────
 _ES_B1: frozenset[str] = frozenset({
     # abstract concepts & nouns
-    "opinión", "situación", "solución", "resultado", "relación",
+    "opinión", "situación", "solución", "relación",
     "oportunidad", "decisión", "razón", "detalle", "hecho",
     "diferencia", "desarrollo", "efecto", "ventaja",
-    "desventaja", "propósito", "valor", "papel", "calidad",
-    "proceso", "método", "nivel", "atención", "esfuerzo",
+    "desventaja", "propósito", "valor", "papel", "calidad", "método", "nivel", "atención", "esfuerzo",
     "posibilidad", "responsabilidad", "importancia", "aspecto",
-    "causa", "condición", "contexto", "dificultad", "evidencia",
-    "función", "impacto", "influencia", "asunto", "conocimiento",
+    "causa", "condición", "dificultad", "evidencia",
+    "función", "influencia", "asunto", "conocimiento",
     "límite", "pérdida", "significado", "necesidad", "período",
     "presión", "principio", "progreso", "tasa", "sentido",
-    "etapa", "estructura", "sistema", "término", "perspectiva",
-    "conclusión", "teoría", "afirmación", "análisis", "crítica",
-    "propuesta", "alternativa", "tendencia", "consecuencia",
-    "suposición", "hipótesis", "argumento",
+    "etapa", "estructura", "sistema", "término", "afirmación", "análisis", "crítica", "alternativa", "consecuencia",
+    "suposición", "argumento",
     # opinions & debate
     "debate", "discusión", "punto de vista", "juicio",
     "recomendación", "evaluación", "acuerdo", "desacuerdo",
     # work & professional (B1 depth)
     "presentación", "solicitud", "entrevista", "departamento",
-    "habilidad", "calificación", "formación", "objetivo",
-    "estrategia", "presupuesto", "beneficio", "recurso",
-    "colaboración", "rendimiento", "desempeño", "logro",
-    "retroalimentación", "capacitación", "liderazgo",
+    "habilidad", "calificación", "formación", "estrategia", "presupuesto", "beneficio", "colaboración", "desempeño", "logro", "capacitación", "liderazgo",
     # news & current affairs
     "anuncio", "elección", "conflicto",
-    "acontecimiento", "crisis", "desafío", "protesta", "reforma",
-    "campaña", "política", "gobierno", "sociedad", "economía",
+    "acontecimiento", "crisis", "desafío", "protesta", "campaña", "política", "gobierno", "sociedad", "economía",
     "estadística", "encuesta", "titular", "fuente", "cobertura",
     "declaración", "acuerdo internacional", "tratado",
     # technology & digital (B1 depth)
@@ -1872,49 +1850,40 @@ _ES_B1: frozenset[str] = frozenset({
     "usuario", "base de datos", "almacenamiento", "actualización",
     "aplicación móvil", "inteligencia artificial", "automatización",
     # health & medicine (extended)
-    "tratamiento", "síntoma", "diagnóstico", "terapia",
+    "tratamiento", "síntoma", "terapia",
     "rehabilitación", "vacuna", "antibiótico", "especialista",
     "dosis", "efecto secundario", "prevención", "cronicidad",
     "bienestar mental", "estrés", "burnout",
     # environment & sustainability
-    "clima", "medio ambiente", "contaminación", "sostenible",
-    "recurso natural", "especie", "hábitat", "emisión",
+    "clima", "medio ambiente", "contaminación", "recurso natural", "especie", "hábitat", "emisión",
     "huella de carbono", "biodiversidad", "sequía", "inundación",
     "deforestación", "calentamiento global", "reciclable",
     "residuo", "impacto ambiental", "energía solar",
     "energía eólica", "panel solar", "transición energética",
     # education & learning (B1 depth)
     "investigación", "tesis", "beca",
-    "taller", "seminario", "metodología", "institución",
-    "academia", "matrícula", "resultado académico",
+    "taller", "seminario", "academia", "matrícula", "resultado académico",
     "aprendizaje autónomo", "competencia",
     # social issues & society
-    "igualdad", "diversidad", "inclusión", "discriminación",
-    "prejuicio", "pobreza", "desigualdad", "justicia",
-    "derechos", "obligación", "ciudadanía", "integración",
-    "migración", "refugiado", "comunidad", "voluntariado",
+    "igualdad", "inclusión", "discriminación",
+    "prejuicio", "pobreza", "justicia",
+    "derechos", "obligación", "migración", "refugiado", "comunidad", "voluntariado",
     "solidaridad", "bienestar", "cohesión social", "tolerancia",
     "equidad", "marginación", "exclusión", "accesibilidad",
     # extended abstract adjectives
     "complejo", "sencillo", "general", "específico", "particular",
     "cierto", "evidente", "normal", "original", "reciente",
-    "grave", "similar", "típico", "variado", "eficiente",
-    "eficaz", "flexible", "innovador", "creativo", "crítico",
-    "lógico", "abstracto", "concreto", "fundamental", "relevante",
-    "significativo", "notable", "considerable", "excepcional",
+    "grave", "similar", "típico", "variado", "eficiente", "flexible", "creativo", "crítico",
+    "lógico", "abstracto", "concreto", "notable", "considerable", "excepcional",
     "moderado", "intenso", "permanente", "temporal", "global",
     "nacional", "internacional", "público", "privado",
-    "oficial", "formal", "informal", "urgente", "inevitable",
+    "oficial", "formal", "informal", "inevitable",
     "razonable", "adecuado", "insuficiente", "excesivo",
     # extended verbs (cognitive & communicative)
-    "considerar", "analizar", "interpretar", "debatir",
-    "argumentar", "dudar", "reconocer", "percibir",
-    "reflexionar", "evaluar", "justificar", "demostrar",
-    "comprobar", "investigar", "resolver", "implementar",
-    "adaptar", "transformar", "contribuir", "participar",
-    "colaborar", "comunicar", "negociar", "gestionar",
-    "coordinar", "establecer", "determinar", "identificar",
-    "priorizar", "supervisar", "promover", "apoyar",
+    "considerar", "analizar", "argumentar", "dudar", "reconocer", "percibir",
+    "reflexionar", "evaluar", "demostrar",
+    "comprobar", "resolver", "adaptar", "contribuir", "participar",
+    "colaborar", "comunicar", "negociar", "coordinar", "establecer", "determinar", "supervisar", "apoyar",
     "defender", "cuestionar", "criticar", "influir",
     "prevenir", "reducir", "aumentar",
     # extended adverbs & discourse connectors
@@ -1928,33 +1897,29 @@ _ES_B1: frozenset[str] = frozenset({
 # ── French B1 (fr) ────────────────────────────────────────────────────────────
 _FR_B1: frozenset[str] = frozenset({
     # abstract concepts & nouns
-    "opinion", "situation", "solution", "résultat", "relation",
+    "opinion", "situation", "relation",
     "opportunité", "décision", "raison", "détail", "fait",
     "différence", "changement", "développement", "effet", "avantage",
-    "inconvénient", "valeur", "rôle", "qualité",
-    "processus", "méthode", "niveau", "attention", "effort",
-    "possibilité", "responsabilité", "importance", "aspect",
+    "inconvénient", "valeur", "rôle", "qualité", "méthode", "niveau", "attention", "effort",
+    "possibilité", "importance", "aspect",
     "cause", "condition", "contexte", "difficulté", "preuve",
-    "fonction", "impact", "influence", "connaissance",
+    "fonction", "influence", "connaissance",
     "limite", "perte", "signification", "besoin", "période",
     "pression", "principe", "progrès", "sens",
-    "étape", "structure", "système", "terme", "perspective",
-    "conclusion", "théorie", "affirmation", "analyse", "critique",
-    "proposition", "alternative", "tendance", "conséquence",
-    "supposition", "hypothèse", "argument",
+    "étape", "structure", "système", "terme", "conclusion", "affirmation", "analyse", "critique",
+    "proposition", "alternative", "conséquence",
+    "supposition", "argument",
     # opinions & debate
     "débat", "discussion", "point de vue", "jugement",
     "recommandation", "évaluation", "accord", "désaccord",
     # work & professional (B1 depth)
     "présentation", "candidature", "entretien", "département",
-    "compétence", "qualification", "formation", "objectif",
-    "stratégie", "budget", "bénéfice", "ressource",
-    "collaboration", "performance", "rendement", "réalisation",
+    "compétence", "qualification", "formation", "stratégie", "budget", "bénéfice", "ressource",
+    "collaboration", "performance", "réalisation",
     "retour d'information", "leadership",
     # news & current affairs
     "annonce", "élection", "conflit",
-    "événement", "crise", "défi", "manifestation", "réforme",
-    "campagne", "politique", "gouvernement", "société", "économie",
+    "événement", "crise", "défi", "manifestation", "campagne", "politique", "société", "économie",
     "statistique", "sondage", "titre", "source", "couverture",
     "déclaration", "traité",
     # technology & digital (B1 depth)
@@ -1976,36 +1941,27 @@ _FR_B1: frozenset[str] = frozenset({
     "énergie éolienne", "transition énergétique",
     # education & learning (B1 depth)
     "recherche", "mémoire", "bourse",
-    "atelier", "séminaire", "méthodologie", "institution",
+    "atelier", "séminaire", "institution",
     "académie", "inscription", "résultat scolaire",
     "apprentissage autonome", "compétence",
     # social issues & society
     "égalité", "diversité", "inclusion", "discrimination",
-    "préjugé", "pauvreté", "inégalité", "justice",
-    "droits", "obligation", "citoyenneté", "intégration",
-    "migration", "réfugié", "communauté", "bénévolat",
-    "solidarité", "bien-être", "cohésion sociale", "tolérance",
-    "équité", "marginalisation", "exclusion", "accessibilité",
+    "préjugé", "pauvreté", "justice",
+    "droits", "obligation", "citoyenneté", "migration", "réfugié", "communauté", "bénévolat",
+    "solidarité", "bien-être", "cohésion sociale", "tolérance", "marginalisation", "exclusion", "accessibilité",
     # extended abstract adjectives
     "complexe", "simple", "général", "spécifique", "particulier",
     "certain", "évident", "normal", "original", "récent",
-    "grave", "similaire", "typique", "varié", "efficace",
-    "flexible", "innovant", "créatif", "critique", "logique",
-    "abstrait", "concret", "fondamental", "pertinent",
-    "significatif", "notable", "considérable", "exceptionnel",
-    "modéré", "intense", "permanent", "temporaire", "mondial",
-    "national", "international", "officiel", "formel", "informel",
-    "urgent", "inévitable", "raisonnable", "adéquat",
+    "grave", "similaire", "typique", "varié", "flexible", "créatif", "critique", "logique",
+    "abstrait", "concret", "fondamental", "notable", "considérable", "modéré", "intense", "permanent", "temporaire", "mondial",
+    "national", "international", "officiel", "formel", "informel", "inévitable", "raisonnable", "adéquat",
     "insuffisant", "excessif",
     # extended verbs (cognitive & communicative)
-    "considérer", "analyser", "interpréter", "débattre",
+    "considérer", "analyser", "débattre",
     "argumenter", "douter", "reconnaître", "percevoir",
-    "réfléchir", "évaluer", "justifier", "démontrer",
-    "vérifier", "enquêter", "résoudre", "mettre en œuvre",
-    "adapter", "transformer", "contribuer", "participer",
-    "collaborer", "communiquer", "négocier", "gérer",
-    "coordonner", "établir", "déterminer", "identifier",
-    "superviser", "promouvoir", "soutenir", "défendre",
+    "réfléchir", "démontrer", "résoudre", "mettre en œuvre",
+    "adapter", "contribuer", "participer",
+    "collaborer", "communiquer", "négocier", "coordonner", "établir", "déterminer", "superviser", "défendre",
     "remettre en question", "critiquer", "influencer",
     "prévenir", "réduire", "augmenter",
     # extended adverbs & discourse connectors
@@ -2023,28 +1979,22 @@ _DE_B1: frozenset[str] = frozenset({
     "Meinung", "Situation", "Lösung", "Beziehung",
     "Gelegenheit", "Entscheidung", "Grund", "Detail", "Tatsache",
     "Unterschied", "Änderung", "Entwicklung", "Wirkung", "Vorteil",
-    "Nachteil", "Zweck", "Wert", "Rolle", "Qualität",
-    "Prozess", "Methode", "Niveau", "Aufmerksamkeit", "Anstrengung",
-    "Möglichkeit", "Verantwortung", "Wichtigkeit", "Aspekt",
-    "Ursache", "Bedingung", "Kontext", "Schwierigkeit", "Beweis",
+    "Nachteil", "Zweck", "Wert", "Rolle", "Qualität", "Methode", "Niveau", "Aufmerksamkeit", "Anstrengung",
+    "Möglichkeit", "Wichtigkeit", "Aspekt",
+    "Ursache", "Bedingung", "Schwierigkeit", "Beweis",
     "Funktion", "Auswirkung", "Einfluss", "Angelegenheit", "Wissen",
     "Grenze", "Verlust", "Bedeutung", "Bedürfnis", "Zeitraum",
     "Druck", "Grundsatz", "Fortschritt", "Sinn",
-    "Stufe", "Struktur", "System", "Begriff", "Perspektive",
-    "Schlussfolgerung", "Theorie", "Aussage", "Analyse", "Kritik",
-    "Vorschlag", "Alternative", "Tendenz", "Konsequenz",
-    "Annahme", "Hypothese", "Argument",
+    "Stufe", "System", "Begriff", "Schlussfolgerung", "Aussage", "Analyse", "Kritik",
+    "Vorschlag", "Alternative", "Annahme", "Argument",
     # debate & opinion nouns
-    "Debatte", "Diskussion", "Standpunkt", "Urteil",
-    "Empfehlung", "Bewertung", "Einigkeit", "Meinungsverschiedenheit",
+    "Debatte", "Diskussion", "Standpunkt", "Urteil", "Einigkeit", "Meinungsverschiedenheit",
     # work & professional nouns (B1 depth)
     "Präsentation", "Bewerbung", "Vorstellungsgespräch", "Abteilung",
-    "Fähigkeit", "Qualifikation", "Ausbildung", "Ziel",
-    "Strategie", "Budget", "Nutzen", "Ressource",
-    "Zusammenarbeit", "Leistung", "Führung", "Rückmeldung",
+    "Fähigkeit", "Qualifikation", "Ausbildung", "Ziel", "Budget", "Nutzen", "Zusammenarbeit", "Leistung", "Führung", "Rückmeldung",
     # news & current affairs nouns
     "Ankündigung", "Wahl", "Konflikt",
-    "Ereignis", "Krise", "Herausforderung", "Protest", "Reform",
+    "Ereignis", "Krise", "Protest", "Reform",
     "Kampagne", "Regierung", "Gesellschaft", "Wirtschaft",
     "Statistik", "Umfrage", "Schlagzeile", "Quelle",
     "Erklärung",
@@ -2058,39 +2008,33 @@ _DE_B1: frozenset[str] = frozenset({
     "Rehabilitation", "Impfstoff", "Antibiotikum", "Spezialist",
     "Dosis", "Nebenwirkung", "Vorbeugung", "Burnout",
     # environment nouns
-    "Klima", "Umwelt", "Verschmutzung", "Ressource",
-    "Art", "Lebensraum", "Emission", "Biodiversität",
+    "Klima", "Umwelt", "Verschmutzung", "Art", "Lebensraum", "Emission", "Biodiversität",
     "Dürre", "Überschwemmung", "Abholzung", "Klimawandel",
     "Abfall", "Solarenergie", "Windenergie",
     # education nouns
     "Forschung", "These", "Stipendium", "Konferenz",
-    "Workshop", "Seminar", "Methodik", "Institution",
-    "Akademie", "Einschreibung", "Kompetenz",
-    # social issues nouns
+    "Workshop", "Seminar", "Institution",
+    "Akademie", "Einschreibung", # social issues nouns
     "Gleichheit", "Vielfalt", "Inklusion", "Diskriminierung",
     "Vorurteil", "Armut", "Ungerechtigkeit", "Gerechtigkeit",
-    "Pflicht", "Staatsbürgerschaft", "Integration",
-    "Migration", "Flüchtling", "Gemeinschaft", "Ehrenamt",
+    "Pflicht", "Staatsbürgerschaft", "Migration", "Flüchtling", "Gemeinschaft", "Ehrenamt",
     "Solidarität", "Wohlbefinden", "Toleranz", "Zugänglichkeit",
-    # abstract adjectives (lowercase)
-    "komplex", "allgemein", "spezifisch",
+    # abstract adjectives (lowercase) "allgemein", "spezifisch",
     "offensichtlich", "ursprünglich",
-    "ähnlich", "typisch", "vielfältig", "effizient",
-    "wirksam", "flexibel", "innovativ", "kreativ",
+    "ähnlich", "typisch", "vielfältig", "wirksam", "flexibel", "innovativ", "kreativ",
     "kritisch", "logisch", "abstrakt", "konkret",
-    "grundlegend", "relevant", "bedeutsam", "bemerkenswert",
+    "grundlegend", "bedeutsam", "bemerkenswert",
     "erheblich", "außergewöhnlich", "gemäßigt", "intensiv",
     "dauerhaft", "vorübergehend", "global", "lokal",
     "öffentlich", "privat", "offiziell", "formell", "informell",
-    "dringend", "unvermeidlich", "angemessen", "unzureichend",
+    "dringend", "unvermeidlich", "unzureichend",
     # verbs (lowercase)
-    "betrachten", "analysieren", "interpretieren", "debattieren",
+    "betrachten", "analysieren", "debattieren",
     "argumentieren", "zweifeln", "wahrnehmen",
-    "nachdenken", "bewerten", "rechtfertigen", "beweisen",
-    "überprüfen", "untersuchen", "lösen", "umsetzen",
-    "anpassen", "transformieren", "beitragen", "teilnehmen",
-    "verhandeln", "verwalten", "koordinieren", "feststellen",
-    "bestimmen", "identifizieren", "beaufsichtigen", "fördern",
+    "nachdenken", "bewerten", "beweisen", "untersuchen", "lösen", "umsetzen",
+    "anpassen", "beitragen", "teilnehmen",
+    "verhandeln", "verwalten", "feststellen",
+    "bestimmen", "beaufsichtigen", "fördern",
     "verteidigen", "hinterfragen", "beeinflussen",
     "verhindern", "reduzieren", "erhöhen",
     # adverbs & connectors (lowercase)
@@ -2104,33 +2048,27 @@ _DE_B1: frozenset[str] = frozenset({
 # ── Italian B1 (it) ───────────────────────────────────────────────────────────
 _IT_B1: frozenset[str] = frozenset({
     # abstract concepts & nouns
-    "opinione", "situazione", "soluzione", "risultato", "relazione",
-    "opportunità", "decisione", "ragione", "dettaglio", "fatto",
+    "opinione", "situazione", "relazione",
+    "opportunità", "ragione", "dettaglio", "fatto",
     "differenza", "cambiamento", "sviluppo", "effetto", "vantaggio",
-    "svantaggio", "scopo", "valore", "ruolo", "qualità",
-    "processo", "metodo", "livello", "attenzione", "sforzo",
-    "possibilità", "responsabilità", "importanza", "aspetto",
-    "causa", "condizione", "contesto", "difficoltà", "prova",
-    "funzione", "impatto", "questione", "conoscenza",
+    "svantaggio", "scopo", "valore", "ruolo", "qualità", "metodo", "livello", "attenzione", "sforzo",
+    "possibilità", "importanza", "aspetto",
+    "causa", "condizione", "contesto", "difficoltà", "prova", "questione", "conoscenza",
     "limite", "perdita", "significato", "necessità", "periodo",
     "pressione", "principio", "progresso", "senso",
-    "fase", "struttura", "sistema", "termine", "prospettiva",
-    "conclusione", "teoria", "affermazione", "analisi", "critica",
-    "proposta", "alternativa", "tendenza", "conseguenza",
-    "ipotesi", "argomento",
+    "fase", "struttura", "sistema", "termine", "prospettiva", "affermazione", "analisi", "critica",
+    "proposta", "alternativa", "argomento",
     # opinions & debate
     "dibattito", "discussione", "punto di vista", "giudizio",
     "raccomandazione", "valutazione", "accordo", "disaccordo",
     # work & professional (B1 depth)
     "presentazione", "candidatura", "colloquio", "dipartimento",
-    "abilità", "qualificazione", "formazione", "obiettivo",
-    "strategia", "budget", "beneficio", "risorsa",
-    "collaborazione", "prestazione", "rendimento", "leadership",
+    "abilità", "qualificazione", "formazione", "strategia", "budget", "beneficio", "risorsa",
+    "collaborazione", "prestazione", "leadership",
     "retroazione", "capacità",
     # news & current affairs
     "annuncio", "elezione", "conflitto",
-    "evento", "crisi", "sfida", "protesta", "riforma",
-    "campagna", "politica", "governo", "società", "economia",
+    "evento", "crisi", "sfida", "protesta", "campagna", "politica", "governo", "società", "economia",
     "statistica", "sondaggio", "fonte", "trattato",
     # technology & digital (B1 depth)
     "software", "dispositivo", "rete", "dati", "sicurezza",
@@ -2138,48 +2076,38 @@ _IT_B1: frozenset[str] = frozenset({
     "utente", "database", "archiviazione", "aggiornamento",
     "intelligenza artificiale", "automazione",
     # health & medicine (extended)
-    "trattamento", "sintomo", "diagnosi", "terapia",
+    "trattamento", "sintomo", "terapia",
     "riabilitazione", "vaccino", "antibiotico", "specialista",
     "dose", "effetto collaterale", "prevenzione", "burnout",
     # environment & sustainability
-    "clima", "ambiente", "inquinamento", "sostenibile",
-    "risorsa naturale", "specie", "habitat", "emissione",
+    "clima", "ambiente", "inquinamento", "risorsa naturale", "specie", "habitat", "emissione",
     "impronta di carbonio", "biodiversità", "siccità", "alluvione",
     "deforestazione", "cambiamento climatico", "riciclabile",
     "rifiuto", "impatto ambientale", "energia solare",
     "energia eolica", "transizione energetica",
     # education & learning (B1 depth)
     "ricerca", "tesi", "borsa di studio",
-    "laboratorio", "seminario", "metodologia", "istituzione",
+    "laboratorio", "seminario", "istituzione",
     "accademia", "iscrizione", "competenza",
     "apprendimento autonomo",
     # social issues & society
-    "uguaglianza", "diversità", "inclusione", "discriminazione",
+    "uguaglianza", "inclusione", "discriminazione",
     "pregiudizio", "povertà", "disuguaglianza", "giustizia",
-    "diritti", "obbligo", "cittadinanza", "integrazione",
-    "migrazione", "rifugiato", "comunità", "volontariato",
+    "diritti", "obbligo", "cittadinanza", "migrazione", "rifugiato", "comunità", "volontariato",
     "solidarietà", "benessere", "coesione sociale", "tolleranza",
     "equità", "marginalizzazione", "esclusione", "accessibilità",
     # extended abstract adjectives
     "complesso", "semplice", "generale", "specifico", "particolare",
     "certo", "evidente", "normale", "originale", "recente",
     "simile", "tipico", "vario", "efficiente",
-    "flessibile", "innovativo", "creativo", "critico", "logico",
-    "astratto", "concreto", "fondamentale", "pertinente",
-    "significativo", "notevole", "considerevole", "eccezionale",
+    "flessibile", "creativo", "critico", "logico",
+    "astratto", "concreto", "notevole", "eccezionale",
     "moderato", "intenso", "permanente", "temporaneo", "globale",
-    "nazionale", "internazionale", "ufficiale", "formale", "informale",
-    "urgente", "inevitabile", "ragionevole", "adeguato",
+    "nazionale", "internazionale", "ufficiale", "formale", "informale", "inevitabile", "ragionevole", "adeguato",
     "insufficiente", "eccessivo",
     # extended verbs (cognitive & communicative)
-    "considerare", "analizzare", "interpretare", "dibattere",
-    "argomentare", "dubitare", "riconoscere", "percepire",
-    "riflettere", "valutare", "giustificare", "dimostrare",
-    "verificare", "indagare", "risolvere", "implementare",
-    "adattare", "trasformare", "contribuire", "partecipare",
-    "collaborare", "comunicare", "negoziare", "gestire",
-    "coordinare", "stabilire", "determinare", "identificare",
-    "supervisionare", "promuovere", "sostenere", "difendere",
+    "considerare", "analizzare", "dibattere", "dubitare", "riconoscere", "percepire",
+    "riflettere", "valutare", "dimostrare", "risolvere", "adattare", "contribuire", "partecipare", "comunicare", "negoziare", "coordinare", "stabilire", "determinare", "supervisionare", "sostenere", "difendere",
     "mettere in discussione", "influenzare",
     "prevenire", "ridurre", "aumentare",
     # extended adverbs & discourse connectors
@@ -2192,33 +2120,26 @@ _IT_B1: frozenset[str] = frozenset({
 # ── Portuguese B1 (pt) ────────────────────────────────────────────────────────
 _PT_B1: frozenset[str] = frozenset({
     # abstract concepts & nouns
-    "opinião", "situação", "solução", "resultado", "relação",
-    "oportunidade", "decisão", "razão", "detalhe", "facto",
+    "opinião", "situação", "relação",
+    "oportunidade", "razão", "detalhe", "facto",
     "diferença", "mudança", "desenvolvimento", "efeito", "vantagem",
-    "desvantagem", "propósito", "valor", "papel", "qualidade",
-    "processo", "método", "nível", "atenção", "esforço",
-    "possibilidade", "responsabilidade", "importância", "aspeto",
-    "causa", "condição", "contexto", "dificuldade", "evidência",
-    "função", "impacto", "influência", "assunto", "conhecimento",
+    "desvantagem", "propósito", "valor", "papel", "qualidade", "método", "nível", "atenção", "esforço",
+    "possibilidade", "importância", "aspeto",
+    "causa", "condição", "dificuldade", "evidência",
+    "função", "influência", "assunto", "conhecimento",
     "limite", "perda", "significado", "necessidade", "período",
     "pressão", "princípio", "progresso", "sentido",
-    "fase", "estrutura", "sistema", "termo", "perspetiva",
-    "conclusão", "teoria", "afirmação", "análise", "crítica",
-    "proposta", "alternativa", "tendência", "consequência",
-    "hipótese", "argumento",
+    "fase", "estrutura", "sistema", "termo", "perspetiva", "afirmação", "análise", "crítica",
+    "proposta", "alternativa", "consequência", "argumento",
     # opinions & debate
     "debate", "discussão", "ponto de vista", "julgamento",
     "recomendação", "avaliação", "acordo", "desacordo",
     # work & professional (B1 depth)
     "apresentação", "candidatura", "entrevista", "departamento",
-    "habilidade", "qualificação", "formação", "objetivo",
-    "estratégia", "orçamento", "benefício", "recurso",
-    "colaboração", "desempenho", "rendimento", "liderança",
-    "feedback", "capacidade",
-    # news & current affairs
+    "habilidade", "qualificação", "formação", "estratégia", "orçamento", "benefício", "colaboração", "desempenho", "liderança",
+    "feedback", # news & current affairs
     "anúncio", "eleição", "conflito",
-    "evento", "crise", "desafio", "protesto", "reforma",
-    "campanha", "política", "governo", "sociedade", "economia",
+    "evento", "crise", "desafio", "protesto", "campanha", "política", "governo", "sociedade", "economia",
     "estatística", "sondagem", "fonte", "tratado",
     # technology & digital (B1 depth)
     "software", "dispositivo", "rede", "dados", "segurança",
@@ -2226,48 +2147,40 @@ _PT_B1: frozenset[str] = frozenset({
     "utilizador", "base de dados", "armazenamento", "atualização",
     "inteligência artificial", "automação",
     # health & medicine (extended)
-    "tratamento", "sintoma", "diagnóstico", "terapia",
+    "tratamento", "sintoma", "terapia",
     "reabilitação", "vacina", "antibiótico", "especialista",
     "dose", "efeito secundário", "prevenção", "burnout",
     # environment & sustainability
-    "clima", "ambiente", "poluição", "sustentável",
-    "recurso natural", "espécie", "hábitat", "emissão",
+    "clima", "ambiente", "poluição", "recurso natural", "espécie", "hábitat", "emissão",
     "pegada de carbono", "biodiversidade", "seca", "inundação",
     "desflorestação", "aquecimento global", "reciclável",
     "resíduo", "impacto ambiental", "energia solar",
     "energia eólica", "transição energética",
     # education & learning (B1 depth)
     "investigação", "dissertação", "bolsa",
-    "oficina", "seminário", "metodologia", "instituição",
+    "oficina", "seminário", "instituição",
     "academia", "matrícula", "competência",
     "aprendizagem autónoma",
     # social issues & society
-    "igualdade", "diversidade", "inclusão", "discriminação",
+    "igualdade", "inclusão", "discriminação",
     "preconceito", "pobreza", "desigualdade", "justiça",
-    "direitos", "obrigação", "cidadania", "integração",
-    "migração", "refugiado", "comunidade", "voluntariado",
+    "direitos", "obrigação", "cidadania", "migração", "refugiado", "comunidade", "voluntariado",
     "solidariedade", "bem-estar", "coesão social", "tolerância",
     "equidade", "marginalização", "exclusão", "acessibilidade",
     # extended abstract adjectives
     "complexo", "simples", "geral", "específico", "particular",
     "certo", "evidente", "normal", "original", "recente",
     "semelhante", "típico", "variado", "eficiente",
-    "flexível", "inovador", "criativo", "crítico", "lógico",
-    "abstrato", "concreto", "fundamental", "relevante",
-    "significativo", "notável", "considerável", "excecional",
+    "flexível", "criativo", "crítico", "lógico",
+    "abstrato", "concreto", "notável", "excecional",
     "moderado", "intenso", "permanente", "temporário", "global",
-    "nacional", "internacional", "oficial", "formal", "informal",
-    "urgente", "inevitável", "razoável", "adequado",
+    "nacional", "internacional", "oficial", "formal", "informal", "inevitável", "razoável", "adequado",
     "insuficiente", "excessivo",
     # extended verbs (cognitive & communicative)
-    "considerar", "analisar", "interpretar", "debater",
+    "considerar", "analisar", "debater",
     "argumentar", "duvidar", "reconhecer", "perceber",
-    "refletir", "avaliar", "justificar", "demonstrar",
-    "verificar", "investigar", "resolver", "implementar",
-    "adaptar", "transformar", "contribuir", "participar",
-    "colaborar", "comunicar", "negociar", "gerir",
-    "coordenar", "estabelecer", "determinar", "identificar",
-    "supervisionar", "promover", "apoiar", "defender",
+    "refletir", "demonstrar", "resolver", "adaptar", "contribuir", "participar",
+    "colaborar", "comunicar", "negociar", "coordenar", "estabelecer", "determinar", "supervisionar", "apoiar", "defender",
     "questionar", "criticar", "influenciar",
     "prevenir", "reduzir", "aumentar",
     # extended adverbs & discourse connectors
@@ -2284,25 +2197,20 @@ _RU_B1: frozenset[str] = frozenset({
     "мнение", "ситуация", "решение", "результат", "отношение",
     "возможность", "причина", "деталь", "факт",
     "различие", "изменение", "развитие", "эффект", "преимущество",
-    "недостаток", "цель", "ценность", "роль", "качество",
-    "процесс", "метод", "уровень", "внимание", "усилие",
+    "недостаток", "цель", "ценность", "роль", "качество", "метод", "уровень", "внимание", "усилие",
     "ответственность", "важность", "аспект",
-    "условие", "контекст", "трудность", "доказательство",
-    "функция", "влияние", "знание",
+    "условие", "трудность", "доказательство",
+    "функция", "знание",
     "потеря", "смысл", "потребность", "период",
     "давление", "принцип", "прогресс",
-    "этап", "структура", "система", "термин", "перспектива",
-    "вывод", "теория", "утверждение", "анализ", "критика",
-    "предложение", "альтернатива", "тенденция", "последствие",
-    "предположение", "гипотеза", "аргумент",
+    "этап", "структура", "система", "термин", "вывод", "утверждение", "анализ", "критика",
+    "предложение", "альтернатива", "предположение", "аргумент",
     # opinions & debate
     "дискуссия", "обсуждение", "точка зрения", "суждение",
     "рекомендация", "согласие", "несогласие",
     # work & professional (B1 depth)
     "презентация", "заявка", "собеседование", "отдел",
-    "навык", "квалификация", "обучение", "стратегия",
-    "бюджет", "выгода", "ресурс",
-    "сотрудничество", "производительность", "руководство",
+    "навык", "квалификация", "обучение", "бюджет", "выгода", "сотрудничество", "производительность", "руководство",
     "обратная связь", "способность",
     # news & current affairs
     "доклад", "объявление", "выборы", "конфликт",
@@ -2319,44 +2227,34 @@ _RU_B1: frozenset[str] = frozenset({
     "реабилитация", "вакцина", "антибиотик", "специалист",
     "доза", "побочный эффект", "профилактика", "выгорание",
     # environment & sustainability
-    "климат", "окружающая среда", "загрязнение", "устойчивый",
-    "природный ресурс", "вид", "среда обитания", "выброс",
+    "климат", "окружающая среда", "загрязнение", "природный ресурс", "вид", "среда обитания", "выброс",
     "углеродный след", "биоразнообразие", "засуха", "наводнение",
     "вырубка лесов", "глобальное потепление", "перерабатываемый",
     "отходы", "экологическое воздействие", "солнечная энергия",
     "ветровая энергия",
-    # education & learning (B1 depth)
-    "исследование", "диссертация", "стипендия", "конференция",
-    "мастер-класс", "семинар", "методология", "учреждение",
+    # education & learning (B1 depth) "диссертация", "стипендия", "конференция",
+    "мастер-класс", "семинар", "учреждение",
     "академия", "компетентность",
     # social issues & society
     "равенство", "разнообразие", "включённость", "дискриминация",
     "предрассудок", "бедность", "неравенство", "справедливость",
-    "права", "обязанность", "гражданство", "интеграция",
-    "миграция", "беженец", "сообщество", "волонтёрство",
+    "права", "обязанность", "гражданство", "миграция", "беженец", "сообщество", "волонтёрство",
     "солидарность", "благополучие", "толерантность", "доступность",
     # extended abstract adjectives
     "сложный", "простой", "общий", "конкретный", "особый",
     "определённый", "очевидный", "нормальный", "оригинальный",
-    "недавний", "похожий", "типичный", "разнообразный",
-    "эффективный", "гибкий", "инновационный", "творческий",
-    "критический", "логический", "абстрактный", "фундаментальный",
-    "актуальный", "значимый", "заметный", "значительный",
+    "недавний", "похожий", "типичный", "разнообразный", "гибкий", "творческий", "логический", "абстрактный", "актуальный", "значимый", "заметный", "значительный",
     "исключительный", "умеренный", "интенсивный", "постоянный",
-    "временный", "глобальный", "национальный", "международный",
+    "временный", "национальный", "международный",
     "официальный", "формальный", "неформальный",
     "срочный", "неизбежный", "разумный", "достаточный",
     # extended verbs (cognitive & communicative)
-    "рассматривать", "анализировать", "интерпретировать",
-    "дискутировать", "аргументировать", "сомневаться",
-    "признавать", "воспринимать", "размышлять",
-    "оценивать", "обосновывать", "доказывать",
-    "проверять", "исследовать", "разрешать", "внедрять",
+    "рассматривать", "дискутировать", "сомневаться",
+    "признавать", "воспринимать", "размышлять", "доказывать", "разрешать", "внедрять",
     "адаптировать", "преобразовывать", "вносить вклад",
     "участвовать", "сотрудничать", "переговариваться",
-    "управлять", "координировать", "устанавливать",
-    "определять", "идентифицировать", "продвигать",
-    "поддерживать", "защищать", "подвергать сомнению",
+    "управлять", "определять", "идентифицировать", "продвигать",
+    "поддерживать", "подвергать сомнению",
     "влиять", "предотвращать", "уменьшать", "увеличивать",
     # extended adverbs & discourse connectors
     "однако", "хотя", "поэтому", "кроме того",
@@ -2371,30 +2269,20 @@ _JA_B1: frozenset[str] = frozenset({
     # abstract concepts & nouns
     "意見", "状況", "解決策", "結果", "関係",
     "機会", "決定", "理由", "詳細", "事実",
-    "違い", "変化", "発展", "効果", "利点",
-    "欠点", "目的", "価値", "役割", "品質",
+    "違い", "変化", "発展", "利点",
+    "欠点", "価値", "役割", "品質",
     "プロセス", "方法", "レベル", "注意", "努力",
-    "可能性", "責任", "重要性", "側面",
-    "原因", "条件", "文脈", "困難", "証拠",
-    "機能", "影響", "知識",
-    "損失", "意味", "必要性", "期間",
-    "圧力", "原則", "進歩", "感覚",
-    "段階", "構造", "システム", "用語", "視点",
-    "結論", "理論", "主張", "分析", "批判",
-    "提案", "代替案", "傾向", "結果", "仮説",
-    # opinions & debate
-    "議論", "討論", "観点", "判断",
-    "勧告", "評価", "合意", "不一致",
+    "可能性", "責任", "重要性", "原因", "困難", "機能", "損失", "意味", "必要性", "期間",
+    "圧力", "進歩", "感覚",
+    "段階", "構造", "システム", "用語", "主張", "批判",
+    "提案", "代替案", "結果", # opinions & debate "討論", "勧告", "合意", "不一致",
     # work & professional (B1 depth)
     "プレゼンテーション", "申請", "面接", "部門",
-    "スキル", "資格", "目標",
-    "戦略", "予算", "メリット", "リソース",
+    "スキル", "資格", "予算", "メリット", "リソース",
     "コラボレーション", "パフォーマンス", "リーダーシップ",
-    "フィードバック", "能力",
-    # news & current affairs
+    "フィードバック", # news & current affairs
     "発表", "選挙", "紛争",
-    "出来事", "危機", "課題", "抗議", "改革",
-    "キャンペーン", "政治", "政府", "社会", "経済",
+    "出来事", "危機", "抗議", "キャンペーン", "政治", "政府", "社会", "経済",
     "統計", "世論調査", "見出し", "出典", "条約",
     # technology & digital (B1 depth)
     "ソフトウェア", "デバイス", "ネットワーク", "データ",
@@ -2412,15 +2300,12 @@ _JA_B1: frozenset[str] = frozenset({
     "森林伐採", "地球温暖化", "再生可能",
     "廃棄物", "環境への影響", "太陽エネルギー",
     "風力エネルギー", "エネルギー転換",
-    # education & learning (B1 depth)
-    "研究", "論文", "奨学金",
+    # education & learning (B1 depth) "論文", "奨学金",
     "ワークショップ", "セミナー", "方法論", "機関",
-    "アカデミー", "登録", "能力",
-    # social issues & society
-    "平等", "多様性", "包括性", "差別",
+    "アカデミー", "登録", # social issues & society
+    "平等", "包括性", "差別",
     "偏見", "貧困", "不平等", "公正",
-    "権利", "義務", "市民権", "統合",
-    "移住", "難民", "コミュニティ", "ボランティア活動",
+    "権利", "義務", "市民権", "移住", "難民", "コミュニティ", "ボランティア活動",
     "連帯", "幸福", "寛容", "アクセシビリティ",
     # extended abstract adjectives
     "複雑な", "一般的な", "具体的な", "特定の",
@@ -2431,14 +2316,10 @@ _JA_B1: frozenset[str] = frozenset({
     "関連した", "重要な", "注目に値する", "相当な",
     "例外的な", "穏やかな", "激しい", "永続的な",
     "一時的な", "国際的な", "公式の", "非公式の",
-    # extended verbs (cognitive & communicative)
-    "検討する", "分析する", "解釈する", "議論する",
-    "主張する", "疑う", "認識する", "感知する",
-    "反省する", "評価する", "正当化する", "証明する",
-    "調査する", "実施する", "適応する", "変革する",
-    "貢献する", "参加する", "協力する", "交渉する",
-    "管理する", "調整する", "確立する", "特定する",
-    "監督する", "推進する", "支持する", "反論する",
+    # extended verbs (cognitive & communicative) "分析する", "解釈する", "議論する", "疑う", "認識する", "感知する",
+    "反省する", "正当化する", "調査する", "適応する", "変革する", "参加する", "協力する", "交渉する",
+    "管理する", "特定する",
+    "監督する", "支持する", "反論する",
     "影響を与える", "防止する", "削減する", "増加させる",
     # extended adverbs & discourse connectors
     "しかし", "したがって", "また", "一方",
@@ -2450,37 +2331,27 @@ _JA_B1: frozenset[str] = frozenset({
 # ── Chinese B1 (zh) ───────────────────────────────────────────────────────────
 _ZH_B1: frozenset[str] = frozenset({
     # abstract concepts & nouns
-    "意见", "情况", "解决方案", "结果", "关系",
+    "意见", "情况", "解决方案", "关系",
     "机会", "原因", "细节", "事实",
     "区别", "变化", "发展", "效果", "优势",
-    "劣势", "目的", "价值", "作用", "质量",
-    "过程", "方法", "层次", "注意力", "努力",
+    "劣势", "价值", "作用", "过程", "方法", "层次", "注意力", "努力",
     "可能性", "责任", "重要性", "方面",
-    "原因", "条件", "背景", "困难", "证据",
-    "功能", "影响", "知识",
-    "损失", "意义", "需求", "时期",
-    "压力", "原则", "进步", "意义",
-    "阶段", "结构", "系统", "术语", "视角",
-    "结论", "理论", "主张", "分析", "批评",
-    "提议", "替代方案", "趋势", "后果",
-    "假设", "论点",
+    "方向", "程度", "结合",
+    "原因", "背景", "困难", "功能", "损失", "意义", "需求", "时期",
+    "压力", "进步", "意义",
+    "阶段", "术语", "理论", "主张", "批评",
+    "提议", "替代方案", "论点",
     # opinions & debate
-    "辩论", "讨论", "观点", "判断",
-    "评估", "同意", "不同意",
+    "辩论", "讨论", "同意", "不同意",
     # work & professional (B1 depth)
     "演示", "申请", "面试", "部门",
-    "技能", "资格", "培训", "目标",
-    "战略", "预算", "收益", "资源",
-    "合作", "绩效", "领导力",
-    "反馈", "能力",
-    # news & current affairs
+    "技能", "资格", "培训", "战略", "预算", "收益", "资源", "领导力",
+    "反馈", # news & current affairs
     "公告", "选举", "冲突",
-    "事件", "危机", "挑战", "抗议", "改革",
-    "运动", "政策", "政府", "社会", "经济",
+    "事件", "危机", "抗议", "运动", "政策", "政府", "社会", "经济",
     "统计数据", "民意调查", "标题", "来源", "条约",
     # technology & digital (B1 depth)
-    "软件", "设备", "数据",
-    "隐私", "平台", "程序", "界面",
+    "软件", "设备", "隐私", "平台", "程序", "界面",
     "用户", "数据库", "存储",
     "人工智能", "自动化",
     # health & medicine (extended)
@@ -2494,33 +2365,25 @@ _ZH_B1: frozenset[str] = frozenset({
     "森林砍伐", "全球变暖", "可回收",
     "废物", "环境影响", "太阳能",
     "风能", "能源转型",
-    # education & learning (B1 depth)
-    "研究", "论文", "奖学金",
-    "研讨会", "方法论", "机构",
-    "学院", "注册", "能力",
-    # social issues & society
-    "平等", "多样性", "包容性", "歧视",
+    # education & learning (B1 depth) "论文", "奖学金",
+    "研讨会", "机构",
+    "学院", "注册", # social issues & society
+    "平等", "歧视",
     "偏见", "贫困", "不平等", "正义",
-    "权利", "义务", "公民权", "融合",
-    "移民", "难民", "社区", "志愿活动",
+    "权利", "义务", "公民权", "移民", "难民", "社区", "志愿活动",
     "团结", "福祉", "宽容", "无障碍",
     # extended abstract adjectives
-    "复杂", "简单", "一般", "具体", "特定",
+    "复杂", "简单", "一般", "特定",
     "明确", "正常", "独特", "近期",
-    "严重", "相似", "典型", "多样",
-    "高效", "灵活", "创新", "有创意",
-    "批判性", "合理的", "抽象", "根本",
+    "严重", "相似", "典型", "多样", "有创意",
+    "批判性", "合理的", "根本",
     "相关", "显著",
     "特殊", "温和", "激烈", "持久",
     "临时", "国际", "官方", "正式", "非正式",
     # extended verbs (cognitive & communicative)
-    "考虑", "分析", "辩论",
-    "论证", "怀疑", "承认", "感知",
-    "反思", "评估", "证明", "核实",
-    "调查", "执行", "适应", "转变",
-    "促进", "谈判", "协调", "确立",
-    "确定", "监督", "推广", "支持",
-    "挑战", "影响", "预防", "减少", "增加",
+    "考虑", "辩论", "怀疑", "承认", "感知",
+    "反思", "核实", "执行", "适应", "转变", "谈判", "确立",
+    "确定", "监督", "推广", "支持", "预防", "减少", "增加",
     # extended adverbs & discourse connectors
     "然而", "因此", "此外", "另一方面",
     "相反", "尽管", "不过", "因此",
@@ -2534,34 +2397,22 @@ _AR_B1: frozenset[str] = frozenset({
     # abstract concepts & nouns
     "رأي", "حالة", "حل", "علاقة",
     "فرصة", "قرار", "سبب", "تفصيل", "حقيقة",
-    "فرق", "تغيير", "تطور", "أثر", "ميزة",
-    "عيب", "قيمة", "دور", "جودة",
-    "أسلوب", "مستوى", "انتباه", "جهد",
-    "إمكانية", "مسؤولية", "أهمية", "جانب",
-    "سبب", "شرط", "سياق", "صعوبة", "دليل",
-    "وظيفة", "تأثير", "معرفة",
-    "خسارة", "معنى", "حاجة", "مرحلة",
-    "ضغط", "مبدأ", "تقدم", "مفهوم",
-    "هيكل", "نظام", "مصطلح", "منظور",
-    "استنتاج", "نظرية", "تصريح", "تحليل", "نقد",
-    "مقترح", "بديل", "اتجاه", "عواقب",
-    "افتراض", "فرضية", "حجة",
+    "فرق", "تغيير", "تطور", "ميزة",
+    "عيب", "قيمة", "دور", "أسلوب", "مستوى", "انتباه", "جهد", "مسؤولية", "أهمية", "جانب",
+    "سبب", "شرط", "صعوبة", "وظيفة", "خسارة", "معنى", "حاجة", "مرحلة",
+    "ضغط", "تقدم", "هيكل", "نظام", "مصطلح", "نظرية", "تصريح", "تحليل", "نقد",
+    "مقترح", "بديل", "عواقب", "فرضية", "حجة",
     # opinions & debate
-    "نقاش", "مناقشة", "وجهة نظر", "حكم",
-    "توصية", "تقييم", "اتفاق", "خلاف",
+    "نقاش", "مناقشة", "وجهة نظر", "توصية", "تقييم", "اتفاق", "خلاف",
     # work & professional (B1 depth)
     "عرض تقديمي", "طلب", "مقابلة", "قسم",
-    "مهارة", "تأهيل", "غاية",
-    "استراتيجية", "ميزانية", "فائدة", "مورد",
-    "تعاون", "أداء", "قيادة",
-    "تغذية راجعة", "كفاءة",
-    # news & current affairs
+    "مهارة", "تأهيل", "ميزانية", "فائدة", "مورد", "قيادة",
+    "تغذية راجعة", # news & current affairs
     "إعلان", "انتخابات", "صراع",
-    "حدث", "أزمة", "تحدي", "احتجاج", "إصلاح",
-    "حملة", "سياسة", "حكومة", "مجتمع", "اقتصاد",
+    "حدث", "أزمة", "تحدي", "احتجاج", "حملة", "سياسة", "حكومة", "مجتمع", "اقتصاد",
     "إحصاء", "استطلاع", "مصدر", "معاهدة",
     # technology & digital (B1 depth)
-    "جهاز", "شبكة", "بيانات", "أمان",
+    "جهاز", "شبكة", "أمان",
     "خصوصية", "منصة", "واجهة",
     "مستخدم", "قاعدة بيانات", "تخزين",
     "ذكاء اصطناعي", "أتمتة",
@@ -2578,20 +2429,18 @@ _AR_B1: frozenset[str] = frozenset({
     "طاقة رياح", "تحول طاقوي",
     # education & learning (B1 depth)
     "منحة", "مؤتمر",
-    "ورشة", "ندوة", "منهجية", "مؤسسة",
-    "أكاديمية", "تسجيل", "كفاءة",
-    # social issues & society
-    "مساواة", "تنوع", "شمول", "تمييز",
+    "ورشة", "ندوة", "مؤسسة",
+    "أكاديمية", "تسجيل", # social issues & society
+    "مساواة", "تنوع", "تمييز",
     "تحيز", "فقر", "عدم مساواة", "عدالة",
     "جنسية", "اندماج",
     "هجرة", "لاجئ", "مجتمع", "تطوع",
     "تضامن", "رفاهية", "تسامح",
     # extended abstract adjectives
     "معقد", "بسيط", "محدد",
-    "واضح", "طبيعي", "أصيل",
-    "مشابه", "نموذجي", "متنوع",
-    "فعال", "مرن", "مبتكر", "إبداعي",
-    "نقدي", "منطقي", "مجرد", "أساسي",
+    "واضح", "طبيعي", "مشابه", "نموذجي", "متنوع",
+    "فعال", "إبداعي",
+    "نقدي", "مجرد", "أساسي",
     "ذو صلة", "ملحوظ",
     "استثنائي", "معتدل", "مكثف", "دائم",
     "مؤقت", "عالمي", "دولي", "رسمي", "غير رسمي",
@@ -2619,34 +2468,27 @@ _HE_B1: frozenset[str] = frozenset({
     # abstract concepts & nouns
     "דעה", "מצב", "פתרון", "קשר",
     "הזדמנות", "החלטה", "סיבה", "פרט", "עובדה",
-    "הבדל", "שינוי", "התפתחות", "השפעה", "יתרון",
-    "חיסרון", "מטרה", "ערך", "תפקיד", "איכות",
-    "תהליך", "שיטה", "רמה", "תשומת לב", "מאמץ",
-    "אפשרות", "אחריות", "חשיבות", "היבט",
-    "גורם", "תנאי", "הקשר", "קושי", "ראיה",
-    "תפקוד",
+    "הבדל", "התפתחות", "יתרון",
+    "חיסרון", "ערך", "תפקיד", "תהליך", "שיטה", "רמה", "תשומת לב", "מאמץ",
+    "אפשרות", "אחריות", "חשיבות", "היבט", "תנאי", "קושי", "תפקוד",
     "אובדן", "משמעות", "צורך", "תקופה",
-    "לחץ", "עיקרון", "התקדמות", "תחושה",
-    "שלב", "מבנה", "מערכת", "מונח", "נקודת מבט",
-    "מסקנה", "תיאוריה", "טענה", "ביקורת",
-    "הצעה", "חלופה", "מגמה", "השלכה",
+    "לחץ", "התקדמות", "תחושה",
+    "שלב", "מבנה", "מערכת", "מונח", "תיאוריה", "טענה", "ביקורת",
+    "הצעה", "חלופה", "השלכה",
     "השערה", "טיעון",
     # opinions & debate
-    "ויכוח", "דיון", "השקפה", "שיפוט",
-    "המלצה", "הערכה", "הסכמה", "אי הסכמה",
+    "ויכוח", "דיון", "השקפה", "המלצה", "הערכה", "הסכמה", "אי הסכמה",
     # work & professional (B1 depth)
     "מצגת", "בקשה", "ראיון", "מחלקה",
-    "כישרון", "כישורים", "הכשרה", "יעד",
-    "אסטרטגיה", "תקציב", "תועלת", "משאב",
-    "שיתוף פעולה", "ביצועים", "מנהיגות",
+    "כישרון", "כישורים", "הכשרה", "תקציב", "תועלת", "משאב",
+    "שיתוף פעולה", "מנהיגות",
     "משוב", "יכולת",
     # news & current affairs
     "הכרזה", "בחירות", "סכסוך",
-    "אירוע", "משבר", "אתגר", "מחאה", "רפורמה",
-    "קמפיין", "פוליטיקה", "ממשלה", "כלכלה",
+    "אירוע", "משבר", "מחאה", "קמפיין", "פוליטיקה", "ממשלה", "כלכלה",
     "נתונים סטטיסטיים", "סקר", "כותרת", "מקור", "הסכם",
     # technology & digital (B1 depth)
-    "תוכנה", "מכשיר", "רשת", "נתונים", "אבטחה",
+    "תוכנה", "מכשיר", "רשת", "אבטחה",
     "פרטיות", "פלטפורמה", "ממשק",
     "משתמש", "מסד נתונים", "אחסון", "עדכון",
     "בינה מלאכותית", "אוטומציה",
@@ -2663,33 +2505,23 @@ _HE_B1: frozenset[str] = frozenset({
     "אנרגיה רוחית", "מעבר אנרגטי",
     # education & learning (B1 depth)
     "מחקר", "עבודת גמר", "מלגה", "כנס",
-    "סדנה", "סמינר", "מתודולוגיה", "מוסד",
+    "סדנה", "סמינר", "מוסד",
     "אקדמיה", "הרשמה", "כשירות",
     # social issues & society
-    "שוויון", "גיוון", "הכלה", "אפליה",
+    "שוויון", "הכלה", "אפליה",
     "דעה קדומה", "עוני", "אי שוויון", "צדק",
-    "זכויות", "חובה", "אזרחות", "שילוב",
-    "הגירה", "פליט", "קהילה", "התנדבות",
+    "זכויות", "חובה", "אזרחות", "הגירה", "פליט", "קהילה", "התנדבות",
     "סולידריות", "רווחה", "סובלנות", "נגישות",
     # extended abstract adjectives
     "מורכב", "פשוט", "כללי", "ספציפי",
     "ברור", "רגיל", "מקורי",
     "חמור", "דומה", "טיפוסי", "מגוון",
-    "יעיל", "גמיש", "חדשני", "יצירתי",
-    "ביקורתי", "הגיוני", "מופשט", "בסיסי",
-    "רלוונטי", "משמעותי", "בולט", "ניכר",
-    "יוצא דופן", "מתון", "עצים", "קבוע",
-    "זמני", "בינלאומי", "רשמי", "בלתי רשמי",
-    # extended verbs (cognitive & communicative)
-    "לשקול", "לנתח", "לפרש", "לדון",
-    "לטעון", "לפקפק", "להכיר", "לתפוס",
-    "להרהר", "להעריך", "להצדיק", "להוכיח",
-    "לאמת", "לחקור", "לפתור", "ליישם",
-    "להתאים", "לשנות", "לתרום", "להשתתף",
-    "לשתף פעולה", "לתקשר", "לנהל משא ומתן",
-    "לנהל", "לתאם", "לבסס", "לזהות",
-    "לפקח", "לקדם", "לתמוך", "להגן",
-    "לערער", "להשפיע", "למנוע", "להפחית",
+    "יעיל", "יצירתי", "בסיסי",
+    "רלוונטי", "משמעותי", "בולט", "יוצא דופן", "מתון", "עצים", "קבוע", "בינלאומי", "רשמי", "בלתי רשמי",
+    # extended verbs (cognitive & communicative) "לפרש", "לטעון", "לפקפק", "להכיר", "לתפוס",
+    "להרהר", "להצדיק", "לפתור", "לשנות", "לתרום", "להשתתף",
+    "לשתף פעולה", "לתקשר", "לנהל משא ומתן", "לבסס", "לזהות",
+    "לפקח", "לתמוך", "להגן", "להשפיע", "למנוע", "להפחית",
     # extended adverbs & discourse connectors
     "עם זאת", "לכן", "בנוסף",
     "מצד שני", "להיפך", "למרות", "בכל זאת",
@@ -2709,4 +2541,954 @@ B1: dict[str, frozenset[str]] = {
     "zh": _ZH_B1,
     "ar": _AR_B1,
     "he": _HE_B1,
+}
+
+# ──────────────────────────────────────────────────────────────────────────────
+# B2 tables (upper-intermediate: ~270 lemmas / lang)
+# Confidence 0.84 — only overrides OOV (tok.is_oov); below in-vocab (0.85)
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ── Spanish B2 ────────────────────────────────────────────────────────────────
+_ES_B2: frozenset[str] = frozenset({
+    # verbs
+    "acreditar", "aludir", "avalar", "carecer", "ceder",
+    "conllevar", "corroborar", "deducir",
+    "delimitar", "denunciar", "derivar", "descartar", "difundir",
+    "discernir", "dilucidar", "elaborar", "emerger", "emprender",
+    "encauzar", "exhibir", "financiar", "fomentar", "formular",
+    "fluctuar", "fundamentar", "generar", "implicar", "impulsar", "incidir", "incurrir",
+    "inferir", "instaurar", "integrar", "manejar", "mermar", "mitigar", "modificar",
+    "obtener", "orientar", "plantear", "ponderar", "postular", "profundizar", "recabar", "reclamar",
+    "reforzar", "registrar", "regular", "señalar", "sintetizar",
+    "superar", "sustentar", "suscitar", "validar",
+    "valorar", "vislumbrar",
+    # nouns
+    "arraigo", "auge", "bagaje", "cohesión", "componente", "conjetura", "connotación", "cooperación", "coyuntura", "desfase", "dilema", "dimensión", "discurso", "distribución", "dinámica", "eficiencia", "entorno", "escenario",
+    "evolución", "fiabilidad", "financiación", "fluctuación",
+    "hegemonía", "hincapié", "identidad", "índice", "iniciativa", "inversión",
+    "jerarquía", "legitimidad", "marco", "matiz", "mecanismo", "norma", "organismo", "paradigma", "pauta", "premisa", "proyección", "régimen", "repercusión", "resiliencia",
+    "rigor", "sesgo", "síntesis", "sostenibilidad", "trayectoria", "umbral", "variable", "viabilidad",
+    "vínculo", "precedente", "indicador",
+    "infraestructura", "intervención", "legislación", "obstáculo", "subvención",
+    "transición", "vulnerabilidad",
+    # adjectives
+    "ambivalente", "audaz", "cauteloso", "certero", "concluyente",
+    "contundente", "crucial", "determinante", "dinámico", "efímero", "equívoco", "exhaustivo", "explícito",
+    "genuino", "gradual", "holístico", "imperioso", "implícito",
+    "indispensable", "ineludible", "inherente", "integral",
+    "metodológico", "multidisciplinario", "óptimo", "ponderable", "potencial", "pragmático", "preciso", "prioritario",
+    "progresivo", "provisional", "rentable", "riguroso",
+    "sesgado", "sistémico", "subjetivo",
+    "sutil", "sustancial", "tangible", "tenaz", "transversal", "versátil", "viable",
+})
+
+# ── French B2 ─────────────────────────────────────────────────────────────────
+_FR_B2: frozenset[str] = frozenset({
+    # verbs
+    "accréditer", "alléger", "allouer", "anticiper", "attribuer",
+    "cautionner", "compenser", "confronter", "consolider",
+    "contester", "corroborer", "déduire", "délimiter",
+    "dénoncer", "diffuser", "discerner", "élaborer",
+    "émerger", "entreprendre", "exhiber", "financer",
+    "fluctuer", "formuler", "générer", "implanter", "impliquer", "impulser", "inciter", "inférer",
+    "instaurer", "intégrer", "investiguer", "maîtriser", "mentionner", "minimiser", "modifier",
+    "obtenir", "orienter", "pondérer", "postuler",
+    "prioriser", "réclamer", "renforcer", "régulariser",
+    "synthétiser", "valider", "valoriser", "susciter", "recueillir", "surmonter", # nouns
+    "ancrage", "apogée", "aptitude", "autonomie", "bagages",
+    "biais", "cohérence", "cohésion", "composante", "connotation",
+    "contingence", "coopération", "critère",
+    "déséquilibre", "dynamique", "échéance", "échelon",
+    "efficacité", "efficience", "enjeu", "entité", "évolution", "fiabilité", "financement", "fluctuation", "fragilité",
+    "gouvernance", "hégémonie", "identité", "implication", "indice", "investissement",
+    "légitimité", "mécanisme", "modèle", "nuance", "paramètre", "préalable", "prémisse", "projections", "référence", "régime", "résilience", "rigueur", "scénario", "secteur", "trajectoire", "transition", "variable",
+    "vulnérabilité", "viabilité", "pertinence", "lacune", "vecteur", "faisabilité", "contrainte", "disposition", "dilemme",
+    "séquençage", # adjectives
+    "ambigu", "ambivalent", "audacieux", "cauteleux", "cohérent",
+    "concluant", "conséquent", "crucial", "déterminant", "dynamique", "éphémère", "équivoque", "exhaustif", "explicite",
+    "graduel", "holistique", "implicite", "indispensable",
+    "inéluctable", "inhérent", "intégral", "méthodique",
+    "multidisciplinaire", "nuancé", "optimal", "pondéré", "pragmatique", "précis", "prioritaire", "progressif",
+    "provisoire", "rigoureux", "systémique", "tangible",
+    "tenace", "transversal", "viable", "versatile",
+})
+
+# ── German B2 ─────────────────────────────────────────────────────────────────
+_DE_B2: frozenset[str] = frozenset({
+    # verbs (lowercase)
+    "abwägen", "anwenden", "auswerten", "begründen",
+    "beurteilen", "berücksichtigen", "charakterisieren", "demonstrieren",
+    "differenzieren", "diskutieren", "dokumentieren",
+    "einschätzen", "erläutern", "erörtern", "evaluieren",
+    "formulieren", "gestalten", "gliedern", "illustrieren", "implementieren", "klassifizieren", "konzipieren", "legitimieren", "modifizieren", "nachweisen",
+    "optimieren", "präzisieren", "priorisieren",
+    "quantifizieren", "regulieren",
+    "strukturieren", "synthetisieren", "systematisieren", "validieren", "vermitteln", "widersprechen",
+    "zurückführen", "zusammenfassen",
+    # nouns (Title-case)
+    "Ambivalenz", "Ansatz", "Autonomie", "Beurteilung", "Charakteristik", "Differenzierung", "Dilemma",
+    "Dimension", "Diskurs", "Dynamik", "Effizienz", "Erkenntnisse", "Evaluation", "Faktor", "Fluktuation",
+    "Fragmentierung", "Gleichgewicht", "Grundlage", "Hierarchie", "Identität", "Implementation", "Indikator",
+    "Infrastruktur", "Investition", "Kohärenz", "Kohäsion", "Konvergenz", "Kriterium",
+    "Legitimität", "Mechanismus", "Modell", "Nachhaltigkeit",
+    "Nuance", "Objektivität", "Organisation", "Paradigma",
+    "Parameter", "Polarisierung", "Priorität", "Regulierung", "Relevanz", "Resilienz", "Sektor", "Systemik", "Transformation", "Transparenz", "Variable", "Verflechtung", "Verhältnis", "Verständnis", "Widerspruch",
+    "Zusammenhang", "Ausmaß", "Einschränkung", "Voraussetzung",
+    # adjectives
+    "adäquat", "ambivalent", "charakteristisch",
+    "deterministisch", "dynamisch", "explizit", "ephemer", "graduell", "holistisch", "implizit", "inhärent",
+    "integral", "kohärent", "konzeptionell", "legitim",
+    "methodisch", "nachhaltig", "normativ", "objektiv", "optimal",
+    "pragmatisch", "präzise", "rigoros", "signifikant",
+    "systematisch", "tangibel", "transversal", "transparent", "valide",
+    "viabel", "wesentlich",
+})
+
+# ── Italian B2 ────────────────────────────────────────────────────────────────
+_IT_B2: frozenset[str] = frozenset({
+    # verbs
+    "accreditare", "affrontare", "ampliare", "avallare",
+    "cedere", "citare", "consolidare",
+    "contestare", "corroborare", "dedurre", "delimitare",
+    "denunciare", "derivare", "diffondere", "discernere", "elaborare",
+    "emergere", "esibire", "finanziare", "fluttuare", "formulare",
+    "generare", "implicare",
+    "inferire", "instaurare", "integrare", "investigare", "limitare", "menzionare",
+    "modificare", "mitigare", "ottenere", "orientare", "ponderare", "postulare", "proporre", "rafforzare",
+    "reclamare", "registrare", "regolare", "sintetizzare", "suscitare", "validare", "valorizzare", "superare",
+    # nouns
+    "ambito", "autonomia", "coesione",
+    "coerenza", "componente", "congettura",
+    "connotazione", "cooperazione", "criterio", "dilemma", "dimensione", "discorso",
+    "distribuzione", "dinamica", "efficienza", "entità",
+    "evoluzione", "fattore", "fenomeno", "finanziamento", "fluttuazione", "gerarchia", "identità", "indice",
+    "infrastruttura", "iniziativa", "investimento",
+    "legittimità", "meccanismo", "modello", "norma", "organismo", "paradigma", "parametro",
+    "percorso", "premessa", "proiezione", "regime", "resilienza", "rigore", "scenario", "settore", "sostenibilità", "traiettoria", "transizione", "variabile",
+    "vulnerabilità", "fattibilità", "vincolo", "lacuna", "indicatore", "intervento", "legislazione",
+    # adjectives
+    "ambiguo", "ambivalente", "audace", "coerente", "conclusivo", "cruciale", "determinante", "dinamico", "effimero", "equivoco", "esaustivo", "esplicito", "graduale", "olistico", "implicito", "indispensabile", "ineludibile",
+    "inerente", "integrale", "metodologico", "multidisciplinare",
+    "oggettivo", "ottimale", "pragmatico", "preciso",
+    "prioritario", "progressivo", "provvisorio", "rigoroso", "rilevante",
+    "redditizio", "sistemico", "soggettivo",
+    "sottile", "sostanziale", "tangibile", "tenace", "trasversale", "versatile", "valido",
+})
+
+# ── Portuguese B2 ─────────────────────────────────────────────────────────────
+_PT_B2: frozenset[str] = frozenset({
+    # verbs
+    "ampliar", "ceder", "citar",
+    "concluir", "confrontar", "consolidar", "contestar", "corroborar",
+    "deduzir", "delimitar", "denunciar", "derivar", "difundir",
+    "discernir", "elaborar", "emergir", "exibir", "financiar",
+    "flutuar", "formular", "gerar", "implicar", "inferir", "instaurar", "integrar", "mencionar",
+    "mitigar", "modificar", "obter", "orientar", "planejar",
+    "ponderar", "postular", "propor", "reforçar", "registrar", "regular", "sintetizar",
+    "suscitar", "validar", "valorizar", "superar", "sustentar",
+    # nouns
+    "âmbito", "arraigamento", "auge", "coesão", "componente", "conjetura", "conotação", "cooperação", "critério", "desequilíbrio", "dilema", "dimensão", "discurso",
+    "distribuição", "dinâmica", "eficiência", "entidade",
+    "evolução", "fator", "fenômeno", "financiamento", "flutuação",
+    "fragilidade", "governança", "hegemonia", "identidade", "índice", "iniciativa", "investimento",
+    "legitimidade", "mecanismo", "modelo", "norma",
+    "nuance", "organismo", "paradigma", "parâmetro", "premissa", "projeção", "regime", "resiliência", "rigor", "setor", "sustentabilidade", "trajetória", "transição", "variável",
+    "vulnerabilidade", "viabilidade", "lacuna", "vínculo", "indicador", "infraestrutura", "intervenção",
+    # adjectives
+    "ambíguo", "ambivalente", "audaz", "coerente", "conclusivo", "crucial", "determinante", "dinâmico", "efêmero", "equívoco", "exaustivo", "explícito", "gradual", "holístico", "implícito", "indispensável", "ineludível",
+    "inerente", "integral", "metodológico", "multidisciplinar", "ótimo", "pragmático", "preciso",
+    "prioritário", "progressivo", "provisório", "rigoroso", "rentável", "sistêmico", "subjetivo",
+    "sutil", "substancial", "tangível", "tenaz", "transversal", "versátil", "viável",
+})
+
+# ── Russian B2 ────────────────────────────────────────────────────────────────
+_RU_B2: frozenset[str] = frozenset({
+    # verbs "выявлять", "демонстрировать",
+    "документировать", "применять", "разрабатывать", "систематизировать",
+    "синтезировать", "формулировать", "характеризовать", "корректировать", "минимизировать", "мобилизовать",
+    "модифицировать", "оптимизировать", "прогнозировать", "реализовывать", "регулировать", "стимулировать", "структурировать",
+    "трансформировать", # nouns
+    "амбивалентность", "аргументация", "аутентичность",
+    "взаимодействие", "глобализация",
+    "дефицит", "дилемма", "дисбаланс", "динамика", "идентичность", "интерпретация", "инфраструктура", "инициатива", "категория", "коэффициент", "критерий", "легитимность", "механизм", "обоснование", "парадигма", "параметр", "приоритет", "прогноз", "реализация", "регулирование",
+    "результативность", "риск", "сектор", "синтез", "трансформация", "уязвимость", "фактор", "финансирование", "целостность", "эволюция", "эффективность",
+    "устойчивость", "противоречие", "надёжность", "сценарий", "обязательство", "диверсификация",
+    # adjectives
+    "адекватный", "амбивалентный", "аналитический", "динамичный", "когерентный", "комплексный", "конструктивный", "методологический", "нормативный",
+    "объективный", "оптимальный", "прагматичный", "прозрачный",
+    "рациональный", "релевантный", "результативный", "системный",
+    "стратегический", "целостный", "последовательный", "существенный",
+})
+
+# ── Japanese B2 ───────────────────────────────────────────────────────────────
+_JA_B2: frozenset[str] = frozenset({
+    "論じる", "把握する",
+    "考察する", "検証する", "推測する",
+    "判断する", "導入する", "構築する", "解析する", "識別する", "区別する", "統合する", "最適化する", "合理化する", "強化する", "促進する", "実現する", "示唆する", "影響する", "依存する", "関連する",
+    "複雑だ", "曖昧だ", "柔軟だ", "合理的だ", "批判的だ",
+    "体系的だ", "総合的だ", "包括的だ", "根本的だ", "抽象的だ", "展開", "枠組み", "体制", "仕組み", "手法", "方針", "指針",
+    "基準", "規範", "概念", "モデル", "パラダイム",
+    "パターン", "動向", "成果", "実績",
+    "障壁", "制約", "要因", "変数", "指標",
+    "格差", "不均衡", "矛盾", "ジレンマ", "曖昧さ", "複雑性", "連携", "協力", "計画", "政策", "革新", "技術", "情報", "技能", "調査", "報告", "論点", "根拠", "推論", "要約", "解釈", "分類", "定義", "優先", "持続可能性", "効率性", "有効性",
+    "透明性", "正当性", "包摂", "脆弱性",
+})
+
+# ── Chinese B2 ────────────────────────────────────────────────────────────────
+_ZH_B2: frozenset[str] = frozenset({ "阐述", "实施", "制定", "构建",
+    "推断", "验证", "整合", "优化", "推进",
+    "实现", "揭示", "突出", "区分",
+    "辨别", "归纳", "演绎", "对比", "批判", "检验", "探讨", "确认", "反驳", "纠正", "完善", "扩展", "深化", "调整", "整理", "规划",
+    "框架", "机制", "体系", "维度", "层面", "立场", "理念", "概念", "规范", "标准",
+    "模式", "范式", "模型", "途径", "策略", "方案", "成效", "效率", "效能", "因素", "变量", "指标", "参数",
+    "差距", "矛盾", "困境", "障碍", "约束", "局限",
+    "潜力", "动态", "演变", "转型", "整合", "协作", "互动", "参与", "贡献", "信息", "依据", "论据", "认知", "理解", "诠释", "可持续性", "透明度", "合法性",
+    "脆弱性", "韧性", "复杂性", "不确定性",
+    "综合", "全面", "深入", "客观", "主观", "动态", "静态", "相对", "绝对", "有效", "可行", "合理", "批判", "包容", })
+
+# ── Arabic B2 ─────────────────────────────────────────────────────────────────
+_AR_B2: frozenset[str] = frozenset({
+    "يُحلّل", "يُقيّم", "يُناقش", "يُبرهن", "يُوضّح", "يُطبّق",
+    "يُطوّر", "يُصمّم", "يُنفّذ", "يُرسّخ", "يُدمج", "يُنسّق",
+    "يُحسّن", "يُعزّز", "يُروّج", "يُحقّق", "يُثبت", "يُظهر",
+    "يُميّز", "يُصنّف", "يُعرّف", "يُبسّط", "يُحدّد",
+    "يُراقب", "يُرصد", "يُخطّط", "يُصلح", "يُكيّف",
+    "يُحاجج", "يُقارن", "يُقيس", "يُستنتج",
+    "إطار", "آلية", "نموذج", "معيار",
+    "متغير", "مؤشر", "بُعد", "رؤية", "مسار", "فاعلية", "مآل",
+    "تناقض", "إشكالية", "تحدٍّ", "قيد", "حاجز", "ديناميكية", "تحوّل", "ابتكار", "تكامل", "تفاعل", "مشاركة", "إسهام", "إدراك", "تفسير",
+    "تنوّع", "استدامة", "شفافية", "شرعية", "هشاشة",
+    "مرونة", "تعقيد", "تداخل",
+    "شامل", "منهجي", "موضوعي", "مجرّد", "ملموس",
+    "ديناميكي", "نسبي", "مطلق", "فعّال", "ناقد", "هادف",
+})
+
+# ── Hebrew B2 ─────────────────────────────────────────────────────────────────
+_HE_B2: frozenset[str] = frozenset({ "להסביר", "לפתח", "לתכנן", "לבצע", "לשלב", "לייעל", "להשיג", "להדגים", "להבחין", "לסווג", "להגדיר",
+    "לסכם", "לבקר", "לאתגר", "לחזק", "לצמצם", "לרכז", "לבחון", "להסיק", "להשוות", "מסגרת", "מנגנון", "מודל", "מושג", "קריטריון", "משתנה", "מדד", "ממד", "מסלול", "יעילות",
+    "אפקטיביות", "סתירה", "בעייתיות", "מגבלה", "פוטנציאל", "דינמיקה", "חדשנות", "שיתוף",
+    "אינטראקציה", "השתתפות", "תרומה", "תפיסה", "פרשנות", "כוללנות",
+    "קיימות", "שקיפות", "לגיטימיות", "שבירות", "חוסן", "מורכבות",
+    "מקיף", "שיטתי", "אובייקטיבי", "סובייקטיבי", "קונקרטי", "דינמי", "יחסי", "מוחלט", "אפקטיבי", "ישים", })
+
+#: Map from language code to frozenset of B2 lemmas (excludes A1–B1 items).
+B2: dict[str, frozenset[str]] = {
+    "es": _ES_B2,
+    "fr": _FR_B2,
+    "de": _DE_B2,
+    "it": _IT_B2,
+    "pt": _PT_B2,
+    "ru": _RU_B2,
+    "ja": _JA_B2,
+    "zh": _ZH_B2,
+    "ar": _AR_B2,
+    "he": _HE_B2,
+}
+
+# ──────────────────────────────────────────────────────────────────────────────
+# C1 tables (advanced: ~240 lemmas / lang)
+# Confidence 0.82 — only overrides OOV (tok.is_oov); below in-vocab (0.85)
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ── Spanish C1 ────────────────────────────────────────────────────────────────
+_ES_C1: frozenset[str] = frozenset({
+    # verbs
+    "abogar", "abrogar", "amalgamar", "atenuar", "catalizar",
+    "circunscribir", "cohibir", "confluir", "decaer", "deliberar",
+    "desestimar", "disipar", "elucidar", "emanar", "emancipar", "erosionar", "escindir", "exacerbar", "exhortar",
+    "extirpar", "homologar", "impugnar", "invocar", "irrumpir",
+    "menguar", "obviar", "perpetuar", "prescindir", "proclamar",
+    "proscribir", "recapitular", "reiterar", "reprochar", "revertir",
+    "salvaguardar", "socavar", "subsumir", "sucumbir", "suprimir",
+    "tergiversar", "transgredir", "trascender", "vindicar", "yuxtaponer",
+    "abstraer", "contravenir", "esgrimir", "fustigar",
+    "instigar", "perpetrar", "precipitar", "subyugar",
+    # nouns
+    "abismo", "afán", "amalgama", "antagonismo", "aporía", "artificio",
+    "asidero", "atavismo", "axioma", "compendio", "correlato",
+    "cuestionamiento", "disrupción", "eclosión", "epítome",
+    "escepticismo", "expediente", "fisura", "impugnación", "incongruencia",
+    "inflexión", "latencia", "legado", "menoscabo", "metamorfosis",
+    "nexo", "obsolescencia", "ocaso", "paradoja", "parangón",
+    "postulado", "propensión", "quiebre", "reciprocidad", "simulacro",
+    "trasfondo", "vicisitud", "axiología", "cosmovisión", "dialéctica",
+    "espectro", "imperativo", "ontología", "teleología", "epistemología",
+    "anomalía", "antítesis", "catarsis", "correlación", "dogma",
+    "eufemismo", "falacia", "ironía", "metáfora", "silogismo",
+    "tautología", "acometida", "complicidad", "corolario", "denotación",
+    "empirismo", "éxodo", "idiosincrasia", "intertextualidad", "moratoria", "relato", "substrato", "utopía", "paradoja",
+    # adjectives
+    "acucioso", "antitético", "apremiante", "arcaico",
+    "atávico", "axiomático", "categórico", "connotativo", "consustancial",
+    "contingente", "deontológico", "dialéctico", "disonante", "dogmático",
+    "empírico", "epistemológico", "existencial", "falaz", "filosófico",
+    "hermenéutico", "hipotético", "ideológico", "inductivo", "innato",
+    "intrínseco", "irrevocable", "metafísico", "mítico", "ontológico",
+    "paradójico", "perentorio", "polifacético", "prescriptivo",
+    "relacional", "retórico", "semiótico", "simbólico", "sinérgico",
+    "teleológico", "utópico",
+})
+
+# ── French C1 ─────────────────────────────────────────────────────────────────
+_FR_C1: frozenset[str] = frozenset({
+    # verbs
+    "abdiquer", "abroger", "amalgamer", "atténuer", "catalyser",
+    "circonscrire", "confluir", "décliner", "délibérer", "dissimuler",
+    "dissiper", "éluder", "émanciper", "éroder", "exacerber",
+    "exhorter", "extirper", "homologuer", "impugner", "infléchir",
+    "instiller", "invoquer", "menguer", "omettre", "perpétuer",
+    "proclamer", "proscrire", "récapituler", "réitérer", "réprouver",
+    "révoquer", "sauvegarder", "saper", "succomber", "supprimer",
+    "transgresser", "transcender", "vindiqer", "juxtaposer",
+    "abstraire", "contrevenir", "escamoter", "fustiger", "instiguer",
+    "perpétrer", "précipiter", "subjuguer", "déconstruire",
+    # nouns
+    "abîme", "amalgame", "antagonisme", "aporie", "artifice",
+    "atavisme", "axiome", "compendium", "corrélat", "déconstruction",
+    "désenchantement", "disruption", "éclosion", "épistémologie",
+    "épitome", "scepticisme", "expédient", "fissure", "impugnation",
+    "incongruence", "inflexion", "latence", "legs", "mensonge",
+    "métamorphose", "nexus", "obsolescence", "paradoxe", "postulat", "propension", "réciprocité", "simulacre", "substratum",
+    "trasfondo", "vicissitude", "axiologie", "cosmovision", "dialectique",
+    "spectre", "impératif", "ontologie", "téléologie",
+    "anomalie", "antithèse", "catharsis", "corrélation", "dogme",
+    "euphémisme", "fallace", "ironie", "métaphore", "syllogisme",
+    "tautologie", "complicité", "corollaire", "dénotation",
+    "empirisme", "idiosyncrasie", "moratoire", "substrat", "utopie", "déterminisme",
+    # adjectives
+    "acéré", "anachronique", "antithétique", "atavique", "axiomatique",
+    "catégorique", "connotatif", "consubstantiel", "contingent",
+    "déontologique", "dialectique", "dissonant", "dogmatique",
+    "empirique", "épistémologique", "existentiel", "fallacieux",
+    "philosophique", "herméneutique", "hypothétique", "idéologique",
+    "inductif", "inné", "intrinsèque", "irrévocable", "métaphysique",
+    "mythique", "ontologique", "paradoxal", "prescriptif",
+    "relationnel", "rhétorique", "sémiotique", "symbolique",
+    "synergique", "téléologique", "utopique",
+})
+
+# ── German C1 ─────────────────────────────────────────────────────────────────
+_DE_C1: frozenset[str] = frozenset({
+    # verbs (lowercase)
+    "abdanken", "abrogieren", "amalgamieren", "abschwächen", "katalysieren",
+    "eingrenzen", "deliberieren", "dissipieren", "emanzipieren",
+    "erodieren", "verschärfen", "ermahnen", "extirpieren", "homologieren",
+    "anfechten", "anrufen", "einbrechen", "verewigen", "proklamieren", "rekapitulieren", "rügen", "rückgängig machen",
+    "schützen", "untergraben", "subsumieren", "unterliegen", "unterdrücken",
+    "überschreiten", "transzendieren", "vindizieren", "nebeneinanderstellen",
+    "abstrahieren", "zuwiderhandeln", "dekonstruieren",
+    # nouns (Title-case)
+    "Abgrund", "Amalgam", "Antagonismus", "Aporie", "Atavismus",
+    "Axiom", "Kompendium", "Korrelat", "Dekonstruktion",
+    "Disruption", "Epistemologie", "Skeptizismus",
+    "Inkongruenz", "Inflexion", "Latenz", "Vermächtnis",
+    "Metamorphose", "Nexus", "Obsoleszenz", "Paradox",
+    "Postulat", "Propensität", "Reziprozität", "Simulakrum",
+    "Substrat", "Wechselfälle", "Axiologie", "Weltanschauung",
+    "Dialektik", "Spektrum", "Imperativ", "Ontologie",
+    "Teleologie", "Anomalie", "Antithese", "Katharsis",
+    "Korrelation", "Dogma", "Euphemismus", "Fehlschluss",
+    "Ironie", "Metapher", "Syllogismus", "Tautologie",
+    "Komplizität", "Korollar", "Denotation",
+    "Empirismus", "Idiosynkrasie", "Moratorium", "Prärogative",
+    "Utopie", "Determinismus", "Intersubjektivität",
+    # adjectives
+    "anachronistisch", "antithetisch", "atavistisch", "axiomatisch",
+    "kategorisch", "konnotativ", "konsubstantiell", "kontingent",
+    "deontologisch", "dialektisch", "dissonant", "dogmatisch",
+    "empirisch", "epistemologisch", "existenziell", "trügerisch",
+    "philosophisch", "hermeneutisch", "hypothetisch", "ideologisch",
+    "induktiv", "angeboren", "intrinsisch", "unwiderruflich",
+    "metaphysisch", "mythisch", "ontologisch", "paradox", "präskriptiv",
+    "relational", "rhetorisch", "semiotisch", "symbolisch",
+    "synergetisch", "teleologisch", "stillschweigend", "utopisch",
+})
+
+# ── Italian C1 ────────────────────────────────────────────────────────────────
+_IT_C1: frozenset[str] = frozenset({
+    # verbs
+    "abdicare", "abrogare", "amalgamare", "attenuare", "catalizzare",
+    "circoscrivere", "confluire", "decadere", "deliberare", "dissipare",
+    "eludere", "emancipare", "erodere", "esacerbare", "esortare",
+    "estirpare", "omologare", "impugnare", "invocare", "irrompere",
+    "perpetuare", "proclamare", "proscrivere", "riepilogare", "reiterare",
+    "biasimare", "revocare", "salvaguardare", "minare", "sussumere",
+    "soccombere", "sopprimere", "trasgredire", "trascendere",
+    "rivendicare", "giustapporre", "astrarre", "contravvenire",
+    "fustigare", "istigare", "perpetrare", "precipitare", "soggiogare",
+    # nouns
+    "abisso", "amalgama", "antagonismo", "aporia", "artificio",
+    "atavismo", "assioma", "compendio", "correlato", "decostruzione",
+    "disruzione", "epistemologia", "epitome", "scetticismo",
+    "incongruenza", "inflessione", "latenza", "lascito",
+    "metamorfosi", "nesso", "obsolescenza", "paradosso",
+    "postulato", "propensione", "reciprocità", "simulacro",
+    "sostrato", "vicissitudine", "assiologia", "visione del mondo",
+    "dialettica", "spettro", "imperativo", "ontologia",
+    "teleologia", "anomalia", "antitesi", "catarsi",
+    "correlazione", "dogma", "eufemismo", "fallacia",
+    "ironia", "metafora", "sillogismo", "tautologia",
+    "complicità", "corollario", "denotazione",
+    "empirismo", "idiosincrasia", "moratoria", "utopia", "determinismo", "intersoggettività",
+    # adjectives
+    "anacronistico", "antitetico", "atavico", "assiomatico",
+    "categorico", "connotativo", "consustanziale", "contingente",
+    "deontologico", "dialettico", "dissonante", "dogmatico",
+    "empirico", "epistemologico", "esistenziale", "fallace",
+    "filosofico", "ermeneutico", "ipotetico", "ideologico",
+    "induttivo", "innato", "intrinseco", "irrevocabile",
+    "metafisico", "mitico", "ontologico", "paradossale",
+    "prescrittivo", "relazionale", "retorico", "semiotico",
+    "simbolico", "sinergico", "teleologico", "tacito", "utopico",
+})
+
+# ── Portuguese C1 ─────────────────────────────────────────────────────────────
+_PT_C1: frozenset[str] = frozenset({
+    # verbs
+    "abdicar", "ab-rogar", "amalgamar", "atenuar", "catalizar",
+    "circunscrever", "confluir", "decair", "deliberar", "dissipar",
+    "eludir", "emancipar", "erodir", "exacerbar", "exortar",
+    "extirpar", "homologar", "impugnar", "invocar", "irromper",
+    "perpetuar", "proclamar", "proscrever", "recapitular", "reiterar",
+    "repreender", "revogar", "salvaguardar", "solapar", "subsumir",
+    "sucumbir", "suprimir", "transgredir", "transcender", "justapor", "abstrair", "contravir",
+    "fustigar", "instigar", "perpetrar", "precipitar", "subjugar",
+    # nouns
+    "abismo", "amalgama", "antagonismo", "aporia", "artifício",
+    "atavismo", "axioma", "compêndio", "correlato", "desconstrução",
+    "disrupção", "epistemologia", "epítome", "ceticismo",
+    "incongruência", "inflexão", "latência", "legado",
+    "metamorfose", "nexo", "obsolescência", "paradoxo",
+    "postulado", "propensão", "reciprocidade", "simulacro",
+    "substrato", "vicissitude", "axiologia", "cosmovisão",
+    "dialética", "espectro", "imperativo", "ontologia",
+    "teleologia", "anomalia", "antítese", "catarse",
+    "correlação", "dogma", "eufemismo", "falácia",
+    "ironia", "metáfora", "silogismo", "tautologia",
+    "cumplicidade", "corolário", "denotação",
+    "empirismo", "idiossincrasia", "moratória", "utopia", "determinismo", "intersubjetividade",
+    # adjectives
+    "anacrônico", "antitético", "atávico", "axiomático",
+    "categórico", "conotativo", "consubstancial", "contingente",
+    "deontológico", "dialético", "dissonante", "dogmático",
+    "empírico", "epistemológico", "existencial", "falacioso",
+    "filosófico", "hermenêutico", "hipotético", "ideológico",
+    "indutivo", "inato", "intrínseco", "irrevogável",
+    "metafísico", "mítico", "ontológico", "paradoxal",
+    "prescritivo", "relacional", "retórico", "semiótico",
+    "simbólico", "sinérgico", "teleológico", "utópico",
+})
+
+# ── Russian C1 ────────────────────────────────────────────────────────────────
+_RU_C1: frozenset[str] = frozenset({
+    # verbs
+    "абстрагировать", "amalgamировать", "ослаблять", "катализировать",
+    "ограничивать", "deliberировать", "рассеивать", "эмансипировать",
+    "эродировать", "обострять", "увещевать", "искоренять",
+    "ходатайствовать", "вторгаться", "увековечивать", "провозглашать",
+    "запрещать", "рекапитулировать", "осуждать",
+    "отменять", "подрывать", "подчинять", "поддаваться",
+    "подавлять", "нарушать", "трансцендировать", "декonstruировать",
+    "абстрагироваться", "противоречить",
+    # nouns
+    "пропасть", "амальгама", "антагонизм", "апория", "атавизм",
+    "аксиома", "компендиум", "коррелят", "деконструкция",
+    "эпистемология", "эпитоме", "скептицизм",
+    "инконгруентность", "латентность", "наследие",
+    "метаморфоза", "нексус", "постулат", "реципрокность", "симулякр",
+    "субстрат", "превратности", "аксиология", "мировоззрение",
+    "диалектика", "спектр", "императив", "онтология",
+    "телеология", "аномалия", "антитезис", "катарсис",
+    "корреляция", "догма", "эвфемизм", "заблуждение",
+    "ирония", "метафора", "силлогизм", "тавтология",
+    "соучастие", "следствие", "коннотация",
+    "эмпиризм", "идиосинкразия", "мораторий",
+    "утопия", "детерминизм", "интерсубъективность",
+    "нигилизм", "плюрализм", "релятивизм",
+    # adjectives
+    "анахроничный", "антитетический", "атавистический", "аксиоматический",
+    "категорический", "коннотативный", "контингентный",
+    "деонтологический", "диалектический", "диссонантный", "догматический",
+    "эмпирический", "эпистемологический", "экзистенциальный",
+    "философский", "герменевтический", "гипотетический", "идеологический",
+    "индуктивный", "врождённый", "внутренний", "метафизический",
+    "мифический", "онтологический", "парадоксальный",
+    "риторический", "семиотический", "символический", "синергетический",
+    "телеологический", "тацитный", "утопический",
+})
+
+# ── Japanese C1 ───────────────────────────────────────────────────────────────
+_JA_C1: frozenset[str] = frozenset({
+    "棄権する", "廃止する", "融合する", "緩和する", "触媒する",
+    "限定する", "審議する", "解消する", "解放する", "浸食する",
+    "悪化させる", "訓戒する", "根絶する", "宣言する", "禁止する",
+    "要約する", "非難する", "廃止する", "保護する",
+    "弱体化する", "包摂する", "降伏する", "抑圧する", "超越する", "並置する", "抽象化する", "違反する",
+    "深淵", "融合体", "拮抗", "アポリア", "隔世遺伝", "公理",
+    "集成", "認識論", "懐疑主義",
+    "不整合", "潜在性", "遺産",
+    "変容", "パラドックス",
+    "公準", "互恵性", "シミュラクラ",
+    "基体", "変転", "価値論", "世界観",
+    "弁証法", "スペクトル", "命令", "存在論",
+    "目的論", "異常", "対位法", "カタルシス",
+    "相関", "教義", "婉曲", "誤謬",
+    "皮肉", "隠喩", "三段論法", "同語反復",
+    "共犯", "系論", "外示",
+    "経験主義", "特異性", "モラトリアム",
+    "ユートピア", "決定論", "間主観性",
+    "虚無主義", "多元主義", "相対主義",
+    "アナクロニズム", "本質主義",
+    "時代錯誤な", "反命題的", "公理的",
+    "断定的", "含意的", "同質的", "偶発的",
+    "義務論的", "弁証法的", "不協和な", "独断的",
+    "経験的", "認識論的", "実存的",
+    "哲学的", "解釈学的", "仮定的", "イデオロギー的",
+    "帰納的", "生得的", "内在的", "形而上学的",
+    "神話的", "存在論的", "逆説的",
+    "修辞的", "記号論的", "象徴的", "目的論的",
+})
+
+# ── Chinese C1 ────────────────────────────────────────────────────────────────
+_ZH_C1: frozenset[str] = frozenset({
+    "退位", "废除", "缓和", "催化",
+    "限定", "审议", "消散", "解放", "侵蚀",
+    "加剧", "告诫", "根除", "宣告", "禁止",
+    "概括", "重申", "谴责", "保护",
+    "削弱", "归摄", "屈服", "压制", "超越",
+    "并置", "抽象化", "违背",
+    "深渊", "融合体", "对立", "悖论", "隔代遗传", "公理",
+    "纲要", "认识论", "怀疑主义",
+    "不一致", "潜在性", "遗产",
+    "蜕变", "悖论", "互惠性", "拟像",
+    "基质", "变迁", "价值论", "世界观",
+    "辩证法", "谱系", "命令", "本体论",
+    "目的论", "异常", "反题", "净化",
+    "相关性", "教条", "委婉", "谬误",
+    "讽刺", "隐喻", "三段论", "同义反复",
+    "共谋", "外延",
+    "经验主义", "特质", "暂缓",
+    "乌托邦", "决定论", "主体间性",
+    "虚无主义", "多元主义", "相对主义", "本质主义",
+    "时代错误的", "反命题的", "公理的",
+    "断然的", "含蓄的", "同质的", "偶然的",
+    "义务论的", "辩证的", "不协调的", "教条的",
+    "经验的", "认识论的", "存在主义的",
+    "哲学的", "诠释学的", "假设的", "意识形态的",
+    "归纳的", "天赋的", "内在的", "形而上学的",
+    "神话的", "本体论的", "悖论的",
+    "修辞的", "符号学的", "象征的", "目的论的",
+})
+
+# ── Arabic C1 ─────────────────────────────────────────────────────────────────
+_AR_C1: frozenset[str] = frozenset({
+    "يَتَخَلَّى", "يُلغي", "يَمتَزج", "يُخفِّف", "يُحفِّز",
+    "يَتَداوَل", "يَتبدَّد", "يُحرِّر", "يَتآكَل",
+    "يُفاقِم", "يَحثُّ", "يَستأصِل", "يُعلِن", "يَحظُر",
+    "يُلخِّص", "يُكرِّر", "يُنكِر",
+    "يُبطِل", "يَحفَظ", "يَنخَر",
+    "يَخضَع", "يَقمَع", "يَتجاوَز",
+    "يَضَع جَنبًا إلى جَنب",
+    "هُوَّة", "تآلُف", "تضادّ", "بداهة", "رَجعيَّة",
+    "بديهيَّة", "ملخَّص", "إبستيمولوجيا", "تشكيكيَّة",
+    "تنافر", "كامِنيَّة", "إرث",
+    "تحوُّل", "نَقِيض", "تبادُليَّة",
+    "مَسرَح", "رُكيزة", "أكسيولوجيا", "رُؤيَة عالَمِيَّة",
+    "جدَليَّة", "طَيف", "أمر واجب", "أُنطولوجيا",
+    "غائيَّة", "شُذوذ", "نقيض", "تَطهير",
+    "ترابُط", "عقيدة", "كِناية", "مغالطة",
+    "سُخرية", "استعارة", "قياس", "تكرار",
+    "تواطُؤ", "لازِمة", "دلالة",
+    "تجريبيَّة", "خُصوصية", "تأجيل",
+    "يوتوبيا", "حَتميَّة", "بين الذوات",
+    "عَدَميَّة", "تعدُّدية", "نسبيَّة",
+    "مفارَقة تاريخيَّة", "جَوهَريَّة",
+    "مُتناقض مع العصر", "ضدّ-أطروحي", "بديهي",
+    "قاطع", "ضمني", "متجانس", "عَرَضي",
+    "واجبي", "جدَلي", "متنافر", "عقائدي",
+    "تجريبي", "معرفي", "وجودي",
+    "فلسفي", "تأويلي", "افتراضي", "أيديولوجي",
+    "استنتاجي", "فطري", "ميتافيزيقي",
+    "أسطوري", "وجودي", "مفارِق",
+    "خطابي", "سيميائي", "رمزي", "غائي",
+})
+
+# ── Hebrew C1 ─────────────────────────────────────────────────────────────────
+_HE_C1: frozenset[str] = frozenset({
+    "לוותר", "לבטל", "להתמזג", "להקל", "לזרז",
+    "להגביל", "להתדיין", "להתפוגג", "לשחרר", "לשחוק",
+    "להחריף", "להזהיר", "לעקור", "להכריז", "לאסור",
+    "לסכם מחדש", "לחזור על", "לגנות", "לדכא", "להתעלות",
+    "להציב זה לצד זה", "להפשיט", "להפר",
+    "תהום", "תמהיל", "ניגוד", "אפוריה", "אטוויזם",
+    "אקסיומה", "מאסף", "אפיסטמולוגיה", "סקפטיות",
+    "חוסר עקביות", "חביון", "מורשת",
+    "מטמורפוזה", "פרדוקס", "הדדיות", "סימולקרום",
+    "מצע", "אקסיולוגיה", "תפיסת עולם",
+    "דיאלקטיקה", "ספקטרום", "ציווי", "אונטולוגיה",
+    "טלאולוגיה", "אנומליה", "אנטיתזה", "קתרזיס",
+    "קורלציה", "דוגמה", "אופמיזם", "כשל",
+    "אירוניה", "מטאפורה", "סילוגיזם", "טאוטולוגיה",
+    "שותפות לפשע", "קורולריה", "דנוטציה",
+    "אמפיריציזם", "אידיוסינקרטיות", "מורטוריום",
+    "אוטופיה", "דטרמיניזם", "בין-סובייקטיביות",
+    "ניהיליזם", "פלורליזם", "רלטיביזם", "אסנציאליזם",
+    "אנכרוניסטי", "אנטי-תזאי", "אקסיומטי",
+    "קטגורי", "קונוטטיבי", "הומוגני", "מקרי",
+    "דאונטולוגי", "דיאלקטי", "דיסוננטי", "דוגמטי",
+    "אמפירי", "אפיסטמי", "אקזיסטנציאלי",
+    "פילוסופי", "הרמנויטי", "היפותטי", "אידיאולוגי",
+    "אינדוקטיבי", "מולד", "אינהרנטי", "מטאפיזי",
+    "מיתי", "אונטולוגי", "פרדוקסלי",
+    "רטורי", "סמיוטי", "סמלי", "טלאולוגי",
+})
+
+#: Map from language code to frozenset of C1 lemmas (excludes A1–B2 items).
+C1: dict[str, frozenset[str]] = {
+    "es": _ES_C1,
+    "fr": _FR_C1,
+    "de": _DE_C1,
+    "it": _IT_C1,
+    "pt": _PT_C1,
+    "ru": _RU_C1,
+    "ja": _JA_C1,
+    "zh": _ZH_C1,
+    "ar": _AR_C1,
+    "he": _HE_C1,
+}
+
+# ──────────────────────────────────────────────────────────────────────────────
+# C2 tables (mastery: ~190 lemmas / lang)
+# Confidence 0.80 — only overrides OOV (tok.is_oov); below in-vocab (0.85)
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ── Spanish C2 ────────────────────────────────────────────────────────────────
+_ES_C2: frozenset[str] = frozenset({
+    # verbs (rare/literary/archaic-formal)
+    "abominar", "acaecer", "adolecer", "aliterarse",
+    "anatemizar", "anteceder", "atormentar", "beatificar", "coadyuvar",
+    "consagrar", "devengar", "dimanar", "dirimir", "estigmatizar", "excomulgar", "fenecer", "fulminar",
+    "glorificar", "impetrar", "inmolar", "inquirir", "lacerar",
+    "lisonjear", "macerar", "merodear", "mortificar", "ostentar",
+    "patentizar", "penar", "perecer", "perfilar", "preconizar",
+    "premiar", "pretender", "prorrumpir", "pugnar", "purgar",
+    "recusar", "renegar", "resarcir", "resignarse",
+    "sancionar", "secularizar", "sublimar", "tolerar", "vacilar",
+    "venerar", "vituperar", "yacer",
+    # nouns (literary/archaic/very formal)
+    "acervo", "acrimonia", "alambique", "altruismo", "anacronismo",
+    "apostasía", "arcano", "banalidad", "baluarte", "cataclismo",
+    "cénit", "cónclave", "confín", "contumacia", "crepúsculo", "efigie", "elucubración", "encomio", "epifanía",
+    "epopeya", "estirpe", "éxtasis", "fatum", "fervor",
+    "hastío", "impávido", "indolencia", "insidia", "jactancia",
+    "laberinto", "lamento", "lascivia", "letargo", "linaje",
+    "magnificencia", "mártir", "nimbo", "panteón", "parsimonia",
+    "pátina", "penumbra", "pervivencia", "pompa", "portento",
+    "presagio", "prodigio", "saga", "serenidad", "soliloquio",
+    "solipsismo", "sopor", "tormento", "umbría", "veneración",
+    "vestigio", "villanía", "yermo",
+    # adjectives (very formal/literary/archaic)
+    "acérrimo", "adlátere", "altisonante", "amorfo", "apócrifo", "arduo", "beatífico", "cenital", "ciclópeo",
+    "contumaz", "desmesurado", "dracónico", "egrégio", "eximio",
+    "fabuloso", "fatídico", "fatuo", "férreo", "fúnebre",
+    "gárrulo", "glacial", "hórrido", "inclito", "inefable",
+    "inescrutable", "infausto", "ingente", "insigne", "íntegro",
+    "irascible", "lóbrego", "luciferino", "macabro", "magno",
+    "nimio", "nímio", "ominoso", "omnipotente", "omnisciente",
+    "perenne", "póstumo", "prístino", "profuso", "pugnable",
+    "saturnino", "seráfico", "solemne", "sombrío", "torpe", "truculento", "vetusto", "vívido",
+})
+
+# ── French C2 ─────────────────────────────────────────────────────────────────
+_FR_C2: frozenset[str] = frozenset({
+    # verbs
+    "abhorrer", "abominer", "advenir", "anathématiser", "antécéder",
+    "beatifier", "coadjuver", "consacrer", "stigmatiser", "excommunier",
+    "périr", "fulminer", "glorifier", "implorer", "immoler", "flatter", "macérer", "mortifier", "afficher",
+    "renoncer", "purger", "séculariser", "sublimer",
+    "vénérer", "vitupérer", "gésir",
+    # nouns
+    "acrimonie", "alambic", "altruisme", "anachronisme", "apostasie",
+    "arcane", "banalité", "bastion", "cataclysme", "zénith",
+    "conclave", "confins", "contumace", "crépuscule",
+    "dédain", "effigie", "élucubration", "éloge", "épiphanie",
+    "épopée", "estirpe", "extase", "destin", "ferveur",
+    "langueur", "indolence", "insidiosité", "jactance",
+    "labyrinthe", "lamentation", "lascivité", "léthargie", "lignage",
+    "magnificence", "martyr", "nimbe", "panthéon", "parcimonie",
+    "patine", "pénombre", "pompe", "portent",
+    "présage", "prodige", "saga", "sérénité", "soliloque",
+    "solipsisme", "torpeur", "tourment", "vénération",
+    "vestige", "vilenie",
+    # adjectives
+    "acerbe", "altisonant", "amorphe", "apocryphe",
+    "béatifique", "cyclopéen", "contumace", "démesuré",
+    "draconien", "égrégore", "fabuleux",
+    "fatidique", "fat", "funèbre", "funeste",
+    "glacial", "horrible", "illustre", "ineffable",
+    "inscrutable", "infâme", "ingénu", "insignifiant",
+    "irascible", "lugubre", "macabre", "omineux", "omnipotent", "omniscient", "perpétuel",
+    "posthume", "pristine", "profus", "saturnin",
+    "séraphique", "solennel", "truculent", "vétuste", "vivide",
+})
+
+# ── German C2 ─────────────────────────────────────────────────────────────────
+_DE_C2: frozenset[str] = frozenset({
+    # verbs
+    "verabscheuen", "verfluchen", "verherrlichen", "verklären",
+    "versteinern", "verwünschen", "weihen", "anprangern", "beschwören", "brandmarken", "entehren",
+    "entlarven", "entheiligen", "entsagen", "erbarmen",
+    "freveln", "geißeln", "kasteien", "lästern",
+    "martyrisieren", "schmähen", "sühnen", "vergotten",
+    # nouns (Title-case)
+    "Abscheu", "Acrimonie", "Alchemie", "Altruismus", "Anachronismus",
+    "Apostasie", "Arcanum", "Bastion", "Kataklysmik", "Zenit",
+    "Konzil", "Contumaz", "Dämmerung",
+    "Efigie", "Epiphanie", "Epos", "Ekstase",
+    "Inbrunst", "Gleichgültigkeit", "Labyrint", "Klage",
+    "Lüsternheit", "Lethargie", "Abstammung",
+    "Herrlichkeit", "Märtyrer", "Nimbus", "Pantheon", "Besonnenheit",
+    "Patina", "Halbdunkel", "Prunk", "Omen",
+    "Prophezeiung", "Wundertat", "Saga", "Gelassenheit",
+    "Selbstgespräch", "Solipsismus", "Torheit", "Qual",
+    "Verehrung", "Überrest", "Bosheit", "Einöde",
+    # adjectives
+    "abscheulich", "altertümlich", "apokryph",
+    "selig", "kolossal", "maßlos",
+    "drakonisch", "fabelhaft",
+    "verhängnisvoll", "eisig",
+    "entsetzlich", "unaussprechlich",
+    "unergründlich", "unheilsam", "gewaltig", "ehrwürdig",
+    "jähzornig", "düster", "unheilvoll", "grandios",
+    "unheilverkündend", "allmächtig", "allwissend", "immerwährend",
+    "posthum", "unverfälscht", "üppig",
+    "düsterlich", "feierlich", "finster",
+    "grausam", "uralt", "lebendig",
+})
+
+# ── Italian C2 ────────────────────────────────────────────────────────────────
+_IT_C2: frozenset[str] = frozenset({
+    # verbs
+    "aborrire", "abominare", "accadere", "anatematizzare",
+    "beatificare", "consacrare", "coadiuvare",
+    "stigmatizzare", "scomunicare",
+    "perire", "fulminare", "glorificare", "implorare", "immolare", "adulare", "macerare", "ostentare",
+    "rinunciare", "purgare", "secolarizzare", "sublimare",
+    "venerare", "vituperare", "giacere",
+    # nouns
+    "acrimonia", "alambicco", "altruismo", "anacronismo", "apostasia",
+    "arcano", "banalità", "bastione", "cataclisma", "zenit",
+    "conclave", "contumacia", "crepuscolo",
+    "effigie", "elucubrazione", "encomio", "epifania",
+    "epopea", "stirpe", "estasi", "fervore",
+    "languore", "indolenza", "insidiosità", "iattanza",
+    "labirinto", "lamento", "lascivia", "letargia", "lignaggio",
+    "magnificenza", "martire", "nimbo", "pantheon", "parsimonia",
+    "patina", "penombra", "pompa", "portento",
+    "presagio", "prodigio", "saga", "serenità", "soliloquio",
+    "solipsismo", "torpore", "tormento", "venerazione",
+    "vestigio", "vigliaccheria",
+    # adjectives
+    "acerbo", "altisonante", "amorfo", "apocrifo",
+    "beatifico", "ciclopeo", "contumax", "smisurato",
+    "draconiano", "favoloso", "fatidico",
+    "funebre", "funesto", "glaciale", "orrendo",
+    "illustre", "ineffabile", "imperscrutabile", "nefasto",
+    "ingente", "insigne", "irascibile", "lugubre",
+    "macabro", "magnifico", "omninoso", "omnipotente",
+    "perenne", "postumo", "pristino", "profuso",
+    "serafico", "solenne", "cupo", "truculento",
+    "vetusto", "vivido",
+})
+
+# ── Portuguese C2 ─────────────────────────────────────────────────────────────
+_PT_C2: frozenset[str] = frozenset({
+    # verbs
+    "abominar", "acontecer", "anatematizar", "beatificar",
+    "consagrar", "coadjuvar", "estigmatizar", "excomungar",
+    "perecer", "fulminar", "glorificar", "implorar", "imolar",
+    "inquirir", "lisonjear", "macerar", "ostentar",
+    "renunciar", "purgar", "secularizar", "sublimar",
+    "venerar", "vituperar", "jazer",
+    # nouns
+    "acrimônia", "alambique", "altruísmo", "anacronismo", "apostasia",
+    "arcano", "banalidade", "baluarte", "cataclismo", "zênite",
+    "conclave", "contumácia", "crepúsculo",
+    "efigie", "elucubração", "encômio", "epifania",
+    "epopeia", "estirpe", "êxtase", "fervência",
+    "languor", "indolência", "insídia", "jactância",
+    "labirinto", "lamento", "lascívia", "letargia", "linhagem",
+    "magnificência", "mártir", "nimbo", "panteão", "parcimônia",
+    "pátina", "penumbra", "pompa", "portento",
+    "presságio", "prodígio", "saga", "serenidade", "solilóquio",
+    "solipsismo", "torpor", "tormento", "veneração",
+    "vestígio", "vilania",
+    # adjectives
+    "acérrimo", "altisonante", "amorfo", "apócrifo",
+    "beatífico", "ciclópeo", "contumaz", "desmesurado",
+    "draconiano", "fabuloso", "fatídico",
+    "fúnebre", "funesto", "glacial", "hórrido",
+    "ilustre", "inefável", "inescrutável", "infausto",
+    "ingente", "insigne", "irascível", "lúgubre",
+    "macabro", "magno", "ominoso", "onipotente",
+    "perene", "póstumo", "prístino", "profuso",
+    "seráfico", "solene", "sombrio", "truculento",
+    "vetusto", "vívido",
+})
+
+# ── Russian C2 ────────────────────────────────────────────────────────────────
+_RU_C2: frozenset[str] = frozenset({
+    # verbs
+    "богохульствовать", "возносить", "воздавать", "вопиять",
+    "воспевать", "геройствовать", "глумиться", "гнушаться",
+    "довлеть", "изничтожать", "изрыгать", "кануть",
+    "лицедействовать", "льстить", "мздоимствовать", "неистовствовать",
+    "ниспровергать", "обличать", "опровергать", "остервенеть",
+    "поносить", "превозносить", "пренебрегать", "сетовать",
+    "скорбеть", "трепетать", "уничижать", "хулить",
+    # nouns
+    "алчность", "анахронизм", "апостасия", "архив", "аскеза",
+    "блаженство", "бренность", "величие", "вероотступничество",
+    "вожделение", "гнусность", "грядущее", "двуличие",
+    "деспотизм", "дремота", "духовность", "забвение",
+    "злодеяние", "инертность", "исступление", "лабиринт",
+    "летаргия", "лицемерие", "мартирий", "мрак",
+    "нечестие", "нимб", "пантеон", "пастораль",
+    "перипетия", "пламень", "плач", "помпа",
+    "потомство", "предзнаменование", "прельщение", "причастность",
+    "прозрение", "пустошь", "скверна", "смятение",
+    "сумерки", "тщеславие", "укоризна", "умозрение",
+    "фатум", "хаос", "экстаз",
+    # adjectives
+    "алчный", "апокрифический", "архаичный", "аскетичный",
+    "благостный", "бренный", "величественный", "гнусный",
+    "дряхлый", "забытый", "зловещий", "зыбкий",
+    "исконный", "лицемерный", "мрачный", "нечестивый",
+    "неизречённый", "ничтожный", "огненный", "первозданный",
+    "потусторонний", "сакральный", "скорбный", "сумеречный",
+    "тленный", "торжественный", "трагический", "тщетный",
+    "умозрительный", "устаревший", "ярый",
+})
+
+# ── Japanese C2 ───────────────────────────────────────────────────────────────
+_JA_C2: frozenset[str] = frozenset({
+    "忌避する", "呪詛する", "崇拝する", "悼む", "嘆く",
+    "罵倒する", "美化する", "冒涜する", "奉じる",
+    "嘲弄する", "玩弄する", "讃える", "誹謗する",
+    "懺悔する", "殉じる", "赴く", "葬る",
+    "貶める", "崇める", "省みる",
+    "強欲", "時代錯誤", "背教", "神秘", "禁欲",
+    "至福", "無常", "偉大さ", "背信", "官能",
+    "忌まわしさ", "未来", "偽善",
+    "専制主義", "昏睡", "霊性", "忘却",
+    "悪行", "不活動", "狂乱", "迷宮",
+    "嗜眠", "偽善", "殉難", "闇",
+    "不敬", "光輪", "万神殿", "田園",
+    "紆余曲折", "炎", "嘆き", "壮麗",
+    "子孫", "前兆", "誘惑", "帰属",
+    "洞察", "荒野", "悪", "混乱",
+    "薄暮", "虚栄", "叱責", "思索",
+    "宿命", "現象", "混沌", "恍惚",
+    "強欲な", "外典の", "古風な", "禁欲的な",
+    "至福の", "無常の", "荘厳な", "忌まわしい",
+    "老朽化した", "忘れられた", "不吉な", "はかない",
+    "本来の", "偽善的な", "陰鬱な", "不敬な",
+    "言い表せない", "取るに足らない", "燃えるような", "原初的な",
+    "幽冥の", "神聖な", "悲痛な", "薄暮の",
+    "束の間の", "厳粛な", "悲劇的な", "虚しい",
+    "思索的な", "時代遅れの", "熱烈な",
+})
+
+# ── Chinese C2 ────────────────────────────────────────────────────────────────
+_ZH_C2: frozenset[str] = frozenset({
+    "憎恶", "诅咒", "崇拜", "悼念", "哀叹",
+    "谩骂", "美化", "亵渎", "奉行",
+    "嘲弄", "玩弄", "颂扬", "诽谤",
+    "忏悔", "殉道", "前往", "埋葬",
+    "贬低", "敬奉", "反省",
+    "贪婪", "叛教", "神秘", "禁欲",
+    "极乐", "无常", "伟大", "背信", "情欲",
+    "可恶", "未来", "伪善",
+    "专制主义", "昏迷", "灵性", "遗忘",
+    "恶行", "惰性", "狂乱", "迷宫",
+    "嗜睡", "虚伪", "殉难", "不虔诚", "光环", "万神殿", "田园",
+    "曲折", "炎焰", "哀鸣", "壮丽",
+    "后裔", "预兆", "诱惑", "归属",
+    "洞察", "荒野", "邪恶", "混乱",
+    "暮色", "虚荣", "责备", "玄思",
+    "命运", "现象", "混沌", "狂喜",
+    "贪婪的", "外典的", "古朴的", "禁欲的",
+    "极乐的", "无常的", "雄伟的", "可恶的",
+    "陈旧的", "被遗忘的", "不祥的", "短暂的",
+    "固有的", "虚伪的", "阴郁的", "不虔诚的",
+    "难以言表的", "微不足道的", "燃烧的", "原始的",
+    "幽冥的", "神圣的", "悲痛的", "暮色的",
+    "转瞬即逝的", "庄严的", "悲剧的", "徒劳的",
+    "玄思的", "过时的", "狂热的",
+})
+
+# ── Arabic C2 ─────────────────────────────────────────────────────────────────
+_AR_C2: frozenset[str] = frozenset({
+    "يَكره", "يَلعن", "يعبد", "يَرثي", "يَندب",
+    "يَشتم", "يُمجِّد", "يُدنِّس", "يَلتزم",
+    "يَسخر", "يَعبث", "يُمجِّد", "يَفتري",
+    "يَتوب", "يَستشهد", "يَغدو", "يَدفن",
+    "يُهين", "يُبجِّل", "جَشَع", "أناكرونيزم", "ارتداد", "غموض", "زُهد",
+    "نعيم", "فَناء", "عَظَمة", "خيانة", "شَهوة",
+    "دَناءة", "مستقبل", "نفاق",
+    "استبداد", "سُبات", "روحانية", "نسيان",
+    "إثم", "خُمول", "هيجان", "متاهة",
+    "خَدَر", "رياء", "استشهاد", "ظلام",
+    "كفر", "هالة", "بانثيون", "رعوية",
+    "تقلبات", "لهيب", "عويل", "جلال",
+    "ذرية", "فأل", "إغراء", "انتماء",
+    "بصيرة", "براري", "شر", "فوضى",
+    "غسق", "خيلاء", "عتاب", "تأمّل",
+    "قضاء", "ظاهرة", "فوضى", "نشوة",
+    "جَشِع", "أبوكريفي", "زاهد",
+    "نَعيمي", "فانٍ", "مهيب", "مقيت",
+    "بالٍ", "منسي", "مشؤوم", "عابر", "منافق", "كئيب", "كافر",
+    "لا يوصف", "تافه", "مشتعل", "بدائي",
+    "أخروي", "مقدَّس", "محزن", "شفقي",
+    "عابر", "مهيب", "مأساوي", "باطل",
+    "تأملي", "بائد", })
+
+# ── Hebrew C2 ─────────────────────────────────────────────────────────────────
+_HE_C2: frozenset[str] = frozenset({
+    "לשנוא", "לקלל", "לסגוד", "לאבל", "להתאונן",
+    "לגדף", "לפאר", "לחלל", "לדבוק",
+    "ללעוג", "לשעשע", "לשבח", "להשמיץ",
+    "לחזור בתשובה", "להיות קדוש", "ללכת", "לקבור",
+    "להשפיל", "לכבד", "חמדנות", "כפירה", "מסתורין", "פרישות",
+    "אושר עליון", "חולפות", "גדולה", "בגידה", "תאווה",
+    "שפלות", "עתיד", "צביעות",
+    "עריצות", "תרדמת", "רוחניות", "שכחה",
+    "עוון", "אדישות", "התפרצות", "מבוך",
+    "נרדמות", "חנופה", "קידוש השם", "חשכה",
+    "כפירה", "הילה", "פנתיאון", "פסטורלי", "להבה", "יללה", "הדר",
+    "צאצאים", "סימן", "פיתוי", "שייכות",
+    "תובנה", "ישימון", "רשע", "תוהו",
+    "דמדומים", "יוהרה", "תוכחה", "הרהור",
+    "גזרה", "תופעה", "כאוס", "אקסטזה",
+    "חמדן", "אפוקריפי", "ארכאי", "פרוש",
+    "עליון", "חולף", "אדיר", "מתועב",
+    "ישן נושן", "נשכח", "מזעזע", "ראשוני", "צבוע", "קודר", "כופר",
+    "שאין לתארו", "בוער", "קדמוני",
+    "שאחרי המוות", "קדוש", "של שחר",
+    "חולף", "חגיגי", "טרגי", "לשווא",
+    "הרהורי", "מיושן", "נלהב",
+})
+
+#: Map from language code to frozenset of C2 lemmas (excludes A1–C1 items).
+C2: dict[str, frozenset[str]] = {
+    "es": _ES_C2,
+    "fr": _FR_C2,
+    "de": _DE_C2,
+    "it": _IT_C2,
+    "pt": _PT_C2,
+    "ru": _RU_C2,
+    "ja": _JA_C2,
+    "zh": _ZH_C2,
+    "ar": _AR_C2,
+    "he": _HE_C2,
 }
