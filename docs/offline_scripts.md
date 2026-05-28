@@ -131,10 +131,31 @@ curated grammar rules for each supported language.
 
 **Sources:**
 
+| Language | Code | Vocabulary source |
+|----------|------|------------------|
+| English | `en` | FrequencyWords/OpenSubtitles |
+| Spanish | `es` | FrequencyWords/OpenSubtitles |
+| French | `fr` | FrequencyWords/OpenSubtitles |
+| German | `de` | FrequencyWords/OpenSubtitles |
+| Italian | `it` | FrequencyWords/OpenSubtitles |
+| Portuguese | `pt` | FrequencyWords/OpenSubtitles |
+| Russian | `ru` | FrequencyWords/OpenSubtitles |
+| Arabic | `ar` | FrequencyWords/OpenSubtitles |
+| Hebrew | `he` | FrequencyWords/OpenSubtitles |
+| Hindi | `hi` | FrequencyWords/OpenSubtitles |
+| Turkish | `tr` | FrequencyWords/OpenSubtitles |
+| Finnish | `fi` | FrequencyWords/OpenSubtitles |
+| Japanese | `ja` | JLPT community lists (N5–N1 → A1–C1) |
+| Chinese | `zh` | HSK official lists (HSK 1–6 → A1–C2) |
+| Latin | `la` | Plugin curated (Wheelock/DCC Core; A1–B1) |
+| Koine Greek | `grc` | Plugin curated (Mounce/Trenchard NT vocab; A1–B1) |
+
 - `FrequencyWords` (hermitdave/FrequencyWords on GitHub; CC BY-SA 3.0) —
   OpenSubtitles-derived frequency lists; CEFR band assigned by frequency rank.
 - JLPT word lists (Japanese, N5–N1 → A1–C1).
 - HSK word lists (Mandarin, HSK 1–6 → A1–C2).
+- Latin/Greek inline vocab: curated headwords with gloss and POS; no network
+  fetch required. Wiktionary definitions optionally supplemented at runtime.
 - Wiktionary API for definitions (rate-limited; skippable).
 
 **Requires:**

@@ -164,7 +164,7 @@ class TestGreekMorphAnnotations:
         caps = self.plugin.capabilities
         assert caps.analysis_depth    == "morphology_light"
         assert caps.morphology_depth  == "shallow"
-        assert caps.morphology_quality == "low"
+        assert caps.morphology_quality == "medium"
         assert "vocabulary" in caps.lesson_modes_supported
 
     def test_romanized_present(self):
