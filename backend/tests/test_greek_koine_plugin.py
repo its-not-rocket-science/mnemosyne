@@ -46,13 +46,14 @@ class TestCapabilities:
     def test_lesson_modes_includes_vocabulary(self, plugin):
         assert "vocabulary" in plugin.capabilities.lesson_modes_supported
         assert "dictionary" in plugin.capabilities.lesson_modes_supported
+        assert "morphology" in plugin.capabilities.lesson_modes_supported
 
     def test_transliteration_scheme_set(self, plugin):
         # Koine Greek needs romanization for script-view toggle.
         assert plugin.capabilities.transliteration_scheme is not None
 
-    def test_morphology_quality_low(self, plugin):
-        assert plugin.capabilities.morphology_quality == "low"
+    def test_morphology_quality_medium(self, plugin):
+        assert plugin.capabilities.morphology_quality == "medium"
 
     def test_no_syntax_support(self, plugin):
         assert plugin.capabilities.syntax_support is False
@@ -300,3 +301,78 @@ def test_plugin_auto_discovered():
     plugin = registry.get("grc")
     assert plugin is not None
     assert plugin.language_code == "grc"
+
+
+# ── Deep morphology (conjugation + grammar types) ─────────────────────────────
+
+class TestDeepMorphology:
+    @pytest.fixture()
+    def plugin(self) -> KoineGreekPlugin:
+        return create_plugin()
+
+    def test_tense_pool_populated(self, plugin):
+        pool = plugin.capabilities.tense_pool
+        assert pool is not None and len(pool) >= 4
+        assert "present" in pool
+        assert "aorist" in pool
+
+    def test_mood_pool_populated(self, plugin):
+        pool = plugin.capabilities.mood_pool
+        assert pool is not None and len(pool) >= 4
+        assert "indicative" in pool
+        assert "subjunctive" in pool
+
+    def test_morph_verb_legei_emits_conjugation(self, plugin):
+        # λέγει (3sg present active indicative of λέγω) is in grc_morph.json
+        result = plugin.analyze_sentence("λέγει")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("tense") == "present"
+        assert c.lesson_data.get("person") == "third"
+
+    def test_morph_verb_canonical_contains_morph_tag(self, plugin):
+        result = plugin.analyze_sentence("λέγει")
+        c = result.candidates[0]
+        assert ":" in c.canonical_form
+
+    def test_morph_verb_hlqen_emits_conjugation(self, plugin):
+        # ἦλθεν (aorist of ἔρχομαι) is in grc_morph.json
+        result = plugin.analyze_sentence("ἦλθεν")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("tense") == "past"
+
+    def test_preposition_en_emits_grammar_type(self, plugin):
+        result = plugin.analyze_sentence("ἐν")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "grammar"
+        assert "in" in c.lesson_data.get("gloss", "").lower()
+
+    def test_conjunction_kai_emits_grammar_type(self, plugin):
+        result = plugin.analyze_sentence("καί")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "grammar"
+
+    def test_preposition_eis_emits_grammar_type(self, plugin):
+        result = plugin.analyze_sentence("εἰς")
+        assert len(result.candidates) == 1
+        assert result.candidates[0].type == "grammar"
+
+    def test_noun_logos_stays_vocabulary(self, plugin):
+        result = plugin.analyze_sentence("λόγος")
+        assert len(result.candidates) == 1
+        assert result.candidates[0].type == "vocabulary"
+
+    def test_verb_has_romanized_in_lesson_data(self, plugin):
+        result = plugin.analyze_sentence("λέγει")
+        c = result.candidates[0]
+        assert c.lesson_data.get("romanized") is not None
+
+    def test_conjugation_canonical_stable_across_calls(self, plugin):
+        r1 = plugin.analyze_sentence("λέγει")
+        r2 = plugin.analyze_sentence("λέγει")
+        assert r1.candidates[0].canonical_form == r2.candidates[0].canonical_form

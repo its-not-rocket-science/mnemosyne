@@ -45,6 +45,7 @@ class TestCapabilities:
     def test_lesson_modes_includes_vocabulary(self, plugin: LatinPlugin) -> None:
         assert "vocabulary" in plugin.capabilities.lesson_modes_supported
         assert "dictionary" in plugin.capabilities.lesson_modes_supported
+        assert "morphology" in plugin.capabilities.lesson_modes_supported
 
     def test_no_transliteration(self, plugin: LatinPlugin) -> None:
         # Latin already uses Latin script — no separate romanization needed.
@@ -539,3 +540,104 @@ class TestMultilingualArchitecture:
         caps = registry.supported_languages()
         assert "vocabulary" in caps["la"].lesson_modes_supported
         assert "dictionary" in caps["la"].lesson_modes_supported
+        assert "morphology" in caps["la"].lesson_modes_supported
+
+
+# ── Deep morphology (conjugation + grammar types) ─────────────────────────────
+
+class TestDeepMorphology:
+    @pytest.fixture()
+    def plugin(self) -> LatinPlugin:
+        return create_plugin()
+
+    def test_tense_pool_populated(self, plugin: LatinPlugin) -> None:
+        pool = plugin.capabilities.tense_pool
+        assert pool is not None and len(pool) >= 4
+        assert "present" in pool
+        assert "imperfect" in pool
+
+    def test_mood_pool_populated(self, plugin: LatinPlugin) -> None:
+        pool = plugin.capabilities.mood_pool
+        assert pool is not None and len(pool) >= 3
+        assert "indicative" in pool
+        assert "subjunctive" in pool
+
+    def test_morph_verb_amat_emits_conjugation(self, plugin: LatinPlugin) -> None:
+        # "amat" (3sg present active indicative of amo) is in la_morph.json
+        result = plugin.analyze_sentence("amat")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("tense") == "present"
+        assert c.lesson_data.get("person") == "third"
+
+    def test_morph_verb_canonical_contains_morph_tag(self, plugin: LatinPlugin) -> None:
+        result = plugin.analyze_sentence("amat")
+        c = result.candidates[0]
+        assert ":" in c.canonical_form
+
+    def test_suffix_imperfect_emits_conjugation(self, plugin: LatinPlugin) -> None:
+        # "amabat" not in morph index; detected via suffix rule
+        result = plugin.analyze_sentence("amabat")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("tense") == "imperfect"
+        assert c.lesson_data.get("person") == "third"
+        assert c.lesson_data.get("number") == "singular"
+
+    def test_suffix_future_emits_conjugation(self, plugin: LatinPlugin) -> None:
+        # "portabunt" (3pl future active of porto) detected via suffix rule
+        result = plugin.analyze_sentence("portabunt")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("tense") == "future"
+        assert c.lesson_data.get("number") == "plural"
+
+    def test_suffix_infinitive_emits_conjugation(self, plugin: LatinPlugin) -> None:
+        # "laudare" (pres. inf. of laudo) detected via suffix rule
+        result = plugin.analyze_sentence("laudare")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("verbform") == "infinitive"
+
+    def test_preposition_in_emits_grammar_type(self, plugin: LatinPlugin) -> None:
+        result = plugin.analyze_sentence("in")
+        assert len(result.candidates) == 1
+        assert result.candidates[0].type == "grammar"
+
+    def test_conjunction_et_emits_grammar_type(self, plugin: LatinPlugin) -> None:
+        result = plugin.analyze_sentence("et")
+        assert len(result.candidates) == 1
+        assert result.candidates[0].type == "grammar"
+
+    def test_conjunction_sed_emits_grammar_type(self, plugin: LatinPlugin) -> None:
+        result = plugin.analyze_sentence("sed")
+        assert len(result.candidates) == 1
+        assert result.candidates[0].type == "grammar"
+
+    def test_noun_amor_stays_vocabulary(self, plugin: LatinPlugin) -> None:
+        result = plugin.analyze_sentence("amor")
+        assert len(result.candidates) == 1
+        assert result.candidates[0].type == "vocabulary"
+
+    def test_conjugation_canonical_stable_across_calls(self, plugin: LatinPlugin) -> None:
+        r1 = plugin.analyze_sentence("amat")
+        r2 = plugin.analyze_sentence("amat")
+        assert r1.candidates[0].canonical_form == r2.candidates[0].canonical_form
+
+    def test_suffix_conjugation_has_confidence_note(self, plugin: LatinPlugin) -> None:
+        result = plugin.analyze_sentence("amabat")
+        c = result.candidates[0]
+        assert "confidence_note" in c.lesson_data
+
+    def test_morph_conjugation_confidence_high(self, plugin: LatinPlugin) -> None:
+        result = plugin.analyze_sentence("amat")
+        assert result.candidates[0].confidence == 0.80
+
+    def test_suffix_conjugation_confidence_lower(self, plugin: LatinPlugin) -> None:
+        result = plugin.analyze_sentence("amabat")
+        assert result.candidates[0].confidence is not None
+        assert result.candidates[0].confidence < 0.80

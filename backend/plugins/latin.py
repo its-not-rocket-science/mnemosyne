@@ -253,6 +253,54 @@ _DICT_ONLY_NOTE = (
     "not available for this specific inflected form."
 )
 
+_SUFFIX_NOTE = (
+    "Latin suffix-based: outermost ending matched against imperfect/future/infinitive "
+    "patterns. Accuracy is moderate; consult Whitaker's Words or CLTK for definitive analysis."
+)
+
+_VERB_POS    = frozenset({"verb", "aux"})
+_GRAMMAR_POS = frozenset({"prep", "conj", "particle", "det"})
+
+# Imperfect and future active for 1st/2nd conjugation are highly distinctive.
+# Infinitives (-are/-ere/-ire) require at least one stem char before the suffix.
+_LATIN_VERB_SUFFIXES: list[tuple[str, dict]] = [
+    ("abatis", {"tense": "imperfect", "voice": "active", "person": "second", "number": "plural",   "verbform": "finite"}),
+    ("ebatis", {"tense": "imperfect", "voice": "active", "person": "second", "number": "plural",   "verbform": "finite"}),
+    ("abamus", {"tense": "imperfect", "voice": "active", "person": "first",  "number": "plural",   "verbform": "finite"}),
+    ("ebamus", {"tense": "imperfect", "voice": "active", "person": "first",  "number": "plural",   "verbform": "finite"}),
+    ("abant",  {"tense": "imperfect", "voice": "active", "person": "third",  "number": "plural",   "verbform": "finite"}),
+    ("ebant",  {"tense": "imperfect", "voice": "active", "person": "third",  "number": "plural",   "verbform": "finite"}),
+    ("abat",   {"tense": "imperfect", "voice": "active", "person": "third",  "number": "singular", "verbform": "finite"}),
+    ("ebat",   {"tense": "imperfect", "voice": "active", "person": "third",  "number": "singular", "verbform": "finite"}),
+    ("abas",   {"tense": "imperfect", "voice": "active", "person": "second", "number": "singular", "verbform": "finite"}),
+    ("ebas",   {"tense": "imperfect", "voice": "active", "person": "second", "number": "singular", "verbform": "finite"}),
+    ("abam",   {"tense": "imperfect", "voice": "active", "person": "first",  "number": "singular", "verbform": "finite"}),
+    ("ebam",   {"tense": "imperfect", "voice": "active", "person": "first",  "number": "singular", "verbform": "finite"}),
+    ("abitis", {"tense": "future",    "voice": "active", "person": "second", "number": "plural",   "verbform": "finite"}),
+    ("ebitis", {"tense": "future",    "voice": "active", "person": "second", "number": "plural",   "verbform": "finite"}),
+    ("abimus", {"tense": "future",    "voice": "active", "person": "first",  "number": "plural",   "verbform": "finite"}),
+    ("ebimus", {"tense": "future",    "voice": "active", "person": "first",  "number": "plural",   "verbform": "finite"}),
+    ("abunt",  {"tense": "future",    "voice": "active", "person": "third",  "number": "plural",   "verbform": "finite"}),
+    ("ebunt",  {"tense": "future",    "voice": "active", "person": "third",  "number": "plural",   "verbform": "finite"}),
+    ("abit",   {"tense": "future",    "voice": "active", "person": "third",  "number": "singular", "verbform": "finite"}),
+    ("ebit",   {"tense": "future",    "voice": "active", "person": "third",  "number": "singular", "verbform": "finite"}),
+    ("abis",   {"tense": "future",    "voice": "active", "person": "second", "number": "singular", "verbform": "finite"}),
+    ("ebis",   {"tense": "future",    "voice": "active", "person": "second", "number": "singular", "verbform": "finite"}),
+    ("abo",    {"tense": "future",    "voice": "active", "person": "first",  "number": "singular", "verbform": "finite"}),
+    ("ebo",    {"tense": "future",    "voice": "active", "person": "first",  "number": "singular", "verbform": "finite"}),
+    ("isse",   {"tense": "perfect",   "voice": "active", "verbform": "infinitive"}),
+    ("are",    {"tense": "present",   "voice": "active", "verbform": "infinitive"}),
+    ("ere",    {"tense": "present",   "voice": "active", "verbform": "infinitive"}),
+    ("ire",    {"tense": "present",   "voice": "active", "verbform": "infinitive"}),
+]
+
+
+def _extract_latin_verb_morph(key: str) -> dict | None:
+    for suffix, features in _LATIN_VERB_SUFFIXES:
+        if key.endswith(suffix) and len(key) > len(suffix):
+            return dict(features)
+    return None
+
 
 # ── Plugin ────────────────────────────────────────────────────────────────────
 
@@ -267,7 +315,7 @@ class LatinPlugin:
         script_family="latin",
         tokenization_mode="whitespace",
         morphology_depth="shallow",
-        lesson_modes_supported=["vocabulary", "dictionary"],
+        lesson_modes_supported=["morphology", "vocabulary", "dictionary"],
         analysis_depth="morphology_light",
         segmentation_quality="medium",
         tokenization_quality="medium",
@@ -276,6 +324,8 @@ class LatinPlugin:
         idiom_detection=False,
         tts_lang_tag="la",
         transliteration_scheme=None,
+        tense_pool=["present", "imperfect", "perfect", "pluperfect", "future", "future_perfect"],
+        mood_pool=["indicative", "subjunctive", "imperative", "infinitive", "participle"],
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="none",
@@ -283,16 +333,17 @@ class LatinPlugin:
             cultural_references="none",
             etymology="none",
             formality_register="none",
-            grammar_nuance="none",
+            grammar_nuance="stub",
             pronunciation_tts="stub",
             transliteration="none",
             proverb_tradition="none",
             classical_or_scriptural_allusion="none",
             notes=(
-                "Morphological annotations (case, tense, voice, mood, person, "
-                "number, gender) available for ~3 400 forms from ITTB dev set. "
-                "Full ITTB would give much wider coverage. "
-                "Forms outside ITTB fall back to dictionary mode."
+                "Verb forms annotated as conjugation type when found in ITTB morph index "
+                "(~3 400 forms). Imperfect/future active and infinitive endings also "
+                "detected via suffix rules with moderate confidence. Prepositions, "
+                "conjunctions, and particles emitted as grammar type. "
+                "Forms outside ITTB fall back to suffix or dictionary mode."
             ),
         ),
     )
@@ -321,14 +372,40 @@ class LatinPlugin:
 
             entry       = _lookup(key)
             morph_entry = _morph().get(key)
+            morph_pos   = morph_entry.get("pos") if morph_entry else None
+            # Distinguish citation-form hits from inflection-resolved hits.
+            is_lemma = (key in _CURATED) or (key in _lemmas())
 
-            if entry is not None:
-                lesson_data: dict[str, Any] = {
+            if morph_pos in _VERB_POS:
+                lesson_data: dict[str, Any] = {"surface_form": token}
+                if entry:
+                    lesson_data["citation_form"] = entry["citation"]
+                    lesson_data["gloss"]         = entry["gloss"]
+                    lesson_data["grammar_note"]  = entry.get("grammar_note", "")
+                for field in _MORPH_FIELDS:
+                    if field in morph_entry:
+                        lesson_data[field] = morph_entry[field]
+                morph_tag = ":".join(
+                    f"{f}={morph_entry[f]}" for f in sorted(_MORPH_FIELDS) if f in morph_entry
+                )
+                candidates.append(CandidateObject(
+                    canonical_form=f"{key}:{morph_tag}" if morph_tag else key,
+                    surface_form=token,
+                    type="conjugation",
+                    label=token,
+                    lesson_data=lesson_data,
+                    confidence=0.80,
+                ))
+
+            elif entry is not None and is_lemma:
+                pos      = entry["pos"]
+                obj_type = "grammar" if pos in _GRAMMAR_POS else "vocabulary"
+                lesson_data = {
                     "lemma":         entry["citation"],
                     "citation_form": entry["citation"],
                     "gloss":         entry["gloss"],
                     "grammar_note":  entry.get("grammar_note", ""),
-                    "pos":           entry["pos"].upper(),
+                    "pos":           pos.upper(),
                 }
                 if morph_entry:
                     for field in _MORPH_FIELDS:
@@ -338,24 +415,94 @@ class LatinPlugin:
                 else:
                     lesson_data["confidence_note"] = _DICT_ONLY_NOTE
                     confidence = 0.70
-            else:
-                lesson_data = {"lemma": key, "confidence_note": _UNKNOWN_NOTE}
+                candidates.append(CandidateObject(
+                    canonical_form=key,
+                    surface_form=token,
+                    type=obj_type,
+                    label=token,
+                    lesson_data=lesson_data,
+                    confidence=confidence,
+                ))
+
+            elif entry is not None and not is_lemma and entry["pos"] == "verb":
+                # Inflection-resolved verb: emit as conjugation; supplement with
+                # suffix-based morphology when the morph index has no entry.
+                verb_morph = _extract_latin_verb_morph(key)
+                lesson_data = {
+                    "citation_form": entry["citation"],
+                    "gloss":         entry["gloss"],
+                    "grammar_note":  entry.get("grammar_note", ""),
+                    "surface_form":  token,
+                }
+                if verb_morph:
+                    lesson_data.update(verb_morph)
+                    lesson_data["confidence_note"] = _SUFFIX_NOTE
+                    morph_tag = ":".join(f"{k}={v}" for k, v in sorted(verb_morph.items()))
+                    confidence = 0.55
+                else:
+                    lesson_data["confidence_note"] = _DICT_ONLY_NOTE
+                    morph_tag = ""
+                    confidence = 0.50
+                candidates.append(CandidateObject(
+                    canonical_form=f"{key}:{morph_tag}" if morph_tag else key,
+                    surface_form=token,
+                    type="conjugation",
+                    label=token,
+                    lesson_data=lesson_data,
+                    confidence=confidence,
+                ))
+
+            elif entry is not None:
+                # Inflection-resolved non-verb (noun/adj/etc.)
+                pos      = entry["pos"]
+                obj_type = "grammar" if pos in _GRAMMAR_POS else "vocabulary"
+                lesson_data = {
+                    "lemma":         entry["citation"],
+                    "citation_form": entry["citation"],
+                    "gloss":         entry["gloss"],
+                    "grammar_note":  entry.get("grammar_note", ""),
+                    "pos":           pos.upper(),
+                    "confidence_note": _DICT_ONLY_NOTE,
+                }
                 if morph_entry:
                     for field in _MORPH_FIELDS:
                         if field in morph_entry:
                             lesson_data[field] = morph_entry[field]
-                    confidence = 0.50
+                    confidence = 0.70
                 else:
-                    confidence = None
+                    confidence = 0.60
+                candidates.append(CandidateObject(
+                    canonical_form=key,
+                    surface_form=token,
+                    type=obj_type,
+                    label=token,
+                    lesson_data=lesson_data,
+                    confidence=confidence,
+                ))
 
-            candidates.append(CandidateObject(
-                canonical_form=key,
-                surface_form=token,
-                type="vocabulary",
-                label=token,
-                lesson_data=lesson_data,
-                confidence=confidence,
-            ))
+            elif morph_entry:
+                lesson_data = {"lemma": key, "confidence_note": _UNKNOWN_NOTE}
+                for field in _MORPH_FIELDS:
+                    if field in morph_entry:
+                        lesson_data[field] = morph_entry[field]
+                candidates.append(CandidateObject(
+                    canonical_form=key,
+                    surface_form=token,
+                    type="vocabulary",
+                    label=token,
+                    lesson_data=lesson_data,
+                    confidence=0.50,
+                ))
+
+            else:
+                candidates.append(CandidateObject(
+                    canonical_form=key,
+                    surface_form=token,
+                    type="vocabulary",
+                    label=token,
+                    lesson_data={"lemma": key, "confidence_note": _UNKNOWN_NOTE},
+                    confidence=None,
+                ))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
