@@ -331,8 +331,9 @@ export class MnemosyneDetailPane extends HTMLElement {
           return
         }
 
-        // Concept help button (field/axis "?" triggers)
-        const helpBtn = e.target.closest('[data-concept-id]')
+        // Concept help button (field/axis "?" triggers) — scoped to .pane__concept-help
+        // to avoid matching the dialog container which also carries data-concept-id
+        const helpBtn = e.target.closest('.pane__concept-help')
         if (helpBtn) {
           const conceptId = helpBtn.dataset.conceptId
           if (conceptId) this.#openConceptDialog(conceptId, helpBtn)
@@ -351,6 +352,14 @@ export class MnemosyneDetailPane extends HTMLElement {
         if (e.target.closest('.pane__concept-dialog-back')) {
           const prev = this.#conceptDialogHistory.pop()
           if (prev) this.#openConceptDialog(prev.concept_id, null, false)
+          return
+        }
+
+        // Practice CTA inside concept dialog — close dialog, switch to Practice tab
+        if (e.target.closest('.pane__concept-practice-cta')) {
+          this.#closeConceptDialog()
+          const practiceTab = this.shadowRoot.querySelector('#dp-tab-practice')
+          if (practiceTab) practiceTab.click()
           return
         }
 
@@ -1628,7 +1637,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     }
 
     if (titleEl) titleEl.textContent = '…'
-    if (bodyEl)  bodyEl.innerHTML = ''
+    if (bodyEl)  bodyEl.innerHTML = `<p class="pane__concept-loading" aria-busy="true">${esc(t('dp_concept_loading'))}</p>`
     dialog.dataset.conceptId = conceptId
     dialog.hidden = false
 
@@ -1657,7 +1666,7 @@ export class MnemosyneDetailPane extends HTMLElement {
       if (bodyEl)  bodyEl.innerHTML = this.#renderConceptDialogBody(concept)
     } catch {
       if (titleEl) titleEl.textContent = t('dp_concept_unavailable')
-      if (bodyEl)  bodyEl.innerHTML = ''
+      if (bodyEl)  bodyEl.innerHTML = `<p class="pane__concept-error">${esc(t('dp_concept_error'))}</p>`
     }
   }
 
@@ -1687,6 +1696,9 @@ export class MnemosyneDetailPane extends HTMLElement {
         </li>
       `).join('')
       parts.push(`<p class="pane__concept-section-label">${esc(t('dp_concept_related'))}</p><ul class="pane__concept-related">${items}</ul>`)
+    }
+    if (Array.isArray(concept.practice_tags) && concept.practice_tags.length) {
+      parts.push(`<div class="pane__concept-practice-section"><button class="pane__concept-practice-cta" type="button">${esc(t('dp_concept_practice_cta'))}</button></div>`)
     }
     return parts.join('')
   }
