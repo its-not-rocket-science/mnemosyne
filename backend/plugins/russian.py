@@ -62,7 +62,7 @@ import logging
 from functools import cached_property
 from typing import Any
 
-from backend.plugins.cefr_vocab import A1 as _CEFR_A1, A2 as _CEFR_A2
+from backend.plugins.cefr_vocab import A1 as _CEFR_A1, A2 as _CEFR_A2, B1 as _CEFR_B1
 from backend.core.vocab_index import get_cefr_level as _get_cefr_level
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import (
@@ -75,6 +75,7 @@ logger = logging.getLogger(__name__)
 
 _A1 = _CEFR_A1.get("ru", frozenset())
 _A2 = _CEFR_A2.get("ru", frozenset())
+_B1 = _CEFR_B1.get("ru", frozenset())
 
 # ── POS filter ────────────────────────────────────────────────────────────────
 
@@ -425,7 +426,7 @@ class RussianPlugin:
             seen.add(lemma)
 
             data: dict[str, Any] = {"lemma": lemma, "pos": tok.pos_}
-            cefr = _get_cefr_level("ru", lemma) or ("A1" if lemma in _A1 else "A2" if lemma in _A2 else None)
+            cefr = _get_cefr_level("ru", lemma) or ("A1" if lemma in _A1 else "A2" if lemma in _A2 else "B1" if lemma in _B1 else None)
             if cefr:
                 data["cefr_level"] = cefr
 
