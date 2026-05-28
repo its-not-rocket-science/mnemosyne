@@ -79,6 +79,7 @@ async def submit_review(
 
     # Look up object type for concept-type-aware scheduling.
     obj_type: str | None = None
+    canonical_obj: CanonicalObjectRow | None = None
     try:
         canonical_obj = await db.get(CanonicalObjectRow, payload.object_id)
         if canonical_obj is not None:

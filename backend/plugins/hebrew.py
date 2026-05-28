@@ -36,11 +36,12 @@ from __future__ import annotations
 import re
 
 from backend.morphology import he_adapter as _he_adapter
-from backend.plugins.cefr_vocab import A1 as _CEFR_A1
+from backend.plugins.cefr_vocab import A1 as _CEFR_A1, A2 as _CEFR_A2
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 _A1: frozenset[str] = _CEFR_A1.get("he", frozenset())
+_A2: frozenset[str] = _CEFR_A2.get("he", frozenset())
 
 # ── Sentence splitting ────────────────────────────────────────────────────────
 _SENTENCE_RE = re.compile(r"[^.!?\n]+[.!?\n]?")
@@ -191,6 +192,9 @@ class HebrewPlugin:
             if canonical in _A1:
                 lesson_data["cefr_level"] = "A1"
                 confidence: float | None = 0.70
+            elif canonical in _A2:
+                lesson_data["cefr_level"] = "A2"
+                confidence = 0.70
             else:
                 confidence = None
 

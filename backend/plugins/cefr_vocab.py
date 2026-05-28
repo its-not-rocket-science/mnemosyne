@@ -28,10 +28,8 @@ Usage in plugins
   if lemma in _A1:
       data["cefr_level"] = "A1"
 
-Roadmap
-───────
-  A2 table: add here when curated; plugins pick it up automatically once
-  the level check is extended (see ROADMAP.md "CEFR A2 vocabulary").
+A2 tables added 2026-05-28.  Plugin priority:
+  A1 (0.90) → A2 (0.88) → in-vocab (0.85) → OOV (0.50)
 """
 from __future__ import annotations
 
@@ -1066,6 +1064,735 @@ _HE_A1: frozenset[str] = frozenset({
     "מוזר", "רזה", "מזל",
 })
 
+# ── Spanish A2 (es) ───────────────────────────────────────────────────────────
+_ES_A2: frozenset[str] = frozenset({
+    # extended family & relationships
+    "abuelo", "abuela", "nieto", "nieta", "tío", "tía", "primo", "prima",
+    "sobrino", "sobrina", "suegro", "suegra", "yerno", "nuera", "cuñado",
+    "cuñada", "pareja", "novio", "novia", "colega", "vecino", "vecina",
+    "compañero", "conocido",
+    # extended workplace & school
+    "oficina", "reunión", "jefe", "jefa", "empleado", "empresa", "negocio",
+    "proyecto", "informe", "plazo", "sueldo", "salario", "contrato",
+    "asignatura", "examen", "nota", "deberes", "tarea", "carrera", "título",
+    "materia", "conferencia", "pizarra", "cuaderno",
+    # extended travel & transport
+    "pasaporte", "billete", "reserva", "maleta", "equipaje", "aduanas",
+    "facturación", "tarjeta de embarque", "llegada", "salida", "andén",
+    "autopista", "atasco", "aparcamiento", "parada", "ferry", "crucero",
+    "excursión", "turismo", "alojamiento",
+    # extended home & furniture
+    "salón", "comedor", "pasillo", "garaje", "sótano", "ático",
+    "estante", "cajón", "lámpara", "alfombra", "cortina", "espejo",
+    "nevera", "microondas", "lavadora", "secadora", "grifo", "enchufe",
+    # weather
+    "lluvia", "nieve", "viento", "tormenta", "rayo", "trueno", "niebla",
+    "nublado", "despejado", "temperatura", "húmedo", "helada",
+    "grado", "pronóstico",
+    # health & body
+    "dolor de cabeza", "fiebre", "resfriado", "gripe", "farmacia",
+    "receta", "medicina", "pastilla", "operación", "emergencia",
+    "ambulancia", "herida", "alergia", "cita",
+    # shopping & money
+    "recibo", "descuento", "oferta", "talla", "probador", "marca",
+    "cartera", "tarjeta", "cuenta", "factura", "cambio", "efectivo",
+    "bolsa", "etiqueta", "devolución",
+    # food & cooking
+    "receta", "ingrediente", "sabor", "menú", "plato", "postre",
+    "primer plato", "aperitivo", "propina", "mezclar", "hervir",
+    "hornear", "freír", "cortar", "preparar",
+    # entertainment & culture
+    "concierto", "actuación", "exposición", "obra", "personaje",
+    "trama", "escena", "entrada", "espectáculo", "festival", "galería",
+    "artículo", "capítulo", "novela", "poema",
+    # sport & hobbies
+    "equipo", "campeonato", "partido", "torneo", "puntuación", "gol",
+    "entrenamiento", "entrenador", "aficionado", "atleta", "carrera",
+    "natación", "ciclismo", "senderismo", "jardinería", "fotografía",
+    "pintura", "música", "baile",
+    # communication & technology
+    "mensaje", "correo electrónico", "llamada", "contacto", "dirección",
+    "aplicación", "red social", "contraseña", "pantalla", "teclado",
+    "impresora", "archivo", "descargar", "subir", "actualizar",
+    # extended nature
+    "bosque", "río", "lago", "desierto", "océano", "costa", "horizonte",
+    "valle", "campo", "pradera", "selva", "cascada", "volcán",
+    # extended adjectives
+    "cómodo", "incómodo", "amargo", "dulce", "ácido", "picante",
+    "suave", "redondo", "cuadrado", "plano", "profundo",
+    "curioso", "serio", "nervioso",
+    "orgulloso", "avergonzado", "sorprendido", "preocupado", "celoso",
+    "emocionante", "relajante", "útil", "inútil", "disponible",
+    # extended verbs
+    "sugerir", "aceptar", "rechazar", "quejarse",
+    "recomendar", "describir", "imaginar", "planificar",
+    "organizar", "comparar", "explicar", "convencer", "invitar",
+    "celebrar", "felicitar", "disculparse", "agradecer", "disfrutar",
+    "mejorar", "empeorar", "continuar", "pertenecer", "consistir",
+    # extended adverbs & expressions
+    "definitivamente", "probablemente", "quizás", "especialmente",
+    "principalmente", "generalmente", "normalmente", "a veces",
+    "raramente", "casi", "demasiado", "suficiente",
+    "ya", "todavía", "aún", "enseguida", "de repente",
+})
+
+# ── French A2 (fr) ────────────────────────────────────────────────────────────
+_FR_A2: frozenset[str] = frozenset({
+    # extended family & relationships
+    "grand-père", "grand-mère", "petit-fils", "petite-fille", "oncle",
+    "tante", "cousin", "cousine", "neveu", "nièce", "beau-père",
+    "belle-mère", "gendre", "belle-fille", "beau-frère", "belle-sœur",
+    "partenaire", "fiancé", "fiancée", "collègue", "voisin", "voisine",
+    "camarade",
+    # extended workplace & school
+    "bureau", "réunion", "chef", "employé", "entreprise", "affaire",
+    "projet", "rapport", "délai", "salaire", "contrat", "promotion",
+    "matière", "examen", "note", "carrière", "diplôme",
+    "conférence", "tableau", "cahier",
+    # extended travel & transport
+    "passeport", "billet", "réservation", "valise", "bagage", "douane",
+    "enregistrement", "carte d'embarquement", "arrivée", "départ",
+    "quai", "autoroute", "embouteillage", "parking", "arrêt",
+    "ferry", "croisière", "excursion", "tourisme", "hébergement",
+    # extended home & furniture
+    "salon", "salle à manger", "couloir", "garage", "sous-sol",
+    "grenier", "étagère", "tiroir", "lampe", "tapis", "rideau",
+    "miroir", "réfrigérateur", "micro-onde", "lave-linge", "robinet",
+    "prise", "escalier", "balcon",
+    # weather
+    "pluie", "neige", "vent", "orage", "éclair", "tonnerre", "brouillard",
+    "nuageux", "dégagé", "température", "humide", "gel", "degré",
+    "météo", "prévision",
+    # health & body
+    "mal de tête", "fièvre", "rhume", "grippe", "pharmacie", "ordonnance",
+    "médicament", "comprimé", "opération", "urgence", "ambulance",
+    "blessure", "allergie", "rendez-vous",
+    # shopping & money
+    "reçu", "réduction", "solde", "taille", "cabine d'essayage", "marque",
+    "portefeuille", "carte", "compte", "facture", "monnaie", "espèce",
+    "sac", "étiquette", "remboursement",
+    # food & cooking
+    "recette", "ingrédient", "saveur", "menu", "plat", "dessert",
+    "entrée", "pourboire", "mélanger", "bouillir", "cuire", "frire",
+    "couper", "préparer", "goûter",
+    # entertainment & culture
+    "concert", "spectacle", "exposition", "pièce", "personnage",
+    "intrigue", "scène", "entrée", "festival", "galerie",
+    "article", "chapitre", "roman", "poème",
+    # sport & hobbies
+    "équipe", "championnat", "match", "tournoi", "score", "but",
+    "entraînement", "entraîneur", "fan", "athlète", "course",
+    "natation", "cyclisme", "randonnée", "jardinage", "photographie",
+    "peinture", "musique", "danse",
+    # communication & technology
+    "message", "appel", "contact", "adresse", "application",
+    "réseau social", "mot de passe", "écran", "clavier",
+    "imprimante", "fichier", "télécharger", "mettre à jour",
+    # extended nature
+    "forêt", "rivière", "lac", "désert", "océan", "côte", "horizon",
+    "vallée", "champ", "prairie", "jungle", "cascade", "volcan",
+    # extended adjectives
+    "confortable", "amer", "sucré", "acide", "épicé", "doux",
+    "rond", "carré", "plat", "profond", "curieux", "sérieux",
+    "ennuyé", "nerveux", "fier", "gêné", "surpris", "inquiet",
+    "jaloux", "passionnant", "relaxant", "utile", "inutile",
+    # extended verbs
+    "suggérer", "accepter", "refuser", "se plaindre",
+    "recommander", "décrire", "imaginer", "espérer", "planifier",
+    "organiser", "comparer", "convaincre", "inviter", "célébrer",
+    "féliciter", "s'excuser", "remercier", "profiter", "améliorer",
+    "continuer", "appartenir", "consister",
+    # extended adverbs
+    "définitivement", "probablement", "peut-être", "surtout",
+    "principalement", "généralement", "normalement", "parfois",
+    "rarement", "presque", "assez", "trop", "suffisamment",
+    "déjà", "encore", "tout de suite", "soudain",
+})
+
+# ── German A2 (de) ────────────────────────────────────────────────────────────
+# Nouns Title-cased; other POS lowercase.
+_DE_A2: frozenset[str] = frozenset({
+    # extended family & relationships
+    "Großvater", "Oma", "Opa", "Großmutter", "Enkel", "Enkelin",
+    "Onkel", "Tante", "Cousin", "Cousine", "Neffe", "Nichte",
+    "Schwiegervater", "Schwiegermutter", "Schwiegersohn", "Schwiegertochter",
+    "Schwager", "Schwägerin", "Partner", "Partnerin", "Verlobte",
+    "Kollege", "Kollegin", "Nachbar", "Nachbarin", "Mitschüler",
+    # extended workplace & school
+    "Büro", "Besprechung", "Sitzung", "Chef", "Chefin", "Mitarbeiter",
+    "Firma", "Unternehmen", "Geschäft", "Projekt", "Bericht", "Frist",
+    "Gehalt", "Vertrag", "Beförderung", "Fach", "Prüfung", "Note",
+    "Hausaufgabe", "Laufbahn", "Abschluss", "Vortrag", "Tafel", "Heft",
+    # extended travel & transport
+    "Reisepass", "Ticket", "Reservierung", "Koffer", "Gepäck", "Zoll",
+    "Check-in", "Bordkarte", "Ankunft", "Abfahrt", "Bahnsteig",
+    "Autobahn", "Stau", "Parkplatz", "Haltestelle", "Fähre", "Kreuzfahrt",
+    "Ausflug", "Touristik", "Unterkunft",
+    # extended home & furniture
+    "Wohnzimmer", "Esszimmer", "Flur", "Keller", "Dachboden",
+    "Balkon", "Regal", "Schublade", "Lampe", "Teppich", "Vorhang",
+    "Spiegel", "Kühlschrank", "Mikrowelle", "Waschmaschine", "Trockner",
+    "Hahn", "Steckdose", "Treppe",
+    # weather
+    "Regen", "Schnee", "Wind", "Gewitter", "Blitz", "Donner", "Nebel",
+    "bewölkt", "heiter", "Temperatur", "feucht", "Frost", "Grad",
+    "Wetterbericht", "Vorhersage",
+    # health & body
+    "Kopfschmerzen", "Fieber", "Erkältung", "Grippe", "Apotheke",
+    "Rezept", "Medikament", "Tablette", "Operation", "Notfall",
+    "Krankenwagen", "Wunde", "Allergie", "Termin",
+    # shopping & money
+    "Quittung", "Rabatt", "Angebot", "Größe", "Umkleidekabine", "Marke",
+    "Geldbeutel", "Karte", "Konto", "Rechnung", "Wechselgeld", "Bargeld",
+    "Tüte", "Etikett", "Rückgabe",
+    # food & cooking
+    "Rezept", "Zutat", "Geschmack", "Speisekarte", "Gericht", "Nachtisch",
+    "Vorspeise", "Trinkgeld", "mischen", "kochen", "backen", "braten",
+    "schneiden", "zubereiten", "schmecken",
+    # entertainment & culture
+    "Konzert", "Aufführung", "Ausstellung", "Stück", "Figur", "Handlung",
+    "Szene", "Eintrittskarte", "Festival", "Galerie",
+    "Artikel", "Kapitel", "Roman", "Gedicht",
+    # sport & hobbies
+    "Mannschaft", "Meisterschaft", "Spiel", "Turnier", "Ergebnis", "Tor",
+    "Training", "Trainer", "Fan", "Athlet", "Rennen",
+    "Schwimmen", "Radfahren", "Wandern", "Gärtnern", "Fotografieren",
+    "Malen", "Kochen", "Musik", "Tanzen",
+    # communication & technology
+    "Nachricht", "Anruf", "Kontakt", "Adresse", "App", "soziales Netzwerk",
+    "Passwort", "Bildschirm", "Tastatur", "Drucker", "Datei",
+    "herunterladen", "aktualisieren",
+    # extended nature
+    "Wald", "Fluss", "See", "Wüste", "Ozean", "Küste", "Horizont",
+    "Tal", "Feld", "Wiese", "Dschungel", "Wasserfall", "Vulkan",
+    # extended adjectives (lowercase)
+    "gemütlich", "bitter", "süß", "sauer", "scharf", "weich",
+    "rund", "quadratisch", "flach", "tief", "neugierig", "ernst",
+    "gelangweilt", "nervös", "stolz", "verlegen", "überrascht",
+    "besorgt", "eifersüchtig", "aufregend", "entspannend", "nützlich",
+    "nutzlos", "verfügbar",
+    # extended verbs (lowercase)
+    "vorschlagen", "akzeptieren", "ablehnen", "sich beschweren",
+    "empfehlen", "beschreiben", "hoffen", "planen",
+    "organisieren", "vergleichen", "überzeugen", "einladen",
+    "feiern", "gratulieren", "sich entschuldigen", "danken", "genießen",
+    "verbessern", "fortsetzen", "gehören", "bestehen",
+    # extended adverbs
+    "definitiv", "wahrscheinlich", "vielleicht", "besonders", "hauptsächlich",
+    "normalerweise", "manchmal", "selten", "fast", "ziemlich",
+    "genug", "bereits", "noch", "plötzlich",
+})
+
+# ── Italian A2 (it) ───────────────────────────────────────────────────────────
+_IT_A2: frozenset[str] = frozenset({
+    # extended family & relationships
+    "nonno", "nonna", "nipote", "zio", "zia", "cugino", "cugina",
+    "suocero", "suocera", "genero", "nuora", "cognato", "cognata",
+    "fidanzato", "fidanzata", "collega", "vicina",
+    "compagno", "conoscente",
+    # extended workplace & school
+    "ufficio", "riunione", "capo", "dipendente", "azienda", "affare",
+    "progetto", "rapporto", "scadenza", "stipendio", "contratto",
+    "materia", "esame", "voto", "compito", "carriera", "titolo",
+    "conferenza", "lavagna", "quaderno",
+    # extended travel & transport
+    "passaporto", "biglietto", "prenotazione", "valigia", "bagaglio",
+    "dogana", "check-in", "carta d'imbarco", "arrivo", "partenza",
+    "binario", "autostrada", "ingorgo", "parcheggio", "fermata",
+    "traghetto", "crociera", "gita", "turismo", "alloggio",
+    # extended home & furniture
+    "soggiorno", "sala da pranzo", "corridoio", "garage", "cantina",
+    "soffitta", "balcone", "scaffale", "cassetto", "lampada",
+    "tappeto", "tenda", "specchio", "frigorifero", "microonde",
+    "lavatrice", "rubinetto", "presa", "scala",
+    # weather
+    "pioggia", "neve", "vento", "temporale", "fulmine", "tuono",
+    "nebbia", "nuvoloso", "sereno", "temperatura", "umido",
+    "gelo", "grado", "previsione",
+    # health & body
+    "mal di testa", "febbre", "raffreddore", "influenza", "farmacia",
+    "ricetta", "medicina", "compressa", "operazione", "emergenza",
+    "ambulanza", "ferita", "allergia", "appuntamento",
+    # shopping & money
+    "scontrino", "sconto", "offerta", "taglia", "camerino", "marca",
+    "portafoglio", "carta", "conto", "fattura", "resto", "contanti",
+    "borsa", "etichetta", "reso",
+    # food & cooking
+    "ricetta", "ingrediente", "sapore", "menù", "piatto", "dessert",
+    "antipasto", "mancia", "mescolare", "bollire", "infornare",
+    "friggere", "tagliare", "preparare", "assaggiare",
+    # entertainment & culture
+    "concerto", "spettacolo", "mostra", "opera", "personaggio",
+    "trama", "scena", "biglietto", "festival", "galleria",
+    "articolo", "capitolo", "romanzo", "poesia",
+    # sport & hobbies
+    "squadra", "campionato", "partita", "torneo", "punteggio", "gol",
+    "allenamento", "allenatore", "tifoso", "atleta",
+    "nuoto", "ciclismo", "escursionismo", "giardinaggio", "fotografia",
+    "pittura", "musica", "ballo",
+    # communication & technology
+    "messaggio", "chiamata", "contatto", "indirizzo", "app",
+    "social network", "password", "schermo", "tastiera",
+    "stampante", "file", "scaricare", "aggiornare",
+    # extended nature
+    "bosco", "fiume", "lago", "deserto", "oceano", "costa", "orizzonte",
+    "valle", "campo", "prato", "giungla", "cascata", "vulcano",
+    # extended adjectives
+    "comodo", "amaro", "dolce", "aspro", "piccante", "morbido",
+    "tondo", "quadrato", "piatto", "profondo", "curioso", "serio",
+    "annoiato", "nervoso", "orgoglioso", "imbarazzato", "sorpreso",
+    "preoccupato", "geloso", "emozionante", "rilassante", "utile",
+    "inutile", "disponibile",
+    # extended verbs
+    "suggerire", "accettare", "rifiutare", "lamentarsi",
+    "consigliare", "descrivere", "immaginare", "sperare", "pianificare",
+    "organizzare", "confrontare", "convincere", "invitare",
+    "festeggiare", "congratularsi", "scusarsi", "ringraziare", "godere",
+    "migliorare", "continuare", "appartenere",
+    # extended adverbs
+    "sicuramente", "probabilmente", "forse", "specialmente",
+    "principalmente", "generalmente", "di solito", "a volte",
+    "raramente", "quasi", "abbastanza", "troppo", "già",
+    "ancora", "improvvisamente",
+})
+
+# ── Portuguese A2 (pt) ────────────────────────────────────────────────────────
+_PT_A2: frozenset[str] = frozenset({
+    # extended family & relationships
+    "avô", "avó", "neto", "neta", "tio", "tia", "primo", "prima",
+    "sobrinho", "sobrinha", "sogro", "sogra", "genro", "nora",
+    "cunhado", "cunhada", "namorado", "namorada", "colega", "vizinho",
+    "vizinha", "companheiro", "conhecido",
+    # extended workplace & school
+    "escritório", "reunião", "chefe", "funcionário", "empresa", "negócio",
+    "projeto", "relatório", "prazo", "salário", "contrato", "promoção",
+    "disciplina", "exame", "nota", "tarefa", "carreira", "título",
+    "conferência", "quadro", "caderno",
+    # extended travel & transport
+    "passaporte", "bilhete", "reserva", "mala", "bagagem", "alfândega",
+    "check-in", "cartão de embarque", "chegada", "partida", "plataforma",
+    "autoestrada", "engarrafamento", "estacionamento", "paragem",
+    "ferryboat", "cruzeiro", "excursão", "turismo", "alojamento",
+    # extended home & furniture
+    "sala de estar", "sala de jantar", "corredor", "garagem", "cave",
+    "sótão", "varanda", "prateleira", "gaveta", "candeeiro",
+    "tapete", "cortina", "espelho", "frigorífico", "micro-ondas",
+    "máquina de lavar", "torneira", "tomada", "escadas",
+    # weather
+    "chuva", "neve", "vento", "tempestade", "relâmpago", "trovão",
+    "nevoeiro", "nublado", "temperatura", "húmido",
+    "geada", "grau", "previsão",
+    # health & body
+    "dor de cabeça", "febre", "constipação", "gripe", "farmácia",
+    "receita", "medicamento", "comprimido", "operação", "emergência",
+    "ambulância", "ferida", "alergia", "consulta",
+    # shopping & money
+    "recibo", "desconto", "oferta", "tamanho", "cabine de prova", "marca",
+    "carteira", "cartão", "conta", "fatura", "troco",
+    "saco", "etiqueta", "devolução",
+    # food & cooking
+    "receita", "ingrediente", "sabor", "menu", "prato", "sobremesa",
+    "entrada", "gorjeta", "misturar", "ferver", "assar",
+    "fritar", "cortar", "preparar", "provar",
+    # entertainment & culture
+    "concerto", "espetáculo", "exposição", "peça", "personagem",
+    "enredo", "cena", "bilhete", "festival", "galeria",
+    "artigo", "capítulo", "romance", "poema",
+    # sport & hobbies
+    "equipa", "campeonato", "jogo", "torneio", "pontuação", "golo",
+    "treino", "treinador", "adepto", "atleta",
+    "natação", "ciclismo", "caminhada", "jardinagem", "fotografia",
+    "pintura", "culinária", "música", "dança",
+    # communication & technology
+    "mensagem", "chamada", "contacto", "endereço", "aplicação",
+    "rede social", "palavra-passe", "ecrã", "teclado",
+    "impressora", "ficheiro", "descarregar", "atualizar",
+    # extended nature
+    "floresta", "rio", "lago", "deserto", "oceano", "costa", "horizonte",
+    "vale", "campo", "prado", "selva", "cascata", "vulcão",
+    # extended adjectives
+    "confortável", "amargo", "doce", "ácido", "picante", "suave",
+    "redondo", "quadrado", "plano", "profundo", "curioso", "sério",
+    "nervoso", "orgulhoso", "envergonhado", "surpreendido",
+    "preocupado", "ciumento", "emocionante", "relaxante", "útil",
+    "inútil", "disponível",
+    # extended verbs
+    "sugerir", "aceitar", "recusar", "queixar-se",
+    "recomendar", "descrever", "imaginar", "planear",
+    "organizar", "comparar", "convencer", "convidar",
+    "celebrar", "felicitar", "desculpar", "agradecer", "desfrutar",
+    "melhorar", "continuar", "pertencer",
+    # extended adverbs
+    "definitivamente", "provavelmente", "talvez", "especialmente",
+    "principalmente", "geralmente", "normalmente", "às vezes",
+    "raramente", "quase", "bastante", "demasiado", "já",
+    "ainda", "de repente",
+})
+
+# ── Russian A2 (ru) ───────────────────────────────────────────────────────────
+_RU_A2: frozenset[str] = frozenset({
+    # extended family & relationships
+    "дедушка", "бабушка", "внук", "внучка", "дядя", "тётя",
+    "двоюродный брат", "двоюродная сестра", "племянник", "племянница",
+    "свёкор", "свекровь", "тесть", "тёща", "зять", "невестка",
+    "деверь", "невестка", "жених", "невеста", "коллега", "сосед",
+    "соседка", "одноклассник",
+    # extended workplace & school
+    "офис", "совещание", "начальник", "сотрудник", "компания",
+    "бизнес", "проект", "отчёт", "срок", "зарплата", "контракт",
+    "повышение", "предмет", "экзамен", "оценка", "домашнее задание",
+    "карьера", "диплом", "лекция", "доска", "тетрадь",
+    # extended travel & transport
+    "паспорт", "билет", "бронирование", "чемодан", "багаж", "таможня",
+    "регистрация", "посадочный талон", "прилёт", "отправление",
+    "перрон", "шоссе", "пробка", "парковка", "остановка",
+    "паром", "круиз", "экскурсия", "туризм", "жильё",
+    # extended home & furniture
+    "гостиная", "столовая", "коридор", "гараж", "подвал",
+    "чердак", "балкон", "полка", "ящик", "лампа",
+    "ковёр", "штора", "зеркало", "холодильник", "микроволновка",
+    "стиральная машина", "кран", "розетка", "лестница",
+    # weather
+    "дождь", "снегопад", "ветер", "буря", "молния", "гром",
+    "туман", "облачный", "ясный", "температура", "влажный",
+    "мороз", "градус", "прогноз погоды",
+    # health & body
+    "головная боль", "жар", "насморк", "грипп", "аптека",
+    "рецепт", "лекарство", "таблетка", "операция", "скорая помощь",
+    "рана", "аллергия", "запись к врачу",
+    # shopping & money
+    "чек", "скидка", "акция", "размер", "примерочная", "бренд",
+    "кошелёк", "карточка", "счёт", "квитанция", "сдача", "наличные",
+    "пакет", "этикетка", "возврат",
+    # food & cooking
+    "рецепт", "ингредиент", "вкус", "меню", "блюдо", "десерт",
+    "закуска", "чаевые", "перемешивать", "кипятить", "печь",
+    "жарить", "резать", "готовить", "пробовать",
+    # entertainment & culture
+    "концерт", "спектакль", "выставка", "пьеса", "персонаж",
+    "сюжет", "сцена", "билет", "фестиваль", "галерея",
+    "статья", "глава", "роман", "стихотворение",
+    # sport & hobbies
+    "команда", "чемпионат", "матч", "турнир", "счёт", "гол",
+    "тренировка", "тренер", "болельщик", "спортсмен",
+    "плавание", "велоспорт", "пеший туризм", "садоводство",
+    "фотография", "рисование", "кулинария", "музыка", "танцы",
+    # communication & technology
+    "сообщение", "звонок", "контакт", "адрес", "приложение",
+    "социальная сеть", "пароль", "экран", "клавиатура",
+    "принтер", "файл", "скачать", "обновить",
+    # extended nature
+    "лес", "река", "озеро", "пустыня", "океан", "побережье",
+    "горизонт", "долина", "поле", "луг", "джунгли", "водопад",
+    "вулкан",
+    # extended adjectives
+    "удобный", "горький", "сладкий", "кислый", "острый", "мягкий",
+    "круглый", "квадратный", "плоский", "глубокий", "любопытный",
+    "серьёзный", "скучающий", "нервный", "гордый", "смущённый",
+    "удивлённый", "обеспокоенный", "ревнивый", "захватывающий",
+    "расслабляющий", "полезный", "бесполезный", "доступный",
+    # extended verbs
+    "предлагать", "принимать", "отказываться", "жаловаться",
+    "советовать", "описывать", "воображать", "надеяться", "планировать",
+    "организовывать", "сравнивать", "убеждать", "приглашать",
+    "праздновать", "поздравлять", "извиняться", "благодарить",
+    "наслаждаться", "улучшать", "продолжать", "принадлежать",
+    # extended adverbs
+    "определённо", "вероятно", "может быть", "особенно",
+    "главным образом", "обычно", "иногда", "редко",
+    "почти", "довольно", "слишком", "уже", "всё ещё", "вдруг",
+})
+
+# ── Japanese A2 (ja) ──────────────────────────────────────────────────────────
+_JA_A2: frozenset[str] = frozenset({
+    # extended family & relationships
+    "祖父", "祖母", "孫", "叔父", "叔母", "おじ", "おば", "いとこ",
+    "甥", "姪", "義父", "義母", "義兄", "義弟", "婚約者",
+    "同僚", "隣人", "クラスメート",
+    # extended workplace & school
+    "オフィス", "会議", "上司", "社員", "会社", "プロジェクト",
+    "報告書", "締め切り", "給料", "契約", "昇進", "科目",
+    "試験", "成績", "宿題", "キャリア", "卒業証書", "講義",
+    "黒板", "ノート",
+    # extended travel & transport
+    "パスポート", "予約", "スーツケース", "荷物", "税関",
+    "チェックイン", "搭乗券", "到着", "出発", "ホーム",
+    "高速道路", "渋滞", "駐車場", "停留所", "フェリー",
+    "クルーズ", "観光", "宿泊",
+    # extended home & furniture
+    "居間", "食堂", "廊下", "車庫", "地下室", "屋根裏",
+    "バルコニー", "棚", "引き出し", "ランプ", "カーペット",
+    "カーテン", "鏡", "冷蔵庫", "電子レンジ", "洗濯機",
+    "蛇口", "コンセント", "階段",
+    # weather
+    "雨", "雪", "風", "嵐", "雷", "稲妻", "霧",
+    "曇り", "晴れ", "気温", "湿度", "霜", "度", "天気予報",
+    # health & body
+    "頭痛", "熱", "風邪", "インフルエンザ", "薬局", "処方箋",
+    "薬", "錠剤", "手術", "救急", "救急車", "傷", "アレルギー",
+    "予約",
+    # shopping & money
+    "レシート", "割引", "セール", "サイズ", "試着室", "ブランド",
+    "財布", "カード", "口座", "請求書", "おつり", "現金",
+    "袋", "値札", "返品",
+    # food & cooking
+    "レシピ", "材料", "味", "メニュー", "料理", "デザート",
+    "前菜", "チップ", "混ぜる", "沸かす", "焼く",
+    "揚げる", "切る", "準備する", "味見する",
+    # entertainment & culture
+    "コンサート", "公演", "展覧会", "演劇", "登場人物",
+    "プロット", "場面", "チケット", "フェスティバル", "ギャラリー",
+    "記事", "章", "小説", "詩",
+    # sport & hobbies
+    "チーム", "選手権", "試合", "トーナメント", "スコア", "ゴール",
+    "練習", "コーチ", "ファン",
+    "水泳", "サイクリング", "ハイキング", "ガーデニング", "写真撮影",
+    "絵画", "料理", "音楽", "ダンス",
+    # communication & technology
+    "メッセージ", "通話", "連絡先", "住所", "アプリ",
+    "ソーシャルメディア", "パスワード", "画面", "キーボード",
+    "プリンター", "ファイル", "ダウンロード", "アップデート",
+    # extended nature
+    "森", "川", "湖", "砂漠", "大洋", "海岸", "地平線",
+    "谷", "野原", "草原", "ジャングル", "滝", "火山",
+    # extended adjectives
+    "快適", "苦い", "甘い", "酸っぱい", "辛い", "柔らかい",
+    "丸い", "四角い", "平ら", "深い", "好奇心旺盛", "真剣",
+    "退屈した", "緊張した", "誇りに思う", "恥ずかしい", "驚いた",
+    "心配した", "嫉妬した", "わくわくする", "リラックスできる",
+    "役に立つ", "役に立たない",
+    # extended verbs
+    "提案する", "受け入れる", "断る", "文句を言う",
+    "勧める", "描写する", "想像する", "希望する", "計画する",
+    "整理する", "比べる", "納得させる", "招待する",
+    "祝う", "おめでとうと言う", "謝る", "感謝する", "楽しむ",
+    "改善する", "続ける", "属する",
+    # extended adverbs
+    "確かに", "たぶん", "おそらく", "特に", "主に",
+    "普通は", "時々", "めったに", "ほとんど", "かなり",
+    "すでに", "突然",
+})
+
+# ── Chinese A2 (zh) ───────────────────────────────────────────────────────────
+_ZH_A2: frozenset[str] = frozenset({
+    # extended family & relationships
+    "祖父", "爷爷", "祖母", "奶奶", "孙子", "孙女", "叔叔", "阿姨",
+    "表兄", "表姐", "表弟", "表妹", "侄子", "侄女",
+    "公公", "婆婆", "女婿", "儿媳", "姐夫", "妹夫",
+    "男朋友", "女朋友", "同事", "邻居", "同学",
+    # extended workplace & school
+    "办公室", "会议", "老板", "员工", "生意",
+    "项目", "报告", "截止日期", "工资", "合同", "晋升",
+    "科目", "考试", "成绩", "职业", "文凭",
+    "讲座", "黑板", "笔记本",
+    # extended travel & transport
+    "护照", "预订", "行李箱", "行李", "海关",
+    "值机", "登机牌", "抵达", "出发", "站台",
+    "高速公路", "堵车", "停车场", "车站", "渡轮",
+    "游轮", "旅游", "住宿",
+    # extended home & furniture
+    "客厅", "饭厅", "走廊", "车库", "地下室", "阁楼",
+    "阳台", "书架", "抽屉", "台灯", "地毯", "窗帘",
+    "镜子", "冰箱", "微波炉", "洗衣机", "水龙头",
+    "插座", "楼梯",
+    # weather
+    "下雨", "下雪", "刮风", "暴风雨", "闪电", "雷声",
+    "大雾", "多云", "晴朗", "气温", "潮湿", "结冰",
+    "摄氏度", "天气预报",
+    # health & body
+    "头疼", "发烧", "感冒", "流感", "药店", "处方",
+    "药物", "药片", "手术", "急救", "救护车", "伤口",
+    "过敏", "预约",
+    # shopping & money
+    "收据", "折扣", "特价", "尺码", "试衣间", "品牌",
+    "钱包", "信用卡", "账户", "账单", "找零", "现金",
+    "购物袋", "标签", "退货",
+    # food & cooking
+    "食谱", "材料", "味道", "菜单", "菜肴", "甜点",
+    "开胃菜", "小费", "搅拌", "煮沸", "烘烤",
+    "油炸", "切", "准备", "品尝",
+    # entertainment & culture
+    "音乐会", "表演", "展览", "戏剧", "角色",
+    "情节", "场景", "门票", "节日", "画廊",
+    "文章", "章节", "小说", "诗",
+    # sport & hobbies
+    "队", "锦标赛", "比赛", "联赛", "比分", "进球",
+    "训练", "教练", "球迷",
+    "骑行", "徒步", "园艺", "摄影",
+    "绘画", "烹饪", "音乐", "舞蹈",
+    # communication & technology
+    "短信", "通话", "联系方式", "地址", "应用程序",
+    "社交媒体", "密码", "屏幕", "键盘",
+    "打印机", "文件", "下载", "更新",
+    # extended nature
+    "森林", "河流", "湖泊", "沙漠", "大海", "海岸线",
+    "地平线", "山谷", "农田", "草地", "丛林", "瀑布",
+    "火山",
+    # extended adjectives
+    "舒适", "苦", "甜", "酸", "辣", "软",
+    "圆的", "方的", "平的", "深的", "好奇", "严肃",
+    "紧张", "骄傲", "害羞", "惊讶",
+    "担心", "嫉妒", "令人兴奋", "令人放松", "有用",
+    "没用",
+    # extended verbs
+    "建议", "接受", "拒绝", "抱怨",
+    "推荐", "描述", "想象", "希望", "计划",
+    "组织", "比较", "说服", "邀请",
+    "庆祝", "祝贺", "道歉", "感谢", "享受",
+    "改善", "继续", "属于",
+    # extended adverbs
+    "肯定", "也许", "特别是", "主要",
+    "通常", "有时", "很少", "几乎", "相当",
+    "已经", "仍然", "突然",
+})
+
+# ── Arabic A2 (ar) ────────────────────────────────────────────────────────────
+# Unvocalised forms matching arabic.py's _strip_tashkeel() output.
+_AR_A2: frozenset[str] = frozenset({
+    # extended family & relationships
+    "جد", "جدة", "حفيد", "حفيدة", "عم", "عمة", "خال", "خالة",
+    "ابن العم", "ابنة العم", "ابن الخال", "ابنة الخال",
+    "ابن الأخ", "ابنة الأخ", "حماة", "حمو", "صهر", "كنة",
+    "خطيب", "خطيبة", "زميل", "جار", "جارة", "زميل دراسة",
+    # extended workplace & school
+    "مكتب", "اجتماع", "رئيس", "موظف", "شركة", "أعمال",
+    "مشروع", "تقرير", "موعد نهائي", "راتب", "عقد", "ترقية",
+    "مادة", "امتحان", "علامة", "واجب", "مهنة", "شهادة",
+    "محاضرة", "لوحة", "دفتر",
+    # extended travel & transport
+    "جواز سفر", "تذكرة", "حجز", "حقيبة سفر", "أمتعة", "جمارك",
+    "تسجيل وصول", "بطاقة صعود", "وصول", "مغادرة", "رصيف",
+    "طريق سريع", "ازدحام", "موقف سيارات", "محطة", "عبارة",
+    "رحلة بحرية", "جولة سياحية", "سياحة", "إقامة",
+    # extended home & furniture
+    "غرفة المعيشة", "غرفة الطعام", "ممر", "مرآب", "قبو",
+    "شرفة", "رف", "درج", "مصباح", "سجادة",
+    "ستارة", "مرآة", "ثلاجة", "ميكروويف", "غسالة",
+    "صنبور", "مقبس", "سلم",
+    # weather
+    "مطر", "ثلج", "ريح", "عاصفة", "برق", "رعد", "ضباب",
+    "غائم", "مشمس", "درجة الحرارة", "رطب", "صقيع",
+    "درجة", "توقعات الطقس",
+    # health & body
+    "صداع", "حمى", "نزلة برد", "إنفلونزا", "صيدلية", "وصفة طبية",
+    "دواء", "حبة", "عملية", "طوارئ", "سيارة إسعاف", "جرح",
+    "حساسية", "موعد",
+    # shopping & money
+    "إيصال", "خصم", "عرض", "مقاس", "غرفة تجريب", "علامة تجارية",
+    "محفظة", "بطاقة", "حساب", "فاتورة", "فكة", "نقود",
+    "حقيبة", "ملصق", "إرجاع",
+    # food & cooking
+    "وصفة", "مكون", "نكهة", "قائمة طعام", "طبق", "حلوى",
+    "مقبلات", "بقشيش", "خلط", "غلي", "طهي",
+    "قلي", "قطع", "تحضير", "تذوق",
+    # entertainment & culture
+    "حفلة موسيقية", "عرض", "معرض", "مسرحية", "شخصية",
+    "حبكة", "مشهد", "تذكرة", "مهرجان", "معرض فني",
+    "مقالة", "رواية", "قصيدة",
+    # sport & hobbies
+    "فريق", "بطولة", "مباراة", "دوري", "نتيجة", "هدف",
+    "تدريب", "مدرب", "مشجع", "رياضي",
+    "سباحة", "ركوب الدراجات", "مشي لمسافات طويلة", "بستنة",
+    "تصوير فوتوغرافي", "طبخ", "موسيقى", "رقص",
+    # communication & technology
+    "رسالة", "مكالمة", "جهة اتصال", "عنوان", "تطبيق",
+    "وسائل التواصل الاجتماعي", "كلمة مرور", "شاشة", "لوحة مفاتيح",
+    "طابعة", "ملف", "تنزيل", "تحديث",
+    # extended nature
+    "غابة", "نهر", "بحيرة", "صحراء", "محيط", "ساحل",
+    "أفق", "وادي", "حقل", "مرج", "غابة استوائية", "شلال",
+    "بركان",
+    # extended adjectives
+    "مريح", "مرّ", "حلو", "حامض", "لاذع", "ناعم",
+    "دائري", "مربع", "مسطح", "عميق", "فضولي", "جاد",
+    "ملول", "متوتر", "فخور", "محرج", "مندهش",
+    "قلق", "غيور", "مثير", "مريح", "مفيد",
+    "غير مفيد", "متاح",
+    # extended verbs
+    "اقترح", "تقبّل", "رفض", "اشتكى",
+    "أوصى", "وصف", "تخيل", "أمل", "خطط",
+    "نظّم", "قارن", "أقنع", "دعا", "احتفل",
+    "هنأ", "اعتذر", "شكر", "استمتع", "حسّن",
+    "استمر", "انتمى",
+    # extended adverbs
+    "بالتأكيد", "على الأرجح", "ربما", "خاصة",
+    "أساسا", "عادة", "أحيانا", "نادرا",
+    "تقريبا", "إلى حد ما", "فعلا", "لا يزال", "فجأة",
+})
+
+# ── Hebrew A2 (he) ────────────────────────────────────────────────────────────
+# Unvocalised forms matching hebrew.py's _strip_nikud() output.
+_HE_A2: frozenset[str] = frozenset({
+    # extended family & relationships
+    "סבא", "סבתא", "נכד", "נכדה", "דוד", "דודה", "בן דוד", "בת דוד",
+    "אחיין", "אחיינית", "חותן", "חותנת", "חתן", "כלה",
+    "גיס", "גיסה", "עמית", "שכן", "שכנה",
+    "חבר לכיתה",
+    # extended workplace & school
+    "משרד", "פגישה", "מנהל", "עובד", "עסק",
+    "פרויקט", "דוח", "מועד אחרון", "משכורת", "חוזה", "קידום",
+    "מקצוע", "בחינה", "ציון", "שיעורי בית", "קריירה", "תעודה",
+    "הרצאה", "לוח", "מחברת",
+    # extended travel & transport
+    "דרכון", "כרטיס", "הזמנה", "מזוודה", "מטען", "מכס",
+    "צ'ק-אין", "כרטיס עלייה", "הגעה", "יציאה", "רציף",
+    "כביש מהיר", "פקק", "חניה", "תחנה", "מעבורת",
+    "שייט", "טיול", "תיירות", "אכסניה",
+    # extended home & furniture
+    "סלון", "חדר אוכל", "מסדרון", "מוסך", "מרתף",
+    "עליית גג", "מרפסת", "מדף", "מגירה", "מנורה",
+    "שטיח", "וילון", "מראה", "מקרר", "מיקרוגל",
+    "מכונת כביסה", "ברז", "שקע", "מדרגות",
+    # weather
+    "גשם", "שלג", "רוח", "סופה", "ברק", "רעם", "ערפל",
+    "מעונן", "בהיר", "טמפרטורה", "לח", "כפור",
+    "מעלה", "תחזית מזג אוויר",
+    # health & body
+    "כאב ראש", "נזלת", "שפעת", "בית מרקחת", "מרשם",
+    "תרופה", "כדור", "ניתוח", "חירום", "אמבולנס", "פצע",
+    "אלרגיה", "תור",
+    # shopping & money
+    "קבלה", "הנחה", "מבצע", "מידה", "חדר הלבשה", "מותג",
+    "ארנק", "כרטיס", "חשבון", "חשבונית", "עודף", "מזומן",
+    "שקית", "תווית", "החזרה",
+    # food & cooking
+    "מתכון", "מרכיב", "טעם", "תפריט", "מנה", "קינוח",
+    "מנה ראשונה", "טיפ", "לערבב", "להרתיח", "לאפות",
+    "לטגן", "לחתוך", "להכין", "לטעום",
+    # entertainment & culture
+    "קונצרט", "מופע", "תערוכה", "מחזה", "דמות",
+    "עלילה", "סצנה", "כרטיס", "פסטיבל", "גלריה",
+    "מאמר", "פרק", "רומן", "שיר",
+    # sport & hobbies
+    "קבוצה", "אליפות", "משחק", "טורניר", "תוצאה", "שער",
+    "אימון", "מאמן", "אוהד", "ספורטאי",
+    "שחייה", "רכיבה על אופניים", "טיול רגלי", "גינון",
+    "צילום", "ציור", "בישול", "מוזיקה", "ריקוד",
+    # communication & technology
+    "הודעה", "שיחה", "איש קשר", "כתובת", "אפליקציה",
+    "רשת חברתית", "סיסמה", "מסך", "מקלדת",
+    "מדפסת", "קובץ", "להוריד", "לעדכן",
+    # extended nature
+    "יער", "נהר", "אגם", "מדבר", "אוקיינוס",
+    "אופק", "עמק", "ג'ונגל", "מפל", "הר געש",
+    # extended adjectives
+    "נוח", "מר", "מתוק", "חמוץ", "חריף", "רך",
+    "עגול", "מרובע", "שטוח", "עמוק", "סקרן", "רציני",
+    "משועמם", "עצבני", "גאה", "מביך", "מופתע",
+    "דואג", "מקנא", "מרגש", "מרגיע", "שימושי",
+    "חסר תועלת", "זמין",
+    # extended verbs
+    "הציע", "קיבל", "סירב", "התלונן",
+    "המליץ", "תיאר", "דמיין", "קיווה", "תכנן",
+    "ארגן", "השווה", "שכנע", "הזמין", "חגג",
+    "איחל", "התנצל", "הודה", "נהנה", "שיפר",
+    "המשיך", "השתייך",
+    # extended adverbs
+    "בהחלט", "כנראה", "אולי", "במיוחד",
+    "בעיקר", "בדרך כלל", "לפעמים", "לעיתים נדירות",
+    "כמעט", "למדי", "כבר", "עדיין", "לפתע",
+})
+
 # ── Public API ────────────────────────────────────────────────────────────────
 
 #: Map from language code to frozenset of A1 lemmas.
@@ -1080,4 +1807,18 @@ A1: dict[str, frozenset[str]] = {
     "zh": _ZH_A1,
     "ar": _AR_A1,
     "he": _HE_A1,
+}
+
+#: Map from language code to frozenset of A2 lemmas (excludes A1 items).
+A2: dict[str, frozenset[str]] = {
+    "es": _ES_A2,
+    "fr": _FR_A2,
+    "de": _DE_A2,
+    "it": _IT_A2,
+    "pt": _PT_A2,
+    "ru": _RU_A2,
+    "ja": _JA_A2,
+    "zh": _ZH_A2,
+    "ar": _AR_A2,
+    "he": _HE_A2,
 }

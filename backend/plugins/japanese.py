@@ -53,7 +53,7 @@ import logging
 from functools import cached_property
 from typing import Any
 
-from backend.plugins.cefr_vocab import A1 as _CEFR_A1
+from backend.plugins.cefr_vocab import A1 as _CEFR_A1, A2 as _CEFR_A2
 from backend.core.vocab_index import get_cefr_level as _get_cefr_level
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
@@ -61,6 +61,7 @@ from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 logger = logging.getLogger(__name__)
 
 _A1: frozenset[str] = _CEFR_A1.get("ja", frozenset())
+_A2: frozenset[str] = _CEFR_A2.get("ja", frozenset())
 
 # ── POS filter ────────────────────────────────────────────────────────────────
 
@@ -204,7 +205,7 @@ class JapanesePlugin:
                 data["reading"] = reading_hira
             elif "confidence_note" not in data:
                 data["confidence_note"] = _CONFIDENCE_NOTE_NO_READING
-            cefr = _get_cefr_level("ja", lemma) or ("A1" if lemma in _A1 else None)
+            cefr = _get_cefr_level("ja", lemma) or ("A1" if lemma in _A1 else "A2" if lemma in _A2 else None)
             if cefr:
                 data["cefr_level"] = cefr
 
@@ -224,6 +225,8 @@ class JapanesePlugin:
             return 0.60
         if tok.lemma_ in _A1:
             return 0.90  # known A1 word — suppress is_oov false-positive
+        if tok.lemma_ in _A2:
+            return 0.88  # known A2 word
         if reading is None:
             return 0.65
         return 0.80

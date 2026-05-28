@@ -40,11 +40,12 @@ from __future__ import annotations
 import re
 
 from backend.morphology import ar_adapter as _ar_adapter
-from backend.plugins.cefr_vocab import A1 as _CEFR_A1
+from backend.plugins.cefr_vocab import A1 as _CEFR_A1, A2 as _CEFR_A2
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
 
 _A1: frozenset[str] = _CEFR_A1.get("ar", frozenset())
+_A2: frozenset[str] = _CEFR_A2.get("ar", frozenset())
 
 # ── Sentence splitting ────────────────────────────────────────────────────────
 # Split on standard terminal marks plus:
@@ -209,6 +210,9 @@ class ArabicPlugin:
             if canonical in _A1:
                 lesson_data["cefr_level"] = "A1"
                 confidence: float | None = 0.70
+            elif canonical in _A2:
+                lesson_data["cefr_level"] = "A2"
+                confidence = 0.70
             else:
                 confidence = None
 

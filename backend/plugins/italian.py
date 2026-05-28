@@ -94,7 +94,7 @@ import logging
 from functools import cached_property
 from typing import Any
 
-from backend.plugins.cefr_vocab import A1 as _CEFR_A1
+from backend.plugins.cefr_vocab import A1 as _CEFR_A1, A2 as _CEFR_A2
 from backend.core.vocab_index import get_cefr_level as _get_cefr_level
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import (
@@ -106,6 +106,7 @@ from backend.schemas.parse import (
 logger = logging.getLogger(__name__)
 
 _A1 = _CEFR_A1.get("it", frozenset())
+_A2 = _CEFR_A2.get("it", frozenset())
 
 # ── POS filter ────────────────────────────────────────────────────────────────
 
@@ -387,7 +388,7 @@ class ItalianPlugin:
 
             confidence, confidence_note = self._vocab_confidence(tok, lemma)
             data: dict[str, Any] = {"lemma": lemma, "pos": tok.pos_}
-            cefr = _get_cefr_level("it", lemma) or ("A1" if lemma in _A1 else None)
+            cefr = _get_cefr_level("it", lemma) or ("A1" if lemma in _A1 else "A2" if lemma in _A2 else None)
             if cefr:
                 data["cefr_level"] = cefr
 
@@ -418,6 +419,8 @@ class ItalianPlugin:
             return 0.60, "proper noun — may not represent general vocabulary"
         if lemma in _A1 or _get_cefr_level("it", lemma):
             return 0.90, None  # known word — suppress is_oov false-positive
+        if lemma in _A2:
+            return 0.88, None  # known A2 word
         if tok.is_oov:
             return 0.50, "word not found in model vocabulary — form may be incorrect"
         return 0.85, None
