@@ -516,4 +516,67 @@ await (async () => {
   console.log('  ✓ practice CTA click closes concept dialog')
 })()
 
+// 28. Loading state has aria-busy="true" for AT announcement suppression
+{
+  const withConcept = {
+    ...VOCAB_LESSON,
+    fields: [{ label: 'Tense', value: 'present', concept_id: 'axis.tense' }],
+  }
+  const pane = makePane()
+  pane.show({ lesson: withConcept, sentenceText: '', language: 'es', depth: 'deep' })
+  globalThis.fetch = () => new Promise(() => {})
+  sr(pane).querySelector('.pane__concept-help').click()
+  const loadingEl = sr(pane).querySelector('.pane__concept-loading')
+  assert.ok(loadingEl !== null, '.pane__concept-loading element must be present during fetch')
+  assert.equal(loadingEl.getAttribute('aria-busy'), 'true',
+    'loading element must have aria-busy="true" to signal AT that content is pending')
+  globalThis.fetch = undefined
+  cleanUp()
+  console.log('  ✓ concept dialog loading state has aria-busy="true"')
+}
+
+// 29. Escape key closes concept dialog without closing the pane
+await (async () => {
+  const withConcept = {
+    ...VOCAB_LESSON,
+    fields: [{ label: 'Tense', value: 'present', concept_id: 'axis.tense' }],
+  }
+  const pane = makePane()
+  pane.show({ lesson: withConcept, sentenceText: '', language: 'es', depth: 'deep' })
+  globalThis.fetch = () => Promise.resolve({ ok: true, json: () => Promise.resolve({
+    concept_id: 'axis.tense', title: 'Tense', explanation: 'When.', related_concepts: [], practice_tags: [],
+  }) })
+  sr(pane).querySelector('.pane__concept-help').click()
+  await new Promise(r => setTimeout(r, 0))
+  const dialog = sr(pane).querySelector('#dp-concept-dialog')
+  assert.ok(!dialog.hidden, 'dialog must be open before Escape')
+  // linkedom doesn't expose KeyboardEvent — use Event + key property, which is all the handler inspects
+  sr(pane).dispatchEvent(Object.assign(new Event('keydown', { bubbles: true, cancelable: true }), { key: 'Escape' }))
+  assert.ok(dialog.hidden, 'concept dialog must close on Escape')
+  assert.ok(document.body.contains(pane), 'pane must remain in DOM — Escape must not close the pane when dialog was open')
+  globalThis.fetch = undefined
+  cleanUp()
+  console.log('  ✓ Escape closes concept dialog only, pane stays open')
+})()
+
+// 30. Error state paragraph has role="alert" for assertive AT announcement
+await (async () => {
+  const withConcept = {
+    ...VOCAB_LESSON,
+    fields: [{ label: 'Tense', value: 'present', concept_id: 'axis.tense' }],
+  }
+  const pane = makePane()
+  pane.show({ lesson: withConcept, sentenceText: '', language: 'es', depth: 'deep' })
+  globalThis.fetch = () => Promise.reject(new Error('offline'))
+  sr(pane).querySelector('.pane__concept-help').click()
+  await new Promise(r => setTimeout(r, 0))
+  const errorEl = sr(pane).querySelector('.pane__concept-error')
+  assert.ok(errorEl !== null, '.pane__concept-error must be rendered')
+  assert.equal(errorEl.getAttribute('role'), 'alert',
+    'error paragraph must have role="alert" so AT announces it assertively')
+  globalThis.fetch = undefined
+  cleanUp()
+  console.log('  ✓ concept dialog error state has role="alert"')
+})()
+
 console.log('\nAll detail pane render tests passed.')

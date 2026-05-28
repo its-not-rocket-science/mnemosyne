@@ -1666,7 +1666,7 @@ export class MnemosyneDetailPane extends HTMLElement {
       if (bodyEl)  bodyEl.innerHTML = this.#renderConceptDialogBody(concept)
     } catch {
       if (titleEl) titleEl.textContent = t('dp_concept_unavailable')
-      if (bodyEl)  bodyEl.innerHTML = `<p class="pane__concept-error">${esc(t('dp_concept_error'))}</p>`
+      if (bodyEl)  bodyEl.innerHTML = `<p class="pane__concept-error" role="alert">${esc(t('dp_concept_error'))}</p>`
     }
   }
 
