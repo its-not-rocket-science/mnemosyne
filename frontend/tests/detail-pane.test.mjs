@@ -423,4 +423,97 @@ const cleanUp = () => { document.body.innerHTML = '' }
   console.log('  ✓ label and value concept help buttons have distinct aria-labels')
 }
 
+// 24. Loading state shown synchronously in body aria-live region
+{
+  const withConcept = {
+    ...VOCAB_LESSON,
+    fields: [{ label: 'Tense', value: 'present', concept_id: 'axis.tense' }],
+  }
+  const pane = makePane()
+  pane.show({ lesson: withConcept, sentenceText: '', language: 'es', depth: 'deep' })
+  const origFetch = globalThis.fetch
+  globalThis.fetch = () => new Promise(() => {}) // never resolves — freeze to observe loading state
+  const helpBtn = sr(pane).querySelector('.pane__concept-help')
+  helpBtn.click()
+  const body = sr(pane).querySelector('#dp-concept-body')
+  assert.ok(body.textContent.trim().length > 0,
+    'body must show loading message synchronously while fetch is pending')
+  globalThis.fetch = origFetch
+  cleanUp()
+  console.log('  ✓ concept dialog body shows loading message synchronously')
+}
+
+// 25. Error state shown in body after fetch rejects
+await (async () => {
+  const withConcept = {
+    ...VOCAB_LESSON,
+    fields: [{ label: 'Tense', value: 'present', concept_id: 'axis.tense' }],
+  }
+  const pane = makePane()
+  pane.show({ lesson: withConcept, sentenceText: '', language: 'es', depth: 'deep' })
+  globalThis.fetch = () => Promise.reject(new Error('no server'))
+  sr(pane).querySelector('.pane__concept-help').click()
+  await new Promise(r => setTimeout(r, 0))
+  const body = sr(pane).querySelector('#dp-concept-body')
+  assert.ok(body.textContent.trim().length > 0,
+    'body must show error message after fetch failure')
+  const errorEl = sr(pane).querySelector('.pane__concept-error')
+  assert.ok(errorEl !== null, '.pane__concept-error element must be rendered in body')
+  globalThis.fetch = undefined
+  cleanUp()
+  console.log('  ✓ concept dialog body shows error message after fetch failure')
+})()
+
+// 26. Practice CTA rendered when concept has practice_tags
+await (async () => {
+  const CONCEPT_WITH_PRACTICE = {
+    concept_id: 'axis.tense', title: 'Tense',
+    short_definition: 'When an action occurs.',
+    learner_explanation: 'Tense marks time.',
+    examples: [], related_concepts: [],
+    practice_tags: ['tense_recognition'],
+  }
+  const withConcept = {
+    ...VOCAB_LESSON,
+    fields: [{ label: 'Tense', value: 'present', concept_id: 'axis.tense' }],
+  }
+  const pane = makePane()
+  pane.show({ lesson: withConcept, sentenceText: '', language: 'es', depth: 'learning' })
+  globalThis.fetch = () => Promise.resolve({ ok: true, json: () => Promise.resolve(CONCEPT_WITH_PRACTICE) })
+  sr(pane).querySelector('.pane__concept-help').click()
+  await new Promise(r => setTimeout(r, 0))
+  const cta = sr(pane).querySelector('.pane__concept-practice-cta')
+  assert.ok(cta !== null, 'practice CTA must render when concept has practice_tags')
+  globalThis.fetch = undefined
+  cleanUp()
+  console.log('  ✓ concept dialog renders practice CTA when concept has practice_tags')
+})()
+
+// 27. Practice CTA click closes concept dialog
+await (async () => {
+  const CONCEPT_WITH_PRACTICE = {
+    concept_id: 'axis.tense', title: 'Tense',
+    short_definition: 'When an action occurs.',
+    learner_explanation: 'Tense marks time.',
+    examples: [], related_concepts: [],
+    practice_tags: ['tense_recognition'],
+  }
+  const withConcept = {
+    ...VOCAB_LESSON,
+    fields: [{ label: 'Tense', value: 'present', concept_id: 'axis.tense' }],
+  }
+  const pane = makePane()
+  pane.show({ lesson: withConcept, sentenceText: 'hablar es fácil.', language: 'es', depth: 'learning' })
+  globalThis.fetch = () => Promise.resolve({ ok: true, json: () => Promise.resolve(CONCEPT_WITH_PRACTICE) })
+  sr(pane).querySelector('.pane__concept-help').click()
+  await new Promise(r => setTimeout(r, 0))
+  const dialog = sr(pane).querySelector('#dp-concept-dialog')
+  assert.ok(!dialog.hidden, 'dialog must be open before CTA click')
+  sr(pane).querySelector('.pane__concept-practice-cta').click()
+  assert.ok(dialog.hidden, 'dialog must close when practice CTA is clicked')
+  globalThis.fetch = undefined
+  cleanUp()
+  console.log('  ✓ practice CTA click closes concept dialog')
+})()
+
 console.log('\nAll detail pane render tests passed.')
