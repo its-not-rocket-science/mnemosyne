@@ -20,6 +20,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session, get_plugin_registry
 from backend.core.config import Settings, get_settings
+from backend.services.analytics import maybe_record_event
 from backend.core.limiter import limiter
 from backend.ingestion.validator import detect_dominant_script, validate_ingest_text
 from backend.models import CanonicalObjectRow
@@ -27,6 +28,7 @@ from backend.parsing.pipeline import PipelineResult, pipeline_cache_key, run_pip
 from backend.parsing.plugin_loader import PluginRegistry
 from backend.schemas.ingest import IngestRequest, IngestResponse
 from backend.schemas.parse import CandidateObject
+from backend.services.analytics import maybe_record_event
 from backend.services.parse_persistence import persist_ingest
 
 logger = logging.getLogger(__name__)
@@ -127,6 +129,12 @@ async def ingest_text(
 
     if persist_exc is not None:
         logger.warning("DB persistence failed for /ingest", exc_info=persist_exc)
+    else:
+        await maybe_record_event(
+            db, current_user, "text_ingested",
+            language=payload.language,
+            count=len(sentences),
+        )
 
     logger.info(
         "ingest lang=%s content_type=%s chars=%d sentences=%d objects=%d elapsed_ms=%.1f",

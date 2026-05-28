@@ -47,6 +47,7 @@ from sqlalchemy import or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session
+from backend.services.analytics import maybe_record_event
 from backend.difficulty.profiles import get_profile
 from backend.difficulty.scorer import (
     DifficultyScore,
@@ -281,6 +282,11 @@ async def recommend_text(
         except Exception:
             await db.rollback()
             logger.debug("content_gap signal insert failed — non-fatal")
+        await maybe_record_event(
+            db, current_user, "recommend_served",
+            language=language,
+            count=0,
+        )
         return RecommendTextResponse(
             sentences=[],
             target_difficulty_min=window[0],
@@ -445,6 +451,12 @@ async def recommend_text(
         "recommend_text lang=%s mastered=%d window=[%.2f,%.2f] returned=%d profile_scale=%.2f",
         language, total_mastered, window[0], window[1],
         len(result_sentences), profile.grammar_weight_scale,
+    )
+
+    await maybe_record_event(
+        db, current_user, "recommend_served",
+        language=language,
+        count=len(result_sentences),
     )
 
     return RecommendTextResponse(

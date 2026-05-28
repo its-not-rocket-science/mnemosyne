@@ -8,6 +8,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session
+from backend.services.analytics import maybe_record_event
 from backend.models import (
     CanonicalObjectRow,
     ReviewEventRow,
@@ -210,6 +211,11 @@ async def submit_review(
             next_review_at=tp_synced.next_review_at,
             now=now,
         )
+
+    await maybe_record_event(
+        db, current_user, "review_session",
+        language=canonical_obj.language if canonical_obj is not None else None,
+    )
 
     return ReviewResponse(
         object_id=payload.object_id,
