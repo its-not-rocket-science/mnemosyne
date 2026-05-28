@@ -8,6 +8,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_plugin_registry
 from backend.core.config import Settings, get_settings
+from backend.services.analytics import maybe_record_event
 from backend.core.database import get_session_factory
 from backend.core.limiter import limiter
 from backend.ingestion.validator import validate_ingest_text
@@ -127,6 +128,11 @@ async def _persist_parse_background(
     try:
         async with session_factory() as db:
             await _persist_parse(db, payload, candidate_results, sentences, uuid_to_candidate, user_id)
+            await maybe_record_event(
+                db, user_id, "text_ingested",
+                language=payload.language,
+                count=len(sentences),
+            )
     except Exception:
         logger.warning("Background DB persist failed for /parse", exc_info=True)
         return  # Don't attempt enrichment if persist itself failed
