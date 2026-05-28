@@ -333,7 +333,7 @@ class LatinPlugin:
             cultural_references="none",
             etymology="none",
             formality_register="none",
-            grammar_nuance="stub",
+            grammar_nuance="none",
             pronunciation_tts="stub",
             transliteration="none",
             proverb_tradition="none",
@@ -425,8 +425,9 @@ class LatinPlugin:
                 ))
 
             elif entry is not None and not is_lemma and entry["pos"] == "verb":
-                # Inflection-resolved verb: emit as conjugation; supplement with
-                # suffix-based morphology when the morph index has no entry.
+                # Inflection-resolved verb: only emit conjugation if we have
+                # tense+mood (C9 contract).  Suffix rules cover imperfect/future/
+                # infinitives; forms without a match fall back to vocabulary.
                 verb_morph = _extract_latin_verb_morph(key)
                 lesson_data = {
                     "citation_form": entry["citation"],
@@ -438,19 +439,25 @@ class LatinPlugin:
                     lesson_data.update(verb_morph)
                     lesson_data["confidence_note"] = _SUFFIX_NOTE
                     morph_tag = ":".join(f"{k}={v}" for k, v in sorted(verb_morph.items()))
-                    confidence = 0.55
+                    candidates.append(CandidateObject(
+                        canonical_form=f"{key}:{morph_tag}",
+                        surface_form=token,
+                        type="conjugation",
+                        label=token,
+                        lesson_data=lesson_data,
+                        confidence=0.55,
+                    ))
                 else:
+                    lesson_data["lemma"]           = entry["citation"]
                     lesson_data["confidence_note"] = _DICT_ONLY_NOTE
-                    morph_tag = ""
-                    confidence = 0.50
-                candidates.append(CandidateObject(
-                    canonical_form=f"{key}:{morph_tag}" if morph_tag else key,
-                    surface_form=token,
-                    type="conjugation",
-                    label=token,
-                    lesson_data=lesson_data,
-                    confidence=confidence,
-                ))
+                    candidates.append(CandidateObject(
+                        canonical_form=key,
+                        surface_form=token,
+                        type="vocabulary",
+                        label=token,
+                        lesson_data=lesson_data,
+                        confidence=0.50,
+                    ))
 
             elif entry is not None:
                 # Inflection-resolved non-verb (noun/adj/etc.)
