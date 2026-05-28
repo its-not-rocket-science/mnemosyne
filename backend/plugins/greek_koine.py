@@ -227,6 +227,9 @@ def _lookup(key: str) -> dict[str, str] | None:
 _MORPH_FIELDS = ("case", "number", "gender", "tense", "mood", "voice",
                  "person", "aspect", "verbform")
 
+_VERB_POS    = frozenset({"verb", "aux"})
+_GRAMMAR_POS = frozenset({"prep", "conj", "particle", "det"})
+
 # ── Unknown-token note ────────────────────────────────────────────────────────
 
 _UNKNOWN_NOTE = (
@@ -254,15 +257,17 @@ class KoineGreekPlugin:
         script_family="greek",
         tokenization_mode="whitespace",
         morphology_depth="shallow",
-        lesson_modes_supported=["vocabulary", "dictionary"],
+        lesson_modes_supported=["morphology", "vocabulary", "dictionary"],
         analysis_depth="morphology_light",
         segmentation_quality="medium",
         tokenization_quality="medium",
-        morphology_quality="low",
+        morphology_quality="medium",
         syntax_support=False,
         idiom_detection=False,
         tts_lang_tag="el",
         transliteration_scheme="sbl-simplified",
+        tense_pool=["present", "imperfect", "aorist", "perfect", "pluperfect", "future"],
+        mood_pool=["indicative", "subjunctive", "optative", "imperative", "infinitive", "participle"],
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="none",
@@ -270,14 +275,15 @@ class KoineGreekPlugin:
             cultural_references="none",
             etymology="none",
             formality_register="none",
-            grammar_nuance="none",
+            grammar_nuance="stub",
             pronunciation_tts="stub",
             transliteration="partial",
             proverb_tradition="none",
             classical_or_scriptural_allusion="none",
             notes=(
-                "Morphological annotations (case, tense, voice, mood, person, "
-                "number, gender) available for ~27 000 forms from PROIEL and MorphGNT. "
+                "Verb forms annotated as conjugation type from PROIEL and MorphGNT "
+                "(~13 800 verb forms, covers most of the Greek NT). Prepositions, "
+                "conjunctions, and particles emitted as grammar type. "
                 "Forms outside these corpora fall back to dictionary mode."
             ),
         ),
@@ -305,17 +311,41 @@ class KoineGreekPlugin:
                 continue
             seen.add(key)
 
-            romanized = transliterate(token)
-            entry    = _lookup(key)
+            romanized   = transliterate(token)
+            entry       = _lookup(key)
             morph_entry = _morph().get(key)
+            morph_pos   = morph_entry.get("pos") if morph_entry else None
 
-            if entry is not None:
-                lesson_data: dict[str, Any] = {
+            if morph_pos in _VERB_POS:
+                lesson_data: dict[str, Any] = {"surface_form": token, "romanized": romanized}
+                if entry:
+                    lesson_data["citation_form"] = entry["citation"]
+                    lesson_data["gloss"]         = entry["gloss"]
+                    lesson_data["grammar_note"]  = entry.get("grammar_note", "")
+                for field in _MORPH_FIELDS:
+                    if field in morph_entry:
+                        lesson_data[field] = morph_entry[field]
+                morph_tag = ":".join(
+                    f"{f}={morph_entry[f]}" for f in sorted(_MORPH_FIELDS) if f in morph_entry
+                )
+                candidates.append(CandidateObject(
+                    canonical_form=f"{key}:{morph_tag}" if morph_tag else key,
+                    surface_form=token,
+                    type="conjugation",
+                    label=token,
+                    lesson_data=lesson_data,
+                    confidence=0.80,
+                ))
+
+            elif entry is not None:
+                pos      = entry["pos"]
+                obj_type = "grammar" if pos in _GRAMMAR_POS else "vocabulary"
+                lesson_data = {
                     "lemma":         entry["citation"],
                     "citation_form": entry["citation"],
                     "gloss":         entry["gloss"],
                     "grammar_note":  entry.get("grammar_note", ""),
-                    "pos":           entry["pos"].upper(),
+                    "pos":           pos.upper(),
                     "romanized":     romanized,
                 }
                 if morph_entry:
@@ -326,28 +356,46 @@ class KoineGreekPlugin:
                 else:
                     lesson_data["confidence_note"] = _DICT_ONLY_NOTE
                     confidence = 0.70
-            else:
+                candidates.append(CandidateObject(
+                    canonical_form=key,
+                    surface_form=token,
+                    type=obj_type,
+                    label=token,
+                    lesson_data=lesson_data,
+                    confidence=confidence,
+                ))
+
+            elif morph_entry:
                 lesson_data = {
                     "lemma":           key,
                     "confidence_note": _UNKNOWN_NOTE,
                     "romanized":       romanized,
                 }
-                if morph_entry:
-                    for field in _MORPH_FIELDS:
-                        if field in morph_entry:
-                            lesson_data[field] = morph_entry[field]
-                    confidence = 0.50
-                else:
-                    confidence = None
+                for field in _MORPH_FIELDS:
+                    if field in morph_entry:
+                        lesson_data[field] = morph_entry[field]
+                candidates.append(CandidateObject(
+                    canonical_form=key,
+                    surface_form=token,
+                    type="vocabulary",
+                    label=token,
+                    lesson_data=lesson_data,
+                    confidence=0.50,
+                ))
 
-            candidates.append(CandidateObject(
-                canonical_form=key,
-                surface_form=token,
-                type="vocabulary",
-                label=token,
-                lesson_data=lesson_data,
-                confidence=confidence,
-            ))
+            else:
+                candidates.append(CandidateObject(
+                    canonical_form=key,
+                    surface_form=token,
+                    type="vocabulary",
+                    label=token,
+                    lesson_data={
+                        "lemma":           key,
+                        "confidence_note": _UNKNOWN_NOTE,
+                        "romanized":       romanized,
+                    },
+                    confidence=None,
+                ))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
