@@ -687,3 +687,107 @@ extraction methods incrementally — each new method is independently testable.
 4. Update `test_plugin.py` and `test_language_capabilities.py` stub-specific
    assertions to reflect the new capabilities.
 5. Create a dedicated `test_{lang}_spacy.py` test file with a skip guard.
+
+---
+
+### Classical / Dead Languages (Latin, Koine Greek) — Offline Morph-Index Pattern
+
+`backend/plugins/latin.py` and `backend/plugins/greek_koine.py` demonstrate the pattern
+for dead languages where no live NLP model exists but offline treebank annotations are
+available.
+
+**Key design decisions:**
+
+- `lesson_modes_supported=["morphology", "vocabulary", "dictionary"]` — all three modes
+  enabled because the plugin emits `conjugation`, `grammar`, and `vocabulary` objects.
+- `morphology_quality="low"` (Latin, ~3 400 forms from UD ITTB dev split) or `"medium"`
+  (Koine Greek, ~27 000 forms from UD PROIEL + full MorphGNT New Testament).
+- `grammar_nuance="none"` — grammar detection is binary (is it a preposition / conjunction
+  / particle?) rather than context-sensitive nuance analysis.
+
+**Lookup order per token:**
+
+```
+curated dict  →  Kaikki/Wiktionary lemma  →  Kaikki inflection table  →  morph index  →  suffix rules (Latin only)  →  unknown
+```
+
+**Conjugation type rules:**
+
+Emit `type="conjugation"` **only when tense and mood are both known** (contract C9).
+Sources for tense/mood, in priority order:
+1. Morph index hit (`la_morph.json` / `grc_morph.json`) — confidence 0.80.
+2. Latin suffix rules (imperfect: `-abat`/`-ebat`…; future: `-abit`/`-ebit`…;
+   infinitive: `-are`/`-ere`/`-ire`) — confidence 0.55.
+3. No tense/mood source → emit `type="vocabulary"` instead (honest degradation).
+
+**Grammar type rules:**
+
+Emit `type="grammar"` for curated entries whose `pos` is in
+`frozenset({"prep", "conj", "particle", "det"})`.
+
+**Canonical form for morph-indexed conjugations:**
+
+```
+{surface_key}:{field1}={val1}:{field2}={val2}:...
+```
+
+Fields sorted alphabetically; only fields present in the morph entry are included.
+
+Example: `amabat:aspect=imperfective:mood=indicative:number=singular:person=third:tense=imperfect`
+
+**Diacritic normalisation:**
+
+Both plugins strip all diacritics (accents, breathings, iota subscript, diaeresis)
+and lowercase before lookup.  Normalised keys are used for all dict and morph index
+lookups.  The `romanized` field in `lesson_data` is computed from the normalised form
+via the plugin's transliteration function.
+
+**Offline data pipeline:**
+
+Re-build morph indices with `scripts/ingest_classical_morph.py` after obtaining larger
+treebank splits (the current indices use dev splits only; full treebanks give ~5× more
+Latin coverage and ~3× more Greek coverage).  Lexicon JSON files committed at
+`data/lexicons/{la,grc}_{lemmas,inflections,morph}.json`.
+
+---
+
+### Suffix-Rule Morphology-Light Plugins (Hindi, Turkish, Finnish)
+
+`backend/plugins/hindi.py`, `backend/plugins/turkish.py`, and
+`backend/plugins/finnish.py` demonstrate the suffix-rule pattern for languages
+where a spaCy model is not available or not yet integrated.
+
+**Key design decisions:**
+
+- `analysis_depth="morphology_light"`, `morphology_depth="shallow"`,
+  `morphology_quality="low"` — honest about partial coverage.
+- `lesson_modes_supported=["morphology", "vocabulary"]` — conjugation and
+  case/nominal objects emitted from suffix rules.
+- `grammar_nuance="none"` — no context-sensitive grammar analysis.
+
+**Hindi (`hi`) specifics:**
+- Devanagari word regex for tokenisation (not whitespace — script has no spaces between words in some contexts).
+- IAST romanisation via a Unicode codepoint mapping.
+- Verb suffix rules: aspect (`raha/rahi/rahe` → progressive), perfective (`a/i/e` endings), future (`ga/gi/ge`).
+- Noun/postposition tagging: `_POSTPOSITIONS` table for bigram postpositions (`के लिए`, `की ओर`, etc.).
+- `tts_lang_tag="hi-IN"`, `transliteration_scheme="iast"`.
+
+**Turkish (`tr`) specifics:**
+- Whitespace tokenisation; vowel-harmony-aware suffix matching.
+- Nominal: `-lar`/`-ler` plural; `-da`/`-de`/`-ta`/`-te` locative; `-dan`/`-den`/`-tan`/`-ten` ablative; `-a`/`-e` dative; `-ı`/`-i`/`-u`/`-ü` accusative.
+- Verbal: `-yor` present progressive; `-di`/`-dı`/`-du`/`-dü`/`-ti`/`-tı`/`-tu`/`-tü` definite past; `-ecek`/`-acak` future; `-meli`/`-malı` necessitative.
+- Short suffixes (`-ı`, `-a`, `-da`) deliberately excluded to limit false positives.
+- `transliteration_scheme="latin"`.
+
+**Finnish (`fi`) specifics:**
+- 15-case suffix table (inessive through comitative); plural detection (`-t` nominative plural).
+- Vowel harmony variants for each case.
+- Conjugation: present (`-n`/`-t`/`-mme`/`-tte`/`-vat`/`-vät`), past (`-i-` stem + person suffixes), conditional (`-isi-`), imperative (`-kaa`/`-kää`).
+- `transliteration_scheme="latin"`.
+
+**Testing pattern (no model required):**
+
+All three plugins use word injection directly into `analyze_sentence()` — no spaCy
+model load needed.  Tests live in `test_hindi_turkish_finnish_plugins.py` and follow
+the same `module`-scoped fixture pattern as spaCy tests, but with no skip guard since
+the plugins have no external dependency.

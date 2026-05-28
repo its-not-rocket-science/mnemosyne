@@ -181,8 +181,8 @@ LanguageCapabilities(
 
 The lesson builder dispatches based on the richest supported mode:
 - `"morphology"` — full conjugation/agreement/tense drills (Spanish, French, German, Russian, Japanese, Portuguese, Italian)
-- `"vocabulary"` — lemma + POS only; no morphological drills (English stub)
-- `"dictionary"` — word + gloss only (Arabic, Hebrew, Chinese, Latin, Koine Greek)
+- `"vocabulary"` — lemma + POS only; no morphological drills (English stub, Hindi, Turkish, Finnish, Korean)
+- `"dictionary"` — word + gloss only (Arabic, Hebrew, Chinese); Latin and Koine Greek use all three modes (`["morphology", "vocabulary", "dictionary"]`) with conjugation and grammar objects emitted from offline morph indices
 
 The difficulty scorer's `score_sentence()` accepts an optional `word_count_hint: int` for languages where `text.split()` is meaningless (CJK, Thai). Pass this from plugin-derived token counts when available.
 

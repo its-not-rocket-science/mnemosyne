@@ -1,6 +1,6 @@
 # Beta Gap Report — Mnemosyne
 
-*Originally written 2026-04-15. Updated 2026-05-15 to reflect current `main` branch state.*
+*Originally written 2026-04-15. Updated 2026-05-28 to reflect current `main` branch state.*
 
 All private alpha and public beta blockers are resolved. All vision items V1–V5 are
 implemented. The system is at or beyond the original 12-week plan. This document is
@@ -12,7 +12,7 @@ tier.
 ## What is solid (do not second-guess)
 
 - **Core loop.** Parse → lesson → review → recommend is complete, tested, and persistent.
-  2 807 tests collected; 2 766 passing (14 pre-existing failures unrelated to core loop; 27 skipped).
+  4 194 passing, 48 skipped, 0 failures (as of 2026-05-28).
 - **Practice activities.** Detail pane exposes scored retell, typed drill, comprehension, and
   mini-quiz practice panels. Every practice check dispatches `pane-practice-check` → `submitReview(objectId, quality)` → FSRS `/review` endpoint, so practice directly updates spaced-repetition state. Session score and next-interval feedback shown inline.
 - **FSRS-5.** Pure Python, deterministic, no external dependencies. Per-user calibration
@@ -20,9 +20,10 @@ tier.
   `UserFsrsParamsRow` table; `GET/PATCH /users/me/fsrs-params`.
 - **Canonical knowledge layer.** UUID-v5 PKs; the same word in any text always maps to
   the same DB row. Surface forms accumulate. Object relations stored.
-- **Plugin architecture.** Structural typing, no registration step. 14 production plugins:
+- **Plugin architecture.** Structural typing, no registration step. 17 production plugins:
   8 full morphological (es/fr/de/ru/ja/pt/it/**en**) + 5 dictionary-mode
-  (ar/he/zh/la/grc) + 1 morphology-light (ko, kiwipiepy). Drop a file in `backend/plugins/` and the server picks it up.
+  (ar/he/zh/la/grc) + 4 morphology-light (ko/hi/tr/fi — suffix-rule, no model required).
+  Drop a file in `backend/plugins/` and the server picks it up.
 - **Accessibility baseline.** Skip link, focus trap, ARIA live regions, reduced motion,
   44 px targets, roving tabindex, `role="list"` on pill lists. Static WCAG 2.1 AA code
   audit complete — 8 issues found and fixed. See `WCAG_AUDIT.md`.
@@ -34,7 +35,16 @@ tier.
 - **Full multilingual stack.** Spanish, French, German, Russian, Japanese, Portuguese,
   Italian: full spaCy morphological pipelines. Arabic, Hebrew, Chinese (jieba + pypinyin),
   Latin, Koine Greek: dictionary/vocabulary mode with honest capability declarations.
-  14 registered language codes.
+  Hindi, Turkish, Finnish: suffix-rule morphology-light plugins (Devanagari/Latin/Latin
+  script; IAST/Latin/Latin romanisation; no external model required). Korean: morphology-
+  light via kiwipiepy. 17 registered language codes.
+- **Classical morphology.** Latin and Koine Greek deepened beyond dictionary mode:
+  ~3 400 Latin forms (UD ITTB) and ~27 000 Greek forms (UD PROIEL + MorphGNT) provide
+  conjugation type + tense/mood/person in lesson_data. Suffix rules fill gaps for Latin
+  imperfect/future/infinitive. `morphology_quality="low"` (Latin) / `"medium"` (Greek).
+- **Offline data pipeline.** `scripts/harvest_language_data.py` covers all 17 languages:
+  FrequencyWords (en/es/fr/de/it/pt/ru/ar/he/hi/tr/fi), JLPT (ja), HSK (zh), inline
+  curated vocab A1–B1 (la/grc). Grammar rules A1–C2 for all 17 languages.
 - **RTL support.** `dir`/`lang` applied throughout modal and sentence cards; logical CSS
   properties; `<bdi>` isolation in drill feedback; 43 non-Latin DB round-trip tests.
 - **Operational baseline.** Health + readiness probes (degraded-plugin reporting).
@@ -102,8 +112,8 @@ tier.
 | V3. Real dictionary integration | ✓ done (Wiktionary) |
 | V4. FSRS parameter fitting | ✓ done (per-user calibration via `ReviewEventRow`) |
 | V5. PWA and offline mode | ✓ done |
-| V6. 10+ production-quality language plugins | ~ partial — 8 full morphological (es/fr/de/ru/ja/pt/it/en), 5 dictionary-mode (ar/he/zh/la/grc), 1 morphology-light (ko) = 14 total. Hindi, Turkish, Finnish remain open. |
-| V7. Dead and historic language annotation mode | ~ partial — Latin, Arabic, Koine Greek implemented in dictionary mode with honest capability declarations. Classical Arabic lexicon and Perseus-backed Latin morphology remain open. |
+| V6. 10+ production-quality language plugins | ✓ done — 8 full morphological (es/fr/de/ru/ja/pt/it/en) + 5 dictionary-mode (ar/he/zh/la/grc) + 4 morphology-light (ko/hi/tr/fi) = 17 total. |
+| V7. Dead and historic language annotation mode | ~ partial — Latin and Koine Greek deepened to morphology-light with UD treebank annotations (ITTB, PROIEL + MorphGNT); conjugation type + tense/mood/person emitted. Perseus/Logeion API integration for full classical lexicon coverage remains open. |
 
 ---
 
@@ -115,11 +125,11 @@ These are the only items without a completed implementation:
 issues were fixed. A human keyboard-only walkthrough and NVDA/VoiceOver smoke test
 have not been run. See `WCAG_AUDIT.md` for the testing checklist.
 
-**Full morphological plugins for additional languages** — Hindi, Turkish,
-Finnish are natural next targets given available spaCy models. (Korean is done;
-see morphology-light `ko` plugin using kiwipiepy.) Each requires NLP research,
-canonical-form convention decisions (per `PLUGIN_AUTHOR_GUIDE.md`), plugin
-implementation, and tests. This is the main remaining work toward the V6 target.
+**Full spaCy-model morphological plugins for additional languages** — Hindi,
+Turkish, and Finnish now have suffix-rule morphology-light plugins (no model
+required); full spaCy-model-backed versions with richer agreement/case analysis
+remain open. Each would require installing a suitable model and expanding the
+suffix logic into full morphological extraction.
 
 **Portuguese (`pt`) — done**: `pt_core_news_sm`; vocabulary, conjugation, agreement,
 grammar patterns (ser/estar copula, ter_perfect, ir_near_future, estar_progressive),
@@ -134,10 +144,12 @@ conditional, reflexive). avere/essere auxiliary distinction documented.
 60 tests in `test_italian_spacy.py`.
 Install: `python -m spacy download it_core_news_sm`.
 
-**Classical-text lexicon depth** — Latin and Koine Greek are in dictionary mode with
-small curated lexicons (~100–200 entries). Perseus Digital Library integration or a
-comparable classical lexicon would substantially improve coverage. Policy decision on
-what "production quality" means for a dead language is still needed.
+**Classical-text lexicon depth** — Latin and Koine Greek now have ~3 400 and ~27 000
+morphologically-annotated forms respectively (UD ITTB + PROIEL/MorphGNT), plus curated
+A1–B1 vocabularies in the harvest pipeline. Perseus Digital Library / Logeion API
+integration would further improve attested-form coverage and gloss quality for forms
+outside these corpora. The offline script infrastructure (harvest_language_data.py) is
+ready to ingest additional lexicon sources.
 
 **`source_progression` reading continuity** — **done**: `GET /reading/{id}` and
 `PATCH /reading/{id}` expose the per-(user, document) reading position.
