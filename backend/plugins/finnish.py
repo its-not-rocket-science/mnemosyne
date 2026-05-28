@@ -7,36 +7,35 @@ What this plugin does reliably
   - Sentence splitting on standard terminal punctuation and newlines.
   - Whitespace tokenisation (Finnish is whitespace-delimited).
   - Vowel harmony classification: back (a/o/u) vs. front (ä/ö/y).
-    Finnish suffixes undergo vowel harmony; this is used to annotate tokens.
-  - Suffix-based morphological hints for:
-    • Nominal cases (15 cases): nominative (base), genitive -n, accusative -t/-n,
-      partitive -a/-ä/-ta/-tä, inessive -ssa/-ssä, elative -sta/-stä,
-      illative -Vn/-hVn, adessive -lla/-llä, ablative -lta/-ltä,
-      allative -lle, essive -na/-nä, translative -ksi,
-      abessive -tta/-ttä, instructive (plural) -n, comitative -ne.
-    • Plural: -t (nominative), -iden/-itten (genitive), -ita/-itä (partitive).
-    • Verb forms: infinitive -a/-ä/-ta/-tä/-da/-dä,
-                  present 1sg -n, 2sg -t, 3sg -V, 1pl -mme, 2pl -tte, 3pl -vat/-vät,
-                  imperative 2sg (stem), 3sg -koon/-köön,
-                  past 1sg -in, 2sg -it, 3sg -i,
-                  conditional -isi-, potential -ne-,
-                  passive -taan/-tään, passive past -ttiin.
-    • Common negative verb forms: e- stem + person ending.
+    Finnish suffixes undergo vowel harmony; annotated on all tokens.
+  - Suffix-based morphological hints for nominal cases (15 cases):
+    nominative (base form), genitive -n, accusative -t/-n,
+    partitive -a/-ä/-ta/-tä, inessive -ssa/-ssä, elative -sta/-stä,
+    illative (recognised by -Vn pattern), adessive -lla/-llä,
+    ablative -lta/-ltä, allative -lle, essive -na/-nä,
+    translative -ksi, abessive -tta/-ttä,
+    instructive (plural) -in, comitative -ne.
+  - Plural markers: -t (nominative), -iden/-itten (genitive),
+    -ita/-itä (partitive plural).
+  - Verb forms with conjugation-type emission:
+    Infinitives (-a/-ä/-ta/-tä/-da/-dä), passive (-taan/-tään/-daan/-dään,
+    past passive -ttiin/-tiin), third plural present (-vat/-vät),
+    conditional (-isi-), first/second plural present (-mme/-tte),
+    imperative 3sg (-koon/-köön), past 1sg/2sg (-in/-it).
   - Common Finnish function words and particles identified.
 
 Known limitations
 ─────────────────
-  • Finnish morphology is highly agglutinative; this plugin detects only the
-    outermost suffix layer.  Inner layers (possessive suffixes, clitic
-    particles -ko/-kö, -kin, -kaan/-kään, -pa/-pä, -han/-hän) are not parsed.
+  • Finnish morphology is highly agglutinative; only the outermost suffix
+    layer is detected. Inner layers (possessive suffixes -ni/-si/-nsa/-nsä,
+    clitic particles -ko/-kö, -kin, -kaan/-kään, -pa/-pä, -han/-hän) are
+    not parsed.
   • Consonant gradation (k→∅, p→v, t→d etc.) means many stems cannot be
     recovered without a morphological lexicon; lemmatisation is NOT attempted.
-  • Ambiguous suffixes (e.g. -ssa = inessive, but also 3sg verb form for some
-    verbs) may be mislabelled.
-  • No trained NLP model (fi_core_news_sm or equivalent) available in this
-    deployment.
-  • Analysis quality: morphology_light — morphological fields are hints, not
-    verified analysis.
+  • Ambiguous suffixes (e.g. -ssa = inessive for nouns but also some verb forms)
+    may be mislabelled.
+  • No trained NLP model (fi_core_news_sm or equivalent) available.
+  • Canonical form for conjugations uses surface form + morphology tag.
 """
 from __future__ import annotations
 
@@ -50,7 +49,6 @@ _SENTENCE_RE = re.compile(r"[^.!?\n]+[.!?\n]?")
 
 # ── Tokenisation ──────────────────────────────────────────────────────────────
 # Finnish letters: standard ASCII + ä (U+00E4), ö (U+00F6), å (U+00E5, rare)
-# Uppercase variants included.
 _WORD_RE = re.compile(r"[A-Za-zÄäÖöÅå]+")
 
 # ── Vowel harmony ─────────────────────────────────────────────────────────────
@@ -78,24 +76,26 @@ _FUNCTION_WORDS: frozenset[str] = frozenset({
     "yksi", "kaksi", "kolme", "neljä",
     "tämä", "tuo", "nämä", "ne", "kaikki", "jokin", "joku",
     "mikä", "kuka", "missä", "milloin", "miten", "miksi",
-    "eli", "tai", "joko",
+    "eli", "joko", "nyt", "sitten", "jo", "vielä",
+    "hyvin", "hyvin", "paljon", "vähän",
 })
 
 # ── Morphological suffix rules (longest match first) ─────────────────────────
 # (suffix, feature_dict)
+# Verb forms → emitted as "conjugation"; nominal forms → "vocabulary".
 _SUFFIX_RULES: list[tuple[str, dict]] = [
     # ── Verb forms ──────────────────────────────────────────────────────────
-    # Passive forms
+    # Passive forms (longer before shorter)
     ("ttiin",   {"voice": "passive", "tense": "past",    "pos": "verb"}),
     ("tiin",    {"voice": "passive", "tense": "past",    "pos": "verb"}),
     ("taan",    {"voice": "passive", "tense": "present", "pos": "verb"}),
     ("tään",    {"voice": "passive", "tense": "present", "pos": "verb"}),
     ("daan",    {"voice": "passive", "tense": "present", "pos": "verb"}),
     ("dään",    {"voice": "passive", "tense": "present", "pos": "verb"}),
-    # Third plural present
+    # Third plural present -vat/-vät
     ("vat",     {"person": "third",  "number": "plural", "tense": "present", "pos": "verb"}),
     ("vät",     {"person": "third",  "number": "plural", "tense": "present", "pos": "verb"}),
-    # Conditional stem -isi-
+    # Conditional -isi- (with person endings)
     ("isimme",  {"mood": "conditional", "person": "first",  "number": "plural",   "pos": "verb"}),
     ("isitte",  {"mood": "conditional", "person": "second", "number": "plural",   "pos": "verb"}),
     ("isivat",  {"mood": "conditional", "person": "third",  "number": "plural",   "pos": "verb"}),
@@ -105,16 +105,13 @@ _SUFFIX_RULES: list[tuple[str, dict]] = [
     # First/second plural present
     ("mme",     {"person": "first",  "number": "plural",   "tense": "present", "pos": "verb"}),
     ("tte",     {"person": "second", "number": "plural",   "tense": "present", "pos": "verb"}),
-    # Imperative 3sg
+    # Imperative 3sg -koon/-köön
     ("koon",    {"mood": "imperative", "person": "third",  "number": "singular", "pos": "verb"}),
     ("köön",    {"mood": "imperative", "person": "third",  "number": "singular", "pos": "verb"}),
-    # Past 1sg/2sg
+    # Past 1sg -in, 2sg -it (short; placed after longer rules)
     ("in",      {"person": "first",  "number": "singular", "tense": "past",    "pos": "verb"}),
     ("it",      {"person": "second", "number": "singular", "tense": "past",    "pos": "verb"}),
-    # Present 1sg -n, 2sg -t
-    # (short; match only after longer rules pass)
     # ── Nominal plural ───────────────────────────────────────────────────────
-    ("iden",    {"number": "plural", "case": "genitive",  "pos": "noun"}),
     ("itten",   {"number": "plural", "case": "genitive",  "pos": "noun"}),
     ("iden",    {"number": "plural", "case": "genitive",  "pos": "noun"}),
     ("ita",     {"number": "plural", "case": "partitive", "pos": "noun"}),
@@ -136,7 +133,7 @@ _SUFFIX_RULES: list[tuple[str, dict]] = [
     ("nä",      {"case": "essive",      "pos": "noun_or_adjective"}),
     ("ta",      {"case": "partitive",   "pos": "noun_or_adjective"}),
     ("tä",      {"case": "partitive",   "pos": "noun_or_adjective"}),
-    # Partitive -a/-ä (short; match last)
+    # Partitive -a/-ä (short; placed after longer -ta/-tä to avoid shadowing)
     ("a",       {"case": "partitive_or_infinitive", "pos": "noun_or_verb"}),
     ("ä",       {"case": "partitive_or_infinitive", "pos": "noun_or_verb"}),
     # Genitive/accusative -n
@@ -148,8 +145,11 @@ _SUFFIX_RULES: list[tuple[str, dict]] = [
 _CONFIDENCE_NOTE = (
     "Finnish morphology-light: outermost suffix analysis only. "
     "Consonant gradation and inner suffix layers (possessive, clitics) not parsed. "
-    "Lemmatisation not attempted. No trained NLP model used."
+    "Lemmatisation not attempted. Canonical form uses surface form + morphology tag "
+    "for conjugations. No trained NLP model used."
 )
+
+_VERB_POS = frozenset({"verb"})
 
 
 def _extract_morph(token: str) -> dict:
@@ -163,7 +163,8 @@ def _extract_morph(token: str) -> dict:
 class FinnishPlugin:
     """Finnish morphology-light plugin.
 
-    Provides whitespace tokenisation and suffix-based case/verb hints.
+    Provides whitespace tokenisation, 15-case suffix detection, verb-form
+    suffix analysis, and conjugation-type emission for detected verb forms.
     Capabilities honestly declared.
     """
 
@@ -186,6 +187,8 @@ class FinnishPlugin:
         idiom_detection=False,
         tts_lang_tag="fi",
         transliteration_scheme=None,
+        tense_pool=["present", "past"],
+        mood_pool=["imperative", "conditional"],
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="none",
@@ -200,6 +203,7 @@ class FinnishPlugin:
             classical_or_scriptural_allusion="none",
             notes=(
                 "Morphology-light: 15-case suffix detection and verb-form hints. "
+                "Detected verb forms emitted as conjugation objects. "
                 "Consonant gradation not resolved; lemmatisation not performed. "
                 "No fi_core_news_sm spaCy model installed in this deployment."
             ),
@@ -232,34 +236,58 @@ class FinnishPlugin:
             is_function = canonical in _FUNCTION_WORDS
             morph = _extract_morph(token)
             harmony = _vowel_harmony(token)
-
-            lesson_data: dict = {
-                "lemma":         canonical,
-                "surface_form":  token,
-                "vowel_harmony": harmony,
-            }
+            is_verb = morph.get("pos") in _VERB_POS
 
             if is_function:
-                lesson_data["pos"] = "function_word"
-                confidence: float | None = 0.80
-            elif morph:
+                candidates.append(CandidateObject(
+                    canonical_form=canonical,
+                    surface_form=token,
+                    type="vocabulary",
+                    label=token,
+                    lesson_data={
+                        "lemma":         canonical,
+                        "surface_form":  token,
+                        "vowel_harmony": harmony,
+                        "pos":           "function_word",
+                    },
+                    confidence=0.80,
+                ))
+            elif is_verb and morph:
+                morph_tag = ":".join(f"{k}={v}" for k, v in sorted(morph.items()))
+                conj_canonical = f"{canonical}:{morph_tag}"
+                lesson_data: dict = {
+                    "surface_form":    token,
+                    "vowel_harmony":   harmony,
+                    "confidence_note": _CONFIDENCE_NOTE,
+                }
                 lesson_data.update(morph)
-                lesson_data["confidence_note"] = _CONFIDENCE_NOTE
-                confidence = 0.45
+                candidates.append(CandidateObject(
+                    canonical_form=conj_canonical,
+                    surface_form=token,
+                    type="conjugation",
+                    label=token,
+                    lesson_data=lesson_data,
+                    confidence=0.45,
+                ))
             else:
-                lesson_data["confidence_note"] = _CONFIDENCE_NOTE
-                confidence = None
-
-            candidates.append(
-                CandidateObject(
+                lesson_data = {
+                    "lemma":         canonical,
+                    "surface_form":  token,
+                    "vowel_harmony": harmony,
+                }
+                if morph:
+                    lesson_data.update(morph)
+                    lesson_data["confidence_note"] = _CONFIDENCE_NOTE
+                else:
+                    lesson_data["confidence_note"] = _CONFIDENCE_NOTE
+                candidates.append(CandidateObject(
                     canonical_form=canonical,
                     surface_form=token,
                     type="vocabulary",
                     label=token,
                     lesson_data=lesson_data,
-                    confidence=confidence,
-                )
-            )
+                    confidence=0.45 if morph else None,
+                ))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
