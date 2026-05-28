@@ -33,7 +33,7 @@ class TestMorphFiles:
 
     def test_la_morph_structure(self):
         data = json.loads((LEXICONS / "la_morph.json").read_text("utf-8"))
-        assert data["version"] == "1"
+        assert data["version"] in ("1", "2")
         assert data["language"] == "la"
         assert isinstance(data["entries"], dict)
         assert len(data["entries"]) > 0
@@ -66,12 +66,16 @@ class TestMorphFiles:
         has_tense = any("tense" in v for v in entries.values())
         assert has_tense, "Expected at least one Greek entry with tense annotation"
 
-    def test_grc_morph_larger_than_la_morph(self):
-        # Greek has MorphGNT (full NT) + PROIEL; Latin only has ITTB dev set
-        la_count  = len(json.loads((LEXICONS / "la_morph.json").read_text("utf-8"))["entries"])
+    def test_la_morph_expanded_coverage(self):
+        # kaikki noun/adj paradigms bring Latin morph coverage above 200k forms
+        la_count = len(json.loads((LEXICONS / "la_morph.json").read_text("utf-8"))["entries"])
+        assert la_count > 200_000, \
+            f"Expected la_morph > 200k entries after kaikki expansion; got {la_count}"
+
+    def test_grc_morph_substantial_coverage(self):
         grc_count = len(json.loads((LEXICONS / "grc_morph.json").read_text("utf-8"))["entries"])
-        assert grc_count > la_count, \
-            f"Expected grc_morph ({grc_count}) > la_morph ({la_count})"
+        assert grc_count > 25_000, \
+            f"Expected grc_morph > 25k entries; got {grc_count}"
 
 
 # ── Latin plugin morphological output ─────────────────────────────────────────
@@ -87,7 +91,7 @@ class TestLatinMorphAnnotations:
         caps = self.plugin.capabilities
         assert caps.analysis_depth    == "morphology_light"
         assert caps.morphology_depth  == "shallow"
-        assert caps.morphology_quality == "low"
+        assert caps.morphology_quality == "medium"
         assert "vocabulary" in caps.lesson_modes_supported
 
     def test_curated_word_has_confidence(self):
