@@ -1,6 +1,6 @@
 # Beta Gap Report — Mnemosyne
 
-*Originally written 2026-04-15. Updated 2026-05-28 to reflect current `main` branch state.*
+*Originally written 2026-04-15. Updated 2026-05-28 to reflect feature-maturity pass (Priority 1–8 complete).*
 
 All private alpha and public beta blockers are resolved. All vision items V1–V5 are
 implemented. The system is at or beyond the original 12-week plan. This document is
@@ -12,7 +12,7 @@ tier.
 ## What is solid (do not second-guess)
 
 - **Core loop.** Parse → lesson → review → recommend is complete, tested, and persistent.
-  4 194 passing, 48 skipped, 0 failures (as of 2026-05-28).
+  3 680+ passing tests (full suite as of 2026-05-28 feature-maturity pass).
 - **Practice activities.** Detail pane exposes scored retell, typed drill, comprehension, and
   mini-quiz practice panels. Every practice check dispatches `pane-practice-check` → `submitReview(objectId, quality)` → FSRS `/review` endpoint, so practice directly updates spaced-repetition state. Session score and next-interval feedback shown inline.
 - **FSRS-5.** Pure Python, deterministic, no external dependencies. Per-user calibration
@@ -38,6 +38,14 @@ tier.
   Hindi, Turkish, Finnish: suffix-rule morphology-light plugins (Devanagari/Latin/Latin
   script; IAST/Latin/Latin romanisation; no external model required). Korean: morphology-
   light via kiwipiepy. 17 registered language codes.
+- **Language capability labels (user-facing).** `LanguageCapabilities` now carries a `analysis_depth_label` computed field mapping internal IDs (`morphology_light`, `dictionary`, `full`, `segmentation_only`) to English display strings ("Basic grammar hints", "Vocabulary lookup", etc.). `CAPABILITY_LABELS_I18N` in `i18n.js` localises these for all 11 UI languages. Internal IDs unchanged; user-facing labels are separate.
+- **Gold linguistic tests.** Per-language gold fixtures cover hi/tr/fi with false-positive and confidence assertions. `pytest_terminal_summary` hook prints per-language pass/fail/skip table after every full run. New assertion types: `assert_min_vocabulary_count` and `assert_no_confidence_above`.
+- **Morphology improvements.** Hindi: single-char matras require min token length 5 (prevents "अच्छा"/"लड़का" false-positive conjugation tags). Turkish: `_AORIST_BLOCKLIST` blocks ~30 common words from aorist 3sg suffix match. Finnish: possessive suffix detection after case suffix match; `_INESSIVE_GUARD` blocks known false-positive forms.
+- **Latin noun suffix hints.** `_extract_latin_noun_suffix_hint` provides heuristic `case_hint`, `number_hint`, `gender_hint`, and optional `ambiguity_note` for tokens not in the morph index. Wired into both the inflection-resolved non-verb branch and the unknown-token fallback.
+- **Greek article agreement.** `_ARTICLE_FORMS` dict covers all 17 standard Koine article forms. A pre-pass over each sentence detects article + following-token bigrams and annotates the following token with `article_agrees_with: {case, gender, number}` from the article.
+- **Corpus product features.** `GET /recommend-text` now returns `cefr_level` (from `CorpusIngestionRow`), `provenance` (author · source_url), and `recommendation_reason` (level_match | continuing | closest_match) per sentence. New query params: `?continuation=true`, `?cefr=`, `?max_words=`. `RECOMMEND_UI_I18N` export in `i18n.js` localises these for all 11 UI languages.
+- **Privacy-conscious analytics.** `LearningEventRow` table stores aggregate, non-identifiable session counts (no text, no canonical forms). `UserRow.analytics_opt_out` bool (migration 0016). `backend/services/analytics.py`: `record_event`, `maybe_record_event` (respects opt-out), `delete_user_events` (GDPR). `GET /metrics/learning-events` dev endpoint (DEBUG=true only) returns aggregate event counts grouped by (event_type, language).
+- **Manual accessibility test additions.** MANUAL_ACCESSIBILITY_TEST.md extended with tests 13–17 (reduced motion, 200% zoom, 400% zoom/reflow, offline/error states, Practice tab full). Structured session results template added. Automated static tests added: `TestReducedMotionCSS`, `TestConceptDialogStructure`, `TestPracticeTabInputs`, `TestLiveRegionCompleteness` — 38 tests, all pass.
 - **Classical morphology.** Latin and Koine Greek deepened beyond dictionary mode:
   ~3 400 Latin forms (UD ITTB) and ~27 000 Greek forms (UD PROIEL + MorphGNT) provide
   conjugation type + tense/mood/person in lesson_data. Suffix rules fill gaps for Latin
@@ -122,8 +130,10 @@ tier.
 These are the only items without a completed implementation:
 
 **Manual keyboard + screen-reader test** — The WCAG 2.1 AA code audit is done and 8
-issues were fixed. A human keyboard-only walkthrough and NVDA/VoiceOver smoke test
-have not been run. See `WCAG_AUDIT.md` for the testing checklist.
+issues were fixed; automated static a11y tests cover 38 ARIA/CSS invariants; Tests 13–17
+(zoom, reduced-motion, offline states, Practice tab) are documented in `MANUAL_ACCESSIBILITY_TEST.md`.
+A human keyboard-only walkthrough and NVDA/VoiceOver smoke test have not been run.
+See `MANUAL_ACCESSIBILITY_TEST.md` for the structured session results template.
 
 **Full spaCy-model morphological plugins for additional languages** — Hindi,
 Turkish, and Finnish now have suffix-rule morphology-light plugins (no model
@@ -165,6 +175,26 @@ English-only layer is the terminal grammatical label values (person `"third"`, n
 `"singular"`, tense `"present"`, mood `"indicative"`) produced by `generators.py`.
 For most learners the mixed output is adequate; full label localisation would require a
 second lookup table in `l10n.py`.
+
+---
+
+## What remains before deployment or user testing
+
+*These are not implemented in this pass and are NOT deployment/onboarding/user-testing tasks.
+This section documents known limitations and future work.*
+
+1. **Manual AT run** — Human keyboard-only + NVDA + VoiceOver session using `MANUAL_ACCESSIBILITY_TEST.md`. Must record results in `docs/accessibility_results/`. Not automated.
+2. **Database migration on production** — `alembic upgrade head` must be run on the target PostgreSQL instance before `0016_analytics` tables and columns are live.
+3. **Analytics opt-out UI** — `UserRow.analytics_opt_out` backend column and service exist. A frontend toggle (Settings or Privacy page) to expose opt-out has not been built.
+4. **Analytics instrumentation call sites** — `backend/services/analytics.py` (`maybe_record_event`) is written and tested but not yet wired to any actual route (parse, review, recommend, etc.). Instrumentation calls must be added to route handlers when ready.
+5. **Greek article agreement — frontend display** — `article_agrees_with` is in `lesson_data` for following tokens. No frontend UI renders this field yet.
+6. **Latin noun suffix hints — frontend display** — `case_hint`, `number_hint`, `gender_hint`, `ambiguity_note` are emitted in `lesson_data`. Lesson builder and frontend do not surface them yet.
+7. **`RECOMMEND_UI_I18N` keys — frontend wiring** — Export added to `i18n.js`, tests pass. No frontend component consumes `provenance`, `cefr_level`, or `recommendation_reason` from the recommend response yet.
+8. **CEFR A2–C2 vocabulary tables** — `cefr_vocab.py` only covers A1. CEFR filter in `/recommend-text?cefr=` will return empty results for most sentences until corpus pipeline produces more `cefr_equivalent`-tagged documents.
+9. **Full spaCy morphology for hi/tr/fi** — Still morphology-light (suffix rules); improvements to false positives made but full model-backed morphology remains open.
+10. **Perseus/Logeion API integration** — Latin/Greek lexicon depth limited to ~3 400 / ~27 000 attested forms. API integration would improve coverage of rare forms.
+11. **Grammatical label localisation** — `person="third"`, `number="singular"`, etc. in `lesson_data` remain English. Full localisation requires a second lookup table in `l10n.py`.
+12. **Docker Compose end-to-end smoke test in CI** — Not in automated CI; currently manual `make up` only.
 
 ---
 

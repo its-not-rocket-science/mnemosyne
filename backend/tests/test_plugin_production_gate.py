@@ -33,7 +33,10 @@ def _registry(debug: bool):
     from backend.core.config import Settings
     from backend.parsing.plugin_loader import load_plugins
 
-    settings = Settings(debug=debug, database_url="postgresql+asyncpg://x/x")
+    kwargs: dict = {"debug": debug, "database_url": "postgresql+asyncpg://x/x"}
+    if not debug:
+        kwargs["cors_origins"] = ["https://example.com"]
+    settings = Settings(**kwargs)
     with patch("backend.parsing.plugin_loader.get_settings", return_value=settings):
         return load_plugins()
 
@@ -84,7 +87,7 @@ def test_x_code_blocked_without_test_only_flag():
     from backend.core.config import Settings
     from backend.parsing.plugin_loader import PluginRegistry
 
-    settings = Settings(debug=False, database_url="postgresql+asyncpg://x/x")
+    settings = Settings(debug=False, database_url="postgresql+asyncpg://x/x", cors_origins=["https://example.com"])
 
     class ForgottenFlagPlugin:
         language_code = "x-forgot-flag"

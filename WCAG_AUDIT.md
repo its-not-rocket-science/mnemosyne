@@ -145,6 +145,21 @@ Verify these oklch/color-mix values in the rendered browser (cannot be analytica
 
 ---
 
+## Automated / static audit — 2026-05-28 additions (accessibility static tests)
+
+Four new test classes added to `backend/tests/test_accessibility_static.py` (38 total tests):
+
+| Class | What it verifies |
+|-------|-----------------|
+| `TestReducedMotionCSS` | 5 key CSS/JS files contain `prefers-reduced-motion` media query |
+| `TestConceptDialogStructure` | `mnemosyne-detail-pane.js` contains `role="dialog"`, `aria-modal`, `aria-labelledby`, `aria-busy` on loading state, `role="alert"` on error state |
+| `TestPracticeTabInputs` | Modal has labelled inputs; detail pane dispatches `pane-practice-check` |
+| `TestLiveRegionCompleteness` | Multiple polite live regions exist; no assertive on non-errors; `aria-atomic` present |
+
+These tests verify static code invariants, not runtime behaviour. They do not replace manual AT testing.
+
+---
+
 ## Known limitations (deferred)
 
 - **Automated tool run not performed.** A Lighthouse or axe-core sweep against the running app (not static source) may surface additional issues, particularly for dynamic content (options populated from `/languages`, cards rendered by `renderResults()`).

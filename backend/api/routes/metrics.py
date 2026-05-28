@@ -12,14 +12,17 @@ from collections import defaultdict
 from datetime import UTC, date, datetime, timedelta
 
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session
-from backend.models import CanonicalObjectRow, ReviewEventRow, UserKnowledgeRow
+from backend.core.config import get_settings
+from backend.models import CanonicalObjectRow, LearningEventRow, ReviewEventRow, UserKnowledgeRow, UserRow
 from backend.schemas.metrics import (
     DailyActivity,
     LanguageMetrics,
+    LearningEventSummary,
+    LearningEventsResponse,
     MetricsResponse,
     TypeMetrics,
     WeakObject,
@@ -311,4 +314,56 @@ def _empty_response(
         reviews_today=reviews_today,
         streak_days=streak_days,
         daily_activity=daily_activity or [],
+    )
+
+
+@router.get("/metrics/learning-events", response_model=LearningEventsResponse)
+async def get_learning_events_summary(
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> LearningEventsResponse:
+    """Return aggregate learning-event counts grouped by (event_type, language).
+
+    DEBUG mode only — returns 404 in production to prevent aggregate
+    enumeration of event types, even though no per-user data is exposed.
+
+    Analytics events are written by the analytics service only when the
+    user has not opted out (UserRow.analytics_opt_out=False).
+    """
+    if not get_settings().debug:
+        raise HTTPException(status_code=404, detail="Not found")
+
+    total_rows = await db.scalar(
+        select(func.count()).select_from(LearningEventRow)
+    ) or 0
+
+    opt_out_count = await db.scalar(
+        select(func.count()).select_from(UserRow).where(UserRow.analytics_opt_out.is_(True))
+    ) or 0
+
+    summary_result = await db.execute(
+        select(
+            LearningEventRow.event_type,
+            LearningEventRow.language,
+            func.sum(LearningEventRow.count).label("total_count"),
+            func.count(LearningEventRow.id).label("event_rows"),
+        )
+        .group_by(LearningEventRow.event_type, LearningEventRow.language)
+        .order_by(LearningEventRow.event_type, LearningEventRow.language)
+    )
+
+    by_type = [
+        LearningEventSummary(
+            event_type=row.event_type,
+            language=row.language,
+            total_count=int(row.total_count or 0),
+            event_rows=int(row.event_rows or 0),
+        )
+        for row in summary_result.all()
+    ]
+
+    return LearningEventsResponse(
+        total_event_rows=total_rows,
+        opt_out_users=opt_out_count,
+        by_event_type=by_type,
     )

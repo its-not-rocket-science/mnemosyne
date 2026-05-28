@@ -39,6 +39,7 @@ FastAPI (uvicorn)
   ├── GET/PATCH /users/me/fsrs-params
   ├── POST /users/me/calibrate
   ├── GET/PATCH /users/me/language-preferences
+  ├── GET  /metrics/learning-events  aggregate analytics (DEBUG only)
   ├── GET  /health             liveness (process only)
   └── GET  /ready              readiness (DB + Redis + plugins)
 
@@ -374,7 +375,7 @@ source_progression               PRIMARY KEY: (user_id, source_document_id)
 
 ### Migrations
 
-Nine Alembic revision files (all in `alembic/versions/`):
+Seventeen Alembic revision files (all in `alembic/versions/`):
 
 | Revision | Content |
 |----------|---------|
@@ -388,6 +389,13 @@ Nine Alembic revision files (all in `alembic/versions/`):
 | `0007_source_documents` | `source_documents`, `source_chunks`, `source_progression` |
 | `0008_jsonb_key_removal` | Casts `lesson_data`/`fsrs_state` from JSON → jsonb for key-removal operators |
 | `0009_parsed_texts_user_id` | Adds nullable `user_id` to `parsed_texts`; indexed for account-deletion cascade |
+| `0010_grammar_rules` | `grammar_rules` table; CEFR A1–C2 grammar rule storage |
+| `0011_term_progress` | `term_progress` table; per-learner term mastery tracking |
+| `0012_content_gap_signal` | `content_gap_signals` table; logs when recommendation engine finds no sentences |
+| `0013_corpus_ingestions` | `corpus_ingestions` table; idempotent corpus build pipeline state |
+| `0014_sentence_review_items` | `sentence_review_items`, `user_sentence_review` tables |
+| `0015_reinforcement_learning` | `confusion_pairs`, `weakness_clusters`; `progression_stage` on `user_knowledge` |
+| `0016_analytics` | `learning_events` table; `analytics_opt_out` bool on `users` |
 
 Startup runs `alembic upgrade head` in a subprocess. `Base.metadata.create_all` is not called in production.
 
@@ -401,6 +409,7 @@ Startup runs `alembic upgrade head` in a subprocess. `Base.metadata.create_all` 
 | DB read (lesson) | Falls back to plugin in-session store |
 | DB read/write (review) | FSRS runs stateless; interval returned, state not saved |
 | DB read (dashboard / metrics) | Returns HTTP 503 with error detail |
+| DB write (analytics event) | Non-fatal; event silently dropped; main request succeeds |
 
 ---
 

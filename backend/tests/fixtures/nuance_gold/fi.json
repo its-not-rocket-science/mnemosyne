@@ -1,0 +1,101 @@
+{
+  "language": "fi",
+  "plugin_module": "backend.plugins.finnish",
+  "plugin_class": "FinnishPlugin",
+  "nuance_extractor_module": null,
+  "nuance_extractor_class": null,
+  "tokenizer": "words",
+  "capability_assertions": {
+    "grammar_nuance": ["none", "stub"]
+  },
+  "capability_gaps": {
+    "grammar_nuance": "Finnish morphology-light: outermost suffix rules only; no trained model; consonant gradation and inner suffix layers (possessive clitics) not analysed"
+  },
+  "cases": [
+    {
+      "id": "fi_inessive_case_suffix",
+      "category": "morphology",
+      "text": "Olen talossa.",
+      "note": "'talossa' = talo + -ssa (inessive 'in the house'); case=inessive should appear in lesson_data",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.85,
+      "lesson_data_required_keys": {
+        "vocabulary": ["vowel_harmony", "confidence_note"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fi_vowel_harmony_back",
+      "category": "morphology",
+      "text": "Lapset leikkivat pihalla.",
+      "note": "Back vowel words — vowel_harmony=back should appear in lesson_data for suffix-bearing tokens",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "assert_min_vocabulary_count": 1,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.85,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fi_morphology_light_low_confidence",
+      "category": "confidence",
+      "text": "Kirjassa on monta sivua.",
+      "note": "Morphology-light — any confidence set should be ≤ 0.75 (honest about heuristic quality)",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "assert_min_vocabulary_count": 1,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.85,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fi_function_word_handling",
+      "category": "function_word",
+      "text": "Han ja sina olemme hyvia ystavia.",
+      "note": "'ja' (Finnish: and) — function word; should not receive spurious morphology keys",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "assert_min_vocabulary_count": 1,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.85,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fi_no_raw_uuids",
+      "category": "vocabulary",
+      "text": "Suomi on kaunis maa.",
+      "note": "Verify no UUID-format strings in lesson_data",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.85,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    }
+  ]
+}

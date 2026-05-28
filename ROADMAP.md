@@ -55,6 +55,14 @@ Status markers: **implemented** · **partial** · **planned** · **deferred**
 | Source progression tracking | implemented | `SourceProgressionRow`; `GET/PATCH /reading/{id}`; `POST /ingest` creates row; `GET /recommend` surfaces `is_continuation` items first |
 | Backend startup resilience | implemented | `app.state.startup_errors`; `X-Startup-Warning` response header; `/ready` startup field; frontend banner on degraded-startup detection |
 | CEFR A1 vocabulary tables | implemented | `backend/plugins/cefr_vocab.py`; ~200–250 lemmas per language for es/fr/de/it/pt/ru/ja; suppresses `_sm` model OOV false-positives; adds `cefr_level: "A1"` to lesson_data; displayed in vocabulary lesson |
+| Language capability user-facing labels | implemented | `ANALYSIS_DEPTH_USER_LABELS` dict + `@computed_field analysis_depth_label` in `LanguageCapabilities`; `CAPABILITY_LABELS_I18N` in `i18n.js` for 11 UI languages; internal IDs unchanged |
+| Gold linguistic fixtures | implemented | Gold fixture files for all 17 languages; `assert_min_vocabulary_count` and `assert_no_confidence_above` assertions; `pytest_terminal_summary` per-language coverage report |
+| Morphology false-positive fixes (hi/tr/fi) | implemented | Hindi single-char matra min-length guard; Turkish `_AORIST_BLOCKLIST` for common -ar/-er words; Finnish possessive suffix detection + `_INESSIVE_GUARD` |
+| Latin noun suffix hints | implemented | `_LATIN_NOUN_SUFFIXES` table + `_extract_latin_noun_suffix_hint`; `case_hint`, `number_hint`, `gender_hint`, `ambiguity_note` in `lesson_data` for non-morph-indexed forms |
+| Greek article agreement bigrams | implemented | `_ARTICLE_FORMS` for all 17 Koine article forms; pre-pass adds `article_agrees_with` to lesson_data of following tokens |
+| Corpus product features | implemented | `/recommend-text` returns `cefr_level`, `provenance`, `recommendation_reason`; `?continuation=true`, `?cefr=`, `?max_words=` filters; `RECOMMEND_UI_I18N` in `i18n.js` |
+| Privacy-conscious analytics | implemented | `LearningEventRow` table; `UserRow.analytics_opt_out`; `backend/services/analytics.py` with opt-out check and GDPR deletion; `GET /metrics/learning-events` dev endpoint (DEBUG only); migration 0016 |
+| Manual accessibility test extensions | implemented | Tests 13–17 in `MANUAL_ACCESSIBILITY_TEST.md`; `TestReducedMotionCSS`, `TestConceptDialogStructure`, `TestPracticeTabInputs`, `TestLiveRegionCompleteness` (38 tests) |
 
 ---
 

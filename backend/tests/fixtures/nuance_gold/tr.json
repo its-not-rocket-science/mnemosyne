@@ -1,0 +1,102 @@
+{
+  "language": "tr",
+  "plugin_module": "backend.plugins.turkish",
+  "plugin_class": "TurkishPlugin",
+  "nuance_extractor_module": null,
+  "nuance_extractor_class": null,
+  "tokenizer": "words",
+  "capability_assertions": {
+    "grammar_nuance": ["none", "stub"]
+  },
+  "capability_gaps": {
+    "grammar_nuance": "Turkish morphology-light: outermost suffix rules only; no trained model; inner suffix layers (possessive, aspect stacking) not analysed"
+  },
+  "cases": [
+    {
+      "id": "tr_locative_case_suffix",
+      "category": "morphology",
+      "text": "Kitaplarda cok bilgi var.",
+      "note": "'Kitaplarda' = kitap + -lar (plural) + -da (locative); should carry case=locative and number=plural in lesson_data",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.85,
+      "lesson_data_required_keys": {
+        "vocabulary": ["vowel_harmony"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "tr_vowel_harmony_present",
+      "category": "morphology",
+      "text": "Eve gidiyorum.",
+      "note": "'Eve' = ev + -e (dative, front vowel); vowel_harmony key should be present",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.85,
+      "lesson_data_required_keys": {
+        "vocabulary": ["vowel_harmony"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "tr_function_word_var",
+      "category": "function_word",
+      "text": "Orada bir kitap var.",
+      "note": "'var' (there is) — Turkish existential; should be tagged as function_word",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "assert_min_vocabulary_count": 1,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.85,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "tr_morphology_light_no_high_confidence",
+      "category": "confidence",
+      "text": "Cocuklar parkta oyun oynuyor.",
+      "note": "Morphology-light — suffix rules; no candidate should claim high confidence",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "assert_min_vocabulary_count": 2,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.85,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "tr_no_raw_uuids",
+      "category": "vocabulary",
+      "text": "Bugun hava cok guzel.",
+      "note": "Verify no UUID-format strings in lesson_data",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.85,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    }
+  ]
+}

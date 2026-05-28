@@ -170,10 +170,32 @@ _SUFFIX_RULES: list[tuple[str, dict]] = [
     ("ün",     {"case": "genitive",              "pos": "noun"}),
     ("la",     {"case": "comitative_instrumental", "pos": "noun"}),
     ("le",     {"case": "comitative_instrumental", "pos": "noun"}),
-    # Aorist 3sg -ar/-er (shorter; must follow plural -lar/-ler)
+    # Possessive suffixes (1sg/2sg/3sg) — outermost only
+    ("ım",     {"possessive": "first_sg",  "pos": "noun"}),
+    ("im",     {"possessive": "first_sg",  "pos": "noun"}),
+    ("um",     {"possessive": "first_sg",  "pos": "noun"}),
+    ("üm",     {"possessive": "first_sg",  "pos": "noun"}),
+    ("ın",     {"possessive": "second_sg", "pos": "noun"}),
+    ("nın",    {"possessive": "second_sg", "pos": "noun"}),
+    ("sı",     {"possessive": "third_sg",  "pos": "noun"}),
+    ("si",     {"possessive": "third_sg",  "pos": "noun"}),
+    ("su",     {"possessive": "third_sg",  "pos": "noun"}),
+    ("sü",     {"possessive": "third_sg",  "pos": "noun"}),
+    # Aorist 3sg -ar/-er (short; must follow all longer suffixes above).
+    # Min stem length enforced in _extract_morph to reduce false positives.
     ("ar",     {"tense": "aorist", "person": "third", "number": "singular", "pos": "verb"}),
     ("er",     {"tense": "aorist", "person": "third", "number": "singular", "pos": "verb"}),
 ]
+
+# Words that end in -ar/-er but are NOT aorist verb forms.
+# Matching would be a false positive; these are excluded in _extract_morph.
+_AORIST_BLOCKLIST: frozenset[str] = frozenset({
+    "bir", "her", "ver", "yer", "ger", "mer", "ser", "ber",
+    "nar", "bar", "car", "dar", "far", "gar", "har", "jar",
+    "kar", "lar", "mar", "par", "sar", "tar", "var", "zar",
+    "dolar", "şeker", "pazar", "haber", "yazar", "kamer",
+    "noter", "fiber", "laser", "liner", "poker",
+})
 
 _CONFIDENCE_NOTE = (
     "Turkish morphology-light: outermost suffix stripped for feature hints. "
@@ -185,11 +207,24 @@ _VERB_POS = frozenset({"verb"})
 
 
 def _extract_morph(token: str) -> dict:
-    """Return morphology hints by longest-suffix match."""
+    """Return morphology hints by longest-suffix match.
+
+    Aorist -ar/-er requires a minimum stem length of 3 chars and is
+    blocked for known non-verb forms in _AORIST_BLOCKLIST.
+    """
     lower = _normalise_turkish(token)
     for suffix, features in _SUFFIX_RULES:
-        if lower.endswith(suffix) and len(lower) > len(suffix) + 1:
-            return dict(features)
+        if not lower.endswith(suffix):
+            continue
+        stem_len = len(lower) - len(suffix)
+        # Standard minimum stem (must have at least 2 chars before suffix)
+        if stem_len < 2:
+            continue
+        # Aorist -ar/-er: require longer stem and blocklist check
+        if suffix in ("ar", "er"):
+            if stem_len < 3 or lower in _AORIST_BLOCKLIST:
+                continue
+        return dict(features)
     return {}
 
 

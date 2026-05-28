@@ -1,12 +1,18 @@
 # Manual Accessibility Test Script — Mnemosyne
 
-**Purpose:** Step-by-step script for a tester to manually verify keyboard and AT accessibility through Mnemosyne's primary user flow. Run before any public beta tag.
+**Purpose:** Step-by-step script for a tester to manually verify keyboard and AT accessibility through Mnemosyne's primary user flow. Run before any public beta tag or controlled user testing.
+
+**Scope distinction:**
+- **Automated accessibility coverage** — structural ARIA contract checks run in CI via `backend/tests/test_accessibility_static.py`. These catch missing roles, broken label references, and structural regressions. They do not replace AT validation.
+- **Code audit** — static review of HTML/CSS/JS against WCAG 2.1 AA criteria. See `WCAG_AUDIT.md`. Completed 2026-05-28; 8 issues found and fixed.
+- **Manual AT validation** — this document. A human tester with a real screen reader or keyboard-only setup must run these flows. Automation cannot substitute.
 
 **Prerequisites:**
 - Chrome (latest) + NVDA 2024.x for Windows AT testing
 - Safari (latest) + VoiceOver for macOS AT testing
 - A keyboard with no mouse attached (or mouse unplugged) for keyboard-only passes
 - App running locally at `http://localhost:8000` (or staging URL)
+- DevTools accessible for zoom/reflow and network-offline tests
 
 ---
 
@@ -182,7 +188,104 @@ Use Chrome DevTools → Rendering → Emulate CSS media: `prefers-color-scheme: 
 
 ---
 
+## Test 13 — Reduced Motion
+
+**Device:** Any. Use Chrome DevTools → Rendering → Emulate CSS media: `prefers-reduced-motion: reduce`.
+
+| Step | Action | Expected |
+|------|--------|----------|
+| 1 | Enable reduced-motion emulation. | No visual change required — setting takes effect on next animation/transition. |
+| 2 | Open and close the detail pane. | Pane appears/disappears without slide or fade animation. No transform transitions visible. |
+| 3 | Open and close the concept help dialog. | Dialog appears/disappears without animation. |
+| 4 | Activate a multiple-choice drill option. | Feedback appears immediately; no pulse or fade-in transition. |
+| 5 | Activate the FSRS rating buttons. | "Saved." message appears immediately. |
+| 6 | Trigger the parse progress bar (large text). | Progress bar updates without smooth animation (steps or instant updates acceptable). |
+| 7 | Disable reduced-motion emulation; repeat steps 2–4. | Animations are present again. (Confirms the media query is wired correctly, not always-off.) |
+
+Pass criteria: no animated transitions occur while `prefers-reduced-motion: reduce` is active.
+
+---
+
+## Test 14 — 200% Browser Zoom
+
+**Device:** Desktop Chrome or Firefox. Press Ctrl+= (Windows) or Cmd+= (macOS) until browser shows 200%.
+
+| Step | Action | Expected |
+|------|--------|----------|
+| 1 | Set zoom to 200%. | Page still usable. No overlapping elements. |
+| 2 | Sign in. | Auth form usable. Submit button visible without scrolling (or accessible via scroll). |
+| 3 | Parse a short text. | Parse button and status visible. |
+| 4 | Open a sentence pill. | Detail pane slides in or appears. Content readable. |
+| 5 | Navigate Explanation / Form / Practice tabs. | All three tabs reachable. Tab bar does not overflow off-screen. |
+| 6 | Open concept help dialog. | Dialog visible within viewport (may require scroll). Close button reachable. |
+| 7 | Scroll the page. | No horizontal scroll bar appears (content reflows, not truncated). |
+
+Pass criteria: all interactive elements reachable, no content lost to overflow.
+
+---
+
+## Test 15 — 400% Zoom / Reflow (WCAG 1.4.10)
+
+**Device:** Desktop Chrome. Set zoom to 400% (Ctrl+= × 6 from 100%).
+
+| Step | Action | Expected |
+|------|--------|----------|
+| 1 | Set zoom to 400%. | Page reflows into single-column layout. No horizontal scroll. |
+| 2 | Tab through main page. | Skip link reachable. Language select reachable. Parse button reachable. |
+| 3 | Parse a text (paste short snippet). | Status message visible. Sentence cards visible (stacked vertically). |
+| 4 | Open a pill. | Detail pane fills most of viewport width. Content readable. |
+| 5 | Open concept dialog. | Dialog visible and scrollable. Close button reachable. |
+| 6 | Check that no content is clipped or requires 2D scrolling. | WCAG 1.4.10: content must not require scrolling in two dimensions (unless essential). |
+
+Pass criteria: all primary flows completable at 400% without 2D scrolling.
+
+---
+
+## Test 16 — Offline and Error States
+
+**Device:** Any. Use Chrome DevTools → Network → Offline toggle.
+
+| Step | Action | Expected |
+|------|--------|----------|
+| 1 | Sign in; go offline (DevTools → Network → Offline). | Offline badge visible in UI. |
+| 2 | Attempt to parse text while offline. | Error message shown; announced via live region. App does not crash. |
+| 3 | Complete a review while offline. | Review queued in IndexedDB offline queue. No error message. |
+| 4 | Go back online. | Queued reviews drain automatically. Success/count message announced. |
+| 5 | Go offline; activate a concept help `?` button. | Concept dialog shows localised error (not a blank dialog). Error announced via `role=alert`. |
+| 6 | Go offline; reload the page (PWA cache). | App shell loads from service worker cache. Core layout renders. |
+| 7 | Go offline; wait for JWT to expire (or manually clear localStorage). | "Session expired" message shown in all supported UI languages when drain is attempted. |
+
+Pass criteria: offline states have visible and AT-announced feedback; app does not crash or show blank UI.
+
+---
+
+## Test 17 — Practice Tab Full Coverage
+
+Extends Test 7 with additional drill types and edge cases introduced after initial audit.
+
+**Setup:** Parse a multi-sentence text in a language with full morphological analysis (Spanish, French, German, or Russian). Open a vocabulary/conjugation pill and switch to the Practice tab.
+
+| Step | Action | Expected |
+|------|--------|----------|
+| 1 | **Chunk recall drill:** Observe the "Say this aloud" prompt. | Text visible, language `lang` attribute on display element matches sentence language. |
+| 2 | **Fill-blank drill:** Type a correct answer; press Enter. | "Correct!" feedback announced via polite live region. |
+| 3 | **Fill-blank drill:** Type a wrong answer; press Enter. | Error feedback with correct answer announced via polite live region. |
+| 4 | **Multiple-choice:** Navigate options with Tab / arrow keys; press Space or Enter. | Selected option visually highlighted; feedback announced. |
+| 5 | **True/false drill:** Tab to True button; press Space. | Feedback announced. Tab to False button; press Space on a second question. Feedback announced. |
+| 6 | **Shadowing drill:** Tab to "Speak" button. Press Enter. | If Web Speech API available, speech starts. Button aria-label includes the drill target (not just "Speak"). |
+| 7 | **Grammar discrimination (nuance drill):** If available for language — Two sentences shown; Tab to options. | Both sentences read by AT. Option buttons reachable and labelled. |
+| 8 | After any drill, Tab to rating buttons. | Four buttons: Again / Hard / Good / Easy — all reachable, announced with label and keyboard shortcut hint if shown. |
+| 9 | Press a rating button via keyboard. | "Saved. Next review in N day(s)." announced via polite live region. |
+| 10 | Repeat steps 2–9 with an Arabic or Hebrew pill. | Drill text `dir="rtl"` set. Input also `dir="rtl"`. Feedback correct direction. |
+| 11 | Open a pill for a language with `morphology_light` capability (Hindi/Turkish/Finnish). | Practice tab renders; drills shown; no crash. Confidence notes visible if present. |
+
+Pass criteria: all drill types completable by keyboard alone; feedback announced by AT; RTL drills work correctly.
+
+---
+
 ## Pass / Fail Recording
+
+Copy this table into the session results template below; fill in during the test run.
 
 | Test | Pass | Fail | Notes |
 |------|------|------|-------|
@@ -198,5 +301,75 @@ Use Chrome DevTools → Rendering → Emulate CSS media: `prefers-color-scheme: 
 | 10 VoiceOver smoke | | | |
 | 11 Colour contrast | | | |
 | 12 Reflow 320px | | | |
+| 13 Reduced motion | | | |
+| 14 200% zoom | | | |
+| 15 400% zoom/reflow | | | |
+| 16 Offline/error states | | | |
+| 17 Practice tab full | | | |
 
 File any failures as GitHub issues tagged `a11y`.
+
+---
+
+## Session Results Template
+
+Use one copy of this template per test run. Store completed results in `docs/accessibility_results/` (filename: `YYYY-MM-DD_<tester>_<AT>.md`).
+
+```markdown
+# Manual AT Test Session — Mnemosyne
+
+## Session metadata
+
+| Field | Value |
+|-------|-------|
+| Date | YYYY-MM-DD |
+| Tester | Name / handle |
+| Browser + version | e.g. Chrome 125.0.6422 |
+| OS | e.g. Windows 11 22H2 / macOS 14.4 |
+| AT tool + version | e.g. NVDA 2024.1 / VoiceOver (built-in) / keyboard-only |
+| Viewport / zoom | e.g. 1440×900 100% / 320px / 400% |
+| Language direction tested | LTR / RTL / both |
+| App commit / version | git SHA or tag |
+| App URL | http://localhost:8000 or staging URL |
+
+## Results
+
+| Test | Pass | Fail | Notes |
+|------|------|------|-------|
+| 1 Skip link | | | |
+| 2 Auth keyboard | | | |
+| 3 Parse form | | | |
+| 4 Sentence cards | | | |
+| 5 Concept dialog | | | |
+| 6 Form tab axes | | | |
+| 7 Practice drills | | | |
+| 8 RTL layout | | | |
+| 9 NVDA smoke | | | |
+| 10 VoiceOver smoke | | | |
+| 11 Colour contrast | | | |
+| 12 Reflow 320px | | | |
+| 13 Reduced motion | | | |
+| 14 200% zoom | | | |
+| 15 400% zoom/reflow | | | |
+| 16 Offline/error states | | | |
+| 17 Practice tab full | | | |
+
+## Defects found
+
+<!-- Link each defect to a GitHub issue. -->
+
+| # | Test | Description | Severity | Issue |
+|---|------|-------------|----------|-------|
+| 1 | | | | |
+
+## Overall assessment
+
+<!-- Pass / Conditional pass / Fail -->
+
+## Tester sign-off
+
+> I confirm the above results reflect my direct testing observations on the date and
+> environment recorded above.
+>
+> — [Tester name], [Date]
+```

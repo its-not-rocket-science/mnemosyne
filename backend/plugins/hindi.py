@@ -93,54 +93,72 @@ _MULTI_WORD_POSTPOSITIONS: list[tuple[str, ...]] = [
 
 # Function words — copula/auxiliaries worth tagging.
 _FUNCTION_WORDS: frozenset[str] = frozenset({
+    # Copula / auxiliaries
     "है", "हैं", "हूँ", "था", "थे", "थी", "थीं",
     "होगा", "होगी", "होंगे", "होंगी", "हो", "हों",
-    "यह", "वह", "वे", "ये", "मैं", "तुम", "आप", "हम",
-    "एक", "कि", "और", "या", "भी", "नहीं", "मत",
-    "जो", "सो", "तो", "फिर", "अब", "यहाँ", "वहाँ",
-    "क्या", "कौन", "कहाँ", "कब", "कैसे", "कितना",
+    "हुआ", "हुई", "हुए", "होना", "हो",
+    # Personal pronouns
+    "यह", "वह", "वे", "ये", "मैं", "तुम", "आप", "हम", "वो",
+    # Determiners / particles
+    "एक", "कि", "और", "या", "भी", "नहीं", "मत", "न",
+    "ही", "तो", "भी", "बस", "सिर्फ", "केवल",
+    # Relative / interrogative pronouns
+    "जो", "सो", "कि", "इस", "उस", "इन", "उन",
+    # Adverbs / discourse particles
+    "फिर", "अब", "यहाँ", "वहाँ", "तब", "जब",
+    "बहुत", "थोड़ा", "काफी", "बिल्कुल", "शायद",
+    # Interrogatives
+    "क्या", "कौन", "कहाँ", "कब", "कैसे", "कितना", "किसने",
+    # Negation
+    "नहीं", "मत", "न",
 })
 
 # ── Morphology hints (verb suffixes) ─────────────────────────────────────────
 # Ordered longest-match first to avoid partial matches.
 # Returns (feature_dict, is_verb_form) where is_verb_form signals conjugation.
-_VERB_SUFFIXES: list[tuple[str, dict]] = [
+_VERB_SUFFIXES: list[tuple[str, dict, int]] = [
+    # (suffix, features, min_total_token_len)
+    # Longer/more specific suffixes first for longest-match priority.
     # Future (4-way gender × number)
-    ("एंगी", {"tense": "future", "gender": "feminine",  "number": "plural"}),
-    ("एंगे", {"tense": "future", "gender": "masculine", "number": "plural"}),
-    ("एगी",  {"tense": "future", "gender": "feminine",  "number": "singular"}),
-    ("एगा",  {"tense": "future", "gender": "masculine", "number": "singular"}),
+    ("एंगी", {"tense": "future", "gender": "feminine",  "number": "plural"},   4),
+    ("एंगे", {"tense": "future", "gender": "masculine", "number": "plural"},   4),
+    ("एगी",  {"tense": "future", "gender": "feminine",  "number": "singular"}, 4),
+    ("एगा",  {"tense": "future", "gender": "masculine", "number": "singular"}, 4),
     # Habitual + auxiliary (longer forms first)
-    ("ती हैं", {"tense": "present_habitual", "gender": "feminine",  "number": "plural"}),
-    ("ते हैं", {"tense": "present_habitual", "gender": "masculine", "number": "plural"}),
-    ("ती है", {"tense": "present_habitual", "gender": "feminine",  "number": "singular"}),
-    ("ता है", {"tense": "present_habitual", "gender": "masculine", "number": "singular"}),
+    ("ती हैं", {"tense": "present_habitual", "gender": "feminine",  "number": "plural"},   4),
+    ("ते हैं", {"tense": "present_habitual", "gender": "masculine", "number": "plural"},   4),
+    ("ती है", {"tense": "present_habitual", "gender": "feminine",  "number": "singular"}, 4),
+    ("ता है", {"tense": "present_habitual", "gender": "masculine", "number": "singular"}, 4),
     # Past perfective auxiliary forms
-    ("आए",   {"tense": "past", "gender": "masculine", "number": "plural",   "aspect": "perfective"}),
-    ("आई",   {"tense": "past", "gender": "feminine",  "aspect": "perfective"}),
-    ("आया",  {"tense": "past", "gender": "masculine", "number": "singular", "aspect": "perfective"}),
-    # Habitual / imperfective (bare)
-    ("ते",   {"aspect": "habitual", "gender": "masculine", "number": "plural"}),
-    ("ती",   {"aspect": "habitual", "gender": "feminine"}),
-    ("ता",   {"aspect": "habitual", "gender": "masculine"}),
+    ("आए",   {"tense": "past", "gender": "masculine", "number": "plural",   "aspect": "perfective"}, 4),
+    ("आई",   {"tense": "past", "gender": "feminine",  "aspect": "perfective"},                       4),
+    ("आया",  {"tense": "past", "gender": "masculine", "number": "singular", "aspect": "perfective"}, 4),
+    # Habitual / imperfective (bare) — require ≥ 4 chars total to avoid matching nouns
+    ("ते",   {"aspect": "habitual", "gender": "masculine", "number": "plural"}, 4),
+    ("ती",   {"aspect": "habitual", "gender": "feminine"},                      4),
+    ("ता",   {"aspect": "habitual", "gender": "masculine"},                     4),
     # Infinitive
-    ("ना",   {"verb_form": "infinitive"}),
+    ("ना",   {"verb_form": "infinitive"}, 4),
     # Imperative
-    ("इए",   {"mood": "imperative", "register": "formal"}),
-    ("ओ",    {"mood": "imperative", "person": "second"}),
+    ("इए",   {"mood": "imperative", "register": "formal"}, 4),
+    ("ओ",    {"mood": "imperative", "person": "second"},    4),
     # Subjunctive / polite imperative
-    ("ए",    {"mood": "subjunctive_or_imperative"}),
-    # Perfective participle (noun-like; omit oblique "ो" to avoid false pos)
-    ("ी",    {"verb_form": "perfective_participle", "gender": "feminine"}),
-    ("ा",    {"verb_form": "perfective_participle", "gender": "masculine"}),
+    ("ए",    {"mood": "subjunctive_or_imperative"}, 4),
+    # Perfective participle (single-char matras — high false-positive risk).
+    # Require ≥ 5 chars total so common nouns/adjectives (e.g. "लड़का", "अच्छा")
+    # do not match. Confidence set lower; see _extract_verb_morph.
+    ("ी",    {"verb_form": "perfective_participle", "gender": "feminine"},  5),
+    ("ा",    {"verb_form": "perfective_participle", "gender": "masculine"}, 5),
 ]
 
 # ── Noun/adjective suffix hints ───────────────────────────────────────────────
-_NOUN_SUFFIXES: list[tuple[str, dict]] = [
-    ("एं",  {"number": "plural", "gender": "feminine"}),
-    ("ें",  {"number": "plural"}),
-    ("ों",  {"number": "plural", "case": "oblique"}),
-    ("े",   {"case": "oblique", "gender": "masculine"}),
+_NOUN_SUFFIXES: list[tuple[str, dict, int]] = [
+    # (suffix, features, min_total_token_len)
+    ("एं",  {"number": "plural", "gender": "feminine"},     4),
+    ("ें",  {"number": "plural"},                           4),
+    ("ों",  {"number": "plural", "case": "oblique"},        4),
+    # Single-char oblique matra — require ≥ 5 chars to reduce false positives
+    ("े",   {"case": "oblique", "gender": "masculine"},     5),
 ]
 
 # ── Simplified IAST-style romanisation ───────────────────────────────────────
@@ -195,17 +213,21 @@ def _romanise(word: str) -> str:
 
 
 def _extract_verb_morph(token: str) -> dict | None:
-    """Return verb morphology if a verb suffix matches, else None."""
-    for suffix, features in _VERB_SUFFIXES:
-        if token.endswith(suffix) and len(token) > len(suffix):
+    """Return verb morphology if a verb suffix matches, else None.
+
+    Single-character matra suffixes (ā/ī) require a minimum token length
+    to avoid false positives on common nouns and adjectives.
+    """
+    for suffix, features, min_len in _VERB_SUFFIXES:
+        if token.endswith(suffix) and len(token) >= min_len:
             return dict(features)
     return None
 
 
 def _extract_noun_morph(token: str) -> dict:
     """Return noun/adjective morphology hints; empty dict if no match."""
-    for suffix, features in _NOUN_SUFFIXES:
-        if token.endswith(suffix) and len(token) > len(suffix):
+    for suffix, features, min_len in _NOUN_SUFFIXES:
+        if token.endswith(suffix) and len(token) >= min_len:
             return dict(features)
     return {}
 

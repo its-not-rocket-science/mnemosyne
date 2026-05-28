@@ -215,6 +215,27 @@ def _assert_case(candidates: list[CandidateObject], case: dict) -> None:
                     f"[{cid}] raw UUID in lesson_data of {c.canonical_form!r}: {val!r}"
                 )
 
+    # minimum vocabulary candidate count
+    min_vocab = case.get("assert_min_vocabulary_count")
+    if min_vocab is not None:
+        vocab_count = sum(1 for c in candidates if c.type == "vocabulary")
+        assert vocab_count >= min_vocab, (
+            f"[{cid}] expected at least {min_vocab} vocabulary candidates; "
+            f"got {vocab_count}"
+        )
+
+    # no candidate confidence exceeds threshold (morphology-light cap)
+    conf_max = case.get("assert_no_confidence_above")
+    if conf_max is not None:
+        over = [
+            (c.canonical_form, c.confidence)
+            for c in candidates
+            if c.confidence is not None and c.confidence > conf_max
+        ]
+        assert not over, (
+            f"[{cid}] candidates have confidence > {conf_max}: {over}"
+        )
+
 
 # ── Fixture collection ────────────────────────────────────────────────────────
 
