@@ -124,7 +124,7 @@ import logging
 from functools import cached_property
 from typing import Any
 
-from backend.plugins.cefr_vocab import A1 as _CEFR_A1
+from backend.plugins.cefr_vocab import A1 as _CEFR_A1, A2 as _CEFR_A2
 from backend.core.vocab_index import get_cefr_level as _get_cefr_level
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.lesson.practice_hooks import hooks_for_language
@@ -135,6 +135,7 @@ from backend.schemas.parse import (
 )
 
 _A1 = _CEFR_A1.get("es", frozenset())
+_A2 = _CEFR_A2.get("es", frozenset())
 
 logger = logging.getLogger(__name__)
 
@@ -456,7 +457,7 @@ class SpanishPlugin:
 
             confidence, confidence_note = self._vocab_confidence(tok, lemma)
             data: dict[str, Any] = {"lemma": lemma, "pos": tok.pos_}
-            cefr = _get_cefr_level("es", lemma) or ("A1" if lemma in _A1 else None)
+            cefr = _get_cefr_level("es", lemma) or ("A1" if lemma in _A1 else "A2" if lemma in _A2 else None)
             if cefr:
                 data["cefr_level"] = cefr
 
@@ -490,6 +491,8 @@ class SpanishPlugin:
             return 0.60, "proper noun — may not represent general vocabulary"
         if lemma in _A1:
             return 0.90, None  # known A1 word — suppress is_oov false-positive
+        if lemma in _A2:
+            return 0.88, None  # known A2 word
         if tok.is_oov:
             return 0.50, "word not found in model vocabulary — form may be incorrect"
         return 0.85, None
@@ -526,7 +529,7 @@ class SpanishPlugin:
             construction    = _detect_construction(tok)
             is_reflexive    = _has_reflexive_clitic(tok, tokens)
             # Suppress OOV signal for known A1 lemmas — sm model has no vectors
-            _oov            = tok.is_oov and lemma not in _A1
+            _oov            = tok.is_oov and lemma not in _A1 and lemma not in _A2
             confidence      = self._conj_confidence(tok, feats, _oov)
             confidence_note = _conj_confidence_note(feats, _oov)
 
