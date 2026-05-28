@@ -55,6 +55,21 @@ see `MANUAL_ACCESSIBILITY_TEST.md` for the full manual keyboard/AT test script.
 
 ---
 
+## Automated / static audit — 2026-05-28 additions (detail pane, adaptive reader)
+
+No new issues found. Components reviewed:
+
+| Component | Check | Result |
+|-----------|-------|--------|
+| `mnemosyne-detail-pane` tabs | `role="tablist"` / `role="tab"` pattern; `aria-selected`, `aria-controls`, `tabindex` roving; Arrow-key navigation; `inert` on close | ✓ |
+| Detail pane close | `aria-label` via i18n `dp_close_aria`; focus returns to activating pill via `#previousFocus` | ✓ |
+| Detail pane copy-link | `aria-label` via i18n `dp_copy_link_aria`; `aria-live="polite"` hint on success | ✓ |
+| Adaptive reader annotations | `aria-live="polite"` on toast; `aria-pressed` on reveal buttons; `aria-hidden="true"` on decorative badge icons | ✓ |
+| Reinforcement toggle | Standard `<button>` with visible label; programmatic state tracked in `localStorage` | ✓ |
+| Practice check drills (detail pane) | Drill inputs follow same pattern as modal drills; `aria-labelledby` referencing prompt | ✓ |
+
+---
+
 ## Automated / static audit — 2026-05-27 additions (concept help dialog)
 
 | # | Criterion | Issue | Fix applied |
