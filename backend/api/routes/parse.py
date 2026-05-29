@@ -125,9 +125,10 @@ async def _persist_parse_background(
     after the main persist so canonical objects are guaranteed to be in the DB
     before enrichment reads them.
     """
+    parsed_text_id: str | None = None
     try:
         async with session_factory() as db:
-            await _persist_parse(db, payload, candidate_results, sentences, uuid_to_candidate, user_id)
+            parsed_text_id = await _persist_parse(db, payload, candidate_results, sentences, uuid_to_candidate, user_id)
             await maybe_record_event(
                 db, user_id, "text_ingested",
                 language=payload.language,
@@ -135,7 +136,21 @@ async def _persist_parse_background(
             )
     except Exception:
         logger.warning("Background DB persist failed for /parse", exc_info=True)
-        return  # Don't attempt enrichment if persist itself failed
+        return  # Don't attempt enrichment or mining if persist itself failed
+
+    # ── Sentence mining ───────────────────────────────────────────────────────
+    if parsed_text_id:
+        from backend.services.sentence_mining import mine_parsed_text
+        try:
+            async with session_factory() as db:
+                await mine_parsed_text(
+                    db,
+                    parsed_text_id=parsed_text_id,
+                    language=payload.language,
+                    user_id=user_id,
+                )
+        except Exception:
+            logger.warning("Background sentence mining failed for /parse", exc_info=True)
 
     s = get_settings()
     if s.enable_dictionary_lookup or s.enable_translation_enrichment:
