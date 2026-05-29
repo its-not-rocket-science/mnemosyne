@@ -2484,10 +2484,18 @@ function buildMinimap() {
     const markRect = mark.getBoundingClientRect()
     const markTop  = markRect.top + window.scrollY
     const pct      = Math.max(0, Math.min(99, (markTop - regionTop) / totalH * 100))
-    const tick     = document.createElement('div')
+    const tick     = document.createElement('button')
+    tick.type      = 'button'
     tick.className = 'annotation-minimap__tick'
     tick.style.top        = `${pct.toFixed(2)}%`
     tick.style.background = _MINIMAP_COLORS[mark.dataset.type] ?? 'var(--muted)'
+    const label = (mark.dataset.type ?? '') + (mark.textContent.trim() ? ': ' + mark.textContent.trim().slice(0, 40) : '')
+    tick.setAttribute('aria-label', label)
+    tick.addEventListener('click', () => {
+      mark.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      mark.classList.add('reader-annotation--jump-flash')
+      setTimeout(() => mark.classList.remove('reader-annotation--jump-flash'), 700)
+    })
     frag.appendChild(tick)
   })
   annotationMinimap.appendChild(frag)
