@@ -6,17 +6,17 @@
   "nuance_extractor_class": null,
   "tokenizer": "words",
   "capability_assertions": {
-    "grammar_nuance": ["none", "stub"]
+    "grammar_nuance": ["none", "stub", "partial"]
   },
   "capability_gaps": {
-    "grammar_nuance": "Finnish morphology-light: outermost suffix rules only; no trained model; consonant gradation and inner suffix layers (possessive clitics) not analysed"
+    "grammar_nuance": "fi_core_news_sm (small model): lemmatization unreliable for consonant-gradation forms; no possessive suffix or clitic analysis; grammar nuance drilling limited to case and conjugation features"
   },
   "cases": [
     {
       "id": "fi_inessive_case_suffix",
       "category": "morphology",
       "text": "Olen talossa.",
-      "note": "'talossa' = talo + -ssa (inessive 'in the house'); case=inessive should appear in lesson_data",
+      "note": "'talossa' = talo + -ssa (inessive); spaCy assigns Case=Ine; case=inessive should appear in lesson_data for the NOUN",
       "pipeline": "plugin",
       "assert_types_present": ["vocabulary"],
       "assert_types_absent": [],
@@ -26,7 +26,7 @@
       "confidence_ge": null,
       "assert_no_confidence_above": 0.85,
       "lesson_data_required_keys": {
-        "vocabulary": ["vowel_harmony", "confidence_note"]
+        "vocabulary": ["vowel_harmony"]
       },
       "no_raw_uuids": true
     },
@@ -48,10 +48,10 @@
       "no_raw_uuids": true
     },
     {
-      "id": "fi_morphology_light_low_confidence",
+      "id": "fi_spacy_confidence_range",
       "category": "confidence",
       "text": "Kirjassa on monta sivua.",
-      "note": "Morphology-light — any confidence set should be ≤ 0.75 (honest about heuristic quality)",
+      "note": "spaCy-based plugin: NOUN/VERB confidence ≤ 0.85; PROPN confidence ≤ 0.70",
       "pipeline": "plugin",
       "assert_types_present": ["vocabulary"],
       "assert_types_absent": [],

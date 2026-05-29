@@ -116,6 +116,15 @@ def test_parse_at_limit_returns_200() -> None:
     assert resp.status_code == 200
 
 
+def test_ingest_oversized_text_returns_413() -> None:
+    from backend.core.config import get_settings
+    limit = get_settings().max_parse_chars
+    oversized = "a " * (limit + 1)
+    resp = client.post("/ingest", json={"text": oversized, "language": "en", "content_type": "pasted_text"})
+    assert resp.status_code == 413
+    assert "limit" in resp.json()["detail"].lower()
+
+
 # ── /parse — cache fault tolerance ───────────────────────────────────────────
 
 

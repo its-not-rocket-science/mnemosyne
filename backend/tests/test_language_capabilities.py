@@ -1133,8 +1133,8 @@ class TestAnalysisDepthUserLabels:
 
     def test_morphology_light_languages_show_basic_hints_label(self) -> None:
         resp = client.get("/languages")
-        # ja/zh/grc/la are morphology_light (suffix rules, no full spaCy pipeline)
-        morphology_light_codes = {"hi", "tr", "fi", "ko", "ja", "zh", "grc", "la"}
+        # fi upgraded to full spaCy (fi_core_news_sm); remaining are morphology_light
+        morphology_light_codes = {"hi", "tr", "ko", "ja", "zh", "grc", "la"}
         for item in resp.json():
             if item["code"] in morphology_light_codes:
                 assert item["analysis_depth_label"] == "Basic grammar hints", (
