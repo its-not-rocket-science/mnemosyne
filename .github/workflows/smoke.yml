@@ -1,0 +1,81 @@
+name: smoke
+
+on:
+  push:
+    paths:
+      - "backend/**"
+      - "frontend/**"
+      - "alembic/**"
+      - "Dockerfile"
+      - "docker-compose.yml"
+      - "pyproject.toml"
+      - "poetry.lock"
+  pull_request:
+    paths:
+      - "backend/**"
+      - "frontend/**"
+      - "alembic/**"
+      - "Dockerfile"
+      - "docker-compose.yml"
+      - "pyproject.toml"
+      - "poetry.lock"
+
+jobs:
+  docker-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare .env
+        run: |
+          cp .env.example .env
+          # Dev auth fallback lets smoke assertions use X-User-Id without a JWT
+          echo "DEBUG=true" >> .env
+          echo "ALLOW_DEV_AUTH_FALLBACK=true" >> .env
+          # Load only Spanish to limit startup time in CI
+          echo "ENABLED_LANGUAGES=es" >> .env
+
+      - name: Build and start stack
+        run: docker compose up -d --build
+
+      - name: Wait for /health (up to 150 s)
+        run: |
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:8000/health > /dev/null; then
+              echo "App is healthy after $((i * 5))s"
+              exit 0
+            fi
+            echo "Attempt $i/30 — retrying in 5s…"
+            sleep 5
+          done
+          echo "App did not become healthy within 150s"
+          docker compose logs app
+          exit 1
+
+      - name: Readiness probe (/ready)
+        run: curl -sf http://localhost:8000/ready
+
+      - name: Smoke — POST /parse returns tokens
+        run: |
+          curl -sf \
+            -X POST \
+            -H "Content-Type: application/json" \
+            -H "X-User-Id: smoke-user" \
+            -d '{"text": "El gato come pescado.", "language": "es"}' \
+            http://localhost:8000/parse \
+          | jq -e '.tokens | length > 0'
+
+      - name: Smoke — GET /health is idempotent
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8000/health)
+          [ "$STATUS" = "200" ] || (echo "Expected 200, got $STATUS"; exit 1)
+
+      - name: Dump logs on failure
+        if: failure()
+        run: docker compose logs
+
+      - name: Tear down
+        if: always()
+        run: docker compose down -v
