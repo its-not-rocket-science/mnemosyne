@@ -386,3 +386,147 @@ class TestPluggablePools:
         ctx = LessonContext.from_capabilities(caps)
         assert ctx.tense_pool is None
         assert ctx.mood_pool is None
+
+
+# ── Latin suffix hints and Greek article agreement ─────────────────────────────
+
+
+class TestLatinSuffixHintsInLesson:
+    """Latin noun suffix hints (case_hint/number_hint/gender_hint/ambiguity_note)
+    should appear as labelled fields in vocabulary lessons."""
+
+    def _fields(self, lesson_data: dict) -> dict[str, str]:
+        lesson = build_lesson(
+            object_id="la-test",
+            obj_type="vocabulary",
+            canonical_form="amicorum",
+            display_label="amicorum",
+            lesson_data=lesson_data,
+        )
+        return {f.label: f.value for f in lesson.fields}
+
+    def test_case_hint_rendered(self):
+        fields = self._fields({"lemma": "amicus", "pos": "NOUN", "case_hint": "genitive"})
+        assert "Case (hint)" in fields
+        assert fields["Case (hint)"] == "genitive"
+
+    def test_number_hint_rendered(self):
+        fields = self._fields({"lemma": "amicus", "pos": "NOUN", "number_hint": "plural"})
+        assert "Number (hint)" in fields
+        assert fields["Number (hint)"] == "plural"
+
+    def test_gender_hint_rendered(self):
+        fields = self._fields({"lemma": "amicus", "pos": "NOUN", "gender_hint": "masculine"})
+        assert "Gender (hint)" in fields
+        assert fields["Gender (hint)"] == "masculine"
+
+    def test_ambiguity_note_rendered(self):
+        fields = self._fields({
+            "lemma": "portum", "pos": "NOUN",
+            "case_hint": "accusative",
+            "ambiguity_note": "Could also be dative singular of a 4th-declension noun.",
+        })
+        assert "Ambiguity" in fields
+        assert "dative" in fields["Ambiguity"]
+
+    def test_all_hints_together(self):
+        fields = self._fields({
+            "lemma": "amicus", "pos": "NOUN",
+            "case_hint": "genitive",
+            "number_hint": "plural",
+            "gender_hint": "masculine",
+            "ambiguity_note": "Could be nominative plural of amicus.",
+        })
+        assert fields["Case (hint)"] == "genitive"
+        assert fields["Number (hint)"] == "plural"
+        assert fields["Gender (hint)"] == "masculine"
+        assert "Ambiguity" in fields
+
+    def test_no_hints_no_extra_fields(self):
+        fields = self._fields({"lemma": "amicus", "pos": "NOUN"})
+        assert "Case (hint)" not in fields
+        assert "Number (hint)" not in fields
+        assert "Gender (hint)" not in fields
+        assert "Ambiguity" not in fields
+
+
+class TestGreekArticleAgreementInLesson:
+    """article_agrees_with in lesson_data should produce an 'Article agrees' field
+    in both vocabulary and conjugation lessons."""
+
+    _ART = {"case": "nominative", "gender": "masculine", "number": "singular"}
+
+    def test_vocabulary_article_agrees_field(self):
+        lesson = build_lesson(
+            object_id="grc-test",
+            obj_type="vocabulary",
+            canonical_form="λογος",
+            display_label="λόγος",
+            lesson_data={
+                "lemma": "λόγος", "pos": "NOUN",
+                "article_agrees_with": self._ART,
+            },
+        )
+        fields = {f.label: f.value for f in lesson.fields}
+        assert "Article agrees" in fields
+        val = fields["Article agrees"]
+        assert "nominative" in val
+        assert "masculine" in val
+        assert "singular" in val
+
+    def test_vocabulary_article_agrees_separator(self):
+        lesson = build_lesson(
+            object_id="grc-test2",
+            obj_type="vocabulary",
+            canonical_form="λογος",
+            display_label="λόγος",
+            lesson_data={
+                "lemma": "λόγος", "pos": "NOUN",
+                "article_agrees_with": self._ART,
+            },
+        )
+        fields = {f.label: f.value for f in lesson.fields}
+        # Values joined by " · "
+        assert " · " in fields["Article agrees"]
+
+    def test_conjugation_article_agrees_field(self):
+        lesson = build_lesson(
+            object_id="grc-conj",
+            obj_type="conjugation",
+            canonical_form="ειμι:present:indicative:1:singular:active",
+            display_label="ἦν",
+            lesson_data={
+                "lemma": "εἰμί",
+                "tense": "imperfect", "mood": "indicative",
+                "person": "3", "number": "singular",
+                "article_agrees_with": self._ART,
+            },
+        )
+        fields = {f.label: f.value for f in lesson.fields}
+        assert "Article agrees" in fields
+
+    def test_no_article_agrees_no_field(self):
+        lesson = build_lesson(
+            object_id="grc-none",
+            obj_type="vocabulary",
+            canonical_form="λογος",
+            display_label="λόγος",
+            lesson_data={"lemma": "λόγος", "pos": "NOUN"},
+        )
+        fields = {f.label: f.value for f in lesson.fields}
+        assert "Article agrees" not in fields
+
+    def test_partial_article_data_renders_available_keys(self):
+        lesson = build_lesson(
+            object_id="grc-partial",
+            obj_type="vocabulary",
+            canonical_form="λογος",
+            display_label="λόγος",
+            lesson_data={
+                "lemma": "λόγος", "pos": "NOUN",
+                "article_agrees_with": {"case": "genitive", "gender": "any", "number": "plural"},
+            },
+        )
+        fields = {f.label: f.value for f in lesson.fields}
+        assert "Article agrees" in fields
+        assert "genitive" in fields["Article agrees"]

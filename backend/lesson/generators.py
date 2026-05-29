@@ -587,6 +587,24 @@ def _build_vocabulary(b: _B) -> LessonResponse:
     if note := b.lesson_data.get("confidence_note"):
         fields.append(LessonField(label="Note", value=note))
 
+    # Latin noun suffix hints — case/number/gender inferred from suffix rules for
+    # tokens not found in the morph index.
+    if case_hint := b.lesson_data.get("case_hint"):
+        fields.append(LessonField(label="Case (hint)", value=case_hint))
+    if number_hint := b.lesson_data.get("number_hint"):
+        fields.append(LessonField(label="Number (hint)", value=number_hint))
+    if gender_hint := b.lesson_data.get("gender_hint"):
+        fields.append(LessonField(label="Gender (hint)", value=gender_hint))
+    if amb := b.lesson_data.get("ambiguity_note"):
+        fields.append(LessonField(label="Ambiguity", value=amb))
+
+    # Greek article agreement — case/gender/number inferred from the immediately
+    # preceding definite article.
+    if art := b.lesson_data.get("article_agrees_with"):
+        parts = " · ".join(art[k] for k in ("case", "gender", "number") if art.get(k))
+        if parts:
+            fields.append(LessonField(label="Article agrees", value=parts))
+
     drills: list[Drill] = [ShadowingDrill(type="shadowing", text=b.display_label)]
 
     mc = _make_mc_drill(
@@ -694,6 +712,12 @@ def _build_conjugation(b: _B) -> LessonResponse:
         fields.append(LessonField(label="Separable verb", value=sep_label))
     if note := b.lesson_data.get("confidence_note"):
         fields.append(LessonField(label="Note", value=note))
+
+    # Greek article agreement \u2014 case/gender/number from immediately preceding article.
+    if art := b.lesson_data.get("article_agrees_with"):
+        parts = " \u00b7 ".join(art[k] for k in ("case", "gender", "number") if art.get(k))
+        if parts:
+            fields.append(LessonField(label="Article agrees", value=parts))
 
     drills: list[Drill] = [ShadowingDrill(type="shadowing", text=surface)]
 
