@@ -1045,6 +1045,19 @@ body.player-active .reader-nowplaying {
   color: var(--accent);
 }
 
+.rec-card__cefr-badge {
+  display: inline-block;
+  padding: 0 0.35em;
+  border-radius: 0.25em;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  vertical-align: middle;
+}
+
 .recommended-reading-card h4 {
   margin: 0;
   font-size: 0.875rem;

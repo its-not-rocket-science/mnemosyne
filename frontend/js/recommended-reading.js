@@ -15,14 +15,20 @@ import { API_BASE } from './config.js'
 const COUNTDOWN_MS = 4000
 const TRIGGER_PROGRESS = 0.7
 const PREFETCH_PROGRESS = 0.5
+const CEFR_STORAGE_KEY = 'mnemosyne.cefr.level'
 
 const languageSelect = document.querySelector('#language')
+const cefrSelect     = document.querySelector('#cefr-level')
 const resultsSection = document.querySelector('#results-section')
 const results = document.querySelector('#results')
 const pickerTextarea = document.querySelector('#picker-text')
 const pickerUseBtn = document.querySelector('#picker-use-btn')
 const a11yLive = document.querySelector('#a11y-live')
 const scrollArea = document.querySelector('.app-shell__scroll-area')
+
+function selectedCefrLevel() {
+  return cefrSelect?.value || localStorage.getItem(CEFR_STORAGE_KEY) || ''
+}
 
 let currentRecommendations = []
 let lastRecommendationData = null
@@ -140,6 +146,7 @@ function renderAlternatives(listEl, alternatives) {
       <div class="recommended-reading-card__meta">
         <span>${escapeHtml(item.is_continuation ? t('rec_continue') : t('rec_option'))}</span>
         <span>${escapeHtml(item.difficulty_label ? t(`difficulty_${item.difficulty_label}`) || item.difficulty_label : t('rec_matched'))}</span>
+        ${item.cefr_level ? `<span class="rec-card__cefr-badge">${escapeHtml(item.cefr_level)}</span>` : ''}
         <span>${Number(item.difficulty || 0).toFixed(2)}</span>
       </div>
       <h4>${escapeHtml(title)}</h4>
@@ -176,6 +183,7 @@ function renderPanel() {
     <div class="rec-panel__featured recommended-reading-card recommended-reading-card--chosen">
       <div class="recommended-reading-card__meta">
         <span>${escapeHtml(chosen.difficulty_label || t('rec_matched'))}</span>
+        ${chosen.cefr_level ? `<span class="rec-card__cefr-badge">${escapeHtml(chosen.cefr_level)}</span>` : ''}
         <span>${Number(chosen.difficulty || 0).toFixed(2)}</span>
       </div>
       <h4>${escapeHtml(title)}</h4>
@@ -364,6 +372,8 @@ async function loadRecommendations(showEmpty = false) {
   const requestId = ++recommendationRequestId
   try {
     let url = `${API_BASE}/recommend?language=${encodeURIComponent(language)}&limit=12`
+    const cefrLevel = selectedCefrLevel()
+    if (cefrLevel) url += `&cefr=${encodeURIComponent(cefrLevel)}`
     if (_excludeDocId) url += `&exclude_source_document_id=${encodeURIComponent(_excludeDocId)}`
     if (_excludeParsedTextId) url += `&exclude_parsed_text_id=${encodeURIComponent(_excludeParsedTextId)}`
     const response = await fetch(url, { headers: getAuthHeaders() })
@@ -416,6 +426,20 @@ function init() {
 
   languageSelect?.addEventListener('change', refreshForLanguageChange)
   document.addEventListener('mnemosyne:language-changed', refreshForLanguageChange)
+
+  // Restore persisted CEFR level on load
+  const savedCefr = localStorage.getItem(CEFR_STORAGE_KEY)
+  if (savedCefr && cefrSelect) cefrSelect.value = savedCefr
+
+  cefrSelect?.addEventListener('change', () => {
+    const level = cefrSelect.value
+    if (level) localStorage.setItem(CEFR_STORAGE_KEY, level)
+    else localStorage.removeItem(CEFR_STORAGE_KEY)
+    recommendationRequestId += 1
+    clearRecommendations()
+    resetProgress()
+    queueMicrotask(onScroll)
+  })
 
   // Reset and re-check when new results load
   if (results) {
