@@ -673,9 +673,10 @@
   transition: opacity 0.12s ease;
 }
 
+/* ::before type chip superseded by JS #annotation-tooltip popover */
 .reader-annotation:hover::before,
 .reader-annotation:focus-visible::before {
-  opacity: 1;
+  opacity: 0;
 }
 
 .reader-annotation:focus-visible {
@@ -1019,6 +1020,46 @@ body.player-active .reader-nowplaying {
 
 @media (forced-colors: active) {
   .reader-annotation--jump-flash { outline: 2px solid Highlight; }
+}
+
+
+/* ── Annotation hover tooltip ────────────────────────────────────────────────── */
+
+#annotation-tooltip {
+  position: fixed;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  padding: 0.4em 0.65em;
+  background: var(--text-primary);
+  color: var(--surface);
+  border-radius: 4px;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  pointer-events: none;
+  max-inline-size: 220px;
+  word-break: break-word;
+}
+
+#annotation-tooltip[hidden] { display: none; }
+
+.annotation-tooltip__type {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.65;
+}
+
+.annotation-tooltip__label {
+  font-weight: 500;
+}
+
+@media (forced-colors: active) {
+  #annotation-tooltip { border: 1px solid ButtonText; }
+}
 
 
 /* ── Feature: Annotation note badge ─────────────────────────────────────────── */

@@ -120,6 +120,7 @@ const appFilterBar       = document.querySelector('#app-filter-bar')
 const nowPlayingBar      = document.querySelector('#now-playing-bar')
 const readingProgress    = document.querySelector('#reading-progress')
 const annotationMinimap  = document.querySelector('#annotation-minimap')
+const annotationTooltip  = document.querySelector('#annotation-tooltip')
 
 // Accessibility
 const a11yLive         = document.querySelector('#a11y-live')
@@ -1725,6 +1726,72 @@ async function _openCorpusDrills() {
 
 corpusDrillsBtn?.addEventListener('click', _openCorpusDrills)
 
+// ── Annotation hover tooltip ──────────────────────────────────────────────────
+
+function _showAnnotationTooltip(mark) {
+  if (!annotationTooltip) return
+  const typeLabel = mark.dataset.typeLabel ?? ''
+  const label     = mark.dataset.label ?? ''
+  if (!typeLabel && !label) return
+
+  annotationTooltip.innerHTML = ''
+  if (typeLabel) {
+    const chip = document.createElement('span')
+    chip.className   = 'annotation-tooltip__type'
+    chip.textContent = typeLabel
+    annotationTooltip.appendChild(chip)
+  }
+  if (label) {
+    const el = document.createElement('span')
+    el.className   = 'annotation-tooltip__label'
+    el.textContent = label
+    annotationTooltip.appendChild(el)
+  }
+
+  annotationTooltip.removeAttribute('hidden')
+  annotationTooltip.removeAttribute('aria-hidden')
+
+  requestAnimationFrame(() => {
+    const rect = mark.getBoundingClientRect()
+    const tipW  = annotationTooltip.offsetWidth
+    const tipH  = annotationTooltip.offsetHeight
+    const viewW = window.innerWidth
+    const left  = Math.max(8, Math.min(rect.left + rect.width / 2 - tipW / 2, viewW - tipW - 8))
+    const top   = rect.top >= tipH + 10 ? rect.top - tipH - 6 : rect.bottom + 6
+    annotationTooltip.style.left = `${left}px`
+    annotationTooltip.style.top  = `${top}px`
+  })
+}
+
+function _hideAnnotationTooltip() {
+  if (!annotationTooltip) return
+  annotationTooltip.setAttribute('hidden', '')
+  annotationTooltip.setAttribute('aria-hidden', 'true')
+}
+
+results.addEventListener('mouseover', e => {
+  const mark = e.target?.closest?.('.reader-annotation')
+  if (mark) _showAnnotationTooltip(mark)
+  else _hideAnnotationTooltip()
+})
+
+results.addEventListener('mouseout', e => {
+  if (!e.relatedTarget?.closest?.('.reader-annotation')) _hideAnnotationTooltip()
+})
+
+results.addEventListener('focusin', e => {
+  const mark = e.target?.closest?.('.reader-annotation')
+  if (mark) _showAnnotationTooltip(mark)
+})
+
+results.addEventListener('focusout', e => {
+  if (!e.relatedTarget?.closest?.('.reader-annotation')) _hideAnnotationTooltip()
+})
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !annotationTooltip?.hasAttribute('hidden')) _hideAnnotationTooltip()
+})
+
 paneBackdrop?.addEventListener('click', () => detailPane?.hide())
 
 // Navigate from a confusable-family link inside the detail pane.
@@ -2424,6 +2491,7 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam, de
     mark.dataset.level     = String(TYPE_LEVEL[item.type] ?? 1)
     // mark.dataset.typeLabel = TYPE_LABELS[item.type] ?? item.type
     mark.dataset.typeLabel = t(TYPE_LABEL_KEYS[item.type] ?? 'type_unknown')
+    mark.dataset.label     = item.label ?? ''
     mark.setAttribute('role', 'button')
     mark.setAttribute('tabindex', '0')
     const typeLong  = TYPE_LABELS_LONG_I18N[currentUiLang()]?.[`type_${item.type}_long`] 
