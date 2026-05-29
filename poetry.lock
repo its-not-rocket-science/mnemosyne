@@ -1072,7 +1072,7 @@ version = "0.23.1"
 description = "Kiwi, the Korean Tokenizer for Python"
 optional = false
 python-versions = "*"
-groups = ["dev"]
+groups = ["main", "dev"]
 files = [
     {file = "kiwipiepy-0.23.1-cp314-cp314t-macosx_10_15_x86_64.whl", hash = "sha256:d9c088627153475b4192836ccada3f2684e6dd9e52d8c131b76defe946c2d159"},
     {file = "kiwipiepy-0.23.1-cp314-cp314t-macosx_11_0_arm64.whl", hash = "sha256:3d8467f9f4e79f130af79ae74fb7cd38316c2443a345c90b5c1fd68d719dc207"},
@@ -1086,6 +1086,7 @@ files = [
     {file = "kiwipiepy-0.23.1-cp39-abi3-win_amd64.whl", hash = "sha256:61ddc5bcd5ca728d85039e0c3b83ae5d6b4999188b7e170fa5ddb1adb0dce221"},
     {file = "kiwipiepy-0.23.1.tar.gz", hash = "sha256:6800e64eefe09c9f00c08802a2facba7a84b6f2d8d32d3f5c811a29b451753d0"},
 ]
+markers = {main = "extra == \"korean\""}
 
 [package.dependencies]
 kiwipiepy_model = ">=0.23,<0.24"
@@ -1098,10 +1099,11 @@ version = "0.23.0"
 description = "Model for kiwipiepy"
 optional = false
 python-versions = "*"
-groups = ["dev"]
+groups = ["main", "dev"]
 files = [
     {file = "kiwipiepy_model-0.23.0.tar.gz", hash = "sha256:498a22f5585e6c4a162423d7557eb3ee3f71cddc6e0aeb2650c50467e85933e2"},
 ]
+markers = {main = "extra == \"korean\""}
 
 [[package]]
 name = "langcodes"
@@ -3290,8 +3292,9 @@ dev = ["pytest", "setuptools"]
 
 [extras]
 cjk = ["jieba", "pypinyin"]
+korean = ["kiwipiepy"]
 
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "3b0dddacf0eb5596f3e8a24423aad9e5fd6ea907d12a0bfd0ee7c75ff729621a"
+content-hash = "f8e9241215d76571b9a8296a0734a48c3a03b1bbd392339704b49c10b487b730"
