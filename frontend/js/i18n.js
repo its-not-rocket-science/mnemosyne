@@ -63,6 +63,8 @@ const STRINGS = {
     textarea_placeholder:   'Paste or type text here\u2026',
     picker_char_count:      '{{count}} / {{limit}} characters',
     picker_text_too_long:   'Text is too long. Maximum: {{limit}} characters.',
+    difficulty_label:       'Difficulty:',
+    difficulty_indicative:  'indicative',
     btn_parse:              'Parse text',
     results_heading:        'Sentence lessons',
     results_empty:          'Choose some text above to see lessons here.',
