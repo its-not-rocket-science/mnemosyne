@@ -1,6 +1,6 @@
 # Beta Gap Report — Mnemosyne
 
-*Originally written 2026-04-15. Updated 2026-05-28 to reflect feature-maturity pass (Priority 1–8 complete).*
+*Originally written 2026-04-15. Updated 2026-05-28 (feature-maturity pass, Priority 1–8 complete). Updated 2026-05-29 (items 7–12 complete; auth/deps fixes; 4 468 passing tests).*
 
 All private alpha and public beta blockers are resolved. All vision items V1–V5 are
 implemented. The system is at or beyond the original 12-week plan. This document is
@@ -12,7 +12,7 @@ tier.
 ## What is solid (do not second-guess)
 
 - **Core loop.** Parse → lesson → review → recommend is complete, tested, and persistent.
-  3 680+ passing tests (full suite as of 2026-05-28 feature-maturity pass).
+  4 468 passing tests (full suite as of 2026-05-29).
 - **Practice activities.** Detail pane exposes scored retell, typed drill, comprehension, and
   mini-quiz practice panels. Every practice check dispatches `pane-practice-check` → `submitReview(objectId, quality)` → FSRS `/review` endpoint, so practice directly updates spaced-repetition state. Session score and next-interval feedback shown inline.
 - **FSRS-5.** Pure Python, deterministic, no external dependencies. Per-user calibration
@@ -135,11 +135,12 @@ issues were fixed; automated static a11y tests cover 38 ARIA/CSS invariants; Tes
 A human keyboard-only walkthrough and NVDA/VoiceOver smoke test have not been run.
 See `MANUAL_ACCESSIBILITY_TEST.md` for the structured session results template.
 
-**Full spaCy-model morphological plugins for additional languages** — Hindi,
-Turkish, and Finnish now have suffix-rule morphology-light plugins (no model
-required); full spaCy-model-backed versions with richer agreement/case analysis
-remain open. Each would require installing a suitable model and expanding the
-suffix logic into full morphological extraction.
+**Full spaCy-model morphological plugins for Hindi and Turkish** — Finnish was
+upgraded to full spaCy (`fi_core_news_sm`) with 15-case morphology, tense/mood/voice,
+vowel harmony, and negation AUX. Hindi and Turkish remain morphology-light (suffix-rule)
+because no spaCy 3.8 model exists for either language. This is an honest capability
+declaration, not a code gap; adding full morphology would require a non-spaCy dependency
+(e.g., Stanza, UDPipe) and is a separate decision.
 
 **Portuguese (`pt`) — done**: `pt_core_news_sm`; vocabulary, conjugation, agreement,
 grammar patterns (ser/estar copula, ter_perfect, ir_near_future, estar_progressive),
@@ -154,12 +155,12 @@ conditional, reflexive). avere/essere auxiliary distinction documented.
 60 tests in `test_italian_spacy.py`.
 Install: `python -m spacy download it_core_news_sm`.
 
-**Classical-text lexicon depth** — Latin and Koine Greek now have ~3 400 and ~27 000
+**Classical-text lexicon depth** — Latin and Koine Greek have ~3 400 and ~27 000
 morphologically-annotated forms respectively (UD ITTB + PROIEL/MorphGNT), plus curated
-A1–B1 vocabularies in the harvest pipeline. Perseus Digital Library / Logeion API
-integration would further improve attested-form coverage and gloss quality for forms
-outside these corpora. The offline script infrastructure (harvest_language_data.py) is
-ready to ingest additional lexicon sources.
+A1–B1 vocabularies. `backend/dictionary/logeion.py` (2026-05-29) now provides an async
+Logeion client (Lewis & Short for `la`, LSJ for `grc`) wired into `enrichment.py` as a
+fallback when Wiktionary returns None. Forms outside both the local data and Logeion will
+still surface without a gloss.
 
 **`source_progression` reading continuity** — **done**: `GET /reading/{id}` and
 `PATCH /reading/{id}` expose the per-(user, document) reading position.
@@ -169,12 +170,9 @@ in-progress documents and sorts continuation sentences (at or after
 `next_position`) first within the difficulty window, with an `is_continuation`
 flag in each response item. 14 new tests in `test_source_progression.py`.
 
-**Grammatical label localisation** — Both lesson prose (`backend/lesson/l10n.py`) and
-frontend UI strings (`frontend/js/i18n.js`) are now localised. The one remaining
-English-only layer is the terminal grammatical label values (person `"third"`, number
-`"singular"`, tense `"present"`, mood `"indicative"`) produced by `generators.py`.
-For most learners the mixed output is adequate; full label localisation would require a
-second lookup table in `l10n.py`.
+**Grammatical label localisation** — **done** (2026-05-29): lesson prose, frontend UI
+strings, POS labels, gender/number fields, Latin suffix hints, and Greek article-agreement
+values all run through `gram_label()` in `l10n.py`. See item 11 below.
 
 ---
 
@@ -192,9 +190,11 @@ This section documents known limitations and future work.*
 7. ~~**`RECOMMEND_UI_I18N` keys — frontend wiring**~~ — **done** (2026-05-29): `reasonFor()` in `recommended-reading.js` uses `recommendation_reason` → `RECOMMEND_UI_I18N` key as primary reason text (falls back to heuristic). Both featured and alternative cards render `provenance` via `.recommended-reading-card__provenance`; label localised via `recI18n().provenance_label`.
 8. ~~**CEFR A2–C2 vocabulary tables / corpus CEFR tagging**~~ — **done** (2026-05-29): Vocab tables A1–C2 already existed. Root cause was `build_entry()` never writing `CorpusIngestionRow`, so `recommend.py`'s outer join always returned NULL for `cefr_equivalent`. Fixed: `build_entry()` now upserts `CorpusIngestionRow` (delete-then-insert) on successful ingestion; `cefr_equivalent` uses `entry.effective_cefr` or falls back to `levels.to_cefr()` (so JLPT/HSK/TOPIK entries auto-map without explicit override). 3 new tests in `test_corpus_build.py`.
 9. ~~**Full spaCy morphology for fi**~~ / **hi/tr remain morphology-light** — **done for fi (2026-05-29)**: `fi_core_news_sm` plugin code was already complete (15-case system, tense/mood/voice, vowel harmony, negation AUX, 27 tests). Model was simply missing from Dockerfile and CI. Both now updated. Hindi: no spaCy 3.8 model available — suffix-rule plugin is the best available without adding non-spaCy heavy deps. Turkish: same (no official spaCy 3.8 Turkish model). hi/tr morphology-light status is an honest capability declaration, not a code gap.
-10. **Perseus/Logeion API integration** — Latin/Greek lexicon depth limited to ~3 400 / ~27 000 attested forms. API integration would improve coverage of rare forms.
+10. ~~**Perseus/Logeion API integration**~~ — **done** (2026-05-29): `backend/dictionary/logeion.py` implements an async Logeion client (Lewis & Short for `la`, LSJ for `grc`) following the `wiktionary.py` pattern. `enrichment.py` tries Logeion as a fallback after Wiktionary returns None for `la`/`grc`. 14 tests in `test_logeion.py`; 2 enrichment fallback tests added to `test_dictionary.py`. Also fixed: `respx` and `pydantic[email]` added to dev deps (test_dictionary.py was silently uncollectable); JS VM context patched for `_REASON_KEY`/`recI18n` (broken since cb4c757).
 11. ~~**Grammatical label localisation**~~ — **done** (2026-05-29): "pos" category added to `_GRAM_LABELS` in `l10n.py` (bare POS labels for all 11 UI languages). `_build_vocabulary()` and `_build_inflection()` now call `gram_label("pos", ...)` for the "Part of speech" field and MC pool; gender/number fields in vocabulary also localised. Latin suffix hints (case_hint/number_hint/gender_hint) and Greek article_agrees_with values run through `gram_label()`. 16 new tests in `TestGrammaticalLabelLocalisation`.
 12. ~~**Docker Compose end-to-end smoke test in CI**~~ — **done** (2026-05-29): `.github/workflows/smoke.yml` added. Triggers on backend/frontend/Dockerfile/docker-compose/alembic/pyproject changes. Builds full stack, polls `/health` (30×5s), asserts `/ready` → 200, `POST /parse` → tokens present. `ENABLED_LANGUAGES=es` limits plugin load for speed. Logs dumped on failure; always tears down with `docker compose down -v`.
+13. ~~**bcrypt / passlib incompatibility**~~ — **done** (2026-05-29): passlib 1.7.4 is abandoned and incompatible with bcrypt ≥ 4.0 (`__about__` removed in 4.0; 72-byte enforcement in 5.0 raises ValueError). Replaced with direct `bcrypt` usage in `backend/auth/passwords.py`. Hash format (`$2b$12$…`) unchanged; existing stored hashes remain valid.
+14. ~~**Chinese plugin dev dependency gap**~~ — **done** (2026-05-29): `jieba` and `pypinyin` were optional runtime extras (`poetry install --extras cjk`) but not installed in the dev environment, causing 8 Chinese plugin tests to fail with `AttributeError: _posseg`. Added both to the dev dependency group; widened version constraints (`^0.42`/`^0.50` → `>=0.42`/`>=0.50`). CI `poetry install` now picks them up automatically.
 
 ---
 
