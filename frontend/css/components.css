@@ -1083,6 +1083,12 @@ body.player-active .reader-nowplaying {
   font-style: italic;
 }
 
+.recommended-reading-card__provenance {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
 .recommended-reading-card__actions {
   margin-block-start: auto;
   padding-block-start: 0.5rem;

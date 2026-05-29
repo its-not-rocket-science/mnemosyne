@@ -10,7 +10,7 @@
 */
 
 import { getAuthHeaders } from './auth.js'
-import { t } from './i18n.js'
+import { t, currentUiLang, RECOMMEND_UI_I18N } from './i18n.js'
 import { API_BASE } from './config.js'
 const COUNTDOWN_MS = 4000
 const TRIGGER_PROGRESS = 0.7
@@ -72,7 +72,19 @@ function passageText(item) {
   return normalizeMojibake(item.text || '')
 }
 
+function recI18n() {
+  return RECOMMEND_UI_I18N[currentUiLang()] ?? RECOMMEND_UI_I18N.en
+}
+
+const _REASON_KEY = {
+  level_match:   'reason_level_match',
+  continuing:    'reason_continuing',
+  closest_match: 'reason_closest_match',
+}
+
 function reasonFor(item) {
+  const key = _REASON_KEY[item.recommendation_reason]
+  if (key) return recI18n()[key] ?? RECOMMEND_UI_I18N.en[key] ?? ''
   const unknownPct = Math.round((item.unknown_ratio || 0) * 100)
   const parts = []
   if (item.is_continuation) parts.push(t('rec_continues'))
@@ -152,6 +164,7 @@ function renderAlternatives(listEl, alternatives) {
       <h4>${escapeHtml(title)}</h4>
       <p class="recommended-reading-card__text">${escapeHtml(focusSentence)}</p>
       <p class="recommended-reading-card__reason">${escapeHtml(reasonFor(item))}</p>
+      ${item.provenance ? `<p class="recommended-reading-card__provenance">${escapeHtml(recI18n().provenance_label)}: ${escapeHtml(item.provenance)}</p>` : ''}
       <div class="recommended-reading-card__actions">
         <button type="button" class="button-primary recommended-reading-card__study">
           ${escapeHtml(t('rec_study'))}
@@ -189,6 +202,7 @@ function renderPanel() {
       <h4>${escapeHtml(title)}</h4>
       <p class="recommended-reading-card__text">${escapeHtml(focusSentence)}</p>
       <p class="recommended-reading-card__reason">${escapeHtml(reasonFor(chosen))}</p>
+      ${chosen.provenance ? `<p class="recommended-reading-card__provenance">${escapeHtml(recI18n().provenance_label)}: ${escapeHtml(chosen.provenance)}</p>` : ''}
     </div>
     <div class="rec-panel__actions passage-transition__actions">
       <button type="button" class="button-primary rec-panel__continue">
