@@ -12,7 +12,7 @@ import {
   deleteReview,
   countPendingReviews,
 } from './offline.js'
-import { initUiLanguage, t, ti, currentUiLang, TYPE_LABELS_LONG_I18N } from './i18n.js'
+import { initUiLanguage, t, ti, currentUiLang, TYPE_LABELS_LONG_I18N, CAPABILITY_LABELS_I18N } from './i18n.js'
 import { initReviewSession } from './review-session.js'
 import { openDetail, closeDetail } from './layout.js'
 import { API_BASE } from './config.js'
@@ -181,6 +181,14 @@ function _transportReset() {
 // Stores the last-rendered sentences and their TTS tag for playback controls.
 let currentSentences = []
 let currentTtsTag    = ''
+
+// ── Reading auto-advance state ─────────────────────────────────────────────────
+let _currentSourceDocId   = null  // set by _loadSource; null for pasted/url texts
+let _currentSentenceIdx   = -1    // sentence index of the item last opened in the pane
+const _sentenceRatedIds   = new Map() // sentenceIdx → Set<objectId> of rated items
+
+// ── Sentence translation state ─────────────────────────────────────────────────
+const _sentenceTranslations = new Map() // sentenceIdx → {text, attribution} | null
 
 let currentContentType    = 'pasted_text'
 let currentFilename       = null
@@ -928,6 +936,10 @@ loadLessonCloseBtn?.addEventListener('click', () => loadLessonDialog?.close())
 
 async function _loadSource(sourceId, language) {
   loadLessonDialog?.close()
+  corpusBrowserDialog?.close()
+  _currentSourceDocId = sourceId
+  _sentenceRatedIds.clear()
+  _sentenceTranslations.clear()
   setStatus(t('loading'))
   try {
     const resp = await fetch(`${API_BASE}/sources/${sourceId}`, { headers: getAuthHeaders() })
@@ -1060,6 +1072,26 @@ async function _runDifficultyEstimate() {
     label.textContent = t('difficulty_label')
 
     pickerDifficulty.replaceChildren(label, badge)
+
+    const _CAP_KEY_MAP = {
+      full:              'cap_label_full',
+      morphology_light:  'cap_label_morphology_light',
+      dictionary:        'cap_label_dictionary',
+      segmentation_only: 'cap_label_segmentation_only',
+    }
+    const caps = languageCapabilities.get(lang)
+    if (caps) {
+      const capKey  = _CAP_KEY_MAP[caps.analysis_depth] ?? null
+      const capText = capKey
+        ? (CAPABILITY_LABELS_I18N[currentUiLang]?.[capKey] ?? caps.analysis_depth_label)
+        : caps.analysis_depth_label
+      if (capText) {
+        const chip = document.createElement('span')
+        chip.className = 'picker-difficulty__cap'
+        chip.textContent = capText
+        pickerDifficulty.appendChild(chip)
+      }
+    }
 
     if (!data.confident) {
       const note = document.createElement('span')
@@ -1389,6 +1421,7 @@ results.addEventListener('lesson-open', async (event) => {
     ?? event.target
   const sentenceCard = originEl?.closest?.('.sentence-card')
   const sentenceText = sentenceCard?.querySelector('.sentence-card__text')?.textContent ?? ''
+  _currentSentenceIdx = parseInt(sentenceCard?.dataset.sentenceIndex ?? '-1', 10)
 
   const phrase = originEl?.getAttribute?.('aria-label') ?? objectId
   announce(ti('aria_loading_details', { phrase }))
@@ -1550,8 +1583,92 @@ detailPane?.addEventListener('pane-practice-check', ({ detail }) => {
         reviewBucket:      payload.review_bucket,
       },
     }))
+
+    // Auto-advance when all items in the current sentence have been rated.
+    _trackSentenceRating(objectId)
   })
 })
+
+function _trackSentenceRating(objectId) {
+  const idx = _currentSentenceIdx
+  if (idx < 0 || idx >= currentSentences.length) return
+  let rated = _sentenceRatedIds.get(idx)
+  if (!rated) { rated = new Set(); _sentenceRatedIds.set(idx, rated) }
+  rated.add(objectId)
+  const sentence  = currentSentences[idx]
+  const ratable   = sentence.learnable_objects.map(o => o.id).filter(Boolean)
+  if (ratable.length > 0 && ratable.every(id => rated.has(id))) {
+    _autoAdvanceSentence(idx)
+  }
+}
+
+function _autoAdvanceSentence(doneIdx) {
+  const nextIdx  = doneIdx + 1
+  const nextCard = results?.querySelector(`[data-sentence-index="${nextIdx}"]`)
+  if (nextCard) {
+    nextCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+    nextCard.classList.add('sentence-card--done')
+    requestAnimationFrame(() => nextCard.classList.add('sentence-card--done-flash'))
+    setTimeout(() => {
+      nextCard.classList.remove('sentence-card--done', 'sentence-card--done-flash')
+    }, 900)
+  }
+  if (_currentSourceDocId) {
+    void fetch(`${API_BASE}/reading/${encodeURIComponent(_currentSourceDocId)}`, {
+      method:  'PATCH',
+      headers: { ...getAuthHeaders(), 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ sentences_read: 1 }),
+    }).catch(() => { /* non-fatal: progression update best-effort */ })
+  }
+}
+
+// ── Sentence translation fetch ────────────────────────────────────────────────
+
+async function _fetchSentenceTranslation(sentenceIdx, text, sourceLang, el) {
+  const cached = _sentenceTranslations.get(sentenceIdx)
+  if (cached !== undefined) {
+    _renderSentenceTranslation(el, cached)
+    return
+  }
+  el.textContent = t('sentence_translating')
+  try {
+    const resp = await fetch(`${API_BASE}/translate`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
+      body:    JSON.stringify({
+        text,
+        source_language: sourceLang,
+        target_language: currentUiLang(),
+      }),
+    })
+    if (!resp.ok) throw new Error(resp.status)
+    const data = await resp.json()
+    const result = data.translation
+      ? { text: data.translation, attribution: data.attribution ?? null }
+      : null
+    _sentenceTranslations.set(sentenceIdx, result)
+    _renderSentenceTranslation(el, result)
+  } catch {
+    _sentenceTranslations.set(sentenceIdx, null)
+    _renderSentenceTranslation(el, null)
+  }
+}
+
+function _renderSentenceTranslation(el, result) {
+  if (!result) {
+    el.textContent = t('sentence_translation_na')
+    el.dataset.state = 'error'
+    return
+  }
+  el.textContent = result.text
+  el.removeAttribute('data-state')
+  if (result.attribution) {
+    const attr = document.createElement('span')
+    attr.className   = 'reader-sentence__translation-attr'
+    attr.textContent = result.attribution
+    el.appendChild(attr)
+  }
+}
 
 paneBackdrop?.addEventListener('click', () => detailPane?.hide())
 
@@ -1600,6 +1717,189 @@ detailPane?.addEventListener('pane-navigate', async (event) => {
     })
   } catch { /* ignore — confusable may not be in store yet */ }
 })
+
+
+// ── Corpus browser ────────────────────────────────────────────────────────────
+
+const corpusBrowserDialog   = document.querySelector('#corpus-browser-dialog')
+const corpusBrowserCloseBtn = document.querySelector('#corpus-browser-close-btn')
+const openCorpusBrowserBtn  = document.querySelector('#open-corpus-browser-btn')
+const corpusBrowserSearch   = document.querySelector('#corpus-browser-search')
+const corpusBrowserLang     = document.querySelector('#corpus-browser-lang')
+const corpusBrowserType     = document.querySelector('#corpus-browser-type')
+const corpusBrowserList     = document.querySelector('#corpus-browser-list')
+const corpusBrowserStatus   = document.querySelector('#corpus-browser-status')
+const corpusBrowserCount    = document.querySelector('#corpus-browser-count')
+const corpusBrowserMoreBtn  = document.querySelector('#corpus-browser-more-btn')
+
+const _CORPUS_PAGE_SIZE = 20
+let _corpusOffset = 0
+let _corpusTotal  = 0
+let _corpusSearchTimer = null
+
+function _corpusParams() {
+  const p = new URLSearchParams()
+  const q    = corpusBrowserSearch?.value.trim()
+  const lang = corpusBrowserLang?.value
+  const type = corpusBrowserType?.value
+  if (lang)  p.set('language', lang)
+  if (type)  p.set('content_type', type)
+  if (q)     p.set('q', q)
+  p.set('limit', String(_CORPUS_PAGE_SIZE))
+  p.set('offset', String(_corpusOffset))
+  return p
+}
+
+function _buildCorpusItem(item) {
+  const li = document.createElement('li')
+  li.className = 'corpus-browser-list__item'
+
+  const btn = document.createElement('button')
+  btn.type = 'button'
+  btn.className = 'corpus-browser-list__btn'
+
+  const titleSpan = document.createElement('span')
+  titleSpan.className = 'corpus-browser-list__title'
+  titleSpan.textContent = item.title || item.language
+
+  const meta = document.createElement('span')
+  meta.className = 'corpus-browser-list__meta'
+
+  const langTag = document.createElement('span')
+  langTag.className = 'corpus-browser-list__tag'
+  langTag.textContent = item.language.toUpperCase()
+  meta.appendChild(langTag)
+
+  if (item.char_count) {
+    const chars = document.createElement('span')
+    chars.className = 'corpus-browser-list__chars'
+    chars.textContent = ti('corpus_char_count', { n: item.char_count.toLocaleString() })
+    meta.appendChild(chars)
+  }
+
+  const openBtn = document.createElement('button')
+  openBtn.type = 'button'
+  openBtn.className = 'corpus-browser-list__open'
+  openBtn.textContent = t('corpus_open_btn')
+  openBtn.addEventListener('click', (e) => {
+    e.stopPropagation()
+    _loadSource(item.id, item.language)
+  })
+
+  btn.appendChild(titleSpan)
+  btn.appendChild(meta)
+  btn.appendChild(openBtn)
+  btn.addEventListener('click', () => _loadSource(item.id, item.language))
+
+  // Progress bar for started documents
+  if (item.started && item.sentences_total > 0) {
+    const prog = document.createElement('div')
+    prog.className = 'corpus-browser-list__progress'
+    const fill = document.createElement('span')
+    fill.className = 'corpus-browser-list__progress-fill'
+    fill.style.inlineSize = `${Math.round((item.completion_fraction ?? 0) * 100)}%`
+    prog.appendChild(fill)
+    li.appendChild(prog)
+  }
+
+  li.appendChild(btn)
+
+  const pct = Math.round((item.completion_fraction ?? 0) * 100)
+  const progressText = item.is_complete
+    ? t('source_complete')
+    : item.started
+      ? ti('source_progress_text', { pos: item.next_position, total: item.sentences_total })
+      : ''
+  btn.setAttribute('aria-label',
+    `${t('corpus_open_btn')}: ${item.title || item.language}${progressText ? ` — ${progressText}` : ''}`)
+
+  return li
+}
+
+async function _loadCorpus(append = false) {
+  if (!corpusBrowserList) return
+  if (!append) {
+    _corpusOffset = 0
+    corpusBrowserList.replaceChildren()
+  }
+  if (corpusBrowserStatus) corpusBrowserStatus.textContent = t('vocab_loading')
+  if (corpusBrowserMoreBtn) corpusBrowserMoreBtn.hidden = true
+
+  try {
+    const resp = await fetch(`${API_BASE}/corpus?${_corpusParams()}`, {
+      headers: getAuthHeaders(),
+    })
+    if (!resp.ok) throw new Error(`${resp.status}`)
+    const data = await resp.json()
+    _corpusTotal = data.total
+
+    if (corpusBrowserStatus) corpusBrowserStatus.textContent = ''
+
+    if (data.items.length === 0 && !append) {
+      const li = document.createElement('li')
+      li.className = 'corpus-browser-list__empty'
+      li.textContent = t('corpus_empty')
+      corpusBrowserList.appendChild(li)
+    } else {
+      for (const item of data.items) {
+        corpusBrowserList.appendChild(_buildCorpusItem(item))
+      }
+      _corpusOffset += data.items.length
+    }
+
+    if (corpusBrowserCount) {
+      corpusBrowserCount.textContent = ti('corpus_count', { n: _corpusTotal })
+    }
+    if (corpusBrowserMoreBtn) {
+      corpusBrowserMoreBtn.hidden = _corpusOffset >= _corpusTotal
+    }
+  } catch {
+    if (corpusBrowserStatus) corpusBrowserStatus.textContent = t('load_lesson_failed')
+  }
+}
+
+function _populateCorpusLangSelect() {
+  if (!corpusBrowserLang) return
+  const current = corpusBrowserLang.value
+  const placeholder = corpusBrowserLang.querySelector('option[value=""]')
+  const options = [...languageCapabilities.entries()]
+    .filter(([code]) => !['x-cjk-test', 'x-rtl-test'].includes(code))
+    .map(([code, caps]) => {
+      const opt = document.createElement('option')
+      opt.value = code
+      const label = t('lesson_lang_' + code)
+      opt.textContent = (label && label !== 'lesson_lang_' + code) ? label : caps.name || code
+      return opt
+    })
+  corpusBrowserLang.replaceChildren(
+    placeholder ?? (() => {
+      const o = document.createElement('option'); o.value = ''; o.textContent = t('choose_language'); return o
+    })(),
+    ...options,
+  )
+  corpusBrowserLang.value = current
+}
+
+openCorpusBrowserBtn?.addEventListener('click', async () => {
+  _populateCorpusLangSelect()
+  corpusBrowserDialog?.showModal()
+  await _loadCorpus()
+})
+
+corpusBrowserCloseBtn?.addEventListener('click', () => corpusBrowserDialog?.close())
+corpusBrowserDialog?.addEventListener('click', e => {
+  if (e.target === corpusBrowserDialog) corpusBrowserDialog.close()
+})
+
+corpusBrowserSearch?.addEventListener('input', () => {
+  clearTimeout(_corpusSearchTimer)
+  _corpusSearchTimer = setTimeout(() => _loadCorpus(), 300)
+})
+
+corpusBrowserLang?.addEventListener('change', () => _loadCorpus())
+corpusBrowserType?.addEventListener('change', () => _loadCorpus())
+
+corpusBrowserMoreBtn?.addEventListener('click', () => _loadCorpus(true))
 
 
 // ── TopNav event wiring ───────────────────────────────────────────────────────
@@ -1890,6 +2190,36 @@ function renderResults(pipelinePayload, language) {
     )
     row.dataset.debugRanges = JSON.stringify(debugRanges)
     if (debugRanges.some(r => r.status !== 'selected')) row.dataset.debugIssue = 'true'
+
+    // Translate toggle — skip when reading language matches UI language
+    if (language !== currentUiLang()) {
+      const translateBtn = document.createElement('button')
+      translateBtn.type      = 'button'
+      translateBtn.className = 'reader-sentence__translate-btn'
+      translateBtn.setAttribute('aria-expanded', 'false')
+      translateBtn.setAttribute('aria-label', t('sentence_translate'))
+      translateBtn.textContent = t('sentence_translate')
+
+      const translationEl = document.createElement('span')
+      translationEl.className = 'reader-sentence__translation'
+      translationEl.hidden    = true
+
+      translateBtn.addEventListener('click', () => {
+        const expanded = translateBtn.getAttribute('aria-expanded') === 'true'
+        if (expanded) {
+          translateBtn.setAttribute('aria-expanded', 'false')
+          translationEl.hidden = true
+        } else {
+          translateBtn.setAttribute('aria-expanded', 'true')
+          translationEl.hidden = false
+          _fetchSentenceTranslation(sentenceIdx, sentence.text, language, translationEl)
+        }
+      })
+
+      row.appendChild(translateBtn)
+      row.appendChild(translationEl)
+    }
+
     prose.appendChild(row)
   }
 

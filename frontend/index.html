@@ -185,6 +185,8 @@
           </button>
           <button type="button" id="open-vocab-browser-btn" class="ghost-button review-quick-btn"
                   data-i18n="vocab_browser_btn">My vocabulary</button>
+          <button type="button" id="open-corpus-browser-btn" class="ghost-button review-quick-btn"
+                  data-i18n="corpus_browser_btn">Corpus</button>
         </div>
 
         <!-- ── SRS stats summary ─────────────────────────────────────────────
@@ -579,6 +581,50 @@
             <button type="button" id="vocab-export-anki-btn" class="ghost-button ghost-button--small"
                     data-i18n="vocab_export_anki">↓ Anki</button>
           </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Corpus browser dialog — opened by #open-corpus-browser-btn -->
+    <dialog id="corpus-browser-dialog" class="picker-dialog corpus-browser-dialog"
+            aria-labelledby="corpus-browser-heading">
+      <div class="picker-dialog__inner stack">
+        <div class="picker-dialog__header">
+          <h2 id="corpus-browser-heading" data-i18n="corpus_browser_heading">Text library</h2>
+          <button type="button" id="corpus-browser-close-btn" class="dialog-close-btn"
+                  data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
+        </div>
+
+        <!-- Filters row -->
+        <div class="corpus-browser-filters">
+          <label for="corpus-browser-search" class="sr-only"
+                 data-i18n="corpus_filter_search_placeholder">Search titles…</label>
+          <input type="search" id="corpus-browser-search"
+                 class="corpus-browser-search"
+                 data-i18n-placeholder="corpus_filter_search_placeholder"
+                 placeholder="Search titles…"
+                 autocomplete="off" spellcheck="false">
+          <select id="corpus-browser-lang" class="ghost-select ghost-select--small"
+                  aria-label="Filter by language">
+            <option value="" data-i18n="choose_language">All languages</option>
+          </select>
+          <select id="corpus-browser-type" class="ghost-select ghost-select--small"
+                  aria-label="Filter by type">
+            <option value="" data-i18n="corpus_type_all">All types</option>
+            <option value="pasted_text" data-i18n="corpus_type_pasted">Pasted text</option>
+            <option value="uploaded_file" data-i18n="corpus_type_file">Uploaded file</option>
+          </select>
+        </div>
+
+        <p id="corpus-browser-status" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+        <p id="corpus-browser-count" class="corpus-browser-count" aria-live="polite"></p>
+
+        <ul id="corpus-browser-list" class="corpus-browser-list" role="list"
+            aria-label="Text library"></ul>
+
+        <div class="corpus-browser-footer">
+          <button type="button" id="corpus-browser-more-btn" class="ghost-button" hidden
+                  data-i18n="corpus_load_more">Load more</button>
         </div>
       </div>
     </dialog>

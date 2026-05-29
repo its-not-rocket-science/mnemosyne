@@ -670,6 +670,16 @@ export class MnemosyneDetailPane extends HTMLElement {
       `
     }).join('')
 
+    const gramChipsHtml = (lesson.morphology_axes ?? [])
+      .filter(ax => ax.value_concept_id || ax.axis_concept_id)
+      .map(ax => {
+        const conceptId = ax.value_concept_id || ax.axis_concept_id
+        const chipLabel = ax.label || ax.value || ax.axis
+        const tip       = `${esc(ax.axis)}: ${esc(chipLabel)}`
+        return /* html */`<button class="pane__concept-help pane__gram-chip" type="button" data-concept-id="${esc(conceptId)}" aria-label="${tip}" title="${tip}">${esc(chipLabel)}</button>`
+      })
+      .join('')
+
     const hasAudio        = Boolean(matchedVariant)
     const matchType       = ld.match_type || ''
     const matchTypeMeta   = matchType ? (MATCH_TYPE_META[matchType] ?? { labelKey: null, cls: 'variant' }) : null
@@ -701,6 +711,7 @@ export class MnemosyneDetailPane extends HTMLElement {
           </div>
         ` : ''}
         <p class="pane__explanation">${esc(lesson.explanation || '')}</p>
+        ${gramChipsHtml ? `<div class="pane__gram-chips">${gramChipsHtml}</div>` : ''}
         <div class="pane__translation-row" hidden>
           <p class="pane__translation-text"></p>
           <small class="pane__translation-attribution"></small>
@@ -3911,6 +3922,37 @@ export class MnemosyneDetailPane extends HTMLElement {
       }
       @media (forced-colors: active) {
         .pane__concept-help { border: 1px solid ButtonText; color: ButtonText; background: ButtonFace; }
+      }
+
+      /* ── Grammar tag chips (override circular .pane__concept-help) ─────── */
+      .pane__gram-chip {
+        inline-size: auto;
+        block-size: auto;
+        border-radius: 0.3rem;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.025em;
+        padding-block: 0.25em;
+        padding-inline: 0.55em;
+        margin-inline-start: 0;
+        vertical-align: baseline;
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 8%, Canvas);
+        border-color: color-mix(in oklch, var(--detail-accent, ${ref}) 30%, Canvas);
+        color: color-mix(in oklch, var(--detail-accent, ${ref}) 70%, CanvasText);
+      }
+      .pane__gram-chip:hover {
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 18%, Canvas);
+        border-color: color-mix(in oklch, var(--detail-accent, ${ref}) 55%, Canvas);
+      }
+      @media (forced-colors: active) {
+        .pane__gram-chip { border: 1px solid Highlight; color: HighlightText; background: Highlight; }
+      }
+
+      .pane__gram-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        margin-block: 0.6rem 0;
       }
 
       /* ── Concept help dialog (floating over the pane body) ──────────────── */

@@ -78,6 +78,106 @@
   background: color-mix(in srgb, var(--accent) 4%, var(--surface));
 }
 
+/* Auto-advance flash: brief green-tint pulse when the next sentence is
+   scrolled into view after the previous sentence's items are all rated.    */
+@keyframes sentence-done-flash {
+  0%   { background: color-mix(in srgb, var(--success, #22c55e) 18%, var(--surface)); }
+  100% { background: transparent; }
+}
+
+.sentence-card--done-flash {
+  animation: sentence-done-flash 0.9s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sentence-card--done-flash { animation: none; }
+}
+
+@media (forced-colors: active) {
+  .sentence-card--done-flash { outline: 2px solid Highlight; }
+}
+
+/* ── Sentence translate button ───────────────────────────────────────────────
+   Inline chip that appears after the sentence text; revealed on hover/focus.
+   In prose mode the button stays inline; the translation reveal uses
+   display:block to create a block break inside the inline sentence span.   */
+
+.reader-sentence__translate-btn {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding-block: 0.15em;
+  padding-inline: 0.5em;
+  margin-inline-start: 0.4em;
+  vertical-align: middle;
+  background: transparent;
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  border-radius: 0.25rem;
+  color: var(--muted);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.reader-sentence:hover .reader-sentence__translate-btn,
+.reader-sentence:focus-within .reader-sentence__translate-btn,
+.reader-sentence__translate-btn[aria-expanded="true"] {
+  opacity: 1;
+}
+
+.reader-sentence__translate-btn:hover,
+.reader-sentence__translate-btn:focus-visible {
+  color: var(--fg);
+  border-color: color-mix(in srgb, currentColor 50%, transparent);
+  outline: none;
+}
+
+.reader-sentence__translate-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-sentence__translate-btn { transition: none; }
+}
+
+/* ── Translation reveal ───────────────────────────────────────────────────── */
+
+.reader-sentence__translation {
+  display: block;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--muted);
+  padding-block: 0.25em;
+  border-block-start: 1px solid var(--border);
+  margin-block-start: 0.3em;
+}
+
+.reader-sentence__translation[data-state="error"] {
+  color: var(--error, #dc2626);
+  font-style: normal;
+}
+
+.reader-sentence__translation-attr {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-style: normal;
+  opacity: 0.6;
+  margin-inline-start: 0.5em;
+}
+
+@media (forced-colors: active) {
+  .reader-sentence__translate-btn {
+    border-color: ButtonText;
+    color: ButtonText;
+    opacity: 1;
+  }
+  .reader-sentence__translation {
+    border-color: ButtonText;
+  }
+}
+
 /* Pill list — <ul>/<li> gives AT the item count; reset UA list styles so the
    pills render as an inline flex row without bullets or indentation. */
 .sentence-card__pills {
