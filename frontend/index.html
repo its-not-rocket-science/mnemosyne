@@ -545,8 +545,14 @@
 
         <div class="vocab-browser-footer">
           <p id="vocab-browser-count" class="vocab-browser-count" aria-live="polite"></p>
-          <button type="button" id="vocab-browser-more-btn" class="ghost-button" hidden
-                  data-i18n="vocab_load_more">Load more</button>
+          <div class="vocab-browser-footer__actions">
+            <button type="button" id="vocab-browser-more-btn" class="ghost-button" hidden
+                    data-i18n="vocab_load_more">Load more</button>
+            <button type="button" id="vocab-export-csv-btn" class="ghost-button ghost-button--small"
+                    data-i18n="vocab_export_csv">↓ CSV</button>
+            <button type="button" id="vocab-export-anki-btn" class="ghost-button ghost-button--small"
+                    data-i18n="vocab_export_anki">↓ Anki</button>
+          </div>
         </div>
       </div>
     </dialog>

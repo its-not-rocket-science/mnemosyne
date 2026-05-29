@@ -25,6 +25,8 @@ assert.ok(html.includes('id="vocab-browser-level"'),    'vocab-browser-level sel
 assert.ok(html.includes('id="vocab-browser-sort"'),     'vocab-browser-sort select must exist')
 assert.ok(html.includes('id="vocab-browser-list"'),     'vocab-browser-list must exist')
 assert.ok(html.includes('id="vocab-browser-more-btn"'), 'vocab-browser-more-btn must exist')
+assert.ok(html.includes('id="vocab-export-csv-btn"'),   'vocab-export-csv-btn must exist')
+assert.ok(html.includes('id="vocab-export-anki-btn"'),  'vocab-export-anki-btn must exist')
 assert.ok(html.includes('id="vocab-browser-count"'),    'vocab-browser-count must exist')
 assert.ok(html.includes('id="vocab-browser-status"'),   'vocab-browser-status must exist')
 console.log('✓ HTML: all vocab-browser elements present')
@@ -72,6 +74,9 @@ const REQUIRED_KEYS = [
   'vocab_count',
   'vocab_empty',
   'vocab_loading',
+  'vocab_export_csv',
+  'vocab_export_anki',
+  'vocab_export_busy',
 ]
 for (const key of REQUIRED_KEYS) {
   assert.ok(i18n.includes(key), `i18n.js must define ${key}`)
@@ -88,6 +93,10 @@ assert.ok(mainJs.includes('vocabBrowserMoreBtn'),   'main.js must reference voca
 assert.ok(mainJs.includes('_loadVocab'),            'main.js must define _loadVocab')
 assert.ok(mainJs.includes('_vocabParams'),          'main.js must define _vocabParams')
 assert.ok(mainJs.includes('/users/me/vocabulary'),  'main.js must call /users/me/vocabulary endpoint')
+assert.ok(mainJs.includes('vocabExportCsvBtn'),     'main.js must reference vocabExportCsvBtn')
+assert.ok(mainJs.includes('vocabExportAnkiBtn'),    'main.js must reference vocabExportAnkiBtn')
+assert.ok(mainJs.includes('_downloadVocabExport'),  'main.js must define _downloadVocabExport')
+assert.ok(mainJs.includes('/users/me/vocabulary/export'), 'main.js must call export endpoint')
 console.log('✓ main.js: vocab browser functions and references wired')
 
 // open button wired
@@ -127,5 +136,31 @@ assert.ok(mainJs.includes('_VOCAB_PAGE_SIZE'), 'main.js must define _VOCAB_PAGE_
 assert.ok(mainJs.includes('_vocabOffset'),     'main.js must track _vocabOffset')
 assert.ok(mainJs.includes('_vocabTotal'),      'main.js must track _vocabTotal')
 console.log('✓ main.js: pagination state variables defined')
+
+// ── Export: filters forwarded to export endpoint ──────────────────────────────
+
+const downloadFn = mainJs.slice(
+  mainJs.indexOf('async function _downloadVocabExport'),
+  mainJs.indexOf('async function _downloadVocabExport') + 1500,
+)
+assert.ok(downloadFn.includes("format === 'csv'"),   '_downloadVocabExport must branch on csv format')
+assert.ok(downloadFn.includes("format === 'anki'"),  '_downloadVocabExport must branch on anki format')
+assert.ok(downloadFn.includes('language'),           '_downloadVocabExport must forward language filter')
+assert.ok(downloadFn.includes('level'),              '_downloadVocabExport must forward level filter')
+assert.ok(downloadFn.includes('createObjectURL'),    '_downloadVocabExport must use object URL for download')
+assert.ok(downloadFn.includes('revokeObjectURL'),    '_downloadVocabExport must revoke object URL after download')
+assert.ok(downloadFn.includes('content-disposition'), '_downloadVocabExport must parse Content-Disposition filename')
+console.log('✓ main.js: _downloadVocabExport forwards filters, handles blob download correctly')
+
+// Export buttons wired
+assert.ok(
+  mainJs.includes("vocabExportCsvBtn?.addEventListener('click', () => _downloadVocabExport('csv'))"),
+  'CSV button must be wired to _downloadVocabExport'
+)
+assert.ok(
+  mainJs.includes("vocabExportAnkiBtn?.addEventListener('click', () => _downloadVocabExport('anki'))"),
+  'Anki button must be wired to _downloadVocabExport'
+)
+console.log('✓ main.js: export buttons wired to correct format')
 
 console.log('\nAll vocab-browser tests passed.')
