@@ -29,16 +29,17 @@ Sources
 
 Known limitations
 ─────────────────
-  Noun/adjective morphological coverage is now broad (~220 000 forms).
-  Verb morphological coverage remains limited to the ITTB dev set (~3 400
-  forms); irregular and rare verb forms fall back to suffix heuristics.
-  Forms outside the annotated corpus fall back to dictionary-mode output.
-  No paradigm inference.
+  Noun/adjective morphological coverage is broad (~257 000 forms, la_morph.json).
+  Verb morphological coverage: ~615 000 forms in la_verb_morph.db (SQLite, lazily
+  opened), covering ~5 400 verb lemmas from kaikki Wiktionary paradigm tables.
+  Verb forms not in la_verb_morph.db fall back to suffix heuristics; remaining
+  forms fall back to dictionary-mode output.
 """
 from __future__ import annotations
 
 import json
 import re
+import sqlite3
 import unicodedata
 from functools import lru_cache
 from pathlib import Path
@@ -227,6 +228,47 @@ def _morph() -> dict[str, dict]:
     return json.loads(path.read_text("utf-8"))["entries"]
 
 
+# ── Verb morphological SQLite index ──────────────────────────────────────────
+
+_VERB_DB_CON: sqlite3.Connection | None = None
+_VERB_DB_MISSING = False  # set True once we confirm the file is absent
+
+
+def _verb_db() -> sqlite3.Connection | None:
+    """Return a cached read-only SQLite connection to la_verb_morph.db, or None."""
+    global _VERB_DB_CON, _VERB_DB_MISSING
+    if _VERB_DB_MISSING:
+        return None
+    if _VERB_DB_CON is None:
+        path = _DATA / "la_verb_morph.db"
+        if not path.exists():
+            _VERB_DB_MISSING = True
+            return None
+        _VERB_DB_CON = sqlite3.connect(f"file:{path}?mode=ro", uri=True, check_same_thread=False)
+    return _VERB_DB_CON
+
+
+_VERB_DB_FIELDS = ("lemma", "tense", "mood", "voice", "person", "number", "verbform")
+
+
+def _lookup_verb_morph(form_key: str) -> dict[str, str] | None:
+    """Look up a normalised Latin verb form in la_verb_morph.db."""
+    con = _verb_db()
+    if con is None:
+        return None
+    row = con.execute(
+        "SELECT lemma,tense,mood,voice,person,number,verbform FROM verb_morph WHERE form=?",
+        (form_key,),
+    ).fetchone()
+    if row is None:
+        return None
+    result: dict[str, str] = {}
+    for field, val in zip(_VERB_DB_FIELDS, row):
+        if val is not None:
+            result[field] = val
+    return result or None
+
+
 def _lookup(key: str) -> dict[str, str] | None:
     """Curated → kaikki lemma → kaikki inflection → None."""
     if key in _CURATED:
@@ -393,11 +435,10 @@ class LatinPlugin:
             proverb_tradition="none",
             classical_or_scriptural_allusion="none",
             notes=(
-                "Verb forms annotated as conjugation type when found in ITTB morph index "
-                "(~3 400 forms). Imperfect/future active and infinitive endings also "
-                "detected via suffix rules with moderate confidence. Prepositions, "
-                "conjunctions, and particles emitted as grammar type. "
-                "Forms outside ITTB fall back to suffix or dictionary mode."
+                "Verb forms looked up in la_verb_morph.db (~615 000 annotated verb forms "
+                "from kaikki Wiktionary paradigm tables for ~5 400 lemmas). "
+                "Imperfect/future/infinitive endings also detected via suffix rules. "
+                "Prepositions, conjunctions, and particles emitted as grammar type."
             ),
         ),
     )
@@ -480,16 +521,19 @@ class LatinPlugin:
 
             elif entry is not None and not is_lemma and entry["pos"] == "verb":
                 # Inflection-resolved verb: only emit conjugation if we have
-                # tense+mood (C9 contract).  Suffix rules cover imperfect/future/
-                # infinitives; forms without a match fall back to vocabulary.
-                verb_morph = _extract_latin_verb_morph(key)
+                # tense+mood (C9 contract).
+                # Priority: suffix rules (infinitive/imperfect/future — clear endings)
+                #           → SQLite verb index (all other paradigm slots)
+                #           → vocabulary fallback.
                 lesson_data = {
                     "citation_form": entry["citation"],
                     "gloss":         entry["gloss"],
                     "grammar_note":  entry.get("grammar_note", ""),
                     "surface_form":  token,
                 }
+                verb_morph = _extract_latin_verb_morph(key)
                 if verb_morph:
+                    # Suffix rule fired (infinitive, imperfect, future active).
                     lesson_data.update(verb_morph)
                     lesson_data["confidence_note"] = _SUFFIX_NOTE
                     morph_tag = ":".join(f"{k}={v}" for k, v in sorted(verb_morph.items()))
@@ -502,16 +546,54 @@ class LatinPlugin:
                         confidence=0.55,
                     ))
                 else:
-                    lesson_data["lemma"]           = entry["citation"]
-                    lesson_data["confidence_note"] = _DICT_ONLY_NOTE
-                    candidates.append(CandidateObject(
-                        canonical_form=key,
-                        surface_form=token,
-                        type="vocabulary",
-                        label=token,
-                        lesson_data=lesson_data,
-                        confidence=0.50,
-                    ))
+                    # Suffix rule miss — consult SQLite verb index.
+                    db_feats = _lookup_verb_morph(key)
+                    if db_feats and "tense" in db_feats and "mood" in db_feats:
+                        for f in ("tense", "mood", "voice", "person", "number", "verbform"):
+                            if f in db_feats:
+                                lesson_data[f] = db_feats[f]
+                        morph_tag = ":".join(
+                            f"{f}={db_feats[f]}"
+                            for f in sorted(db_feats)
+                            if f != "lemma" and f in db_feats
+                        )
+                        candidates.append(CandidateObject(
+                            canonical_form=f"{key}:{morph_tag}" if morph_tag else key,
+                            surface_form=token,
+                            type="conjugation",
+                            label=token,
+                            lesson_data=lesson_data,
+                            confidence=0.78,
+                        ))
+                    elif db_feats and "verbform" in db_feats:
+                        # Non-finite without tense+mood (rare in kaikki but possible).
+                        for f in ("tense", "mood", "voice", "person", "number", "verbform"):
+                            if f in db_feats:
+                                lesson_data[f] = db_feats[f]
+                        morph_tag = ":".join(
+                            f"{f}={db_feats[f]}"
+                            for f in sorted(db_feats)
+                            if f != "lemma" and f in db_feats
+                        )
+                        candidates.append(CandidateObject(
+                            canonical_form=f"{key}:{morph_tag}" if morph_tag else key,
+                            surface_form=token,
+                            type="conjugation",
+                            label=token,
+                            lesson_data=lesson_data,
+                            confidence=0.75,
+                        ))
+                    else:
+                        lesson_data["lemma"]           = entry["citation"]
+                        lesson_data["confidence_note"] = _DICT_ONLY_NOTE
+                        candidates.append(CandidateObject(
+                            canonical_form=key,
+                            surface_form=token,
+                            type="vocabulary",
+                            label=token,
+                            lesson_data=lesson_data,
+                            confidence=0.50,
+                        ))
 
             elif entry is not None:
                 # Inflection-resolved non-verb (noun/adj/etc.)
@@ -569,27 +651,55 @@ class LatinPlugin:
                 ))
 
             else:
-                lesson_data = {"lemma": key, "confidence_note": _UNKNOWN_NOTE}
-                noun_hint = _extract_latin_noun_suffix_hint(key)
-                if noun_hint:
-                    hint_feats, amb_note = noun_hint
-                    if "case" in hint_feats:
-                        lesson_data["case_hint"]   = hint_feats["case"]
-                    if "number" in hint_feats:
-                        lesson_data["number_hint"] = hint_feats["number"]
-                    if "gender" in hint_feats:
-                        lesson_data["gender_hint"] = hint_feats["gender"]
-                    if amb_note:
-                        lesson_data["ambiguity_note"] = amb_note
-                    lesson_data["confidence_note"] = _NOUN_SUFFIX_NOTE
-                candidates.append(CandidateObject(
-                    canonical_form=key,
-                    surface_form=token,
-                    type="vocabulary",
-                    label=token,
-                    lesson_data=lesson_data,
-                    confidence=None,
-                ))
+                # Unknown form: not in lexicon or la_morph.json.
+                # Try the verb SQLite index before falling back to noun hints.
+                db_feats = _lookup_verb_morph(key)
+                if db_feats and ("tense" in db_feats or "verbform" in db_feats):
+                    # Found in verb DB — look up lemma entry for gloss if possible.
+                    db_lemma = db_feats.get("lemma", key)
+                    lemma_entry = _lemmas().get(db_lemma)
+                    lesson_data = {
+                        "lemma":        db_lemma,
+                        "surface_form": token,
+                    }
+                    if lemma_entry:
+                        lesson_data["citation_form"] = lemma_entry["citation"]
+                        lesson_data["gloss"]         = lemma_entry["gloss"]
+                        lesson_data["grammar_note"]  = lemma_entry.get("grammar_note", "")
+                    for f in ("tense", "mood", "voice", "person", "number", "verbform"):
+                        if f in db_feats:
+                            lesson_data[f] = db_feats[f]
+                    has_finite = "tense" in db_feats and "mood" in db_feats
+                    candidates.append(CandidateObject(
+                        canonical_form=key,
+                        surface_form=token,
+                        type="conjugation" if has_finite else "vocabulary",
+                        label=token,
+                        lesson_data=lesson_data,
+                        confidence=0.65,
+                    ))
+                else:
+                    lesson_data = {"lemma": key, "confidence_note": _UNKNOWN_NOTE}
+                    noun_hint = _extract_latin_noun_suffix_hint(key)
+                    if noun_hint:
+                        hint_feats, amb_note = noun_hint
+                        if "case" in hint_feats:
+                            lesson_data["case_hint"]   = hint_feats["case"]
+                        if "number" in hint_feats:
+                            lesson_data["number_hint"] = hint_feats["number"]
+                        if "gender" in hint_feats:
+                            lesson_data["gender_hint"] = hint_feats["gender"]
+                        if amb_note:
+                            lesson_data["ambiguity_note"] = amb_note
+                        lesson_data["confidence_note"] = _NOUN_SUFFIX_NOTE
+                    candidates.append(CandidateObject(
+                        canonical_form=key,
+                        surface_form=token,
+                        type="vocabulary",
+                        label=token,
+                        lesson_data=lesson_data,
+                        confidence=None,
+                    ))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 

@@ -641,3 +641,42 @@ class TestDeepMorphology:
         result = plugin.analyze_sentence("amabat")
         assert result.candidates[0].confidence is not None
         assert result.candidates[0].confidence < 0.80
+
+    def test_verb_db_present_indicative(self, plugin: LatinPlugin) -> None:
+        # "laudat" not in UD morph index; found in SQLite verb DB
+        result = plugin.analyze_sentence("laudat")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("tense") == "present"
+        assert c.lesson_data.get("mood") == "indicative"
+        assert c.lesson_data.get("person") == "third"
+        assert c.lesson_data.get("number") == "singular"
+        assert c.confidence is not None and c.confidence >= 0.75
+
+    def test_verb_db_perfect_active(self, plugin: LatinPlugin) -> None:
+        # "amavit" (3sg perfect active of amo) via SQLite verb DB
+        result = plugin.analyze_sentence("amavit")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("tense") == "perfect"
+        assert c.lesson_data.get("mood") == "indicative"
+        assert c.lesson_data.get("voice") == "active"
+
+    def test_verb_db_subjunctive(self, plugin: LatinPlugin) -> None:
+        # "amet" (3sg pres subj active of amo) via SQLite verb DB
+        result = plugin.analyze_sentence("amet")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("mood") == "subjunctive"
+
+    def test_verb_db_passive(self, plugin: LatinPlugin) -> None:
+        # "laudatur" (3sg pres ind passive of laudo) via SQLite verb DB
+        result = plugin.analyze_sentence("laudatur")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("voice") == "passive"
+        assert c.lesson_data.get("tense") == "present"
