@@ -187,6 +187,30 @@
                   data-i18n="vocab_browser_btn">My vocabulary</button>
         </div>
 
+        <!-- ── SRS stats summary ─────────────────────────────────────────────
+             Populated by review-session.js on auth, language change, and rating.
+        -->
+        <div class="wrap" id="srs-stats-bar" hidden aria-label="Learning stats">
+          <dl class="srs-stats">
+            <div class="srs-stat">
+              <dt class="srs-stat__label" data-i18n="stats_due">Due</dt>
+              <dd class="srs-stat__value" id="stat-due">—</dd>
+            </div>
+            <div class="srs-stat">
+              <dt class="srs-stat__label" data-i18n="stats_streak">Streak</dt>
+              <dd class="srs-stat__value" id="stat-streak">—</dd>
+            </div>
+            <div class="srs-stat">
+              <dt class="srs-stat__label" data-i18n="stats_mastered">Mastered</dt>
+              <dd class="srs-stat__value" id="stat-mastered">—</dd>
+            </div>
+            <div class="srs-stat">
+              <dt class="srs-stat__label" data-i18n="stats_today">Today</dt>
+              <dd class="srs-stat__value" id="stat-today">—</dd>
+            </div>
+          </dl>
+        </div>
+
         <!-- ── Weakness / learning profile ───────────────────────────────────
              Collapsed by default; JS shows and loads on auth + language change.
         -->
