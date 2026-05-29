@@ -376,3 +376,49 @@ class TestDeepMorphology:
         r1 = plugin.analyze_sentence("λέγει")
         r2 = plugin.analyze_sentence("λέγει")
         assert r1.candidates[0].canonical_form == r2.candidates[0].canonical_form
+
+    def test_verb_db_present_indicative(self, plugin):
+        # λύει (3sg pres ind act of λύω) via SQLite verb DB
+        result = plugin.analyze_sentence("λύει")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("tense") == "present"
+        assert c.lesson_data.get("mood") == "indicative"
+        assert c.lesson_data.get("voice") == "active"
+        assert c.lesson_data.get("person") == "third"
+        assert c.lesson_data.get("number") == "singular"
+
+    def test_verb_db_aorist_active(self, plugin):
+        # ἔλυσεν (3sg aor ind act of λύω) via SQLite verb DB
+        result = plugin.analyze_sentence("ἔλυσεν")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("tense") == "aorist"
+        assert c.lesson_data.get("mood") == "indicative"
+
+    def test_verb_db_imperfect(self, plugin):
+        # ἐλύομεν (1pl impf ind act of λύω) via SQLite verb DB
+        result = plugin.analyze_sentence("ἐλύομεν")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("tense") == "imperfect"
+
+    def test_verb_db_subjunctive(self, plugin):
+        # λύωμεν (1pl pres subj act of λύω) via SQLite verb DB
+        result = plugin.analyze_sentence("λύωμεν")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("mood") == "subjunctive"
+
+    def test_verb_db_passive(self, plugin):
+        # ἐλύθη (3sg aor ind pass of λύω) via SQLite verb DB
+        result = plugin.analyze_sentence("ἐλύθη")
+        assert len(result.candidates) == 1
+        c = result.candidates[0]
+        assert c.type == "conjugation"
+        assert c.lesson_data.get("voice") == "passive"
+        assert c.lesson_data.get("tense") == "aorist"
