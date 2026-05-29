@@ -17,7 +17,8 @@ export function initReviewSession() {
   const reviewPanel = document.getElementById('review-panel')
   const reviewBar = document.getElementById('review-bar')
   const reviewPane = document.getElementById('review-pane')
-  const badge = document.getElementById('review-due-badge')
+  const badge    = document.getElementById('review-due-badge')
+  const navBadge = document.getElementById('nav-due-badge')
   const weaknessBar = document.getElementById('weakness-graph-bar')
   const weaknessGraph = document.getElementById('weakness-graph')
   const statsBar = document.getElementById('srs-stats-bar')
@@ -96,18 +97,21 @@ export function initReviewSession() {
       const stats = await resp.json()
       const due = stats.due_now || 0
 
-      if (badge) {
+      const dueLabel = due > 99 ? '99+' : String(due)
+      const ariaLabel = `${due} item${due !== 1 ? 's' : ''} due for review`
+      for (const el of [badge, navBadge]) {
+        if (!el) continue
         if (due > 0) {
-          badge.textContent = String(due > 99 ? '99+' : due)
-          badge.removeAttribute('hidden')
-          badge.setAttribute('aria-label', `${due} item${due !== 1 ? 's' : ''} due for review`)
+          el.textContent = dueLabel
+          el.removeAttribute('hidden')
+          el.setAttribute('aria-label', ariaLabel)
         } else {
-          badge.textContent = ''
-          badge.setAttribute('hidden', '')
+          el.textContent = ''
+          el.setAttribute('hidden', '')
         }
       }
     } catch {
-      // Non-fatal — badge just stays hidden
+      // Non-fatal — badges stay hidden
     }
   }
 
@@ -153,6 +157,9 @@ export function initReviewSession() {
   refreshBadge()
   refreshStats()
   _pollTimer = setInterval(() => { refreshBadge(); refreshStats() }, 5 * 60 * 1000)
+
+  // Refresh when the tab regains focus (user returns from another tab/app)
+  window.addEventListener('focus', () => { refreshBadge(); refreshStats() })
 }
 
 export function teardownReviewSession() {
