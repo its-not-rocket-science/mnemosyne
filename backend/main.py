@@ -20,6 +20,7 @@ from backend.api.dependencies import get_plugin_registry
 from backend.api.routes.auth import router as auth_router
 from backend.core.limiter import limiter, rate_limit_exceeded_handler
 from backend.api.routes.dashboard import router as dashboard_router
+from backend.api.routes.difficulty import router as difficulty_router
 from backend.api.routes.fetch_url import router as fetch_url_router
 from backend.api.routes.languages import router as languages_router
 from backend.api.routes.lesson import router as lesson_router
@@ -315,6 +316,7 @@ async def _startup_warning_middleware(request: Request, call_next):
 
 
 app.include_router(auth_router)
+app.include_router(difficulty_router)
 app.include_router(ingest_router)
 app.include_router(fetch_url_router)
 app.include_router(parse_router)
