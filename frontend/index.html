@@ -183,6 +183,8 @@
             Review queue
             <span id="review-due-badge" class="review-due-count" hidden aria-live="polite"></span>
           </button>
+          <button type="button" id="open-vocab-browser-btn" class="ghost-button review-quick-btn"
+                  data-i18n="vocab_browser_btn">My vocabulary</button>
         </div>
 
         <!-- ── Weakness / learning profile ───────────────────────────────────
@@ -498,6 +500,53 @@
         <div class="button-row">
           <button type="button" id="save-lesson-confirm-btn" class="button-primary"
                   data-i18n="save_lesson_btn">Save lesson</button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Vocabulary browser dialog — opened by #open-vocab-browser-btn -->
+    <dialog id="vocab-browser-dialog" class="picker-dialog vocab-browser-dialog"
+            aria-labelledby="vocab-browser-heading">
+      <div class="picker-dialog__inner stack">
+        <div class="picker-dialog__header">
+          <h2 id="vocab-browser-heading" data-i18n="vocab_browser_btn">My vocabulary</h2>
+          <button type="button" id="vocab-browser-close-btn" class="dialog-close-btn"
+                  data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
+        </div>
+
+        <!-- Filters row -->
+        <div class="vocab-browser-filters">
+          <input type="search" id="vocab-browser-search"
+                 class="vocab-browser-search"
+                 data-i18n-placeholder="vocab_search_placeholder"
+                 placeholder="Search words…"
+                 autocomplete="off" spellcheck="false">
+          <select id="vocab-browser-level" class="ghost-select ghost-select--small"
+                  aria-label="Filter by CEFR level">
+            <option value="" data-i18n="cefr_all_levels">All levels</option>
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="B1">B1</option>
+            <option value="B2">B2</option>
+            <option value="C1">C1</option>
+            <option value="C2">C2</option>
+          </select>
+          <select id="vocab-browser-sort" class="ghost-select ghost-select--small"
+                  aria-label="Sort order">
+            <option value="mastery" data-i18n="vocab_sort_mastery">By mastery</option>
+            <option value="alpha" data-i18n="vocab_sort_alpha">A–Z</option>
+            <option value="due" data-i18n="vocab_sort_due">Due next</option>
+          </select>
+        </div>
+
+        <p id="vocab-browser-status" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+
+        <ul id="vocab-browser-list" class="vocab-browser-list" role="list" aria-label="Vocabulary items"></ul>
+
+        <div class="vocab-browser-footer">
+          <p id="vocab-browser-count" class="vocab-browser-count" aria-live="polite"></p>
+          <button type="button" id="vocab-browser-more-btn" class="ghost-button" hidden
+                  data-i18n="vocab_load_more">Load more</button>
         </div>
       </div>
     </dialog>

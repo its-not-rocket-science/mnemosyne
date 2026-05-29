@@ -1334,3 +1334,116 @@ body.player-active .app-shell__scroll-area {
     display: none;
   }
 }
+
+/* ── Vocabulary browser dialog ───────────────────────────────────────────────
+   Wider than the default picker-dialog to show word columns comfortably.    */
+
+.vocab-browser-dialog {
+  inline-size: min(52rem, calc(100% - 2rem));
+}
+
+.vocab-browser-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  margin-block-end: var(--space-2);
+}
+
+.vocab-browser-search {
+  flex: 1 1 12rem;
+  padding-block: 0.4rem;
+  padding-inline: 0.65rem;
+  border: 1px solid var(--border-input);
+  border-radius: 0.375rem;
+  font-size: var(--font-size-ui);
+  background: var(--surface);
+  color: var(--text);
+  min-inline-size: 0;
+}
+
+.vocab-browser-search:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.vocab-browser-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  max-block-size: 55dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.vocab-browser-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 0.3rem 0.75rem;
+  padding-block: 0.4rem;
+  padding-inline: 0.5rem;
+  border-radius: 0.375rem;
+  border-block-end: 1px solid var(--border);
+}
+
+.vocab-browser-item:last-child {
+  border-block-end: none;
+}
+
+.vocab-browser-item__word {
+  font-weight: 600;
+  font-size: var(--font-size-ui);
+}
+
+.vocab-browser-item__gloss {
+  color: var(--muted);
+  font-size: var(--font-size-label);
+  grid-column: 1;
+}
+
+.vocab-browser-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  grid-row: 1 / 3;
+  grid-column: 2;
+}
+
+.vocab-browser-item__cefr {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 0.1em;
+  padding-inline: 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--brand-purple-light);
+  color: var(--brand-purple);
+  border: 1px solid color-mix(in srgb, var(--brand-purple) 20%, transparent);
+}
+
+.vocab-browser-item__mastery {
+  font-size: var(--font-size-label);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.vocab-browser-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-block-start: var(--space-2);
+  padding-block-start: var(--space-2);
+  border-block-start: 1px solid var(--border);
+}
+
+.vocab-browser-count {
+  font-size: var(--font-size-label);
+  color: var(--muted);
+  margin: 0;
+}

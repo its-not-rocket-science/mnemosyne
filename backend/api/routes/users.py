@@ -32,6 +32,10 @@ POST  /users/me/calibrate
 GET  /users/me/export
     Return a portable JSON export of all user knowledge and preferences.
 
+GET  /users/me/vocabulary
+    Paginated JSON browse of learned vocabulary.
+    Query params: language, level (CEFR), q (search), type, sort, limit, offset.
+
 GET  /users/me/vocabulary/export
     Download vocabulary as CSV or Anki-compatible TSV.
     Query params: format (csv|anki), language, type.
@@ -70,6 +74,7 @@ from backend.models import (
     UserLanguagePreferenceRow,
     UserRow,
 )
+from pydantic import BaseModel as _BaseModel
 from backend.schemas.user import (
     FsrsParams,
     FsrsParamsUpdate,
@@ -427,6 +432,97 @@ async def set_analytics_opt_out(
         row.analytics_opt_out = opt_out
         await db.commit()
     return {"opt_out": opt_out}
+
+
+class VocabBrowseItem(_BaseModel):
+    object_id: str
+    canonical_form: str
+    display_label: str
+    language: str
+    type: str
+    gloss: str | None
+    cefr_level: str | None
+    mastery_score: float
+    total_reviews: int
+    progression_stage: str | None
+
+
+class VocabBrowsePage(_BaseModel):
+    items: list[VocabBrowseItem]
+    total: int
+    limit: int
+    offset: int
+
+
+@router.get("/me/vocabulary", response_model=VocabBrowsePage)
+async def browse_vocabulary(
+    language: str | None = Query(None),
+    level: str | None = Query(None, description="Comma-separated CEFR levels, e.g. A1,B1"),
+    q: str | None = Query(None, description="Substring search on canonical_form"),
+    type: str = Query("vocabulary"),
+    sort: Literal["mastery", "alpha", "due"] = Query("mastery"),
+    limit: int = Query(50, ge=1, le=200),
+    offset: int = Query(0, ge=0),
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> VocabBrowsePage:
+    """Paginated JSON browse of the current user's learned vocabulary.
+
+    Supports filtering by language, CEFR level, and word search.
+    Sort options: ``mastery`` (score desc), ``alpha`` (canonical_form asc),
+    ``due`` (next review ascending — soonest first).
+    """
+    from sqlalchemy import asc, desc, func as sqlfunc
+
+    join_cond = UserKnowledgeRow.object_id == CanonicalObjectRow.id
+    stmt = (
+        select(UserKnowledgeRow, CanonicalObjectRow)
+        .join(CanonicalObjectRow, join_cond)
+        .where(UserKnowledgeRow.user_id == current_user)
+    )
+
+    if language:
+        stmt = stmt.where(UserKnowledgeRow.language == language)
+    if type != "all":
+        stmt = stmt.where(CanonicalObjectRow.type == type)
+    if level:
+        levels = [lv.strip().upper() for lv in level.split(",") if lv.strip()]
+        stmt = stmt.where(CanonicalObjectRow.lesson_data["cefr_level"].as_string().in_(levels))
+    if q:
+        stmt = stmt.where(CanonicalObjectRow.canonical_form.ilike(f"%{q}%"))
+
+    count_stmt = select(sqlfunc.count()).select_from(stmt.subquery())
+    total: int = (await db.scalar(count_stmt)) or 0
+
+    if sort == "alpha":
+        stmt = stmt.order_by(asc(CanonicalObjectRow.canonical_form))
+    elif sort == "due":
+        stmt = stmt.order_by(asc(UserKnowledgeRow.next_review_at).nulls_first())
+    else:
+        stmt = stmt.order_by(desc(UserKnowledgeRow.mastery_score))
+
+    stmt = stmt.limit(limit).offset(offset)
+    rows = (await db.execute(stmt)).all()
+
+    items = []
+    for uk, co in rows:
+        ld = co.lesson_data or {}
+        cefr = ld.get("cefr_level") or get_cefr_level(co.language, co.canonical_form)
+        gloss = ld.get("gloss") or ld.get("definition") or None
+        items.append(VocabBrowseItem(
+            object_id=co.id,
+            canonical_form=co.canonical_form,
+            display_label=co.display_label or co.canonical_form,
+            language=co.language,
+            type=co.type,
+            gloss=gloss,
+            cefr_level=cefr,
+            mastery_score=round(uk.mastery_score, 4),
+            total_reviews=uk.total_reviews or 0,
+            progression_stage=uk.progression_stage,
+        ))
+
+    return VocabBrowsePage(items=items, total=total, limit=limit, offset=offset)
 
 
 @router.get("/me/vocabulary/export")

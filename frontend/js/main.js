@@ -1015,6 +1015,135 @@ async function _runDifficultyEstimate() {
 }
 
 
+// ── Vocabulary browser ────────────────────────────────────────────────────────
+
+const vocabBrowserDialog    = document.querySelector('#vocab-browser-dialog')
+const vocabBrowserCloseBtn  = document.querySelector('#vocab-browser-close-btn')
+const openVocabBrowserBtn   = document.querySelector('#open-vocab-browser-btn')
+const vocabBrowserSearch    = document.querySelector('#vocab-browser-search')
+const vocabBrowserLevel     = document.querySelector('#vocab-browser-level')
+const vocabBrowserSort      = document.querySelector('#vocab-browser-sort')
+const vocabBrowserList      = document.querySelector('#vocab-browser-list')
+const vocabBrowserStatus    = document.querySelector('#vocab-browser-status')
+const vocabBrowserCount     = document.querySelector('#vocab-browser-count')
+const vocabBrowserMoreBtn   = document.querySelector('#vocab-browser-more-btn')
+
+const _VOCAB_PAGE_SIZE = 50
+let _vocabOffset = 0
+let _vocabTotal  = 0
+let _vocabSearchTimer = null
+
+function _vocabParams() {
+  const p = new URLSearchParams()
+  const q = vocabBrowserSearch?.value.trim()
+  const lv = vocabBrowserLevel?.value
+  const sort = vocabBrowserSort?.value || 'mastery'
+  const lang = languageSelect?.value
+  if (lang)  p.set('language', lang)
+  if (q)     p.set('q', q)
+  if (lv)    p.set('level', lv)
+  p.set('sort', sort)
+  p.set('limit', String(_VOCAB_PAGE_SIZE))
+  p.set('offset', String(_vocabOffset))
+  return p
+}
+
+async function _loadVocab(append = false) {
+  if (!vocabBrowserList) return
+  if (!append) {
+    _vocabOffset = 0
+    vocabBrowserList.replaceChildren()
+  }
+  if (vocabBrowserStatus) vocabBrowserStatus.textContent = t('vocab_loading')
+  if (vocabBrowserMoreBtn) vocabBrowserMoreBtn.hidden = true
+
+  try {
+    const resp = await fetch(`${API_BASE}/users/me/vocabulary?${_vocabParams()}`, {
+      headers: getAuthHeaders(),
+    })
+    if (!resp.ok) throw new Error(`${resp.status}`)
+    const data = await resp.json()
+    _vocabTotal = data.total
+
+    if (vocabBrowserStatus) vocabBrowserStatus.textContent = ''
+
+    if (data.items.length === 0 && !append) {
+      const li = document.createElement('li')
+      li.className = 'vocab-browser-item'
+      li.textContent = t('vocab_empty')
+      vocabBrowserList.appendChild(li)
+    } else {
+      for (const item of data.items) {
+        const li = document.createElement('li')
+        li.className = 'vocab-browser-item'
+
+        const wordSpan = document.createElement('span')
+        wordSpan.className = 'vocab-browser-item__word'
+        wordSpan.textContent = item.display_label || item.canonical_form
+
+        const meta = document.createElement('span')
+        meta.className = 'vocab-browser-item__meta'
+
+        if (item.cefr_level) {
+          const cefr = document.createElement('span')
+          cefr.className = 'vocab-browser-item__cefr'
+          cefr.textContent = item.cefr_level
+          meta.appendChild(cefr)
+        }
+
+        const mastery = document.createElement('span')
+        mastery.className = 'vocab-browser-item__mastery'
+        mastery.textContent = `${Math.round(item.mastery_score * 100)}%`
+        meta.appendChild(mastery)
+
+        li.appendChild(wordSpan)
+        li.appendChild(meta)
+
+        if (item.gloss) {
+          const gloss = document.createElement('span')
+          gloss.className = 'vocab-browser-item__gloss'
+          gloss.textContent = item.gloss
+          li.appendChild(gloss)
+        }
+
+        vocabBrowserList.appendChild(li)
+      }
+      _vocabOffset += data.items.length
+    }
+
+    const shown = Math.min(_vocabOffset, _vocabTotal)
+    if (vocabBrowserCount) {
+      vocabBrowserCount.textContent = ti('vocab_count', { shown, total: _vocabTotal })
+    }
+    if (vocabBrowserMoreBtn) {
+      vocabBrowserMoreBtn.hidden = _vocabOffset >= _vocabTotal
+    }
+  } catch (err) {
+    if (vocabBrowserStatus) vocabBrowserStatus.textContent = t('parse_error_generic')
+  }
+}
+
+function _scheduleVocabSearch() {
+  clearTimeout(_vocabSearchTimer)
+  _vocabSearchTimer = setTimeout(() => _loadVocab(false), 350)
+}
+
+openVocabBrowserBtn?.addEventListener('click', () => {
+  vocabBrowserDialog?.showModal()
+  _loadVocab(false)
+})
+
+vocabBrowserCloseBtn?.addEventListener('click', () => vocabBrowserDialog?.close())
+vocabBrowserDialog?.addEventListener('cancel', (e) => {
+  if (!vocabBrowserDialog.matches(':modal')) e.preventDefault()
+})
+
+vocabBrowserSearch?.addEventListener('input', _scheduleVocabSearch)
+vocabBrowserLevel?.addEventListener('change', () => _loadVocab(false))
+vocabBrowserSort?.addEventListener('change', () => _loadVocab(false))
+vocabBrowserMoreBtn?.addEventListener('click', () => _loadVocab(true))
+
+
 // ── Status helper ─────────────────────────────────────────────────────────────
 
 function setStatus(message, state = 'idle') {
