@@ -1040,13 +1040,13 @@ files = [
 name = "jieba"
 version = "0.42.1"
 description = "Chinese Words Segmentation Utilities"
-optional = true
+optional = false
 python-versions = "*"
-groups = ["main"]
-markers = "extra == \"cjk\""
+groups = ["main", "dev"]
 files = [
     {file = "jieba-0.42.1.tar.gz", hash = "sha256:055ca12f62674fafed09427f176506079bc135638a14e23e25be909131928db2"},
 ]
+markers = {main = "extra == \"cjk\""}
 
 [[package]]
 name = "jinja2"
@@ -1898,14 +1898,14 @@ tests = ["coverage[toml] (==7.10.7)", "pytest (>=8.4.2,<9.0.0)"]
 name = "pypinyin"
 version = "0.50.0"
 description = "汉字拼音转换模块/工具."
-optional = true
+optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*, <4"
-groups = ["main"]
-markers = "extra == \"cjk\""
+groups = ["main", "dev"]
 files = [
     {file = "pypinyin-0.50.0-py2.py3-none-any.whl", hash = "sha256:a6ff9a58b8c3ba4599e5ebccf7fab7850257114be70c05a7baab435d1208358f"},
     {file = "pypinyin-0.50.0.tar.gz", hash = "sha256:72e77c4b9b78bad102aca5fefccebdb23439b02717c626039be14a78643980fb"},
 ]
+markers = {main = "extra == \"cjk\""}
 
 [[package]]
 name = "pytest"
@@ -3257,4 +3257,4 @@ cjk = ["jieba", "pypinyin"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "49ffe50f6d96f747dd62cc8b72556a9cf58a5cab706efae197de98ff87f5ca64"
+content-hash = "739fe764c866121a13dffd97ea2d644a6e50ba937d5bd6fad74dea1e1412653b"
