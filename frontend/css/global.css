@@ -711,6 +711,36 @@ select:focus-visible {
   margin-block: 0.35rem 0;
 }
 
+.picker-difficulty {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-block-size: 0;
+  margin-block: 0.3rem 0;
+  font-size: var(--font-size-label);
+  color: var(--muted);
+}
+
+.picker-difficulty__badge {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 0.1em;
+  padding-inline: 0.45em;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  background: var(--brand-purple-light);
+  color: var(--brand-purple);
+  border: 1px solid color-mix(in srgb, var(--brand-purple) 25%, transparent);
+}
+
+.picker-difficulty__note {
+  font-size: var(--font-size-label);
+  color: var(--muted);
+  font-style: italic;
+}
+
 /* ── Job progress bar ─────────────────────────────────────────────────────── */
 
 @keyframes progress-scan {

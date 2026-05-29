@@ -68,6 +68,7 @@ const pickerTextarea    = document.querySelector('#picker-text')
 const pickerFileInput   = document.querySelector('#picker-file-input')
 const pickerUseBtn      = document.querySelector('#picker-use-btn')
 const pickerStatus      = document.querySelector('#picker-status')
+const pickerDifficulty  = document.querySelector('#picker-difficulty')
 const pickerCloseBtn    = document.querySelector('#picker-close-btn')
 const pickerSampleOpenBtn = document.querySelector('#picker-sample-open-btn')
 const pickerSampleBtn   = document.querySelector('#picker-sample-btn')
@@ -363,6 +364,7 @@ languageSelect.addEventListener('change', () => {
   syncCurrentCaps()
   populateSampleLanguageSelect()
   refreshLoadLessonBtn()
+  scheduleDifficultyEstimate()
 })
 
 function syncCurrentCaps() {
@@ -469,6 +471,8 @@ function openPicker() {
   languageUserSelected = false
   textPickerDialog?.showModal()
   updatePickerCharCount()
+  _clearDifficultyBadge()
+  scheduleDifficultyEstimate()
   pickerTextarea?.focus()
 }
 
@@ -586,6 +590,7 @@ pickerFileInput?.addEventListener('change', () => {
     languageUserSelected = false
     setPickerStatus(`Loaded: ${escapeHtml(file.name)} (${(file.size / 1024).toFixed(1)} KB)`)
     scheduleLanguageDetection()
+    scheduleDifficultyEstimate()
   }).catch(error => {
     const key = error instanceof Error ? error.message : 'file_read_error'
     const translatable = ['unsupported_file_type', 'encrypted_pdf', 'corrupt_file', 'no_extractable_text', 'file_read_error']
@@ -630,6 +635,7 @@ pickerFetchUrlBtn?.addEventListener('click', async () => {
     currentFetchedTitle  = data.title || null
     languageUserSelected = false
     updatePickerCharCount()
+    scheduleDifficultyEstimate()
 
     const chars = data.char_count.toLocaleString()
     if (data.detected_language) {
@@ -663,6 +669,7 @@ pickerTextarea?.addEventListener('input', () => {
   setPickerStatus('')
   updatePickerCharCount()
   scheduleLanguageDetection()
+  scheduleDifficultyEstimate()
 })
 
 function updatePickerCharCount() {
@@ -943,6 +950,67 @@ async function _runLanguageDetection() {
     }
   } catch {
     // Detection failure is silent — always best-effort.
+  }
+}
+
+
+// ── Difficulty estimator ──────────────────────────────────────────────────────
+
+const _DIFF_DEBOUNCE_MS  = 800
+const _DIFF_MIN_CHARS    = 40
+let   _diffTimer         = null
+let   _diffLastText      = ''
+let   _diffLastLang      = ''
+
+function scheduleDifficultyEstimate() {
+  clearTimeout(_diffTimer)
+  _diffTimer = setTimeout(_runDifficultyEstimate, _DIFF_DEBOUNCE_MS)
+}
+
+function _clearDifficultyBadge() {
+  if (!pickerDifficulty) return
+  pickerDifficulty.hidden = true
+  pickerDifficulty.replaceChildren()
+}
+
+async function _runDifficultyEstimate() {
+  if (!pickerDifficulty) return
+  const text = pickerTextarea?.value.trim() ?? ''
+  const lang = languageSelect?.value ?? ''
+  if (!lang || text.length < _DIFF_MIN_CHARS) { _clearDifficultyBadge(); return }
+  if (text === _diffLastText && lang === _diffLastLang) return
+  _diffLastText = text
+  _diffLastLang = lang
+
+  try {
+    const resp = await fetch(`${API_BASE}/estimate-difficulty`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
+      body:    JSON.stringify({ text, language: lang }),
+    })
+    if (!resp.ok) { _clearDifficultyBadge(); return }
+    const data = await resp.json()
+    if (!data.estimated_cefr) { _clearDifficultyBadge(); return }
+
+    const badge = document.createElement('span')
+    badge.className = 'picker-difficulty__badge'
+    badge.textContent = data.estimated_cefr
+
+    const label = document.createElement('span')
+    label.textContent = t('difficulty_label')
+
+    pickerDifficulty.replaceChildren(label, badge)
+
+    if (!data.confident) {
+      const note = document.createElement('span')
+      note.className = 'picker-difficulty__note'
+      note.textContent = `(${t('difficulty_indicative')})`
+      pickerDifficulty.appendChild(note)
+    }
+
+    pickerDifficulty.hidden = false
+  } catch {
+    _clearDifficultyBadge()
   }
 }
 

@@ -73,6 +73,8 @@ _CONFIDENCE_NOTE = (
     "Canonical form is the raw surface token — morphological analysis unavailable. "
     "Install kiwipiepy for stem extraction and POS tagging."
 )
+_PROPN_NOTE = "Proper noun detected by kiwipiepy; canonical form uses raw surface token."
+_XR_NOTE    = "Root morpheme (XR tag); may be a noun stem in an XSV compound — confidence capped."
 
 # ── kiwipiepy lazy loader ─────────────────────────────────────────────────────
 
@@ -257,7 +259,8 @@ class KoreanPlugin:
             return CandidateObject(
                 canonical_form=cf, surface_form=form,
                 type="vocabulary", label=form,
-                lesson_data={"lemma": form, "pos": "PROPN", "_raw_tag": tag},
+                lesson_data={"lemma": form, "pos": "PROPN", "_raw_tag": tag,
+                             "confidence_note": _PROPN_NOTE},
                 confidence=0.65,
             )
 
@@ -285,7 +288,8 @@ class KoreanPlugin:
             return CandidateObject(
                 canonical_form=cf, surface_form=form,
                 type="vocabulary", label=form,
-                lesson_data={"lemma": form, "pos": "NOUN", "_raw_tag": tag},
+                lesson_data={"lemma": form, "pos": "NOUN", "_raw_tag": tag,
+                             "confidence_note": _XR_NOTE},
                 confidence=0.55,
             )
 
