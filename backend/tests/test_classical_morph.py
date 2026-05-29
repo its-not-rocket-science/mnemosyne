@@ -40,7 +40,7 @@ class TestMorphFiles:
 
     def test_grc_morph_structure(self):
         data = json.loads((LEXICONS / "grc_morph.json").read_text("utf-8"))
-        assert data["version"] == "1"
+        assert data["version"] in ("1", "2")
         assert data["language"] == "grc"
         assert isinstance(data["entries"], dict)
         assert len(data["entries"]) > 0
@@ -72,10 +72,11 @@ class TestMorphFiles:
         assert la_count > 200_000, \
             f"Expected la_morph > 200k entries after kaikki expansion; got {la_count}"
 
-    def test_grc_morph_substantial_coverage(self):
+    def test_grc_morph_expanded_coverage(self):
+        # kaikki noun/adj paradigms bring Greek morph coverage above 150k forms
         grc_count = len(json.loads((LEXICONS / "grc_morph.json").read_text("utf-8"))["entries"])
-        assert grc_count > 25_000, \
-            f"Expected grc_morph > 25k entries; got {grc_count}"
+        assert grc_count > 150_000, \
+            f"Expected grc_morph > 150k entries after kaikki expansion; got {grc_count}"
 
 
 # ── Latin plugin morphological output ─────────────────────────────────────────
