@@ -305,6 +305,21 @@ async def _run_parse_job(
             sentences_done=sentences_total,
         )
 
+        # ── Sentence mining ───────────────────────────────────────────────────
+        from backend.services.sentence_mining import mine_parsed_text
+        try:
+            async with session_factory() as db:
+                await mine_parsed_text(
+                    db,
+                    parsed_text_id=parsed_text_id,
+                    language=payload.language,
+                    user_id=user_id,
+                )
+        except Exception:
+            logger.warning(
+                "Sentence mining failed for parse_job=%s", job_id, exc_info=True
+            )
+
         # ── Dictionary / translation enrichment ───────────────────────────────
         if settings.enable_dictionary_lookup or settings.enable_translation_enrichment:
             from backend.dictionary.enrichment import enrich_objects

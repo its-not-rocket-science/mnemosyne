@@ -86,12 +86,14 @@ async def persist_chunk(
     sentences: list[SentenceResult],
     uuid_to_candidate: dict[str, tuple[str, CandidateObject]],
     user_id: str = DEFAULT_USER_ID,
-) -> None:
+) -> str:
     """Persist one parsed chunk. Flush but do not commit.
 
     Writes: ParsedText, Sentence rows, CanonicalObjectRows (upsert),
     UserKnowledgeRows (seed/update last_seen), SentenceObjectRows,
     ObjectRelationRows (upsert), SourceChunkRow.
+
+    Returns the ``parsed_text_id`` of the newly created ``ParsedText`` row.
     """
     now = datetime.now(UTC)
 
@@ -273,6 +275,7 @@ async def persist_chunk(
         char_end=char_end,
     ))
     await db.flush()
+    return parsed.id
 
 
 async def create_source_progression_row(
@@ -310,12 +313,14 @@ async def persist_ingest(
     source_url: str | None = None,
     filename: str | None = None,
     user_id: str = DEFAULT_USER_ID,
-) -> None:
+) -> str:
     """Single-chunk ingest convenience wrapper. Commits at end.
 
     Used by POST /ingest for single-passage submissions.  For multi-chunk
     corpus builds, call create_source_document_row / persist_chunk /
     create_source_progression_row directly and manage the commit yourself.
+
+    Returns the ``parsed_text_id`` of the newly created ``ParsedText`` row.
     """
     await create_source_document_row(
         db,
@@ -329,7 +334,7 @@ async def persist_ingest(
         source_url=source_url,
         filename=filename,
     )
-    await persist_chunk(
+    parsed_text_id = await persist_chunk(
         db,
         source_document_id=source_document_id,
         language=language,
@@ -350,3 +355,4 @@ async def persist_ingest(
         sentences_total=len(sentences),
     )
     await db.commit()
+    return parsed_text_id

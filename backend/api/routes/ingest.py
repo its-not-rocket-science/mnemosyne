@@ -107,8 +107,9 @@ async def ingest_text(
     # ── 5. Persist: source document + parse records ───────────────────────────
     source_document_id = str(uuid.uuid4())
     persist_exc: Exception | None = None
+    parsed_text_id: str | None = None
     try:
-        await persist_ingest(
+        parsed_text_id = await persist_ingest(
             db,
             language=payload.language,
             content_type=payload.content_type.value,
@@ -135,6 +136,17 @@ async def ingest_text(
             language=payload.language,
             count=len(sentences),
         )
+        if parsed_text_id:
+            from backend.services.sentence_mining import mine_parsed_text
+            try:
+                await mine_parsed_text(
+                    db,
+                    parsed_text_id=parsed_text_id,
+                    language=payload.language,
+                    user_id=current_user,
+                )
+            except Exception:
+                logger.warning("Sentence mining failed for /ingest", exc_info=True)
 
     logger.info(
         "ingest lang=%s content_type=%s chars=%d sentences=%d objects=%d elapsed_ms=%.1f",
