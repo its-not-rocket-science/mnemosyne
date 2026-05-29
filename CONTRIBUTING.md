@@ -20,9 +20,11 @@ python -m spacy download ru_core_news_sm   # Russian
 python -m spacy download ja_core_news_sm   # Japanese  (also: pip install sudachipy sudachidict-small)
 python -m spacy download pt_core_news_sm   # Portuguese
 python -m spacy download it_core_news_sm   # Italian
+python -m spacy download fi_core_news_sm   # Finnish
 
 # Dictionary-mode plugins — no spaCy model needed:
 # Arabic, Hebrew, Chinese (jieba), Latin, Koine Greek
+# Morphology-light (suffix rules, no model needed): Hindi, Turkish, Korean
 ```
 
 Tests that require a model are auto-skipped when the model is not installed.

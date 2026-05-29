@@ -387,10 +387,10 @@ class TestFinnishPlugin:
     def test_capabilities_honest(self):
         caps = self.plugin.capabilities
         assert caps.script_family == "latin"
-        assert caps.analysis_depth == "morphology_light"
-        assert caps.morphology_depth == "shallow"
-        assert caps.morphology_quality == "low"
-        assert caps.syntax_support is False
+        assert caps.analysis_depth == "full"
+        assert caps.morphology_depth == "rich"
+        assert caps.morphology_quality == "medium"
+        assert caps.syntax_support is True
 
     def test_tense_pool_populated(self):
         caps = self.plugin.capabilities
@@ -432,20 +432,22 @@ class TestFinnishPlugin:
         assert kaupungissa.lesson_data.get("case") == "inessive"
 
     def test_elative_case(self):
+        # spaCy lemmatizes "kaupungista" → "kaupunki"; canonical_form = lemma
         result = self.plugin.analyze_sentence("Tulen kaupungista.")
         kaupungista = next(
-            (c for c in result.candidates if c.canonical_form == "kaupungista"), None
+            (c for c in result.candidates if c.lesson_data.get("case") == "elative"), None
         )
         assert kaupungista is not None
-        assert kaupungista.lesson_data.get("case") == "elative"
+        assert kaupungista.type == "vocabulary"
 
     def test_allative_case(self):
+        # spaCy lemmatizes "koululle" → "koulu"; canonical_form = "koulu"
         result = self.plugin.analyze_sentence("Menen koululle.")
         koululle = next(
-            (c for c in result.candidates if c.canonical_form == "koululle"), None
+            (c for c in result.candidates if c.lesson_data.get("case") == "allative"), None
         )
         assert koululle is not None
-        assert koululle.lesson_data.get("case") == "allative"
+        assert koululle.type == "vocabulary"
 
     def test_plural_nominative(self):
         result = self.plugin.analyze_sentence("Koirat juoksevat.")
@@ -468,20 +470,20 @@ class TestFinnishPlugin:
         assert juoksevat.lesson_data.get("person") == "third"
 
     def test_passive_voice_emits_conjugation(self):
-        # "luetaan" = is read (passive present -taan)
+        # "luetaan" = is read (passive present); spaCy lemma="lukea"
         result = self.plugin.analyze_sentence("Kirja luetaan.")
         luetaan = next(
-            (c for c in result.candidates if c.canonical_form.startswith("luetaan")), None
+            (c for c in result.candidates if c.surface_form == "luetaan"), None
         )
         assert luetaan is not None
         assert luetaan.type == "conjugation"
         assert luetaan.lesson_data.get("voice") == "passive"
 
     def test_conditional_emits_conjugation(self):
-        # "menisi" = would go (conditional bare)
+        # "menisi" = would go (conditional); spaCy lemma="mennä"
         result = self.plugin.analyze_sentence("Hän menisi kotiin.")
         menisi = next(
-            (c for c in result.candidates if c.canonical_form.startswith("menisi")), None
+            (c for c in result.candidates if c.surface_form == "menisi"), None
         )
         assert menisi is not None
         assert menisi.type == "conjugation"
@@ -498,27 +500,31 @@ class TestFinnishPlugin:
         assert menemme.lesson_data.get("person") == "first"
         assert menemme.lesson_data.get("number") == "plural"
 
-    def test_function_word_ei(self):
+    def test_negation_aux_ei_emits_conjugation(self):
+        # "ei" = negation AUX, conjugated (finite). spaCy: AUX, VerbForm=Fin, Polarity=Neg
         result = self.plugin.analyze_sentence("Minä ei tule.")
         ei = next(
-            (c for c in result.candidates if c.canonical_form == "ei"), None
+            (c for c in result.candidates if c.surface_form == "ei"), None
         )
         assert ei is not None
-        assert ei.lesson_data.get("pos") == "function_word"
+        assert ei.type == "conjugation"
+        assert ei.lesson_data.get("polarity") == "neg"
         assert ei.confidence == 0.80
 
-    def test_confidence_float_for_suffix_hit(self):
+    def test_confidence_float_for_noun_with_case(self):
+        # "kaupungissa" = inessive NOUN; spaCy gives Case=Ine → confidence 0.80
         result = self.plugin.analyze_sentence("kaupungissa")
         cand = result.candidates[0]
-        assert cand.confidence == pytest.approx(0.45)
+        assert cand.confidence == pytest.approx(0.80)
 
-    def test_confidence_none_for_bare_stem(self):
+    def test_confidence_for_bare_nominative(self):
+        # spaCy assigns Case=Nom|Number=Sing for "auto" → confidence 0.80
         result = self.plugin.analyze_sentence("auto")
         auto = next(
             (c for c in result.candidates if c.canonical_form == "auto"), None
         )
         assert auto is not None
-        assert auto.confidence is None
+        assert auto.confidence == pytest.approx(0.80)
 
     def test_no_duplicate_candidates(self):
         result = self.plugin.analyze_sentence("talo talo talo")
@@ -547,10 +553,10 @@ class TestFinnishPlugin:
         assert forms1 == forms2
 
     def test_past_passive_emits_conjugation(self):
-        # "luettiin" = was read (passive past -ttiin)
+        # "luettiin" = was read (passive past); spaCy lemma="lukea"
         result = self.plugin.analyze_sentence("Kirja luettiin.")
         luettiin = next(
-            (c for c in result.candidates if c.canonical_form.startswith("luettiin")), None
+            (c for c in result.candidates if c.surface_form == "luettiin"), None
         )
         assert luettiin is not None
         assert luettiin.type == "conjugation"

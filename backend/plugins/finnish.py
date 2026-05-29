@@ -1,55 +1,106 @@
-"""Finnish plugin — morphology-light with case and verb suffix analysis.
+"""Finnish plugin — full spaCy ``fi_core_news_sm`` morphological analysis.
 
-BCP-47 code "fi", LTR, Latin script with Finnish diacritics (ä, ö).
+Registers as ``language_code = "fi"``.
 
-What this plugin does reliably
-──────────────────────────────
-  - Sentence splitting on standard terminal punctuation and newlines.
-  - Whitespace tokenisation (Finnish is whitespace-delimited).
-  - Vowel harmony classification: back (a/o/u) vs. front (ä/ö/y).
-    Finnish suffixes undergo vowel harmony; annotated on all tokens.
-  - Suffix-based morphological hints for nominal cases (15 cases):
-    nominative (base form), genitive -n, accusative -t/-n,
-    partitive -a/-ä/-ta/-tä, inessive -ssa/-ssä, elative -sta/-stä,
-    illative (recognised by -Vn pattern), adessive -lla/-llä,
-    ablative -lta/-ltä, allative -lle, essive -na/-nä,
-    translative -ksi, abessive -tta/-ttä,
-    instructive (plural) -in, comitative -ne.
-  - Plural markers: -t (nominative), -iden/-itten (genitive),
-    -ita/-itä (partitive plural).
-  - Verb forms with conjugation-type emission:
-    Infinitives (-a/-ä/-ta/-tä/-da/-dä), passive (-taan/-tään/-daan/-dään,
-    past passive -ttiin/-tiin), third plural present (-vat/-vät),
-    conditional (-isi-), first/second plural present (-mme/-tte),
-    imperative 3sg (-koon/-köön), past 1sg/2sg (-in/-it).
-  - Common Finnish function words and particles identified.
+─────────────────────────────────────────────────────────────────────────────
+WHAT THIS PLUGIN EXTRACTS
+─────────────────────────────────────────────────────────────────────────────
 
-Known limitations
-─────────────────
-  • Finnish morphology is highly agglutinative; only the outermost suffix
-    layer is detected. Inner layers (possessive suffixes -ni/-si/-nsa/-nsä,
-    clitic particles -ko/-kö, -kin, -kaan/-kään, -pa/-pä, -han/-hän) are
-    not parsed.
-  • Consonant gradation (k→∅, p→v, t→d etc.) means many stems cannot be
-    recovered without a morphological lexicon; lemmatisation is NOT attempted.
-  • Ambiguous suffixes (e.g. -ssa = inessive for nouns but also some verb forms)
-    may be mislabelled.
-  • No trained NLP model (fi_core_news_sm or equivalent) available.
-  • Canonical form for conjugations uses surface form + morphology tag.
+**Vocabulary** — open-class content words (NOUN, ADJ, ADV, PROPN) and
+non-finite VERB/AUX forms.
+
+  lesson_data keys: lemma, pos, case*, number*, degree*, vowel_harmony
+
+**Conjugation** — finite VERB and AUX tokens (VerbForm=Fin), annotated with:
+  • tense (present/past/unknown)
+  • mood (indicative/conditional/imperative/potential)
+  • person (first/second/third/unknown)
+  • number (singular/plural)
+  • voice (active/passive)
+
+  Finnish negation auxiliaries (ei/en/et/emme/ette/eivät) are emitted as
+  conjugation objects with Polarity=Neg noted.
+
+  lesson_data keys: lemma, surface, tense, mood, person, number, voice,
+                    vowel_harmony, polarity*
+
+─────────────────────────────────────────────────────────────────────────────
+KNOWN MODEL LIMITATIONS (fi_core_news_sm)
+─────────────────────────────────────────────────────────────────────────────
+
+- Small model; lemmatization is unreliable for many inflected forms due to
+  consonant gradation (k→∅, p→v, t→d).  Morphological features (case, tense,
+  mood, etc.) are generally more reliable than lemmas.
+- Sentence boundary detection may miss ambiguous periods (abbreviations).
+- Compound-word analysis is not performed; compounds are treated as single tokens.
+- No possessive suffix analysis (inner -ni/-si/-nsa/-nsä layer).
+- No CEFR vocabulary tables for Finnish in this release.
 """
 from __future__ import annotations
 
-import re
+import logging
+from functools import cached_property
+from typing import Any
 
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
-from backend.schemas.parse import CandidateObject, CandidateSentenceResult
+from backend.schemas.parse import CandidateObject, CandidateSentenceResult, RelationHint
 
-# ── Sentence splitting ────────────────────────────────────────────────────────
-_SENTENCE_RE = re.compile(r"[^.!?\n]+[.!?\n]?")
+logger = logging.getLogger(__name__)
 
-# ── Tokenisation ──────────────────────────────────────────────────────────────
-# Finnish letters: standard ASCII + ä (U+00E4), ö (U+00F6), å (U+00E5, rare)
-_WORD_RE = re.compile(r"[A-Za-zÄäÖöÅå]+")
+# ── POS filter ────────────────────────────────────────────────────────────────
+# Skip closed-class function words that are not pedagogically useful as vocabulary.
+_SKIP_POS = frozenset({
+    "DET", "ADP", "CCONJ", "SCONJ", "CONJ", "PUNCT", "SPACE",
+    "X", "SYM", "INTJ", "PART", "PRON",
+})
+
+# VerbForm values that indicate non-finite forms (treat as vocabulary).
+_NON_FINITE_VERBFORMS = frozenset({"Inf", "Part", "Conv"})
+
+# ── Display maps ──────────────────────────────────────────────────────────────
+_CASE_MAP: dict[str, str] = {
+    "Nom": "nominative",
+    "Gen": "genitive",
+    "Par": "partitive",
+    "Acc": "accusative",
+    "Ine": "inessive",
+    "Ela": "elative",
+    "Ill": "illative",
+    "Ade": "adessive",
+    "Abl": "ablative",
+    "All": "allative",
+    "Ess": "essive",
+    "Tra": "translative",
+    "Abe": "abessive",
+    "Ins": "instructive",
+    "Com": "comitative",
+    "Loc": "locative",
+}
+
+_TENSE_MAP: dict[str, str] = {
+    "Pres": "present",
+    "Past": "past",
+    "Fut":  "future",
+}
+
+_MOOD_MAP: dict[str, str] = {
+    "Ind": "indicative",
+    "Imp": "imperative",
+    "Cnd": "conditional",
+    "Pot": "potential",
+    "Opt": "optative",
+}
+
+_PERSON_MAP: dict[str, str] = {
+    "1": "first",
+    "2": "second",
+    "3": "third",
+}
+
+_VOICE_MAP: dict[str, str] = {
+    "Act":  "active",
+    "Pass": "passive",
+}
 
 # ── Vowel harmony ─────────────────────────────────────────────────────────────
 _BACK_VOWELS  = frozenset("aouAOU")
@@ -57,7 +108,6 @@ _FRONT_VOWELS = frozenset("äöyÄÖY")
 
 
 def _vowel_harmony(word: str) -> str:
-    """Return 'back' or 'front' based on last back/front vowel (Finnish rule)."""
     for ch in reversed(word):
         if ch in _BACK_VOWELS:
             return "back"
@@ -66,166 +116,45 @@ def _vowel_harmony(word: str) -> str:
     return "back"
 
 
-# ── Function words ────────────────────────────────────────────────────────────
-_FUNCTION_WORDS: frozenset[str] = frozenset({
-    "ja", "tai", "vai", "sekä", "mutta", "vaan", "koska", "jos", "kun",
-    "että", "kuin", "niin", "siis", "kuitenkin", "myös", "vain", "jo",
-    "ei", "en", "et", "emme", "ette", "eivät",
-    "se", "hän", "he", "minä", "sinä", "me", "te", "ne",
-    "on", "olla", "oli", "olisi", "ollut",
-    "yksi", "kaksi", "kolme", "neljä",
-    "tämä", "tuo", "nämä", "ne", "kaikki", "jokin", "joku",
-    "mikä", "kuka", "missä", "milloin", "miten", "miksi",
-    "eli", "joko", "nyt", "sitten", "jo", "vielä",
-    "hyvin", "hyvin", "paljon", "vähän",
-})
+# ── Helpers ───────────────────────────────────────────────────────────────────
 
-# ── Morphological suffix rules (longest match first) ─────────────────────────
-# (suffix, feature_dict)
-# Verb forms → emitted as "conjugation"; nominal forms → "vocabulary".
-_SUFFIX_RULES: list[tuple[str, dict]] = [
-    # ── Verb forms ──────────────────────────────────────────────────────────
-    # Passive forms (longer before shorter)
-    ("ttiin",   {"voice": "passive", "tense": "past",    "pos": "verb"}),
-    ("tiin",    {"voice": "passive", "tense": "past",    "pos": "verb"}),
-    ("taan",    {"voice": "passive", "tense": "present", "pos": "verb"}),
-    ("tään",    {"voice": "passive", "tense": "present", "pos": "verb"}),
-    ("daan",    {"voice": "passive", "tense": "present", "pos": "verb"}),
-    ("dään",    {"voice": "passive", "tense": "present", "pos": "verb"}),
-    # Third plural present -vat/-vät
-    ("vat",     {"person": "third",  "number": "plural", "tense": "present", "pos": "verb"}),
-    ("vät",     {"person": "third",  "number": "plural", "tense": "present", "pos": "verb"}),
-    # Conditional -isi- (with person endings)
-    ("isimme",  {"mood": "conditional", "person": "first",  "number": "plural",   "pos": "verb"}),
-    ("isitte",  {"mood": "conditional", "person": "second", "number": "plural",   "pos": "verb"}),
-    ("isivat",  {"mood": "conditional", "person": "third",  "number": "plural",   "pos": "verb"}),
-    ("isin",    {"mood": "conditional", "person": "first",  "number": "singular", "pos": "verb"}),
-    ("isit",    {"mood": "conditional", "person": "second", "number": "singular", "pos": "verb"}),
-    ("isi",     {"mood": "conditional", "pos": "verb"}),
-    # First/second plural present
-    ("mme",     {"person": "first",  "number": "plural",   "tense": "present", "pos": "verb"}),
-    ("tte",     {"person": "second", "number": "plural",   "tense": "present", "pos": "verb"}),
-    # Imperative 3sg -koon/-köön
-    ("koon",    {"mood": "imperative", "person": "third",  "number": "singular", "pos": "verb"}),
-    ("köön",    {"mood": "imperative", "person": "third",  "number": "singular", "pos": "verb"}),
-    # Past 1sg -in, 2sg -it (short; placed after longer rules)
-    ("in",      {"person": "first",  "number": "singular", "tense": "past",    "pos": "verb"}),
-    ("it",      {"person": "second", "number": "singular", "tense": "past",    "pos": "verb"}),
-    # ── Nominal plural ───────────────────────────────────────────────────────
-    ("itten",   {"number": "plural", "case": "genitive",  "pos": "noun"}),
-    ("iden",    {"number": "plural", "case": "genitive",  "pos": "noun"}),
-    ("ita",     {"number": "plural", "case": "partitive", "pos": "noun"}),
-    ("itä",     {"number": "plural", "case": "partitive", "pos": "noun"}),
-    # ── Nominal cases (singular) ─────────────────────────────────────────────
-    ("tta",     {"case": "abessive",    "pos": "noun_or_adjective"}),
-    ("ttä",     {"case": "abessive",    "pos": "noun_or_adjective"}),
-    ("ksi",     {"case": "translative", "pos": "noun_or_adjective"}),
-    ("lle",     {"case": "allative",    "pos": "noun_or_adjective"}),
-    ("lta",     {"case": "ablative",    "pos": "noun_or_adjective"}),
-    ("ltä",     {"case": "ablative",    "pos": "noun_or_adjective"}),
-    ("lla",     {"case": "adessive",    "pos": "noun_or_adjective"}),
-    ("llä",     {"case": "adessive",    "pos": "noun_or_adjective"}),
-    ("sta",     {"case": "elative",     "pos": "noun_or_adjective"}),
-    ("stä",     {"case": "elative",     "pos": "noun_or_adjective"}),
-    ("ssa",     {"case": "inessive",    "pos": "noun_or_adjective"}),
-    ("ssä",     {"case": "inessive",    "pos": "noun_or_adjective"}),
-    ("na",      {"case": "essive",      "pos": "noun_or_adjective"}),
-    ("nä",      {"case": "essive",      "pos": "noun_or_adjective"}),
-    ("ta",      {"case": "partitive",   "pos": "noun_or_adjective"}),
-    ("tä",      {"case": "partitive",   "pos": "noun_or_adjective"}),
-    # Partitive -a/-ä (short; placed after longer -ta/-tä to avoid shadowing)
-    ("a",       {"case": "partitive_or_infinitive", "pos": "noun_or_verb"}),
-    ("ä",       {"case": "partitive_or_infinitive", "pos": "noun_or_verb"}),
-    # Genitive/accusative -n
-    ("n",       {"case": "genitive_or_accusative", "pos": "noun_or_adjective"}),
-    # Nominative plural -t
-    ("t",       {"number": "plural", "case": "nominative", "pos": "noun_or_adjective"}),
-]
-
-_CONFIDENCE_NOTE = (
-    "Finnish morphology-light: outermost suffix analysis only. "
-    "Consonant gradation (k→∅, p→v, t→d) not resolved — lemmatisation unreliable. "
-    "Inner suffix layers (possessive -ni/-si/-nsa, clitics -ko/-kin) not parsed. "
-    "Canonical form uses surface form + morphology tag for conjugations. "
-    "No trained NLP model (fi_core_news_sm) used."
-)
-
-# Possessive suffix patterns (appear after case suffix in Finnish).
-# We detect them as a hint when the portion before the case suffix ends in one.
-_POSSESSIVE_ENDINGS: list[tuple[str, str]] = [
-    ("ni",  "first_sg"),
-    ("si",  "second_sg"),
-    ("nsa", "third_any"),
-    ("nsä", "third_any"),
-    ("mme", "first_pl"),
-    ("nne", "second_pl"),
-]
-
-# Function words that should NOT receive case suffix analysis even if the
-# word superficially matches a suffix pattern.
-_INESSIVE_GUARD: frozenset[str] = frozenset({
-    "missa", "minussa", "sinussa", "meissä", "teissä", "heissä",
-    "hänessä", "siinä", "tässä", "tuossa", "siellä", "täällä",
-})
-
-_VERB_POS = frozenset({"verb"})
+def _morph_first(tok: Any, feature: str) -> str | None:
+    vals = tok.morph.get(feature)
+    return vals[0] if vals else None
 
 
-def _detect_possessive(stem: str) -> str | None:
-    """Return possessive person label if stem ends in a possessive suffix, else None."""
-    lower = stem.lower()
-    for ending, person in _POSSESSIVE_ENDINGS:
-        if lower.endswith(ending) and len(lower) > len(ending):
-            return person
-    return None
+def _conj_canonical_form(
+    lemma: str, tense: str, mood: str, person: str, number: str, voice: str
+) -> str:
+    return f"{lemma}:{tense}:{mood}:{person}:{number}:{voice}"
 
 
-def _extract_morph(token: str) -> dict:
-    lower = token.lower()
-    # Guard: known false-positive forms for inessive
-    if lower in _INESSIVE_GUARD:
-        return {}
-    for suffix, features in _SUFFIX_RULES:
-        if lower.endswith(suffix) and len(lower) > len(suffix) + 1:
-            result = dict(features)
-            # Check if the stem (before this suffix) ends in a possessive marker
-            stem = lower[: len(lower) - len(suffix)]
-            possessive = _detect_possessive(stem)
-            if possessive:
-                result["possessive_hint"] = possessive
-            return result
-    return {}
-
+# ── Plugin ────────────────────────────────────────────────────────────────────
 
 class FinnishPlugin:
-    """Finnish morphology-light plugin.
-
-    Provides whitespace tokenisation, 15-case suffix detection, verb-form
-    suffix analysis, and conjugation-type emission for detected verb forms.
-    Capabilities honestly declared.
-    """
+    """Finnish full-morphology plugin backed by ``fi_core_news_sm``."""
 
     language_code = "fi"
-    display_name  = "Finnish (morphology-light)"
+    display_name  = "Finnish"
     direction     = "ltr"
     capabilities  = LanguageCapabilities(
         code="fi",
-        display_name="Finnish (morphology-light)",
+        display_name="Finnish",
         direction="ltr",
         script_family="latin",
         tokenization_mode="whitespace",
-        morphology_depth="shallow",
-        lesson_modes_supported=["vocabulary", "dictionary"],
-        analysis_depth="morphology_light",
+        morphology_depth="rich",
+        lesson_modes_supported=["morphology", "vocabulary"],
+        analysis_depth="full",
         segmentation_quality="medium",
         tokenization_quality="high",
-        morphology_quality="low",
-        syntax_support=False,
+        morphology_quality="medium",  # small model; lemmatization unreliable for some forms
+        syntax_support=True,
         idiom_detection=False,
         tts_lang_tag="fi",
         transliteration_scheme=None,
         tense_pool=["present", "past"],
-        mood_pool=["imperative", "conditional"],
+        mood_pool=["indicative", "conditional", "imperative", "potential"],
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="none",
@@ -233,16 +162,15 @@ class FinnishPlugin:
             cultural_references="none",
             etymology="none",
             formality_register="none",
-            grammar_nuance="stub",
+            grammar_nuance="partial",  # 15-case system + verb conjugation drilling
             pronunciation_tts="stub",
             transliteration="none",
             proverb_tradition="none",
             classical_or_scriptural_allusion="none",
             notes=(
-                "Morphology-light: 15-case suffix detection and verb-form hints. "
-                "Detected verb forms emitted as conjugation objects. "
-                "Consonant gradation not resolved; lemmatisation not performed. "
-                "No fi_core_news_sm spaCy model installed in this deployment."
+                "fi_core_news_sm: full morphological features (15 cases, tense, mood, "
+                "voice, person/number). Lemmatization unreliable for some consonant-gradation "
+                "forms (small model limitation). Vowel harmony annotated on all tokens."
             ),
         ),
     )
@@ -250,86 +178,181 @@ class FinnishPlugin:
     def __init__(self) -> None:
         self.lesson_store: dict[str, CandidateObject] = {}
 
+    @cached_property
+    def _nlp(self) -> Any:
+        try:
+            import spacy  # noqa: PLC0415
+            return spacy.load("fi_core_news_sm", disable=["ner"])
+        except ImportError as exc:
+            raise RuntimeError("spaCy is not installed.  Run: pip install spacy") from exc
+        except OSError as exc:
+            raise RuntimeError(
+                "spaCy model 'fi_core_news_sm' not found.  "
+                "Run: python -m spacy download fi_core_news_sm"
+            ) from exc
+
+    # ── LanguagePlugin protocol ────────────────────────────────────────────────
+
     def analyze_text(self, text: str) -> list[CandidateSentenceResult]:
-        return [self.analyze_sentence(s) for s in self.split_sentences(text)]
+        doc = self._nlp(text.strip())
+        results = []
+        for sent in doc.sents:
+            sent_text = sent.text.strip()
+            if not sent_text:
+                continue
+            results.append(self._analyze_tokens(sent_text, list(sent)))
+        return results
 
     def split_sentences(self, text: str) -> list[str]:
-        return [
-            m.group(0).strip()
-            for m in _SENTENCE_RE.finditer(text)
-            if m.group(0).strip()
-        ]
+        doc = self._nlp(text.strip())
+        return [s.text.strip() for s in doc.sents if s.text.strip()]
 
     def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
-        candidates: list[CandidateObject] = []
-        seen: set[str] = set()
-
-        for token in _WORD_RE.findall(sentence):
-            canonical = token.lower()
-            if canonical in seen:
-                continue
-            seen.add(canonical)
-
-            is_function = canonical in _FUNCTION_WORDS
-            morph = _extract_morph(token)
-            harmony = _vowel_harmony(token)
-            is_verb = morph.get("pos") in _VERB_POS
-
-            if is_function:
-                candidates.append(CandidateObject(
-                    canonical_form=canonical,
-                    surface_form=token,
-                    type="vocabulary",
-                    label=token,
-                    lesson_data={
-                        "lemma":         canonical,
-                        "surface_form":  token,
-                        "vowel_harmony": harmony,
-                        "pos":           "function_word",
-                    },
-                    confidence=0.80,
-                ))
-            elif is_verb and morph:
-                morph_tag = ":".join(f"{k}={v}" for k, v in sorted(morph.items()))
-                conj_canonical = f"{canonical}:{morph_tag}"
-                lesson_data: dict = {
-                    "surface_form":    token,
-                    "vowel_harmony":   harmony,
-                    "confidence_note": _CONFIDENCE_NOTE,
-                }
-                lesson_data.update(morph)
-                candidates.append(CandidateObject(
-                    canonical_form=conj_canonical,
-                    surface_form=token,
-                    type="conjugation",
-                    label=token,
-                    lesson_data=lesson_data,
-                    confidence=0.45,
-                ))
-            else:
-                lesson_data = {
-                    "lemma":         canonical,
-                    "surface_form":  token,
-                    "vowel_harmony": harmony,
-                }
-                if morph:
-                    lesson_data.update(morph)
-                    lesson_data["confidence_note"] = _CONFIDENCE_NOTE
-                else:
-                    lesson_data["confidence_note"] = _CONFIDENCE_NOTE
-                candidates.append(CandidateObject(
-                    canonical_form=canonical,
-                    surface_form=token,
-                    type="vocabulary",
-                    label=token,
-                    lesson_data=lesson_data,
-                    confidence=0.45 if morph else None,
-                ))
-
-        return CandidateSentenceResult(text=sentence, candidates=candidates)
+        doc = self._nlp(sentence)
+        return self._analyze_tokens(sentence, list(doc))
 
     def get_lesson(self, object_id: str) -> CandidateObject | None:
         return self.lesson_store.get(object_id)
+
+    # ── Token analysis ────────────────────────────────────────────────────────
+
+    def _analyze_tokens(
+        self, sentence: str, tokens: list[Any]
+    ) -> CandidateSentenceResult:
+        seen_vocab: set[str] = set()
+        seen_conj:  set[str] = set()
+
+        candidates: list[CandidateObject] = []
+        candidates.extend(self._extract_conjugations(tokens, seen_conj, seen_vocab))
+        candidates.extend(self._extract_vocabulary(tokens, seen_vocab))
+
+        return CandidateSentenceResult(text=sentence, candidates=candidates)
+
+    # ── Conjugation ───────────────────────────────────────────────────────────
+
+    def _extract_conjugations(
+        self,
+        tokens: list[Any],
+        seen_conj: set[str],
+        seen_vocab: set[str],
+    ) -> list[CandidateObject]:
+        candidates: list[CandidateObject] = []
+        for tok in tokens:
+            if tok.pos_ not in {"VERB", "AUX"}:
+                continue
+            verb_form = _morph_first(tok, "VerbForm")
+            if verb_form in _NON_FINITE_VERBFORMS:
+                continue
+            # Must have VerbForm=Fin or be a negation auxiliary
+            if verb_form not in ("Fin", None):
+                continue
+
+            lemma = tok.lemma_.lower()
+            if len(lemma) < 2:
+                continue
+
+            tense  = _TENSE_MAP.get(_morph_first(tok, "Tense") or "",  "unknown")
+            mood   = _MOOD_MAP.get(_morph_first(tok, "Mood") or "",   "unknown")
+            person = _PERSON_MAP.get(_morph_first(tok, "Person") or "", "unknown")
+            number = ("singular" if _morph_first(tok, "Number") == "Sing"
+                      else "plural" if _morph_first(tok, "Number") == "Plur"
+                      else "unknown")
+            voice  = _VOICE_MAP.get(_morph_first(tok, "Voice") or "", "unknown")
+
+            canonical = _conj_canonical_form(lemma, tense, mood, person, number, voice)
+            if canonical in seen_conj:
+                continue
+            seen_conj.add(canonical)
+            seen_vocab.add(lemma)
+
+            lesson: dict[str, Any] = {
+                "lemma":         lemma,
+                "surface":       tok.text,
+                "tense":         tense,
+                "mood":          mood,
+                "person":        person,
+                "number":        number,
+                "voice":         voice,
+                "vowel_harmony": _vowel_harmony(tok.text),
+            }
+            polarity = _morph_first(tok, "Polarity")
+            if polarity:
+                lesson["polarity"] = polarity.lower()
+
+            candidates.append(CandidateObject(
+                canonical_form=canonical,
+                surface_form=tok.text,
+                type="conjugation",
+                label=tok.text,
+                lesson_data=lesson,
+                confidence=0.80,
+                relation_hints=[RelationHint(
+                    relation_type="conjugation_of",
+                    target_canonical_form=lemma,
+                    target_type="vocabulary",
+                )],
+            ))
+        return candidates
+
+    # ── Vocabulary ────────────────────────────────────────────────────────────
+
+    def _extract_vocabulary(
+        self,
+        tokens: list[Any],
+        seen: set[str],
+    ) -> list[CandidateObject]:
+        candidates: list[CandidateObject] = []
+        for tok in tokens:
+            if tok.pos_ in _SKIP_POS or tok.is_punct or tok.is_space:
+                continue
+
+            verb_form = _morph_first(tok, "VerbForm")
+            if tok.pos_ in {"VERB", "AUX"} and verb_form not in _NON_FINITE_VERBFORMS:
+                continue
+
+            lemma = tok.lemma_.lower()
+            if len(lemma) < 2 or lemma in seen:
+                continue
+            seen.add(lemma)
+
+            data: dict[str, Any] = {
+                "lemma":         lemma,
+                "pos":           tok.pos_.lower(),
+                "vowel_harmony": _vowel_harmony(tok.text),
+            }
+
+            if tok.pos_ == "NOUN":
+                if case := _CASE_MAP.get(_morph_first(tok, "Case") or ""):
+                    data["case"] = case
+                if number_raw := _morph_first(tok, "Number"):
+                    data["number"] = "singular" if number_raw == "Sing" else "plural"
+
+            elif tok.pos_ == "ADJ":
+                if case := _CASE_MAP.get(_morph_first(tok, "Case") or ""):
+                    data["case"] = case
+                if degree := _morph_first(tok, "Degree"):
+                    data["degree"] = degree.lower()
+
+            elif tok.pos_ in {"VERB", "AUX"}:
+                if verb_form:
+                    data["verb_form"] = verb_form.lower()
+
+            confidence = 0.60 if tok.pos_ == "PROPN" else 0.80
+            if confidence < 0.70:
+                data["confidence_note"] = (
+                    "Proper noun: POS tag from fi_core_news_sm; "
+                    "lemmatization and morphology less reliable for names."
+                )
+
+            candidates.append(CandidateObject(
+                canonical_form=lemma,
+                surface_form=tok.text,
+                type="vocabulary",
+                label=tok.text,
+                lesson_data=data,
+                confidence=confidence,
+            ))
+        return candidates
 
 
 def create_plugin() -> FinnishPlugin:
