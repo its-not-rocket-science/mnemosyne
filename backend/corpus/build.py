@@ -46,10 +46,11 @@ from backend.corpus.lockfile import (
     save_lockfile,
     update_lock_entry,
 )
+from backend.corpus.levels import to_cefr
 from backend.corpus.manifest import CorpusEntry
 from backend.corpus.normalize import normalize_corpus_text
 from backend.ingestion.validator import detect_dominant_script
-from backend.models import SourceDocumentRow
+from backend.models import CorpusIngestionRow, SourceDocumentRow
 from backend.parsing.pipeline import pipeline_cache_key, run_pipeline
 from backend.parsing.plugin_loader import PluginRegistry
 from backend.schemas.ingest import ContentType
@@ -404,6 +405,30 @@ async def build_entry(
 
     # SourceProgressionRow — one per (user, document).
     try:
+        # CorpusIngestionRow carries cefr_equivalent for the /recommend?cefr= filter.
+        # Delete-then-insert handles re-ingestion (force=True) without duplicate rows.
+        cefr_eq = entry.effective_cefr or to_cefr(entry.framework.value, entry.level)
+        await db.execute(
+            delete(CorpusIngestionRow).where(
+                CorpusIngestionRow.source_document_id == source_document_id
+            )
+        )
+        now = datetime.now(tz=timezone.utc)
+        db.add(CorpusIngestionRow(
+            source_identity=si,
+            manifest_entry_hash=me_hash,
+            raw_content_hash=raw_hash,
+            normalized_content_hash=norm_hash,
+            language=entry.language,
+            framework=entry.framework.value,
+            level=entry.level,
+            cefr_equivalent=cefr_eq,
+            source_document_id=source_document_id,
+            acquired_at=now,
+            normalized_at=now,
+            ingested_at=now,
+            status="ok",
+        ))
         await create_source_progression_row(
             db,
             user_id=user_id,
