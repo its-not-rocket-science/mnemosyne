@@ -121,7 +121,7 @@ tier.
 | V4. FSRS parameter fitting | ✓ done (per-user calibration via `ReviewEventRow`) |
 | V5. PWA and offline mode | ✓ done |
 | V6. 10+ production-quality language plugins | ✓ done — 8 full morphological (es/fr/de/ru/ja/pt/it/en) + 5 dictionary-mode (ar/he/zh/la/grc) + 4 morphology-light (ko/hi/tr/fi) = 17 total. |
-| V7. Dead and historic language annotation mode | ~ partial — Latin and Koine Greek deepened to morphology-light with UD treebank annotations (ITTB, PROIEL + MorphGNT); conjugation type + tense/mood/person emitted. Perseus/Logeion API integration for full classical lexicon coverage remains open. |
+| V7. Dead and historic language annotation mode | ✓ done — Latin and Koine Greek have morphology-light annotation (UD ITTB + PROIEL/MorphGNT; ~3 400 / ~27 000 forms; conjugation type + tense/mood/person). `backend/dictionary/logeion.py` (2026-05-29) adds Logeion fallback (Lewis & Short for `la`, LSJ for `grc`) for forms outside local data. |
 
 ---
 
