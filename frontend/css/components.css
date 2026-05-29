@@ -908,19 +908,82 @@ body.player-active .reader-nowplaying {
 }
 
 .load-lesson-list__item {
-  display: contents;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
 .load-lesson-list__btn {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 0.1rem 0.75rem;
   inline-size: 100%;
   text-align: start;
-  padding: 0.55rem 0.75rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.load-lesson-list__btn:hover {
+.load-lesson-list__btn:hover,
+.load-lesson-list__btn:focus-visible {
   background: var(--surface-secondary);
+}
+
+.load-lesson-list__btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.load-lesson-list__title {
+  font-size: var(--font-size-ui);
+  font-weight: 600;
+  grid-column: 1;
+  grid-row: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.load-lesson-list__action {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  font-size: var(--font-size-label);
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+  align-self: center;
+}
+
+.load-lesson-list__progress-row {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.load-lesson-list__progress-bar {
+  flex: 1;
+  block-size: 0.25rem;
+  border-radius: 9999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.load-lesson-list__progress-fill {
+  block-size: 100%;
+  border-radius: 9999px;
+  background: var(--accent-fill);
+  transition: inline-size 0.2s ease;
+}
+
+.load-lesson-list__progress-text {
+  font-size: 0.7rem;
+  color: var(--muted);
+  white-space: nowrap;
 }
 
 .load-lesson-list__empty {
