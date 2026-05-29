@@ -28,6 +28,8 @@ from backend.models import (
     Sentence,
     SentenceObjectRow,
     SentenceReviewItemRow,
+    SourceChunkRow,
+    SourceDocumentRow,
     UserFsrsParamsRow,
     UserSentenceReviewRow,
 )
@@ -36,6 +38,7 @@ from backend.schemas.sentence_review import (
     ReviewItemSubmitRequest,
     ReviewItemSubmitResponse,
     ReviewQueueStats,
+    SentenceContextResponse,
     SentenceReviewItem,
 )
 from backend.srs.fsrs import DESIRED_RETENTION, review as fsrs_review
@@ -306,6 +309,81 @@ async def trigger_mining(
         mined=mined_count,
         skipped_duplicate=skip_count,
         sentences_processed=len(sentences),
+    )
+
+
+# ── GET /review/sentence-items/{item_id}/context ─────────────────────────────
+
+_CONTEXT_WINDOW = 2  # sentences before and after the target
+
+
+@router.get("/{item_id}/context", response_model=SentenceContextResponse)
+async def get_sentence_context(
+    item_id: str,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> SentenceContextResponse:
+    """Return up to {_CONTEXT_WINDOW} sentences before and after the review sentence.
+
+    Fetches from the same ``parsed_text`` so context is always from the exact
+    passage the learner originally read.  Returns an empty before/after list
+    when the sentence is at the start/end of its text, or when no source chunk
+    links this text to a saved document.
+    """
+    item = await db.scalar(
+        select(SentenceReviewItemRow).where(SentenceReviewItemRow.id == item_id)
+    )
+    if item is None:
+        from fastapi import HTTPException
+        raise HTTPException(status_code=404, detail="Review item not found")
+
+    sent = await db.scalar(
+        select(Sentence).where(Sentence.id == item.sentence_id)
+    )
+    if sent is None:
+        from fastapi import HTTPException
+        raise HTTPException(status_code=404, detail="Sentence not found")
+
+    # Fetch the surrounding window from the same parsed_text
+    lo = max(0, sent.position - _CONTEXT_WINDOW)
+    hi = sent.position + _CONTEXT_WINDOW
+    neighbors_result = await db.execute(
+        select(Sentence)
+        .where(
+            Sentence.parsed_text_id == sent.parsed_text_id,
+            Sentence.position >= lo,
+            Sentence.position <= hi,
+        )
+        .order_by(Sentence.position)
+    )
+    neighbors = neighbors_result.scalars().all()
+
+    before = [s.text for s in neighbors if s.position < sent.position]
+    after  = [s.text for s in neighbors if s.position > sent.position]
+
+    # Best-effort source title via SourceChunkRow → SourceDocumentRow
+    source_title: str | None = None
+    try:
+        chunk = await db.scalar(
+            select(SourceChunkRow).where(
+                SourceChunkRow.parsed_text_id == sent.parsed_text_id
+            ).limit(1)
+        )
+        if chunk:
+            doc = await db.scalar(
+                select(SourceDocumentRow).where(
+                    SourceDocumentRow.id == chunk.source_document_id
+                )
+            )
+            source_title = doc.title if doc else None
+    except Exception as exc:
+        logger.warning("get_sentence_context: source title lookup failed: %s", exc)
+
+    return SentenceContextResponse(
+        before=before,
+        target=sent.text,
+        after=after,
+        source_title=source_title,
     )
 
 

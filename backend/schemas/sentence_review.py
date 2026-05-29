@@ -45,6 +45,14 @@ class SentenceReviewItem(BaseModel):
     due_at: str | None = None
 
 
+class SentenceContextResponse(BaseModel):
+    """Surrounding sentences for a review item."""
+    before: list[str]
+    target: str
+    after: list[str]
+    source_title: str | None = None
+
+
 class ReviewItemSubmitRequest(BaseModel):
     """Quality rating for a completed sentence review item."""
 
