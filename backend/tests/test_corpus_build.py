@@ -226,3 +226,129 @@ async def test_build_entry_skips_already_ingested(
         # Second build (new session not needed — same session): should skip.
         r2 = await build_entry(sample_entry, registry, db_session, cache_dir=cache_dir)
         assert r2.status == "skipped"
+
+
+# ── build_entry — CorpusIngestionRow ─────────────────────────────────────────
+
+@pytest.mark.asyncio
+async def test_build_entry_writes_corpus_ingestion_row(
+    sample_entry: CorpusEntry,
+    db_session: AsyncSession,
+    tmp_path: Path,
+):
+    from sqlalchemy import select
+    from backend.models import CorpusIngestionRow
+    from backend.corpus.cache import write_cache
+    from backend.parsing.pipeline import PipelineResult
+
+    registry = _make_registry("en")
+    cache_dir = tmp_path / "cache"
+    write_cache("en", sample_entry.title, "Hello world.", cache_dir)
+
+    mock_pipeline = AsyncMock(return_value=PipelineResult(
+        sentences=[SentenceResult(text="Hello world.", learnable_objects=[])],
+        candidate_results=[CandidateSentenceResult(text="Hello world.", candidates=[])],
+        uuid_to_candidate={},
+    ))
+
+    with patch("backend.corpus.build.run_pipeline", mock_pipeline):
+        result = await build_entry(
+            sample_entry, registry, db_session,
+            cache_dir=cache_dir,
+            lockfile_path=tmp_path / "test.lock.json",
+        )
+
+    assert result.status == "ingested"
+    rows = (await db_session.execute(select(CorpusIngestionRow))).scalars().all()
+    assert len(rows) == 1
+    row = rows[0]
+    assert row.language == "en"
+    assert row.framework == "CEFR"
+    assert row.level == "B2"
+    assert row.cefr_equivalent == "B2"
+    assert row.source_document_id == result.source_document_id
+    assert row.status == "ok"
+
+
+@pytest.mark.asyncio
+async def test_build_entry_cefr_from_jlpt_framework(
+    db_session: AsyncSession,
+    tmp_path: Path,
+):
+    """JLPT entries without explicit cefr_equivalent get it inferred via levels.to_cefr."""
+    from sqlalchemy import select
+    from backend.models import CorpusIngestionRow
+    from backend.corpus.cache import write_cache
+    from backend.parsing.pipeline import PipelineResult
+
+    entry = CorpusEntry(
+        language="ja",
+        framework=Framework.JLPT,
+        level="N3",
+        title="JLPT N3 Text",
+        source_url="https://example.com/jlpt.txt",
+        source_name="JLPT Source",
+        license="public_domain",
+    )
+    registry = _make_registry("ja")
+    cache_dir = tmp_path / "cache"
+    write_cache("ja", entry.title, "テスト文です。", cache_dir)
+
+    mock_pipeline = AsyncMock(return_value=PipelineResult(
+        sentences=[SentenceResult(text="テスト文です。", learnable_objects=[])],
+        candidate_results=[CandidateSentenceResult(text="テスト文です。", candidates=[])],
+        uuid_to_candidate={},
+    ))
+
+    with patch("backend.corpus.build.run_pipeline", mock_pipeline):
+        result = await build_entry(
+            entry, registry, db_session,
+            cache_dir=cache_dir,
+            lockfile_path=tmp_path / "test.lock.json",
+        )
+
+    assert result.status == "ingested"
+    rows = (await db_session.execute(select(CorpusIngestionRow))).scalars().all()
+    assert len(rows) == 1
+    assert rows[0].cefr_equivalent == "B1"  # JLPT N3 → B1 via levels.JLPT_TO_CEFR
+
+
+@pytest.mark.asyncio
+async def test_reingest_with_force_upserts_ingestion_row(
+    sample_entry: CorpusEntry,
+    db_session: AsyncSession,
+    tmp_path: Path,
+):
+    """Re-ingestion with force=True produces exactly one CorpusIngestionRow (no duplicates)."""
+    from sqlalchemy import select
+    from backend.models import CorpusIngestionRow
+    from backend.corpus.cache import write_cache
+    from backend.parsing.pipeline import PipelineResult
+
+    registry = _make_registry("en")
+    cache_dir = tmp_path / "cache"
+    write_cache("en", sample_entry.title, "Hello world.", cache_dir)
+
+    mock_pipeline = AsyncMock(return_value=PipelineResult(
+        sentences=[SentenceResult(text="Hello world.", learnable_objects=[])],
+        candidate_results=[CandidateSentenceResult(text="Hello world.", candidates=[])],
+        uuid_to_candidate={},
+    ))
+
+    lockfile = tmp_path / "test.lock.json"
+    with patch("backend.corpus.build.run_pipeline", mock_pipeline), \
+         patch("backend.corpus.build.fetch_text", return_value="Hello world."), \
+         patch("backend.corpus.build.create_source_progression_row", AsyncMock()):
+        r1 = await build_entry(
+            sample_entry, registry, db_session,
+            cache_dir=cache_dir, lockfile_path=lockfile,
+        )
+        assert r1.status == "ingested"
+        r2 = await build_entry(
+            sample_entry, registry, db_session,
+            cache_dir=cache_dir, lockfile_path=lockfile, force=True,
+        )
+        assert r2.status == "ingested"
+
+    rows = (await db_session.execute(select(CorpusIngestionRow))).scalars().all()
+    assert len(rows) == 1, f"Expected 1 CorpusIngestionRow after re-ingest, got {len(rows)}"
