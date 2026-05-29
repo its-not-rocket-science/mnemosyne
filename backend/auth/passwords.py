@@ -1,16 +1,16 @@
-"""Password hashing and verification via passlib/bcrypt."""
+"""Password hashing and verification via bcrypt."""
 from __future__ import annotations
 
-from passlib.context import CryptContext
+import bcrypt
 
-_ctx = CryptContext(schemes=["bcrypt"], deprecated="auto")
+_ROUNDS = 12
 
 
 def hash_password(plain: str) -> str:
     """Return a bcrypt hash of *plain*."""
-    return _ctx.hash(plain)
+    return bcrypt.hashpw(plain.encode(), bcrypt.gensalt(rounds=_ROUNDS)).decode()
 
 
 def verify_password(plain: str, hashed: str) -> bool:
     """Return True if *plain* matches *hashed*."""
-    return _ctx.verify(plain, hashed)
+    return bcrypt.checkpw(plain.encode(), hashed.encode())
