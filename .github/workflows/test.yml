@@ -39,6 +39,7 @@ jobs:
           poetry run python -m spacy download it_core_news_sm
           poetry run python -m spacy download pt_core_news_sm
           poetry run python -m spacy download ru_core_news_sm
+          poetry run python -m spacy download fi_core_news_sm
 
       - name: Run tests
         run: poetry run pytest -x -q

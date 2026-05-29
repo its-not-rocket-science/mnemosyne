@@ -21,12 +21,12 @@ RUN pip install "poetry==$POETRY_VERSION"
 COPY pyproject.toml poetry.lock ./
 RUN poetry install --without dev --no-interaction --no-ansi
 
-# Download spaCy models for the ES/FR/DE beta language trio.
-# Each model is downloaded in a separate RUN so a single model failure does not
-# invalidate the other layers during development rebuilds.
+# Download spaCy models.  Each model is in a separate RUN so a single
+# model failure does not invalidate other layers during development rebuilds.
 RUN python -m spacy download es_core_news_sm
 RUN python -m spacy download fr_core_news_sm
 RUN python -m spacy download de_core_news_sm
+RUN python -m spacy download fi_core_news_sm
 
 # Application source is copied after deps to preserve layer caching on code changes.
 COPY backend/ ./backend/
