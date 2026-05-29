@@ -610,3 +610,72 @@ async def test_export_isolated_between_users(async_client) -> None:
     )
     assert alice_resp.status_code == 200
     assert len(alice_resp.json()["knowledge"]) == 1
+
+
+async def _register_and_token(client, email: str, password: str = "Test1234!") -> str:
+    """Register a new user and return a Bearer token string."""
+    resp = await client.post("/auth/register", json={"email": email, "password": password})
+    assert resp.status_code in (200, 201), resp.text
+    return resp.json()["access_token"]
+
+
+@pytest.mark.asyncio
+async def test_analytics_opt_out_default_is_false(async_client) -> None:
+    """Freshly registered user has analytics_opt_out=False by default."""
+    token = await _register_and_token(async_client, "optout-fresh@test.example")
+    resp = await async_client.get(
+        "/users/me/analytics-opt-out",
+        headers={"Authorization": f"Bearer {token}"},
+    )
+    assert resp.status_code == 200
+    assert resp.json()["opt_out"] is False
+
+
+@pytest.mark.asyncio
+async def test_analytics_opt_out_patch_and_get(async_client) -> None:
+    """PATCH sets opt-out; subsequent GET reflects the change."""
+    token = await _register_and_token(async_client, "optout-user1@test.example")
+    headers = {"Authorization": f"Bearer {token}"}
+
+    patch_resp = await async_client.patch(
+        "/users/me/analytics-opt-out", json={"opt_out": True}, headers=headers
+    )
+    assert patch_resp.status_code == 200
+    assert patch_resp.json()["opt_out"] is True
+
+    get_resp = await async_client.get("/users/me/analytics-opt-out", headers=headers)
+    assert get_resp.status_code == 200
+    assert get_resp.json()["opt_out"] is True
+
+
+@pytest.mark.asyncio
+async def test_analytics_opt_out_can_re_enable(async_client) -> None:
+    """Opt-out can be toggled back to False."""
+    token = await _register_and_token(async_client, "optout-user2@test.example")
+    headers = {"Authorization": f"Bearer {token}"}
+    await async_client.patch(
+        "/users/me/analytics-opt-out", json={"opt_out": True}, headers=headers
+    )
+    resp = await async_client.patch(
+        "/users/me/analytics-opt-out", json={"opt_out": False}, headers=headers
+    )
+    assert resp.json()["opt_out"] is False
+    get = await async_client.get("/users/me/analytics-opt-out", headers=headers)
+    assert get.json()["opt_out"] is False
+
+
+@pytest.mark.asyncio
+async def test_analytics_opt_out_isolated_between_users(async_client) -> None:
+    """One user's opt-out does not affect another user's preference."""
+    token_a = await _register_and_token(async_client, "optout-isolate-a@test.example")
+    token_b = await _register_and_token(async_client, "optout-isolate-b@test.example")
+    await async_client.patch(
+        "/users/me/analytics-opt-out",
+        json={"opt_out": True},
+        headers={"Authorization": f"Bearer {token_a}"},
+    )
+    resp = await async_client.get(
+        "/users/me/analytics-opt-out",
+        headers={"Authorization": f"Bearer {token_b}"},
+    )
+    assert resp.json()["opt_out"] is False

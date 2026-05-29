@@ -185,7 +185,7 @@ This section documents known limitations and future work.*
 
 1. **Manual AT run** — Human keyboard-only + NVDA + VoiceOver session using `MANUAL_ACCESSIBILITY_TEST.md`. Must record results in `docs/accessibility_results/`. Not automated.
 2. **Database migration on production** — `alembic upgrade head` must be run on the target PostgreSQL instance before `0016_analytics` tables and columns are live.
-3. **Analytics opt-out UI** — `UserRow.analytics_opt_out` backend column and service exist. A frontend toggle (Settings or Privacy page) to expose opt-out has not been built.
+3. ~~**Analytics opt-out UI**~~ — **done** (2026-05-29): `GET /users/me/analytics-opt-out` and `PATCH /users/me/analytics-opt-out` endpoints added to `users.py`. Analytics section with checkbox toggle added to `privacy.html`; JS loads current state on page load (hidden for unauthenticated users) and PATCHes on change. 4 new tests in `test_user_isolation.py`.
 4. **Analytics instrumentation call sites** — `backend/services/analytics.py` (`maybe_record_event`) is written and tested but not yet wired to any actual route (parse, review, recommend, etc.). Instrumentation calls must be added to route handlers when ready.
 5. ~~**Greek article agreement display**~~ — **done** (2026-05-29): `article_agrees_with` rendered as "Article agrees: nominative · masculine · singular" field in vocabulary and conjugation lessons.
 6. ~~**Latin noun suffix hints display**~~ — **done** (2026-05-29): `case_hint`, `number_hint`, `gender_hint`, `ambiguity_note` rendered as labelled fields ("Case (hint)", "Number (hint)", "Gender (hint)", "Ambiguity") in vocabulary lessons. 11 tests in `test_lesson_gen.py`.
