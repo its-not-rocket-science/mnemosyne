@@ -19,13 +19,20 @@ RUN pip install "poetry==$POETRY_VERSION"
 # Copy dependency manifests first so this layer is only rebuilt when they change.
 # poetry.lock must exist — run `poetry lock` (or `make lock`) before building.
 COPY pyproject.toml poetry.lock ./
-RUN poetry install --without dev --no-interaction --no-ansi
+# --extras cjk installs jieba + pypinyin (Mandarin Chinese plugin).
+# --extras korean installs kiwipiepy (Korean plugin).
+RUN poetry install --without dev --extras cjk --extras korean --no-interaction --no-ansi
 
 # Download spaCy models.  Each model is in a separate RUN so a single
 # model failure does not invalidate other layers during development rebuilds.
 RUN python -m spacy download es_core_news_sm
 RUN python -m spacy download fr_core_news_sm
 RUN python -m spacy download de_core_news_sm
+RUN python -m spacy download it_core_news_sm
+RUN python -m spacy download pt_core_news_sm
+RUN python -m spacy download ru_core_news_sm
+RUN python -m spacy download ja_core_news_sm
+RUN python -m spacy download en_core_web_sm
 RUN python -m spacy download fi_core_news_sm
 
 # Application source is copied after deps to preserve layer caching on code changes.
