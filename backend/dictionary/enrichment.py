@@ -43,6 +43,7 @@ import httpx
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from backend.dictionary import logeion
 from backend.dictionary.wiktionary import fetch_definition
 from backend.models import CanonicalObjectRow
 
@@ -124,21 +125,40 @@ async def enrich_objects(
     # ── Gloss tasks ───────────────────────────────────────────────────────────
 
     async def _fetch_gloss(row: CanonicalObjectRow) -> None:
+        lang = row.language or ""
         async with sem:
+            gloss: str | None = None
+
+            # Wiktionary — primary source for most languages.
             try:
-                gloss = await fetch_definition(row.canonical_form, row.language or "")
+                gloss = await fetch_definition(row.canonical_form, lang)
             except httpx.HTTPStatusError as exc:
                 logger.warning(
                     "wiktionary HTTP %d lemma=%r lang=%s",
-                    exc.response.status_code, row.canonical_form, row.language,
+                    exc.response.status_code, row.canonical_form, lang,
                 )
                 return
             except Exception as exc:
                 logger.warning(
                     "wiktionary fetch failed lemma=%r lang=%s: %s",
-                    row.canonical_form, row.language, exc,
+                    row.canonical_form, lang, exc,
                 )
                 return
+
+            # Logeion fallback for Latin and Koine Greek (LSJ / Lewis & Short).
+            if gloss is None and lang in logeion.LOGEION_LEXICON:
+                try:
+                    gloss = await logeion.fetch_definition(row.canonical_form, lang)
+                except httpx.HTTPStatusError as exc:
+                    logger.warning(
+                        "logeion HTTP %d lemma=%r lang=%s",
+                        exc.response.status_code, row.canonical_form, lang,
+                    )
+                except Exception as exc:
+                    logger.warning(
+                        "logeion fetch failed lemma=%r lang=%s: %s",
+                        row.canonical_form, lang, exc,
+                    )
 
             updated = dict(row.lesson_data or {})
             updated["gloss_attempted"] = True

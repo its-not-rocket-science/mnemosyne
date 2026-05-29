@@ -19,24 +19,42 @@ const source = fs.readFileSync(
 
 // ── Extract pure functions via vm ─────────────────────────────────────────────
 
-const escapeMatch  = source.match(/function escapeHtml\(value\) \{[\s\S]*?\n\}/)
-const mojiMatch    = source.match(/function normalizeMojibake\(text\) \{[\s\S]*?\n\}/)
-const passageMatch = source.match(/function passageText\(item\) \{[\s\S]*?\n\}/)
-const reasonMatch  = source.match(/function reasonFor\(item\) \{[\s\S]*?\n\}/)
+const escapeMatch   = source.match(/function escapeHtml\(value\) \{[\s\S]*?\n\}/)
+const mojiMatch     = source.match(/function normalizeMojibake\(text\) \{[\s\S]*?\n\}/)
+const passageMatch  = source.match(/function passageText\(item\) \{[\s\S]*?\n\}/)
+const reasonMatch   = source.match(/function reasonFor\(item\) \{[\s\S]*?\n\}/)
+const reasonKeyMatch = source.match(/const _REASON_KEY = \{[\s\S]*?\}/)
+const recI18nMatch  = source.match(/function recI18n\(\) \{[\s\S]*?\n\}/)
 
-if (!escapeMatch)   throw new Error('escapeHtml not found in source')
-if (!mojiMatch)     throw new Error('normalizeMojibake not found in source')
-if (!passageMatch)  throw new Error('passageText not found in source')
-if (!reasonMatch)   throw new Error('reasonFor not found in source')
+if (!escapeMatch)    throw new Error('escapeHtml not found in source')
+if (!mojiMatch)      throw new Error('normalizeMojibake not found in source')
+if (!passageMatch)   throw new Error('passageText not found in source')
+if (!reasonMatch)    throw new Error('reasonFor not found in source')
+if (!reasonKeyMatch) throw new Error('_REASON_KEY not found in source')
+if (!recI18nMatch)   throw new Error('recI18n not found in source')
+
+// Minimal stub for RECOMMEND_UI_I18N English section.
+const RECOMMEND_UI_I18N_STUB = {
+  en: {
+    reason_level_match: 'rec_level_match',
+    reason_continuing: 'rec_continues',
+    reason_closest_match: 'rec_closest_match',
+    provenance_label: 'Source',
+  },
+}
 
 const ctx = {
   t: key => key,
   window: { mnemosyneDifficulty: null },
+  RECOMMEND_UI_I18N: RECOMMEND_UI_I18N_STUB,
+  currentUiLang: () => 'en',
   result: {},
 }
 vm.createContext(ctx)
 vm.runInContext(
-  `${escapeMatch[0]}
+  `${reasonKeyMatch[0]}
+   ${recI18nMatch[0]}
+   ${escapeMatch[0]}
    ${mojiMatch[0]}
    ${passageMatch[0]}
    ${reasonMatch[0]}

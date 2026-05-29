@@ -361,6 +361,74 @@ async def test_enrich_does_not_mark_attempted_on_network_error(db_session):
     assert "gloss_attempted" not in row.lesson_data
 
 
+# ── Logeion fallback in enrich_objects ───────────────────────────────────────
+
+@pytest.mark.asyncio
+async def test_enrich_uses_logeion_fallback_for_grc(db_session):
+    """When Wiktionary returns None for grc, Logeion is tried as fallback."""
+    row = _make_vocab_row(language="grc", canonical_form="λόγος")
+    db_session.add(row)
+    await db_session.commit()
+
+    import backend.dictionary.enrichment as mod
+    import backend.dictionary.logeion as logeion_mod
+
+    orig_wikt = mod.fetch_definition
+    orig_logeion = logeion_mod.fetch_definition
+
+    logeion_calls: list = []
+
+    # Wiktionary returns None (grc not in its language map)
+    mod.fetch_definition = lambda lemma, lang, **kw: _async_return(None)
+
+    async def _logeion_spy(lemma, lang, **kw):
+        logeion_calls.append((lemma, lang))
+        return "word, reason, account."
+
+    logeion_mod.fetch_definition = _logeion_spy
+
+    await enrich_objects(db_session, [row.id])
+
+    mod.fetch_definition = orig_wikt
+    logeion_mod.fetch_definition = orig_logeion
+
+    await db_session.refresh(row)
+    assert logeion_calls, "Logeion fallback was not called for grc"
+    assert row.lesson_data.get("gloss") == "word, reason, account."
+    assert row.lesson_data["gloss_attempted"] is True
+
+
+@pytest.mark.asyncio
+async def test_enrich_logeion_not_called_for_non_classical(db_session):
+    """Logeion fallback must NOT fire for languages like 'es'."""
+    row = _make_vocab_row(language="es", canonical_form="gato")
+    db_session.add(row)
+    await db_session.commit()
+
+    import backend.dictionary.enrichment as mod
+    import backend.dictionary.logeion as logeion_mod
+
+    orig_wikt = mod.fetch_definition
+    orig_logeion = logeion_mod.fetch_definition
+
+    logeion_calls: list = []
+
+    mod.fetch_definition = lambda lemma, lang, **kw: _async_return(None)
+
+    async def _logeion_spy(lemma, lang, **kw):
+        logeion_calls.append((lemma, lang))
+        return "cat"
+
+    logeion_mod.fetch_definition = _logeion_spy
+
+    await enrich_objects(db_session, [row.id])
+
+    mod.fetch_definition = orig_wikt
+    logeion_mod.fetch_definition = orig_logeion
+
+    assert not logeion_calls, "Logeion should not be called for 'es'"
+
+
 # ── bcp47 coverage ────────────────────────────────────────────────────────────
 
 def test_all_mnemosyne_languages_mapped():
