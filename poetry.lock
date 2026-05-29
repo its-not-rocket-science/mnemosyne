@@ -587,11 +587,11 @@ description = "Cross-platform colored terminal text."
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
 groups = ["main", "dev"]
+markers = "platform_system == \"Windows\" or sys_platform == \"win32\""
 files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
 ]
-markers = {main = "platform_system == \"Windows\" or sys_platform == \"win32\"", dev = "sys_platform == \"win32\""}
 
 [[package]]
 name = "confection"
@@ -1067,6 +1067,43 @@ MarkupSafe = ">=2.0"
 i18n = ["Babel (>=2.7)"]
 
 [[package]]
+name = "kiwipiepy"
+version = "0.23.1"
+description = "Kiwi, the Korean Tokenizer for Python"
+optional = false
+python-versions = "*"
+groups = ["dev"]
+files = [
+    {file = "kiwipiepy-0.23.1-cp314-cp314t-macosx_10_15_x86_64.whl", hash = "sha256:d9c088627153475b4192836ccada3f2684e6dd9e52d8c131b76defe946c2d159"},
+    {file = "kiwipiepy-0.23.1-cp314-cp314t-macosx_11_0_arm64.whl", hash = "sha256:3d8467f9f4e79f130af79ae74fb7cd38316c2443a345c90b5c1fd68d719dc207"},
+    {file = "kiwipiepy-0.23.1-cp314-cp314t-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:91f066cbb3edcfcb773eb3f2007d397908756ce584a37a452830ad466863a458"},
+    {file = "kiwipiepy-0.23.1-cp314-cp314t-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:28964cd73f50be09137ab09d48b4c6c5d42c7f23b6bdbe6e4afdb1057c4e0e76"},
+    {file = "kiwipiepy-0.23.1-cp314-cp314t-win_amd64.whl", hash = "sha256:ead54b784fd2f08a559c03abf238e0046380b5dc5cda28b4020d6e73161fb58e"},
+    {file = "kiwipiepy-0.23.1-cp39-abi3-macosx_10_14_x86_64.whl", hash = "sha256:bfd652e20874df476d5a1c890a6f7f0f4d9cbff4f7135cd80fb814c2cf4c0144"},
+    {file = "kiwipiepy-0.23.1-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:6f8afa82ed41eed61fa1f443cd92dc08a08476159e583b3e3f96119bf10decc9"},
+    {file = "kiwipiepy-0.23.1-cp39-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:de9e85442848038914b0a77b995c1b21131b1ac7ffba461e4fb6549e292be278"},
+    {file = "kiwipiepy-0.23.1-cp39-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:d9925c1a6e25b8fcadb064f70f72f4d809b6e88d1d09977b7dd5a7cf05169788"},
+    {file = "kiwipiepy-0.23.1-cp39-abi3-win_amd64.whl", hash = "sha256:61ddc5bcd5ca728d85039e0c3b83ae5d6b4999188b7e170fa5ddb1adb0dce221"},
+    {file = "kiwipiepy-0.23.1.tar.gz", hash = "sha256:6800e64eefe09c9f00c08802a2facba7a84b6f2d8d32d3f5c811a29b451753d0"},
+]
+
+[package.dependencies]
+kiwipiepy_model = ">=0.23,<0.24"
+numpy = {version = "*", markers = "python_version >= \"3.9\""}
+tqdm = "*"
+
+[[package]]
+name = "kiwipiepy-model"
+version = "0.23.0"
+description = "Model for kiwipiepy"
+optional = false
+python-versions = "*"
+groups = ["dev"]
+files = [
+    {file = "kiwipiepy_model-0.23.0.tar.gz", hash = "sha256:498a22f5585e6c4a162423d7557eb3ee3f71cddc6e0aeb2650c50467e85933e2"},
+]
+
+[[package]]
 name = "langcodes"
 version = "3.5.1"
 description = "Tools for labeling human languages with IETF language tags"
@@ -1514,7 +1551,7 @@ version = "2.0.2"
 description = "Fundamental package for array computing in Python"
 optional = false
 python-versions = ">=3.9"
-groups = ["main"]
+groups = ["main", "dev"]
 files = [
     {file = "numpy-2.0.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:51129a29dbe56f9ca83438b706e2e69a39892b5eda6cedcb6b0c9fdc9b0d3ece"},
     {file = "numpy-2.0.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:f15975dfec0cf2239224d80e32c3170b1d168335eaedee69da84fbe9f1f9cd04"},
@@ -2728,7 +2765,7 @@ version = "4.67.3"
 description = "Fast, Extensible Progress Meter"
 optional = false
 python-versions = ">=3.7"
-groups = ["main"]
+groups = ["main", "dev"]
 files = [
     {file = "tqdm-4.67.3-py3-none-any.whl", hash = "sha256:ee1e4c0e59148062281c49d80b25b67771a127c85fc9676d3be5f243206826bf"},
     {file = "tqdm-4.67.3.tar.gz", hash = "sha256:7d825f03f89244ef73f1d4ce193cb1774a8179fd96f31d7e1dcde62092b960bb"},
@@ -3257,4 +3294,4 @@ cjk = ["jieba", "pypinyin"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "739fe764c866121a13dffd97ea2d644a6e50ba937d5bd6fad74dea1e1412653b"
+content-hash = "3b0dddacf0eb5596f3e8a24423aad9e5fd6ea907d12a0bfd0ee7c75ff729621a"

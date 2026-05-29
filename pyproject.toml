@@ -53,6 +53,7 @@ respx = "^0.23.1"
 pydantic = {extras = ["email"], version = "^2.13.4"}
 jieba = ">=0.42"
 pypinyin = ">=0.50"
+kiwipiepy = "^0.23.1"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
