@@ -48,6 +48,7 @@ export class MnemosyneReviewPane extends HTMLElement {
   #language = null
   #answered = false
   #loading = false
+  #sessionStats = { count: 0, qualitySum: 0, masteryDeltaSum: 0, nextDueAt: null }
 
   constructor() {
     super()
@@ -64,6 +65,7 @@ export class MnemosyneReviewPane extends HTMLElement {
     this.#language = language
     this.#queue = []
     this.#currentIndex = 0
+    this.#sessionStats = { count: 0, qualitySum: 0, masteryDeltaSum: 0, nextDueAt: null }
     this.removeAttribute('hidden')
     this._renderLoading()
     await this._fetchQueue()
@@ -345,13 +347,50 @@ export class MnemosyneReviewPane extends HTMLElement {
   }
 
   _renderDone() {
+    const s = this.#sessionStats
+    const nothingDue = s.count === 0
+
+    let statsHtml = ''
+    if (!nothingDue) {
+      const avgQuality  = (s.qualitySum / s.count).toFixed(1)
+      const avgDelta    = s.masteryDeltaSum / s.count
+      const deltaSign   = avgDelta >= 0 ? '+' : ''
+      const deltaPct    = `${deltaSign}${Math.round(avgDelta * 100)}%`
+      const nextReview  = s.nextDueAt ? _relativeTime(s.nextDueAt) : '—'
+
+      statsHtml = `
+        <dl class="summary-stats">
+          <div class="summary-stat">
+            <dt class="summary-stat__label">Reviewed</dt>
+            <dd class="summary-stat__value">${s.count}</dd>
+          </div>
+          <div class="summary-stat">
+            <dt class="summary-stat__label">Avg quality</dt>
+            <dd class="summary-stat__value">${avgQuality}<span class="summary-stat__denom"> / 4</span></dd>
+          </div>
+          <div class="summary-stat">
+            <dt class="summary-stat__label">Mastery</dt>
+            <dd class="summary-stat__value summary-stat__value--delta" data-positive="${avgDelta >= 0}">${deltaPct}</dd>
+          </div>
+          <div class="summary-stat">
+            <dt class="summary-stat__label">Next review</dt>
+            <dd class="summary-stat__value summary-stat__value--next">${_escHtml(nextReview)}</dd>
+          </div>
+        </dl>
+      `
+    }
+
     this.shadowRoot.innerHTML = `
       ${this._styles()}
-      <section class="pane pane--done" aria-labelledby="review-heading">
-        <h2 id="review-heading" class="pane__heading">Review complete</h2>
-        <p class="done-msg">You reviewed ${this.#queue.length} item${this.#queue.length !== 1 ? 's' : ''}.
-          Come back tomorrow for more.</p>
-        <button type="button" class="btn btn--primary" id="done-btn">Close</button>
+      <section class="pane pane--summary" aria-labelledby="review-heading">
+        <h2 id="review-heading" class="pane__heading">
+          ${nothingDue ? 'Nothing due' : 'Session complete'}
+        </h2>
+        ${nothingDue
+          ? '<p class="summary-empty">No items are due right now.</p>'
+          : statsHtml
+        }
+        <button type="button" class="btn btn--primary summary-close-btn" id="done-btn">Close</button>
       </section>
     `
     this.shadowRoot.getElementById('done-btn')?.addEventListener('click', () => {
@@ -504,6 +543,16 @@ export class MnemosyneReviewPane extends HTMLElement {
 
     try {
       const result = await this._submitRating(item.id, quality)
+
+      // Accumulate session stats
+      this.#sessionStats.count++
+      this.#sessionStats.qualitySum += quality
+      this.#sessionStats.masteryDeltaSum += (result.mastery_score - result.mastery_score_before)
+      const dueAt = result.next_review_at
+      if (!this.#sessionStats.nextDueAt || dueAt < this.#sessionStats.nextDueAt) {
+        this.#sessionStats.nextDueAt = dueAt
+      }
+
       this.dispatchEvent(new CustomEvent('review-item-rated', {
         bubbles: true,
         composed: true,
@@ -822,9 +871,77 @@ export class MnemosyneReviewPane extends HTMLElement {
       }
       .status-error:empty { display: none; }
 
-      /* ── Done state ── */
-      .pane--done { text-align: center; }
-      .done-msg { color: var(--muted, GrayText); margin-block: 1rem; }
+      /* ── Summary / done state ── */
+      .pane--summary { text-align: center; }
+
+      .summary-empty {
+        color: var(--muted, GrayText);
+        margin-block: 1rem;
+      }
+
+      .summary-stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 1.25rem 0 1rem;
+        padding: 0;
+      }
+
+      .summary-stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: color-mix(in srgb, CanvasText 5%, Canvas);
+        border-radius: 0.5rem;
+        padding: 0.6rem 1.25rem;
+        min-inline-size: 5.5rem;
+        flex: 1 1 auto;
+        max-inline-size: 9rem;
+      }
+
+      .summary-stat__label {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted, GrayText);
+        margin: 0;
+      }
+
+      .summary-stat__value {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+      }
+
+      .summary-stat__denom {
+        font-size: 0.75rem;
+        font-weight: 400;
+        color: var(--muted, GrayText);
+      }
+
+      .summary-stat__value--delta[data-positive="true"]  { color: oklch(0.45 0.15 145); }
+      .summary-stat__value--delta[data-positive="false"] { color: var(--error-color, oklch(0.50 0.2 29)); }
+
+      .summary-stat__value--next { font-size: 1rem; }
+
+      .summary-close-btn { margin-block-start: 0.25rem; }
+
+      @media (prefers-color-scheme: dark) {
+        :host-context(:root[data-theme="auto"]) .summary-stat__value--delta[data-positive="true"] {
+          color: oklch(0.70 0.15 145);
+        }
+      }
+      :host-context(:root[data-theme="dark"]) .summary-stat__value--delta[data-positive="true"] {
+        color: oklch(0.70 0.15 145);
+      }
+
+      @media (forced-colors: active) {
+        .summary-stat { border: 1px solid ButtonText; }
+        .summary-stat__label { color: GrayText; }
+        .summary-stat__value--delta { forced-color-adjust: none; }
+      }
 
       /* ── Sentence context ── */
       .card__context {
@@ -920,6 +1037,17 @@ function _bdi(text) {
 function _guessDir(lang) {
   const RTL = new Set(['ar', 'he', 'fa', 'ur', 'yi', 'arc', 'dv', 'ku'])
   return RTL.has((lang || '').split('-')[0]) ? 'rtl' : 'ltr'
+}
+
+function _relativeTime(isoString) {
+  const diff = new Date(isoString) - Date.now()
+  const mins = Math.round(diff / 60_000)
+  if (mins < 1)   return 'soon'
+  if (mins < 60)  return `in ${mins}m`
+  const hours = Math.round(mins / 60)
+  if (hours < 24) return `in ${hours}h`
+  const days = Math.round(hours / 24)
+  return `in ${days}d`
 }
 
 customElements.define('mnemosyne-review-pane', MnemosyneReviewPane)
