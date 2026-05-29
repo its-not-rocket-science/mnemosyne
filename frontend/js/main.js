@@ -1087,6 +1087,8 @@ const vocabBrowserList      = document.querySelector('#vocab-browser-list')
 const vocabBrowserStatus    = document.querySelector('#vocab-browser-status')
 const vocabBrowserCount     = document.querySelector('#vocab-browser-count')
 const vocabBrowserMoreBtn   = document.querySelector('#vocab-browser-more-btn')
+const vocabExportCsvBtn     = document.querySelector('#vocab-export-csv-btn')
+const vocabExportAnkiBtn    = document.querySelector('#vocab-export-anki-btn')
 
 const _VOCAB_PAGE_SIZE = 50
 let _vocabOffset = 0
@@ -1202,6 +1204,51 @@ vocabBrowserSearch?.addEventListener('input', _scheduleVocabSearch)
 vocabBrowserLevel?.addEventListener('change', () => _loadVocab(false))
 vocabBrowserSort?.addEventListener('change', () => _loadVocab(false))
 vocabBrowserMoreBtn?.addEventListener('click', () => _loadVocab(true))
+
+async function _downloadVocabExport(format) {
+  const btn = format === 'csv' ? vocabExportCsvBtn : vocabExportAnkiBtn
+  if (!btn) return
+  const orig = btn.textContent
+  btn.disabled = true
+  btn.textContent = t('vocab_export_busy')
+
+  try {
+    const p = new URLSearchParams({ format })
+    const lang = languageSelect?.value
+    const lv   = vocabBrowserLevel?.value
+    const q    = vocabBrowserSearch?.value.trim()
+    if (lang) p.set('language', lang)
+    if (lv)   p.set('level', lv)
+    if (q)    p.set('q', q)
+
+    const resp = await fetch(`${API_BASE}/users/me/vocabulary/export?${p}`, {
+      headers: getAuthHeaders(),
+    })
+    if (!resp.ok) throw new Error(resp.status)
+
+    const blob = await resp.blob()
+    const cd   = resp.headers.get('content-disposition') ?? ''
+    const fnMatch = cd.match(/filename="([^"]+)"/)
+    const filename = fnMatch ? fnMatch[1] : `mnemosyne_vocabulary.${format === 'anki' ? 'txt' : 'csv'}`
+
+    const url = URL.createObjectURL(blob)
+    const a   = document.createElement('a')
+    a.href     = url
+    a.download = filename
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+    URL.revokeObjectURL(url)
+  } catch {
+    // Download failure is silent — user sees no response; no state to roll back.
+  } finally {
+    btn.disabled = false
+    btn.textContent = orig
+  }
+}
+
+vocabExportCsvBtn?.addEventListener('click', () => _downloadVocabExport('csv'))
+vocabExportAnkiBtn?.addEventListener('click', () => _downloadVocabExport('anki'))
 
 
 // ── Status helper ─────────────────────────────────────────────────────────────

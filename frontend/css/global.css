@@ -1447,3 +1447,10 @@ body.player-active .app-shell__scroll-area {
   color: var(--muted);
   margin: 0;
 }
+
+.vocab-browser-footer__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-wrap: wrap;
+}
