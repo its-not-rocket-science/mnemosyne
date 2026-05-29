@@ -193,7 +193,7 @@ This section documents known limitations and future work.*
 8. **CEFR A2–C2 vocabulary tables** — `cefr_vocab.py` only covers A1. CEFR filter in `/recommend-text?cefr=` will return empty results for most sentences until corpus pipeline produces more `cefr_equivalent`-tagged documents.
 9. **Full spaCy morphology for hi/tr/fi** — Still morphology-light (suffix rules); improvements to false positives made but full model-backed morphology remains open.
 10. **Perseus/Logeion API integration** — Latin/Greek lexicon depth limited to ~3 400 / ~27 000 attested forms. API integration would improve coverage of rare forms.
-11. **Grammatical label localisation** — `person="third"`, `number="singular"`, etc. in `lesson_data` remain English. Full localisation requires a second lookup table in `l10n.py`.
+11. ~~**Grammatical label localisation**~~ — **done** (2026-05-29): "pos" category added to `_GRAM_LABELS` in `l10n.py` (bare POS labels for all 11 UI languages). `_build_vocabulary()` and `_build_inflection()` now call `gram_label("pos", ...)` for the "Part of speech" field and MC pool; gender/number fields in vocabulary also localised. Latin suffix hints (case_hint/number_hint/gender_hint) and Greek article_agrees_with values run through `gram_label()`. 16 new tests in `TestGrammaticalLabelLocalisation`.
 12. **Docker Compose end-to-end smoke test in CI** — Not in automated CI; currently manual `make up` only.
 
 ---

@@ -529,38 +529,41 @@ def build_lesson(
 def _build_vocabulary(b: _B) -> LessonResponse:
     lemma   = b.lesson_data.get("lemma") or b.canonical_form
     pos_raw = b.lesson_data.get("pos") or "WORD"
-    pos     = _POS_DISPLAY.get(pos_raw, pos_raw.lower())
+    pos_en  = _POS_DISPLAY.get(pos_raw, pos_raw.lower())
+    pos_loc = l10n.gram_label("pos", pos_en, b.ctx.l1_language)
     seed    = b.canonical_form
     l1      = b.ctx.l1_language
 
-    explanation = fmt.vocabulary_explanation(b.display_label, pos, lemma, b.ctx)
+    explanation = fmt.vocabulary_explanation(b.display_label, pos_en, lemma, b.ctx)
 
     fields: list[LessonField] = [
         LessonField(label="Lemma", value=lemma, concept_id="axis.lemma"),
-        LessonField(label="Part of speech", value=pos,
+        LessonField(label="Part of speech", value=pos_loc,
                     concept_id="axis.part_of_speech",
-                    value_concept_id=_value_cid("part_of_speech", pos)),
+                    value_concept_id=_value_cid("part_of_speech", pos_en)),
     ]
 
     # Noun gender and number (Spanish and other inflecting languages)
     if pos_raw == "NOUN":
         gender_raw = b.lesson_data.get("gender")
         if gender_raw and str(gender_raw) not in ("unknown", ""):
-            gender_display = _GENDER_DISPLAY.get(str(gender_raw), str(gender_raw).lower())
+            gender_en = _GENDER_DISPLAY.get(str(gender_raw), str(gender_raw).lower())
+            gender_loc = l10n.gram_label("gender", gender_en, l1)
             fields.append(LessonField(
                 label="Gender",
-                value=gender_display,
+                value=gender_loc,
                 concept_id="axis.gender",
-                value_concept_id=_value_cid("gender", gender_display),
+                value_concept_id=_value_cid("gender", gender_en),
             ))
         number_raw = b.lesson_data.get("number")
         if number_raw and str(number_raw) not in ("unknown", ""):
-            number_display = _NUMBER_LABELS.get(str(number_raw), str(number_raw).lower())
+            number_en = _NUMBER_LABELS.get(str(number_raw), str(number_raw).lower())
+            number_loc = l10n.gram_label("number", number_en, l1)
             fields.append(LessonField(
                 label="Number",
-                value=number_display,
+                value=number_loc,
                 concept_id="axis.number",
-                value_concept_id=_value_cid("number", number_display),
+                value_concept_id=_value_cid("number", number_en),
             ))
 
     if pinyin := b.lesson_data.get("pinyin"):
@@ -590,18 +593,22 @@ def _build_vocabulary(b: _B) -> LessonResponse:
     # Latin noun suffix hints — case/number/gender inferred from suffix rules for
     # tokens not found in the morph index.
     if case_hint := b.lesson_data.get("case_hint"):
-        fields.append(LessonField(label="Case (hint)", value=case_hint))
+        fields.append(LessonField(label="Case (hint)", value=l10n.gram_label("case", case_hint, l1)))
     if number_hint := b.lesson_data.get("number_hint"):
-        fields.append(LessonField(label="Number (hint)", value=number_hint))
+        fields.append(LessonField(label="Number (hint)", value=l10n.gram_label("number", number_hint, l1)))
     if gender_hint := b.lesson_data.get("gender_hint"):
-        fields.append(LessonField(label="Gender (hint)", value=gender_hint))
+        fields.append(LessonField(label="Gender (hint)", value=l10n.gram_label("gender", gender_hint, l1)))
     if amb := b.lesson_data.get("ambiguity_note"):
         fields.append(LessonField(label="Ambiguity", value=amb))
 
     # Greek article agreement — case/gender/number inferred from the immediately
     # preceding definite article.
     if art := b.lesson_data.get("article_agrees_with"):
-        parts = " · ".join(art[k] for k in ("case", "gender", "number") if art.get(k))
+        parts = " · ".join(
+            l10n.gram_label(cat, art[k], l1)
+            for k, cat in (("case", "case"), ("gender", "gender"), ("number", "number"))
+            if art.get(k)
+        )
         if parts:
             fields.append(LessonField(label="Article agrees", value=parts))
 
@@ -610,8 +617,8 @@ def _build_vocabulary(b: _B) -> LessonResponse:
     mc = _make_mc_drill(
         seed=seed,
         prompt=l10n.t("drill.pos_blank", l1, word=b.display_label),
-        correct=pos,
-        pool=_POS_OPTIONS,
+        correct=pos_loc,
+        pool=[l10n.gram_label("pos", v, l1) for v in _POS_OPTIONS],
     )
     if mc:
         drills.append(mc)
@@ -715,7 +722,11 @@ def _build_conjugation(b: _B) -> LessonResponse:
 
     # Greek article agreement \u2014 case/gender/number from immediately preceding article.
     if art := b.lesson_data.get("article_agrees_with"):
-        parts = " \u00b7 ".join(art[k] for k in ("case", "gender", "number") if art.get(k))
+        parts = " \u00b7 ".join(
+            l10n.gram_label(cat, art[k], l1)
+            for k, cat in (("case", "case"), ("gender", "gender"), ("number", "number"))
+            if art.get(k)
+        )
         if parts:
             fields.append(LessonField(label="Article agrees", value=parts))
 
@@ -1619,7 +1630,8 @@ def _build_inflection(b: _B) -> LessonResponse:
     gender  = b.lesson_data.get("gender") or "unknown"
     number  = b.lesson_data.get("number") or "unknown"
     pos_raw = b.lesson_data.get("pos") or "NOUN"
-    pos     = _POS_DISPLAY.get(pos_raw, pos_raw.lower())
+    pos_en  = _POS_DISPLAY.get(pos_raw, pos_raw.lower())
+    pos_loc = l10n.gram_label("pos", pos_en, b.ctx.l1_language)
     seed    = b.canonical_form
     l1      = b.ctx.l1_language
 
@@ -1638,13 +1650,13 @@ def _build_inflection(b: _B) -> LessonResponse:
     contrasts   = _contrast_notes_from_lesson_data(b.lesson_data)
 
     explanation = fmt.inflection_explanation(
-        surface, pos, case_display, gender_display, number_display, lemma, b.ctx
+        surface, pos_en, case_display, gender_display, number_display, lemma, b.ctx
     )
 
     fields: list[LessonField] = [
         LessonField(label="Lemma", value=lemma),
         LessonField(label="Surface form", value=surface),
-        LessonField(label="Part of speech", value=pos),
+        LessonField(label="Part of speech", value=pos_loc),
     ]
     if case_display not in ("unknown", ""):
         fields.append(LessonField(label="Case", value=case_loc))
