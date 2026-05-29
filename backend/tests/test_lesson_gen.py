@@ -388,6 +388,122 @@ class TestPluggablePools:
         assert ctx.mood_pool is None
 
 
+# ── Grammatical label localisation ────────────────────────────────────────────
+
+
+class TestGrammaticalLabelLocalisation:
+    """POS, gender, number, case, and article-agreement field values are localised
+    via gram_label() — English l1 falls back to English values unchanged."""
+
+    def _vocab_lesson(self, lesson_data: dict, l1: str = "en") -> dict[str, str]:
+        ctx = LessonContext(l1_language=l1)
+        lesson = build_lesson(
+            object_id="loc-test",
+            obj_type="vocabulary",
+            canonical_form="test",
+            display_label="test",
+            lesson_data=lesson_data,
+            context=ctx,
+        )
+        return {f.label: f.value for f in lesson.fields}
+
+    def test_pos_field_english_unchanged(self):
+        fields = self._vocab_lesson({"lemma": "casa", "pos": "NOUN"}, l1="en")
+        assert fields["Part of speech"] == "noun"
+
+    def test_pos_field_spanish(self):
+        fields = self._vocab_lesson({"lemma": "casa", "pos": "NOUN"}, l1="es")
+        assert fields["Part of speech"] == "sustantivo"
+
+    def test_pos_field_french(self):
+        fields = self._vocab_lesson({"lemma": "maison", "pos": "NOUN"}, l1="fr")
+        assert fields["Part of speech"] == "nom"
+
+    def test_pos_field_german(self):
+        fields = self._vocab_lesson({"lemma": "Haus", "pos": "NOUN"}, l1="de")
+        assert fields["Part of speech"] == "Substantiv"
+
+    def test_pos_field_russian(self):
+        fields = self._vocab_lesson({"lemma": "дом", "pos": "NOUN"}, l1="ru")
+        assert fields["Part of speech"] == "существительное"
+
+    def test_pos_field_japanese(self):
+        fields = self._vocab_lesson({"lemma": "家", "pos": "NOUN"}, l1="ja")
+        assert fields["Part of speech"] == "名詞"
+
+    def test_pos_verb_spanish(self):
+        fields = self._vocab_lesson({"lemma": "hablar", "pos": "VERB"}, l1="es")
+        assert fields["Part of speech"] == "verbo"
+
+    def test_pos_adjective_german(self):
+        fields = self._vocab_lesson({"lemma": "groß", "pos": "ADJ"}, l1="de")
+        assert fields["Part of speech"] == "Adjektiv"
+
+    def test_gender_field_spanish(self):
+        fields = self._vocab_lesson(
+            {"lemma": "casa", "pos": "NOUN", "gender": "Fem"}, l1="es"
+        )
+        assert fields.get("Gender") == "femenino"
+
+    def test_number_field_french(self):
+        fields = self._vocab_lesson(
+            {"lemma": "maison", "pos": "NOUN", "number": "Plur"}, l1="fr"
+        )
+        assert fields.get("Number") == "pluriel"
+
+    def test_pos_mc_pool_localised(self):
+        """MC drill options for POS are localised; correct answer in localised form."""
+        ctx = LessonContext(l1_language="es")
+        lesson = build_lesson(
+            object_id="mc-loc",
+            obj_type="vocabulary",
+            canonical_form="casa",
+            display_label="casa",
+            lesson_data={"lemma": "casa", "pos": "NOUN"},
+            context=ctx,
+        )
+        mc_drills = [d for d in lesson.drills if d.type == "multiple_choice"]
+        assert mc_drills, "Expected at least one MC drill"
+        mc = mc_drills[0]
+        correct = mc.options[mc.answer_index]
+        assert correct == "sustantivo"
+
+    def test_latin_case_hint_localised(self):
+        fields = self._vocab_lesson(
+            {"lemma": "amicus", "pos": "NOUN", "case_hint": "genitive"}, l1="es"
+        )
+        assert fields.get("Case (hint)") == "genitivo"
+
+    def test_latin_number_hint_localised(self):
+        fields = self._vocab_lesson(
+            {"lemma": "amicus", "pos": "NOUN", "number_hint": "plural"}, l1="fr"
+        )
+        assert fields.get("Number (hint)") == "pluriel"
+
+    def test_latin_gender_hint_localised(self):
+        fields = self._vocab_lesson(
+            {"lemma": "amicus", "pos": "NOUN", "gender_hint": "masculine"}, l1="de"
+        )
+        assert fields.get("Gender (hint)") == "maskulin"
+
+    def test_greek_article_agrees_localised(self):
+        fields = self._vocab_lesson(
+            {
+                "lemma": "λόγος", "pos": "NOUN",
+                "article_agrees_with": {"case": "nominative", "gender": "masculine", "number": "singular"},
+            },
+            l1="es",
+        )
+        val = fields.get("Article agrees", "")
+        assert "nominativo" in val
+        assert "masculino" in val
+        assert "singular" in val
+
+    def test_english_fallback_for_unknown_l1(self):
+        fields = self._vocab_lesson({"lemma": "x", "pos": "NOUN"}, l1="xx")
+        assert fields["Part of speech"] == "noun"
+
+
 # ── Latin suffix hints and Greek article agreement ─────────────────────────────
 
 

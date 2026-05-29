@@ -521,6 +521,23 @@ _GRAM_LABELS: dict[str, dict[str, dict[str, str]]] = {
         "case":   {"es": "caso",    "fr": "cas",    "de": "Kasus",   "ru": "падеже", "pt": "caso",   "it": "caso",
                    "ja": "格",      "zh": "格",      "ar": "الإعراب", "he": "יחסה",   "ko": "격"},
     },
+    # part of speech — bare labels for field display (no article; _POS_LABELS has article-prefixed phrases for explanations)
+    "pos": {
+        "noun":           {"es": "sustantivo",     "fr": "nom",        "de": "Substantiv",  "ru": "существительное",        "pt": "substantivo",    "it": "sostantivo",
+                           "ja": "名詞",            "zh": "名词",        "ar": "اسم",          "he": "שם עצם",                 "ko": "명사"},
+        "verb":           {"es": "verbo",          "fr": "verbe",      "de": "Verb",         "ru": "глагол",                 "pt": "verbo",          "it": "verbo",
+                           "ja": "動詞",            "zh": "动词",        "ar": "فعل",          "he": "פועל",                   "ko": "동사"},
+        "adjective":      {"es": "adjetivo",       "fr": "adjectif",   "de": "Adjektiv",     "ru": "прилагательное",         "pt": "adjetivo",       "it": "aggettivo",
+                           "ja": "形容詞",          "zh": "形容词",      "ar": "صفة",          "he": "שם תואר",                "ko": "형용사"},
+        "adverb":         {"es": "adverbio",       "fr": "adverbe",    "de": "Adverb",       "ru": "наречие",                "pt": "advérbio",       "it": "avverbio",
+                           "ja": "副詞",            "zh": "副词",        "ar": "ظرف",          "he": "תואר הפועל",             "ko": "부사"},
+        "auxiliary verb": {"es": "verbo auxiliar", "fr": "auxiliaire", "de": "Hilfsverb",    "ru": "вспомогательный глагол", "pt": "verbo auxiliar", "it": "verbo ausiliare",
+                           "ja": "助動詞",          "zh": "助动词",      "ar": "فعل مساعد",    "he": "פועל עזר",               "ko": "보조동사"},
+        "proper noun":    {"es": "nombre propio",  "fr": "nom propre", "de": "Eigenname",    "ru": "имя собственное",        "pt": "nome próprio",   "it": "nome proprio",
+                           "ja": "固有名詞",        "zh": "专有名词",    "ar": "اسم علم",      "he": "שם פרטי",                "ko": "고유명사"},
+        "word":           {"es": "palabra",        "fr": "mot",        "de": "Wort",          "ru": "слово",                  "pt": "palavra",        "it": "parola",
+                           "ja": "語",              "zh": "词",          "ar": "كلمة",         "he": "מילה",                  "ko": "단어"},
+    },
 }
 
 # Conjunction "and" for joining feature names in each L1.
