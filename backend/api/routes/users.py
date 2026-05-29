@@ -394,6 +394,32 @@ async def export_my_data(
     )
 
 
+@router.get("/me/analytics-opt-out", response_model=dict)
+async def get_analytics_opt_out(
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> dict:
+    """Return the current analytics opt-out preference for the current user."""
+    row = await db.scalar(select(UserRow).where(UserRow.id == current_user))
+    opt_out = bool(row.analytics_opt_out) if row else False
+    return {"opt_out": opt_out}
+
+
+@router.patch("/me/analytics-opt-out", response_model=dict)
+async def set_analytics_opt_out(
+    payload: dict,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> dict:
+    """Set analytics opt-out preference. Body: ``{"opt_out": true|false}``."""
+    opt_out = bool(payload.get("opt_out", False))
+    row = await db.scalar(select(UserRow).where(UserRow.id == current_user))
+    if row:
+        row.analytics_opt_out = opt_out
+        await db.commit()
+    return {"opt_out": opt_out}
+
+
 @router.delete("/me", status_code=204)
 async def delete_my_account(
     db: AsyncSession = Depends(get_db_session),

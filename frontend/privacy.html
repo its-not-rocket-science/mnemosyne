@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Privacy policy — Mnemosyne</title>
     <link rel="stylesheet" href="./css/global.css">
+    <style>
+      .toggle-row {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-block: 0.75rem;
+      }
+      .toggle-row input[type="checkbox"] {
+        inline-size: 1.1rem;
+        block-size: 1.1rem;
+        cursor: pointer;
+        accent-color: var(--accent, #4f6ef7);
+      }
+      .toggle-row input:disabled { cursor: not-allowed; opacity: 0.5; }
+      .muted-note { font-size: 0.85rem; color: var(--muted, GrayText); margin-block-start: 0.25rem; }
+      #analytics-status { font-size: 0.85rem; color: var(--muted, GrayText); margin-inline-start: 0.25rem; }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -66,6 +85,21 @@
           from the database within the same request.
         </p>
 
+        <h2>Analytics</h2>
+        <p>
+          Mnemosyne records aggregate, non-identifiable session counts (e.g.
+          "a parse was submitted in language es") to improve the service.
+          No text, vocabulary items, or personal details are included.
+          You can opt out at any time:
+        </p>
+        <div id="analytics-section">
+          <label class="toggle-row">
+            <input type="checkbox" id="analytics-opt-out-toggle" disabled>
+            <span id="analytics-toggle-label">Opt out of analytics</span>
+          </label>
+          <p id="analytics-auth-note" class="muted-note">Sign in to manage this preference.</p>
+        </div>
+
         <h2>Contact</h2>
         <p>
           Questions about this policy can be sent to
@@ -74,6 +108,50 @@
 
       </article>
     </main>
+
+    <script type="module">
+      import { getToken } from './js/auth.js'
+
+      const toggle   = document.querySelector('#analytics-opt-out-toggle')
+      const authNote = document.querySelector('#analytics-auth-note')
+      const label    = document.querySelector('#analytics-toggle-label')
+
+      async function authHeaders() {
+        const t = getToken()
+        return t ? { Authorization: `Bearer ${t}`, 'Content-Type': 'application/json' } : {}
+      }
+
+      async function loadState() {
+        const headers = await authHeaders()
+        if (!headers.Authorization) return   // not signed in — leave disabled
+
+        authNote.hidden = true
+        toggle.disabled = false
+
+        try {
+          const res = await fetch('/users/me/analytics-opt-out', { headers })
+          if (res.ok) {
+            const data = await res.json()
+            toggle.checked = Boolean(data.opt_out)
+          }
+        } catch { /* degraded — leave unchecked */ }
+      }
+
+      async function saveState() {
+        const headers = await authHeaders()
+        if (!headers.Authorization) return
+        try {
+          await fetch('/users/me/analytics-opt-out', {
+            method: 'PATCH',
+            headers,
+            body: JSON.stringify({ opt_out: toggle.checked }),
+          })
+        } catch { /* silently ignore — UI already reflects intent */ }
+      }
+
+      toggle.addEventListener('change', saveState)
+      loadState()
+    </script>
 
     <footer class="site-footer">
       <div class="wrap site-footer__inner">
