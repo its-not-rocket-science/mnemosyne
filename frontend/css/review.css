@@ -12,7 +12,8 @@
   gap: 0.4rem;
 }
 
-.review-badge {
+.review-badge,
+.nav-due-badge {
   /* Circular count pill; hidden when count is 0 */
   display: inline-flex;
   align-items: center;
@@ -28,7 +29,22 @@
   line-height: 1;
 }
 
-.review-badge[hidden] { display: none; }
+.review-badge[hidden],
+.nav-due-badge[hidden] { display: none; }
+
+/* Nav badge: sits in the slotted nav__end area */
+.nav-due-badge {
+  margin-inline-end: 0.25rem;
+  vertical-align: middle;
+}
+
+@media (forced-colors: active) {
+  .nav-due-badge {
+    background: Highlight;
+    color: HighlightText;
+    border: 1px solid HighlightText;
+  }
+}
 
 /* ── Review panel container ─────────────────────────────────────────────────── */
 
