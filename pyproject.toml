@@ -49,6 +49,8 @@ pytest-asyncio = "^0.23.8"
 aiosqlite = "^0.20.0"
 ruff = "^0.5.6"
 mypy = "^1.11.1"
+respx = "^0.23.1"
+pydantic = {extras = ["email"], version = "^2.13.4"}
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
