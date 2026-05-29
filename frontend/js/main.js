@@ -113,6 +113,7 @@ const resultsEyebrow     = document.querySelector('#results-source-eyebrow')
 const parseDialog        = document.querySelector('#parse-dialog')
 const parseDialogClose   = document.querySelector('#parse-dialog-close')
 const changeLessonBtn    = document.querySelector('#change-lesson-btn')
+const corpusDrillsBtn    = document.querySelector('#corpus-drills-btn')
 const filterBar          = document.querySelector('#filter-bar')
 const appFilterBar       = document.querySelector('#app-filter-bar')
 
@@ -1670,6 +1671,60 @@ function _renderSentenceTranslation(el, result) {
   }
 }
 
+// ── Corpus confusable drills ──────────────────────────────────────────────────
+
+async function _openCorpusDrills() {
+  const language = languageSelect?.value
+  if (!language) return
+
+  const nuanceTypes = [
+    ...new Set(
+      currentSentences.flatMap(s =>
+        s.learnable_objects
+          .filter(o => o.type === 'nuance' && o.lesson_data?.nuance_type)
+          .map(o => o.lesson_data.nuance_type)
+      )
+    ),
+  ]
+  if (!nuanceTypes.length) return
+
+  setStatus(t('loading'), 'busy')
+  try {
+    const params = new URLSearchParams({ language, nuance_types: nuanceTypes.join(','), limit: '8' })
+    const resp = await fetch(`${API_BASE}/nuance-drills?${params}`, { headers: getAuthHeaders() })
+    if (!resp.ok) throw new Error(resp.status)
+    const data = await resp.json()
+    if (!data.drills?.length) { setStatus(''); return }
+
+    const caps   = languageCapabilities.get(language)
+    const ttsTag = caps?.tts_lang_tag ?? language
+    const syntheticLesson = {
+      id:          `corpus-drills-${language}`,
+      title:       t('corpus_drills_btn'),
+      type:        'nuance',
+      label:       t('corpus_drills_btn'),
+      drills:      data.drills,
+      nuance_sets: [],
+      examples:    [],
+      lesson_data: {},
+    }
+    setStatus('')
+    modal.open({
+      lesson:        syntheticLesson,
+      objectId:      null,
+      caps,
+      language,
+      onRate:        submitReview,
+      onSpeak:       (text) => speakText(text, ttsTag),
+      onCheckResult: (check) => { void submitLessonCheck(syntheticLesson, language, check) },
+    })
+  } catch {
+    setStatus(t('load_lesson_failed'), 'error')
+  }
+}
+
+corpusDrillsBtn?.addEventListener('click', _openCorpusDrills)
+
 paneBackdrop?.addEventListener('click', () => detailPane?.hide())
 
 // Navigate from a confusable-family link inside the detail pane.
@@ -2235,6 +2290,14 @@ function renderResults(pipelinePayload, language) {
   if (siteHero) siteHero.hidden = true
   parseDialog?.close()
   if (changeLessonBtn) changeLessonBtn.hidden = false
+
+  // Show "Practice confusables" button only when the text has nuance items
+  if (corpusDrillsBtn) {
+    const hasNuance = sentences.some(s =>
+      s.learnable_objects.some(o => o.type === 'nuance')
+    )
+    corpusDrillsBtn.hidden = !hasNuance
+  }
 
   if (filterBar) {
     const allTypes = [...new Set(sentences.flatMap(s =>

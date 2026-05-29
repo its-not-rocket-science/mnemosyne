@@ -31,6 +31,7 @@ from backend.api.routes.parse_jobs import router as parse_jobs_router
 from backend.api.routes.ready import router as ready_router
 from backend.api.routes.vocabulary import router as vocabulary_router
 from backend.api.routes.grammar import router as grammar_router
+from backend.api.routes.nuance_drills import router as nuance_drills_router
 from backend.api.routes.reading import router as reading_router
 from backend.api.routes.sources import router as sources_router
 from backend.api.routes.recommend import router as recommend_router
@@ -334,6 +335,7 @@ app.include_router(translate_router)
 app.include_router(ready_router)
 app.include_router(vocabulary_router)
 app.include_router(grammar_router)
+app.include_router(nuance_drills_router)
 app.include_router(term_progress_router)
 app.include_router(sentence_review_router)
 app.include_router(weakness_router)
