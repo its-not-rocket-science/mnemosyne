@@ -564,3 +564,67 @@ async def test_recommend_continuation_sorts_first(db_session) -> None:
     assert cont_key[0] == 0, "Continuation sentence should have priority 0"
     assert other_key[0] == 1, "Non-continuation sentence should have priority 1"
     assert cont_key < other_key, "Continuation should sort before non-continuation"
+
+
+# ── GET /sources — progress fields ────────────────────────────────────────────
+
+@pytest.mark.asyncio
+async def test_list_sources_includes_progress_fields(async_client, db_session) -> None:
+    await _seed_progression(
+        db_session,
+        next_position=3,
+        sentences_total=10,
+        completion_fraction=0.3,
+    )
+    resp = await async_client.get("/sources")
+    assert resp.status_code == 200
+    sources = resp.json()["sources"]
+    assert len(sources) == 1
+    src = sources[0]
+    assert "next_position" in src
+    assert "sentences_total" in src
+    assert "completion_fraction" in src
+    assert "is_complete" in src
+
+
+@pytest.mark.asyncio
+async def test_list_sources_progress_values_correct(async_client, db_session) -> None:
+    await _seed_progression(
+        db_session,
+        next_position=4,
+        sentences_total=10,
+        completion_fraction=0.4,
+    )
+    resp = await async_client.get("/sources")
+    src = resp.json()["sources"][0]
+    assert src["next_position"] == 4
+    assert src["sentences_total"] == 10
+    assert abs(src["completion_fraction"] - 0.4) < 0.01
+    assert src["is_complete"] is False
+
+
+@pytest.mark.asyncio
+async def test_list_sources_is_complete_when_at_total(async_client, db_session) -> None:
+    await _seed_progression(
+        db_session,
+        next_position=10,
+        sentences_total=10,
+        completion_fraction=1.0,
+    )
+    resp = await async_client.get("/sources")
+    src = resp.json()["sources"][0]
+    assert src["is_complete"] is True
+
+
+@pytest.mark.asyncio
+async def test_list_sources_not_started_has_zero_position(async_client, db_session) -> None:
+    await _seed_progression(
+        db_session,
+        next_position=0,
+        sentences_total=15,
+        completion_fraction=0.0,
+    )
+    resp = await async_client.get("/sources")
+    src = resp.json()["sources"][0]
+    assert src["next_position"] == 0
+    assert src["is_complete"] is False

@@ -825,6 +825,76 @@ privacyLink?.addEventListener('click', e => {
 gdprCloseBtn?.addEventListener('click', () => gdprDialog?.close())
 gdprOkBtn?.addEventListener('click',    () => gdprDialog?.close())
 
+// ── Source list item builder ──────────────────────────────────────────────────
+
+function _buildSourceItem(src) {
+  const pct       = Math.round((src.completion_fraction ?? 0) * 100)
+  const pos       = src.next_position ?? 0
+  const total     = src.sentences_total ?? 0
+  const started   = pos > 0
+  const complete  = src.is_complete ?? false
+
+  const actionKey = complete ? 'source_action_reread'
+    : started ? 'source_action_resume'
+    : 'source_action_start'
+
+  const li = document.createElement('li')
+  li.className = 'load-lesson-list__item'
+
+  const btn = document.createElement('button')
+  btn.type = 'button'
+  btn.className = 'load-lesson-list__btn'
+  btn.dataset.sourceId   = src.id
+  btn.dataset.sourceLang = src.language
+  btn.addEventListener('click', () => _loadSource(src.id, src.language))
+
+  const titleSpan = document.createElement('span')
+  titleSpan.className = 'load-lesson-list__title'
+  titleSpan.textContent = src.title || src.language
+
+  const actionSpan = document.createElement('span')
+  actionSpan.className = 'load-lesson-list__action'
+  actionSpan.textContent = t(actionKey)
+  actionSpan.setAttribute('aria-hidden', 'true')
+
+  btn.appendChild(titleSpan)
+  btn.appendChild(actionSpan)
+
+  if (total > 0) {
+    const progressRow = document.createElement('span')
+    progressRow.className = 'load-lesson-list__progress-row'
+
+    const barWrap = document.createElement('span')
+    barWrap.className = 'load-lesson-list__progress-bar'
+    barWrap.setAttribute('role', 'presentation')
+
+    const fill = document.createElement('span')
+    fill.className = 'load-lesson-list__progress-fill'
+    fill.style.inlineSize = `${pct}%`
+    barWrap.appendChild(fill)
+
+    const label = document.createElement('span')
+    label.className = 'load-lesson-list__progress-text'
+    label.textContent = complete
+      ? t('source_complete')
+      : ti('source_progress_text', { pos, total })
+
+    progressRow.appendChild(barWrap)
+    progressRow.appendChild(label)
+    btn.appendChild(progressRow)
+  }
+
+  li.appendChild(btn)
+
+  // Accessible label includes action + title + progress context
+  const ariaLabel = `${t(actionKey)}: ${src.title || src.language}`
+    + (total > 0 ? ` — ${complete ? t('source_complete') : ti('source_progress_text', { pos, total })}` : '')
+  btn.setAttribute('aria-label', ariaLabel)
+
+  return li
+}
+
+
 // ── Load-lesson dialog ────────────────────────────────────────────────────────
 
 loadLessonBtn?.addEventListener('click', async () => {
@@ -844,17 +914,7 @@ loadLessonBtn?.addEventListener('click', async () => {
       return
     }
     for (const src of sources) {
-      const li = document.createElement('li')
-      li.className = 'load-lesson-list__item'
-      const btn = document.createElement('button')
-      btn.type = 'button'
-      btn.className = 'load-lesson-list__btn ghost-button'
-      btn.textContent = src.title || src.language
-      btn.dataset.sourceId  = src.id
-      btn.dataset.sourceLang = src.language
-      btn.addEventListener('click', () => _loadSource(src.id, src.language))
-      li.appendChild(btn)
-      loadLessonList?.appendChild(li)
+      loadLessonList?.appendChild(_buildSourceItem(src))
     }
   } catch {
     const li = document.createElement('li')

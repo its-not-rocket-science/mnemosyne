@@ -13,6 +13,11 @@ class SourceItem(BaseModel):
     language: str
     created_at: datetime
     char_count: int
+    # Reading progress (from SourceProgressionRow)
+    next_position: int = 0
+    sentences_total: int = 0
+    completion_fraction: float = 0.0
+    is_complete: bool = False
 
 
 class SourceListResponse(BaseModel):

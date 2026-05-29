@@ -29,7 +29,7 @@ async def list_sources(
     current_user: str = Depends(get_current_user),
 ) -> SourceListResponse:
     q = (
-        select(SourceDocumentRow)
+        select(SourceDocumentRow, SourceProgressionRow)
         .join(
             SourceProgressionRow,
             SourceProgressionRow.source_document_id == SourceDocumentRow.id,
@@ -40,8 +40,7 @@ async def list_sources(
     if language:
         q = q.where(SourceDocumentRow.language == language)
 
-    result = await db.execute(q)
-    docs = result.scalars().all()
+    rows = (await db.execute(q)).all()
 
     return SourceListResponse(
         sources=[
@@ -51,8 +50,14 @@ async def list_sources(
                 language=d.language,
                 created_at=d.created_at,
                 char_count=d.char_count,
+                next_position=p.next_position or 0,
+                sentences_total=p.sentences_total or 0,
+                completion_fraction=p.completion_fraction or 0.0,
+                is_complete=bool(
+                    p.sentences_total and p.next_position >= p.sentences_total
+                ),
             )
-            for d in docs
+            for d, p in rows
         ]
     )
 
