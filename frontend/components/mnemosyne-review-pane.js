@@ -187,6 +187,13 @@ export class MnemosyneReviewPane extends HTMLElement {
           <div class="card__feedback" aria-live="polite" aria-atomic="true" id="feedback-region"></div>
         </div>
 
+        <details class="card__context" id="context-details">
+          <summary class="card__context-summary">Show context</summary>
+          <div class="card__context-body" id="context-body" aria-busy="true">
+            <p class="card__context-loading">Loading…</p>
+          </div>
+        </details>
+
         <div class="mastery-bar" aria-label="Mastery: ${masteryPct}%">
           <div class="mastery-bar__fill" style="inline-size:${masteryPct}%"></div>
         </div>
@@ -211,9 +218,73 @@ export class MnemosyneReviewPane extends HTMLElement {
     }
 
     this._wireCard(item)
+    this._wireContext(item.id)
 
     // Move focus to the heading for screen readers announcing new card
     sr.getElementById('review-heading')?.focus()
+  }
+
+  _wireContext(itemId) {
+    const details = this.shadowRoot.getElementById('context-details')
+    if (!details) return
+    let loaded = false
+    details.addEventListener('toggle', async () => {
+      if (!details.open || loaded) return
+      loaded = true
+      await this._loadContext(itemId)
+    }, { once: true })
+  }
+
+  async _loadContext(itemId) {
+    const body = this.shadowRoot.getElementById('context-body')
+    if (!body) return
+    try {
+      const token = localStorage.getItem('mnemosyne_token')
+      const resp = await fetch(`${API_BASE}/review/sentence-items/${itemId}/context`, {
+        headers: token ? { Authorization: `Bearer ${token}` } : {},
+      })
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
+      const ctx = await resp.json()
+
+      body.removeAttribute('aria-busy')
+      body.replaceChildren()
+
+      for (const text of ctx.before) {
+        const p = document.createElement('p')
+        p.className = 'context-sent context-sent--before'
+        p.textContent = text
+        body.appendChild(p)
+      }
+
+      const target = document.createElement('p')
+      target.className = 'context-sent context-sent--target'
+      target.textContent = ctx.target
+      target.setAttribute('aria-current', 'true')
+      body.appendChild(target)
+
+      for (const text of ctx.after) {
+        const p = document.createElement('p')
+        p.className = 'context-sent context-sent--after'
+        p.textContent = text
+        body.appendChild(p)
+      }
+
+      if (ctx.source_title) {
+        const cite = document.createElement('p')
+        cite.className = 'context-source'
+        cite.textContent = `From: ${ctx.source_title}`
+        body.appendChild(cite)
+      }
+    } catch {
+      if (body) {
+        body.removeAttribute('aria-busy')
+        body.replaceChildren()
+        const err = document.createElement('p')
+        err.className = 'card__context-loading'
+        err.textContent = 'Context unavailable.'
+        body.appendChild(err)
+      }
+    }
   }
 
   _renderDiscriminationChoices(item) {
@@ -755,11 +826,72 @@ export class MnemosyneReviewPane extends HTMLElement {
       .pane--done { text-align: center; }
       .done-msg { color: var(--muted, GrayText); margin-block: 1rem; }
 
+      /* ── Sentence context ── */
+      .card__context {
+        margin-block: 0.5rem 0;
+        border-radius: 0.375rem;
+        border: 1px solid color-mix(in srgb, CanvasText 15%, Canvas);
+        overflow: hidden;
+      }
+
+      .card__context-summary {
+        cursor: pointer;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+        color: GrayText;
+        user-select: none;
+        list-style: none;
+      }
+      .card__context-summary::-webkit-details-marker { display: none; }
+      .card__context-summary::before { content: '▶ '; font-size: 0.65rem; }
+      .card__context[open] .card__context-summary::before { content: '▼ '; }
+
+      .card__context-body {
+        padding: 0.5rem 0.75rem 0.6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+
+      .card__context-loading {
+        color: GrayText;
+        font-size: 0.85rem;
+        font-style: italic;
+        margin: 0;
+      }
+
+      .context-sent {
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.5;
+      }
+
+      .context-sent--before,
+      .context-sent--after {
+        color: GrayText;
+      }
+
+      .context-sent--target {
+        font-weight: 600;
+        padding-inline: 0.3rem;
+        background: color-mix(in srgb, var(--accent, #3557ff) 8%, Canvas);
+        border-radius: 0.2rem;
+      }
+
+      .context-source {
+        margin-block-start: 0.4rem;
+        margin-block-end: 0;
+        font-size: 0.75rem;
+        color: GrayText;
+        font-style: italic;
+      }
+
       /* ── Forced colors ── */
       @media (forced-colors: active) {
         .btn--choice[data-state="correct"] { outline: 3px solid Highlight; }
         .btn--choice[data-state="wrong"]   { outline: 3px solid Mark; }
         .mastery-bar__fill                 { forced-color-adjust: none; background: Highlight; }
+        .context-sent--target              { outline: 2px solid Highlight; background: transparent; }
       }
     </style>`
   }
