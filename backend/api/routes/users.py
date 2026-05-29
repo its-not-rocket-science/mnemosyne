@@ -32,6 +32,10 @@ POST  /users/me/calibrate
 GET  /users/me/export
     Return a portable JSON export of all user knowledge and preferences.
 
+GET  /users/me/vocabulary/export
+    Download vocabulary as CSV or Anki-compatible TSV.
+    Query params: format (csv|anki), language, type.
+
 DELETE  /users/me
     Permanently delete all personal data for the current user.  Removes rows
     from user_knowledge, user_language_preferences, source_progression,
@@ -39,10 +43,14 @@ DELETE  /users/me
 """
 from __future__ import annotations
 
+import csv
+import io
 import logging
 from datetime import UTC, datetime
+from typing import Literal
 
-from fastapi import APIRouter, Depends, HTTPException, Response
+from fastapi import APIRouter, Depends, HTTPException, Query, Response
+from fastapi.responses import StreamingResponse
 from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import outerjoin
@@ -70,6 +78,7 @@ from backend.schemas.user import (
     UserExport,
     UserPreferences,
 )
+from backend.core.vocab_index import get_cefr_level
 from backend.srs.calibrate import MIN_REVIEWS_FOR_CALIBRATION, calibrate
 
 logger = logging.getLogger(__name__)
@@ -418,6 +427,126 @@ async def set_analytics_opt_out(
         row.analytics_opt_out = opt_out
         await db.commit()
     return {"opt_out": opt_out}
+
+
+@router.get("/me/vocabulary/export")
+async def export_vocabulary(
+    format: Literal["csv", "anki"] = Query("csv", description="Export format"),
+    language: str | None = Query(None, description="Filter by language code (e.g. 'es')"),
+    type: str = Query("vocabulary", description="Object type filter; 'all' returns every type"),
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> StreamingResponse:
+    """Export the current user's vocabulary as a downloadable file.
+
+    Query parameters
+    ----------------
+    format   ``csv`` (default) or ``anki`` (Anki-compatible TSV).
+    language  ISO 639-1 code to restrict export to one language.
+    type      Canonical object type to include.  Default ``vocabulary``; pass
+              ``all`` to include conjugations, grammar patterns, etc.
+
+    CSV columns
+    -----------
+    word, display, language, type, gloss, cefr_level, mastery_score,
+    total_reviews, due_at, progression_stage
+
+    Anki TSV format
+    ---------------
+    Three tab-separated columns: ``Front`` (word), ``Back`` (gloss or display
+    label), ``Tags`` (space-separated: language, type, CEFR level).
+    The first line is a ``#separator:tab`` comment so Anki auto-detects the
+    format when the file is dragged into the import dialog.
+    """
+    try:
+        join_clause = outerjoin(
+            UserKnowledgeRow,
+            CanonicalObjectRow,
+            UserKnowledgeRow.object_id == CanonicalObjectRow.id,
+        )
+        query = (
+            select(UserKnowledgeRow, CanonicalObjectRow)
+            .select_from(join_clause)
+            .where(UserKnowledgeRow.user_id == current_user)
+            .order_by(UserKnowledgeRow.mastery_score.desc())
+        )
+        if language:
+            query = query.where(UserKnowledgeRow.language == language)
+        if type != "all":
+            query = query.where(CanonicalObjectRow.type == type)
+
+        result = await db.execute(query)
+        rows = result.all()
+    except Exception as exc:
+        logger.warning("vocabulary export DB query failed user=%r: %s", current_user, exc)
+        raise HTTPException(status_code=503, detail="Database unavailable") from exc
+
+    if format == "anki":
+        content = _build_anki(rows)
+        media_type = "text/plain; charset=utf-8"
+        filename = "mnemosyne_vocabulary.txt"
+    else:
+        content = _build_csv(rows)
+        media_type = "text/csv; charset=utf-8"
+        filename = "mnemosyne_vocabulary.csv"
+
+    return StreamingResponse(
+        iter([content]),
+        media_type=media_type,
+        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+    )
+
+
+def _build_csv(rows: list) -> str:
+    buf = io.StringIO()
+    writer = csv.writer(buf)
+    writer.writerow([
+        "word", "display", "language", "type", "gloss",
+        "cefr_level", "mastery_score", "total_reviews", "due_at", "progression_stage",
+    ])
+    for uk, co in rows:
+        if co is None:
+            continue
+        lesson_data = co.lesson_data or {}
+        gloss = lesson_data.get("gloss") or lesson_data.get("translation") or ""
+        cefr = get_cefr_level(co.language or "", co.canonical_form) or ""
+        writer.writerow([
+            co.canonical_form,
+            co.display_label,
+            co.language or "",
+            co.type,
+            gloss,
+            cefr,
+            round(uk.mastery_score, 4),
+            uk.total_reviews,
+            uk.due_at.isoformat() if uk.due_at else "",
+            uk.progression_stage or "",
+        ])
+    return buf.getvalue()
+
+
+def _build_anki(rows: list) -> str:
+    lines = [
+        "#separator:tab",
+        "#html:false",
+        "#notetype:Basic",
+        "#deck:Mnemosyne",
+        "#columns:Front\tBack\tTags",
+    ]
+    for uk, co in rows:
+        if co is None:
+            continue
+        lesson_data = co.lesson_data or {}
+        gloss = lesson_data.get("gloss") or lesson_data.get("translation") or co.display_label
+        cefr = get_cefr_level(co.language or "", co.canonical_form) or ""
+        tags_parts = [co.language or "unknown", co.type]
+        if cefr:
+            tags_parts.append(cefr)
+        tags = " ".join(tags_parts)
+        front = co.canonical_form
+        back = gloss if gloss != co.canonical_form else co.display_label
+        lines.append(f"{front}\t{back}\t{tags}")
+    return "\n".join(lines) + "\n"
 
 
 @router.delete("/me", status_code=204)
