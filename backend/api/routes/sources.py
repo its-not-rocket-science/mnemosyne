@@ -1,10 +1,11 @@
 """GET /sources — list user's saved source documents.
 GET /sources/{source_id} — reconstruct lesson sentences from a saved source.
+GET /corpus — browse all ingested source documents with filters and pagination.
 """
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import select
+from fastapi import APIRouter, Depends, HTTPException, Query
+from sqlalchemy import and_, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session
@@ -17,7 +18,13 @@ from backend.models import (
     SourceProgressionRow,
 )
 from backend.schemas.parse import LearnableObject, SentenceResult
-from backend.schemas.sources import SourceDetailResponse, SourceItem, SourceListResponse
+from backend.schemas.sources import (
+    CorpusBrowseItem,
+    CorpusBrowseResponse,
+    SourceDetailResponse,
+    SourceItem,
+    SourceListResponse,
+)
 
 router = APIRouter(tags=["sources"])
 
@@ -129,3 +136,71 @@ async def get_source(
         language=doc.language,
         sentences=sentences,
     )
+
+
+@router.get("/corpus", response_model=CorpusBrowseResponse)
+async def browse_corpus(
+    language: str | None = None,
+    content_type: str | None = None,
+    q: str | None = None,
+    limit: int = Query(default=20, ge=1, le=100),
+    offset: int = Query(default=0, ge=0),
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> CorpusBrowseResponse:
+    """Browse all ingested source documents with optional filters and pagination."""
+    base = select(SourceDocumentRow)
+    if language:
+        base = base.where(SourceDocumentRow.language == language)
+    if content_type:
+        base = base.where(SourceDocumentRow.content_type == content_type)
+    if q:
+        base = base.where(SourceDocumentRow.title.ilike(f"%{q}%"))
+
+    total = await db.scalar(
+        select(func.count()).select_from(base.subquery())
+    ) or 0
+
+    data_stmt = (
+        select(SourceDocumentRow, SourceProgressionRow)
+        .outerjoin(
+            SourceProgressionRow,
+            and_(
+                SourceProgressionRow.source_document_id == SourceDocumentRow.id,
+                SourceProgressionRow.user_id == current_user,
+            ),
+        )
+        .where(
+            *([SourceDocumentRow.language == language] if language else []),
+            *([SourceDocumentRow.content_type == content_type] if content_type else []),
+            *([SourceDocumentRow.title.ilike(f"%{q}%")] if q else []),
+        )
+        .order_by(SourceDocumentRow.created_at.desc())
+        .limit(limit)
+        .offset(offset)
+    )
+    rows = (await db.execute(data_stmt)).all()
+
+    items = [
+        CorpusBrowseItem(
+            id=doc.id,
+            title=doc.title,
+            language=doc.language,
+            content_type=doc.content_type,
+            author=doc.author,
+            char_count=doc.char_count,
+            created_at=doc.created_at,
+            next_position=prog.next_position if prog else 0,
+            sentences_total=prog.sentences_total if prog else 0,
+            completion_fraction=prog.completion_fraction if prog else 0.0,
+            started=bool(prog and prog.next_position and prog.next_position > 0),
+            is_complete=bool(
+                prog
+                and prog.sentences_total
+                and prog.next_position
+                and prog.next_position >= prog.sentences_total
+            ),
+        )
+        for doc, prog in rows
+    ]
+    return CorpusBrowseResponse(items=items, total=total)

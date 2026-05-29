@@ -54,7 +54,11 @@ assert.ok(
   globalCss.includes('.picker-difficulty__note {'),
   'global.css must define .picker-difficulty__note'
 )
-console.log('✓ CSS: .picker-difficulty, __badge, __note defined')
+assert.ok(
+  globalCss.includes('.picker-difficulty__cap {'),
+  'global.css must define .picker-difficulty__cap'
+)
+console.log('✓ CSS: .picker-difficulty, __badge, __note, __cap defined')
 
 // ── i18n keys ─────────────────────────────────────────────────────────────────
 
@@ -159,7 +163,7 @@ console.log('✓ main.js: badge and note elements use correct CSS class names')
 // Verify confident flag gates note
 const estimateBlock = mainJs.slice(
   mainJs.indexOf('async function _runDifficultyEstimate'),
-  mainJs.indexOf('async function _runDifficultyEstimate') + 1200,
+  mainJs.indexOf('async function _runDifficultyEstimate') + 2000,
 )
 assert.ok(
   estimateBlock.includes('data.confident'),
@@ -170,5 +174,42 @@ assert.ok(
   '_runDifficultyEstimate must check data.estimated_cefr before rendering badge'
 )
 console.log('✓ main.js: confidence check gates indicative note; null CEFR clears badge')
+
+// ── Capability chip ───────────────────────────────────────────────────────────
+
+assert.ok(
+  mainJs.includes('CAPABILITY_LABELS_I18N'),
+  'main.js must import CAPABILITY_LABELS_I18N'
+)
+assert.ok(
+  mainJs.includes("'picker-difficulty__cap'"),
+  "main.js must create element with class 'picker-difficulty__cap'"
+)
+assert.ok(
+  mainJs.includes('_CAP_KEY_MAP'),
+  'main.js must define _CAP_KEY_MAP to map analysis_depth to i18n key'
+)
+assert.ok(
+  mainJs.includes('cap_label_full') && mainJs.includes('cap_label_morphology_light') &&
+  mainJs.includes('cap_label_dictionary') && mainJs.includes('cap_label_segmentation_only'),
+  '_CAP_KEY_MAP must cover all four analysis_depth values'
+)
+assert.ok(
+  mainJs.includes('analysis_depth_label'),
+  'main.js must reference analysis_depth_label as fallback'
+)
+console.log('✓ main.js: capability chip uses CAPABILITY_LABELS_I18N with analysis_depth mapping')
+
+// Verify CAPABILITY_LABELS_I18N exported from i18n.js
+assert.ok(
+  i18n.includes('export const CAPABILITY_LABELS_I18N'),
+  'i18n.js must export CAPABILITY_LABELS_I18N'
+)
+assert.ok(
+  i18n.includes('cap_label_full') && i18n.includes('cap_label_morphology_light') &&
+  i18n.includes('cap_label_dictionary') && i18n.includes('cap_label_segmentation_only'),
+  'CAPABILITY_LABELS_I18N must define all four cap_label keys'
+)
+console.log('✓ i18n.js: CAPABILITY_LABELS_I18N exported with all four cap keys')
 
 console.log('\nAll difficulty-badge tests passed.')

@@ -24,6 +24,27 @@ class SourceListResponse(BaseModel):
     sources: list[SourceItem]
 
 
+class CorpusBrowseItem(BaseModel):
+    id: str
+    title: str | None = None
+    language: str
+    content_type: str
+    author: str | None = None
+    char_count: int
+    created_at: datetime
+    # Reading progress (may be absent if user never started this document)
+    next_position: int = 0
+    sentences_total: int = 0
+    completion_fraction: float = 0.0
+    started: bool = False
+    is_complete: bool = False
+
+
+class CorpusBrowseResponse(BaseModel):
+    items: list[CorpusBrowseItem]
+    total: int
+
+
 class SourceDetailResponse(BaseModel):
     id: str
     title: str | None = None

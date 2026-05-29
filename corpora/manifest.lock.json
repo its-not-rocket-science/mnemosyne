@@ -379,6 +379,12 @@
     "manifest_entry_hash": "60ffd87311e28ce39f7e07cf8dd6919b99323505dd8c741a2f2266af527e65cd",
     "verified_url": "https://www.aozora.gr.jp/cards/000081/files/456_15050.html"
   },
+  "ja:JLPT:N3:jlpt-n3-text:12df72bf": {
+    "ingestion_status": "ok",
+    "manifest_entry_hash": "280b15b3ca296f195a2b2d9c47cfc237fb7ec7a84efc50925d6035bee4021754",
+    "normalized_content_hash": "f3823b50ab4d71f1443b2ff3be8fdf99955c7dc1960de8220a3e2889c49a3e55",
+    "raw_content_hash": "f3823b50ab4d71f1443b2ff3be8fdf99955c7dc1960de8220a3e2889c49a3e55"
+  },
   "ja:JLPT:N4::77856024": {
     "ingestion_status": "ok",
     "last_verified_at": "2026-05-19T00:25:48.781846+00:00",
