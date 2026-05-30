@@ -435,3 +435,62 @@ class TestSubmitReview:
                 f"/review/sentence-items/{item2.id}/submit", json={"quality": q}
             )
             assert resp.json()["next_interval_days"] >= 1
+
+
+# ── GET /review/sentence-items/{id}/schedule-preview ─────────────────────────
+
+
+class TestSchedulePreview:
+    async def test_preview_shape_new_item(self, client, db_session):
+        pt = await _seed_parsed_text(db_session)
+        s = await _seed_sentence(db_session, pt.id, "La luna brilla en la noche oscura.")
+        item = await _seed_review_item(db_session, s.id)
+
+        resp = await client.get(f"/review/sentence-items/{item.id}/schedule-preview")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert "previews" in data
+        assert len(data["previews"]) == 4
+
+    async def test_preview_all_four_qualities(self, client, db_session):
+        pt = await _seed_parsed_text(db_session)
+        s = await _seed_sentence(db_session, pt.id, "El tren llega tarde hoy.")
+        item = await _seed_review_item(db_session, s.id)
+
+        resp = await client.get(f"/review/sentence-items/{item.id}/schedule-preview")
+        assert resp.status_code == 200
+        qualities = {p["quality"] for p in resp.json()["previews"]}
+        assert qualities == {1, 2, 3, 4}
+
+    async def test_preview_has_days_and_label(self, client, db_session):
+        pt = await _seed_parsed_text(db_session)
+        s = await _seed_sentence(db_session, pt.id, "Ella canta muy bien aquí.")
+        item = await _seed_review_item(db_session, s.id)
+
+        resp = await client.get(f"/review/sentence-items/{item.id}/schedule-preview")
+        for preview in resp.json()["previews"]:
+            assert "days" in preview
+            assert "label" in preview
+            assert preview["days"] >= 1
+            assert len(preview["label"]) > 0
+
+    async def test_preview_intervals_nondecreasing(self, client, db_session):
+        """Intervals should be non-decreasing with quality (1 ≤ 2 ≤ 3 ≤ 4)."""
+        pt = await _seed_parsed_text(db_session)
+        s = await _seed_sentence(db_session, pt.id, "El cielo azul es hermoso.")
+        item = await _seed_review_item(db_session, s.id)
+
+        resp = await client.get(f"/review/sentence-items/{item.id}/schedule-preview")
+        previews = sorted(resp.json()["previews"], key=lambda p: p["quality"])
+        days = [p["days"] for p in previews]
+        assert days == sorted(days), f"Intervals not non-decreasing: {days}"
+
+    async def test_preview_does_not_modify_state(self, client, db_session):
+        """Calling preview twice should return identical results."""
+        pt = await _seed_parsed_text(db_session)
+        s = await _seed_sentence(db_session, pt.id, "La flor crece en el jardín.")
+        item = await _seed_review_item(db_session, s.id)
+
+        r1 = (await client.get(f"/review/sentence-items/{item.id}/schedule-preview")).json()
+        r2 = (await client.get(f"/review/sentence-items/{item.id}/schedule-preview")).json()
+        assert r1 == r2
