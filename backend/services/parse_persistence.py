@@ -56,6 +56,7 @@ async def create_source_document_row(
     author: str | None = None,
     source_url: str | None = None,
     filename: str | None = None,
+    content_hash: str | None = None,
 ) -> None:
     """Insert a SourceDocumentRow and flush (does not commit)."""
     db.add(SourceDocumentRow(
@@ -68,6 +69,7 @@ async def create_source_document_row(
         filename=filename,
         char_count=char_count,
         script_hint=script_hint,
+        content_hash=content_hash,
     ))
     await db.flush()
 
@@ -312,6 +314,7 @@ async def persist_ingest(
     author: str | None = None,
     source_url: str | None = None,
     filename: str | None = None,
+    content_hash: str | None = None,
     user_id: str = DEFAULT_USER_ID,
 ) -> str:
     """Single-chunk ingest convenience wrapper. Commits at end.
@@ -333,6 +336,7 @@ async def persist_ingest(
         author=author,
         source_url=source_url,
         filename=filename,
+        content_hash=content_hash,
     )
     parsed_text_id = await persist_chunk(
         db,

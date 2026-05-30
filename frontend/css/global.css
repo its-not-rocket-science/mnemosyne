@@ -1933,6 +1933,64 @@ body.player-active .app-shell__scroll-area {
   .corpus-browser-list__study { border-color: ButtonText; }
 }
 
+/* Vocabulary density dot — appended inside .corpus-browser-list__btn */
+.corpus-browser-list__density {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  margin-inline-start: 0.4rem;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.corpus-browser-list__density--low  { background: oklch(68% 0.16 50); }
+.corpus-browser-list__density--mid  { background: oklch(72% 0.17 95); }
+.corpus-browser-list__density--high { background: oklch(60% 0.17 145); }
+
+/* Note toggle and textarea */
+.corpus-browser-list__note-toggle {
+  display: block;
+  width: 100%;
+  text-align: start;
+  background: none;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-size: var(--font-size-label);
+  color: var(--text);
+  cursor: pointer;
+  border-radius: var(--radius);
+  white-space: pre-line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.corpus-browser-list__note-toggle--empty {
+  color: var(--muted);
+  font-style: italic;
+}
+.corpus-browser-list__note-toggle:hover { background: var(--surface-hover, color-mix(in oklch, var(--surface) 92%, var(--text))); }
+.corpus-browser-list__note-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.corpus-browser-list__note-area {
+  padding-inline: 0.5rem;
+  padding-block-end: 0.4rem;
+}
+.corpus-browser-list__note-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.3rem 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--font-size-label);
+  font-family: inherit;
+  resize: vertical;
+}
+.corpus-browser-list__note-textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
 .corpus-import-url {
   padding-block: 0.5rem;
   border-block-start: 1px solid var(--border);
@@ -2002,4 +2060,6 @@ body.player-active .app-shell__scroll-area {
   .corpus-stats-chip { border-color: ButtonText; }
   .corpus-stats-chip__n, .corpus-stats-chip__label { color: ButtonText; }
   .corpus-import-url__input { border-color: ButtonText; background: ButtonFace; color: ButtonText; }
+  .corpus-browser-list__density { background: Highlight; }
+  .corpus-browser-list__note-textarea { border-color: ButtonText; background: ButtonFace; color: ButtonText; }
 }
