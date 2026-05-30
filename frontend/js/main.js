@@ -121,6 +121,7 @@ const nowPlayingBar      = document.querySelector('#now-playing-bar')
 const readingProgress    = document.querySelector('#reading-progress')
 const annotationMinimap  = document.querySelector('#annotation-minimap')
 const annotationTooltip  = document.querySelector('#annotation-tooltip')
+const annotationSearch   = document.querySelector('#annotation-search')
 
 // Accessibility
 const a11yLive         = document.querySelector('#a11y-live')
@@ -200,7 +201,8 @@ let currentDocumentTitle  = null
 let currentDocumentEyebrow = null
 let languageUserSelected  = false
 let currentText          = ''   // committed text from picker
-let activeFilterTypes    = null // Set<string> when filtered, null = show all
+let activeFilterTypes    = null  // Set<string> when filtered, null = show all
+let activeSearchTerm     = ''   // lowercase string; '' = no search filter
 
 let isFollowAlongEnabled = false
 const ANNOTATION_DEPTH_KEY = 'mn-annotation-depth'
@@ -2047,6 +2049,21 @@ filterBar?.addEventListener('filter-change', ({ detail }) => {
   applyAnnotationFilter()
 })
 
+if (annotationSearch) {
+  let _searchDebounce = null
+  annotationSearch.addEventListener('input', () => {
+    clearTimeout(_searchDebounce)
+    _searchDebounce = setTimeout(() => {
+      activeSearchTerm = annotationSearch.value.trim().toLowerCase()
+      applyAnnotationFilter()
+    }, 180)
+  })
+  annotationSearch.addEventListener('search', () => {
+    activeSearchTerm = annotationSearch.value.trim().toLowerCase()
+    applyAnnotationFilter()
+  })
+}
+
 function applyFilterBarLabels() {
   filterBar?.setLabels?.({
     vocab:        t('filter_vocab'),
@@ -2374,6 +2391,8 @@ function renderResults(pipelinePayload, language) {
     filterBar.reset()
     filterBar.hidden = allTypes.length === 0
     if (appFilterBar) appFilterBar.hidden = allTypes.length === 0
+    activeSearchTerm = ''
+    if (annotationSearch) annotationSearch.value = ''
   }
 
   if (nowPlayingBar) {
@@ -2576,9 +2595,12 @@ function buildMinimap() {
 function applyAnnotationFilter() {
   const depthTypes = ANNOTATION_DEPTH_MODEL[currentDepth] ?? ANNOTATION_DEPTH_MODEL[DEPTH_FALLBACK]
   results?.querySelectorAll('.reader-annotation').forEach(mark => {
-    const typeAllowedByDepth = depthTypes.has(mark.dataset.type)
+    const typeAllowedByDepth      = depthTypes.has(mark.dataset.type)
     const typeAllowedByUserFilter = activeFilterTypes === null || activeFilterTypes.has(mark.dataset.type)
-    mark.toggleAttribute('data-filtered', !(typeAllowedByDepth && typeAllowedByUserFilter))
+    const searchAllowed           = !activeSearchTerm
+      || mark.textContent.toLowerCase().includes(activeSearchTerm)
+      || (mark.dataset.label ?? '').toLowerCase().includes(activeSearchTerm)
+    mark.toggleAttribute('data-filtered', !(typeAllowedByDepth && typeAllowedByUserFilter && searchAllowed))
   })
   requestAnimationFrame(buildMinimap)
 }
