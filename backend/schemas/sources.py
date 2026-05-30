@@ -40,6 +40,10 @@ class CorpusBrowseItem(BaseModel):
     is_complete: bool = False
     # User-defined tags
     tags: list[str] = []
+    # User note (freetext)
+    note: str | None = None
+    # Fraction of objects in this doc the user has reviewed (0–1)
+    vocab_density: float = 0.0
 
 
 class CorpusBrowseResponse(BaseModel):
@@ -83,6 +87,14 @@ class CorpusStudyResult(BaseModel):
     mined: int
     skipped_duplicate: int
     sentences_processed: int
+
+
+class NoteUpsertRequest(BaseModel):
+    text: str = Field(max_length=2000)
+
+
+class NoteResponse(BaseModel):
+    text: str | None
 
 
 class UrlImportRequest(BaseModel):

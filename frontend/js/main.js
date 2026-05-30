@@ -2250,6 +2250,63 @@ function _buildCorpusItem(item) {
   tagsRow.appendChild(studyBtn)
   li.appendChild(tagsRow)
 
+  // Vocab density indicator
+  const density = item.vocab_density || 0
+  if (density > 0) {
+    const level = density >= 0.7 ? 'high' : density >= 0.35 ? 'mid' : 'low'
+    li.dataset.vocabLevel = level
+    const densityDot = document.createElement('span')
+    densityDot.className = `corpus-browser-list__density corpus-browser-list__density--${level}`
+    densityDot.setAttribute('aria-label', `${t('corpus_vocab_density_label')}: ${Math.round(density * 100)}%`)
+    densityDot.setAttribute('role', 'img')
+    btn.appendChild(densityDot)
+  }
+
+  // Note row
+  const noteToggle = document.createElement('button')
+  noteToggle.type = 'button'
+  noteToggle.className = 'corpus-browser-list__note-toggle'
+  const notePreview = item.note ? item.note.slice(0, 80) + (item.note.length > 80 ? '…' : '') : ''
+  noteToggle.textContent = notePreview || t('corpus_note_add')
+  if (!item.note) noteToggle.classList.add('corpus-browser-list__note-toggle--empty')
+  noteToggle.addEventListener('click', (e) => {
+    e.stopPropagation()
+    noteArea.hidden = !noteArea.hidden
+    if (!noteArea.hidden) noteTextarea.focus()
+  })
+
+  const noteArea = document.createElement('div')
+  noteArea.className = 'corpus-browser-list__note-area'
+  noteArea.hidden = true
+
+  const noteTextarea = document.createElement('textarea')
+  noteTextarea.className = 'corpus-browser-list__note-textarea'
+  noteTextarea.rows = 3
+  noteTextarea.maxLength = 2000
+  noteTextarea.value = item.note || ''
+  noteTextarea.placeholder = t('corpus_note_placeholder')
+  noteTextarea.addEventListener('click', e => e.stopPropagation())
+  noteTextarea.addEventListener('blur', async () => {
+    const text = noteTextarea.value.trim()
+    if (text !== (item.note || '').trim()) {
+      if (text) {
+        await _saveCorpusNote(item.id, text)
+        item.note = text
+        noteToggle.textContent = text.slice(0, 80) + (text.length > 80 ? '…' : '')
+        noteToggle.classList.remove('corpus-browser-list__note-toggle--empty')
+      } else {
+        await _deleteCorpusNote(item.id)
+        item.note = null
+        noteToggle.textContent = t('corpus_note_add')
+        noteToggle.classList.add('corpus-browser-list__note-toggle--empty')
+      }
+    }
+  })
+
+  noteArea.appendChild(noteTextarea)
+  li.appendChild(noteToggle)
+  li.appendChild(noteArea)
+
   return li
 }
 
@@ -2431,6 +2488,25 @@ async function _populateTagFilter() {
   } catch { /* ignore */ }
 }
 
+async function _saveCorpusNote(docId, text) {
+  try {
+    await fetch(`${API_BASE}/corpus/${encodeURIComponent(docId)}/note`, {
+      method: 'PUT',
+      headers: { ...getAuthHeaders(), 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text }),
+    })
+  } catch { /* ignore */ }
+}
+
+async function _deleteCorpusNote(docId) {
+  try {
+    await fetch(`${API_BASE}/corpus/${encodeURIComponent(docId)}/note`, {
+      method: 'DELETE',
+      headers: getAuthHeaders(),
+    })
+  } catch { /* ignore */ }
+}
+
 async function _populateImportLangSelect() {
   if (!corpusImportLang) return
   try {
@@ -2467,9 +2543,14 @@ async function _importCorpusUrl() {
       if (corpusImportForm) corpusImportForm.hidden = true
       if (corpusImportToggle) corpusImportToggle.setAttribute('aria-expanded', 'false')
       await Promise.all([_loadCorpus(), _loadCorpusStats()])
+    } else if (resp.status === 409) {
+      const err = await resp.json().catch(() => ({}))
+      const detail = err.detail || {}
+      const existingTitle = detail.title || detail.source_document_id || url
+      if (corpusImportStatus) corpusImportStatus.textContent = ti('corpus_import_url_duplicate', { title: existingTitle })
     } else {
       const err = await resp.json().catch(() => ({}))
-      if (corpusImportStatus) corpusImportStatus.textContent = err.detail || t('corpus_import_url_error')
+      if (corpusImportStatus) corpusImportStatus.textContent = (typeof err.detail === 'string' ? err.detail : null) || t('corpus_import_url_error')
     }
   } catch {
     if (corpusImportStatus) corpusImportStatus.textContent = t('corpus_import_url_error')

@@ -194,6 +194,7 @@ class SourceDocumentRow(Base):
     filename: Mapped[str | None] = mapped_column(String(256), nullable=True)
     char_count: Mapped[int] = mapped_column(Integer, default=0)
     script_hint: Mapped[str | None] = mapped_column(String(32), nullable=True)
+    content_hash: Mapped[str | None] = mapped_column(String(64), nullable=True, index=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
 
     chunks: Mapped[list["SourceChunkRow"]] = relationship(
@@ -313,6 +314,19 @@ class CorpusDocumentTagRow(Base):
     )
     tag: Mapped[str] = mapped_column(String(50), primary_key=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+
+class CorpusDocumentNoteRow(Base):
+    """Freetext note a user has attached to a corpus document."""
+
+    __tablename__ = "corpus_document_notes"
+
+    user_id: Mapped[str] = mapped_column(String(50), primary_key=True)
+    source_document_id: Mapped[str] = mapped_column(
+        String(36), ForeignKey("source_documents.id", ondelete="CASCADE"), primary_key=True
+    )
+    note: Mapped[str] = mapped_column(Text)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
 
 
 class UserKnowledgeRow(Base):

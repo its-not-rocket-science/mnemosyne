@@ -5,6 +5,7 @@ POST /corpus/import-url — fetch a URL server-side, extract text, and ingest it
 """
 from __future__ import annotations
 
+import hashlib
 import logging
 import re
 import uuid
@@ -21,6 +22,7 @@ from backend.core.config import get_settings
 from backend.ingestion.validator import detect_dominant_script, validate_ingest_text
 from backend.models import (
     CanonicalObjectRow,
+    CorpusDocumentNoteRow,
     CorpusDocumentTagRow,
     Sentence,
     SentenceObjectRow,
@@ -28,6 +30,7 @@ from backend.models import (
     SourceChunkRow,
     SourceDocumentRow,
     SourceProgressionRow,
+    UserKnowledgeRow,
     UserSentenceReviewRow,
 )
 from backend.parsing.pipeline import PipelineResult, pipeline_cache_key, run_pipeline
@@ -41,6 +44,8 @@ from backend.schemas.sources import (
     CorpusStats,
     CorpusStudyResult,
     CorpusTagsResponse,
+    NoteResponse,
+    NoteUpsertRequest,
     SourceDetailResponse,
     SourceItem,
     SourceListResponse,
@@ -261,6 +266,22 @@ async def import_corpus_url(
     current_user: str = Depends(get_current_user),
 ) -> UrlImportResponse:
     """Fetch a URL, extract its text, and ingest it as a corpus document."""
+    # ── 0. URL dedup ──────────────────────────────────────────────────────────
+    url_dup = await db.execute(
+        select(SourceDocumentRow.id, SourceDocumentRow.title)
+        .where(SourceDocumentRow.source_url == payload.url)
+    )
+    url_dup_row = url_dup.first()
+    if url_dup_row:
+        raise HTTPException(
+            status_code=409,
+            detail={
+                "message": "already_imported",
+                "source_document_id": url_dup_row.id,
+                "title": url_dup_row.title,
+            },
+        )
+
     # ── 1. Fetch ──────────────────────────────────────────────────────────────
     headers = {"User-Agent": "Mnemosyne/1.0 (+educational-language-tool)"}
     try:
@@ -302,6 +323,23 @@ async def import_corpus_url(
 
     script_hint = detect_dominant_script(normalized_text)
 
+    # ── 3b. Content-hash dedup ────────────────────────────────────────────────
+    content_hash = hashlib.sha256(normalized_text.encode()).hexdigest()
+    hash_dup = await db.execute(
+        select(SourceDocumentRow.id, SourceDocumentRow.title)
+        .where(SourceDocumentRow.content_hash == content_hash)
+    )
+    hash_dup_row = hash_dup.first()
+    if hash_dup_row:
+        raise HTTPException(
+            status_code=409,
+            detail={
+                "message": "duplicate_content",
+                "source_document_id": hash_dup_row.id,
+                "title": hash_dup_row.title,
+            },
+        )
+
     result: PipelineResult = await run_pipeline(
         text=normalized_text,
         language=payload.language,
@@ -324,6 +362,7 @@ async def import_corpus_url(
             uuid_to_candidate=result.uuid_to_candidate,
             title=title,
             source_url=payload.url,
+            content_hash=content_hash,
             user_id=current_user,
         )
     except Exception as exc:
@@ -363,6 +402,47 @@ def _extract_html_text(html: str) -> tuple[str | None, str]:
 
     text = "\n\n".join(paragraphs) if paragraphs else re.sub(r"\n{3,}", "\n\n", container.get_text("\n"))
     return title, text
+
+
+@router.put("/corpus/{doc_id}/note", response_model=NoteResponse)
+async def upsert_doc_note(
+    doc_id: str,
+    payload: NoteUpsertRequest,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> NoteResponse:
+    """Create or replace the user's note for a corpus document."""
+    await db.execute(
+        delete(CorpusDocumentNoteRow).where(
+            CorpusDocumentNoteRow.user_id == current_user,
+            CorpusDocumentNoteRow.source_document_id == doc_id,
+        )
+    )
+    db.add(CorpusDocumentNoteRow(
+        user_id=current_user,
+        source_document_id=doc_id,
+        note=payload.text,
+        updated_at=datetime.now(UTC),
+    ))
+    await db.commit()
+    return NoteResponse(text=payload.text)
+
+
+@router.delete("/corpus/{doc_id}/note", status_code=204)
+async def delete_doc_note(
+    doc_id: str,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> Response:
+    """Delete the user's note for a corpus document."""
+    await db.execute(
+        delete(CorpusDocumentNoteRow).where(
+            CorpusDocumentNoteRow.user_id == current_user,
+            CorpusDocumentNoteRow.source_document_id == doc_id,
+        )
+    )
+    await db.commit()
+    return Response(status_code=204)
 
 
 @router.get("/corpus/{doc_id}/tags", response_model=CorpusTagsResponse)
@@ -662,9 +742,12 @@ async def browse_corpus(
     )
     rows = (await db.execute(data_stmt)).all()
 
-    # Fetch tags for all returned docs in one query.
+    # Fetch tags, notes, and vocab density for all returned docs in one batch each.
     doc_ids = [doc.id for doc, _ in rows]
     tags_by_doc: dict[str, list[str]] = {}
+    notes_by_doc: dict[str, str] = {}
+    density_by_doc: dict[str, float] = {}
+
     if doc_ids:
         tag_rows = (await db.execute(
             select(CorpusDocumentTagRow.source_document_id, CorpusDocumentTagRow.tag)
@@ -676,6 +759,38 @@ async def browse_corpus(
         )).all()
         for doc_id_val, tag_val in tag_rows:
             tags_by_doc.setdefault(doc_id_val, []).append(tag_val)
+
+        note_rows = (await db.execute(
+            select(CorpusDocumentNoteRow.source_document_id, CorpusDocumentNoteRow.note)
+            .where(
+                CorpusDocumentNoteRow.user_id == current_user,
+                CorpusDocumentNoteRow.source_document_id.in_(doc_ids),
+            )
+        )).all()
+        notes_by_doc = {r.source_document_id: r.note for r in note_rows}
+
+        density_rows = (await db.execute(
+            select(
+                SourceChunkRow.source_document_id,
+                func.count(func.distinct(SentenceObjectRow.object_id)).label("total"),
+                func.count(func.distinct(SentenceObjectRow.object_id)).filter(
+                    UserKnowledgeRow.object_id.is_not(None)
+                ).label("known"),
+            )
+            .select_from(SourceChunkRow)
+            .join(Sentence, Sentence.parsed_text_id == SourceChunkRow.parsed_text_id)
+            .join(SentenceObjectRow, SentenceObjectRow.sentence_id == Sentence.id)
+            .outerjoin(UserKnowledgeRow, and_(
+                UserKnowledgeRow.object_id == SentenceObjectRow.object_id,
+                UserKnowledgeRow.user_id == current_user,
+            ))
+            .where(SourceChunkRow.source_document_id.in_(doc_ids))
+            .group_by(SourceChunkRow.source_document_id)
+        )).all()
+        density_by_doc = {
+            r.source_document_id: round(r.known / r.total, 3) if r.total > 0 else 0.0
+            for r in density_rows
+        }
 
     items = [
         CorpusBrowseItem(
@@ -697,6 +812,8 @@ async def browse_corpus(
                 and prog.next_position >= prog.sentences_total
             ),
             tags=tags_by_doc.get(doc.id, []),
+            note=notes_by_doc.get(doc.id),
+            vocab_density=density_by_doc.get(doc.id, 0.0),
         )
         for doc, prog in rows
     ]
