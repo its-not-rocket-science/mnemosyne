@@ -90,6 +90,18 @@ class MnemosyneFilterBar extends HTMLElement {
   }
 
   /**
+   * Activate a single category by ID, clearing all others.
+   * Pass null to clear all (equivalent to reset without clearing custom terms).
+   * @param {string|null} id
+   */
+  activateCategory(id) {
+    this.#active.clear()
+    if (id) this.#active.add(id)
+    this.#syncAllPills()
+    this.#dispatch()
+  }
+
+  /**
    * Update pill and popover labels for i18n.
    * @param {Object} labels — keys: vocab, grammar, idioms, literary, etymology,
    *                          custom, custom_title, custom_hint, add_btn, placeholder
