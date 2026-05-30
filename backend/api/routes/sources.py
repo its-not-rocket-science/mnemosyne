@@ -1,17 +1,24 @@
 """GET /sources — list user's saved source documents.
 GET /sources/{source_id} — reconstruct lesson sentences from a saved source.
 GET /corpus — browse all ingested source documents with filters and pagination.
+POST /corpus/import-url — fetch a URL server-side, extract text, and ingest it.
 """
 from __future__ import annotations
 
 import logging
+import re
+import uuid
 from datetime import UTC, datetime
 
-from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
+import httpx
+from bs4 import BeautifulSoup
+from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response, status
 from sqlalchemy import and_, case, delete, func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.api.dependencies import get_current_user, get_db_session
+from backend.api.dependencies import get_current_user, get_db_session, get_plugin_registry
+from backend.core.config import get_settings
+from backend.ingestion.validator import detect_dominant_script, validate_ingest_text
 from backend.models import (
     CanonicalObjectRow,
     CorpusDocumentTagRow,
@@ -23,6 +30,8 @@ from backend.models import (
     SourceProgressionRow,
     UserSentenceReviewRow,
 )
+from backend.parsing.pipeline import PipelineResult, pipeline_cache_key, run_pipeline
+from backend.parsing.plugin_loader import PluginRegistry
 from backend.schemas.parse import LearnableObject, SentenceResult
 from backend.schemas.sources import (
     CorpusBrowseItem,
@@ -36,8 +45,15 @@ from backend.schemas.sources import (
     SourceItem,
     SourceListResponse,
     TagAddRequest,
+    UrlImportRequest,
+    UrlImportResponse,
 )
+from backend.services.parse_persistence import persist_ingest
 from backend.srs.sentence_miner import mine_sentence
+
+_URL_IMPORT_MAX_CHARS = 50_000
+_URL_FETCH_TIMEOUT    = 15.0
+_URL_FETCH_MAX_BYTES  = 5 * 1024 * 1024  # 5 MB raw HTML cap
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["sources"])
@@ -235,6 +251,118 @@ async def list_all_corpus_tags(
         .order_by(CorpusDocumentTagRow.tag)
     )
     return CorpusTagsResponse(tags=[r.tag for r in rows.all()])
+
+
+@router.post("/corpus/import-url", response_model=UrlImportResponse, status_code=201)
+async def import_corpus_url(
+    payload: UrlImportRequest,
+    registry: PluginRegistry = Depends(get_plugin_registry),
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> UrlImportResponse:
+    """Fetch a URL, extract its text, and ingest it as a corpus document."""
+    # ── 1. Fetch ──────────────────────────────────────────────────────────────
+    headers = {"User-Agent": "Mnemosyne/1.0 (+educational-language-tool)"}
+    try:
+        async with httpx.AsyncClient(follow_redirects=True, timeout=_URL_FETCH_TIMEOUT) as client:
+            resp = await client.get(payload.url, headers=headers)
+        resp.raise_for_status()
+    except httpx.HTTPStatusError as exc:
+        raise HTTPException(status_code=502, detail=f"Remote server returned {exc.response.status_code}.") from exc
+    except httpx.RequestError as exc:
+        raise HTTPException(status_code=502, detail="Could not fetch that URL.") from exc
+
+    content_type_header = resp.headers.get("content-type", "")
+    if "html" not in content_type_header and "text" not in content_type_header:
+        raise HTTPException(status_code=422, detail="URL does not point to an HTML or text resource.")
+
+    raw = resp.text[:_URL_FETCH_MAX_BYTES]
+
+    # ── 2. Extract text + title ───────────────────────────────────────────────
+    extracted_title, text = _extract_html_text(raw)
+    title = payload.title or extracted_title
+
+    if not text.strip():
+        raise HTTPException(status_code=422, detail="No readable text found at that URL.")
+
+    truncated = len(text) > _URL_IMPORT_MAX_CHARS
+    if truncated:
+        text = text[:_URL_IMPORT_MAX_CHARS]
+
+    # ── 3. Validate + pipeline ────────────────────────────────────────────────
+    try:
+        normalized_text, _ = validate_ingest_text(text, payload.language)
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+    try:
+        plugin = registry.get(payload.language)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+    script_hint = detect_dominant_script(normalized_text)
+
+    result: PipelineResult = await run_pipeline(
+        text=normalized_text,
+        language=payload.language,
+        plugin=plugin,
+        cache_key=pipeline_cache_key(normalized_text, payload.language),
+    )
+
+    # ── 4. Persist ────────────────────────────────────────────────────────────
+    source_document_id = str(uuid.uuid4())
+    try:
+        await persist_ingest(
+            db,
+            language=payload.language,
+            content_type="article",
+            normalized_text=normalized_text,
+            script_hint=script_hint,
+            source_document_id=source_document_id,
+            candidate_results=result.candidate_results,
+            sentences=result.sentences,
+            uuid_to_candidate=result.uuid_to_candidate,
+            title=title,
+            source_url=payload.url,
+            user_id=current_user,
+        )
+    except Exception as exc:
+        logger.warning("DB persistence failed for /corpus/import-url", exc_info=exc)
+        raise HTTPException(status_code=500, detail="Failed to save imported document.") from exc
+
+    return UrlImportResponse(
+        source_document_id=source_document_id,
+        title=title,
+        char_count=len(normalized_text),
+        truncated=truncated,
+    )
+
+
+def _extract_html_text(html: str) -> tuple[str | None, str]:
+    """Return (title, body_text) extracted from raw HTML."""
+    soup = BeautifulSoup(html, "html.parser")
+
+    # Title
+    title: str | None = None
+    title_tag = soup.find("title")
+    if title_tag:
+        title = re.sub(r"\s+", " ", title_tag.get_text(" ", strip=True)).strip() or None
+
+    # Remove noise tags
+    for tag in soup(["script", "style", "nav", "header", "footer", "aside", "noscript", "form"]):
+        tag.decompose()
+
+    # Best-effort main content
+    container = soup.find("article") or soup.find("main") or soup.find("body") or soup
+
+    paragraphs: list[str] = []
+    for elem in container.find_all(["p", "h1", "h2", "h3", "h4", "h5", "h6", "li", "blockquote", "td"]):
+        t = re.sub(r"\s+", " ", elem.get_text(" ", strip=True))
+        if t:
+            paragraphs.append(t)
+
+    text = "\n\n".join(paragraphs) if paragraphs else re.sub(r"\n{3,}", "\n\n", container.get_text("\n"))
+    return title, text
 
 
 @router.get("/corpus/{doc_id}/tags", response_model=CorpusTagsResponse)
