@@ -1121,6 +1121,12 @@ body.player-active .reader-nowplaying {
 
 #annotation-tooltip[hidden] { display: none; }
 
+.annotation-tooltip__header {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
 .annotation-tooltip__type {
   font-size: 0.6rem;
   font-weight: 700;
@@ -1129,12 +1135,55 @@ body.player-active .reader-nowplaying {
   opacity: 0.65;
 }
 
+.annotation-tooltip__cefr {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 0.05em;
+  padding-inline: 0.35em;
+  border-radius: 0.2rem;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  /* default fallback */
+  background: oklch(0.40 0.10 280 / 0.5);
+  color: oklch(0.95 0.06 280);
+}
+
+/* A-level: green */
+.annotation-tooltip__cefr[data-cefr="A1"],
+.annotation-tooltip__cefr[data-cefr="A2"] {
+  background: oklch(0.30 0.10 145 / 0.6);
+  color: oklch(0.90 0.12 145);
+}
+
+/* B-level: amber */
+.annotation-tooltip__cefr[data-cefr="B1"],
+.annotation-tooltip__cefr[data-cefr="B2"] {
+  background: oklch(0.32 0.10 75 / 0.6);
+  color: oklch(0.90 0.12 75);
+}
+
+/* C-level: red */
+.annotation-tooltip__cefr[data-cefr="C1"],
+.annotation-tooltip__cefr[data-cefr="C2"] {
+  background: oklch(0.30 0.10 20 / 0.6);
+  color: oklch(0.90 0.12 20);
+}
+
 .annotation-tooltip__label {
   font-weight: 500;
 }
 
+.annotation-tooltip__gloss {
+  font-size: 0.73rem;
+  opacity: 0.80;
+  font-style: italic;
+  line-height: 1.3;
+}
+
 @media (forced-colors: active) {
   #annotation-tooltip { border: 1px solid ButtonText; }
+  .annotation-tooltip__cefr { border: 1px solid ButtonText; }
 }
 
 
