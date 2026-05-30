@@ -667,6 +667,26 @@
           </select>
         </div>
 
+        <!-- Reading-progress stats strip — populated and revealed by JS -->
+        <div id="corpus-browser-stats" class="corpus-browser-stats" hidden>
+          <button class="corpus-stats-chip corpus-stats-chip--all"      data-sort="recent"      type="button">
+            <span class="corpus-stats-chip__n" id="corpus-stat-total">—</span>
+            <span class="corpus-stats-chip__label" data-i18n="corpus_stats_total">Total</span>
+          </button>
+          <button class="corpus-stats-chip corpus-stats-chip--progress" data-sort="in_progress" type="button">
+            <span class="corpus-stats-chip__n" id="corpus-stat-in-progress">—</span>
+            <span class="corpus-stats-chip__label" data-i18n="corpus_stats_in_progress">Reading</span>
+          </button>
+          <button class="corpus-stats-chip corpus-stats-chip--new"      data-sort="not_started" type="button">
+            <span class="corpus-stats-chip__n" id="corpus-stat-not-started">—</span>
+            <span class="corpus-stats-chip__label" data-i18n="corpus_stats_not_started">New</span>
+          </button>
+          <button class="corpus-stats-chip corpus-stats-chip--done"     data-sort="complete"    type="button">
+            <span class="corpus-stats-chip__n" id="corpus-stat-complete">—</span>
+            <span class="corpus-stats-chip__label" data-i18n="corpus_stats_complete">Done</span>
+          </button>
+        </div>
+
         <p id="corpus-browser-status" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
         <p id="corpus-browser-count" class="corpus-browser-count" aria-live="polite"></p>
 

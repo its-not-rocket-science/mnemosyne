@@ -4,8 +4,8 @@ GET /corpus — browse all ingested source documents with filters and pagination
 """
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends, HTTPException, Query
-from sqlalchemy import and_, func, or_, select
+from fastapi import APIRouter, Depends, HTTPException, Query, Response
+from sqlalchemy import and_, case, delete, func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session
@@ -23,6 +23,7 @@ from backend.schemas.sources import (
     CorpusBrowseResponse,
     CorpusLanguagesResponse,
     CorpusLanguageSummary,
+    CorpusStats,
     SourceDetailResponse,
     SourceItem,
     SourceListResponse,
@@ -158,6 +159,73 @@ async def list_corpus_languages(
             for row in rows
         ]
     )
+
+
+@router.get("/corpus/stats", response_model=CorpusStats)
+async def get_corpus_stats(
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> CorpusStats:
+    """Return per-user reading-progress counts across the entire corpus."""
+    prog_join = and_(
+        SourceProgressionRow.source_document_id == SourceDocumentRow.id,
+        SourceProgressionRow.user_id == current_user,
+    )
+    stmt = (
+        select(
+            func.count().label("total"),
+            func.sum(case(
+                (or_(
+                    SourceProgressionRow.user_id == None,   # noqa: E711
+                    SourceProgressionRow.next_position == 0,
+                ), 1),
+                else_=0,
+            )).label("not_started"),
+            func.sum(case(
+                (and_(
+                    SourceProgressionRow.next_position > 0,
+                    or_(
+                        SourceProgressionRow.sentences_total == 0,
+                        SourceProgressionRow.next_position < SourceProgressionRow.sentences_total,
+                    ),
+                ), 1),
+                else_=0,
+            )).label("in_progress"),
+            func.sum(case(
+                (and_(
+                    SourceProgressionRow.sentences_total > 0,
+                    SourceProgressionRow.next_position >= SourceProgressionRow.sentences_total,
+                ), 1),
+                else_=0,
+            )).label("complete"),
+        )
+        .select_from(SourceDocumentRow)
+        .outerjoin(SourceProgressionRow, prog_join)
+    )
+    row = (await db.execute(stmt)).one()
+    return CorpusStats(
+        total=row.total or 0,
+        not_started=row.not_started or 0,
+        in_progress=row.in_progress or 0,
+        complete=row.complete or 0,
+    )
+
+
+@router.delete("/corpus/{doc_id}/progress", status_code=204)
+async def reset_corpus_progress(
+    doc_id: str,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> Response:
+    """Delete the user's reading-progress record for a corpus document."""
+    await db.execute(
+        delete(SourceProgressionRow).where(
+            SourceProgressionRow.source_document_id == doc_id,
+            SourceProgressionRow.user_id == current_user,
+        )
+    )
+    await db.commit()
+    return Response(status_code=204)
 
 
 _VALID_CORPUS_SORT = frozenset({"recent", "in_progress", "not_started", "complete"})

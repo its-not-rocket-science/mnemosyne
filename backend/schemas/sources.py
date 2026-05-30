@@ -54,6 +54,13 @@ class CorpusLanguagesResponse(BaseModel):
     languages: list[CorpusLanguageSummary]
 
 
+class CorpusStats(BaseModel):
+    total: int
+    not_started: int
+    in_progress: int
+    complete: int
+
+
 class SourceDetailResponse(BaseModel):
     id: str
     title: str | None = None
