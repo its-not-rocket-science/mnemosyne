@@ -1725,6 +1725,19 @@ body.player-active .app-shell__scroll-area {
 .corpus-stats-chip--progress .corpus-stats-chip__n { color: var(--brand-purple); }
 .corpus-stats-chip--done    .corpus-stats-chip__n { color: oklch(52% 0.17 145); }
 
+.corpus-browser-list__match {
+  background: oklch(88% 0.16 95);
+  color: inherit;
+  border-radius: 0.15em;
+  padding-inline: 0.05em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .corpus-browser-list__match { background: oklch(38% 0.13 75); }
+}
+
+[data-theme="dark"] .corpus-browser-list__match { background: oklch(38% 0.13 75); }
+
 .corpus-browser-list__progress {
   block-size: 3px;
   background: var(--border);

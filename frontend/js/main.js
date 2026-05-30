@@ -2060,6 +2060,19 @@ function _corpusParams() {
   return p
 }
 
+function _applyQueryHighlight(span, text, query) {
+  span.textContent = ''
+  if (!query) { span.textContent = text; return }
+  const idx = text.toLowerCase().indexOf(query.toLowerCase())
+  if (idx === -1) { span.textContent = text; return }
+  span.append(text.slice(0, idx))
+  const mark = document.createElement('mark')
+  mark.className = 'corpus-browser-list__match'
+  mark.textContent = text.slice(idx, idx + query.length)
+  span.appendChild(mark)
+  span.append(text.slice(idx + query.length))
+}
+
 function _buildCorpusItem(item) {
   const pct = Math.round((item.completion_fraction ?? 0) * 100)
   const progressText = item.is_complete
@@ -2067,6 +2080,7 @@ function _buildCorpusItem(item) {
     : item.started
       ? ti('source_progress_text', { pos: item.next_position, total: item.sentences_total })
       : ''
+  const actionLabel = (item.started && !item.is_complete) ? t('corpus_continue_btn') : t('corpus_open_btn')
 
   const li = document.createElement('li')
   li.className = 'corpus-browser-list__item'
@@ -2076,11 +2090,11 @@ function _buildCorpusItem(item) {
   btn.type = 'button'
   btn.className = 'corpus-browser-list__btn'
   btn.setAttribute('aria-label',
-    `${t('corpus_open_btn')}: ${item.title || item.language}${progressText ? ` — ${progressText}` : ''}`)
+    `${actionLabel}: ${item.title || item.language}${progressText ? ` — ${progressText}` : ''}`)
 
   const titleSpan = document.createElement('span')
   titleSpan.className = 'corpus-browser-list__title'
-  titleSpan.textContent = item.title || item.language
+  _applyQueryHighlight(titleSpan, item.title || item.language, corpusBrowserSearch?.value.trim() || '')
 
   const meta = document.createElement('span')
   meta.className = 'corpus-browser-list__meta'
@@ -2115,19 +2129,23 @@ function _buildCorpusItem(item) {
     meta.appendChild(resetBtn)
   }
 
+  const resumeAt = (item.started && !item.is_complete) ? item.next_position : 0
+
   const openBtn = document.createElement('button')
   openBtn.type = 'button'
   openBtn.className = 'corpus-browser-list__open'
-  openBtn.textContent = t('corpus_open_btn')
+  openBtn.textContent = (item.started && !item.is_complete)
+    ? t('corpus_continue_btn')
+    : t('corpus_open_btn')
   openBtn.addEventListener('click', (e) => {
     e.stopPropagation()
-    _loadSource(item.id, item.language)
+    _loadSource(item.id, item.language, resumeAt)
   })
 
   btn.appendChild(titleSpan)
   btn.appendChild(meta)
   btn.appendChild(openBtn)
-  btn.addEventListener('click', () => _loadSource(item.id, item.language))
+  btn.addEventListener('click', () => _loadSource(item.id, item.language, resumeAt))
 
   // Progress bar at top of card; ARIA role for screen readers
   if (item.started && item.sentences_total > 0) {
