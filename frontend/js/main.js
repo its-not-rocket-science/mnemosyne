@@ -110,6 +110,7 @@ const siteHero           = document.querySelector('#site-hero')
 const resultsSection     = document.querySelector('#results-section')
 const resultsTitle       = document.querySelector('#results-heading')
 const resultsEyebrow     = document.querySelector('#results-source-eyebrow')
+const resultsDifficulty  = document.querySelector('#results-difficulty')
 const parseDialog        = document.querySelector('#parse-dialog')
 const parseDialogClose   = document.querySelector('#parse-dialog-close')
 const changeLessonBtn    = document.querySelector('#change-lesson-btn')
@@ -200,8 +201,9 @@ let currentContentType    = 'pasted_text'
 let currentFilename       = null
 let currentSourceUrl      = null
 let currentFetchedTitle   = null
-let currentDocumentTitle  = null
-let currentDocumentEyebrow = null
+let currentDocumentTitle      = null
+let currentDocumentEyebrow    = null
+let currentDocumentDifficulty = null  // estimated CEFR level of loaded document
 let languageUserSelected  = false
 let currentText          = ''   // committed text from picker
 let activeFilterTypes      = null  // Set<string> when filtered, null = show all
@@ -1060,12 +1062,14 @@ async function _loadSource(sourceId, language, resumeAt = 0) {
     }
     currentDocumentTitle   = data.title || null
     currentDocumentEyebrow = null
+    const sourceText = data.sentences.map(s => s.text).join(" ")
     renderResults(buildLessonPipelinePayload({
-      sourceText: data.sentences.map(s => s.text).join(" "),
-      normalizedText: data.sentences.map(s => s.text).join(" "),
+      sourceText,
+      normalizedText: sourceText,
       parseData: data,
       suggestedNextPassage: null,
     }), data.language)
+    _fetchResultsDifficulty(sourceText, data.language)
     setStatus(ti('sentences_parsed', { n: data.sentences.length }))
     if (saveLessonBtn) saveLessonBtn.hidden = false
     if (resumeAt > 0) {
@@ -1217,6 +1221,43 @@ async function _runDifficultyEstimate() {
     pickerDifficulty.hidden = false
   } catch {
     _clearDifficultyBadge()
+  }
+}
+
+
+// ── Results heading difficulty badge ─────────────────────────────────────────
+
+function _clearResultsDifficultyBadge() {
+  if (!resultsDifficulty) return
+  resultsDifficulty.hidden = true
+  resultsDifficulty.textContent = ''
+  delete resultsDifficulty.dataset.cefr
+  currentDocumentDifficulty = null
+}
+
+function _setResultsDifficultyBadge(cefr, confident) {
+  if (!resultsDifficulty) return
+  resultsDifficulty.textContent = confident ? cefr : `~${cefr}`
+  resultsDifficulty.dataset.cefr = cefr
+  resultsDifficulty.title = confident ? cefr : `Estimated: ${cefr} (low confidence)`
+  resultsDifficulty.hidden = false
+  currentDocumentDifficulty = cefr
+}
+
+async function _fetchResultsDifficulty(text, language) {
+  _clearResultsDifficultyBadge()
+  if (!text || !language || text.length < _DIFF_MIN_CHARS) return
+  try {
+    const resp = await fetch(`${API_BASE}/estimate-difficulty`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
+      body:    JSON.stringify({ text, language }),
+    })
+    if (!resp.ok) return
+    const data = await resp.json()
+    if (data.estimated_cefr) _setResultsDifficultyBadge(data.estimated_cefr, data.confident)
+  } catch {
+    // non-critical — badge stays hidden
   }
 }
 
@@ -1473,6 +1514,7 @@ async function doParseText(text) {
 
     if (chosenTextDisplay) chosenTextDisplay.hidden = true
     renderResults(pipelinePayload, language)
+    _fetchResultsDifficulty(normalizedText, language)
     const n = pipelinePayload.sentences.length
     const parsedMsg = n === 1 ? t('sentence_parsed_1') : ti('sentences_parsed', { n })
     if (data.warnings?.length) {
@@ -2449,6 +2491,7 @@ playbackEngine.addEventListener('state-change', ({ detail: { state, current, ind
 // ── Render sentence cards ─────────────────────────────────────────────────────
 
 function renderResults(pipelinePayload, language) {
+  _clearResultsDifficultyBadge()
   const payload = validateLessonPipelinePayload(pipelinePayload)
   const sentences = payload.sentences
   const fragment  = document.createDocumentFragment()
