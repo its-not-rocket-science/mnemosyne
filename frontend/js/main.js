@@ -2026,6 +2026,7 @@ const openCorpusBrowserBtn  = document.querySelector('#open-corpus-browser-btn')
 const corpusBrowserSearch   = document.querySelector('#corpus-browser-search')
 const corpusBrowserLang     = document.querySelector('#corpus-browser-lang')
 const corpusBrowserType     = document.querySelector('#corpus-browser-type')
+const corpusBrowserSort     = document.querySelector('#corpus-browser-sort')
 const corpusBrowserList     = document.querySelector('#corpus-browser-list')
 const corpusBrowserStatus   = document.querySelector('#corpus-browser-status')
 const corpusBrowserCount    = document.querySelector('#corpus-browser-count')
@@ -2041,9 +2042,11 @@ function _corpusParams() {
   const q    = corpusBrowserSearch?.value.trim()
   const lang = corpusBrowserLang?.value
   const type = corpusBrowserType?.value
-  if (lang)  p.set('language', lang)
-  if (type)  p.set('content_type', type)
-  if (q)     p.set('q', q)
+  const sort = corpusBrowserSort?.value
+  if (lang)                   p.set('language', lang)
+  if (type)                   p.set('content_type', type)
+  if (sort && sort !== 'recent') p.set('sort', sort)
+  if (q)                      p.set('q', q)
   p.set('limit', String(_CORPUS_PAGE_SIZE))
   p.set('offset', String(_corpusOffset))
   return p
@@ -2222,6 +2225,7 @@ corpusBrowserSearch?.addEventListener('input', () => {
 
 corpusBrowserLang?.addEventListener('change', () => _loadCorpus())
 corpusBrowserType?.addEventListener('change', () => _loadCorpus())
+corpusBrowserSort?.addEventListener('change', () => _loadCorpus())
 
 corpusBrowserMoreBtn?.addEventListener('click', () => _loadCorpus(true))
 

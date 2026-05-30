@@ -5,7 +5,7 @@ GET /corpus — browse all ingested source documents with filters and pagination
 from __future__ import annotations
 
 from fastapi import APIRouter, Depends, HTTPException, Query
-from sqlalchemy import and_, func, select
+from sqlalchemy import and_, func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session
@@ -160,44 +160,87 @@ async def list_corpus_languages(
     )
 
 
+_VALID_CORPUS_SORT = frozenset({"recent", "in_progress", "not_started", "complete"})
+
+
 @router.get("/corpus", response_model=CorpusBrowseResponse)
 async def browse_corpus(
     language: str | None = None,
     content_type: str | None = None,
     q: str | None = None,
+    sort: str = Query(default="recent"),
     limit: int = Query(default=20, ge=1, le=100),
     offset: int = Query(default=0, ge=0),
     db: AsyncSession = Depends(get_db_session),
     current_user: str = Depends(get_current_user),
 ) -> CorpusBrowseResponse:
-    """Browse all ingested source documents with optional filters and pagination."""
-    base = select(SourceDocumentRow)
-    if language:
-        base = base.where(SourceDocumentRow.language == language)
-    if content_type:
-        base = base.where(SourceDocumentRow.content_type == content_type)
-    if q:
-        base = base.where(SourceDocumentRow.title.ilike(f"%{q}%"))
+    """Browse all ingested source documents with optional filters and pagination.
 
+    ``sort`` controls ordering and optional progress filtering:
+
+    * ``recent`` (default) — all documents, newest first.
+    * ``in_progress`` — only documents the user has started but not finished,
+      ordered by descending completion fraction.
+    * ``not_started`` — only documents the user has never opened, newest first.
+    * ``complete`` — only documents the user has fully read, newest first.
+    """
+    if sort not in _VALID_CORPUS_SORT:
+        sort = "recent"
+
+    # All queries outerjoin progression so progress conditions are available.
+    prog_join = and_(
+        SourceProgressionRow.source_document_id == SourceDocumentRow.id,
+        SourceProgressionRow.user_id == current_user,
+    )
+    joined = (
+        select(SourceDocumentRow, SourceProgressionRow)
+        .outerjoin(SourceProgressionRow, prog_join)
+    )
+
+    # Document-level filter conditions
+    conditions: list = []
+    if language:
+        conditions.append(SourceDocumentRow.language == language)
+    if content_type:
+        conditions.append(SourceDocumentRow.content_type == content_type)
+    if q:
+        conditions.append(SourceDocumentRow.title.ilike(f"%{q}%"))
+
+    # Progress filter + sort order
+    if sort == "in_progress":
+        conditions.append(SourceProgressionRow.next_position > 0)
+        conditions.append(
+            or_(
+                SourceProgressionRow.sentences_total == 0,
+                SourceProgressionRow.next_position < SourceProgressionRow.sentences_total,
+            )
+        )
+        order_clause = SourceProgressionRow.completion_fraction.desc()
+    elif sort == "not_started":
+        conditions.append(
+            or_(
+                SourceProgressionRow.user_id == None,   # noqa: E711 (SA null check)
+                SourceProgressionRow.next_position == 0,
+            )
+        )
+        order_clause = SourceDocumentRow.created_at.desc()
+    elif sort == "complete":
+        conditions.append(SourceProgressionRow.sentences_total > 0)
+        conditions.append(
+            SourceProgressionRow.next_position >= SourceProgressionRow.sentences_total
+        )
+        order_clause = SourceDocumentRow.created_at.desc()
+    else:  # recent
+        order_clause = SourceDocumentRow.created_at.desc()
+
+    base_filtered = joined.where(*conditions)
     total = await db.scalar(
-        select(func.count()).select_from(base.subquery())
+        select(func.count()).select_from(base_filtered.subquery())
     ) or 0
 
     data_stmt = (
-        select(SourceDocumentRow, SourceProgressionRow)
-        .outerjoin(
-            SourceProgressionRow,
-            and_(
-                SourceProgressionRow.source_document_id == SourceDocumentRow.id,
-                SourceProgressionRow.user_id == current_user,
-            ),
-        )
-        .where(
-            *([SourceDocumentRow.language == language] if language else []),
-            *([SourceDocumentRow.content_type == content_type] if content_type else []),
-            *([SourceDocumentRow.title.ilike(f"%{q}%")] if q else []),
-        )
-        .order_by(SourceDocumentRow.created_at.desc())
+        base_filtered
+        .order_by(order_clause)
         .limit(limit)
         .offset(offset)
     )
