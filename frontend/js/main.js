@@ -205,6 +205,8 @@ let languageUserSelected  = false
 let currentText          = ''   // committed text from picker
 let activeFilterTypes    = null  // Set<string> when filtered, null = show all
 let activeSearchTerm     = ''   // lowercase string; '' = no search filter
+const FILTER_CYCLE       = [null, 'vocab', 'grammar', 'idioms', 'literary', 'etymology']
+let _filterCycleIdx      = 0   // index into FILTER_CYCLE; 0 = show all
 
 let isFollowAlongEnabled = false
 const ANNOTATION_DEPTH_KEY = 'mn-annotation-depth'
@@ -2149,6 +2151,12 @@ document.addEventListener('mnemosyne:mode-changed', ({ detail }) => {
 
 filterBar?.addEventListener('filter-change', ({ detail }) => {
   activeFilterTypes = detail.types.length ? new Set(detail.types) : null
+  if (!detail.active.length) {
+    _filterCycleIdx = 0
+  } else {
+    const idx = FILTER_CYCLE.indexOf(detail.active[0])
+    if (idx >= 0) _filterCycleIdx = idx
+  }
   applyAnnotationFilter()
 })
 
@@ -2249,6 +2257,9 @@ document.addEventListener('keydown', e => {
   // Never steal keys from text-entry controls.
   if (inText || inSelect) return
 
+  // Whether results are currently rendered.
+  const hasResults = resultsSection && !resultsSection.hidden
+
   switch (e.key) {
     case '?':
       if (!inButton) { e.preventDefault(); openShortcuts() }
@@ -2279,13 +2290,53 @@ document.addEventListener('keydown', e => {
       }
       break
 
-    case 'f':
-    case 'F':
+    case 'l':
+    case 'L':
       if (!inButton && !e.ctrlKey && !e.metaKey) {
         e.preventDefault()
         isFollowAlongEnabled = !isFollowAlongEnabled
         announce(isFollowAlongEnabled ? t('aria_follow_along_on') : t('aria_follow_along_off'))
       }
+      break
+
+    case 't':
+    case 'T':
+      if (inButton || e.ctrlKey || e.metaKey || !hasResults) break
+      e.preventDefault()
+      {
+        const focused = /** @type {HTMLElement} */ (e.composedPath()[0])
+        const card = focused?.closest?.('.sentence-card')
+          ?? results?.querySelector(`[data-sentence-index="${_currentSentenceIdx}"]`)
+          ?? results?.querySelector('.sentence-card')
+        const translateBtn = card?.querySelector('.reader-sentence__translate-btn')
+        if (translateBtn) translateBtn.click()
+      }
+      break
+
+    case 'd':
+    case 'D':
+      if (inButton || e.ctrlKey || e.metaKey || !hasResults) break
+      if (corpusDrillsBtn?.hidden !== false) break
+      e.preventDefault()
+      _openCorpusDrills()
+      break
+
+    case 'f':
+    case 'F':
+      if (inButton || e.ctrlKey || e.metaKey) break
+      if (!appFilterBar || appFilterBar.hidden) break
+      e.preventDefault()
+      _filterCycleIdx = (_filterCycleIdx + 1) % FILTER_CYCLE.length
+      filterBar?.activateCategory?.(FILTER_CYCLE[_filterCycleIdx])
+      break
+
+    case 's':
+    case 'S':
+      if (inButton || e.ctrlKey || e.metaKey || !hasResults) break
+      if (!annotationSearch || appFilterBar?.hidden) break
+      e.preventDefault()
+      annotationSearch.focus()
+      annotationSearch.select()
       break
   }
 })
