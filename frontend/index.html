@@ -656,6 +656,7 @@
             <option value="" data-i18n="corpus_type_all">All types</option>
             <option value="pasted_text" data-i18n="corpus_type_pasted">Pasted text</option>
             <option value="uploaded_file" data-i18n="corpus_type_file">Uploaded file</option>
+            <option value="article" data-i18n="corpus_type_article">Web article</option>
           </select>
           <select id="corpus-browser-sort" class="ghost-select ghost-select--small"
                   aria-label="Sort order"
@@ -697,6 +698,31 @@
 
         <ul id="corpus-browser-list" class="corpus-browser-list" role="list"
             aria-label="Text library"></ul>
+
+        <!-- URL import panel -->
+        <div class="corpus-import-url" id="corpus-import-url">
+          <button type="button" id="corpus-import-url-toggle"
+                  class="ghost-button ghost-button--small corpus-import-url__toggle"
+                  data-i18n="corpus_import_url_btn"
+                  aria-expanded="false"
+                  aria-controls="corpus-import-url-form">+ Import from URL</button>
+          <div class="corpus-import-url__form" id="corpus-import-url-form" hidden>
+            <input type="url" id="corpus-import-url-input"
+                   class="corpus-import-url__input"
+                   data-i18n-placeholder="corpus_import_url_placeholder"
+                   placeholder="https://…"
+                   autocomplete="off">
+            <select id="corpus-import-url-lang"
+                    class="ghost-select ghost-select--small corpus-import-url__lang"
+                    data-i18n-aria-label="corpus_import_url_lang_aria"
+                    aria-label="Language"></select>
+            <button type="button" id="corpus-import-url-submit"
+                    class="ghost-button ghost-button--small"
+                    data-i18n="corpus_import_url_submit">Import</button>
+          </div>
+          <p id="corpus-import-url-status" class="corpus-import-url__status"
+             aria-live="polite" aria-atomic="true"></p>
+        </div>
 
         <div class="corpus-browser-footer">
           <button type="button" id="corpus-browser-more-btn" class="ghost-button" hidden

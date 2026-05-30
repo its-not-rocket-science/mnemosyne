@@ -85,6 +85,19 @@ class CorpusStudyResult(BaseModel):
     sentences_processed: int
 
 
+class UrlImportRequest(BaseModel):
+    url: str = Field(max_length=2048)
+    language: str = Field(min_length=2, max_length=10)
+    title: str | None = Field(None, max_length=512)
+
+
+class UrlImportResponse(BaseModel):
+    source_document_id: str
+    title: str | None
+    char_count: int
+    truncated: bool = False
+
+
 class SourceDetailResponse(BaseModel):
     id: str
     title: str | None = None

@@ -1933,6 +1933,54 @@ body.player-active .app-shell__scroll-area {
   .corpus-browser-list__study { border-color: ButtonText; }
 }
 
+.corpus-import-url {
+  padding-block: 0.5rem;
+  border-block-start: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.corpus-import-url__toggle {
+  align-self: flex-start;
+  font-size: var(--font-size-label);
+  color: var(--muted);
+}
+
+.corpus-import-url__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.corpus-import-url__input {
+  flex: 1 1 16rem;
+  min-width: 0;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--font-size-label);
+}
+
+.corpus-import-url__input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.corpus-import-url__lang {
+  flex: 0 0 auto;
+}
+
+.corpus-import-url__status {
+  font-size: var(--font-size-label);
+  color: var(--muted);
+  margin: 0;
+  min-height: 1.2em;
+}
+
 .corpus-browser-footer {
   display: flex;
   justify-content: center;
@@ -1953,4 +2001,5 @@ body.player-active .app-shell__scroll-area {
   .corpus-browser-list__item[data-complete] .corpus-browser-list__progress-fill { background: Highlight; }
   .corpus-stats-chip { border-color: ButtonText; }
   .corpus-stats-chip__n, .corpus-stats-chip__label { color: ButtonText; }
+  .corpus-import-url__input { border-color: ButtonText; background: ButtonFace; color: ButtonText; }
 }

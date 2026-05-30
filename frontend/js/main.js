@@ -2033,6 +2033,12 @@ const corpusBrowserStatus    = document.querySelector('#corpus-browser-status')
 const corpusBrowserCount     = document.querySelector('#corpus-browser-count')
 const corpusBrowserMoreBtn   = document.querySelector('#corpus-browser-more-btn')
 const corpusBrowserStats     = document.querySelector('#corpus-browser-stats')
+const corpusImportToggle     = document.querySelector('#corpus-import-url-toggle')
+const corpusImportForm       = document.querySelector('#corpus-import-url-form')
+const corpusImportInput      = document.querySelector('#corpus-import-url-input')
+const corpusImportLang       = document.querySelector('#corpus-import-url-lang')
+const corpusImportSubmit     = document.querySelector('#corpus-import-url-submit')
+const corpusImportStatus     = document.querySelector('#corpus-import-url-status')
 const corpusStatTotal        = document.querySelector('#corpus-stat-total')
 const corpusStatInProgress   = document.querySelector('#corpus-stat-in-progress')
 const corpusStatNotStarted   = document.querySelector('#corpus-stat-not-started')
@@ -2425,10 +2431,57 @@ async function _populateTagFilter() {
   } catch { /* ignore */ }
 }
 
+async function _populateImportLangSelect() {
+  if (!corpusImportLang) return
+  try {
+    const resp = await fetch(`${API_BASE}/languages`, { headers: getAuthHeaders() })
+    if (!resp.ok) return
+    const langs = await resp.json()
+    const opts = langs.map(l => {
+      const o = document.createElement('option')
+      o.value = l.language
+      o.textContent = l.language
+      return o
+    })
+    corpusImportLang.replaceChildren(...opts)
+  } catch { /* ignore */ }
+}
+
+async function _importCorpusUrl() {
+  const url  = corpusImportInput?.value.trim()
+  const lang = corpusImportLang?.value
+  if (!url || !lang) return
+  if (corpusImportSubmit) corpusImportSubmit.disabled = true
+  if (corpusImportStatus) corpusImportStatus.textContent = '…'
+  try {
+    const resp = await fetch(`${API_BASE}/corpus/import-url`, {
+      method: 'POST',
+      headers: { ...getAuthHeaders(), 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url, language: lang }),
+    })
+    if (resp.ok) {
+      const d = await resp.json()
+      const label = d.title || url
+      if (corpusImportStatus) corpusImportStatus.textContent = ti('corpus_import_url_success', { title: label })
+      if (corpusImportInput) corpusImportInput.value = ''
+      if (corpusImportForm) corpusImportForm.hidden = true
+      if (corpusImportToggle) corpusImportToggle.setAttribute('aria-expanded', 'false')
+      await Promise.all([_loadCorpus(), _loadCorpusStats()])
+    } else {
+      const err = await resp.json().catch(() => ({}))
+      if (corpusImportStatus) corpusImportStatus.textContent = err.detail || t('corpus_import_url_error')
+    }
+  } catch {
+    if (corpusImportStatus) corpusImportStatus.textContent = t('corpus_import_url_error')
+  } finally {
+    if (corpusImportSubmit) corpusImportSubmit.disabled = false
+  }
+}
+
 openCorpusBrowserBtn?.addEventListener('click', async () => {
   corpusBrowserDialog?.showModal()
   await _populateCorpusLangSelect()
-  await Promise.all([_loadCorpus(), _loadCorpusStats(), _populateTagFilter()])
+  await Promise.all([_loadCorpus(), _loadCorpusStats(), _populateTagFilter(), _populateImportLangSelect()])
 })
 
 corpusBrowserCloseBtn?.addEventListener('click', () => corpusBrowserDialog?.close())
@@ -2456,6 +2509,19 @@ corpusBrowserStats?.querySelectorAll('.corpus-stats-chip').forEach(chip => {
 })
 
 corpusBrowserMoreBtn?.addEventListener('click', () => _loadCorpus(true))
+
+corpusImportToggle?.addEventListener('click', () => {
+  const open = corpusImportForm?.hidden
+  if (corpusImportForm) corpusImportForm.hidden = !open
+  corpusImportToggle.setAttribute('aria-expanded', String(!!open))
+  if (open) corpusImportInput?.focus()
+})
+
+corpusImportSubmit?.addEventListener('click', _importCorpusUrl)
+
+corpusImportInput?.addEventListener('keydown', e => {
+  if (e.key === 'Enter') _importCorpusUrl()
+})
 
 
 // ── TopNav event wiring ───────────────────────────────────────────────────────
