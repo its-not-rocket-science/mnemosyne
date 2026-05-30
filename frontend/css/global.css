@@ -1675,6 +1675,56 @@ body.player-active .app-shell__scroll-area {
   white-space: nowrap;
 }
 
+.corpus-browser-stats {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.corpus-stats-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding-block: 0.4rem;
+  padding-inline: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: transparent;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  flex: 1 1 auto;
+  transition: background 100ms, border-color 100ms;
+}
+
+.corpus-stats-chip:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+}
+
+.corpus-stats-chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.corpus-stats-chip__n {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.corpus-stats-chip__label {
+  font-size: 0.65rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.corpus-stats-chip--progress .corpus-stats-chip__n { color: var(--brand-purple); }
+.corpus-stats-chip--done    .corpus-stats-chip__n { color: oklch(52% 0.17 145); }
+
 .corpus-browser-list__progress {
   block-size: 3px;
   background: var(--border);
@@ -1685,6 +1735,42 @@ body.player-active .app-shell__scroll-area {
   block-size: 100%;
   background: var(--brand-purple);
   transition: inline-size 0.2s ease;
+}
+
+.corpus-browser-list__item[data-complete] .corpus-browser-list__progress-fill {
+  background: oklch(52% 0.17 145);
+}
+
+.corpus-browser-list__progress-pct {
+  font-size: 0.68rem;
+  color: var(--muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.corpus-browser-list__reset {
+  flex-shrink: 0;
+  padding-block: 0.15rem;
+  padding-inline: 0.35rem;
+  border: 1px solid transparent;
+  border-radius: 0.3rem;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.82rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 100ms, border-color 100ms;
+}
+
+.corpus-browser-list__reset:hover {
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.corpus-browser-list__reset:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .corpus-browser-list__open {
@@ -1730,4 +1816,7 @@ body.player-active .app-shell__scroll-area {
   .corpus-browser-list__tag { border: 1px solid ButtonText; background: ButtonFace; color: ButtonText; }
   .corpus-browser-list__progress { background: ButtonFace; border: 1px solid ButtonText; }
   .corpus-browser-list__progress-fill { background: Highlight; }
+  .corpus-browser-list__item[data-complete] .corpus-browser-list__progress-fill { background: Highlight; }
+  .corpus-stats-chip { border-color: ButtonText; }
+  .corpus-stats-chip__n, .corpus-stats-chip__label { color: ButtonText; }
 }

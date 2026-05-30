@@ -2026,11 +2026,16 @@ const openCorpusBrowserBtn  = document.querySelector('#open-corpus-browser-btn')
 const corpusBrowserSearch   = document.querySelector('#corpus-browser-search')
 const corpusBrowserLang     = document.querySelector('#corpus-browser-lang')
 const corpusBrowserType     = document.querySelector('#corpus-browser-type')
-const corpusBrowserSort     = document.querySelector('#corpus-browser-sort')
-const corpusBrowserList     = document.querySelector('#corpus-browser-list')
-const corpusBrowserStatus   = document.querySelector('#corpus-browser-status')
-const corpusBrowserCount    = document.querySelector('#corpus-browser-count')
-const corpusBrowserMoreBtn  = document.querySelector('#corpus-browser-more-btn')
+const corpusBrowserSort      = document.querySelector('#corpus-browser-sort')
+const corpusBrowserList      = document.querySelector('#corpus-browser-list')
+const corpusBrowserStatus    = document.querySelector('#corpus-browser-status')
+const corpusBrowserCount     = document.querySelector('#corpus-browser-count')
+const corpusBrowserMoreBtn   = document.querySelector('#corpus-browser-more-btn')
+const corpusBrowserStats     = document.querySelector('#corpus-browser-stats')
+const corpusStatTotal        = document.querySelector('#corpus-stat-total')
+const corpusStatInProgress   = document.querySelector('#corpus-stat-in-progress')
+const corpusStatNotStarted   = document.querySelector('#corpus-stat-not-started')
+const corpusStatComplete     = document.querySelector('#corpus-stat-complete')
 
 const _CORPUS_PAGE_SIZE = 20
 let _corpusOffset = 0
@@ -2053,12 +2058,22 @@ function _corpusParams() {
 }
 
 function _buildCorpusItem(item) {
+  const pct = Math.round((item.completion_fraction ?? 0) * 100)
+  const progressText = item.is_complete
+    ? t('source_complete')
+    : item.started
+      ? ti('source_progress_text', { pos: item.next_position, total: item.sentences_total })
+      : ''
+
   const li = document.createElement('li')
   li.className = 'corpus-browser-list__item'
+  if (item.is_complete) li.dataset.complete = ''
 
   const btn = document.createElement('button')
   btn.type = 'button'
   btn.className = 'corpus-browser-list__btn'
+  btn.setAttribute('aria-label',
+    `${t('corpus_open_btn')}: ${item.title || item.language}${progressText ? ` — ${progressText}` : ''}`)
 
   const titleSpan = document.createElement('span')
   titleSpan.className = 'corpus-browser-list__title'
@@ -2079,6 +2094,24 @@ function _buildCorpusItem(item) {
     meta.appendChild(chars)
   }
 
+  if (item.started) {
+    const pctSpan = document.createElement('span')
+    pctSpan.className = 'corpus-browser-list__progress-pct'
+    pctSpan.textContent = item.is_complete ? t('source_complete') : `${pct}%`
+    meta.appendChild(pctSpan)
+
+    const resetBtn = document.createElement('button')
+    resetBtn.type = 'button'
+    resetBtn.className = 'corpus-browser-list__reset'
+    resetBtn.setAttribute('aria-label', `${t('corpus_reset_progress_aria')}: ${item.title || item.language}`)
+    resetBtn.textContent = '↺'
+    resetBtn.addEventListener('click', (e) => {
+      e.stopPropagation()
+      _resetCorpusProgress(item.id)
+    })
+    meta.appendChild(resetBtn)
+  }
+
   const openBtn = document.createElement('button')
   openBtn.type = 'button'
   openBtn.className = 'corpus-browser-list__open'
@@ -2093,28 +2126,23 @@ function _buildCorpusItem(item) {
   btn.appendChild(openBtn)
   btn.addEventListener('click', () => _loadSource(item.id, item.language))
 
-  // Progress bar for started documents
+  // Progress bar at top of card; ARIA role for screen readers
   if (item.started && item.sentences_total > 0) {
     const prog = document.createElement('div')
     prog.className = 'corpus-browser-list__progress'
+    prog.setAttribute('role', 'progressbar')
+    prog.setAttribute('aria-valuemin', '0')
+    prog.setAttribute('aria-valuemax', '100')
+    prog.setAttribute('aria-valuenow', String(pct))
+    prog.setAttribute('aria-label', progressText)
     const fill = document.createElement('span')
     fill.className = 'corpus-browser-list__progress-fill'
-    fill.style.inlineSize = `${Math.round((item.completion_fraction ?? 0) * 100)}%`
+    fill.style.inlineSize = `${pct}%`
     prog.appendChild(fill)
     li.appendChild(prog)
   }
 
   li.appendChild(btn)
-
-  const pct = Math.round((item.completion_fraction ?? 0) * 100)
-  const progressText = item.is_complete
-    ? t('source_complete')
-    : item.started
-      ? ti('source_progress_text', { pos: item.next_position, total: item.sentences_total })
-      : ''
-  btn.setAttribute('aria-label',
-    `${t('corpus_open_btn')}: ${item.title || item.language}${progressText ? ` — ${progressText}` : ''}`)
-
   return li
 }
 
@@ -2207,10 +2235,35 @@ async function _populateCorpusLangSelect() {
   corpusBrowserLang.value = preselect
 }
 
+async function _loadCorpusStats() {
+  try {
+    const resp = await fetch(`${API_BASE}/corpus/stats`, { headers: getAuthHeaders() })
+    if (!resp.ok) return
+    const d = await resp.json()
+    if (corpusStatTotal)      corpusStatTotal.textContent      = d.total
+    if (corpusStatInProgress) corpusStatInProgress.textContent = d.in_progress
+    if (corpusStatNotStarted) corpusStatNotStarted.textContent = d.not_started
+    if (corpusStatComplete)   corpusStatComplete.textContent   = d.complete
+    if (corpusBrowserStats)   corpusBrowserStats.hidden = false
+  } catch { /* ignore */ }
+}
+
+async function _resetCorpusProgress(docId) {
+  try {
+    const resp = await fetch(`${API_BASE}/corpus/${encodeURIComponent(docId)}/progress`, {
+      method: 'DELETE',
+      headers: getAuthHeaders(),
+    })
+    if (resp.ok || resp.status === 204) {
+      await Promise.all([_loadCorpus(), _loadCorpusStats()])
+    }
+  } catch { /* ignore */ }
+}
+
 openCorpusBrowserBtn?.addEventListener('click', async () => {
   corpusBrowserDialog?.showModal()
   await _populateCorpusLangSelect()
-  await _loadCorpus()
+  await Promise.all([_loadCorpus(), _loadCorpusStats()])
 })
 
 corpusBrowserCloseBtn?.addEventListener('click', () => corpusBrowserDialog?.close())
@@ -2226,6 +2279,15 @@ corpusBrowserSearch?.addEventListener('input', () => {
 corpusBrowserLang?.addEventListener('change', () => _loadCorpus())
 corpusBrowserType?.addEventListener('change', () => _loadCorpus())
 corpusBrowserSort?.addEventListener('change', () => _loadCorpus())
+
+corpusBrowserStats?.querySelectorAll('.corpus-stats-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    if (corpusBrowserSort) {
+      corpusBrowserSort.value = chip.dataset.sort || 'recent'
+      _loadCorpus()
+    }
+  })
+})
 
 corpusBrowserMoreBtn?.addEventListener('click', () => _loadCorpus(true))
 
