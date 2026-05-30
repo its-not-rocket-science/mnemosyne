@@ -122,6 +122,8 @@ const readingProgress    = document.querySelector('#reading-progress')
 const annotationMinimap  = document.querySelector('#annotation-minimap')
 const annotationTooltip  = document.querySelector('#annotation-tooltip')
 const annotationSearch   = document.querySelector('#annotation-search')
+const readingHistoryEl   = document.querySelector('#reading-history')
+const readingHistoryList = document.querySelector('#reading-history-list')
 
 // Accessibility
 const a11yLive         = document.querySelector('#a11y-live')
@@ -938,7 +940,101 @@ loadLessonBtn?.addEventListener('click', async () => {
 
 loadLessonCloseBtn?.addEventListener('click', () => loadLessonDialog?.close())
 
-async function _loadSource(sourceId, language) {
+// ── Reading history ───────────────────────────────────────────────────────────
+
+function _relativeTime(iso) {
+  if (!iso) return ''
+  try {
+    const diff = Date.now() - new Date(iso).getTime()
+    const rtf  = new Intl.RelativeTimeFormat(currentUiLang(), { numeric: 'auto' })
+    const min  = Math.floor(diff / 60000)
+    if (min < 60) return rtf.format(-Math.max(min, 1), 'minute')
+    const hr = Math.floor(min / 60)
+    if (hr < 24) return rtf.format(-hr, 'hour')
+    return rtf.format(-Math.floor(hr / 24), 'day')
+  } catch {
+    return ''
+  }
+}
+
+function _renderReadingHistory(items) {
+  if (!readingHistoryList) return
+  readingHistoryList.replaceChildren()
+  items.forEach(item => {
+    const li    = document.createElement('li')
+    li.className = 'reading-history__item'
+    const pct   = Math.round((item.completion_fraction ?? 0) * 100)
+    const rawTitle = item.title ?? item.source_document_id
+    const title = rawTitle.length > 55 ? rawTitle.slice(0, 52) + '…' : rawTitle
+
+    const meta = document.createElement('div')
+    meta.className = 'reading-history__meta'
+
+    const lang = document.createElement('span')
+    lang.className   = 'reading-history__lang'
+    lang.textContent = item.language
+
+    const titleEl = document.createElement('span')
+    titleEl.className   = 'reading-history__title'
+    titleEl.textContent = title
+    titleEl.title       = rawTitle
+
+    meta.append(lang, titleEl)
+
+    const barWrap = document.createElement('div')
+    barWrap.className     = 'reading-history__bar-wrap'
+    barWrap.setAttribute('role', 'progressbar')
+    barWrap.setAttribute('aria-valuenow', String(pct))
+    barWrap.setAttribute('aria-valuemin', '0')
+    barWrap.setAttribute('aria-valuemax', '100')
+
+    const bar = document.createElement('div')
+    bar.className = 'reading-history__bar'
+    bar.style.setProperty('--_prog', String(item.completion_fraction ?? 0))
+    barWrap.appendChild(bar)
+
+    const footer = document.createElement('div')
+    footer.className = 'reading-history__footer'
+
+    const pctEl = document.createElement('span')
+    pctEl.className   = 'reading-history__pct'
+    pctEl.textContent = `${pct}%`
+
+    const dateEl = document.createElement('span')
+    dateEl.className   = 'reading-history__date'
+    dateEl.textContent = _relativeTime(item.last_read_at)
+
+    const btn = document.createElement('button')
+    btn.type      = 'button'
+    btn.className = 'ghost-button ghost-button--small reading-history__btn'
+    btn.setAttribute('data-i18n', 'reading_resume_btn')
+    btn.textContent = t('reading_resume_btn')
+    btn.addEventListener('click', () => {
+      parseDialog?.close()
+      _loadSource(item.source_document_id, item.language, item.next_position)
+    })
+
+    footer.append(pctEl, dateEl, btn)
+    li.append(meta, barWrap, footer)
+    readingHistoryList.appendChild(li)
+  })
+}
+
+async function _fetchReadingHistory() {
+  if (!readingHistoryEl) return
+  try {
+    const resp = await fetch(`${API_BASE}/reading?limit=3`, { headers: getAuthHeaders() })
+    if (!resp.ok) { readingHistoryEl.hidden = true; return }
+    const data = await resp.json()
+    if (!data.items?.length) { readingHistoryEl.hidden = true; return }
+    _renderReadingHistory(data.items)
+    readingHistoryEl.hidden = false
+  } catch {
+    readingHistoryEl.hidden = true
+  }
+}
+
+async function _loadSource(sourceId, language, resumeAt = 0) {
   loadLessonDialog?.close()
   corpusBrowserDialog?.close()
   _currentSourceDocId = sourceId
@@ -964,6 +1060,12 @@ async function _loadSource(sourceId, language) {
     }), data.language)
     setStatus(ti('sentences_parsed', { n: data.sentences.length }))
     if (saveLessonBtn) saveLessonBtn.hidden = false
+    if (resumeAt > 0) {
+      requestAnimationFrame(() => {
+        const card = results?.querySelector(`[data-sentence-index="${resumeAt}"]`)
+        card?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      })
+    }
   } catch {
     setStatus(t('load_lesson_failed'), 'error')
   }
@@ -1727,6 +1829,7 @@ async function _openCorpusDrills() {
 }
 
 corpusDrillsBtn?.addEventListener('click', _openCorpusDrills)
+changeLessonBtn?.addEventListener('click', _fetchReadingHistory)
 
 // ── Annotation hover tooltip ──────────────────────────────────────────────────
 
@@ -2965,12 +3068,15 @@ async function _openDeepLink() {
 
 initAuth()
 
-// ── Review session init (runs once #main-content becomes visible) ─────────────
+// ── Review session + reading history init (runs once #main-content becomes visible)
 ;(function () {
   const mc = document.querySelector('#main-content')
   if (!mc) return
+  let _initialized = false
   function _maybeInit() {
-    if (!mc.hidden) initReviewSession()
+    if (mc.hidden) return
+    initReviewSession()
+    if (!_initialized) { _initialized = true; _fetchReadingHistory() }
   }
   _maybeInit()
   new MutationObserver(_maybeInit).observe(mc, { attributes: true, attributeFilter: ['hidden'] })
