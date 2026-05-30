@@ -2135,31 +2135,56 @@ async function _loadCorpus(append = false) {
   }
 }
 
-function _populateCorpusLangSelect() {
+function _makeAllLangsOption() {
+  const o = document.createElement('option')
+  o.value = ''
+  o.textContent = t('corpus_lang_all')
+  return o
+}
+
+function _langOptLabel(code) {
+  const label = t('lesson_lang_' + code)
+  return (label && label !== 'lesson_lang_' + code)
+    ? label
+    : (languageCapabilities.get(code)?.name || code)
+}
+
+async function _populateCorpusLangSelect() {
   if (!corpusBrowserLang) return
-  const current = corpusBrowserLang.value
-  const placeholder = corpusBrowserLang.querySelector('option[value=""]')
-  const options = [...languageCapabilities.entries()]
+  // Pre-select current app language so first load is filtered correctly.
+  const preselect = languageSelect?.value || ''
+  try {
+    const resp = await fetch(`${API_BASE}/corpus/languages`, { headers: getAuthHeaders() })
+    if (resp.ok) {
+      const data = await resp.json()
+      const options = data.languages.map(({ language, count }) => {
+        const opt = document.createElement('option')
+        opt.value = language
+        opt.textContent = `${_langOptLabel(language)} (${count})`
+        return opt
+      })
+      corpusBrowserLang.replaceChildren(_makeAllLangsOption(), ...options)
+      const hasPreselect = data.languages.some(l => l.language === preselect)
+      corpusBrowserLang.value = hasPreselect ? preselect : ''
+      return
+    }
+  } catch { /* fall through to static */ }
+  // Fallback: show all supported languages without counts
+  const staticOpts = [...languageCapabilities.entries()]
     .filter(([code]) => !['x-cjk-test', 'x-rtl-test'].includes(code))
-    .map(([code, caps]) => {
+    .map(([code]) => {
       const opt = document.createElement('option')
       opt.value = code
-      const label = t('lesson_lang_' + code)
-      opt.textContent = (label && label !== 'lesson_lang_' + code) ? label : caps.name || code
+      opt.textContent = _langOptLabel(code)
       return opt
     })
-  corpusBrowserLang.replaceChildren(
-    placeholder ?? (() => {
-      const o = document.createElement('option'); o.value = ''; o.textContent = t('choose_language'); return o
-    })(),
-    ...options,
-  )
-  corpusBrowserLang.value = current
+  corpusBrowserLang.replaceChildren(_makeAllLangsOption(), ...staticOpts)
+  corpusBrowserLang.value = preselect
 }
 
 openCorpusBrowserBtn?.addEventListener('click', async () => {
-  _populateCorpusLangSelect()
   corpusBrowserDialog?.showModal()
+  await _populateCorpusLangSelect()
   await _loadCorpus()
 })
 

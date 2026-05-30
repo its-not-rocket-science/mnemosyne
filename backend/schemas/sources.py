@@ -45,6 +45,15 @@ class CorpusBrowseResponse(BaseModel):
     total: int
 
 
+class CorpusLanguageSummary(BaseModel):
+    language: str
+    count: int
+
+
+class CorpusLanguagesResponse(BaseModel):
+    languages: list[CorpusLanguageSummary]
+
+
 class SourceDetailResponse(BaseModel):
     id: str
     title: str | None = None

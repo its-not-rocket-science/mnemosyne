@@ -21,6 +21,8 @@ from backend.schemas.parse import LearnableObject, SentenceResult
 from backend.schemas.sources import (
     CorpusBrowseItem,
     CorpusBrowseResponse,
+    CorpusLanguagesResponse,
+    CorpusLanguageSummary,
     SourceDetailResponse,
     SourceItem,
     SourceListResponse,
@@ -135,6 +137,26 @@ async def get_source(
         title=doc.title,
         language=doc.language,
         sentences=sentences,
+    )
+
+
+@router.get("/corpus/languages", response_model=CorpusLanguagesResponse)
+async def list_corpus_languages(
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> CorpusLanguagesResponse:
+    """Return each language present in the corpus with its document count."""
+    stmt = (
+        select(SourceDocumentRow.language, func.count().label("count"))
+        .group_by(SourceDocumentRow.language)
+        .order_by(SourceDocumentRow.language)
+    )
+    rows = (await db.execute(stmt)).all()
+    return CorpusLanguagesResponse(
+        languages=[
+            CorpusLanguageSummary(language=row.language, count=row.count)
+            for row in rows
+        ]
     )
 
 
