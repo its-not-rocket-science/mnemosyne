@@ -1,4 +1,4 @@
-"""GET /metrics — learning effectiveness snapshot.
+﻿"""GET /metrics — learning effectiveness snapshot.
 
 Computes review success rates, retention, stability, and weak-area
 identification from the current ``user_knowledge`` + ``canonical_objects``
@@ -11,13 +11,20 @@ import logging
 from collections import defaultdict
 from datetime import UTC, date, datetime, timedelta
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session
 from backend.core.config import get_settings
-from backend.models import CanonicalObjectRow, LearningEventRow, ReviewEventRow, UserKnowledgeRow, UserRow
+from backend.models import (
+    CanonicalObjectRow,
+    LearningEventRow,
+    ReviewEventRow,
+    UserKnowledgeRow,
+    UserRow,
+    UserSentenceReviewRow,
+)
 from backend.schemas.metrics import (
     DailyActivity,
     LanguageMetrics,
@@ -367,3 +374,65 @@ async def get_learning_events_summary(
         opt_out_users=opt_out_count,
         by_event_type=by_type,
     )
+
+@router.get("/metrics/forecast")
+async def get_review_forecast(
+    days: int = Query(default=7, ge=1, le=30),
+    language: str | None = Query(default=None),
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> dict:
+    """Return projected review item counts per day for the next N days.
+
+    Combines annotation items (UserKnowledgeRow) and sentence review items
+    (UserSentenceReviewRow).  Day 0 (today) absorbs all overdue items
+    (due_at before today_start) so the caller always sees a full 7-bar chart.
+    """
+    now         = datetime.now(UTC)
+    today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    epoch       = datetime(1970, 1, 1, tzinfo=UTC)
+
+    result_days = []
+    for i in range(days):
+        day_start  = today_start + timedelta(days=i)
+        day_end    = day_start   + timedelta(days=1)
+        lower      = epoch if i == 0 else day_start
+
+        try:
+            ann_q = (
+                select(func.count())
+                .select_from(UserKnowledgeRow)
+                .where(
+                    UserKnowledgeRow.user_id == current_user,
+                    UserKnowledgeRow.due_at  >= lower,
+                    UserKnowledgeRow.due_at  <  day_end,
+                )
+            )
+            if language:
+                ann_q = ann_q.where(UserKnowledgeRow.language == language)
+            ann_count = (await db.execute(ann_q)).scalar() or 0
+
+            sent_q = (
+                select(func.count())
+                .select_from(UserSentenceReviewRow)
+                .where(
+                    UserSentenceReviewRow.user_id == current_user,
+                    UserSentenceReviewRow.due_at  >= lower,
+                    UserSentenceReviewRow.due_at  <  day_end,
+                )
+            )
+            sent_count = (await db.execute(sent_q)).scalar() or 0
+        except Exception as exc:
+            logger.warning("forecast day %d query failed: %s", i, exc)
+            ann_count = sent_count = 0
+
+        result_days.append({
+            "date":             day_start.strftime("%Y-%m-%d"),
+            "day_label":        day_start.strftime("%a"),
+            "annotation_count": ann_count,
+            "sentence_count":   sent_count,
+            "total":            ann_count + sent_count,
+            "is_today":         i == 0,
+        })
+
+    return {"days": result_days, "total_days": days}

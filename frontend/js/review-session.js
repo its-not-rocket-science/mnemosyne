@@ -22,6 +22,8 @@ export function initReviewSession() {
   const weaknessBar = document.getElementById('weakness-graph-bar')
   const weaknessGraph = document.getElementById('weakness-graph')
   const statsBar = document.getElementById('srs-stats-bar')
+  const forecastBar   = document.getElementById('forecast-bar')
+  const forecastChart = document.getElementById('forecast-chart')
 
   if (!openBtn || !reviewPanel || !reviewPane) return
 
@@ -150,16 +152,77 @@ export function initReviewSession() {
     refreshStats()
   })
 
-  // Language change: refresh badge and stats
-  document.getElementById('language')?.addEventListener('change', refreshStats)
+  // ── 7-day review forecast ──────────────────────────────────────────────────
+
+  async function refreshForecast() {
+    if (!forecastChart) return
+    try {
+      const token = localStorage.getItem('mnemosyne_token')
+      if (!token) return
+      const langSel = document.getElementById('language')
+      const lang = langSel?.value || null
+      const params = new URLSearchParams({ days: '7' })
+      if (lang) params.set('language', lang)
+      const resp = await fetch(`${API_BASE}/metrics/forecast?${params}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      if (!resp.ok) return
+      const data = await resp.json()
+      _renderForecast(data.days)
+      forecastBar?.removeAttribute('hidden')
+    } catch {
+      // Non-fatal — chart stays hidden
+    }
+  }
+
+  function _renderForecast(days) {
+    if (!forecastChart || !days?.length) return
+    const max = Math.max(...days.map(d => d.total), 1)
+
+    const ul = document.createElement('ul')
+    ul.className  = 'forecast-chart'
+    ul.setAttribute('role', 'list')
+
+    days.forEach(day => {
+      const frac = day.total / max
+      const li = document.createElement('li')
+      li.className = 'forecast-bar' + (day.is_today ? ' forecast-bar--today' : '')
+
+      const fill = document.createElement('span')
+      fill.className = 'forecast-bar__fill'
+      fill.style.setProperty('--_h', String(frac.toFixed(3)))
+
+      const count = document.createElement('span')
+      count.className   = 'forecast-bar__count'
+      count.textContent = day.total > 0 ? String(day.total) : ''
+      count.setAttribute('aria-hidden', 'true')
+
+      const label = document.createElement('span')
+      label.className   = 'forecast-bar__label'
+      label.textContent = day.is_today ? '·' : day.day_label
+
+      li.setAttribute('aria-label', `${day.day_label}: ${day.total} items`)
+      li.append(fill, count, label)
+      ul.appendChild(li)
+    })
+
+    forecastChart.replaceChildren(ul)
+  }
+
+  // Language change: refresh badge, stats, forecast
+  document.getElementById('language')?.addEventListener('change', () => {
+    refreshStats()
+    refreshForecast()
+  })
 
   // Initial fetch + periodic refresh every 5 minutes
   refreshBadge()
   refreshStats()
-  _pollTimer = setInterval(() => { refreshBadge(); refreshStats() }, 5 * 60 * 1000)
+  refreshForecast()
+  _pollTimer = setInterval(() => { refreshBadge(); refreshStats(); refreshForecast() }, 5 * 60 * 1000)
 
   // Refresh when the tab regains focus (user returns from another tab/app)
-  window.addEventListener('focus', () => { refreshBadge(); refreshStats() })
+  window.addEventListener('focus', () => { refreshBadge(); refreshStats(); refreshForecast() })
 }
 
 export function teardownReviewSession() {
