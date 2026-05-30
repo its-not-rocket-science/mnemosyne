@@ -196,9 +196,10 @@ export class MnemosyneReviewPane extends HTMLElement {
           </div>
         </details>
 
-        <div class="mastery-bar" aria-label="Mastery: ${masteryPct}%">
+        <div class="mastery-bar" aria-label="Mastery: ${masteryPct}%" id="mastery-bar">
           <div class="mastery-bar__fill" style="inline-size:${masteryPct}%"></div>
         </div>
+        <p class="next-interval" id="next-interval" hidden aria-live="polite"></p>
 
         <div class="ratings" role="group" aria-label="How well did you recall this?" id="ratings-row" hidden>
           <button type="button" class="btn btn--rate" data-quality="1" aria-keyshortcuts="1">
@@ -592,6 +593,22 @@ export class MnemosyneReviewPane extends HTMLElement {
           nextIntervalDays: result.next_interval_days,
         },
       }))
+
+      // Animate mastery bar to new value
+      const newPct = Math.round(result.mastery_score * 100)
+      const bar    = this.shadowRoot.getElementById('mastery-bar')
+      const fill   = bar?.querySelector('.mastery-bar__fill')
+      if (fill) fill.style.setProperty('inline-size', `${newPct}%`)
+      if (bar) bar.setAttribute('aria-label', `Mastery: ${newPct}%`)
+
+      // Show next-interval hint
+      const nextEl = this.shadowRoot.getElementById('next-interval')
+      if (nextEl && result.next_interval_days != null) {
+        nextEl.textContent = `Next: ${_fmtDays(result.next_interval_days)}`
+        nextEl.removeAttribute('hidden')
+      }
+
+      await _animationPause()
     } catch (err) {
       if (errorEl) errorEl.textContent = `Save failed: ${err.message}. Rating still recorded locally.`
       ratingsRow?.querySelectorAll('button').forEach((b) => { b.disabled = false })
@@ -925,6 +942,22 @@ export class MnemosyneReviewPane extends HTMLElement {
         .mastery-bar__fill { transition: none; }
       }
 
+      .next-interval {
+        text-align: center;
+        font-size: 0.8rem;
+        color: var(--muted, GrayText);
+        margin: 0.2rem 0 0;
+        min-block-size: 1.1rem;
+        opacity: 1;
+        transition: opacity 0.2s ease;
+      }
+
+      .next-interval[hidden] { display: none; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .next-interval { transition: none; }
+      }
+
       /* ── Status ── */
       .loading { color: var(--muted, GrayText); font-size: 0.9rem; }
       .error   { color: var(--error-color, oklch(0.50 0.2 29)); }
@@ -1105,6 +1138,18 @@ function _bdi(text) {
 function _guessDir(lang) {
   const RTL = new Set(['ar', 'he', 'fa', 'ur', 'yi', 'arc', 'dv', 'ku'])
   return RTL.has((lang || '').split('-')[0]) ? 'rtl' : 'ltr'
+}
+
+function _animationPause() {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  return new Promise(r => setTimeout(r, reduced ? 80 : 650))
+}
+
+function _fmtDays(days) {
+  if (days < 7) return `${days}d`
+  const w = Math.floor(days / 7)
+  if (w < 5) return `${w}w`
+  return `${Math.round(days / 30)}mo`
 }
 
 function _relativeTime(isoString) {
