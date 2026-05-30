@@ -1039,6 +1039,47 @@ body.player-active .reader-nowplaying {
   .annotation-minimap__tick:focus-visible { outline: 2px solid Highlight; }
 }
 
+/* ── Minimap category legend ──────────────────────────────────────────────── */
+
+.minimap-legend {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-end: 4px;
+  inline-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.minimap-legend[hidden] { display: none; }
+
+.minimap-legend__dot {
+  inline-size: 5px;
+  block-size: 5px;
+  border-radius: 50%;
+  opacity: 0.25;
+  transition: opacity 0.12s ease;
+  flex-shrink: 0;
+}
+
+/* Category present in current document */
+.minimap-legend__dot--present { opacity: 0.50; }
+
+/* Category in active session filter (or no filter active = all bright) */
+.minimap-legend__dot--active  { opacity: 1.0;  }
+
+@media (prefers-reduced-motion: reduce) {
+  .minimap-legend__dot { transition: none; }
+}
+
+@media (forced-colors: active) {
+  .minimap-legend__dot { background: ButtonText !important; border-radius: 0; }
+  .minimap-legend__dot--active { background: Highlight !important; }
+}
+
 /* Jump highlight: brief ring on the annotation that was scrolled to. */
 @keyframes annotation-jump-flash {
   0%   { outline: 3px solid var(--accent); outline-offset: 3px; }
