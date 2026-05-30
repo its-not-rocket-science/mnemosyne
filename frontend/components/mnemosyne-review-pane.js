@@ -201,10 +201,18 @@ export class MnemosyneReviewPane extends HTMLElement {
         </div>
 
         <div class="ratings" role="group" aria-label="How well did you recall this?" id="ratings-row" hidden>
-          <button type="button" class="btn btn--rate" data-quality="1" aria-keyshortcuts="1">Again</button>
-          <button type="button" class="btn btn--rate" data-quality="2" aria-keyshortcuts="2">Hard</button>
-          <button type="button" class="btn btn--rate" data-quality="3" aria-keyshortcuts="3">Good</button>
-          <button type="button" class="btn btn--rate" data-quality="4" aria-keyshortcuts="4">Easy</button>
+          <button type="button" class="btn btn--rate" data-quality="1" aria-keyshortcuts="1">
+            <span class="rate__label">Again</span><span class="rate__interval" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="btn btn--rate" data-quality="2" aria-keyshortcuts="2">
+            <span class="rate__label">Hard</span><span class="rate__interval" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="btn btn--rate" data-quality="3" aria-keyshortcuts="3">
+            <span class="rate__label">Good</span><span class="rate__interval" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="btn btn--rate" data-quality="4" aria-keyshortcuts="4">
+            <span class="rate__label">Easy</span><span class="rate__interval" aria-hidden="true"></span>
+          </button>
         </div>
 
         <p class="status-error" role="alert" aria-atomic="true" id="submit-error"></p>
@@ -530,8 +538,28 @@ export class MnemosyneReviewPane extends HTMLElement {
   _showRatings() {
     const ratingsRow = this.shadowRoot.getElementById('ratings-row')
     ratingsRow?.removeAttribute('hidden')
-    // Focus first rating button
     this.shadowRoot.querySelector('[data-quality]')?.focus()
+    this._fetchSchedulePreview()
+  }
+
+  async _fetchSchedulePreview() {
+    const item = this.#queue[this.#currentIndex]
+    if (!item) return
+    try {
+      const token = localStorage.getItem('mnemosyne_token')
+      const resp = await fetch(`${API_BASE}/review/sentence-items/${item.id}/schedule-preview`, {
+        headers: token ? { Authorization: `Bearer ${token}` } : {},
+      })
+      if (!resp.ok) return
+      const data = await resp.json()
+      for (const preview of data.previews) {
+        const btn = this.shadowRoot.querySelector(`[data-quality="${preview.quality}"]`)
+        const intervalEl = btn?.querySelector('.rate__interval')
+        if (intervalEl && preview.label) intervalEl.textContent = preview.label
+      }
+    } catch {
+      // Non-fatal — interval sublabels stay empty
+    }
   }
 
   async _rate(item, quality) {
@@ -831,15 +859,51 @@ export class MnemosyneReviewPane extends HTMLElement {
         margin-block-start: 0.75rem;
       }
 
-      .btn--rate { flex: 1 1 auto; font-size: 0.9rem; }
+      .btn--rate {
+        flex: 1 1 auto;
+        font-size: 0.9rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.1rem;
+        padding-block: 0.5rem;
+      }
 
-      .btn--rate[data-quality="1"] { color: var(--error-color, oklch(0.50 0.2 29)); }
-      .btn--rate[data-quality="4"] { color: oklch(0.45 0.15 145); }
+      .rate__label { font-weight: 600; line-height: 1.2; }
+      .rate__interval {
+        font-size: 0.68rem;
+        opacity: 0.72;
+        line-height: 1;
+        min-block-size: 0.8rem;
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* Grade-specific accent colors */
+      .btn--rate[data-quality="1"] {
+        color: var(--error-color, oklch(0.50 0.2 29));
+        border-color: color-mix(in srgb, var(--error-color, oklch(0.50 0.2 29)) 35%, transparent);
+      }
+      .btn--rate[data-quality="2"] {
+        color: oklch(0.52 0.14 58);
+        border-color: color-mix(in srgb, oklch(0.52 0.14 58) 35%, transparent);
+      }
+      .btn--rate[data-quality="3"] {
+        color: oklch(0.45 0.15 145);
+        border-color: color-mix(in srgb, oklch(0.45 0.15 145) 35%, transparent);
+      }
+      .btn--rate[data-quality="4"] {
+        color: oklch(0.42 0.16 200);
+        border-color: color-mix(in srgb, oklch(0.42 0.16 200) 35%, transparent);
+      }
 
       @media (prefers-color-scheme: dark) {
-        :host-context(:root[data-theme="auto"]) .btn--rate[data-quality="4"] { color: oklch(0.70 0.15 145); }
+        :host-context(:root[data-theme="auto"]) .btn--rate[data-quality="2"] { color: oklch(0.76 0.14 58); }
+        :host-context(:root[data-theme="auto"]) .btn--rate[data-quality="3"] { color: oklch(0.70 0.15 145); }
+        :host-context(:root[data-theme="auto"]) .btn--rate[data-quality="4"] { color: oklch(0.68 0.16 200); }
       }
-      :host-context(:root[data-theme="dark"]) .btn--rate[data-quality="4"] { color: oklch(0.70 0.15 145); }
+      :host-context(:root[data-theme="dark"]) .btn--rate[data-quality="2"] { color: oklch(0.76 0.14 58); }
+      :host-context(:root[data-theme="dark"]) .btn--rate[data-quality="3"] { color: oklch(0.70 0.15 145); }
+      :host-context(:root[data-theme="dark"]) .btn--rate[data-quality="4"] { color: oklch(0.68 0.16 200); }
 
       /* ── Mastery bar ── */
       .mastery-bar {
@@ -1009,6 +1073,10 @@ export class MnemosyneReviewPane extends HTMLElement {
         .btn--choice[data-state="wrong"]   { outline: 3px solid Mark; }
         .mastery-bar__fill                 { forced-color-adjust: none; background: Highlight; }
         .context-sent--target              { outline: 2px solid Highlight; background: transparent; }
+        .btn--rate[data-quality]           { forced-color-adjust: none; }
+        .btn--rate[data-quality="1"]       { color: var(--error-color, oklch(0.50 0.2 29)); border-color: currentColor; }
+        .btn--rate[data-quality="3"],
+        .btn--rate[data-quality="4"]       { color: Highlight; border-color: Highlight; }
       }
     </style>`
   }

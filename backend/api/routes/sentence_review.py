@@ -387,6 +387,61 @@ async def get_sentence_context(
     )
 
 
+# ── GET /review/sentence-items/{item_id}/schedule-preview ────────────────────
+
+
+@router.get("/{item_id}/schedule-preview")
+async def schedule_preview(
+    item_id: str,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> dict:
+    """Dry-run FSRS for all four qualities and return estimated next intervals.
+
+    Does not write to the database.  Used by the frontend to show interval
+    hints on the Again / Hard / Good / Easy rating buttons before the learner
+    commits a rating.
+    """
+    now = datetime.now(UTC)
+
+    user_desired_retention = DESIRED_RETENTION
+    try:
+        params_row = await db.get(UserFsrsParamsRow, current_user)
+        if params_row is not None:
+            user_desired_retention = params_row.desired_retention
+    except Exception:
+        pass
+
+    ur: UserSentenceReviewRow | None = None
+    try:
+        result = await db.execute(
+            select(UserSentenceReviewRow).where(
+                UserSentenceReviewRow.user_id == current_user,
+                UserSentenceReviewRow.item_id == item_id,
+            )
+        )
+        ur = result.scalar_one_or_none()
+    except Exception:
+        pass
+
+    prior_state = ur.fsrs_state if ur else None
+
+    previews = []
+    for q in (1, 2, 3, 4):
+        try:
+            days, _ = fsrs_review(
+                quality=q,
+                state=prior_state,
+                now=now,
+                desired_retention=user_desired_retention,
+            )
+            previews.append({"quality": q, "days": days, "label": _format_interval(days)})
+        except Exception:
+            previews.append({"quality": q, "days": None, "label": ""})
+
+    return {"previews": previews}
+
+
 # ── POST /review/sentence-items/{item_id}/submit ──────────────────────────────
 
 
@@ -489,3 +544,14 @@ def _next_streak(current: int, quality: int) -> int:
     if quality >= 3:
         return current + 1
     return current  # quality 2 (Hard): preserve streak
+
+
+def _format_interval(days: int) -> str:
+    """Human-readable next-interval label for schedule-preview buttons."""
+    if days < 7:
+        return f"{days}d"
+    weeks = days // 7
+    if weeks < 5:
+        return f"{weeks}w"
+    months = round(days / 30)
+    return f"{months}mo"
