@@ -2027,6 +2027,7 @@ const corpusBrowserSearch   = document.querySelector('#corpus-browser-search')
 const corpusBrowserLang     = document.querySelector('#corpus-browser-lang')
 const corpusBrowserType     = document.querySelector('#corpus-browser-type')
 const corpusBrowserSort      = document.querySelector('#corpus-browser-sort')
+const corpusBrowserTag       = document.querySelector('#corpus-browser-tag')
 const corpusBrowserList      = document.querySelector('#corpus-browser-list')
 const corpusBrowserStatus    = document.querySelector('#corpus-browser-status')
 const corpusBrowserCount     = document.querySelector('#corpus-browser-count')
@@ -2048,10 +2049,12 @@ function _corpusParams() {
   const lang = corpusBrowserLang?.value
   const type = corpusBrowserType?.value
   const sort = corpusBrowserSort?.value
-  if (lang)                   p.set('language', lang)
-  if (type)                   p.set('content_type', type)
+  const tag  = corpusBrowserTag?.value
+  if (lang)                      p.set('language', lang)
+  if (type)                      p.set('content_type', type)
   if (sort && sort !== 'recent') p.set('sort', sort)
-  if (q)                      p.set('q', q)
+  if (tag)                       p.set('tag', tag)
+  if (q)                         p.set('q', q)
   p.set('limit', String(_CORPUS_PAGE_SIZE))
   p.set('offset', String(_corpusOffset))
   return p
@@ -2143,6 +2146,86 @@ function _buildCorpusItem(item) {
   }
 
   li.appendChild(btn)
+
+  // Tags + study row
+  const tagsRow = document.createElement('div')
+  tagsRow.className = 'corpus-browser-list__tags'
+
+  for (const tag of (item.tags ?? [])) {
+    const chip = document.createElement('span')
+    chip.className = 'corpus-browser-list__tag-chip'
+
+    const chipLabel = document.createElement('button')
+    chipLabel.type = 'button'
+    chipLabel.className = 'corpus-browser-list__tag-chip-label'
+    chipLabel.textContent = tag
+    chipLabel.addEventListener('click', (e) => {
+      e.stopPropagation()
+      if (corpusBrowserTag) { corpusBrowserTag.value = tag; _loadCorpus() }
+    })
+
+    const removeBtn = document.createElement('button')
+    removeBtn.type = 'button'
+    removeBtn.className = 'corpus-browser-list__tag-remove'
+    removeBtn.setAttribute('aria-label', `${t('corpus_tag_remove_aria')}: ${tag}`)
+    removeBtn.textContent = '×'
+    removeBtn.addEventListener('click', (e) => {
+      e.stopPropagation()
+      _removeCorpusTag(item.id, tag)
+    })
+
+    chip.appendChild(chipLabel)
+    chip.appendChild(removeBtn)
+    tagsRow.appendChild(chip)
+  }
+
+  const addTagBtn = document.createElement('button')
+  addTagBtn.type = 'button'
+  addTagBtn.className = 'corpus-browser-list__tag-add'
+  addTagBtn.setAttribute('aria-label', t('corpus_tag_add_aria'))
+  addTagBtn.textContent = '+'
+
+  const tagInput = document.createElement('input')
+  tagInput.type = 'text'
+  tagInput.className = 'corpus-browser-list__tag-input'
+  tagInput.placeholder = t('corpus_tag_add_placeholder')
+  tagInput.hidden = true
+  tagInput.maxLength = 50
+
+  addTagBtn.addEventListener('click', (e) => {
+    e.stopPropagation()
+    tagInput.hidden = !tagInput.hidden
+    if (!tagInput.hidden) tagInput.focus()
+  })
+
+  tagInput.addEventListener('keydown', async (e) => {
+    if (e.key === 'Enter') {
+      const val = tagInput.value.trim()
+      if (val) { await _addCorpusTag(item.id, val); tagInput.value = ''; tagInput.hidden = true }
+    } else if (e.key === 'Escape') {
+      tagInput.value = ''; tagInput.hidden = true
+    }
+  })
+
+  tagInput.addEventListener('blur', () => {
+    setTimeout(() => { tagInput.hidden = true; tagInput.value = '' }, 150)
+  })
+
+  const studyBtn = document.createElement('button')
+  studyBtn.type = 'button'
+  studyBtn.className = 'corpus-browser-list__study'
+  studyBtn.textContent = t('corpus_study_btn')
+  studyBtn.setAttribute('aria-label', `${t('corpus_study_aria')}: ${item.title || item.language}`)
+  studyBtn.addEventListener('click', (e) => {
+    e.stopPropagation()
+    _studyCorpusDocument(item.id, studyBtn)
+  })
+
+  tagsRow.appendChild(addTagBtn)
+  tagsRow.appendChild(tagInput)
+  tagsRow.appendChild(studyBtn)
+  li.appendChild(tagsRow)
+
   return li
 }
 
@@ -2260,10 +2343,74 @@ async function _resetCorpusProgress(docId) {
   } catch { /* ignore */ }
 }
 
+async function _addCorpusTag(docId, tag) {
+  try {
+    const resp = await fetch(`${API_BASE}/corpus/${encodeURIComponent(docId)}/tags`, {
+      method: 'POST',
+      headers: { ...getAuthHeaders(), 'Content-Type': 'application/json' },
+      body: JSON.stringify({ tag }),
+    })
+    if (resp.ok) await Promise.all([_loadCorpus(), _populateTagFilter()])
+  } catch { /* ignore */ }
+}
+
+async function _removeCorpusTag(docId, tag) {
+  try {
+    const resp = await fetch(
+      `${API_BASE}/corpus/${encodeURIComponent(docId)}/tags/${encodeURIComponent(tag)}`,
+      { method: 'DELETE', headers: getAuthHeaders() }
+    )
+    if (resp.ok || resp.status === 204) await Promise.all([_loadCorpus(), _populateTagFilter()])
+  } catch { /* ignore */ }
+}
+
+async function _studyCorpusDocument(docId, btn) {
+  const orig = btn.textContent
+  btn.disabled = true
+  btn.textContent = '…'
+  try {
+    const resp = await fetch(`${API_BASE}/corpus/${encodeURIComponent(docId)}/study`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+    })
+    if (resp.ok) {
+      const d = await resp.json()
+      btn.textContent = ti('corpus_study_mined', { n: d.mined })
+    } else {
+      btn.textContent = orig
+    }
+  } catch {
+    btn.textContent = orig
+  } finally {
+    btn.disabled = false
+  }
+}
+
+async function _populateTagFilter() {
+  if (!corpusBrowserTag) return
+  try {
+    const resp = await fetch(`${API_BASE}/corpus/all-tags`, { headers: getAuthHeaders() })
+    if (!resp.ok) return
+    const d = await resp.json()
+    const current = corpusBrowserTag.value
+    const allOpt = document.createElement('option')
+    allOpt.value = ''
+    allOpt.textContent = t('corpus_tag_all')
+    const opts = d.tags.map(tag => {
+      const o = document.createElement('option')
+      o.value = tag
+      o.textContent = tag
+      return o
+    })
+    corpusBrowserTag.replaceChildren(allOpt, ...opts)
+    if (d.tags.includes(current)) corpusBrowserTag.value = current
+  } catch { /* ignore */ }
+}
+
 openCorpusBrowserBtn?.addEventListener('click', async () => {
   corpusBrowserDialog?.showModal()
   await _populateCorpusLangSelect()
-  await Promise.all([_loadCorpus(), _loadCorpusStats()])
+  await Promise.all([_loadCorpus(), _loadCorpusStats(), _populateTagFilter()])
 })
 
 corpusBrowserCloseBtn?.addEventListener('click', () => corpusBrowserDialog?.close())
@@ -2279,6 +2426,7 @@ corpusBrowserSearch?.addEventListener('input', () => {
 corpusBrowserLang?.addEventListener('change', () => _loadCorpus())
 corpusBrowserType?.addEventListener('change', () => _loadCorpus())
 corpusBrowserSort?.addEventListener('change', () => _loadCorpus())
+corpusBrowserTag?.addEventListener('change',  () => _loadCorpus())
 
 corpusBrowserStats?.querySelectorAll('.corpus-stats-chip').forEach(chip => {
   chip.addEventListener('click', () => {

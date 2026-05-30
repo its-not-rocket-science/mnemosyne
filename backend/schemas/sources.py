@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, field_validator
 
 from backend.schemas.parse import SentenceResult
 
@@ -38,6 +38,8 @@ class CorpusBrowseItem(BaseModel):
     completion_fraction: float = 0.0
     started: bool = False
     is_complete: bool = False
+    # User-defined tags
+    tags: list[str] = []
 
 
 class CorpusBrowseResponse(BaseModel):
@@ -59,6 +61,28 @@ class CorpusStats(BaseModel):
     not_started: int
     in_progress: int
     complete: int
+
+
+class TagAddRequest(BaseModel):
+    tag: str = Field(min_length=1, max_length=50)
+
+    @field_validator("tag")
+    @classmethod
+    def strip_tag(cls, v: str) -> str:
+        v = v.strip()
+        if not v:
+            raise ValueError("tag must not be blank")
+        return v
+
+
+class CorpusTagsResponse(BaseModel):
+    tags: list[str]
+
+
+class CorpusStudyResult(BaseModel):
+    mined: int
+    skipped_duplicate: int
+    sentences_processed: int
 
 
 class SourceDetailResponse(BaseModel):

@@ -1799,6 +1799,127 @@ body.player-active .app-shell__scroll-area {
   outline-offset: 2px;
 }
 
+.corpus-browser-list__tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  padding-block: 0.35rem;
+  padding-inline: 0.75rem;
+  border-block-start: 1px solid var(--border);
+}
+
+.corpus-browser-list__tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  border: 1px solid color-mix(in srgb, var(--brand-purple) 30%, transparent);
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.corpus-browser-list__tag-chip-label {
+  padding-block: 0.15rem;
+  padding-inline: 0.5rem 0.25rem;
+  background: color-mix(in srgb, var(--brand-purple) 8%, transparent);
+  border: none;
+  color: var(--brand-purple);
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.corpus-browser-list__tag-chip-label:hover {
+  background: color-mix(in srgb, var(--brand-purple) 16%, transparent);
+}
+
+.corpus-browser-list__tag-remove {
+  padding-block: 0.15rem;
+  padding-inline: 0.25rem 0.4rem;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.7rem;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.corpus-browser-list__tag-remove:hover { color: var(--text); }
+
+.corpus-browser-list__tag-add {
+  padding-block: 0.15rem;
+  padding-inline: 0.4rem;
+  border: 1px dashed var(--border);
+  border-radius: 0.9rem;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+  line-height: 1.4;
+  transition: color 100ms, border-color 100ms;
+}
+
+.corpus-browser-list__tag-add:hover { color: var(--text); border-color: var(--accent); }
+
+.corpus-browser-list__tag-input {
+  inline-size: 7rem;
+  padding-block: 0.1rem;
+  padding-inline: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  font-size: 0.72rem;
+}
+
+.corpus-browser-list__tag-input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.corpus-browser-list__study {
+  margin-inline-start: auto;
+  flex-shrink: 0;
+  padding-block: 0.2rem;
+  padding-inline: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 100ms, border-color 100ms, color 100ms;
+}
+
+.corpus-browser-list__study:hover:not(:disabled) {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.corpus-browser-list__study:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.corpus-browser-list__study:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (forced-colors: active) {
+  .corpus-browser-list__tag-chip { border-color: ButtonText; }
+  .corpus-browser-list__tag-chip-label { background: ButtonFace; color: ButtonText; }
+  .corpus-browser-list__study { border-color: ButtonText; }
+}
+
 .corpus-browser-footer {
   display: flex;
   justify-content: center;

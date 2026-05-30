@@ -297,6 +297,24 @@ class SourceProgressionRow(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
 
 
+class CorpusDocumentTagRow(Base):
+    """User-defined label on a corpus document.
+
+    Composite primary key (user_id, source_document_id, tag) makes add
+    idempotent via INSERT OR IGNORE and keeps the table compact.  No FK on
+    user_id — consistent with the FK-free design used elsewhere.
+    """
+
+    __tablename__ = "corpus_document_tags"
+
+    user_id: Mapped[str] = mapped_column(String(50), primary_key=True)
+    source_document_id: Mapped[str] = mapped_column(
+        String(36), ForeignKey("source_documents.id", ondelete="CASCADE"), primary_key=True
+    )
+    tag: Mapped[str] = mapped_column(String(50), primary_key=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+
 class UserKnowledgeRow(Base):
     """FSRS state and mastery metrics for one (user, canonical object) pair.
 
