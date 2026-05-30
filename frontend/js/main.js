@@ -1887,19 +1887,41 @@ function _showAnnotationTooltip(mark) {
   if (!annotationTooltip) return
   const typeLabel = mark.dataset.typeLabel ?? ''
   const label     = mark.dataset.label ?? ''
+  const gloss     = mark.dataset.gloss ?? ''
+  const cefrLevel = mark.dataset.cefrLevel ?? ''
   if (!typeLabel && !label) return
 
   annotationTooltip.innerHTML = ''
-  if (typeLabel) {
-    const chip = document.createElement('span')
-    chip.className   = 'annotation-tooltip__type'
-    chip.textContent = typeLabel
-    annotationTooltip.appendChild(chip)
+
+  if (typeLabel || cefrLevel) {
+    const header = document.createElement('span')
+    header.className = 'annotation-tooltip__header'
+    if (typeLabel) {
+      const chip = document.createElement('span')
+      chip.className   = 'annotation-tooltip__type'
+      chip.textContent = typeLabel
+      header.appendChild(chip)
+    }
+    if (cefrLevel) {
+      const cefr = document.createElement('span')
+      cefr.className      = 'annotation-tooltip__cefr'
+      cefr.textContent    = cefrLevel
+      cefr.dataset.cefr   = cefrLevel
+      header.appendChild(cefr)
+    }
+    annotationTooltip.appendChild(header)
   }
+
   if (label) {
     const el = document.createElement('span')
     el.className   = 'annotation-tooltip__label'
     el.textContent = label
+    annotationTooltip.appendChild(el)
+  }
+  if (gloss) {
+    const el = document.createElement('span')
+    el.className   = 'annotation-tooltip__gloss'
+    el.textContent = gloss
     annotationTooltip.appendChild(el)
   }
 
@@ -2752,6 +2774,9 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam, de
     // mark.dataset.typeLabel = TYPE_LABELS[item.type] ?? item.type
     mark.dataset.typeLabel = t(TYPE_LABEL_KEYS[item.type] ?? 'type_unknown')
     mark.dataset.label     = item.label ?? ''
+    const _gloss = item.lesson_data?.gloss || item.lesson_data?.translation || ''
+    if (_gloss)                        mark.dataset.gloss     = _gloss
+    if (item.lesson_data?.cefr_level)  mark.dataset.cefrLevel = item.lesson_data.cefr_level
     mark.setAttribute('role', 'button')
     mark.setAttribute('tabindex', '0')
     const typeLong  = TYPE_LABELS_LONG_I18N[currentUiLang()]?.[`type_${item.type}_long`] 
