@@ -216,6 +216,41 @@
   margin-block-end: var(--space-2);
 }
 
+/* ── Annotation text search ──────────────────────────────────────────────────── */
+
+.annotation-search-wrap {
+  padding-inline: 0.75rem;
+  padding-block: 0.4rem 0.5rem;
+  border-block-start: 1px solid var(--border);
+}
+
+.annotation-search {
+  inline-size: 100%;
+  padding-block: 0.28rem;
+  padding-inline: 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  background: var(--bg);
+  color: inherit;
+  font-size: 0.78rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.annotation-search:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 0;
+  border-color: transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .annotation-search { transition: border-color 120ms; }
+}
+
+@media (forced-colors: active) {
+  .annotation-search { border: 1px solid ButtonText; }
+}
+
 /* ── Script view toggle ──────────────────────────────────────────────────────
    Segmented button group: Script / Romanized / Both.
    aria-pressed signals the active state to AT.                               */
