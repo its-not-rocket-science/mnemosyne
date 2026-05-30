@@ -4,18 +4,24 @@ GET /corpus — browse all ingested source documents with filters and pagination
 """
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends, HTTPException, Query, Response
+import logging
+from datetime import UTC, datetime
+
+from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
 from sqlalchemy import and_, case, delete, func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.api.dependencies import get_current_user, get_db_session
 from backend.models import (
     CanonicalObjectRow,
+    CorpusDocumentTagRow,
     Sentence,
     SentenceObjectRow,
+    SentenceReviewItemRow,
     SourceChunkRow,
     SourceDocumentRow,
     SourceProgressionRow,
+    UserSentenceReviewRow,
 )
 from backend.schemas.parse import LearnableObject, SentenceResult
 from backend.schemas.sources import (
@@ -24,11 +30,16 @@ from backend.schemas.sources import (
     CorpusLanguagesResponse,
     CorpusLanguageSummary,
     CorpusStats,
+    CorpusStudyResult,
+    CorpusTagsResponse,
     SourceDetailResponse,
     SourceItem,
     SourceListResponse,
+    TagAddRequest,
 )
+from backend.srs.sentence_miner import mine_sentence
 
+logger = logging.getLogger(__name__)
 router = APIRouter(tags=["sources"])
 
 
@@ -211,6 +222,205 @@ async def get_corpus_stats(
     )
 
 
+@router.get("/corpus/all-tags", response_model=CorpusTagsResponse)
+async def list_all_corpus_tags(
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> CorpusTagsResponse:
+    """Return all unique tags the user has applied across the corpus."""
+    rows = await db.execute(
+        select(CorpusDocumentTagRow.tag)
+        .where(CorpusDocumentTagRow.user_id == current_user)
+        .group_by(CorpusDocumentTagRow.tag)
+        .order_by(CorpusDocumentTagRow.tag)
+    )
+    return CorpusTagsResponse(tags=[r.tag for r in rows.all()])
+
+
+@router.get("/corpus/{doc_id}/tags", response_model=CorpusTagsResponse)
+async def get_doc_tags(
+    doc_id: str,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> CorpusTagsResponse:
+    rows = await db.execute(
+        select(CorpusDocumentTagRow.tag)
+        .where(
+            CorpusDocumentTagRow.user_id == current_user,
+            CorpusDocumentTagRow.source_document_id == doc_id,
+        )
+        .order_by(CorpusDocumentTagRow.tag)
+    )
+    return CorpusTagsResponse(tags=[r.tag for r in rows.all()])
+
+
+@router.post("/corpus/{doc_id}/tags", status_code=201, response_model=CorpusTagsResponse)
+async def add_doc_tag(
+    doc_id: str,
+    body: TagAddRequest,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> CorpusTagsResponse:
+    """Add a tag to a corpus document (idempotent)."""
+    existing = await db.scalar(
+        select(CorpusDocumentTagRow).where(
+            CorpusDocumentTagRow.user_id == current_user,
+            CorpusDocumentTagRow.source_document_id == doc_id,
+            CorpusDocumentTagRow.tag == body.tag,
+        )
+    )
+    if not existing:
+        db.add(CorpusDocumentTagRow(
+            user_id=current_user,
+            source_document_id=doc_id,
+            tag=body.tag,
+        ))
+        await db.commit()
+    rows = await db.execute(
+        select(CorpusDocumentTagRow.tag)
+        .where(
+            CorpusDocumentTagRow.user_id == current_user,
+            CorpusDocumentTagRow.source_document_id == doc_id,
+        )
+        .order_by(CorpusDocumentTagRow.tag)
+    )
+    return CorpusTagsResponse(tags=[r.tag for r in rows.all()])
+
+
+@router.delete("/corpus/{doc_id}/tags/{tag}", status_code=204)
+async def remove_doc_tag(
+    doc_id: str,
+    tag: str,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> Response:
+    await db.execute(
+        delete(CorpusDocumentTagRow).where(
+            CorpusDocumentTagRow.user_id == current_user,
+            CorpusDocumentTagRow.source_document_id == doc_id,
+            CorpusDocumentTagRow.tag == tag,
+        )
+    )
+    await db.commit()
+    return Response(status_code=204)
+
+
+@router.post("/corpus/{doc_id}/study", response_model=CorpusStudyResult)
+async def study_corpus_document(
+    doc_id: str,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> CorpusStudyResult:
+    """Mine a corpus document for sentence-level review items.
+
+    Equivalent to running ``/review/sentence-items/mine`` but scoped to a
+    single corpus document.  Items already mined from the same sentence are
+    skipped (idempotent).
+    """
+    doc = await db.scalar(
+        select(SourceDocumentRow).where(SourceDocumentRow.id == doc_id)
+    )
+    if doc is None:
+        raise HTTPException(status_code=404, detail="Document not found")
+
+    chunk_rows = (await db.execute(
+        select(SourceChunkRow)
+        .where(SourceChunkRow.source_document_id == doc_id)
+        .order_by(SourceChunkRow.chunk_index)
+    )).scalars().all()
+
+    if not chunk_rows:
+        return CorpusStudyResult(mined=0, skipped_duplicate=0, sentences_processed=0)
+
+    now = datetime.now(UTC)
+    mined_count = 0
+    skip_count = 0
+    sent_count = 0
+
+    for chunk in chunk_rows:
+        sentences = (await db.execute(
+            select(Sentence)
+            .where(Sentence.parsed_text_id == chunk.parsed_text_id)
+            .order_by(Sentence.position)
+        )).scalars().all()
+
+        for sentence in sentences:
+            sent_count += 1
+            obj_rows = (await db.execute(
+                select(CanonicalObjectRow)
+                .join(SentenceObjectRow, CanonicalObjectRow.id == SentenceObjectRow.object_id)
+                .where(SentenceObjectRow.sentence_id == sentence.id)
+            )).scalars().all()
+
+            obj_dicts = [
+                {
+                    "id": o.id,
+                    "type": o.type,
+                    "display_label": o.display_label,
+                    "surface_forms": o.surface_forms or [],
+                    "lesson_data": o.lesson_data or {},
+                    "confidence": o.confidence or 0.0,
+                }
+                for o in obj_rows
+            ]
+
+            specs = mine_sentence(sentence.id, sentence.text, doc.language, obj_dicts)
+
+            for spec in specs:
+                existing = (await db.execute(
+                    select(SentenceReviewItemRow.id).where(
+                        SentenceReviewItemRow.sentence_id == spec.sentence_id,
+                        SentenceReviewItemRow.item_type == spec.item_type,
+                        SentenceReviewItemRow.target_span == spec.target_span,
+                    )
+                )).scalar_one_or_none()
+
+                if existing:
+                    skip_count += 1
+                    continue
+
+                item_row = SentenceReviewItemRow(
+                    sentence_id=spec.sentence_id,
+                    language=spec.language,
+                    item_type=spec.item_type,
+                    prompt=spec.prompt,
+                    target_span=spec.target_span,
+                    answer=spec.answer,
+                    distractors=spec.distractors,
+                    hint=spec.hint,
+                    grammar_concept=spec.grammar_concept,
+                    cefr_level=spec.cefr_level,
+                    difficulty_score=spec.difficulty_score,
+                    target_object_ids=spec.target_object_ids,
+                )
+                db.add(item_row)
+                try:
+                    await db.flush()
+                except Exception:
+                    await db.rollback()
+                    logger.warning("Flush failed for study item, skipping", exc_info=True)
+                    continue
+
+                db.add(UserSentenceReviewRow(
+                    user_id=current_user,
+                    item_id=item_row.id,
+                    due_at=now,
+                ))
+                mined_count += 1
+
+    try:
+        await db.commit()
+    except Exception:
+        logger.warning("Commit failed during corpus study mining", exc_info=True)
+        await db.rollback()
+
+    return CorpusStudyResult(
+        mined=mined_count,
+        skipped_duplicate=skip_count,
+        sentences_processed=sent_count,
+    )
+
+
 @router.delete("/corpus/{doc_id}/progress", status_code=204)
 async def reset_corpus_progress(
     doc_id: str,
@@ -237,6 +447,7 @@ async def browse_corpus(
     content_type: str | None = None,
     q: str | None = None,
     sort: str = Query(default="recent"),
+    tag: str | None = None,
     limit: int = Query(default=20, ge=1, le=100),
     offset: int = Query(default=0, ge=0),
     db: AsyncSession = Depends(get_db_session),
@@ -273,6 +484,15 @@ async def browse_corpus(
         conditions.append(SourceDocumentRow.content_type == content_type)
     if q:
         conditions.append(SourceDocumentRow.title.ilike(f"%{q}%"))
+    if tag:
+        tag_subq = (
+            select(CorpusDocumentTagRow.source_document_id)
+            .where(
+                CorpusDocumentTagRow.user_id == current_user,
+                CorpusDocumentTagRow.tag == tag,
+            )
+        )
+        conditions.append(SourceDocumentRow.id.in_(tag_subq))
 
     # Progress filter + sort order
     if sort == "in_progress":
@@ -314,6 +534,21 @@ async def browse_corpus(
     )
     rows = (await db.execute(data_stmt)).all()
 
+    # Fetch tags for all returned docs in one query.
+    doc_ids = [doc.id for doc, _ in rows]
+    tags_by_doc: dict[str, list[str]] = {}
+    if doc_ids:
+        tag_rows = (await db.execute(
+            select(CorpusDocumentTagRow.source_document_id, CorpusDocumentTagRow.tag)
+            .where(
+                CorpusDocumentTagRow.user_id == current_user,
+                CorpusDocumentTagRow.source_document_id.in_(doc_ids),
+            )
+            .order_by(CorpusDocumentTagRow.tag)
+        )).all()
+        for doc_id_val, tag_val in tag_rows:
+            tags_by_doc.setdefault(doc_id_val, []).append(tag_val)
+
     items = [
         CorpusBrowseItem(
             id=doc.id,
@@ -333,6 +568,7 @@ async def browse_corpus(
                 and prog.next_position
                 and prog.next_position >= prog.sentences_total
             ),
+            tags=tags_by_doc.get(doc.id, []),
         )
         for doc, prog in rows
     ]
