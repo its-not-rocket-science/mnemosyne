@@ -273,6 +273,14 @@
                               data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
                     </div>
 
+                    <!-- Reading history — shown when user has prior ingested docs -->
+                    <section id="reading-history" class="reading-history" hidden
+                             aria-labelledby="reading-history-heading">
+                      <h3 id="reading-history-heading" class="reading-history__heading"
+                          data-i18n="rec_continue_reading">Continue reading</h3>
+                      <ul class="reading-history__list" id="reading-history-list" role="list"></ul>
+                    </section>
+
                     <div class="field">
                       <label for="language" data-i18n="label_language">Language</label>
                       <select id="language" name="language" aria-busy="true">

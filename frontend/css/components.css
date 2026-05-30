@@ -1113,6 +1113,115 @@ body.player-active .reader-nowplaying {
 }
 
 
+/* ── Reading history ─────────────────────────────────────────────────────────── */
+
+.reading-history[hidden] { display: none; }
+
+.reading-history__heading {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-block-end: 0.5rem;
+}
+
+.reading-history__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.reading-history__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius, 0.5rem);
+  background: var(--surface);
+}
+
+.reading-history__meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  min-inline-size: 0;
+}
+
+.reading-history__lang {
+  flex-shrink: 0;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  padding: 0.05em 0.35em;
+  border-radius: 3px;
+}
+
+.reading-history__title {
+  flex: 1 1 auto;
+  min-inline-size: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.reading-history__bar-wrap {
+  block-size: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.reading-history__bar {
+  block-size: 100%;
+  inline-size: calc(var(--_prog, 0) * 100%);
+  background: var(--accent);
+  border-radius: 2px;
+  transition: inline-size 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reading-history__bar { transition: none; }
+}
+
+.reading-history__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reading-history__pct {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.reading-history__date {
+  flex: 1 1 auto;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.reading-history__btn {
+  flex-shrink: 0;
+}
+
+@media (forced-colors: active) {
+  .reading-history__item { border: 1px solid ButtonText; }
+  .reading-history__bar  { background: Highlight; }
+}
+
+
 /* ── Load-lesson list ────────────────────────────────────────────────────────── */
 
 .load-lesson-list {

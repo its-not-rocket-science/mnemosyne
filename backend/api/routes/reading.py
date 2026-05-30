@@ -1,4 +1,5 @@
-"""GET /reading/{source_document_id} — current reading position and comprehension.
+"""GET /reading — recent reading history list.
+GET /reading/{source_document_id} — current reading position and comprehension.
 PATCH /reading/{source_document_id} — advance next_position.
 
 A ``SourceProgressionRow`` must already exist for the (user, document) pair;
@@ -14,7 +15,7 @@ from __future__ import annotations
 import logging
 from datetime import UTC, datetime
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -24,6 +25,7 @@ from backend.models import (
     Sentence,
     SentenceObjectRow,
     SourceChunkRow,
+    SourceDocumentRow,
     SourceProgressionRow,
     UserKnowledgeRow,
 )
@@ -98,6 +100,59 @@ def _to_response(row: SourceProgressionRow) -> ReadingProgressResponse:
         last_read_at=row.last_read_at,
         is_complete=is_complete,
     )
+
+
+@router.get("/reading")
+async def list_reading_history(
+    limit: int = Query(default=5, ge=1, le=20),
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> dict:
+    """Return the user's recent reading history ordered by last_read_at DESC.
+
+    Joins SourceProgressionRow with SourceDocumentRow to include document
+    title, language, and progress fraction.  Only documents with a
+    SourceProgressionRow (i.e. ingested via POST /ingest) are included.
+    """
+    try:
+        result = await db.execute(
+            select(SourceProgressionRow, SourceDocumentRow)
+            .join(
+                SourceDocumentRow,
+                SourceDocumentRow.id == SourceProgressionRow.source_document_id,
+            )
+            .where(SourceProgressionRow.user_id == current_user)
+            .order_by(SourceProgressionRow.last_read_at.desc())
+            .limit(limit)
+        )
+        rows = result.all()
+    except Exception as exc:
+        logger.warning("DB error in GET /reading: %s", exc)
+        raise HTTPException(status_code=503, detail="Database unavailable") from exc
+
+    items = []
+    for prog, doc in rows:
+        display_title = (
+            doc.title
+            or doc.filename
+            or doc.source_url
+            or prog.source_document_id
+        )
+        items.append({
+            "source_document_id": prog.source_document_id,
+            "title": display_title,
+            "language": doc.language,
+            "completion_fraction": prog.completion_fraction,
+            "next_position": prog.next_position,
+            "sentences_total": prog.sentences_total,
+            "last_read_at": prog.last_read_at.isoformat() if prog.last_read_at else None,
+            "is_complete": (
+                prog.sentences_total > 0
+                and prog.next_position >= prog.sentences_total
+            ),
+        })
+
+    return {"items": items, "count": len(items)}
 
 
 @router.get("/reading/{source_document_id}", response_model=ReadingProgressResponse)
