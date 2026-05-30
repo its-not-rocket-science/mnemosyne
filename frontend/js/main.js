@@ -204,6 +204,10 @@ let currentDocumentEyebrow = null
 let languageUserSelected  = false
 let currentText          = ''   // committed text from picker
 let activeFilterTypes    = null  // Set<string> when filtered, null = show all
+let activeLockedTypes    = new Set(
+  JSON.parse(localStorage.getItem('mn-cat-lock-types') || '[]')
+)
+let activeLockedCatIds   = JSON.parse(localStorage.getItem('mn-cat-locks') || '[]')
 let activeSearchTerm     = ''   // lowercase string; '' = no search filter
 const FILTER_CYCLE       = [null, 'vocab', 'grammar', 'idioms', 'literary', 'etymology']
 let _filterCycleIdx      = 0   // index into FILTER_CYCLE; 0 = show all
@@ -2151,6 +2155,15 @@ document.addEventListener('mnemosyne:mode-changed', ({ detail }) => {
 
 filterBar?.addEventListener('filter-change', ({ detail }) => {
   activeFilterTypes = detail.types.length ? new Set(detail.types) : null
+
+  // Persist per-category depth locks when they change
+  if (detail.locked !== undefined) {
+    activeLockedCatIds = detail.locked
+    activeLockedTypes  = new Set(detail.lockedTypes || [])
+    localStorage.setItem('mn-cat-locks',       JSON.stringify(activeLockedCatIds))
+    localStorage.setItem('mn-cat-lock-types',  JSON.stringify([...activeLockedTypes]))
+  }
+
   if (!detail.active.length) {
     _filterCycleIdx = 0
   } else {
@@ -2159,6 +2172,9 @@ filterBar?.addEventListener('filter-change', ({ detail }) => {
   }
   applyAnnotationFilter()
 })
+
+// Restore persisted per-category depth locks (fires filter-change → applyAnnotationFilter)
+if (activeLockedCatIds.length) filterBar?.setLocks?.(activeLockedCatIds)
 
 if (annotationSearch) {
   let _searchDebounce = null
@@ -2749,12 +2765,22 @@ function buildMinimap() {
 function applyAnnotationFilter() {
   const depthTypes = ANNOTATION_DEPTH_MODEL[currentDepth] ?? ANNOTATION_DEPTH_MODEL[DEPTH_FALLBACK]
   results?.querySelectorAll('.reader-annotation').forEach(mark => {
-    const typeAllowedByDepth      = depthTypes.has(mark.dataset.type)
-    const typeAllowedByUserFilter = activeFilterTypes === null || activeFilterTypes.has(mark.dataset.type)
-    const searchAllowed           = !activeSearchTerm
+    const type = mark.dataset.type
+
+    // Session filter (pill click): show exactly those types, overriding global depth.
+    // No session filter: depth model applies, but locked categories are always shown.
+    let typeAllowed
+    if (activeFilterTypes !== null) {
+      typeAllowed = activeFilterTypes.has(type)
+    } else {
+      typeAllowed = depthTypes.has(type) || activeLockedTypes.has(type)
+    }
+
+    const searchAllowed = !activeSearchTerm
       || mark.textContent.toLowerCase().includes(activeSearchTerm)
       || (mark.dataset.label ?? '').toLowerCase().includes(activeSearchTerm)
-    mark.toggleAttribute('data-filtered', !(typeAllowedByDepth && typeAllowedByUserFilter && searchAllowed))
+    mark.toggleAttribute('data-filtered', !(typeAllowed && searchAllowed))
+
   })
   requestAnimationFrame(buildMinimap)
 }

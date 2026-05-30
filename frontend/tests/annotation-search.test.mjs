@@ -37,7 +37,7 @@ console.log('✓ main.js: annotationSearch ref and activeSearchTerm state declar
 // ── applyAnnotationFilter uses searchAllowed ──────────────────────────────────
 
 const filterIdx  = mainJs.indexOf('function applyAnnotationFilter(')
-const filterBody = mainJs.slice(filterIdx, filterIdx + 600)
+const filterBody = mainJs.slice(filterIdx, filterIdx + 900)
 assert.ok(filterBody.includes('searchAllowed'), 'applyAnnotationFilter must use searchAllowed')
 assert.ok(filterBody.includes('activeSearchTerm'), 'applyAnnotationFilter must check activeSearchTerm')
 assert.ok(filterBody.includes('dataset.label'), 'search must match against dataset.label')

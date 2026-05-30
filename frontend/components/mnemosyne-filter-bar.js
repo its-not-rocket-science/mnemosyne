@@ -54,7 +54,8 @@ const CUSTOM_COLOR = 'var(--accent)'
 
 class MnemosyneFilterBar extends HTMLElement {
   #shadow
-  #active    = new Set()  // active category IDs
+  #active    = new Set()  // active category IDs (session — cleared on reset)
+  #locks     = new Set()  // locked category IDs (persistent — survive reset/navigation)
   #custom    = []         // user-added annotation type terms
   #available = null       // Set<string> | null — types present in current text
   #popOpen   = false
@@ -97,6 +98,16 @@ class MnemosyneFilterBar extends HTMLElement {
   activateCategory(id) {
     this.#active.clear()
     if (id) this.#active.add(id)
+    this.#syncAllPills()
+    this.#dispatch()
+  }
+
+  /**
+   * Restore persisted depth locks. Call once on page load.
+   * @param {string[]} lockedIds — array of category IDs to lock
+   */
+  setLocks(lockedIds) {
+    this.#locks = new Set(lockedIds)
     this.#syncAllPills()
     this.#dispatch()
   }
@@ -189,6 +200,17 @@ class MnemosyneFilterBar extends HTMLElement {
       const btn = e.target.closest('.pill[data-id]')
       if (!btn || btn.hasAttribute('data-empty')) return
       const id = btn.dataset.id
+
+      if (e.shiftKey) {
+        // Shift+click = toggle depth lock for this category (persists across sessions)
+        if (this.#locks.has(id)) this.#locks.delete(id)
+        else this.#locks.add(id)
+        this.#syncPill(btn)
+        this.#dispatch()
+        return
+      }
+
+      // Regular click = toggle session filter (current behavior)
       if (this.#active.has(id)) this.#active.delete(id)
       else this.#active.add(id)
       this.#syncPill(btn)
@@ -282,9 +304,13 @@ class MnemosyneFilterBar extends HTMLElement {
   // ── State sync ────────────────────────────────────────────────────────────────
 
   #syncPill(btn) {
-    const active = this.#active.has(btn.dataset.id)
-    btn.setAttribute('aria-pressed', String(active))
+    const id     = btn.dataset.id
+    const active = this.#active.has(id)
+    const locked = this.#locks.has(id)
+    btn.setAttribute('aria-pressed', String(active || locked))
     btn.classList.toggle('pill--active', active)
+    btn.toggleAttribute('data-locked', locked)
+    btn.title = locked ? 'Depth locked (Shift+click to unlock)' : 'Shift+click to lock at full depth'
   }
 
   #syncAllPills() {
@@ -320,17 +346,21 @@ class MnemosyneFilterBar extends HTMLElement {
   // ── Dispatch ──────────────────────────────────────────────────────────────────
 
   #dispatch() {
-    const active = [...this.#active]
-    const types  = [
+    const active      = [...this.#active]
+    const locked      = [...this.#locks]
+    const types       = [
       ...new Set([
         ...active.flatMap(id => CATEGORIES.find(c => c.id === id)?.types ?? []),
         ...this.#custom,
       ]),
     ]
+    const lockedTypes = [
+      ...new Set(locked.flatMap(id => CATEGORIES.find(c => c.id === id)?.types ?? [])),
+    ]
     this.dispatchEvent(new CustomEvent('filter-change', {
       bubbles:  true,
       composed: true,
-      detail:   { active, customTerms: [...this.#custom], types },
+      detail:   { active, locked, customTerms: [...this.#custom], types, lockedTypes },
     }))
   }
 
@@ -428,6 +458,20 @@ class MnemosyneFilterBar extends HTMLElement {
   opacity: 0.32;
   cursor: default;
   pointer-events: none;
+}
+
+/* Locked pill: depth override active — dashed outline ring */
+.pill[data-locked] {
+  outline: 2px dashed var(--_c);
+  outline-offset: 2px;
+}
+
+.pill[data-locked]:not(.pill--active) {
+  background: color-mix(in srgb, var(--_c) 10%, transparent);
+}
+
+@media (forced-colors: active) {
+  .pill[data-locked] { outline: 2px dashed Highlight; }
 }
 
 /* Caret rotates when popover open */
