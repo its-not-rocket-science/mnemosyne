@@ -120,6 +120,7 @@ const appFilterBar       = document.querySelector('#app-filter-bar')
 const nowPlayingBar      = document.querySelector('#now-playing-bar')
 const readingProgress    = document.querySelector('#reading-progress')
 const annotationMinimap  = document.querySelector('#annotation-minimap')
+const minimapLegend      = document.querySelector('#minimap-legend')
 const annotationTooltip  = document.querySelector('#annotation-tooltip')
 const annotationSearch   = document.querySelector('#annotation-search')
 const readingHistoryEl   = document.querySelector('#reading-history')
@@ -203,7 +204,8 @@ let currentDocumentTitle  = null
 let currentDocumentEyebrow = null
 let languageUserSelected  = false
 let currentText          = ''   // committed text from picker
-let activeFilterTypes    = null  // Set<string> when filtered, null = show all
+let activeFilterTypes      = null  // Set<string> when filtered, null = show all
+let activeFilterCategories = null  // Set<string> of active category IDs, null = all
 let activeLockedTypes    = new Set(
   JSON.parse(localStorage.getItem('mn-cat-lock-types') || '[]')
 )
@@ -2154,7 +2156,8 @@ document.addEventListener('mnemosyne:mode-changed', ({ detail }) => {
 })
 
 filterBar?.addEventListener('filter-change', ({ detail }) => {
-  activeFilterTypes = detail.types.length ? new Set(detail.types) : null
+  activeFilterTypes      = detail.types.length   ? new Set(detail.types)  : null
+  activeFilterCategories = detail.active.length  ? new Set(detail.active) : null
 
   // Persist per-category depth locks when they change
   if (detail.locked !== undefined) {
@@ -2711,16 +2714,60 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam, de
 // ── Annotation density minimap ────────────────────────────────────────────────
 
 const _MINIMAP_COLORS = {
-  vocabulary:      'var(--ann-vocab)',
-  conjugation:     'var(--ann-grammar)',
-  agreement:       'var(--ann-grammar)',
-  inflection:      'var(--ann-grammar)',
-  grammar:         'var(--ann-grammar)',
-  idiom:           'var(--ann-idiom)',
-  nuance:          'var(--ann-literary)',
-  phrase_family:   'var(--ann-literary)',
-  script:          'var(--ann-etymology)',
-  transliteration: 'var(--ann-etymology)',
+  // vocab
+  vocabulary:          'var(--ann-vocab)',
+  lexical_item:        'var(--ann-vocab)',
+  word_form:           'var(--ann-vocab)',
+  vocab:               'var(--ann-vocab)',
+  word:                'var(--ann-vocab)',
+  memory_map:          'var(--ann-vocab)',
+  // grammar
+  grammar:             'var(--ann-grammar)',
+  grammatical_pattern: 'var(--ann-grammar)',
+  morphology:          'var(--ann-grammar)',
+  grammar_point:       'var(--ann-grammar)',
+  syntax:              'var(--ann-grammar)',
+  conjugation:         'var(--ann-grammar)',
+  agreement:           'var(--ann-grammar)',
+  inflection:          'var(--ann-grammar)',
+  // idioms
+  idiom:               'var(--ann-idiom)',
+  expression:          'var(--ann-idiom)',
+  phrase:              'var(--ann-idiom)',
+  collocation:         'var(--ann-idiom)',
+  proverb:             'var(--ann-idiom)',
+  // literary
+  nuance:              'var(--ann-literary)',
+  phrase_family:       'var(--ann-literary)',
+  literary:            'var(--ann-literary)',
+  literary_device:     'var(--ann-literary)',
+  nuance_or_style:     'var(--ann-literary)',
+  cultural_note:       'var(--ann-literary)',
+  rhetoric:            'var(--ann-literary)',
+  figure_of_speech:    'var(--ann-literary)',
+  poetic:              'var(--ann-literary)',
+  // etymology
+  etymology:           'var(--ann-etymology)',
+  derivation:          'var(--ann-etymology)',
+  cognate:             'var(--ann-etymology)',
+  root:                'var(--ann-etymology)',
+  script:              'var(--ann-etymology)',
+  transliteration:     'var(--ann-etymology)',
+}
+
+const _TYPE_TO_CATEGORY = {
+  vocabulary: 'vocab', lexical_item: 'vocab', word_form: 'vocab',
+  vocab: 'vocab', word: 'vocab', memory_map: 'vocab',
+  grammar: 'grammar', grammatical_pattern: 'grammar', morphology: 'grammar',
+  grammar_point: 'grammar', syntax: 'grammar', conjugation: 'grammar',
+  agreement: 'grammar', inflection: 'grammar',
+  idiom: 'idioms', expression: 'idioms', phrase: 'idioms',
+  collocation: 'idioms', proverb: 'idioms',
+  nuance: 'literary', phrase_family: 'literary', literary: 'literary',
+  literary_device: 'literary', nuance_or_style: 'literary', cultural_note: 'literary',
+  rhetoric: 'literary', figure_of_speech: 'literary', poetic: 'literary',
+  etymology: 'etymology', derivation: 'etymology', cognate: 'etymology',
+  root: 'etymology', script: 'etymology', transliteration: 'etymology',
 }
 
 function buildMinimap() {
@@ -2728,7 +2775,11 @@ function buildMinimap() {
   annotationMinimap.replaceChildren()
 
   const marks = Array.from(results.querySelectorAll('.reader-annotation:not([data-filtered])'))
-  if (!marks.length) { annotationMinimap.hidden = true; return }
+  if (!marks.length) {
+    annotationMinimap.hidden = true
+    if (minimapLegend) minimapLegend.hidden = true
+    return
+  }
 
   const region = annotationMinimap.parentElement
   const regionRect = region.getBoundingClientRect()
@@ -2736,6 +2787,7 @@ function buildMinimap() {
   const totalH     = region.offsetHeight
   if (!totalH) return
 
+  const presentCats = new Set()
   const frag = document.createDocumentFragment()
   marks.forEach(mark => {
     const markRect = mark.getBoundingClientRect()
@@ -2745,7 +2797,9 @@ function buildMinimap() {
     tick.type      = 'button'
     tick.className = 'annotation-minimap__tick'
     tick.style.top        = `${pct.toFixed(2)}%`
-    tick.style.background = _MINIMAP_COLORS[mark.dataset.type] ?? 'var(--muted)'
+    tick.style.background = _MINIMAP_COLORS[mark.dataset.type] ?? 'var(--accent)'
+    const cat = _TYPE_TO_CATEGORY[mark.dataset.type]
+    if (cat) { tick.dataset.category = cat; presentCats.add(cat) }
     const label = (mark.dataset.type ?? '') + (mark.textContent.trim() ? ': ' + mark.textContent.trim().slice(0, 40) : '')
     tick.setAttribute('aria-label', label)
     tick.addEventListener('click', () => {
@@ -2757,6 +2811,20 @@ function buildMinimap() {
   })
   annotationMinimap.appendChild(frag)
   annotationMinimap.hidden = false
+
+  _updateMinimapLegend(presentCats)
+}
+
+function _updateMinimapLegend(presentCats) {
+  if (!minimapLegend) return
+  minimapLegend.querySelectorAll('.minimap-legend__dot').forEach(dot => {
+    const cat = dot.dataset.cat
+    const isPresent = presentCats.has(cat)
+    const isActive  = !activeFilterCategories || activeFilterCategories.has(cat)
+    dot.classList.toggle('minimap-legend__dot--present', isPresent && !isActive)
+    dot.classList.toggle('minimap-legend__dot--active',  isPresent && isActive)
+  })
+  minimapLegend.hidden = false
 }
 
 
