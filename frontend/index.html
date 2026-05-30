@@ -215,6 +215,16 @@
           </dl>
         </div>
 
+        <!-- ── 7-day review forecast ─────────────────────────────────────────
+             Collapsed by default; JS shows and loads on auth + language change.
+        -->
+        <div class="wrap" id="forecast-bar" hidden>
+          <details id="forecast-details" class="forecast-disclosure">
+            <summary class="forecast-disclosure__summary">7-day review forecast</summary>
+            <div id="forecast-chart" class="forecast-chart-wrap" aria-live="polite"></div>
+          </details>
+        </div>
+
         <!-- ── Weakness / learning profile ───────────────────────────────────
              Collapsed by default; JS shows and loads on auth + language change.
         -->
