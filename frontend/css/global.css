@@ -1130,6 +1130,104 @@ kbd {
   color: var(--muted);
 }
 
+.results-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  min-inline-size: 0;
+}
+
+.results-difficulty {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 0.1em;
+  padding-inline: 0.5em;
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+  /* default (unknown level) */
+  background: var(--brand-purple-light);
+  color: var(--brand-purple);
+  border: 1px solid color-mix(in srgb, var(--brand-purple) 25%, transparent);
+}
+
+.results-difficulty[hidden] { display: none; }
+
+/* A-level: green */
+.results-difficulty[data-cefr="A1"],
+.results-difficulty[data-cefr="A2"] {
+  background: oklch(0.95 0.06 145);
+  color: oklch(0.35 0.14 145);
+  border-color: oklch(0.70 0.10 145);
+}
+
+/* B-level: amber */
+.results-difficulty[data-cefr="B1"],
+.results-difficulty[data-cefr="B2"] {
+  background: oklch(0.96 0.08 75);
+  color: oklch(0.40 0.14 65);
+  border-color: oklch(0.72 0.12 75);
+}
+
+/* C-level: red */
+.results-difficulty[data-cefr="C1"],
+.results-difficulty[data-cefr="C2"] {
+  background: oklch(0.96 0.07 20);
+  color: oklch(0.40 0.16 25);
+  border-color: oklch(0.72 0.12 20);
+}
+
+@media (prefers-color-scheme: dark) {
+  .results-difficulty[data-cefr="A1"],
+  .results-difficulty[data-cefr="A2"] {
+    background: oklch(0.25 0.07 145);
+    color: oklch(0.80 0.14 145);
+    border-color: oklch(0.40 0.10 145);
+  }
+  .results-difficulty[data-cefr="B1"],
+  .results-difficulty[data-cefr="B2"] {
+    background: oklch(0.25 0.07 75);
+    color: oklch(0.80 0.12 75);
+    border-color: oklch(0.40 0.10 75);
+  }
+  .results-difficulty[data-cefr="C1"],
+  .results-difficulty[data-cefr="C2"] {
+    background: oklch(0.25 0.07 20);
+    color: oklch(0.80 0.12 20);
+    border-color: oklch(0.40 0.10 20);
+  }
+}
+
+[data-theme="dark"] .results-difficulty[data-cefr="A1"],
+[data-theme="dark"] .results-difficulty[data-cefr="A2"] {
+  background: oklch(0.25 0.07 145);
+  color: oklch(0.80 0.14 145);
+  border-color: oklch(0.40 0.10 145);
+}
+[data-theme="dark"] .results-difficulty[data-cefr="B1"],
+[data-theme="dark"] .results-difficulty[data-cefr="B2"] {
+  background: oklch(0.25 0.07 75);
+  color: oklch(0.80 0.12 75);
+  border-color: oklch(0.40 0.10 75);
+}
+[data-theme="dark"] .results-difficulty[data-cefr="C1"],
+[data-theme="dark"] .results-difficulty[data-cefr="C2"] {
+  background: oklch(0.25 0.07 20);
+  color: oklch(0.80 0.12 20);
+  border-color: oklch(0.40 0.10 20);
+}
+
+@media (forced-colors: active) {
+  .results-difficulty {
+    background: ButtonFace;
+    color: ButtonText;
+    border: 1px solid ButtonText;
+  }
+}
+
 /* Action buttons cluster on the inline-end edge of the results heading row. */
 .results-heading-actions {
   display: flex;
