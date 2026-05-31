@@ -34,8 +34,11 @@ Covers:
   have_perfect         have + VBN      (has finished)
   modal_verb           MD + VB         (should leave)
   going_to_future      going to + VB   (going to rain)
+  phrasal_verb         VERB + prt arc  (give up, look into, pick up)
 
   lesson_data keys: pattern_id, pattern, usage, contrast, surface_verb
+  Periphrastic constructions also emit ``tense`` (present/past) when the
+  auxiliary tense is unambiguous.
 
 **Nuance** — via EnglishNuanceExtractor: register (formal/informal markers),
 tone (hedging, intensifiers), politeness softeners, idiom transparency
@@ -75,6 +78,8 @@ KNOWN LIMITATIONS
   future or subjunctive; those are expressed periphrastically (will, might).
 - Grammar detection is heuristic window-scan, not full dependency analysis.
   "has been running" emits be_progressive rather than perfect-progressive.
+- Phrasal verb detection uses spaCy prt dependency arcs (high precision).
+  Verbs with only prepositional complements (no prt arc) are not detected.
 - Idiom table covers only two fixed phrases (kick the bucket, piece of cake);
   emits type="nuance" not type="idiom", so idiom_detection=False.
 - phrase_families=partial: 49 English entries in the phrase family catalog
@@ -82,8 +87,8 @@ KNOWN LIMITATIONS
 - etymology=none: etymology store has no English entries yet.
 - formality_register=partial: 12 curated markers (formal/informal);
   most formal/informal vocabulary is not covered.
-- grammar_nuance=partial: 5 construction patterns (progressive, passive,
-  perfect, modal, going-to) plus tone/politeness markers.
+- grammar_nuance=partial: 6 construction patterns (progressive, passive,
+  perfect, modal, going-to, phrasal_verb) plus tone/politeness markers.
 """
 from __future__ import annotations
 
@@ -174,7 +179,7 @@ class EnglishPlugin:
         segmentation_quality="medium",   # en_core_web_sm sentence splits are reliable
         tokenization_quality="high",     # spaCy English tokenisation is excellent
         morphology_quality="low",        # two tenses, 3rd-sg marking only; agreement absent
-        syntax_support=True,             # dep parse used for grammar construction detection
+        syntax_support=True,             # dep parse used for grammar + phrasal verb detection
         idiom_detection=False,           # emits nuance type for idioms, not type="idiom"
         tts_lang_tag="en",
         transliteration_scheme=None,
@@ -259,7 +264,10 @@ class EnglishPlugin:
     ) -> CandidateSentenceResult:
         # Grammar runs first; its surface tokens may overlap with conjugation.
         grammar_candidates = self._extract_grammar(tokens)
-        grammar_surfaces = self._phrase_surface_words(grammar_candidates)
+        phrasal_candidates = self._extract_phrasal_verbs(tokens)
+        grammar_surfaces   = self._phrase_surface_words(
+            grammar_candidates + phrasal_candidates
+        )
 
         # Conjugation: finite verb forms not already claimed by grammar patterns.
         conj_candidates = self._extract_conjugations(tokens, grammar_surfaces)
@@ -281,7 +289,9 @@ class EnglishPlugin:
         )
 
         # Re-extract vocabulary, skipping words already covered by phrases/idioms.
-        skip_words = self._phrase_surface_words(grammar_candidates + nuance_candidates)
+        skip_words = self._phrase_surface_words(
+            grammar_candidates + phrasal_candidates + nuance_candidates
+        )
         if skip_words:
             seen_vocab.clear()
             vocab_candidates = self._extract_vocabulary(tokens, seen_vocab, skip_words=skip_words)
@@ -294,7 +304,10 @@ class EnglishPlugin:
 
         return CandidateSentenceResult(
             text=sentence,
-            candidates=grammar_candidates + conj_candidates + nuance_candidates + vocab_candidates,
+            candidates=(
+                grammar_candidates + phrasal_candidates
+                + conj_candidates + nuance_candidates + vocab_candidates
+            ),
         )
 
     def _extract_conjugations(
@@ -454,6 +467,11 @@ class EnglishPlugin:
             if pos != "AUX":
                 continue
 
+            # Tense of the current auxiliary token (for lesson_data enrichment).
+            aux_tense = _TENSE_DISPLAY.get(
+                (tokens[i].morph.get("Tense") or [""])[0]
+            )
+
             # Scan ahead for the nearest relevant verb form.
             found_k: int | None = None
             found_vtag: str | None = None
@@ -477,6 +495,7 @@ class EnglishPlugin:
                     grammar.append(self._emit_grammar(
                         "be_progressive",
                         f"{tokens[i].text} {tokens[found_k].text}",
+                        tense=aux_tense,
                     ))
 
             # Passive: [be] + VBN (exclude 'been', which is part of perfect-passive)
@@ -486,6 +505,7 @@ class EnglishPlugin:
                     grammar.append(self._emit_grammar(
                         "be_passive",
                         f"{tokens[i].text} {tokens[found_k].text}",
+                        tense=aux_tense,
                     ))
 
             # Perfect: [have] + VBN (exclude 'been' → perfect-progressive/passive handled above)
@@ -495,24 +515,78 @@ class EnglishPlugin:
                     grammar.append(self._emit_grammar(
                         "have_perfect",
                         f"{tokens[i].text} {tokens[found_k].text}",
+                        tense=aux_tense,
                     ))
 
         return grammar
 
-    def _emit_grammar(self, pattern_id: str, surface: str) -> CandidateObject:
+    def _extract_phrasal_verbs(self, tokens: list[Any]) -> list[CandidateObject]:
+        """Emit grammar candidates for phrasal verbs using spaCy prt dependency arcs.
+
+        Only emits when spaCy assigns dep_="prt" (verb particle) — this is a
+        hard dependency-parse signal, not a heuristic surface scan.  Verbs that
+        happen to be followed by a preposition but lack the prt arc are not
+        detected (prevents false positives like "look at the sky").
+        """
+        seen: set[str] = set()
+        candidates: list[CandidateObject] = []
+        for token in tokens:
+            if token.pos_ != "VERB":
+                continue
+            for child in token.children:
+                if child.dep_ != "prt":
+                    continue
+                base = token.lemma_.lower()
+                prt  = child.text.lower()
+                key  = f"{base}_{prt}"
+                if key in seen:
+                    continue
+                seen.add(key)
+                candidates.append(CandidateObject(
+                    canonical_form=f"grammar:phrasal_verb:{key}",
+                    surface_form=f"{token.text} {child.text}",
+                    type="grammar",
+                    label=f"{base} {prt} (phrasal verb)",
+                    lesson_data={
+                        "pattern_id":   "phrasal_verb",
+                        "phrasal_verb": f"{base} {prt}",
+                        "base_verb":    base,
+                        "particle":     prt,
+                        "usage": (
+                            f"Phrasal verb combining '{base}' with particle '{prt}'. "
+                            f"The particle shifts the meaning away from the base verb."
+                        ),
+                        "contrast": (
+                            f"'{base}' alone has a more literal or different meaning "
+                            f"than '{base} {prt}'."
+                        ),
+                    },
+                    confidence=0.86,
+                ))
+        return candidates
+
+    def _emit_grammar(
+        self,
+        pattern_id: str,
+        surface: str,
+        tense: str | None = None,
+    ) -> CandidateObject:
         label, usage, contrast = _GRAMMAR_PATTERNS[pattern_id]
+        lesson: dict[str, Any] = {
+            "pattern_id":   pattern_id,
+            "pattern":      label,
+            "usage":        usage,
+            "contrast":     contrast,
+            "surface_verb": surface,
+        }
+        if tense:
+            lesson["tense"] = tense
         return CandidateObject(
             canonical_form=f"grammar:{pattern_id}",
             surface_form=surface,
             type="grammar",
             label=label,
-            lesson_data={
-                "pattern_id": pattern_id,
-                "pattern": label,
-                "usage": usage,
-                "contrast": contrast,
-                "surface_verb": surface,
-            },
+            lesson_data=lesson,
             confidence=0.85,
         )
 
