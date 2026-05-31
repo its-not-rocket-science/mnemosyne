@@ -87,6 +87,7 @@ class CorpusStudyResult(BaseModel):
     mined: int
     skipped_duplicate: int
     sentences_processed: int
+    limit_reached: bool = False
 
 
 class NoteUpsertRequest(BaseModel):
@@ -102,12 +103,24 @@ class UrlImportRequest(BaseModel):
     language: str = Field(min_length=2, max_length=10)
     title: str | None = Field(None, max_length=512)
 
+    @field_validator("url")
+    @classmethod
+    def validate_http_url(cls, v: str) -> str:
+        v = v.strip()
+        if not v:
+            raise ValueError("url must not be blank")
+        lower = v.lower()
+        if not (lower.startswith("http://") or lower.startswith("https://")):
+            raise ValueError("only http and https URLs are supported")
+        return v
+
 
 class UrlImportResponse(BaseModel):
     source_document_id: str
     title: str | None
     char_count: int
     truncated: bool = False
+    final_url: str | None = None
 
 
 class SourceDetailResponse(BaseModel):
