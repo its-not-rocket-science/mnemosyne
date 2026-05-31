@@ -40,12 +40,21 @@ Data shape — vocabulary
         canonical_form = "学习",
         type           = "vocabulary",
         lesson_data    = {
-            "word":   "学习",
-            "pos":    "NOUN" | "VERB" | … | "WORD",
-            "pinyin": "xué xí",   # omitted when pypinyin absent
+            "word":          "学习",
+            "pos":           "NOUN" | "VERB" | … | "WORD",
+            "pinyin":        "xué xí",   # omitted when pypinyin absent
+            "tone_contours": [2, 2],     # per-syllable tone numbers 1–4 (5=neutral)
+            "heteronyms":    [...],      # present only for polyphonic characters
         },
         confidence = 0.70,
     )
+
+``tone_contours`` — list[int] length equals syllable count.  Uses pypinyin
+Style.TONE3; digit 5 = neutral tone (e.g. 吗 ma).
+
+``heteronyms`` — list[dict] present only when the word contains a character
+with multiple distinct readings (e.g. 重, 行, 好).  Each entry:
+    {"character": "重", "readings": [{"reading": "zhòng", ...}, ...]}
 
 Data shape — grammar/nuance (aspect particle example)
 ──────────────────────────────────────────────────────
@@ -224,6 +233,114 @@ _ALL_GRAMMAR_PARTICLES: dict[str, dict] = {
     **_ASPECT_PARTICLES,
     **_STRUCTURAL_PARTICLES,
 }
+
+
+# ── Polyphonic character (heteronym) table ─────────────────────────────────────
+# Characters with two or more distinct readings, each with different meaning.
+# Readings use tone-marked pinyin; tone=0 means neutral/unstressed.
+# Keep this list curated and conservative — only include characters where
+# the reading difference is a genuine learner pitfall.
+
+_HETERONYMS: dict[str, list[dict]] = {
+    "重": [
+        {"reading": "zhòng", "meaning": "heavy, weight, important", "example": "重要"},
+        {"reading": "chóng", "meaning": "again, repeat, double",   "example": "重新"},
+    ],
+    "行": [
+        {"reading": "xíng", "meaning": "walk, OK, capable",        "example": "行走"},
+        {"reading": "háng", "meaning": "row, trade, profession",    "example": "银行"},
+    ],
+    "乐": [
+        {"reading": "lè",   "meaning": "happy, joy",               "example": "快乐"},
+        {"reading": "yuè",  "meaning": "music",                    "example": "音乐"},
+    ],
+    "长": [
+        {"reading": "cháng","meaning": "long (in length)",         "example": "长度"},
+        {"reading": "zhǎng","meaning": "grow, senior, chief",      "example": "成长"},
+    ],
+    "中": [
+        {"reading": "zhōng","meaning": "middle, center, China",    "example": "中间"},
+        {"reading": "zhòng","meaning": "hit (a target), suffer",   "example": "中奖"},
+    ],
+    "好": [
+        {"reading": "hǎo",  "meaning": "good, well",               "example": "好人"},
+        {"reading": "hào",  "meaning": "be fond of, enjoy",        "example": "好学"},
+    ],
+    "还": [
+        {"reading": "hái",  "meaning": "still, also, yet",         "example": "还是"},
+        {"reading": "huán", "meaning": "return, give back",        "example": "还书"},
+    ],
+    "得": [
+        {"reading": "dé",   "meaning": "get, obtain, achieve",     "example": "得到"},
+        {"reading": "děi",  "meaning": "must, have to",            "example": "得去"},
+        {"reading": "de",   "meaning": "complement particle",      "example": "跑得快"},
+    ],
+    "数": [
+        {"reading": "shù",  "meaning": "number, figure",           "example": "数字"},
+        {"reading": "shǔ",  "meaning": "count, enumerate",         "example": "数数"},
+    ],
+    "种": [
+        {"reading": "zhǒng","meaning": "type, kind, seed",         "example": "种类"},
+        {"reading": "zhòng","meaning": "plant, sow",               "example": "种树"},
+    ],
+    "假": [
+        {"reading": "jiǎ",  "meaning": "false, fake, pretend",     "example": "假装"},
+        {"reading": "jià",  "meaning": "holiday, vacation",        "example": "假期"},
+    ],
+    "发": [
+        {"reading": "fā",   "meaning": "send, emit, develop",      "example": "发送"},
+        {"reading": "fà",   "meaning": "hair (on the head)",       "example": "头发"},
+    ],
+    "差": [
+        {"reading": "chā",  "meaning": "difference, error",        "example": "差别"},
+        {"reading": "chà",  "meaning": "bad, wrong, differ from",  "example": "差不多"},
+        {"reading": "chāi", "meaning": "errand, assignment",       "example": "出差"},
+    ],
+    "朝": [
+        {"reading": "cháo", "meaning": "dynasty, face toward",     "example": "朝代"},
+        {"reading": "zhāo", "meaning": "morning (literary)",       "example": "朝霞"},
+    ],
+    "大": [
+        {"reading": "dà",   "meaning": "big, large",               "example": "大小"},
+        {"reading": "dài",  "meaning": "used in 大夫 (doctor)",     "example": "大夫"},
+    ],
+}
+
+
+def _tone_contour(word: str) -> list[int] | None:
+    """Return per-syllable tone numbers (1–4; 5 = neutral) for *word*.
+
+    Uses pypinyin Style.TONE3 (tone digit appended to syllable).
+    Returns None when pypinyin is absent or the word yields no syllables.
+    """
+    if not _HAS_PYPINYIN:
+        return None
+    try:
+        from pypinyin import Style as _Style  # noqa: PLC0415
+        syllables = lazy_pinyin(word, style=_Style.TONE3)
+        tones: list[int] = []
+        for syl in syllables:
+            digit = next((c for c in reversed(syl) if c.isdigit()), None)
+            tones.append(int(digit) if digit else 5)
+        return tones if tones else None
+    except Exception:
+        return None
+
+
+def _heteronyms_for(word: str) -> list[dict] | None:
+    """Return heteronym data for any polyphonic characters found in *word*.
+
+    Each entry names the character and lists its distinct readings so the
+    learner understands that pronunciation depends on context.
+    """
+    result = []
+    for char in word:
+        if char in _HETERONYMS:
+            result.append({
+                "character": char,
+                "readings":  _HETERONYMS[char],
+            })
+    return result if result else None
 
 
 def _is_learnable(token: str) -> bool:
@@ -408,6 +525,10 @@ class MandarinChinesePlugin:
             }
             if py := _pinyin_for(canonical):
                 lesson_data["pinyin"] = py
+            if tc := _tone_contour(canonical):
+                lesson_data["tone_contours"] = tc
+            if ht := _heteronyms_for(canonical):
+                lesson_data["heteronyms"] = ht
             if canonical in _A1:
                 lesson_data["cefr_level"] = "A1"
             elif canonical in _A2:
