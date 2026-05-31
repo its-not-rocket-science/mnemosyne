@@ -47,34 +47,69 @@ _PARTICLES: dict[str, str] = {
 }
 
 _YOJIJUKUGO: dict[str, str] = {
-    # perseverance / effort
+    # ── perseverance / effort ────────────────────────────────────────────────
     "一石二鳥": "kill two birds with one stone",
     "七転八起": "fall seven times, rise eight — perseverance through adversity",
     "臥薪嘗胆": "endure hardship for a greater goal; bide one's time for revenge",
     "不撓不屈": "indomitable spirit; never giving up no matter how hard",
-    # fate / consequences
+    "一意専心": "devotion to a single purpose; undivided dedication",
+    "粉骨砕身": "spare no effort; work to the bone",
+    "七転八倒": "writhing in agony; rolling about in pain or distress",
+    "起死回生": "revival from the brink of death; a comeback against all odds",
+    # ── fate / consequences ──────────────────────────────────────────────────
     "自業自得": "reap what you sow; face the consequences of one's own actions",
     "因果応報": "karma; good and bad deeds return to the doer",
     "一期一会": "once-in-a-lifetime encounter; treasure every meeting",
-    # situation / environment
+    "自縄自縛": "bound by one's own rope; trapped by one's own words or actions",
+    "自画自賛": "praising one's own work; blowing one's own trumpet",
+    # ── situation / environment ──────────────────────────────────────────────
     "四面楚歌": "surrounded by enemies on all sides; completely isolated",
     "風前灯火": "a candle in the wind; precarious situation on the verge of extinction",
     "前途多難": "a long and difficult road ahead; the future is full of obstacles",
-    # communication / understanding
+    "一触即発": "one touch and it explodes; a hair-trigger situation on the brink",
+    "危機一髪": "by a hair's breadth; a close call; in the nick of time",
+    "焦眉之急": "an emergency as urgent as eyebrows on fire; critical urgency",
+    "四苦八苦": "struggling with all kinds of hardship; in great distress",
+    # ── communication / understanding ───────────────────────────────────────
     "以心伝心": "unspoken mutual understanding; heart-to-heart communication",
     "言語道断": "beyond words; utterly outrageous; inexcusable",
-    # diversity / individuality
+    "一言居士": "someone who always has a comment; a person full of opinions",
+    "単刀直入": "cutting straight to the point; getting directly to the matter",
+    "有言実行": "keeping one's word; doing what one says",
+    "不言実行": "acting without words; deeds speak louder than words",
+    # ── diversity / individuality ────────────────────────────────────────────
     "十人十色": "to each their own; ten people, ten colors — everyone differs",
     "千差万別": "infinite variety; great diversity among things or people",
-    # adaptability / skill
+    "百花繚乱": "a riot of flowers; a dazzling display of talent or beauty",
+    "百花斉放": "let a hundred flowers bloom; free expression of ideas",
+    # ── adaptability / skill ────────────────────────────────────────────────
     "臨機応変": "adapting flexibly to circumstances; thinking on one's feet",
     "融通無碍": "complete freedom and adaptability; no obstacles to free movement",
-    # absorption / dedication
+    "変幻自在": "protean; transforming freely and at will",
+    "縦横無尽": "moving freely in all directions; without restraint",
+    # ── absorption / dedication ──────────────────────────────────────────────
     "無我夢中": "completely absorbed in something; losing oneself in an activity",
     "一心不乱": "with single-minded focus; undivided concentration",
-    # power / competition
+    "熱中夢中": "passionately absorbed; fully engrossed",
+    # ── power / competition ──────────────────────────────────────────────────
     "弱肉強食": "survival of the fittest; the strong prey on the weak",
     "天下無双": "unrivaled under heaven; the best in the world",
+    "天下泰平": "peace and tranquility throughout the land",
+    "勇猛果敢": "brave and bold; courageous and decisive",
+    # ── human nature / character ─────────────────────────────────────────────
+    "温故知新": "learn from the past to understand the present; revisit the old to discover the new",
+    "知足安分": "contentment with one's lot; knowing when enough is enough",
+    "喜怒哀楽": "the full range of human emotions — joy, anger, sorrow, pleasure",
+    "清廉潔白": "upright and pure; clean hands and a clear conscience",
+    "明鏡止水": "a still mirror and clear water; a serene and unclouded mind",
+    "初志貫徹": "sticking to one's original goal; seeing a resolution through to the end",
+    # ── appearance vs reality ────────────────────────────────────────────────
+    "羊頭狗肉": "hanging a sheep's head while selling dog meat; false advertising",
+    "表裏一体": "two sides of the same coin; inseparably connected front and back",
+    "有名無実": "famous in name but not in substance; an empty title",
+    # ── time / opportunity ───────────────────────────────────────────────────
+    "今是昨非": "today right, yesterday wrong — realizing past errors; reformed thinking",
+    "一朝一夕": "overnight; in a single morning and evening — a short time",
 }
 
 
