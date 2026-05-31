@@ -121,6 +121,111 @@
   }
 }
 
+/* ── Daily learning insight ─────────────────────────────────────────────────── */
+
+.daily-insight {
+  padding-block: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted, #555);
+  line-height: 1.5;
+}
+
+.daily-insight__item {
+  display: inline;
+}
+
+.daily-insight__item + .daily-insight__item::before {
+  content: ' · ';
+  color: var(--text-muted, #888);
+}
+
+.daily-insight__label {
+  font-weight: 600;
+  color: var(--text, #111);
+}
+
+.daily-insight__accent {
+  color: oklch(45% 0.16 25);
+}
+
+@media (forced-colors: active) {
+  .daily-insight { color: GrayText; }
+  .daily-insight__label { color: ButtonText; }
+  .daily-insight__accent { color: Highlight; }
+}
+
+/* ── Retention / calibration panel ─────────────────────────────────────────── */
+
+.retention-disclosure {
+  margin-block-start: 0.25rem;
+}
+
+.retention-disclosure__summary {
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--text-muted, #666);
+  user-select: none;
+  padding-block: 0.25rem;
+}
+
+.retention-disclosure__summary:focus-visible {
+  outline: 2px solid var(--accent, #3557ff);
+  outline-offset: 2px;
+}
+
+.retention-panel__body {
+  padding-block: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.retention-panel__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+  margin-block-end: 0.25rem;
+}
+
+.retention-panel__label {
+  color: var(--text-muted, #666);
+  flex-shrink: 0;
+}
+
+.retention-panel__value {
+  font-weight: 600;
+  color: var(--text, #111);
+}
+
+.retention-panel__muted {
+  color: var(--text-muted, #888);
+  font-size: 0.8rem;
+}
+
+.retention-panel__actions {
+  margin-block-start: 0.5rem;
+}
+
+.retention-panel__recalibrate-btn {
+  font-size: 0.8rem;
+  padding-block: 0.2rem;
+  padding-inline: 0.6rem;
+}
+
+.retention-panel__status {
+  display: inline-block;
+  margin-inline-start: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted, #666);
+  font-style: italic;
+}
+
+@media (forced-colors: active) {
+  .retention-disclosure__summary { color: ButtonText; }
+  .retention-panel__label { color: GrayText; }
+  .retention-panel__value { color: ButtonText; }
+}
+
 /* ── Review panel container ─────────────────────────────────────────────────── */
 
 #review-panel {
