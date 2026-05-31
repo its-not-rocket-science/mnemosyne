@@ -707,21 +707,23 @@
                   aria-expanded="false"
                   aria-controls="corpus-import-url-form">+ Import from URL</button>
           <div class="corpus-import-url__form" id="corpus-import-url-form" hidden>
+            <label for="corpus-import-url-input" class="sr-only"
+                  data-i18n="corpus_import_url_label">URL to import</label>
             <input type="url" id="corpus-import-url-input"
-                   class="corpus-import-url__input"
-                   data-i18n-placeholder="corpus_import_url_placeholder"
-                   placeholder="https://…"
-                   autocomplete="off">
+                  class="corpus-import-url__input"
+                  data-i18n-placeholder="corpus_import_url_placeholder"
+                  placeholder="https://…"
+                  autocomplete="off">
             <select id="corpus-import-url-lang"
                     class="ghost-select ghost-select--small corpus-import-url__lang"
                     data-i18n-aria-label="corpus_import_url_lang_aria"
-                    aria-label="Language"></select>
+                    aria-label="Language for imported URL"></select>
             <button type="button" id="corpus-import-url-submit"
                     class="ghost-button ghost-button--small"
                     data-i18n="corpus_import_url_submit">Import</button>
           </div>
           <p id="corpus-import-url-status" class="corpus-import-url__status"
-             aria-live="polite" aria-atomic="true"></p>
+            aria-live="polite" aria-atomic="true"></p>
         </div>
 
         <div class="corpus-browser-footer">

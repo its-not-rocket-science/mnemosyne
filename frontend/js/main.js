@@ -1882,61 +1882,55 @@ corpusDrillsBtn?.addEventListener('click', _openCorpusDrills)
 changeLessonBtn?.addEventListener('click', _fetchReadingHistory)
 
 // ── Annotation hover tooltip ──────────────────────────────────────────────────
-
 function _showAnnotationTooltip(mark) {
-  if (!annotationTooltip) return
-  const typeLabel = mark.dataset.typeLabel ?? ''
-  const label     = mark.dataset.label ?? ''
-  const gloss     = mark.dataset.gloss ?? ''
-  const cefrLevel = mark.dataset.cefrLevel ?? ''
-  if (!typeLabel && !label) return
-
-  annotationTooltip.innerHTML = ''
-
-  if (typeLabel || cefrLevel) {
-    const header = document.createElement('span')
-    header.className = 'annotation-tooltip__header'
-    if (typeLabel) {
-      const chip = document.createElement('span')
-      chip.className   = 'annotation-tooltip__type'
-      chip.textContent = typeLabel
-      header.appendChild(chip)
-    }
-    if (cefrLevel) {
-      const cefr = document.createElement('span')
-      cefr.className      = 'annotation-tooltip__cefr'
-      cefr.textContent    = cefrLevel
-      cefr.dataset.cefr   = cefrLevel
-      header.appendChild(cefr)
-    }
-    annotationTooltip.appendChild(header)
-  }
-
-  if (label) {
-    const el = document.createElement('span')
-    el.className   = 'annotation-tooltip__label'
-    el.textContent = label
-    annotationTooltip.appendChild(el)
-  }
-  if (gloss) {
-    const el = document.createElement('span')
-    el.className   = 'annotation-tooltip__gloss'
-    el.textContent = gloss
-    annotationTooltip.appendChild(el)
-  }
-
+  if (!annotationTooltip || !mark) return
   annotationTooltip.removeAttribute('hidden')
   annotationTooltip.removeAttribute('aria-hidden')
 
+  const typeLabel = mark.dataset.typeLabel || mark.dataset.type || ''
+  const label = mark.dataset.label || mark.textContent || ''
+  const gloss = mark.dataset.gloss || ''
+  const cefrLevel = mark.dataset.cefrLevel || ''
+  if (!typeLabel && !label && !gloss && !cefrLevel) return
+
+  const rect = mark.getBoundingClientRect()
+  annotationTooltip.innerHTML = ''
+
+  const header = document.createElement('span')
+  header.className = 'annotation-tooltip__header'
+
+  if (typeLabel) {
+    const chip = document.createElement('span')
+    chip.className = 'annotation-tooltip__type'
+    chip.textContent = typeLabel
+    header.appendChild(chip)
+  }
+
+  if (cefrLevel) {
+    const cefr = document.createElement('span')
+    cefr.className = 'annotation-tooltip__cefr'
+    cefr.dataset.cefr = cefrLevel
+    cefr.textContent = cefrLevel
+    header.appendChild(cefr)
+  }
+
+  const labelEl = document.createElement('span')
+  labelEl.className = 'annotation-tooltip__label'
+  labelEl.textContent = label
+  const glossEl = document.createElement('span')
+  glossEl.className = 'annotation-tooltip__gloss'
+  glossEl.textContent = gloss
+
+  annotationTooltip.append(header, labelEl, glossEl)
+
   requestAnimationFrame(() => {
-    const rect = mark.getBoundingClientRect()
-    const tipW  = annotationTooltip.offsetWidth
-    const tipH  = annotationTooltip.offsetHeight
+    const tipW = annotationTooltip.offsetWidth
+    const tipH = annotationTooltip.offsetHeight
     const viewW = window.innerWidth
-    const left  = Math.max(8, Math.min(rect.left + rect.width / 2 - tipW / 2, viewW - tipW - 8))
-    const top   = rect.top >= tipH + 10 ? rect.top - tipH - 6 : rect.bottom + 6
+    const left = Math.max(8, Math.min(rect.left + rect.width / 2 - tipW / 2, viewW - tipW - 8))
+    const top = rect.top >= tipH + 10 ? rect.top - tipH - 6 : rect.bottom + 6
     annotationTooltip.style.left = `${left}px`
-    annotationTooltip.style.top  = `${top}px`
+    annotationTooltip.style.top = `${top}px`
   })
 }
 
@@ -2051,16 +2045,21 @@ let _corpusSearchTimer = null
 
 function _corpusParams() {
   const p = new URLSearchParams()
-  const q    = corpusBrowserSearch?.value.trim()
+  const sort = corpusBrowserSort?.value || 'recent'
+  p.set('sort', sort)
+
   const lang = corpusBrowserLang?.value
+  if (lang) p.set('language', lang)
+
   const type = corpusBrowserType?.value
-  const sort = corpusBrowserSort?.value
-  const tag  = corpusBrowserTag?.value
-  if (lang)                      p.set('language', lang)
-  if (type)                      p.set('content_type', type)
-  if (sort && sort !== 'recent') p.set('sort', sort)
-  if (tag)                       p.set('tag', tag)
-  if (q)                         p.set('q', q)
+  if (type) p.set('content_type', type)
+
+  const tag = corpusBrowserTag?.value
+  if (tag) p.set('tag', tag)
+
+  const query = corpusBrowserSearch?.value?.trim()
+  if (query) p.set('q', query)
+
   p.set('limit', String(_CORPUS_PAGE_SIZE))
   p.set('offset', String(_corpusOffset))
   return p
@@ -2562,7 +2561,8 @@ async function _importCorpusUrl() {
 openCorpusBrowserBtn?.addEventListener('click', async () => {
   corpusBrowserDialog?.showModal()
   await _populateCorpusLangSelect()
-  await Promise.all([_loadCorpus(), _loadCorpusStats(), _populateTagFilter(), _populateImportLangSelect()])
+  await _loadCorpus()
+  await Promise.all([_loadCorpusStats(), _populateTagFilter(), _populateImportLangSelect()])
 })
 
 corpusBrowserCloseBtn?.addEventListener('click', () => corpusBrowserDialog?.close())
