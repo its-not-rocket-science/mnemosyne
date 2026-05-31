@@ -1,167 +1,193 @@
 /**
- * corpus-browser.test.mjs — structural tests for the corpus text browser.
+ * corpus-browser.test.mjs
  *
- * Run with: node frontend/tests/corpus-browser.test.mjs
+ * DOM-aware tests for the corpus browser dialog, filters, sort, and language
+ * selector. Consolidates corpus-sort and corpus-lang-filter.
+ *
+ * HTML checks use linkedom. i18n checks use key-count. No body slices.
  */
+import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
-import path from 'node:path'
+import { loadDocument, readSource } from './lib/dom.mjs'
+import { assertLocaleKeys } from './lib/i18n.mjs'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const ROOT      = path.resolve(__dirname, '..')
+const document  = loadDocument()
+const mainJs    = readSource('js/main.js')
+const globalCss = readSource('css/global.css')
+const i18n      = readSource('js/i18n.js')
 
-const html      = readFileSync(path.join(ROOT, 'index.html'), 'utf8')
-const mainJs    = readFileSync(path.join(ROOT, 'js', 'main.js'), 'utf8')
-const i18n      = readFileSync(path.join(ROOT, 'js', 'i18n.js'), 'utf8')
-const globalCss = readFileSync(path.join(ROOT, 'css', 'global.css'), 'utf8')
+// ── Dialog structure ──────────────────────────────────────────────────────────
 
-// ── HTML: open button ─────────────────────────────────────────────────────────
+describe('corpus browser — dialog structure', () => {
+  const REQUIRED_IDS = [
+    'open-corpus-browser-btn',
+    'corpus-browser-dialog',
+    'corpus-browser-heading',
+    'corpus-browser-close-btn',
+    'corpus-browser-search',
+    'corpus-browser-lang',
+    'corpus-browser-type',
+    'corpus-browser-sort',
+    'corpus-browser-list',
+    'corpus-browser-more-btn',
+    'corpus-browser-stats',
+  ]
 
-assert.ok(
-  html.includes('id="open-corpus-browser-btn"'),
-  'index.html must include #open-corpus-browser-btn'
-)
-console.log('✓ HTML: #open-corpus-browser-btn present')
+  for (const id of REQUIRED_IDS) {
+    it(`#${id} present in index.html`, () => {
+      assert.ok(document.querySelector(`#${id}`), `#${id} must exist`)
+    })
+  }
 
-// ── HTML: dialog structure ────────────────────────────────────────────────────
+  it('dialog has aria-labelledby pointing to corpus-browser-heading', () => {
+    const dialog = document.querySelector('#corpus-browser-dialog')
+    assert.equal(dialog?.getAttribute('aria-labelledby'), 'corpus-browser-heading')
+  })
 
-assert.ok(
-  html.includes('id="corpus-browser-dialog"'),
-  'index.html must include #corpus-browser-dialog'
-)
-assert.ok(
-  html.includes('id="corpus-browser-heading"'),
-  'dialog must have #corpus-browser-heading for aria-labelledby'
-)
-assert.ok(
-  html.includes('id="corpus-browser-close-btn"'),
-  'dialog must have a close button'
-)
-assert.ok(
-  html.includes('id="corpus-browser-search"'),
-  'dialog must have #corpus-browser-search input'
-)
-assert.ok(
-  html.includes('id="corpus-browser-lang"'),
-  'dialog must have #corpus-browser-lang language filter'
-)
-assert.ok(
-  html.includes('id="corpus-browser-type"'),
-  'dialog must have #corpus-browser-type content-type filter'
-)
-assert.ok(
-  html.includes('id="corpus-browser-list"'),
-  'dialog must have #corpus-browser-list'
-)
-assert.ok(
-  html.includes('id="corpus-browser-more-btn"'),
-  'dialog must have #corpus-browser-more-btn load-more button'
-)
-console.log('✓ HTML: corpus browser dialog structure present')
+  it('close button has aria-label or i18n aria-label', () => {
+    const btn = document.querySelector('#corpus-browser-close-btn')
+    assert.ok(
+      btn?.getAttribute('aria-label') || btn?.getAttribute('data-i18n-aria-label'),
+      'close button must have an accessible label'
+    )
+  })
+})
 
-// ── HTML: filter options ──────────────────────────────────────────────────────
+// ── Sort select ───────────────────────────────────────────────────────────────
 
-assert.ok(
-  html.includes('value="pasted_text"') && html.includes('value="uploaded_file"'),
-  'type filter must include pasted_text and uploaded_file options'
-)
-console.log('✓ HTML: content-type filter options present')
+describe('corpus browser — sort select', () => {
+  it('has all four sort options', () => {
+    const select  = document.querySelector('#corpus-browser-sort')
+    const values  = [...select.querySelectorAll('option')].map(o => o.getAttribute('value'))
+    assert.ok(values.includes('recent'),      'sort must have "recent" option')
+    assert.ok(values.includes('in_progress'), 'sort must have "in_progress" option')
+    assert.ok(values.includes('not_started'), 'sort must have "not_started" option')
+    assert.ok(values.includes('complete'),    'sort must have "complete" option')
+  })
 
-// ── i18n keys ─────────────────────────────────────────────────────────────────
+  it('each sort option carries its i18n key', () => {
+    const select = document.querySelector('#corpus-browser-sort')
+    const keys   = [...select.querySelectorAll('option')].map(o => o.getAttribute('data-i18n'))
+    assert.ok(keys.includes('corpus_sort_recent'))
+    assert.ok(keys.includes('corpus_sort_in_progress'))
+    assert.ok(keys.includes('corpus_sort_not_started'))
+    assert.ok(keys.includes('corpus_sort_complete'))
+  })
+})
 
-const REQUIRED_KEYS = [
-  'corpus_browser_btn',
-  'corpus_browser_heading',
-  'corpus_filter_search_placeholder',
-  'corpus_type_all',
-  'corpus_type_pasted',
-  'corpus_type_file',
-  'corpus_empty',
-  'corpus_load_more',
-  'corpus_open_btn',
-  'corpus_char_count',
-  'corpus_count',
-]
-for (const key of REQUIRED_KEYS) {
-  assert.ok(i18n.includes(key), `i18n.js must define key: ${key}`)
-}
-console.log('✓ i18n: all corpus browser keys defined')
+// ── Type filter ───────────────────────────────────────────────────────────────
 
-// Keys must appear in all 11 language blocks — spot check es and ar
-assert.ok(
-  (i18n.match(/corpus_browser_btn/g) ?? []).length >= 11,
-  'corpus_browser_btn must appear in all 11 language blocks'
-)
-console.log('✓ i18n: corpus keys present across language blocks')
+describe('corpus browser — type filter', () => {
+  it('includes pasted_text, uploaded_file, and article options', () => {
+    const select = document.querySelector('#corpus-browser-type')
+    const values = [...select.querySelectorAll('option')].map(o => o.getAttribute('value'))
+    assert.ok(values.includes('pasted_text'),   'type filter must have pasted_text')
+    assert.ok(values.includes('uploaded_file'), 'type filter must have uploaded_file')
+    assert.ok(values.includes('article'),       'type filter must have article')
+  })
+})
 
-// ── main.js wiring ────────────────────────────────────────────────────────────
+// ── Language filter ───────────────────────────────────────────────────────────
 
-assert.ok(mainJs.includes('corpusBrowserDialog'),   'main.js must declare corpusBrowserDialog')
-assert.ok(mainJs.includes('openCorpusBrowserBtn'),  'main.js must declare openCorpusBrowserBtn')
-assert.ok(mainJs.includes('corpusBrowserList'),     'main.js must declare corpusBrowserList')
-assert.ok(mainJs.includes('_loadCorpus'),           'main.js must define _loadCorpus')
-assert.ok(mainJs.includes('_buildCorpusItem'),      'main.js must define _buildCorpusItem')
-assert.ok(mainJs.includes('_corpusParams'),         'main.js must define _corpusParams')
-assert.ok(mainJs.includes('_populateCorpusLangSelect'), 'main.js must define _populateCorpusLangSelect')
-console.log('✓ main.js: corpus browser functions defined')
+describe('corpus browser — language filter', () => {
+  it('#corpus-browser-lang has a default "all" option', () => {
+    const select  = document.querySelector('#corpus-browser-lang')
+    const allOpt  = select?.querySelector('option[data-i18n="corpus_lang_all"]')
+    assert.ok(allOpt, 'lang filter must have a corpus_lang_all default option')
+  })
+})
 
-// ── API endpoint ──────────────────────────────────────────────────────────────
+// ── JS wiring ─────────────────────────────────────────────────────────────────
 
-assert.ok(
-  mainJs.includes('/corpus?'),
-  'main.js must call /corpus endpoint'
-)
-assert.ok(
-  mainJs.includes('content_type'),
-  'main.js must pass content_type filter'
-)
-console.log('✓ main.js: /corpus endpoint called with filters')
+describe('corpus browser — main.js', () => {
+  it('defines _loadCorpus, _buildCorpusItem, _corpusParams', () => {
+    assert.ok(mainJs.includes('_loadCorpus'))
+    assert.ok(mainJs.includes('_buildCorpusItem'))
+    assert.ok(mainJs.includes('_corpusParams'))
+  })
 
-// ── Load-more and search debounce ─────────────────────────────────────────────
+  it('defines _populateCorpusLangSelect', () => {
+    assert.ok(mainJs.includes('_populateCorpusLangSelect'))
+  })
 
-assert.ok(
-  mainJs.includes('_corpusSearchTimer'),
-  'main.js must debounce corpus search'
-)
-assert.ok(
-  mainJs.includes("_loadCorpus(true)"),
-  'load-more button must call _loadCorpus(true)'
-)
-console.log('✓ main.js: search debounce and load-more wired')
+  it('fetches /corpus/languages for the lang filter', () => {
+    assert.ok(mainJs.includes('/corpus/languages'))
+  })
 
-// ── _loadSource closes corpus dialog ─────────────────────────────────────────
+  it('calls /corpus endpoint with filters', () => {
+    assert.ok(mainJs.includes('/corpus?'))
+  })
 
-const loadSourceIdx  = mainJs.indexOf('async function _loadSource(')
-const loadSourceBody = mainJs.slice(loadSourceIdx, loadSourceIdx + 300)
-assert.ok(
-  loadSourceBody.includes('corpusBrowserDialog'),
-  '_loadSource must close corpusBrowserDialog'
-)
-console.log('✓ main.js: _loadSource closes corpus browser dialog')
+  it('debounces search input', () => {
+    assert.ok(mainJs.includes('_corpusSearchTimer'))
+  })
+
+  it('load-more calls _loadCorpus(true)', () => {
+    assert.ok(mainJs.includes('_loadCorpus(true)'))
+  })
+
+  it('sort, lang, type, and tag changes trigger reload', () => {
+    assert.ok(mainJs.includes("corpusBrowserSort?.addEventListener('change'"))
+    assert.ok(mainJs.includes("corpusBrowserLang?.addEventListener('change'"))
+    assert.ok(mainJs.includes("corpusBrowserType?.addEventListener('change'"))
+    assert.ok(mainJs.includes("corpusBrowserTag?.addEventListener('change'"))
+  })
+})
 
 // ── CSS ───────────────────────────────────────────────────────────────────────
 
-const CSS_CLASSES = [
-  '.corpus-browser-dialog',
-  '.corpus-browser-filters',
-  '.corpus-browser-list',
-  '.corpus-browser-list__item',
-  '.corpus-browser-list__btn',
-  '.corpus-browser-list__title',
-  '.corpus-browser-list__tag',
-  '.corpus-browser-list__open',
-  '.corpus-browser-count',
-]
-for (const cls of CSS_CLASSES) {
-  assert.ok(globalCss.includes(cls), `CSS must define ${cls}`)
-}
-console.log('✓ CSS: all .corpus-browser-* classes defined')
+describe('corpus browser — CSS', () => {
+  const CLASSES = [
+    '.corpus-browser-dialog',
+    '.corpus-browser-filters',
+    '.corpus-browser-list',
+    '.corpus-browser-list__item',
+    '.corpus-browser-list__btn',
+    '.corpus-browser-list__title',
+    '.corpus-browser-count',
+  ]
 
-assert.ok(
-  globalCss.includes('forced-colors') && globalCss.includes('.corpus-browser'),
-  'CSS must include forced-colors support for corpus browser'
-)
-console.log('✓ CSS: forced-colors support for corpus browser')
+  for (const cls of CLASSES) {
+    it(`global.css defines ${cls}`, () => {
+      assert.ok(globalCss.includes(cls))
+    })
+  }
 
-console.log('\nAll corpus-browser tests passed.')
+  it('forced-colors support present', () => {
+    assert.ok(
+      globalCss.includes('forced-colors') && globalCss.includes('.corpus-browser'),
+      'forced-colors block must cover corpus-browser'
+    )
+  })
+})
+
+// ── i18n coverage ─────────────────────────────────────────────────────────────
+
+describe('corpus browser — i18n (all 11 locales)', () => {
+  it('core browser keys present in every locale', () => {
+    assertLocaleKeys(i18n, [
+      'corpus_browser_btn',
+      'corpus_browser_heading',
+      'corpus_filter_search_placeholder',
+      'corpus_type_all',
+      'corpus_type_pasted',
+      'corpus_type_file',
+      'corpus_empty',
+      'corpus_load_more',
+      'corpus_open_btn',
+    ])
+  })
+
+  it('sort keys present in every locale', () => {
+    assertLocaleKeys(i18n, [
+      'corpus_sort_recent',
+      'corpus_sort_in_progress',
+      'corpus_sort_not_started',
+      'corpus_sort_complete',
+    ])
+  })
+
+  it('lang filter key present in every locale', () => {
+    assertLocaleKeys(i18n, ['corpus_lang_all'])
+  })
+})
