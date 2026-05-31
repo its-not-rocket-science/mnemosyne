@@ -2,7 +2,7 @@
 
 Paste any text, parse it into sentences, open per-word micro-lessons, and rate your recall. FSRS schedules the next review.
 
-**Current state:** multi-user system with fifteen language plugins. Full morphological analysis for Spanish, French, German, Russian, Japanese, Portuguese, and Italian; morphology-light mode (offline treebank annotations) for Latin and Koine Greek; vocabulary/dictionary mode for Arabic, Hebrew, and Mandarin Chinese; shallow suffix-based morphology for Hindi, Turkish, and Finnish; regex stub for English. RTL layout (Arabic, Hebrew) and CJK segmentation (Chinese, Japanese) are supported. User authentication is implemented (JWT); see [ROADMAP.md](ROADMAP.md).
+**Current state:** multi-user system with seventeen language plugins. Full morphological analysis for Spanish, French, German, Russian, Japanese, Portuguese, and Italian; full grammar and nuance analysis for English (phrasal verbs, tense constructions, register markers via spaCy; shallow tense morphology — present and past only); morphology-light for Latin, Koine Greek, Korean, Hindi, Turkish, and Finnish; vocabulary/dictionary mode for Arabic, Hebrew, and Mandarin Chinese. RTL layout (Arabic, Hebrew) and CJK segmentation (Chinese, Japanese) are supported. User authentication is implemented (JWT); see [ROADMAP.md](ROADMAP.md).
 
 ---
 
