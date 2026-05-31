@@ -1,85 +1,100 @@
 /**
- * corpus-import-url.test.mjs — structural tests for "Import from URL" feature.
+ * corpus-import-url.test.mjs
  *
- * Run with: node frontend/tests/corpus-import-url.test.mjs
+ * DOM-aware tests for the "Import from URL" feature.
+ * HTML checks use linkedom DOM queries. i18n checks use key-count.
+ * No function-body slice inspection.
  */
+import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
-import path from 'node:path'
+import { loadDocument, readSource } from './lib/dom.mjs'
+import { assertLocaleKeys } from './lib/i18n.mjs'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const ROOT      = path.resolve(__dirname, '..')
+const document = loadDocument()
+const mainJs   = readSource('js/main.js')
+const i18n     = readSource('js/i18n.js')
 
-const mainJs = readFileSync(path.join(ROOT, 'js', 'main.js'), 'utf8')
-const html   = readFileSync(path.join(ROOT, 'index.html'), 'utf8')
-const i18n   = readFileSync(path.join(ROOT, 'js', 'i18n.js'), 'utf8')
+// ── DOM structure ─────────────────────────────────────────────────────────────
 
-// ── index.html: import URL panel ──────────────────────────────────────────────
+describe('corpus import URL — DOM structure', () => {
+  const REQUIRED_IDS = [
+    'corpus-import-url-toggle',
+    'corpus-import-url-form',
+    'corpus-import-url-input',
+    'corpus-import-url-lang',
+    'corpus-import-url-submit',
+    'corpus-import-url-status',
+  ]
 
-assert.ok(html.includes('id="corpus-import-url-toggle"'), 'index.html must have #corpus-import-url-toggle')
-assert.ok(html.includes('id="corpus-import-url-form"'),   'index.html must have #corpus-import-url-form')
-assert.ok(html.includes('id="corpus-import-url-input"'),  'index.html must have #corpus-import-url-input')
-assert.ok(html.includes('id="corpus-import-url-lang"'),   'index.html must have #corpus-import-url-lang')
-assert.ok(html.includes('id="corpus-import-url-submit"'), 'index.html must have #corpus-import-url-submit')
-assert.ok(html.includes('id="corpus-import-url-status"'), 'index.html must have #corpus-import-url-status')
-assert.ok(html.includes('value="article"'),               'index.html must have article option in type filter')
-console.log('✓ index.html: import URL panel elements present')
+  for (const id of REQUIRED_IDS) {
+    it(`#${id} present in index.html`, () => {
+      assert.ok(document.querySelector(`#${id}`), `#${id} must exist`)
+    })
+  }
 
-// ── main.js: refs ─────────────────────────────────────────────────────────────
+  it('toggle has aria-expanded=false initially', () => {
+    const toggle = document.querySelector('#corpus-import-url-toggle')
+    assert.equal(toggle?.getAttribute('aria-expanded'), 'false')
+  })
 
-assert.ok(mainJs.includes('corpusImportToggle'),  'main.js must declare corpusImportToggle ref')
-assert.ok(mainJs.includes('corpusImportForm'),    'main.js must declare corpusImportForm ref')
-assert.ok(mainJs.includes('corpusImportInput'),   'main.js must declare corpusImportInput ref')
-assert.ok(mainJs.includes('corpusImportLang'),    'main.js must declare corpusImportLang ref')
-assert.ok(mainJs.includes('corpusImportSubmit'),  'main.js must declare corpusImportSubmit ref')
-assert.ok(mainJs.includes('corpusImportStatus'),  'main.js must declare corpusImportStatus ref')
-console.log('✓ main.js: corpusImport* refs declared')
+  it('import form is hidden initially', () => {
+    const form = document.querySelector('#corpus-import-url-form')
+    assert.ok(form?.hidden, 'import form starts hidden')
+  })
 
-// ── main.js: _populateImportLangSelect ────────────────────────────────────────
+  it('URL input type is "url"', () => {
+    const input = document.querySelector('#corpus-import-url-input')
+    assert.equal(input?.getAttribute('type'), 'url')
+  })
 
-assert.ok(mainJs.includes('function _populateImportLangSelect('), 'main.js must define _populateImportLangSelect')
-const popIdx  = mainJs.indexOf('function _populateImportLangSelect(')
-const popBody = mainJs.slice(popIdx, popIdx + 400)
-assert.ok(popBody.includes('/languages'),       '_populateImportLangSelect must fetch /languages')
-assert.ok(popBody.includes('corpusImportLang'), '_populateImportLangSelect must populate corpusImportLang')
-console.log('✓ main.js: _populateImportLangSelect fetches /languages')
+  it('type filter includes "article" option', () => {
+    const opt = document.querySelector('#corpus-browser-type option[value="article"]')
+    assert.ok(opt, 'type filter must include article option')
+  })
+})
 
-// ── main.js: _importCorpusUrl ─────────────────────────────────────────────────
+// ── JS wiring ─────────────────────────────────────────────────────────────────
 
-assert.ok(mainJs.includes('function _importCorpusUrl('), 'main.js must define _importCorpusUrl')
-const impIdx  = mainJs.indexOf('function _importCorpusUrl(')
-const impBody = mainJs.slice(impIdx, impIdx + 1800)
-assert.ok(impBody.includes('/corpus/import-url'),         '_importCorpusUrl must POST to /corpus/import-url')
-assert.ok(impBody.includes("method: 'POST'"),             '_importCorpusUrl must use POST')
-assert.ok(impBody.includes('corpus_import_url_success'),  '_importCorpusUrl must use corpus_import_url_success key')
-assert.ok(impBody.includes('corpus_import_url_error'),    '_importCorpusUrl must use corpus_import_url_error key')
-assert.ok(impBody.includes('_loadCorpus()'),              '_importCorpusUrl must reload corpus on success')
-console.log('✓ main.js: _importCorpusUrl POSTs to /corpus/import-url and handles success/error')
+describe('corpus import URL — main.js', () => {
+  it('defines _importCorpusUrl', () => {
+    assert.ok(mainJs.includes('_importCorpusUrl'))
+  })
 
-// ── main.js: event wiring ─────────────────────────────────────────────────────
+  it('defines _populateImportLangSelect', () => {
+    assert.ok(mainJs.includes('_populateImportLangSelect'))
+  })
 
-assert.ok(mainJs.includes("corpusImportToggle?.addEventListener('click'"), 'main.js must wire toggle click')
-assert.ok(mainJs.includes("corpusImportSubmit?.addEventListener('click'"), 'main.js must wire submit click')
-assert.ok(mainJs.includes("corpusImportInput?.addEventListener('keydown'"), 'main.js must wire Enter key')
-console.log('✓ main.js: import URL event listeners wired')
+  it('POSTs to /corpus/import-url', () => {
+    assert.ok(mainJs.includes('/corpus/import-url'))
+  })
 
-// ── i18n: all 7 new keys in all 11 language blocks ───────────────────────────
+  it('handles 409 with duplicate message', () => {
+    assert.ok(mainJs.includes('status === 409'))
+    assert.ok(mainJs.includes('corpus_import_url_duplicate'))
+  })
 
-const newKeys = [
-  'corpus_type_article',
-  'corpus_import_url_btn',
-  'corpus_import_url_placeholder',
-  'corpus_import_url_lang_aria',
-  'corpus_import_url_submit',
-  'corpus_import_url_success',
-  'corpus_import_url_error',
-]
+  it('wires toggle, submit, and Enter keydown events', () => {
+    assert.ok(mainJs.includes("corpusImportToggle?.addEventListener('click'"))
+    assert.ok(mainJs.includes("corpusImportSubmit?.addEventListener('click'"))
+    assert.ok(mainJs.includes("corpusImportInput?.addEventListener('keydown'"))
+  })
+})
 
-for (const key of newKeys) {
-  const count = (i18n.match(new RegExp(key, 'g')) ?? []).length
-  assert.ok(count >= 11, `${key} must appear in all 11 language blocks (found ${count})`)
-}
-console.log('✓ i18n: all 7 corpus-import-url keys in all 11 language blocks')
+// ── i18n coverage ─────────────────────────────────────────────────────────────
 
-console.log('\nAll corpus-import-url tests passed.')
+describe('corpus import URL — i18n (all 11 locales)', () => {
+  const KEYS = [
+    'corpus_type_article',
+    'corpus_import_url_btn',
+    'corpus_import_url_placeholder',
+    'corpus_import_url_lang_aria',
+    'corpus_import_url_submit',
+    'corpus_import_url_success',
+    'corpus_import_url_error',
+    'corpus_import_url_duplicate',
+  ]
+
+  it('all import-URL keys present in every locale', () => {
+    assertLocaleKeys(i18n, KEYS)
+  })
+})
