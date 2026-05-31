@@ -9,6 +9,7 @@
  */
 
 import { API_BASE } from './config.js'
+import { t, ti } from './i18n.js'
 
 let _pollTimer = null
 
@@ -44,6 +45,67 @@ export function initReviewSession() {
     })
   }
 
+  // ── Daily insight ─────────────────────────────────────────────────────────
+
+  const insightBar = document.getElementById('daily-insight')
+
+  function _buildInsightItems(metrics, profile) {
+    const items = []
+
+    // Weakest concept type — lowest accuracy with meaningful volume (≥5 reviews)
+    if (profile?.concept_type_accuracy?.length) {
+      const candidates = profile.concept_type_accuracy
+        .filter(e => (e.correct_count + (e.total_reviews - e.correct_count)) >= 5)
+      if (candidates.length) {
+        const worst = candidates.reduce((a, b) => a.accuracy < b.accuracy ? a : b)
+        if (worst.accuracy < 0.75) {
+          const pct = Math.round(worst.accuracy * 100)
+          const concept = worst.concept_type.replace(/_/g, ' ')
+          items.push({ kind: 'weak', text: ti('insight_weak_concept', { concept, pct }) })
+        }
+      }
+    }
+
+    // Top confusion pair
+    if (profile?.confusion_pairs?.length) {
+      const top = profile.confusion_pairs[0]
+      if (top.confusion_count >= 2) {
+        items.push({ kind: 'confusion', text: ti('insight_confusion', { a: top.object_id, b: top.confused_with }) })
+      }
+    }
+
+    // High-friction items from metrics.weakest (lapse_rate > 0.3)
+    if (items.length < 2 && metrics?.weakest?.length) {
+      const sticky = metrics.weakest.filter(w => w.lapse_rate > 0.3 && w.total_reviews >= 3)
+      if (sticky.length >= 2) {
+        items.push({ kind: 'friction', text: ti('insight_high_friction', { n: sticky.length }) })
+      }
+    }
+
+    return items.slice(0, 2)
+  }
+
+  function _renderInsight(items) {
+    if (!insightBar) return
+    if (!items.length) {
+      insightBar.setAttribute('hidden', '')
+      return
+    }
+    const p = document.createElement('p')
+    p.className = 'daily-insight'
+    items.forEach(item => {
+      const span = document.createElement('span')
+      span.className = 'daily-insight__item'
+      span.textContent = item.text
+      if (item.kind === 'friction' || item.kind === 'confusion') span.classList.add('daily-insight__accent')
+      p.appendChild(span)
+    })
+    insightBar.replaceChildren(p)
+    insightBar.removeAttribute('hidden')
+  }
+
+  // ── SRS stats + insight ────────────────────────────────────────────────────
+
   // Fetch SRS stats and populate the stats bar tiles
   async function refreshStats() {
     try {
@@ -55,13 +117,18 @@ export function initReviewSession() {
       const params = new URLSearchParams()
       if (lang) params.set('language', lang)
 
-      const [sentStats, metrics] = await Promise.all([
+      const [sentStats, metrics, profile] = await Promise.all([
         fetch(`${API_BASE}/review/sentence-items/stats?${params}`, {
           headers: { Authorization: `Bearer ${token}` },
         }).then(r => r.ok ? r.json() : null).catch(() => null),
         fetch(`${API_BASE}/metrics?${params}`, {
           headers: { Authorization: `Bearer ${token}` },
         }).then(r => r.ok ? r.json() : null).catch(() => null),
+        lang
+          ? fetch(`${API_BASE}/weakness/profile/${encodeURIComponent(lang)}`, {
+              headers: { Authorization: `Bearer ${token}` },
+            }).then(r => r.ok ? r.json() : null).catch(() => null)
+          : Promise.resolve(null),
       ])
 
       const statDue      = document.getElementById('stat-due')
@@ -75,6 +142,11 @@ export function initReviewSession() {
       if (statToday && metrics != null)      statToday.textContent    = String(metrics.reviews_today  ?? '—')
 
       statsBar?.removeAttribute('hidden')
+
+      // Daily insight — only meaningful when a language is selected
+      if (lang && (metrics || profile)) {
+        _renderInsight(_buildInsightItems(metrics, profile))
+      }
     } catch {
       // Non-fatal — tiles stay at "—"
     }
@@ -152,6 +224,100 @@ export function initReviewSession() {
     refreshStats()
   })
 
+  // ── Retention / calibration panel ─────────────────────────────────────────
+
+  const retentionPanel = document.getElementById('retention-panel')
+  const retentionBody  = document.getElementById('retention-panel-body')
+
+  function _agoLabel(isoDate) {
+    if (!isoDate) return null
+    const diffMs   = Date.now() - new Date(isoDate).getTime()
+    const diffDays = Math.floor(diffMs / 86_400_000)
+    if (diffDays < 1) return 'today'
+    if (diffDays === 1) return '1 day ago'
+    return `${diffDays} days ago`
+  }
+
+  function _renderRetentionBody(params) {
+    if (!retentionBody) return
+    const pct  = Math.round((params.desired_retention ?? 0.90) * 100)
+    const ago  = _agoLabel(params.last_calibrated_at)
+
+    let calibrationText
+    if (ago) {
+      calibrationText = ti('retention_calibrated', {
+        ago,
+        reviews: params.reviews_used ?? '?',
+      })
+      if (params.calibration_rmse != null) {
+        calibrationText += ' · ' + ti('retention_rmse', { rmse: params.calibration_rmse.toFixed(3) })
+      }
+    } else {
+      calibrationText = t('retention_not_calibrated') + ' — ' + t('retention_requires')
+    }
+
+    retentionBody.innerHTML = `
+      <div class="retention-panel__row">
+        <span class="retention-panel__value">${ti('retention_targeting', { pct })}</span>
+      </div>
+      <div class="retention-panel__row">
+        <span class="retention-panel__muted">${calibrationText}</span>
+      </div>
+      <div class="retention-panel__actions">
+        <button type="button" class="ghost-button retention-panel__recalibrate-btn"
+                id="recalibrate-btn">${t('retention_recalibrate_btn')}</button>
+        <span class="retention-panel__status" id="recalibrate-status" aria-live="polite"></span>
+      </div>
+    `
+
+    document.getElementById('recalibrate-btn')?.addEventListener('click', async () => {
+      const statusEl = document.getElementById('recalibrate-status')
+      const btn      = document.getElementById('recalibrate-btn')
+      if (!btn) return
+      btn.disabled = true
+      if (statusEl) statusEl.textContent = t('retention_calibrating')
+      try {
+        const token = localStorage.getItem('mnemosyne_token')
+        const resp  = await fetch(`${API_BASE}/users/me/calibrate`, {
+          method:  'POST',
+          headers: { Authorization: `Bearer ${token}` },
+        })
+        if (resp.ok) {
+          const updated = await resp.json()
+          _renderRetentionBody(updated)
+        } else if (resp.status === 422) {
+          const data = await resp.json().catch(() => ({}))
+          const needed = data?.detail?.min_reviews ?? 30
+          if (statusEl) statusEl.textContent = ti('retention_requires', {}) || `Need ${needed} reviews`
+          btn.disabled = false
+        } else {
+          if (statusEl) statusEl.textContent = '—'
+          btn.disabled = false
+        }
+      } catch {
+        if (statusEl) statusEl.textContent = '—'
+        btn.disabled = false
+      }
+    })
+  }
+
+  async function refreshRetentionPanel() {
+    if (!retentionPanel || !retentionBody) return
+    try {
+      const token = localStorage.getItem('mnemosyne_token')
+      if (!token) return
+      const resp = await fetch(`${API_BASE}/users/me/fsrs-params`, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      if (!resp.ok) return
+      const params = await resp.json()
+      _renderRetentionBody(params)
+      retentionPanel.removeAttribute('hidden')
+    } catch {
+      // Non-fatal — panel stays hidden
+    }
+  }
+
   // ── 7-day review forecast ──────────────────────────────────────────────────
 
   async function refreshForecast() {
@@ -209,16 +375,18 @@ export function initReviewSession() {
     forecastChart.replaceChildren(ul)
   }
 
-  // Language change: refresh badge, stats, forecast
+  // Language change: refresh badge, stats, forecast, retention
   document.getElementById('language')?.addEventListener('change', () => {
     refreshStats()
     refreshForecast()
+    refreshRetentionPanel()
   })
 
   // Initial fetch + periodic refresh every 5 minutes
   refreshBadge()
   refreshStats()
   refreshForecast()
+  refreshRetentionPanel()
   _pollTimer = setInterval(() => { refreshBadge(); refreshStats(); refreshForecast() }, 5 * 60 * 1000)
 
   // Refresh when the tab regains focus (user returns from another tab/app)

@@ -218,6 +218,12 @@
           </dl>
         </div>
 
+        <!-- ── Daily learning insight ────────────────────────────────────────
+             Populated by review-session.js from /metrics + /weakness/profile.
+             Hidden until there is something meaningful to surface.
+        -->
+        <div class="wrap" id="daily-insight" hidden aria-live="polite"></div>
+
         <!-- ── 7-day review forecast ─────────────────────────────────────────
              Collapsed by default; JS shows and loads on auth + language change.
         -->
@@ -235,6 +241,19 @@
           <details id="weakness-graph-details" class="weakness-graph-disclosure">
             <summary class="weakness-graph-disclosure__summary">Learning profile</summary>
             <mnemosyne-weakness-graph id="weakness-graph"></mnemosyne-weakness-graph>
+          </details>
+        </div>
+
+        <!-- ── Retention / calibration panel ────────────────────────────────
+             Collapsed by default; shows desired_retention, calibration state,
+             and a Recalibrate button. Fetched once on auth + language change.
+        -->
+        <div class="wrap" id="retention-panel" hidden>
+          <details id="retention-details" class="retention-disclosure">
+            <summary class="retention-disclosure__summary"
+                     data-i18n="retention_panel_heading">Retention settings</summary>
+            <div id="retention-panel-body" class="retention-panel__body"
+                 aria-live="polite"></div>
           </details>
         </div>
 
