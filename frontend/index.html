@@ -638,6 +638,15 @@
                   data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
         </div>
 
+        <!-- Continue reading strip — populated and revealed by JS -->
+        <section id="corpus-in-progress" class="corpus-in-progress" hidden
+                 aria-label="Continue reading">
+          <h3 class="corpus-in-progress__heading" data-i18n="corpus_continue_heading">Continue reading</h3>
+          <div class="corpus-in-progress__scroll">
+            <ul id="corpus-in-progress-list" class="corpus-in-progress__list" role="list"></ul>
+          </div>
+        </section>
+
         <!-- Filters row -->
         <div class="corpus-browser-filters">
           <label for="corpus-browser-search" class="sr-only"
@@ -671,6 +680,35 @@
                   data-i18n-aria-label="corpus_tag_filter_aria">
             <option value="" data-i18n="corpus_tag_all">All tags</option>
           </select>
+          <select id="corpus-browser-collection" class="ghost-select ghost-select--small"
+                  aria-label="Filter by shelf"
+                  data-i18n-aria-label="corpus_collection_filter_aria">
+            <option value="" data-i18n="corpus_collection_all">All shelves</option>
+          </select>
+          <button type="button" id="corpus-bulk-select-btn"
+                  class="ghost-button ghost-button--small"
+                  data-i18n="corpus_bulk_select"
+                  aria-pressed="false">Select</button>
+        </div>
+
+        <!-- Bulk action bar — shown in select mode -->
+        <div id="corpus-bulk-bar" class="corpus-bulk-bar" hidden>
+          <span id="corpus-bulk-count" class="corpus-bulk-bar__count"></span>
+          <label for="corpus-bulk-tag-input" class="sr-only"
+                 data-i18n="corpus_bulk_tag_add">Tag name</label>
+          <input type="text" id="corpus-bulk-tag-input"
+                 class="corpus-bulk-bar__input"
+                 placeholder="Tag name"
+                 maxlength="50">
+          <button type="button" id="corpus-bulk-tag-add-btn"
+                  class="ghost-button ghost-button--small"
+                  data-i18n="corpus_bulk_tag_add">Add tag</button>
+          <button type="button" id="corpus-bulk-tag-remove-btn"
+                  class="ghost-button ghost-button--small"
+                  data-i18n="corpus_bulk_tag_remove">Remove tag</button>
+          <button type="button" id="corpus-bulk-done-btn"
+                  class="ghost-button ghost-button--small"
+                  data-i18n="corpus_bulk_done">Done</button>
         </div>
 
         <!-- Reading-progress stats strip — populated and revealed by JS -->
@@ -724,6 +762,16 @@
           </div>
           <p id="corpus-import-url-status" class="corpus-import-url__status"
             aria-live="polite" aria-atomic="true"></p>
+        </div>
+
+        <!-- Import history panel -->
+        <div class="corpus-import-log" id="corpus-import-log">
+          <button type="button" id="corpus-import-log-toggle"
+                  class="ghost-button ghost-button--small corpus-import-log__toggle"
+                  data-i18n="corpus_import_log_btn"
+                  aria-expanded="false"
+                  aria-controls="corpus-import-log-list">Import history</button>
+          <ul id="corpus-import-log-list" class="corpus-import-log__list" hidden role="list"></ul>
         </div>
 
         <div class="corpus-browser-footer">

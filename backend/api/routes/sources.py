@@ -26,8 +26,11 @@ from backend.ingestion.ssrf import SSRFBlockedError, validate_url_ssrf
 from backend.ingestion.validator import detect_dominant_script, validate_ingest_text
 from backend.models import (
     CanonicalObjectRow,
+    CorpusCollectionItemRow,
+    CorpusCollectionRow,
     CorpusDocumentNoteRow,
     CorpusDocumentTagRow,
+    CorpusImportLogRow,
     Sentence,
     SentenceObjectRow,
     SentenceReviewItemRow,
@@ -41,6 +44,11 @@ from backend.parsing.pipeline import PipelineResult, pipeline_cache_key, run_pip
 from backend.parsing.plugin_loader import PluginRegistry
 from backend.schemas.parse import LearnableObject, SentenceResult
 from backend.schemas.sources import (
+    BulkTagRequest,
+    CollectionCreate,
+    CollectionListResponse,
+    CollectionResponse,
+    CollectionUpdate,
     CorpusBrowseItem,
     CorpusBrowseResponse,
     CorpusLanguagesResponse,
@@ -48,6 +56,10 @@ from backend.schemas.sources import (
     CorpusStats,
     CorpusStudyResult,
     CorpusTagsResponse,
+    ImportLogEntry,
+    ImportLogResponse,
+    InProgressItem,
+    InProgressResponse,
     NoteResponse,
     NoteUpsertRequest,
     SourceDetailResponse,
@@ -370,6 +382,315 @@ async def list_all_corpus_tags(
     return CorpusTagsResponse(tags=[r.tag for r in rows.all()])
 
 
+@router.get("/collections", response_model=CollectionListResponse)
+async def list_collections(
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> CollectionListResponse:
+    rows = (
+        await db.execute(
+            select(CorpusCollectionRow)
+            .where(CorpusCollectionRow.user_id == current_user)
+            .order_by(CorpusCollectionRow.position, CorpusCollectionRow.created_at)
+        )
+    ).scalars().all()
+
+    if rows:
+        col_ids = [r.id for r in rows]
+        count_rows = (
+            await db.execute(
+                select(
+                    CorpusCollectionItemRow.collection_id,
+                    sql_count(CorpusCollectionItemRow.source_document_id).label("n"),
+                )
+                .where(CorpusCollectionItemRow.collection_id.in_(col_ids))
+                .group_by(CorpusCollectionItemRow.collection_id)
+            )
+        ).all()
+        count_map = {r.collection_id: r.n for r in count_rows}
+    else:
+        count_map = {}
+
+    return CollectionListResponse(
+        collections=[
+            CollectionResponse(
+                id=r.id,
+                name=r.name,
+                position=r.position,
+                item_count=count_map.get(r.id, 0),
+                created_at=r.created_at,
+            )
+            for r in rows
+        ]
+    )
+
+
+@router.post("/collections", response_model=CollectionResponse, status_code=201)
+async def create_collection(
+    body: CollectionCreate,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> CollectionResponse:
+    col = CorpusCollectionRow(
+        id=str(uuid.uuid4()),
+        user_id=current_user,
+        name=body.name,
+        position=body.position,
+        created_at=datetime.now(UTC),
+    )
+    db.add(col)
+    await db.commit()
+    await db.refresh(col)
+    return CollectionResponse(
+        id=col.id, name=col.name, position=col.position, item_count=0, created_at=col.created_at
+    )
+
+
+@router.put("/collections/{col_id}", response_model=CollectionResponse)
+async def update_collection(
+    col_id: str,
+    body: CollectionUpdate,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> CollectionResponse:
+    col = await db.scalar(
+        select(CorpusCollectionRow).where(
+            CorpusCollectionRow.id == col_id,
+            CorpusCollectionRow.user_id == current_user,
+        )
+    )
+    if col is None:
+        raise HTTPException(status_code=404, detail="Collection not found")
+    if body.name is not None:
+        col.name = body.name.strip()
+    if body.position is not None:
+        col.position = body.position
+    await db.commit()
+    await db.refresh(col)
+    item_count = (
+        await db.scalar(
+            select(sql_count(CorpusCollectionItemRow.source_document_id)).where(
+                CorpusCollectionItemRow.collection_id == col_id
+            )
+        )
+    ) or 0
+    return CollectionResponse(
+        id=col.id,
+        name=col.name,
+        position=col.position,
+        item_count=item_count,
+        created_at=col.created_at,
+    )
+
+
+@router.delete("/collections/{col_id}", status_code=204)
+async def delete_collection(
+    col_id: str,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> Response:
+    result = await db.execute(
+        delete(CorpusCollectionRow).where(
+            CorpusCollectionRow.id == col_id,
+            CorpusCollectionRow.user_id == current_user,
+        )
+    )
+    if result.rowcount == 0:
+        raise HTTPException(status_code=404, detail="Collection not found")
+    await db.commit()
+    return Response(status_code=204)
+
+
+@router.post("/collections/{col_id}/items/{doc_id}", status_code=204)
+async def add_to_collection(
+    col_id: str,
+    doc_id: str,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> Response:
+    col = await db.scalar(
+        select(CorpusCollectionRow).where(
+            CorpusCollectionRow.id == col_id,
+            CorpusCollectionRow.user_id == current_user,
+        )
+    )
+    if col is None:
+        raise HTTPException(status_code=404, detail="Collection not found")
+    await _require_source_document(db, doc_id)
+    existing = await db.scalar(
+        select(CorpusCollectionItemRow).where(
+            CorpusCollectionItemRow.collection_id == col_id,
+            CorpusCollectionItemRow.source_document_id == doc_id,
+        )
+    )
+    if not existing:
+        db.add(
+            CorpusCollectionItemRow(
+                collection_id=col_id,
+                source_document_id=doc_id,
+                user_id=current_user,
+                added_at=datetime.now(UTC),
+            )
+        )
+        await db.commit()
+    return Response(status_code=204)
+
+
+@router.delete("/collections/{col_id}/items/{doc_id}", status_code=204)
+async def remove_from_collection(
+    col_id: str,
+    doc_id: str,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> Response:
+    await db.execute(
+        delete(CorpusCollectionItemRow).where(
+            CorpusCollectionItemRow.collection_id == col_id,
+            CorpusCollectionItemRow.source_document_id == doc_id,
+        )
+    )
+    await db.commit()
+    return Response(status_code=204)
+
+
+@router.get("/corpus/in-progress", response_model=InProgressResponse)
+async def get_in_progress(
+    limit: int = Query(default=10, ge=1, le=50),
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> InProgressResponse:
+    """Return documents currently being read, ordered by most recently read."""
+    stmt = (
+        select(SourceDocumentRow, SourceProgressionRow)
+        .join(
+            SourceProgressionRow,
+            and_(
+                SourceProgressionRow.source_document_id == SourceDocumentRow.id,
+                SourceProgressionRow.user_id == current_user,
+            ),
+        )
+        .where(
+            SourceProgressionRow.next_position > 0,
+            or_(
+                SourceProgressionRow.sentences_total == 0,
+                SourceProgressionRow.next_position < SourceProgressionRow.sentences_total,
+            ),
+        )
+        .order_by(SourceProgressionRow.last_read_at.desc())
+        .limit(limit)
+    )
+    rows = (await db.execute(stmt)).all()
+    return InProgressResponse(
+        items=[
+            InProgressItem(
+                source_document_id=doc.id,
+                title=doc.title,
+                language=doc.language,
+                content_type=doc.content_type,
+                last_read_at=prog.last_read_at,
+                completion_fraction=prog.completion_fraction or 0.0,
+                next_position=prog.next_position or 0,
+                sentences_total=prog.sentences_total or 0,
+            )
+            for doc, prog in rows
+        ]
+    )
+
+
+@router.get("/corpus/import-log", response_model=ImportLogResponse)
+async def get_import_log(
+    limit: int = Query(default=20, ge=1, le=100),
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> ImportLogResponse:
+    """Return recent corpus import attempts for this user."""
+    rows = (
+        await db.execute(
+            select(CorpusImportLogRow)
+            .where(CorpusImportLogRow.user_id == current_user)
+            .order_by(CorpusImportLogRow.created_at.desc())
+            .limit(limit)
+        )
+    ).scalars().all()
+    return ImportLogResponse(
+        entries=[
+            ImportLogEntry(
+                id=r.id,
+                url=r.url,
+                status=r.status,
+                title=r.title,
+                error_detail=r.error_detail,
+                source_document_id=r.source_document_id,
+                created_at=r.created_at,
+            )
+            for r in rows
+        ]
+    )
+
+
+@router.post("/corpus/bulk/tags", status_code=204)
+async def bulk_tag_documents(
+    body: BulkTagRequest,
+    db: AsyncSession = Depends(get_db_session),
+    current_user: str = Depends(get_current_user),
+) -> Response:
+    """Add or remove a tag on multiple corpus documents atomically."""
+    if body.action == "remove":
+        await db.execute(
+            delete(CorpusDocumentTagRow).where(
+                CorpusDocumentTagRow.user_id == current_user,
+                CorpusDocumentTagRow.source_document_id.in_(body.doc_ids),
+                CorpusDocumentTagRow.tag == body.tag,
+            )
+        )
+    else:
+        for doc_id in body.doc_ids:
+            existing = await db.scalar(
+                select(CorpusDocumentTagRow).where(
+                    CorpusDocumentTagRow.user_id == current_user,
+                    CorpusDocumentTagRow.source_document_id == doc_id,
+                    CorpusDocumentTagRow.tag == body.tag,
+                )
+            )
+            if not existing:
+                db.add(
+                    CorpusDocumentTagRow(
+                        user_id=current_user,
+                        source_document_id=doc_id,
+                        tag=body.tag,
+                    )
+                )
+    await db.commit()
+    return Response(status_code=204)
+
+
+async def _write_import_log(
+    db: AsyncSession,
+    user_id: str,
+    url: str,
+    status: str,
+    title: str | None,
+    error_detail: str | None,
+    source_document_id: str | None,
+) -> None:
+    try:
+        db.add(
+            CorpusImportLogRow(
+                user_id=user_id,
+                url=url,
+                status=status,
+                title=title,
+                error_detail=error_detail,
+                source_document_id=source_document_id,
+                created_at=datetime.now(UTC),
+            )
+        )
+        await db.commit()
+    except Exception:
+        logger.warning("Failed to write import log", exc_info=True)
+        await db.rollback()
+
+
 @router.post("/corpus/import-url", response_model=UrlImportResponse, status_code=201)
 async def import_corpus_url(
     payload: UrlImportRequest,
@@ -400,15 +721,17 @@ async def import_corpus_url(
     try:
         fetched = await _fetch_import_url_text(requested_url)
     except (SSRFBlockedError, ValueError) as exc:
+        await _write_import_log(db, current_user, requested_url, "failed", None, str(exc), None)
         raise HTTPException(status_code=422, detail=str(exc)) from exc
     except httpx.HTTPStatusError as exc:
-        raise HTTPException(
-            status_code=502,
-            detail=f"Remote server returned {exc.response.status_code}.",
-        ) from exc
+        detail = f"Remote server returned {exc.response.status_code}."
+        await _write_import_log(db, current_user, requested_url, "failed", None, detail, None)
+        raise HTTPException(status_code=502, detail=detail) from exc
     except httpx.TimeoutException as exc:
+        await _write_import_log(db, current_user, requested_url, "failed", None, "Timed out.", None)
         raise HTTPException(status_code=502, detail="Remote server timed out.") from exc
     except httpx.RequestError as exc:
+        await _write_import_log(db, current_user, requested_url, "failed", None, str(exc), None)
         raise HTTPException(status_code=502, detail="Could not fetch that URL.") from exc
 
     if fetched.final_url != requested_url:
@@ -458,6 +781,9 @@ async def import_corpus_url(
     hash_dup_row = hash_dup.first()
 
     if hash_dup_row:
+        await _write_import_log(
+            db, current_user, requested_url, "duplicate", hash_dup_row.title, None, hash_dup_row.id
+        )
         raise HTTPException(
             status_code=409,
             detail={
@@ -494,8 +820,14 @@ async def import_corpus_url(
         )
     except Exception as exc:
         logger.warning("DB persistence failed for /corpus/import-url", exc_info=exc)
+        await _write_import_log(
+            db, current_user, requested_url, "failed", title, "Persistence error.", None
+        )
         raise HTTPException(status_code=500, detail="Failed to save imported document.") from exc
 
+    await _write_import_log(
+        db, current_user, requested_url, "success", title, None, source_document_id
+    )
     return UrlImportResponse(
         source_document_id=source_document_id,
         title=title,
@@ -853,6 +1185,7 @@ async def browse_corpus(
     q: str | None = None,
     sort: str = Query(default="recent"),
     tag: str | None = None,
+    collection_id: str | None = None,
     limit: int = Query(default=20, ge=1, le=100),
     offset: int = Query(default=0, ge=0),
     db: AsyncSession = Depends(get_db_session),
@@ -889,6 +1222,12 @@ async def browse_corpus(
             CorpusDocumentTagRow.tag == tag,
         )
         conditions.append(SourceDocumentRow.id.in_(tag_subq))
+
+    if collection_id:
+        col_subq = select(CorpusCollectionItemRow.source_document_id).where(
+            CorpusCollectionItemRow.collection_id == collection_id
+        )
+        conditions.append(SourceDocumentRow.id.in_(col_subq))
 
     if sort == "in_progress":
         conditions.append(SourceProgressionRow.next_position > 0)
@@ -1004,6 +1343,7 @@ async def browse_corpus(
             language=doc.language,
             content_type=doc.content_type,
             author=doc.author,
+            source_url=doc.source_url,
             char_count=doc.char_count,
             created_at=doc.created_at,
             next_position=prog.next_position if prog else 0,

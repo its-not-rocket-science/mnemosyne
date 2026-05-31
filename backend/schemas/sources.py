@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime
+from typing import Literal
 
 from pydantic import BaseModel, Field, field_validator
 
@@ -30,6 +31,7 @@ class CorpusBrowseItem(BaseModel):
     language: str
     content_type: str
     author: str | None = None
+    source_url: str | None = None
     char_count: int
     created_at: datetime
     # Reading progress (may be absent if user never started this document)
@@ -121,6 +123,79 @@ class UrlImportResponse(BaseModel):
     char_count: int
     truncated: bool = False
     final_url: str | None = None
+
+
+class CollectionCreate(BaseModel):
+    name: str = Field(min_length=1, max_length=100)
+    position: int = 0
+
+    @field_validator("name")
+    @classmethod
+    def strip_name(cls, v: str) -> str:
+        v = v.strip()
+        if not v:
+            raise ValueError("name must not be blank")
+        return v
+
+
+class CollectionUpdate(BaseModel):
+    name: str | None = Field(None, min_length=1, max_length=100)
+    position: int | None = None
+
+
+class CollectionResponse(BaseModel):
+    id: str
+    name: str
+    position: int
+    item_count: int = 0
+    created_at: datetime
+
+
+class CollectionListResponse(BaseModel):
+    collections: list[CollectionResponse]
+
+
+class BulkTagRequest(BaseModel):
+    doc_ids: list[str] = Field(min_length=1)
+    tag: str = Field(min_length=1, max_length=50)
+    action: Literal["add", "remove"]
+
+    @field_validator("tag")
+    @classmethod
+    def strip_bulk_tag(cls, v: str) -> str:
+        v = v.strip()
+        if not v:
+            raise ValueError("tag must not be blank")
+        return v
+
+
+class ImportLogEntry(BaseModel):
+    id: int
+    url: str
+    status: str
+    title: str | None = None
+    error_detail: str | None = None
+    source_document_id: str | None = None
+    created_at: datetime
+
+
+class ImportLogResponse(BaseModel):
+    entries: list[ImportLogEntry]
+
+
+class InProgressItem(BaseModel):
+    source_document_id: str
+    title: str | None = None
+    language: str
+    content_type: str
+    last_read_at: datetime
+    completion_fraction: float
+    next_position: int
+    sentences_total: int
+
+
+class InProgressResponse(BaseModel):
+    items: list[InProgressItem]
 
 
 class SourceDetailResponse(BaseModel):

@@ -2052,6 +2052,251 @@ body.player-active .app-shell__scroll-area {
   margin: 0;
 }
 
+/* ── Continue reading strip ──────────────────────────────────────────────── */
+
+.corpus-in-progress {
+  border-block-end: 1px solid var(--border);
+  padding-block-end: 0.75rem;
+  margin-block-end: 0.5rem;
+}
+
+.corpus-in-progress__heading {
+  font-size: var(--font-size-label);
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-block-end: 0.5rem;
+}
+
+.corpus-in-progress__scroll {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.corpus-in-progress__list {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0.25rem;
+}
+
+.corpus-in-progress__card {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-inline-size: 180px;
+  max-inline-size: 220px;
+  padding: 0.5rem 0.75rem;
+  background: var(--surface-alt);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.corpus-in-progress__lang {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.corpus-in-progress__title {
+  font-size: var(--font-size-label);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.corpus-in-progress__bar {
+  block-size: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.corpus-in-progress__fill {
+  block-size: 100%;
+  background: oklch(60% 0.15 250);
+  border-radius: 2px;
+  transition: inline-size 0.3s ease;
+}
+
+.corpus-in-progress__pct {
+  font-size: 0.65rem;
+  color: var(--muted);
+}
+
+.corpus-in-progress__resume {
+  margin-block-start: 0.25rem;
+}
+
+/* ── Bulk action bar ─────────────────────────────────────────────────────── */
+
+.corpus-bulk-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--surface-alt);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.corpus-bulk-bar__count {
+  font-size: var(--font-size-label);
+  color: var(--muted);
+  min-inline-size: 5ch;
+}
+
+.corpus-bulk-bar__input {
+  flex: 1 1 120px;
+  min-inline-size: 80px;
+  max-inline-size: 200px;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--font-size-label);
+}
+
+/* ── Corpus list bulk checkboxes ─────────────────────────────────────────── */
+
+.corpus-browser-list--bulk .corpus-browser-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.corpus-browser-list__checkbox {
+  margin-block-start: 0.25rem;
+  flex-shrink: 0;
+  accent-color: oklch(60% 0.15 250);
+}
+
+/* ── Provenance row ──────────────────────────────────────────────────────── */
+
+.corpus-browser-list__provenance {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-block-start: 0.25rem;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.corpus-browser-list__author {
+  font-style: italic;
+}
+
+.corpus-browser-list__source-link {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.corpus-browser-list__source-link:hover {
+  text-decoration: underline;
+}
+
+.corpus-browser-list__type-badge {
+  padding: 0.1em 0.4em;
+  border-radius: 0.25em;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+/* ── Shelf select on cards ───────────────────────────────────────────────── */
+
+.corpus-browser-list__shelf-select {
+  font-size: 0.7rem;
+  margin-block-start: 0.2rem;
+}
+
+/* ── Import history panel ────────────────────────────────────────────────── */
+
+.corpus-import-log {
+  padding-block-start: 0.5rem;
+}
+
+.corpus-import-log__toggle {
+  font-size: var(--font-size-label);
+}
+
+.corpus-import-log__list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.corpus-import-log__empty {
+  font-size: var(--font-size-label);
+  color: var(--muted);
+  padding: 0.25rem 0;
+}
+
+.corpus-import-log__item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: var(--font-size-label);
+  padding: 0.2rem 0;
+  border-block-end: 1px solid var(--border);
+}
+
+.corpus-import-log__status {
+  flex-shrink: 0;
+  font-weight: 600;
+  font-size: 0.65rem;
+  padding: 0.1em 0.4em;
+  border-radius: 0.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.corpus-import-log__item--success .corpus-import-log__status {
+  background: oklch(92% 0.07 145);
+  color: oklch(38% 0.12 145);
+}
+
+.corpus-import-log__item--failed .corpus-import-log__status {
+  background: oklch(92% 0.07 25);
+  color: oklch(38% 0.12 25);
+}
+
+.corpus-import-log__item--duplicate .corpus-import-log__status {
+  background: oklch(92% 0.05 55);
+  color: oklch(38% 0.08 55);
+}
+
+.corpus-import-log__title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.corpus-import-log__error {
+  color: var(--muted);
+  font-size: 0.65rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-inline-size: 200px;
+}
+
 @media (forced-colors: active) {
   .corpus-browser-list__tag { border: 1px solid ButtonText; background: ButtonFace; color: ButtonText; }
   .corpus-browser-list__progress { background: ButtonFace; border: 1px solid ButtonText; }
@@ -2062,4 +2307,6 @@ body.player-active .app-shell__scroll-area {
   .corpus-import-url__input { border-color: ButtonText; background: ButtonFace; color: ButtonText; }
   .corpus-browser-list__density { background: Highlight; }
   .corpus-browser-list__note-textarea { border-color: ButtonText; background: ButtonFace; color: ButtonText; }
+  .corpus-in-progress__fill { background: Highlight; }
+  .corpus-import-log__status { border: 1px solid ButtonText; background: ButtonFace; color: ButtonText; }
 }
