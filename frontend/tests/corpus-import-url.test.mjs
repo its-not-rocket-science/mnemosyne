@@ -49,7 +49,7 @@ console.log('✓ main.js: _populateImportLangSelect fetches /languages')
 
 assert.ok(mainJs.includes('function _importCorpusUrl('), 'main.js must define _importCorpusUrl')
 const impIdx  = mainJs.indexOf('function _importCorpusUrl(')
-const impBody = mainJs.slice(impIdx, impIdx + 1200)
+const impBody = mainJs.slice(impIdx, impIdx + 1800)
 assert.ok(impBody.includes('/corpus/import-url'),         '_importCorpusUrl must POST to /corpus/import-url')
 assert.ok(impBody.includes("method: 'POST'"),             '_importCorpusUrl must use POST')
 assert.ok(impBody.includes('corpus_import_url_success'),  '_importCorpusUrl must use corpus_import_url_success key')
