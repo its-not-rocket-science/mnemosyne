@@ -1,6 +1,6 @@
 # Nuance Coverage Reference
 
-Coverage status for all 13 supported languages across every `NuanceCapabilities`
+Coverage status for all 17 supported languages across every `NuanceCapabilities`
 dimension.  Run `scripts/audit_nuance_coverage.py` to regenerate the summary
 table from live plugin declarations.
 
@@ -22,7 +22,7 @@ table from live plugin declarations.
 
 | Language | Idioms | Phrase families | Etymology | Grammar nuance | Formality/register | Pronunciation TTS | Transliteration | Literary/cultural | Tests |
 |----------|--------|-----------------|-----------|----------------|--------------------|-------------------|-----------------|-------------------|-------|
-| en (English) | stub | stub | none | none | none | partial | none | none | 8 |
+| en (English) | stub | **partial** | none | **partial** | **partial** | partial | none | none | **12** |
 | es (Spanish) | partial | **partial** | **strong** | partial | stub | partial | none | none | **26** |
 | fr (French) | partial | **partial** | **strong** | partial | **partial** | partial | none | none | **15** |
 | de (German) | partial | **partial** | **strong** | partial | stub | partial | none | none | **24** |
@@ -35,6 +35,10 @@ table from live plugin declarations.
 | ja (Japanese) | none | none | none | stub | none | partial | stub | none | 7 |
 | la (Latin) | none | none | none | none | none | stub | none | none | 7 |
 | grc (Koine Greek) | none | none | none | none | none | stub | partial | none | 7 |
+| ko (Korean) | none | none | none | none | none | none | none | none | 5 |
+| hi (Hindi) | none | none | none | none | none | none | none | none | 5 |
+| tr (Turkish) | none | none | none | none | none | none | none | none | 5 |
+| fi (Finnish) | none | none | none | none | none | none | none | none | 5 |
 
 > "Literary/cultural" collapses `literary_references`, `cultural_references`,
 > `proverb_tradition`, and `classical_or_scriptural_allusion` — all are `none`
@@ -57,7 +61,7 @@ catalogs and morphological analysis.  It does not call the nuance extractor.
 | it | ~30 fixed expressions | essere copula, subjunctive trigger, conditional mood | Lei/tu |
 | pt | ~30 fixed expressions | ser/estar copula, subjunctive trigger, conditional mood | você/tu |
 | ru | ~35 fixed expressions | imperfective/perfective aspect, verbal government | formal/informal verb forms |
-| en | heuristic blend-detection | — | — |
+| en | heuristic blend-detection | phrasal verbs (dep parse prt arc), be_progressive, be_passive, have_perfect, cleft, existential | register markers (formal/informal/neutral via spaCy morphology) |
 | ar | — | — | — |
 | he | — | — | — |
 | zh | — | — | — |
@@ -85,6 +89,10 @@ candidates independently.  No extractor is registered for `en`, `it`, or `pt`.
 | he | **phrase families (10 families)** · definite prefix ה- · waw conjunction ו- · prefix decomposition (ב- ל- כ- מ- ש-) · binyan annotation (when candidate carries binyan metadata) · biblical register (cantillation marks) |
 | la | discourse particles (autem · igitur · ergo · tamen · enim · sed · nam · …) · enclitic -que · classical register (macrons in sentence) |
 | grc | discourse particles (δέ · γάρ · οὖν · μέν · ἀλλά · …) · οὐ/μή negation distinction · definite article forms |
+| ko | — |
+| hi | — |
+| tr | — |
+| fi | — |
 
 ---
 
@@ -113,8 +121,10 @@ classifiers or embedding-based detectors in the current codebase.
 - Etymology `strong` for ES/FR/DE (100 curated entries each); `partial` for IT/PT/RU (50 entries each).
 
 ### English
-- `EnglishStubPlugin` is a scaffold.  Idiom detection is heuristic and fires
-  on blend families only.  No grammar nuance or register detection.
+- Idiom detection is heuristic (blend families only); no curated idiom catalog.
+- Grammar patterns (6 types) rely on spaCy `en_core_web_sm` dependency parse; parse quality degrades on informal/fragmented text.
+- Tense morphology is shallow: only present and past are labelled; future, conditional, and perfect tenses are inferred from auxiliary morphology, not directly annotated by spaCy.
+- Register detection uses a heuristic token-frequency approach; precision is low for mixed-register sentences.
 
 ### Spanish
 - ser/estar detection relies on spaCy dep parse; low-confidence when parse
@@ -162,8 +172,8 @@ classifiers or embedding-based detectors in the current codebase.
   misses 4-char units that jieba would keep together.
 - Measure-word detection requires character-level tokenization; jieba may merge
   numeral + classifier into one token.
-- No tonal information in lesson data; pinyin readings rely on pypinyin which
-  may mis-tone polyphonic characters.
+- `tone_contours` (list[int] 1–5, 5=neutral) added to vocabulary `lesson_data` via `_tone_contour()`; covers multi-syllable words. pypinyin may still mis-tone polyphonic characters in context.
+- `heteronyms` field added for the 15 most common polyphonic characters (重 行 乐 长 中 好 还 得 数 种 假 发 差 朝 大); each entry lists readings with meaning and example. Characters outside this set still receive a single reading from pypinyin.
 
 ### Japanese
 - yojijukugo detection fails when spaCy splits the 4-char compound into
@@ -341,11 +351,11 @@ Each fixture covers:
 | False positive | Named nuance types absent from plain control sentences |
 | Capability | `plugin.capabilities.nuance_capabilities.<dim>` in declared allowed set |
 
-Total: **~222 parametrized test cases** across 13 languages (as of 2026-05-10).
+Total: **~242 parametrized test cases** across 17 languages.
 
 | Language | Cases | Capability assertions |
 |----------|-------|-----------------------|
-| en | 8 | 3 |
+| en | 12 | 4 |
 | es | 26 | 5 |
 | fr | 9 | 3 |
 | de | 24 | 5 |
@@ -358,6 +368,10 @@ Total: **~222 parametrized test cases** across 13 languages (as of 2026-05-10).
 | ja | 7 | 3 |
 | la | 7 | 2 |
 | grc | 7 | 2 |
+| ko | 5 | 1 |
+| hi | 5 | 1 |
+| tr | 5 | 1 |
+| fi | 5 | 1 |
 
 ---
 

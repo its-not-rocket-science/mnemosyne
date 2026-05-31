@@ -42,14 +42,18 @@ The five pillars are:
 | Japanese | `ja` | Full morphological | vocabulary (+ hiragana readings), particles filtered | `ja_core_news_sm` + SudachiPy |
 | Portuguese | `pt` | Full morphological | vocabulary, conjugation, agreement, grammar patterns, idiom, nuance | `pt_core_news_sm` |
 | Italian | `it` | Full morphological | vocabulary, conjugation, agreement, grammar patterns, idiom, nuance | `it_core_news_sm` |
+| English | `en` | Full grammar/nuance | vocabulary, grammar (6 patterns: phrasal_verb, be_progressive, be_passive, have_perfect, cleft, existential), nuance (register markers) | `en_core_web_sm` |
 | Arabic | `ar` | Dictionary mode | vocabulary (tashkeel-normalised), RTL | none |
 | Hebrew | `he` | Dictionary mode | vocabulary (nikud-normalised), RTL | none |
-| Mandarin Chinese | `zh` | Dictionary mode | vocabulary (jieba segmentation + pinyin) | jieba + pypinyin |
-| Latin | `la` | Dictionary mode | vocabulary (regex tokenisation), dead-language scaffold | none |
-| Koine Greek | `grc` | Dictionary mode | vocabulary (polytonic normalisation + SBL transliteration) | none |
-| English | `en` | Stub | vocabulary (regex only) | none |
+| Mandarin Chinese | `zh` | Dictionary mode | vocabulary (jieba segmentation + pinyin + tone contours + heteronyms) | jieba + pypinyin |
+| Latin | `la` | Morphology-light | vocabulary, morphology (offline UD ITTB treebank; ~3 400 attested forms) | none |
+| Koine Greek | `grc` | Morphology-light | vocabulary, morphology (offline MorphGNT corpus; ~27 000 attested forms) | none |
+| Korean | `ko` | Morphology-light | vocabulary, conjugation (kiwipiepy morphological analysis) | kiwipiepy |
+| Hindi | `hi` | Morphology-light | vocabulary, morphology (suffix rules) | none |
+| Turkish | `tr` | Morphology-light | vocabulary, morphology (suffix rules) | none |
+| Finnish | `fi` | Morphology-light | vocabulary, morphology (suffix rules) | `fi_core_news_sm` |
 
-**Production-quality** means full morphological extraction with relation hints. Seven languages qualify: Spanish, French, German, Russian, Japanese, Portuguese, and Italian.
+**Production-quality** means full morphological or full grammar/nuance extraction with relation hints. Eight languages qualify: Spanish, French, German, Russian, Japanese, Portuguese, Italian, and English (full grammar/nuance; shallow tense morphology only).
 
 ### Infrastructure
 
@@ -73,7 +77,7 @@ The five pillars are:
 
 These were the major open issues when this document was first written. All are resolved.
 
-**Gap 1 — One real language** → Seven languages now have production-quality full-morphological plugins (es, fr, de, ru, ja, pt, it). Five more are in dictionary mode (ar, he, zh, la, grc).
+**Gap 1 — One real language** → Eight languages now have production-quality plugins: seven full-morphological (es, fr, de, ru, ja, pt, it) and one full grammar/nuance (en). Six more are in morphology-light mode (la, grc, ko, hi, tr, fi); three in dictionary mode (ar, he, zh).
 
 **Gap 2 — RTL and non-Latin scripts** → `dir`/`lang` applied throughout modal, sentence cards, and drill prompts. Logical CSS properties throughout. `<bdi>` isolation in drill feedback. 43 non-Latin DB round-trip tests. `canonical_form` conventions documented for Arabic, Hebrew, CJK, Cyrillic, and agglutinative languages in `PLUGIN_AUTHOR_GUIDE.md`. Difficulty scorer accepts `word_count_hint` for CJK.
 
@@ -87,7 +91,7 @@ These were the major open issues when this document was first written. All are r
 
 **Gap 7 — Lesson text localisation** → `backend/lesson/l10n.py` renders `build_lesson()` explanations in the learner's native language for all 12 UI locales. Static templates; zero-latency; deterministic. 326 tests in `test_l10n.py`. Untranslated L1 codes fall back to English.
 
-**Gap 8 — Frontend UI string localisation** → all hardcoded English strings in frontend components replaced with `t()`/`ti()` calls in `frontend/js/i18n.js`. Covers `mnemosyne-modal`, `mnemosyne-pill`, `mnemosyne-text-panel`, `mnemosyne-top-nav`, and `main.js`. The grammatical terminal label values from `generators.py` (e.g. `"third"`, `"singular"`, `"present"`) remain untranslated.
+**Gap 8 — Frontend UI string localisation** → all hardcoded English strings in frontend components replaced with `t()`/`ti()` calls in `frontend/js/i18n.js`. Covers `mnemosyne-modal`, `mnemosyne-pill`, `mnemosyne-text-panel`, `mnemosyne-top-nav`, and `main.js`. The grammatical terminal label values from `generators.py` (e.g. `"third"`, `"singular"`, `"present"`) are now translated via a lookup table in `l10n.py` for all 12 UI locales.
 
 ---
 
@@ -96,8 +100,6 @@ These were the major open issues when this document was first written. All are r
 - **Manual keyboard + screen-reader test.** Static audit done (11 issues found and fixed, incl. concept dialog ARIA); NVDA/VoiceOver smoke test not yet run; see `MANUAL_ACCESSIBILITY_TEST.md`.
 - **Shallow morphological plugins for Hindi, Turkish, Finnish — done.** Suffix-rule `morphology_light` plugins added (2026-05-27). Full spaCy-model morphology for Korean and deeper per-language coverage remains planned.
 - **Classical lexicon depth — partially done.** Latin (~3 400 forms) and Koine Greek (~27 000 forms) now have offline treebank morphological annotations. Perseus/Logeion integration would cover unattested forms.
-- **Grammatical label localisation.** `build_lesson()` prose is now in the learner's language, but the terminal label values (`"third"`, `"singular"`, `"present"`, `"indicative"`) produced by `backend/lesson/generators.py` remain English strings. A second lookup table in `l10n.py` is needed to translate these.
-
 ---
 
 ## Architectural decisions that help the vision
@@ -135,11 +137,9 @@ Every database and Redis operation in the route handlers is wrapped in `try/exce
 
 The frontend applies `dir` and `lang` attributes dynamically from plugin capabilities. Logical CSS properties (`inline-size`, `margin-inline-start`, etc.) are used throughout. Non-Latin font stacks are declared in `global.css`. The modal applies RTL to example text, drill prompts, and fill-blank inputs. `<bdi>` elements isolate bidirectional strings in feedback. 43 non-Latin DB round-trip tests cover Arabic, Hebrew, Chinese, Russian, and Japanese canonical forms.
 
-**Remaining limitation:** `build_lesson()` prose is now in the learner's language via `backend/lesson/l10n.py`, but the terminal grammatical label values (`"third"`, `"singular"`, `"present"`, `"indicative"`) produced by `generators.py` remain English strings. For most learners the mixed output is adequate; full label translation requires a second lookup table in `l10n.py`.
+### Lesson generator — fully localised
 
-### Lesson generator — prose localised; grammatical labels remain English
-
-`backend/lesson/generators.py` produces grammatical category labels as bare English strings (`"third"`, `"singular"`, `"present"`, `"indicative"`). The surrounding prose is now localised via `l10n.py`, but these terminal values are not yet run through a translation table. For languages with significantly different grammatical concepts (verb classes, classifier systems, tone) the label framing may also need adaptation.
+`backend/lesson/generators.py` produces grammatical category labels; all are translated via a lookup table in `l10n.py` for all 12 UI locales. For languages with significantly different grammatical concepts (verb classes, classifier systems, tone) the label framing may need further adaptation as new plugins are added.
 
 ### `canonical_form` string format is Latin-script-centric in practice
 

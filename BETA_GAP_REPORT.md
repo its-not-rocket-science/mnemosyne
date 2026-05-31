@@ -1,6 +1,6 @@
 # Beta Gap Report — Mnemosyne
 
-*Originally written 2026-04-15. Updated 2026-05-28 (feature-maturity pass, Priority 1–8 complete). Updated 2026-05-29 (items 7–12 complete; auth/deps fixes; 4 468 passing tests).*
+*Originally written 2026-04-15. Updated 2026-05-28 (feature-maturity pass, Priority 1–8 complete). Updated 2026-05-29 (items 7–12 complete; auth/deps fixes; 4 468 passing tests). Updated 2026-05-31 (English grammar/nuance plugin, Chinese tone contours/heteronyms, analytics insight UI; 4 605 passing tests).*
 
 All private alpha and public beta blockers are resolved. All vision items V1–V5 are
 implemented. The system is at or beyond the original 12-week plan. This document is
@@ -12,7 +12,7 @@ tier.
 ## What is solid (do not second-guess)
 
 - **Core loop.** Parse → lesson → review → recommend is complete, tested, and persistent.
-  4 468 passing tests (full suite as of 2026-05-29).
+  4 605 passing tests (full suite as of 2026-05-31).
 - **Practice activities.** Detail pane exposes scored retell, typed drill, comprehension, and
   mini-quiz practice panels. Every practice check dispatches `pane-practice-check` → `submitReview(objectId, quality)` → FSRS `/review` endpoint, so practice directly updates spaced-repetition state. Session score and next-interval feedback shown inline.
 - **FSRS-5.** Pure Python, deterministic, no external dependencies. Per-user calibration
