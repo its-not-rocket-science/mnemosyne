@@ -2018,11 +2018,12 @@ const corpusBrowserDialog   = document.querySelector('#corpus-browser-dialog')
 const corpusBrowserCloseBtn = document.querySelector('#corpus-browser-close-btn')
 const openCorpusBrowserBtn  = document.querySelector('#open-corpus-browser-btn')
 const corpusBrowserSearch   = document.querySelector('#corpus-browser-search')
-const corpusBrowserLang     = document.querySelector('#corpus-browser-lang')
-const corpusBrowserType     = document.querySelector('#corpus-browser-type')
-const corpusBrowserSort      = document.querySelector('#corpus-browser-sort')
-const corpusBrowserTag       = document.querySelector('#corpus-browser-tag')
-const corpusBrowserList      = document.querySelector('#corpus-browser-list')
+const corpusBrowserLang       = document.querySelector('#corpus-browser-lang')
+const corpusBrowserType       = document.querySelector('#corpus-browser-type')
+const corpusBrowserSort       = document.querySelector('#corpus-browser-sort')
+const corpusBrowserTag        = document.querySelector('#corpus-browser-tag')
+const corpusBrowserCollection = document.querySelector('#corpus-browser-collection')
+const corpusBrowserList       = document.querySelector('#corpus-browser-list')
 const corpusBrowserStatus    = document.querySelector('#corpus-browser-status')
 const corpusBrowserCount     = document.querySelector('#corpus-browser-count')
 const corpusBrowserMoreBtn   = document.querySelector('#corpus-browser-more-btn')
@@ -2042,6 +2043,9 @@ const _CORPUS_PAGE_SIZE = 20
 let _corpusOffset = 0
 let _corpusTotal  = 0
 let _corpusSearchTimer = null
+let _bulkMode = false
+let _selectedDocIds = new Set()
+let _collectionsCache = []
 
 function _corpusParams() {
   const p = new URLSearchParams()
@@ -2056,6 +2060,9 @@ function _corpusParams() {
 
   const tag = corpusBrowserTag?.value
   if (tag) p.set('tag', tag)
+
+  const col = corpusBrowserCollection?.value
+  if (col) p.set('collection_id', col)
 
   const query = corpusBrowserSearch?.value?.trim()
   if (query) p.set('q', query)
@@ -2306,6 +2313,76 @@ function _buildCorpusItem(item) {
   li.appendChild(noteToggle)
   li.appendChild(noteArea)
 
+  // Provenance row: author, source link, content-type badge
+  if (item.author || item.source_url || item.content_type) {
+    const prov = document.createElement('div')
+    prov.className = 'corpus-browser-list__provenance'
+    if (item.author) {
+      const byline = document.createElement('span')
+      byline.className = 'corpus-browser-list__author'
+      byline.textContent = `by ${item.author}`
+      prov.appendChild(byline)
+    }
+    if (item.source_url) {
+      const link = document.createElement('a')
+      link.className = 'corpus-browser-list__source-link'
+      link.href = item.source_url
+      link.target = '_blank'
+      link.rel = 'noopener noreferrer'
+      link.textContent = '↗ Source'
+      link.addEventListener('click', e => e.stopPropagation())
+      prov.appendChild(link)
+    }
+    const typeBadge = document.createElement('span')
+    typeBadge.className = `corpus-browser-list__type-badge corpus-browser-list__type-badge--${item.content_type}`
+    typeBadge.textContent = item.content_type.replace('_', ' ')
+    prov.appendChild(typeBadge)
+    li.appendChild(prov)
+  }
+
+  // Add-to-shelf button (shown when collections exist)
+  if (_collectionsCache.length) {
+    const shelfSel = document.createElement('select')
+    shelfSel.className = 'corpus-browser-list__shelf-select ghost-select ghost-select--small'
+    shelfSel.setAttribute('aria-label', t('corpus_collection_add'))
+    const placeholder = document.createElement('option')
+    placeholder.value = ''
+    placeholder.textContent = t('corpus_collection_add')
+    placeholder.disabled = true
+    placeholder.selected = true
+    shelfSel.appendChild(placeholder)
+    for (const col of _collectionsCache) {
+      const opt = document.createElement('option')
+      opt.value = col.id
+      opt.textContent = col.name
+      shelfSel.appendChild(opt)
+    }
+    shelfSel.addEventListener('change', async (e) => {
+      e.stopPropagation()
+      const colId = shelfSel.value
+      if (!colId) return
+      await _addToCollection(item.id, colId)
+      shelfSel.value = ''
+    })
+    li.appendChild(shelfSel)
+  }
+
+  // Bulk-mode checkbox (always present, shown only in bulk mode)
+  const checkbox = document.createElement('input')
+  checkbox.type = 'checkbox'
+  checkbox.className = 'corpus-browser-list__checkbox'
+  checkbox.setAttribute('aria-label', item.title || item.language)
+  checkbox.hidden = !_bulkMode
+  checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+      _selectedDocIds.add(item.id)
+    } else {
+      _selectedDocIds.delete(item.id)
+    }
+    _updateBulkCount()
+  })
+  li.insertBefore(checkbox, li.firstChild)
+
   return li
 }
 
@@ -2506,6 +2583,204 @@ async function _deleteCorpusNote(docId) {
   } catch { /* ignore */ }
 }
 
+// ── Collections ───────────────────────────────────────────────────────────────
+
+async function _loadCollections() {
+  try {
+    const resp = await fetch(`${API_BASE}/collections`, { headers: getAuthHeaders() })
+    if (!resp.ok) return
+    const data = await resp.json()
+    _collectionsCache = data.collections || []
+    _populateCorpusCollectionSelect()
+  } catch { /* ignore */ }
+}
+
+function _populateCorpusCollectionSelect() {
+  if (!corpusBrowserCollection) return
+  const current = corpusBrowserCollection.value
+  // Keep first option ("All shelves"), rebuild the rest
+  while (corpusBrowserCollection.options.length > 1) corpusBrowserCollection.remove(1)
+  for (const col of _collectionsCache) {
+    const opt = document.createElement('option')
+    opt.value = col.id
+    opt.textContent = `${col.name} (${col.item_count})`
+    corpusBrowserCollection.appendChild(opt)
+  }
+  // Append "New shelf…" option
+  const newOpt = document.createElement('option')
+  newOpt.value = '__new__'
+  newOpt.textContent = t('corpus_collection_new')
+  corpusBrowserCollection.appendChild(newOpt)
+  if ([...corpusBrowserCollection.options].some(o => o.value === current)) {
+    corpusBrowserCollection.value = current
+  }
+}
+
+async function _addToCollection(docId, colId) {
+  try {
+    await fetch(`${API_BASE}/collections/${encodeURIComponent(colId)}/items/${encodeURIComponent(docId)}`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+    })
+    await _loadCollections()
+  } catch { /* ignore */ }
+}
+
+async function _createCollection(name) {
+  try {
+    const resp = await fetch(`${API_BASE}/collections`, {
+      method: 'POST',
+      headers: { ...getAuthHeaders(), 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name }),
+    })
+    if (resp.ok) {
+      await _loadCollections()
+      return await resp.json()
+    }
+  } catch { /* ignore */ }
+  return null
+}
+
+// ── Bulk mode ─────────────────────────────────────────────────────────────────
+
+function _updateBulkCount() {
+  const countEl = document.querySelector('#corpus-bulk-count')
+  if (countEl) countEl.textContent = `${_selectedDocIds.size} selected`
+}
+
+function _enterBulkMode() {
+  _bulkMode = true
+  _selectedDocIds.clear()
+  document.querySelector('#corpus-bulk-select-btn')?.setAttribute('aria-pressed', 'true')
+  document.querySelector('#corpus-bulk-bar')?.removeAttribute('hidden')
+  corpusBrowserList?.querySelectorAll('.corpus-browser-list__checkbox').forEach(cb => {
+    cb.hidden = false
+    cb.checked = false
+  })
+  _updateBulkCount()
+}
+
+function _exitBulkMode() {
+  _bulkMode = false
+  _selectedDocIds.clear()
+  document.querySelector('#corpus-bulk-select-btn')?.setAttribute('aria-pressed', 'false')
+  const bulkBar = document.querySelector('#corpus-bulk-bar')
+  if (bulkBar) bulkBar.hidden = true
+  corpusBrowserList?.querySelectorAll('.corpus-browser-list__checkbox').forEach(cb => {
+    cb.hidden = true
+    cb.checked = false
+  })
+}
+
+async function _executeBulkTag(action) {
+  const tag = document.querySelector('#corpus-bulk-tag-input')?.value.trim()
+  if (!tag || _selectedDocIds.size === 0) return
+  try {
+    await fetch(`${API_BASE}/corpus/bulk/tags`, {
+      method: 'POST',
+      headers: { ...getAuthHeaders(), 'Content-Type': 'application/json' },
+      body: JSON.stringify({ doc_ids: [..._selectedDocIds], tag, action }),
+    })
+  } catch { /* ignore */ }
+  _exitBulkMode()
+  await Promise.all([_loadCorpus(), _populateTagFilter()])
+}
+
+// ── Import history ────────────────────────────────────────────────────────────
+
+async function _loadImportLog() {
+  const list = document.querySelector('#corpus-import-log-list')
+  if (!list) return
+  try {
+    const resp = await fetch(`${API_BASE}/corpus/import-log?limit=20`, { headers: getAuthHeaders() })
+    if (!resp.ok) return
+    const data = await resp.json()
+    list.innerHTML = ''
+    if (!data.entries.length) {
+      const li = document.createElement('li')
+      li.className = 'corpus-import-log__empty'
+      li.textContent = t('corpus_import_log_empty')
+      list.appendChild(li)
+      return
+    }
+    for (const e of data.entries) {
+      const li = document.createElement('li')
+      li.className = `corpus-import-log__item corpus-import-log__item--${e.status}`
+      const statusSpan = document.createElement('span')
+      statusSpan.className = 'corpus-import-log__status'
+      const statusKey = { success: 'corpus_import_log_ok', failed: 'corpus_import_log_fail', duplicate: 'corpus_import_log_dup' }[e.status] || 'corpus_import_log_fail'
+      statusSpan.textContent = t(statusKey)
+      const titleSpan = document.createElement('span')
+      titleSpan.className = 'corpus-import-log__title'
+      try { titleSpan.textContent = e.title || new URL(e.url).hostname } catch { titleSpan.textContent = e.url }
+      li.appendChild(statusSpan)
+      li.appendChild(titleSpan)
+      if (e.error_detail) {
+        const err = document.createElement('span')
+        err.className = 'corpus-import-log__error'
+        err.textContent = e.error_detail
+        li.appendChild(err)
+      }
+      list.appendChild(li)
+    }
+  } catch { /* ignore */ }
+}
+
+// ── Continue reading strip ────────────────────────────────────────────────────
+
+async function _loadInProgress() {
+  const section = document.querySelector('#corpus-in-progress')
+  const list    = document.querySelector('#corpus-in-progress-list')
+  if (!section || !list) return
+  try {
+    const resp = await fetch(`${API_BASE}/corpus/in-progress?limit=10`, { headers: getAuthHeaders() })
+    if (!resp.ok) return
+    const data = await resp.json()
+    if (!data.items.length) { section.hidden = true; return }
+    list.innerHTML = ''
+    for (const item of data.items) list.appendChild(_buildInProgressCard(item))
+    section.hidden = false
+  } catch { section.hidden = true }
+}
+
+function _buildInProgressCard(item) {
+  const li  = document.createElement('li')
+  li.className = 'corpus-in-progress__card'
+  const pct = Math.round((item.completion_fraction || 0) * 100)
+
+  const lang = document.createElement('span')
+  lang.className = 'corpus-in-progress__lang'
+  lang.textContent = item.language.toUpperCase()
+
+  const title = document.createElement('span')
+  title.className = 'corpus-in-progress__title'
+  title.textContent = item.title || item.language
+
+  const bar = document.createElement('div')
+  bar.className = 'corpus-in-progress__bar'
+  bar.setAttribute('role', 'progressbar')
+  bar.setAttribute('aria-valuemin', '0')
+  bar.setAttribute('aria-valuemax', '100')
+  bar.setAttribute('aria-valuenow', String(pct))
+  const fill = document.createElement('div')
+  fill.className = 'corpus-in-progress__fill'
+  fill.style.inlineSize = `${pct}%`
+  bar.appendChild(fill)
+
+  const pctSpan = document.createElement('span')
+  pctSpan.className = 'corpus-in-progress__pct'
+  pctSpan.textContent = `${pct}%`
+
+  const resumeBtn = document.createElement('button')
+  resumeBtn.type = 'button'
+  resumeBtn.className = 'ghost-button ghost-button--small corpus-in-progress__resume'
+  resumeBtn.textContent = t('corpus_continue_btn')
+  resumeBtn.addEventListener('click', () => _loadSource(item.source_document_id, item.language, item.next_position))
+
+  li.append(lang, title, bar, pctSpan, resumeBtn)
+  return li
+}
+
 async function _populateImportLangSelect() {
   if (!corpusImportLang) return
   try {
@@ -2562,7 +2837,13 @@ openCorpusBrowserBtn?.addEventListener('click', async () => {
   corpusBrowserDialog?.showModal()
   await _populateCorpusLangSelect()
   await _loadCorpus()
-  await Promise.all([_loadCorpusStats(), _populateTagFilter(), _populateImportLangSelect()])
+  await Promise.all([
+    _loadCorpusStats(),
+    _populateTagFilter(),
+    _populateImportLangSelect(),
+    _loadCollections(),
+    _loadInProgress(),
+  ])
 })
 
 corpusBrowserCloseBtn?.addEventListener('click', () => corpusBrowserDialog?.close())
@@ -2579,6 +2860,33 @@ corpusBrowserLang?.addEventListener('change', () => _loadCorpus())
 corpusBrowserType?.addEventListener('change', () => _loadCorpus())
 corpusBrowserSort?.addEventListener('change', () => _loadCorpus())
 corpusBrowserTag?.addEventListener('change',  () => _loadCorpus())
+corpusBrowserCollection?.addEventListener('change', async () => {
+  if (corpusBrowserCollection.value === '__new__') {
+    const name = prompt(t('corpus_collection_new'))?.trim()
+    corpusBrowserCollection.value = ''
+    if (name) {
+      const col = await _createCollection(name)
+      if (col) corpusBrowserCollection.value = col.id
+    }
+  }
+  _loadCorpus()
+})
+
+document.querySelector('#corpus-bulk-select-btn')?.addEventListener('click', () => {
+  if (_bulkMode) _exitBulkMode(); else _enterBulkMode()
+})
+document.querySelector('#corpus-bulk-tag-add-btn')?.addEventListener('click', () => _executeBulkTag('add'))
+document.querySelector('#corpus-bulk-tag-remove-btn')?.addEventListener('click', () => _executeBulkTag('remove'))
+document.querySelector('#corpus-bulk-done-btn')?.addEventListener('click', _exitBulkMode)
+
+document.querySelector('#corpus-import-log-toggle')?.addEventListener('click', () => {
+  const toggle = document.querySelector('#corpus-import-log-toggle')
+  const list   = document.querySelector('#corpus-import-log-list')
+  const open   = list?.hidden
+  if (list) list.hidden = !open
+  toggle?.setAttribute('aria-expanded', String(!!open))
+  if (open) _loadImportLog()
+})
 
 corpusBrowserStats?.querySelectorAll('.corpus-stats-chip').forEach(chip => {
   chip.addEventListener('click', () => {

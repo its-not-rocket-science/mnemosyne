@@ -329,6 +329,48 @@ class CorpusDocumentNoteRow(Base):
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
 
 
+class CorpusCollectionRow(Base):
+    """Named shelf for organizing corpus documents."""
+
+    __tablename__ = "corpus_collections"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    user_id: Mapped[str] = mapped_column(String(50), index=True)
+    name: Mapped[str] = mapped_column(String(100))
+    position: Mapped[int] = mapped_column(Integer, default=0)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+
+class CorpusCollectionItemRow(Base):
+    """Membership record mapping one document into one collection."""
+
+    __tablename__ = "corpus_collection_items"
+
+    collection_id: Mapped[str] = mapped_column(
+        String(36), ForeignKey("corpus_collections.id", ondelete="CASCADE"), primary_key=True
+    )
+    source_document_id: Mapped[str] = mapped_column(
+        String(36), ForeignKey("source_documents.id", ondelete="CASCADE"), primary_key=True
+    )
+    user_id: Mapped[str] = mapped_column(String(50))
+    added_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+
+class CorpusImportLogRow(Base):
+    """Audit log of corpus import attempts (success, failed, or duplicate)."""
+
+    __tablename__ = "corpus_import_log"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    user_id: Mapped[str] = mapped_column(String(50), index=True)
+    url: Mapped[str] = mapped_column(Text)
+    status: Mapped[str] = mapped_column(String(20))  # success / failed / duplicate
+    title: Mapped[str | None] = mapped_column(Text, nullable=True)
+    error_detail: Mapped[str | None] = mapped_column(Text, nullable=True)
+    source_document_id: Mapped[str | None] = mapped_column(String(36), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
+
+
 class UserKnowledgeRow(Base):
     """FSRS state and mastery metrics for one (user, canonical object) pair.
 
