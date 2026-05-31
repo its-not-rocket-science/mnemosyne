@@ -32,7 +32,7 @@ table from live plugin declarations.
 | ar (Arabic) | none | **partial** | none | **partial** | none | stub | none | none | **13** |
 | he (Hebrew) | none | **partial** | none | **partial** | none | stub | none | none | **13** |
 | zh (Chinese) | none | none | none | none | none | partial | partial | none | 8 |
-| ja (Japanese) | none | none | none | stub | none | partial | stub | none | 7 |
+| ja (Japanese) | none | none | none | stub | none | **partial** | stub | none | **14** |
 | la (Latin) | none | none | none | none | none | stub | none | none | 7 |
 | grc (Koine Greek) | none | none | none | none | none | stub | partial | none | 7 |
 | ko (Korean) | none | none | none | none | none | none | none | none | 5 |
@@ -176,11 +176,15 @@ classifiers or embedding-based detectors in the current codebase.
 - `heteronyms` field added for the 15 most common polyphonic characters (重 行 乐 长 中 好 还 得 数 种 假 发 差 朝 大); each entry lists readings with meaning and example. Characters outside this set still receive a single reading from pypinyin.
 
 ### Japanese
-- yojijukugo detection fails when spaCy splits the 4-char compound into
-  sub-morpheme tokens (observed for most common yojijukugo in ja_core_news_sm).
-- keigo detection via spaCy lemmas is limited to the ~15 honoric/humble lemma
+- Yojijukugo detection uses a two-pass hybrid: raw 4-char string pre-scan (catches
+  SudachiPy splits such as 一石|二鳥) plus token-surface fallback. Catalog: ~50 entries.
+  Detection is robust; coverage is limited to the catalog.
+- Keigo detection via spaCy lemmas is limited to the ~15 honorific/humble lemma
   table and the polite ます/ません endings.
-- No pitch-accent information.
+- Pitch accent: curated NHK-standard table of ~60 high-frequency lemmas; stored as
+  `lesson_data["pitch_accent"]` with `drop_mora` (NHK accent number), `pattern`
+  (heiban/atamadaka/nakadaka/odaka), and `note` for minimal pairs. Coverage limited
+  to the curated table; full coverage requires an OJAD/NHK dataset integration.
 
 ### Latin
 - Morph index: ~3 400 forms from UD ITTB treebank. Forms in the morph index
@@ -394,9 +398,9 @@ Priority order based on pedagogical impact vs implementation cost:
    The adapter code and extractor methods are already in place; this is a deployment step.
    Grammar\_nuance would advance from `partial` to `strong` for both languages.
 
-4. **ja yojijukugo** — extractor detects them but spaCy splits all common
-   4-char compounds.  Workaround: pre-scan sentence for dictionary matches
-   before passing to spaCy, or use `custom_tokenizer` to protect compounds.
+4. **ja yojijukugo** — two-pass detection (sentence pre-scan + token fallback)
+   already handles SudachiPy splits. Catalog expanded to ~50 entries. Next step:
+   expand further toward 100+ entries for better recall; no code changes needed.
 
 5. **ru verbal government** — current table has ~10 verbs.  Expanding to
    100+ high-frequency verbs would meaningfully improve grammar\_nuance
