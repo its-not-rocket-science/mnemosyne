@@ -72,6 +72,9 @@
         <!-- Slotted into nav__end alongside the expand button -->
         <span id="nav-due-badge" class="nav-due-badge" hidden
               aria-live="polite" aria-atomic="true"></span>
+        <button type="button" id="offline-queue-badge" class="offline-queue-badge" hidden
+                aria-live="polite" aria-atomic="true"
+                aria-haspopup="dialog"></button>
         <div id="user-info" class="user-info" hidden
              data-i18n-aria-label="account_aria" aria-label="Account">
           <span id="user-email" class="user-info__email"
@@ -805,6 +808,19 @@
           <button type="button" id="gdpr-ok-btn" class="button-primary"
                   data-i18n="gdpr_close">Close</button>
         </div>
+      </div>
+    </dialog>
+
+    <!-- Offline queue explain dialog — opened by clicking the offline badge -->
+    <dialog id="offline-explain-dialog" class="offline-explain-dialog picker-dialog"
+            aria-labelledby="offline-explain-heading">
+      <div class="picker-dialog__inner stack">
+        <div class="picker-dialog__header">
+          <h2 id="offline-explain-heading" data-i18n="offline_explain_heading">Queued reviews</h2>
+          <button type="button" id="offline-explain-close" class="dialog-close-btn"
+                  data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
+        </div>
+        <p id="offline-explain-body" class="offline-explain-dialog__body"></p>
       </div>
     </dialog>
 

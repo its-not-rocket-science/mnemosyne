@@ -46,6 +46,81 @@
   }
 }
 
+/* ── Offline queue badge ────────────────────────────────────────────────────── */
+
+.offline-queue-badge {
+  /* Inherit pill shape from .nav-due-badge but with a text label */
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 0.5rem;
+  padding-block: 0.15rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+  vertical-align: middle;
+  margin-inline-end: 0.25rem;
+  background: oklch(78% 0.12 65);
+  color: oklch(25% 0.08 65);
+  transition: opacity 0.2s;
+}
+
+.offline-queue-badge[hidden] { display: none; }
+
+.offline-queue-badge[data-state="offline"] {
+  background: oklch(72% 0.14 45);
+  color: oklch(22% 0.10 45);
+}
+
+.offline-queue-badge[data-state="pending"] {
+  background: oklch(82% 0.10 80);
+  color: oklch(28% 0.08 80);
+}
+
+.offline-queue-badge[data-state="syncing"] {
+  background: oklch(68% 0.12 250);
+  color: white;
+  animation: _offline-pulse 1.2s ease-in-out infinite;
+}
+
+.offline-queue-badge[data-state="synced"] {
+  background: oklch(68% 0.14 145);
+  color: white;
+}
+
+.offline-queue-badge[data-state="expired"] {
+  background: oklch(60% 0.16 25);
+  color: white;
+}
+
+@keyframes _offline-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
+}
+
+/* ── Offline explain dialog ──────────────────────────────────────────────────── */
+
+.offline-explain-dialog {
+  max-inline-size: 22rem;
+}
+
+.offline-explain-dialog__body {
+  font-size: var(--font-size-body, 0.9rem);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (forced-colors: active) {
+  .offline-queue-badge {
+    background: Highlight;
+    color: HighlightText;
+    border: 1px solid HighlightText;
+  }
+}
+
 /* ── Review panel container ─────────────────────────────────────────────────── */
 
 #review-panel {

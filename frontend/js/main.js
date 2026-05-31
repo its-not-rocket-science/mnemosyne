@@ -3829,9 +3829,40 @@ async function getTermProgress(language) {
 
 // ── Offline review queue ──────────────────────────────────────────────────────
 
+let _offlineJwtExpired = false
+
+async function updateOfflineBadge() {
+  const badge = document.querySelector('#offline-queue-badge')
+  if (!badge) return
+  const n = await countPendingReviews()
+  if (n === 0) {
+    badge.hidden = true
+    badge.dataset.state = ''
+    _offlineJwtExpired = false
+    return
+  }
+  badge.hidden = false
+  if (_offlineJwtExpired) {
+    badge.textContent = ti('offline_jwt_expired', { n })
+    badge.dataset.state = 'expired'
+  } else if (!navigator.onLine) {
+    badge.textContent = ti('offline_queued', { n })
+    badge.dataset.state = 'offline'
+  } else {
+    badge.textContent = ti('offline_pending', { n })
+    badge.dataset.state = 'pending'
+  }
+}
+
 async function drainReviewQueue() {
   const pending = await getPendingReviews()
   if (!pending.length) return
+
+  const badge = document.querySelector('#offline-queue-badge')
+  if (badge && !badge.hidden) {
+    badge.dataset.state = 'syncing'
+    badge.textContent = t('offline_syncing')
+  }
 
   let synced = 0
   for (const { key, value } of pending) {
@@ -3849,21 +3880,54 @@ async function drainReviewQueue() {
         await deleteReview(key)
         synced++
       } else if (response.status === 401) {
-        // JWT expired while offline — stop drain and notify; keep queue intact.
+        _offlineJwtExpired = true
         setStatus(t('session_expired_queue'), 'error')
+        await updateOfflineBadge()
         break
       } else {
-        // Server error — stop and retry silently on next online event.
+        await updateOfflineBadge()
         break
       }
     } catch {
+      await updateOfflineBadge()
       break
     }
   }
 
+  if (synced > 0) {
+    if (badge) {
+      badge.hidden = false
+      badge.dataset.state = 'synced'
+      badge.textContent = ti('offline_synced', { n: synced })
+    }
+    setTimeout(updateOfflineBadge, 3000)
+  } else {
+    await updateOfflineBadge()
+  }
 }
 
 window.addEventListener('online', drainReviewQueue)
+window.addEventListener('offline', updateOfflineBadge)
+setTimeout(updateOfflineBadge, 200)
+
+document.querySelector('#offline-queue-badge')?.addEventListener('click', async () => {
+  const n = await countPendingReviews()
+  const dialog = document.querySelector('#offline-explain-dialog')
+  const body   = document.querySelector('#offline-explain-body')
+  if (!dialog || !body) return
+  if (_offlineJwtExpired) {
+    body.textContent = ti('offline_explain_expired', { n })
+  } else if (!navigator.onLine) {
+    body.textContent = ti('offline_explain_offline', { n })
+  } else {
+    body.textContent = ti('offline_explain_pending', { n })
+  }
+  dialog.showModal()
+})
+
+document.querySelector('#offline-explain-close')?.addEventListener('click', () => {
+  document.querySelector('#offline-explain-dialog')?.close()
+})
 
 
 // ── Text-to-speech ────────────────────────────────────────────────────────────
