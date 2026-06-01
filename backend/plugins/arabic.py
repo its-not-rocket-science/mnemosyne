@@ -11,18 +11,23 @@ What this plugin does reliably
   - Correct RTL / arabic metadata for frontend rendering and font selection.
   - TTS tag "ar" (browser SpeechSynthesis covers MSA on major platforms).
 
-When camel-tools is installed (optional)
-─────────────────────────────────────────
-  Rich vocabulary candidates gain: POS, root, pattern, gloss, voice, aspect,
-  mood, and proclitic fields (prc0/1/2).  The nuance extractor (ar.py) uses
-  these to fire root_pattern, verb_form, and proclitic signals.
+When camel-tools is installed (poetry install --extras arabic)
+──────────────────────────────────────────────────────────────
+  Rich vocabulary candidates gain: POS, root (trilateral, e.g. ك.ت.ب),
+  pattern, gloss, voice, aspect, mood, and proclitic fields (prc0/1/2).
+  The nuance extractor (ar.py) fires root_pattern, verb_form, and
+  proclitic signals using this data.
 
-  Installation:
-    pip install camel-tools
+  After installing the package, download the morphology database once:
     camel_data -i morphology-db-msa-r13
 
-Without camel-tools
-───────────────────
+  Note: camel-tools pulls in torch + transformers (~2 GB).  It is declared
+  as an optional extra (arabic) rather than a core dependency for this reason.
+  In-process analysis is rule-based (database lookup); torch is a camel-tools
+  package-level dep but is not used by the morphology analyzer at runtime.
+
+Without camel-tools (dictionary mode)
+──────────────────────────────────────
   Vocabulary candidates carry only lemma (= undiacritised surface form).
   The nuance extractor still fires definite_article and negation signals.
 

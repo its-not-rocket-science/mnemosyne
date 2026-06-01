@@ -14,15 +14,21 @@ What this plugin does reliably
   - Correct RTL / hebrew metadata for frontend rendering and font selection.
   - TTS tag "he" (browser SpeechSynthesis covers modern Hebrew).
 
-When he_dep_ud_hybrid spaCy model is installed (optional)
-──────────────────────────────────────────────────────────
+When he_dep_ud_hybrid spaCy model is installed (CURRENTLY BLOCKED)
+────────────────────────────────────────────────────────────────────
   Rich vocabulary candidates gain: POS, binyan, tense, person, number,
   gender, verb_form, and construct state.  The nuance extractor (he.py)
   uses binyan + tense to fire the verb_template signal.
 
-  Install the he_dep_ud_hybrid model via whatever channel the Hebrew NLP
-  community provides; the adapter gates on spacy.load() succeeding.
-    python -m spacy download he_dep_ud_hybrid
+  BLOCKER: hebspacy 0.1.7 pins spacy==3.2.2, which conflicts with our
+  spacy ^3.7 requirement and would break all other spaCy language plugins.
+
+  Spike outcome (2026-06-01): defer until a spaCy-compatible Hebrew model
+  is available.  Stanza Hebrew (UD treebank) provides tense/person/number
+  but does not annotate binyan — the central Hebrew morphological category —
+  making it insufficient for the existing nuance extractor wiring.
+
+  Track: https://github.com/CAMeL-Lab/HebSpaCy for spaCy 3.x compatibility.
 
 Known limitations
 ─────────────────

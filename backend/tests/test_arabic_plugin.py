@@ -369,6 +369,79 @@ class TestLessonStore:
     def test_missing_id_returns_none(self, plugin: ArabicPlugin) -> None:
         assert plugin.get_lesson("no-such-id") is None
 
+
+# ── CAMeL Tools morphology (skipped when library absent) ─────────────────────
+
+from backend.morphology import ar_adapter as _ar_adapter  # noqa: E402
+
+
+@pytest.mark.skipif(not _ar_adapter.is_available(), reason="camel-tools not installed or morphology-db-msa-r13 not downloaded")
+class TestCAMeLMorphology:
+    """These tests run only when camel-tools + morphology-db-msa-r13 are present.
+
+    They validate root annotation, proclitic decomposition, and verb aspect
+    detection — the highest-value signals unlocked by the optional extra.
+    """
+
+    def test_adapter_is_available(self) -> None:
+        assert _ar_adapter.is_available()
+
+    def test_verb_root_annotated(self) -> None:
+        # يكتب (he writes) — imperfective form of root ك.ت.ب
+        tokens = _ar_adapter.analyze_tokens(["يكتب"])
+        assert tokens[0].root == "ك.ت.ب"
+
+    def test_noun_root_annotated(self) -> None:
+        # كتاب (book) shares root ك.ت.ب
+        tokens = _ar_adapter.analyze_tokens(["كتاب"])
+        assert tokens[0].root == "ك.ت.ب"
+
+    def test_verb_aspect_imperfective(self) -> None:
+        tokens = _ar_adapter.analyze_tokens(["يكتب"])
+        assert tokens[0].aspect == "i"  # imperfective
+
+    def test_definite_article_proclitic(self) -> None:
+        # الكتاب = Al- + kitaab
+        tokens = _ar_adapter.analyze_tokens(["الكتاب"])
+        assert "Al" in tokens[0].prc0 or tokens[0].prc0.startswith("Al")
+
+    def test_prepositional_proclitic(self) -> None:
+        # بالقلم = bi- + Al- + qalam
+        tokens = _ar_adapter.analyze_tokens(["بالقلم"])
+        t = tokens[0]
+        assert "bi" in t.prc1 or "li" in t.prc1 or t.prc1 != "0"
+
+    def test_conjunction_proclitic(self) -> None:
+        # وكتب = wa- + kataba
+        tokens = _ar_adapter.analyze_tokens(["وكتب"])
+        t = tokens[0]
+        assert "wa" in t.prc2 or t.prc2 not in ("", "0", "na")
+
+    def test_source_is_camel_tools(self) -> None:
+        tokens = _ar_adapter.analyze_tokens(["يكتب"])
+        assert tokens[0].source == "camel_tools"
+
+    def test_different_roots_distinguished(self) -> None:
+        # درس (study) should not get root ك.ت.ب
+        tokens = _ar_adapter.analyze_tokens(["درس"])
+        assert tokens[0].root != "ك.ت.ب"
+
+    def test_plugin_lesson_data_includes_root_when_available(self, plugin: ArabicPlugin) -> None:
+        result = plugin.analyze_sentence("يكتب")
+        cands = [c for c in result.candidates if "root" in c.lesson_data]
+        assert len(cands) >= 1, "CAMeL mode should add root to lesson_data"
+
+    def test_plugin_lesson_data_includes_pos_when_available(self, plugin: ArabicPlugin) -> None:
+        result = plugin.analyze_sentence("يكتب")
+        cands = [c for c in result.candidates if "pos" in c.lesson_data]
+        assert len(cands) >= 1
+
+    def test_fallback_still_works_for_unknown_tokens(self) -> None:
+        # Purely latin/non-Arabic token — should fall back gracefully
+        tokens = _ar_adapter.analyze_tokens(["hello"])
+        assert tokens[0].source == "camel_tools"  # CAMeL may parse it, or return NOAN
+        assert tokens[0].text == "hello"
+
     def test_stored_object_is_retrievable(self, plugin: ArabicPlugin) -> None:
         obj = CandidateObject(
             canonical_form="كتاب",
