@@ -15,7 +15,20 @@ Canonical form conventions (IMMUTABLE — first DB write is final):
   XSV-compound verbs: preceding NNG/XR stem + 하다
     e.g. 공부(NNG) + 하(XSV) → verb:공부하다
 
-Why POS-prefixed canonicals (not bare lemma like Japanese):
+  conj:{lemma}:{tense}:{register}  conjugation pattern extracted from EP+EF morphemes
+    e.g. conj:먹다:past:informal_polite
+
+    tense values  : present | past | future
+    register values: formal_polite | informal_polite | plain_informal | plain_declarative
+
+    EP (pre-final ending) sources: 었/았 → past; 겠 → future
+    EF (sentence-final ending) sources:
+      ᆸ니다/습니다/ᆸ니까/습니까 → formal_polite
+      어요/아요/여요            → informal_polite
+      어/아/여                   → plain_informal
+      다/ㄴ다/는다               → plain_declarative
+
+  Why POS-prefixed canonicals (not bare lemma like Japanese):
   - Korean homograph problem: 일 is NNG "day/work" and also root of 일하다
   - noun:일  and  verb:일하다  are distinct canonical objects with no collision
   - noun: prefix prevents the same Hangul surface from shadowing verb:
@@ -35,7 +48,7 @@ from typing import Any
 
 from backend.plugins.cefr_vocab import A1 as _CEFR_A1
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
-from backend.schemas.parse import CandidateObject, CandidateSentenceResult
+from backend.schemas.parse import CandidateObject, CandidateSentenceResult, RelationHint
 
 logger = logging.getLogger(__name__)
 
@@ -54,15 +67,44 @@ _XSV_TAG        = "XSV"
 _XR_TAG         = "XR"
 _NOUN_STEM_TAGS = frozenset({"NNG", "XR"})
 
-# Tags that carry no vocabulary lesson value — skipped entirely.
+# Tags that carry no lesson value — skipped entirely.
+# EP (pre-final) and EF (sentence-final) are NOT skipped; they are handled
+# explicitly in _analyze_with_kiwi for conjugation extraction.
 _SKIP_TAGS = frozenset({
     "JKS", "JKC", "JKG", "JKO", "JKB", "JKV", "JKQ",
     "JX", "JC",
-    "EP", "EF", "EC", "ETN", "ETM",
+    "EC", "ETN", "ETM",
     "XPN", "XSN", "XSA", "MM",
     "SF", "SP", "SS", "SW", "SE", "SN", "SL", "SH", "SB", "SO",
     "IC",  # interjection
 })
+
+# ── Conjugation classification tables ────────────────────────────────────────
+
+# Tense from pre-final ending (EP tag) morpheme forms.
+_EP_TENSE: dict[str, str] = {
+    "었": "past",
+    "았": "past",
+    "셨": "past",    # honorific past (시 + 었 contraction)
+    "겠": "future",
+}
+
+# Politeness register from sentence-final ending (EF tag) morpheme forms.
+_EF_REGISTER: dict[str, str] = {
+    "ᆸ니다": "formal_polite",
+    "습니다": "formal_polite",
+    "ᆸ니까": "formal_polite",
+    "습니까": "formal_polite",
+    "어요":   "informal_polite",
+    "아요":   "informal_polite",
+    "여요":   "informal_polite",
+    "어":     "plain_informal",
+    "아":     "plain_informal",
+    "여":     "plain_informal",
+    "다":     "plain_declarative",
+    "ㄴ다":   "plain_declarative",
+    "는다":   "plain_declarative",
+}
 
 # ── Sentence splitting ────────────────────────────────────────────────────────
 _SENT_RE   = re.compile(r"[^.!?\n]+[.!?\n]?")
@@ -96,6 +138,61 @@ def _get_kiwi() -> Any:
     return _kiwi
 
 
+# ── Conjugation helpers ───────────────────────────────────────────────────────
+
+def _classify_tense(ep_forms: list[str]) -> str:
+    for f in ep_forms:
+        t = _EP_TENSE.get(f)
+        if t:
+            return t
+    return "present"
+
+
+def _classify_register(ef_form: str) -> str | None:
+    return _EF_REGISTER.get(ef_form)
+
+
+def _make_conjugation_candidate(
+    verb_lemma: str,
+    verb_surface: str,
+    ep_forms: list[str],
+    ef_form: str,
+    stem_prefix: str,  # "verb" or "adj"
+) -> CandidateObject | None:
+    register = _classify_register(ef_form)
+    if register is None:
+        return None  # unclassified ending — don't emit
+    tense = _classify_tense(ep_forms)
+    cf = f"conj:{verb_lemma}:{tense}:{register}"
+    # Morpheme-form concatenation; may differ orthographically from the surface
+    # due to Korean consonant-combination rules (e.g. 가+ᆸ니다 → 갑니다).
+    conjugated = verb_surface + "".join(ep_forms) + ef_form
+    return CandidateObject(
+        canonical_form=cf,
+        surface_form=conjugated,
+        type="conjugation",
+        label=conjugated,
+        lesson_data={
+            "lemma": verb_lemma,
+            "pos": "VERB" if stem_prefix == "verb" else "ADJ",
+            "tense": tense,
+            "register": register,
+            "verb_stem": verb_surface,
+            "ep_markers": list(ep_forms),
+            "ef_marker": ef_form,
+            "conjugated_form": conjugated,
+        },
+        confidence=0.85,
+        relation_hints=[
+            RelationHint(
+                relation_type="conjugation_of",
+                target_canonical_form=f"{stem_prefix}:{verb_lemma}",
+                target_type="vocabulary",
+            )
+        ],
+    )
+
+
 # ── Plugin ────────────────────────────────────────────────────────────────────
 
 class KoreanPlugin:
@@ -109,12 +206,12 @@ class KoreanPlugin:
         script_family="other",          # Hangul; no dedicated ScriptFamily literal
         tokenization_mode="whitespace", # modern Korean is word-spaced; kiwipiepy
                                         # further sub-divides into morphemes
-        morphology_depth="shallow",     # stem + POS when kiwipiepy present
+        morphology_depth="shallow",     # stem + POS + conjugation when kiwipiepy present
         lesson_modes_supported=["vocabulary", "dictionary"],
         analysis_depth="morphology_light",
         segmentation_quality="medium",  # kiwipiepy → high; heuristic → low
         tokenization_quality="medium",
-        morphology_quality="low",       # POS + stem only; no full paradigm
+        morphology_quality="medium",    # stem + POS + tense/register conjugation
         syntax_support=False,
         idiom_detection=False,
         tts_lang_tag="ko",
@@ -125,8 +222,8 @@ class KoreanPlugin:
             literary_references="none",
             cultural_references="none",
             etymology="none",
-            formality_register="stub",  # politeness register from sentence-final endings
-            grammar_nuance="stub",      # particles, negation, subject-honorific 시
+            formality_register="partial",  # register from sentence-final endings (EF)
+            grammar_nuance="stub",         # particles, negation, subject-honorific 시
             pronunciation_tts="partial",
             transliteration="none",
             proverb_tradition="none",
@@ -170,6 +267,12 @@ class KoreanPlugin:
         tokens = kiwi.tokenize(sentence)
         seen: set[str] = set()
         candidates: list[CandidateObject] = []
+
+        # Conjugation state: track the most recent verb/adj stem across tokens.
+        # Tuple: (lemma, surface_form, stem_prefix) where stem_prefix ∈ {"verb","adj"}.
+        pending_verb: tuple[str, str, str] | None = None
+        pending_ep: list[str] = []
+
         i = 0
         while i < len(tokens):
             tok = tokens[i]
@@ -196,7 +299,30 @@ class KoreanPlugin:
                             lesson_data=ld,
                             confidence=0.82,
                         ))
-                # If no preceding stem, skip the XSV (fallback handled by VV path)
+                    # compound is now the pending verb for conjugation
+                    pending_verb = (compound, prev_stem + "하", "verb")
+                    pending_ep = []
+                i += 1
+                continue
+
+            # Pre-final endings: accumulate tense markers (었/았/겠 etc.)
+            if tag == "EP":
+                pending_ep.append(tok.form)
+                i += 1
+                continue
+
+            # Sentence-final endings: emit conjugation candidate if verb pending.
+            if tag == "EF":
+                if pending_verb is not None:
+                    lemma, surface, prefix = pending_verb
+                    conj = _make_conjugation_candidate(
+                        lemma, surface, pending_ep, tok.form, prefix
+                    )
+                    if conj is not None and conj.canonical_form not in seen:
+                        seen.add(conj.canonical_form)
+                        candidates.append(conj)
+                pending_verb = None
+                pending_ep = []
                 i += 1
                 continue
 
@@ -205,9 +331,18 @@ class KoreanPlugin:
                 continue
 
             cand = self._token_to_candidate(tok, tag)
-            if cand is not None and cand.canonical_form not in seen:
-                seen.add(cand.canonical_form)
-                candidates.append(cand)
+            if cand is not None:
+                if cand.canonical_form not in seen:
+                    seen.add(cand.canonical_form)
+                    candidates.append(cand)
+                # Always update conjugation state, even if vocab was already seen.
+                if tag in _VERB_TAGS:
+                    pending_verb = (tok.form + "다", tok.form, "verb")
+                    pending_ep = []
+                elif tag == _ADJ_TAG:
+                    pending_verb = (tok.form + "다", tok.form, "adj")
+                    pending_ep = []
+
             i += 1
 
         # Remove internal _raw_tag keys used only during compound detection.
