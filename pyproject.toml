@@ -37,6 +37,18 @@ pypinyin = { version = ">=0.50", optional = true }
 # Install with:  poetry install --extras korean
 kiwipiepy = { version = ">=0.23", optional = true }
 
+# ── Arabic morphology extras (optional) ───────────────────────────────────────
+# Enables root, pattern, proclitic decomposition and verb inflection for Arabic
+# via CAMeL Tools (NYU Abu Dhabi).  Without this extra the Arabic plugin still
+# works in dictionary mode (tashkeel normalisation, nuance extractor).
+#
+# WARNING: camel-tools pulls in torch (~2 GB) + transformers + scikit-learn.
+# Do NOT add to the default Docker image unless image size is acceptable.
+#
+# Install with:  poetry install --extras arabic
+# Then run once:  camel_data -i morphology-db-msa-r13
+camel-tools = { version = ">=1.5.0", optional = true }
+
 langdetect = "^1.0.9"
 typer = ">=0.13"
 rich = "^13.0"
@@ -44,8 +56,9 @@ pyyaml = "^6.0"
 bcrypt = ">=4.0"
 
 [tool.poetry.extras]
-cjk    = ["jieba", "pypinyin"]
-korean = ["kiwipiepy"]
+cjk     = ["jieba", "pypinyin"]
+korean  = ["kiwipiepy"]
+arabic  = ["camel-tools"]
 
 [tool.poetry.scripts]
 mnemosyne-corpus = "backend.corpus.cli:app"

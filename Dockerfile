@@ -21,6 +21,11 @@ RUN pip install "poetry==$POETRY_VERSION"
 COPY pyproject.toml poetry.lock ./
 # --extras cjk installs jieba + pypinyin (Mandarin Chinese plugin).
 # --extras korean installs kiwipiepy (Korean plugin).
+# --extras arabic is intentionally OMITTED: camel-tools pulls in torch + transformers
+# (~2 GB extra), inflating the image. To enable Arabic root/proclitic morphology:
+#   1. Add --extras arabic to the poetry install line below.
+#   2. Add: RUN camel_data -i morphology-db-msa-r13
+# The Arabic plugin works in dictionary mode (tashkeel + nuance extractor) without it.
 RUN poetry install --without dev --extras cjk --extras korean --no-interaction --no-ansi
 
 # Download spaCy models.  Each model is in a separate RUN so a single
