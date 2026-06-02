@@ -42,9 +42,11 @@ from __future__ import annotations
 
 import re
 import unicodedata
+from typing import Any
 
+from backend.morphology import hi_adapter as _hi_adapter
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
-from backend.schemas.parse import CandidateObject, CandidateSentenceResult
+from backend.schemas.parse import CandidateObject, CandidateSentenceResult, RelationHint
 
 # ── Sentence splitting ────────────────────────────────────────────────────────
 # ।  U+0964 Devanagari danda  (primary sentence boundary)
@@ -252,6 +254,34 @@ _CONFIDENCE_NOTE = (
 )
 
 
+def _make_conj_canonical(lemma: str, mt: "Any") -> str:
+    """Build a stable conjugation canonical from a stanza HiMorphToken."""
+    from backend.morphology.hi_adapter import HiMorphToken  # noqa: PLC0415
+    # Primary pedagogical feature
+    if mt.verb_form == "infinitive":
+        primary = "infinitive"
+    elif mt.verb_form == "converb":
+        primary = "converb"
+    elif mt.tense == "future":
+        primary = "future"
+    elif mt.aspect:
+        primary = mt.aspect         # habitual | perfective | progressive
+    elif mt.mood and mt.mood != "indicative":
+        primary = mt.mood           # imperative | subjunctive | …
+    elif mt.tense:
+        primary = mt.tense          # present | past
+    elif mt.verb_form:
+        primary = mt.verb_form      # participle | finite
+    else:
+        primary = "finite"
+    # Append gender+number when both are known (participle agreement)
+    if mt.gender and mt.number:
+        short_g = "masc" if mt.gender == "masculine" else "fem"
+        short_n = "sing" if mt.number == "singular" else "pl"
+        return f"conj:{lemma}:{primary}:{short_g}:{short_n}"
+    return f"conj:{lemma}:{primary}"
+
+
 class HindiPlugin:
     """Hindi morphology-light plugin.
 
@@ -261,11 +291,11 @@ class HindiPlugin:
     """
 
     language_code = "hi"
-    display_name  = "Hindi (morphology-light)"
+    display_name  = "Hindi"
     direction     = "ltr"
     capabilities  = LanguageCapabilities(
         code="hi",
-        display_name="Hindi (morphology-light)",
+        display_name="Hindi",
         direction="ltr",
         script_family="devanagari",
         tokenization_mode="whitespace",
@@ -274,13 +304,13 @@ class HindiPlugin:
         analysis_depth="morphology_light",
         segmentation_quality="medium",
         tokenization_quality="medium",
-        morphology_quality="low",
+        morphology_quality="medium",   # stanza; degrades to "low" without it
         syntax_support=False,
         idiom_detection=False,
         tts_lang_tag="hi",
         transliteration_scheme="iast_approximate",
-        tense_pool=["present_habitual", "past", "future"],
-        mood_pool=["imperative", "subjunctive_or_imperative"],
+        tense_pool=["present", "past", "future", "present_habitual"],
+        mood_pool=["imperative", "subjunctive", "subjunctive_or_imperative"],
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="none",
@@ -294,10 +324,11 @@ class HindiPlugin:
             proverb_tradition="none",
             classical_or_scriptural_allusion="none",
             notes=(
-                "Morphology-light: verb tense/aspect/gender and noun case hints "
-                "derived from suffix patterns only. Detected verb forms emitted as "
-                "conjugation objects. Multi-word postpositions detected via bigram/"
-                "trigram scan. No trained model."
+                "Stanza UD model: full lemmatisation + UD POS + morphological "
+                "features (Aspect, Tense, Gender, Number, Case, Mood, VerbForm). "
+                "Falls back to suffix-rule heuristics without stanza. "
+                "Verb forms emitted as conjugation objects with RelationHint. "
+                "Multi-word postpositions detected via bigram/trigram scan."
             ),
         ),
     )
@@ -316,6 +347,244 @@ class HindiPlugin:
         ]
 
     def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
+        if _hi_adapter.is_available():
+            return self._analyze_with_stanza(sentence)
+        return self._analyze_heuristic(sentence)
+
+    # ------------------------------------------------------------------
+    # Stanza path
+    # ------------------------------------------------------------------
+
+    def _analyze_with_stanza(self, sentence: str) -> CandidateSentenceResult:
+        morph_tokens = _hi_adapter.analyze_sentence(sentence)
+        if not morph_tokens:
+            return self._analyze_heuristic(sentence)
+
+        seen: set[str] = set()
+        candidates: list[CandidateObject] = []
+
+        for mt in morph_tokens:
+            if mt.upos == "PUNCT":
+                continue
+
+            romanized = _romanise(mt.text)
+            text_lower = mt.text.lower()
+            is_latin = all(c.isascii() for c in mt.text)
+            lemma = (mt.lemma or mt.text).lower() if is_latin else (mt.lemma or mt.text)
+
+            # Postpositions (ADP)
+            if mt.upos == "ADP" or mt.text in _POSTPOSITIONS:
+                cf = mt.text
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="grammar",
+                        label=mt.text,
+                        lesson_data={
+                            "lemma":     lemma,
+                            "romanized": romanized,
+                            "pos":       "postposition",
+                        },
+                        confidence=0.85,
+                    ))
+                continue
+
+            # Function words: AUX or closed-class surface matches
+            if mt.upos == "AUX" or mt.text in _FUNCTION_WORDS:
+                cf = mt.text
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=mt.text,
+                        lesson_data={
+                            "lemma":     lemma,
+                            "romanized": romanized,
+                            "pos":       "function_word",
+                        },
+                        confidence=0.80,
+                    ))
+                continue
+
+            # Latin loanwords — keep surface-based canonical
+            if is_latin and mt.text.isalpha():
+                cf = text_lower
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=mt.text,
+                        lesson_data={
+                            "lemma":     cf,
+                            "romanized": mt.text,
+                            "pos":       mt.upos.lower(),
+                            "note":      "Latin-script loanword or technical term.",
+                        },
+                        confidence=None,
+                    ))
+                continue
+
+            # Build shared lesson_data (C9: tense+mood always present as keys)
+            base_ld: dict[str, Any] = {
+                "lemma":     lemma,
+                "pos":       mt.upos,
+                "romanized": romanized,
+                "tense":     mt.tense,
+                "mood":      mt.mood,
+            }
+            if mt.aspect:   base_ld["aspect"]    = mt.aspect
+            if mt.gender:   base_ld["gender"]    = mt.gender
+            if mt.number:   base_ld["number"]    = mt.number
+            if mt.person:   base_ld["person"]    = mt.person
+            if mt.case:     base_ld["case"]      = mt.case
+            if mt.verb_form: base_ld["verb_form"] = mt.verb_form
+
+            # Confidence: None when stanza has no features (morphologically opaque)
+            has_feats = mt.feats_raw is not None
+
+            # VERB tokens → vocabulary + conjugation
+            if mt.upos == "VERB":
+                vocab_cf = f"verb:{lemma}"
+                if vocab_cf not in seen:
+                    seen.add(vocab_cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=vocab_cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data={"lemma": lemma, "pos": "VERB", "romanized": romanized},
+                        confidence=0.85 if has_feats else 0.65,
+                    ))
+
+                conj_cf = _make_conj_canonical(lemma, mt)
+                if conj_cf not in seen:
+                    seen.add(conj_cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=conj_cf,
+                        surface_form=mt.text,
+                        type="conjugation",
+                        label=mt.text,
+                        lesson_data=dict(base_ld),
+                        confidence=0.85 if has_feats else 0.65,
+                        relation_hints=[
+                            RelationHint(
+                                relation_type="conjugation_of",
+                                target_canonical_form=f"verb:{lemma}",
+                                target_type="vocabulary",
+                            )
+                        ],
+                    ))
+                continue
+
+            # NOUN that looks like an infinitive (ends in ना, ≥ 4 chars)
+            if mt.upos == "NOUN" and mt.text.endswith("ना") and len(mt.text) >= 4:
+                # Emit infinitive conjugation first (test compatibility), then vocabulary
+                conj_cf = f"conj:{lemma}:infinitive"
+                if conj_cf not in seen:
+                    seen.add(conj_cf)
+                    inf_ld = dict(base_ld)
+                    inf_ld["verb_form"] = "infinitive"
+                    candidates.append(CandidateObject(
+                        canonical_form=conj_cf,
+                        surface_form=mt.text,
+                        type="conjugation",
+                        label=mt.text,
+                        lesson_data=inf_ld,
+                        confidence=0.70,
+                        relation_hints=[
+                            RelationHint(
+                                relation_type="conjugation_of",
+                                target_canonical_form=f"verb:{lemma}",
+                                target_type="vocabulary",
+                            )
+                        ],
+                    ))
+                vocab_cf = f"noun:{lemma}"
+                if vocab_cf not in seen:
+                    seen.add(vocab_cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=vocab_cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data=dict(base_ld),
+                        confidence=0.70 if has_feats else None,
+                    ))
+                continue
+
+            # NOUN → vocabulary
+            if mt.upos in ("NOUN", "PROPN"):
+                cf = f"noun:{lemma}"
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data=dict(base_ld),
+                        confidence=0.80 if has_feats else None,
+                    ))
+                continue
+
+            # ADJ → vocabulary
+            if mt.upos == "ADJ":
+                cf = f"adj:{lemma}"
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data=dict(base_ld),
+                        confidence=0.75 if has_feats else None,
+                    ))
+                continue
+
+            # ADV → vocabulary
+            if mt.upos == "ADV":
+                cf = f"adv:{lemma}"
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data=dict(base_ld),
+                        confidence=0.70 if has_feats else None,
+                    ))
+                continue
+
+            # Everything else (PRON, DET, PART, NUM, CCONJ, SCONJ, X, …)
+            cf = mt.text
+            if cf not in seen:
+                seen.add(cf)
+                else_ld = dict(base_ld)
+                else_ld["confidence_note"] = "Closed-class or low-resource POS; stanza parse."
+                candidates.append(CandidateObject(
+                    canonical_form=cf,
+                    surface_form=mt.text,
+                    type="vocabulary",
+                    label=mt.text,
+                    lesson_data=else_ld,
+                    confidence=0.65 if has_feats else None,
+                ))
+
+        return CandidateSentenceResult(text=sentence, candidates=candidates)
+
+    # ------------------------------------------------------------------
+    # Heuristic suffix-rule fallback path
+    # ------------------------------------------------------------------
+
+    def _analyze_heuristic(self, sentence: str) -> CandidateSentenceResult:
         candidates: list[CandidateObject] = []
         seen: set[str] = set()
 
