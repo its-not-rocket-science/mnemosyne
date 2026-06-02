@@ -8,7 +8,7 @@
   "capability_assertions": {
     "idioms": ["none"],
     "grammar_nuance": ["stub"],
-    "formality_register": ["stub"]
+    "formality_register": ["stub", "partial"]
   },
   "capability_gaps": {},
   "cases": [
