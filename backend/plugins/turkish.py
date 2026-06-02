@@ -1,6 +1,11 @@
-"""Turkish plugin — morphology-light with agglutinative suffix analysis.
+"""Turkish plugin — zeyrek morphology with agglutinative suffix fallback.
 
 BCP-47 code "tr", LTR, Latin script with Turkish special characters.
+
+NLP hierarchy (tried in order, lazy-loaded once per process):
+  1. zeyrek  — poetry install --extras turkish  (recommended; rule-based FST,
+                no neural network, punkt_tab downloaded automatically on first use)
+  2. Suffix-rule heuristic — outermost suffix only; no lemmatisation
 
 What this plugin does reliably
 ──────────────────────────────
@@ -8,40 +13,50 @@ What this plugin does reliably
   - Whitespace tokenisation (Turkish is whitespace-delimited).
   - Turkish dotted-I normalisation (İ→i, I→ı for case folding).
   - Vowel harmony classification: back (a/ı/o/u) vs. front (e/i/ö/ü).
-    Most Turkish suffixes alternate based on the last vowel in the stem.
-  - Suffix chain hints for morphological features (longest-match first):
-    • Infinitive: -mak/-mek
-    • Negation + progressive: -mıyor/-miyor/-muyor/-müyor
-    • Progressive present: -ıyor/-iyor/-uyor/-üyor
-    • Definite past: -dı/-di/-du/-dü/-tı/-ti/-tu/-tü (+ person markings)
-    • Evidential/reported past: -mış/-miş/-muş/-müş
-    • Future: -ecek/-acak (+ person markings)
-    • Conditional: -sak/-sek
-    • Plural noun + case: -lardan/-lerden, -larda/-lerde, etc.
-    • Singular case: ablative, locative, genitive, comitative/instrumental
-    • Aorist 3sg: -ar/-er
-  - Words with verb morphology emitted as "conjugation" type with
-    tense/mood/person/number fields.
-  - Common Turkish function words and particles identified.
 
-Known limitations
-─────────────────
-  • Turkish agglutinative morphology stacks multiple suffixes on one stem.
-    This plugin strips only the outermost suffix; inner suffixes (possessive,
-    aspect, evidentiality stacking) are not decomposed.
-  • Vowel harmony disambiguation on ambiguous stems may be incorrect.
-  • Consonant mutation (t→d, k→ğ after vowel) partially handled.
-  • No nominal/verbal compound resolution.
-  • No trained NLP model available for Turkish in this deployment.
-  • Lemmatisation is NOT performed; canonical_form for conjugations uses
-    surface form + morphology tag.
+With zeyrek (morphology_quality="medium")
+─────────────────────────────────────────
+  Full lemmatisation + morphological decomposition.
+  Canonical forms: verb:{lemma}, noun:{lemma}, adj:{lemma}, adv:{lemma}.
+  Conjugation objects: conj:{lemma}:{tense}:{agreement}.
+  Features: tense, mood, person, number, case, possessive, negation, verb_form.
+
+Without zeyrek (morphology_quality="low")
+─────────────────────────────────────────
+  Suffix chain hints (outermost suffix only):
+    • Infinitive: -mak/-mek
+    • Progressive: -ıyor/-iyor/-uyor/-üyor
+    • Definite past: -dı/-di/-du/-dü/-tı/-ti/-tu/-tü (+ person)
+    • Evidential past: -mış/-miş/-muş/-müş
+    • Future: -ecek/-acak (+ person)
+    • Conditional: -sak/-sek
+    • Plural + case: -lardan/-lerden, -larda/-lerde, etc.
+    • Singular case: ablative, locative, genitive, comitative/instrumental
+    • Aorist 3sg: -ar/-er (min stem length enforced)
+  Canonical form uses surface form (no lemmatisation).
+
+Canonical form conventions (zeyrek path — IMMUTABLE after first DB write):
+  verb:{lemma}               vocabulary item  e.g. verb:gitmek
+  noun:{lemma}               noun             e.g. noun:ev
+  adj:{lemma}                adjective        e.g. adj:güzel
+  adv:{lemma}                adverb           e.g. adv:hızlı
+  conj:{lemma}:{tense}:{agr} conjugation      e.g. conj:gitmek:progressive:A1sg
+  conj:{lemma}:infinitive    infinitive       e.g. conj:gitmek:infinitive
+  conj:{lemma}:{mood}        mood-only        e.g. conj:gitmek:conditional
+  {word}                     function word    e.g. bir
+
+Heuristic-path canonical forms (surface-based, used when zeyrek absent):
+  {canonical}:{morph_tag}   conjugation
+  {canonical}               vocabulary / function word
 """
 from __future__ import annotations
 
 import re
+from typing import Any
 
+from backend.morphology import tr_adapter as _tr_adapter
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
-from backend.schemas.parse import CandidateObject, CandidateSentenceResult
+from backend.schemas.parse import CandidateObject, CandidateSentenceResult, RelationHint
 
 # ── Sentence splitting ────────────────────────────────────────────────────────
 _SENTENCE_RE = re.compile(r"[^.!?\n]+[.!?\n]?")
@@ -56,7 +71,6 @@ _ALL_VOWELS   = _BACK_VOWELS | _FRONT_VOWELS
 
 
 def _last_vowel_harmony(word: str) -> str:
-    """Return 'back' or 'front' based on the last vowel in the word."""
     for ch in reversed(word):
         if ch in _BACK_VOWELS:
             return "back"
@@ -66,12 +80,6 @@ def _last_vowel_harmony(word: str) -> str:
 
 
 def _normalise_turkish(token: str) -> str:
-    """Lowercase with Turkish dotted-I correction.
-
-    Turkish has two i-like letters: dotted İ/i and dotless I/ı.
-    Python's str.lower() maps I→i, but in Turkish I should map to ı.
-    This function applies the Turkish-correct lowercasing for these characters.
-    """
     return token.replace("İ", "i").replace("I", "ı").lower()
 
 
@@ -85,14 +93,10 @@ _FUNCTION_WORDS: frozenset[str] = frozenset({
     "en", "çok", "az", "daha", "hep", "her", "hiç",
 })
 
-# ── Morphological suffix rules (longest match first) ─────────────────────────
-# Each entry: (suffix_lower, feature_dict)
-# Verb features → emitted as "conjugation"; noun/adj features → "vocabulary".
+# ── Morphological suffix rules (heuristic fallback only) ─────────────────────
 _SUFFIX_RULES: list[tuple[str, dict]] = [
-    # Infinitive
     ("mak",    {"verb_form": "infinitive", "pos": "verb"}),
     ("mek",    {"verb_form": "infinitive", "pos": "verb"}),
-    # Evidential/reported past -mış/-miş/-muş/-müş (+ person markings)
     ("mışım",  {"tense": "past_evidential", "person": "first",  "number": "singular", "pos": "verb"}),
     ("mişim",  {"tense": "past_evidential", "person": "first",  "number": "singular", "pos": "verb"}),
     ("muşum",  {"tense": "past_evidential", "person": "first",  "number": "singular", "pos": "verb"}),
@@ -103,17 +107,14 @@ _SUFFIX_RULES: list[tuple[str, dict]] = [
     ("miş",    {"tense": "past_evidential", "pos": "verb"}),
     ("muş",    {"tense": "past_evidential", "pos": "verb"}),
     ("müş",    {"tense": "past_evidential", "pos": "verb"}),
-    # Negation + progressive
     ("mıyor",  {"tense": "progressive", "polarity": "negative", "pos": "verb"}),
     ("miyor",  {"tense": "progressive", "polarity": "negative", "pos": "verb"}),
     ("muyor",  {"tense": "progressive", "polarity": "negative", "pos": "verb"}),
     ("müyor",  {"tense": "progressive", "polarity": "negative", "pos": "verb"}),
-    # Progressive present -iyor (four-way vowel harmony)
     ("ıyor",   {"tense": "progressive", "polarity": "affirmative", "pos": "verb"}),
     ("iyor",   {"tense": "progressive", "polarity": "affirmative", "pos": "verb"}),
     ("uyor",   {"tense": "progressive", "polarity": "affirmative", "pos": "verb"}),
     ("üyor",   {"tense": "progressive", "polarity": "affirmative", "pos": "verb"}),
-    # Definite past -dı/-di/-du/-dü/-tı/-ti/-tu/-tü (+ person)
     ("dım",    {"tense": "past_definite", "person": "first",  "number": "singular", "pos": "verb"}),
     ("dim",    {"tense": "past_definite", "person": "first",  "number": "singular", "pos": "verb"}),
     ("dum",    {"tense": "past_definite", "person": "first",  "number": "singular", "pos": "verb"}),
@@ -130,17 +131,14 @@ _SUFFIX_RULES: list[tuple[str, dict]] = [
     ("ti",     {"tense": "past_definite", "person": "third",  "number": "singular", "pos": "verb"}),
     ("tu",     {"tense": "past_definite", "person": "third",  "number": "singular", "pos": "verb"}),
     ("tü",     {"tense": "past_definite", "person": "third",  "number": "singular", "pos": "verb"}),
-    # Future -ecek/-acak (+ person endings)
     ("eceksin", {"tense": "future", "person": "second", "number": "singular", "pos": "verb"}),
     ("acaksın", {"tense": "future", "person": "second", "number": "singular", "pos": "verb"}),
     ("eceğim",  {"tense": "future", "person": "first",  "number": "singular", "pos": "verb"}),
     ("acağım",  {"tense": "future", "person": "first",  "number": "singular", "pos": "verb"}),
     ("ecek",    {"tense": "future", "pos": "verb"}),
     ("acak",    {"tense": "future", "pos": "verb"}),
-    # Conditional -sa/-se (person-marked only to avoid false positives)
     ("sak",    {"mood": "conditional", "person": "first", "number": "plural", "pos": "verb"}),
     ("sek",    {"mood": "conditional", "person": "first", "number": "plural", "pos": "verb"}),
-    # Plural noun + case (must precede bare case suffixes to avoid shadowing)
     ("lardan",  {"number": "plural", "case": "ablative",    "pos": "noun"}),
     ("lerden",  {"number": "plural", "case": "ablative",    "pos": "noun"}),
     ("larda",   {"number": "plural", "case": "locative",    "pos": "noun"}),
@@ -155,7 +153,6 @@ _SUFFIX_RULES: list[tuple[str, dict]] = [
     ("lere",    {"number": "plural", "case": "dative",      "pos": "noun"}),
     ("lar",     {"number": "plural", "pos": "noun"}),
     ("ler",     {"number": "plural", "pos": "noun"}),
-    # Singular cases
     ("dan",    {"case": "ablative",              "pos": "noun_or_adjective"}),
     ("den",    {"case": "ablative",              "pos": "noun_or_adjective"}),
     ("tan",    {"case": "ablative",              "pos": "noun_or_adjective"}),
@@ -170,7 +167,6 @@ _SUFFIX_RULES: list[tuple[str, dict]] = [
     ("ün",     {"case": "genitive",              "pos": "noun"}),
     ("la",     {"case": "comitative_instrumental", "pos": "noun"}),
     ("le",     {"case": "comitative_instrumental", "pos": "noun"}),
-    # Possessive suffixes (1sg/2sg/3sg) — outermost only
     ("ım",     {"possessive": "first_sg",  "pos": "noun"}),
     ("im",     {"possessive": "first_sg",  "pos": "noun"}),
     ("um",     {"possessive": "first_sg",  "pos": "noun"}),
@@ -181,14 +177,10 @@ _SUFFIX_RULES: list[tuple[str, dict]] = [
     ("si",     {"possessive": "third_sg",  "pos": "noun"}),
     ("su",     {"possessive": "third_sg",  "pos": "noun"}),
     ("sü",     {"possessive": "third_sg",  "pos": "noun"}),
-    # Aorist 3sg -ar/-er (short; must follow all longer suffixes above).
-    # Min stem length enforced in _extract_morph to reduce false positives.
     ("ar",     {"tense": "aorist", "person": "third", "number": "singular", "pos": "verb"}),
     ("er",     {"tense": "aorist", "person": "third", "number": "singular", "pos": "verb"}),
 ]
 
-# Words that end in -ar/-er but are NOT aorist verb forms.
-# Matching would be a false positive; these are excluded in _extract_morph.
 _AORIST_BLOCKLIST: frozenset[str] = frozenset({
     "bir", "her", "ver", "yer", "ger", "mer", "ser", "ber",
     "nar", "bar", "car", "dar", "far", "gar", "har", "jar",
@@ -197,7 +189,7 @@ _AORIST_BLOCKLIST: frozenset[str] = frozenset({
     "noter", "fiber", "laser", "liner", "poker",
 })
 
-_CONFIDENCE_NOTE = (
+_CONFIDENCE_NOTE_HEURISTIC = (
     "Turkish morphology-light: outermost suffix stripped for feature hints. "
     "Inner suffix layers (possessive, aspect stacking, evidentiality) not analysed. "
     "No trained NLP model used. Canonical form uses surface form + morphology tag."
@@ -207,20 +199,13 @@ _VERB_POS = frozenset({"verb"})
 
 
 def _extract_morph(token: str) -> dict:
-    """Return morphology hints by longest-suffix match.
-
-    Aorist -ar/-er requires a minimum stem length of 3 chars and is
-    blocked for known non-verb forms in _AORIST_BLOCKLIST.
-    """
     lower = _normalise_turkish(token)
     for suffix, features in _SUFFIX_RULES:
         if not lower.endswith(suffix):
             continue
         stem_len = len(lower) - len(suffix)
-        # Standard minimum stem (must have at least 2 chars before suffix)
         if stem_len < 2:
             continue
-        # Aorist -ar/-er: require longer stem and blocklist check
         if suffix in ("ar", "er"):
             if stem_len < 3 or lower in _AORIST_BLOCKLIST:
                 continue
@@ -228,20 +213,33 @@ def _extract_morph(token: str) -> dict:
     return {}
 
 
-class TurkishPlugin:
-    """Turkish morphology-light plugin.
+# ── Agreement code builder for conjugation canonical ─────────────────────────
 
-    Provides whitespace tokenisation, Turkish-correct I/İ normalisation,
-    agglutinative suffix hinting, and conjugation-type emission for detected
-    verb forms. Capabilities honestly declared.
+def _agr_code(person: str | None, number: str | None) -> str | None:
+    """Convert person/number to UD-style agreement code (A1sg, etc.)."""
+    _p = {"first": "1", "second": "2", "third": "3"}
+    _n = {"singular": "sg", "plural": "pl"}
+    p = _p.get(person or "")
+    n = _n.get(number or "")
+    if p and n:
+        return f"A{p}{n}"
+    return None
+
+
+# ── Plugin ────────────────────────────────────────────────────────────────────
+
+class TurkishPlugin:
+    """Turkish plugin — zeyrek primary, suffix-rule fallback.
+
+    morphology_quality reflects zeyrek capability; falls to "low" without it.
     """
 
     language_code = "tr"
-    display_name  = "Turkish (morphology-light)"
+    display_name  = "Turkish"
     direction     = "ltr"
     capabilities  = LanguageCapabilities(
         code="tr",
-        display_name="Turkish (morphology-light)",
+        display_name="Turkish",
         direction="ltr",
         script_family="latin",
         tokenization_mode="whitespace",
@@ -250,13 +248,13 @@ class TurkishPlugin:
         analysis_depth="morphology_light",
         segmentation_quality="medium",
         tokenization_quality="high",
-        morphology_quality="low",
+        morphology_quality="medium",   # with zeyrek; degrades to "low" without it
         syntax_support=False,
         idiom_detection=False,
         tts_lang_tag="tr",
         transliteration_scheme=None,
-        tense_pool=["aorist", "progressive", "past_definite", "past_evidential", "future"],
-        mood_pool=["conditional"],
+        tense_pool=["aorist", "progressive", "past_definite", "past_evidential", "future", "present"],
+        mood_pool=["conditional", "optative", "imperative", "necessitative"],
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="none",
@@ -270,10 +268,9 @@ class TurkishPlugin:
             proverb_tradition="none",
             classical_or_scriptural_allusion="none",
             notes=(
-                "Morphology-light: outermost suffix only for case, tense, plural. "
-                "Evidential past (-mış) added. Detected verb forms emitted as "
-                "conjugation objects. Vowel harmony detected. "
-                "No trained Turkish NLP model in this deployment."
+                "Zeyrek rule-based FST: full lemmatisation + case/tense/person/number. "
+                "Falls back to outermost-suffix heuristic without zeyrek. "
+                "Vowel harmony detected. Detected verb forms emitted as conjugation objects."
             ),
         ),
     )
@@ -292,6 +289,213 @@ class TurkishPlugin:
         ]
 
     def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
+        if _tr_adapter.is_available():
+            return self._analyze_with_zeyrek(sentence)
+        return self._analyze_heuristic(sentence)
+
+    def get_lesson(self, object_id: str) -> CandidateObject | None:
+        return self.lesson_store.get(object_id)
+
+    # ------------------------------------------------------------------
+    # zeyrek path
+    # ------------------------------------------------------------------
+
+    def _analyze_with_zeyrek(self, sentence: str) -> CandidateSentenceResult:
+        tokens = _WORD_RE.findall(sentence)
+        morph_tokens = _tr_adapter.analyze_tokens(tokens)
+        seen: set[str] = set()
+        candidates: list[CandidateObject] = []
+
+        for mt in morph_tokens:
+            harmony = _last_vowel_harmony(mt.text)
+            canonical_lower = _normalise_turkish(mt.text)
+
+            if canonical_lower in _FUNCTION_WORDS:
+                cf = canonical_lower
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=mt.text,
+                        lesson_data={
+                            "lemma": mt.lemma or canonical_lower,
+                            "pos": "function_word",
+                            "vowel_harmony": harmony,
+                        },
+                        confidence=0.80,
+                    ))
+                continue
+
+            pos = mt.pos  # "Verb", "Noun", "Adj", "Adv", etc.
+            # Apply Turkish-correct lowercasing to lemma (İ→i, I→ı).
+            lemma = _normalise_turkish(mt.lemma) if mt.lemma else canonical_lower
+
+            # Build base lesson_data.
+            # C9 contract: conjugation objects must carry both "tense" and "mood"
+            # keys (values may be None for mood-only or tense-only forms).
+            ld: dict[str, Any] = {
+                "lemma": lemma,
+                "pos": pos,
+                "vowel_harmony": harmony,
+                "tense": mt.tense,   # None is acceptable; key must be present
+                "mood": mt.mood,     # None is acceptable; key must be present
+            }
+            if mt.person:
+                ld["person"] = mt.person
+            if mt.number:
+                ld["number"] = mt.number
+            if mt.case:
+                ld["case"] = mt.case
+            if mt.possessive:
+                ld["possessive"] = mt.possessive
+            if mt.negation:
+                ld["negation"] = True
+            if mt.verb_form:
+                ld["verb_form"] = mt.verb_form
+
+            is_verb = pos == "Verb"
+            is_finite_verb = is_verb and (mt.tense or mt.mood) and mt.verb_form != "infinitive"
+            is_infinitive = is_verb and mt.verb_form == "infinitive"
+
+            if is_finite_verb or is_infinitive:
+                # Vocabulary: verb:{lemma}
+                vocab_cf = f"verb:{lemma}"
+                if vocab_cf not in seen:
+                    seen.add(vocab_cf)
+                    vocab_ld: dict[str, Any] = {"lemma": lemma, "pos": "Verb", "vowel_harmony": harmony}
+                    candidates.append(CandidateObject(
+                        canonical_form=vocab_cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data=vocab_ld,
+                        confidence=0.85,
+                    ))
+
+                # Conjugation: conj:{lemma}:{tense_or_mood}:{agreement}
+                if is_infinitive:
+                    conj_cf = f"conj:{lemma}:infinitive"
+                else:
+                    feature = mt.tense or mt.mood or "present"
+                    agr = _agr_code(mt.person, mt.number)
+                    conj_cf = f"conj:{lemma}:{feature}:{agr}" if agr else f"conj:{lemma}:{feature}"
+
+                if conj_cf not in seen:
+                    seen.add(conj_cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=conj_cf,
+                        surface_form=mt.text,
+                        type="conjugation",
+                        label=mt.text,
+                        lesson_data=ld,
+                        confidence=0.85,
+                        relation_hints=[
+                            RelationHint(
+                                relation_type="conjugation_of",
+                                target_canonical_form=f"verb:{lemma}",
+                                target_type="vocabulary",
+                            )
+                        ],
+                    ))
+            elif pos == "Noun" and mt.verb_form == "infinitive" and "Verb" in mt.morphemes:
+                # Turkish verbal nouns (gitmek = "to go"): zeyrek classifies these
+                # as Noun (the infinitive suffix nominalises the verb), but they are
+                # pedagogically verb forms.  Emit both a vocabulary item and a
+                # conjugation item so learners see the verb root and its infinitive.
+                vocab_cf = f"verb:{lemma}"
+                if vocab_cf not in seen:
+                    seen.add(vocab_cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=vocab_cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data={"lemma": lemma, "pos": "Verb", "vowel_harmony": harmony},
+                        confidence=0.85,
+                    ))
+                conj_cf = f"conj:{lemma}:infinitive"
+                if conj_cf not in seen:
+                    seen.add(conj_cf)
+                    inf_ld = dict(ld)
+                    inf_ld["pos"] = "Verb"  # zeyrek classifies infinitive as Noun; override
+                    candidates.append(CandidateObject(
+                        canonical_form=conj_cf,
+                        surface_form=mt.text,
+                        type="conjugation",
+                        label=mt.text,
+                        lesson_data=inf_ld,
+                        confidence=0.85,
+                        relation_hints=[
+                            RelationHint(
+                                relation_type="conjugation_of",
+                                target_canonical_form=f"verb:{lemma}",
+                                target_type="vocabulary",
+                            )
+                        ],
+                    ))
+            elif pos == "Noun":
+                cf = f"noun:{lemma}"
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data=ld,
+                        confidence=0.80,
+                    ))
+            elif pos == "Adj":
+                cf = f"adj:{lemma}"
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data=ld,
+                        confidence=0.80,
+                    ))
+            elif pos == "Adv":
+                cf = f"adv:{lemma}"
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data=ld,
+                        confidence=0.75,
+                    ))
+            else:
+                # Pronoun, Conj, Det, Num, Interj, Unknown, etc.
+                cf = canonical_lower
+                if cf not in seen:
+                    seen.add(cf)
+                    else_ld = dict(ld)
+                    else_ld["confidence_note"] = (
+                        "Closed-class or unrecognised POS; zeyrek parse used as-is."
+                    )
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=mt.text,
+                        lesson_data=else_ld,
+                        confidence=0.65,
+                    ))
+
+        return CandidateSentenceResult(text=sentence, candidates=candidates)
+
+    # ------------------------------------------------------------------
+    # Heuristic suffix-rule fallback path (unchanged from original)
+    # ------------------------------------------------------------------
+
+    def _analyze_heuristic(self, sentence: str) -> CandidateSentenceResult:
         candidates: list[CandidateObject] = []
         seen: set[str] = set()
 
@@ -321,13 +525,12 @@ class TurkishPlugin:
                     confidence=0.80,
                 ))
             elif is_verb and morph:
-                # Emit as conjugation with morphological fields
                 morph_tag = ":".join(f"{k}={v}" for k, v in sorted(morph.items()))
                 conj_canonical = f"{canonical}:{morph_tag}"
                 lesson_data: dict = {
                     "surface_form":    token,
                     "vowel_harmony":   harmony,
-                    "confidence_note": _CONFIDENCE_NOTE,
+                    "confidence_note": _CONFIDENCE_NOTE_HEURISTIC,
                 }
                 lesson_data.update(morph)
                 candidates.append(CandidateObject(
@@ -346,9 +549,9 @@ class TurkishPlugin:
                 }
                 if morph:
                     lesson_data.update(morph)
-                    lesson_data["confidence_note"] = _CONFIDENCE_NOTE
+                    lesson_data["confidence_note"] = _CONFIDENCE_NOTE_HEURISTIC
                 else:
-                    lesson_data["confidence_note"] = _CONFIDENCE_NOTE
+                    lesson_data["confidence_note"] = _CONFIDENCE_NOTE_HEURISTIC
                 candidates.append(CandidateObject(
                     canonical_form=canonical,
                     surface_form=token,
@@ -359,9 +562,6 @@ class TurkishPlugin:
                 ))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
-
-    def get_lesson(self, object_id: str) -> CandidateObject | None:
-        return self.lesson_store.get(object_id)
 
 
 def create_plugin() -> TurkishPlugin:
