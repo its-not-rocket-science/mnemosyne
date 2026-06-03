@@ -1,4 +1,4 @@
-"""Finnish plugin — full spaCy ``fi_core_news_sm`` morphological analysis.
+"""Finnish plugin — stanza UD primary, fi_core_news_sm (spaCy) fallback.
 
 Registers as ``language_code = "fi"``.
 
@@ -26,18 +26,19 @@ non-finite VERB/AUX forms.
                     vowel_harmony, polarity*
 
 ─────────────────────────────────────────────────────────────────────────────
-KNOWN MODEL LIMITATIONS (fi_core_news_sm)
+MODEL NOTES
 ─────────────────────────────────────────────────────────────────────────────
 
-- Small model; lemmatization is unreliable for many inflected forms due to
-  consonant gradation (k→∅, p→v, t→d).  Morphological features (case, tense,
-  mood, etc.) are generally more reliable than lemmas.  When gradation is
-  detected (surface↔lemma alternation), a ``lemma_note`` key is added.
-- Sentence boundary detection may miss ambiguous periods (abbreviations).
-- Compound-word analysis is not performed; compounds are treated as single tokens.
-- Possessive suffixes (-ni/-si/-nsa/-nsä/-mme/-nne) are detected from UD
-  ``Person[psor]``/``Number[psor]`` features and reported as ``possessive_suffix``
-  in lesson_data.  Small-model reliability for these features is moderate.
+Primary: stanza Finnish UD model (tokenize+pos+lemma).
+  Reliable 15-case detection, possessive-suffix features (Person[psor]/
+  Number[psor]), correct POS for possessive-inflected nouns.
+
+Fallback (no stanza): fi_core_news_sm (spaCy).
+  Small model; lemmatization unreliable for consonant-gradation forms.
+  Possessive-inflected nouns occasionally mislabelled as VERB.
+
+Consonant-gradation alternations (d↔t, v↔p, ng↔nk, etc.) are flagged via
+``lemma_note`` in both paths.
 """
 from __future__ import annotations
 
@@ -46,6 +47,8 @@ import re
 from functools import cached_property
 from typing import Any
 
+from backend.morphology import fi_adapter as _fi_stanza
+from backend.morphology.fi_adapter import FiMorphToken as _FiMorphToken
 from backend.plugins.cefr_vocab import (
     A1 as _CEFR_A1, A2 as _CEFR_A2, B1 as _CEFR_B1,
     B2 as _CEFR_B2, C1 as _CEFR_C1, C2 as _CEFR_C2,
@@ -178,11 +181,28 @@ def _gradation_note(surface: str, lemma: str) -> str | None:
         return None
     for weak, strong in _GRADATION_PAIRS:
         if weak in s and strong in l and weak not in l:
-            return f"consonant gradation ({weak}↔{strong}): lemma from fi_core_news_sm may be approximate"
+            return f"consonant gradation ({weak}↔{strong}): lemma is the strong-grade base form"
     return None
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
+
+def _possessive_suffix_stanza(mt: "_FiMorphToken") -> str | None:
+    """Return possessive-suffix label from stanza FiMorphToken."""
+    if mt.poss_person and mt.poss_number:
+        return _POSS_LABEL.get((mt.poss_person, mt.poss_number))
+    m = _POSS_SURFACE_RE.search(mt.text)
+    if m:
+        return _POSS_SURFACE_LABEL.get(m.group().lower())
+    return None
+
+
+# UPOS tags treated as closed-class / non-pedagogical in both paths
+_STANZA_SKIP_UPOS = frozenset({
+    "DET", "ADP", "CCONJ", "SCONJ", "CONJ", "PUNCT", "SPACE",
+    "X", "SYM", "INTJ", "PART", "PRON",
+})
+
 
 def _morph_first(tok: Any, feature: str) -> str | None:
     vals = tok.morph.get(feature)
@@ -198,7 +218,7 @@ def _conj_canonical_form(
 # ── Plugin ────────────────────────────────────────────────────────────────────
 
 class FinnishPlugin:
-    """Finnish full-morphology plugin backed by ``fi_core_news_sm``."""
+    """Finnish full-morphology plugin — stanza primary, fi_core_news_sm fallback."""
 
     language_code = "fi"
     display_name  = "Finnish"
@@ -234,11 +254,11 @@ class FinnishPlugin:
             proverb_tradition="none",
             classical_or_scriptural_allusion="none",
             notes=(
-                "fi_core_news_sm: full morphological features (15 cases, tense, mood, "
-                "voice, person/number). Possessive suffixes detected from Person[psor]/"
-                "Number[psor] UD features. Consonant-gradation alternations (d↔t, v↔p, "
-                "ng↔nk, etc.) flagged via lemma_note where detected. Lemmatization "
-                "unreliable for some gradation forms (small model limitation)."
+                "stanza Finnish UD (primary): reliable 15-case system, possessive-suffix "
+                "features (Person[psor]/Number[psor]), correct POS for possessive forms. "
+                "fi_core_news_sm (spaCy) fallback when stanza unavailable. "
+                "Consonant-gradation alternations (d↔t, v↔p, ng↔nk, etc.) flagged via "
+                "lemma_note in both paths."
             ),
         ),
     )
@@ -262,6 +282,9 @@ class FinnishPlugin:
     # ── LanguagePlugin protocol ────────────────────────────────────────────────
 
     def analyze_text(self, text: str) -> list[CandidateSentenceResult]:
+        if _fi_stanza.is_available():
+            pairs = _fi_stanza.analyze_text(text.strip())
+            return [self._analyze_stanza_sentence(s, toks) for s, toks in pairs]
         doc = self._nlp(text.strip())
         results = []
         for sent in doc.sents:
@@ -272,15 +295,183 @@ class FinnishPlugin:
         return results
 
     def split_sentences(self, text: str) -> list[str]:
+        if _fi_stanza.is_available():
+            return [s for s, _ in _fi_stanza.analyze_text(text.strip())]
         doc = self._nlp(text.strip())
         return [s.text.strip() for s in doc.sents if s.text.strip()]
 
     def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
+        if _fi_stanza.is_available():
+            tokens = _fi_stanza.analyze_sentence(sentence)
+            if tokens:
+                return self._analyze_stanza_sentence(sentence, tokens)
         doc = self._nlp(sentence)
         return self._analyze_tokens(sentence, list(doc))
 
     def get_lesson(self, object_id: str) -> CandidateObject | None:
         return self.lesson_store.get(object_id)
+
+    # ── Stanza analysis path ──────────────────────────────────────────────────
+
+    def _analyze_stanza_sentence(
+        self, sentence: str, tokens: list[_FiMorphToken]
+    ) -> CandidateSentenceResult:
+        seen_vocab: set[str] = set()
+        seen_conj:  set[str] = set()
+        candidates: list[CandidateObject] = []
+        candidates.extend(self._stanza_conjugations(tokens, seen_conj, seen_vocab))
+        candidates.extend(self._stanza_vocabulary(tokens, seen_vocab))
+        return CandidateSentenceResult(text=sentence, candidates=candidates)
+
+    def _stanza_conjugations(
+        self,
+        tokens: list[_FiMorphToken],
+        seen_conj: set[str],
+        seen_vocab: set[str],
+    ) -> list[CandidateObject]:
+        candidates: list[CandidateObject] = []
+        for mt in tokens:
+            if mt.upos not in ("VERB", "AUX"):
+                continue
+            if mt.verb_form not in ("finite", None):
+                continue
+            # Require at least one finite indicator to avoid bare None-form nominals
+            if mt.verb_form is None and mt.mood is None and mt.tense is None:
+                continue
+
+            lemma = mt.lemma
+            if len(lemma) < 2:
+                continue
+
+            tense  = mt.tense  or "unknown"
+            mood   = mt.mood   or "unknown"
+            person = mt.person or "unknown"
+            number = mt.number or "unknown"
+            voice  = mt.voice  or "unknown"
+
+            canonical = _conj_canonical_form(lemma, tense, mood, person, number, voice)
+            if canonical in seen_conj:
+                continue
+            seen_conj.add(canonical)
+            seen_vocab.add(lemma)
+
+            lesson: dict[str, Any] = {
+                "lemma":         lemma,
+                "surface":       mt.text,
+                "tense":         tense,
+                "mood":          mood,
+                "person":        person,
+                "number":        number,
+                "voice":         voice,
+                "vowel_harmony": _vowel_harmony(mt.text),
+            }
+            if mt.polarity:
+                lesson["polarity"] = mt.polarity
+
+            candidates.append(CandidateObject(
+                canonical_form=canonical,
+                surface_form=mt.text,
+                type="conjugation",
+                label=mt.text,
+                lesson_data=lesson,
+                confidence=0.85,
+                relation_hints=[RelationHint(
+                    relation_type="conjugation_of",
+                    target_canonical_form=lemma,
+                    target_type="vocabulary",
+                )],
+            ))
+        return candidates
+
+    def _stanza_vocabulary(
+        self,
+        tokens: list[_FiMorphToken],
+        seen: set[str],
+    ) -> list[CandidateObject]:
+        candidates: list[CandidateObject] = []
+        for mt in tokens:
+            if mt.upos in _STANZA_SKIP_UPOS:
+                continue
+            # Skip finite verb forms (handled as conjugations)
+            if mt.upos in ("VERB", "AUX") and mt.verb_form == "finite":
+                continue
+            if mt.upos in ("VERB", "AUX") and mt.verb_form is None and (
+                mt.mood is not None or mt.tense is not None
+            ):
+                continue
+
+            lemma = mt.lemma
+            if len(lemma) < 2 or lemma in seen:
+                continue
+            seen.add(lemma)
+
+            data: dict[str, Any] = {
+                "lemma":         lemma,
+                "pos":           mt.upos.lower(),
+                "vowel_harmony": _vowel_harmony(mt.text),
+            }
+
+            if mt.upos in ("NOUN", "PROPN"):
+                if mt.case:
+                    data["case"] = mt.case
+                if mt.number:
+                    data["number"] = mt.number
+            elif mt.upos == "ADJ":
+                if mt.case:
+                    data["case"] = mt.case
+                if mt.degree:
+                    data["degree"] = mt.degree
+            elif mt.upos in ("VERB", "AUX"):
+                if mt.verb_form:
+                    data["verb_form"] = mt.verb_form
+
+            poss = _possessive_suffix_stanza(mt)
+            if poss:
+                data["possessive_suffix"] = poss
+
+            grad = _gradation_note(mt.text, lemma)
+            if grad:
+                data["lemma_note"] = grad
+
+            conf, conf_note = self._stanza_vocab_confidence(mt)
+            cefr = (
+                "A1" if lemma in _FI_A1 else
+                "A2" if lemma in _FI_A2 else
+                "B1" if lemma in _FI_B1 else
+                "B2" if lemma in _FI_B2 else
+                "C1" if lemma in _FI_C1 else
+                "C2" if lemma in _FI_C2 else None
+            )
+            if cefr:
+                data["cefr_level"] = cefr
+            if conf_note:
+                data["confidence_note"] = conf_note
+
+            candidates.append(CandidateObject(
+                canonical_form=lemma,
+                surface_form=mt.text,
+                type="vocabulary",
+                label=mt.text,
+                lesson_data=data,
+                confidence=conf,
+            ))
+        return candidates
+
+    def _stanza_vocab_confidence(self, mt: _FiMorphToken) -> tuple[float, str | None]:
+        lemma = mt.lemma
+        if mt.upos == "PROPN":
+            return 0.60, "Proper noun: stanza morphology; lemma may be imprecise for names."
+        if lemma in _FI_A1: return 0.90, None
+        if lemma in _FI_A2: return 0.88, None
+        if lemma in _FI_B1: return 0.86, None
+        if lemma in _FI_B2: return 0.84, None
+        if lemma in _FI_C1: return 0.82, None
+        if lemma in _FI_C2: return 0.80, None
+        if mt.feats_raw is None:
+            return 0.75, None
+        return 0.85, None
+
+    # ── spaCy fallback path ───────────────────────────────────────────────────
 
     # ── Token analysis ────────────────────────────────────────────────────────
 
