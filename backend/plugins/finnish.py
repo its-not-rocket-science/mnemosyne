@@ -42,10 +42,21 @@ import logging
 from functools import cached_property
 from typing import Any
 
+from backend.plugins.cefr_vocab import (
+    A1 as _CEFR_A1, A2 as _CEFR_A2, B1 as _CEFR_B1,
+    B2 as _CEFR_B2, C1 as _CEFR_C1, C2 as _CEFR_C2,
+)
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult, RelationHint
 
 logger = logging.getLogger(__name__)
+
+_FI_A1 = _CEFR_A1.get("fi", frozenset())
+_FI_A2 = _CEFR_A2.get("fi", frozenset())
+_FI_B1 = _CEFR_B1.get("fi", frozenset())
+_FI_B2 = _CEFR_B2.get("fi", frozenset())
+_FI_C1 = _CEFR_C1.get("fi", frozenset())
+_FI_C2 = _CEFR_C2.get("fi", frozenset())
 
 # ── POS filter ────────────────────────────────────────────────────────────────
 # Skip closed-class function words that are not pedagogically useful as vocabulary.
@@ -337,12 +348,19 @@ class FinnishPlugin:
                 if verb_form:
                     data["verb_form"] = verb_form.lower()
 
-            confidence = 0.60 if tok.pos_ == "PROPN" else 0.80
-            if confidence < 0.70:
-                data["confidence_note"] = (
-                    "Proper noun: POS tag from fi_core_news_sm; "
-                    "lemmatization and morphology less reliable for names."
-                )
+            confidence, confidence_note = self._vocab_confidence(tok, lemma)
+            cefr = (
+                "A1" if lemma in _FI_A1 else
+                "A2" if lemma in _FI_A2 else
+                "B1" if lemma in _FI_B1 else
+                "B2" if lemma in _FI_B2 else
+                "C1" if lemma in _FI_C1 else
+                "C2" if lemma in _FI_C2 else None
+            )
+            if cefr:
+                data["cefr_level"] = cefr
+            if confidence_note:
+                data["confidence_note"] = confidence_note
 
             candidates.append(CandidateObject(
                 canonical_form=lemma,
@@ -353,6 +371,28 @@ class FinnishPlugin:
                 confidence=confidence,
             ))
         return candidates
+
+    def _vocab_confidence(self, tok: Any, lemma: str) -> tuple[float, str | None]:
+        if tok.pos_ == "PROPN":
+            return 0.60, (
+                "Proper noun: POS tag from fi_core_news_sm; "
+                "lemmatization and morphology less reliable for names."
+            )
+        if lemma in _FI_A1:
+            return 0.90, None
+        if lemma in _FI_A2:
+            return 0.88, None
+        if lemma in _FI_B1:
+            return 0.86, None
+        if tok.is_oov:
+            if lemma in _FI_B2:
+                return 0.84, None
+            if lemma in _FI_C1:
+                return 0.82, None
+            if lemma in _FI_C2:
+                return 0.80, None
+            return 0.50, "word not in fi_core_news_sm vocabulary"
+        return 0.80, None
 
 
 def create_plugin() -> FinnishPlugin:

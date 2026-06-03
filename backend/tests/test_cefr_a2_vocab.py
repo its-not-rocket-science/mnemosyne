@@ -13,7 +13,7 @@ import pytest
 
 from backend.plugins.cefr_vocab import A1, A2
 
-_EXPECTED_LANGS = {"es", "fr", "de", "it", "pt", "ru", "ja", "zh", "ar", "he"}
+_EXPECTED_LANGS = {"es", "fr", "de", "it", "pt", "ru", "ja", "zh", "ar", "he", "fi", "tr", "hi"}
 _MIN_A2_SIZE = 200
 
 
@@ -113,3 +113,50 @@ class TestJapanesePluginA2:
         tok.lemma_ = a2_word
         conf = plugin._vocab_confidence(tok, reading="dummy")
         assert conf == 0.88
+
+
+class TestFinnishPluginA2:
+    def test_a2_word_confidence(self):
+        from unittest.mock import MagicMock
+        from backend.plugins.finnish import FinnishPlugin
+        plugin = FinnishPlugin()
+        from backend.plugins.cefr_vocab import A2 as _A2
+        a2_word = next(iter(_A2["fi"]))
+        tok = MagicMock()
+        tok.pos_ = "NOUN"
+        tok.is_oov = True
+        conf, note = plugin._vocab_confidence(tok, a2_word)
+        assert conf == 0.88
+        assert note is None
+
+
+class TestTurkishPluginA2:
+    def test_a2_word_in_cefr_table(self):
+        from backend.plugins.cefr_vocab import A2 as _A2
+        from backend.plugins.turkish import _TR_A2
+        assert _TR_A2 is _A2["tr"]
+        assert len(_TR_A2) >= 200
+
+    def test_a2_word_confidence(self):
+        from backend.plugins.turkish import _tr_cefr_confidence
+        from backend.plugins.cefr_vocab import A2 as _A2
+        a2_word = next(iter(_A2["tr"]))
+        conf, cefr = _tr_cefr_confidence(a2_word)
+        assert conf == 0.88
+        assert cefr == "A2"
+
+
+class TestHindiPluginA2:
+    def test_a2_word_in_cefr_table(self):
+        from backend.plugins.cefr_vocab import A2 as _A2
+        from backend.plugins.hindi import _HI_A2
+        assert _HI_A2 is _A2["hi"]
+        assert len(_HI_A2) >= 200
+
+    def test_a2_word_confidence(self):
+        from backend.plugins.hindi import _hi_cefr_confidence
+        from backend.plugins.cefr_vocab import A2 as _A2
+        a2_word = next(iter(_A2["hi"]))
+        conf, cefr = _hi_cefr_confidence(a2_word, 0.80)
+        assert conf == 0.88
+        assert cefr == "A2"

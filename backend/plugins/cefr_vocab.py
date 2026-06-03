@@ -1782,6 +1782,704 @@ _HE_A2: frozenset[str] = frozenset({
     "כמעט", "למדי", "כבר", "עדיין", "לפתע",
 })
 
+# ── Finnish (fi) ─────────────────────────────────────────────────────────────
+# Lemma conventions: spaCy fi_core_news_sm lowercase lemmas.
+# Verbs → 1st infinitive (mennä, olla); Nouns → nom. sg. (talo, kissa).
+_FI_A1: frozenset[str] = frozenset({
+    # core verbs (1st infinitive)
+    "olla", "mennä", "tulla", "tehdä", "saada", "voida", "sanoa",
+    "nähdä", "pitää", "haluta", "antaa", "ottaa", "tietää", "lähteä",
+    "asua", "syödä", "juoda", "nukkua", "katsoa", "puhua",
+    "ymmärtää", "kysyä", "vastata", "oppia", "lukea", "kirjoittaa", "kuulla",
+    # family / people
+    "isä", "äiti", "lapsi", "tyttö", "poika", "ystävä", "perhe",
+    "mies", "nainen",
+    # home / school / daily objects
+    "talo", "huone", "ovi", "ikkuna", "kirja", "puhelin", "raha", "koulu",
+    # transport
+    "auto", "bussi", "juna",
+    # animals
+    "koira", "kissa",
+    # food / drink
+    "vesi", "ruoka", "leipä", "kahvi", "maito",
+    # time
+    "nimi", "vuosi", "päivä", "viikko", "kuukausi", "aamu", "ilta", "yö",
+    # nature / geography
+    "aurinko", "lumi", "maa", "kaupunki", "kauppa",
+    # basic adjectives
+    "hyvä", "huono", "iso", "pieni", "uusi", "vanha", "nuori",
+    "kaunis", "nopea", "kallis", "halpa", "pitkä", "lyhyt", "kylmä", "lämmin",
+    # numbers 1–10, 100, 1000
+    "yksi", "kaksi", "kolme", "neljä", "viisi", "kuusi",
+    "seitsemän", "kahdeksan", "yhdeksän", "kymmenen", "sata", "tuhat",
+    # weekdays
+    "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai",
+    "lauantai", "sunnuntai",
+    # basic colours
+    "punainen", "sininen", "vihreä", "keltainen", "musta", "valkoinen",
+    "harmaa", "ruskea",
+})
+
+_FI_A2: frozenset[str] = frozenset({
+    # verbs not in A1
+    "rakastaa", "herätä", "pukeutua", "auttaa", "maksaa", "ostaa",
+    "myydä", "varata", "tilata", "tarvita", "käyttää", "toivoa",
+    "muistaa", "unohtaa", "kokeilla", "matkustaa", "juosta", "kävellä",
+    "ajaa", "lentää", "uida", "harrastaa", "opiskella", "työskennellä",
+    "laittaa", "kokata", "siivota", "pestä", "korjata", "rakentaa",
+    "esitellä", "tavata", "kiittää", "pyytää", "odottaa", "lähettää",
+    "soittaa", "etsiä", "löytää", "avata", "sulkea", "valmistaa",
+    "pakata", "vierailla", "jutella", "nauraa", "itkeä", "levätä",
+    "iloita", "surra", "rentoutua", "innostua",
+    # seasons / weather
+    "iltapäivä", "kevät", "kesä", "syksy", "talvi", "pilvi", "sade",
+    "lämpötila", "tuuli", "ukkonen", "jää",
+    # nature / terrain
+    "järvi", "joki", "meri", "vuori", "metsä", "pelto", "piha",
+    "puutarha", "ranta", "puisto", "katu", "tie", "silta",
+    # services / buildings
+    "ravintola", "kahvila", "hotelli", "lentokenttä", "rautatieasema",
+    "apteekki", "pankki", "posti", "kirjasto", "sairaala", "yliopisto",
+    "toimisto",
+    # travel
+    "matka", "lento", "lippu", "passi", "laukku",
+    # clothing
+    "paita", "housut", "takki", "kenkä", "hattu", "huivi",
+    # occupations / study
+    "ammatti", "lääkäri", "opettaja", "kurssi", "todistus", "kokous",
+    # media / culture
+    "lehti", "televisio", "radio", "elokuva", "musiikki", "tanssi",
+    "urheilu", "kuva", "valokuva", "taide", "museo", "teatteri", "harrastus",
+    # celebrations
+    "syntymäpäivä", "juhla", "lahja", "kukka", "kakku",
+    # food extended
+    "hedelmä", "liha", "kala", "kana", "muna", "juusto",
+    "peruna", "tomaatti", "omena", "appelsiini", "banaani", "mansikka",
+    "riisi", "pasta", "kasvikset",
+    # home rooms / housing
+    "keittiö", "olohuone", "makuuhuone", "kylpyhuone", "parveke",
+    "naapuri", "asunto", "vuokra", "kerrostalo",
+    # technology
+    "sähköposti", "internet", "tietokone", "tabletti", "sovellus",
+    # health basics
+    "kipu", "lääke", "resepti",
+    # misc nouns
+    "apu", "ongelma", "kysymys", "vastaus", "idea", "asia", "tapahtuma",
+    "kieli", "historia", "tulevaisuus", "rutiini", "käytäntö",
+    # extra colours
+    "vaaleanpunainen", "oranssi", "violetti",
+    # adjectives not in A1
+    "kiva", "mukava", "hauska", "tylsä", "vaikea", "helppo",
+    "mielenkiintoinen", "tärkeä", "hyödyllinen", "tarpeellinen",
+    "oikea", "väärä", "sama", "erilainen", "tavallinen",
+    "terve", "sairas", "väsynyt", "iloinen", "surullinen",
+    "pelokas", "innostunut", "rauhallinen", "kiireinen", "herkullinen",
+    "kuuma", "viileä", "kostea", "kuiva", "tuore", "raskas", "kevyt",
+    "leveä", "kapea",
+})
+
+_FI_B1: frozenset[str] = frozenset({
+    # verbs
+    "kehittää", "parantaa", "vaikuttaa", "osallistua", "järjestää",
+    "hoitaa", "huolehtia", "kuvailla", "selittää", "vertailla",
+    "arvioida", "analysoida", "suunnitella", "toteuttaa", "saavuttaa",
+    "epäonnistua", "onnistua", "päättää", "valita", "hyväksyä",
+    "hylätä", "ehdottaa", "suostua", "kieltäytyä", "väittää",
+    "todistaa", "myöntää", "kiistää", "johtaa", "hallita",
+    "ohjata", "neuvoa", "tutkia", "selvittää", "raportoida",
+    "julkaista", "ilmoittaa", "osata", "pystyä", "jaksaa",
+    "muodostaa", "kuulua", "liittyä", "erota", "yhdistyä",
+    "kuvata", "muuttua", "kasvaa", "vahvistaa", "heikentää",
+    # society / politics
+    "yhteiskunta", "hallitus", "politiikka", "puolue", "vaalit",
+    "laki", "oikeus", "talous", "budjetti", "verotus",
+    "eläke", "sosiaalituet", "poliisi", "armeija",
+    # environment
+    "ympäristö", "saastuminen", "ilmastonmuutos", "kierrätys",
+    "energiankulutus", "luonnonvarat", "suojelu",
+    # abstract nouns
+    "ajatus", "mielipide", "käsitys", "arvo", "periaate",
+    "tavoite", "unelma", "ratkaisu", "tulos", "muutos",
+    "kasvu", "kehitys", "edistys", "haaste", "riski",
+    "mahdollisuus", "uhka", "vaikutus", "asenne", "motivaatio",
+    "taito", "kyky", "rakenne", "normi",
+    # work / business
+    "yritys", "organisaatio", "johtaja", "esimies", "asiantuntija",
+    "kokemus", "osaaminen", "koulutus", "ura", "palkka",
+    "sopimus", "neuvottelu", "projekti", "tehtävä", "vastuu",
+    # communication / relations
+    "viestintä", "yhteistyö", "suhde", "luottamus", "tuki",
+    "konflikti", "päätös", "ehdotus",
+    # health (intermediate)
+    "terveydenhuolto", "diagnoosi", "hoito", "leikkaus", "toipuminen",
+    "stressi", "uupumus", "mielenterveys", "kuntoutus",
+    # culture / arts
+    "kirjallisuus", "runous", "näytelmä", "dokumentti",
+    "kritiikki", "arvostelu", "teos", "näyttely",
+    # science / technology
+    "tutkimus", "tiede", "teknologia", "tekoäly", "digitalisaatio",
+    "ohjelmointi", "data",
+    # education
+    "tutkinto", "opinnot", "seminaari", "väitöskirja",
+    # adjectives
+    "merkittävä", "oleellinen", "keskeinen", "välttämätön",
+    "tehokas", "kestävä", "nykyinen", "entinen", "tuleva",
+    "historiallinen", "kansainvälinen", "kansallinen", "alueellinen",
+    "paikallinen", "julkinen", "yksityinen", "poliittinen",
+    "sosiaalinen", "taloudellinen", "teknologinen", "tieteellinen",
+    "kulttuurinen", "taiteellinen", "ammatillinen", "henkilökohtainen",
+    "yleinen", "konkreettinen", "abstrakti", "monimutkainen",
+    "yksinkertainen", "laaja", "vakava", "kriittinen",
+    "aktiivinen", "passiivinen", "riippuvainen", "itsenäinen",
+    "vastuullinen", "luotettava", "epävarma",
+    # extra nouns / verbs to reach 200
+    "prosessi", "menetelmä", "tekijä", "yhteys", "vuorovaikutus",
+    "osallistuminen", "muutos", "standardi",
+    "tulostavoite", "mittari", "indikaattori", "seuraus", "vaikuttavuus",
+    "toiminto", "peruste",
+})
+
+_FI_B2: frozenset[str] = frozenset({
+    # verbs (formal / academic register)
+    "priorisoida", "koordinoida", "fasilitoida", "optimoida",
+    "standardisoida", "kyseenalaistaa", "hyödyntää", "integroida",
+    "legitimoida", "hahmottaa", "systematisoida", "visualisoida",
+    "implementoida", "evaluoida", "modernisoida",
+    # nouns (institutional / management)
+    "lainsäädäntö", "oikeuslaitos", "demokratia", "autoritarismi",
+    "byrokratia", "infrastruktuuri", "instituutio", "mekanismi",
+    "paradigma", "hierarkia", "konsensus", "kompromissi",
+    "dilemma", "konteksti", "perspektiivi", "dimensio", "aspekti",
+    "fenomeeni", "diskurssi", "retoriikka", "narratiivi", "ideologia",
+    "ekosysteemi", "biodiversiteetti", "resilienssi",
+    "transformaatio", "innovaatio", "disruptio",
+    "kapasiteetti", "kompetenssi", "legitimiteetti", "transparenssi",
+    # adjectives
+    "pragmaattinen", "strateginen", "systemaattinen", "hierarkkinen",
+    "institutionaalinen", "byrokraattinen", "demokraattinen",
+    "autoritaarinen", "liberaali", "konservatiivinen", "progressiivinen",
+    "interdisiplinaarinen", "kokonaisvaltainen",
+    "johdonmukainen", "epäjohdonmukainen", "implisiittinen", "eksplisiittinen",
+    "normatiivinen", "deskriptiivinen", "metodinen", "rationaalinen",
+})
+
+_FI_C1: frozenset[str] = frozenset({
+    # verbs (philosophical / specialist)
+    "eksplikoida", "konstituoida", "dekonstruoida", "problematisoida",
+    "kontekstualisoida", "konkretisoida", "operationalisoida",
+    "rekonstituoida", "reifioida", "instrumentalisoida",
+    # nouns (philosophical / analytical)
+    "epistemologia", "metodologia", "ontologia", "aksiologia",
+    "hermeneutiikka", "fenomenologia", "teleologia", "dialektiikka",
+    "emansipaatio", "hegemonia", "intersubjektiviteetti",
+    "representaatio", "signifikaatio", "konnotaatio", "denotaatio",
+    "semiootiikka", "intertekstuaalisuus", "polyfonia", "parataksi",
+    "hypotaksi", "ambivalenssi", "paradoksi", "aporia", "antinomia",
+    "pleonasmi", "episteme", "logosentrismi", "subjektiviteetti",
+    "objektiviteetti", "artikulaatio",
+    # adjectives
+    "episteeminen", "ontologinen", "aksiologinen", "teleologinen",
+    "dialektinen", "hermeneutinen", "fenomenologinen",
+    "emansipatoorinen", "hegemoninen", "intersubjektiivinen",
+    "ambivalentti", "aporettinen", "tautologinen",
+    "intertekstuaalinen", "logosentristinen", "polyfooninen",
+})
+
+_FI_C2: frozenset[str] = frozenset({
+    # nouns (rhetoric / literary theory / archaic)
+    "anakoluti", "zeugma", "syllepsi", "antistasis", "anadiplosis",
+    "epistrofi", "chiasmi", "litotes", "prosopopoeia", "ekfrasi",
+    "diegesis", "mimesis", "katarsis", "anagnorisis", "hamartia",
+    "hybris", "nemesis", "peripeteia", "eudaimonia", "ataraxia",
+    "apatheia", "parrhesia", "arete", "phronesis", "kairos",
+    "apofaasi", "polyptoon", "antanaklasis", "epifora", "anafora",
+    # archaic / rare Finnish nouns
+    "elämänväsymys", "kaihomielisyys", "synkkämielisyys", "sielunrauha",
+    "ylevyys", "jalomielisyys", "anteliaisuus", "pyyteettömyys",
+    "uhrautuvaisuus", "autuus", "hurskaus", "katumus",
+    "teeskentely", "hurskastelu", "vilpittömyys",
+    # archaic / rare adjectives
+    "jalomielinen", "synkkämielinen", "kaihomielinen",
+    "ylevä", "hyveellinen", "hartainen", "hurskas",
+    "melankolinen", "katuvainen", "nöyrä",
+    "apostolinen", "profeetallinen", "eristäytyvä",
+    "kiihkottoman", "apaattinen", "arvoituksellinen",
+})
+
+# ── Turkish (tr) ──────────────────────────────────────────────────────────────
+# Lemma conventions: zeyrek lemmas normalised (İ→i, I→ı, lowercase).
+# Verbs → infinitive with -(m)ak/-(m)ek (gitmek, yapmak).
+_TR_A1: frozenset[str] = frozenset({
+    # core verbs
+    "gitmek", "gelmek", "yapmak", "olmak", "bilmek", "istemek", "görmek",
+    "vermek", "almak", "demek", "söylemek", "anlamak", "okumak", "yazmak",
+    "yemek", "içmek", "uyumak", "kalkmak", "oturmak", "beklemek",
+    "bakmak", "dinlemek", "konuşmak", "çalışmak", "öğrenmek",
+    "bulmak", "başlamak", "bitmek", "açmak", "kapatmak", "sevmek",
+    # family / people
+    "anne", "baba", "çocuk", "kız", "erkek", "arkadaş", "aile",
+    # home / school / daily objects
+    "ev", "oda", "kapı", "okul", "kitap", "masa", "sandalye",
+    # transport
+    "araba", "otobüs", "tren",
+    # animals
+    "köpek", "kedi",
+    # food / drink
+    "su", "yemek", "ekmek", "çay", "süt",
+    # everyday items
+    "para", "telefon",
+    # time
+    "isim", "yıl", "gün", "hafta", "ay", "sabah", "akşam", "gece",
+    # nature / geography
+    "güneş", "ülke", "şehir", "sokak",
+    # adjectives
+    "iyi", "kötü", "büyük", "küçük", "yeni", "eski", "genç",
+    "güzel", "hızlı", "yavaş", "pahalı", "ucuz", "uzun", "kısa",
+    "sıcak", "soğuk",
+    # numbers 1–10, 100, 1000
+    "iki", "üç", "dört", "beş", "altı", "yedi",
+    "sekiz", "dokuz", "on", "yüz", "bin",
+    # weekdays
+    "pazartesi", "salı", "çarşamba", "perşembe", "cuma",
+    "cumartesi", "pazar",
+    # basic colours
+    "kırmızı", "mavi", "yeşil", "sarı", "siyah", "beyaz",
+    "gri", "kahverengi", "turuncu", "mor",
+})
+
+_TR_A2: frozenset[str] = frozenset({
+    # verbs not in A1
+    "uyanmak", "giyinmek", "ödemek", "satmak", "kullanmak",
+    "planlamak", "hatırlamak", "unutmak", "denemek", "koşmak",
+    "yürümek", "uçmak", "yüzmek", "pişirmek", "temizlemek",
+    "yıkamak", "kiralamak", "tanışmak", "tanıtmak", "kaydetmek",
+    "göndermek", "aramak", "taşımak", "seçmek", "kazanmak",
+    "kaybetmek", "gülmek", "ağlamak", "korkmak", "dinlenmek",
+    "hazırlanmak", "alışmak", "katılmak", "ayrılmak", "buluşmak",
+    "tekrarlamak", "sormak", "anlatmak", "düşünmek", "hissetmek",
+    "indirmek", "çıkarmak",
+    # seasons / weather
+    "öğle", "bahar", "yaz", "sonbahar", "kış", "bulut", "yağmur",
+    "rüzgar", "sıcaklık", "kar",
+    # nature / terrain
+    "göl", "nehir", "deniz", "dağ", "orman", "tarla", "bahçe",
+    "park", "cadde", "köprü",
+    # travel
+    "yolculuk", "uçuş", "bilet", "pasaport", "bavul",
+    # clothing
+    "gömlek", "pantolon", "mont", "ayakkabı", "şapka", "atkı",
+    # occupations
+    "meslek", "doktor", "hemşire", "öğretmen",
+    # media / culture
+    "gazete", "televizyon", "radyo", "film", "müzik", "dans",
+    "spor", "fotoğraf", "resim", "sanat", "müze", "tiyatro", "hobi",
+    # celebrations
+    "doğum günü", "parti", "hediye", "çiçek", "pasta",
+    # technology
+    "email", "internet", "bilgisayar", "tablet", "uygulama",
+    # food extended
+    "sebze", "meyve", "et", "balık", "tavuk", "yumurta", "peynir",
+    "patates", "domates", "elma", "portakal", "muz", "çilek",
+    "pirinç", "makarna",
+    # home rooms / housing
+    "mutfak", "salon", "yatak odası", "banyo", "teras",
+    "komşu", "daire", "kira", "apartman",
+    # services / buildings
+    "lokanta", "kafe", "otel", "havalimanı", "eczane",
+    "banka", "postane", "kütüphane", "hastane", "üniversite", "ofis",
+    # health basics
+    "sağlık", "hastalık", "ağrı", "ilaç", "reçete",
+    # home items
+    "sabun", "havlu", "ayna", "koltuk", "raf", "çanta", "kalem",
+    "defter", "sözlük",
+    # misc
+    "manzara", "mevsim", "şarkı", "oyun", "ders", "sınıf",
+    "müzisyen", "ressam", "yazar", "şef", "avukat", "mühendis",
+    # adjectives not in A1
+    "hoş", "sevimli", "ilginç", "meşgul", "yorgun", "mutlu",
+    "üzgün", "korkmuş", "heyecanlı", "sakin", "rahat",
+    "zor", "kolay", "önemli", "faydalı", "gerekli",
+    "mümkün", "imkansız", "doğru", "yanlış", "aynı", "farklı",
+    "sıradan", "özel", "normal", "sağlıklı", "hasta",
+    "taze", "ağır", "hafif", "geniş", "dar",
+    "temiz", "kirli", "dolu", "boş", "açık", "kapalı",
+    "pembe", "lacivert",
+})
+
+_TR_B1: frozenset[str] = frozenset({
+    # verbs
+    "geliştirmek", "iyileştirmek", "etkilemek",
+    "organize etmek", "ilgilenmek", "tarif etmek", "fark etmek", "belirtmek",
+    "açıklamak", "karşılaştırmak", "analiz etmek",
+    "başarıya ulaşmak", "başarısız olmak", "karar vermek",
+    "kabul etmek", "reddetmek", "önermek", "yönetmek",
+    "kontrol etmek", "araştırmak", "bildirmek", "yayımlamak",
+    "duyurmak", "oluşturmak", "bağlanmak", "birleşmek",
+    "değişmek", "büyümek", "güçlendirmek", "zayıflamak",
+    # society / politics
+    "toplum", "hükümet", "siyaset", "seçim",
+    "kanun", "hukuk", "ekonomi", "bütçe", "vergi",
+    "emeklilik", "sosyal yardımlar", "askerlik",
+    # environment
+    "çevre", "kirlilik", "iklim değişikliği", "geri dönüşüm",
+    "enerji tüketimi", "doğal kaynaklar", "koruma",
+    # abstract nouns
+    "düşünce", "görüş", "anlayış", "değer", "ilke",
+    "hedef", "hayal", "çözüm", "sonuç", "değişim",
+    "büyüme", "gelişme", "ilerleme", "zorluk", "risk",
+    "fırsat", "tehdit", "etki", "tutum", "motivasyon",
+    "beceri", "yetenek", "yapı", "norm",
+    # work / business
+    "şirket", "kuruluş", "lider", "müdür", "uzman",
+    "deneyim", "eğitim", "kariyer", "maaş",
+    "sözleşme", "müzakere", "proje", "görev", "sorumluluk",
+    # communication / relations
+    "iletişim", "işbirliği", "ilişki", "güven", "destek",
+    "çatışma", "karar", "öneri",
+    # health (intermediate)
+    "sağlık hizmetleri", "tanı", "tedavi", "ameliyat", "iyileşme",
+    "stres", "tükenmişlik", "ruh sağlığı", "rehabilitasyon",
+    # culture / arts
+    "edebiyat", "şiir", "belgesel",
+    "eleştiri", "inceleme", "eser", "sergi",
+    # science / technology
+    "araştırma", "bilim", "teknoloji", "yapay zeka", "dijitalleşme",
+    "programlama", "veri",
+    # education
+    "diploma", "akademi", "seminer", "tez",
+    # adjectives
+    "temel", "merkezi", "zorunlu",
+    "etkili", "sürdürülebilir", "mevcut",
+    "tarihsel", "uluslararası", "ulusal", "bölgesel",
+    "yerel", "kamusal", "siyasi",
+    "sosyal", "ekonomik", "teknolojik", "bilimsel",
+    "kültürel", "sanatsal", "mesleki", "kişisel",
+    "genel", "somut", "soyut", "karmaşık",
+    "basit", "ciddi", "kritik",
+    "aktif", "pasif", "bağımsız", "sorumlu",
+    "güvenilir", "belirsiz",
+    # extra nouns to reach 200
+    "amaç", "hedef", "ilerleme", "reform", "kriz",
+    "süreç", "yöntem", "faktör",
+    "gelir", "harcama", "kaynak", "yatırım", "büyüme",
+    "rekabet", "strateji", "politika", "model",
+    "nüfus", "istatistik", "rapor", "analiz", "sonuç",
+    "başarı", "başarısızlık", "fırsat", "zorluk", "çözüm",
+    "olanak", "sınırlama", "önlem", "etken",
+    "bağlantı", "etkileşim", "katılım", "yenilik", "standart",
+    "itibar", "baskı", "koordinasyon", "denge", "etkinlik", "kapsamlı",
+    "makale", "bölüm", "örnek", "yaklaşım", "davranış",
+    "alan", "durum", "koşul", "düzey",
+})
+
+_TR_B2: frozenset[str] = frozenset({
+    # verbs (academic / formal)
+    "önceliklendirmek", "koordine etmek", "kolaylaştırmak", "optimize etmek",
+    "standartlaştırmak", "sorgulamak", "meşrulaştırmak",
+    "entegre etmek", "modernize etmek", "kavramsallaştırmak",
+    "sistematize etmek", "değerlendirmek", "uygulayabilmek",
+    # nouns (institutional / academic)
+    "mevzuat", "yargı", "demokrasi", "otokrasi",
+    "bürokratizm", "altyapı", "kurum", "mekanizma",
+    "paradigma", "hiyerarşi", "konsensüs", "uzlaşma",
+    "ikilem", "bağlam", "perspektif", "boyut", "yön",
+    "olgu", "söylem", "retorik", "anlatı", "ideoloji",
+    "ekosistem", "biyoçeşitlilik", "esneklik",
+    "dönüşüm", "inovasyon", "aksaklık",
+    "kapasite", "yetkinlik", "meşruiyet", "şeffaflık",
+    # adjectives
+    "pragmatik", "stratejik", "sistematik", "hiyerarşik",
+    "kurumsal", "bürokratik", "demokratik",
+    "otoriter", "liberal", "muhafazakar", "ilerici",
+    "disiplinlerarası", "bütüncül",
+    "tutarlı", "tutarsız", "örtük",
+    "normatif", "betimleyici", "metodolojik", "rasyonel", "sistematik",
+})
+
+_TR_C1: frozenset[str] = frozenset({
+    # verbs
+    "açımlamak", "kurmak", "yapısökmek", "sorunsallaştırmak",
+    "bağlamsallaştırmak", "somutlaştırmak", "işlevselleştirmek",
+    "yeniden kurmak", "nesneleştirmek", "araçsallaştırmak",
+    # nouns
+    "epistemoloji", "metodoloji", "ontoloji", "aksiyoloji",
+    "hermeneutik", "fenomenoloji", "teleoloji", "diyalektik",
+    "özgürleşme", "hegemonya", "öznelerarasılık",
+    "temsil", "anlamlandırma", "çağrışım", "gönderim",
+    "göstergebilim", "metinlerarasılık", "çoğul seslilik",
+    "bağdaşıklık", "artgönderim", "belirsizlik",
+    "paradoks", "çıkmaz", "çelişki", "tekrarsöz",
+    "bilgi", "mantık merkezcilik", "öznellik",
+    "nesnellik", "dile getirme",
+    # adjectives
+    "epistemik", "ontolojik", "aksiyolojik", "teleolojik",
+    "diyalektik", "hermenötik", "fenomenolojik",
+    "özgürleştirici", "hegemonik", "öznelerarası",
+    "muğlak", "paradoksal", "söylemsel",
+    "metinlerarası", "çoğuldisiplinli", "mantık merkezci",
+    "çığır açıcı", "dönüştürücü",
+})
+
+_TR_C2: frozenset[str] = frozenset({
+    # nouns (rhetoric / literary theory)
+    "anakoluton", "zeugma", "sillepsis", "antistasis",
+    "anadiplosis", "epistrophe", "khiasmos", "litotes",
+    "prosopopeia", "ekphrasis", "diegesis", "mimesis",
+    "katharsis", "anagnorisis", "hamartia", "hybris",
+    "nemesis", "peripeteia", "eudaimonia", "ataraxia",
+    "apatheia", "parrhesia", "arete", "phronesis", "kairos",
+    "apophasis", "polyptoton", "antanaklasis", "epiphora",
+    "anaphora",
+    # archaic / rare Turkish nouns
+    "mükalemât", "münakaşa", "mütalaa", "mülahaza", "iddia",
+    "müdahale", "müdavele", "münasebet", "mutabakat",
+    "mütalaasızlık", "müracaat", "müzaharet",
+    "tefekkür", "tezahür", "tecellî", "teşekkül",
+    "istikbal", "istidlâl", "istikamet",
+    "mazhar", "müktesep", "mükemmeliyet",
+    "hakikat", "hakimiyet", "hilkat",
+    "ibret", "idrak", "ihata",
+    "kemal", "kemalist", "müfrit",
+})
+
+# ── Hindi (hi) ────────────────────────────────────────────────────────────────
+# Lemma conventions: stanza Devanagari lemmas.
+# Verbs → infinitive (जाना, करना); Nouns/Adj → base form (घर, अच्छा).
+_HI_A1: frozenset[str] = frozenset({
+    # core verbs
+    "जाना", "आना", "करना", "होना", "देना", "लेना", "बोलना",
+    "देखना", "सुनना", "खाना", "पीना", "पढ़ना", "लिखना", "सोना",
+    "जानना", "समझना", "पूछना", "चाहना", "मिलना",
+    # family / people
+    "माँ", "पिता", "बच्चा", "लड़की", "लड़का", "दोस्त", "परिवार",
+    "आदमी", "औरत",
+    # home / school / objects
+    "घर", "किताब", "स्कूल", "पैसा", "फोन",
+    # transport
+    "कार", "बस", "ट्रेन",
+    # animals
+    "कुत्ता", "बिल्ली",
+    # food / drink
+    "पानी", "रोटी", "चाय", "दूध",
+    # time
+    "नाम", "साल", "दिन", "हफ्ता", "महीना", "सुबह", "शाम", "रात",
+    # nature / geography
+    "सूरज", "बर्फ", "देश", "शहर", "सड़क", "दुकान",
+    # adjectives
+    "अच्छा", "बुरा", "बड़ा", "छोटा", "नया", "पुराना", "जवान",
+    "सुंदर", "तेज़", "धीमा", "महंगा", "सस्ता", "लंबा", "ठंडा", "गर्म",
+    # numbers
+    "एक", "दो", "तीन", "चार", "पाँच", "छह", "सात", "आठ", "नौ",
+    "दस", "सौ", "हजार",
+    # weekdays
+    "सोमवार", "मंगलवार", "बुधवार", "गुरुवार", "शुक्रवार",
+    "शनिवार", "रविवार",
+    # basic colours
+    "लाल", "नीला", "हरा", "पीला", "काला", "सफेद", "भूरा",
+})
+
+_HI_A2: frozenset[str] = frozenset({
+    # verbs not in A1
+    "रहना", "चलना", "खेलना", "सीखना", "पहनना", "लाना",
+    "खरीदना", "बेचना", "भेजना", "ढूंढना", "खोलना", "बंद करना",
+    "हँसना", "रोना", "डरना", "पहुँचना", "बैठना", "उठना",
+    "पकड़ना", "छोड़ना", "बचाना", "बनाना", "चुनना", "जीतना",
+    "हारना", "गाना", "नाचना", "दौड़ना", "तैरना", "उड़ना",
+    "पकाना", "धोना", "सुधारना", "रुकना", "बदलना", "सोचना",
+    "भूलना", "डालना", "निकालना", "चढ़ना", "उतरना",
+    # seasons / weather
+    "दोपहर", "वसंत", "गर्मी", "पतझड़", "सर्दी", "बादल",
+    "बारिश", "हवा", "तापमान", "धूप", "कोहरा",
+    # nature / terrain / animals
+    "झील", "नदी", "समुद्र", "पहाड़", "जंगल", "खेत", "बगीचा",
+    "पेड़", "पत्ता", "जानवर", "पक्षी", "घोड़ा", "गाय", "बकरी",
+    "बंदर", "शेर", "हाथी",
+    # travel
+    "यात्रा", "उड़ान", "टिकट", "पासपोर्ट", "बैग",
+    # clothing
+    "कमीज़", "पैंट", "कोट", "जूता", "टोपी", "मफलर",
+    # occupations
+    "पेशा", "डॉक्टर", "नर्स", "टीचर",
+    # media / culture
+    "अखबार", "टेलीविजन", "रेडियो", "फिल्म", "संगीत",
+    "नृत्य", "खेल", "फोटो", "चित्र", "कला", "संग्रहालय",
+    "थिएटर", "शौक",
+    # celebrations
+    "जन्मदिन", "त्योहार", "उपहार", "फूल", "केक",
+    # technology
+    "ईमेल", "इंटरनेट", "कंप्यूटर", "मोबाइल", "एप्लिकेशन",
+    # food extended
+    "सब्जी", "फल", "मांस", "मछली", "मुर्गी", "अंडा", "पनीर",
+    "आलू", "टमाटर", "सेब", "संतरा", "केला", "स्ट्रॉबेरी",
+    "चावल", "पास्ता",
+    # home rooms / housing
+    "रसोई", "बैठक", "शयनकक्ष", "बाथरूम", "बालकनी",
+    "पड़ोसी", "मकान", "किराया", "अपार्टमेंट",
+    # services / buildings
+    "रेस्तरां", "कैफे", "होटल", "हवाई अड्डा", "रेलवे स्टेशन",
+    "दवाई की दुकान", "बैंक", "डाकघर", "पुस्तकालय",
+    "अस्पताल", "विश्वविद्यालय", "कार्यालय",
+    # health basics
+    "स्वास्थ्य", "बीमारी", "दर्द", "दवा", "नुस्खा",
+    # misc nouns
+    "शब्द", "भाषा", "प्रश्न", "उत्तर", "विचार",
+    # body parts
+    "सिर", "हाथ", "पैर", "आँख", "कान", "नाक", "मुँह", "दाँत", "बाल", "पेट", "गला", "पीठ",
+    # more food
+    "दाल", "चपाती", "सलाद",
+    # more places
+    "मंदिर", "मस्जिद", "बाज़ार",
+    # adjectives not in A1
+    "प्यारा", "मज़ेदार", "दिलचस्प", "थका", "खुश", "दुखी",
+    "उत्साहित", "शांत", "व्यस्त", "स्वादिष्ट", "ज़रूरी",
+    "आसान", "कठिन", "सही", "गलत", "साफ", "गंदा",
+    "भारी", "हल्का", "चौड़ा", "संकरा", "गीला", "सूखा",
+    "ताज़ा", "खुला", "बंद",
+    # extra colours
+    "नारंगी", "गुलाबी", "बैंगनी",
+})
+
+_HI_B1: frozenset[str] = frozenset({
+    # verbs
+    "उभरना", "जुड़ना", "टूटना", "बिगड़ना", "बढ़ना", "फैलना",
+    "झुकना", "उलझना", "खिलना", "मुरझाना", "जगाना",
+    "पहचानना", "मनाना", "जांचना", "नकारना", "स्वीकारना",
+    "संभालना", "प्रभावित करना", "शामिल होना", "नेतृत्व करना",
+    "व्यवस्थित करना", "घोषणा करना", "प्रकाशित करना",
+    "रिपोर्ट करना", "विश्लेषण करना", "मूल्यांकन करना",
+    "योजना बनाना", "लागू करना", "हासिल करना",
+    "सुझाव देना", "प्रबंधन करना",
+    # society / politics
+    "समाज", "सरकार", "राजनीति", "चुनाव",
+    "कानून", "न्याय", "अर्थव्यवस्था", "बजट", "कर",
+    "सेवानिवृत्ति", "सामाजिक सेवाएं", "पुलिस", "सेना",
+    # environment
+    "पर्यावरण", "प्रदूषण", "जलवायु परिवर्तन", "पुनर्चक्रण",
+    "ऊर्जा खपत", "प्राकृतिक संसाधन", "संरक्षण",
+    # abstract nouns
+    "राय", "समझ", "मूल्य", "सिद्धांत",
+    "लक्ष्य", "सपना", "समाधान", "परिणाम",
+    "परिवर्तन", "प्रगति", "चुनौती", "खतरा",
+    "संभावना", "प्रभाव", "रुचि", "प्रेरणा",
+    "दृष्टिकोण", "रवैया", "योग्यता",
+    # work / business
+    "कंपनी", "संगठन", "नेता", "प्रबंधक", "विशेषज्ञ",
+    "अनुभव", "कौशल", "शिक्षा", "करियर", "वेतन",
+    "अनुबंध", "वार्ता", "परियोजना", "कार्य", "जिम्मेदारी",
+    # communication / relations
+    "संचार", "सहयोग", "संबंध", "विश्वास", "समर्थन",
+    "संघर्ष", "निर्णय", "प्रस्ताव",
+    # health (intermediate)
+    "स्वास्थ्य सेवा", "निदान", "उपचार", "ऑपरेशन", "रिकवरी",
+    "तनाव", "थकान", "मानसिक स्वास्थ्य", "पुनर्वास",
+    # culture / arts
+    "साहित्य", "कविता", "नाटक", "दस्तावेज़",
+    "समीक्षा", "रचना", "प्रदर्शनी",
+    # science / technology
+    "अनुसंधान", "विज्ञान", "प्रौद्योगिकी", "कृत्रिम बुद्धिमत्ता",
+    "डिजिटलीकरण", "प्रोग्रामिंग", "डेटा",
+    # education
+    "डिग्री", "पाठ्यक्रम", "संगोष्ठी", "शोध प्रबंध",
+    "परीक्षा", "छात्रवृत्ति",
+    # extra verbs
+    "मानना", "जोड़ना", "घटाना", "समझाना", "सिखाना",
+    "बुलाना", "लौटना", "रोकना", "हटाना", "दर्शाना",
+    # society / geography
+    "राजधानी", "राज्य", "पड़ोस", "नागरिक", "जनसंख्या",
+    "समुदाय", "वर्ग", "पीढ़ी",
+    # economy / work
+    "व्यापार", "उद्योग", "उत्पादन", "निर्यात", "आयात",
+    "रोजगार", "बेरोजगारी",
+    # media / communication
+    "समाचार", "पत्रकारिता", "विज्ञापन", "प्रचार",
+    # culture / transport
+    "संस्कृति", "वाहन", "परिवहन", "यातायात", "सुविधा",
+    # health / wellness
+    "योग", "ध्यान", "व्यायाम", "आहार",
+    # adjectives
+    "महत्वपूर्ण", "आवश्यक", "केंद्रीय", "अनिवार्य",
+    "प्रभावी", "टिकाऊ", "वर्तमान", "ऐतिहासिक",
+    "अंतरराष्ट्रीय", "राष्ट्रीय", "क्षेत्रीय",
+    "सार्वजनिक", "निजी", "राजनीतिक",
+    "सामाजिक", "आर्थिक", "वैज्ञानिक",
+    "सांस्कृतिक", "व्यावसायिक", "व्यक्तिगत",
+    "सामान्य", "जटिल", "सरल", "गंभीर",
+    "सक्रिय", "स्वतंत्र", "जिम्मेदार",
+    "विश्वसनीय", "अनिश्चित",
+    "नैतिक", "सामूहिक", "व्यापक", "संभावित",
+    "अस्थायी", "स्थायी", "क्रमिक", "अचानक",
+    "प्रत्यक्ष", "सक्षम",
+    "गतिविधि",
+})
+
+_HI_B2: frozenset[str] = frozenset({
+    # verbs (academic / formal)
+    "प्राथमिकता देना", "समन्वय करना", "सुगम बनाना", "अनुकूलित करना",
+    "मानकीकृत करना", "प्रश्न उठाना", "वैधता प्रदान करना",
+    "एकीकृत करना", "आधुनिकीकरण करना", "अवधारणाओं को परिभाषित करना",
+    "संहिताबद्ध करना", "औपचारिकीकरण करना",
+    # nouns (institutional / academic)
+    "विधान", "न्यायपालिका", "लोकतंत्र", "निरंकुशता",
+    "नौकरशाही", "बुनियादी ढांचा", "संस्था", "तंत्र",
+    "प्रतिमान", "पदानुक्रम", "सहमति", "समझौता",
+    "दुविधा", "संदर्भ", "परिप्रेक्ष्य", "आयाम", "पहलू",
+    "प्रवचन", "अलंकारशास्त्र", "आख्यान", "विचारधारा",
+    "पारिस्थितिक तंत्र", "जैव विविधता", "लचीलापन",
+    "रूपांतरण", "नवाचार", "व्यवधान",
+    "क्षमता", "दक्षता", "वैधता", "पारदर्शिता",
+    # adjectives
+    "व्यावहारिक", "रणनीतिक", "व्यवस्थित", "श्रेणीबद्ध",
+    "संस्थागत", "नौकरशाही", "लोकतांत्रिक",
+    "सत्तावादी", "उदार", "रूढ़िवादी", "प्रगतिशील",
+    "अंतःविषय", "समग्र",
+    "सुसंगत", "असंगत", "अंतर्निहित", "स्पष्ट",
+    "मानदंड", "वर्णनात्मक", "पद्धतिगत", "तर्कसंगत",
+})
+
+_HI_C1: frozenset[str] = frozenset({
+    # nouns (philosophical / analytical)
+    "ज्ञानमीमांसा", "प्रणालीशास्त्र", "सत्तामीमांसा", "मूल्यमीमांसा",
+    "व्याख्याशास्त्र", "परिघटनाविज्ञान", "द्वंद्ववाद",
+    "उत्तर-संरचनावाद", "मुक्तिशास्त्र", "आधिपत्य",
+    "पारस्परिक-व्यक्तिपरकता", "प्रतिनिधित्व", "अर्थीकरण",
+    "अर्थव्यंजना", "सांकेतिकता", "पाठांतरता",
+    "बहुस्वरता", "अस्पष्टता", "विरोधाभास",
+    "अपोरिया", "प्रतिविरोध", "पुनरावृत्ति",
+    "ज्ञान-केंद्रवाद", "व्यक्तिपरकता", "वस्तुनिष्ठता",
+    "अंतर्विरोध", "तार्किकता", "सार्वभौमिकता",
+    "विशिष्टता", "प्रासंगिकता",
+    # adjectives
+    "ज्ञानमीमांसीय", "सत्तामीमांसीय", "मूल्यमीमांसीय", "दूरदर्शी",
+    "द्वंद्वात्मक", "व्याख्याशास्त्रीय", "परिघटनावैज्ञानिक",
+    "मुक्तिकारी", "आधिपत्यवादी", "पारस्परिक",
+    "अस्पष्ट", "विरोधाभासी", "प्रवचनात्मक",
+    "पाठांतरात्मक", "बहुअनुशासनीय", "तार्किक-केंद्रवादी",
+    "युगांतरकारी", "रूपांतरणशील", "अन्वेषणशील",
+    "परावर्तनशील", "आत्म-संदर्भात्मक", "संरचनात्मक",
+    "अंतर्विरोधी", "पुनर्विचारशील", "समालोचनात्मक",
+})
+
+_HI_C2: frozenset[str] = frozenset({
+    # nouns (rhetoric / literary theory / very rare)
+    "अनाकोलुथन", "ज़ेउग्मा", "सिल्लेप्सिस", "अन्तिस्तासिस",
+    "अनाडिप्लोसिस", "एपिस्ट्रोफ़े", "काइस्मस", "लिटोटेस",
+    "प्रोसोपोपोइया", "एकफ़्रेसिस", "डाइजेसिस", "माइमेसिस",
+    "कैथार्सिस", "अनग्नोरिसिस", "हमार्टिया", "हाइब्रिस",
+    "नेमेसिस", "पेरिपेटिया", "यूडाइमोनिया", "अटारैक्सिया",
+    "अपाथिया", "पैरहेसिया", "अरेते", "फ्रोनेसिस", "काइरोस",
+    "अपोफ़ेसिस", "पॉलिप्टोटोन", "अन्तानाक्लासिस",
+    # archaic / rare Hindi nouns
+    "आत्मग्लानि", "विषाद", "वैराग्य", "तृष्णा", "निर्वेद",
+    "क्षोभ", "विस्मय", "अवसाद", "उत्कंठा", "लालसा",
+    "श्रद्धा", "भक्ति", "वैभव", "परमार्थ", "अध्यात्म",
+    "अहंकार", "माया", "मोह", "क्रोध", "लोभ",
+    "अनित्यता", "शाश्वतता", "पुनर्जन्म", "कर्मफल",
+    # archaic / rare adjectives
+    "विषादग्रस्त", "वैरागी", "अध्यात्मिक", "परमार्थी",
+    "अहंकारी", "मोहग्रस्त", "क्रोधी", "लोभी",
+    "श्रद्धावान", "भक्तिमान",
+})
+
 # ── Public API ────────────────────────────────────────────────────────────────
 
 #: Map from language code to frozenset of A1 lemmas.
@@ -1796,6 +2494,9 @@ A1: dict[str, frozenset[str]] = {
     "zh": _ZH_A1,
     "ar": _AR_A1,
     "he": _HE_A1,
+    "fi": _FI_A1,
+    "tr": _TR_A1,
+    "hi": _HI_A1,
 }
 
 #: Map from language code to frozenset of A2 lemmas (excludes A1 items).
@@ -1810,6 +2511,9 @@ A2: dict[str, frozenset[str]] = {
     "zh": _ZH_A2,
     "ar": _AR_A2,
     "he": _HE_A2,
+    "fi": _FI_A2,
+    "tr": _TR_A2,
+    "hi": _HI_A2,
 }
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -2541,6 +3245,9 @@ B1: dict[str, frozenset[str]] = {
     "zh": _ZH_B1,
     "ar": _AR_B1,
     "he": _HE_B1,
+    "fi": _FI_B1,
+    "tr": _TR_B1,
+    "hi": _HI_B1,
 }
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -2783,6 +3490,9 @@ B2: dict[str, frozenset[str]] = {
     "zh": _ZH_B2,
     "ar": _AR_B2,
     "he": _HE_B2,
+    "fi": _FI_B2,
+    "tr": _TR_B2,
+    "hi": _HI_B2,
 }
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -3155,6 +3865,9 @@ C1: dict[str, frozenset[str]] = {
     "zh": _ZH_C1,
     "ar": _AR_C1,
     "he": _HE_C1,
+    "fi": _FI_C1,
+    "tr": _TR_C1,
+    "hi": _HI_C1,
 }
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -3491,4 +4204,7 @@ C2: dict[str, frozenset[str]] = {
     "zh": _ZH_C2,
     "ar": _AR_C2,
     "he": _HE_C2,
+    "fi": _FI_C2,
+    "tr": _TR_C2,
+    "hi": _HI_C2,
 }

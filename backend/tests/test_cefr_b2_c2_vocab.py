@@ -13,7 +13,7 @@ import pytest
 
 from backend.plugins.cefr_vocab import A1, A2, B1, B2, C1, C2
 
-_EXPECTED_LANGS = {"es", "fr", "de", "it", "pt", "ru", "ja", "zh", "ar", "he"}
+_EXPECTED_LANGS = {"es", "fr", "de", "it", "pt", "ru", "ja", "zh", "ar", "he", "fi", "tr", "hi"}
 _MIN_SIZE = 55
 
 

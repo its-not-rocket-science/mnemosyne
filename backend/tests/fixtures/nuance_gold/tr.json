@@ -24,7 +24,7 @@
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": null,
-      "assert_no_confidence_above": 0.85,
+      "assert_no_confidence_above": 0.90,
       "lesson_data_required_keys": {
         "vocabulary": ["vowel_harmony"]
       },
@@ -42,7 +42,7 @@
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": null,
-      "assert_no_confidence_above": 0.85,
+      "assert_no_confidence_above": 0.90,
       "lesson_data_required_keys": {
         "vocabulary": ["vowel_harmony"]
       },
@@ -61,7 +61,7 @@
       "assert_canonical_contains": null,
       "assert_min_vocabulary_count": 1,
       "confidence_ge": null,
-      "assert_no_confidence_above": 0.85,
+      "assert_no_confidence_above": 0.90,
       "lesson_data_required_keys": {},
       "no_raw_uuids": true
     },
@@ -69,7 +69,7 @@
       "id": "tr_morphology_light_no_high_confidence",
       "category": "confidence",
       "text": "Cocuklar parkta oyun oynuyor.",
-      "note": "Morphology-light — suffix rules; no candidate should claim high confidence",
+      "note": "CEFR-wired: known words get CEFR-calibrated confidence; unknown words cap at 0.80; maximum is 0.90 for A1 words",
       "pipeline": "plugin",
       "assert_types_present": ["vocabulary"],
       "assert_types_absent": [],
@@ -78,7 +78,7 @@
       "assert_canonical_contains": null,
       "assert_min_vocabulary_count": 2,
       "confidence_ge": null,
-      "assert_no_confidence_above": 0.85,
+      "assert_no_confidence_above": 0.90,
       "lesson_data_required_keys": {},
       "no_raw_uuids": true
     },
@@ -94,7 +94,7 @@
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": null,
-      "assert_no_confidence_above": 0.85,
+      "assert_no_confidence_above": 0.90,
       "lesson_data_required_keys": {},
       "no_raw_uuids": true
     }

@@ -13,7 +13,7 @@ import pytest
 
 from backend.plugins.cefr_vocab import A1, A2, B1
 
-_EXPECTED_LANGS = {"es", "fr", "de", "it", "pt", "ru", "ja", "zh", "ar", "he"}
+_EXPECTED_LANGS = {"es", "fr", "de", "it", "pt", "ru", "ja", "zh", "ar", "he", "fi", "tr", "hi"}
 _MIN_B1_SIZE = 200
 
 
@@ -120,3 +120,38 @@ class TestJapanesePluginB1:
         tok.lemma_ = b1_word
         conf = plugin._vocab_confidence(tok, reading="dummy")
         assert conf == 0.86
+
+
+class TestFinnishPluginB1:
+    def test_b1_word_confidence(self):
+        from unittest.mock import MagicMock
+        from backend.plugins.finnish import FinnishPlugin
+        plugin = FinnishPlugin()
+        from backend.plugins.cefr_vocab import B1 as _B1
+        b1_word = next(iter(_B1["fi"]))
+        tok = MagicMock()
+        tok.pos_ = "NOUN"
+        tok.is_oov = True
+        conf, note = plugin._vocab_confidence(tok, b1_word)
+        assert conf == 0.86
+        assert note is None
+
+
+class TestTurkishPluginB1:
+    def test_b1_word_confidence(self):
+        from backend.plugins.turkish import _tr_cefr_confidence
+        from backend.plugins.cefr_vocab import B1 as _B1
+        b1_word = next(iter(_B1["tr"]))
+        conf, cefr = _tr_cefr_confidence(b1_word)
+        assert conf == 0.86
+        assert cefr == "B1"
+
+
+class TestHindiPluginB1:
+    def test_b1_word_confidence(self):
+        from backend.plugins.hindi import _hi_cefr_confidence
+        from backend.plugins.cefr_vocab import B1 as _B1
+        b1_word = next(iter(_B1["hi"]))
+        conf, cefr = _hi_cefr_confidence(b1_word, 0.80)
+        assert conf == 0.86
+        assert cefr == "B1"

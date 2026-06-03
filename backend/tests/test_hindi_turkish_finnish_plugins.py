@@ -519,19 +519,19 @@ class TestFinnishPlugin:
         assert ei.confidence == 0.80
 
     def test_confidence_float_for_noun_with_case(self):
-        # "kaupungissa" = inessive NOUN; spaCy gives Case=Ine → confidence 0.80
+        # "kaupungissa" lemma "kaupunki" is A1 → confidence 0.90
         result = self.plugin.analyze_sentence("kaupungissa")
         cand = result.candidates[0]
-        assert cand.confidence == pytest.approx(0.80)
+        assert cand.confidence == pytest.approx(0.90)
 
     def test_confidence_for_bare_nominative(self):
-        # spaCy assigns Case=Nom|Number=Sing for "auto" → confidence 0.80
+        # "auto" is A1 → confidence 0.90
         result = self.plugin.analyze_sentence("auto")
         auto = next(
             (c for c in result.candidates if c.canonical_form == "auto"), None
         )
         assert auto is not None
-        assert auto.confidence == pytest.approx(0.80)
+        assert auto.confidence == pytest.approx(0.90)
 
     def test_no_duplicate_candidates(self):
         result = self.plugin.analyze_sentence("talo talo talo")
