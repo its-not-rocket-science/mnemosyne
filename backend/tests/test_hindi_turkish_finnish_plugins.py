@@ -191,6 +191,49 @@ class TestHindiPlugin:
         forms2 = {c.canonical_form for c in r2.candidates}
         assert forms1 == forms2
 
+    def test_compound_verb_detected(self):
+        # "खा लिया" = ate (self-benefit completion): main=खाना + vector=लेना
+        result = self.plugin.analyze_sentence("उसने खाना खा लिया।")
+        compounds = [
+            c for c in result.candidates
+            if c.lesson_data.get("pos") == "compound_verb"
+        ]
+        assert len(compounds) >= 1
+        cv = compounds[0]
+        assert cv.type == "vocabulary"
+        assert "main_verb" in cv.lesson_data
+        assert "vector_verb" in cv.lesson_data
+        assert cv.lesson_data["vector_verb"] in {"लेना", "ले"}
+
+    def test_compound_verb_canonical_form_prefix(self):
+        result = self.plugin.analyze_sentence("वह चला गया।")
+        compounds = [
+            c for c in result.candidates
+            if c.canonical_form.startswith("compound:")
+        ]
+        assert len(compounds) >= 1
+
+    def test_ergative_subject_flagged(self):
+        # "राम ने" — राम is ergative subject before ने
+        result = self.plugin.analyze_sentence("राम ने सेब खाया।")
+        ram = next(
+            (c for c in result.candidates
+             if "राम" in c.surface_form and c.type == "vocabulary"), None
+        )
+        assert ram is not None
+        assert ram.lesson_data.get("ergative_subject") is True
+        assert ram.lesson_data.get("case") == "ergative"
+
+    def test_ergative_not_flagged_without_ne(self):
+        # "राम" alone — no ने follows, should NOT be marked ergative
+        result = self.plugin.analyze_sentence("राम स्कूल जाता है।")
+        ram = next(
+            (c for c in result.candidates
+             if "राम" in c.surface_form and c.type == "vocabulary"), None
+        )
+        assert ram is not None
+        assert ram.lesson_data.get("ergative_subject") is not True
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Turkish
@@ -371,6 +414,26 @@ class TestTurkishPlugin:
         forms1 = {c.canonical_form for c in r1.candidates}
         forms2 = {c.canonical_form for c in r2.candidates}
         assert forms1 == forms2
+
+    def test_possessive_case_stack_1sg_ablative(self):
+        # "evimden" = ev + im (1sg poss) + den (abl): "from my house"
+        result = self.plugin.analyze_sentence("evimden")
+        evimden = next(
+            (c for c in result.candidates if c.surface_form.lower() == "evimden"), None
+        )
+        assert evimden is not None
+        assert evimden.lesson_data.get("possessive") in ("first_sg", "1sg")
+        assert evimden.lesson_data.get("case") == "ablative"
+
+    def test_possessive_case_stack_3sg_locative(self):
+        # "evinde" = ev + in (3sg poss) + de (loc): "in his/her house"
+        result = self.plugin.analyze_sentence("evinde")
+        evinde = next(
+            (c for c in result.candidates if c.surface_form.lower() == "evinde"), None
+        )
+        assert evinde is not None
+        assert evinde.lesson_data.get("possessive") is not None
+        assert evinde.lesson_data.get("case") == "locative"
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -569,3 +632,40 @@ class TestFinnishPlugin:
         assert luettiin.type == "conjugation"
         assert luettiin.lesson_data.get("voice") == "passive"
         assert luettiin.lesson_data.get("tense") == "past"
+
+    def test_possessive_suffix_1pl_mme(self):
+        # "talomme" = talo + -mme (1pl possessive); needs context for correct POS tag
+        result = self.plugin.analyze_sentence("Tama on talomme.")
+        talo = next(
+            (c for c in result.candidates if c.surface_form == "talomme"), None
+        )
+        assert talo is not None
+        assert talo.lesson_data.get("possessive_suffix") == "1pl"
+
+    def test_possessive_suffix_2pl_nne(self):
+        # "talonne" = talo + -nne (2pl possessive)
+        result = self.plugin.analyze_sentence("talonne")
+        talo = next(
+            (c for c in result.candidates if c.type == "vocabulary"), None
+        )
+        assert talo is not None
+        assert talo.lesson_data.get("possessive_suffix") == "2pl"
+
+    def test_gradation_note_on_kaupungissa(self):
+        # "kaupungissa" surface has "ng" (weak), lemma "kaupunki" has "nk" (strong)
+        result = self.plugin.analyze_sentence("kaupungissa")
+        kaup = next(
+            (c for c in result.candidates if c.type == "vocabulary"), None
+        )
+        assert kaup is not None
+        note = kaup.lesson_data.get("lemma_note", "")
+        assert "gradation" in note
+
+    def test_no_gradation_note_on_plain_noun(self):
+        # "talo" has no gradation alternation
+        result = self.plugin.analyze_sentence("talo")
+        talo = next(
+            (c for c in result.candidates if c.canonical_form == "talo"), None
+        )
+        assert talo is not None
+        assert "lemma_note" not in talo.lesson_data

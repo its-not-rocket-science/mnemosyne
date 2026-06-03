@@ -9,7 +9,8 @@ WHAT THIS PLUGIN EXTRACTS
 **Vocabulary** — open-class content words (NOUN, ADJ, ADV, PROPN) and
 non-finite VERB/AUX forms.
 
-  lesson_data keys: lemma, pos, case*, number*, degree*, vowel_harmony
+  lesson_data keys: lemma, pos, case*, number*, degree*, vowel_harmony,
+                    possessive_suffix*, lemma_note*, cefr_level*
 
 **Conjugation** — finite VERB and AUX tokens (VerbForm=Fin), annotated with:
   • tense (present/past/unknown)
@@ -30,15 +31,18 @@ KNOWN MODEL LIMITATIONS (fi_core_news_sm)
 
 - Small model; lemmatization is unreliable for many inflected forms due to
   consonant gradation (k→∅, p→v, t→d).  Morphological features (case, tense,
-  mood, etc.) are generally more reliable than lemmas.
+  mood, etc.) are generally more reliable than lemmas.  When gradation is
+  detected (surface↔lemma alternation), a ``lemma_note`` key is added.
 - Sentence boundary detection may miss ambiguous periods (abbreviations).
 - Compound-word analysis is not performed; compounds are treated as single tokens.
-- No possessive suffix analysis (inner -ni/-si/-nsa/-nsä layer).
-- No CEFR vocabulary tables for Finnish in this release.
+- Possessive suffixes (-ni/-si/-nsa/-nsä/-mme/-nne) are detected from UD
+  ``Person[psor]``/``Number[psor]`` features and reported as ``possessive_suffix``
+  in lesson_data.  Small-model reliability for these features is moderate.
 """
 from __future__ import annotations
 
 import logging
+import re
 from functools import cached_property
 from typing import Any
 
@@ -127,6 +131,57 @@ def _vowel_harmony(word: str) -> str:
     return "back"
 
 
+# ── Possessive suffix ─────────────────────────────────────────────────────────
+# UD Finnish encodes possessive suffix as Person[psor] + Number[psor].
+# Mapping: (person_digit, number_ud) -> display label
+_POSS_LABEL: dict[tuple[str, str], str] = {
+    ("1", "Sing"): "1sg", ("2", "Sing"): "2sg",
+    ("3", "Sing"): "3sg", ("3", "Plur"): "3pl",
+    ("1", "Plur"): "1pl", ("2", "Plur"): "2pl",
+}
+
+# Surface-form fallback: -mme / -nne / -nsa / -nsä are low-ambiguity.
+# -ni and -si are omitted (high false-positive rate without UD features).
+_POSS_SURFACE_RE = re.compile(r"(mme|nne|nsa|nsä)$", re.IGNORECASE)
+_POSS_SURFACE_LABEL: dict[str, str] = {
+    "mme": "1pl", "nne": "2pl", "nsa": "3sg/3pl", "nsä": "3sg/3pl",
+}
+
+
+def _possessive_suffix(tok: Any) -> str | None:
+    """Return possessive-suffix label from UD features, or surface heuristic."""
+    p_vals = tok.morph.get("Person[psor]")
+    n_vals = tok.morph.get("Number[psor]")
+    if p_vals and n_vals:
+        label = _POSS_LABEL.get((p_vals[0], n_vals[0]))
+        if label:
+            return label
+    m = _POSS_SURFACE_RE.search(tok.text)
+    if m:
+        return _POSS_SURFACE_LABEL.get(m.group().lower())
+    return None
+
+
+# ── Consonant gradation ───────────────────────────────────────────────────────
+# Detect surface↔lemma alternations consistent with Finnish consonant gradation.
+# Adds an informational note; does not reduce confidence (morphological features
+# are still reliable; only lemma may be approximate).
+_GRADATION_PAIRS = (
+    ("d", "t"), ("v", "p"), ("ng", "nk"),
+    ("mm", "mp"), ("nn", "nt"), ("ll", "lt"), ("rr", "rt"),
+)
+
+
+def _gradation_note(surface: str, lemma: str) -> str | None:
+    s, l = surface.lower(), lemma.lower()
+    if s == l:
+        return None
+    for weak, strong in _GRADATION_PAIRS:
+        if weak in s and strong in l and weak not in l:
+            return f"consonant gradation ({weak}↔{strong}): lemma from fi_core_news_sm may be approximate"
+    return None
+
+
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def _morph_first(tok: Any, feature: str) -> str | None:
@@ -180,8 +235,10 @@ class FinnishPlugin:
             classical_or_scriptural_allusion="none",
             notes=(
                 "fi_core_news_sm: full morphological features (15 cases, tense, mood, "
-                "voice, person/number). Lemmatization unreliable for some consonant-gradation "
-                "forms (small model limitation). Vowel harmony annotated on all tokens."
+                "voice, person/number). Possessive suffixes detected from Person[psor]/"
+                "Number[psor] UD features. Consonant-gradation alternations (d↔t, v↔p, "
+                "ng↔nk, etc.) flagged via lemma_note where detected. Lemmatization "
+                "unreliable for some gradation forms (small model limitation)."
             ),
         ),
     )
@@ -347,6 +404,17 @@ class FinnishPlugin:
             elif tok.pos_ in {"VERB", "AUX"}:
                 if verb_form:
                     data["verb_form"] = verb_form.lower()
+
+            # Possessive suffix: apply to all vocabulary tokens. The small model
+            # sometimes mislabels possessive-inflected nouns as ADV, so POS-gating
+            # would miss them. -mme/-nne/-nsa/-nsä are low-ambiguity surface cues.
+            poss = _possessive_suffix(tok)
+            if poss:
+                data["possessive_suffix"] = poss
+
+            grad = _gradation_note(tok.text, lemma)
+            if grad:
+                data["lemma_note"] = grad
 
             confidence, confidence_note = self._vocab_confidence(tok, lemma)
             cefr = (
