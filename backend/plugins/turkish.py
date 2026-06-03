@@ -55,8 +55,19 @@ import re
 from typing import Any
 
 from backend.morphology import tr_adapter as _tr_adapter
+from backend.plugins.cefr_vocab import (
+    A1 as _CEFR_A1, A2 as _CEFR_A2, B1 as _CEFR_B1,
+    B2 as _CEFR_B2, C1 as _CEFR_C1, C2 as _CEFR_C2,
+)
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult, RelationHint
+
+_TR_A1 = _CEFR_A1.get("tr", frozenset())
+_TR_A2 = _CEFR_A2.get("tr", frozenset())
+_TR_B1 = _CEFR_B1.get("tr", frozenset())
+_TR_B2 = _CEFR_B2.get("tr", frozenset())
+_TR_C1 = _CEFR_C1.get("tr", frozenset())
+_TR_C2 = _CEFR_C2.get("tr", frozenset())
 
 # ── Sentence splitting ────────────────────────────────────────────────────────
 _SENTENCE_RE = re.compile(r"[^.!?\n]+[.!?\n]?")
@@ -81,6 +92,23 @@ def _last_vowel_harmony(word: str) -> str:
 
 def _normalise_turkish(token: str) -> str:
     return token.replace("İ", "i").replace("I", "ı").lower()
+
+
+def _tr_cefr_confidence(lemma: str) -> tuple[float, str | None]:
+    """Return (confidence, cefr_level | None) for a Turkish vocabulary lemma."""
+    if lemma in _TR_A1:
+        return 0.90, "A1"
+    if lemma in _TR_A2:
+        return 0.88, "A2"
+    if lemma in _TR_B1:
+        return 0.86, "B1"
+    if lemma in _TR_B2:
+        return 0.84, "B2"
+    if lemma in _TR_C1:
+        return 0.82, "C1"
+    if lemma in _TR_C2:
+        return 0.80, "C2"
+    return 0.80, None
 
 
 # ── Function words / closed-class items ──────────────────────────────────────
@@ -364,14 +392,17 @@ class TurkishPlugin:
                 vocab_cf = f"verb:{lemma}"
                 if vocab_cf not in seen:
                     seen.add(vocab_cf)
+                    v_conf, v_cefr = _tr_cefr_confidence(lemma)
                     vocab_ld: dict[str, Any] = {"lemma": lemma, "pos": "Verb", "vowel_harmony": harmony}
+                    if v_cefr:
+                        vocab_ld["cefr_level"] = v_cefr
                     candidates.append(CandidateObject(
                         canonical_form=vocab_cf,
                         surface_form=mt.text,
                         type="vocabulary",
                         label=lemma,
                         lesson_data=vocab_ld,
-                        confidence=0.85,
+                        confidence=v_conf,
                     ))
 
                 # Conjugation: conj:{lemma}:{tense_or_mood}:{agreement}
@@ -407,13 +438,17 @@ class TurkishPlugin:
                 vocab_cf = f"verb:{lemma}"
                 if vocab_cf not in seen:
                     seen.add(vocab_cf)
+                    v_conf2, v_cefr2 = _tr_cefr_confidence(lemma)
+                    vn_ld: dict[str, Any] = {"lemma": lemma, "pos": "Verb", "vowel_harmony": harmony}
+                    if v_cefr2:
+                        vn_ld["cefr_level"] = v_cefr2
                     candidates.append(CandidateObject(
                         canonical_form=vocab_cf,
                         surface_form=mt.text,
                         type="vocabulary",
                         label=lemma,
-                        lesson_data={"lemma": lemma, "pos": "Verb", "vowel_harmony": harmony},
-                        confidence=0.85,
+                        lesson_data=vn_ld,
+                        confidence=v_conf2,
                     ))
                 conj_cf = f"conj:{lemma}:infinitive"
                 if conj_cf not in seen:
@@ -439,25 +474,33 @@ class TurkishPlugin:
                 cf = f"noun:{lemma}"
                 if cf not in seen:
                     seen.add(cf)
+                    n_conf, n_cefr = _tr_cefr_confidence(lemma)
+                    noun_ld = dict(ld)
+                    if n_cefr:
+                        noun_ld["cefr_level"] = n_cefr
                     candidates.append(CandidateObject(
                         canonical_form=cf,
                         surface_form=mt.text,
                         type="vocabulary",
                         label=lemma,
-                        lesson_data=ld,
-                        confidence=0.80,
+                        lesson_data=noun_ld,
+                        confidence=n_conf,
                     ))
             elif pos == "Adj":
                 cf = f"adj:{lemma}"
                 if cf not in seen:
                     seen.add(cf)
+                    a_conf, a_cefr = _tr_cefr_confidence(lemma)
+                    adj_ld = dict(ld)
+                    if a_cefr:
+                        adj_ld["cefr_level"] = a_cefr
                     candidates.append(CandidateObject(
                         canonical_form=cf,
                         surface_form=mt.text,
                         type="vocabulary",
                         label=lemma,
-                        lesson_data=ld,
-                        confidence=0.80,
+                        lesson_data=adj_ld,
+                        confidence=a_conf,
                     ))
             elif pos == "Adv":
                 cf = f"adv:{lemma}"

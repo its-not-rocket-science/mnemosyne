@@ -16,7 +16,7 @@
       "id": "hi_basic_vocabulary_output",
       "category": "vocabulary",
       "text": "वह घर जाता है।",
-      "note": "Basic sentence — should produce vocabulary candidates; suffix detection may also produce conjugation type",
+      "note": "Basic sentence — should produce vocabulary candidates; CEFR lookup gives A1 words up to 0.90",
       "pipeline": "plugin",
       "assert_types_present": ["vocabulary"],
       "assert_types_absent": [],
@@ -25,7 +25,7 @@
       "assert_canonical_contains": null,
       "assert_min_vocabulary_count": 1,
       "confidence_ge": null,
-      "assert_no_confidence_above": 0.85,
+      "assert_no_confidence_above": 0.90,
       "lesson_data_required_keys": {},
       "no_raw_uuids": true
     },
@@ -41,7 +41,7 @@
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": null,
-      "assert_no_confidence_above": 0.85,
+      "assert_no_confidence_above": 0.90,
       "lesson_data_required_keys": {},
       "no_raw_uuids": true
     },
@@ -57,7 +57,7 @@
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": null,
-      "assert_no_confidence_above": 0.85,
+      "assert_no_confidence_above": 0.90,
       "lesson_data_required_keys": {},
       "no_raw_uuids": true
     },
@@ -73,7 +73,7 @@
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": null,
-      "assert_no_confidence_above": 0.85,
+      "assert_no_confidence_above": 0.90,
       "lesson_data_required_keys": {},
       "no_raw_uuids": true
     },
@@ -81,7 +81,7 @@
       "id": "hi_no_raw_uuids",
       "category": "vocabulary",
       "text": "मेरा नाम राम है।",
-      "note": "Verify no UUID-format strings in lesson_data; morphology-light should not overclaim confidence",
+      "note": "Verify no UUID-format strings in lesson_data",
       "pipeline": "plugin",
       "assert_types_present": ["vocabulary"],
       "assert_types_absent": [],
@@ -90,7 +90,7 @@
       "assert_canonical_contains": null,
       "assert_min_vocabulary_count": 1,
       "confidence_ge": null,
-      "assert_no_confidence_above": 0.85,
+      "assert_no_confidence_above": 0.90,
       "lesson_data_required_keys": {},
       "no_raw_uuids": true
     }

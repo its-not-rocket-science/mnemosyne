@@ -45,8 +45,19 @@ import unicodedata
 from typing import Any
 
 from backend.morphology import hi_adapter as _hi_adapter
+from backend.plugins.cefr_vocab import (
+    A1 as _CEFR_A1, A2 as _CEFR_A2, B1 as _CEFR_B1,
+    B2 as _CEFR_B2, C1 as _CEFR_C1, C2 as _CEFR_C2,
+)
 from backend.schemas.language import LanguageCapabilities, NuanceCapabilities
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult, RelationHint
+
+_HI_A1 = _CEFR_A1.get("hi", frozenset())
+_HI_A2 = _CEFR_A2.get("hi", frozenset())
+_HI_B1 = _CEFR_B1.get("hi", frozenset())
+_HI_B2 = _CEFR_B2.get("hi", frozenset())
+_HI_C1 = _CEFR_C1.get("hi", frozenset())
+_HI_C2 = _CEFR_C2.get("hi", frozenset())
 
 # ── Sentence splitting ────────────────────────────────────────────────────────
 # ।  U+0964 Devanagari danda  (primary sentence boundary)
@@ -282,6 +293,23 @@ def _make_conj_canonical(lemma: str, mt: "Any") -> str:
     return f"conj:{lemma}:{primary}"
 
 
+def _hi_cefr_confidence(lemma: str, base: float) -> tuple[float, str | None]:
+    """Return adjusted (confidence, cefr_level|None) using the CEFR chain."""
+    if lemma in _HI_A1:
+        return 0.90, "A1"
+    if lemma in _HI_A2:
+        return 0.88, "A2"
+    if lemma in _HI_B1:
+        return 0.86, "B1"
+    if lemma in _HI_B2:
+        return 0.84, "B2"
+    if lemma in _HI_C1:
+        return 0.82, "C1"
+    if lemma in _HI_C2:
+        return 0.80, "C2"
+    return base, None
+
+
 class HindiPlugin:
     """Hindi morphology-light plugin.
 
@@ -453,13 +481,18 @@ class HindiPlugin:
                 vocab_cf = f"verb:{lemma}"
                 if vocab_cf not in seen:
                     seen.add(vocab_cf)
+                    base_v_conf = 0.85 if has_feats else 0.65
+                    v_conf, v_cefr = _hi_cefr_confidence(lemma, base_v_conf)
+                    v_ld: dict[str, Any] = {"lemma": lemma, "pos": "VERB", "romanized": romanized}
+                    if v_cefr:
+                        v_ld["cefr_level"] = v_cefr
                     candidates.append(CandidateObject(
                         canonical_form=vocab_cf,
                         surface_form=mt.text,
                         type="vocabulary",
                         label=lemma,
-                        lesson_data={"lemma": lemma, "pos": "VERB", "romanized": romanized},
-                        confidence=0.85 if has_feats else 0.65,
+                        lesson_data=v_ld,
+                        confidence=v_conf,
                     ))
 
                 conj_cf = _make_conj_canonical(lemma, mt)
@@ -508,13 +541,17 @@ class HindiPlugin:
                 vocab_cf = f"noun:{lemma}"
                 if vocab_cf not in seen:
                     seen.add(vocab_cf)
+                    inf_n_conf, inf_n_cefr = _hi_cefr_confidence(lemma, 0.70 if has_feats else 0.50)
+                    inf_n_ld = dict(base_ld)
+                    if inf_n_cefr:
+                        inf_n_ld["cefr_level"] = inf_n_cefr
                     candidates.append(CandidateObject(
                         canonical_form=vocab_cf,
                         surface_form=mt.text,
                         type="vocabulary",
                         label=lemma,
-                        lesson_data=dict(base_ld),
-                        confidence=0.70 if has_feats else None,
+                        lesson_data=inf_n_ld,
+                        confidence=inf_n_conf if has_feats else None,
                     ))
                 continue
 
@@ -523,13 +560,17 @@ class HindiPlugin:
                 cf = f"noun:{lemma}"
                 if cf not in seen:
                     seen.add(cf)
+                    n_conf, n_cefr = _hi_cefr_confidence(lemma, 0.80 if has_feats else 0.50)
+                    n_ld = dict(base_ld)
+                    if n_cefr:
+                        n_ld["cefr_level"] = n_cefr
                     candidates.append(CandidateObject(
                         canonical_form=cf,
                         surface_form=mt.text,
                         type="vocabulary",
                         label=lemma,
-                        lesson_data=dict(base_ld),
-                        confidence=0.80 if has_feats else None,
+                        lesson_data=n_ld,
+                        confidence=n_conf if has_feats else None,
                     ))
                 continue
 
@@ -538,13 +579,17 @@ class HindiPlugin:
                 cf = f"adj:{lemma}"
                 if cf not in seen:
                     seen.add(cf)
+                    a_conf, a_cefr = _hi_cefr_confidence(lemma, 0.75 if has_feats else 0.50)
+                    a_ld = dict(base_ld)
+                    if a_cefr:
+                        a_ld["cefr_level"] = a_cefr
                     candidates.append(CandidateObject(
                         canonical_form=cf,
                         surface_form=mt.text,
                         type="vocabulary",
                         label=lemma,
-                        lesson_data=dict(base_ld),
-                        confidence=0.75 if has_feats else None,
+                        lesson_data=a_ld,
+                        confidence=a_conf if has_feats else None,
                     ))
                 continue
 
