@@ -334,10 +334,11 @@ class TestTurkishPlugin:
         assert gidiyor.lesson_data.get("tense") == "progressive"
 
     def test_future_tense_detected(self):
-        # "Gidecek" → future participle or finite future; either way tense=future
+        # "Gidecek" → future; tense=future on the conjugation candidate
         result = self.plugin.analyze_sentence("Gidecek.")
         gidecek = next(
-            (c for c in result.candidates if c.surface_form.lower() == "gidecek"), None
+            (c for c in result.candidates
+             if c.surface_form.lower() == "gidecek" and c.type == "conjugation"), None
         )
         assert gidecek is not None
         assert gidecek.lesson_data.get("tense") == "future"

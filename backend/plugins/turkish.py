@@ -55,6 +55,8 @@ import re
 from typing import Any
 
 from backend.morphology import tr_adapter as _tr_adapter
+from backend.morphology import tr_stanza_adapter as _tr_stanza
+from backend.morphology.tr_stanza_adapter import TrStanzaMorphToken as _TrStanzaMorphToken
 from backend.plugins.cefr_vocab import (
     A1 as _CEFR_A1, A2 as _CEFR_A2, B1 as _CEFR_B1,
     B2 as _CEFR_B2, C1 as _CEFR_C1, C2 as _CEFR_C2,
@@ -284,10 +286,7 @@ def _agr_code(person: str | None, number: str | None) -> str | None:
 # ── Plugin ────────────────────────────────────────────────────────────────────
 
 class TurkishPlugin:
-    """Turkish plugin — zeyrek primary, suffix-rule fallback.
-
-    morphology_quality reflects zeyrek capability; falls to "low" without it.
-    """
+    """Turkish plugin — stanza primary, zeyrek secondary, suffix-rule fallback."""
 
     language_code = "tr"
     display_name  = "Turkish"
@@ -323,9 +322,10 @@ class TurkishPlugin:
             proverb_tradition="none",
             classical_or_scriptural_allusion="none",
             notes=(
-                "Zeyrek rule-based FST: full lemmatisation + case/tense/person/number. "
-                "Falls back to outermost-suffix heuristic without zeyrek. "
-                "Vowel harmony detected. Detected verb forms emitted as conjugation objects."
+                "stanza Turkish UD (primary): lemmatisation + case/tense/aspect/person/number "
+                "+ possessive stacking (Person[psor]/Number[psor]) + evidential distinction "
+                "(Evident=Nfh for -mış/-miş) + necessitative (Mood=Nec). "
+                "Falls back to zeyrek FST, then outermost-suffix heuristic."
             ),
         ),
     )
@@ -344,12 +344,256 @@ class TurkishPlugin:
         ]
 
     def analyze_sentence(self, sentence: str) -> CandidateSentenceResult:
+        if _tr_stanza.is_available():
+            tokens = _tr_stanza.analyze_sentence(sentence)
+            if tokens:
+                return self._analyze_with_stanza(sentence, tokens)
         if _tr_adapter.is_available():
             return self._analyze_with_zeyrek(sentence)
         return self._analyze_heuristic(sentence)
 
     def get_lesson(self, object_id: str) -> CandidateObject | None:
         return self.lesson_store.get(object_id)
+
+    # ------------------------------------------------------------------
+    # stanza path
+    # ------------------------------------------------------------------
+
+    _STANZA_SKIP_UPOS = frozenset({
+        "PUNCT", "SPACE", "SYM", "X",
+    })
+    _STANZA_CLOSED_UPOS = frozenset({
+        "DET", "CCONJ", "SCONJ", "CONJ", "INTJ", "PART",
+    })
+
+    def _analyze_with_stanza(
+        self, sentence: str, tokens: list[_TrStanzaMorphToken]
+    ) -> CandidateSentenceResult:
+        seen: set[str] = set()
+        candidates: list[CandidateObject] = []
+
+        for mt in tokens:
+            if mt.upos in self._STANZA_SKIP_UPOS:
+                continue
+
+            harmony = _last_vowel_harmony(mt.text)
+            lemma = _normalise_turkish(mt.lemma)
+            canonical_lower = _normalise_turkish(mt.text)
+
+            # Function words / pronouns / closed-class
+            if mt.upos in self._STANZA_CLOSED_UPOS or canonical_lower in _FUNCTION_WORDS:
+                cf = canonical_lower
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=mt.text,
+                        lesson_data={
+                            "lemma":         lemma,
+                            "pos":           "function_word",
+                            "vowel_harmony": harmony,
+                        },
+                        confidence=0.80,
+                    ))
+                continue
+
+            # Possessive + case stacking
+            poss_label = _tr_stanza.possessive_label(mt)
+            stacked = f"{poss_label}_poss+{mt.case}" if (poss_label and mt.case) else None
+
+            # Shared lesson_data base
+            ld: dict[str, Any] = {
+                "lemma":         lemma,
+                "pos":           mt.upos,
+                "vowel_harmony": harmony,
+                "tense":         mt.tense,
+                "mood":          mt.mood,
+            }
+            if mt.person:         ld["person"]    = mt.person
+            if mt.number:         ld["number"]    = mt.number
+            if mt.case:           ld["case"]      = mt.case
+            if poss_label:        ld["possessive"] = poss_label
+            if stacked:           ld["stacked_suffixes"] = stacked
+            if mt.polarity == "neg": ld["negation"] = True
+            # Normalize vnoun → infinitive (Turkish -mak/-mek is a verbal noun,
+            # but pedagogically labelled "infinitive" throughout this codebase)
+            if mt.verb_form:
+                ld["verb_form"] = "infinitive" if mt.verb_form == "vnoun" else mt.verb_form
+            if mt.evidential:     ld["evidential"] = mt.evidential
+
+            is_verb     = mt.upos == "VERB"
+            is_aux      = mt.upos == "AUX"
+            is_vnoun    = mt.verb_form == "vnoun"
+            is_finite   = is_verb and (mt.tense or mt.mood) and not is_vnoun
+
+            if is_finite or (is_verb and mt.verb_form == "infinitive"):
+                vocab_cf = f"verb:{lemma}"
+                if vocab_cf not in seen:
+                    seen.add(vocab_cf)
+                    v_conf, v_cefr = _tr_cefr_confidence(lemma)
+                    vocab_ld: dict[str, Any] = {
+                        "lemma": lemma, "pos": "Verb", "vowel_harmony": harmony,
+                    }
+                    if v_cefr:
+                        vocab_ld["cefr_level"] = v_cefr
+                    candidates.append(CandidateObject(
+                        canonical_form=vocab_cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data=vocab_ld,
+                        confidence=v_conf,
+                    ))
+
+                if mt.verb_form == "infinitive" or is_vnoun:
+                    conj_cf = f"conj:{lemma}:infinitive"
+                else:
+                    feature = mt.tense or mt.mood or "present"
+                    agr = _agr_code(mt.person, mt.number)
+                    conj_cf = (f"conj:{lemma}:{feature}:{agr}" if agr
+                               else f"conj:{lemma}:{feature}")
+
+                if conj_cf not in seen:
+                    seen.add(conj_cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=conj_cf,
+                        surface_form=mt.text,
+                        type="conjugation",
+                        label=mt.text,
+                        lesson_data=dict(ld),
+                        confidence=0.85,
+                        relation_hints=[RelationHint(
+                            relation_type="conjugation_of",
+                            target_canonical_form=f"verb:{lemma}",
+                            target_type="vocabulary",
+                        )],
+                    ))
+
+            elif is_vnoun:
+                # Verbal noun (gitmek): emit vocabulary verb + conjugation infinitive
+                vocab_cf = f"verb:{lemma}"
+                if vocab_cf not in seen:
+                    seen.add(vocab_cf)
+                    v_conf2, v_cefr2 = _tr_cefr_confidence(lemma)
+                    vn_ld: dict[str, Any] = {"lemma": lemma, "pos": "Verb", "vowel_harmony": harmony}
+                    if v_cefr2:
+                        vn_ld["cefr_level"] = v_cefr2
+                    candidates.append(CandidateObject(
+                        canonical_form=vocab_cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data=vn_ld,
+                        confidence=v_conf2,
+                    ))
+                conj_cf = f"conj:{lemma}:infinitive"
+                if conj_cf not in seen:
+                    seen.add(conj_cf)
+                    inf_ld = dict(ld)
+                    inf_ld["pos"] = "Verb"
+                    candidates.append(CandidateObject(
+                        canonical_form=conj_cf,
+                        surface_form=mt.text,
+                        type="conjugation",
+                        label=mt.text,
+                        lesson_data=inf_ld,
+                        confidence=0.85,
+                        relation_hints=[RelationHint(
+                            relation_type="conjugation_of",
+                            target_canonical_form=f"verb:{lemma}",
+                            target_type="vocabulary",
+                        )],
+                    ))
+
+            elif mt.upos == "NOUN" or mt.upos == "PROPN":
+                cf = f"noun:{lemma}"
+                if cf not in seen:
+                    seen.add(cf)
+                    n_conf, n_cefr = _tr_cefr_confidence(lemma)
+                    noun_ld = dict(ld)
+                    if n_cefr:
+                        noun_ld["cefr_level"] = n_cefr
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data=noun_ld,
+                        confidence=n_conf,
+                    ))
+
+            elif mt.upos == "ADJ":
+                cf = f"adj:{lemma}"
+                if cf not in seen:
+                    seen.add(cf)
+                    a_conf, a_cefr = _tr_cefr_confidence(lemma)
+                    adj_ld = dict(ld)
+                    if a_cefr:
+                        adj_ld["cefr_level"] = a_cefr
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data=adj_ld,
+                        confidence=a_conf,
+                    ))
+
+            elif mt.upos == "ADV":
+                cf = f"adv:{lemma}"
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=lemma,
+                        lesson_data=ld,
+                        confidence=0.75,
+                    ))
+
+            elif mt.upos == "PRON":
+                cf = canonical_lower
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=mt.text,
+                        lesson_data={**ld, "pos": "pronoun"},
+                        confidence=0.80,
+                    ))
+
+            elif is_aux:
+                cf = canonical_lower
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=mt.text,
+                        lesson_data={**ld, "pos": "auxiliary"},
+                        confidence=0.75,
+                    ))
+
+            else:
+                cf = canonical_lower
+                if cf not in seen:
+                    seen.add(cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=cf,
+                        surface_form=mt.text,
+                        type="vocabulary",
+                        label=mt.text,
+                        lesson_data={**ld, "confidence_note": "Closed-class or unrecognised POS; stanza parse."},
+                        confidence=0.65,
+                    ))
+
+        return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     # ------------------------------------------------------------------
     # zeyrek path

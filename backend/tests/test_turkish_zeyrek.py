@@ -113,14 +113,16 @@ class TestTrAdapter:
 class TestZeyrекCanonicalForms:
     def test_verb_canonical(self, plugin):
         result = plugin.analyze_sentence("O gitti.")
-        vocab = next((c for c in result.candidates if c.canonical_form == "verb:gitmek"), None)
+        # stanza lemma = root "git"; zeyrek lemma = infinitive "gitmek"
+        vocab = next((c for c in result.candidates
+                      if c.canonical_form in {"verb:git", "verb:gitmek"}), None)
         assert vocab is not None
         assert vocab.type == "vocabulary"
 
     def test_verb_conjugation_canonical(self, plugin):
         result = plugin.analyze_sentence("O gitti.")
         conj = next((c for c in result.candidates if c.type == "conjugation"
-                     and "gitmek" in c.canonical_form), None)
+                     and c.canonical_form.startswith("conj:git")), None)
         assert conj is not None
         assert "past_definite" in conj.canonical_form
 
@@ -147,28 +149,29 @@ class TestZeyrекTense:
     def test_past_definite(self, plugin):
         result = plugin.analyze_sentence("O gitti.")
         conj = next((c for c in result.candidates if c.type == "conjugation"
-                     and "gitmek" in c.canonical_form), None)
+                     and c.canonical_form.startswith("conj:git")), None)
         assert conj is not None
         assert conj.lesson_data["tense"] == "past_definite"
 
     def test_past_evidential(self, plugin):
         result = plugin.analyze_sentence("O gitmiş.")
         conj = next((c for c in result.candidates if c.type == "conjugation"
-                     and "gitmek" in c.canonical_form), None)
+                     and c.canonical_form.startswith("conj:git")), None)
         assert conj is not None
         assert conj.lesson_data["tense"] == "past_evidential"
 
     def test_progressive(self, plugin):
         result = plugin.analyze_sentence("Gidiyorum.")
         conj = next((c for c in result.candidates if c.type == "conjugation"
-                     and "gitmek" in c.canonical_form), None)
+                     and c.canonical_form.startswith("conj:git")), None)
         assert conj is not None
         assert conj.lesson_data["tense"] == "progressive"
 
     def test_future_participle_carries_future_tense(self, plugin):
         result = plugin.analyze_sentence("Gidecek.")
         cand = next((c for c in result.candidates
-                     if c.surface_form.lower() == "gidecek"), None)
+                     if c.surface_form.lower() == "gidecek"
+                     and c.type == "conjugation"), None)
         assert cand is not None
         assert cand.lesson_data.get("tense") == "future"
 
@@ -212,14 +215,15 @@ class TestZeyrекInfinitive:
     def test_infinitive_also_emits_vocabulary(self, plugin):
         result = plugin.analyze_sentence("Gitmek istiyorum.")
         vocab = next((c for c in result.candidates
-                      if c.canonical_form == "verb:gitmek"), None)
+                      if c.canonical_form in {"verb:git", "verb:gitmek"}), None)
         assert vocab is not None
         assert vocab.type == "vocabulary"
 
     def test_infinitive_relation_hint(self, plugin):
         result = plugin.analyze_sentence("Gitmek istiyorum.")
         conj = next((c for c in result.candidates
-                     if c.type == "conjugation" and "gitmek" in c.canonical_form
+                     if c.type == "conjugation"
+                     and c.canonical_form.startswith("conj:git")
                      and "infinitive" in c.canonical_form), None)
         assert conj is not None
         assert any(h.relation_type == "conjugation_of" for h in conj.relation_hints)
@@ -250,7 +254,7 @@ class TestZeyrекConjugation:
         # First-person singular progressive
         result = plugin.analyze_sentence("Gidiyorum.")
         conj = next((c for c in result.candidates if c.type == "conjugation"
-                     and "gitmek" in c.canonical_form), None)
+                     and c.canonical_form.startswith("conj:git")), None)
         assert conj is not None
         assert "A1sg" in conj.canonical_form
 
