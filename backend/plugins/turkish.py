@@ -181,6 +181,33 @@ _SUFFIX_RULES: list[tuple[str, dict]] = [
     ("lere",    {"number": "plural", "case": "dative",      "pos": "noun"}),
     ("lar",     {"number": "plural", "pos": "noun"}),
     ("ler",     {"number": "plural", "pos": "noun"}),
+    # ── Possessive + case stacks (heuristic: longer suffixes matched first) ──
+    # 1sg possessive + ablative/locative/dative
+    ("ımdan",  {"possessive": "first_sg",          "case": "ablative", "pos": "noun"}),
+    ("imden",  {"possessive": "first_sg",          "case": "ablative", "pos": "noun"}),
+    ("umdan",  {"possessive": "first_sg",          "case": "ablative", "pos": "noun"}),
+    ("ümden",  {"possessive": "first_sg",          "case": "ablative", "pos": "noun"}),
+    ("ımda",   {"possessive": "first_sg",          "case": "locative", "pos": "noun"}),
+    ("imde",   {"possessive": "first_sg",          "case": "locative", "pos": "noun"}),
+    ("umda",   {"possessive": "first_sg",          "case": "locative", "pos": "noun"}),
+    ("ümde",   {"possessive": "first_sg",          "case": "locative", "pos": "noun"}),
+    ("ıma",    {"possessive": "first_sg",          "case": "dative",   "pos": "noun"}),
+    ("ime",    {"possessive": "first_sg",          "case": "dative",   "pos": "noun"}),
+    ("uma",    {"possessive": "first_sg",          "case": "dative",   "pos": "noun"}),
+    ("üme",    {"possessive": "first_sg",          "case": "dative",   "pos": "noun"}),
+    # 2sg/3sg possessive + ablative/locative/dative (surface-identical; labelled ambiguous)
+    ("ından",  {"possessive": "second_or_third_sg", "case": "ablative", "pos": "noun"}),
+    ("inden",  {"possessive": "second_or_third_sg", "case": "ablative", "pos": "noun"}),
+    ("undan",  {"possessive": "second_or_third_sg", "case": "ablative", "pos": "noun"}),
+    ("ünden",  {"possessive": "second_or_third_sg", "case": "ablative", "pos": "noun"}),
+    ("ında",   {"possessive": "second_or_third_sg", "case": "locative", "pos": "noun"}),
+    ("inde",   {"possessive": "second_or_third_sg", "case": "locative", "pos": "noun"}),
+    ("unda",   {"possessive": "second_or_third_sg", "case": "locative", "pos": "noun"}),
+    ("ünde",   {"possessive": "second_or_third_sg", "case": "locative", "pos": "noun"}),
+    ("ına",    {"possessive": "second_or_third_sg", "case": "dative",   "pos": "noun"}),
+    ("ine",    {"possessive": "second_or_third_sg", "case": "dative",   "pos": "noun"}),
+    ("una",    {"possessive": "second_or_third_sg", "case": "dative",   "pos": "noun"}),
+    ("üne",    {"possessive": "second_or_third_sg", "case": "dative",   "pos": "noun"}),
     ("dan",    {"case": "ablative",              "pos": "noun_or_adjective"}),
     ("den",    {"case": "ablative",              "pos": "noun_or_adjective"}),
     ("tan",    {"case": "ablative",              "pos": "noun_or_adjective"}),
@@ -218,8 +245,8 @@ _AORIST_BLOCKLIST: frozenset[str] = frozenset({
 })
 
 _CONFIDENCE_NOTE_HEURISTIC = (
-    "Turkish morphology-light: outermost suffix stripped for feature hints. "
-    "Inner suffix layers (possessive, aspect stacking, evidentiality) not analysed. "
+    "Turkish morphology-light: common possessive+case stacks detected; "
+    "deeper agglutinative layers (aspect stacking, evidentiality) not analysed. "
     "No trained NLP model used. Canonical form uses surface form + morphology tag."
 )
 
@@ -378,6 +405,8 @@ class TurkishPlugin:
                 ld["case"] = mt.case
             if mt.possessive:
                 ld["possessive"] = mt.possessive
+            if mt.possessive and mt.case:
+                ld["stacked_suffixes"] = f"{mt.possessive}_poss+{mt.case}"
             if mt.negation:
                 ld["negation"] = True
             if mt.verb_form:

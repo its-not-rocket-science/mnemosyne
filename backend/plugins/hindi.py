@@ -293,6 +293,24 @@ def _make_conj_canonical(lemma: str, mt: "Any") -> str:
     return f"conj:{lemma}:{primary}"
 
 
+# ── Compound verbs (V+V constructions) ───────────────────────────────────────
+# Vector (light) verbs that form compound verbs with a main verb stem.
+# Listed as the standard infinitive lemma returned by stanza.
+_VECTOR_VERBS: frozenset[str] = frozenset({
+    "जाना",   # to go — completion / direction
+    "देना",   # to give — other-benefit (causative)
+    "लेना",   # to take — self-benefit (reflexive)
+    "आना",    # to come — involuntary / resultant action
+    "पड़ना",  # to fall / befall — compulsion
+    "सकना",   # can / be able — modality
+    "रहना",   # to remain — continuous aspect
+    "बैठना",  # to sit — inadvertent or undesirable action
+    "उठना",   # to rise — inceptive / sudden action
+    "चुकना",  # to finish — completion (anterior)
+    "डालना",  # to throw — forceful / sudden completion
+})
+
+
 def _hi_cefr_confidence(lemma: str, base: float) -> tuple[float, str | None]:
     """Return adjusted (confidence, cefr_level|None) using the CEFR chain."""
     if lemma in _HI_A1:
@@ -391,7 +409,7 @@ class HindiPlugin:
         seen: set[str] = set()
         candidates: list[CandidateObject] = []
 
-        for mt in morph_tokens:
+        for i, mt in enumerate(morph_tokens):
             if mt.upos == "PUNCT":
                 continue
 
@@ -564,6 +582,11 @@ class HindiPlugin:
                     n_ld = dict(base_ld)
                     if n_cefr:
                         n_ld["cefr_level"] = n_cefr
+                    # Ergative: NOUN/PROPN followed by ने marks the ergative subject
+                    next_mt = morph_tokens[i + 1] if i + 1 < len(morph_tokens) else None
+                    if next_mt is not None and next_mt.text == "ने":
+                        n_ld["ergative_subject"] = True
+                        n_ld["case"] = "ergative"
                     candidates.append(CandidateObject(
                         canonical_form=cf,
                         surface_form=mt.text,
@@ -622,6 +645,33 @@ class HindiPlugin:
                     lesson_data=else_ld,
                     confidence=0.65 if has_feats else None,
                 ))
+
+        # Compound verb detection: V+V/AUX bigrams where V2 is a vector (light) verb.
+        # Stanza tags vector verbs as AUX in perfective compounds (चला गया) and
+        # as VERB in benefactive/completive compounds (खा लिया).
+        for j in range(len(morph_tokens) - 1):
+            mt1, mt2 = morph_tokens[j], morph_tokens[j + 1]
+            if mt1.upos == "VERB" and mt2.upos in ("VERB", "AUX"):
+                v2_lem = mt2.lemma or mt2.text
+                if v2_lem in _VECTOR_VERBS:
+                    v1_lem = mt1.lemma or mt1.text
+                    compound_cf = f"compound:{v1_lem}+{v2_lem}"
+                    if compound_cf not in seen:
+                        seen.add(compound_cf)
+                        candidates.append(CandidateObject(
+                            canonical_form=compound_cf,
+                            surface_form=f"{mt1.text} {mt2.text}",
+                            type="vocabulary",
+                            label=f"{mt1.text} {mt2.text}",
+                            lesson_data={
+                                "pos": "compound_verb",
+                                "main_verb": v1_lem,
+                                "vector_verb": v2_lem,
+                                "romanized": f"{_romanise(mt1.text)} {_romanise(mt2.text)}",
+                                "note": f"Compound verb: {v1_lem} + vector verb {v2_lem}",
+                            },
+                            confidence=0.82,
+                        ))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
