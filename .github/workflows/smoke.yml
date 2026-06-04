@@ -39,10 +39,22 @@ jobs:
 
       - name: Build app image
         run: |
-          docker compose build \
-            --build-arg POETRY_INSTALL_EXTRAS= \
-            --build-arg SPACY_MODELS=es_core_news_sm \
-            app
+          for attempt in 1 2 3; do
+            if docker compose build \
+              --build-arg POETRY_INSTALL_EXTRAS= \
+              --build-arg SPACY_MODELS=es_core_news_sm \
+              app; then
+              exit 0
+            fi
+
+            if [ "$attempt" = "3" ]; then
+              echo "docker compose build failed after 3 attempts"
+              exit 1
+            fi
+
+            echo "docker compose build failed on attempt $attempt; retrying in 10s..."
+            sleep 10
+          done
 
       - name: Start stack
         run: docker compose up -d
