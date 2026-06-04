@@ -27,7 +27,7 @@ COPY pyproject.toml poetry.lock ./
 # and add a camel_data install step. The Arabic plugin works in dictionary mode
 # (tashkeel + nuance extractor) without it.
 ARG POETRY_INSTALL_EXTRAS="--extras cjk --extras korean"
-RUN poetry install --without dev ${POETRY_INSTALL_EXTRAS} --no-interaction --no-ansi
+RUN poetry install --without dev ${POETRY_INSTALL_EXTRAS} --no-root --no-interaction --no-ansi
 
 # Download spaCy models. CI can override SPACY_MODELS to install only the models
 # exercised by the smoke test, avoiding unrelated network-heavy downloads.
