@@ -37,8 +37,15 @@ jobs:
           # Load only Spanish to limit startup time in CI
           echo "ENABLED_LANGUAGES=es" >> .env
 
-      - name: Build and start stack
-        run: docker compose up -d --build
+      - name: Build app image
+        run: |
+          docker compose build \
+            --build-arg POETRY_INSTALL_EXTRAS= \
+            --build-arg SPACY_MODELS=es_core_news_sm \
+            app
+
+      - name: Start stack
+        run: docker compose up -d
 
       - name: Wait for /health (up to 150 s)
         run: |
