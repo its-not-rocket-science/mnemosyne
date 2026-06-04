@@ -10,7 +10,7 @@ packages = [{ include = "backend" }]
 python = "^3.12"
 fastapi = "^0.115.0"
 uvicorn = { version = "^0.30.0", extras = ["standard"] }
-pydantic = "^2.8.0"
+pydantic = { version = "^2.8.0", extras = ["email"] }
 pydantic-settings = "^2.4.0"
 sqlalchemy = "^2.0.32"
 asyncpg = "^0.29.0"
