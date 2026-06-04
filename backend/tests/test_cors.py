@@ -57,3 +57,26 @@ def test_multiple_wildcard_entries_still_rejected():
             debug=False,
             cors_origins=["https://app.example.com", "*"],
         )
+
+
+def test_list_settings_accept_comma_separated_env_values(monkeypatch):
+    """List settings should accept the documented comma-separated env syntax."""
+    monkeypatch.setenv("ENABLED_LANGUAGES", "es, fr")
+    monkeypatch.setenv("CORS_ORIGINS", "https://app.example.com, https://staging.example.com")
+
+    s = Settings(database_url="sqlite+aiosqlite:///:memory:", debug=False)
+
+    assert s.enabled_languages == ["es", "fr"]
+    assert s.cors_origins == [
+        "https://app.example.com",
+        "https://staging.example.com",
+    ]
+
+
+def test_single_enabled_language_env_value_is_a_one_item_list(monkeypatch):
+    """The smoke workflow uses ENABLED_LANGUAGES=es to limit startup work."""
+    monkeypatch.setenv("ENABLED_LANGUAGES", "es")
+
+    s = Settings(database_url="sqlite+aiosqlite:///:memory:")
+
+    assert s.enabled_languages == ["es"]
