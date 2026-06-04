@@ -174,6 +174,26 @@ _GRADATION_PAIRS = (
     ("mm", "mp"), ("nn", "nt"), ("ll", "lt"), ("rr", "rt"),
 )
 
+_LOCATION_CASES: dict[str, str] = {
+    "inessive": "inside / in",
+    "elative": "out of / from inside",
+    "illative": "into",
+    "adessive": "on / at",
+    "ablative": "off / from",
+    "allative": "onto / to",
+}
+
+_LOCATION_CASE_SUFFIXES: dict[str, tuple[str, ...]] = {
+    "inessive": ("ssa", "ssä"),
+    "elative": ("sta", "stä"),
+    "illative": ("in", "an", "en", "on", "ön", "un", "yn", "seen"),
+    "adessive": ("lla", "llä"),
+    "ablative": ("lta", "ltä"),
+    "allative": ("lle",),
+}
+
+_NEGATIVE_AUXILIARIES = frozenset({"en", "et", "ei", "emme", "ette", "eivät", "eivat"})
+
 
 def _gradation_note(surface: str, lemma: str) -> str | None:
     s, l = surface.lower(), lemma.lower()
@@ -321,6 +341,7 @@ class FinnishPlugin:
         candidates: list[CandidateObject] = []
         candidates.extend(self._stanza_conjugations(tokens, seen_conj, seen_vocab))
         candidates.extend(self._stanza_vocabulary(tokens, seen_vocab))
+        candidates.extend(self._extract_nuance_candidates(candidates))
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     def _stanza_conjugations(
@@ -484,6 +505,7 @@ class FinnishPlugin:
         candidates: list[CandidateObject] = []
         candidates.extend(self._extract_conjugations(tokens, seen_conj, seen_vocab))
         candidates.extend(self._extract_vocabulary(tokens, seen_vocab))
+        candidates.extend(self._extract_nuance_candidates(candidates))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
@@ -630,6 +652,179 @@ class FinnishPlugin:
                 confidence=confidence,
             ))
         return candidates
+
+    # ── Grammar / nuance candidates ──────────────────────────────────────────
+
+    def _extract_nuance_candidates(
+        self,
+        candidates: list[CandidateObject],
+    ) -> list[CandidateObject]:
+        """Emit Finnish grammar-nuance candidates from morphology already found.
+
+        These objects power the Nuance tab and practice panels for high-value
+        Finnish patterns: local cases, possessive suffixes, consonant gradation,
+        passive voice, and the negative auxiliary paradigm.
+        """
+        out: list[CandidateObject] = []
+        seen: set[str] = set()
+
+        for cand in candidates:
+            ld = cand.lesson_data or {}
+            surface = cand.surface_form or cand.label or cand.canonical_form
+            lemma = str(ld.get("lemma") or cand.canonical_form)
+
+            if cand.type == "vocabulary":
+                case = str(ld.get("case") or "")
+                if case in _LOCATION_CASES:
+                    suffix_hint = "/".join(_LOCATION_CASE_SUFFIXES.get(case, ()))
+                    explanation = (
+                        f"«{surface}» uses the Finnish {case} local case ({suffix_hint}), "
+                        f"which expresses {_LOCATION_CASES[case]}. Finnish often encodes "
+                        "English prepositions as case endings attached directly to the noun."
+                    )
+                    self._append_nuance(out, self._nuance_object(
+                        seen=seen,
+                        nuance_type="finnish_location_case",
+                        key=f"{case}:{surface.lower()}",
+                        surface=surface,
+                        label=surface,
+                        lemma=lemma,
+                        explanation=explanation,
+                        level="A2",
+                        extra={"case": case, "suffix_hint": suffix_hint},
+                    ))
+
+                poss = str(ld.get("possessive_suffix") or "")
+                if poss:
+                    poss_meaning = {
+                        "1pl": "our",
+                        "2pl": "your (plural)",
+                        "3sg/3pl": "his/her/their",
+                        "3sg": "his/her",
+                        "3pl": "their",
+                    }.get(poss, poss)
+                    suffix = surface[-3:]
+                    self._append_nuance(out, self._nuance_object(
+                        seen=seen,
+                        nuance_type="finnish_possessive_suffix",
+                        key=f"{poss}:{surface.lower()}",
+                        surface=surface,
+                        label=surface,
+                        lemma=lemma,
+                        explanation=(
+                            f"«{surface}» contains the possessive suffix -{suffix}. "
+                            f"For this form it signals {poss_meaning} possession, so the possessor "
+                            "is encoded inside the noun rather than as a separate word."
+                        ),
+                        level="A2",
+                        extra={"possessive_suffix": poss, "possessive_meaning": poss_meaning},
+                    ))
+
+                grad = str(ld.get("lemma_note") or "")
+                if "gradation" in grad.lower():
+                    self._append_nuance(out, self._nuance_object(
+                        seen=seen,
+                        nuance_type="consonant_gradation",
+                        key=f"{lemma}:{surface.lower()}",
+                        surface=surface,
+                        label=surface,
+                        lemma=lemma,
+                        explanation=(
+                            f"«{surface}» shows Finnish consonant gradation from the base «{lemma}». "
+                            "Certain case endings weaken or alter the stem consonants, so the form is not "
+                            "made by simply adding a suffix to an unchanged stem."
+                        ),
+                        level="A2",
+                        extra={"lemma_note": grad},
+                    ))
+
+            if cand.type == "conjugation":
+                voice = str(ld.get("voice") or "")
+                tense = str(ld.get("tense") or "unknown")
+                if voice == "passive":
+                    self._append_nuance(out, self._nuance_object(
+                        seen=seen,
+                        nuance_type="finnish_passive_voice",
+                        key=f"{tense}:{surface.lower()}",
+                        surface=surface,
+                        label=surface,
+                        lemma=lemma,
+                        explanation=(
+                            f"«{surface}» is Finnish passive voice ({tense}). It backgrounds the actor "
+                            "and focuses on the action itself, often corresponding to English passive "
+                            "or impersonal 'one/people' readings."
+                        ),
+                        level="A2",
+                        extra={"tense": tense, "voice": voice},
+                    ))
+
+                polarity = str(ld.get("polarity") or "")
+                if polarity == "neg" or surface.lower() in _NEGATIVE_AUXILIARIES:
+                    self._append_nuance(out, self._nuance_object(
+                        seen=seen,
+                        nuance_type="finnish_negative_auxiliary",
+                        key=surface.lower(),
+                        surface=surface,
+                        label=surface,
+                        lemma=lemma,
+                        explanation=(
+                            f"«{surface}» is part of the Finnish negative auxiliary paradigm "
+                            "(en, et, ei, emme, ette, eivät). Finnish negation conjugates for "
+                            "person and number while the main verb appears in its negative stem form."
+                        ),
+                        level="A1",
+                        extra={"polarity": "neg"},
+                    ))
+
+        return out
+
+    @staticmethod
+    def _append_nuance(out: list[CandidateObject], obj: CandidateObject | None) -> None:
+        if obj is not None:
+            out.append(obj)
+
+    def _nuance_object(
+        self,
+        *,
+        seen: set[str],
+        nuance_type: str,
+        key: str,
+        surface: str,
+        label: str,
+        lemma: str,
+        explanation: str,
+        level: str,
+        extra: dict[str, Any] | None = None,
+    ) -> CandidateObject | None:
+        cf = f"nuance:fi:{nuance_type}:{key}"
+        if cf in seen:
+            return None
+        seen.add(cf)
+        lesson_data: dict[str, Any] = {
+            "nuance_type": nuance_type,
+            "explanation": explanation,
+            "note": explanation,
+            "register": "neutral",
+            "learner_level": level,
+            "source": "heuristic",
+            "surface": surface,
+            "lemma": lemma,
+        }
+        if extra:
+            lesson_data.update(extra)
+        return CandidateObject(
+            canonical_form=cf,
+            surface_form=surface,
+            type="nuance",
+            label=label,
+            lesson_data=lesson_data,
+            confidence=0.82,
+            relation_hints=[RelationHint(
+                relation_type="nuance_of",
+                target_canonical_form=lemma,
+                target_type="vocabulary",
+            )],
+        )
 
     def _vocab_confidence(self, tok: Any, lemma: str) -> tuple[float, str | None]:
         if tok.pos_ == "PROPN":

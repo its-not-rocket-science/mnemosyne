@@ -1321,6 +1321,12 @@ _NUANCE_TYPE_LABELS: dict[str, str] = {
     "honorific":                  "Subject honorific (주체 높임)",
     # German
     "modal_particle":             "Modal particle (Modalpartikel)",
+    # Finnish
+    "finnish_location_case":       "Finnish local case",
+    "finnish_possessive_suffix":   "Finnish possessive suffix",
+    "consonant_gradation":         "Consonant gradation",
+    "finnish_passive_voice":       "Finnish passive voice",
+    "finnish_negative_auxiliary":   "Finnish negative auxiliary",
     # Latin / Greek
     "discourse_particle":         "Discourse particle",
 }

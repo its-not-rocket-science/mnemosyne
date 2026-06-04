@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "language": "fi",
+  "sets": [
+    {
+      "concept": "finnish_location_cases",
+      "title": "Finnish local cases: inside vs surface, place vs motion",
+      "dimension": "case",
+      "description": "Finnish local cases replace many English prepositions: inner cases describe being in, coming out of, or going into something; outer cases describe being on/at, coming off/from, or going onto/to something.",
+      "cefr_level": "A2",
+      "grammar_concept": "case.local_finnish",
+      "pairs": [
+        {
+          "sentence_a": "Olen kaupungissa.",
+          "sentence_b": "Tulen kaupungista.",
+          "label_a": "in a city",
+          "label_b": "from a city",
+          "question": "Which sentence says the person is located in the city?",
+          "answer": "a",
+          "dimension": "case",
+          "explanation": "Kaupungissa uses the inessive -ssa/-ssä for location inside or within a place. Kaupungista uses the elative -sta/-stä for movement out of or from a place.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "Menen kaupunkiin.",
+          "sentence_b": "Olen kaupungissa.",
+          "label_a": "into/toward the city",
+          "label_b": "in the city",
+          "question": "Which sentence describes motion into the city rather than already being there?",
+          "answer": "a",
+          "dimension": "case",
+          "explanation": "Kaupunkiin is illative: the destination is being entered or reached. Kaupungissa is inessive: the location is already the setting.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "Kirja on pöydällä.",
+          "sentence_b": "Otan kirjan pöydältä.",
+          "label_a": "on the table",
+          "label_b": "from off the table",
+          "question": "Which sentence says the book is on the table now?",
+          "answer": "a",
+          "dimension": "case",
+          "explanation": "Pöydällä uses the adessive -lla/-llä for a surface or nearby location. Pöydältä uses the ablative -lta/-ltä for movement away from that surface or location.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "Laitan kirjan pöydälle.",
+          "sentence_b": "Kirja on pöydällä.",
+          "label_a": "onto the table",
+          "label_b": "on the table",
+          "question": "Which sentence focuses on placing the book onto the table?",
+          "answer": "a",
+          "dimension": "case",
+          "explanation": "Pöydälle is allative: motion or transfer toward a surface/location. Pöydällä is adessive: static position on or at that surface/location.",
+          "cefr_level": "A2"
+        }
+      ]
+    },
+    {
+      "concept": "finnish_possessive_suffixes",
+      "title": "Finnish possessive suffixes",
+      "dimension": "possession",
+      "description": "Finnish can mark the possessor with a suffix on the noun: -mme 'our', -nne 'your (plural)', and -nsa/-nsä 'his/her/their'.",
+      "cefr_level": "A2",
+      "grammar_concept": "suffix.possessive_finnish",
+      "pairs": [
+        {
+          "sentence_a": "Tämä on talomme.",
+          "sentence_b": "Tämä on talonne.",
+          "label_a": "our house",
+          "label_b": "your (plural) house",
+          "question": "Which sentence says the house belongs to us?",
+          "answer": "a",
+          "dimension": "possession",
+          "explanation": "Talomme ends in -mme, the first-person plural possessive suffix: our house. Talonne ends in -nne, the second-person plural suffix: your house when speaking to more than one person or formally.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "Tämä on talonsa.",
+          "sentence_b": "Tämä on talomme.",
+          "label_a": "his/her/their house",
+          "label_b": "our house",
+          "question": "Which form can mean his, her, or their house depending on context?",
+          "answer": "a",
+          "dimension": "possession",
+          "explanation": "Talonsa uses -nsa/-nsä, a third-person possessive suffix. Finnish uses the same surface form for his, her, and their; the context identifies the possessor.",
+          "cefr_level": "A2"
+        }
+      ]
+    },
+    {
+      "concept": "finnish_consonant_gradation",
+      "title": "Finnish consonant gradation",
+      "dimension": "stem_alternation",
+      "description": "Many Finnish nouns and verbs change their stem consonants when endings are added, so the inflected form may not look like the dictionary form plus a suffix.",
+      "cefr_level": "A2",
+      "grammar_concept": "stem.consonant_gradation_finnish",
+      "pairs": [
+        {
+          "sentence_a": "Asun kaupungissa.",
+          "sentence_b": "Kaupunki on suuri.",
+          "label_a": "weak grade in a case form",
+          "label_b": "strong grade dictionary form",
+          "question": "Which sentence shows kaupunki with consonant gradation inside a case form?",
+          "answer": "a",
+          "dimension": "stem_alternation",
+          "explanation": "Kaupunki changes to kaupung- before the inessive ending -ssa: kaupungissa. The nk/ng alternation is consonant gradation, not a separate word.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "Pankki on auki.",
+          "sentence_b": "Olen pankissa.",
+          "label_a": "base form pankki",
+          "label_b": "case form pankissa",
+          "question": "Which sentence contains the inessive form 'in the bank'?",
+          "answer": "b",
+          "dimension": "stem_alternation",
+          "explanation": "Pankki loses one k before -ssa: pankissa. This k/zero alternation is a common gradation pattern in words ending in -kk-. ",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "Jalka sattuu.",
+          "sentence_b": "Minulla on kipua jalassa.",
+          "label_a": "base form jalka",
+          "label_b": "inessive jalassa",
+          "question": "Which sentence shows the weak-grade stem in a location case?",
+          "answer": "b",
+          "dimension": "stem_alternation",
+          "explanation": "Jalka becomes jalassa in the inessive: the k disappears before -ssa. Recognizing the stem alternation helps connect inflected forms to their lemmas.",
+          "cefr_level": "A2"
+        }
+      ]
+    },
+    {
+      "concept": "finnish_passive_voice",
+      "title": "Finnish passive voice: present vs past",
+      "dimension": "diathesis",
+      "description": "Finnish passive forms such as luetaan and luettiin background the actor and focus on the action: 'is read / people read' versus 'was read / people read'.",
+      "cefr_level": "A2",
+      "grammar_concept": "voice.passive_finnish",
+      "pairs": [
+        {
+          "sentence_a": "Täällä luetaan paljon.",
+          "sentence_b": "Täällä luettiin paljon.",
+          "label_a": "present passive",
+          "label_b": "past passive",
+          "question": "Which sentence describes what is being read or is generally read now?",
+          "answer": "a",
+          "dimension": "diathesis",
+          "explanation": "Luetaan is present passive: the action is current or habitual. Luettiin is past passive: the action happened in the past.",
+          "cefr_level": "A2"
+        },
+        {
+          "sentence_a": "Kirja luettiin eilen.",
+          "sentence_b": "Kirja luetaan tänään.",
+          "label_a": "was read yesterday",
+          "label_b": "is read today",
+          "question": "Which sentence places the passive action in the past?",
+          "answer": "a",
+          "dimension": "diathesis",
+          "explanation": "Luettiin marks past passive, while luetaan marks present passive. The voice is similar, but the tense changes when the action is situated.",
+          "cefr_level": "A2"
+        }
+      ]
+    },
+    {
+      "concept": "finnish_negative_auxiliary",
+      "title": "Finnish negative auxiliary",
+      "dimension": "negation",
+      "description": "Finnish negation uses a conjugated negative auxiliary: en, et, ei, emme, ette, eivät. The auxiliary carries person/number, while the main verb appears in a non-finite negative stem.",
+      "cefr_level": "A1",
+      "grammar_concept": "negation.auxiliary_finnish",
+      "pairs": [
+        {
+          "sentence_a": "En lue.",
+          "sentence_b": "Et lue.",
+          "label_a": "I do not read",
+          "label_b": "you do not read",
+          "question": "Which sentence uses the first-person singular negative auxiliary?",
+          "answer": "a",
+          "dimension": "negation",
+          "explanation": "En is the first-person singular negative auxiliary. Et is second-person singular. Finnish marks the person of negation on the auxiliary rather than on the lexical verb.",
+          "cefr_level": "A1"
+        },
+        {
+          "sentence_a": "Emme lue.",
+          "sentence_b": "Ette lue.",
+          "label_a": "we do not read",
+          "label_b": "you (plural) do not read",
+          "question": "Which sentence means 'we do not read'?",
+          "answer": "a",
+          "dimension": "negation",
+          "explanation": "Emme is first-person plural; ette is second-person plural. The main verb lue stays the same in both forms.",
+          "cefr_level": "A1"
+        },
+        {
+          "sentence_a": "Hän ei lue.",
+          "sentence_b": "He eivät lue.",
+          "label_a": "he/she does not read",
+          "label_b": "they do not read",
+          "question": "Which sentence uses the plural negative auxiliary?",
+          "answer": "b",
+          "dimension": "negation",
+          "explanation": "Ei is the third-person singular negative auxiliary. Eivät is third-person plural. The subject number changes the auxiliary, not the main verb form lue.",
+          "cefr_level": "A1"
+        }
+      ]
+    }
+  ]
+}

@@ -674,6 +674,66 @@ _INVENTORIES: dict[str, list[NuanceSystem]] = {
         ),
     ],
 
+    # ── Finnish ───────────────────────────────────────────────────────────────
+    "fi": [
+        NuanceSystem(
+            name="Local case system",
+            dimension="case",
+            cefr_range=("A2", "B2"),
+            description="Finnish local cases encode being in/on/at a place, moving from it, or moving into/onto it directly on the noun.",
+            native_term="sijamuodot",
+            contrast_concept="finnish_location_cases",
+            discourse_effects=[
+                "Kaupungissa, kaupungista, and kaupunkiin differ by location versus source versus destination, not by separate prepositions.",
+                "Pöydällä, pöydältä, and pöydälle make the same static/source/destination contrast for surfaces or at-locations.",
+            ],
+        ),
+        NuanceSystem(
+            name="Possessive suffixes",
+            dimension="argument_marking",
+            cefr_range=("A2", "B1"),
+            description="Possession can be marked by suffixes attached to nouns: talomme, talonne, talonsa.",
+            native_term="omistusliitteet",
+            contrast_concept="finnish_possessive_suffixes",
+            discourse_effects=[
+                "The third-person suffix -nsa/-nsä is ambiguous between his, her, and their unless the surrounding context identifies the possessor.",
+            ],
+        ),
+        NuanceSystem(
+            name="Consonant gradation",
+            dimension="case",
+            cefr_range=("A2", "B2"),
+            description="Finnish stems often alternate strong and weak consonant grades when case or verb endings are added.",
+            native_term="astevaihtelu",
+            contrast_concept="finnish_consonant_gradation",
+            discourse_effects=[
+                "Forms like kaupungissa, pankissa, and jalassa must be recognized as inflected forms of kaupunki, pankki, and jalka despite stem changes.",
+            ],
+        ),
+        NuanceSystem(
+            name="Passive voice",
+            dimension="diathesis",
+            cefr_range=("A2", "B2"),
+            description="Finnish passive forms such as luetaan and luettiin background the actor and focus on the action.",
+            native_term="passiivi",
+            contrast_concept="finnish_passive_voice",
+            discourse_effects=[
+                "The Finnish passive often feels impersonal ('one/people do') as well as passive ('is done'), so translating it word-for-word can over-specify the actor.",
+            ],
+        ),
+        NuanceSystem(
+            name="Negative auxiliary",
+            dimension="negation",
+            cefr_range=("A1", "B1"),
+            description="Finnish negation uses a conjugated auxiliary: en, et, ei, emme, ette, eivät.",
+            native_term="kieltoverbi",
+            contrast_concept="finnish_negative_auxiliary",
+            discourse_effects=[
+                "Person and number move to the negative auxiliary while the main verb remains in a negative stem form.",
+            ],
+        ),
+    ],
+
     # ── Hebrew ────────────────────────────────────────────────────────────────
     "he": [
         NuanceSystem(
