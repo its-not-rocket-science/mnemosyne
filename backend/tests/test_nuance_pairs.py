@@ -33,6 +33,18 @@ class TestGetNuanceSets:
         sets = get_nuance_sets("de")
         assert len(sets) >= 1
 
+    def test_finnish_loads(self):
+        sets = get_nuance_sets("fi", limit=10)
+        assert len(sets) >= 5
+        concepts = {s.concept for s in sets}
+        assert "finnish_location_cases" in concepts
+        assert "finnish_negative_auxiliary" in concepts
+
+    def test_finnish_location_case_concept(self):
+        sets = get_nuance_sets("fi", concept="finnish_location_cases")
+        assert len(sets) == 1
+        assert len(sets[0].pairs) >= 4
+
     def test_japanese_loads(self):
         sets = get_nuance_sets("ja")
         assert len(sets) >= 1
@@ -147,6 +159,14 @@ class TestGetNuanceSetsForType:
         sets = get_nuance_sets_for_type("ru", "russian_aspect")
         assert any(s.concept == "perfective_vs_imperfective" for s in sets)
 
+    def test_finnish_negative_auxiliary_maps(self):
+        sets = get_nuance_sets_for_type("fi", "finnish_negative_auxiliary")
+        assert any(s.concept == "finnish_negative_auxiliary" for s in sets)
+
+    def test_finnish_consonant_gradation_maps(self):
+        sets = get_nuance_sets_for_type("fi", "consonant_gradation")
+        assert any(s.concept == "finnish_consonant_gradation" for s in sets)
+
     def test_unmapped_type_returns_empty(self):
         sets = get_nuance_sets_for_type("es", "totally_unknown_nuance")
         assert sets == []
@@ -242,6 +262,11 @@ class TestBuildDiscriminationDrills:
         drills = build_discrimination_drills("grc", nuance_type="negation_ou")
         assert len(drills) >= 1
         assert all(d.concept == "ou_vs_me" for d in drills)
+
+    def test_finnish_passive_drills(self):
+        drills = build_discrimination_drills("fi", nuance_type="finnish_passive_voice")
+        assert len(drills) >= 1
+        assert all(d.concept == "finnish_passive_voice" for d in drills)
 
 
 class TestNuanceSchemaPydantic:
