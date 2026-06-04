@@ -3297,4 +3297,4 @@ korean = ["kiwipiepy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "f8e9241215d76571b9a8296a0734a48c3a03b1bbd392339704b49c10b487b730"
+content-hash = "7a3ce6ec02489e63b4da43dbbe41c0d4ca209e255786a2a85ca6597c6c488eb5"
