@@ -496,6 +496,17 @@ class TestLanguagesEndpointV2:
         assert de["morphology_quality"] == "medium"
         assert de["tts_lang_tag"] == "de"
 
+    def test_finnish_rich_morphology_and_partial_grammar_nuance(self) -> None:
+        resp = client.get("/languages")
+        fi = next((x for x in resp.json() if x["code"] == "fi"), None)
+        assert fi is not None
+        assert fi["analysis_depth"] == "full"
+        assert fi["morphology_depth"] == "rich"
+        assert fi["morphology_quality"] == "medium"
+        assert fi["syntax_support"] is True
+        assert fi["nuance_capabilities"]["grammar_nuance"] == "partial"
+        assert "conditional" in fi["nuance_capabilities"]["notes"]
+
 
 # ── _build_script() ───────────────────────────────────────────────────────────
 
