@@ -1,6 +1,7 @@
 from functools import lru_cache
+from typing import Any
 
-from pydantic import Field, model_validator
+from pydantic import Field, field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -91,6 +92,20 @@ class Settings(BaseSettings):
     allow_dev_auth_fallback: bool | None = Field(default=None)
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
+
+    @field_validator("enabled_languages", "cors_origins", mode="before")
+    @classmethod
+    def _parse_csv_list_settings(cls, value: Any) -> Any:
+        """Accept comma-separated values for list settings loaded from env files.
+
+        Pydantic expects list-valued settings to be supplied as actual lists or
+        JSON arrays.  Our documented .env examples use the more shell-friendly
+        form ``ENABLED_LANGUAGES=es,fr`` / ``CORS_ORIGINS=https://...``, so
+        normalize those strings before standard list validation runs.
+        """
+        if isinstance(value, str):
+            return [item.strip() for item in value.split(",") if item.strip()]
+        return value
 
     @model_validator(mode="after")
     def _default_allow_dev_auth_fallback(self) -> "Settings":
