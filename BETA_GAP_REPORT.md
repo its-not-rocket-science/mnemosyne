@@ -21,8 +21,8 @@ tier.
 - **Canonical knowledge layer.** UUID-v5 PKs; the same word in any text always maps to
   the same DB row. Surface forms accumulate. Object relations stored.
 - **Plugin architecture.** Structural typing, no registration step. 17 production plugins:
-  8 full morphological (es/fr/de/ru/ja/pt/it/**en**) + 5 dictionary-mode
-  (ar/he/zh/la/grc) + 4 morphology-light (ko/hi/tr/fi — suffix-rule, no model required).
+  9 full/rich morphological (es/fr/de/ru/ja/pt/it/**en**/**fi**) + 5 dictionary-mode
+  (ar/he/zh/la/grc) + 3 morphology-light (ko/hi/tr — suffix-rule, no model required).
   Drop a file in `backend/plugins/` and the server picks it up.
 - **Accessibility baseline.** Skip link, focus trap, ARIA live regions, reduced motion,
   44 px targets, roving tabindex, `role="list"` on pill lists. Static WCAG 2.1 AA code
@@ -35,12 +35,13 @@ tier.
 - **Full multilingual stack.** Spanish, French, German, Russian, Japanese, Portuguese,
   Italian: full spaCy morphological pipelines. Arabic, Hebrew, Chinese (jieba + pypinyin),
   Latin, Koine Greek: dictionary/vocabulary mode with honest capability declarations.
-  Hindi, Turkish, Finnish: suffix-rule morphology-light plugins (Devanagari/Latin/Latin
-  script; IAST/Latin/Latin romanisation; no external model required). Korean: morphology-
-  light via kiwipiepy. 17 registered language codes.
+  Finnish: Stanza-primary rich morphology with `fi_core_news_sm` fallback and grammar-nuance drills.
+  Hindi and Turkish: suffix-rule morphology-light plugins (Devanagari/Latin script;
+  IAST/Latin romanisation; no external model required). Korean: morphology-light via kiwipiepy.
+  17 registered language codes.
 - **Language capability labels (user-facing).** `LanguageCapabilities` now carries a `analysis_depth_label` computed field mapping internal IDs (`morphology_light`, `dictionary`, `full`, `segmentation_only`) to English display strings ("Basic grammar hints", "Vocabulary lookup", etc.). `CAPABILITY_LABELS_I18N` in `i18n.js` localises these for all 11 UI languages. Internal IDs unchanged; user-facing labels are separate.
 - **Gold linguistic tests.** Per-language gold fixtures cover hi/tr/fi with false-positive and confidence assertions. `pytest_terminal_summary` hook prints per-language pass/fail/skip table after every full run. New assertion types: `assert_min_vocabulary_count` and `assert_no_confidence_above`.
-- **Morphology improvements.** Hindi: single-char matras require min token length 5 (prevents "अच्छा"/"लड़का" false-positive conjugation tags). Turkish: `_AORIST_BLOCKLIST` blocks ~30 common words from aorist 3sg suffix match. Finnish: possessive suffix detection after case suffix match; `_INESSIVE_GUARD` blocks known false-positive forms.
+- **Morphology improvements.** Hindi: single-char matras require min token length 5 (prevents "अच्छा"/"लड़का" false-positive conjugation tags). Turkish: `_AORIST_BLOCKLIST` blocks ~30 common words from aorist 3sg suffix match. Finnish: Stanza UD primary analysis emits case, possessive suffix, tense/mood/person/number/voice, polarity, vowel harmony, consonant-gradation notes, and learner-facing grammar nuance/drill candidates.
 - **Latin noun suffix hints.** `_extract_latin_noun_suffix_hint` provides heuristic `case_hint`, `number_hint`, `gender_hint`, and optional `ambiguity_note` for tokens not in the morph index. Wired into both the inflection-resolved non-verb branch and the unknown-token fallback.
 - **Greek article agreement.** `_ARTICLE_FORMS` dict covers all 17 standard Koine article forms. A pre-pass over each sentence detects article + following-token bigrams and annotates the following token with `article_agrees_with: {case, gender, number}` from the article.
 - **Corpus product features.** `GET /recommend-text` now returns `cefr_level` (from `CorpusIngestionRow`), `provenance` (author · source_url), and `recommendation_reason` (level_match | continuing | closest_match) per sentence. New query params: `?continuation=true`, `?cefr=`, `?max_words=`. `RECOMMEND_UI_I18N` export in `i18n.js` localises these for all 11 UI languages.
@@ -120,7 +121,7 @@ tier.
 | V3. Real dictionary integration | ✓ done (Wiktionary) |
 | V4. FSRS parameter fitting | ✓ done (per-user calibration via `ReviewEventRow`) |
 | V5. PWA and offline mode | ✓ done |
-| V6. 10+ production-quality language plugins | ✓ done — 8 full morphological (es/fr/de/ru/ja/pt/it/en) + 5 dictionary-mode (ar/he/zh/la/grc) + 4 morphology-light (ko/hi/tr/fi) = 17 total. |
+| V6. 10+ production-quality language plugins | ✓ done — 9 full/rich morphological (es/fr/de/ru/ja/pt/it/en/fi) + 5 dictionary-mode (ar/he/zh/la/grc) + 3 morphology-light (ko/hi/tr) = 17 total. |
 | V7. Dead and historic language annotation mode | ✓ done — Latin and Koine Greek have morphology-light annotation (UD ITTB + PROIEL/MorphGNT; ~3 400 / ~27 000 forms; conjugation type + tense/mood/person). `backend/dictionary/logeion.py` (2026-05-29) adds Logeion fallback (Lewis & Short for `la`, LSJ for `grc`) for forms outside local data. |
 
 ---
@@ -135,11 +136,12 @@ issues were fixed; automated static a11y tests cover 38 ARIA/CSS invariants; Tes
 A human keyboard-only walkthrough and NVDA/VoiceOver smoke test have not been run.
 See `MANUAL_ACCESSIBILITY_TEST.md` for the structured session results template.
 
-**Full spaCy-model morphological plugins for Hindi and Turkish** — Finnish was
-upgraded to full spaCy (`fi_core_news_sm`) with 15-case morphology, tense/mood/voice,
-vowel harmony, and negation AUX. Hindi and Turkish remain morphology-light (suffix-rule)
-because no spaCy 3.8 model exists for either language. This is an honest capability
-declaration, not a code gap; adding full morphology would require a non-spaCy dependency
+**Full model-backed morphological plugins for Hindi and Turkish** — Finnish is now
+Stanza-primary with `fi_core_news_sm` fallback, rich morphology, and learner-facing
+nuance drills for local cases, possessive suffixes, consonant gradation, passive voice,
+negative auxiliaries, and conditional mood. Hindi and Turkish remain morphology-light
+(suffix-rule) because no spaCy 3.8 model exists for either language. This is an honest
+capability declaration, not a code gap; adding full morphology would require a non-spaCy dependency
 (e.g., Stanza, UDPipe) and is a separate decision.
 
 **Portuguese (`pt`) — done**: `pt_core_news_sm`; vocabulary, conjugation, agreement,
@@ -189,7 +191,7 @@ This section documents known limitations and future work.*
 6. ~~**Latin noun suffix hints display**~~ — **done** (2026-05-29): `case_hint`, `number_hint`, `gender_hint`, `ambiguity_note` rendered as labelled fields ("Case (hint)", "Number (hint)", "Gender (hint)", "Ambiguity") in vocabulary lessons. 11 tests in `test_lesson_gen.py`.
 7. ~~**`RECOMMEND_UI_I18N` keys — frontend wiring**~~ — **done** (2026-05-29): `reasonFor()` in `recommended-reading.js` uses `recommendation_reason` → `RECOMMEND_UI_I18N` key as primary reason text (falls back to heuristic). Both featured and alternative cards render `provenance` via `.recommended-reading-card__provenance`; label localised via `recI18n().provenance_label`.
 8. ~~**CEFR A2–C2 vocabulary tables / corpus CEFR tagging**~~ — **done** (2026-05-29): Vocab tables A1–C2 already existed. Root cause was `build_entry()` never writing `CorpusIngestionRow`, so `recommend.py`'s outer join always returned NULL for `cefr_equivalent`. Fixed: `build_entry()` now upserts `CorpusIngestionRow` (delete-then-insert) on successful ingestion; `cefr_equivalent` uses `entry.effective_cefr` or falls back to `levels.to_cefr()` (so JLPT/HSK/TOPIK entries auto-map without explicit override). 3 new tests in `test_corpus_build.py`.
-9. ~~**Full spaCy morphology for fi**~~ / **hi/tr remain morphology-light** — **done for fi (2026-05-29)**: `fi_core_news_sm` plugin code was already complete (15-case system, tense/mood/voice, vowel harmony, negation AUX, 27 tests). Model was simply missing from Dockerfile and CI. Both now updated. Hindi: no spaCy 3.8 model available — suffix-rule plugin is the best available without adding non-spaCy heavy deps. Turkish: same (no official spaCy 3.8 Turkish model). hi/tr morphology-light status is an honest capability declaration, not a code gap.
+9. ~~**Full Finnish morphology**~~ / **hi/tr remain morphology-light** — **done for fi (2026-05-29; Stanza-primary and nuance-deepened 2026-06-04)**: Finnish now uses Stanza UD primary with `fi_core_news_sm` fallback, rich case/possessive/verb morphology, polarity, vowel harmony, consonant-gradation notes, and grammar nuance/drills. Hindi: no spaCy 3.8 model available — suffix-rule plugin is the best available without adding non-spaCy heavy deps. Turkish: same (no official spaCy 3.8 Turkish model). hi/tr morphology-light status is an honest capability declaration, not a code gap.
 10. ~~**Perseus/Logeion API integration**~~ — **done** (2026-05-29): `backend/dictionary/logeion.py` implements an async Logeion client (Lewis & Short for `la`, LSJ for `grc`) following the `wiktionary.py` pattern. `enrichment.py` tries Logeion as a fallback after Wiktionary returns None for `la`/`grc`. 14 tests in `test_logeion.py`; 2 enrichment fallback tests added to `test_dictionary.py`. Also fixed: `respx` and `pydantic[email]` added to dev deps (test_dictionary.py was silently uncollectable); JS VM context patched for `_REASON_KEY`/`recI18n` (broken since cb4c757).
 11. ~~**Grammatical label localisation**~~ — **done** (2026-05-29): "pos" category added to `_GRAM_LABELS` in `l10n.py` (bare POS labels for all 11 UI languages). `_build_vocabulary()` and `_build_inflection()` now call `gram_label("pos", ...)` for the "Part of speech" field and MC pool; gender/number fields in vocabulary also localised. Latin suffix hints (case_hint/number_hint/gender_hint) and Greek article_agrees_with values run through `gram_label()`. 16 new tests in `TestGrammaticalLabelLocalisation`.
 12. ~~**Docker Compose end-to-end smoke test in CI**~~ — **done** (2026-05-29): `.github/workflows/smoke.yml` added. Triggers on backend/frontend/Dockerfile/docker-compose/alembic/pyproject changes. Builds full stack, polls `/health` (30×5s), asserts `/ready` → 200, `POST /parse` → tokens present. `ENABLED_LANGUAGES=es` limits plugin load for speed. Logs dumped on failure; always tears down with `docker compose down -v`.

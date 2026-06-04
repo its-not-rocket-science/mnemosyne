@@ -195,6 +195,27 @@ _LOCATION_CASE_SUFFIXES: dict[str, tuple[str, ...]] = {
 _NEGATIVE_AUXILIARIES = frozenset({"en", "et", "ei", "emme", "ette", "eivät", "eivat"})
 
 
+
+_POSSESSIVE_MEANING: dict[str, str] = {
+    "1sg": "my",
+    "2sg": "your (singular)",
+    "3sg": "his/her",
+    "1pl": "our",
+    "2pl": "your (plural)",
+    "3pl": "their",
+    "3sg/3pl": "his/her/their",
+}
+
+_NEGATIVE_AUX_PERSON: dict[str, str] = {
+    "en": "1sg",
+    "et": "2sg",
+    "ei": "3sg",
+    "emme": "1pl",
+    "ette": "2pl",
+    "eivät": "3pl",
+    "eivat": "3pl",
+}
+
 def _gradation_note(surface: str, lemma: str) -> str | None:
     s, l = surface.lower(), lemma.lower()
     if s == l:
@@ -268,17 +289,18 @@ class FinnishPlugin:
             cultural_references="none",
             etymology="none",
             formality_register="none",
-            grammar_nuance="partial",  # 15-case system + verb conjugation drilling
+            grammar_nuance="partial",  # model-derived local cases, possessives, gradation, negation, passive/conditional
             pronunciation_tts="stub",
             transliteration="none",
             proverb_tradition="none",
             classical_or_scriptural_allusion="none",
             notes=(
                 "stanza Finnish UD (primary): reliable 15-case system, possessive-suffix "
-                "features (Person[psor]/Number[psor]), correct POS for possessive forms. "
-                "fi_core_news_sm (spaCy) fallback when stanza unavailable. "
-                "Consonant-gradation alternations (d↔t, v↔p, ng↔nk, etc.) flagged via "
-                "lemma_note in both paths."
+                "features (Person[psor]/Number[psor]), voice, polarity, and conditional mood. "
+                "fi_core_news_sm (spaCy) fallback when stanza unavailable. Learner-facing "
+                "grammar nuance emits shared fields (nuance_type, grammar_axis, surface, lemma, "
+                "explanation, learner_level, drills). Consonant-gradation alternations "
+                "(d↔t, v↔p, ng↔nk, etc.) flagged via lemma_note in both paths."
             ),
         ),
     )
@@ -447,8 +469,11 @@ class FinnishPlugin:
                     data["verb_form"] = mt.verb_form
 
             poss = _possessive_suffix_stanza(mt)
+            poss_surface_fallback = bool(poss and not (mt.poss_person and mt.poss_number))
             if poss:
                 data["possessive_suffix"] = poss
+                if poss_surface_fallback:
+                    data["possessive_suffix_source"] = "surface_fallback"
 
             grad = _gradation_note(mt.text, lemma)
             if grad:
@@ -467,6 +492,8 @@ class FinnishPlugin:
                 data["cefr_level"] = cefr
             if conf_note:
                 data["confidence_note"] = conf_note
+            elif data.get("possessive_suffix_source") == "surface_fallback":
+                data["confidence_note"] = "Possessive suffix inferred from low-ambiguity surface ending, not UD Person[psor]/Number[psor]."
 
             candidates.append(CandidateObject(
                 canonical_form=lemma,
@@ -622,8 +649,11 @@ class FinnishPlugin:
             # sometimes mislabels possessive-inflected nouns as ADV, so POS-gating
             # would miss them. -mme/-nne/-nsa/-nsä are low-ambiguity surface cues.
             poss = _possessive_suffix(tok)
+            poss_surface_fallback = bool(poss and not (_morph_first(tok, "Person[psor]") and _morph_first(tok, "Number[psor]")))
             if poss:
                 data["possessive_suffix"] = poss
+                if poss_surface_fallback:
+                    data["possessive_suffix_source"] = "surface_fallback"
 
             grad = _gradation_note(tok.text, lemma)
             if grad:
@@ -642,6 +672,8 @@ class FinnishPlugin:
                 data["cefr_level"] = cefr
             if confidence_note:
                 data["confidence_note"] = confidence_note
+            elif data.get("possessive_suffix_source") == "surface_fallback":
+                data["confidence_note"] = "Possessive suffix inferred from low-ambiguity surface ending, not UD Person[psor]/Number[psor]."
 
             candidates.append(CandidateObject(
                 canonical_form=lemma,
@@ -663,7 +695,7 @@ class FinnishPlugin:
 
         These objects power the Nuance tab and practice panels for high-value
         Finnish patterns: local cases, possessive suffixes, consonant gradation,
-        passive voice, and the negative auxiliary paradigm.
+        passive voice, conditional mood, and the negative auxiliary paradigm.
         """
         out: list[CandidateObject] = []
         seen: set[str] = set()
@@ -685,28 +717,30 @@ class FinnishPlugin:
                     self._append_nuance(out, self._nuance_object(
                         seen=seen,
                         nuance_type="finnish_location_case",
+                        grammar_axis="case",
                         key=f"{case}:{surface.lower()}",
                         surface=surface,
                         label=surface,
                         lemma=lemma,
                         explanation=explanation,
                         level="A2",
+                        confidence=self._nuance_confidence(cand),
+                        confidence_note=self._nuance_confidence_note(cand),
+                        drill_prompt=(
+                            f"What spatial meaning does the {case} case signal in «{surface}»?"
+                        ),
+                        drill_answer=_LOCATION_CASES[case],
                         extra={"case": case, "suffix_hint": suffix_hint},
                     ))
 
                 poss = str(ld.get("possessive_suffix") or "")
                 if poss:
-                    poss_meaning = {
-                        "1pl": "our",
-                        "2pl": "your (plural)",
-                        "3sg/3pl": "his/her/their",
-                        "3sg": "his/her",
-                        "3pl": "their",
-                    }.get(poss, poss)
-                    suffix = surface[-3:]
+                    poss_meaning = _POSSESSIVE_MEANING.get(poss, poss)
+                    suffix = self._possessive_surface_suffix(surface, poss)
                     self._append_nuance(out, self._nuance_object(
                         seen=seen,
                         nuance_type="finnish_possessive_suffix",
+                        grammar_axis="possessive_suffix",
                         key=f"{poss}:{surface.lower()}",
                         surface=surface,
                         label=surface,
@@ -717,6 +751,10 @@ class FinnishPlugin:
                             "is encoded inside the noun rather than as a separate word."
                         ),
                         level="A2",
+                        confidence=self._nuance_confidence(cand),
+                        confidence_note=self._nuance_confidence_note(cand),
+                        drill_prompt=f"In «{surface}», whose possession does the suffix -{suffix} mark?",
+                        drill_answer=poss_meaning,
                         extra={"possessive_suffix": poss, "possessive_meaning": poss_meaning},
                     ))
 
@@ -725,6 +763,7 @@ class FinnishPlugin:
                     self._append_nuance(out, self._nuance_object(
                         seen=seen,
                         nuance_type="consonant_gradation",
+                        grammar_axis="stem_alternation",
                         key=f"{lemma}:{surface.lower()}",
                         surface=surface,
                         label=surface,
@@ -735,6 +774,10 @@ class FinnishPlugin:
                             "made by simply adding a suffix to an unchanged stem."
                         ),
                         level="A2",
+                        confidence=self._nuance_confidence(cand),
+                        confidence_note=self._nuance_confidence_note(cand),
+                        drill_prompt=f"What stem-change pattern is visible between «{lemma}» and «{surface}»?",
+                        drill_answer=grad,
                         extra={"lemma_note": grad},
                     ))
 
@@ -745,6 +788,7 @@ class FinnishPlugin:
                     self._append_nuance(out, self._nuance_object(
                         seen=seen,
                         nuance_type="finnish_passive_voice",
+                        grammar_axis="voice",
                         key=f"{tense}:{surface.lower()}",
                         surface=surface,
                         label=surface,
@@ -755,15 +799,43 @@ class FinnishPlugin:
                             "or impersonal 'one/people' readings."
                         ),
                         level="A2",
+                        confidence=self._nuance_confidence(cand),
+                        confidence_note=self._nuance_confidence_note(cand),
+                        drill_prompt=f"Is «{surface}» active or passive voice?",
+                        drill_answer="passive",
                         extra={"tense": tense, "voice": voice},
                     ))
 
+                mood = str(ld.get("mood") or "")
+                if mood == "conditional":
+                    self._append_nuance(out, self._nuance_object(
+                        seen=seen,
+                        nuance_type="finnish_conditional_mood",
+                        grammar_axis="mood",
+                        key=f"{lemma}:{surface.lower()}",
+                        surface=surface,
+                        label=surface,
+                        lemma=lemma,
+                        explanation=(
+                            f"«{surface}» is in the Finnish conditional mood. Conditional forms often "
+                            "express would/should-like meanings, hypotheticals, or polite softening."
+                        ),
+                        level="A2",
+                        confidence=self._nuance_confidence(cand),
+                        confidence_note=self._nuance_confidence_note(cand),
+                        drill_prompt=f"What mood does «{surface}» use?",
+                        drill_answer="conditional",
+                        extra={"mood": mood},
+                    ))
+
                 polarity = str(ld.get("polarity") or "")
-                if polarity == "neg" or surface.lower() in _NEGATIVE_AUXILIARIES:
+                lower_surface = surface.lower()
+                if polarity == "neg" or lower_surface in _NEGATIVE_AUXILIARIES:
                     self._append_nuance(out, self._nuance_object(
                         seen=seen,
                         nuance_type="finnish_negative_auxiliary",
-                        key=surface.lower(),
+                        grammar_axis="polarity",
+                        key=lower_surface,
                         surface=surface,
                         label=surface,
                         lemma=lemma,
@@ -773,7 +845,11 @@ class FinnishPlugin:
                             "person and number while the main verb appears in its negative stem form."
                         ),
                         level="A1",
-                        extra={"polarity": "neg"},
+                        confidence=self._nuance_confidence(cand),
+                        confidence_note=self._nuance_confidence_note(cand),
+                        drill_prompt=f"What does the Finnish auxiliary «{surface}» mark?",
+                        drill_answer=f"negation ({_NEGATIVE_AUX_PERSON.get(lower_surface, 'negative auxiliary')})",
+                        extra={"polarity": "neg", "negative_auxiliary_person": _NEGATIVE_AUX_PERSON.get(lower_surface)},
                     ))
 
         return out
@@ -788,12 +864,17 @@ class FinnishPlugin:
         *,
         seen: set[str],
         nuance_type: str,
+        grammar_axis: str,
         key: str,
         surface: str,
         label: str,
         lemma: str,
         explanation: str,
         level: str,
+        confidence: float,
+        confidence_note: str | None,
+        drill_prompt: str | None = None,
+        drill_answer: str | None = None,
         extra: dict[str, Any] | None = None,
     ) -> CandidateObject | None:
         cf = f"nuance:fi:{nuance_type}:{key}"
@@ -802,29 +883,75 @@ class FinnishPlugin:
         seen.add(cf)
         lesson_data: dict[str, Any] = {
             "nuance_type": nuance_type,
+            "grammar_axis": grammar_axis,
             "explanation": explanation,
             "note": explanation,
             "register": "neutral",
             "learner_level": level,
-            "source": "heuristic",
+            "source": "stanza_ud" if confidence >= 0.80 and confidence_note is None else "surface_or_fallback_morphology",
             "surface": surface,
             "lemma": lemma,
         }
+        if drill_prompt and drill_answer:
+            lesson_data["drill_prompt"] = drill_prompt
+            lesson_data["drill_answer"] = drill_answer
+        if confidence_note:
+            lesson_data["confidence_note"] = confidence_note
         if extra:
-            lesson_data.update(extra)
+            lesson_data.update({k: v for k, v in extra.items() if v is not None})
         return CandidateObject(
             canonical_form=cf,
             surface_form=surface,
             type="nuance",
             label=label,
             lesson_data=lesson_data,
-            confidence=0.82,
+            confidence=confidence,
             relation_hints=[RelationHint(
                 relation_type="nuance_of",
                 target_canonical_form=lemma,
                 target_type="vocabulary",
             )],
         )
+
+
+    @staticmethod
+    def _nuance_confidence(cand: CandidateObject) -> float:
+        """Keep grammar-nuance confidence tied to the morphology source."""
+        ld = cand.lesson_data or {}
+        note = str(ld.get("confidence_note") or "")
+        if "word not in fi_core_news_sm" in note:
+            return 0.58
+        if "Proper noun" in note:
+            return 0.62
+        if "surface ending" in note:
+            return 0.68
+        # Stanza-derived finite morphology and in-vocabulary spaCy morphology are
+        # useful enough for learner-facing drills, but nuance should not exceed
+        # the originating morphological object.
+        base = cand.confidence if cand.confidence is not None else 0.70
+        return min(float(base), 0.85)
+
+    @staticmethod
+    def _nuance_confidence_note(cand: CandidateObject) -> str | None:
+        ld = cand.lesson_data or {}
+        note = str(ld.get("confidence_note") or "")
+        if note:
+            return f"Derived from Finnish morphology with caveat: {note}"
+        if cand.confidence is not None and cand.confidence < 0.80:
+            return "Derived from lower-confidence Finnish morphology; verify in context."
+        return None
+
+    @staticmethod
+    def _possessive_surface_suffix(surface: str, poss: str) -> str:
+        lower = surface.lower()
+        for suffix, label in _POSS_SURFACE_LABEL.items():
+            if lower.endswith(suffix) and label == poss:
+                return surface[-len(suffix):]
+        if poss in {"1sg", "2sg"}:
+            return surface[-2:]
+        if poss in {"1pl", "2pl", "3sg", "3pl", "3sg/3pl"}:
+            return surface[-3:]
+        return surface[-3:]
 
     def _vocab_confidence(self, tok: Any, lemma: str) -> tuple[float, str | None]:
         if tok.pos_ == "PROPN":
