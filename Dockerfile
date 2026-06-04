@@ -22,23 +22,21 @@ COPY pyproject.toml poetry.lock ./
 # --extras cjk installs jieba + pypinyin (Mandarin Chinese plugin).
 # --extras korean installs kiwipiepy (Korean plugin).
 # --extras arabic is intentionally OMITTED: camel-tools pulls in torch + transformers
-# (~2 GB extra), inflating the image. To enable Arabic root/proclitic morphology:
-#   1. Add --extras arabic to the poetry install line below.
-#   2. Add: RUN camel_data -i morphology-db-msa-r13
-# The Arabic plugin works in dictionary mode (tashkeel + nuance extractor) without it.
-RUN poetry install --without dev --extras cjk --extras korean --no-interaction --no-ansi
+# (~2 GB extra), inflating the image. To enable Arabic root/proclitic morphology,
+# pass POETRY_INSTALL_EXTRAS="--extras cjk --extras korean --extras arabic"
+# and add a camel_data install step. The Arabic plugin works in dictionary mode
+# (tashkeel + nuance extractor) without it.
+ARG POETRY_INSTALL_EXTRAS="--extras cjk --extras korean"
+RUN poetry install --without dev ${POETRY_INSTALL_EXTRAS} --no-interaction --no-ansi
 
-# Download spaCy models.  Each model is in a separate RUN so a single
-# model failure does not invalidate other layers during development rebuilds.
-RUN python -m spacy download es_core_news_sm
-RUN python -m spacy download fr_core_news_sm
-RUN python -m spacy download de_core_news_sm
-RUN python -m spacy download it_core_news_sm
-RUN python -m spacy download pt_core_news_sm
-RUN python -m spacy download ru_core_news_sm
-RUN python -m spacy download ja_core_news_sm
-RUN python -m spacy download en_core_web_sm
-RUN python -m spacy download fi_core_news_sm
+# Download spaCy models. CI can override SPACY_MODELS to install only the models
+# exercised by the smoke test, avoiding unrelated network-heavy downloads.
+ARG SPACY_MODELS="es_core_news_sm fr_core_news_sm de_core_news_sm it_core_news_sm pt_core_news_sm ru_core_news_sm ja_core_news_sm en_core_web_sm fi_core_news_sm"
+RUN if [ -n "$SPACY_MODELS" ]; then \
+      for model in $SPACY_MODELS; do \
+        python -m spacy download "$model"; \
+      done; \
+    fi
 
 # Application source is copied after deps to preserve layer caching on code changes.
 COPY backend/ ./backend/
