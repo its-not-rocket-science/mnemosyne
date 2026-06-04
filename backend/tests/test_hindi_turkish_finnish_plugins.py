@@ -669,3 +669,43 @@ class TestFinnishPlugin:
         )
         assert talo is not None
         assert "lemma_note" not in talo.lesson_data
+
+    def test_location_case_nuance_candidate(self):
+        result = self.plugin.analyze_sentence("Asun kaupungissa.")
+        nuance = next(
+            (c for c in result.candidates
+             if c.type == "nuance" and c.lesson_data.get("nuance_type") == "finnish_location_case"),
+            None,
+        )
+        assert nuance is not None
+        assert nuance.lesson_data.get("case") == "inessive"
+
+    def test_possessive_suffix_nuance_candidate(self):
+        result = self.plugin.analyze_sentence("Tämä on talomme.")
+        nuance = next(
+            (c for c in result.candidates
+             if c.type == "nuance" and c.lesson_data.get("nuance_type") == "finnish_possessive_suffix"),
+            None,
+        )
+        assert nuance is not None
+        assert nuance.lesson_data.get("possessive_suffix") == "1pl"
+
+    def test_passive_voice_nuance_candidate(self):
+        result = self.plugin.analyze_sentence("Kirja luetaan.")
+        nuance = next(
+            (c for c in result.candidates
+             if c.type == "nuance" and c.lesson_data.get("nuance_type") == "finnish_passive_voice"),
+            None,
+        )
+        assert nuance is not None
+        assert nuance.lesson_data.get("voice") == "passive"
+
+    def test_negative_auxiliary_nuance_candidate(self):
+        result = self.plugin.analyze_sentence("En lue.")
+        nuance = next(
+            (c for c in result.candidates
+             if c.type == "nuance" and c.lesson_data.get("nuance_type") == "finnish_negative_auxiliary"),
+            None,
+        )
+        assert nuance is not None
+        assert nuance.lesson_data.get("polarity") == "neg"

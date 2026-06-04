@@ -65,6 +65,12 @@ NUANCE_TYPE_TO_CONCEPT: dict[str, str] = {
     # French
     "passe_compose":            "passe_compose_vs_imparfait",
     "imparfait":                "passe_compose_vs_imparfait",
+    # Finnish
+    "finnish_location_case":     "finnish_location_cases",
+    "finnish_possessive_suffix": "finnish_possessive_suffixes",
+    "consonant_gradation":       "finnish_consonant_gradation",
+    "finnish_passive_voice":     "finnish_passive_voice",
+    "finnish_negative_auxiliary": "finnish_negative_auxiliary",
     # German
     "modal_particle":           "modal_particles",
     # Japanese
@@ -84,6 +90,12 @@ PATTERN_TO_CONCEPT: dict[str, str] = {
     "ser_copula_pt":           "ser_estar_ficar",
     "estar_copula_pt":         "ser_estar_ficar",
     "ficar_copula":            "ser_estar_ficar",
+    # Finnish
+    "case.local_finnish":      "finnish_location_cases",
+    "suffix.possessive_finnish": "finnish_possessive_suffixes",
+    "stem.consonant_gradation_finnish": "finnish_consonant_gradation",
+    "voice.passive_finnish":   "finnish_passive_voice",
+    "negation.auxiliary_finnish": "finnish_negative_auxiliary",
 }
 
 
