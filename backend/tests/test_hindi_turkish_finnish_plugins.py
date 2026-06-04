@@ -709,3 +709,120 @@ class TestFinnishPlugin:
         )
         assert nuance is not None
         assert nuance.lesson_data.get("polarity") == "neg"
+
+    @pytest.mark.parametrize("word,expected_case", [
+        ("kaupungissa", "inessive"),
+        ("kaupungista", "elative"),
+        ("koululle", "allative"),
+    ])
+    def test_finnish_local_case_nuance_for_requested_forms(self, word, expected_case):
+        result = self.plugin.analyze_sentence(word)
+        nuance = next(
+            (c for c in result.candidates
+             if c.type == "nuance"
+             and c.lesson_data.get("nuance_type") == "finnish_location_case"
+             and c.lesson_data.get("case") == expected_case),
+            None,
+        )
+        assert nuance is not None
+        assert nuance.lesson_data.get("grammar_axis") == "case"
+        assert nuance.lesson_data.get("surface") == word
+        assert nuance.lesson_data.get("lemma")
+        assert nuance.lesson_data.get("explanation")
+        assert nuance.lesson_data.get("learner_level") == "A2"
+        assert nuance.lesson_data.get("drill_prompt")
+        assert nuance.lesson_data.get("drill_answer")
+
+    @pytest.mark.parametrize("word,expected_suffix,meaning", [
+        ("talomme", "1pl", "our"),
+        ("talonne", "2pl", "your (plural)"),
+    ])
+    def test_finnish_possessive_suffix_nuance_for_requested_forms(self, word, expected_suffix, meaning):
+        result = self.plugin.analyze_sentence(word)
+        nuance = next(
+            (c for c in result.candidates
+             if c.type == "nuance"
+             and c.lesson_data.get("nuance_type") == "finnish_possessive_suffix"
+             and c.lesson_data.get("possessive_suffix") == expected_suffix),
+            None,
+        )
+        assert nuance is not None
+        assert nuance.lesson_data.get("grammar_axis") == "possessive_suffix"
+        assert nuance.lesson_data.get("possessive_meaning") == meaning
+        assert nuance.lesson_data.get("drill_answer") == meaning
+
+    def test_finnish_consonant_gradation_nuance_for_kaupungissa(self):
+        result = self.plugin.analyze_sentence("kaupungissa")
+        nuance = next(
+            (c for c in result.candidates
+             if c.type == "nuance"
+             and c.lesson_data.get("nuance_type") == "consonant_gradation"),
+            None,
+        )
+        assert nuance is not None
+        assert nuance.lesson_data.get("grammar_axis") == "stem_alternation"
+        assert "gradation" in nuance.lesson_data.get("lemma_note", "")
+        assert nuance.lesson_data.get("drill_prompt")
+        assert nuance.lesson_data.get("drill_answer")
+
+    @pytest.mark.parametrize("word,expected_tense", [
+        ("luetaan", "present"),
+        ("luettiin", "past"),
+    ])
+    def test_finnish_passive_nuance_for_requested_forms(self, word, expected_tense):
+        result = self.plugin.analyze_sentence(word)
+        nuance = next(
+            (c for c in result.candidates
+             if c.type == "nuance"
+             and c.lesson_data.get("nuance_type") == "finnish_passive_voice"),
+            None,
+        )
+        assert nuance is not None
+        assert nuance.lesson_data.get("grammar_axis") == "voice"
+        assert nuance.lesson_data.get("voice") == "passive"
+        assert nuance.lesson_data.get("tense") == expected_tense
+        assert nuance.lesson_data.get("drill_answer") == "passive"
+
+    def test_finnish_conditional_nuance_for_menisi(self):
+        result = self.plugin.analyze_sentence("menisi")
+        nuance = next(
+            (c for c in result.candidates
+             if c.type == "nuance"
+             and c.lesson_data.get("nuance_type") == "finnish_conditional_mood"),
+            None,
+        )
+        assert nuance is not None
+        assert nuance.lesson_data.get("grammar_axis") == "mood"
+        assert nuance.lesson_data.get("mood") == "conditional"
+        assert nuance.lesson_data.get("drill_answer") == "conditional"
+
+    @pytest.mark.parametrize("word,person", [
+        ("ei", "3sg"),
+        ("en", "1sg"),
+        ("emme", "1pl"),
+        ("ette", "2pl"),
+    ])
+    def test_finnish_negation_nuance_for_requested_forms(self, word, person):
+        result = self.plugin.analyze_sentence(f"{word} lue")
+        nuance = next(
+            (c for c in result.candidates
+             if c.type == "nuance"
+             and c.lesson_data.get("nuance_type") == "finnish_negative_auxiliary"
+             and c.surface_form.lower() == word),
+            None,
+        )
+        assert nuance is not None
+        assert nuance.lesson_data.get("grammar_axis") == "polarity"
+        assert nuance.lesson_data.get("polarity") == "neg"
+        assert nuance.lesson_data.get("negative_auxiliary_person") == person
+
+    def test_finnish_nuance_candidates_are_not_duplicated(self):
+        result = self.plugin.analyze_sentence("kaupungissa kaupungissa talomme talomme")
+        forms = [c.canonical_form for c in result.candidates if c.type == "nuance"]
+        assert len(forms) == len(set(forms))
+
+    def test_finnish_nuance_coverage_declared_partial(self):
+        caps = self.plugin.capabilities.nuance_capabilities
+        assert caps is not None
+        assert caps.grammar_nuance == "partial"
+        assert "conditional" in caps.notes

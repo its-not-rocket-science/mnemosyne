@@ -38,7 +38,7 @@ table from live plugin declarations.
 | ko (Korean) | none | none | none | none | none | none | none | none | 5 |
 | hi (Hindi) | none | none | none | none | none | none | none | none | 5 |
 | tr (Turkish) | none | none | none | none | none | none | none | none | 5 |
-| fi (Finnish) | none | none | none | none | none | none | none | none | 5 |
+| fi (Finnish) | none | none | none | **partial** | none | none | none | none | **16** |
 
 > "Literary/cultural" collapses `literary_references`, `cultural_references`,
 > `proverb_tradition`, and `classical_or_scriptural_allusion` — all are `none`
@@ -68,6 +68,7 @@ catalogs and morphological analysis.  It does not call the nuance extractor.
 | ja | — | basic verb-form via morphology\_light | — |
 | la | — | — | — |
 | grc | — | — | — |
+| fi | — | stanza UD-derived local cases, possessive suffixes, consonant gradation, passive voice, negative auxiliaries, conditional mood | — |
 
 ### Extractor layer (NuanceExtractor.extract\_nuance)
 
@@ -104,10 +105,9 @@ candidates independently.  No extractor is registered for `en`, `it`, or `pt`.
 | **Rule-based regex/token-match** | all with extractor | Discourse particles, particles, aspect markers, affixes, enclitics — deterministic |
 | **Dependency-parse heuristic** | es fr de it pt ru ja | Copula/aspect detection using spaCy dep labels; correctness depends on model quality |
 | **Dictionary lookup** | ar he la grc | Vocabulary candidates from embedded lexicon; no morphological inference |
-| **Model-derived** | — | *None currently.* No learned classifiers in production. |
+| **Model-derived morphology** | fi | Stanza UD features drive Finnish grammar nuance (case, possessive suffix, voice, polarity, mood); spaCy fallback is lower confidence and marked with `confidence_note` when heuristic/OOV. |
 
-All nuance signals are hand-authored or rule-derived.  There are no ML
-classifiers or embedding-based detectors in the current codebase.
+Most nuance signals are hand-authored or rule-derived. Finnish grammar nuance is derived from Stanza UD morphology already emitted by the plugin, with lower-confidence notes when falling back to surface or spaCy heuristics. There are no embedding-based detectors in the current codebase.
 
 ---
 
@@ -375,7 +375,7 @@ Total: **~242 parametrized test cases** across 17 languages.
 | ko | 5 | 1 |
 | hi | 5 | 1 |
 | tr | 5 | 1 |
-| fi | 5 | 1 |
+| fi | 16 | 2 |
 
 ---
 
