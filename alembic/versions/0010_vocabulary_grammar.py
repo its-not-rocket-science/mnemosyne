@@ -5,9 +5,6 @@ Revises: 0009
 """
 from __future__ import annotations
 
-import sqlalchemy as sa
-from sqlalchemy.dialects.postgresql import JSONB
-
 from alembic import op
 
 revision = "0010"
@@ -40,8 +37,8 @@ def upgrade() -> None:
         json_type = "JSONB"
     else:
         json_type = "JSON"
-    
-    op.execute("""
+
+    op.execute(f"""
         CREATE TABLE IF NOT EXISTS grammar_rules (
             id          SERIAL PRIMARY KEY,
             language    VARCHAR(10)  NOT NULL,

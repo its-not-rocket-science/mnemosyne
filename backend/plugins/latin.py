@@ -651,55 +651,77 @@ class LatinPlugin:
                 ))
 
             else:
-                # Unknown form: not in lexicon or la_morph.json.
-                # Try the verb SQLite index before falling back to noun hints.
-                db_feats = _lookup_verb_morph(key)
-                if db_feats and ("tense" in db_feats or "verbform" in db_feats):
-                    # Found in verb DB — look up lemma entry for gloss if possible.
-                    db_lemma = db_feats.get("lemma", key)
-                    lemma_entry = _lemmas().get(db_lemma)
+                # Unknown form: not in lexicon or la_morph.json.  Prefer the
+                # transparent suffix heuristic before the SQLite verb DB because
+                # Latin infinitives such as ``laudare`` are also valid finite
+                # passive imperatives; the DB stores one row per form and may
+                # return that finite analysis first.
+                verb_morph = _extract_latin_verb_morph(key)
+                if verb_morph:
                     lesson_data = {
-                        "lemma":        db_lemma,
+                        "lemma": key,
                         "surface_form": token,
+                        "confidence_note": _SUFFIX_NOTE,
                     }
-                    if lemma_entry:
-                        lesson_data["citation_form"] = lemma_entry["citation"]
-                        lesson_data["gloss"]         = lemma_entry["gloss"]
-                        lesson_data["grammar_note"]  = lemma_entry.get("grammar_note", "")
-                    for f in ("tense", "mood", "voice", "person", "number", "verbform"):
-                        if f in db_feats:
-                            lesson_data[f] = db_feats[f]
-                    has_finite = "tense" in db_feats and "mood" in db_feats
+                    lesson_data.update(verb_morph)
+                    morph_tag = ":".join(f"{k}={v}" for k, v in sorted(verb_morph.items()))
                     candidates.append(CandidateObject(
-                        canonical_form=key,
+                        canonical_form=f"{key}:{morph_tag}",
                         surface_form=token,
-                        type="conjugation" if has_finite else "vocabulary",
+                        type="conjugation",
                         label=token,
                         lesson_data=lesson_data,
-                        confidence=0.65,
+                        confidence=0.55,
                     ))
                 else:
-                    lesson_data = {"lemma": key, "confidence_note": _UNKNOWN_NOTE}
-                    noun_hint = _extract_latin_noun_suffix_hint(key)
-                    if noun_hint:
-                        hint_feats, amb_note = noun_hint
-                        if "case" in hint_feats:
-                            lesson_data["case_hint"]   = hint_feats["case"]
-                        if "number" in hint_feats:
-                            lesson_data["number_hint"] = hint_feats["number"]
-                        if "gender" in hint_feats:
-                            lesson_data["gender_hint"] = hint_feats["gender"]
-                        if amb_note:
-                            lesson_data["ambiguity_note"] = amb_note
-                        lesson_data["confidence_note"] = _NOUN_SUFFIX_NOTE
-                    candidates.append(CandidateObject(
-                        canonical_form=key,
-                        surface_form=token,
-                        type="vocabulary",
-                        label=token,
-                        lesson_data=lesson_data,
-                        confidence=None,
-                    ))
+                    # Try the verb SQLite index before falling back to noun hints.
+                    db_feats = _lookup_verb_morph(key)
+                    if db_feats and ("tense" in db_feats or "verbform" in db_feats):
+                        # Found in verb DB — look up lemma entry for gloss if possible.
+                        db_lemma = db_feats.get("lemma", key)
+                        lemma_entry = _lemmas().get(db_lemma)
+                        lesson_data = {
+                            "lemma":        db_lemma,
+                            "surface_form": token,
+                        }
+                        if lemma_entry:
+                            lesson_data["citation_form"] = lemma_entry["citation"]
+                            lesson_data["gloss"]         = lemma_entry["gloss"]
+                            lesson_data["grammar_note"]  = lemma_entry.get("grammar_note", "")
+                        for f in ("tense", "mood", "voice", "person", "number", "verbform"):
+                            if f in db_feats:
+                                lesson_data[f] = db_feats[f]
+                        has_finite = "tense" in db_feats and "mood" in db_feats
+                        candidates.append(CandidateObject(
+                            canonical_form=key,
+                            surface_form=token,
+                            type="conjugation" if has_finite else "vocabulary",
+                            label=token,
+                            lesson_data=lesson_data,
+                            confidence=0.65,
+                        ))
+                    else:
+                        lesson_data = {"lemma": key, "confidence_note": _UNKNOWN_NOTE}
+                        noun_hint = _extract_latin_noun_suffix_hint(key)
+                        if noun_hint:
+                            hint_feats, amb_note = noun_hint
+                            if "case" in hint_feats:
+                                lesson_data["case_hint"]   = hint_feats["case"]
+                            if "number" in hint_feats:
+                                lesson_data["number_hint"] = hint_feats["number"]
+                            if "gender" in hint_feats:
+                                lesson_data["gender_hint"] = hint_feats["gender"]
+                            if amb_note:
+                                lesson_data["ambiguity_note"] = amb_note
+                            lesson_data["confidence_note"] = _NOUN_SUFFIX_NOTE
+                        candidates.append(CandidateObject(
+                            canonical_form=key,
+                            surface_form=token,
+                            type="vocabulary",
+                            label=token,
+                            lesson_data=lesson_data,
+                            confidence=None,
+                        ))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
