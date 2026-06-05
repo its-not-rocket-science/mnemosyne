@@ -2,8 +2,8 @@ import asyncio
 import logging
 import os
 import re
-import shutil
 import subprocess
+import sys
 import uuid
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -145,26 +145,24 @@ _PROJECT_ROOT = Path(__file__).parent.parent
 def _run_alembic_upgrade() -> None:
     """Run ``alembic upgrade head`` in a subprocess.
 
-    The project's ``alembic/`` migrations directory shadows the installed
-    ``alembic`` package inside this process's import system.  Running the
-    ``alembic`` CLI binary as a subprocess sidesteps that collision — the
-    binary resolves ``alembic`` from site-packages regardless of CWD.
+    Run Alembic as ``python -m alembic`` from the project root so ``env.py``
+    can import the app package in Docker, where console-script entry points do
+    not always include the working directory on ``sys.path``.
 
-    DATABASE_URL is injected explicitly so the subprocess receives it even
-    when pydantic-settings loaded it from .env without touching os.environ.
+    DATABASE_URL and PYTHONPATH are injected explicitly so the subprocess
+    receives pydantic-settings values loaded from .env and can import
+    ``backend.models`` regardless of the parent process environment.
 
     Raises RuntimeError on migration failure so the lifespan warning handler
     can log it and continue (same behaviour as the old create_all path).
     """
-    alembic_bin = shutil.which("alembic")
-    if alembic_bin is None:
-        raise RuntimeError(
-            "'alembic' executable not found in PATH. "
-            "Install it with: pip install alembic"
-        )
     env = {**os.environ, "DATABASE_URL": settings.database_url}
+    pythonpath_parts = [str(_PROJECT_ROOT)]
+    if existing_pythonpath := env.get("PYTHONPATH"):
+        pythonpath_parts.append(existing_pythonpath)
+    env["PYTHONPATH"] = os.pathsep.join(pythonpath_parts)
     result = subprocess.run(
-        [alembic_bin, "upgrade", "head"],
+        [sys.executable, "-m", "alembic", "upgrade", "head"],
         cwd=str(_PROJECT_ROOT),
         env=env,
         capture_output=True,
