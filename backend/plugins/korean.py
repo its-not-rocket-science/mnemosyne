@@ -33,12 +33,13 @@ Canonical form conventions (IMMUTABLE — first DB write is final):
   - noun:일  and  verb:일하다  are distinct canonical objects with no collision
   - noun: prefix prevents the same Hangul surface from shadowing verb:
 
-Nuance canonical forms (emitted by KoreanNuanceExtractor, never by this plugin):
-  nuance:ko:politeness:{register}    register ∈ {formal_polite, informal_polite,
-                                                  plain_informal, plain_formal}
-  nuance:ko:particle:{citation}      e.g. nuance:ko:particle:이/가
-  nuance:ko:negation:{type}          type ∈ {short_an, short_mot, long_anta, long_motda}
-  nuance:ko:honorific:subject_si
+Nuance canonical forms (emitted by KoreanNuanceExtractor):
+  ko:particle:{role}              e.g. ko:particle:topic, ko:particle:subject
+  ko:ending:{speech_level}        e.g. ko:ending:polite_haeyo
+  ko:tense:past / ko:aspect:progressive / ko:tense:future_prospective
+  ko:negation:{short,long,inability_*}
+  ko:honorific:si
+  ko:connective:{go,jiman,aseo_eoseo,myeon,nikka}
 """
 from __future__ import annotations
 
@@ -223,7 +224,7 @@ class KoreanPlugin:
             cultural_references="none",
             etymology="none",
             formality_register="partial",  # register from sentence-final endings (EF)
-            grammar_nuance="stub",         # particles, negation, subject-honorific 시
+            grammar_nuance="partial",      # particles, endings, tense/aspect, negation, honorifics
             pronunciation_tts="partial",
             transliteration="none",
             proverb_tradition="none",
@@ -349,6 +350,7 @@ class KoreanPlugin:
         for c in candidates:
             c.lesson_data.pop("_raw_tag", None)
 
+        candidates.extend(self._extract_nuance(sentence, tokens, candidates, seen))
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     def _token_to_candidate(self, tok: Any, tag: str) -> CandidateObject | None:
@@ -458,7 +460,28 @@ class KoreanPlugin:
                 lesson_data=ld,
                 confidence=0.50,
             ))
+        candidates.extend(self._extract_nuance(sentence, [], candidates, seen))
         return CandidateSentenceResult(text=sentence, candidates=candidates)
+
+    def _extract_nuance(
+        self,
+        sentence: str,
+        tokens: list[Any],
+        candidates: list[CandidateObject],
+        seen: set[str],
+    ) -> list[CandidateObject]:
+        from backend.nuance.ko import KoreanNuanceExtractor  # noqa: PLC0415
+
+        nuance_candidates = KoreanNuanceExtractor().extract_nuance(
+            sentence, tokens, candidates, self.language_code
+        )
+        out: list[CandidateObject] = []
+        for cand in nuance_candidates:
+            if cand.canonical_form in seen:
+                continue
+            seen.add(cand.canonical_form)
+            out.append(cand)
+        return out
 
 
 # ── Module helpers ────────────────────────────────────────────────────────────
