@@ -208,6 +208,7 @@ class KoreanNuanceExtractor:
         ("ko:ending:polite_haeyo", "politeness", "speech_level", "polite_haeyo", "어요", 0.82, "해요체 polite endings such as -어요/-아요 make speech polite without sounding highly formal."),
         ("ko:ending:polite_haeyo", "politeness", "speech_level", "polite_haeyo", "아요", 0.82, "해요체 polite endings such as -어요/-아요 make speech polite without sounding highly formal."),
         ("ko:ending:polite_haeyo", "politeness", "speech_level", "polite_haeyo", "예요", 0.78, "예요/이에요 is the polite copula pattern; it belongs with 해요체 but depends on the preceding noun shape."),
+        ("ko:ending:polite_haeyo", "politeness", "speech_level", "polite_haeyo", "요", 0.76, "Sentence-final -요 is the broad 해요체 politeness marker, including contracted forms such as 가요 that do not end in -어요/-아요."),
         ("ko:ending:plain_informal", "politeness", "speech_level", "plain_informal", "어", 0.48, "Final -어 can be plain informal 해체, but it is short and context-sensitive; treat this as a low-confidence hint."),
         ("ko:ending:plain_informal", "politeness", "speech_level", "plain_informal", "아", 0.48, "Final -아 can be plain informal 해체, but it is short and context-sensitive; treat this as a low-confidence hint."),
         ("ko:ending:plain_declarative", "politeness", "speech_level", "plain_declarative", "다", 0.55, "Final -다 often marks plain written/declarative style, but dictionary citation forms also end in 다; confidence is intentionally low."),
