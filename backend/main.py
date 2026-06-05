@@ -173,9 +173,47 @@ def _run_alembic_upgrade() -> None:
     if result.stdout:
         logger.info("alembic: %s", result.stdout.strip())
     if result.returncode != 0:
-        raise RuntimeError(
-            f"alembic upgrade head exited {result.returncode}:\n{result.stderr.strip()}"
+        output = "\n".join(
+            part.strip() for part in (result.stderr, result.stdout) if part.strip()
         )
+        detail = output or "no output captured"
+        raise RuntimeError(f"alembic upgrade head exited {result.returncode}:\n{detail}")
+
+
+async def _run_alembic_upgrade_with_retries(
+    *,
+    attempts: int = 12,
+    delay_seconds: float = 2.0,
+) -> None:
+    """Run startup migrations, retrying transient database boot races.
+
+    Docker Compose waits for ``pg_isready`` before starting the app, but a
+    freshly-created PostgreSQL service can still reject the first real asyncpg
+    connection used by Alembic.  Without a retry, that one startup race leaves
+    ``/ready`` permanently degraded even after later DB checks pass.
+    """
+    last_error: Exception | None = None
+    for attempt in range(1, attempts + 1):
+        try:
+            await asyncio.to_thread(_run_alembic_upgrade)
+            if attempt > 1:
+                logger.info("Database migrations applied after %s attempts.", attempt)
+            return
+        except Exception as exc:
+            last_error = exc
+            if attempt >= attempts:
+                break
+            logger.warning(
+                "Database migration attempt %s/%s failed: %s; retrying in %.1fs",
+                attempt,
+                attempts,
+                str(exc).splitlines()[0],
+                delay_seconds,
+            )
+            await asyncio.sleep(delay_seconds)
+
+    assert last_error is not None
+    raise last_error
 
 
 # ── Plugin warm-up + vocab index ─────────────────────────────────────────────
@@ -225,10 +263,11 @@ async def lifespan(app: FastAPI):
     app.state.startup_errors: list[str] = []
 
     # Run pending Alembic migrations on startup.
-    # _run_alembic_upgrade uses subprocess to avoid the local alembic/ directory
-    # shadowing the installed package; asyncio.to_thread prevents blocking the loop.
+    # The retry wrapper tolerates transient database boot races, while
+    # _run_alembic_upgrade itself runs in a worker thread so the event loop is
+    # not blocked by the subprocess.
     try:
-        await asyncio.to_thread(_run_alembic_upgrade)
+        await _run_alembic_upgrade_with_retries()
         logger.info("Database migrations applied.")
     except Exception as exc:
         # Condense multi-line alembic output to one readable sentence.
