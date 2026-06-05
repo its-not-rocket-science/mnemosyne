@@ -353,7 +353,7 @@ class KoreanNuanceExtractor:
 
         short_mot = (kiwi_mode and any(form == "못" and tag == "MAG" for form, tag in zip(forms, tags))) or "못" in words
         if short_mot:
-            self._append_once(out, seen, "ko:negation:inability_short", "못", "ability_impossibility", "negation", "못 before a verb means inability or external prevention: ‘cannot / be unable to’. It contrasts with volitional 안.", "A2", 0.86 if kiwi_mode else 0.76, "Medium confidence: standalone 못 was detected; scope still depends on the following predicate." if not kiwi_mode else None, {"negation_type": "short_mot"})
+            self._append_once(out, seen, "ko:negation:inability_short", "못", "negation", "negation", "못 before a verb means inability or external prevention: ‘cannot / be unable to’. It contrasts with volitional 안.", "A2", 0.86 if kiwi_mode else 0.76, "Medium confidence: standalone 못 was detected; scope still depends on the following predicate." if not kiwi_mode else None, {"negation_type": "short_mot"})
 
         long_an = (kiwi_mode and any(forms[i] == "지" and i + 1 < len(forms) and forms[i + 1] == "않" for i in range(len(forms) - 1))) or "지 않" in sentence
         if long_an:
@@ -361,7 +361,7 @@ class KoreanNuanceExtractor:
 
         long_mot = (kiwi_mode and any(forms[i] == "지" and i + 1 < len(forms) and forms[i + 1] == "못하" for i in range(len(forms) - 1))) or "지 못" in sentence
         if long_mot:
-            self._append_once(out, seen, "ko:negation:inability_long", "지 못하다", "ability_impossibility", "negation", "-지 못하다 is the long/formal inability pattern, equivalent to ‘cannot / fail to’. It is common in writing and formal speech.", "A2", 0.88 if kiwi_mode else 0.78, "Medium confidence: detected from the -지 못- sequence." if not kiwi_mode else None, {"negation_type": "long_motda"})
+            self._append_once(out, seen, "ko:negation:inability_long", "지 못하다", "negation", "negation", "-지 못하다 is the long/formal inability pattern, equivalent to ‘cannot / fail to’. It is common in writing and formal speech.", "A2", 0.88 if kiwi_mode else 0.78, "Medium confidence: detected from the -지 못- sequence." if not kiwi_mode else None, {"negation_type": "long_motda"})
         return out
 
     def _honorific(self, tokens: list[Any], sentence: str, seen: set[str], kiwi_mode: bool) -> list[CandidateObject]:
