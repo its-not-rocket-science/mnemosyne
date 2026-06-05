@@ -826,6 +826,15 @@ class HindiPlugin:
                     }
                     if noun_morph:
                         lesson_data.update(noun_morph)
+
+                    # Ergative subject heuristic: a noun/proper noun immediately
+                    # before the postposition "ने" is the ergative-marked
+                    # subject (e.g. "राम ने सेब खाया").
+                    next_token = deva_tokens[idx + 1] if idx + 1 < len(deva_tokens) else None
+                    if next_token == "ने":
+                        lesson_data["ergative_subject"] = True
+                        lesson_data["case"] = "ergative"
+
                     candidates.append(CandidateObject(
                         canonical_form=token,
                         surface_form=token,
