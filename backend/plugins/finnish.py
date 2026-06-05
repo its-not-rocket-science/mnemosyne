@@ -433,18 +433,21 @@ class FinnishPlugin:
     ) -> list[CandidateObject]:
         candidates: list[CandidateObject] = []
         for mt in tokens:
-            if mt.upos in _STANZA_SKIP_UPOS:
+            poss = _possessive_suffix_stanza(mt)
+            if mt.upos in _STANZA_SKIP_UPOS and not poss:
                 continue
-            # Skip finite verb forms (handled as conjugations)
-            if mt.upos in ("VERB", "AUX") and mt.verb_form == "finite":
+            # Skip finite verb forms (handled as conjugations), unless a
+            # low-ambiguity possessive surface cue makes this useful as a noun
+            # fallback for short context-free forms such as "talomme".
+            if mt.upos in ("VERB", "AUX") and mt.verb_form == "finite" and not poss:
                 continue
             if mt.upos in ("VERB", "AUX") and mt.verb_form is None and (
                 mt.mood is not None or mt.tense is not None
-            ):
+            ) and not poss:
                 continue
 
             lemma = mt.lemma
-            if len(lemma) < 2 or lemma in seen:
+            if len(lemma) < 2 or (lemma in seen and not poss):
                 continue
             seen.add(lemma)
 
@@ -468,7 +471,6 @@ class FinnishPlugin:
                 if mt.verb_form:
                     data["verb_form"] = mt.verb_form
 
-            poss = _possessive_suffix_stanza(mt)
             poss_surface_fallback = bool(poss and not (mt.poss_person and mt.poss_number))
             if poss:
                 data["possessive_suffix"] = poss
@@ -611,15 +613,20 @@ class FinnishPlugin:
     ) -> list[CandidateObject]:
         candidates: list[CandidateObject] = []
         for tok in tokens:
-            if tok.pos_ in _SKIP_POS or tok.is_punct or tok.is_space:
+            poss = _possessive_suffix(tok)
+            if (tok.pos_ in _SKIP_POS and not poss) or tok.is_punct or tok.is_space:
                 continue
 
             verb_form = _morph_first(tok, "VerbForm")
-            if tok.pos_ in {"VERB", "AUX"} and verb_form not in _NON_FINITE_VERBFORMS:
+            if (
+                tok.pos_ in {"VERB", "AUX"}
+                and verb_form not in _NON_FINITE_VERBFORMS
+                and not poss
+            ):
                 continue
 
             lemma = tok.lemma_.lower()
-            if len(lemma) < 2 or lemma in seen:
+            if len(lemma) < 2 or (lemma in seen and not poss):
                 continue
             seen.add(lemma)
 
@@ -646,9 +653,8 @@ class FinnishPlugin:
                     data["verb_form"] = verb_form.lower()
 
             # Possessive suffix: apply to all vocabulary tokens. The small model
-            # sometimes mislabels possessive-inflected nouns as ADV, so POS-gating
-            # would miss them. -mme/-nne/-nsa/-nsä are low-ambiguity surface cues.
-            poss = _possessive_suffix(tok)
+            # sometimes mislabels possessive-inflected nouns as closed-class POS,
+            # so POS-gating would miss them. -mme/-nne/-nsa/-nsä are low-ambiguity surface cues.
             poss_surface_fallback = bool(poss and not (_morph_first(tok, "Person[psor]") and _morph_first(tok, "Number[psor]")))
             if poss:
                 data["possessive_suffix"] = poss
