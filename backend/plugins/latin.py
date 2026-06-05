@@ -299,6 +299,12 @@ _DICT_ONLY_NOTE = (
     "for this specific inflected form (verb form not in morph index)."
 )
 
+# SQLite verb morphology is generated from full Wiktionary paradigm tables, so
+# finite tense+mood hits should be trusted nearly as much as la_morph.json UD
+# annotations and must remain above the SRS confidence floor for conjugations.
+_VERB_DB_FINITE_CONFIDENCE = 0.78
+_VERB_DB_NONFINITE_CONFIDENCE = 0.75
+
 _SUFFIX_NOTE = (
     "Latin suffix-based: outermost ending matched against imperfect/future/infinitive "
     "patterns. Accuracy is moderate; consult Whitaker's Words or CLTK for definitive analysis."
@@ -563,7 +569,7 @@ class LatinPlugin:
                             type="conjugation",
                             label=token,
                             lesson_data=lesson_data,
-                            confidence=0.78,
+                            confidence=_VERB_DB_FINITE_CONFIDENCE,
                         ))
                     elif db_feats and "verbform" in db_feats:
                         # Non-finite without tense+mood (rare in kaikki but possible).
@@ -581,7 +587,7 @@ class LatinPlugin:
                             type="conjugation",
                             label=token,
                             lesson_data=lesson_data,
-                            confidence=0.75,
+                            confidence=_VERB_DB_NONFINITE_CONFIDENCE,
                         ))
                     else:
                         lesson_data["lemma"]           = entry["citation"]
@@ -692,7 +698,11 @@ class LatinPlugin:
                             if f in db_feats:
                                 lesson_data[f] = db_feats[f]
                         has_finite = "tense" in db_feats and "mood" in db_feats
-                        confidence = 0.78 if has_finite else 0.75
+                        confidence = (
+                            _VERB_DB_FINITE_CONFIDENCE
+                            if has_finite
+                            else _VERB_DB_NONFINITE_CONFIDENCE
+                        )
                         candidates.append(CandidateObject(
                             canonical_form=key,
                             surface_form=token,
