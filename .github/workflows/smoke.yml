@@ -96,7 +96,7 @@ jobs:
           docker compose logs app
           exit 1
 
-      - name: Smoke — POST /parse returns tokens
+      - name: Smoke — POST /parse returns learnable objects
         run: |
           curl -sf \
             -X POST \
@@ -104,7 +104,7 @@ jobs:
             -H "X-User-Id: smoke-user" \
             -d '{"text": "El gato come pescado.", "language": "es"}' \
             http://localhost:8000/parse \
-          | jq -e '.tokens | length > 0'
+          | jq -e '(.sentences | length > 0) and ([.sentences[].learnable_objects[]?] | length > 0)'
 
       - name: Smoke — GET /health is idempotent
         run: |
