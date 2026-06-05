@@ -29,7 +29,7 @@ Known limitations
 ─────────────────
   • Suffix matching has false positives: Hindi has considerable homography
     and suffix ambiguity that requires full morphological analysis.
-  • No compound-verb (conjunct verb) decomposition.
+  • Compound-verb (conjunct verb) detection is limited to adjacent light-verb pairs.
   • No sandhi resolution.
   • Loanwords (English, Urdu, Sanskrit tatsama) may get incorrect morphology.
   • Romanisation is approximate; IPA would require trained models.
@@ -260,7 +260,8 @@ def _find_multi_word_postpositions(tokens: list[str]) -> set[int]:
 _CONFIDENCE_NOTE = (
     "Hindi morphology-light: suffix-pattern heuristics only. "
     "Morphological features (tense, gender, case) are probable, not certain. "
-    "No compound-verb decomposition, sandhi resolution, or loanword analysis. "
+    "Compound-verb detection is limited to adjacent light-verb pairs; "
+    "no sandhi resolution or loanword analysis. "
     "Lemmatisation not performed; canonical_form is the surface form."
 )
 
@@ -295,20 +296,43 @@ def _make_conj_canonical(lemma: str, mt: "Any") -> str:
 
 # ── Compound verbs (V+V constructions) ───────────────────────────────────────
 # Vector (light) verbs that form compound verbs with a main verb stem.
-# Listed as the standard infinitive lemma returned by stanza.
-_VECTOR_VERBS: frozenset[str] = frozenset({
-    "जाना",   # to go — completion / direction
-    "देना",   # to give — other-benefit (causative)
-    "लेना",   # to take — self-benefit (reflexive)
-    "आना",    # to come — involuntary / resultant action
-    "पड़ना",  # to fall / befall — compulsion
-    "सकना",   # can / be able — modality
-    "रहना",   # to remain — continuous aspect
-    "बैठना",  # to sit — inadvertent or undesirable action
-    "उठना",   # to rise — inceptive / sudden action
-    "चुकना",  # to finish — completion (anterior)
-    "डालना",  # to throw — forceful / sudden completion
-})
+# Stanza Hindi lemmatisation is not fully stable across model versions: vector
+# verbs may appear as infinitives (लेना), bare stems (ले), or inflected surfaces
+# when the model cannot recover a lemma.  Keep the accepted forms narrow and
+# limited to closed-class light verbs so compound detection survives those
+# model differences without broadening to arbitrary V+V sequences.
+_VECTOR_VERB_FORMS: dict[str, str] = {
+    # to go — completion / direction
+    "जाना": "जाना", "जा": "जा", "गया": "जा", "गई": "जा", "गए": "जा",
+    # to give — other-benefit (causative)
+    "देना": "देना", "दे": "दे", "दिया": "दे", "दी": "दे", "दिए": "दे",
+    # to take — self-benefit (reflexive)
+    "लेना": "लेना", "ले": "ले", "लिया": "ले", "ली": "ले", "लिए": "ले",
+    # to come — involuntary / resultant action
+    "आना": "आना", "आ": "आ",
+    # to fall / befall — compulsion
+    "पड़ना": "पड़ना", "पड़": "पड़",
+    # can / be able — modality
+    "सकना": "सकना", "सक": "सक",
+    # to remain — continuous aspect
+    "रहना": "रहना", "रह": "रह",
+    # to sit — inadvertent or undesirable action
+    "बैठना": "बैठना", "बैठ": "बैठ",
+    # to rise — inceptive / sudden action
+    "उठना": "उठना", "उठ": "उठ",
+    # to finish — completion (anterior)
+    "चुकना": "चुकना", "चुक": "चुक",
+    # to throw — forceful / sudden completion
+    "डालना": "डालना", "डाल": "डाल",
+}
+
+
+def _normalise_vector_verb(*forms: str | None) -> str | None:
+    """Return a stable vector-verb label for a stanza lemma/surface pair."""
+    for form in forms:
+        if form in _VECTOR_VERB_FORMS:
+            return _VECTOR_VERB_FORMS[form]
+    return None
 
 
 def _hi_cefr_confidence(lemma: str, base: float) -> tuple[float, str | None]:
@@ -651,27 +675,30 @@ class HindiPlugin:
         # as VERB in benefactive/completive compounds (खा लिया).
         for j in range(len(morph_tokens) - 1):
             mt1, mt2 = morph_tokens[j], morph_tokens[j + 1]
-            if mt1.upos == "VERB" and mt2.upos in ("VERB", "AUX"):
-                v2_lem = mt2.lemma or mt2.text
-                if v2_lem in _VECTOR_VERBS:
-                    v1_lem = mt1.lemma or mt1.text
-                    compound_cf = f"compound:{v1_lem}+{v2_lem}"
-                    if compound_cf not in seen:
-                        seen.add(compound_cf)
-                        candidates.append(CandidateObject(
-                            canonical_form=compound_cf,
-                            surface_form=f"{mt1.text} {mt2.text}",
-                            type="vocabulary",
-                            label=f"{mt1.text} {mt2.text}",
-                            lesson_data={
-                                "pos": "compound_verb",
-                                "main_verb": v1_lem,
-                                "vector_verb": v2_lem,
-                                "romanized": f"{_romanise(mt1.text)} {_romanise(mt2.text)}",
-                                "note": f"Compound verb: {v1_lem} + vector verb {v2_lem}",
-                            },
-                            confidence=0.82,
-                        ))
+            v2_lem = _normalise_vector_verb(mt2.lemma, mt2.text)
+            if (
+                mt1.upos == "VERB"
+                and mt2.upos in ("VERB", "AUX")
+                and v2_lem is not None
+            ):
+                v1_lem = mt1.lemma or mt1.text
+                compound_cf = f"compound:{v1_lem}+{v2_lem}"
+                if compound_cf not in seen:
+                    seen.add(compound_cf)
+                    candidates.append(CandidateObject(
+                        canonical_form=compound_cf,
+                        surface_form=f"{mt1.text} {mt2.text}",
+                        type="vocabulary",
+                        label=f"{mt1.text} {mt2.text}",
+                        lesson_data={
+                            "pos": "compound_verb",
+                            "main_verb": v1_lem,
+                            "vector_verb": v2_lem,
+                            "romanized": f"{_romanise(mt1.text)} {_romanise(mt2.text)}",
+                            "note": f"Compound verb: {v1_lem} + vector verb {v2_lem}",
+                        },
+                        confidence=0.82,
+                    ))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
@@ -807,6 +834,40 @@ class HindiPlugin:
                         lesson_data=lesson_data,
                         confidence=0.45 if noun_morph else None,
                     ))
+
+        # Compound verb detection for the heuristic path.  This is intentionally
+        # conservative: only adjacent Devanagari bigrams whose second token is a
+        # closed-class vector form are emitted.
+        for idx in range(len(deva_tokens) - 1):
+            main_form, vector_form = deva_tokens[idx], deva_tokens[idx + 1]
+            vector_lemma = _normalise_vector_verb(vector_form)
+            if (
+                vector_lemma is None
+                or main_form in _POSTPOSITIONS
+                or main_form in _FUNCTION_WORDS
+            ):
+                continue
+
+            compound_cf = f"compound:{main_form}+{vector_lemma}"
+            if compound_cf in seen:
+                continue
+
+            seen.add(compound_cf)
+            candidates.append(CandidateObject(
+                canonical_form=compound_cf,
+                surface_form=f"{main_form} {vector_form}",
+                type="vocabulary",
+                label=f"{main_form} {vector_form}",
+                lesson_data={
+                    "pos": "compound_verb",
+                    "main_verb": main_form,
+                    "vector_verb": vector_lemma,
+                    "romanized": f"{_romanise(main_form)} {_romanise(vector_form)}",
+                    "note": f"Compound verb: {main_form} + vector verb {vector_lemma}",
+                    "confidence_note": _CONFIDENCE_NOTE,
+                },
+                confidence=0.55,
+            ))
 
         # Latin tokens (loanwords/numerals) as low-confidence vocabulary
         for token in latin_tokens:
