@@ -3291,10 +3291,14 @@ files = [
 dev = ["pytest", "setuptools"]
 
 [extras]
+arabic = ["camel-tools"]
 cjk = ["jieba", "pypinyin"]
+hindi = ["stanza"]
 korean = ["kiwipiepy"]
+turkish = ["zeyrek"]
+turkish-stanza = ["stanza"]
 
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "1fdea299cc6eaee7a4bb74a5e99431639bb4733ebb1269d5c3d955567e4cf785"
+content-hash = "64e2ee1ebf5f0f24d910c66af696e8ab81ce55e270cdc7fccc0481fe5bad14e6"
