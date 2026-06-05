@@ -15,7 +15,7 @@ from backend.nuance.dimensions import (
     get_system,
 )
 
-EXPECTED_LANGUAGES = {"es", "fr", "de", "ru", "ar", "ja", "zh", "ko", "it", "pt", "la", "grc", "he", "en"}
+EXPECTED_LANGUAGES = {"es", "fr", "de", "ru", "ar", "ja", "zh", "ko", "it", "pt", "la", "grc", "he", "en", "fi"}
 
 
 class TestInventoryCoverage:
