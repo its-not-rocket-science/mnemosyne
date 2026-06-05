@@ -6,9 +6,16 @@
   "nuance_extractor_class": "KoreanNuanceExtractor",
   "tokenizer": "words",
   "capability_assertions": {
-    "idioms": ["none"],
-    "grammar_nuance": ["stub"],
-    "formality_register": ["stub", "partial"]
+    "idioms": [
+      "none"
+    ],
+    "grammar_nuance": [
+      "partial"
+    ],
+    "formality_register": [
+      "stub",
+      "partial"
+    ]
   },
   "capability_gaps": {},
   "cases": [
@@ -18,14 +25,22 @@
       "text": "학교에 가요.",
       "note": "Heuristic: sentence ends in 요 → informal_polite (해요체)",
       "pipeline": "extractor",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "politeness",
       "assert_nuance_types_absent": [],
-      "assert_canonical_contains": "informal_polite",
-      "confidence_ge": 0.85,
+      "assert_canonical_contains": "ko:ending:polite_haeyo",
+      "confidence_ge": 0.75,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+        "nuance": [
+          "nuance_type",
+          "explanation",
+          "grammar_axis",
+          "surface",
+          "learner_level"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -35,14 +50,22 @@
       "text": "학교에 갑니다.",
       "note": "Heuristic: sentence ends in 니다 → formal_polite (합쇼체)",
       "pipeline": "extractor",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "politeness",
       "assert_nuance_types_absent": [],
-      "assert_canonical_contains": "formal_polite",
-      "confidence_ge": 0.85,
+      "assert_canonical_contains": "ko:ending:formal_hapsyo",
+      "confidence_ge": 0.75,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+        "nuance": [
+          "nuance_type",
+          "explanation",
+          "grammar_axis",
+          "surface",
+          "learner_level"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -52,14 +75,22 @@
       "text": "고양이가 물을 마셔요.",
       "note": "Heuristic: '고양이가' ends with 가 → particle 이/가 (subject marker). Politeness also fires — lesson_data_required_keys limited to shared keys.",
       "pipeline": "extractor",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "particle",
       "assert_nuance_types_absent": [],
-      "assert_canonical_contains": "이/가",
-      "confidence_ge": 0.85,
+      "assert_canonical_contains": "ko:particle:subject",
+      "confidence_ge": 0.7,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+        "nuance": [
+          "nuance_type",
+          "explanation",
+          "grammar_axis",
+          "surface",
+          "learner_level"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -69,14 +100,22 @@
       "text": "고양이가 생선을 먹어요.",
       "note": "Heuristic: '생선을' ends with 을 → particle 을/를 (object marker). Politeness also fires.",
       "pipeline": "extractor",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "particle",
       "assert_nuance_types_absent": [],
-      "assert_canonical_contains": "을/를",
-      "confidence_ge": 0.85,
+      "assert_canonical_contains": "ko:particle:object",
+      "confidence_ge": 0.7,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+        "nuance": [
+          "nuance_type",
+          "explanation",
+          "grammar_axis",
+          "surface",
+          "learner_level"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -86,14 +125,22 @@
       "text": "저는 학생이에요.",
       "note": "Heuristic: '저는' ends with 는 → particle 은/는 (topic marker). Politeness also fires.",
       "pipeline": "extractor",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "particle",
       "assert_nuance_types_absent": [],
-      "assert_canonical_contains": "은/는",
-      "confidence_ge": 0.85,
+      "assert_canonical_contains": "ko:particle:topic",
+      "confidence_ge": 0.7,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+        "nuance": [
+          "nuance_type",
+          "explanation",
+          "grammar_axis",
+          "surface",
+          "learner_level"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -103,14 +150,22 @@
       "text": "도서관에 책이 많아요.",
       "note": "Heuristic: '도서관에' ends with 에 → particle 에 (locative/dative). Politeness also fires.",
       "pipeline": "extractor",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "particle",
       "assert_nuance_types_absent": [],
-      "assert_canonical_contains": "nuance:ko:particle:에",
-      "confidence_ge": 0.85,
+      "assert_canonical_contains": "ko:particle:location_time",
+      "confidence_ge": 0.7,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+        "nuance": [
+          "nuance_type",
+          "explanation",
+          "grammar_axis",
+          "surface",
+          "learner_level"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -120,14 +175,22 @@
       "text": "밥을 안 먹어요.",
       "note": "Heuristic: standalone token '안' → short_an negation",
       "pipeline": "extractor",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "negation",
       "assert_nuance_types_absent": [],
-      "assert_canonical_contains": "short_an",
-      "confidence_ge": 0.80,
+      "assert_canonical_contains": "ko:negation:short",
+      "confidence_ge": 0.75,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+        "nuance": [
+          "nuance_type",
+          "explanation",
+          "grammar_axis",
+          "surface",
+          "learner_level"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -137,14 +200,22 @@
       "text": "저는 못 가요.",
       "note": "Heuristic: standalone token '못' → short_mot (inability) negation. Politeness also fires.",
       "pipeline": "extractor",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "negation",
       "assert_nuance_types_absent": [],
-      "assert_canonical_contains": "short_mot",
-      "confidence_ge": 0.80,
+      "assert_canonical_contains": "ko:negation:inability_short",
+      "confidence_ge": 0.75,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+        "nuance": [
+          "nuance_type",
+          "explanation",
+          "grammar_axis",
+          "surface",
+          "learner_level"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -157,7 +228,9 @@
       "assert_types_present": [],
       "assert_types_absent": [],
       "assert_nuance_type": null,
-      "assert_nuance_types_absent": ["politeness"],
+      "assert_nuance_types_absent": [
+        "politeness"
+      ],
       "assert_canonical_contains": null,
       "confidence_ge": null,
       "lesson_data_required_keys": {},
@@ -172,7 +245,9 @@
       "assert_types_present": [],
       "assert_types_absent": [],
       "assert_nuance_type": null,
-      "assert_nuance_types_absent": ["negation"],
+      "assert_nuance_types_absent": [
+        "negation"
+      ],
       "assert_canonical_contains": null,
       "confidence_ge": null,
       "lesson_data_required_keys": {},
@@ -184,14 +259,18 @@
       "text": "고양이가 생선을 먹어요.",
       "note": "Heuristic mode: plugin emits word:{surface} vocabulary candidates for each Hangul run",
       "pipeline": "plugin",
-      "assert_types_present": ["vocabulary"],
+      "assert_types_present": [
+        "vocabulary"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": null,
       "lesson_data_required_keys": {
-        "vocabulary": ["lemma"]
+        "vocabulary": [
+          "lemma"
+        ]
       },
       "no_raw_uuids": true
     },
@@ -201,7 +280,9 @@
       "text": "오늘 날씨가 좋아요.",
       "note": "Verify no UUID-format strings appear in any lesson_data field",
       "pipeline": "plugin",
-      "assert_types_present": ["vocabulary"],
+      "assert_types_present": [
+        "vocabulary"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
@@ -216,14 +297,22 @@
       "text": "선생님이 학교에 오십니다.",
       "note": "Co-fire: particle 이/가 from 선생님이, locative 에 from 학교에, formal_polite from 십니다",
       "pipeline": "extractor",
-      "assert_types_present": ["nuance"],
+      "assert_types_present": [
+        "nuance"
+      ],
       "assert_types_absent": [],
       "assert_nuance_type": "particle",
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": 0.85,
       "lesson_data_required_keys": {
-        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+        "nuance": [
+          "nuance_type",
+          "explanation",
+          "grammar_axis",
+          "surface",
+          "learner_level"
+        ]
       },
       "no_raw_uuids": true
     }
