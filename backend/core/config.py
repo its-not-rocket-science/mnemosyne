@@ -1,6 +1,7 @@
+import json
 from functools import lru_cache
 
-from pydantic import Field, model_validator
+from pydantic import Field, field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -91,6 +92,30 @@ class Settings(BaseSettings):
     allow_dev_auth_fallback: bool | None = Field(default=None)
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
+
+    @field_validator("enabled_languages", "cors_origins", mode="before")
+    @classmethod
+    def _parse_env_list(cls, value: object) -> object:
+        """Accept JSON arrays or comma-separated strings for list settings.
+
+        pydantic-settings handles JSON arrays for list fields, but several
+        documented examples and CI smoke jobs use comma-separated values such
+        as ``ENABLED_LANGUAGES=es`` or ``CORS_ORIGINS=https://app.example``.
+        Normalize those strings before pydantic validates the typed lists.
+        """
+        if value is None or isinstance(value, list):
+            return value
+
+        if isinstance(value, str):
+            raw = value.strip()
+            if raw == "":
+                return None
+            if raw.startswith("["):
+                parsed = json.loads(raw)
+                return parsed
+            return [item.strip() for item in raw.split(",") if item.strip()]
+
+        return value
 
     @model_validator(mode="after")
     def _default_allow_dev_auth_fallback(self) -> "Settings":
