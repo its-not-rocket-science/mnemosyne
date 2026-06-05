@@ -28,9 +28,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Reset Docker Compose state
-        run: docker compose down -v --remove-orphans
-
       - name: Prepare .env
         run: |
           cp .env.example .env
@@ -39,6 +36,9 @@ jobs:
           echo "ALLOW_DEV_AUTH_FALLBACK=true" >> .env
           # Load only Spanish to limit startup time in CI
           echo "ENABLED_LANGUAGES=es" >> .env
+
+      - name: Reset Docker Compose state
+        run: docker compose down -v --remove-orphans
 
       - name: Build app image
         run: |
