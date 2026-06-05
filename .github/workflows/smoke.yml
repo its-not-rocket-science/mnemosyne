@@ -28,6 +28,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Reset Docker Compose state
+        run: docker compose down -v --remove-orphans
+
       - name: Prepare .env
         run: |
           cp .env.example .env
@@ -57,7 +60,7 @@ jobs:
           done
 
       - name: Start stack
-        run: docker compose up -d
+        run: docker compose up -d --force-recreate --renew-anon-volumes
 
       - name: Wait for /health (up to 150 s)
         run: |
