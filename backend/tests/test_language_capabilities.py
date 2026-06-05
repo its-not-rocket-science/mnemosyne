@@ -1145,7 +1145,7 @@ class TestAnalysisDepthUserLabels:
     def test_morphology_light_languages_show_basic_hints_label(self) -> None:
         resp = client.get("/languages")
         # fi upgraded to full spaCy (fi_core_news_sm); remaining are morphology_light
-        morphology_light_codes = {"hi", "tr", "ko", "ja", "zh", "grc", "la"}
+        morphology_light_codes = {"hi", "tr", "ko", "ja", "zh", "grc", "la", "ar", "he"}
         for item in resp.json():
             if item["code"] in morphology_light_codes:
                 assert item["analysis_depth_label"] == "Basic grammar hints", (
@@ -1155,8 +1155,8 @@ class TestAnalysisDepthUserLabels:
 
     def test_dictionary_languages_show_vocabulary_lookup_label(self) -> None:
         resp = client.get("/languages")
-        # Only ar and he are analysis_depth="dictionary"
-        dictionary_codes = {"ar", "he"}
+        # No built-in plugin is dictionary-only after Arabic/Hebrew Semitic morphology hints.
+        dictionary_codes: set[str] = set()
         for item in resp.json():
             if item["code"] in dictionary_codes:
                 assert item["analysis_depth_label"] == "Vocabulary lookup", (

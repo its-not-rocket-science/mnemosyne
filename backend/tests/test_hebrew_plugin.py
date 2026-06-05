@@ -1,4 +1,4 @@
-"""Tests for the Hebrew dictionary-mode plugin.
+"""Tests for the Hebrew morphology-light spike plugin.
 
 The Hebrew plugin is a starter (no morphological NLP library available).
 It provides:
@@ -45,17 +45,18 @@ class TestCapabilities:
     def test_tokenization_mode_whitespace(self, plugin: HebrewPlugin) -> None:
         assert plugin.capabilities.tokenization_mode == "whitespace"
 
-    def test_morphology_depth_none(self, plugin: HebrewPlugin) -> None:
-        assert plugin.capabilities.morphology_depth == "none"
+    def test_morphology_depth_shallow(self, plugin: HebrewPlugin) -> None:
+        assert plugin.capabilities.morphology_depth == "shallow"
 
-    def test_analysis_depth_dictionary(self, plugin: HebrewPlugin) -> None:
-        assert plugin.capabilities.analysis_depth == "dictionary"
+    def test_analysis_depth_morphology_light(self, plugin: HebrewPlugin) -> None:
+        assert plugin.capabilities.analysis_depth == "morphology_light"
 
-    def test_lesson_modes_contains_dictionary(self, plugin: HebrewPlugin) -> None:
+    def test_lesson_modes_contains_vocabulary_and_dictionary(self, plugin: HebrewPlugin) -> None:
+        assert "vocabulary" in plugin.capabilities.lesson_modes_supported
         assert "dictionary" in plugin.capabilities.lesson_modes_supported
 
-    def test_no_morphology_quality(self, plugin: HebrewPlugin) -> None:
-        assert plugin.capabilities.morphology_quality == "none"
+    def test_morphology_quality_low(self, plugin: HebrewPlugin) -> None:
+        assert plugin.capabilities.morphology_quality == "low"
 
     def test_no_syntax_support(self, plugin: HebrewPlugin) -> None:
         assert plugin.capabilities.syntax_support is False
@@ -294,6 +295,27 @@ class TestLessonData:
             note = c.lesson_data.get("confidence_note", "")
             # The note must acknowledge that inseparable prefixes aren't split.
             assert "prefix" in note.lower() or "prefix" in note
+
+    def test_heuristic_binyan_for_common_verb(self, plugin: HebrewPlugin) -> None:
+        from backend.morphology import he_adapter as _he_adapter
+        if _he_adapter.is_available():
+            pytest.skip("HebSpaCy active: binyan data comes from the model")
+        result = plugin.analyze_sentence("כתב ספר")
+        by_form = {c.canonical_form: c for c in result.candidates}
+        assert by_form["כתב"].lesson_data["root"] == "כ.ת.ב"
+        assert by_form["כתב"].lesson_data["binyan"] == "Pa'al"
+        assert by_form["כתב"].lesson_data["tense"] == "Past"
+        assert by_form["כתב"].lesson_data["morphology_source"] == "heuristic"
+
+    def test_prefix_false_positive_blocklist_keeps_shalom_intact(self, plugin: HebrewPlugin) -> None:
+        from backend.morphology import he_adapter as _he_adapter
+        if _he_adapter.is_available():
+            pytest.skip("HebSpaCy active: prefix handling comes from the model")
+        result = plugin.analyze_sentence("שלום")
+        c = result.candidates[0]
+        assert c.canonical_form == "שלום"
+        assert c.lesson_data["lemma"] == "שלום"
+        assert c.lesson_data.get("prefix", "") == ""
 
 
 # ── Deduplication ─────────────────────────────────────────────────────────────
