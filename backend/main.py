@@ -142,28 +142,74 @@ def _warn_config(s: Settings) -> None:
 _PROJECT_ROOT = Path(__file__).parent.parent
 
 
+_ALEMBIC_UPGRADE_CODE = """
+import os
+import sys
+from pathlib import Path
+
+project_root = Path(os.environ["MNEMOSYNE_PROJECT_ROOT"])
+
+# Import the installed Alembic package before putting the project root on
+# sys.path.  The repository's migration directory is also named `alembic`, so
+# importing after adding the project root would resolve to that local package
+# instead of the CLI package and fail with "No module named alembic.config".
+from alembic.config import main
+
+sys.path.insert(0, str(project_root))
+os.chdir(project_root)
+sys.argv = ["alembic", "-c", str(project_root / "alembic.ini"), "upgrade", "head"]
+main()
+"""
+
+
+def _pythonpath_without_project_root(existing_pythonpath: str | None) -> str | None:
+    """Return PYTHONPATH entries that cannot shadow the installed Alembic package."""
+    if not existing_pythonpath:
+        return None
+
+    keep: list[str] = []
+    for entry in existing_pythonpath.split(os.pathsep):
+        if not entry:
+            continue
+        try:
+            if Path(entry).resolve() == _PROJECT_ROOT.resolve():
+                continue
+        except OSError:
+            pass
+        keep.append(entry)
+
+    return os.pathsep.join(keep) or None
+
+
 def _run_alembic_upgrade() -> None:
     """Run ``alembic upgrade head`` in a subprocess.
 
-    Run Alembic as ``python -m alembic`` from the project root so ``env.py``
-    can import the app package in Docker, where console-script entry points do
-    not always include the working directory on ``sys.path``.
+    The repository's migration directory is named ``alembic``, which shadows the
+    installed Alembic package whenever the project root is on ``sys.path``.
+    Instead of running ``python -m alembic`` from the project root, start Python
+    outside the repository, import the installed CLI package first, then add the
+    project root so ``env.py`` can import ``backend.models``.
 
-    DATABASE_URL and PYTHONPATH are injected explicitly so the subprocess
-    receives pydantic-settings values loaded from .env and can import
-    ``backend.models`` regardless of the parent process environment.
+    DATABASE_URL is injected explicitly so the subprocess receives
+    pydantic-settings values loaded from .env.
 
     Raises RuntimeError on migration failure so the lifespan warning handler
     can log it and continue (same behaviour as the old create_all path).
     """
-    env = {**os.environ, "DATABASE_URL": settings.database_url}
-    pythonpath_parts = [str(_PROJECT_ROOT)]
-    if existing_pythonpath := env.get("PYTHONPATH"):
-        pythonpath_parts.append(existing_pythonpath)
-    env["PYTHONPATH"] = os.pathsep.join(pythonpath_parts)
+    env = {
+        **os.environ,
+        "DATABASE_URL": settings.database_url,
+        "MNEMOSYNE_PROJECT_ROOT": str(_PROJECT_ROOT),
+    }
+    clean_pythonpath = _pythonpath_without_project_root(env.get("PYTHONPATH"))
+    if clean_pythonpath is None:
+        env.pop("PYTHONPATH", None)
+    else:
+        env["PYTHONPATH"] = clean_pythonpath
+
     result = subprocess.run(
-        [sys.executable, "-m", "alembic", "upgrade", "head"],
-        cwd=str(_PROJECT_ROOT),
+        [sys.executable, "-c", _ALEMBIC_UPGRADE_CODE],
+        cwd=str(_PROJECT_ROOT.parent),
         env=env,
         capture_output=True,
         text=True,
