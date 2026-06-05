@@ -164,7 +164,65 @@ def _lemma(c: CandidateObject) -> str:
 
 
 class KoreanNuanceExtractor:
+    """Learner-facing Korean grammar nuance extractor.
+
+    The extractor deliberately favours a narrow set of high-value, explainable
+    Korean grammar features.  Kiwipiepy morpheme tags receive higher confidence;
+    plain text suffix checks are capped at medium/low confidence so short,
+    ambiguous syllables do not become overconfident lessons.
+    """
+
     language = "ko"
+
+    _PARTICLE_META: dict[str, tuple[str, str, str, str, list[str]]] = {
+        "은": ("ko:particle:topic", "topic", "particles_case", "은/는", ["는"]),
+        "는": ("ko:particle:topic", "topic", "particles_case", "은/는", ["은"]),
+        "이": ("ko:particle:subject", "subject", "particles_case", "이/가", ["가"]),
+        "가": ("ko:particle:subject", "subject", "particles_case", "이/가", ["이"]),
+        "을": ("ko:particle:object", "object", "particles_case", "을/를", ["를"]),
+        "를": ("ko:particle:object", "object", "particles_case", "을/를", ["을"]),
+        "에": ("ko:particle:location_time", "location_time", "particles_case", "에", []),
+        "에서": ("ko:particle:direction_source", "direction_source", "particles_case", "에서", []),
+        "의": ("ko:particle:possessive", "possessive", "particles_case", "의", []),
+        "와": ("ko:particle:comitative", "comitative", "particles_case", "와/과/하고/랑/이랑", ["과", "하고", "랑", "이랑"]),
+        "과": ("ko:particle:comitative", "comitative", "particles_case", "와/과/하고/랑/이랑", ["와", "하고", "랑", "이랑"]),
+        "하고": ("ko:particle:comitative", "comitative", "particles_case", "와/과/하고/랑/이랑", ["와", "과", "랑", "이랑"]),
+        "랑": ("ko:particle:comitative", "comitative", "particles_case", "와/과/하고/랑/이랑", ["와", "과", "하고", "이랑"]),
+        "이랑": ("ko:particle:comitative", "comitative", "particles_case", "와/과/하고/랑/이랑", ["와", "과", "하고", "랑"]),
+    }
+    _PARTICLE_EXPLANATIONS: dict[str, str] = {
+        "topic": "은/는 marks the sentence topic or contrast: what the sentence is about, not necessarily the grammatical subject.",
+        "subject": "이/가 marks the grammatical subject or newly focused information in the clause.",
+        "object": "을/를 marks the direct object affected by the verb.",
+        "location_time": "에 marks a destination, static location, or time point; learners often contrast it with 에서 for where an action happens.",
+        "direction_source": "에서 marks the place where an action occurs or a source meaning ‘from’. It is not the same as static-location 에.",
+        "possessive": "의 links nouns possessively or relationally, similar to ‘of’; in speech it may be reduced or omitted.",
+        "comitative": "와/과/하고/랑/이랑 links nouns as ‘and’ or ‘with’; 와/과 is more written/formal, while 하고/랑 are common in speech.",
+    }
+
+    _ENDING_PATTERNS: tuple[tuple[str, str, str, str, str, float, str], ...] = (
+        ("ko:ending:formal_hapsyo", "politeness", "speech_level", "formal_hapsyo", "습니다", 0.82, "합쇼체 formal-polite endings such as -습니다/-ㅂ니다 are used in announcements, workplaces, and formal public speech."),
+        ("ko:ending:formal_hapsyo", "politeness", "speech_level", "formal_hapsyo", "ㅂ니다", 0.82, "합쇼체 formal-polite endings such as -습니다/-ㅂ니다 are used in announcements, workplaces, and formal public speech."),
+        ("ko:ending:formal_hapsyo", "politeness", "speech_level", "formal_hapsyo", "니다", 0.76, "A sentence-final -니다 usually signals 합쇼체, but the exact stem allomorph is clearer with morphological analysis."),
+        ("ko:ending:polite_haeyo", "politeness", "speech_level", "polite_haeyo", "해요", 0.82, "해요체 is the default polite spoken style for adult learners; -해요 is the 하다-verb form."),
+        ("ko:ending:polite_haeyo", "politeness", "speech_level", "polite_haeyo", "어요", 0.82, "해요체 polite endings such as -어요/-아요 make speech polite without sounding highly formal."),
+        ("ko:ending:polite_haeyo", "politeness", "speech_level", "polite_haeyo", "아요", 0.82, "해요체 polite endings such as -어요/-아요 make speech polite without sounding highly formal."),
+        ("ko:ending:polite_haeyo", "politeness", "speech_level", "polite_haeyo", "예요", 0.78, "예요/이에요 is the polite copula pattern; it belongs with 해요체 but depends on the preceding noun shape."),
+        ("ko:ending:plain_informal", "politeness", "speech_level", "plain_informal", "어", 0.48, "Final -어 can be plain informal 해체, but it is short and context-sensitive; treat this as a low-confidence hint."),
+        ("ko:ending:plain_informal", "politeness", "speech_level", "plain_informal", "아", 0.48, "Final -아 can be plain informal 해체, but it is short and context-sensitive; treat this as a low-confidence hint."),
+        ("ko:ending:plain_declarative", "politeness", "speech_level", "plain_declarative", "다", 0.55, "Final -다 often marks plain written/declarative style, but dictionary citation forms also end in 다; confidence is intentionally low."),
+    )
+
+    _CONNECTIVE_META: dict[str, tuple[str, str, str]] = {
+        "고": ("ko:connective:go", "connective_sequence", "-고 links actions or clauses in sequence or coordination: ‘and/then’."),
+        "지만": ("ko:connective:jiman", "connective_contrast", "-지만 links clauses with contrast: ‘but/although’."),
+        "아서": ("ko:connective:aseo_eoseo", "connective_reason_sequence", "-아서/-어서 gives a reason or a natural sequence; it often explains why the next clause happens."),
+        "어서": ("ko:connective:aseo_eoseo", "connective_reason_sequence", "-아서/-어서 gives a reason or a natural sequence; it often explains why the next clause happens."),
+        "면": ("ko:connective:myeon", "connective_condition", "-(으)면 marks a condition: ‘if/when’."),
+        "으면": ("ko:connective:myeon", "connective_condition", "-(으)면 marks a condition: ‘if/when’."),
+        "니까": ("ko:connective:nikka", "connective_reason", "-(으)니까 gives a reason or basis, often with a speaker-oriented nuance: ‘because/since’."),
+        "으니까": ("ko:connective:nikka", "connective_reason", "-(으)니까 gives a reason or basis, often with a speaker-oriented nuance: ‘because/since’."),
+    }
 
     def extract_nuance(
         self,
@@ -177,22 +235,170 @@ class KoreanNuanceExtractor:
         seen: set[str] = set()
         kiwi_mode = bool(tokens) and hasattr(tokens[0], "tag")
 
-        if kiwi_mode:
-            out.extend(self._politeness_kiwi(tokens, seen))
-            out.extend(self._particles_kiwi(tokens, seen))
-            out.extend(self._negation_kiwi(tokens, seen))
-            out.extend(self._honorific_kiwi(tokens, seen))
-        else:
-            out.extend(self._politeness_heuristic(sentence, seen))
-            out.extend(self._particles_heuristic(sentence, seen))
-            out.extend(self._negation_heuristic(tokens, seen))
-
+        out.extend(self._particles(tokens, sentence, seen, kiwi_mode))
+        out.extend(self._endings(tokens, sentence, seen, kiwi_mode))
+        out.extend(self._tense_aspect_modality(tokens, sentence, seen, kiwi_mode))
+        out.extend(self._negation(tokens, sentence, seen, kiwi_mode))
+        out.extend(self._honorific(tokens, sentence, seen, kiwi_mode))
+        out.extend(self._connectives(tokens, sentence, seen, kiwi_mode))
         out.extend(self._verbal_government(candidates, seen))
         return out
 
-    def _verbal_government(
-        self, candidates: list[CandidateObject], seen: set[str]
-    ) -> list[CandidateObject]:
+    # ------------------------------------------------------------------
+    # Feature extractors
+    # ------------------------------------------------------------------
+
+    def _particles(self, tokens: list[Any], sentence: str, seen: set[str], kiwi_mode: bool) -> list[CandidateObject]:
+        out: list[CandidateObject] = []
+        if kiwi_mode:
+            for tok in tokens:
+                tag = str(tok.tag)
+                form = tok.form
+                if tag in _PARTICLE_TAGS and form in self._PARTICLE_META:
+                    cf, role, axis, citation, alternatives = self._PARTICLE_META[form]
+                    if cf not in seen:
+                        seen.add(cf)
+                        out.append(self._make_candidate(
+                            cf, form, form, "particle", axis,
+                            self._PARTICLE_EXPLANATIONS[role], "A1", 0.93,
+                            confidence_note="High confidence: kiwipiepy exposed this as a particle attached to a noun/pronoun.",
+                            alternatives=alternatives,
+                            extra={"particle": citation, "particle_role": role, "source": "kiwipiepy"},
+                        ))
+            return out
+
+        strip = str.maketrans("", "", ".,!?。、·\"'()[]{}~")
+        for raw in sentence.split():
+            word = raw.translate(strip)
+            if not word:
+                continue
+            for surface in sorted(self._PARTICLE_META, key=len, reverse=True):
+                if word == surface:
+                    # A standalone one-syllable particle is too ambiguous in heuristic mode.
+                    if len(surface) <= 1:
+                        continue
+                    stem = ""
+                elif word.endswith(surface):
+                    stem = word[:-len(surface)]
+                    if len(stem) < 1:
+                        continue
+                else:
+                    continue
+                cf, role, axis, citation, alternatives = self._PARTICLE_META[surface]
+                if cf not in seen:
+                    seen.add(cf)
+                    out.append(self._make_candidate(
+                        cf, surface, surface, "particle", axis,
+                        self._PARTICLE_EXPLANATIONS[role], "A1", 0.72,
+                        confidence_note="Medium confidence: detected by a Korean word-final suffix pattern without morpheme tags.",
+                        alternatives=alternatives,
+                        extra={"particle": citation, "particle_role": role, "source": "heuristic", "host": stem},
+                    ))
+                break
+        return out
+
+    def _endings(self, tokens: list[Any], sentence: str, seen: set[str], kiwi_mode: bool) -> list[CandidateObject]:
+        text = sentence.rstrip(" .,!?。、·\"'")
+        surfaces = [t.form for t in tokens if kiwi_mode and str(t.tag) == "EF"] or [text]
+        out: list[CandidateObject] = []
+        for candidate_surface in surfaces:
+            for cf, nt, axis, subtype, suffix, confidence, explanation in self._ENDING_PATTERNS:
+                if not candidate_surface.endswith(suffix):
+                    continue
+                if cf in seen:
+                    return out
+                # Avoid low-value false positives on bare one-syllable input.
+                if len(text) <= 1 and suffix in {"어", "아", "다"}:
+                    continue
+                seen.add(cf)
+                note = None if confidence >= 0.8 and kiwi_mode else "Heuristic suffix match; Korean endings can be ambiguous without full clause context."
+                out.append(self._make_candidate(
+                    cf, suffix, suffix, nt, axis, explanation, "A2", confidence,
+                    confidence_note=note,
+                    extra={"ending_type": subtype, "source": "kiwipiepy" if kiwi_mode else "heuristic"},
+                ))
+                return out
+        return out
+
+    def _tense_aspect_modality(self, tokens: list[Any], sentence: str, seen: set[str], kiwi_mode: bool) -> list[CandidateObject]:
+        forms = [t.form for t in tokens] if kiwi_mode else []
+        tags = [str(t.tag) for t in tokens] if kiwi_mode else []
+        text = sentence.rstrip(" .,!?。、·\"'")
+        out: list[CandidateObject] = []
+
+        past = (kiwi_mode and any(tag == "EP" and form in {"었", "았", "였", "했", "셨"} for form, tag in zip(forms, tags))) or any(x in text for x in ("었", "았", "했"))
+        if past:
+            self._append_once(out, seen, "ko:tense:past", "았/었/했", "past", "tense_aspect_modality", "Past tense is commonly marked with -았-/-었-; 하다 contracts to 했-. Polite endings can follow it, as in 먹었어요 or 했어요.", "A2", 0.84 if kiwi_mode else 0.74, "Medium confidence: detected from a common past-tense surface pattern." if not kiwi_mode else None)
+
+        progressive = (kiwi_mode and any(forms[i] == "고" and i + 1 < len(forms) and forms[i + 1] == "있" for i in range(len(forms) - 1))) or ("고 있" in text or "고있" in text)
+        if progressive:
+            self._append_once(out, seen, "ko:aspect:progressive", "고 있다", "progressive", "tense_aspect_modality", "-고 있다 marks an action in progress or an ongoing state, similar to ‘be V-ing’. The 있다 part still conjugates for speech level.", "A2", 0.86 if kiwi_mode else 0.76, "Medium confidence: detected from the common -고 있다 sequence." if not kiwi_mode else None)
+
+        future = (kiwi_mode and any(tag == "EP" and form == "겠" for form, tag in zip(forms, tags))) or "겠" in text or " 거예요" in sentence or " 것이다" in sentence or " 거야" in sentence
+        if future:
+            surface = "겠" if "겠" in text else "(으)ㄹ 것이다"
+            self._append_once(out, seen, "ko:tense:future_prospective", surface, "future_prospective", "tense_aspect_modality", "Korean future/prospective meaning can be marked by -겠- or by -(으)ㄹ 것이다/거예요. -겠- can also express intention or conjecture, so context matters.", "A2", 0.80 if kiwi_mode else 0.70, "Medium confidence: future/prospective forms overlap with intention or conjecture depending on context.")
+        return out
+
+    def _negation(self, tokens: list[Any], sentence: str, seen: set[str], kiwi_mode: bool) -> list[CandidateObject]:
+        forms = [t.form for t in tokens] if kiwi_mode else []
+        tags = [str(t.tag) for t in tokens] if kiwi_mode else []
+        words = sentence.replace(".", " ").replace("?", " ").replace("!", " ").split()
+        out: list[CandidateObject] = []
+
+        short_an = (kiwi_mode and any(form == "안" and tag == "MAG" for form, tag in zip(forms, tags))) or "안" in words
+        if short_an:
+            self._append_once(out, seen, "ko:negation:short", "안", "negation", "negation", "안 before a verb/adjective is short negation. It is common in speech and often means the subject does not do the action by choice.", "A2", 0.86 if kiwi_mode else 0.76, "Medium confidence: standalone 안 was detected; scope still depends on the following predicate." if not kiwi_mode else None, {"negation_type": "short_an"})
+
+        short_mot = (kiwi_mode and any(form == "못" and tag == "MAG" for form, tag in zip(forms, tags))) or "못" in words
+        if short_mot:
+            self._append_once(out, seen, "ko:negation:inability_short", "못", "ability_impossibility", "negation", "못 before a verb means inability or external prevention: ‘cannot / be unable to’. It contrasts with volitional 안.", "A2", 0.86 if kiwi_mode else 0.76, "Medium confidence: standalone 못 was detected; scope still depends on the following predicate." if not kiwi_mode else None, {"negation_type": "short_mot"})
+
+        long_an = (kiwi_mode and any(forms[i] == "지" and i + 1 < len(forms) and forms[i + 1] == "않" for i in range(len(forms) - 1))) or "지 않" in sentence
+        if long_an:
+            self._append_once(out, seen, "ko:negation:long", "지 않다", "negation", "negation", "-지 않다 is long negation. It attaches after a verb/adjective stem and is often more formal or written than short 안.", "A2", 0.88 if kiwi_mode else 0.78, "Medium confidence: detected from the -지 않- sequence." if not kiwi_mode else None, {"negation_type": "long_anta"})
+
+        long_mot = (kiwi_mode and any(forms[i] == "지" and i + 1 < len(forms) and forms[i + 1] == "못하" for i in range(len(forms) - 1))) or "지 못" in sentence
+        if long_mot:
+            self._append_once(out, seen, "ko:negation:inability_long", "지 못하다", "ability_impossibility", "negation", "-지 못하다 is the long/formal inability pattern, equivalent to ‘cannot / fail to’. It is common in writing and formal speech.", "A2", 0.88 if kiwi_mode else 0.78, "Medium confidence: detected from the -지 못- sequence." if not kiwi_mode else None, {"negation_type": "long_motda"})
+        return out
+
+    def _honorific(self, tokens: list[Any], sentence: str, seen: set[str], kiwi_mode: bool) -> list[CandidateObject]:
+        forms = [t.form for t in tokens] if kiwi_mode else []
+        tags = [str(t.tag) for t in tokens] if kiwi_mode else []
+        hit = (kiwi_mode and any(tag == "EP" and form in _HONORIFIC_EP for form, tag in zip(forms, tags))) or any(x in sentence for x in ("세요", "으세요", "십니다", "으십니다"))
+        if not hit or "ko:honorific:si" in seen:
+            return []
+        seen.add("ko:honorific:si")
+        return [self._make_candidate(
+            "ko:honorific:si", "시", "시", "honorific", "honorific", "-(으)시- is the subject-honorific marker. It elevates the grammatical subject, as in 선생님이 오세요, and should not be used for the speaker’s own actions.", "B1", 0.90 if kiwi_mode else 0.68,
+            confidence_note=None if kiwi_mode else "Medium-low confidence: detected from common honorific surface endings such as -세요; full morphology is safer.",
+            extra={"honorific_marker": "-(으)시-", "source": "kiwipiepy" if kiwi_mode else "heuristic"},
+        )]
+
+    def _connectives(self, tokens: list[Any], sentence: str, seen: set[str], kiwi_mode: bool) -> list[CandidateObject]:
+        out: list[CandidateObject] = []
+        if kiwi_mode:
+            surfaces = [(t.form, str(t.tag)) for t in tokens]
+            for form, tag in surfaces:
+                if tag != "EC" or form not in self._CONNECTIVE_META:
+                    continue
+                cf, nt, explanation = self._CONNECTIVE_META[form]
+                self._append_once(out, seen, cf, form, nt, "connective_endings", explanation, "A2", 0.88, None)
+            return out
+
+        strip = str.maketrans("", "", ".,!?。、·\"'()[]{}~")
+        for raw in sentence.split():
+            word = raw.translate(strip)
+            for surface in sorted(self._CONNECTIVE_META, key=len, reverse=True):
+                if len(word) <= len(surface) or not word.endswith(surface):
+                    continue
+                cf, nt, explanation = self._CONNECTIVE_META[surface]
+                self._append_once(out, seen, cf, surface, nt, "connective_endings", explanation, "A2", 0.70, "Medium confidence: detected by suffix pattern; some endings need clause context.")
+                break
+        return out
+
+    def _verbal_government(self, candidates: list[CandidateObject], seen: set[str]) -> list[CandidateObject]:
         out = []
         for c in candidates:
             if c.type not in ("vocabulary", "conjugation"):
@@ -201,367 +407,77 @@ class KoreanNuanceExtractor:
             if lemma not in _VERBAL_GOV:
                 continue
             required_case, example = _VERBAL_GOV[lemma]
-            cf = f"nuance:ko:verbal_government:{lemma}"
+            cf = f"ko:verbal_government:{lemma}"
             if cf in seen:
                 continue
             seen.add(cf)
-            out.append(CandidateObject(
-                canonical_form=cf,
-                surface_form=c.surface_form,
-                type="nuance",
-                label=c.label,
-                lesson_data={
-                    "nuance_type": "verbal_government",
-                    "explanation": (
-                        f"{example}. "
-                        "Korean verbs require specific case particles for their arguments — "
-                        "이/가 (subject), 을/를 (object), 에 (location/time), 에서 (source/"
-                        "location of action), 에게 (animate goal). Vowel/consonant allomorphy "
-                        f"determines particle form. Required structure: {required_case}."
-                    ),
-                    "register": "neutral",
-                    "learner_level": "B1",
-                    "source": "heuristic",
-                    "lemma": lemma,
-                    "required_case": required_case,
-                },
-                confidence=0.85,
-                relation_hints=[RelationHint(
-                    relation_type="nuance_of",
-                    target_canonical_form=lemma,
-                    target_type="vocabulary",
-                )],
+            out.append(self._make_candidate(
+                cf, c.surface_form or c.label, c.label, "verbal_government", "particles_case",
+                f"{example}. This verb commonly selects a specific Korean particle/case frame: {required_case}.",
+                "B1", 0.82,
+                extra={"lemma": lemma, "required_case": required_case, "source": "lexical_table"},
             ))
         return out
 
     # ------------------------------------------------------------------
-    # kiwipiepy-mode
+    # Builders
     # ------------------------------------------------------------------
 
-    def _politeness_kiwi(
-        self, tokens: list[Any], seen: set[str]
-    ) -> list[CandidateObject]:
-        out = []
-        for tok in tokens:
-            if str(tok.tag) != "EF":
-                continue
-            register = self._classify_ef_surface(tok.form)
-            if register is None:
-                continue
-            cf = f"nuance:ko:politeness:{register}"
-            if cf in seen:
-                continue
-            seen.add(cf)
-            out.append(self._make_politeness(cf, tok.form, register))
-        return out
-
-    def _particles_kiwi(
-        self, tokens: list[Any], seen: set[str]
-    ) -> list[CandidateObject]:
-        out = []
-        for tok in tokens:
-            if str(tok.tag) not in _PARTICLE_TAGS:
-                continue
-            entry = _PARTICLES.get(tok.form)
-            if entry is None:
-                continue
-            citation, role = entry
-            cf = f"nuance:ko:particle:{citation}"
-            if cf in seen:
-                continue
-            seen.add(cf)
-            out.append(self._make_particle(cf, tok.form, citation, role))
-        return out
-
-    def _negation_kiwi(
-        self, tokens: list[Any], seen: set[str]
-    ) -> list[CandidateObject]:
-        out = []
-        forms = [t.form for t in tokens]
-        tags  = [str(t.tag) for t in tokens]
-        for i, (form, tag) in enumerate(zip(forms, tags)):
-            # Short: MAG 안/못 followed immediately by a verb
-            if tag == "MAG" and form in _SHORT_NEG:
-                nxt = tags[i + 1] if i + 1 < len(tags) else ""
-                if nxt in {"VV", "VA", "VX", "VCP", "VCN"}:
-                    neg_type = _SHORT_NEG[form]
-                    cf = f"nuance:ko:negation:{neg_type}"
-                    if cf not in seen:
-                        seen.add(cf)
-                        out.append(self._make_negation(cf, form, neg_type))
-            # Long: EC 지 followed by VX 않/못하
-            if tag == "EC" and form == "지":
-                nxt_form = forms[i + 1] if i + 1 < len(forms) else ""
-                neg_type = _LONG_NEG_NEXT.get(nxt_form)
-                if neg_type:
-                    cf = f"nuance:ko:negation:{neg_type}"
-                    if cf not in seen:
-                        seen.add(cf)
-                        out.append(self._make_negation(
-                            cf, f"지 {nxt_form}다", neg_type,
-                        ))
-        return out
-
-    def _honorific_kiwi(
-        self, tokens: list[Any], seen: set[str]
-    ) -> list[CandidateObject]:
-        cf = "nuance:ko:honorific:subject_si"
+    def _append_once(
+        self,
+        out: list[CandidateObject],
+        seen: set[str],
+        cf: str,
+        surface: str,
+        nuance_type: str,
+        grammar_axis: str,
+        explanation: str,
+        learner_level: str,
+        confidence: float,
+        confidence_note: str | None = None,
+        extra: dict[str, Any] | None = None,
+    ) -> None:
         if cf in seen:
-            return []
-        for tok in tokens:
-            if str(tok.tag) == "EP" and tok.form in _HONORIFIC_EP:
-                seen.add(cf)
-                return [CandidateObject(
-                    canonical_form=cf,
-                    surface_form=tok.form,
-                    type="nuance",
-                    label=tok.form,
-                    lesson_data={
-                        "nuance_type": "honorific",
-                        "explanation": (
-                            f"«-{tok.form}-» is the subject-honorific suffix (주체 높임법). "
-                            "Elevates the grammatical subject of the clause — "
-                            "used when the subject is a respected person (teacher, elder, customer). "
-                            "Never used for the speaker's own actions."
-                        ),
-                        "register": "formal",
-                        "learner_level": "B1",
-                        "source": "heuristic",
-                    },
-                    confidence=0.92,
-                )]
-        return []
+            return
+        seen.add(cf)
+        out.append(self._make_candidate(cf, surface, surface, nuance_type, grammar_axis, explanation, learner_level, confidence, confidence_note=confidence_note, extra=extra))
 
-    # ------------------------------------------------------------------
-    # Heuristic mode
-    # ------------------------------------------------------------------
-
-    def _politeness_heuristic(
-        self, sentence: str, seen: set[str]
-    ) -> list[CandidateObject]:
-        """Detect politeness register from sentence-final morphology.
-
-        Checks the stripped sentence ending — the most reliable signal without
-        morphological analysis because Korean register is always sentence-final.
-        """
-        text = sentence.rstrip(" .,!?。、·\"'")
-        if not text:
-            return []
-
-        out: list[CandidateObject] = []
-
-        # Formal polite: -십시오/-으십시오 (imperative), -습니다/-ㅂ니다 (declarative)
-        if (text.endswith("십시오") or text.endswith("으십시오")
-                or text.endswith("니다")):
-            register = "formal_polite"
-            surface = "니다" if text.endswith("니다") else "십시오"
-            cf = f"nuance:ko:politeness:{register}"
-            if cf not in seen:
-                seen.add(cf)
-                out.append(self._make_politeness(cf, surface, register))
-
-        # Informal polite: sentence ends in 요 (covers 어요/아요/해요/셔요/etc.)
-        if text.endswith("요"):
-            cf = "nuance:ko:politeness:informal_polite"
-            if cf not in seen:
-                seen.add(cf)
-                out.append(self._make_politeness(cf, "요", "informal_polite"))
-
-        # Plain informal: ends in 어/아/해 WITHOUT 요
-        if (not text.endswith("요")
-                and (text.endswith("어") or text.endswith("아") or text.endswith("해"))):
-            cf = "nuance:ko:politeness:plain_informal"
-            if cf not in seen:
-                seen.add(cf)
-                out.append(self._make_politeness(cf, text[-1], "plain_informal"))
-
-        # Plain formal (written): ends in 는다/ㄴ다/었다/았다/겠다
-        _plain_formal_ends = ("는다", "ㄴ다", "었다", "았다", "겠다")
-        if any(text.endswith(e) for e in _plain_formal_ends):
-            cf = "nuance:ko:politeness:plain_formal"
-            if cf not in seen:
-                seen.add(cf)
-                matched = next(e for e in _plain_formal_ends if text.endswith(e))
-                out.append(self._make_politeness(cf, matched, "plain_formal"))
-
-        return out
-
-    def _particles_heuristic(
-        self, sentence: str, seen: set[str]
-    ) -> list[CandidateObject]:
-        """Detect particles by suffix-matching whitespace-split words.
-
-        Particles in Korean are postpositional and appear word-finally — suffix
-        matching on space-delimited tokens is sufficient for the most common cases.
-        Punctuation is stripped before matching.
-        """
-        out: list[CandidateObject] = []
-        _STRIP = str.maketrans("", "", ".,!?。、·\"'()[]{}~")
-        for word_raw in sentence.split():
-            word = word_raw.translate(_STRIP)
-            if not word:
-                continue
-            # Direct standalone match (particle alone)
-            if word in _PARTICLES:
-                citation, role = _PARTICLES[word]
-                cf = f"nuance:ko:particle:{citation}"
-                if cf not in seen:
-                    seen.add(cf)
-                    out.append(self._make_particle(cf, word, citation, role))
-                continue
-            # Suffix match — particle attached to preceding noun (normal Korean)
-            for surface, (citation, role) in _PARTICLES.items():
-                if word.endswith(surface) and len(word) > len(surface):
-                    cf = f"nuance:ko:particle:{citation}"
-                    if cf not in seen:
-                        seen.add(cf)
-                        out.append(self._make_particle(cf, surface, citation, role))
-                    break   # longest-first order in dict ensures best match
-        return out
-
-    def _negation_heuristic(
-        self, tokens: list[Any], seen: set[str]
-    ) -> list[CandidateObject]:
-        """Detect short negation from standalone 안/못 tokens."""
-        if not tokens:
-            return []
-        out: list[CandidateObject] = []
-        for tok in tokens:
-            word = getattr(tok, "text", None) or str(tok)
-            neg_type = _SHORT_NEG.get(word)
-            if neg_type:
-                cf = f"nuance:ko:negation:{neg_type}"
-                if cf not in seen:
-                    seen.add(cf)
-                    out.append(self._make_negation(cf, word, neg_type))
-        return out
-
-    # ------------------------------------------------------------------
-    # Shared helpers
-    # ------------------------------------------------------------------
-
-    def _classify_ef_surface(self, surface: str) -> str | None:
-        for ef in _EF_FORMAL_POLITE:
-            if surface.endswith(ef):
-                return "formal_polite"
-        for ef in _EF_INFORMAL_POLITE:
-            if surface.endswith(ef):
-                return "informal_polite"
-        for ef in _EF_PLAIN_INFORMAL:
-            if surface.endswith(ef):
-                return "plain_informal"
-        for ef in _EF_PLAIN_FORMAL:
-            if surface.endswith(ef):
-                return "plain_formal"
-        return None
-
-    _POLITENESS_META: dict[str, tuple[str, str]] = {
-        "formal_polite":   (
-            "합쇼체 (formal polite speech)",
-            "Used in news broadcasts, formal addresses, and business writing. "
-            "Verb endings: -습니다/-ㅂ니다 (declarative), -십시오 (imperative). "
-            "Highest register in everyday speech.",
-        ),
-        "informal_polite": (
-            "해요체 (polite informal speech)",
-            "The default adult register — used with strangers, in shops, and with teachers. "
-            "Marked by sentence-final 요. Most common spoken register for adult learners.",
-        ),
-        "plain_informal":  (
-            "해체 (plain / intimate speech)",
-            "Used with close friends, younger people, and in private writing. "
-            "Endings: -어/-아/-해 without 요. Using this with strangers or elders is rude.",
-        ),
-        "plain_formal":    (
-            "해라체 (plain formal / literary speech)",
-            "Appears in written language, narration, and newspaper headlines. "
-            "Endings: -(는)다/-ㄴ다. Direct address in this register can sound harsh.",
-        ),
-    }
-
-    def _make_politeness(
-        self, cf: str, surface: str, register: str
+    def _make_candidate(
+        self,
+        cf: str,
+        surface: str,
+        label: str,
+        nuance_type: str,
+        grammar_axis: str,
+        explanation: str,
+        learner_level: str,
+        confidence: float,
+        confidence_note: str | None = None,
+        drill_prompt: str | None = None,
+        drill_answer: str | None = None,
+        alternatives: list[str] | None = None,
+        extra: dict[str, Any] | None = None,
     ) -> CandidateObject:
-        label, explanation = self._POLITENESS_META[register]
+        lesson_data: dict[str, Any] = {
+            "nuance_type": nuance_type,
+            "grammar_axis": grammar_axis,
+            "surface": surface,
+            "explanation": explanation,
+            "learner_level": learner_level,
+            "drill_prompt": drill_prompt or f"What does «{surface}» signal in this Korean sentence?",
+            "drill_answer": drill_answer or explanation,
+        }
+        if confidence_note:
+            lesson_data["confidence_note"] = confidence_note
+        if alternatives:
+            lesson_data["alternatives"] = alternatives
+        if extra:
+            lesson_data.update(extra)
         return CandidateObject(
             canonical_form=cf,
             surface_form=surface,
             type="nuance",
-            label=surface,
-            lesson_data={
-                "nuance_type": "politeness",
-                "register_label": label,
-                "explanation": explanation,
-                "register": register,
-                "learner_level": "A2",
-                "source": "heuristic",
-            },
-            confidence=0.88,
-        )
-
-    def _make_particle(
-        self, cf: str, surface: str, citation: str, role: str
-    ) -> CandidateObject:
-        return CandidateObject(
-            canonical_form=cf,
-            surface_form=surface,
-            type="nuance",
-            label=surface,
-            lesson_data={
-                "nuance_type": "particle",
-                "explanation": (
-                    f"«{citation}» is a Korean postpositional particle (조사): {role}."
-                ),
-                "register": "neutral",
-                "learner_level": "A1",
-                "source": "heuristic",
-                "particle": citation,
-            },
-            confidence=0.90,
-        )
-
-    _NEG_META: dict[str, tuple[str, str]] = {
-        "short_an": (
-            "안",
-            "Short negation — «안» precedes the verb. Colloquial and natural in speech. "
-            "Cannot be used with 하다-compound verbs (공부하다 → 공부 안 하다, not 안 공부하다). "
-            "Marks volitional negation: the subject chooses not to act.",
-        ),
-        "short_mot": (
-            "못",
-            "Short ability-negation — «못» precedes the verb. "
-            "Means the subject is unable to perform the action (lack of ability or external prevention). "
-            "Contrast with 안 (volitional) vs 못 (inability).",
-        ),
-        "long_anta": (
-            "지 않다",
-            "Long negation — «-지 않다» attaches to the verb stem after removing the citation 다. "
-            "More formal and versatile than short 안; works with all verb classes including 하다-compounds. "
-            "Preferred in writing and formal speech.",
-        ),
-        "long_motda": (
-            "지 못하다",
-            "Long ability-negation — «-지 못하다» is the formal equivalent of short 못. "
-            "Used in writing and formal contexts to express inability.",
-        ),
-    }
-
-    def _make_negation(
-        self, cf: str, surface: str, neg_type: str
-    ) -> CandidateObject:
-        _, explanation = self._NEG_META[neg_type]
-        return CandidateObject(
-            canonical_form=cf,
-            surface_form=surface,
-            type="nuance",
-            label=surface,
-            lesson_data={
-                "nuance_type": "negation",
-                "explanation": explanation,
-                "register": "neutral",
-                "learner_level": "A2",
-                "source": "heuristic",
-                "negation_type": neg_type,
-            },
-            confidence=0.85,
+            label=label,
+            lesson_data=lesson_data,
+            confidence=confidence,
         )
