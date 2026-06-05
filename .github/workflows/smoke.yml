@@ -73,8 +73,25 @@ jobs:
           docker compose logs app
           exit 1
 
-      - name: Readiness probe (/ready)
-        run: curl -sf http://localhost:8000/ready
+      - name: Wait for /ready (up to 150 s)
+        run: |
+          for i in $(seq 1 30); do
+            STATUS=$(curl -s -o /tmp/ready-response.json -w "%{http_code}" http://localhost:8000/ready || true)
+            cat /tmp/ready-response.json || true
+            echo
+
+            if [ "$STATUS" = "200" ]; then
+              echo "App is ready after $((i * 5))s"
+              exit 0
+            fi
+
+            echo "Attempt $i/30 — /ready returned HTTP $STATUS; retrying in 5s…"
+            sleep 5
+          done
+
+          echo "App did not become ready within 150s"
+          docker compose logs app
+          exit 1
 
       - name: Smoke — POST /parse returns tokens
         run: |
