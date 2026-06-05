@@ -1,4 +1,4 @@
-"""Arabic plugin — dictionary mode with optional CAMeL Tools morphology.
+"""Arabic plugin — dictionary mode with optional CAMeL Tools morphology and a low-confidence heuristic spike.
 
 BCP-47 code "ar", RTL direction, Arabic sentence punctuation.
 
@@ -26,16 +26,19 @@ When camel-tools is installed (poetry install --extras arabic)
   In-process analysis is rule-based (database lookup); torch is a camel-tools
   package-level dep but is not used by the morphology analyzer at runtime.
 
-Without camel-tools (dictionary mode)
+Without camel-tools (heuristic spike)
 ──────────────────────────────────────
-  Vocabulary candidates carry only lemma (= undiacritised surface form).
-  The nuance extractor still fires definite_article and negation signals.
+  A tiny built-in fallback recognizes a few high-frequency root/pattern families
+  (e.g. ك.ت.ب and د.ر.س) plus obvious proclitics.  Unrecognized words remain
+  dictionary-only.  The nuance extractor can fire low-confidence root_pattern
+  and proclitic signals from these hints, but this is not a full analyzer.
 
 Known limitations
 ─────────────────
   • Arabic proclitics (وَ "and-", بِ "in-", كَ "like-", لِ "for-") attach to
-    the following word without a space in normal orthography.  Without CAMeL
-    Tools, the combined form is returned as a single token.
+    the following word without a space in normal orthography.  The heuristic
+    fallback records only obvious prefix hints and still returns the combined
+    orthographic word as one token.
   • Tokenisation quality is rated "medium" for MSA prose.
   • Sentence splitting is a regex heuristic; discourse markers and run-on
     sentences may cause over- or under-splitting.
@@ -101,9 +104,9 @@ _TASHKEEL_RE = re.compile(r"[\u064B-\u065F\u0670]")
 
 # Confidence note shown in every lesson card — informs the learner honestly.
 _CONFIDENCE_NOTE = (
-    "Arabic dictionary mode: no morphological analysis. "
+    "Arabic heuristic mode: limited root/pattern and clitic hints only. "
     "Canonical form is the undiacritised surface token. "
-    "Clitic prefixes (ال, وَ, بِ…) are not split from their host word."
+    "Clitic prefixes (ال, وَ, بِ…) remain attached to their host word."
 )
 
 
@@ -113,31 +116,32 @@ def _strip_tashkeel(text: str) -> str:
 
 
 class ArabicPlugin:
-    """Arabic starter — dictionary-mode plugin.
+    """Arabic starter — morphology-light spike plugin.
 
-    Provides sentence splitting and whitespace tokenisation with tashkeel
-    normalisation.  Capabilities honestly declare the pipeline depth.
+    Provides sentence splitting, whitespace tokenisation, tashkeel normalisation,
+    and low-confidence root/pattern hints for a tiny set of common forms.
+    Capabilities honestly declare the pipeline depth.
     """
 
     language_code = "ar"
-    display_name  = "Arabic (dictionary foundations)"
+    display_name  = "Arabic (basic root-pattern hints)"
     direction     = "rtl"
     capabilities  = LanguageCapabilities(
         code="ar",
-        display_name="Arabic (dictionary foundations)",
+        display_name="Arabic (basic root-pattern hints)",
         direction="rtl",
         script_family="arabic",
         tokenization_mode="whitespace",
-        morphology_depth="none",
-        lesson_modes_supported=["dictionary"],
+        morphology_depth="shallow",
+        lesson_modes_supported=["vocabulary", "dictionary"],
         # v2 — honest quality declarations.
-        analysis_depth="dictionary",
+        analysis_depth="morphology_light",
         segmentation_quality="low",    # regex heuristic; discourse markers and
                                        # run-on sentences may cause errors.
         tokenization_quality="medium", # whitespace works well for MSA prose;
                                        # clitics and dialectal contractions
                                        # are not split.
-        morphology_quality="none",
+        morphology_quality="low",
         syntax_support=False,
         idiom_detection=False,
         tts_lang_tag="ar",             # browser TTS: MSA widely supported.
@@ -149,7 +153,7 @@ class ArabicPlugin:
             cultural_references="none",
             etymology="none",
             formality_register="none",
-            grammar_nuance="partial",   # definite_article + 5 negation particles always; root/verb/proclitic with CAMeL
+            grammar_nuance="partial",   # definite_article + negation always; low-confidence root/proclitic hints without CAMeL, richer with CAMeL
             pronunciation_tts="stub",   # ar TTS coverage varies by browser
             transliteration="none",
             proverb_tradition="none",
@@ -189,31 +193,22 @@ class ArabicPlugin:
             seen.add(canonical)
 
             lesson_data: dict = {
-                # Strip tashkeel from CAMeL lemma too for consistency
+                # Strip tashkeel from analyzer/heuristic lemma too for consistency.
                 "lemma": _strip_tashkeel(mt.lemma),
+                "pos": mt.pos,
             }
 
-            if mt.source == "camel_tools":
-                lesson_data["pos"] = mt.pos
-                if mt.root:
-                    lesson_data["root"] = mt.root
-                if mt.pattern:
-                    lesson_data["pattern"] = mt.pattern
-                if mt.gloss:
-                    lesson_data["gloss"] = mt.gloss
-                if mt.voice:
-                    lesson_data["voice"] = mt.voice
-                if mt.aspect:
-                    lesson_data["aspect"] = mt.aspect
-                if mt.mood:
-                    lesson_data["mood"] = mt.mood
-                if mt.prc0:
-                    lesson_data["prc0"] = mt.prc0
-                if mt.prc1:
-                    lesson_data["prc1"] = mt.prc1
-                if mt.prc2:
-                    lesson_data["prc2"] = mt.prc2
-            else:
+            if mt.source in {"camel_tools", "heuristic"}:
+                for key in (
+                    "root", "pattern", "gloss", "person", "number", "gender",
+                    "case", "voice", "aspect", "mood", "prc0", "prc1", "prc2",
+                ):
+                    value = getattr(mt, key)
+                    if value:
+                        lesson_data[key] = value
+                lesson_data["morphology_source"] = mt.source
+
+            if mt.source != "camel_tools":
                 lesson_data["confidence_note"] = _CONFIDENCE_NOTE
 
             if canonical in _A1:

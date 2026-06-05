@@ -1,4 +1,4 @@
-"""Tests for the Arabic dictionary-mode plugin.
+"""Tests for the Arabic morphology-light spike plugin.
 
 The Arabic plugin is a starter (no CAMeL-Tools or morphological NLP library).
 It provides:
@@ -46,17 +46,18 @@ class TestCapabilities:
     def test_tokenization_mode_whitespace(self, plugin: ArabicPlugin) -> None:
         assert plugin.capabilities.tokenization_mode == "whitespace"
 
-    def test_morphology_depth_none(self, plugin: ArabicPlugin) -> None:
-        assert plugin.capabilities.morphology_depth == "none"
+    def test_morphology_depth_shallow(self, plugin: ArabicPlugin) -> None:
+        assert plugin.capabilities.morphology_depth == "shallow"
 
-    def test_analysis_depth_dictionary(self, plugin: ArabicPlugin) -> None:
-        assert plugin.capabilities.analysis_depth == "dictionary"
+    def test_analysis_depth_morphology_light(self, plugin: ArabicPlugin) -> None:
+        assert plugin.capabilities.analysis_depth == "morphology_light"
 
-    def test_lesson_modes_contains_dictionary(self, plugin: ArabicPlugin) -> None:
+    def test_lesson_modes_contains_vocabulary_and_dictionary(self, plugin: ArabicPlugin) -> None:
+        assert "vocabulary" in plugin.capabilities.lesson_modes_supported
         assert "dictionary" in plugin.capabilities.lesson_modes_supported
 
-    def test_no_morphology_quality(self, plugin: ArabicPlugin) -> None:
-        assert plugin.capabilities.morphology_quality == "none"
+    def test_morphology_quality_low(self, plugin: ArabicPlugin) -> None:
+        assert plugin.capabilities.morphology_quality == "low"
 
     def test_no_syntax_support(self, plugin: ArabicPlugin) -> None:
         assert plugin.capabilities.syntax_support is False
@@ -299,6 +300,31 @@ class TestLessonData:
             note = c.lesson_data.get("confidence_note", "")
             # The note must acknowledge that clitics (ال etc.) aren't split.
             assert "clitic" in note.lower() or "ال" in note or "prefix" in note.lower()
+
+    def test_heuristic_root_pattern_for_common_ktb_family(self, plugin: ArabicPlugin) -> None:
+        from backend.morphology import ar_adapter as _ar_adapter
+        if _ar_adapter.is_available():
+            pytest.skip("CAMeL Tools active: root data comes from CAMeL Tools")
+        result = plugin.analyze_sentence("كتب الكاتب كتابا")
+        by_form = {c.canonical_form: c for c in result.candidates}
+        assert by_form["كتب"].lesson_data["root"] == "ك.ت.ب"
+        assert by_form["كتب"].lesson_data["pattern"] == "فعل"
+        assert by_form["الكاتب"].lesson_data["root"] == "ك.ت.ب"
+        assert by_form["الكاتب"].lesson_data["prc0"] == "Al+"
+        assert by_form["كتابا"].lesson_data.get("root") is None
+
+    def test_heuristic_clitic_hint_keeps_surface_token_intact(self, plugin: ArabicPlugin) -> None:
+        from backend.morphology import ar_adapter as _ar_adapter
+        if _ar_adapter.is_available():
+            pytest.skip("CAMeL Tools active: clitic data comes from CAMeL Tools")
+        result = plugin.analyze_sentence("وبالكتاب")
+        c = result.candidates[0]
+        assert c.canonical_form == "وبالكتاب"
+        assert c.lesson_data["lemma"] == "كتاب"
+        assert c.lesson_data["prc2"] == "wa+"
+        assert c.lesson_data["prc1"] == "bi+"
+        assert c.lesson_data["prc0"] == "Al+"
+        assert c.lesson_data["morphology_source"] == "heuristic"
 
     def test_confidence_is_none_for_all_words(self, plugin: ArabicPlugin) -> None:
         # Honest: no frequency or morphological data → confidence unknown.
@@ -611,8 +637,8 @@ class TestMultilingualArchitecture:
         assert caps["ar"].direction == "rtl"
         assert caps["la"].direction == "ltr"
 
-    def test_arabic_only_dictionary_mode(self) -> None:
+    def test_arabic_supports_vocabulary_and_dictionary_modes(self) -> None:
         from backend.parsing.plugin_loader import load_plugins
         registry = load_plugins()
         caps = registry.supported_languages()
-        assert caps["ar"].lesson_modes_supported == ["dictionary"]
+        assert caps["ar"].lesson_modes_supported == ["vocabulary", "dictionary"]

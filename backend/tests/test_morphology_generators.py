@@ -5,7 +5,7 @@ Covers:
   2. _build_conjugation enriched drills and fields for Romance/Slavic verbs
   3. _build_case_agreement with German/Russian case data
   4. _build_inflection for Latin declension
-  5. Morphology-light paths: Arabic/Hebrew dictionary mode, CJK dictionary mode
+  5. Morphology-light paths: Arabic/Hebrew Semitic hints, CJK dictionary mode
   6. Backwards compatibility — existing lesson_data produces identical core output
 
 Run:
@@ -463,7 +463,7 @@ class TestInflectionBuilder:
 # ── 5. Morphology-light: Arabic / Hebrew / CJK ────────────────────────────────
 
 class TestMorphologyLightFallback:
-    def test_arabic_dictionary_mode_no_morphology_drills(self):
+    def test_arabic_dictionary_mode_can_stay_dictionary_only(self):
         lesson = build_lesson(
             object_id="ar-1", obj_type="vocabulary",
             canonical_form="كتب", display_label="كتب",
@@ -485,7 +485,7 @@ class TestMorphologyLightFallback:
         assert "ShadowingDrill" in drill_types
         assert "MultipleChoiceDrill" not in drill_types
 
-    def test_hebrew_dictionary_mode(self):
+    def test_hebrew_dictionary_mode_can_stay_dictionary_only(self):
         lesson = build_lesson(
             object_id="he-1", obj_type="vocabulary",
             canonical_form="בית", display_label="בית",
