@@ -1,4 +1,4 @@
-"""Hebrew plugin — dictionary mode with optional HebSpaCy morphology.
+"""Hebrew plugin — morphology-light spike with optional HebSpaCy morphology.
 
 BCP-47 code "he", RTL direction, standard sentence punctuation.
 
@@ -10,7 +10,8 @@ What this plugin does reliably
     "סֵפֶר" and "ספר" resolve to the same canonical object.
   - Inseparable-prefix heuristic: ב-, ל-, מ-, כ-, ו-, ה-, ש- (and two-char
     combinations) are stripped to set lesson_data["prefix"] on each token.
-    This fires the prefix_decomposition nuance signal without HebSpaCy.
+  - A tiny root/binyan/tense fallback recognizes a few common verbs such as
+    כתב, קרא, and הלך.  This fires low-confidence binyan notes without HebSpaCy.
   - Correct RTL / hebrew metadata for frontend rendering and font selection.
   - TTS tag "he" (browser SpeechSynthesis covers modern Hebrew).
 
@@ -90,9 +91,9 @@ _NIKUD_RE = re.compile(r"[\u0591-\u05AF\u05B0-\u05BD\u05BF\u05C1\u05C2\u05C4\u05
 
 # Confidence note — honest disclosure on every lesson card.
 _CONFIDENCE_NOTE = (
-    "Hebrew dictionary mode: no morphological analysis. "
+    "Hebrew heuristic mode: limited prefix and binyan hints only. "
     "Canonical form is the undiacritised surface token. "
-    "Inseparable prefixes (ו-, ב-, ה-, ל-…) are not split from their host word."
+    "Inseparable prefixes (ו-, ב-, ה-, ל-…) remain attached to their host word."
 )
 
 
@@ -102,30 +103,31 @@ def _strip_nikud(text: str) -> str:
 
 
 class HebrewPlugin:
-    """Hebrew starter — dictionary-mode plugin.
+    """Hebrew starter — morphology-light spike plugin.
 
-    Provides sentence splitting and whitespace tokenisation with nikud
-    normalisation.  Capabilities honestly declare the pipeline depth.
+    Provides sentence splitting, whitespace tokenisation, nikud normalisation,
+    prefix hints, and low-confidence binyan hints for a tiny set of common
+    forms. Capabilities honestly declare the pipeline depth.
     """
 
     language_code = "he"
-    display_name  = "Hebrew (dictionary foundations)"
+    display_name  = "Hebrew (basic binyan hints)"
     direction     = "rtl"
     capabilities  = LanguageCapabilities(
         code="he",
-        display_name="Hebrew (dictionary foundations)",
+        display_name="Hebrew (basic binyan hints)",
         direction="rtl",
         script_family="hebrew",
         tokenization_mode="whitespace",
-        morphology_depth="none",
-        lesson_modes_supported=["dictionary"],
+        morphology_depth="shallow",
+        lesson_modes_supported=["vocabulary", "dictionary"],
         # v2 — honest quality declarations.
-        analysis_depth="dictionary",
+        analysis_depth="morphology_light",
         segmentation_quality="low",    # regex heuristic; may mis-split on
                                        # abbreviations and ellipses.
         tokenization_quality="medium", # whitespace works for modern prose;
                                        # inseparable prefixes are not split.
-        morphology_quality="none",
+        morphology_quality="low",
         syntax_support=False,
         idiom_detection=False,
         tts_lang_tag="he",             # browser TTS: modern Hebrew supported.
@@ -137,7 +139,7 @@ class HebrewPlugin:
             cultural_references="none",
             etymology="none",
             formality_register="none",
-            grammar_nuance="partial",   # definite_prefix + waw_conjunction + prefix_decomposition + biblical_register always; binyan/verb with HebSpaCy
+            grammar_nuance="partial",   # definite_prefix + waw + prefix_decomposition always; low-confidence binyan hints without HebSpaCy; richer with HebSpaCy
             pronunciation_tts="stub",   # he TTS coverage varies by browser
             transliteration="none",
             proverb_tradition="none",
@@ -181,7 +183,7 @@ class HebrewPlugin:
                 "prefix": mt.prefix,
             }
 
-            if mt.source == "heb_spacy":
+            if mt.source in {"heb_spacy", "heuristic"}:
                 if mt.binyan:
                     lesson_data["binyan"] = mt.binyan
                 if mt.tense:
@@ -196,7 +198,11 @@ class HebrewPlugin:
                     lesson_data["verb_form"] = mt.verb_form
                 if mt.construct:
                     lesson_data["construct"] = mt.construct
-            else:
+                if mt.root:
+                    lesson_data["root"] = mt.root
+                lesson_data["morphology_source"] = mt.source
+
+            if mt.source != "heb_spacy":
                 lesson_data["confidence_note"] = _CONFIDENCE_NOTE
 
             if canonical in _A1:
