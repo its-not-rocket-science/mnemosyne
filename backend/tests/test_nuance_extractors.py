@@ -19,6 +19,7 @@ from backend.nuance.de import GermanNuanceExtractor
 from backend.nuance.ru import RussianNuanceExtractor
 from backend.nuance.zh import ChineseNuanceExtractor
 from backend.nuance.ja import JapaneseNuanceExtractor
+from backend.nuance.ko import KoreanNuanceExtractor
 from backend.nuance.ar import ArabicNuanceExtractor
 from backend.nuance.he import HebrewNuanceExtractor
 from backend.nuance.la import LatinNuanceExtractor
@@ -643,6 +644,78 @@ class TestJapaneseNuance:
         results = ext.extract_nuance("ランダム", tokens, [], "ja")
         assert "yojijukugo" not in _nuance_types(results)
 
+
+
+
+# ── Korean ───────────────────────────────────────────────────────────────────
+
+class TestKoreanNuance:
+    @pytest.fixture()
+    def ext(self):
+        return KoreanNuanceExtractor()
+
+    def _forms(self, ext, sentence: str) -> set[str]:
+        return {c.canonical_form for c in ext.extract_nuance(sentence, [], [], "ko")}
+
+    def test_topic_particle(self, ext):
+        assert "ko:particle:topic" in self._forms(ext, "저는 학생입니다.")
+
+    def test_subject_particle(self, ext):
+        assert "ko:particle:subject" in self._forms(ext, "고양이가 자요.")
+
+    def test_object_particle(self, ext):
+        assert "ko:particle:object" in self._forms(ext, "책을 읽어요.")
+
+    def test_location_particle(self, ext):
+        assert "ko:particle:location_time" in self._forms(ext, "학교에 가요.")
+
+    def test_source_location_particle(self, ext):
+        assert "ko:particle:direction_source" in self._forms(ext, "학교에서 공부해요.")
+
+    @pytest.mark.parametrize("sentence", ["먹어요", "공부해요"])
+    def test_polite_ending(self, ext, sentence):
+        assert "ko:ending:polite_haeyo" in self._forms(ext, sentence)
+
+    @pytest.mark.parametrize("sentence", ["갑니다", "먹습니다"])
+    def test_formal_ending(self, ext, sentence):
+        assert "ko:ending:formal_hapsyo" in self._forms(ext, sentence)
+
+    @pytest.mark.parametrize("sentence", ["먹었어요", "했어요"])
+    def test_past_tense(self, ext, sentence):
+        assert "ko:tense:past" in self._forms(ext, sentence)
+
+    def test_progressive(self, ext):
+        assert "ko:aspect:progressive" in self._forms(ext, "읽고 있어요.")
+
+    @pytest.mark.parametrize("sentence", ["갈 거예요", "가겠습니다"])
+    def test_future_prospective(self, ext, sentence):
+        assert "ko:tense:future_prospective" in self._forms(ext, sentence)
+
+    @pytest.mark.parametrize("sentence, expected", [("안 가요", "ko:negation:short"), ("가지 않아요", "ko:negation:long")])
+    def test_negation(self, ext, sentence, expected):
+        assert expected in self._forms(ext, sentence)
+
+    def test_honorific(self, ext):
+        assert "ko:honorific:si" in self._forms(ext, "선생님이 오세요.")
+
+    def test_connective_go(self, ext):
+        assert "ko:connective:go" in self._forms(ext, "먹고 마셔요.")
+
+    def test_no_duplicate_canonical_forms_per_sentence(self, ext):
+        results = ext.extract_nuance("저는 책을 읽고 먹고 마셔요.", [], [], "ko")
+        forms = [c.canonical_form for c in results]
+        assert len(forms) == len(set(forms))
+
+    def test_no_high_confidence_false_positive_for_short_ambiguous_token(self, ext):
+        results = ext.extract_nuance("가", [], [], "ko")
+        assert all((c.confidence or 0) < 0.8 for c in results)
+        assert "ko:particle:subject" not in {c.canonical_form for c in results}
+
+    def test_required_lesson_data_fields_present(self, ext):
+        results = ext.extract_nuance("책을 읽어요.", [], [], "ko")
+        nuance = next(c for c in results if c.canonical_form == "ko:particle:object")
+        for key in ("nuance_type", "grammar_axis", "surface", "explanation", "learner_level"):
+            assert key in nuance.lesson_data
 
 # ── Arabic ────────────────────────────────────────────────────────────────────
 

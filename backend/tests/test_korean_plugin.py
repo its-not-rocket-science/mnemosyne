@@ -202,9 +202,10 @@ class TestHeuristicFallback:
         self, heuristic_plugin: KoreanPlugin
     ) -> None:
         result = heuristic_plugin.analyze_sentence("학교에 갔어요")
-        forms = canonical_forms(result)
+        forms = [o.canonical_form for o in result.candidates if o.type == "vocabulary"]
+        assert forms
         assert all(f.startswith("word:") for f in forms), (
-            f"Heuristic path must use word: prefix; got {forms}"
+            f"Heuristic vocabulary path must use word: prefix; got {forms}"
         )
 
     def test_hangul_runs_extracted(
@@ -217,14 +218,14 @@ class TestHeuristicFallback:
         self, heuristic_plugin: KoreanPlugin
     ) -> None:
         result = heuristic_plugin.analyze_sentence("학교에 갔어요")
-        for obj in result.candidates:
+        for obj in objects_of(result, "vocabulary"):
             assert obj.confidence == 0.50
 
     def test_confidence_note_present(
         self, heuristic_plugin: KoreanPlugin
     ) -> None:
         result = heuristic_plugin.analyze_sentence("학교에 갔어요")
-        for obj in result.candidates:
+        for obj in objects_of(result, "vocabulary"):
             assert "confidence_note" in obj.lesson_data
             assert isinstance(obj.lesson_data["confidence_note"], str)
             assert len(obj.lesson_data["confidence_note"]) > 0
@@ -233,7 +234,7 @@ class TestHeuristicFallback:
         self, heuristic_plugin: KoreanPlugin
     ) -> None:
         result = heuristic_plugin.analyze_sentence("학교에 갔어요")
-        for obj in result.candidates:
+        for obj in objects_of(result, "vocabulary"):
             note = obj.lesson_data["confidence_note"]
             assert "kiwipiepy" in note.lower()
 
@@ -267,14 +268,14 @@ class TestHeuristicFallback:
         self, heuristic_plugin: KoreanPlugin
     ) -> None:
         result = heuristic_plugin.analyze_sentence("고양이가 잔다")
-        for obj in result.candidates:
-            assert obj.type == "vocabulary"
+        assert objects_of(result, "vocabulary")
+        assert all(obj.type in {"vocabulary", "nuance"} for obj in result.candidates)
 
     def test_lemma_key_present(
         self, heuristic_plugin: KoreanPlugin
     ) -> None:
         result = heuristic_plugin.analyze_sentence("학교에 갔어요")
-        for obj in result.candidates:
+        for obj in objects_of(result, "vocabulary"):
             assert "lemma" in obj.lesson_data
 
     def test_idempotent_analysis(
@@ -344,19 +345,19 @@ class TestKiwiPath:
     @kiwi_required
     def test_all_types_are_vocabulary(self, plugin: KoreanPlugin) -> None:
         result = plugin.analyze_sentence("그녀는 매일 한국어를 말한다.")
-        for obj in result.candidates:
-            assert obj.type == "vocabulary"
+        assert objects_of(result, "vocabulary")
+        assert all(obj.type in {"vocabulary", "conjugation", "nuance"} for obj in result.candidates)
 
     @kiwi_required
     def test_pos_key_present(self, plugin: KoreanPlugin) -> None:
         result = plugin.analyze_sentence("고양이가 잔다.")
-        for obj in result.candidates:
+        for obj in objects_of(result, "vocabulary"):
             assert "pos" in obj.lesson_data
 
     @kiwi_required
     def test_lemma_key_present(self, plugin: KoreanPlugin) -> None:
         result = plugin.analyze_sentence("고양이가 잔다.")
-        for obj in result.candidates:
+        for obj in objects_of(result, "vocabulary"):
             assert "lemma" in obj.lesson_data
 
     @kiwi_required

@@ -37,7 +37,7 @@ tier.
   Latin, Koine Greek: dictionary/vocabulary mode with honest capability declarations.
   Finnish: Stanza-primary rich morphology with `fi_core_news_sm` fallback and grammar-nuance drills.
   Hindi and Turkish: suffix-rule morphology-light plugins (Devanagari/Latin script;
-  IAST/Latin romanisation; no external model required). Korean: morphology-light via kiwipiepy.
+  IAST/Latin romanisation; no external model required). Korean: morphology-light via kiwipiepy with partial learner-facing grammar nuance (particles, speech levels, tense/aspect, negation, honorifics, connectives).
   17 registered language codes.
 - **Language capability labels (user-facing).** `LanguageCapabilities` now carries a `analysis_depth_label` computed field mapping internal IDs (`morphology_light`, `dictionary`, `full`, `segmentation_only`) to English display strings ("Basic grammar hints", "Vocabulary lookup", etc.). `CAPABILITY_LABELS_I18N` in `i18n.js` localises these for all 11 UI languages. Internal IDs unchanged; user-facing labels are separate.
 - **Gold linguistic tests.** Per-language gold fixtures cover hi/tr/fi with false-positive and confidence assertions. `pytest_terminal_summary` hook prints per-language pass/fail/skip table after every full run. New assertion types: `assert_min_vocabulary_count` and `assert_no_confidence_above`.

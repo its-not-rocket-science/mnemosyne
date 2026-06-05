@@ -35,7 +35,7 @@ table from live plugin declarations.
 | ja (Japanese) | none | none | none | stub | none | **partial** | stub | none | **14** |
 | la (Latin) | none | none | none | none | none | stub | none | none | 7 |
 | grc (Koine Greek) | none | none | none | none | none | stub | partial | none | 7 |
-| ko (Korean) | none | none | none | none | none | none | none | none | 5 |
+| ko (Korean) | none | none | none | **partial** | **partial** | partial | none | none | **13** |
 | hi (Hindi) | none | none | none | none | none | none | none | none | 5 |
 | tr (Turkish) | none | none | none | none | none | none | none | none | 5 |
 | fi (Finnish) | none | none | none | **partial** | none | none | none | none | **16** |
@@ -68,7 +68,7 @@ catalogs and morphological analysis.  It does not call the nuance extractor.
 | ja | — | basic verb-form via morphology\_light | — |
 | la | — | — | — |
 | grc | — | — | — |
-| fi | — | stanza UD-derived local cases, possessive suffixes, consonant gradation, passive voice, negative auxiliaries, conditional mood | — |
+| fi | stanza UD-derived local cases, possessive suffixes, consonant gradation, passive voice, negative auxiliaries, conditional mood | stanza UD-derived local cases, possessive suffixes, consonant gradation, passive voice, negative auxiliaries, conditional mood | — |
 
 ### Extractor layer (NuanceExtractor.extract\_nuance)
 
@@ -90,10 +90,10 @@ candidates independently.  No extractor is registered for `en`, `it`, or `pt`.
 | he | **phrase families (10 families)** · definite prefix ה- · waw conjunction ו- · prefix decomposition (ב- ל- כ- מ- ש-) · binyan annotation (when candidate carries binyan metadata) · biblical register (cantillation marks) |
 | la | discourse particles (autem · igitur · ergo · tamen · enim · sed · nam · …) · enclitic -que · classical register (macrons in sentence) |
 | grc | discourse particles (δέ · γάρ · οὖν · μέν · ἀλλά · …) · οὐ/μή negation distinction · definite article forms |
-| ko | — |
+| ko | particles/case markers (은/는 · 이/가 · 을/를 · 에 · 에서 · 의 · 와/과/하고/랑/이랑) · speech levels (해요체 · 합쇼체 · low-confidence plain endings) · past/progressive/future-prospective · short/long negation and inability · subject honorific -(으)시- · common connectives (-고 · -지만 · -아서/-어서 · -(으)면 · -(으)니까) |
 | hi | — |
 | tr | — |
-| fi | — |
+| fi | stanza UD-derived local cases, possessive suffixes, consonant gradation, passive voice, negative auxiliaries, conditional mood |
 
 ---
 
@@ -105,9 +105,9 @@ candidates independently.  No extractor is registered for `en`, `it`, or `pt`.
 | **Rule-based regex/token-match** | all with extractor | Discourse particles, particles, aspect markers, affixes, enclitics — deterministic |
 | **Dependency-parse heuristic** | es fr de it pt ru ja | Copula/aspect detection using spaCy dep labels; correctness depends on model quality |
 | **Dictionary lookup** | ar he la grc | Vocabulary candidates from embedded lexicon; no morphological inference |
-| **Model-derived morphology** | fi | Stanza UD features drive Finnish grammar nuance (case, possessive suffix, voice, polarity, mood); spaCy fallback is lower confidence and marked with `confidence_note` when heuristic/OOV. |
+| **Model-derived morphology** | fi ko | Stanza UD features drive Finnish grammar nuance (case, possessive suffix, voice, polarity, mood); Korean uses kiwipiepy morpheme tags when available and conservative suffix heuristics otherwise. Fallback paths are lower confidence and marked with `confidence_note` when heuristic/OOV. |
 
-Most nuance signals are hand-authored or rule-derived. Finnish grammar nuance is derived from Stanza UD morphology already emitted by the plugin, with lower-confidence notes when falling back to surface or spaCy heuristics. There are no embedding-based detectors in the current codebase.
+Most nuance signals are hand-authored or rule-derived. Finnish grammar nuance is derived from Stanza UD morphology already emitted by the plugin; Korean grammar nuance is derived from kiwipiepy morpheme tags where available plus conservative suffix/phrase patterns. Both use lower-confidence notes when falling back to surface heuristics. There are no embedding-based detectors in the current codebase.
 
 ---
 
@@ -125,6 +125,11 @@ Most nuance signals are hand-authored or rule-derived. Finnish grammar nuance is
 - Grammar patterns (6 types) rely on spaCy `en_core_web_sm` dependency parse; parse quality degrades on informal/fragmented text.
 - Tense morphology is shallow: only present and past are labelled; future, conditional, and perfect tenses are inferred from auxiliary morphology, not directly annotated by spaCy.
 - Register detection uses a heuristic token-frequency approach; precision is low for mixed-register sentences.
+
+### Korean
+- Korean grammar nuance is now `partial`: the extractor emits learner-facing particles/case markers, speech-level endings, tense/aspect/prospective markers, negation and inability patterns, subject honorific -(으)시-, and common connective endings.
+- Confidence is intentionally tiered: kiwipiepy-exposed particles and morphemes are high confidence; suffix-only detections are medium; short ambiguous plain endings such as -어/-아/-다 are low confidence and include `confidence_note`.
+- Known gaps: no dependency parse, no discourse-level topic/focus resolution, no full honorific agreement validation, and no exhaustive ending inventory. Forms like -겠- can express future, intention, or conjecture, so lessons describe the ambiguity rather than overclaiming.
 
 ### Spanish
 - ser/estar detection relies on spaCy dep parse; low-confidence when parse
@@ -372,7 +377,7 @@ Total: **~242 parametrized test cases** across 17 languages.
 | ja | 7 | 3 |
 | la | 7 | 2 |
 | grc | 7 | 2 |
-| ko | 5 | 1 |
+| ko | 13 | 3 |
 | hi | 5 | 1 |
 | tr | 5 | 1 |
 | fi | 16 | 2 |
