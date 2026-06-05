@@ -6,7 +6,8 @@ POS, root, pattern, gloss, inflectional features (aspect, voice, mood,
 person, number, gender, case), and proclitic fields (prc0/1/2).
 
 When camel-tools is absent, every function still works — analyze_tokens()
-returns surface-only MorphTokens with source="fallback".
+returns low-confidence heuristic MorphTokens with source="heuristic" when a small
+root/pattern or clitic rule matches, otherwise surface-only fallback tokens.
 
 Installation (optional — dictionary mode works without it):
     pip install camel-tools
@@ -19,10 +20,10 @@ Example (CAMeL available):
     >>> toks[1].prc0
     'Al+'
 
-Example (fallback):
+Example (heuristic fallback):
     >>> toks = analyze_tokens(["كتب"])
-    >>> toks[0].lemma, toks[0].source
-    ('كتب', 'fallback')
+    >>> toks[0].root, toks[0].pattern, toks[0].source
+    ('ك.ت.ب', 'فعل', 'heuristic')
 """
 from __future__ import annotations
 
@@ -63,6 +64,76 @@ class MorphToken:
     prc2:    str = ""   # conjunction clitic, e.g. "wa+", "fa+"
     source:  str = "fallback"
 
+
+
+# Minimal no-dependency spike data for common Modern Standard Arabic roots.
+# These entries are intentionally tiny and conservative; CAMeL Tools remains the
+# preferred source for production morphology when installed.
+_HEURISTIC_LEXICON: dict[str, dict[str, str]] = {
+    "كتب": {"lemma": "كتب", "pos": "VERB", "root": "ك.ت.ب", "pattern": "فعل", "gloss": "write", "aspect": "p", "voice": "a"},
+    "يكتب": {"lemma": "كتب", "pos": "VERB", "root": "ك.ت.ب", "pattern": "يفعل", "gloss": "write", "aspect": "i", "voice": "a"},
+    "كاتب": {"lemma": "كاتب", "pos": "NOUN", "root": "ك.ت.ب", "pattern": "فاعل", "gloss": "writer"},
+    "كتاب": {"lemma": "كتاب", "pos": "NOUN", "root": "ك.ت.ب", "pattern": "فعال", "gloss": "book"},
+    "مكتوب": {"lemma": "مكتوب", "pos": "ADJ", "root": "ك.ت.ب", "pattern": "مفعول", "gloss": "written"},
+    "درس": {"lemma": "درس", "pos": "VERB", "root": "د.ر.س", "pattern": "فعل", "gloss": "study", "aspect": "p", "voice": "a"},
+    "يدرس": {"lemma": "درس", "pos": "VERB", "root": "د.ر.س", "pattern": "يفعل", "gloss": "study", "aspect": "i", "voice": "a"},
+    "دارس": {"lemma": "دارس", "pos": "NOUN", "root": "د.ر.س", "pattern": "فاعل", "gloss": "student / studier"},
+    "مدرسة": {"lemma": "مدرسة", "pos": "NOUN", "root": "د.ر.س", "pattern": "مفعلة", "gloss": "school"},
+}
+
+_TASHKEEL = dict.fromkeys(map(ord, "ًٌٍَُِّْٰ"), None)
+
+
+def _undiacritized(text: str) -> str:
+    return text.translate(_TASHKEEL)
+
+
+def _split_common_clitics(token: str) -> tuple[str, dict[str, str]]:
+    """Return a likely stem plus CAMeL-style clitic fields for obvious prefixes.
+
+    This is deliberately conservative: it only strips at most one conjunction,
+    one preposition, and the definite article when a stem of at least three
+    letters remains. It is a learning hint, not tokenization.
+    """
+    stem = _undiacritized(token)
+    fields = {"prc0": "", "prc1": "", "prc2": ""}
+
+    if len(stem) >= 4 and stem[0] in {"و", "ف"}:
+        fields["prc2"] = "wa+" if stem[0] == "و" else "fa+"
+        stem = stem[1:]
+
+    if len(stem) >= 4 and stem[0] in {"ب", "ل", "ك"}:
+        fields["prc1"] = {"ب": "bi+", "ل": "li+", "ك": "ka+"}[stem[0]]
+        stem = stem[1:]
+
+    if len(stem) >= 5 and stem.startswith("ال"):
+        fields["prc0"] = "Al+"
+        stem = stem[2:]
+
+    if len(stem) < 3:
+        return _undiacritized(token), {"prc0": "", "prc1": "", "prc2": ""}
+    return stem, fields
+
+
+def _heuristic_analyze(token: str) -> MorphToken:
+    stem, clitics = _split_common_clitics(token)
+    entry = _HEURISTIC_LEXICON.get(stem)
+    if not entry:
+        return MorphToken(text=token, lemma=_undiacritized(token), source="fallback")
+    return MorphToken(
+        text=token,
+        lemma=entry.get("lemma", stem),
+        pos=entry.get("pos", "X"),
+        root=entry.get("root", ""),
+        pattern=entry.get("pattern", ""),
+        gloss=entry.get("gloss", ""),
+        voice=entry.get("voice", ""),
+        aspect=entry.get("aspect", ""),
+        prc0=clitics["prc0"],
+        prc1=clitics["prc1"],
+        prc2=clitics["prc2"],
+        source="heuristic",
+    )
 
 _CAMEL_POS_TO_UD: dict[str, str] = {
     "noun": "NOUN", "adj": "ADJ", "verb": "VERB", "adv": "ADV",
@@ -150,6 +221,6 @@ def analyze_tokens(tokens: list[str]) -> list[MorphToken]:
                 ))
                 continue
 
-        out.append(MorphToken(text=token, lemma=token, source="fallback"))
+        out.append(_heuristic_analyze(token))
 
     return out

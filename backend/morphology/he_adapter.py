@@ -1,13 +1,14 @@
-"""Hebrew morphological adapter — HebSpaCy with heuristic prefix fallback.
+"""Hebrew morphological adapter — HebSpaCy with heuristic Semitic fallback.
 
 When heb_spacy (he_dep_ud_hybrid model) is installed, analyze_tokens()
 returns fully annotated MorphTokens: lemma, POS, binyan, tense, person,
 number, gender, verb_form, and construct state.
 
 When HebSpaCy is absent (the common case), every function still works —
-the fallback applies heuristic inseparable-prefix stripping to populate
-the `prefix` field.  This is sufficient for the prefix_decomposition
-nuance signal in backend.nuance.he.
+the fallback applies heuristic inseparable-prefix stripping and a tiny
+lexicon of common root/binyan/tense hints.  This is sufficient for the
+prefix_decomposition nuance signal and limited binyan/verb-template notes in
+backend.nuance.he.
 
 Installation (optional — install the he_dep_ud_hybrid spaCy model by whatever
 distribution the Hebrew NLP community provides; the adapter gates solely on
@@ -58,6 +59,7 @@ class MorphToken:
     gender:    str = ""   # Masc | Fem
     verb_form: str = ""   # Fin | Inf | Part
     construct: str = ""   # Con (construct / smichut state)
+    root:      str = ""   # dotted consonantal root, e.g. כ.ת.ב
     prefix:    str = ""   # stripped inseparable prefix(es), e.g. "ב", "וה"
     source:    str = "fallback"
 
@@ -67,6 +69,20 @@ _INSEP_PREFIXES: tuple[str, ...] = (
     "מה", "שה", "וה", "בה", "כה", "לה",
     "ב", "ו", "ה", "ל", "כ", "מ", "ש",
 )
+
+# Common complete words that begin with prefix letters but should not be split
+# by the fallback. This keeps the spike useful without claiming real parsing.
+_PREFIX_FALSE_POSITIVE_BLOCKLIST: frozenset[str] = frozenset({
+    "שלום", "שלומך", "הוא", "היא", "כי", "כן", "לא", "מה", "מי",
+})
+
+_HEURISTIC_LEXICON: dict[str, dict[str, str]] = {
+    "כתב": {"lemma": "כתב", "pos": "VERB", "root": "כ.ת.ב", "binyan": "Pa'al", "tense": "Past", "person": "3", "number": "Sing", "gender": "Masc", "verb_form": "Fin"},
+    "כותב": {"lemma": "כתב", "pos": "VERB", "root": "כ.ת.ב", "binyan": "Pa'al", "tense": "Present", "number": "Sing", "gender": "Masc", "verb_form": "Part"},
+    "קרא": {"lemma": "קרא", "pos": "VERB", "root": "ק.ר.א", "binyan": "Pa'al", "tense": "Past", "person": "3", "number": "Sing", "gender": "Masc", "verb_form": "Fin"},
+    "הלך": {"lemma": "הלך", "pos": "VERB", "root": "ה.ל.ך", "binyan": "Pa'al", "tense": "Past", "person": "3", "number": "Sing", "gender": "Masc", "verb_form": "Fin"},
+    "מכתב": {"lemma": "מכתב", "pos": "NOUN", "root": "כ.ת.ב", "binyan": "", "tense": ""},
+}
 
 
 def _extract_prefix(token: str) -> tuple[str, str]:
@@ -83,6 +99,8 @@ def _extract_prefix(token: str) -> tuple[str, str]:
         _extract_prefix("הוא")    → ("הוא", "")     # remaining "וא" < 3 chars
         _extract_prefix("שלום")   → ("שלום", "")    # remaining "לום" = 3 — but "שלום"
     """
+    if token in _PREFIX_FALSE_POSITIVE_BLOCKLIST:
+        return token, ""
     for pfx in _INSEP_PREFIXES:
         if token.startswith(pfx) and len(token) - len(pfx) >= 3:
             return token[len(pfx):], pfx
@@ -126,6 +144,23 @@ def _fallback_analyze(tokens: list[str]) -> list[MorphToken]:
     out = []
     for token in tokens:
         remaining, prefix = _extract_prefix(token)
+        entry = _HEURISTIC_LEXICON.get(remaining)
+        if entry:
+            out.append(MorphToken(
+                text=token,
+                lemma=entry.get("lemma", remaining),
+                pos=entry.get("pos", "WORD"),
+                binyan=entry.get("binyan", ""),
+                tense=entry.get("tense", ""),
+                person=entry.get("person", ""),
+                number=entry.get("number", ""),
+                gender=entry.get("gender", ""),
+                verb_form=entry.get("verb_form", ""),
+                root=entry.get("root", ""),
+                prefix=prefix,
+                source="heuristic",
+            ))
+            continue
         out.append(MorphToken(
             text=token,
             lemma=remaining,
