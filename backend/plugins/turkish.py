@@ -402,6 +402,7 @@ class TurkishPlugin:
             # Possessive + case stacking
             poss_label = _tr_stanza.possessive_label(mt)
             stacked = f"{poss_label}_poss+{mt.case}" if (poss_label and mt.case) else None
+            has_feats = bool(mt.feats_raw)
 
             # Shared lesson_data base
             ld: dict[str, Any] = {
@@ -411,17 +412,24 @@ class TurkishPlugin:
                 "tense":         mt.tense,
                 "mood":          mt.mood,
             }
-            if mt.person:         ld["person"]    = mt.person
-            if mt.number:         ld["number"]    = mt.number
-            if mt.case:           ld["case"]      = mt.case
-            if poss_label:        ld["possessive"] = poss_label
-            if stacked:           ld["stacked_suffixes"] = stacked
-            if mt.polarity == "neg": ld["negation"] = True
+            if mt.person:
+                ld["person"] = mt.person
+            if mt.number:
+                ld["number"] = mt.number
+            if mt.case:
+                ld["case"] = mt.case
+            if poss_label:
+                ld["possessive"] = poss_label
+            if stacked:
+                ld["stacked_suffixes"] = stacked
+            if mt.polarity == "neg":
+                ld["negation"] = True
             # Normalize vnoun → infinitive (Turkish -mak/-mek is a verbal noun,
             # but pedagogically labelled "infinitive" throughout this codebase)
             if mt.verb_form:
                 ld["verb_form"] = "infinitive" if mt.verb_form == "vnoun" else mt.verb_form
-            if mt.evidential:     ld["evidential"] = mt.evidential
+            if mt.evidential:
+                ld["evidential"] = mt.evidential
 
             is_verb     = mt.upos == "VERB"
             is_aux      = mt.upos == "AUX"
@@ -521,7 +529,7 @@ class TurkishPlugin:
                         type="vocabulary",
                         label=lemma,
                         lesson_data=noun_ld,
-                        confidence=n_conf,
+                        confidence=n_conf if has_feats else None,
                     ))
 
             elif mt.upos == "ADJ":
@@ -538,7 +546,7 @@ class TurkishPlugin:
                         type="vocabulary",
                         label=lemma,
                         lesson_data=adj_ld,
-                        confidence=a_conf,
+                        confidence=a_conf if has_feats else None,
                     ))
 
             elif mt.upos == "ADV":
@@ -551,7 +559,7 @@ class TurkishPlugin:
                         type="vocabulary",
                         label=lemma,
                         lesson_data=ld,
-                        confidence=0.75,
+                        confidence=0.75 if has_feats else None,
                     ))
 
             elif mt.upos == "PRON":
@@ -564,7 +572,7 @@ class TurkishPlugin:
                         type="vocabulary",
                         label=mt.text,
                         lesson_data={**ld, "pos": "pronoun"},
-                        confidence=0.80,
+                        confidence=0.80 if has_feats else None,
                     ))
 
             elif is_aux:
@@ -577,7 +585,7 @@ class TurkishPlugin:
                         type="vocabulary",
                         label=mt.text,
                         lesson_data={**ld, "pos": "auxiliary"},
-                        confidence=0.75,
+                        confidence=0.75 if has_feats else None,
                     ))
 
             else:
@@ -590,7 +598,7 @@ class TurkishPlugin:
                         type="vocabulary",
                         label=mt.text,
                         lesson_data={**ld, "confidence_note": "Closed-class or unrecognised POS; stanza parse."},
-                        confidence=0.65,
+                        confidence=0.65 if has_feats else None,
                     ))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
