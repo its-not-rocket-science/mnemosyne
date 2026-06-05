@@ -692,13 +692,14 @@ class LatinPlugin:
                             if f in db_feats:
                                 lesson_data[f] = db_feats[f]
                         has_finite = "tense" in db_feats and "mood" in db_feats
+                        confidence = 0.78 if has_finite else 0.75
                         candidates.append(CandidateObject(
                             canonical_form=key,
                             surface_form=token,
                             type="conjugation" if has_finite else "vocabulary",
                             label=token,
                             lesson_data=lesson_data,
-                            confidence=0.65,
+                            confidence=confidence,
                         ))
                     else:
                         lesson_data = {"lemma": key, "confidence_note": _UNKNOWN_NOTE}
