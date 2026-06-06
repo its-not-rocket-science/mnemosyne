@@ -43,11 +43,25 @@ table from live plugin declarations.
 > "Literary/cultural" collapses `literary_references`, `cultural_references`,
 > `proverb_tradition`, and `classical_or_scriptural_allusion`. These are now
 > backed by the generated cultural catalogue for all 17 supported languages.
+> The generated cultural catalogue is not a per-language NuanceExtractor. It is
+> applied globally by `lesson_extraction.engine.enrich()` after plugin and
+> extractor enrichment. Per-language capability flags are set to `partial`
+> because each supported language has starter curated entries, but matching
+> remains deterministic string matching rather than semantic interpretation.
 
 ---
 
 
 ### Generated cultural catalogue workflow
+
+`data/cultural_references_seed.yaml` is the source of truth.
+`scripts/build_cultural_catalog.py` validates it and writes deterministic,
+committed runtime JSON under `backend/nuance/data/cultural_references/`, which
+`backend.nuance.cultural` reads lazily at runtime. The catalogue is curated and
+uses exact/near-exact surface string matching only: no LLM calls, embeddings,
+external APIs, or network lookups are involved. Coverage is deliberately
+partial and should be read as starter recognition data, not comprehensive
+cultural interpretation.
 
 ```bash
 python scripts/build_cultural_catalog.py --check
@@ -117,7 +131,7 @@ candidates independently.  No extractor is registered for `en`, `it`, or `pt`.
 | **Dictionary lookup** | ar he la grc | Vocabulary candidates from embedded lexicon; no morphological inference |
 | **Model-derived morphology** | fi ko | Stanza UD features drive Finnish grammar nuance (case, possessive suffix, voice, polarity, mood); Korean uses kiwipiepy morpheme tags when available and conservative suffix heuristics otherwise. Fallback paths are lower confidence and marked with `confidence_note` when heuristic/OOV. |
 
-Most nuance signals are hand-authored or rule-derived. Generated cultural catalogue entries are built from `data/cultural_references_seed.yaml` by `scripts/build_cultural_catalog.py`; runtime detection loads JSON from `backend/nuance/data/cultural_references/` and uses deterministic longest-match string matching. Finnish grammar nuance is derived from Stanza UD morphology already emitted by the plugin; Korean grammar nuance is derived from kiwipiepy morpheme tags where available plus conservative suffix/phrase patterns. Both use lower-confidence notes when falling back to surface heuristics. There are no embedding-based detectors in the current codebase.
+Most nuance signals are hand-authored or rule-derived. Generated cultural catalogue entries are built from `data/cultural_references_seed.yaml` by `scripts/build_cultural_catalog.py`; runtime detection loads committed JSON from `backend/nuance/data/cultural_references/` and uses deterministic longest-match string matching after plugin and extractor enrichment in `backend/lesson_extraction/engine.py`. Finnish grammar nuance is derived from Stanza UD morphology already emitted by the plugin; Korean grammar nuance is derived from kiwipiepy morpheme tags where available plus conservative suffix/phrase patterns. Both use lower-confidence notes when falling back to surface heuristics. There are no embedding-based detectors in the current codebase.
 
 ---
 
