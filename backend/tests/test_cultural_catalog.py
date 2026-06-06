@@ -203,6 +203,31 @@ def test_provenance_fields_are_preserved_in_generated_json(tmp_path):
     assert "reviewed_at" not in entry
 
 
+def test_localisation_key_fields_are_preserved_in_generated_json(tmp_path):
+    row = _base_catalog_row(
+        explanation_key="cultural.explanation.en.test_allusion",
+        source_work="Test Work",
+        source_work_key="cultural.source_work.test_work",
+        source_author="Test Author",
+        source_author_key="cultural.source_author.test_author",
+    )
+    by_lang, warnings = validate_and_build([row])
+    write_count = import_module("scripts.build_cultural_catalog").write_outputs(
+        by_lang, tmp_path, "en"
+    )
+
+    payload = json.loads((tmp_path / "en.json").read_text(encoding="utf-8"))
+    entry = payload["entries"][0]
+    assert write_count == 1
+    assert warnings == []
+    assert entry["short_explanation"] == "A test-only cultural catalogue entry."
+    assert entry["explanation_key"] == "cultural.explanation.en.test_allusion"
+    assert entry["source_work"] == "Test Work"
+    assert entry["source_work_key"] == "cultural.source_work.test_work"
+    assert entry["source_author"] == "Test Author"
+    assert entry["source_author_key"] == "cultural.source_author.test_author"
+
+
 def test_seed_scalar_whitespace_is_normalized():
     by_lang, warnings = validate_and_build([
         {
@@ -509,6 +534,35 @@ def test_one_positive_detection_per_language(language, text):
         "literary_reference", "cultural_reference", "proverb_tradition", "classical_or_scriptural_allusion"
     }
 
+
+def test_detector_includes_localisation_keys_and_fallbacks(monkeypatch, tmp_path):
+    _write_runtime_catalog(tmp_path, "en", [{
+        "id": "test_allusion",
+        "language": "en",
+        "canonical_form": "en:literary:test_allusion",
+        "canonical_reference": "Test Allusion",
+        "reference_type": "literary_reference",
+        "surface_patterns": ["Test Allusion"],
+        "short_explanation": "Fallback explanation.",
+        "explanation_key": "cultural.explanation.en.test_allusion",
+        "source_work": "Fallback Work",
+        "source_work_key": "cultural.source_work.test_work",
+        "source_author": "Fallback Author",
+        "source_author_key": "cultural.source_author.test_author",
+        "learner_level": "B2",
+        "confidence": 0.8,
+    }])
+    _use_runtime_catalog(monkeypatch, tmp_path)
+
+    matches = extract_cultural_references("This is a Test Allusion.", "en")
+
+    assert len(matches) == 1
+    assert matches[0].lesson_data["explanation"] == "Fallback explanation."
+    assert matches[0].lesson_data["explanation_key"] == "cultural.explanation.en.test_allusion"
+    assert matches[0].lesson_data["source_work"] == "Fallback Work"
+    assert matches[0].lesson_data["source_work_key"] == "cultural.source_work.test_work"
+    assert matches[0].lesson_data["source_author"] == "Fallback Author"
+    assert matches[0].lesson_data["source_author_key"] == "cultural.source_author.test_author"
 
 
 def test_variants_are_merged_into_generated_surface_patterns_without_duplicates():
