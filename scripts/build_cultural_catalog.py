@@ -262,35 +262,74 @@ def validate_and_build(rows: list[dict[str, Any]], only_language: str | None = N
     return by_lang, warnings
 
 
-def summary(by_lang: dict[str, list[dict[str, Any]]]) -> str:
+def selected_languages(only_language: str | None = None) -> list[str]:
+    return [only_language] if only_language is not None else list(SUPPORTED_LANGUAGES)
+
+
+def entry_count(by_lang: dict[str, list[dict[str, Any]]], only_language: str | None = None) -> int:
+    return sum(len(by_lang.get(lang, [])) for lang in selected_languages(only_language))
+
+
+def language_count(only_language: str | None = None) -> int:
+    return len(selected_languages(only_language))
+
+
+def pluralize(count: int, singular: str, plural: str | None = None) -> str:
+    return singular if count == 1 else (plural or f"{singular}s")
+
+
+def summary(
+    by_lang: dict[str, list[dict[str, Any]]],
+    only_language: str | None = None,
+) -> str:
     headers = ["language", "entries", *sorted(REFERENCE_TYPES)]
     lines = [" | ".join(headers), " | ".join("-" * len(h) for h in headers)]
-    for lang in SUPPORTED_LANGUAGES:
+    for lang in selected_languages(only_language):
         entries = by_lang.get(lang, [])
         counts = Counter(e["reference_type"] for e in entries)
-        lines.append(" | ".join([lang, str(len(entries)), *(str(counts[t]) for t in sorted(REFERENCE_TYPES))]))
+        lines.append(
+            " | ".join(
+                [lang, str(len(entries)), *(str(counts[t]) for t in sorted(REFERENCE_TYPES))]
+            )
+        )
     return "\n".join(lines)
 
 
-def write_outputs(by_lang: dict[str, list[dict[str, Any]]], out_dir: Path, only_language: str | None = None) -> None:
+def write_outputs(
+    by_lang: dict[str, list[dict[str, Any]]],
+    out_dir: Path,
+    only_language: str | None = None,
+) -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
-    langs = [only_language] if only_language else list(SUPPORTED_LANGUAGES)
+    langs = selected_languages(only_language)
     for lang in langs:
         payload = {
             "language": lang,
             "entries": by_lang.get(lang, []),
         }
         target = out_dir / f"{lang}.json"
-        target.write_text(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        target.write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+    return len(langs)
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group(required=True)
-    mode.add_argument("--check", action="store_true", help="validate seed and generated output without writing")
+    mode.add_argument(
+        "--check",
+        action="store_true",
+        help="validate seed and generated output without writing",
+    )
     mode.add_argument("--write", action="store_true", help="write generated runtime JSON files")
     mode.add_argument("--report", action="store_true", help="validate and print summary report")
-    parser.add_argument("--language", choices=SUPPORTED_LANGUAGES, help="limit validation/report/write to one language")
+    parser.add_argument(
+        "--language",
+        choices=SUPPORTED_LANGUAGES,
+        help="limit validation/report/write to one language",
+    )
     parser.add_argument("--seed", type=Path, default=DEFAULT_SEED)
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT)
     args = parser.parse_args()
@@ -302,10 +341,22 @@ def main() -> int:
         return 1
     for warning in warnings:
         print(f"WARNING: {warning}", file=sys.stderr)
-    if args.write:
-        write_outputs(by_lang, args.out_dir, args.language)
-    if args.report or args.check or args.write:
-        print(summary(by_lang))
+    entries = entry_count(by_lang, args.language)
+    if args.check:
+        languages = language_count(args.language)
+        language_suffix = f" ({args.language})" if args.language else ""
+        print(
+            f"OK: validated {entries} {pluralize(entries, 'entry', 'entries')} "
+            f"across {languages} {pluralize(languages, 'language')}{language_suffix}"
+        )
+    elif args.report:
+        print(summary(by_lang, args.language))
+    elif args.write:
+        files_written = write_outputs(by_lang, args.out_dir, args.language)
+        print(
+            f"Wrote {files_written} catalogue {pluralize(files_written, 'file')} to {args.out_dir} "
+            f"({entries} {pluralize(entries, 'entry', 'entries')})"
+        )
     return 0
 
 
