@@ -65,6 +65,7 @@
       "canonical_form": "en:literary:big_brother",
       "canonical_reference": "Big Brother",
       "confidence": 0.88,
+      "explanation_key": "cultural.explanation.en.orwell.big_brother",
       "id": "big_brother",
       "language": "en",
       "learner_level": "B2",
@@ -72,7 +73,9 @@
       "register": "literary",
       "short_explanation": "A symbol of intrusive surveillance and authoritarian control.",
       "source_author": "George Orwell",
+      "source_author_key": "cultural.source_author.orwell",
       "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "cultural.source_work.orwell.nineteen_eighty_four",
       "surface_patterns": [
         "Big Brother"
       ]
