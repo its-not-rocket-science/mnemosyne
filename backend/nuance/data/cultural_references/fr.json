@@ -1,0 +1,154 @@
+{
+  "entries": [
+    {
+      "canonical_form": "fr:classical:cheval_de_troie",
+      "canonical_reference": "cheval de Troie",
+      "confidence": 0.88,
+      "id": "cheval_de_troie",
+      "language": "fr",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A hidden threat inside something apparently benign.",
+      "surface_patterns": [
+        "cheval de Troie"
+      ]
+    },
+    {
+      "canonical_form": "fr:classical:talon_d_achille",
+      "canonical_reference": "talon d’Achille",
+      "confidence": 0.88,
+      "id": "talon_d_achille",
+      "language": "fr",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A vulnerable point.",
+      "surface_patterns": [
+        "talon d’Achille"
+      ]
+    },
+    {
+      "canonical_form": "fr:cultural:apres_moi_le_deluge",
+      "canonical_reference": "après moi, le déluge",
+      "confidence": 0.88,
+      "id": "apres_moi_le_deluge",
+      "language": "fr",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "Indifference to consequences after one has gone.",
+      "surface_patterns": [
+        "après moi, le déluge"
+      ]
+    },
+    {
+      "canonical_form": "fr:cultural:coup_de_grace",
+      "canonical_reference": "coup de grâce",
+      "confidence": 0.88,
+      "id": "coup_de_grace",
+      "language": "fr",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "A final decisive blow.",
+      "surface_patterns": [
+        "coup de grâce"
+      ]
+    },
+    {
+      "canonical_form": "fr:cultural:esprit_de_l_escalier",
+      "canonical_reference": "esprit de l’escalier",
+      "confidence": 0.88,
+      "id": "esprit_de_l_escalier",
+      "language": "fr",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "Thinking of the perfect reply too late.",
+      "surface_patterns": [
+        "esprit de l’escalier"
+      ]
+    },
+    {
+      "canonical_form": "fr:literary:candide",
+      "canonical_reference": "Candide",
+      "confidence": 0.88,
+      "id": "candide",
+      "language": "fr",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A call to practical action rather than abstract speculation.",
+      "source_author": "Voltaire",
+      "source_work": "Candide",
+      "surface_patterns": [
+        "Candide",
+        "il faut cultiver notre jardin"
+      ]
+    },
+    {
+      "canonical_form": "fr:literary:etre_ou_ne_pas_etre",
+      "canonical_reference": "être ou ne pas être",
+      "confidence": 0.88,
+      "id": "etre_ou_ne_pas_etre",
+      "language": "fr",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A famous formulation of existential hesitation.",
+      "source_author": "Shakespeare",
+      "source_work": "Hamlet",
+      "surface_patterns": [
+        "être ou ne pas être"
+      ]
+    },
+    {
+      "canonical_form": "fr:literary:l_enfer_c_est_les_autres",
+      "canonical_reference": "l’enfer, c’est les autres",
+      "confidence": 0.88,
+      "id": "l_enfer_c_est_les_autres",
+      "language": "fr",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A phrase associated with social judgement and existential confinement.",
+      "source_author": "Jean-Paul Sartre",
+      "source_work": "Huis clos",
+      "surface_patterns": [
+        "l’enfer, c’est les autres"
+      ]
+    },
+    {
+      "canonical_form": "fr:literary:madeleine_de_proust",
+      "canonical_reference": "madeleine de Proust",
+      "confidence": 0.88,
+      "id": "madeleine_de_proust",
+      "language": "fr",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A sensory trigger that evokes involuntary memory.",
+      "source_author": "Marcel Proust",
+      "source_work": "À la recherche du temps perdu",
+      "surface_patterns": [
+        "madeleine de Proust"
+      ]
+    },
+    {
+      "canonical_form": "fr:proverb:chercher_le_mouton_a_cinq_pattes",
+      "canonical_reference": "chercher le mouton à cinq pattes",
+      "confidence": 0.88,
+      "id": "chercher_le_mouton_a_cinq_pattes",
+      "language": "fr",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Looking for something impossibly rare or over-specific.",
+      "surface_patterns": [
+        "chercher le mouton à cinq pattes"
+      ]
+    }
+  ],
+  "language": "fr"
+}

@@ -220,15 +220,15 @@ class KoreanPlugin:
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="none",
-            literary_references="none",
-            cultural_references="none",
+            literary_references="partial",
+            cultural_references="partial",
             etymology="none",
             formality_register="partial",  # register from sentence-final endings (EF)
             grammar_nuance="partial",      # particles, endings, tense/aspect, negation, honorifics
             pronunciation_tts="partial",
             transliteration="none",
-            proverb_tradition="none",
-            classical_or_scriptural_allusion="none",
+            proverb_tradition="partial",
+            classical_or_scriptural_allusion="partial",
         ),
     )
 

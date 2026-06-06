@@ -1,0 +1,148 @@
+{
+  "entries": [
+    {
+      "canonical_form": "tr:classical:asil_topugu",
+      "canonical_reference": "Aşil topuğu",
+      "confidence": 0.88,
+      "id": "asil_topugu",
+      "language": "tr",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A vulnerable point.",
+      "surface_patterns": [
+        "Aşil topuğu"
+      ]
+    },
+    {
+      "canonical_form": "tr:classical:truva_atı",
+      "canonical_reference": "Truva atı",
+      "confidence": 0.88,
+      "id": "truva_atı",
+      "language": "tr",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A hidden threat inside something apparently harmless.",
+      "surface_patterns": [
+        "Truva atı"
+      ]
+    },
+    {
+      "canonical_form": "tr:cultural:nasreddin_hoca",
+      "canonical_reference": "Nasreddin Hoca",
+      "confidence": 0.88,
+      "id": "nasreddin_hoca",
+      "language": "tr",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "Folk figure associated with wit, irony, and comic wisdom.",
+      "surface_patterns": [
+        "Nasreddin Hoca",
+        "Nasrettin Hoca"
+      ]
+    },
+    {
+      "canonical_form": "tr:literary:dede_korkut",
+      "canonical_reference": "Dede Korkut",
+      "confidence": 0.88,
+      "id": "dede_korkut",
+      "language": "tr",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Epic Turkic narrative tradition.",
+      "source_work": "Book of Dede Korkut",
+      "surface_patterns": [
+        "Dede Korkut"
+      ]
+    },
+    {
+      "canonical_form": "tr:literary:ince_memed",
+      "canonical_reference": "İnce Memed",
+      "confidence": 0.88,
+      "id": "ince_memed",
+      "language": "tr",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Rebellion against oppression and landlord power.",
+      "source_author": "Yaşar Kemal",
+      "surface_patterns": [
+        "İnce Memed"
+      ]
+    },
+    {
+      "canonical_form": "tr:literary:koroglu",
+      "canonical_reference": "Köroğlu",
+      "confidence": 0.88,
+      "id": "koroglu",
+      "language": "tr",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Folk-epic hero associated with resistance and justice.",
+      "surface_patterns": [
+        "Köroğlu"
+      ]
+    },
+    {
+      "canonical_form": "tr:literary:leyla_ile_mecnun",
+      "canonical_reference": "Leyla ile Mecnun",
+      "confidence": 0.88,
+      "id": "leyla_ile_mecnun",
+      "language": "tr",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Tragic or obsessive love.",
+      "surface_patterns": [
+        "Leyla ile Mecnun"
+      ]
+    },
+    {
+      "canonical_form": "tr:proverb:damlaya_damlaya_gol_olur",
+      "canonical_reference": "damlaya damlaya göl olur",
+      "confidence": 0.88,
+      "id": "damlaya_damlaya_gol_olur",
+      "language": "tr",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Small amounts accumulate into something large.",
+      "surface_patterns": [
+        "damlaya damlaya göl olur"
+      ]
+    },
+    {
+      "canonical_form": "tr:proverb:sakla_samanı_gelir_zamanı",
+      "canonical_reference": "sakla samanı gelir zamanı",
+      "confidence": 0.88,
+      "id": "sakla_samanı_gelir_zamanı",
+      "language": "tr",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Keep even humble things; they may be useful later.",
+      "surface_patterns": [
+        "sakla samanı gelir zamanı"
+      ]
+    },
+    {
+      "canonical_form": "tr:proverb:sutten_agzı_yanan_yogurdu_ufleyerek_yer",
+      "canonical_reference": "sütten ağzı yanan yoğurdu üfleyerek yer",
+      "confidence": 0.88,
+      "id": "sutten_agzı_yanan_yogurdu_ufleyerek_yer",
+      "language": "tr",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Once bitten, twice shy.",
+      "surface_patterns": [
+        "sütten ağzı yanan yoğurdu üfleyerek yer"
+      ]
+    }
+  ],
+  "language": "tr"
+}

@@ -188,15 +188,15 @@ class EnglishPlugin:
         nuance_capabilities=NuanceCapabilities(
             idioms="stub",               # 2 hardcoded phrases only (kick the bucket, piece of cake)
             phrase_families="partial",   # 49 English families in catalog; common idioms and proverbs
-            literary_references="none",
-            cultural_references="none",
+            literary_references="partial",
+            cultural_references="partial",
             etymology="none",            # etymology store has 0 English entries
             formality_register="partial",# 12 curated formal/informal markers; significant gaps
             grammar_nuance="partial",    # 5 construction patterns + tone/politeness markers
             pronunciation_tts="partial", # browser TTS via lang="en" tag
             transliteration="none",
-            proverb_tradition="none",
-            classical_or_scriptural_allusion="none",
+            proverb_tradition="partial",
+            classical_or_scriptural_allusion="partial",
         ),
     )
 

@@ -1,0 +1,148 @@
+{
+  "entries": [
+    {
+      "canonical_form": "ar:classical:حصان_طروادة",
+      "canonical_reference": "حصان طروادة",
+      "confidence": 0.88,
+      "id": "حصان_طروادة",
+      "language": "ar",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A hidden threat inside something apparently harmless.",
+      "surface_patterns": [
+        "حصان طروادة"
+      ]
+    },
+    {
+      "canonical_form": "ar:classical:كعب_اخيل",
+      "canonical_reference": "كعب أخيل",
+      "confidence": 0.88,
+      "id": "كعب_اخيل",
+      "language": "ar",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A vulnerable point.",
+      "surface_patterns": [
+        "كعب أخيل"
+      ]
+    },
+    {
+      "allow_short_pattern": true,
+      "canonical_form": "ar:cultural:جحا",
+      "canonical_reference": "جحا",
+      "confidence": 0.78,
+      "id": "جحا",
+      "language": "ar",
+      "learner_level": "B1",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "A comic folk figure associated with wit, foolishness, and satire.",
+      "surface_patterns": [
+        "جحا"
+      ]
+    },
+    {
+      "canonical_form": "ar:cultural:علاء_الدين",
+      "canonical_reference": "علاء الدين",
+      "confidence": 0.88,
+      "id": "علاء_الدين",
+      "language": "ar",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "A magical wish or sudden fortune motif.",
+      "surface_patterns": [
+        "علاء الدين"
+      ]
+    },
+    {
+      "canonical_form": "ar:literary:الف_ليلة_وليلة",
+      "canonical_reference": "ألف ليلة وليلة",
+      "confidence": 0.88,
+      "id": "الف_ليلة_وليلة",
+      "language": "ar",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A reference to storytelling, marvels, or layered tales.",
+      "source_work": "One Thousand and One Nights",
+      "surface_patterns": [
+        "ألف ليلة وليلة"
+      ]
+    },
+    {
+      "canonical_form": "ar:literary:شهرزاد",
+      "canonical_reference": "شهرزاد",
+      "confidence": 0.88,
+      "id": "شهرزاد",
+      "language": "ar",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Clever storytelling used for survival or persuasion.",
+      "source_work": "One Thousand and One Nights",
+      "surface_patterns": [
+        "شهرزاد"
+      ]
+    },
+    {
+      "canonical_form": "ar:proverb:اتق_شر_من_احسنت_اليه",
+      "canonical_reference": "اتق شر من أحسنت إليه",
+      "confidence": 0.88,
+      "id": "اتق_شر_من_احسنت_اليه",
+      "language": "ar",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Beware harm from someone you have helped.",
+      "surface_patterns": [
+        "اتق شر من أحسنت إليه"
+      ]
+    },
+    {
+      "canonical_form": "ar:proverb:رب_ضارة_نافعة",
+      "canonical_reference": "رب ضارة نافعة",
+      "confidence": 0.88,
+      "id": "رب_ضارة_نافعة",
+      "language": "ar",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "A harmful thing may bring benefit.",
+      "surface_patterns": [
+        "رب ضارة نافعة"
+      ]
+    },
+    {
+      "canonical_form": "ar:proverb:كما_تدين_تدان",
+      "canonical_reference": "كما تدين تدان",
+      "confidence": 0.88,
+      "id": "كما_تدين_تدان",
+      "language": "ar",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "As you judge or act, so you will be judged or repaid.",
+      "surface_patterns": [
+        "كما تدين تدان"
+      ]
+    },
+    {
+      "canonical_form": "ar:proverb:لا_توجل_عمل_اليوم_الى_الغد",
+      "canonical_reference": "لا تؤجل عمل اليوم إلى الغد",
+      "confidence": 0.88,
+      "id": "لا_توجل_عمل_اليوم_الى_الغد",
+      "language": "ar",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Do not put off today’s work until tomorrow.",
+      "surface_patterns": [
+        "لا تؤجل عمل اليوم إلى الغد"
+      ]
+    }
+  ],
+  "language": "ar"
+}

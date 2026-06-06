@@ -324,15 +324,15 @@ class SpanishPlugin:
         nuance_capabilities=NuanceCapabilities(
             idioms="partial",            # curated ~35-entry fixed-expression table
             phrase_families="partial",   # 10 families with variants and pedagogical notes
-            literary_references="none",
-            cultural_references="none",
+            literary_references="partial",
+            cultural_references="partial",
             etymology="strong",          # 100-entry curated catalog; Arabic/Nahuatl/Latin layers covered
             formality_register="stub",   # tú/usted distinction detectable
             grammar_nuance="partial",    # tense/mood/person/number drilling
             pronunciation_tts="partial", # browser TTS reliable for es
             transliteration="none",
-            proverb_tradition="none",
-            classical_or_scriptural_allusion="none",
+            proverb_tradition="partial",
+            classical_or_scriptural_allusion="partial",
         ),
     )
 

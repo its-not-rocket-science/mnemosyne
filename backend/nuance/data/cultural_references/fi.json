@@ -1,0 +1,154 @@
+{
+  "entries": [
+    {
+      "canonical_form": "fi:cultural:menna_metsaan",
+      "canonical_reference": "mennä metsään",
+      "confidence": 0.88,
+      "id": "menna_metsaan",
+      "language": "fi",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "To go wrong; literally, to go into the forest.",
+      "surface_patterns": [
+        "mennä metsään"
+      ]
+    },
+    {
+      "canonical_form": "fi:literary:kalevala",
+      "canonical_reference": "Kalevala",
+      "confidence": 0.88,
+      "id": "kalevala",
+      "language": "fi",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Finnish national epic tradition.",
+      "source_work": "Kalevala",
+      "surface_patterns": [
+        "Kalevala"
+      ]
+    },
+    {
+      "canonical_form": "fi:literary:kullervo",
+      "canonical_reference": "Kullervo",
+      "confidence": 0.88,
+      "id": "kullervo",
+      "language": "fi",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Tragic figure associated with fate, anger, and ruin.",
+      "source_work": "Kalevala",
+      "surface_patterns": [
+        "Kullervo"
+      ]
+    },
+    {
+      "allow_short_pattern": true,
+      "canonical_form": "fi:literary:sampo",
+      "canonical_reference": "Sampo",
+      "confidence": 0.82,
+      "id": "sampo",
+      "language": "fi",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Mythic object of prosperity or abundance.",
+      "source_work": "Kalevala",
+      "surface_patterns": [
+        "Sampo"
+      ]
+    },
+    {
+      "canonical_form": "fi:literary:seitseman_veljesta",
+      "canonical_reference": "Seitsemän veljestä",
+      "confidence": 0.88,
+      "id": "seitseman_veljesta",
+      "language": "fi",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Finnish literary classic about brothers, society, and learning.",
+      "source_author": "Aleksis Kivi",
+      "source_work": "Seitsemän veljestä",
+      "surface_patterns": [
+        "Seitsemän veljestä"
+      ]
+    },
+    {
+      "canonical_form": "fi:literary:tuntematon_sotilas",
+      "canonical_reference": "Tuntematon sotilas",
+      "confidence": 0.88,
+      "id": "tuntematon_sotilas",
+      "language": "fi",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "War, comradeship, and Finnish national memory.",
+      "source_author": "Väinö Linna",
+      "source_work": "Tuntematon sotilas",
+      "surface_patterns": [
+        "Tuntematon sotilas"
+      ]
+    },
+    {
+      "canonical_form": "fi:literary:vainamoinen",
+      "canonical_reference": "Väinämöinen",
+      "confidence": 0.88,
+      "id": "vainamoinen",
+      "language": "fi",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Wise singer/sage figure from the Kalevala.",
+      "source_work": "Kalevala",
+      "surface_patterns": [
+        "Väinämöinen"
+      ]
+    },
+    {
+      "canonical_form": "fi:proverb:ei_kahta_ilman_kolmatta",
+      "canonical_reference": "ei kahta ilman kolmatta",
+      "confidence": 0.88,
+      "id": "ei_kahta_ilman_kolmatta",
+      "language": "fi",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Things tend to come in threes.",
+      "surface_patterns": [
+        "ei kahta ilman kolmatta"
+      ]
+    },
+    {
+      "canonical_form": "fi:proverb:hiljaa_hyva_tulee",
+      "canonical_reference": "hiljaa hyvä tulee",
+      "confidence": 0.88,
+      "id": "hiljaa_hyva_tulee",
+      "language": "fi",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Good things come slowly/carefully.",
+      "surface_patterns": [
+        "hiljaa hyvä tulee"
+      ]
+    },
+    {
+      "canonical_form": "fi:proverb:oma_lehma_ojassa",
+      "canonical_reference": "oma lehmä ojassa",
+      "confidence": 0.88,
+      "id": "oma_lehma_ojassa",
+      "language": "fi",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Someone has a personal interest at stake.",
+      "surface_patterns": [
+        "oma lehmä ojassa"
+      ]
+    }
+  ],
+  "language": "fi"
+}

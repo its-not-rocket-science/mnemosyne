@@ -1,0 +1,156 @@
+{
+  "entries": [
+    {
+      "canonical_form": "it:classical:cavallo_di_troia",
+      "canonical_reference": "cavallo di Troia",
+      "confidence": 0.88,
+      "id": "cavallo_di_troia",
+      "language": "it",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A hidden threat inside something apparently harmless.",
+      "surface_patterns": [
+        "cavallo di Troia"
+      ]
+    },
+    {
+      "canonical_form": "it:classical:tallone_d_achille",
+      "canonical_reference": "tallone d’Achille",
+      "confidence": 0.88,
+      "id": "tallone_d_achille",
+      "language": "it",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A vulnerable point.",
+      "surface_patterns": [
+        "tallone d’Achille"
+      ]
+    },
+    {
+      "canonical_form": "it:cultural:dolce_vita",
+      "canonical_reference": "dolce vita",
+      "confidence": 0.88,
+      "id": "dolce_vita",
+      "language": "it",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "A life of pleasure, glamour, or stylish ease.",
+      "source_author": "Federico Fellini",
+      "source_work": "La Dolce Vita",
+      "surface_patterns": [
+        "dolce vita"
+      ]
+    },
+    {
+      "canonical_form": "it:literary:don_abbondio",
+      "canonical_reference": "don Abbondio",
+      "confidence": 0.88,
+      "id": "don_abbondio",
+      "language": "it",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Cowardly or evasive clerical behaviour.",
+      "source_author": "Alessandro Manzoni",
+      "source_work": "I promessi sposi",
+      "surface_patterns": [
+        "don Abbondio"
+      ]
+    },
+    {
+      "canonical_form": "it:literary:galeotto_fu_il_libro",
+      "canonical_reference": "galeotto fu il libro",
+      "confidence": 0.88,
+      "id": "galeotto_fu_il_libro",
+      "language": "it",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A book or intermediary that enables a fateful romance.",
+      "source_author": "Dante Alighieri",
+      "source_work": "Inferno",
+      "surface_patterns": [
+        "galeotto fu il libro"
+      ]
+    },
+    {
+      "canonical_form": "it:literary:gattopardo",
+      "canonical_reference": "gattopardo",
+      "confidence": 0.88,
+      "id": "gattopardo",
+      "language": "it",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Apparent change that preserves existing power.",
+      "source_author": "Giuseppe Tomasi di Lampedusa",
+      "source_work": "Il Gattopardo",
+      "surface_patterns": [
+        "gattopardesco",
+        "gattopardo"
+      ]
+    },
+    {
+      "canonical_form": "it:literary:i_promessi_sposi",
+      "canonical_reference": "i promessi sposi",
+      "confidence": 0.88,
+      "id": "i_promessi_sposi",
+      "language": "it",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A reference to canonical Italian literature and social/religious constraint.",
+      "surface_patterns": [
+        "i promessi sposi"
+      ]
+    },
+    {
+      "canonical_form": "it:literary:uscire_dalla_selva_oscura",
+      "canonical_reference": "uscire dalla selva oscura",
+      "confidence": 0.88,
+      "id": "uscire_dalla_selva_oscura",
+      "language": "it",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Emerging from confusion, crisis, or moral darkness.",
+      "source_author": "Dante Alighieri",
+      "source_work": "Divina Commedia",
+      "surface_patterns": [
+        "uscire dalla selva oscura"
+      ]
+    },
+    {
+      "canonical_form": "it:proverb:chi_dorme_non_piglia_pesci",
+      "canonical_reference": "chi dorme non piglia pesci",
+      "confidence": 0.88,
+      "id": "chi_dorme_non_piglia_pesci",
+      "language": "it",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Opportunity requires action.",
+      "surface_patterns": [
+        "chi dorme non piglia pesci"
+      ]
+    },
+    {
+      "canonical_form": "it:proverb:tra_il_dire_e_il_fare_c_e_di_mezzo_il_mare",
+      "canonical_reference": "tra il dire e il fare c’è di mezzo il mare",
+      "confidence": 0.88,
+      "id": "tra_il_dire_e_il_fare_c_e_di_mezzo_il_mare",
+      "language": "it",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Saying something is much easier than doing it.",
+      "surface_patterns": [
+        "tra il dire e il fare c’è di mezzo il mare"
+      ]
+    }
+  ],
+  "language": "it"
+}

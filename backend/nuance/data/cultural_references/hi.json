@@ -1,0 +1,155 @@
+{
+  "entries": [
+    {
+      "allow_short_pattern": true,
+      "canonical_form": "hi:classical:अरज_न",
+      "canonical_reference": "अर्जुन",
+      "confidence": 0.82,
+      "id": "अरज_न",
+      "language": "hi",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Archer-warrior figure associated with skill and moral hesitation.",
+      "source_work": "Mahabharata",
+      "surface_patterns": [
+        "अर्जुन"
+      ]
+    },
+    {
+      "allow_short_pattern": true,
+      "canonical_form": "hi:classical:क_षण",
+      "canonical_reference": "कृष्ण",
+      "confidence": 0.82,
+      "id": "क_षण",
+      "language": "hi",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Divine counsellor, strategist, or beloved deity depending on context.",
+      "source_work": "Mahabharata / Bhagavad Gita",
+      "surface_patterns": [
+        "कृष्ण"
+      ]
+    },
+    {
+      "allow_short_pattern": true,
+      "canonical_form": "hi:classical:ग_त",
+      "canonical_reference": "गीता",
+      "confidence": 0.82,
+      "id": "ग_त",
+      "language": "hi",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Spiritual/philosophical teaching on duty and action.",
+      "surface_patterns": [
+        "गीता",
+        "भगवद्गीता"
+      ]
+    },
+    {
+      "canonical_form": "hi:classical:मह_भ_रत",
+      "canonical_reference": "महाभारत",
+      "confidence": 0.88,
+      "id": "मह_भ_रत",
+      "language": "hi",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Epic reference to conflict, duty, family, and moral complexity.",
+      "source_work": "Mahabharata",
+      "surface_patterns": [
+        "महाभारत"
+      ]
+    },
+    {
+      "canonical_form": "hi:classical:र_म_यण",
+      "canonical_reference": "रामायण",
+      "confidence": 0.88,
+      "id": "र_म_यण",
+      "language": "hi",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Epic reference to duty, exile, devotion, and conflict.",
+      "source_work": "Ramayana",
+      "surface_patterns": [
+        "रामायण"
+      ]
+    },
+    {
+      "canonical_form": "hi:literary:अ_ध_र_नगर",
+      "canonical_reference": "अंधेर नगरी",
+      "confidence": 0.88,
+      "id": "अ_ध_र_नगर",
+      "language": "hi",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Chaotic, foolish, or unjust governance.",
+      "source_author": "Bharatendu Harishchandra",
+      "source_work": "Andher Nagari",
+      "surface_patterns": [
+        "अंधेर नगरी"
+      ]
+    },
+    {
+      "canonical_form": "hi:literary:प_चत_तर",
+      "canonical_reference": "पंचतंत्र",
+      "confidence": 0.88,
+      "id": "प_चत_तर",
+      "language": "hi",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Animal fables teaching practical wisdom.",
+      "surface_patterns": [
+        "पंचतंत्र"
+      ]
+    },
+    {
+      "canonical_form": "hi:proverb:ऊ_ट_क_म_ह_म_ज_र",
+      "canonical_reference": "ऊँट के मुँह में जीरा",
+      "confidence": 0.88,
+      "id": "ऊ_ट_क_म_ह_म_ज_र",
+      "language": "hi",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Too little for a large need.",
+      "surface_patterns": [
+        "ऊँट के मुँह में जीरा"
+      ]
+    },
+    {
+      "canonical_form": "hi:proverb:घर_क_म_रग_द_ल_बर_बर",
+      "canonical_reference": "घर की मुर्गी दाल बराबर",
+      "confidence": 0.88,
+      "id": "घर_क_म_रग_द_ल_बर_बर",
+      "language": "hi",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Familiar things are undervalued.",
+      "surface_patterns": [
+        "घर की मुर्गी दाल बराबर"
+      ]
+    },
+    {
+      "canonical_form": "hi:proverb:न_च_न_ज_न_आ_गन_ट_ढ",
+      "canonical_reference": "नाच न जाने आँगन टेढ़ा",
+      "confidence": 0.88,
+      "id": "न_च_न_ज_न_आ_गन_ट_ढ",
+      "language": "hi",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Blaming circumstances for one’s own incompetence.",
+      "surface_patterns": [
+        "नाच न जाने आँगन टेढ़ा"
+      ]
+    }
+  ],
+  "language": "hi"
+}

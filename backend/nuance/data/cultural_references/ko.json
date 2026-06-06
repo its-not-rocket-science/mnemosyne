@@ -1,0 +1,146 @@
+{
+  "entries": [
+    {
+      "canonical_form": "ko:cultural:토끼와_거북이",
+      "canonical_reference": "토끼와 거북이",
+      "confidence": 0.88,
+      "id": "토끼와_거북이",
+      "language": "ko",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "The hare and the tortoise; persistence over arrogance.",
+      "surface_patterns": [
+        "토끼와 거북이"
+      ]
+    },
+    {
+      "canonical_form": "ko:cultural:흥부와_놀부",
+      "canonical_reference": "흥부와 놀부",
+      "confidence": 0.88,
+      "id": "흥부와_놀부",
+      "language": "ko",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "Folk-tale contrast between generosity and greed.",
+      "surface_patterns": [
+        "흥부와 놀부"
+      ]
+    },
+    {
+      "canonical_form": "ko:literary:심청전",
+      "canonical_reference": "심청전",
+      "confidence": 0.88,
+      "id": "심청전",
+      "language": "ko",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Filial piety and sacrifice in Korean classical fiction.",
+      "surface_patterns": [
+        "심청전"
+      ]
+    },
+    {
+      "canonical_form": "ko:literary:춘향전",
+      "canonical_reference": "춘향전",
+      "confidence": 0.88,
+      "id": "춘향전",
+      "language": "ko",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Love, loyalty, and resistance to corrupt authority.",
+      "surface_patterns": [
+        "춘향전"
+      ]
+    },
+    {
+      "canonical_form": "ko:literary:홍길동",
+      "canonical_reference": "홍길동",
+      "confidence": 0.88,
+      "id": "홍길동",
+      "language": "ko",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Heroic outlaw figure associated with justice and social constraint.",
+      "source_work": "홍길동전",
+      "surface_patterns": [
+        "홍길동"
+      ]
+    },
+    {
+      "canonical_form": "ko:proverb:고래_싸움에_새우_등_터진다",
+      "canonical_reference": "고래 싸움에 새우 등 터진다",
+      "confidence": 0.88,
+      "id": "고래_싸움에_새우_등_터진다",
+      "language": "ko",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "The weak suffer in conflicts between the powerful.",
+      "surface_patterns": [
+        "고래 싸움에 새우 등 터진다"
+      ]
+    },
+    {
+      "canonical_form": "ko:proverb:등잔_밑이_어둡다",
+      "canonical_reference": "등잔 밑이 어둡다",
+      "confidence": 0.88,
+      "id": "등잔_밑이_어둡다",
+      "language": "ko",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "People miss what is close.",
+      "surface_patterns": [
+        "등잔 밑이 어둡다"
+      ]
+    },
+    {
+      "canonical_form": "ko:proverb:시작이_반이다",
+      "canonical_reference": "시작이 반이다",
+      "confidence": 0.88,
+      "id": "시작이_반이다",
+      "language": "ko",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Beginning is half the task.",
+      "surface_patterns": [
+        "시작이 반이다"
+      ]
+    },
+    {
+      "canonical_form": "ko:proverb:원숭이도_나무에서_떨어진다",
+      "canonical_reference": "원숭이도 나무에서 떨어진다",
+      "confidence": 0.88,
+      "id": "원숭이도_나무에서_떨어진다",
+      "language": "ko",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Even experts make mistakes.",
+      "surface_patterns": [
+        "원숭이도 나무에서 떨어진다"
+      ]
+    },
+    {
+      "canonical_form": "ko:proverb:호랑이도_제_말_하면_온다",
+      "canonical_reference": "호랑이도 제 말 하면 온다",
+      "confidence": 0.88,
+      "id": "호랑이도_제_말_하면_온다",
+      "language": "ko",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Speak of the tiger and it appears.",
+      "surface_patterns": [
+        "호랑이도 제 말 하면 온다"
+      ]
+    }
+  ],
+  "language": "ko"
+}

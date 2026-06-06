@@ -249,15 +249,15 @@ class GermanPlugin:
         nuance_capabilities=NuanceCapabilities(
             idioms="partial",            # curated ~35-entry fixed-expression table
             phrase_families="partial",   # 10 families with variants and pedagogical notes
-            literary_references="none",
-            cultural_references="none",
+            literary_references="partial",
+            cultural_references="partial",
             etymology="strong",          # 100-entry curated catalog; core vocabulary + loanwords covered
             formality_register="stub",   # formal/informal verb forms detectable
             grammar_nuance="partial",    # case detection via dep-parse + drilling
             pronunciation_tts="partial", # browser TTS reliable for de
             transliteration="none",
-            proverb_tradition="none",
-            classical_or_scriptural_allusion="none",
+            proverb_tradition="partial",
+            classical_or_scriptural_allusion="partial",
         ),
     )
 
