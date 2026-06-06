@@ -18,7 +18,19 @@ SUPPORTED_LANGUAGES = ("en", "es", "fr", "de", "it", "pt", "ru", "ar", "he", "zh
 REFERENCE_TYPES = {"literary_reference", "cultural_reference", "proverb_tradition", "classical_or_scriptural_allusion"}
 LEARNER_LEVELS = {"A1", "A2", "B1", "B2", "C1", "C2"}
 REGISTERS = {"common", "literary", "formal", "informal", "religious", "classical", "proverbial"}
-SHORT_AMBIGUOUS = {"logos", "λόγος", "πίστις", "χάρις", "ἀγάπη", "faust", "sampo", "गीता", "कृष्ण", "अर्जुन", "जحا", "جحا"}
+SHORT_AMBIGUOUS = {
+    "logos",
+    "λόγος",
+    "πίστις",
+    "χάρις",
+    "ἀγάπη",
+    "faust",
+    "sampo",
+    "गीता",
+    "कृष्ण",
+    "अर्जुन",
+    "جحا",
+}
 COMMON_WORDS = SHORT_AMBIGUOUS | {"scrooge", "orwellian", "kafkaesque", "saudade", "memento mori", "dolce vita"}
 TYPE_PREFIX = {
     "literary_reference": "literary",
