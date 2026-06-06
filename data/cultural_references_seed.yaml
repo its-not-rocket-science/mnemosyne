@@ -1,2165 +1,1827 @@
-[
-  {
-    "language": "en",
-    "surface_patterns": [
-      "Achilles’ heel",
-      "Achilles heel"
-    ],
-    "canonical_reference": "Achilles’ heel",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A single vulnerable point in an otherwise strong person or system.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_work": "Greek myth / Iliadic tradition"
-  },
-  {
-    "language": "en",
-    "surface_patterns": [
-      "Trojan horse"
-    ],
-    "canonical_reference": "Trojan horse",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Something apparently harmless that conceals danger.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_work": "Trojan War tradition"
-  },
-  {
-    "language": "en",
-    "surface_patterns": [
-      "Big Brother"
-    ],
-    "canonical_reference": "Big Brother",
-    "reference_type": "literary_reference",
-    "short_explanation": "A symbol of intrusive surveillance and authoritarian control.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Nineteen Eighty-Four",
-    "source_author": "George Orwell"
-  },
-  {
-    "language": "en",
-    "surface_patterns": [
-      "Orwellian"
-    ],
-    "canonical_reference": "Orwellian",
-    "reference_type": "literary_reference",
-    "short_explanation": "Describes manipulative, authoritarian, or truth-distorting political language.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.86,
-    "source_work": "Nineteen Eighty-Four / Animal Farm",
-    "source_author": "George Orwell"
-  },
-  {
-    "language": "en",
-    "surface_patterns": [
-      "Kafkaesque"
-    ],
-    "canonical_reference": "Kafkaesque",
-    "reference_type": "literary_reference",
-    "short_explanation": "Absurd, oppressive bureaucracy or nightmarish helplessness.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.86,
-    "source_author": "Franz Kafka"
-  },
-  {
-    "language": "en",
-    "surface_patterns": [
-      "Scrooge"
-    ],
-    "canonical_reference": "Scrooge",
-    "reference_type": "literary_reference",
-    "short_explanation": "A miserly or ungenerous person.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.86,
-    "source_work": "A Christmas Carol",
-    "source_author": "Charles Dickens"
-  },
-  {
-    "language": "en",
-    "surface_patterns": [
-      "Jekyll and Hyde"
-    ],
-    "canonical_reference": "Jekyll and Hyde",
-    "reference_type": "literary_reference",
-    "short_explanation": "A sharply divided or double personality.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Strange Case of Dr Jekyll and Mr Hyde",
-    "source_author": "Robert Louis Stevenson"
-  },
-  {
-    "language": "en",
-    "surface_patterns": [
-      "Catch-22"
-    ],
-    "canonical_reference": "Catch-22",
-    "reference_type": "literary_reference",
-    "short_explanation": "A no-win bureaucratic paradox.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Catch-22",
-    "source_author": "Joseph Heller"
-  },
-  {
-    "language": "en",
-    "surface_patterns": [
-      "writing on the wall"
-    ],
-    "canonical_reference": "writing on the wall",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A sign that disaster or failure is imminent.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_work": "Book of Daniel"
-  },
-  {
-    "language": "en",
-    "surface_patterns": [
-      "forbidden fruit"
-    ],
-    "canonical_reference": "forbidden fruit",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Something tempting because it is prohibited.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_work": "Genesis"
-  },
-  {
-    "language": "es",
-    "surface_patterns": [
-      "Don Quijote",
-      "Don Quixote",
-      "quijotesco"
-    ],
-    "canonical_reference": "Don Quijote",
-    "reference_type": "literary_reference",
-    "short_explanation": "Idealistic, impractical, or nobly deluded behaviour.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Don Quijote de la Mancha",
-    "source_author": "Miguel de Cervantes"
-  },
-  {
-    "language": "es",
-    "surface_patterns": [
-      "luchar contra molinos de viento",
-      "molinos de viento"
-    ],
-    "canonical_reference": "molinos de viento",
-    "reference_type": "literary_reference",
-    "short_explanation": "Fighting imaginary enemies or impossible battles.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Don Quijote de la Mancha"
-  },
-  {
-    "language": "es",
-    "surface_patterns": [
-      "Lazarillo",
-      "Lazarillo de Tormes"
-    ],
-    "canonical_reference": "Lazarillo de Tormes",
-    "reference_type": "literary_reference",
-    "short_explanation": "A reference to picaresque survival, poverty, and cunning.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Lazarillo de Tormes"
-  },
-  {
-    "language": "es",
-    "surface_patterns": [
-      "Fuenteovejuna"
-    ],
-    "canonical_reference": "Fuenteovejuna",
-    "reference_type": "literary_reference",
-    "short_explanation": "Collective responsibility or communal resistance.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Fuenteovejuna",
-    "source_author": "Lope de Vega"
-  },
-  {
-    "language": "es",
-    "surface_patterns": [
-      "más vale tarde que nunca"
-    ],
-    "canonical_reference": "más vale tarde que nunca",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Better late than never.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "es",
-    "surface_patterns": [
-      "a buen entendedor, pocas palabras"
-    ],
-    "canonical_reference": "a buen entendedor, pocas palabras",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "A wise listener needs only a hint.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "es",
-    "surface_patterns": [
-      "talón de Aquiles"
-    ],
-    "canonical_reference": "talón de Aquiles",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A vulnerable point.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "es",
-    "surface_patterns": [
-      "caballo de Troya"
-    ],
-    "canonical_reference": "caballo de Troya",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A hidden danger inside an apparently harmless gift.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "es",
-    "surface_patterns": [
-      "estar en las nubes"
-    ],
-    "canonical_reference": "estar en las nubes",
-    "reference_type": "cultural_reference",
-    "short_explanation": "To be distracted or daydreaming.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "es",
-    "surface_patterns": [
-      "la vida es sueño"
-    ],
-    "canonical_reference": "la vida es sueño",
-    "reference_type": "literary_reference",
-    "short_explanation": "A reflection on illusion, fate, and free will.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "La vida es sueño",
-    "source_author": "Calderón de la Barca"
-  },
-  {
-    "language": "fr",
-    "surface_patterns": [
-      "madeleine de Proust"
-    ],
-    "canonical_reference": "madeleine de Proust",
-    "reference_type": "literary_reference",
-    "short_explanation": "A sensory trigger that evokes involuntary memory.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "À la recherche du temps perdu",
-    "source_author": "Marcel Proust"
-  },
-  {
-    "language": "fr",
-    "surface_patterns": [
-      "l’enfer, c’est les autres"
-    ],
-    "canonical_reference": "l’enfer, c’est les autres",
-    "reference_type": "literary_reference",
-    "short_explanation": "A phrase associated with social judgement and existential confinement.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Huis clos",
-    "source_author": "Jean-Paul Sartre"
-  },
-  {
-    "language": "fr",
-    "surface_patterns": [
-      "Candide",
-      "il faut cultiver notre jardin"
-    ],
-    "canonical_reference": "Candide",
-    "reference_type": "literary_reference",
-    "short_explanation": "A call to practical action rather than abstract speculation.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Candide",
-    "source_author": "Voltaire"
-  },
-  {
-    "language": "fr",
-    "surface_patterns": [
-      "esprit de l’escalier"
-    ],
-    "canonical_reference": "esprit de l’escalier",
-    "reference_type": "cultural_reference",
-    "short_explanation": "Thinking of the perfect reply too late.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "fr",
-    "surface_patterns": [
-      "après moi, le déluge"
-    ],
-    "canonical_reference": "après moi, le déluge",
-    "reference_type": "cultural_reference",
-    "short_explanation": "Indifference to consequences after one has gone.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "fr",
-    "surface_patterns": [
-      "chercher le mouton à cinq pattes"
-    ],
-    "canonical_reference": "chercher le mouton à cinq pattes",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Looking for something impossibly rare or over-specific.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "fr",
-    "surface_patterns": [
-      "talon d’Achille"
-    ],
-    "canonical_reference": "talon d’Achille",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A vulnerable point.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "fr",
-    "surface_patterns": [
-      "cheval de Troie"
-    ],
-    "canonical_reference": "cheval de Troie",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A hidden threat inside something apparently benign.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "fr",
-    "surface_patterns": [
-      "coup de grâce"
-    ],
-    "canonical_reference": "coup de grâce",
-    "reference_type": "cultural_reference",
-    "short_explanation": "A final decisive blow.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "fr",
-    "surface_patterns": [
-      "être ou ne pas être"
-    ],
-    "canonical_reference": "être ou ne pas être",
-    "reference_type": "literary_reference",
-    "short_explanation": "A famous formulation of existential hesitation.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Hamlet",
-    "source_author": "Shakespeare"
-  },
-  {
-    "language": "de",
-    "surface_patterns": [
-      "Gretchenfrage"
-    ],
-    "canonical_reference": "Gretchenfrage",
-    "reference_type": "literary_reference",
-    "short_explanation": "A crucial, revealing question.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Faust",
-    "source_author": "Johann Wolfgang von Goethe"
-  },
-  {
-    "language": "de",
-    "surface_patterns": [
-      "Faust",
-      "faustisch",
-      "faustischer Pakt"
-    ],
-    "canonical_reference": "Faust",
-    "reference_type": "literary_reference",
-    "short_explanation": "A bargain sacrificing moral integrity for knowledge, power, or gain.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Faust",
-    "source_author": "Goethe",
-    "allow_short_pattern": true
-  },
-  {
-    "language": "de",
-    "surface_patterns": [
-      "kafkaesk"
-    ],
-    "canonical_reference": "kafkaesk",
-    "reference_type": "literary_reference",
-    "short_explanation": "Absurd, oppressive bureaucracy or nightmarish helplessness.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_author": "Franz Kafka"
-  },
-  {
-    "language": "de",
-    "surface_patterns": [
-      "Werther"
-    ],
-    "canonical_reference": "Werther",
-    "reference_type": "literary_reference",
-    "short_explanation": "Romantic despair or intense sentimental suffering.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Die Leiden des jungen Werthers",
-    "source_author": "Goethe"
-  },
-  {
-    "language": "de",
-    "surface_patterns": [
-      "Eulen nach Athen tragen"
-    ],
-    "canonical_reference": "Eulen nach Athen tragen",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Doing something unnecessary; carrying owls to Athens.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "de",
-    "surface_patterns": [
-      "Achillesferse"
-    ],
-    "canonical_reference": "Achillesferse",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A vulnerable point.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "de",
-    "surface_patterns": [
-      "Trojanisches Pferd"
-    ],
-    "canonical_reference": "Trojanisches Pferd",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A hidden threat inside a gift or system.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "de",
-    "surface_patterns": [
-      "Schlaraffenland"
-    ],
-    "canonical_reference": "Schlaraffenland",
-    "reference_type": "cultural_reference",
-    "short_explanation": "A fantasy land of effortless abundance.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "de",
-    "surface_patterns": [
-      "den Wald vor lauter Bäumen nicht sehen"
-    ],
-    "canonical_reference": "den Wald vor lauter Bäumen nicht sehen",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Missing the bigger picture because of too many details.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "de",
-    "surface_patterns": [
-      "Sisyphusarbeit"
-    ],
-    "canonical_reference": "Sisyphusarbeit",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Endless, futile labour.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "it",
-    "surface_patterns": [
-      "dolce vita"
-    ],
-    "canonical_reference": "dolce vita",
-    "reference_type": "cultural_reference",
-    "short_explanation": "A life of pleasure, glamour, or stylish ease.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88,
-    "source_work": "La Dolce Vita",
-    "source_author": "Federico Fellini"
-  },
-  {
-    "language": "it",
-    "surface_patterns": [
-      "gattopardo",
-      "gattopardesco"
-    ],
-    "canonical_reference": "gattopardo",
-    "reference_type": "literary_reference",
-    "short_explanation": "Apparent change that preserves existing power.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Il Gattopardo",
-    "source_author": "Giuseppe Tomasi di Lampedusa"
-  },
-  {
-    "language": "it",
-    "surface_patterns": [
-      "don Abbondio"
-    ],
-    "canonical_reference": "don Abbondio",
-    "reference_type": "literary_reference",
-    "short_explanation": "Cowardly or evasive clerical behaviour.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "I promessi sposi",
-    "source_author": "Alessandro Manzoni"
-  },
-  {
-    "language": "it",
-    "surface_patterns": [
-      "i promessi sposi"
-    ],
-    "canonical_reference": "i promessi sposi",
-    "reference_type": "literary_reference",
-    "short_explanation": "A reference to canonical Italian literature and social/religious constraint.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88
-  },
-  {
-    "language": "it",
-    "surface_patterns": [
-      "uscire dalla selva oscura"
-    ],
-    "canonical_reference": "uscire dalla selva oscura",
-    "reference_type": "literary_reference",
-    "short_explanation": "Emerging from confusion, crisis, or moral darkness.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Divina Commedia",
-    "source_author": "Dante Alighieri"
-  },
-  {
-    "language": "it",
-    "surface_patterns": [
-      "galeotto fu il libro"
-    ],
-    "canonical_reference": "galeotto fu il libro",
-    "reference_type": "literary_reference",
-    "short_explanation": "A book or intermediary that enables a fateful romance.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Inferno",
-    "source_author": "Dante Alighieri"
-  },
-  {
-    "language": "it",
-    "surface_patterns": [
-      "tallone d’Achille"
-    ],
-    "canonical_reference": "tallone d’Achille",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A vulnerable point.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "it",
-    "surface_patterns": [
-      "cavallo di Troia"
-    ],
-    "canonical_reference": "cavallo di Troia",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A hidden threat inside something apparently harmless.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "it",
-    "surface_patterns": [
-      "tra il dire e il fare c’è di mezzo il mare"
-    ],
-    "canonical_reference": "tra il dire e il fare c’è di mezzo il mare",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Saying something is much easier than doing it.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "it",
-    "surface_patterns": [
-      "chi dorme non piglia pesci"
-    ],
-    "canonical_reference": "chi dorme non piglia pesci",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Opportunity requires action.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "pt",
-    "surface_patterns": [
-      "Adamastor"
-    ],
-    "canonical_reference": "Adamastor",
-    "reference_type": "literary_reference",
-    "short_explanation": "A monstrous obstacle or threatening force.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Os Lusíadas",
-    "source_author": "Luís de Camões"
-  },
-  {
-    "language": "pt",
-    "surface_patterns": [
-      "velho do Restelo"
-    ],
-    "canonical_reference": "velho do Restelo",
-    "reference_type": "literary_reference",
-    "short_explanation": "A pessimistic critic of risky ambition.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Os Lusíadas",
-    "source_author": "Camões"
-  },
-  {
-    "language": "pt",
-    "surface_patterns": [
-      "Inês de Castro"
-    ],
-    "canonical_reference": "Inês de Castro",
-    "reference_type": "literary_reference",
-    "short_explanation": "Tragic love and posthumous recognition.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88
-  },
-  {
-    "language": "pt",
-    "surface_patterns": [
-      "sebastianismo"
-    ],
-    "canonical_reference": "sebastianismo",
-    "reference_type": "cultural_reference",
-    "short_explanation": "Hope for a vanished saviour or impossible return.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "pt",
-    "surface_patterns": [
-      "saudade"
-    ],
-    "canonical_reference": "saudade",
-    "reference_type": "cultural_reference",
-    "short_explanation": "A culturally important feeling of longing, absence, or nostalgia.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.84
-  },
-  {
-    "language": "pt",
-    "surface_patterns": [
-      "talão de Aquiles"
-    ],
-    "canonical_reference": "talão de Aquiles",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A vulnerable point.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "pt",
-    "surface_patterns": [
-      "cavalo de Troia"
-    ],
-    "canonical_reference": "cavalo de Troia",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A hidden threat inside something apparently harmless.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "pt",
-    "surface_patterns": [
-      "mais vale tarde do que nunca"
-    ],
-    "canonical_reference": "mais vale tarde do que nunca",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Better late than never.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "pt",
-    "surface_patterns": [
-      "água mole em pedra dura"
-    ],
-    "canonical_reference": "água mole em pedra dura",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Persistence eventually succeeds.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "pt",
-    "surface_patterns": [
-      "quem não arrisca não petisca"
-    ],
-    "canonical_reference": "quem não arrisca não petisca",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Nothing ventured, nothing gained.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ru",
-    "surface_patterns": [
-      "Обломов",
-      "обломовщина"
-    ],
-    "canonical_reference": "Обломов",
-    "reference_type": "literary_reference",
-    "short_explanation": "Inertia, passivity, or chronic inability to act.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Обломов",
-    "source_author": "Иван Гончаров"
-  },
-  {
-    "language": "ru",
-    "surface_patterns": [
-      "Раскольников"
-    ],
-    "canonical_reference": "Раскольников",
-    "reference_type": "literary_reference",
-    "short_explanation": "Guilt, moral transgression, or tortured conscience.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Преступление и наказание",
-    "source_author": "Фёдор Достоевский"
-  },
-  {
-    "language": "ru",
-    "surface_patterns": [
-      "маленький человек"
-    ],
-    "canonical_reference": "маленький человек",
-    "reference_type": "literary_reference",
-    "short_explanation": "The little man figure in Russian literature: powerless, ordinary, often humiliated.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88
-  },
-  {
-    "language": "ru",
-    "surface_patterns": [
-      "лишний человек"
-    ],
-    "canonical_reference": "лишний человек",
-    "reference_type": "literary_reference",
-    "short_explanation": "The superfluous man: alienated, gifted, but socially ineffective.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88
-  },
-  {
-    "language": "ru",
-    "surface_patterns": [
-      "Потёмкинская деревня"
-    ],
-    "canonical_reference": "Потёмкинская деревня",
-    "reference_type": "cultural_reference",
-    "short_explanation": "A façade concealing poor reality.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "ru",
-    "surface_patterns": [
-      "Троянский конь"
-    ],
-    "canonical_reference": "Троянский конь",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A hidden threat inside something apparently harmless.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "ru",
-    "surface_patterns": [
-      "ахиллесова пята"
-    ],
-    "canonical_reference": "ахиллесова пята",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A vulnerable point.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "ru",
-    "surface_patterns": [
-      "сизифов труд"
-    ],
-    "canonical_reference": "сизифов труд",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Endless, futile labour.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "ru",
-    "surface_patterns": [
-      "Москва слезам не верит"
-    ],
-    "canonical_reference": "Москва слезам не верит",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Practical resilience; tears do not solve problems.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ru",
-    "surface_patterns": [
-      "без труда не вытащишь и рыбку из пруда"
-    ],
-    "canonical_reference": "без труда не вытащишь и рыбку из пруда",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "No reward without effort.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ar",
-    "surface_patterns": [
-      "ألف ليلة وليلة"
-    ],
-    "canonical_reference": "ألف ليلة وليلة",
-    "reference_type": "literary_reference",
-    "short_explanation": "A reference to storytelling, marvels, or layered tales.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "One Thousand and One Nights"
-  },
-  {
-    "language": "ar",
-    "surface_patterns": [
-      "شهرزاد"
-    ],
-    "canonical_reference": "شهرزاد",
-    "reference_type": "literary_reference",
-    "short_explanation": "Clever storytelling used for survival or persuasion.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "One Thousand and One Nights"
-  },
-  {
-    "language": "ar",
-    "surface_patterns": [
-      "علاء الدين"
-    ],
-    "canonical_reference": "علاء الدين",
-    "reference_type": "cultural_reference",
-    "short_explanation": "A magical wish or sudden fortune motif.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "ar",
-    "surface_patterns": [
-      "حصان طروادة"
-    ],
-    "canonical_reference": "حصان طروادة",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A hidden threat inside something apparently harmless.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "ar",
-    "surface_patterns": [
-      "كعب أخيل"
-    ],
-    "canonical_reference": "كعب أخيل",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A vulnerable point.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "ar",
-    "surface_patterns": [
-      "لا تؤجل عمل اليوم إلى الغد"
-    ],
-    "canonical_reference": "لا تؤجل عمل اليوم إلى الغد",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Do not put off today’s work until tomorrow.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ar",
-    "surface_patterns": [
-      "رب ضارة نافعة"
-    ],
-    "canonical_reference": "رب ضارة نافعة",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "A harmful thing may bring benefit.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ar",
-    "surface_patterns": [
-      "اتق شر من أحسنت إليه"
-    ],
-    "canonical_reference": "اتق شر من أحسنت إليه",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Beware harm from someone you have helped.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ar",
-    "surface_patterns": [
-      "كما تدين تدان"
-    ],
-    "canonical_reference": "كما تدين تدان",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "As you judge or act, so you will be judged or repaid.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ar",
-    "surface_patterns": [
-      "جحا"
-    ],
-    "canonical_reference": "جحا",
-    "reference_type": "cultural_reference",
-    "short_explanation": "A comic folk figure associated with wit, foolishness, and satire.",
-    "learner_level": "B1",
-    "register": "common",
-    "confidence": 0.78,
-    "allow_short_pattern": true
-  },
-  {
-    "language": "he",
-    "surface_patterns": [
-      "עקב אכילס"
-    ],
-    "canonical_reference": "עקב אכילס",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A vulnerable point.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "he",
-    "surface_patterns": [
-      "סוס טרויאני"
-    ],
-    "canonical_reference": "סוס טרויאני",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A hidden threat inside something apparently harmless.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "he",
-    "surface_patterns": [
-      "דוד וגוליית"
-    ],
-    "canonical_reference": "דוד וגוליית",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A small or weaker opponent facing a giant.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_work": "Hebrew Bible"
-  },
-  {
-    "language": "he",
-    "surface_patterns": [
-      "מגדל בבל"
-    ],
-    "canonical_reference": "מגדל בבל",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Confusion of language or failed human overreach.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_work": "Genesis"
-  },
-  {
-    "language": "he",
-    "surface_patterns": [
-      "תיבת פנדורה"
-    ],
-    "canonical_reference": "תיבת פנדורה",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A source of unforeseen troubles once opened.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "he",
-    "surface_patterns": [
-      "אין חדש תחת השמש"
-    ],
-    "canonical_reference": "אין חדש תחת השמש",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "There is nothing new under the sun.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_work": "Ecclesiastes"
-  },
-  {
-    "language": "he",
-    "surface_patterns": [
-      "לך אל הנמלה"
-    ],
-    "canonical_reference": "לך אל הנמלה",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Learn diligence from the ant.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_work": "Proverbs"
-  },
-  {
-    "language": "he",
-    "surface_patterns": [
-      "אם אין אני לי מי לי"
-    ],
-    "canonical_reference": "אם אין אני לי מי לי",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "If I am not for myself, who will be for me?",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "he",
-    "surface_patterns": [
-      "תפסת מרובה לא תפסת"
-    ],
-    "canonical_reference": "תפסת מרובה לא תפסת",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Grasping too much may mean grasping nothing.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "he",
-    "surface_patterns": [
-      "חכמת שלמה"
-    ],
-    "canonical_reference": "חכמת שלמה",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Solomonic wisdom or judgement.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "zh",
-    "surface_patterns": [
-      "井底之蛙"
-    ],
-    "canonical_reference": "井底之蛙",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "A frog in a well; someone with a narrow view.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "zh",
-    "surface_patterns": [
-      "画蛇添足"
-    ],
-    "canonical_reference": "画蛇添足",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "To ruin something by adding unnecessary detail.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "zh",
-    "surface_patterns": [
-      "守株待兔"
-    ],
-    "canonical_reference": "守株待兔",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Waiting idly for luck instead of acting.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "zh",
-    "surface_patterns": [
-      "掩耳盗铃"
-    ],
-    "canonical_reference": "掩耳盗铃",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Fooling oneself by ignoring reality.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "zh",
-    "surface_patterns": [
-      "塞翁失马"
-    ],
-    "canonical_reference": "塞翁失马",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Misfortune may turn into blessing.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "zh",
-    "surface_patterns": [
-      "纸上谈兵"
-    ],
-    "canonical_reference": "纸上谈兵",
-    "reference_type": "cultural_reference",
-    "short_explanation": "Armchair strategy; theory without practical ability.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "zh",
-    "surface_patterns": [
-      "三顾茅庐"
-    ],
-    "canonical_reference": "三顾茅庐",
-    "reference_type": "literary_reference",
-    "short_explanation": "Sincere repeated effort to recruit talent.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Romance of the Three Kingdoms tradition"
-  },
-  {
-    "language": "zh",
-    "surface_patterns": [
-      "草船借箭"
-    ],
-    "canonical_reference": "草船借箭",
-    "reference_type": "literary_reference",
-    "short_explanation": "Cleverly using circumstances to obtain resources.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Romance of the Three Kingdoms tradition"
-  },
-  {
-    "language": "zh",
-    "surface_patterns": [
-      "红楼梦"
-    ],
-    "canonical_reference": "红楼梦",
-    "reference_type": "literary_reference",
-    "short_explanation": "A reference to one of the great Chinese classical novels.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Dream of the Red Chamber"
-  },
-  {
-    "language": "zh",
-    "surface_patterns": [
-      "西游记"
-    ],
-    "canonical_reference": "西游记",
-    "reference_type": "literary_reference",
-    "short_explanation": "Pilgrimage, mischief, transformation, and adventure.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Journey to the West"
-  },
-  {
-    "language": "ja",
-    "surface_patterns": [
-      "猿も木から落ちる"
-    ],
-    "canonical_reference": "猿も木から落ちる",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Even experts make mistakes.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ja",
-    "surface_patterns": [
-      "七転び八起き"
-    ],
-    "canonical_reference": "七転び八起き",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Fall seven times, rise eight.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ja",
-    "surface_patterns": [
-      "花より団子"
-    ],
-    "canonical_reference": "花より団子",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Practical benefit over aesthetic appreciation.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ja",
-    "surface_patterns": [
-      "猫に小判"
-    ],
-    "canonical_reference": "猫に小判",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Giving something valuable to someone who cannot appreciate it.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ja",
-    "surface_patterns": [
-      "井の中の蛙"
-    ],
-    "canonical_reference": "井の中の蛙",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Someone with a narrow perspective.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ja",
-    "surface_patterns": [
-      "源氏物語"
-    ],
-    "canonical_reference": "源氏物語",
-    "reference_type": "literary_reference",
-    "short_explanation": "A reference to classical court literature and romance.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "The Tale of Genji",
-    "source_author": "Murasaki Shikibu"
-  },
-  {
-    "language": "ja",
-    "surface_patterns": [
-      "羅生門"
-    ],
-    "canonical_reference": "羅生門",
-    "reference_type": "literary_reference",
-    "short_explanation": "Ambiguous testimony or conflicting perspectives.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Rashōmon",
-    "source_author": "Akutagawa Ryūnosuke"
-  },
-  {
-    "language": "ja",
-    "surface_patterns": [
-      "雪国"
-    ],
-    "canonical_reference": "雪国",
-    "reference_type": "literary_reference",
-    "short_explanation": "A reference to melancholy, beauty, and isolation.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Snow Country",
-    "source_author": "Kawabata Yasunari",
-    "allow_short_pattern": true
-  },
-  {
-    "language": "ja",
-    "surface_patterns": [
-      "桃太郎"
-    ],
-    "canonical_reference": "桃太郎",
-    "reference_type": "cultural_reference",
-    "short_explanation": "Folk hero associated with courage and companions.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "ja",
-    "surface_patterns": [
-      "浦島太郎"
-    ],
-    "canonical_reference": "浦島太郎",
-    "reference_type": "cultural_reference",
-    "short_explanation": "A folk tale of time displacement and return.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "la",
-    "surface_patterns": [
-      "carpe diem"
-    ],
-    "canonical_reference": "carpe diem",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Seize the day; act in the present.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_work": "Odes",
-    "source_author": "Horace"
-  },
-  {
-    "language": "la",
-    "surface_patterns": [
-      "memento mori"
-    ],
-    "canonical_reference": "memento mori",
-    "reference_type": "cultural_reference",
-    "short_explanation": "Remember that you must die.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "la",
-    "surface_patterns": [
-      "alea iacta est"
-    ],
-    "canonical_reference": "alea iacta est",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "The die is cast; an irreversible decision has been made.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_author": "Julius Caesar tradition"
-  },
-  {
-    "language": "la",
-    "surface_patterns": [
-      "veni vidi vici"
-    ],
-    "canonical_reference": "veni vidi vici",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "I came, I saw, I conquered.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_author": "Julius Caesar"
-  },
-  {
-    "language": "la",
-    "surface_patterns": [
-      "et tu Brute"
-    ],
-    "canonical_reference": "et tu Brute",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A betrayal by someone close.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_work": "Shakespeare/Caesar tradition"
-  },
-  {
-    "language": "la",
-    "surface_patterns": [
-      "in vino veritas"
-    ],
-    "canonical_reference": "in vino veritas",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "In wine, truth.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "la",
-    "surface_patterns": [
-      "ars longa vita brevis"
-    ],
-    "canonical_reference": "ars longa vita brevis",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Art is long, life is short.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "la",
-    "surface_patterns": [
-      "homo homini lupus"
-    ],
-    "canonical_reference": "homo homini lupus",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Man is a wolf to man.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "la",
-    "surface_patterns": [
-      "sic transit gloria mundi"
-    ],
-    "canonical_reference": "sic transit gloria mundi",
-    "reference_type": "cultural_reference",
-    "short_explanation": "Thus passes worldly glory.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "la",
-    "surface_patterns": [
-      "panem et circenses"
-    ],
-    "canonical_reference": "panem et circenses",
-    "reference_type": "cultural_reference",
-    "short_explanation": "Bread and circuses; public appeasement through food and spectacle.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88,
-    "source_author": "Juvenal"
-  },
-  {
-    "language": "grc",
-    "surface_patterns": [
-      "λόγος"
-    ],
-    "canonical_reference": "λόγος",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Word, reason, or divine ordering principle depending on context.",
-    "learner_level": "C1",
-    "register": "religious",
-    "confidence": 0.7,
-    "source_work": "John 1 / Greek philosophical tradition",
-    "notes": "Only annotate when context strongly suggests scriptural/philosophical use.",
-    "allow_short_pattern": true
-  },
-  {
-    "language": "grc",
-    "surface_patterns": [
-      "ἄλφα καὶ ὦ"
-    ],
-    "canonical_reference": "ἄλφα καὶ ὦ",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Alpha and omega; beginning and end.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_work": "Revelation"
-  },
-  {
-    "language": "grc",
-    "surface_patterns": [
-      "ὁ καλὸς ποιμήν"
-    ],
-    "canonical_reference": "ὁ καλὸς ποιμήν",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "The good shepherd.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_work": "John"
-  },
-  {
-    "language": "grc",
-    "surface_patterns": [
-      "υἱὸς τοῦ ἀνθρώπου"
-    ],
-    "canonical_reference": "υἱὸς τοῦ ἀνθρώπου",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Son of Man; scriptural title/expression.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "grc",
-    "surface_patterns": [
-      "βασιλεία τοῦ θεοῦ"
-    ],
-    "canonical_reference": "βασιλεία τοῦ θεοῦ",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Kingdom of God.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "grc",
-    "surface_patterns": [
-      "πίστις"
-    ],
-    "canonical_reference": "πίστις",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Faith/trust; important theological and ethical term.",
-    "learner_level": "C1",
-    "register": "religious",
-    "confidence": 0.65,
-    "notes": "Common word; avoid high confidence unless context is scriptural.",
-    "allow_short_pattern": true
-  },
-  {
-    "language": "grc",
-    "surface_patterns": [
-      "χάρις"
-    ],
-    "canonical_reference": "χάρις",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Grace/favour; important theological and social term.",
-    "learner_level": "C1",
-    "register": "religious",
-    "confidence": 0.65,
-    "allow_short_pattern": true
-  },
-  {
-    "language": "grc",
-    "surface_patterns": [
-      "ἀγάπη"
-    ],
-    "canonical_reference": "ἀγάπη",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Love, especially in Christian ethical/theological contexts.",
-    "learner_level": "C1",
-    "register": "religious",
-    "confidence": 0.7,
-    "allow_short_pattern": true
-  },
-  {
-    "language": "grc",
-    "surface_patterns": [
-      "εἰρήνη ὑμῖν"
-    ],
-    "canonical_reference": "εἰρήνη ὑμῖν",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Peace be with you.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "grc",
-    "surface_patterns": [
-      "πολλοὶ κλητοί, ὀλίγοι δὲ ἐκλεκτοί"
-    ],
-    "canonical_reference": "πολλοὶ κλητοί, ὀλίγοι δὲ ἐκλεκτοί",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Many are called, but few are chosen.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "ko",
-    "surface_patterns": [
-      "토끼와 거북이"
-    ],
-    "canonical_reference": "토끼와 거북이",
-    "reference_type": "cultural_reference",
-    "short_explanation": "The hare and the tortoise; persistence over arrogance.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "ko",
-    "surface_patterns": [
-      "흥부와 놀부"
-    ],
-    "canonical_reference": "흥부와 놀부",
-    "reference_type": "cultural_reference",
-    "short_explanation": "Folk-tale contrast between generosity and greed.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "ko",
-    "surface_patterns": [
-      "심청전"
-    ],
-    "canonical_reference": "심청전",
-    "reference_type": "literary_reference",
-    "short_explanation": "Filial piety and sacrifice in Korean classical fiction.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88
-  },
-  {
-    "language": "ko",
-    "surface_patterns": [
-      "춘향전"
-    ],
-    "canonical_reference": "춘향전",
-    "reference_type": "literary_reference",
-    "short_explanation": "Love, loyalty, and resistance to corrupt authority.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88
-  },
-  {
-    "language": "ko",
-    "surface_patterns": [
-      "홍길동"
-    ],
-    "canonical_reference": "홍길동",
-    "reference_type": "literary_reference",
-    "short_explanation": "Heroic outlaw figure associated with justice and social constraint.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "홍길동전"
-  },
-  {
-    "language": "ko",
-    "surface_patterns": [
-      "고래 싸움에 새우 등 터진다"
-    ],
-    "canonical_reference": "고래 싸움에 새우 등 터진다",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "The weak suffer in conflicts between the powerful.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ko",
-    "surface_patterns": [
-      "호랑이도 제 말 하면 온다"
-    ],
-    "canonical_reference": "호랑이도 제 말 하면 온다",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Speak of the tiger and it appears.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ko",
-    "surface_patterns": [
-      "원숭이도 나무에서 떨어진다"
-    ],
-    "canonical_reference": "원숭이도 나무에서 떨어진다",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Even experts make mistakes.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ko",
-    "surface_patterns": [
-      "등잔 밑이 어둡다"
-    ],
-    "canonical_reference": "등잔 밑이 어둡다",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "People miss what is close.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "ko",
-    "surface_patterns": [
-      "시작이 반이다"
-    ],
-    "canonical_reference": "시작이 반이다",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Beginning is half the task.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "hi",
-    "surface_patterns": [
-      "रामायण"
-    ],
-    "canonical_reference": "रामायण",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Epic reference to duty, exile, devotion, and conflict.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_work": "Ramayana"
-  },
-  {
-    "language": "hi",
-    "surface_patterns": [
-      "महाभारत"
-    ],
-    "canonical_reference": "महाभारत",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Epic reference to conflict, duty, family, and moral complexity.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88,
-    "source_work": "Mahabharata"
-  },
-  {
-    "language": "hi",
-    "surface_patterns": [
-      "अर्जुन"
-    ],
-    "canonical_reference": "अर्जुन",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Archer-warrior figure associated with skill and moral hesitation.",
-    "learner_level": "B2",
-    "register": "religious",
-    "confidence": 0.82,
-    "source_work": "Mahabharata",
-    "allow_short_pattern": true
-  },
-  {
-    "language": "hi",
-    "surface_patterns": [
-      "कृष्ण"
-    ],
-    "canonical_reference": "कृष्ण",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Divine counsellor, strategist, or beloved deity depending on context.",
-    "learner_level": "B2",
-    "register": "religious",
-    "confidence": 0.82,
-    "source_work": "Mahabharata / Bhagavad Gita",
-    "allow_short_pattern": true
-  },
-  {
-    "language": "hi",
-    "surface_patterns": [
-      "गीता",
-      "भगवद्गीता"
-    ],
-    "canonical_reference": "गीता",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "Spiritual/philosophical teaching on duty and action.",
-    "learner_level": "B2",
-    "register": "religious",
-    "confidence": 0.82,
-    "allow_short_pattern": true
-  },
-  {
-    "language": "hi",
-    "surface_patterns": [
-      "पंचतंत्र"
-    ],
-    "canonical_reference": "पंचतंत्र",
-    "reference_type": "literary_reference",
-    "short_explanation": "Animal fables teaching practical wisdom.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88
-  },
-  {
-    "language": "hi",
-    "surface_patterns": [
-      "अंधेर नगरी"
-    ],
-    "canonical_reference": "अंधेर नगरी",
-    "reference_type": "literary_reference",
-    "short_explanation": "Chaotic, foolish, or unjust governance.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Andher Nagari",
-    "source_author": "Bharatendu Harishchandra"
-  },
-  {
-    "language": "hi",
-    "surface_patterns": [
-      "घर की मुर्गी दाल बराबर"
-    ],
-    "canonical_reference": "घर की मुर्गी दाल बराबर",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Familiar things are undervalued.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "hi",
-    "surface_patterns": [
-      "नाच न जाने आँगन टेढ़ा"
-    ],
-    "canonical_reference": "नाच न जाने आँगन टेढ़ा",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Blaming circumstances for one’s own incompetence.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "hi",
-    "surface_patterns": [
-      "ऊँट के मुँह में जीरा"
-    ],
-    "canonical_reference": "ऊँट के मुँह में जीरा",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Too little for a large need.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "tr",
-    "surface_patterns": [
-      "Nasreddin Hoca",
-      "Nasrettin Hoca"
-    ],
-    "canonical_reference": "Nasreddin Hoca",
-    "reference_type": "cultural_reference",
-    "short_explanation": "Folk figure associated with wit, irony, and comic wisdom.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  },
-  {
-    "language": "tr",
-    "surface_patterns": [
-      "Dede Korkut"
-    ],
-    "canonical_reference": "Dede Korkut",
-    "reference_type": "literary_reference",
-    "short_explanation": "Epic Turkic narrative tradition.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Book of Dede Korkut"
-  },
-  {
-    "language": "tr",
-    "surface_patterns": [
-      "Leyla ile Mecnun"
-    ],
-    "canonical_reference": "Leyla ile Mecnun",
-    "reference_type": "literary_reference",
-    "short_explanation": "Tragic or obsessive love.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88
-  },
-  {
-    "language": "tr",
-    "surface_patterns": [
-      "Köroğlu"
-    ],
-    "canonical_reference": "Köroğlu",
-    "reference_type": "literary_reference",
-    "short_explanation": "Folk-epic hero associated with resistance and justice.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88
-  },
-  {
-    "language": "tr",
-    "surface_patterns": [
-      "İnce Memed"
-    ],
-    "canonical_reference": "İnce Memed",
-    "reference_type": "literary_reference",
-    "short_explanation": "Rebellion against oppression and landlord power.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_author": "Yaşar Kemal"
-  },
-  {
-    "language": "tr",
-    "surface_patterns": [
-      "Truva atı"
-    ],
-    "canonical_reference": "Truva atı",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A hidden threat inside something apparently harmless.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "tr",
-    "surface_patterns": [
-      "Aşil topuğu"
-    ],
-    "canonical_reference": "Aşil topuğu",
-    "reference_type": "classical_or_scriptural_allusion",
-    "short_explanation": "A vulnerable point.",
-    "learner_level": "B2",
-    "register": "classical",
-    "confidence": 0.88
-  },
-  {
-    "language": "tr",
-    "surface_patterns": [
-      "damlaya damlaya göl olur"
-    ],
-    "canonical_reference": "damlaya damlaya göl olur",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Small amounts accumulate into something large.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "tr",
-    "surface_patterns": [
-      "sakla samanı gelir zamanı"
-    ],
-    "canonical_reference": "sakla samanı gelir zamanı",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Keep even humble things; they may be useful later.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "tr",
-    "surface_patterns": [
-      "sütten ağzı yanan yoğurdu üfleyerek yer"
-    ],
-    "canonical_reference": "sütten ağzı yanan yoğurdu üfleyerek yer",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Once bitten, twice shy.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "fi",
-    "surface_patterns": [
-      "Kalevala"
-    ],
-    "canonical_reference": "Kalevala",
-    "reference_type": "literary_reference",
-    "short_explanation": "Finnish national epic tradition.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Kalevala"
-  },
-  {
-    "language": "fi",
-    "surface_patterns": [
-      "Väinämöinen"
-    ],
-    "canonical_reference": "Väinämöinen",
-    "reference_type": "literary_reference",
-    "short_explanation": "Wise singer/sage figure from the Kalevala.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Kalevala"
-  },
-  {
-    "language": "fi",
-    "surface_patterns": [
-      "Sampo"
-    ],
-    "canonical_reference": "Sampo",
-    "reference_type": "literary_reference",
-    "short_explanation": "Mythic object of prosperity or abundance.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.82,
-    "source_work": "Kalevala",
-    "allow_short_pattern": true
-  },
-  {
-    "language": "fi",
-    "surface_patterns": [
-      "Kullervo"
-    ],
-    "canonical_reference": "Kullervo",
-    "reference_type": "literary_reference",
-    "short_explanation": "Tragic figure associated with fate, anger, and ruin.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Kalevala"
-  },
-  {
-    "language": "fi",
-    "surface_patterns": [
-      "Tuntematon sotilas"
-    ],
-    "canonical_reference": "Tuntematon sotilas",
-    "reference_type": "literary_reference",
-    "short_explanation": "War, comradeship, and Finnish national memory.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Tuntematon sotilas",
-    "source_author": "Väinö Linna"
-  },
-  {
-    "language": "fi",
-    "surface_patterns": [
-      "Seitsemän veljestä"
-    ],
-    "canonical_reference": "Seitsemän veljestä",
-    "reference_type": "literary_reference",
-    "short_explanation": "Finnish literary classic about brothers, society, and learning.",
-    "learner_level": "B2",
-    "register": "literary",
-    "confidence": 0.88,
-    "source_work": "Seitsemän veljestä",
-    "source_author": "Aleksis Kivi"
-  },
-  {
-    "language": "fi",
-    "surface_patterns": [
-      "ei kahta ilman kolmatta"
-    ],
-    "canonical_reference": "ei kahta ilman kolmatta",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Things tend to come in threes.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "fi",
-    "surface_patterns": [
-      "hiljaa hyvä tulee"
-    ],
-    "canonical_reference": "hiljaa hyvä tulee",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Good things come slowly/carefully.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "fi",
-    "surface_patterns": [
-      "oma lehmä ojassa"
-    ],
-    "canonical_reference": "oma lehmä ojassa",
-    "reference_type": "proverb_tradition",
-    "short_explanation": "Someone has a personal interest at stake.",
-    "learner_level": "B2",
-    "register": "proverbial",
-    "confidence": 0.88
-  },
-  {
-    "language": "fi",
-    "surface_patterns": [
-      "mennä metsään"
-    ],
-    "canonical_reference": "mennä metsään",
-    "reference_type": "cultural_reference",
-    "short_explanation": "To go wrong; literally, to go into the forest.",
-    "learner_level": "B2",
-    "register": "common",
-    "confidence": 0.88
-  }
-]
+# Curated source catalogue for generated cultural/literary/proverb/allusion runtime data.
+# Keep entries hand-editable YAML; regenerate JSON with scripts/build_cultural_catalog.py.
+- language: en
+  canonical_reference: Achilles’ heel
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Achilles’ heel
+    - Achilles heel
+  short_explanation: >
+    A single vulnerable point in an otherwise strong person or system.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_work: Greek myth / Iliadic tradition
+- language: en
+  canonical_reference: Trojan horse
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Trojan horse
+  short_explanation: >
+    Something apparently harmless that conceals danger.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_work: Trojan War tradition
+- language: en
+  canonical_reference: Big Brother
+  reference_type: literary_reference
+  surface_patterns:
+    - Big Brother
+  short_explanation: >
+    A symbol of intrusive surveillance and authoritarian control.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+- language: en
+  canonical_reference: Orwellian
+  reference_type: literary_reference
+  surface_patterns:
+    - Orwellian
+  short_explanation: >
+    Describes manipulative, authoritarian, or truth-distorting political language.
+  learner_level: B2
+  register: literary
+  confidence: 0.86
+  source_work: Nineteen Eighty-Four / Animal Farm
+  source_author: George Orwell
+- language: en
+  canonical_reference: Kafkaesque
+  reference_type: literary_reference
+  surface_patterns:
+    - Kafkaesque
+  short_explanation: >
+    Absurd, oppressive bureaucracy or nightmarish helplessness.
+  learner_level: B2
+  register: literary
+  confidence: 0.86
+  source_author: Franz Kafka
+- language: en
+  canonical_reference: Scrooge
+  reference_type: literary_reference
+  surface_patterns:
+    - Scrooge
+  short_explanation: >
+    A miserly or ungenerous person.
+  learner_level: B2
+  register: literary
+  confidence: 0.86
+  source_work: A Christmas Carol
+  source_author: Charles Dickens
+- language: en
+  canonical_reference: Jekyll and Hyde
+  reference_type: literary_reference
+  surface_patterns:
+    - Jekyll and Hyde
+  short_explanation: >
+    A sharply divided or double personality.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Strange Case of Dr Jekyll and Mr Hyde
+  source_author: Robert Louis Stevenson
+- language: en
+  canonical_reference: Catch-22
+  reference_type: literary_reference
+  surface_patterns:
+    - Catch-22
+  short_explanation: >
+    A no-win bureaucratic paradox.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Catch-22
+  source_author: Joseph Heller
+- language: en
+  canonical_reference: writing on the wall
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - writing on the wall
+  short_explanation: >
+    A sign that disaster or failure is imminent.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_work: Book of Daniel
+- language: en
+  canonical_reference: forbidden fruit
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - forbidden fruit
+  short_explanation: >
+    Something tempting because it is prohibited.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_work: Genesis
+- language: es
+  canonical_reference: Don Quijote
+  reference_type: literary_reference
+  surface_patterns:
+    - Don Quijote
+    - Don Quixote
+    - quijotesco
+  short_explanation: >
+    Idealistic, impractical, or nobly deluded behaviour.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Don Quijote de la Mancha
+  source_author: Miguel de Cervantes
+- language: es
+  canonical_reference: molinos de viento
+  reference_type: literary_reference
+  surface_patterns:
+    - luchar contra molinos de viento
+    - molinos de viento
+  short_explanation: >
+    Fighting imaginary enemies or impossible battles.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Don Quijote de la Mancha
+- language: es
+  canonical_reference: Lazarillo de Tormes
+  reference_type: literary_reference
+  surface_patterns:
+    - Lazarillo
+    - Lazarillo de Tormes
+  short_explanation: >
+    A reference to picaresque survival, poverty, and cunning.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Lazarillo de Tormes
+- language: es
+  canonical_reference: Fuenteovejuna
+  reference_type: literary_reference
+  surface_patterns:
+    - Fuenteovejuna
+  short_explanation: >
+    Collective responsibility or communal resistance.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Fuenteovejuna
+  source_author: Lope de Vega
+- language: es
+  canonical_reference: más vale tarde que nunca
+  reference_type: proverb_tradition
+  surface_patterns:
+    - más vale tarde que nunca
+  short_explanation: >
+    Better late than never.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: es
+  canonical_reference: a buen entendedor, pocas palabras
+  reference_type: proverb_tradition
+  surface_patterns:
+    - a buen entendedor, pocas palabras
+  short_explanation: >
+    A wise listener needs only a hint.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: es
+  canonical_reference: talón de Aquiles
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - talón de Aquiles
+  short_explanation: >
+    A vulnerable point.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: es
+  canonical_reference: caballo de Troya
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - caballo de Troya
+  short_explanation: >
+    A hidden danger inside an apparently harmless gift.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: es
+  canonical_reference: estar en las nubes
+  reference_type: cultural_reference
+  surface_patterns:
+    - estar en las nubes
+  short_explanation: >
+    To be distracted or daydreaming.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: es
+  canonical_reference: la vida es sueño
+  reference_type: literary_reference
+  surface_patterns:
+    - la vida es sueño
+  short_explanation: >
+    A reflection on illusion, fate, and free will.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: La vida es sueño
+  source_author: Calderón de la Barca
+- language: fr
+  canonical_reference: madeleine de Proust
+  reference_type: literary_reference
+  surface_patterns:
+    - madeleine de Proust
+  short_explanation: >
+    A sensory trigger that evokes involuntary memory.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: À la recherche du temps perdu
+  source_author: Marcel Proust
+- language: fr
+  canonical_reference: l’enfer, c’est les autres
+  reference_type: literary_reference
+  surface_patterns:
+    - l’enfer, c’est les autres
+  short_explanation: >
+    A phrase associated with social judgement and existential confinement.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Huis clos
+  source_author: Jean-Paul Sartre
+- language: fr
+  canonical_reference: Candide
+  reference_type: literary_reference
+  surface_patterns:
+    - Candide
+    - il faut cultiver notre jardin
+  short_explanation: >
+    A call to practical action rather than abstract speculation.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Candide
+  source_author: Voltaire
+- language: fr
+  canonical_reference: esprit de l’escalier
+  reference_type: cultural_reference
+  surface_patterns:
+    - esprit de l’escalier
+  short_explanation: >
+    Thinking of the perfect reply too late.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: fr
+  canonical_reference: après moi, le déluge
+  reference_type: cultural_reference
+  surface_patterns:
+    - après moi, le déluge
+  short_explanation: >
+    Indifference to consequences after one has gone.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: fr
+  canonical_reference: chercher le mouton à cinq pattes
+  reference_type: proverb_tradition
+  surface_patterns:
+    - chercher le mouton à cinq pattes
+  short_explanation: >
+    Looking for something impossibly rare or over-specific.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: fr
+  canonical_reference: talon d’Achille
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - talon d’Achille
+  short_explanation: >
+    A vulnerable point.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: fr
+  canonical_reference: cheval de Troie
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - cheval de Troie
+  short_explanation: >
+    A hidden threat inside something apparently benign.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: fr
+  canonical_reference: coup de grâce
+  reference_type: cultural_reference
+  surface_patterns:
+    - coup de grâce
+  short_explanation: >
+    A final decisive blow.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: fr
+  canonical_reference: être ou ne pas être
+  reference_type: literary_reference
+  surface_patterns:
+    - être ou ne pas être
+  short_explanation: >
+    A famous formulation of existential hesitation.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Hamlet
+  source_author: Shakespeare
+- language: de
+  canonical_reference: Gretchenfrage
+  reference_type: literary_reference
+  surface_patterns:
+    - Gretchenfrage
+  short_explanation: >
+    A crucial, revealing question.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Faust
+  source_author: Johann Wolfgang von Goethe
+- language: de
+  canonical_reference: Faust
+  reference_type: literary_reference
+  surface_patterns:
+    - Faust
+    - faustisch
+    - faustischer Pakt
+  short_explanation: >
+    A bargain sacrificing moral integrity for knowledge, power, or gain.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Faust
+  source_author: Goethe
+  allow_short_pattern: true
+- language: de
+  canonical_reference: kafkaesk
+  reference_type: literary_reference
+  surface_patterns:
+    - kafkaesk
+  short_explanation: >
+    Absurd, oppressive bureaucracy or nightmarish helplessness.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_author: Franz Kafka
+- language: de
+  canonical_reference: Werther
+  reference_type: literary_reference
+  surface_patterns:
+    - Werther
+  short_explanation: >
+    Romantic despair or intense sentimental suffering.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Die Leiden des jungen Werthers
+  source_author: Goethe
+- language: de
+  canonical_reference: Eulen nach Athen tragen
+  reference_type: proverb_tradition
+  surface_patterns:
+    - Eulen nach Athen tragen
+  short_explanation: >
+    Doing something unnecessary; carrying owls to Athens.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: de
+  canonical_reference: Achillesferse
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Achillesferse
+  short_explanation: >
+    A vulnerable point.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: de
+  canonical_reference: Trojanisches Pferd
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Trojanisches Pferd
+  short_explanation: >
+    A hidden threat inside a gift or system.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: de
+  canonical_reference: Schlaraffenland
+  reference_type: cultural_reference
+  surface_patterns:
+    - Schlaraffenland
+  short_explanation: >
+    A fantasy land of effortless abundance.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: de
+  canonical_reference: den Wald vor lauter Bäumen nicht sehen
+  reference_type: proverb_tradition
+  surface_patterns:
+    - den Wald vor lauter Bäumen nicht sehen
+  short_explanation: >
+    Missing the bigger picture because of too many details.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: de
+  canonical_reference: Sisyphusarbeit
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Sisyphusarbeit
+  short_explanation: >
+    Endless, futile labour.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: it
+  canonical_reference: dolce vita
+  reference_type: cultural_reference
+  surface_patterns:
+    - dolce vita
+  short_explanation: >
+    A life of pleasure, glamour, or stylish ease.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+  source_work: La Dolce Vita
+  source_author: Federico Fellini
+- language: it
+  canonical_reference: gattopardo
+  reference_type: literary_reference
+  surface_patterns:
+    - gattopardo
+    - gattopardesco
+  short_explanation: >
+    Apparent change that preserves existing power.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Il Gattopardo
+  source_author: Giuseppe Tomasi di Lampedusa
+- language: it
+  canonical_reference: don Abbondio
+  reference_type: literary_reference
+  surface_patterns:
+    - don Abbondio
+  short_explanation: >
+    Cowardly or evasive clerical behaviour.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: I promessi sposi
+  source_author: Alessandro Manzoni
+- language: it
+  canonical_reference: i promessi sposi
+  reference_type: literary_reference
+  surface_patterns:
+    - i promessi sposi
+  short_explanation: >
+    A reference to canonical Italian literature and social/religious constraint.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+- language: it
+  canonical_reference: uscire dalla selva oscura
+  reference_type: literary_reference
+  surface_patterns:
+    - uscire dalla selva oscura
+  short_explanation: >
+    Emerging from confusion, crisis, or moral darkness.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Divina Commedia
+  source_author: Dante Alighieri
+- language: it
+  canonical_reference: galeotto fu il libro
+  reference_type: literary_reference
+  surface_patterns:
+    - galeotto fu il libro
+  short_explanation: >
+    A book or intermediary that enables a fateful romance.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Inferno
+  source_author: Dante Alighieri
+- language: it
+  canonical_reference: tallone d’Achille
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - tallone d’Achille
+  short_explanation: >
+    A vulnerable point.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: it
+  canonical_reference: cavallo di Troia
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - cavallo di Troia
+  short_explanation: >
+    A hidden threat inside something apparently harmless.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: it
+  canonical_reference: tra il dire e il fare c’è di mezzo il mare
+  reference_type: proverb_tradition
+  surface_patterns:
+    - tra il dire e il fare c’è di mezzo il mare
+  short_explanation: >
+    Saying something is much easier than doing it.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: it
+  canonical_reference: chi dorme non piglia pesci
+  reference_type: proverb_tradition
+  surface_patterns:
+    - chi dorme non piglia pesci
+  short_explanation: >
+    Opportunity requires action.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: pt
+  canonical_reference: Adamastor
+  reference_type: literary_reference
+  surface_patterns:
+    - Adamastor
+  short_explanation: >
+    A monstrous obstacle or threatening force.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Os Lusíadas
+  source_author: Luís de Camões
+- language: pt
+  canonical_reference: velho do Restelo
+  reference_type: literary_reference
+  surface_patterns:
+    - velho do Restelo
+  short_explanation: >
+    A pessimistic critic of risky ambition.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Os Lusíadas
+  source_author: Camões
+- language: pt
+  canonical_reference: Inês de Castro
+  reference_type: literary_reference
+  surface_patterns:
+    - Inês de Castro
+  short_explanation: >
+    Tragic love and posthumous recognition.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+- language: pt
+  canonical_reference: sebastianismo
+  reference_type: cultural_reference
+  surface_patterns:
+    - sebastianismo
+  short_explanation: >
+    Hope for a vanished saviour or impossible return.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: pt
+  canonical_reference: saudade
+  reference_type: cultural_reference
+  surface_patterns:
+    - saudade
+  short_explanation: >
+    A culturally important feeling of longing, absence, or nostalgia.
+  learner_level: B2
+  register: common
+  confidence: 0.84
+- language: pt
+  canonical_reference: talão de Aquiles
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - talão de Aquiles
+  short_explanation: >
+    A vulnerable point.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: pt
+  canonical_reference: cavalo de Troia
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - cavalo de Troia
+  short_explanation: >
+    A hidden threat inside something apparently harmless.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: pt
+  canonical_reference: mais vale tarde do que nunca
+  reference_type: proverb_tradition
+  surface_patterns:
+    - mais vale tarde do que nunca
+  short_explanation: >
+    Better late than never.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: pt
+  canonical_reference: água mole em pedra dura
+  reference_type: proverb_tradition
+  surface_patterns:
+    - água mole em pedra dura
+  short_explanation: >
+    Persistence eventually succeeds.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: pt
+  canonical_reference: quem não arrisca não petisca
+  reference_type: proverb_tradition
+  surface_patterns:
+    - quem não arrisca não petisca
+  short_explanation: >
+    Nothing ventured, nothing gained.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ru
+  canonical_reference: Обломов
+  reference_type: literary_reference
+  surface_patterns:
+    - Обломов
+    - обломовщина
+  short_explanation: >
+    Inertia, passivity, or chronic inability to act.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Обломов
+  source_author: Иван Гончаров
+- language: ru
+  canonical_reference: Раскольников
+  reference_type: literary_reference
+  surface_patterns:
+    - Раскольников
+  short_explanation: >
+    Guilt, moral transgression, or tortured conscience.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Преступление и наказание
+  source_author: Фёдор Достоевский
+- language: ru
+  canonical_reference: маленький человек
+  reference_type: literary_reference
+  surface_patterns:
+    - маленький человек
+  short_explanation: >
+    The little man figure in Russian literature: powerless, ordinary, often humiliated.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+- language: ru
+  canonical_reference: лишний человек
+  reference_type: literary_reference
+  surface_patterns:
+    - лишний человек
+  short_explanation: >
+    The superfluous man: alienated, gifted, but socially ineffective.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+- language: ru
+  canonical_reference: Потёмкинская деревня
+  reference_type: cultural_reference
+  surface_patterns:
+    - Потёмкинская деревня
+  short_explanation: >
+    A façade concealing poor reality.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: ru
+  canonical_reference: Троянский конь
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Троянский конь
+  short_explanation: >
+    A hidden threat inside something apparently harmless.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: ru
+  canonical_reference: ахиллесова пята
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - ахиллесова пята
+  short_explanation: >
+    A vulnerable point.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: ru
+  canonical_reference: сизифов труд
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - сизифов труд
+  short_explanation: >
+    Endless, futile labour.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: ru
+  canonical_reference: Москва слезам не верит
+  reference_type: proverb_tradition
+  surface_patterns:
+    - Москва слезам не верит
+  short_explanation: >
+    Practical resilience; tears do not solve problems.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ru
+  canonical_reference: без труда не вытащишь и рыбку из пруда
+  reference_type: proverb_tradition
+  surface_patterns:
+    - без труда не вытащишь и рыбку из пруда
+  short_explanation: >
+    No reward without effort.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ar
+  canonical_reference: ألف ليلة وليلة
+  reference_type: literary_reference
+  surface_patterns:
+    - ألف ليلة وليلة
+  short_explanation: >
+    A reference to storytelling, marvels, or layered tales.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: One Thousand and One Nights
+- language: ar
+  canonical_reference: شهرزاد
+  reference_type: literary_reference
+  surface_patterns:
+    - شهرزاد
+  short_explanation: >
+    Clever storytelling used for survival or persuasion.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: One Thousand and One Nights
+- language: ar
+  canonical_reference: علاء الدين
+  reference_type: cultural_reference
+  surface_patterns:
+    - علاء الدين
+  short_explanation: >
+    A magical wish or sudden fortune motif.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: ar
+  canonical_reference: حصان طروادة
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - حصان طروادة
+  short_explanation: >
+    A hidden threat inside something apparently harmless.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: ar
+  canonical_reference: كعب أخيل
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - كعب أخيل
+  short_explanation: >
+    A vulnerable point.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: ar
+  canonical_reference: لا تؤجل عمل اليوم إلى الغد
+  reference_type: proverb_tradition
+  surface_patterns:
+    - لا تؤجل عمل اليوم إلى الغد
+  short_explanation: >
+    Do not put off today’s work until tomorrow.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ar
+  canonical_reference: رب ضارة نافعة
+  reference_type: proverb_tradition
+  surface_patterns:
+    - رب ضارة نافعة
+  short_explanation: >
+    A harmful thing may bring benefit.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ar
+  canonical_reference: اتق شر من أحسنت إليه
+  reference_type: proverb_tradition
+  surface_patterns:
+    - اتق شر من أحسنت إليه
+  short_explanation: >
+    Beware harm from someone you have helped.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ar
+  canonical_reference: كما تدين تدان
+  reference_type: proverb_tradition
+  surface_patterns:
+    - كما تدين تدان
+  short_explanation: >
+    As you judge or act, so you will be judged or repaid.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ar
+  canonical_reference: جحا
+  reference_type: cultural_reference
+  surface_patterns:
+    - جحا
+  short_explanation: >
+    A comic folk figure associated with wit, foolishness, and satire.
+  learner_level: B1
+  register: common
+  confidence: 0.78
+  allow_short_pattern: true
+- language: he
+  canonical_reference: עקב אכילס
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - עקב אכילס
+  short_explanation: >
+    A vulnerable point.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: he
+  canonical_reference: סוס טרויאני
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - סוס טרויאני
+  short_explanation: >
+    A hidden threat inside something apparently harmless.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: he
+  canonical_reference: דוד וגוליית
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - דוד וגוליית
+  short_explanation: >
+    A small or weaker opponent facing a giant.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_work: Hebrew Bible
+- language: he
+  canonical_reference: מגדל בבל
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - מגדל בבל
+  short_explanation: >
+    Confusion of language or failed human overreach.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_work: Genesis
+- language: he
+  canonical_reference: תיבת פנדורה
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - תיבת פנדורה
+  short_explanation: >
+    A source of unforeseen troubles once opened.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: he
+  canonical_reference: אין חדש תחת השמש
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - אין חדש תחת השמש
+  short_explanation: >
+    There is nothing new under the sun.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_work: Ecclesiastes
+- language: he
+  canonical_reference: לך אל הנמלה
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - לך אל הנמלה
+  short_explanation: >
+    Learn diligence from the ant.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_work: Proverbs
+- language: he
+  canonical_reference: אם אין אני לי מי לי
+  reference_type: proverb_tradition
+  surface_patterns:
+    - אם אין אני לי מי לי
+  short_explanation: >
+    If I am not for myself, who will be for me?
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: he
+  canonical_reference: תפסת מרובה לא תפסת
+  reference_type: proverb_tradition
+  surface_patterns:
+    - תפסת מרובה לא תפסת
+  short_explanation: >
+    Grasping too much may mean grasping nothing.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: he
+  canonical_reference: חכמת שלמה
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - חכמת שלמה
+  short_explanation: >
+    Solomonic wisdom or judgement.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: zh
+  canonical_reference: 井底之蛙
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 井底之蛙
+  short_explanation: >
+    A frog in a well; someone with a narrow view.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: zh
+  canonical_reference: 画蛇添足
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 画蛇添足
+  short_explanation: >
+    To ruin something by adding unnecessary detail.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: zh
+  canonical_reference: 守株待兔
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 守株待兔
+  short_explanation: >
+    Waiting idly for luck instead of acting.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: zh
+  canonical_reference: 掩耳盗铃
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 掩耳盗铃
+  short_explanation: >
+    Fooling oneself by ignoring reality.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: zh
+  canonical_reference: 塞翁失马
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 塞翁失马
+  short_explanation: >
+    Misfortune may turn into blessing.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: zh
+  canonical_reference: 纸上谈兵
+  reference_type: cultural_reference
+  surface_patterns:
+    - 纸上谈兵
+  short_explanation: >
+    Armchair strategy; theory without practical ability.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: zh
+  canonical_reference: 三顾茅庐
+  reference_type: literary_reference
+  surface_patterns:
+    - 三顾茅庐
+  short_explanation: >
+    Sincere repeated effort to recruit talent.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Romance of the Three Kingdoms tradition
+- language: zh
+  canonical_reference: 草船借箭
+  reference_type: literary_reference
+  surface_patterns:
+    - 草船借箭
+  short_explanation: >
+    Cleverly using circumstances to obtain resources.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Romance of the Three Kingdoms tradition
+- language: zh
+  canonical_reference: 红楼梦
+  reference_type: literary_reference
+  surface_patterns:
+    - 红楼梦
+  short_explanation: >
+    A reference to one of the great Chinese classical novels.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Dream of the Red Chamber
+- language: zh
+  canonical_reference: 西游记
+  reference_type: literary_reference
+  surface_patterns:
+    - 西游记
+  short_explanation: >
+    Pilgrimage, mischief, transformation, and adventure.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Journey to the West
+- language: ja
+  canonical_reference: 猿も木から落ちる
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 猿も木から落ちる
+  short_explanation: >
+    Even experts make mistakes.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ja
+  canonical_reference: 七転び八起き
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 七転び八起き
+  short_explanation: >
+    Fall seven times, rise eight.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ja
+  canonical_reference: 花より団子
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 花より団子
+  short_explanation: >
+    Practical benefit over aesthetic appreciation.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ja
+  canonical_reference: 猫に小判
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 猫に小判
+  short_explanation: >
+    Giving something valuable to someone who cannot appreciate it.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ja
+  canonical_reference: 井の中の蛙
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 井の中の蛙
+  short_explanation: >
+    Someone with a narrow perspective.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ja
+  canonical_reference: 源氏物語
+  reference_type: literary_reference
+  surface_patterns:
+    - 源氏物語
+  short_explanation: >
+    A reference to classical court literature and romance.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: The Tale of Genji
+  source_author: Murasaki Shikibu
+- language: ja
+  canonical_reference: 羅生門
+  reference_type: literary_reference
+  surface_patterns:
+    - 羅生門
+  short_explanation: >
+    Ambiguous testimony or conflicting perspectives.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Rashōmon
+  source_author: Akutagawa Ryūnosuke
+- language: ja
+  canonical_reference: 雪国
+  reference_type: literary_reference
+  surface_patterns:
+    - 雪国
+  short_explanation: >
+    A reference to melancholy, beauty, and isolation.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Snow Country
+  source_author: Kawabata Yasunari
+  allow_short_pattern: true
+- language: ja
+  canonical_reference: 桃太郎
+  reference_type: cultural_reference
+  surface_patterns:
+    - 桃太郎
+  short_explanation: >
+    Folk hero associated with courage and companions.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: ja
+  canonical_reference: 浦島太郎
+  reference_type: cultural_reference
+  surface_patterns:
+    - 浦島太郎
+  short_explanation: >
+    A folk tale of time displacement and return.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: la
+  canonical_reference: carpe diem
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - carpe diem
+  short_explanation: >
+    Seize the day; act in the present.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_work: Odes
+  source_author: Horace
+- language: la
+  canonical_reference: memento mori
+  reference_type: cultural_reference
+  surface_patterns:
+    - memento mori
+  short_explanation: >
+    Remember that you must die.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: la
+  canonical_reference: alea iacta est
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - alea iacta est
+  short_explanation: >
+    The die is cast; an irreversible decision has been made.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_author: Julius Caesar tradition
+- language: la
+  canonical_reference: veni vidi vici
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - veni vidi vici
+  short_explanation: >
+    I came, I saw, I conquered.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_author: Julius Caesar
+- language: la
+  canonical_reference: et tu Brute
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - et tu Brute
+  short_explanation: >
+    A betrayal by someone close.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_work: Shakespeare/Caesar tradition
+- language: la
+  canonical_reference: in vino veritas
+  reference_type: proverb_tradition
+  surface_patterns:
+    - in vino veritas
+  short_explanation: >
+    In wine, truth.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: la
+  canonical_reference: ars longa vita brevis
+  reference_type: proverb_tradition
+  surface_patterns:
+    - ars longa vita brevis
+  short_explanation: >
+    Art is long, life is short.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: la
+  canonical_reference: homo homini lupus
+  reference_type: proverb_tradition
+  surface_patterns:
+    - homo homini lupus
+  short_explanation: >
+    Man is a wolf to man.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: la
+  canonical_reference: sic transit gloria mundi
+  reference_type: cultural_reference
+  surface_patterns:
+    - sic transit gloria mundi
+  short_explanation: >
+    Thus passes worldly glory.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: la
+  canonical_reference: panem et circenses
+  reference_type: cultural_reference
+  surface_patterns:
+    - panem et circenses
+  short_explanation: >
+    Bread and circuses; public appeasement through food and spectacle.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+  source_author: Juvenal
+- language: grc
+  canonical_reference: λόγος
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - λόγος
+  short_explanation: >
+    Word, reason, or divine ordering principle depending on context.
+  learner_level: C1
+  register: religious
+  confidence: 0.7
+  source_work: John 1 / Greek philosophical tradition
+  notes: >
+    Only annotate when context strongly suggests scriptural/philosophical use.
+  allow_short_pattern: true
+- language: grc
+  canonical_reference: ἄλφα καὶ ὦ
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - ἄλφα καὶ ὦ
+  short_explanation: >
+    Alpha and omega; beginning and end.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_work: Revelation
+- language: grc
+  canonical_reference: ὁ καλὸς ποιμήν
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - ὁ καλὸς ποιμήν
+  short_explanation: >
+    The good shepherd.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_work: John
+- language: grc
+  canonical_reference: υἱὸς τοῦ ἀνθρώπου
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - υἱὸς τοῦ ἀνθρώπου
+  short_explanation: >
+    Son of Man; scriptural title/expression.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: grc
+  canonical_reference: βασιλεία τοῦ θεοῦ
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - βασιλεία τοῦ θεοῦ
+  short_explanation: >
+    Kingdom of God.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: grc
+  canonical_reference: πίστις
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - πίστις
+  short_explanation: >
+    Faith/trust; important theological and ethical term.
+  learner_level: C1
+  register: religious
+  confidence: 0.65
+  notes: >
+    Common word; avoid high confidence unless context is scriptural.
+  allow_short_pattern: true
+- language: grc
+  canonical_reference: χάρις
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - χάρις
+  short_explanation: >
+    Grace/favour; important theological and social term.
+  learner_level: C1
+  register: religious
+  confidence: 0.65
+  allow_short_pattern: true
+- language: grc
+  canonical_reference: ἀγάπη
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - ἀγάπη
+  short_explanation: >
+    Love, especially in Christian ethical/theological contexts.
+  learner_level: C1
+  register: religious
+  confidence: 0.7
+  allow_short_pattern: true
+- language: grc
+  canonical_reference: εἰρήνη ὑμῖν
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - εἰρήνη ὑμῖν
+  short_explanation: >
+    Peace be with you.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: grc
+  canonical_reference: πολλοὶ κλητοί, ὀλίγοι δὲ ἐκλεκτοί
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - πολλοὶ κλητοί, ὀλίγοι δὲ ἐκλεκτοί
+  short_explanation: >
+    Many are called, but few are chosen.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: ko
+  canonical_reference: 토끼와 거북이
+  reference_type: cultural_reference
+  surface_patterns:
+    - 토끼와 거북이
+  short_explanation: >
+    The hare and the tortoise; persistence over arrogance.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: ko
+  canonical_reference: 흥부와 놀부
+  reference_type: cultural_reference
+  surface_patterns:
+    - 흥부와 놀부
+  short_explanation: >
+    Folk-tale contrast between generosity and greed.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: ko
+  canonical_reference: 심청전
+  reference_type: literary_reference
+  surface_patterns:
+    - 심청전
+  short_explanation: >
+    Filial piety and sacrifice in Korean classical fiction.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+- language: ko
+  canonical_reference: 춘향전
+  reference_type: literary_reference
+  surface_patterns:
+    - 춘향전
+  short_explanation: >
+    Love, loyalty, and resistance to corrupt authority.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+- language: ko
+  canonical_reference: 홍길동
+  reference_type: literary_reference
+  surface_patterns:
+    - 홍길동
+  short_explanation: >
+    Heroic outlaw figure associated with justice and social constraint.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: 홍길동전
+- language: ko
+  canonical_reference: 고래 싸움에 새우 등 터진다
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 고래 싸움에 새우 등 터진다
+  short_explanation: >
+    The weak suffer in conflicts between the powerful.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ko
+  canonical_reference: 호랑이도 제 말 하면 온다
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 호랑이도 제 말 하면 온다
+  short_explanation: >
+    Speak of the tiger and it appears.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ko
+  canonical_reference: 원숭이도 나무에서 떨어진다
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 원숭이도 나무에서 떨어진다
+  short_explanation: >
+    Even experts make mistakes.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ko
+  canonical_reference: 등잔 밑이 어둡다
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 등잔 밑이 어둡다
+  short_explanation: >
+    People miss what is close.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: ko
+  canonical_reference: 시작이 반이다
+  reference_type: proverb_tradition
+  surface_patterns:
+    - 시작이 반이다
+  short_explanation: >
+    Beginning is half the task.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: hi
+  canonical_reference: रामायण
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - रामायण
+  short_explanation: >
+    Epic reference to duty, exile, devotion, and conflict.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_work: Ramayana
+- language: hi
+  canonical_reference: महाभारत
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - महाभारत
+  short_explanation: >
+    Epic reference to conflict, duty, family, and moral complexity.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+  source_work: Mahabharata
+- language: hi
+  canonical_reference: अर्जुन
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - अर्जुन
+  short_explanation: >
+    Archer-warrior figure associated with skill and moral hesitation.
+  learner_level: B2
+  register: religious
+  confidence: 0.82
+  source_work: Mahabharata
+  allow_short_pattern: true
+- language: hi
+  canonical_reference: कृष्ण
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - कृष्ण
+  short_explanation: >
+    Divine counsellor, strategist, or beloved deity depending on context.
+  learner_level: B2
+  register: religious
+  confidence: 0.82
+  source_work: Mahabharata / Bhagavad Gita
+  allow_short_pattern: true
+- language: hi
+  canonical_reference: गीता
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - गीता
+    - भगवद्गीता
+  short_explanation: >
+    Spiritual/philosophical teaching on duty and action.
+  learner_level: B2
+  register: religious
+  confidence: 0.82
+  allow_short_pattern: true
+- language: hi
+  canonical_reference: पंचतंत्र
+  reference_type: literary_reference
+  surface_patterns:
+    - पंचतंत्र
+  short_explanation: >
+    Animal fables teaching practical wisdom.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+- language: hi
+  canonical_reference: अंधेर नगरी
+  reference_type: literary_reference
+  surface_patterns:
+    - अंधेर नगरी
+  short_explanation: >
+    Chaotic, foolish, or unjust governance.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Andher Nagari
+  source_author: Bharatendu Harishchandra
+- language: hi
+  canonical_reference: घर की मुर्गी दाल बराबर
+  reference_type: proverb_tradition
+  surface_patterns:
+    - घर की मुर्गी दाल बराबर
+  short_explanation: >
+    Familiar things are undervalued.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: hi
+  canonical_reference: नाच न जाने आँगन टेढ़ा
+  reference_type: proverb_tradition
+  surface_patterns:
+    - नाच न जाने आँगन टेढ़ा
+  short_explanation: >
+    Blaming circumstances for one’s own incompetence.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: hi
+  canonical_reference: ऊँट के मुँह में जीरा
+  reference_type: proverb_tradition
+  surface_patterns:
+    - ऊँट के मुँह में जीरा
+  short_explanation: >
+    Too little for a large need.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: tr
+  canonical_reference: Nasreddin Hoca
+  reference_type: cultural_reference
+  surface_patterns:
+    - Nasreddin Hoca
+    - Nasrettin Hoca
+  short_explanation: >
+    Folk figure associated with wit, irony, and comic wisdom.
+  learner_level: B2
+  register: common
+  confidence: 0.88
+- language: tr
+  canonical_reference: Dede Korkut
+  reference_type: literary_reference
+  surface_patterns:
+    - Dede Korkut
+  short_explanation: >
+    Epic Turkic narrative tradition.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Book of Dede Korkut
+- language: tr
+  canonical_reference: Leyla ile Mecnun
+  reference_type: literary_reference
+  surface_patterns:
+    - Leyla ile Mecnun
+  short_explanation: >
+    Tragic or obsessive love.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+- language: tr
+  canonical_reference: Köroğlu
+  reference_type: literary_reference
+  surface_patterns:
+    - Köroğlu
+  short_explanation: >
+    Folk-epic hero associated with resistance and justice.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+- language: tr
+  canonical_reference: İnce Memed
+  reference_type: literary_reference
+  surface_patterns:
+    - İnce Memed
+  short_explanation: >
+    Rebellion against oppression and landlord power.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_author: Yaşar Kemal
+- language: tr
+  canonical_reference: Truva atı
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Truva atı
+  short_explanation: >
+    A hidden threat inside something apparently harmless.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: tr
+  canonical_reference: Aşil topuğu
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Aşil topuğu
+  short_explanation: >
+    A vulnerable point.
+  learner_level: B2
+  register: classical
+  confidence: 0.88
+- language: tr
+  canonical_reference: damlaya damlaya göl olur
+  reference_type: proverb_tradition
+  surface_patterns:
+    - damlaya damlaya göl olur
+  short_explanation: >
+    Small amounts accumulate into something large.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: tr
+  canonical_reference: sakla samanı gelir zamanı
+  reference_type: proverb_tradition
+  surface_patterns:
+    - sakla samanı gelir zamanı
+  short_explanation: >
+    Keep even humble things; they may be useful later.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: tr
+  canonical_reference: sütten ağzı yanan yoğurdu üfleyerek yer
+  reference_type: proverb_tradition
+  surface_patterns:
+    - sütten ağzı yanan yoğurdu üfleyerek yer
+  short_explanation: >
+    Once bitten, twice shy.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: fi
+  canonical_reference: Kalevala
+  reference_type: literary_reference
+  surface_patterns:
+    - Kalevala
+  short_explanation: >
+    Finnish national epic tradition.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Kalevala
+- language: fi
+  canonical_reference: Väinämöinen
+  reference_type: literary_reference
+  surface_patterns:
+    - Väinämöinen
+  short_explanation: >
+    Wise singer/sage figure from the Kalevala.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Kalevala
+- language: fi
+  canonical_reference: Sampo
+  reference_type: literary_reference
+  surface_patterns:
+    - Sampo
+  short_explanation: >
+    Mythic object of prosperity or abundance.
+  learner_level: B2
+  register: literary
+  confidence: 0.82
+  source_work: Kalevala
+  allow_short_pattern: true
+- language: fi
+  canonical_reference: Kullervo
+  reference_type: literary_reference
+  surface_patterns:
+    - Kullervo
+  short_explanation: >
+    Tragic figure associated with fate, anger, and ruin.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Kalevala
+- language: fi
+  canonical_reference: Tuntematon sotilas
+  reference_type: literary_reference
+  surface_patterns:
+    - Tuntematon sotilas
+  short_explanation: >
+    War, comradeship, and Finnish national memory.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Tuntematon sotilas
+  source_author: Väinö Linna
+- language: fi
+  canonical_reference: Seitsemän veljestä
+  reference_type: literary_reference
+  surface_patterns:
+    - Seitsemän veljestä
+  short_explanation: >
+    Finnish literary classic about brothers, society, and learning.
+  learner_level: B2
+  register: literary
+  confidence: 0.88
+  source_work: Seitsemän veljestä
+  source_author: Aleksis Kivi
+- language: fi
+  canonical_reference: ei kahta ilman kolmatta
+  reference_type: proverb_tradition
+  surface_patterns:
+    - ei kahta ilman kolmatta
+  short_explanation: >
+    Things tend to come in threes.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: fi
+  canonical_reference: hiljaa hyvä tulee
+  reference_type: proverb_tradition
+  surface_patterns:
+    - hiljaa hyvä tulee
+  short_explanation: >
+    Good things come slowly/carefully.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: fi
+  canonical_reference: oma lehmä ojassa
+  reference_type: proverb_tradition
+  surface_patterns:
+    - oma lehmä ojassa
+  short_explanation: >
+    Someone has a personal interest at stake.
+  learner_level: B2
+  register: proverbial
+  confidence: 0.88
+- language: fi
+  canonical_reference: mennä metsään
+  reference_type: cultural_reference
+  surface_patterns:
+    - mennä metsään
+  short_explanation: >
+    To go wrong; literally, to go into the forest.
+  learner_level: B2
+  register: common
+  confidence: 0.88
