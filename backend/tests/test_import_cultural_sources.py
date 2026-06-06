@@ -17,6 +17,7 @@ def test_convert_rows_from_csv_shape() -> None:
             "source_work": "Hamlet",
             "source_author": "William Shakespeare",
             "source_location": "Act 3 Scene 1",
+            "short_explanation": "A soliloquy about existence and choice.",
             "learner_level": "B2",
             "register": "literary",
             "confidence": "0.71",
@@ -40,12 +41,15 @@ def test_convert_rows_from_csv_shape() -> None:
                 "the slings and arrows",
                 "sea of troubles",
             ],
-            "short_explanation": "TODO: add explanation",
+            "short_explanation": "A soliloquy about existence and choice.",
             "learner_level": "B2",
             "confidence": 0.71,
             "review_status": "draft",
             "register": "literary",
             "variants": ["slings and arrows"],
+            "explanation_key": "cultural.explanation.en.unit_test_dataset.to_be_or_not_to_be",
+            "source_work_key": "cultural.source_work.unit_test_dataset.hamlet",
+            "source_author_key": "cultural.source_author.william_shakespeare",
             "source_work": "Hamlet",
             "source_author": "William Shakespeare",
             "source_location": "Act 3 Scene 1",
@@ -105,3 +109,119 @@ def test_missing_source_dataset_is_rejected() -> None:
         assert "missing source_dataset" in str(exc)
     else:  # pragma: no cover
         raise AssertionError("expected missing source_dataset to fail")
+
+
+def _minimal_row(**overrides: str) -> dict[str, str]:
+    row = {
+        "language": "en",
+        "surface_pattern": "break the ice",
+        "surface_patterns": "",
+        "variants": "broke the ice|breaking the ice",
+        "canonical_reference": "break the ice",
+        "reference_type": "literary_reference",
+        "source_work": "The Taming of the Shrew",
+        "source_author": "William Shakespeare",
+        "source_location": "Act I Scene 2",
+        "short_explanation": (
+            "To reduce social tension or begin interaction in an awkward situation."
+        ),
+        "explanation_key": "",
+        "source_work_key": "",
+        "source_author_key": "",
+        "learner_level": "B2",
+        "register": "literary",
+        "confidence": "0.84",
+        "source_url": "",
+        "source_license": "public_domain",
+        "source_dataset": "en_shakespeare_phrases",
+        "notes": "review attribution",
+    }
+    row.update(overrides)
+    return row
+
+
+def test_missing_short_explanation_uses_todo_but_still_suggests_stable_key() -> None:
+    [entry] = importer.convert_rows([_minimal_row(short_explanation="")])
+
+    assert entry["short_explanation"] == importer.TODO_EXPLANATION
+    assert (
+        entry["explanation_key"]
+        == "cultural.explanation.en.en_shakespeare_phrases.break_the_ice"
+    )
+
+
+def test_user_provided_localisation_keys_are_preserved() -> None:
+    [entry] = importer.convert_rows(
+        [
+            _minimal_row(
+                explanation_key="cultural.explanation.en.custom.break_the_ice",
+                source_work_key="cultural.source_work.custom.taming",
+                source_author_key="cultural.source_author.custom.shakespeare",
+            )
+        ]
+    )
+
+    assert entry["explanation_key"] == "cultural.explanation.en.custom.break_the_ice"
+    assert entry["source_work_key"] == "cultural.source_work.custom.taming"
+    assert entry["source_author_key"] == "cultural.source_author.custom.shakespeare"
+
+
+def test_generated_draft_yaml_includes_localisation_keys(tmp_path) -> None:
+    out = tmp_path / "draft.yaml"
+    entries = importer.convert_rows([_minimal_row()])
+
+    importer.write_yaml(entries, out)
+
+    text = out.read_text(encoding="utf-8")
+    assert "short_explanation" in text
+    assert "cultural.explanation.en.en_shakespeare_phrases.break_the_ice" in text
+    assert "cultural.source_work.en_shakespeare_phrases.the_taming_of_the_shrew" in text
+    assert "cultural.source_author.william_shakespeare" in text
+
+
+def test_l10n_out_creates_mappings(tmp_path) -> None:
+    out = tmp_path / "en.json"
+    entries = importer.convert_rows([_minimal_row()])
+
+    warnings = importer.write_l10n(entries, out)
+
+    payload = json.loads(out.read_text(encoding="utf-8"))
+    assert warnings == []
+    assert payload == {
+        "cultural.explanation.en.en_shakespeare_phrases.break_the_ice": (
+            "To reduce social tension or begin interaction in an awkward situation."
+        ),
+        "cultural.source_author.william_shakespeare": "William Shakespeare",
+        "cultural.source_work.en_shakespeare_phrases.the_taming_of_the_shrew": (
+            "The Taming of the Shrew"
+        ),
+    }
+
+
+def test_l10n_out_preserves_existing_values_and_warns_on_conflicts(tmp_path) -> None:
+    out = tmp_path / "en.json"
+    out.write_text(
+        json.dumps(
+            {
+                "cultural.explanation.en.en_shakespeare_phrases.break_the_ice": (
+                    "Existing explanation."
+                ),
+                "z.existing": "Keep me.",
+            },
+            ensure_ascii=False,
+            indent=2,
+        ) + "\n",
+        encoding="utf-8",
+    )
+    entries = importer.convert_rows([_minimal_row()])
+
+    warnings = importer.write_l10n(entries, out)
+
+    payload = json.loads(out.read_text(encoding="utf-8"))
+    assert (
+        payload["cultural.explanation.en.en_shakespeare_phrases.break_the_ice"]
+        == "Existing explanation."
+    )
+    assert payload["z.existing"] == "Keep me."
+    assert payload["cultural.source_author.william_shakespeare"] == "William Shakespeare"
+    assert any("l10n conflict" in warning for warning in warnings)
