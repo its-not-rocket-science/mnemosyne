@@ -18,6 +18,8 @@ SUPPORTED_LANGUAGES = ("en", "es", "fr", "de", "it", "pt", "ru", "ar", "he", "zh
 REFERENCE_TYPES = {"literary_reference", "cultural_reference", "proverb_tradition", "classical_or_scriptural_allusion"}
 LEARNER_LEVELS = {"A1", "A2", "B1", "B2", "C1", "C2"}
 REGISTERS = {"common", "literary", "formal", "informal", "religious", "classical", "proverbial"}
+REVIEW_STATUSES = {"draft", "reviewed", "rejected", "needs_native_review"}
+PUBLIC_PROVENANCE_FIELDS = ("source_location", "source_url", "source_license", "source_dataset")
 SHORT_AMBIGUOUS = {
     "logos",
     "λόγος",
@@ -158,7 +160,11 @@ def clean_text(value: Any) -> str:
     return unicodedata.normalize("NFC", str(value)).strip()
 
 
-def validate_and_build(rows: list[dict[str, Any]], only_language: str | None = None) -> tuple[dict[str, list[dict[str, Any]]], list[str]]:
+def validate_and_build(
+    rows: list[dict[str, Any]],
+    only_language: str | None = None,
+    include_drafts: bool = False,
+) -> tuple[dict[str, list[dict[str, Any]]], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
     by_lang: dict[str, list[dict[str, Any]]] = {lang: [] for lang in SUPPORTED_LANGUAGES}
@@ -194,6 +200,23 @@ def validate_and_build(rows: list[dict[str, Any]], only_language: str | None = N
         register = raw.get("register")
         if register is not None and register not in REGISTERS:
             errors.append(f"row {idx} ({lang}): invalid register {register!r}")
+        review_status = raw.get("review_status", "reviewed")
+        if review_status not in REVIEW_STATUSES:
+            errors.append(f"row {idx} ({lang}): unknown review_status {review_status!r}")
+            review_status = "rejected"
+        if raw.get("source_url") and not raw.get("source_license"):
+            warnings.append(
+                f"row {idx} ({lang}): source_url is present but source_license is missing"
+            )
+        if raw.get("review_status") == "reviewed" and (
+            not raw.get("reviewed_by") or not raw.get("reviewed_at")
+        ):
+            warnings.append(
+                f"row {idx} ({lang}): review_status 'reviewed' should include reviewed_by and reviewed_at"
+            )
+        emit_entry = review_status == "reviewed" or (
+            include_drafts and review_status in {"draft", "needs_native_review"}
+        )
         try:
             confidence = float(raw.get("confidence"))
             if not (0 <= confidence <= 1):
@@ -247,7 +270,17 @@ def validate_and_build(rows: list[dict[str, Any]], only_language: str | None = N
             "notes": notes,
             "allow_short_pattern": bool(raw.get("allow_short_pattern", False)),
         }
-        by_lang[lang].append({k: v for k, v in entry.items() if v not in (None, [], False) or k in {"confidence"}})
+        for field in PUBLIC_PROVENANCE_FIELDS:
+            if raw.get(field) not in (None, ""):
+                entry[field] = clean_text(raw[field])
+        if emit_entry:
+            by_lang[lang].append(
+                {
+                    k: v
+                    for k, v in entry.items()
+                    if v not in (None, [], False) or k in {"confidence"}
+                }
+            )
 
     for lang, per_surface in surfaces.items():
         for pat, entry_ids in per_surface.items():
@@ -332,10 +365,17 @@ def main() -> int:
     )
     parser.add_argument("--seed", type=Path, default=DEFAULT_SEED)
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT)
+    parser.add_argument(
+        "--include-drafts",
+        action="store_true",
+        help="include draft and needs_native_review entries in generated output; rejected entries are never emitted",
+    )
     args = parser.parse_args()
 
     try:
-        by_lang, warnings = validate_and_build(load_seed(args.seed), args.language)
+        by_lang, warnings = validate_and_build(
+            load_seed(args.seed), args.language, include_drafts=args.include_drafts
+        )
     except Exception as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1

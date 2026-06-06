@@ -146,6 +146,19 @@ The catalogue is curated exact/near-exact string matching only. It does not use
 LLMs, embeddings, external APIs, or runtime network calls, and its coverage is
 partial rather than comprehensive cultural interpretation.
 
+The seed supports production entries and draft imported rows. Missing
+`review_status` is treated as `reviewed` for backwards compatibility. Explicit
+statuses are `draft`, `reviewed`, `needs_native_review`, and `rejected`. Default
+generation emits only missing-status/`reviewed` rows; `--include-drafts` also
+emits `draft` and `needs_native_review` rows for local review builds.
+`rejected` rows are never emitted, even with `--include-drafts`, so known-bad
+imports cannot become runtime annotations accidentally. Generated JSON preserves
+public provenance fields (`source_location`, `source_url`, `source_license`,
+`source_dataset`) and omits internal review-only fields, including
+`review_status`; production runtime files should not be generated with
+`--include-drafts`. Confirm source licensing before adding imported rows, and
+include `source_license` whenever `source_url` is present.
+
 ---
 
 ## Object Types
