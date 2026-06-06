@@ -1,0 +1,23 @@
+- id: "en_literary_reference_break_the_ice_e3de3170"
+  language: "en"
+  canonical_reference: "break the ice"
+  reference_type: "literary_reference"
+  surface_patterns:
+    - "break the ice"
+  short_explanation: "To reduce social tension or begin interaction in an awkward situation."
+  learner_level: "B2"
+  confidence: 0.84
+  review_status: "draft"
+  register: "literary"
+  variants:
+    - "broke the ice"
+    - "breaking the ice"
+  explanation_key: "cultural.explanation.en.en_shakespeare_phrases.break_the_ice"
+  source_work_key: "cultural.source_work.en_shakespeare_phrases.the_taming_of_the_shrew"
+  source_author_key: "cultural.source_author.william_shakespeare"
+  source_work: "The Taming of the Shrew"
+  source_author: "William Shakespeare"
+  source_location: "Act I Scene 2"
+  source_license: "public_domain"
+  source_dataset: "en_shakespeare_phrases"
+  notes: "Commonly attributed to Shakespeare; attribution should be reviewed"

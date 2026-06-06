@@ -18,6 +18,13 @@ from typing import Any, Iterable
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE_DIR = ROOT / "data" / "cultural_sources"
 DEFAULT_DRAFT_DIR = ROOT / "data" / "cultural_drafts"
+TODO_EXPLANATION = "TODO: add explanation"
+EXPECTED_CSV_HEADER = (
+    "language,surface_pattern,surface_patterns,variants,canonical_reference,reference_type,"
+    "source_work,source_author,source_location,short_explanation,explanation_key,"
+    "source_work_key,source_author_key,learner_level,register,confidence,source_url,"
+    "source_license,source_dataset,notes"
+)
 
 try:
     import yaml  # type: ignore
@@ -66,6 +73,10 @@ OPTIONAL_SCALAR_FIELDS = (
     "source_work",
     "source_author",
     "source_location",
+    "short_explanation",
+    "explanation_key",
+    "source_work_key",
+    "source_author_key",
     "register",
     "source_url",
     "source_license",
@@ -109,6 +120,44 @@ def slugify(value: str) -> str:
             slug.append("_")
             previous_was_sep = True
     return "".join(slug).strip("_") or "reference"
+
+
+def key_or_generated(row: dict[str, Any], field: str, generated: str | None) -> str | None:
+    """Return a user-provided localisation key or a deterministic suggestion."""
+    if not is_blank(row.get(field)):
+        return clean_text(row[field])
+    return generated
+
+
+def has_real_explanation(value: Any) -> bool:
+    return not is_blank(value) and clean_text(value) != TODO_EXPLANATION
+
+
+def explanation_key(row: dict[str, Any]) -> str | None:
+    language = clean_text(row.get("language", ""))
+    dataset = clean_text(row.get("source_dataset", ""))
+    canonical = clean_text(row.get("canonical_reference", ""))
+    entry_basis = canonical or (
+        split_pipe(row.get("surface_pattern")) or split_pipe(row.get("surface_patterns")) or [""]
+    )[0]
+    if not language or not dataset or not entry_basis:
+        return None
+    return f"cultural.explanation.{language}.{slugify(dataset)}.{slugify(entry_basis)}"
+
+
+def source_work_key(row: dict[str, Any]) -> str | None:
+    dataset = clean_text(row.get("source_dataset", ""))
+    work = clean_text(row.get("source_work", ""))
+    if not dataset or not work:
+        return None
+    return f"cultural.source_work.{slugify(dataset)}.{slugify(work)}"
+
+
+def source_author_key(row: dict[str, Any]) -> str | None:
+    author = clean_text(row.get("source_author", ""))
+    if not author:
+        return None
+    return f"cultural.source_author.{slugify(author)}"
 
 
 def stable_generated_id(row: dict[str, Any]) -> str:
@@ -224,7 +273,11 @@ def convert_row(row: dict[str, Any], row_number: int) -> dict[str, Any]:
         "canonical_reference": clean_text(row["canonical_reference"]),
         "reference_type": reference_type,
         "surface_patterns": surface_patterns,
-        "short_explanation": "TODO: add explanation",
+        "short_explanation": (
+            clean_text(row.get("short_explanation"))
+            if has_real_explanation(row.get("short_explanation"))
+            else TODO_EXPLANATION
+        ),
         "learner_level": learner_level,
         "confidence": confidence,
         "review_status": "draft",
@@ -242,8 +295,24 @@ def convert_row(row: dict[str, Any], row_number: int) -> dict[str, Any]:
     if variants:
         entry["variants"] = variants
 
+    generated_keys = {
+        "explanation_key": explanation_key(row),
+        "source_work_key": source_work_key(row),
+        "source_author_key": source_author_key(row),
+    }
+    for field, generated in generated_keys.items():
+        value = key_or_generated(row, field, generated)
+        if value:
+            entry[field] = value
+
     for field in OPTIONAL_SCALAR_FIELDS:
-        if field == "register":
+        if field in {
+            "register",
+            "short_explanation",
+            "explanation_key",
+            "source_work_key",
+            "source_author_key",
+        }:
             continue
         if not is_blank(row.get(field)):
             entry[field] = clean_text(row[field])
@@ -304,6 +373,51 @@ def dump_minimal_yaml(entries: list[dict[str, Any]]) -> str:
     return "\n".join(lines) + ("\n" if lines else "[]\n")
 
 
+def l10n_candidates(entries: list[dict[str, Any]]) -> dict[str, str]:
+    candidates: dict[str, str] = {}
+    for entry in entries:
+        if entry.get("explanation_key") and has_real_explanation(entry.get("short_explanation")):
+            candidates[clean_text(entry["explanation_key"])] = clean_text(
+                entry["short_explanation"]
+            )
+        if entry.get("source_work_key") and not is_blank(entry.get("source_work")):
+            candidates[clean_text(entry["source_work_key"])] = clean_text(entry["source_work"])
+        if entry.get("source_author_key") and not is_blank(entry.get("source_author")):
+            candidates[clean_text(entry["source_author_key"])] = clean_text(entry["source_author"])
+    return dict(sorted(candidates.items()))
+
+
+def write_l10n(entries: list[dict[str, Any]], out_path: Path) -> list[str]:
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    existing: dict[str, str] = {}
+    if out_path.exists():
+        payload = json.loads(out_path.read_text(encoding="utf-8"))
+        if not isinstance(payload, dict) or not all(
+            isinstance(k, str) and isinstance(v, str) for k, v in payload.items()
+        ):
+            raise ValueError(
+                f"{out_path}: l10n file must be a JSON object mapping strings to strings"
+            )
+        existing = dict(payload)
+
+    warnings: list[str] = []
+    merged = dict(existing)
+    for key, value in l10n_candidates(entries).items():
+        if key in existing:
+            if existing[key] != value:
+                warnings.append(
+                    f"l10n conflict for {key!r}: existing={existing[key]!r}, imported={value!r}"
+                )
+            continue
+        merged[key] = value
+
+    out_path.write_text(
+        json.dumps(dict(sorted(merged.items())), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    return warnings
+
+
 def write_yaml(entries: list[dict[str, Any]], out_path: Path) -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     if yaml is not None:
@@ -333,18 +447,34 @@ def main() -> int:
         required=True,
         help=f"draft YAML output path, typically under {DEFAULT_DRAFT_DIR}",
     )
+    parser.add_argument(
+        "--l10n-out",
+        type=Path,
+        help=(
+            "optional cultural localisation JSON output path to create/update, "
+            "e.g. backend/lesson/l10n/cultural_references/en.json"
+        ),
+    )
+    parser.epilog = f"Expected CSV header: {EXPECTED_CSV_HEADER}"
     args = parser.parse_args()
 
     try:
         rows = load_source(args.source)
         entries = convert_rows(rows)
         write_yaml(entries, args.out)
+        l10n_warnings: list[str] = []
+        if args.l10n_out is not None:
+            l10n_warnings = write_l10n(entries, args.l10n_out)
     except Exception as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1
 
+    for warning in l10n_warnings:
+        print(f"WARNING: {warning}", file=sys.stderr)
     entry_word = "entry" if len(entries) == 1 else "entries"
     print(f"Wrote {len(entries)} draft cultural {entry_word} to {args.out}")
+    if args.l10n_out is not None:
+        print(f"Updated cultural localisation resource {args.l10n_out}")
     return 0
 
 

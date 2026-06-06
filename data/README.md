@@ -56,6 +56,69 @@ canonical reference; the builder merges them into generated `surface_patterns`
 and deduplicates the result deterministically. Use `allow_short_pattern: true`
 only for reviewed short forms that are meaningful in context despite ambiguity.
 
+## Source CSV explanations and localisation keys
+
+Source import files under `data/cultural_sources/` may be CSV, JSONL, or NDJSON.
+CSV files should use this Windows/PowerShell-friendly header:
+
+```csv
+language,surface_pattern,surface_patterns,variants,canonical_reference,reference_type,source_work,source_author,source_location,short_explanation,explanation_key,source_work_key,source_author_key,learner_level,register,confidence,source_url,source_license,source_dataset,notes
+```
+
+`short_explanation` is optional in source rows. When it is present, the importer
+copies it into the draft YAML. When it is missing or blank, the importer keeps the
+review placeholder `TODO: add explanation` so reviewers can identify rows that
+still need human-authored explanation text before promotion.
+
+`explanation_key`, `source_work_key`, and `source_author_key` are optional. If a
+row omits them, the importer generates deterministic suggested keys from stable
+row fields where possible:
+
+- `cultural.explanation.<language>.<source_dataset>.<entry_slug>`
+- `cultural.source_work.<source_dataset>.<source_work_slug>`
+- `cultural.source_author.<source_author_slug>`
+
+For example, an English Shakespeare phrase row can generate
+`cultural.explanation.en.en_shakespeare_phrases.break_the_ice`,
+`cultural.source_work.en_shakespeare_phrases.the_taming_of_the_shrew`, and
+`cultural.source_author.william_shakespeare`. User-provided keys are preserved.
+Blank source-work and source-author values do not produce keys.
+
+To create or update an English cultural localisation resource while importing,
+pass `--l10n-out` explicitly:
+
+```bash
+python scripts/import_cultural_sources.py \
+  --source data/cultural_sources/en_shakespeare_phrases.csv \
+  --out data/cultural_drafts/en_shakespeare.generated.yaml \
+  --l10n-out backend/lesson/l10n/cultural_references/en.json
+```
+
+PowerShell path separators are also supported:
+
+```powershell
+python scripts/import_cultural_sources.py `
+  --source data\cultural_sources\en_shakespeare_phrases.csv `
+  --out data\cultural_drafts\en_shakespeare.generated.yaml `
+  --l10n-out backend\lesson\l10n\cultural_references\en.json
+```
+
+The localisation resource is a sorted UTF-8 JSON object. The importer adds
+missing mappings for non-placeholder explanation text, source work titles, and
+source author names. Existing values are preserved. If an imported row proposes a
+different value for an existing key, the importer prints a warning showing both
+values and does not overwrite silently. It only writes the file you point it at;
+it does not create other locales and does not perform machine translation or
+interpretation.
+
+Generated runtime JSON preserves localisation keys, and the detector exposes
+those keys in `lesson_data` alongside fallback strings (`explanation`,
+`source_work`, and `source_author`). Keep fallback strings in reviewed catalogue
+entries: missing translations must never break parsing or lesson generation.
+Source attribution should remain cautious; imported source metadata is for review
+and traceability, not proof that a phrase originated with the named work or
+author.
+
 
 ## Review status and provenance
 
