@@ -153,6 +153,11 @@ def generated_id(entry: dict[str, Any]) -> str:
     return slugify(str(entry["canonical_reference"]))
 
 
+def clean_text(value: Any) -> str:
+    """Return deterministic single-entry text from seed scalar values."""
+    return unicodedata.normalize("NFC", str(value)).strip()
+
+
 def validate_and_build(rows: list[dict[str, Any]], only_language: str | None = None) -> tuple[dict[str, list[dict[str, Any]]], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
@@ -205,8 +210,8 @@ def validate_and_build(rows: list[dict[str, Any]], only_language: str | None = N
                     variants = []
                 else:
                     avoid_if = []
-        merged_patterns = list(dict.fromkeys(unicodedata.normalize("NFC", p) for p in [*patterns, *variants]))
-        eid = str(raw.get("id") or generated_id(raw))
+        merged_patterns = list(dict.fromkeys(clean_text(p) for p in [*patterns, *variants]))
+        eid = str(raw.get("id") or generated_id(raw)).strip()
         if eid in ids[lang]:
             errors.append(f"row {idx} ({lang}): duplicate id {eid!r}")
         ids[lang].add(eid)
@@ -225,12 +230,12 @@ def validate_and_build(rows: list[dict[str, Any]], only_language: str | None = N
             "id": eid,
             "language": lang,
             "surface_patterns": merged_patterns,
-            "canonical_reference": unicodedata.normalize("NFC", str(raw.get("canonical_reference", ""))),
+            "canonical_reference": clean_text(raw.get("canonical_reference", "")),
             "canonical_form": f"{lang}:{TYPE_PREFIX.get(str(rtype), str(rtype))}:{eid}",
             "reference_type": rtype,
             "source_work": raw.get("source_work"),
             "source_author": raw.get("source_author"),
-            "short_explanation": raw.get("short_explanation"),
+            "short_explanation": clean_text(raw.get("short_explanation", "")),
             "learner_level": level,
             "register": register,
             "confidence": confidence,
