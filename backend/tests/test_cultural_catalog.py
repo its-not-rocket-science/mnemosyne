@@ -70,6 +70,31 @@ def test_seed_schema_validation_accepts_starter_catalogue():
     assert all(by_lang[lang] for lang in SUPPORTED_LANGUAGES)
 
 
+def test_seed_scalar_whitespace_is_normalized():
+    by_lang, warnings = validate_and_build([
+        {
+            "language": "en",
+            "canonical_reference": "Orwellian\n",
+            "reference_type": "literary_reference",
+            "surface_patterns": ["Orwellian\n"],
+            "short_explanation": (
+                "Describes manipulative, authoritarian, or truth-distorting political language.\n"
+            ),
+            "learner_level": "B2",
+            "register": "literary",
+            "confidence": 0.86,
+        }
+    ])
+
+    assert not warnings
+    entry = by_lang["en"][0]
+    assert entry["canonical_reference"] == "Orwellian"
+    assert entry["surface_patterns"] == ["Orwellian"]
+    assert entry["short_explanation"] == (
+        "Describes manipulative, authoritarian, or truth-distorting political language."
+    )
+
+
 @pytest.mark.parametrize(
     "bad_row, message",
     [
