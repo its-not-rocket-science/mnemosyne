@@ -226,6 +226,9 @@ def validate_and_build(rows: list[dict[str, Any]], only_language: str | None = N
             if confidence > 0.90 and (norm_pat in COMMON_WORDS or len(pat.strip()) < 6):
                 warnings.append(f"row {idx} ({lang}): high confidence {confidence:.2f} for ambiguous/common pattern {pat!r}")
             surfaces[lang][norm_pat].append(eid)
+        notes = raw.get("notes")
+        if isinstance(notes, str):
+            notes = clean_text(notes)
         entry = {
             "id": eid,
             "language": lang,
@@ -241,7 +244,7 @@ def validate_and_build(rows: list[dict[str, Any]], only_language: str | None = N
             "confidence": confidence,
             "variants": variants,
             "avoid_if": avoid_if,
-            "notes": raw.get("notes"),
+            "notes": notes,
             "allow_short_pattern": bool(raw.get("allow_short_pattern", False)),
         }
         by_lang[lang].append({k: v for k, v in entry.items() if v not in (None, [], False) or k in {"confidence"}})
