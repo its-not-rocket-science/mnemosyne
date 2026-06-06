@@ -96,7 +96,15 @@ def test_build_report_includes_every_supported_language():
 
 def test_language_write_targets_only_requested_language(tmp_path):
     subprocess.run(
-        [sys.executable, "scripts/build_cultural_catalog.py", "--language", "fi", "--write", "--out-dir", str(tmp_path)],
+        [
+            sys.executable,
+            "scripts/build_cultural_catalog.py",
+            "--language",
+            "fi",
+            "--write",
+            "--out-dir",
+            str(tmp_path),
+        ],
         cwd=ROOT,
         check=True,
         capture_output=True,
@@ -105,13 +113,69 @@ def test_language_write_targets_only_requested_language(tmp_path):
     assert {p.name for p in tmp_path.glob("*.json")} == {"fi.json"}
 
 
-def test_generated_json_determinism():
-    first = subprocess.run([sys.executable, "scripts/build_cultural_catalog.py", "--write"], cwd=ROOT, check=True, capture_output=True, text=True)
-    before = {p.name: p.read_text(encoding="utf-8") for p in sorted(OUT.glob("*.json"))}
-    second = subprocess.run([sys.executable, "scripts/build_cultural_catalog.py", "--write"], cwd=ROOT, check=True, capture_output=True, text=True)
-    after = {p.name: p.read_text(encoding="utf-8") for p in sorted(OUT.glob("*.json"))}
+def test_generated_json_determinism_in_temp_dir(tmp_path):
+    first_dir = tmp_path / "first"
+    second_dir = tmp_path / "second"
+
+    first = subprocess.run(
+        [
+            sys.executable,
+            "scripts/build_cultural_catalog.py",
+            "--write",
+            "--out-dir",
+            str(first_dir),
+        ],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    second = subprocess.run(
+        [
+            sys.executable,
+            "scripts/build_cultural_catalog.py",
+            "--write",
+            "--out-dir",
+            str(second_dir),
+        ],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    first_payloads = {
+        p.name: p.read_text(encoding="utf-8") for p in sorted(first_dir.glob("*.json"))
+    }
+    second_payloads = {
+        p.name: p.read_text(encoding="utf-8") for p in sorted(second_dir.glob("*.json"))
+    }
     assert first.stdout == second.stdout
-    assert before == after
+    assert first_payloads == second_payloads
+
+
+def test_committed_generated_catalogues_are_up_to_date(tmp_path):
+    generated = tmp_path / "generated"
+    subprocess.run(
+        [
+            sys.executable,
+            "scripts/build_cultural_catalog.py",
+            "--write",
+            "--out-dir",
+            str(generated),
+        ],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    for lang in SUPPORTED_LANGUAGES:
+        expected = (generated / f"{lang}.json").read_text(encoding="utf-8")
+        committed = (OUT / f"{lang}.json").read_text(encoding="utf-8")
+        assert committed == expected, (
+            f"{lang}.json is stale; run scripts/build_cultural_catalog.py --write"
+        )
 
 
 def test_generated_file_exists_for_every_supported_language():
