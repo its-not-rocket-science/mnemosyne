@@ -118,6 +118,28 @@ The hook bundle supports:
 If omitted, the lesson engine uses safe default hooks so unsupported languages still get
 basic comprehension and retrieval activities.
 
+
+## Data-driven cultural catalogue
+
+Do not hard-code literary references, cultural references, proverb traditions,
+or classical/scriptural allusions inside plugin files. Maintain those entries in
+`data/cultural_references_seed.yaml`, then generate runtime catalogues with:
+
+```bash
+python scripts/build_cultural_catalog.py --check
+python scripts/build_cultural_catalog.py --report
+python scripts/build_cultural_catalog.py --write
+pytest backend/tests -k "cultural or literary or proverb or allusion"
+```
+
+Runtime detection loads `backend/nuance/data/cultural_references/<lang>.json`
+lazily and emits `type="nuance"` candidates with `reference_type`,
+`canonical_reference`, source metadata, explanation, surface form, learner level,
+register, and confidence notes where needed. Plugins should only declare the
+capability level; they should not duplicate catalogue rows.
+
+---
+
 ## Object Types
 
 Each `CandidateObject` has a `type` field.  The built-in lesson builders

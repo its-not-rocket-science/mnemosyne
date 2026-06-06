@@ -431,15 +431,15 @@ class LatinPlugin:
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="none",
-            literary_references="none",
-            cultural_references="none",
+            literary_references="partial",
+            cultural_references="partial",
             etymology="none",
             formality_register="none",
             grammar_nuance="none",
             pronunciation_tts="stub",
             transliteration="none",
-            proverb_tradition="none",
-            classical_or_scriptural_allusion="none",
+            proverb_tradition="partial",
+            classical_or_scriptural_allusion="partial",
             notes=(
                 "Verb forms looked up in la_verb_morph.db (~615 000 annotated verb forms "
                 "from kaikki Wiktionary paradigm tables for ~5 400 lemmas). "

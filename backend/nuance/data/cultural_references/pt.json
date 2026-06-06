@@ -1,0 +1,149 @@
+{
+  "entries": [
+    {
+      "canonical_form": "pt:classical:cavalo_de_troia",
+      "canonical_reference": "cavalo de Troia",
+      "confidence": 0.88,
+      "id": "cavalo_de_troia",
+      "language": "pt",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A hidden threat inside something apparently harmless.",
+      "surface_patterns": [
+        "cavalo de Troia"
+      ]
+    },
+    {
+      "canonical_form": "pt:classical:talao_de_aquiles",
+      "canonical_reference": "talão de Aquiles",
+      "confidence": 0.88,
+      "id": "talao_de_aquiles",
+      "language": "pt",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A vulnerable point.",
+      "surface_patterns": [
+        "talão de Aquiles"
+      ]
+    },
+    {
+      "canonical_form": "pt:cultural:saudade",
+      "canonical_reference": "saudade",
+      "confidence": 0.84,
+      "id": "saudade",
+      "language": "pt",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "A culturally important feeling of longing, absence, or nostalgia.",
+      "surface_patterns": [
+        "saudade"
+      ]
+    },
+    {
+      "canonical_form": "pt:cultural:sebastianismo",
+      "canonical_reference": "sebastianismo",
+      "confidence": 0.88,
+      "id": "sebastianismo",
+      "language": "pt",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "Hope for a vanished saviour or impossible return.",
+      "surface_patterns": [
+        "sebastianismo"
+      ]
+    },
+    {
+      "canonical_form": "pt:literary:adamastor",
+      "canonical_reference": "Adamastor",
+      "confidence": 0.88,
+      "id": "adamastor",
+      "language": "pt",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A monstrous obstacle or threatening force.",
+      "source_author": "Luís de Camões",
+      "source_work": "Os Lusíadas",
+      "surface_patterns": [
+        "Adamastor"
+      ]
+    },
+    {
+      "canonical_form": "pt:literary:ines_de_castro",
+      "canonical_reference": "Inês de Castro",
+      "confidence": 0.88,
+      "id": "ines_de_castro",
+      "language": "pt",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Tragic love and posthumous recognition.",
+      "surface_patterns": [
+        "Inês de Castro"
+      ]
+    },
+    {
+      "canonical_form": "pt:literary:velho_do_restelo",
+      "canonical_reference": "velho do Restelo",
+      "confidence": 0.88,
+      "id": "velho_do_restelo",
+      "language": "pt",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A pessimistic critic of risky ambition.",
+      "source_author": "Camões",
+      "source_work": "Os Lusíadas",
+      "surface_patterns": [
+        "velho do Restelo"
+      ]
+    },
+    {
+      "canonical_form": "pt:proverb:agua_mole_em_pedra_dura",
+      "canonical_reference": "água mole em pedra dura",
+      "confidence": 0.88,
+      "id": "agua_mole_em_pedra_dura",
+      "language": "pt",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Persistence eventually succeeds.",
+      "surface_patterns": [
+        "água mole em pedra dura"
+      ]
+    },
+    {
+      "canonical_form": "pt:proverb:mais_vale_tarde_do_que_nunca",
+      "canonical_reference": "mais vale tarde do que nunca",
+      "confidence": 0.88,
+      "id": "mais_vale_tarde_do_que_nunca",
+      "language": "pt",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Better late than never.",
+      "surface_patterns": [
+        "mais vale tarde do que nunca"
+      ]
+    },
+    {
+      "canonical_form": "pt:proverb:quem_nao_arrisca_nao_petisca",
+      "canonical_reference": "quem não arrisca não petisca",
+      "confidence": 0.88,
+      "id": "quem_nao_arrisca_nao_petisca",
+      "language": "pt",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Nothing ventured, nothing gained.",
+      "surface_patterns": [
+        "quem não arrisca não petisca"
+      ]
+    }
+  ],
+  "language": "pt"
+}

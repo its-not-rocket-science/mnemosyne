@@ -1,0 +1,149 @@
+{
+  "entries": [
+    {
+      "canonical_form": "he:classical:אין_חדש_תחת_השמש",
+      "canonical_reference": "אין חדש תחת השמש",
+      "confidence": 0.88,
+      "id": "אין_חדש_תחת_השמש",
+      "language": "he",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "There is nothing new under the sun.",
+      "source_work": "Ecclesiastes",
+      "surface_patterns": [
+        "אין חדש תחת השמש"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:דוד_וגוליית",
+      "canonical_reference": "דוד וגוליית",
+      "confidence": 0.88,
+      "id": "דוד_וגוליית",
+      "language": "he",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A small or weaker opponent facing a giant.",
+      "source_work": "Hebrew Bible",
+      "surface_patterns": [
+        "דוד וגוליית"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:חכמת_שלמה",
+      "canonical_reference": "חכמת שלמה",
+      "confidence": 0.88,
+      "id": "חכמת_שלמה",
+      "language": "he",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Solomonic wisdom or judgement.",
+      "surface_patterns": [
+        "חכמת שלמה"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:לך_אל_הנמלה",
+      "canonical_reference": "לך אל הנמלה",
+      "confidence": 0.88,
+      "id": "לך_אל_הנמלה",
+      "language": "he",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Learn diligence from the ant.",
+      "source_work": "Proverbs",
+      "surface_patterns": [
+        "לך אל הנמלה"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:מגדל_בבל",
+      "canonical_reference": "מגדל בבל",
+      "confidence": 0.88,
+      "id": "מגדל_בבל",
+      "language": "he",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Confusion of language or failed human overreach.",
+      "source_work": "Genesis",
+      "surface_patterns": [
+        "מגדל בבל"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:סוס_טרויאני",
+      "canonical_reference": "סוס טרויאני",
+      "confidence": 0.88,
+      "id": "סוס_טרויאני",
+      "language": "he",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A hidden threat inside something apparently harmless.",
+      "surface_patterns": [
+        "סוס טרויאני"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:עקב_אכילס",
+      "canonical_reference": "עקב אכילס",
+      "confidence": 0.88,
+      "id": "עקב_אכילס",
+      "language": "he",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A vulnerable point.",
+      "surface_patterns": [
+        "עקב אכילס"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:תיבת_פנדורה",
+      "canonical_reference": "תיבת פנדורה",
+      "confidence": 0.88,
+      "id": "תיבת_פנדורה",
+      "language": "he",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A source of unforeseen troubles once opened.",
+      "surface_patterns": [
+        "תיבת פנדורה"
+      ]
+    },
+    {
+      "canonical_form": "he:proverb:אם_אין_אני_לי_מי_לי",
+      "canonical_reference": "אם אין אני לי מי לי",
+      "confidence": 0.88,
+      "id": "אם_אין_אני_לי_מי_לי",
+      "language": "he",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "If I am not for myself, who will be for me?",
+      "surface_patterns": [
+        "אם אין אני לי מי לי"
+      ]
+    },
+    {
+      "canonical_form": "he:proverb:תפסת_מרובה_לא_תפסת",
+      "canonical_reference": "תפסת מרובה לא תפסת",
+      "confidence": 0.88,
+      "id": "תפסת_מרובה_לא_תפסת",
+      "language": "he",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Grasping too much may mean grasping nothing.",
+      "surface_patterns": [
+        "תפסת מרובה לא תפסת"
+      ]
+    }
+  ],
+  "language": "he"
+}

@@ -1,0 +1,150 @@
+{
+  "entries": [
+    {
+      "canonical_form": "ru:classical:ахиллесова_пята",
+      "canonical_reference": "ахиллесова пята",
+      "confidence": 0.88,
+      "id": "ахиллесова_пята",
+      "language": "ru",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A vulnerable point.",
+      "surface_patterns": [
+        "ахиллесова пята"
+      ]
+    },
+    {
+      "canonical_form": "ru:classical:сизифов_труд",
+      "canonical_reference": "сизифов труд",
+      "confidence": 0.88,
+      "id": "сизифов_труд",
+      "language": "ru",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Endless, futile labour.",
+      "surface_patterns": [
+        "сизифов труд"
+      ]
+    },
+    {
+      "canonical_form": "ru:classical:троянскии_конь",
+      "canonical_reference": "Троянский конь",
+      "confidence": 0.88,
+      "id": "троянскии_конь",
+      "language": "ru",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A hidden threat inside something apparently harmless.",
+      "surface_patterns": [
+        "Троянский конь"
+      ]
+    },
+    {
+      "canonical_form": "ru:cultural:потемкинская_деревня",
+      "canonical_reference": "Потёмкинская деревня",
+      "confidence": 0.88,
+      "id": "потемкинская_деревня",
+      "language": "ru",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "A façade concealing poor reality.",
+      "surface_patterns": [
+        "Потёмкинская деревня"
+      ]
+    },
+    {
+      "canonical_form": "ru:literary:лишнии_человек",
+      "canonical_reference": "лишний человек",
+      "confidence": 0.88,
+      "id": "лишнии_человек",
+      "language": "ru",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "The superfluous man: alienated, gifted, but socially ineffective.",
+      "surface_patterns": [
+        "лишний человек"
+      ]
+    },
+    {
+      "canonical_form": "ru:literary:маленькии_человек",
+      "canonical_reference": "маленький человек",
+      "confidence": 0.88,
+      "id": "маленькии_человек",
+      "language": "ru",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "The little man figure in Russian literature: powerless, ordinary, often humiliated.",
+      "surface_patterns": [
+        "маленький человек"
+      ]
+    },
+    {
+      "canonical_form": "ru:literary:обломов",
+      "canonical_reference": "Обломов",
+      "confidence": 0.88,
+      "id": "обломов",
+      "language": "ru",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Inertia, passivity, or chronic inability to act.",
+      "source_author": "Иван Гончаров",
+      "source_work": "Обломов",
+      "surface_patterns": [
+        "Обломов",
+        "обломовщина"
+      ]
+    },
+    {
+      "canonical_form": "ru:literary:раскольников",
+      "canonical_reference": "Раскольников",
+      "confidence": 0.88,
+      "id": "раскольников",
+      "language": "ru",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Guilt, moral transgression, or tortured conscience.",
+      "source_author": "Фёдор Достоевский",
+      "source_work": "Преступление и наказание",
+      "surface_patterns": [
+        "Раскольников"
+      ]
+    },
+    {
+      "canonical_form": "ru:proverb:без_труда_не_вытащишь_и_рыбку_из_пруда",
+      "canonical_reference": "без труда не вытащишь и рыбку из пруда",
+      "confidence": 0.88,
+      "id": "без_труда_не_вытащишь_и_рыбку_из_пруда",
+      "language": "ru",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "No reward without effort.",
+      "surface_patterns": [
+        "без труда не вытащишь и рыбку из пруда"
+      ]
+    },
+    {
+      "canonical_form": "ru:proverb:москва_слезам_не_верит",
+      "canonical_reference": "Москва слезам не верит",
+      "confidence": 0.88,
+      "id": "москва_слезам_не_верит",
+      "language": "ru",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Practical resilience; tears do not solve problems.",
+      "surface_patterns": [
+        "Москва слезам не верит"
+      ]
+    }
+  ],
+  "language": "ru"
+}

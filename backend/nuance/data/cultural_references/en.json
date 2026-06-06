@@ -1,0 +1,161 @@
+{
+  "entries": [
+    {
+      "canonical_form": "en:classical:achilles_heel",
+      "canonical_reference": "Achilles’ heel",
+      "confidence": 0.88,
+      "id": "achilles_heel",
+      "language": "en",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A single vulnerable point in an otherwise strong person or system.",
+      "source_work": "Greek myth / Iliadic tradition",
+      "surface_patterns": [
+        "Achilles heel",
+        "Achilles’ heel"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:forbidden_fruit",
+      "canonical_reference": "forbidden fruit",
+      "confidence": 0.88,
+      "id": "forbidden_fruit",
+      "language": "en",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Something tempting because it is prohibited.",
+      "source_work": "Genesis",
+      "surface_patterns": [
+        "forbidden fruit"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:trojan_horse",
+      "canonical_reference": "Trojan horse",
+      "confidence": 0.88,
+      "id": "trojan_horse",
+      "language": "en",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Something apparently harmless that conceals danger.",
+      "source_work": "Trojan War tradition",
+      "surface_patterns": [
+        "Trojan horse"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:writing_on_the_wall",
+      "canonical_reference": "writing on the wall",
+      "confidence": 0.88,
+      "id": "writing_on_the_wall",
+      "language": "en",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A sign that disaster or failure is imminent.",
+      "source_work": "Book of Daniel",
+      "surface_patterns": [
+        "writing on the wall"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:big_brother",
+      "canonical_reference": "Big Brother",
+      "confidence": 0.88,
+      "id": "big_brother",
+      "language": "en",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A symbol of intrusive surveillance and authoritarian control.",
+      "source_author": "George Orwell",
+      "source_work": "Nineteen Eighty-Four",
+      "surface_patterns": [
+        "Big Brother"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:catch_22",
+      "canonical_reference": "Catch-22",
+      "confidence": 0.88,
+      "id": "catch_22",
+      "language": "en",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A no-win bureaucratic paradox.",
+      "source_author": "Joseph Heller",
+      "source_work": "Catch-22",
+      "surface_patterns": [
+        "Catch-22"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:jekyll_and_hyde",
+      "canonical_reference": "Jekyll and Hyde",
+      "confidence": 0.88,
+      "id": "jekyll_and_hyde",
+      "language": "en",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A sharply divided or double personality.",
+      "source_author": "Robert Louis Stevenson",
+      "source_work": "Strange Case of Dr Jekyll and Mr Hyde",
+      "surface_patterns": [
+        "Jekyll and Hyde"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:kafkaesque",
+      "canonical_reference": "Kafkaesque",
+      "confidence": 0.86,
+      "id": "kafkaesque",
+      "language": "en",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Absurd, oppressive bureaucracy or nightmarish helplessness.",
+      "source_author": "Franz Kafka",
+      "surface_patterns": [
+        "Kafkaesque"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:orwellian",
+      "canonical_reference": "Orwellian",
+      "confidence": 0.86,
+      "id": "orwellian",
+      "language": "en",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Describes manipulative, authoritarian, or truth-distorting political language.",
+      "source_author": "George Orwell",
+      "source_work": "Nineteen Eighty-Four / Animal Farm",
+      "surface_patterns": [
+        "Orwellian"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:scrooge",
+      "canonical_reference": "Scrooge",
+      "confidence": 0.86,
+      "id": "scrooge",
+      "language": "en",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A miserly or ungenerous person.",
+      "source_author": "Charles Dickens",
+      "source_work": "A Christmas Carol",
+      "surface_patterns": [
+        "Scrooge"
+      ]
+    }
+  ],
+  "language": "en"
+}
