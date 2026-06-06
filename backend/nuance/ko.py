@@ -168,8 +168,10 @@ class KoreanNuanceExtractor:
 
     The extractor deliberately favours a narrow set of high-value, explainable
     Korean grammar features.  Kiwipiepy morpheme tags receive higher confidence;
-    plain text suffix checks are capped at medium/low confidence so short,
-    ambiguous syllables do not become overconfident lessons.
+    plain text suffix checks are usually capped at medium/low confidence so
+    short, ambiguous syllables do not become overconfident lessons.  Highly
+    distinctive honorific-formal endings such as -십니다 are allowed a narrow
+    high-confidence heuristic path.
     """
 
     language = "ko"
@@ -201,6 +203,26 @@ class KoreanNuanceExtractor:
     }
 
     _ENDING_PATTERNS: tuple[tuple[str, str, str, str, str, float, str], ...] = (
+        (
+            "ko:ending:formal_hapsyo",
+            "politeness",
+            "speech_level",
+            "formal_hapsyo",
+            "으십니다",
+            0.86,
+            "합쇼체 formal-polite honorific endings such as -으십니다/-십니다 clearly combine "
+            "formal public speech with the subject-honorific marker.",
+        ),
+        (
+            "ko:ending:formal_hapsyo",
+            "politeness",
+            "speech_level",
+            "formal_hapsyo",
+            "십니다",
+            0.86,
+            "합쇼체 formal-polite honorific endings such as -으십니다/-십니다 clearly combine "
+            "formal public speech with the subject-honorific marker.",
+        ),
         ("ko:ending:formal_hapsyo", "politeness", "speech_level", "formal_hapsyo", "습니다", 0.82, "합쇼체 formal-polite endings such as -습니다/-ㅂ니다 are used in announcements, workplaces, and formal public speech."),
         ("ko:ending:formal_hapsyo", "politeness", "speech_level", "formal_hapsyo", "ㅂ니다", 0.82, "합쇼체 formal-polite endings such as -습니다/-ㅂ니다 are used in announcements, workplaces, and formal public speech."),
         ("ko:ending:formal_hapsyo", "politeness", "speech_level", "formal_hapsyo", "니다", 0.76, "A sentence-final -니다 usually signals 합쇼체, but the exact stem allomorph is clearer with morphological analysis."),
