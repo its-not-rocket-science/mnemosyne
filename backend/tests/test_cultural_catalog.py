@@ -12,7 +12,12 @@ from backend.lesson_extraction.engine import enrich
 import backend.nuance.cultural as cultural
 from backend.nuance.cultural import extract_cultural_references
 from backend.schemas.parse import CandidateSentenceResult
-from scripts.build_cultural_catalog import SUPPORTED_LANGUAGES, load_seed, validate_and_build
+from scripts.build_cultural_catalog import (
+    REFERENCE_TYPES,
+    SUPPORTED_LANGUAGES,
+    load_seed,
+    validate_and_build,
+)
 
 ROOT = Path(__file__).resolve().parents[2]
 SEED = ROOT / "data" / "cultural_references_seed.yaml"
@@ -109,18 +114,71 @@ def test_seed_schema_validation_rejects_bad_rows(bad_row, message):
         validate_and_build([bad_row])
 
 
-def test_build_check_succeeds():
-    subprocess.run([sys.executable, "scripts/build_cultural_catalog.py", "--check"], cwd=ROOT, check=True, capture_output=True, text=True)
+def test_build_check_prints_concise_ok_not_report_table():
+    result = subprocess.run(
+        [sys.executable, "scripts/build_cultural_catalog.py", "--check"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    assert result.stdout.strip() == "OK: validated 170 entries across 17 languages"
+    assert "language | entries" not in result.stdout
+    assert result.stderr == ""
 
 
-def test_build_report_includes_every_supported_language():
-    result = subprocess.run([sys.executable, "scripts/build_cultural_catalog.py", "--report"], cwd=ROOT, check=True, capture_output=True, text=True)
-    report_languages = {line.split(" | ", 1)[0] for line in result.stdout.splitlines()[2:] if line.strip()}
+def test_build_check_language_scope_reports_only_requested_language():
+    result = subprocess.run(
+        [sys.executable, "scripts/build_cultural_catalog.py", "--check", "--language", "fi"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    assert result.stdout.strip() == "OK: validated 10 entries across 1 language (fi)"
+    assert "language | entries" not in result.stdout
+
+
+def test_build_report_prints_full_table_for_every_supported_language():
+    result = subprocess.run(
+        [sys.executable, "scripts/build_cultural_catalog.py", "--report"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    lines = result.stdout.splitlines()
+
+    assert lines[0].split(" | ") == ["language", "entries", *sorted(REFERENCE_TYPES)]
+    report_languages = {line.split(" | ", 1)[0] for line in lines[2:] if line.strip()}
     assert report_languages == set(SUPPORTED_LANGUAGES)
+    assert len(report_languages) == 17
+
+
+def test_write_out_dir_writes_files_and_prints_concise_summary(tmp_path):
+    result = subprocess.run(
+        [
+            sys.executable,
+            "scripts/build_cultural_catalog.py",
+            "--write",
+            "--out-dir",
+            str(tmp_path),
+        ],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    assert {p.stem for p in tmp_path.glob("*.json")} == set(SUPPORTED_LANGUAGES)
+    assert result.stdout.strip() == f"Wrote 17 catalogue files to {tmp_path} (170 entries)"
+    assert "language | entries" not in result.stdout
 
 
 def test_language_write_targets_only_requested_language(tmp_path):
-    subprocess.run(
+    result = subprocess.run(
         [
             sys.executable,
             "scripts/build_cultural_catalog.py",
@@ -135,7 +193,39 @@ def test_language_write_targets_only_requested_language(tmp_path):
         capture_output=True,
         text=True,
     )
+
     assert {p.name for p in tmp_path.glob("*.json")} == {"fi.json"}
+    assert result.stdout.strip() == f"Wrote 1 catalogue file to {tmp_path} (10 entries)"
+
+
+def test_build_invalid_seed_exits_non_zero(tmp_path):
+    bad_seed = tmp_path / "bad_seed.json"
+    bad_seed.write_text(
+        json.dumps([
+            {
+                "language": "xx",
+                "surface_patterns": ["abc"],
+                "canonical_reference": "abc",
+                "reference_type": "literary_reference",
+                "short_explanation": "x",
+                "learner_level": "B1",
+                "confidence": 0.8,
+            }
+        ]),
+        encoding="utf-8",
+    )
+
+    result = subprocess.run(
+        [sys.executable, "scripts/build_cultural_catalog.py", "--check", "--seed", str(bad_seed)],
+        cwd=ROOT,
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+
+    assert result.returncode != 0
+    assert "ERROR:" in result.stderr
+    assert "unknown language" in result.stderr
 
 
 def test_generated_json_determinism_in_temp_dir(tmp_path):
@@ -175,7 +265,8 @@ def test_generated_json_determinism_in_temp_dir(tmp_path):
     second_payloads = {
         p.name: p.read_text(encoding="utf-8") for p in sorted(second_dir.glob("*.json"))
     }
-    assert first.stdout == second.stdout
+    assert first.stdout.strip() == f"Wrote 17 catalogue files to {first_dir} (170 entries)"
+    assert second.stdout.strip() == f"Wrote 17 catalogue files to {second_dir} (170 entries)"
     assert first_payloads == second_payloads
 
 
