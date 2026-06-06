@@ -159,6 +159,17 @@ public provenance fields (`source_location`, `source_url`, `source_license`,
 `--include-drafts`. Confirm source licensing before adding imported rows, and
 include `source_license` whenever `source_url` is present.
 
+
+Cultural source import rows may also carry human-authored `short_explanation` text
+and optional localisation keys. The importer can generate stable suggested keys
+for explanations, source works, and source authors, and `--l10n-out` can add
+missing English fallback resource strings without overwriting conflicting
+existing values. Generated runtime JSON preserves these keys and emits them in
+`lesson_data` alongside fallback strings. Keep fallback strings because missing
+translations must never break parsing, do not use machine translation for these
+resources, and treat source attribution as review metadata rather than proof of
+origin. See `data/README.md` for the full CSV header and command examples.
+
 ---
 
 ## Object Types
