@@ -20,6 +20,7 @@ LEARNER_LEVELS = {"A1", "A2", "B1", "B2", "C1", "C2"}
 REGISTERS = {"common", "literary", "formal", "informal", "religious", "classical", "proverbial"}
 REVIEW_STATUSES = {"draft", "reviewed", "rejected", "needs_native_review"}
 PUBLIC_PROVENANCE_FIELDS = ("source_location", "source_url", "source_license", "source_dataset")
+LOCALISATION_KEY_FIELDS = ("explanation_key", "source_work_key", "source_author_key")
 SHORT_AMBIGUOUS = {
     "logos",
     "λόγος",
@@ -270,7 +271,7 @@ def validate_and_build(
             "notes": notes,
             "allow_short_pattern": bool(raw.get("allow_short_pattern", False)),
         }
-        for field in PUBLIC_PROVENANCE_FIELDS:
+        for field in (*LOCALISATION_KEY_FIELDS, *PUBLIC_PROVENANCE_FIELDS):
             if raw.get(field) not in (None, ""):
                 entry[field] = clean_text(raw[field])
         if emit_entry:
