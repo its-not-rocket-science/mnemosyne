@@ -68,11 +68,139 @@ def _use_runtime_catalog(monkeypatch: pytest.MonkeyPatch, out_dir: Path) -> None
     cultural._patterns.cache_clear()
 
 
+def _base_catalog_row(**overrides: object) -> dict[str, object]:
+    row: dict[str, object] = {
+        "language": "en",
+        "surface_patterns": ["Test allusion"],
+        "canonical_reference": "Test Allusion",
+        "reference_type": "literary_reference",
+        "short_explanation": "A test-only cultural catalogue entry.",
+        "learner_level": "B2",
+        "confidence": 0.8,
+    }
+    row.update(overrides)
+    return row
+
+
 def test_seed_schema_validation_accepts_starter_catalogue():
     by_lang, warnings = validate_and_build(load_seed(SEED))
     assert not warnings
     assert set(by_lang) == set(SUPPORTED_LANGUAGES)
     assert all(by_lang[lang] for lang in SUPPORTED_LANGUAGES)
+
+
+def test_missing_review_status_behaves_as_reviewed():
+    by_lang, warnings = validate_and_build([_base_catalog_row()])
+
+    assert not warnings
+    assert [entry["canonical_reference"] for entry in by_lang["en"]] == [
+        "Test Allusion"
+    ]
+    assert "review_status" not in by_lang["en"][0]
+
+
+def test_draft_excluded_by_default():
+    by_lang, warnings = validate_and_build([_base_catalog_row(review_status="draft")])
+
+    assert not warnings
+    assert by_lang["en"] == []
+
+
+def test_needs_native_review_excluded_by_default():
+    by_lang, warnings = validate_and_build(
+        [_base_catalog_row(review_status="needs_native_review")]
+    )
+
+    assert not warnings
+    assert by_lang["en"] == []
+
+
+def test_draft_included_with_include_drafts():
+    by_lang, warnings = validate_and_build(
+        [_base_catalog_row(review_status="draft")], include_drafts=True
+    )
+
+    assert not warnings
+    assert [entry["canonical_reference"] for entry in by_lang["en"]] == [
+        "Test Allusion"
+    ]
+
+
+def test_needs_native_review_included_with_include_drafts():
+    by_lang, warnings = validate_and_build(
+        [_base_catalog_row(review_status="needs_native_review")],
+        include_drafts=True,
+    )
+
+    assert not warnings
+    assert [entry["canonical_reference"] for entry in by_lang["en"]] == [
+        "Test Allusion"
+    ]
+
+
+def test_rejected_excluded_even_with_include_drafts():
+    by_lang, warnings = validate_and_build(
+        [_base_catalog_row(review_status="rejected")], include_drafts=True
+    )
+
+    assert not warnings
+    assert by_lang["en"] == []
+
+
+def test_unknown_review_status_fails_validation():
+    with pytest.raises(ValueError, match="unknown review_status"):
+        validate_and_build([_base_catalog_row(review_status="published")])
+
+
+def test_review_and_provenance_warnings_do_not_fail_validation():
+    by_lang, warnings = validate_and_build(
+        [
+            _base_catalog_row(
+                review_status="reviewed",
+                source_url="https://example.invalid/reference-list",
+            )
+        ]
+    )
+
+    assert by_lang["en"]
+    assert any(
+        "source_url is present but source_license is missing" in warning
+        for warning in warnings
+    )
+    assert any(
+        "review_status 'reviewed' should include reviewed_by and reviewed_at" in warning
+        for warning in warnings
+    )
+
+
+def test_provenance_fields_are_preserved_in_generated_json(tmp_path):
+    row = _base_catalog_row(
+        source_location="row 42",
+        source_url="https://example.invalid/reference-list",
+        source_license="CC0-1.0",
+        source_dataset="test cultural references",
+        review_status="reviewed",
+        reviewed_by="tester",
+        reviewed_at="2026-06-06",
+        review_notes="Internal note that should not be emitted.",
+    )
+    by_lang, warnings = validate_and_build([row])
+    write_count = import_module("scripts.build_cultural_catalog").write_outputs(
+        by_lang, tmp_path, "en"
+    )
+
+    payload = json.loads((tmp_path / "en.json").read_text(encoding="utf-8"))
+    entry = payload["entries"][0]
+    assert write_count == 1
+    assert warnings == []
+    assert entry["source_location"] == "row 42"
+    assert entry["source_url"] == "https://example.invalid/reference-list"
+    assert entry["source_license"] == "CC0-1.0"
+    assert entry["source_dataset"] == "test cultural references"
+    assert "review_status" not in entry
+    assert "review_notes" not in entry
+    assert "reviewed_by" not in entry
+    assert "reviewed_at" not in entry
 
 
 def test_seed_scalar_whitespace_is_normalized():
