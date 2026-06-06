@@ -23,6 +23,28 @@ python scripts/build_cultural_catalog.py --write
 pytest backend/tests -k "cultural or literary or proverb or allusion"
 ```
 
+## YAML parser fallback
+
+`build_cultural_catalog.py` prefers PyYAML when available. If PyYAML is not
+installed, it uses a deliberately small fallback parser that supports only the
+subset used by this seed file:
+
+- a top-level list of mappings;
+- scalar string/number/bool/null values;
+- nested lists of scalar strings, such as `surface_patterns`, `variants`, and
+  `avoid_if`;
+- folded block scalars using `>` for prose fields.
+
+The fallback parser does not support YAML anchors, aliases, inline maps, nested
+objects, complex quoting rules, or arbitrary YAML tags. Keep the seed file simple
+and run:
+
+```bash
+python scripts/build_cultural_catalog.py --check
+```
+
+after editing.
+
 ## Adding entries
 
 Each item should include `language`, `surface_patterns`, `canonical_reference`,
