@@ -132,11 +132,19 @@ python scripts/build_cultural_catalog.py --write
 pytest backend/tests -k "cultural or literary or proverb or allusion"
 ```
 
-Runtime detection loads `backend/nuance/data/cultural_references/<lang>.json`
-lazily and emits `type="nuance"` candidates with `reference_type`,
-`canonical_reference`, source metadata, explanation, surface form, learner level,
-register, and confidence notes where needed. Plugins should only declare the
-capability level; they should not duplicate catalogue rows.
+Runtime detection loads committed
+`backend/nuance/data/cultural_references/<lang>.json` lazily and emits
+`type="nuance"` candidates with `reference_type`, `canonical_reference`, source
+metadata, explanation, surface form, learner level, register, and confidence
+notes where needed. The detector is global enrichment applied by
+`backend/lesson_extraction/engine.py` after plugin/extractor enrichment; it is
+not a per-language `NuanceExtractor`. Plugins should only declare the capability
+level (`partial` for the starter catalogue languages); they should not duplicate
+catalogue rows.
+
+The catalogue is curated exact/near-exact string matching only. It does not use
+LLMs, embeddings, external APIs, or runtime network calls, and its coverage is
+partial rather than comprehensive cultural interpretation.
 
 ---
 

@@ -28,6 +28,87 @@ TYPE_PREFIX = {
 }
 
 
+
+def _parse_seed_scalar(value: str) -> Any:
+    value = value.strip()
+    if not value:
+        return ""
+    if value[0] in {"'", '"'}:
+        return json.loads(value) if value[0] == '"' else value.strip("'")
+    if value == "true":
+        return True
+    if value == "false":
+        return False
+    if value in {"null", "~"}:
+        return None
+    try:
+        return int(value)
+    except ValueError:
+        pass
+    try:
+        return float(value)
+    except ValueError:
+        return value
+
+
+def _load_minimal_seed_yaml(text: str) -> list[dict[str, Any]]:
+    """Parse the hand-authored seed YAML when PyYAML is unavailable.
+
+    This intentionally supports only the small YAML subset used by
+    data/cultural_references_seed.yaml: a top-level list of mappings, nested
+    lists of scalar strings, and folded block scalars for prose fields.
+    """
+    lines = text.splitlines()
+    rows: list[dict[str, Any]] = []
+    current: dict[str, Any] | None = None
+    idx = 0
+    while idx < len(lines):
+        raw = lines[idx]
+        stripped = raw.strip()
+        if not stripped or stripped.startswith("#"):
+            idx += 1
+            continue
+        if raw.startswith("- "):
+            current = {}
+            rows.append(current)
+            content = raw[2:]
+        elif raw.startswith("  ") and current is not None:
+            content = raw[2:]
+        else:
+            raise ValueError(f"unsupported seed YAML line {idx + 1}: {raw!r}")
+
+        if ":" not in content:
+            raise ValueError(f"unsupported seed YAML line {idx + 1}: {raw!r}")
+        key, value = content.split(":", 1)
+        key = key.strip()
+        value = value.strip()
+        if value == ">":
+            idx += 1
+            block: list[str] = []
+            while idx < len(lines) and (lines[idx].startswith("    ") or not lines[idx].strip()):
+                block.append(lines[idx][4:] if lines[idx].startswith("    ") else "")
+                idx += 1
+            current[key] = " ".join(part.strip() for part in block if part.strip())
+            continue
+        if value == "":
+            idx += 1
+            items: list[Any] = []
+            while idx < len(lines):
+                item_raw = lines[idx]
+                item_stripped = item_raw.strip()
+                if not item_stripped or item_stripped.startswith("#"):
+                    idx += 1
+                    continue
+                if not item_raw.startswith("    - "):
+                    break
+                items.append(_parse_seed_scalar(item_raw[6:]))
+                idx += 1
+            current[key] = items
+            continue
+        current[key] = _parse_seed_scalar(value)
+        idx += 1
+    return rows
+
 def load_seed(path: Path) -> list[dict[str, Any]]:
     text = path.read_text(encoding="utf-8")
     try:
@@ -35,9 +116,10 @@ def load_seed(path: Path) -> list[dict[str, Any]]:
     except json.JSONDecodeError:
         try:
             import yaml  # type: ignore
-        except ImportError as exc:
-            raise SystemExit(f"{path} is not JSON and PyYAML is not installed") from exc
-        data = yaml.safe_load(text)
+        except ImportError:
+            data = _load_minimal_seed_yaml(text)
+        else:
+            data = yaml.safe_load(text)
     if not isinstance(data, list):
         raise ValueError("seed file must contain a list of entries")
     return data
@@ -102,17 +184,21 @@ def validate_and_build(rows: list[dict[str, Any]], only_language: str | None = N
         except (TypeError, ValueError):
             errors.append(f"row {idx} ({lang}): confidence must be between 0 and 1")
             confidence = 0.0
-        for field in ("variants", "avoid_if"):
-            value = raw.get(field, [])
-            if value is None:
-                value = []
+        variants = raw.get("variants") or []
+        avoid_if = raw.get("avoid_if") or []
+        for field, value in (("variants", variants), ("avoid_if", avoid_if)):
             if not isinstance(value, list) or not all(isinstance(v, str) for v in value):
                 errors.append(f"row {idx} ({lang}): {field} must be a list[str]")
+                if field == "variants":
+                    variants = []
+                else:
+                    avoid_if = []
+        merged_patterns = list(dict.fromkeys(unicodedata.normalize("NFC", p) for p in [*patterns, *variants]))
         eid = str(raw.get("id") or generated_id(raw))
         if eid in ids[lang]:
             errors.append(f"row {idx} ({lang}): duplicate id {eid!r}")
         ids[lang].add(eid)
-        for pat in patterns:
+        for pat in merged_patterns:
             if not is_normalized(pat):
                 errors.append(f"row {idx} ({lang}): pattern is not NFC-normalized: {pat!r}")
             norm_pat = unicodedata.normalize("NFC", pat).casefold()
@@ -126,7 +212,7 @@ def validate_and_build(rows: list[dict[str, Any]], only_language: str | None = N
         entry = {
             "id": eid,
             "language": lang,
-            "surface_patterns": sorted(dict.fromkeys(unicodedata.normalize("NFC", p) for p in patterns), key=lambda s: (s.casefold(), s)),
+            "surface_patterns": merged_patterns,
             "canonical_reference": unicodedata.normalize("NFC", str(raw.get("canonical_reference", ""))),
             "canonical_form": f"{lang}:{TYPE_PREFIX.get(str(rtype), str(rtype))}:{eid}",
             "reference_type": rtype,
@@ -136,8 +222,8 @@ def validate_and_build(rows: list[dict[str, Any]], only_language: str | None = N
             "learner_level": level,
             "register": register,
             "confidence": confidence,
-            "variants": raw.get("variants") or [],
-            "avoid_if": raw.get("avoid_if") or [],
+            "variants": variants,
+            "avoid_if": avoid_if,
             "notes": raw.get("notes"),
             "allow_short_pattern": bool(raw.get("allow_short_pattern", False)),
         }

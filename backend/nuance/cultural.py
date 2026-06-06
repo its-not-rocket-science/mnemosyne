@@ -25,6 +25,13 @@ class _Pattern:
     length: int
 
 
+@dataclass(frozen=True)
+class _CandidateMatch:
+    candidate: CandidateObject
+    start: int
+    end: int
+
+
 def normalize_text(text: str) -> str:
     return unicodedata.normalize("NFC", text)
 
@@ -34,6 +41,21 @@ def _comparable(text: str, language: str) -> str:
     if language in CASE_INSENSITIVE_LANGUAGES:
         return text.casefold()
     return text
+
+
+def _comparable_with_spans(text: str, language: str) -> tuple[str, list[tuple[int, int]]]:
+    """Return comparable text plus a map from comparable offsets to original spans."""
+    text = normalize_text(text)
+    if language not in CASE_INSENSITIVE_LANGUAGES:
+        return text, [(idx, idx + 1) for idx in range(len(text))]
+
+    chars: list[str] = []
+    spans: list[tuple[int, int]] = []
+    for idx, char in enumerate(text):
+        folded = char.casefold()
+        chars.append(folded)
+        spans.extend((idx, idx + 1) for _ in folded)
+    return "".join(chars), spans
 
 
 @lru_cache(maxsize=None)
@@ -83,16 +105,19 @@ def extract_cultural_references(sentence: str, language: str) -> list[CandidateO
     overlap an earlier longer match.
     """
     normalized = normalize_text(sentence)
-    comp_sentence = _comparable(normalized, language)
+    comp_sentence, comp_spans = _comparable_with_spans(normalized, language)
     occupied: list[tuple[int, int]] = []
-    out: list[CandidateObject] = []
+    accepted: list[_CandidateMatch] = []
 
     for pat in _patterns(language):
         if not pat.comparable or _avoid_context(comp_sentence, pat.entry, language):
             continue
-        flags = re.IGNORECASE if language in CASE_INSENSITIVE_LANGUAGES else 0
-        for match in re.finditer(re.escape(pat.pattern), normalized, flags):
-            start, end = match.span()
+        for match in re.finditer(re.escape(pat.comparable), comp_sentence):
+            comp_start, comp_end = match.span()
+            if comp_start == comp_end or comp_end > len(comp_spans):
+                continue
+            start = comp_spans[comp_start][0]
+            end = comp_spans[comp_end - 1][1]
             if not _boundary_ok(normalized, start, end, language):
                 continue
             if any(start < used_end and end > used_start for used_start, used_end in occupied):
@@ -113,16 +138,20 @@ def extract_cultural_references(sentence: str, language: str) -> list[CandidateO
             confidence_note = _confidence_note(pat.entry)
             if confidence_note:
                 lesson_data["confidence_note"] = confidence_note
-            out.append(
-                CandidateObject(
-                    canonical_form=pat.entry["canonical_form"],
-                    type="nuance",
-                    label=pat.entry["canonical_reference"],
-                    surface_form=surface,
-                    lesson_data={k: v for k, v in lesson_data.items() if v is not None},
-                    confidence=float(pat.entry["confidence"]),
+            accepted.append(
+                _CandidateMatch(
+                    candidate=CandidateObject(
+                        canonical_form=pat.entry["canonical_form"],
+                        type="nuance",
+                        label=pat.entry["canonical_reference"],
+                        surface_form=surface,
+                        lesson_data={k: v for k, v in lesson_data.items() if v is not None},
+                        confidence=float(pat.entry["confidence"]),
+                    ),
+                    start=start,
+                    end=end,
                 )
             )
             occupied.append((start, end))
-    out.sort(key=lambda c: (c.canonical_form, c.surface_form or ""))
-    return out
+    accepted.sort(key=lambda m: (m.start, m.end, m.candidate.canonical_form))
+    return [match.candidate for match in accepted]
