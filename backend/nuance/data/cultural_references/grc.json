@@ -1,0 +1,154 @@
+{
+  "entries": [
+    {
+      "allow_short_pattern": true,
+      "canonical_form": "grc:classical:αγαπη",
+      "canonical_reference": "ἀγάπη",
+      "confidence": 0.7,
+      "id": "αγαπη",
+      "language": "grc",
+      "learner_level": "C1",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Love, especially in Christian ethical/theological contexts.",
+      "surface_patterns": [
+        "ἀγάπη"
+      ]
+    },
+    {
+      "canonical_form": "grc:classical:αλφα_και_ω",
+      "canonical_reference": "ἄλφα καὶ ὦ",
+      "confidence": 0.88,
+      "id": "αλφα_και_ω",
+      "language": "grc",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Alpha and omega; beginning and end.",
+      "source_work": "Revelation",
+      "surface_patterns": [
+        "ἄλφα καὶ ὦ"
+      ]
+    },
+    {
+      "canonical_form": "grc:classical:βασιλεια_του_θεου",
+      "canonical_reference": "βασιλεία τοῦ θεοῦ",
+      "confidence": 0.88,
+      "id": "βασιλεια_του_θεου",
+      "language": "grc",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Kingdom of God.",
+      "surface_patterns": [
+        "βασιλεία τοῦ θεοῦ"
+      ]
+    },
+    {
+      "canonical_form": "grc:classical:ειρηνη_υμιν",
+      "canonical_reference": "εἰρήνη ὑμῖν",
+      "confidence": 0.88,
+      "id": "ειρηνη_υμιν",
+      "language": "grc",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Peace be with you.",
+      "surface_patterns": [
+        "εἰρήνη ὑμῖν"
+      ]
+    },
+    {
+      "allow_short_pattern": true,
+      "canonical_form": "grc:classical:λογοσ",
+      "canonical_reference": "λόγος",
+      "confidence": 0.7,
+      "id": "λογοσ",
+      "language": "grc",
+      "learner_level": "C1",
+      "notes": "Only annotate when context strongly suggests scriptural/philosophical use.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Word, reason, or divine ordering principle depending on context.",
+      "source_work": "John 1 / Greek philosophical tradition",
+      "surface_patterns": [
+        "λόγος"
+      ]
+    },
+    {
+      "canonical_form": "grc:classical:ο_καλοσ_ποιμην",
+      "canonical_reference": "ὁ καλὸς ποιμήν",
+      "confidence": 0.88,
+      "id": "ο_καλοσ_ποιμην",
+      "language": "grc",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "The good shepherd.",
+      "source_work": "John",
+      "surface_patterns": [
+        "ὁ καλὸς ποιμήν"
+      ]
+    },
+    {
+      "allow_short_pattern": true,
+      "canonical_form": "grc:classical:πιστισ",
+      "canonical_reference": "πίστις",
+      "confidence": 0.65,
+      "id": "πιστισ",
+      "language": "grc",
+      "learner_level": "C1",
+      "notes": "Common word; avoid high confidence unless context is scriptural.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Faith/trust; important theological and ethical term.",
+      "surface_patterns": [
+        "πίστις"
+      ]
+    },
+    {
+      "canonical_form": "grc:classical:πολλοι_κλητοι_ολιγοι_δε_εκλεκτοι",
+      "canonical_reference": "πολλοὶ κλητοί, ὀλίγοι δὲ ἐκλεκτοί",
+      "confidence": 0.88,
+      "id": "πολλοι_κλητοι_ολιγοι_δε_εκλεκτοι",
+      "language": "grc",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Many are called, but few are chosen.",
+      "surface_patterns": [
+        "πολλοὶ κλητοί, ὀλίγοι δὲ ἐκλεκτοί"
+      ]
+    },
+    {
+      "canonical_form": "grc:classical:υιοσ_του_ανθρωπου",
+      "canonical_reference": "υἱὸς τοῦ ἀνθρώπου",
+      "confidence": 0.88,
+      "id": "υιοσ_του_ανθρωπου",
+      "language": "grc",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Son of Man; scriptural title/expression.",
+      "surface_patterns": [
+        "υἱὸς τοῦ ἀνθρώπου"
+      ]
+    },
+    {
+      "allow_short_pattern": true,
+      "canonical_form": "grc:classical:χαρισ",
+      "canonical_reference": "χάρις",
+      "confidence": 0.65,
+      "id": "χαρισ",
+      "language": "grc",
+      "learner_level": "C1",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Grace/favour; important theological and social term.",
+      "surface_patterns": [
+        "χάρις"
+      ]
+    }
+  ],
+  "language": "grc"
+}

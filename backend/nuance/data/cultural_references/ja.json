@@ -1,0 +1,152 @@
+{
+  "entries": [
+    {
+      "canonical_form": "ja:cultural:桃太郎",
+      "canonical_reference": "桃太郎",
+      "confidence": 0.88,
+      "id": "桃太郎",
+      "language": "ja",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "Folk hero associated with courage and companions.",
+      "surface_patterns": [
+        "桃太郎"
+      ]
+    },
+    {
+      "canonical_form": "ja:cultural:浦島太郎",
+      "canonical_reference": "浦島太郎",
+      "confidence": 0.88,
+      "id": "浦島太郎",
+      "language": "ja",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "A folk tale of time displacement and return.",
+      "surface_patterns": [
+        "浦島太郎"
+      ]
+    },
+    {
+      "canonical_form": "ja:literary:源氏物語",
+      "canonical_reference": "源氏物語",
+      "confidence": 0.88,
+      "id": "源氏物語",
+      "language": "ja",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A reference to classical court literature and romance.",
+      "source_author": "Murasaki Shikibu",
+      "source_work": "The Tale of Genji",
+      "surface_patterns": [
+        "源氏物語"
+      ]
+    },
+    {
+      "canonical_form": "ja:literary:羅生門",
+      "canonical_reference": "羅生門",
+      "confidence": 0.88,
+      "id": "羅生門",
+      "language": "ja",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Ambiguous testimony or conflicting perspectives.",
+      "source_author": "Akutagawa Ryūnosuke",
+      "source_work": "Rashōmon",
+      "surface_patterns": [
+        "羅生門"
+      ]
+    },
+    {
+      "allow_short_pattern": true,
+      "canonical_form": "ja:literary:雪国",
+      "canonical_reference": "雪国",
+      "confidence": 0.88,
+      "id": "雪国",
+      "language": "ja",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A reference to melancholy, beauty, and isolation.",
+      "source_author": "Kawabata Yasunari",
+      "source_work": "Snow Country",
+      "surface_patterns": [
+        "雪国"
+      ]
+    },
+    {
+      "canonical_form": "ja:proverb:七転ひ八起き",
+      "canonical_reference": "七転び八起き",
+      "confidence": 0.88,
+      "id": "七転ひ八起き",
+      "language": "ja",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Fall seven times, rise eight.",
+      "surface_patterns": [
+        "七転び八起き"
+      ]
+    },
+    {
+      "canonical_form": "ja:proverb:井の中の蛙",
+      "canonical_reference": "井の中の蛙",
+      "confidence": 0.88,
+      "id": "井の中の蛙",
+      "language": "ja",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Someone with a narrow perspective.",
+      "surface_patterns": [
+        "井の中の蛙"
+      ]
+    },
+    {
+      "canonical_form": "ja:proverb:猫に小判",
+      "canonical_reference": "猫に小判",
+      "confidence": 0.88,
+      "id": "猫に小判",
+      "language": "ja",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Giving something valuable to someone who cannot appreciate it.",
+      "surface_patterns": [
+        "猫に小判"
+      ]
+    },
+    {
+      "canonical_form": "ja:proverb:猿も木から落ちる",
+      "canonical_reference": "猿も木から落ちる",
+      "confidence": 0.88,
+      "id": "猿も木から落ちる",
+      "language": "ja",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Even experts make mistakes.",
+      "surface_patterns": [
+        "猿も木から落ちる"
+      ]
+    },
+    {
+      "canonical_form": "ja:proverb:花より団子",
+      "canonical_reference": "花より団子",
+      "confidence": 0.88,
+      "id": "花より団子",
+      "language": "ja",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Practical benefit over aesthetic appreciation.",
+      "surface_patterns": [
+        "花より団子"
+      ]
+    }
+  ],
+  "language": "ja"
+}

@@ -4,6 +4,7 @@ import logging
 from collections.abc import Iterable
 
 from backend.schemas.parse import CandidateObject, CandidateSentenceResult
+from backend.nuance.cultural import extract_cultural_references
 from .adapters.base import candidate_key
 from .registry import get_adapter
 
@@ -28,7 +29,8 @@ def enrich(language: str, candidate_results: list[CandidateSentenceResult], capa
         try:
             existing = adapter.enrich_existing(list(sent.candidates), sent.text)
             derived = adapter.derive_additional(existing, sent.text)
-            candidates = _dedupe_merge([*existing, *derived])
+            cultural = extract_cultural_references(sent.text, language)
+            candidates = _dedupe_merge([*existing, *derived, *cultural])
             candidates = _drop_vocab_consumed_by_phrases(candidates)
         except Exception:
             logger.warning("lesson extraction failed lang=%s sentence=%r", language, sent.text[:120], exc_info=True)

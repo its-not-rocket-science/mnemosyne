@@ -426,15 +426,15 @@ class MandarinChinesePlugin:
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="none",
-            literary_references="none",
-            cultural_references="none",
+            literary_references="partial",
+            cultural_references="partial",
             etymology="none",
             formality_register="none",
             grammar_nuance="partial" if _HAS_POSSEG else "none",
             pronunciation_tts="partial",
             transliteration="partial",
-            proverb_tradition="none",
-            classical_or_scriptural_allusion="none",
+            proverb_tradition="partial",
+            classical_or_scriptural_allusion="partial",
         ),
     )
 

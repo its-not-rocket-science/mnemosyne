@@ -196,15 +196,15 @@ class RussianPlugin:
         nuance_capabilities=NuanceCapabilities(
             idioms="partial",            # curated ~35-entry fixed-expression table
             phrase_families="partial",   # 14-family curated catalog; extractor wired
-            literary_references="none",
-            cultural_references="none",
+            literary_references="partial",
+            cultural_references="partial",
             etymology="partial",         # 50-entry curated catalog; Proto-Slavic/PIE chains covered
             formality_register="stub",   # formal/informal verb forms detectable
             grammar_nuance="partial",    # aspect/tense/case drilling
             pronunciation_tts="partial", # browser TTS reliable for ru
             transliteration="none",      # no romanisation scheme active
-            proverb_tradition="none",
-            classical_or_scriptural_allusion="none",
+            proverb_tradition="partial",
+            classical_or_scriptural_allusion="partial",
         ),
     )
 

@@ -149,15 +149,15 @@ class ArabicPlugin:
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="partial",  # 10-family curated catalog; extractor wired
-            literary_references="none",
-            cultural_references="none",
+            literary_references="partial",
+            cultural_references="partial",
             etymology="none",
             formality_register="none",
             grammar_nuance="partial",   # definite_article + negation always; low-confidence root/proclitic hints without CAMeL, richer with CAMeL
             pronunciation_tts="stub",   # ar TTS coverage varies by browser
             transliteration="none",
-            proverb_tradition="none",
-            classical_or_scriptural_allusion="none",
+            proverb_tradition="partial",
+            classical_or_scriptural_allusion="partial",
         ),
     )
 
