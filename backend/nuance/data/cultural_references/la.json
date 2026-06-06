@@ -1,0 +1,151 @@
+{
+  "entries": [
+    {
+      "canonical_form": "la:classical:alea_iacta_est",
+      "canonical_reference": "alea iacta est",
+      "confidence": 0.88,
+      "id": "alea_iacta_est",
+      "language": "la",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "The die is cast; an irreversible decision has been made.",
+      "source_author": "Julius Caesar tradition",
+      "surface_patterns": [
+        "alea iacta est"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:carpe_diem",
+      "canonical_reference": "carpe diem",
+      "confidence": 0.88,
+      "id": "carpe_diem",
+      "language": "la",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Seize the day; act in the present.",
+      "source_author": "Horace",
+      "source_work": "Odes",
+      "surface_patterns": [
+        "carpe diem"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:et_tu_brute",
+      "canonical_reference": "et tu Brute",
+      "confidence": 0.88,
+      "id": "et_tu_brute",
+      "language": "la",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A betrayal by someone close.",
+      "source_work": "Shakespeare/Caesar tradition",
+      "surface_patterns": [
+        "et tu Brute"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:veni_vidi_vici",
+      "canonical_reference": "veni vidi vici",
+      "confidence": 0.88,
+      "id": "veni_vidi_vici",
+      "language": "la",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "I came, I saw, I conquered.",
+      "source_author": "Julius Caesar",
+      "surface_patterns": [
+        "veni vidi vici"
+      ]
+    },
+    {
+      "canonical_form": "la:cultural:memento_mori",
+      "canonical_reference": "memento mori",
+      "confidence": 0.88,
+      "id": "memento_mori",
+      "language": "la",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "Remember that you must die.",
+      "surface_patterns": [
+        "memento mori"
+      ]
+    },
+    {
+      "canonical_form": "la:cultural:panem_et_circenses",
+      "canonical_reference": "panem et circenses",
+      "confidence": 0.88,
+      "id": "panem_et_circenses",
+      "language": "la",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "Bread and circuses; public appeasement through food and spectacle.",
+      "source_author": "Juvenal",
+      "surface_patterns": [
+        "panem et circenses"
+      ]
+    },
+    {
+      "canonical_form": "la:cultural:sic_transit_gloria_mundi",
+      "canonical_reference": "sic transit gloria mundi",
+      "confidence": 0.88,
+      "id": "sic_transit_gloria_mundi",
+      "language": "la",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "Thus passes worldly glory.",
+      "surface_patterns": [
+        "sic transit gloria mundi"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:ars_longa_vita_brevis",
+      "canonical_reference": "ars longa vita brevis",
+      "confidence": 0.88,
+      "id": "ars_longa_vita_brevis",
+      "language": "la",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Art is long, life is short.",
+      "surface_patterns": [
+        "ars longa vita brevis"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:homo_homini_lupus",
+      "canonical_reference": "homo homini lupus",
+      "confidence": 0.88,
+      "id": "homo_homini_lupus",
+      "language": "la",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Man is a wolf to man.",
+      "surface_patterns": [
+        "homo homini lupus"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:in_vino_veritas",
+      "canonical_reference": "in vino veritas",
+      "confidence": 0.88,
+      "id": "in_vino_veritas",
+      "language": "la",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "In wine, truth.",
+      "surface_patterns": [
+        "in vino veritas"
+      ]
+    }
+  ],
+  "language": "la"
+}

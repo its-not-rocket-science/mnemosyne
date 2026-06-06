@@ -1,0 +1,149 @@
+{
+  "entries": [
+    {
+      "canonical_form": "zh:cultural:纸上谈兵",
+      "canonical_reference": "纸上谈兵",
+      "confidence": 0.88,
+      "id": "纸上谈兵",
+      "language": "zh",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "Armchair strategy; theory without practical ability.",
+      "surface_patterns": [
+        "纸上谈兵"
+      ]
+    },
+    {
+      "canonical_form": "zh:literary:三顾茅庐",
+      "canonical_reference": "三顾茅庐",
+      "confidence": 0.88,
+      "id": "三顾茅庐",
+      "language": "zh",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Sincere repeated effort to recruit talent.",
+      "source_work": "Romance of the Three Kingdoms tradition",
+      "surface_patterns": [
+        "三顾茅庐"
+      ]
+    },
+    {
+      "canonical_form": "zh:literary:红楼梦",
+      "canonical_reference": "红楼梦",
+      "confidence": 0.88,
+      "id": "红楼梦",
+      "language": "zh",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A reference to one of the great Chinese classical novels.",
+      "source_work": "Dream of the Red Chamber",
+      "surface_patterns": [
+        "红楼梦"
+      ]
+    },
+    {
+      "canonical_form": "zh:literary:草船借箭",
+      "canonical_reference": "草船借箭",
+      "confidence": 0.88,
+      "id": "草船借箭",
+      "language": "zh",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Cleverly using circumstances to obtain resources.",
+      "source_work": "Romance of the Three Kingdoms tradition",
+      "surface_patterns": [
+        "草船借箭"
+      ]
+    },
+    {
+      "canonical_form": "zh:literary:西游记",
+      "canonical_reference": "西游记",
+      "confidence": 0.88,
+      "id": "西游记",
+      "language": "zh",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Pilgrimage, mischief, transformation, and adventure.",
+      "source_work": "Journey to the West",
+      "surface_patterns": [
+        "西游记"
+      ]
+    },
+    {
+      "canonical_form": "zh:proverb:井底之蛙",
+      "canonical_reference": "井底之蛙",
+      "confidence": 0.88,
+      "id": "井底之蛙",
+      "language": "zh",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "A frog in a well; someone with a narrow view.",
+      "surface_patterns": [
+        "井底之蛙"
+      ]
+    },
+    {
+      "canonical_form": "zh:proverb:塞翁失马",
+      "canonical_reference": "塞翁失马",
+      "confidence": 0.88,
+      "id": "塞翁失马",
+      "language": "zh",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Misfortune may turn into blessing.",
+      "surface_patterns": [
+        "塞翁失马"
+      ]
+    },
+    {
+      "canonical_form": "zh:proverb:守株待兔",
+      "canonical_reference": "守株待兔",
+      "confidence": 0.88,
+      "id": "守株待兔",
+      "language": "zh",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Waiting idly for luck instead of acting.",
+      "surface_patterns": [
+        "守株待兔"
+      ]
+    },
+    {
+      "canonical_form": "zh:proverb:掩耳盗铃",
+      "canonical_reference": "掩耳盗铃",
+      "confidence": 0.88,
+      "id": "掩耳盗铃",
+      "language": "zh",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Fooling oneself by ignoring reality.",
+      "surface_patterns": [
+        "掩耳盗铃"
+      ]
+    },
+    {
+      "canonical_form": "zh:proverb:画蛇添足",
+      "canonical_reference": "画蛇添足",
+      "confidence": 0.88,
+      "id": "画蛇添足",
+      "language": "zh",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "To ruin something by adding unnecessary detail.",
+      "surface_patterns": [
+        "画蛇添足"
+      ]
+    }
+  ],
+  "language": "zh"
+}

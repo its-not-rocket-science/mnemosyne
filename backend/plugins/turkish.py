@@ -312,15 +312,15 @@ class TurkishPlugin:
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="none",
-            literary_references="none",
-            cultural_references="none",
+            literary_references="partial",
+            cultural_references="partial",
             etymology="none",
             formality_register="stub",
             grammar_nuance="stub",
             pronunciation_tts="stub",
             transliteration="none",
-            proverb_tradition="none",
-            classical_or_scriptural_allusion="none",
+            proverb_tradition="partial",
+            classical_or_scriptural_allusion="partial",
             notes=(
                 "stanza Turkish UD (primary): lemmatisation + case/tense/aspect/person/number "
                 "+ possessive stacking (Person[psor]/Number[psor]) + evidential distinction "

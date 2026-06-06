@@ -210,15 +210,15 @@ class JapanesePlugin:
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="none",
-            literary_references="none",
-            cultural_references="none",
+            literary_references="partial",
+            cultural_references="partial",
             etymology="none",
             formality_register="none",
             grammar_nuance="stub",        # basic verb form via morphology_light
             pronunciation_tts="partial",  # ja TTS reliable + hiragana reading
             transliteration="stub",       # hiragana reading only; no full romaji
-            proverb_tradition="none",
-            classical_or_scriptural_allusion="none",
+            proverb_tradition="partial",
+            classical_or_scriptural_allusion="partial",
         ),
     )
 

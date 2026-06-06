@@ -384,15 +384,15 @@ class HindiPlugin:
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
             phrase_families="none",
-            literary_references="none",
-            cultural_references="none",
+            literary_references="partial",
+            cultural_references="partial",
             etymology="none",
             formality_register="stub",
             grammar_nuance="stub",
             pronunciation_tts="stub",
             transliteration="partial",
-            proverb_tradition="none",
-            classical_or_scriptural_allusion="none",
+            proverb_tradition="partial",
+            classical_or_scriptural_allusion="partial",
             notes=(
                 "Stanza UD model: full lemmatisation + UD POS + morphological "
                 "features (Aspect, Tense, Gender, Number, Case, Mood, VerbForm). "

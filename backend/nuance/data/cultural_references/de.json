@@ -1,0 +1,155 @@
+{
+  "entries": [
+    {
+      "canonical_form": "de:classical:achillesferse",
+      "canonical_reference": "Achillesferse",
+      "confidence": 0.88,
+      "id": "achillesferse",
+      "language": "de",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A vulnerable point.",
+      "surface_patterns": [
+        "Achillesferse"
+      ]
+    },
+    {
+      "canonical_form": "de:classical:sisyphusarbeit",
+      "canonical_reference": "Sisyphusarbeit",
+      "confidence": 0.88,
+      "id": "sisyphusarbeit",
+      "language": "de",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Endless, futile labour.",
+      "surface_patterns": [
+        "Sisyphusarbeit"
+      ]
+    },
+    {
+      "canonical_form": "de:classical:trojanisches_pferd",
+      "canonical_reference": "Trojanisches Pferd",
+      "confidence": 0.88,
+      "id": "trojanisches_pferd",
+      "language": "de",
+      "learner_level": "B2",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A hidden threat inside a gift or system.",
+      "surface_patterns": [
+        "Trojanisches Pferd"
+      ]
+    },
+    {
+      "canonical_form": "de:cultural:schlaraffenland",
+      "canonical_reference": "Schlaraffenland",
+      "confidence": 0.88,
+      "id": "schlaraffenland",
+      "language": "de",
+      "learner_level": "B2",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "A fantasy land of effortless abundance.",
+      "surface_patterns": [
+        "Schlaraffenland"
+      ]
+    },
+    {
+      "allow_short_pattern": true,
+      "canonical_form": "de:literary:faust",
+      "canonical_reference": "Faust",
+      "confidence": 0.88,
+      "id": "faust",
+      "language": "de",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A bargain sacrificing moral integrity for knowledge, power, or gain.",
+      "source_author": "Goethe",
+      "source_work": "Faust",
+      "surface_patterns": [
+        "Faust",
+        "faustisch",
+        "faustischer Pakt"
+      ]
+    },
+    {
+      "canonical_form": "de:literary:gretchenfrage",
+      "canonical_reference": "Gretchenfrage",
+      "confidence": 0.88,
+      "id": "gretchenfrage",
+      "language": "de",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A crucial, revealing question.",
+      "source_author": "Johann Wolfgang von Goethe",
+      "source_work": "Faust",
+      "surface_patterns": [
+        "Gretchenfrage"
+      ]
+    },
+    {
+      "canonical_form": "de:literary:kafkaesk",
+      "canonical_reference": "kafkaesk",
+      "confidence": 0.88,
+      "id": "kafkaesk",
+      "language": "de",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Absurd, oppressive bureaucracy or nightmarish helplessness.",
+      "source_author": "Franz Kafka",
+      "surface_patterns": [
+        "kafkaesk"
+      ]
+    },
+    {
+      "canonical_form": "de:literary:werther",
+      "canonical_reference": "Werther",
+      "confidence": 0.88,
+      "id": "werther",
+      "language": "de",
+      "learner_level": "B2",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Romantic despair or intense sentimental suffering.",
+      "source_author": "Goethe",
+      "source_work": "Die Leiden des jungen Werthers",
+      "surface_patterns": [
+        "Werther"
+      ]
+    },
+    {
+      "canonical_form": "de:proverb:den_wald_vor_lauter_baumen_nicht_sehen",
+      "canonical_reference": "den Wald vor lauter Bäumen nicht sehen",
+      "confidence": 0.88,
+      "id": "den_wald_vor_lauter_baumen_nicht_sehen",
+      "language": "de",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Missing the bigger picture because of too many details.",
+      "surface_patterns": [
+        "den Wald vor lauter Bäumen nicht sehen"
+      ]
+    },
+    {
+      "canonical_form": "de:proverb:eulen_nach_athen_tragen",
+      "canonical_reference": "Eulen nach Athen tragen",
+      "confidence": 0.88,
+      "id": "eulen_nach_athen_tragen",
+      "language": "de",
+      "learner_level": "B2",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Doing something unnecessary; carrying owls to Athens.",
+      "surface_patterns": [
+        "Eulen nach Athen tragen"
+      ]
+    }
+  ],
+  "language": "de"
+}

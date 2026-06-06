@@ -22,29 +22,39 @@ table from live plugin declarations.
 
 | Language | Idioms | Phrase families | Etymology | Grammar nuance | Formality/register | Pronunciation TTS | Transliteration | Literary/cultural | Tests |
 |----------|--------|-----------------|-----------|----------------|--------------------|-------------------|-----------------|-------------------|-------|
-| en (English) | stub | **partial** | none | **partial** | **partial** | partial | none | none | **12** |
-| es (Spanish) | partial | **partial** | **strong** | partial | stub | partial | none | none | **26** |
-| fr (French) | partial | **partial** | **strong** | partial | **partial** | partial | none | none | **15** |
-| de (German) | partial | **partial** | **strong** | partial | stub | partial | none | none | **24** |
-| it (Italian) | partial | **partial** | **partial** | partial | **partial** | partial | none | none | **11** |
-| pt (Portuguese) | partial | **partial** | **partial** | partial | **partial** | partial | none | none | **12** |
-| ru (Russian) | partial | **partial** | **partial** | partial | stub | partial | none | none | **9** |
-| ar (Arabic) | none | **partial** | none | **partial** | none | stub | none | none | **13** |
-| he (Hebrew) | none | **partial** | none | **partial** | none | stub | none | none | **13** |
-| zh (Chinese) | none | none | none | none | none | partial | partial | none | 8 |
-| ja (Japanese) | none | none | none | stub | none | **partial** | stub | none | **14** |
-| la (Latin) | none | none | none | none | none | stub | none | none | 7 |
-| grc (Koine Greek) | none | none | none | none | none | stub | partial | none | 7 |
-| ko (Korean) | none | none | none | **partial** | **partial** | partial | none | none | **13** |
-| hi (Hindi) | none | none | none | none | none | none | none | none | 5 |
-| tr (Turkish) | none | none | none | none | none | none | none | none | 5 |
-| fi (Finnish) | none | none | none | **partial** | none | none | none | none | **16** |
+| en (English) | stub | **partial** | none | **partial** | **partial** | partial | none | **partial** | **12** |
+| es (Spanish) | partial | **partial** | **strong** | partial | stub | partial | none | **partial** | **26** |
+| fr (French) | partial | **partial** | **strong** | partial | **partial** | partial | none | **partial** | **15** |
+| de (German) | partial | **partial** | **strong** | partial | stub | partial | none | **partial** | **24** |
+| it (Italian) | partial | **partial** | **partial** | partial | **partial** | partial | none | **partial** | **11** |
+| pt (Portuguese) | partial | **partial** | **partial** | partial | **partial** | partial | none | **partial** | **12** |
+| ru (Russian) | partial | **partial** | **partial** | partial | stub | partial | none | **partial** | **9** |
+| ar (Arabic) | none | **partial** | none | **partial** | none | stub | none | **partial** | **13** |
+| he (Hebrew) | none | **partial** | none | **partial** | none | stub | none | **partial** | **13** |
+| zh (Chinese) | none | none | none | none | none | partial | partial | **partial** | 8 |
+| ja (Japanese) | none | none | none | stub | none | **partial** | stub | **partial** | **14** |
+| la (Latin) | none | none | none | none | none | stub | none | **partial** | 7 |
+| grc (Koine Greek) | none | none | none | none | none | stub | partial | **partial** | 7 |
+| ko (Korean) | none | none | none | **partial** | **partial** | partial | none | **partial** | **13** |
+| hi (Hindi) | none | none | none | none | none | none | none | **partial** | 5 |
+| tr (Turkish) | none | none | none | none | none | none | none | **partial** | 5 |
+| fi (Finnish) | none | none | none | **partial** | none | none | none | **partial** | **16** |
 
 > "Literary/cultural" collapses `literary_references`, `cultural_references`,
-> `proverb_tradition`, and `classical_or_scriptural_allusion` — all are `none`
-> for every language currently.
+> `proverb_tradition`, and `classical_or_scriptural_allusion`. These are now
+> backed by the generated cultural catalogue for all 17 supported languages.
 
 ---
+
+
+### Generated cultural catalogue workflow
+
+```bash
+python scripts/build_cultural_catalog.py --check
+python scripts/build_cultural_catalog.py --report
+python scripts/build_cultural_catalog.py --write
+pytest backend/tests -k "cultural or literary or proverb or allusion"
+```
 
 ## Coverage by layer
 
@@ -101,13 +111,13 @@ candidates independently.  No extractor is registered for `en`, `it`, or `pt`.
 
 | Method | Languages | What it covers |
 |--------|-----------|---------------|
-| **Curated catalog** | es fr de it pt ru | Fixed-expression idiom tables hand-checked against native-speaker corpora |
+| **Curated catalog** | all 17 supported languages | Generated cultural catalogue plus fixed-expression idiom tables where available |
 | **Rule-based regex/token-match** | all with extractor | Discourse particles, particles, aspect markers, affixes, enclitics — deterministic |
 | **Dependency-parse heuristic** | es fr de it pt ru ja | Copula/aspect detection using spaCy dep labels; correctness depends on model quality |
 | **Dictionary lookup** | ar he la grc | Vocabulary candidates from embedded lexicon; no morphological inference |
 | **Model-derived morphology** | fi ko | Stanza UD features drive Finnish grammar nuance (case, possessive suffix, voice, polarity, mood); Korean uses kiwipiepy morpheme tags when available and conservative suffix heuristics otherwise. Fallback paths are lower confidence and marked with `confidence_note` when heuristic/OOV. |
 
-Most nuance signals are hand-authored or rule-derived. Finnish grammar nuance is derived from Stanza UD morphology already emitted by the plugin; Korean grammar nuance is derived from kiwipiepy morpheme tags where available plus conservative suffix/phrase patterns. Both use lower-confidence notes when falling back to surface heuristics. There are no embedding-based detectors in the current codebase.
+Most nuance signals are hand-authored or rule-derived. Generated cultural catalogue entries are built from `data/cultural_references_seed.yaml` by `scripts/build_cultural_catalog.py`; runtime detection loads JSON from `backend/nuance/data/cultural_references/` and uses deterministic longest-match string matching. Finnish grammar nuance is derived from Stanza UD morphology already emitted by the plugin; Korean grammar nuance is derived from kiwipiepy morpheme tags where available plus conservative suffix/phrase patterns. Both use lower-confidence notes when falling back to surface heuristics. There are no embedding-based detectors in the current codebase.
 
 ---
 
@@ -115,8 +125,11 @@ Most nuance signals are hand-authored or rule-derived. Finnish grammar nuance is
 
 ### Universal
 - No etymology data beyond Spanish, French, German, Italian, Portuguese, and Russian.
-- No literary/cultural references: `literary_references`, `cultural_references`,
-  `proverb_tradition`, and `classical_or_scriptural_allusion` are all `none`.
+- Generated cultural catalogue coverage is `partial` for `literary_references`,
+  `cultural_references`, `proverb_tradition`, and
+  `classical_or_scriptural_allusion` across all 17 supported languages. The
+  starter seed is intentionally small (10 entries per language) and string-match
+  based; it does not use LLMs, embeddings, or external APIs.
 - Phrase families `partial` for all 8 languages with extractors (15/20/15/15/13/14/10/10 families for ES/FR/DE/IT/PT/RU/AR/HE respectively).
 - Etymology `strong` for ES/FR/DE (100 curated entries each); `partial` for IT/PT/RU (50 entries each).
 
@@ -411,10 +424,7 @@ Priority order based on pedagogical impact vs implementation cost:
    100+ high-frequency verbs would meaningfully improve grammar\_nuance
    quality; partner with a Russian valency lexicon (RuVallex).
 
-6. **proverb\_tradition** — no language has this.  A curated 20-proverb
-   starter for each language is achievable without tooling changes.
-
-7. **classical\_or\_scriptural\_allusion for la / grc** — both plugins are
-   scaffold-only but the extractor infrastructure exists.  A 50-phrase NT
-   Greek / Ciceronian Latin allusion table would bring grc to `partial`
-   and la to `stub`.
+6. **Generated cultural catalogue expansion** — the starter data-driven catalogue
+   now covers literary, cultural, proverb, classical, and scriptural references
+   for all 17 supported languages. Next step: expand from 10 to 50+ reviewed
+   entries per language while keeping ambiguous short forms low-confidence.
