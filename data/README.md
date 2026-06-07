@@ -118,6 +118,32 @@ and traceability, not proof that a phrase originated with the named work or
 author.
 
 
+## Promoting draft cultural entries
+
+Use `scripts/promote_cultural_drafts.py` to promote only reviewed, allowlisted
+draft rows into `data/cultural_references_seed.yaml`. The allowlist is a UTF-8
+text file with one `canonical_reference` per line; blank lines and lines starting
+with `#` are ignored. The script refuses unsafe rows by default, including
+rejected drafts, rights-review licences, placeholder explanations, missing
+`source_location`, low-confidence rows, duplicate ids, duplicate
+`language`/`canonical_reference` pairs, and duplicate surface-pattern collisions.
+It does not generate runtime JSON; run the catalogue builder separately after
+promotion.
+
+Example dry run:
+
+```bash
+python scripts/promote_cultural_drafts.py \
+  --draft data/cultural_drafts/en_literary_idioms_normalised_v3.generated.yaml \
+  --seed data/cultural_references_seed.yaml \
+  --allowlist data/cultural_drafts/promote_en_literary_idioms_batch_001.txt \
+  --reviewed-by paul \
+  --reviewed-at 2026-06-07 \
+  --dry-run
+```
+
+Remove `--dry-run` after reviewing the proposed YAML block and summary.
+
 ## Review status and provenance
 
 The committed seed can hold both production-ready starter entries and larger
