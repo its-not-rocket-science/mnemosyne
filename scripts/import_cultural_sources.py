@@ -168,7 +168,10 @@ def key_or_generated(
             f"for {field} to {generated!r}"
         )
         return generated
-    return explicit
+    raise ValueError(
+        f"row {row_number}: invalid localisation key {explicit!r} for {field}; "
+        "expected mnemosyne.en.* key"
+    )
 
 
 def has_real_explanation(value: Any) -> bool:

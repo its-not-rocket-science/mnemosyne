@@ -166,6 +166,17 @@ def test_user_provided_localisation_keys_are_preserved() -> None:
     assert entry["source_author_key"] == "mnemosyne.en.author.custom_shakespeare"
 
 
+def test_invalid_explicit_localisation_key_is_rejected() -> None:
+    try:
+        importer.convert_rows(
+            [_minimal_row(explanation_key="banana.cheese.break_the_ice")]
+        )
+    except ValueError as exc:
+        assert "invalid localisation key" in str(exc)
+    else:  # pragma: no cover
+        raise AssertionError("expected invalid key to fail")
+
+
 def test_generated_draft_yaml_includes_localisation_keys(tmp_path) -> None:
     out = tmp_path / "draft.yaml"
     entries = importer.convert_rows([_minimal_row()])
