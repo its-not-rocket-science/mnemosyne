@@ -118,6 +118,37 @@ and traceability, not proof that a phrase originated with the named work or
 author.
 
 
+## Reviewing generated cultural drafts
+
+Generated draft files can be reviewed interactively before promotion:
+
+```bash
+python scripts/review_cultural_draft.py \
+  --draft data/cultural_drafts/en_literary_idioms_normalised_v3.generated.yaml \
+  --reviewed-by paul
+```
+
+The tool writes a reviewed copy with `_reviewed` in the filename. For inputs
+ending in `.generated.yaml`, the deterministic output convention is to insert
+`_reviewed` before the final `.yaml` suffix, for example
+`en_literary_idioms_normalised_v3.generated_reviewed.yaml`. It prompts for
+missing `source_location`, unresolved rights-review flags, blank source URLs for
+public-domain rows, and generic placeholder explanations. It does not promote
+entries into the production seed.
+
+Validation commands:
+
+```bash
+python scripts/review_cultural_draft.py \
+  --draft data/cultural_drafts/en_literary_idioms_normalised_v3.generated.yaml \
+  --reviewed-by paul \
+  --dry-run
+
+pytest backend/tests/test_review_cultural_draft.py
+python scripts/build_cultural_catalog.py --check
+pytest backend/tests -k "cultural or literary or proverb or allusion or l10n"
+```
+
 ## Promoting draft cultural entries
 
 Use `scripts/promote_cultural_drafts.py` to promote only reviewed, allowlisted
