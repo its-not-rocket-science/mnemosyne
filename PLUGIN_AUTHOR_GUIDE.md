@@ -161,14 +161,24 @@ include `source_license` whenever `source_url` is present.
 
 
 Cultural source import rows may also carry human-authored `short_explanation` text
-and optional localisation keys. The importer can generate stable suggested keys
-for explanations, source works, and source authors, and `--l10n-out` can add
-missing English fallback resource strings without overwriting conflicting
-existing values. Generated runtime JSON preserves these keys and emits them in
-`lesson_data` alongside fallback strings. Keep fallback strings because missing
-translations must never break parsing, do not use machine translation for these
-resources, and treat source attribution as review metadata rather than proof of
-origin. See `data/README.md` for the full CSV header and command examples.
+and optional localisation keys. Cultural catalogue localisation keys use the
+canonical `mnemosyne.en.*` namespace:
+
+- `mnemosyne.en.explanation.<source_dataset>.<entry_slug>`
+- `mnemosyne.en.work.<source_work_slug>`
+- `mnemosyne.en.author.<source_author_slug>`
+
+The older `cultural.*` key family is deprecated and should not be used for new
+entries. The importer generates canonical keys when fields are missing, preserves
+explicit canonical keys, and warns while migrating old explicit keys when the
+mapping is unambiguous. `--l10n-out` adds missing English fallback resource
+strings, removes deprecated `cultural.*` resource keys, and does not overwrite
+conflicting existing canonical values. Generated runtime JSON preserves these
+keys and emits them in `lesson_data` alongside fallback strings. Keep fallback
+strings because missing translations must never break parsing or lesson
+rendering, do not use machine translation for these resources, and treat source
+attribution as review metadata rather than proof of origin. See `data/README.md`
+for the full CSV header and command examples.
 
 ---
 

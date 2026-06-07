@@ -12,9 +12,9 @@
   variants:
     - "broke the ice"
     - "breaking the ice"
-  explanation_key: "cultural.explanation.en.en_shakespeare_phrases.break_the_ice"
-  source_work_key: "cultural.source_work.en_shakespeare_phrases.the_taming_of_the_shrew"
-  source_author_key: "cultural.source_author.william_shakespeare"
+  explanation_key: "mnemosyne.en.explanation.en_shakespeare_phrases.break_the_ice"
+  source_work_key: "mnemosyne.en.work.the_taming_of_the_shrew"
+  source_author_key: "mnemosyne.en.author.william_shakespeare"
   source_work: "The Taming of the Shrew"
   source_author: "William Shakespeare"
   source_location: "Act I Scene 2"
