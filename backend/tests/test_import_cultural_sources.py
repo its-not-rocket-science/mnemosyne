@@ -284,3 +284,16 @@ def test_l10n_out_removes_deprecated_cultural_keys(tmp_path) -> None:
     assert "cultural.source_author.william_shakespeare" not in payload
     assert payload["mnemosyne.en.author.william_shakespeare"] == "William Shakespeare"
     assert any("removed 1 deprecated cultural.*" in warning for warning in warnings)
+
+
+def test_invalid_explicit_localisation_key_is_rejected() -> None:
+    try:
+        importer.convert_rows([
+            _minimal_row(explanation_key="banana.cheese.break_the_ice")
+        ])
+    except ValueError as exc:
+        assert "invalid localisation key" in str(exc)
+        assert "expected mnemosyne.en.* key" in str(exc)
+    else:
+        raise AssertionError("expected invalid localisation key to fail")
+
