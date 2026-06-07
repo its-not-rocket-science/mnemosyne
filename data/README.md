@@ -70,7 +70,7 @@ copies it into the draft YAML. When it is missing or blank, the importer keeps t
 review placeholder `TODO: add explanation` so reviewers can identify rows that
 still need human-authored explanation text before promotion.
 
-`explanation_key`, `source_work_key`, and `source_author_key` are optional. Cultural catalogue localisation keys use the canonical `mnemosyne.en.*` namespace. If a row omits keys, the importer generates deterministic suggested keys from stable row fields where possible:
+`explanation_key`, `source_work_key`, and `source_author_key` are optional. Cultural catalogue localisation keys use the canonical `mnemosyne.en.*` namespace. The `en` segment names the English fallback localisation resource, not necessarily the source-row language. If a row omits keys, the importer generates deterministic suggested keys from stable row fields where possible:
 
 - `mnemosyne.en.explanation.<source_dataset>.<entry_slug>`
 - `mnemosyne.en.work.<source_work_slug>`

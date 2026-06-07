@@ -162,7 +162,8 @@ include `source_license` whenever `source_url` is present.
 
 Cultural source import rows may also carry human-authored `short_explanation` text
 and optional localisation keys. Cultural catalogue localisation keys use the
-canonical `mnemosyne.en.*` namespace:
+canonical `mnemosyne.en.*` namespace. The `en` segment names the English
+fallback localisation resource, not necessarily the source-row language:
 
 - `mnemosyne.en.explanation.<source_dataset>.<entry_slug>`
 - `mnemosyne.en.work.<source_work_slug>`
