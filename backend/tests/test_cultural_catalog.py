@@ -205,11 +205,11 @@ def test_provenance_fields_are_preserved_in_generated_json(tmp_path):
 
 def test_localisation_key_fields_are_preserved_in_generated_json(tmp_path):
     row = _base_catalog_row(
-        explanation_key="cultural.explanation.en.test_allusion",
+        explanation_key="mnemosyne.en.explanation.test_dataset.test_allusion",
         source_work="Test Work",
-        source_work_key="cultural.source_work.test_work",
+        source_work_key="mnemosyne.en.work.test_work",
         source_author="Test Author",
-        source_author_key="cultural.source_author.test_author",
+        source_author_key="mnemosyne.en.author.test_author",
     )
     by_lang, warnings = validate_and_build([row])
     write_count = import_module("scripts.build_cultural_catalog").write_outputs(
@@ -221,11 +221,11 @@ def test_localisation_key_fields_are_preserved_in_generated_json(tmp_path):
     assert write_count == 1
     assert warnings == []
     assert entry["short_explanation"] == "A test-only cultural catalogue entry."
-    assert entry["explanation_key"] == "cultural.explanation.en.test_allusion"
+    assert entry["explanation_key"] == "mnemosyne.en.explanation.test_dataset.test_allusion"
     assert entry["source_work"] == "Test Work"
-    assert entry["source_work_key"] == "cultural.source_work.test_work"
+    assert entry["source_work_key"] == "mnemosyne.en.work.test_work"
     assert entry["source_author"] == "Test Author"
-    assert entry["source_author_key"] == "cultural.source_author.test_author"
+    assert entry["source_author_key"] == "mnemosyne.en.author.test_author"
 
 
 def test_seed_scalar_whitespace_is_normalized():
@@ -544,11 +544,11 @@ def test_detector_includes_localisation_keys_and_fallbacks(monkeypatch, tmp_path
         "reference_type": "literary_reference",
         "surface_patterns": ["Test Allusion"],
         "short_explanation": "Fallback explanation.",
-        "explanation_key": "cultural.explanation.en.test_allusion",
+        "explanation_key": "mnemosyne.en.explanation.test_dataset.test_allusion",
         "source_work": "Fallback Work",
-        "source_work_key": "cultural.source_work.test_work",
+        "source_work_key": "mnemosyne.en.work.test_work",
         "source_author": "Fallback Author",
-        "source_author_key": "cultural.source_author.test_author",
+        "source_author_key": "mnemosyne.en.author.test_author",
         "learner_level": "B2",
         "confidence": 0.8,
     }])
@@ -558,11 +558,11 @@ def test_detector_includes_localisation_keys_and_fallbacks(monkeypatch, tmp_path
 
     assert len(matches) == 1
     assert matches[0].lesson_data["explanation"] == "Fallback explanation."
-    assert matches[0].lesson_data["explanation_key"] == "cultural.explanation.en.test_allusion"
+    assert matches[0].lesson_data["explanation_key"] == "mnemosyne.en.explanation.test_dataset.test_allusion"
     assert matches[0].lesson_data["source_work"] == "Fallback Work"
-    assert matches[0].lesson_data["source_work_key"] == "cultural.source_work.test_work"
+    assert matches[0].lesson_data["source_work_key"] == "mnemosyne.en.work.test_work"
     assert matches[0].lesson_data["source_author"] == "Fallback Author"
-    assert matches[0].lesson_data["source_author_key"] == "cultural.source_author.test_author"
+    assert matches[0].lesson_data["source_author_key"] == "mnemosyne.en.author.test_author"
 
 
 def test_variants_are_merged_into_generated_surface_patterns_without_duplicates():

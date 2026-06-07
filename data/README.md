@@ -70,19 +70,16 @@ copies it into the draft YAML. When it is missing or blank, the importer keeps t
 review placeholder `TODO: add explanation` so reviewers can identify rows that
 still need human-authored explanation text before promotion.
 
-`explanation_key`, `source_work_key`, and `source_author_key` are optional. If a
-row omits them, the importer generates deterministic suggested keys from stable
-row fields where possible:
+`explanation_key`, `source_work_key`, and `source_author_key` are optional. Cultural catalogue localisation keys use the canonical `mnemosyne.en.*` namespace. If a row omits keys, the importer generates deterministic suggested keys from stable row fields where possible:
 
-- `cultural.explanation.<language>.<source_dataset>.<entry_slug>`
-- `cultural.source_work.<source_dataset>.<source_work_slug>`
-- `cultural.source_author.<source_author_slug>`
+- `mnemosyne.en.explanation.<source_dataset>.<entry_slug>`
+- `mnemosyne.en.work.<source_work_slug>`
+- `mnemosyne.en.author.<source_author_slug>`
 
 For example, an English Shakespeare phrase row can generate
-`cultural.explanation.en.en_shakespeare_phrases.break_the_ice`,
-`cultural.source_work.en_shakespeare_phrases.the_taming_of_the_shrew`, and
-`cultural.source_author.william_shakespeare`. User-provided keys are preserved.
-Blank source-work and source-author values do not produce keys.
+`mnemosyne.en.explanation.en_shakespeare_phrases.break_the_ice`,
+`mnemosyne.en.work.the_taming_of_the_shrew`, and
+`mnemosyne.en.author.william_shakespeare`. Explicit `mnemosyne.en.*` keys are preserved. Older `cultural.explanation.*`, `cultural.source_work.*`, and `cultural.source_author.*` keys are deprecated; the importer warns and migrates them to the canonical key when the row contains enough source data to do so, and it rejects ambiguous old keys instead of generating new `cultural.*` keys. Blank source-work and source-author values do not produce keys.
 
 To create or update an English cultural localisation resource while importing,
 pass `--l10n-out` explicitly:
@@ -104,12 +101,13 @@ python scripts/import_cultural_sources.py `
 ```
 
 The localisation resource is a sorted UTF-8 JSON object. The importer adds
-missing mappings for non-placeholder explanation text, source work titles, and
-source author names. Existing values are preserved. If an imported row proposes a
-different value for an existing key, the importer prints a warning showing both
-values and does not overwrite silently. It only writes the file you point it at;
-it does not create other locales and does not perform machine translation or
-interpretation.
+missing canonical mappings for non-placeholder explanation text, source work
+titles, and source author names, and removes deprecated `cultural.*` resource
+keys from the file it updates. Existing canonical values are preserved. If an
+imported row proposes a different value for an existing key, the importer prints
+a warning showing both values and does not overwrite silently. It only writes the
+file you point it at; it does not create other locales and does not perform
+machine translation or interpretation.
 
 Generated runtime JSON preserves localisation keys, and the detector exposes
 those keys in `lesson_data` alongside fallback strings (`explanation`,
