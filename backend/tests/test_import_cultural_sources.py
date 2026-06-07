@@ -47,9 +47,9 @@ def test_convert_rows_from_csv_shape() -> None:
             "review_status": "draft",
             "register": "literary",
             "variants": ["slings and arrows"],
-            "explanation_key": "cultural.explanation.en.unit_test_dataset.to_be_or_not_to_be",
-            "source_work_key": "cultural.source_work.unit_test_dataset.hamlet",
-            "source_author_key": "cultural.source_author.william_shakespeare",
+            "explanation_key": "mnemosyne.en.explanation.unit_test_dataset.to_be_or_not_to_be",
+            "source_work_key": "mnemosyne.en.work.hamlet",
+            "source_author_key": "mnemosyne.en.author.william_shakespeare",
             "source_work": "Hamlet",
             "source_author": "William Shakespeare",
             "source_location": "Act 3 Scene 1",
@@ -146,7 +146,7 @@ def test_missing_short_explanation_uses_todo_but_still_suggests_stable_key() -> 
     assert entry["short_explanation"] == importer.TODO_EXPLANATION
     assert (
         entry["explanation_key"]
-        == "cultural.explanation.en.en_shakespeare_phrases.break_the_ice"
+        == "mnemosyne.en.explanation.en_shakespeare_phrases.break_the_ice"
     )
 
 
@@ -154,16 +154,16 @@ def test_user_provided_localisation_keys_are_preserved() -> None:
     [entry] = importer.convert_rows(
         [
             _minimal_row(
-                explanation_key="cultural.explanation.en.custom.break_the_ice",
-                source_work_key="cultural.source_work.custom.taming",
-                source_author_key="cultural.source_author.custom.shakespeare",
+                explanation_key="mnemosyne.en.explanation.custom.break_the_ice",
+                source_work_key="mnemosyne.en.work.custom_taming",
+                source_author_key="mnemosyne.en.author.custom_shakespeare",
             )
         ]
     )
 
-    assert entry["explanation_key"] == "cultural.explanation.en.custom.break_the_ice"
-    assert entry["source_work_key"] == "cultural.source_work.custom.taming"
-    assert entry["source_author_key"] == "cultural.source_author.custom.shakespeare"
+    assert entry["explanation_key"] == "mnemosyne.en.explanation.custom.break_the_ice"
+    assert entry["source_work_key"] == "mnemosyne.en.work.custom_taming"
+    assert entry["source_author_key"] == "mnemosyne.en.author.custom_shakespeare"
 
 
 def test_generated_draft_yaml_includes_localisation_keys(tmp_path) -> None:
@@ -174,9 +174,9 @@ def test_generated_draft_yaml_includes_localisation_keys(tmp_path) -> None:
 
     text = out.read_text(encoding="utf-8")
     assert "short_explanation" in text
-    assert "cultural.explanation.en.en_shakespeare_phrases.break_the_ice" in text
-    assert "cultural.source_work.en_shakespeare_phrases.the_taming_of_the_shrew" in text
-    assert "cultural.source_author.william_shakespeare" in text
+    assert "mnemosyne.en.explanation.en_shakespeare_phrases.break_the_ice" in text
+    assert "mnemosyne.en.work.the_taming_of_the_shrew" in text
+    assert "mnemosyne.en.author.william_shakespeare" in text
 
 
 def test_l10n_out_creates_mappings(tmp_path) -> None:
@@ -188,11 +188,11 @@ def test_l10n_out_creates_mappings(tmp_path) -> None:
     payload = json.loads(out.read_text(encoding="utf-8"))
     assert warnings == []
     assert payload == {
-        "cultural.explanation.en.en_shakespeare_phrases.break_the_ice": (
+        "mnemosyne.en.explanation.en_shakespeare_phrases.break_the_ice": (
             "To reduce social tension or begin interaction in an awkward situation."
         ),
-        "cultural.source_author.william_shakespeare": "William Shakespeare",
-        "cultural.source_work.en_shakespeare_phrases.the_taming_of_the_shrew": (
+        "mnemosyne.en.author.william_shakespeare": "William Shakespeare",
+        "mnemosyne.en.work.the_taming_of_the_shrew": (
             "The Taming of the Shrew"
         ),
     }
@@ -203,7 +203,7 @@ def test_l10n_out_preserves_existing_values_and_warns_on_conflicts(tmp_path) -> 
     out.write_text(
         json.dumps(
             {
-                "cultural.explanation.en.en_shakespeare_phrases.break_the_ice": (
+                "mnemosyne.en.explanation.en_shakespeare_phrases.break_the_ice": (
                     "Existing explanation."
                 ),
                 "z.existing": "Keep me.",
@@ -219,9 +219,57 @@ def test_l10n_out_preserves_existing_values_and_warns_on_conflicts(tmp_path) -> 
 
     payload = json.loads(out.read_text(encoding="utf-8"))
     assert (
-        payload["cultural.explanation.en.en_shakespeare_phrases.break_the_ice"]
+        payload["mnemosyne.en.explanation.en_shakespeare_phrases.break_the_ice"]
         == "Existing explanation."
     )
     assert payload["z.existing"] == "Keep me."
-    assert payload["cultural.source_author.william_shakespeare"] == "William Shakespeare"
+    assert payload["mnemosyne.en.author.william_shakespeare"] == "William Shakespeare"
     assert any("l10n conflict" in warning for warning in warnings)
+
+
+def test_deprecated_explicit_localisation_keys_are_migrated_with_warnings() -> None:
+    entries, warnings = importer.convert_rows_with_warnings(
+        [
+            _minimal_row(
+                explanation_key="cultural.explanation.en.en_shakespeare_phrases.break_the_ice",
+                source_work_key=(
+                    "cultural.source_work.en_shakespeare_phrases."
+                    "the_taming_of_the_shrew"
+                ),
+                source_author_key="cultural.source_author.william_shakespeare",
+            )
+        ]
+    )
+
+    [entry] = entries
+    assert (
+        entry["explanation_key"]
+        == "mnemosyne.en.explanation.en_shakespeare_phrases.break_the_ice"
+    )
+    assert entry["source_work_key"] == "mnemosyne.en.work.the_taming_of_the_shrew"
+    assert entry["source_author_key"] == "mnemosyne.en.author.william_shakespeare"
+    assert len(warnings) == 3
+    assert all("migrated deprecated localisation key" in warning for warning in warnings)
+
+
+def test_l10n_out_removes_deprecated_cultural_keys(tmp_path) -> None:
+    out = tmp_path / "en.json"
+    out.write_text(
+        json.dumps(
+            {
+                "cultural.source_author.william_shakespeare": "William Shakespeare",
+                "mnemosyne.en.author.william_shakespeare": "William Shakespeare",
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+    warnings = importer.write_l10n(importer.convert_rows([_minimal_row()]), out)
+
+    payload = json.loads(out.read_text(encoding="utf-8"))
+    assert "cultural.source_author.william_shakespeare" not in payload
+    assert payload["mnemosyne.en.author.william_shakespeare"] == "William Shakespeare"
+    assert any("removed 1 deprecated cultural.*" in warning for warning in warnings)
