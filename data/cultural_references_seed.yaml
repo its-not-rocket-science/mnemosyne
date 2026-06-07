@@ -30,14 +30,14 @@
     - Big Brother
   short_explanation: >
     A symbol of intrusive surveillance and authoritarian control.
-  explanation_key: cultural.explanation.en.orwell.big_brother
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.big_brother
   learner_level: B2
   register: literary
   confidence: 0.88
   source_work: Nineteen Eighty-Four
-  source_work_key: cultural.source_work.orwell.nineteen_eighty_four
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four
   source_author: George Orwell
-  source_author_key: cultural.source_author.orwell
+  source_author_key: mnemosyne.en.author.george_orwell
 - language: en
   canonical_reference: Orwellian
   reference_type: literary_reference

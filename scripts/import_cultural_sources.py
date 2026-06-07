@@ -122,11 +122,53 @@ def slugify(value: str) -> str:
     return "".join(slug).strip("_") or "reference"
 
 
-def key_or_generated(row: dict[str, Any], field: str, generated: str | None) -> str | None:
-    """Return a user-provided localisation key or a deterministic suggestion."""
-    if not is_blank(row.get(field)):
-        return clean_text(row[field])
-    return generated
+OLD_LOCALISATION_PREFIXES = (
+    "cultural.explanation.",
+    "cultural.source_work.",
+    "cultural.source_author.",
+)
+CANONICAL_LOCALISATION_PREFIXES = (
+    "mnemosyne.en.explanation.",
+    "mnemosyne.en.work.",
+    "mnemosyne.en.author.",
+)
+
+
+def is_old_localisation_key(value: str) -> bool:
+    return value.startswith(OLD_LOCALISATION_PREFIXES)
+
+
+def is_canonical_localisation_key(value: str) -> bool:
+    return value.startswith(CANONICAL_LOCALISATION_PREFIXES)
+
+
+def key_or_generated(
+    row: dict[str, Any],
+    field: str,
+    generated: str | None,
+    row_number: int,
+    warnings: list[str],
+) -> str | None:
+    """Return a canonical user-provided localisation key or deterministic suggestion."""
+    if is_blank(row.get(field)):
+        return generated
+
+    explicit = clean_text(row[field])
+    if is_canonical_localisation_key(explicit):
+        return explicit
+    if is_old_localisation_key(explicit):
+        if generated is None:
+            raise ValueError(
+                f"row {row_number}: old localisation key {explicit!r} for {field} cannot be "
+                "migrated automatically because the row is missing data needed to build the "
+                "canonical mnemosyne.en.* key"
+            )
+        warnings.append(
+            f"row {row_number}: migrated deprecated localisation key {explicit!r} "
+            f"for {field} to {generated!r}"
+        )
+        return generated
+    return explicit
 
 
 def has_real_explanation(value: Any) -> bool:
@@ -142,22 +184,21 @@ def explanation_key(row: dict[str, Any]) -> str | None:
     )[0]
     if not language or not dataset or not entry_basis:
         return None
-    return f"cultural.explanation.{language}.{slugify(dataset)}.{slugify(entry_basis)}"
+    return f"mnemosyne.en.explanation.{slugify(dataset)}.{slugify(entry_basis)}"
 
 
 def source_work_key(row: dict[str, Any]) -> str | None:
-    dataset = clean_text(row.get("source_dataset", ""))
     work = clean_text(row.get("source_work", ""))
-    if not dataset or not work:
+    if not work:
         return None
-    return f"cultural.source_work.{slugify(dataset)}.{slugify(work)}"
+    return f"mnemosyne.en.work.{slugify(work)}"
 
 
 def source_author_key(row: dict[str, Any]) -> str | None:
     author = clean_text(row.get("source_author", ""))
     if not author:
         return None
-    return f"cultural.source_author.{slugify(author)}"
+    return f"mnemosyne.en.author.{slugify(author)}"
 
 
 def stable_generated_id(row: dict[str, Any]) -> str:
@@ -245,7 +286,11 @@ def validate_choice(
     return value
 
 
-def convert_row(row: dict[str, Any], row_number: int) -> dict[str, Any]:
+def convert_row(
+    row: dict[str, Any], row_number: int, warnings: list[str] | None = None
+) -> dict[str, Any]:
+    if warnings is None:
+        warnings = []
     for field in REQUIRED_FIELDS:
         if is_blank(row.get(field)):
             raise ValueError(f"row {row_number}: missing {field}")
@@ -301,7 +346,7 @@ def convert_row(row: dict[str, Any], row_number: int) -> dict[str, Any]:
         "source_author_key": source_author_key(row),
     }
     for field, generated in generated_keys.items():
-        value = key_or_generated(row, field, generated)
+        value = key_or_generated(row, field, generated, row_number, warnings)
         if value:
             entry[field] = value
 
@@ -320,13 +365,14 @@ def convert_row(row: dict[str, Any], row_number: int) -> dict[str, Any]:
     return entry
 
 
-def convert_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def convert_rows_with_warnings(rows: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[str]]:
     entries: list[dict[str, Any]] = []
+    warnings: list[str] = []
     errors: list[str] = []
     seen_ids: dict[str, int] = {}
     for row_number, row in enumerate(rows, start=1):
         try:
-            entry = convert_row(row, row_number)
+            entry = convert_row(row, row_number, warnings)
         except ValueError as exc:
             errors.append(str(exc))
             continue
@@ -342,6 +388,11 @@ def convert_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
         entries.append(entry)
     if errors:
         raise ValueError("\n".join(errors))
+    return entries, warnings
+
+
+def convert_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    entries, _warnings = convert_rows_with_warnings(rows)
     return entries
 
 
@@ -401,12 +452,17 @@ def write_l10n(entries: list[dict[str, Any]], out_path: Path) -> list[str]:
         existing = dict(payload)
 
     warnings: list[str] = []
-    merged = dict(existing)
+    merged = {key: value for key, value in existing.items() if not is_old_localisation_key(key)}
+    removed_old = sorted(key for key in existing if is_old_localisation_key(key))
+    if removed_old:
+        warnings.append(
+            f"removed {len(removed_old)} deprecated cultural.* localisation keys from {out_path}"
+        )
     for key, value in l10n_candidates(entries).items():
-        if key in existing:
-            if existing[key] != value:
+        if key in merged:
+            if merged[key] != value:
                 warnings.append(
-                    f"l10n conflict for {key!r}: existing={existing[key]!r}, imported={value!r}"
+                    f"l10n conflict for {key!r}: existing={merged[key]!r}, imported={value!r}"
                 )
             continue
         merged[key] = value
@@ -460,11 +516,10 @@ def main() -> int:
 
     try:
         rows = load_source(args.source)
-        entries = convert_rows(rows)
+        entries, l10n_warnings = convert_rows_with_warnings(rows)
         write_yaml(entries, args.out)
-        l10n_warnings: list[str] = []
         if args.l10n_out is not None:
-            l10n_warnings = write_l10n(entries, args.l10n_out)
+            l10n_warnings.extend(write_l10n(entries, args.l10n_out))
     except Exception as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1
