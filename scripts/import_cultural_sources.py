@@ -74,6 +74,7 @@ KNOWN_SOURCE_LICENSES = {
     "public_domain",
     "not_required",
     "CC0",
+    "CC0-1.0",
     "CC-BY-4.0",
     "copyright_or_rights_review_needed",
     "common_usage_short_expression",  # legacy v4 value; kept accepted for older source files
