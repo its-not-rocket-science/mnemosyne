@@ -297,3 +297,54 @@ def test_invalid_explicit_localisation_key_is_rejected() -> None:
     else:
         raise AssertionError("expected invalid localisation key to fail")
 
+
+
+def test_v5_source_fields_are_preserved_and_rights_clean() -> None:
+    rows = [
+        _minimal_row(
+            source_location="Act II Scene 2",
+            source_quote="That which we call a rose by any other name would smell as sweet.",
+            source_note="Context note for provenance review.",
+            source_license="not_required",
+            rights_basis="common_usage_short_expression",
+        )
+    ]
+
+    entries, warnings = importer.convert_rows_with_warnings(rows)
+
+    assert warnings == []
+    [entry] = entries
+    assert entry["source_location"] == "Act II Scene 2"
+    assert entry["source_quote"] == "That which we call a rose by any other name would smell as sweet."
+    assert entry["source_note"] == "Context note for provenance review."
+    assert entry["source_license"] == "not_required"
+    assert entry["rights_basis"] == "common_usage_short_expression"
+
+
+def test_older_twenty_column_rows_still_import() -> None:
+    row = _minimal_row()
+    row.pop("source_quote", None)
+    row.pop("source_note", None)
+    row.pop("rights_basis", None)
+
+    [entry] = importer.convert_rows([row])
+
+    assert "source_quote" not in entry
+    assert "source_note" not in entry
+    assert "rights_basis" not in entry
+
+
+def test_source_location_embedded_source_quote_warns() -> None:
+    entries, warnings = importer.convert_rows_with_warnings(
+        [
+            _minimal_row(
+                source_location=(
+                    "Act II Scene 2; Source quote: That which we call a rose by any other name "
+                    "would smell as sweet."
+                )
+            )
+        ]
+    )
+
+    assert entries[0]["source_location"].startswith("Act II Scene 2; Source quote:")
+    assert any("Source quote:" in warning for warning in warnings)

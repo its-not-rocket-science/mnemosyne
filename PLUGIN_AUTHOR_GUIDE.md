@@ -153,11 +153,14 @@ generation emits only missing-status/`reviewed` rows; `--include-drafts` also
 emits `draft` and `needs_native_review` rows for local review builds.
 `rejected` rows are never emitted, even with `--include-drafts`, so known-bad
 imports cannot become runtime annotations accidentally. Generated JSON preserves
-public provenance fields (`source_location`, `source_url`, `source_license`,
-`source_dataset`) and omits internal review-only fields, including
+public provenance fields (`source_location`, `source_quote`, `source_note`,
+`source_url`, `source_license`, `rights_basis`, `source_dataset`) and omits internal review-only fields, including
 `review_status`; production runtime files should not be generated with
 `--include-drafts`. Confirm source licensing before adding imported rows, and
-include `source_license` whenever `source_url` is present.
+include `source_license` whenever `source_url` is present. Use `source_quote` for
+brief supporting text, `source_note` for contextual provenance, and
+`rights_basis: common_usage_short_expression` with `source_license: not_required`
+for short common-use expressions that do not require a licence.
 
 
 Cultural source import rows may also carry human-authored `short_explanation` text

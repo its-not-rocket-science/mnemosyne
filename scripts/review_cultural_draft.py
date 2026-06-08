@@ -64,8 +64,11 @@ FIELD_ORDER = (
     "source_work",
     "source_author",
     "source_location",
+    "source_quote",
+    "source_note",
     "source_url",
     "source_license",
+    "rights_basis",
     "source_dataset",
     "allow_short_pattern",
     "review_notes",
@@ -125,14 +128,89 @@ def default_output_path(draft: Path) -> Path:
     return draft.with_name(f"{draft.name}_reviewed.yaml")
 
 
-def require_yaml() -> None:
-    if yaml is None:
-        raise ReviewError("PyYAML is required for interactive draft review. Install pyyaml.")
+def _parse_scalar(value: str) -> Any:
+    value = value.strip()
+    if not value:
+        return ""
+    if value[0] == '"':
+        import json
+
+        return json.loads(value)
+    if value[0] == "'":
+        return value.strip("'")
+    if value == "true":
+        return True
+    if value == "false":
+        return False
+    if value in {"null", "~"}:
+        return None
+    try:
+        return int(value)
+    except ValueError:
+        pass
+    try:
+        return float(value)
+    except ValueError:
+        return value
+
+
+def _load_minimal_yaml_list(text: str) -> list[dict[str, Any]]:
+    lines = text.splitlines()
+    rows: list[dict[str, Any]] = []
+    current: dict[str, Any] | None = None
+    idx = 0
+    while idx < len(lines):
+        raw = lines[idx]
+        stripped = raw.strip()
+        if not stripped or stripped.startswith("#"):
+            idx += 1
+            continue
+        if stripped == "[]":
+            return []
+        if raw.startswith("- "):
+            current = {}
+            rows.append(current)
+            content = raw[2:]
+        elif raw.startswith("  ") and current is not None:
+            content = raw[2:]
+        else:
+            raise ReviewError(f"unsupported draft YAML line {idx + 1}: {raw!r}")
+        if ":" not in content:
+            raise ReviewError(f"unsupported draft YAML line {idx + 1}: {raw!r}")
+        key, value = content.split(":", 1)
+        key = key.strip()
+        value = value.strip()
+        if value == ">":
+            idx += 1
+            block: list[str] = []
+            while idx < len(lines) and (lines[idx].startswith("    ") or not lines[idx].strip()):
+                block.append(lines[idx][4:] if lines[idx].startswith("    ") else "")
+                idx += 1
+            current[key] = " ".join(part.strip() for part in block if part.strip())
+            continue
+        if value == "":
+            idx += 1
+            items: list[Any] = []
+            while idx < len(lines):
+                item_raw = lines[idx]
+                item_stripped = item_raw.strip()
+                if not item_stripped or item_stripped.startswith("#"):
+                    idx += 1
+                    continue
+                if not item_raw.startswith("    - "):
+                    break
+                items.append(_parse_scalar(item_raw[6:]))
+                idx += 1
+            current[key] = items
+            continue
+        current[key] = _parse_scalar(value)
+        idx += 1
+    return rows
 
 
 def load_yaml_list(path: Path) -> list[dict[str, Any]]:
-    require_yaml()
-    data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    text = path.read_text(encoding="utf-8")
+    data = yaml.safe_load(text) if yaml is not None else _load_minimal_yaml_list(text)
     if not isinstance(data, list):
         raise ReviewError("draft YAML must contain a list of entries")
     for idx, row in enumerate(data, start=1):
@@ -152,9 +230,38 @@ def ordered_entry(entry: dict[str, Any]) -> dict[str, Any]:
     return ordered
 
 
+def _yaml_scalar(value: Any) -> str:
+    import json
+
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    if isinstance(value, int | float):
+        return str(value)
+    if value is None:
+        return "null"
+    return json.dumps(clean_text(value), ensure_ascii=False)
+
+
+def _dump_minimal_yaml(rows: list[dict[str, Any]]) -> str:
+    lines: list[str] = []
+    for entry in rows:
+        first = True
+        for key, value in ordered_entry(entry).items():
+            prefix = "- " if first else "  "
+            first = False
+            if isinstance(value, list):
+                lines.append(f"{prefix}{key}:")
+                for item in value:
+                    lines.append(f"    - {_yaml_scalar(item)}")
+            else:
+                lines.append(f"{prefix}{key}: {_yaml_scalar(value)}")
+    return "\n".join(lines) + ("\n" if lines else "[]\n")
+
+
 def dump_yaml(rows: list[dict[str, Any]]) -> str:
-    require_yaml()
     ordered = [ordered_entry(row) for row in rows]
+    if yaml is None:
+        return _dump_minimal_yaml(ordered)
     return yaml.dump(
         ordered,
         Dumper=IndentedDumper,
@@ -206,6 +313,17 @@ def has_rights_confirmation(entry: dict[str, Any]) -> bool:
     return RIGHTS_REVIEW_CONFIRMED_NOTE.casefold() in clean_text(entry.get("review_notes")).casefold()
 
 
+def common_usage_not_required(entry: dict[str, Any]) -> bool:
+    return (
+        clean_text(entry.get("source_license")) == "not_required"
+        and clean_text(entry.get("rights_basis")) == "common_usage_short_expression"
+    )
+
+
+def missing_not_required_basis(entry: dict[str, Any]) -> bool:
+    return clean_text(entry.get("source_license")) == "not_required" and is_blank(entry.get("rights_basis"))
+
+
 def source_license_missing_and_sensitive(entry: dict[str, Any]) -> bool:
     """Return True for rows whose blank licence needs human rights review.
 
@@ -213,7 +331,11 @@ def source_license_missing_and_sensitive(entry: dict[str, Any]) -> bool:
     rows with source metadata but no explicit licence as review-sensitive.
     """
     return is_blank(entry.get("source_license")) and (
-        not is_blank(entry.get("source_work")) or not is_blank(entry.get("source_author"))
+        not is_blank(entry.get("source_work"))
+        or not is_blank(entry.get("source_author"))
+        or not is_blank(entry.get("source_location"))
+        or not is_blank(entry.get("source_quote"))
+        or not is_blank(entry.get("source_note"))
     )
 
 
@@ -225,6 +347,8 @@ def needs_action(entry: dict[str, Any], skip_rights_review: bool = False) -> boo
     if clean_text(entry.get("source_license")) == RIGHTS_REVIEW_LICENSE and not skip_rights_review:
         return True
     if source_license_missing_and_sensitive(entry) and not skip_rights_review:
+        return True
+    if missing_not_required_basis(entry) and not skip_rights_review:
         return True
     if clean_text(entry.get("source_license")) == "public_domain" and is_blank(entry.get("source_url")) and not has_missing_url_acceptance(entry):
         return True
@@ -260,8 +384,11 @@ def display_entry_summary(entry: dict[str, Any]) -> None:
     print(f"Source work: {clean_text(entry.get('source_work')) or '<missing>'}")
     print(f"Source author: {clean_text(entry.get('source_author')) or '<missing>'}")
     print(f"Source location: {clean_text(entry.get('source_location')) or '<missing>'}")
+    print(f"Source quote: {clean_text(entry.get('source_quote')) or '<missing>'}")
+    print(f"Source note: {clean_text(entry.get('source_note')) or '<missing>'}")
     print(f"Source URL: {clean_text(entry.get('source_url')) or '<missing>'}")
     print(f"Source licence: {clean_text(entry.get('source_license')) or '<missing>'}")
+    print(f"Rights basis: {clean_text(entry.get('rights_basis')) or '<missing>'}")
     print(f"Confidence: {entry.get('confidence', '<missing>')}")
     print(f"Explanation: {clean_text(entry.get('short_explanation')) or '<missing>'}")
     print(f"Current review_status: {clean_text(entry.get('review_status')) or 'draft'}")
@@ -298,7 +425,8 @@ def prompt_rights_review(
     print(f"Entry: {clean_text(entry.get('canonical_reference')) or '<missing>'}")
     print(f"Source work: {clean_text(entry.get('source_work')) or '<missing>'}")
     print(f"Source author: {clean_text(entry.get('source_author')) or '<missing>'}")
-    print(f"Current source_license: {current}\n")
+    print(f"Current source_license: {current}")
+    print(f"Current rights_basis: {clean_text(entry.get('rights_basis')) or '<missing>'}\n")
     answer = clean_text(input_fn("Rights review is needed.\nChoose:\n  k = keep as rights-review-needed and leave draft\n  r = mark reviewed despite rights flag\n  l = replace source_license\n  s = skip\n  q = quit and save progress\n> "))
     if answer == "q":
         return "quit"
@@ -318,10 +446,13 @@ def prompt_rights_review(
         stats.rights_review_retained += 1
         return "continue"
     if answer == "l":
-        replacement = clean_text(input_fn("Enter replacement source_license (for example public_domain, CC0, CC-BY-4.0):\n> "))
+        replacement = clean_text(input_fn("Enter replacement source_license (for example public_domain, not_required, CC0, CC-BY-4.0):\n> "))
         if not replacement:
             return "skip"
         entry["source_license"] = replacement
+        return "continue"
+    if answer == "b" and clean_text(entry.get("source_license")) == "not_required":
+        entry["rights_basis"] = "common_usage_short_expression"
         return "continue"
     return "skip"
 
@@ -376,6 +507,7 @@ def review_entry_interactive(
     if args.skip_rights_review and (
         clean_text(entry.get("source_license")) == RIGHTS_REVIEW_LICENSE
         or source_license_missing_and_sensitive(entry)
+        or missing_not_required_basis(entry)
     ):
         if clean_text(entry.get("source_license")) == RIGHTS_REVIEW_LICENSE:
             entry["review_status"] = "needs_native_review"
@@ -386,6 +518,7 @@ def review_entry_interactive(
     while (
         clean_text(entry.get("source_license")) == RIGHTS_REVIEW_LICENSE
         or source_license_missing_and_sensitive(entry)
+        or missing_not_required_basis(entry)
     ) and not args.skip_rights_review:
         result = prompt_rights_review(entry, reviewer, reviewed_at, stats, input_fn)
         if result != "continue":
@@ -413,6 +546,8 @@ def can_auto_review(entry: dict[str, Any], args: argparse.Namespace) -> bool:
     if clean_text(entry.get("source_license")) == RIGHTS_REVIEW_LICENSE:
         return has_rights_confirmation(entry)
     if source_license_missing_and_sensitive(entry):
+        return False
+    if missing_not_required_basis(entry):
         return False
     if clean_text(entry.get("source_license")) == "public_domain" and is_blank(entry.get("source_url")) and not has_missing_url_acceptance(entry):
         return False

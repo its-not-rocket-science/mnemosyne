@@ -2,13 +2,6 @@ from __future__ import annotations
 
 from pathlib import Path
 
-import importlib.util
-
-import pytest
-
-yaml = pytest.importorskip("yaml") if importlib.util.find_spec("yaml") else None
-pytestmark = pytest.mark.skipif(yaml is None, reason="PyYAML is required for review tool tests")
-
 from scripts import review_cultural_draft as reviewer
 from scripts.build_cultural_catalog import validate_and_build
 
@@ -42,9 +35,7 @@ def _write_yaml(path: Path, rows: list[dict[str, object]]) -> None:
 
 
 def _load_yaml(path: Path) -> list[dict[str, object]]:
-    data = yaml.safe_load(path.read_text(encoding="utf-8"))
-    assert isinstance(data, list)
-    return data
+    return reviewer.load_yaml_list(path)
 
 
 def test_output_filename_inserts_reviewed_for_generated_yaml(tmp_path) -> None:
@@ -349,3 +340,90 @@ def test_output_yaml_validates_with_build_cultural_catalog(tmp_path) -> None:
     by_lang, warnings = validate_and_build(rows, include_drafts=True)
     assert len(by_lang["en"]) == 1
     assert warnings == []
+
+
+def test_common_usage_not_required_is_not_hard_rights_blocker(tmp_path) -> None:
+    draft = tmp_path / "draft.generated.yaml"
+    out = tmp_path / "reviewed.yaml"
+    _write_yaml(
+        draft,
+        [
+            _entry(
+                source_license="not_required",
+                rights_basis="common_usage_short_expression",
+                source_url="",
+            )
+        ],
+    )
+
+    assert reviewer.main([
+        "--draft",
+        str(draft),
+        "--out",
+        str(out),
+        "--reviewed-by",
+        "paul",
+        "--reviewed-at",
+        "2026-06-07",
+        "--non-interactive",
+    ]) == 0
+
+    row = _load_yaml(out)[0]
+    assert row["review_status"] == "reviewed"
+    assert row["source_license"] == "not_required"
+    assert row["rights_basis"] == "common_usage_short_expression"
+
+
+def test_not_required_without_rights_basis_is_not_auto_reviewed(tmp_path) -> None:
+    draft = tmp_path / "draft.generated.yaml"
+    out = tmp_path / "reviewed.yaml"
+    _write_yaml(draft, [_entry(source_license="not_required", source_url="")])
+
+    assert reviewer.main([
+        "--draft",
+        str(draft),
+        "--out",
+        str(out),
+        "--reviewed-by",
+        "paul",
+        "--reviewed-at",
+        "2026-06-07",
+        "--non-interactive",
+    ]) == 0
+
+    assert _load_yaml(out)[0]["review_status"] == "draft"
+
+
+def test_blank_source_license_with_source_metadata_is_not_auto_reviewed(tmp_path) -> None:
+    draft = tmp_path / "draft.generated.yaml"
+    out = tmp_path / "reviewed.yaml"
+    _write_yaml(draft, [_entry(source_license="", source_quote="Short quote", source_url="")])
+
+    assert reviewer.main([
+        "--draft",
+        str(draft),
+        "--out",
+        str(out),
+        "--reviewed-by",
+        "paul",
+        "--reviewed-at",
+        "2026-06-07",
+        "--non-interactive",
+    ]) == 0
+
+    assert _load_yaml(out)[0]["review_status"] == "draft"
+
+
+def test_summary_displays_new_source_fields(capsys) -> None:
+    reviewer.display_entry_summary(
+        _entry(
+            source_quote="Short supporting quote.",
+            source_note="Contextual provenance note.",
+            rights_basis="common_usage_short_expression",
+        )
+    )
+
+    out = capsys.readouterr().out
+    assert "Source quote: Short supporting quote." in out
+    assert "Source note: Contextual provenance note." in out
+    assert "Rights basis: common_usage_short_expression" in out
