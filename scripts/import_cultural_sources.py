@@ -21,9 +21,9 @@ DEFAULT_DRAFT_DIR = ROOT / "data" / "cultural_drafts"
 TODO_EXPLANATION = "TODO: add explanation"
 EXPECTED_CSV_HEADER = (
     "language,surface_pattern,surface_patterns,variants,canonical_reference,reference_type,"
-    "source_work,source_author,source_location,short_explanation,explanation_key,"
-    "source_work_key,source_author_key,learner_level,register,confidence,source_url,"
-    "source_license,source_dataset,notes"
+    "source_work,source_author,source_location,source_quote,source_note,short_explanation,"
+    "explanation_key,source_work_key,source_author_key,learner_level,register,confidence,"
+    "source_url,source_license,rights_basis,source_dataset,notes"
 )
 
 try:
@@ -69,10 +69,28 @@ REQUIRED_FIELDS = (
     "confidence",
     "source_dataset",
 )
+
+KNOWN_SOURCE_LICENSES = {
+    "public_domain",
+    "not_required",
+    "CC0",
+    "CC-BY-4.0",
+    "copyright_or_rights_review_needed",
+    "common_usage_short_expression",  # legacy v4 value; kept accepted for older source files
+}
+RIGHTS_BASES = {
+    "common_usage_short_expression",
+    "public_domain_source",
+    "quotation_under_review",
+}
+SOURCE_QUOTE_WARNING_LENGTH = 160
+
 OPTIONAL_SCALAR_FIELDS = (
     "source_work",
     "source_author",
     "source_location",
+    "source_quote",
+    "source_note",
     "short_explanation",
     "explanation_key",
     "source_work_key",
@@ -80,6 +98,7 @@ OPTIONAL_SCALAR_FIELDS = (
     "register",
     "source_url",
     "source_license",
+    "rights_basis",
     "source_dataset",
     "notes",
 )
@@ -289,6 +308,72 @@ def validate_choice(
     return value
 
 
+def looks_biblical_or_cross_reference(row: dict[str, Any]) -> bool:
+    haystack = " ".join(
+        clean_text(row.get(field, ""))
+        for field in ("source_work", "source_author", "source_location", "reference_type")
+    ).casefold()
+    biblical_terms = {
+        "bible",
+        "biblical",
+        "king james",
+        "kjv",
+        "authorised version",
+        "authorized version",
+        "gospel",
+        "psalm",
+        "proverb",
+        "isaiah",
+        "matthew",
+        "mark",
+        "luke",
+        "john",
+        "genesis",
+        "exodus",
+        "ecclesiastes",
+    }
+    if any(term in haystack for term in biblical_terms):
+        return True
+    location = clean_text(row.get("source_location", "")).casefold()
+    return any(marker in location for marker in ("cf.", "see ", "compare ", "cross-reference"))
+
+
+def validate_rights_and_source_fields(
+    row: dict[str, Any], row_number: int, warnings: list[str]
+) -> None:
+    source_license = clean_text(row.get("source_license", ""))
+    rights_basis = clean_text(row.get("rights_basis", ""))
+    source_quote = clean_text(row.get("source_quote", ""))
+    source_location = clean_text(row.get("source_location", ""))
+
+    if source_license and source_license not in KNOWN_SOURCE_LICENSES:
+        warnings.append(
+            f"row {row_number}: source_license {source_license!r} is not in the known licence/status list"
+        )
+    if rights_basis and rights_basis not in RIGHTS_BASES:
+        warnings.append(f"row {row_number}: rights_basis {rights_basis!r} is not recognised")
+    if rights_basis and not source_license:
+        warnings.append(f"row {row_number}: rights_basis is present but source_license is blank")
+    if rights_basis == "common_usage_short_expression" and source_license != "not_required":
+        warnings.append(
+            f"row {row_number}: rights_basis=common_usage_short_expression should use source_license=not_required"
+        )
+    if source_license == "not_required" and not rights_basis:
+        warnings.append(f"row {row_number}: source_license=not_required should include rights_basis")
+    if len(source_quote) > SOURCE_QUOTE_WARNING_LENGTH:
+        warnings.append(
+            f"row {row_number}: source_quote is {len(source_quote)} characters; keep quotes short"
+        )
+    if "source quote:" in source_location.casefold():
+        warnings.append(
+            f"row {row_number}: source_location contains 'Source quote:'; split quoted text into source_quote"
+        )
+    if ";" in source_location and not looks_biblical_or_cross_reference(row):
+        warnings.append(
+            f"row {row_number}: source_location contains semicolon prose; consider moving context to source_note"
+        )
+
+
 def convert_row(
     row: dict[str, Any], row_number: int, warnings: list[str] | None = None
 ) -> dict[str, Any]:
@@ -311,6 +396,7 @@ def convert_row(
     learner_level = validate_choice(row, row_number, "learner_level", LEARNER_LEVELS)
     register = validate_choice(row, row_number, "register", REGISTERS, required=False)
     confidence = parse_confidence(row.get("confidence"), row_number)
+    validate_rights_and_source_fields(row, row_number, warnings)
 
     entry_id = (
         clean_text(row.get("id")) if not is_blank(row.get("id")) else stable_generated_id(row)

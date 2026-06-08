@@ -62,7 +62,41 @@ Source import files under `data/cultural_sources/` may be CSV, JSONL, or NDJSON.
 CSV files should use this Windows/PowerShell-friendly header:
 
 ```csv
-language,surface_pattern,surface_patterns,variants,canonical_reference,reference_type,source_work,source_author,source_location,short_explanation,explanation_key,source_work_key,source_author_key,learner_level,register,confidence,source_url,source_license,source_dataset,notes
+language,surface_pattern,surface_patterns,variants,canonical_reference,reference_type,source_work,source_author,source_location,source_quote,source_note,short_explanation,explanation_key,source_work_key,source_author_key,learner_level,register,confidence,source_url,source_license,rights_basis,source_dataset,notes
+```
+
+
+Source provenance and rights fields should be split cleanly:
+
+- `source_location`: precise location in the source work, such as chapter, act,
+  scene, verse, or section. Keep this to locator text only.
+- `source_quote`: a short supporting quote or source phrase when useful for
+  review. Keep it brief; long quotations should not be imported.
+- `source_note`: contextual provenance note that is not itself a location, such
+  as review caveats, wording context, or why a work is associated with the row.
+- `source_license`: licence or licence-requirement status. Common values include
+  `public_domain`, `not_required`, `CC0`, `CC-BY-4.0`, and
+  `copyright_or_rights_review_needed`.
+- `rights_basis`: rights rationale or assessment, especially when a licence is
+  not required. Current structured values include
+  `common_usage_short_expression`, `public_domain_source`, and
+  `quotation_under_review`.
+
+Examples:
+
+```yaml
+source_location: Act II Scene 2
+source_quote: That which we call a rose by any other name would smell as sweet.
+source_license: public_domain
+rights_basis: public_domain_source
+
+source_work: Nineteen Eighty-Four
+source_author: George Orwell
+source_location: Part 1, Chapter 1
+source_license: not_required
+rights_basis: common_usage_short_expression
+notes: >
+  Short common-use term or phrase only, not extended source text.
 ```
 
 `short_explanation` is optional in source rows. When it is present, the importer
@@ -211,14 +245,20 @@ Optional public provenance fields are preserved in generated JSON for explanatio
 and debugging:
 
 - `source_location`
+- `source_quote`
+- `source_note`
 - `source_url`
 - `source_license`
+- `rights_basis`
 - `source_dataset`
 
 Licensing caution: only import or emit rows from sources that Mnemosyne is allowed
 to redistribute or reference. The builder warns when `source_url` is present
 without `source_license`; treat that warning as a prompt to confirm licensing
-before promoting the row. The builder also warns when an explicitly
+before promoting the row. Use `source_license: not_required` plus
+`rights_basis: common_usage_short_expression` for short common-use expressions
+where no licence is required; keep `copyright_or_rights_review_needed` as a hard
+review blocker. The builder also warns when an explicitly
 `review_status: reviewed` row lacks `reviewed_by` or `reviewed_at`, but this does
 not fail legacy starter entries that rely on the missing-status compatibility
 default.
