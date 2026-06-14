@@ -19,7 +19,7 @@ REFERENCE_TYPES = {"literary_reference", "cultural_reference", "proverb_traditio
 LEARNER_LEVELS = {"A1", "A2", "B1", "B2", "C1", "C2"}
 REGISTERS = {"common", "literary", "formal", "informal", "religious", "classical", "proverbial"}
 REVIEW_STATUSES = {"draft", "reviewed", "rejected", "needs_native_review"}
-PUBLIC_PROVENANCE_FIELDS = ("source_location", "source_url", "source_license", "source_dataset")
+PUBLIC_PROVENANCE_FIELDS = ("source_location", "source_quote", "source_note", "source_url", "source_license", "rights_basis", "source_dataset")
 LOCALISATION_KEY_FIELDS = ("explanation_key", "source_work_key", "source_author_key")
 SHORT_AMBIGUOUS = {
     "logos",
@@ -35,6 +35,18 @@ SHORT_AMBIGUOUS = {
     "جحا",
 }
 COMMON_WORDS = SHORT_AMBIGUOUS | {"scrooge", "orwellian", "kafkaesque", "saudade", "memento mori", "dolce vita"}
+KNOWN_SOURCE_LICENSES = {
+    "public_domain",
+    "not_required",
+    "CC0",
+    "CC0-1.0",
+    "CC-BY-4.0",
+    "copyright_or_rights_review_needed",
+    "common_usage_short_expression",  # legacy accepted seed/source value
+}
+RIGHTS_BASES = {"common_usage_short_expression", "public_domain_source", "quotation_under_review"}
+SOURCE_QUOTE_WARNING_LENGTH = 160
+
 TYPE_PREFIX = {
     "literary_reference": "literary",
     "cultural_reference": "cultural",
@@ -161,6 +173,47 @@ def clean_text(value: Any) -> str:
     return unicodedata.normalize("NFC", str(value)).strip()
 
 
+
+def _looks_biblical_or_cross_reference(raw: dict[str, Any]) -> bool:
+    haystack = " ".join(
+        clean_text(raw.get(field, ""))
+        for field in ("source_work", "source_author", "source_location", "reference_type")
+    ).casefold()
+    biblical_terms = {
+        "bible", "biblical", "king james", "kjv", "authorised version", "authorized version",
+        "gospel", "psalm", "proverb", "isaiah", "matthew", "mark", "luke", "john",
+        "genesis", "exodus", "ecclesiastes",
+    }
+    if any(term in haystack for term in biblical_terms):
+        return True
+    location = clean_text(raw.get("source_location", "")).casefold()
+    return any(marker in location for marker in ("cf.", "see ", "compare ", "cross-reference"))
+
+
+def append_rights_warnings(raw: dict[str, Any], idx: int, lang: str, warnings: list[str]) -> None:
+    source_license = clean_text(raw.get("source_license", ""))
+    rights_basis = clean_text(raw.get("rights_basis", ""))
+    source_quote = clean_text(raw.get("source_quote", ""))
+    source_location = clean_text(raw.get("source_location", ""))
+    prefix = f"row {idx} ({lang})"
+
+    if source_license and source_license not in KNOWN_SOURCE_LICENSES:
+        warnings.append(f"{prefix}: source_license {source_license!r} is not in the known licence/status list")
+    if rights_basis and rights_basis not in RIGHTS_BASES:
+        warnings.append(f"{prefix}: rights_basis {rights_basis!r} is not recognised")
+    if rights_basis and not source_license:
+        warnings.append(f"{prefix}: rights_basis is present but source_license is blank")
+    if rights_basis == "common_usage_short_expression" and source_license != "not_required":
+        warnings.append(f"{prefix}: rights_basis=common_usage_short_expression should use source_license=not_required")
+    if source_license == "not_required" and not rights_basis:
+        warnings.append(f"{prefix}: source_license=not_required should include rights_basis")
+    if len(source_quote) > SOURCE_QUOTE_WARNING_LENGTH:
+        warnings.append(f"{prefix}: source_quote is {len(source_quote)} characters; keep quotes short")
+    if "source quote:" in source_location.casefold():
+        warnings.append(f"{prefix}: source_location contains 'Source quote:'; split quoted text into source_quote")
+    if ";" in source_location and not _looks_biblical_or_cross_reference(raw):
+        warnings.append(f"{prefix}: source_location contains semicolon prose; consider moving context to source_note")
+
 def validate_and_build(
     rows: list[dict[str, Any]],
     only_language: str | None = None,
@@ -209,6 +262,7 @@ def validate_and_build(
             warnings.append(
                 f"row {idx} ({lang}): source_url is present but source_license is missing"
             )
+        append_rights_warnings(raw, idx, str(lang), warnings)
         if raw.get("review_status") == "reviewed" and (
             not raw.get("reviewed_by") or not raw.get("reviewed_at")
         ):
