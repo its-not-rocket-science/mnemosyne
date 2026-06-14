@@ -1,0 +1,31 @@
+# Reviewed cultural draft entries for promotion batch 003.
+# KJV (0.84, B1-B2)
+Armageddon
+David and Goliath
+Tower of Babel
+a law unto themselves
+a time to every purpose
+# Shakespeare (0.78, B2-C1)
+all that glitters is not gold
+be-all and end-all
+brave new world
+break the ice
+brevity is the soul of wit
+# Classical allusions (0.78, B2-C1)
+carpe diem
+narcissism
+siren song
+bread and circuses
+beware Greeks bearing gifts
+# Orwell (0.78, B2)
+Newspeak
+doublethink
+Room 101
+Animal Farm
+# Dickens (0.78, B2)
+Bah! Humbug!
+Dickensian
+Ghost of Christmas Past
+God bless us, every one
+# Aesop (0.76, B2)
+cry wolf

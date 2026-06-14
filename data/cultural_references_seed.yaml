@@ -2280,3 +2280,607 @@
   source_dataset: en_shakespeare_phrases
   notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
     using provenance/attribution cap; previous confidence 0.84.
+- id: en_classical_or_scriptural_allusion_armageddon_ea4865a8
+  language: en
+  canonical_reference: Armageddon
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Armageddon
+  short_explanation: A final catastrophic conflict.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.armageddon
+  source_work_key: mnemosyne.en.work.revelation
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Revelation
+  source_author: King James Version
+  source_location: Revelation 16:16
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_david_and_goliath_9739407f
+  language: en
+  canonical_reference: David and Goliath
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - David and Goliath
+  short_explanation: A contest between a small underdog and a giant opponent.
+  learner_level: B1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - David & Goliath
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.david_and_goliath
+  source_work_key: mnemosyne.en.work.1_samuel
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 1 Samuel
+  source_author: King James Version
+  source_location: 1 Samuel 17
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_tower_of_babel_7b34afdc
+  language: en
+  canonical_reference: Tower of Babel
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Tower of Babel
+  short_explanation: Confusion caused by many languages or competing voices.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.tower_of_babel
+  source_work_key: mnemosyne.en.work.genesis
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 11
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_a_law_unto_themselves_01714692
+  language: en
+  canonical_reference: a law unto themselves
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a law unto themselves
+  short_explanation: Someone acting by their own rules.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - a law unto himself
+    - a law unto herself
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_law_unto_themselves
+  source_work_key: mnemosyne.en.work.romans
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Romans
+  source_author: King James Version
+  source_location: Romans 2:14
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_a_time_to_every_purpose_f8337e2f
+  language: en
+  canonical_reference: a time to every purpose
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a time to every purpose
+  short_explanation: Different actions are suited to different moments.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - to everything there is a season
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_time_to_every_purpose
+  source_work_key: mnemosyne.en.work.ecclesiastes
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Ecclesiastes
+  source_author: King James Version
+  source_location: Ecclesiastes 3:1
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_literary_reference_all_that_glitters_is_not_gold_abecec81
+  language: en
+  canonical_reference: all that glitters is not gold
+  reference_type: literary_reference
+  surface_patterns:
+    - all that glitters is not gold
+  short_explanation: Attractive appearances can be deceptive.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - all that glisters is not gold
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.all_that_glitters_is_not_gold
+  source_work_key: mnemosyne.en.work.the_merchant_of_venice
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Merchant of Venice
+  source_author: William Shakespeare
+  source_location: Act II Scene 7
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_be_all_and_end_all_de40ee63
+  language: en
+  canonical_reference: be-all and end-all
+  reference_type: literary_reference
+  surface_patterns:
+    - the be-all and end-all
+  short_explanation: The final or most important thing.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - be-all and end-all
+    - be-all & end-all
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.be_all_and_end_all
+  source_work_key: mnemosyne.en.work.macbeth
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act I Scene 7
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: 'Commonly attributed to Shakespeare; attribution should be reviewed. Commonly attributed to or
+    strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location
+    review. Merged duplicate/overlapping draft rows. Provenance candidates: en_shakespeare_phrases / Macbeth
+    / William Shakespeare / Act I Scene 7; en_shakespeare_phrases / Works of William Shakespeare / William
+    Shakespeare.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.'
+- id: en_literary_reference_brave_new_world_b2cbf48b
+  language: en
+  canonical_reference: brave new world
+  reference_type: literary_reference
+  surface_patterns:
+    - brave new world
+  short_explanation: A new situation that seems exciting or unsettling.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.brave_new_world
+  source_work_key: mnemosyne.en.work.the_tempest
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Tempest
+  source_author: William Shakespeare
+  source_location: Act V Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_break_the_ice_e3de3170
+  language: en
+  canonical_reference: break the ice
+  reference_type: literary_reference
+  surface_patterns:
+    - break the ice
+  short_explanation: To ease tension and begin interaction.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - broke the ice
+    - breaking the ice
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.break_the_ice
+  source_work_key: mnemosyne.en.work.the_taming_of_the_shrew
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Taming of the Shrew
+  source_author: William Shakespeare
+  source_location: Act I Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_brevity_is_the_soul_of_wit_f9793557
+  language: en
+  canonical_reference: brevity is the soul of wit
+  reference_type: literary_reference
+  surface_patterns:
+    - brevity is the soul of wit
+  short_explanation: Clever expression should be concise.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.brevity_is_the_soul_of_wit
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act II Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_classical_or_scriptural_allusion_carpe_diem_f029fc15
+  language: en
+  canonical_reference: carpe diem
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - carpe diem
+  short_explanation: Seize the day; enjoy the present.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.carpe_diem
+  source_work_key: mnemosyne.en.work.odes
+  source_author_key: mnemosyne.en.author.horace
+  source_work: Odes
+  source_author: Horace
+  source_location: Book 1 Ode 11
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_narcissism_87032246
+  language: en
+  canonical_reference: narcissism
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - narcissism
+  short_explanation: Excessive self-love or self-absorption.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.narcissism
+  source_work_key: mnemosyne.en.work.narcissus_myth
+  source_author_key: mnemosyne.en.author.ovid
+  source_work: Narcissus myth
+  source_author: Ovid
+  source_location: Metamorphoses
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.88.
+- id: en_classical_or_scriptural_allusion_siren_song_ad7e1289
+  language: en
+  canonical_reference: siren song
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - siren song
+  short_explanation: A seductive appeal that leads to danger.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - siren call
+  explanation_key: mnemosyne.en.explanation.classical_allusions.siren_song
+  source_work_key: mnemosyne.en.work.odyssey
+  source_author_key: mnemosyne.en.author.homer
+  source_work: Odyssey
+  source_author: Homer
+  source_location: Book 12
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_bread_and_circuses_4622e367
+  language: en
+  canonical_reference: bread and circuses
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - bread and circuses
+  short_explanation: Public appeasement through food and entertainment.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - bread & circuses
+  explanation_key: mnemosyne.en.explanation.classical_allusions.bread_and_circuses
+  source_work_key: mnemosyne.en.work.satires
+  source_author_key: mnemosyne.en.author.juvenal
+  source_work: Satires
+  source_author: Juvenal
+  source_location: Satire 10
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_beware_greeks_bearing_gifts_1951bcd3
+  language: en
+  canonical_reference: beware Greeks bearing gifts
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - beware Greeks bearing gifts
+  short_explanation: Be suspicious of enemies offering presents.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - Greek gift
+  explanation_key: mnemosyne.en.explanation.classical_allusions.beware_greeks_bearing_gifts
+  source_work_key: mnemosyne.en.work.aeneid
+  source_author_key: mnemosyne.en.author.virgil
+  source_work: Aeneid
+  source_author: Virgil
+  source_location: Book 2
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.88.
+- id: en_cultural_reference_newspeak_ac243393
+  language: en
+  canonical_reference: Newspeak
+  reference_type: cultural_reference
+  surface_patterns:
+    - Newspeak
+  short_explanation: Language engineered to restrict thought.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.newspeak
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: 'Appendix: The Principles of Newspeak'
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short
+    common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression;
+    short common-use term or phrase only, not extended source text.'
+- id: en_cultural_reference_doublethink_f61ca7ce
+  language: en
+  canonical_reference: doublethink
+  reference_type: cultural_reference
+  surface_patterns:
+    - doublethink
+  short_explanation: Holding contradictory beliefs while accepting both.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - double-think
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.doublethink
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: Part II, Chapter 9
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short
+    common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression;
+    short common-use term or phrase only, not extended source text.'
+- id: en_cultural_reference_room_101_72ac3e64
+  language: en
+  canonical_reference: Room 101
+  reference_type: cultural_reference
+  surface_patterns:
+    - Room 101
+  short_explanation: A place of one’s worst fear or extreme coercion.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.room_101
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: Part III, Chapter 5
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short
+    common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression;
+    short common-use term or phrase only, not extended source text.'
+- id: en_cultural_reference_animal_farm_7322ed66
+  language: en
+  canonical_reference: Animal Farm
+  reference_type: cultural_reference
+  surface_patterns:
+    - Animal Farm
+  short_explanation: A political fable about revolution becoming tyranny.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.animal_farm
+  source_work_key: mnemosyne.en.work.animal_farm
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Animal Farm
+  source_author: George Orwell
+  source_location: Title / whole work
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short
+    common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression;
+    short common-use term or phrase only, not extended source text.'
+- id: en_cultural_reference_bah_humbug_73dcd92c
+  language: en
+  canonical_reference: Bah! Humbug!
+  reference_type: cultural_reference
+  surface_patterns:
+    - Bah! Humbug!
+  short_explanation: A dismissive rejection of sentiment or celebration.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - humbug
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.bah_humbug
+  source_work_key: mnemosyne.en.work.a_christmas_carol
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: A Christmas Carol
+  source_author: Charles Dickens
+  source_location: Stave 1
+  source_url: https://www.gutenberg.org/ebooks/46
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.90.
+- id: en_cultural_reference_dickensian_1b0ba5e1
+  language: en
+  canonical_reference: Dickensian
+  reference_type: cultural_reference
+  surface_patterns:
+    - Dickensian
+  short_explanation: Suggesting poverty, social injustice, or vivid Victorian detail.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.dickensian
+  source_work_key: mnemosyne.en.work.dickens_s_novels
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Dickens’s novels
+  source_author: Charles Dickens
+  source_location: General cultural usage
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Confidence
+    revised in v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_cultural_reference_ghost_of_christmas_past_2680d980
+  language: en
+  canonical_reference: Ghost of Christmas Past
+  reference_type: cultural_reference
+  surface_patterns:
+    - ghost of Christmas past
+  short_explanation: A reminder of earlier life and memory.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.ghost_of_christmas_past
+  source_work_key: mnemosyne.en.work.a_christmas_carol
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: A Christmas Carol
+  source_author: Charles Dickens
+  source_location: Stave 2
+  source_url: https://www.gutenberg.org/ebooks/46
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.90.
+- id: en_cultural_reference_god_bless_us_every_one_967c86a9
+  language: en
+  canonical_reference: God bless us, every one
+  reference_type: cultural_reference
+  surface_patterns:
+    - God bless us, every one
+  short_explanation: A sentimental blessing of goodwill to all.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.god_bless_us_every_one
+  source_work_key: mnemosyne.en.work.a_christmas_carol
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: A Christmas Carol
+  source_author: Charles Dickens
+  source_location: Stave 3
+  source_url: https://www.gutenberg.org/ebooks/46
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.90.
+- id: en_proverb_tradition_cry_wolf_6cf46878
+  language: en
+  canonical_reference: cry wolf
+  reference_type: proverb_tradition
+  surface_patterns:
+    - cry wolf
+  short_explanation: Raise a false alarm so often that real warnings are doubted.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - cried wolf
+    - crying wolf
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.cry_wolf
+  source_work_key: mnemosyne.en.work.the_boy_who_cried_wolf
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Boy Who Cried Wolf
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
