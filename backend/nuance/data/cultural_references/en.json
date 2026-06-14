@@ -153,6 +153,150 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_an_eye_for_an_eye_70ed3c1f",
+      "canonical_reference": "an eye for an eye",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.an_eye_for_an_eye",
+      "id": "en_classical_or_scriptural_allusion_an_eye_for_an_eye_70ed3c1f",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Punishment matching the injury caused.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Exodus 21:24",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Exodus",
+      "source_work_key": "mnemosyne.en.work.exodus",
+      "surface_patterns": [
+        "an eye for an eye",
+        "eye for eye",
+        "tooth for tooth"
+      ],
+      "variants": [
+        "eye for eye",
+        "tooth for tooth"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_by_the_skin_of_my_teeth_f27152d4",
+      "canonical_reference": "by the skin of my teeth",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.by_the_skin_of_my_teeth",
+      "id": "en_classical_or_scriptural_allusion_by_the_skin_of_my_teeth_f27152d4",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Only just; by the narrowest margin.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Job 19:20",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Job",
+      "source_work_key": "mnemosyne.en.work.job",
+      "surface_patterns": [
+        "by the skin of my teeth",
+        "skin of one's teeth",
+        "skin of your teeth",
+        "skin of my teeth",
+        "by the skin of your teeth"
+      ],
+      "variants": [
+        "skin of one's teeth",
+        "skin of your teeth",
+        "skin of my teeth",
+        "by the skin of your teeth"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_feet_of_clay_6963abce",
+      "canonical_reference": "feet of clay",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.feet_of_clay",
+      "id": "en_classical_or_scriptural_allusion_feet_of_clay_6963abce",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A hidden weakness in someone admired.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Daniel 2:33",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Daniel",
+      "source_work_key": "mnemosyne.en.work.daniel",
+      "surface_patterns": [
+        "feet of clay"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_pearls_before_swine_6285a748",
+      "canonical_reference": "pearls before swine",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.pearls_before_swine",
+      "id": "en_classical_or_scriptural_allusion_pearls_before_swine_6285a748",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Offering something valuable to those who cannot appreciate it.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 7:6",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Matthew",
+      "source_work_key": "mnemosyne.en.work.gospel_of_matthew",
+      "surface_patterns": [
+        "pearls before swine",
+        "cast pearls before swine"
+      ],
+      "variants": [
+        "cast pearls before swine"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_salt_of_the_earth_58429edc",
+      "canonical_reference": "salt of the earth",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.salt_of_the_earth",
+      "id": "en_classical_or_scriptural_allusion_salt_of_the_earth_58429edc",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A very decent, reliable person or group.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 5:13",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Matthew",
+      "source_work_key": "mnemosyne.en.work.gospel_of_matthew",
+      "surface_patterns": [
+        "salt of the earth",
+        "the salt of the earth"
+      ],
+      "variants": [
+        "the salt of the earth"
+      ]
+    },
+    {
       "canonical_form": "en:classical:forbidden_fruit",
       "canonical_reference": "forbidden fruit",
       "confidence": 0.88,
@@ -198,6 +342,130 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_curiouser_and_curiouser_0366a420",
+      "canonical_reference": "curiouser and curiouser",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.curiouser_and_curiouser",
+      "id": "en_cultural_reference_curiouser_and_curiouser_0366a420",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Carroll reference; public-domain wording kept short.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "Increasingly strange or surprising.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 2",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice’s Adventures in Wonderland",
+      "source_work_key": "mnemosyne.en.work.alice_s_adventures_in_wonderland",
+      "surface_patterns": [
+        "curiouser and curiouser",
+        "curiouser",
+        "curiouser & curiouser"
+      ],
+      "variants": [
+        "curiouser",
+        "curiouser & curiouser"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_down_the_rabbit_hole_18b2bb72",
+      "canonical_reference": "down the rabbit hole",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.down_the_rabbit_hole",
+      "id": "en_cultural_reference_down_the_rabbit_hole_18b2bb72",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Carroll reference; public-domain wording kept short.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "Into a strange, complex, or obsessive situation.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 1",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice’s Adventures in Wonderland",
+      "source_work_key": "mnemosyne.en.work.alice_s_adventures_in_wonderland",
+      "surface_patterns": [
+        "down the rabbit hole",
+        "go down the rabbit hole",
+        "went down the rabbit hole",
+        "fall down the rabbit hole"
+      ],
+      "variants": [
+        "go down the rabbit hole",
+        "went down the rabbit hole",
+        "fall down the rabbit hole"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_grin_like_a_cheshire_cat_6f550499",
+      "canonical_reference": "grin like a Cheshire cat",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.grin_like_a_cheshire_cat",
+      "id": "en_cultural_reference_grin_like_a_cheshire_cat_6f550499",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Carroll reference; public-domain wording kept short.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "Smile broadly or mysteriously.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 6",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice’s Adventures in Wonderland",
+      "source_work_key": "mnemosyne.en.work.alice_s_adventures_in_wonderland",
+      "surface_patterns": [
+        "grin like a Cheshire cat",
+        "Cheshire Cat grin",
+        "grinning like a Cheshire cat"
+      ],
+      "variants": [
+        "Cheshire Cat grin",
+        "grinning like a Cheshire cat"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_through_the_looking_glass_9618086e",
+      "canonical_reference": "through the looking-glass",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.through_the_looking_glass",
+      "id": "en_cultural_reference_through_the_looking_glass_9618086e",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Carroll reference; public-domain wording kept short.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "Into a reversed, strange, or alternative reality.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Through the Looking-Glass",
+      "source_work_key": "mnemosyne.en.work.through_the_looking_glass",
+      "surface_patterns": [
+        "through the looking-glass",
+        "through the looking glass",
+        "looking-glass world",
+        "looking glass world"
+      ],
+      "variants": [
+        "through the looking glass",
+        "looking-glass world",
+        "looking glass world"
+      ]
+    },
+    {
       "canonical_form": "en:literary:big_brother",
       "canonical_reference": "Big Brother",
       "confidence": 0.88,
@@ -230,6 +498,106 @@
       "source_work": "Catch-22",
       "surface_patterns": [
         "Catch-22"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_pandemonium_d59be526",
+      "canonical_reference": "pandemonium",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.pandemonium",
+      "id": "en_literary_reference_pandemonium_d59be526",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Miltonic phrase; modern usage may be allusive rather than idiomatic.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Wild chaos or uproar; originally the capital of Hell.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 1",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Lost",
+      "source_work_key": "mnemosyne.en.work.paradise_lost",
+      "surface_patterns": [
+        "pandemonium"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_paradise_lost_6b090ba5",
+      "canonical_reference": "paradise lost",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.paradise_lost",
+      "id": "en_literary_reference_paradise_lost_6b090ba5",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Miltonic phrase; modern usage may be allusive rather than idiomatic.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "An ideal state that has been ruined or forfeited.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Lost",
+      "source_work_key": "mnemosyne.en.work.paradise_lost",
+      "surface_patterns": [
+        "paradise lost"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_something_is_rotten_in_the_state_of_denmark_65d72856",
+      "canonical_reference": "something is rotten in the state of Denmark",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.something_is_rotten_in_the_state_of_denmark",
+      "id": "en_literary_reference_something_is_rotten_in_the_state_of_denmark_65d72856",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Something is corrupt or seriously wrong.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 4",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.hamlet",
+      "surface_patterns": [
+        "something is rotten in the state of Denmark",
+        "something rotten in Denmark"
+      ],
+      "variants": [
+        "something rotten in Denmark"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_to_be_or_not_to_be_6aa4d196",
+      "canonical_reference": "to be or not to be",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.to_be_or_not_to_be",
+      "id": "en_literary_reference_to_be_or_not_to_be_6aa4d196",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A phrase for existential doubt or indecision.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.hamlet",
+      "surface_patterns": [
+        "to be or not to be"
       ]
     },
     {
