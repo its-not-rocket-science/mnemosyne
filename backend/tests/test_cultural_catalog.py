@@ -680,3 +680,76 @@ def test_docs_no_longer_claim_literary_cultural_none_for_every_language():
     text = (ROOT / "docs" / "NUANCE_COVERAGE.md").read_text(encoding="utf-8")
     assert "all are `none` for every language" not in text
     assert "Generated cultural catalogue" in text
+
+
+def test_builder_preserves_new_public_provenance_fields() -> None:
+    by_lang, warnings = validate_and_build(
+        [
+            _base_catalog_row(
+                review_status="reviewed",
+                reviewed_by="paul",
+                reviewed_at="2026-06-07",
+                source_location="Act II Scene 2",
+                source_quote="That which we call a rose by any other name would smell as sweet.",
+                source_note="Short source context note.",
+                source_license="not_required",
+                rights_basis="common_usage_short_expression",
+                source_dataset="unit_test_dataset",
+            )
+        ]
+    )
+
+    assert warnings == []
+    [entry] = by_lang["en"]
+    assert entry["source_quote"] == "That which we call a rose by any other name would smell as sweet."
+    assert entry["source_note"] == "Short source context note."
+    assert entry["rights_basis"] == "common_usage_short_expression"
+
+
+def test_builder_warns_on_rights_mismatches() -> None:
+    _, warnings = validate_and_build(
+        [
+            _base_catalog_row(
+                source_location="Act II Scene 2; Source quote: embedded text",
+                source_license="public_domain",
+                rights_basis="common_usage_short_expression",
+                source_quote="x" * 161,
+            )
+        ],
+        include_drafts=True,
+    )
+
+    assert any("source_license=not_required" in warning for warning in warnings)
+    assert any("source_quote is 161 characters" in warning for warning in warnings)
+    assert any("Source quote:" in warning for warning in warnings)
+
+
+def test_detector_lesson_data_includes_new_provenance_fields(tmp_path, monkeypatch) -> None:
+    out_dir = tmp_path / "catalog"
+    _write_runtime_catalog(
+        out_dir,
+        "en",
+        [
+            {
+                "id": "test_allusion",
+                "language": "en",
+                "surface_patterns": ["Test allusion"],
+                "canonical_reference": "Test Allusion",
+                "canonical_form": "en:literary:test_allusion",
+                "reference_type": "literary_reference",
+                "short_explanation": "A test-only cultural catalogue entry.",
+                "learner_level": "B2",
+                "confidence": 0.8,
+                "source_quote": "Short supporting quote.",
+                "source_note": "Context note.",
+                "rights_basis": "common_usage_short_expression",
+            }
+        ],
+    )
+    _use_runtime_catalog(monkeypatch, out_dir)
+
+    [match] = extract_cultural_references("This is a Test allusion.", "en")
+
+    assert match.lesson_data["source_quote"] == "Short supporting quote."
+    assert match.lesson_data["source_note"] == "Context note."
+    assert match.lesson_data["rights_basis"] == "common_usage_short_expression"
