@@ -1828,3 +1828,126 @@
   learner_level: B2
   register: common
   confidence: 0.88
+- id: en_classical_or_scriptural_allusion_a_broken_reed_c9af762d
+  language: en
+  canonical_reference: a broken reed
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a broken reed
+  short_explanation: An unreliable support or ally.
+  learner_level: C1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_broken_reed
+  source_work_key: mnemosyne.en.work.isaiah
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Isaiah
+  source_author: King James Version
+  source_location: Isaiah 36:6
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_a_camel_through_the_eye_of_a_needle_69109ff0
+  language: en
+  canonical_reference: a camel through the eye of a needle
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a camel through the eye of a needle
+  short_explanation: Something extremely difficult or impossible.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: religious
+  variants:
+    - eye of a needle
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_camel_through_the_eye_of_a_needle
+  source_work_key: mnemosyne.en.work.gospels
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospels
+  source_author: King James Version
+  source_location: Matthew 19:24
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_a_drop_in_the_bucket_474af896
+  language: en
+  canonical_reference: a drop in the bucket
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a drop in the bucket
+  short_explanation: A very small or insignificant amount.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: religious
+  variants:
+    - drop in a bucket
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_drop_in_the_bucket
+  source_work_key: mnemosyne.en.work.isaiah
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Isaiah
+  source_author: King James Version
+  source_location: Isaiah 40:15
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_a_good_samaritan_e8523ee6
+  language: en
+  canonical_reference: a good Samaritan
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a good Samaritan
+  short_explanation: Someone who helps a stranger in need.
+  learner_level: B1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: religious
+  variants:
+    - good Samaritan
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_good_samaritan
+  source_work_key: mnemosyne.en.work.gospel_of_luke
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Luke
+  source_author: King James Version
+  source_location: Luke 10:25–37
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_a_house_divided_against_itself_67e106df
+  language: en
+  canonical_reference: a house divided against itself
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a house divided against itself
+  short_explanation: An internally divided group cannot endure.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: religious
+  variants:
+    - house divided
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_house_divided_against_itself
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 12:25
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
