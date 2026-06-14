@@ -153,6 +153,64 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_law_unto_themselves_01714692",
+      "canonical_reference": "a law unto themselves",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.a_law_unto_themselves",
+      "id": "en_classical_or_scriptural_allusion_a_law_unto_themselves_01714692",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Someone acting by their own rules.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Romans 2:14",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Romans",
+      "source_work_key": "mnemosyne.en.work.romans",
+      "surface_patterns": [
+        "a law unto themselves",
+        "a law unto himself",
+        "a law unto herself"
+      ],
+      "variants": [
+        "a law unto himself",
+        "a law unto herself"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_time_to_every_purpose_f8337e2f",
+      "canonical_reference": "a time to every purpose",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.a_time_to_every_purpose",
+      "id": "en_classical_or_scriptural_allusion_a_time_to_every_purpose_f8337e2f",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Different actions are suited to different moments.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Ecclesiastes 3:1",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Ecclesiastes",
+      "source_work_key": "mnemosyne.en.work.ecclesiastes",
+      "surface_patterns": [
+        "a time to every purpose",
+        "to everything there is a season"
+      ],
+      "variants": [
+        "to everything there is a season"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_an_eye_for_an_eye_70ed3c1f",
       "canonical_reference": "an eye for an eye",
       "confidence": 0.84,
@@ -180,6 +238,84 @@
       "variants": [
         "eye for eye",
         "tooth for tooth"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_armageddon_ea4865a8",
+      "canonical_reference": "Armageddon",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.armageddon",
+      "id": "en_classical_or_scriptural_allusion_armageddon_ea4865a8",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A final catastrophic conflict.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Revelation 16:16",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Revelation",
+      "source_work_key": "mnemosyne.en.work.revelation",
+      "surface_patterns": [
+        "Armageddon"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_beware_greeks_bearing_gifts_1951bcd3",
+      "canonical_reference": "beware Greeks bearing gifts",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.beware_greeks_bearing_gifts",
+      "id": "en_classical_or_scriptural_allusion_beware_greeks_bearing_gifts_1951bcd3",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Be suspicious of enemies offering presents.",
+      "source_author": "Virgil",
+      "source_author_key": "mnemosyne.en.author.virgil",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_location": "Book 2",
+      "source_work": "Aeneid",
+      "source_work_key": "mnemosyne.en.work.aeneid",
+      "surface_patterns": [
+        "beware Greeks bearing gifts",
+        "Greek gift"
+      ],
+      "variants": [
+        "Greek gift"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_bread_and_circuses_4622e367",
+      "canonical_reference": "bread and circuses",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.bread_and_circuses",
+      "id": "en_classical_or_scriptural_allusion_bread_and_circuses_4622e367",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Public appeasement through food and entertainment.",
+      "source_author": "Juvenal",
+      "source_author_key": "mnemosyne.en.author.juvenal",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_location": "Satire 10",
+      "source_work": "Satires",
+      "source_work_key": "mnemosyne.en.work.satires",
+      "surface_patterns": [
+        "bread and circuses",
+        "bread & circuses"
+      ],
+      "variants": [
+        "bread & circuses"
       ]
     },
     {
@@ -217,6 +353,57 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_carpe_diem_f029fc15",
+      "canonical_reference": "carpe diem",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.carpe_diem",
+      "id": "en_classical_or_scriptural_allusion_carpe_diem_f029fc15",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Seize the day; enjoy the present.",
+      "source_author": "Horace",
+      "source_author_key": "mnemosyne.en.author.horace",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_location": "Book 1 Ode 11",
+      "source_work": "Odes",
+      "source_work_key": "mnemosyne.en.work.odes",
+      "surface_patterns": [
+        "carpe diem"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_david_and_goliath_9739407f",
+      "canonical_reference": "David and Goliath",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.david_and_goliath",
+      "id": "en_classical_or_scriptural_allusion_david_and_goliath_9739407f",
+      "language": "en",
+      "learner_level": "B1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A contest between a small underdog and a giant opponent.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "1 Samuel 17",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "1 Samuel",
+      "source_work_key": "mnemosyne.en.work.1_samuel",
+      "surface_patterns": [
+        "David and Goliath",
+        "David & Goliath"
+      ],
+      "variants": [
+        "David & Goliath"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_feet_of_clay_6963abce",
       "canonical_reference": "feet of clay",
       "confidence": 0.84,
@@ -238,6 +425,29 @@
       "source_work_key": "mnemosyne.en.work.daniel",
       "surface_patterns": [
         "feet of clay"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_narcissism_87032246",
+      "canonical_reference": "narcissism",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.narcissism",
+      "id": "en_classical_or_scriptural_allusion_narcissism_87032246",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Excessive self-love or self-absorption.",
+      "source_author": "Ovid",
+      "source_author_key": "mnemosyne.en.author.ovid",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_location": "Metamorphoses",
+      "source_work": "Narcissus myth",
+      "source_work_key": "mnemosyne.en.work.narcissus_myth",
+      "surface_patterns": [
+        "narcissism"
       ]
     },
     {
@@ -297,6 +507,57 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_siren_song_ad7e1289",
+      "canonical_reference": "siren song",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.siren_song",
+      "id": "en_classical_or_scriptural_allusion_siren_song_ad7e1289",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A seductive appeal that leads to danger.",
+      "source_author": "Homer",
+      "source_author_key": "mnemosyne.en.author.homer",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_location": "Book 12",
+      "source_work": "Odyssey",
+      "source_work_key": "mnemosyne.en.work.odyssey",
+      "surface_patterns": [
+        "siren song",
+        "siren call"
+      ],
+      "variants": [
+        "siren call"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_tower_of_babel_7b34afdc",
+      "canonical_reference": "Tower of Babel",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.tower_of_babel",
+      "id": "en_classical_or_scriptural_allusion_tower_of_babel_7b34afdc",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Confusion caused by many languages or competing voices.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 11",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.genesis",
+      "surface_patterns": [
+        "Tower of Babel"
+      ]
+    },
+    {
       "canonical_form": "en:classical:forbidden_fruit",
       "canonical_reference": "forbidden fruit",
       "confidence": 0.88,
@@ -342,6 +603,58 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_animal_farm_7322ed66",
+      "canonical_reference": "Animal Farm",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.animal_farm",
+      "id": "en_cultural_reference_animal_farm_7322ed66",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A political fable about revolution becoming tyranny.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Title / whole work",
+      "source_work": "Animal Farm",
+      "source_work_key": "mnemosyne.en.work.animal_farm",
+      "surface_patterns": [
+        "Animal Farm"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_bah_humbug_73dcd92c",
+      "canonical_reference": "Bah! Humbug!",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.bah_humbug",
+      "id": "en_cultural_reference_bah_humbug_73dcd92c",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A dismissive rejection of sentiment or celebration.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Stave 1",
+      "source_url": "https://www.gutenberg.org/ebooks/46",
+      "source_work": "A Christmas Carol",
+      "source_work_key": "mnemosyne.en.work.a_christmas_carol",
+      "surface_patterns": [
+        "Bah! Humbug!",
+        "humbug"
+      ],
+      "variants": [
+        "humbug"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_curiouser_and_curiouser_0366a420",
       "canonical_reference": "curiouser and curiouser",
       "confidence": 0.9,
@@ -369,6 +682,58 @@
       "variants": [
         "curiouser",
         "curiouser & curiouser"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_dickensian_1b0ba5e1",
+      "canonical_reference": "Dickensian",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.dickensian",
+      "id": "en_cultural_reference_dickensian_1b0ba5e1",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "Suggesting poverty, social injustice, or vivid Victorian detail.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "General cultural usage",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "Dickens’s novels",
+      "source_work_key": "mnemosyne.en.work.dickens_s_novels",
+      "surface_patterns": [
+        "Dickensian"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_doublethink_f61ca7ce",
+      "canonical_reference": "doublethink",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.doublethink",
+      "id": "en_cultural_reference_doublethink_f61ca7ce",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Holding contradictory beliefs while accepting both.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Part II, Chapter 9",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four",
+      "surface_patterns": [
+        "doublethink",
+        "double-think"
+      ],
+      "variants": [
+        "double-think"
       ]
     },
     {
@@ -404,6 +769,54 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_ghost_of_christmas_past_2680d980",
+      "canonical_reference": "Ghost of Christmas Past",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.ghost_of_christmas_past",
+      "id": "en_cultural_reference_ghost_of_christmas_past_2680d980",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A reminder of earlier life and memory.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Stave 2",
+      "source_url": "https://www.gutenberg.org/ebooks/46",
+      "source_work": "A Christmas Carol",
+      "source_work_key": "mnemosyne.en.work.a_christmas_carol",
+      "surface_patterns": [
+        "ghost of Christmas past"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_god_bless_us_every_one_967c86a9",
+      "canonical_reference": "God bless us, every one",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.god_bless_us_every_one",
+      "id": "en_cultural_reference_god_bless_us_every_one_967c86a9",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A sentimental blessing of goodwill to all.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Stave 3",
+      "source_url": "https://www.gutenberg.org/ebooks/46",
+      "source_work": "A Christmas Carol",
+      "source_work_key": "mnemosyne.en.work.a_christmas_carol",
+      "surface_patterns": [
+        "God bless us, every one"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_grin_like_a_cheshire_cat_6f550499",
       "canonical_reference": "grin like a Cheshire cat",
       "confidence": 0.9,
@@ -431,6 +844,54 @@
       "variants": [
         "Cheshire Cat grin",
         "grinning like a Cheshire cat"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_newspeak_ac243393",
+      "canonical_reference": "Newspeak",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.newspeak",
+      "id": "en_cultural_reference_newspeak_ac243393",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Language engineered to restrict thought.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Appendix: The Principles of Newspeak",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four",
+      "surface_patterns": [
+        "Newspeak"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_room_101_72ac3e64",
+      "canonical_reference": "Room 101",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.room_101",
+      "id": "en_cultural_reference_room_101_72ac3e64",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A place of one’s worst fear or extreme coercion.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Part III, Chapter 5",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four",
+      "surface_patterns": [
+        "Room 101"
       ]
     },
     {
@@ -498,6 +959,142 @@
       "source_work": "Catch-22",
       "surface_patterns": [
         "Catch-22"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_all_that_glitters_is_not_gold_abecec81",
+      "canonical_reference": "all that glitters is not gold",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.all_that_glitters_is_not_gold",
+      "id": "en_literary_reference_all_that_glitters_is_not_gold_abecec81",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Attractive appearances can be deceptive.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 7",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Merchant of Venice",
+      "source_work_key": "mnemosyne.en.work.the_merchant_of_venice",
+      "surface_patterns": [
+        "all that glitters is not gold",
+        "all that glisters is not gold"
+      ],
+      "variants": [
+        "all that glisters is not gold"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_be_all_and_end_all_de40ee63",
+      "canonical_reference": "be-all and end-all",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.be_all_and_end_all",
+      "id": "en_literary_reference_be_all_and_end_all_de40ee63",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed. Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review. Merged duplicate/overlapping draft rows. Provenance candidates: en_shakespeare_phrases / Macbeth / William Shakespeare / Act I Scene 7; en_shakespeare_phrases / Works of William Shakespeare / William Shakespeare.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "The final or most important thing.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 7",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Macbeth",
+      "source_work_key": "mnemosyne.en.work.macbeth",
+      "surface_patterns": [
+        "the be-all and end-all",
+        "be-all and end-all",
+        "be-all & end-all"
+      ],
+      "variants": [
+        "be-all and end-all",
+        "be-all & end-all"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_brave_new_world_b2cbf48b",
+      "canonical_reference": "brave new world",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.brave_new_world",
+      "id": "en_literary_reference_brave_new_world_b2cbf48b",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A new situation that seems exciting or unsettling.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act V Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Tempest",
+      "source_work_key": "mnemosyne.en.work.the_tempest",
+      "surface_patterns": [
+        "brave new world"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_break_the_ice_e3de3170",
+      "canonical_reference": "break the ice",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.break_the_ice",
+      "id": "en_literary_reference_break_the_ice_e3de3170",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "To ease tension and begin interaction.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Taming of the Shrew",
+      "source_work_key": "mnemosyne.en.work.the_taming_of_the_shrew",
+      "surface_patterns": [
+        "break the ice",
+        "broke the ice",
+        "breaking the ice"
+      ],
+      "variants": [
+        "broke the ice",
+        "breaking the ice"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_brevity_is_the_soul_of_wit_f9793557",
+      "canonical_reference": "brevity is the soul of wit",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.brevity_is_the_soul_of_wit",
+      "id": "en_literary_reference_brevity_is_the_soul_of_wit_f9793557",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Clever expression should be concise.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.hamlet",
+      "surface_patterns": [
+        "brevity is the soul of wit"
       ]
     },
     {
@@ -661,6 +1258,35 @@
       "source_work": "A Christmas Carol",
       "surface_patterns": [
         "Scrooge"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_cry_wolf_6cf46878",
+      "canonical_reference": "cry wolf",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.cry_wolf",
+      "id": "en_proverb_tradition_cry_wolf_6cf46878",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Raise a false alarm so often that real warnings are doubted.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Boy Who Cried Wolf",
+      "source_work_key": "mnemosyne.en.work.the_boy_who_cried_wolf",
+      "surface_patterns": [
+        "cry wolf",
+        "cried wolf",
+        "crying wolf"
+      ],
+      "variants": [
+        "cried wolf",
+        "crying wolf"
       ]
     }
   ],
