@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mnemosyne — Language Learning from Any Text</title>
+<meta name="description" content="Paste any text, parse it into sentences, open per-word micro-lessons, and rate your recall. FSRS scheduling. 17 language plugins. Morphological analysis throughout.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Mnemosyne — Language Learning from Any Text">
+<meta property="og:description" content="Paste any text, parse it into micro-lessons, and rate your recall. FSRS scheduling. 17 languages. Full morphological analysis.">
+<meta property="og:image" content="https://raw.githubusercontent.com/its-not-rocket-science/mnemosyne/main/mnemosyneThumbnail.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+<meta property="og:url" content="https://its-not-rocket-science.github.io/mnemosyne/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mnemosyne">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mnemosyne — Language Learning from Any Text">
+<meta name="twitter:description" content="Paste any text, parse it into micro-lessons, and rate your recall. FSRS scheduling. 17 languages.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/its-not-rocket-science/mnemosyne/main/mnemosyne.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black:      #0a0a0a;
+  --black-mid:  #111111;
+  --surface:    #1a1008;
+  --terra:      #c4622d;
+  --terra-dim:  #7a3d1c;
+  --terra-pale: #e8895a;
+  --cream:      #f0dfc0;
+  --cream-dim:  #c8b090;
+  --gold:       #c9a227;
+  --text:       #e8d5b0;
+  --muted:      #8a7055;
+  --display:    'Cinzel', Georgia, serif;
+  --serif:      'Crimson Text', Georgia, serif;
+  --mono:       'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 17px; scroll-behavior: smooth; }
+body { background: var(--black); color: var(--text); font-family: var(--serif); line-height: 1.7; }
+
+/* ── Greek key border ── */
+.page-frame {
+  min-height: 100vh;
+  border: 4px solid var(--terra-dim);
+  position: relative;
+}
+
+.page-frame::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(196,98,45,.3);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Hero ── */
+.hero {
+  background: var(--black);
+  padding: 3.5rem 2rem 3rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 2px solid var(--terra-dim);
+}
+
+/* Greek key top band */
+.hero::before {
+  content: '';
+  display: block;
+  height: 12px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--terra-dim) 0px, var(--terra-dim) 8px,
+    transparent 8px, transparent 10px,
+    var(--terra-dim) 10px, var(--terra-dim) 12px,
+    transparent 12px, transparent 20px
+  );
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  opacity: .4;
+}
+
+.hero-vessel {
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  background: var(--terra-dim);
+  border: 3px solid var(--terra);
+  margin: 0 auto 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 0 6px rgba(196,98,45,.15);
+}
+
+.hero-vessel img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: sepia(20%) contrast(1.1);
+}
+
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  color: var(--terra);
+  letter-spacing: .12em;
+  line-height: 1;
+  margin-bottom: .4rem;
+}
+
+.hero-greek {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--muted);
+  letter-spacing: .1em;
+  margin-bottom: 1rem;
+}
+
+.hero-divider {
+  width: 160px; height: 1px;
+  background: linear-gradient(to right, transparent, var(--terra), transparent);
+  margin: 0 auto 1.25rem;
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  color: var(--cream);
+  max-width: 480px;
+  margin: 0 auto 1rem;
+  font-style: italic;
+}
+
+.hero-sub {
+  font-family: var(--mono);
+  font-size: .72rem;
+  color: var(--muted);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.stat { text-align: center; }
+
+.stat-num {
+  font-family: var(--display);
+  font-size: 2rem;
+  color: var(--terra);
+  display: block;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: .75rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-top: .2rem;
+}
+
+.cta-row {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+}
+
+.btn {
+  font-family: var(--mono);
+  font-size: .78rem;
+  padding: .6rem 1.5rem;
+  border-radius: 3px;
+  text-decoration: none;
+  letter-spacing: .06em;
+  transition: background .15s, color .15s, border-color .15s;
+  border: none; cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--terra);
+  color: var(--black);
+  font-weight: 600;
+}
+
+.btn-primary:hover { background: var(--terra-pale); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--terra);
+  border: 1px solid var(--terra-dim);
+}
+
+.btn-secondary:hover { border-color: var(--terra); background: rgba(196,98,45,.08); }
+
+/* ── Nav ── */
+.nav-strip {
+  background: var(--surface);
+  border-bottom: 1px solid var(--terra-dim);
+  padding: .65rem 2rem;
+  display: flex; align-items: center; justify-content: center;
+  gap: 2rem; flex-wrap: wrap;
+}
+
+.nav-strip a {
+  font-family: var(--mono);
+  font-size: .7rem;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: .05em;
+  transition: color .15s;
+}
+
+.nav-strip a:hover { color: var(--terra); }
+
+/* ── Main ── */
+main { max-width: 920px; margin: 0 auto; padding: 2.5rem 2rem 3rem; }
+
+.section { margin-bottom: 2.5rem; }
+
+.section-title {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  color: var(--terra);
+  letter-spacing: .08em;
+  margin-bottom: .75rem;
+  display: flex; align-items: center; gap: .6rem;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1; height: 1px;
+  background: linear-gradient(to right, var(--terra-dim), transparent);
+}
+
+/* ── How it works ── */
+.flow {
+  display: flex; align-items: center; gap: 0;
+  flex-wrap: wrap; margin-top: .85rem;
+}
+
+.flow-step {
+  background: var(--surface);
+  border: 1px solid var(--terra-dim);
+  padding: .85rem 1.1rem;
+  flex: 1; min-width: 130px;
+  text-align: center;
+  position: relative;
+}
+
+.flow-step:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: -12px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--terra);
+  font-size: 1rem;
+  z-index: 1;
+  background: var(--black);
+  padding: 0 2px;
+}
+
+.flow-step h3 {
+  font-family: var(--display);
+  font-size: .85rem;
+  color: var(--terra);
+  letter-spacing: .08em;
+  margin-bottom: .25rem;
+}
+
+.flow-step p { font-size: .8rem; color: var(--muted); line-height: 1.45; }
+
+/* ── Language grid ── */
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: .6rem;
+  margin-top: .85rem;
+}
+
+.lang-chip {
+  background: var(--surface);
+  border: 1px solid var(--terra-dim);
+  border-radius: 3px;
+  padding: .45rem .7rem;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: .4rem;
+}
+
+.lang-name { font-size: .875rem; color: var(--text); }
+.lang-tier {
+  font-family: var(--mono);
+  font-size: .58rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.lang-tier.full { color: var(--terra); }
+.lang-tier.rich { color: var(--gold); }
+
+/* ── API preview ── */
+pre {
+  background: var(--surface);
+  color: #c8b090;
+  font-family: var(--mono);
+  font-size: .72rem;
+  border-radius: 4px;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  line-height: 1.65;
+  border: 1px solid var(--terra-dim);
+  margin-top: .85rem;
+}
+
+pre .key { color: var(--terra-pale); }
+pre .str { color: #a8d8a8; }
+pre .num { color: var(--gold); }
+
+/* ── Docs list ── */
+.doc-list { list-style: none; margin-top: .75rem; display: flex; flex-direction: column; gap: .35rem; }
+.doc-list a {
+  font-family: var(--mono);
+  font-size: .75rem;
+  color: var(--terra-pale);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s;
+}
+.doc-list a:hover { border-color: var(--terra-pale); }
+
+/* ── Footer ── */
+footer {
+  background: var(--surface);
+  border-top: 2px solid var(--terra-dim);
+  color: var(--muted);
+  text-align: center;
+  padding: 1.25rem 2rem;
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: .05em;
+}
+
+footer a { color: var(--terra); text-decoration: none; }
+
+@media (max-width: 600px) {
+  main, .nav-strip { padding-left: 1rem; padding-right: 1rem; }
+  .hero { padding: 2.5rem 1rem 2rem; }
+  .stat-row { gap: 1.5rem; }
+}
+</style>
+</head>
+<body>
+<div class="page-frame">
+
+<header class="hero">
+  <div class="hero-vessel">
+    <img src="https://raw.githubusercontent.com/its-not-rocket-science/mnemosyne/main/mnemosyneThumbnail.png" alt="Mnemosyne — Titan of Memory">
+  </div>
+  <h1>Mnemosyne</h1>
+  <p class="hero-greek">Μνημοσύνη · Μήτηρ Μουσῶν · Mother of the Muses</p>
+  <div class="hero-divider"></div>
+  <p class="hero-tagline">Language learning from any text you care about.</p>
+  <p class="hero-sub">Paste · Parse · Learn · Remember</p>
+
+  <div class="stat-row">
+    <div class="stat">
+      <span class="stat-num">17</span>
+      <span class="stat-label">Languages</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">625</span>
+      <span class="stat-label">Commits</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">FSRS</span>
+      <span class="stat-label">Scheduling</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">i+1</span>
+      <span class="stat-label">Comprehensible input</span>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn btn-primary" href="https://github.com/its-not-rocket-science/mnemosyne">View on GitHub</a>
+    <a class="btn btn-secondary" href="https://github.com/its-not-rocket-science/mnemosyne#quick-start">Quick start</a>
+  </div>
+</header>
+
+<nav class="nav-strip" aria-label="Quick links">
+  <a href="https://github.com/its-not-rocket-science/mnemosyne#readme">README</a>
+  <a href="https://github.com/its-not-rocket-science/mnemosyne/blob/main/ARCHITECTURE.md">Architecture</a>
+  <a href="https://github.com/its-not-rocket-science/mnemosyne/blob/main/ROADMAP.md">Roadmap</a>
+  <a href="https://github.com/its-not-rocket-science/mnemosyne/blob/main/CONTRIBUTING.md">Contributing</a>
+  <a href="https://github.com/its-not-rocket-science/mnemosyne/blob/main/PLUGIN_AUTHOR_GUIDE.md">Plugin guide</a>
+  <a href="https://github.com/its-not-rocket-science/its-not-rocket-science">← Profile</a>
+</nav>
+
+<main>
+
+  <section class="section">
+    <h2 class="section-title">How it works</h2>
+    <div class="flow">
+      <div class="flow-step">
+        <h3>Paste</h3>
+        <p>Any text — article, book, lyrics, conversation, legal document</p>
+      </div>
+      <div class="flow-step">
+        <h3>Parse</h3>
+        <p>Sentences split into learnable objects: vocabulary, conjugation, grammar, idiom, nuance</p>
+      </div>
+      <div class="flow-step">
+        <h3>Learn</h3>
+        <p>Per-word micro-lessons with morphological analysis and grammatical context</p>
+      </div>
+      <div class="flow-step">
+        <h3>Review</h3>
+        <p>FSRS scheduling surfaces the right words at the right moment</p>
+      </div>
+      <div class="flow-step">
+        <h3>Progress</h3>
+        <p>i+1 recommendations find sentences just beyond your current level</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Languages</h2>
+    <p style="font-size:.95rem;color:var(--muted);margin-bottom:.25rem">Full morphological analysis — <span style="color:var(--terra)">full</span> · Rich morphology via Stanza — <span style="color:var(--gold)">rich</span> · Vocabulary / dictionary mode — standard</p>
+    <div class="lang-grid">
+      <div class="lang-chip"><span class="lang-name">Spanish</span><span class="lang-tier full">full</span></div>
+      <div class="lang-chip"><span class="lang-name">French</span><span class="lang-tier full">full</span></div>
+      <div class="lang-chip"><span class="lang-name">German</span><span class="lang-tier full">full</span></div>
+      <div class="lang-chip"><span class="lang-name">Russian</span><span class="lang-tier full">full</span></div>
+      <div class="lang-chip"><span class="lang-name">Japanese</span><span class="lang-tier full">full</span></div>
+      <div class="lang-chip"><span class="lang-name">Portuguese</span><span class="lang-tier full">full</span></div>
+      <div class="lang-chip"><span class="lang-name">Italian</span><span class="lang-tier full">full</span></div>
+      <div class="lang-chip"><span class="lang-name">English</span><span class="lang-tier full">full</span></div>
+      <div class="lang-chip"><span class="lang-name">Finnish</span><span class="lang-tier rich">rich</span></div>
+      <div class="lang-chip"><span class="lang-name">Latin</span><span class="lang-tier">morph</span></div>
+      <div class="lang-chip"><span class="lang-name">Koine Greek</span><span class="lang-tier">morph</span></div>
+      <div class="lang-chip"><span class="lang-name">Korean</span><span class="lang-tier">morph</span></div>
+      <div class="lang-chip"><span class="lang-name">Hindi</span><span class="lang-tier">morph</span></div>
+      <div class="lang-chip"><span class="lang-name">Turkish</span><span class="lang-tier">morph</span></div>
+      <div class="lang-chip"><span class="lang-name">Arabic</span><span class="lang-tier">vocab · RTL</span></div>
+      <div class="lang-chip"><span class="lang-name">Hebrew</span><span class="lang-tier">vocab · RTL</span></div>
+      <div class="lang-chip"><span class="lang-name">Mandarin</span><span class="lang-tier">vocab · CJK</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">API</h2>
+    <p style="font-size:.95rem;color:var(--muted)">Self-hosted FastAPI backend. Parse text, retrieve lessons, submit reviews, get recommendations.</p>
+<pre><span class="key">POST</span> /ingest
+{
+  <span class="key">"text"</span>: <span class="str">"Hola. Yo hablo español."</span>,
+  <span class="key">"language"</span>: <span class="str">"es"</span>,
+  <span class="key">"content_type"</span>: <span class="str">"article"</span>
+}
+
+<span class="key">→</span> sentences with learnable objects (vocabulary, conjugation, grammar, idiom, nuance)
+<span class="key">→</span> deterministic UUID per object: same word always same ID
+<span class="key">→</span> source_document_id for reading-progression tracking
+
+<span class="key">POST</span> /review  { <span class="key">"object_id"</span>: <span class="str">"..."</span>, <span class="key">"quality"</span>: <span class="num">3</span> }
+<span class="key">→</span> next_interval_days  (FSRS scheduling)
+
+<span class="key">GET</span>  /recommend?language=es
+<span class="key">→</span> sentences at i+1 difficulty from your parse history</pre>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Self-host in 3 commands</h2>
+<pre>cp .env.example .env
+make build
+make up
+# API on :8000 · frontend: python -m http.server 8080 -d frontend</pre>
+    <div class="cta-row" style="margin-top:1.25rem">
+      <a class="btn btn-primary" href="https://github.com/its-not-rocket-science/mnemosyne">View on GitHub</a>
+      <a class="btn btn-secondary" href="https://github.com/its-not-rocket-science/mnemosyne/blob/main/ARCHITECTURE.md">Architecture</a>
+      <a class="btn btn-secondary" href="https://github.com/its-not-rocket-science/mnemosyne/blob/main/PLUGIN_AUTHOR_GUIDE.md">Write a plugin</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Docs</h2>
+    <ul class="doc-list">
+      <li><a href="https://github.com/its-not-rocket-science/mnemosyne/blob/main/ARCHITECTURE.md">ARCHITECTURE.md — request flows, plugin system, FSRS, persistence, difficulty scoring</a></li>
+      <li><a href="https://github.com/its-not-rocket-science/mnemosyne/blob/main/ROADMAP.md">ROADMAP.md — what is done and what is next</a></li>
+      <li><a href="https://github.com/its-not-rocket-science/mnemosyne/blob/main/PLUGIN_AUTHOR_GUIDE.md">PLUGIN_AUTHOR_GUIDE.md — write a language plugin</a></li>
+      <li><a href="https://github.com/its-not-rocket-science/mnemosyne/blob/main/CONTRIBUTING.md">CONTRIBUTING.md — setup, coding standards, tests</a></li>
+      <li><a href="https://github.com/its-not-rocket-science/mnemosyne/blob/main/VISION_ALIGNMENT.md">VISION_ALIGNMENT.md — vision, current state, design principles</a></li>
+      <li><a href="https://github.com/its-not-rocket-science/mnemosyne/blob/main/DEPLOYMENT.md">DEPLOYMENT.md — production deployment guide</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>Mnemosyne · Μνημοσύνη · Mother of the Muses · MIT licence · <a href="https://github.com/its-not-rocket-science/mnemosyne">its-not-rocket-science/mnemosyne</a></p>
+</footer>
+
+</div>
+</body>
+</html>
