@@ -1951,3 +1951,332 @@
   source_license: public_domain
   source_dataset: en_kjv_bible_phrases
   notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_cultural_reference_down_the_rabbit_hole_18b2bb72
+  language: en
+  canonical_reference: down the rabbit hole
+  reference_type: cultural_reference
+  surface_patterns:
+    - down the rabbit hole
+  short_explanation: Into a strange, complex, or obsessive situation.
+  learner_level: B2
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: literary
+  variants:
+    - go down the rabbit hole
+    - went down the rabbit hole
+    - fall down the rabbit hole
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.down_the_rabbit_hole
+  source_work_key: mnemosyne.en.work.alice_s_adventures_in_wonderland
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 1
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_curiouser_and_curiouser_0366a420
+  language: en
+  canonical_reference: curiouser and curiouser
+  reference_type: cultural_reference
+  surface_patterns:
+    - curiouser and curiouser
+  short_explanation: Increasingly strange or surprising.
+  learner_level: B2
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: literary
+  variants:
+    - curiouser
+    - curiouser & curiouser
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.curiouser_and_curiouser
+  source_work_key: mnemosyne.en.work.alice_s_adventures_in_wonderland
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 2
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_grin_like_a_cheshire_cat_6f550499
+  language: en
+  canonical_reference: grin like a Cheshire cat
+  reference_type: cultural_reference
+  surface_patterns:
+    - grin like a Cheshire cat
+  short_explanation: Smile broadly or mysteriously.
+  learner_level: B2
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: literary
+  variants:
+    - Cheshire Cat grin
+    - grinning like a Cheshire cat
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.grin_like_a_cheshire_cat
+  source_work_key: mnemosyne.en.work.alice_s_adventures_in_wonderland
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 6
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_through_the_looking_glass_9618086e
+  language: en
+  canonical_reference: through the looking-glass
+  reference_type: cultural_reference
+  surface_patterns:
+    - through the looking-glass
+  short_explanation: Into a reversed, strange, or alternative reality.
+  learner_level: B2
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: literary
+  variants:
+    - through the looking glass
+    - looking-glass world
+    - looking glass world
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.through_the_looking_glass
+  source_work_key: mnemosyne.en.work.through_the_looking_glass
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Through the Looking-Glass
+  source_author: Lewis Carroll
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_literary_reference_pandemonium_d59be526
+  language: en
+  canonical_reference: pandemonium
+  reference_type: literary_reference
+  surface_patterns:
+    - pandemonium
+  short_explanation: Wild chaos or uproar; originally the capital of Hell.
+  learner_level: B2
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.pandemonium
+  source_work_key: mnemosyne.en.work.paradise_lost
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book 1
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.
+- id: en_literary_reference_paradise_lost_6b090ba5
+  language: en
+  canonical_reference: paradise lost
+  reference_type: literary_reference
+  surface_patterns:
+    - paradise lost
+  short_explanation: An ideal state that has been ruined or forfeited.
+  learner_level: B2
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.paradise_lost
+  source_work_key: mnemosyne.en.work.paradise_lost
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.
+- id: en_classical_or_scriptural_allusion_feet_of_clay_6963abce
+  language: en
+  canonical_reference: feet of clay
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - feet of clay
+  short_explanation: A hidden weakness in someone admired.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.feet_of_clay
+  source_work_key: mnemosyne.en.work.daniel
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Daniel
+  source_author: King James Version
+  source_location: Daniel 2:33
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_an_eye_for_an_eye_70ed3c1f
+  language: en
+  canonical_reference: an eye for an eye
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - an eye for an eye
+  short_explanation: Punishment matching the injury caused.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: religious
+  variants:
+    - eye for eye
+    - tooth for tooth
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.an_eye_for_an_eye
+  source_work_key: mnemosyne.en.work.exodus
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Exodus
+  source_author: King James Version
+  source_location: Exodus 21:24
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_by_the_skin_of_my_teeth_f27152d4
+  language: en
+  canonical_reference: by the skin of my teeth
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - by the skin of my teeth
+  short_explanation: Only just; by the narrowest margin.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: religious
+  variants:
+    - skin of one's teeth
+    - skin of your teeth
+    - skin of my teeth
+    - by the skin of your teeth
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.by_the_skin_of_my_teeth
+  source_work_key: mnemosyne.en.work.job
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Job
+  source_author: King James Version
+  source_location: Job 19:20
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_pearls_before_swine_6285a748
+  language: en
+  canonical_reference: pearls before swine
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - pearls before swine
+  short_explanation: Offering something valuable to those who cannot appreciate it.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: religious
+  variants:
+    - cast pearls before swine
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.pearls_before_swine
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 7:6
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_salt_of_the_earth_58429edc
+  language: en
+  canonical_reference: salt of the earth
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - salt of the earth
+  short_explanation: A very decent, reliable person or group.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: religious
+  variants:
+    - the salt of the earth
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.salt_of_the_earth
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 5:13
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_literary_reference_to_be_or_not_to_be_6aa4d196
+  language: en
+  canonical_reference: to be or not to be
+  reference_type: literary_reference
+  surface_patterns:
+    - to be or not to be
+  short_explanation: A phrase for existential doubt or indecision.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.to_be_or_not_to_be
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act III Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_something_is_rotten_in_the_state_of_denmark_65d72856
+  language: en
+  canonical_reference: something is rotten in the state of Denmark
+  reference_type: literary_reference
+  surface_patterns:
+    - something is rotten in the state of Denmark
+  short_explanation: Something is corrupt or seriously wrong.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-14'
+  register: literary
+  variants:
+    - something rotten in Denmark
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.something_is_rotten_in_the_state_of_denmark
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act I Scene 4
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.

@@ -1,0 +1,18 @@
+# Reviewed cultural draft entries for promotion batch 002.
+# Carroll (0.90, B2)
+down the rabbit hole
+curiouser and curiouser
+grin like a Cheshire cat
+through the looking-glass
+# Milton (0.90, B2)
+pandemonium
+paradise lost
+# KJV (0.84, B2)
+feet of clay
+an eye for an eye
+by the skin of my teeth
+pearls before swine
+salt of the earth
+# Shakespeare (0.78, B2)
+to be or not to be
+something is rotten in the state of Denmark
