@@ -17,6 +17,142 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_broken_reed_c9af762d",
+      "canonical_reference": "a broken reed",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.a_broken_reed",
+      "id": "en_classical_or_scriptural_allusion_a_broken_reed_c9af762d",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "An unreliable support or ally.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Isaiah 36:6",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Isaiah",
+      "source_work_key": "mnemosyne.en.work.isaiah",
+      "surface_patterns": [
+        "a broken reed"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_camel_through_the_eye_of_a_needle_69109ff0",
+      "canonical_reference": "a camel through the eye of a needle",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.a_camel_through_the_eye_of_a_needle",
+      "id": "en_classical_or_scriptural_allusion_a_camel_through_the_eye_of_a_needle_69109ff0",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Something extremely difficult or impossible.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 19:24",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospels",
+      "source_work_key": "mnemosyne.en.work.gospels",
+      "surface_patterns": [
+        "a camel through the eye of a needle",
+        "eye of a needle"
+      ],
+      "variants": [
+        "eye of a needle"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_drop_in_the_bucket_474af896",
+      "canonical_reference": "a drop in the bucket",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.a_drop_in_the_bucket",
+      "id": "en_classical_or_scriptural_allusion_a_drop_in_the_bucket_474af896",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A very small or insignificant amount.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Isaiah 40:15",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Isaiah",
+      "source_work_key": "mnemosyne.en.work.isaiah",
+      "surface_patterns": [
+        "a drop in the bucket",
+        "drop in a bucket"
+      ],
+      "variants": [
+        "drop in a bucket"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_good_samaritan_e8523ee6",
+      "canonical_reference": "a good Samaritan",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.a_good_samaritan",
+      "id": "en_classical_or_scriptural_allusion_a_good_samaritan_e8523ee6",
+      "language": "en",
+      "learner_level": "B1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Someone who helps a stranger in need.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Luke 10:25–37",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Luke",
+      "source_work_key": "mnemosyne.en.work.gospel_of_luke",
+      "surface_patterns": [
+        "a good Samaritan",
+        "good Samaritan"
+      ],
+      "variants": [
+        "good Samaritan"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_house_divided_against_itself_67e106df",
+      "canonical_reference": "a house divided against itself",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.a_house_divided_against_itself",
+      "id": "en_classical_or_scriptural_allusion_a_house_divided_against_itself_67e106df",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "An internally divided group cannot endure.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 12:25",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Matthew",
+      "source_work_key": "mnemosyne.en.work.gospel_of_matthew",
+      "surface_patterns": [
+        "a house divided against itself",
+        "house divided"
+      ],
+      "variants": [
+        "house divided"
+      ]
+    },
+    {
       "canonical_form": "en:classical:forbidden_fruit",
       "canonical_reference": "forbidden fruit",
       "confidence": 0.88,
