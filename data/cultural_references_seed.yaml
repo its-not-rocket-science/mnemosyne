@@ -7833,3 +7833,612 @@
   notes: Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added
     by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using
     provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_murder_most_foul_c73e4c60
+  language: en
+  canonical_reference: murder most foul
+  reference_type: literary_reference
+  surface_patterns:
+    - murder most foul
+  short_explanation: An especially wicked murder.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.murder_most_foul
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act I Scene 5
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_my_kingdom_for_a_horse_be40cf9b
+  language: en
+  canonical_reference: my kingdom for a horse
+  reference_type: literary_reference
+  surface_patterns:
+    - my kingdom for a horse
+  short_explanation: Desperate need makes one value a simple thing.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.my_kingdom_for_a_horse
+  source_work_key: mnemosyne.en.work.richard_iii
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Richard III
+  source_author: William Shakespeare
+  source_location: Act V Scene 4
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_now_is_the_winter_of_our_discontent_690b2e85
+  language: en
+  canonical_reference: now is the winter of our discontent
+  reference_type: literary_reference
+  surface_patterns:
+    - now is the winter of our discontent
+  short_explanation: A famous opening for a time of grievance.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.now_is_the_winter_of_our_discontent
+  source_work_key: mnemosyne.en.work.richard_iii
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Richard III
+  source_author: William Shakespeare
+  source_location: Act I Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_out_damned_spot_3b4a9c0e
+  language: en
+  canonical_reference: out, damned spot
+  reference_type: literary_reference
+  surface_patterns:
+    - out, damned spot
+  short_explanation: A sign of guilt that cannot be removed.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - damned spot
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.out_damned_spot
+  source_work_key: mnemosyne.en.work.macbeth
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act V Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_parting_is_such_sweet_sorrow_655538dd
+  language: en
+  canonical_reference: parting is such sweet sorrow
+  reference_type: literary_reference
+  surface_patterns:
+    - parting is such sweet sorrow
+  short_explanation: Leaving can be painful and pleasurable.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - sweet sorrow
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.parting_is_such_sweet_sorrow
+  source_work_key: mnemosyne.en.work.romeo_and_juliet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Romeo and Juliet
+  source_author: William Shakespeare
+  source_location: Act II Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_not_slept_one_wink_f724b873
+  language: en
+  canonical_reference: not slept one wink
+  reference_type: literary_reference
+  surface_patterns:
+    - not slept one wink
+  short_explanation: Not sleep at all.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - not sleep a wink
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.not_slept_one_wink
+  source_work_key: mnemosyne.en.work.cymbeline
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Cymbeline
+  source_author: William Shakespeare
+  source_location: Act III Scene 4
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.
+- id: en_proverb_tradition_the_tortoise_and_the_hare_674b7629
+  language: en
+  canonical_reference: the tortoise and the hare
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the tortoise and the hare
+  short_explanation: A contrast between persistence and overconfident speed.
+  learner_level: B1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - tortoise and the hare
+    - the tortoise & the hare
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_tortoise_and_the_hare
+  source_work_key: mnemosyne.en.work.the_tortoise_and_the_hare
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Tortoise and the Hare
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_the_goose_that_laid_the_golden_eggs_7b528643
+  language: en
+  canonical_reference: the goose that laid the golden eggs
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the goose that laid the golden eggs
+  short_explanation: A valuable source of profit ruined by greed.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - golden goose
+    - goose that laid the golden eggs
+    - goose that laid the golden egg
+    - kill the goose that lays the golden eggs
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_goose_that_laid_the_golden_eggs
+  source_work_key: mnemosyne.en.work.the_goose_and_the_golden_eggs
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Goose and the Golden Eggs
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_the_mouse_that_freed_the_lion_696ce93b
+  language: en
+  canonical_reference: the mouse that freed the lion
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the mouse that freed the lion
+  short_explanation: Small helpers can repay great kindness.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - the lion and the mouse
+    - mouse that freed the lion
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_mouse_that_freed_the_lion
+  source_work_key: mnemosyne.en.work.the_lion_and_the_mouse
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Lion and the Mouse
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_farmer_and_the_viper_d9409747
+  language: en
+  canonical_reference: farmer and the viper
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the farmer and the viper
+  short_explanation: Kindness to the malicious may be repaid with harm.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - farmer and the viper
+    - farmer & the viper
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.farmer_and_the_viper
+  source_work_key: mnemosyne.en.work.the_farmer_and_the_viper
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Farmer and the Viper
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_classical_or_scriptural_allusion_icarus_92ce9441
+  language: en
+  canonical_reference: Icarus
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Icarus
+  short_explanation: A symbol of overambitious flight and downfall.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.icarus
+  source_work_key: mnemosyne.en.work.daedalus_and_icarus_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Daedalus and Icarus myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_medusa_a5958dd8
+  language: en
+  canonical_reference: Medusa
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Medusa
+  short_explanation: A terrifying figure whose gaze petrifies.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.medusa
+  source_work_key: mnemosyne.en.work.medusa_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Medusa myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.88.
+- id: en_classical_or_scriptural_allusion_janus_faced_272e38fb
+  language: en
+  canonical_reference: Janus-faced
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Janus-faced
+  short_explanation: Two-faced, double-looking, or duplicitous.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.janus_faced
+  source_work_key: mnemosyne.en.work.roman_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Roman myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.88.
+- id: en_classical_or_scriptural_allusion_mercurial_48bd2cd2
+  language: en
+  canonical_reference: Mercurial
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Mercurial
+  short_explanation: Changeable, quick, or lively.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.mercurial
+  source_work_key: mnemosyne.en.work.mercury_myth
+  source_author_key: mnemosyne.en.author.roman_tradition
+  source_work: Mercury myth
+  source_author: Roman tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.84.
+- id: en_cultural_reference_oliver_twist_7727aea3
+  language: en
+  canonical_reference: Oliver Twist
+  reference_type: cultural_reference
+  surface_patterns:
+    - Oliver Twist
+  short_explanation: A vulnerable child associated with poverty and pleading for more.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.oliver_twist
+  source_work_key: mnemosyne.en.work.oliver_twist
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Oliver Twist
+  source_author: Charles Dickens
+  source_location: Title character
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.88.
+- id: en_cultural_reference_tiny_tim_343f03cc
+  language: en
+  canonical_reference: Tiny Tim
+  reference_type: cultural_reference
+  surface_patterns:
+    - Tiny Tim
+  short_explanation: A vulnerable child symbolising innocence and hardship.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.tiny_tim
+  source_work_key: mnemosyne.en.work.a_christmas_carol
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: A Christmas Carol
+  source_author: Charles Dickens
+  source_location: Tiny Tim
+  source_url: https://www.gutenberg.org/ebooks/46
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.88.
+- id: en_cultural_reference_pip_9a67c355
+  language: en
+  canonical_reference: Pip
+  reference_type: cultural_reference
+  surface_patterns:
+    - Pip
+  short_explanation: A poor boy whose hopes and status change dramatically.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.pip
+  source_work_key: mnemosyne.en.work.great_expectations
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Great Expectations
+  source_author: Charles Dickens
+  source_location: Pip
+  source_url: https://www.gutenberg.org/ebooks/1400
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_cultural_reference_pickwickian_c892741b
+  language: en
+  canonical_reference: pickwickian
+  reference_type: cultural_reference
+  surface_patterns:
+    - pickwickian
+  short_explanation: Humorous, benevolent, or used in a special non-literal sense.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.pickwickian
+  source_work_key: mnemosyne.en.work.the_pickwick_papers
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: The Pickwick Papers
+  source_author: Charles Dickens
+  source_location: Title / whole work
+  source_url: https://www.gutenberg.org/ebooks/580
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.88.
+- id: en_classical_or_scriptural_allusion_behemoth_77204245
+  language: en
+  canonical_reference: Behemoth
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Behemoth
+  short_explanation: A huge, powerful thing or organisation.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.behemoth
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_leviathan_bb236ad6
+  language: en
+  canonical_reference: Leviathan
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Leviathan
+  short_explanation: Something huge, powerful, or monstrous.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.leviathan
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_jezebel_cbc22edd
+  language: en
+  canonical_reference: Jezebel
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Jezebel
+  short_explanation: A culturally loaded name for a wicked or manipulative woman.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.jezebel
+  source_work_key: mnemosyne.en.work.1_kings
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 1 Kings
+  source_author: King James Version
+  source_location: 1 Kings 16–21
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_as_old_as_methuselah_46e99234
+  language: en
+  canonical_reference: as old as Methuselah
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - as old as Methuselah
+  short_explanation: Extremely old.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.as_old_as_methuselah
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_a_coat_of_many_colours_13567dce
+  language: en
+  canonical_reference: a coat of many colours
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a coat of many colours
+  short_explanation: A distinctive, richly varied garment or symbol of favour.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_coat_of_many_colours
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_literary_reference_humpty_dumpty_dcf6d721
+  language: en
+  canonical_reference: Humpty Dumpty
+  reference_type: literary_reference
+  surface_patterns:
+    - Humpty Dumpty
+  short_explanation: A fragile figure after an irreversible fall.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.humpty_dumpty
+  source_work_key: mnemosyne.en.work.alice_books_and_poems
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Through the Looking-Glass
+  source_author: Lewis Carroll
+  source_location: Chapter 6
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_literary_reference_mad_hatter_f0b47ab9
+  language: en
+  canonical_reference: Mad Hatter
+  reference_type: literary_reference
+  surface_patterns:
+    - Mad Hatter
+  short_explanation: An eccentric or irrational person.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.mad_hatter
+  source_work_key: mnemosyne.en.work.alice_books_and_poems
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 7
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
