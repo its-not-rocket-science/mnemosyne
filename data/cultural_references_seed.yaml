@@ -14894,3 +14894,667 @@
   source_dataset: en_bunyan_phrases
   notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
     added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_vaulting_ambition_b712c32c
+  language: en
+  canonical_reference: vaulting ambition
+  reference_type: literary_reference
+  surface_patterns:
+    - vaulting ambition
+  short_explanation: Excessive ambition that may cause downfall.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.vaulting_ambition
+  source_work_key: mnemosyne.en.work.macbeth
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act I Scene 7
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_seen_better_days_8b104403
+  language: en
+  canonical_reference: seen better days
+  reference_type: literary_reference
+  surface_patterns:
+    - we have seen better days
+  short_explanation: Now shabby or diminished from former quality.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.seen_better_days
+  source_work_key: mnemosyne.en.work.as_you_like_it
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: As You Like It
+  source_author: William Shakespeare
+  source_location: Act II Scene 7
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.82.
+- id: en_literary_reference_wear_my_heart_upon_my_sleeve_6163204b
+  language: en
+  canonical_reference: wear my heart upon my sleeve
+  reference_type: literary_reference
+  surface_patterns:
+    - wear my heart upon my sleeve
+  short_explanation: Show emotions openly.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - wear one's heart on one's sleeve
+    - wear your heart on your sleeve
+    - wear his heart on his sleeve
+    - wear her heart on her sleeve
+    - wear my heart on my sleeve
+    - wearing your heart on your sleeve
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.wear_my_heart_upon_my_sleeve
+  source_work_key: mnemosyne.en.work.othello
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Othello
+  source_author: William Shakespeare
+  source_location: Act I Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_what_s_done_is_done_44927f8c
+  language: en
+  canonical_reference: what’s done is done
+  reference_type: literary_reference
+  surface_patterns:
+    - what’s done is done
+  short_explanation: The past cannot be changed.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - what's done is done
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.what_s_done_is_done
+  source_work_key: mnemosyne.en.work.macbeth
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act III Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_put_money_in_thy_purse_5ccf557f
+  language: en
+  canonical_reference: put money in thy purse
+  reference_type: literary_reference
+  surface_patterns:
+    - put money in thy purse
+  short_explanation: A repeated urging to gather resources.
+  learner_level: C2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - put money in your purse
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.put_money_in_thy_purse
+  source_work_key: mnemosyne.en.work.othello
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Othello
+  source_author: William Shakespeare
+  source_location: Act I Scene 3
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_stand_not_upon_the_order_of_your_going_f50b7f8d
+  language: en
+  canonical_reference: stand not upon the order of your going
+  reference_type: literary_reference
+  surface_patterns:
+    - stand not upon the order of your going
+  short_explanation: Do not delay with formalities.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - stand upon ceremony
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.stand_not_upon_the_order_of_your_going
+  source_work_key: mnemosyne.en.work.macbeth
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act III Scene 4
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_sound_and_fury_bcaac383
+  language: en
+  canonical_reference: sound and fury
+  reference_type: literary_reference
+  surface_patterns:
+    - sound and fury
+  short_explanation: Loud activity with little meaning.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - sound & fury
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.sound_and_fury
+  source_work_key: mnemosyne.en.work.macbeth
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act V Scene 5
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_winter_of_our_discontent_f2219a4c
+  language: en
+  canonical_reference: winter of our discontent
+  reference_type: literary_reference
+  surface_patterns:
+    - the winter of our discontent
+  short_explanation: A period of misery or grievance.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - winter of our discontent
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.winter_of_our_discontent
+  source_work_key: mnemosyne.en.work.richard_iii
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Richard III
+  source_author: William Shakespeare
+  source_location: Act I Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_classical_or_scriptural_allusion_eurydice_af4a5ef5
+  language: en
+  canonical_reference: Eurydice
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Eurydice
+  short_explanation: A beloved lost to the underworld.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.eurydice
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_gorgon_5ff48e01
+  language: en
+  canonical_reference: gorgon
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - gorgon
+  short_explanation: A frightening or repellent woman or monster.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.gorgon
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_hades_ea598d9f
+  language: en
+  canonical_reference: Hades
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Hades
+  short_explanation: The underworld or a hellish place.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.hades
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_hector_31e43d91
+  language: en
+  canonical_reference: Hector
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Hector
+  short_explanation: A noble but doomed defender.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.hector
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_proverb_tradition_the_ass_in_the_lion_s_skin_4fb6ac21
+  language: en
+  canonical_reference: the ass in the lion’s skin
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the ass in the lion’s skin
+  short_explanation: Disguise cannot hide true nature for long.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: proverbial
+  variants:
+    - ass in the lion's skin
+    - the ass in the lion's skin
+    - ass in the lion’s skin
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_ass_in_the_lion_s_skin
+  source_work_key: mnemosyne.en.work.the_ass_in_the_lion_s_skin
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Ass in the Lion’s Skin
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_aesop_s_fox_7542721c
+  language: en
+  canonical_reference: Aesop’s fox
+  reference_type: proverb_tradition
+  surface_patterns:
+    - aesop’s fox
+  short_explanation: Someone who excuses failure by belittling the prize.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: proverbial
+  variants:
+    - Aesop's fox
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.aesop_s_fox
+  source_work_key: mnemosyne.en.work.the_fox_and_the_grapes
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Fox and the Grapes
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.78.
+- id: en_proverb_tradition_the_shepherd_boy_and_the_wolf_67833384
+  language: en
+  canonical_reference: the shepherd boy and the wolf
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the shepherd boy and the wolf
+  short_explanation: Repeated lies destroy trust.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: proverbial
+  variants:
+    - shepherd boy and the wolf
+    - the shepherd boy & the wolf
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_shepherd_boy_and_the_wolf
+  source_work_key: mnemosyne.en.work.aesop_s_fables_fable_tradition
+  source_author_key: mnemosyne.en.author.aesop_fable_tradition
+  source_work: Aesop’s Fables / fable tradition
+  source_author: Aesop / fable tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_proverb_tradition_the_sick_lion_c17e8ef3
+  language: en
+  canonical_reference: the sick lion
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the sick lion
+  short_explanation: Predators may lure victims with false weakness.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: proverbial
+  variants:
+    - sick lion
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_sick_lion
+  source_work_key: mnemosyne.en.work.aesop_s_fables_fable_tradition
+  source_author_key: mnemosyne.en.author.aesop_fable_tradition
+  source_work: Aesop’s Fables / fable tradition
+  source_author: Aesop / fable tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_classical_or_scriptural_allusion_new_wine_in_old_bottles_0a59d247
+  language: en
+  canonical_reference: new wine in old bottles
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - new wine in old bottles
+  short_explanation: New ideas forced into unsuitable old forms.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.new_wine_in_old_bottles
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_land_of_milk_and_honey_2444de73
+  language: en
+  canonical_reference: land of milk and honey
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - land of milk and honey
+  short_explanation: A promised place of abundance and prosperity.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - land of milk & honey
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.land_of_milk_and_honey
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_literary_reference_noble_savage_983c15b8
+  language: en
+  canonical_reference: noble savage
+  reference_type: literary_reference
+  surface_patterns:
+    - noble savage
+  short_explanation: An idealised natural human outside civilisation.
+  learner_level: C1
+  confidence: 0.7
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.pope_phrases.noble_savage
+  source_work_key: mnemosyne.en.work.an_essay_on_man
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Man
+  source_author: Alexander Pope
+  source_location: Epistle 1
+  source_url: https://en.wikisource.org/wiki/An_Essay_on_Man
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable
+    public-domain reference for review.
+- id: en_literary_reference_christian_s_burden_205d4e6a
+  language: en
+  canonical_reference: Christian’s burden
+  reference_type: literary_reference
+  surface_patterns:
+    - Christian’s burden
+  short_explanation: A symbolic load of guilt or sin.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - Christian's burden
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.christian_s_burden
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part I
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_carker_s_teeth_ef55205c
+  language: en
+  canonical_reference: Carker’s teeth
+  reference_type: literary_reference
+  surface_patterns:
+    - Carker’s teeth
+  short_explanation: A sinister smile or predatory politeness.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - Carker's teeth
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.carker_s_teeth
+  source_work_key: mnemosyne.en.work.novels_and_christmas_books
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Novels and Christmas books
+  source_author: Charles Dickens
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_cultural_reference_two_legs_bad_four_legs_good_c714d2a1
+  language: en
+  canonical_reference: two legs bad, four legs good
+  reference_type: cultural_reference
+  surface_patterns:
+    - two legs bad, four legs good
+  short_explanation: A simplified political slogan.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.two_legs_bad_four_legs_good
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four_and_animal_farm
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Animal Farm
+  source_author: George Orwell
+  source_location: Chapter 3
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Short common-use term or phrase; no extended Orwell source text is included.; Rights basis:
+    common_usage_short_expression; short common-use term or phrase only, not extended source text.'
+- id: en_literary_reference_tangled_web_689890c2
+  language: en
+  canonical_reference: tangled web
+  reference_type: literary_reference
+  surface_patterns:
+    - tangled web
+  short_explanation: A complicated mess produced by deception.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.tangled_web
+  source_work_key: mnemosyne.en.work.waverley_novels_and_poems
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: Waverley novels and poems
+  source_author: Walter Scott
+  source_url: https://www.gutenberg.org/ebooks/82
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_lock_stock_and_barrel_0449a22e
+  language: en
+  canonical_reference: lock, stock and barrel
+  reference_type: literary_reference
+  surface_patterns:
+    - lock, stock and barrel
+  short_explanation: Everything; the whole lot.
+  learner_level: B2
+  confidence: 0.6
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - lock, stock & barrel
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.lock_stock_and_barrel
+  source_work_key: mnemosyne.en.work.scott_related_attribution_uncertain
+  source_author_key: mnemosyne.en.author.walter_scott_tradition
+  source_work: Scott-related attribution uncertain
+  source_author: Walter Scott tradition
+  source_url: https://www.gutenberg.org/ebooks/82
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Scott-related expression; attribution should be reviewed cautiously.
+- id: en_literary_reference_all_good_things_must_come_to_an_end_e47ef42b
+  language: en
+  canonical_reference: all good things must come to an end
+  reference_type: literary_reference
+  surface_patterns:
+    - all good things must come to an end
+  short_explanation: Pleasant experiences cannot last forever.
+  learner_level: B2
+  confidence: 0.62
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.all_good_things_must_come_to_an_end
+  source_work_key: mnemosyne.en.work.troilus_and_criseyde
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: Troilus and Criseyde
+  source_author: Geoffrey Chaucer
+  source_url: https://www.gutenberg.org/ebooks/257
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added
+    by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_better_late_than_never_53516f9b
+  language: en
+  canonical_reference: better late than never
+  reference_type: literary_reference
+  surface_patterns:
+    - better late than never
+  short_explanation: Doing something late is better than not doing it.
+  learner_level: B1
+  confidence: 0.6
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.better_late_than_never
+  source_work_key: mnemosyne.en.work.the_canterbury_tales
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer_tradition
+  source_work: The Canterbury Tales
+  source_author: Geoffrey Chaucer tradition
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added
+    by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_time_and_tide_wait_for_no_man_26667720
+  language: en
+  canonical_reference: time and tide wait for no man
+  reference_type: literary_reference
+  surface_patterns:
+    - time and tide wait for no man
+  short_explanation: Time passes regardless of human plans.
+  learner_level: B2
+  confidence: 0.6
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - time & tide wait for no man
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.time_and_tide_wait_for_no_man
+  source_work_key: mnemosyne.en.work.proverb_tradition_chaucerian_era
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer_tradition
+  source_work: Proverb tradition; Chaucerian era
+  source_author: Geoffrey Chaucer tradition
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Chaucer-related attribution should be reviewed; some forms are modernised.
