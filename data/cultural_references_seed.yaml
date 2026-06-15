@@ -4710,3 +4710,619 @@
   notes: Bunyan phrase; some overlap with Biblical tradition.; Source URL added by v3 normalisation as
     a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
     cap; previous confidence 0.90.
+- id: en_literary_reference_cry_havoc_317dcfcf
+  language: en
+  canonical_reference: cry havoc
+  reference_type: literary_reference
+  surface_patterns:
+    - cry havoc
+  short_explanation: Unleash chaos or violence.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.cry_havoc
+  source_work_key: mnemosyne.en.work.julius_caesar
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Julius Caesar
+  source_author: William Shakespeare
+  source_location: Act III Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_double_double_toil_and_trouble_c70c525e
+  language: en
+  canonical_reference: double, double toil and trouble
+  reference_type: literary_reference
+  surface_patterns:
+    - double, double toil and trouble
+  short_explanation: A formula for brewing trouble or chaos.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - toil and trouble
+    - double, double toil & trouble
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.double_double_toil_and_trouble
+  source_work_key: mnemosyne.en.work.macbeth
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act IV Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_et_tu_brute_786cadf0
+  language: en
+  canonical_reference: et tu, Brute
+  reference_type: literary_reference
+  surface_patterns:
+    - et tu, Brute
+  short_explanation: A cry of betrayal by a trusted person.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.et_tu_brute
+  source_work_key: mnemosyne.en.work.julius_caesar
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Julius Caesar
+  source_author: William Shakespeare
+  source_location: Act III Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_dogs_of_war_ea752b5d
+  language: en
+  canonical_reference: dogs of war
+  reference_type: literary_reference
+  surface_patterns:
+    - the dogs of war
+  short_explanation: The destructive forces of war.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - dogs of war
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.dogs_of_war
+  source_work_key: mnemosyne.en.work.julius_caesar
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Julius Caesar
+  source_author: William Shakespeare
+  source_location: Act III Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_eat_out_of_house_and_home_5a1b3420
+  language: en
+  canonical_reference: eat out of house and home
+  reference_type: literary_reference
+  surface_patterns:
+    - eat me out of house and home
+  short_explanation: Consume someone’s food or resources extravagantly.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - eat out of house & home
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.eat_out_of_house_and_home
+  source_work_key: mnemosyne.en.work.henry_iv_part_2
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Henry IV, Part 2
+  source_author: William Shakespeare
+  source_location: Act II Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_cultural_reference_frabjous_day_8e9f2534
+  language: en
+  canonical_reference: frabjous day
+  reference_type: cultural_reference
+  surface_patterns:
+    - frabjous day
+  short_explanation: A wonderfully joyous day, in playful nonsense diction.
+  learner_level: C1
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.frabjous_day
+  source_work_key: mnemosyne.en.work.through_the_looking_glass
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Through the Looking-Glass
+  source_author: Lewis Carroll
+  source_location: Jabberwocky
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_alice_in_wonderland_188df886
+  language: en
+  canonical_reference: Alice in Wonderland
+  reference_type: cultural_reference
+  surface_patterns:
+    - Alice in Wonderland
+  short_explanation: A bewildered person in a strange world.
+  learner_level: B2
+  confidence: 0.86
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.alice_in_wonderland
+  source_work_key: mnemosyne.en.work.alice_s_adventures_in_wonderland
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_white_rabbit_9f0d3451
+  language: en
+  canonical_reference: White Rabbit
+  reference_type: cultural_reference
+  surface_patterns:
+    - white rabbit
+  short_explanation: A guide or trigger leading into strangeness.
+  learner_level: B2
+  confidence: 0.86
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.white_rabbit
+  source_work_key: mnemosyne.en.work.alice_s_adventures_in_wonderland
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 1
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_the_time_has_come_the_walrus_said_f3eb7d15
+  language: en
+  canonical_reference: the time has come, the Walrus said
+  reference_type: cultural_reference
+  surface_patterns:
+    - the time has come, the Walrus said
+  short_explanation: A playful opening to an announcement or task.
+  learner_level: C1
+  confidence: 0.86
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - the time has come
+    - time has come, the Walrus said
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.the_time_has_come_the_walrus_said
+  source_work_key: mnemosyne.en.work.through_the_looking_glass
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Through the Looking-Glass
+  source_author: Lewis Carroll
+  source_location: Chapter 4
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_literary_reference_fit_audience_though_few_bfe3b5c4
+  language: en
+  canonical_reference: fit audience though few
+  reference_type: literary_reference
+  surface_patterns:
+    - fit audience though few
+  short_explanation: A small but discerning audience.
+  learner_level: C1
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.fit_audience_though_few
+  source_work_key: mnemosyne.en.work.paradise_lost
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book 7
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.
+- id: en_literary_reference_all_hell_broke_loose_9f4ad81b
+  language: en
+  canonical_reference: all Hell broke loose
+  reference_type: literary_reference
+  surface_patterns:
+    - all Hell broke loose
+  short_explanation: Complete chaos suddenly erupted.
+  learner_level: B2
+  confidence: 0.82
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - all hell breaks loose
+  explanation_key: mnemosyne.en.explanation.milton_phrases.all_hell_broke_loose
+  source_work_key: mnemosyne.en.work.paradise_lost
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book 4
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.
+- id: en_literary_reference_they_also_serve_who_only_stand_and_wait_2995c85c
+  language: en
+  canonical_reference: they also serve who only stand and wait
+  reference_type: literary_reference
+  surface_patterns:
+    - they also serve who only stand and wait
+  short_explanation: Passive endurance can still be meaningful service.
+  learner_level: C1
+  confidence: 0.8
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - they also serve who stand and wait
+    - they also serve who only stand & wait
+  explanation_key: mnemosyne.en.explanation.milton_phrases.they_also_serve_who_only_stand_and_wait
+  source_work_key: mnemosyne.en.work.sonnet_19
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Sonnet 19 / On His Blindness
+  source_author: John Milton
+  source_location: Final line
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_go_the_extra_mile_a306a71e
+  language: en
+  canonical_reference: go the extra mile
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - go the extra mile
+  short_explanation: Do more than is required.
+  learner_level: B1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - second mile
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.go_the_extra_mile
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 5:41
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_how_the_mighty_are_fallen_b9633859
+  language: en
+  canonical_reference: how the mighty are fallen
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - how the mighty are fallen
+  short_explanation: A once-powerful person or thing has declined.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - the mighty are fallen
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.how_the_mighty_are_fallen
+  source_work_key: mnemosyne.en.work.2_samuel
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 2 Samuel
+  source_author: King James Version
+  source_location: 2 Samuel 1:19
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_kill_the_fatted_calf_45d237e6
+  language: en
+  canonical_reference: kill the fatted calf
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - kill the fatted calf
+  short_explanation: Celebrate someone’s return lavishly.
+  learner_level: C1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.kill_the_fatted_calf
+  source_work_key: mnemosyne.en.work.gospel_of_luke
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Luke
+  source_author: King James Version
+  source_location: Luke 15:23
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_labour_of_love_b9ee2f46
+  language: en
+  canonical_reference: labour of love
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - labour of love
+  short_explanation: Work done for affection, not reward.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - labor of love
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.labour_of_love
+  source_work_key: mnemosyne.en.work.1_thessalonians
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 1 Thessalonians
+  source_author: King James Version
+  source_location: 1 Thessalonians 1:3
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_many_are_called_but_few_are_chosen_8738d630
+  language: en
+  canonical_reference: many are called, but few are chosen
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - many are called, but few are chosen
+  short_explanation: Many have the chance, but few succeed or qualify.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.many_are_called_but_few_are_chosen
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 22:14
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_physician_heal_thyself_80b5224d
+  language: en
+  canonical_reference: physician, heal thyself
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - physician, heal thyself
+  short_explanation: Fix your own faults before advising others.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.physician_heal_thyself
+  source_work_key: mnemosyne.en.work.gospel_of_luke
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Luke
+  source_author: King James Version
+  source_location: Luke 4:23
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_proverb_tradition_belling_the_cat_72cf37a8
+  language: en
+  canonical_reference: belling the cat
+  reference_type: proverb_tradition
+  surface_patterns:
+    - belling the cat
+  short_explanation: A good plan may fail because no one dares execute it.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.belling_the_cat
+  source_work_key: mnemosyne.en.work.belling_the_cat
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: Belling the Cat
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_bundle_of_sticks_f4d0fe3d
+  language: en
+  canonical_reference: bundle of sticks
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the bundle of sticks
+  short_explanation: Unity makes people stronger than isolation.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - bundle of sticks
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.bundle_of_sticks
+  source_work_key: mnemosyne.en.work.the_bundle_of_sticks
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Bundle of Sticks
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_dog_in_the_manger_86676ca4
+  language: en
+  canonical_reference: dog in the manger
+  reference_type: proverb_tradition
+  surface_patterns:
+    - dog in the manger
+  short_explanation: Someone who prevents others enjoying what they cannot use.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.dog_in_the_manger
+  source_work_key: mnemosyne.en.work.the_dog_in_the_manger
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Dog in the Manger
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_cultural_reference_bleak_house_ff0eed17
+  language: en
+  canonical_reference: Bleak House
+  reference_type: cultural_reference
+  surface_patterns:
+    - Bleak House
+  short_explanation: A phrase for institutional gloom or legal frustration.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.bleak_house
+  source_work_key: mnemosyne.en.work.bleak_house
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Bleak House
+  source_author: Charles Dickens
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/1023
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_cultural_reference_gradgrind_1278ea88
+  language: en
+  canonical_reference: Gradgrind
+  reference_type: cultural_reference
+  surface_patterns:
+    - Gradgrind
+  short_explanation: A person obsessed with facts and utility.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.gradgrind
+  source_work_key: mnemosyne.en.work.hard_times
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Hard Times
+  source_author: Charles Dickens
+  source_location: Thomas Gradgrind
+  source_url: https://www.gutenberg.org/ebooks/786
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_homeric_laughter_72f457f6
+  language: en
+  canonical_reference: Homeric laughter
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Homeric laughter
+  short_explanation: Loud, unrestrained laughter.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.homeric_laughter
+  source_work_key: mnemosyne.en.work.iliad
+  source_author_key: mnemosyne.en.author.homer
+  source_work: Iliad
+  source_author: Homer
+  source_location: Book 1
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.86.
+- id: en_classical_or_scriptural_allusion_augean_stables_5f090af5
+  language: en
+  canonical_reference: Augean stables
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the Augean stables
+  short_explanation: A huge accumulated mess needing cleansing.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - clean the Augean stables
+    - Augean stables
+  explanation_key: mnemosyne.en.explanation.classical_allusions.augean_stables
+  source_work_key: mnemosyne.en.work.heracles_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Heracles myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: 'Classical allusion; English surface form is later conventional usage. Expanded Mnemosyne candidate;
+    source attribution and wording should be reviewed. Needs source-location review. Merged duplicate/overlapping
+    draft rows. Provenance candidates: en_classical_allusions / Heracles myth / Classical tradition; en_classical_allusions
+    / Classical Greek and Roman literature / myth / Classical tradition.; Confidence revised in v3 using
+    provenance/attribution cap; previous confidence 0.88.'
