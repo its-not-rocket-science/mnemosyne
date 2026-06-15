@@ -239,6 +239,32 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_achilles_and_the_tortoise_d2bf6b76",
+      "canonical_reference": "Achilles and the tortoise",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.achilles_and_the_tortoise",
+      "id": "en_classical_or_scriptural_allusion_achilles_and_the_tortoise_d2bf6b76",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.86.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A paradox about motion and infinite division.",
+      "source_author": "Zeno of Elea",
+      "source_author_key": "mnemosyne.en.author.zeno_of_elea",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Zeno’s paradoxes",
+      "source_work_key": "mnemosyne.en.work.zeno_s_paradoxes",
+      "surface_patterns": [
+        "Achilles and the tortoise",
+        "Achilles & the tortoise"
+      ],
+      "variants": [
+        "Achilles & the tortoise"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_an_eye_for_an_eye_70ed3c1f",
       "canonical_reference": "an eye for an eye",
       "confidence": 0.84,
@@ -682,6 +708,28 @@
       ],
       "variants": [
         "eat, drink, & be merry"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_electra_complex_b54eb71d",
+      "canonical_reference": "Electra complex",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.electra_complex",
+      "id": "en_classical_or_scriptural_allusion_electra_complex_b54eb71d",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A psychoanalytic term based on the Electra myth.",
+      "source_author": "Sophocles and later tradition",
+      "source_author_key": "mnemosyne.en.author.sophocles_and_later_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Electra myth",
+      "source_work_key": "mnemosyne.en.work.electra_myth",
+      "surface_patterns": [
+        "Electra complex"
       ]
     },
     {
@@ -1378,6 +1426,58 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_still_small_voice_86499ce3",
+      "canonical_reference": "still small voice",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.still_small_voice",
+      "id": "en_classical_or_scriptural_allusion_still_small_voice_86499ce3",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A quiet inner prompting or conscience.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "1 Kings 19:12",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "1 Kings",
+      "source_work_key": "mnemosyne.en.work.1_kings",
+      "surface_patterns": [
+        "the still small voice",
+        "still small voice"
+      ],
+      "variants": [
+        "still small voice"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_suffer_fools_gladly_3f5b20f0",
+      "canonical_reference": "suffer fools gladly",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.suffer_fools_gladly",
+      "id": "en_classical_or_scriptural_allusion_suffer_fools_gladly_3f5b20f0",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Tolerate foolish people patiently or ironically.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "2 Corinthians 11:19",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "2 Corinthians",
+      "source_work_key": "mnemosyne.en.work.2_corinthians",
+      "surface_patterns": [
+        "suffer fools gladly"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_blind_leading_the_blind_6db49b03",
       "canonical_reference": "the blind leading the blind",
       "confidence": 0.84,
@@ -1462,6 +1562,62 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_land_of_the_living_72f1358a",
+      "canonical_reference": "the land of the living",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.the_land_of_the_living",
+      "id": "en_classical_or_scriptural_allusion_the_land_of_the_living_72f1358a",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "The world of people still alive.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Job 28:13; Psalm 27:13",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Job; Psalms",
+      "source_work_key": "mnemosyne.en.work.job_psalms",
+      "surface_patterns": [
+        "the land of the living",
+        "land of the living"
+      ],
+      "variants": [
+        "land of the living"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_last_shall_be_first_e81964bc",
+      "canonical_reference": "the last shall be first",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.the_last_shall_be_first",
+      "id": "en_classical_or_scriptural_allusion_the_last_shall_be_first_e81964bc",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Lowly people may be exalted above the powerful.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 20:16",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Matthew",
+      "source_work_key": "mnemosyne.en.work.gospel_of_matthew",
+      "surface_patterns": [
+        "the last shall be first",
+        "last shall be first"
+      ],
+      "variants": [
+        "last shall be first"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_meek_shall_inherit_the_earth_7e296f2e",
       "canonical_reference": "the meek shall inherit the earth",
       "confidence": 0.84,
@@ -1487,6 +1643,36 @@
       ],
       "variants": [
         "meek shall inherit the earth"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_patience_of_job_f51cb75d",
+      "canonical_reference": "the patience of Job",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.the_patience_of_job",
+      "id": "en_classical_or_scriptural_allusion_the_patience_of_job_f51cb75d",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Extreme endurance under suffering.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "James 5:11",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Job; James",
+      "source_work_key": "mnemosyne.en.work.job_james",
+      "surface_patterns": [
+        "the patience of Job",
+        "Job-like patience",
+        "patience of Job"
+      ],
+      "variants": [
+        "Job-like patience",
+        "patience of Job"
       ]
     },
     {
@@ -1663,6 +1849,36 @@
       ],
       "variants": [
         "wages of sin"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_writing_is_on_the_wall_a0aef6d6",
+      "canonical_reference": "the writing is on the wall",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.the_writing_is_on_the_wall",
+      "id": "en_classical_or_scriptural_allusion_the_writing_is_on_the_wall_a0aef6d6",
+      "language": "en",
+      "learner_level": "B1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Failure or danger is clearly approaching.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Daniel 5",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Daniel",
+      "source_work_key": "mnemosyne.en.work.daniel",
+      "surface_patterns": [
+        "the writing is on the wall",
+        "the handwriting is on the wall",
+        "writing is on the wall"
+      ],
+      "variants": [
+        "the handwriting is on the wall",
+        "writing is on the wall"
       ]
     },
     {
@@ -2467,6 +2683,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_micawber_ee545507",
+      "canonical_reference": "Micawber",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.micawber",
+      "id": "en_cultural_reference_micawber_ee545507",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "An optimistic debtor expecting luck to turn.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Wilkins Micawber",
+      "source_url": "https://www.gutenberg.org/ebooks/766",
+      "source_work": "David Copperfield",
+      "source_work_key": "mnemosyne.en.work.david_copperfield",
+      "surface_patterns": [
+        "Micawber"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_ministry_of_love_662a451f",
       "canonical_reference": "Ministry of Love",
       "confidence": 0.78,
@@ -2831,6 +3071,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_uriah_heep_6aa31ae5",
+      "canonical_reference": "Uriah Heep",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.uriah_heep",
+      "id": "en_cultural_reference_uriah_heep_6aa31ae5",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "An oily, falsely humble hypocrite.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Uriah Heep",
+      "source_url": "https://www.gutenberg.org/ebooks/766",
+      "source_work": "David Copperfield",
+      "source_work_key": "mnemosyne.en.work.david_copperfield",
+      "surface_patterns": [
+        "Uriah Heep"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_walrus_and_the_carpenter_b2f827af",
       "canonical_reference": "Walrus and the Carpenter",
       "confidence": 0.88,
@@ -3000,6 +3264,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_abashed_the_devil_stood_3f1f6c6a",
+      "canonical_reference": "abashed the devil stood",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.abashed_the_devil_stood",
+      "id": "en_literary_reference_abashed_the_devil_stood_3f1f6c6a",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "Miltonic phrase; modern usage may be allusive rather than idiomatic.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Even evil may be checked by goodness.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 4",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Lost",
+      "source_work_key": "mnemosyne.en.work.paradise_lost",
+      "surface_patterns": [
+        "abashed the devil stood"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_alas_poor_yorick_67cc4754",
       "canonical_reference": "alas, poor Yorick",
       "confidence": 0.78,
@@ -3081,6 +3369,29 @@
       ],
       "variants": [
         "all that glisters is not gold"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_april_showers_622b9295",
+      "canonical_reference": "April showers",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.chaucer_phrases.april_showers",
+      "id": "en_literary_reference_april_showers_622b9295",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Spring rain associated with renewal.",
+      "source_author": "Geoffrey Chaucer",
+      "source_author_key": "mnemosyne.en.author.geoffrey_chaucer",
+      "source_dataset": "en_chaucer_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/2383",
+      "source_work": "The Canterbury Tales and works",
+      "source_work_key": "mnemosyne.en.work.the_canterbury_tales_and_works",
+      "surface_patterns": [
+        "April showers"
       ]
     },
     {
@@ -3730,6 +4041,110 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_foul_play_0dfcc611",
+      "canonical_reference": "foul play",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.foul_play",
+      "id": "en_literary_reference_foul_play_0dfcc611",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Criminal, unfair, or treacherous behaviour.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Tempest",
+      "source_work_key": "mnemosyne.en.work.the_tempest",
+      "surface_patterns": [
+        "foul play"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_full_of_sound_and_fury_35d1eded",
+      "canonical_reference": "full of sound and fury",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.full_of_sound_and_fury",
+      "id": "en_literary_reference_full_of_sound_and_fury_35d1eded",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Noisy and dramatic but ultimately empty.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act V Scene 5",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Macbeth",
+      "source_work_key": "mnemosyne.en.work.macbeth",
+      "surface_patterns": [
+        "full of sound and fury",
+        "full of sound & fury"
+      ],
+      "variants": [
+        "full of sound & fury"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_give_the_devil_his_due_17b8148a",
+      "canonical_reference": "give the devil his due",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.give_the_devil_his_due",
+      "id": "en_literary_reference_give_the_devil_his_due_17b8148a",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.80.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Acknowledge merit even in a disliked person.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Henry IV, Part 1",
+      "source_work_key": "mnemosyne.en.work.henry_iv_part_1",
+      "surface_patterns": [
+        "give the devil his due"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_gladly_would_he_learn_and_gladly_teach_a81e1518",
+      "canonical_reference": "gladly would he learn and gladly teach",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.chaucer_phrases.gladly_would_he_learn_and_gladly_teach",
+      "id": "en_literary_reference_gladly_would_he_learn_and_gladly_teach_a81e1518",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A model of eager learning and teaching.",
+      "source_author": "Geoffrey Chaucer",
+      "source_author_key": "mnemosyne.en.author.geoffrey_chaucer",
+      "source_dataset": "en_chaucer_phrases",
+      "source_license": "public_domain",
+      "source_location": "General Prologue",
+      "source_url": "https://www.gutenberg.org/ebooks/2383",
+      "source_work": "The Canterbury Tales",
+      "source_work_key": "mnemosyne.en.work.the_canterbury_tales",
+      "surface_patterns": [
+        "gladly would he learn and gladly teach",
+        "gladly would he learn & gladly teach"
+      ],
+      "variants": [
+        "gladly would he learn & gladly teach"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_good_riddance_71a9e997",
       "canonical_reference": "good riddance",
       "confidence": 0.78,
@@ -3854,6 +4269,36 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_hoist_with_his_own_petard_02cf1e3e",
+      "canonical_reference": "hoist with his own petard",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.hoist_with_his_own_petard",
+      "id": "en_literary_reference_hoist_with_his_own_petard_02cf1e3e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Harmed by one’s own trap or scheme.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 4",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.hamlet",
+      "surface_patterns": [
+        "hoist with his own petard",
+        "hoist by his own petard",
+        "hoisted by his own petard"
+      ],
+      "variants": [
+        "hoist by his own petard",
+        "hoisted by his own petard"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_hope_springs_eternal_8a9658f5",
       "canonical_reference": "hope springs eternal",
       "confidence": 0.78,
@@ -3882,6 +4327,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_into_thin_air_250d639d",
+      "canonical_reference": "into thin air",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.into_thin_air",
+      "id": "en_literary_reference_into_thin_air_250d639d",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Completely disappeared.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act IV Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Tempest",
+      "source_work_key": "mnemosyne.en.work.the_tempest",
+      "surface_patterns": [
+        "into thin air",
+        "vanished into thin air"
+      ],
+      "variants": [
+        "vanished into thin air"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_justify_the_ways_of_god_to_men_47244ae6",
       "canonical_reference": "justify the ways of God to men",
       "confidence": 0.9,
@@ -3903,6 +4376,92 @@
       "source_work_key": "mnemosyne.en.work.paradise_lost",
       "surface_patterns": [
         "justify the ways of God to men"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_lend_me_your_ears_7a061d86",
+      "canonical_reference": "lend me your ears",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.lend_me_your_ears",
+      "id": "en_literary_reference_lend_me_your_ears_7a061d86",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Listen to me; hear what I have to say.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Julius Caesar",
+      "source_work_key": "mnemosyne.en.work.julius_caesar",
+      "surface_patterns": [
+        "lend me your ears",
+        "friends Romans countrymen lend me your ears"
+      ],
+      "variants": [
+        "friends Romans countrymen lend me your ears"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_method_in_the_madness_e4734316",
+      "canonical_reference": "method in the madness",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.method_in_the_madness",
+      "id": "en_literary_reference_method_in_the_madness_e4734316",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Apparent disorder has hidden logic.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.hamlet",
+      "surface_patterns": [
+        "method in the madness",
+        "there is method in his madness",
+        "method to my madness",
+        "method to the madness",
+        "there is method in the madness"
+      ],
+      "variants": [
+        "there is method in his madness",
+        "method to my madness",
+        "method to the madness",
+        "there is method in the madness"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_murder_will_out_e269dc7c",
+      "canonical_reference": "murder will out",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.chaucer_phrases.murder_will_out",
+      "id": "en_literary_reference_murder_will_out_e269dc7c",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Serious wrongdoing is eventually revealed.",
+      "source_author": "Geoffrey Chaucer",
+      "source_author_key": "mnemosyne.en.author.geoffrey_chaucer",
+      "source_dataset": "en_chaucer_phrases",
+      "source_license": "public_domain",
+      "source_location": "The Nun’s Priest’s Tale",
+      "source_url": "https://www.gutenberg.org/ebooks/2383",
+      "source_work": "The Canterbury Tales",
+      "source_work_key": "mnemosyne.en.work.the_canterbury_tales",
+      "surface_patterns": [
+        "murder will out"
       ]
     },
     {
@@ -3951,6 +4510,34 @@
       "source_work_key": "mnemosyne.en.work.paradise_lost",
       "surface_patterns": [
         "paradise lost"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_paradise_within_thee_f66238c4",
+      "canonical_reference": "paradise within thee",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.paradise_within_thee",
+      "id": "en_literary_reference_paradise_within_thee_f66238c4",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Miltonic phrase; modern usage may be allusive rather than idiomatic.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Inner virtue as a source of happiness.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 12",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Lost",
+      "source_work_key": "mnemosyne.en.work.paradise_lost",
+      "surface_patterns": [
+        "the paradise within thee",
+        "paradise within thee"
+      ],
+      "variants": [
+        "paradise within thee"
       ]
     },
     {
@@ -4302,6 +4889,35 @@
       ]
     },
     {
+      "canonical_form": "en:proverb:en_proverb_tradition_belly_and_the_members_9da159fa",
+      "canonical_reference": "belly and the members",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.belly_and_the_members",
+      "id": "en_proverb_tradition_belly_and_the_members_9da159fa",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Parts of a community depend on one another.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Belly and the Members",
+      "source_work_key": "mnemosyne.en.work.the_belly_and_the_members",
+      "surface_patterns": [
+        "the belly and the members",
+        "belly and the members",
+        "belly & the members"
+      ],
+      "variants": [
+        "belly and the members",
+        "belly & the members"
+      ]
+    },
+    {
       "canonical_form": "en:proverb:en_proverb_tradition_bundle_of_sticks_f4d0fe3d",
       "canonical_reference": "bundle of sticks",
       "confidence": 0.76,
@@ -4326,6 +4942,35 @@
       ],
       "variants": [
         "bundle of sticks"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_crow_and_the_pitcher_517ca2d1",
+      "canonical_reference": "crow and the pitcher",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.crow_and_the_pitcher",
+      "id": "en_proverb_tradition_crow_and_the_pitcher_517ca2d1",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Ingenuity solves difficult problems.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Crow and the Pitcher",
+      "source_work_key": "mnemosyne.en.work.the_crow_and_the_pitcher",
+      "surface_patterns": [
+        "the crow and the pitcher",
+        "crow and the pitcher",
+        "crow & the pitcher"
+      ],
+      "variants": [
+        "crow and the pitcher",
+        "crow & the pitcher"
       ]
     },
     {
@@ -4405,6 +5050,35 @@
       "source_work_key": "mnemosyne.en.work.the_dog_in_the_manger",
       "surface_patterns": [
         "dog in the manger"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_fox_and_the_crow_4bb0f7a1",
+      "canonical_reference": "fox and the crow",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.fox_and_the_crow",
+      "id": "en_proverb_tradition_fox_and_the_crow_4bb0f7a1",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Flattery can make people foolish.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Fox and the Crow",
+      "source_work_key": "mnemosyne.en.work.the_fox_and_the_crow",
+      "surface_patterns": [
+        "the fox and the crow",
+        "fox and the crow",
+        "fox & the crow"
+      ],
+      "variants": [
+        "fox and the crow",
+        "fox & the crow"
       ]
     },
     {
