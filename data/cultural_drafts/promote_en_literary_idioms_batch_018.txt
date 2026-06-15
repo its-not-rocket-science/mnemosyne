@@ -1,0 +1,38 @@
+# Reviewed cultural draft entries for promotion batch 018.
+# Shakespeare (0.78, B2-C1)
+quality of mercy
+the lady doth protest too much
+the game is up
+# Classical allusions (0.76, B2-C1)
+Sisyphus task
+Saturnine
+Medea
+# Aesop (0.74, C1)
+the dog and his reflection
+appearances can be deceiving
+# Pope (0.78, C1)
+ruling passion
+man never is but always to be blest
+# KJV (0.78, B2)
+eye for an eye
+fall from grace
+fig leaf
+# Dickens (0.74, C1)
+Mrs Gamp
+Mr Podsnap
+Betsey Trotwood
+# Walter Scott (0.74-0.78, C1-C2)
+Wizard of the North
+Marmion
+# Chaucer (0.74, C1)
+the parfit gentil knight
+# Bunyan (0.78, C2)
+Delectable Mountains
+# Orwell (0.74, C1)
+thought police
+Ministry of Peace
+Squealer
+# Carroll (0.74, C1)
+callooh callay
+# Milton (0.74, C1)
+Lycidas
