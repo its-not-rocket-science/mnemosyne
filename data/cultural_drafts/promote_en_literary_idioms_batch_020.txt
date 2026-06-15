@@ -1,0 +1,37 @@
+# Reviewed cultural draft entries for promotion batch 020.
+# Shakespeare (0.78, C1)
+the slings and arrows
+# Classical allusions (0.76, B2-C1)
+face that launched a thousand ships
+golden age
+golden fleece
+apple of discord
+# Aesop (0.74, C1)
+the fox and the mask
+the bat, the birds and the beasts
+# Pope (0.74-0.78, C1-C2)
+who breaks a butterfly upon a wheel
+a little learning
+what oft was thought, but ne’er so well expressed
+# KJV (0.78, B2-C1)
+in the beginning
+Jonah
+# Dickens (0.74, C1)
+Mr Dick
+Mr Murdstone
+Chancery fog
+Podsnappery
+# Walter Scott (0.72-0.74, B2-C1)
+caught red-handed
+Young Lochinvar
+# Swift (0.74-0.78, C1-C2)
+projector
+Laputa
+# Carroll (0.74, C1)
+Jubjub bird
+# Milton (0.74, C1)
+blind mouths
+Satanic pride
+# Orwell (0.74, C1)
+boot on the face
+Ministry of Plenty

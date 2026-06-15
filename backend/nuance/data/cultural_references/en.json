@@ -501,6 +501,32 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_apple_of_discord_f3116f02",
+      "canonical_reference": "apple of discord",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.apple_of_discord",
+      "id": "en_classical_or_scriptural_allusion_apple_of_discord_f3116f02",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A small cause of a major dispute.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Judgement of Paris myth",
+      "source_work_key": "mnemosyne.en.work.judgement_of_paris_myth",
+      "surface_patterns": [
+        "the apple of discord",
+        "apple of discord"
+      ],
+      "variants": [
+        "apple of discord"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_apple_of_his_eye_60487f49",
       "canonical_reference": "apple of his eye",
       "confidence": 0.84,
@@ -1256,6 +1282,32 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_face_that_launched_a_thousand_ships_7da6d412",
+      "canonical_reference": "face that launched a thousand ships",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.face_that_launched_a_thousand_ships",
+      "id": "en_classical_or_scriptural_allusion_face_that_launched_a_thousand_ships_7da6d412",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage. Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review. Merged duplicate/overlapping draft rows. Provenance candidates: en_classical_allusions / Faust and Helen tradition / Christopher Marlowe; classical myth; en_classical_allusions / Classical Greek and Roman literature / myth / Classical tradition.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.78.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Extraordinary beauty causing great conflict.",
+      "source_author": "Christopher Marlowe; classical myth",
+      "source_author_key": "mnemosyne.en.author.christopher_marlowe_classical_myth",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Faust and Helen tradition",
+      "source_work_key": "mnemosyne.en.work.faust_and_helen_tradition",
+      "surface_patterns": [
+        "the face that launched a thousand ships",
+        "face that launched a thousand ships"
+      ],
+      "variants": [
+        "face that launched a thousand ships"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_fall_from_grace_f88f28f1",
       "canonical_reference": "fall from grace",
       "confidence": 0.78,
@@ -1528,6 +1580,58 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_golden_age_0a69d5f7",
+      "canonical_reference": "golden age",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.golden_age",
+      "id": "en_classical_or_scriptural_allusion_golden_age_0a69d5f7",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "An idealised period of peace and prosperity.",
+      "source_author": "Hesiod",
+      "source_author_key": "mnemosyne.en.author.hesiod",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Works and Days",
+      "source_work_key": "mnemosyne.en.work.works_and_days",
+      "surface_patterns": [
+        "the golden age",
+        "golden age"
+      ],
+      "variants": [
+        "golden age"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_golden_fleece_5eadbabe",
+      "canonical_reference": "golden fleece",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.golden_fleece",
+      "id": "en_classical_or_scriptural_allusion_golden_fleece_5eadbabe",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage. Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review. Merged duplicate/overlapping draft rows. Provenance candidates: en_classical_allusions / Jason and the Argonauts myth / Classical tradition; en_classical_allusions / Classical Greek and Roman literature / myth / Classical tradition.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.86.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A prized object pursued through adventure.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Jason and the Argonauts myth",
+      "source_work_key": "mnemosyne.en.work.jason_and_the_argonauts_myth",
+      "surface_patterns": [
+        "the golden fleece",
+        "golden fleece"
+      ],
+      "variants": [
+        "golden fleece"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_gordian_knot_8353de12",
       "canonical_reference": "Gordian knot",
       "confidence": 0.76,
@@ -1765,6 +1869,29 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_in_the_beginning_2e97a400",
+      "canonical_reference": "in the beginning",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.in_the_beginning",
+      "id": "en_classical_or_scriptural_allusion_in_the_beginning_2e97a400",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A formula for the start of a story or process.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "in the beginning"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_janus_faced_272e38fb",
       "canonical_reference": "Janus-faced",
       "confidence": 0.76,
@@ -1834,6 +1961,30 @@
       "source_work_key": "mnemosyne.en.work.1_kings",
       "surface_patterns": [
         "Jezebel"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_jonah_5e800391",
+      "canonical_reference": "Jonah",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.jonah",
+      "id": "en_classical_or_scriptural_allusion_jonah_5e800391",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Someone associated with bad luck or reluctant duty.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book of Jonah",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Jonah",
+      "source_work_key": "mnemosyne.en.work.jonah",
+      "surface_patterns": [
+        "Jonah"
       ]
     },
     {
@@ -3861,6 +4012,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_boot_on_the_face_608dcecd",
+      "canonical_reference": "boot on the face",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.boot_on_the_face",
+      "id": "en_cultural_reference_boot_on_the_face_608dcecd",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A shorthand image of permanent violent domination.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Part III, Chapter 3",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four_and_animal_farm",
+      "surface_patterns": [
+        "boot on the face"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_boot_stamping_on_a_human_face_0df927f0",
       "canonical_reference": "boot stamping on a human face",
       "confidence": 0.78,
@@ -5069,6 +5244,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_ministry_of_plenty_d03dc34b",
+      "canonical_reference": "Ministry of Plenty",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.ministry_of_plenty",
+      "id": "en_cultural_reference_ministry_of_plenty_d03dc34b",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A euphemistic name associated with scarcity.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Part I, Chapter 1",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four_and_animal_farm",
+      "surface_patterns": [
+        "Ministry of Plenty"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_ministry_of_truth_8796bb73",
       "canonical_reference": "Ministry of Truth",
       "confidence": 0.78,
@@ -5361,6 +5560,29 @@
       ],
       "variants": [
         "I want some more"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_projector_3eb8b8f4",
+      "canonical_reference": "projector",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.swift_phrases.projector",
+      "id": "en_cultural_reference_projector_3eb8b8f4",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A schemer proposing impractical social projects.",
+      "source_author": "Jonathan Swift",
+      "source_author_key": "mnemosyne.en.author.jonathan_swift",
+      "source_dataset": "en_swift_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/829",
+      "source_work": "A Modest Proposal; Gulliver’s Travels",
+      "source_work_key": "mnemosyne.en.work.a_modest_proposal_gulliver_s_travels",
+      "surface_patterns": [
+        "projector"
       ]
     },
     {
@@ -5995,6 +6217,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_a_little_learning_0653aa46",
+      "canonical_reference": "a little learning",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.a_little_learning",
+      "id": "en_literary_reference_a_little_learning_0653aa46",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "formal",
+      "short_explanation": "Shallow knowledge that creates overconfidence.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part II",
+      "source_url": "https://www.gutenberg.org/ebooks/9601",
+      "source_work": "An Essay on Criticism",
+      "source_work_key": "mnemosyne.en.work.poems_and_essays",
+      "surface_patterns": [
+        "a little learning"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_a_little_learning_is_a_dangerous_thing_19019f56",
       "canonical_reference": "a little learning is a dangerous thing",
       "confidence": 0.78,
@@ -6488,6 +6734,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_blind_mouths_006e9489",
+      "canonical_reference": "blind mouths",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.blind_mouths",
+      "id": "en_literary_reference_blind_mouths_006e9489",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Corrupt or negligent clergy or leaders.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Line 119",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Lycidas",
+      "source_work_key": "mnemosyne.en.work.paradise_lost_and_poems",
+      "surface_patterns": [
+        "blind mouths"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_blood_is_thicker_than_water_57c51d13",
       "canonical_reference": "blood is thicker than water",
       "confidence": 0.74,
@@ -6732,6 +7002,33 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_caught_red_handed_ba6fdde0",
+      "canonical_reference": "caught red-handed",
+      "confidence": 0.72,
+      "explanation_key": "mnemosyne.en.explanation.walter_scott_phrases.caught_red_handed",
+      "id": "en_literary_reference_caught_red_handed_ba6fdde0",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Scott-related expression; attribution should be reviewed cautiously.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Caught in the act of wrongdoing.",
+      "source_author": "Walter Scott",
+      "source_author_key": "mnemosyne.en.author.walter_scott",
+      "source_dataset": "en_walter_scott_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/82",
+      "source_work": "Ivanhoe",
+      "source_work_key": "mnemosyne.en.work.ivanhoe",
+      "surface_patterns": [
+        "caught red-handed",
+        "red-handed"
+      ],
+      "variants": [
+        "red-handed"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_celestial_city_c4ff4967",
       "canonical_reference": "celestial city",
       "confidence": 0.78,
@@ -6757,6 +7054,30 @@
       ],
       "variants": [
         "celestial city"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_chancery_fog_deb3ab97",
+      "canonical_reference": "Chancery fog",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.chancery_fog",
+      "id": "en_literary_reference_chancery_fog_deb3ab97",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Obscuring bureaucracy or legal confusion.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 1",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "Bleak House",
+      "source_work_key": "mnemosyne.en.work.novels_and_christmas_books",
+      "surface_patterns": [
+        "Chancery fog"
       ]
     },
     {
@@ -8047,6 +8368,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_jubjub_bird_1608de52",
+      "canonical_reference": "Jubjub bird",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.jubjub_bird",
+      "id": "en_literary_reference_jubjub_bird_1608de52",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A nonsense creature from Carroll.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Jabberwocky",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Through the Looking-Glass / Jabberwocky",
+      "source_work_key": "mnemosyne.en.work.alice_books_and_poems",
+      "surface_patterns": [
+        "Jubjub bird"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_justify_the_ways_of_god_to_men_47244ae6",
       "canonical_reference": "justify the ways of God to men",
       "confidence": 0.9,
@@ -8096,6 +8441,29 @@
       ],
       "variants": [
         "Lady of the Lake"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_laputa_97f9c13e",
+      "canonical_reference": "Laputa",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.swift_phrases.laputa",
+      "id": "en_literary_reference_laputa_97f9c13e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A floating island associated with impractical theorists.",
+      "source_author": "Jonathan Swift",
+      "source_author_key": "mnemosyne.en.author.jonathan_swift",
+      "source_dataset": "en_swift_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/829",
+      "source_work": "Gulliver’s Travels and satire",
+      "source_work_key": "mnemosyne.en.work.gulliver_s_travels_and_satire",
+      "surface_patterns": [
+        "Laputa"
       ]
     },
     {
@@ -8531,6 +8899,53 @@
       "source_work_key": "mnemosyne.en.work.hamlet",
       "surface_patterns": [
         "more in sorrow than in anger"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_mr_dick_d480034b",
+      "canonical_reference": "Mr Dick",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.mr_dick",
+      "id": "en_literary_reference_mr_dick_d480034b",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A gentle eccentric figure.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "Novels and Christmas books",
+      "source_work_key": "mnemosyne.en.work.novels_and_christmas_books",
+      "surface_patterns": [
+        "Mr Dick"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_mr_murdstone_89fbb885",
+      "canonical_reference": "Mr Murdstone",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.mr_murdstone",
+      "id": "en_literary_reference_mr_murdstone_89fbb885",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A cruel stepfather or disciplinarian.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Character",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "David Copperfield",
+      "source_work_key": "mnemosyne.en.work.novels_and_christmas_books",
+      "surface_patterns": [
+        "Mr Murdstone"
       ]
     },
     {
@@ -9142,6 +9557,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_podsnappery_bff77ef2",
+      "canonical_reference": "Podsnappery",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.podsnappery",
+      "id": "en_literary_reference_podsnappery_bff77ef2",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Complacent refusal to face unpleasant facts.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Character: Mr Podsnap",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "Our Mutual Friend",
+      "source_work_key": "mnemosyne.en.work.novels_and_christmas_books",
+      "surface_patterns": [
+        "Podsnappery"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_pound_of_flesh_1ec1486a",
       "canonical_reference": "pound of flesh",
       "confidence": 0.78,
@@ -9319,6 +9758,30 @@
       "source_work_key": "mnemosyne.en.work.antony_and_cleopatra",
       "surface_patterns": [
         "salad days"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_satanic_pride_cccdb5a0",
+      "canonical_reference": "Satanic pride",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.satanic_pride",
+      "id": "en_literary_reference_satanic_pride_cccdb5a0",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Defiant pride associated with Milton’s Satan.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book I",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Lost",
+      "source_work_key": "mnemosyne.en.work.paradise_lost_and_poems",
+      "surface_patterns": [
+        "Satanic pride"
       ]
     },
     {
@@ -9964,6 +10427,38 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_the_slings_and_arrows_4da69498",
+      "canonical_reference": "the slings and arrows",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.the_slings_and_arrows",
+      "id": "en_literary_reference_the_slings_and_arrows_4da69498",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Life’s attacks, troubles, or misfortunes.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.hamlet",
+      "surface_patterns": [
+        "the slings and arrows",
+        "slings and arrows of outrageous fortune",
+        "slings and arrows",
+        "the slings & arrows"
+      ],
+      "variants": [
+        "slings and arrows of outrageous fortune",
+        "slings and arrows",
+        "the slings & arrows"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_they_also_serve_e7c8bd19",
       "canonical_reference": "they also serve",
       "confidence": 0.74,
@@ -10224,6 +10719,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_what_oft_was_thought_but_ne_er_so_well_expressed_a42a0543",
+      "canonical_reference": "what oft was thought, but ne’er so well expressed",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.what_oft_was_thought_but_ne_er_so_well_expressed",
+      "id": "en_literary_reference_what_oft_was_thought_but_ne_er_so_well_expressed_a42a0543",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A familiar idea stated especially well.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part 2",
+      "source_url": "https://en.wikisource.org/wiki/An_Essay_on_Criticism",
+      "source_work": "An Essay on Criticism",
+      "source_work_key": "mnemosyne.en.work.an_essay_on_criticism",
+      "surface_patterns": [
+        "what oft was thought, but ne’er so well expressed",
+        "what oft was thought, but ne'er so well expressed"
+      ],
+      "variants": [
+        "what oft was thought, but ne'er so well expressed"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_whatever_is_is_right_171f89a1",
       "canonical_reference": "whatever is, is right",
       "confidence": 0.78,
@@ -10269,6 +10792,30 @@
       "source_work_key": "mnemosyne.en.work.an_essay_on_criticism",
       "surface_patterns": [
         "where angels fear to tread"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_who_breaks_a_butterfly_upon_a_wheel_99668955",
+      "canonical_reference": "who breaks a butterfly upon a wheel",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.who_breaks_a_butterfly_upon_a_wheel",
+      "id": "en_literary_reference_who_breaks_a_butterfly_upon_a_wheel_99668955",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Use excessive force against something fragile or trivial.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Line 308",
+      "source_url": "https://en.wikisource.org/wiki/Epistle_to_Dr_Arbuthnot",
+      "source_work": "Epistle to Dr Arbuthnot",
+      "source_work_key": "mnemosyne.en.work.epistle_to_dr_arbuthnot",
+      "surface_patterns": [
+        "who breaks a butterfly upon a wheel"
       ]
     },
     {
@@ -10372,6 +10919,29 @@
       "source_work_key": "mnemosyne.en.work.alice_books_and_poems",
       "surface_patterns": [
         "Wonderland"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_young_lochinvar_170f02ab",
+      "canonical_reference": "Young Lochinvar",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.walter_scott_phrases.young_lochinvar",
+      "id": "en_literary_reference_young_lochinvar_170f02ab",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A dashing suitor.",
+      "source_author": "Walter Scott",
+      "source_author_key": "mnemosyne.en.author.walter_scott",
+      "source_dataset": "en_walter_scott_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/82",
+      "source_work": "Waverley novels and poems",
+      "source_work_key": "mnemosyne.en.work.waverley_novels_and_poems",
+      "surface_patterns": [
+        "Young Lochinvar"
       ]
     },
     {
@@ -11013,6 +11583,35 @@
       ]
     },
     {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_bat_the_birds_and_the_beasts_76b829ca",
+      "canonical_reference": "the bat, the birds and the beasts",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_bat_the_birds_and_the_beasts",
+      "id": "en_proverb_tradition_the_bat_the_birds_and_the_beasts_76b829ca",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Opportunists may be trusted by neither side.",
+      "source_author": "Aesop / fable tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_fable_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "Aesop’s Fables / fable tradition",
+      "source_work_key": "mnemosyne.en.work.aesop_s_fables_fable_tradition",
+      "surface_patterns": [
+        "the bat, the birds and the beasts",
+        "bat, the birds and the beasts",
+        "the bat, the birds & the beasts"
+      ],
+      "variants": [
+        "bat, the birds and the beasts",
+        "the bat, the birds & the beasts"
+      ]
+    },
+    {
       "canonical_form": "en:proverb:en_proverb_tradition_the_boy_who_cried_wolf_706f804b",
       "canonical_reference": "the boy who cried wolf",
       "confidence": 0.76,
@@ -11155,6 +11754,35 @@
       "variants": [
         "fox and the grapes",
         "the fox & the grapes"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_fox_and_the_mask_1827cbca",
+      "canonical_reference": "the fox and the mask",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_fox_and_the_mask",
+      "id": "en_proverb_tradition_the_fox_and_the_mask_1827cbca",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "An impressive appearance may hide emptiness.",
+      "source_author": "Aesop / fable tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_fable_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "Aesop’s Fables / fable tradition",
+      "source_work_key": "mnemosyne.en.work.aesop_s_fables_fable_tradition",
+      "surface_patterns": [
+        "the fox and the mask",
+        "fox and the mask",
+        "the fox & the mask"
+      ],
+      "variants": [
+        "fox and the mask",
+        "the fox & the mask"
       ]
     },
     {
