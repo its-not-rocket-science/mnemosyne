@@ -10166,3 +10166,597 @@
   notes: Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation
     as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
     cap; previous confidence 0.84.
+- id: en_literary_reference_strange_bedfellows_5096bdd0
+  language: en
+  canonical_reference: strange bedfellows
+  reference_type: literary_reference
+  surface_patterns:
+    - strange bedfellows
+  short_explanation: Unlikely allies or companions.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - misery acquaints a man with strange bedfellows
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.strange_bedfellows
+  source_work_key: mnemosyne.en.work.the_tempest
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Tempest
+  source_author: William Shakespeare
+  source_location: Act II Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: 'Commonly attributed to Shakespeare; attribution should be reviewed. Merged duplicate/overlapping
+    draft rows. Provenance candidates: en_shakespeare_phrases / The Tempest / William Shakespeare / Act
+    II Scene 2.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.'
+- id: en_literary_reference_the_better_part_of_valour_b7912458
+  language: en
+  canonical_reference: the better part of valour
+  reference_type: literary_reference
+  surface_patterns:
+    - the better part of valour
+  short_explanation: Caution can be wiser than bravery.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - discretion is the better part of valour
+    - better part of valour
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.the_better_part_of_valour
+  source_work_key: mnemosyne.en.work.henry_iv_part_1
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Henry IV, Part 1
+  source_author: William Shakespeare
+  source_location: Act V Scene 4
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_such_stuff_as_dreams_are_made_on_6f58facf
+  language: en
+  canonical_reference: such stuff as dreams are made on
+  reference_type: literary_reference
+  surface_patterns:
+    - such stuff as dreams are made on
+  short_explanation: The fragile substance of imagination or life.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - stuff dreams are made of
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.such_stuff_as_dreams_are_made_on
+  source_work_key: mnemosyne.en.work.the_tempest
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Tempest
+  source_author: William Shakespeare
+  source_location: Act IV Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_classical_or_scriptural_allusion_nemesis_b3431564
+  language: en
+  canonical_reference: nemesis
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - nemesis
+  short_explanation: A rival, punishment, or agent of downfall.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.nemesis
+  source_work_key: mnemosyne.en.work.greek_myth_and_tragedy
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Greek myth and tragedy
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.88.
+- id: en_classical_or_scriptural_allusion_mentor_9591467b
+  language: en
+  canonical_reference: mentor
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - mentor
+  short_explanation: A trusted adviser or guide.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.mentor
+  source_work_key: mnemosyne.en.work.odyssey
+  source_author_key: mnemosyne.en.author.homer
+  source_work: Odyssey
+  source_author: Homer
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.86.
+- id: en_classical_or_scriptural_allusion_lethe_28d19e95
+  language: en
+  canonical_reference: Lethe
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Lethe
+  short_explanation: Forgetfulness, especially oblivion of the past.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.lethe
+  source_work_key: mnemosyne.en.work.greek_afterlife_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Greek afterlife myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.86.
+- id: en_classical_or_scriptural_allusion_nero_fiddled_while_rome_burned_30df2751
+  language: en
+  canonical_reference: Nero fiddled while Rome burned
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Nero fiddled while Rome burned
+  short_explanation: A leader ignores disaster with trivial distractions.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - fiddling while Rome burns
+  explanation_key: mnemosyne.en.explanation.classical_allusions.nero_fiddled_while_rome_burned
+  source_work_key: mnemosyne.en.work.roman_imperial_legend
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Roman imperial legend
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.
+- id: en_proverb_tradition_the_town_mouse_and_the_country_mouse_33ce8a3f
+  language: en
+  canonical_reference: the town mouse and the country mouse
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the town mouse and the country mouse
+  short_explanation: A contrast between urban luxury and rural simplicity.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - town mouse and the country mouse
+    - the town mouse & the country mouse
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_town_mouse_and_the_country_mouse
+  source_work_key: mnemosyne.en.work.the_town_mouse_and_the_country_mouse
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Town Mouse and the Country Mouse
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_wolf_and_the_lamb_6e015f5b
+  language: en
+  canonical_reference: wolf and the lamb
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the wolf and the lamb
+  short_explanation: The powerful may invent excuses to oppress the weak.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - wolf and the lamb
+    - wolf & the lamb
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.wolf_and_the_lamb
+  source_work_key: mnemosyne.en.work.the_wolf_and_the_lamb
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Wolf and the Lamb
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_frogs_who_desired_a_king_aca90c55
+  language: en
+  canonical_reference: frogs who desired a king
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the frogs who desired a king
+  short_explanation: People may regret demanding stronger rulers.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - frogs who desired a king
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.frogs_who_desired_a_king
+  source_work_key: mnemosyne.en.work.the_frogs_who_desired_a_king
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Frogs Who Desired a King
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_literary_reference_glory_jest_and_riddle_of_the_world_520ab646
+  language: en
+  canonical_reference: glory, jest, and riddle of the world
+  reference_type: literary_reference
+  surface_patterns:
+    - the glory, jest, and riddle of the world
+  short_explanation: Humanity as noble, absurd, and mysterious.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - glory, jest, and riddle of the world
+    - glory, jest, & riddle of the world
+  explanation_key: mnemosyne.en.explanation.pope_phrases.glory_jest_and_riddle_of_the_world
+  source_work_key: mnemosyne.en.work.an_essay_on_man
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Man
+  source_author: Alexander Pope
+  source_location: Epistle 2
+  source_url: https://en.wikisource.org/wiki/An_Essay_on_Man
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable
+    public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous
+    confidence 0.88.
+- id: en_classical_or_scriptural_allusion_balm_in_gilead_886b7ad2
+  language: en
+  canonical_reference: balm in Gilead
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - balm in Gilead
+  short_explanation: A source of healing or comfort.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.balm_in_gilead
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_be_fruitful_and_multiply_47ed2e2a
+  language: en
+  canonical_reference: be fruitful and multiply
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - be fruitful and multiply
+  short_explanation: An injunction to reproduce, grow, or increase.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - be fruitful & multiply
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.be_fruitful_and_multiply
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_adam_s_apple_5594da0d
+  language: en
+  canonical_reference: Adam’s apple
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Adam’s apple
+  short_explanation: The visible throat cartilage, by Biblical folk etymology.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - Adam's apple
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.adam_s_apple
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_literary_reference_it_was_the_worst_of_times_d7ca42c4
+  language: en
+  canonical_reference: it was the worst of times
+  reference_type: literary_reference
+  surface_patterns:
+    - it was the worst of times
+  short_explanation: A phrase for disastrous historical conditions.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.it_was_the_worst_of_times
+  source_work_key: mnemosyne.en.work.novels_and_christmas_books
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: A Tale of Two Cities
+  source_author: Charles Dickens
+  source_location: Book I, Chapter 1
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_barkis_is_willing_612d1ca8
+  language: en
+  canonical_reference: Barkis is willing
+  reference_type: literary_reference
+  surface_patterns:
+    - Barkis is willing
+  short_explanation: A shy or comic declaration of willingness.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.barkis_is_willing
+  source_work_key: mnemosyne.en.work.novels_and_christmas_books
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: David Copperfield
+  source_author: Charles Dickens
+  source_location: Chapter 5
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_cultural_reference_bumbledom_f144d7d1
+  language: en
+  canonical_reference: Bumbledom
+  reference_type: cultural_reference
+  surface_patterns:
+    - Bumbledom
+  short_explanation: Petty, pompous bureaucracy.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.bumbledom
+  source_work_key: mnemosyne.en.work.oliver_twist
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Oliver Twist
+  source_author: Charles Dickens
+  source_location: Mr Bumble
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.88.
+- id: en_literary_reference_heart_of_midlothian_7498461b
+  language: en
+  canonical_reference: Heart of Midlothian
+  reference_type: literary_reference
+  surface_patterns:
+    - the Heart of Midlothian
+  short_explanation: A Scottish legal and moral trial reference.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - Heart of Midlothian
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.heart_of_midlothian
+  source_work_key: mnemosyne.en.work.the_heart_of_midlothian
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: The Heart of Midlothian
+  source_author: Walter Scott
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/82
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Scott-related expression; attribution should be reviewed cautiously.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.82.
+- id: en_literary_reference_bride_of_lammermoor_4c13261b
+  language: en
+  canonical_reference: Bride of Lammermoor
+  reference_type: literary_reference
+  surface_patterns:
+    - the Bride of Lammermoor
+  short_explanation: A tragic romance reference.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - Bride of Lammermoor
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.bride_of_lammermoor
+  source_work_key: mnemosyne.en.work.the_bride_of_lammermoor
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: The Bride of Lammermoor
+  source_author: Walter Scott
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/82
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Scott-related expression; attribution should be reviewed cautiously.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.82.
+- id: en_literary_reference_through_thick_and_thin_4f2c4eb0
+  language: en
+  canonical_reference: through thick and thin
+  reference_type: literary_reference
+  surface_patterns:
+    - through thick and thin
+  short_explanation: Persisting in all circumstances.
+  learner_level: B2
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - thick and thin
+    - through thick & thin
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.through_thick_and_thin
+  source_work_key: mnemosyne.en.work.the_canterbury_tales
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: The Canterbury Tales
+  source_author: Geoffrey Chaucer
+  source_location: The Reeve’s Tale
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added
+    by v3 normalisation as a stable public-domain reference for review.
+- id: en_cultural_reference_napoleon_the_pig_bea98176
+  language: en
+  canonical_reference: Napoleon the pig
+  reference_type: cultural_reference
+  surface_patterns:
+    - Napoleon the pig
+  short_explanation: A revolutionary leader turned dictator.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.napoleon_the_pig
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four_and_animal_farm
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Animal Farm
+  source_author: George Orwell
+  source_location: Whole work
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Short common-use term or phrase; no extended Orwell source text is included.; Rights basis:
+    common_usage_short_expression; short common-use term or phrase only, not extended source text.'
+- id: en_cultural_reference_snowball_3687f15a
+  language: en
+  canonical_reference: Snowball
+  reference_type: cultural_reference
+  surface_patterns:
+    - Snowball
+  short_explanation: A scapegoated revolutionary rival.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.snowball
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four_and_animal_farm
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Animal Farm
+  source_author: George Orwell
+  source_location: Whole work
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Short common-use term or phrase; no extended Orwell source text is included.; Rights basis:
+    common_usage_short_expression; short common-use term or phrase only, not extended source text.'
+- id: en_literary_reference_they_also_serve_e7c8bd19
+  language: en
+  canonical_reference: they also serve
+  reference_type: literary_reference
+  surface_patterns:
+    - they also serve
+  short_explanation: Waiting can itself be service.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.they_also_serve
+  source_work_key: mnemosyne.en.work.paradise_lost_and_poems
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Sonnet 19 / On His Blindness
+  source_author: John Milton
+  source_location: Final line
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_paradise_regained_0c832547
+  language: en
+  canonical_reference: paradise regained
+  reference_type: literary_reference
+  surface_patterns:
+    - paradise regained
+  short_explanation: A recovery after loss.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.paradise_regained
+  source_work_key: mnemosyne.en.work.paradise_lost_and_poems
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Regained
+  source_author: John Milton
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.

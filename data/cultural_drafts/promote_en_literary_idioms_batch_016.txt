@@ -1,0 +1,36 @@
+# Reviewed cultural draft entries for promotion batch 016.
+# Shakespeare (0.78, B2-C1)
+strange bedfellows
+the better part of valour
+such stuff as dreams are made on
+# Classical allusions (0.76, B2-C1)
+nemesis
+mentor
+Lethe
+Nero fiddled while Rome burned
+# Aesop (0.76, B2-C1)
+the town mouse and the country mouse
+wolf and the lamb
+frogs who desired a king
+# Pope (0.78, C1)
+glory, jest, and riddle of the world
+# KJV (0.78, B2)
+balm in Gilead
+be fruitful and multiply
+Adam’s apple
+# Dickens (0.74-0.78, C1)
+it was the worst of times
+Barkis is willing
+Bumbledom
+# Carroll (0.74, C1)
+# Walter Scott (0.78, C1)
+Heart of Midlothian
+Bride of Lammermoor
+# Chaucer (0.74, B2)
+through thick and thin
+# Orwell (0.74, C1)
+Napoleon the pig
+Snowball
+# Milton (0.74, C1)
+they also serve
+paradise regained
