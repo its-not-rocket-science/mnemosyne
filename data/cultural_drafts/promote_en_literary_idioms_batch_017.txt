@@ -1,0 +1,38 @@
+# Reviewed cultural draft entries for promotion batch 017.
+# Shakespeare (0.78, B2-C1)
+the course of true love never did run smooth
+the fault is not in our stars
+the devil can cite Scripture
+# Classical allusions (0.76, B2-C1)
+odyssey
+Pandora’s box
+Oedipus complex
+# Aesop (0.74, C1)
+honesty is the best policy
+one good turn deserves another
+# Pope (0.78, C1)
+proper study of mankind is man
+an honest man’s the noblest work of God
+# KJV (0.78, B2)
+doubting Thomas
+dust to dust
+by their fruits
+# Dickens (0.74-0.78, C1)
+Little Nell
+Estella
+# Walter Scott (0.74, C1)
+O what a tangled web we weave
+Lochinvar
+# Chaucer (0.72-0.76, B2-C1)
+many a true word is spoken in jest
+not worth an old shoe
+# Swift (0.74, C1)
+Modest Proposal
+Houyhnhnm
+# Orwell (0.74, C1)
+telescreen
+duckspeak
+# Bunyan (0.74, C1)
+City of Destruction
+# Carroll (0.74, C1)
+vorpal sword
