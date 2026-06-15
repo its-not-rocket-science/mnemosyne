@@ -1,0 +1,33 @@
+# Reviewed cultural draft entries for promotion batch 009.
+# KJV (0.84, B1-C1)
+the last shall be first
+the land of the living
+suffer fools gladly
+still small voice
+the writing is on the wall
+the patience of Job
+# Shakespeare (0.78, B2-C1)
+full of sound and fury
+hoist with his own petard
+lend me your ears
+method in the madness
+into thin air
+foul play
+give the devil his due
+# Milton (0.88, C1-C2)
+abashed the devil stood
+paradise within thee
+# Classical allusions (0.76, C1)
+Electra complex
+Achilles and the tortoise
+# Aesop (0.76, B2-C1)
+crow and the pitcher
+fox and the crow
+belly and the members
+# Chaucer (0.74-0.78, B2-C1)
+April showers
+murder will out
+gladly would he learn and gladly teach
+# Dickens (0.78, C1)
+Uriah Heep
+Micawber
