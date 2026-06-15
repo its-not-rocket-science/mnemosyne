@@ -1,0 +1,39 @@
+# Reviewed cultural draft entries for promotion batch 024.
+# Shakespeare (0.78, B2-C2)
+vaulting ambition
+seen better days
+wear my heart upon my sleeve
+what’s done is done
+put money in thy purse
+stand not upon the order of your going
+sound and fury
+winter of our discontent
+# Classical allusions (0.74, C1)
+Eurydice
+gorgon
+Hades
+Hector
+# Aesop (0.74-0.76, C1)
+the ass in the lion’s skin
+Aesop’s fox
+the shepherd boy and the wolf
+the sick lion
+# KJV (0.78, B2)
+new wine in old bottles
+land of milk and honey
+# Pope (0.70, C1)
+noble savage
+# Swift (0.74, C1)
+# Bunyan (0.74, C1)
+Christian’s burden
+# Dickens (0.74, C1)
+Carker’s teeth
+# Orwell (0.74, C1)
+two legs bad, four legs good
+# Walter Scott (0.60-0.74, B2-C1)
+tangled web
+lock, stock and barrel
+# Chaucer (0.60-0.62, B1-B2)
+all good things must come to an end
+better late than never
+time and tide wait for no man

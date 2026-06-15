@@ -1413,6 +1413,28 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_eurydice_af4a5ef5",
+      "canonical_reference": "Eurydice",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.eurydice",
+      "id": "en_classical_or_scriptural_allusion_eurydice_af4a5ef5",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A beloved lost to the underworld.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Classical Greek and Roman literature / myth",
+      "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
+      "surface_patterns": [
+        "Eurydice"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_eye_for_an_eye_11cc0870",
       "canonical_reference": "eye for an eye",
       "confidence": 0.78,
@@ -1812,6 +1834,50 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_gorgon_5ff48e01",
+      "canonical_reference": "gorgon",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.gorgon",
+      "id": "en_classical_or_scriptural_allusion_gorgon_5ff48e01",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A frightening or repellent woman or monster.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Classical Greek and Roman literature / myth",
+      "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
+      "surface_patterns": [
+        "gorgon"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_hades_ea598d9f",
+      "canonical_reference": "Hades",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.hades",
+      "id": "en_classical_or_scriptural_allusion_hades_ea598d9f",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "The underworld or a hellish place.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Classical Greek and Roman literature / myth",
+      "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
+      "surface_patterns": [
+        "Hades"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_halcyon_days_a07dd947",
       "canonical_reference": "halcyon days",
       "confidence": 0.76,
@@ -1831,6 +1897,28 @@
       "source_work_key": "mnemosyne.en.work.alcyone_myth",
       "surface_patterns": [
         "halcyon days"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_hector_31e43d91",
+      "canonical_reference": "Hector",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.hector",
+      "id": "en_classical_or_scriptural_allusion_hector_31e43d91",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A noble but doomed defender.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Classical Greek and Roman literature / myth",
+      "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
+      "surface_patterns": [
+        "Hector"
       ]
     },
     {
@@ -2266,6 +2354,33 @@
       ],
       "variants": [
         "labyrinth"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_land_of_milk_and_honey_2444de73",
+      "canonical_reference": "land of milk and honey",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.land_of_milk_and_honey",
+      "id": "en_classical_or_scriptural_allusion_land_of_milk_and_honey_2444de73",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A promised place of abundance and prosperity.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "land of milk and honey",
+        "land of milk & honey"
+      ],
+      "variants": [
+        "land of milk & honey"
       ]
     },
     {
@@ -2729,6 +2844,29 @@
       ],
       "variants": [
         "fiddling while Rome burns"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_new_wine_in_old_bottles_0a59d247",
+      "canonical_reference": "new wine in old bottles",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.new_wine_in_old_bottles",
+      "id": "en_classical_or_scriptural_allusion_new_wine_in_old_bottles_0a59d247",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "New ideas forced into unsuitable old forms.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "new wine in old bottles"
       ]
     },
     {
@@ -6356,6 +6494,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_two_legs_bad_four_legs_good_c714d2a1",
+      "canonical_reference": "two legs bad, four legs good",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.two_legs_bad_four_legs_good",
+      "id": "en_cultural_reference_two_legs_bad_four_legs_good_c714d2a1",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A simplified political slogan.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Chapter 3",
+      "source_work": "Animal Farm",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four_and_animal_farm",
+      "surface_patterns": [
+        "two legs bad, four legs good"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_two_minutes_hate_967d7f4c",
       "canonical_reference": "Two Minutes Hate",
       "confidence": 0.78,
@@ -6697,6 +6859,29 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_all_good_things_must_come_to_an_end_e47ef42b",
+      "canonical_reference": "all good things must come to an end",
+      "confidence": 0.62,
+      "explanation_key": "mnemosyne.en.explanation.chaucer_phrases.all_good_things_must_come_to_an_end",
+      "id": "en_literary_reference_all_good_things_must_come_to_an_end_e47ef42b",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Pleasant experiences cannot last forever.",
+      "source_author": "Geoffrey Chaucer",
+      "source_author_key": "mnemosyne.en.author.geoffrey_chaucer",
+      "source_dataset": "en_chaucer_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/257",
+      "source_work": "Troilus and Criseyde",
+      "source_work_key": "mnemosyne.en.work.troilus_and_criseyde",
+      "surface_patterns": [
+        "all good things must come to an end"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_all_hell_broke_loose_9f4ad81b",
       "canonical_reference": "all Hell broke loose",
       "confidence": 0.82,
@@ -7011,6 +7196,29 @@
       "source_work_key": "mnemosyne.en.work.novels_and_christmas_books",
       "surface_patterns": [
         "Betsey Trotwood"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_better_late_than_never_53516f9b",
+      "canonical_reference": "better late than never",
+      "confidence": 0.6,
+      "explanation_key": "mnemosyne.en.explanation.chaucer_phrases.better_late_than_never",
+      "id": "en_literary_reference_better_late_than_never_53516f9b",
+      "language": "en",
+      "learner_level": "B1",
+      "notes": "Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Doing something late is better than not doing it.",
+      "source_author": "Geoffrey Chaucer tradition",
+      "source_author_key": "mnemosyne.en.author.geoffrey_chaucer_tradition",
+      "source_dataset": "en_chaucer_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/2383",
+      "source_work": "The Canterbury Tales",
+      "source_work_key": "mnemosyne.en.work.the_canterbury_tales",
+      "surface_patterns": [
+        "better late than never"
       ]
     },
     {
@@ -7382,6 +7590,33 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_carker_s_teeth_ef55205c",
+      "canonical_reference": "Carker’s teeth",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.carker_s_teeth",
+      "id": "en_literary_reference_carker_s_teeth_ef55205c",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A sinister smile or predatory politeness.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "Novels and Christmas books",
+      "source_work_key": "mnemosyne.en.work.novels_and_christmas_books",
+      "surface_patterns": [
+        "Carker’s teeth",
+        "Carker's teeth"
+      ],
+      "variants": [
+        "Carker's teeth"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_caterpillar_question_34f2505f",
       "canonical_reference": "Caterpillar question",
       "confidence": 0.74,
@@ -7577,6 +7812,34 @@
       "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
       "surface_patterns": [
         "Christian"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_christian_s_burden_205d4e6a",
+      "canonical_reference": "Christian’s burden",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.bunyan_phrases.christian_s_burden",
+      "id": "en_literary_reference_christian_s_burden_205d4e6a",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "religious",
+      "short_explanation": "A symbolic load of guilt or sin.",
+      "source_author": "John Bunyan",
+      "source_author_key": "mnemosyne.en.author.john_bunyan",
+      "source_dataset": "en_bunyan_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part I",
+      "source_url": "https://www.gutenberg.org/ebooks/131",
+      "source_work": "The Pilgrim’s Progress",
+      "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
+      "surface_patterns": [
+        "Christian’s burden",
+        "Christian's burden"
+      ],
+      "variants": [
+        "Christian's burden"
       ]
     },
     {
@@ -9466,6 +9729,33 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_lock_stock_and_barrel_0449a22e",
+      "canonical_reference": "lock, stock and barrel",
+      "confidence": 0.6,
+      "explanation_key": "mnemosyne.en.explanation.walter_scott_phrases.lock_stock_and_barrel",
+      "id": "en_literary_reference_lock_stock_and_barrel_0449a22e",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Scott-related expression; attribution should be reviewed cautiously.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Everything; the whole lot.",
+      "source_author": "Walter Scott tradition",
+      "source_author_key": "mnemosyne.en.author.walter_scott_tradition",
+      "source_dataset": "en_walter_scott_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/82",
+      "source_work": "Scott-related attribution uncertain",
+      "source_work_key": "mnemosyne.en.work.scott_related_attribution_uncertain",
+      "surface_patterns": [
+        "lock, stock and barrel",
+        "lock, stock & barrel"
+      ],
+      "variants": [
+        "lock, stock & barrel"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_lord_what_fools_these_mortals_be_d4f42c07",
       "canonical_reference": "lord, what fools these mortals be",
       "confidence": 0.78,
@@ -10071,6 +10361,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_noble_savage_983c15b8",
+      "canonical_reference": "noble savage",
+      "confidence": 0.7,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.noble_savage",
+      "id": "en_literary_reference_noble_savage_983c15b8",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "An idealised natural human outside civilisation.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Epistle 1",
+      "source_url": "https://en.wikisource.org/wiki/An_Essay_on_Man",
+      "source_work": "An Essay on Man",
+      "source_work_key": "mnemosyne.en.work.an_essay_on_man",
+      "surface_patterns": [
+        "noble savage"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_not_slept_one_wink_f724b873",
       "canonical_reference": "not slept one wink",
       "confidence": 0.78,
@@ -10661,6 +10975,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_put_money_in_thy_purse_5ccf557f",
+      "canonical_reference": "put money in thy purse",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.put_money_in_thy_purse",
+      "id": "en_literary_reference_put_money_in_thy_purse_5ccf557f",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A repeated urging to gather resources.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 3",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Othello",
+      "source_work_key": "mnemosyne.en.work.othello",
+      "surface_patterns": [
+        "put money in thy purse",
+        "put money in your purse"
+      ],
+      "variants": [
+        "put money in your purse"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_quality_of_mercy_2c73ef76",
       "canonical_reference": "quality of mercy",
       "confidence": 0.78,
@@ -10938,6 +11280,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_seen_better_days_8b104403",
+      "canonical_reference": "seen better days",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.seen_better_days",
+      "id": "en_literary_reference_seen_better_days_8b104403",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.82.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Now shabby or diminished from former quality.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 7",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "As You Like It",
+      "source_work_key": "mnemosyne.en.work.as_you_like_it",
+      "surface_patterns": [
+        "we have seen better days"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_send_him_packing_ab6cab46",
       "canonical_reference": "send him packing",
       "confidence": 0.78,
@@ -11150,6 +11516,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_sound_and_fury_bcaac383",
+      "canonical_reference": "sound and fury",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.sound_and_fury",
+      "id": "en_literary_reference_sound_and_fury_bcaac383",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Loud activity with little meaning.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act V Scene 5",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Macbeth",
+      "source_work_key": "mnemosyne.en.work.macbeth",
+      "surface_patterns": [
+        "sound and fury",
+        "sound & fury"
+      ],
+      "variants": [
+        "sound & fury"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_sound_must_seem_an_echo_to_the_sense_7e79acbb",
       "canonical_reference": "sound must seem an echo to the sense",
       "confidence": 0.74,
@@ -11195,6 +11589,34 @@
       "source_work_key": "mnemosyne.en.work.richard_ii",
       "surface_patterns": [
         "a spotless reputation"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_stand_not_upon_the_order_of_your_going_f50b7f8d",
+      "canonical_reference": "stand not upon the order of your going",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.stand_not_upon_the_order_of_your_going",
+      "id": "en_literary_reference_stand_not_upon_the_order_of_your_going_f50b7f8d",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Do not delay with formalities.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 4",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Macbeth",
+      "source_work_key": "mnemosyne.en.work.macbeth",
+      "surface_patterns": [
+        "stand not upon the order of your going",
+        "stand upon ceremony"
+      ],
+      "variants": [
+        "stand upon ceremony"
       ]
     },
     {
@@ -11345,6 +11767,29 @@
       "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
       "surface_patterns": [
         "Talkative"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_tangled_web_689890c2",
+      "canonical_reference": "tangled web",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.walter_scott_phrases.tangled_web",
+      "id": "en_literary_reference_tangled_web_689890c2",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A complicated mess produced by deception.",
+      "source_author": "Walter Scott",
+      "source_author_key": "mnemosyne.en.author.walter_scott",
+      "source_dataset": "en_walter_scott_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/82",
+      "source_work": "Waverley novels and poems",
+      "source_work_key": "mnemosyne.en.work.waverley_novels_and_poems",
+      "surface_patterns": [
+        "tangled web"
       ]
     },
     {
@@ -11902,6 +12347,33 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_time_and_tide_wait_for_no_man_26667720",
+      "canonical_reference": "time and tide wait for no man",
+      "confidence": 0.6,
+      "explanation_key": "mnemosyne.en.explanation.chaucer_phrases.time_and_tide_wait_for_no_man",
+      "id": "en_literary_reference_time_and_tide_wait_for_no_man_26667720",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Chaucer-related attribution should be reviewed; some forms are modernised.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Time passes regardless of human plans.",
+      "source_author": "Geoffrey Chaucer tradition",
+      "source_author_key": "mnemosyne.en.author.geoffrey_chaucer_tradition",
+      "source_dataset": "en_chaucer_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/2383",
+      "source_work": "Proverb tradition; Chaucerian era",
+      "source_work_key": "mnemosyne.en.work.proverb_tradition_chaucerian_era",
+      "surface_patterns": [
+        "time and tide wait for no man",
+        "time & tide wait for no man"
+      ],
+      "variants": [
+        "time & tide wait for no man"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_to_be_or_not_to_be_6aa4d196",
       "canonical_reference": "to be or not to be",
       "confidence": 0.78,
@@ -12150,6 +12622,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_vaulting_ambition_b712c32c",
+      "canonical_reference": "vaulting ambition",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.vaulting_ambition",
+      "id": "en_literary_reference_vaulting_ambition_b712c32c",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Excessive ambition that may cause downfall.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 7",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Macbeth",
+      "source_work_key": "mnemosyne.en.work.macbeth",
+      "surface_patterns": [
+        "vaulting ambition"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_vindicate_the_ways_of_god_to_man_ab4fc347",
       "canonical_reference": "vindicate the ways of God to man",
       "confidence": 0.74,
@@ -12245,6 +12741,44 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_wear_my_heart_upon_my_sleeve_6163204b",
+      "canonical_reference": "wear my heart upon my sleeve",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.wear_my_heart_upon_my_sleeve",
+      "id": "en_literary_reference_wear_my_heart_upon_my_sleeve_6163204b",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Show emotions openly.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Othello",
+      "source_work_key": "mnemosyne.en.work.othello",
+      "surface_patterns": [
+        "wear my heart upon my sleeve",
+        "wear one's heart on one's sleeve",
+        "wear your heart on your sleeve",
+        "wear his heart on his sleeve",
+        "wear her heart on her sleeve",
+        "wear my heart on my sleeve",
+        "wearing your heart on your sleeve"
+      ],
+      "variants": [
+        "wear one's heart on one's sleeve",
+        "wear your heart on your sleeve",
+        "wear his heart on his sleeve",
+        "wear her heart on her sleeve",
+        "wear my heart on my sleeve",
+        "wearing your heart on your sleeve"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_wegg_4481e4b4",
       "canonical_reference": "Wegg",
       "confidence": 0.74,
@@ -12293,6 +12827,34 @@
       ],
       "variants": [
         "what oft was thought, but ne'er so well expressed"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_what_s_done_is_done_44927f8c",
+      "canonical_reference": "what’s done is done",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.what_s_done_is_done",
+      "id": "en_literary_reference_what_s_done_is_done_44927f8c",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "The past cannot be changed.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Macbeth",
+      "source_work_key": "mnemosyne.en.work.macbeth",
+      "surface_patterns": [
+        "what’s done is done",
+        "what's done is done"
+      ],
+      "variants": [
+        "what's done is done"
       ]
     },
     {
@@ -12469,6 +13031,34 @@
       ],
       "variants": [
         "willing to wound & yet afraid to strike"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_winter_of_our_discontent_f2219a4c",
+      "canonical_reference": "winter of our discontent",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.winter_of_our_discontent",
+      "id": "en_literary_reference_winter_of_our_discontent_f2219a4c",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A period of misery or grievance.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Richard III",
+      "source_work_key": "mnemosyne.en.work.richard_iii",
+      "surface_patterns": [
+        "the winter of our discontent",
+        "winter of our discontent"
+      ],
+      "variants": [
+        "winter of our discontent"
       ]
     },
     {
@@ -12658,6 +13248,33 @@
       "variants": [
         "wolf in sheep's clothing",
         "a wolf in sheep's clothing"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_aesop_s_fox_7542721c",
+      "canonical_reference": "Aesop’s fox",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.aesop_s_fox",
+      "id": "en_proverb_tradition_aesop_s_fox_7542721c",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.78.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Someone who excuses failure by belittling the prize.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Fox and the Grapes",
+      "source_work_key": "mnemosyne.en.work.the_fox_and_the_grapes",
+      "surface_patterns": [
+        "aesop’s fox",
+        "Aesop's fox"
+      ],
+      "variants": [
+        "Aesop's fox"
       ]
     },
     {
@@ -13257,6 +13874,37 @@
       ]
     },
     {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_ass_in_the_lion_s_skin_4fb6ac21",
+      "canonical_reference": "the ass in the lion’s skin",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_ass_in_the_lion_s_skin",
+      "id": "en_proverb_tradition_the_ass_in_the_lion_s_skin_4fb6ac21",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Disguise cannot hide true nature for long.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Ass in the Lion’s Skin",
+      "source_work_key": "mnemosyne.en.work.the_ass_in_the_lion_s_skin",
+      "surface_patterns": [
+        "the ass in the lion’s skin",
+        "ass in the lion's skin",
+        "the ass in the lion's skin",
+        "ass in the lion’s skin"
+      ],
+      "variants": [
+        "ass in the lion's skin",
+        "the ass in the lion's skin",
+        "ass in the lion’s skin"
+      ]
+    },
+    {
       "canonical_form": "en:proverb:en_proverb_tradition_the_bat_the_birds_and_the_beasts_76b829ca",
       "canonical_reference": "the bat, the birds and the beasts",
       "confidence": 0.74,
@@ -13722,6 +14370,62 @@
       "variants": [
         "the lion and the mouse",
         "mouse that freed the lion"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_shepherd_boy_and_the_wolf_67833384",
+      "canonical_reference": "the shepherd boy and the wolf",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_shepherd_boy_and_the_wolf",
+      "id": "en_proverb_tradition_the_shepherd_boy_and_the_wolf_67833384",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Repeated lies destroy trust.",
+      "source_author": "Aesop / fable tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_fable_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "Aesop’s Fables / fable tradition",
+      "source_work_key": "mnemosyne.en.work.aesop_s_fables_fable_tradition",
+      "surface_patterns": [
+        "the shepherd boy and the wolf",
+        "shepherd boy and the wolf",
+        "the shepherd boy & the wolf"
+      ],
+      "variants": [
+        "shepherd boy and the wolf",
+        "the shepherd boy & the wolf"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_sick_lion_c17e8ef3",
+      "canonical_reference": "the sick lion",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_sick_lion",
+      "id": "en_proverb_tradition_the_sick_lion_c17e8ef3",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Predators may lure victims with false weakness.",
+      "source_author": "Aesop / fable tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_fable_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "Aesop’s Fables / fable tradition",
+      "source_work_key": "mnemosyne.en.work.aesop_s_fables_fable_tradition",
+      "surface_patterns": [
+        "the sick lion",
+        "sick lion"
+      ],
+      "variants": [
+        "sick lion"
       ]
     },
     {
