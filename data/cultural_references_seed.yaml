@@ -11967,3 +11967,586 @@
   source_license: public_domain
   source_dataset: en_milton_phrases
   notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_the_rest_is_silence_61a80b74
+  language: en
+  canonical_reference: the rest is silence
+  reference_type: literary_reference
+  surface_patterns:
+    - the rest is silence
+  short_explanation: Nothing more can be said, often at death.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - rest is silence
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.the_rest_is_silence
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act V Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_the_readiness_is_all_0feee0b7
+  language: en
+  canonical_reference: the readiness is all
+  reference_type: literary_reference
+  surface_patterns:
+    - the readiness is all
+  short_explanation: Being prepared matters most.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - readiness is all
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.the_readiness_is_all
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act V Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_the_short_and_the_long_of_it_ef925158
+  language: en
+  canonical_reference: the short and the long of it
+  reference_type: literary_reference
+  surface_patterns:
+    - the short and the long of it
+  short_explanation: The essential summary of a matter.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - long and short of it
+    - short and the long of it
+    - the short & the long of it
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.the_short_and_the_long_of_it
+  source_work_key: mnemosyne.en.work.the_merry_wives_of_windsor
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Merry Wives of Windsor
+  source_author: William Shakespeare
+  source_location: Act II Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.82.
+- id: en_classical_or_scriptural_allusion_sword_of_damocles_af066a46
+  language: en
+  canonical_reference: sword of Damocles
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - sword of Damocles
+  short_explanation: A constant threat hanging over someone.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.sword_of_damocles
+  source_work_key: mnemosyne.en.work.tusculan_disputations
+  source_author_key: mnemosyne.en.author.cicero
+  source_work: Tusculan Disputations
+  source_author: Cicero
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_tantalising_402c037d
+  language: en
+  canonical_reference: tantalising
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - tantalising
+  short_explanation: Tempting but kept just out of reach.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - tantalizing
+  explanation_key: mnemosyne.en.explanation.classical_allusions.tantalising
+  source_work_key: mnemosyne.en.work.tantalus_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Tantalus myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.88.
+- id: en_classical_or_scriptural_allusion_stygian_4656212c
+  language: en
+  canonical_reference: Stygian
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Stygian
+  short_explanation: Dark, gloomy, or infernal.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.stygian
+  source_work_key: mnemosyne.en.work.river_styx_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: River Styx myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.84.
+- id: en_classical_or_scriptural_allusion_prometheus_unbound_a7e739ba
+  language: en
+  canonical_reference: Prometheus unbound
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Prometheus unbound
+  short_explanation: Liberation of rebellious creative power.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.prometheus_unbound
+  source_work_key: mnemosyne.en.work.prometheus_myth
+  source_author_key: mnemosyne.en.author.aeschylus_and_later_tradition
+  source_work: Prometheus myth
+  source_author: Aeschylus and later tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.82.
+- id: en_proverb_tradition_the_fox_and_the_stork_bc2b3878
+  language: en
+  canonical_reference: the fox and the stork
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the fox and the stork
+  short_explanation: Treating others badly may invite retaliation.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - fox and the stork
+    - the fox & the stork
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_fox_and_the_stork
+  source_work_key: mnemosyne.en.work.aesop_s_fables_fable_tradition
+  source_author_key: mnemosyne.en.author.aesop_fable_tradition
+  source_work: Aesop’s Fables / fable tradition
+  source_author: Aesop / fable tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_proverb_tradition_the_crab_and_its_mother_4b7a62f6
+  language: en
+  canonical_reference: the crab and its mother
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the crab and its mother
+  short_explanation: Do not criticise faults you also display.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - crab and its mother
+    - the crab & its mother
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_crab_and_its_mother
+  source_work_key: mnemosyne.en.work.aesop_s_fables_fable_tradition
+  source_author_key: mnemosyne.en.author.aesop_fable_tradition
+  source_work: Aesop’s Fables / fable tradition
+  source_author: Aesop / fable tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_where_angels_fear_to_tread_dd1d1391
+  language: en
+  canonical_reference: where angels fear to tread
+  reference_type: literary_reference
+  surface_patterns:
+    - where angels fear to tread
+  short_explanation: A place or issue the wise avoid.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.pope_phrases.where_angels_fear_to_tread
+  source_work_key: mnemosyne.en.work.an_essay_on_criticism
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Criticism
+  source_author: Alexander Pope
+  source_location: Part 3
+  source_url: https://en.wikisource.org/wiki/An_Essay_on_Criticism
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable
+    public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous
+    confidence 0.90.
+- id: en_literary_reference_whatever_is_is_right_171f89a1
+  language: en
+  canonical_reference: whatever is, is right
+  reference_type: literary_reference
+  surface_patterns:
+    - whatever is, is right
+  short_explanation: A controversial claim that existence follows providential order.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.pope_phrases.whatever_is_is_right
+  source_work_key: mnemosyne.en.work.an_essay_on_man
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Man
+  source_author: Alexander Pope
+  source_location: Epistle 1
+  source_url: https://en.wikisource.org/wiki/An_Essay_on_Man
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable
+    public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous
+    confidence 0.90.
+- id: en_literary_reference_master_passion_2a598f8a
+  language: en
+  canonical_reference: master passion
+  reference_type: literary_reference
+  surface_patterns:
+    - the master passion
+  short_explanation: A controlling desire or motive.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - master passion
+  explanation_key: mnemosyne.en.explanation.pope_phrases.master_passion
+  source_work_key: mnemosyne.en.work.moral_essays
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: Moral Essays
+  source_author: Alexander Pope
+  source_location: Epistle 1
+  source_url: https://www.gutenberg.org/ebooks/9601
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Pope phrase; exact line form should be reviewed.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.86.
+- id: en_classical_or_scriptural_allusion_fire_and_brimstone_d859ea42
+  language: en
+  canonical_reference: fire and brimstone
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - fire and brimstone
+  short_explanation: Severe religious warning or apocalyptic denunciation.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - fire & brimstone
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.fire_and_brimstone
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_flesh_pots_of_egypt_71d42765
+  language: en
+  canonical_reference: flesh pots of Egypt
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - flesh pots of Egypt
+  short_explanation: Comforts missed after leaving security behind.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.flesh_pots_of_egypt
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_a_thorn_in_the_flesh_491d462a
+  language: en
+  canonical_reference: a thorn in the flesh
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a thorn in the flesh
+  short_explanation: A persistent source of trouble or irritation.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_thorn_in_the_flesh
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_literary_reference_pecksniffian_9ea1f1b6
+  language: en
+  canonical_reference: Pecksniffian
+  reference_type: literary_reference
+  surface_patterns:
+    - Pecksniffian
+  short_explanation: Hypocritically moralistic.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.pecksniffian
+  source_work_key: mnemosyne.en.work.novels_and_christmas_books
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Martin Chuzzlewit
+  source_author: Charles Dickens
+  source_location: 'Character: Seth Pecksniff'
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_oliver_asks_for_more_e7346413
+  language: en
+  canonical_reference: Oliver asks for more
+  reference_type: literary_reference
+  surface_patterns:
+    - Oliver asks for more
+  short_explanation: A timid request that shocks authority.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.oliver_asks_for_more
+  source_work_key: mnemosyne.en.work.novels_and_christmas_books
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Oliver Twist
+  source_author: Charles Dickens
+  source_location: Chapter 2
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_our_mutual_friend_f0b85a22
+  language: en
+  canonical_reference: Our Mutual Friend
+  reference_type: literary_reference
+  surface_patterns:
+    - Our Mutual Friend
+  short_explanation: A Dickensian allusion to social masks and money.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.our_mutual_friend
+  source_work_key: mnemosyne.en.work.novels_and_christmas_books
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Our Mutual Friend
+  source_author: Charles Dickens
+  source_location: Title / whole work
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_old_mortality_c8b1cf9e
+  language: en
+  canonical_reference: Old Mortality
+  reference_type: literary_reference
+  surface_patterns:
+    - Old Mortality
+  short_explanation: A figure associated with preserving memory of the dead.
+  learner_level: C2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.old_mortality
+  source_work_key: mnemosyne.en.work.old_mortality
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: Old Mortality
+  source_author: Walter Scott
+  source_location: Title character
+  source_url: https://www.gutenberg.org/ebooks/82
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Scott-related expression; attribution should be reviewed cautiously.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.80.
+- id: en_cultural_reference_struldbrug_1e66bcb2
+  language: en
+  canonical_reference: struldbrug
+  reference_type: cultural_reference
+  surface_patterns:
+    - struldbrug
+  short_explanation: An immortal person cursed with endless ageing.
+  learner_level: C2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.swift_phrases.struldbrug
+  source_work_key: mnemosyne.en.work.gulliver_s_travels
+  source_author_key: mnemosyne.en.author.jonathan_swift
+  source_work: Gulliver’s Travels
+  source_author: Jonathan Swift
+  source_location: Part III
+  source_url: https://www.gutenberg.org/ebooks/829
+  source_license: public_domain
+  source_dataset: en_swift_phrases
+  notes: Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.86.
+- id: en_literary_reference_wonderland_f37af270
+  language: en
+  canonical_reference: Wonderland
+  reference_type: literary_reference
+  surface_patterns:
+    - Wonderland
+  short_explanation: A strange or marvellous world.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.wonderland
+  source_work_key: mnemosyne.en.work.alice_books_and_poems
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Title / whole work
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_literary_reference_bandersnatch_26a17ffe
+  language: en
+  canonical_reference: Bandersnatch
+  reference_type: literary_reference
+  surface_patterns:
+    - Bandersnatch
+  short_explanation: A fierce nonsense creature.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.bandersnatch
+  source_work_key: mnemosyne.en.work.alice_books_and_poems
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Through the Looking-Glass / Jabberwocky
+  source_author: Lewis Carroll
+  source_location: Jabberwocky
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_cultural_reference_bellyfeel_9ba18b56
+  language: en
+  canonical_reference: bellyfeel
+  reference_type: cultural_reference
+  surface_patterns:
+    - bellyfeel
+  short_explanation: Blind emotional acceptance of ideology.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.bellyfeel
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four_and_animal_farm
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: 'Appendix: The Principles of Newspeak'
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Short common-use term or phrase; no extended Orwell source text is included.; Rights basis:
+    common_usage_short_expression; short common-use term or phrase only, not extended source text.'
+- id: en_cultural_reference_oldthink_41cf3453
+  language: en
+  canonical_reference: oldthink
+  reference_type: cultural_reference
+  surface_patterns:
+    - oldthink
+  short_explanation: Ideas belonging to the pre-totalitarian past.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.oldthink
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four_and_animal_farm
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: 'Appendix: The Principles of Newspeak'
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Short common-use term or phrase; no extended Orwell source text is included.; Rights basis:
+    common_usage_short_expression; short common-use term or phrase only, not extended source text.'

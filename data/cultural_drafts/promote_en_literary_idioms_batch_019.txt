@@ -1,0 +1,35 @@
+# Reviewed cultural draft entries for promotion batch 019.
+# Shakespeare (0.78, B2-C1)
+the rest is silence
+the readiness is all
+the short and the long of it
+# Classical allusions (0.76, B2-C1)
+sword of Damocles
+tantalising
+Stygian
+Prometheus unbound
+# Aesop (0.74, C1)
+the fox and the stork
+the crab and its mother
+# Pope (0.78, B2-C1)
+where angels fear to tread
+whatever is, is right
+master passion
+# KJV (0.78, B2)
+fire and brimstone
+flesh pots of Egypt
+a thorn in the flesh
+# Dickens (0.74, C1)
+Pecksniffian
+Oliver asks for more
+Our Mutual Friend
+# Walter Scott (0.78, C2)
+Old Mortality
+# Swift (0.78, C2)
+struldbrug
+# Carroll (0.74, C1)
+Wonderland
+Bandersnatch
+# Orwell (0.74, C1)
+bellyfeel
+oldthink
