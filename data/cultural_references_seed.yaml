@@ -4099,3 +4099,614 @@
   notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
     as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
     cap; previous confidence 0.84.
+- id: en_cultural_reference_off_with_his_head_d16f4027
+  language: en
+  canonical_reference: off with his head
+  reference_type: cultural_reference
+  surface_patterns:
+    - off with his head
+  short_explanation: A comic command for extreme punishment.
+  learner_level: B2
+  confidence: 0.88
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - off with their heads
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.off_with_his_head
+  source_work_key: mnemosyne.en.work.alice_s_adventures_in_wonderland
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 8
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_mad_tea_party_28a5d8a2
+  language: en
+  canonical_reference: Mad Tea-Party
+  reference_type: cultural_reference
+  surface_patterns:
+    - the Mad Tea-Party
+  short_explanation: A chaotic or absurd gathering.
+  learner_level: B2
+  confidence: 0.88
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - mad tea party
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.mad_tea_party
+  source_work_key: mnemosyne.en.work.alice_s_adventures_in_wonderland
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 7
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_queen_of_hearts_017491ec
+  language: en
+  canonical_reference: Queen of Hearts
+  reference_type: cultural_reference
+  surface_patterns:
+    - Queen of Hearts
+  short_explanation: A tyrannical, temperamental authority figure.
+  learner_level: B2
+  confidence: 0.88
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.queen_of_hearts
+  source_work_key: mnemosyne.en.work.alice_s_adventures_in_wonderland
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 8
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_walrus_and_the_carpenter_b2f827af
+  language: en
+  canonical_reference: Walrus and the Carpenter
+  reference_type: cultural_reference
+  surface_patterns:
+    - the Walrus and the Carpenter
+  short_explanation: A reference to charming but exploitative persuasion.
+  learner_level: C1
+  confidence: 0.88
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - Walrus and the Carpenter
+    - Walrus & the Carpenter
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.walrus_and_the_carpenter
+  source_work_key: mnemosyne.en.work.through_the_looking_glass
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Through the Looking-Glass
+  source_author: Lewis Carroll
+  source_location: Chapter 4
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_jabberwock_0bb534f9
+  language: en
+  canonical_reference: Jabberwock
+  reference_type: cultural_reference
+  surface_patterns:
+    - Jabberwock
+  short_explanation: A monstrous nonsense creature.
+  learner_level: C1
+  confidence: 0.88
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.jabberwock
+  source_work_key: mnemosyne.en.work.through_the_looking_glass
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Through the Looking-Glass
+  source_author: Lewis Carroll
+  source_location: Jabberwocky
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_literary_reference_heaven_of_hell_0b7aa3ab
+  language: en
+  canonical_reference: heaven of hell
+  reference_type: literary_reference
+  surface_patterns:
+    - a heaven of hell
+  short_explanation: Making the best of misery by the mind.
+  learner_level: C1
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.heaven_of_hell
+  source_work_key: mnemosyne.en.work.paradise_lost
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book 1
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.
+- id: en_literary_reference_hell_of_heaven_2d65e612
+  language: en
+  canonical_reference: hell of heaven
+  reference_type: literary_reference
+  surface_patterns:
+    - a hell of heaven
+  short_explanation: Turning good circumstances into misery.
+  learner_level: C1
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.hell_of_heaven
+  source_work_key: mnemosyne.en.work.paradise_lost
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book 1
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.
+- id: en_classical_or_scriptural_allusion_scapegoat_ca5e976d
+  language: en
+  canonical_reference: scapegoat
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - scapegoat
+  short_explanation: Someone blamed for others’ faults or failures.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.scapegoat
+  source_work_key: mnemosyne.en.work.leviticus
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Leviticus
+  source_author: King James Version
+  source_location: Leviticus 16:8
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_the_meek_shall_inherit_the_earth_7e296f2e
+  language: en
+  canonical_reference: the meek shall inherit the earth
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the meek shall inherit the earth
+  short_explanation: The humble will ultimately be rewarded.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - meek shall inherit the earth
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_meek_shall_inherit_the_earth
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 5:5
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_turn_the_other_cheek_032bc865
+  language: en
+  canonical_reference: turn the other cheek
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - turn the other cheek
+  short_explanation: Respond to insult or injury without retaliation.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.turn_the_other_cheek
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 5:39
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_the_prodigal_son_9f9d6d11
+  language: en
+  canonical_reference: the prodigal son
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the prodigal son
+  short_explanation: Someone who returns after wasteful absence.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - prodigal daughter
+    - prodigal son
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_prodigal_son
+  source_work_key: mnemosyne.en.work.gospel_of_luke
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Luke
+  source_author: King James Version
+  source_location: Luke 15:11–32
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_the_blind_leading_the_blind_6db49b03
+  language: en
+  canonical_reference: the blind leading the blind
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the blind leading the blind
+  short_explanation: Incompetent people guiding other incompetent people.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - blind leading the blind
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_blind_leading_the_blind
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 15:14
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_manna_from_heaven_6f1968c6
+  language: en
+  canonical_reference: manna from heaven
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - manna from heaven
+  short_explanation: Unexpected help or benefit.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.manna_from_heaven
+  source_work_key: mnemosyne.en.work.exodus
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Exodus
+  source_author: King James Version
+  source_location: Exodus 16
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_the_root_of_all_evil_6eb937e1
+  language: en
+  canonical_reference: the root of all evil
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the root of all evil
+  short_explanation: The cause from which serious wrongdoing grows.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - money is the root of all evil
+    - love of money is the root of all evil
+    - root of all evil
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_root_of_all_evil
+  source_work_key: mnemosyne.en.work.1_timothy
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 1 Timothy
+  source_author: King James Version
+  source_location: 1 Timothy 6:10
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_let_there_be_light_f544036d
+  language: en
+  canonical_reference: let there be light
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - let there be light
+  short_explanation: A phrase for illumination, creation, or sudden clarity.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.let_there_be_light
+  source_work_key: mnemosyne.en.work.genesis
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 1:3
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_nothing_new_under_the_sun_2d50c1f6
+  language: en
+  canonical_reference: nothing new under the sun
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - nothing new under the sun
+  short_explanation: Human events repeat; novelty is limited.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.nothing_new_under_the_sun
+  source_work_key: mnemosyne.en.work.ecclesiastes
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Ecclesiastes
+  source_author: King James Version
+  source_location: Ecclesiastes 1:9
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_literary_reference_green_eyed_monster_ed733b27
+  language: en
+  canonical_reference: green-eyed monster
+  reference_type: literary_reference
+  surface_patterns:
+    - green-eyed monster
+  short_explanation: Jealousy personified as a destructive creature.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - the green-eyed monster
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.green_eyed_monster
+  source_work_key: mnemosyne.en.work.othello
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Othello
+  source_author: William Shakespeare
+  source_location: Act III Scene 3
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: 'Commonly attributed to Shakespeare; attribution should be reviewed. Merged duplicate/overlapping
+    draft rows. Provenance candidates: en_shakespeare_phrases / Othello / William Shakespeare / Act III
+    Scene 3.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.'
+- id: en_literary_reference_good_riddance_71a9e997
+  language: en
+  canonical_reference: good riddance
+  reference_type: literary_reference
+  surface_patterns:
+    - good riddance
+  short_explanation: Relief that someone or something is gone.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.good_riddance
+  source_work_key: mnemosyne.en.work.troilus_and_cressida
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Troilus and Cressida
+  source_author: William Shakespeare
+  source_location: Act II Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_wild_goose_chase_0ab687ba
+  language: en
+  canonical_reference: wild-goose chase
+  reference_type: literary_reference
+  surface_patterns:
+    - wild-goose chase
+  short_explanation: A pointless or hopeless pursuit.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.wild_goose_chase
+  source_work_key: mnemosyne.en.work.romeo_and_juliet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Romeo and Juliet
+  source_author: William Shakespeare
+  source_location: Act II Scene 4
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_fair_play_9b60e216
+  language: en
+  canonical_reference: fair play
+  reference_type: literary_reference
+  surface_patterns:
+    - fair play
+  short_explanation: Honest or just treatment.
+  learner_level: B1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.fair_play
+  source_work_key: mnemosyne.en.work.the_tempest
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Tempest
+  source_author: William Shakespeare
+  source_location: Act V Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.
+- id: en_literary_reference_foregone_conclusion_d455846f
+  language: en
+  canonical_reference: foregone conclusion
+  reference_type: literary_reference
+  surface_patterns:
+    - foregone conclusion
+  short_explanation: An outcome treated as certain in advance.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - a foregone conclusion
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.foregone_conclusion
+  source_work_key: mnemosyne.en.work.othello
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Othello
+  source_author: William Shakespeare
+  source_location: Act III Scene 3
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: 'Commonly attributed to Shakespeare; attribution should be reviewed. Merged duplicate/overlapping
+    draft rows. Provenance candidates: en_shakespeare_phrases / Othello / William Shakespeare / Act III
+    Scene 3.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.'
+- id: en_classical_or_scriptural_allusion_midas_touch_1894e593
+  language: en
+  canonical_reference: Midas touch
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Midas touch
+  short_explanation: An ability to make everything profitable.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - the Midas touch
+  explanation_key: mnemosyne.en.explanation.classical_allusions.midas_touch
+  source_work_key: mnemosyne.en.work.midas_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Midas myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_pyrrhic_victory_1c5786ab
+  language: en
+  canonical_reference: Pyrrhic victory
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Pyrrhic victory
+  short_explanation: A victory so costly it is almost a defeat.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - a Pyrrhic victory
+  explanation_key: mnemosyne.en.explanation.classical_allusions.pyrrhic_victory
+  source_work_key: mnemosyne.en.work.life_of_pyrrhus
+  source_author_key: mnemosyne.en.author.plutarch_and_classical_history
+  source_work: Life of Pyrrhus
+  source_author: Plutarch and classical history
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_cultural_reference_unperson_40943e08
+  language: en
+  canonical_reference: unperson
+  reference_type: cultural_reference
+  surface_patterns:
+    - unperson
+  short_explanation: Someone erased from official existence or public memory.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.unperson
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: Part I, Chapter 5
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short
+    common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression;
+    short common-use term or phrase only, not extended source text.'
+- id: en_literary_reference_slough_of_despond_bf9153ca
+  language: en
+  canonical_reference: slough of despond
+  reference_type: literary_reference
+  surface_patterns:
+    - slough of despond
+  short_explanation: A state of deep discouragement or depression.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - the Slough of Despond
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.slough_of_despond
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part 1
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Bunyan phrase; some overlap with Biblical tradition.; Source URL added by v3 normalisation as
+    a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.90.
