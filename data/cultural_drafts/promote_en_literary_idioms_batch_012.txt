@@ -1,0 +1,32 @@
+# Reviewed cultural draft entries for promotion batch 012.
+# Shakespeare (0.78, B2-C1)
+murder most foul
+my kingdom for a horse
+now is the winter of our discontent
+out, damned spot
+parting is such sweet sorrow
+not slept one wink
+# Aesop (0.76, B1-B2)
+the tortoise and the hare
+the goose that laid the golden eggs
+the mouse that freed the lion
+farmer and the viper
+# Classical allusions (0.76, B2-C1)
+Icarus
+Medusa
+Janus-faced
+Mercurial
+# Dickens (0.78, B2-C1)
+Oliver Twist
+Tiny Tim
+Pip
+pickwickian
+# KJV (0.78, B2-C1)
+Behemoth
+Leviathan
+Jezebel
+as old as Methuselah
+a coat of many colours
+# Carroll (0.74, C1)
+Humpty Dumpty
+Mad Hatter

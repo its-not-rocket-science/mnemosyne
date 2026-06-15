@@ -69,6 +69,29 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_coat_of_many_colours_13567dce",
+      "canonical_reference": "a coat of many colours",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.a_coat_of_many_colours",
+      "id": "en_classical_or_scriptural_allusion_a_coat_of_many_colours_13567dce",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A distinctive, richly varied garment or symbol of favour.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "a coat of many colours"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_drop_in_the_bucket_474af896",
       "canonical_reference": "a drop in the bucket",
       "confidence": 0.84,
@@ -401,6 +424,29 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_as_old_as_methuselah_46e99234",
+      "canonical_reference": "as old as Methuselah",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.as_old_as_methuselah",
+      "id": "en_classical_or_scriptural_allusion_as_old_as_methuselah_46e99234",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Extremely old.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "as old as Methuselah"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_augean_stables_5f090af5",
       "canonical_reference": "Augean stables",
       "confidence": 0.76,
@@ -426,6 +472,29 @@
       "variants": [
         "clean the Augean stables",
         "Augean stables"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_behemoth_77204245",
+      "canonical_reference": "Behemoth",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.behemoth",
+      "id": "en_classical_or_scriptural_allusion_behemoth_77204245",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A huge, powerful thing or organisation.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "Behemoth"
       ]
     },
     {
@@ -1092,6 +1161,74 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_icarus_92ce9441",
+      "canonical_reference": "Icarus",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.icarus",
+      "id": "en_classical_or_scriptural_allusion_icarus_92ce9441",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A symbol of overambitious flight and downfall.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Daedalus and Icarus myth",
+      "source_work_key": "mnemosyne.en.work.daedalus_and_icarus_myth",
+      "surface_patterns": [
+        "Icarus"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_janus_faced_272e38fb",
+      "canonical_reference": "Janus-faced",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.janus_faced",
+      "id": "en_classical_or_scriptural_allusion_janus_faced_272e38fb",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Two-faced, double-looking, or duplicitous.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Roman myth",
+      "source_work_key": "mnemosyne.en.work.roman_myth",
+      "surface_patterns": [
+        "Janus-faced"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_jezebel_cbc22edd",
+      "canonical_reference": "Jezebel",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.jezebel",
+      "id": "en_classical_or_scriptural_allusion_jezebel_cbc22edd",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A culturally loaded name for a wicked or manipulative woman.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "1 Kings 16–21",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "1 Kings",
+      "source_work_key": "mnemosyne.en.work.1_kings",
+      "surface_patterns": [
+        "Jezebel"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_kill_the_fatted_calf_45d237e6",
       "canonical_reference": "kill the fatted calf",
       "confidence": 0.84,
@@ -1165,6 +1302,29 @@
       "source_work_key": "mnemosyne.en.work.genesis",
       "surface_patterns": [
         "let there be light"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_leviathan_bb236ad6",
+      "canonical_reference": "Leviathan",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.leviathan",
+      "id": "en_classical_or_scriptural_allusion_leviathan_bb236ad6",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Something huge, powerful, or monstrous.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "Leviathan"
       ]
     },
     {
@@ -1269,6 +1429,50 @@
       ],
       "variants": [
         "mark of the beast"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_medusa_a5958dd8",
+      "canonical_reference": "Medusa",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.medusa",
+      "id": "en_classical_or_scriptural_allusion_medusa_a5958dd8",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A terrifying figure whose gaze petrifies.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Medusa myth",
+      "source_work_key": "mnemosyne.en.work.medusa_myth",
+      "surface_patterns": [
+        "Medusa"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_mercurial_48bd2cd2",
+      "canonical_reference": "Mercurial",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.mercurial",
+      "id": "en_classical_or_scriptural_allusion_mercurial_48bd2cd2",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Changeable, quick, or lively.",
+      "source_author": "Roman tradition",
+      "source_author_key": "mnemosyne.en.author.roman_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Mercury myth",
+      "source_work_key": "mnemosyne.en.work.mercury_myth",
+      "surface_patterns": [
+        "Mercurial"
       ]
     },
     {
@@ -3303,6 +3507,78 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_oliver_twist_7727aea3",
+      "canonical_reference": "Oliver Twist",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.oliver_twist",
+      "id": "en_cultural_reference_oliver_twist_7727aea3",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A vulnerable child associated with poverty and pleading for more.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title character",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "Oliver Twist",
+      "source_work_key": "mnemosyne.en.work.oliver_twist",
+      "surface_patterns": [
+        "Oliver Twist"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_pickwickian_c892741b",
+      "canonical_reference": "pickwickian",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.pickwickian",
+      "id": "en_cultural_reference_pickwickian_c892741b",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "Humorous, benevolent, or used in a special non-literal sense.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title / whole work",
+      "source_url": "https://www.gutenberg.org/ebooks/580",
+      "source_work": "The Pickwick Papers",
+      "source_work_key": "mnemosyne.en.work.the_pickwick_papers",
+      "surface_patterns": [
+        "pickwickian"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_pip_9a67c355",
+      "canonical_reference": "Pip",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.pip",
+      "id": "en_cultural_reference_pip_9a67c355",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A poor boy whose hopes and status change dramatically.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Pip",
+      "source_url": "https://www.gutenberg.org/ebooks/1400",
+      "source_work": "Great Expectations",
+      "source_work_key": "mnemosyne.en.work.great_expectations",
+      "surface_patterns": [
+        "Pip"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_queen_of_hearts_017491ec",
       "canonical_reference": "Queen of Hearts",
       "confidence": 0.88,
@@ -3486,6 +3762,30 @@
         "through the looking glass",
         "looking-glass world",
         "looking glass world"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_tiny_tim_343f03cc",
+      "canonical_reference": "Tiny Tim",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.tiny_tim",
+      "id": "en_cultural_reference_tiny_tim_343f03cc",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A vulnerable child symbolising innocence and hardship.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Tiny Tim",
+      "source_url": "https://www.gutenberg.org/ebooks/46",
+      "source_work": "A Christmas Carol",
+      "source_work_key": "mnemosyne.en.work.a_christmas_carol",
+      "surface_patterns": [
+        "Tiny Tim"
       ]
     },
     {
@@ -5033,6 +5333,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_humpty_dumpty_dcf6d721",
+      "canonical_reference": "Humpty Dumpty",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.humpty_dumpty",
+      "id": "en_literary_reference_humpty_dumpty_dcf6d721",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A fragile figure after an irreversible fall.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 6",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Through the Looking-Glass",
+      "source_work_key": "mnemosyne.en.work.alice_books_and_poems",
+      "surface_patterns": [
+        "Humpty Dumpty"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_hurled_headlong_561607c7",
       "canonical_reference": "hurled headlong",
       "confidence": 0.82,
@@ -5293,6 +5617,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_mad_hatter_f0b47ab9",
+      "canonical_reference": "Mad Hatter",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.mad_hatter",
+      "id": "en_literary_reference_mad_hatter_f0b47ab9",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "An eccentric or irrational person.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 7",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice’s Adventures in Wonderland",
+      "source_work_key": "mnemosyne.en.work.alice_books_and_poems",
+      "surface_patterns": [
+        "Mad Hatter"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_method_in_the_madness_e4734316",
       "canonical_reference": "method in the madness",
       "confidence": 0.78,
@@ -5403,6 +5751,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_murder_most_foul_c73e4c60",
+      "canonical_reference": "murder most foul",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.murder_most_foul",
+      "id": "en_literary_reference_murder_most_foul_c73e4c60",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "An especially wicked murder.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 5",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.hamlet",
+      "surface_patterns": [
+        "murder most foul"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_murder_will_out_e269dc7c",
       "canonical_reference": "murder will out",
       "confidence": 0.74,
@@ -5424,6 +5796,30 @@
       "source_work_key": "mnemosyne.en.work.the_canterbury_tales",
       "surface_patterns": [
         "murder will out"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_my_kingdom_for_a_horse_be40cf9b",
+      "canonical_reference": "my kingdom for a horse",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.my_kingdom_for_a_horse",
+      "id": "en_literary_reference_my_kingdom_for_a_horse_be40cf9b",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Desperate need makes one value a simple thing.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act V Scene 4",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Richard III",
+      "source_work_key": "mnemosyne.en.work.richard_iii",
+      "surface_patterns": [
+        "my kingdom for a horse"
       ]
     },
     {
@@ -5455,6 +5851,58 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_not_slept_one_wink_f724b873",
+      "canonical_reference": "not slept one wink",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.not_slept_one_wink",
+      "id": "en_literary_reference_not_slept_one_wink_f724b873",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Not sleep at all.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 4",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Cymbeline",
+      "source_work_key": "mnemosyne.en.work.cymbeline",
+      "surface_patterns": [
+        "not slept one wink",
+        "not sleep a wink"
+      ],
+      "variants": [
+        "not sleep a wink"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_now_is_the_winter_of_our_discontent_690b2e85",
+      "canonical_reference": "now is the winter of our discontent",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.now_is_the_winter_of_our_discontent",
+      "id": "en_literary_reference_now_is_the_winter_of_our_discontent_690b2e85",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A famous opening for a time of grievance.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Richard III",
+      "source_work_key": "mnemosyne.en.work.richard_iii",
+      "surface_patterns": [
+        "now is the winter of our discontent"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_one_fell_swoop_9911e623",
       "canonical_reference": "one fell swoop",
       "confidence": 0.78,
@@ -5480,6 +5928,34 @@
       ],
       "variants": [
         "in one fell swoop"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_out_damned_spot_3b4a9c0e",
+      "canonical_reference": "out, damned spot",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.out_damned_spot",
+      "id": "en_literary_reference_out_damned_spot_3b4a9c0e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A sign of guilt that cannot be removed.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act V Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Macbeth",
+      "source_work_key": "mnemosyne.en.work.macbeth",
+      "surface_patterns": [
+        "out, damned spot",
+        "damned spot"
+      ],
+      "variants": [
+        "damned spot"
       ]
     },
     {
@@ -5556,6 +6032,34 @@
       ],
       "variants": [
         "paradise within thee"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_parting_is_such_sweet_sorrow_655538dd",
+      "canonical_reference": "parting is such sweet sorrow",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.parting_is_such_sweet_sorrow",
+      "id": "en_literary_reference_parting_is_such_sweet_sorrow_655538dd",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Leaving can be painful and pleasurable.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Romeo and Juliet",
+      "source_work_key": "mnemosyne.en.work.romeo_and_juliet",
+      "surface_patterns": [
+        "parting is such sweet sorrow",
+        "sweet sorrow"
+      ],
+      "variants": [
+        "sweet sorrow"
       ]
     },
     {
@@ -6326,6 +6830,35 @@
       ]
     },
     {
+      "canonical_form": "en:proverb:en_proverb_tradition_farmer_and_the_viper_d9409747",
+      "canonical_reference": "farmer and the viper",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.farmer_and_the_viper",
+      "id": "en_proverb_tradition_farmer_and_the_viper_d9409747",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Kindness to the malicious may be repaid with harm.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Farmer and the Viper",
+      "source_work_key": "mnemosyne.en.work.the_farmer_and_the_viper",
+      "surface_patterns": [
+        "the farmer and the viper",
+        "farmer and the viper",
+        "farmer & the viper"
+      ],
+      "variants": [
+        "farmer and the viper",
+        "farmer & the viper"
+      ]
+    },
+    {
       "canonical_form": "en:proverb:en_proverb_tradition_fox_and_the_crow_4bb0f7a1",
       "canonical_reference": "fox and the crow",
       "confidence": 0.76,
@@ -6499,6 +7032,97 @@
       "variants": [
         "fox and the grapes",
         "the fox & the grapes"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_goose_that_laid_the_golden_eggs_7b528643",
+      "canonical_reference": "the goose that laid the golden eggs",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_goose_that_laid_the_golden_eggs",
+      "id": "en_proverb_tradition_the_goose_that_laid_the_golden_eggs_7b528643",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "A valuable source of profit ruined by greed.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Goose and the Golden Eggs",
+      "source_work_key": "mnemosyne.en.work.the_goose_and_the_golden_eggs",
+      "surface_patterns": [
+        "the goose that laid the golden eggs",
+        "golden goose",
+        "goose that laid the golden eggs",
+        "goose that laid the golden egg",
+        "kill the goose that lays the golden eggs"
+      ],
+      "variants": [
+        "golden goose",
+        "goose that laid the golden eggs",
+        "goose that laid the golden egg",
+        "kill the goose that lays the golden eggs"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_mouse_that_freed_the_lion_696ce93b",
+      "canonical_reference": "the mouse that freed the lion",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_mouse_that_freed_the_lion",
+      "id": "en_proverb_tradition_the_mouse_that_freed_the_lion_696ce93b",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Small helpers can repay great kindness.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Lion and the Mouse",
+      "source_work_key": "mnemosyne.en.work.the_lion_and_the_mouse",
+      "surface_patterns": [
+        "the mouse that freed the lion",
+        "the lion and the mouse",
+        "mouse that freed the lion"
+      ],
+      "variants": [
+        "the lion and the mouse",
+        "mouse that freed the lion"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_tortoise_and_the_hare_674b7629",
+      "canonical_reference": "the tortoise and the hare",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_tortoise_and_the_hare",
+      "id": "en_proverb_tradition_the_tortoise_and_the_hare_674b7629",
+      "language": "en",
+      "learner_level": "B1",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "A contrast between persistence and overconfident speed.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Tortoise and the Hare",
+      "source_work_key": "mnemosyne.en.work.the_tortoise_and_the_hare",
+      "surface_patterns": [
+        "the tortoise and the hare",
+        "tortoise and the hare",
+        "the tortoise & the hare"
+      ],
+      "variants": [
+        "tortoise and the hare",
+        "the tortoise & the hare"
       ]
     }
   ],
