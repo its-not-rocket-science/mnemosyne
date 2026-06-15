@@ -508,7 +508,7 @@ def main(argv: list[str] | None = None) -> int:
         if args.dry_run:
             print("Proposed YAML block:")
             print(dump_yaml_block(promoted), end="")
-        else:
+        elif promoted:
             append_entries(args.seed, promoted)
         print(summary_text(promoted, skipped, refused))
     except PromotionError as exc:

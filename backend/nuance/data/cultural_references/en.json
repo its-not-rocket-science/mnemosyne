@@ -400,6 +400,32 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_ariadne_s_thread_c0c00e2f",
+      "canonical_reference": "Ariadne’s thread",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.ariadne_s_thread",
+      "id": "en_classical_or_scriptural_allusion_ariadne_s_thread_c0c00e2f",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A clue or method guiding one through complexity.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Theseus myth",
+      "source_work_key": "mnemosyne.en.work.theseus_myth",
+      "surface_patterns": [
+        "Ariadne’s thread",
+        "Ariadne's thread"
+      ],
+      "variants": [
+        "Ariadne's thread"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_armageddon_ea4865a8",
       "canonical_reference": "Armageddon",
       "confidence": 0.84,
@@ -754,6 +780,54 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_cross_the_styx_6be8e14c",
+      "canonical_reference": "cross the Styx",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.cross_the_styx",
+      "id": "en_classical_or_scriptural_allusion_cross_the_styx_6be8e14c",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.86.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Die or pass into the underworld.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Greek afterlife myth",
+      "source_work_key": "mnemosyne.en.work.greek_afterlife_myth",
+      "surface_patterns": [
+        "cross the Styx"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_crossing_the_rubicon_86efa296",
+      "canonical_reference": "crossing the Rubicon",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.crossing_the_rubicon",
+      "id": "en_classical_or_scriptural_allusion_crossing_the_rubicon_86efa296",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Pass a point of no return.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Roman history",
+      "source_work_key": "mnemosyne.en.work.roman_history",
+      "surface_patterns": [
+        "crossing the Rubicon",
+        "cross the Rubicon"
+      ],
+      "variants": [
+        "cross the Rubicon"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_david_and_goliath_9739407f",
       "canonical_reference": "David and Goliath",
       "confidence": 0.84,
@@ -779,6 +853,28 @@
       ],
       "variants": [
         "David & Goliath"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_deus_ex_machina_2e853ab3",
+      "canonical_reference": "deus ex machina",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.deus_ex_machina",
+      "id": "en_classical_or_scriptural_allusion_deus_ex_machina_2e853ab3",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "An artificial or unexpected solution to a plot problem.",
+      "source_author": "Classical theatre",
+      "source_author_key": "mnemosyne.en.author.classical_theatre",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Greek drama tradition",
+      "source_work_key": "mnemosyne.en.work.greek_drama_tradition",
+      "surface_patterns": [
+        "deus ex machina"
       ]
     },
     {
@@ -1552,6 +1648,34 @@
       "source_work_key": "mnemosyne.en.work.narcissus_myth",
       "surface_patterns": [
         "narcissism"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_noah_s_ark_aec83401",
+      "canonical_reference": "Noah’s ark",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.noah_s_ark",
+      "id": "en_classical_or_scriptural_allusion_noah_s_ark_aec83401",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A refuge preserving life from catastrophe.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 6–9",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.genesis",
+      "surface_patterns": [
+        "Noah’s ark",
+        "Noah's ark"
+      ],
+      "variants": [
+        "Noah's ark"
       ]
     },
     {
@@ -2703,6 +2827,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_big_brother_is_watching_22e6f2b5",
+      "canonical_reference": "Big Brother is watching",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.big_brother_is_watching",
+      "id": "en_cultural_reference_big_brother_is_watching_22e6f2b5",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A warning that authority is constantly watching.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Part I, Chapter 1",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four_and_animal_farm",
+      "surface_patterns": [
+        "Big Brother is watching"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_bleak_house_ff0eed17",
       "canonical_reference": "Bleak House",
       "confidence": 0.78,
@@ -2724,6 +2872,34 @@
       "source_work_key": "mnemosyne.en.work.bleak_house",
       "surface_patterns": [
         "Bleak House"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_boot_stamping_on_a_human_face_0df927f0",
+      "canonical_reference": "boot stamping on a human face",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.boot_stamping_on_a_human_face",
+      "id": "en_cultural_reference_boot_stamping_on_a_human_face_0df927f0",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A shorthand image of permanent authoritarian domination.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Part III, Chapter 3",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four",
+      "surface_patterns": [
+        "boot stamping on a human face",
+        "boot on a human face"
+      ],
+      "variants": [
+        "boot on a human face"
       ]
     },
     {
@@ -2920,6 +3096,54 @@
         "go down the rabbit hole",
         "went down the rabbit hole",
         "fall down the rabbit hole"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_drink_me_fbc5b25c",
+      "canonical_reference": "Drink me",
+      "confidence": 0.82,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.drink_me",
+      "id": "en_cultural_reference_drink_me_fbc5b25c",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Carroll reference; public-domain wording kept short.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A label inviting risky transformation or experiment.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 1",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice’s Adventures in Wonderland",
+      "source_work_key": "mnemosyne.en.work.alice_s_adventures_in_wonderland",
+      "surface_patterns": [
+        "drink me"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_eat_me_0c215404",
+      "canonical_reference": "Eat me",
+      "confidence": 0.82,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.eat_me",
+      "id": "en_cultural_reference_eat_me_0c215404",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Carroll reference; public-domain wording kept short.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A label inviting risky transformation or experiment.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 1",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice’s Adventures in Wonderland",
+      "source_work_key": "mnemosyne.en.work.alice_s_adventures_in_wonderland",
+      "surface_patterns": [
+        "eat me"
       ]
     },
     {
@@ -3179,6 +3403,34 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_i_m_late_i_m_late_23c87f52",
+      "canonical_reference": "I’m late, I’m late",
+      "confidence": 0.86,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.i_m_late_i_m_late",
+      "id": "en_cultural_reference_i_m_late_i_m_late_23c87f52",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Carroll reference; public-domain wording kept short.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A comic expression of frantic lateness.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 1",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice’s Adventures in Wonderland",
+      "source_work_key": "mnemosyne.en.work.alice_s_adventures_in_wonderland",
+      "surface_patterns": [
+        "I’m late, I’m late",
+        "I'm late, I'm late"
+      ],
+      "variants": [
+        "I'm late, I'm late"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_it_was_the_best_of_times_6a385768",
       "canonical_reference": "it was the best of times",
       "confidence": 0.78,
@@ -3331,6 +3583,86 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_madame_defarge_199c6796",
+      "canonical_reference": "Madame Defarge",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.madame_defarge",
+      "id": "en_cultural_reference_madame_defarge_199c6796",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A vengeful revolutionary figure calmly recording enemies.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Madame Defarge",
+      "source_url": "https://www.gutenberg.org/ebooks/98",
+      "source_work": "A Tale of Two Cities",
+      "source_work_key": "mnemosyne.en.work.a_tale_of_two_cities",
+      "surface_patterns": [
+        "Madame Defarge"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_march_hare_6d41f184",
+      "canonical_reference": "March Hare",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.march_hare",
+      "id": "en_cultural_reference_march_hare_6d41f184",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Carroll reference; public-domain wording kept short. Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review. Merged duplicate/overlapping draft rows. Provenance candidates: en_carroll_phrases / Alice’s Adventures in Wonderland / Lewis Carroll / Chapter 7; en_carroll_phrases / Alice books and poems / Lewis Carroll.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.82.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "An eccentric or madcap figure.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 7",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice’s Adventures in Wonderland",
+      "source_work_key": "mnemosyne.en.work.alice_s_adventures_in_wonderland",
+      "surface_patterns": [
+        "the March Hare",
+        "March Hare"
+      ],
+      "variants": [
+        "March Hare"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_marley_s_ghost_71524729",
+      "canonical_reference": "Marley’s ghost",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.marley_s_ghost",
+      "id": "en_cultural_reference_marley_s_ghost_71524729",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A warning figure from the past.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Stave 1",
+      "source_url": "https://www.gutenberg.org/ebooks/46",
+      "source_work": "A Christmas Carol",
+      "source_work_key": "mnemosyne.en.work.a_christmas_carol",
+      "surface_patterns": [
+        "Marley’s ghost",
+        "Marley's ghost"
+      ],
+      "variants": [
+        "Marley's ghost"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_memory_hole_0a6f2783",
       "canonical_reference": "memory hole",
       "confidence": 0.78,
@@ -3476,6 +3808,29 @@
       "source_work_key": "mnemosyne.en.work.nineteen_eighty_four",
       "surface_patterns": [
         "Newspeak"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_nonsense_verse_15895ef1",
+      "canonical_reference": "nonsense verse",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.nonsense_verse",
+      "id": "en_cultural_reference_nonsense_verse_15895ef1",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Carroll reference; public-domain wording kept short.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "Poetry using playful absurdity and invented language.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice and Looking-Glass poems",
+      "source_work_key": "mnemosyne.en.work.alice_and_looking_glass_poems",
+      "surface_patterns": [
+        "nonsense verse"
       ]
     },
     {
@@ -4192,6 +4547,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_all_the_world_s_a_stage_f02f75fb",
+      "canonical_reference": "all the world’s a stage",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.all_the_world_s_a_stage",
+      "id": "en_literary_reference_all_the_world_s_a_stage_f02f75fb",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Life is like a performance with roles.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 7",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "As You Like It",
+      "source_work_key": "mnemosyne.en.work.as_you_like_it",
+      "surface_patterns": [
+        "all the world’s a stage",
+        "all the world's a stage"
+      ],
+      "variants": [
+        "all the world's a stage"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_april_showers_622b9295",
       "canonical_reference": "April showers",
       "confidence": 0.74,
@@ -4455,6 +4838,46 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_burden_on_one_s_back_5a470b77",
+      "canonical_reference": "burden on one’s back",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.bunyan_phrases.burden_on_one_s_back",
+      "id": "en_literary_reference_burden_on_one_s_back_5a470b77",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Bunyan phrase; some overlap with Biblical tradition.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.82.",
+      "reference_type": "literary_reference",
+      "register": "religious",
+      "short_explanation": "A heavy guilt, duty, or emotional load.",
+      "source_author": "John Bunyan",
+      "source_author_key": "mnemosyne.en.author.john_bunyan",
+      "source_dataset": "en_bunyan_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part 1",
+      "source_url": "https://www.gutenberg.org/ebooks/131",
+      "source_work": "The Pilgrim’s Progress",
+      "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
+      "surface_patterns": [
+        "burden on one’s back",
+        "burden on his back",
+        "burden on my back",
+        "a burden on your back",
+        "burden on one's back",
+        "burden on your back",
+        "burden on her back",
+        "burden on their back"
+      ],
+      "variants": [
+        "burden on his back",
+        "burden on my back",
+        "a burden on your back",
+        "burden on one's back",
+        "burden on your back",
+        "burden on her back",
+        "burden on their back"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_celestial_city_c4ff4967",
       "canonical_reference": "celestial city",
       "confidence": 0.78,
@@ -4680,6 +5103,30 @@
       "source_work_key": "mnemosyne.en.work.paradise_lost",
       "surface_patterns": [
         "darkness visible"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_dish_fit_for_the_gods_80dca1e8",
+      "canonical_reference": "dish fit for the gods",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.dish_fit_for_the_gods",
+      "id": "en_literary_reference_dish_fit_for_the_gods_80dca1e8",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Something extremely fine or worthy.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Julius Caesar",
+      "source_work_key": "mnemosyne.en.work.julius_caesar",
+      "surface_patterns": [
+        "a dish fit for the gods"
       ]
     },
     {
@@ -5405,6 +5852,62 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_in_my_mind_s_eye_445e486b",
+      "canonical_reference": "in my mind’s eye",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.in_my_mind_s_eye",
+      "id": "en_literary_reference_in_my_mind_s_eye_445e486b",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "In imagination or memory.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.hamlet",
+      "surface_patterns": [
+        "in my mind’s eye",
+        "in my mind's eye"
+      ],
+      "variants": [
+        "in my mind's eye"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_infernal_serpent_fcd625b3",
+      "canonical_reference": "infernal serpent",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.infernal_serpent",
+      "id": "en_literary_reference_infernal_serpent_fcd625b3",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "Miltonic phrase; modern usage may be allusive rather than idiomatic.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A Satanic or treacherous figure.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 1",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Lost",
+      "source_work_key": "mnemosyne.en.work.paradise_lost",
+      "surface_patterns": [
+        "the infernal serpent",
+        "infernal serpent"
+      ],
+      "variants": [
+        "infernal serpent"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_into_thin_air_250d639d",
       "canonical_reference": "into thin air",
       "confidence": 0.78,
@@ -6063,6 +6566,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_pilgrim_s_progress_e0aa4d30",
+      "canonical_reference": "pilgrim’s progress",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.bunyan_phrases.pilgrim_s_progress",
+      "id": "en_literary_reference_pilgrim_s_progress_e0aa4d30",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Bunyan phrase; some overlap with Biblical tradition.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "literary_reference",
+      "register": "religious",
+      "short_explanation": "A difficult moral or spiritual journey.",
+      "source_author": "John Bunyan",
+      "source_author_key": "mnemosyne.en.author.john_bunyan",
+      "source_dataset": "en_bunyan_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title",
+      "source_url": "https://www.gutenberg.org/ebooks/131",
+      "source_work": "The Pilgrim’s Progress",
+      "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
+      "surface_patterns": [
+        "pilgrim’s progress",
+        "pilgrim's progress"
+      ],
+      "variants": [
+        "pilgrim's progress"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_pound_of_flesh_1ec1486a",
       "canonical_reference": "pound of flesh",
       "confidence": 0.78,
@@ -6643,6 +7174,35 @@
       ]
     },
     {
+      "canonical_form": "en:proverb:en_proverb_tradition_a_wolf_in_sheep_s_clothing_044da797",
+      "canonical_reference": "a wolf in sheep’s clothing",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.a_wolf_in_sheep_s_clothing",
+      "id": "en_proverb_tradition_a_wolf_in_sheep_s_clothing_044da797",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.82.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "A dangerous person disguised as harmless.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Wolf in Sheep’s Clothing",
+      "source_work_key": "mnemosyne.en.work.the_wolf_in_sheep_s_clothing",
+      "surface_patterns": [
+        "a wolf in sheep’s clothing",
+        "wolf in sheep's clothing",
+        "a wolf in sheep's clothing"
+      ],
+      "variants": [
+        "wolf in sheep's clothing",
+        "a wolf in sheep's clothing"
+      ]
+    },
+    {
       "canonical_form": "en:proverb:en_proverb_tradition_belling_the_cat_72cf37a8",
       "canonical_reference": "belling the cat",
       "confidence": 0.76,
@@ -6830,6 +7390,35 @@
       ]
     },
     {
+      "canonical_form": "en:proverb:en_proverb_tradition_don_t_count_your_chickens_before_they_hatch_151ca3f8",
+      "canonical_reference": "don’t count your chickens before they hatch",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.don_t_count_your_chickens_before_they_hatch",
+      "id": "en_proverb_tradition_don_t_count_your_chickens_before_they_hatch_151ca3f8",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Do not rely on success before it happens.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Milkmaid and Her Pail",
+      "source_work_key": "mnemosyne.en.work.the_milkmaid_and_her_pail",
+      "surface_patterns": [
+        "don’t count your chickens before they hatch",
+        "do not count your chickens before they hatch",
+        "don't count your chickens before they hatch"
+      ],
+      "variants": [
+        "do not count your chickens before they hatch",
+        "don't count your chickens before they hatch"
+      ]
+    },
+    {
       "canonical_form": "en:proverb:en_proverb_tradition_farmer_and_the_viper_d9409747",
       "canonical_reference": "farmer and the viper",
       "confidence": 0.76,
@@ -7003,6 +7592,64 @@
       "variants": [
         "ant and the grasshopper",
         "the ant & the grasshopper"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_boy_who_cried_wolf_706f804b",
+      "canonical_reference": "the boy who cried wolf",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_boy_who_cried_wolf",
+      "id": "en_proverb_tradition_the_boy_who_cried_wolf_706f804b",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "A person whose repeated false alarms lose credibility.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Boy Who Cried Wolf",
+      "source_work_key": "mnemosyne.en.work.the_boy_who_cried_wolf",
+      "surface_patterns": [
+        "the boy who cried wolf",
+        "boy who cried wolf"
+      ],
+      "variants": [
+        "boy who cried wolf"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_cat_s_paw_25300599",
+      "canonical_reference": "the cat’s paw",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_cat_s_paw",
+      "id": "en_proverb_tradition_the_cat_s_paw_25300599",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.78.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "A person used as another’s tool.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Monkey and the Cat",
+      "source_work_key": "mnemosyne.en.work.the_monkey_and_the_cat",
+      "surface_patterns": [
+        "the cat’s paw",
+        "cat's paw",
+        "the cat's paw",
+        "cat’s paw"
+      ],
+      "variants": [
+        "cat's paw",
+        "the cat's paw",
+        "cat’s paw"
       ]
     },
     {
