@@ -1,0 +1,37 @@
+# Reviewed cultural draft entries for promotion batch 021.
+# Shakespeare (0.78, B2)
+there’s the rub
+the world’s mine oyster
+# Classical allusions (0.76, B2)
+labyrinth
+Minotaur
+Muses
+# Aesop (0.74, C1)
+do not grasp at shadows
+the fox guarding the henhouse
+# Pope (0.74-0.78, C1)
+charms strike the sight, but merit wins the soul
+fools admire, but men of sense approve
+# KJV (0.78, B2)
+kick against the pricks
+# Chaucer (0.70-0.78, B2-C2)
+honest miller has a golden thumb
+smiler with the knife under the cloak
+love is blind
+# Bunyan (0.74, C1)
+Enchanted Ground
+By-ends
+Evangelist
+Faithful and Hopeful
+# Walter Scott (0.74, C1)
+Redgauntlet
+Waverley novel
+# Swift (0.74, C1)
+# Dickens (0.74, C1)
+Quilp
+Sairey Gamp
+# Carroll (0.74, C1)
+Caterpillar question
+# Milton (0.74, C1)
+hail horrors
+Miltonic
