@@ -3531,3 +3531,571 @@
   notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
     added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
     using provenance/attribution cap; previous confidence 0.86.
+- id: en_cultural_reference_chortle_bb95ae67
+  language: en
+  canonical_reference: chortle
+  reference_type: cultural_reference
+  surface_patterns:
+    - chortle
+  short_explanation: Laugh gleefully; a coined blend of chuckle and snort.
+  learner_level: B2
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - chortled
+    - chortling
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.chortle
+  source_work_key: mnemosyne.en.work.through_the_looking_glass
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Through the Looking-Glass
+  source_author: Lewis Carroll
+  source_location: Jabberwocky
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_jabberwocky_e5e6cdd0
+  language: en
+  canonical_reference: Jabberwocky
+  reference_type: cultural_reference
+  surface_patterns:
+    - Jabberwocky
+  short_explanation: Playful nonsense language or a nonsense poem.
+  learner_level: B2
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.jabberwocky
+  source_work_key: mnemosyne.en.work.through_the_looking_glass
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Through the Looking-Glass
+  source_author: Lewis Carroll
+  source_location: Jabberwocky
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_tweedledum_and_tweedledee_b3e133fa
+  language: en
+  canonical_reference: Tweedledum and Tweedledee
+  reference_type: cultural_reference
+  surface_patterns:
+    - Tweedledum and Tweedledee
+  short_explanation: Two people or options seen as almost indistinguishable.
+  learner_level: B2
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - Tweedledee and Tweedledum
+    - Tweedledum & Tweedledee
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.tweedledum_and_tweedledee
+  source_work_key: mnemosyne.en.work.through_the_looking_glass
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Through the Looking-Glass
+  source_author: Lewis Carroll
+  source_location: Chapter 4
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_galumph_a8e9004b
+  language: en
+  canonical_reference: galumph
+  reference_type: cultural_reference
+  surface_patterns:
+    - galumph
+  short_explanation: Move in a clumsy, triumphant way.
+  learner_level: C1
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - galumphed
+    - galumphing
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.galumph
+  source_work_key: mnemosyne.en.work.through_the_looking_glass
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Through the Looking-Glass
+  source_author: Lewis Carroll
+  source_location: Jabberwocky
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_slithy_toves_d0a30a38
+  language: en
+  canonical_reference: slithy toves
+  reference_type: cultural_reference
+  surface_patterns:
+    - slithy toves
+  short_explanation: A famous example of playful invented nonsense language.
+  learner_level: C1
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.slithy_toves
+  source_work_key: mnemosyne.en.work.through_the_looking_glass
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Through the Looking-Glass
+  source_author: Lewis Carroll
+  source_location: Jabberwocky
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_literary_reference_justify_the_ways_of_god_to_men_47244ae6
+  language: en
+  canonical_reference: justify the ways of God to men
+  reference_type: literary_reference
+  surface_patterns:
+    - justify the ways of God to men
+  short_explanation: Explain divine justice despite human suffering.
+  learner_level: C1
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.justify_the_ways_of_god_to_men
+  source_work_key: mnemosyne.en.work.paradise_lost
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book 1
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.
+- id: en_literary_reference_unconquerable_will_dcbbd516
+  language: en
+  canonical_reference: unconquerable will
+  reference_type: literary_reference
+  surface_patterns:
+    - the unconquerable will
+  short_explanation: Determination that refuses to submit.
+  learner_level: C1
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - unconquerable will
+  explanation_key: mnemosyne.en.explanation.milton_phrases.unconquerable_will
+  source_work_key: mnemosyne.en.work.paradise_lost
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book 1
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.
+- id: en_literary_reference_confusion_worse_confounded_cb79abcc
+  language: en
+  canonical_reference: confusion worse confounded
+  reference_type: literary_reference
+  surface_patterns:
+    - confusion worse confounded
+  short_explanation: Disorder made even more disorderly.
+  learner_level: C1
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.confusion_worse_confounded
+  source_work_key: mnemosyne.en.work.paradise_lost
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book 2
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.
+- id: en_classical_or_scriptural_allusion_eat_drink_and_be_merry_b2ec2289
+  language: en
+  canonical_reference: eat, drink, and be merry
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - eat, drink, and be merry
+  short_explanation: Enjoy life now, often with little concern for tomorrow.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - eat, drink, & be merry
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.eat_drink_and_be_merry
+  source_work_key: mnemosyne.en.work.ecclesiastes_luke
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Ecclesiastes; Luke
+  source_author: King James Version
+  source_location: Ecclesiastes 8:15; Luke 12:19
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_fight_the_good_fight_d5cd0708
+  language: en
+  canonical_reference: fight the good fight
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - fight the good fight
+  short_explanation: Struggle honourably for a worthy cause.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.fight_the_good_fight
+  source_work_key: mnemosyne.en.work.1_timothy
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 1 Timothy
+  source_author: King James Version
+  source_location: 1 Timothy 6:12
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_fly_in_the_ointment_e3212ebb
+  language: en
+  canonical_reference: fly in the ointment
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - fly in the ointment
+  short_explanation: A small flaw that spoils something good.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - flies in the ointment
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.fly_in_the_ointment
+  source_work_key: mnemosyne.en.work.ecclesiastes
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Ecclesiastes
+  source_author: King James Version
+  source_location: Ecclesiastes 10:1
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_four_horsemen_of_the_apocalypse_b48bcbf7
+  language: en
+  canonical_reference: four horsemen of the apocalypse
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - four horsemen of the apocalypse
+  short_explanation: Symbols of conquest, war, famine, and death.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.four_horsemen_of_the_apocalypse
+  source_work_key: mnemosyne.en.work.revelation
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Revelation
+  source_author: King James Version
+  source_location: Revelation 6
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_literary_reference_cruel_to_be_kind_049054f6
+  language: en
+  canonical_reference: cruel to be kind
+  reference_type: literary_reference
+  surface_patterns:
+    - cruel to be kind
+  short_explanation: Harshness intended to help.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.cruel_to_be_kind
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act III Scene 4
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_cold_comfort_8a8d94de
+  language: en
+  canonical_reference: cold comfort
+  reference_type: literary_reference
+  surface_patterns:
+    - cold comfort
+  short_explanation: Little or inadequate consolation.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.cold_comfort
+  source_work_key: mnemosyne.en.work.the_taming_of_the_shrew
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Taming of the Shrew
+  source_author: William Shakespeare
+  source_location: Act IV Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.82.
+- id: en_literary_reference_sorry_sight_f5b4dc3d
+  language: en
+  canonical_reference: sorry sight
+  reference_type: literary_reference
+  surface_patterns:
+    - a sorry sight
+  short_explanation: A distressing or shameful spectacle.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.sorry_sight
+  source_work_key: mnemosyne.en.work.macbeth
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act II Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_spotless_reputation_6bd673e8
+  language: en
+  canonical_reference: spotless reputation
+  reference_type: literary_reference
+  surface_patterns:
+    - a spotless reputation
+  short_explanation: A reputation free from blame.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.spotless_reputation
+  source_work_key: mnemosyne.en.work.richard_ii
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Richard II
+  source_author: William Shakespeare
+  source_location: Act I Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.
+- id: en_classical_or_scriptural_allusion_between_scylla_and_charybdis_a4a3945e
+  language: en
+  canonical_reference: between Scylla and Charybdis
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - between Scylla and Charybdis
+  short_explanation: Between two dangerous alternatives.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - Scylla and Charybdis
+    - between Scylla & Charybdis
+  explanation_key: mnemosyne.en.explanation.classical_allusions.between_scylla_and_charybdis
+  source_work_key: mnemosyne.en.work.odyssey
+  source_author_key: mnemosyne.en.author.homer
+  source_work: Odyssey
+  source_author: Homer
+  source_location: Book 12
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_cassandra_3497f74e
+  language: en
+  canonical_reference: Cassandra
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Cassandra
+  short_explanation: A truthful prophet whose warnings are ignored.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.cassandra
+  source_work_key: mnemosyne.en.work.trojan_war_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Trojan War myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_literary_reference_hope_springs_eternal_8a9658f5
+  language: en
+  canonical_reference: hope springs eternal
+  reference_type: literary_reference
+  surface_patterns:
+    - hope springs eternal
+  short_explanation: People naturally continue to hope.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - hope springs eternal in the human breast
+  explanation_key: mnemosyne.en.explanation.pope_phrases.hope_springs_eternal
+  source_work_key: mnemosyne.en.work.an_essay_on_man
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Man
+  source_author: Alexander Pope
+  source_location: Epistle 1
+  source_url: https://en.wikisource.org/wiki/An_Essay_on_Man
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable
+    public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous
+    confidence 0.90.
+- id: en_literary_reference_fools_rush_in_208d0c15
+  language: en
+  canonical_reference: fools rush in
+  reference_type: literary_reference
+  surface_patterns:
+    - fools rush in
+  short_explanation: Inexperienced people act where wiser people hesitate.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - fools rush in where angels fear to tread
+  explanation_key: mnemosyne.en.explanation.pope_phrases.fools_rush_in
+  source_work_key: mnemosyne.en.work.an_essay_on_criticism
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Criticism
+  source_author: Alexander Pope
+  source_location: Part 3
+  source_url: https://en.wikisource.org/wiki/An_Essay_on_Criticism
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable
+    public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous
+    confidence 0.90.
+- id: en_cultural_reference_it_was_the_best_of_times_6a385768
+  language: en
+  canonical_reference: it was the best of times
+  reference_type: cultural_reference
+  surface_patterns:
+    - it was the best of times
+  short_explanation: A paradoxical description of mixed conditions.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - best of times, worst of times
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.it_was_the_best_of_times
+  source_work_key: mnemosyne.en.work.a_tale_of_two_cities
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: A Tale of Two Cities
+  source_author: Charles Dickens
+  source_location: Opening
+  source_url: https://www.gutenberg.org/ebooks/98
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.90.
+- id: en_proverb_tradition_do_not_kill_the_goose_that_lays_the_golden_eggs_4a0a4251
+  language: en
+  canonical_reference: do not kill the goose that lays the golden eggs
+  reference_type: proverb_tradition
+  surface_patterns:
+    - do not kill the goose that lays the golden eggs
+  short_explanation: Do not destroy the source of your benefit.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - kill the golden goose
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.do_not_kill_the_goose_that_lays_the_golden_eggs
+  source_work_key: mnemosyne.en.work.the_goose_and_the_golden_eggs
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Goose and the Golden Eggs
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_the_ant_and_the_grasshopper_d354f8f2
+  language: en
+  canonical_reference: the ant and the grasshopper
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the ant and the grasshopper
+  short_explanation: A contrast between preparation and idleness.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - ant and the grasshopper
+    - the ant & the grasshopper
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_ant_and_the_grasshopper
+  source_work_key: mnemosyne.en.work.the_ant_and_the_grasshopper
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Ant and the Grasshopper
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
