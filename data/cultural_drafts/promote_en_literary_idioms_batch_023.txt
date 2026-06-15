@@ -1,0 +1,34 @@
+# Reviewed cultural draft entries for promotion batch 023.
+# Shakespeare (0.78, B2-C1)
+too much of a good thing
+uneasy lies the head that wears a crown
+merry war
+ocular proof
+# Classical allusions (0.74-0.76, C1)
+Cerberus
+Charon
+Daedalus
+Orestes
+# Aesop (0.74-0.76, C1)
+the milkmaid and her pail
+hare with many friends
+the lion’s skin
+# KJV (0.78, B2)
+lick the dust
+# Chaucer (0.74, C1)
+earnest and game
+field of folk
+worldly vanities
+# Swift (0.74, C1)
+Gulliverian
+Laputian
+Struldbrugg
+# Walter Scott (0.74, C1)
+Ivanhoe romance
+Rob Roy figure
+Jock o’ Hazeldean
+# Pope (0.74, C1)
+willing to wound and yet afraid to strike
+# Bunyan (0.74-0.78, C1)
+Christian
+Interpreter’s House
