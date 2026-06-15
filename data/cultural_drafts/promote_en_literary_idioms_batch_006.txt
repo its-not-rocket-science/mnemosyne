@@ -1,0 +1,33 @@
+# Reviewed cultural draft entries for promotion batch 006.
+# Carroll (0.88, B2-C1)
+off with his head
+Mad Tea-Party
+Queen of Hearts
+Walrus and the Carpenter
+Jabberwock
+# Milton (0.90, C1)
+heaven of hell
+hell of heaven
+# KJV (0.84, B1-C1)
+scapegoat
+the meek shall inherit the earth
+turn the other cheek
+the prodigal son
+the blind leading the blind
+manna from heaven
+the root of all evil
+let there be light
+nothing new under the sun
+# Shakespeare (0.78, B1-B2)
+green-eyed monster
+good riddance
+wild-goose chase
+fair play
+foregone conclusion
+# Classical allusions (0.76, B2)
+Midas touch
+Pyrrhic victory
+# Orwell (0.78, B2)
+unperson
+# Bunyan (0.78, C1)
+slough of despond
