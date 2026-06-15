@@ -2014,6 +2014,29 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_kick_against_the_pricks_89cc24b9",
+      "canonical_reference": "kick against the pricks",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.kick_against_the_pricks",
+      "id": "en_classical_or_scriptural_allusion_kick_against_the_pricks_89cc24b9",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "To resist authority or fate pointlessly.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "kick against the pricks"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_kill_the_fatted_calf_45d237e6",
       "canonical_reference": "kill the fatted calf",
       "confidence": 0.84,
@@ -2063,6 +2086,32 @@
       ],
       "variants": [
         "labor of love"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_labyrinth_31f30fce",
+      "canonical_reference": "labyrinth",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.labyrinth",
+      "id": "en_classical_or_scriptural_allusion_labyrinth_31f30fce",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage. Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review. Merged duplicate/overlapping draft rows. Provenance candidates: en_classical_allusions / Theseus myth / Classical tradition; en_classical_allusions / Classical Greek and Roman literature / myth / Classical tradition.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.82.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A complicated maze or confusing system.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Theseus myth",
+      "source_work_key": "mnemosyne.en.work.theseus_myth",
+      "surface_patterns": [
+        "the labyrinth",
+        "labyrinth"
+      ],
+      "variants": [
+        "labyrinth"
       ]
     },
     {
@@ -2380,6 +2429,58 @@
       "variants": [
         "land flowing with milk and honey",
         "milk & honey"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_minotaur_1a39c085",
+      "canonical_reference": "Minotaur",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.minotaur",
+      "id": "en_classical_or_scriptural_allusion_minotaur_1a39c085",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage. Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review. Merged duplicate/overlapping draft rows. Provenance candidates: en_classical_allusions / Theseus myth / Classical tradition; en_classical_allusions / Classical Greek and Roman literature / myth / Classical tradition.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.86.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A monstrous threat at the centre of a maze.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Theseus myth",
+      "source_work_key": "mnemosyne.en.work.theseus_myth",
+      "surface_patterns": [
+        "the Minotaur",
+        "Minotaur"
+      ],
+      "variants": [
+        "Minotaur"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_muses_5966c8c1",
+      "canonical_reference": "Muses",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.muses",
+      "id": "en_classical_or_scriptural_allusion_muses_5966c8c1",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Sources of artistic inspiration.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Greek myth",
+      "source_work_key": "mnemosyne.en.work.greek_myth",
+      "surface_patterns": [
+        "the Muses",
+        "Muses"
+      ],
+      "variants": [
+        "Muses"
       ]
     },
     {
@@ -6978,6 +7079,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_by_ends_b25850e8",
+      "canonical_reference": "By-ends",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.bunyan_phrases.by_ends",
+      "id": "en_literary_reference_by_ends_b25850e8",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "religious",
+      "short_explanation": "A hypocritical opportunist.",
+      "source_author": "John Bunyan",
+      "source_author_key": "mnemosyne.en.author.john_bunyan",
+      "source_dataset": "en_bunyan_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part I",
+      "source_url": "https://www.gutenberg.org/ebooks/131",
+      "source_work": "The Pilgrim’s Progress",
+      "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
+      "surface_patterns": [
+        "By-ends"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_callooh_callay_187f5773",
       "canonical_reference": "callooh callay",
       "confidence": 0.74,
@@ -6999,6 +7124,29 @@
       "source_work_key": "mnemosyne.en.work.alice_books_and_poems",
       "surface_patterns": [
         "callooh callay"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_caterpillar_question_34f2505f",
+      "canonical_reference": "Caterpillar question",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.caterpillar_question",
+      "id": "en_literary_reference_caterpillar_question_34f2505f",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "An identity-questioning encounter.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice books and poems",
+      "source_work_key": "mnemosyne.en.work.alice_books_and_poems",
+      "surface_patterns": [
+        "Caterpillar question"
       ]
     },
     {
@@ -7102,6 +7250,30 @@
       "source_work_key": "mnemosyne.en.work.macbeth",
       "surface_patterns": [
         "a charmed life"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_charms_strike_the_sight_but_merit_wins_the_soul_ee6cf385",
+      "canonical_reference": "charms strike the sight, but merit wins the soul",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.charms_strike_the_sight_but_merit_wins_the_soul",
+      "id": "en_literary_reference_charms_strike_the_sight_but_merit_wins_the_soul_ee6cf385",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.86.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Beauty attracts, but character wins lasting regard.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Canto 5",
+      "source_url": "https://en.wikisource.org/wiki/The_Rape_of_the_Lock",
+      "source_work": "The Rape of the Lock",
+      "source_work_key": "mnemosyne.en.work.the_rape_of_the_lock",
+      "surface_patterns": [
+        "charms strike the sight, but merit wins the soul"
       ]
     },
     {
@@ -7515,6 +7687,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_enchanted_ground_4b94e5ff",
+      "canonical_reference": "Enchanted Ground",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.bunyan_phrases.enchanted_ground",
+      "id": "en_literary_reference_enchanted_ground_4b94e5ff",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "religious",
+      "short_explanation": "A place of seductive spiritual sleep.",
+      "source_author": "John Bunyan",
+      "source_author_key": "mnemosyne.en.author.john_bunyan",
+      "source_dataset": "en_bunyan_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part I",
+      "source_url": "https://www.gutenberg.org/ebooks/131",
+      "source_work": "The Pilgrim’s Progress",
+      "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
+      "surface_patterns": [
+        "Enchanted Ground",
+        "Enchanted Garound"
+      ],
+      "variants": [
+        "Enchanted Garound"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_et_tu_brute_786cadf0",
       "canonical_reference": "et tu, Brute",
       "confidence": 0.78,
@@ -7563,6 +7763,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_evangelist_2be37c58",
+      "canonical_reference": "Evangelist",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.bunyan_phrases.evangelist",
+      "id": "en_literary_reference_evangelist_2be37c58",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "religious",
+      "short_explanation": "A guide urging spiritual progress.",
+      "source_author": "John Bunyan",
+      "source_author_key": "mnemosyne.en.author.john_bunyan",
+      "source_dataset": "en_bunyan_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part I",
+      "source_url": "https://www.gutenberg.org/ebooks/131",
+      "source_work": "The Pilgrim’s Progress",
+      "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
+      "surface_patterns": [
+        "Evangelist"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_fair_play_9b60e216",
       "canonical_reference": "fair play",
       "confidence": 0.78,
@@ -7584,6 +7808,34 @@
       "source_work_key": "mnemosyne.en.work.the_tempest",
       "surface_patterns": [
         "fair play"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_faithful_and_hopeful_30c20a67",
+      "canonical_reference": "Faithful and Hopeful",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.bunyan_phrases.faithful_and_hopeful",
+      "id": "en_literary_reference_faithful_and_hopeful_30c20a67",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "religious",
+      "short_explanation": "Companions representing faith and hope.",
+      "source_author": "John Bunyan",
+      "source_author_key": "mnemosyne.en.author.john_bunyan",
+      "source_dataset": "en_bunyan_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part I",
+      "source_url": "https://www.gutenberg.org/ebooks/131",
+      "source_work": "The Pilgrim’s Progress",
+      "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
+      "surface_patterns": [
+        "Faithful and Hopeful",
+        "Faithful & Hopeful"
+      ],
+      "variants": [
+        "Faithful & Hopeful"
       ]
     },
     {
@@ -7662,6 +7914,30 @@
       "source_work_key": "mnemosyne.en.work.alice_books_and_poems",
       "surface_patterns": [
         "follow the White Rabbit"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_fools_admire_but_men_of_sense_approve_48a97341",
+      "canonical_reference": "fools admire, but men of sense approve",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.fools_admire_but_men_of_sense_approve",
+      "id": "en_literary_reference_fools_admire_but_men_of_sense_approve_48a97341",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "formal",
+      "short_explanation": "Wise approval matters more than foolish admiration.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part II",
+      "source_url": "https://www.gutenberg.org/ebooks/9601",
+      "source_work": "An Essay on Criticism",
+      "source_work_key": "mnemosyne.en.work.poems_and_essays",
+      "surface_patterns": [
+        "fools admire, but men of sense approve"
       ]
     },
     {
@@ -7959,6 +8235,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_hail_horrors_033459b3",
+      "canonical_reference": "hail horrors",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.hail_horrors",
+      "id": "en_literary_reference_hail_horrors_033459b3",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A grandly defiant greeting to suffering.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book I",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Lost",
+      "source_work_key": "mnemosyne.en.work.paradise_lost_and_poems",
+      "surface_patterns": [
+        "hail horrors"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_hail_horrors_hail_cf7e1dcf",
       "canonical_reference": "hail horrors, hail",
       "confidence": 0.9,
@@ -8110,6 +8410,30 @@
       "variants": [
         "hoist by his own petard",
         "hoisted by his own petard"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_honest_miller_has_a_golden_thumb_08a95e20",
+      "canonical_reference": "honest miller has a golden thumb",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.chaucer_phrases.honest_miller_has_a_golden_thumb",
+      "id": "en_literary_reference_honest_miller_has_a_golden_thumb_08a95e20",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.82.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "An ironic suggestion that millers cheat customers.",
+      "source_author": "Geoffrey Chaucer",
+      "source_author_key": "mnemosyne.en.author.geoffrey_chaucer",
+      "source_dataset": "en_chaucer_phrases",
+      "source_license": "public_domain",
+      "source_location": "The Reeve’s Tale",
+      "source_url": "https://www.gutenberg.org/ebooks/2383",
+      "source_work": "The Canterbury Tales",
+      "source_work_key": "mnemosyne.en.work.the_canterbury_tales",
+      "surface_patterns": [
+        "every honest miller has a golden thumb"
       ]
     },
     {
@@ -8646,6 +8970,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_love_is_blind_6f40d240",
+      "canonical_reference": "love is blind",
+      "confidence": 0.7,
+      "explanation_key": "mnemosyne.en.explanation.chaucer_phrases.love_is_blind",
+      "id": "en_literary_reference_love_is_blind_6f40d240",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed. Chaucer-related attribution should be reviewed; some forms are modernised. Merged duplicate/overlapping draft rows. Provenance candidates: en_shakespeare_phrases / The Merchant of Venice / William Shakespeare / Act II Scene 6; en_chaucer_phrases / The Canterbury Tales / Geoffrey Chaucer / The Merchant’s Tale.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Love can prevent clear judgement.",
+      "source_author": "Geoffrey Chaucer",
+      "source_author_key": "mnemosyne.en.author.geoffrey_chaucer",
+      "source_dataset": "en_chaucer_phrases",
+      "source_license": "public_domain",
+      "source_location": "The Merchant’s Tale",
+      "source_url": "https://www.gutenberg.org/ebooks/2383",
+      "source_work": "The Canterbury Tales",
+      "source_work_key": "mnemosyne.en.work.the_canterbury_tales",
+      "surface_patterns": [
+        "love is blind",
+        "love is blynd"
+      ],
+      "variants": [
+        "love is blynd"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_lycidas_cf63903f",
       "canonical_reference": "Lycidas",
       "confidence": 0.74,
@@ -8852,6 +9204,30 @@
       ],
       "variants": [
         "milk of human kindness"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_miltonic_b1054c41",
+      "canonical_reference": "Miltonic",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.miltonic",
+      "id": "en_literary_reference_miltonic_b1054c41",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Grand, elevated, or severe in style.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "General cultural usage",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "John Milton’s works",
+      "source_work_key": "mnemosyne.en.work.paradise_lost_and_poems",
+      "surface_patterns": [
+        "Miltonic"
       ]
     },
     {
@@ -9685,6 +10061,52 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_quilp_545a852e",
+      "canonical_reference": "Quilp",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.quilp",
+      "id": "en_literary_reference_quilp_545a852e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A grotesque malicious villain.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "Novels and Christmas books",
+      "source_work_key": "mnemosyne.en.work.novels_and_christmas_books",
+      "surface_patterns": [
+        "Quilp"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_redgauntlet_5f6b21d8",
+      "canonical_reference": "Redgauntlet",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.walter_scott_phrases.redgauntlet",
+      "id": "en_literary_reference_redgauntlet_5f6b21d8",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A Jacobite or antiquarian Scott allusion.",
+      "source_author": "Walter Scott",
+      "source_author_key": "mnemosyne.en.author.walter_scott",
+      "source_dataset": "en_walter_scott_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/82",
+      "source_work": "Waverley novels and poems",
+      "source_work_key": "mnemosyne.en.work.waverley_novels_and_poems",
+      "surface_patterns": [
+        "Redgauntlet"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_rob_roy_c5dd1872",
       "canonical_reference": "Rob Roy",
       "confidence": 0.78,
@@ -9734,6 +10156,30 @@
       ],
       "variants": [
         "ruling passion"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_sairey_gamp_38b37eff",
+      "canonical_reference": "Sairey Gamp",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.sairey_gamp",
+      "id": "en_literary_reference_sairey_gamp_38b37eff",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A disreputable comic caregiver.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Character",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "Martin Chuzzlewit",
+      "source_work_key": "mnemosyne.en.work.novels_and_christmas_books",
+      "surface_patterns": [
+        "Sairey Gamp"
       ]
     },
     {
@@ -9922,6 +10368,34 @@
       ],
       "variants": [
         "the Slough of Despond"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_smiler_with_the_knife_under_the_cloak_8952ef5d",
+      "canonical_reference": "smiler with the knife under the cloak",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.chaucer_phrases.smiler_with_the_knife_under_the_cloak",
+      "id": "en_literary_reference_smiler_with_the_knife_under_the_cloak_8952ef5d",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.82.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A friendly-seeming but treacherous person.",
+      "source_author": "Geoffrey Chaucer",
+      "source_author_key": "mnemosyne.en.author.geoffrey_chaucer",
+      "source_dataset": "en_chaucer_phrases",
+      "source_license": "public_domain",
+      "source_location": "The Knight’s Tale",
+      "source_url": "https://www.gutenberg.org/ebooks/2383",
+      "source_work": "The Canterbury Tales",
+      "source_work_key": "mnemosyne.en.work.the_canterbury_tales",
+      "surface_patterns": [
+        "the smiler with the knife under the cloak",
+        "smiler with the knife under the cloak"
+      ],
+      "variants": [
+        "smiler with the knife under the cloak"
       ]
     },
     {
@@ -10459,6 +10933,74 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_the_world_s_mine_oyster_1a0c4a84",
+      "canonical_reference": "the world’s mine oyster",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.the_world_s_mine_oyster",
+      "id": "en_literary_reference_the_world_s_mine_oyster_1a0c4a84",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Many opportunities are available.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Merry Wives of Windsor",
+      "source_work_key": "mnemosyne.en.work.the_merry_wives_of_windsor",
+      "surface_patterns": [
+        "the world’s mine oyster",
+        "the world is my oyster",
+        "world’s mine oyster",
+        "the world’s my oyster",
+        "the world's mine oyster",
+        "the world's my oyster",
+        "the world is your oyster",
+        "the world is one's oyster"
+      ],
+      "variants": [
+        "the world is my oyster",
+        "world’s mine oyster",
+        "the world’s my oyster",
+        "the world's mine oyster",
+        "the world's my oyster",
+        "the world is your oyster",
+        "the world is one's oyster"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_there_s_the_rub_c8bb2abe",
+      "canonical_reference": "there’s the rub",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.there_s_the_rub",
+      "id": "en_literary_reference_there_s_the_rub_c8bb2abe",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "That is the difficulty or catch.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.hamlet",
+      "surface_patterns": [
+        "there’s the rub",
+        "there's the rub"
+      ],
+      "variants": [
+        "there's the rub"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_they_also_serve_e7c8bd19",
       "canonical_reference": "they also serve",
       "confidence": 0.74,
@@ -10716,6 +11258,29 @@
       "source_work_key": "mnemosyne.en.work.waverley",
       "surface_patterns": [
         "Waverley"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_waverley_novel_14dad1d7",
+      "canonical_reference": "Waverley novel",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.walter_scott_phrases.waverley_novel",
+      "id": "en_literary_reference_waverley_novel_14dad1d7",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A historical novel in Scott’s manner.",
+      "source_author": "Walter Scott",
+      "source_author_key": "mnemosyne.en.author.walter_scott",
+      "source_dataset": "en_walter_scott_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/82",
+      "source_work": "Waverley novels and poems",
+      "source_work_key": "mnemosyne.en.work.waverley_novels_and_poems",
+      "surface_patterns": [
+        "Waverley novel"
       ]
     },
     {
@@ -11194,6 +11759,29 @@
       "variants": [
         "cried wolf",
         "crying wolf"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_do_not_grasp_at_shadows_7d6047be",
+      "canonical_reference": "do not grasp at shadows",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.do_not_grasp_at_shadows",
+      "id": "en_proverb_tradition_do_not_grasp_at_shadows_7d6047be",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Do not lose real things chasing illusions.",
+      "source_author": "Aesop / fable tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_fable_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "Aesop’s Fables / fable tradition",
+      "source_work_key": "mnemosyne.en.work.aesop_s_fables_fable_tradition",
+      "surface_patterns": [
+        "do not grasp at shadows"
       ]
     },
     {
@@ -11812,6 +12400,33 @@
       "variants": [
         "fox and the stork",
         "the fox & the stork"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_fox_guarding_the_henhouse_2bb7bdac",
+      "canonical_reference": "the fox guarding the henhouse",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_fox_guarding_the_henhouse",
+      "id": "en_proverb_tradition_the_fox_guarding_the_henhouse_2bb7bdac",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "A dangerous person put in charge of victims.",
+      "source_author": "Aesop / fable tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_fable_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "Aesop’s Fables / fable tradition",
+      "source_work_key": "mnemosyne.en.work.aesop_s_fables_fable_tradition",
+      "surface_patterns": [
+        "the fox guarding the henhouse",
+        "fox guarding the henhouse"
+      ],
+      "variants": [
+        "fox guarding the henhouse"
       ]
     },
     {
