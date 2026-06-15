@@ -9053,3 +9053,600 @@
   notes: Bunyan phrase; some overlap with Biblical tradition.; Source URL added by v3 normalisation as
     a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
     cap; previous confidence 0.82.
+- id: en_literary_reference_shuffle_off_this_mortal_coil_38f9d580
+  language: en
+  canonical_reference: shuffle off this mortal coil
+  reference_type: literary_reference
+  surface_patterns:
+    - shuffle off this mortal coil
+  short_explanation: Die or leave earthly life.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - mortal coil
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.shuffle_off_this_mortal_coil
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act III Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_screw_your_courage_to_the_sticking_place_a35abc1d
+  language: en
+  canonical_reference: screw your courage to the sticking-place
+  reference_type: literary_reference
+  surface_patterns:
+    - screw your courage to the sticking-place
+  short_explanation: Strengthen your nerve for action.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - screw one's courage to the sticking-place
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.screw_your_courage_to_the_sticking_place
+  source_work_key: mnemosyne.en.work.macbeth
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act I Scene 7
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_send_him_packing_ab6cab46
+  language: en
+  canonical_reference: send him packing
+  reference_type: literary_reference
+  surface_patterns:
+    - send him packing
+  short_explanation: Dismiss someone abruptly.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - send someone packing
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.send_him_packing
+  source_work_key: mnemosyne.en.work.henry_iv_part_1
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Henry IV, Part 1
+  source_author: William Shakespeare
+  source_location: Act II Scene 4
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.82.
+- id: en_classical_or_scriptural_allusion_hubris_65548e05
+  language: en
+  canonical_reference: hubris
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - hubris
+  short_explanation: Excessive pride leading to downfall.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.hubris
+  source_work_key: mnemosyne.en.work.greek_tragedy
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Greek tragedy
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_halcyon_days_a07dd947
+  language: en
+  canonical_reference: halcyon days
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - halcyon days
+  short_explanation: A peaceful, happy time in the past.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.halcyon_days
+  source_work_key: mnemosyne.en.work.alcyone_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Alcyone myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.86.
+- id: en_classical_or_scriptural_allusion_fly_too_close_to_the_sun_42e44340
+  language: en
+  canonical_reference: fly too close to the sun
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - fly too close to the sun
+  short_explanation: Be ruined by excessive ambition.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.fly_too_close_to_the_sun
+  source_work_key: mnemosyne.en.work.daedalus_and_icarus_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Daedalus and Icarus myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_proverb_tradition_the_lion_s_share_fb14528e
+  language: en
+  canonical_reference: the lion’s share
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the lion’s share
+  short_explanation: The largest or dominant portion.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - lion's share
+    - the lion's share
+    - lion’s share
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_lion_s_share
+  source_work_key: mnemosyne.en.work.the_lion_s_share
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Lion’s Share
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_miser_and_his_gold_2781018f
+  language: en
+  canonical_reference: miser and his gold
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the miser and his gold
+  short_explanation: Unused wealth is no real benefit.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - miser and his gold
+    - miser & his gold
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.miser_and_his_gold
+  source_work_key: mnemosyne.en.work.the_miser_and_his_gold
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Miser and His Gold
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_cultural_reference_please_sir_i_want_some_more_875bf52e
+  language: en
+  canonical_reference: please, sir, I want some more
+  reference_type: cultural_reference
+  surface_patterns:
+    - please, sir, I want some more
+  short_explanation: A plea for more from someone powerless.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - I want some more
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.please_sir_i_want_some_more
+  source_work_key: mnemosyne.en.work.oliver_twist
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Oliver Twist
+  source_author: Charles Dickens
+  source_location: Chapter 2
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.90.
+- id: en_cultural_reference_mr_bumble_0a4a4c17
+  language: en
+  canonical_reference: Mr Bumble
+  reference_type: cultural_reference
+  surface_patterns:
+    - Mr Bumble
+  short_explanation: A pompous petty official.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.mr_bumble
+  source_work_key: mnemosyne.en.work.oliver_twist
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Oliver Twist
+  source_author: Charles Dickens
+  source_location: Mr Bumble
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.88.
+- id: en_cultural_reference_jarndyce_and_jarndyce_78ead3cd
+  language: en
+  canonical_reference: Jarndyce and Jarndyce
+  reference_type: cultural_reference
+  surface_patterns:
+    - Jarndyce and Jarndyce
+  short_explanation: A legal case that drags on ruinously.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - Jarndyce & Jarndyce
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.jarndyce_and_jarndyce
+  source_work_key: mnemosyne.en.work.bleak_house
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Bleak House
+  source_author: Charles Dickens
+  source_location: Chapter 1
+  source_url: https://www.gutenberg.org/ebooks/1023
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.90.
+- id: en_cultural_reference_prolefeed_53dfb6c1
+  language: en
+  canonical_reference: prolefeed
+  reference_type: cultural_reference
+  surface_patterns:
+    - prolefeed
+  short_explanation: Low-grade mass entertainment used to pacify people.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.prolefeed
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: Part I, Chapter 7
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short
+    common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression;
+    short common-use term or phrase only, not extended source text.'
+- id: en_cultural_reference_blackwhite_fde93186
+  language: en
+  canonical_reference: blackwhite
+  reference_type: cultural_reference
+  surface_patterns:
+    - blackwhite
+  short_explanation: The power to accept or assert opposite claims as true.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.blackwhite
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four_and_animal_farm
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: 'Appendix: The Principles of Newspeak'
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Short common-use term or phrase; no extended Orwell source text is included.; Rights basis:
+    common_usage_short_expression; short common-use term or phrase only, not extended source text.'
+- id: en_cultural_reference_crimethink_1b797adb
+  language: en
+  canonical_reference: crimethink
+  reference_type: cultural_reference
+  surface_patterns:
+    - crimethink
+  short_explanation: Thought treated as criminal by an authoritarian system.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.crimethink
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four_and_animal_farm
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: 'Appendix: The Principles of Newspeak'
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Short common-use term or phrase; no extended Orwell source text is included.; Rights basis:
+    common_usage_short_expression; short common-use term or phrase only, not extended source text.'
+- id: en_cultural_reference_doubleplusgood_1c44c07d
+  language: en
+  canonical_reference: doubleplusgood
+  reference_type: cultural_reference
+  surface_patterns:
+    - doubleplusgood
+  short_explanation: Intensified approval in Newspeak-style language.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.doubleplusgood
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four_and_animal_farm
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: 'Appendix: The Principles of Newspeak'
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Short common-use term or phrase; no extended Orwell source text is included.; Rights basis:
+    common_usage_short_expression; short common-use term or phrase only, not extended source text.'
+- id: en_cultural_reference_big_endian_665f7cba
+  language: en
+  canonical_reference: Big-endian
+  reference_type: cultural_reference
+  surface_patterns:
+    - Big-endian
+  short_explanation: A side in a petty technical or doctrinal dispute.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.swift_phrases.big_endian
+  source_work_key: mnemosyne.en.work.gulliver_s_travels
+  source_author_key: mnemosyne.en.author.jonathan_swift
+  source_work: Gulliver’s Travels
+  source_author: Jonathan Swift
+  source_location: Part I
+  source_url: https://www.gutenberg.org/ebooks/829
+  source_license: public_domain
+  source_dataset: en_swift_phrases
+  notes: Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.88.
+- id: en_cultural_reference_little_endian_2e29a26e
+  language: en
+  canonical_reference: Little-endian
+  reference_type: cultural_reference
+  surface_patterns:
+    - Little-endian
+  short_explanation: A side in a petty technical or doctrinal dispute.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.swift_phrases.little_endian
+  source_work_key: mnemosyne.en.work.gulliver_s_travels
+  source_author_key: mnemosyne.en.author.jonathan_swift
+  source_work: Gulliver’s Travels
+  source_author: Jonathan Swift
+  source_location: Part I
+  source_url: https://www.gutenberg.org/ebooks/829
+  source_license: public_domain
+  source_dataset: en_swift_phrases
+  notes: Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.88.
+- id: en_cultural_reference_laputan_1cda7a4a
+  language: en
+  canonical_reference: Laputan
+  reference_type: cultural_reference
+  surface_patterns:
+    - Laputan
+  short_explanation: Absurdly impractical or detached from reality.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.swift_phrases.laputan
+  source_work_key: mnemosyne.en.work.gulliver_s_travels
+  source_author_key: mnemosyne.en.author.jonathan_swift
+  source_work: Gulliver’s Travels
+  source_author: Jonathan Swift
+  source_location: Part III
+  source_url: https://www.gutenberg.org/ebooks/829
+  source_license: public_domain
+  source_dataset: en_swift_phrases
+  notes: Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.88.
+- id: en_literary_reference_better_to_reign_in_hell_fe414813
+  language: en
+  canonical_reference: better to reign in Hell
+  reference_type: literary_reference
+  surface_patterns:
+    - better to reign in Hell
+  short_explanation: Defiant preference for autonomy over submission.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.better_to_reign_in_hell
+  source_work_key: mnemosyne.en.work.paradise_lost_and_poems
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book I
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_fresh_woods_and_pastures_new_4d42b383
+  language: en
+  canonical_reference: fresh woods and pastures new
+  reference_type: literary_reference
+  surface_patterns:
+    - fresh woods and pastures new
+  short_explanation: A move toward new opportunities.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - fresh woods & pastures new
+  explanation_key: mnemosyne.en.explanation.milton_phrases.fresh_woods_and_pastures_new
+  source_work_key: mnemosyne.en.work.paradise_lost_and_poems
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Lycidas
+  source_author: John Milton
+  source_location: Final line
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_cheshire_cat_5659bdb1
+  language: en
+  canonical_reference: Cheshire Cat
+  reference_type: literary_reference
+  surface_patterns:
+    - Cheshire Cat
+  short_explanation: A grinning, vanishing, enigmatic figure.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.cheshire_cat
+  source_work_key: mnemosyne.en.work.alice_books_and_poems
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 6
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_literary_reference_follow_the_white_rabbit_d578826f
+  language: en
+  canonical_reference: follow the White Rabbit
+  reference_type: literary_reference
+  surface_patterns:
+    - follow the White Rabbit
+  short_explanation: Enter a strange or revelatory path.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.follow_the_white_rabbit
+  source_work_key: mnemosyne.en.work.alice_books_and_poems
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 1
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_am_i_my_brother_s_keeper_12748055
+  language: en
+  canonical_reference: Am I my brother’s keeper
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Am I my brother’s keeper
+  short_explanation: A question about responsibility for others.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - Am I my brother's keeper
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.am_i_my_brother_s_keeper
+  source_work_key: mnemosyne.en.work.genesis
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 4:9
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_a_job_s_comforter_afa04042
+  language: en
+  canonical_reference: a Job’s comforter
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a Job’s comforter
+  short_explanation: A person whose comfort makes distress worse.
+  learner_level: C1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - Job's comforter
+    - a Job's comforter
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_job_s_comforter
+  source_work_key: mnemosyne.en.work.job
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Job
+  source_author: King James Version
+  source_location: Book of Job
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.

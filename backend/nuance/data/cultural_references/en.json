@@ -176,6 +176,36 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_job_s_comforter_afa04042",
+      "canonical_reference": "a Job’s comforter",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.a_job_s_comforter",
+      "id": "en_classical_or_scriptural_allusion_a_job_s_comforter_afa04042",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A person whose comfort makes distress worse.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book of Job",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Job",
+      "source_work_key": "mnemosyne.en.work.job",
+      "surface_patterns": [
+        "a Job’s comforter",
+        "Job's comforter",
+        "a Job's comforter"
+      ],
+      "variants": [
+        "Job's comforter",
+        "a Job's comforter"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_law_unto_themselves_01714692",
       "canonical_reference": "a law unto themselves",
       "confidence": 0.84,
@@ -315,6 +345,34 @@
       "variants": [
         "alpha and omega",
         "Alpha & Omega"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_am_i_my_brother_s_keeper_12748055",
+      "canonical_reference": "Am I my brother’s keeper",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.am_i_my_brother_s_keeper",
+      "id": "en_classical_or_scriptural_allusion_am_i_my_brother_s_keeper_12748055",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A question about responsibility for others.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 4:9",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.genesis",
+      "surface_patterns": [
+        "Am I my brother’s keeper",
+        "Am I my brother's keeper"
+      ],
+      "variants": [
+        "Am I my brother's keeper"
       ]
     },
     {
@@ -1052,6 +1110,28 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_fly_too_close_to_the_sun_42e44340",
+      "canonical_reference": "fly too close to the sun",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.fly_too_close_to_the_sun",
+      "id": "en_classical_or_scriptural_allusion_fly_too_close_to_the_sun_42e44340",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Be ruined by excessive ambition.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Daedalus and Icarus myth",
+      "source_work_key": "mnemosyne.en.work.daedalus_and_icarus_myth",
+      "surface_patterns": [
+        "fly too close to the sun"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_four_horsemen_of_the_apocalypse_b48bcbf7",
       "canonical_reference": "four horsemen of the apocalypse",
       "confidence": 0.84,
@@ -1156,6 +1236,28 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_halcyon_days_a07dd947",
+      "canonical_reference": "halcyon days",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.halcyon_days",
+      "id": "en_classical_or_scriptural_allusion_halcyon_days_a07dd947",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.86.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A peaceful, happy time in the past.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Alcyone myth",
+      "source_work_key": "mnemosyne.en.work.alcyone_myth",
+      "surface_patterns": [
+        "halcyon days"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_helen_of_troy_57f5cbbe",
       "canonical_reference": "Helen of Troy",
       "confidence": 0.76,
@@ -1254,6 +1356,28 @@
       ],
       "variants": [
         "the mighty are fallen"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_hubris_65548e05",
+      "canonical_reference": "hubris",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.hubris",
+      "id": "en_classical_or_scriptural_allusion_hubris_65548e05",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Excessive pride leading to downfall.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Greek tragedy",
+      "source_work_key": "mnemosyne.en.work.greek_tragedy",
+      "surface_patterns": [
+        "hubris"
       ]
     },
     {
@@ -2851,6 +2975,54 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_big_endian_665f7cba",
+      "canonical_reference": "Big-endian",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.swift_phrases.big_endian",
+      "id": "en_cultural_reference_big_endian_665f7cba",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A side in a petty technical or doctrinal dispute.",
+      "source_author": "Jonathan Swift",
+      "source_author_key": "mnemosyne.en.author.jonathan_swift",
+      "source_dataset": "en_swift_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part I",
+      "source_url": "https://www.gutenberg.org/ebooks/829",
+      "source_work": "Gulliver’s Travels",
+      "source_work_key": "mnemosyne.en.work.gulliver_s_travels",
+      "surface_patterns": [
+        "Big-endian"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_blackwhite_fde93186",
+      "canonical_reference": "blackwhite",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.blackwhite",
+      "id": "en_cultural_reference_blackwhite_fde93186",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "The power to accept or assert opposite claims as true.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Appendix: The Principles of Newspeak",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four_and_animal_farm",
+      "surface_patterns": [
+        "blackwhite"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_bleak_house_ff0eed17",
       "canonical_reference": "Bleak House",
       "confidence": 0.78,
@@ -2957,6 +3129,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_crimethink_1b797adb",
+      "canonical_reference": "crimethink",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.crimethink",
+      "id": "en_cultural_reference_crimethink_1b797adb",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Thought treated as criminal by an authoritarian system.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Appendix: The Principles of Newspeak",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four_and_animal_farm",
+      "surface_patterns": [
+        "crimethink"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_curiouser_and_curiouser_0366a420",
       "canonical_reference": "curiouser and curiouser",
       "confidence": 0.9,
@@ -3036,6 +3232,30 @@
       ],
       "variants": [
         "Dormouse"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_doubleplusgood_1c44c07d",
+      "canonical_reference": "doubleplusgood",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.doubleplusgood",
+      "id": "en_cultural_reference_doubleplusgood_1c44c07d",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Intensified approval in Newspeak-style language.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Appendix: The Principles of Newspeak",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four_and_animal_farm",
+      "surface_patterns": [
+        "doubleplusgood"
       ]
     },
     {
@@ -3507,6 +3727,58 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_jarndyce_and_jarndyce_78ead3cd",
+      "canonical_reference": "Jarndyce and Jarndyce",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.jarndyce_and_jarndyce",
+      "id": "en_cultural_reference_jarndyce_and_jarndyce_78ead3cd",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A legal case that drags on ruinously.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 1",
+      "source_url": "https://www.gutenberg.org/ebooks/1023",
+      "source_work": "Bleak House",
+      "source_work_key": "mnemosyne.en.work.bleak_house",
+      "surface_patterns": [
+        "Jarndyce and Jarndyce",
+        "Jarndyce & Jarndyce"
+      ],
+      "variants": [
+        "Jarndyce & Jarndyce"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_laputan_1cda7a4a",
+      "canonical_reference": "Laputan",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.swift_phrases.laputan",
+      "id": "en_cultural_reference_laputan_1cda7a4a",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "Absurdly impractical or detached from reality.",
+      "source_author": "Jonathan Swift",
+      "source_author_key": "mnemosyne.en.author.jonathan_swift",
+      "source_dataset": "en_swift_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part III",
+      "source_url": "https://www.gutenberg.org/ebooks/829",
+      "source_work": "Gulliver’s Travels",
+      "source_work_key": "mnemosyne.en.work.gulliver_s_travels",
+      "surface_patterns": [
+        "Laputan"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_lilliputian_67a5b041",
       "canonical_reference": "Lilliputian",
       "confidence": 0.78,
@@ -3528,6 +3800,30 @@
       "source_work_key": "mnemosyne.en.work.gulliver_s_travels",
       "surface_patterns": [
         "Lilliputian"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_little_endian_2e29a26e",
+      "canonical_reference": "Little-endian",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.swift_phrases.little_endian",
+      "id": "en_cultural_reference_little_endian_2e29a26e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A side in a petty technical or doctrinal dispute.",
+      "source_author": "Jonathan Swift",
+      "source_author_key": "mnemosyne.en.author.jonathan_swift",
+      "source_dataset": "en_swift_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part I",
+      "source_url": "https://www.gutenberg.org/ebooks/829",
+      "source_work": "Gulliver’s Travels",
+      "source_work_key": "mnemosyne.en.work.gulliver_s_travels",
+      "surface_patterns": [
+        "Little-endian"
       ]
     },
     {
@@ -3787,6 +4083,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_mr_bumble_0a4a4c17",
+      "canonical_reference": "Mr Bumble",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.mr_bumble",
+      "id": "en_cultural_reference_mr_bumble_0a4a4c17",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A pompous petty official.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Mr Bumble",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "Oliver Twist",
+      "source_work_key": "mnemosyne.en.work.oliver_twist",
+      "surface_patterns": [
+        "Mr Bumble"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_newspeak_ac243393",
       "canonical_reference": "Newspeak",
       "confidence": 0.78,
@@ -3931,6 +4251,58 @@
       "source_work_key": "mnemosyne.en.work.great_expectations",
       "surface_patterns": [
         "Pip"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_please_sir_i_want_some_more_875bf52e",
+      "canonical_reference": "please, sir, I want some more",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.please_sir_i_want_some_more",
+      "id": "en_cultural_reference_please_sir_i_want_some_more_875bf52e",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A plea for more from someone powerless.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 2",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "Oliver Twist",
+      "source_work_key": "mnemosyne.en.work.oliver_twist",
+      "surface_patterns": [
+        "please, sir, I want some more",
+        "I want some more"
+      ],
+      "variants": [
+        "I want some more"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_prolefeed_53dfb6c1",
+      "canonical_reference": "prolefeed",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.prolefeed",
+      "id": "en_cultural_reference_prolefeed_53dfb6c1",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Low-grade mass entertainment used to pacify people.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Part I, Chapter 7",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four",
+      "surface_patterns": [
+        "prolefeed"
       ]
     },
     {
@@ -4708,6 +5080,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_better_to_reign_in_hell_fe414813",
+      "canonical_reference": "better to reign in Hell",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.better_to_reign_in_hell",
+      "id": "en_literary_reference_better_to_reign_in_hell_fe414813",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Defiant preference for autonomy over submission.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book I",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Lost",
+      "source_work_key": "mnemosyne.en.work.paradise_lost_and_poems",
+      "surface_patterns": [
+        "better to reign in Hell"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_better_to_reign_in_hell_than_serve_in_heaven_a4485cb9",
       "canonical_reference": "better to reign in Hell than serve in Heaven",
       "confidence": 0.9,
@@ -4927,6 +5323,30 @@
       "source_work_key": "mnemosyne.en.work.macbeth",
       "surface_patterns": [
         "a charmed life"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_cheshire_cat_5659bdb1",
+      "canonical_reference": "Cheshire Cat",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.cheshire_cat",
+      "id": "en_literary_reference_cheshire_cat_5659bdb1",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A grinning, vanishing, enigmatic figure.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 6",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice’s Adventures in Wonderland",
+      "source_work_key": "mnemosyne.en.work.alice_books_and_poems",
+      "surface_patterns": [
+        "Cheshire Cat"
       ]
     },
     {
@@ -5390,6 +5810,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_follow_the_white_rabbit_d578826f",
+      "canonical_reference": "follow the White Rabbit",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.follow_the_white_rabbit",
+      "id": "en_literary_reference_follow_the_white_rabbit_d578826f",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Enter a strange or revelatory path.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 1",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice’s Adventures in Wonderland",
+      "source_work_key": "mnemosyne.en.work.alice_books_and_poems",
+      "surface_patterns": [
+        "follow the White Rabbit"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_fools_rush_in_208d0c15",
       "canonical_reference": "fools rush in",
       "confidence": 0.78,
@@ -5467,6 +5911,34 @@
       "source_work_key": "mnemosyne.en.work.the_tempest",
       "surface_patterns": [
         "foul play"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_fresh_woods_and_pastures_new_4d42b383",
+      "canonical_reference": "fresh woods and pastures new",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.fresh_woods_and_pastures_new",
+      "id": "en_literary_reference_fresh_woods_and_pastures_new_4d42b383",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A move toward new opportunities.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Final line",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Lycidas",
+      "source_work_key": "mnemosyne.en.work.paradise_lost_and_poems",
+      "surface_patterns": [
+        "fresh woods and pastures new",
+        "fresh woods & pastures new"
+      ],
+      "variants": [
+        "fresh woods & pastures new"
       ]
     },
     {
@@ -6690,6 +7162,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_screw_your_courage_to_the_sticking_place_a35abc1d",
+      "canonical_reference": "screw your courage to the sticking-place",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.screw_your_courage_to_the_sticking_place",
+      "id": "en_literary_reference_screw_your_courage_to_the_sticking_place_a35abc1d",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Strengthen your nerve for action.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 7",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Macbeth",
+      "source_work_key": "mnemosyne.en.work.macbeth",
+      "surface_patterns": [
+        "screw your courage to the sticking-place",
+        "screw one's courage to the sticking-place"
+      ],
+      "variants": [
+        "screw one's courage to the sticking-place"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_sea_change_42be5e97",
       "canonical_reference": "sea change",
       "confidence": 0.78,
@@ -6715,6 +7215,62 @@
       ],
       "variants": [
         "a sea change"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_send_him_packing_ab6cab46",
+      "canonical_reference": "send him packing",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.send_him_packing",
+      "id": "en_literary_reference_send_him_packing_ab6cab46",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.82.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Dismiss someone abruptly.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 4",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Henry IV, Part 1",
+      "source_work_key": "mnemosyne.en.work.henry_iv_part_1",
+      "surface_patterns": [
+        "send him packing",
+        "send someone packing"
+      ],
+      "variants": [
+        "send someone packing"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_shuffle_off_this_mortal_coil_38f9d580",
+      "canonical_reference": "shuffle off this mortal coil",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.shuffle_off_this_mortal_coil",
+      "id": "en_literary_reference_shuffle_off_this_mortal_coil_38f9d580",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Die or leave earthly life.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.hamlet",
+      "surface_patterns": [
+        "shuffle off this mortal coil",
+        "mortal coil"
+      ],
+      "variants": [
+        "mortal coil"
       ]
     },
     {
@@ -7477,6 +8033,35 @@
       ]
     },
     {
+      "canonical_form": "en:proverb:en_proverb_tradition_miser_and_his_gold_2781018f",
+      "canonical_reference": "miser and his gold",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.miser_and_his_gold",
+      "id": "en_proverb_tradition_miser_and_his_gold_2781018f",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Unused wealth is no real benefit.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Miser and His Gold",
+      "source_work_key": "mnemosyne.en.work.the_miser_and_his_gold",
+      "surface_patterns": [
+        "the miser and his gold",
+        "miser and his gold",
+        "miser & his gold"
+      ],
+      "variants": [
+        "miser and his gold",
+        "miser & his gold"
+      ]
+    },
+    {
       "canonical_form": "en:proverb:en_proverb_tradition_north_wind_and_the_sun_cc52558e",
       "canonical_reference": "north wind and the sun",
       "confidence": 0.76,
@@ -7712,6 +8297,37 @@
         "goose that laid the golden eggs",
         "goose that laid the golden egg",
         "kill the goose that lays the golden eggs"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_lion_s_share_fb14528e",
+      "canonical_reference": "the lion’s share",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_lion_s_share",
+      "id": "en_proverb_tradition_the_lion_s_share_fb14528e",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "The largest or dominant portion.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Lion’s Share",
+      "source_work_key": "mnemosyne.en.work.the_lion_s_share",
+      "surface_patterns": [
+        "the lion’s share",
+        "lion's share",
+        "the lion's share",
+        "lion’s share"
+      ],
+      "variants": [
+        "lion's share",
+        "the lion's share",
+        "lion’s share"
       ]
     },
     {
