@@ -14327,3 +14327,570 @@
   source_dataset: en_carroll_phrases
   notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
     review.
+- id: en_literary_reference_too_much_of_a_good_thing_e643ab75
+  language: en
+  canonical_reference: too much of a good thing
+  reference_type: literary_reference
+  surface_patterns:
+    - too much of a good thing
+  short_explanation: Even something pleasant can become excessive.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.too_much_of_a_good_thing
+  source_work_key: mnemosyne.en.work.as_you_like_it
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: As You Like It
+  source_author: William Shakespeare
+  source_location: Act IV Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_uneasy_lies_the_head_that_wears_a_crown_630f99c1
+  language: en
+  canonical_reference: uneasy lies the head that wears a crown
+  reference_type: literary_reference
+  surface_patterns:
+    - uneasy lies the head that wears a crown
+  short_explanation: Power brings anxiety and responsibility.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.uneasy_lies_the_head_that_wears_a_crown
+  source_work_key: mnemosyne.en.work.henry_iv_part_2
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Henry IV, Part 2
+  source_author: William Shakespeare
+  source_location: Act III Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_merry_war_7d15881b
+  language: en
+  canonical_reference: merry war
+  reference_type: literary_reference
+  surface_patterns:
+    - merry war
+  short_explanation: Witty, playful verbal sparring.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.merry_war
+  source_work_key: mnemosyne.en.work.much_ado_about_nothing
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Much Ado About Nothing
+  source_author: William Shakespeare
+  source_location: Act I Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_ocular_proof_e162050b
+  language: en
+  canonical_reference: ocular proof
+  reference_type: literary_reference
+  surface_patterns:
+    - ocular proof
+  short_explanation: Direct visual evidence.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.ocular_proof
+  source_work_key: mnemosyne.en.work.othello
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Othello
+  source_author: William Shakespeare
+  source_location: Act III Scene 3
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_classical_or_scriptural_allusion_cerberus_f755e2b8
+  language: en
+  canonical_reference: Cerberus
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Cerberus
+  short_explanation: A fierce guardian.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.cerberus
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_charon_f1030c93
+  language: en
+  canonical_reference: Charon
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Charon
+  short_explanation: A ferryman of the dead; grim passage figure.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.charon
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_daedalus_787e2eed
+  language: en
+  canonical_reference: Daedalus
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Daedalus
+  short_explanation: A brilliant artificer or ingenious maker.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.daedalus
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_orestes_e144585a
+  language: en
+  canonical_reference: Orestes
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Orestes
+  short_explanation: A figure associated with vengeance and guilt.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.orestes
+  source_work_key: mnemosyne.en.work.oresteia
+  source_author_key: mnemosyne.en.author.aeschylus
+  source_work: Oresteia
+  source_author: Aeschylus
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.78.
+- id: en_proverb_tradition_the_milkmaid_and_her_pail_e914fc0c
+  language: en
+  canonical_reference: the milkmaid and her pail
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the milkmaid and her pail
+  short_explanation: Do not build plans on imaginary gains.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - milkmaid and her pail
+    - the milkmaid & her pail
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_milkmaid_and_her_pail
+  source_work_key: mnemosyne.en.work.aesop_s_fables_fable_tradition
+  source_author_key: mnemosyne.en.author.aesop_fable_tradition
+  source_work: Aesop’s Fables / fable tradition
+  source_author: Aesop / fable tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_proverb_tradition_hare_with_many_friends_59314caf
+  language: en
+  canonical_reference: hare with many friends
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the hare with many friends
+  short_explanation: Many casual friends may not help in need.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - hare with many friends
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.hare_with_many_friends
+  source_work_key: mnemosyne.en.work.the_hare_with_many_friends
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Hare with Many Friends
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.80.
+- id: en_proverb_tradition_the_lion_s_skin_4aae25b1
+  language: en
+  canonical_reference: the lion’s skin
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the lion’s skin
+  short_explanation: False appearance of courage or power.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - lion’s skin
+    - the lion's skin
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_lion_s_skin
+  source_work_key: mnemosyne.en.work.aesop_s_fables_fable_tradition
+  source_author_key: mnemosyne.en.author.aesop_fable_tradition
+  source_work: Aesop’s Fables / fable tradition
+  source_author: Aesop / fable tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_classical_or_scriptural_allusion_lick_the_dust_a6507f3c
+  language: en
+  canonical_reference: lick the dust
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - lick the dust
+  short_explanation: To be utterly defeated or humiliated.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.lick_the_dust
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_literary_reference_earnest_and_game_6636c460
+  language: en
+  canonical_reference: earnest and game
+  reference_type: literary_reference
+  surface_patterns:
+    - earnest and game
+  short_explanation: Seriousness and play together.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - earnest & game
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.earnest_and_game
+  source_work_key: mnemosyne.en.work.the_canterbury_tales_and_works
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: The Canterbury Tales and works
+  source_author: Geoffrey Chaucer
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_field_of_folk_198a964f
+  language: en
+  canonical_reference: field of folk
+  reference_type: literary_reference
+  surface_patterns:
+    - field of folk
+  short_explanation: A crowd or mass of people.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.field_of_folk
+  source_work_key: mnemosyne.en.work.the_canterbury_tales_and_works
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: The Canterbury Tales and works
+  source_author: Geoffrey Chaucer
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_worldly_vanities_29377d61
+  language: en
+  canonical_reference: worldly vanities
+  reference_type: literary_reference
+  surface_patterns:
+    - worldly vanities
+  short_explanation: Empty attractions of worldly life.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.worldly_vanities
+  source_work_key: mnemosyne.en.work.the_canterbury_tales_and_works
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: The Canterbury Tales and works
+  source_author: Geoffrey Chaucer
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_gulliverian_431a511f
+  language: en
+  canonical_reference: Gulliverian
+  reference_type: literary_reference
+  surface_patterns:
+    - Gulliverian
+  short_explanation: Satirically travel-like or perspectival.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.swift_phrases.gulliverian
+  source_work_key: mnemosyne.en.work.gulliver_s_travels_and_satire
+  source_author_key: mnemosyne.en.author.jonathan_swift
+  source_work: Gulliver’s Travels and satire
+  source_author: Jonathan Swift
+  source_url: https://www.gutenberg.org/ebooks/829
+  source_license: public_domain
+  source_dataset: en_swift_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_laputian_008d73ec
+  language: en
+  canonical_reference: Laputian
+  reference_type: literary_reference
+  surface_patterns:
+    - Laputian
+  short_explanation: Abstract, impractical, or detached from reality.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.swift_phrases.laputian
+  source_work_key: mnemosyne.en.work.gulliver_s_travels_and_satire
+  source_author_key: mnemosyne.en.author.jonathan_swift
+  source_work: Gulliver’s Travels and satire
+  source_author: Jonathan Swift
+  source_url: https://www.gutenberg.org/ebooks/829
+  source_license: public_domain
+  source_dataset: en_swift_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_struldbrugg_6d06f95f
+  language: en
+  canonical_reference: Struldbrugg
+  reference_type: literary_reference
+  surface_patterns:
+    - Struldbrugg
+  short_explanation: An immortal but miserable person.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.swift_phrases.struldbrugg
+  source_work_key: mnemosyne.en.work.gulliver_s_travels_and_satire
+  source_author_key: mnemosyne.en.author.jonathan_swift
+  source_work: Gulliver’s Travels and satire
+  source_author: Jonathan Swift
+  source_url: https://www.gutenberg.org/ebooks/829
+  source_license: public_domain
+  source_dataset: en_swift_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_ivanhoe_romance_34358065
+  language: en
+  canonical_reference: Ivanhoe romance
+  reference_type: literary_reference
+  surface_patterns:
+    - Ivanhoe romance
+  short_explanation: A medieval romance of chivalry and identity.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.ivanhoe_romance
+  source_work_key: mnemosyne.en.work.waverley_novels_and_poems
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: Waverley novels and poems
+  source_author: Walter Scott
+  source_url: https://www.gutenberg.org/ebooks/82
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_rob_roy_figure_d94a6e95
+  language: en
+  canonical_reference: Rob Roy figure
+  reference_type: literary_reference
+  surface_patterns:
+    - Rob Roy figure
+  short_explanation: A romantic outlaw or Highland rebel.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.rob_roy_figure
+  source_work_key: mnemosyne.en.work.waverley_novels_and_poems
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: Waverley novels and poems
+  source_author: Walter Scott
+  source_url: https://www.gutenberg.org/ebooks/82
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_jock_o_hazeldean_4e3b5f1f
+  language: en
+  canonical_reference: Jock o’ Hazeldean
+  reference_type: literary_reference
+  surface_patterns:
+    - Jock o’ Hazeldean
+  short_explanation: A romantic ballad allusion.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - Jock o' Hazeldean
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.jock_o_hazeldean
+  source_work_key: mnemosyne.en.work.waverley_novels_and_poems
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: Waverley novels and poems
+  source_author: Walter Scott
+  source_url: https://www.gutenberg.org/ebooks/82
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_willing_to_wound_and_yet_afraid_to_strike_42d67944
+  language: en
+  canonical_reference: willing to wound and yet afraid to strike
+  reference_type: literary_reference
+  surface_patterns:
+    - willing to wound and yet afraid to strike
+  short_explanation: Malicious but cowardly criticism.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  variants:
+    - willing to wound & yet afraid to strike
+  explanation_key: mnemosyne.en.explanation.pope_phrases.willing_to_wound_and_yet_afraid_to_strike
+  source_work_key: mnemosyne.en.work.poems_and_essays
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: Prologue to the Satires
+  source_author: Alexander Pope
+  source_location: Line 203
+  source_url: https://www.gutenberg.org/ebooks/9601
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_literary_reference_christian_ec9b3e09
+  language: en
+  canonical_reference: Christian
+  reference_type: literary_reference
+  surface_patterns:
+    - Christian
+  short_explanation: A pilgrim figure representing the faithful soul.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.christian
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part 1
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Bunyan phrase; some overlap with Biblical tradition.; Source URL added by v3 normalisation as
+    a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.80.
+- id: en_literary_reference_interpreter_s_house_04e2ba31
+  language: en
+  canonical_reference: Interpreter’s House
+  reference_type: literary_reference
+  surface_patterns:
+    - Interpreter’s House
+  short_explanation: A place of moral instruction.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - Interpreter's House
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.interpreter_s_house
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part I
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
