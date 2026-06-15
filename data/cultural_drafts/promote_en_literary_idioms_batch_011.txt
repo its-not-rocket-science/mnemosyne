@@ -1,0 +1,34 @@
+# Reviewed cultural draft entries for promotion batch 011.
+# Milton (0.82-0.90, C1-C2)
+hail horrors, hail
+hurled headlong
+# Shakespeare (0.78, B2-C1)
+more in sorrow than in anger
+neither rhyme nor reason
+one fell swoop
+pound of flesh
+primrose path
+salad days
+sea change
+tower of strength
+# Walter Scott (0.78, C1)
+Ivanhoe
+Rob Roy
+Lady of the Lake
+Waverley
+# Bunyan (0.78, C1)
+Giant Despair
+Mr Worldly Wiseman
+celestial city
+wicket gate
+# Pope (0.78, C1)
+act well your part
+drink deep, or taste not
+feast of reason and flow of soul
+# Classical allusions (0.76, C1)
+Calliope
+Furies
+Tantalus
+# Chaucer (0.78, C1)
+as fresh as is the month of May
+the life so short, the craft so long to learn
