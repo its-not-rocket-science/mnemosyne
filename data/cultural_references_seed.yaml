@@ -8442,3 +8442,614 @@
   source_dataset: en_carroll_phrases
   notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
     review.
+- id: en_cultural_reference_i_m_late_i_m_late_23c87f52
+  language: en
+  canonical_reference: I’m late, I’m late
+  reference_type: cultural_reference
+  surface_patterns:
+    - I’m late, I’m late
+  short_explanation: A comic expression of frantic lateness.
+  learner_level: B2
+  confidence: 0.86
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - I'm late, I'm late
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.i_m_late_i_m_late
+  source_work_key: mnemosyne.en.work.alice_s_adventures_in_wonderland
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 1
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_drink_me_fbc5b25c
+  language: en
+  canonical_reference: Drink me
+  reference_type: cultural_reference
+  surface_patterns:
+    - drink me
+  short_explanation: A label inviting risky transformation or experiment.
+  learner_level: B2
+  confidence: 0.82
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.drink_me
+  source_work_key: mnemosyne.en.work.alice_s_adventures_in_wonderland
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 1
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_eat_me_0c215404
+  language: en
+  canonical_reference: Eat me
+  reference_type: cultural_reference
+  surface_patterns:
+    - eat me
+  short_explanation: A label inviting risky transformation or experiment.
+  learner_level: B2
+  confidence: 0.82
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.eat_me
+  source_work_key: mnemosyne.en.work.alice_s_adventures_in_wonderland
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 1
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_nonsense_verse_15895ef1
+  language: en
+  canonical_reference: nonsense verse
+  reference_type: cultural_reference
+  surface_patterns:
+    - nonsense verse
+  short_explanation: Poetry using playful absurdity and invented language.
+  learner_level: B2
+  confidence: 0.8
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.nonsense_verse
+  source_work_key: mnemosyne.en.work.alice_and_looking_glass_poems
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice and Looking-Glass poems
+  source_author: Lewis Carroll
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_march_hare_6d41f184
+  language: en
+  canonical_reference: March Hare
+  reference_type: cultural_reference
+  surface_patterns:
+    - the March Hare
+  short_explanation: An eccentric or madcap figure.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - March Hare
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.march_hare
+  source_work_key: mnemosyne.en.work.alice_s_adventures_in_wonderland
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 7
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: 'Carroll reference; public-domain wording kept short. Expanded Mnemosyne candidate; source attribution
+    and wording should be reviewed. Needs source-location review. Merged duplicate/overlapping draft rows.
+    Provenance candidates: en_carroll_phrases / Alice’s Adventures in Wonderland / Lewis Carroll / Chapter
+    7; en_carroll_phrases / Alice books and poems / Lewis Carroll.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.82.'
+- id: en_literary_reference_infernal_serpent_fcd625b3
+  language: en
+  canonical_reference: infernal serpent
+  reference_type: literary_reference
+  surface_patterns:
+    - the infernal serpent
+  short_explanation: A Satanic or treacherous figure.
+  learner_level: C2
+  confidence: 0.88
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - infernal serpent
+  explanation_key: mnemosyne.en.explanation.milton_phrases.infernal_serpent
+  source_work_key: mnemosyne.en.work.paradise_lost
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book 1
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.
+- id: en_proverb_tradition_the_boy_who_cried_wolf_706f804b
+  language: en
+  canonical_reference: the boy who cried wolf
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the boy who cried wolf
+  short_explanation: A person whose repeated false alarms lose credibility.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - boy who cried wolf
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_boy_who_cried_wolf
+  source_work_key: mnemosyne.en.work.the_boy_who_cried_wolf
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Boy Who Cried Wolf
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_a_wolf_in_sheep_s_clothing_044da797
+  language: en
+  canonical_reference: a wolf in sheep’s clothing
+  reference_type: proverb_tradition
+  surface_patterns:
+    - a wolf in sheep’s clothing
+  short_explanation: A dangerous person disguised as harmless.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - wolf in sheep's clothing
+    - a wolf in sheep's clothing
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.a_wolf_in_sheep_s_clothing
+  source_work_key: mnemosyne.en.work.the_wolf_in_sheep_s_clothing
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Wolf in Sheep’s Clothing
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.82.
+- id: en_proverb_tradition_don_t_count_your_chickens_before_they_hatch_151ca3f8
+  language: en
+  canonical_reference: don’t count your chickens before they hatch
+  reference_type: proverb_tradition
+  surface_patterns:
+    - don’t count your chickens before they hatch
+  short_explanation: Do not rely on success before it happens.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - do not count your chickens before they hatch
+    - don't count your chickens before they hatch
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.don_t_count_your_chickens_before_they_hatch
+  source_work_key: mnemosyne.en.work.the_milkmaid_and_her_pail
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Milkmaid and Her Pail
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_the_cat_s_paw_25300599
+  language: en
+  canonical_reference: the cat’s paw
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the cat’s paw
+  short_explanation: A person used as another’s tool.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - cat's paw
+    - the cat's paw
+    - cat’s paw
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_cat_s_paw
+  source_work_key: mnemosyne.en.work.the_monkey_and_the_cat
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Monkey and the Cat
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.78.
+- id: en_classical_or_scriptural_allusion_crossing_the_rubicon_86efa296
+  language: en
+  canonical_reference: crossing the Rubicon
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - crossing the Rubicon
+  short_explanation: Pass a point of no return.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - cross the Rubicon
+  explanation_key: mnemosyne.en.explanation.classical_allusions.crossing_the_rubicon
+  source_work_key: mnemosyne.en.work.roman_history
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Roman history
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_deus_ex_machina_2e853ab3
+  language: en
+  canonical_reference: deus ex machina
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - deus ex machina
+  short_explanation: An artificial or unexpected solution to a plot problem.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.deus_ex_machina
+  source_work_key: mnemosyne.en.work.greek_drama_tradition
+  source_author_key: mnemosyne.en.author.classical_theatre
+  source_work: Greek drama tradition
+  source_author: Classical theatre
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_ariadne_s_thread_c0c00e2f
+  language: en
+  canonical_reference: Ariadne’s thread
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Ariadne’s thread
+  short_explanation: A clue or method guiding one through complexity.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - Ariadne's thread
+  explanation_key: mnemosyne.en.explanation.classical_allusions.ariadne_s_thread
+  source_work_key: mnemosyne.en.work.theseus_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Theseus myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.88.
+- id: en_classical_or_scriptural_allusion_cross_the_styx_6be8e14c
+  language: en
+  canonical_reference: cross the Styx
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - cross the Styx
+  short_explanation: Die or pass into the underworld.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.cross_the_styx
+  source_work_key: mnemosyne.en.work.greek_afterlife_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Greek afterlife myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.86.
+- id: en_literary_reference_all_the_world_s_a_stage_f02f75fb
+  language: en
+  canonical_reference: all the world’s a stage
+  reference_type: literary_reference
+  surface_patterns:
+    - all the world’s a stage
+  short_explanation: Life is like a performance with roles.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - all the world's a stage
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.all_the_world_s_a_stage
+  source_work_key: mnemosyne.en.work.as_you_like_it
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: As You Like It
+  source_author: William Shakespeare
+  source_location: Act II Scene 7
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_in_my_mind_s_eye_445e486b
+  language: en
+  canonical_reference: in my mind’s eye
+  reference_type: literary_reference
+  surface_patterns:
+    - in my mind’s eye
+  short_explanation: In imagination or memory.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - in my mind's eye
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.in_my_mind_s_eye
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act I Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_dish_fit_for_the_gods_80dca1e8
+  language: en
+  canonical_reference: dish fit for the gods
+  reference_type: literary_reference
+  surface_patterns:
+    - a dish fit for the gods
+  short_explanation: Something extremely fine or worthy.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.dish_fit_for_the_gods
+  source_work_key: mnemosyne.en.work.julius_caesar
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Julius Caesar
+  source_author: William Shakespeare
+  source_location: Act II Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_classical_or_scriptural_allusion_noah_s_ark_aec83401
+  language: en
+  canonical_reference: Noah’s ark
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Noah’s ark
+  short_explanation: A refuge preserving life from catastrophe.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - Noah's ark
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.noah_s_ark
+  source_work_key: mnemosyne.en.work.genesis
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 6–9
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_cultural_reference_marley_s_ghost_71524729
+  language: en
+  canonical_reference: Marley’s ghost
+  reference_type: cultural_reference
+  surface_patterns:
+    - Marley’s ghost
+  short_explanation: A warning figure from the past.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - Marley's ghost
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.marley_s_ghost
+  source_work_key: mnemosyne.en.work.a_christmas_carol
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: A Christmas Carol
+  source_author: Charles Dickens
+  source_location: Stave 1
+  source_url: https://www.gutenberg.org/ebooks/46
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.90.
+- id: en_cultural_reference_madame_defarge_199c6796
+  language: en
+  canonical_reference: Madame Defarge
+  reference_type: cultural_reference
+  surface_patterns:
+    - Madame Defarge
+  short_explanation: A vengeful revolutionary figure calmly recording enemies.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.madame_defarge
+  source_work_key: mnemosyne.en.work.a_tale_of_two_cities
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: A Tale of Two Cities
+  source_author: Charles Dickens
+  source_location: Madame Defarge
+  source_url: https://www.gutenberg.org/ebooks/98
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.88.
+- id: en_cultural_reference_big_brother_is_watching_22e6f2b5
+  language: en
+  canonical_reference: Big Brother is watching
+  reference_type: cultural_reference
+  surface_patterns:
+    - Big Brother is watching
+  short_explanation: A warning that authority is constantly watching.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.big_brother_is_watching
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four_and_animal_farm
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: Part I, Chapter 1
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Short common-use term or phrase; no extended Orwell source text is included.; Rights basis:
+    common_usage_short_expression; short common-use term or phrase only, not extended source text.'
+- id: en_cultural_reference_boot_stamping_on_a_human_face_0df927f0
+  language: en
+  canonical_reference: boot stamping on a human face
+  reference_type: cultural_reference
+  surface_patterns:
+    - boot stamping on a human face
+  short_explanation: A shorthand image of permanent authoritarian domination.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - boot on a human face
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.boot_stamping_on_a_human_face
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: Part III, Chapter 3
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short
+    common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression;
+    short common-use term or phrase only, not extended source text.'
+- id: en_literary_reference_pilgrim_s_progress_e0aa4d30
+  language: en
+  canonical_reference: pilgrim’s progress
+  reference_type: literary_reference
+  surface_patterns:
+    - pilgrim’s progress
+  short_explanation: A difficult moral or spiritual journey.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - pilgrim's progress
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.pilgrim_s_progress
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Bunyan phrase; some overlap with Biblical tradition.; Source URL added by v3 normalisation as
+    a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.88.
+- id: en_literary_reference_burden_on_one_s_back_5a470b77
+  language: en
+  canonical_reference: burden on one’s back
+  reference_type: literary_reference
+  surface_patterns:
+    - burden on one’s back
+  short_explanation: A heavy guilt, duty, or emotional load.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - burden on his back
+    - burden on my back
+    - a burden on your back
+    - burden on one's back
+    - burden on your back
+    - burden on her back
+    - burden on their back
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.burden_on_one_s_back
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part 1
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Bunyan phrase; some overlap with Biblical tradition.; Source URL added by v3 normalisation as
+    a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.82.
