@@ -5917,3 +5917,632 @@
   source_dataset: en_swift_phrases
   notes: Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation
     as a stable public-domain reference for review.
+- id: en_classical_or_scriptural_allusion_the_last_shall_be_first_e81964bc
+  language: en
+  canonical_reference: the last shall be first
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the last shall be first
+  short_explanation: Lowly people may be exalted above the powerful.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - last shall be first
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_last_shall_be_first
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 20:16
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_the_land_of_the_living_72f1358a
+  language: en
+  canonical_reference: the land of the living
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the land of the living
+  short_explanation: The world of people still alive.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - land of the living
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_land_of_the_living
+  source_work_key: mnemosyne.en.work.job_psalms
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Job; Psalms
+  source_author: King James Version
+  source_location: Job 28:13; Psalm 27:13
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_suffer_fools_gladly_3f5b20f0
+  language: en
+  canonical_reference: suffer fools gladly
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - suffer fools gladly
+  short_explanation: Tolerate foolish people patiently or ironically.
+  learner_level: C1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.suffer_fools_gladly
+  source_work_key: mnemosyne.en.work.2_corinthians
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 2 Corinthians
+  source_author: King James Version
+  source_location: 2 Corinthians 11:19
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_still_small_voice_86499ce3
+  language: en
+  canonical_reference: still small voice
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the still small voice
+  short_explanation: A quiet inner prompting or conscience.
+  learner_level: C1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - still small voice
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.still_small_voice
+  source_work_key: mnemosyne.en.work.1_kings
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 1 Kings
+  source_author: King James Version
+  source_location: 1 Kings 19:12
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_the_writing_is_on_the_wall_a0aef6d6
+  language: en
+  canonical_reference: the writing is on the wall
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the writing is on the wall
+  short_explanation: Failure or danger is clearly approaching.
+  learner_level: B1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - the handwriting is on the wall
+    - writing is on the wall
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_writing_is_on_the_wall
+  source_work_key: mnemosyne.en.work.daniel
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Daniel
+  source_author: King James Version
+  source_location: Daniel 5
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_the_patience_of_job_f51cb75d
+  language: en
+  canonical_reference: the patience of Job
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the patience of Job
+  short_explanation: Extreme endurance under suffering.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - Job-like patience
+    - patience of Job
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_patience_of_job
+  source_work_key: mnemosyne.en.work.job_james
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Job; James
+  source_author: King James Version
+  source_location: James 5:11
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_literary_reference_full_of_sound_and_fury_35d1eded
+  language: en
+  canonical_reference: full of sound and fury
+  reference_type: literary_reference
+  surface_patterns:
+    - full of sound and fury
+  short_explanation: Noisy and dramatic but ultimately empty.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - full of sound & fury
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.full_of_sound_and_fury
+  source_work_key: mnemosyne.en.work.macbeth
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act V Scene 5
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_hoist_with_his_own_petard_02cf1e3e
+  language: en
+  canonical_reference: hoist with his own petard
+  reference_type: literary_reference
+  surface_patterns:
+    - hoist with his own petard
+  short_explanation: Harmed by one’s own trap or scheme.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - hoist by his own petard
+    - hoisted by his own petard
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.hoist_with_his_own_petard
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act III Scene 4
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_lend_me_your_ears_7a061d86
+  language: en
+  canonical_reference: lend me your ears
+  reference_type: literary_reference
+  surface_patterns:
+    - lend me your ears
+  short_explanation: Listen to me; hear what I have to say.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - friends Romans countrymen lend me your ears
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.lend_me_your_ears
+  source_work_key: mnemosyne.en.work.julius_caesar
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Julius Caesar
+  source_author: William Shakespeare
+  source_location: Act III Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_method_in_the_madness_e4734316
+  language: en
+  canonical_reference: method in the madness
+  reference_type: literary_reference
+  surface_patterns:
+    - method in the madness
+  short_explanation: Apparent disorder has hidden logic.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - there is method in his madness
+    - method to my madness
+    - method to the madness
+    - there is method in the madness
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.method_in_the_madness
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act II Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_into_thin_air_250d639d
+  language: en
+  canonical_reference: into thin air
+  reference_type: literary_reference
+  surface_patterns:
+    - into thin air
+  short_explanation: Completely disappeared.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - vanished into thin air
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.into_thin_air
+  source_work_key: mnemosyne.en.work.the_tempest
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Tempest
+  source_author: William Shakespeare
+  source_location: Act IV Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_foul_play_0dfcc611
+  language: en
+  canonical_reference: foul play
+  reference_type: literary_reference
+  surface_patterns:
+    - foul play
+  short_explanation: Criminal, unfair, or treacherous behaviour.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.foul_play
+  source_work_key: mnemosyne.en.work.the_tempest
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Tempest
+  source_author: William Shakespeare
+  source_location: Act I Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_give_the_devil_his_due_17b8148a
+  language: en
+  canonical_reference: give the devil his due
+  reference_type: literary_reference
+  surface_patterns:
+    - give the devil his due
+  short_explanation: Acknowledge merit even in a disliked person.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.give_the_devil_his_due
+  source_work_key: mnemosyne.en.work.henry_iv_part_1
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Henry IV, Part 1
+  source_author: William Shakespeare
+  source_location: Act I Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.80.
+- id: en_literary_reference_abashed_the_devil_stood_3f1f6c6a
+  language: en
+  canonical_reference: abashed the devil stood
+  reference_type: literary_reference
+  surface_patterns:
+    - abashed the devil stood
+  short_explanation: Even evil may be checked by goodness.
+  learner_level: C2
+  confidence: 0.88
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.abashed_the_devil_stood
+  source_work_key: mnemosyne.en.work.paradise_lost
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book 4
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.
+- id: en_literary_reference_paradise_within_thee_f66238c4
+  language: en
+  canonical_reference: paradise within thee
+  reference_type: literary_reference
+  surface_patterns:
+    - the paradise within thee
+  short_explanation: Inner virtue as a source of happiness.
+  learner_level: C1
+  confidence: 0.88
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - paradise within thee
+  explanation_key: mnemosyne.en.explanation.milton_phrases.paradise_within_thee
+  source_work_key: mnemosyne.en.work.paradise_lost
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book 12
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.
+- id: en_classical_or_scriptural_allusion_electra_complex_b54eb71d
+  language: en
+  canonical_reference: Electra complex
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Electra complex
+  short_explanation: A psychoanalytic term based on the Electra myth.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.electra_complex
+  source_work_key: mnemosyne.en.work.electra_myth
+  source_author_key: mnemosyne.en.author.sophocles_and_later_tradition
+  source_work: Electra myth
+  source_author: Sophocles and later tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.
+- id: en_classical_or_scriptural_allusion_achilles_and_the_tortoise_d2bf6b76
+  language: en
+  canonical_reference: Achilles and the tortoise
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Achilles and the tortoise
+  short_explanation: A paradox about motion and infinite division.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - Achilles & the tortoise
+  explanation_key: mnemosyne.en.explanation.classical_allusions.achilles_and_the_tortoise
+  source_work_key: mnemosyne.en.work.zeno_s_paradoxes
+  source_author_key: mnemosyne.en.author.zeno_of_elea
+  source_work: Zeno’s paradoxes
+  source_author: Zeno of Elea
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.86.
+- id: en_proverb_tradition_crow_and_the_pitcher_517ca2d1
+  language: en
+  canonical_reference: crow and the pitcher
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the crow and the pitcher
+  short_explanation: Ingenuity solves difficult problems.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - crow and the pitcher
+    - crow & the pitcher
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.crow_and_the_pitcher
+  source_work_key: mnemosyne.en.work.the_crow_and_the_pitcher
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Crow and the Pitcher
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_fox_and_the_crow_4bb0f7a1
+  language: en
+  canonical_reference: fox and the crow
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the fox and the crow
+  short_explanation: Flattery can make people foolish.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - fox and the crow
+    - fox & the crow
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.fox_and_the_crow
+  source_work_key: mnemosyne.en.work.the_fox_and_the_crow
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Fox and the Crow
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_belly_and_the_members_9da159fa
+  language: en
+  canonical_reference: belly and the members
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the belly and the members
+  short_explanation: Parts of a community depend on one another.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - belly and the members
+    - belly & the members
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.belly_and_the_members
+  source_work_key: mnemosyne.en.work.the_belly_and_the_members
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Belly and the Members
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_literary_reference_april_showers_622b9295
+  language: en
+  canonical_reference: April showers
+  reference_type: literary_reference
+  surface_patterns:
+    - April showers
+  short_explanation: Spring rain associated with renewal.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.april_showers
+  source_work_key: mnemosyne.en.work.the_canterbury_tales_and_works
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: The Canterbury Tales and works
+  source_author: Geoffrey Chaucer
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_murder_will_out_e269dc7c
+  language: en
+  canonical_reference: murder will out
+  reference_type: literary_reference
+  surface_patterns:
+    - murder will out
+  short_explanation: Serious wrongdoing is eventually revealed.
+  learner_level: B2
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.murder_will_out
+  source_work_key: mnemosyne.en.work.the_canterbury_tales
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: The Canterbury Tales
+  source_author: Geoffrey Chaucer
+  source_location: The Nun’s Priest’s Tale
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added
+    by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_gladly_would_he_learn_and_gladly_teach_a81e1518
+  language: en
+  canonical_reference: gladly would he learn and gladly teach
+  reference_type: literary_reference
+  surface_patterns:
+    - gladly would he learn and gladly teach
+  short_explanation: A model of eager learning and teaching.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - gladly would he learn & gladly teach
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.gladly_would_he_learn_and_gladly_teach
+  source_work_key: mnemosyne.en.work.the_canterbury_tales
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: The Canterbury Tales
+  source_author: Geoffrey Chaucer
+  source_location: General Prologue
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added
+    by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using
+    provenance/attribution cap; previous confidence 0.84.
+- id: en_cultural_reference_uriah_heep_6aa31ae5
+  language: en
+  canonical_reference: Uriah Heep
+  reference_type: cultural_reference
+  surface_patterns:
+    - Uriah Heep
+  short_explanation: An oily, falsely humble hypocrite.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.uriah_heep
+  source_work_key: mnemosyne.en.work.david_copperfield
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: David Copperfield
+  source_author: Charles Dickens
+  source_location: Uriah Heep
+  source_url: https://www.gutenberg.org/ebooks/766
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.90.
+- id: en_cultural_reference_micawber_ee545507
+  language: en
+  canonical_reference: Micawber
+  reference_type: cultural_reference
+  surface_patterns:
+    - Micawber
+  short_explanation: An optimistic debtor expecting luck to turn.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.micawber
+  source_work_key: mnemosyne.en.work.david_copperfield
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: David Copperfield
+  source_author: Charles Dickens
+  source_location: Wilkins Micawber
+  source_url: https://www.gutenberg.org/ebooks/766
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.90.
