@@ -323,6 +323,34 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_augean_stables_5f090af5",
+      "canonical_reference": "Augean stables",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.augean_stables",
+      "id": "en_classical_or_scriptural_allusion_augean_stables_5f090af5",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage. Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review. Merged duplicate/overlapping draft rows. Provenance candidates: en_classical_allusions / Heracles myth / Classical tradition; en_classical_allusions / Classical Greek and Roman literature / myth / Classical tradition.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A huge accumulated mess needing cleansing.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Heracles myth",
+      "source_work_key": "mnemosyne.en.work.heracles_myth",
+      "surface_patterns": [
+        "the Augean stables",
+        "clean the Augean stables",
+        "Augean stables"
+      ],
+      "variants": [
+        "clean the Augean stables",
+        "Augean stables"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_between_scylla_and_charybdis_a4a3945e",
       "canonical_reference": "between Scylla and Charybdis",
       "confidence": 0.78,
@@ -713,6 +741,137 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_go_the_extra_mile_a306a71e",
+      "canonical_reference": "go the extra mile",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.go_the_extra_mile",
+      "id": "en_classical_or_scriptural_allusion_go_the_extra_mile_a306a71e",
+      "language": "en",
+      "learner_level": "B1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Do more than is required.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 5:41",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Matthew",
+      "source_work_key": "mnemosyne.en.work.gospel_of_matthew",
+      "surface_patterns": [
+        "go the extra mile",
+        "second mile"
+      ],
+      "variants": [
+        "second mile"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_homeric_laughter_72f457f6",
+      "canonical_reference": "Homeric laughter",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.homeric_laughter",
+      "id": "en_classical_or_scriptural_allusion_homeric_laughter_72f457f6",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.86.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Loud, unrestrained laughter.",
+      "source_author": "Homer",
+      "source_author_key": "mnemosyne.en.author.homer",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_location": "Book 1",
+      "source_work": "Iliad",
+      "source_work_key": "mnemosyne.en.work.iliad",
+      "surface_patterns": [
+        "Homeric laughter"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_how_the_mighty_are_fallen_b9633859",
+      "canonical_reference": "how the mighty are fallen",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.how_the_mighty_are_fallen",
+      "id": "en_classical_or_scriptural_allusion_how_the_mighty_are_fallen_b9633859",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A once-powerful person or thing has declined.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "2 Samuel 1:19",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "2 Samuel",
+      "source_work_key": "mnemosyne.en.work.2_samuel",
+      "surface_patterns": [
+        "how the mighty are fallen",
+        "the mighty are fallen"
+      ],
+      "variants": [
+        "the mighty are fallen"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_kill_the_fatted_calf_45d237e6",
+      "canonical_reference": "kill the fatted calf",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.kill_the_fatted_calf",
+      "id": "en_classical_or_scriptural_allusion_kill_the_fatted_calf_45d237e6",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Celebrate someone’s return lavishly.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Luke 15:23",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Luke",
+      "source_work_key": "mnemosyne.en.work.gospel_of_luke",
+      "surface_patterns": [
+        "kill the fatted calf"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_labour_of_love_b9ee2f46",
+      "canonical_reference": "labour of love",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.labour_of_love",
+      "id": "en_classical_or_scriptural_allusion_labour_of_love_b9ee2f46",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Work done for affection, not reward.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "1 Thessalonians 1:3",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "1 Thessalonians",
+      "source_work_key": "mnemosyne.en.work.1_thessalonians",
+      "surface_patterns": [
+        "labour of love",
+        "labor of love"
+      ],
+      "variants": [
+        "labor of love"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_let_there_be_light_f544036d",
       "canonical_reference": "let there be light",
       "confidence": 0.84,
@@ -758,6 +917,30 @@
       "source_work_key": "mnemosyne.en.work.exodus",
       "surface_patterns": [
         "manna from heaven"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_many_are_called_but_few_are_chosen_8738d630",
+      "canonical_reference": "many are called, but few are chosen",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.many_are_called_but_few_are_chosen",
+      "id": "en_classical_or_scriptural_allusion_many_are_called_but_few_are_chosen_8738d630",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Many have the chance, but few succeed or qualify.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 22:14",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Matthew",
+      "source_work_key": "mnemosyne.en.work.gospel_of_matthew",
+      "surface_patterns": [
+        "many are called, but few are chosen"
       ]
     },
     {
@@ -859,6 +1042,30 @@
       ],
       "variants": [
         "cast pearls before swine"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_physician_heal_thyself_80b5224d",
+      "canonical_reference": "physician, heal thyself",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.physician_heal_thyself",
+      "id": "en_classical_or_scriptural_allusion_physician_heal_thyself_80b5224d",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Fix your own faults before advising others.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Luke 4:23",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Luke",
+      "source_work_key": "mnemosyne.en.work.gospel_of_luke",
+      "surface_patterns": [
+        "physician, heal thyself"
       ]
     },
     {
@@ -1202,6 +1409,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_alice_in_wonderland_188df886",
+      "canonical_reference": "Alice in Wonderland",
+      "confidence": 0.86,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.alice_in_wonderland",
+      "id": "en_cultural_reference_alice_in_wonderland_188df886",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Carroll reference; public-domain wording kept short.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A bewildered person in a strange world.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice’s Adventures in Wonderland",
+      "source_work_key": "mnemosyne.en.work.alice_s_adventures_in_wonderland",
+      "surface_patterns": [
+        "Alice in Wonderland"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_all_animals_are_equal_2e60e234",
       "canonical_reference": "all animals are equal",
       "confidence": 0.78,
@@ -1279,6 +1510,30 @@
       ],
       "variants": [
         "humbug"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_bleak_house_ff0eed17",
+      "canonical_reference": "Bleak House",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.bleak_house",
+      "id": "en_cultural_reference_bleak_house_ff0eed17",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A phrase for institutional gloom or legal frustration.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title",
+      "source_url": "https://www.gutenberg.org/ebooks/1023",
+      "source_work": "Bleak House",
+      "source_work_key": "mnemosyne.en.work.bleak_house",
+      "surface_patterns": [
+        "Bleak House"
       ]
     },
     {
@@ -1426,6 +1681,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_frabjous_day_8e9f2534",
+      "canonical_reference": "frabjous day",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.frabjous_day",
+      "id": "en_cultural_reference_frabjous_day_8e9f2534",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Carroll reference; public-domain wording kept short.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A wonderfully joyous day, in playful nonsense diction.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Jabberwocky",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Through the Looking-Glass",
+      "source_work_key": "mnemosyne.en.work.through_the_looking_glass",
+      "surface_patterns": [
+        "frabjous day"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_galumph_a8e9004b",
       "canonical_reference": "galumph",
       "confidence": 0.9,
@@ -1529,6 +1808,30 @@
       "source_work_key": "mnemosyne.en.work.a_christmas_carol",
       "surface_patterns": [
         "God bless us, every one"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_gradgrind_1278ea88",
+      "canonical_reference": "Gradgrind",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.gradgrind",
+      "id": "en_cultural_reference_gradgrind_1278ea88",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A person obsessed with facts and utility.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Thomas Gradgrind",
+      "source_url": "https://www.gutenberg.org/ebooks/786",
+      "source_work": "Hard Times",
+      "source_work_key": "mnemosyne.en.work.hard_times",
+      "surface_patterns": [
+        "Gradgrind"
       ]
     },
     {
@@ -1918,6 +2221,36 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_the_time_has_come_the_walrus_said_f3eb7d15",
+      "canonical_reference": "the time has come, the Walrus said",
+      "confidence": 0.86,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.the_time_has_come_the_walrus_said",
+      "id": "en_cultural_reference_the_time_has_come_the_walrus_said_f3eb7d15",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Carroll reference; public-domain wording kept short.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A playful opening to an announcement or task.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 4",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Through the Looking-Glass",
+      "source_work_key": "mnemosyne.en.work.through_the_looking_glass",
+      "surface_patterns": [
+        "the time has come, the Walrus said",
+        "the time has come",
+        "time has come, the Walrus said"
+      ],
+      "variants": [
+        "the time has come",
+        "time has come, the Walrus said"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_thoughtcrime_63fb33b2",
       "canonical_reference": "thoughtcrime",
       "confidence": 0.78,
@@ -2058,6 +2391,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_white_rabbit_9f0d3451",
+      "canonical_reference": "White Rabbit",
+      "confidence": 0.86,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.white_rabbit",
+      "id": "en_cultural_reference_white_rabbit_9f0d3451",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Carroll reference; public-domain wording kept short.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A guide or trigger leading into strangeness.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 1",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice’s Adventures in Wonderland",
+      "source_work_key": "mnemosyne.en.work.alice_s_adventures_in_wonderland",
+      "surface_patterns": [
+        "white rabbit"
+      ]
+    },
+    {
       "canonical_form": "en:literary:big_brother",
       "canonical_reference": "Big Brother",
       "confidence": 0.88,
@@ -2170,6 +2527,34 @@
       ],
       "variants": [
         "poor Yorick"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_all_hell_broke_loose_9f4ad81b",
+      "canonical_reference": "all Hell broke loose",
+      "confidence": 0.82,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.all_hell_broke_loose",
+      "id": "en_literary_reference_all_hell_broke_loose_9f4ad81b",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Miltonic phrase; modern usage may be allusive rather than idiomatic.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Complete chaos suddenly erupted.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 4",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Lost",
+      "source_work_key": "mnemosyne.en.work.paradise_lost",
+      "surface_patterns": [
+        "all Hell broke loose",
+        "all hell breaks loose"
+      ],
+      "variants": [
+        "all hell breaks loose"
       ]
     },
     {
@@ -2453,6 +2838,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_cry_havoc_317dcfcf",
+      "canonical_reference": "cry havoc",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.cry_havoc",
+      "id": "en_literary_reference_cry_havoc_317dcfcf",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Unleash chaos or violence.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Julius Caesar",
+      "source_work_key": "mnemosyne.en.work.julius_caesar",
+      "surface_patterns": [
+        "cry havoc"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_damn_with_faint_praise_8defa4e6",
       "canonical_reference": "damn with faint praise",
       "confidence": 0.78,
@@ -2505,6 +2914,116 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_dogs_of_war_ea752b5d",
+      "canonical_reference": "dogs of war",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.dogs_of_war",
+      "id": "en_literary_reference_dogs_of_war_ea752b5d",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "The destructive forces of war.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Julius Caesar",
+      "source_work_key": "mnemosyne.en.work.julius_caesar",
+      "surface_patterns": [
+        "the dogs of war",
+        "dogs of war"
+      ],
+      "variants": [
+        "dogs of war"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_double_double_toil_and_trouble_c70c525e",
+      "canonical_reference": "double, double toil and trouble",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.double_double_toil_and_trouble",
+      "id": "en_literary_reference_double_double_toil_and_trouble_c70c525e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A formula for brewing trouble or chaos.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act IV Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Macbeth",
+      "source_work_key": "mnemosyne.en.work.macbeth",
+      "surface_patterns": [
+        "double, double toil and trouble",
+        "toil and trouble",
+        "double, double toil & trouble"
+      ],
+      "variants": [
+        "toil and trouble",
+        "double, double toil & trouble"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_eat_out_of_house_and_home_5a1b3420",
+      "canonical_reference": "eat out of house and home",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.eat_out_of_house_and_home",
+      "id": "en_literary_reference_eat_out_of_house_and_home_5a1b3420",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Consume someone’s food or resources extravagantly.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Henry IV, Part 2",
+      "source_work_key": "mnemosyne.en.work.henry_iv_part_2",
+      "surface_patterns": [
+        "eat me out of house and home",
+        "eat out of house & home"
+      ],
+      "variants": [
+        "eat out of house & home"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_et_tu_brute_786cadf0",
+      "canonical_reference": "et tu, Brute",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.et_tu_brute",
+      "id": "en_literary_reference_et_tu_brute_786cadf0",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A cry of betrayal by a trusted person.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Julius Caesar",
+      "source_work_key": "mnemosyne.en.work.julius_caesar",
+      "surface_patterns": [
+        "et tu, Brute"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_eternal_sunshine_of_the_spotless_mind_69084567",
       "canonical_reference": "eternal sunshine of the spotless mind",
       "confidence": 0.78,
@@ -2550,6 +3069,30 @@
       "source_work_key": "mnemosyne.en.work.the_tempest",
       "surface_patterns": [
         "fair play"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_fit_audience_though_few_bfe3b5c4",
+      "canonical_reference": "fit audience though few",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.fit_audience_though_few",
+      "id": "en_literary_reference_fit_audience_though_few_bfe3b5c4",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Miltonic phrase; modern usage may be allusive rather than idiomatic.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A small but discerning audience.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 7",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Lost",
+      "source_work_key": "mnemosyne.en.work.paradise_lost",
+      "surface_patterns": [
+        "fit audience though few"
       ]
     },
     {
@@ -2941,6 +3484,36 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_they_also_serve_who_only_stand_and_wait_2995c85c",
+      "canonical_reference": "they also serve who only stand and wait",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.they_also_serve_who_only_stand_and_wait",
+      "id": "en_literary_reference_they_also_serve_who_only_stand_and_wait_2995c85c",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Miltonic phrase; modern usage may be allusive rather than idiomatic.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Passive endurance can still be meaningful service.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Final line",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Sonnet 19 / On His Blindness",
+      "source_work_key": "mnemosyne.en.work.sonnet_19",
+      "surface_patterns": [
+        "they also serve who only stand and wait",
+        "they also serve who stand and wait",
+        "they also serve who only stand & wait"
+      ],
+      "variants": [
+        "they also serve who stand and wait",
+        "they also serve who only stand & wait"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_to_be_or_not_to_be_6aa4d196",
       "canonical_reference": "to be or not to be",
       "confidence": 0.78,
@@ -3080,6 +3653,56 @@
       ]
     },
     {
+      "canonical_form": "en:proverb:en_proverb_tradition_belling_the_cat_72cf37a8",
+      "canonical_reference": "belling the cat",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.belling_the_cat",
+      "id": "en_proverb_tradition_belling_the_cat_72cf37a8",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "A good plan may fail because no one dares execute it.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "Belling the Cat",
+      "source_work_key": "mnemosyne.en.work.belling_the_cat",
+      "surface_patterns": [
+        "belling the cat"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_bundle_of_sticks_f4d0fe3d",
+      "canonical_reference": "bundle of sticks",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.bundle_of_sticks",
+      "id": "en_proverb_tradition_bundle_of_sticks_f4d0fe3d",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Unity makes people stronger than isolation.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Bundle of Sticks",
+      "source_work_key": "mnemosyne.en.work.the_bundle_of_sticks",
+      "surface_patterns": [
+        "the bundle of sticks",
+        "bundle of sticks"
+      ],
+      "variants": [
+        "bundle of sticks"
+      ]
+    },
+    {
       "canonical_form": "en:proverb:en_proverb_tradition_cry_wolf_6cf46878",
       "canonical_reference": "cry wolf",
       "confidence": 0.76,
@@ -3133,6 +3756,29 @@
       ],
       "variants": [
         "kill the golden goose"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_dog_in_the_manger_86676ca4",
+      "canonical_reference": "dog in the manger",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.dog_in_the_manger",
+      "id": "en_proverb_tradition_dog_in_the_manger_86676ca4",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Someone who prevents others enjoying what they cannot use.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Dog in the Manger",
+      "source_work_key": "mnemosyne.en.work.the_dog_in_the_manger",
+      "surface_patterns": [
+        "dog in the manger"
       ]
     },
     {
