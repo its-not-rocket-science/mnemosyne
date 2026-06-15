@@ -391,6 +391,28 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_ajax_077d72da",
+      "canonical_reference": "Ajax",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.ajax",
+      "id": "en_classical_or_scriptural_allusion_ajax_077d72da",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A strong warrior figure.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Classical Greek and Roman literature / myth",
+      "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
+      "surface_patterns": [
+        "Ajax"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_alpha_and_omega_e5f8ff36",
       "canonical_reference": "Alpha and Omega",
       "confidence": 0.78,
@@ -479,6 +501,28 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_aphrodite_127995d0",
+      "canonical_reference": "Aphrodite",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.aphrodite",
+      "id": "en_classical_or_scriptural_allusion_aphrodite_127995d0",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Beauty, desire, or love personified.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Classical Greek and Roman literature / myth",
+      "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
+      "surface_patterns": [
+        "Aphrodite"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_apollonian_6cdd1d3d",
       "canonical_reference": "Apollonian",
       "confidence": 0.76,
@@ -554,6 +598,50 @@
       "variants": [
         "apple of my eye",
         "apple of her eye"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_argonauts_5f433b11",
+      "canonical_reference": "Argonauts",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.argonauts",
+      "id": "en_classical_or_scriptural_allusion_argonauts_5f433b11",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Adventurers pursuing a difficult prize.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Classical Greek and Roman literature / myth",
+      "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
+      "surface_patterns": [
+        "Argonauts"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_argus_8e6c9554",
+      "canonical_reference": "Argus",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.argus",
+      "id": "en_classical_or_scriptural_allusion_argus_8e6c9554",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A many-eyed watcher.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Classical Greek and Roman literature / myth",
+      "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
+      "surface_patterns": [
+        "Argus"
       ]
     },
     {
@@ -4345,6 +4433,34 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_dombey_and_son_6b1a58ea",
+      "canonical_reference": "Dombey and Son",
+      "confidence": 0.72,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.dombey_and_son",
+      "id": "en_cultural_reference_dombey_and_son_6b1a58ea",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A shorthand for patriarchal business family pride.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title",
+      "source_url": "https://www.gutenberg.org/ebooks/821",
+      "source_work": "Dombey and Son",
+      "source_work_key": "mnemosyne.en.work.dombey_and_son",
+      "surface_patterns": [
+        "Dombey and Son",
+        "Dombey & Son"
+      ],
+      "variants": [
+        "Dombey & Son"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_dormouse_cfc999cd",
       "canonical_reference": "Dormouse",
       "confidence": 0.78,
@@ -7079,6 +7195,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_busy_as_bees_0e6d298e",
+      "canonical_reference": "busy as bees",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.chaucer_phrases.busy_as_bees",
+      "id": "en_literary_reference_busy_as_bees_0e6d298e",
+      "language": "en",
+      "learner_level": "B1",
+      "notes": "Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Very busy or industrious.",
+      "source_author": "Geoffrey Chaucer",
+      "source_author_key": "mnemosyne.en.author.geoffrey_chaucer",
+      "source_dataset": "en_chaucer_phrases",
+      "source_license": "public_domain",
+      "source_location": "The Squire’s Tale",
+      "source_url": "https://www.gutenberg.org/ebooks/2383",
+      "source_work": "The Canterbury Tales",
+      "source_work_key": "mnemosyne.en.work.the_canterbury_tales",
+      "surface_patterns": [
+        "busy as bees",
+        "busy as a bee"
+      ],
+      "variants": [
+        "busy as a bee"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_by_ends_b25850e8",
       "canonical_reference": "By-ends",
       "confidence": 0.74,
@@ -7526,6 +7670,30 @@
       ],
       "variants": [
         "Delectable Mountains"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_demas_736864fa",
+      "canonical_reference": "Demas",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.bunyan_phrases.demas",
+      "id": "en_literary_reference_demas_736864fa",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "religious",
+      "short_explanation": "A tempter toward worldly gain.",
+      "source_author": "John Bunyan",
+      "source_author_key": "mnemosyne.en.author.john_bunyan",
+      "source_dataset": "en_bunyan_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part I",
+      "source_url": "https://www.gutenberg.org/ebooks/131",
+      "source_work": "The Pilgrim’s Progress",
+      "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
+      "surface_patterns": [
+        "Demas"
       ]
     },
     {
@@ -8183,6 +8351,29 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_glubbdubdrib_e5b608b1",
+      "canonical_reference": "Glubbdubdrib",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.swift_phrases.glubbdubdrib",
+      "id": "en_literary_reference_glubbdubdrib_e5b608b1",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A fantastical island of conjured historical ghosts.",
+      "source_author": "Jonathan Swift",
+      "source_author_key": "mnemosyne.en.author.jonathan_swift",
+      "source_dataset": "en_swift_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/829",
+      "source_work": "Gulliver’s Travels and satire",
+      "source_work_key": "mnemosyne.en.work.gulliver_s_travels_and_satire",
+      "surface_patterns": [
+        "Glubbdubdrib"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_good_riddance_71a9e997",
       "canonical_reference": "good riddance",
       "confidence": 0.78,
@@ -8740,6 +8931,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_kenilworth_12def897",
+      "canonical_reference": "Kenilworth",
+      "confidence": 0.72,
+      "explanation_key": "mnemosyne.en.explanation.walter_scott_phrases.kenilworth",
+      "id": "en_literary_reference_kenilworth_12def897",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "Scott-related expression; attribution should be reviewed cautiously.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "An Elizabethan historical romance reference.",
+      "source_author": "Walter Scott",
+      "source_author_key": "mnemosyne.en.author.walter_scott",
+      "source_dataset": "en_walter_scott_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title",
+      "source_url": "https://www.gutenberg.org/ebooks/1606",
+      "source_work": "Kenilworth",
+      "source_work_key": "mnemosyne.en.work.kenilworth",
+      "surface_patterns": [
+        "Kenilworth"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_lady_of_the_lake_e16aca58",
       "canonical_reference": "Lady of the Lake",
       "confidence": 0.78,
@@ -9228,6 +9443,34 @@
       "source_work_key": "mnemosyne.en.work.paradise_lost_and_poems",
       "surface_patterns": [
         "Miltonic"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_mob_of_gentlemen_61378ce5",
+      "canonical_reference": "mob of gentlemen",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.mob_of_gentlemen",
+      "id": "en_literary_reference_mob_of_gentlemen_61378ce5",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A satirical phrase for fashionable or idle elites.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Line 237",
+      "source_url": "https://en.wikisource.org/wiki/Epistle_to_Dr_Arbuthnot",
+      "source_work": "Epistle to Dr Arbuthnot",
+      "source_work_key": "mnemosyne.en.work.epistle_to_dr_arbuthnot",
+      "surface_patterns": [
+        "the mob of gentlemen",
+        "mob of gentlemen"
+      ],
+      "variants": [
+        "mob of gentlemen"
       ]
     },
     {
@@ -9881,6 +10124,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_patience_is_a_virtue_69529ded",
+      "canonical_reference": "patience is a virtue",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.chaucer_phrases.patience_is_a_virtue",
+      "id": "en_literary_reference_patience_is_a_virtue_69529ded",
+      "language": "en",
+      "learner_level": "B1",
+      "notes": "Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Waiting calmly is a moral strength.",
+      "source_author": "Geoffrey Chaucer",
+      "source_author_key": "mnemosyne.en.author.geoffrey_chaucer",
+      "source_dataset": "en_chaucer_phrases",
+      "source_license": "public_domain",
+      "source_location": "The Franklin’s Tale",
+      "source_url": "https://www.gutenberg.org/ebooks/2383",
+      "source_work": "The Canterbury Tales",
+      "source_work_key": "mnemosyne.en.work.the_canterbury_tales",
+      "surface_patterns": [
+        "patience is a virtue",
+        "patience is virtuous"
+      ],
+      "variants": [
+        "patience is virtuous"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_pecksniffian_9ea1f1b6",
       "canonical_reference": "Pecksniffian",
       "confidence": 0.74,
@@ -10315,6 +10586,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_shoot_folly_as_it_flies_2acec81f",
+      "canonical_reference": "shoot folly as it flies",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.shoot_folly_as_it_flies",
+      "id": "en_literary_reference_shoot_folly_as_it_flies_2acec81f",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.86.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Satirise foolishness as it appears.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Epistle 1",
+      "source_url": "https://en.wikisource.org/wiki/An_Essay_on_Man",
+      "source_work": "An Essay on Man",
+      "source_work_key": "mnemosyne.en.work.an_essay_on_man",
+      "surface_patterns": [
+        "shoot folly as it flies"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_shuffle_off_this_mortal_coil_38f9d580",
       "canonical_reference": "shuffle off this mortal coil",
       "confidence": 0.78,
@@ -10399,6 +10694,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_snatch_a_grace_beyond_the_reach_of_art_af671e91",
+      "canonical_reference": "snatch a grace beyond the reach of art",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.snatch_a_grace_beyond_the_reach_of_art",
+      "id": "en_literary_reference_snatch_a_grace_beyond_the_reach_of_art_af671e91",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "formal",
+      "short_explanation": "Achieve a natural excellence beyond technique.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part II",
+      "source_url": "https://www.gutenberg.org/ebooks/9601",
+      "source_work": "An Essay on Criticism",
+      "source_work_key": "mnemosyne.en.work.poems_and_essays",
+      "surface_patterns": [
+        "snatch a grace beyond the reach of art"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_something_is_rotten_in_the_state_of_denmark_65d72856",
       "canonical_reference": "something is rotten in the state of Denmark",
       "confidence": 0.78,
@@ -10448,6 +10767,30 @@
       "source_work_key": "mnemosyne.en.work.macbeth",
       "surface_patterns": [
         "a sorry sight"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_sound_must_seem_an_echo_to_the_sense_7e79acbb",
+      "canonical_reference": "sound must seem an echo to the sense",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.sound_must_seem_an_echo_to_the_sense",
+      "id": "en_literary_reference_sound_must_seem_an_echo_to_the_sense_7e79acbb",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "formal",
+      "short_explanation": "Style should match meaning.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part II",
+      "source_url": "https://www.gutenberg.org/ebooks/9601",
+      "source_work": "An Essay on Criticism",
+      "source_work_key": "mnemosyne.en.work.poems_and_essays",
+      "surface_patterns": [
+        "sound must seem an echo to the sense"
       ]
     },
     {
@@ -10552,6 +10895,53 @@
       ],
       "variants": [
         "stuff dreams are made of"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_swiftian_satire_024a487d",
+      "canonical_reference": "Swiftian satire",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.swift_phrases.swiftian_satire",
+      "id": "en_literary_reference_swiftian_satire_024a487d",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Savage, ironic political or social satire.",
+      "source_author": "Jonathan Swift",
+      "source_author_key": "mnemosyne.en.author.jonathan_swift",
+      "source_dataset": "en_swift_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/829",
+      "source_work": "Gulliver’s Travels and satire",
+      "source_work_key": "mnemosyne.en.work.gulliver_s_travels_and_satire",
+      "surface_patterns": [
+        "Swiftian satire"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_talkative_d981f9b1",
+      "canonical_reference": "Talkative",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.bunyan_phrases.talkative",
+      "id": "en_literary_reference_talkative_d981f9b1",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "religious",
+      "short_explanation": "A person whose words outrun conduct.",
+      "source_author": "John Bunyan",
+      "source_author_key": "mnemosyne.en.author.john_bunyan",
+      "source_dataset": "en_bunyan_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part I",
+      "source_url": "https://www.gutenberg.org/ebooks/131",
+      "source_work": "The Pilgrim’s Progress",
+      "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
+      "surface_patterns": [
+        "Talkative"
       ]
     },
     {
@@ -11055,6 +11445,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_though_she_be_but_little_she_is_fierce_f77a16ab",
+      "canonical_reference": "though she be but little, she is fierce",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.though_she_be_but_little_she_is_fierce",
+      "id": "en_literary_reference_though_she_be_but_little_she_is_fierce_f77a16ab",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Small size can hide great force.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "A Midsummer Night’s Dream",
+      "source_work_key": "mnemosyne.en.work.a_midsummer_night_s_dream",
+      "surface_patterns": [
+        "though she be but little, she is fierce"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_through_thick_and_thin_4f2c4eb0",
       "canonical_reference": "through thick and thin",
       "confidence": 0.74,
@@ -11137,6 +11551,54 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_to_thine_own_self_be_true_0887095a",
+      "canonical_reference": "to thine own self be true",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.to_thine_own_self_be_true",
+      "id": "en_literary_reference_to_thine_own_self_be_true_0887095a",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Be honest with yourself.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 3",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.hamlet",
+      "surface_patterns": [
+        "to thine own self be true"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_to_wake_the_soul_by_tender_strokes_of_art_18af2e55",
+      "canonical_reference": "to wake the soul by tender strokes of art",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.to_wake_the_soul_by_tender_strokes_of_art",
+      "id": "en_literary_reference_to_wake_the_soul_by_tender_strokes_of_art_18af2e55",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "formal",
+      "short_explanation": "Art can awaken deep feeling.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Line 366",
+      "source_url": "https://www.gutenberg.org/ebooks/9601",
+      "source_work": "Eloisa to Abelard",
+      "source_work_key": "mnemosyne.en.work.poems_and_essays",
+      "surface_patterns": [
+        "to wake the soul by tender strokes of art"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_tower_of_strength_28971755",
       "canonical_reference": "tower of strength",
       "confidence": 0.78,
@@ -11158,6 +11620,30 @@
       "source_work_key": "mnemosyne.en.work.richard_iii",
       "surface_patterns": [
         "tower of strength"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_true_wit_is_nature_to_advantage_dressed_11997ff8",
+      "canonical_reference": "true wit is nature to advantage dressed",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.true_wit_is_nature_to_advantage_dressed",
+      "id": "en_literary_reference_true_wit_is_nature_to_advantage_dressed_11997ff8",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "formal",
+      "short_explanation": "Good wit makes nature appear more clearly.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part II",
+      "source_url": "https://www.gutenberg.org/ebooks/9601",
+      "source_work": "An Essay on Criticism",
+      "source_work_key": "mnemosyne.en.work.poems_and_essays",
+      "surface_patterns": [
+        "true wit is nature to advantage dressed"
       ]
     },
     {
@@ -11210,6 +11696,30 @@
       "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
       "surface_patterns": [
         "vanity fair"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_vindicate_the_ways_of_god_to_man_ab4fc347",
+      "canonical_reference": "vindicate the ways of God to man",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.vindicate_the_ways_of_god_to_man",
+      "id": "en_literary_reference_vindicate_the_ways_of_god_to_man_ab4fc347",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "formal",
+      "short_explanation": "Defend divine justice to human reason.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Epistle I",
+      "source_url": "https://www.gutenberg.org/ebooks/9601",
+      "source_work": "An Essay on Man",
+      "source_work_key": "mnemosyne.en.work.poems_and_essays",
+      "surface_patterns": [
+        "vindicate the ways of God to man"
       ]
     },
     {
@@ -11281,6 +11791,29 @@
       "source_work_key": "mnemosyne.en.work.waverley_novels_and_poems",
       "surface_patterns": [
         "Waverley novel"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_wegg_4481e4b4",
+      "canonical_reference": "Wegg",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.wegg",
+      "id": "en_literary_reference_wegg_4481e4b4",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A comic opportunist or literary pretender.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "Novels and Christmas books",
+      "source_work_key": "mnemosyne.en.work.novels_and_christmas_books",
+      "surface_patterns": [
+        "Wegg"
       ]
     },
     {
@@ -11357,6 +11890,30 @@
       "source_work_key": "mnemosyne.en.work.an_essay_on_criticism",
       "surface_patterns": [
         "where angels fear to tread"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_who_are_you_f53c505a",
+      "canonical_reference": "who are you?",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.who_are_you",
+      "id": "en_literary_reference_who_are_you_f53c505a",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A destabilising question of identity.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 5",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Alice’s Adventures in Wonderland",
+      "source_work_key": "mnemosyne.en.work.alice_books_and_poems",
+      "surface_patterns": [
+        "who are you?"
       ]
     },
     {
@@ -12460,6 +13017,35 @@
         "goose that laid the golden eggs",
         "goose that laid the golden egg",
         "kill the goose that lays the golden eggs"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_horse_and_the_groom_61c0231d",
+      "canonical_reference": "the horse and the groom",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_horse_and_the_groom",
+      "id": "en_proverb_tradition_the_horse_and_the_groom_61c0231d",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Neglect ruins what display cannot fix.",
+      "source_author": "Aesop / fable tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_fable_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "Aesop’s Fables / fable tradition",
+      "source_work_key": "mnemosyne.en.work.aesop_s_fables_fable_tradition",
+      "surface_patterns": [
+        "the horse and the groom",
+        "horse and the groom",
+        "the horse & the groom"
+      ],
+      "variants": [
+        "horse and the groom",
+        "the horse & the groom"
       ]
     },
     {
