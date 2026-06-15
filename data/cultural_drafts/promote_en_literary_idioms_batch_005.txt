@@ -1,0 +1,32 @@
+# Reviewed cultural draft entries for promotion batch 005.
+# Carroll (0.90, B2-C1)
+chortle
+Jabberwocky
+Tweedledum and Tweedledee
+galumph
+slithy toves
+# Milton (0.90, C1)
+justify the ways of God to men
+unconquerable will
+confusion worse confounded
+# KJV (0.84, B2)
+eat, drink, and be merry
+fight the good fight
+fly in the ointment
+four horsemen of the apocalypse
+# Shakespeare (0.78, B2)
+cruel to be kind
+cold comfort
+sorry sight
+spotless reputation
+# Classical allusions (0.78-0.76, C1)
+between Scylla and Charybdis
+Cassandra
+# Pope (0.78, B2)
+hope springs eternal
+fools rush in
+# Dickens (0.78, B2)
+it was the best of times
+# Aesop (0.76, B2)
+do not kill the goose that lays the golden eggs
+the ant and the grasshopper
