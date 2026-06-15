@@ -211,6 +211,34 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_voice_crying_in_the_wilderness_bca7c132",
+      "canonical_reference": "a voice crying in the wilderness",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.a_voice_crying_in_the_wilderness",
+      "id": "en_classical_or_scriptural_allusion_a_voice_crying_in_the_wilderness_bca7c132",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A warning or appeal ignored by others.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Isaiah 40:3; John 1:23",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Isaiah; Gospels",
+      "source_work_key": "mnemosyne.en.work.isaiah_gospels",
+      "surface_patterns": [
+        "a voice crying in the wilderness",
+        "voice in the wilderness"
+      ],
+      "variants": [
+        "voice in the wilderness"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_an_eye_for_an_eye_70ed3c1f",
       "canonical_reference": "an eye for an eye",
       "confidence": 0.84,
@@ -238,6 +266,36 @@
       "variants": [
         "eye for eye",
         "tooth for tooth"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_apple_of_his_eye_60487f49",
+      "canonical_reference": "apple of his eye",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.apple_of_his_eye",
+      "id": "en_classical_or_scriptural_allusion_apple_of_his_eye_60487f49",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Someone especially cherished or protected.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Deuteronomy 32:10; Psalm 17:8",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Deuteronomy; Psalms",
+      "source_work_key": "mnemosyne.en.work.deuteronomy_psalms",
+      "surface_patterns": [
+        "apple of his eye",
+        "apple of my eye",
+        "apple of her eye"
+      ],
+      "variants": [
+        "apple of my eye",
+        "apple of her eye"
       ]
     },
     {
@@ -353,6 +411,46 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_can_a_leopard_change_his_spots_419cd8b1",
+      "canonical_reference": "can a leopard change his spots",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.can_a_leopard_change_his_spots",
+      "id": "en_classical_or_scriptural_allusion_can_a_leopard_change_his_spots_419cd8b1",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "People rarely change their basic nature.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Jeremiah 13:23",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Jeremiah",
+      "source_work_key": "mnemosyne.en.work.jeremiah",
+      "surface_patterns": [
+        "can a leopard change his spots",
+        "leopard cannot change its spots",
+        "leopard change his spots",
+        "can a leopard change its spots",
+        "a leopard cannot change its spots",
+        "a leopard can't change its spots",
+        "a leopard will not change its spots",
+        "a leopard never changes its spots"
+      ],
+      "variants": [
+        "leopard cannot change its spots",
+        "leopard change his spots",
+        "can a leopard change its spots",
+        "a leopard cannot change its spots",
+        "a leopard can't change its spots",
+        "a leopard will not change its spots",
+        "a leopard never changes its spots"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_carpe_diem_f029fc15",
       "canonical_reference": "carpe diem",
       "confidence": 0.78,
@@ -373,6 +471,38 @@
       "source_work_key": "mnemosyne.en.work.odes",
       "surface_patterns": [
         "carpe diem"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_cast_the_first_stone_4ca08b0a",
+      "canonical_reference": "cast the first stone",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.cast_the_first_stone",
+      "id": "en_classical_or_scriptural_allusion_cast_the_first_stone_4ca08b0a",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Condemn someone despite not being faultless yourself.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "John 8:7",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of John",
+      "source_work_key": "mnemosyne.en.work.gospel_of_john",
+      "surface_patterns": [
+        "cast the first stone",
+        "let him cast the first stone",
+        "throw the first stone",
+        "casting the first stone"
+      ],
+      "variants": [
+        "let him cast the first stone",
+        "throw the first stone",
+        "casting the first stone"
       ]
     },
     {
@@ -603,6 +733,58 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_a_modest_proposal_ce09db8e",
+      "canonical_reference": "a modest proposal",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.swift_phrases.a_modest_proposal",
+      "id": "en_cultural_reference_a_modest_proposal_ce09db8e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "An apparently mild proposal that is shockingly satirical.",
+      "source_author": "Jonathan Swift",
+      "source_author_key": "mnemosyne.en.author.jonathan_swift",
+      "source_dataset": "en_swift_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title",
+      "source_url": "https://www.gutenberg.org/ebooks/829",
+      "source_work": "A Modest Proposal",
+      "source_work_key": "mnemosyne.en.work.a_modest_proposal",
+      "surface_patterns": [
+        "a modest proposal"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_all_animals_are_equal_2e60e234",
+      "canonical_reference": "all animals are equal",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.all_animals_are_equal",
+      "id": "en_cultural_reference_all_animals_are_equal_2e60e234",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A slogan of equality later exposed as hypocritical.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Chapter 10",
+      "source_work": "Animal Farm",
+      "source_work_key": "mnemosyne.en.work.animal_farm",
+      "surface_patterns": [
+        "all animals are equal",
+        "all animals are equal, but some are more equal than others"
+      ],
+      "variants": [
+        "all animals are equal, but some are more equal than others"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_animal_farm_7322ed66",
       "canonical_reference": "Animal Farm",
       "confidence": 0.78,
@@ -769,6 +951,34 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_ghost_of_christmas_future_764839f0",
+      "canonical_reference": "Ghost of Christmas Future",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.ghost_of_christmas_future",
+      "id": "en_cultural_reference_ghost_of_christmas_future_764839f0",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A warning vision of what may happen.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Stave 4",
+      "source_url": "https://www.gutenberg.org/ebooks/46",
+      "source_work": "A Christmas Carol",
+      "source_work_key": "mnemosyne.en.work.a_christmas_carol",
+      "surface_patterns": [
+        "ghost of Christmas future",
+        "Ghost of Christmas Yet to Come"
+      ],
+      "variants": [
+        "Ghost of Christmas Yet to Come"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_ghost_of_christmas_past_2680d980",
       "canonical_reference": "Ghost of Christmas Past",
       "confidence": 0.78,
@@ -817,6 +1027,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_great_expectations_065742cc",
+      "canonical_reference": "Great Expectations",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.great_expectations",
+      "id": "en_cultural_reference_great_expectations_065742cc",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.86.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "High hopes, often with irony or disappointment.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title",
+      "source_url": "https://www.gutenberg.org/ebooks/1400",
+      "source_work": "Great Expectations",
+      "source_work_key": "mnemosyne.en.work.great_expectations",
+      "surface_patterns": [
+        "Great Expectations"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_grin_like_a_cheshire_cat_6f550499",
       "canonical_reference": "grin like a Cheshire cat",
       "confidence": 0.9,
@@ -844,6 +1078,82 @@
       "variants": [
         "Cheshire Cat grin",
         "grinning like a Cheshire cat"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_lilliputian_67a5b041",
+      "canonical_reference": "Lilliputian",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.swift_phrases.lilliputian",
+      "id": "en_cultural_reference_lilliputian_67a5b041",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "Very small, petty, or trivial.",
+      "source_author": "Jonathan Swift",
+      "source_author_key": "mnemosyne.en.author.jonathan_swift",
+      "source_dataset": "en_swift_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part I",
+      "source_url": "https://www.gutenberg.org/ebooks/829",
+      "source_work": "Gulliver’s Travels",
+      "source_work_key": "mnemosyne.en.work.gulliver_s_travels",
+      "surface_patterns": [
+        "Lilliputian"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_memory_hole_0a6f2783",
+      "canonical_reference": "memory hole",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.memory_hole",
+      "id": "en_cultural_reference_memory_hole_0a6f2783",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A mechanism for destroying inconvenient records.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Part I, Chapter 4",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four",
+      "surface_patterns": [
+        "memory hole",
+        "the memory hole"
+      ],
+      "variants": [
+        "the memory hole"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_ministry_of_truth_8796bb73",
+      "canonical_reference": "Ministry of Truth",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.ministry_of_truth",
+      "id": "en_cultural_reference_ministry_of_truth_8796bb73",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A propaganda institution that falsifies information.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Part I, Chapter 1",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four",
+      "surface_patterns": [
+        "Ministry of Truth"
       ]
     },
     {
@@ -892,6 +1202,58 @@
       "source_work_key": "mnemosyne.en.work.nineteen_eighty_four",
       "surface_patterns": [
         "Room 101"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_some_animals_are_more_equal_than_others_94c9d2f6",
+      "canonical_reference": "some animals are more equal than others",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.some_animals_are_more_equal_than_others",
+      "id": "en_cultural_reference_some_animals_are_more_equal_than_others_94c9d2f6",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A hypocritical claim that privilege is equality.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Chapter 10",
+      "source_work": "Animal Farm",
+      "source_work_key": "mnemosyne.en.work.animal_farm",
+      "surface_patterns": [
+        "some animals are more equal than others",
+        "all animals are equal, but some animals are more equal than others"
+      ],
+      "variants": [
+        "all animals are equal, but some animals are more equal than others"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_thoughtcrime_63fb33b2",
+      "canonical_reference": "thoughtcrime",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.thoughtcrime",
+      "id": "en_cultural_reference_thoughtcrime_63fb33b2",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "An opinion treated as a punishable offence.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Part I, Chapter 1",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four",
+      "surface_patterns": [
+        "thoughtcrime"
       ]
     },
     {
@@ -962,6 +1324,86 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_a_little_learning_is_a_dangerous_thing_19019f56",
+      "canonical_reference": "a little learning is a dangerous thing",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.a_little_learning_is_a_dangerous_thing",
+      "id": "en_literary_reference_a_little_learning_is_a_dangerous_thing_19019f56",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Small knowledge can make people overconfident.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part 2",
+      "source_url": "https://en.wikisource.org/wiki/An_Essay_on_Criticism",
+      "source_work": "An Essay on Criticism",
+      "source_work_key": "mnemosyne.en.work.an_essay_on_criticism",
+      "surface_patterns": [
+        "a little learning is a dangerous thing",
+        "a little knowledge is a dangerous thing"
+      ],
+      "variants": [
+        "a little knowledge is a dangerous thing"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_a_plague_on_both_your_houses_cf68fd4f",
+      "canonical_reference": "a plague on both your houses",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.a_plague_on_both_your_houses",
+      "id": "en_literary_reference_a_plague_on_both_your_houses_cf68fd4f",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Condemnation of both sides in a dispute.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Romeo and Juliet",
+      "source_work_key": "mnemosyne.en.work.romeo_and_juliet",
+      "surface_patterns": [
+        "a plague on both your houses"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_alas_poor_yorick_67cc4754",
+      "canonical_reference": "alas, poor Yorick",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.alas_poor_yorick",
+      "id": "en_literary_reference_alas_poor_yorick_67cc4754",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A reflection on mortality or lost familiarity.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act V Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.hamlet",
+      "surface_patterns": [
+        "alas, poor Yorick",
+        "poor Yorick"
+      ],
+      "variants": [
+        "poor Yorick"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_all_that_glitters_is_not_gold_abecec81",
       "canonical_reference": "all that glitters is not gold",
       "confidence": 0.78,
@@ -987,6 +1429,30 @@
       ],
       "variants": [
         "all that glisters is not gold"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_awake_arise_or_be_forever_fallen_7dbd4ba9",
+      "canonical_reference": "awake, arise, or be forever fallen",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.awake_arise_or_be_forever_fallen",
+      "id": "en_literary_reference_awake_arise_or_be_forever_fallen_7dbd4ba9",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Miltonic phrase; modern usage may be allusive rather than idiomatic.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A call to urgent action after defeat.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 1",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Lost",
+      "source_work_key": "mnemosyne.en.work.paradise_lost",
+      "surface_patterns": [
+        "awake, arise, or be forever fallen"
       ]
     },
     {
@@ -1017,6 +1483,30 @@
       "variants": [
         "be-all and end-all",
         "be-all & end-all"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_better_to_reign_in_hell_than_serve_in_heaven_a4485cb9",
+      "canonical_reference": "better to reign in Hell than serve in Heaven",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.better_to_reign_in_hell_than_serve_in_heaven",
+      "id": "en_literary_reference_better_to_reign_in_hell_than_serve_in_heaven_a4485cb9",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Miltonic phrase; modern usage may be allusive rather than idiomatic.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Prideful preference for power in misery over obedience.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 1",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Lost",
+      "source_work_key": "mnemosyne.en.work.paradise_lost",
+      "surface_patterns": [
+        "better to reign in Hell than serve in Heaven"
       ]
     },
     {
@@ -1098,6 +1588,106 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_charmed_life_ad8655fd",
+      "canonical_reference": "charmed life",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.charmed_life",
+      "id": "en_literary_reference_charmed_life_ad8655fd",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A life seemingly protected from danger.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act V Scene 8",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Macbeth",
+      "source_work_key": "mnemosyne.en.work.macbeth",
+      "surface_patterns": [
+        "a charmed life"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_damn_with_faint_praise_8defa4e6",
+      "canonical_reference": "damn with faint praise",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.damn_with_faint_praise",
+      "id": "en_literary_reference_damn_with_faint_praise_8defa4e6",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Condemn by giving weak or insincere praise.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Line 201",
+      "source_url": "https://en.wikisource.org/wiki/Epistle_to_Dr_Arbuthnot",
+      "source_work": "Epistle to Dr Arbuthnot",
+      "source_work_key": "mnemosyne.en.work.epistle_to_dr_arbuthnot",
+      "surface_patterns": [
+        "damn with faint praise",
+        "damned with faint praise"
+      ],
+      "variants": [
+        "damned with faint praise"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_darkness_visible_3de560a2",
+      "canonical_reference": "darkness visible",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.darkness_visible",
+      "id": "en_literary_reference_darkness_visible_3de560a2",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Miltonic phrase; modern usage may be allusive rather than idiomatic.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A paradoxical image of gloom made perceptible.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 1",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Lost",
+      "source_work_key": "mnemosyne.en.work.paradise_lost",
+      "surface_patterns": [
+        "darkness visible"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_eternal_sunshine_of_the_spotless_mind_69084567",
+      "canonical_reference": "eternal sunshine of the spotless mind",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.eternal_sunshine_of_the_spotless_mind",
+      "id": "en_literary_reference_eternal_sunshine_of_the_spotless_mind_69084567",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A blissful state free of painful memory.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Line 209",
+      "source_url": "https://en.wikisource.org/wiki/Eloisa_to_Abelard",
+      "source_work": "Eloisa to Abelard",
+      "source_work_key": "mnemosyne.en.work.eloisa_to_abelard",
+      "surface_patterns": [
+        "eternal sunshine of the spotless mind"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_pandemonium_d59be526",
       "canonical_reference": "pandemonium",
       "confidence": 0.9,
@@ -1171,6 +1761,34 @@
       ],
       "variants": [
         "something rotten in Denmark"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_the_mind_is_its_own_place_5e4a11b7",
+      "canonical_reference": "the mind is its own place",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.the_mind_is_its_own_place",
+      "id": "en_literary_reference_the_mind_is_its_own_place_5e4a11b7",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Miltonic phrase; modern usage may be allusive rather than idiomatic.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Perspective can transform experience.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 1",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Lost",
+      "source_work_key": "mnemosyne.en.work.paradise_lost",
+      "surface_patterns": [
+        "the mind is its own place",
+        "mind is its own place"
+      ],
+      "variants": [
+        "mind is its own place"
       ]
     },
     {
@@ -1287,6 +1905,66 @@
       "variants": [
         "cried wolf",
         "crying wolf"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_slow_and_steady_wins_the_race_83d9bf51",
+      "canonical_reference": "slow and steady wins the race",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.slow_and_steady_wins_the_race",
+      "id": "en_proverb_tradition_slow_and_steady_wins_the_race_83d9bf51",
+      "language": "en",
+      "learner_level": "B1",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Steady persistence can defeat careless speed.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Tortoise and the Hare",
+      "source_work_key": "mnemosyne.en.work.the_tortoise_and_the_hare",
+      "surface_patterns": [
+        "slow and steady wins the race",
+        "slow but steady wins the race",
+        "slow & steady wins the race",
+        "slow and steady"
+      ],
+      "variants": [
+        "slow but steady wins the race",
+        "slow & steady wins the race",
+        "slow and steady"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_sour_grapes_616df0e1",
+      "canonical_reference": "sour grapes",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.sour_grapes",
+      "id": "en_proverb_tradition_sour_grapes_616df0e1",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked. Fable-tradition expression; not tied to one fixed English text. Merged duplicate/overlapping draft rows. Provenance candidates: en_kjv_bible_phrases / Ezekiel; fable tradition / King James Version / Ezekiel 18:2; en_aesop_fable_phrases / The Fox and the Grapes / Aesop tradition.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.82.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Dismissing something desired as worthless after failing to get it.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Fox and the Grapes",
+      "source_work_key": "mnemosyne.en.work.the_fox_and_the_grapes",
+      "surface_patterns": [
+        "sour grapes",
+        "just sour grapes",
+        "cry sour grapes"
+      ],
+      "variants": [
+        "just sour grapes",
+        "cry sour grapes"
       ]
     }
   ],
