@@ -13156,3 +13156,598 @@
   source_dataset: en_orwell_phrases
   notes: 'Short common-use term or phrase; no extended Orwell source text is included.; Rights basis:
     common_usage_short_expression; short common-use term or phrase only, not extended source text.'
+- id: en_literary_reference_there_s_the_rub_c8bb2abe
+  language: en
+  canonical_reference: there’s the rub
+  reference_type: literary_reference
+  surface_patterns:
+    - there’s the rub
+  short_explanation: That is the difficulty or catch.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - there's the rub
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.there_s_the_rub
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act III Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_the_world_s_mine_oyster_1a0c4a84
+  language: en
+  canonical_reference: the world’s mine oyster
+  reference_type: literary_reference
+  surface_patterns:
+    - the world’s mine oyster
+  short_explanation: Many opportunities are available.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - the world is my oyster
+    - world’s mine oyster
+    - the world’s my oyster
+    - the world's mine oyster
+    - the world's my oyster
+    - the world is your oyster
+    - the world is one's oyster
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.the_world_s_mine_oyster
+  source_work_key: mnemosyne.en.work.the_merry_wives_of_windsor
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Merry Wives of Windsor
+  source_author: William Shakespeare
+  source_location: Act II Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_classical_or_scriptural_allusion_labyrinth_31f30fce
+  language: en
+  canonical_reference: labyrinth
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the labyrinth
+  short_explanation: A complicated maze or confusing system.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - labyrinth
+  explanation_key: mnemosyne.en.explanation.classical_allusions.labyrinth
+  source_work_key: mnemosyne.en.work.theseus_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Theseus myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: 'Classical allusion; English surface form is later conventional usage. Expanded Mnemosyne candidate;
+    source attribution and wording should be reviewed. Needs source-location review. Merged duplicate/overlapping
+    draft rows. Provenance candidates: en_classical_allusions / Theseus myth / Classical tradition; en_classical_allusions
+    / Classical Greek and Roman literature / myth / Classical tradition.; Confidence revised in v3 using
+    provenance/attribution cap; previous confidence 0.82.'
+- id: en_classical_or_scriptural_allusion_minotaur_1a39c085
+  language: en
+  canonical_reference: Minotaur
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the Minotaur
+  short_explanation: A monstrous threat at the centre of a maze.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - Minotaur
+  explanation_key: mnemosyne.en.explanation.classical_allusions.minotaur
+  source_work_key: mnemosyne.en.work.theseus_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Theseus myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: 'Classical allusion; English surface form is later conventional usage. Expanded Mnemosyne candidate;
+    source attribution and wording should be reviewed. Needs source-location review. Merged duplicate/overlapping
+    draft rows. Provenance candidates: en_classical_allusions / Theseus myth / Classical tradition; en_classical_allusions
+    / Classical Greek and Roman literature / myth / Classical tradition.; Confidence revised in v3 using
+    provenance/attribution cap; previous confidence 0.86.'
+- id: en_classical_or_scriptural_allusion_muses_5966c8c1
+  language: en
+  canonical_reference: Muses
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the Muses
+  short_explanation: Sources of artistic inspiration.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - Muses
+  explanation_key: mnemosyne.en.explanation.classical_allusions.muses
+  source_work_key: mnemosyne.en.work.greek_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Greek myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.88.
+- id: en_proverb_tradition_do_not_grasp_at_shadows_7d6047be
+  language: en
+  canonical_reference: do not grasp at shadows
+  reference_type: proverb_tradition
+  surface_patterns:
+    - do not grasp at shadows
+  short_explanation: Do not lose real things chasing illusions.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.do_not_grasp_at_shadows
+  source_work_key: mnemosyne.en.work.aesop_s_fables_fable_tradition
+  source_author_key: mnemosyne.en.author.aesop_fable_tradition
+  source_work: Aesop’s Fables / fable tradition
+  source_author: Aesop / fable tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_proverb_tradition_the_fox_guarding_the_henhouse_2bb7bdac
+  language: en
+  canonical_reference: the fox guarding the henhouse
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the fox guarding the henhouse
+  short_explanation: A dangerous person put in charge of victims.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - fox guarding the henhouse
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_fox_guarding_the_henhouse
+  source_work_key: mnemosyne.en.work.aesop_s_fables_fable_tradition
+  source_author_key: mnemosyne.en.author.aesop_fable_tradition
+  source_work: Aesop’s Fables / fable tradition
+  source_author: Aesop / fable tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_charms_strike_the_sight_but_merit_wins_the_soul_ee6cf385
+  language: en
+  canonical_reference: charms strike the sight, but merit wins the soul
+  reference_type: literary_reference
+  surface_patterns:
+    - charms strike the sight, but merit wins the soul
+  short_explanation: Beauty attracts, but character wins lasting regard.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.pope_phrases.charms_strike_the_sight_but_merit_wins_the_soul
+  source_work_key: mnemosyne.en.work.the_rape_of_the_lock
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: The Rape of the Lock
+  source_author: Alexander Pope
+  source_location: Canto 5
+  source_url: https://en.wikisource.org/wiki/The_Rape_of_the_Lock
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable
+    public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous
+    confidence 0.86.
+- id: en_literary_reference_fools_admire_but_men_of_sense_approve_48a97341
+  language: en
+  canonical_reference: fools admire, but men of sense approve
+  reference_type: literary_reference
+  surface_patterns:
+    - fools admire, but men of sense approve
+  short_explanation: Wise approval matters more than foolish admiration.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.pope_phrases.fools_admire_but_men_of_sense_approve
+  source_work_key: mnemosyne.en.work.poems_and_essays
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Criticism
+  source_author: Alexander Pope
+  source_location: Part II
+  source_url: https://www.gutenberg.org/ebooks/9601
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_kick_against_the_pricks_89cc24b9
+  language: en
+  canonical_reference: kick against the pricks
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - kick against the pricks
+  short_explanation: To resist authority or fate pointlessly.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.kick_against_the_pricks
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_literary_reference_honest_miller_has_a_golden_thumb_08a95e20
+  language: en
+  canonical_reference: honest miller has a golden thumb
+  reference_type: literary_reference
+  surface_patterns:
+    - every honest miller has a golden thumb
+  short_explanation: An ironic suggestion that millers cheat customers.
+  learner_level: C2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.honest_miller_has_a_golden_thumb
+  source_work_key: mnemosyne.en.work.the_canterbury_tales
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: The Canterbury Tales
+  source_author: Geoffrey Chaucer
+  source_location: The Reeve’s Tale
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added
+    by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using
+    provenance/attribution cap; previous confidence 0.82.
+- id: en_literary_reference_smiler_with_the_knife_under_the_cloak_8952ef5d
+  language: en
+  canonical_reference: smiler with the knife under the cloak
+  reference_type: literary_reference
+  surface_patterns:
+    - the smiler with the knife under the cloak
+  short_explanation: A friendly-seeming but treacherous person.
+  learner_level: C2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - smiler with the knife under the cloak
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.smiler_with_the_knife_under_the_cloak
+  source_work_key: mnemosyne.en.work.the_canterbury_tales
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: The Canterbury Tales
+  source_author: Geoffrey Chaucer
+  source_location: The Knight’s Tale
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added
+    by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using
+    provenance/attribution cap; previous confidence 0.82.
+- id: en_literary_reference_love_is_blind_6f40d240
+  language: en
+  canonical_reference: love is blind
+  reference_type: literary_reference
+  surface_patterns:
+    - love is blind
+  short_explanation: Love can prevent clear judgement.
+  learner_level: B2
+  confidence: 0.7
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - love is blynd
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.love_is_blind
+  source_work_key: mnemosyne.en.work.the_canterbury_tales
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: The Canterbury Tales
+  source_author: Geoffrey Chaucer
+  source_location: The Merchant’s Tale
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: 'Commonly attributed to Shakespeare; attribution should be reviewed. Chaucer-related attribution
+    should be reviewed; some forms are modernised. Merged duplicate/overlapping draft rows. Provenance
+    candidates: en_shakespeare_phrases / The Merchant of Venice / William Shakespeare / Act II Scene 6;
+    en_chaucer_phrases / The Canterbury Tales / Geoffrey Chaucer / The Merchant’s Tale.; Source URL added
+    by v3 normalisation as a stable public-domain reference for review.'
+- id: en_literary_reference_enchanted_ground_4b94e5ff
+  language: en
+  canonical_reference: Enchanted Ground
+  reference_type: literary_reference
+  surface_patterns:
+    - Enchanted Ground
+  short_explanation: A place of seductive spiritual sleep.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - Enchanted Garound
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.enchanted_ground
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part I
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_by_ends_b25850e8
+  language: en
+  canonical_reference: By-ends
+  reference_type: literary_reference
+  surface_patterns:
+    - By-ends
+  short_explanation: A hypocritical opportunist.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.by_ends
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part I
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_evangelist_2be37c58
+  language: en
+  canonical_reference: Evangelist
+  reference_type: literary_reference
+  surface_patterns:
+    - Evangelist
+  short_explanation: A guide urging spiritual progress.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.evangelist
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part I
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_faithful_and_hopeful_30c20a67
+  language: en
+  canonical_reference: Faithful and Hopeful
+  reference_type: literary_reference
+  surface_patterns:
+    - Faithful and Hopeful
+  short_explanation: Companions representing faith and hope.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - Faithful & Hopeful
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.faithful_and_hopeful
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part I
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_redgauntlet_5f6b21d8
+  language: en
+  canonical_reference: Redgauntlet
+  reference_type: literary_reference
+  surface_patterns:
+    - Redgauntlet
+  short_explanation: A Jacobite or antiquarian Scott allusion.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.redgauntlet
+  source_work_key: mnemosyne.en.work.waverley_novels_and_poems
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: Waverley novels and poems
+  source_author: Walter Scott
+  source_url: https://www.gutenberg.org/ebooks/82
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_waverley_novel_14dad1d7
+  language: en
+  canonical_reference: Waverley novel
+  reference_type: literary_reference
+  surface_patterns:
+    - Waverley novel
+  short_explanation: A historical novel in Scott’s manner.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.waverley_novel
+  source_work_key: mnemosyne.en.work.waverley_novels_and_poems
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: Waverley novels and poems
+  source_author: Walter Scott
+  source_url: https://www.gutenberg.org/ebooks/82
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_quilp_545a852e
+  language: en
+  canonical_reference: Quilp
+  reference_type: literary_reference
+  surface_patterns:
+    - Quilp
+  short_explanation: A grotesque malicious villain.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.quilp
+  source_work_key: mnemosyne.en.work.novels_and_christmas_books
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Novels and Christmas books
+  source_author: Charles Dickens
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_sairey_gamp_38b37eff
+  language: en
+  canonical_reference: Sairey Gamp
+  reference_type: literary_reference
+  surface_patterns:
+    - Sairey Gamp
+  short_explanation: A disreputable comic caregiver.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.sairey_gamp
+  source_work_key: mnemosyne.en.work.novels_and_christmas_books
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Martin Chuzzlewit
+  source_author: Charles Dickens
+  source_location: Character
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_caterpillar_question_34f2505f
+  language: en
+  canonical_reference: Caterpillar question
+  reference_type: literary_reference
+  surface_patterns:
+    - Caterpillar question
+  short_explanation: An identity-questioning encounter.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.caterpillar_question
+  source_work_key: mnemosyne.en.work.alice_books_and_poems
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice books and poems
+  source_author: Lewis Carroll
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_literary_reference_hail_horrors_033459b3
+  language: en
+  canonical_reference: hail horrors
+  reference_type: literary_reference
+  surface_patterns:
+    - hail horrors
+  short_explanation: A grandly defiant greeting to suffering.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.hail_horrors
+  source_work_key: mnemosyne.en.work.paradise_lost_and_poems
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book I
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_miltonic_b1054c41
+  language: en
+  canonical_reference: Miltonic
+  reference_type: literary_reference
+  surface_patterns:
+    - Miltonic
+  short_explanation: Grand, elevated, or severe in style.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.miltonic
+  source_work_key: mnemosyne.en.work.paradise_lost_and_poems
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: John Milton’s works
+  source_author: John Milton
+  source_location: General cultural usage
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
