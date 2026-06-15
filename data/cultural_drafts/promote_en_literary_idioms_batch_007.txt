@@ -1,0 +1,33 @@
+# Reviewed cultural draft entries for promotion batch 007.
+# Shakespeare (0.78, B2-C1)
+cry havoc
+double, double toil and trouble
+et tu, Brute
+dogs of war
+eat out of house and home
+# Carroll (0.82-0.90, B2-C1)
+frabjous day
+Alice in Wonderland
+White Rabbit
+the time has come, the Walrus said
+# Milton (0.80-0.90, B2-C1)
+fit audience though few
+all Hell broke loose
+they also serve who only stand and wait
+# KJV (0.84, B1-C1)
+go the extra mile
+how the mighty are fallen
+kill the fatted calf
+labour of love
+many are called, but few are chosen
+physician, heal thyself
+# Aesop (0.76, C1)
+belling the cat
+bundle of sticks
+dog in the manger
+# Dickens (0.78, C1)
+Bleak House
+Gradgrind
+# Classical allusions (0.76-0.78, C1)
+Homeric laughter
+Augean stables
