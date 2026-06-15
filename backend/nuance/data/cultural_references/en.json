@@ -799,6 +799,29 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_by_their_fruits_c139904a",
+      "canonical_reference": "by their fruits",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.by_their_fruits",
+      "id": "en_classical_or_scriptural_allusion_by_their_fruits_c139904a",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Judging people by results or actions.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "by their fruits"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_calliope_dadd534e",
       "canonical_reference": "Calliope",
       "confidence": 0.76,
@@ -1055,6 +1078,59 @@
       "source_work_key": "mnemosyne.en.work.greek_myth",
       "surface_patterns": [
         "Dionysian"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_doubting_thomas_eb3b46ef",
+      "canonical_reference": "doubting Thomas",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.doubting_thomas",
+      "id": "en_classical_or_scriptural_allusion_doubting_thomas_eb3b46ef",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A sceptic who needs proof before believing.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "doubting Thomas"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_dust_to_dust_4ece4f33",
+      "canonical_reference": "dust to dust",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.dust_to_dust",
+      "id": "en_classical_or_scriptural_allusion_dust_to_dust_4ece4f33",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Human life ends in mortality and decay.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 3:19",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis; funeral liturgy",
+      "source_work_key": "mnemosyne.en.work.genesis_funeral_liturgy",
+      "surface_patterns": [
+        "dust to dust",
+        "ashes to ashes",
+        "earth to earth"
+      ],
+      "variants": [
+        "ashes to ashes",
+        "earth to earth"
       ]
     },
     {
@@ -2115,6 +2191,50 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_odyssey_120ecbc4",
+      "canonical_reference": "odyssey",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.odyssey",
+      "id": "en_classical_or_scriptural_allusion_odyssey_120ecbc4",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A long adventurous journey.",
+      "source_author": "Homer",
+      "source_author_key": "mnemosyne.en.author.homer",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Odyssey",
+      "source_work_key": "mnemosyne.en.work.odyssey",
+      "surface_patterns": [
+        "odyssey"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_oedipus_complex_41a3541e",
+      "canonical_reference": "Oedipus complex",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.oedipus_complex",
+      "id": "en_classical_or_scriptural_allusion_oedipus_complex_41a3541e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.82.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A psychoanalytic term based on the Oedipus myth.",
+      "source_author": "Sophocles and later tradition",
+      "source_author_key": "mnemosyne.en.author.sophocles_and_later_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Oedipus myth",
+      "source_work_key": "mnemosyne.en.work.oedipus_myth",
+      "surface_patterns": [
+        "Oedipus complex"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_out_of_the_mouths_of_babes_13e24e06",
       "canonical_reference": "out of the mouths of babes",
       "confidence": 0.84,
@@ -2140,6 +2260,34 @@
       ],
       "variants": [
         "mouths of babes"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_pandora_s_box_5903dd9d",
+      "canonical_reference": "Pandora’s box",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.pandora_s_box",
+      "id": "en_classical_or_scriptural_allusion_pandora_s_box_5903dd9d",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A source of many unforeseen troubles once opened.",
+      "source_author": "Hesiod",
+      "source_author_key": "mnemosyne.en.author.hesiod",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Works and Days",
+      "source_work_key": "mnemosyne.en.work.works_and_days",
+      "surface_patterns": [
+        "Pandora’s box",
+        "open Pandora’s box",
+        "Pandora's box"
+      ],
+      "variants": [
+        "open Pandora’s box",
+        "Pandora's box"
       ]
     },
     {
@@ -3751,6 +3899,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_duckspeak_a8d9c51e",
+      "canonical_reference": "duckspeak",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.duckspeak",
+      "id": "en_cultural_reference_duckspeak_a8d9c51e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Speech that repeats ideology without thought.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Appendix: The Principles of Newspeak",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four_and_animal_farm",
+      "surface_patterns": [
+        "duckspeak"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_eat_me_0c215404",
       "canonical_reference": "Eat me",
       "confidence": 0.82,
@@ -3772,6 +3944,30 @@
       "source_work_key": "mnemosyne.en.work.alice_s_adventures_in_wonderland",
       "surface_patterns": [
         "eat me"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_estella_66f6d012",
+      "canonical_reference": "Estella",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.estella",
+      "id": "en_cultural_reference_estella_66f6d012",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.82.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A beautiful but emotionally cold figure shaped by revenge.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Estella",
+      "source_url": "https://www.gutenberg.org/ebooks/1400",
+      "source_work": "Great Expectations",
+      "source_work_key": "mnemosyne.en.work.great_expectations",
+      "surface_patterns": [
+        "Estella"
       ]
     },
     {
@@ -4938,6 +5134,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_telescreen_c1914dc2",
+      "canonical_reference": "telescreen",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.telescreen",
+      "id": "en_cultural_reference_telescreen_c1914dc2",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A screen used for surveillance and propaganda.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Part I, Chapter 1",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four_and_animal_farm",
+      "surface_patterns": [
+        "telescreen"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_the_artful_dodger_e4701884",
       "canonical_reference": "the Artful Dodger",
       "confidence": 0.78,
@@ -5537,6 +5757,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_an_honest_man_s_the_noblest_work_of_god_1319cc3e",
+      "canonical_reference": "an honest man’s the noblest work of God",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.an_honest_man_s_the_noblest_work_of_god",
+      "id": "en_literary_reference_an_honest_man_s_the_noblest_work_of_god_1319cc3e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Moral honesty is humanity’s highest achievement.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Epistle 4",
+      "source_url": "https://en.wikisource.org/wiki/An_Essay_on_Man",
+      "source_work": "An Essay on Man",
+      "source_work_key": "mnemosyne.en.work.an_essay_on_man",
+      "surface_patterns": [
+        "an honest man’s the noblest work of God",
+        "an honest man's the noblest work of God"
+      ],
+      "variants": [
+        "an honest man's the noblest work of God"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_april_showers_622b9295",
       "canonical_reference": "April showers",
       "confidence": 0.74,
@@ -6035,6 +6283,30 @@
       "source_work_key": "mnemosyne.en.work.alice_books_and_poems",
       "surface_patterns": [
         "Cheshire Cat"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_city_of_destruction_3d114750",
+      "canonical_reference": "City of Destruction",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.bunyan_phrases.city_of_destruction",
+      "id": "en_literary_reference_city_of_destruction_3d114750",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "religious",
+      "short_explanation": "A doomed starting-place one must leave.",
+      "source_author": "John Bunyan",
+      "source_author_key": "mnemosyne.en.author.john_bunyan",
+      "source_dataset": "en_bunyan_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part I",
+      "source_url": "https://www.gutenberg.org/ebooks/131",
+      "source_work": "The Pilgrim’s Progress",
+      "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
+      "surface_patterns": [
+        "City of Destruction"
       ]
     },
     {
@@ -6998,6 +7270,29 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_houyhnhnm_a9ae493a",
+      "canonical_reference": "Houyhnhnm",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.swift_phrases.houyhnhnm",
+      "id": "en_literary_reference_houyhnhnm_a9ae493a",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A rational horse-like being from Swift.",
+      "source_author": "Jonathan Swift",
+      "source_author_key": "mnemosyne.en.author.jonathan_swift",
+      "source_dataset": "en_swift_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/829",
+      "source_work": "Gulliver’s Travels and satire",
+      "source_work_key": "mnemosyne.en.work.gulliver_s_travels_and_satire",
+      "surface_patterns": [
+        "Houyhnhnm"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_humpty_dumpty_dcf6d721",
       "canonical_reference": "Humpty Dumpty",
       "confidence": 0.74,
@@ -7358,6 +7653,53 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_little_nell_20fd0c9c",
+      "canonical_reference": "Little Nell",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.little_nell",
+      "id": "en_literary_reference_little_nell_20fd0c9c",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A sentimental innocent child figure.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Character",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "The Old Curiosity Shop",
+      "source_work_key": "mnemosyne.en.work.novels_and_christmas_books",
+      "surface_patterns": [
+        "Little Nell"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_lochinvar_6e2069ea",
+      "canonical_reference": "Lochinvar",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.walter_scott_phrases.lochinvar",
+      "id": "en_literary_reference_lochinvar_6e2069ea",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A bold romantic eloper.",
+      "source_author": "Walter Scott",
+      "source_author_key": "mnemosyne.en.author.walter_scott",
+      "source_dataset": "en_walter_scott_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/82",
+      "source_work": "Waverley novels and poems",
+      "source_work_key": "mnemosyne.en.work.waverley_novels_and_poems",
+      "surface_patterns": [
+        "Lochinvar"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_lord_what_fools_these_mortals_be_d4f42c07",
       "canonical_reference": "lord, what fools these mortals be",
       "confidence": 0.78,
@@ -7407,6 +7749,30 @@
       "source_work_key": "mnemosyne.en.work.alice_books_and_poems",
       "surface_patterns": [
         "Mad Hatter"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_many_a_true_word_is_spoken_in_jest_195adaf1",
+      "canonical_reference": "many a true word is spoken in jest",
+      "confidence": 0.72,
+      "explanation_key": "mnemosyne.en.explanation.chaucer_phrases.many_a_true_word_is_spoken_in_jest",
+      "id": "en_literary_reference_many_a_true_word_is_spoken_in_jest_195adaf1",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Jokes may reveal real truths.",
+      "source_author": "Geoffrey Chaucer",
+      "source_author_key": "mnemosyne.en.author.geoffrey_chaucer",
+      "source_dataset": "en_chaucer_phrases",
+      "source_license": "public_domain",
+      "source_location": "The Cook’s Tale",
+      "source_url": "https://www.gutenberg.org/ebooks/2383",
+      "source_work": "The Canterbury Tales",
+      "source_work_key": "mnemosyne.en.work.the_canterbury_tales",
+      "surface_patterns": [
+        "many a true word is spoken in jest"
       ]
     },
     {
@@ -7469,6 +7835,29 @@
       ],
       "variants": [
         "milk of human kindness"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_modest_proposal_ff92318c",
+      "canonical_reference": "Modest Proposal",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.swift_phrases.modest_proposal",
+      "id": "en_literary_reference_modest_proposal_ff92318c",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A brutally ironic policy proposal.",
+      "source_author": "Jonathan Swift",
+      "source_author_key": "mnemosyne.en.author.jonathan_swift",
+      "source_dataset": "en_swift_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/829",
+      "source_work": "Gulliver’s Travels and satire",
+      "source_work_key": "mnemosyne.en.work.gulliver_s_travels_and_satire",
+      "surface_patterns": [
+        "Modest Proposal"
       ]
     },
     {
@@ -7648,6 +8037,33 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_not_worth_an_old_shoe_414873d2",
+      "canonical_reference": "not worth an old shoe",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.chaucer_phrases.not_worth_an_old_shoe",
+      "id": "en_literary_reference_not_worth_an_old_shoe_414873d2",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Worthless or of very little value.",
+      "source_author": "Geoffrey Chaucer",
+      "source_author_key": "mnemosyne.en.author.geoffrey_chaucer",
+      "source_dataset": "en_chaucer_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/257",
+      "source_work": "Troilus and Criseyde",
+      "source_work_key": "mnemosyne.en.work.troilus_and_criseyde",
+      "surface_patterns": [
+        "not worth an old shoe",
+        "not worth a shoe"
+      ],
+      "variants": [
+        "not worth a shoe"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_now_is_the_winter_of_our_discontent_690b2e85",
       "canonical_reference": "now is the winter of our discontent",
       "confidence": 0.78,
@@ -7669,6 +8085,29 @@
       "source_work_key": "mnemosyne.en.work.richard_iii",
       "surface_patterns": [
         "now is the winter of our discontent"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_o_what_a_tangled_web_we_weave_580615cf",
+      "canonical_reference": "O what a tangled web we weave",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.walter_scott_phrases.o_what_a_tangled_web_we_weave",
+      "id": "en_literary_reference_o_what_a_tangled_web_we_weave_580615cf",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Deception creates complications.",
+      "source_author": "Walter Scott",
+      "source_author_key": "mnemosyne.en.author.walter_scott",
+      "source_dataset": "en_walter_scott_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/82",
+      "source_work": "Waverley novels and poems",
+      "source_work_key": "mnemosyne.en.work.waverley_novels_and_poems",
+      "surface_patterns": [
+        "O what a tangled web we weave"
       ]
     },
     {
@@ -7957,6 +8396,34 @@
       "source_work_key": "mnemosyne.en.work.hamlet",
       "surface_patterns": [
         "primrose path"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_proper_study_of_mankind_is_man_3224132d",
+      "canonical_reference": "proper study of mankind is man",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.proper_study_of_mankind_is_man",
+      "id": "en_literary_reference_proper_study_of_mankind_is_man_3224132d",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Human nature is the central subject of inquiry.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Epistle 2",
+      "source_url": "https://en.wikisource.org/wiki/An_Essay_on_Man",
+      "source_work": "An Essay on Man",
+      "source_work_key": "mnemosyne.en.work.an_essay_on_man",
+      "surface_patterns": [
+        "the proper study of mankind is man",
+        "proper study of mankind is man"
+      ],
+      "variants": [
+        "proper study of mankind is man"
       ]
     },
     {
@@ -8334,6 +8801,94 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_the_course_of_true_love_never_did_run_smooth_a7985aa8",
+      "canonical_reference": "the course of true love never did run smooth",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.the_course_of_true_love_never_did_run_smooth",
+      "id": "en_literary_reference_the_course_of_true_love_never_did_run_smooth_a7985aa8",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Romance often faces difficulties.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "A Midsummer Night’s Dream",
+      "source_work_key": "mnemosyne.en.work.a_midsummer_night_s_dream",
+      "surface_patterns": [
+        "the course of true love never did run smooth",
+        "course of true love",
+        "course of true love never did run smooth"
+      ],
+      "variants": [
+        "course of true love",
+        "course of true love never did run smooth"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_the_devil_can_cite_scripture_02442d43",
+      "canonical_reference": "the devil can cite Scripture",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.the_devil_can_cite_scripture",
+      "id": "en_literary_reference_the_devil_can_cite_scripture_02442d43",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Bad people can quote good words for bad ends.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 3",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Merchant of Venice",
+      "source_work_key": "mnemosyne.en.work.the_merchant_of_venice",
+      "surface_patterns": [
+        "the devil can cite Scripture",
+        "devil can cite Scripture"
+      ],
+      "variants": [
+        "devil can cite Scripture"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_the_fault_is_not_in_our_stars_18be3d57",
+      "canonical_reference": "the fault is not in our stars",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.the_fault_is_not_in_our_stars",
+      "id": "en_literary_reference_the_fault_is_not_in_our_stars_18be3d57",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Responsibility lies with ourselves, not fate.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Julius Caesar",
+      "source_work_key": "mnemosyne.en.work.julius_caesar",
+      "surface_patterns": [
+        "the fault is not in our stars",
+        "fault in our stars",
+        "fault is not in our stars"
+      ],
+      "variants": [
+        "fault in our stars",
+        "fault is not in our stars"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_the_life_so_short_the_craft_so_long_to_learn_c7066b6f",
       "canonical_reference": "the life so short, the craft so long to learn",
       "confidence": 0.78,
@@ -8598,6 +9153,30 @@
       "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
       "surface_patterns": [
         "vanity fair"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_vorpal_sword_b8603512",
+      "canonical_reference": "vorpal sword",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.carroll_phrases.vorpal_sword",
+      "id": "en_literary_reference_vorpal_sword_b8603512",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A fantastical weapon from nonsense verse.",
+      "source_author": "Lewis Carroll",
+      "source_author_key": "mnemosyne.en.author.lewis_carroll",
+      "source_dataset": "en_carroll_phrases",
+      "source_license": "public_domain",
+      "source_location": "Jabberwocky",
+      "source_url": "https://www.gutenberg.org/ebooks/11",
+      "source_work": "Through the Looking-Glass / Jabberwocky",
+      "source_work_key": "mnemosyne.en.work.alice_books_and_poems",
+      "surface_patterns": [
+        "vorpal sword"
       ]
     },
     {
@@ -9070,6 +9649,29 @@
       ]
     },
     {
+      "canonical_form": "en:proverb:en_proverb_tradition_honesty_is_the_best_policy_33bf3b3d",
+      "canonical_reference": "honesty is the best policy",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.honesty_is_the_best_policy",
+      "id": "en_proverb_tradition_honesty_is_the_best_policy_33bf3b3d",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Truthfulness is usually wisest.",
+      "source_author": "Aesop / fable tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_fable_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "Aesop’s Fables / fable tradition",
+      "source_work_key": "mnemosyne.en.work.aesop_s_fables_fable_tradition",
+      "surface_patterns": [
+        "honesty is the best policy"
+      ]
+    },
+    {
       "canonical_form": "en:proverb:en_proverb_tradition_miser_and_his_gold_2781018f",
       "canonical_reference": "miser and his gold",
       "confidence": 0.76,
@@ -9154,6 +9756,29 @@
       "variants": [
         "oak and the reed",
         "oak & the reed"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_one_good_turn_deserves_another_b4c62eb8",
+      "canonical_reference": "one good turn deserves another",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.one_good_turn_deserves_another",
+      "id": "en_proverb_tradition_one_good_turn_deserves_another_b4c62eb8",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Kindness should be returned.",
+      "source_author": "Aesop / fable tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_fable_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "Aesop’s Fables / fable tradition",
+      "source_work_key": "mnemosyne.en.work.aesop_s_fables_fable_tradition",
+      "surface_patterns": [
+        "one good turn deserves another"
       ]
     },
     {
