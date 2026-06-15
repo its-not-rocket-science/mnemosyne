@@ -276,7 +276,7 @@ def test_build_check_prints_concise_ok_not_report_table():
         text=True,
     )
 
-    assert result.stdout.strip() == "OK: validated 435 entries across 17 languages"
+    assert result.stdout.strip() == "OK: validated 459 entries across 17 languages"
     assert "language | entries" not in result.stdout
     assert result.stderr == ""
 
@@ -326,7 +326,7 @@ def test_write_out_dir_writes_files_and_prints_concise_summary(tmp_path):
     )
 
     assert {p.stem for p in tmp_path.glob("*.json")} == set(SUPPORTED_LANGUAGES)
-    assert result.stdout.strip() == f"Wrote 17 catalogue files to {tmp_path} (435 entries)"
+    assert result.stdout.strip() == f"Wrote 17 catalogue files to {tmp_path} (459 entries)"
     assert "language | entries" not in result.stdout
 
 
@@ -418,8 +418,8 @@ def test_generated_json_determinism_in_temp_dir(tmp_path):
     second_payloads = {
         p.name: p.read_text(encoding="utf-8") for p in sorted(second_dir.glob("*.json"))
     }
-    assert first.stdout.strip() == f"Wrote 17 catalogue files to {first_dir} (435 entries)"
-    assert second.stdout.strip() == f"Wrote 17 catalogue files to {second_dir} (435 entries)"
+    assert first.stdout.strip() == f"Wrote 17 catalogue files to {first_dir} (459 entries)"
+    assert second.stdout.strip() == f"Wrote 17 catalogue files to {second_dir} (459 entries)"
     assert first_payloads == second_payloads
 
 
@@ -643,7 +643,7 @@ def test_matches_are_returned_in_sentence_order():
 
 def test_cultural_detector_integrates_with_lesson_extraction():
     result = enrich("en", [CandidateSentenceResult(text="Big Brother is watching.", candidates=[])])[0]
-    assert any(c.canonical_form == "en:literary:big_brother" for c in result.candidates)
+    assert any(c.canonical_form == "en:cultural:en_cultural_reference_big_brother_is_watching_22e6f2b5" for c in result.candidates)
 
 
 @pytest.mark.parametrize("language", SUPPORTED_LANGUAGES)
