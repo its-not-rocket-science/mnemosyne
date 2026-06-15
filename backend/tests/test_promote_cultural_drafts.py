@@ -205,3 +205,18 @@ def test_output_validates_with_build_cultural_catalog(tmp_path) -> None:
 
     assert warnings == []
     assert [entry["canonical_reference"] for entry in by_lang["en"]] == ["break the ice"]
+
+
+def test_rights_basis_preserved_through_promotion(tmp_path) -> None:
+    entry = _entry(source_license="not_required", rights_basis="common_usage_short_expression")
+    entry.pop("source_location", None)
+    draft, seed, allowlist = _paths(tmp_path, [entry], "break the ice\n")
+
+    promoted, _, _ = promoter.promote(
+        _args(draft, seed, allowlist, allow_missing_source_location=True, min_confidence=0.80)
+    )
+
+    assert promoted[0]["rights_basis"] == "common_usage_short_expression"
+
+    by_lang, warnings = validate_and_build(promoted)
+    assert warnings == []
