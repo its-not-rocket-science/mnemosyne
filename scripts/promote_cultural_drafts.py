@@ -59,6 +59,7 @@ PROMOTED_FIELD_ORDER = (
     "source_location",
     "source_url",
     "source_license",
+    "rights_basis",
     "source_dataset",
     "allow_short_pattern",
     "review_notes",
