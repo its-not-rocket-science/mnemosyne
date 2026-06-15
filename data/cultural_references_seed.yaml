@@ -7178,3 +7178,658 @@
   notes: Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable
     public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous
     confidence 0.90.
+- id: en_literary_reference_hail_horrors_hail_cf7e1dcf
+  language: en
+  canonical_reference: hail horrors, hail
+  reference_type: literary_reference
+  surface_patterns:
+    - hail horrors, hail
+  short_explanation: A defiant acceptance of misery or terror.
+  learner_level: C2
+  confidence: 0.9
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.hail_horrors_hail
+  source_work_key: mnemosyne.en.work.paradise_lost
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book 1
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.
+- id: en_literary_reference_hurled_headlong_561607c7
+  language: en
+  canonical_reference: hurled headlong
+  reference_type: literary_reference
+  surface_patterns:
+    - hurled headlong
+  short_explanation: Thrown violently downward or into disaster.
+  learner_level: C1
+  confidence: 0.82
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.hurled_headlong
+  source_work_key: mnemosyne.en.work.paradise_lost
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Paradise Lost
+  source_author: John Milton
+  source_location: Book 1
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.
+- id: en_literary_reference_more_in_sorrow_than_in_anger_f18943ba
+  language: en
+  canonical_reference: more in sorrow than in anger
+  reference_type: literary_reference
+  surface_patterns:
+    - more in sorrow than in anger
+  short_explanation: With sadness rather than rage.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.more_in_sorrow_than_in_anger
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act I Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_neither_rhyme_nor_reason_d4edab1a
+  language: en
+  canonical_reference: neither rhyme nor reason
+  reference_type: literary_reference
+  surface_patterns:
+    - neither rhyme nor reason
+  short_explanation: No clear logic or explanation.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - without rhyme or reason
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.neither_rhyme_nor_reason
+  source_work_key: mnemosyne.en.work.the_comedy_of_errors
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Comedy of Errors
+  source_author: William Shakespeare
+  source_location: Act II Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_one_fell_swoop_9911e623
+  language: en
+  canonical_reference: one fell swoop
+  reference_type: literary_reference
+  surface_patterns:
+    - one fell swoop
+  short_explanation: All at once in a single action.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - in one fell swoop
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.one_fell_swoop
+  source_work_key: mnemosyne.en.work.macbeth
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act IV Scene 3
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_pound_of_flesh_1ec1486a
+  language: en
+  canonical_reference: pound of flesh
+  reference_type: literary_reference
+  surface_patterns:
+    - pound of flesh
+  short_explanation: A harshly exacted debt or revenge.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.pound_of_flesh
+  source_work_key: mnemosyne.en.work.the_merchant_of_venice
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Merchant of Venice
+  source_author: William Shakespeare
+  source_location: Act IV Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_primrose_path_5535ebb6
+  language: en
+  canonical_reference: primrose path
+  reference_type: literary_reference
+  surface_patterns:
+    - primrose path
+  short_explanation: An easy path leading to ruin.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.primrose_path
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act I Scene 3
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_salad_days_e1ec0838
+  language: en
+  canonical_reference: salad days
+  reference_type: literary_reference
+  surface_patterns:
+    - salad days
+  short_explanation: Youthful, inexperienced days.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.salad_days
+  source_work_key: mnemosyne.en.work.antony_and_cleopatra
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Antony and Cleopatra
+  source_author: William Shakespeare
+  source_location: Act I Scene 5
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_sea_change_42be5e97
+  language: en
+  canonical_reference: sea change
+  reference_type: literary_reference
+  surface_patterns:
+    - sea change
+  short_explanation: A profound transformation.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - a sea change
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.sea_change
+  source_work_key: mnemosyne.en.work.the_tempest
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Tempest
+  source_author: William Shakespeare
+  source_location: Act I Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: 'Commonly attributed to Shakespeare; attribution should be reviewed. Merged duplicate/overlapping
+    draft rows. Provenance candidates: en_shakespeare_phrases / The Tempest / William Shakespeare / Act
+    I Scene 2.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.'
+- id: en_literary_reference_tower_of_strength_28971755
+  language: en
+  canonical_reference: tower of strength
+  reference_type: literary_reference
+  surface_patterns:
+    - tower of strength
+  short_explanation: A very dependable source of support.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.tower_of_strength
+  source_work_key: mnemosyne.en.work.richard_iii
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Richard III
+  source_author: William Shakespeare
+  source_location: Act V Scene 3
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.82.
+- id: en_literary_reference_ivanhoe_c0134182
+  language: en
+  canonical_reference: Ivanhoe
+  reference_type: literary_reference
+  surface_patterns:
+    - Ivanhoe
+  short_explanation: A medieval chivalric romance reference.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.ivanhoe
+  source_work_key: mnemosyne.en.work.ivanhoe
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: Ivanhoe
+  source_author: Walter Scott
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/82
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Scott-related expression; attribution should be reviewed cautiously.; Source URL added by v3
+    normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_literary_reference_rob_roy_c5dd1872
+  language: en
+  canonical_reference: Rob Roy
+  reference_type: literary_reference
+  surface_patterns:
+    - Rob Roy
+  short_explanation: A Scottish outlaw-hero reference.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.rob_roy
+  source_work_key: mnemosyne.en.work.rob_roy
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: Rob Roy
+  source_author: Walter Scott
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/7025
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Scott-related expression; attribution should be reviewed cautiously.; Source URL added by v3
+    normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_literary_reference_lady_of_the_lake_e16aca58
+  language: en
+  canonical_reference: Lady of the Lake
+  reference_type: literary_reference
+  surface_patterns:
+    - the Lady of the Lake
+  short_explanation: A romantic Highland literary allusion.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - Lady of the Lake
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.lady_of_the_lake
+  source_work_key: mnemosyne.en.work.the_lady_of_the_lake
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: The Lady of the Lake
+  source_author: Walter Scott
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/3011
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Scott-related expression; attribution should be reviewed cautiously.; Source URL added by v3
+    normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_waverley_21c932ff
+  language: en
+  canonical_reference: Waverley
+  reference_type: literary_reference
+  surface_patterns:
+    - Waverley
+  short_explanation: A reference to divided loyalties and historical romance.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.waverley
+  source_work_key: mnemosyne.en.work.waverley
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: Waverley
+  source_author: Walter Scott
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/5998
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Scott-related expression; attribution should be reviewed cautiously.; Source URL added by v3
+    normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.82.
+- id: en_literary_reference_giant_despair_0478fdff
+  language: en
+  canonical_reference: Giant Despair
+  reference_type: literary_reference
+  surface_patterns:
+    - giant despair
+  short_explanation: A personification of crushing hopelessness.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.giant_despair
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part 1
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Bunyan phrase; some overlap with Biblical tradition.; Source URL added by v3 normalisation as
+    a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.90.
+- id: en_literary_reference_mr_worldly_wiseman_34954dbb
+  language: en
+  canonical_reference: Mr Worldly Wiseman
+  reference_type: literary_reference
+  surface_patterns:
+    - Mr Worldly Wiseman
+  short_explanation: A figure of practical but spiritually misleading advice.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.mr_worldly_wiseman
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part 1
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Bunyan phrase; some overlap with Biblical tradition.; Source URL added by v3 normalisation as
+    a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.88.
+- id: en_literary_reference_celestial_city_c4ff4967
+  language: en
+  canonical_reference: celestial city
+  reference_type: literary_reference
+  surface_patterns:
+    - the celestial city
+  short_explanation: A promised final destination or spiritual goal.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - celestial city
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.celestial_city
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part 1
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: 'Bunyan phrase; some overlap with Biblical tradition. Expanded Mnemosyne candidate; source attribution
+    and wording should be reviewed. Merged duplicate/overlapping draft rows. Provenance candidates: en_bunyan_phrases
+    / The Pilgrim’s Progress / John Bunyan / Part 1; en_bunyan_phrases / The Pilgrim’s Progress / John
+    Bunyan.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence
+    revised in v3 using provenance/attribution cap; previous confidence 0.88.'
+- id: en_literary_reference_wicket_gate_055f13a5
+  language: en
+  canonical_reference: wicket gate
+  reference_type: literary_reference
+  surface_patterns:
+    - the wicket gate
+  short_explanation: The small entrance to a difficult path of salvation.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - wicket gate
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.wicket_gate
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part 1
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: 'Bunyan phrase; some overlap with Biblical tradition. Expanded Mnemosyne candidate; source attribution
+    and wording should be reviewed. Merged duplicate/overlapping draft rows. Provenance candidates: en_bunyan_phrases
+    / The Pilgrim’s Progress / John Bunyan / Part 1; en_bunyan_phrases / The Pilgrim’s Progress / John
+    Bunyan.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence
+    revised in v3 using provenance/attribution cap; previous confidence 0.86.'
+- id: en_literary_reference_act_well_your_part_f5b6d94e
+  language: en
+  canonical_reference: act well your part
+  reference_type: literary_reference
+  surface_patterns:
+    - act well your part
+  short_explanation: Perform your role honourably.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.pope_phrases.act_well_your_part
+  source_work_key: mnemosyne.en.work.an_essay_on_man
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Man
+  source_author: Alexander Pope
+  source_location: Epistle 4
+  source_url: https://en.wikisource.org/wiki/An_Essay_on_Man
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable
+    public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous
+    confidence 0.86.
+- id: en_literary_reference_drink_deep_or_taste_not_5a7ddf40
+  language: en
+  canonical_reference: drink deep, or taste not
+  reference_type: literary_reference
+  surface_patterns:
+    - drink deep, or taste not
+  short_explanation: Superficial knowledge is dangerous; learn deeply.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.pope_phrases.drink_deep_or_taste_not
+  source_work_key: mnemosyne.en.work.an_essay_on_criticism
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Criticism
+  source_author: Alexander Pope
+  source_location: Part 2
+  source_url: https://en.wikisource.org/wiki/An_Essay_on_Criticism
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: 'Pope phrase; exact line form should be reviewed. Expanded Mnemosyne candidate; source attribution
+    and wording should be reviewed. Needs source-location review. Merged duplicate/overlapping draft rows.
+    Provenance candidates: en_pope_phrases / An Essay on Criticism / Alexander Pope / Part 2; en_pope_phrases
+    / Poems and essays / Alexander Pope.; Source URL added by v3 normalisation as a stable public-domain
+    reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence
+    0.90.'
+- id: en_literary_reference_feast_of_reason_and_flow_of_soul_c6c36d22
+  language: en
+  canonical_reference: feast of reason and flow of soul
+  reference_type: literary_reference
+  surface_patterns:
+    - the feast of reason and the flow of soul
+  short_explanation: A lively, intelligent conversation.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - feast of reason and the flow of soul
+    - feast of reason & flow of soul
+  explanation_key: mnemosyne.en.explanation.pope_phrases.feast_of_reason_and_flow_of_soul
+  source_work_key: mnemosyne.en.work.imitations_of_horace
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: Imitations of Horace
+  source_author: Alexander Pope
+  source_location: First Satire of the Second Book of Horace
+  source_url: https://www.gutenberg.org/ebooks/9601
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Pope phrase; exact line form should be reviewed.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.88.
+- id: en_classical_or_scriptural_allusion_calliope_dadd534e
+  language: en
+  canonical_reference: Calliope
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - calliope
+  short_explanation: The muse of epic poetry; a source of poetic inspiration.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.calliope
+  source_work_key: mnemosyne.en.work.greek_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Greek myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.82.
+- id: en_classical_or_scriptural_allusion_furies_499ea21f
+  language: en
+  canonical_reference: Furies
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the Furies
+  short_explanation: Avenging forces of guilt or punishment.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - Furies
+  explanation_key: mnemosyne.en.explanation.classical_allusions.furies
+  source_work_key: mnemosyne.en.work.oresteia_and_greek_myth
+  source_author_key: mnemosyne.en.author.aeschylus_and_classical_tradition
+  source_work: Oresteia and Greek myth
+  source_author: Aeschylus and classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.88.
+- id: en_classical_or_scriptural_allusion_tantalus_32189426
+  language: en
+  canonical_reference: Tantalus
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Tantalus
+  short_explanation: A symbol of desire eternally frustrated.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.tantalus
+  source_work_key: mnemosyne.en.work.tantalus_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Tantalus myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.88.
+- id: en_literary_reference_as_fresh_as_is_the_month_of_may_28f3105f
+  language: en
+  canonical_reference: as fresh as is the month of May
+  reference_type: literary_reference
+  surface_patterns:
+    - as fresh as is the month of May
+  short_explanation: Youthful, lively, or fresh.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - fresh as May
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.as_fresh_as_is_the_month_of_may
+  source_work_key: mnemosyne.en.work.the_canterbury_tales
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: The Canterbury Tales
+  source_author: Geoffrey Chaucer
+  source_location: General Prologue
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added
+    by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using
+    provenance/attribution cap; previous confidence 0.82.
+- id: en_literary_reference_the_life_so_short_the_craft_so_long_to_learn_c7066b6f
+  language: en
+  canonical_reference: the life so short, the craft so long to learn
+  reference_type: literary_reference
+  surface_patterns:
+    - the life so short, the craft so long to learn
+  short_explanation: Mastery takes longer than life allows.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - life so short, the craft so long to learn
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.the_life_so_short_the_craft_so_long_to_learn
+  source_work_key: mnemosyne.en.work.parlement_of_foules
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: Parlement of Foules
+  source_author: Geoffrey Chaucer
+  source_url: https://en.wikisource.org/wiki/Parlement_of_Foules
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added
+    by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using
+    provenance/attribution cap; previous confidence 0.84.
