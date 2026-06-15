@@ -13751,3 +13751,579 @@
   source_license: public_domain
   source_dataset: en_milton_phrases
   notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_to_thine_own_self_be_true_0887095a
+  language: en
+  canonical_reference: to thine own self be true
+  reference_type: literary_reference
+  surface_patterns:
+    - to thine own self be true
+  short_explanation: Be honest with yourself.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.to_thine_own_self_be_true
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act I Scene 3
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_though_she_be_but_little_she_is_fierce_f77a16ab
+  language: en
+  canonical_reference: though she be but little, she is fierce
+  reference_type: literary_reference
+  surface_patterns:
+    - though she be but little, she is fierce
+  short_explanation: Small size can hide great force.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.though_she_be_but_little_she_is_fierce
+  source_work_key: mnemosyne.en.work.a_midsummer_night_s_dream
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: A Midsummer Night’s Dream
+  source_author: William Shakespeare
+  source_location: Act III Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_classical_or_scriptural_allusion_ajax_077d72da
+  language: en
+  canonical_reference: Ajax
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Ajax
+  short_explanation: A strong warrior figure.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.ajax
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_aphrodite_127995d0
+  language: en
+  canonical_reference: Aphrodite
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Aphrodite
+  short_explanation: Beauty, desire, or love personified.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.aphrodite
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_argonauts_5f433b11
+  language: en
+  canonical_reference: Argonauts
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Argonauts
+  short_explanation: Adventurers pursuing a difficult prize.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.argonauts
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_argus_8e6c9554
+  language: en
+  canonical_reference: Argus
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Argus
+  short_explanation: A many-eyed watcher.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.argus
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_proverb_tradition_the_horse_and_the_groom_61c0231d
+  language: en
+  canonical_reference: the horse and the groom
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the horse and the groom
+  short_explanation: Neglect ruins what display cannot fix.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - horse and the groom
+    - the horse & the groom
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_horse_and_the_groom
+  source_work_key: mnemosyne.en.work.aesop_s_fables_fable_tradition
+  source_author_key: mnemosyne.en.author.aesop_fable_tradition
+  source_work: Aesop’s Fables / fable tradition
+  source_author: Aesop / fable tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_shoot_folly_as_it_flies_2acec81f
+  language: en
+  canonical_reference: shoot folly as it flies
+  reference_type: literary_reference
+  surface_patterns:
+    - shoot folly as it flies
+  short_explanation: Satirise foolishness as it appears.
+  learner_level: C2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.pope_phrases.shoot_folly_as_it_flies
+  source_work_key: mnemosyne.en.work.an_essay_on_man
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Man
+  source_author: Alexander Pope
+  source_location: Epistle 1
+  source_url: https://en.wikisource.org/wiki/An_Essay_on_Man
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable
+    public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous
+    confidence 0.86.
+- id: en_literary_reference_mob_of_gentlemen_61378ce5
+  language: en
+  canonical_reference: mob of gentlemen
+  reference_type: literary_reference
+  surface_patterns:
+    - the mob of gentlemen
+  short_explanation: A satirical phrase for fashionable or idle elites.
+  learner_level: C2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - mob of gentlemen
+  explanation_key: mnemosyne.en.explanation.pope_phrases.mob_of_gentlemen
+  source_work_key: mnemosyne.en.work.epistle_to_dr_arbuthnot
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: Epistle to Dr Arbuthnot
+  source_author: Alexander Pope
+  source_location: Line 237
+  source_url: https://en.wikisource.org/wiki/Epistle_to_Dr_Arbuthnot
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable
+    public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous
+    confidence 0.84.
+- id: en_literary_reference_true_wit_is_nature_to_advantage_dressed_11997ff8
+  language: en
+  canonical_reference: true wit is nature to advantage dressed
+  reference_type: literary_reference
+  surface_patterns:
+    - true wit is nature to advantage dressed
+  short_explanation: Good wit makes nature appear more clearly.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.pope_phrases.true_wit_is_nature_to_advantage_dressed
+  source_work_key: mnemosyne.en.work.poems_and_essays
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Criticism
+  source_author: Alexander Pope
+  source_location: Part II
+  source_url: https://www.gutenberg.org/ebooks/9601
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_literary_reference_vindicate_the_ways_of_god_to_man_ab4fc347
+  language: en
+  canonical_reference: vindicate the ways of God to man
+  reference_type: literary_reference
+  surface_patterns:
+    - vindicate the ways of God to man
+  short_explanation: Defend divine justice to human reason.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.pope_phrases.vindicate_the_ways_of_god_to_man
+  source_work_key: mnemosyne.en.work.poems_and_essays
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Man
+  source_author: Alexander Pope
+  source_location: Epistle I
+  source_url: https://www.gutenberg.org/ebooks/9601
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_literary_reference_sound_must_seem_an_echo_to_the_sense_7e79acbb
+  language: en
+  canonical_reference: sound must seem an echo to the sense
+  reference_type: literary_reference
+  surface_patterns:
+    - sound must seem an echo to the sense
+  short_explanation: Style should match meaning.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.pope_phrases.sound_must_seem_an_echo_to_the_sense
+  source_work_key: mnemosyne.en.work.poems_and_essays
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Criticism
+  source_author: Alexander Pope
+  source_location: Part II
+  source_url: https://www.gutenberg.org/ebooks/9601
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_literary_reference_snatch_a_grace_beyond_the_reach_of_art_af671e91
+  language: en
+  canonical_reference: snatch a grace beyond the reach of art
+  reference_type: literary_reference
+  surface_patterns:
+    - snatch a grace beyond the reach of art
+  short_explanation: Achieve a natural excellence beyond technique.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.pope_phrases.snatch_a_grace_beyond_the_reach_of_art
+  source_work_key: mnemosyne.en.work.poems_and_essays
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Criticism
+  source_author: Alexander Pope
+  source_location: Part II
+  source_url: https://www.gutenberg.org/ebooks/9601
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_literary_reference_to_wake_the_soul_by_tender_strokes_of_art_18af2e55
+  language: en
+  canonical_reference: to wake the soul by tender strokes of art
+  reference_type: literary_reference
+  surface_patterns:
+    - to wake the soul by tender strokes of art
+  short_explanation: Art can awaken deep feeling.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.pope_phrases.to_wake_the_soul_by_tender_strokes_of_art
+  source_work_key: mnemosyne.en.work.poems_and_essays
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: Eloisa to Abelard
+  source_author: Alexander Pope
+  source_location: Line 366
+  source_url: https://www.gutenberg.org/ebooks/9601
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_literary_reference_patience_is_a_virtue_69529ded
+  language: en
+  canonical_reference: patience is a virtue
+  reference_type: literary_reference
+  surface_patterns:
+    - patience is a virtue
+  short_explanation: Waiting calmly is a moral strength.
+  learner_level: B1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - patience is virtuous
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.patience_is_a_virtue
+  source_work_key: mnemosyne.en.work.the_canterbury_tales
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: The Canterbury Tales
+  source_author: Geoffrey Chaucer
+  source_location: The Franklin’s Tale
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added
+    by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_busy_as_bees_0e6d298e
+  language: en
+  canonical_reference: busy as bees
+  reference_type: literary_reference
+  surface_patterns:
+    - busy as bees
+  short_explanation: Very busy or industrious.
+  learner_level: B1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - busy as a bee
+  explanation_key: mnemosyne.en.explanation.chaucer_phrases.busy_as_bees
+  source_work_key: mnemosyne.en.work.the_canterbury_tales
+  source_author_key: mnemosyne.en.author.geoffrey_chaucer
+  source_work: The Canterbury Tales
+  source_author: Geoffrey Chaucer
+  source_location: The Squire’s Tale
+  source_url: https://www.gutenberg.org/ebooks/2383
+  source_license: public_domain
+  source_dataset: en_chaucer_phrases
+  notes: Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added
+    by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_glubbdubdrib_e5b608b1
+  language: en
+  canonical_reference: Glubbdubdrib
+  reference_type: literary_reference
+  surface_patterns:
+    - Glubbdubdrib
+  short_explanation: A fantastical island of conjured historical ghosts.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.swift_phrases.glubbdubdrib
+  source_work_key: mnemosyne.en.work.gulliver_s_travels_and_satire
+  source_author_key: mnemosyne.en.author.jonathan_swift
+  source_work: Gulliver’s Travels and satire
+  source_author: Jonathan Swift
+  source_url: https://www.gutenberg.org/ebooks/829
+  source_license: public_domain
+  source_dataset: en_swift_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_swiftian_satire_024a487d
+  language: en
+  canonical_reference: Swiftian satire
+  reference_type: literary_reference
+  surface_patterns:
+    - Swiftian satire
+  short_explanation: Savage, ironic political or social satire.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.swift_phrases.swiftian_satire
+  source_work_key: mnemosyne.en.work.gulliver_s_travels_and_satire
+  source_author_key: mnemosyne.en.author.jonathan_swift
+  source_work: Gulliver’s Travels and satire
+  source_author: Jonathan Swift
+  source_url: https://www.gutenberg.org/ebooks/829
+  source_license: public_domain
+  source_dataset: en_swift_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_kenilworth_12def897
+  language: en
+  canonical_reference: Kenilworth
+  reference_type: literary_reference
+  surface_patterns:
+    - Kenilworth
+  short_explanation: An Elizabethan historical romance reference.
+  learner_level: C2
+  confidence: 0.72
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.kenilworth
+  source_work_key: mnemosyne.en.work.kenilworth
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: Kenilworth
+  source_author: Walter Scott
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/1606
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Scott-related expression; attribution should be reviewed cautiously.; Source URL added by v3
+    normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_demas_736864fa
+  language: en
+  canonical_reference: Demas
+  reference_type: literary_reference
+  surface_patterns:
+    - Demas
+  short_explanation: A tempter toward worldly gain.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.demas
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part I
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_talkative_d981f9b1
+  language: en
+  canonical_reference: Talkative
+  reference_type: literary_reference
+  surface_patterns:
+    - Talkative
+  short_explanation: A person whose words outrun conduct.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.talkative
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part I
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_wegg_4481e4b4
+  language: en
+  canonical_reference: Wegg
+  reference_type: literary_reference
+  surface_patterns:
+    - Wegg
+  short_explanation: A comic opportunist or literary pretender.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.wegg
+  source_work_key: mnemosyne.en.work.novels_and_christmas_books
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Novels and Christmas books
+  source_author: Charles Dickens
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_cultural_reference_dombey_and_son_6b1a58ea
+  language: en
+  canonical_reference: Dombey and Son
+  reference_type: cultural_reference
+  surface_patterns:
+    - Dombey and Son
+  short_explanation: A shorthand for patriarchal business family pride.
+  learner_level: C2
+  confidence: 0.72
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - Dombey & Son
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.dombey_and_son
+  source_work_key: mnemosyne.en.work.dombey_and_son
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Dombey and Son
+  source_author: Charles Dickens
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/821
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_who_are_you_f53c505a
+  language: en
+  canonical_reference: who are you?
+  reference_type: literary_reference
+  surface_patterns:
+    - who are you?
+  short_explanation: A destabilising question of identity.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.who_are_you
+  source_work_key: mnemosyne.en.work.alice_books_and_poems
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 5
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
