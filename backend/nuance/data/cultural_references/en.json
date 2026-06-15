@@ -269,6 +269,28 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_apollonian_6cdd1d3d",
+      "canonical_reference": "Apollonian",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.apollonian",
+      "id": "en_classical_or_scriptural_allusion_apollonian_6cdd1d3d",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.86.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Ordered, rational, balanced, or restrained.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Greek myth",
+      "source_work_key": "mnemosyne.en.work.greek_myth",
+      "surface_patterns": [
+        "Apollonian"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_apple_of_his_eye_60487f49",
       "canonical_reference": "apple of his eye",
       "confidence": 0.84,
@@ -613,6 +635,28 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_dionysian_d8c3f961",
+      "canonical_reference": "Dionysian",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.dionysian",
+      "id": "en_classical_or_scriptural_allusion_dionysian_d8c3f961",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.86.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Wild, ecstatic, instinctive, or sensual.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Greek myth",
+      "source_work_key": "mnemosyne.en.work.greek_myth",
+      "surface_patterns": [
+        "Dionysian"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_eat_drink_and_be_merry_b2ec2289",
       "canonical_reference": "eat, drink, and be merry",
       "confidence": 0.84,
@@ -944,6 +988,34 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_mark_of_cain_4fb0548b",
+      "canonical_reference": "mark of Cain",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.mark_of_cain",
+      "id": "en_classical_or_scriptural_allusion_mark_of_cain_4fb0548b",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A visible sign of guilt or exclusion.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 4:15",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.genesis",
+      "surface_patterns": [
+        "the mark of Cain",
+        "mark of Cain"
+      ],
+      "variants": [
+        "mark of Cain"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_midas_touch_1894e593",
       "canonical_reference": "Midas touch",
       "confidence": 0.76,
@@ -967,6 +1039,36 @@
       ],
       "variants": [
         "the Midas touch"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_milk_and_honey_553d4d37",
+      "canonical_reference": "milk and honey",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.milk_and_honey",
+      "id": "en_classical_or_scriptural_allusion_milk_and_honey_553d4d37",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Abundance, prosperity, or comfort.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Exodus 3:8",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Exodus",
+      "source_work_key": "mnemosyne.en.work.exodus",
+      "surface_patterns": [
+        "milk and honey",
+        "land flowing with milk and honey",
+        "milk & honey"
+      ],
+      "variants": [
+        "land flowing with milk and honey",
+        "milk & honey"
       ]
     },
     {
@@ -1014,6 +1116,34 @@
       "source_work_key": "mnemosyne.en.work.ecclesiastes",
       "surface_patterns": [
         "nothing new under the sun"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_out_of_the_mouths_of_babes_13e24e06",
+      "canonical_reference": "out of the mouths of babes",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.out_of_the_mouths_of_babes",
+      "id": "en_classical_or_scriptural_allusion_out_of_the_mouths_of_babes_13e24e06",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Children can unexpectedly speak wisdom.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Psalm 8:2; Matthew 21:16",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Psalms; Matthew",
+      "source_work_key": "mnemosyne.en.work.psalms_matthew",
+      "surface_patterns": [
+        "out of the mouths of babes",
+        "mouths of babes"
+      ],
+      "variants": [
+        "mouths of babes"
       ]
     },
     {
@@ -1066,6 +1196,28 @@
       "source_work_key": "mnemosyne.en.work.gospel_of_luke",
       "surface_patterns": [
         "physician, heal thyself"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_promethean_b58a64fe",
+      "canonical_reference": "Promethean",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.promethean",
+      "id": "en_classical_or_scriptural_allusion_promethean_b58a64fe",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Boldly creative, rebellious, or life-giving.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Prometheus myth",
+      "source_work_key": "mnemosyne.en.work.prometheus_myth",
+      "surface_patterns": [
+        "Promethean"
       ]
     },
     {
@@ -1147,6 +1299,58 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_separate_the_sheep_from_the_goats_b35bc619",
+      "canonical_reference": "separate the sheep from the goats",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.separate_the_sheep_from_the_goats",
+      "id": "en_classical_or_scriptural_allusion_separate_the_sheep_from_the_goats_b35bc619",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Distinguish the worthy from the unworthy.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 25:32",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Matthew",
+      "source_work_key": "mnemosyne.en.work.gospel_of_matthew",
+      "surface_patterns": [
+        "separate the sheep from the goats"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_signs_of_the_times_7b688211",
+      "canonical_reference": "signs of the times",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.signs_of_the_times",
+      "id": "en_classical_or_scriptural_allusion_signs_of_the_times_7b688211",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Events showing the character of an age.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 16:3",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Matthew",
+      "source_work_key": "mnemosyne.en.work.gospel_of_matthew",
+      "surface_patterns": [
+        "signs of the times",
+        "sign of the times"
+      ],
+      "variants": [
+        "sign of the times"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_siren_song_ad7e1289",
       "canonical_reference": "siren song",
       "confidence": 0.78,
@@ -1202,6 +1406,62 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_eleventh_hour_46b9154a",
+      "canonical_reference": "the eleventh hour",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.the_eleventh_hour",
+      "id": "en_classical_or_scriptural_allusion_the_eleventh_hour_46b9154a",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "The last possible moment.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 20:6",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Matthew",
+      "source_work_key": "mnemosyne.en.work.gospel_of_matthew",
+      "surface_patterns": [
+        "the eleventh hour",
+        "eleventh hour"
+      ],
+      "variants": [
+        "eleventh hour"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_flesh_is_weak_48fc7cb5",
+      "canonical_reference": "the flesh is weak",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.the_flesh_is_weak",
+      "id": "en_classical_or_scriptural_allusion_the_flesh_is_weak_48fc7cb5",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Human willpower or physical strength can fail.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 26:41",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Matthew",
+      "source_work_key": "mnemosyne.en.work.gospel_of_matthew",
+      "surface_patterns": [
+        "the flesh is weak",
+        "flesh is weak"
+      ],
+      "variants": [
+        "flesh is weak"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_meek_shall_inherit_the_earth_7e296f2e",
       "canonical_reference": "the meek shall inherit the earth",
       "confidence": 0.84,
@@ -1227,6 +1487,34 @@
       ],
       "variants": [
         "meek shall inherit the earth"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_powers_that_be_99d36d64",
+      "canonical_reference": "the powers that be",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.the_powers_that_be",
+      "id": "en_classical_or_scriptural_allusion_the_powers_that_be_99d36d64",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Existing authorities or people in control.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Romans 13:1",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Romans",
+      "source_work_key": "mnemosyne.en.work.romans",
+      "surface_patterns": [
+        "the powers that be",
+        "powers that be"
+      ],
+      "variants": [
+        "powers that be"
       ]
     },
     {
@@ -1289,6 +1577,92 @@
         "money is the root of all evil",
         "love of money is the root of all evil",
         "root of all evil"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_spirit_is_willing_f050eff9",
+      "canonical_reference": "the spirit is willing",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.the_spirit_is_willing",
+      "id": "en_classical_or_scriptural_allusion_the_spirit_is_willing_f050eff9",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Good intentions are weakened by human frailty.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 26:41",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Matthew",
+      "source_work_key": "mnemosyne.en.work.gospel_of_matthew",
+      "surface_patterns": [
+        "the spirit is willing",
+        "the spirit is willing but the flesh is weak",
+        "spirit is willing"
+      ],
+      "variants": [
+        "the spirit is willing but the flesh is weak",
+        "spirit is willing"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_valley_of_the_shadow_of_death_b406fb6f",
+      "canonical_reference": "the valley of the shadow of death",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.the_valley_of_the_shadow_of_death",
+      "id": "en_classical_or_scriptural_allusion_the_valley_of_the_shadow_of_death_b406fb6f",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A period of extreme danger or fear.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Psalm 23:4",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Psalms",
+      "source_work_key": "mnemosyne.en.work.psalms",
+      "surface_patterns": [
+        "the valley of the shadow of death",
+        "valley of the shadow of death"
+      ],
+      "variants": [
+        "valley of the shadow of death"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_wages_of_sin_59397ad5",
+      "canonical_reference": "the wages of sin",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.the_wages_of_sin",
+      "id": "en_classical_or_scriptural_allusion_the_wages_of_sin_59397ad5",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "The consequences of wrongdoing.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Romans 6:23",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Romans",
+      "source_work_key": "mnemosyne.en.work.romans",
+      "surface_patterns": [
+        "the wages of sin",
+        "wages of sin"
+      ],
+      "variants": [
+        "wages of sin"
       ]
     },
     {
@@ -1534,6 +1908,30 @@
       "source_work_key": "mnemosyne.en.work.bleak_house",
       "surface_patterns": [
         "Bleak House"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_brobdingnagian_dbe5f724",
+      "canonical_reference": "Brobdingnagian",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.swift_phrases.brobdingnagian",
+      "id": "en_cultural_reference_brobdingnagian_dbe5f724",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "Gigantic or enormous.",
+      "source_author": "Jonathan Swift",
+      "source_author_key": "mnemosyne.en.author.jonathan_swift",
+      "source_dataset": "en_swift_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part II",
+      "source_url": "https://www.gutenberg.org/ebooks/829",
+      "source_work": "Gulliver’s Travels",
+      "source_work_key": "mnemosyne.en.work.gulliver_s_travels",
+      "surface_patterns": [
+        "Brobdingnagian"
       ]
     },
     {
@@ -1889,6 +2287,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_gulliver_6b3396b2",
+      "canonical_reference": "Gulliver",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.swift_phrases.gulliver",
+      "id": "en_cultural_reference_gulliver_6b3396b2",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A traveller among strange societies; sometimes an outsider observer.",
+      "source_author": "Jonathan Swift",
+      "source_author_key": "mnemosyne.en.author.jonathan_swift",
+      "source_dataset": "en_swift_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title character",
+      "source_url": "https://www.gutenberg.org/ebooks/829",
+      "source_work": "Gulliver’s Travels",
+      "source_work_key": "mnemosyne.en.work.gulliver_s_travels",
+      "surface_patterns": [
+        "Gulliver"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_it_was_the_best_of_times_6a385768",
       "canonical_reference": "it was the best of times",
       "confidence": 0.78,
@@ -2042,6 +2464,30 @@
       ],
       "variants": [
         "the memory hole"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_ministry_of_love_662a451f",
+      "canonical_reference": "Ministry of Love",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.ministry_of_love",
+      "id": "en_cultural_reference_ministry_of_love_662a451f",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A coercive institution masked by benevolent language.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Part I, Chapter 1",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four",
+      "surface_patterns": [
+        "Ministry of Love"
       ]
     },
     {
@@ -2337,6 +2783,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_two_minutes_hate_967d7f4c",
+      "canonical_reference": "Two Minutes Hate",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.two_minutes_hate",
+      "id": "en_cultural_reference_two_minutes_hate_967d7f4c",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Ritualised public hatred directed by authority.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Part I, Chapter 1",
+      "source_work": "Nineteen Eighty-Four",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four",
+      "surface_patterns": [
+        "two minutes hate"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_unperson_40943e08",
       "canonical_reference": "unperson",
       "confidence": 0.78,
@@ -2412,6 +2882,34 @@
       "source_work_key": "mnemosyne.en.work.alice_s_adventures_in_wonderland",
       "surface_patterns": [
         "white rabbit"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_yahoo_df97b015",
+      "canonical_reference": "Yahoo",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.swift_phrases.yahoo",
+      "id": "en_cultural_reference_yahoo_df97b015",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "A brutish or uncultured person; also a coined creature name.",
+      "source_author": "Jonathan Swift",
+      "source_author_key": "mnemosyne.en.author.jonathan_swift",
+      "source_dataset": "en_swift_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part IV",
+      "source_url": "https://www.gutenberg.org/ebooks/829",
+      "source_work": "Gulliver’s Travels",
+      "source_work_key": "mnemosyne.en.work.gulliver_s_travels",
+      "surface_patterns": [
+        "Yahoo",
+        "Yahoos"
+      ],
+      "variants": [
+        "Yahoos"
       ]
     },
     {
@@ -2586,6 +3084,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_as_good_luck_would_have_it_ac64dc78",
+      "canonical_reference": "as good luck would have it",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.as_good_luck_would_have_it",
+      "id": "en_literary_reference_as_good_luck_would_have_it_ac64dc78",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "By fortunate chance.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 5",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Merry Wives of Windsor",
+      "source_work_key": "mnemosyne.en.work.the_merry_wives_of_windsor",
+      "surface_patterns": [
+        "as good luck would have it",
+        "as luck would have it"
+      ],
+      "variants": [
+        "as luck would have it"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_awake_arise_or_be_forever_fallen_7dbd4ba9",
       "canonical_reference": "awake, arise, or be forever fallen",
       "confidence": 0.9,
@@ -2739,6 +3265,34 @@
       "source_work_key": "mnemosyne.en.work.hamlet",
       "surface_patterns": [
         "brevity is the soul of wit"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_budge_an_inch_8f2cf075",
+      "canonical_reference": "budge an inch",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.budge_an_inch",
+      "id": "en_literary_reference_budge_an_inch_8f2cf075",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Move or change position even slightly.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Induction Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Taming of the Shrew",
+      "source_work_key": "mnemosyne.en.work.the_taming_of_the_shrew",
+      "surface_patterns": [
+        "budge an inch",
+        "not budge an inch"
+      ],
+      "variants": [
+        "not budge an inch"
       ]
     },
     {
@@ -2972,6 +3526,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_doubting_castle_084a9369",
+      "canonical_reference": "Doubting Castle",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.bunyan_phrases.doubting_castle",
+      "id": "en_literary_reference_doubting_castle_084a9369",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Bunyan phrase; some overlap with Biblical tradition.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "literary_reference",
+      "register": "religious",
+      "short_explanation": "A mental prison of doubt and despair.",
+      "source_author": "John Bunyan",
+      "source_author_key": "mnemosyne.en.author.john_bunyan",
+      "source_dataset": "en_bunyan_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part 1",
+      "source_url": "https://www.gutenberg.org/ebooks/131",
+      "source_work": "The Pilgrim’s Progress",
+      "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
+      "surface_patterns": [
+        "doubting castle"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_eat_out_of_house_and_home_5a1b3420",
       "canonical_reference": "eat out of house and home",
       "confidence": 0.78,
@@ -3201,6 +3779,30 @@
       ],
       "variants": [
         "the green-eyed monster"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_heart_of_gold_f00a48da",
+      "canonical_reference": "heart of gold",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.heart_of_gold",
+      "id": "en_literary_reference_heart_of_gold_f00a48da",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A very kind and generous nature.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act IV Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Henry V",
+      "source_work_key": "mnemosyne.en.work.henry_v",
+      "surface_patterns": [
+        "heart of gold"
       ]
     },
     {
@@ -3563,6 +4165,30 @@
       ],
       "variants": [
         "unconquerable will"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_vanity_fair_96aaa61c",
+      "canonical_reference": "vanity fair",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.bunyan_phrases.vanity_fair",
+      "id": "en_literary_reference_vanity_fair_96aaa61c",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Bunyan phrase; some overlap with Biblical tradition.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.90.",
+      "reference_type": "literary_reference",
+      "register": "religious",
+      "short_explanation": "A place or culture of shallow worldly display.",
+      "source_author": "John Bunyan",
+      "source_author_key": "mnemosyne.en.author.john_bunyan",
+      "source_dataset": "en_bunyan_phrases",
+      "source_license": "public_domain",
+      "source_location": "Part 1",
+      "source_url": "https://www.gutenberg.org/ebooks/131",
+      "source_work": "The Pilgrim’s Progress",
+      "source_work_key": "mnemosyne.en.work.the_pilgrim_s_progress",
+      "surface_patterns": [
+        "vanity fair"
       ]
     },
     {
