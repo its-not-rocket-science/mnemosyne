@@ -1,0 +1,33 @@
+# Reviewed cultural draft entries for promotion batch 015.
+# Shakespeare (0.78, B2)
+star-crossed lovers
+# Classical allusions (0.76, C1)
+in medias res
+Jason and the Argonauts
+judgement of Paris
+hydra-headed
+# Aesop (0.76, C1)
+the mountain in labour
+oak and the reed
+# Dickens (0.76-0.78, B2-C1)
+the Artful Dodger
+the law is a ass
+A Tale of Two Cities
+Chancery
+# Pope (0.78, C1-C2)
+order is Heaven’s first law
+# KJV (0.78, B2)
+a rod of iron
+# Walter Scott (0.74, C1)
+blood is thicker than water
+breathes there the man
+# Orwell (0.74, C1)
+four legs good, two legs better
+INGSOC
+doubleplusungood
+# Carroll (0.74, C1)
+# Milton (0.74-0.80, C1-C2)
+license they mean when they cry liberty
+# Swift (0.78, C1)
+academy of Lagado
+Gulliver’s travels

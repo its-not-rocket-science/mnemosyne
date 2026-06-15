@@ -9650,3 +9650,519 @@
   source_license: public_domain
   source_dataset: en_kjv_bible_phrases
   notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_literary_reference_star_crossed_lovers_7f8bc1cc
+  language: en
+  canonical_reference: star-crossed lovers
+  reference_type: literary_reference
+  surface_patterns:
+    - star-crossed lovers
+  short_explanation: Lovers whose relationship is doomed by fate.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.star_crossed_lovers
+  source_work_key: mnemosyne.en.work.romeo_and_juliet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Romeo and Juliet
+  source_author: William Shakespeare
+  source_location: Prologue
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_classical_or_scriptural_allusion_in_medias_res_b534a4be
+  language: en
+  canonical_reference: in medias res
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - in medias res
+  short_explanation: Beginning a story in the middle of events.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.in_medias_res
+  source_work_key: mnemosyne.en.work.ars_poetica
+  source_author_key: mnemosyne.en.author.horace
+  source_work: Ars Poetica
+  source_author: Horace
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_jason_and_the_argonauts_589199b4
+  language: en
+  canonical_reference: Jason and the Argonauts
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Jason and the Argonauts
+  short_explanation: A band of adventurers seeking a great prize.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - Jason & the Argonauts
+  explanation_key: mnemosyne.en.explanation.classical_allusions.jason_and_the_argonauts
+  source_work_key: mnemosyne.en.work.argonautica
+  source_author_key: mnemosyne.en.author.apollonius_of_rhodes
+  source_work: Argonautica
+  source_author: Apollonius of Rhodes
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.86.
+- id: en_classical_or_scriptural_allusion_judgement_of_paris_4d2ce596
+  language: en
+  canonical_reference: judgement of Paris
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - judgement of Paris
+  short_explanation: A choice among rivals with serious consequences.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - judgment of Paris
+  explanation_key: mnemosyne.en.explanation.classical_allusions.judgement_of_paris
+  source_work_key: mnemosyne.en.work.judgement_of_paris_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Judgement of Paris myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.86.
+- id: en_classical_or_scriptural_allusion_hydra_headed_aa6834ec
+  language: en
+  canonical_reference: hydra-headed
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - hydra-headed
+  short_explanation: A problem that multiplies when attacked.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.hydra_headed
+  source_work_key: mnemosyne.en.work.hydra_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Hydra myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.88.
+- id: en_proverb_tradition_the_mountain_in_labour_2fb3a334
+  language: en
+  canonical_reference: the mountain in labour
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the mountain in labour
+  short_explanation: Great fuss produces a tiny result.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - mountain gave birth to a mouse
+    - mountain in labour
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_mountain_in_labour
+  source_work_key: mnemosyne.en.work.the_mountain_in_labour
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Mountain in Labour
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.82.
+- id: en_proverb_tradition_oak_and_the_reed_3cc26863
+  language: en
+  canonical_reference: oak and the reed
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the oak and the reed
+  short_explanation: Flexibility may survive where rigid strength fails.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - oak and the reed
+    - oak & the reed
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.oak_and_the_reed
+  source_work_key: mnemosyne.en.work.the_oak_and_the_reed
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Oak and the Reed
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_cultural_reference_the_artful_dodger_e4701884
+  language: en
+  canonical_reference: the Artful Dodger
+  reference_type: cultural_reference
+  surface_patterns:
+    - the Artful Dodger
+  short_explanation: A crafty, evasive young trickster.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - Artful Dodger
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.the_artful_dodger
+  source_work_key: mnemosyne.en.work.oliver_twist
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Oliver Twist
+  source_author: Charles Dickens
+  source_location: Jack Dawkins
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.90.
+- id: en_cultural_reference_the_law_is_a_ass_bcf9dd7b
+  language: en
+  canonical_reference: the law is a ass
+  reference_type: cultural_reference
+  surface_patterns:
+    - the law is a ass
+  short_explanation: The law can be absurd or unjust.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - the law is an ass
+    - law is a ass
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.the_law_is_a_ass
+  source_work_key: mnemosyne.en.work.oliver_twist
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Oliver Twist
+  source_author: Charles Dickens
+  source_location: Chapter 51
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_cultural_reference_a_tale_of_two_cities_bbbb7604
+  language: en
+  canonical_reference: A Tale of Two Cities
+  reference_type: cultural_reference
+  surface_patterns:
+    - A Tale of Two Cities
+  short_explanation: A contrast between two societies or conditions.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.a_tale_of_two_cities
+  source_work_key: mnemosyne.en.work.a_tale_of_two_cities
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: A Tale of Two Cities
+  source_author: Charles Dickens
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/98
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_cultural_reference_chancery_20b6b129
+  language: en
+  canonical_reference: Chancery
+  reference_type: cultural_reference
+  surface_patterns:
+    - Chancery
+  short_explanation: A symbol of slow, costly legal bureaucracy.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.chancery
+  source_work_key: mnemosyne.en.work.bleak_house
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Bleak House
+  source_author: Charles Dickens
+  source_location: Chapter 1
+  source_url: https://www.gutenberg.org/ebooks/1023
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.82.
+- id: en_literary_reference_order_is_heaven_s_first_law_014c7972
+  language: en
+  canonical_reference: order is Heaven’s first law
+  reference_type: literary_reference
+  surface_patterns:
+    - order is Heaven’s first law
+  short_explanation: Order is presented as a divine principle.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - order is Heaven's first law
+  explanation_key: mnemosyne.en.explanation.pope_phrases.order_is_heaven_s_first_law
+  source_work_key: mnemosyne.en.work.an_essay_on_man
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Man
+  source_author: Alexander Pope
+  source_location: Epistle 4
+  source_url: https://en.wikisource.org/wiki/An_Essay_on_Man
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable
+    public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous
+    confidence 0.90.
+- id: en_classical_or_scriptural_allusion_a_rod_of_iron_b0a05f31
+  language: en
+  canonical_reference: a rod of iron
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a rod of iron
+  short_explanation: Harsh or absolute rule.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_rod_of_iron
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_literary_reference_blood_is_thicker_than_water_57c51d13
+  language: en
+  canonical_reference: blood is thicker than water
+  reference_type: literary_reference
+  surface_patterns:
+    - blood is thicker than water
+  short_explanation: Family bonds are stronger than others; attribution debated.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.blood_is_thicker_than_water
+  source_work_key: mnemosyne.en.work.waverley_novels_and_poems
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: Waverley novels and poems
+  source_author: Walter Scott
+  source_url: https://www.gutenberg.org/ebooks/82
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_literary_reference_breathes_there_the_man_3828314d
+  language: en
+  canonical_reference: breathes there the man
+  reference_type: literary_reference
+  surface_patterns:
+    - breathes there the man
+  short_explanation: A patriotic rhetorical opening.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.walter_scott_phrases.breathes_there_the_man
+  source_work_key: mnemosyne.en.work.waverley_novels_and_poems
+  source_author_key: mnemosyne.en.author.walter_scott
+  source_work: Waverley novels and poems
+  source_author: Walter Scott
+  source_url: https://www.gutenberg.org/ebooks/82
+  source_license: public_domain
+  source_dataset: en_walter_scott_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.
+- id: en_cultural_reference_four_legs_good_two_legs_better_be47d6db
+  language: en
+  canonical_reference: four legs good, two legs better
+  reference_type: cultural_reference
+  surface_patterns:
+    - four legs good, two legs better
+  short_explanation: A slogan changed to justify new rulers.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.four_legs_good_two_legs_better
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four_and_animal_farm
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Animal Farm
+  source_author: George Orwell
+  source_location: Chapter 10
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Short common-use term or phrase; no extended Orwell source text is included.; Rights basis:
+    common_usage_short_expression; short common-use term or phrase only, not extended source text.'
+- id: en_cultural_reference_ingsoc_5697783d
+  language: en
+  canonical_reference: INGSOC
+  reference_type: cultural_reference
+  surface_patterns:
+    - INGSOC
+  short_explanation: The ruling ideology of the Party.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.ingsoc
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four_and_animal_farm
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: Part I, Chapter 1
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Short common-use term or phrase; no extended Orwell source text is included.; Rights basis:
+    common_usage_short_expression; short common-use term or phrase only, not extended source text.'
+- id: en_cultural_reference_doubleplusungood_aa09d218
+  language: en
+  canonical_reference: doubleplusungood
+  reference_type: cultural_reference
+  surface_patterns:
+    - doubleplusungood
+  short_explanation: Intensified disapproval in Newspeak-style language.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: formal
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.doubleplusungood
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four_and_animal_farm
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: 'Appendix: The Principles of Newspeak'
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Short common-use term or phrase; no extended Orwell source text is included.; Rights basis:
+    common_usage_short_expression; short common-use term or phrase only, not extended source text.'
+- id: en_literary_reference_license_they_mean_when_they_cry_liberty_4bd418b5
+  language: en
+  canonical_reference: license they mean when they cry liberty
+  reference_type: literary_reference
+  surface_patterns:
+    - license they mean when they cry liberty
+  short_explanation: A warning that calls for liberty may mask disorder.
+  learner_level: C2
+  confidence: 0.8
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.milton_phrases.license_they_mean_when_they_cry_liberty
+  source_work_key: mnemosyne.en.work.sonnet_12
+  source_author_key: mnemosyne.en.author.john_milton
+  source_work: Sonnet 12 / On the New Forcers of Conscience
+  source_author: John Milton
+  source_location: Sonnet
+  source_url: https://www.gutenberg.org/ebooks/20
+  source_license: public_domain
+  source_dataset: en_milton_phrases
+  notes: Miltonic phrase; modern usage may be allusive rather than idiomatic.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_cultural_reference_academy_of_lagado_3b654322
+  language: en
+  canonical_reference: academy of Lagado
+  reference_type: cultural_reference
+  surface_patterns:
+    - academy of Lagado
+  short_explanation: A place of absurd, useless research schemes.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.swift_phrases.academy_of_lagado
+  source_work_key: mnemosyne.en.work.gulliver_s_travels
+  source_author_key: mnemosyne.en.author.jonathan_swift
+  source_work: Gulliver’s Travels
+  source_author: Jonathan Swift
+  source_location: Part III
+  source_url: https://www.gutenberg.org/ebooks/829
+  source_license: public_domain
+  source_dataset: en_swift_phrases
+  notes: Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.88.
+- id: en_cultural_reference_gulliver_s_travels_9014b32d
+  language: en
+  canonical_reference: Gulliver’s travels
+  reference_type: cultural_reference
+  surface_patterns:
+    - Gulliver’s travels
+  short_explanation: A journey through absurd or satirical societies.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - Gulliver's travels
+  explanation_key: mnemosyne.en.explanation.swift_phrases.gulliver_s_travels
+  source_work_key: mnemosyne.en.work.gulliver_s_travels
+  source_author_key: mnemosyne.en.author.jonathan_swift
+  source_work: Gulliver’s Travels
+  source_author: Jonathan Swift
+  source_location: Title
+  source_url: https://www.gutenberg.org/ebooks/829
+  source_license: public_domain
+  source_dataset: en_swift_phrases
+  notes: Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
