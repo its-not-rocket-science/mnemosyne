@@ -341,6 +341,33 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_adam_s_apple_5594da0d",
+      "canonical_reference": "Adam’s apple",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.adam_s_apple",
+      "id": "en_classical_or_scriptural_allusion_adam_s_apple_5594da0d",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "The visible throat cartilage, by Biblical folk etymology.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "Adam’s apple",
+        "Adam's apple"
+      ],
+      "variants": [
+        "Adam's apple"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_alpha_and_omega_e5f8ff36",
       "canonical_reference": "Alpha and Omega",
       "confidence": 0.78,
@@ -579,6 +606,56 @@
       "variants": [
         "clean the Augean stables",
         "Augean stables"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_balm_in_gilead_886b7ad2",
+      "canonical_reference": "balm in Gilead",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.balm_in_gilead",
+      "id": "en_classical_or_scriptural_allusion_balm_in_gilead_886b7ad2",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A source of healing or comfort.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "balm in Gilead"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_be_fruitful_and_multiply_47ed2e2a",
+      "canonical_reference": "be fruitful and multiply",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.be_fruitful_and_multiply",
+      "id": "en_classical_or_scriptural_allusion_be_fruitful_and_multiply_47ed2e2a",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "An injunction to reproduce, grow, or increase.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "be fruitful and multiply",
+        "be fruitful & multiply"
+      ],
+      "variants": [
+        "be fruitful & multiply"
       ]
     },
     {
@@ -1644,6 +1721,28 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_lethe_28d19e95",
+      "canonical_reference": "Lethe",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.lethe",
+      "id": "en_classical_or_scriptural_allusion_lethe_28d19e95",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.86.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Forgetfulness, especially oblivion of the past.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Greek afterlife myth",
+      "source_work_key": "mnemosyne.en.work.greek_afterlife_myth",
+      "surface_patterns": [
+        "Lethe"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_leviathan_bb236ad6",
       "canonical_reference": "Leviathan",
       "confidence": 0.78,
@@ -1793,6 +1892,28 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_mentor_9591467b",
+      "canonical_reference": "mentor",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.mentor",
+      "id": "en_classical_or_scriptural_allusion_mentor_9591467b",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.86.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A trusted adviser or guide.",
+      "source_author": "Homer",
+      "source_author_key": "mnemosyne.en.author.homer",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Odyssey",
+      "source_work_key": "mnemosyne.en.work.odyssey",
+      "surface_patterns": [
+        "mentor"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_mercurial_48bd2cd2",
       "canonical_reference": "Mercurial",
       "confidence": 0.76,
@@ -1891,6 +2012,54 @@
       "source_work_key": "mnemosyne.en.work.narcissus_myth",
       "surface_patterns": [
         "narcissism"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_nemesis_b3431564",
+      "canonical_reference": "nemesis",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.nemesis",
+      "id": "en_classical_or_scriptural_allusion_nemesis_b3431564",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A rival, punishment, or agent of downfall.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Greek myth and tragedy",
+      "source_work_key": "mnemosyne.en.work.greek_myth_and_tragedy",
+      "surface_patterns": [
+        "nemesis"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_nero_fiddled_while_rome_burned_30df2751",
+      "canonical_reference": "Nero fiddled while Rome burned",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.nero_fiddled_while_rome_burned",
+      "id": "en_classical_or_scriptural_allusion_nero_fiddled_while_rome_burned_30df2751",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A leader ignores disaster with trivial distractions.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Roman imperial legend",
+      "source_work_key": "mnemosyne.en.work.roman_imperial_legend",
+      "surface_patterns": [
+        "Nero fiddled while Rome burned",
+        "fiddling while Rome burns"
+      ],
+      "variants": [
+        "fiddling while Rome burns"
       ]
     },
     {
@@ -3266,6 +3435,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_bumbledom_f144d7d1",
+      "canonical_reference": "Bumbledom",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.bumbledom",
+      "id": "en_cultural_reference_bumbledom_f144d7d1",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Dickens reference; character-name use depends on context and should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "short_explanation": "Petty, pompous bureaucracy.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Mr Bumble",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "Oliver Twist",
+      "source_work_key": "mnemosyne.en.work.oliver_twist",
+      "surface_patterns": [
+        "Bumbledom"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_chancery_20b6b129",
       "canonical_reference": "Chancery",
       "confidence": 0.78,
@@ -4398,6 +4591,30 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_napoleon_the_pig_bea98176",
+      "canonical_reference": "Napoleon the pig",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.napoleon_the_pig",
+      "id": "en_cultural_reference_napoleon_the_pig_bea98176",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A revolutionary leader turned dictator.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Whole work",
+      "source_work": "Animal Farm",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four_and_animal_farm",
+      "surface_patterns": [
+        "Napoleon the pig"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_newspeak_ac243393",
       "canonical_reference": "Newspeak",
       "confidence": 0.78,
@@ -4666,6 +4883,30 @@
       "source_work_key": "mnemosyne.en.work.through_the_looking_glass",
       "surface_patterns": [
         "slithy toves"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_snowball_3687f15a",
+      "canonical_reference": "Snowball",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.orwell_phrases.snowball",
+      "id": "en_cultural_reference_snowball_3687f15a",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Short common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression; short common-use term or phrase only, not extended source text.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A scapegoated revolutionary rival.",
+      "source_author": "George Orwell",
+      "source_author_key": "mnemosyne.en.author.george_orwell",
+      "source_dataset": "en_orwell_phrases",
+      "source_license": "not_required",
+      "source_location": "Whole work",
+      "source_work": "Animal Farm",
+      "source_work_key": "mnemosyne.en.work.nineteen_eighty_four_and_animal_farm",
+      "surface_patterns": [
+        "Snowball"
       ]
     },
     {
@@ -5399,6 +5640,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_barkis_is_willing_612d1ca8",
+      "canonical_reference": "Barkis is willing",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.barkis_is_willing",
+      "id": "en_literary_reference_barkis_is_willing_612d1ca8",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A shy or comic declaration of willingness.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Chapter 5",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "David Copperfield",
+      "source_work_key": "mnemosyne.en.work.novels_and_christmas_books",
+      "surface_patterns": [
+        "Barkis is willing"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_be_all_and_end_all_de40ee63",
       "canonical_reference": "be-all and end-all",
       "confidence": 0.78,
@@ -5598,6 +5863,34 @@
       "source_work_key": "mnemosyne.en.work.hamlet",
       "surface_patterns": [
         "brevity is the soul of wit"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_bride_of_lammermoor_4c13261b",
+      "canonical_reference": "Bride of Lammermoor",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.walter_scott_phrases.bride_of_lammermoor",
+      "id": "en_literary_reference_bride_of_lammermoor_4c13261b",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Scott-related expression; attribution should be reviewed cautiously.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.82.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A tragic romance reference.",
+      "source_author": "Walter Scott",
+      "source_author_key": "mnemosyne.en.author.walter_scott",
+      "source_dataset": "en_walter_scott_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title",
+      "source_url": "https://www.gutenberg.org/ebooks/82",
+      "source_work": "The Bride of Lammermoor",
+      "source_work_key": "mnemosyne.en.work.the_bride_of_lammermoor",
+      "surface_patterns": [
+        "the Bride of Lammermoor",
+        "Bride of Lammermoor"
+      ],
+      "variants": [
+        "Bride of Lammermoor"
       ]
     },
     {
@@ -6441,6 +6734,36 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_glory_jest_and_riddle_of_the_world_520ab646",
+      "canonical_reference": "glory, jest, and riddle of the world",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.pope_phrases.glory_jest_and_riddle_of_the_world",
+      "id": "en_literary_reference_glory_jest_and_riddle_of_the_world_520ab646",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.88.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Humanity as noble, absurd, and mysterious.",
+      "source_author": "Alexander Pope",
+      "source_author_key": "mnemosyne.en.author.alexander_pope",
+      "source_dataset": "en_pope_phrases",
+      "source_license": "public_domain",
+      "source_location": "Epistle 2",
+      "source_url": "https://en.wikisource.org/wiki/An_Essay_on_Man",
+      "source_work": "An Essay on Man",
+      "source_work_key": "mnemosyne.en.work.an_essay_on_man",
+      "surface_patterns": [
+        "the glory, jest, and riddle of the world",
+        "glory, jest, and riddle of the world",
+        "glory, jest, & riddle of the world"
+      ],
+      "variants": [
+        "glory, jest, and riddle of the world",
+        "glory, jest, & riddle of the world"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_good_riddance_71a9e997",
       "canonical_reference": "good riddance",
       "confidence": 0.78,
@@ -6538,6 +6861,34 @@
       "source_work_key": "mnemosyne.en.work.henry_v",
       "surface_patterns": [
         "heart of gold"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_heart_of_midlothian_7498461b",
+      "canonical_reference": "Heart of Midlothian",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.walter_scott_phrases.heart_of_midlothian",
+      "id": "en_literary_reference_heart_of_midlothian_7498461b",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Scott-related expression; attribution should be reviewed cautiously.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.82.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A Scottish legal and moral trial reference.",
+      "source_author": "Walter Scott",
+      "source_author_key": "mnemosyne.en.author.walter_scott",
+      "source_dataset": "en_walter_scott_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title",
+      "source_url": "https://www.gutenberg.org/ebooks/82",
+      "source_work": "The Heart of Midlothian",
+      "source_work_key": "mnemosyne.en.work.the_heart_of_midlothian",
+      "surface_patterns": [
+        "the Heart of Midlothian",
+        "Heart of Midlothian"
+      ],
+      "variants": [
+        "Heart of Midlothian"
       ]
     },
     {
@@ -6800,6 +7151,30 @@
       ],
       "variants": [
         "vanished into thin air"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_it_was_the_worst_of_times_d7ca42c4",
+      "canonical_reference": "it was the worst of times",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.dickens_phrases.it_was_the_worst_of_times",
+      "id": "en_literary_reference_it_was_the_worst_of_times_d7ca42c4",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A phrase for disastrous historical conditions.",
+      "source_author": "Charles Dickens",
+      "source_author_key": "mnemosyne.en.author.charles_dickens",
+      "source_dataset": "en_dickens_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book I, Chapter 1",
+      "source_url": "https://www.gutenberg.org/ebooks/730",
+      "source_work": "A Tale of Two Cities",
+      "source_work_key": "mnemosyne.en.work.novels_and_christmas_books",
+      "surface_patterns": [
+        "it was the worst of times"
       ]
     },
     {
@@ -7429,6 +7804,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_paradise_regained_0c832547",
+      "canonical_reference": "paradise regained",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.paradise_regained",
+      "id": "en_literary_reference_paradise_regained_0c832547",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A recovery after loss.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Title",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Paradise Regained",
+      "source_work_key": "mnemosyne.en.work.paradise_lost_and_poems",
+      "surface_patterns": [
+        "paradise regained"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_paradise_within_thee_f66238c4",
       "canonical_reference": "paradise within thee",
       "confidence": 0.88,
@@ -7849,6 +8248,92 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_strange_bedfellows_5096bdd0",
+      "canonical_reference": "strange bedfellows",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.strange_bedfellows",
+      "id": "en_literary_reference_strange_bedfellows_5096bdd0",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed. Merged duplicate/overlapping draft rows. Provenance candidates: en_shakespeare_phrases / The Tempest / William Shakespeare / Act II Scene 2.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Unlikely allies or companions.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Tempest",
+      "source_work_key": "mnemosyne.en.work.the_tempest",
+      "surface_patterns": [
+        "strange bedfellows",
+        "misery acquaints a man with strange bedfellows"
+      ],
+      "variants": [
+        "misery acquaints a man with strange bedfellows"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_such_stuff_as_dreams_are_made_on_6f58facf",
+      "canonical_reference": "such stuff as dreams are made on",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.such_stuff_as_dreams_are_made_on",
+      "id": "en_literary_reference_such_stuff_as_dreams_are_made_on_6f58facf",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "The fragile substance of imagination or life.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act IV Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Tempest",
+      "source_work_key": "mnemosyne.en.work.the_tempest",
+      "surface_patterns": [
+        "such stuff as dreams are made on",
+        "stuff dreams are made of"
+      ],
+      "variants": [
+        "stuff dreams are made of"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_the_better_part_of_valour_b7912458",
+      "canonical_reference": "the better part of valour",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.the_better_part_of_valour",
+      "id": "en_literary_reference_the_better_part_of_valour_b7912458",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Caution can be wiser than bravery.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act V Scene 4",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Henry IV, Part 1",
+      "source_work_key": "mnemosyne.en.work.henry_iv_part_1",
+      "surface_patterns": [
+        "the better part of valour",
+        "discretion is the better part of valour",
+        "better part of valour"
+      ],
+      "variants": [
+        "discretion is the better part of valour",
+        "better part of valour"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_the_life_so_short_the_craft_so_long_to_learn_c7066b6f",
       "canonical_reference": "the life so short, the craft so long to learn",
       "confidence": 0.78,
@@ -7904,6 +8389,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_they_also_serve_e7c8bd19",
+      "canonical_reference": "they also serve",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.milton_phrases.they_also_serve",
+      "id": "en_literary_reference_they_also_serve_e7c8bd19",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Waiting can itself be service.",
+      "source_author": "John Milton",
+      "source_author_key": "mnemosyne.en.author.john_milton",
+      "source_dataset": "en_milton_phrases",
+      "source_license": "public_domain",
+      "source_location": "Final line",
+      "source_url": "https://www.gutenberg.org/ebooks/20",
+      "source_work": "Sonnet 19 / On His Blindness",
+      "source_work_key": "mnemosyne.en.work.paradise_lost_and_poems",
+      "surface_patterns": [
+        "they also serve"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_they_also_serve_who_only_stand_and_wait_2995c85c",
       "canonical_reference": "they also serve who only stand and wait",
       "confidence": 0.8,
@@ -7931,6 +8440,36 @@
       "variants": [
         "they also serve who stand and wait",
         "they also serve who only stand & wait"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_through_thick_and_thin_4f2c4eb0",
+      "canonical_reference": "through thick and thin",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.chaucer_phrases.through_thick_and_thin",
+      "id": "en_literary_reference_through_thick_and_thin_4f2c4eb0",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Chaucer-related attribution should be reviewed; some forms are modernised.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Persisting in all circumstances.",
+      "source_author": "Geoffrey Chaucer",
+      "source_author_key": "mnemosyne.en.author.geoffrey_chaucer",
+      "source_dataset": "en_chaucer_phrases",
+      "source_license": "public_domain",
+      "source_location": "The Reeve’s Tale",
+      "source_url": "https://www.gutenberg.org/ebooks/2383",
+      "source_work": "The Canterbury Tales",
+      "source_work_key": "mnemosyne.en.work.the_canterbury_tales",
+      "surface_patterns": [
+        "through thick and thin",
+        "thick and thin",
+        "through thick & thin"
+      ],
+      "variants": [
+        "thick and thin",
+        "through thick & thin"
       ]
     },
     {
@@ -8504,6 +9043,33 @@
       ]
     },
     {
+      "canonical_form": "en:proverb:en_proverb_tradition_frogs_who_desired_a_king_aca90c55",
+      "canonical_reference": "frogs who desired a king",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.frogs_who_desired_a_king",
+      "id": "en_proverb_tradition_frogs_who_desired_a_king_aca90c55",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "People may regret demanding stronger rulers.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Frogs Who Desired a King",
+      "source_work_key": "mnemosyne.en.work.the_frogs_who_desired_a_king",
+      "surface_patterns": [
+        "the frogs who desired a king",
+        "frogs who desired a king"
+      ],
+      "variants": [
+        "frogs who desired a king"
+      ]
+    },
+    {
       "canonical_form": "en:proverb:en_proverb_tradition_miser_and_his_gold_2781018f",
       "canonical_reference": "miser and his gold",
       "confidence": 0.76,
@@ -8915,6 +9481,64 @@
       "variants": [
         "tortoise and the hare",
         "the tortoise & the hare"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_town_mouse_and_the_country_mouse_33ce8a3f",
+      "canonical_reference": "the town mouse and the country mouse",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_town_mouse_and_the_country_mouse",
+      "id": "en_proverb_tradition_the_town_mouse_and_the_country_mouse_33ce8a3f",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "A contrast between urban luxury and rural simplicity.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Town Mouse and the Country Mouse",
+      "source_work_key": "mnemosyne.en.work.the_town_mouse_and_the_country_mouse",
+      "surface_patterns": [
+        "the town mouse and the country mouse",
+        "town mouse and the country mouse",
+        "the town mouse & the country mouse"
+      ],
+      "variants": [
+        "town mouse and the country mouse",
+        "the town mouse & the country mouse"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_wolf_and_the_lamb_6e015f5b",
+      "canonical_reference": "wolf and the lamb",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.wolf_and_the_lamb",
+      "id": "en_proverb_tradition_wolf_and_the_lamb_6e015f5b",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "The powerful may invent excuses to oppress the weak.",
+      "source_author": "Aesop tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "The Wolf and the Lamb",
+      "source_work_key": "mnemosyne.en.work.the_wolf_and_the_lamb",
+      "surface_patterns": [
+        "the wolf and the lamb",
+        "wolf and the lamb",
+        "wolf & the lamb"
+      ],
+      "variants": [
+        "wolf and the lamb",
+        "wolf & the lamb"
       ]
     }
   ],
