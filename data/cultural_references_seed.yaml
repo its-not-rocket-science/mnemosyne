@@ -5326,3 +5326,594 @@
     draft rows. Provenance candidates: en_classical_allusions / Heracles myth / Classical tradition; en_classical_allusions
     / Classical Greek and Roman literature / myth / Classical tradition.; Confidence revised in v3 using
     provenance/attribution cap; previous confidence 0.88.'
+- id: en_classical_or_scriptural_allusion_the_eleventh_hour_46b9154a
+  language: en
+  canonical_reference: the eleventh hour
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the eleventh hour
+  short_explanation: The last possible moment.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - eleventh hour
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_eleventh_hour
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 20:6
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_milk_and_honey_553d4d37
+  language: en
+  canonical_reference: milk and honey
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - milk and honey
+  short_explanation: Abundance, prosperity, or comfort.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - land flowing with milk and honey
+    - milk & honey
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.milk_and_honey
+  source_work_key: mnemosyne.en.work.exodus
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Exodus
+  source_author: King James Version
+  source_location: Exodus 3:8
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_the_powers_that_be_99d36d64
+  language: en
+  canonical_reference: the powers that be
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the powers that be
+  short_explanation: Existing authorities or people in control.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - powers that be
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_powers_that_be
+  source_work_key: mnemosyne.en.work.romans
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Romans
+  source_author: King James Version
+  source_location: Romans 13:1
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_the_valley_of_the_shadow_of_death_b406fb6f
+  language: en
+  canonical_reference: the valley of the shadow of death
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the valley of the shadow of death
+  short_explanation: A period of extreme danger or fear.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - valley of the shadow of death
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_valley_of_the_shadow_of_death
+  source_work_key: mnemosyne.en.work.psalms
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Psalms
+  source_author: King James Version
+  source_location: Psalm 23:4
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_the_wages_of_sin_59397ad5
+  language: en
+  canonical_reference: the wages of sin
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the wages of sin
+  short_explanation: The consequences of wrongdoing.
+  learner_level: C1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - wages of sin
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_wages_of_sin
+  source_work_key: mnemosyne.en.work.romans
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Romans
+  source_author: King James Version
+  source_location: Romans 6:23
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_mark_of_cain_4fb0548b
+  language: en
+  canonical_reference: mark of Cain
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the mark of Cain
+  short_explanation: A visible sign of guilt or exclusion.
+  learner_level: C1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - mark of Cain
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.mark_of_cain
+  source_work_key: mnemosyne.en.work.genesis
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 4:15
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_separate_the_sheep_from_the_goats_b35bc619
+  language: en
+  canonical_reference: separate the sheep from the goats
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - separate the sheep from the goats
+  short_explanation: Distinguish the worthy from the unworthy.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.separate_the_sheep_from_the_goats
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 25:32
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_signs_of_the_times_7b688211
+  language: en
+  canonical_reference: signs of the times
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - signs of the times
+  short_explanation: Events showing the character of an age.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - sign of the times
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.signs_of_the_times
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 16:3
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_out_of_the_mouths_of_babes_13e24e06
+  language: en
+  canonical_reference: out of the mouths of babes
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - out of the mouths of babes
+  short_explanation: Children can unexpectedly speak wisdom.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - mouths of babes
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.out_of_the_mouths_of_babes
+  source_work_key: mnemosyne.en.work.psalms_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Psalms; Matthew
+  source_author: King James Version
+  source_location: Psalm 8:2; Matthew 21:16
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_the_spirit_is_willing_f050eff9
+  language: en
+  canonical_reference: the spirit is willing
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the spirit is willing
+  short_explanation: Good intentions are weakened by human frailty.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - the spirit is willing but the flesh is weak
+    - spirit is willing
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_spirit_is_willing
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 26:41
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_the_flesh_is_weak_48fc7cb5
+  language: en
+  canonical_reference: the flesh is weak
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the flesh is weak
+  short_explanation: Human willpower or physical strength can fail.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - flesh is weak
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_flesh_is_weak
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 26:41
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_literary_reference_as_good_luck_would_have_it_ac64dc78
+  language: en
+  canonical_reference: as good luck would have it
+  reference_type: literary_reference
+  surface_patterns:
+    - as good luck would have it
+  short_explanation: By fortunate chance.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - as luck would have it
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.as_good_luck_would_have_it
+  source_work_key: mnemosyne.en.work.the_merry_wives_of_windsor
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Merry Wives of Windsor
+  source_author: William Shakespeare
+  source_location: Act III Scene 5
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.
+- id: en_literary_reference_budge_an_inch_8f2cf075
+  language: en
+  canonical_reference: budge an inch
+  reference_type: literary_reference
+  surface_patterns:
+    - budge an inch
+  short_explanation: Move or change position even slightly.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - not budge an inch
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.budge_an_inch
+  source_work_key: mnemosyne.en.work.the_taming_of_the_shrew
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Taming of the Shrew
+  source_author: William Shakespeare
+  source_location: Induction Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.
+- id: en_literary_reference_heart_of_gold_f00a48da
+  language: en
+  canonical_reference: heart of gold
+  reference_type: literary_reference
+  surface_patterns:
+    - heart of gold
+  short_explanation: A very kind and generous nature.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.heart_of_gold
+  source_work_key: mnemosyne.en.work.henry_v
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Henry V
+  source_author: William Shakespeare
+  source_location: Act IV Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_classical_or_scriptural_allusion_apollonian_6cdd1d3d
+  language: en
+  canonical_reference: Apollonian
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Apollonian
+  short_explanation: Ordered, rational, balanced, or restrained.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.apollonian
+  source_work_key: mnemosyne.en.work.greek_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Greek myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.86.
+- id: en_classical_or_scriptural_allusion_dionysian_d8c3f961
+  language: en
+  canonical_reference: Dionysian
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Dionysian
+  short_explanation: Wild, ecstatic, instinctive, or sensual.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.dionysian
+  source_work_key: mnemosyne.en.work.greek_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Greek myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.86.
+- id: en_classical_or_scriptural_allusion_promethean_b58a64fe
+  language: en
+  canonical_reference: Promethean
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Promethean
+  short_explanation: Boldly creative, rebellious, or life-giving.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.promethean
+  source_work_key: mnemosyne.en.work.prometheus_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Prometheus myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.88.
+- id: en_cultural_reference_ministry_of_love_662a451f
+  language: en
+  canonical_reference: Ministry of Love
+  reference_type: cultural_reference
+  surface_patterns:
+    - Ministry of Love
+  short_explanation: A coercive institution masked by benevolent language.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.ministry_of_love
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: Part I, Chapter 1
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short
+    common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression;
+    short common-use term or phrase only, not extended source text.'
+- id: en_cultural_reference_two_minutes_hate_967d7f4c
+  language: en
+  canonical_reference: Two Minutes Hate
+  reference_type: cultural_reference
+  surface_patterns:
+    - two minutes hate
+  short_explanation: Ritualised public hatred directed by authority.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.orwell_phrases.two_minutes_hate
+  source_work_key: mnemosyne.en.work.nineteen_eighty_four
+  source_author_key: mnemosyne.en.author.george_orwell
+  source_work: Nineteen Eighty-Four
+  source_author: George Orwell
+  source_location: Part I, Chapter 1
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: en_orwell_phrases
+  notes: 'Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.; Short
+    common-use term or phrase; no extended Orwell source text is included.; Rights basis: common_usage_short_expression;
+    short common-use term or phrase only, not extended source text.'
+- id: en_literary_reference_vanity_fair_96aaa61c
+  language: en
+  canonical_reference: vanity fair
+  reference_type: literary_reference
+  surface_patterns:
+    - vanity fair
+  short_explanation: A place or culture of shallow worldly display.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.vanity_fair
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part 1
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Bunyan phrase; some overlap with Biblical tradition.; Source URL added by v3 normalisation as
+    a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.90.
+- id: en_literary_reference_doubting_castle_084a9369
+  language: en
+  canonical_reference: Doubting Castle
+  reference_type: literary_reference
+  surface_patterns:
+    - doubting castle
+  short_explanation: A mental prison of doubt and despair.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.bunyan_phrases.doubting_castle
+  source_work_key: mnemosyne.en.work.the_pilgrim_s_progress
+  source_author_key: mnemosyne.en.author.john_bunyan
+  source_work: The Pilgrim’s Progress
+  source_author: John Bunyan
+  source_location: Part 1
+  source_url: https://www.gutenberg.org/ebooks/131
+  source_license: public_domain
+  source_dataset: en_bunyan_phrases
+  notes: Bunyan phrase; some overlap with Biblical tradition.; Source URL added by v3 normalisation as
+    a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.90.
+- id: en_cultural_reference_yahoo_df97b015
+  language: en
+  canonical_reference: Yahoo
+  reference_type: cultural_reference
+  surface_patterns:
+    - Yahoo
+  short_explanation: A brutish or uncultured person; also a coined creature name.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - Yahoos
+  explanation_key: mnemosyne.en.explanation.swift_phrases.yahoo
+  source_work_key: mnemosyne.en.work.gulliver_s_travels
+  source_author_key: mnemosyne.en.author.jonathan_swift
+  source_work: Gulliver’s Travels
+  source_author: Jonathan Swift
+  source_location: Part IV
+  source_url: https://www.gutenberg.org/ebooks/829
+  source_license: public_domain
+  source_dataset: en_swift_phrases
+  notes: Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.90.
+- id: en_cultural_reference_brobdingnagian_dbe5f724
+  language: en
+  canonical_reference: Brobdingnagian
+  reference_type: cultural_reference
+  surface_patterns:
+    - Brobdingnagian
+  short_explanation: Gigantic or enormous.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.swift_phrases.brobdingnagian
+  source_work_key: mnemosyne.en.work.gulliver_s_travels
+  source_author_key: mnemosyne.en.author.jonathan_swift
+  source_work: Gulliver’s Travels
+  source_author: Jonathan Swift
+  source_location: Part II
+  source_url: https://www.gutenberg.org/ebooks/829
+  source_license: public_domain
+  source_dataset: en_swift_phrases
+  notes: Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.90.
+- id: en_cultural_reference_gulliver_6b3396b2
+  language: en
+  canonical_reference: Gulliver
+  reference_type: cultural_reference
+  surface_patterns:
+    - Gulliver
+  short_explanation: A traveller among strange societies; sometimes an outsider observer.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.swift_phrases.gulliver
+  source_work_key: mnemosyne.en.work.gulliver_s_travels
+  source_author_key: mnemosyne.en.author.jonathan_swift
+  source_work: Gulliver’s Travels
+  source_author: Jonathan Swift
+  source_location: Title character
+  source_url: https://www.gutenberg.org/ebooks/829
+  source_license: public_domain
+  source_dataset: en_swift_phrases
+  notes: Swiftian term; include for cultural-literary recognition.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.

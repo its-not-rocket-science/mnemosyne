@@ -1,0 +1,31 @@
+# Reviewed cultural draft entries for promotion batch 008.
+# KJV (0.84, B2-C1)
+the eleventh hour
+milk and honey
+the powers that be
+the valley of the shadow of death
+the wages of sin
+mark of Cain
+separate the sheep from the goats
+signs of the times
+out of the mouths of babes
+the spirit is willing
+the flesh is weak
+# Shakespeare (0.78, B2)
+as good luck would have it
+budge an inch
+heart of gold
+# Classical allusions (0.76, C1)
+Apollonian
+Dionysian
+Promethean
+# Orwell (0.78, C1)
+Ministry of Love
+Two Minutes Hate
+# Bunyan (0.78, B2-C1)
+vanity fair
+Doubting Castle
+# Swift (0.78, B2-C1)
+Yahoo
+Brobdingnagian
+Gulliver
