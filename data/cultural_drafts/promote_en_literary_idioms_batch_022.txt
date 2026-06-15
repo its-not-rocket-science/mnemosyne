@@ -1,0 +1,35 @@
+# Reviewed cultural draft entries for promotion batch 022.
+# Shakespeare (0.78, B2)
+to thine own self be true
+though she be but little, she is fierce
+# Classical allusions (0.74, C1)
+Ajax
+Aphrodite
+Argonauts
+Argus
+# Aesop (0.74, C1)
+the horse and the groom
+# Pope (0.74-0.78, C1-C2)
+shoot folly as it flies
+mob of gentlemen
+true wit is nature to advantage dressed
+vindicate the ways of God to man
+sound must seem an echo to the sense
+snatch a grace beyond the reach of art
+to wake the soul by tender strokes of art
+# Chaucer (0.68, B1)
+patience is a virtue
+busy as bees
+# Swift (0.74, C1)
+Glubbdubdrib
+Swiftian satire
+# Walter Scott (0.72, C2)
+Kenilworth
+# Bunyan (0.74, C1)
+Demas
+Talkative
+# Dickens (0.72-0.74, C1-C2)
+Wegg
+Dombey and Son
+# Carroll (0.74, C1)
+who are you?
