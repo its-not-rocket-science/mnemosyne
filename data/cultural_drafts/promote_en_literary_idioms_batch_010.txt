@@ -1,0 +1,33 @@
+# Reviewed cultural draft entries for promotion batch 010.
+# KJV (0.82-0.84, B2-C1)
+mark of the beast
+vanity of vanities
+wheels within wheels
+thorn in the flesh
+the promised land
+parting of the waters
+the straight and narrow
+Alpha and Omega
+# Shakespeare (0.78, B2-C1)
+milk of human kindness
+if you prick us, do we not bleed
+lord, what fools these mortals be
+laughing stock
+lean and hungry look
+cudgel thy brains
+# Classical allusions (0.76, B2-C1)
+Gordian knot
+Helen of Troy
+Herculean task
+Elysian fields
+# Aesop (0.76, B2)
+the fox and the grapes
+north wind and the sun
+# Carroll (0.78, B2)
+mad as a Hatter
+Dormouse
+# Dickens (0.78, C1)
+Miss Havisham
+Fagin
+# Pope (0.78, B2)
+to err is human

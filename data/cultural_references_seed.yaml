@@ -6546,3 +6546,635 @@
   notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
     added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
     using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_mark_of_the_beast_a882b4b4
+  language: en
+  canonical_reference: mark of the beast
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the mark of the beast
+  short_explanation: A sign of evil allegiance or control.
+  learner_level: C1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - mark of the beast
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.mark_of_the_beast
+  source_work_key: mnemosyne.en.work.revelation
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Revelation
+  source_author: King James Version
+  source_location: Revelation 13:17
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_vanity_of_vanities_7e42a88e
+  language: en
+  canonical_reference: vanity of vanities
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - vanity of vanities
+  short_explanation: Everything is futile or empty.
+  learner_level: C1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.vanity_of_vanities
+  source_work_key: mnemosyne.en.work.ecclesiastes
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Ecclesiastes
+  source_author: King James Version
+  source_location: Ecclesiastes 1:2
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_wheels_within_wheels_4b4cda6f
+  language: en
+  canonical_reference: wheels within wheels
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - wheels within wheels
+  short_explanation: Complex hidden mechanisms or motives.
+  learner_level: C1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.wheels_within_wheels
+  source_work_key: mnemosyne.en.work.ezekiel
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Ezekiel
+  source_author: King James Version
+  source_location: Ezekiel 1:16
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_thorn_in_the_flesh_00ed6d09
+  language: en
+  canonical_reference: thorn in the flesh
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - thorn in the flesh
+  short_explanation: A persistent source of trouble or irritation.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - thorn in my side
+    - thorn in one's flesh
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.thorn_in_the_flesh
+  source_work_key: mnemosyne.en.work.2_corinthians
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 2 Corinthians
+  source_author: King James Version
+  source_location: 2 Corinthians 12:7
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_the_promised_land_9903aa17
+  language: en
+  canonical_reference: the promised land
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the promised land
+  short_explanation: A desired place of freedom or fulfilment.
+  learner_level: B2
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - promised land
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_promised_land
+  source_work_key: mnemosyne.en.work.exodus_deuteronomy
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Exodus; Deuteronomy
+  source_author: King James Version
+  source_location: Pentateuch
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_parting_of_the_waters_1ae499f7
+  language: en
+  canonical_reference: parting of the waters
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the parting of the waters
+  short_explanation: A miraculous escape or decisive breakthrough.
+  learner_level: B2
+  confidence: 0.82
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - parting of the waters
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.parting_of_the_waters
+  source_work_key: mnemosyne.en.work.exodus
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Exodus
+  source_author: King James Version
+  source_location: Exodus 14
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_the_straight_and_narrow_a1c4ceee
+  language: en
+  canonical_reference: the straight and narrow
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the straight and narrow
+  short_explanation: A morally proper or disciplined way of life.
+  learner_level: B2
+  confidence: 0.82
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - strait and narrow
+    - straight and narrow
+    - the straight & narrow
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_straight_and_narrow
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 7:14
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: 'Biblical phrasing influenced by the King James Version; exact wording should be checked. Bunyan
+    phrase; some overlap with Biblical tradition. Merged duplicate/overlapping draft rows. Provenance
+    candidates: en_kjv_bible_phrases / Gospel of Matthew / King James Version / Matthew 7:14; en_bunyan_phrases
+    / The Pilgrim’s Progress / John Bunyan / Part 1.'
+- id: en_classical_or_scriptural_allusion_alpha_and_omega_e5f8ff36
+  language: en
+  canonical_reference: Alpha and Omega
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the alpha and omega
+  short_explanation: The beginning and end; everything.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: religious
+  variants:
+    - alpha and omega
+    - Alpha & Omega
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.alpha_and_omega
+  source_work_key: mnemosyne.en.work.revelation
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Revelation
+  source_author: King James Version
+  source_location: Revelation 1:8
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: 'Biblical phrasing influenced by the King James Version; exact wording should be checked. Biblical/KJV-associated
+    expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be
+    checked. Needs source-location review. Merged duplicate/overlapping draft rows. Provenance candidates:
+    en_kjv_bible_phrases / Revelation / King James Version / Revelation 1:8; en_kjv_bible_phrases / King
+    James Bible / Authorised Version / King James Version.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.'
+- id: en_literary_reference_milk_of_human_kindness_1896b4c6
+  language: en
+  canonical_reference: milk of human kindness
+  reference_type: literary_reference
+  surface_patterns:
+    - the milk of human kindness
+  short_explanation: Natural compassion or gentleness.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - milk of human kindness
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.milk_of_human_kindness
+  source_work_key: mnemosyne.en.work.macbeth
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act I Scene 5
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_if_you_prick_us_do_we_not_bleed_ba03498a
+  language: en
+  canonical_reference: if you prick us, do we not bleed
+  reference_type: literary_reference
+  surface_patterns:
+    - if you prick us, do we not bleed
+  short_explanation: A plea for shared human feeling.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.if_you_prick_us_do_we_not_bleed
+  source_work_key: mnemosyne.en.work.the_merchant_of_venice
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Merchant of Venice
+  source_author: William Shakespeare
+  source_location: Act III Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_lord_what_fools_these_mortals_be_d4f42c07
+  language: en
+  canonical_reference: lord, what fools these mortals be
+  reference_type: literary_reference
+  surface_patterns:
+    - lord, what fools these mortals be
+  short_explanation: Humans behave foolishly, especially in love.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - what fools these mortals be
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.lord_what_fools_these_mortals_be
+  source_work_key: mnemosyne.en.work.a_midsummer_night_s_dream
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: A Midsummer Night’s Dream
+  source_author: William Shakespeare
+  source_location: Act III Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_laughing_stock_51424a46
+  language: en
+  canonical_reference: laughing stock
+  reference_type: literary_reference
+  surface_patterns:
+    - laughing stock
+  short_explanation: A person made ridiculous to others.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.laughing_stock
+  source_work_key: mnemosyne.en.work.the_merry_wives_of_windsor
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Merry Wives of Windsor
+  source_author: William Shakespeare
+  source_location: Act III Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.
+- id: en_literary_reference_lean_and_hungry_look_c3a3ff6f
+  language: en
+  canonical_reference: lean and hungry look
+  reference_type: literary_reference
+  surface_patterns:
+    - lean and hungry look
+  short_explanation: An ambitious or dangerous appearance.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - lean & hungry look
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.lean_and_hungry_look
+  source_work_key: mnemosyne.en.work.julius_caesar
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Julius Caesar
+  source_author: William Shakespeare
+  source_location: Act I Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_literary_reference_cudgel_thy_brains_5ff15127
+  language: en
+  canonical_reference: cudgel thy brains
+  reference_type: literary_reference
+  surface_patterns:
+    - cudgel thy brains
+  short_explanation: Think hard to remember or understand.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - cudgel your brains
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.cudgel_thy_brains
+  source_work_key: mnemosyne.en.work.hamlet
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act V Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.84.
+- id: en_classical_or_scriptural_allusion_gordian_knot_8353de12
+  language: en
+  canonical_reference: Gordian knot
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Gordian knot
+  short_explanation: A complex problem solved by bold action.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - cut the Gordian knot
+  explanation_key: mnemosyne.en.explanation.classical_allusions.gordian_knot
+  source_work_key: mnemosyne.en.work.alexander_legend
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Alexander legend
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_helen_of_troy_57f5cbbe
+  language: en
+  canonical_reference: Helen of Troy
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Helen of Troy
+  short_explanation: A woman associated with beauty and destructive conflict.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.helen_of_troy
+  source_work_key: mnemosyne.en.work.trojan_war_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Trojan War myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.88.
+- id: en_classical_or_scriptural_allusion_herculean_task_27cdd1b9
+  language: en
+  canonical_reference: Herculean task
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Herculean task
+  short_explanation: A very difficult task requiring great effort.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - Herculean labour
+    - Herculean effort
+  explanation_key: mnemosyne.en.explanation.classical_allusions.herculean_task
+  source_work_key: mnemosyne.en.work.heracles_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Heracles myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.90.
+- id: en_classical_or_scriptural_allusion_elysian_fields_40f0d35e
+  language: en
+  canonical_reference: Elysian fields
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Elysian fields
+  short_explanation: A place or state of perfect happiness.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: classical
+  variants:
+    - Elysium
+  explanation_key: mnemosyne.en.explanation.classical_allusions.elysian_fields
+  source_work_key: mnemosyne.en.work.greek_afterlife_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Greek afterlife myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.88.
+- id: en_proverb_tradition_the_fox_and_the_grapes_59536e5a
+  language: en
+  canonical_reference: the fox and the grapes
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the fox and the grapes
+  short_explanation: A story about rationalising failure.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - fox and the grapes
+    - the fox & the grapes
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_fox_and_the_grapes
+  source_work_key: mnemosyne.en.work.the_fox_and_the_grapes
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The Fox and the Grapes
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_proverb_tradition_north_wind_and_the_sun_cc52558e
+  language: en
+  canonical_reference: north wind and the sun
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the north wind and the sun
+  short_explanation: Gentle persuasion can succeed where force fails.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: proverbial
+  variants:
+    - north wind and the sun
+    - north wind & the sun
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.north_wind_and_the_sun
+  source_work_key: mnemosyne.en.work.the_north_wind_and_the_sun
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: The North Wind and the Sun
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.
+- id: en_cultural_reference_mad_as_a_hatter_cfa3cc23
+  language: en
+  canonical_reference: mad as a Hatter
+  reference_type: cultural_reference
+  surface_patterns:
+    - mad as a Hatter
+  short_explanation: Completely eccentric or irrational.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.mad_as_a_hatter
+  source_work_key: mnemosyne.en.work.alice_s_adventures_in_wonderland
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 7
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_dormouse_cfc999cd
+  language: en
+  canonical_reference: Dormouse
+  reference_type: cultural_reference
+  surface_patterns:
+    - the Dormouse
+  short_explanation: A sleepy or dozy participant.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - Dormouse
+  explanation_key: mnemosyne.en.explanation.carroll_phrases.dormouse
+  source_work_key: mnemosyne.en.work.alice_s_adventures_in_wonderland
+  source_author_key: mnemosyne.en.author.lewis_carroll
+  source_work: Alice’s Adventures in Wonderland
+  source_author: Lewis Carroll
+  source_location: Chapter 7
+  source_url: https://www.gutenberg.org/ebooks/11
+  source_license: public_domain
+  source_dataset: en_carroll_phrases
+  notes: Carroll reference; public-domain wording kept short.
+- id: en_cultural_reference_miss_havisham_2caeaa01
+  language: en
+  canonical_reference: Miss Havisham
+  reference_type: cultural_reference
+  surface_patterns:
+    - Miss Havisham
+  short_explanation: A figure frozen in bitterness and disappointed love.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.miss_havisham
+  source_work_key: mnemosyne.en.work.great_expectations
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Great Expectations
+  source_author: Charles Dickens
+  source_location: Miss Havisham
+  source_url: https://www.gutenberg.org/ebooks/1400
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.; Confidence revised in v3
+    using provenance/attribution cap; previous confidence 0.90.
+- id: en_cultural_reference_fagin_cbdcf9e0
+  language: en
+  canonical_reference: Fagin
+  reference_type: cultural_reference
+  surface_patterns:
+    - Fagin
+  short_explanation: A criminal trainer or corrupting figure; use cautiously.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dickens_phrases.fagin
+  source_work_key: mnemosyne.en.work.oliver_twist
+  source_author_key: mnemosyne.en.author.charles_dickens
+  source_work: Oliver Twist
+  source_author: Charles Dickens
+  source_location: Fagin
+  source_url: https://www.gutenberg.org/ebooks/730
+  source_license: public_domain
+  source_dataset: en_dickens_phrases
+  notes: Dickens reference; character-name use depends on context and should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_literary_reference_to_err_is_human_6d6d6d78
+  language: en
+  canonical_reference: to err is human
+  reference_type: literary_reference
+  surface_patterns:
+    - to err is human
+  short_explanation: Making mistakes is part of being human.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul
+  reviewed_at: '2026-06-15'
+  register: literary
+  variants:
+    - to err is human, to forgive divine
+  explanation_key: mnemosyne.en.explanation.pope_phrases.to_err_is_human
+  source_work_key: mnemosyne.en.work.an_essay_on_criticism
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Criticism
+  source_author: Alexander Pope
+  source_location: Part 2
+  source_url: https://en.wikisource.org/wiki/An_Essay_on_Criticism
+  source_license: public_domain
+  source_dataset: en_pope_phrases
+  notes: Pope phrase; exact line form should be reviewed.; Source URL added by v3 normalisation as a stable
+    public-domain reference for review.; Confidence revised in v3 using provenance/attribution cap; previous
+    confidence 0.90.
