@@ -18449,3 +18449,811 @@
   source_dataset: en_kjv_bible_phrases
   notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
     and wording should be checked. Needs source-location review.
+- id: en_literary_reference_beast_with_two_backs_2c4c1741
+  language: en
+  canonical_reference: beast with two backs
+  reference_type: literary_reference
+  surface_patterns:
+    - beast with two backs
+  short_explanation: A bawdy image for sexual intercourse.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.beast_with_two_backs
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Othello
+  source_author: William Shakespeare
+  source_location: Act I Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_best_foot_forward_8c03a1d7
+  language: en
+  canonical_reference: best foot forward
+  reference_type: literary_reference
+  surface_patterns:
+    - best foot forward
+  short_explanation: Make the strongest possible effort or impression.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.best_foot_forward
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: King John
+  source_author: William Shakespeare
+  source_location: Act IV Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_better_three_hours_too_soon_af6ef5c0
+  language: en
+  canonical_reference: better three hours too soon
+  reference_type: literary_reference
+  surface_patterns:
+    - better three hours too soon
+  short_explanation: It is better to arrive early than late.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.better_three_hours_too_soon
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Merry Wives of Windsor
+  source_author: William Shakespeare
+  source_location: Act II Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_catch_a_cold_294dd50a
+  language: en
+  canonical_reference: catch a cold
+  reference_type: literary_reference
+  surface_patterns:
+    - catch a cold
+  short_explanation: Become ill with a cold; figuratively, suffer a setback.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.catch_a_cold
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Cymbeline
+  source_author: William Shakespeare
+  source_location: Act I Scene 4
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_clothes_make_the_man_276b29f5
+  language: en
+  canonical_reference: clothes make the man
+  reference_type: literary_reference
+  surface_patterns:
+    - clothes make the man
+  short_explanation: Appearance and dress strongly affect how people are judged.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.clothes_make_the_man
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act I Scene 3
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_conscience_does_make_cowards_34791025
+  language: en
+  canonical_reference: conscience does make cowards
+  reference_type: literary_reference
+  surface_patterns:
+    - conscience does make cowards
+  short_explanation: Moral reflection can make people hesitate.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.conscience_does_make_cowards
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act III Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_dead_as_a_doornail_b243af71
+  language: en
+  canonical_reference: dead as a doornail
+  reference_type: literary_reference
+  surface_patterns:
+    - dead as a doornail
+  short_explanation: Completely dead or finished.
+  learner_level: B2
+  confidence: 0.72
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - dead as doornail
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.dead_as_a_doornail
+  source_work_key: mnemosyne.en.work.henry_vi_part_2
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Henry VI, Part 2
+  source_author: William Shakespeare
+  source_location: Act IV Scene 10
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to Shakespeare; attribution should be reviewed.
+- id: en_literary_reference_hair_stand_on_end_dfaa2175
+  language: en
+  canonical_reference: hair stand on end
+  reference_type: literary_reference
+  surface_patterns:
+    - hair stand on end
+  short_explanation: Be extremely frightened or horrified.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.hair_stand_on_end
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act I Scene 5
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_in_a_better_world_than_this_3d9d4e21
+  language: en
+  canonical_reference: in a better world than this
+  reference_type: literary_reference
+  surface_patterns:
+    - in a better world than this
+  short_explanation: In kinder or fairer circumstances.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.in_a_better_world_than_this
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: As You Like It
+  source_author: William Shakespeare
+  source_location: Act I Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_in_the_twinkling_of_an_eye_fa7a0223
+  language: en
+  canonical_reference: in the twinkling of an eye
+  reference_type: literary_reference
+  surface_patterns:
+    - in the twinkling of an eye
+  short_explanation: Very quickly.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.in_the_twinkling_of_an_eye
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Merchant of Venice
+  source_author: William Shakespeare
+  source_location: Act II Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_make_your_hair_stand_on_end_ed50ae70
+  language: en
+  canonical_reference: make your hair stand on end
+  reference_type: literary_reference
+  surface_patterns:
+    - make your hair stand on end
+  short_explanation: Make someone extremely frightened or horrified.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.make_your_hair_stand_on_end
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act I Scene 5
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_venereal_01707976
+  language: en
+  canonical_reference: Venereal
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Venereal
+  short_explanation: Related to love or sexual desire.
+  learner_level: C2
+  confidence: 0.72
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.venereal
+  source_work_key: mnemosyne.en.work.venus_myth
+  source_author_key: mnemosyne.en.author.roman_tradition
+  source_work: Venus myth
+  source_author: Roman tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.
+- id: en_proverb_tradition_the_mouse_and_the_lion_13b2d99e
+  language: en
+  canonical_reference: the mouse and the lion
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the mouse and the lion
+  short_explanation: Small helpers may prove unexpectedly valuable.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: proverbial
+  variants:
+    - mouse and the lion
+    - the mouse & the lion
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_mouse_and_the_lion
+  source_work_key: mnemosyne.en.work.aesop_s_fables_fable_tradition
+  source_author_key: mnemosyne.en.author.aesop_fable_tradition
+  source_work: Aesop’s Fables / fable tradition
+  source_author: Aesop / fable tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_classical_or_scriptural_allusion_absalom_30f5daa0
+  language: en
+  canonical_reference: Absalom
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Absalom
+  short_explanation: A rebellious son or beloved betrayer.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.absalom
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 2 Samuel
+  source_author: King James Version
+  source_location: 2 Samuel 15-18
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_ahab_439dbc92
+  language: en
+  canonical_reference: Ahab
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Ahab
+  short_explanation: A destructive ruler associated with obsession and wrongdoing.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.ahab
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 1 Kings
+  source_author: King James Version
+  source_location: 1 Kings 16:29-22:40
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_a_millstone_round_one_s_neck_1ab0d313
+  language: en
+  canonical_reference: a millstone round one’s neck
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a millstone round one’s neck
+  short_explanation: A heavy burden, guilt, or ruinous responsibility.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - a millstone round one's neck
+    - a millstone round your neck
+    - a millstone round my neck
+    - a millstone round his neck
+    - a millstone round her neck
+    - a millstone round their neck
+    - a millstone around one’s neck
+    - a millstone around one's neck
+    - a millstone around your neck
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_millstone_round_one_s_neck
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospels
+  source_author: King James Version
+  source_location: Matthew 18:6
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_a_mess_of_pottage_b2cf89fa
+  language: en
+  canonical_reference: a mess of pottage
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a mess of pottage
+  short_explanation: A poor bargain made for immediate appetite or short-term gain.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_mess_of_pottage
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 25:29-34
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_blessed_are_the_peacemakers_794e430b
+  language: en
+  canonical_reference: blessed are the peacemakers
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - blessed are the peacemakers
+  short_explanation: Praise for people who reconcile conflict.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.blessed_are_the_peacemakers
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Matthew
+  source_author: King James Version
+  source_location: Matthew 5:9
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_bread_of_life_1c10f694
+  language: en
+  canonical_reference: bread of life
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - bread of life
+  short_explanation: A sustaining spiritual or essential source of life.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.bread_of_life
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: John
+  source_author: King James Version
+  source_location: John 6:35
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_brimstone_910a40a0
+  language: en
+  canonical_reference: brimstone
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - brimstone
+  short_explanation: Fiery punishment, destruction, or hellish severity.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.brimstone
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 19:24
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_cup_runneth_over_c53a6048
+  language: en
+  canonical_reference: cup runneth over
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - cup runneth over
+  short_explanation: Abundance, overflowing gratitude, or good fortune.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.cup_runneth_over
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Psalms
+  source_author: King James Version
+  source_location: Psalm 23:5
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_dry_bones_23b68b8b
+  language: en
+  canonical_reference: dry bones
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - dry bones
+  short_explanation: Something apparently lifeless that may be revived.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.dry_bones
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Ezekiel
+  source_author: King James Version
+  source_location: Ezekiel 37:1-14
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_fall_on_stony_ground_cec95c22
+  language: en
+  canonical_reference: fall on stony ground
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - fall on stony ground
+  short_explanation: To fail because conditions are unreceptive.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - fall on stony garound
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.fall_on_stony_ground
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Matthew
+  source_author: King James Version
+  source_location: Matthew 13:5-6
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_feet_of_iron_and_clay_96b213e9
+  language: en
+  canonical_reference: feet of iron and clay
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - feet of iron and clay
+  short_explanation: A structure or power weakened by hidden fragility.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - feet of iron & clay
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.feet_of_iron_and_clay
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Daniel
+  source_author: King James Version
+  source_location: Daniel 2:33-43
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_fiery_furnace_72049e03
+  language: en
+  canonical_reference: fiery furnace
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - fiery furnace
+  short_explanation: An extreme trial or ordeal.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.fiery_furnace
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Daniel
+  source_author: King James Version
+  source_location: Daniel 3:19-27
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_house_built_on_sand_df49366b
+  language: en
+  canonical_reference: house built on sand
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - house built on sand
+  short_explanation: Something founded on unstable assumptions.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.house_built_on_sand
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Matthew
+  source_author: King James Version
+  source_location: Matthew 7:26-27
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_jawbone_of_an_ass_c1394ebe
+  language: en
+  canonical_reference: jawbone of an ass
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - jawbone of an ass
+  short_explanation: An unlikely tool used to achieve victory.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.jawbone_of_an_ass
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Judges
+  source_author: King James Version
+  source_location: Judges 15:15-16
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_land_of_nod_aa7cde5e
+  language: en
+  canonical_reference: land of Nod
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - land of Nod
+  short_explanation: A place of sleep, wandering, or exile.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.land_of_nod
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 4:16
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_pillar_of_fire_52cf1564
+  language: en
+  canonical_reference: pillar of fire
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - pillar of fire
+  short_explanation: Guidance, protection, or dramatic divine presence.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.pillar_of_fire
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Exodus
+  source_author: King James Version
+  source_location: Exodus 13:21
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_poor_in_spirit_50ad2ac4
+  language: en
+  canonical_reference: poor in spirit
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - poor in spirit
+  short_explanation: Humble, spiritually needy, or unproud.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.poor_in_spirit
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Matthew
+  source_author: King James Version
+  source_location: Matthew 5:3
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_still_waters_7a590471
+  language: en
+  canonical_reference: still waters
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - still waters
+  short_explanation: Calmness, safety, or spiritual refreshment.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.still_waters
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Psalms
+  source_author: King James Version
+  source_location: Psalm 23:2
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_the_serpent_in_the_garden_3f93179e
+  language: en
+  canonical_reference: the serpent in the garden
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the serpent in the garden
+  short_explanation: A deceiver who tempts innocence into wrongdoing.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - serpent in the garden
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_serpent_in_the_garden
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 3
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_wrestle_with_an_angel_41016620
+  language: en
+  canonical_reference: wrestle with an angel
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - wrestle with an angel
+  short_explanation: Struggle intensely with conscience, faith, or destiny.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.wrestle_with_an_angel
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 32:24-30
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
