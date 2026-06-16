@@ -1,0 +1,35 @@
+# Reviewed cultural draft entries for promotion batch 026.
+# KJV (0.84, B2)
+a Solomon’s judgement
+# KJV (0.78, B2-C1)
+parting the Red Sea
+reap what you sow
+sow the wind and reap the whirlwind
+swords into ploughshares
+whited sepulchre
+two by two
+wash one’s hands of it
+widow’s mite
+# KJV (0.68, B1-B2)
+burning bush
+Cain and Abel
+Garden of Eden
+Goliath
+Passover
+Sodom and Gomorrah
+Jacob’s ladder
+manna
+the ten commandments
+the tree of knowledge
+crown of thorns
+Samson and Delilah
+# Shakespeare (0.76, B2-C1)
+all our yesterdays
+crack of doom
+in a pickle
+forever and a day
+# Classical allusions (0.74, B2-C1)
+Prometheus
+Phoenix
+Styx
+Theseus
