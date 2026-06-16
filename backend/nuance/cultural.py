@@ -136,6 +136,7 @@ def extract_cultural_references(sentence: str, language: str) -> list[CandidateO
                 "source_license": pat.entry.get("source_license"),
                 "rights_basis": pat.entry.get("rights_basis"),
                 "explanation": pat.entry["short_explanation"],
+                "i18n_explanations": pat.entry.get("i18n_explanations"),
                 "explanation_key": pat.entry.get("explanation_key"),
                 "source_work_key": pat.entry.get("source_work_key"),
                 "source_author_key": pat.entry.get("source_author_key"),
