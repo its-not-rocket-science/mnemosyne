@@ -236,6 +236,74 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_mess_of_pottage_b2cf89fa",
+      "canonical_reference": "a mess of pottage",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.a_mess_of_pottage",
+      "id": "en_classical_or_scriptural_allusion_a_mess_of_pottage_b2cf89fa",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A poor bargain made for immediate appetite or short-term gain.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 25:29-34",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "a mess of pottage"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_millstone_round_one_s_neck_1ab0d313",
+      "canonical_reference": "a millstone round one’s neck",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.a_millstone_round_one_s_neck",
+      "id": "en_classical_or_scriptural_allusion_a_millstone_round_one_s_neck_1ab0d313",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A heavy burden, guilt, or ruinous responsibility.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 18:6",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospels",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "a millstone round one’s neck",
+        "a millstone round one's neck",
+        "a millstone round your neck",
+        "a millstone round my neck",
+        "a millstone round his neck",
+        "a millstone round her neck",
+        "a millstone round their neck",
+        "a millstone around one’s neck",
+        "a millstone around one's neck",
+        "a millstone around your neck"
+      ],
+      "variants": [
+        "a millstone round one's neck",
+        "a millstone round your neck",
+        "a millstone round my neck",
+        "a millstone round his neck",
+        "a millstone round her neck",
+        "a millstone round their neck",
+        "a millstone around one’s neck",
+        "a millstone around one's neck",
+        "a millstone around your neck"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_rod_of_iron_b0a05f31",
       "canonical_reference": "a rod of iron",
       "confidence": 0.78,
@@ -394,6 +462,30 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_absalom_30f5daa0",
+      "canonical_reference": "Absalom",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.absalom",
+      "id": "en_classical_or_scriptural_allusion_absalom_30f5daa0",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A rebellious son or beloved betrayer.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "2 Samuel 15-18",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "2 Samuel",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "Absalom"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_achilles_and_the_tortoise_d2bf6b76",
       "canonical_reference": "Achilles and the tortoise",
       "confidence": 0.76,
@@ -444,6 +536,30 @@
       ],
       "variants": [
         "Adam's apple"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_ahab_439dbc92",
+      "canonical_reference": "Ahab",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.ahab",
+      "id": "en_classical_or_scriptural_allusion_ahab_439dbc92",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A destructive ruler associated with obsession and wrongdoing.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "1 Kings 16:29-22:40",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "1 Kings",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "Ahab"
       ]
     },
     {
@@ -981,6 +1097,30 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_blessed_are_the_peacemakers_794e430b",
+      "canonical_reference": "blessed are the peacemakers",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.blessed_are_the_peacemakers",
+      "id": "en_classical_or_scriptural_allusion_blessed_are_the_peacemakers_794e430b",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Praise for people who reconcile conflict.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 5:9",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Matthew",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "blessed are the peacemakers"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_bread_and_circuses_4622e367",
       "canonical_reference": "bread and circuses",
       "confidence": 0.78,
@@ -1005,6 +1145,54 @@
       ],
       "variants": [
         "bread & circuses"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_bread_of_life_1c10f694",
+      "canonical_reference": "bread of life",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.bread_of_life",
+      "id": "en_classical_or_scriptural_allusion_bread_of_life_1c10f694",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A sustaining spiritual or essential source of life.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "John 6:35",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "John",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "bread of life"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_brimstone_910a40a0",
+      "canonical_reference": "brimstone",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.brimstone",
+      "id": "en_classical_or_scriptural_allusion_brimstone_910a40a0",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Fiery punishment, destruction, or hellish severity.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 19:24",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "brimstone"
       ]
     },
     {
@@ -1420,6 +1608,30 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_cup_runneth_over_c53a6048",
+      "canonical_reference": "cup runneth over",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.cup_runneth_over",
+      "id": "en_classical_or_scriptural_allusion_cup_runneth_over_c53a6048",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Abundance, overflowing gratitude, or good fortune.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Psalm 23:5",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Psalms",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "cup runneth over"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_daedalian_03c08568",
       "canonical_reference": "Daedalian",
       "confidence": 0.76,
@@ -1608,6 +1820,30 @@
       "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
       "surface_patterns": [
         "doubting Thomas"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_dry_bones_23b68b8b",
+      "canonical_reference": "dry bones",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.dry_bones",
+      "id": "en_classical_or_scriptural_allusion_dry_bones_23b68b8b",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Something apparently lifeless that may be revived.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Ezekiel 37:1-14",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Ezekiel",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "dry bones"
       ]
     },
     {
@@ -1835,6 +2071,34 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_fall_on_stony_ground_cec95c22",
+      "canonical_reference": "fall on stony ground",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.fall_on_stony_ground",
+      "id": "en_classical_or_scriptural_allusion_fall_on_stony_ground_cec95c22",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "To fail because conditions are unreceptive.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 13:5-6",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Matthew",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "fall on stony ground",
+        "fall on stony garound"
+      ],
+      "variants": [
+        "fall on stony garound"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_fallen_angel_ab817a2f",
       "canonical_reference": "fallen angel",
       "confidence": 0.68,
@@ -1904,6 +2168,58 @@
       "source_work_key": "mnemosyne.en.work.daniel",
       "surface_patterns": [
         "feet of clay"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_feet_of_iron_and_clay_96b213e9",
+      "canonical_reference": "feet of iron and clay",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.feet_of_iron_and_clay",
+      "id": "en_classical_or_scriptural_allusion_feet_of_iron_and_clay_96b213e9",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A structure or power weakened by hidden fragility.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Daniel 2:33-43",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Daniel",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "feet of iron and clay",
+        "feet of iron & clay"
+      ],
+      "variants": [
+        "feet of iron & clay"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_fiery_furnace_72049e03",
+      "canonical_reference": "fiery furnace",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.fiery_furnace",
+      "id": "en_classical_or_scriptural_allusion_fiery_furnace_72049e03",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "An extreme trial or ordeal.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Daniel 3:19-27",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Daniel",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "fiery furnace"
       ]
     },
     {
@@ -2523,6 +2839,30 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_house_built_on_sand_df49366b",
+      "canonical_reference": "house built on sand",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.house_built_on_sand",
+      "id": "en_classical_or_scriptural_allusion_house_built_on_sand_df49366b",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Something founded on unstable assumptions.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 7:26-27",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Matthew",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "house built on sand"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_how_the_mighty_are_fallen_b9633859",
       "canonical_reference": "how the mighty are fallen",
       "confidence": 0.84,
@@ -2782,6 +3122,30 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_jawbone_of_an_ass_c1394ebe",
+      "canonical_reference": "jawbone of an ass",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.jawbone_of_an_ass",
+      "id": "en_classical_or_scriptural_allusion_jawbone_of_an_ass_c1394ebe",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "An unlikely tool used to achieve victory.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Judges 15:15-16",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Judges",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "jawbone of an ass"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_jezebel_cbc22edd",
       "canonical_reference": "Jezebel",
       "confidence": 0.78,
@@ -3009,6 +3373,30 @@
       ],
       "variants": [
         "land of milk & honey"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_land_of_nod_aa7cde5e",
+      "canonical_reference": "land of Nod",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.land_of_nod",
+      "id": "en_classical_or_scriptural_allusion_land_of_nod_aa7cde5e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A place of sleep, wandering, or exile.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 4:16",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "land of Nod"
       ]
     },
     {
@@ -4165,6 +4553,30 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_pillar_of_fire_52cf1564",
+      "canonical_reference": "pillar of fire",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.pillar_of_fire",
+      "id": "en_classical_or_scriptural_allusion_pillar_of_fire_52cf1564",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Guidance, protection, or dramatic divine presence.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Exodus 13:21",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Exodus",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "pillar of fire"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_pillar_of_salt_366f9cd7",
       "canonical_reference": "pillar of salt",
       "confidence": 0.78,
@@ -4185,6 +4597,30 @@
       "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
       "surface_patterns": [
         "pillar of salt"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_poor_in_spirit_50ad2ac4",
+      "canonical_reference": "poor in spirit",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.poor_in_spirit",
+      "id": "en_classical_or_scriptural_allusion_poor_in_spirit_50ad2ac4",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Humble, spiritually needy, or unproud.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 5:3",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Matthew",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "poor in spirit"
       ]
     },
     {
@@ -4667,6 +5103,30 @@
       ],
       "variants": [
         "still small voice"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_still_waters_7a590471",
+      "canonical_reference": "still waters",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.still_waters",
+      "id": "en_classical_or_scriptural_allusion_still_waters_7a590471",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Calmness, safety, or spiritual refreshment.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Psalm 23:2",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Psalms",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "still waters"
       ]
     },
     {
@@ -5254,6 +5714,34 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_serpent_in_the_garden_3f93179e",
+      "canonical_reference": "the serpent in the garden",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.the_serpent_in_the_garden",
+      "id": "en_classical_or_scriptural_allusion_the_serpent_in_the_garden_3f93179e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A deceiver who tempts innocence into wrongdoing.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 3",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "the serpent in the garden",
+        "serpent in the garden"
+      ],
+      "variants": [
+        "serpent in the garden"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_spirit_is_willing_f050eff9",
       "canonical_reference": "the spirit is willing",
       "confidence": 0.84,
@@ -5702,6 +6190,28 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_venereal_01707976",
+      "canonical_reference": "Venereal",
+      "confidence": 0.72,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.venereal",
+      "id": "en_classical_or_scriptural_allusion_venereal_01707976",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "Classical allusion; English surface form is later conventional usage.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Related to love or sexual desire.",
+      "source_author": "Roman tradition",
+      "source_author_key": "mnemosyne.en.author.roman_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Venus myth",
+      "source_work_key": "mnemosyne.en.work.venus_myth",
+      "surface_patterns": [
+        "Venereal"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_venus_85c24c41",
       "canonical_reference": "Venus",
       "confidence": 0.74,
@@ -5890,6 +6400,30 @@
       ],
       "variants": [
         "wisdom of Solomon"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_wrestle_with_an_angel_41016620",
+      "canonical_reference": "wrestle with an angel",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.wrestle_with_an_angel",
+      "id": "en_classical_or_scriptural_allusion_wrestle_with_an_angel_41016620",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Struggle intensely with conscience, faith, or destiny.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 32:24-30",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "wrestle with an angel"
       ]
     },
     {
@@ -9333,6 +9867,54 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_beast_with_two_backs_2c4c1741",
+      "canonical_reference": "beast with two backs",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.beast_with_two_backs",
+      "id": "en_literary_reference_beast_with_two_backs_2c4c1741",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A bawdy image for sexual intercourse.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Othello",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "beast with two backs"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_best_foot_forward_8c03a1d7",
+      "canonical_reference": "best foot forward",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.best_foot_forward",
+      "id": "en_literary_reference_best_foot_forward_8c03a1d7",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Make the strongest possible effort or impression.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act IV Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "King John",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "best foot forward"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_betsey_trotwood_ad9e0103",
       "canonical_reference": "Betsey Trotwood",
       "confidence": 0.74,
@@ -9377,6 +9959,30 @@
       "source_work_key": "mnemosyne.en.work.the_canterbury_tales",
       "surface_patterns": [
         "better late than never"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_better_three_hours_too_soon_af6ef5c0",
+      "canonical_reference": "better three hours too soon",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.better_three_hours_too_soon",
+      "id": "en_literary_reference_better_three_hours_too_soon_af6ef5c0",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "It is better to arrive early than late.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Merry Wives of Windsor",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "better three hours too soon"
       ]
     },
     {
@@ -9775,6 +10381,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_catch_a_cold_294dd50a",
+      "canonical_reference": "catch a cold",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.catch_a_cold",
+      "id": "en_literary_reference_catch_a_cold_294dd50a",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Become ill with a cold; figuratively, suffer a setback.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 4",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Cymbeline",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "catch a cold"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_caterpillar_question_34f2505f",
       "canonical_reference": "Caterpillar question",
       "confidence": 0.74,
@@ -10025,6 +10655,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_clothes_make_the_man_276b29f5",
+      "canonical_reference": "clothes make the man",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.clothes_make_the_man",
+      "id": "en_literary_reference_clothes_make_the_man_276b29f5",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Appearance and dress strongly affect how people are judged.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 3",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "clothes make the man"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_cold_comfort_8a8d94de",
       "canonical_reference": "cold comfort",
       "confidence": 0.78,
@@ -10094,6 +10748,30 @@
       "source_work_key": "mnemosyne.en.work.paradise_lost",
       "surface_patterns": [
         "confusion worse confounded"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_conscience_does_make_cowards_34791025",
+      "canonical_reference": "conscience does make cowards",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.conscience_does_make_cowards",
+      "id": "en_literary_reference_conscience_does_make_cowards_34791025",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Moral reflection can make people hesitate.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "conscience does make cowards"
       ]
     },
     {
@@ -10246,6 +10924,34 @@
       "source_work_key": "mnemosyne.en.work.paradise_lost",
       "surface_patterns": [
         "darkness visible"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_dead_as_a_doornail_b243af71",
+      "canonical_reference": "dead as a doornail",
+      "confidence": 0.72,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.dead_as_a_doornail",
+      "id": "en_literary_reference_dead_as_a_doornail_b243af71",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Commonly attributed to Shakespeare; attribution should be reviewed.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Completely dead or finished.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act IV Scene 10",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Henry VI, Part 2",
+      "source_work_key": "mnemosyne.en.work.henry_vi_part_2",
+      "surface_patterns": [
+        "dead as a doornail",
+        "dead as doornail"
+      ],
+      "variants": [
+        "dead as doornail"
       ]
     },
     {
@@ -11379,6 +12085,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_hair_stand_on_end_dfaa2175",
+      "canonical_reference": "hair stand on end",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.hair_stand_on_end",
+      "id": "en_literary_reference_hair_stand_on_end_dfaa2175",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Be extremely frightened or horrified.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 5",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "hair stand on end"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_heart_of_gold_f00a48da",
       "canonical_reference": "heart of gold",
       "confidence": 0.78,
@@ -11728,6 +12458,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_in_a_better_world_than_this_3d9d4e21",
+      "canonical_reference": "in a better world than this",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.in_a_better_world_than_this",
+      "id": "en_literary_reference_in_a_better_world_than_this_3d9d4e21",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "In kinder or fairer circumstances.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "As You Like It",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "in a better world than this"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_in_a_pickle_c075b299",
       "canonical_reference": "in a pickle",
       "confidence": 0.76,
@@ -11801,6 +12555,30 @@
       "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
       "surface_patterns": [
         "in stitches"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_in_the_twinkling_of_an_eye_fa7a0223",
+      "canonical_reference": "in the twinkling of an eye",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.in_the_twinkling_of_an_eye",
+      "id": "en_literary_reference_in_the_twinkling_of_an_eye_fa7a0223",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Very quickly.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Merchant of Venice",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "in the twinkling of an eye"
       ]
     },
     {
@@ -12511,6 +13289,30 @@
       "source_work_key": "mnemosyne.en.work.alice_books_and_poems",
       "surface_patterns": [
         "Mad Hatter"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_make_your_hair_stand_on_end_ed50ae70",
+      "canonical_reference": "make your hair stand on end",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.make_your_hair_stand_on_end",
+      "id": "en_literary_reference_make_your_hair_stand_on_end_ed50ae70",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Make someone extremely frightened or horrified.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act I Scene 5",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "make your hair stand on end"
       ]
     },
     {
@@ -17223,6 +18025,35 @@
       "variants": [
         "mountain gave birth to a mouse",
         "mountain in labour"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_mouse_and_the_lion_13b2d99e",
+      "canonical_reference": "the mouse and the lion",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_mouse_and_the_lion",
+      "id": "en_proverb_tradition_the_mouse_and_the_lion_13b2d99e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Small helpers may prove unexpectedly valuable.",
+      "source_author": "Aesop / fable tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_fable_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "Aesop’s Fables / fable tradition",
+      "source_work_key": "mnemosyne.en.work.aesop_s_fables_fable_tradition",
+      "surface_patterns": [
+        "the mouse and the lion",
+        "mouse and the lion",
+        "the mouse & the lion"
+      ],
+      "variants": [
+        "mouse and the lion",
+        "the mouse & the lion"
       ]
     },
     {
