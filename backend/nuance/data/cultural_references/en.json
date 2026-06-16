@@ -1278,6 +1278,30 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_chariot_of_fire_5945f26f",
+      "canonical_reference": "chariot of fire",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.chariot_of_fire",
+      "id": "en_classical_or_scriptural_allusion_chariot_of_fire_5945f26f",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A dramatic vehicle of deliverance or glory.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "2 Kings 2:11",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "2 Kings",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "chariot of fire"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_charon_f1030c93",
       "canonical_reference": "Charon",
       "confidence": 0.74,
@@ -1319,6 +1343,30 @@
       "source_work_key": "mnemosyne.en.work.greek_afterlife_myth",
       "surface_patterns": [
         "cross the Styx"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_cross_to_bear_b4556b87",
+      "canonical_reference": "cross to bear",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.cross_to_bear",
+      "id": "en_classical_or_scriptural_allusion_cross_to_bear_b4556b87",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A personal burden or unavoidable suffering.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Luke 14:27",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Luke",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "cross to bear"
       ]
     },
     {
@@ -1413,6 +1461,58 @@
       "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
       "surface_patterns": [
         "Daedalus"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_daily_bread_76987a10",
+      "canonical_reference": "daily bread",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.daily_bread",
+      "id": "en_classical_or_scriptural_allusion_daily_bread_76987a10",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Basic daily needs or ordinary sustenance.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 6:11",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Matthew",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "daily bread"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_daniel_in_the_lions_den_97c40369",
+      "canonical_reference": "Daniel in the lions’ den",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.daniel_in_the_lions_den",
+      "id": "en_classical_or_scriptural_allusion_daniel_in_the_lions_den_97c40369",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A righteous person facing dangerous hostility.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Daniel 6",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Daniel",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "Daniel in the lions’ den",
+        "Daniel in the lions' den"
+      ],
+      "variants": [
+        "Daniel in the lions' den"
       ]
     },
     {
@@ -1759,6 +1859,30 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_fatted_calf_26feb5b2",
+      "canonical_reference": "fatted calf",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.fatted_calf",
+      "id": "en_classical_or_scriptural_allusion_fatted_calf_26feb5b2",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A lavish welcome for someone returning.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Luke 15:23",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Luke",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "fatted calf"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_feet_of_clay_6963abce",
       "canonical_reference": "feet of clay",
       "confidence": 0.84,
@@ -1927,6 +2051,34 @@
       "source_work_key": "mnemosyne.en.work.daedalus_and_icarus_myth",
       "surface_patterns": [
         "fly too close to the sun"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_forty_days_and_forty_nights_a172b9cd",
+      "canonical_reference": "forty days and forty nights",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.forty_days_and_forty_nights",
+      "id": "en_classical_or_scriptural_allusion_forty_days_and_forty_nights_a172b9cd",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A long testing period or prolonged ordeal.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 7:12",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "forty days and forty nights",
+        "forty days & forty nights"
+      ],
+      "variants": [
+        "forty days & forty nights"
       ]
     },
     {
@@ -2181,6 +2333,30 @@
       "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
       "surface_patterns": [
         "gorgon"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_green_pastures_8e4ab3df",
+      "canonical_reference": "green pastures",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.green_pastures",
+      "id": "en_classical_or_scriptural_allusion_green_pastures_8e4ab3df",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Peaceful provision, safety, or pastoral comfort.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Psalm 23:2",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Psalms",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "green pastures"
       ]
     },
     {
@@ -2928,6 +3104,54 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_lilies_of_the_field_46d89309",
+      "canonical_reference": "lilies of the field",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.lilies_of_the_field",
+      "id": "en_classical_or_scriptural_allusion_lilies_of_the_field_46d89309",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Natural beauty or trust without anxious striving.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 6:28-29",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Matthew",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "lilies of the field"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_man_shall_not_live_by_bread_alone_95c556b8",
+      "canonical_reference": "man shall not live by bread alone",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.man_shall_not_live_by_bread_alone",
+      "id": "en_classical_or_scriptural_allusion_man_shall_not_live_by_bread_alone_95c556b8",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "People need more than material survival.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 4:4",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Matthew",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "man shall not live by bread alone"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_manna_676b1ea0",
       "canonical_reference": "manna",
       "confidence": 0.68,
@@ -3053,6 +3277,28 @@
       ],
       "variants": [
         "mark of the beast"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_martial_a29d952c",
+      "canonical_reference": "Martial",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.martial",
+      "id": "en_classical_or_scriptural_allusion_martial_a29d952c",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Classical allusion; English surface form is later conventional usage.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.82.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "War-like or military.",
+      "source_author": "Roman tradition",
+      "source_author_key": "mnemosyne.en.author.roman_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Mars myth",
+      "source_work_key": "mnemosyne.en.work.mars_myth",
+      "surface_patterns": [
+        "Martial"
       ]
     },
     {
@@ -3600,6 +3846,28 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_orphic_3281854b",
+      "canonical_reference": "Orphic",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.orphic",
+      "id": "en_classical_or_scriptural_allusion_orphic_3281854b",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Mystical, poetic, or obscure.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Classical Greek and Roman literature / myth",
+      "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
+      "surface_patterns": [
+        "Orphic"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_out_of_the_mouths_of_babes_13e24e06",
       "canonical_reference": "out of the mouths of babes",
       "confidence": 0.84,
@@ -4082,6 +4350,34 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_sackcloth_and_ashes_35b8249a",
+      "canonical_reference": "sackcloth and ashes",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.sackcloth_and_ashes",
+      "id": "en_classical_or_scriptural_allusion_sackcloth_and_ashes_35b8249a",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Signs of mourning, repentance, or public grief.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Esther 4:1-3",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Esther",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "sackcloth and ashes",
+        "sackcloth & ashes"
+      ],
+      "variants": [
+        "sackcloth & ashes"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_salt_of_the_earth_58429edc",
       "canonical_reference": "salt of the earth",
       "confidence": 0.84,
@@ -4532,6 +4828,28 @@
       "source_work_key": "mnemosyne.en.work.tantalus_myth",
       "surface_patterns": [
         "Tantalus"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_tartarus_f6464d04",
+      "canonical_reference": "Tartarus",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.tartarus",
+      "id": "en_classical_or_scriptural_allusion_tartarus_f6464d04",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A deep hellish prison.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Classical Greek and Roman literature / myth",
+      "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
+      "surface_patterns": [
+        "Tartarus"
       ]
     },
     {
@@ -5110,6 +5428,34 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_walls_of_jericho_9e5571cf",
+      "canonical_reference": "the walls of Jericho",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.the_walls_of_jericho",
+      "id": "en_classical_or_scriptural_allusion_the_walls_of_jericho_9e5571cf",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Barriers that collapse dramatically.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Joshua 6:20",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Joshua",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "the walls of Jericho",
+        "walls of Jericho"
+      ],
+      "variants": [
+        "walls of Jericho"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_writing_is_on_the_wall_a0aef6d6",
       "canonical_reference": "the writing is on the wall",
       "confidence": 0.84,
@@ -5236,6 +5582,30 @@
       "source_work_key": "mnemosyne.en.work.genesis",
       "surface_patterns": [
         "Tower of Babel"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_tree_of_life_11ed35df",
+      "canonical_reference": "tree of life",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.tree_of_life",
+      "id": "en_classical_or_scriptural_allusion_tree_of_life_11ed35df",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A symbol of immortality, renewal, or divine life.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 2:9; Revelation 22:2",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis / Revelation",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "tree of life"
       ]
     },
     {
@@ -8393,6 +8763,36 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_age_cannot_wither_b265ccbe",
+      "canonical_reference": "age cannot wither",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.age_cannot_wither",
+      "id": "en_literary_reference_age_cannot_wither_b265ccbe",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A beauty, charm, or power that time cannot diminish.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Antony and Cleopatra",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "age cannot wither",
+        "age can't wither",
+        "age can not wither"
+      ],
+      "variants": [
+        "age can't wither",
+        "age can not wither"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_alas_poor_yorick_67cc4754",
       "canonical_reference": "alas, poor Yorick",
       "confidence": 0.78,
@@ -8418,6 +8818,30 @@
       ],
       "variants": [
         "poor Yorick"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_all_corners_of_the_world_b927bcef",
+      "canonical_reference": "all corners of the world",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.all_corners_of_the_world",
+      "id": "en_literary_reference_all_corners_of_the_world_b927bcef",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Everywhere; from all parts of the world.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 4",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Cymbeline",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "all corners of the world"
       ]
     },
     {
@@ -8603,6 +9027,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_as_dead_as_a_doornail_86b924c2",
+      "canonical_reference": "as dead as a doornail",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.as_dead_as_a_doornail",
+      "id": "en_literary_reference_as_dead_as_a_doornail_86b924c2",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Completely dead or lifeless.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act IV Scene 10",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Henry VI, Part 2",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "as dead as a doornail"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_as_fresh_as_is_the_month_of_may_28f3105f",
       "canonical_reference": "as fresh as is the month of May",
       "confidence": 0.78,
@@ -8659,6 +9107,54 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_as_merry_as_the_day_is_long_56c2d166",
+      "canonical_reference": "as merry as the day is long",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.as_merry_as_the_day_is_long",
+      "id": "en_literary_reference_as_merry_as_the_day_is_long_56c2d166",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Very cheerful or carefree.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Much Ado About Nothing",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "as merry as the day is long"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_as_pure_as_the_driven_snow_1c9cfad3",
+      "canonical_reference": "as pure as the driven snow",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.as_pure_as_the_driven_snow",
+      "id": "en_literary_reference_as_pure_as_the_driven_snow_1c9cfad3",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Completely innocent or morally pure.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "as pure as the driven snow"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_awake_arise_or_be_forever_fallen_7dbd4ba9",
       "canonical_reference": "awake, arise, or be forever fallen",
       "confidence": 0.9,
@@ -8680,6 +9176,34 @@
       "source_work_key": "mnemosyne.en.work.paradise_lost",
       "surface_patterns": [
         "awake, arise, or be forever fallen"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_bag_and_baggage_05d62b4c",
+      "canonical_reference": "bag and baggage",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.bag_and_baggage",
+      "id": "en_literary_reference_bag_and_baggage_05d62b4c",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "With all belongings; completely.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "As You Like It",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "bag and baggage",
+        "bag & baggage"
+      ],
+      "variants": [
+        "bag & baggage"
       ]
     },
     {
@@ -8758,6 +9282,30 @@
       "variants": [
         "be-all and end-all",
         "be-all & end-all"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_be_cruel_to_be_kind_f13ca81e",
+      "canonical_reference": "be cruel to be kind",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.be_cruel_to_be_kind",
+      "id": "en_literary_reference_be_cruel_to_be_kind_f13ca81e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Cause short-term pain to produce a better outcome.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 4",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Hamlet",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "be cruel to be kind"
       ]
     },
     {
@@ -9753,6 +10301,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_devil_incarnate_cf51969f",
+      "canonical_reference": "devil incarnate",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.devil_incarnate",
+      "id": "en_literary_reference_devil_incarnate_cf51969f",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A person seen as evil embodied.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act V Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Titus Andronicus",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "devil incarnate"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_dish_fit_for_the_gods_80dca1e8",
       "canonical_reference": "dish fit for the gods",
       "confidence": 0.78,
@@ -9938,6 +10510,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_eaten_me_out_of_house_and_home_d2eca6f6",
+      "canonical_reference": "eaten me out of house and home",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.eaten_me_out_of_house_and_home",
+      "id": "en_literary_reference_eaten_me_out_of_house_and_home_d2eca6f6",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Consumed someone’s resources by eating or costing too much.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Henry IV, Part 2",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "eaten me out of house and home",
+        "eaten me out of house & home"
+      ],
+      "variants": [
+        "eaten me out of house & home"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_elbow_room_f9789776",
       "canonical_reference": "elbow room",
       "confidence": 0.76,
@@ -10111,6 +10711,30 @@
       ],
       "variants": [
         "Faithful & Hopeful"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_fancy_free_532290e1",
+      "canonical_reference": "fancy-free",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.fancy_free",
+      "id": "en_literary_reference_fancy_free_532290e1",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Free from romantic attachment.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "A Midsummer Night's Dream",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "fancy-free"
       ]
     },
     {
@@ -10632,6 +11256,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_green_eyed_jealousy_33a323d7",
+      "canonical_reference": "green-eyed jealousy",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.green_eyed_jealousy",
+      "id": "en_literary_reference_green_eyed_jealousy_33a323d7",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Jealousy imagined as green-eyed.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Merchant of Venice",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "green-eyed jealousy"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_green_eyed_monster_ed733b27",
       "canonical_reference": "green-eyed monster",
       "confidence": 0.78,
@@ -11032,6 +11680,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_i_have_not_slept_one_wink_8a155f5e",
+      "canonical_reference": "I have not slept one wink",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.i_have_not_slept_one_wink",
+      "id": "en_literary_reference_i_have_not_slept_one_wink_8a155f5e",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "I have not slept at all.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 4",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Cymbeline",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "I have not slept one wink"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_if_you_prick_us_do_we_not_bleed_ba03498a",
       "canonical_reference": "if you prick us, do we not bleed",
       "confidence": 0.78,
@@ -11105,6 +11777,30 @@
       ],
       "variants": [
         "in my mind's eye"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_in_stitches_2058f820",
+      "canonical_reference": "in stitches",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.in_stitches",
+      "id": "en_literary_reference_in_stitches_2058f820",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Laughing uncontrollably.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act III Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Twelfth Night",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "in stitches"
       ]
     },
     {
@@ -11383,6 +12079,58 @@
       "source_work_key": "mnemosyne.en.work.kenilworth",
       "surface_patterns": [
         "Kenilworth"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_kill_with_kindness_042dce42",
+      "canonical_reference": "kill with kindness",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.kill_with_kindness",
+      "id": "en_literary_reference_kill_with_kindness_042dce42",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Overwhelm or control someone through excessive kindness.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act IV Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Taming of the Shrew",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "kill with kindness"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_knock_knock_who_s_there_4ba28409",
+      "canonical_reference": "knock knock who’s there",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.knock_knock_who_s_there",
+      "id": "en_literary_reference_knock_knock_who_s_there_4ba28409",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A comic or ominous knocking formula.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act II Scene 3",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Macbeth",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "knock knock who’s there",
+        "knock knock who's there"
+      ],
+      "variants": [
+        "knock knock who's there"
       ]
     },
     {
@@ -16272,6 +17020,62 @@
         "goose that laid the golden eggs",
         "goose that laid the golden egg",
         "kill the goose that lays the golden eggs"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_goose_with_the_golden_eggs_af381edf",
+      "canonical_reference": "the goose with the golden eggs",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_goose_with_the_golden_eggs",
+      "id": "en_proverb_tradition_the_goose_with_the_golden_eggs_af381edf",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Destroying a source of profit through greed.",
+      "source_author": "Aesop / fable tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_fable_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "Aesop’s Fables / fable tradition",
+      "source_work_key": "mnemosyne.en.work.aesop_s_fables_fable_tradition",
+      "surface_patterns": [
+        "the goose with the golden eggs",
+        "goose with the golden eggs"
+      ],
+      "variants": [
+        "goose with the golden eggs"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_hare_and_the_tortoise_5dd0d392",
+      "canonical_reference": "the hare and the tortoise",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.aesop_fable_phrases.the_hare_and_the_tortoise",
+      "id": "en_proverb_tradition_the_hare_and_the_tortoise_5dd0d392",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL added by v3 normalisation as a stable public-domain reference for review.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "A reversal where slow steadiness beats speed.",
+      "source_author": "Aesop / fable tradition",
+      "source_author_key": "mnemosyne.en.author.aesop_fable_tradition",
+      "source_dataset": "en_aesop_fable_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/11339",
+      "source_work": "Aesop’s Fables / fable tradition",
+      "source_work_key": "mnemosyne.en.work.aesop_s_fables_fable_tradition",
+      "surface_patterns": [
+        "the hare and the tortoise",
+        "hare and the tortoise",
+        "the hare & the tortoise"
+      ],
+      "variants": [
+        "hare and the tortoise",
+        "the hare & the tortoise"
       ]
     },
     {

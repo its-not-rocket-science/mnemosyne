@@ -17667,3 +17667,785 @@
   source_dataset: en_kjv_bible_phrases
   notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
     and wording should be checked. Needs source-location review.
+- id: en_literary_reference_i_have_not_slept_one_wink_8a155f5e
+  language: en
+  canonical_reference: I have not slept one wink
+  reference_type: literary_reference
+  surface_patterns:
+    - I have not slept one wink
+  short_explanation: I have not slept at all.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.i_have_not_slept_one_wink
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Cymbeline
+  source_author: William Shakespeare
+  source_location: Act III Scene 4
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_age_cannot_wither_b265ccbe
+  language: en
+  canonical_reference: age cannot wither
+  reference_type: literary_reference
+  surface_patterns:
+    - age cannot wither
+  short_explanation: A beauty, charm, or power that time cannot diminish.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - age can't wither
+    - age can not wither
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.age_cannot_wither
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Antony and Cleopatra
+  source_author: William Shakespeare
+  source_location: Act II Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_all_corners_of_the_world_b927bcef
+  language: en
+  canonical_reference: all corners of the world
+  reference_type: literary_reference
+  surface_patterns:
+    - all corners of the world
+  short_explanation: Everywhere; from all parts of the world.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.all_corners_of_the_world
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Cymbeline
+  source_author: William Shakespeare
+  source_location: Act III Scene 4
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_as_dead_as_a_doornail_86b924c2
+  language: en
+  canonical_reference: as dead as a doornail
+  reference_type: literary_reference
+  surface_patterns:
+    - as dead as a doornail
+  short_explanation: Completely dead or lifeless.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.as_dead_as_a_doornail
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Henry VI, Part 2
+  source_author: William Shakespeare
+  source_location: Act IV Scene 10
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_as_merry_as_the_day_is_long_56c2d166
+  language: en
+  canonical_reference: as merry as the day is long
+  reference_type: literary_reference
+  surface_patterns:
+    - as merry as the day is long
+  short_explanation: Very cheerful or carefree.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.as_merry_as_the_day_is_long
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Much Ado About Nothing
+  source_author: William Shakespeare
+  source_location: Act II Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_as_pure_as_the_driven_snow_1c9cfad3
+  language: en
+  canonical_reference: as pure as the driven snow
+  reference_type: literary_reference
+  surface_patterns:
+    - as pure as the driven snow
+  short_explanation: Completely innocent or morally pure.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.as_pure_as_the_driven_snow
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act III Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_bag_and_baggage_05d62b4c
+  language: en
+  canonical_reference: bag and baggage
+  reference_type: literary_reference
+  surface_patterns:
+    - bag and baggage
+  short_explanation: With all belongings; completely.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - bag & baggage
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.bag_and_baggage
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: As You Like It
+  source_author: William Shakespeare
+  source_location: Act III Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_be_cruel_to_be_kind_f13ca81e
+  language: en
+  canonical_reference: be cruel to be kind
+  reference_type: literary_reference
+  surface_patterns:
+    - be cruel to be kind
+  short_explanation: Cause short-term pain to produce a better outcome.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.be_cruel_to_be_kind
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act III Scene 4
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_devil_incarnate_cf51969f
+  language: en
+  canonical_reference: devil incarnate
+  reference_type: literary_reference
+  surface_patterns:
+    - devil incarnate
+  short_explanation: A person seen as evil embodied.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.devil_incarnate
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Titus Andronicus
+  source_author: William Shakespeare
+  source_location: Act V Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_eaten_me_out_of_house_and_home_d2eca6f6
+  language: en
+  canonical_reference: eaten me out of house and home
+  reference_type: literary_reference
+  surface_patterns:
+    - eaten me out of house and home
+  short_explanation: Consumed someone’s resources by eating or costing too much.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - eaten me out of house & home
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.eaten_me_out_of_house_and_home
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Henry IV, Part 2
+  source_author: William Shakespeare
+  source_location: Act II Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_fancy_free_532290e1
+  language: en
+  canonical_reference: fancy-free
+  reference_type: literary_reference
+  surface_patterns:
+    - fancy-free
+  short_explanation: Free from romantic attachment.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.fancy_free
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: A Midsummer Night's Dream
+  source_author: William Shakespeare
+  source_location: Act II Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_green_eyed_jealousy_33a323d7
+  language: en
+  canonical_reference: green-eyed jealousy
+  reference_type: literary_reference
+  surface_patterns:
+    - green-eyed jealousy
+  short_explanation: Jealousy imagined as green-eyed.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.green_eyed_jealousy
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Merchant of Venice
+  source_author: William Shakespeare
+  source_location: Act III Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_in_stitches_2058f820
+  language: en
+  canonical_reference: in stitches
+  reference_type: literary_reference
+  surface_patterns:
+    - in stitches
+  short_explanation: Laughing uncontrollably.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.in_stitches
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Twelfth Night
+  source_author: William Shakespeare
+  source_location: Act III Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_kill_with_kindness_042dce42
+  language: en
+  canonical_reference: kill with kindness
+  reference_type: literary_reference
+  surface_patterns:
+    - kill with kindness
+  short_explanation: Overwhelm or control someone through excessive kindness.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.kill_with_kindness
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Taming of the Shrew
+  source_author: William Shakespeare
+  source_location: Act IV Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_knock_knock_who_s_there_4ba28409
+  language: en
+  canonical_reference: knock knock who’s there
+  reference_type: literary_reference
+  surface_patterns:
+    - knock knock who’s there
+  short_explanation: A comic or ominous knocking formula.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - knock knock who's there
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.knock_knock_who_s_there
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act II Scene 3
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_martial_a29d952c
+  language: en
+  canonical_reference: Martial
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Martial
+  short_explanation: War-like or military.
+  learner_level: B2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.martial
+  source_work_key: mnemosyne.en.work.mars_myth
+  source_author_key: mnemosyne.en.author.roman_tradition
+  source_work: Mars myth
+  source_author: Roman tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.82.
+- id: en_classical_or_scriptural_allusion_orphic_3281854b
+  language: en
+  canonical_reference: Orphic
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Orphic
+  short_explanation: Mystical, poetic, or obscure.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.orphic
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_tartarus_f6464d04
+  language: en
+  canonical_reference: Tartarus
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Tartarus
+  short_explanation: A deep hellish prison.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.tartarus
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_proverb_tradition_the_goose_with_the_golden_eggs_af381edf
+  language: en
+  canonical_reference: the goose with the golden eggs
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the goose with the golden eggs
+  short_explanation: Destroying a source of profit through greed.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: proverbial
+  variants:
+    - goose with the golden eggs
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_goose_with_the_golden_eggs
+  source_work_key: mnemosyne.en.work.aesop_s_fables_fable_tradition
+  source_author_key: mnemosyne.en.author.aesop_fable_tradition
+  source_work: Aesop’s Fables / fable tradition
+  source_author: Aesop / fable tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_proverb_tradition_the_hare_and_the_tortoise_5dd0d392
+  language: en
+  canonical_reference: the hare and the tortoise
+  reference_type: proverb_tradition
+  surface_patterns:
+    - the hare and the tortoise
+  short_explanation: A reversal where slow steadiness beats speed.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: proverbial
+  variants:
+    - hare and the tortoise
+    - the hare & the tortoise
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.the_hare_and_the_tortoise
+  source_work_key: mnemosyne.en.work.aesop_s_fables_fable_tradition
+  source_author_key: mnemosyne.en.author.aesop_fable_tradition
+  source_work: Aesop’s Fables / fable tradition
+  source_author: Aesop / fable tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed.; Source URL
+    added by v3 normalisation as a stable public-domain reference for review.
+- id: en_classical_or_scriptural_allusion_chariot_of_fire_5945f26f
+  language: en
+  canonical_reference: chariot of fire
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - chariot of fire
+  short_explanation: A dramatic vehicle of deliverance or glory.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.chariot_of_fire
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 2 Kings
+  source_author: King James Version
+  source_location: 2 Kings 2:11
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_cross_to_bear_b4556b87
+  language: en
+  canonical_reference: cross to bear
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - cross to bear
+  short_explanation: A personal burden or unavoidable suffering.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.cross_to_bear
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Luke
+  source_author: King James Version
+  source_location: Luke 14:27
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_daily_bread_76987a10
+  language: en
+  canonical_reference: daily bread
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - daily bread
+  short_explanation: Basic daily needs or ordinary sustenance.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.daily_bread
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Matthew
+  source_author: King James Version
+  source_location: Matthew 6:11
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_daniel_in_the_lions_den_97c40369
+  language: en
+  canonical_reference: Daniel in the lions’ den
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Daniel in the lions’ den
+  short_explanation: A righteous person facing dangerous hostility.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - Daniel in the lions' den
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.daniel_in_the_lions_den
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Daniel
+  source_author: King James Version
+  source_location: Daniel 6
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_fatted_calf_26feb5b2
+  language: en
+  canonical_reference: fatted calf
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - fatted calf
+  short_explanation: A lavish welcome for someone returning.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.fatted_calf
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Luke
+  source_author: King James Version
+  source_location: Luke 15:23
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_forty_days_and_forty_nights_a172b9cd
+  language: en
+  canonical_reference: forty days and forty nights
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - forty days and forty nights
+  short_explanation: A long testing period or prolonged ordeal.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - forty days & forty nights
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.forty_days_and_forty_nights
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 7:12
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_green_pastures_8e4ab3df
+  language: en
+  canonical_reference: green pastures
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - green pastures
+  short_explanation: Peaceful provision, safety, or pastoral comfort.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.green_pastures
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Psalms
+  source_author: King James Version
+  source_location: Psalm 23:2
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_lilies_of_the_field_46d89309
+  language: en
+  canonical_reference: lilies of the field
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - lilies of the field
+  short_explanation: Natural beauty or trust without anxious striving.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.lilies_of_the_field
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Matthew
+  source_author: King James Version
+  source_location: Matthew 6:28-29
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_man_shall_not_live_by_bread_alone_95c556b8
+  language: en
+  canonical_reference: man shall not live by bread alone
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - man shall not live by bread alone
+  short_explanation: People need more than material survival.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.man_shall_not_live_by_bread_alone
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Matthew
+  source_author: King James Version
+  source_location: Matthew 4:4
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_sackcloth_and_ashes_35b8249a
+  language: en
+  canonical_reference: sackcloth and ashes
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - sackcloth and ashes
+  short_explanation: Signs of mourning, repentance, or public grief.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - sackcloth & ashes
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.sackcloth_and_ashes
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Esther
+  source_author: King James Version
+  source_location: Esther 4:1-3
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_the_walls_of_jericho_9e5571cf
+  language: en
+  canonical_reference: the walls of Jericho
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the walls of Jericho
+  short_explanation: Barriers that collapse dramatically.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - walls of Jericho
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_walls_of_jericho
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Joshua
+  source_author: King James Version
+  source_location: Joshua 6:20
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_tree_of_life_11ed35df
+  language: en
+  canonical_reference: tree of life
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - tree of life
+  short_explanation: A symbol of immortality, renewal, or divine life.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.tree_of_life
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis / Revelation
+  source_author: King James Version
+  source_location: Genesis 2:9; Revelation 22:2
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
