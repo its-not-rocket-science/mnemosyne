@@ -1,0 +1,37 @@
+# Reviewed cultural draft entries for promotion batch 028.
+# Shakespeare (0.76, B2-C1)
+I have not slept one wink
+age cannot wither
+all corners of the world
+as dead as a doornail
+as merry as the day is long
+as pure as the driven snow
+bag and baggage
+be cruel to be kind
+devil incarnate
+eaten me out of house and home
+fancy-free
+green-eyed jealousy
+in stitches
+kill with kindness
+knock knock who’s there
+# Classical allusions (0.74-0.76, B2-C1)
+Martial
+Orphic
+Tartarus
+# Aesop (0.74, B1-B2)
+the goose with the golden eggs
+the hare and the tortoise
+# KJV (0.68, B1-B2)
+chariot of fire
+cross to bear
+daily bread
+Daniel in the lions’ den
+fatted calf
+forty days and forty nights
+green pastures
+lilies of the field
+man shall not live by bread alone
+sackcloth and ashes
+the walls of Jericho
+tree of life
