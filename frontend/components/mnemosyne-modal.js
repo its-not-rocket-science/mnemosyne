@@ -1,4 +1,4 @@
-import { t, ti } from '../js/i18n.js'
+import { t, ti, currentUiLang } from '../js/i18n.js'
 
 // Field labels (lower-cased) whose values are romanized / transliterated text.
 // Used to assign data-layer="romanized" so the script-view toggle can hide them.
@@ -831,8 +831,10 @@ export class MnemosyneModal extends HTMLElement {
       modeNote.removeAttribute('hidden')
     }
 
-    // Explanation is always UI-language (English) — no lang/dir override.
-    sr.querySelector('.explanation').textContent = lesson.explanation
+    // Explanation is always UI-language — use pre-baked i18n translation when available.
+    const _uiLang = currentUiLang()
+    sr.querySelector('.explanation').textContent =
+      lesson.i18n_explanations?.[_uiLang] || lesson.explanation
 
     // Fields — definition list.
     // Labels from the backend identify whether each value is native script,
