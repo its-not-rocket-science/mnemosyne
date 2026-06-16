@@ -1,0 +1,37 @@
+# Reviewed cultural draft entries for promotion batch 031.
+# KJV (0.68, B1-B2) — final promotable pool
+Azazel
+Uriah letter
+a sling and a stone
+broad way
+build on rock
+burden is light
+captivity of Babylon
+cast seed on stony ground
+cleft in the rock
+good seed
+miserable comforters
+murmuring in the wilderness
+quail in the wilderness
+sepulchres
+tables of stone
+the bread of affliction
+the old serpent
+the sign of Jonah
+thorny path
+trumpets of Jericho
+water from the rock
+whited wall
+yoke is easy
+# KJV (0.68) — apostrophe
+Esau’s birthright
+Job’s boils
+Naboth’s vineyard
+Nathan’s parable
+Samson’s strength
+# KJV — likely surface conflicts (dry-run check)
+Jericho walls
+ashes and sackcloth
+mantle of Elijah
+millstone around the neck
+strait gate
