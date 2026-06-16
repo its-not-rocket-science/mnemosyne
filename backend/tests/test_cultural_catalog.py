@@ -276,7 +276,7 @@ def test_build_check_prints_concise_ok_not_report_table():
         text=True,
     )
 
-    assert result.stdout.strip() == "OK: validated 813 entries across 17 languages"
+    assert result.stdout.strip() == "OK: validated 845 entries across 17 languages"
     assert "language | entries" not in result.stdout
     assert result.stderr == ""
 
@@ -326,7 +326,7 @@ def test_write_out_dir_writes_files_and_prints_concise_summary(tmp_path):
     )
 
     assert {p.stem for p in tmp_path.glob("*.json")} == set(SUPPORTED_LANGUAGES)
-    assert result.stdout.strip() == f"Wrote 17 catalogue files to {tmp_path} (813 entries)"
+    assert result.stdout.strip() == f"Wrote 17 catalogue files to {tmp_path} (845 entries)"
     assert "language | entries" not in result.stdout
 
 
@@ -418,8 +418,8 @@ def test_generated_json_determinism_in_temp_dir(tmp_path):
     second_payloads = {
         p.name: p.read_text(encoding="utf-8") for p in sorted(second_dir.glob("*.json"))
     }
-    assert first.stdout.strip() == f"Wrote 17 catalogue files to {first_dir} (813 entries)"
-    assert second.stdout.strip() == f"Wrote 17 catalogue files to {second_dir} (813 entries)"
+    assert first.stdout.strip() == f"Wrote 17 catalogue files to {first_dir} (845 entries)"
+    assert second.stdout.strip() == f"Wrote 17 catalogue files to {second_dir} (845 entries)"
     assert first_payloads == second_payloads
 
 
