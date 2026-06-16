@@ -328,6 +328,8 @@ def validate_and_build(
         for field in (*LOCALISATION_KEY_FIELDS, *PUBLIC_PROVENANCE_FIELDS):
             if raw.get(field) not in (None, ""):
                 entry[field] = clean_text(raw[field])
+        if isinstance(raw.get("i18n_explanations"), dict) and raw["i18n_explanations"]:
+            entry["i18n_explanations"] = raw["i18n_explanations"]
         if emit_entry:
             by_lang[lang].append(
                 {
