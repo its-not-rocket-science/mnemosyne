@@ -16218,3 +16218,719 @@
   source_dataset: en_kjv_bible_phrases
   notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
     and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_a_solomon_s_judgement_53166aee
+  language: en
+  canonical_reference: a Solomon’s judgement
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a Solomon’s judgement
+  short_explanation: A wise judgement in a difficult dispute.
+  learner_level: C1
+  confidence: 0.84
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - Solomonic judgement
+    - Solomonic judgment
+    - a Solomon's judgement
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_solomon_s_judgement
+  source_work_key: mnemosyne.en.work.1_kings
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 1 Kings
+  source_author: King James Version
+  source_location: 1 Kings 3:16–28
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical phrasing influenced by the King James Version; exact wording should be checked.
+- id: en_classical_or_scriptural_allusion_parting_the_red_sea_9a537763
+  language: en
+  canonical_reference: parting the Red Sea
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - parting the Red Sea
+  short_explanation: Overcoming an apparently impossible obstacle.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.parting_the_red_sea
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_reap_what_you_sow_b2398f89
+  language: en
+  canonical_reference: reap what you sow
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - reap what you sow
+  short_explanation: You experience the consequences of your actions.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.reap_what_you_sow
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_sow_the_wind_and_reap_the_whirlwind_36fbb4eb
+  language: en
+  canonical_reference: sow the wind and reap the whirlwind
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - sow the wind and reap the whirlwind
+  short_explanation: Actions bring severe consequences.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - sow the wind & reap the whirlwind
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.sow_the_wind_and_reap_the_whirlwind
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_swords_into_ploughshares_91d6d1ec
+  language: en
+  canonical_reference: swords into ploughshares
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - swords into ploughshares
+  short_explanation: Turning from war to peace.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.swords_into_ploughshares
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_whited_sepulchre_c1fcf538
+  language: en
+  canonical_reference: whited sepulchre
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the whited sepulchre
+  short_explanation: Someone outwardly respectable but inwardly corrupt.
+  learner_level: C1
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - whited sepulcher
+    - whited sepulchre
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.whited_sepulchre
+  source_work_key: mnemosyne.en.work.gospel_of_matthew
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Gospel of Matthew
+  source_author: King James Version
+  source_location: Matthew 23:27
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: 'Biblical phrasing influenced by the King James Version; exact wording should be checked. Biblical/KJV-associated
+    expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be
+    checked. Needs source-location review. Merged duplicate/overlapping draft rows. Provenance candidates:
+    en_kjv_bible_phrases / Gospel of Matthew / King James Version / Matthew 23:27; en_kjv_bible_phrases
+    / King James Bible / Authorised Version / King James Version.; Confidence revised in v3 using provenance/attribution
+    cap; previous confidence 0.84.'
+- id: en_classical_or_scriptural_allusion_two_by_two_ecde5411
+  language: en
+  canonical_reference: two by two
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - two by two
+  short_explanation: In pairs, especially animals or people moving together.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.two_by_two
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_wash_one_s_hands_of_it_ee3e483e
+  language: en
+  canonical_reference: wash one’s hands of it
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - wash one’s hands of it
+  short_explanation: To refuse responsibility for something.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - wash one's hands of it
+    - wash your hands of it
+    - wash my hands of it
+    - wash his hands of it
+    - wash her hands of it
+    - wash their hands of it
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.wash_one_s_hands_of_it
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_widow_s_mite_dd5fd48b
+  language: en
+  canonical_reference: widow’s mite
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - widow’s mite
+  short_explanation: A small but sacrificial contribution.
+  learner_level: B2
+  confidence: 0.78
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - widow's mite
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.widow_s_mite
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: King James Bible / Authorised Version
+  source_author: King James Version
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_burning_bush_5600d7f1
+  language: en
+  canonical_reference: burning bush
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - burning bush
+  short_explanation: A revelatory sign or sudden divine calling.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.burning_bush
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Exodus
+  source_author: King James Version
+  source_location: Exodus 3:2-4
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_cain_and_abel_f3434ccc
+  language: en
+  canonical_reference: Cain and Abel
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Cain and Abel
+  short_explanation: Sibling rivalry, jealousy, or fratricidal conflict.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - Cain & Abel
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.cain_and_abel
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 4:1-16
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_garden_of_eden_f54b4439
+  language: en
+  canonical_reference: Garden of Eden
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Garden of Eden
+  short_explanation: A place of innocence, abundance, or lost perfection.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.garden_of_eden
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 2-3
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_goliath_0dbd8cc8
+  language: en
+  canonical_reference: Goliath
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Goliath
+  short_explanation: A huge or powerful opponent.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.goliath
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 1 Samuel
+  source_author: King James Version
+  source_location: 1 Samuel 17
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_passover_7fd72e75
+  language: en
+  canonical_reference: Passover
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Passover
+  short_explanation: Deliverance from danger or liberation from bondage.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.passover
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Exodus
+  source_author: King James Version
+  source_location: Exodus 12
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_sodom_and_gomorrah_63ad69df
+  language: en
+  canonical_reference: Sodom and Gomorrah
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Sodom and Gomorrah
+  short_explanation: A symbol of extreme wickedness or destruction.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - Sodom & Gomorrah
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.sodom_and_gomorrah
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 19
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_jacob_s_ladder_df30aa33
+  language: en
+  canonical_reference: Jacob’s ladder
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Jacob’s ladder
+  short_explanation: A link between earth and heaven or ascending steps.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - Jacob's ladder
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.jacob_s_ladder
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 28:12
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_manna_676b1ea0
+  language: en
+  canonical_reference: manna
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - manna
+  short_explanation: Unexpected provision or daily sustenance.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.manna
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Exodus
+  source_author: King James Version
+  source_location: Exodus 16
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_the_ten_commandments_5e6baeaa
+  language: en
+  canonical_reference: the ten commandments
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the ten commandments
+  short_explanation: Foundational moral rules or strict guiding principles.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - ten commandments
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_ten_commandments
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Exodus
+  source_author: King James Version
+  source_location: Exodus 20:1-17
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_the_tree_of_knowledge_e3d4f470
+  language: en
+  canonical_reference: the tree of knowledge
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the tree of knowledge
+  short_explanation: Forbidden knowledge or the loss of innocence.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - tree of knowledge
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_tree_of_knowledge
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 2:17; 3:6
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_crown_of_thorns_b1907c5b
+  language: en
+  canonical_reference: crown of thorns
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - crown of thorns
+  short_explanation: Humiliation, suffering, or martyr-like pain.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.crown_of_thorns
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Matthew
+  source_author: King James Version
+  source_location: Matthew 27:29
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_samson_and_delilah_830525a2
+  language: en
+  canonical_reference: Samson and Delilah
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Samson and Delilah
+  short_explanation: A story of strength undone by betrayal and weakness.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - Samson & Delilah
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.samson_and_delilah
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Judges
+  source_author: King James Version
+  source_location: Judges 16
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_literary_reference_all_our_yesterdays_e78e2737
+  language: en
+  canonical_reference: all our yesterdays
+  reference_type: literary_reference
+  surface_patterns:
+    - all our yesterdays
+  short_explanation: The accumulated past, often viewed bleakly.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.all_our_yesterdays
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act V Scene 5
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_crack_of_doom_908b1ba2
+  language: en
+  canonical_reference: crack of doom
+  reference_type: literary_reference
+  surface_patterns:
+    - crack of doom
+  short_explanation: The end of the world or final judgement.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.crack_of_doom
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act IV Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_in_a_pickle_c075b299
+  language: en
+  canonical_reference: in a pickle
+  reference_type: literary_reference
+  surface_patterns:
+    - in a pickle
+  short_explanation: In a difficult or awkward situation.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.in_a_pickle
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Tempest
+  source_author: William Shakespeare
+  source_location: Act V Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_forever_and_a_day_f7200d85
+  language: en
+  canonical_reference: forever and a day
+  reference_type: literary_reference
+  surface_patterns:
+    - forever and a day
+  short_explanation: For an extremely long time.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - forever & a day
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.forever_and_a_day
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: As You Like It
+  source_author: William Shakespeare
+  source_location: Act IV Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_prometheus_6404ef13
+  language: en
+  canonical_reference: Prometheus
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Prometheus
+  short_explanation: A rebel benefactor who brings dangerous knowledge.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.prometheus
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_phoenix_c5fadb7a
+  language: en
+  canonical_reference: Phoenix
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Phoenix
+  short_explanation: A person or thing reborn from destruction.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.phoenix
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_styx_90287698
+  language: en
+  canonical_reference: Styx
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Styx
+  short_explanation: A boundary associated with death or solemn oaths.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.styx
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_theseus_26f61dc6
+  language: en
+  canonical_reference: Theseus
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Theseus
+  short_explanation: A heroic monster-slayer or founder figure.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.theseus
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.

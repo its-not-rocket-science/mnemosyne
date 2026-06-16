@@ -259,6 +259,38 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_solomon_s_judgement_53166aee",
+      "canonical_reference": "a Solomon’s judgement",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.a_solomon_s_judgement",
+      "id": "en_classical_or_scriptural_allusion_a_solomon_s_judgement_53166aee",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A wise judgement in a difficult dispute.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "1 Kings 3:16–28",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "1 Kings",
+      "source_work_key": "mnemosyne.en.work.1_kings",
+      "surface_patterns": [
+        "a Solomon’s judgement",
+        "Solomonic judgement",
+        "Solomonic judgment",
+        "a Solomon's judgement"
+      ],
+      "variants": [
+        "Solomonic judgement",
+        "Solomonic judgment",
+        "a Solomon's judgement"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_a_thorn_in_the_flesh_491d462a",
       "canonical_reference": "a thorn in the flesh",
       "confidence": 0.78,
@@ -930,6 +962,30 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_burning_bush_5600d7f1",
+      "canonical_reference": "burning bush",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.burning_bush",
+      "id": "en_classical_or_scriptural_allusion_burning_bush_5600d7f1",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A revelatory sign or sudden divine calling.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Exodus 3:2-4",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Exodus",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "burning bush"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_by_the_skin_of_my_teeth_f27152d4",
       "canonical_reference": "by the skin of my teeth",
       "confidence": 0.84,
@@ -984,6 +1040,34 @@
       "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
       "surface_patterns": [
         "by their fruits"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_cain_and_abel_f3434ccc",
+      "canonical_reference": "Cain and Abel",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.cain_and_abel",
+      "id": "en_classical_or_scriptural_allusion_cain_and_abel_f3434ccc",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Sibling rivalry, jealousy, or fratricidal conflict.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 4:1-16",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "Cain and Abel",
+        "Cain & Abel"
+      ],
+      "variants": [
+        "Cain & Abel"
       ]
     },
     {
@@ -1215,6 +1299,30 @@
       ],
       "variants": [
         "cross the Rubicon"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_crown_of_thorns_b1907c5b",
+      "canonical_reference": "crown of thorns",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.crown_of_thorns",
+      "id": "en_classical_or_scriptural_allusion_crown_of_thorns_b1907c5b",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Humiliation, suffering, or martyr-like pain.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 27:29",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Matthew",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "crown of thorns"
       ]
     },
     {
@@ -1756,6 +1864,30 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_garden_of_eden_f54b4439",
+      "canonical_reference": "Garden of Eden",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.garden_of_eden",
+      "id": "en_classical_or_scriptural_allusion_garden_of_eden_f54b4439",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A place of innocence, abundance, or lost perfection.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 2-3",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "Garden of Eden"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_go_the_extra_mile_a306a71e",
       "canonical_reference": "go the extra mile",
       "confidence": 0.84,
@@ -1861,6 +1993,30 @@
       ],
       "variants": [
         "golden fleece"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_goliath_0dbd8cc8",
+      "canonical_reference": "Goliath",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.goliath",
+      "id": "en_classical_or_scriptural_allusion_goliath_0dbd8cc8",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A huge or powerful opponent.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "1 Samuel 17",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "1 Samuel",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "Goliath"
       ]
     },
     {
@@ -2212,6 +2368,34 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_jacob_s_ladder_df30aa33",
+      "canonical_reference": "Jacob’s ladder",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.jacob_s_ladder",
+      "id": "en_classical_or_scriptural_allusion_jacob_s_ladder_df30aa33",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A link between earth and heaven or ascending steps.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 28:12",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "Jacob’s ladder",
+        "Jacob's ladder"
+      ],
+      "variants": [
+        "Jacob's ladder"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_janus_faced_272e38fb",
       "canonical_reference": "Janus-faced",
       "confidence": 0.76,
@@ -2551,6 +2735,30 @@
       "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
       "surface_patterns": [
         "lick the dust"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_manna_676b1ea0",
+      "canonical_reference": "manna",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.manna",
+      "id": "en_classical_or_scriptural_allusion_manna_676b1ea0",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Unexpected provision or daily sustenance.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Exodus 16",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Exodus",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "manna"
       ]
     },
     {
@@ -3240,6 +3448,53 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_parting_the_red_sea_9a537763",
+      "canonical_reference": "parting the Red Sea",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.parting_the_red_sea",
+      "id": "en_classical_or_scriptural_allusion_parting_the_red_sea_9a537763",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Overcoming an apparently impossible obstacle.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "parting the Red Sea"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_passover_7fd72e75",
+      "canonical_reference": "Passover",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.passover",
+      "id": "en_classical_or_scriptural_allusion_passover_7fd72e75",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Deliverance from danger or liberation from bondage.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Exodus 12",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Exodus",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "Passover"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_pearls_before_swine_6285a748",
       "canonical_reference": "pearls before swine",
       "confidence": 0.84,
@@ -3265,6 +3520,28 @@
       ],
       "variants": [
         "cast pearls before swine"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_phoenix_c5fadb7a",
+      "canonical_reference": "Phoenix",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.phoenix",
+      "id": "en_classical_or_scriptural_allusion_phoenix_c5fadb7a",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A person or thing reborn from destruction.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Classical Greek and Roman literature / myth",
+      "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
+      "surface_patterns": [
+        "Phoenix"
       ]
     },
     {
@@ -3337,6 +3614,28 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_prometheus_6404ef13",
+      "canonical_reference": "Prometheus",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.prometheus",
+      "id": "en_classical_or_scriptural_allusion_prometheus_6404ef13",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A rebel benefactor who brings dangerous knowledge.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Classical Greek and Roman literature / myth",
+      "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
+      "surface_patterns": [
+        "Prometheus"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_prometheus_unbound_a7e739ba",
       "canonical_reference": "Prometheus unbound",
       "confidence": 0.76,
@@ -3382,6 +3681,29 @@
       ],
       "variants": [
         "a Pyrrhic victory"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_reap_what_you_sow_b2398f89",
+      "canonical_reference": "reap what you sow",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.reap_what_you_sow",
+      "id": "en_classical_or_scriptural_allusion_reap_what_you_sow_b2398f89",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "You experience the consequences of your actions.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "reap what you sow"
       ]
     },
     {
@@ -3433,6 +3755,34 @@
       ],
       "variants": [
         "the salt of the earth"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_samson_and_delilah_830525a2",
+      "canonical_reference": "Samson and Delilah",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.samson_and_delilah",
+      "id": "en_classical_or_scriptural_allusion_samson_and_delilah_830525a2",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A story of strength undone by betrayal and weakness.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Judges 16",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Judges",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "Samson and Delilah",
+        "Samson & Delilah"
+      ],
+      "variants": [
+        "Samson & Delilah"
       ]
     },
     {
@@ -3589,6 +3939,61 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_sodom_and_gomorrah_63ad69df",
+      "canonical_reference": "Sodom and Gomorrah",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.sodom_and_gomorrah",
+      "id": "en_classical_or_scriptural_allusion_sodom_and_gomorrah_63ad69df",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A symbol of extreme wickedness or destruction.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 19",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "Sodom and Gomorrah",
+        "Sodom & Gomorrah"
+      ],
+      "variants": [
+        "Sodom & Gomorrah"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_sow_the_wind_and_reap_the_whirlwind_36fbb4eb",
+      "canonical_reference": "sow the wind and reap the whirlwind",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.sow_the_wind_and_reap_the_whirlwind",
+      "id": "en_classical_or_scriptural_allusion_sow_the_wind_and_reap_the_whirlwind_36fbb4eb",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Actions bring severe consequences.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "sow the wind and reap the whirlwind",
+        "sow the wind & reap the whirlwind"
+      ],
+      "variants": [
+        "sow the wind & reap the whirlwind"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_still_small_voice_86499ce3",
       "canonical_reference": "still small voice",
       "confidence": 0.84,
@@ -3639,6 +4044,28 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_styx_90287698",
+      "canonical_reference": "Styx",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.styx",
+      "id": "en_classical_or_scriptural_allusion_styx_90287698",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A boundary associated with death or solemn oaths.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Classical Greek and Roman literature / myth",
+      "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
+      "surface_patterns": [
+        "Styx"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_suffer_fools_gladly_3f5b20f0",
       "canonical_reference": "suffer fools gladly",
       "confidence": 0.84,
@@ -3682,6 +4109,29 @@
       "source_work_key": "mnemosyne.en.work.tusculan_disputations",
       "surface_patterns": [
         "sword of Damocles"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_swords_into_ploughshares_91d6d1ec",
+      "canonical_reference": "swords into ploughshares",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.swords_into_ploughshares",
+      "id": "en_classical_or_scriptural_allusion_swords_into_ploughshares_91d6d1ec",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Turning from war to peace.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "swords into ploughshares"
       ]
     },
     {
@@ -4140,6 +4590,62 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_ten_commandments_5e6baeaa",
+      "canonical_reference": "the ten commandments",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.the_ten_commandments",
+      "id": "en_classical_or_scriptural_allusion_the_ten_commandments_5e6baeaa",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Foundational moral rules or strict guiding principles.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Exodus 20:1-17",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Exodus",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "the ten commandments",
+        "ten commandments"
+      ],
+      "variants": [
+        "ten commandments"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_tree_of_knowledge_e3d4f470",
+      "canonical_reference": "the tree of knowledge",
+      "confidence": 0.68,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.the_tree_of_knowledge",
+      "id": "en_classical_or_scriptural_allusion_the_tree_of_knowledge_e3d4f470",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Forbidden knowledge or the loss of innocence.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Genesis 2:17; 3:6",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Genesis",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "the tree of knowledge",
+        "tree of knowledge"
+      ],
+      "variants": [
+        "tree of knowledge"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_the_valley_of_the_shadow_of_death_b406fb6f",
       "canonical_reference": "the valley of the shadow of death",
       "confidence": 0.84,
@@ -4223,6 +4729,28 @@
       "variants": [
         "the handwriting is on the wall",
         "writing is on the wall"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_theseus_26f61dc6",
+      "canonical_reference": "Theseus",
+      "confidence": 0.74,
+      "explanation_key": "mnemosyne.en.explanation.classical_allusions.theseus",
+      "id": "en_classical_or_scriptural_allusion_theseus_26f61dc6",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A heroic monster-slayer or founder figure.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "en_classical_allusions",
+      "source_license": "public_domain",
+      "source_work": "Classical Greek and Roman literature / myth",
+      "source_work_key": "mnemosyne.en.work.classical_greek_and_roman_literature_myth",
+      "surface_patterns": [
+        "Theseus"
       ]
     },
     {
@@ -4327,6 +4855,29 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_two_by_two_ecde5411",
+      "canonical_reference": "two by two",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.two_by_two",
+      "id": "en_classical_or_scriptural_allusion_two_by_two_ecde5411",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "In pairs, especially animals or people moving together.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "two by two"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_vanity_of_vanities_7e42a88e",
       "canonical_reference": "vanity of vanities",
       "confidence": 0.84,
@@ -4351,6 +4902,43 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_wash_one_s_hands_of_it_ee3e483e",
+      "canonical_reference": "wash one’s hands of it",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.wash_one_s_hands_of_it",
+      "id": "en_classical_or_scriptural_allusion_wash_one_s_hands_of_it_ee3e483e",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "To refuse responsibility for something.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "wash one’s hands of it",
+        "wash one's hands of it",
+        "wash your hands of it",
+        "wash my hands of it",
+        "wash his hands of it",
+        "wash her hands of it",
+        "wash their hands of it"
+      ],
+      "variants": [
+        "wash one's hands of it",
+        "wash your hands of it",
+        "wash my hands of it",
+        "wash his hands of it",
+        "wash her hands of it",
+        "wash their hands of it"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_wheels_within_wheels_4b4cda6f",
       "canonical_reference": "wheels within wheels",
       "confidence": 0.84,
@@ -4372,6 +4960,63 @@
       "source_work_key": "mnemosyne.en.work.ezekiel",
       "surface_patterns": [
         "wheels within wheels"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_whited_sepulchre_c1fcf538",
+      "canonical_reference": "whited sepulchre",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.whited_sepulchre",
+      "id": "en_classical_or_scriptural_allusion_whited_sepulchre_c1fcf538",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Biblical phrasing influenced by the King James Version; exact wording should be checked. Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review. Merged duplicate/overlapping draft rows. Provenance candidates: en_kjv_bible_phrases / Gospel of Matthew / King James Version / Matthew 23:27; en_kjv_bible_phrases / King James Bible / Authorised Version / King James Version.; Confidence revised in v3 using provenance/attribution cap; previous confidence 0.84.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Someone outwardly respectable but inwardly corrupt.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_location": "Matthew 23:27",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "Gospel of Matthew",
+      "source_work_key": "mnemosyne.en.work.gospel_of_matthew",
+      "surface_patterns": [
+        "the whited sepulchre",
+        "whited sepulcher",
+        "whited sepulchre"
+      ],
+      "variants": [
+        "whited sepulcher",
+        "whited sepulchre"
+      ]
+    },
+    {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_widow_s_mite_dd5fd48b",
+      "canonical_reference": "widow’s mite",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.en.explanation.kjv_bible_phrases.widow_s_mite",
+      "id": "en_classical_or_scriptural_allusion_widow_s_mite_dd5fd48b",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion and wording should be checked. Needs source-location review.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A small but sacrificial contribution.",
+      "source_author": "King James Version",
+      "source_author_key": "mnemosyne.en.author.king_james_version",
+      "source_dataset": "en_kjv_bible_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/10",
+      "source_work": "King James Bible / Authorised Version",
+      "source_work_key": "mnemosyne.en.work.king_james_bible_authorised_version",
+      "surface_patterns": [
+        "widow’s mite",
+        "widow's mite"
+      ],
+      "variants": [
+        "widow's mite"
       ]
     },
     {
@@ -7351,6 +7996,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_all_our_yesterdays_e78e2737",
+      "canonical_reference": "all our yesterdays",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.all_our_yesterdays",
+      "id": "en_literary_reference_all_our_yesterdays_e78e2737",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "The accumulated past, often viewed bleakly.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act V Scene 5",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Macbeth",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "all our yesterdays"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_all_that_glitters_is_not_gold_abecec81",
       "canonical_reference": "all that glitters is not gold",
       "confidence": 0.78,
@@ -8356,6 +9025,30 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_crack_of_doom_908b1ba2",
+      "canonical_reference": "crack of doom",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.crack_of_doom",
+      "id": "en_literary_reference_crack_of_doom_908b1ba2",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "The end of the world or final judgement.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act IV Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "Macbeth",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "crack of doom"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_cruel_to_be_kind_049054f6",
       "canonical_reference": "cruel to be kind",
       "confidence": 0.78,
@@ -9054,6 +9747,34 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_forever_and_a_day_f7200d85",
+      "canonical_reference": "forever and a day",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.forever_and_a_day",
+      "id": "en_literary_reference_forever_and_a_day_f7200d85",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "For an extremely long time.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act IV Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "As You Like It",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "forever and a day",
+        "forever & a day"
+      ],
+      "variants": [
+        "forever & a day"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_foul_play_0dfcc611",
       "canonical_reference": "foul play",
       "confidence": 0.78,
@@ -9660,6 +10381,30 @@
       "source_work_key": "mnemosyne.en.work.the_merchant_of_venice",
       "surface_patterns": [
         "if you prick us, do we not bleed"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_in_a_pickle_c075b299",
+      "canonical_reference": "in a pickle",
+      "confidence": 0.76,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_phrases.in_a_pickle",
+      "id": "en_literary_reference_in_a_pickle_c075b299",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording should be reviewed. Needs source-location review.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "In a difficult or awkward situation.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "en_shakespeare_phrases",
+      "source_license": "public_domain",
+      "source_location": "Act V Scene 1",
+      "source_url": "https://www.gutenberg.org/ebooks/100",
+      "source_work": "The Tempest",
+      "source_work_key": "mnemosyne.en.work.works_of_william_shakespeare",
+      "surface_patterns": [
+        "in a pickle"
       ]
     },
     {
