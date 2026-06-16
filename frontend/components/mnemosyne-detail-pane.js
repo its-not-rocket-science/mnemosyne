@@ -653,6 +653,7 @@ export class MnemosyneDetailPane extends HTMLElement {
   // ── HTML fragment builders ──────────────────────────────────────────────────
 
   _htmlExplanationPanel(lesson, ld, matchedVariant, depthIdx = 2) {
+    const uiLang       = this.#config?.uiLang ?? 'en'
     const allFields    = (lesson.fields ?? [])
       .filter(f => !SUPPRESS_IN_EXPLANATION.has(f.label.toLowerCase()))
     const displayFields = depthIdx >= 1 ? allFields : []
@@ -710,7 +711,7 @@ export class MnemosyneDetailPane extends HTMLElement {
             ${matchTypeNote ? `<p class="pane__match-note">${esc(matchTypeNote)}</p>` : ''}
           </div>
         ` : ''}
-        <p class="pane__explanation">${esc(lesson.explanation || '')}</p>
+        <p class="pane__explanation">${esc(lesson.i18n_explanations?.[uiLang] || lesson.explanation || '')}</p>
         ${gramChipsHtml ? `<div class="pane__gram-chips">${gramChipsHtml}</div>` : ''}
         <div class="pane__translation-row" hidden>
           <p class="pane__translation-text"></p>
@@ -1901,6 +1902,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     const { lesson, uiLang } = this.#config
     const explanation = lesson.explanation
     if (!explanation || !uiLang || uiLang === 'en') return
+    if (lesson.i18n_explanations?.[uiLang]) return
     this.#explanationTranslationFetched = true
     const result = await this.#onTranslate(explanation, 'en', uiLang)
     if (!result?.text) return
