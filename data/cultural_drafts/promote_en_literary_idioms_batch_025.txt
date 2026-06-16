@@ -1,0 +1,32 @@
+# Reviewed cultural draft entries for promotion batch 025.
+# Shakespeare (0.76-0.78, B2-C1)
+what’s in a name
+what’s past is prologue
+wherefore art thou Romeo
+a rose by any other name
+a fool’s paradise
+a ministering angel
+a Daniel come to judgement
+a countenance more in sorrow than in anger
+# Classical allusions (0.74, C1)
+Hydra
+Odysseus
+Orpheus
+# Aesop (0.68-0.74, B1-C1)
+look before you leap
+birds of a feather flock together
+united we stand, divided we fall
+familiarity breeds contempt
+the stag at the pool
+the vain jackdaw
+# KJV (0.78, B2-C1)
+no peace for the wicked
+original sin
+road to Damascus
+golden calf
+thirty pieces of silver
+wilderness years
+wisdom of Solomon
+pillar of salt
+belly of the whale
+the quick and the dead
