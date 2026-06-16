@@ -1,0 +1,36 @@
+# Reviewed cultural draft entries for promotion batch 027.
+# Shakespeare (0.76, B2-C1)
+a horse, a horse, my kingdom for a horse
+be not afraid of greatness
+come what may
+elbow room
+fight fire with fire
+flesh and blood
+full circle
+heart of hearts
+high time
+it was Greek to me
+lie low
+# Classical allusions (0.74-0.76, B2-C1)
+Argus-eyed
+Daedalian
+Jason
+Nemean lion
+Pandora’s jar
+Paris judgement
+Penelope
+Phaeton
+Ulysses
+Venus
+# Aesop (0.68-0.74, B1-B2)
+necessity is the mother of invention
+# KJV (0.68, B1-B2)
+a still small voice
+fallen angel
+handwriting on the wall
+the golden rule
+east of Eden
+the flood
+Jonah and the whale
+Nebuchadnezzar
+Queen of Sheba

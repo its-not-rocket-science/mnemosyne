@@ -16934,3 +16934,736 @@
   source_dataset: en_classical_allusions
   notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
     review.
+- id: en_literary_reference_a_horse_a_horse_my_kingdom_for_a_horse_c53be6a9
+  language: en
+  canonical_reference: a horse, a horse, my kingdom for a horse
+  reference_type: literary_reference
+  surface_patterns:
+    - a horse, a horse, my kingdom for a horse
+  short_explanation: A desperate plea for the one thing needed.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.a_horse_a_horse_my_kingdom_for_a_horse
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Richard III
+  source_author: William Shakespeare
+  source_location: Act V Scene 4
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_be_not_afraid_of_greatness_b517b6f1
+  language: en
+  canonical_reference: be not afraid of greatness
+  reference_type: literary_reference
+  surface_patterns:
+    - be not afraid of greatness
+  short_explanation: Encouragement to accept ambition or opportunity.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.be_not_afraid_of_greatness
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Twelfth Night
+  source_author: William Shakespeare
+  source_location: Act II Scene 5
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_come_what_may_aa866dd4
+  language: en
+  canonical_reference: come what may
+  reference_type: literary_reference
+  surface_patterns:
+    - come what may
+  short_explanation: Whatever happens.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.come_what_may
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Macbeth
+  source_author: William Shakespeare
+  source_location: Act I Scene 3
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_elbow_room_f9789776
+  language: en
+  canonical_reference: elbow room
+  reference_type: literary_reference
+  surface_patterns:
+    - elbow room
+  short_explanation: Space or freedom to act.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.elbow_room
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: King John
+  source_author: William Shakespeare
+  source_location: Act V Scene 7
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_fight_fire_with_fire_391de60d
+  language: en
+  canonical_reference: fight fire with fire
+  reference_type: literary_reference
+  surface_patterns:
+    - fight fire with fire
+  short_explanation: Use the same tactics as an opponent.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.fight_fire_with_fire
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: King John
+  source_author: William Shakespeare
+  source_location: Act V Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_flesh_and_blood_a46fbf4a
+  language: en
+  canonical_reference: flesh and blood
+  reference_type: literary_reference
+  surface_patterns:
+    - flesh and blood
+  short_explanation: Human nature, family, or bodily existence.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  variants:
+    - flesh & blood
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.flesh_and_blood
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act IV Scene 7
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_full_circle_a422db91
+  language: en
+  canonical_reference: full circle
+  reference_type: literary_reference
+  surface_patterns:
+    - full circle
+  short_explanation: Back to the starting point after a sequence of events.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.full_circle
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: King Lear
+  source_author: William Shakespeare
+  source_location: Act V Scene 3
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_heart_of_hearts_59efbfd8
+  language: en
+  canonical_reference: heart of hearts
+  reference_type: literary_reference
+  surface_patterns:
+    - heart of hearts
+  short_explanation: A person’s deepest feelings or convictions.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.heart_of_hearts
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Hamlet
+  source_author: William Shakespeare
+  source_location: Act III Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_high_time_848a1657
+  language: en
+  canonical_reference: high time
+  reference_type: literary_reference
+  surface_patterns:
+    - high time
+  short_explanation: The right or overdue time for something.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.high_time
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Comedy of Errors
+  source_author: William Shakespeare
+  source_location: Act III Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_it_was_greek_to_me_11db11c8
+  language: en
+  canonical_reference: it was Greek to me
+  reference_type: literary_reference
+  surface_patterns:
+    - it was Greek to me
+  short_explanation: It was completely unintelligible to me.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.it_was_greek_to_me
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Julius Caesar
+  source_author: William Shakespeare
+  source_location: Act I Scene 2
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_literary_reference_lie_low_5b01d0ac
+  language: en
+  canonical_reference: lie low
+  reference_type: literary_reference
+  surface_patterns:
+    - lie low
+  short_explanation: Keep hidden or avoid attention.
+  learner_level: C1
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_phrases.lie_low
+  source_work_key: mnemosyne.en.work.works_of_william_shakespeare
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Much Ado About Nothing
+  source_author: William Shakespeare
+  source_location: Act V Scene 1
+  source_url: https://www.gutenberg.org/ebooks/100
+  source_license: public_domain
+  source_dataset: en_shakespeare_phrases
+  notes: Commonly attributed to or strongly associated with Shakespeare; attribution and exact wording
+    should be reviewed. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_argus_eyed_ff4463d3
+  language: en
+  canonical_reference: Argus-eyed
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Argus-eyed
+  short_explanation: Watchful and observant.
+  learner_level: C2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.argus_eyed
+  source_work_key: mnemosyne.en.work.argus_panoptes_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Argus Panoptes myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.82.
+- id: en_classical_or_scriptural_allusion_daedalian_03c08568
+  language: en
+  canonical_reference: Daedalian
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Daedalian
+  short_explanation: Ingenious or maze-like.
+  learner_level: C2
+  confidence: 0.76
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.daedalian
+  source_work_key: mnemosyne.en.work.daedalus_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Daedalus myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Classical allusion; English surface form is later conventional usage.; Confidence revised in
+    v3 using provenance/attribution cap; previous confidence 0.82.
+- id: en_classical_or_scriptural_allusion_jason_2825d5aa
+  language: en
+  canonical_reference: Jason
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Jason
+  short_explanation: A questing hero, often morally ambiguous.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.jason
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_nemean_lion_3dbf3e06
+  language: en
+  canonical_reference: Nemean lion
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Nemean lion
+  short_explanation: A formidable first challenge.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.nemean_lion
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_pandora_s_jar_0c1282f4
+  language: en
+  canonical_reference: Pandora’s jar
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Pandora’s jar
+  short_explanation: A source of unleashed troubles.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  variants:
+    - Pandora's jar
+  explanation_key: mnemosyne.en.explanation.classical_allusions.pandora_s_jar
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_paris_judgement_b293164b
+  language: en
+  canonical_reference: Paris judgement
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Paris judgement
+  short_explanation: A choice that triggers rivalry or disaster.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.paris_judgement
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_penelope_94198808
+  language: en
+  canonical_reference: Penelope
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Penelope
+  short_explanation: A faithful spouse or patient waiter.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.penelope
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_phaeton_6d85c1f8
+  language: en
+  canonical_reference: Phaeton
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Phaeton
+  short_explanation: A reckless driver or overreacher.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.phaeton
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_ulysses_4061fa59
+  language: en
+  canonical_reference: Ulysses
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Ulysses
+  short_explanation: A wandering, resourceful hero.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.ulysses
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_classical_or_scriptural_allusion_venus_85c24c41
+  language: en
+  canonical_reference: Venus
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Venus
+  short_explanation: Beauty or love as a classical figure.
+  learner_level: C1
+  confidence: 0.74
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions.venus
+  source_work_key: mnemosyne.en.work.classical_greek_and_roman_literature_myth
+  source_author_key: mnemosyne.en.author.classical_tradition
+  source_work: Classical Greek and Roman literature / myth
+  source_author: Classical tradition
+  source_license: public_domain
+  source_dataset: en_classical_allusions
+  notes: Expanded Mnemosyne candidate; source attribution and wording should be reviewed. Needs source-location
+    review.
+- id: en_proverb_tradition_necessity_is_the_mother_of_invention_51bdca34
+  language: en
+  canonical_reference: necessity is the mother of invention
+  reference_type: proverb_tradition
+  surface_patterns:
+    - necessity is the mother of invention
+  short_explanation: Need encourages creative solutions.
+  learner_level: B2
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: proverbial
+  explanation_key: mnemosyne.en.explanation.aesop_fable_phrases.necessity_is_the_mother_of_invention
+  source_work_key: mnemosyne.en.work.aesop_tradition
+  source_author_key: mnemosyne.en.author.aesop_tradition
+  source_work: Aesop tradition
+  source_author: Aesop tradition
+  source_url: https://www.gutenberg.org/ebooks/11339
+  source_license: public_domain
+  source_dataset: en_aesop_fable_phrases
+  notes: Fable-tradition expression; not tied to one fixed English text.; Source URL added by v3 normalisation
+    as a stable public-domain reference for review.
+- id: en_classical_or_scriptural_allusion_a_still_small_voice_212db74c
+  language: en
+  canonical_reference: a still small voice
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - a still small voice
+  short_explanation: A quiet inner prompting or gentle moral guidance.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.a_still_small_voice
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 1 Kings
+  source_author: King James Version
+  source_location: 1 Kings 19:12
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_fallen_angel_ab817a2f
+  language: en
+  canonical_reference: fallen angel
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - fallen angel
+  short_explanation: A once-admired person who has morally fallen.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.fallen_angel
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Isaiah
+  source_author: King James Version
+  source_location: Isaiah 14:12
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_handwriting_on_the_wall_6868ef41
+  language: en
+  canonical_reference: handwriting on the wall
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - handwriting on the wall
+  short_explanation: A warning sign that failure or judgement is near.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.handwriting_on_the_wall
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Daniel
+  source_author: King James Version
+  source_location: Daniel 5:5-31
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_the_golden_rule_9ef9abb0
+  language: en
+  canonical_reference: the golden rule
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the golden rule
+  short_explanation: Treat others as you would want to be treated.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - golden rule
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_golden_rule
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Matthew
+  source_author: King James Version
+  source_location: Matthew 7:12
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_east_of_eden_0e24ff40
+  language: en
+  canonical_reference: east of Eden
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - east of Eden
+  short_explanation: A state of exile, alienation, or life after innocence.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.east_of_eden
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 4:16
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_the_flood_0d0d201f
+  language: en
+  canonical_reference: the flood
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - the flood
+  short_explanation: A catastrophic deluge or overwhelming disaster.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - flood
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.the_flood
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Genesis
+  source_author: King James Version
+  source_location: Genesis 6-9
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_jonah_and_the_whale_a05331ab
+  language: en
+  canonical_reference: Jonah and the whale
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Jonah and the whale
+  short_explanation: A person swallowed by trouble and later delivered.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  variants:
+    - Jonah & the whale
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.jonah_and_the_whale
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Jonah
+  source_author: King James Version
+  source_location: Jonah 1:17
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_nebuchadnezzar_72edb255
+  language: en
+  canonical_reference: Nebuchadnezzar
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Nebuchadnezzar
+  short_explanation: A proud ruler humbled by madness or judgement.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.nebuchadnezzar
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: Daniel
+  source_author: King James Version
+  source_location: Daniel 4
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
+- id: en_classical_or_scriptural_allusion_queen_of_sheba_8b7d61a2
+  language: en
+  canonical_reference: Queen of Sheba
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+    - Queen of Sheba
+  short_explanation: A wealthy or admiring visitor drawn by wisdom or splendour.
+  learner_level: C1
+  confidence: 0.68
+  review_status: reviewed
+  reviewed_by: paul_schleifer
+  reviewed_at: '2026-06-16'
+  register: religious
+  explanation_key: mnemosyne.en.explanation.kjv_bible_phrases.queen_of_sheba
+  source_work_key: mnemosyne.en.work.king_james_bible_authorised_version
+  source_author_key: mnemosyne.en.author.king_james_version
+  source_work: 1 Kings
+  source_author: King James Version
+  source_location: 1 Kings 10:1-13
+  source_url: https://www.gutenberg.org/ebooks/10
+  source_license: public_domain
+  source_dataset: en_kjv_bible_phrases
+  notes: Biblical/KJV-associated expression; included for expanded Mnemosyne review. Exact Crystal inclusion
+    and wording should be checked. Needs source-location review.
