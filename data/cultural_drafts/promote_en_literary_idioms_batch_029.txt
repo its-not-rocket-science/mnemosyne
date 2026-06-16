@@ -1,0 +1,38 @@
+# Reviewed cultural draft entries for promotion batch 029.
+# Shakespeare (0.72-0.76, B2-C1)
+beast with two backs
+best foot forward
+better three hours too soon
+catch a cold
+clothes make the man
+conscience does make cowards
+dead as a doornail
+hair stand on end
+in a better world than this
+in the twinkling of an eye
+make your hair stand on end
+# Classical allusions (0.72, B2-C1)
+Venereal
+# Aesop (0.74, B1-B2)
+the mouse and the lion
+# KJV (0.68, B1-B2)
+Absalom
+Ahab
+a millstone round one’s neck
+a mess of pottage
+blessed are the peacemakers
+bread of life
+brimstone
+cup runneth over
+dry bones
+fall on stony ground
+feet of iron and clay
+fiery furnace
+house built on sand
+jawbone of an ass
+land of Nod
+pillar of fire
+poor in spirit
+still waters
+the serpent in the garden
+wrestle with an angel
