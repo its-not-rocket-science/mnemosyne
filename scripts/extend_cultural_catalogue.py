@@ -154,7 +154,11 @@ REFERENCE_TYPES = {
     "literary_reference", "classical_or_scriptural_allusion",
     "proverb_tradition", "cultural_reference",
 }
-REGISTERS = {"literary", "religious", "proverbial", "classical", "formal", "neutral"}
+REGISTERS = {"common", "literary", "formal", "informal", "religious", "classical", "proverbial"}
+KNOWN_SOURCE_LICENSES = {
+    "public_domain", "not_required", "CC0", "CC0-1.0", "CC-BY-4.0",
+    "copyright_or_rights_review_needed", "common_usage_short_expression",
+}
 
 FIELD_ORDER = [
     "id", "language", "canonical_reference", "reference_type",
@@ -308,12 +312,16 @@ Each object:
   "short_explanation"    -- 1-2 sentences English: meaning and cultural significance
   "learner_level"        -- "A1"|"A2"|"B1"|"B2"|"C1"|"C2"
   "confidence"           -- float 0.60-0.90
-  "register"             -- "literary"|"religious"|"proverbial"|"classical"|"formal"|"neutral"
+  "register"             -- "common"|"literary"|"religious"|"proverbial"|"classical"|"formal"|"informal"
   "source_work"          -- title in original language ("Various"/"Oral tradition" if unknown)
   "source_author"        -- author or tradition
   "source_location"      -- location (book/act/verse) or null
   "source_url"           -- URL to free text (Gutenberg/Perseus/Wikisource) or null
-  "source_license"       -- "public_domain" for >100yr old works; else SPDX id
+  "source_license"       -- one of: "public_domain" (>100yr old works),
+                            "CC0"|"CC0-1.0", "CC-BY-4.0", "not_required" (common
+                            short expression, no quoted text), or
+                            "copyright_or_rights_review_needed" (modern in-copyright
+                            work, or any uncertainty) -- use no other value
   "source_dataset_tag"   -- snake_case batch tag e.g. "es_quijote_phrases"
   "variants"             -- optional alternate surface forms or omit
 
@@ -531,7 +539,7 @@ def _run_promote_once(
     with tempfile.NamedTemporaryFile(
         mode="w", suffix=".txt", delete=False, encoding="utf-8"
     ) as f:
-        f.write("\n".join(approved) + "\n")
+        f.write("\n".join(dict.fromkeys(approved)) + "\n")
         allowlist = f.name
     try:
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
@@ -617,9 +625,12 @@ def build_entry(language: str, enriched: dict,
     rt  = enriched.get("reference_type", "cultural_reference")
     if rt not in REFERENCE_TYPES:
         rt = "cultural_reference"
-    reg = enriched.get("register", "neutral")
+    reg = enriched.get("register", "common")
     if reg not in REGISTERS:
-        reg = "neutral"
+        reg = "common"
+    lic = enriched.get("source_license", "public_domain")
+    if lic not in KNOWN_SOURCE_LICENSES:
+        lic = "copyright_or_rights_review_needed"
 
     conf = float(enriched.get("confidence", 0.68))
     if review and review.get("revised_confidence") is not None:
@@ -649,7 +660,7 @@ def build_entry(language: str, enriched: dict,
         "source_author_key":   make_key("author", language, enriched.get("source_author") or "unknown"),
         "source_work":         enriched.get("source_work", ""),
         "source_author":       enriched.get("source_author", ""),
-        "source_license":      enriched.get("source_license", "public_domain"),
+        "source_license":      lic,
         "source_dataset":      dataset_tag,
         "notes": "AI-generated; verify attribution and surface patterns before promotion." + review_note,
     }
@@ -831,7 +842,9 @@ def run(
     # ---- Side files from review ------------------------------------------
     approved_crs: list[str] = []
     if do_review and review_map:
-        approved_crs = [r["canonical_reference"] for r in state["reviewed"] if r.get("verdict") == "approve"]
+        approved_crs = list(dict.fromkeys(
+            r["canonical_reference"] for r in state["reviewed"] if r.get("verdict") == "approve"
+        ))
         flagged = [e for e in entries if review_map.get(e["canonical_reference"], {}).get("verdict") == "flag"]
         rejected = [{"canonical_reference": r["canonical_reference"], "reason": r.get("reason", "")}
                     for r in state["reviewed"] if r.get("verdict") == "reject"]

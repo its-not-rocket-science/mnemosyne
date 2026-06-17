@@ -276,7 +276,7 @@ def test_build_check_prints_concise_ok_not_report_table():
         text=True,
     )
 
-    assert result.stdout.strip() == "OK: validated 1378 entries across 17 languages"
+    assert result.stdout.strip() == "OK: validated 2219 entries across 17 languages"
     assert "language | entries" not in result.stdout
     assert result.stderr == ""
 
@@ -290,7 +290,7 @@ def test_build_check_language_scope_reports_only_requested_language():
         text=True,
     )
 
-    assert result.stdout.strip() == "OK: validated 10 entries across 1 language (fi)"
+    assert result.stdout.strip() == "OK: validated 133 entries across 1 language (fi)"
     assert "language | entries" not in result.stdout
 
 
@@ -326,7 +326,7 @@ def test_write_out_dir_writes_files_and_prints_concise_summary(tmp_path):
     )
 
     assert {p.stem for p in tmp_path.glob("*.json")} == set(SUPPORTED_LANGUAGES)
-    assert result.stdout.strip() == f"Wrote 17 catalogue files to {tmp_path} (1378 entries)"
+    assert result.stdout.strip() == f"Wrote 17 catalogue files to {tmp_path} (2219 entries)"
     assert "language | entries" not in result.stdout
 
 
@@ -348,7 +348,7 @@ def test_language_write_targets_only_requested_language(tmp_path):
     )
 
     assert {p.name for p in tmp_path.glob("*.json")} == {"fi.json"}
-    assert result.stdout.strip() == f"Wrote 1 catalogue file to {tmp_path} (10 entries)"
+    assert result.stdout.strip() == f"Wrote 1 catalogue file to {tmp_path} (133 entries)"
 
 
 def test_build_invalid_seed_exits_non_zero(tmp_path):
@@ -418,8 +418,8 @@ def test_generated_json_determinism_in_temp_dir(tmp_path):
     second_payloads = {
         p.name: p.read_text(encoding="utf-8") for p in sorted(second_dir.glob("*.json"))
     }
-    assert first.stdout.strip() == f"Wrote 17 catalogue files to {first_dir} (1378 entries)"
-    assert second.stdout.strip() == f"Wrote 17 catalogue files to {second_dir} (1378 entries)"
+    assert first.stdout.strip() == f"Wrote 17 catalogue files to {first_dir} (2219 entries)"
+    assert second.stdout.strip() == f"Wrote 17 catalogue files to {second_dir} (2219 entries)"
     assert first_payloads == second_payloads
 
 
