@@ -43,6 +43,7 @@ PROMOTED_FIELD_ORDER = (
     "reference_type",
     "surface_patterns",
     "short_explanation",
+    "i18n_explanations",
     "learner_level",
     "confidence",
     "review_status",

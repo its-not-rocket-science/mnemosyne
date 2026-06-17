@@ -524,17 +524,18 @@ def review_batch(
 # Phase 5: auto-promote
 # ---------------------------------------------------------------------------
 
-def auto_promote(
+def _run_promote_once(
     draft_path: Path, seed_path: Path, approved: list[str],
     reviewed_by: str, promote_script: Path,
-) -> tuple[int, int]:
+) -> subprocess.CompletedProcess:
     with tempfile.NamedTemporaryFile(
         mode="w", suffix=".txt", delete=False, encoding="utf-8"
     ) as f:
         f.write("\n".join(approved) + "\n")
         allowlist = f.name
     try:
-        result = subprocess.run(
+        env = dict(os.environ, PYTHONIOENCODING="utf-8")
+        return subprocess.run(
             [sys.executable, str(promote_script),
              "--draft", str(draft_path), "--seed", str(seed_path),
              "--allowlist", allowlist,
@@ -542,21 +543,68 @@ def auto_promote(
              "--reviewed-at", date.today().isoformat(),
              "--skip-existing", "--allow-missing-source-location",
              "--min-confidence", "0.60"],
-            capture_output=True, text=True, encoding="utf-8",
+            capture_output=True, text=True, encoding="utf-8", errors="replace",
+            env=env,
         )
-        promoted = refused = 0
-        for line in (result.stdout + result.stderr).splitlines():
-            if "promoted:" in line:
-                try: promoted = int(line.split(":")[1].strip())
-                except ValueError: pass
-            elif "refused:" in line:
-                try: refused = int(line.split(":")[1].strip())
-                except ValueError: pass
-        if result.returncode != 0 and not promoted:
-            print(result.stderr.strip(), file=sys.stderr)
-        return promoted, refused
     finally:
         os.unlink(allowlist)
+
+
+def _parse_refused_names(output: str, candidates: list[str]) -> list[str]:
+    """Promotion output lists refused entries as '- {canonical_reference}: {reason}'.
+    canonical_reference itself may contain ': ', so match against known
+    candidate strings (longest first) rather than splitting on the colon."""
+    by_length = sorted(set(candidates), key=len, reverse=True)
+    refused: list[str] = []
+    in_section = False
+    for line in output.splitlines():
+        stripped = line.strip()
+        if stripped == "refused_entries:":
+            in_section = True
+            continue
+        if stripped.endswith("_entries:"):
+            in_section = False
+            continue
+        if in_section and stripped.startswith("- "):
+            content = stripped[2:]
+            match = next((c for c in by_length if content.startswith(c)), None)
+            if match:
+                refused.append(match)
+    return refused
+
+
+def auto_promote(
+    draft_path: Path, seed_path: Path, approved: list[str],
+    reviewed_by: str, promote_script: Path, max_retries: int = 10,
+) -> tuple[int, int]:
+    """promote_cultural_drafts.py aborts the *entire* batch (writes nothing)
+    if any single entry is refused — so retry with refused entries stripped
+    until the batch is clean or nothing is left to promote."""
+    remaining = list(approved)
+    total_promoted = 0
+    last_refused_count = 0
+
+    for _ in range(max_retries):
+        if not remaining:
+            break
+        result = _run_promote_once(draft_path, seed_path, remaining, reviewed_by, promote_script)
+        output = (result.stdout or "") + (result.stderr or "")
+
+        if result.returncode == 0:
+            for line in output.splitlines():
+                if "promoted:" in line:
+                    try: total_promoted += int(line.split(":")[1].strip())
+                    except ValueError: pass
+            return total_promoted, last_refused_count
+
+        refused_names = _parse_refused_names(output, remaining)
+        if not refused_names:
+            print(output.strip(), file=sys.stderr)
+            return total_promoted, last_refused_count
+        last_refused_count += len(refused_names)
+        remaining = [c for c in remaining if c not in set(refused_names)]
+
+    return total_promoted, last_refused_count
 
 
 # ---------------------------------------------------------------------------
@@ -684,9 +732,12 @@ def run(
     if do_review:  print(f"Review model : {review_model}")
     print(f"Output       : {output}\n")
 
-    if need == 0:
+    pending_progress = resume and _progress_path(output).exists()
+    if need == 0 and not pending_progress:
         print("Target already met -- nothing to generate.")
         return
+    if need == 0:
+        print("Target already met for generation -- resuming to finish remaining phases (i18n/review/promote).")
 
     client = make_client()
     state  = load_progress(output) if resume else {
@@ -699,7 +750,7 @@ def run(
     reviewed_refs  = {r["canonical_reference"] for r in state.get("reviewed", [])}
     to_enrich_pool = [c for c in state["discovered"]
                       if c not in enriched_refs and c not in existing]
-    total_needed   = need - len(state["enriched"])
+    total_needed   = max(0, need - len(state["enriched"]))
 
     # ---- Phase 1: discover ------------------------------------------------
     if total_needed > 0 and len(to_enrich_pool) < total_needed:
