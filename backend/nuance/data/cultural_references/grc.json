@@ -1,6 +1,95 @@
 {
   "entries": [
     {
+      "canonical_form": "grc:classical:grc_classical_or_scriptural_allusion_πάρισ_καὶ_μήλον_ba7c94fd",
+      "canonical_reference": "Πάρις καὶ μήλον",
+      "confidence": 0.83,
+      "explanation_key": "mnemosyne.grc.explanation.gr_mythological_allusions_πάρισ_καὶ_μήλον",
+      "i18n_explanations": {
+        "ar": "يشير إلى حكم باريس الذي منح التفاحة الذهبية لأفروديت، مما أدى إلى حرب طروادة؛ ويرمز إلى الخيارات الصعبة وبداية النزاعات.",
+        "de": "Bezieht sich auf das Urteil des Paris, der den goldenen Apfel an Aphrodite vergab und so den Trojanischen Krieg auslöste; es steht für schwierige Entscheidungen und den Ursprung von Konflikten.",
+        "en": "Alludes to the Judgment of Paris, who awarded the golden apple to Aphrodite, leading to the Trojan War; it symbolizes difficult choices and the origins of conflict.",
+        "es": "Alude al Juicio de Paris, quien entregó la manzana de oro a Afrodita, desencadenando la Guerra de Troya; simboliza elecciones difíciles y el origen de los conflictos.",
+        "fr": "Fait allusion au Jugement de Pâris, qui donna la pomme d’or à Aphrodite, déclenchant la guerre de Troie ; il symbolise les choix difficiles et l’origine des conflits.",
+        "he": "רומז למשפט פאריס, שהעניק את התפוח הזהוב לאפרודיטה וגרם למלחמת טרויה; מסמל בחירות קשות ומקורות לסכסוך.",
+        "it": "Allude al giudizio di Paride, che diede la mela d’oro ad Afrodite, scatenando la guerra di Troia; simboleggia scelte difficili e l’origine dei conflitti.",
+        "ja": "パリスの審判で金の林檎をアフロディーテに与えたことがトロイア戦争の発端となったことに由来し、困難な選択や争いの起源を象徴します。",
+        "pt": "Alude ao Julgamento de Páris, que entregou a maçã dourada a Afrodite, levando à Guerra de Troia; simboliza escolhas difíceis e a origem de conflitos.",
+        "ru": "Отсылает к суду Париса, который вручил золотое яблоко Афродите, что привело к Троянской войне; символизирует трудный выбор и истоки конфликтов.",
+        "zh": "指帕里斯将金苹果赠予阿佛洛狄忒，引发特洛伊战争，象征艰难抉择与冲突的起源。"
+      },
+      "id": "grc_classical_or_scriptural_allusion_πάρισ_καὶ_μήλον_ba7c94fd",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The allusion to the Judgment of Paris and the golden apple is accurate, the surface patterns are correct, and the attribution to the Cypria (Epic Cycle) is appropriate given the myth's transmission.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Alludes to the Judgment of Paris, who awarded the golden apple to Aphrodite, leading to the Trojan War; it symbolizes difficult choices and the origins of conflict.",
+      "source_author": "Κύκλος Ἐπικός (Epic Cycle)",
+      "source_author_key": "mnemosyne.grc.author.κύκλοσ_ἐπικόσ_epic_cycle",
+      "source_dataset": "gr_mythological_allusions",
+      "source_license": "public_domain",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Apollod.+Epit.+3.9",
+      "source_work": "Κύπρια (fragments)",
+      "source_work_key": "mnemosyne.grc.work.κύπρια_fragments",
+      "surface_patterns": [
+        "Πάρις καὶ μήλον",
+        "μήλον τῆς Ἔριδος",
+        "Πάριδος κρίσις",
+        "κρίσις τοῦ Πάριδος",
+        "μήλον τῆς καλλονῆς"
+      ],
+      "variants": [
+        "κρίσις τοῦ Πάριδος",
+        "μήλον τῆς καλλονῆς"
+      ]
+    },
+    {
+      "canonical_form": "grc:classical:grc_classical_or_scriptural_allusion_πανδώρα_καὶ_κιβωτόσ_3f1add78",
+      "canonical_reference": "Πανδώρα καὶ κιβωτός",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.grc.explanation.gr_mythological_allusions_πανδώρα_καὶ_κιβωτόσ",
+      "i18n_explanations": {
+        "ar": "يشير إلى صندوق باندورا (في الواقع جرة)، الذي أطلق كل الشرور في العالم، ويرمز إلى العواقب غير المتوقعة أو أصل المتاعب.",
+        "de": "Bezieht sich auf die Büchse der Pandora (eigentlich eine Urne), die alles Übel in die Welt entließ, als Symbol für unvorhergesehene Folgen oder den Ursprung von Problemen.",
+        "en": "Refers to Pandora's box (actually a jar), which released all evils into the world, symbolizing unforeseen consequences or the origin of troubles.",
+        "es": "Hace referencia a la caja de Pandora (en realidad un ánfora), que liberó todos los males al mundo, simbolizando consecuencias imprevistas o el origen de los problemas.",
+        "fr": "Fait référence à la boîte de Pandore (en réalité une jarre), qui a libéré tous les maux dans le monde, symbolisant les conséquences imprévues ou l’origine des ennuis.",
+        "he": "מתייחס לקופסת פנדורה (למעשה כד), ששחררה את כל הרעות לעולם, כסמל לתוצאות בלתי צפויות או למקור הצרות.",
+        "it": "Si riferisce al vaso di Pandora (in realtà un’anfora), che liberò tutti i mali nel mondo, simbolo di conseguenze impreviste o dell’origine dei guai.",
+        "ja": "パンドラの箱（実際は壺）からあらゆる災厄が世に放たれたことに由来し、予期せぬ結果や災いの起源を象徴します。",
+        "pt": "Refere-se à caixa de Pandora (na verdade, um jarro), que liberou todos os males no mundo, simbolizando consequências imprevistas ou a origem dos problemas.",
+        "ru": "Отсылает к ящику Пандоры (на самом деле кувшину), выпустившему все беды в мир, символизируя непредвиденные последствия или источник проблем.",
+        "zh": "指潘多拉的盒子（实际上是罐子），释放了世间所有灾祸，象征意外后果或祸端的起源。"
+      },
+      "id": "grc_classical_or_scriptural_allusion_πανδώρα_καὶ_κιβωτόσ_3f1add78",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry accurately describes the myth of Pandora and her jar (κιβωτός), with correct surface patterns and an appropriate reference to Works and Days 47–105.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Refers to Pandora's box (actually a jar), which released all evils into the world, symbolizing unforeseen consequences or the origin of troubles.",
+      "source_author": "Ἡσίοδος",
+      "source_author_key": "mnemosyne.grc.author.ἡσίοδοσ",
+      "source_dataset": "gr_mythological_allusions",
+      "source_license": "public_domain",
+      "source_location": "47–105",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hes.+WD+47",
+      "source_work": "Ἔργα καὶ Ἡμέραι",
+      "source_work_key": "mnemosyne.grc.work.ἔργα_καὶ_ἡμέραι",
+      "surface_patterns": [
+        "Πανδώρα καὶ κιβωτός",
+        "κιβωτὸς τῆς Πανδώρας",
+        "Πανδώρας κιβωτός",
+        "Πανδώρας πίθος",
+        "Πανδώρας δοχεῖον"
+      ],
+      "variants": [
+        "Πανδώρας πίθος",
+        "Πανδώρας δοχεῖον"
+      ]
+    },
+    {
       "canonical_form": "grc:classical:grc_classical_or_scriptural_allusion_περσεφόνη_καὶ_ἀδη_02a0cd2e",
       "canonical_reference": "Περσεφόνη καὶ Ἀδη",
       "confidence": 0.8,
@@ -40,6 +129,182 @@
       ]
     },
     {
+      "canonical_form": "grc:classical:grc_classical_or_scriptural_allusion_προμηθεὺσ_καὶ_πυ_ρ_79f650a9",
+      "canonical_reference": "Προμηθεὺς καὶ πῦρ",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.grc.explanation.gr_mythological_allusions_προμηθεὺσ_καὶ_πυ_ρ",
+      "i18n_explanations": {
+        "ar": "يشير إلى بروميثيوس الذي سرق النار من الآلهة ليمنحها للبشرية، ويرمز إلى السعي وراء المعرفة والابتكار والمعاناة الناتجة عن التمرد.",
+        "de": "Bezieht sich auf Prometheus, der das Feuer den Göttern stahl und den Menschen brachte, als Symbol für Wissensdrang, Innovation und das Leiden durch Auflehnung.",
+        "en": "Refers to Prometheus stealing fire from the gods to give to humanity, symbolizing the quest for knowledge, innovation, and the suffering that may come with defiance.",
+        "es": "Hace referencia a Prometeo robando el fuego a los dioses para dárselo a la humanidad, simbolizando la búsqueda de conocimiento, la innovación y el sufrimiento que puede conllevar la rebeldía.",
+        "fr": "Fait référence à Prométhée qui vole le feu aux dieux pour l’offrir aux hommes, symbolisant la quête de savoir, l’innovation et la souffrance liée à la rébellion.",
+        "he": "מתייחס לפרומתאוס שגנב את האש מהאלים ונתן אותה לאנושות, כסמל לשאיפה לידע, חדשנות והסבל שבמרד.",
+        "it": "Si riferisce a Prometeo che rubò il fuoco agli dèi per donarlo all’umanità, simbolo della ricerca della conoscenza, dell’innovazione e delle sofferenze della ribellione.",
+        "ja": "プロメテウスが神々から火を盗み人類に与えたことに由来し、知識や革新の追求、反抗による苦しみを象徴します。",
+        "pt": "Refere-se a Prometeu roubando o fogo dos deuses para dar à humanidade, simbolizando a busca pelo conhecimento, inovação e o sofrimento que pode acompanhar a rebeldia.",
+        "ru": "Отсылает к Прометею, укравшему огонь у богов ради людей, символизируя стремление к знаниям, инновациям и страданиям за неповиновение.",
+        "zh": "指普罗米修斯盗火给人类，象征对知识和创新的追求，以及反抗带来的苦难。"
+      },
+      "id": "grc_classical_or_scriptural_allusion_προμηθεὺσ_καὶ_πυ_ρ_79f650a9",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The allusion to Prometheus and fire is accurate, the surface patterns are correct, and the reference to Hesiod's Theogony 507–616 is appropriate.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Refers to Prometheus stealing fire from the gods to give to humanity, symbolizing the quest for knowledge, innovation, and the suffering that may come with defiance.",
+      "source_author": "Ἡσίοδος",
+      "source_author_key": "mnemosyne.grc.author.ἡσίοδοσ",
+      "source_dataset": "gr_mythological_allusions",
+      "source_license": "public_domain",
+      "source_location": "507–616",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hes.+Th.+507",
+      "source_work": "Θεογονία",
+      "source_work_key": "mnemosyne.grc.work.θεογονία",
+      "surface_patterns": [
+        "Προμηθεὺς καὶ πῦρ",
+        "Προμηθεὺς πῦρ κλέπτει",
+        "Προμηθεϊκόν πῦρ",
+        "Προμηθεϊκὸς ἔρως πρὸς πῦρ",
+        "Προμηθεϊκὴ τόλμη"
+      ],
+      "variants": [
+        "Προμηθεϊκὸς ἔρως πρὸς πῦρ",
+        "Προμηθεϊκὴ τόλμη"
+      ]
+    },
+    {
+      "canonical_form": "grc:classical:grc_classical_or_scriptural_allusion_σίσυφοσ_καὶ_λίθοσ_6016aa9c",
+      "canonical_reference": "Σίσυφος καὶ λίθος",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.grc.explanation.gr_mythological_allusions_σίσυφοσ_καὶ_λίθοσ",
+      "i18n_explanations": {
+        "ar": "يشير إلى العمل العبثي واللامتناهي لسيسيفوس، الذي حكمت عليه الآلهة بدحرجة صخرة إلى أعلى الجبل للأبد، ويرمز إلى المهام العقيمة أو المتكررة.",
+        "de": "Bezieht sich auf die endlose und sinnlose Arbeit des Sisyphos, der von den Göttern dazu verurteilt wurde, einen Felsblock ewig bergauf zu rollen, und steht für sinnlose oder sich wiederholende Aufgaben.",
+        "en": "Refers to the endless and futile labor of Sisyphus, condemned by the gods to roll a boulder uphill for eternity, symbolizing pointless or repetitive tasks.",
+        "es": "Hace referencia al trabajo interminable y fútil de Sísifo, condenado por los dioses a empujar una roca cuesta arriba eternamente, simbolizando tareas inútiles o repetitivas.",
+        "fr": "Fait référence au labeur sans fin et vain de Sisyphe, condamné à pousser un rocher éternellement, symbolisant les tâches inutiles ou répétitives.",
+        "he": "מתייחס לעבודה האינסופית והחסרת תכלית של סיזיפוס, שנגזר עליו לגלגל סלע במעלה ההר לנצח, כסמל למשימות סתמיות או חוזרות.",
+        "it": "Si riferisce al lavoro infinito e inutile di Sisifo, condannato dagli dèi a spingere un masso in salita per l’eternità, simbolo di compiti inutili o ripetitivi.",
+        "ja": "シーシュポスが神々に永遠に岩を押し上げる無意味で終わりのない労働を課されたことに由来し、無駄または反復的な作業を象徴します。",
+        "pt": "Refere-se ao trabalho interminável e fútil de Sísifo, condenado pelos deuses a empurrar uma pedra morro acima eternamente, simbolizando tarefas inúteis ou repetitivas.",
+        "ru": "Отсылает к бесконечному и бесполезному труду Сизифа, обречённого богами вечно катить камень в гору, символизируя бессмысленные или повторяющиеся задачи.",
+        "zh": "指西西弗斯被众神惩罚永远推石上山，象征无尽且徒劳的劳动或重复性任务。"
+      },
+      "id": "grc_classical_or_scriptural_allusion_σίσυφοσ_καὶ_λίθοσ_6016aa9c",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The allusion to Sisyphus and his stone is accurately described, the surface patterns are correct, and the reference to Odyssey 11.593–600 is appropriate.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Refers to the endless and futile labor of Sisyphus, condemned by the gods to roll a boulder uphill for eternity, symbolizing pointless or repetitive tasks.",
+      "source_author": "Ὅμηρος",
+      "source_author_key": "mnemosyne.grc.author.ὅμηροσ",
+      "source_dataset": "gr_mythological_allusions",
+      "source_license": "public_domain",
+      "source_location": "11.593–600",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hom.+Od.+11.593",
+      "source_work": "Ὀδύσσεια",
+      "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "surface_patterns": [
+        "Σίσυφος καὶ λίθος",
+        "λίθος τοῦ Σισύφου",
+        "Σισύφειος λίθος",
+        "Σισύφεια ποινή",
+        "Σισύφειον ἔργον",
+        "Σισύφειος μόχθος"
+      ],
+      "variants": [
+        "Σισύφειον ἔργον",
+        "Σισύφειος μόχθος"
+      ]
+    },
+    {
+      "canonical_form": "grc:classical:grc_classical_or_scriptural_allusion_τάνταλοσ_καὶ_βασανιστήρια_dacb5106",
+      "canonical_reference": "Τάνταλος καὶ βασανιστήρια",
+      "confidence": 0.86,
+      "explanation_key": "mnemosyne.grc.explanation.gr_mythological_allusions_τάνταλοσ_καὶ_βασανιστήρι",
+      "i18n_explanations": {
+        "ar": "يشير إلى تانتالوس الذي عُوقب في العالم السفلي بجوع وعطش أبديين، ويرمز إلى الرغبات المستحيلة أو العذاب الذي لا ينتهي.",
+        "de": "Bezieht sich auf Tantalos, der in der Unterwelt mit ewigem Hunger und Durst bestraft wurde, und steht für unerreichbare Wünsche oder endlose Qualen.",
+        "en": "Alludes to Tantalus, punished in the underworld with eternal hunger and thirst, representing unattainable desires or endless torment.",
+        "es": "Alude a Tántalo, castigado en el inframundo con hambre y sed eternas, representando deseos inalcanzables o tormentos interminables.",
+        "fr": "Fait allusion à Tantale, puni aux Enfers par une faim et une soif éternelles, représentant des désirs inaccessibles ou un tourment sans fin.",
+        "he": "רומז לטנטלוס, שנענש בעולם התחתון ברעב וצמא נצחיים, כסמל לתשוקות בלתי מושגות או ייסורים אינסופיים.",
+        "it": "Allude a Tantalo, punito negli inferi con fame e sete eterne, simbolo di desideri irraggiungibili o tormenti infiniti.",
+        "ja": "タンタロスが冥界で永遠の飢えと渇きに苦しめられたことに由来し、手の届かない願望や終わりなき苦しみを象徴します。",
+        "pt": "Alude a Tântalo, punido no submundo com fome e sede eternas, representando desejos inalcançáveis ou tormentos sem fim.",
+        "ru": "Отсылает к Танталу, наказанному в подземном мире вечным голодом и жаждой, что символизирует недостижимые желания или бесконечные мучения.",
+        "zh": "指坦塔罗斯在冥界受永恒饥渴之刑，象征无法实现的欲望或无尽的折磨。"
+      },
+      "id": "grc_classical_or_scriptural_allusion_τάνταλοσ_καὶ_βασανιστήρια_dacb5106",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry correctly references Tantalus's punishment as described in Odyssey 11.582–592, and the surface patterns are plausible and accurate.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Alludes to Tantalus, punished in the underworld with eternal hunger and thirst, representing unattainable desires or endless torment.",
+      "source_author": "Ὅμηρος",
+      "source_author_key": "mnemosyne.grc.author.ὅμηροσ",
+      "source_dataset": "gr_mythological_allusions",
+      "source_license": "public_domain",
+      "source_location": "11.582–592",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hom.+Od.+11.582",
+      "source_work": "Ὀδύσσεια",
+      "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "surface_patterns": [
+        "Τάνταλος καὶ βασανιστήρια",
+        "Ταντάλειοι πόνοι",
+        "Ταντάλειον μαρτύριον",
+        "Ταντάλειος τιμωρία",
+        "Ταντάλειον βάσανον"
+      ],
+      "variants": [
+        "Ταντάλειος τιμωρία",
+        "Ταντάλειον βάσανον"
+      ]
+    },
+    {
+      "canonical_form": "grc:classical:grc_classical_or_scriptural_allusion_τάνταλοσ_καὶ_δίψα_d5d2f20a",
+      "canonical_reference": "Τάνταλος καὶ δίψα",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.grc.explanation.grc_greek_myth_refs_τάνταλοσ_καὶ_δίψα",
+      "i18n_explanations": {
+        "ar": "يشير إلى أسطورة تانتالوس، الذي يعذب أبدياً بالعطش والجوع في العالم السفلي، رمزاً للرغبة المستحيلة أو العقاب.",
+        "de": "Bezieht sich auf den Mythos von Tantalos, der im Hades ewig von Durst und Hunger gequält wird, als Symbol für unerreichbares Verlangen oder Strafe.",
+        "en": "Refers to the myth of Tantalus, eternally tormented by thirst and hunger in the underworld, symbolizing unattainable desire or punishment.",
+        "es": "Hace referencia al mito de Tántalo, condenado eternamente a la sed y el hambre en el inframundo, simbolizando el deseo inalcanzable o el castigo.",
+        "fr": "Fait référence au mythe de Tantale, éternellement tourmenté par la soif et la faim aux Enfers, symbolisant le désir inatteignable ou la punition.",
+        "he": "מתייחס למיתוס של טנטלוס, שנידון לצמא ורעב נצחיים בשאול, כסמל לחשק בלתי מושג או לעונש.",
+        "it": "Si riferisce al mito di Tantalo, eternamente tormentato da sete e fame negli inferi, simbolo del desiderio irraggiungibile o della punizione.",
+        "ja": "タンタロスの神話を指し、冥界で永遠に渇きと飢えに苦しむ姿は、手の届かない欲望や罰を象徴します。",
+        "pt": "Refere-se ao mito de Tântalo, eternamente atormentado por sede e fome no submundo, simbolizando desejo inalcançável ou punição.",
+        "ru": "Отсылает к мифу о Тантале, вечно мучимом жаждой и голодом в подземном мире, символизируя недостижимое желание или наказание.",
+        "zh": "指坦塔罗斯的神话，他在冥界永远受饥渴折磨，象征无法实现的欲望或惩罚。"
+      },
+      "id": "grc_classical_or_scriptural_allusion_τάνταλοσ_καὶ_δίψα_d5d2f20a",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The myth of Tantalus and his punishment is accurately referenced with correct surface patterns and a valid Homeric source.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "proverbial",
+      "short_explanation": "Refers to the myth of Tantalus, eternally tormented by thirst and hunger in the underworld, symbolizing unattainable desire or punishment.",
+      "source_author": "Ὅμηρος",
+      "source_author_key": "mnemosyne.grc.author.ὅμηροσ",
+      "source_dataset": "grc_greek_myth_refs",
+      "source_license": "public_domain",
+      "source_location": "Book 11, lines 582–592",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hom.+Od.+11.582",
+      "source_work": "Ὀδύσσεια",
+      "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "surface_patterns": [
+        "Τάνταλος καὶ δίψα",
+        "δίψα Ταντάλου",
+        "Τάνταλος διψῶν",
+        "Ταντάλειος δίψα"
+      ]
+    },
+    {
       "canonical_form": "grc:classical:grc_classical_or_scriptural_allusion_χάοσ_καὶ_κόσμοσ_dd5188ae",
       "canonical_reference": "Χάος καὶ Κόσμος",
       "confidence": 0.9,
@@ -75,6 +340,92 @@
       "surface_patterns": [
         "Χάος καὶ Κόσμος",
         "Χάος και Κόσμος"
+      ]
+    },
+    {
+      "canonical_form": "grc:classical:grc_classical_or_scriptural_allusion_ἀριάδνη_καὶ_μίτοσ_521ca711",
+      "canonical_reference": "Ἀριάδνη καὶ μίτος",
+      "confidence": 0.83,
+      "explanation_key": "mnemosyne.grc.explanation.grc_mythological_motifs_ἀριάδνη_καὶ_μίτοσ",
+      "i18n_explanations": {
+        "ar": "خيط أريادني يرمز إلى الإرشاد وحل المشكلات بذكاء، في إشارة إلى الخيط الذي أعطته لثيسيوس ليخرج من المتاهة بعد هزيمة المينوتور.",
+        "de": "Ariadnes Faden steht für Orientierung und kluge Problemlösung; sie gab ihn Theseus, damit er nach dem Sieg über den Minotaurus aus dem Labyrinth entkam.",
+        "en": "Ariadne's thread is a symbol of guidance and clever problem-solving, referring to the thread she gave Theseus to escape the Labyrinth after defeating the Minotaur.",
+        "es": "El hilo de Ariadna simboliza la guía y la astucia para resolver problemas, aludiendo al hilo que dio a Teseo para salir del Laberinto tras vencer al Minotauro.",
+        "fr": "Le fil d’Ariane symbolise la guidance et l’ingéniosité, faisant référence au fil qu’elle donna à Thésée pour sortir du Labyrinthe après avoir vaincu le Minotaure.",
+        "he": "חוטה של אריאדנה מסמל הדרכה ופתרון בעיות בחכמה, בהתייחס לחוט שנתנה לתסאוס כדי לצאת מהמבוך לאחר שהביס את המינוטאור.",
+        "it": "Il filo di Arianna è simbolo di guida e ingegno, riferendosi al filo che diede a Teseo per uscire dal Labirinto dopo aver sconfitto il Minotauro.",
+        "ja": "アリアドネの糸は導きと巧妙な問題解決の象徴で、ミノタウロスを倒したテセウスが迷宮から脱出するために彼女が渡した糸を指します。",
+        "pt": "O fio de Ariadne simboliza orientação e solução engenhosa de problemas, referindo-se ao fio que ela deu a Teseu para sair do Labirinto após derrotar o Minotauro.",
+        "ru": "Нить Ариадны — символ помощи и находчивости; с её помощью Тесей выбрался из Лабиринта после победы над Минотавром.",
+        "zh": "阿里阿德涅的线象征着指引和巧妙的解决问题，指她给忒修斯的线团帮助其打败弥诺陶洛斯后逃出迷宫。"
+      },
+      "id": "grc_classical_or_scriptural_allusion_ἀριάδνη_καὶ_μίτοσ_521ca711",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The association of Ariadne with the thread and the surface patterns are attested in later sources and are widely recognized as a classical allusion.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Ariadne's thread is a symbol of guidance and clever problem-solving, referring to the thread she gave Theseus to escape the Labyrinth after defeating the Minotaur.",
+      "source_author": "Ἀπολλόδωρος",
+      "source_author_key": "mnemosyne.grc.author.ἀπολλόδωροσ",
+      "source_dataset": "grc_mythological_motifs",
+      "source_license": "public_domain",
+      "source_location": "3.1.4",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Apollod.+Epit.+1.9",
+      "source_work": "Βιβλιοθήκη",
+      "source_work_key": "mnemosyne.grc.work.βιβλιοθήκη",
+      "surface_patterns": [
+        "Ἀριάδνη καὶ μίτος",
+        "ὁ μίτος τῆς Ἀριάδνης",
+        "μίτος Ἀριάδνης",
+        "Ἀριάδνης μίτος"
+      ]
+    },
+    {
+      "canonical_form": "grc:classical:grc_classical_or_scriptural_allusion_ἀτλασ_καὶ_ου_ρανόσ_57d3b8c2",
+      "canonical_reference": "Ἀτλας καὶ οὐρανός",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.grc.explanation.ancient_greek_myth_phrases_ἀτλασ_καὶ_ου_ρανόσ",
+      "i18n_explanations": {
+        "ar": "أطلس والسماء يشير إلى التيتان أطلس المحكوم عليه بحمل السماء، ويرمز إلى الصبر وتحمل الأعباء الثقيلة.",
+        "de": "Atlas und der Himmel bezieht sich auf den Titanen Atlas, der dazu verdammt war, das Himmelsgewölbe zu tragen, als Symbol für Ausdauer und schwere Lasten.",
+        "en": "Atlas and the sky refers to the Titan Atlas, condemned to hold up the heavens, symbolizing endurance and bearing heavy burdens.",
+        "es": "Atlas y el cielo hace referencia al titán Atlas, condenado a sostener los cielos, simbolizando la resistencia y la carga de grandes responsabilidades.",
+        "fr": "Atlas et le ciel fait référence au Titan Atlas, condamné à porter les cieux, symbole d'endurance et de lourds fardeaux.",
+        "he": "אטלס והשמים מתייחסים לטיטאן אטלס שנגזר עליו לשאת את השמים, כסמל לעמידות ונשיאת עול כבד.",
+        "it": "Atlante e il cielo si riferisce al Titano Atlante, condannato a sorreggere il cielo, simbolo di resistenza e di portare pesi gravosi.",
+        "ja": "アトラスと天空は、天を支える運命を負ったタイタン・アトラスの神話を指し、忍耐や重荷を背負うことの象徴です。",
+        "pt": "Atlas e o céu refere-se ao titã Atlas, condenado a sustentar os céus, simbolizando resistência e suportar grandes fardos.",
+        "ru": "Атлас и небо — это миф о титане Атласе, обречённом держать небеса, символизируя выносливость и тяжёлое бремя.",
+        "zh": "阿特拉斯与天空指的是被罚举天的泰坦阿特拉斯，象征坚韧和承受重负。"
+      },
+      "id": "grc_classical_or_scriptural_allusion_ἀτλασ_καὶ_ου_ρανόσ_57d3b8c2",
+      "language": "grc",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to Atlas holding up the heavens is accurate and attested in Hesiod's Theogony 517–520, and the surface patterns are appropriate.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Atlas and the sky refers to the Titan Atlas, condemned to hold up the heavens, symbolizing endurance and bearing heavy burdens.",
+      "source_author": "Ἡσίοδος (Hesiod)",
+      "source_author_key": "mnemosyne.grc.author.ἡσίοδοσ_hesiod",
+      "source_dataset": "ancient_greek_myth_phrases",
+      "source_license": "public_domain",
+      "source_location": "517–520",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hes.+Th.+507",
+      "source_work": "Θεογονία",
+      "source_work_key": "mnemosyne.grc.work.θεογονία",
+      "surface_patterns": [
+        "Ἀτλας καὶ οὐρανός",
+        "Ἀτλας βαστάζων τὸν οὐρανόν",
+        "Ἀτλας",
+        "Ἀτλας ὁ οὐρανοφόρος",
+        "Ἀτλας τὸν οὐρανὸν φέρων",
+        "Ἀτλας ὁ οὐρανοῦ στηριγμὸς"
+      ],
+      "variants": [
+        "Ἀτλας τὸν οὐρανὸν φέρων",
+        "Ἀτλας ὁ οὐρανοῦ στηριγμὸς"
       ]
     },
     {
@@ -1392,6 +1743,52 @@
       ]
     },
     {
+      "canonical_form": "grc:cultural:grc_cultural_reference_περικλη_σ_καὶ_ἀθηναι_οι_bdf6cb85",
+      "canonical_reference": "Περικλῆς καὶ Ἀθηναῖοι",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.grc.explanation.ancient_greek_myth_phrases_περικλη_σ_καὶ_ἀθηναι_οι",
+      "i18n_explanations": {
+        "ar": "بريكليس والأثينيون يشير إلى الزعيم بريكليس وقيادته خلال العصر الذهبي لأثينا، ويرمز إلى الديمقراطية والإنجازات المدنية.",
+        "de": "Perikles und die Athener bezieht sich auf den Staatsmann Perikles und seine Führung während Athens Goldener Zeit, als Symbol für Demokratie und bürgerliche Errungenschaften.",
+        "en": "Pericles and the Athenians refers to the statesman Pericles and his leadership during Athens' Golden Age, symbolizing democracy and civic achievement.",
+        "es": "Pericles y los atenienses hace referencia al estadista Pericles y su liderazgo durante la Edad de Oro de Atenas, simbolizando la democracia y los logros cívicos.",
+        "fr": "Périclès et les Athéniens fait référence à l'homme d'État Périclès et à son leadership durant l'âge d'or d'Athènes, symbole de démocratie et de réussite civique.",
+        "he": "פריקלס והאתונאים מתייחסים למדינאי פריקלס ולהנהגתו בתקופת תור הזהב של אתונה, כסמל לדמוקרטיה והישגים אזרחיים.",
+        "it": "Pericle e gli Ateniesi si riferisce allo statista Pericle e alla sua guida durante l'età d'oro di Atene, simbolo di democrazia e successo civico.",
+        "ja": "ペリクレスとアテナイ人は、アテネの黄金時代を導いた政治家ペリクレスを指し、民主主義や市民的成果の象徴です。",
+        "pt": "Péricles e os atenienses refere-se ao estadista Péricles e sua liderança durante a Era de Ouro de Atenas, simbolizando democracia e conquistas cívicas.",
+        "ru": "Перикл и афиняне — это о государственном деятеле Перикле и его руководстве в Золотой век Афин, символизируя демократию и гражданские достижения.",
+        "zh": "伯里克利与雅典人指的是雅典黄金时代的政治家伯里克利及其领导，象征民主和公民成就。"
+      },
+      "id": "grc_cultural_reference_περικλη_σ_καὶ_ἀθηναι_οι_bdf6cb85",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Pericles' leadership of the Athenians is a major theme in Thucydides' Histories, especially in the cited passages.",
+      "reference_type": "cultural_reference",
+      "register": "classical",
+      "short_explanation": "Pericles and the Athenians refers to the statesman Pericles and his leadership during Athens' Golden Age, symbolizing democracy and civic achievement.",
+      "source_author": "Θουκυδίδης (Thucydides)",
+      "source_author_key": "mnemosyne.grc.author.θουκυδίδησ_thucydides",
+      "source_dataset": "ancient_greek_myth_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 2.35–46",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Thuc.+2.35.1",
+      "source_work": "Ἱστορίαι",
+      "source_work_key": "mnemosyne.grc.work.ἱστορίαι",
+      "surface_patterns": [
+        "Περικλῆς καὶ Ἀθηναῖοι",
+        "Περικλῆς μετὰ Ἀθηναίων",
+        "Περικλῆς ὁ Ἀθηναῖος",
+        "Περικλῆς",
+        "Περικλῆς ὁ τῶν Ἀθηναίων",
+        "Περικλῆς καὶ οἱ Ἀθηναῖοι"
+      ],
+      "variants": [
+        "Περικλῆς ὁ τῶν Ἀθηναίων",
+        "Περικλῆς καὶ οἱ Ἀθηναῖοι"
+      ]
+    },
+    {
       "canonical_form": "grc:cultural:grc_cultural_reference_περσέασ_καὶ_μεδούσα_cc2caef7",
       "canonical_reference": "Περσέας καὶ Μεδούσα",
       "confidence": 0.85,
@@ -2197,6 +2594,50 @@
       "surface_patterns": [
         "Ἀπόλλων καὶ Δελφοί",
         "Ἀπόλλων και Δελφοί"
+      ]
+    },
+    {
+      "canonical_form": "grc:cultural:grc_cultural_reference_ἀπόλλων_καὶ_μαντει_ον_1e606a2b",
+      "canonical_reference": "Ἀπόλλων καὶ μαντεῖον",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.grc.explanation.grc_greek_myth_refs_ἀπόλλων_καὶ_μαντει_ον",
+      "i18n_explanations": {
+        "ar": "يشير إلى دور أبولو كإله النبوءة وإلى الوحي الشهير في دلفي، وهو مركز رئيسي للعرافة في اليونان القديمة.",
+        "de": "Bezieht sich auf Apollons Rolle als Gott der Weissagung und das berühmte Orakel von Delphi, ein bedeutendes Zentrum der Wahrsagung im antiken Griechenland.",
+        "en": "Refers to Apollo's role as god of prophecy and the famous oracle at Delphi, a major center for divination in the ancient Greek world.",
+        "es": "Hace referencia al papel de Apolo como dios de la profecía y al famoso oráculo de Delfos, un importante centro de adivinación en la antigua Grecia.",
+        "fr": "Fait référence au rôle d’Apollon comme dieu de la prophétie et à l’oracle célèbre de Delphes, grand centre de divination du monde grec antique.",
+        "he": "מתייחס לתפקידו של אפולו כאל הנבואה ולמקדש דלפי המפורסם, שהיה מרכז חשוב לניבוי ביוון העתיקה.",
+        "it": "Si riferisce al ruolo di Apollo come dio della profezia e al celebre oracolo di Delfi, importante centro di divinazione nell’antica Grecia.",
+        "ja": "アポロンが予言の神であり、デルフォイの有名な神託所が古代ギリシャの主要な占いの中心地であったことを指します。",
+        "pt": "Refere-se ao papel de Apolo como deus da profecia e ao famoso oráculo de Delfos, importante centro de adivinhação na Grécia Antiga.",
+        "ru": "Отсылает к Аполлону как богу пророчеств и знаменитому дельфийскому оракулу — главному центру гаданий в Древней Греции.",
+        "zh": "指阿波罗作为预言之神及著名的德尔斐神谕所，是古希腊重要的占卜中心。"
+      },
+      "id": "grc_cultural_reference_ἀπόλλων_καὶ_μαντει_ον_1e606a2b",
+      "language": "grc",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Apollo's association with the oracle at Delphi is accurate, and the surface patterns and Herodotean source are appropriate.",
+      "reference_type": "cultural_reference",
+      "register": "religious",
+      "short_explanation": "Refers to Apollo's role as god of prophecy and the famous oracle at Delphi, a major center for divination in the ancient Greek world.",
+      "source_author": "Ἡρόδοτος",
+      "source_author_key": "mnemosyne.grc.author.ἡρόδοτοσ",
+      "source_dataset": "grc_greek_myth_refs",
+      "source_license": "public_domain",
+      "source_location": "Book 1, section 46",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hdt.+1.46.1",
+      "source_work": "Ἱστορίαι",
+      "source_work_key": "mnemosyne.grc.work.ἱστορίαι",
+      "surface_patterns": [
+        "Ἀπόλλων καὶ μαντεῖον",
+        "μαντεῖον Ἀπόλλωνος",
+        "Ἀπόλλων μαντεῖον",
+        "Δελφικὸν μαντεῖον",
+        "μαντεῖον Δελφῶν"
+      ],
+      "variants": [
+        "μαντεῖον Δελφῶν"
       ]
     },
     {
@@ -3764,6 +4205,46 @@
       ]
     },
     {
+      "canonical_form": "grc:literary:grc_literary_reference_πηνελόπη_καὶ_ὀδυσσεύσ_6914b4a8",
+      "canonical_reference": "Πηνελόπη καὶ Ὀδυσσεύς",
+      "confidence": 0.89,
+      "explanation_key": "mnemosyne.grc.explanation.gr_greek_myth_pairs_πηνελόπη_καὶ_ὀδυσσεύσ",
+      "i18n_explanations": {
+        "ar": "بينيلوب وأوديسيوس يرمزان للإخلاص الزوجي والذكاء، حيث انتظرت بينيلوب عودة أوديسيوس بأمانة في الأوديسة.",
+        "de": "Penelope und Odysseus stehen für eheliche Treue und Klugheit, wobei Penelope in der Odyssee treu auf Odysseus’ Rückkehr wartet.",
+        "en": "Penelope and Odysseus symbolize marital fidelity and cleverness, with Penelope waiting faithfully for Odysseus's return in the Odyssey.",
+        "es": "Penélope y Odiseo simbolizan la fidelidad conyugal y la astucia, con Penélope esperando fielmente el regreso de Odiseo en la Odisea.",
+        "fr": "Pénélope et Ulysse symbolisent la fidélité conjugale et l’ingéniosité, Pénélope attendant fidèlement le retour d’Ulysse dans l’Odyssée.",
+        "he": "פנלופה ואודיסאוס מסמלים נאמנות זוגית ותבונה, כאשר פנלופה ממתינה בנאמנות לשובו של אודיסאוס באודיסיאה.",
+        "it": "Penelope e Ulisse simboleggiano la fedeltà coniugale e l’astuzia, con Penelope che attende fedelmente il ritorno di Ulisse nell’Odissea.",
+        "ja": "ペネロペとオデュッセウスは、オデュッセウスの帰還を忠実に待つペネロペの姿を通じて、夫婦の貞節と賢さを象徴します。",
+        "pt": "Penélope e Odisseu simbolizam a fidelidade conjugal e a astúcia, com Penélope esperando fielmente o retorno de Odisseu na Odisseia.",
+        "ru": "Пенелопа и Одиссей символизируют супружескую верность и хитрость: Пенелопа верно ждет возвращения Одиссея в «Одиссее».",
+        "zh": "佩涅洛佩与奥德修斯象征着婚姻忠诚与智慧，佩涅洛佩在《奥德赛》中忠实等待奥德修斯归来。"
+      },
+      "id": "grc_literary_reference_πηνελόπη_καὶ_ὀδυσσεύσ_6914b4a8",
+      "language": "grc",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry accurately reflects the relationship between Penelope and Odysseus as depicted in the Odyssey, with correct surface patterns and attribution.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Penelope and Odysseus symbolize marital fidelity and cleverness, with Penelope waiting faithfully for Odysseus's return in the Odyssey.",
+      "source_author": "Ὅμηρος",
+      "source_author_key": "mnemosyne.grc.author.ὅμηροσ",
+      "source_dataset": "gr_greek_myth_pairs",
+      "source_license": "public_domain",
+      "source_location": "Books 19–23",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hom.+Od.+19.1",
+      "source_work": "Ὀδύσσεια",
+      "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "surface_patterns": [
+        "Πηνελόπη καὶ Ὀδυσσεύς",
+        "Ὀδυσσεὺς καὶ Πηνελόπη",
+        "ἡ Πηνελόπη τοῦ Ὀδυσσέως",
+        "Πηνελόπη ἀναμένουσα"
+      ]
+    },
+    {
       "canonical_form": "grc:literary:grc_literary_reference_πλάτων_καὶ_σοφιστήσ_0da68516",
       "canonical_reference": "Πλάτων καὶ Σοφιστής",
       "confidence": 0.9,
@@ -4223,6 +4704,93 @@
       ]
     },
     {
+      "canonical_form": "grc:literary:grc_literary_reference_ἀγαμέμνων_καὶ_μενέλαοσ_19e522f1",
+      "canonical_reference": "Ἀγαμέμνων καὶ Μενέλαος",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.grc.explanation.gr_greek_myth_pairs_ἀγαμέμνων_καὶ_μενέλαοσ",
+      "i18n_explanations": {
+        "ar": "أغاممنون ومينلاوس، المعروفان باسم الأتريدان، كانا أخوين وقائدين للقوات اليونانية في حرب طروادة، ويرمزان للقيادة والواجب العائلي في التقليد الملحمي اليوناني.",
+        "de": "Agamemnon und Menelaos, die Atriden, waren Brüder und Anführer der Griechen im Trojanischen Krieg und stehen für Führung und familiäre Pflicht in der griechischen Epik.",
+        "en": "Agamemnon and Menelaus, known as the Atreidae, were brothers and leaders of the Greek forces in the Trojan War, symbolizing leadership and familial duty in Greek epic tradition.",
+        "es": "Agamenón y Menelao, conocidos como los Atridas, eran hermanos y líderes de los griegos en la Guerra de Troya, simbolizando el liderazgo y el deber familiar en la tradición épica griega.",
+        "fr": "Agamemnon et Ménélas, appelés les Atrides, étaient frères et chefs des Grecs lors de la guerre de Troie, incarnant le leadership et le devoir familial dans l’épopée grecque.",
+        "he": "אגממנון ומנלאוס, המכונים האטרידים, היו אחים ומנהיגי היוונים במלחמת טרויה, ומסמלים מנהיגות וחובה משפחתית במסורת האפית היוונית.",
+        "it": "Agamennone e Menelao, detti gli Atridi, erano fratelli e capi dei Greci nella guerra di Troia, simboli di leadership e dovere familiare nell’epica greca.",
+        "ja": "アガメムノンとメネラオスはアトレウス家の兄弟で、トロイア戦争のギリシャ軍の指導者として、ギリシャ叙事詩における指導力と家族の義務を象徴します。",
+        "pt": "Agamenon e Menelau, conhecidos como os Atridas, eram irmãos e líderes dos gregos na Guerra de Troia, simbolizando liderança e dever familiar na tradição épica grega.",
+        "ru": "Агамемнон и Менелай, известные как Атриды, были братьями и вождями греков в Троянской войне, олицетворяя лидерство и семейный долг в греческой эпической традиции.",
+        "zh": "阿伽门农和墨涅拉俄斯是阿特柔斯家族的兄弟，在特洛伊战争中领导希腊军队，象征着希腊史诗中的领导力和家族责任。"
+      },
+      "id": "grc_literary_reference_ἀγαμέμνων_καὶ_μενέλαοσ_19e522f1",
+      "language": "grc",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution, surface patterns, and explanation accurately reflect the Homeric portrayal of Agamemnon and Menelaus as the Atreidae in the Iliad.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Agamemnon and Menelaus, known as the Atreidae, were brothers and leaders of the Greek forces in the Trojan War, symbolizing leadership and familial duty in Greek epic tradition.",
+      "source_author": "Ὅμηρος",
+      "source_author_key": "mnemosyne.grc.author.ὅμηροσ",
+      "source_dataset": "gr_greek_myth_pairs",
+      "source_license": "public_domain",
+      "source_location": "Book 2, lines 402–429",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hom.+Il.+2.402",
+      "source_work": "Ἰλιάς",
+      "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "surface_patterns": [
+        "Ἀγαμέμνων καὶ Μενέλαος",
+        "οἱ Ἀτρεῖδαι",
+        "Ἀγαμέμνων μετὰ Μενελάου",
+        "οἱ υἱοὶ Ἀτρέως",
+        "Ἀτρεῖδαι"
+      ],
+      "variants": [
+        "Ἀτρεῖδαι"
+      ]
+    },
+    {
+      "canonical_form": "grc:literary:grc_literary_reference_ἀγαμέμνων_καὶ_ἰφιγένεια_d9c9b9a8",
+      "canonical_reference": "Ἀγαμέμνων καὶ Ἰφιγένεια",
+      "confidence": 0.83,
+      "explanation_key": "mnemosyne.grc.explanation.gr_greek_myth_pairs_ἀγαμέμνων_καὶ_ἰφιγένεια",
+      "i18n_explanations": {
+        "ar": "أغاممنون وإيفيجينيا يشير إلى الأسطورة التي يضحي فيها أغاممنون بابنته لإرضاء أرتميس، وهي قصة ترمز للواجب المأساوي وثمن الحرب.",
+        "de": "Agamemnon und Iphigenie bezieht sich auf den Mythos, in dem Agamemnon seine Tochter opfert, um Artemis zu besänftigen, und steht für tragische Pflicht und die Opfer des Krieges.",
+        "en": "Agamemnon and Iphigenia refers to the myth in which Agamemnon sacrifices his daughter Iphigenia to appease Artemis, a story symbolizing tragic duty and the cost of war.",
+        "es": "Agamenón e Ifigenia hace referencia al mito en el que Agamenón sacrifica a su hija para apaciguar a Artemisa, simbolizando el deber trágico y el costo de la guerra.",
+        "fr": "Agamemnon et Iphigénie évoquent le mythe où Agamemnon sacrifie sa fille à Artémis, illustrant le devoir tragique et le prix de la guerre.",
+        "he": "אגממנון ואיפיגניה מתייחסים למיתוס שבו אגממנון מקריב את בתו לארטמיס, סיפור המסמל חובה טרגית ואת מחיר המלחמה.",
+        "it": "Agamennone e Ifigenia si riferisce al mito in cui Agamennone sacrifica la figlia per placare Artemide, simbolo di dovere tragico e del costo della guerra.",
+        "ja": "アガメムノンとイフィゲネイアは、アガメムノンが娘イフィゲネイアをアルテミスに捧げる神話で、悲劇的な義務と戦争の代償を象徴します。",
+        "pt": "Agamenon e Ifigênia refere-se ao mito em que Agamenon sacrifica sua filha para apaziguar Ártemis, simbolizando o dever trágico e o custo da guerra.",
+        "ru": "Агамемнон и Ифигения — миф, в котором Агамемнон жертвует дочерью ради умиротворения Артемиды, символизируя трагический долг и цену войны.",
+        "zh": "阿伽门农与伊菲革涅娅指的是阿伽门农为安抚阿耳忒弥斯而牺牲女儿的神话，象征着悲剧性的责任和战争的代价。"
+      },
+      "id": "grc_literary_reference_ἀγαμέμνων_καὶ_ἰφιγένεια_d9c9b9a8",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry correctly attributes the myth of Agamemnon and Iphigenia to Euripides' 'Iphigenia at Aulis' and uses appropriate surface patterns.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Agamemnon and Iphigenia refers to the myth in which Agamemnon sacrifices his daughter Iphigenia to appease Artemis, a story symbolizing tragic duty and the cost of war.",
+      "source_author": "Εὐριπίδης",
+      "source_author_key": "mnemosyne.grc.author.ευ_ριπίδησ",
+      "source_dataset": "gr_greek_myth_pairs",
+      "source_license": "public_domain",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Eur.+IA+1",
+      "source_work": "Ἰφιγένεια ἐν Αὐλίδι",
+      "source_work_key": "mnemosyne.grc.work.ἰφιγένεια_ἐν_αυ_λίδι",
+      "surface_patterns": [
+        "Ἀγαμέμνων καὶ Ἰφιγένεια",
+        "Ἰφιγένεια θύεται",
+        "ἡ θυσία τῆς Ἰφιγενείας",
+        "Ἰφιγένεια παρὰ Αὐλίδι",
+        "Ἰφιγένεια ἐν Αὐλίδι"
+      ],
+      "variants": [
+        "Ἰφιγένεια ἐν Αὐλίδι"
+      ]
+    },
+    {
       "canonical_form": "grc:literary:grc_literary_reference_ἀθηνα_καὶ_περσέασ_fe897a81",
       "canonical_reference": "Ἀθηνᾶ καὶ Περσέας",
       "confidence": 0.85,
@@ -4256,6 +4824,46 @@
       "surface_patterns": [
         "Ἀθηνᾶ καὶ Περσέας",
         "Περσέας καὶ Ἀθηνᾶ"
+      ]
+    },
+    {
+      "canonical_form": "grc:literary:grc_literary_reference_ἀθηνα_καὶ_ἀράχνη_f70087b9",
+      "canonical_reference": "Ἀθηνᾶ καὶ Ἀράχνη",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.grc.explanation.gr_mythological_pairs_ἀθηνα_καὶ_ἀράχνη",
+      "i18n_explanations": {
+        "ar": "يشير إلى الأسطورة التي تعاقب فيها أثينا أراكني على غرورها في مسابقة نسج، وتحولها إلى عنكبوت. القصة تحذر من الغرور وعدم احترام الآلهة.",
+        "de": "Bezieht sich auf den Mythos, in dem Athene Arachne für ihren Hochmut in einem Webwettbewerb bestraft und sie in eine Spinne verwandelt. Die Geschichte warnt vor Stolz und Respektlosigkeit gegenüber den Göttern.",
+        "en": "Refers to the myth where Athena punishes Arachne for her hubris in a weaving contest, transforming her into a spider. The tale is a warning against pride and disrespect toward the gods.",
+        "es": "Hace referencia al mito en el que Atenea castiga a Aracne por su arrogancia en un concurso de tejido, transformándola en araña. El relato advierte contra el orgullo y la falta de respeto a los dioses.",
+        "fr": "Fait référence au mythe où Athéna punit Arachné pour son orgueil lors d'un concours de tissage, la transformant en araignée. Le récit met en garde contre l'orgueil et l'irrespect envers les dieux.",
+        "he": "מתייחס למיתוס שבו אתנה מענישה את ארכנה על יהירותה בתחרות אריגה והופכת אותה לעכביש. הסיפור מזהיר מפני גאווה וחוסר כבוד לאלים.",
+        "it": "Si riferisce al mito in cui Atena punisce Aracne per la sua superbia in una gara di tessitura, trasformandola in un ragno. Il racconto mette in guardia contro l'orgoglio e la mancanza di rispetto verso gli dei.",
+        "ja": "アテナが織物対決でアラクネの傲慢さを罰し、彼女を蜘蛛に変える神話を指します。この物語は高慢と神々への不敬への警告です。",
+        "pt": "Refere-se ao mito em que Atena pune Aracne por sua arrogância em um concurso de tecelagem, transformando-a em uma aranha. O conto alerta contra o orgulho e a falta de respeito aos deuses.",
+        "ru": "Отсылает к мифу, где Афина наказывает Арахну за гордыню на состязании в ткачестве, превращая её в паука. Эта история предостерегает от гордости и неуважения к богам.",
+        "zh": "指雅典娜在织布比赛中因阿拉克涅的傲慢而惩罚她，将其变为蜘蛛的神话。这个故事警示人们不要傲慢和不敬神明。"
+      },
+      "id": "grc_literary_reference_ἀθηνα_καὶ_ἀράχνη_f70087b9",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The story of Athena and Arachne is correctly attributed to Ovid's Metamorphoses 6.1–145, which is the primary literary source for this myth.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Refers to the myth where Athena punishes Arachne for her hubris in a weaving contest, transforming her into a spider. The tale is a warning against pride and disrespect toward the gods.",
+      "source_author": "Οὐίδιος",
+      "source_author_key": "mnemosyne.grc.author.ου_ίδιοσ",
+      "source_dataset": "gr_mythological_pairs",
+      "source_license": "public_domain",
+      "source_location": "6.1–145",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Ov.+Met.+6.1",
+      "source_work": "Μεταμορφώσεις",
+      "source_work_key": "mnemosyne.grc.work.μεταμορφώσεισ",
+      "surface_patterns": [
+        "Ἀθηνᾶ καὶ Ἀράχνη",
+        "Ἀθηνᾶ καὶ ἡ Ἀράχνη",
+        "Ἀράχνη καὶ Ἀθηνᾶ",
+        "Ἀθηνᾶ καὶ τὴν Ἀράχνην"
       ]
     },
     {
@@ -4335,6 +4943,46 @@
       ]
     },
     {
+      "canonical_form": "grc:literary:grc_literary_reference_ἀντιγόνη_καὶ_νόμοσ_89298821",
+      "canonical_reference": "Ἀντιγόνη καὶ νόμος",
+      "confidence": 0.87,
+      "explanation_key": "mnemosyne.grc.explanation.grc_greek_myth_refs_ἀντιγόνη_καὶ_νόμοσ",
+      "i18n_explanations": {
+        "ar": "يشير إلى تحدي أنتيغون لأمر الملك كريون في مأساة سوفوكليس، ممثلاً الصراع بين القانون البشري والقانون الأخلاقي أو الإلهي الأعلى.",
+        "de": "Bezieht sich auf Antigones Widerstand gegen das Edikt von König Kreon in Sophokles’ Tragödie und steht für den Konflikt zwischen menschlichem Gesetz und höherem moralischen oder göttlichen Recht.",
+        "en": "Alludes to Antigone's defiance of King Creon's edict in Sophocles' tragedy, representing the conflict between human law and higher moral or divine law.",
+        "es": "Alude a la desobediencia de Antígona al edicto del rey Creonte en la tragedia de Sófocles, representando el conflicto entre la ley humana y la ley moral o divina.",
+        "fr": "Fait allusion à la rébellion d’Antigone contre l’édit du roi Créon dans la tragédie de Sophocle, symbolisant le conflit entre la loi humaine et la loi morale ou divine.",
+        "he": "רומזת לסירובה של אנטיגונה לציית לצו המלך קריאון בטרגדיה של סופוקלס, ומסמלת את העימות בין החוק האנושי לחוק מוסרי או אלוהי גבוה יותר.",
+        "it": "Allude alla sfida di Antigone all’editto di Creonte nella tragedia di Sofocle, rappresentando il conflitto tra la legge umana e quella morale o divina.",
+        "ja": "ソフォクレスの悲劇でアンティゴネがクレオン王の命令に逆らうことを指し、人間の法とより高い道徳的・神の法の対立を象徴します。",
+        "pt": "Alude à desobediência de Antígona ao decreto do rei Creonte na tragédia de Sófocles, representando o conflito entre a lei humana e a lei moral ou divina.",
+        "ru": "Отсылает к неповиновению Антигоны указу царя Креонта в трагедии Софокла, что символизирует конфликт между человеческим и высшим моральным или божественным законом.",
+        "zh": "指安提戈涅在索福克勒斯悲剧中违抗克瑞翁王命令，象征人法与更高道德或神法的冲突。"
+      },
+      "id": "grc_literary_reference_ἀντιγόνη_καὶ_νόμοσ_89298821",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry correctly alludes to the conflict between Antigone and the law in Sophocles' play, and the surface patterns are appropriate.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Alludes to Antigone's defiance of King Creon's edict in Sophocles' tragedy, representing the conflict between human law and higher moral or divine law.",
+      "source_author": "Σοφοκλῆς",
+      "source_author_key": "mnemosyne.grc.author.σοφοκλη_σ",
+      "source_dataset": "grc_greek_myth_refs",
+      "source_license": "public_domain",
+      "source_location": "lines 450–470",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0188%3Acard%3D450",
+      "source_work": "Ἀντιγόνη",
+      "source_work_key": "mnemosyne.grc.work.ἀντιγόνη",
+      "surface_patterns": [
+        "Ἀντιγόνη καὶ νόμος",
+        "νόμος καὶ Ἀντιγόνη",
+        "Ἀντιγόνη τοῦ νόμου",
+        "νόμος Ἀντιγόνης"
+      ]
+    },
+    {
       "canonical_form": "grc:literary:grc_literary_reference_ἀπολλώνιοσ_καὶ_ἰάσων_94a44785",
       "canonical_reference": "Ἀπολλώνιος καὶ Ἰάσων",
       "confidence": 0.8,
@@ -4370,6 +5018,86 @@
       "surface_patterns": [
         "Ἀπολλώνιος καὶ Ἰάσων",
         "Ἀπολλώνιος Ἰάσων"
+      ]
+    },
+    {
+      "canonical_form": "grc:literary:grc_literary_reference_ἀπόλλων_καὶ_δάφνη_73339fbc",
+      "canonical_reference": "Ἀπόλλων καὶ Δάφνη",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.grc.explanation.gr_mythological_pairs_ἀπόλλων_καὶ_δάφνη",
+      "i18n_explanations": {
+        "ar": "يشير إلى الأسطورة التي يطارد فيها أبولو الحورية دافني، التي تتحول إلى شجرة غار هربًا منه. ترمز القصة إلى الحب غير المتبادل والتحول.",
+        "de": "Bezieht sich auf den Mythos, in dem Apollon die Nymphe Daphne verfolgt, die sich in einen Lorbeerbaum verwandelt, um ihm zu entkommen. Die Geschichte steht für unerwiderte Liebe und Verwandlung.",
+        "en": "Refers to the myth in which Apollo pursues the nymph Daphne, who is transformed into a laurel tree to escape him. The story is symbolic of unrequited love and metamorphosis.",
+        "es": "Hace referencia al mito en el que Apolo persigue a la ninfa Dafne, quien se transforma en un laurel para escapar de él. La historia simboliza el amor no correspondido y la metamorfosis.",
+        "fr": "Fait référence au mythe où Apollon poursuit la nymphe Daphné, qui est transformée en laurier pour lui échapper. L'histoire symbolise l'amour non partagé et la métamorphose.",
+        "he": "מתייחס למיתוס שבו אפולון רודף אחרי הנימפה דפנה, שהופכת לעץ דפנה כדי להימלט ממנו. הסיפור מסמל אהבה נכזבת ומטמורפוזה.",
+        "it": "Si riferisce al mito in cui Apollo insegue la ninfa Dafne, che si trasforma in un albero di alloro per sfuggirgli. La storia simboleggia l'amore non corrisposto e la metamorfosi.",
+        "ja": "アポロンがニンフのダフネを追いかけ、彼女が月桂樹に変身して逃れる神話を指します。この物語は報われない愛と変身を象徴しています。",
+        "pt": "Refere-se ao mito em que Apolo persegue a ninfa Dafne, que se transforma em uma árvore de louro para escapar dele. A história simboliza o amor não correspondido e a metamorfose.",
+        "ru": "Отсылает к мифу, в котором Аполлон преследует нимфу Дафну, и она превращается в лавровое дерево, чтобы спастись. История символизирует безответную любовь и превращение.",
+        "zh": "指阿波罗追逐宁芙达芙妮，达芙妮为逃避他而变成月桂树的神话。这个故事象征着单恋和变形。"
+      },
+      "id": "grc_literary_reference_ἀπόλλων_καὶ_δάφνη_73339fbc",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The myth of Apollo and Daphne is most fully told in Ovid's Metamorphoses 1.452–567, making the attribution accurate despite Ovid being a Roman author.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Refers to the myth in which Apollo pursues the nymph Daphne, who is transformed into a laurel tree to escape him. The story is symbolic of unrequited love and metamorphosis.",
+      "source_author": "Οὐίδιος",
+      "source_author_key": "mnemosyne.grc.author.ου_ίδιοσ",
+      "source_dataset": "gr_mythological_pairs",
+      "source_license": "public_domain",
+      "source_location": "1.452–567",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Ov.+Met.+1.452",
+      "source_work": "Μεταμορφώσεις",
+      "source_work_key": "mnemosyne.grc.work.μεταμορφώσεισ",
+      "surface_patterns": [
+        "Ἀπόλλων καὶ Δάφνη",
+        "Ἀπόλλων καὶ ἡ Δάφνη",
+        "Ἀπόλλων καὶ τὴν Δάφνην",
+        "Δάφνη καὶ Ἀπόλλων"
+      ]
+    },
+    {
+      "canonical_form": "grc:literary:grc_literary_reference_ἀπόλλων_καὶ_μαρσύασ_1108d5bc",
+      "canonical_reference": "Ἀπόλλων καὶ Μαρσύας",
+      "confidence": 0.87,
+      "explanation_key": "mnemosyne.grc.explanation.gr_mythological_pairs_ἀπόλλων_καὶ_μαρσύασ",
+      "i18n_explanations": {
+        "ar": "يشير إلى المسابقة الأسطورية بين أبولو ومارسياس، حيث يتحدى مارسياس الإله في مسابقة موسيقية ويعاقب على غروره. تحذر القصة من تحدي الآلهة ومخاطر الكبرياء.",
+        "de": "Bezieht sich auf den mythischen Wettstreit zwischen Apollon und Marsyas, bei dem Marsyas den Gott zu einem musikalischen Duell herausfordert und für seinen Hochmut bestraft wird. Die Geschichte warnt vor Übermut und dem Herausfordern der Götter.",
+        "en": "Refers to the mythic contest between Apollo and Marsyas, where Marsyas challenges the god to a musical duel and is punished for his hubris. The story warns against challenging the divine and the dangers of pride.",
+        "es": "Hace referencia al mito del concurso entre Apolo y Marsias, donde Marsias desafía al dios a un duelo musical y es castigado por su arrogancia. La historia advierte sobre los peligros del orgullo y desafiar a los dioses.",
+        "fr": "Fait référence au concours mythique entre Apollon et Marsyas, où Marsyas défie le dieu à un duel musical et est puni pour son orgueil. L'histoire met en garde contre l'orgueil et le défi aux dieux.",
+        "he": "מתייחס לתחרות המיתולוגית בין אפולון למרסיאס, שבה מרסיאס מתחרה באל בדו-קרב מוזיקלי ונענש על יהירותו. הסיפור מזהיר מפני גאווה ואתגר לאלים.",
+        "it": "Si riferisce alla gara mitica tra Apollo e Marsia, in cui Marsia sfida il dio a un duello musicale e viene punito per la sua superbia. La storia mette in guardia contro l'orgoglio e la sfida agli dei.",
+        "ja": "アポロンとマルシュアスの音楽対決の神話を指し、マルシュアスは傲慢さゆえに罰せられます。この物語は神への挑戦と高慢の危険性を警告しています。",
+        "pt": "Refere-se ao mito do duelo musical entre Apolo e Marsias, em que Marsias desafia o deus e é punido por sua arrogância. A história alerta contra o orgulho e desafiar o divino.",
+        "ru": "Отсылает к мифу о состязании между Аполлоном и Марсием, где Марсий бросает вызов богу в музыкальном поединке и наказывается за свою гордыню. История предостерегает от гордости и соперничества с богами.",
+        "zh": "指阿波罗与马尔西亚斯的音乐比赛神话，马尔西亚斯因傲慢挑战神明而受到惩罚。这个故事警示人们不要傲慢和挑战神灵。"
+      },
+      "id": "grc_literary_reference_ἀπόλλων_καὶ_μαρσύασ_1108d5bc",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The contest between Apollo and Marsyas is correctly attributed to Apollodorus, Bibliotheca 1.4.2, and the surface patterns are appropriate.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Refers to the mythic contest between Apollo and Marsyas, where Marsyas challenges the god to a musical duel and is punished for his hubris. The story warns against challenging the divine and the dangers of pride.",
+      "source_author": "Ἀπολλόδωρος",
+      "source_author_key": "mnemosyne.grc.author.ἀπολλόδωροσ",
+      "source_dataset": "gr_mythological_pairs",
+      "source_license": "public_domain",
+      "source_location": "1.4.2",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Apollod.+1.4.2",
+      "source_work": "Βιβλιοθήκη",
+      "source_work_key": "mnemosyne.grc.work.βιβλιοθήκη",
+      "surface_patterns": [
+        "Ἀπόλλων καὶ Μαρσύας",
+        "Ἀπόλλων καὶ ὁ Μαρσύας",
+        "Ἀπόλλων καὶ Μαρσύαν",
+        "Ἀγών Ἀπόλλωνος καὶ Μαρσύου"
       ]
     },
     {
@@ -4670,6 +5398,52 @@
       ]
     },
     {
+      "canonical_form": "grc:literary:grc_literary_reference_ἀχιλλεὺσ_καὶ_πάτροκλοσ_d9c50b77",
+      "canonical_reference": "Ἀχιλλεὺς καὶ Πάτροκλος",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.grc.explanation.ancient_greek_myth_phrases_ἀχιλλεὺσ_καὶ_πάτροκλοσ",
+      "i18n_explanations": {
+        "ar": "أخيل وباتروكلوس مشهوران بصداقتهما العميقة في الإلياذة، ويرمزان إلى الوفاء والحزن والروابط البطولية.",
+        "de": "Achilles und Patroklos sind für ihre tiefe Freundschaft in der Ilias bekannt und symbolisieren Loyalität, Trauer und heldenhafte Verbundenheit.",
+        "en": "Achilles and Patroclus are famed for their deep friendship in the Iliad, often symbolizing loyalty, grief, and heroic bonds.",
+        "es": "Aquiles y Patroclo son famosos por su profunda amistad en la Ilíada, simbolizando la lealtad, el duelo y los lazos heroicos.",
+        "fr": "Achille et Patrocle sont célèbres pour leur profonde amitié dans l'Iliade, symbolisant la loyauté, le deuil et les liens héroïques.",
+        "he": "אכילס ופטרוקלוס מפורסמים בידידותם העמוקה באיליאדה, כסמל לנאמנות, אבל וקשרים הרואיים.",
+        "it": "Achille e Patroclo sono noti per la loro profonda amicizia nell'Iliade, simbolo di lealtà, dolore e legami eroici.",
+        "ja": "アキレウスとパトロクロスは『イリアス』での深い友情で知られ、忠誠や悲しみ、英雄的な絆の象徴です。",
+        "pt": "Aquiles e Pátroclo são conhecidos por sua profunda amizade na Ilíada, simbolizando lealdade, luto e laços heroicos.",
+        "ru": "Ахиллес и Патрокл известны своей глубокой дружбой в «Илиаде», символизируя верность, скорбь и героические узы.",
+        "zh": "阿基琉斯与帕特罗克洛斯以《伊利亚特》中的深厚友谊著称，象征忠诚、悲痛和英雄情谊。"
+      },
+      "id": "grc_literary_reference_ἀχιλλεὺσ_καὶ_πάτροκλοσ_d9c50b77",
+      "language": "grc",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The relationship between Achilles and Patroclus is central to the Iliad and the surface patterns are plausible.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Achilles and Patroclus are famed for their deep friendship in the Iliad, often symbolizing loyalty, grief, and heroic bonds.",
+      "source_author": "Ὅμηρος (Homer)",
+      "source_author_key": "mnemosyne.grc.author.ὅμηροσ_homer",
+      "source_dataset": "ancient_greek_myth_phrases",
+      "source_license": "public_domain",
+      "source_location": "Books 16–18",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hom.+Il.+16.1",
+      "source_work": "Ἰλιάς",
+      "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "surface_patterns": [
+        "Ἀχιλλεὺς καὶ Πάτροκλος",
+        "Ἀχιλλεὺς μετὰ Πατρόκλου",
+        "Ἀχιλλεὺς καὶ φίλος",
+        "Πατρόκλου θάνατος",
+        "Ἀχιλλεὺς καὶ ὁ Πατρόκλος",
+        "Ἀχιλλεὺς τοῦ Πατρόκλου"
+      ],
+      "variants": [
+        "Ἀχιλλεὺς καὶ ὁ Πατρόκλος",
+        "Ἀχιλλεὺς τοῦ Πατρόκλου"
+      ]
+    },
+    {
       "canonical_form": "grc:literary:grc_literary_reference_ἐπίκτητοσ_καὶ_σωκράτησ_c52ba7fd",
       "canonical_reference": "Ἐπίκτητος καὶ Σωκράτης",
       "confidence": 0.85,
@@ -4703,6 +5477,126 @@
       "surface_patterns": [
         "Ἐπίκτητος καὶ Σωκράτης",
         "Σωκράτης καὶ Ἐπίκτητος"
+      ]
+    },
+    {
+      "canonical_form": "grc:literary:grc_literary_reference_ἑλένη_καὶ_μενέλαοσ_8ed231d9",
+      "canonical_reference": "Ἑλένη καὶ Μενέλαος",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.grc.explanation.grc_iliad_myth_pairs_ἑλένη_καὶ_μενέλαοσ",
+      "i18n_explanations": {
+        "ar": "يشير إلى زواج هيلين وملك إسبرطة مينلاوس. علاقتهم محورية لأن اختطاف هيلين أدى إلى حرب طروادة.",
+        "de": "Dies bezieht sich auf die Ehe von Helena und Menelaos, dem König von Sparta. Ihre Beziehung ist entscheidend, da Helenas Entführung den Trojanischen Krieg auslöst.",
+        "en": "This refers to the marriage of Helen and Menelaus, king of Sparta. Their relationship is pivotal in Greek myth, as Helen's abduction by Paris leads to the Trojan War.",
+        "es": "Se refiere al matrimonio de Helena y Menelao, rey de Esparta. Su relación es clave, ya que el rapto de Helena por Paris provoca la Guerra de Troya.",
+        "fr": "Cela fait référence au mariage d'Hélène et Ménélas, roi de Sparte. Leur union est centrale, car l'enlèvement d'Hélène par Pâris déclenche la guerre de Troie.",
+        "he": "מתייחס לנישואי הלנה ומנלאוס, מלך ספרטה. יחסיהם מרכזיים כי חטיפת הלנה הובילה למלחמת טרויה.",
+        "it": "Si riferisce al matrimonio tra Elena e Menelao, re di Sparta. La loro relazione è centrale poiché il rapimento di Elena da parte di Paride causa la guerra di Troia.",
+        "ja": "これはスパルタ王メネラオスとヘレネの結婚を指します。ヘレネがパリスに連れ去られたことがトロイア戦争の発端となりました。",
+        "pt": "Refere-se ao casamento de Helena e Menelau, rei de Esparta. Sua relação é fundamental, pois o rapto de Helena por Páris inicia a Guerra de Troia.",
+        "ru": "Это относится к браку Елены и Менелая, царя Спарты. Их отношения важны, ведь похищение Елены Парисом привело к Троянской войне.",
+        "zh": "指海伦与斯巴达国王墨涅拉俄斯的婚姻。因帕里斯劫持海伦，引发了特洛伊战争，这段关系至关重要。"
+      },
+      "id": "grc_literary_reference_ἑλένη_καὶ_μενέλαοσ_8ed231d9",
+      "language": "grc",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry accurately describes the relationship and its significance in the Iliad, with appropriate surface patterns.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This refers to the marriage of Helen and Menelaus, king of Sparta. Their relationship is pivotal in Greek myth, as Helen's abduction by Paris leads to the Trojan War.",
+      "source_author": "Ὅμηρος",
+      "source_author_key": "mnemosyne.grc.author.ὅμηροσ",
+      "source_dataset": "grc_iliad_myth_pairs",
+      "source_license": "public_domain",
+      "source_location": "Book 3",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hom.+Il.+3.139",
+      "source_work": "Ἰλιάς",
+      "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "surface_patterns": [
+        "Ἑλένη καὶ Μενέλαος",
+        "Ἑλένη καὶ ὁ Μενέλαος",
+        "Ἑλένη γυνὴ Μενελάου",
+        "Ἑλένη τοῦ Μενελάου"
+      ]
+    },
+    {
+      "canonical_form": "grc:literary:grc_literary_reference_ἑλένη_καὶ_τροία_a3e36c3c",
+      "canonical_reference": "Ἑλένη καὶ Τροία",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.grc.explanation.grc_greek_myth_refs_ἑλένη_καὶ_τροία",
+      "i18n_explanations": {
+        "ar": "يشير إلى هيلين طروادة، التي أدى اختطافها على يد باريس إلى اندلاع حرب طروادة، وهو أسطورة مركزية في الأدب اليوناني ترمز إلى القوة المدمرة للجمال والرغبة.",
+        "de": "Bezieht sich auf Helena von Troja, deren Entführung durch Paris den Trojanischen Krieg auslöste, ein zentrales Motiv der griechischen Literatur für die zerstörerische Kraft von Schönheit und Verlangen.",
+        "en": "Refers to Helen of Troy, whose abduction by Paris sparked the Trojan War, a central myth in Greek literature symbolizing the destructive power of beauty and desire.",
+        "es": "Hace referencia a Helena de Troya, cuyo rapto por Paris desencadenó la Guerra de Troya, mito central de la literatura griega que simboliza el poder destructivo de la belleza y el deseo.",
+        "fr": "Fait référence à Hélène de Troie, dont l'enlèvement par Pâris déclencha la guerre de Troie, mythe central de la littérature grecque symbolisant le pouvoir destructeur de la beauté et du désir.",
+        "he": "מתייחס להלנה מטרויה, שחטיפתה בידי פאריס הציתה את מלחמת טרויה, מיתוס מרכזי בספרות היוונית המסמל את כוחם ההרסני של היופי והתשוקה.",
+        "it": "Si riferisce a Elena di Troia, il cui rapimento da parte di Paride scatenò la guerra di Troia, mito centrale della letteratura greca che simboleggia il potere distruttivo della bellezza e del desiderio.",
+        "ja": "トロイのヘレネーを指し、パリスによる誘拐がトロイア戦争の発端となった。これは美と欲望の破壊的な力を象徴するギリシャ神話の中心的な物語です。",
+        "pt": "Refere-se a Helena de Troia, cujo rapto por Páris desencadeou a Guerra de Troia, mito central da literatura grega que simboliza o poder destrutivo da beleza e do desejo.",
+        "ru": "Отсылает к Елене Троянской, похищение которой Парисом стало причиной Троянской войны, символизируя разрушительную силу красоты и страсти в греческой мифологии.",
+        "zh": "指特洛伊的海伦，她被帕里斯劫走引发了特洛伊战争，是希腊文学中象征美貌与欲望破坏力的核心神话。"
+      },
+      "id": "grc_literary_reference_ἑλένη_καὶ_τροία_a3e36c3c",
+      "language": "grc",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference accurately connects Helen and Troy as central to the Iliad, and the surface patterns are plausible and relevant.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Refers to Helen of Troy, whose abduction by Paris sparked the Trojan War, a central myth in Greek literature symbolizing the destructive power of beauty and desire.",
+      "source_author": "Ὅμηρος",
+      "source_author_key": "mnemosyne.grc.author.ὅμηροσ",
+      "source_dataset": "grc_greek_myth_refs",
+      "source_license": "public_domain",
+      "source_location": "Book 3, lines 121–242",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hom.+Il.+3.121",
+      "source_work": "Ἰλιάς",
+      "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "surface_patterns": [
+        "Ἑλένη καὶ Τροία",
+        "Ἑλένη καὶ ὁ πόλεμος τῆς Τροίας",
+        "Ἑλένη Τροία",
+        "Ἑλένη καὶ Τροίαν"
+      ]
+    },
+    {
+      "canonical_form": "grc:literary:grc_literary_reference_ἠρακλη_σ_καὶ_ἄθλοι_f376b3da",
+      "canonical_reference": "Ἠρακλῆς καὶ ἄθλοι",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.grc.explanation.grc_greek_myth_refs_ἠρακλη_σ_καὶ_ἄθλοι",
+      "i18n_explanations": {
+        "ar": "يشير إلى الأعمال الاثني عشر لهيراكليس، وهي مآثر أسطورية ترمز إلى البطولة والصبر وتجاوز التحديات المستحيلة.",
+        "de": "Bezieht sich auf die zwölf Arbeiten des Herakles, legendäre Taten, die Heldentum, Ausdauer und das Überwinden unmöglicher Herausforderungen symbolisieren.",
+        "en": "Refers to the Twelve Labors of Heracles, legendary feats symbolizing heroism, endurance, and the overcoming of impossible challenges.",
+        "es": "Hace referencia a los Doce Trabajos de Heracles, hazañas legendarias que simbolizan el heroísmo, la resistencia y la superación de desafíos imposibles.",
+        "fr": "Fait référence aux Douze Travaux d’Héraclès, exploits légendaires symbolisant l’héroïsme, l’endurance et le dépassement d’épreuves impossibles.",
+        "he": "מתייחס לשנים-עשר מעללי הרקלס, מעשים אגדיים המסמלים גבורה, התמדה והתגברות על אתגרים בלתי אפשריים.",
+        "it": "Si riferisce alle Dodici Fatiche di Eracle, imprese leggendarie che simboleggiano eroismo, resistenza e il superamento di sfide impossibili.",
+        "ja": "ヘラクレスの十二の功業を指し、これは英雄的精神、忍耐力、不可能な試練の克服を象徴します。",
+        "pt": "Refere-se aos Doze Trabalhos de Héracles, feitos lendários que simbolizam heroísmo, resistência e a superação de desafios impossíveis.",
+        "ru": "Отсылает к двенадцати подвигам Геракла, легендарным деяниям, символизирующим героизм, выносливость и преодоление невозможных испытаний.",
+        "zh": "指赫拉克勒斯的十二项功绩，这些传奇壮举象征着英雄主义、坚韧和克服不可能的挑战。"
+      },
+      "id": "grc_literary_reference_ἠρακλη_σ_καὶ_ἄθλοι_f376b3da",
+      "language": "grc",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The Twelve Labors of Heracles are correctly referenced with appropriate surface patterns and a standard ancient source.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Refers to the Twelve Labors of Heracles, legendary feats symbolizing heroism, endurance, and the overcoming of impossible challenges.",
+      "source_author": "Ἀπολλόδωρος",
+      "source_author_key": "mnemosyne.grc.author.ἀπολλόδωροσ",
+      "source_dataset": "grc_greek_myth_refs",
+      "source_license": "public_domain",
+      "source_location": "Book 2, sections 4–5",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Apollod.+2.4.1",
+      "source_work": "Βιβλιοθήκη",
+      "source_work_key": "mnemosyne.grc.work.βιβλιοθήκη",
+      "surface_patterns": [
+        "Ἠρακλῆς καὶ ἄθλοι",
+        "ἄθλοι Ἡρακλέους",
+        "Ἠρακλῆς ἄθλοι",
+        "Ἡρακλεῖοι ἄθλοι"
       ]
     },
     {
@@ -4775,6 +5669,46 @@
       "surface_patterns": [
         "Ἡρακλῆς καὶ Λάιον",
         "Ἡρακλῆς Λάιον"
+      ]
+    },
+    {
+      "canonical_form": "grc:literary:grc_literary_reference_ἡρακλη_σ_καὶ_ἀμαζόνεσ_fb5cedc0",
+      "canonical_reference": "Ἡρακλῆς καὶ Ἀμαζόνες",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.grc.explanation.gr_mythological_pairs_ἡρακλη_σ_καὶ_ἀμαζόνεσ",
+      "i18n_explanations": {
+        "ar": "يشير إلى العمل التاسع لهيراكليس، حيث يجب عليه الحصول على حزام هيبوليتا ملكة الأمازونيات. يبرز هذا الحدث لقاءات الأبطال اليونانيين مع نساء محاربات أجنبيات.",
+        "de": "Bezieht sich auf die neunte Aufgabe des Herakles, bei der er den Gürtel der Amazonenkönigin Hippolyta erlangen muss. Diese Episode betont Begegnungen zwischen griechischen Helden und fremden Kriegerinnen.",
+        "en": "Refers to Heracles' ninth labor, in which he must obtain the girdle of Hippolyta, queen of the Amazons. This episode highlights encounters between Greek heroes and foreign warrior women.",
+        "es": "Hace referencia al noveno trabajo de Heracles, en el que debe obtener el cinturón de Hipólita, reina de las amazonas. Este episodio destaca los encuentros entre héroes griegos y guerreras extranjeras.",
+        "fr": "Fait référence au neuvième travail d'Héraclès, où il doit obtenir la ceinture d'Hippolyte, reine des Amazones. Cet épisode met en avant les rencontres entre héros grecs et guerrières étrangères.",
+        "he": "מתייחס למשימה התשיעית של הרקלס, בה עליו להשיג את החגורה של היפוליטה, מלכת האמזונות. הפרק מדגיש מפגשים בין גיבורים יוונים ללוחמות זרות.",
+        "it": "Si riferisce alla nona fatica di Eracle, in cui deve ottenere la cintura di Ippolita, regina delle Amazzoni. Questo episodio evidenzia gli incontri tra eroi greci e guerriere straniere.",
+        "ja": "ヘラクレスの第九の功業で、アマゾンの女王ヒッポリュテの帯を手に入れる話を指します。このエピソードはギリシャの英雄と異国の女戦士たちの出会いを強調しています。",
+        "pt": "Refere-se ao nono trabalho de Héracles, no qual ele deve obter o cinto de Hipólita, rainha das amazonas. Esse episódio destaca encontros entre heróis gregos e guerreiras estrangeiras.",
+        "ru": "Отсылает к девятому подвигу Геракла, где он должен добыть пояс Ипполиты, царицы амазонок. Этот эпизод подчеркивает встречи греческих героев с воинственными женщинами других народов.",
+        "zh": "指赫拉克勒斯的第九项任务，他必须获得亚马逊女王希波吕忒的腰带。这个故事突出表现了希腊英雄与异族女战士的相遇。"
+      },
+      "id": "grc_literary_reference_ἡρακλη_σ_καὶ_ἀμαζόνεσ_fb5cedc0",
+      "language": "grc",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The episode of Heracles and the Amazons, specifically the quest for Hippolyta's girdle, is accurately attributed to Apollodorus, Bibliotheca 2.5.9.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Refers to Heracles' ninth labor, in which he must obtain the girdle of Hippolyta, queen of the Amazons. This episode highlights encounters between Greek heroes and foreign warrior women.",
+      "source_author": "Ἀπολλόδωρος",
+      "source_author_key": "mnemosyne.grc.author.ἀπολλόδωροσ",
+      "source_dataset": "gr_mythological_pairs",
+      "source_license": "public_domain",
+      "source_location": "2.5.9",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Apollod.+2.5.9",
+      "source_work": "Βιβλιοθήκη",
+      "source_work_key": "mnemosyne.grc.work.βιβλιοθήκη",
+      "surface_patterns": [
+        "Ἡρακλῆς καὶ Ἀμαζόνες",
+        "Ἡρακλῆς καὶ ἡ Ἀμαζών",
+        "Ἡρακλῆς καὶ Ἱππολύτη",
+        "Ἡρακλῆς καὶ τὰς Ἀμαζόνας"
       ]
     },
     {
@@ -4888,6 +5822,50 @@
       "surface_patterns": [
         "Ἰάσων καὶ Ἀργonautαί",
         "Ἰάσων Ἀργonautαί"
+      ]
+    },
+    {
+      "canonical_form": "grc:literary:grc_literary_reference_ἰάσων_καὶ_ἀργοναυ_ται_048aa06e",
+      "canonical_reference": "Ἰάσων καὶ Ἀργοναῦται",
+      "confidence": 0.87,
+      "explanation_key": "mnemosyne.grc.explanation.gr_greek_myth_pairs_ἰάσων_καὶ_ἀργοναυ_ται",
+      "i18n_explanations": {
+        "ar": "جيسون والأرغونوتيون يروون رحلة البحث عن الصوف الذهبي، وهو أسطورة يونانية تؤكد البطولة والعمل الجماعي ورضا الآلهة.",
+        "de": "Jason und die Argonauten schildern die Suche nach dem Goldenen Vlies, einen grundlegenden griechischen Abenteuer-Mythos über Heldentum, Teamarbeit und göttliche Gunst.",
+        "en": "Jason and the Argonauts recounts the quest for the Golden Fleece, a foundational Greek adventure myth highlighting heroism, teamwork, and the favor of the gods.",
+        "es": "Jasón y los Argonautas narra la búsqueda del Vellocino de Oro, un mito griego que resalta el heroísmo, el trabajo en equipo y el favor divino.",
+        "fr": "Jason et les Argonautes raconte la quête de la Toison d’or, un mythe grec fondateur mettant en avant héroïsme, esprit d’équipe et faveur des dieux.",
+        "he": "יאסון והארגונאוטים מספרים על מסע החיפוש אחרי גיזת הזהב, מיתוס יווני המדגיש גבורה, עבודת צוות וחסדי האלים.",
+        "it": "Giasone e gli Argonauti raccontano la ricerca del Vello d’Oro, un mito greco che esalta eroismo, lavoro di squadra e il favore degli dèi.",
+        "ja": "イアソンとアルゴナウタイは、黄金の羊毛を求める冒険を描いたギリシャ神話で、英雄性、協力、神々の加護を強調します。",
+        "pt": "Jasão e os Argonautas narram a busca pelo Velocino de Ouro, um mito grego fundamental que destaca heroísmo, trabalho em equipe e o favor dos deuses.",
+        "ru": "Ясон и аргонавты — миф о поиске Золотого руна, подчеркивающий героизм, командную работу и благосклонность богов.",
+        "zh": "伊阿宋与阿尔戈英雄讲述了寻找金羊毛的冒险，是强调英雄主义、团队合作和神祇庇佑的希腊神话。"
+      },
+      "id": "grc_literary_reference_ἰάσων_καὶ_ἀργοναυ_ται_048aa06e",
+      "language": "grc",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to Jason and the Argonauts is accurate, with correct attribution to Apollonius Rhodius' 'Argonautica' and appropriate surface patterns.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Jason and the Argonauts recounts the quest for the Golden Fleece, a foundational Greek adventure myth highlighting heroism, teamwork, and the favor of the gods.",
+      "source_author": "Ἀπολλώνιος Ῥόδιος",
+      "source_author_key": "mnemosyne.grc.author.ἀπολλώνιοσ_ῥόδιοσ",
+      "source_dataset": "gr_greek_myth_pairs",
+      "source_license": "public_domain",
+      "source_location": "Book 1",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Apoll.+Argon.+1.1",
+      "source_work": "Ἀργοναυτικά",
+      "source_work_key": "mnemosyne.grc.work.ἀργοναυτικά",
+      "surface_patterns": [
+        "Ἰάσων καὶ Ἀργοναῦται",
+        "οἱ Ἀργοναῦται",
+        "Ἰάσων μετὰ τῶν Ἀργοναυτῶν",
+        "ἡ Ἀργοναυτική",
+        "Ἰάσων καὶ οἱ Ἀργοναῦται"
+      ],
+      "variants": [
+        "Ἰάσων καὶ οἱ Ἀργοναῦται"
       ]
     },
     {
@@ -5121,6 +6099,46 @@
       ]
     },
     {
+      "canonical_form": "grc:literary:grc_literary_reference_ὀδυσσεὺσ_καὶ_κίρκη_0d796c87",
+      "canonical_reference": "Ὀδυσσεὺς καὶ Κίρκη",
+      "confidence": 0.87,
+      "explanation_key": "mnemosyne.grc.explanation.grc_odyssey_myth_pairs_ὀδυσσεὺσ_καὶ_κίρκη",
+      "i18n_explanations": {
+        "ar": "يشير إلى إقامة أوديسيوس لدى الساحرة سيرسي التي حولت رجاله إلى حيوانات ثم ساعدته. تتناول الحلقة موضوعات التحول والإغراء والإرشاد.",
+        "de": "Dies bezieht sich auf Odysseus’ Aufenthalt bei der Zauberin Kirke, die seine Gefährten in Tiere verwandelt und ihm später hilft. Das Thema sind Verwandlung, Versuchung und Führung.",
+        "en": "This refers to Odysseus's stay with the enchantress Circe, who transforms his men into animals and later aids him. The episode explores themes of transformation, temptation, and guidance.",
+        "es": "Se refiere a la estancia de Odiseo con la hechicera Circe, quien transforma a sus hombres en animales y luego lo ayuda. Explora temas de transformación, tentación y guía.",
+        "fr": "Cela fait référence au séjour d'Ulysse chez la magicienne Circé, qui transforme ses hommes en animaux puis l'aide. L'épisode aborde la transformation, la tentation et l'aide.",
+        "he": "מתייחס לשהות אודיסאוס אצל המכשפה קירקה, שהפכה את אנשיו לחיות ולבסוף עזרה לו. הפרק עוסק בשינוי, פיתוי והכוונה.",
+        "it": "Si riferisce al soggiorno di Ulisse presso la maga Circe, che trasforma i suoi uomini in animali e poi lo aiuta. L'episodio tratta temi di trasformazione, tentazione e guida.",
+        "ja": "これはオデュッセウスが魔女キルケーのもとに滞在し、仲間が動物に変えられた後、彼女に助けられる場面です。変身、誘惑、導きがテーマです。",
+        "pt": "Refere-se à estadia de Odisseu com a feiticeira Circe, que transforma seus homens em animais e depois o ajuda. O episódio aborda transformação, tentação e orientação.",
+        "ru": "Это относится к пребыванию Одиссея у волшебницы Кирки, которая превращает его спутников в животных и затем помогает ему. Эпизод раскрывает темы превращения, искушения и наставничества.",
+        "zh": "指奥德修斯在女巫喀耳刻处逗留，她将其同伴变为动物，后又帮助他。该情节探讨了变形、诱惑与指引的主题。"
+      },
+      "id": "grc_literary_reference_ὀδυσσεὺσ_καὶ_κίρκη_0d796c87",
+      "language": "grc",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry correctly attributes the Circe episode to Odyssey Book 10, and the surface patterns are appropriate.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This refers to Odysseus's stay with the enchantress Circe, who transforms his men into animals and later aids him. The episode explores themes of transformation, temptation, and guidance.",
+      "source_author": "Ὅμηρος",
+      "source_author_key": "mnemosyne.grc.author.ὅμηροσ",
+      "source_dataset": "grc_odyssey_myth_pairs",
+      "source_license": "public_domain",
+      "source_location": "Book 10",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hom.+Od.+10.210",
+      "source_work": "Ὀδύσσεια",
+      "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "surface_patterns": [
+        "Ὀδυσσεὺς καὶ Κίρκη",
+        "Ὀδυσσεὺς καὶ ἡ Κίρκη",
+        "Ὀδυσσεὺς παρὰ Κίρκῃ",
+        "Ὀδυσσεὺς καὶ ἡ μάγισσα Κίρκη"
+      ]
+    },
+    {
       "canonical_form": "grc:literary:grc_literary_reference_ὀρφικόσ_λόγοσ_7eff4c91",
       "canonical_reference": "ὀρφικός λόγος",
       "confidence": 0.85,
@@ -5266,6 +6284,50 @@
         "ὑποκείμενον",
         "ὑποκείμενα",
         "ὑποκείμενος"
+      ]
+    },
+    {
+      "canonical_form": "grc:proverb:grc_proverb_tradition_δαναι_δεσ_καὶ_πίθοσ_1c2fe61a",
+      "canonical_reference": "Δαναΐδες καὶ πίθος",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.grc.explanation.ancient_greek_myth_phrases_δαναι_δεσ_καὶ_πίθοσ",
+      "i18n_explanations": {
+        "ar": "الدانايدات والجرة يشير إلى أسطورة الدانايدات المحكومات بملء جرة بلا قاع، ويرمز إلى العمل العقيم أو الذي لا ينتهي.",
+        "de": "Die Danaiden und das Fass bezieht sich auf den Mythos der Danaiden, die dazu verdammt waren, ein bodenloses Fass zu füllen, als Symbol für vergebliche oder endlose Arbeit.",
+        "en": "The Danaids and the jar refers to the myth of the Danaids condemned to fill a bottomless jar, symbolizing futile or endless labor.",
+        "es": "Las Danaides y el cántaro hace referencia al mito de las Danaides, condenadas a llenar un cántaro sin fondo, simbolizando un trabajo inútil o interminable.",
+        "fr": "Les Danaïdes et la jarre fait référence au mythe des Danaïdes, condamnées à remplir une jarre sans fond, symbole d'un labeur vain ou sans fin.",
+        "he": "הדנאידות והכד מתייחסים למיתוס הדנאידות שנגזר עליהן למלא כד ללא תחתית, כסמל לעבודה סיזיפית או אינסופית.",
+        "it": "Le Danaidi e il vaso si riferisce al mito delle Danaidi, condannate a riempire un vaso senza fondo, simbolo di lavoro inutile o senza fine.",
+        "ja": "ダナイデスと壺は、底なしの壺を満たす運命を負ったダナイデスの神話を指し、無駄や終わりなき労働の象徴です。",
+        "pt": "As Danaides e o jarro refere-se ao mito das Danaides, condenadas a encher um jarro sem fundo, simbolizando trabalho fútil ou interminável.",
+        "ru": "Данайиды и сосуд — это миф о Данайидах, обречённых наполнять бездонный сосуд, символизируя бесполезный или бесконечный труд.",
+        "zh": "达娜伊得斯与罐子指的是被罚填无底罐的达娜伊得斯神话，象征徒劳或无尽的劳动。"
+      },
+      "id": "grc_proverb_tradition_δαναι_δεσ_καὶ_πίθοσ_1c2fe61a",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The myth of the Danaids and the bottomless jar is a well-known proverb in Greek tradition and is attested in Zenobius 1.68.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "The Danaids and the jar refers to the myth of the Danaids condemned to fill a bottomless jar, symbolizing futile or endless labor.",
+      "source_author": "Σχολιαστής/Παροιμιακός (Proverb tradition, e.g. Zenobius)",
+      "source_author_key": "mnemosyne.grc.author.σχολιαστήσ_παροιμιακόσ_proverb_tradition_e_g_zenob",
+      "source_dataset": "ancient_greek_myth_phrases",
+      "source_license": "public_domain",
+      "source_location": "Zenobius 1.68",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Zenob.+1.68",
+      "source_work": "Γνῶμαι Μυθικαί",
+      "source_work_key": "mnemosyne.grc.work.γνω_μαι_μυθικαί",
+      "surface_patterns": [
+        "Δαναΐδες καὶ πίθος",
+        "πίθος τῶν Δαναΐδων",
+        "Δαναΐδες",
+        "πίθος ἄπληστος",
+        "Δαναΐδων ἔργον"
+      ],
+      "variants": [
+        "Δαναΐδων ἔργον"
       ]
     },
     {

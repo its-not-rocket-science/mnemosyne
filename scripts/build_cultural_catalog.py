@@ -192,7 +192,11 @@ def _looks_biblical_or_cross_reference(raw: dict[str, Any]) -> bool:
     location = clean_text(raw.get("source_location", "")).casefold()
     if any(marker in location for marker in ("cf.", "see ", "compare ", "cross-reference")):
         return True
-    return any(marker in haystack for marker in ("canto", "inferno", "purgatorio", "paradiso"))
+    if any(marker in haystack for marker in ("canto", "inferno", "purgatorio", "paradiso")):
+        return True
+    # Citing multiple works (source_work lists more than one, comma-separated)
+    # legitimately needs one semicolon-separated location per work.
+    return "," in clean_text(raw.get("source_work", ""))
 
 
 def append_rights_warnings(raw: dict[str, Any], idx: int, lang: str, warnings: list[str]) -> None:
