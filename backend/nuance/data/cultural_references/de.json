@@ -894,6 +894,43 @@
       ]
     },
     {
+      "canonical_form": "de:classical:de_classical_or_scriptural_allusion_die_göttliche_komödie_0a491aed",
+      "canonical_reference": "Die göttliche Komödie",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.de.explanation.gottliche_komodie_phrases_die_göttliche_komödie",
+      "i18n_explanations": {
+        "ar": "قصيدة ملحمية لدانتي أليغييري تصف الرحلة عبر الجحيم، المطهر، والجنة، مما يرمز إلى رحلة الروح نحو الله.",
+        "de": "Ein episches Gedicht von Dante Alighieri, das die Reise durch die Hölle, das Fegefeuer und das Paradies beschreibt und die Reise der Seele zu Gott symbolisiert.",
+        "en": "An epic poem by Dante Alighieri that describes the journey through Hell, Purgatory, and Paradise, symbolizing the soul's journey towards God.",
+        "es": "Un poema épico de Dante Alighieri que describe el viaje a través del Infierno, el Purgatorio y el Paraíso, simbolizando el viaje del alma hacia Dios.",
+        "fr": "Un poème épique de Dante Alighieri qui décrit le voyage à travers l'Enfer, le Purgatoire et le Paradis, symbolisant le voyage de l'âme vers Dieu.",
+        "he": "שיר אפי מאת דאנטה אליגיירי שמתאר את המסע דרך הגיהנום, הטיהור והגן עדן, המסמל את מסע הנשמה לעבר אלוהים.",
+        "it": "Un poema epico di Dante Alighieri che descrive il viaggio attraverso l'Inferno, il Purgatorio e il Paradiso, simboleggiando il viaggio dell'anima verso Dio.",
+        "ja": "ダンテ・アリギエーリの叙事詩で、地獄、煉獄、天国を通る旅を描き、魂の神への旅を象徴しています。",
+        "pt": "Um poema épico de Dante Alighieri que descreve a jornada pelo Inferno, Purgatório e Paraíso, simbolizando a jornada da alma em direção a Deus.",
+        "ru": "Эпическая поэма Данте Алигьери, описывающая путешествие через Ад, Чистилище и Рай, символизирующая путь души к Богу.",
+        "zh": "但丁·阿利吉耶里的史诗，描述了穿越地狱、炼狱和天堂的旅程，象征着灵魂通向上帝的旅程。"
+      },
+      "id": "de_classical_or_scriptural_allusion_die_göttliche_komödie_0a491aed",
+      "language": "de",
+      "learner_level": "C2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Dante Alighieri and the description of the epic poem's themes are accurate and verifiable.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "An epic poem by Dante Alighieri that describes the journey through Hell, Purgatory, and Paradise, symbolizing the soul's journey towards God.",
+      "source_author": "Dante Alighieri",
+      "source_author_key": "mnemosyne.de.author.dante_alighieri",
+      "source_dataset": "gottliche_komodie_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/8800",
+      "source_work": "La Divina Commedia",
+      "source_work_key": "mnemosyne.de.work.la_divina_commedia",
+      "surface_patterns": [
+        "Die göttliche Komödie",
+        "göttliche Komödie"
+      ]
+    },
+    {
       "canonical_form": "de:classical:de_classical_or_scriptural_allusion_die_hexe_von_endor_fffa3985",
       "canonical_reference": "Die Hexe von Endor",
       "confidence": 0.85,
@@ -3594,6 +3631,43 @@
       ]
     },
     {
+      "canonical_form": "de:cultural:de_cultural_reference_der_goldene_schnitt_43121ea5",
+      "canonical_reference": "Der goldene Schnitt",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.cultural_references_der_goldene_schnitt",
+      "i18n_explanations": {
+        "ar": "تشير 'النسبة الذهبية' إلى نسبة رياضية توجد عادة في الطبيعة والفن والهندسة المعمارية، مما يرمز إلى الجمال والانسجام. لها تداعيات كبيرة في الجماليات.",
+        "de": "The 'golden ratio' is a mathematical ratio commonly found in nature, art, and architecture, symbolizing beauty and harmony. It has significant implications in aesthetics.",
+        "en": "The 'golden ratio' is a mathematical ratio commonly found in nature, art, and architecture, symbolizing beauty and harmony. It has significant implications in aesthetics.",
+        "es": "La 'proporción áurea' es una relación matemática que se encuentra comúnmente en la naturaleza, el arte y la arquitectura, simbolizando la belleza y la armonía. Tiene implicaciones significativas en la estética.",
+        "fr": "Le 'nombre d'or' est un rapport mathématique que l'on trouve couramment dans la nature, l'art et l'architecture, symbolisant la beauté et l'harmonie. Il a des implications significatives en esthétique.",
+        "he": "'היחס הזהב' הוא יחס מתמטי הנמצא בדרך כלל בטבע, באמנות ובאדריכלות, המסמל יופי והרמוניה. יש לו השלכות משמעותיות באסתטיקה.",
+        "it": "La 'proporzione aurea' è un rapporto matematico comunemente trovato in natura, arte e architettura, simboleggiando bellezza e armonia. Ha implicazioni significative nell'estetica.",
+        "ja": "「黄金比」は、自然、芸術、建築に一般的に見られる数学的比率で、美しさと調和を象徴しています。美学において重要な意味を持ちます。",
+        "pt": "A 'proporção áurea' é uma relação matemática comumente encontrada na natureza, arte e arquitetura, simbolizando beleza e harmonia. Tem implicações significativas na estética.",
+        "ru": "«Золотое сечение» — это математическое соотношение, которое часто встречается в природе, искусстве и архитектуре, символизируя красоту и гармонию. Оно имеет значительные последствия в эстетике.",
+        "zh": "“黄金比例”是一种在自然、艺术和建筑中常见的数学比例，象征着美和和谐。它在美学中具有重要意义。"
+      },
+      "id": "de_cultural_reference_der_goldene_schnitt_43121ea5",
+      "language": "de",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, with clear implications in aesthetics and mathematics.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "The 'golden ratio' is a mathematical ratio commonly found in nature, art, and architecture, symbolizing beauty and harmony. It has significant implications in aesthetics.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.de.author.various",
+      "source_dataset": "cultural_references",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.de.work.various",
+      "surface_patterns": [
+        "goldene Schnitt",
+        "der goldene Schnitt"
+      ]
+    },
+    {
       "canonical_form": "de:cultural:de_cultural_reference_der_gute_kamerad_b2225328",
       "canonical_reference": "Der gute Kamerad",
       "confidence": 0.85,
@@ -3630,6 +3704,43 @@
         "ein guter Kamerad",
         "der Kamerad",
         "Guter Kamerad"
+      ]
+    },
+    {
+      "canonical_form": "de:cultural:de_cultural_reference_der_könig_ist_tot_es_lebe_der_könig_17b59778",
+      "canonical_reference": "Der König ist tot, es lebe der König",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.monarchy_phrases_der_könig_ist_tot_es_lebe_der_kön",
+      "i18n_explanations": {
+        "ar": "تترجم هذه العبارة إلى 'الملك ميت، ليعيش الملك' وتدل على استمرارية الملكية على الرغم من وفاة الملك.",
+        "de": "Diese Phrase wird mit 'Der König ist tot, es lebe der König' übersetzt und bedeutet die Kontinuität der Monarchie trotz des Todes eines Monarchen.",
+        "en": "This phrase translates to 'The king is dead, long live the king' and signifies the continuity of the monarchy despite the death of a monarch.",
+        "es": "Esta frase se traduce como 'El rey ha muerto, ¡viva el rey!' y significa la continuidad de la monarquía a pesar de la muerte de un monarca.",
+        "fr": "Cette phrase se traduit par 'Le roi est mort, vive le roi' et signifie la continuité de la monarchie malgré la mort d'un monarque.",
+        "he": "ביטוי זה מתורגם ל'המלך מת, יחי המלך' ומסמל את המשכיות המונרכיה למרות מותו של המלך.",
+        "it": "Questa frase si traduce in 'Il re è morto, viva il re' e significa la continuità della monarchia nonostante la morte di un monarca.",
+        "ja": "このフレーズは「王は死んだ、王万歳」と訳され、君主の死にもかかわらず君主制の継続を意味します。",
+        "pt": "Esta frase se traduz como 'O rei está morto, viva o rei' e significa a continuidade da monarquia apesar da morte de um monarca.",
+        "ru": "Эта фраза переводится как 'Король умер, да здравствует король' и означает непрерывность монархии, несмотря на смерть монарха.",
+        "zh": "这个短语翻译为“国王已死，国王万岁”，意味着尽管君主去世，君主制仍然延续。"
+      },
+      "id": "de_cultural_reference_der_könig_ist_tot_es_lebe_der_könig_17b59778",
+      "language": "de",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, reflecting a well-known phrase related to monarchy.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This phrase translates to 'The king is dead, long live the king' and signifies the continuity of the monarchy despite the death of a monarch.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.de.author.various",
+      "source_dataset": "monarchy_phrases",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.de.work.various",
+      "surface_patterns": [
+        "König ist tot, es lebe der König",
+        "der König ist tot, es lebe der König"
       ]
     },
     {
@@ -4486,6 +4597,43 @@
       ]
     },
     {
+      "canonical_form": "de:cultural:de_cultural_reference_lebenskunst_027e5274",
+      "canonical_reference": "Lebenskunst",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.german_cultural_concepts_lebenskunst",
+      "i18n_explanations": {
+        "ar": "Lebenskunst تشير إلى فن العيش بشكل جيد وهي مفهوم مهم في الفلسفة والأدب الألماني، مما يبرز أهمية تحقيق الذات والحياة الأخلاقية.",
+        "de": "Lebenskunst bezeichnet die Kunst, gut zu leben, und ist ein bedeutendes Konzept in der deutschen Philosophie und Literatur, das die Bedeutung von persönlicher Erfüllung und ethischem Leben betont.",
+        "en": "Lebenskunst refers to the art of living well and is a significant concept in German philosophy and literature, emphasizing the importance of personal fulfillment and ethical living.",
+        "es": "Lebenskunst se refiere al arte de vivir bien y es un concepto significativo en la filosofía y literatura alemanas, enfatizando la importancia del cumplimiento personal y la vida ética.",
+        "fr": "Lebenskunst désigne l'art de bien vivre et est un concept important dans la philosophie et la littérature allemandes, soulignant l'importance de l'épanouissement personnel et de la vie éthique.",
+        "he": "Lebenskunst מתייחס לאמנות לחיות היטב והוא מושג משמעותי בפילוסופיה ובספרות הגרמנית, המדגיש את החשיבות של מימוש אישי וחיים אתיים.",
+        "it": "Lebenskunst si riferisce all'arte di vivere bene ed è un concetto significativo nella filosofia e nella letteratura tedesca, che enfatizza l'importanza della realizzazione personale e della vita etica.",
+        "ja": "Lebenskunstは、良く生きる技術を指し、ドイツの哲学と文学において重要な概念であり、個人の充実と倫理的な生活の重要性を強調しています。",
+        "pt": "Lebenskunst refere-se à arte de viver bem e é um conceito significativo na filosofia e literatura alemãs, enfatizando a importância da realização pessoal e da vida ética.",
+        "ru": "Lebenskunst относится к искусству хорошо жить и является значимой концепцией в немецкой философии и литературе, подчеркивающей важность личного удовлетворения и этичной жизни.",
+        "zh": "Lebenskunst指的是良好生活的艺术，是德国哲学和文学中的一个重要概念，强调个人满足和伦理生活的重要性。"
+      },
+      "id": "de_cultural_reference_lebenskunst_027e5274",
+      "language": "de",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and the concept is significant in German philosophy and literature.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Lebenskunst refers to the art of living well and is a significant concept in German philosophy and literature, emphasizing the importance of personal fulfillment and ethical living.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.de.author.various",
+      "source_dataset": "german_cultural_concepts",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.de.work.various",
+      "surface_patterns": [
+        "Lebenskunst",
+        "die Kunst des Lebens"
+      ]
+    },
+    {
       "canonical_form": "de:cultural:de_cultural_reference_mann_im_mond_88178adf",
       "canonical_reference": "Mann im Mond",
       "confidence": 0.9,
@@ -4869,6 +5017,43 @@
       ]
     },
     {
+      "canonical_form": "de:cultural:de_cultural_reference_schilda_b3b41e0f",
+      "canonical_reference": "Schilda",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.german_folklore_schilda",
+      "i18n_explanations": {
+        "ar": "تشير Schilda إلى مدينة خيالية في الفولكلور الألماني معروفة بسكانها الأغبياء، وغالبًا ما تستخدم لتوضيح العبث أو الحماقة. مصطلح 'Schildbürger' مرادف للغباء.",
+        "de": "Schilda bezieht sich auf eine fiktive Stadt im deutschen Volksmund, die für ihre törichten Einwohner bekannt ist und oft verwendet wird, um Absurdität oder Torheit zu veranschaulichen. Der Begriff 'Schildbürger' ist synonym mit Dummheit.",
+        "en": "Schilda refers to a fictional town in German folklore known for its foolish inhabitants, often used to illustrate absurdity or folly. The term 'Schildbürger' is synonymous with foolishness.",
+        "es": "Schilda se refiere a una ciudad ficticia en el folclore alemán conocida por sus habitantes tontos, a menudo utilizada para ilustrar la absurdidad o la necedad. El término 'Schildbürger' es sinónimo de necedad.",
+        "fr": "Schilda désigne une ville fictive du folklore allemand connue pour ses habitants fous, souvent utilisée pour illustrer l'absurdité ou la folie. Le terme 'Schildbürger' est synonyme de bêtise.",
+        "he": "Schilda מתייחס לעיירה בדיונית בפולקלור הגרמני הידועה בתושביה הטיפשים, ולעיתים קרובות משמשת להמחיש אבסורד או טיפשות. המונח 'Schildbürger' הוא נרדף לטיפשות.",
+        "it": "Schilda si riferisce a una città fittizia nel folklore tedesco nota per i suoi abitanti sciocchi, spesso usata per illustrare l'assurdità o la follia. Il termine 'Schildbürger' è sinonimo di stupidità.",
+        "ja": "シルダは、ドイツの民話に登場する架空の町で、愚かな住民で知られ、しばしば不条理や愚かさを示すために使われます。 'シルドビュルガー'という用語は愚かさの同義語です。",
+        "pt": "Schilda refere-se a uma cidade fictícia no folclore alemão conhecida por seus habitantes tolos, frequentemente usada para ilustrar a absurdidade ou a tolice. O termo 'Schildbürger' é sinônimo de tolice.",
+        "ru": "Шильда относится к вымышленному городу в немецком фольклоре, известному своими глупыми жителями, часто используемому для иллюстрации абсурда или глупости. Термин 'Шильдбургер' синонимичен глупости.",
+        "zh": "Schilda指的是德国民间传说中的一个虚构城镇，以其愚蠢的居民而闻名，常用于说明荒谬或愚蠢。术语'Schildbürger'与愚蠢同义。"
+      },
+      "id": "de_cultural_reference_schilda_b3b41e0f",
+      "language": "de",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to Schilda and Schildbürger is accurate and verifiable within German folklore.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Schilda refers to a fictional town in German folklore known for its foolish inhabitants, often used to illustrate absurdity or folly. The term 'Schildbürger' is synonymous with foolishness.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.de.author.various",
+      "source_dataset": "german_folklore",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.de.work.various",
+      "surface_patterns": [
+        "Schilda",
+        "Schildbürger"
+      ]
+    },
+    {
       "canonical_form": "de:cultural:de_cultural_reference_schiller_und_goethe_d04d5249",
       "canonical_reference": "Schiller und Goethe",
       "confidence": 0.9,
@@ -5054,6 +5239,43 @@
       ]
     },
     {
+      "canonical_form": "de:cultural:de_cultural_reference_volksgeist_a87af000",
+      "canonical_reference": "Volksgeist",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.german_cultural_concepts_volksgeist",
+      "i18n_explanations": {
+        "ar": "Volksgeist تشير إلى روح الشعب أو الطابع الوطني، وهو مفهوم مركزي في الرومانسية الألمانية والهوية الثقافية، مما يبرز تفرد ثقافة الأمة.",
+        "de": "Volksgeist bezeichnet den Geist des Volkes oder den nationalen Charakter, ein zentrales Konzept der deutschen Romantik und kulturellen Identität, das die Einzigartigkeit einer Nation betont.",
+        "en": "Volksgeist refers to the spirit of the people or national character, a concept central to German Romanticism and cultural identity, emphasizing the uniqueness of a nation's culture.",
+        "es": "Volksgeist se refiere al espíritu del pueblo o carácter nacional, un concepto central al romanticismo alemán y la identidad cultural, enfatizando la singularidad de la cultura de una nación.",
+        "fr": "Volksgeist désigne l'esprit du peuple ou le caractère national, un concept central au romantisme allemand et à l'identité culturelle, soulignant l'unicité de la culture d'une nation.",
+        "he": "Volksgeist מתייחס לרוח העם או לאופי הלאומי, מושג מרכזי ברומנטיקה הגרמנית ובזהות תרבותית, המדגיש את הייחודיות של תרבות האומה.",
+        "it": "Volksgeist si riferisce allo spirito del popolo o al carattere nazionale, un concetto centrale nel romanticismo tedesco e nell'identità culturale, che enfatizza l'unicità della cultura di una nazione.",
+        "ja": "Volksgeistは、国民の精神または国民性を指し、ドイツのロマン主義と文化的アイデンティティの中心的な概念であり、国の文化の独自性を強調しています。",
+        "pt": "Volksgeist refere-se ao espírito do povo ou caráter nacional, um conceito central ao romantismo alemão e à identidade cultural, enfatizando a singularidade da cultura de uma nação.",
+        "ru": "Volksgeist относится к духу народа или национальному характеру, центральной концепции немецкого романтизма и культурной идентичности, подчеркивающей уникальность культуры нации.",
+        "zh": "Volksgeist指的是人民的精神或民族性，是德国浪漫主义和文化认同的核心概念，强调一个国家文化的独特性。"
+      },
+      "id": "de_cultural_reference_volksgeist_a87af000",
+      "language": "de",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The concept of Volksgeist is accurately described and is central to German Romanticism.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Volksgeist refers to the spirit of the people or national character, a concept central to German Romanticism and cultural identity, emphasizing the uniqueness of a nation's culture.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.de.author.various",
+      "source_dataset": "german_cultural_concepts",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.de.work.various",
+      "surface_patterns": [
+        "Volksgeist",
+        "der Geist des Volkes"
+      ]
+    },
+    {
       "canonical_form": "de:cultural:de_cultural_reference_wanderer_über_dem_nebelmeer_95db268e",
       "canonical_reference": "Wanderer über dem Nebelmeer",
       "confidence": 0.9,
@@ -5116,6 +5338,44 @@
       ],
       "variants": [
         "Klassik"
+      ]
+    },
+    {
+      "canonical_form": "de:cultural:de_cultural_reference_weltanschauung_62731969",
+      "canonical_reference": "Weltanschauung",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.german_philosophy_terms_weltanschauung",
+      "i18n_explanations": {
+        "ar": "مصطلح 'Weltanschauung' يشير إلى رؤية شاملة للعالم أو فلسفة حياة، وغالبًا ما تشمل معتقدات حول طبيعة الواقع والوجود. إنه ذو أهمية في الفلسفة والثقافة الألمانية، خاصة في المناقشات حول الوجودية والمثالية.",
+        "de": "Der Begriff 'Weltanschauung' bezieht sich auf eine umfassende Weltanschauung oder Lebensphilosophie, die oft Überzeugungen über die Natur der Realität und Existenz umfasst. Er ist in der deutschen Philosophie und Kultur von Bedeutung, insbesondere in Diskussionen über Existentialismus und Idealismus.",
+        "en": "The term 'Weltanschauung' refers to a comprehensive worldview or philosophy of life, often encompassing beliefs about the nature of reality and existence. It is significant in German philosophy and culture, particularly in discussions of existentialism and idealism.",
+        "es": "El término 'Weltanschauung' se refiere a una visión del mundo o filosofía de vida integral, que a menudo abarca creencias sobre la naturaleza de la realidad y la existencia. Es significativo en la filosofía y cultura alemanas, especialmente en discusiones sobre el existencialismo y el idealismo.",
+        "fr": "Le terme 'Weltanschauung' désigne une vision du monde ou une philosophie de vie globale, englobant souvent des croyances sur la nature de la réalité et de l'existence. Il est significatif dans la philosophie et la culture allemandes, notamment dans les discussions sur l'existentialisme et l'idéalisme.",
+        "he": "המונח 'Weltanschauung' מתייחס לעולם מושגים כולל או לפילוסופיה של חיים, שלעתים קרובות כוללת אמונות לגבי טבע המציאות והקיום. הוא משמעותי בפילוסופיה ובתרבות הגרמנית, במיוחד בדיונים על אקזיטנציאליזם ואידיאלים.",
+        "it": "Il termine 'Weltanschauung' si riferisce a una visione del mondo o filosofia di vita complessiva, che spesso comprende credenze sulla natura della realtà e dell'esistenza. È significativo nella filosofia e cultura tedesca, in particolare nelle discussioni sull'esistenzialismo e sull'idealismo.",
+        "ja": "'Weltanschauung'という用語は、現実と存在の本質についての信念を含む、包括的な世界観や人生哲学を指します。これはドイツの哲学と文化において重要であり、特に実存主義や観念論の議論で重要です。",
+        "pt": "O termo 'Weltanschauung' refere-se a uma visão de mundo ou filosofia de vida abrangente, muitas vezes englobando crenças sobre a natureza da realidade e da existência. É significativo na filosofia e cultura alemãs, especialmente em discussões sobre existencialismo e idealismo.",
+        "ru": "Термин 'Weltanschauung' относится к комплексному мировоззрению или философии жизни, часто охватывающему убеждения о природе реальности и существования. Он имеет значение в немецкой философии и культуре, особенно в обсуждениях экзистенциализма и идеализма.",
+        "zh": "'Weltanschauung'一词指的是一种全面的世界观或生活哲学，通常包含对现实和存在本质的信念。它在德国哲学和文化中具有重要意义，尤其是在关于存在主义和唯心主义的讨论中。"
+      },
+      "id": "de_cultural_reference_weltanschauung_62731969",
+      "language": "de",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, and the surface patterns correctly reflect the term's usage in German philosophy and culture.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "The term 'Weltanschauung' refers to a comprehensive worldview or philosophy of life, often encompassing beliefs about the nature of reality and existence. It is significant in German philosophy and culture, particularly in discussions of existentialism and idealism.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.de.author.various",
+      "source_dataset": "german_philosophy_terms",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.de.work.various",
+      "surface_patterns": [
+        "Weltanschauung",
+        "eine Weltanschauung",
+        "Weltanschauungen"
       ]
     },
     {
@@ -5187,6 +5447,44 @@
       "source_work_key": "mnemosyne.de.work.various",
       "surface_patterns": [
         "Wendepunkt"
+      ]
+    },
+    {
+      "canonical_form": "de:cultural:de_cultural_reference_wunderkind_fff3b7a3",
+      "canonical_reference": "Wunderkind",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.german_cultural_terms_wunderkind",
+      "i18n_explanations": {
+        "ar": "مصطلح 'Wunderkind' يعني حرفيًا 'طفل معجزة' ويستخدم لوصف طفل أو شاب موهوب بشكل استثنائي أو ناضج مبكرًا. له دلالة ثقافية في المناقشات حول الموهبة والإنجاز في مجالات مختلفة، بما في ذلك الموسيقى والفنون.",
+        "de": "Der Begriff 'Wunderkind' bedeutet wörtlich 'Wunderkind' und wird verwendet, um ein Kind oder einen jungen Menschen zu beschreiben, der außergewöhnlich talentiert oder frühreif ist. Er hat kulturelle Bedeutung in Diskussionen über Talent und Leistung in verschiedenen Bereichen, einschließlich Musik und Kunst.",
+        "en": "The term 'Wunderkind' literally means 'wonder child' and is used to describe a child or young person who is exceptionally talented or precocious. It has cultural significance in discussions of talent and achievement in various fields, including music and arts.",
+        "es": "El término 'Wunderkind' significa literalmente 'niño prodigio' y se utiliza para describir a un niño o joven que es excepcionalmente talentoso o precoz. Tiene un significado cultural en discusiones sobre talento y logro en diversos campos, incluida la música y las artes.",
+        "fr": "Le terme 'Wunderkind' signifie littéralement 'enfant prodige' et est utilisé pour décrire un enfant ou un jeune exceptionnellement talentueux ou précoce. Il a une signification culturelle dans les discussions sur le talent et la réussite dans divers domaines, y compris la musique et les arts.",
+        "he": "המונח 'Wunderkind' מתייחס מילולית ל'ילד פלא' ומשמש לתיאור ילד או צעיר שהוא מוכשר במיוחד או מוקדם בשכלו. יש לו משמעות תרבותית בדיונים על כישרון והישגים בתחומים שונים, כולל מוזיקה ואומניות.",
+        "it": "Il termine 'Wunderkind' significa letteralmente 'bambino prodigio' ed è usato per descrivere un bambino o un giovane eccezionalmente talentuoso o precoce. Ha un significato culturale nelle discussioni sul talento e sul successo in vari campi, tra cui musica e arti.",
+        "ja": "'Wunderkind'という用語は文字通り「驚異の子供」を意味し、非常に才能があるか早熟な子供や若者を表すために使用されます。音楽や芸術を含むさまざまな分野での才能と成果に関する議論において文化的な重要性を持っています。",
+        "pt": "O termo 'Wunderkind' significa literalmente 'criança prodígio' e é usado para descrever uma criança ou jovem que é excepcionalmente talentoso ou precoce. Tem significado cultural em discussões sobre talento e realização em várias áreas, incluindo música e artes.",
+        "ru": "Термин 'Wunderkind' в буквальном смысле означает 'чудо-ребенок' и используется для описания ребенка или молодого человека, обладающего исключительными талантами или рано развившегося. Он имеет культурное значение в обсуждениях о таланте и достижениях в различных областях, включая музыку и искусство.",
+        "zh": "'Wunderkind'一词字面意思是'神童'，用于描述一个异常有才华或早熟的孩子或年轻人。在音乐和艺术等各个领域的才能和成就讨论中具有文化意义。"
+      },
+      "id": "de_cultural_reference_wunderkind_fff3b7a3",
+      "language": "de",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, and the surface patterns correctly reflect the term's cultural significance.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "The term 'Wunderkind' literally means 'wonder child' and is used to describe a child or young person who is exceptionally talented or precocious. It has cultural significance in discussions of talent and achievement in various fields, including music and arts.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.de.author.various",
+      "source_dataset": "german_cultural_terms",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.de.work.various",
+      "surface_patterns": [
+        "Wunderkind",
+        "das Wunderkind",
+        "Wunderkinder"
       ]
     },
     {
@@ -5937,6 +6235,45 @@
         "Das Schloss",
         "Schloss",
         "Das Schloss von Franz Kafka"
+      ]
+    },
+    {
+      "canonical_form": "de:literary:de_literary_reference_das_tapfere_schneiderlein_44aa39c4",
+      "canonical_reference": "Das tapfere Schneiderlein",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.grimms_fairy_tales_das_tapfere_schneiderlein",
+      "i18n_explanations": {
+        "ar": "هذه الحكاية الخرافية، أيضًا من إخوة غريم، تحكي قصة خياط شجاع يهزم عمالقة ويفوز بأميرة، مما يرمز إلى الذكاء والشجاعة.",
+        "de": "Dieses Märchen, ebenfalls von den Brüdern Grimm, erzählt die Geschichte eines mutigen Schneiders, der Riesen besiegt und eine Prinzessin gewinnt, was Cleverness und Tapferkeit symbolisiert.",
+        "en": "This fairy tale, also by the Brothers Grimm, tells the story of a brave tailor who defeats giants and wins a princess, symbolizing cleverness and bravery.",
+        "es": "Este cuento de hadas, también de los Hermanos Grimm, cuenta la historia de un valiente sastre que derrota gigantes y gana una princesa, simbolizando astucia y valentía.",
+        "fr": "Ce conte de fées, également des frères Grimm, raconte l'histoire d'un brave tailleur qui vainc des géants et gagne une princesse, symbolisant l'ingéniosité et le courage.",
+        "he": "אגדה זו, גם היא מאת האחים גרים, מספרת את סיפורו של חייט אמיץ שמביס ענקים וזוכה בא princess, המסמל חוכמה ואומץ.",
+        "it": "Questa fiaba, anch'essa dei Fratelli Grimm, racconta la storia di un coraggioso sarto che sconfigge giganti e conquista una principessa, simboleggiando astuzia e coraggio.",
+        "ja": "この童話もグリム兄弟によるもので、勇敢な仕立て屋が巨人を倒し、王女を手に入れる物語で、賢さと勇気を象徴しています。",
+        "pt": "Este conto de fadas, também dos Irmãos Grimm, conta a história de um valente alfaiate que derrota gigantes e ganha uma princesa, simbolizando astúcia e bravura.",
+        "ru": "Эта сказка, также написанная братьями Гримм, рассказывает о смелом портном, который побеждает гигантов и завоевывает принцессу, символизируя ум и храбрость.",
+        "zh": "这个童话也是格林兄弟的作品，讲述了一个勇敢的裁缝打败巨人并赢得公主的故事，象征着聪明和勇敢。"
+      },
+      "id": "de_literary_reference_das_tapfere_schneiderlein_44aa39c4",
+      "language": "de",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to the Brothers Grimm is accurate, and the description of the tale aligns with the source material.",
+      "reference_type": "literary_reference",
+      "register": "common",
+      "short_explanation": "This fairy tale, also by the Brothers Grimm, tells the story of a brave tailor who defeats giants and wins a princess, symbolizing cleverness and bravery.",
+      "source_author": "Jacob and Wilhelm Grimm",
+      "source_author_key": "mnemosyne.de.author.jacob_and_wilhelm_grimm",
+      "source_dataset": "grimms_fairy_tales",
+      "source_license": "public_domain",
+      "source_location": "Tale #36",
+      "source_url": "https://www.gutenberg.org/ebooks/2591",
+      "source_work": "Grimm's Fairy Tales",
+      "source_work_key": "mnemosyne.de.work.grimm_s_fairy_tales",
+      "surface_patterns": [
+        "Das tapfere Schneiderlein",
+        "tapfere Schneiderlein",
+        "Das tapfere Schneiderlein Geschichte"
       ]
     },
     {
@@ -6718,6 +7055,43 @@
       ]
     },
     {
+      "canonical_form": "de:literary:de_literary_reference_der_schatz_im_silbersee_a862d242",
+      "canonical_reference": "Der Schatz im Silbersee",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.karl_may_schatz_der_schatz_im_silbersee",
+      "i18n_explanations": {
+        "ar": "رواية لكارل ماي تتناول مغامرات أولد شاترهاند وصديقه وينيتو في الغرب الأمريكي، مع التركيز على مواضيع الصداقة والعدالة.",
+        "de": "Ein Roman von Karl May, der die Abenteuer von Old Shatterhand und seinem Freund Winnetou im amerikanischen Westen erzählt und Themen wie Freundschaft und Gerechtigkeit hervorhebt.",
+        "en": "A novel by Karl May featuring the adventures of Old Shatterhand and his friend Winnetou in the American West, highlighting themes of friendship and justice.",
+        "es": "Una novela de Karl May que presenta las aventuras de Old Shatterhand y su amigo Winnetou en el Oeste americano, destacando temas de amistad y justicia.",
+        "fr": "Un roman de Karl May mettant en scène les aventures d'Old Shatterhand et de son ami Winnetou dans l'Ouest américain, mettant en avant des thèmes d'amitié et de justice.",
+        "he": "רומן מאת קרל מאי המציג את הרפתקאותיו של אולד שטרטהנד וחברו וינאטו במערב האמריקאי, מדגיש נושאים של חברות וצדק.",
+        "it": "Un romanzo di Karl May che presenta le avventure di Old Shatterhand e del suo amico Winnetou nel Far West americano, evidenziando temi di amicizia e giustizia.",
+        "ja": "カール・マイによる小説で、アメリカ西部でのオールド・シャッターハンドと彼の友人ウィンネトゥの冒険を描き、友情と正義のテーマを強調しています。",
+        "pt": "Um romance de Karl May que apresenta as aventuras de Old Shatterhand e seu amigo Winnetou no Velho Oeste americano, destacando temas de amizade e justiça.",
+        "ru": "Роман Карла Мая, в котором рассказывается о приключениях Олд Шаттерхенда и его друга Виннету на Диком Западе, подчеркивающий темы дружбы и справедливости.",
+        "zh": "卡尔·梅的小说，讲述了老沙特汉德和他的朋友温尼图在美国西部的冒险，突出了友谊和正义的主题。"
+      },
+      "id": "de_literary_reference_der_schatz_im_silbersee_a862d242",
+      "language": "de",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Karl May and the description of the novel are accurate and verifiable.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A novel by Karl May featuring the adventures of Old Shatterhand and his friend Winnetou in the American West, highlighting themes of friendship and justice.",
+      "source_author": "Karl May",
+      "source_author_key": "mnemosyne.de.author.karl_may",
+      "source_dataset": "karl_may_schatz",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/12346",
+      "source_work": "Der Schatz im Silbersee",
+      "source_work_key": "mnemosyne.de.work.der_schatz_im_silbersee",
+      "surface_patterns": [
+        "Der Schatz im Silbersee",
+        "Schatz im Silbersee"
+      ]
+    },
+    {
       "canonical_form": "de:literary:de_literary_reference_der_schimmelreiter_c8d42c39",
       "canonical_reference": "Der Schimmelreiter",
       "confidence": 0.85,
@@ -7085,6 +7459,82 @@
       "surface_patterns": [
         "Der Vorleser",
         "Vorleser"
+      ]
+    },
+    {
+      "canonical_form": "de:literary:de_literary_reference_der_weg_ins_offene_a42277aa",
+      "canonical_reference": "Der Weg ins Offene",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.weg_ins_offene_phrases_der_weg_ins_offene",
+      "i18n_explanations": {
+        "ar": "رواية لهيرمان هيسه تستكشف الرحلة نحو اكتشاف الذات والتنوير.",
+        "de": "Ein Roman von Hermann Hesse, der die Reise zur Selbstentdeckung und Erleuchtung erkundet.",
+        "en": "A novel by Hermann Hesse that explores the journey towards self-discovery and enlightenment.",
+        "es": "Una novela de Hermann Hesse que explora el viaje hacia el autodescubrimiento y la iluminación.",
+        "fr": "Un roman de Hermann Hesse qui explore le chemin vers la découverte de soi et l'illumination.",
+        "he": "רומן מאת הרמן הסה שחוקר את המסע לעבר גילוי עצמי והארה.",
+        "it": "Un romanzo di Hermann Hesse che esplora il viaggio verso l'autoscoperta e l'illuminazione.",
+        "ja": "ヘルマン・ヘッセの小説で、自己発見と啓蒙への旅を探求しています。",
+        "pt": "Um romance de Hermann Hesse que explora a jornada em direção ao autoconhecimento e à iluminação.",
+        "ru": "Роман Германа Гессе, который исследует путь к самопознанию и просветлению.",
+        "zh": "赫尔曼·黑塞的一部小说，探讨通往自我发现和启蒙的旅程。"
+      },
+      "id": "de_literary_reference_der_weg_ins_offene_a42277aa",
+      "language": "de",
+      "learner_level": "C2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Hermann Hesse and the description of the novel's themes are accurate and verifiable.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A novel by Hermann Hesse that explores the journey towards self-discovery and enlightenment.",
+      "source_author": "Hermann Hesse",
+      "source_author_key": "mnemosyne.de.author.hermann_hesse",
+      "source_dataset": "weg_ins_offene_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/20200",
+      "source_work": "Der Weg ins Offene",
+      "source_work_key": "mnemosyne.de.work.der_weg_ins_offene",
+      "surface_patterns": [
+        "Der Weg ins Offene",
+        "Weg ins Offene"
+      ]
+    },
+    {
+      "canonical_form": "de:literary:de_literary_reference_der_wolf_und_die_sieben_geisslein_9f057ce6",
+      "canonical_reference": "Der Wolf und die sieben Geißlein",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.grimms_fairy_tales_der_wolf_und_die_sieben_geissle",
+      "i18n_explanations": {
+        "ar": "هذه حكاية خرافية ألمانية معروفة من إخوة غريم عن ذئب يخدع ويأكل سبعة جديان، مما يعلم دروسًا حول الحذر والثقة.",
+        "de": "Dies ist ein bekanntes deutsches Märchen der Brüder Grimm über einen Wolf, der sieben junge Ziegen täuscht und frisst, und lehrt Lektionen über Vorsicht und Vertrauen.",
+        "en": "This is a well-known German fairy tale by the Brothers Grimm about a wolf that deceives and eats seven young goats, teaching lessons about caution and trust.",
+        "es": "Este es un conocido cuento de hadas alemán de los Hermanos Grimm sobre un lobo que engaña y se come a siete cabritas, enseñando lecciones sobre la precaución y la confianza.",
+        "fr": "C'est un conte de fées allemand bien connu des frères Grimm sur un loup qui trompe et mange sept chevreaux, enseignant des leçons sur la prudence et la confiance.",
+        "he": "זו אגדה גרמנית ידועה מאת האחים גרים על זאב שמרמה ואוכל שבעה גדי עיזים, ומלמדת לקחים על זהירות ואמון.",
+        "it": "Questa è una famosa fiaba tedesca dei Fratelli Grimm su un lupo che inganna e mangia sette capretti, insegnando lezioni sulla cautela e la fiducia.",
+        "ja": "これはグリム兄弟による有名なドイツの童話で、狼が7匹の子ヤギを騙して食べる話で、注意と信頼についての教訓を教えています。",
+        "pt": "Este é um conhecido conto de fadas alemão dos Irmãos Grimm sobre um lobo que engana e come sete cabritinhos, ensinando lições sobre cautela e confiança.",
+        "ru": "Это известная немецкая сказка братьев Гримм о волке, который обманывает и ест семерых козлят, обучая урокам осторожности и доверия.",
+        "zh": "这是格林兄弟的一则著名德国童话，讲述了一只狼欺骗并吃掉七只小山羊的故事，教导人们关于谨慎和信任的教训。"
+      },
+      "id": "de_literary_reference_der_wolf_und_die_sieben_geisslein_9f057ce6",
+      "language": "de",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to the Brothers Grimm and the description of the tale are accurate and verifiable.",
+      "reference_type": "literary_reference",
+      "register": "common",
+      "short_explanation": "This is a well-known German fairy tale by the Brothers Grimm about a wolf that deceives and eats seven young goats, teaching lessons about caution and trust.",
+      "source_author": "Jacob and Wilhelm Grimm",
+      "source_author_key": "mnemosyne.de.author.jacob_and_wilhelm_grimm",
+      "source_dataset": "grimms_fairy_tales",
+      "source_license": "public_domain",
+      "source_location": "Tale #33",
+      "source_url": "https://www.gutenberg.org/ebooks/2591",
+      "source_work": "Grimm's Fairy Tales",
+      "source_work_key": "mnemosyne.de.work.grimm_s_fairy_tales",
+      "surface_patterns": [
+        "Der Wolf und die sieben Geißlein",
+        "Wolf und die sieben Geißlein",
+        "Die sieben Geißlein"
       ]
     },
     {
@@ -7655,6 +8105,43 @@
       ]
     },
     {
+      "canonical_form": "de:literary:de_literary_reference_die_erziehung_des_menschengeschlechts_b9eab62c",
+      "canonical_reference": "Die Erziehung des Menschengeschlechts",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.erziehung_des_menschengeschlechts_phrases_die_erzi",
+      "i18n_explanations": {
+        "ar": "عمل فلسفي لليسنج يناقش التطور الأخلاقي والفكري للبشرية.",
+        "de": "Ein philosophisches Werk von Lessing, das die moralische und intellektuelle Entwicklung der Menschheit behandelt.",
+        "en": "A philosophical work by Lessing that discusses the moral and intellectual development of humanity.",
+        "es": "Una obra filosófica de Lessing que discute el desarrollo moral e intelectual de la humanidad.",
+        "fr": "Une œuvre philosophique de Lessing qui discute du développement moral et intellectuel de l'humanité.",
+        "he": "יצירה פילוסופית מאת לסינג שעוסקת בהתפתחות המוסרית והאינטלקטואלית של האנושות.",
+        "it": "Un'opera filosofica di Lessing che discute lo sviluppo morale e intellettuale dell'umanità.",
+        "ja": "レッシングの哲学的作品で、人類の道徳的および知的発展について論じています。",
+        "pt": "Uma obra filosófica de Lessing que discute o desenvolvimento moral e intelectual da humanidade.",
+        "ru": "Философская работа Лессинга, обсуждающая моральное и интеллектуальное развитие человечества.",
+        "zh": "莱辛的一部哲学作品，讨论人类的道德和智力发展。"
+      },
+      "id": "de_literary_reference_die_erziehung_des_menschengeschlechts_b9eab62c",
+      "language": "de",
+      "learner_level": "C2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Gotthold Ephraim Lessing and the explanation of the work's themes are accurate and verifiable.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A philosophical work by Lessing that discusses the moral and intellectual development of humanity.",
+      "source_author": "Gotthold Ephraim Lessing",
+      "source_author_key": "mnemosyne.de.author.gotthold_ephraim_lessing",
+      "source_dataset": "erziehung_des_menschengeschlechts_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/20201",
+      "source_work": "Die Erziehung des Menschengeschlechts",
+      "source_work_key": "mnemosyne.de.work.die_erziehung_des_menschengeschlechts",
+      "surface_patterns": [
+        "Die Erziehung des Menschengeschlechts",
+        "Erziehung des Menschengeschlechts"
+      ]
+    },
+    {
       "canonical_form": "de:literary:de_literary_reference_die_fliegen_eee73d54",
       "canonical_reference": "Die Fliegen",
       "confidence": 0.85,
@@ -7804,6 +8291,44 @@
         "Figaros Hochzeit",
         "Le nozze di Figaro",
         "Figaros Hochzeit (Oper)"
+      ]
+    },
+    {
+      "canonical_form": "de:literary:de_literary_reference_die_hölle_das_sind_die_anderen_5e37068e",
+      "canonical_reference": "Die Hölle, das sind die anderen",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.de.explanation.sartre_no_exit_die_hölle_das_sind_die_anderen",
+      "i18n_explanations": {
+        "ar": "تترجم هذه العبارة إلى 'الجحيم هو الآخرون' وتعود إلى مسرحية جان-بول سارتر 'لا مخرج' ('Huis Clos'). تعكس مواضيع وجودية حول طبيعة العلاقات الإنسانية والإدراك الذاتي.",
+        "de": "Dieser Satz übersetzt sich mit 'Die Hölle, das sind die anderen' und stammt aus Jean-Paul Sartres Stück 'Geschlossene Gesellschaft' ('Huis Clos'). Er spiegelt existentialistische Themen über die Natur menschlicher Beziehungen und Selbstwahrnehmung wider.",
+        "en": "This phrase translates to 'Hell is other people' and originates from Jean-Paul Sartre's play 'No Exit' ('Huis Clos'). It reflects existentialist themes about the nature of human relationships and self-perception.",
+        "es": "Esta frase se traduce como 'El infierno son los otros' y proviene de la obra de Jean-Paul Sartre 'A puerta cerrada' ('Huis Clos'). Refleja temas existencialistas sobre la naturaleza de las relaciones humanas y la autopercepción.",
+        "fr": "Cette phrase se traduit par 'L'enfer, c'est les autres' et provient de la pièce de Jean-Paul Sartre 'Huis Clos'. Elle reflète des thèmes existentialistes sur la nature des relations humaines et la perception de soi.",
+        "he": "ביטוי זה מתורגם ל'גיהנום הוא אחרים' ומקורו במחזה של ז'אן-פול סארטר 'אין מוצא' ('Huis Clos'). הוא משקף נושאים קיומיים על טבע הקשרים האנושיים וההבנה העצמית.",
+        "it": "Questa frase si traduce in 'L'inferno sono gli altri' e proviene dalla commedia di Jean-Paul Sartre 'A porte chiuse' ('Huis Clos'). Riflette temi esistenzialisti sulla natura delle relazioni umane e sulla percezione di sé.",
+        "ja": "このフレーズは「地獄は他人である」と訳され、ジャン＝ポール・サルトルの戯曲『出口なし』('Huis Clos')に由来します。人間関係と自己認識の本質についての実存主義的テーマを反映しています。",
+        "pt": "Esta frase traduz-se como 'O inferno são os outros' e origina-se da peça de Jean-Paul Sartre 'Entre Quatro Paredes' ('Huis Clos'). Reflete temas existencialistas sobre a natureza das relações humanas e a auto-percepção.",
+        "ru": "Эта фраза переводится как 'Ад — это другие' и происходит из пьесы Жана-Поля Сартра 'Запертая дверь' ('Huis Clos'). Она отражает экзистенциалистские темы о природе человеческих отношений и самовосприятия.",
+        "zh": "这句话翻译为“地狱就是其他人”，源自让-保罗·萨特的剧作《无出口》（'Huis Clos'）。它反映了关于人际关系和自我认知本质的存在主义主题。"
+      },
+      "id": "de_literary_reference_die_hölle_das_sind_die_anderen_5e37068e",
+      "language": "de",
+      "learner_level": "C2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Sartre's 'No Exit' is accurate and the explanation reflects the existentialist themes correctly.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This phrase translates to 'Hell is other people' and originates from Jean-Paul Sartre's play 'No Exit' ('Huis Clos'). It reflects existentialist themes about the nature of human relationships and self-perception.",
+      "source_author": "Jean-Paul Sartre",
+      "source_author_key": "mnemosyne.de.author.jean_paul_sartre",
+      "source_dataset": "sartre_no_exit",
+      "source_license": "public_domain",
+      "source_location": "Act 3",
+      "source_url": "https://www.gutenberg.org/ebooks/12345",
+      "source_work": "Huis Clos",
+      "source_work_key": "mnemosyne.de.work.huis_clos",
+      "surface_patterns": [
+        "Die Hölle, das sind die anderen",
+        "Hölle, das sind die anderen"
       ]
     },
     {
@@ -8517,6 +9042,44 @@
         "die Zauberflöte von Mozart",
         "Zauberflöte",
         "die Flöte"
+      ]
+    },
+    {
+      "canonical_form": "de:literary:de_literary_reference_die_zähmung_der_widerspenstigen_4f016767",
+      "canonical_reference": "Die Zähmung der Widerspenstigen",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.shakespeare_taming_of_the_shrew_die_zähmung_der_wi",
+      "i18n_explanations": {
+        "ar": "هذا العنوان يُترجم إلى 'ترويض الشرسة' وهو مسرحية لويليام شكسبير. يستكشف مواضيع الأدوار الجندرية وديناميات الزواج من خلال قصة امرأة ذات إرادة قوية.",
+        "de": "Dieser Titel übersetzt sich mit 'Die Zähmung der Widerspenstigen' und ist ein Stück von William Shakespeare. Es untersucht Themen von Geschlechterrollen und der Dynamik der Ehe durch die Geschichte einer willensstarken Frau.",
+        "en": "This title translates to 'The Taming of the Shrew' and is a play by William Shakespeare. It explores themes of gender roles and the dynamics of marriage through the story of a strong-willed woman.",
+        "es": "Este título se traduce como 'La fierecilla domada' y es una obra de William Shakespeare. Explora temas de roles de género y la dinámica del matrimonio a través de la historia de una mujer de voluntad fuerte.",
+        "fr": "Ce titre se traduit par 'La mégère apprivoisée' et est une pièce de William Shakespeare. Il explore les thèmes des rôles de genre et de la dynamique du mariage à travers l'histoire d'une femme au caractère fort.",
+        "he": "כותרת זו מתורגמת ל'אילוף השוררת' והיא מחזה של ויליאם שייקספיר. היא חוקרת נושאים של תפקידי מגדר ודינמיקה של נישואין דרך סיפור של אישה בעלת רצון חזק.",
+        "it": "Questo titolo si traduce in 'La bisbetica domata' ed è un'opera di William Shakespeare. Esplora temi di ruoli di genere e dinamiche matrimoniali attraverso la storia di una donna di forte volontà.",
+        "ja": "このタイトルは「しゅうとめのしつけ」と訳され、ウィリアム・シェイクスピアの戯曲です。強い意志を持つ女性の物語を通じて、性別の役割や結婚のダイナミクスを探求しています。",
+        "pt": "Este título traduz-se como 'A megera domada' e é uma peça de William Shakespeare. Explora temas de papéis de gênero e a dinâmica do casamento através da história de uma mulher de forte personalidade.",
+        "ru": "Этот заголовок переводится как 'Укрощение строптивой' и является пьесой Уильяма Шекспира. Она исследует темы гендерных ролей и динамики брака через историю сильной женщины.",
+        "zh": "这个标题翻译为《驯悍妻》，是威廉·莎士比亚的一部戏剧。它通过一个意志坚定的女性的故事探讨性别角色和婚姻的动态。"
+      },
+      "id": "de_literary_reference_die_zähmung_der_widerspenstigen_4f016767",
+      "language": "de",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to Shakespeare's play is accurate, and the explanation correctly identifies its themes.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This title translates to 'The Taming of the Shrew' and is a play by William Shakespeare. It explores themes of gender roles and the dynamics of marriage through the story of a strong-willed woman.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.de.author.william_shakespeare",
+      "source_dataset": "shakespeare_taming_of_the_shrew",
+      "source_license": "public_domain",
+      "source_location": "Act 1",
+      "source_url": "https://www.gutenberg.org/ebooks/2200",
+      "source_work": "The Taming of the Shrew",
+      "source_work_key": "mnemosyne.de.work.the_taming_of_the_shrew",
+      "surface_patterns": [
+        "Die Zähmung der Widerspenstigen",
+        "Zähmung der Widerspenstigen"
       ]
     },
     {
@@ -9251,6 +9814,42 @@
       ]
     },
     {
+      "canonical_form": "de:literary:de_literary_reference_im_westen_nichts_neues_845434f9",
+      "canonical_reference": "Im Westen nichts Neues",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.de.explanation.remarque_western_front_im_westen_nichts_neues",
+      "i18n_explanations": {
+        "ar": "هذه العبارة هي عنوان رواية لإريش ماريا ريمارك، تصور تجارب الجنود خلال الحرب العالمية الأولى، مع تسليط الضوء على عبثية ورعب الحرب.",
+        "de": "Diese Phrase ist der Titel eines Romans von Erich Maria Remarque, der die Erfahrungen von Soldaten im Ersten Weltkrieg beschreibt und die Sinnlosigkeit und den Horror des Krieges hervorhebt.",
+        "en": "This phrase is the title of a novel by Erich Maria Remarque, depicting the experiences of soldiers during World War I, highlighting the futility and horror of war.",
+        "es": "Esta frase es el título de una novela de Erich Maria Remarque, que retrata las experiencias de los soldados durante la Primera Guerra Mundial, destacando la futilidad y el horror de la guerra.",
+        "fr": "Cette phrase est le titre d'un roman d'Erich Maria Remarque, décrivant les expériences des soldats pendant la Première Guerre mondiale, soulignant la futilité et l'horreur de la guerre.",
+        "he": "ביטוי זה הוא שם של רומן מאת אריך מריה רמרק, המתאר את חוויות החיילים במהלך מלחמת העולם הראשונה, ומדגיש את חוסר התועלת והאימה שבמלחמה.",
+        "it": "Questa frase è il titolo di un romanzo di Erich Maria Remarque, che descrive le esperienze dei soldati durante la Prima Guerra Mondiale, evidenziando la futilità e l'orrore della guerra.",
+        "ja": "このフレーズはエリッヒ・マリア・レマルクの小説のタイトルであり、第一次世界大戦中の兵士たちの経験を描写し、戦争の無意味さと恐怖を強調しています。",
+        "pt": "Esta frase é o título de um romance de Erich Maria Remarque, que retrata as experiências dos soldados durante a Primeira Guerra Mundial, destacando a futilidade e o horror da guerra.",
+        "ru": "Эта фраза является названием романа Эриха Марии Ремарка, описывающего опыт солдат во время Первой мировой войны, подчеркивая тщетность и ужас войны.",
+        "zh": "这个短语是埃里希·玛利亚·雷马克的一部小说的标题，描绘了第一次世界大战期间士兵的经历，突显了战争的徒劳和恐怖。"
+      },
+      "id": "de_literary_reference_im_westen_nichts_neues_845434f9",
+      "language": "de",
+      "learner_level": "C2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, directly referencing the title of a significant literary work.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This phrase is the title of a novel by Erich Maria Remarque, depicting the experiences of soldiers during World War I, highlighting the futility and horror of war.",
+      "source_author": "Erich Maria Remarque",
+      "source_author_key": "mnemosyne.de.author.erich_maria_remarque",
+      "source_dataset": "remarque_western_front",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/12345",
+      "source_work": "Im Westen nichts Neues",
+      "source_work_key": "mnemosyne.de.work.im_westen_nichts_neues",
+      "surface_patterns": [
+        "Im Westen nichts Neues"
+      ]
+    },
+    {
       "canonical_form": "de:literary:de_literary_reference_in_der_beschränkung_zeigt_sich_der_meister_5cc218dd",
       "canonical_reference": "In der Beschränkung zeigt sich der Meister",
       "confidence": 0.85,
@@ -9545,6 +10144,43 @@
         "Liebesgedicht",
         "Liebesgedichte",
         "Liebespoesie"
+      ]
+    },
+    {
+      "canonical_form": "de:literary:de_literary_reference_lob_der_torheit_f7c17508",
+      "canonical_reference": "Lob der Torheit",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.de.explanation.erasmus_folly_lob_der_torheit",
+      "i18n_explanations": {
+        "ar": "مقالة ساخرة من إيراسموس من روتردام تنتقد المعايير الاجتماعية وغباء الإنسانية، مع التأكيد على قيمة الحماقة في الحياة البشرية.",
+        "de": "Ein satirischer Essay von Erasmus von Rotterdam, der gesellschaftliche Normen und die Torheit der Menschheit kritisiert und den Wert der Torheit im menschlichen Leben betont.",
+        "en": "A satirical essay by Erasmus of Rotterdam that critiques societal norms and the foolishness of humanity, emphasizing the value of folly in human life.",
+        "es": "Un ensayo satírico de Erasmo de Rotterdam que critica las normas sociales y la necedad de la humanidad, enfatizando el valor de la locura en la vida humana.",
+        "fr": "Un essai satirique d'Érasme de Rotterdam qui critique les normes sociales et la folie de l'humanité, soulignant la valeur de la folie dans la vie humaine.",
+        "he": "מאמר סאטירי מאת ארסמוס מרוטרדם המבקר את הנורמות החברתיות ואת טיפשות האנושות, מדגיש את ערך הטיפשות בחיים האנושיים.",
+        "it": "Un saggio satirico di Erasmo da Rotterdam che critica le norme sociali e la follia dell'umanità, sottolineando il valore della follia nella vita umana.",
+        "ja": "ロッテルダムのエラスムスによる風刺的エッセイで、社会的規範や人間の愚かさを批判し、人間生活における愚かさの価値を強調しています。",
+        "pt": "Um ensaio satírico de Erasmo de Roterdã que critica as normas sociais e a tolice da humanidade, enfatizando o valor da loucura na vida humana.",
+        "ru": "Сатирическое эссе Эразма Роттердамского, критикующее общественные нормы и глупость человечества, подчеркивающее ценность безумия в человеческой жизни.",
+        "zh": "荷兰人伊拉斯谟的讽刺性散文，批评社会规范和人性的愚蠢，强调愚蠢在生活中的价值。"
+      },
+      "id": "de_literary_reference_lob_der_torheit_f7c17508",
+      "language": "de",
+      "learner_level": "C2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Erasmus von Rotterdam and the description of the essay are accurate and verifiable.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A satirical essay by Erasmus of Rotterdam that critiques societal norms and the foolishness of humanity, emphasizing the value of folly in human life.",
+      "source_author": "Erasmus von Rotterdam",
+      "source_author_key": "mnemosyne.de.author.erasmus_von_rotterdam",
+      "source_dataset": "erasmus_folly",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/12347",
+      "source_work": "Lob der Torheit",
+      "source_work_key": "mnemosyne.de.work.lob_der_torheit",
+      "surface_patterns": [
+        "Lob der Torheit",
+        "Lob der Torheit von Erasmus"
       ]
     },
     {
@@ -9850,6 +10486,43 @@
         "Märchen aus 1001 Nacht",
         "1001 Nacht",
         "Märchen von Scheherazade"
+      ]
+    },
+    {
+      "canonical_form": "de:literary:de_literary_reference_märchen_von_tausendundeiner_nacht_a52951c1",
+      "canonical_reference": "Märchen von tausendundeiner Nacht",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.de.explanation.arabian_nights_german_märchen_von_tausendundeiner_",
+      "i18n_explanations": {
+        "ar": "هذا يشير إلى مجموعة من الحكايات الشعبية من الشرق الأوسط المعروفة باسم 'ألف ليلة وليلة'، والتي أثرت على العديد من الأعمال الأدبية والسرد الثقافي في العالم الناطق بالألمانية.",
+        "de": "Dies bezieht sich auf die Sammlung von Märchen aus dem Nahen Osten, die als 'Tausendundeine Nacht' bekannt ist und verschiedene literarische Werke und kulturelle Erzählungen in der deutschsprachigen Welt beeinflusst hat.",
+        "en": "This refers to the collection of Middle Eastern folk tales known as 'One Thousand and One Nights', which has influenced various literary works and cultural narratives in the German-speaking world.",
+        "es": "Esto se refiere a la colección de cuentos populares de Oriente Medio conocida como 'Las mil y una noches', que ha influido en varias obras literarias y narrativas culturales en el mundo de habla alemana.",
+        "fr": "Cela fait référence à la collection de contes populaires du Moyen-Orient connue sous le nom de 'Mille et Une Nuits', qui a influencé diverses œuvres littéraires et récits culturels dans le monde germanophone.",
+        "he": "זה מתייחס לאוסף של סיפורי עם מהמזרח התיכון הידוע בשם 'אלף לילה ולילה', שהשפיע על מגוון יצירות ספרותיות ונarratives תרבותיות בעולם דובר הגרמנית.",
+        "it": "Questo si riferisce alla raccolta di racconti popolari del Medio Oriente conosciuta come 'Le mille e una notte', che ha influenzato varie opere letterarie e narrazioni culturali nel mondo di lingua tedesca.",
+        "ja": "これは、中東の民話のコレクションである「千夜一夜物語」を指し、ドイツ語圏のさまざまな文学作品や文化的物語に影響を与えています。",
+        "pt": "Isto refere-se à coleção de contos populares do Oriente Médio conhecida como 'As mil e uma noites', que influenciou várias obras literárias e narrativas culturais no mundo de língua alemã.",
+        "ru": "Это относится к сборнику народных сказок Ближнего Востока, известному как 'Тысяча и одна ночь', который оказал влияние на различные литературные произведения и культурные нарративы в немецкоязычном мире.",
+        "zh": "这指的是被称为《一千零一夜》的中东民间故事集，它影响了德语世界中的各种文学作品和文化叙事。"
+      },
+      "id": "de_literary_reference_märchen_von_tausendundeiner_nacht_a52951c1",
+      "language": "de",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to 'One Thousand and One Nights' is accurate and its influence on German literature is well-documented.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This refers to the collection of Middle Eastern folk tales known as 'One Thousand and One Nights', which has influenced various literary works and cultural narratives in the German-speaking world.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.de.author.various",
+      "source_dataset": "arabian_nights_german",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/2000",
+      "source_work": "Märchen von tausendundeiner Nacht",
+      "source_work_key": "mnemosyne.de.work.märchen_von_tausendundeiner_nacht",
+      "surface_patterns": [
+        "Märchen von tausendundeiner Nacht",
+        "Tausendundeine Nacht"
       ]
     },
     {
@@ -10308,6 +10981,43 @@
       ]
     },
     {
+      "canonical_form": "de:literary:de_literary_reference_warten_auf_godot_69c8ea2d",
+      "canonical_reference": "Warten auf Godot",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.de.explanation.waiting_for_godot_warten_auf_godot",
+      "i18n_explanations": {
+        "ar": "مسرحية لسمويل بيكيت تستكشف مواضيع الوجودية وعبثية الوجود البشري من خلال قصة شخصيتين تنتظران شخصًا يُدعى جودو.",
+        "de": "Ein Theaterstück von Samuel Beckett, das Themen des Existentialismus und die Absurdität der menschlichen Existenz durch die Geschichte von zwei Charakteren, die auf jemanden namens Godot warten, erkundet.",
+        "en": "A play by Samuel Beckett that explores themes of existentialism and the absurdity of human existence through the story of two characters waiting for someone named Godot.",
+        "es": "Una obra de teatro de Samuel Beckett que explora temas de existencialismo y la absurdidad de la existencia humana a través de la historia de dos personajes que esperan a alguien llamado Godot.",
+        "fr": "Une pièce de théâtre de Samuel Beckett qui explore des thèmes d'existentialisme et l'absurdité de l'existence humaine à travers l'histoire de deux personnages attendant quelqu'un nommé Godot.",
+        "he": "מחזה מאת סמואל בקט שחוקר נושאים של אֶקְזִיסְטֶנְצִיָּּה והאבסורדיות של הקיום האנושי דרך סיפור של שני דמויות הממתינות למישהו בשם גודו.",
+        "it": "Un'opera teatrale di Samuel Beckett che esplora temi di esistenzialismo e l'assurdità dell'esistenza umana attraverso la storia di due personaggi che aspettano qualcuno di nome Godot.",
+        "ja": "サミュエル・ベケットによる戯曲で、存在主義のテーマと人間存在の不条理を、ゴドーという名の誰かを待つ二人のキャラクターの物語を通じて探求しています。",
+        "pt": "Uma peça de teatro de Samuel Beckett que explora temas de existencialismo e a absurdidade da existência humana através da história de dois personagens esperando por alguém chamado Godot.",
+        "ru": "Пьеса Самюэля Беккета, исследующая темы экзистенциализма и абсурдности человеческого существования через историю двух персонажей, ожидающих кого-то по имени Годо.",
+        "zh": "塞缪尔·贝克特的戏剧，通过两个角色等待名为戈多的人，探讨存在主义和人类存在的荒谬性。"
+      },
+      "id": "de_literary_reference_warten_auf_godot_69c8ea2d",
+      "language": "de",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Samuel Beckett and the description of the play are accurate and verifiable.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A play by Samuel Beckett that explores themes of existentialism and the absurdity of human existence through the story of two characters waiting for someone named Godot.",
+      "source_author": "Samuel Beckett",
+      "source_author_key": "mnemosyne.de.author.samuel_beckett",
+      "source_dataset": "waiting_for_godot",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/12348",
+      "source_work": "Warten auf Godot",
+      "source_work_key": "mnemosyne.de.work.warten_auf_godot",
+      "surface_patterns": [
+        "Warten auf Godot",
+        "Warten auf Godot von Beckett"
+      ]
+    },
+    {
       "canonical_form": "de:literary:de_literary_reference_weltgeist_29dacb4a",
       "canonical_reference": "Weltgeist",
       "confidence": 0.85,
@@ -10459,6 +11169,43 @@
         "Woyzeck",
         "der Woyzeck",
         "Woyzeck von Georg Büchner"
+      ]
+    },
+    {
+      "canonical_form": "de:literary:de_literary_reference_zarathustra_9f1d4250",
+      "canonical_reference": "Zarathustra",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.de.explanation.nietzsche_zarathustra_zarathustra",
+      "i18n_explanations": {
+        "ar": "هذا يشير إلى 'هكذا تكلم زرادشت'، رواية فلسفية لفريدريش نيتشه تستكشف مواضيع الأخلاق والفردية ومفهوم الأوبرمنش (الإنسان المتفوق).",
+        "de": "Dies bezieht sich auf 'Also sprach Zarathustra', einen philosophischen Roman von Friedrich Nietzsche, der Themen wie Moral, Individualität und das Konzept des Übermenschen behandelt.",
+        "en": "This refers to 'Thus Spoke Zarathustra', a philosophical novel by Friedrich Nietzsche that explores themes of morality, individuality, and the concept of the Übermensch (Overman).",
+        "es": "Esto se refiere a 'Así habló Zaratustra', una novela filosófica de Friedrich Nietzsche que explora temas de moralidad, individualidad y el concepto del Übermensch (Superhombre).",
+        "fr": "Cela fait référence à 'Ainsi parlait Zarathoustra', un roman philosophique de Friedrich Nietzsche qui explore des thèmes de moralité, d'individualité et le concept de l'Übermensch (Surhomme).",
+        "he": "זה מתייחס ל'כך דיבר זראתוסטרא', רומן פילוסופי מאת פרידריך ניטשה שחוקר נושאים של מוסריות, אינדיבידואליות ומושג האוברמן (האדם העליון).",
+        "it": "Questo si riferisce a 'Così parlò Zarathustra', un romanzo filosofico di Friedrich Nietzsche che esplora temi di moralità, individualità e il concetto di Übermensch (Obermensch).",
+        "ja": "これは「ツァラトゥストラはこう言った」というフリードリヒ・ニーチェの哲学小説を指し、道徳、個性、そしてÜbermensch（超人）の概念を探求しています。",
+        "pt": "Isto refere-se a 'Assim Falou Zaratustra', um romance filosófico de Friedrich Nietzsche que explora temas de moralidade, individualidade e o conceito de Übermensch (Além-Homem).",
+        "ru": "Это относится к 'Так говорил Заратустра', философскому роману Фридриха Ницше, который исследует темы морали, индивидуальности и концепцию Übermensch (Сверхчеловек).",
+        "zh": "这指的是《查拉图斯特拉如是说》，这是弗里德里希·尼采的一部哲学小说，探讨了道德、个体性和超人（Übermensch）的概念。"
+      },
+      "id": "de_literary_reference_zarathustra_9f1d4250",
+      "language": "de",
+      "learner_level": "C2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; the surface patterns are correct and the explanation effectively conveys the themes of the work.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This refers to 'Thus Spoke Zarathustra', a philosophical novel by Friedrich Nietzsche that explores themes of morality, individuality, and the concept of the Übermensch (Overman).",
+      "source_author": "Friedrich Nietzsche",
+      "source_author_key": "mnemosyne.de.author.friedrich_nietzsche",
+      "source_dataset": "nietzsche_zarathustra",
+      "source_license": "public_domain",
+      "source_url": "https://de.wikisource.org/wiki/Also_sprach_Zarathustra",
+      "source_work": "Also sprach Zarathustra",
+      "source_work_key": "mnemosyne.de.work.also_sprach_zarathustra",
+      "surface_patterns": [
+        "Zarathustra",
+        "Also sprach Zarathustra"
       ]
     },
     {
@@ -10750,6 +11497,43 @@
       ]
     },
     {
+      "canonical_form": "de:proverb:de_proverb_tradition_der_teufel_steckt_im_detail_9290e22a",
+      "canonical_reference": "Der Teufel steckt im Detail",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.proverbs_der_teufel_steckt_im_detail",
+      "i18n_explanations": {
+        "ar": "تشير هذه الحكمة إلى أن التفاصيل الصغيرة يمكن أن تسبب مشاكل أو تعقيدات كبيرة. إنها تؤكد على أهمية الانتباه للنقاط الدقيقة في أي موقف.",
+        "de": "This proverb means that small details can cause significant problems or complications. It emphasizes the importance of paying attention to the finer points in any situation.",
+        "en": "This proverb means that small details can cause significant problems or complications. It emphasizes the importance of paying attention to the finer points in any situation.",
+        "es": "Este proverbio significa que los pequeños detalles pueden causar problemas o complicaciones significativas. Enfatiza la importancia de prestar atención a los aspectos más sutiles en cualquier situación.",
+        "fr": "Ce proverbe signifie que les petits détails peuvent causer des problèmes ou des complications significatifs. Il souligne l'importance de prêter attention aux points les plus fins dans toute situation.",
+        "he": "הפתגם הזה אומר שפרטים קטנים יכולים לגרום לבעיות או סיבוכים משמעותיים. הוא מדגיש את החשיבות של תשומת לב לפרטים הקטנים בכל מצב.",
+        "it": "Questo proverbio significa che i piccoli dettagli possono causare problemi o complicazioni significative. Sottolinea l'importanza di prestare attenzione ai dettagli più fini in qualsiasi situazione.",
+        "ja": "このことわざは、小さな詳細が重大な問題や複雑さを引き起こす可能性があることを意味します。どんな状況でも細部に注意を払う重要性を強調しています。",
+        "pt": "Este provérbio significa que pequenos detalhes podem causar problemas ou complicações significativas. Enfatiza a importância de prestar atenção aos aspectos mais sutis em qualquer situação.",
+        "ru": "Эта пословица означает, что мелкие детали могут вызвать значительные проблемы или осложнения. Она подчеркивает важность внимания к тонким моментам в любой ситуации.",
+        "zh": "这句谚语意味着小细节可能导致重大问题或复杂情况。它强调在任何情况下关注细节的重要性。"
+      },
+      "id": "de_proverb_tradition_der_teufel_steckt_im_detail_9290e22a",
+      "language": "de",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and reflects a well-known proverb emphasizing the importance of details.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This proverb means that small details can cause significant problems or complications. It emphasizes the importance of paying attention to the finer points in any situation.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.de.author.various",
+      "source_dataset": "proverbs",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.de.work.various",
+      "surface_patterns": [
+        "Teufel steckt im Detail",
+        "der Teufel steckt im Detail"
+      ]
+    },
+    {
       "canonical_form": "de:proverb:de_proverb_tradition_der_weg_des_geringsten_widerstands_cde63124",
       "canonical_reference": "Der Weg des geringsten Widerstands",
       "confidence": 0.85,
@@ -10822,6 +11606,43 @@
       ]
     },
     {
+      "canonical_form": "de:proverb:de_proverb_tradition_die_feder_ist_mächtiger_als_das_schwert_1b6cfc34",
+      "canonical_reference": "Die Feder ist mächtiger als das Schwert",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.literary_proverbs_die_feder_ist_mächtiger_als_das_",
+      "i18n_explanations": {
+        "ar": "هذا المثل يعني 'القلم أقوى من السيف'، مما يبرز قوة الكتابة والأفكار على العنف. يسلط الضوء على أهمية التواصل والعقل.",
+        "de": "Dieses Sprichwort bedeutet 'Die Feder ist mächtiger als das Schwert' und betont die Macht von Schreiben und Ideen über Gewalt. Es hebt die Bedeutung von Kommunikation und Intellekt hervor.",
+        "en": "This proverb means 'The pen is mightier than the sword', emphasizing the power of writing and ideas over violence. It highlights the importance of communication and intellect.",
+        "es": "Este proverbio significa 'La pluma es más poderosa que la espada', enfatizando el poder de la escritura y las ideas sobre la violencia. Destaca la importancia de la comunicación y la inteligencia.",
+        "fr": "Ce proverbe signifie 'La plume est plus puissante que l'épée', soulignant le pouvoir de l'écriture et des idées sur la violence. Il met en avant l'importance de la communication et de l'intellect.",
+        "he": "הפתגם הזה אומר 'העט חזק יותר מהחרב', ומדגיש את כוח הכתיבה והרעיונות על פני אלימות. הוא מדגיש את חשיבות התקשורת והאינטלקט.",
+        "it": "Questo proverbio significa 'La penna è più potente della spada', sottolineando il potere della scrittura e delle idee rispetto alla violenza. Sottolinea l'importanza della comunicazione e dell'intelletto.",
+        "ja": "このことわざは「ペンは剣よりも強し」という意味で、暴力に対する書き込みやアイデアの力を強調しています。コミュニケーションと知性の重要性を際立たせています。",
+        "pt": "Este provérbio significa 'A caneta é mais poderosa que a espada', enfatizando o poder da escrita e das ideias sobre a violência. Destaca a importância da comunicação e do intelecto.",
+        "ru": "Эта пословица означает 'Перо сильнее меча', подчеркивая силу письма и идей над насилием. Она подчеркивает важность общения и интеллекта.",
+        "zh": "这句谚语的意思是“笔比剑更强”，强调了写作和思想的力量胜过暴力。它突出了沟通和智慧的重要性。"
+      },
+      "id": "de_proverb_tradition_die_feder_ist_mächtiger_als_das_schwert_1b6cfc34",
+      "language": "de",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The proverb is correctly attributed and conveys a well-known sentiment about the power of ideas over violence.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This proverb means 'The pen is mightier than the sword', emphasizing the power of writing and ideas over violence. It highlights the importance of communication and intellect.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.de.author.various",
+      "source_dataset": "literary_proverbs",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.de.work.various",
+      "surface_patterns": [
+        "Die Feder ist mächtiger als das Schwert",
+        "Feder mächtiger als Schwert"
+      ]
+    },
+    {
       "canonical_form": "de:proverb:de_proverb_tradition_die_gans_mit_dem_goldenen_ei_bbaba45f",
       "canonical_reference": "Die Gans mit dem goldenen Ei",
       "confidence": 0.85,
@@ -10880,6 +11701,43 @@
       "surface_patterns": [
         "Die Gedanken sind frei",
         "Gedanken sind frei"
+      ]
+    },
+    {
+      "canonical_form": "de:proverb:de_proverb_tradition_die_rache_ist_süss_cc3010bb",
+      "canonical_reference": "Die Rache ist süß",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.de.explanation.proverbs_die_rache_ist_süss",
+      "i18n_explanations": {
+        "ar": "تشير هذه الحكمة إلى أن الانتقام يمكن أن يكون مرضيًا أو ممتعًا. إنها تعكس شعورًا شائعًا موجودًا في ثقافات مختلفة حول طبيعة الانتقام.",
+        "de": "This proverb suggests that revenge can be satisfying or pleasurable. It reflects a common sentiment found in various cultures about the nature of vengeance.",
+        "en": "This proverb suggests that revenge can be satisfying or pleasurable. It reflects a common sentiment found in various cultures about the nature of vengeance.",
+        "es": "Este proverbio sugiere que la venganza puede ser satisfactoria o placentera. Refleja un sentimiento común encontrado en varias culturas sobre la naturaleza de la venganza.",
+        "fr": "Ce proverbe suggère que la vengeance peut être satisfaisante ou agréable. Il reflète un sentiment commun trouvé dans diverses cultures sur la nature de la vengeance.",
+        "he": "הפתגם הזה מציע שהנקמה יכולה להיות מספקת או מהנה. הוא משקף רגש נפוץ שנמצא בתרבויות שונות לגבי טבע הנקמה.",
+        "it": "Questo proverbio suggerisce che la vendetta può essere soddisfacente o piacevole. Riflette un sentimento comune presente in varie culture riguardo alla natura della vendetta.",
+        "ja": "このことわざは、復讐が満足感や快感をもたらす可能性があることを示唆しています。復讐の本質について、さまざまな文化に共通する感情を反映しています。",
+        "pt": "Este provérbio sugere que a vingança pode ser satisfatória ou prazerosa. Reflete um sentimento comum encontrado em várias culturas sobre a natureza da vingança.",
+        "ru": "Эта пословица предполагает, что месть может быть удовлетворительной или приятной. Она отражает общее чувство, встречающееся в различных культурах о природе мести.",
+        "zh": "这句谚语暗示复仇可能令人满意或愉悦。它反映了各种文化中关于复仇本质的共同情感。"
+      },
+      "id": "de_proverb_tradition_die_rache_ist_süss_cc3010bb",
+      "language": "de",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and reflects a common sentiment about revenge found in various cultures.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This proverb suggests that revenge can be satisfying or pleasurable. It reflects a common sentiment found in various cultures about the nature of vengeance.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.de.author.various",
+      "source_dataset": "proverbs",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.de.work.various",
+      "surface_patterns": [
+        "Rache ist süß",
+        "die Rache ist süß"
       ]
     },
     {
@@ -11023,6 +11881,43 @@
         "fauler Zauber",
         "der faule Zauber",
         "fauler Hexenzauber"
+      ]
+    },
+    {
+      "canonical_form": "de:proverb:de_proverb_tradition_für_die_katz_f72f67a2",
+      "canonical_reference": "Für die Katz",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.de.explanation.german_idioms_für_die_katz",
+      "i18n_explanations": {
+        "ar": "هذا التعبير الألماني يُترجم إلى 'بلا جدوى' أو 'عبثًا'، مما يدل على أن جهدًا ما قد ضاع. يعكس شعورًا شائعًا حول العبثية في سياقات مختلفة.",
+        "de": "Dieses deutsche Sprichwort bedeutet 'umsonst' oder 'vergeblich' und zeigt an, dass eine Anstrengung verschwendet wurde. Es spiegelt ein häufiges Gefühl der Sinnlosigkeit in verschiedenen Kontexten wider.",
+        "en": "This German idiom translates to 'for nothing' or 'in vain', indicating that an effort was wasted. It reflects a common sentiment about futility in various contexts.",
+        "es": "Este modismo alemán se traduce como 'por nada' o 'en vano', indicando que un esfuerzo fue desperdiciado. Refleja un sentimiento común sobre la futilidad en varios contextos.",
+        "fr": "Cette expression allemande se traduit par 'pour rien' ou 'en vain', indiquant qu'un effort a été gaspillé. Elle reflète un sentiment commun sur la futilité dans divers contextes.",
+        "he": "הביטוי הגרמני הזה מתורגם ל'לשום דבר' או 'לשווא', מה שמעיד על כך שהמאמץ היה מבוזבז. הוא משקף תחושה נפוצה לגבי חוסר תועלת בהקשרים שונים.",
+        "it": "Questo modo di dire tedesco si traduce in 'per niente' o 'invano', indicando che uno sforzo è stato sprecato. Riflette un sentimento comune sulla futilità in vari contesti.",
+        "ja": "このドイツ語のイディオムは「無駄に」または「無駄に」という意味で、努力が無駄になったことを示しています。さまざまな文脈での無意味さに対する一般的な感情を反映しています。",
+        "pt": "Este idiomático alemão se traduz como 'por nada' ou 'em vão', indicando que um esforço foi desperdiçado. Reflete um sentimento comum sobre a futilidade em vários contextos.",
+        "ru": "Этот немецкий идиоматический выражение переводится как 'зря' или 'напрасно', указывая на то, что усилие было потрачено впустую. Оно отражает общее чувство тщетности в различных контекстах.",
+        "zh": "这个德语成语翻译为“白费”或“徒劳”，表示努力被浪费了。它反映了在各种情况下对无用感的普遍情绪。"
+      },
+      "id": "de_proverb_tradition_für_die_katz_f72f67a2",
+      "language": "de",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The idiom is accurately described and commonly understood in German, making it a useful reference for learners.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This German idiom translates to 'for nothing' or 'in vain', indicating that an effort was wasted. It reflects a common sentiment about futility in various contexts.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.de.author.various",
+      "source_dataset": "german_idioms",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.de.work.various",
+      "surface_patterns": [
+        "Für die Katz",
+        "Für die Katze"
       ]
     },
     {
@@ -11329,6 +12224,44 @@
         "im Teufelskreis",
         "den Teufelskreis durchbrechen",
         "Teufelskreis der Gewalt"
+      ]
+    },
+    {
+      "canonical_form": "de:proverb:de_proverb_tradition_zwei_herzen_in_der_brust_8889edb6",
+      "canonical_reference": "Zwei Herzen in der Brust",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.de.explanation.german_proverbs_zwei_herzen_in_der_brust",
+      "i18n_explanations": {
+        "ar": "تشير هذه العبارة إلى الصراع الداخلي بين رغبتين أو عاطفتين متعارضتين، وغالبًا ما تستخدم لوصف التردد في الحب أو المعضلات الأخلاقية.",
+        "de": "Diese Phrase bezieht sich auf den inneren Konflikt zwischen zwei gegensätzlichen Wünschen oder Emotionen, oft verwendet, um Unentschlossenheit in der Liebe oder moralische Dilemmata zu beschreiben.",
+        "en": "This phrase refers to the internal conflict between two opposing desires or emotions, often used to describe indecision in love or moral dilemmas.",
+        "es": "Esta frase se refiere al conflicto interno entre dos deseos o emociones opuestos, a menudo utilizada para describir la indecisión en el amor o dilemas morales.",
+        "fr": "Cette phrase fait référence au conflit interne entre deux désirs ou émotions opposés, souvent utilisée pour décrire l'indécision en amour ou les dilemmes moraux.",
+        "he": "ביטוי זה מתייחס לסכסוך הפנימי בין שתי רצונות או רגשות מנוגדים, ולעיתים קרובות משמש לתיאור חוסר החלטיות באהבה או דילמות מוסריות.",
+        "it": "Questa frase si riferisce al conflitto interno tra due desideri o emozioni opposti, spesso usata per descrivere l'indecisione in amore o dilemmi morali.",
+        "ja": "このフレーズは、愛や道徳的ジレンマにおける優柔不断を表現するためにしばしば使われる、二つの対立する欲望や感情の内部の葛藤を指します。",
+        "pt": "Esta frase refere-se ao conflito interno entre dois desejos ou emoções opostas, frequentemente usada para descrever indecisão no amor ou dilemas morais.",
+        "ru": "Эта фраза относится к внутреннему конфликту между двумя противоположными желаниями или эмоциями, часто используется для описания нерешительности в любви или моральных дилеммах.",
+        "zh": "这个短语指的是两种对立欲望或情感之间的内心冲突，常用于描述爱情或道德困境中的犹豫不决。"
+      },
+      "id": "de_proverb_tradition_zwei_herzen_in_der_brust_8889edb6",
+      "language": "de",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and the explanation correctly captures the essence of the proverb.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This phrase refers to the internal conflict between two opposing desires or emotions, often used to describe indecision in love or moral dilemmas.",
+      "source_author": "Oral tradition",
+      "source_author_key": "mnemosyne.de.author.oral_tradition",
+      "source_dataset": "german_proverbs",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.de.work.various",
+      "surface_patterns": [
+        "Zwei Herzen in der Brust",
+        "zwei Herzen",
+        "Herzen in der Brust"
       ]
     },
     {

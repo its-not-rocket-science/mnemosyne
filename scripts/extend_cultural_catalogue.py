@@ -167,7 +167,7 @@ FIELD_ORDER = [
     "variants",
     "explanation_key", "source_work_key", "source_author_key",
     "source_work", "source_author", "source_location",
-    "source_url", "source_license", "source_dataset",
+    "source_url", "source_license", "rights_basis", "source_dataset",
     "notes",
 ]
 
@@ -619,6 +619,25 @@ def auto_promote(
 # Build YAML entry
 # ---------------------------------------------------------------------------
 
+def _dedupe_case_variants(values: list[str], seen: set[str] | None = None) -> list[str]:
+    """Drop later entries that are case/NFC-equivalent to an earlier one.
+
+    build_cultural_catalog.py treats surface patterns as duplicates after
+    NFC-normalising and casefolding them, regardless of which field
+    (surface_patterns or variants) they came from -- so the same dedup
+    must happen here, before the entry ever reaches the seed file.
+    """
+    seen = set() if seen is None else {unicodedata.normalize("NFC", s).casefold() for s in seen}
+    out: list[str] = []
+    for v in values:
+        key = unicodedata.normalize("NFC", v).casefold()
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(v)
+    return out
+
+
 def build_entry(language: str, enriched: dict,
                 i18n: dict | None = None, review: dict | None = None) -> dict:
     cr  = enriched.get("canonical_reference", "")
@@ -631,6 +650,9 @@ def build_entry(language: str, enriched: dict,
     lic = enriched.get("source_license", "public_domain")
     if lic not in KNOWN_SOURCE_LICENSES:
         lic = "copyright_or_rights_review_needed"
+    rights_basis = "common_usage_short_expression" if lic == "not_required" else None
+
+    surface_patterns = _dedupe_case_variants(enriched.get("surface_patterns") or [cr])
 
     conf = float(enriched.get("confidence", 0.68))
     if review and review.get("revised_confidence") is not None:
@@ -649,7 +671,7 @@ def build_entry(language: str, enriched: dict,
         "language":            language,
         "canonical_reference": cr,
         "reference_type":      rt,
-        "surface_patterns":    enriched.get("surface_patterns") or [cr],
+        "surface_patterns":    surface_patterns,
         "short_explanation":   enriched.get("short_explanation", ""),
         "learner_level":       enriched.get("learner_level", "B2"),
         "confidence":          conf,
@@ -668,7 +690,7 @@ def build_entry(language: str, enriched: dict,
     if i18n and isinstance(i18n.get("i18n_explanations"), dict):
         entry["i18n_explanations"] = i18n["i18n_explanations"]
 
-    variants = enriched.get("variants")
+    variants = _dedupe_case_variants(enriched.get("variants") or [], seen=surface_patterns)
     if variants:
         entry["variants"] = variants
     loc = enriched.get("source_location")
@@ -677,6 +699,8 @@ def build_entry(language: str, enriched: dict,
     url = enriched.get("source_url")
     if url:
         entry["source_url"] = url
+    if rights_basis:
+        entry["rights_basis"] = rights_basis
 
     ordered: dict = {}
     for k in FIELD_ORDER:
