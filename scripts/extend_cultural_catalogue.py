@@ -690,7 +690,14 @@ def build_entry(language: str, enriched: dict,
     if i18n and isinstance(i18n.get("i18n_explanations"), dict):
         entry["i18n_explanations"] = i18n["i18n_explanations"]
 
-    variants = _dedupe_case_variants(enriched.get("variants") or [], seen=surface_patterns)
+    raw_variants = enriched.get("variants") or []
+    if isinstance(raw_variants, str):
+        raw_variants = [raw_variants]
+    if not isinstance(raw_variants, list):
+        raw_variants = []
+    variants = _dedupe_case_variants(
+        [v for v in raw_variants if isinstance(v, str)], seen=surface_patterns
+    )
     if variants:
         entry["variants"] = variants
     loc = enriched.get("source_location")
