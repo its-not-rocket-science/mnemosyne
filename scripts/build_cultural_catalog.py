@@ -175,6 +175,8 @@ def clean_text(value: Any) -> str:
 
 
 def _looks_biblical_or_cross_reference(raw: dict[str, Any]) -> bool:
+    if raw.get("reference_type") == "classical_or_scriptural_allusion":
+        return True
     haystack = " ".join(
         clean_text(raw.get(field, ""))
         for field in ("source_work", "source_author", "source_location", "reference_type")
@@ -182,12 +184,15 @@ def _looks_biblical_or_cross_reference(raw: dict[str, Any]) -> bool:
     biblical_terms = {
         "bible", "biblical", "king james", "kjv", "authorised version", "authorized version",
         "gospel", "psalm", "proverb", "isaiah", "matthew", "mark", "luke", "john",
-        "genesis", "exodus", "ecclesiastes",
+        "genesis", "exodus", "ecclesiastes", "kings", "micah", "zechariah", "numbers",
+        "joshua", "judges", "job", "lamentations",
     }
     if any(term in haystack for term in biblical_terms):
         return True
     location = clean_text(raw.get("source_location", "")).casefold()
-    return any(marker in location for marker in ("cf.", "see ", "compare ", "cross-reference"))
+    if any(marker in location for marker in ("cf.", "see ", "compare ", "cross-reference")):
+        return True
+    return any(marker in haystack for marker in ("canto", "inferno", "purgatorio", "paradiso"))
 
 
 def append_rights_warnings(raw: dict[str, Any], idx: int, lang: str, warnings: list[str]) -> None:
