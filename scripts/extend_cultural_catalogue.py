@@ -159,12 +159,16 @@ KNOWN_SOURCE_LICENSES = {
     "public_domain", "not_required", "CC0", "CC0-1.0", "CC-BY-4.0",
     "copyright_or_rights_review_needed", "common_usage_short_expression",
 }
+# Languages where a 1-2 character surface pattern is normal word/title
+# length (CJK, Hebrew), not an inherently ambiguous fragment the way it
+# would be in a Latin-script language.
+SHORT_PATTERN_OK_LANGUAGES = {"zh", "ja", "ko", "he"}
 
 FIELD_ORDER = [
     "id", "language", "canonical_reference", "reference_type",
     "surface_patterns", "short_explanation", "i18n_explanations",
     "learner_level", "confidence", "review_status", "register",
-    "variants",
+    "allow_short_pattern", "variants",
     "explanation_key", "source_work_key", "source_author_key",
     "source_work", "source_author", "source_location",
     "source_url", "source_license", "rights_basis", "source_dataset",
@@ -653,6 +657,10 @@ def build_entry(language: str, enriched: dict,
     rights_basis = "common_usage_short_expression" if lic == "not_required" else None
 
     surface_patterns = _dedupe_case_variants(enriched.get("surface_patterns") or [cr])
+    allow_short_pattern = (
+        language in SHORT_PATTERN_OK_LANGUAGES
+        and any(len(p.strip()) < 3 for p in surface_patterns)
+    )
 
     conf = float(enriched.get("confidence", 0.68))
     if review and review.get("revised_confidence") is not None:
@@ -708,6 +716,8 @@ def build_entry(language: str, enriched: dict,
         entry["source_url"] = url
     if rights_basis:
         entry["rights_basis"] = rights_basis
+    if allow_short_pattern:
+        entry["allow_short_pattern"] = True
 
     ordered: dict = {}
     for k in FIELD_ORDER:
