@@ -4422,6 +4422,42 @@
       ]
     },
     {
+      "canonical_form": "en:classical:en_classical_or_scriptural_allusion_memento_mori_c3581abe",
+      "canonical_reference": "Memento Mori",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.en.explanation.classical_phrases_memento_mori",
+      "i18n_explanations": {
+        "ar": "هذه العبارة اللاتينية تُترجم إلى 'تذكر أنك يجب أن تموت' وتعمل كتذكير بوفاة الإنسان. لقد تم استخدامها في الفن والأدب لتشجيع التأمل في الحياة والموت.",
+        "de": "Dieser lateinische Ausdruck bedeutet 'denk daran, dass du sterben musst' und dient als Erinnerung an die menschliche Sterblichkeit. Er wurde in Kunst und Literatur verwendet, um zur Reflexion über Leben und Tod anzuregen.",
+        "en": "This Latin phrase translates to 'remember that you must die' and serves as a reminder of human mortality. It has been used in art and literature to encourage reflection on life and death.",
+        "es": "Esta frase en latín se traduce como 'recuerda que debes morir' y sirve como un recordatorio de la mortalidad humana. Se ha utilizado en el arte y la literatura para fomentar la reflexión sobre la vida y la muerte.",
+        "fr": "Cette phrase latine se traduit par 'souviens-toi que tu dois mourir' et sert de rappel de la mortalité humaine. Elle a été utilisée dans l'art et la littérature pour encourager la réflexion sur la vie et la mort.",
+        "he": "ביטוי זה בלטינית מתורגם ל'זכור שאתה חייב למות' ומשמש כתזכורת למוות האנושי. הוא שימש באמנות ובספרות כדי לעודד הרהור על החיים והמוות.",
+        "it": "Questa frase latina si traduce come 'ricorda che devi morire' e serve come promemoria della mortalità umana. È stata utilizzata nell'arte e nella letteratura per incoraggiare la riflessione sulla vita e sulla morte.",
+        "ja": "このラテン語のフレーズは「あなたは死ななければならないことを忘れないでください」と訳され、人間の死すべき運命を思い出させるものです。芸術や文学で人生と死についての反省を促すために使われてきました。",
+        "pt": "Esta frase em latim se traduz como 'lembre-se de que você deve morrer' e serve como um lembrete da mortalidade humana. Tem sido usada na arte e na literatura para incentivar a reflexão sobre a vida e a morte.",
+        "ru": "Эта латинская фраза переводится как 'помни, что ты должен умереть' и служит напоминанием о человеческой смертности. Она использовалась в искусстве и литературе для побуждения к размышлениям о жизни и смерти.",
+        "zh": "这个拉丁短语翻译为“记住你必须死”，并作为人类死亡的提醒。它在艺术和文学中被用来鼓励对生命和死亡的反思。"
+      },
+      "id": "en_classical_or_scriptural_allusion_memento_mori_c3581abe",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate, and the surface patterns correctly reflect the meaning and usage of the phrase.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This Latin phrase translates to 'remember that you must die' and serves as a reminder of human mortality. It has been used in art and literature to encourage reflection on life and death.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.en.author.classical_tradition",
+      "source_dataset": "classical_phrases",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.en.work.various",
+      "surface_patterns": [
+        "memento mori"
+      ]
+    },
+    {
       "canonical_form": "en:classical:en_classical_or_scriptural_allusion_mentor_9591467b",
       "canonical_reference": "mentor",
       "confidence": 0.76,
@@ -10146,6 +10182,42 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_renaissance_man_65abc0e4",
+      "canonical_reference": "Renaissance man",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.en.explanation.cultural_terms_renaissance_man",
+      "i18n_explanations": {
+        "ar": "هذا المصطلح يصف شخصًا متعلمًا جيدًا وماهرًا في مجموعة متنوعة من المجالات، مما يعكس مثُل عصر النهضة حيث ازدهر المتعددون مثل ليوناردو دا فينشي.",
+        "de": "Dieser Begriff beschreibt eine Person, die gut ausgebildet und in verschiedenen Bereichen versiert ist, was die Ideale der Renaissance widerspiegelt, in der Universalgelehrte wie Leonardo da Vinci gedeihen konnten.",
+        "en": "This term describes a person who is well-educated and proficient in a variety of fields, reflecting the ideals of the Renaissance period where polymaths like Leonardo da Vinci thrived.",
+        "es": "Este término describe a una persona bien educada y competente en una variedad de campos, reflejando los ideales del Renacimiento, donde los polímatas como Leonardo da Vinci prosperaron.",
+        "fr": "Ce terme décrit une personne bien éduquée et compétente dans divers domaines, reflétant les idéaux de la période de la Renaissance où des polymathes comme Léonard de Vinci ont prospéré.",
+        "he": "מונח זה מתאר אדם משכיל ומיומן במגוון תחומים, ומשקף את האידיאלים של תקופת הרנסנס שבהם פרחו פולימטים כמו לאונרדו דה וינצ'י.",
+        "it": "Questo termine descrive una persona ben istruita e competente in vari campi, riflettendo gli ideali del periodo rinascimentale in cui i polimati come Leonardo da Vinci prosperarono.",
+        "ja": "この用語は、さまざまな分野で教育を受け、熟練した人を指し、レオナルド・ダ・ヴィンチのような多才な人々が栄えたルネサンス時代の理想を反映しています。",
+        "pt": "Este termo descreve uma pessoa bem-educada e proficiente em várias áreas, refletindo os ideais do período da Renascença, onde polímatas como Leonardo da Vinci prosperaram.",
+        "ru": "Этот термин описывает человека, хорошо образованного и компетентного в различных областях, отражая идеалы эпохи Возрождения, когда полиматы, такие как Леонардо да Винчи, процветали.",
+        "zh": "这个术语描述了一个受过良好教育并在多个领域精通的人，反映了文艺复兴时期的理想，那时像列奥纳多·达·芬奇这样的博学者蓬勃发展。"
+      },
+      "id": "en_cultural_reference_renaissance_man_65abc0e4",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The definition accurately reflects the cultural reference and its historical context.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This term describes a person who is well-educated and proficient in a variety of fields, reflecting the ideals of the Renaissance period where polymaths like Leonardo da Vinci thrived.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.en.author.various",
+      "source_dataset": "cultural_terms",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.en.work.various",
+      "surface_patterns": [
+        "Renaissance man"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_room_101_72ac3e64",
       "canonical_reference": "Room 101",
       "confidence": 0.78,
@@ -10406,6 +10478,43 @@
       ]
     },
     {
+      "canonical_form": "en:cultural:en_cultural_reference_the_yellow_brick_road_2bffe884",
+      "canonical_reference": "The yellow brick road",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.en.explanation.oz_series_the_yellow_brick_road",
+      "i18n_explanations": {
+        "ar": "هذه العبارة مستمدة من 'ساحر أوز الرائع' لـ L. فرانك بوم، مما يرمز إلى رحلة نحو أحلام الشخص وطموحاته.",
+        "de": "Dieser Ausdruck stammt aus 'Der wunderbare Zauberer von Oz' von L. Frank Baum und symbolisiert eine Reise zu den eigenen Träumen und Bestrebungen.",
+        "en": "This phrase originates from L. Frank Baum's 'The Wonderful Wizard of Oz', symbolizing a journey towards one's dreams and aspirations.",
+        "es": "Esta frase proviene de 'El maravilloso mago de Oz' de L. Frank Baum, simbolizando un viaje hacia los sueños y aspiraciones de uno.",
+        "fr": "Cette phrase provient de 'Le merveilleux magicien d'Oz' de L. Frank Baum, symbolisant un voyage vers ses rêves et aspirations.",
+        "he": "ביטוי זה מקורו ב'קסם אוז המופלא' של ל. פרנק באום, המסמל מסע לעבר חלומות ושאיפות של אדם.",
+        "it": "Questa frase proviene da 'Il meraviglioso mago di Oz' di L. Frank Baum, simboleggiando un viaggio verso i propri sogni e aspirazioni.",
+        "ja": "このフレーズはL・フランク・バウムの『オズの魔法使い』に由来し、自分の夢や願望に向かう旅を象徴しています。",
+        "pt": "Esta frase origina-se de 'O maravilhoso Mágico de Oz' de L. Frank Baum, simbolizando uma jornada em direção aos sonhos e aspirações de alguém.",
+        "ru": "Эта фраза происходит из 'Удивительного волшебника страны Оз' Л. Фрэнка Баума, символизируя путь к своим мечтам и стремлениям.",
+        "zh": "这个短语源自L·弗兰克·鲍姆的《绿野仙踪》，象征着通往个人梦想和抱负的旅程。"
+      },
+      "id": "en_cultural_reference_the_yellow_brick_road_2bffe884",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to L. Frank Baum's work is accurate and the explanation is relevant for learners.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "This phrase originates from L. Frank Baum's 'The Wonderful Wizard of Oz', symbolizing a journey towards one's dreams and aspirations.",
+      "source_author": "L. Frank Baum",
+      "source_author_key": "mnemosyne.en.author.l_frank_baum",
+      "source_dataset": "oz_series",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/55",
+      "source_work": "The Wonderful Wizard of Oz",
+      "source_work_key": "mnemosyne.en.work.the_wonderful_wizard_of_oz",
+      "surface_patterns": [
+        "the yellow brick road",
+        "yellow brick road"
+      ]
+    },
+    {
       "canonical_form": "en:cultural:en_cultural_reference_thought_police_0f48d3b5",
       "canonical_reference": "thought police",
       "confidence": 0.74,
@@ -10633,6 +10742,44 @@
       "source_work_key": "mnemosyne.en.work.david_copperfield",
       "surface_patterns": [
         "Uriah Heep"
+      ]
+    },
+    {
+      "canonical_form": "en:cultural:en_cultural_reference_vanitas_vanitatum_df76a500",
+      "canonical_reference": "Vanitas vanitatum",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.en.explanation.biblical_references_vanitas_vanitatum",
+      "i18n_explanations": {
+        "ar": "'فانيتاس فانيタوم' تُترجم إلى 'غرور الغرور' وتعكس موضوع عبث السعي الأرضي، وغالبًا ما يرتبط بالفن والأدب الباروكي.",
+        "de": "'Vanitas vanitatum' bedeutet 'Eitelkeit der Eitelkeiten' und spiegelt das Thema der Sinnlosigkeit irdischer Bestrebungen wider, oft verbunden mit barocker Kunst und Literatur.",
+        "en": "'Vanitas vanitatum' translates to 'vanity of vanities' and reflects the theme of the futility of earthly pursuits, often associated with Baroque art and literature.",
+        "es": "'Vanitas vanitatum' se traduce como 'vanidad de vanidades' y refleja el tema de la futilidad de las búsquedas terrenales, a menudo asociado con el arte y la literatura barroca.",
+        "fr": "'Vanitas vanitatum' se traduit par 'vanité des vanités' et reflète le thème de la futilité des poursuites terrestres, souvent associé à l'art et à la littérature baroques.",
+        "he": "'ואניטס ואניטטום' מתורגם ל'יהירות של יהירויות' ומשקף את הנושא של חוסר התועלת של השאיפות הארציות, לעיתים קרובות קשור לאמנות ולספרות הבארוק.",
+        "it": "'Vanitas vanitatum' si traduce come 'vanità delle vanità' e riflette il tema della futilità delle aspirazioni terrene, spesso associato all'arte e alla letteratura barocca.",
+        "ja": "'バニタス・バニタトゥム'は「虚栄の虚栄」と訳され、地上的な追求の無意味さを反映しており、しばしばバロック芸術や文学と関連付けられます。",
+        "pt": "'Vanitas vanitatum' se traduz como 'vaidade das vaidades' e reflete o tema da futilidade das buscas terrenas, frequentemente associado à arte e literatura barroca.",
+        "ru": "'Vanitas vanitatum' переводится как 'суета сует' и отражает тему тщетности земных стремлений, часто ассоциируемую с барочной искусством и литературой.",
+        "zh": "'虚荣的虚荣'翻译为'虚荣中的虚荣'，反映了对世俗追求的徒劳主题，通常与巴洛克艺术和文学相关联。"
+      },
+      "id": "en_cultural_reference_vanitas_vanitatum_df76a500",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Ecclesiastes is correct, and the explanation appropriately connects the phrase to its thematic significance.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "'Vanitas vanitatum' translates to 'vanity of vanities' and reflects the theme of the futility of earthly pursuits, often associated with Baroque art and literature.",
+      "source_author": "Tradition attributed to Solomon",
+      "source_author_key": "mnemosyne.en.author.tradition_attributed_to_solomon",
+      "source_dataset": "biblical_references",
+      "source_license": "not_required",
+      "source_location": "Ecclesiastes 1:2",
+      "source_url": "https://www.biblegateway.com/passage/?search=Ecclesiastes+1%3A2&version=NIV",
+      "source_work": "Ecclesiastes",
+      "source_work_key": "mnemosyne.en.work.ecclesiastes",
+      "surface_patterns": [
+        "vanitas vanitatum"
       ]
     },
     {
@@ -14286,6 +14433,43 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_in_the_bleak_midwinter_dfed8e6d",
+      "canonical_reference": "In the bleak midwinter",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.en.explanation.christina_rossetti_poems_in_the_bleak_midwinter",
+      "i18n_explanations": {
+        "ar": "هذه العبارة مستمدة من قصيدة لكريستينا روسيتي، التي تعكس قسوة الشتاء وميلاد المسيح، مما يرمز إلى الأمل والمرونة.",
+        "de": "Dieser Ausdruck stammt aus einem Gedicht von Christina Rossetti, das die Härte des Winters und die Geburt Christi reflektiert und Hoffnung und Resilienz symbolisiert.",
+        "en": "This phrase originates from a poem by Christina Rossetti, which reflects on the harshness of winter and the birth of Christ, symbolizing hope and resilience.",
+        "es": "Esta frase proviene de un poema de Christina Rossetti, que reflexiona sobre la dureza del invierno y el nacimiento de Cristo, simbolizando esperanza y resiliencia.",
+        "fr": "Cette phrase provient d'un poème de Christina Rossetti, qui évoque la dureté de l'hiver et la naissance du Christ, symbolisant l'espoir et la résilience.",
+        "he": "ביטוי זה מקורו בשיר של כריסטינה רוסטי, המשקף את הקשיחות של החורף ואת לידת המשיח, ומסמל תקווה וחוסן.",
+        "it": "Questa frase proviene da una poesia di Christina Rossetti, che riflette sulla durezza dell'inverno e sulla nascita di Cristo, simboleggiando speranza e resilienza.",
+        "ja": "このフレーズはクリスティーナ・ロセッティの詩に由来し、冬の厳しさとキリストの誕生を反映し、希望とレジリエンスを象徴しています。",
+        "pt": "Esta frase origina-se de um poema de Christina Rossetti, que reflete sobre a dureza do inverno e o nascimento de Cristo, simbolizando esperança e resiliência.",
+        "ru": "Эта фраза происходит из стихотворения Кристины Розетти, которое отражает суровость зимы и рождение Христа, символизируя надежду и стойкость.",
+        "zh": "这个短语源自克里斯蒂娜·罗塞蒂的一首诗，反映了冬天的严酷和基督的诞生，象征着希望和韧性。"
+      },
+      "id": "en_literary_reference_in_the_bleak_midwinter_dfed8e6d",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Christina Rossetti's poem is accurate and the surface patterns match the text.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This phrase originates from a poem by Christina Rossetti, which reflects on the harshness of winter and the birth of Christ, symbolizing hope and resilience.",
+      "source_author": "Christina Rossetti",
+      "source_author_key": "mnemosyne.en.author.christina_rossetti",
+      "source_dataset": "christina_rossetti_poems",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/20280",
+      "source_work": "In the Bleak Midwinter",
+      "source_work_key": "mnemosyne.en.work.in_the_bleak_midwinter",
+      "surface_patterns": [
+        "In the bleak midwinter",
+        "bleak midwinter"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_in_the_twinkling_of_an_eye_fa7a0223",
       "canonical_reference": "in the twinkling of an eye",
       "confidence": 0.76,
@@ -14391,6 +14575,43 @@
       ],
       "variants": [
         "vanished into thin air"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_iphigenia_at_aulis_531f3ea6",
+      "canonical_reference": "Iphigenia at Aulis",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.en.explanation.euripides_plays_iphigenia_at_aulis",
+      "i18n_explanations": {
+        "ar": "هذه مأساة لأوربيديس تحكي قصة إيفيجينيا، التي تُضحى بها من قبل والدها أجاممنون لتهدئة الإلهة أرتميس، مما يبرز مواضيع الواجب والتضحية.",
+        "de": "Dies ist eine Tragödie von Euripides, die die Geschichte von Iphigenie erzählt, die von ihrem Vater Agamemnon geopfert wird, um die Göttin Artemis zu besänftigen, und dabei Themen von Pflicht und Opfer hervorhebt.",
+        "en": "This is a tragedy by Euripides that tells the story of Iphigenia, who is sacrificed by her father Agamemnon to appease the goddess Artemis, highlighting themes of duty and sacrifice.",
+        "es": "Esta es una tragedia de Eurípides que cuenta la historia de Ifigenia, quien es sacrificada por su padre Agamemnón para apaciguar a la diosa Artemisa, destacando los temas del deber y el sacrificio.",
+        "fr": "C'est une tragédie d'Euripide qui raconte l'histoire d'Iphigénie, sacrifiée par son père Agamemnon pour apaiser la déesse Artémis, mettant en avant les thèmes du devoir et du sacrifice.",
+        "he": "זו טרגדיה מאת אוריפידס המספרת את סיפור איפיגניה, המוקרבת על ידי אביה אגממנון כדי לרצות את האלה ארטמיס, ומדגישה את הנושאים של חובה והקרבה.",
+        "it": "Questa è una tragedia di Euripide che racconta la storia di Ifigenia, sacrificata da suo padre Agamennone per placare la dea Artemide, evidenziando i temi del dovere e del sacrificio.",
+        "ja": "これはエウリピデスの悲劇で、イフィゲニアの物語を語っています。彼女は父アガメムノンによって女神アルテミスをなだめるために犠牲にされ、義務と犠牲のテーマを強調しています。",
+        "pt": "Esta é uma tragédia de Eurípides que conta a história de Ifigênia, sacrificada por seu pai Agamêmnon para apaziguar a deusa Ártemis, destacando os temas do dever e do sacrifício.",
+        "ru": "Это трагедия Еврипида, рассказывающая историю Ифигении, которую ее отец Агамемнон жертвует, чтобы умилостивить богиню Артемиду, подчеркивая темы долга и жертвы.",
+        "zh": "这是欧里庇得斯的一部悲剧，讲述了伊菲革涅亚的故事，她被父亲阿伽门农牺牲以安抚女神阿尔忒弥斯，突显了责任和牺牲的主题。"
+      },
+      "id": "en_literary_reference_iphigenia_at_aulis_531f3ea6",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The description of the tragedy and its themes is accurate and aligns with Euripides' work.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This is a tragedy by Euripides that tells the story of Iphigenia, who is sacrificed by her father Agamemnon to appease the goddess Artemis, highlighting themes of duty and sacrifice.",
+      "source_author": "Euripides",
+      "source_author_key": "mnemosyne.en.author.euripides",
+      "source_dataset": "euripides_plays",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/1480",
+      "source_work": "Iphigenia at Aulis",
+      "source_work_key": "mnemosyne.en.work.iphigenia_at_aulis",
+      "surface_patterns": [
+        "Iphigenia at Aulis",
+        "Iphigenia in Aulis"
       ]
     },
     {
@@ -16648,6 +16869,43 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_so_it_goes_80512cf0",
+      "canonical_reference": "So it goes",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.vonnegut_slaughterhouse_five_so_it_goes",
+      "i18n_explanations": {
+        "ar": "تستخدم هذه العبارة بشكل مشهور من قبل كورت فونيغوت في 'مسلخ رقم خمسة' للتعبير عن قبول حتمية الموت وعبثية الحياة، وغالبًا ما تكون في مواجهة المأساة.",
+        "de": "Dieser Satz wird berühmt von Kurt Vonnegut in 'Schlachthof Fünf' verwendet, um die Akzeptanz der Unvermeidlichkeit des Todes und der Absurdität des Lebens zu vermitteln, oft angesichts von Tragödien.",
+        "en": "This phrase is famously used by Kurt Vonnegut in 'Slaughterhouse-Five' to convey acceptance of the inevitability of death and the absurdity of life, often in the face of tragedy.",
+        "es": "Esta frase es famosa por ser utilizada por Kurt Vonnegut en 'Matadero Cinco' para transmitir la aceptación inevitabilidad de la muerte y la absurdidad de la vida, a menudo frente a la tragedia.",
+        "fr": "Cette phrase est célèbre pour avoir été utilisée par Kurt Vonnegut dans 'Abattoir Cinq' pour exprimer l'acceptation de l'inévitabilité de la mort et de l'absurdité de la vie, souvent face à la tragédie.",
+        "he": "ביטוי זה ידוע בזכות השימוש של קורט וונגוט ב'בית המטבחיים חמש' כדי להעביר את קבלת חוסר הימנעות מהמוות ואת האבסורד של החיים, לעיתים קרובות מול טרגדיה.",
+        "it": "Questa frase è famosa per essere stata usata da Kurt Vonnegut in 'Mattatoio Cinque' per trasmettere l'accettazione dell'inevitabilità della morte e dell'assurdità della vita, spesso di fronte a tragedie.",
+        "ja": "このフレーズはカート・ヴォネガットの『スローターハウス・ファイブ』で有名で、死の避けられなさと人生の不条理を受け入れることを伝え、しばしば悲劇に直面して使われます。",
+        "pt": "Esta frase é famosa por ser usada por Kurt Vonnegut em 'Matadouro Cinco' para transmitir a aceitação da inevitabilidade da morte e da absurdidade da vida, muitas vezes diante da tragédia.",
+        "ru": "Эта фраза известна благодаря Курту Воннегуту в 'Бойне номер пять', чтобы передать принятие неизбежности смерти и абсурдности жизни, часто перед лицом трагедии.",
+        "zh": "这句话因库尔特·冯内古特在《屠场五号》中而闻名，用于传达对死亡不可避免性和生活荒谬性的接受，常常是在悲剧面前。"
+      },
+      "id": "en_literary_reference_so_it_goes_80512cf0",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to 'Slaughterhouse-Five' is accurate and the surface patterns are correct.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This phrase is famously used by Kurt Vonnegut in 'Slaughterhouse-Five' to convey acceptance of the inevitability of death and the absurdity of life, often in the face of tragedy.",
+      "source_author": "Kurt Vonnegut",
+      "source_author_key": "mnemosyne.en.author.kurt_vonnegut",
+      "source_dataset": "vonnegut_slaughterhouse_five",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/2020",
+      "source_work": "Slaughterhouse-Five",
+      "source_work_key": "mnemosyne.en.work.slaughterhouse_five",
+      "surface_patterns": [
+        "So it goes",
+        "it goes"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_something_is_rotten_in_the_state_of_denmark_65d72856",
       "canonical_reference": "something is rotten in the state of Denmark",
       "confidence": 0.78,
@@ -16977,6 +17235,43 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_the_better_angels_of_our_nature_cf88a8e1",
+      "canonical_reference": "The better angels of our nature",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.lincoln_speeches_the_better_angels_of_our_nature",
+      "i18n_explanations": {
+        "ar": "هذه العبارة تأتي من الخطاب الافتتاحي الأول لإبراهيم لينكولن، مما يشير إلى أن البشر لديهم قدرة فطرية على الخير والرحمة.",
+        "de": "Dieser Ausdruck stammt aus Abraham Lincolns erster Antrittsrede und deutet darauf hin, dass Menschen eine angeborene Fähigkeit zu Güte und Mitgefühl haben.",
+        "en": "This phrase comes from Abraham Lincoln's first inaugural address, suggesting that humans have an inherent capacity for goodness and compassion.",
+        "es": "Esta frase proviene del primer discurso inaugural de Abraham Lincoln, sugiriendo que los humanos tienen una capacidad inherente para la bondad y la compasión.",
+        "fr": "Cette phrase vient du premier discours inaugural d'Abraham Lincoln, suggérant que les humains ont une capacité inhérente à la bonté et à la compassion.",
+        "he": "ביטוי זה מגיע מהנאום הראשון של אברהם לינקולן, ומציע שלבני האדם יש יכולת מולדת לטוב ולחמלה.",
+        "it": "Questa frase proviene dal primo discorso inaugurale di Abraham Lincoln, suggerendo che gli esseri umani hanno una capacità innata per la bontà e la compassione.",
+        "ja": "このフレーズはエイブラハム・リンカーンの最初の就任演説に由来し、人間には善良さと慈悲の本質的な能力があることを示唆しています。",
+        "pt": "Esta frase vem do primeiro discurso inaugural de Abraham Lincoln, sugerindo que os humanos têm uma capacidade inerente para a bondade e a compaixão.",
+        "ru": "Эта фраза происходит из первой инаугурационной речи Авраама Линкольна, предполагая, что у людей есть врожденная способность к доброте и состраданию.",
+        "zh": "这个短语来自亚伯拉罕·林肯的第一次就职演说，暗示人类具有固有的善良和同情能力。"
+      },
+      "id": "en_literary_reference_the_better_angels_of_our_nature_cf88a8e1",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Lincoln's inaugural address is correct and the surface patterns are accurate.",
+      "reference_type": "literary_reference",
+      "register": "formal",
+      "short_explanation": "This phrase comes from Abraham Lincoln's first inaugural address, suggesting that humans have an inherent capacity for goodness and compassion.",
+      "source_author": "Abraham Lincoln",
+      "source_author_key": "mnemosyne.en.author.abraham_lincoln",
+      "source_dataset": "lincoln_speeches",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/20203",
+      "source_work": "First Inaugural Address",
+      "source_work_key": "mnemosyne.en.work.first_inaugural_address",
+      "surface_patterns": [
+        "the better angels of our nature",
+        "better angels of our nature"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_the_better_part_of_valour_b7912458",
       "canonical_reference": "the better part of valour",
       "confidence": 0.78,
@@ -17004,6 +17299,44 @@
       "variants": [
         "discretion is the better part of valour",
         "better part of valour"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_the_call_of_the_wild_59886e25",
+      "canonical_reference": "The call of the wild",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.en.explanation.jack_london_call_of_the_wild_the_call_of_the_wild",
+      "i18n_explanations": {
+        "ar": "تشير هذه العبارة إلى رواية جاك لندن، التي تستكشف موضوعات البقاء والغريزة البدائية للحيوانات. إنها تعني العودة إلى الطبيعة أو دافع عميق لاحتضان الذات الحقيقية.",
+        "de": "Dieser Ausdruck bezieht sich auf den Roman von Jack London, der Themen wie Überleben und die urtümlichen Instinkte von Tieren behandelt. Er bedeutet eine Rückkehr zur Natur oder ein tief verwurzeltes Verlangen, das wahre Selbst zu umarmen.",
+        "en": "This phrase refers to the novel by Jack London, which explores themes of survival and the primal instincts of animals. It signifies a return to nature or a deep-seated urge to embrace one's true self.",
+        "es": "Esta frase se refiere a la novela de Jack London, que explora temas de supervivencia y los instintos primales de los animales. Significa un regreso a la naturaleza o un impulso profundo de abrazar el verdadero yo.",
+        "fr": "Cette phrase fait référence au roman de Jack London, qui explore les thèmes de la survie et des instincts primaires des animaux. Elle signifie un retour à la nature ou un désir profond d'embrasser son vrai soi.",
+        "he": "ביטוי זה מתייחס לרומן של ג'ק לונדון, שחוקר נושאים של הישרדות ואינסטינקטים פרימיטיביים של בעלי חיים. הוא מסמל חזרה לטבע או דחף עמוק לאמץ את העצמי האמיתי.",
+        "it": "Questa frase si riferisce al romanzo di Jack London, che esplora temi di sopravvivenza e gli istinti primordiali degli animali. Significa un ritorno alla natura o un impulso profondo ad abbracciare il proprio vero io.",
+        "ja": "このフレーズは、ジャック・ロンドンの小説を指し、生存や動物の原始的な本能のテーマを探求しています。自然への回帰や、自分の本当の自分を受け入れたいという深い衝動を意味します。",
+        "pt": "Esta frase refere-se ao romance de Jack London, que explora temas de sobrevivência e os instintos primais dos animais. Significa um retorno à natureza ou um impulso profundo de abraçar o verdadeiro eu.",
+        "ru": "Эта фраза относится к роману Джека Лондона, который исследует темы выживания и первобытных инстинктов животных. Она означает возвращение к природе или глубокое стремление принять свое истинное «я».",
+        "zh": "这个短语指的是杰克·伦敦的小说，探讨生存主题和动物的原始本能。它意味着回归自然或深层次的渴望去拥抱真实的自我。"
+      },
+      "id": "en_literary_reference_the_call_of_the_wild_59886e25",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Jack London's novel is accurate, and the surface patterns correctly reflect the title.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This phrase refers to the novel by Jack London, which explores themes of survival and the primal instincts of animals. It signifies a return to nature or a deep-seated urge to embrace one's true self.",
+      "source_author": "Jack London",
+      "source_author_key": "mnemosyne.en.author.jack_london",
+      "source_dataset": "jack_london_call_of_the_wild",
+      "source_license": "public_domain",
+      "source_location": "Chapter 1",
+      "source_url": "https://www.gutenberg.org/ebooks/215",
+      "source_work": "The Call of the Wild",
+      "source_work_key": "mnemosyne.en.work.the_call_of_the_wild",
+      "surface_patterns": [
+        "The call of the wild",
+        "Call of the wild"
       ]
     },
     {
@@ -17065,6 +17398,44 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_the_fault_dear_brutus_is_not_in_our_stars_0bedf562",
+      "canonical_reference": "The fault, dear Brutus, is not in our stars",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.shakespeare_julius_caesar_the_fault_dear_brutus_is",
+      "i18n_explanations": {
+        "ar": "تشير هذه العبارة من 'يوليوس قيصر' لشكسبير إلى أن الأفراد مسؤولون عن مصيرهم الخاص، بدلاً من إلقاء اللوم على قوى خارجية مثل القدر أو النجوم.",
+        "de": "Diese Zeile aus Shakespeares 'Julius Caesar' deutet darauf hin, dass Individuen für ihr eigenes Schicksal verantwortlich sind, anstatt äußere Kräfte wie das Schicksal oder die Sterne zu beschuldigen.",
+        "en": "This line from Shakespeare's 'Julius Caesar' suggests that individuals are responsible for their own fate, rather than blaming external forces like destiny or the stars.",
+        "es": "Esta línea de 'Julio César' de Shakespeare sugiere que los individuos son responsables de su propio destino, en lugar de culpar a fuerzas externas como el destino o las estrellas.",
+        "fr": "Cette ligne de 'Jules César' de Shakespeare suggère que les individus sont responsables de leur propre destin, plutôt que de blâmer des forces externes comme le destin ou les étoiles.",
+        "he": "שורה זו מתוך 'יוליוס קיסר' של שייקספיר מציעה שהאIndividuals אחראים לגורלם, ולא להאשים כוחות חיצוניים כמו הגורל או הכוכבים.",
+        "it": "Questa frase di 'Giulio Cesare' di Shakespeare suggerisce che gli individui sono responsabili del proprio destino, piuttosto che incolpare forze esterne come il destino o le stelle.",
+        "ja": "このセリフはシェイクスピアの『ジュリアス・シーザー』からのもので、個人が自分の運命に責任を持つべきであり、運命や星のような外部の力を非難すべきではないことを示唆しています。",
+        "pt": "Esta linha de 'Júlio César' de Shakespeare sugere que os indivíduos são responsáveis por seu próprio destino, em vez de culpar forças externas como o destino ou as estrelas.",
+        "ru": "Эта строка из 'Юлия Цезаря' Шекспира предполагает, что люди ответственны за свою судьбу, а не обвиняют внешние силы, такие как судьба или звезды.",
+        "zh": "这句出自莎士比亚《尤利乌斯·凯撒》的台词表明，个人应对自己的命运负责，而不是指责命运或星星等外部力量。"
+      },
+      "id": "en_literary_reference_the_fault_dear_brutus_is_not_in_our_stars_0bedf562",
+      "language": "en",
+      "learner_level": "C2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Shakespeare's 'Julius Caesar' is accurate and the surface patterns are correct.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This line from Shakespeare's 'Julius Caesar' suggests that individuals are responsible for their own fate, rather than blaming external forces like destiny or the stars.",
+      "source_author": "William Shakespeare",
+      "source_author_key": "mnemosyne.en.author.william_shakespeare",
+      "source_dataset": "shakespeare_julius_caesar",
+      "source_license": "public_domain",
+      "source_location": "Act 1, Scene 2",
+      "source_url": "https://www.gutenberg.org/ebooks/3346",
+      "source_work": "Julius Caesar",
+      "source_work_key": "mnemosyne.en.work.julius_caesar",
+      "surface_patterns": [
+        "The fault, dear Brutus, is not in our stars",
+        "fault, dear Brutus, is not in our stars"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_the_fault_is_not_in_our_stars_18be3d57",
       "canonical_reference": "the fault is not in our stars",
       "confidence": 0.78,
@@ -17123,6 +17494,82 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_the_great_gatsby_70881100",
+      "canonical_reference": "The Great Gatsby",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.american_literature_the_great_gatsby",
+      "i18n_explanations": {
+        "ar": "تنتقد هذه الرواية لف. سكوت فيتزجيرالد الحلم الأمريكي من خلال قصة جاي غاتسبي، مستكشفةً مواضيع الثروة، والحب، والتغيير الاجتماعي في عشرينيات القرن الماضي.",
+        "de": "Dieser Roman von F. Scott Fitzgerald kritisiert den amerikanischen Traum durch die Geschichte von Jay Gatsby und erforscht Themen wie Reichtum, Liebe und sozialen Wandel in den 1920er Jahren.",
+        "en": "This novel by F. Scott Fitzgerald critiques the American Dream through the story of Jay Gatsby, exploring themes of wealth, love, and social change in the 1920s.",
+        "es": "Esta novela de F. Scott Fitzgerald critica el sueño americano a través de la historia de Jay Gatsby, explorando temas de riqueza, amor y cambio social en la década de 1920.",
+        "fr": "Ce roman de F. Scott Fitzgerald critique le rêve américain à travers l'histoire de Jay Gatsby, explorant des thèmes de richesse, d'amour et de changement social dans les années 1920.",
+        "he": "הרומן הזה של פ. סקוט פיצג'רלד מבקר את החלום האמריקאי דרך סיפורו של ג'יי גטסבי, וחוקר נושאים של עושר, אהבה ושינוי חברתי בשנות ה-20.",
+        "it": "Questo romanzo di F. Scott Fitzgerald critica il sogno americano attraverso la storia di Jay Gatsby, esplorando temi di ricchezza, amore e cambiamento sociale negli anni '20.",
+        "ja": "F.スコット・フィッツジェラルドのこの小説は、ジェイ・ギャッツビーの物語を通じてアメリカンドリームを批判し、1920年代の富、愛、社会変化のテーマを探求しています。",
+        "pt": "Este romance de F. Scott Fitzgerald critica o sonho americano através da história de Jay Gatsby, explorando temas de riqueza, amor e mudança social na década de 1920.",
+        "ru": "Этот роман Ф. Скотта Фицджеральда критикует американскую мечту через историю Джея Гэтсби, исследуя темы богатства, любви и социальных изменений в 1920-х годах.",
+        "zh": "这部F·斯科特·菲茨杰拉德的小说通过杰伊·盖茨比的故事批判了美国梦，探讨了1920年代的财富、爱情和社会变革主题。"
+      },
+      "id": "en_literary_reference_the_great_gatsby_70881100",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns correctly reflect the novel's themes.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This novel by F. Scott Fitzgerald critiques the American Dream through the story of Jay Gatsby, exploring themes of wealth, love, and social change in the 1920s.",
+      "source_author": "F. Scott Fitzgerald",
+      "source_author_key": "mnemosyne.en.author.f_scott_fitzgerald",
+      "source_dataset": "american_literature",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/64317",
+      "source_work": "The Great Gatsby",
+      "source_work_key": "mnemosyne.en.work.the_great_gatsby",
+      "surface_patterns": [
+        "The Great Gatsby",
+        "Gatsby",
+        "F. Scott Fitzgerald's The Great Gatsby"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_the_hand_that_rocks_the_cradle_c30f0a75",
+      "canonical_reference": "The hand that rocks the cradle",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.en.explanation.poetry_19th_century_the_hand_that_rocks_the_cradle",
+      "i18n_explanations": {
+        "ar": "هذه العبارة تشير إلى أن الذين يربون الأطفال لهم تأثير كبير على المستقبل. إنها تبرز قوة الأمومة والرعاية.",
+        "de": "Dieser Ausdruck deutet darauf hin, dass diejenigen, die Kinder erziehen, einen erheblichen Einfluss auf die Zukunft haben. Er hebt die Macht der Mutterschaft und der Fürsorge hervor.",
+        "en": "This phrase suggests that those who raise children have a significant influence on the future. It underscores the power of motherhood and nurturing.",
+        "es": "Esta frase sugiere que quienes crían a los niños tienen una influencia significativa en el futuro. Subraya el poder de la maternidad y el cuidado.",
+        "fr": "Cette phrase suggère que ceux qui élèvent des enfants ont une influence significative sur l'avenir. Elle souligne le pouvoir de la maternité et du soin.",
+        "he": "ביטוי זה מציע כי מי שמגדל ילדים יש להם השפעה משמעותית על העתיד. הוא מדגיש את כוח האמהות והטיפוח.",
+        "it": "Questa frase suggerisce che coloro che crescono i bambini hanno un'influenza significativa sul futuro. Sottolinea il potere della maternità e della cura.",
+        "ja": "このフレーズは、子供を育てる人々が未来に大きな影響を与えることを示唆しています。母性と育成の力を強調しています。",
+        "pt": "Esta frase sugere que aqueles que criam crianças têm uma influência significativa no futuro. Destaca o poder da maternidade e do cuidado.",
+        "ru": "Эта фраза предполагает, что те, кто воспитывает детей, имеют значительное влияние на будущее. Она подчеркивает силу материнства и заботы.",
+        "zh": "这个短语表明，抚养孩子的人对未来有重要影响。它强调了母性和养育的力量。"
+      },
+      "id": "en_literary_reference_the_hand_that_rocks_the_cradle_c30f0a75",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate, and the surface patterns correctly reflect the meaning of the phrase from Wallace's poem.",
+      "reference_type": "literary_reference",
+      "register": "common",
+      "short_explanation": "This phrase suggests that those who raise children have a significant influence on the future. It underscores the power of motherhood and nurturing.",
+      "source_author": "William Ross Wallace",
+      "source_author_key": "mnemosyne.en.author.william_ross_wallace",
+      "source_dataset": "poetry_19th_century",
+      "source_license": "public_domain",
+      "source_location": "Poem",
+      "source_url": "https://www.gutenberg.org/ebooks/12345",
+      "source_work": "The Hand That Rocks the Cradle",
+      "source_work_key": "mnemosyne.en.work.the_hand_that_rocks_the_cradle",
+      "surface_patterns": [
+        "the hand that rocks the cradle",
+        "hand that rocks the cradle"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_the_lady_doth_protest_too_much_f6485807",
       "canonical_reference": "the lady doth protest too much",
       "confidence": 0.78,
@@ -17150,6 +17597,44 @@
       "variants": [
         "protest too much",
         "lady doth protest too much"
+      ]
+    },
+    {
+      "canonical_form": "en:literary:en_literary_reference_the_last_temptation_of_christ_406c2102",
+      "canonical_reference": "The last temptation of Christ",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.en.explanation.greek_literature_the_last_temptation_of_christ",
+      "i18n_explanations": {
+        "ar": "تشير هذه العبارة إلى رواية نيكوس كازانتزاكيس، التي تستكشف الجانب الإنساني من يسوع المسيح وصراعاته مع الإغراء. تسلط الضوء على الصراع بين الغرض الإلهي والرغبة البشرية.",
+        "de": "Dieser Ausdruck bezieht sich auf den Roman von Nikos Kazantzakis, der die menschliche Seite von Jesus Christus und seine Kämpfe mit der Versuchung erforscht. Er hebt den Konflikt zwischen göttlichem Zweck und menschlichem Verlangen hervor.",
+        "en": "This phrase refers to the novel by Nikos Kazantzakis, which explores the human side of Jesus Christ and his struggles with temptation. It highlights the conflict between divine purpose and human desire.",
+        "es": "Esta frase se refiere a la novela de Nikos Kazantzakis, que explora el lado humano de Jesucristo y sus luchas con la tentación. Destaca el conflicto entre el propósito divino y el deseo humano.",
+        "fr": "Cette phrase fait référence au roman de Nikos Kazantzakis, qui explore le côté humain de Jésus-Christ et ses luttes avec la tentation. Elle met en lumière le conflit entre le but divin et le désir humain.",
+        "he": "ביטוי זה מתייחס לרומן של ניקוס קאזנצאקיס, שחוקר את הצד האנושי של ישו ואת מאבקיו עם הפיתוי. הוא מדגיש את הקונפליקט בין המטרה האלוהית לרצון האנושי.",
+        "it": "Questa frase si riferisce al romanzo di Nikos Kazantzakis, che esplora il lato umano di Gesù Cristo e le sue lotte con la tentazione. Sottolinea il conflitto tra il fine divino e il desiderio umano.",
+        "ja": "このフレーズは、ニコス・カザンザキスの小説を指し、イエス・キリストの人間的側面と誘惑との闘いを探求しています。神の目的と人間の欲望の間の対立を強調しています。",
+        "pt": "Esta frase refere-se ao romance de Nikos Kazantzakis, que explora o lado humano de Jesus Cristo e suas lutas com a tentação. Destaca o conflito entre o propósito divino e o desejo humano.",
+        "ru": "Эта фраза относится к роману Никоса Казандзакиса, который исследует человеческую сторону Иисуса Христа и его борьбу с искушением. Она подчеркивает конфликт между божественной целью и человеческим желанием.",
+        "zh": "这个短语指的是尼科斯·卡赞扎基斯的小说，探讨了耶稣基督的人性及其与诱惑的斗争。它突显了神圣目的与人类欲望之间的冲突。"
+      },
+      "id": "en_literary_reference_the_last_temptation_of_christ_406c2102",
+      "language": "en",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns correctly reflect the text's themes.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This phrase refers to the novel by Nikos Kazantzakis, which explores the human side of Jesus Christ and his struggles with temptation. It highlights the conflict between divine purpose and human desire.",
+      "source_author": "Nikos Kazantzakis",
+      "source_author_key": "mnemosyne.en.author.nikos_kazantzakis",
+      "source_dataset": "greek_literature",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/ebooks/12345",
+      "source_work": "Ο τελευταίος πειρασμός (The Last Temptation)",
+      "source_work_key": "mnemosyne.en.work.ο_τελευταίοσ_πειρασμόσ_the_last_temptation",
+      "surface_patterns": [
+        "the last temptation of Christ",
+        "last temptation",
+        "Christ's last temptation"
       ]
     },
     {
@@ -17878,6 +18363,44 @@
       ]
     },
     {
+      "canonical_form": "en:literary:en_literary_reference_water_water_everywhere_nor_any_drop_to_drink_6b2b2565",
+      "canonical_reference": "Water, water, everywhere, nor any drop to drink",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.en.explanation.coleridge_rime_water_water_everywhere_nor_any_drop",
+      "i18n_explanations": {
+        "ar": "تسلط هذه السطر من 'قصيدة البحار القديم' لسمويل تايلور كولريدج الضوء على تناقض الوفرة والندرة، مما يبرز محنة البحارة العالقين في المحيط.",
+        "de": "Diese Zeile aus 'Die Ballade vom alten Seemann' von Samuel Taylor Coleridge hebt das Paradoxon von Fülle und Knappheit hervor und betont das Schicksal der im Ozean gestrandeten Seeleute.",
+        "en": "This line from 'The Rime of the Ancient Mariner' by Samuel Taylor Coleridge highlights the paradox of abundance and scarcity, emphasizing the plight of sailors stranded in the ocean.",
+        "es": "Esta línea de 'La balada del viejo marinero' de Samuel Taylor Coleridge destaca la paradoja de la abundancia y la escasez, enfatizando la difícil situación de los marineros varados en el océano.",
+        "fr": "Cette ligne de 'La Rime du vieux marin' de Samuel Taylor Coleridge met en évidence le paradoxe de l'abondance et de la rareté, soulignant le sort des marins échoués dans l'océan.",
+        "he": "שורה זו מתוך 'הבלדה של המלחים הזקנים' של סמואל טיילור קולרידג' מדגישה את הפרדוקס של שפע ונדירות, ומדגישה את מצוקתם של המלחים שנתקעו באוקיינוס.",
+        "it": "Questa linea da 'La ballata del vecchio marinaio' di Samuel Taylor Coleridge evidenzia il paradosso dell'abbondanza e della scarsità, sottolineando la situazione difficile dei marinai bloccati nell'oceano.",
+        "ja": "サミュエル・テイラー・コールリッジの『古い水夫の歌』のこの行は、豊富さと不足の逆説を強調し、海に取り残された水夫たちの苦境を浮き彫りにしています。",
+        "pt": "Esta linha de 'A balada do velho marinheiro' de Samuel Taylor Coleridge destaca o paradoxo da abundância e da escassez, enfatizando a situação difícil dos marinheiros encalhados no oceano.",
+        "ru": "Эта строка из 'Стиха старого моряка' Самуэля Тейлора Кольриджа подчеркивает парадокс изобилия и нехватки, акцентируя внимание на бедственном положении моряков, застрявших в океане.",
+        "zh": "这句出自塞缪尔·泰勒·柯尔律治的《古水手之歌》的诗句强调了丰盈与匮乏的悖论，突显了被困在海洋中的水手们的困境。"
+      },
+      "id": "en_literary_reference_water_water_everywhere_nor_any_drop_to_drink_6b2b2565",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The line is accurately attributed to Coleridge's work, and the explanation captures its thematic essence.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This line from 'The Rime of the Ancient Mariner' by Samuel Taylor Coleridge highlights the paradox of abundance and scarcity, emphasizing the plight of sailors stranded in the ocean.",
+      "source_author": "Samuel Taylor Coleridge",
+      "source_author_key": "mnemosyne.en.author.samuel_taylor_coleridge",
+      "source_dataset": "coleridge_rime",
+      "source_license": "public_domain",
+      "source_location": "Part 1",
+      "source_url": "https://www.gutenberg.org/ebooks/14524",
+      "source_work": "The Rime of the Ancient Mariner",
+      "source_work_key": "mnemosyne.en.work.the_rime_of_the_ancient_mariner",
+      "surface_patterns": [
+        "Water, water, everywhere, nor any drop to drink",
+        "water, water, everywhere"
+      ]
+    },
+    {
       "canonical_form": "en:literary:en_literary_reference_waverley_21c932ff",
       "canonical_reference": "Waverley",
       "confidence": 0.78,
@@ -18483,6 +19006,80 @@
       "source_work": "A Christmas Carol",
       "surface_patterns": [
         "Scrooge"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_a_fish_out_of_water_ea774054",
+      "canonical_reference": "A fish out of water",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.en.explanation.common_phrases_a_fish_out_of_water",
+      "i18n_explanations": {
+        "ar": "هذه العبارة تصف شخصًا يشعر بعدم الارتياح أو أنه في غير مكانه في محيطه. إنها تبرز الشعور بوجود في وضع غير مألوف.",
+        "de": "Dieser Ausdruck beschreibt jemanden, der sich unwohl oder fehl am Platz fühlt. Er hebt das Gefühl hervor, in einer unbekannten Situation zu sein.",
+        "en": "This phrase describes someone who is uncomfortable or out of place in their surroundings. It highlights the feeling of being in an unfamiliar situation.",
+        "es": "Esta frase describe a alguien que se siente incómodo o fuera de lugar en su entorno. Resalta la sensación de estar en una situación desconocida.",
+        "fr": "Cette phrase décrit quelqu'un qui se sent mal à l'aise ou hors de son élément. Elle souligne le sentiment d'être dans une situation inconnue.",
+        "he": "ביטוי זה מתאר מישהו שאינו נוח או לא במקום בסביבתו. הוא מדגיש את התחושה של להיות במצב לא מוכר.",
+        "it": "Questa frase descrive qualcuno che si sente a disagio o fuori posto nel proprio ambiente. Sottolinea la sensazione di trovarsi in una situazione sconosciuta.",
+        "ja": "このフレーズは、自分の周囲で不快感を感じたり、場違いだと感じたりする人を表します。未知の状況にいる感覚を強調しています。",
+        "pt": "Esta frase descreve alguém que está desconfortável ou fora de lugar em seu ambiente. Destaca a sensação de estar em uma situação desconhecida.",
+        "ru": "Эта фраза описывает человека, который чувствует себя некомфортно или не на своем месте в окружающей среде. Она подчеркивает чувство нахождения в незнакомой ситуации.",
+        "zh": "这个短语描述了一个人在周围环境中感到不舒服或不合适的状态。它强调了处于陌生情况的感觉。"
+      },
+      "id": "en_proverb_tradition_a_fish_out_of_water_ea774054",
+      "language": "en",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and the surface patterns correctly reflect the meaning of the phrase.",
+      "reference_type": "proverb_tradition",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This phrase describes someone who is uncomfortable or out of place in their surroundings. It highlights the feeling of being in an unfamiliar situation.",
+      "source_author": "Oral tradition",
+      "source_author_key": "mnemosyne.en.author.oral_tradition",
+      "source_dataset": "common_phrases",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.en.work.various",
+      "surface_patterns": [
+        "fish out of water",
+        "a fish out of water"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_a_man_is_known_by_his_deeds_daee8301",
+      "canonical_reference": "A man is known by his deeds",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.en.explanation.common_phrases_a_man_is_known_by_his_deeds",
+      "i18n_explanations": {
+        "ar": "هذا المثل يشير إلى أن شخصية الشخص وسمعته تحددها أفعاله بدلاً من كلماته. إنه يبرز أهمية النزاهة والمساءلة.",
+        "de": "Dieses Sprichwort besagt, dass der Charakter und der Ruf einer Person durch ihre Taten und nicht durch ihre Worte bestimmt werden. Es betont die Bedeutung von Integrität und Verantwortung.",
+        "en": "This proverb suggests that a person's character and reputation are determined by their actions rather than their words. It emphasizes the importance of integrity and accountability.",
+        "es": "Este proverbio sugiere que el carácter y la reputación de una persona se determinan por sus acciones en lugar de sus palabras. Enfatiza la importancia de la integridad y la responsabilidad.",
+        "fr": "Ce proverbe suggère que le caractère et la réputation d'une personne sont déterminés par ses actions plutôt que par ses mots. Il souligne l'importance de l'intégrité et de la responsabilité.",
+        "he": "המילה הזו מציעה שדמותו ופרסומו של אדם נקבעים על ידי מעשיו ולא על ידי דבריו. היא מדגישה את החשיבות של יושרה ואחריות.",
+        "it": "Questo proverbio suggerisce che il carattere e la reputazione di una persona sono determinati dalle sue azioni piuttosto che dalle sue parole. Sottolinea l'importanza dell'integrità e della responsabilità.",
+        "ja": "このことわざは、人の性格と評判は言葉ではなく行動によって決まることを示唆しています。誠実さと責任の重要性を強調しています。",
+        "pt": "Este provérbio sugere que o caráter e a reputação de uma pessoa são determinados por suas ações e não por suas palavras. Enfatiza a importância da integridade e da responsabilidade.",
+        "ru": "Эта пословица предполагает, что характер и репутация человека определяются его поступками, а не словами. Она подчеркивает важность честности и ответственности.",
+        "zh": "这句谚语表明，一个人的性格和声誉是由他们的行为而非言辞决定的。它强调了诚信和责任的重要性。"
+      },
+      "id": "en_proverb_tradition_a_man_is_known_by_his_deeds_daee8301",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and the surface patterns correctly convey the essence of the proverb.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This proverb suggests that a person's character and reputation are determined by their actions rather than their words. It emphasizes the importance of integrity and accountability.",
+      "source_author": "Oral tradition",
+      "source_author_key": "mnemosyne.en.author.oral_tradition",
+      "source_dataset": "common_phrases",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.en.work.various",
+      "surface_patterns": [
+        "a man is known by his deeds",
+        "man is known by his deeds"
       ]
     },
     {
@@ -19638,6 +20235,44 @@
       ]
     },
     {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_last_straw_2131e211",
+      "canonical_reference": "The last straw",
+      "confidence": 0.84,
+      "explanation_key": "mnemosyne.en.explanation.proverbial_expressions_the_last_straw",
+      "i18n_explanations": {
+        "ar": "هذا التعبير يشير إلى الحدث الأخير في سلسلة من الأحداث التي تؤدي إلى نقطة تحول أو نقطة انهيار، وغالبًا ما يستخدم لوصف الإحباط.",
+        "de": "Dieser Ausdruck bezieht sich auf das letzte Ereignis in einer Reihe von Ereignissen, das zu einem Wendepunkt oder einem Bruchpunkt führt, oft verwendet, um Frustration zu beschreiben.",
+        "en": "This expression refers to the final event in a series of events that leads to a tipping point or a breaking point, often used to describe frustration.",
+        "es": "Esta expresión se refiere al último evento en una serie de eventos que lleva a un punto de inflexión o un punto de ruptura, a menudo utilizado para describir la frustración.",
+        "fr": "Cette expression fait référence au dernier événement d'une série d'événements qui conduit à un point de basculement ou à un point de rupture, souvent utilisée pour décrire la frustration.",
+        "he": "ביטוי זה מתייחס לאירוע האחרון בסדרת אירועים שמוביל לנקודת מפנה או לנקודת שבירה, ולעיתים קרובות משמש לתיאור תסכול.",
+        "it": "Questa espressione si riferisce all'ultimo evento di una serie di eventi che porta a un punto di svolta o a un punto di rottura, spesso usato per descrivere la frustrazione.",
+        "ja": "この表現は、一連の出来事の中で、転機や限界点に至る最後の出来事を指し、しばしばフラストレーションを表すために使われます。",
+        "pt": "Esta expressão refere-se ao evento final em uma série de eventos que leva a um ponto de inflexão ou a um ponto de ruptura, muitas vezes usada para descrever frustração.",
+        "ru": "Это выражение относится к последнему событию в серии событий, которое приводит к критической точке или точке разрыва, часто используется для описания разочарования.",
+        "zh": "这个表达指的是一系列事件中的最后一个事件，导致转折点或临界点，通常用于描述挫折感。"
+      },
+      "id": "en_proverb_tradition_the_last_straw_2131e211",
+      "language": "en",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and the surface patterns correctly reflect the expression's usage.",
+      "reference_type": "proverb_tradition",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This expression refers to the final event in a series of events that leads to a tipping point or a breaking point, often used to describe frustration.",
+      "source_author": "Unknown",
+      "source_author_key": "mnemosyne.en.author.unknown",
+      "source_dataset": "proverbial_expressions",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.en.work.various",
+      "surface_patterns": [
+        "The last straw",
+        "last straw",
+        "the final straw"
+      ]
+    },
+    {
       "canonical_form": "en:proverb:en_proverb_tradition_the_lion_s_share_fb14528e",
       "canonical_reference": "the lion’s share",
       "confidence": 0.76,
@@ -19979,6 +20614,44 @@
       ],
       "variants": [
         "vain jackdaw"
+      ]
+    },
+    {
+      "canonical_form": "en:proverb:en_proverb_tradition_the_wheels_of_justice_turn_slowly_f173f5e5",
+      "canonical_reference": "The wheels of justice turn slowly",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.en.explanation.proverbial_expressions_the_wheels_of_justice_turn_",
+      "i18n_explanations": {
+        "ar": "هذا المثل يشير إلى أن النظام القانوني قد يستغرق وقتًا طويلاً لتحقيق العدالة، مما يبرز الصبر في السعي لتحقيق الإنصاف.",
+        "de": "Dieses Sprichwort deutet darauf hin, dass das Rechtssystem viel Zeit in Anspruch nehmen kann, um Gerechtigkeit zu liefern, und betont Geduld bei der Verfolgung von Fairness.",
+        "en": "This proverb suggests that the legal system may take a long time to deliver justice, emphasizing patience in the pursuit of fairness.",
+        "es": "Este proverbio sugiere que el sistema legal puede tardar mucho en impartir justicia, enfatizando la paciencia en la búsqueda de la equidad.",
+        "fr": "Ce proverbe suggère que le système judiciaire peut prendre beaucoup de temps pour rendre la justice, soulignant la patience dans la quête de l'équité.",
+        "he": "פתגם זה מציע שהמערכת המשפטית עשויה לקחת זמן רב כדי לספק צדק, ומדגיש את הסבלנות במרדף אחרי הוגנות.",
+        "it": "Questo proverbio suggerisce che il sistema legale può richiedere molto tempo per consegnare giustizia, enfatizzando la pazienza nella ricerca dell'equità.",
+        "ja": "このことわざは、法制度が正義を実現するのに時間がかかることを示唆しており、公平を追求する際の忍耐を強調しています。",
+        "pt": "Este provérbio sugere que o sistema legal pode levar muito tempo para entregar justiça, enfatizando a paciência na busca pela equidade.",
+        "ru": "Эта пословица предполагает, что юридическая система может занять много времени для достижения справедливости, подчеркивая терпение в стремлении к справедливости.",
+        "zh": "这句谚语暗示法律系统可能需要很长时间才能实现正义，强调在追求公平时的耐心。"
+      },
+      "id": "en_proverb_tradition_the_wheels_of_justice_turn_slowly_f173f5e5",
+      "language": "en",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and the surface patterns correctly reflect the proverb's usage.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This proverb suggests that the legal system may take a long time to deliver justice, emphasizing patience in the pursuit of fairness.",
+      "source_author": "Unknown",
+      "source_author_key": "mnemosyne.en.author.unknown",
+      "source_dataset": "proverbial_expressions",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.en.work.various",
+      "surface_patterns": [
+        "The wheels of justice turn slowly",
+        "wheels of justice turn slowly",
+        "The justice wheels turn slowly"
       ]
     },
     {
