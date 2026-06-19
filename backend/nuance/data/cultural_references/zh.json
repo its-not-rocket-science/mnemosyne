@@ -1734,6 +1734,45 @@
       ]
     },
     {
+      "canonical_form": "zh:classical:zh_classical_or_scriptural_allusion_大禹治水_36f25d33",
+      "canonical_reference": "大禹治水",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.zh.explanation.zh_shangshu_myths_大禹治水",
+      "i18n_explanations": {
+        "ar": "أسطورة أساسية من النصوص الصينية القديمة (مثل *شوجينغ*) عن يو العظيم الذي سيطر على الفيضانات بالمثابرة والتضحية بالنفس، مجسدًا القيادة المثالية والاجتهاد.",
+        "de": "Ein grundlegender Mythos aus alten chinesischen Texten (z. B. *Shujing*) über Yu den Großen, der durch Ausdauer und Selbstaufopferung Überschwemmungen bändigte und ideale Führung sowie Fleiß verkörperte.",
+        "en": "A foundational myth from ancient Chinese texts (e.g., *Shujing*) about Yu the Great, who tamed floods through perseverance and self-sacrifice, embodying ideal leadership and diligence.",
+        "es": "Mito fundacional de textos chinos antiguos (como el *Shujing*) sobre el Gran Yu, quien controló las inundaciones con perseverancia y sacrificio, encarnando liderazgo ideal y diligencia.",
+        "fr": "Mythe fondateur des textes chinois anciens (comme le *Shujing*) sur Yu le Grand, qui dompta les inondations par la persévérance et le sacrifice, incarnant un leadership idéal et l'application.",
+        "he": "מיתוס יסוד מטקסטים סיניים עתיקים (כגון *שוג׳ינג*) על יו הגדול, שבלם שיטפונות באמצעות התמדה והקרבה עצמית, וסימל מנהיגות אידיאלית ושקדנות.",
+        "it": "Mito fondativo dei testi cinesi antichi (come lo *Shujing*) su Yu il Grande, che domò le inondazioni con perseveranza e sacrificio, incarnando leadership ideale e diligenza.",
+        "ja": "古代中国の文献（例：『書経』）にある基礎的な神話で、禹王が忍耐と自己犠牲によって洪水を治め、理想的なリーダーシップと勤勉さを体現した。",
+        "pt": "Mito fundador de textos chineses antigos (como o *Shujing*) sobre o Grande Yu, que controlou inundações com perseverança e sacrifício, encarnando liderança ideal e diligência.",
+        "ru": "Основополагающий миф из древнекитайских текстов (например, *Шуцзин*) о Великом Юе, который усмирил наводнения благодаря упорству и самопожертвованию, олицетворяя идеальное лидерство и усердие.",
+        "zh": "出自古代中国典籍（如《尚书》）的基础神话，讲述大禹通过坚持不懈和自我牺牲治理洪水，体现了理想的领导力和勤勉精神。"
+      },
+      "id": "zh_classical_or_scriptural_allusion_大禹治水_36f25d33",
+      "language": "zh",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to *Shujing* and the mythological context is accurate and well-documented.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "common",
+      "short_explanation": "A foundational myth from ancient Chinese texts (e.g., *Shujing*) about Yu the Great, who tamed floods through perseverance and self-sacrifice, embodying ideal leadership and diligence.",
+      "source_author": "Various (traditionally attributed to 孔子编订)",
+      "source_author_key": "mnemosyne.zh.author.various_traditionally_attributed_to_孔子编订",
+      "source_dataset": "zh_shangshu_myths",
+      "source_license": "public_domain",
+      "source_location": "《尚书·禹贡》",
+      "source_url": "https://zh.wikisource.org/wiki/尚書/禹貢",
+      "source_work": "尚书",
+      "source_work_key": "mnemosyne.zh.work.尚书",
+      "surface_patterns": [
+        "大禹治水",
+        "禹治水",
+        "大禹治理洪水"
+      ]
+    },
+    {
       "canonical_form": "zh:classical:zh_classical_or_scriptural_allusion_大逆不道_eb0a2bf4",
       "canonical_reference": "大逆不道",
       "confidence": 0.85,
@@ -3813,6 +3852,52 @@
       ],
       "variants": [
         "填海"
+      ]
+    },
+    {
+      "canonical_form": "zh:classical:zh_classical_or_scriptural_allusion_约法三章_e11cefae",
+      "canonical_reference": "约法三章",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.zh.explanation.zh_shiji_classical_allusions_约法三章",
+      "i18n_explanations": {
+        "ar": "إشارة تاريخية إلى ليو بانغ (الإمبراطور غاوزو من هان) الذي وضع ثلاثة قوانين بسيطة لكسب ثقة الشعب بعد دخوله شيانيانغ. اليوم يرمز إلى تبسيط القواعد أو وضع اتفاقيات واضحة.",
+        "de": "Historische Anspielung auf Liu Bang (Kaiser Gaozu der Han-Dynastie), der nach der Einnahme von Xianyang drei einfache Gesetze erließ, um das Vertrauen des Volkes zu gewinnen. Steht heute für vereinfachte Regeln oder klare Absprachen.",
+        "en": "A historical allusion to Liu Bang (Emperor Gaozu of Han) establishing three simple laws to win the people's trust after entering Xianyang. It now signifies simplifying rules or making clear agreements.",
+        "es": "Alusión histórica a Liu Bang (Emperador Gaozu de Han), quien estableció tres leyes sencillas para ganar la confianza del pueblo al entrar en Xianyang. Hoy simboliza simplificar normas o establecer acuerdos claros.",
+        "fr": "Allusion historique à Liu Bang (empereur Gaozu des Han) qui établit trois lois simples pour gagner la confiance du peuple après son entrée à Xianyang. Désigne aujourd’hui la simplification des règles ou la clarification des accords.",
+        "he": "אזכור היסטורי לליוא באנג (קיסר גאודזו מהשושלת האן), שקבע שלושה חוקים פשוטים כדי לזכות באמון העם לאחר כניסתו לשיאניאנג. כיום מסמל פישוט חוקים או הסכמים ברורים.",
+        "it": "Allusione storica a Liu Bang (Imperatore Gaozu degli Han), che stabilì tre semplici leggi per conquistare la fiducia del popolo dopo l'ingresso a Xianyang. Oggi indica la semplificazione delle regole o accordi chiari.",
+        "ja": "劉邦（漢の高祖）が咸陽に入城した際、民衆の信頼を得るために三つの簡単な法律を定めた故事。現在では規則を簡素化したり、明確な取り決めを行うことを意味する。",
+        "pt": "Alusão histórica a Liu Bang (Imperador Gaozu de Han), que estabeleceu três leis simples para conquistar a confiança do povo ao entrar em Xianyang. Hoje simboliza a simplificação de regras ou acordos claros.",
+        "ru": "Историческая аллюзия на Лю Бана (императора Гао-цзу династии Хань), который установил три простых закона, чтобы завоевать доверие народа после захвата Сяньяна. Сегодня означает упрощение правил или заключение четких соглашений.",
+        "zh": "历史典故，指汉高祖刘邦入咸阳后与民约法三章，以简明的法律赢得民心。现多指简化规则或明确约定。"
+      },
+      "id": "zh_classical_or_scriptural_allusion_约法三章_e11cefae",
+      "language": "zh",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to 《史记·高祖本纪》 is accurate, and the explanation aligns with historical records.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "proverbial",
+      "short_explanation": "A historical allusion to Liu Bang (Emperor Gaozu of Han) establishing three simple laws to win the people's trust after entering Xianyang. It now signifies simplifying rules or making clear agreements.",
+      "source_author": "司马迁",
+      "source_author_key": "mnemosyne.zh.author.司马迁",
+      "source_dataset": "zh_shiji_classical_allusions",
+      "source_license": "public_domain",
+      "source_location": "《史记》卷八",
+      "source_url": "https://zh.wikisource.org/wiki/史記/卷008",
+      "source_work": "《史记·高祖本纪》",
+      "source_work_key": "mnemosyne.zh.work.史记_高祖本纪",
+      "surface_patterns": [
+        "约法三章",
+        "与民约法三章",
+        "刘邦约法三章",
+        "约法三章的故事",
+        "立约三章",
+        "约法三条"
+      ],
+      "variants": [
+        "立约三章",
+        "约法三条"
       ]
     },
     {
@@ -6938,6 +7023,46 @@
       "surface_patterns": [
         "曲高和寡",
         "曲高和寡者"
+      ]
+    },
+    {
+      "canonical_form": "zh:literary:zh_literary_reference_曾参杀人_ca4f74b1",
+      "canonical_reference": "曾参杀人",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.zh.explanation.zh_han_feizi_allusions_曾参杀人",
+      "i18n_explanations": {
+        "ar": "قصة من كتاب *هان فيزي* توضح خطر الشائعات الكاذبة؛ حيث كاد الزاهد تسينغ زي أن يُعتقل بسبب اتهامات متكررة زائفة بالقتل. تسلط الضوء على قوة الإشاعات وهشاشة السمعة.",
+        "de": "Eine Geschichte aus dem *Han Feizi*, die die Gefahr falscher Gerüchte zeigt; selbst der tugendhafte Zengzi wurde aufgrund wiederholter falscher Mordvorwürfe fast verhaftet. Sie verdeutlicht die Macht von Klatsch und die Zerbrechlichkeit des Rufs.",
+        "en": "A story from the *Han Feizi* illustrating the danger of false rumors; even the virtuous Zengzi was nearly arrested due to repeated false accusations of murder. It highlights the power of gossip and the fragility of reputation.",
+        "es": "Historia del *Han Feizi* que muestra el peligro de los rumores falsos; incluso el virtuoso Zengzi casi fue arrestado por acusaciones repetidas de asesinato. Destaca el poder del chisme y la fragilidad de la reputación.",
+        "fr": "Histoire tirée du *Han Feizi* illustrant le danger des rumeurs ; même le vertueux Zengzi fut presque arrêté à cause de fausses accusations répétées de meurtre. Elle souligne le pouvoir des ragots et la fragilité de la réputation.",
+        "he": "סיפור מ״האן פיי דזה״ הממחיש את סכנת השמועות השקריות; אפילו צנג דזה, שהיה אדם מוסרי, כמעט נעצר בשל האשמות שווא חוזרות ונשנות ברצח. הסיפור מדגיש את כוחה של הרכילות ואת שבריריות המוניטין.",
+        "it": "Un racconto del *Han Feizi* che illustra il pericolo delle false voci; persino il virtuoso Zengzi rischiò l'arresto a causa di ripetute false accuse di omicidio. Sottolinea il potere dei pettegolezzi e la fragilità della reputazione.",
+        "ja": "『韓非子』の物語で、偽りの噂の危険性を示す。徳の高い曾子でさえ、繰り返される殺人の冤罪で逮捕されかけた。噂の力と名誉のもろさを強調している。",
+        "pt": "História do *Han Feizi* que ilustra o perigo dos boatos falsos; até mesmo o virtuoso Zengzi quase foi preso devido a acusações repetidas de assassinato. Destaca o poder da fofoca e a fragilidade da reputação.",
+        "ru": "История из *Хань Фэй-цзы*, иллюстрирующая опасность ложных слухов; даже добродетельный Цзэн-цзы едва не был арестован из-за повторяющихся ложных обвинений в убийстве. Подчёркивает силу сплетен и хрупкость репутации.",
+        "zh": "出自《韩非子》的故事，说明谣言的危害；即使品德高尚的曾参，也因屡次被诬告杀人而险些被捕。突显了流言的威力和名誉的脆弱。"
+      },
+      "id": "zh_literary_reference_曾参杀人_ca4f74b1",
+      "language": "zh",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to *Han Feizi* and the specific passage is accurate and verifiable.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "A story from the *Han Feizi* illustrating the danger of false rumors; even the virtuous Zengzi was nearly arrested due to repeated false accusations of murder. It highlights the power of gossip and the fragility of reputation.",
+      "source_author": "韩非",
+      "source_author_key": "mnemosyne.zh.author.韩非",
+      "source_dataset": "zh_han_feizi_allusions",
+      "source_license": "public_domain",
+      "source_location": "《韩非子·内储说下》",
+      "source_url": "https://zh.wikisource.org/wiki/韓非子/內儲說下",
+      "source_work": "韩非子",
+      "source_work_key": "mnemosyne.zh.work.韩非子",
+      "surface_patterns": [
+        "曾参杀人",
+        "曾子杀人",
+        "曾参杀了人",
+        "曾子杀了人"
       ]
     },
     {

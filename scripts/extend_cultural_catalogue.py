@@ -419,7 +419,7 @@ def _chat(
                     return content, u.prompt_tokens, u.completion_tokens
                 except Exception:
                     pass
-            wait = 2 ** (attempt + 1)
+            wait = 4 ** (attempt + 1)
             print(f"\n  [retry {attempt+1}/{max_retries}] {exc} -- sleeping {wait}s", file=sys.stderr)
             if attempt < max_retries - 1:
                 time.sleep(wait)
