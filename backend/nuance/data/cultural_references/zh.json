@@ -1697,6 +1697,47 @@
       ]
     },
     {
+      "allow_short_pattern": true,
+      "canonical_form": "zh:classical:zh_classical_or_scriptural_allusion_囊萤映雪_9804387e",
+      "canonical_reference": "囊萤映雪",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.zh.explanation.jin_shu_car_yin_囊萤映雪",
+      "i18n_explanations": {
+        "ar": "يشير إلى الدراسة المجتهدة بضوء اليراعات (囊萤) أو ضوء القمر المنعكس على الثلج (映雪)، ويرمز إلى المثابرة في التعلم رغم الصعوبات.",
+        "de": "Bezieht sich auf das fleißige Lernen bei Kerzenschein (囊萤) oder Mondlicht auf Schnee (映雪), was Ausdauer im Lernen trotz harter Bedingungen symbolisiert.",
+        "en": "Refers to studying diligently by the light of fireflies (囊萤) or reflected moonlight on snow (映雪), symbolizing perseverance in learning despite hardship.",
+        "es": "Se refiere a estudiar con diligencia a la luz de las luciérnagas (囊萤) o de la luz de la luna reflejada en la nieve (映雪), simbolizando la perseverancia en el aprendizaje a pesar de las dificultades.",
+        "fr": "Désigne l'étude assidue à la lueur des lucioles (囊萤) ou de la lumière de la lune réfléchie par la neige (映雪), symbolisant la persévérance dans l'apprentissage malgré les difficultés.",
+        "he": "מתייחס ללימוד מסור לאור זיקיות (囊萤) או לאור ירח מוחזר על השלג (映雪), המסמל התמדה בלימודים למרות הקשיים.",
+        "it": "Si riferisce allo studio assiduo alla luce delle lucciole (囊萤) o della luna riflessa sulla neve (映雪), simbolo di perseveranza nello studio nonostante le avversità.",
+        "ja": "蛍の光や雪に映る月の光で勉強することを指し、困難にもかかわらず学問に励むことを象徴する故事成語。",
+        "pt": "Refere-se ao estudo diligente à luz de vaga-lumes (囊萤) ou da luz da lua refletida na neve (映雪), simbolizando perseverança nos estudos apesar das dificuldades.",
+        "ru": "Олицетворяет усердное обучение при свете светлячков (囊萤) или отражённом лунном свете на снегу (映雪), символизируя настойчивость в учёбе несмотря на трудности.",
+        "zh": "指通过萤火虫之光（囊萤）或雪地反射的月光（映雪）勤奋学习，象征不畏艰难、坚持求学的精神。"
+      },
+      "id": "zh_classical_or_scriptural_allusion_囊萤映雪_9804387e",
+      "language": "zh",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to 《晋书》 is accurate for the 囊萤 part; the combined allusion is well-known and correctly explained.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Refers to studying diligently by the light of fireflies (囊萤) or reflected moonlight on snow (映雪), symbolizing perseverance in learning despite hardship.",
+      "source_author": "房玄龄等",
+      "source_author_key": "mnemosyne.zh.author.房玄龄等",
+      "source_dataset": "jin_shu_car_yin",
+      "source_license": "public_domain",
+      "source_location": "列传第五十九·车胤传",
+      "source_url": "https://ctext.org/jin-shu/jy/zh",
+      "source_work": "《晋书》",
+      "source_work_key": "mnemosyne.zh.work.晋书",
+      "surface_patterns": [
+        "囊萤映雪",
+        "囊萤",
+        "映雪",
+        "囊萤照雪"
+      ]
+    },
+    {
       "canonical_form": "zh:classical:zh_classical_or_scriptural_allusion_大器晚成_da17cb22",
       "canonical_reference": "大器晚成",
       "confidence": 0.9,
@@ -3362,6 +3403,46 @@
       ]
     },
     {
+      "canonical_form": "zh:classical:zh_classical_or_scriptural_allusion_画地为牢_b0a786a8",
+      "canonical_reference": "画地为牢",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.zh.explanation.han_shu_simaqian_phrases_画地为牢",
+      "i18n_explanations": {
+        "ar": "إشارة من عهد هان تصف سجنًا مفروضًا على الأرض، ترمز إلى تقييد الذات أو الحبس غير الضروري. تُستخدم غالبًا لانتقاد الحذر المفرط أو القيود الاصطناعية.",
+        "de": "Eine Anspielung aus der Han-Dynastie, die ein selbst auferlegtes Gefängnis beschreibt, das auf den Boden gezeichnet ist. Symbolisiert Selbstbeschränkung oder unnötige Einschränkung. Wird oft verwendet, um übertriebene Vorsicht oder künstliche Grenzen zu kritisieren.",
+        "en": "An allusion from the Han Dynasty describing a self-imposed prison drawn on the ground, symbolizing self-restraint or unnecessary confinement. Often used to criticize excessive caution or artificial limitations.",
+        "es": "Una alusión de la dinastía Han que describe una prisión autoimpuesta dibujada en el suelo, simbolizando la autolimitación o el encierro innecesario. Se usa para criticar la excesiva precaución o las limitaciones artificiales.",
+        "fr": "Une allusion de la dynastie Han décrivant une prison auto-imposée tracée sur le sol, symbolisant l'auto-restriction ou un confinement inutile. Souvent utilisée pour critiquer une prudence excessive ou des limites artificielles.",
+        "he": "אזכור מתקופת שושלת האן המתאר כלא עצמי שמצויר על הקרקע, המסמל הגבלה עצמית או כליאה מיותרת. משמש לעיתים קרובות לביקורת על זהירות יתר או מגבלות מלאכותיות.",
+        "it": "Un'allusione della dinastia Han che descrive una prigione autoimposta tracciata sul terreno, simbolo di autolimitazione o di una reclusione inutile. Usata per criticare un'eccessiva prudenza o limitazioni artificiali.",
+        "ja": "漢王朝の故事成句で、地面に描かれた自らに課した牢獄を表し、自制や不必要な制限を象徴する。過度な慎重さや人為的な制約を批判する際に用いられる。",
+        "pt": "Uma alusão da dinastia Han que descreve uma prisão autoimposta desenhada no chão, simbolizando a autolimitação ou um confinamento desnecessário. Usada para criticar o excesso de cautela ou limitações artificiais.",
+        "ru": "Аллюзия из эпохи Хань, описывающая самоограничение в виде нарисованной на земле тюрьмы, символизирующая сдерживание себя или ненужное ограничение. Часто используется для критики излишней осторожности или искусственных барьеров.",
+        "zh": "汉代典故，在地上画地为牢，象征自我约束或不必要的限制。常用于批评过度谨慎或人为设限。"
+      },
+      "id": "zh_classical_or_scriptural_allusion_画地为牢_b0a786a8",
+      "language": "zh",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The origin and explanation are correct; surface patterns are appropriate.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "An allusion from the Han Dynasty describing a self-imposed prison drawn on the ground, symbolizing self-restraint or unnecessary confinement. Often used to criticize excessive caution or artificial limitations.",
+      "source_author": "班固",
+      "source_author_key": "mnemosyne.zh.author.班固",
+      "source_dataset": "han_shu_simaqian_phrases",
+      "source_license": "public_domain",
+      "source_location": "卷六十四上《司马迁传》",
+      "source_url": "https://ctext.org/han-shu/tao-yuan-di-ji/zh",
+      "source_work": "《汉书》",
+      "source_work_key": "mnemosyne.zh.work.汉书",
+      "surface_patterns": [
+        "画地为牢",
+        "画地为狱",
+        "画地为牢自缚",
+        "画地为牢的故事"
+      ]
+    },
+    {
       "canonical_form": "zh:classical:zh_classical_or_scriptural_allusion_画虎类犬_56c1ce49",
       "canonical_reference": "画虎类犬",
       "confidence": 0.85,
@@ -4102,6 +4183,45 @@
       ],
       "variants": [
         "舍生取正义"
+      ]
+    },
+    {
+      "canonical_form": "zh:classical:zh_classical_or_scriptural_allusion_苏秦刺股_a5025889",
+      "canonical_reference": "苏秦刺股",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.zh.explanation.zhanguoce_phrases_苏秦刺股",
+      "i18n_explanations": {
+        "ar": "سوقين يغرز إبرة في فخذه ليبقى مستيقظًا أثناء الدراسة. يرمز إلى الاجتهاد الشديد والانضباط الذاتي في السعي وراء المعرفة أو النجاح.",
+        "de": "Su Qin stach sich in den Oberschenkel, um beim Lernen wach zu bleiben. Steht für extreme Fleiß und Selbstdisziplin im Streben nach Wissen oder Erfolg.",
+        "en": "Su Qin piercing his thigh to stay awake while studying. Represents extreme diligence and self-discipline in pursuit of knowledge or success.",
+        "es": "Su Qin se pinchó el muslo para mantenerse despierto mientras estudiaba. Representa la extrema diligencia y autodisciplina en la búsqueda de conocimiento o éxito.",
+        "fr": "Su Qin se perçant la cuisse pour rester éveillé en étudiant. Représente une diligence extrême et une autodiscipline dans la quête de savoir ou de réussite.",
+        "he": "סו צ'ין דקר את ירכו כדי להישאר ער בזמן לימודיו. מסמל התמדה קיצונית ומשמעת עצמית בהשגת ידע או הצלחה.",
+        "it": "Su Qin si punse la coscia per restare sveglio mentre studiava. Rappresenta una diligenza estrema e l'autodisciplina nella ricerca di conoscenza o successo.",
+        "ja": "蘇秦が太ももに針を刺して勉強し続けた。知識や成功を追求する際の極度の勤勉と自制を表す。",
+        "pt": "Su Qin se perfurou na coxa para ficar acordado enquanto estudava. Representa extrema dedicação e autodisciplina na busca por conhecimento ou sucesso.",
+        "ru": "Су Цинь проткнул себе бедро, чтобы не уснуть во время учебы. Олицетворяет крайнюю прилежность и самодисциплину в pursuit of knowledge or success.",
+        "zh": "苏秦为了读书不睡觉而刺自己的大腿。比喻为追求知识或成功而极度勤奋和自律。"
+      },
+      "id": "zh_classical_or_scriptural_allusion_苏秦刺股_a5025889",
+      "language": "zh",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Source and location in Zhanguo Ce are correct; explanation is accurate.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Su Qin piercing his thigh to stay awake while studying. Represents extreme diligence and self-discipline in pursuit of knowledge or success.",
+      "source_author": "Various (attributed to Liu Xiang)",
+      "source_author_key": "mnemosyne.zh.author.various_attributed_to_liu_xiang",
+      "source_dataset": "zhanguoce_phrases",
+      "source_license": "public_domain",
+      "source_location": "《秦策一》",
+      "source_url": "https://ctext.org/zhan-guo-ce/yan-qian",
+      "source_work": "《战国策》",
+      "source_work_key": "mnemosyne.zh.work.战国策",
+      "surface_patterns": [
+        "苏秦刺股",
+        "刺股悬梁",
+        "头悬梁，锥刺股"
       ]
     },
     {
@@ -5165,6 +5285,46 @@
       ]
     },
     {
+      "canonical_form": "zh:cultural:zh_cultural_reference_曹冲称象_c0967bd2",
+      "canonical_reference": "曹冲称象",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.zh.explanation.sanguozhi_caocao_phrases_曹冲称象",
+      "i18n_explanations": {
+        "ar": "قصة من فترة الممالك الثلاث عن الابن الصغير ل曹操، تشاو تشونغ، الذي قام بوزن الفيل باستخدام إزاحة الماء في القوارب. ترمز إلى البراعة وحل المشكلات العملية في الثقافة الصينية.",
+        "de": "Eine Geschichte aus der Zeit der Drei Reiche über den jungen Cao Chong, Sohn des Cao Cao, der einen Elefanten durch Wasserverdrängung in Booten wog. Symbolisiert Erfindungsreichtum und praktische Problemlösung in der chinesischen Kultur.",
+        "en": "A story from the Three Kingdoms period about Cao Cao's young son Cao Chong who cleverly weighed an elephant by using displacement of water in boats. It symbolizes ingenuity and practical problem-solving in Chinese culture.",
+        "es": "Un relato de la época de los Tres Reinos sobre el joven hijo de Cao Cao, Cao Chong, quien pesó un elefante usando el desplazamiento de agua en barcos. Simboliza la ingeniosidad y la resolución práctica de problemas en la cultura china.",
+        "fr": "Un récit de la période des Trois Royaumes où le jeune Cao Chong, fils de Cao Cao, pèse un éléphant en utilisant le déplacement d'eau dans des bateaux. Symbole d'ingéniosité et de résolution pratique de problèmes dans la culture chinoise.",
+        "he": "סיפור מתקופת שלוש הממלכות על בנו הצעיר של צאו צאו, צאו צ'ונג, שהצליח לשקול פיל באמצעות העברת מים בסירות. מסמל תושייה ופתרון בעיות מעשי בתרבות הסינית.",
+        "it": "Un racconto del periodo dei Tre Regni su Cao Chong, figlio di Cao Cao, che pesò un elefante usando lo spostamento d'acqua nelle barche. Simboleggia l'ingegnosità e la risoluzione pratica dei problemi nella cultura cinese.",
+        "ja": "三国時代の曹操の幼い息子、曹沖が船を使って水の排水量で象の重さを量った故事。中国文化における機知と実践的な問題解決の象徴。",
+        "pt": "Um relato do período dos Três Reinos sobre Cao Chong, filho de Cao Cao, que pesou um elefante usando o deslocamento de água em barcos. Simboliza a engenhosidade e a resolução prática de problemas na cultura chinesa.",
+        "ru": "История периода Троецарствия о юном сыне Цао Цао, Цао Чуне, который взвесил слона, используя вытеснение воды в лодках. Символизирует изобретательность и практическое решение проблем в китайской культуре.",
+        "zh": "三国时期曹操之子曹冲巧妙利用船只排水量称象的故事。象征中国文化中智慧与实践问题解决能力。"
+      },
+      "id": "zh_cultural_reference_曹冲称象_c0967bd2",
+      "language": "zh",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The story is accurately attributed to 《三国志》 and the explanation is correct.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "A story from the Three Kingdoms period about Cao Cao's young son Cao Chong who cleverly weighed an elephant by using displacement of water in boats. It symbolizes ingenuity and practical problem-solving in Chinese culture.",
+      "source_author": "陈寿",
+      "source_author_key": "mnemosyne.zh.author.陈寿",
+      "source_dataset": "sanguozhi_caocao_phrases",
+      "source_license": "public_domain",
+      "source_location": "卷二十《魏书·武文世王公传》",
+      "source_url": "https://ctext.org/sanguozhi/zhanguo-ce/zh",
+      "source_work": "《三国志》",
+      "source_work_key": "mnemosyne.zh.work.三国志",
+      "surface_patterns": [
+        "曹冲称象",
+        "曹冲称大象",
+        "用曹冲称象的方法",
+        "曹冲称象的故事"
+      ]
+    },
+    {
       "allow_short_pattern": true,
       "canonical_form": "zh:cultural:zh_cultural_reference_梁祝化蝶_7f51944e",
       "canonical_reference": "梁祝化蝶",
@@ -5287,6 +5447,43 @@
         "白蛇传",
         "白蛇的故事",
         "白蛇传说"
+      ]
+    },
+    {
+      "canonical_form": "zh:cultural:zh_cultural_reference_盲人摸象_66a888bc",
+      "canonical_reference": "盲人摸象",
+      "confidence": 0.87,
+      "explanation_key": "mnemosyne.zh.explanation.oral_parable_elephant_盲人摸象",
+      "i18n_explanations": {
+        "ar": "مثل يوضح كيف تؤدي الإدراك الجزئي إلى فهم ناقص؛ كل أعمى يلمس جزءا مختلفا من الفيل ويستنتج استنتاجات خاطئة حول شكله الحقيقي.",
+        "de": "Ein Gleichnis, das zeigt, wie eine unvollständige Wahrnehmung zu einem unvollständigen Verständnis führt; jeder Blinde berührt einen anderen Teil eines Elefanten und zieht falsche Schlüsse über dessen wahre Gestalt.",
+        "en": "A parable illustrating how partial perception leads to incomplete understanding; each blind person touches a different part of an elephant and draws erroneous conclusions about its true form.",
+        "es": "Una parábola que ilustra cómo la percepción parcial lleva a una comprensión incompleta; cada ciego toca una parte diferente de un elefante y saca conclusiones erróneas sobre su forma real.",
+        "fr": "Une parabole illustrant comment une perception partielle mène à une compréhension incomplète; chaque aveugle touche une partie différente d'un éléphant et en tire des conclusions erronées sur sa forme réelle.",
+        "he": "משל המדגים כיצד תפיסה חלקית מובילה להבנה חלקית; כל עיוור נוגע בחלק אחר של פיל ומסיק מסקנות שגויות על צורתו האמיתית.",
+        "it": "Una parabola che illustra come una percezione parziale porti a una comprensione incompleta; ogni cieco tocca una parte diversa di un elefante e trae conclusioni errate sulla sua forma reale.",
+        "ja": "部分的な知覚が不完全な理解につながることを示す寓話。盲人が象の異なる部分に触れ、その真の姿について誤った結論を導く。",
+        "pt": "Uma parábola que ilustra como a percepção parcial leva a um entendimento incompleto; cada cego toca uma parte diferente de um elefante e tira conclusões erradas sobre sua forma real.",
+        "ru": "Притча, иллюстрирующая, как частичное восприятие ведёт к неполному пониманию; каждый слепой ощупывает разную часть слона и делает ошибочные выводы о его истинной форме.",
+        "zh": "一个寓言，说明片面的认知导致对事物的理解不全面；每个盲人触摸大象的不同部位，并对其真实形态得出错误结论。"
+      },
+      "id": "zh_cultural_reference_盲人摸象_66a888bc",
+      "language": "zh",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly identified as stemming from Buddhist scripture oral tradition; explanation is standard.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A parable illustrating how partial perception leads to incomplete understanding; each blind person touches a different part of an elephant and draws erroneous conclusions about its true form.",
+      "source_author": "Unknown",
+      "source_author_key": "mnemosyne.zh.author.unknown",
+      "source_dataset": "oral_parable_elephant",
+      "source_license": "not_required",
+      "source_work": "Various (oral tradition)",
+      "source_work_key": "mnemosyne.zh.work.various_oral_tradition",
+      "surface_patterns": [
+        "盲人摸象",
+        "盲人摸象的故事"
       ]
     },
     {
@@ -6785,6 +6982,46 @@
       ],
       "variants": [
         "差强人意地"
+      ]
+    },
+    {
+      "allow_short_pattern": true,
+      "canonical_form": "zh:literary:zh_literary_reference_庖丁解牛_e952ac5a",
+      "canonical_reference": "庖丁解牛",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.zh.explanation.zhuangzi_phrases_庖丁解牛",
+      "i18n_explanations": {
+        "ar": "الجزار دينج يفرم ثورًا. من *تشوانغ زي*، يوضح الإتقان والمهارة السهلة وأهمية فهم المبادئ الأساسية للمهمة.",
+        "de": "Metzger Ding, der einen Ochsen zerlegt. Aus dem *Zhuangzi* – illustriert Meisterschaft, müheloses Können und die Bedeutung, die zugrundeliegenden Prinzipien einer Aufgabe zu verstehen.",
+        "en": "Butcher Ding carving an ox. From the *Zhuangzi*, it illustrates mastery, effortless skill, and the importance of understanding the underlying principles of a task.",
+        "es": "El carnicero Ding despiezando un buey. Del *Zhuangzi*, ilustra el dominio, la habilidad sin esfuerzo y la importancia de entender los principios subyacentes de una tarea.",
+        "fr": "Le boucher Ding découpant un bœuf. Tiré du *Zhuangzi*, cela illustre la maîtrise, l'habileté sans effort et l'importance de comprendre les principes sous-jacents d'une tâche.",
+        "he": "הקצב דינג מפרק שור. מתוך *ג'ואנג דזה*, מדגים שליטה, מיומנות ללא מאמץ וחשיבות הבנת העקרונות הבסיסיים של המשימה.",
+        "it": "Il macellaio Ding che trancia un bue. Dal *Zhuangzi*, illustra la maestria, l'abilità senza sforzo e l'importanza di comprendere i principi fondamentali di un compito.",
+        "ja": "庖丁が牛を解体する。荘子に由来し、熟達、無駄のない技術、そして課題の根本原理を理解する重要性を示す。",
+        "pt": "O açougueiro Ding desmembrando um boi. Do *Zhuangzi*, ilustra maestria, habilidade sem esforço e a importância de entender os princípios subjacentes de uma tarefa.",
+        "ru": "Мясник Дин, разрубающий быка. Из *Чжуан-цзы* – иллюстрирует мастерство, легкое умение и важность понимания основополагающих принципов задачи.",
+        "zh": "庖丁解牛。出自《庄子》，比喻技艺高超、游刃有余，强调理解事物内在规律的重要性。"
+      },
+      "id": "zh_literary_reference_庖丁解牛_e952ac5a",
+      "language": "zh",
+      "learner_level": "C2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Source work, author, and location in Zhuangzi are correct; explanation is accurate.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Butcher Ding carving an ox. From the *Zhuangzi*, it illustrates mastery, effortless skill, and the importance of understanding the underlying principles of a task.",
+      "source_author": "莊周 (Zhuang Zhou)",
+      "source_author_key": "mnemosyne.zh.author.莊周_zhuang_zhou",
+      "source_dataset": "zhuangzi_phrases",
+      "source_license": "public_domain",
+      "source_location": "《養生主》篇",
+      "source_url": "https://ctext.org/zhuangzi/yang-sheng-zhu",
+      "source_work": "《莊子》",
+      "source_work_key": "mnemosyne.zh.work.莊子",
+      "surface_patterns": [
+        "庖丁解牛",
+        "庖丁",
+        "解牛"
       ]
     },
     {
@@ -8875,6 +9112,45 @@
       ],
       "variants": [
         "宁为玉碎，不为瓦全"
+      ]
+    },
+    {
+      "canonical_form": "zh:proverb:zh_proverb_tradition_对牛弹琴_289ad8c6",
+      "canonical_reference": "对牛弹琴",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.zh.explanation.mouzi_lihuo_zhuan_phrases_对牛弹琴",
+      "i18n_explanations": {
+        "ar": "العزف على العود أمام البقرة. يصف تقديم شيء لشخص لا يقدر قيمته، ويُستخدم غالبًا لانتقاد عدم الفهم أو سوء التواصل.",
+        "de": "Laute für eine Kuh spielen. Beschreibt, jemandem etwas anzubieten, der es nicht zu schätzen weiß, oft zur Kritik an mangelndem Verständnis oder Missverständnissen.",
+        "en": "Playing the lute to a cow. Describes offering something to someone who cannot appreciate it, often used to criticize a lack of understanding or miscommunication.",
+        "es": "Tocar el laúd a una vaca. Describe ofrecer algo a quien no puede apreciarlo, usado para criticar la falta de comprensión o la mala comunicación.",
+        "fr": "Jouer du luth à une vache. Décrit offrir quelque chose à quelqu'un qui ne peut l'apprécier, souvent utilisé pour critiquer un manque de compréhension ou une mauvaise communication.",
+        "he": "לנגן בכינור בפני פרה. מתאר הצעת דבר מה למישהו שאינו יכול להעריכו, לרוב נועד לביקורת על חוסר הבנה או תקשורת לקויה.",
+        "it": "Suonare il liuto a una mucca. Descrive offrire qualcosa a chi non può apprezzarlo, usato per criticare la mancanza di comprensione o la cattiva comunicazione.",
+        "ja": "牛に琴を弾く。理解できない人に物を与えることを表し、理解不足や意思疎通の失敗を批判する際に用いられる。",
+        "pt": "Tocar alaúde para uma vaca. Descreve oferecer algo a quem não pode apreciá-lo, usado para criticar a falta de compreensão ou comunicação.",
+        "ru": "Играть на лютне для коровы. Описывает предложение чего-то тому, кто не может это оценить, часто используется для критики непонимания или недопонимания.",
+        "zh": "对牛弹琴。比喻对不懂欣赏的人讲高雅的事物，常用于批评缺乏理解或沟通不当。"
+      },
+      "id": "zh_proverb_tradition_对牛弹琴_289ad8c6",
+      "language": "zh",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Mouzi and Mou Rong is correct; explanation and patterns are accurate.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "Playing the lute to a cow. Describes offering something to someone who cannot appreciate it, often used to criticize a lack of understanding or miscommunication.",
+      "source_author": "牟融",
+      "source_author_key": "mnemosyne.zh.author.牟融",
+      "source_dataset": "mouzi_lihuo_zhuan_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://ctext.org/mouzi-li-huo-zhuan",
+      "source_work": "《牟子》",
+      "source_work_key": "mnemosyne.zh.work.牟子",
+      "surface_patterns": [
+        "对牛弹琴",
+        "对牛弹琴之举",
+        "对牛弹琴地",
+        "对牛弹琴者"
       ]
     },
     {

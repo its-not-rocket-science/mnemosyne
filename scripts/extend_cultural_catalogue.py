@@ -263,6 +263,24 @@ def make_client() -> OpenAI:
     return OpenAI(**kwargs)
 
 
+def make_review_client() -> OpenAI:
+    """Review can run against a different provider than generation (e.g.
+    Mistral for discover/enrich breadth, DeepSeek for review judgment) by
+    setting CULTURAL_CATALOGUE_REVIEW_API_KEY / _BASE_URL. Falls back to
+    the main client's credentials when unset."""
+    api_key = os.environ.get("CULTURAL_CATALOGUE_REVIEW_API_KEY")
+    base_url = os.environ.get("CULTURAL_CATALOGUE_REVIEW_BASE_URL")
+    if not api_key and not base_url:
+        return make_client()
+    api_key = api_key or os.environ.get("CULTURAL_CATALOGUE_API_KEY") or os.environ.get("OPENAI_API_KEY")
+    if not api_key:
+        sys.exit("ERROR: set CULTURAL_CATALOGUE_REVIEW_API_KEY (or CULTURAL_CATALOGUE_API_KEY) in scripts/.env")
+    kwargs: dict = {"api_key": api_key}
+    if base_url:
+        kwargs["base_url"] = base_url
+    return OpenAI(**kwargs)
+
+
 def resolve_model(cli_val: str | None, env_var: str, default: str) -> str:
     return cli_val or os.environ.get(env_var) or default
 
@@ -835,6 +853,7 @@ def run(
         print("Target already met for generation -- resuming to finish remaining phases (i18n/review/promote).")
 
     client = make_client()
+    review_client = make_review_client()
     state  = load_progress(output) if resume else {
         "discovered": [], "enriched": [], "i18n": [], "reviewed": [],
         "tokens_in": 0, "tokens_out": 0,
@@ -904,7 +923,7 @@ def run(
             for i in range(0, len(to_review), review_batch_size):
                 batch = to_review[i:i + review_batch_size]
                 print(f"  -> reviewing {i+1}-{min(i+review_batch_size, len(to_review))} ...", end="", flush=True)
-                reviews, in_t, out_t = review_batch(client, lang_name, batch, review_model)
+                reviews, in_t, out_t = review_batch(review_client, lang_name, batch, review_model)
                 state["tokens_in"] += in_t; state["tokens_out"] += out_t
                 state["reviewed"].extend(reviews)
                 save_progress(output, state)

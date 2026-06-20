@@ -47,6 +47,44 @@
       ]
     },
     {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_ab_imo_pectore_8b856020",
+      "canonical_reference": "Ab imo pectore",
+      "confidence": 0.82,
+      "explanation_key": "mnemosyne.la.explanation.latin_classical_phrases_ab_imo_pectore",
+      "i18n_explanations": {
+        "ar": "عبارة لاتينية تعني 'من أعماق الصدر'، تستخدم للتعبير عن صدق عميق أو عاطفة صادقة. تظهر في الأدب اللاتيني الكلاسيكي.",
+        "de": "Lateinischer Ausdruck für 'aus der Tiefe der Brust,' um tiefe Aufrichtigkeit oder innige Gefühle auszudrücken. Stammt aus der klassischen lateinischen Literatur.",
+        "en": "A Latin phrase meaning 'from the bottom of the chest,' used to express deep sincerity or heartfelt emotion. It appears in classical Latin literature.",
+        "es": "Frase latina que significa 'desde el fondo del pecho,' usada para expresar profunda sinceridad o emoción sincera. Aparece en la literatura latina clásica.",
+        "fr": "Locution latine signifiant 'du fond de la poitrine,' utilisée pour exprimer une sincérité profonde ou une émotion sincère. Apparaît dans la littérature latine classique.",
+        "he": "ביטוי לטיני שפירושו 'מעומק הלב', המשמש להבעת כנות עמוקה או רגש כנה. מופיע בספרות הלטינית הקלאסית.",
+        "it": "Espressione latina che significa 'dal profondo del petto,' usata per esprimere profonda sincerità o emozione sentita. Compare nella letteratura latina classica.",
+        "ja": "「胸の底から」を意味するラテン語の成句で、深い誠実さや心からの感情を表す際に用いられる。古典ラテン文学に登場する。",
+        "pt": "Expressão latina que significa 'do fundo do peito,' usada para expressar profunda sinceridade ou emoção sincera. Aparece na literatura latina clássica.",
+        "ru": "Латинское выражение, означающее 'из глубины груди,' используемое для выражения глубокой искренности или сердечных чувств. Встречается в классической латинской литературе.",
+        "zh": "拉丁语短语，意为“发自肺腑”，用于表达深切的诚意或真挚的情感。出现在古典拉丁文学中。"
+      },
+      "id": "la_classical_or_scriptural_allusion_ab_imo_pectore_8b856020",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The Latin phrase 'ab imo pectore' appears in classical literature and is correctly explained as expressing deep sincerity.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A Latin phrase meaning 'from the bottom of the chest,' used to express deep sincerity or heartfelt emotion. It appears in classical Latin literature.",
+      "source_author": "Classical Latin authors",
+      "source_author_key": "mnemosyne.la.author.classical_latin_authors",
+      "source_dataset": "latin_classical_phrases",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "ab imo pectore",
+        "ab imo pectore dicere",
+        "from the bottom of my heart"
+      ]
+    },
+    {
       "canonical_form": "la:classical:la_classical_or_scriptural_allusion_ablata_causa_aequitas_non_quaeritur_ad565efb",
       "canonical_reference": "Ablata causa aequitas non quaeritur",
       "confidence": 0.85,
@@ -125,6 +163,44 @@
       ]
     },
     {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_absit_iniuria_verbis_f5fb49a0",
+      "canonical_reference": "Absit iniuria verbis",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.la.explanation.latin_classical_phrases_absit_iniuria_verbis",
+      "i18n_explanations": {
+        "ar": "عبارة لاتينية تعني 'ليكن عدم الإساءة في كلامي'، تستخدم لتقديم بيان قد يسبب إساءة. تظهر في الأدب اللاتيني الكلاسيكي.",
+        "de": "Lateinischer Ausdruck für 'möge kein Unrecht in meinen Worten liegen,' um eine Aussage einzuleiten, die sonst Anstoß erregen könnte. Stammt aus der klassischen lateinischen Literatur.",
+        "en": "A Latin phrase meaning 'may injury be absent from my words,' used to preface a statement that might otherwise cause offense. It appears in classical Latin literature.",
+        "es": "Frase latina que significa 'que no haya ofensa en mis palabras,' usada para introducir una afirmación que podría causar ofensa. Aparece en la literatura latina clásica.",
+        "fr": "Locution latine signifiant 'que mes paroles ne soient pas blessantes,' utilisée pour introduire une déclaration qui pourrait offenser. Apparaît dans la littérature latine classique.",
+        "he": "ביטוי לטיני שפירושו 'שלא תהיה פגיעה בדברי', המשמש להקדמה למשפט שעלול להיחשב פוגע. מופיע בספרות הלטינית הקלאסית.",
+        "it": "Espressione latina che significa 'che non ci sia offesa nelle mie parole,' usata per introdurre un'affermazione che potrebbe risultare offensiva. Compare nella letteratura latina classica.",
+        "ja": "「私の言葉が傷つけることのないように」を意味するラテン語の成句で、そうでなければ不快感を与える可能性のある発言の前に用いられる。古典ラテン文学に登場する。",
+        "pt": "Expressão latina que significa 'que não haja ofensa em minhas palavras,' usada para introduzir uma afirmação que poderia causar ofensa. Aparece na literatura latina clássica.",
+        "ru": "Латинское выражение, означающее 'да не будет обиды в моих словах,' используемое для введения утверждения, которое может оскорбить. Встречается в классической латинской литературе.",
+        "zh": "拉丁语短语，意为“但愿我的话无冒犯之意”，用于引出可能引起冒犯的陈述。出现在古典拉丁文学中。"
+      },
+      "id": "la_classical_or_scriptural_allusion_absit_iniuria_verbis_f5fb49a0",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase 'absit iniuria verbis' is a genuine classical Latin expression used to soften potentially offensive remarks.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A Latin phrase meaning 'may injury be absent from my words,' used to preface a statement that might otherwise cause offense. It appears in classical Latin literature.",
+      "source_author": "Classical Latin authors",
+      "source_author_key": "mnemosyne.la.author.classical_latin_authors",
+      "source_dataset": "latin_classical_phrases",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "absit iniuria verbis",
+        "absit iniuria verbis, sit reverentia factis",
+        "no offense intended by my words"
+      ]
+    },
+    {
       "canonical_form": "la:classical:la_classical_or_scriptural_allusion_ad_baculum_confugere_a75f4836",
       "canonical_reference": "Ad baculum confugere",
       "confidence": 0.87,
@@ -161,6 +237,43 @@
         "ad baculum confugere",
         "ad baculum confugit",
         "confugere ad baculum"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_ad_nauseam_0dbc82ab",
+      "canonical_reference": "Ad nauseam",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.latin_phrases_ad_nauseam",
+      "i18n_explanations": {
+        "ar": "عبارة لاتينية تعني 'حتى point الاشمئزاز'. تنشأ من البلاغة الرومانية وتصف جدالا أو مناقشة تم تمديدها بشكل مفرط.",
+        "de": "Ein lateinischer Ausdruck, der 'bis zum Ekel' bedeutet. Er stammt aus der römischen Rhetorik und beschreibt ein Argument oder eine Diskussion, die übermäßig in die Länge gezogen wurde.",
+        "en": "A Latin phrase meaning 'to the point of disgust.' It originates from Roman rhetoric and describes an argument or discussion that has been prolonged to an excessive degree.",
+        "es": "Frase latina que significa 'hasta el punto de la náusea'. Proviene de la retórica romana y describe un argumento o discusión prolongada en exceso.",
+        "fr": "Expression latine signifiant 'jusqu'à la nausée'. Issue de la rhétorique romaine, elle décrit un argument ou une discussion prolongée à l'excès.",
+        "he": "ביטוי לטיני שפירושו 'עד כדי גועל'. מקורו ברטוריקה הרומית ומתאר טיעון או דיון שנמשכו יתר על המידה.",
+        "it": "Un'espressione latina che significa 'fino alla nausea'. Deriva dalla retorica romana e descrive un argomento o una discussione protrattasi eccessivamente.",
+        "ja": "「吐き気を催すほどに」という意味のラテン語表現。ローマの修辞学に由来し、過度に長引いた議論や討論を表す。",
+        "pt": "Uma expressão latina que significa 'até o ponto da náusea'. Origina-se da retórica romana e descreve um argumento ou discussão prolongado em excesso.",
+        "ru": "Латинское выражение, означающее 'до тошноты'. Происходит из римской риторики и описывает спор или обсуждение, затянутое до излишней степени.",
+        "zh": "拉丁语短语，意为“令人厌恶的地步”。源自罗马修辞学，描述一种过度拖延的争论或讨论。"
+      },
+      "id": "la_classical_or_scriptural_allusion_ad_nauseam_0dbc82ab",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-known Latin phrase, correct explanation.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A Latin phrase meaning 'to the point of disgust.' It originates from Roman rhetoric and describes an argument or discussion that has been prolonged to an excessive degree.",
+      "source_author": "Oral tradition",
+      "source_author_key": "mnemosyne.la.author.oral_tradition",
+      "source_dataset": "latin_phrases",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Ad nauseam",
+        "To the point of nausea"
       ]
     },
     {
@@ -201,6 +314,45 @@
       ]
     },
     {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_aes_alienum_ac183a44",
+      "canonical_reference": "Aes alienum",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.justinian_digest_aes_alienum",
+      "i18n_explanations": {
+        "ar": "مصطلح قانوني ومالي لاتيني يشير إلى 'مال الغير' أو الديون. يظهر في القانون والأدب الرومانيين، مسلطا الضوء على الأعباء الأخلاقية والعملية للديون.",
+        "de": "Ein lateinischer Rechts- und Finanzbegriff, der sich auf 'fremdes Geld' oder Schulden bezieht. Er findet sich im römischen Recht und in der Literatur und unterstreicht die moralischen und praktischen Lasten der Verschuldung.",
+        "en": "A Latin legal and financial term referring to 'another's money' or debt. It appears in Roman law and literature, highlighting the moral and practical burdens of indebtedness.",
+        "es": "Término legal y financiero latino que se refiere a 'el dinero de otro' o deuda. Aparece en el derecho y la literatura romana, destacando las cargas morales y prácticas de la deuda.",
+        "fr": "Terme juridique et financier latin désignant 'l'argent d'autrui' ou une dette. Il apparaît dans le droit et la littérature romains, soulignant les fardeaux moraux et pratiques de l'endettement.",
+        "he": "מונח משפטי וכלכלי לטיני המתייחס ל'כספו של אחר' או חוב. מופיע במשפט ובספרות הרומית, ומדגיש את הנטל המוסרי והמעשי של החוב.",
+        "it": "Termine legale e finanziario latino che si riferisce a 'denaro altrui' o debito. Compare nel diritto e nella letteratura romana, evidenziando gli oneri morali e pratici dell'indebitamento.",
+        "ja": "ラテン語の法律・金融用語で、「他人の金」や借金を指す。ローマ法や文学に登場し、借金の道徳的・実務的負担を強調する。",
+        "pt": "Termo legal e financeiro latino que se refere a 'dinheiro alheio' ou dívida. Aparece no direito e na literatura romana, destacando os encargos morais e práticos do endividamento.",
+        "ru": "Латинский юридический и финансовый термин, обозначающий 'чужое имущество' или долг. Встречается в римском праве и литературе, подчеркивая моральные и практические бремена задолженности.",
+        "zh": "拉丁语法律和金融术语，指“他人的钱”或债务。出现在罗马法和文学中，强调债务的道德和实际负担。"
+      },
+      "id": "la_classical_or_scriptural_allusion_aes_alienum_ac183a44",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate legal term, source location verifiable.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "formal",
+      "short_explanation": "A Latin legal and financial term referring to 'another's money' or debt. It appears in Roman law and literature, highlighting the moral and practical burdens of indebtedness.",
+      "source_author": "Roman jurists (compiled under Emperor Justinian I)",
+      "source_author_key": "mnemosyne.la.author.roman_jurists_compiled_under_emperor_justinian_i",
+      "source_dataset": "justinian_digest",
+      "source_license": "public_domain",
+      "source_location": "Digest 12.6.1",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0075:book=12:title=6",
+      "source_work": "Digestum",
+      "source_work_key": "mnemosyne.la.work.digestum",
+      "surface_patterns": [
+        "Aes alienum",
+        "Aes alienum habere",
+        "Debt"
+      ]
+    },
+    {
       "canonical_form": "la:classical:la_classical_or_scriptural_allusion_agnus_dei_qui_tollis_peccata_mundi_49e68cec",
       "canonical_reference": "Agnus Dei qui tollis peccata mundi",
       "confidence": 0.9,
@@ -238,6 +390,42 @@
         "Agnus Dei qui tollis peccata mundi",
         "Agnus Dei, qui tollis peccata mundi",
         "Agnus Dei"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_alma_mater_93cfbec4",
+      "canonical_reference": "Alma mater",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.la.explanation.classical_phrases_alma_mater",
+      "i18n_explanations": {
+        "ar": "حرفياً «الأم المغذية»، تشير هذه العبارة إلى الجامعة أو المدرسة باعتبارها مصدراً للنمو الفكري والشخصي. أصلها من الألقاب الدينية الرومانية للإلهة الأم.",
+        "de": "Wörtlich 'nährende Mutter' bezieht sich dieser Ausdruck auf die eigene Universität oder Schule als Quelle des intellektuellen und persönlichen Wachstums. Er stammt aus römischen religiösen Beinamen für Muttergöttinnen.",
+        "en": "Literally 'nourishing mother,' this phrase refers to one's university or school as a source of intellectual and personal growth. It originates from Roman religious epithets for mother goddesses.",
+        "es": "Literalmente 'madre nutricia,' esta frase se refiere a la universidad o escuela como fuente de crecimiento intelectual y personal. Proviene de epítetos religiosos romanos para diosas madres.",
+        "fr": "Littéralement 'mère nourricière,' cette expression désigne son université ou école comme source de croissance intellectuelle et personnelle. Elle vient d'épithètes religieuses romaines pour les déesses mères.",
+        "he": "בתרגום מילולי \"אם מניקה\", ביטוי זה מתייחס לאוניברסיטה או בית הספר כמקור לצמיחה אינטלקטואלית ואישית. מקורו מכינויים דתיים רומיים לאלות אם.",
+        "it": "Letteralmente 'madre nutrice,' questa frase si riferisce alla propria università o scuola come fonte di crescita intellettuale e personale. Deriva da epiteti religiosi romani per dee madri.",
+        "ja": "文字通り「養う母」を意味し、知的・人間的成長の源としての大学や学校を指す。ローマの母神に対する宗教的称号に由来する。",
+        "pt": "Literalmente 'mãe nutriz,' esta frase refere-se à sua universidade ou escola como fonte de crescimento intelectual e pessoal. Origina-se de epítetos religiosos romanos para deusas-mães.",
+        "ru": "В буквальном смысле 'питающая мать' — это выражение относится к университету или школе как источнику интеллектуального и личностного роста. Оно восходит к римским религиозным эпитетам матери-богини.",
+        "zh": "字面意思是“滋养的母亲”，指代自己的大学或学校作为知识与个人成长的源泉。源自罗马对母神的宗教称号。"
+      },
+      "id": "la_classical_or_scriptural_allusion_alma_mater_93cfbec4",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate and verifiable classical phrase referring to a nurturing mother figure, used for schools.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Literally 'nourishing mother,' this phrase refers to one's university or school as a source of intellectual and personal growth. It originates from Roman religious epithets for mother goddesses.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.la.author.classical_tradition",
+      "source_dataset": "classical_phrases",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Alma Mater"
       ]
     },
     {
@@ -437,6 +625,45 @@
         "aperite portas aeternas",
         "aperite portas aeternales",
         "portas aeternas aperite"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_apostolus_gentium_dd395a20",
+      "canonical_reference": "Apostolus gentium",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.bible_vulgate_phrases_apostolus_gentium",
+      "i18n_explanations": {
+        "ar": "لقب للقديس بولس يبرز دوره ك'رسول الأمم'. يعكس مهمته في نشر المسيحية خارج المجتمعات اليهودية.",
+        "de": "Ein Titel für den heiligen Paulus, der seine Rolle als 'Apostel der Heiden' betont. Er spiegelt seine Mission wider, das Christentum über jüdische Gemeinden hinaus zu verbreiten.",
+        "en": "A title for St. Paul, emphasizing his role as the 'Apostle to the Gentiles.' It reflects his mission to spread Christianity beyond Jewish communities.",
+        "es": "Un título para San Pablo que enfatiza su papel como 'Apóstol de los Gentiles.' Refleja su misión de difundir el cristianismo más allá de las comunidades judías.",
+        "fr": "Un titre pour saint Paul soulignant son rôle d''Apôtre des Gentils.' Il reflète sa mission de propager le christianisme au-delà des communautés juives.",
+        "he": "כינוי לפאולוס הקדוש המדגיש את תפקידו כ'שליח הגויים'. משקף את שליחותו להפיץ את הנצרות מעבר לקהילות היהודיות.",
+        "it": "Un titolo per San Paolo che sottolinea il suo ruolo di 'Apostolo dei Gentili.' Riflette la sua missione di diffondere il cristianesimo oltre le comunità ebraiche.",
+        "ja": "聖パウロの称号で、彼の「異邦人の使徒」としての役割を強調する。ユダヤ人社会を超えてキリスト教を広めるという使命を反映している。",
+        "pt": "Um título para São Paulo que enfatiza seu papel como 'Apóstolo dos Gentios.' Reflete sua missão de espalhar o cristianismo além das comunidades judaicas.",
+        "ru": "Титул апостола Павла, подчёркивающий его роль как 'Апостола язычников.' Отражает его миссию распространения христианства за пределами еврейских общин.",
+        "zh": "圣保罗的称号，强调他作为“外邦人的使徒”的角色。反映了他向犹太社区之外传播基督教的使命。"
+      },
+      "id": "la_classical_or_scriptural_allusion_apostolus_gentium_dd395a20",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate phrase from Romans 11:13 Vulgate describing St. Paul.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A title for St. Paul, emphasizing his role as the 'Apostle to the Gentiles.' It reflects his mission to spread Christianity beyond Jewish communities.",
+      "source_author": "Tradition / Jerome (attributed)",
+      "source_author_key": "mnemosyne.la.author.tradition_jerome_attributed",
+      "source_dataset": "bible_vulgate_phrases",
+      "source_license": "public_domain",
+      "source_location": "Romans 11:13 (Vulgate)",
+      "source_url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/NV-codice-sacro_lt.html#Rm11",
+      "source_work": "Biblia Sacra Vulgata",
+      "source_work_key": "mnemosyne.la.work.biblia_sacra_vulgata",
+      "surface_patterns": [
+        "Apostolus gentium",
+        "Apostolus gentium Paulus",
+        "Apostolus gentium dictus"
       ]
     },
     {
@@ -725,6 +952,32 @@
       ]
     },
     {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_beatus_vir_qui_timet_dominum_0d242521",
+      "canonical_reference": "Beatus vir qui timet Dominum",
+      "confidence": 0.87,
+      "explanation_key": "mnemosyne.la.explanation.vulgate_psalms_beatus_vir_qui_timet_dominum",
+      "id": "la_classical_or_scriptural_allusion_beatus_vir_qui_timet_dominum_0d242521",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical quotation from the Vulgate.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A biblical phrase from Psalm 111 (Vulgate: Psalm 112), meaning 'Blessed is the man who fears the Lord.' It emphasizes piety and divine reward, foundational in Christian theology.",
+      "source_author": "Unknown (attributed to King David)",
+      "source_author_key": "mnemosyne.la.author.unknown_attributed_to_king_david",
+      "source_dataset": "vulgate_psalms",
+      "source_license": "public_domain",
+      "source_location": "Psalmus 111 (Psalm 112 in Protestant Bibles)",
+      "source_url": "https://www.biblegateway.com/passage/?search=Psalm+111&version=VULGATE",
+      "source_work": "Vulgate",
+      "source_work_key": "mnemosyne.la.work.vulgate",
+      "surface_patterns": [
+        "Beatus vir qui timet Dominum",
+        "Beatus vir qui timet Dominum suum",
+        "Beatus vir qui timet Dominum Deum"
+      ]
+    },
+    {
       "canonical_form": "la:classical:la_classical_or_scriptural_allusion_bene_diagnoscit_bene_curat_3550b4de",
       "canonical_reference": "Bene diagnoscit, bene curat",
       "confidence": 0.88,
@@ -761,6 +1014,44 @@
         "Bene diagnoscere, bene curare",
         "To diagnose well is to cure well",
         "Good diagnosis, good cure"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_brevitatis_causa_dbf2d75d",
+      "canonical_reference": "Brevitatis causa",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.latin_phrases_common_brevitatis_causa",
+      "i18n_explanations": {
+        "ar": "عبارة لاتينية تعني: «من أجل الإيجاز». تُستخدم بشكل شائع في السياقات الأكاديمية والقانونية والأدبية للإشارة إلى أن العبارة مختصرة أو مبسطة.",
+        "de": "Ein lateinischer Ausdruck, der 'zur Kürze' bedeutet. Er wird in akademischen, juristischen und literarischen Kontexten verwendet, um anzugeben, dass eine Aussage abgekürzt oder vereinfacht ist.",
+        "en": "A Latin phrase meaning 'for the sake of brevity.' It is commonly used in academic, legal, and literary contexts to indicate that a statement is abbreviated or simplified.",
+        "es": "Locución latina que significa 'por brevedad'. Se usa comúnmente en contextos académicos, legales y literarios para indicar que una afirmación está abreviada o simplificada.",
+        "fr": "Locution latine signifiant 'pour abréger'. Elle est couramment utilisée dans les contextes académiques, juridiques et littéraires pour indiquer qu'une affirmation est abrégée ou simplifiée.",
+        "he": "ביטוי לטיני שפירושו: 'למען הקיצור'. משמש בדרך כלל בהקשרים אקדמיים, משפטיים וספרותיים לציין שהצהרה מקוצרת או מופשטת.",
+        "it": "Un'espressione latina che significa 'per brevità'. Viene comunemente usata in contesti accademici, legali e letterari per indicare che un'affermazione è abbreviata o semplificata.",
+        "ja": "ラテン語の成句で、「簡潔さのために」を意味する。学術、法的、文学的な文脈で、発言が省略または単純化されていることを示す際に用いられる。",
+        "pt": "Expressão latina que significa 'por brevidade'. É comumente usada em contextos acadêmicos, jurídicos e literários para indicar que uma afirmação está abreviada ou simplificada.",
+        "ru": "Латинское выражение, означающее 'ради краткости'. Оно часто используется в академических, юридических и литературных контекстах, чтобы указать, что утверждение сокращено или упрощено.",
+        "zh": "拉丁语短语，意为“为了简洁起见”。在学术、法律和文学语境中常用，表示某个陈述被简化或缩写。"
+      },
+      "id": "la_classical_or_scriptural_allusion_brevitatis_causa_dbf2d75d",
+      "language": "la",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Common Latin phrase with accurate usage and no attribution issues.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "formal",
+      "short_explanation": "A Latin phrase meaning 'for the sake of brevity.' It is commonly used in academic, legal, and literary contexts to indicate that a statement is abbreviated or simplified.",
+      "source_author": "Classical Latin tradition",
+      "source_author_key": "mnemosyne.la.author.classical_latin_tradition",
+      "source_dataset": "latin_phrases_common",
+      "source_license": "public_domain",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=brevitas",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "brevitatis causa",
+        "for brevity's sake",
+        "for the sake of brevity"
       ]
     },
     {
@@ -925,6 +1216,49 @@
       ]
     },
     {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_causa_finalis_5529802a",
+      "canonical_reference": "Causa finalis",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.la.explanation.aristotle_metaphysics_causa_finalis",
+      "i18n_explanations": {
+        "ar": "«السبب الغائي» في الفلسفة الأرسطية، ويقصد به الغاية النهائية أو الهدف الذي من أجله يوجد الشيء. مفهوم أساسي في ميتافيزيقا أرسطو وفلسفته الطبيعية.",
+        "de": "Die 'Zielursache' in der aristotelischen Philosophie, die sich auf den letzten Zweck oder das Endziel bezieht, für das etwas existiert. Ein zentraler Begriff in Aristoteles' Metaphysik und Naturphilosophie.",
+        "en": "The 'final cause' in Aristotelian philosophy, referring to the ultimate purpose or end for which something exists. It is a key concept in Aristotle's metaphysics and natural philosophy.",
+        "es": "La 'causa final' en la filosofía aristotélica, que se refiere al propósito o fin último por el que algo existe. Es un concepto clave en la metafísica y filosofía natural de Aristóteles.",
+        "fr": "La 'cause finale' dans la philosophie aristotélicienne, désignant le but ou la fin ultime pour laquelle une chose existe. C'est un concept clé de la métaphysique et de la philosophie naturelle d'Aristote.",
+        "he": "«הסיבה הסופית» בפילוסופיה האריסטוטלית, המתייחסת למטרה הסופית או התכלית שבגינה קיימת הדבר. מושג מרכזי במטאפיזיקה ובפילוסופיה הטבעית של אריסטו.",
+        "it": "La 'causa finale' nella filosofia aristotelica, che si riferisce allo scopo o fine ultimo per cui qualcosa esiste. È un concetto chiave nella metafisica e nella filosofia naturale di Aristotele.",
+        "ja": "アリストテレス哲学における「目的因」で、何かが存在する究極の目的や目標を指す。アリストテレスの形而上学と自然哲学の重要概念。",
+        "pt": "A 'causa final' na filosofia aristotélica, referindo-se ao propósito ou fim último pelo qual algo existe. É um conceito-chave na metafísica e filosofia natural de Aristóteles.",
+        "ru": "«Конечная причина» в аристотелевской философии, означающая конечную цель или предназначение, ради которого существует что-либо. Ключевое понятие в метафизике и натурфилософии Аристотеля.",
+        "zh": "亚里士多德哲学中的“目的因”，指事物存在的最终目的或终极目标。是亚里士多德形而上学和自然哲学的核心概念。"
+      },
+      "id": "la_classical_or_scriptural_allusion_causa_finalis_5529802a",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Aristotle's Metaphysics is accurate and verifiable.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "The 'final cause' in Aristotelian philosophy, referring to the ultimate purpose or end for which something exists. It is a key concept in Aristotle's metaphysics and natural philosophy.",
+      "source_author": "Aristotle",
+      "source_author_key": "mnemosyne.la.author.aristotle",
+      "source_dataset": "aristotle_metaphysics",
+      "source_license": "public_domain",
+      "source_location": "Book V (Delta), 2.1013a25-35",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus%3Atext%3A1999.01.0053%3Abook%3D5%3Asection%3D1013a",
+      "source_work": "Metaphysica",
+      "source_work_key": "mnemosyne.la.work.metaphysica",
+      "surface_patterns": [
+        "causa finalis",
+        "causa finalis Aristotelis",
+        "causa finalis (Aristotle)",
+        "final cause"
+      ],
+      "variants": [
+        "final cause"
+      ]
+    },
+    {
       "canonical_form": "la:classical:la_classical_or_scriptural_allusion_civis_romanus_sum_38f60345",
       "canonical_reference": "Civis Romanus sum",
       "confidence": 0.9,
@@ -1025,6 +1359,44 @@
         "cf.",
         "cfr.",
         "v. confer"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_consummatum_est_b1a9350f",
+      "canonical_reference": "Consummatum est",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.bible_vulgate_john_consummatum_est",
+      "i18n_explanations": {
+        "ar": "العبارة اللاتينية التي نطق بها يسوع على الصليب في إنجيل يوحنا، دالّة على اكتمال مهمته الأرضية. أصبحت رمزا للنهائية والتمام في التقليد المسيحي.",
+        "de": "Der lateinische Ausspruch Jesu am Kreuz im Johannesevangelium, der die Vollendung seiner irdischen Mission bedeutet. Er ist zu einem Symbol für Endgültigkeit und Erfüllung in der christlichen Tradition geworden.",
+        "en": "The Latin phrase spoken by Jesus on the cross in the Gospel of John, signifying the completion of his earthly mission. It has become a symbol of finality and fulfillment in Christian tradition.",
+        "es": "La frase latina pronunciada por Jesús en la cruz según el Evangelio de Juan, que significa la culminación de su misión terrenal. Se ha convertido en un símbolo de finalidad y cumplimiento en la tradición cristiana.",
+        "fr": "La phrase latine prononcée par Jésus sur la croix dans l'Évangile de Jean, signifiant l'accomplissement de sa mission terrestre. Elle est devenue un symbole de finalité et d'accomplissement dans la tradition chrétienne.",
+        "he": "המשפט הלטיני שאמר ישו על הצלב בבשורת יוחנן, המסמל את השלמת משימתו הארצית. הפך לסמל של סופיות והגשמה במסורת הנוצרית.",
+        "it": "La frase latina pronunciata da Gesù sulla croce nel Vangelo di Giovanni, che significa il compimento della sua missione terrena. È divenuta un simbolo di finalità e compimento nella tradizione cristiana.",
+        "ja": "ヨハネ福音書で十字架上のイエスが語ったラテン語の言葉で、地上の使命の完遂を意味する。キリスト教の伝統において、終局と成就の象徴となっている。",
+        "pt": "A frase latina dita por Jesus na cruz no Evangelho de João, significando o cumprimento de sua missão terrena. Tornou-se um símbolo de finalidade e realização na tradição cristã.",
+        "ru": "Латинская фраза, произнесённая Иисусом на кресте в Евангелии от Иоанна, знаменующая завершение Его земной миссии. Стала символом окончательности и исполнения в христианской традиции.",
+        "zh": "《约翰福音》中耶稣在十字架上说的拉丁语短语，象征其世间使命的完成。在基督教传统中成为终结与成就的象征。"
+      },
+      "id": "la_classical_or_scriptural_allusion_consummatum_est_b1a9350f",
+      "language": "la",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to John 19:30 is correct and well-known.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "The Latin phrase spoken by Jesus on the cross in the Gospel of John, signifying the completion of his earthly mission. It has become a symbol of finality and fulfillment in Christian tradition.",
+      "source_author": "Anonymous (traditionally attributed to the Evangelist John)",
+      "source_author_key": "mnemosyne.la.author.anonymous_traditionally_attributed_to_the_evangeli",
+      "source_dataset": "bible_vulgate_john",
+      "source_license": "public_domain",
+      "source_location": "John 19:30",
+      "source_url": "https://www.biblegateway.com/passage/?search=John+19%3A30&version=VULGATE",
+      "source_work": "Novum Testamentum Graece",
+      "source_work_key": "mnemosyne.la.work.novum_testamentum_graece",
+      "surface_patterns": [
+        "Consummatum est",
+        "It is finished"
       ]
     },
     {
@@ -1816,6 +2188,49 @@
       ]
     },
     {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_memento_te_hominem_esse_6e4cac01",
+      "canonical_reference": "Memento te hominem esse",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.roman_triumph_customs_memento_te_hominem_esse",
+      "i18n_explanations": {
+        "ar": "عبارة لاتينية تعني 'تذكر أنك إنسان'. تنشأ من طقوس النصر الرومانية، حيث كان عبد يهمس بها للجنرال المنتصر لكبح غطرسته، reminding him of his mortality.",
+        "de": "Ein lateinischer Ausdruck mit der Bedeutung 'Erinnere dich, dass du ein Mensch bist'. Er stammt aus dem römischen Triumphritual, bei dem ein Sklave dem siegreichen Feldherrn dies ins Ohr flüsterte, um seinen Hochmut zu zügeln und ihn an seine Sterblichkeit zu erinnern.",
+        "en": "A Latin phrase meaning 'Remember that you are a man.' It originates from the Roman triumph ritual, where a slave whispered this to the victorious general to curb hubris, reminding him of his mortality.",
+        "es": "Una frase latina que significa 'Recuerda que eres un hombre'. Tiene su origen en el ritual romano del triunfo, donde un esclavo susurraba esto al general victorioso para frenar su arrogancia, recordándole su mortalidad.",
+        "fr": "Une locution latine signifiant 'Souviens-toi que tu es un homme'. Elle trouve son origine dans le rituel romain du triomphe, où un esclave chuchotait cela au général victorieux pour modérer son orgueil et lui rappeler sa mortalité.",
+        "he": "ביטוי לטיני שפירושו 'זכור כי אתה אדם'. מקורו בטקס הניצחון הרומי, בו עבד לחש זאת למצביא המנצח כדי לרסן את גאוותו ולהזכיר לו את מותו.",
+        "it": "Una frase latina che significa 'Ricordati che sei un uomo'. Ha origine nel rituale romano del trionfo, dove uno schiavo sussurrava questo al generale vittorioso per frenare la sua hybris, ricordandogli la sua mortalità.",
+        "ja": "ラテン語の表現で、「自分が人間であることを忘れるな」という意味。古代ローマの凱旋式の儀式に由来し、勝利した将軍に奴隷が囁いて傲慢を戒め、死すべき存在であることを思い起こさせました。",
+        "pt": "Uma frase latina que significa 'Lembre-se de que você é um homem'. Origina-se do ritual romano do triunfo, onde um escravo sussurrava isso ao general vitorioso para conter sua arrogância, lembrando-o de sua mortalidade.",
+        "ru": "Латинское выражение 'Помни, что ты человек'. Происходит из римского ритуала триумфа, когда раб шептал это победившему полководцу, чтобы обуздать его гордыню и напомнить о его смертности.",
+        "zh": "拉丁语短语，意为“记住你是个人”。源自罗马凯旋仪式，奴隶会向凯旋的将军低语此语，以抑制其傲慢，提醒其终有一死。"
+      },
+      "id": "la_classical_or_scriptural_allusion_memento_te_hominem_esse_6e4cac01",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Roman triumph ritual as attested by multiple ancient sources (e.g., Pliny, Tertullian).",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A Latin phrase meaning 'Remember that you are a man.' It originates from the Roman triumph ritual, where a slave whispered this to the victorious general to curb hubris, reminding him of his mortality.",
+      "source_author": "Oral tradition (attributed to Roman custom)",
+      "source_author_key": "mnemosyne.la.author.oral_tradition_attributed_to_roman_custom",
+      "source_dataset": "roman_triumph_customs",
+      "source_license": "public_domain",
+      "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/secondary/SMIGRA*/Triumphus.html",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Memento te hominem esse",
+        "Memento, te hominem esse",
+        "Memento hominem te esse",
+        "Memento te mortalem esse",
+        "Respice post te, hominem te esse memento"
+      ],
+      "variants": [
+        "Respice post te, hominem te esse memento"
+      ]
+    },
+    {
       "canonical_form": "la:classical:la_classical_or_scriptural_allusion_nihil_novi_sub_sole_d1d6cc0d",
       "canonical_reference": "Nihil novi sub sole",
       "confidence": 0.9,
@@ -2007,6 +2422,121 @@
         "Quod scripsi, scripsi",
         "Quod scripsi, scripsi.",
         "Quod scripsi, scripsi (Pilate's words)"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_requiescat_in_pace_f54070e5",
+      "canonical_reference": "Requiescat in pace",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.latin_religious_phrases_requiescat_in_pace",
+      "i18n_explanations": {
+        "ar": "عبارة لاتينية تعني 'ليكن راحة في سلام'، تُستخدم عادةً في السياقات المسيحية للمتوفين. تنشأ من الطقوس الكاثوليكية لدفن الموتى وأصبحت تعبيرًا عالميًا للتعزية.",
+        "de": "Lateinische Phrase für 'er/sie möge in Frieden ruhen', die im christlichen Kontext für Verstorbene verwendet wird. Sie stammt aus der katholischen Begräbnisliturgie und ist zu einem universellen Ausdruck des Beileids geworden.",
+        "en": "Latin phrase meaning 'may he/she rest in peace,' commonly used in Christian contexts for the deceased. It originates from the Catholic burial liturgy and has become a universal expression of condolence.",
+        "es": "Frase latina que significa 'que descanse en paz', usada comúnmente en contextos cristianos para los difuntos. Proviene de la liturgia católica de entierro y se ha convertido en una expresión universal de condolencia.",
+        "fr": "Locution latine signifiant 'qu'il/elle repose en paix', couramment utilisée dans les contextes chrétiens pour les défunts. Elle provient de la liturgie catholique des funérailles et est devenue une expression universelle de condoléances.",
+        "he": "ביטוי לטיני שפירושו 'תנוח על משכבו בשלום', המשמש בדרך כלל בהקשרים נוצריים למנוחים. מקורו בליטורגיה הקתולית של הלוויות ונהפך לביטוי אוניברסלי לתנחומים.",
+        "it": "Locuzione latina che significa 'possa riposare in pace', comunemente usata nei contesti cristiani per i defunti. Proviene dalla liturgia cattolica dei funerali ed è diventata un'espressione universale di condoglianze.",
+        "ja": "ラテン語の成句で「安らかに眠れ」を意味し、キリスト教の文脈で故人に対して一般的に使われる。カトリックの葬儀 Liturgy に由来し、世界共通の哀悼の表現となっている。",
+        "pt": "Expressão latina que significa 'que descanse em paz', comumente usada em contextos cristãos para os falecidos. Origina-se da liturgia católica de sepultamento e tornou-se uma expressão universal de condolência.",
+        "ru": "Латинское выражение 'да упокоится с миром', обычно используемое в христианских контекстах для усопших. Происходит из католической заупокойной литургии и стало универсальным выражением соболезнования.",
+        "zh": "拉丁语短语，意为“愿他/她安息”，常用于基督教背景下对亡者的祈祷。源自天主教葬礼仪式，现已成为通用的哀悼用语。"
+      },
+      "id": "la_classical_or_scriptural_allusion_requiescat_in_pace_f54070e5",
+      "language": "la",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Catholic liturgy; surface patterns include translations appropriately.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Latin phrase meaning 'may he/she rest in peace,' commonly used in Christian contexts for the deceased. It originates from the Catholic burial liturgy and has become a universal expression of condolence.",
+      "source_author": "Catholic Church",
+      "source_author_key": "mnemosyne.la.author.catholic_church",
+      "source_dataset": "latin_religious_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.sacred-texts.com/chr/lit/rmiss.htm",
+      "source_work": "Missale Romanum",
+      "source_work_key": "mnemosyne.la.work.missale_romanum",
+      "surface_patterns": [
+        "Requiescat in pace (RIP)",
+        "requiescat in pace",
+        "may he/she/they rest in peace",
+        "rest in peace"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_temet_nosce_ecca1dc6",
+      "canonical_reference": "Temet nosce",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.la.explanation.delphic_maxims_temet_nosce",
+      "i18n_explanations": {
+        "ar": "مبدأ ديلفي يعني 'اعرف نفسك'، مؤكدًا على الوعي الذاتي والتأمل الداخلي. يُنسب إلى وحي ديلفي ثم روّج له سقراط لاحقًا.",
+        "de": "Ein delphisches Motto, das 'erkenne dich selbst' bedeutet und Selbstbewusstsein sowie Selbstreflexion betont. Dem Orakel von Delphi zugeschrieben und später von Sokrates populär gemacht.",
+        "en": "A Delphic maxim meaning 'know thyself,' emphasizing self-awareness and introspection. Attributed to the Oracle of Delphi and later popularized by Socrates.",
+        "es": "Un precepto délfico que significa 'conócete a ti mismo', destacando la autoconciencia y la introspección. Atribuido al Oráculo de Delfos y popularizado por Sócrates.",
+        "fr": "Une maxime delphique signifiant 'connais-toi toi-même', soulignant l'importance de la conscience de soi et de l'introspection. Attribuée à l'Oracle de Delphes et popularisée par Socrate.",
+        "he": "פתגם דלפי שפירושו 'דע את עצמך', המדגיש מודעות עצמית והרהור פנימי. מיוחס לאורקל מדלפי ומאוחר יותר זכה לפופולריות הודות לסוקרטס.",
+        "it": "Un motto delfico che significa 'conosci te stesso', che sottolinea l'autoconsapevolezza e l'introspezione. Attribuito all'Oracolo di Delfi e poi reso popolare da Socrate.",
+        "ja": "デルポイの格言で「汝自身を知れ」を意味し、自己認識と内省を重視します。デルポイの神託に由来し、後にソクラテスによって広められました。",
+        "pt": "Um preceito délfico que significa 'conhece-te a ti mesmo', destacando a autoconhecimento e a introspecção. Atribuído ao Oráculo de Delfos e popularizado por Sócrates.",
+        "ru": "Дельфийский девиз, означающий 'познай самого себя', подчеркивающий важность самосознания и самоанализа. Приписывается Дельфийскому оракулу и позже популяризован Сократом.",
+        "zh": "德尔菲神谕箴言，意为“认识你自己”，强调自我意识与内省。源自德尔菲神谕，后由苏格拉底推广。"
+      },
+      "id": "la_classical_or_scriptural_allusion_temet_nosce_ecca1dc6",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly identified as a Delphic maxim with valid surface patterns.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A Delphic maxim meaning 'know thyself,' emphasizing self-awareness and introspection. Attributed to the Oracle of Delphi and later popularized by Socrates.",
+      "source_author": "Oracle of Delphi (traditionally)",
+      "source_author_key": "mnemosyne.la.author.oracle_of_delphi_traditionally",
+      "source_dataset": "delphic_maxims",
+      "source_license": "public_domain",
+      "source_url": "https://en.wikipedia.org/wiki/Know_thyself",
+      "source_work": "Delphic maxims",
+      "source_work_key": "mnemosyne.la.work.delphic_maxims",
+      "surface_patterns": [
+        "Temet nosce",
+        "nosce te ipsum",
+        "gnōthi seauton"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_tempus_fugit_538b81f2",
+      "canonical_reference": "Tempus fugit",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.virgil_georgics_tempus_fugit",
+      "i18n_explanations": {
+        "ar": "عبارة لاتينية تعني 'الوقت يطير'، مستمدة من *الجورجيات* لفيرجيل. تؤكد على طبيعة الوقت الزائلة وغالبًا ما تُستخدم في سياقات مemento mori.",
+        "de": "Ein lateinischer Ausdruck, der 'die Zeit flieht' bedeutet und aus Vergils *Georgica* stammt. Er betont die Vergänglichkeit der Zeit und wird oft im Kontext von memento mori verwendet.",
+        "en": "A Latin phrase meaning 'time flies,' originating from Virgil's *Georgics*. It emphasizes the fleeting nature of time and is often used in memento mori contexts.",
+        "es": "Una frase latina que significa 'el tiempo vuela', originaria de las *Geórgicas* de Virgilio. Enfatiza la fugacidad del tiempo y se usa en contextos de memento mori.",
+        "fr": "Une phrase latine signifiant 'le temps fuit', tirée des *Géorgiques* de Virgile. Elle souligne la fugacité du temps et est souvent utilisée dans des contextes de memento mori.",
+        "he": "ביטוי לטיני שפירושו 'הזמן עף', שמקורו ב'גאורגיקה' של ורגיליוס. מדגיש את חולפת הזמן ונעשה שימוש בו בהקשרים של 'זכור את המוות'.",
+        "it": "Una frase latina che significa 'il tempo fugge', tratta dalle *Georgiche* di Virgilio. Sottolinea la fugacità del tempo ed è spesso usata in contesti di memento mori.",
+        "ja": "ラテン語の成句で「時は過ぎ去る」を意味し、ウェルギリウスの《農耕詩》に由来します。時間の儚さを強調し、メメント・モリの文脈でしばしば用いられます。",
+        "pt": "Uma frase latina que significa 'o tempo voa', originária das *Geórgicas* de Virgílio. Enfatiza a natureza fugaz do tempo e é usada em contextos de memento mori.",
+        "ru": "Латинское выражение, означающее 'время летит', восходящее к *Георгикам* Вергилия. Подчеркивает мимолетность времени и часто используется в контексте memento mori.",
+        "zh": "一句拉丁语成语，意为“时光飞逝”，源自维吉尔的《农事诗》。强调时间的流逝无情，常用于警示生命短暂的语境。"
+      },
+      "id": "la_classical_or_scriptural_allusion_tempus_fugit_538b81f2",
+      "language": "la",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurately attributed to Virgil's Georgics with correct location.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A Latin phrase meaning 'time flies,' originating from Virgil's *Georgics*. It emphasizes the fleeting nature of time and is often used in memento mori contexts.",
+      "source_author": "Publius Vergilius Maro (Virgil)",
+      "source_author_key": "mnemosyne.la.author.publius_vergilius_maro_virgil",
+      "source_dataset": "virgil_georgics",
+      "source_license": "public_domain",
+      "source_location": "Georgics 3.284",
+      "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0055%3Abook%3D3%3Acard%3D280",
+      "source_work": "Georgica",
+      "source_work_key": "mnemosyne.la.work.georgica",
+      "surface_patterns": [
+        "Tempus fugit",
+        "tempus fugit, memento mori"
       ]
     },
     {
@@ -2477,6 +3007,32 @@
       "surface_patterns": [
         "Ars gratia artis",
         "Ars artis gratia"
+      ]
+    },
+    {
+      "canonical_form": "la:cultural:la_cultural_reference_bacchanalia_6a9b277b",
+      "canonical_reference": "Bacchanalia",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.livy_ab_urbe_condita_bacchanalia",
+      "id": "la_cultural_reference_bacchanalia_6a9b277b",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate cultural reference with correct Livy citation.",
+      "reference_type": "cultural_reference",
+      "register": "classical",
+      "short_explanation": "The Bacchanalia were wild, ecstatic festivals in honor of Bacchus (Dionysus), often associated with revelry and excess. They were later suppressed by the Roman state due to their subversive nature.",
+      "source_author": "Livy",
+      "source_author_key": "mnemosyne.la.author.livy",
+      "source_dataset": "livy_ab_urbe_condita",
+      "source_license": "public_domain",
+      "source_location": "Book 39, Chapters 8-19",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0026:book=39",
+      "source_work": "Ab Urbe Condita",
+      "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "surface_patterns": [
+        "Bacchanalia",
+        "Bacchanalian rites",
+        "Bacchic mysteries"
       ]
     },
     {
@@ -2977,6 +3533,45 @@
       ]
     },
     {
+      "canonical_form": "la:cultural:la_cultural_reference_ex_libris_bdcea8c3",
+      "canonical_reference": "Ex libris",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.la.explanation.latin_phrases_ex_libris",
+      "i18n_explanations": {
+        "ar": "عبارة لاتينية تعني 'من كتب' وتستخدم تقليديًا في الإكس ليبري للإشارة إلى الملكية. تدل على الأصل أو المجموعة التي ينتمي إليها الكتاب.",
+        "de": "Ein lateinischer Ausdruck mit der Bedeutung 'aus den Büchern von', traditionell auf Exlibris verwendet, um den Besitz anzuzeigen. Er kennzeichnet die Herkunft oder Sammlung, aus der ein Buch stammt.",
+        "en": "A Latin phrase meaning 'from the books of,' traditionally used in bookplates to indicate ownership. It signifies the provenance or collection from which a book originates.",
+        "es": "Frase latina que significa 'de los libros de', tradicionalmente usada en ex libris para indicar propiedad. Significa el origen o colección de la que proviene un libro.",
+        "fr": "Locution latine signifiant 'des livres de', traditionnellement utilisée sur les ex-libris pour indiquer la propriété. Elle désigne la provenance ou la collection d'origine d'un livre.",
+        "he": "ביטוי לטיני שפירושו 'מן הספרים של', המשמש באופן מסורתי בספרים כדי לציין בעלות. מציין את המקור או האוסף שממנו הגיע הספר.",
+        "it": "Una frase latina che significa 'dai libri di', tradizionalmente usata negli ex libris per indicare la proprietà. Indica la provenienza o la collezione da cui proviene un libro.",
+        "ja": "ラテン語の成句で「～の蔵書より」を意味し、書籍の所有者を示すエクスリブリスに伝統的に用いられる。本の出自や由来するコレクションを示す。",
+        "pt": "Uma expressão latina que significa 'dos livros de', tradicionalmente usada em ex-libris para indicar propriedade. Significa a origem ou coleção de onde um livro provém.",
+        "ru": "Латинское выражение, означающее 'из книг', традиционно используемое на экслибрисах для указания владельца. Обозначает происхождение или коллекцию, к которой принадлежит книга.",
+        "zh": "拉丁语短语，意为“来自某人的藏书”，传统上用于藏书票以表明所有权。表示书籍的出处或来源的收藏。"
+      },
+      "id": "la_cultural_reference_ex_libris_bdcea8c3",
+      "language": "la",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Standard cultural reference with accurate explanation.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A Latin phrase meaning 'from the books of,' traditionally used in bookplates to indicate ownership. It signifies the provenance or collection from which a book originates.",
+      "source_author": "Oral tradition",
+      "source_author_key": "mnemosyne.la.author.oral_tradition",
+      "source_dataset": "latin_phrases",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Ex libris",
+        "Ex-libris",
+        "Ex libris [name]",
+        "Ex-libris [name]"
+      ]
+    },
+    {
       "canonical_form": "la:cultural:la_cultural_reference_exempli_gratia_68e0cc09",
       "canonical_reference": "Exempli gratia",
       "confidence": 0.9,
@@ -3238,6 +3833,45 @@
       ]
     },
     {
+      "canonical_form": "la:cultural:la_cultural_reference_modus_operandi_02a9a851",
+      "canonical_reference": "Modus operandi",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.latin_legal_phrases_modus_operandi",
+      "i18n_explanations": {
+        "ar": "عبارة لاتينية تعني 'طريقة العمل'، تُستخدم لوصف الطريقة المعتادة التي يفعل بها شخص ما الأشياء، خاصة في السياقات الإجرامية أو المهنية. دخلت الإنجليزية كاقتراض لغوي.",
+        "de": "Lateinische Phrase für 'Handlungsweise', die beschreibt, wie jemand Dinge gewöhnlich tut, besonders in kriminellen oder beruflichen Kontexten. Ist als Lehnwort ins Englische übernommen worden.",
+        "en": "Latin phrase meaning 'method of operating,' used to describe someone's habitual way of doing things, especially in criminal or professional contexts. It has entered English as a loan phrase.",
+        "es": "Frase latina que significa 'modo de operar', usada para describir la forma habitual en que alguien hace las cosas, especialmente en contextos criminales o profesionales. Ha entrado en el inglés como préstamo.",
+        "fr": "Locution latine signifiant 'méthode d'opération', utilisée pour décrire la manière habituelle dont quelqu'un agit, notamment dans des contextes criminels ou professionnels. Elle est passée en anglais comme emprunt.",
+        "he": "ביטוי לטיני שפירושו 'אופן פעולה', המשמש לתיאור דרך הפעולה הקבועה של מישהו, בעיקר בהקשרים פליליים או מקצועיים. נכנס לאנגלית כמילה שאולה.",
+        "it": "Locuzione latina che significa 'modo di operare', usata per descrivere il modo abituale in cui qualcuno agisce, soprattutto in contesti criminali o professionali. È entrata nell'inglese come prestito.",
+        "ja": "ラテン語の成句で「行動様式」を意味し、特に犯罪や職業の文脈で誰かの習慣的な行動様式を表すのに使われる。英語に借用語として取り入れられた。",
+        "pt": "Expressão latina que significa 'modo de operar', usada para descrever a maneira habitual como alguém faz as coisas, especialmente em contextos criminais ou profissionais. Entrou no inglês como empréstimo.",
+        "ru": "Латинское выражение, означающее 'метод действия', используется для описания чьего-либо привычного способа делать что-либо, особенно в криминальных или профессиональных контекстах. Вошло в английский язык как заимствование.",
+        "zh": "拉丁语短语，意为“行动方式”，用于描述某人做事的习惯方式，尤指在犯罪或职业背景下。已作为借词进入英语。"
+      },
+      "id": "la_cultural_reference_modus_operandi_02a9a851",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-established Latin phrase used in English; surface patterns and explanation are accurate.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Latin phrase meaning 'method of operating,' used to describe someone's habitual way of doing things, especially in criminal or professional contexts. It has entered English as a loan phrase.",
+      "source_author": "Oral tradition / Legal Latin",
+      "source_author_key": "mnemosyne.la.author.oral_tradition_legal_latin",
+      "source_dataset": "latin_legal_phrases",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "modus operandi",
+        "modus operandi (MO)",
+        "the modus operandi",
+        "a modus operandi"
+      ]
+    },
+    {
       "canonical_form": "la:cultural:la_cultural_reference_primus_inter_pares_06089f8e",
       "canonical_reference": "Primus inter pares",
       "confidence": 0.85,
@@ -3475,6 +4109,45 @@
       ]
     },
     {
+      "canonical_form": "la:literary:la_literary_reference_ab_urbe_condita_5ca89f76",
+      "canonical_reference": "Ab urbe condita",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.livy_ab_urbe_condita_ab_urbe_condita",
+      "i18n_explanations": {
+        "ar": "عبارة لاتينية تعني 'منذ تأسيس المدينة (روما)'، تستخدم للإشارة إلى نظام التقويم الروماني. تأتي من عمل المؤرخ ليفيوس.",
+        "de": "Lateinischer Ausdruck für 'seit der Gründung der Stadt (Rom),' der das römische Kalendersystem bezeichnet. Stammt aus dem Werk des Historikers Livius.",
+        "en": "A Latin phrase meaning 'from the founding of the city (Rome),' used to denote the Roman calendar system. It originates from the historian Livy's work.",
+        "es": "Frase latina que significa 'desde la fundación de la ciudad (Roma),' usada para denotar el sistema de calendario romano. Proviene de la obra del historiador Livio.",
+        "fr": "Locution latine signifiant 'depuis la fondation de la ville (Rome),' utilisée pour désigner le calendrier romain. Provient de l'œuvre de l'historien Tite-Live.",
+        "he": "ביטוי לטיני שפירושו 'מלידת העיר (רומא)', המשמש לציון שיטת הלוח הרומי. מקורו בחיבורו של ההיסטוריון ליוויוס.",
+        "it": "Espressione latina che significa 'dalla fondazione della città (Roma),' usata per indicare il sistema di calendario romano. Deriva dall'opera dello storico Livio.",
+        "ja": "「ローマ建国から」を意味するラテン語の成句で、ローマの暦法を示す際に用いられる。歴史家リウィウスの著作に由来する。",
+        "pt": "Expressão latina que significa 'desde a fundação da cidade (Roma),' usada para denotar o sistema de calendário romano. Vem da obra do historiador Lívio.",
+        "ru": "Латинское выражение, означающее 'от основания города (Рима),' используемое для обозначения римского календарного летосчисления. Происходит из трудов историка Ливия.",
+        "zh": "拉丁语短语，意为“自罗马建城起”，用于表示罗马历法系统。源自历史学家李维的著作。"
+      },
+      "id": "la_literary_reference_ab_urbe_condita_5ca89f76",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase 'ab urbe condita' is correctly linked to Livy's history and the Roman calendar system.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "A Latin phrase meaning 'from the founding of the city (Rome),' used to denote the Roman calendar system. It originates from the historian Livy's work.",
+      "source_author": "Titus Livius (Livy)",
+      "source_author_key": "mnemosyne.la.author.titus_livius_livy",
+      "source_dataset": "livy_ab_urbe_condita",
+      "source_license": "public_domain",
+      "source_location": "Preface",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0059",
+      "source_work": "Ab Urbe Condita Libri",
+      "source_work_key": "mnemosyne.la.work.ab_urbe_condita_libri",
+      "surface_patterns": [
+        "Ab urbe condita",
+        "AUC",
+        "from the founding of the city"
+      ]
+    },
+    {
       "canonical_form": "la:literary:la_literary_reference_abiit_excessit_evasit_erupit_9825d5af",
       "canonical_reference": "Abiit, excessit, evasit, erupit",
       "confidence": 0.9,
@@ -3511,6 +4184,45 @@
         "Abiit, excessit, evasit, erupit",
         "abiit excessit evasit erupit",
         "He is gone, he has departed, he has vanished, he has broken out"
+      ]
+    },
+    {
+      "canonical_form": "la:literary:la_literary_reference_acheruntis_pabulum_530759c0",
+      "canonical_reference": "Acheruntis pabulum",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.horace_epodes_phrases_acheruntis_pabulum",
+      "i18n_explanations": {
+        "ar": "عبارة لاتينية تعني 'طعام لأخيرون'، تشير إلى نهر العالم السفلي في الميثولوجيا اليونانية والرومانية. ترمز إلى شيء يؤدي إلى الهلاك أو الموت، وغالبًا ما تُستخدم في الشعر.",
+        "de": "Lateinische Phrase für 'Nahrung für den Acheron', bezogen auf den Fluss der Unterwelt in der griechischen und römischen Mythologie. Sie symbolisiert etwas, das zum Untergang oder Tod führt, oft in der Dichtung verwendet.",
+        "en": "Latin phrase meaning 'food for Acheron,' referring to the river of the underworld in Greek and Roman mythology. It symbolizes something that leads to ruin or death, often used in poetry.",
+        "es": "Frase latina que significa 'alimento para el Aqueronte', refiriéndose al río del inframundo en la mitología griega y romana. Simboliza algo que lleva a la ruina o la muerte, usado a menudo en poesía.",
+        "fr": "Locution latine signifiant 'nourriture pour l'Achéron', faisant référence au fleuve des Enfers dans la mythologie grecque et romaine. Elle symbolise quelque chose qui mène à la ruine ou à la mort, souvent utilisée en poésie.",
+        "he": "ביטוי לטיני שפירושו 'מזון לאכרון', המתייחס לנהר העולם התחתון במיתולוגיה היוונית והרומית. מסמל דבר מה המוביל לחורבן או למוות, ונעשה בו שימוש תכוף בשירה.",
+        "it": "Locuzione latina che significa 'cibo per l'Acheronte', riferendosi al fiume degli Inferi nella mitologia greca e romana. Simboleggia qualcosa che porta alla rovina o alla morte, spesso usato in poesia.",
+        "ja": "ラテン語の成句で「アケロンの糧」を意味し、ギリシャ・ローマ神話における冥界の川アケロンを指す。破滅や死に至るものを象徴し、しばしば詩で用いられる。",
+        "pt": "Expressão latina que significa 'alimento para o Aqueronte', referindo-se ao rio do submundo na mitologia grega e romana. Simboliza algo que leva à ruína ou à morte, frequentemente usado na poesia.",
+        "ru": "Латинское выражение 'пища для Ахерона', относящееся к реке подземного мира в греческой и римской мифологии. Символизирует нечто, ведущее к гибели или смерти, часто используется в поэзии.",
+        "zh": "拉丁语短语，意为“冥河之粮”，指希腊和罗马神话中的冥界之河。象征导致毁灭或死亡的事物，常用于诗歌中。"
+      },
+      "id": "la_literary_reference_acheruntis_pabulum_530759c0",
+      "language": "la",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Phrase confirmed in Horace's Epodes 17.66; surface patterns and explanation are correct.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Latin phrase meaning 'food for Acheron,' referring to the river of the underworld in Greek and Roman mythology. It symbolizes something that leads to ruin or death, often used in poetry.",
+      "source_author": "Horace",
+      "source_author_key": "mnemosyne.la.author.horace",
+      "source_dataset": "horace_epodes_phrases",
+      "source_license": "public_domain",
+      "source_location": "Epode 17.66",
+      "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0062%3Abook%3De17%3Acard%3D17",
+      "source_work": "Epodes",
+      "source_work_key": "mnemosyne.la.work.epodes",
+      "surface_patterns": [
+        "Acheruntis pabulum",
+        "pabulum Acheruntis",
+        "Acherontis pabulum"
       ]
     },
     {
@@ -4552,6 +5264,45 @@
       ]
     },
     {
+      "canonical_form": "la:literary:la_literary_reference_barbarus_hic_ego_sum_quia_non_intelligor_illis_2263c512",
+      "canonical_reference": "Barbarus hic ego sum quia non intelligor illis",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.ovid_tristia_barbarus_hic_ego_sum_quia_non_intelli",
+      "i18n_explanations": {
+        "ar": "هذا السطر من شعر Ovid في المنفى يعبر عن شعور الشاعر بالغربة في أرض أجنبية، حيث يشعر بعدم الفهم ويعامل كبربري. يعكس مواضيع المنفى والتشرد الثقافي.",
+        "de": "Diese Zeile aus Ovids Exildichtung drückt das Gefühl des Dichters aus, in fremdem Land entfremdet zu sein, wo er sich unverstanden und wie ein Barbar behandelt fühlt. Sie spiegelt Themen von Exil und kultureller Entwurzelung wider.",
+        "en": "This line from Ovid's exile poetry expresses the poet's sense of alienation in a foreign land, where he feels misunderstood and treated as a barbarian. It reflects themes of exile and cultural displacement.",
+        "es": "Este verso de la poesía de exilio de Ovidio expresa la sensación de alienación del poeta en tierra extranjera, donde se siente incomprendido y tratado como un bárbaro. Refleja temas de exilio y desplazamiento cultural.",
+        "fr": "Ce vers de la poésie d'exil d'Ovide exprime le sentiment d'aliénation du poète dans un pays étranger, où il se sent incompris et traité en barbare. Il reflète les thèmes de l'exil et du déracinement culturel.",
+        "he": "שורה זו משיריו של אובידיוס על גלות מביעה את תחושת הזרות של המשורר בארץ זרה, שם הוא חש שלא מובן ומתייחסים אליו כאל ברברי. היא משקפת נושאים של גלות והעתקה תרבותית.",
+        "it": "Questo verso della poesia di esilio di Ovidio esprime il senso di alienazione del poeta in terra straniera, dove si sente incompreso e trattato come un barbaro. Riflette temi di esilio e sradicamento culturale.",
+        "ja": "オウィディウスの追放詩にあるこの一節は、詩人が外国の地で感じる疎外感、すなわち理解されず「野蛮人」扱いされる気持ちを表しています。追放と文化的な離散というテーマを反映しています。",
+        "pt": "Este verso da poesia de exílio de Ovídio expressa a sensação de alienação do poeta em terra estrangeira, onde se sente incompreendido e tratado como um bárbaro. Reflete temas de exílio e deslocamento cultural.",
+        "ru": "Эта строка из стихов Овидия, написанных в изгнании, выражает чувство поэта-изгнанника в чужой стране, где он ощущает себя непонятым и воспринимается как варвар. Она отражает темы изгнания и культурного отчуждения.",
+        "zh": "这是奥维德流放诗中的一句，表达了诗人在异国他乡的疏离感，感到被误解并被视为野蛮人。它反映了流放与文化疏离的主题。"
+      },
+      "id": "la_literary_reference_barbarus_hic_ego_sum_quia_non_intelligor_illis_2263c512",
+      "language": "la",
+      "learner_level": "C2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly cites Ovid, Tristia 5.10.37 with accurate surface patterns.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This line from Ovid's exile poetry expresses the poet's sense of alienation in a foreign land, where he feels misunderstood and treated as a barbarian. It reflects themes of exile and cultural displacement.",
+      "source_author": "Publius Ovidius Naso",
+      "source_author_key": "mnemosyne.la.author.publius_ovidius_naso",
+      "source_dataset": "ovid_tristia",
+      "source_license": "public_domain",
+      "source_location": "Book V, Elegy 10, Line 37",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0026%3Abook%3D5%3Aelegia%3D10",
+      "source_work": "Tristia",
+      "source_work_key": "mnemosyne.la.work.tristia",
+      "surface_patterns": [
+        "Barbarus hic ego sum quia non intelligor illis",
+        "Barbarus hic ego sum, quia non intellegor illis",
+        "Hic ego barbarus sum"
+      ]
+    },
+    {
       "canonical_form": "la:literary:la_literary_reference_beatus_ille_qui_procul_negotiis_185e82bf",
       "canonical_reference": "Beatus ille qui procul negotiis",
       "confidence": 0.9,
@@ -4668,6 +5419,84 @@
       ]
     },
     {
+      "canonical_form": "la:literary:la_literary_reference_caeca_invidia_est_99ff66d0",
+      "canonical_reference": "Caeca invidia est",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.seneca_epistles_caeca_invidia_est",
+      "i18n_explanations": {
+        "ar": "عبارة لاتينية تعني: «الغيرة عمياء». تنشأ من أعمال سينيكا، وتسلط الضوء على الطبيعة التدميرية وغير المنطقية للغيرة.",
+        "de": "Ein lateinischer Ausdruck, der 'Neid ist blind' bedeutet. Er stammt aus den Werken Senecas und unterstreicht die zerstörerische und irrationale Natur des Neides.",
+        "en": "A Latin phrase meaning 'Envy is blind.' It originates from Seneca's works, highlighting the destructive and irrational nature of envy.",
+        "es": "Frase latina que significa 'La envidia es ciega'. Proviene de las obras de Séneca y destaca la naturaleza destructiva e irracional de la envidia.",
+        "fr": "Locution latine signifiant 'L'envie est aveugle'. Elle provient des œuvres de Sénèque et met en lumière la nature destructrice et irrationnelle de l'envie.",
+        "he": "ביטוי לטיני שפירושו: 'הקנאה עיוורת'. מקורו בכתביו של סנקה, ומדגיש את טבעה ההרסני והלא-רציונלי של הקנאה.",
+        "it": "Un detto latino che significa 'L'invidia è cieca'. Proviene dalle opere di Seneca e mette in evidenza la natura distruttiva e irrazionale dell'invidia.",
+        "ja": "ラテン語の成句で、「嫉妬は盲目なり」を意味する。セネカの著作に由来し、嫉妬の破壊的で非合理的な性質を強調している。",
+        "pt": "Expressão latina que significa 'A inveja é cega'. Origina-se das obras de Sêneca e destaca a natureza destrutiva e irracional da inveja.",
+        "ru": "Латинское выражение, означающее 'Зависть слепа'. Оно восходит к произведениям Сенеки и подчеркивает разрушительный и иррациональный характер зависти.",
+        "zh": "拉丁语短语，意为“妒忌是盲目的”。源自塞涅卡的作品，强调了嫉妒的破坏性和非理性本质。"
+      },
+      "id": "la_literary_reference_caeca_invidia_est_99ff66d0",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Seneca's Epistulae Morales, Epistle 7.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "A Latin phrase meaning 'Envy is blind.' It originates from Seneca's works, highlighting the destructive and irrational nature of envy.",
+      "source_author": "Seneca the Younger",
+      "source_author_key": "mnemosyne.la.author.seneca_the_younger",
+      "source_dataset": "seneca_epistles",
+      "source_license": "public_domain",
+      "source_location": "Epistle 7, Section 3",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0125:letter=7",
+      "source_work": "Epistulae Morales ad Lucilium",
+      "source_work_key": "mnemosyne.la.work.epistulae_morales_ad_lucilium",
+      "surface_patterns": [
+        "Caeca invidia est",
+        "Caeca enim invidia est",
+        "Caeca enim est invidia"
+      ]
+    },
+    {
+      "canonical_form": "la:literary:la_literary_reference_caelum_non_animum_mutant_95d49123",
+      "canonical_reference": "Caelum non animum mutant",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.horace_epistles_phrases_caelum_non_animum_mutant",
+      "i18n_explanations": {
+        "ar": "سطر من رسائل هوراس، بمعنى 'يغيرون السماء، لا الروح'. ينتقد أولئك الذين يسعون لتغيير الظروف الخارجية دون تغيير داخلي.",
+        "de": "Ein Vers aus den *Episteln* des Horaz mit der Bedeutung 'Sie ändern den Himmel, nicht die Seele.' Er kritisiert diejenigen, die äußere Umstände ändern wollen, ohne sich selbst zu verändern.",
+        "en": "A line from Horace's *Epistles*, meaning 'They change the sky, not the soul.' It critiques those who seek change in external circumstances while remaining unchanged internally.",
+        "es": "Un verso de las *Epístolas* de Horacio que significa 'Cambian el cielo, no el alma.' Critica a quienes buscan cambiar las circunstancias externas sin cambiar internamente.",
+        "fr": "Un vers des *Épîtres* d'Horace signifiant 'Ils changent le ciel, non l'âme.' Il critique ceux qui cherchent à changer les circonstances extérieures sans changer intérieurement.",
+        "he": "ביטוי מתוך 'איגרות' של הורטיוס, שפירושו 'הם משנים את השמים, לא את הנפש'. מבקר את אלו המחפשים לשנות נסיבות חיצוניות מבלי להשתנות מבפנים.",
+        "it": "Un verso delle *Epistole* di Orazio che significa 'Cambiano il cielo, non l'anima.' Critica coloro che cercano di cambiare le circostanze esterne senza cambiare interiormente.",
+        "ja": "ホラティウスの「エピストラエ」の一節で、「彼らは空を変えるが、魂は変えない」という意味。外的状況を変えようとしながら、内面が変わらない人々を批判。",
+        "pt": "Um verso das *Epístolas* de Horácio que significa 'Eles mudam o céu, não a alma.' Critica aqueles que buscam mudar as circunstâncias externas sem se transformar internamente.",
+        "ru": "Строка из «Посланий» Горация, означающая 'Они меняют небо, но не душу.' Критика тех, кто стремится изменить внешние обстоятельства, оставаясь внутренне неизменным.",
+        "zh": "贺拉斯《书信集》中的一句，意为“他们改变天空，却不改变灵魂”。批评那些试图改变外部环境却内心依旧如故的人。"
+      },
+      "id": "la_literary_reference_caelum_non_animum_mutant_95d49123",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Horace Epistles 1.11.27 with accurate surface patterns.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A line from Horace's *Epistles*, meaning 'They change the sky, not the soul.' It critiques those who seek change in external circumstances while remaining unchanged internally.",
+      "source_author": "Quintus Horatius Flaccus (Horace)",
+      "source_author_key": "mnemosyne.la.author.quintus_horatius_flaccus_horace",
+      "source_dataset": "horace_epistles_phrases",
+      "source_license": "public_domain",
+      "source_location": "Epistulae 1.11.27",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0133:text=Ep.1:book=1:poem=11",
+      "source_work": "Epistulae",
+      "source_work_key": "mnemosyne.la.work.epistulae",
+      "surface_patterns": [
+        "caelum non animum mutant",
+        "caelum animum non mutat",
+        "caelum non mutat animum"
+      ]
+    },
+    {
       "canonical_form": "la:literary:la_literary_reference_caelum_non_animum_mutant_qui_trans_mare_currunt_85a5c05b",
       "canonical_reference": "Caelum non animum mutant qui trans mare currunt",
       "confidence": 0.9,
@@ -4704,6 +5533,44 @@
         "Caelum non animum mutant qui trans mare currunt",
         "Caelum non animum mutant qui trans mare currunt.",
         "Caelum non animum mutant qui trans mare currunt,"
+      ]
+    },
+    {
+      "canonical_form": "la:literary:la_literary_reference_calumniare_si_quis_autem_voluerit_bea2d7ee",
+      "canonical_reference": "Calumniare si quis autem voluerit",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.terence_heauton_timorumenos_calumniare_si_quis_aut",
+      "i18n_explanations": {
+        "ar": "سطر من مسرحية تيرينتيوس الكوميدية «هيوتون تيمورومينوس» (المعذب لنفسه)، غالبًا ما تُنسب إلى معنى «افترِ إذا شئت، طالما كذبت». تعكس الموقف القانوني والاجتماعي الروماني تجاه الاتهامات الكاذبة.",
+        "de": "Eine Zeile aus Terenz' Komödie 'Heauton Timorumenos' (Der Selbstquäler), oft zitiert als 'Verleumde, wenn du willst, solange du lügst.' Sie spiegelt die römische rechtliche und gesellschaftliche Haltung gegenüber falschen Anschuldigungen wider.",
+        "en": "A line from Terence's comedy 'Heauton Timorumenos' (The Self-Tormentor), often cited to mean 'slander if you wish, as long as you lie.' It reflects the Roman legal and social attitude toward false accusations.",
+        "es": "Una línea de la comedia de Terencio 'Heauton Timorumenos' (El Atormentador), citada para significar 'calumnia si quieres, siempre que mientas.' Refleja la actitud legal y social romana hacia las acusaciones falsas.",
+        "fr": "Une réplique de la comédie de Térence 'Heauton Timorumenos' (Le Bourreau de soi-même), souvent citée pour signifier 'calomnie si tu veux, du moment que tu mens.' Elle reflète l'attitude juridique et sociale romaine envers les fausses accusations.",
+        "he": "שורה מהקומדיה של טרנטיוס «הֶאוֹטוֹן טִימוֹרוּמֶנוֹס» (המענה העצמי), המובאת לעיתים קרובות כ'השמצה אם תרצה, כל עוד תשקר'. משקפת את הגישה המשפטית והחברתית הרומית כלפי האשמות שווא.",
+        "it": "Una battuta della commedia di Terenzio 'Heauton Timorumenos' (Il Tormentatore di sé stesso), spesso citata per significare 'calunnia pure, purché tu menta.' Riflette l'atteggiamento romano verso le false accuse.",
+        "ja": "テレンティウスの喜劇「ヘウトン・ティモルメノス」（自罰者）の一節で、「中傷したいなら、嘘をつけ」という意味で引用される。ローマの法律や社会における虚偽の告発への態度を反映している。",
+        "pt": "Uma linha da comédia de Terêncio 'Heauton Timorumenos' (O Autotormentador), frequentemente citada para significar 'caluniar se quiser, desde que minta.' Reflete a atitude romana legal e social em relação a acusações falsas.",
+        "ru": "Строка из комедии Теренция 'Heauton Timorumenos' ('Самому себя мучающий'), часто цитируемая как 'Клевещи, если хочешь, лишь бы лгал.' Отражает римское правовое и социальное отношение к ложным обвинениям.",
+        "zh": "出自泰伦提乌斯喜剧《自我折磨者》（Heauton Timorumenos），常被引用为“诽谤随你便，只要你说谎”。反映了罗马法律和社会对诬告的态度。"
+      },
+      "id": "la_literary_reference_calumniare_si_quis_autem_voluerit_bea2d7ee",
+      "language": "la",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Terence's Heauton Timorumenos with accurate surface patterns.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A line from Terence's comedy 'Heauton Timorumenos' (The Self-Tormentor), often cited to mean 'slander if you wish, as long as you lie.' It reflects the Roman legal and social attitude toward false accusations.",
+      "source_author": "Publius Terentius Afer",
+      "source_author_key": "mnemosyne.la.author.publius_terentius_afer",
+      "source_dataset": "terence_heauton_timorumenos",
+      "source_license": "public_domain",
+      "source_location": "Act IV, scene 5",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0122:text=Heaut.:scene=4",
+      "source_work": "Heauton Timorumenos",
+      "source_work_key": "mnemosyne.la.work.heauton_timorumenos",
+      "surface_patterns": [
+        "Calumniare si quis autem voluerit",
+        "Calumniare si quis autem voluerit, dummodo is mentiatur"
       ]
     },
     {
@@ -4823,6 +5690,84 @@
       ]
     },
     {
+      "canonical_form": "la:literary:la_literary_reference_carpe_diem_quam_minimum_credula_postero_09876e4d",
+      "canonical_reference": "Carpe diem, quam minimum credula postero",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.horace_carmina_carpe_diem_quam_minimum_credula_pos",
+      "i18n_explanations": {
+        "ar": "بيت من قصائد هوراس يعني 'اغتنم اليوم، معتمدا على المستقبل بقدر الإمكان القليل'. دعوة للاستمتاع باللحظة الحاضرة وعدم الاعتماد على مستقبل غير مؤكد.",
+        "de": "Ein Vers aus Horaz' Oden mit der Bedeutung 'Nutze den Tag, vertraue so wenig wie möglich auf die Zukunft'. Es ist ein Aufruf, den gegenwärtigen Moment zu genießen und sich nicht auf eine unsichere Zukunft zu verlassen.",
+        "en": "A line from Horace's Odes, meaning 'Seize the day, trusting as little as possible in the future.' It is a call to enjoy the present moment and not rely on uncertain future.",
+        "es": "Un verso de las Odas de Horacio que significa 'Aprovecha el día, confiando lo menos posible en el futuro'. Es un llamado a disfrutar el momento presente sin depender de un futuro incierto.",
+        "fr": "Un vers d'Horace dans ses Odes, signifiant 'Cueille le jour, en se fiant le moins possible à l'avenir'. C'est un appel à profiter du moment présent sans compter sur un futur incertain.",
+        "he": "שורה מאודה של הורטיוס שפירושה 'נצל את היום, אל תבטח בעתיד ככל האפשר'. קריאה ליהנות מהרגע הנוכחי ולא לסמוך על עתיד בלתי ודאי.",
+        "it": "Un verso di Orazio dalle Odi che significa 'Cogli il giorno, fidandoti il meno possibile nel futuro'. È un invito a godere del momento presente senza fare affidamento su un futuro incerto.",
+        "ja": "ホラティウスの「オード」の一節で「日々を摘め、未来にはできるだけ頼るな」という意味。不確かな未来に頼らず、今という瞬間を楽しむよう促す言葉。",
+        "pt": "Um verso de Horácio em suas Odes que significa 'Aproveite o dia, confiando o mínimo possível no futuro'. É um chamado para desfrutar o momento presente sem depender de um futuro incerto.",
+        "ru": "Строка из од Горация, означающая 'Лови день, доверяя как можно меньше будущему'. Это призыв наслаждаться настоящим моментом и не полагаться на неопределённое будущее.",
+        "zh": "贺拉斯《颂歌》中的一句，意为“把握今天，尽可能少地信赖未来”。这是一种享受当下、不依赖不确定未来的召唤。"
+      },
+      "id": "la_literary_reference_carpe_diem_quam_minimum_credula_postero_09876e4d",
+      "language": "la",
+      "learner_level": "C2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate quotation from Horace's Odes with correct source.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A line from Horace's Odes, meaning 'Seize the day, trusting as little as possible in the future.' It is a call to enjoy the present moment and not rely on uncertain future.",
+      "source_author": "Horace",
+      "source_author_key": "mnemosyne.la.author.horace",
+      "source_dataset": "horace_carmina",
+      "source_license": "public_domain",
+      "source_location": "Odes 1.11.8",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0067%3Abook%3D1%3Apoem%3D11",
+      "source_work": "Carmina",
+      "source_work_key": "mnemosyne.la.work.carmina",
+      "surface_patterns": [
+        "Carpe diem, quam minimum credula postero",
+        "Carpe diem, quam minimum credula posteris",
+        "Carpe diem, quam minimum credula posterum"
+      ]
+    },
+    {
+      "canonical_form": "la:literary:la_literary_reference_carpent_tua_poma_nepotes_d187cde8",
+      "canonical_reference": "Carpent tua poma nepotes",
+      "confidence": 0.87,
+      "explanation_key": "mnemosyne.la.explanation.virgil_eclogues_phrases_carpent_tua_poma_nepotes",
+      "i18n_explanations": {
+        "ar": "سطر من أشعار فيرجيل 'الأغاني الرعوية' بمعنى 'أحفادك سيقطفون ثمارك'. يعكس فكرة أن الأجيال القادمة ستتمتع بثمار عمل المرء، وغالبًا ما يرتبط بمفهوم الإرث.",
+        "de": "Ein Vers aus Vergils *Eklogen* mit der Bedeutung 'Deine Nachkommen werden deine Früchte ernten.' Er spiegelt die Idee wider, dass zukünftige Generationen die Früchte der eigenen Arbeit genießen werden, oft verbunden mit dem Konzept des Erbes.",
+        "en": "A line from Virgil's *Eclogues*, meaning 'Your descendants will pluck your fruits.' It reflects the idea that future generations will enjoy the rewards of one's labor, often linked to the concept of legacy.",
+        "es": "Un verso de las *Églogas* de Virgilio que significa 'Tus descendientes recogerán tus frutos.' Refleja la idea de que las generaciones futuras disfrutarán de los frutos del trabajo de uno, vinculado al concepto de legado.",
+        "fr": "Un vers des *Bucoliques* de Virgile signifiant 'Tes descendants cueilleront tes fruits.' Il reflète l'idée que les générations futures profiteront des fruits du travail de quelqu'un, souvent lié au concept de legs.",
+        "he": "ביטוי מתוך 'אקלוגות' של ורגיליוס, שפירושו 'צאצאיך יקטפו את פירותיך'. משקף את הרעיון שדורות עתידיים ייהנו מפירות עמלך, לעיתים קשור למושג מורשת.",
+        "it": "Un verso delle *Egloghe* di Virgilio che significa 'I tuoi discendenti coglieranno i tuoi frutti.' Riflette l'idea che le generazioni future godranno dei frutti del lavoro di uno, spesso legato al concetto di eredità.",
+        "ja": "ウェルギリウスの「牧歌」の一節で、「あなたの子孫があなたの果実を摘むだろう」という意味。未来の世代が先人の努力の報いを享受するという考えを反映し、遺産の概念と結びつく。",
+        "pt": "Um verso das *Éclogas* de Virgílio que significa 'Teus descendentes colherão teus frutos.' Reflete a ideia de que as futuras gerações desfrutarão dos frutos do trabalho de alguém, muitas vezes ligado ao conceito de legado.",
+        "ru": "Строка из «Эклог» Вергилия, означающая 'Твои потомки сорвут твои плоды.' Отражает идею, что будущие поколения пожнут плоды чужого труда, часто связанную с понятием наследия.",
+        "zh": "维吉尔《牧歌》中的一句，意为“你的后代将摘取你的果实”。体现后代将享受前人劳动成果的理念，常与遗产概念相关联。"
+      },
+      "id": "la_literary_reference_carpent_tua_poma_nepotes_d187cde8",
+      "language": "la",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate citation from Virgil's Eclogue 9.49.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A line from Virgil's *Eclogues*, meaning 'Your descendants will pluck your fruits.' It reflects the idea that future generations will enjoy the rewards of one's labor, often linked to the concept of legacy.",
+      "source_author": "Publius Vergilius Maro (Virgil)",
+      "source_author_key": "mnemosyne.la.author.publius_vergilius_maro_virgil",
+      "source_dataset": "virgil_eclogues_phrases",
+      "source_license": "public_domain",
+      "source_location": "Ecloga 9.49",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0058:text=Ecl.9",
+      "source_work": "Eclogae",
+      "source_work_key": "mnemosyne.la.work.eclogae",
+      "surface_patterns": [
+        "carpent tua poma nepotes",
+        "carpent poma nepotes",
+        "poma tua carpent nepotes"
+      ]
+    },
+    {
       "canonical_form": "la:literary:la_literary_reference_ceterum_censeo_carthaginem_esse_delendam_701a46cc",
       "canonical_reference": "Ceterum censeo Carthaginem esse delendam",
       "confidence": 0.9,
@@ -4898,6 +5843,46 @@
         "circulus vitiosus",
         "circulus vitiosus est",
         "in circulo vitioso"
+      ]
+    },
+    {
+      "canonical_form": "la:literary:la_literary_reference_cogito_ergo_sum_68c89977",
+      "canonical_reference": "Cogito, ergo sum",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.la.explanation.descartes_works_cogito_ergo_sum",
+      "i18n_explanations": {
+        "ar": "عبارة فلسفية لرينيه ديكارت تؤكد أن فعل التفكير يثبت وجود المرء. هي أساس الفلسفة الغربية.",
+        "de": "Philosophische Aussage von René Descartes, die besagt, dass das Denken die eigene Existenz bestätigt. Grundlegend für die westliche Philosophie.",
+        "en": "A philosophical statement by René Descartes, asserting that the act of thinking confirms one's existence. It is foundational in Western philosophy.",
+        "es": "Enunciado filosófico de René Descartes que afirma que el acto de pensar confirma la existencia propia. Es fundamental en la filosofía occidental.",
+        "fr": "Énoncé philosophique de René Descartes affirmant que l'acte de penser confirme l'existence de soi. Fondement de la philosophie occidentale.",
+        "he": "אמרה פילוסופית של רנה דקארט הטוענת כי מעשה החשיבה מאשר את קיומו של האדם. מהווה יסוד בפילוסופיה המערבית.",
+        "it": "Affermazione filosofica di René Descartes che sostiene che l'atto di pensare conferma la propria esistenza. Fondamentale nella filosofia occidentale.",
+        "ja": "ルネ・デカルトによる哲学的な言葉で、思考することが存在を証明すると主張する。西洋哲学の基礎となる。",
+        "pt": "Enunciado filosófico de René Descartes que afirma que o ato de pensar confirma a própria existência. É fundamental na filosofia ocidental.",
+        "ru": "Философское утверждение Рене Декарта, гласящее, что акт мышления подтверждает собственное существование. Основа западной философии.",
+        "zh": "笛卡尔的哲学名言，认为思考的行为证明了自我的存在。是西方哲学的基础。"
+      },
+      "id": "la_literary_reference_cogito_ergo_sum_68c89977",
+      "language": "la",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase 'cogito ergo sum' is accurately attributed to Descartes' Discours de la méthode and is a cornerstone of Western philosophy.",
+      "reference_type": "literary_reference",
+      "register": "formal",
+      "short_explanation": "A philosophical statement by René Descartes, asserting that the act of thinking confirms one's existence. It is foundational in Western philosophy.",
+      "source_author": "René Descartes",
+      "source_author_key": "mnemosyne.la.author.rené_descartes",
+      "source_dataset": "descartes_works",
+      "source_license": "public_domain",
+      "source_location": "Part IV",
+      "source_url": "https://www.gutenberg.org/ebooks/13846",
+      "source_work": "Discours de la méthode",
+      "source_work_key": "mnemosyne.la.work.discours_de_la_méthode",
+      "surface_patterns": [
+        "cogito ergo sum",
+        "cogito, ergo sum",
+        "I think, therefore I am",
+        "dubito, ergo cogito, ergo sum"
       ]
     },
     {
@@ -5816,6 +6801,45 @@
         "Forsan et haec olim meminisse iuvabit",
         "Forsan haec olim meminisse iuvabit",
         "Meminisse iuvabit"
+      ]
+    },
+    {
+      "canonical_form": "la:literary:la_literary_reference_gallia_est_omnis_divisa_in_partes_tres_04aa0efa",
+      "canonical_reference": "Gallia est omnis divisa in partes tres",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.caesar_bellum_gallicum_phrases_gallia_est_omnis_di",
+      "i18n_explanations": {
+        "ar": "السطر الافتتاحي لسرد يوليوس قيصر لحروبه الغالية، الذي يصف بلاد الغال مقسمة إلى ثلاثة أجزاء. هو نص أساسي في التأريخ اللاتيني والأدب العسكري.",
+        "de": "Der erste Satz von Julius Caesars Bericht über seine Gallischen Kriege, in dem Gallien in drei Teile unterteilt wird. Er ist ein Grundlagentext der lateinischen Geschichtsschreibung und Militärliteratur.",
+        "en": "The opening line of Julius Caesar's account of his Gallic Wars, describing Gaul as divided into three parts. It is a foundational text in Latin historiography and military literature.",
+        "es": "La primera línea del relato de Julio César sobre sus guerras en la Galia, describiendo la Galia dividida en tres partes. Es un texto fundamental en la historiografía y literatura militar latina.",
+        "fr": "La première ligne du récit de Jules César sur ses guerres des Gaules, décrivant la Gaule divisée en trois parties. C'est un texte fondateur de l'historiographie et de la littérature militaire latine.",
+        "he": "המשפט הפותח של יוליוס קיסר בתיאור מלחמותיו בגאליה, המתאר את גאליה מחולקת לשלושה חלקים. זהו טקסט יסודי בהיסטוריוגרפיה ובספרות הצבאית הלטינית.",
+        "it": "La prima riga del resoconto di Giulio Cesare sulle sue guerre galliche, che descrive la Gallia divisa in tre parti. È un testo fondamentale nella storiografia e nella letteratura militare latina.",
+        "ja": "ユリウス・カエサルによるガリア戦争の記録の冒頭文で、ガリアが三つの部分に分かれていると述べられている。ラテン語の歴史叙述と軍事文学の基礎的なテキストである。",
+        "pt": "A primeira linha do relato de Júlio César sobre suas guerras na Gália, descrevendo a Gália dividida em três partes. É um texto fundamental na historiografia e literatura militar latina.",
+        "ru": "Первая строка из отчёта Юлия Цезаря о Галльских войнах, описывающая Галлию, разделённую на три части. Это основополагающий текст латинской историографии и военной литературы.",
+        "zh": "尤利乌斯·恺撒关于高卢战争的记述的开篇语，描述高卢被分为三部分。这是拉丁历史编纂学和军事文学的基础文本。"
+      },
+      "id": "la_literary_reference_gallia_est_omnis_divisa_in_partes_tres_04aa0efa",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate opening line of Caesar's Gallic Wars, source location correct.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "The opening line of Julius Caesar's account of his Gallic Wars, describing Gaul as divided into three parts. It is a foundational text in Latin historiography and military literature.",
+      "source_author": "Gaius Julius Caesar",
+      "source_author_key": "mnemosyne.la.author.gaius_julius_caesar",
+      "source_dataset": "caesar_bellum_gallicum_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 1, Chapter 1",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0153:text=BG:book=1:chapter=1",
+      "source_work": "Commentarii de Bello Gallico",
+      "source_work_key": "mnemosyne.la.work.commentarii_de_bello_gallico",
+      "surface_patterns": [
+        "Gallia est omnis divisa in partes tres",
+        "Gallia omnis divisa est in partes tres",
+        "Gallia in tres partes divisa est"
       ]
     },
     {
@@ -6840,6 +7864,44 @@
       ]
     },
     {
+      "canonical_form": "la:literary:la_literary_reference_quot_homines_tot_sententiae_aef8fc24",
+      "canonical_reference": "Quot homines, tot sententiae",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.terence_phormio_quot_homines_tot_sententiae",
+      "i18n_explanations": {
+        "ar": "عبارة من مسرحية تيرينس 'فورميو' تعني 'كم من الرجال، تعدد الآراء'، مما يعكس تنوع وجهات النظر البشرية.",
+        "de": "Ein Sprichwort aus Terenz' 'Phormio' mit der Bedeutung 'So viele Menschen, so viele Meinungen,' das die Vielfalt menschlicher Perspektiven widerspiegelt.",
+        "en": "A phrase from Terence's 'Phormio' meaning 'As many men, so many opinions,' reflecting the diversity of human perspectives.",
+        "es": "Frase de Terencio que significa 'Cuántos hombres, tantas opiniones,' reflejando la diversidad de perspectivas humanas.",
+        "fr": "Une expression de Térence signifiant 'Autant d'hommes, autant d'opinions,' reflétant la diversité des points de vue humains.",
+        "he": "ביטוי מתוך המחזה 'פורמיו' של טרנציוס שפירושו 'כמה אנשים, כך דעות', המשקף את מגוון הפרספקטיבות האנושיות.",
+        "it": "Un'espressione di Terenzio che significa 'Quante persone, altrettante opinioni,' riflettendo la diversità delle prospettive umane.",
+        "ja": "テレンティウスの戯曲「フォルミオ」に由来する言葉で、「何人いれば、それだけの意見がある」という意味。人間の多様な視点を反映している。",
+        "pt": "Uma frase de Terêncio que significa 'Quantos homens, tantas opiniões,' refletindo a diversidade de perspectivas humanas.",
+        "ru": "Выражение из комедии Теренция 'Формион', означающее 'Сколько людей, столько мнений,' отражающее разнообразие человеческих взглядов.",
+        "zh": "来自泰伦提乌斯戏剧《福尔弥奥》的一句话，意为‘人各不同，见解各异’，反映了人类观点的多样性。"
+      },
+      "id": "la_literary_reference_quot_homines_tot_sententiae_aef8fc24",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Terence's Phormio with correct location and attribution.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "A phrase from Terence's 'Phormio' meaning 'As many men, so many opinions,' reflecting the diversity of human perspectives.",
+      "source_author": "Publius Terentius Afer (Terence)",
+      "source_author_key": "mnemosyne.la.author.publius_terentius_afer_terence",
+      "source_dataset": "terence_phormio",
+      "source_license": "public_domain",
+      "source_location": "Act V, scene 8, line 454",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0122:text=Phormio",
+      "source_work": "Phormio",
+      "source_work_key": "mnemosyne.la.work.phormio",
+      "surface_patterns": [
+        "Quot homines, tot sententiae",
+        "Quot homines, tot sententiae quot capita"
+      ]
+    },
+    {
       "canonical_form": "la:literary:la_literary_reference_rara_avis_in_terris_20894068",
       "canonical_reference": "Rara avis in terris",
       "confidence": 0.85,
@@ -7506,6 +8568,44 @@
       ]
     },
     {
+      "canonical_form": "la:proverb:la_proverb_tradition_acta_non_verba_3966c95b",
+      "canonical_reference": "Acta non verba",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.la.explanation.latin_proverbs_acta_non_verba",
+      "i18n_explanations": {
+        "ar": "مثل لاتيني يؤكد أن الأفعال أهم من الأقوال الفارغة. يعكس الفضيلة الرواقية والرومانية المتمثلة في العمل العملي على البلاغة الفارغة.",
+        "de": "Ein lateinisches Sprichwort, das betont, dass Taten wichtiger sind als bloße Worte. Es spiegelt die stoische und römische Tugend des praktischen Handelns gegenüber leerer Rhetorik wider.",
+        "en": "A Latin proverb emphasizing that deeds are more important than mere words. It reflects a Stoic and Roman virtue of practical action over empty rhetoric.",
+        "es": "Un proverbio latino que enfatiza que los hechos son más importantes que las simples palabras. Refleja la virtud estoica y romana de la acción práctica sobre la retórica vacía.",
+        "fr": "Un proverbe latin soulignant que les actes sont plus importants que les simples mots. Il reflète la vertu stoïcienne et romaine de l'action pratique plutôt que de la rhétorique creuse.",
+        "he": "פתגם לטיני המדגיש כי מעשים חשובים יותר ממילים ריקות. משקף את המידה הסטואית והרומית של פעולה מעשית על פני רטוריקה ריקה.",
+        "it": "Un proverbio latino che sottolinea come le azioni siano più importanti delle semplici parole. Riflette la virtù stoica e romana dell'azione pratica rispetto alla retorica vuota.",
+        "ja": "行いは言葉よりも重要であるというラテン語の格言。空虚なレトリックよりも実践的な行動を重視するストア派とローマの美徳を反映している。",
+        "pt": "Um provérbio latino que enfatiza que os atos são mais importantes do que meras palavras. Reflete a virtude estoica e romana da ação prática sobre a retórica vazia.",
+        "ru": "Латинская пословица, подчеркивающая, что дела важнее пустых слов. Отражает стоическую и римскую добродетель практических действий перед пустой риторикой.",
+        "zh": "拉丁谚语，强调行动比空话更重要。体现了斯多葛派和罗马人务实行动重于空谈的美德。"
+      },
+      "id": "la_proverb_tradition_acta_non_verba_3966c95b",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Common Latin proverb, accurately represented.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A Latin proverb emphasizing that deeds are more important than mere words. It reflects a Stoic and Roman virtue of practical action over empty rhetoric.",
+      "source_author": "Oral tradition",
+      "source_author_key": "mnemosyne.la.author.oral_tradition",
+      "source_dataset": "latin_proverbs",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Acta non verba",
+        "Acta, non verba",
+        "Actions speak louder than words"
+      ]
+    },
+    {
       "canonical_form": "la:proverb:la_proverb_tradition_ad_augusta_per_angusta_79bb58aa",
       "canonical_reference": "Ad augusta per angusta",
       "confidence": 0.8,
@@ -7618,6 +8718,44 @@
       ]
     },
     {
+      "canonical_form": "la:proverb:la_proverb_tradition_amantes_amentes_2e8a41b1",
+      "canonical_reference": "Amantes amentes",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.latin_proverbs_amantes_amentes",
+      "i18n_explanations": {
+        "ar": "مثل لاتيني يعني 'العشاق مجانين'، يعكس الرأي القديم بأن الحب العنيف يعطل التفكير العقلاني. يظهر في نصوص كلاسيكية ومتوسطة مختلفة.",
+        "de": "Ein lateinisches Sprichwort, das bedeutet 'Liebende sind verrückt', und spiegelt die antike Vorstellung wider, dass leidenschaftliche Liebe den rationalen Gedanken stört. Es taucht in verschiedenen klassischen und mittelalterlichen Texten auf.",
+        "en": "A Latin proverb meaning 'lovers are mad,' reflecting the ancient view that passionate love disrupts rational thought. It appears in various classical and medieval texts.",
+        "es": "Un proverbio latino que significa 'los amantes están locos', reflejando la visión antigua de que el amor apasionado perturba el pensamiento racional. Aparece en diversos textos clásicos y medievales.",
+        "fr": "Un proverbe latin signifiant 'les amants sont fous', reflétant l'idée antique que l'amour passionnel perturbe la pensée rationnelle. Il apparaît dans divers textes classiques et médiévaux.",
+        "he": "פתגם לטיני שמשמעו 'אוהבים הם משוגעים', משקף את התפיסה העתיקה לפיה אהבה עזה מפריעה לחשיבה רציונלית. מופיע בטקסטים קלאסיים וימי-ביניים שונים.",
+        "it": "Un detto latino che significa 'gli amanti sono pazzi', riflettendo l'idea antica che l'amore appassionato sconvolge il pensiero razionale. Compare in vari testi classici e medievali.",
+        "ja": "ラテン語の格言で、「恋する者は狂気の沙汰」を意味し、激しい愛が理性的思考を乱すという古代の見方を反映している。様々な古典・中世の文献に登場する。",
+        "pt": "Um provérbio latino que significa 'os amantes são loucos', refletindo a visão antiga de que o amor passional perturba o pensamento racional. Aparece em vários textos clássicos e medievais.",
+        "ru": "Латинская пословица 'влюблённые безумны', отражающая древнее представление о том, что страстная любовь нарушает рациональное мышление. Встречается в различных классических и средневековых текстах.",
+        "zh": "拉丁谚语，意为'恋爱者皆疯狂'，反映了古代观点：激情的爱情扰乱理性思维。出现在多种古典和中世纪文本中。"
+      },
+      "id": "la_proverb_tradition_amantes_amentes_2e8a41b1",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-attested Latin proverb in classical and medieval texts; attribution as traditional is correct.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A Latin proverb meaning 'lovers are mad,' reflecting the ancient view that passionate love disrupts rational thought. It appears in various classical and medieval texts.",
+      "source_author": "Traditional",
+      "source_author_key": "mnemosyne.la.author.traditional",
+      "source_dataset": "latin_proverbs",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Amantes amentes",
+        "Amantes amentes esse",
+        "Amantes amentes dicuntur"
+      ]
+    },
+    {
       "canonical_form": "la:proverb:la_proverb_tradition_asinus_asinum_fricat_0996f4bd",
       "canonical_reference": "Asinus asinum fricat",
       "confidence": 0.9,
@@ -7652,6 +8790,30 @@
         "Asinus asinum fricat",
         "Asinus asinum fricare",
         "Asinus asinum terit"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:la_proverb_tradition_asinus_in_tegulis_19e626a9",
+      "canonical_reference": "Asinus in tegulis",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.la.explanation.classical_proverbs_asinus_in_tegulis",
+      "id": "la_proverb_tradition_asinus_in_tegulis_19e626a9",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-attested Latin proverb with classical and later usage.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "A Latin proverb meaning 'A donkey on the roof,' used to describe something absurd or out of place. It highlights the comic or nonsensical nature of misplaced objects or actions.",
+      "source_author": "Oral tradition / Classical sources",
+      "source_author_key": "mnemosyne.la.author.oral_tradition_classical_sources",
+      "source_dataset": "classical_proverbs",
+      "source_license": "public_domain",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Asinus in tegulis",
+        "Asinus sub tegulis",
+        "Asinus in tectis"
       ]
     },
     {
@@ -7690,6 +8852,45 @@
         "Auditur et altera pars",
         "Audiatur et altera pars",
         "Audire alteram partem"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:la_proverb_tradition_auribus_teneo_lupum_2c103020",
+      "canonical_reference": "Auribus teneo lupum",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.latin_proverbs_auribus_teneo_lupum",
+      "i18n_explanations": {
+        "ar": "استعارة لموقف خطير أو لا مفر منه، حيث قد يؤدي أي تصرف إلى ضرر. تأتي من خرافة رجل يمسك ذئبًا لكنه لا يستطيع تركه دون أن يهاجمه.",
+        "de": "Metapher für eine gefährliche oder ausweglose Situation, in der jede Handlung Schaden verursachen kann. Stammt aus einer Fabel, in der ein Mann einen Wolf fängt, ihn aber nicht loslassen kann, ohne angegriffen zu werden.",
+        "en": "A metaphor for being in a dangerous or inescapable situation where any action could lead to harm. The phrase originates from a fable where a man catches a wolf but cannot let go without being attacked.",
+        "es": "Metáfora de una situación peligrosa o sin salida en la que cualquier acción puede causar daño. Proviene de una fábula en la que un hombre atrapa un lobo pero no puede soltarlo sin ser atacado.",
+        "fr": "Métaphore d'une situation dangereuse ou sans issue où toute action peut causer du tort. Provient d'une fable où un homme attrape un loup mais ne peut le lâcher sans être attaqué.",
+        "he": "מטאפורה למצב מסוכן או ללא מוצא שבו כל פעולה עלולה לגרום נזק. מקורה במשל על אדם שתפס זאב אך לא יכול לשחררו בלי להיות מותקף.",
+        "it": "Metafora di una situazione pericolosa o senza via d'uscita in cui qualsiasi azione può causare danno. Deriva da una favola in cui un uomo afferra un lupo ma non può lasciarlo senza essere attaccato.",
+        "ja": "どんな行動も害を招く可能性のある危険な状況や逃れられない状況の比喩。男がオオカミを捕まえるが、手放すと襲われるという寓話に由来する。",
+        "pt": "Metáfora de uma situação perigosa ou sem saída em que qualquer ação pode causar dano. Vem de uma fábula em que um homem pega um lobo, mas não pode soltá-lo sem ser atacado.",
+        "ru": "Метафора безвыходной или опасной ситуации, где любое действие может причинить вред. Происходит из басни, где человек ловит волка, но не может отпустить, не рискуя быть атакованным.",
+        "zh": "比喻陷入危险或无法摆脱的境地，任何行动都可能导致伤害。源自一则寓言：一个人抓住一只狼，但若松手就会被攻击。"
+      },
+      "id": "la_proverb_tradition_auribus_teneo_lupum_2c103020",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The proverb 'auribus teneo lupum' is a well-attested Latin expression from fable tradition, correctly explained.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A metaphor for being in a dangerous or inescapable situation where any action could lead to harm. The phrase originates from a fable where a man catches a wolf but cannot let go without being attacked.",
+      "source_author": "Oral tradition",
+      "source_author_key": "mnemosyne.la.author.oral_tradition",
+      "source_dataset": "latin_proverbs",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "auribus teneo lupum",
+        "auribus tenere lupum",
+        "tenere lupum auribus",
+        "I hold a wolf by the ears"
       ]
     },
     {
@@ -7770,6 +8971,44 @@
       ]
     },
     {
+      "canonical_form": "la:proverb:la_proverb_tradition_barba_non_facit_philosophum_310a577b",
+      "canonical_reference": "Barba non facit philosophum",
+      "confidence": 0.78,
+      "explanation_key": "mnemosyne.la.explanation.latin_proverbs_phrases_barba_non_facit_philosophum",
+      "i18n_explanations": {
+        "ar": "مثل يعني 'اللحية لا تصنع الفيلسوف'، مؤكداً أن الحكمة والفضيلة لا تُقاس بالمظهر الخارجي. يعكس المثل المثل العليا الرواقية والكلبية.",
+        "de": "Ein Sprichwort mit der Bedeutung 'ein Bart macht keinen Philosophen', das betont, dass Weisheit und Tugend nicht am äußeren Erscheinungsbild gemessen werden. Es spiegelt stoische und kynische Ideale wider.",
+        "en": "A proverb meaning 'a beard does not make a philosopher,' emphasizing that wisdom and virtue are not determined by outward appearance. It reflects Stoic and Cynic ideals.",
+        "es": "Un proverbio que significa 'la barba no hace al filósofo', destacando que la sabiduría y la virtud no se determinan por la apariencia externa. Refleja ideales estoicos y cínicos.",
+        "fr": "Un proverbe signifiant 'la barbe ne fait pas le philosophe', soulignant que la sagesse et la vertu ne se mesurent pas à l'apparence extérieure. Il reflète les idéaux stoïciens et cyniques.",
+        "he": "פתגם שפירושו 'זקן אינו הופך לפילוסוף', המדגיש כי חוכמה ומידות טובות אינן נקבעות על פי מראה חיצוני. משקף את האידיאלים הסטואיים והציניים.",
+        "it": "Un proverbio che significa 'la barba non fa il filosofo', sottolineando che la saggezza e la virtù non si determinano dall'aspetto esteriore. Riflette ideali stoici e cinici.",
+        "ja": "ことわざで「髭が哲学者を作るのではない」という意味。知恵や徳は外見で決まるものではないことを強調し、ストア派やキニク派の理想を反映している。",
+        "pt": "Um provérbio que significa 'a barba não faz o filósofo', destacando que a sabedoria e a virtude não são determinadas pela aparência externa. Reflete ideais estoicos e cínicos.",
+        "ru": "Поговорка, означающая 'борода не делает философа', подчеркивающая, что мудрость и добродетель не определяются внешним видом. Отражает стоические и кинические идеалы.",
+        "zh": "一句谚语，意为“胡子不代表哲学家”，强调智慧和美德不由外表决定。反映了斯多葛派和犬儒派的理念。"
+      },
+      "id": "la_proverb_tradition_barba_non_facit_philosophum_310a577b",
+      "language": "la",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-attested proverb; explanation and confidence appropriate.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A proverb meaning 'a beard does not make a philosopher,' emphasizing that wisdom and virtue are not determined by outward appearance. It reflects Stoic and Cynic ideals.",
+      "source_author": "Anonymous (proverbial tradition)",
+      "source_author_key": "mnemosyne.la.author.anonymous_proverbial_tradition",
+      "source_dataset": "latin_proverbs_phrases",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Barba non facit philosophum",
+        "Barba philosophum non facit",
+        "Non barba philosophum facit"
+      ]
+    },
+    {
       "canonical_form": "la:proverb:la_proverb_tradition_bis_dat_qui_cito_dat_90aeafe3",
       "canonical_reference": "Bis dat qui cito dat",
       "confidence": 0.85,
@@ -7806,6 +9045,82 @@
         "Qui cito dat, bis dat",
         "He who gives quickly gives twice",
         "Giving quickly is giving twice"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:la_proverb_tradition_canis_in_praesepi_8558cf6f",
+      "canonical_reference": "Canis in praesepi",
+      "confidence": 0.87,
+      "explanation_key": "mnemosyne.la.explanation.latin_proverbs_aesop_canis_in_praesepi",
+      "i18n_explanations": {
+        "ar": "مثل لاتيني يعني: «كلب في المعلف». يصف شخصًا يمنع الآخرين من الاستمتاع بشيء لا يستطيع هو استخدامه، غالبًا بدافع الحقد.",
+        "de": "Ein lateinisches Sprichwort, das 'Ein Hund im Futtertrog' bedeutet. Es beschreibt jemanden, der anderen etwas vorenthält, das er selbst nicht nutzen kann, oft aus Boshaftigkeit.",
+        "en": "A Latin proverb meaning 'A dog in the manger.' It describes someone who prevents others from enjoying something they themselves cannot use, often out of spite.",
+        "es": "Refrán latino que significa 'Un perro en el pesebre'. Describe a alguien que impide a otros disfrutar de algo que él mismo no puede usar, a menudo por despecho.",
+        "fr": "Proverbe latin signifiant 'Un chien dans la crèche'. Il décrit une personne qui empêche les autres de profiter de quelque chose qu'elle ne peut pas utiliser elle-même, souvent par méchanceté.",
+        "he": "פתגם לטיני שפירושו: 'כלב בערוגת המספוא'. מתאר מישהו שמונע מאחרים ליהנות ממשהו שהוא עצמו אינו יכול להשתמש בו, לרוב מתוך נקמנות.",
+        "it": "Un proverbio latino che significa 'Un cane nella mangiatoia'. Descrive qualcuno che impedisce agli altri di godere di qualcosa che lui stesso non può usare, spesso per dispetto.",
+        "ja": "ラテン語の格言で、「飼葉桶の中の犬」を意味する。自分では利用できないものを他人が享受するのを妨げる人のことを指す。しばしば悪意から。",
+        "pt": "Um provérbio latino que significa 'Um cachorro na manjedoura'. Descreve alguém que impede os outros de desfrutar de algo que ele mesmo não pode usar, muitas vezes por despeito.",
+        "ru": "Латинская пословица, означающая 'Собака на сене'. Описывает того, кто мешает другим наслаждаться тем, чем сам не может воспользоваться, часто из злобы.",
+        "zh": "拉丁语谚语，意为“牛槽里的狗”。形容某人不让别人享用自己无法使用的东西，通常出于恶意。"
+      },
+      "id": "la_proverb_tradition_canis_in_praesepi_8558cf6f",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-known proverb from Aesop's fables, correctly identified.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "A Latin proverb meaning 'A dog in the manger.' It describes someone who prevents others from enjoying something they themselves cannot use, often out of spite.",
+      "source_author": "Tradition (attributed to Aesop's fables)",
+      "source_author_key": "mnemosyne.la.author.tradition_attributed_to_aesop_s_fables",
+      "source_dataset": "latin_proverbs_aesop",
+      "source_license": "public_domain",
+      "source_url": "https://en.wikisource.org/wiki/Aesop%27s_Fables_(Perry_Index)",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Canis in praesepi",
+        "Canis in praesepi esuriens",
+        "Canis in praesepi, bos non comedet"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:la_proverb_tradition_caveat_emptor_0dafe69d",
+      "canonical_reference": "Caveat emptor",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.latin_proverbs_caveat_emptor",
+      "i18n_explanations": {
+        "ar": "مبدأ يحذر المشتري من الحذر والتحقق من جودة أو أصالة السلع قبل الشراء. يسلط الضوء على مسؤولية المشتري في المعاملات التجارية.",
+        "de": "Ein Grundsatz, der Käufer warnt, vorsichtig zu sein und die Qualität oder Echtheit von Waren vor dem Kauf zu überprüfen. Er unterstreicht die Verantwortung des Käufers bei Handelsgeschäften.",
+        "en": "A principle warning buyers to be cautious and verify the quality or authenticity of goods before purchase. It underscores the responsibility of the buyer in commercial transactions.",
+        "es": "Principio que advierte a los compradores ser cautelosos y verificar la calidad o autenticidad de los bienes antes de adquirirlos. Subraya la responsabilidad del comprador en transacciones comerciales.",
+        "fr": "Un principe avertissant les acheteurs d'être prudents et de vérifier la qualité ou l'authenticité des biens avant un achat. Il souligne la responsabilité de l'acheteur dans les transactions commerciales.",
+        "he": "עיקרון המזהיר קונים להיות זהירים ולבדוק את איכות או אותנטיות הסחורה לפני רכישה. מדגיש את אחריות הקונה בעסקאות מסחריות.",
+        "it": "Un principio che avverte gli acquirenti di essere cauti e verificare la qualità o l'autenticità dei beni prima dell'acquisto. Sottolinea la responsabilità dell'acquirente nelle transazioni commerciali.",
+        "ja": "買い手に対し、購入前に商品の品質や真贋を慎重に確認するよう警告する原則。商取引における買い手の責任を強調する。",
+        "pt": "Um princípio que alerta os compradores para serem cautelosos e verificarem a qualidade ou autenticidade dos bens antes da compra. Ressalta a responsabilidade do comprador em transações comerciais.",
+        "ru": "Принцип, предупреждающий покупателей быть осторожными и проверять качество или подлинность товара перед покупкой. Подчеркивает ответственность покупателя в коммерческих сделках.",
+        "zh": "提醒买方在购买前谨慎并核实商品质量或真伪的原则。强调买方在商业交易中的责任。"
+      },
+      "id": "la_proverb_tradition_caveat_emptor_0dafe69d",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Commonly known proverb with no specific author; attribution to oral tradition is correct.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A principle warning buyers to be cautious and verify the quality or authenticity of goods before purchase. It underscores the responsibility of the buyer in commercial transactions.",
+      "source_author": "Oral tradition",
+      "source_author_key": "mnemosyne.la.author.oral_tradition",
+      "source_dataset": "latin_proverbs",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "caveat emptor",
+        "caveat emptor est",
+        "caveat emptor (let the buyer beware)"
       ]
     },
     {
@@ -7957,6 +9272,82 @@
         "Cum grano salis",
         "Cum grano salis accipere",
         "Cum grano salis accipienda est"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:la_proverb_tradition_damnant_quod_non_intelligunt_20a2a659",
+      "canonical_reference": "Damnant quod non intelligunt",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.latin_proverbs_damnant_quod_non_intelligunt",
+      "i18n_explanations": {
+        "ar": "مثل يقول 'يدينون ما لا يفهمون'. يعكس الميل البشري إلى رفض أو انتقاد الأفكار أو المفاهيم غير المفهومة.",
+        "de": "Ein Sprichwort mit der Bedeutung 'Sie verurteilen, was sie nicht verstehen'. Es spiegelt die menschliche Tendenz wider, Unbekanntes abzulehnen oder zu kritisieren.",
+        "en": "A proverb meaning 'They condemn what they do not understand.' It reflects a common human tendency to reject or criticize unfamiliar ideas or concepts.",
+        "es": "Refrán que significa 'Condenan lo que no entienden'. Refleja la tendencia humana a rechazar o criticar ideas o conceptos desconocidos.",
+        "fr": "Proverbe signifiant 'Ils condamnent ce qu'ils ne comprennent pas'. Il reflète la tendance humaine à rejeter ou critiquer ce qui est inconnu.",
+        "he": "פתגם שפירושו 'הם מגנים מה שלא מבינים'. משקף את הנטייה האנושית לדחות או לבקר רעיונות או מושגים לא מוכרים.",
+        "it": "Un proverbio che significa 'Condannano ciò che non capiscono'. Riflette la tendenza umana a respingere o criticare idee o concetti sconosciuti.",
+        "ja": "「理解できないものを非難する」という格言。未知の概念や考えを拒絶したり批判したりする人間の傾向を表す。",
+        "pt": "Um provérbio que significa 'Condenam o que não entendem'. Reflete a tendência humana de rejeitar ou criticar ideias ou conceitos desconhecidos.",
+        "ru": "Поговорка, означающая 'Они осуждают то, чего не понимают'. Отражает человеческую склонность отвергать или критиковать неизвестные идеи.",
+        "zh": "一句谚语，意为“他们谴责自己不理解的事物”。反映了人类拒绝或批评陌生想法的常见倾向。"
+      },
+      "id": "la_proverb_tradition_damnant_quod_non_intelligunt_20a2a659",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-known proverb with accurate explanation and reasonable confidence.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A proverb meaning 'They condemn what they do not understand.' It reflects a common human tendency to reject or criticize unfamiliar ideas or concepts.",
+      "source_author": "Oral tradition",
+      "source_author_key": "mnemosyne.la.author.oral_tradition",
+      "source_dataset": "latin_proverbs",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Damnant quod non intelligunt",
+        "Damnant, quod non intelligunt",
+        "Damnant, quae non intellegunt"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:la_proverb_tradition_de_gustibus_non_est_disputandum_ef45d65b",
+      "canonical_reference": "De gustibus non est disputandum",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.classical_proverbs_de_gustibus_non_est_disputandum",
+      "i18n_explanations": {
+        "ar": "مثل لاتيني يعني «في مسائل الذوق، لا مجال للنقاش». يؤكد على ذاتية التفضيلات الشخصية وعبثية الجدال بشأنها.",
+        "de": "Ein lateinisches Sprichwort mit der Bedeutung 'Über Geschmack lässt sich nicht streiten.' Es betont die Subjektivität persönlicher Vorlieben und die Sinnlosigkeit, darüber zu diskutieren.",
+        "en": "A Latin proverb meaning 'In matters of taste, there can be no dispute.' It emphasizes the subjectivity of personal preferences and the futility of arguing over them.",
+        "es": "Un proverbio latino que significa 'En cuestiones de gusto, no hay lugar para la discusión.' Destaca la subjetividad de las preferencias personales y la inutilidad de discutir sobre ellas.",
+        "fr": "Un proverbe latin signifiant 'En matière de goût, il n'y a pas lieu de discuter.' Il souligne la subjectivité des préférences personnelles et l'inutilité d'en débattre.",
+        "he": "פתגם לטיני שפירושו «על הטעם אין להתווכח». מדגיש את הסובייקטיביות של העדפות אישיות ואת חוסר התועלת בוויכוח עליהן.",
+        "it": "Un proverbio latino che significa 'Sui gusti non si discute.' Sottolinea la soggettività delle preferenze personali e l'inutilità di discuterne.",
+        "ja": "ラテン語の格言で「好みについて議論は無意味」という意味。個人の嗜好の主観性と、それについて議論する無駄を強調する。",
+        "pt": "Um provérbio latino que significa 'Sobre gostos não se discute.' Enfatiza a subjetividade das preferências pessoais e a futilidade de discuti-las.",
+        "ru": "Латинская пословица, означающая 'О вкусах не спорят.' Подчеркивает субъективность личных предпочтений и бесполезность споров о них.",
+        "zh": "拉丁谚语，意为“趣味无可争辩”。强调个人偏好的主观性及争论其是非的无意义。"
+      },
+      "id": "la_proverb_tradition_de_gustibus_non_est_disputandum_ef45d65b",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-known Latin proverb with accurate explanation and surface patterns.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A Latin proverb meaning 'In matters of taste, there can be no dispute.' It emphasizes the subjectivity of personal preferences and the futility of arguing over them.",
+      "source_author": "Classical tradition",
+      "source_author_key": "mnemosyne.la.author.classical_tradition",
+      "source_dataset": "classical_proverbs",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "De gustibus non est disputandum",
+        "De gustibus non disputandum",
+        "De gustibus nihil est disputandum"
       ]
     },
     {
@@ -8114,6 +9505,44 @@
       ]
     },
     {
+      "canonical_form": "la:proverb:la_proverb_tradition_dura_lex_sed_lex_9e3538bb",
+      "canonical_reference": "Dura lex sed lex",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.latin_legal_maxims_dura_lex_sed_lex",
+      "i18n_explanations": {
+        "ar": "مبدأ قانوني يعني 'القانون قاسٍ، لكنه القانون'. يؤكد المبدأ القائل بأن القوانين يجب طاعتها بغض النظر عن قسوتها.",
+        "de": "Ein juristischer Grundsatz mit der Bedeutung 'das Gesetz ist hart, aber es ist das Gesetz'. Er betont, dass Gesetze befolgt werden müssen, unabhängig von ihrer Strenge.",
+        "en": "A legal maxim meaning 'the law is harsh, but it is the law.' It emphasizes the principle that laws must be obeyed regardless of their severity.",
+        "es": "Un adagio legal que significa 'la ley es dura, pero es la ley'. Subraya el principio de que las leyes deben cumplirse, independientemente de su severidad.",
+        "fr": "Un adage juridique signifiant 'la loi est dure, mais c'est la loi'. Il souligne le principe selon lequel les lois doivent être respectées, quelle que soit leur sévérité.",
+        "he": "פתגם משפטי שמשמעו 'החוק קשה, אך הוא החוק'. מדגיש את העיקרון שחוקים חייבים להישמע ללא קשר לחומרתם.",
+        "it": "Un adagio giuridico che significa 'la legge è dura, ma è la legge'. Sottolinea il principio che le leggi devono essere rispettate, indipendentemente dalla loro severità.",
+        "ja": "「法は厳しいが、それが法である」を意味する法諺。法はその厳しさにかかわらず、従わなければならない原則を強調する。",
+        "pt": "Um adágio jurídico que significa 'a lei é dura, mas é a lei'. Enfatiza o princípio de que as leis devem ser obedecidas, independentemente de sua severidade.",
+        "ru": "Юридический принцип, означающий 'закон суров, но это закон'. Подчеркивает, что законы должны соблюдаться, независимо от их строгости.",
+        "zh": "一个法律格言，意为‘法律严酷，但它就是法律’。强调无论法律多么严厉，都必须遵守。"
+      },
+      "id": "la_proverb_tradition_dura_lex_sed_lex_9e3538bb",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-established legal maxim; oral tradition attribution is appropriate.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A legal maxim meaning 'the law is harsh, but it is the law.' It emphasizes the principle that laws must be obeyed regardless of their severity.",
+      "source_author": "Oral tradition",
+      "source_author_key": "mnemosyne.la.author.oral_tradition",
+      "source_dataset": "latin_legal_maxims",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "dura lex sed lex",
+        "dura lex, sed lex",
+        "dura lex, sed lex est"
+      ]
+    },
+    {
       "canonical_form": "la:proverb:la_proverb_tradition_errare_humanum_est_e69a1b2a",
       "canonical_reference": "Errare humanum est",
       "confidence": 0.85,
@@ -8150,6 +9579,49 @@
         "Errare humanum est.",
         "To err is human",
         "Errare humanum est, perseverare autem diabolicum"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:la_proverb_tradition_facta_non_verba_d600c3aa",
+      "canonical_reference": "Facta non verba",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.latin_proverbs_facta_non_verba",
+      "i18n_explanations": {
+        "ar": "مثل لاتيني يعني 'أفعال لا أقوال'. يؤكد على أهمية الفعل على الكلام الفارغ، ويعكس الأخلاق العملية الرومانية الموجودة في الأدب الكلاسيكي والنصوص الوسيطة والنهضة.",
+        "de": "Ein lateinisches Sprichwort mit der Bedeutung 'Taten, nicht Worte'. Es betont die Bedeutung von Handeln gegenüber bloßen Worten und spiegelt die praktische römische Ethik wider, die sich in der klassischen Literatur sowie in mittelalterlichen und Renaissance-Texten findet.",
+        "en": "A Latin proverb meaning 'Deeds, not words.' It emphasizes the importance of action over mere talk, reflecting a practical Roman ethos found in both classical literature and later medieval and Renaissance texts.",
+        "es": "Un proverbio latino que significa 'Hechos, no palabras'. Destaca la importancia de la acción sobre el mero discurso, reflejando la ética práctica romana presente en la literatura clásica y en textos medievales y renacentistas.",
+        "fr": "Un proverbe latin signifiant 'Des actes, non des mots'. Il souligne l'importance de l'action plutôt que du simple discours, reflétant l'éthique pratique romaine présente dans la littérature classique ainsi que dans les textes médiévaux et de la Renaissance.",
+        "he": "פתגם לטיני שפירושו 'מעשים, לא מילים'. מדגיש את חשיבות הפעולה על פני דיבורים בלבד, משקף את האתוס הרומי המעשי שנמצא בספרות הקלאסית ובטקסטים מימי הביניים והרנסאנס.",
+        "it": "Un motto latino che significa 'Fatti, non parole'. Sottolinea l'importanza dell'azione rispetto al semplice parlare, riflettendo l'etica pratica romana presente nella letteratura classica e nei testi medievali e rinascimentali.",
+        "ja": "ラテン語の格言で、「言葉ではなく行いを」という意味。単なる話よりも行動の重要性を強調し、古典文学や中世・ルネサンス期のテキストに見られる実践的なローマの倫理観を反映しています。",
+        "pt": "Um provérbio latino que significa 'Fatos, não palavras'. Enfatiza a importância da ação em vez de meras palavras, refletindo a ética prática romana encontrada na literatura clássica e em textos medievais e renascentistas.",
+        "ru": "Латинская пословица 'Дела, а не слова'. Подчеркивает важность действия перед пустыми разговорами, отражая прагматичную римскую этику, встречающуюся в классической литературе и текстах Средневековья и эпохи Возрождения.",
+        "zh": "拉丁谚语，意为“行动而非言语”。强调行动重于空谈，体现了罗马实用主义精神，在古典文学以及中世纪和文艺复兴时期的文本中均有体现。"
+      },
+      "id": "la_proverb_tradition_facta_non_verba_d600c3aa",
+      "language": "la",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-known Latin proverb with multiple classical attestations; attribution to oral tradition is accurate.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A Latin proverb meaning 'Deeds, not words.' It emphasizes the importance of action over mere talk, reflecting a practical Roman ethos found in both classical literature and later medieval and Renaissance texts.",
+      "source_author": "Oral tradition",
+      "source_author_key": "mnemosyne.la.author.oral_tradition",
+      "source_dataset": "latin_proverbs",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Facta non verba",
+        "Facta, non verba",
+        "Facta, non verba!",
+        "Facta potius quam verba",
+        "Verba movent, facta trahunt"
+      ],
+      "variants": [
+        "Verba movent, facta trahunt"
       ]
     },
     {
@@ -8328,6 +9800,44 @@
       ]
     },
     {
+      "canonical_form": "la:proverb:la_proverb_tradition_lapsus_calami_e9dbe699",
+      "canonical_reference": "Lapsus calami",
+      "confidence": 0.82,
+      "explanation_key": "mnemosyne.la.explanation.latin_terms_lapsus_calami",
+      "i18n_explanations": {
+        "ar": "مصطلح يشير إلى خطأ غير مقصود في الكتابة، مثل خطأ مطبعي أو زلة قلم، يُستخدم غالبًا في السياقات الأكاديمية أو التحريرية.",
+        "de": "Ein Begriff für einen unbeabsichtigten Fehler beim Schreiben, wie einen Tippfehler oder einen Federstrich, der oft in akademischen oder redaktionellen Kontexten verwendet wird.",
+        "en": "A term referring to an unintentional error in writing, such as a typo or slip of the pen, often used in academic or editorial contexts.",
+        "es": "Término que se refiere a un error involuntario en la escritura, como una errata o un desliz de la pluma, usado frecuentemente en contextos académicos o editoriales.",
+        "fr": "Un terme désignant une erreur involontaire dans l'écriture, comme une coquille ou un lapsus calami, souvent utilisé dans des contextes académiques ou éditoriaux.",
+        "he": "מונח המתייחס לטעות כתיבה בלתי מכוונת, כגון טעות הקלדה או שגיאת עט, הנפוץ בהקשרים אקדמיים או עריכתיים.",
+        "it": "Un termine che indica un errore involontario nella scrittura, come un refuso o un lapsus calami, spesso usato in contesti accademici o editoriali.",
+        "ja": "筆記やタイプミスなどの書き間違いを指す用語。学術的または編集の文脈でしばしば用いられる。",
+        "pt": "Termo que se refere a um erro involuntário na escrita, como um erro de digitação ou um lapso de caneta, frequentemente usado em contextos acadêmicos ou editoriais.",
+        "ru": "Термин, обозначающий непреднамеренную ошибку в письме, например опечатку или описку, часто используемый в академических или редакторских контекстах.",
+        "zh": "指书写中的无意错误，如笔误或打字错误，常用于学术或编辑语境。"
+      },
+      "id": "la_proverb_tradition_lapsus_calami_e9dbe699",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Common term with no specific author; oral tradition attribution is acceptable.",
+      "reference_type": "proverb_tradition",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A term referring to an unintentional error in writing, such as a typo or slip of the pen, often used in academic or editorial contexts.",
+      "source_author": "Oral tradition",
+      "source_author_key": "mnemosyne.la.author.oral_tradition",
+      "source_dataset": "latin_terms",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "lapsus calami",
+        "lapsus calami est",
+        "lapsus calami (slip of the pen)"
+      ]
+    },
+    {
       "canonical_form": "la:proverb:la_proverb_tradition_mea_culpa_73f01c90",
       "canonical_reference": "Mea culpa",
       "confidence": 0.85,
@@ -8397,6 +9907,82 @@
       "source_work_key": "mnemosyne.la.work.various",
       "surface_patterns": [
         "Memento vivere"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:la_proverb_tradition_nil_desperandum_0ed10d3e",
+      "canonical_reference": "Nil desperandum",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.la.explanation.classical_proverbs_nil_desperandum",
+      "i18n_explanations": {
+        "ar": "عبارة تعني 'لا تيأس' أو 'لا تستسلم أبدًا'، تُستخدم غالبًا كشعار للصمود. تعكس فلسفة الرواقية في التركيز على المرونة.",
+        "de": "Ein Sprichwort mit der Bedeutung 'Verzweifle nicht' oder 'Gib niemals auf,' oft als Motto der Ausdauer verwendet. Es spiegelt die stoische Betonung von Widerstandsfähigkeit wider.",
+        "en": "A phrase meaning 'Do not despair' or 'Never give up,' often used as a motto of perseverance. It reflects Stoic philosophy's emphasis on resilience.",
+        "es": "Frase que significa 'No desesperes' o 'Nunca te rindas,' usada como lema de perseverancia. Refleja el énfasis estoico en la resiliencia.",
+        "fr": "Une expression signifiant 'Ne désespérez pas' ou 'Ne renoncez jamais,' souvent utilisée comme devise de persévérance. Elle reflète l'accent mis par le stoïcisme sur la résilience.",
+        "he": "ביטוי שפירושו 'אל תתייאש' או 'לעולם אל תוותר', המשמש לעיתים קרובות כמוטו של התמדה. משקף את הפילוסופיה הסטואית בדגש על חוסן נפשי.",
+        "it": "Un'espressione che significa 'Non disperare' o 'Non arrenderti mai,' spesso usata come motto di perseveranza. Riflette l'enfasi stoica sulla resilienza.",
+        "ja": "「絶望するな」または「決して諦めるな」という意味の言葉で、忍耐のモットーとして使われる。ストア哲学の強靭さへの重視を反映している。",
+        "pt": "Uma expressão que significa 'Não desanime' ou 'Nunca desista,' frequentemente usada como lema de perseverança. Reflete a ênfase estoica na resiliência.",
+        "ru": "Выражение, означающее 'Не отчаивайся' или 'Никогда не сдавайся,' часто используемое как девиз стойкости. Отражает стоическое учение о жизнестойкости.",
+        "zh": "一句拉丁语格言，意为‘不要绝望’或‘永不放弃’，常作为坚韧不拔的座右铭。体现了斯多葛哲学对韧性的强调。"
+      },
+      "id": "la_proverb_tradition_nil_desperandum_0ed10d3e",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase is classical Latin, attested in Horace and other sources; surface patterns and explanation are accurate.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A phrase meaning 'Do not despair' or 'Never give up,' often used as a motto of perseverance. It reflects Stoic philosophy's emphasis on resilience.",
+      "source_author": "Oral tradition / Classical Latin",
+      "source_author_key": "mnemosyne.la.author.oral_tradition_classical_latin",
+      "source_dataset": "classical_proverbs",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Nil desperandum",
+        "Noli desperare",
+        "Nihil desperandum"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:la_proverb_tradition_si_vis_pacem_para_bellum_c26d2376",
+      "canonical_reference": "Si vis pacem, para bellum",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.vegetius_military_si_vis_pacem_para_bellum",
+      "i18n_explanations": {
+        "ar": "مثل لاتيني يعني 'إن أردت السلام، استعد للحرب'، يُنسب غالبًا إلى استراتيجيين عسكريين مثل فيجيتيوس، مؤكدًا على الردع.",
+        "de": "Ein lateinisches Sprichwort mit der Bedeutung 'Wenn du Frieden willst, bereite dich auf den Krieg vor,' oft dem Militärstrategen Vegetius zugeschrieben, betont Abschreckung.",
+        "en": "A Latin adage meaning 'If you want peace, prepare for war,' often attributed to military strategists like Vegetius, emphasizing deterrence.",
+        "es": "Un adagio latino que significa 'Si quieres la paz, prepárate para la guerra,' atribuido a estrategas militares como Vegecio, destacando la disuasión.",
+        "fr": "Un adage latin signifiant 'Si tu veux la paix, prépare la guerre,' souvent attribué à des stratèges militaires comme Végèce, soulignant la dissuasion.",
+        "he": "פתגם לטיני שפירושו 'אם תרצה שלום, הכן מלחמה', המיוחס לעיתים לאסטרטגים צבאיים כמו וגטיוס, ומדגיש הרתעה.",
+        "it": "Un detto latino che significa 'Se vuoi la pace, preparati alla guerra,' attribuito a strategi militari come Vegezio, che sottolinea la deterrenza.",
+        "ja": "「平和を望むなら戦争に備えよ」という意味のラテン語の格言。ウェゲティウスのような軍事戦略家に帰せられ、抑止力を強調する。",
+        "pt": "Um provérbio latino que significa 'Se queres a paz, prepara-te para a guerra,' atribuído a estrategistas militares como Vegecio, enfatizando a dissuasão.",
+        "ru": "Латинская поговорка, означающая 'Если хочешь мира, готовься к войне,' часто приписываемая военным стратегам вроде Вегеция, подчеркивающая сдерживание.",
+        "zh": "一句拉丁语格言，意为‘若想和平，当备战’，常被归于韦格蒂乌斯等军事战略家，强调威慑的重要性。"
+      },
+      "id": "la_proverb_tradition_si_vis_pacem_para_bellum_c26d2376",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Vegetius, Epitoma Rei Militaris, with accurate surface patterns.",
+      "reference_type": "proverb_tradition",
+      "register": "classical",
+      "short_explanation": "A Latin adage meaning 'If you want peace, prepare for war,' often attributed to military strategists like Vegetius, emphasizing deterrence.",
+      "source_author": "Publius Flavius Vegetius Renatus",
+      "source_author_key": "mnemosyne.la.author.publius_flavius_vegetius_renatus",
+      "source_dataset": "vegetius_military",
+      "source_license": "public_domain",
+      "source_location": "Book III, Preface",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0120:text=Mil.:book=3:chapter=preface",
+      "source_work": "Epitoma Rei Militaris",
+      "source_work_key": "mnemosyne.la.work.epitoma_rei_militaris",
+      "surface_patterns": [
+        "Si vis pacem, para bellum",
+        "Si vis pacem, para bellum, si vis bellum, para pacem"
       ]
     },
     {
