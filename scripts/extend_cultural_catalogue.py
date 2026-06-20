@@ -585,6 +585,49 @@ def _parse_refused_names(output: str, candidates: list[str]) -> list[str]:
     return refused
 
 
+def _prefer_canonical_form(a: str, b: str) -> str:
+    """Two strings that are case/NFC-equivalent -- pick the more conventional
+    citation form: fewer uppercase letters wins (mid-sentence idiom/proverb
+    citation is normally all-lowercase except internal proper nouns; a
+    sentence-initial or over-capitalised duplicate has more uppercase
+    letters). Ties keep the first-seen form."""
+    a_upper = sum(1 for c in a if c.isupper())
+    b_upper = sum(1 for c in b if c.isupper())
+    return b if b_upper < a_upper else a
+
+
+def _merge_case_variants(approved: list[str]) -> list[str]:
+    """Two AI-generated entries sometimes share a canonical_reference that
+    differs only by capitalisation (e.g. 'Die Geschichte' / 'die geschichte').
+    promote_cultural_drafts.py's allowlist lookup is casefold-normalised, so
+    it treats these as an ambiguous duplicate and aborts the whole batch.
+    Keep one per casefold key."""
+    by_key: dict[str, str] = {}
+    for cr in approved:
+        key = unicodedata.normalize("NFC", cr).casefold()
+        by_key[key] = _prefer_canonical_form(by_key[key], cr) if key in by_key else cr
+    return list(by_key.values())
+
+
+def _dedupe_entries_by_canonical_reference(entries: list[dict]) -> list[dict]:
+    """Same casefold-collision problem as _merge_case_variants, but applied
+    to full draft entries before they're ever written to disk -- without
+    this, promote_cultural_drafts.py's draft lookup finds two rows matching
+    one allowlist name and refuses to guess which one was meant, even if
+    the allowlist itself only names it once."""
+    by_key: dict[str, dict] = {}
+    for e in entries:
+        key = unicodedata.normalize("NFC", e["canonical_reference"]).casefold()
+        if key not in by_key:
+            by_key[key] = e
+        else:
+            kept_cr = _prefer_canonical_form(
+                by_key[key]["canonical_reference"], e["canonical_reference"]
+            )
+            by_key[key] = e if kept_cr == e["canonical_reference"] else by_key[key]
+    return list(by_key.values())
+
+
 def auto_promote(
     draft_path: Path, seed_path: Path, approved: list[str],
     reviewed_by: str, promote_script: Path, max_retries: int = 10,
@@ -592,7 +635,7 @@ def auto_promote(
     """promote_cultural_drafts.py aborts the *entire* batch (writes nothing)
     if any single entry is refused — so retry with refused entries stripped
     until the batch is clean or nothing is left to promote."""
-    remaining = list(approved)
+    remaining = _merge_case_variants(list(dict.fromkeys(approved)))
     total_promoted = 0
     last_refused_count = 0
 
@@ -878,13 +921,16 @@ def run(
                     review=review_map.get(e["canonical_reference"]))
         for e in state["enriched"]
     ]
+    entries = _dedupe_entries_by_canonical_reference(entries)
+    kept_crs = {e["canonical_reference"] for e in entries}
     write_yaml(entries, output)
 
     # ---- Side files from review ------------------------------------------
     approved_crs: list[str] = []
     if do_review and review_map:
         approved_crs = list(dict.fromkeys(
-            r["canonical_reference"] for r in state["reviewed"] if r.get("verdict") == "approve"
+            r["canonical_reference"] for r in state["reviewed"]
+            if r.get("verdict") == "approve" and r["canonical_reference"] in kept_crs
         ))
         flagged = [e for e in entries if review_map.get(e["canonical_reference"], {}).get("verdict") == "flag"]
         rejected = [{"canonical_reference": r["canonical_reference"], "reason": r.get("reason", "")}

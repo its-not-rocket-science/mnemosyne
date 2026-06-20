@@ -1162,6 +1162,43 @@
       ]
     },
     {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_ecce_homo_768afa25",
+      "canonical_reference": "Ecce homo",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.la_vulgata_scriptural_ecce_homo",
+      "i18n_explanations": {
+        "ar": "باللاتينية تعني 'هذا هو الإنسان'، وهي الكلمات التي قالها بيلاطس البنطي عندما قدم يسوع المسيح للجماهير قبل صلبه، وأصبحت رمزًا للمعاناة والتضحية البشرية.",
+        "de": "Lateinisch für 'Siehe, der Mensch', diese Worte sprach Pontius Pilatus, als er Jesus Christus vor der Kreuzigung der Menge präsentierte. Sie sind zu einem Symbol für menschliches Leiden und Opfer geworden.",
+        "en": "Latin for 'Behold the man,' these words were spoken by Pontius Pilate when presenting Jesus Christ to the crowd before his crucifixion. It has become a symbol of human suffering and sacrifice.",
+        "es": "En latín 'He aquí el hombre', palabras pronunciadas por Poncio Pilato al presentar a Jesucristo a la multitud antes de su crucifixión. Se ha convertido en símbolo del sufrimiento y sacrificio humano.",
+        "fr": "En latin 'Voici l'homme', ces mots ont été prononcés par Ponce Pilate en présentant Jésus-Christ à la foule avant sa crucifixion. Ils sont devenus un symbole de la souffrance et du sacrifice humains.",
+        "he": "בלטינית 'הנה האדם', מילים שאמר פונטיוס פילטוס כאשר הציג את ישו בפני ההמון לפני צליבתו. הפכו לסמל לסבל וקורבן אנושי.",
+        "it": "In latino 'Ecco l'uomo', queste parole furono pronunciate da Ponzio Pilato presentando Gesù Cristo alla folla prima della crocifissione. Sono diventate un simbolo di sofferenza e sacrificio umano.",
+        "ja": "ラテン語で「この人を見よ」という意味で、ポンテオ・ピラトがイエス・キリストを群衆に示した際の言葉。人間の苦しみと犠牲の象徴となった。",
+        "pt": "Em latim 'Eis o homem', essas palavras foram ditas por Pôncio Pilatos ao apresentar Jesus Cristo à multidão antes de sua crucificação. Tornou-se um símbolo do sofrimento e sacrifício humano.",
+        "ru": "На латыни означает 'Се человек', эти слова произнес Понтий Пилат, представляя Иисуса Христа толпе перед распятием. Они стали символом человеческого страдания и жертвенности.",
+        "zh": "拉丁语意为“看这个人”，这是本丢·彼拉多在耶稣被钉十字架前向众人展示他时说的话。现已成为人类苦难与牺牲的象征。"
+      },
+      "id": "la_classical_or_scriptural_allusion_ecce_homo_768afa25",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate scriptural allusion with verifiable source in the Vulgate and correct surface patterns.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Latin for 'Behold the man,' these words were spoken by Pontius Pilate when presenting Jesus Christ to the crowd before his crucifixion. It has become a symbol of human suffering and sacrifice.",
+      "source_author": "Hieronymus (Saint Jerome)",
+      "source_author_key": "mnemosyne.la.author.hieronymus_saint_jerome",
+      "source_dataset": "la_vulgata_scriptural",
+      "source_license": "public_domain",
+      "source_location": "Ioannes 19:5",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0060:book=John:chapter=19:verse=5",
+      "source_work": "Vulgata",
+      "source_work_key": "mnemosyne.la.work.vulgata",
+      "surface_patterns": [
+        "Ecce homo"
+      ]
+    },
+    {
       "canonical_form": "la:classical:la_classical_or_scriptural_allusion_ex_cathedra_056f8121",
       "canonical_reference": "Ex cathedra",
       "confidence": 0.9,
@@ -1223,6 +1260,81 @@
         "Ex nihilo nihil fit",
         "Ex nihilo nihil fit.",
         "Ex nihilo nihil fit!"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_felix_culpa_8a84e5dd",
+      "canonical_reference": "Felix culpa",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.la.explanation.la_liturgical_phrases_felix_culpa",
+      "i18n_explanations": {
+        "ar": "باللاتينية تعني 'الذنب السعيد' أو 'الذنب المبارك'، وتشير إلى سقوط الإنسان (خطيئة آدم وحواء)، الذي استلزم فداء المسيح، ويُنظر إليه كحدث سعيد في اللاهوت المسيحي.",
+        "de": "Lateinisch für 'glückliche Schuld' oder 'gesegnete Schuld', bezieht sich auf den Sündenfall (die Sünde von Adam und Eva), der die Erlösung durch Christus notwendig machte, was in der christlichen Theologie als glückliches Ereignis angesehen wird.",
+        "en": "Latin for 'Happy fault' or 'Blessed fault,' referring to the Fall of Man (Adam and Eve's sin), which necessitated Christ's redemption, seen as a fortunate event in Christian theology.",
+        "es": "En latín 'feliz culpa' o 'culpa bendita', se refiere al Pecado Original (el pecado de Adán y Eva), que hizo necesaria la redención de Cristo, vista como un evento afortunado en la teología cristiana.",
+        "fr": "En latin 'faute heureuse' ou 'faute bénie', se référant à la Chute de l'Homme (le péché d'Adam et Ève), qui a rendu nécessaire la rédemption par le Christ, considérée comme un événement heureux dans la théologie chrétienne.",
+        "he": "בלטינית 'אשמה מאושרת' או 'אשמה מבורכת', מתייחסת לנפילת האדם (חטאם של אדם וחווה), שהצריכה את גאולתו של ישו, הנחשבת לאירוע מבורך בתאולוגיה הנוצרית.",
+        "it": "In latino 'colpa felice' o 'colpa benedetta', si riferisce alla Caduta dell'Uomo (il peccato di Adamo ed Eva), che rese necessaria la redenzione di Cristo, vista come un evento fortunato nella teologia cristiana.",
+        "ja": "ラテン語で「幸福な過ち」または「祝福された過ち」を意味し、アダムとイヴの原罪を指す。この罪によりキリストの贖いが必要となり、キリスト教神学では幸運な出来事と見なされる。",
+        "pt": "Em latim 'culpa feliz' ou 'culpa abençoada', referindo-se à Queda do Homem (o pecado de Adão e Eva), que tornou necessária a redenção de Cristo, vista como um evento afortunado na teologia cristã.",
+        "ru": "На латыни означает 'счастливая вина' или 'благословенная вина', относится к Грехопадению (греху Адама и Евы), которое сделало необходимым искупление через Христа, рассматриваемое как счастливое событие в христианской теологии.",
+        "zh": "拉丁语意为“幸福的过错”或“受祝福的过错”，指人类堕落（亚当和夏娃的罪），这一罪行使得基督的救赎成为必要，在基督教神学中被视为幸运的事件。"
+      },
+      "id": "la_classical_or_scriptural_allusion_felix_culpa_8a84e5dd",
+      "language": "la",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to the Exsultet in liturgical tradition with accurate surface patterns and theological context.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Latin for 'Happy fault' or 'Blessed fault,' referring to the Fall of Man (Adam and Eve's sin), which necessitated Christ's redemption, seen as a fortunate event in Christian theology.",
+      "source_author": "Liturgical tradition (attributed to early Christian writers)",
+      "source_author_key": "mnemosyne.la.author.liturgical_tradition_attributed_to_early_christian",
+      "source_dataset": "la_liturgical_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0590",
+      "source_work": "Exsultet (Easter Proclamation)",
+      "source_work_key": "mnemosyne.la.work.exsultet_easter_proclamation",
+      "surface_patterns": [
+        "Felix culpa",
+        "O felix culpa"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_fiat_lux_450666e1",
+      "canonical_reference": "Fiat lux",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.la_vulgata_scriptural_fiat_lux",
+      "i18n_explanations": {
+        "ar": "باللاتينية تعني 'ليكن نور'، من سفر التكوين، يصف خلق الله للنور. يرمز إلى بداية الخلق والتنوير.",
+        "de": "Lateinisch für 'Es werde Licht', aus dem Buch Genesis, beschreibt Gottes Erschaffung des Lichts. Es symbolisiert den Beginn der Schöpfung und der Erleuchtung.",
+        "en": "Latin for 'Let there be light,' from the Book of Genesis, describing God's creation of light. It symbolizes the beginning of creation and enlightenment.",
+        "es": "En latín 'Hágase la luz', del Libro del Génesis, describiendo la creación de la luz por Dios. Simboliza el inicio de la creación y la iluminación.",
+        "fr": "En latin 'Que la lumière soit', tiré du Livre de la Genèse, décrivant la création de la lumière par Dieu. Il symbolise le début de la création et de l'illumination.",
+        "he": "בלטינית 'יהי אור', מספר בראשית, המתאר את בריאת האור על ידי אלוהים. מסמל את תחילת הבריאה וההארה.",
+        "it": "In latino 'Sia la luce', dal Libro della Genesi, descrive la creazione della luce da parte di Dio. Simboleggia l'inizio della creazione e dell'illuminazione.",
+        "ja": "ラテン語で「光あれ」という意味で、『創世記』に記された神による光の創造を表す。創造と啓蒙の始まりを象徴する。",
+        "pt": "Em latim 'Faça-se a luz', do Livro de Gênesis, descrevendo a criação da luz por Deus. Simboliza o início da criação e da iluminação.",
+        "ru": "На латыни означает 'Да будет свет', из Книги Бытия, описывающей создание света Богом. Символизирует начало творения и просвещения.",
+        "zh": "拉丁语意为“要有光”，出自《创世记》，描述上帝创造光的过程。象征着创造与启蒙的开始。"
+      },
+      "id": "la_classical_or_scriptural_allusion_fiat_lux_450666e1",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate scriptural allusion with verifiable source in the Vulgate and correct surface patterns.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Latin for 'Let there be light,' from the Book of Genesis, describing God's creation of light. It symbolizes the beginning of creation and enlightenment.",
+      "source_author": "Hieronymus (Saint Jerome)",
+      "source_author_key": "mnemosyne.la.author.hieronymus_saint_jerome",
+      "source_dataset": "la_vulgata_scriptural",
+      "source_license": "public_domain",
+      "source_location": "Genesis 1:3",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0060:book=Genesis:chapter=1:verse=3",
+      "source_work": "Vulgata",
+      "source_work_key": "mnemosyne.la.work.vulgata",
+      "surface_patterns": [
+        "Fiat lux",
+        "Dixitque Deus: Fiat lux"
       ]
     },
     {
@@ -1538,6 +1650,49 @@
       ]
     },
     {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_magna_est_veritas_et_praevalet_c77cd8fb",
+      "canonical_reference": "Magna est veritas et praevalet",
+      "confidence": 0.82,
+      "explanation_key": "mnemosyne.la.explanation.vulgate_phrases_magna_est_veritas_et_praevalet",
+      "i18n_explanations": {
+        "ar": "عبارة توراتية وكلاسيكية تعني 'عظيمة هي الحقيقة وتنتصر'، وترمز إلى انتصار الحقيقة النهائي على الكذب. تظهر في كل من التقاليد اليهودية والمسيحية.",
+        "de": "Ein biblischer und klassischer Ausdruck mit der Bedeutung 'Groß ist die Wahrheit, und sie siegt', der den endgültigen Triumph der Wahrheit über die Lüge symbolisiert. Er erscheint sowohl in jüdischen als auch in christlichen Traditionen.",
+        "en": "A biblical and classical phrase meaning 'Great is truth, and it prevails,' symbolizing the ultimate triumph of truth over falsehood. It appears in both Jewish and Christian traditions.",
+        "es": "Una frase bíblica y clásica que significa 'Grande es la verdad, y prevalece', simbolizando el triunfo final de la verdad sobre la falsedad. Aparece tanto en tradiciones judías como cristianas.",
+        "fr": "Une phrase biblique et classique signifiant 'Grande est la vérité, et elle prévaut', symbolisant le triomphe ultime de la vérité sur le mensonge. Elle apparaît dans les traditions juive et chrétienne.",
+        "he": "ביטוי מקראי וקלאסי שפירושו 'גדולה האמת וניצחת', המסמל את ניצחון האמת הסופי על השקר. מופיע הן במסורת היהודית והן במסורת הנוצרית.",
+        "it": "Una frase biblica e classica che significa 'Grande è la verità, e prevale', simbolizzando il trionfo finale della verità sulla falsità. Appare sia nelle tradizioni ebraiche che in quelle cristiane.",
+        "ja": "「真実は偉大であり、そして勝利する」という聖書と古典に由来する言葉で、真実が虚偽に最終的に勝利することを象徴しています。ユダヤ教とキリスト教の両方の伝統に見られます。",
+        "pt": "Uma frase bíblica e clássica que significa 'Grande é a verdade, e ela prevalece', simbolizando o triunfo final da verdade sobre a falsidade. Aparece tanto nas tradições judaicas quanto nas cristãs.",
+        "ru": "Библейская и классическая фраза, означающая «Велика истина, и она побеждает», символизирующая окончательную победу истины над ложью. Встречается как в иудейской, так и в христианской традициях.",
+        "zh": "一句源自圣经和古典的短语，意为“真理伟大，且终将胜利”，象征着真理对谬误的最终胜利。出现于犹太教和基督教传统中。"
+      },
+      "id": "la_classical_or_scriptural_allusion_magna_est_veritas_et_praevalet_c77cd8fb",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate attribution to 3 Esdras in the Vulgate with correct surface patterns and explanation.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A biblical and classical phrase meaning 'Great is truth, and it prevails,' symbolizing the ultimate triumph of truth over falsehood. It appears in both Jewish and Christian traditions.",
+      "source_author": "Jerome (translator)",
+      "source_author_key": "mnemosyne.la.author.jerome_translator",
+      "source_dataset": "vulgate_phrases",
+      "source_license": "public_domain",
+      "source_location": "3 Esdras 4:41",
+      "source_url": "https://www.biblegateway.com/passage/?search=3+Esdras+4%3A41&version=VULGATE",
+      "source_work": "Vulgate (3 Esdras 4:41)",
+      "source_work_key": "mnemosyne.la.work.vulgate_3_esdras_4_41",
+      "surface_patterns": [
+        "Magna est veritas et praevalet",
+        "Magna est veritas",
+        "Veritas praevalet",
+        "Et praevalebit veritas (alternative phrasing)"
+      ],
+      "variants": [
+        "Et praevalebit veritas (alternative phrasing)"
+      ]
+    },
+    {
       "canonical_form": "la:classical:la_classical_or_scriptural_allusion_medice_cura_te_ipsum_3e395eb0",
       "canonical_reference": "Medice, cura te ipsum",
       "confidence": 0.9,
@@ -1691,6 +1846,44 @@
         "personam induere",
         "personam induere alienam",
         "personam induere alieni"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_quo_vadis_a7600e08",
+      "canonical_reference": "Quo vadis?",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.latin_apocryphal_phrases_quo_vadis",
+      "i18n_explanations": {
+        "ar": "باللاتينية تعني «إلى أين أنت ذاهب؟»، وتنسب إلى لقاء القديس بطرس مع المسيح قرب روما. ترمز إلى لحظة تدخل إلهي أو تساؤل وجودي.",
+        "de": "Lateinisch für 'Wohin gehst du?', zugeschrieben der Begegnung des Heiligen Petrus mit Jesus nahe Rom. Es symbolisiert einen Moment göttlicher Intervention oder existenzieller Fragestellung.",
+        "en": "Latin for 'Where are you going?', famously attributed to Saint Peter's encounter with Jesus near Rome. It symbolizes a moment of divine intervention or existential questioning.",
+        "es": "En latín '¿A dónde vas?', atribuido al encuentro de San Pedro con Jesús cerca de Roma. Simboliza un momento de intervención divina o cuestionamiento existencial.",
+        "fr": "En latin « Où vas-tu ? », attribué à la rencontre de saint Pierre avec Jésus près de Rome. Il symbolise un moment d'intervention divine ou de questionnement existentiel.",
+        "he": "בלטינית: 'לאן אתה הולך?', מיוחס למפגש של פטרוס הקדוש עם ישו ליד רומא. מסמל רגע של התערבות אלוהית או שאלת קיום.",
+        "it": "In latino 'Dove vai?', attribuito all'incontro di San Pietro con Gesù vicino a Roma. Simboleggia un momento di intervento divino o di domanda esistenziale.",
+        "ja": "ラテン語で「どこへ行くのか？」を意味し、ローマ近郊で聖ペトロがイエスと出会った故事に由来する。神の介入や存在意義を問う瞬間を象徴する。",
+        "pt": "Em latim 'Para onde vais?', atribuído ao encontro de São Pedro com Jesus perto de Roma. Simboliza um momento de intervenção divina ou questionamento existencial.",
+        "ru": "На латыни означает 'Куда идешь?', приписывается встрече Святого Петра с Иисусом под Римом. Символизирует момент божественного вмешательства или экзистенциального вопроса.",
+        "zh": "拉丁语意为“汝往何处？”，源于圣彼得在罗马附近与耶稣相遇的传说。象征神圣干预或对存在意义的追问。"
+      },
+      "id": "la_classical_or_scriptural_allusion_quo_vadis_a7600e08",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to the Acts of Peter and the apocryphal tradition is accurate and verifiable.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Latin for 'Where are you going?', famously attributed to Saint Peter's encounter with Jesus near Rome. It symbolizes a moment of divine intervention or existential questioning.",
+      "source_author": "Apocryphal tradition",
+      "source_author_key": "mnemosyne.la.author.apocryphal_tradition",
+      "source_dataset": "latin_apocryphal_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://www.newadvent.org/fathers/0807.htm",
+      "source_work": "Acts of Peter",
+      "source_work_key": "mnemosyne.la.work.acts_of_peter",
+      "surface_patterns": [
+        "Quo vadis?",
+        "Quo vadis, Domine?",
+        "Quo vadis domine?"
       ]
     },
     {
@@ -2354,6 +2547,43 @@
       ]
     },
     {
+      "canonical_form": "la:cultural:la_cultural_reference_cuius_regio_eius_religio_fe7e101e",
+      "canonical_reference": "Cuius regio, eius religio",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.la.explanation.la_early_modern_legal_phrases_cuius_regio_eius_rel",
+      "i18n_explanations": {
+        "ar": "مبدأ يعني 'من يملك الأرض يملك الدين'، تأسس بموجب صلح أوغسبورغ (1555) للسماح لأمراء ألمانيا بتحديد دين أراضيهم.",
+        "de": "Ein Prinzip mit der Bedeutung 'Wessen Gebiet, dessen Religion', das durch den Augsburger Religionsfrieden (1555) festgelegt wurde, um deutschen Fürsten zu erlauben, die Religion ihrer Territorien zu bestimmen.",
+        "en": "A principle meaning 'Whose realm, his religion,' established by the Peace of Augsburg (1555) to allow German princes to determine the religion of their territories.",
+        "es": "Principio que significa 'Cuyo reino, su religión', establecido por la Paz de Augsburgo (1555) para permitir a los príncipes alemanes determinar la religión de sus territorios.",
+        "fr": "Un principe signifiant 'Tel prince, telle religion', établi par la Paix d'Augsbourg (1555) pour permettre aux princes allemands de déterminer la religion de leurs territoires.",
+        "he": "עיקרון שפירושו 'של מי הממלכה, שלו הדת', שנקבע בהסכם אאוגסבורג (1555) כדי לאפשר לנסיכים הגרמנים לקבוע את הדת בשטחיהם.",
+        "it": "Un principio che significa 'Di chi è il regno, di lui la religione', stabilito dalla Pace di Augusta (1555) per consentire ai principi tedeschi di determinare la religione dei loro territori.",
+        "ja": "『領主の宗教が領民の宗教』という原則で、アウクスブルクの和議（1555年）により、ドイツの諸侯が自領の宗教を決定することを認められました。",
+        "pt": "Um princípio que significa 'De quem é o reino, sua religião', estabelecido pela Paz de Augsburgo (1555) para permitir que os príncipes alemães determinassem a religião de seus territórios.",
+        "ru": "Принцип, означающий 'Чья власть, того и вера', установленный Аугсбургским миром (1555 г.) для того, чтобы немецкие князья могли определять религию своих территорий.",
+        "zh": "意为“谁的领地，谁的宗教”的原则，由1555年《奥格斯堡和约》确立，允许德国诸侯决定其领地的宗教。"
+      },
+      "id": "la_cultural_reference_cuius_regio_eius_religio_fe7e101e",
+      "language": "la",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The principle is accurately described as originating from the Peace of Augsburg (1555), though not a classical literary reference.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A principle meaning 'Whose realm, his religion,' established by the Peace of Augsburg (1555) to allow German princes to determine the religion of their territories.",
+      "source_author": "Oral tradition / Treaty of Augsburg",
+      "source_author_key": "mnemosyne.la.author.oral_tradition_treaty_of_augsburg",
+      "source_dataset": "la_early_modern_legal_phrases",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Cuius regio, eius religio",
+        "Cuius regio, illius religio"
+      ]
+    },
+    {
       "canonical_form": "la:cultural:la_cultural_reference_de_facto_451ac48f",
       "canonical_reference": "De facto",
       "confidence": 0.9,
@@ -2469,6 +2699,48 @@
       ]
     },
     {
+      "canonical_form": "la:cultural:la_cultural_reference_de_novo_b3598397",
+      "canonical_reference": "De novo",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.la.explanation.latin_common_phrases_de_novo",
+      "i18n_explanations": {
+        "ar": "يعني 'من جديد' أو 'من الصفر'، ويُستخدم غالبًا للإشارة إلى البدء من جديد أو تكرار فعل ما. شائع في السياقات القانونية والفلسفية والعامة.",
+        "de": "Bedeutet 'von Neuem' oder 'erneut' und wird oft verwendet, um einen Neuanfang oder eine Wiederholung zu bezeichnen. Häufig in rechtlichen, philosophischen und allgemeinen Kontexten.",
+        "en": "Means 'anew' or 'afresh,' often used to indicate starting over or repeating an action. Common in legal, philosophical, and general contexts.",
+        "es": "Significa 'de nuevo' o 'desde cero', usado para indicar reiniciar o repetir una acción. Común en contextos legales, filosóficos y generales.",
+        "fr": "Signifie 'de nouveau' ou 'à neuf', souvent utilisé pour indiquer un recommencement ou une répétition. Courant dans les contextes juridiques, philosophiques et généraux.",
+        "he": "פירושו 'מחדש' או 'מהתחלה', ומשמש לעיתים קרובות לציון התחלה מחדש או חזרה על פעולה. נפוץ בהקשרים משפטיים, פילוסופיים וכלליים.",
+        "it": "Significa 'di nuovo' o 'da capo', usato per indicare un nuovo inizio o la ripetizione di un'azione. Comune in contesti legali, filosofici e generali.",
+        "ja": "「新たに」や「再び」を意味し、やり直しや行動の繰り返しを示す際に使われます。法律、哲学、一般的な文脈でよく用いられます。",
+        "pt": "Significa 'de novo' ou 'do zero', usado para indicar recomeçar ou repetir uma ação. Comum em contextos jurídicos, filosóficos e gerais.",
+        "ru": "Означает «заново» или «сначала», часто используется для обозначения перезапуска или повторения действия. Распространено в юридических, философских и общих контекстах.",
+        "zh": "意为“重新”或“从头开始”，常用于表示重新开始或重复某个行为。常见于法律、哲学及一般语境中。"
+      },
+      "id": "la_cultural_reference_de_novo_b3598397",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to legal and general usage is accurate, and surface patterns are correct.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Means 'anew' or 'afresh,' often used to indicate starting over or repeating an action. Common in legal, philosophical, and general contexts.",
+      "source_author": "Oral tradition / Legal tradition",
+      "source_author_key": "mnemosyne.la.author.oral_tradition_legal_tradition",
+      "source_dataset": "latin_common_phrases",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "de novo",
+        "denuo",
+        "a novo",
+        "ex novo"
+      ],
+      "variants": [
+        "ex novo"
+      ]
+    },
+    {
       "canonical_form": "la:cultural:la_cultural_reference_deus_ex_machina_d391a1a8",
       "canonical_reference": "Deus ex machina",
       "confidence": 0.85,
@@ -2578,6 +2850,48 @@
         "exempli gratia",
         "e.g.",
         "ex. gr."
+      ]
+    },
+    {
+      "canonical_form": "la:cultural:la_cultural_reference_gaudeamus_igitur_c8226e43",
+      "canonical_reference": "Gaudeamus igitur",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.medieval_latin_songs_gaudeamus_igitur",
+      "i18n_explanations": {
+        "ar": "أغنية طلابية لاتينية من العصور الوسطى تحتفي بالحياة الأكاديمية والشباب، وهي اليوم النشيد الرسمي للجامعات حول العالم. تعكس تقاليد الاحتفالات الأكاديمية وطبيعة سنوات الدراسة العابرة.",
+        "de": "Ein mittelalterliches lateinisches Studentenlied, das das akademische Leben und die Jugend feiert und heute die Hymne von Universitäten weltweit ist. Es spiegelt die Tradition akademischer Festlichkeiten und die Vergänglichkeit der Studienjahre wider.",
+        "en": "A medieval Latin student song celebrating academic life and youth, now the anthem of universities worldwide. It reflects the tradition of academic festivities and the transient nature of student years.",
+        "es": "Una canción estudiantil medieval en latín que celebra la vida académica y la juventud, hoy himno de universidades en todo el mundo. Refleja la tradición de festividades universitarias y la fugacidad de los años de estudiante.",
+        "fr": "Un chant étudiant médiéval en latin célébrant la vie académique et la jeunesse, aujourd’hui hymne des universités dans le monde. Il incarne la tradition des fêtes universitaires et le caractère éphémère des années étudiantes.",
+        "he": "שיר סטודנטים מימי הביניים בלטינית החוגג את החיים האקדמיים ואת הנעורים, וכיום הוא ההמנון של אוניברסיטאות ברחבי העולם. הוא משקף את מסורת החגיגות האקדמיות ואת טבען החולף של שנות הלימודים.",
+        "it": "Un canto studentesco medievale in latino che celebra la vita accademica e la giovinezza, oggi inno delle università in tutto il mondo. Riflette la tradizione delle feste accademiche e la natura effimera degli anni universitari.",
+        "ja": "学問と青春を讃える中世ラテン語の学生歌で、現在では世界中の大学の校歌となっています。学園祭の伝統と学生時代の儚さを象徴しています。",
+        "pt": "Uma canção estudantil medieval em latim que celebra a vida acadêmica e a juventude, hoje hino das universidades em todo o mundo. Reflete a tradição de festividades acadêmicas e a natureza passageira dos anos de estudante.",
+        "ru": "Средневековая латинская студенческая песня, прославляющая академическую жизнь и молодость, ныне гимн университетов по всему миру. Отражает традиции студенческих торжеств и скоротечность студенческих лет.",
+        "zh": "一首中世纪拉丁语学生歌曲，歌颂学术生活与青春，现为全球大学的校歌。它反映了学术庆典的传统以及学生时代的短暂性。"
+      },
+      "id": "la_cultural_reference_gaudeamus_igitur_c8226e43",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to medieval student song tradition is accurate and well-documented.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "A medieval Latin student song celebrating academic life and youth, now the anthem of universities worldwide. It reflects the tradition of academic festivities and the transient nature of student years.",
+      "source_author": "Anonymous (medieval tradition)",
+      "source_author_key": "mnemosyne.la.author.anonymous_medieval_tradition",
+      "source_dataset": "medieval_latin_songs",
+      "source_license": "public_domain",
+      "source_url": "https://www.gutenberg.org/files/30512/30512-h/30512-h.htm",
+      "source_work": "Gaudeamus igitur",
+      "source_work_key": "mnemosyne.la.work.gaudeamus_igitur",
+      "surface_patterns": [
+        "Gaudeamus igitur",
+        "Gaudeamus",
+        "Igitur gaudeamus",
+        "De brevitate vitae (alternative title)"
+      ],
+      "variants": [
+        "De brevitate vitae (alternative title)"
       ]
     },
     {
@@ -2802,6 +3116,45 @@
       ],
       "variants": [
         "Semper fidelis, semper paratus"
+      ]
+    },
+    {
+      "canonical_form": "la:cultural:la_cultural_reference_ultima_thule_5f5f70e5",
+      "canonical_reference": "Ultima Thule",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.latin_geographical_phrases_ultima_thule",
+      "i18n_explanations": {
+        "ar": "باللاتينية تعني «ثولي القصوى»، وتشير إلى أرض شمالية بعيدة وأسطورية في الجغرافيا الكلاسيكية، وترمز غالبًا إلى حافة العالم المعروف أو هدف يتعذر بلوغه.",
+        "de": "Lateinisch für 'Fernstes Thule', bezieht sich auf ein fernes, mythisches Land im Norden der klassischen Geographie, oft symbolisierend den Rand der bekannten Welt oder ein unerreichbares Ziel.",
+        "en": "Latin for 'Farthest Thule', referring to a distant, mythical northern land in classical geography, often symbolizing the edge of the known world or an unattainable goal.",
+        "es": "En latín 'La última Thule', refiriéndose a una tierra mítica y lejana en el norte según la geografía clásica, que simboliza el límite del mundo conocido o una meta inalcanzable.",
+        "fr": "En latin « Ultima Thulé », désignant une terre mythique et lointaine du nord dans la géographie classique, symbolisant souvent la limite du monde connu ou un objectif inaccessible.",
+        "he": "בלטינית: 'תולה הרחוקה ביותר', מתייחס לארץ צפונית מיתית ורחוקה בגאוגרפיה הקלאסית, מסמל לעיתים קרובות את קצה העולם הידוע או מטרה בלתי מושגת.",
+        "it": "In latino 'Ultima Thule', si riferisce a una terra mitica e lontana del nord nella geografia classica, spesso simbolo del confine del mondo conosciuto o di un obiettivo irraggiungibile.",
+        "ja": "ラテン語で「最果てのトゥーレ」を意味し、古典地理学における遥か北方の神話的な土地を指す。しばしば既知の世界の果てや到達不可能な目標の象徴とされる。",
+        "pt": "Em latim 'Última Thule', referindo-se a uma terra mítica e distante no norte, na geografia clássica, frequentemente simbolizando a borda do mundo conhecido ou um objetivo inalcançável.",
+        "ru": "На латыни означает 'Крайний Туле', относится к далекой мифической северной земле в классической географии, часто символизирующей край известного мира или недостижимую цель.",
+        "zh": "拉丁语意为“最远的图勒”，指古典地理学中遥远的北方神话之地，常象征已知世界的边缘或无法企及的目标。"
+      },
+      "id": "la_cultural_reference_ultima_thule_5f5f70e5",
+      "language": "la",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to Vergil's 'Georgica' (Book I, line 30) is accurate and verifiable.",
+      "reference_type": "cultural_reference",
+      "register": "classical",
+      "short_explanation": "Latin for 'Farthest Thule', referring to a distant, mythical northern land in classical geography, often symbolizing the edge of the known world or an unattainable goal.",
+      "source_author": "Vergil (Publius Vergilius Maro)",
+      "source_author_key": "mnemosyne.la.author.vergil_publius_vergilius_maro",
+      "source_dataset": "latin_geographical_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book I, line 30",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0058%3Abook%3D1%3Apoem%3D1",
+      "source_work": "Georgica",
+      "source_work_key": "mnemosyne.la.work.georgica",
+      "surface_patterns": [
+        "Ultima Thule",
+        "Thule ultima",
+        "Farthest Thule"
       ]
     },
     {
@@ -4391,6 +4744,45 @@
       ]
     },
     {
+      "canonical_form": "la:literary:la_literary_reference_cui_bono_a319cba5",
+      "canonical_reference": "Cui bono?",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.la.explanation.la_cicero_pro_milone_cui_bono",
+      "i18n_explanations": {
+        "ar": "عبارة لاتينية تعني 'لمن الفائدة؟' تُستخدم في السياقات القانونية والبلاغية لاستجواب الدوافع، وتُنسب بشكل مشهور إلى شيشرون في محاكمته لكاتيلينا.",
+        "de": "Ein lateinischer Ausdruck mit der Bedeutung 'Wem nützt es?' Wird in juristischen und rhetorischen Kontexten verwendet, um Motive zu hinterfragen, und wird Cicero in seiner Anklage gegen Catilina zugeschrieben.",
+        "en": "A Latin phrase meaning 'To whose benefit?' used in legal and rhetorical contexts to question motives, famously attributed to Cicero in his prosecution of Catiline.",
+        "es": "Frase latina que significa '¿A quién beneficia?' utilizada en contextos legales y retóricos para cuestionar motivos, atribuida famosamente a Cicerón en su acusación contra Catilina.",
+        "fr": "Une phrase latine signifiant 'À qui profite le crime ?' utilisée dans des contextes juridiques et rhétoriques pour questionner les motifs, attribuée célèbrement à Cicéron lors de son accusation de Catilina.",
+        "he": "ביטוי לטיני שפירושו 'למי זה מועיל?' משמש בהקשרים משפטיים ורטוריים כדי לחקור מניעים, ומיוחס באופן מפורסם לציקרו בהעמדתו לדין של קטילינה.",
+        "it": "Una frase latina che significa 'A chi giova?' utilizzata in contesti legali e retorici per mettere in discussione le motivazioni, famosa per essere attribuita a Cicerone nel suo processo contro Catilina.",
+        "ja": "『誰が利益を得るのか？』という意味のラテン語のフレーズで、動機を問うために法的・修辞的文脈で使われます。キケロがカティリナ弾劾で用いたことで有名です。",
+        "pt": "Uma frase latina que significa 'A quem beneficia?' usada em contextos jurídicos e retóricos para questionar motivos, famosa por ser atribuída a Cícero em sua acusação contra Catilina.",
+        "ru": "Латинская фраза, означающая 'Кому выгодно?' Используется в юридических и риторических контекстах для выяснения мотивов, приписывается Цицерону в его обвинении Катилины.",
+        "zh": "拉丁语短语，意为“谁受益？”，用于法律和修辞场合质疑动机，因西塞罗在起诉喀提林时使用而闻名。"
+      },
+      "id": "la_literary_reference_cui_bono_a319cba5",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase is correctly attributed to Cicero, though not in 'Pro Milone' but in 'Pro Roscio Amerino' and other works.",
+      "reference_type": "literary_reference",
+      "register": "proverbial",
+      "short_explanation": "A Latin phrase meaning 'To whose benefit?' used in legal and rhetorical contexts to question motives, famously attributed to Cicero in his prosecution of Catiline.",
+      "source_author": "Cicero",
+      "source_author_key": "mnemosyne.la.author.cicero",
+      "source_dataset": "la_cicero_pro_milone",
+      "source_license": "public_domain",
+      "source_location": "32.84",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0020%3Atext%3DMil.",
+      "source_work": "Pro Milone",
+      "source_work_key": "mnemosyne.la.work.pro_milone",
+      "surface_patterns": [
+        "Cui bono?",
+        "Cui bono fuisset?",
+        "Cui prodest?"
+      ]
+    },
+    {
       "canonical_form": "la:literary:la_literary_reference_cum_tacent_clamant_654926fd",
       "canonical_reference": "Cum tacent, clamant",
       "confidence": 0.9,
@@ -4427,6 +4819,45 @@
         "Cum tacent, clamant",
         "Cum tacent, clamare videntur",
         "Cum tacent, clamant omnes"
+      ]
+    },
+    {
+      "canonical_form": "la:literary:la_literary_reference_cura_ut_valeas_8ac00ed5",
+      "canonical_reference": "Cura ut valeas",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.la.explanation.latin_epistolary_phrases_cura_ut_valeas",
+      "i18n_explanations": {
+        "ar": "يعني 'اعتنِ بصحتك' أو 'وداعًا'، وهي عبارة شائعة في الرسائل اللاتينية، تؤكد على الاهتمام بصحة المرسل إليه.",
+        "de": "Bedeutet 'sorge dafür, gesund zu sein' oder 'leb wohl', eine häufige Verabschiedung in lateinischen Briefen, die die Sorge um die Gesundheit des Empfängers betont.",
+        "en": "Means 'take care to be well' or 'farewell,' a common valediction in Latin letters, emphasizing concern for the recipient's health.",
+        "es": "Significa 'cuídate de estar bien' o 'adiós', una despedida común en cartas latinas, destacando preocupación por la salud del destinatario.",
+        "fr": "Signifie 'prends soin de bien te porter' ou 'adieu', une formule de départ courante dans les lettres latines, soulignant l'attention portée à la santé du destinataire.",
+        "he": "פירושו 'דאג לבריאותך' או 'להתראות', ברכת פרידה נפוצה במכתבים בלטינית, המדגישה דאגה לבריאות הנמען.",
+        "it": "Significa 'abbi cura di stare bene' o 'addio', una formula di commiato comune nelle lettere latine, che sottolinea la preoccupazione per la salute del destinatario.",
+        "ja": "「健康でいてください」や「さようなら」を意味し、ラテン語の手紙でよく使われる別れの言葉で、相手の健康を気遣う表現です。",
+        "pt": "Significa 'cuide-se para estar bem' ou 'adeus', uma despedida comum em cartas latinas, enfatizando a preocupação com a saúde do destinatário.",
+        "ru": "Означает «позаботься о своём здоровье» или «прощай», распространённое прощание в латинских письмах, подчёркивающее заботу о здоровье адресата.",
+        "zh": "意为“保重身体”或“再见”，是拉丁语书信中常见的告别语，强调对收信人健康的关心。"
+      },
+      "id": "la_literary_reference_cura_ut_valeas_8ac00ed5",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurately reflects Cicero's epistolary valedictions and surface patterns.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Means 'take care to be well' or 'farewell,' a common valediction in Latin letters, emphasizing concern for the recipient's health.",
+      "source_author": "Cicero (Marcus Tullius Cicero)",
+      "source_author_key": "mnemosyne.la.author.cicero_marcus_tullius_cicero",
+      "source_dataset": "latin_epistolary_phrases",
+      "source_license": "public_domain",
+      "source_location": "Various letters (e.g., Ad Familiares 16.27)",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0012%3Atext%3DFam.",
+      "source_work": "Epistulae (Letters of Cicero)",
+      "source_work_key": "mnemosyne.la.work.epistulae_letters_of_cicero",
+      "surface_patterns": [
+        "cura ut valeas",
+        "ut valeas cura",
+        "valeas cura"
       ]
     },
     {
@@ -4505,6 +4936,45 @@
         "De te narratur fabula",
         "The story is told about you",
         "The tale is about you"
+      ]
+    },
+    {
+      "canonical_form": "la:literary:la_literary_reference_diem_perdidi_3d995c96",
+      "canonical_reference": "Diem perdidi",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.la.explanation.la_suetonius_caesars_diem_perdidi",
+      "i18n_explanations": {
+        "ar": "تنسب هذه العبارة للإمبراطور تيتوس، وتعبر عن الندم على يوم ضاع دون إنجاز أي شيء ذي معنى. تعكس المثل الرومانية للإنتاجية والواجب.",
+        "de": "Diese Phrase, die Kaiser Titus zugeschrieben wird, drückt Bedauern über einen vergeudeten Tag ohne sinnvolle Leistung aus. Sie spiegelt römische Ideale von Produktivität und Pflicht wider.",
+        "en": "Attributed to Emperor Titus, this phrase expresses regret for a day wasted without achieving anything meaningful. It reflects Roman ideals of productivity and duty.",
+        "es": "Atribuida al emperador Tito, esta frase expresa arrepentimiento por un día perdido sin lograr nada significativo. Refleja los ideales romanos de productividad y deber.",
+        "fr": "Attribuée à l’empereur Titus, cette phrase exprime le regret d’une journée perdue sans avoir rien accompli de significatif. Elle reflète les idéaux romains de productivité et de devoir.",
+        "he": "מיוחסת לקיסר טיטוס, ביטוי זה מביע חרטה על יום מבוזבז ללא הישג משמעותי. הוא משקף את האידיאלים הרומיים של פרודוקטיביות וחובה.",
+        "it": "Attribuita all'imperatore Tito, questa frase esprime rammarico per una giornata sprecata senza aver realizzato nulla di significativo. Riflette gli ideali romani di produttività e dovere.",
+        "ja": "ティトゥス帝に帰せられるこの言葉は、何の成果もなく無駄に過ごした一日への後悔を表す。ローマの生産性と義務を重んじる理想を反映している。",
+        "pt": "Atribuída ao imperador Tito, esta frase expressa arrependimento por um dia perdido sem realizar nada significativo. Reflete os ideais romanos de produtividade e dever.",
+        "ru": "Эта фраза, приписываемая императору Титу, выражает сожаление о дне, потраченном впустую без каких-либо значимых достижений. Она отражает римские идеалы продуктивности и долга.",
+        "zh": "这句话归于提图斯皇帝，表达了对虚度无意义一天的遗憾。反映了罗马人对生产力和责任的理想。"
+      },
+      "id": "la_literary_reference_diem_perdidi_3d995c96",
+      "language": "la",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Suetonius' *De Vita Caesarum* (Titus 8.1) with accurate surface patterns.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Attributed to Emperor Titus, this phrase expresses regret for a day wasted without achieving anything meaningful. It reflects Roman ideals of productivity and duty.",
+      "source_author": "Suetonius",
+      "source_author_key": "mnemosyne.la.author.suetonius",
+      "source_dataset": "la_suetonius_caesars",
+      "source_license": "public_domain",
+      "source_location": "Titus 8.1",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0080%3Atext%3DTitus%3Achapter%3D8",
+      "source_work": "Suetonius, De Vita Caesarum",
+      "source_work_key": "mnemosyne.la.work.suetonius_de_vita_caesarum",
+      "surface_patterns": [
+        "Diem perdidi",
+        "Perdidi diem",
+        "I have lost the day"
       ]
     },
     {
@@ -5305,6 +5775,45 @@
         "Mens sana in corpore sano",
         "Orandum est ut sit mens sana in corpore sano",
         "A sound mind in a sound body"
+      ]
+    },
+    {
+      "canonical_form": "la:literary:la_literary_reference_nascuntur_poetae_fiunt_oratores_b2f7fe0c",
+      "canonical_reference": "Nascuntur poetae, fiunt oratores",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.cicero_de_oratore_phrases_nascuntur_poetae_fiunt_o",
+      "i18n_explanations": {
+        "ar": "تصريح من أعمال شيشرون يؤكد أن الموهبة الشعرية فطرية، بينما مهارة الخطابة تتطور من خلال الممارسة والتدريب.",
+        "de": "Eine Aussage aus Ciceros Werk, die betont, dass poetisches Talent angeboren ist, während rhetorische Fähigkeiten durch Übung und Training entwickelt werden.",
+        "en": "A statement from Cicero's work emphasizing that poetic talent is innate, while oratorical skill is developed through practice and training.",
+        "es": "Una declaración de la obra de Cicerón que enfatiza que el talento poético es innato, mientras que la habilidad oratoria se desarrolla mediante la práctica y el entrenamiento.",
+        "fr": "Une déclaration tirée de l'œuvre de Cicéron soulignant que le talent poétique est inné, tandis que l'art oratoire s'acquiert par la pratique et la formation.",
+        "he": "אמירה מתוך יצירתו של קיקרו המדגישה כי כישרון פיוטי הוא מולד, בעוד מיומנות רטורית מפותחת באמצעות תרגול ואימון.",
+        "it": "Una dichiarazione tratta dall'opera di Cicerone che sottolinea come il talento poetico sia innato, mentre l'abilità oratoria si sviluppa attraverso la pratica e l'addestramento.",
+        "ja": "キケロの著作における言葉で、詩の才能は生まれつきのものだが、弁論の技術は練習と訓練によって身につくものであると強調している。",
+        "pt": "Uma afirmação da obra de Cícero que enfatiza que o talento poético é inato, enquanto a habilidade oratória é desenvolvida através da prática e do treinamento.",
+        "ru": "Утверждение из трудов Цицерона, подчеркивающее, что поэтический талант является врожденным, в то время как ораторское мастерство развивается через практику и обучение.",
+        "zh": "西塞罗作品中的一句名言，强调诗歌才能是天生的，而演讲技巧则需通过练习和训练培养。"
+      },
+      "id": "la_literary_reference_nascuntur_poetae_fiunt_oratores_b2f7fe0c",
+      "language": "la",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Cicero's De Oratore 2.9.36 with accurate surface patterns and explanation.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A statement from Cicero's work emphasizing that poetic talent is innate, while oratorical skill is developed through practice and training.",
+      "source_author": "Cicero",
+      "source_author_key": "mnemosyne.la.author.cicero",
+      "source_dataset": "cicero_de_oratore_phrases",
+      "source_license": "public_domain",
+      "source_location": "2.9.36",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0019%3Abook%3D2%3Asection%3D36",
+      "source_work": "De Oratore",
+      "source_work_key": "mnemosyne.la.work.de_oratore",
+      "surface_patterns": [
+        "Nascuntur poetae, fiunt oratores",
+        "Poetae nascuntur, oratores fiunt",
+        "Poets are born, orators are made"
       ]
     },
     {
@@ -7309,6 +7818,44 @@
       "surface_patterns": [
         "Gutta cavat lapidem",
         "Gutta cavat lapidem non vi, sed saepe cadendo"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:la_proverb_tradition_hic_et_nunc_2d0c6873",
+      "canonical_reference": "Hic et nunc",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.la.explanation.latin_legal_phrases_hic_et_nunc",
+      "i18n_explanations": {
+        "ar": "عبارة لاتينية تعني 'هنا والآن'، وتؤكد على الفورية أو اللحظة الحالية. تستخدم على نطاق واسع في السياقات القانونية والفلسفية واليومية للتأكيد على إلحاح الفعل أو العمل المباشر.",
+        "de": "Ein lateinischer Ausdruck mit der Bedeutung 'hier und jetzt', der Unmittelbarkeit oder den gegenwärtigen Moment betont. Er wird häufig in rechtlichen, philosophischen und alltäglichen Kontexten verwendet, um Dringlichkeit oder direktes Handeln zu unterstreichen.",
+        "en": "A Latin phrase meaning 'here and now,' emphasizing immediacy or the present moment. It is widely used in legal, philosophical, and everyday contexts to stress urgency or direct action.",
+        "es": "Una frase latina que significa 'aquí y ahora', destacando la inmediatez o el momento presente. Se usa ampliamente en contextos legales, filosóficos y cotidianos para enfatizar urgencia o acción directa.",
+        "fr": "Une expression latine signifiant 'ici et maintenant', soulignant l’immédiateté ou le moment présent. Elle est largement utilisée dans les contextes juridiques, philosophiques et quotidiens pour insister sur l’urgence ou l’action directe.",
+        "he": "ביטוי לטיני שפירושו 'כאן ועכשיו', המדגיש את הרגע הנוכחי או הדחיפות. נמצא בשימוש נרחב בהקשרים משפטיים, פילוסופיים ויומיומיים כדי להדגיש פעולה מיידית או דחיפות.",
+        "it": "Una frase latina che significa 'qui e ora', enfatizzando l’immediatezza o il momento presente. È ampiamente utilizzata in contesti legali, filosofici e quotidiani per sottolineare l’urgenza o l’azione diretta.",
+        "ja": "「ここで今」を意味するラテン語のフレーズで、即時性や現在の瞬間を強調します。法的、哲学的、日常的な文脈で広く使われ、緊急性や直接的な行動を強調します。",
+        "pt": "Uma frase latina que significa 'aqui e agora', enfatizando a imediaticidade ou o momento presente. É amplamente usada em contextos jurídicos, filosóficos e cotidianos para ressaltar urgência ou ação direta.",
+        "ru": "Латинская фраза, означающая «здесь и сейчас», подчеркивающая непосредственность или настоящий момент. Широко используется в юридических, философских и повседневных контекстах для акцентирования срочности или прямого действия.",
+        "zh": "一个拉丁语短语，意为“此时此地”，强调即时性或当下。广泛用于法律、哲学及日常语境中，以强调紧迫性或直接行动。"
+      },
+      "id": "la_proverb_tradition_hic_et_nunc_2d0c6873",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Phrase is correctly attributed to medieval/Renaissance legal/philosophical tradition with accurate surface patterns.",
+      "reference_type": "proverb_tradition",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A Latin phrase meaning 'here and now,' emphasizing immediacy or the present moment. It is widely used in legal, philosophical, and everyday contexts to stress urgency or direct action.",
+      "source_author": "Oral tradition (later formalized in legal Latin)",
+      "source_author_key": "mnemosyne.la.author.oral_tradition_later_formalized_in_legal_latin",
+      "source_dataset": "latin_legal_phrases",
+      "source_license": "not_required",
+      "source_work": "Various (medieval and Renaissance legal/philosophical texts)",
+      "source_work_key": "mnemosyne.la.work.various_medieval_and_renaissance_legal_philosophic",
+      "surface_patterns": [
+        "hic et nunc",
+        "hic nuncque",
+        "hic nunc"
       ]
     },
     {
