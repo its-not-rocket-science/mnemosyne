@@ -196,7 +196,13 @@ def _looks_biblical_or_cross_reference(raw: dict[str, Any]) -> bool:
         return True
     # Citing multiple works (source_work lists more than one, comma-separated)
     # legitimately needs one semicolon-separated location per work.
-    return "," in clean_text(raw.get("source_work", ""))
+    if "," in clean_text(raw.get("source_work", "")):
+        return True
+    # Multiple act/scene/chapter/verse references within the *same* work
+    # (e.g. "Act 1, Scene 4; Act 2, Scene 5") -- every semicolon-separated
+    # segment citing a specific numbered location, not free prose.
+    segments = [s.strip() for s in location.split(";") if s.strip()]
+    return len(segments) > 1 and all(any(ch.isdigit() for ch in s) for s in segments)
 
 
 def append_rights_warnings(raw: dict[str, Any], idx: int, lang: str, warnings: list[str]) -> None:
