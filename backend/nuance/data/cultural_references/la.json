@@ -201,6 +201,46 @@
       ]
     },
     {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_agnus_dei_qui_tollis_peccata_mundi_49e68cec",
+      "canonical_reference": "Agnus Dei qui tollis peccata mundi",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.la_liturgical_phrases_agnus_dei_qui_tollis_peccata",
+      "i18n_explanations": {
+        "ar": "عبارة ليتورجية من القداس اللاتيني تشير إلى يسوع المسيح على أنه 'حمل الله' الذي يزيل خطايا العالم. تعود أصولها إلى إنجيل يوحنا.",
+        "de": "Eine liturgische Phrase aus der lateinischen Messe, die Jesus Christus als das 'Lamm Gottes' bezeichnet, das die Sünden der Welt hinwegnimmt. Sie stammt aus dem Johannesevangelium.",
+        "en": "A liturgical phrase from the Latin Mass referring to Jesus Christ as the 'Lamb of God' who takes away the sins of the world. Rooted in the Gospel of John.",
+        "es": "Frase litúrgica de la Misa latina que se refiere a Jesucristo como el 'Cordero de Dios' que quita los pecados del mundo. Tiene su origen en el Evangelio de Juan.",
+        "fr": "Phrase liturgique de la messe latine désignant Jésus-Christ comme l'« Agneau de Dieu » qui enlève les péchés du monde. Tirée de l'Évangile selon Jean.",
+        "he": "ביטוי ליטורגי מהמיסה הלטינית המתייחס לישוע המשיח כ'שה האלוהים' הנושא חטאי העולם. מקורו בבשורה על-פי יוחנן.",
+        "it": "Frase liturgica della Messa latina che si riferisce a Gesù Cristo come 'Agnello di Dio' che toglie i peccati del mondo. Radicata nel Vangelo di Giovanni.",
+        "ja": "ラテン語ミサの典礼句で、イエス・キリストを「世の罪を取り除く神の子羊」と表現する。ヨハネの福音書に由来する。",
+        "pt": "Frase litúrgica da Missa latina que se refere a Jesus Cristo como o 'Cordeiro de Deus' que tira os pecados do mundo. Tem raízes no Evangelho de João.",
+        "ru": "Литургическая фраза из латинской мессы, называющая Иисуса Христа «Агнцем Божьим», берущим на себя грехи мира. Восходит к Евангелию от Иоанна.",
+        "zh": "拉丁弥撒中的礼拜用语，将耶稣基督称为“除去世人罪孽的上帝羔羊”。源自《约翰福音》。"
+      },
+      "id": "la_classical_or_scriptural_allusion_agnus_dei_qui_tollis_peccata_mundi_49e68cec",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurately reflects the liturgical tradition and scriptural roots, with correct surface patterns and source attribution.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A liturgical phrase from the Latin Mass referring to Jesus Christ as the 'Lamb of God' who takes away the sins of the world. Rooted in the Gospel of John.",
+      "source_author": "Ecclesiastical Latin tradition",
+      "source_author_key": "mnemosyne.la.author.ecclesiastical_latin_tradition",
+      "source_dataset": "la_liturgical_phrases",
+      "source_license": "not_required",
+      "source_location": "Liturgy of the Mass (Ordinary)",
+      "source_url": "https://www.vatican.va/archive/ENG1104/__P2O.HTM",
+      "source_work": "Missale Romanum",
+      "source_work_key": "mnemosyne.la.work.missale_romanum",
+      "surface_patterns": [
+        "Agnus Dei qui tollis peccata mundi",
+        "Agnus Dei, qui tollis peccata mundi",
+        "Agnus Dei"
+      ]
+    },
+    {
       "canonical_form": "la:classical:la_classical_or_scriptural_allusion_alma_roma_417b87db",
       "canonical_reference": "Alma Roma",
       "confidence": 0.82,
@@ -554,6 +594,50 @@
         "Fortuna audentes iuvat",
         "Fortune favors the bold",
         "Fortune favours the brave"
+      ]
+    },
+    {
+      "canonical_form": "la:classical:la_classical_or_scriptural_allusion_ave_maria_gratia_plena_46e53134",
+      "canonical_reference": "Ave Maria, gratia plena",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.latin_vulgate_scripture_ave_maria_gratia_plena",
+      "i18n_explanations": {
+        "ar": "الكلمات الافتتاحية للنسخة اللاتينية من صلاة السلام عليك يا مريم، التي تخاطب العذراء مريم بأنها 'مملوءة نعمة'. وهي نص محوري في الطقوس والتقوى الكاثوليكية.",
+        "de": "Die Anfangsworte des lateinischen Ave-Maria-Gebets, in dem die Jungfrau Maria als 'voll der Gnade' angeredet wird. Es ist ein zentraler Text in der katholischen Liturgie und Andacht.",
+        "en": "The opening words of the Latin version of the Hail Mary prayer, addressing the Virgin Mary as 'full of grace.' It is a central text in Catholic liturgy and devotion.",
+        "es": "Las palabras iniciales de la versión latina de la oración Ave María, que se dirige a la Virgen María como 'llena de gracia'. Es un texto central en la liturgia y devoción católica.",
+        "fr": "Les premiers mots de la version latine de la prière Ave Maria, s'adressant à la Vierge Marie en la qualifiant de 'pleine de grâce'. C'est un texte central dans la liturgie et la dévotion catholiques.",
+        "he": "המילים הפותחות של גרסת התפילה 'שלום לך מרים' בלטינית, הפונות אל מרים הבתולה כ'מלאת חסד'. זהו טקסט מרכזי בליטורגיה ובמסורת הקתולית.",
+        "it": "Le parole iniziali della versione latina della preghiera Ave Maria, che si rivolge alla Vergine Maria come 'piena di grazia'. È un testo centrale nella liturgia e devozione cattolica.",
+        "ja": "「アヴェ・マリア」のラテン語版の冒頭の言葉で、「恵みに満ちた」聖母マリアに呼びかける。カトリックの典礼と信仰の中心的な祈りである。",
+        "pt": "As palavras iniciais da versão latina da oração Ave Maria, que se dirige à Virgem Maria como 'cheia de graça'. É um texto central na liturgia e devoção católica.",
+        "ru": "Начальные слова латинской версии молитвы «Аве Мария», обращённые к Деве Марии как «благодатной». Это центральный текст в католической литургии и богослужении.",
+        "zh": "《圣母经》拉丁文版的开头词句，称呼圣母玛利亚为“充满恩宠者”。这是天主教礼仪和敬礼中的核心经文。"
+      },
+      "id": "la_classical_or_scriptural_allusion_ave_maria_gratia_plena_46e53134",
+      "language": "la",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Luke 1:28 in the Vulgate is accurate, and the surface patterns are correct for liturgical use.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "The opening words of the Latin version of the Hail Mary prayer, addressing the Virgin Mary as 'full of grace.' It is a central text in Catholic liturgy and devotion.",
+      "source_author": "Tradition (attributed to Luke 1:28, Jerome)",
+      "source_author_key": "mnemosyne.la.author.tradition_attributed_to_luke_1_28_jerome",
+      "source_dataset": "latin_vulgate_scripture",
+      "source_license": "public_domain",
+      "source_location": "Luke 1:28",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0059%3Abook%3DLuke%3Achapter%3D1%3Averse%3D28",
+      "source_work": "Vulgata (Biblia Sacra)",
+      "source_work_key": "mnemosyne.la.work.vulgata_biblia_sacra",
+      "surface_patterns": [
+        "Ave Maria, gratia plena",
+        "Ave gratia plena",
+        "Ave Maria",
+        "Ave, gratia plena",
+        "Ave Maria, Dominus tecum, benedicta tu in mulieribus"
+      ],
+      "variants": [
+        "Ave Maria, Dominus tecum, benedicta tu in mulieribus"
       ]
     },
     {
@@ -2207,6 +2291,47 @@
       ]
     },
     {
+      "canonical_form": "la:cultural:la_cultural_reference_alis_volat_propriis_a0aacdb0",
+      "canonical_reference": "Alis volat propriis",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.us_state_mottos_alis_volat_propriis",
+      "i18n_explanations": {
+        "ar": "تعني حرفياً 'إنها تطير بأجنحتها الخاصة'، وترمز إلى الاستقلال والاعتماد على الذات. وهي الشعار الرسمي لولاية أوريغون الأمريكية، الذي تم اعتماده عام 1987.",
+        "de": "Bedeutet 'Sie fliegt mit ihren eigenen Flügeln' und symbolisiert Unabhängigkeit und Selbstständigkeit. Es ist der Staatswahlspruch von Oregon, USA, seit 1987.",
+        "en": "Translates to 'She flies with her own wings,' symbolizing independence and self-reliance. It is the state motto of Oregon, USA, adopted in 1987.",
+        "es": "Se traduce como 'Ella vuela con sus propias alas', simbolizando independencia y autosuficiencia. Es el lema del estado de Oregón, EE.UU., adoptado en 1987.",
+        "fr": "Se traduit par 'Elle vole de ses propres ailes', symbolisant l'indépendance et l'autosuffisance. C'est la devise de l'État de l'Oregon, aux États-Unis, adoptée en 1987.",
+        "he": "מתורגם ל'היא עפה בכנפיה שלה', מסמל עצמאות והסתמכות עצמית. זהו המוטו של מדינת אורגון, ארה״ב, שאומץ בשנת 1987.",
+        "it": "Si traduce con 'Vola con le proprie ali', simbolo di indipendenza e autosufficienza. È il motto dello Stato dell'Oregon, USA, adottato nel 1987.",
+        "ja": "「彼女は自分の翼で飛ぶ」という意味で、独立と自立を象徴しています。1987年にアメリカ合衆国オレゴン州のモットーとして採用されました。",
+        "pt": "Traduz-se como 'Ela voa com suas próprias asas', simbolizando independência e autossuficiência. É o lema do estado de Oregon, EUA, adotado em 1987.",
+        "ru": "Переводится как 'Она летит на собственных крыльях', символизируя независимость и самостоятельность. Это девиз штата Орегон, США, принятый в 1987 году.",
+        "zh": "意为“她凭自己的翅膀飞翔”，象征独立和自力更生。这是美国俄勒冈州的州箴言，于1987年通过。"
+      },
+      "id": "la_cultural_reference_alis_volat_propriis_a0aacdb0",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate attribution as Oregon's state motto and correct symbolic meaning, though not classical in origin.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Translates to 'She flies with her own wings,' symbolizing independence and self-reliance. It is the state motto of Oregon, USA, adopted in 1987.",
+      "source_author": "Oral tradition / State of Oregon",
+      "source_author_key": "mnemosyne.la.author.oral_tradition_state_of_oregon",
+      "source_dataset": "us_state_mottos",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Alis volat propriis",
+        "Volat propriis alis",
+        "Pennis propriis volat"
+      ],
+      "variants": [
+        "Pennis propriis volat"
+      ]
+    },
+    {
       "canonical_form": "la:cultural:la_cultural_reference_alma_mater_studiorum_94192eb6",
       "canonical_reference": "Alma mater studiorum",
       "confidence": 0.8,
@@ -2315,6 +2440,43 @@
       "surface_patterns": [
         "Anno Mundi",
         "A.M."
+      ]
+    },
+    {
+      "canonical_form": "la:cultural:la_cultural_reference_ars_gratia_artis_c994ef1a",
+      "canonical_reference": "Ars gratia artis",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.modern_latin_mottos_ars_gratia_artis",
+      "i18n_explanations": {
+        "ar": "تعني حرفياً 'الفن من أجل الفن'. شعار يعبر عن فكرة أن الفن لا يحتاج لخدمة غرض أخلاقي أو نفعي. تستخدمه استوديوهات مترو غولدوين ماير (MGM).",
+        "de": "Bedeutet 'Kunst um der Kunst willen'. Ein Motto, das ausdrückt, dass Kunst keinen moralischen oder utilitaristischen Zweck erfüllen muss. Wird von Metro-Goldwyn-Mayer (MGM) Studios verwendet.",
+        "en": "Translates to 'Art for art’s sake.' A motto expressing the idea that art need not serve a moral or utilitarian purpose. Used by Metro-Goldwyn-Mayer (MGM) studios.",
+        "es": "Se traduce como 'El arte por el arte'. Un lema que expresa la idea de que el arte no necesita servir a un propósito moral o utilitario. Usado por los estudios Metro-Goldwyn-Mayer (MGM).",
+        "fr": "Se traduit par 'L'art pour l'art'. Une devise exprimant l'idée que l'art n'a pas besoin de servir un but moral ou utilitaire. Utilisée par les studios Metro-Goldwyn-Mayer (MGM).",
+        "he": "מתורגם ל'אמנות לשם אמנות'. מוטו המבטא את הרעיון שאמנות אינה צריכה לשרת מטרה מוסרית או תועלתנית. משמש את אולפני מטרו-גולדווין-מאייר (MGM).",
+        "it": "Si traduce con 'L'arte per l'arte'. Un motto che esprime l'idea che l'arte non debba servire a uno scopo morale o utilitaristico. Usato dagli studi Metro-Goldwyn-Mayer (MGM).",
+        "ja": "「芸術のための芸術」という意味です。芸術は道徳的または実用的な目的を果たす必要はないという考えを表すモットーで、メトロ・ゴールドウィン・メイヤー（MGM）スタジオが使用しています。",
+        "pt": "Traduz-se como 'Arte pela arte'. Um lema que expressa a ideia de que a arte não precisa servir a um propósito moral ou utilitário. Usado pelos estúdios Metro-Goldwyn-Mayer (MGM).",
+        "ru": "Переводится как 'Искусство ради искусства'. Девиз, выражающий идею, что искусство не должно служить моральной или утилитарной цели. Используется студией Metro-Goldwyn-Mayer (MGM).",
+        "zh": "意为“为艺术而艺术”。一句座右铭，表达艺术无需服务于道德或实用目的的理念。由米高梅（MGM）电影公司使用。"
+      },
+      "id": "la_cultural_reference_ars_gratia_artis_c994ef1a",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate modern adaptation and cultural usage, though not classical in origin.",
+      "reference_type": "cultural_reference",
+      "register": "literary",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Translates to 'Art for art’s sake.' A motto expressing the idea that art need not serve a moral or utilitarian purpose. Used by Metro-Goldwyn-Mayer (MGM) studios.",
+      "source_author": "Modern adaptation (Theophile Gautier, 19th c.)",
+      "source_author_key": "mnemosyne.la.author.modern_adaptation_theophile_gautier_19th_c",
+      "source_dataset": "modern_latin_mottos",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "Ars gratia artis",
+        "Ars artis gratia"
       ]
     },
     {
@@ -3073,6 +3235,44 @@
         "Lapsus linguae",
         "Lapsus",
         "Lapsus lingua"
+      ]
+    },
+    {
+      "canonical_form": "la:cultural:la_cultural_reference_primus_inter_pares_06089f8e",
+      "canonical_reference": "Primus inter pares",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.la_roman_political_phrases_primus_inter_pares",
+      "i18n_explanations": {
+        "ar": "بمعنى «الأول بين الأنداد» حرفياً، تصف هذه العبارة قائداً يتمتع بالسلطة مع الحفاظ على المساواة مع أقرانه. استخدمت في السياقات السياسية الرومانية، خاصة لدور الإمبراطور في مجلس الشيوخ.",
+        "de": "Wörtlich 'Erster unter Gleichen' beschreibt dieser Ausdruck einen Anführer, der Autorität ausübt, aber die Gleichheit mit seinen Mitstreitern bewahrt. Er wurde im römischen politischen Kontext verwendet, insbesondere für die Rolle des Kaisers im Senat.",
+        "en": "Literally 'first among equals,' this phrase describes a leader who holds authority while maintaining equality with peers. It was used in Roman political contexts, particularly for the emperor's role in the Senate.",
+        "es": "Literalmente 'primero entre iguales', esta frase describe a un líder que ejerce autoridad manteniendo la igualdad con sus pares. Se usó en contextos políticos romanos, especialmente para el papel del emperador en el Senado.",
+        "fr": "Littéralement 'premier parmi les pairs', cette expression désigne un dirigeant qui exerce une autorité tout en restant l'égal de ses pairs. Elle était utilisée dans le contexte politique romain, notamment pour le rôle de l'empereur au Sénat.",
+        "he": "במשמעות המילולית 'ראשון בין שווים', ביטוי זה מתאר מנהיג המחזיק בסמכות תוך שמירה על שוויון עם עמיתיו. שימש בהקשרים פוליטיים רומיים, במיוחד לתפקיד הקיסר בסנאט.",
+        "it": "Letteralmente 'primo tra pari', questa espressione descrive un leader che detiene autorità pur mantenendo l'uguaglianza con i suoi pari. Era usata nel contesto politico romano, in particolare per il ruolo dell'imperatore nel Senato.",
+        "ja": "「同輩の中で第一人者」を意味し、権威を持ちながらも仲間と対等であるリーダーを表す。ローマの政治的文脈、特に元老院における皇帝の役割に用いられた。",
+        "pt": "Literalmente 'primeiro entre iguais', esta frase descreve um líder que exerce autoridade mantendo a igualdade com seus pares. Foi usada em contextos políticos romanos, especialmente para o papel do imperador no Senado.",
+        "ru": "Буквально «первый среди равных», эта фраза описывает лидера, который обладает властью, сохраняя равенство с коллегами. Использовалась в римском политическом контексте, особенно для обозначения роли императора в Сенате.",
+        "zh": "字面意思是“同辈中的第一人”，指在保持与同僚平等的同时拥有权威的领导者。该短语用于罗马政治语境，特别是皇帝在元老院中的角色。"
+      },
+      "id": "la_cultural_reference_primus_inter_pares_06089f8e",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase is accurately described in Roman political contexts, particularly regarding the emperor's role in the Senate.",
+      "reference_type": "cultural_reference",
+      "register": "classical",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Literally 'first among equals,' this phrase describes a leader who holds authority while maintaining equality with peers. It was used in Roman political contexts, particularly for the emperor's role in the Senate.",
+      "source_author": "Roman political tradition",
+      "source_author_key": "mnemosyne.la.author.roman_political_tradition",
+      "source_dataset": "la_roman_political_phrases",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "primus inter pares",
+        "primum inter pares",
+        "princeps inter pares"
       ]
     },
     {
@@ -4310,6 +4510,45 @@
         "Auri sacra fames",
         "The accursed hunger for gold",
         "The cursed greed for gold"
+      ]
+    },
+    {
+      "canonical_form": "la:literary:la_literary_reference_ave_caesar_morituri_te_salutant_0fac8298",
+      "canonical_reference": "Ave Caesar, morituri te salutant",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.suetonius_lives_of_caesars_ave_caesar_morituri_te_",
+      "i18n_explanations": {
+        "ar": "تعني حرفياً 'سلام يا قيصر، الذين على وشك الموت يحيونك'. عبارة شهيرة قيل إنها قيلت من قبل المصارعين قبل القتال، وسجلها سويتونيوس.",
+        "de": "Bedeutet 'Ave Caesar, die Todgeweihten grüßen dich'. Ein berühmter Ausspruch, der angeblich von Gladiatoren vor dem Kampf gesprochen wurde, überliefert von Sueton.",
+        "en": "Translates to 'Hail, Caesar, those who are about to die salute you.' A famous phrase allegedly spoken by gladiators before combat, recorded by Suetonius.",
+        "es": "Se traduce como 'Ave, César, los que van a morir te saludan'. Una famosa frase supuestamente pronunciada por gladiadores antes del combate, registrada por Suetonio.",
+        "fr": "Se traduit par 'Ave César, ceux qui vont mourir te saluent'. Une phrase célèbre prétendument prononcée par les gladiateurs avant le combat, rapportée par Suétone.",
+        "he": "מתורגם ל'שלום, קיסר, ההולכים למות מברכים אותך'. ביטוי מפורסם שלכאורה נאמר על ידי גלדיאטורים לפני קרב, שתועד על ידי סווטוניוס.",
+        "it": "Si traduce con 'Ave, Cesare, coloro che stanno per morire ti salutano'. Una famosa frase presumibilmente pronunciata dai gladiatori prima del combattimento, registrata da Svetonio.",
+        "ja": "「皇帝万歳、死にゆく者たちがあなたに敬礼します」という意味です。剣闘士が戦闘前に述べたとされる有名な言葉で、スエトニウスが記録しています。",
+        "pt": "Traduz-se como 'Salve, César, os que vão morrer te saúdam'. Uma frase famosa supostamente dita por gladiadores antes do combate, registrada por Suetônio.",
+        "ru": "Переводится как 'Аве, Цезарь, идущие на смерть приветствуют тебя'. Известная фраза, якобы произнесённая гладиаторами перед боем, записанная Светонием.",
+        "zh": "意为“恺撒万岁，即将死去的人向您致敬”。一句著名的短语，据称是角斗士战前所说，由苏埃托尼乌斯记录。"
+      },
+      "id": "la_literary_reference_ave_caesar_morituri_te_salutant_0fac8298",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate attribution to Suetonius and correct historical context for the phrase.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Translates to 'Hail, Caesar, those who are about to die salute you.' A famous phrase allegedly spoken by gladiators before combat, recorded by Suetonius.",
+      "source_author": "Gaius Suetonius Tranquillus",
+      "source_author_key": "mnemosyne.la.author.gaius_suetonius_tranquillus",
+      "source_dataset": "suetonius_lives_of_caesars",
+      "source_license": "public_domain",
+      "source_location": "Claudius, 21.6",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0132%3Atext%3DClaud.%3Achapter%3D21",
+      "source_work": "De Vita Caesarum (Divus Claudius)",
+      "source_work_key": "mnemosyne.la.work.de_vita_caesarum_divus_claudius",
+      "surface_patterns": [
+        "Ave Caesar, morituri te salutant",
+        "Ave, Caesar, morituri te salutant",
+        "Morituri te salutant"
       ]
     },
     {
@@ -5739,6 +5978,45 @@
       ]
     },
     {
+      "canonical_form": "la:literary:la_literary_reference_magna_est_vis_consuetudinis_0e2a5bbf",
+      "canonical_reference": "Magna est vis consuetudinis",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.latin_cicero_phrases_magna_est_vis_consuetudinis",
+      "i18n_explanations": {
+        "ar": "عبارة لشيشرون تعني 'عظيمة هي قوة العادة'. تعكس الفكرة الفلسفية بأن العادة تشكل السلوك والفكر البشري.",
+        "de": "Ein Satz von Cicero, der bedeutet 'groß ist die Macht der Gewohnheit'. Er spiegelt die philosophische Idee wider, dass Gewohnheit das menschliche Verhalten und Denken prägt.",
+        "en": "A phrase from Cicero meaning 'great is the power of habit.' It reflects the philosophical idea that custom shapes human behavior and thought.",
+        "es": "Una frase de Cicerón que significa 'grande es el poder de la costumbre'. Refleja la idea filosófica de que la costumbre moldea el comportamiento y el pensamiento humano.",
+        "fr": "Une phrase de Cicéron signifiant 'grande est la force de l'habitude'. Elle reflète l'idée philosophique que la coutume façonne le comportement et la pensée humaine.",
+        "he": "ביטוי של קיקרו שפירושו 'גדול הוא כוח ההרגל'. הוא משקף את הרעיון הפילוסופי שהמנהג מעצב את ההתנהגות והמחשבה האנושית.",
+        "it": "Una frase di Cicerone che significa 'grande è il potere dell'abitudine'. Riflette l'idea filosofica che la consuetudine modella il comportamento e il pensiero umano.",
+        "ja": "キケロの言葉で、「習慣の力は偉大である」という意味。習慣が人間の行動と思考を形作るという哲学的な考えを反映している。",
+        "pt": "Uma frase de Cícero que significa 'grande é o poder do hábito'. Reflete a ideia filosófica de que o costume molda o comportamento e o pensamento humano.",
+        "ru": "Фраза Цицерона, означающая «велика сила привычки». Она отражает философскую идею о том, что обычай формирует человеческое поведение и мышление.",
+        "zh": "西塞罗的名言，意为“习惯的力量是巨大的”。反映了习俗塑造人类行为和思想的哲学观念。"
+      },
+      "id": "la_literary_reference_magna_est_vis_consuetudinis_0e2a5bbf",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase is correctly sourced to Cicero's *Tusculanae Disputationes* (2.17), and the surface patterns are valid.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A phrase from Cicero meaning 'great is the power of habit.' It reflects the philosophical idea that custom shapes human behavior and thought.",
+      "source_author": "Marcus Tullius Cicero",
+      "source_author_key": "mnemosyne.la.author.marcus_tullius_cicero",
+      "source_dataset": "latin_cicero_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 2, Section 17",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Atext%3DTusc.%3Abook%3D2%3Asection%3D17",
+      "source_work": "Tusculanae Disputationes",
+      "source_work_key": "mnemosyne.la.work.tusculanae_disputationes",
+      "surface_patterns": [
+        "Magna est vis consuetudinis",
+        "Vis consuetudinis magna est",
+        "Magna vis consuetudinis"
+      ]
+    },
+    {
       "canonical_form": "la:literary:la_literary_reference_mens_sana_in_corpore_sano_66d3806b",
       "canonical_reference": "Mens sana in corpore sano",
       "confidence": 0.85,
@@ -5775,6 +6053,44 @@
         "Mens sana in corpore sano",
         "Orandum est ut sit mens sana in corpore sano",
         "A sound mind in a sound body"
+      ]
+    },
+    {
+      "canonical_form": "la:literary:la_literary_reference_nascitur_poeta_non_fit_c03039fb",
+      "canonical_reference": "Nascitur poeta, non fit",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.la.explanation.la_horace_epistles_nascitur_poeta_non_fit",
+      "i18n_explanations": {
+        "ar": "مقولة تؤكد أن الشعراء يولدون بموهبة فطرية ولا يصنعهم التدريب. تُنسب إلى الشاعر الروماني هوراس في *رسائله*.",
+        "de": "Eine Aussage, die behauptet, dass Dichter mit angeborenem Talent geboren werden und nicht durch Ausbildung entstehen. Zugeschrieben dem römischen Dichter Horaz in seinen *Episteln*.",
+        "en": "A statement asserting that poets are born with innate talent, not made through training. Attributed to the Roman poet Horace in his *Epistles*.",
+        "es": "Afirmación que sostiene que los poetas nacen con talento innato, no se hacen con entrenamiento. Atribuida al poeta romano Horacio en sus *Epístolas*.",
+        "fr": "Affirmation selon laquelle les poètes naissent avec un talent inné et ne sont pas formés par l'entraînement. Attribuée au poète romain Horace dans ses *Épîtres*.",
+        "he": "אמירה הטוענת כי משוררים נולדים עם כישרון מולד, ולא נוצרים באמצעות אימון. מיוחסת למשורר הרומי הורטיוס ב'אגרות' שלו.",
+        "it": "Affermazione secondo cui i poeti nascono con un talento innato, non si formano con l'addestramento. Attribuita al poeta romano Orazio nelle sue *Epistole*.",
+        "ja": "詩人は生まれながらにして才能を持つものであり、訓練で作られるものではないという主張。ローマの詩人ホラティウスの『書簡詩』に由来する。",
+        "pt": "Afirmação de que os poetas nascem com talento inato, não são feitos por meio de treinamento. Atribuída ao poeta romano Horácio em suas *Epístolas*.",
+        "ru": "Утверждение о том, что поэты рождаются с врожденным талантом, а не становятся таковыми благодаря обучению. Приписывается римскому поэту Горацию в его *Посланиях*.",
+        "zh": "一种主张诗人天生具有才能，而非通过训练造就的观点。出自罗马诗人贺拉斯的《书信集》。"
+      },
+      "id": "la_literary_reference_nascitur_poeta_non_fit_c03039fb",
+      "language": "la",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Horace's *Epistles* (2.3.128-129) with accurate surface patterns and explanation.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A statement asserting that poets are born with innate talent, not made through training. Attributed to the Roman poet Horace in his *Epistles*.",
+      "source_author": "Horatius (Horace)",
+      "source_author_key": "mnemosyne.la.author.horatius_horace",
+      "source_dataset": "la_horace_epistles",
+      "source_license": "public_domain",
+      "source_location": "2.3.128-129",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0065%3Abook%3D2%3Aepistle%3D3",
+      "source_work": "Epistulae",
+      "source_work_key": "mnemosyne.la.work.epistulae",
+      "surface_patterns": [
+        "Nascitur poeta, non fit",
+        "Poeta nascitur, non fit"
       ]
     },
     {
@@ -5852,6 +6168,45 @@
       "surface_patterns": [
         "nec verbum verbo curabis reddere fidus interpres",
         "nec verbum verbo reddere curabis"
+      ]
+    },
+    {
+      "canonical_form": "la:literary:la_literary_reference_nemo_ante_mortem_beatus_6cd7c923",
+      "canonical_reference": "Nemo ante mortem beatus",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.herodotus_histories_phrases_nemo_ante_mortem_beatu",
+      "i18n_explanations": {
+        "ar": "مفهوم كلاسيكي يعني 'لا أحد سعيد قبل الموت'، ويعكس فكرة أن حظ الشخص لا يمكن الحكم عليه إلا في نهاية حياته. غالباً ما يُنسب إلى سولون في هيرودوت.",
+        "de": "Ein klassischer Gedanke mit der Bedeutung 'Niemand ist vor dem Tod glücklich,' der die Idee widerspiegelt, dass das Schicksal eines Menschen erst am Ende seines Lebens beurteilt werden kann. Er wird oft Solon bei Herodot zugeschrieben.",
+        "en": "A classical sentiment meaning 'No one is blessed before death,' reflecting the idea that a person's fortune can only be judged at the end of their life. It is often attributed to Solon in Herodotus.",
+        "es": "Un sentimiento clásico que significa 'Nadie es feliz antes de la muerte', reflejando la idea de que la fortuna de una persona solo puede juzgarse al final de su vida. Suele atribuirse a Solón en Heródoto.",
+        "fr": "Un sentiment classique signifiant 'Personne n'est heureux avant la mort,' reflétant l'idée que la fortune d'une personne ne peut être jugée qu'à la fin de sa vie. Il est souvent attribué à Solon chez Hérodote.",
+        "he": "רעיון קלאסי שפירושו 'איש אינו מאושר לפני המוות', המשקף את הדעה שגורלו של אדם ניתן לשפוט רק בסוף חייו. מיוחס לעיתים קרובות לסולון אצל הרודוטוס.",
+        "it": "Un sentimento classico che significa 'Nessuno è felice prima della morte,' riflettendo l'idea che la fortuna di una persona può essere giudicata solo alla fine della sua vita. È spesso attribuito a Solone in Erodoto.",
+        "ja": "『死ぬまでは誰も幸福とは言えない』という古典的な考えで、人の運命は人生の終わりに初めて判断できるとする思想。ヘロドトスのソロンにしばしば帰される。",
+        "pt": "Um sentimento clássico que significa 'Ninguém é feliz antes da morte', refletindo a ideia de que a fortuna de uma pessoa só pode ser julgada no fim de sua vida. É frequentemente atribuído a Sólon em Heródoto.",
+        "ru": "Классическая мысль, означающая 'Никто не блажен до смерти', отражающая идею, что судьбу человека можно оценить только в конце его жизни. Часто приписывается Солону у Геродота.",
+        "zh": "一句古典名言，意为“生前无人可称有福”，反映了人的命运只有在生命结束时才能评判的观点。常归于希罗多德笔下的梭伦。"
+      },
+      "id": "la_literary_reference_nemo_ante_mortem_beatus_6cd7c923",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The sentiment is accurately attributed to Herodotus, reflecting Solon's statement in the 'Histories.'",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "A classical sentiment meaning 'No one is blessed before death,' reflecting the idea that a person's fortune can only be judged at the end of their life. It is often attributed to Solon in Herodotus.",
+      "source_author": "Herodotus",
+      "source_author_key": "mnemosyne.la.author.herodotus",
+      "source_dataset": "herodotus_histories_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 1, Section 32",
+      "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0126%3Abook%3D1%3Achapter%3D32",
+      "source_work": "Histories",
+      "source_work_key": "mnemosyne.la.work.histories",
+      "surface_patterns": [
+        "Nemo ante mortem beatus",
+        "nemo ante mortem beatus est",
+        "beatus nemo ante obitum"
       ]
     },
     {
@@ -6568,6 +6923,45 @@
       ]
     },
     {
+      "canonical_form": "la:literary:la_literary_reference_sine_ira_et_studio_f36d4d20",
+      "canonical_reference": "Sine ira et studio",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.tacitus_annales_phrases_sine_ira_et_studio",
+      "i18n_explanations": {
+        "ar": "عبارة تعني 'بدون غضب أو تحيز'، غالباً ما تُستخدم لوصف الكتابة المحايدة أو الموضوعية. ارتبطت بشكل مشهور بالمؤرخ تاسيتوس، الذي سعى إلى روايات تاريخية غير متحيزة.",
+        "de": "Ein Ausdruck mit der Bedeutung 'ohne Zorn und Eifer,' der oft verwendet wird, um unparteiisches oder objektives Schreiben zu beschreiben. Er ist berühmt mit dem Historiker Tacitus verbunden, der nach unvoreingenommenen historischen Berichten strebte.",
+        "en": "A phrase meaning 'without anger and partiality,' often used to describe impartial or objective writing. It is famously associated with the historian Tacitus, who aimed for unbiased historical accounts.",
+        "es": "Una frase que significa 'sin ira ni parcialidad', utilizada para describir escritos imparciales u objetivos. Está famosa asociada con el historiador Tácito, quien buscaba relatos históricos sin sesgos.",
+        "fr": "Une expression signifiant 'sans colère ni partialité,' souvent utilisée pour décrire un écrit impartial ou objectif. Elle est célèbrement associée à l'historien Tacite, qui visait des récits historiques sans parti pris.",
+        "he": "ביטוי שפירושו 'בלי כעס ובלי משוא פנים', משמש לעיתים קרובות לתיאור כתיבה נייטרלית או אובייקטיבית. הוא ידוע בקשרו להיסטוריון טקיטוס, שביקש לכתוב תיאורים היסטוריים ללא הטיה.",
+        "it": "Una frase che significa 'senza ira e parzialità', spesso usata per descrivere scritti imparziali o oggettivi. È famosa per essere associata allo storico Tacito, che mirava a resoconti storici senza pregiudizi.",
+        "ja": "『怒りや偏見なしに』という意味の言葉で、公平または客観的な文章を表す際に使われる。偏りのない歴史記述を目指した歴史家タキトゥスと関連が深い。",
+        "pt": "Uma frase que significa 'sem ira e parcialidade', frequentemente usada para descrever escritos imparciais ou objetivos. Está famosa associada ao historiador Tácito, que buscava relatos históricos sem viés.",
+        "ru": "Фраза, означающая 'без гнева и пристрастия', часто используется для описания беспристрастного или объективного письма. Она знаменита связью с историком Тацитом, который стремился к непредвзятым историческим повествованиям.",
+        "zh": "意为“无怒无偏”的短语，常用于描述公正或客观的写作。著名与历史学家塔西佗相关，他力求不带偏见的历史叙述。"
+      },
+      "id": "la_literary_reference_sine_ira_et_studio_f36d4d20",
+      "language": "la",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase appears verbatim in Tacitus' 'Annales' and is correctly attributed to his methodological statement.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A phrase meaning 'without anger and partiality,' often used to describe impartial or objective writing. It is famously associated with the historian Tacitus, who aimed for unbiased historical accounts.",
+      "source_author": "Tacitus",
+      "source_author_key": "mnemosyne.la.author.tacitus",
+      "source_dataset": "tacitus_annales_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 1, Section 1",
+      "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0078%3Abook%3D1%3Achapter%3D1",
+      "source_work": "Annales",
+      "source_work_key": "mnemosyne.la.work.annales",
+      "surface_patterns": [
+        "Sine ira et studio",
+        "sine ira et studio scribere",
+        "sine ira ac studio"
+      ]
+    },
+    {
       "canonical_form": "la:literary:la_literary_reference_sunt_lacrimae_rerum_et_mentem_mortalia_tangunt_c523a9c1",
       "canonical_reference": "Sunt lacrimae rerum et mentem mortalia tangunt",
       "confidence": 0.9,
@@ -6877,6 +7271,43 @@
         "varium et mutabile semper femina",
         "femina varium et mutabile semper",
         "varium et mutabile femina"
+      ]
+    },
+    {
+      "canonical_form": "la:literary:la_literary_reference_veni_vidi_vici_b1610284",
+      "canonical_reference": "Veni, vidi, vici",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.la.explanation.la_suetonius_lives_caesar_veni_vidi_vici",
+      "i18n_explanations": {
+        "ar": "عبارة شهيرة لجوليوس قيصر بعد انتصار عسكري سريع، وتستخدم اليوم للتعبير عن النجاح السريع والحاسم في أي مسعى.",
+        "de": "Ein berühmter Prahlspruch von Julius Caesar nach einem schnellen militärischen Sieg, heute verwendet, um schnellen und entscheidenden Erfolg in jedem Unterfangen auszudrücken.",
+        "en": "A famous boast by Julius Caesar after a swift military victory, now used to express rapid and decisive success in any endeavor.",
+        "es": "Famosa jactancia de Julio César tras una rápida victoria militar, hoy usada para expresar éxito rápido y decisivo en cualquier empresa.",
+        "fr": "Une célèbre vantardise de Jules César après une victoire militaire rapide, aujourd'hui utilisée pour exprimer un succès rapide et décisif dans n'importe quelle entreprise.",
+        "he": "התפארות מפורסמת של יוליוס קיסר לאחר ניצחון צבאי מהיר, ומשמשת כיום להבעת הצלחה מהירה ונחרצת בכל תחום.",
+        "it": "Una famosa vanteria di Giulio Cesare dopo una rapida vittoria militare, oggi usata per esprimere un successo rapido e decisivo in qualsiasi impresa.",
+        "ja": "ジュリアス・シーザーが迅速な軍事的勝利の後に発した有名な言葉で、現在はあらゆる分野での迅速かつ決定的な成功を表現する際に使われる。",
+        "pt": "Uma famosa ostentação de Júlio César após uma rápida vitória militar, hoje usada para expressar sucesso rápido e decisivo em qualquer empreendimento.",
+        "ru": "Знаменитое хвастовство Юлия Цезаря после быстрой военной победы, сегодня используется для выражения быстрого и решительного успеха в любом начинании.",
+        "zh": "尤利乌斯·凯撒在迅速取得军事胜利后的著名夸耀，如今用于表达任何领域中迅速而决定性的成功。"
+      },
+      "id": "la_literary_reference_veni_vidi_vici_b1610284",
+      "language": "la",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Julius Caesar via Suetonius is accurate, though the exact source location is unattested.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "A famous boast by Julius Caesar after a swift military victory, now used to express rapid and decisive success in any endeavor.",
+      "source_author": "Julius Caesar",
+      "source_author_key": "mnemosyne.la.author.julius_caesar",
+      "source_dataset": "la_suetonius_lives_caesar",
+      "source_license": "public_domain",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0086%3Achapter%3D37",
+      "source_work": "Letter to the Roman Senate (reported by Suetonius)",
+      "source_work_key": "mnemosyne.la.work.letter_to_the_roman_senate_reported_by_suetonius",
+      "surface_patterns": [
+        "Veni, vidi, vici",
+        "I came, I saw, I conquered"
       ]
     },
     {
@@ -8005,6 +8436,89 @@
         "tertium non datur est",
         "tertium non datur legi",
         "tertium non datur non datur"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:la_proverb_tradition_ubi_bene_ibi_patria_345d6c46",
+      "canonical_reference": "Ubi bene, ibi patria",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.la.explanation.latin_proverbs_stoic_ubi_bene_ibi_patria",
+      "i18n_explanations": {
+        "ar": "مثل يعني 'حيثما يكون المرء بخير، فهناك وطنه'، يعبر عن فكرة أن الوطن هو حيث يكون المرء سعيداً أو مزدهراً. يعكس المثل ideals رواقية وعالمية.",
+        "de": "Ein Sprichwort mit der Bedeutung 'wo es gut ist, da ist das Vaterland', das ausdrückt, dass Heimat dort ist, wo man glücklich oder wohlhabend ist. Spiegelt stoische und kosmopolitische Ideale wider.",
+        "en": "A proverb meaning 'where (it is) well, there (is) the fatherland,' expressing the idea that home is where one is happy or prosperous. Reflects Stoic and cosmopolitan ideals.",
+        "es": "Un proverbio que significa 'donde (se está) bien, allí (está) la patria', expresando la idea de que el hogar es donde uno es feliz o próspero. Refleja ideales estoicos y cosmopolitas.",
+        "fr": "Un proverbe signifiant 'là où l'on est bien, là est la patrie', exprimant l'idée que le foyer est là où l'on est heureux ou prospère. Reflète des idéaux stoïciens et cosmopolites.",
+        "he": "פתגם שפירושו 'היכן שטוב, שם המולדת', המבטא את הרעיון שהבית הוא המקום שבו האדם מאושר או מצליח. משקף אידיאלים סטואיים וקוסמופוליטיים.",
+        "it": "Un proverbio che significa 'dove (si sta) bene, lì (è) la patria', esprime l'idea che la patria è dove si è felici o prosperi. Riflette ideali stoici e cosmopoliti.",
+        "ja": "「良きところに故郷あり」という意味の諺で、幸福や繁栄がある場所が故郷であるという考えを表す。ストア派や世界市民主義の理想を反映している。",
+        "pt": "Um provérbio que significa 'onde (se está) bem, aí (é) a pátria', expressando a ideia de que o lar é onde se é feliz ou próspero. Reflete ideais estoicos e cosmopolitas.",
+        "ru": "Пословица, означающая 'где хорошо, там и родина', выражающая идею, что дом там, где человек счастлив или процветает. Отражает стоические и космополитические идеалы.",
+        "zh": "一句谚语，意为“哪里好，哪里就是故乡”，表达家园是一个人感到幸福或繁荣的地方。反映了斯多葛和世界主义的理想。"
+      },
+      "id": "la_proverb_tradition_ubi_bene_ibi_patria_345d6c46",
+      "language": "la",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Proverb is well-attested in Cicero and Seneca, with accurate surface patterns and cultural context.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "A proverb meaning 'where (it is) well, there (is) the fatherland,' expressing the idea that home is where one is happy or prosperous. Reflects Stoic and cosmopolitan ideals.",
+      "source_author": "Oral tradition (attested in Cicero and Seneca)",
+      "source_author_key": "mnemosyne.la.author.oral_tradition_attested_in_cicero_and_seneca",
+      "source_dataset": "latin_proverbs_stoic",
+      "source_license": "public_domain",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0064%3Aalphabetic+letter%3DU%3Aentry+group%3D1%3Aentry%3Dubi",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.la.work.various",
+      "surface_patterns": [
+        "ubi bene, ibi patria",
+        "ubi bene ibi patria",
+        "patria est ubicumque est bene"
+      ]
+    },
+    {
+      "canonical_form": "la:proverb:la_proverb_tradition_vulnerant_omnes_ultima_necat_350f72e6",
+      "canonical_reference": "Vulnerant omnes, ultima necat",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.la.explanation.la_proverbs_time_vulnerant_omnes_ultima_necat",
+      "i18n_explanations": {
+        "ar": "هذه العبارة التي توجد غالباً على الساعات أو الساعات الشمسية تعني \"كل [ساعة] تجرح، والأخيرة تقتل\"، محذرة من حتمية مرور الزمن والموت. تؤكد على الطبيعة العابرة للحياة.",
+        "de": "Dieser Satz, oft auf Uhren oder Sonnenuhren zu finden, bedeutet 'Alle [Stunden] verwunden, die letzte tötet' und warnt vor der Unausweichlichkeit des Zeitverlaufs und der Sterblichkeit. Er unterstreicht die Vergänglichkeit des Lebens.",
+        "en": "This phrase, often found on clocks or sundials, means 'All [hours] wound, the last one kills,' warning of the inevitability of time's passage and mortality. It underscores the fleeting nature of life.",
+        "es": "Esta frase, común en relojes o relojes de sol, significa 'Todas [las horas] hieren, la última mata', advirtiendo sobre la inevitabilidad del paso del tiempo y la mortalidad. Subraya la naturaleza efímera de la vida.",
+        "fr": "Cette phrase, souvent gravée sur des horloges ou des cadrans solaires, signifie 'Toutes [les heures] blessent, la dernière tue', mettant en garde contre l'inéluctabilité du passage du temps et de la mortalité. Elle souligne la nature éphémère de la vie.",
+        "he": "ביטוי זה, הנמצא לעיתים על שעונים או שעוני שמש, פירושו 'כל [השעות] פוצעות, האחרונה הורגת', ומזהיר מפני חוסר הנמנעות של חלוף הזמן והמוות. הוא מדגיש את אופייה החולף של החיים.",
+        "it": "Questa frase, spesso trovata su orologi o meridiane, significa 'Tutte [le ore] feriscono, l'ultima uccide', avvertendo dell'inevitabilità del passaggio del tempo e della mortalità. Sottolinea la natura fugace della vita.",
+        "ja": "この言葉は時計や日時計によく刻まれ、「すべての時間は傷つけ、最後の時間は殺す」という意味で、時間の流れと死の必然性を警告しています。人生の儚さを強調しています。",
+        "pt": "Esta frase, frequentemente encontrada em relógios ou relógios de sol, significa 'Todas [as horas] ferem, a última mata', alertando para a inevitabilidade da passagem do tempo e da mortalidade. Destaca a natureza efêmera da vida.",
+        "ru": "Эта фраза, часто встречающаяся на часах или солнечных часах, означает 'Все [часы] ранят, последняя убивает', предупреждая о неотвратимости течения времени и смертности. Она подчеркивает скоротечность жизни.",
+        "zh": "这句话常见于钟表或日晷，意为“每个小时都会带来伤害，最后一个小时则会致命”，警示时间流逝和死亡的必然性。它强调了生命的短暂。"
+      },
+      "id": "la_proverb_tradition_vulnerant_omnes_ultima_necat_350f72e6",
+      "language": "la",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to common clock/sundial inscriptions is accurate and verifiable in epigraphic sources, with correct surface patterns.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This phrase, often found on clocks or sundials, means 'All [hours] wound, the last one kills,' warning of the inevitability of time's passage and mortality. It underscores the fleeting nature of life.",
+      "source_author": "Unknown (common clock/sundial inscription)",
+      "source_author_key": "mnemosyne.la.author.unknown_common_clock_sundial_inscription",
+      "source_dataset": "la_proverbs_time",
+      "source_license": "not_required",
+      "source_work": "Oral tradition",
+      "source_work_key": "mnemosyne.la.work.oral_tradition",
+      "surface_patterns": [
+        "Vulnerant omnes, ultima necat",
+        "Omnes vulnerant, ultima necat",
+        "Vulnerant omnes, postrema necat",
+        "Horæ vulnerant, ultima necat",
+        "Vulnerant omnes, postrema tollit",
+        "Horæ vulnerant, ultima finit"
+      ],
+      "variants": [
+        "Vulnerant omnes, postrema tollit",
+        "Horæ vulnerant, ultima finit"
       ]
     }
   ],
