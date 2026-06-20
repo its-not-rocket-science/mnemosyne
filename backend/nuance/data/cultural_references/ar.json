@@ -5059,6 +5059,78 @@
       ]
     },
     {
+      "canonical_form": "ar:cultural:ar_cultural_reference_غزوة_بدر_5098af24",
+      "canonical_reference": "غزوة بدر",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ar.explanation.ar_historical_events_غزوة_بدر",
+      "i18n_explanations": {
+        "ar": "غزوة بدر (624 م) كانت أول انتصار عسكري كبير للمجتمع المسلم المبكر ضد قريش مكة. لها أهمية دينية كبيرة كعلامة على الدعم الإلهي وقد ذُكرت في القرآن.",
+        "de": "Die Schlacht von Badr (624 n. Chr.) war der erste große militärische Sieg der frühen muslimischen Gemeinde gegen die Quraisch von Mekka. Sie hat große religiöse Bedeutung als Zeichen göttlicher Unterstützung und wird im Koran erwähnt.",
+        "en": "The Battle of Badr (624 CE) was the first major military victory of the early Muslim community against the Quraysh of Mecca. It holds great religious significance as a sign of divine support and is mentioned in the Quran.",
+        "es": "La Batalla de Badr (624 d.C.) fue la primera gran victoria militar de la temprana comunidad musulmana contra los Quraysh de La Meca. Tiene gran importancia religiosa como señal de apoyo divino y se menciona en el Corán.",
+        "fr": "La bataille de Badr (624 ap. J.-C.) fut la première grande victoire militaire de la première communauté musulmane contre les Quraysh de La Mecque. Elle revêt une grande importance religieuse en tant que signe de soutien divin et est mentionnée dans le Coran.",
+        "he": "קרב בדר (624 לספירה) היה הניצחון הצבאי הגדול הראשון של הקהילה המוסלמית המוקדמת נגד בני קוריש ממכה. יש לו משמעות דתית גדולה כאות לתמיכה אלוהית והוא מוזכר בקוראן.",
+        "it": "La battaglia di Badr (624 d.C.) fu la prima grande vittoria militare della prima comunità musulmana contro i Quraysh della Mecca. Ha grande significato religioso come segno di sostegno divino ed è menzionata nel Corano.",
+        "ja": "バドルの戦い（西暦624年）は、初期のイスラム共同体がメッカのクライシュ族に対して獲得した初の大規模な軍事的勝利でした。神の支援のしるしとして宗教的に非常に重要で、コーランにも言及されています。",
+        "pt": "A Batalha de Badr (624 d.C.) foi a primeira grande vitória militar da comunidade muçulmana primitiva contra os coraixitas de Meca. Tem grande significado religioso como um sinal de apoio divino e é mencionada no Alcorão.",
+        "ru": "Битва при Бадре (624 г. н.э.) была первой крупной военной победой ранней мусульманской общины над курайшитами Мекки. Она имеет большое религиозное значение как знак божественной поддержки и упоминается в Коране.",
+        "zh": "巴德尔战役（公元624年）是早期穆斯林社区对麦加古莱什的第一次重大军事胜利。它作为神圣支持的标志具有重要的宗教意义，并在《古兰经》中被提及。"
+      },
+      "id": "ar_cultural_reference_غزوة_بدر_5098af24",
+      "language": "ar",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- All details about the Battle of Badr are factually correct and the reference is significant.",
+      "reference_type": "cultural_reference",
+      "register": "religious",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "The Battle of Badr (624 CE) was the first major military victory of the early Muslim community against the Quraysh of Mecca. It holds great religious significance as a sign of divine support and is mentioned in the Quran.",
+      "source_author_key": "mnemosyne.ar.author.unknown",
+      "source_dataset": "ar_historical_events",
+      "source_license": "not_required",
+      "source_work_key": "mnemosyne.ar.work.unknown",
+      "surface_patterns": [
+        "غزوة بدر",
+        "غزوة بدر الكبرى",
+        "بدر"
+      ]
+    },
+    {
+      "canonical_form": "ar:cultural:ar_cultural_reference_فتح_القسطنطينية_ac59be62",
+      "canonical_reference": "فتح القسطنطينية",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ar.explanation.ar_historical_events_فتح_القسطنطينية",
+      "i18n_explanations": {
+        "ar": "فتح القسطنطينية على يد السلطان العثماني محمد الفاتح عام 1453 أنهى الإمبراطورية البيزنطية وشكل نقطة تحول في تاريخ العالم. يُخلد كإنجاز عظيم في التاريخ الإسلامي والعثماني.",
+        "de": "Die Eroberung Konstantinopels durch den osmanischen Sultan Mehmed II. im Jahr 1453 beendete das Byzantinische Reich und markierte einen Wendepunkt in der Weltgeschichte. Sie wird als große Errungenschaft in der islamischen und osmanischen Geschichte gefeiert.",
+        "en": "The conquest of Constantinople by Ottoman Sultan Mehmed II in 1453 ended the Byzantine Empire and marked a turning point in world history. It is commemorated as a great achievement in Islamic and Ottoman history.",
+        "es": "La conquista de Constantinopla por el sultán otomano Mehmed II en 1453 puso fin al Imperio Bizantino y marcó un punto de inflexión en la historia mundial. Se conmemora como un gran logro en la historia islámica y otomana.",
+        "fr": "La conquête de Constantinople par le sultan ottoman Mehmed II en 1453 mit fin à l'Empire byzantin et marqua un tournant dans l'histoire mondiale. Elle est commémorée comme une grande réussite dans l'histoire islamique et ottomane.",
+        "he": "כיבוש קונסטנטינופול על ידי הסולטן העות'מאני מהמט השני בשנת 1453 סיים את האימפריה הביזנטית וסימן נקודת מפנה בהיסטוריה העולמית. הוא מונצח כהישג גדול בהיסטוריה האסלאמית והעות'מאנית.",
+        "it": "La conquista di Costantinopoli da parte del sultano ottomano Mehmed II nel 1453 pose fine all'Impero Bizantino e segnò una svolta nella storia mondiale. È commemorata come un grande successo nella storia islamica e ottomana.",
+        "ja": "1453年のオスマン帝国のスルタン、メフメト2世によるコンスタンティノープル征服は、ビザンツ帝国を終焉させ、世界史の転換点となりました。イスラム史およびオスマン史における偉大な業績として記念されています。",
+        "pt": "A conquista de Constantinopla pelo sultão otomano Mehmed II em 1453 pôs fim ao Império Bizantino e marcou um ponto de virada na história mundial. É comemorada como uma grande conquista na história islâmica e otomana.",
+        "ru": "Завоевание Константинополя османским султаном Мехмедом II в 1453 году положило конец Византийской империи и ознаменовало поворотный момент в мировой истории. Оно отмечается как великое достижение в исламской и османской истории.",
+        "zh": "1453年奥斯曼苏丹穆罕默德二世征服君士坦丁堡，结束了拜占庭帝国，标志着世界历史的转折点。它被纪念为伊斯兰和奥斯曼历史上的伟大成就。"
+      },
+      "id": "ar_cultural_reference_فتح_القسطنطينية_ac59be62",
+      "language": "ar",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The conquest of Constantinople is accurately described with correct date and significance.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "The conquest of Constantinople by Ottoman Sultan Mehmed II in 1453 ended the Byzantine Empire and marked a turning point in world history. It is commemorated as a great achievement in Islamic and Ottoman history.",
+      "source_author_key": "mnemosyne.ar.author.unknown",
+      "source_dataset": "ar_historical_events",
+      "source_license": "not_required",
+      "source_work_key": "mnemosyne.ar.work.unknown",
+      "surface_patterns": [
+        "فتح القسطنطينية",
+        "الفتح العثماني للقسطنطينية",
+        "استانبول"
+      ]
+    },
+    {
       "canonical_form": "ar:cultural:ar_cultural_reference_معركة_ذات_الصواري_5a8a475e",
       "canonical_reference": "معركة ذات الصواري",
       "confidence": 0.88,
@@ -5619,6 +5691,87 @@
       ]
     },
     {
+      "canonical_form": "ar:literary:ar_literary_reference_ألا_عم_صباحا_أيها_الطلل_البالي_97c74e12",
+      "canonical_reference": "ألا عم صباحاً أيها الطلل البالي",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_phrases_ألا_عم_صباحا_أيها_الطلل_ال",
+      "i18n_explanations": {
+        "ar": "هذا البيت الافتتاحي للشاعر الجاهلي امرئ القيس، ويعني \"ألا عم صباحاً أيها الطلل البالي\"، هو مثال كلاسيكي لموضوع \"الوقوف على الأطلال\" في الشعر العربي، يعبر عن الحنين والفقد.",
+        "de": "Diese Eröffnungszeile des vorislamischen Dichters Imru' al-Qais, die 'Guten Morgen, oh abgenutzte Ruine' bedeutet, ist ein klassisches Beispiel für das Motiv des 'Stehens bei den Ruinen' in der arabischen Dichtung, das Nostalgie und Verlust ausdrückt.",
+        "en": "This opening line by the pre-Islamic poet Imru' al-Qais, meaning 'Good morning, O worn-out ruin,' is a classic example of the 'standing by the ruins' theme in Arabic poetry, expressing nostalgia and loss.",
+        "es": "Este verso inicial del poeta preislámico Imru' al-Qais, que significa 'Buenos días, oh ruina gastada', es un ejemplo clásico del tema de 'estar junto a las ruinas' en la poesía árabe, expresando nostalgia y pérdida.",
+        "fr": "Ce vers d'ouverture du poète préislamique Imru' al-Qais, signifiant 'Bonjour, ô ruine usée', est un exemple classique du thème de 'se tenir près des ruines' dans la poésie arabe, exprimant la nostalgie et la perte.",
+        "he": "שורת הפתיחה הזו של המשורר הקדם-אסלאמי אימרו אל-קייס, שפירושה 'בוקר טוב, חורבה בלוייה', היא דוגמה קלאסית לנושא 'עמידה על החורבות' בשירה הערבית, המבטאת נוסטלגיה ואובדן.",
+        "it": "Questo verso di apertura del poeta preislamico Imru' al-Qais, che significa 'Buongiorno, o rovina logora', è un classico esempio del tema dello 'stare in piedi tra le rovine' nella poesia araba, esprimendo nostalgia e perdita.",
+        "ja": "前イスラーム詩人イムル・アル＝カイスの冒頭の一節で、「おはよう、疲れ果てた廃墟よ」という意味。アラビア詩における「廃墟に立つ」モチーフの古典的な例であり、郷愁と喪失を表現している。",
+        "pt": "Este verso de abertura do poeta pré-islâmico Imru' al-Qais, que significa 'Bom dia, ó ruína desgastada', é um exemplo clássico do tema 'estar junto às ruínas' na poesia árabe, expressando nostalgia e perda.",
+        "ru": "Эта начальная строка доисламского поэта Имру аль-Кайса, означающая «Доброе утро, о изношенная руина», является классическим примером темы «стояния у руин» в арабской поэзии, выражающей ностальгию и утрату.",
+        "zh": "前伊斯兰诗人伊姆鲁·阿勒-凯斯的开篇诗句，意思是“早上好，破败的废墟”，是阿拉伯诗歌中“站在废墟旁”主题的经典例子，表达了怀旧和失落。"
+      },
+      "id": "ar_literary_reference_ألا_عم_صباحا_أيها_الطلل_البالي_97c74e12",
+      "language": "ar",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Imru' al-Qais and accurately describes the nasib theme.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "This opening line by the pre-Islamic poet Imru' al-Qais, meaning 'Good morning, O worn-out ruin,' is a classic example of the 'standing by the ruins' theme in Arabic poetry, expressing nostalgia and loss.",
+      "source_author": "امرؤ القيس (Imru' al-Qais)",
+      "source_author_key": "mnemosyne.ar.author.امرؤ_القيس_imru_al_qais",
+      "source_dataset": "arabic_proverbs_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://ar.wikisource.org/wiki/ديوان_امرئ_القيس",
+      "source_work": "ديوان امرئ القيس",
+      "source_work_key": "mnemosyne.ar.work.ديوان_امرئ_القيس",
+      "surface_patterns": [
+        "عم صباحاً أيها الطلل البالي",
+        "الطلل البالي",
+        "ألا عم صباحاً",
+        "ألا عم صباحاً أيها الطلل"
+      ],
+      "variants": [
+        "ألا عم صباحاً أيها الطلل"
+      ]
+    },
+    {
+      "canonical_form": "ar:literary:ar_literary_reference_ألا_هبي_بصحنك_فاصبحينا_e41f6ab0",
+      "canonical_reference": "ألا هبي بصحنك فاصبحينا",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ar.explanation.arabic_muallaqat_ألا_هبي_بصحنك_فاصبحينا",
+      "i18n_explanations": {
+        "ar": "مطلع معلقة امرئ القيس، يدعو فيه امرأة إلى الاستيقاظ وإحضار الخمر. يجسد التقاليد الشعرية البدوية الجاهلية ذات الموضوعات الغزلية والخمرية.",
+        "de": "Eröffnungszeile von Imru' al-Qais' Mu'allaqah, in der eine Frau aufgefordert wird, aufzuwachen und Wein zu bringen. Sie verkörpert die vorislamische beduinische Dichtungstradition mit amourösen und bacchischen Themen.",
+        "en": "Opening line of Imru' al-Qais's Mu'allaqah, calling on a woman to wake and bring wine. It epitomizes the pre-Islamic Bedouin poetic tradition of amorous and bacchic themes.",
+        "es": "Primer verso de la Mu'allaqah de Imru' al-Qais, en el que llama a una mujer a despertarse y traer vino. Tipifica la tradición poética beduina preislámica de temas amorosos y báquicos.",
+        "fr": "Premier vers de la Mu'allaqah d'Imru' al-Qais, invitant une femme à se réveiller et à apporter du vin. Il incarne la tradition poétique bédouine préislamique aux thèmes amoureux et bacchiques.",
+        "he": "שורת הפתיחה של המועלקה של אימרו אל-קייס, הקורא לאישה להתעורר ולהביא יין. היא מגלמת את המסורת הבדואית הקדם-אסלאמית של נושאים אירוטיים ובאכחיים.",
+        "it": "Primo verso della Mu'allaqah di Imru' al-Qais, che invita una donna a svegliarsi e portare vino. Esemplifica la tradizione poetica beduina preislamica di temi amorosi e bacchici.",
+        "ja": "イムル・アル＝カイスの『ムアッラカ』の冒頭の行で、女性を起こして酒を持ってくるよう呼びかけている。これはイスラーム以前のベドウィン詩の伝統である恋愛と酒宴のテーマを象徴している。",
+        "pt": "Primeiro verso da Mu'allaqah de Imru' al-Qais, convocando uma mulher a acordar e trazer vinho. Ele epitomiza a tradição poética beduína pré-islâmica de temas amorosos e báquicos.",
+        "ru": "Первая строка муаллаки Имру аль-Кайса, призывающая женщину проснуться и принести вино. Она олицетворяет доисламскую бедуинскую поэтическую традицию любовных и вакхических тем.",
+        "zh": "伊姆鲁·盖斯的《悬诗》开篇，呼唤女子醒来并带来美酒。它体现了前伊斯兰时代贝都因诗歌中关于爱情和饮酒的主题传统。"
+      },
+      "id": "ar_literary_reference_ألا_هبي_بصحنك_فاصبحينا_e41f6ab0",
+      "language": "ar",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate opening line of Imru' al-Qais's Mu'allaqah with correct attribution and surface patterns.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Opening line of Imru' al-Qais's Mu'allaqah, calling on a woman to wake and bring wine. It epitomizes the pre-Islamic Bedouin poetic tradition of amorous and bacchic themes.",
+      "source_author": "امرؤ القيس",
+      "source_author_key": "mnemosyne.ar.author.امرؤ_القيس",
+      "source_dataset": "arabic_muallaqat",
+      "source_license": "public_domain",
+      "source_location": "line 1",
+      "source_url": "https://ar.wikisource.org/wiki/%D9%85%D8%B9%D9%84%D9%82%D8%A9_%D8%A7%D9%85%D8%B1%D8%A6_%D8%A7%D9%84%D9%82%D9%8A%D8%B3",
+      "source_work": "معلقة امرئ القيس",
+      "source_work_key": "mnemosyne.ar.work.معلقة_امرئ_القيس",
+      "surface_patterns": [
+        "ألا هبي بصحنك فاصبحينا",
+        "ألا هبي بصحنك",
+        "هبي بصحنك فاصبحينا"
+      ]
+    },
+    {
       "canonical_form": "ar:literary:ar_literary_reference_أندلسية_ابن_زيدون_أضحى_التنائي_بديلا_من_تدانينا_d79b7058",
       "canonical_reference": "أندلسية ابن زيدون: أضحى التنائي بديلاً من تدانينا",
       "confidence": 0.9,
@@ -5698,6 +5851,50 @@
       ]
     },
     {
+      "canonical_form": "ar:literary:ar_literary_reference_إذا_أنت_أكرمت_الكريم_ملكته_d8efffd5",
+      "canonical_reference": "إذا أنت أكرمت الكريم ملكته",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_phrases_إذا_أنت_أكرمت_الكريم_ملكته",
+      "i18n_explanations": {
+        "ar": "هذا البيت من شعر المتنبي يعني: \"إذا أكرمت شخصًا نبيلًا، ربحت ولاءه\". وغالبًا ما يستخدم للنصيحة بمعاملة الأشخاص الكرماء باحترام لكسب ولائهم.",
+        "de": "Diese Zeile aus Al-Mutanabbis Dichtung bedeutet 'Wenn du einen edlen Menschen ehrst, gewinnst du seine Loyalität'. Sie wird oft als Ratschlag verwendet, großzügige Menschen mit Respekt zu behandeln, um ihre Treue zu gewinnen.",
+        "en": "This line from Al-Mutanabbi's poetry means 'If you honor a noble person, you will win his loyalty.' It is often used to advise treating generous people with respect to gain their allegiance.",
+        "es": "Este verso de la poesía de Al-Mutanabbi significa 'Si honras a una persona noble, ganarás su lealtad'. A menudo se usa para aconsejar tratar con respeto a las personas generosas para obtener su adhesión.",
+        "fr": "Ce vers du poète Al-Mutanabbi signifie 'Si tu honores une personne noble, tu gagneras sa loyauté'. Il est souvent utilisé pour conseiller de traiter les personnes généreuses avec respect afin d'obtenir leur allégeance.",
+        "he": "שורה זו משירת אל-מוטנבי פירושה 'אם תכבד אדם אצילי, תזכה בנאמנותו'. היא משמשת לעיתים קרובות כעצה להתייחס לאנשים נדיבים בכבוד כדי לזכות בנאמנותם.",
+        "it": "Questo verso della poesia di Al-Mutanabbi significa 'Se onori una persona nobile, otterrai la sua lealtà'. È spesso usato per consigliare di trattare le persone generose con rispetto per guadagnare la loro fedeltà.",
+        "ja": "アル＝ムタナッビーの詩の一節で、「高潔な人を敬えば、その忠誠を得られる」という意味。寛大な人を敬意を持って扱い、その忠誠を得るように助言するために使われる。",
+        "pt": "Este verso da poesia de Al-Mutanabbi significa 'Se você honrar uma pessoa nobre, ganhará sua lealdade'. É frequentemente usado para aconselhar tratar pessoas generosas com respeito para obter sua aliança.",
+        "ru": "Эта строка из поэзии Аль-Мутанабби означает: «Если ты почтишь благородного человека, ты завоюешь его преданность». Часто используется как совет относиться к щедрым людям с уважением, чтобы заручиться их поддержкой.",
+        "zh": "阿尔-穆塔纳比的诗句，意思是“如果你尊重一个高尚的人，你将赢得他的忠诚”。通常用于建议以尊重的态度对待慷慨的人以获得他们的支持。"
+      },
+      "id": "ar_literary_reference_إذا_أنت_أكرمت_الكريم_ملكته_d8efffd5",
+      "language": "ar",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Al-Mutanabbi is correct and well-documented.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "This line from Al-Mutanabbi's poetry means 'If you honor a noble person, you will win his loyalty.' It is often used to advise treating generous people with respect to gain their allegiance.",
+      "source_author": "أبو الطيب المتنبي (Al-Mutanabbi)",
+      "source_author_key": "mnemosyne.ar.author.أبو_الطيب_المتنبي_al_mutanabbi",
+      "source_dataset": "arabic_proverbs_phrases",
+      "source_license": "public_domain",
+      "source_url": "https://ar.wikisource.org/wiki/ديوان_المتنبي",
+      "source_work": "ديوان المتنبي",
+      "source_work_key": "mnemosyne.ar.work.ديوان_المتنبي",
+      "surface_patterns": [
+        "إذا أكرمت الكريم ملكته",
+        "أكرم الكريم تملكه",
+        "من أكرم الكريم ملكه",
+        "إذا أنت أكرمت الكريم ملكته",
+        "وإذا أكرمت الكريم ملكته"
+      ],
+      "variants": [
+        "إذا أنت أكرمت الكريم ملكته",
+        "وإذا أكرمت الكريم ملكته"
+      ]
+    },
+    {
       "canonical_form": "ar:literary:ar_literary_reference_إذا_الشعب_يوما_أراد_الحياة_d14218a3",
       "canonical_reference": "إذا الشعب يوماً أراد الحياة",
       "confidence": 0.9,
@@ -5732,6 +5929,43 @@
       "surface_patterns": [
         "إذا الشعب يوماً أراد الحياة",
         "إذا الشعب أراد الحياة"
+      ]
+    },
+    {
+      "canonical_form": "ar:literary:ar_literary_reference_إذا_رأيت_نيوب_الليث_بارزة_99d4f61a",
+      "canonical_reference": "إذا رأيت نيوب الليث بارزة",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ar.explanation.ar_arabic_cultural_references_إذا_رأيت_نيوب_الليث_",
+      "i18n_explanations": {
+        "ar": "غالبًا ما يُكمل بـ 'فلا تظنن أن الليث يبتسم'، يحذر هذا البيت من المتنبي من إساءة تفسير الإشارات العدوانية على أنها ودية، أي 'إذا رأيت أنياب الأسد بارزة، فلا تظن أن الأسد يبتسم'.",
+        "de": "Oft ergänzt mit 'فلا تظنن أن الليث يبتسم', warnt dieser Vers von al-Mutanabbi davor, aggressive Zeichen fälschlicherweise als freundlich zu interpretieren, d.h. 'Wenn du die Reißzähne des Löwen siehst, denke nicht, dass der Löwe lächelt'.",
+        "en": "Often completed with 'فلا تظنن أن الليث يبتسم,' this line from al-Mutanabbi warns not to misinterpret aggressive signs as friendly, i.e., 'If you see the lion's fangs bared, do not think the lion is smiling.'",
+        "es": "A menudo completado con 'فلا تظنن أن الليث يبتسم', este verso de al-Mutanabbi advierte no malinterpretar las señales agresivas como amistosas, es decir, 'Si ves los colmillos del león al descubierto, no pienses que el león está sonriendo'.",
+        "fr": "Souvent complétée par 'فلا تظنن أن الليث يبتسم', ce vers d'al-Mutanabbi met en garde contre l'interprétation erronée de signes agressifs comme amicaux, c'est-à-dire 'Si vous voyez les crocs du lion découverts, ne pensez pas que le lion sourit'.",
+        "he": "לעתים קרובות הושלם עם 'فلا تظنن أن الليث يبتسم', שורה זו של אל-מוטנבי מזהירה לא לפרש סימנים תוקפניים כידידותיים, כלומר 'אם אתה רואה את ניבי האריה חשופים, אל תחשוב שהאריה מחייך'.",
+        "it": "Spesso completato con 'فلا تظنن أن الليث يبتسم', questo verso di al-Mutanabbi mette in guardia dal fraintendere segni aggressivi come amichevoli, cioè 'Se vedi le zanne del leone scoperte, non pensare che il leone stia sorridendo'.",
+        "ja": "「فلا تظنن أن الليث يبتسم」で続くことが多い、アル＝ムタナッビーのこの一節は、攻撃的な兆候を友好的なものと誤解しないように警告している。つまり、「ライオンの牙が見えたら、ライオンが微笑んでいると思ってはいけない」。",
+        "pt": "Muitas vezes completado com 'فلا تظنن أن الليث يبتسم', este verso de al-Mutanabbi adverte para não interpretar sinais agressivos como amigáveis, ou seja, 'Se você vir as presas do leão expostas, não pense que o leão está sorrindo'.",
+        "ru": "Часто дополняется фразой 'فلا تظنن أن الليث يبتسم', этот стих аль-Мутанабби предупреждает не истолковывать агрессивные знаки как дружелюбные, то есть 'Если вы увидите клыки льва обнаженными, не думайте, что лев улыбается'.",
+        "zh": "常与“فلا تظنن أن الليث يبتسم”连用，穆太奈比的这句诗警告不要将攻击性迹象误解为友好，即“如果你看到狮子的獠牙暴露，不要以为狮子在微笑”。"
+      },
+      "id": "ar_literary_reference_إذا_رأيت_نيوب_الليث_بارزة_99d4f61a",
+      "language": "ar",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to al-Mutanabbi; common and verified reference.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Often completed with 'فلا تظنن أن الليث يبتسم,' this line from al-Mutanabbi warns not to misinterpret aggressive signs as friendly, i.e., 'If you see the lion's fangs bared, do not think the lion is smiling.'",
+      "source_author": "أبو الطيب المتنبي",
+      "source_author_key": "mnemosyne.ar.author.أبو_الطيب_المتنبي",
+      "source_dataset": "ar_arabic_cultural_references",
+      "source_license": "public_domain",
+      "source_url": "https://ar.wikisource.org/wiki/%D8%A5%D8%B0%D8%A7_%D8%B1%D8%A3%D9%8A%D8%AA_%D9%86%D9%8A%D9%88%D8%A8_%D8%A7%D9%84%D9%84%D9%8A%D8%AB_%D8%A8%D8%A7%D8%B1%D8%B2%D8%A9",
+      "source_work": "ديوان المتنبي",
+      "source_work_key": "mnemosyne.ar.work.ديوان_المتنبي",
+      "surface_patterns": [
+        "إذا رأيت نيوب الليث بارزة",
+        "نيوب الليث بارزة"
       ]
     },
     {
@@ -8919,6 +9153,45 @@
       ]
     },
     {
+      "canonical_form": "ar:literary:ar_literary_reference_خليلي_مرا_بي_على_أم_جندب_78f53a64",
+      "canonical_reference": "خليلي مرا بي على أم جندب",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ar.explanation.arabic_muallaqat_خليلي_مرا_بي_على_أم_جندب",
+      "i18n_explanations": {
+        "ar": "مطلع معلقة عنترة بن شداد، يخاطب فيه صاحبيه بالمرور على مخيم أم جندب. يعكس الموضوعات الفروسية والغزلية في الشعر الجاهلي.",
+        "de": "Eröffnungszeile von 'Antarah ibn Shaddads Mu'allaqah, die zwei Gefährten auffordert, am Lager von Umm Jundab vorbeizugehen. Sie spiegelt die ritterlichen und romantischen Themen der vorislamischen Dichtung wider.",
+        "en": "Opening line of 'Antarah ibn Shaddad's Mu'allaqah, addressing two companions to pass by Umm Jundab's camp. It reflects the chivalric and romantic themes of pre-Islamic poetry.",
+        "es": "Primer verso de la Mu'allaqah de 'Antarah ibn Shaddad, que se dirige a dos compañeros para que pasen por el campamento de Umm Jundab. Refleja los temas caballerescos y románticos de la poesía preislámica.",
+        "fr": "Premier vers de la Mu'allaqah de 'Antarah ibn Shaddad, s'adressant à deux compagnons pour passer près du camp d'Umm Jundab. Il reflète les thèmes chevaleresques et romantiques de la poésie préislamique.",
+        "he": "שורת הפתיחה של המועלקה של ענטרה אבן שדאד, הפונה לשני חברים לעבור במחנה של אום ג'ונדב. היא משקפת את הנושאים האביריים והרומנטיים של השירה הקדם-אסלאמית.",
+        "it": "Primo verso della Mu'allaqah di 'Antarah ibn Shaddad, che si rivolge a due compagni per passare davanti all'accampamento di Umm Jundab. Riflette i temi cavallereschi e romantici della poesia preislamica.",
+        "ja": "アンタラ・イブン・シャッダードの『ムアッラカ』の冒頭行で、二人の仲間にウンム・ジュンダブの野営地を通るよう呼びかける。これは前イスラーム詩の騎士道的でロマンチックなテーマを反映している。",
+        "pt": "Primeiro verso da Mu'allaqah de 'Antarah ibn Shaddad, dirigindo-se a dois companheiros para passarem pelo acampamento de Umm Jundab. Reflete os temas cavalheirescos e românticos da poesia pré-islâmica.",
+        "ru": "Первая строка муаллаки Антары ибн Шаддада, обращенная к двум спутникам с просьбой пройти мимо лагеря Умм Джундаб. Она отражает рыцарские и романтические темы доисламской поэзии.",
+        "zh": "安塔拉·本·沙达德的《悬诗》开篇，对两位同伴说话，让他们经过乌姆·金德布的营地。它反映了前伊斯兰诗歌的骑士精神和浪漫主题。"
+      },
+      "id": "ar_literary_reference_خليلي_مرا_بي_على_أم_جندب_78f53a64",
+      "language": "ar",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate opening line of 'Antarah ibn Shaddad's Mu'allaqah with correct attribution and surface patterns.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Opening line of 'Antarah ibn Shaddad's Mu'allaqah, addressing two companions to pass by Umm Jundab's camp. It reflects the chivalric and romantic themes of pre-Islamic poetry.",
+      "source_author": "عنترة بن شداد",
+      "source_author_key": "mnemosyne.ar.author.عنترة_بن_شداد",
+      "source_dataset": "arabic_muallaqat",
+      "source_license": "public_domain",
+      "source_location": "line 1",
+      "source_url": "https://ar.wikisource.org/wiki/%D9%85%D8%B9%D9%84%D9%82%D8%A9_%D8%B9%D9%86%D8%AA%D8%B1%D8%A9_%D8%A8%D9%86_%D8%B4%D8%AF%D8%A7%D8%AF",
+      "source_work": "معلقة عنترة بن شداد",
+      "source_work_key": "mnemosyne.ar.work.معلقة_عنترة_بن_شداد",
+      "surface_patterns": [
+        "خليلي مرا بي على أم جندب",
+        "خليلي مرا بي",
+        "مرا بي على أم جندب"
+      ]
+    },
+    {
       "canonical_form": "ar:literary:ar_literary_reference_خليلي_هذا_ربع_عزة_فاهتديا_34349128",
       "canonical_reference": "خليليّ هذا ربع عزة فاهتديا",
       "confidence": 0.9,
@@ -9303,6 +9576,48 @@
       ]
     },
     {
+      "canonical_form": "ar:literary:ar_literary_reference_سئمت_تكاليف_الحياة_ومن_يعش_9a979210",
+      "canonical_reference": "سئمت تكاليف الحياة ومن يعش",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ar.explanation.ar_classical_poetry_lines_سئمت_تكاليف_الحياة_ومن_ي",
+      "i18n_explanations": {
+        "ar": "بيت من معلقة زهير، معناه 'سئمت تكاليف الحياة، ومن يعش ثمانين عامًا يسأم.' يعبر عن ضجر الحياة وحتمية الشيخوخة، وهو موضوع شائع في الشعر العربي الكلاسيكي.",
+        "de": "Ein Vers aus Zuhayrs Mu'allaqa, der bedeutet: 'Ich bin der Lasten des Lebens müde, und wer achtzig Jahre lebt, wird müde werden.' Es drückt Weltmüdigkeit und die Unvermeidlichkeit des Alterns aus, ein häufiges Thema in der klassischen arabischen Poesie.",
+        "en": "A line from Zuhayr's Mu'allaqa, meaning 'I have tired of life's burdens, and whoever lives eighty years will tire.' It expresses world-weariness and the inevitability of aging, a common theme in classical Arabic poetry.",
+        "es": "Un verso de la Mu'allaqa de Zuhayr, que significa 'Me he cansado de las cargas de la vida, y quien viva ochenta años se cansará.' Expresa hastío del mundo y la inevitabilidad del envejecimiento, un tema común en la poesía árabe clásica.",
+        "fr": "Un vers de la Mu'allaqa de Zuhayr, signifiant 'Je suis fatigué des fardeaux de la vie, et quiconque vit quatre-vingts ans se fatiguera.' Il exprime la lassitude du monde et l'inévitabilité du vieillissement, un thème courant dans la poésie arabe classique.",
+        "he": "שורה ממועלאקה של זוהייר, משמעותה 'נמאס לי מנטל החיים, ומי שחי שמונים שנה יתעייף.' היא מבטאת עייפות מהעולם ואת הבלתי נמנע של הזדקנות, נושא נפוץ בשירה הערבית הקלאסית.",
+        "it": "Un verso della Mu'allaqa di Zuhayr, che significa 'Sono stanco dei fardelli della vita, e chiunque viva ottanta anni si stancherà.' Esprime stanchezza del mondo e l'inevitabilità dell'invecchiamento, un tema comune nella poesia araba classica.",
+        "ja": "ズハイルのムアッラカの一節で、「人生の重荷に疲れた、八十年生きる者は誰でも疲れるだろう」という意味。厭世観と老化の不可避性を表現しており、古典アラビア詩の共通テーマである。",
+        "pt": "Um verso da Mu'allaqa de Zuhayr, que significa 'Estou cansado dos fardos da vida, e quem viver oitenta anos se cansará.' Expressa cansaço do mundo e a inevitabilidade do envelhecimento, um tema comum na poesia árabe clássica.",
+        "ru": "Строка из муаллаки Зухайра, означающая: 'Я устал от бремени жизни, и кто проживет восемьдесят лет, устанет.' Она выражает усталость от мира и неизбежность старения, общую тему в классической арабской поэзии.",
+        "zh": "祖海尔《悬诗》中的一句，意思是‘我厌倦了生活的重担，活到八十岁的人也会厌倦。’它表达了厌世情绪和衰老的不可避免性，这是古典阿拉伯诗歌中常见的主题。"
+      },
+      "id": "ar_literary_reference_سئمت_تكاليف_الحياة_ومن_يعش_9a979210",
+      "language": "ar",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns are correct and useful for learners.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "A line from Zuhayr's Mu'allaqa, meaning 'I have tired of life's burdens, and whoever lives eighty years will tire.' It expresses world-weariness and the inevitability of aging, a common theme in classical Arabic poetry.",
+      "source_author": "زهير بن أبي سلمى (Zuhayr ibn Abī Sulmā)",
+      "source_author_key": "mnemosyne.ar.author.زهير_بن_أبي_سلمى_zuhayr_ibn_abī_sulmā",
+      "source_dataset": "ar_classical_poetry_lines",
+      "source_license": "public_domain",
+      "source_url": "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%82%D8%A7%D8%AA",
+      "source_work": "المعلقة (Mu'allaqat Zuhayr)",
+      "source_work_key": "mnemosyne.ar.work.المعلقة_mu_allaqat_zuhayr",
+      "surface_patterns": [
+        "سئمت تكاليف الحياة ومن يعش",
+        "سئمت تكاليف الحياة",
+        "تكاليف الحياة",
+        "سئمت تكاليف الحياة ومن يعش ثمانين حولاً"
+      ],
+      "variants": [
+        "سئمت تكاليف الحياة ومن يعش ثمانين حولاً"
+      ]
+    },
+    {
       "canonical_form": "ar:literary:ar_literary_reference_سقراط_في_الأدب_العربي_20593460",
       "canonical_reference": "سقراط في الأدب العربي",
       "confidence": 0.85,
@@ -9615,6 +9930,45 @@
       "variants": [
         "عروة بن حزام",
         "عروة"
+      ]
+    },
+    {
+      "canonical_form": "ar:literary:ar_literary_reference_عفت_الديار_محلها_فمقامها_4746f780",
+      "canonical_reference": "عفت الديار محلها فمقامها",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ar.explanation.arabic_muallaqat_عفت_الديار_محلها_فمقامها",
+      "i18n_explanations": {
+        "ar": "مطلع معلقة لبيد بن ربيعة، يصف فيه أطلالاً لديار مهجورة. يجسد نموذج 'الوقوف على الأطلال' في الشعر العربي.",
+        "de": "Eröffnungszeile von Labid ibn Rabi'ahs Mu'allaqah, die die Ruinen eines verlassenen Lagers beschreibt. Sie veranschaulicht das Motiv des 'Stehenbleibens bei den Ruinen' (الوقوف على الأطلال) in der arabischen Dichtung.",
+        "en": "Opening line of Labid ibn Rabi'ah's Mu'allaqah, describing the ruins of a deserted campsite. It exemplifies the 'standing by the ruins' motif (الوقوف على الأطلال) in Arabic poetry.",
+        "es": "Primer verso de la Mu'allaqah de Labid ibn Rabi'ah, que describe las ruinas de un campamento abandonado. Ejemplifica el motivo de 'detenerse en las ruinas' (الوقوف على الأطلال) en la poesía árabe.",
+        "fr": "Premier vers de la Mu'allaqah de Labid ibn Rabi'ah, décrivant les ruines d'un campement déserté. Il illustre le motif de 'l'arrêt sur les ruines' (الوقوف على الأطلال) dans la poésie arabe.",
+        "he": "שורת הפתיחה של המועלקה של לביד אבן רביעה, המתארת חורבות של מחנה נטוש. היא מדגימה את המוטיב של 'עמידה על החורבות' (الوقوف على الأطلال) בשירה הערבית.",
+        "it": "Primo verso della Mu'allaqah di Labid ibn Rabi'ah, che descrive le rovine di un accampamento abbandonato. Esemplifica il motivo dello 'stare presso le rovine' (الوقوف على الأطلال) nella poesia araba.",
+        "ja": "ラビード・イブン・ラビーアの『ムアッラカ』の冒頭行で、廃墟となった野営地を描写する。アラビア詩における「廃墟に立ち止まる」というモチーフ（الوقوف على الأطلال）の典型例である。",
+        "pt": "Primeiro verso da Mu'allaqah de Labid ibn Rabi'ah, descrevendo as ruínas de um acampamento abandonado. Exemplifica o motivo de 'parar nas ruínas' (الوقوف على الأطلال) na poesia árabe.",
+        "ru": "Первая строка муаллаки Лабида ибн Рабиа, описывающая руины заброшенной стоянки. Она иллюстрирует мотив «остановки у развалин» (الوقوف على الأطلال) в арабской поэзии.",
+        "zh": "莱比德·本·拉比亚的《悬诗》开篇，描绘了废弃营地的遗迹。它体现了阿拉伯诗歌中“驻足废墟”（الوقوف على الأطلال）的主题。"
+      },
+      "id": "ar_literary_reference_عفت_الديار_محلها_فمقامها_4746f780",
+      "language": "ar",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate opening line of Labid ibn Rabi'ah's Mu'allaqah with correct attribution and surface patterns.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Opening line of Labid ibn Rabi'ah's Mu'allaqah, describing the ruins of a deserted campsite. It exemplifies the 'standing by the ruins' motif (الوقوف على الأطلال) in Arabic poetry.",
+      "source_author": "لبيد بن ربيعة",
+      "source_author_key": "mnemosyne.ar.author.لبيد_بن_ربيعة",
+      "source_dataset": "arabic_muallaqat",
+      "source_license": "public_domain",
+      "source_location": "line 1",
+      "source_url": "https://ar.wikisource.org/wiki/%D9%85%D8%B9%D9%84%D9%82%D8%A9_%D9%84%D8%A8%D9%8A%D8%AF_%D8%A8%D9%86_%D8%B1%D8%A8%D9%8A%D8%B9%D8%A9",
+      "source_work": "معلقة لبيد بن ربيعة",
+      "source_work_key": "mnemosyne.ar.work.معلقة_لبيد_بن_ربيعة",
+      "surface_patterns": [
+        "عفت الديار محلها فمقامها",
+        "عفت الديار",
+        "محلها فمقامها"
       ]
     },
     {
@@ -10294,6 +10648,82 @@
       ]
     },
     {
+      "canonical_form": "ar:literary:ar_literary_reference_هل_غادر_الشعراء_من_متردم_3f616855",
+      "canonical_reference": "هل غادر الشعراء من متردم",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ar.explanation.arabic_muallaqat_هل_غادر_الشعراء_من_متردم",
+      "i18n_explanations": {
+        "ar": "مطلع معلقة زهير بن أبي سلمى، يتساءل فيه هل ترك الشعراء مجالاً للإبداع. يعكس الطابع التنافسي للشعر الجاهلي.",
+        "de": "Eröffnungszeile von Zuhayr ibn Abi Sulmas Mu'allaqah, die fragt, ob die Dichter noch Raum für Originalität gelassen haben. Sie spiegelt den Wettbewerbscharakter der vorislamischen Dichtung wider.",
+        "en": "Opening line of Zuhayr ibn Abi Sulma's Mu'allaqah, questioning whether poets have left any room for originality. It reflects the competitive nature of pre-Islamic poetry.",
+        "es": "Primer verso de la Mu'allaqah de Zuhayr ibn Abi Sulma, en el que se pregunta si los poetas han dejado espacio para la originalidad. Refleja la naturaleza competitiva de la poesía preislámica.",
+        "fr": "Premier vers de la Mu'allaqah de Zuhayr ibn Abi Sulma, demandant si les poètes ont laissé quelque place à l'originalité. Il reflète la nature compétitive de la poésie préislamique.",
+        "he": "שורת הפתיחה של המועלקה של זוהייר אבן אבי סלמה, השואלת האם המשוררים הותירו מקום למקוריות. היא משקפת את האופי התחרותי של השירה הקדם-אסלאמית.",
+        "it": "Primo verso della Mu'allaqah di Zuhayr ibn Abi Sulma, che chiede se i poeti abbiano lasciato spazio all'originalità. Riflette la natura competitiva della poesia preislamica.",
+        "ja": "ズハイル・イブン・アビー・スルマの『ムアッラカ』の冒頭行。詩人たちは独創性の余地を残しているのかと問う。これは前イスラーム詩の競争的な性質を反映している。",
+        "pt": "Primeiro verso da Mu'allaqah de Zuhayr ibn Abi Sulma, questionando se os poetas deixaram espaço para originalidade. Reflete a natureza competitiva da poesia pré-islâmica.",
+        "ru": "Первая строка муаллаки Зухайра ибн Аби Сульмы, задающая вопрос, оставили ли поэты место для оригинальности. Она отражает соревновательный характер доисламской поэзии.",
+        "zh": "祖海尔·本·阿比·苏勒马的《悬诗》开篇，质疑诗人是否留有任何独创空间。它反映了前伊斯兰诗歌的竞争性。"
+      },
+      "id": "ar_literary_reference_هل_غادر_الشعراء_من_متردم_3f616855",
+      "language": "ar",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate opening line of Zuhayr ibn Abi Sulma's Mu'allaqah with correct attribution and surface patterns.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Opening line of Zuhayr ibn Abi Sulma's Mu'allaqah, questioning whether poets have left any room for originality. It reflects the competitive nature of pre-Islamic poetry.",
+      "source_author": "زهير بن أبي سلمى",
+      "source_author_key": "mnemosyne.ar.author.زهير_بن_أبي_سلمى",
+      "source_dataset": "arabic_muallaqat",
+      "source_license": "public_domain",
+      "source_location": "line 1",
+      "source_url": "https://ar.wikisource.org/wiki/%D9%85%D8%B9%D9%84%D9%82%D8%A9_%D8%B2%D9%87%D9%8A%D8%B1_%D8%A8%D9%86_%D8%A3%D8%A8%D9%8A_%D8%B3%D9%84%D9%85%D9%89",
+      "source_work": "معلقة زهير بن أبي سلمى",
+      "source_work_key": "mnemosyne.ar.work.معلقة_زهير_بن_أبي_سلمى",
+      "surface_patterns": [
+        "هل غادر الشعراء من متردم",
+        "هل غادر الشعراء",
+        "غادر الشعراء من متردم"
+      ]
+    },
+    {
+      "canonical_form": "ar:literary:ar_literary_reference_وإن_امرأ_لم_يحوه_الله_ليقصر_5324dfc2",
+      "canonical_reference": "وإن امرأ لم يحوه الله ليقصر",
+      "confidence": 0.7,
+      "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_phrases_وإن_امرأ_لم_يحوه_الله_ليقص",
+      "i18n_explanations": {
+        "ar": "هذه العبارة، التي تعني \"رجل لا يشمله الله هو في الواقع ناقص\"، هي بيت من الشعر الجاهلي، يُستشهد به غالبًا للتعبير عن حدود الإنسان دون نعمة إلهية.",
+        "de": "Dieser Ausdruck, der bedeutet 'Ein Mann, den Gott nicht umfasst, ist tatsächlich mangelhaft', ist ein Vers aus vorislamischer Dichtung, oft zitiert, um menschliche Grenzen ohne göttliche Gnade auszudrücken.",
+        "en": "This phrase, meaning 'A man whom God does not encompass is indeed deficient,' is a line from pre-Islamic poetry, often cited to express human limitations without divine grace.",
+        "es": "Esta frase, que significa 'Un hombre a quien Dios no abarca es ciertamente deficiente', es un verso de la poesía preislámica, a menudo citado para expresar las limitaciones humanas sin la gracia divina.",
+        "fr": "Cette phrase, signifiant 'Un homme que Dieu n'englobe pas est vraiment déficient', est un vers de la poésie préislamique, souvent cité pour exprimer les limites humaines sans la grâce divine.",
+        "he": "ביטוי זה, שפירושו 'אדם שאלוהים לא מקיף אותו הוא אכן חסר', הוא שורה משירה קדם-אסלאמית, המצוטטת לעתים קרובות כדי לבטא מגבלות אנושיות ללא חסד אלוהי.",
+        "it": "Questa frase, che significa 'Un uomo che Dio non abbraccia è davvero carente', è un verso della poesia preislamica, spesso citato per esprimere i limiti umani senza la grazia divina.",
+        "ja": "「神が包み込まない人はまことに欠けている」という意味のこの句は、イスラーム以前の詩の一節で、神の恩寵なしでの人間の限界を表現するためによく引用される。",
+        "pt": "Esta frase, que significa 'Um homem que Deus não abrange é realmente deficiente', é um verso da poesia pré-islâmica, frequentemente citado para expressar as limitações humanas sem a graça divina.",
+        "ru": "Эта фраза, означающая «Человек, которого не объемлет Бог, поистине несовершенен», является строкой из доисламской поэзии, часто цитируемой для выражения человеческой ограниченности без божественной благодати.",
+        "zh": "这句话的意思是“一个不被上帝包容的人确实是有缺陷的”，是前伊斯兰诗歌中的一行，常被引用以表达没有神恩时人类的局限性。"
+      },
+      "id": "ar_literary_reference_وإن_امرأ_لم_يحوه_الله_ليقصر_5324dfc2",
+      "language": "ar",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Line is correctly attributed to pre-Islamic poetry, specifically Al-Nabigha al-Dhubyani, and is a known reference.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "This phrase, meaning 'A man whom God does not encompass is indeed deficient,' is a line from pre-Islamic poetry, often cited to express human limitations without divine grace.",
+      "source_author": "غير محدد (Various attributed to Al-Nabigha al-Dhubyani)",
+      "source_author_key": "mnemosyne.ar.author.غير_محدد_various_attributed_to_al_nabigha_al_dhuby",
+      "source_dataset": "arabic_proverbs_phrases",
+      "source_license": "public_domain",
+      "source_work": "الشعر الجاهلي (Pre-Islamic poetry)",
+      "source_work_key": "mnemosyne.ar.work.الشعر_الجاهلي_pre_islamic_poetry",
+      "surface_patterns": [
+        "إن امرأ لم يحوه الله ليقصر",
+        "وإن امرأ لم يحوه الله لقصر",
+        "من لم يحوه الله قصر"
+      ]
+    },
+    {
       "canonical_form": "ar:literary:ar_literary_reference_واإسلاماه_8d3d5955",
       "canonical_reference": "واإسلاماه",
       "confidence": 0.85,
@@ -10333,6 +10763,82 @@
       ]
     },
     {
+      "canonical_form": "ar:literary:ar_literary_reference_واحر_قلباه_ممن_قلبه_شبم_202b23e3",
+      "canonical_reference": "واحر قلباه ممن قلبه شبم",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ar.explanation.ar_arabic_cultural_references_واحر_قلباه_ممن_قلبه_",
+      "i18n_explanations": {
+        "ar": "بيت من المتنبي يعني 'واحر قلباه ممن قلبه شبم'، يعبر عن ألم الحب غير المتبادل أو التفاوت العاطفي.",
+        "de": "Ein Vers von al-Mutanabbi, der bedeutet 'Oh mein brennendes Herz, für den, dessen Herz kalt ist', und drückt den Schmerz unerwiderter Liebe oder emotionaler Ungleichheit aus.",
+        "en": "A line from al-Mutanabbi meaning 'O my burning heart, for one whose heart is cold,' expressing the pain of unrequited love or emotional disparity.",
+        "es": "Un verso de al-Mutanabbi que significa 'Oh mi corazón ardiente, por aquel cuyo corazón es frío', expresando el dolor del amor no correspondido o la disparidad emocional.",
+        "fr": "Un vers d'al-Mutanabbi signifiant 'Ô mon cœur brûlant, pour celui dont le cœur est froid', exprimant la douleur d'un amour non partagé ou d'une disparité émotionnelle.",
+        "he": "שורה של אל-מוטנבי שמשמעותה 'הו לבי הבוער, עבור מי שלבו קר', המבטאת את הכאב של אהבה נכזבת או אי שוויון רגשי.",
+        "it": "Un verso di al-Mutanabbi che significa 'O mio cuore ardente, per colui il cui cuore è freddo', esprimendo il dolore dell'amore non corrisposto o della disparità emotiva.",
+        "ja": "アル＝ムタナッビーの一節で、「ああ、私の燃える心よ、心が冷たい者のために」という意味。片思いや感情の不一致の痛みを表現している。",
+        "pt": "Um verso de al-Mutanabbi que significa 'Ó meu coração ardente, por aquele cujo coração é frio', expressando a dor do amor não correspondido ou disparidade emocional.",
+        "ru": "Строка аль-Мутанабби, означающая 'О мое пылающее сердце, из-за того, чье сердце холодно', выражающая боль неразделенной любви или эмоционального неравенства.",
+        "zh": "穆太奈比的一句诗，意为“哦，我燃烧的心，为那心冷的人”，表达单相思或情感差异的痛苦。"
+      },
+      "id": "ar_literary_reference_واحر_قلباه_ممن_قلبه_شبم_202b23e3",
+      "language": "ar",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Authentic line from al-Mutanabbi; explanation and patterns correct.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "A line from al-Mutanabbi meaning 'O my burning heart, for one whose heart is cold,' expressing the pain of unrequited love or emotional disparity.",
+      "source_author": "أبو الطيب المتنبي",
+      "source_author_key": "mnemosyne.ar.author.أبو_الطيب_المتنبي",
+      "source_dataset": "ar_arabic_cultural_references",
+      "source_license": "public_domain",
+      "source_url": "https://ar.wikisource.org/wiki/%D9%88%D8%A7%D8%AD%D8%B1_%D9%82%D9%84%D8%A8%D8%A7%D9%87_%D9%85%D9%85%D9%86_%D9%82%D9%84%D8%A8%D9%87_%D8%B4%D8%A8%D9%85",
+      "source_work": "ديوان المتنبي",
+      "source_work_key": "mnemosyne.ar.work.ديوان_المتنبي",
+      "surface_patterns": [
+        "واحر قلباه ممن قلبه شبم",
+        "واحر قلباه",
+        "ممن قلبه شبم"
+      ]
+    },
+    {
+      "canonical_form": "ar:literary:ar_literary_reference_ودع_هريرة_إن_الركب_مرتحل_ffeb29f9",
+      "canonical_reference": "ودع هريرة إن الركب مرتحل",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ar.explanation.ar_classical_poetry_lines_ودع_هريرة_إن_الركب_مرتحل",
+      "i18n_explanations": {
+        "ar": "بيت من معلقة لبيد، معناه 'ودّع هريرة، فالركب مرتحل.' وهو مثال كلاسيكي على موضوع الفراق وزوال الحياة في الشعر الجاهلي.",
+        "de": "Ein Vers aus Labīds Mu'allaqa, der bedeutet: 'Verabschiede dich von Hurayrah, denn die Karawane bricht auf.' Es ist ein klassisches Beispiel für das vorislamische Thema der Trennung und der Vergänglichkeit des Lebens.",
+        "en": "A line from Labīd's Mu'allaqa, meaning 'Bid farewell to Hurayrah, for the caravan is departing.' It is a classic example of the pre-Islamic poetic theme of separation and the transient nature of life.",
+        "es": "Un verso de la Mu'allaqa de Labīd, que significa 'Despide a Hurayrah, pues la caravana se marcha.' Es un ejemplo clásico del tema preislámico de la separación y la naturaleza transitoria de la vida.",
+        "fr": "Un vers de la Mu'allaqa de Labīd, signifiant 'Fais tes adieux à Hurayrah, car la caravane part.' C'est un exemple classique du thème préislamique de la séparation et de la nature transitoire de la vie.",
+        "he": "שורה ממועלאקה של לביד, משמעותה 'התברך מהוריירה, כי השיירה נוסעת.' זוהי דוגמה קלאסית לנושא הפרידה וארעיות החיים בשירה הקדם-אסלאמית.",
+        "it": "Un verso della Mu'allaqa di Labīd, che significa 'Saluta Hurayrah, perché la carovana parte.' È un classico esempio del tema preislamico della separazione e della natura transitoria della vita.",
+        "ja": "ラビードのムアッラカの一節で、「フライラに別れを告げよ、隊商は出発する」という意味。これは分離と人生のはかなさというイスラーム以前の詩のテーマの古典的な例である。",
+        "pt": "Um verso da Mu'allaqa de Labīd, que significa 'Despeça-se de Hurayrah, pois a caravana está partindo.' É um exemplo clássico do tema pré-islâmico da separação e da natureza transitória da vida.",
+        "ru": "Строка из муаллаки Лабида, означающая: 'Попрощайся с Хурайрой, ибо караван отправляется.' Это классический пример доисламской поэтической темы разлуки и бренности жизни.",
+        "zh": "拉比德《悬诗》中的一句，意思是‘向胡赖拉告别吧，商队即将启程。’这是前伊斯兰诗歌中关于离别和生命无常主题的经典例子。"
+      },
+      "id": "ar_literary_reference_ودع_هريرة_إن_الركب_مرتحل_ffeb29f9",
+      "language": "ar",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns are correct and useful for learners.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "A line from Labīd's Mu'allaqa, meaning 'Bid farewell to Hurayrah, for the caravan is departing.' It is a classic example of the pre-Islamic poetic theme of separation and the transient nature of life.",
+      "source_author": "لبيد بن ربيعة (Labīd ibn Rabī'ah)",
+      "source_author_key": "mnemosyne.ar.author.لبيد_بن_ربيعة_labīd_ibn_rabī_ah",
+      "source_dataset": "ar_classical_poetry_lines",
+      "source_license": "public_domain",
+      "source_url": "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%82%D8%A7%D8%AA",
+      "source_work": "المعلقة (Mu'allaqat Labīd)",
+      "source_work_key": "mnemosyne.ar.work.المعلقة_mu_allaqat_labīd",
+      "surface_patterns": [
+        "ودع هريرة إن الركب مرتحل",
+        "وداع هريرة إن الركب مرتحل",
+        "ودع هريرة"
+      ]
+    },
+    {
       "canonical_form": "ar:literary:ar_literary_reference_ولادة_بنت_المستكفي_18dce12c",
       "canonical_reference": "ولادة بنت المستكفي",
       "confidence": 0.9,
@@ -10368,6 +10874,125 @@
         "ولادة بنت المستكفي",
         "ولادة",
         "بنت المستكفي"
+      ]
+    },
+    {
+      "canonical_form": "ar:literary:ar_literary_reference_وما_نيل_المطالب_بالتمني_28b3cd28",
+      "canonical_reference": "وما نيل المطالب بالتمني",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ar.explanation.ar_arabic_cultural_references_وما_نيل_المطالب_بالت",
+      "i18n_explanations": {
+        "ar": "بيت من المتنبي يعني 'وما نيل المطالب بالتمني'، يؤكد على ضرورة الجهد والكفاح لتحقيق الأهداف.",
+        "de": "Ein Vers von al-Mutanabbi, der bedeutet 'Ziele werden nicht durch bloße Wünsche erreicht', und betont die Notwendigkeit von Anstrengung und Kampf, um Ziele zu erreichen.",
+        "en": "A line from al-Mutanabbi meaning 'Objectives are not attained by mere wishes,' emphasizing the necessity of effort and struggle to achieve goals.",
+        "es": "Un verso de al-Mutanabbi que significa 'Los objetivos no se alcanzan con meros deseos', enfatizando la necesidad de esfuerzo y lucha para lograr metas.",
+        "fr": "Un vers d'al-Mutanabbi signifiant 'Les objectifs ne s'atteignent pas par de simples souhaits', soulignant la nécessité de l'effort et de la lutte pour atteindre les buts.",
+        "he": "שורה של אל-מוטנבי שמשמעותה 'מטרות לא מושגות על ידי משאלות בלבד', המדגישה את הצורך במאמץ ומאבק כדי להשיג יעדים.",
+        "it": "Un verso di al-Mutanabbi che significa 'Gli obiettivi non si raggiungono con semplici desideri', sottolineando la necessità di sforzo e lotta per raggiungere i traguardi.",
+        "ja": "アル＝ムタナッビーの一節で、「目標はただの願いでは達成できない」という意味。努力と奮闘の必要性を強調している。",
+        "pt": "Um verso de al-Mutanabbi que significa 'Os objetivos não são alcançados por meros desejos', enfatizando a necessidade de esforço e luta para alcançar metas.",
+        "ru": "Строка аль-Мутанабби, означающая 'Цели не достигаются одними лишь желаниями', подчеркивая необходимость усилий и борьбы для достижения целей.",
+        "zh": "穆太奈比的一句诗，意为“单凭愿望无法实现目标”，强调努力和奋斗的必要性。"
+      },
+      "id": "ar_literary_reference_وما_نيل_المطالب_بالتمني_28b3cd28",
+      "language": "ar",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Verified line from al-Mutanabbi, accurate explanation and patterns.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "A line from al-Mutanabbi meaning 'Objectives are not attained by mere wishes,' emphasizing the necessity of effort and struggle to achieve goals.",
+      "source_author": "أبو الطيب المتنبي",
+      "source_author_key": "mnemosyne.ar.author.أبو_الطيب_المتنبي",
+      "source_dataset": "ar_arabic_cultural_references",
+      "source_license": "public_domain",
+      "source_url": "https://ar.wikisource.org/wiki/%D9%88%D9%85%D8%A7_%D9%86%D9%8A%D9%84_%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D9%84%D8%A8_%D8%A8%D8%A7%D9%84%D8%AA%D9%85%D9%86%D9%8A",
+      "source_work": "ديوان المتنبي",
+      "source_work_key": "mnemosyne.ar.work.ديوان_المتنبي",
+      "surface_patterns": [
+        "وما نيل المطالب بالتمني",
+        "نيل المطالب بالتمني",
+        "ما نيل المطالب بالتمني"
+      ]
+    },
+    {
+      "canonical_form": "ar:literary:ar_literary_reference_ومن_يك_ذا_فضل_فيبخل_بفضله_d2d16ffd",
+      "canonical_reference": "ومن يك ذا فضل فيبخل بفضله",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ar.explanation.ar_classical_poetry_lines_ومن_يك_ذا_فضل_فيبخل_بفضل",
+      "i18n_explanations": {
+        "ar": "بيت من معلقة زهير، معناه 'من كان ذا فضل فبخل بفضله استغني عنه وذُم.' وهو درس أخلاقي عن الكرم، موضوع متكرر في الشعر الجاهلي.",
+        "de": "Ein Vers aus Zuhayrs Mu'allaqa, der bedeutet: 'Wer Überfluss hat und damit geizig ist, wird abgewiesen und getadelt.' Es ist eine moralische Lektion über Großzügigkeit, ein wiederkehrendes Thema in der vorislamischen Poesie.",
+        "en": "A line from Zuhayr's Mu'allaqa, meaning 'Whoever has abundance and is stingy with it will be dispensed with and blamed.' It is a moral lesson on generosity, a recurring theme in pre-Islamic poetry.",
+        "es": "Un verso de la Mu'allaqa de Zuhayr, que significa 'Quien tiene abundancia y es tacaño con ella será despreciado y culpado.' Es una lección moral sobre la generosidad, un tema recurrente en la poesía preislámica.",
+        "fr": "Un vers de la Mu'allaqa de Zuhayr, signifiant 'Quiconque a de l'abondance et en est avare sera méprisé et blâmé.' C'est une leçon de morale sur la générosité, un thème récurrent dans la poésie préislamique.",
+        "he": "שורה ממועלאקה של זוהייר, משמעותה 'מי שיש לו שפע וקמצן בו יידחה ויואשם.' זהו לקח מוסרי על נדיבות, נושא חוזר בשירה הקדם-אסלאמית.",
+        "it": "Un verso della Mu'allaqa di Zuhayr, che significa 'Chi ha abbondanza ed è avaro ne sarà privato e biasimato.' È una lezione morale sulla generosità, un tema ricorrente nella poesia preislamica.",
+        "ja": "ズハイルのムアッラカの一節で、「豊かさを持ちながらそれをけちる者は、嫌われ非難されるだろう」という意味。寛大さについての道徳的教訓であり、イスラーム以前の詩で繰り返し現れるテーマである。",
+        "pt": "Um verso da Mu'allaqa de Zuhayr, que significa 'Quem tem abundância e é mesquinho com ela será dispensado e culpado.' É uma lição moral sobre generosidade, um tema recorrente na poesia pré-islâmica.",
+        "ru": "Строка из муаллаки Зухайра, означающая: 'Тот, кто имеет изобилие и скуп на него, будет отвергнут и осужден.' Это моральный урок о щедрости, повторяющаяся тема в доисламской поэзии.",
+        "zh": "祖海尔《悬诗》中的一句，意思是‘谁拥有富足却吝啬，将被摒弃和指责。’这是关于慷慨的道德教训，是前伊斯兰诗歌中反复出现的主题。"
+      },
+      "id": "ar_literary_reference_ومن_يك_ذا_فضل_فيبخل_بفضله_d2d16ffd",
+      "language": "ar",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns are correct and useful for learners.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "A line from Zuhayr's Mu'allaqa, meaning 'Whoever has abundance and is stingy with it will be dispensed with and blamed.' It is a moral lesson on generosity, a recurring theme in pre-Islamic poetry.",
+      "source_author": "زهير بن أبي سلمى (Zuhayr ibn Abī Sulmā)",
+      "source_author_key": "mnemosyne.ar.author.زهير_بن_أبي_سلمى_zuhayr_ibn_abī_sulmā",
+      "source_dataset": "ar_classical_poetry_lines",
+      "source_license": "public_domain",
+      "source_url": "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%82%D8%A7%D8%AA",
+      "source_work": "المعلقة (Mu'allaqat Zuhayr)",
+      "source_work_key": "mnemosyne.ar.work.المعلقة_mu_allaqat_zuhayr",
+      "surface_patterns": [
+        "ومن يك ذا فضل فيبخل بفضله",
+        "من يك ذا فضل فيبخل بفضله",
+        "فيبخل بفضله",
+        "وَمَنْ يَكُ ذَا فَضْلٍ فَيَبْخَلْ بِفَضْلِهِ"
+      ],
+      "variants": [
+        "وَمَنْ يَكُ ذَا فَضْلٍ فَيَبْخَلْ بِفَضْلِهِ"
+      ]
+    },
+    {
+      "canonical_form": "ar:literary:ar_literary_reference_يا_دار_مية_بالعلياء_فالسند_117fe3d3",
+      "canonical_reference": "يا دار مية بالعلياء فالسند",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ar.explanation.arabic_muallaqat_يا_دار_مية_بالعلياء_فالسند",
+      "i18n_explanations": {
+        "ar": "مطلع معلقة النابغة الذبياني، يخاطب فيه دار مية في العلياء. يجسد موضوع 'الوقوف على الأطلال' الحزين.",
+        "de": "Eröffnungszeile von Al-Nabigha al-Dhubyanis Mu'allaqah, die die Wohnstätte von Mayya im Hochland anspricht. Sie veranschaulicht das nostalgische 'Stehenbleiben bei den Ruinen'-Thema.",
+        "en": "Opening line of Al-Nabigha al-Dhubyani's Mu'allaqah, addressing the abode of Mayya in the highlands. It exemplifies the nostalgic 'standing by the ruins' theme.",
+        "es": "Primer verso de la Mu'allaqah de Al-Nabigha al-Dhubyani, que se dirige a la morada de Mayya en las tierras altas. Ejemplifica el tema nostálgico de 'detenerse en las ruinas'.",
+        "fr": "Premier vers de la Mu'allaqah d'Al-Nabigha al-Dhubyani, s'adressant à la demeure de Mayya dans les hautes terres. Il illustre le thème nostalgique de 'l'arrêt sur les ruines'.",
+        "he": "שורת הפתיחה של המועלקה של אל-נאע'ה אל-ד'וביאני, הפונה אל משכנה של מאיה בהרים. היא מדגימה את נושא 'העמידה על החורבות' הנוסטלגי.",
+        "it": "Primo verso della Mu'allaqah di Al-Nabigha al-Dhubyani, che si rivolge alla dimora di Mayya negli altopiani. Esemplifica il tema nostalgico dello 'stare presso le rovine'.",
+        "ja": "アル＝ナービガ・アル＝ドゥビヤーニーの『ムアッラカ』の冒頭行で、高地にあるマイヤの住まいに呼びかける。これは郷愁を帯びた「廃墟に立ち止まる」というテーマの典型である。",
+        "pt": "Primeiro verso da Mu'allaqah de Al-Nabigha al-Dhubyani, dirigindo-se à morada de Mayya nas terras altas. Exemplifica o tema nostálgico de 'parar nas ruínas'.",
+        "ru": "Первая строка муаллаки Аль-Набиги аль-Зубьяни, обращенная к жилищу Майи в нагорье. Она иллюстрирует ностальгическую тему «остановки у развалин».",
+        "zh": "纳比加·祖布亚尼的《悬诗》开篇，对高地中玛雅的居所倾诉。它体现了怀旧的“驻足废墟”主题。"
+      },
+      "id": "ar_literary_reference_يا_دار_مية_بالعلياء_فالسند_117fe3d3",
+      "language": "ar",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate opening line of Al-Nabigha al-Dhubyani's Mu'allaqah, though inclusion of his poem among the Mu'allaqat is sometimes debated. Attribution and text are correct.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Opening line of Al-Nabigha al-Dhubyani's Mu'allaqah, addressing the abode of Mayya in the highlands. It exemplifies the nostalgic 'standing by the ruins' theme.",
+      "source_author": "النابغة الذبياني",
+      "source_author_key": "mnemosyne.ar.author.النابغة_الذبياني",
+      "source_dataset": "arabic_muallaqat",
+      "source_license": "public_domain",
+      "source_location": "line 1",
+      "source_url": "https://ar.wikisource.org/wiki/%D9%85%D8%B9%D9%84%D9%82%D8%A9_%D8%A7%D9%84%D9%86%D8%A7%D8%A8%D8%BA%D8%A9_%D8%A7%D9%84%D8%B0%D8%A8%D9%8A%D8%A7%D9%86%D9%8A",
+      "source_work": "معلقة النابغة الذبياني",
+      "source_work_key": "mnemosyne.ar.work.معلقة_النابغة_الذبياني",
+      "surface_patterns": [
+        "يا دار مية بالعلياء فالسند",
+        "يا دار مية",
+        "بالعلياء فالسند"
       ]
     },
     {
@@ -10513,6 +11138,43 @@
         "أحلى من العسل",
         "أحلى من العسل في ...",
         "أحلى من العسل في الكلام"
+      ]
+    },
+    {
+      "canonical_form": "ar:proverb:ar_proverb_tradition_أخوك_الذي_إن_تدعه_لملمة_9a2ffe01",
+      "canonical_reference": "أخوك الذي إن تدعه لملمة",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ar.explanation.ar_proverbs_poems_أخوك_الذي_إن_تدعه_لملمة",
+      "i18n_explanations": {
+        "ar": "هذا البيت من شعر المتنبي أصبح مثلاً يعني 'أخوك الذي إن تدعه لملمة يهرع لنجدتك دون تردد'. ويؤكد على الأخوة غير الأنانية والولاء.",
+        "de": "Diese Zeile aus Al-Mutanabbis Dichtung ist zu einem Sprichwort geworden: 'Dein wahrer Bruder ist der, der, wenn du ihn in einer Notlage rufst, unverzüglich zu deiner Hilfe eilt.' Es betont selbstlose Brüderlichkeit und Loyalität.",
+        "en": "This line from Al-Mutanabbi's poetry has become a proverb meaning 'Your true brother is the one who, if you call him for a calamity, rushes to your aid without hesitation.' It emphasizes selfless brotherhood and loyalty.",
+        "es": "Este verso del poeta Al-Mutanabbi se ha convertido en un proverbio que significa 'Tu verdadero hermano es aquel que, si lo llamas para una calamidad, acude en tu ayuda sin dudar'. Enfatiza la hermandad desinteresada y la lealtad.",
+        "fr": "Ce vers du poète Al-Mutanabbi est devenu un proverbe signifiant 'Ton vrai frère est celui qui, si tu l'appelles pour une calamité, accourt à ton aide sans hésitation'. Il souligne la fraternité désintéressée et la loyauté.",
+        "he": "שורה זו משירת אל-מתנבי הפכה לפתגם שפירושו 'אחיך האמיתי הוא זה שאם תקרא לו לאסון, ימהר לעזרתך ללא היסוס'. היא מדגישה אחווה חסרת אנוכיות ונאמנות.",
+        "it": "Questo verso del poeta Al-Mutanabbi è diventato un proverbio che significa 'Il tuo vero fratello è colui che, se lo chiami per una calamità, accorre in tuo aiuto senza esitazione'. Sottolinea la fratellanza disinteressata e la lealtà.",
+        "ja": "アル＝ムタナッビーの詩の一節は格言となり、「真の兄弟とは、災難の時に呼べばためらわずに助けに駆けつける人のことだ」という意味です。無私の兄弟愛と忠誠を強調しています。",
+        "pt": "Este verso do poeta Al-Mutanabbi tornou-se um provérbio que significa 'Seu verdadeiro irmão é aquele que, se você o chamar para uma calamidade, corre em seu auxílio sem hesitar'. Enfatiza a irmandade altruísta e a lealdade.",
+        "ru": "Эта строка из поэзии Аль-Мутанабби стала пословицей, означающей: «Твой истинный брат — тот, кто, если ты позовешь его в беде, немедленно придет на помощь». Она подчеркивает бескорыстное братство и верность.",
+        "zh": "阿尔-穆塔纳比诗歌中的这一行已成为谚语，意思是‘你真正的兄弟是那个当你因灾难呼唤他时，毫不犹豫地赶来帮助你的人。’它强调了无私的兄弟姐妹情谊和忠诚。"
+      },
+      "id": "ar_proverb_tradition_أخوك_الذي_إن_تدعه_لملمة_9a2ffe01",
+      "language": "ar",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Al-Mutanabbi is correct and the surface patterns match the well-known poetic line.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "short_explanation": "This line from Al-Mutanabbi's poetry has become a proverb meaning 'Your true brother is the one who, if you call him for a calamity, rushes to your aid without hesitation.' It emphasizes selfless brotherhood and loyalty.",
+      "source_author": "المتنبي",
+      "source_author_key": "mnemosyne.ar.author.المتنبي",
+      "source_dataset": "ar_proverbs_poems",
+      "source_license": "public_domain",
+      "source_work": "ديوان المتنبي",
+      "source_work_key": "mnemosyne.ar.work.ديوان_المتنبي",
+      "surface_patterns": [
+        "أخوك الذي إن تدعه لملمة",
+        "أخوك الذي إن دعوته لملمة",
+        "أخوك الذي تدعه لملمة"
       ]
     },
     {
@@ -10809,6 +11471,44 @@
       ],
       "variants": [
         "أكثم بن صيفي التميمي"
+      ]
+    },
+    {
+      "canonical_form": "ar:proverb:ar_proverb_tradition_ألا_أيها_الواشي_لقد_بلغ_السيل_الزبى_95ee0fd2",
+      "canonical_reference": "ألا أيها الواشي لقد بلغ السيل الزبى",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ar.explanation.ar_arabic_cultural_references_ألا_أيها_الواشي_لقد_",
+      "i18n_explanations": {
+        "ar": "مثل يعني 'أيها الواشي، لقد بلغ السيل الزبى'، يُستخدم للدلالة على أن الوضع أصبح حرجاً ولا يمكن تجاهله.",
+        "de": "Ein Sprichwort, das bedeutet 'Oh du Tratschender, die Flut hat den Hügel erreicht', verwendet um anzuzeigen, dass eine Situation kritisch geworden ist und nicht ignoriert werden kann.",
+        "en": "A proverb meaning 'O you who gossips, the flood has reached the hilltop,' used to indicate that a situation has become critical and cannot be ignored.",
+        "es": "Un proverbio que significa 'Oh tú que chismorreas, la inundación ha llegado a la cima de la colina', usado para indicar que una situación se ha vuelto crítica y no puede ser ignorada.",
+        "fr": "Un proverbe signifiant 'Ô toi qui bavardes, le déluge a atteint le sommet de la colline', utilisé pour indiquer qu'une situation est devenue critique et ne peut être ignorée.",
+        "he": "פתגם שמשמעותו 'הו אתה הרכלן, המבול הגיע לראש הגבעה', המשמש לציון שהמצב הפך קריטי ואי אפשר להתעלם ממנו.",
+        "it": "Un proverbio che significa 'Oh tu che spettegoli, l'alluvione ha raggiunto la cima della collina', usato per indicare che una situazione è diventata critica e non può essere ignorata.",
+        "ja": "「おお、噂話をする者よ、洪水が丘の頂上に達した」という意味のことわざで、状況が深刻になり無視できなくなったことを示す。",
+        "pt": "Um provérbio que significa 'Ó tu que fofocas, a enchente atingiu o topo da colina', usado para indicar que uma situação se tornou crítica e não pode ser ignorada.",
+        "ru": "Пословица, означающая 'О ты, сплетник, потоп достиг вершины холма', используемая для указания на то, что ситуация стала критической и не может быть проигнорирована.",
+        "zh": "谚语意为“哦，搬弄是非的人，洪水已到山顶”，用于表示情况已变得危急，无法忽视。"
+      },
+      "id": "ar_proverb_tradition_ألا_أيها_الواشي_لقد_بلغ_السيل_الزبى_95ee0fd2",
+      "language": "ar",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Authentic Arabic proverb, well-documented with correct surface patterns.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A proverb meaning 'O you who gossips, the flood has reached the hilltop,' used to indicate that a situation has become critical and cannot be ignored.",
+      "source_author": "Unknown (oral tradition)",
+      "source_author_key": "mnemosyne.ar.author.unknown_oral_tradition",
+      "source_dataset": "ar_arabic_cultural_references",
+      "source_license": "not_required",
+      "source_work": "Various classical Arabic sources",
+      "source_work_key": "mnemosyne.ar.work.various_classical_arabic_sources",
+      "surface_patterns": [
+        "ألا أيها الواشي لقد بلغ السيل الزبى",
+        "قد بلغ السيل الزبى",
+        "بلغ السيل الزبى"
       ]
     },
     {
@@ -11901,6 +12601,88 @@
       ]
     },
     {
+      "canonical_form": "ar:proverb:ar_proverb_tradition_رب_ساع_لما_يضره_1b205498",
+      "canonical_reference": "رب ساعٍ لما يضره",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_phrases_رب_ساع_لما_يضره",
+      "i18n_explanations": {
+        "ar": "هذا المثل العربي الشائع يعني \"كم من ساعٍ لما يضره\". يحذر من الجهود المضللة ويستخدم لتسليط الضوء على مفارقة السعي المدمر للذات.",
+        "de": "Dieses gebräuchliche arabische Sprichwort bedeutet 'Wie oft strebt ein Mensch nach dem, was ihm schadet'. Es warnt vor fehlgeleiteten Bemühungen und wird verwendet, um die Ironie selbstzerstörerischer Bestrebungen hervorzuheben.",
+        "en": "This common Arabic proverb means 'How often a person strives for that which harms him.' It warns against misguided efforts and is used to highlight the irony of self-destructive pursuits.",
+        "es": "Este proverbio árabe común significa 'Cuántas veces una persona se esfuerza por lo que le perjudica'. Advierte contra esfuerzos equivocados y se usa para resaltar la ironía de las empresas autodestructivas.",
+        "fr": "Ce proverbe arabe courant signifie 'Combien de fois une personne s'efforce pour ce qui lui nuit'. Il met en garde contre les efforts malavisés et est utilisé pour souligner l'ironie des poursuites autodestructrices.",
+        "he": "הפתגם הערבי הנפוץ הזה פירושו 'כמה פעמים אדם משתדל למה שמזיק לו'. הוא מזהיר מפני מאמצים מוטעים ומשמש להדגשת האירוניה של חתירות הרס עצמי.",
+        "it": "Questo comune proverbio arabo significa 'Quante volte una persona si sforza per ciò che la danneggia'. Avverte contro sforzi malaccorti e viene usato per evidenziare l'ironia di imprese autodistruttive.",
+        "ja": "この一般的なアラビアのことわざは、「人はどれほど頻繁に自分を傷つけるもののために努力するか」という意味。誤った努力を戒め、自己破壊的な追求の皮肉を指摘するために使われる。",
+        "pt": "Este provérbio árabe comum significa 'Quantas vezes uma pessoa se esforça por aquilo que a prejudica'. Adverte contra esforços equivocados e é usado para destacar a ironia de buscas autodestrutivas.",
+        "ru": "Эта распространенная арабская пословица означает: «Как часто человек стремится к тому, что ему вредит». Она предостерегает от ошибочных усилий и используется, чтобы подчеркнуть иронию саморазрушительных поступков.",
+        "zh": "这个常见的阿拉伯谚语意思是“一个人有多少次在追求对自己有害的东西”。它警告人们不要误入歧途，并用来强调自我毁灭行为的讽刺性。"
+      },
+      "id": "ar_proverb_tradition_رب_ساع_لما_يضره_1b205498",
+      "language": "ar",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Proverb is authentic and accurately described.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This common Arabic proverb means 'How often a person strives for that which harms him.' It warns against misguided efforts and is used to highlight the irony of self-destructive pursuits.",
+      "source_author": "تراث عربي (Arabic tradition)",
+      "source_author_key": "mnemosyne.ar.author.تراث_عربي_arabic_tradition",
+      "source_dataset": "arabic_proverbs_phrases",
+      "source_license": "not_required",
+      "source_work": "Oral tradition",
+      "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "surface_patterns": [
+        "رب ساع لما يضره",
+        "ساعٍ لما يضره",
+        "كم من ساعٍ لما يضره",
+        "رب ساع في ما يضره",
+        "رب ساعٍ إلى ما يضره"
+      ],
+      "variants": [
+        "رب ساع في ما يضره",
+        "رب ساعٍ إلى ما يضره"
+      ]
+    },
+    {
+      "canonical_form": "ar:proverb:ar_proverb_tradition_رب_كلمة_سلبت_نعمة_b1ac879a",
+      "canonical_reference": "رب كلمة سلبت نعمة",
+      "confidence": 0.7,
+      "explanation_key": "mnemosyne.ar.explanation.ar_proverbs_common_رب_كلمة_سلبت_نعمة",
+      "i18n_explanations": {
+        "ar": "مثل عربي شائع يعني 'رب كلمة سلبت نعمة'، يحذر من أن الكلام المتهور يمكن أن يؤدي إلى فقدان النعمة أو الحظ أو البركات.",
+        "de": "Ein verbreitetes arabisches Sprichwort, das bedeutet 'Mancher Satz hat einen Segen geraubt' und davor warnt, dass unbedachte Rede zu Verlust von Gunst, Glück oder Segen führen kann.",
+        "en": "A common Arabic proverb meaning 'Many a word has taken away a blessing,' warning that careless speech can lead to loss of favor, fortune, or blessings.",
+        "es": "Un proverbio árabe común que significa 'Muchas palabras han quitado una bendición', advirtiendo que el habla descuidada puede llevar a la pérdida de favor, fortuna o bendiciones.",
+        "fr": "Un proverbe arabe courant signifiant 'Bien des mots ont emporté une bénédiction', avertissant que des paroles imprudentes peuvent entraîner la perte de faveur, de fortune ou de bénédictions.",
+        "he": "פתגם ערבי נפוץ שפירושו 'מילים רבות לקחו ברכה', מזהיר שדיבור רשלני עלול להוביל לאובדן טובה, מזל או ברכות.",
+        "it": "Un comune proverbio arabo che significa 'Molte parole hanno portato via una benedizione', avvertendo che un discorso imprudente può portare alla perdita di favore, fortuna o benedizioni.",
+        "ja": "一般的なアラビア語のことわざで、「多くの言葉が祝福を奪った」という意味で、不注意な発言が好意や富、祝福を失う原因になると警告しています。",
+        "pt": "Um provérbio árabe comum que significa 'Muitas palavras tiraram uma bênção', alertando que o discurso descuidado pode levar à perda de favor, fortuna ou bênçãos.",
+        "ru": "Распространенная арабская пословица, означающая «Много слов отняли благословение», предупреждающая, что неосторожная речь может привести к потере благосклонности, удачи или благословений.",
+        "zh": "一个常见的阿拉伯谚语，意思是‘许多话夺走了祝福’，警告说轻率的言论可能导致失去恩惠、财富或祝福。"
+      },
+      "id": "ar_proverb_tradition_رب_كلمة_سلبت_نعمة_b1ac879a",
+      "language": "ar",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- This is a common Arabic proverb with accurate surface patterns and appropriate explanation.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "A common Arabic proverb meaning 'Many a word has taken away a blessing,' warning that careless speech can lead to loss of favor, fortune, or blessings.",
+      "source_author": "Unknown",
+      "source_author_key": "mnemosyne.ar.author.unknown",
+      "source_dataset": "ar_proverbs_common",
+      "source_license": "not_required",
+      "source_work": "Oral tradition",
+      "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "surface_patterns": [
+        "رب كلمة سلبت نعمة",
+        "رب كلمة تزيل نعمة",
+        "كلمة سلبت نعمة"
+      ]
+    },
+    {
       "canonical_form": "ar:proverb:ar_proverb_tradition_سقط_المتاع_58d1a558",
       "canonical_reference": "سقط المتاع",
       "confidence": 0.82,
@@ -12366,6 +13148,48 @@
         "من طلب عذراً وجده",
         "من أراد عذراً وجده",
         "من طلب عذراً وجدته"
+      ]
+    },
+    {
+      "canonical_form": "ar:proverb:ar_proverb_tradition_من_استشار_السفيه_شاركه_في_عقله_026c1e1e",
+      "canonical_reference": "من استشار السفيه شاركه في عقله",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_phrases_من_استشار_السفيه_شاركه_في_",
+      "i18n_explanations": {
+        "ar": "هذا المثل: \"من استشار السفيه شاركه في عقله\" ينصح بعدم طلب المشورة من الحمقى، لأن ذلك يؤدي إلى سوء الحكم.",
+        "de": "Dieses Sprichwort, 'Wer einen Narren um Rat fragt, teilt dessen Torheit', rät davon ab, dumme Menschen um Rat zu fragen, da dies zu schlechten Entscheidungen führt.",
+        "en": "This proverb, 'He who consults a fool shares in his folly,' advises against seeking advice from foolish people, as it leads to poor judgment.",
+        "es": "Este proverbio, 'Quien consulta a un necio comparte su necedad', aconseja no pedir consejo a personas tontas, ya que conduce a un mal juicio.",
+        "fr": "Ce proverbe, 'Celui qui consulte un sot partage sa sottise', conseille de ne pas demander conseil à des personnes stupides, car cela conduit à un mauvais jugement.",
+        "he": "הפתגם הזה, 'מי שמתייעץ עם שוטה שותף בטיפשותו', מייעץ לא לבקש עצה מאנשים טפשים, שכן הדבר מוביל לשיקול דעת לקוי.",
+        "it": "Questo proverbio, 'Chi consulta uno stolto condivide la sua follia', consiglia di non chiedere consiglio a persone sciocche, poiché porta a un giudizio scarso.",
+        "ja": "このことわざ、「愚か者に相談する者はその愚かさを共有する」は、愚かな人に助言を求めることを戒め、それが誤った判断につながるとしている。",
+        "pt": "Este provérbio, 'Quem consulta um tolo compartilha de sua tolice', aconselha a não pedir conselhos a pessoas tolas, pois leva a um julgamento ruim.",
+        "ru": "Эта пословица: «Кто советуется с дураком, разделяет его глупость» — советует не обращаться за советом к глупым людям, так как это ведет к плохим решениям.",
+        "zh": "这句谚语“咨询愚人者，与愚人同愚”建议不要向愚蠢的人寻求建议，因为这会导致错误的判断。"
+      },
+      "id": "ar_proverb_tradition_من_استشار_السفيه_شاركه_في_عقله_026c1e1e",
+      "language": "ar",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Proverb is authentic and accurately represented.",
+      "reference_type": "proverb_tradition",
+      "register": "proverbial",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "This proverb, 'He who consults a fool shares in his folly,' advises against seeking advice from foolish people, as it leads to poor judgment.",
+      "source_author": "تراث عربي (Arabic tradition)",
+      "source_author_key": "mnemosyne.ar.author.تراث_عربي_arabic_tradition",
+      "source_dataset": "arabic_proverbs_phrases",
+      "source_license": "not_required",
+      "source_work": "Oral tradition",
+      "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "surface_patterns": [
+        "من استشار السفيه شاركه عقله",
+        "استشارة السفيه مشاركة في عقله",
+        "إذا استشار السفيه شاركه",
+        "من استشار الأحمق شاركه في حمقه"
+      ],
+      "variants": [
+        "من استشار الأحمق شاركه في حمقه"
       ]
     },
     {
