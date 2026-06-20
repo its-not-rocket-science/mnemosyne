@@ -145,6 +145,25 @@ LANGUAGE_NAMES: dict[str, str] = {
     "cs": "Czech",      "ro": "Romanian",   "hu": "Hungarian",
 }
 
+# A single open-ended "give me N more not already in this list" discover
+# prompt reliably plateaus well under most languages' real corpus size --
+# the model converges on its single most-salient cluster of answers and
+# starts repeating itself. Cycling through these themes resets what's
+# "salient" each round and forces exploration of different knowledge
+# clusters instead.
+DISCOVERY_THEMES = [
+    "classical/ancient literature and poetry",
+    "historical figures and landmark events",
+    "religious or scriptural texts and traditions",
+    "mythology and folklore",
+    "proverbs and oral tradition",
+    "modern literature (20th century onward)",
+    "theatre, opera, and performing arts",
+    "philosophy and classical thought",
+    "art, music, and visual culture",
+    "idiomatic expressions tied to a specific named source",
+]
+
 
 # ---------------------------------------------------------------------------
 # Schema constants
@@ -303,7 +322,7 @@ Criteria:
   - Target CEFR B2-C1 cultural literacy level; each reference must be distinct"""
 
 _DISCOVER_USER = """\
-Generate exactly {n} canonical cultural references for {lang_name} (code: {lang}).
+Generate exactly {n} canonical cultural references for {lang_name} (code: {lang}).{theme_clause}
 Return {{"candidates": [array of strings]}} -- canonical phrase strings in {lang} only, no metadata.
 
 Exclude equivalents of these already-catalogued references (sample of {nexist}):
@@ -476,12 +495,14 @@ def _parse_list(raw: str, key: str) -> list:
 def discover_candidates(
     client: OpenAI, language: str, lang_name: str, n: int,
     existing: set[str], model: str, already_discovered: list[str],
+    theme: str | None = None,
 ) -> tuple[list[str], int, int]:
     all_known = existing | set(already_discovered)
     sample = sorted(all_known)[:80]
     sys_p = _DISCOVER_SYS.format(lang_name=lang_name)
+    theme_clause = f" Focus specifically on this theme: {theme}." if theme else ""
     usr_p = _DISCOVER_USER.format(
-        n=n, lang_name=lang_name, lang=language,
+        n=n, lang_name=lang_name, lang=language, theme_clause=theme_clause,
         nexist=len(sample),
         existing_sample=json.dumps(sample, ensure_ascii=False),
     )
@@ -870,21 +891,25 @@ def run(
     if total_needed > 0 and len(to_enrich_pool) < total_needed:
         still_want = total_needed - len(to_enrich_pool)
         print(f"Phase 1: discover {still_want} candidates  (batch={discover_batch})")
-        while len(to_enrich_pool) < total_needed:
+        theme_idx = 0
+        stale_themes = 0
+        while len(to_enrich_pool) < total_needed and stale_themes < len(DISCOVERY_THEMES):
+            theme = DISCOVERY_THEMES[theme_idx % len(DISCOVERY_THEMES)]
             ask = min(discover_batch, total_needed - len(to_enrich_pool) + 5)
-            print(f"  -> requesting {ask} ...", end="", flush=True)
+            print(f"  -> requesting {ask} [{theme}] ...", end="", flush=True)
             cands, in_t, out_t = discover_candidates(
-                client, language, lang_name, ask, existing, model, state["discovered"])
+                client, language, lang_name, ask, existing, model, state["discovered"], theme=theme)
             state["tokens_in"] += in_t; state["tokens_out"] += out_t
             new = [c for c in cands if c not in set(state["discovered"]) | existing]
             state["discovered"].extend(new)
             to_enrich_pool.extend(new)
             save_progress(output, state)
             print(f" +{len(new)} ({len(to_enrich_pool)} queued)  ${cost_usd(state['tokens_in'], state['tokens_out'], model):.4f}")
-            if not new:
-                print("  WARNING: no new candidates -- model may be exhausted for this language")
-                break
+            theme_idx += 1
+            stale_themes = 0 if new else stale_themes + 1
             time.sleep(0.5)
+        if len(to_enrich_pool) < total_needed:
+            print("  WARNING: exhausted all discovery themes -- model may be exhausted for this language")
 
     # ---- Phase 2: enrich --------------------------------------------------
     to_enrich = [c for c in to_enrich_pool if c not in enriched_refs][:total_needed]
