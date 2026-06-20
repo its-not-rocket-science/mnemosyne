@@ -3997,6 +3997,43 @@
       ]
     },
     {
+      "canonical_form": "grc:cultural:grc_cultural_reference_ἑλένη_καὶ_πάρισ_35619f36",
+      "canonical_reference": "Ἑλένη καὶ Πάρις",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.grc.explanation.ancient_greek_cultural_references_ἑλένη_καὶ_πάρισ",
+      "i18n_explanations": {
+        "ar": "الزوجان الشهيران اللذان تسبب هروبهما في اندلاع حرب طروادة؛ شخصيتان محوريتان في الأساطير والأدب اليوناني.",
+        "de": "Das ikonische Paar, dessen Entführung den Trojanischen Krieg auslöste; zentrale Figuren der griechischen Mythologie und Literatur.",
+        "en": "The iconic couple whose elopement sparked the Trojan War; central figures in Greek mythology and literature.",
+        "es": "La pareja icónica cuyo rapto desencadenó la Guerra de Troya; figuras centrales en la mitología y literatura griegas.",
+        "fr": "Le couple emblématique dont l'enlèvement a déclenché la guerre de Troie ; figures centrales de la mythologie et de la littérature grecques.",
+        "he": "הזוג האיקוני שבריחתם הציתה את מלחמת טרויה; דמויות מרכזיות במיתולוגיה ובספרות היוונית.",
+        "it": "La coppia iconica il cui rapimento scatenò la guerra di Troia; figure centrali nella mitologia e letteratura greca.",
+        "ja": "駆け落ちがトロイア戦争の引き金となった象徴的なカップル。ギリシャ神話と文学の中心人物。",
+        "pt": "O casal icônico cujo rapto desencadeou a Guerra de Troia; figuras centrais na mitologia e literatura gregas.",
+        "ru": "Знаменитая пара, чей побег спровоцировал Троянскую войну; центральные фигуры греческой мифологии и литературы.",
+        "zh": "这对标志性的情侣，其私奔引发了特洛伊战争；是希腊神话和文学中的核心人物。"
+      },
+      "id": "grc_cultural_reference_ἑλένη_καὶ_πάρισ_35619f36",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- This reference correctly identifies the couple whose elopement led to the Trojan War, a central cultural reference in Greek mythology.",
+      "reference_type": "cultural_reference",
+      "register": "classical",
+      "short_explanation": "The iconic couple whose elopement sparked the Trojan War; central figures in Greek mythology and literature.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.grc.author.various",
+      "source_dataset": "ancient_greek_cultural_references",
+      "source_license": "public_domain",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.grc.work.various",
+      "surface_patterns": [
+        "Ἑλένη καὶ Πάρις",
+        "Πάρις καὶ Ἑλένη",
+        "Ἑλένη καὶ Πάρις (περίφρασις)"
+      ]
+    },
+    {
       "canonical_form": "grc:cultural:grc_cultural_reference_ἑρμη_σ_καὶ_ψυχοπομπόσ_63982040",
       "canonical_reference": "Ἑρμῆς καὶ ψυχοπομπός",
       "confidence": 0.9,
@@ -5249,6 +5286,45 @@
         "Διόνυσος ἐν τῷ θιάσῳ",
         "ὁ Διόνυσος ἐν τῷ θιάσῳ",
         "Διόνυσος ἐν θιάσῳ"
+      ]
+    },
+    {
+      "canonical_form": "grc:literary:grc_literary_reference_διὸσ_αἰγίοχοσ_505a9bc3",
+      "canonical_reference": "Διὸς αἰγίοχος",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.grc.explanation.ancient_greek_cultural_references_διὸσ_αἰγίοχοσ",
+      "i18n_explanations": {
+        "ar": "لقب لزيوس يعني 'حامل الأغيسة'؛ يشير إلى درعه الإلهي وسلطته، ويظهر كثيراً في ملاحم هوميروس.",
+        "de": "Beiname des Zeus mit der Bedeutung 'Schildträger'; bezieht sich auf seinen göttlichen Schild und seine Autorität, häufig in den homerischen Epen.",
+        "en": "Epithet for Zeus meaning 'aegis-bearer'; refers to his divine shield and authority, frequently in Homeric epics.",
+        "es": "Epíteto de Zeus que significa 'portador de la égida'; se refiere a su escudo divino y autoridad, frecuente en las epopeyas homéricas.",
+        "fr": "Épithète de Zeus signifiant 'porteur de l'égide' ; fait référence à son bouclier divin et à son autorité, fréquent dans les épopées homériques.",
+        "he": "כינוי לזאוס שפירושו 'נושא האגיס'; מתייחס למגנו האלוהי ולסמכותו, מופיע תכופות באפוסים ההומריים.",
+        "it": "Epiteto di Zeus che significa 'portatore dell'egida'; si riferisce al suo scudo divino e alla sua autorità, frequente nei poemi omerici.",
+        "ja": "ゼウスの称号で「アイギスを持つ者」を意味し、彼の神聖な盾と権威を指し、ホメロスの叙事詩に頻出する。",
+        "pt": "Epíteto de Zeus que significa 'portador da égide'; refere-se ao seu escudo divino e autoridade, frequente nas epopeias homéricas.",
+        "ru": "Эпитет Зевса, означающий 'носящий эгиду'; относится к его божественному щиту и власти, часто встречается в гомеровских эпосах.",
+        "zh": "宙斯的称号，意为“持盾者”；指他的神圣盾牌和权威，常见于荷马史诗。"
+      },
+      "id": "grc_literary_reference_διὸσ_αἰγίοχοσ_505a9bc3",
+      "language": "grc",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The epithet Διὸς αἰγίοχος is accurately attributed to Homer's Iliad and is a well-established Homeric epithet.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Epithet for Zeus meaning 'aegis-bearer'; refers to his divine shield and authority, frequently in Homeric epics.",
+      "source_author": "Ὅμηρος",
+      "source_author_key": "mnemosyne.grc.author.ὅμηροσ",
+      "source_dataset": "ancient_greek_cultural_references",
+      "source_license": "public_domain",
+      "source_location": "Iliad 1.202",
+      "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0133",
+      "source_work": "Ἰλιάς",
+      "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "surface_patterns": [
+        "Διὸς αἰγίοχος",
+        "Ζεὺς αἰγίοχος",
+        "αἰγίοχος"
       ]
     },
     {
@@ -7070,6 +7146,45 @@
       ]
     },
     {
+      "canonical_form": "grc:literary:grc_literary_reference_πηνελόπη_καὶ_ἱστόσ_56739fed",
+      "canonical_reference": "Πηνελόπη καὶ ἱστός",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.grc.explanation.greek_epic_phrases_πηνελόπη_καὶ_ἱστόσ",
+      "i18n_explanations": {
+        "ar": "نسج بنيلوب ونقض كفن ليرتس يرمز إلى وفائها وذكائها في تأخير الزواج بينما كان أوديسيوس غائبًا.",
+        "de": "Penelopes Weben und Entweben von Laertes' Leichentuch symbolisiert ihre Treue und Klugheit, die Wiederverheiratung während Odysseus' Abwesenheit hinauszuzögern.",
+        "en": "Penelope's weaving and unweaving of Laertes' shroud symbolizes her fidelity and cleverness in delaying remarriage while Odysseus is away.",
+        "es": "El tejer y destejer de Penélope del sudario de Laertes simboliza su fidelidad e inteligencia al retrasar un nuevo matrimonio mientras Odiseo está ausente.",
+        "fr": "Le tissage et le détissage du linceul de Laërte par Pénélope symbolise sa fidélité et son intelligence en retardant un remariage pendant l'absence d'Ulysse.",
+        "he": "האריגה והפרימה של פנלופה של התכריך של לארטס מסמלת את נאמנותה ותבונתה בעיכוב נישואים מחדש בזמן שאודיסאוס נעדר.",
+        "it": "Il tessere e disfare di Penelope del sudario di Laerte simboleggia la sua fedeltà e intelligenza nel ritardare le nozze mentre Odisseo è lontano.",
+        "ja": "ペネロペがラーエルテースの経帷子を織ったりほどいたりする行為は、オデュッセウス不在中の再婚を遅らせる彼女の貞節と賢明さを象徴している。",
+        "pt": "O tecer e destecer de Penélope do sudário de Laertes simboliza sua fidelidade e inteligência em atrasar o casamento enquanto Odisseu está ausente.",
+        "ru": "Тканье и распускание Пенелопой савана Лаэрта символизирует ее верность и хитрость в отсрочке повторного брака в отсутствие Одиссея.",
+        "zh": "佩涅洛佩编织和拆解拉厄尔忒斯的寿衣，象征着她在奥德修斯不在时拖延再婚的忠诚和智慧。"
+      },
+      "id": "grc_literary_reference_πηνελόπη_καὶ_ἱστόσ_56739fed",
+      "language": "grc",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Penelope's weaving is a well-known episode from the Odyssey with accurate patterns.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Penelope's weaving and unweaving of Laertes' shroud symbolizes her fidelity and cleverness in delaying remarriage while Odysseus is away.",
+      "source_author": "Homer",
+      "source_author_key": "mnemosyne.grc.author.homer",
+      "source_dataset": "greek_epic_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 2, lines 93-110",
+      "source_url": "http://data.perseus.org/citations/urn:cts:greekLit:tlg0012.tlg002.perseus-grc1:2.93-2.110",
+      "source_work": "Odyssey",
+      "source_work_key": "mnemosyne.grc.work.odyssey",
+      "surface_patterns": [
+        "Πηνελόπη καὶ ἱστός",
+        "ἱστὸς Πηνελόπης",
+        "Πηνελόπης ἱστός"
+      ]
+    },
+    {
       "canonical_form": "grc:literary:grc_literary_reference_πηνελόπη_καὶ_ὀδυσσεύσ_6914b4a8",
       "canonical_reference": "Πηνελόπη καὶ Ὀδυσσεύς",
       "confidence": 0.89,
@@ -7226,6 +7341,47 @@
       ]
     },
     {
+      "canonical_form": "grc:literary:grc_literary_reference_προμηθεὺσ_δεσμώτησ_3e3ad7dd",
+      "canonical_reference": "Προμηθεὺς δεσμώτης",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.grc.explanation.ancient_greek_references_προμηθεὺσ_δεσμώτησ",
+      "i18n_explanations": {
+        "ar": "عنوان مأساة يونانية قديمة منسوبة إلى إسخيلوس، تصور بروميثيوس مقيدًا بصخرة من قبل زيوس لإعطائه النار للبشرية، يرمز إلى التمرد والتحمل.",
+        "de": "Titel einer antiken griechischen Tragödie, die Aischylos zugeschrieben wird. Sie zeigt Prometheus, der von Zeus an einen Felsen gekettet wird, weil er der Menschheit das Feuer gab, und symbolisiert Rebellion und Ausdauer.",
+        "en": "Title of an ancient Greek tragedy attributed to Aeschylus, depicting Prometheus chained to a rock by Zeus for giving fire to humanity, symbolizing rebellion and endurance.",
+        "es": "Título de una tragedia griega antigua atribuida a Esquilo, que representa a Prometeo encadenado a una roca por Zeus por dar el fuego a la humanidad, simbolizando rebelión y resistencia.",
+        "fr": "Titre d'une tragédie grecque antique attribuée à Eschyle, dépeignant Prométhée enchaîné à un rocher par Zeus pour avoir donné le feu à l'humanité, symbolisant la rébellion et l'endurance.",
+        "he": "כותרת של טרגדיה יוונית עתיקה המיוחסת לאייסכילוס, המתארת את פרומתאוס כבול לסלע על ידי זאוס על שנתן אש לאנושות, המסמלת מרד וסבולת.",
+        "it": "Titolo di una tragedia greca antica attribuita a Eschilo, che raffigura Prometeo incatenato a una roccia da Zeus per aver dato il fuoco all'umanità, simboleggiando ribellione e resistenza.",
+        "ja": "アイスキュロス作とされる古代ギリシャ悲劇のタイトル。人間に火を与えたプロメテウスがゼウスによって岩に鎖で縛られる様子を描き、反逆と忍耐を象徴する。",
+        "pt": "Título de uma tragédia grega antiga atribuída a Ésquilo, retratando Prometeu acorrentado a uma rocha por Zeus por dar fogo à humanidade, simbolizando rebelião e resistência.",
+        "ru": "Название древнегреческой трагедии, приписываемой Эсхилу, изображающей Прометея, прикованного к скале Зевсом за дарование огня человечеству, символизирующей бунт и стойкость.",
+        "zh": "一部归因于埃斯库罗斯的古希腊悲剧标题，描绘普罗米修斯因将火给予人类而被宙斯锁在岩石上，象征反抗和忍耐。"
+      },
+      "id": "grc_literary_reference_προμηθεὺσ_δεσμώτησ_3e3ad7dd",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly identifies the disputed authorship and provides accurate explanation.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Title of an ancient Greek tragedy attributed to Aeschylus, depicting Prometheus chained to a rock by Zeus for giving fire to humanity, symbolizing rebellion and endurance.",
+      "source_author": "Αἰσχύλος (ἀμφισβητεῖται)",
+      "source_author_key": "mnemosyne.grc.author.αἰσχύλοσ_ἀμφισβητει_ται",
+      "source_dataset": "ancient_greek_references",
+      "source_license": "public_domain",
+      "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0009",
+      "source_work": "Προμηθεὺς δεσμώτης",
+      "source_work_key": "mnemosyne.grc.work.προμηθεὺσ_δεσμώτησ",
+      "surface_patterns": [
+        "Προμηθεὺς δεσμώτης",
+        "τοῦ Προμηθέως Δεσμώτου",
+        "Προμηθεύς δεσμώτης"
+      ],
+      "variants": [
+        "Προμηθεύς δεσμώτης"
+      ]
+    },
+    {
       "canonical_form": "grc:literary:grc_literary_reference_πρὸσ_τὴν_ἐπιου_σαν_ἐκκλησίαν_5b41a9fd",
       "canonical_reference": "πρὸς τὴν ἐπιοῦσαν ἐκκλησίαν",
       "confidence": 0.9,
@@ -7374,6 +7530,49 @@
       "surface_patterns": [
         "Σειρήνις ἡ φωνή",
         "φωνὴ Σειρήνιδος"
+      ]
+    },
+    {
+      "canonical_form": "grc:literary:grc_literary_reference_σειρη_νεσ_καὶ_ὀδυσσεύσ_55cd89d1",
+      "canonical_reference": "Σειρῆνες καὶ Ὀδυσσεύς",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.grc.explanation.ancient_greek_references_σειρη_νεσ_καὶ_ὀδυσσεύσ",
+      "i18n_explanations": {
+        "ar": "يشير إلى الحلقة في أوديسة هوميروس حيث يقاوم أوديسيوس أغنية صفارات الإنذار الساحرة من خلال جعل طاقمه يربطه بالصاري، مما يرمز إلى النضال ضد الإغراء.",
+        "de": "Bezieht sich auf die Episode in Homers Odyssee, in der Odysseus dem betörenden Gesang der Sirenen widersteht, indem er sich von seiner Mannschaft an den Mast binden lässt, was den Kampf gegen die Versuchung symbolisiert.",
+        "en": "Refers to the episode in Homer's Odyssey where Odysseus resists the enchanting song of the Sirens by having his crew tie him to the mast, symbolizing the struggle against temptation.",
+        "es": "Se refiere al episodio de la Odisea de Homero donde Odiseo resiste el canto encantador de las Sirenas haciendo que su tripulación lo ate al mástil, simbolizando la lucha contra la tentación.",
+        "fr": "Fait référence à l'épisode de l'Odyssée d'Homère où Ulysse résiste au chant envoûtant des Sirènes en se faisant attacher au mât par son équipage, symbolisant la lutte contre la tentation.",
+        "he": "מתייחס לפרק באודיסאה של הומרוס שבו אודיסאוס מתנגד לשיר המהפנט של הסירנות על ידי כך שהוא מצווה על צוותו לקשור אותו לתורן, המסמל את המאבק בפיתוי.",
+        "it": "Si riferisce all'episodio dell'Odissea di Omero in cui Ulisse resiste al canto ammaliante delle Sirene facendosi legare all'albero maestro dai suoi uomini, simboleggiando la lotta contro la tentazione.",
+        "ja": "ホメロスの『オデュッセイア』のエピソードで、オデュッセウスがセイレーンの魅惑的な歌に抵抗するため、船員に自分をマストに縛らせる場面を指し、誘惑との戦いを象徴している。",
+        "pt": "Refere-se ao episódio na Odisseia de Homero em que Odisseu resiste ao canto encantador das Sereias fazendo com que sua tripulação o amarre ao mastro, simbolizando a luta contra a tentação.",
+        "ru": "Относится к эпизоду в «Одиссее» Гомера, где Одиссей противостоит чарующему пению сирен, приказав привязать себя к мачте, что символизирует борьбу с искушением.",
+        "zh": "指荷马《奥德赛》中的情节，奥德修斯让船员把他绑在桅杆上以抵抗塞壬的迷人歌声，象征着对抗诱惑的斗争。"
+      },
+      "id": "grc_literary_reference_σειρη_νεσ_καὶ_ὀδυσσεύσ_55cd89d1",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Homer's Odyssey, book 12, with correct explanation.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Refers to the episode in Homer's Odyssey where Odysseus resists the enchanting song of the Sirens by having his crew tie him to the mast, symbolizing the struggle against temptation.",
+      "source_author": "Ὅμηρος",
+      "source_author_key": "mnemosyne.grc.author.ὅμηροσ",
+      "source_dataset": "ancient_greek_references",
+      "source_license": "public_domain",
+      "source_location": "Ῥαψῳδία μ",
+      "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0136",
+      "source_work": "Ὀδύσσεια",
+      "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "surface_patterns": [
+        "Σειρῆνες καὶ Ὀδυσσεύς",
+        "αἱ Σειρῆνες καὶ Ὀδυσσεύς",
+        "τῶν Σειρήνων καὶ Ὀδυσσέως",
+        "Σειρήνες καὶ Ὀδυσσεύς"
+      ],
+      "variants": [
+        "Σειρήνες καὶ Ὀδυσσεύς"
       ]
     },
     {
@@ -7842,6 +8041,45 @@
       ]
     },
     {
+      "canonical_form": "grc:literary:grc_literary_reference_ἀγαμέμνων_καὶ_κλυταιμνήστρα_a96e2b34",
+      "canonical_reference": "Ἀγαμέμνων καὶ Κλυταιμνήστρα",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.grc.explanation.ancient_greek_references_ἀγαμέμνων_καὶ_κλυταιμνήστ",
+      "i18n_explanations": {
+        "ar": "يمثل الزوجين المأساويين من الأساطير اليونانية؛ قتلت كليتمنسترا أجاممنون عند عودته من طروادة، مجسدة موضوعات الخيانة والانتقام.",
+        "de": "Stellt das tragische Paar aus der griechischen Mythologie dar; Klytaimnestra tötete Agamemnon bei seiner Rückkehr aus Troja, was Themen wie Verrat und Rache verkörpert.",
+        "en": "Represents the tragic couple from Greek mythology; Clytemnestra killed Agamemnon upon his return from Troy, embodying themes of betrayal and vengeance.",
+        "es": "Representa a la trágica pareja de la mitología griega; Clitemnestra mató a Agamenón a su regreso de Troya, encarnando temas de traición y venganza.",
+        "fr": "Représente le couple tragique de la mythologie grecque ; Clytemnestre a tué Agamemnon à son retour de Troie, incarnant les thèmes de la trahison et de la vengeance.",
+        "he": "מייצג את הזוג הטראגי מהמיתולוגיה היוונית; קליטמנסטרה הרגה את אגממנון עם שובו מטרויה, ומגלמת נושאים של בגידה ונקמה.",
+        "it": "Rappresenta la coppia tragica della mitologia greca; Clitemnestra uccise Agamennone al suo ritorno da Troia, incarnando i temi del tradimento e della vendetta.",
+        "ja": "ギリシャ神話の悲劇的な夫婦を表す。クリュタイムネストラはトロイアから帰還したアガメムノーンを殺害し、裏切りと復讐のテーマを体現している。",
+        "pt": "Representa o casal trágico da mitologia grega; Clitemnestra matou Agamenon em seu retorno de Troia, personificando temas de traição e vingança.",
+        "ru": "Представляет трагическую пару из греческой мифологии; Клитемнестра убила Агамемнона по его возвращении из Трои, воплощая темы предательства и мести.",
+        "zh": "代表希腊神话中的悲剧夫妇；克吕泰涅斯特拉在阿伽门农从特洛伊返回时杀死了他，体现了背叛和复仇的主题。"
+      },
+      "id": "grc_literary_reference_ἀγαμέμνων_καὶ_κλυταιμνήστρα_a96e2b34",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Aeschylus' Oresteia, specifically Agamemnon, with accurate explanation.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Represents the tragic couple from Greek mythology; Clytemnestra killed Agamemnon upon his return from Troy, embodying themes of betrayal and vengeance.",
+      "source_author": "Αἰσχύλος",
+      "source_author_key": "mnemosyne.grc.author.αἰσχύλοσ",
+      "source_dataset": "ancient_greek_references",
+      "source_license": "public_domain",
+      "source_location": "Ἀγαμέμνων",
+      "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0004",
+      "source_work": "Ὀρέστεια",
+      "source_work_key": "mnemosyne.grc.work.ὀρέστεια",
+      "surface_patterns": [
+        "Ἀγαμέμνων καὶ Κλυταιμνήστρα",
+        "ὁ Ἀγαμέμνων καὶ ἡ Κλυταιμνήστρα",
+        "τοῦ Ἀγαμέμνονος καὶ τῆς Κλυταιμνήστρας"
+      ]
+    },
+    {
       "canonical_form": "grc:literary:grc_literary_reference_ἀγαμέμνων_καὶ_μενέλαοσ_19e522f1",
       "canonical_reference": "Ἀγαμέμνων καὶ Μενέλαος",
       "confidence": 0.88,
@@ -8198,6 +8436,44 @@
         "ἡ Ἀνδρομάχη ἐν τῷ τάφῳ",
         "Ἀνδρομάχη ἐν τάφῳ",
         "ἐν τῷ τάφῳ τῆς Ἀνδρομάχης"
+      ]
+    },
+    {
+      "canonical_form": "grc:literary:grc_literary_reference_ἀντιγόνη_καὶ_κρέων_5ecbb60b",
+      "canonical_reference": "Ἀντιγόνη καὶ Κρέων",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.grc.explanation.ancient_greek_references_ἀντιγόνη_καὶ_κρέων",
+      "i18n_explanations": {
+        "ar": "شخصيات محورية في أنتيجون لسوفوكليس، تمثل الصراع بين القانون الإلهي وسلطة الدولة، والضمير الشخصي والسلطة السياسية.",
+        "de": "Zentrale Figuren in Sophokles' Antigone, die den Konflikt zwischen göttlichem Gesetz und staatlicher Autorität, persönlichem Gewissen und politischer Macht repräsentieren.",
+        "en": "Central figures in Sophocles' Antigone, representing the conflict between divine law and state authority, personal conscience and political power.",
+        "es": "Figuras centrales en Antígona de Sófocles, que representan el conflicto entre la ley divina y la autoridad estatal, la conciencia personal y el poder político.",
+        "fr": "Personnages centraux d'Antigone de Sophocle, représentant le conflit entre la loi divine et l'autorité de l'État, la conscience personnelle et le pouvoir politique.",
+        "he": "דמויות מרכזיות באנטיגונה של סופוקלס, המייצגות את הקונפליקט בין החוק האלוהי לסמכות המדינה, בין מצפון אישי לכוח פוליטי.",
+        "it": "Figure centrali nell'Antigone di Sofocle, che rappresentano il conflitto tra legge divina e autorità statale, coscienza personale e potere politico.",
+        "ja": "ソポクレスの『アンティゴネー』の中心人物であり、神の法と国家権力、個人の良心と政治力の対立を表している。",
+        "pt": "Figuras centrais em Antígona de Sófocles, representando o conflito entre a lei divina e a autoridade do estado, a consciência pessoal e o poder político.",
+        "ru": "Центральные фигуры в «Антигоне» Софокла, представляющие конфликт между божественным законом и государственной властью, личной совестью и политической силой.",
+        "zh": "索福克勒斯《安提戈涅》中的核心人物，代表着神法与国家权威、个人良知与政治权力之间的冲突。"
+      },
+      "id": "grc_literary_reference_ἀντιγόνη_καὶ_κρέων_5ecbb60b",
+      "language": "grc",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Sophocles' Antigone, correctly describing the central conflict.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Central figures in Sophocles' Antigone, representing the conflict between divine law and state authority, personal conscience and political power.",
+      "source_author": "Σοφοκλῆς",
+      "source_author_key": "mnemosyne.grc.author.σοφοκλη_σ",
+      "source_dataset": "ancient_greek_references",
+      "source_license": "public_domain",
+      "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0185",
+      "source_work": "Ἀντιγόνη",
+      "source_work_key": "mnemosyne.grc.work.ἀντιγόνη",
+      "surface_patterns": [
+        "Ἀντιγόνη καὶ Κρέων",
+        "ἥ τε Ἀντιγόνη καὶ ὁ Κρέων",
+        "τῆς Ἀντιγόνης καὶ τοῦ Κρέοντος"
       ]
     },
     {
@@ -9677,6 +9953,45 @@
         "ὁ Ἑρμῆς καὶ ἡ ψυχή",
         "Ἑρμῆς ψυχήν ἄγων",
         "Ἑρμῆς ψυχήν κομίζων"
+      ]
+    },
+    {
+      "canonical_form": "grc:literary:grc_literary_reference_ἕκτοροσ_ἀνδροφόνου_caba8da2",
+      "canonical_reference": "Ἕκτορος ἀνδροφόνου",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.grc.explanation.greek_epic_phrases_ἕκτοροσ_ἀνδροφόνου",
+      "i18n_explanations": {
+        "ar": "صفة لهيكتور، البطل الطروادي، تعني 'قاتل الرجال'، وتؤكد براعته في القتال في الإلياذة.",
+        "de": "Ein Beiname für Hektor, den trojanischen Helden, der 'Männertöter' bedeutet und seine Kampfkraft in der Ilias betont.",
+        "en": "An epithet for Hector, the Trojan hero, meaning 'man-slaying,' emphasizing his prowess in battle within the Iliad.",
+        "es": "Un epíteto para Héctor, el héroe troyano, que significa 'matador de hombres', enfatizando su destreza en la batalla dentro de la Ilíada.",
+        "fr": "Un épithète pour Hector, le héros troyen, signifiant 'tueur d'hommes', soulignant sa prouesse au combat dans l'Iliade.",
+        "he": "כינוי להקטור, הגיבור הטרויאני, שפירושו 'הורג אנשים', המדגיש את כושר הלחימה שלו באיליאדה.",
+        "it": "Un epiteto per Ettore, l'eroe troiano, che significa 'uccisore di uomini', sottolineando la sua abilità in battaglia nell'Iliade.",
+        "ja": "トロイアの英雄ヘクトールに与えられた称号で、「人殺し」を意味し、『イーリアス』における彼の戦闘力を強調している。",
+        "pt": "Um epíteto para Heitor, o herói troiano, que significa 'matador de homens', enfatizando sua proeza em batalha na Ilíada.",
+        "ru": "Эпитет для Гектора, троянского героя, означающий 'мужеубийца', подчеркивающий его доблесть в бою в «Илиаде».",
+        "zh": "特洛伊英雄赫克托尔的称号，意为‘弑人者’，强调他在《伊利亚特》中的战斗能力。"
+      },
+      "id": "grc_literary_reference_ἕκτοροσ_ἀνδροφόνου_caba8da2",
+      "language": "grc",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The epithet is correctly attributed to Hector in the Iliad and the patterns match.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "An epithet for Hector, the Trojan hero, meaning 'man-slaying,' emphasizing his prowess in battle within the Iliad.",
+      "source_author": "Homer",
+      "source_author_key": "mnemosyne.grc.author.homer",
+      "source_dataset": "greek_epic_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book 1, line 242 (typical occurrence)",
+      "source_url": "http://data.perseus.org/citations/urn:cts:greekLit:tlg0012.tlg001.perseus-grc1:1.242",
+      "source_work": "Iliad",
+      "source_work_key": "mnemosyne.grc.work.iliad",
+      "surface_patterns": [
+        "Ἕκτορος ἀνδροφόνου",
+        "Ἕκτωρ ἀνδροφόνος",
+        "ἀνδροφόνου Ἕκτορος"
       ]
     },
     {

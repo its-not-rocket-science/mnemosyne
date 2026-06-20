@@ -3844,6 +3844,44 @@
       ]
     },
     {
+      "canonical_form": "it:literary:it_literary_reference_e_quindi_uscimmo_a_riveder_le_stelle_76ce3aa5",
+      "canonical_reference": "E quindi uscimmo a riveder le stelle",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.it.explanation.dante_inferno_phrases_e_quindi_uscimmo_a_riveder_l",
+      "i18n_explanations": {
+        "ar": "هذا هو السطر الأخير من \"الجحيم\" لدانتي، يصف خروج الشعراء من الجحيم لرؤية النجوم مرة أخرى. يرمز إلى الأمل والتجديد وخاتمة رحلة صعبة.",
+        "de": "Dies ist die letzte Zeile von Dantes Inferno, die das Hervortreten der Dichter aus der Hölle beschreibt, um die Sterne wiederzusehen. Sie symbolisiert Hoffnung, Erneuerung und den Abschluss einer schwierigen Reise.",
+        "en": "This is the final line of Dante's Inferno, describing the poets' emergence from Hell to see the stars again. It symbolizes hope, renewal, and the conclusion of a difficult journey.",
+        "es": "Este es el verso final del Infierno de Dante, que describe la salida de los poetas del Infierno para volver a ver las estrellas. Simboliza esperanza, renovación y la conclusión de un viaje difícil.",
+        "fr": "C'est le dernier vers de l'Enfer de Dante, décrivant la sortie des poètes de l'Enfer pour revoir les étoiles. Il symbolise l'espoir, le renouveau et la conclusion d'un voyage difficile.",
+        "he": "זוהי השורה האחרונה של 'התופת' של דנטה, המתארת את יציאת המשוררים מהגיהנום כדי לראות שוב את הכוכבים. היא מסמלת תקווה, התחדשות וסיום מסע קשה.",
+        "it": "Questo è l'ultimo verso dell'Inferno di Dante, che descrive l'uscita dei poeti dall'Inferno per rivedere le stelle. Simboleggia speranza, rinnovamento e la conclusione di un viaggio difficile.",
+        "ja": "これはダンテの『地獄篇』の最終行で、詩人たちが地獄から出て再び星を見る様子を描いています。希望、再生、困難な旅の終わりを象徴しています。",
+        "pt": "Este é o verso final do Inferno de Dante, descrevendo a saída dos poetas do Inferno para ver as estrelas novamente. Simboliza esperança, renovação e a conclusão de uma jornada difícil.",
+        "ru": "Это последняя строка «Ада» Данте, описывающая выход поэтов из Ада, чтобы снова увидеть звёзды. Она символизирует надежду, обновление и завершение трудного пути.",
+        "zh": "这是但丁《地狱篇》的最后一行，描写了诗人们从地狱出来再次看到星星的情景。象征着希望、重生和艰难旅程的结束。"
+      },
+      "id": "it_literary_reference_e_quindi_uscimmo_a_riveder_le_stelle_76ce3aa5",
+      "language": "it",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Dante's Inferno, Canto XXXIV, line 139; surface patterns are accurate.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "This is the final line of Dante's Inferno, describing the poets' emergence from Hell to see the stars again. It symbolizes hope, renewal, and the conclusion of a difficult journey.",
+      "source_author": "Dante Alighieri",
+      "source_author_key": "mnemosyne.it.author.dante_alighieri",
+      "source_dataset": "dante_inferno_phrases",
+      "source_license": "public_domain",
+      "source_location": "Inferno, Canto XXXIV, line 139",
+      "source_url": "https://it.wikisource.org/wiki/Divina_Commedia/Inferno/Canto_XXXIV",
+      "source_work": "Divina Commedia",
+      "source_work_key": "mnemosyne.it.work.divina_commedia",
+      "surface_patterns": [
+        "E quindi uscimmo a riveder le stelle",
+        "Uscimmo a riveder le stelle"
+      ]
+    },
+    {
       "canonical_form": "it:literary:it_literary_reference_eco_il_pendolo_di_foucault_f0959884",
       "canonical_reference": "Eco, il pendolo di Foucault",
       "confidence": 0.88,
