@@ -1,6 +1,84 @@
 {
   "entries": [
     {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_авгиевы_конюшни_a19aea39",
+      "canonical_reference": "Авгиевы конюшни",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_cultural_refs_авгиевы_конюшни",
+      "i18n_explanations": {
+        "ar": "مكان شديد القذارة أو الإهمال؛ استعارة من إسطبلات أوجياس، التي نظفها هرقل كأحد أعماله في الأساطير اليونانية.",
+        "de": "Ein extrem schmutziger oder vernachlässigter Ort; Metapher für die Ställe des Augias, die Herkules als eine seiner Aufgaben in der griechischen Mythologie reinigte.",
+        "en": "An extremely dirty or neglected place; metaphor from the Augean stables, cleaned by Hercules as one of his labors in Greek mythology.",
+        "es": "Un lugar extremadamente sucio o descuidado; metáfora de los establos de Augías, limpiados por Hércules como uno de sus trabajos en la mitología griega.",
+        "fr": "Un endroit extrêmement sale ou négligé ; métaphore des écuries d'Augias, nettoyées par Hercule comme l'un de ses travaux dans la mythologie grecque.",
+        "he": "מקום מלוכלך או מוזנח במיוחד; מטאפורה מאורוות אוגיאס, שנוקו על ידי הרקולס כאחת ממטלותיו במיתולוגיה היוונית.",
+        "it": "Un luogo estremamente sporco o trascurato; metafora delle stalle di Augia, pulite da Ercole come una delle sue fatiche nella mitologia greca.",
+        "ja": "非常に汚れたり放置された場所；ギリシャ神話でヘラクレスが行った十二の難業の一つ、アウゲイアスの馬小屋を掃除したことに由来する比喩。",
+        "pt": "Um lugar extremamente sujo ou negligenciado; metáfora dos estábulos de Augias, limpos por Hércules como um de seus trabalhos na mitologia grega.",
+        "ru": "Чрезвычайно грязное или запущенное место; метафора из Авгиевых конюшен, очищенных Гераклом в рамках одного из его подвигов в греческой мифологии.",
+        "zh": "极其肮脏或被忽视的地方；比喻源自古希腊神话中赫拉克勒斯完成的十二项任务之一——清扫奥革阿斯牛棚。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_авгиевы_конюшни_a19aea39",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate and verifiable classical allusion to Greek mythology.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "common",
+      "short_explanation": "An extremely dirty or neglected place; metaphor from the Augean stables, cleaned by Hercules as one of his labors in Greek mythology.",
+      "source_author": "Various (Greek myth)",
+      "source_author_key": "mnemosyne.ru.author.various_greek_myth",
+      "source_dataset": "ru_cultural_refs",
+      "source_license": "public_domain",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.ru.work.various",
+      "surface_patterns": [
+        "Авгиевы конюшни",
+        "Авгиев конюшня"
+      ],
+      "variants": [
+        "Авгиев конюшня"
+      ]
+    },
+    {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_амазонки_c55733bb",
+      "canonical_reference": "Амазонки",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ru.explanation.ru_classical_allusions_амазонки",
+      "i18n_explanations": {
+        "ar": "الأمازونيات كن جنسًا أسطوريًا من المحاربات في الأساطير اليونانية، مشهورات بمهاراتهن القتالية وكثيرًا ما ظهرن في القصص الملحمية.",
+        "de": "Die Amazonen waren ein mythisches Volk von Kriegerinnen in der griechischen Mythologie, bekannt für ihre Kampffähigkeiten und oft in epischen Erzählungen.",
+        "en": "The Amazons were a mythical race of female warriors in Greek mythology, renowned for their martial skills and often featured in epic tales.",
+        "es": "Las Amazonas eran una raza mítica de guerreras en la mitología griega, famosas por sus habilidades marciales y a menudo presentes en relatos épicos.",
+        "fr": "Les Amazones étaient une race mythique de guerrières dans la mythologie grecque, réputées pour leurs compétences martiales et souvent présentes dans les récits épiques.",
+        "he": "האמזונות היו גזע מיתי של לוחמות במיתולוגיה היוונית, הידועות בכישוריהן הקרביים ומופיעות לעתים קרובות בסיפורים אפיים.",
+        "it": "Le Amazzoni erano una mitica razza di guerriere nella mitologia greca, rinomate per le loro abilità marziali e spesso presenti in racconti epici.",
+        "ja": "アマゾーンはギリシャ神話に登場する神話上の女戦士の種族で、戦闘技術に優れ、叙事詩によく登場します。",
+        "pt": "As Amazonas eram uma raça mítica de guerreiras na mitologia grega, renomadas por suas habilidades marciais e frequentemente presentes em contos épicos.",
+        "ru": "Амазонки — мифическая раса женщин-воительниц в греческой мифологии, известных своим боевым мастерством и часто фигурирующих в эпических сказаниях.",
+        "zh": "亚马逊人是希腊神话中一个神话般的女战士种族，以其武艺高强而闻名，经常出现在史诗故事中。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_амазонки_c55733bb",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Amazons are mentioned in the Iliad, attribution is valid.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "The Amazons were a mythical race of female warriors in Greek mythology, renowned for their martial skills and often featured in epic tales.",
+      "source_author": "Гомер",
+      "source_author_key": "mnemosyne.ru.author.гомер",
+      "source_dataset": "ru_classical_allusions",
+      "source_license": "public_domain",
+      "source_url": "https://ru.wikisource.org/wiki/Илиада_(Гомер;_Гнедич)",
+      "source_work": "Илиада",
+      "source_work_key": "mnemosyne.ru.work.илиада",
+      "surface_patterns": [
+        "амазонки",
+        "амазонка",
+        "царица амазонок",
+        "амазонское войско"
+      ]
+    },
+    {
       "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_афродита_c8c611fd",
       "canonical_reference": "Афродита",
       "confidence": 0.85,
@@ -150,6 +228,158 @@
       "variants": [
         "The Ugly Duckling",
         "Гадкий утенок"
+      ]
+    },
+    {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_геркулесовы_столбы_27fd81f5",
+      "canonical_reference": "Геркулесовы столбы",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ru.explanation.ru_classical_allusions_геркулесовы_столбы",
+      "i18n_explanations": {
+        "ar": "أعمدة هرقل هما الرأسان اللذان يحيطان بمضيق جبل طارق، ويرتبطان تقليديًا بالبطل هرقل ويحددان حدود العالم المعروف.",
+        "de": "Die Säulen des Herkules sind die beiden Vorgebirge, die die Straße von Gibraltar flankieren, traditionell mit dem Helden Herakles verbunden und markieren die Grenzen der bekannten Welt.",
+        "en": "The Pillars of Hercules are the two promontories flanking the Strait of Gibraltar, traditionally associated with the hero Heracles and marking the limits of the known world.",
+        "es": "Los Pilares de Hércules son los dos promontorios que flanquean el Estrecho de Gibraltar, tradicionalmente asociados al héroe Heracles y que marcan los límites del mundo conocido.",
+        "fr": "Les colonnes d'Hercule sont les deux promontoires qui flanquent le détroit de Gibraltar, traditionnellement associés au héros Héraclès et marquant les limites du monde connu.",
+        "he": "עמודי הרקולס הם שני הצוקים שמשני צדי מצר גיברלטר, המזוהים באופן מסורתי עם הגיבור הרקלס ומסמנים את גבולות העולם הידוע.",
+        "it": "Le colonne d'Ercole sono i due promontori che fiancheggiano lo Stretto di Gibilterra, tradizionalmente associati all'eroe Eracle e segnano i limiti del mondo conosciuto.",
+        "ja": "ヘラクレスの柱とは、ジブラルタル海峡を挟む二つの岬で、伝統的に英雄ヘラクレスに関連付けられ、既知の世界の限界を示します。",
+        "pt": "As Colunas de Hércules são os dois promontórios que flanqueiam o Estreito de Gibraltar, tradicionalmente associados ao herói Hércules e marcando os limites do mundo conhecido.",
+        "ru": "Геркулесовы столбы — два мыса, обрамляющие Гибралтарский пролив, традиционно связанные с героем Гераклом и обозначающие границы известного мира.",
+        "zh": "赫拉克勒斯之柱是直布罗陀海峡两侧的两座海岬，传统上与英雄赫拉克勒斯相关，标志着已知世界的边界。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_геркулесовы_столбы_27fd81f5",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Apollodorus is accurate and verifiable.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "The Pillars of Hercules are the two promontories flanking the Strait of Gibraltar, traditionally associated with the hero Heracles and marking the limits of the known world.",
+      "source_author": "Аполлодор",
+      "source_author_key": "mnemosyne.ru.author.аполлодор",
+      "source_dataset": "ru_classical_allusions",
+      "source_license": "public_domain",
+      "source_location": "Книга II, глава 5",
+      "source_url": "https://ru.wikisource.org/wiki/Библиотека_(Аполлодор)",
+      "source_work": "Библиотека",
+      "source_work_key": "mnemosyne.ru.work.библиотека",
+      "surface_patterns": [
+        "Геркулесовы столбы",
+        "столбы Геркулеса",
+        "столпы Геркулеса"
+      ]
+    },
+    {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_гомер_35a2d8cf",
+      "canonical_reference": "Гомер",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_classical_allusions_гомер",
+      "i18n_explanations": {
+        "ar": "هوميروس هو الشاعر الأسطوري لليونان القديمة الذي ينسب إليه تقليديًا تأليف القصائد الملحمية الإلياذة والأوديسة، الأعمال التأسيسية للأدب الغربي.",
+        "de": "Homer ist der legendäre altgriechische Dichter, dem traditionell die epischen Gedichte Ilias und Odyssee zugeschrieben werden, grundlegende Werke der westlichen Literatur.",
+        "en": "Homer is the legendary ancient Greek poet traditionally credited with composing the epic poems the Iliad and the Odyssey, foundational works of Western literature.",
+        "es": "Homero es el legendario poeta de la antigua Grecia a quien tradicionalmente se le atribuye la composición de los poemas épicos la Ilíada y la Odisea, obras fundamentales de la literatura occidental.",
+        "fr": "Homère est le légendaire poète de la Grèce antique à qui l'on attribue traditionnellement la composition des poèmes épiques l'Iliade et l'Odyssée, œuvres fondatrices de la littérature occidentale.",
+        "he": "הומרוס הוא המשורר האגדי של יוון העתיקה, לו מיוחסת באופן מסורתי חיבור השירים האפיים איליאדה ואודיסיאה, יצירות יסוד בספרות המערבית.",
+        "it": "Omero è il leggendario poeta dell'antica Grecia a cui tradizionalmente si attribuiscono i poemi epici l'Iliade e l'Odissea, opere fondamentali della letteratura occidentale.",
+        "ja": "ホメロスは伝説的な古代ギリシャの詩人で、叙事詩『イリアス』と『オデュッセイア』を作曲したと伝えられており、西洋文学の基礎となっています。",
+        "pt": "Homero é o lendário poeta da Grécia antiga a quem tradicionalmente se atribui a composição dos poemas épicos Ilíada e Odisseia, obras fundamentais da literatura ocidental.",
+        "ru": "Гомер — легендарный древнегреческий поэт, которому традиционно приписывается создание эпических поэм «Илиада» и «Одиссея», основополагающих произведений западной литературы.",
+        "zh": "荷马是传说中的古希腊诗人，传统上被认为是史诗《伊利亚特》和《奥德赛》的作者，这些作品是西方文学的奠基之作。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_гомер_35a2d8cf",
+      "language": "ru",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Author and source work correctly identified.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Homer is the legendary ancient Greek poet traditionally credited with composing the epic poems the Iliad and the Odyssey, foundational works of Western literature.",
+      "source_author": "Гомер",
+      "source_author_key": "mnemosyne.ru.author.гомер",
+      "source_dataset": "ru_classical_allusions",
+      "source_license": "public_domain",
+      "source_url": "https://ru.wikisource.org/wiki/Илиада_(Гомер;_Гнедич)",
+      "source_work": "Илиада",
+      "source_work_key": "mnemosyne.ru.work.илиада",
+      "surface_patterns": [
+        "Гомер",
+        "гомеровский",
+        "Гомеров эпос",
+        "творения Гомера"
+      ]
+    },
+    {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_гордиев_узел_5b481cb4",
+      "canonical_reference": "Гордиев узел",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ru.explanation.russian_classical_phrases_гордиев_узел",
+      "i18n_explanations": {
+        "ar": "عقدة غورديوس كانت عقدة معقدة ربطها الملك غورديوس؛ قطعها الإسكندر الأكبر بسيفه، رمزاً لحل جريء ومباشر لمشكلة معقدة.",
+        "de": "Der gordische Knoten war ein komplexer Knoten, den König Gordius gebunden hatte; Alexander der Große durchtrennte ihn mit seinem Schwert, was eine kühne und direkte Lösung eines komplizierten Problems symbolisiert.",
+        "en": "The Gordian knot was a complex knot tied by King Gordius; Alexander the Great cut it with his sword, symbolizing a bold and direct solution to an intricate problem.",
+        "es": "El nudo gordiano era un nudo complejo atado por el rey Gordias; Alejandro Magno lo cortó con su espada, simbolizando una solución audaz y directa a un problema intrincado.",
+        "fr": "Le nœud gordien était un nœud complexe noué par le roi Gordias ; Alexandre le Grand le coupa avec son épée, symbolisant une solution audacieuse et directe à un problème complexe.",
+        "he": "הקשר הגורדי היה קשר מורכב שנקשר על ידי המלך גורדיוס; אלכסנדר הגדול חתך אותו בחרבו, סמל לפתרון נועז וישיר לבעיה מורכבת.",
+        "it": "Il nodo gordiano era un nodo complesso legato dal re Gordio; Alessandro Magno lo tagliò con la sua spada, simboleggiando una soluzione audace e diretta a un problema intricato.",
+        "ja": "ゴルディオスの結び目は、王ゴルディオスが結んだ複雑な結び目です。アレクサンダー大王は剣でそれを切り、複雑な問題に対する大胆かつ直接的な解決策を象徴しています。",
+        "pt": "O nó górdio era um nó complexo amarrado pelo rei Górdio; Alexandre, o Grande, cortou-o com sua espada, simbolizando uma solução ousada e direta para um problema intrincado.",
+        "ru": "Гордиев узел — сложный узел, завязанный царем Гордием; Александр Македонский разрубил его мечом, что символизирует смелое и прямое решение сложной проблемы.",
+        "zh": "戈尔迪乌斯之结是戈尔迪乌斯国王打的一个复杂结；亚历山大大帝用剑将其砍断，象征着对复杂问题的大胆而直接的解决。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_гордиев_узел_5b481cb4",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Entry correctly describes the legend and its metaphorical use.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "The Gordian knot was a complex knot tied by King Gordius; Alexander the Great cut it with his sword, symbolizing a bold and direct solution to an intricate problem.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.ru.author.various",
+      "source_dataset": "russian_classical_phrases",
+      "source_license": "public_domain",
+      "source_work": "Various (Arrian, Plutarch)",
+      "source_work_key": "mnemosyne.ru.work.various_arrian_plutarch",
+      "surface_patterns": [
+        "гордиев узел",
+        "разрубить гордиев узел"
+      ]
+    },
+    {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_дамоклов_меч_7c651401",
+      "canonical_reference": "Дамоклов меч",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ru.explanation.russian_classical_phrases_дамоклов_меч",
+      "i18n_explanations": {
+        "ar": "سيف داموقليس كان معلقاً بشعرة فوق رأس داموقليس تذكيراً بمخاطر السلطة؛ يستخدم الآن للإشارة إلى تهديد أو خطر وشيك.",
+        "de": "Das Schwert des Damokles hing an einem Haar über dem Kopf des Damokles als Erinnerung an die Gefahren der Macht; heute verwendet, um eine unmittelbare Bedrohung oder Gefahr anzuzeigen.",
+        "en": "The sword of Damocles was hung by a hair over the head of Damocles as a reminder of the dangers of power; now used to indicate an imminent threat or danger.",
+        "es": "La espada de Damocles fue colgada de un cabello sobre la cabeza de Damocles como recordatorio de los peligros del poder; ahora se usa para indicar una amenaza o peligro inminente.",
+        "fr": "L'épée de Damoclès était suspendue par un cheveu au-dessus de la tête de Damoclès pour rappeler les dangers du pouvoir ; maintenant utilisé pour indiquer une menace ou un danger imminent.",
+        "he": "חרב דמוקלס הייתה תלויה בשערה מעל ראשו של דמוקלס כתזכורת לסכנות הכוח; כיום משמש לציון איום או סכנה מתקרבים.",
+        "it": "La spada di Damocle era appesa a un capello sopra la testa di Damocle come monito dei pericoli del potere; ora usata per indicare una minaccia o pericolo imminente.",
+        "ja": "ダモクレスの剣は、権力の危険を思い出させるためにダモクレスの頭上に一本の毛で吊るされていました。現在では、差し迫った脅威や危険を示すために使われます。",
+        "pt": "A espada de Dâmocles foi pendurada por um fio de cabelo sobre a cabeça de Dâmocles como um lembrete dos perigos do poder; agora usado para indicar uma ameaça ou perigo iminente.",
+        "ru": "Меч Дамокла был подвешен на волоске над головой Дамокла как напоминание об опасностях власти; сейчас используется для обозначения неминуемой угрозы или опасности.",
+        "zh": "达摩克利斯之剑用一根头发悬挂在达摩克利斯的头顶上，以提醒权力的危险；现在用来指迫在眉睫的威胁或危险。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_дамоклов_меч_7c651401",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Entry accurately cites the story from Cicero and explains the metaphor.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "The sword of Damocles was hung by a hair over the head of Damocles as a reminder of the dangers of power; now used to indicate an imminent threat or danger.",
+      "source_author": "Cicero",
+      "source_author_key": "mnemosyne.ru.author.cicero",
+      "source_dataset": "russian_classical_phrases",
+      "source_license": "public_domain",
+      "source_location": "Book V, Section 61",
+      "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2007.01.0045",
+      "source_work": "Tusculan Disputations",
+      "source_work_key": "mnemosyne.ru.work.tusculan_disputations",
+      "surface_patterns": [
+        "дамоклов меч",
+        "меч Дамокла"
       ]
     },
     {
@@ -384,6 +614,115 @@
       ]
     },
     {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_кануть_в_лету_ab487f1f",
+      "canonical_reference": "Кануть в Лету",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ru.explanation.ru_cultural_refs_кануть_в_лету",
+      "i18n_explanations": {
+        "ar": "أن يُنسى أو يختفي من الذاكرة؛ من نهر ليثي في الأساطير اليونانية، الذي تسبب مياهه النسيان.",
+        "de": "Vergessen werden oder aus dem Gedächtnis verschwinden; vom Fluss Lethe in der griechischen Mythologie, dessen Wasser Vergessenheit verursacht.",
+        "en": "To be forgotten or disappear from memory; from the River Lethe in Greek mythology, whose waters cause forgetfulness.",
+        "es": "Ser olvidado o desaparecer de la memoria; del río Lete en la mitología griega, cuyas aguas causan el olvido.",
+        "fr": "Être oublié ou disparaître de la mémoire ; du fleuve Léthé dans la mythologie grecque, dont les eaux causent l'oubli.",
+        "he": "להישכח או להיעלם מהזיכרון; מנהר לטה במיתולוגיה היוונית, שמימיו גורמים לשכחה.",
+        "it": "Essere dimenticato o scomparire dalla memoria; dal fiume Lete nella mitologia greca, le cui acque causano oblio.",
+        "ja": "忘れられる、または記憶から消えること；ギリシャ神話のレーテー川に由来し、その水は忘却をもたらす。",
+        "pt": "Ser esquecido ou desaparecer da memória; do rio Lete na mitologia grega, cujas águas causam esquecimento.",
+        "ru": "Быть забытым или исчезнуть из памяти; от реки Леты в греческой мифологии, воды которой вызывают забытье.",
+        "zh": "被遗忘或从记忆中消失；源自古希腊神话中的遗忘之河勒忒，其水能让人忘却。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_кануть_в_лету_ab487f1f",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate and verifiable allusion to Lethe from Greek mythology.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "literary",
+      "short_explanation": "To be forgotten or disappear from memory; from the River Lethe in Greek mythology, whose waters cause forgetfulness.",
+      "source_author": "Various (Greek myth)",
+      "source_author_key": "mnemosyne.ru.author.various_greek_myth",
+      "source_dataset": "ru_cultural_refs",
+      "source_license": "public_domain",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.ru.work.various",
+      "surface_patterns": [
+        "кануть в Лету",
+        "кануть в Лету (забвение)"
+      ]
+    },
+    {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_лебединая_песня_644b3908",
+      "canonical_reference": "Лебединая песня",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.ru.explanation.ru_cultural_refs_лебединая_песня",
+      "i18n_explanations": {
+        "ar": "عمل فني أو أداء أخير قبل الموت أو التقاعد؛ من الاعتقاد القديم بأن البجع يغني بشكل جميل مرة واحدة فقط قبل الموت.",
+        "de": "Ein letztes künstlerisches Werk oder eine letzte Aufführung vor dem Tod oder dem Ruhestand; aus dem alten Glauben, dass Schwäne nur einmal vor ihrem Tod schön singen.",
+        "en": "A final artistic work or performance before death or retirement; from the ancient belief that swans sing beautifully only once before dying.",
+        "es": "Una obra o actuación artística final antes de la muerte o el retiro; de la antigua creencia de que los cisnes cantan hermosamente solo una vez antes de morir.",
+        "fr": "Une œuvre ou une performance artistique finale avant la mort ou la retraite ; de la croyance ancienne que les cygnes chantent magnifiquement une seule fois avant de mourir.",
+        "he": "יצירה או הופעה אמנותית אחרונה לפני מוות או פרישה; מהאמונה העתיקה שברבורים שרים יפה רק פעם אחת לפני מותם.",
+        "it": "Un'opera o performance artistica finale prima della morte o del ritiro; dall'antica credenza che i cigni cantano meravigliosamente solo una volta prima di morire.",
+        "ja": "死や引退前の最後の芸術作品やパフォーマンス；白鳥は死ぬ前に一度だけ美しく歌うという古代の信念に由来。",
+        "pt": "Uma obra ou performance artística final antes da morte ou aposentadoria; da crença antiga de que os cisnes cantam lindamente apenas uma vez antes de morrer.",
+        "ru": "Последнее художественное произведение или выступление перед смертью или уходом на пенсию; от древнего поверья, что лебеди красиво поют только один раз перед смертью.",
+        "zh": "死亡或退休前的最后一件艺术作品或表演；源自古老的传说，天鹅在临死前只会歌唱一次，歌声优美动听。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_лебединая_песня_644b3908",
+      "language": "ru",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate and verifiable allusion to the classical swan song tradition.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "literary",
+      "short_explanation": "A final artistic work or performance before death or retirement; from the ancient belief that swans sing beautifully only once before dying.",
+      "source_author": "Various (classical tradition)",
+      "source_author_key": "mnemosyne.ru.author.various_classical_tradition",
+      "source_dataset": "ru_cultural_refs",
+      "source_license": "public_domain",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.ru.work.various",
+      "surface_patterns": [
+        "лебединая песня",
+        "лебединая песнь"
+      ]
+    },
+    {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_медея_c7de8c52",
+      "canonical_reference": "Медея",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ru.explanation.russian_classical_phrases_медея",
+      "i18n_explanations": {
+        "ar": "ميديا هي شخصية من الأساطير اليونانية قتلت أطفالها للانتقام من خيانة زوجها؛ في الاستخدام الحديث، الاسم هو كناية عن امرأة انتقامية ومحتقرة.",
+        "de": "Medea ist eine Figur der griechischen Mythologie, die ihre Kinder tötete, um den Verrat ihres Mannes zu rächen; im modernen Sprachgebrauch steht der Name metaphorisch für eine rachsüchtige, verschmähte Frau.",
+        "en": "Medea is a figure from Greek mythology who killed her children to avenge her husband's betrayal; in modern usage, the name is a metaphor for a vengeful, scorned woman.",
+        "es": "Medea es una figura de la mitología griega que mató a sus hijos para vengar la traición de su esposo; en el uso moderno, el nombre es una metáfora de una mujer vengativa y despreciada.",
+        "fr": "Médée est une figure de la mythologie grecque qui a tué ses enfants pour venger la trahison de son mari ; dans l'usage moderne, le nom est une métaphore pour une femme vengeresse et dédaignée.",
+        "he": "מדיאה היא דמות מהמיתולוגיה היוונית שהרגה את ילדיה כדי לנקום בבגידת בעלה; בשימוש המודרני, השם הוא מטאפורה לאישה נקמנית ומבוזה.",
+        "it": "Medea è una figura della mitologia greca che uccise i suoi figli per vendicare il tradimento del marito; nell'uso moderno, il nome è una metafora per una donna vendicativa e disprezzata.",
+        "ja": "メデイアはギリシャ神話の人物で、夫の裏切りを復讐するために子供を殺しました。現代では、復讐心に燃え、見捨てられた女性の比喩として使われます。",
+        "pt": "Medeia é uma figura da mitologia grega que matou seus filhos para vingar a traição do marido; no uso moderno, o nome é uma metáfora para uma mulher vingativa e desprezada.",
+        "ru": "Медея — персонаж греческой мифологии, убившая своих детей, чтобы отомстить мужу за предательство; в современном употреблении имя является метафорой мстительной, отвергнутой женщины.",
+        "zh": "美狄亚是希腊神话中的人物，她为了报复丈夫的背叛而杀死了自己的孩子；在现代用法中，这个名字是复仇的、被鄙视的女人的隐喻。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_медея_c7de8c52",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Entry accurately describes the Greek myth and its metaphorical use in Russian.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Medea is a figure from Greek mythology who killed her children to avenge her husband's betrayal; in modern usage, the name is a metaphor for a vengeful, scorned woman.",
+      "source_author": "Euripides",
+      "source_author_key": "mnemosyne.ru.author.euripides",
+      "source_dataset": "russian_classical_phrases",
+      "source_license": "public_domain",
+      "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0110",
+      "source_work": "Medea",
+      "source_work_key": "mnemosyne.ru.work.medea",
+      "surface_patterns": [
+        "Медея",
+        "как Медея"
+      ]
+    },
+    {
       "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_мне_отмщение_и_аз_воздам_18ac5277",
       "canonical_reference": "Мне отмщение, и аз воздам",
       "confidence": 0.9,
@@ -421,6 +760,41 @@
         "Мне отмщение, Я воздам",
         "Аз воздам",
         "Отмщение Мое"
+      ]
+    },
+    {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_нарцисс_32d37f19",
+      "canonical_reference": "Нарцисс",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ru.explanation.ru_classical_references_нарцисс",
+      "i18n_explanations": {
+        "ar": "نرجس يشير إلى شخص مفرط في الانغماس في الذات أو مغرور، من أسطورة نرجس الذي وقع في حب انعكاس صورته.",
+        "de": "Narziss bezeichnet eine Person, die übermäßig selbstbezogen oder eitel ist, abgeleitet vom Mythos des Narziss, der sich in sein eigenes Spiegelbild verliebte.",
+        "en": "Narcissus refers to a person excessively self-absorbed or vain, from the myth of Narcissus who fell in love with his own reflection.",
+        "es": "Narciso se refiere a una persona excesivamente ensimismada o vanidosa, del mito de Narciso que se enamoró de su propio reflejo.",
+        "fr": "Narcisse désigne une personne excessivement narcissique ou vaniteuse, issu du mythe de Narcisse tombé amoureux de son propre reflet.",
+        "he": "נרקיסוס מתייחס לאדם מרוכז בעצמו או יהיר יתר על המידה, מהמיתוס של נרקיסוס שהתאהב בהשתקפותו שלו.",
+        "it": "Narciso si riferisce a una persona eccessivamente egocentrica o vanitosa, dal mito di Narciso che si innamorò del proprio riflesso.",
+        "ja": "ナルキッソスは、過度に自己陶酔したり虚栄心の強い人を指し、自分の姿に恋をしたナルキッソスの神話に由来します。",
+        "pt": "Narciso refere-se a uma pessoa excessivamente egocêntrica ou vaidosa, do mito de Narciso que se apaixonou por seu próprio reflexo.",
+        "ru": "Нарцисс обозначает человека, чрезмерно поглощенного собой или тщеславного, из мифа о Нарциссе, влюбившемся в свое отражение.",
+        "zh": "纳西索斯指过度自恋或虚荣的人，源于纳西索斯爱上自己倒影的神话。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_нарцисс_32d37f19",
+      "language": "ru",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Common classical allusion, correct patterns and explanation.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "common",
+      "short_explanation": "Narcissus refers to a person excessively self-absorbed or vain, from the myth of Narcissus who fell in love with his own reflection.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.ru.author.various",
+      "source_dataset": "ru_classical_references",
+      "source_license": "public_domain",
+      "source_work": "Greek mythology",
+      "source_work_key": "mnemosyne.ru.work.greek_mythology",
+      "surface_patterns": [
+        "нарцисс"
       ]
     },
     {
@@ -507,6 +881,42 @@
       ]
     },
     {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_нить_ариадны_f1525139",
+      "canonical_reference": "Нить Ариадны",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ru.explanation.russian_classical_phrases_нить_ариадны",
+      "i18n_explanations": {
+        "ar": "خيط أريادني ساعد ثيسيوس على التنقل في المتاهة؛ مجازياً، يعني دليلاً أو مبدأً توجيهياً يساعد في حل مشكلة معقدة.",
+        "de": "Ariadnes Faden half Theseus, das Labyrinth zu durchqueren; metaphorisch bedeutet es einen Hinweis oder ein Leitprinzip, das bei der Lösung eines komplexen Problems hilft.",
+        "en": "Ariadne's thread helped Theseus navigate the labyrinth; metaphorically, it means a clue or guiding principle that helps solve a complex problem.",
+        "es": "El hilo de Ariadna ayudó a Teseo a navegar el laberinto; metafóricamente, significa una pista o principio guía que ayuda a resolver un problema complejo.",
+        "fr": "Le fil d'Ariane a aidé Thésée à naviguer dans le labyrinthe ; métaphoriquement, cela signifie un indice ou un principe directeur qui aide à résoudre un problème complexe.",
+        "he": "החוט של אריאדנה עזר לתזאוס לנווט במבוך; באופן מטפורי, זה אומר רמז או עיקרון מנחה שעוזר לפתור בעיה מורכבת.",
+        "it": "Il filo di Arianna aiutò Teseo a navigare il labirinto; metaforicamente, significa un indizio o un principio guida che aiuta a risolvere un problema complesso.",
+        "ja": "アリアドネの糸はテセウスが迷宮を進むのを助けました。比喩的に、複雑な問題を解決する手がかりや指針を意味します。",
+        "pt": "O fio de Ariadne ajudou Teseu a navegar pelo labirinto; metaforicamente, significa uma pista ou princípio orientador que ajuda a resolver um problema complexo.",
+        "ru": "Нить Ариадны помогла Тесею выбраться из лабиринта; метафорически означает ключ или руководящий принцип, помогающий решить сложную проблему.",
+        "zh": "阿里阿德涅的线团帮助忒修斯走出迷宫；比喻意义上，它意味着解决复杂问题的线索或指导原则。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_нить_ариадны_f1525139",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Entry accurately reflects the myth and its metaphorical meaning.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Ariadne's thread helped Theseus navigate the labyrinth; metaphorically, it means a clue or guiding principle that helps solve a complex problem.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.ru.author.various",
+      "source_dataset": "russian_classical_phrases",
+      "source_license": "public_domain",
+      "source_work": "Various (Ovid, Plutarch)",
+      "source_work_key": "mnemosyne.ru.work.various_ovid_plutarch",
+      "surface_patterns": [
+        "нить Ариадны",
+        "ариаднина нить"
+      ]
+    },
+    {
       "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_одиссея_530eaaf5",
       "canonical_reference": "Одиссея",
       "confidence": 0.85,
@@ -542,6 +952,42 @@
         "Одиссея",
         "Гомерова Одиссея",
         "герой Одиссея"
+      ]
+    },
+    {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_орфей_и_эвридика_4933db5d",
+      "canonical_reference": "Орфей и Эвридика",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ru.explanation.ru_classical_references_орфей_и_эвридика",
+      "i18n_explanations": {
+        "ar": "أورفيوس ويوريديس يمثلان قصة حب مأساوية وقوة الموسيقى، من أسطورة أورفيوس الذي حاول إنقاذ زوجته من العالم السفلي.",
+        "de": "Orpheus und Eurydike stehen für eine tragische Liebesgeschichte und die Macht der Musik, abgeleitet vom Mythos des Orpheus, der versuchte, seine Frau aus der Unterwelt zu retten.",
+        "en": "Orpheus and Eurydice represent a tragic love story and the power of music, from the myth of Orpheus who tried to rescue his wife from the underworld.",
+        "es": "Orfeo y Eurídice representan una trágica historia de amor y el poder de la música, del mito de Orfeo que intentó rescatar a su esposa del inframundo.",
+        "fr": "Orphée et Eurydice représentent une histoire d'amour tragique et le pouvoir de la musique, issu du mythe d'Orphée qui tenta de sauver sa femme des enfers.",
+        "he": "אורפאוס ואורידיקה מייצגים סיפור אהבה טרגי ואת כוחה של המוזיקה, מהמיתוס של אורפאוס שניסה להציל את אשתו מהשאול.",
+        "it": "Orfeo ed Euridice rappresentano una tragica storia d'amore e il potere della musica, dal mito di Orfeo che cercò di salvare sua moglie dagli inferi.",
+        "ja": "オルフェウスとエウリュディケーは、悲劇的な愛の物語と音楽の力を表し、妻を冥界から救おうとしたオルフェウスの神話に由来します。",
+        "pt": "Orfeu e Eurídice representam uma trágica história de amor e o poder da música, do mito de Orfeu que tentou resgatar sua esposa do submundo.",
+        "ru": "Орфей и Эвридика символизируют трагическую историю любви и силу музыки, из мифа об Орфее, пытавшемся спасти свою жену из подземного мира.",
+        "zh": "俄耳甫斯与欧律狄刻代表了一段悲剧爱情故事和音乐的力量，源于俄耳甫斯试图从冥界救回妻子的神话。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_орфей_и_эвридика_4933db5d",
+      "language": "ru",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution correct, surface patterns appropriate, explanation accurate.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "common",
+      "short_explanation": "Orpheus and Eurydice represent a tragic love story and the power of music, from the myth of Orpheus who tried to rescue his wife from the underworld.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.ru.author.various",
+      "source_dataset": "ru_classical_references",
+      "source_license": "public_domain",
+      "source_work": "Greek mythology",
+      "source_work_key": "mnemosyne.ru.work.greek_mythology",
+      "surface_patterns": [
+        "Орфей и Эвридика",
+        "Орфей с Эвридикой"
       ]
     },
     {
@@ -619,6 +1065,42 @@
       "surface_patterns": [
         "Плач Ярославны",
         "Ярославнин плач"
+      ]
+    },
+    {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_прометеев_огонь_c960bed9",
+      "canonical_reference": "Прометеев огонь",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ru.explanation.ru_classical_references_прометеев_огонь",
+      "i18n_explanations": {
+        "ar": "نار بروميثيوس ترمز إلى هبة المعرفة أو الإبداع أو القوة المحيية، من أسطورة بروميثيوس الذي سرق النار من الآلهة للبشرية.",
+        "de": "Das prometheische Feuer symbolisiert die Gabe des Wissens, der Kreativität oder der lebensspendenden Kraft, abgeleitet vom Mythos des Prometheus, der den Göttern das Feuer für die Menschheit stahl.",
+        "en": "Promethean fire symbolizes the gift of knowledge, creativity, or life-giving force, from the myth of Prometheus who stole fire from the gods for humanity.",
+        "es": "El fuego prometeico simboliza el don del conocimiento, la creatividad o la fuerza vital, del mito de Prometeo que robó el fuego de los dioses para la humanidad.",
+        "fr": "Le feu prométhéen symbolise le don de la connaissance, de la créativité ou de la force vitale, issu du mythe de Prométhée qui a volé le feu aux dieux pour l'humanité.",
+        "he": "האש הפרומתאית מסמלת את מתנת הידע, היצירתיות או הכוח מעניק החיים, מהמיתוס של פרומתאוס שגנב אש מהאלים למען האנושות.",
+        "it": "Il fuoco prometeico simboleggia il dono della conoscenza, della creatività o della forza vitale, dal mito di Prometeo che rubò il fuoco agli dei per l'umanità.",
+        "ja": "プロメテウスの火は、知識、創造性、または生命を与える力の贈り物を象徴し、人間のために神々から火を盗んだプロメテウスの神話に由来します。",
+        "pt": "O fogo prometeico simboliza o dom do conhecimento, da criatividade ou da força vital, do mito de Prometeu que roubou o fogo dos deuses para a humanidade.",
+        "ru": "Прометеев огонь символизирует дар знаний, творчества или животворной силы, из мифа о Прометее, похитившем огонь у богов для людей.",
+        "zh": "普罗米修斯之火象征着知识、创造力或生命力的馈赠，源于普罗米修斯为人类从众神那里盗取火种的神话。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_прометеев_огонь_c960bed9",
+      "language": "ru",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference, surface patterns standard, explanation correct.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "common",
+      "short_explanation": "Promethean fire symbolizes the gift of knowledge, creativity, or life-giving force, from the myth of Prometheus who stole fire from the gods for humanity.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.ru.author.various",
+      "source_dataset": "ru_classical_references",
+      "source_license": "public_domain",
+      "source_work": "Greek mythology",
+      "source_work_key": "mnemosyne.ru.work.greek_mythology",
+      "surface_patterns": [
+        "прометеев огонь",
+        "огонь Прометея"
       ]
     },
     {
@@ -776,6 +1258,44 @@
       ]
     },
     {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_сцилла_и_харибда_614b363c",
+      "canonical_reference": "Сцилла и Харибда",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_cultural_refs_сцилла_и_харибда",
+      "i18n_explanations": {
+        "ar": "معضلة بين بديلين غير مرغوب فيهما على حد سواء؛ من الوحوش البحرية الأسطورية سكيلا والدوامة خاريبديس في ملحمة هوميروس \"الأوديسة\".",
+        "de": "Ein Dilemma zwischen zwei gleichermaßen unerwünschten Alternativen; aus den mythischen Seeungeheuern Skylla und dem Strudel Charybdis in Homers Odyssee.",
+        "en": "A dilemma between two equally undesirable alternatives; from the mythical sea monsters Scylla and the whirlpool Charybdis in Homer's Odyssey.",
+        "es": "Un dilema entre dos alternativas igualmente indeseables; de los monstruos marinos míticos Escila y el remolino Caribdis en la Odisea de Homero.",
+        "fr": "Un dilemme entre deux alternatives également indésirables ; des monstres marins mythiques Scylla et le tourbillon Charybde dans l'Odyssée d'Homère.",
+        "he": "דילמה בין שתי חלופות לא רצויות באותה מידה; ממפלצות הים המיתולוגיות סקילה והמערבולת כריבדיס באודיסיאה של הומרוס.",
+        "it": "Un dilemma tra due alternative ugualmente indesiderabili; dai mostri marini mitologici Scilla e il vortice Cariddi nell'Odissea di Omero.",
+        "ja": "二つの同様に望ましくない選択肢の間のジレンマ；ホメロスの『オデュッセイア』に登場する神話上の海の怪物スキュラと渦巻きカリュブディスに由来。",
+        "pt": "Um dilema entre duas alternativas igualmente indesejáveis; dos monstros marinhos míticos Cila e o redemoinho Caríbdis na Odisseia de Homero.",
+        "ru": "Дилемма между двумя одинаково нежелательными альтернативами; от мифических морских чудовищ Сциллы и водоворота Харибды в «Одиссее» Гомера.",
+        "zh": "在两个同样不可取的选项之间的困境；源自古希腊荷马史诗《奥德赛》中的神话海怪斯库拉和卡律布狄斯漩涡。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_сцилла_и_харибда_614b363c",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate and verifiable allusion to Homer's Odyssey with correct surface patterns.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A dilemma between two equally undesirable alternatives; from the mythical sea monsters Scylla and the whirlpool Charybdis in Homer's Odyssey.",
+      "source_author": "Гомер (Homer)",
+      "source_author_key": "mnemosyne.ru.author.гомер_homer",
+      "source_dataset": "ru_cultural_refs",
+      "source_license": "public_domain",
+      "source_location": "Песнь 12 (Book 12)",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hom+Od+12.73",
+      "source_work": "Одиссея (Odyssey)",
+      "source_work_key": "mnemosyne.ru.work.одиссея_odyssey",
+      "surface_patterns": [
+        "Сцилла и Харибда",
+        "между Сциллой и Харибдой"
+      ]
+    },
+    {
       "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_троянская_война_f43d9b5c",
       "canonical_reference": "Троянская война",
       "confidence": 0.88,
@@ -815,6 +1335,46 @@
       ]
     },
     {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_феникс_86ec1d66",
+      "canonical_reference": "Феникс",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_cultural_refs_феникс",
+      "i18n_explanations": {
+        "ar": "شخص أو شيء يولد من جديد بعد الدمار؛ من الطائر الأسطوري الذي ينهض من رماده، يرمز إلى التجديد.",
+        "de": "Eine Person oder Sache, die nach der Zerstörung wiedergeboren wird; vom mythischen Vogel, der aus seiner eigenen Asche aufersteht und Erneuerung symbolisiert.",
+        "en": "A person or thing that is reborn after destruction; from the mythical bird that rises from its own ashes, symbolizing renewal.",
+        "es": "Una persona o cosa que renace después de la destrucción; del ave mítica que resurge de sus propias cenizas, simbolizando la renovación.",
+        "fr": "Une personne ou une chose qui renaît après la destruction ; de l'oiseau mythique qui renaît de ses cendres, symbolisant le renouveau.",
+        "he": "אדם או דבר שנולד מחדש לאחר חורבן; מהציפור המיתולוגית העולה מאפרה, המסמלת התחדשות.",
+        "it": "Una persona o cosa che rinasce dopo la distruzione; dall'uccello mitico che risorge dalle proprie ceneri, simboleggiando il rinnovamento.",
+        "ja": "破壊後に再生する人や物；自身の灰からよみがえる神話上の鳥に由来し、再生を象徴する。",
+        "pt": "Uma pessoa ou coisa que renasce após a destruição; da ave mítica que ressuscita das próprias cinzas, simbolizando renovação.",
+        "ru": "Человек или вещь, возрождающаяся после разрушения; от мифической птицы, восстающей из собственного пепла, символизирующей обновление.",
+        "zh": "被毁灭后重生的人或事物；源自神话中从自身灰烬中重生的凤凰，象征着更新与复兴。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_феникс_86ec1d66",
+      "language": "ru",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate and verifiable allusion to the phoenix myth of rebirth.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "common",
+      "short_explanation": "A person or thing that is reborn after destruction; from the mythical bird that rises from its own ashes, symbolizing renewal.",
+      "source_author": "Various (Egyptian/Greek myth)",
+      "source_author_key": "mnemosyne.ru.author.various_egyptian_greek_myth",
+      "source_dataset": "ru_cultural_refs",
+      "source_license": "public_domain",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.ru.work.various",
+      "surface_patterns": [
+        "феникс",
+        "как феникс из пепла",
+        "воскреснуть как феникс"
+      ],
+      "variants": [
+        "воскреснуть как феникс"
+      ]
+    },
+    {
       "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_чистый_понедельник_d0c3b810",
       "canonical_reference": "Чистый понедельник",
       "confidence": 0.9,
@@ -847,6 +1407,81 @@
       "source_work_key": "mnemosyne.ru.work.various",
       "surface_patterns": [
         "Чистый понедельник"
+      ]
+    },
+    {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_эдип_d8f1cf0d",
+      "canonical_reference": "Эдип",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_classical_allusions_эдип",
+      "i18n_explanations": {
+        "ar": "أوديب هو بطل مأساوي في الأساطير اليونانية يقتل والده ويتزوج والدته دون علمه، وهو شخصية محورية في مسرحية سوفوكليس \"أوديب ملكًا\".",
+        "de": "Ödipus ist ein tragischer Held der griechischen Mythologie, der unwissentlich seinen Vater tötet und seine Mutter heiratet, zentral in Sophokles' Drama König Ödipus.",
+        "en": "Oedipus is a tragic hero in Greek mythology who unknowingly kills his father and marries his mother, central to Sophocles' play Oedipus Rex.",
+        "es": "Edipo es un héroe trágico de la mitología griega que, sin saberlo, mata a su padre y se casa con su madre, central en la obra de Sófocles Edipo Rey.",
+        "fr": "Œdipe est un héros tragique de la mythologie grecque qui tue son père et épouse sa mère sans le savoir, central dans la pièce de Sophocle Œdipe roi.",
+        "he": "אדיפוס הוא גיבור טרגי במיתולוגיה היוונית שהורג את אביו ונושא את אמו בלא יודעין, דמות מרכזית במחזה \"אדיפוס המלך\" של סופוקלס.",
+        "it": "Edipo è un eroe tragico della mitologia greca che uccide inconsapevolmente suo padre e sposa sua madre, centrale nell'Edipo re di Sofocle.",
+        "ja": "オイディプスはギリシャ神話の悲劇の英雄で、知らずに父を殺し母と結婚する。ソフォクレスの戯曲『オイディプス王』の中心人物。",
+        "pt": "Édipo é um herói trágico da mitologia grega que, sem saber, mata seu pai e se casa com sua mãe, central na peça Édipo Rei de Sófocles.",
+        "ru": "Эдип — трагический герой греческой мифологии, который невольно убивает своего отца и женится на своей матери, центральный персонаж пьесы Софокла «Царь Эдип».",
+        "zh": "俄狄浦斯是希腊神话中的悲剧英雄，他在不知情的情况下杀父娶母，是索福克勒斯悲剧《俄狄浦斯王》的中心人物。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_эдип_d8f1cf0d",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Sophocles' Oedipus Rex is correct and useful.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "Oedipus is a tragic hero in Greek mythology who unknowingly kills his father and marries his mother, central to Sophocles' play Oedipus Rex.",
+      "source_author": "Софокл",
+      "source_author_key": "mnemosyne.ru.author.софокл",
+      "source_dataset": "ru_classical_allusions",
+      "source_license": "public_domain",
+      "source_url": "https://ru.wikisource.org/wiki/Царь_Эдип_(Софокл)",
+      "source_work": "Царь Эдип",
+      "source_work_key": "mnemosyne.ru.work.царь_эдип",
+      "surface_patterns": [
+        "Эдип",
+        "царь Эдип",
+        "эдипов комплекс",
+        "Эдип-царь"
+      ]
+    },
+    {
+      "canonical_form": "ru:classical:ru_classical_or_scriptural_allusion_яблоко_раздора_07632a1d",
+      "canonical_reference": "Яблоко раздора",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.ru.explanation.russian_classical_phrases_яблоко_раздора",
+      "i18n_explanations": {
+        "ar": "تفاحة الفتنة التي ألقتها إيريس في حفل زفاف بيليوس وثيتيس، أدت إلى حكم باريس وحرب طروادة؛ تستخدم الآن للإشارة إلى أي سبب للنزاع أو التنافس.",
+        "de": "Der Apfel der Zwietracht, den Eris bei der Hochzeit von Peleus und Thetis warf, führte zum Urteil des Paris und zum Trojanischen Krieg; wird heute für jeden Anlass von Streit oder Rivalität verwendet.",
+        "en": "The apple of discord thrown by Eris at the wedding of Peleus and Thetis, leading to the Judgment of Paris and the Trojan War; now used for any cause of dispute or rivalry.",
+        "es": "La manzana de la discordia arrojada por Eris en la boda de Peleo y Tetis, que condujo al juicio de Paris y a la guerra de Troya; ahora se usa para cualquier causa de disputa o rivalidad.",
+        "fr": "La pomme de discorde lancée par Éris au mariage de Pélée et Thétis, menant au jugement de Pâris et à la guerre de Troie ; désormais utilisé pour toute cause de dispute ou de rivalité.",
+        "he": "תפוח המחלוקת שהושלך על ידי אריס בחתונתם של פלאוס ותטיס, הוביל למשפט פאריס ולמלחמת טרויה; כיום משמש לכל סיבה של מחלוקת או יריבות.",
+        "it": "La mela della discordia lanciata da Eris al matrimonio di Peleo e Teti, che portò al giudizio di Paride e alla guerra di Troia; ora usato per qualsiasi causa di disputa o rivalità.",
+        "ja": "エリスがペレウスとテティスの結婚式で投げた不和の林檎は、パリスの審判とトロイア戦争を引き起こしました。現在では、争いや競争の原因を指す比喩として使われます。",
+        "pt": "A maçã da discórdia lançada por Éris no casamento de Peleu e Tétis, levando ao julgamento de Páris e à Guerra de Troia; agora usado para qualquer causa de disputa ou rivalidade.",
+        "ru": "Яблоко раздора, брошенное Эридой на свадьбе Пелея и Фетиды, привело к суду Париса и Троянской войне; сейчас используется для обозначения любой причины раздора или соперничества.",
+        "zh": "厄里斯在佩琉斯和忒提斯的婚礼上扔下的不和之苹果，导致了帕里斯的评判和特洛伊战争；现在用来指任何争端或竞争的原因。"
+      },
+      "id": "ru_classical_or_scriptural_allusion_яблоко_раздора_07632a1d",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Entry correctly explains the origin and meaning of the phrase.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "The apple of discord thrown by Eris at the wedding of Peleus and Thetis, leading to the Judgment of Paris and the Trojan War; now used for any cause of dispute or rivalry.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.ru.author.various",
+      "source_dataset": "russian_classical_phrases",
+      "source_license": "public_domain",
+      "source_work": "Various (Hyginus, Ovid)",
+      "source_work_key": "mnemosyne.ru.work.various_hyginus_ovid",
+      "surface_patterns": [
+        "яблоко раздора",
+        "яблоком раздора"
       ]
     },
     {
@@ -1073,6 +1708,42 @@
         "Баба Яга",
         "Яга",
         "Баба Яга в сказках"
+      ]
+    },
+    {
+      "canonical_form": "ru:cultural:ru_cultural_reference_блокада_ленинграда_fbd61ff5",
+      "canonical_reference": "Блокада Ленинграда",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_cultural_references_блокада_ленинграда",
+      "i18n_explanations": {
+        "ar": "حصار لينينغراد الذي استمر 872 يومًا من قبل القوات الألمانية والفنلندية خلال الحرب العالمية الثانية، يرمز إلى التحمل والمأساة.",
+        "de": "Die 872-tägige Belagerung Leningrads durch deutsche und finnische Truppen während des Zweiten Weltkriegs, Symbol für Durchhaltevermögen und Tragödie.",
+        "en": "The 872-day siege of Leningrad by German and Finnish forces during WWII, symbolizing endurance and tragedy.",
+        "es": "El asedio de 872 días a Leningrado por fuerzas alemanas y finlandesas durante la Segunda Guerra Mundial, que simboliza resistencia y tragedia.",
+        "fr": "Le siège de 872 jours de Leningrad par les forces allemandes et finlandaises pendant la Seconde Guerre mondiale, symbolisant l'endurance et la tragédie.",
+        "he": "המצור בן 872 הימים על לנינגרד על ידי כוחות גרמנים ופינים במהלך מלחמת העולם השנייה, המסמל סיבולת וטרגדיה.",
+        "it": "L'assedio di 872 giorni di Leningrado da parte delle forze tedesche e finlandesi durante la WWII, simbolo di resistenza e tragedia.",
+        "ja": "第二次世界大戦中、ドイツ軍とフィンランド軍によるレニングラード包囲（872日間）で、忍耐と悲劇を象徴している。",
+        "pt": "O cerco de 872 dias a Leningrado por forças alemãs e finlandesas durante a Segunda Guerra Mundial, simbolizando resistência e tragédia.",
+        "ru": "872-дневная блокада Ленинграда немецкими и финскими войсками во время Второй мировой войны, символизирующая стойкость и трагедию.",
+        "zh": "二战期间德国和芬兰军队对列宁格勒的872天围困，象征着坚韧与悲剧。"
+      },
+      "id": "ru_cultural_reference_блокада_ленинграда_fbd61ff5",
+      "language": "ru",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate historical siege, surface patterns correct.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "The 872-day siege of Leningrad by German and Finnish forces during WWII, symbolizing endurance and tragedy.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.ru.author.various",
+      "source_dataset": "ru_cultural_references",
+      "source_license": "public_domain",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.ru.work.various",
+      "surface_patterns": [
+        "Блокада Ленинграда",
+        "ленинградская блокада"
       ]
     },
     {
@@ -2138,6 +2809,42 @@
       ]
     },
     {
+      "canonical_form": "ru:cultural:ru_cultural_reference_ледовое_побоище_99a02ca9",
+      "canonical_reference": "Ледовое побоище",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_cultural_references_ледовое_побоище",
+      "i18n_explanations": {
+        "ar": "يشير إلى معركة عام 1242 على بحيرة بيبوس حيث هزم ألكسندر نيفسكي الفرسان التوتونيين، مما يرمز إلى المقاومة الروسية ضد الغزاة الغربيين.",
+        "de": "Bezieht sich auf die Schlacht von 1242 auf dem Peipussee, bei der Alexander Newski die Deutschen Ritter besiegte und den russischen Widerstand gegen westliche Invasoren symbolisiert.",
+        "en": "Refers to the 1242 battle on Lake Peipus where Alexander Nevsky defeated the Teutonic Knights, symbolizing Russian resistance against Western invaders.",
+        "es": "Se refiere a la batalla de 1242 en el lago Peipus donde Alejandro Nevski derrotó a los Caballeros Teutónicos, simbolizando la resistencia rusa contra los invasores occidentales.",
+        "fr": "Fait référence à la bataille de 1242 sur le lac Peïpous où Alexandre Nevski a vaincu les chevaliers teutoniques, symbolisant la résistance russe contre les envahisseurs occidentaux.",
+        "he": "מתייחס לקרב בשנת 1242 על אגם פייפוס שבו אלכסנדר נבסקי הביס את האבירים הטבטונים, המסמל התנגדות רוסית נגד פולשים מערביים.",
+        "it": "Si riferisce alla battaglia del 1242 sul Lago Peipus in cui Alexander Nevsky sconfisse i Cavalieri Teutonici, simboleggiando la resistenza russa contro gli invasori occidentali.",
+        "ja": "1242年にペイプシ湖で行われたアレクサンドル・ネフスキーがドイツ騎士団を破った戦いを指し、ロシアの西方侵略者への抵抗を象徴しています。",
+        "pt": "Refere-se à batalha de 1242 no Lago Peipus, onde Alexandre Nevsky derrotou os Cavaleiros Teutônicos, simbolizando a resistência russa contra invasores ocidentais.",
+        "ru": "Относится к битве 1242 года на Чудском озере, где Александр Невский разгромил тевтонских рыцарей, символизируя сопротивление России западным захватчикам.",
+        "zh": "指1242年在楚德湖发生的战役，亚历山大·涅夫斯基击败了条顿骑士团，象征着俄罗斯抵抗西方入侵者的精神。"
+      },
+      "id": "ru_cultural_reference_ледовое_побоище_99a02ca9",
+      "language": "ru",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate historical battle, surface patterns correct.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "Refers to the 1242 battle on Lake Peipus where Alexander Nevsky defeated the Teutonic Knights, symbolizing Russian resistance against Western invaders.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.ru.author.various",
+      "source_dataset": "ru_cultural_references",
+      "source_license": "public_domain",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.ru.work.various",
+      "surface_patterns": [
+        "Ледовое побоище",
+        "битва на Чудском озере"
+      ]
+    },
+    {
       "canonical_form": "ru:cultural:ru_cultural_reference_летопись_f61d1506",
       "canonical_reference": "Летопись",
       "confidence": 0.85,
@@ -2332,6 +3039,50 @@
       ]
     },
     {
+      "canonical_form": "ru:cultural:ru_cultural_reference_ни_шагу_назад_d5f06730",
+      "canonical_reference": "Ни шагу назад!",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_cultural_references_ни_шагу_назад",
+      "i18n_explanations": {
+        "ar": "الأمر رقم 227 لستالين خلال الحرب الوطنية العظمى، الذي يحظر الانسحاب ويطالب الجنود بالقتال حتى الموت. إنه يرمز إلى التصميم الذي لا يتزعزع وغالبًا ما يستخدم في السياقات الوطنية.",
+        "de": "Stalins Befehl Nr. 227 während des Großen Vaterländischen Krieges, der den Rückzug verbot und von den Soldaten verlangte, bis zum Tod zu kämpfen. Er symbolisiert unerschütterliche Entschlossenheit und wird oft in patriotischen Zusammenhängen verwendet.",
+        "en": "Stalin's order No. 227 during the Great Patriotic War, forbidding retreat and demanding soldiers fight to the death. It symbolizes unwavering determination and is often used in patriotic contexts.",
+        "es": "La orden nº 227 de Stalin durante la Gran Guerra Patria, que prohibía la retirada y exigía a los soldados luchar hasta la muerte. Simboliza una determinación inquebrantable y se utiliza a menudo en contextos patrióticos.",
+        "fr": "L'ordre n° 227 de Staline pendant la Grande Guerre patriotique, interdisant la retraite et exigeant des soldats de combattre jusqu'à la mort. Il symbolise une détermination inébranlable et est souvent utilisé dans des contextes patriotiques.",
+        "he": "הפקודה מס' 227 של סטלין במהלך המלחמה הפטריוטית הגדולה, האוסרת על נסיגה ומחייבת חיילים להילחם עד מותם. היא מסמלת נחישות בלתי מתפשרת ומשמשת לעתים קרובות בהקשרים פטריוטיים.",
+        "it": "L'ordine n. 227 di Stalin durante la Grande Guerra Patriottica, che vietava la ritirata e imponeva ai soldati di combattere fino alla morte. Simboleggia una determinazione incrollabile ed è spesso usato in contesti patriottici.",
+        "ja": "大祖国戦争中のスターリンの命令第227号。退却を禁じ、兵士に死を覚悟して戦うことを求めた。揺るぎない決意を象徴し、愛国的な文脈でよく使われる。",
+        "pt": "A ordem nº 227 de Stalin durante a Grande Guerra Patriótica, proibindo a retirada e exigindo que os soldados lutassem até a morte. Simboliza uma determinação inabalável e é frequentemente usada em contextos patrióticos.",
+        "ru": "Приказ № 227 Сталина во время Великой Отечественной войны, запрещающий отступление и требующий от солдат сражаться до смерти. Он символизирует непоколебимую решимость и часто используется в патриотическом контексте.",
+        "zh": "斯大林在伟大卫国战争期间下达的第227号命令，禁止撤退，要求士兵战斗至死。它象征着坚定不移的决心，常用于爱国主义语境中。"
+      },
+      "id": "ru_cultural_reference_ни_шагу_назад_d5f06730",
+      "language": "ru",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Stalin's Order No. 227 is accurate and verifiable.",
+      "reference_type": "cultural_reference",
+      "register": "formal",
+      "short_explanation": "Stalin's order No. 227 during the Great Patriotic War, forbidding retreat and demanding soldiers fight to the death. It symbolizes unwavering determination and is often used in patriotic contexts.",
+      "source_author": "Иосиф Сталин (Joseph Stalin)",
+      "source_author_key": "mnemosyne.ru.author.иосиф_сталин_joseph_stalin",
+      "source_dataset": "ru_cultural_references",
+      "source_license": "public_domain",
+      "source_url": "https://ru.wikisource.org/wiki/Приказ_№_227_от_28_июля_1942_года",
+      "source_work": "Приказ №227 (Order No. 227)",
+      "source_work_key": "mnemosyne.ru.work.приказ_227_order_no_227",
+      "surface_patterns": [
+        "Ни шагу назад!",
+        "Ни шагу назад",
+        "Не отступать ни шагу назад",
+        "Не отступать ни на шаг",
+        "Ни шагу назад! Ни шагу!"
+      ],
+      "variants": [
+        "Не отступать ни на шаг",
+        "Ни шагу назад! Ни шагу!"
+      ]
+    },
+    {
       "canonical_form": "ru:cultural:ru_cultural_reference_николай_ii_7ea26131",
       "canonical_reference": "Николай II",
       "confidence": 0.85,
@@ -2512,6 +3263,42 @@
         "Петр и Феврония",
         "Saint Peter and Fevronia",
         "Peter and Fevronia"
+      ]
+    },
+    {
+      "canonical_form": "ru:cultural:ru_cultural_reference_поехали_8c8bb23e",
+      "canonical_reference": "Поехали!",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_cultural_references_поехали",
+      "i18n_explanations": {
+        "ar": "العبارة التي نطق بها يوري غاغارين عند إطلاق أول رحلة فضائية بشرية في 12 أبريل 1961، ترمز إلى بداية عصر الفضاء.",
+        "de": "Der Satz, den Juri Gagarin beim Start des ersten bemannten Raumflugs am 12. April 1961 äußerte, symbolisiert den Beginn des Raumfahrtzeitalters.",
+        "en": "The phrase uttered by Yuri Gagarin as the first human spaceflight launched on April 12, 1961, symbolizing the beginning of the space age.",
+        "es": "La frase pronunciada por Yuri Gagarin cuando el primer vuelo espacial humano despegó el 12 de abril de 1961, simbolizando el comienzo de la era espacial.",
+        "fr": "La phrase prononcée par Youri Gagarine alors que le premier vol spatial humain décollait le 12 avril 1961, symbolisant le début de l'ère spatiale.",
+        "he": "הביטוי שנאמר על ידי יורי גגארין כאשר הטיסה המאוישת הראשונה לחלל שוגרה ב-12 באפריל 1961, המסמל את תחילת עידן החלל.",
+        "it": "La frase pronunciata da Yuri Gagarin mentre il primo volo spaziale umano veniva lanciato il 12 aprile 1961, simboleggiando l'inizio dell'era spaziale.",
+        "ja": "1961年4月12日、人類初の宇宙飛行が打ち上げられた際にユーリ・ガガーリンが発した言葉で、宇宙時代の始まりを象徴しています。",
+        "pt": "A frase dita por Yuri Gagarin quando o primeiro voo espacial humano foi lançado em 12 de abril de 1961, simbolizando o início da era espacial.",
+        "ru": "Фраза, произнесенная Юрием Гагариным при запуске первого пилотируемого космического полета 12 апреля 1961 года, символизирующая начало космической эры.",
+        "zh": "1961年4月12日，尤里·加加林在首次载人航天飞行发射时所说的话，象征着太空时代的开始。"
+      },
+      "id": "ru_cultural_reference_поехали_8c8bb23e",
+      "language": "ru",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate phrase from Gagarin's launch, surface patterns correct.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "The phrase uttered by Yuri Gagarin as the first human spaceflight launched on April 12, 1961, symbolizing the beginning of the space age.",
+      "source_author": "Yuri Gagarin",
+      "source_author_key": "mnemosyne.ru.author.yuri_gagarin",
+      "source_dataset": "ru_cultural_references",
+      "source_license": "public_domain",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.ru.work.various",
+      "surface_patterns": [
+        "Поехали!",
+        "Поехали"
       ]
     },
     {
@@ -2811,6 +3598,42 @@
       "source_work_key": "mnemosyne.ru.work.various",
       "surface_patterns": [
         "Собрание сочинений"
+      ]
+    },
+    {
+      "canonical_form": "ru:cultural:ru_cultural_reference_сталинградская_битва_947dce6d",
+      "canonical_reference": "Сталинградская битва",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_cultural_references_сталинградская_битва",
+      "i18n_explanations": {
+        "ar": "معركة محورية في الحرب العالمية الثانية (1942-1943) حيث حاصرت القوات السوفيتية الجيش الألماني السادس وهزمته، نقطة تحول على الجبهة الشرقية.",
+        "de": "Die entscheidende Schlacht des Zweiten Weltkriegs (1942-1943), in der sowjetische Truppen die deutsche 6. Armee einkesselten und besiegten, ein Wendepunkt an der Ostfront.",
+        "en": "The pivotal WWII battle (1942-1943) where Soviet forces encircled and defeated the German 6th Army, a turning point on the Eastern Front.",
+        "es": "La batalla decisiva de la Segunda Guerra Mundial (1942-1943) donde las fuerzas soviéticas rodearon y derrotaron al 6.º Ejército alemán, un punto de inflexión en el Frente Oriental.",
+        "fr": "La bataille cruciale de la Seconde Guerre mondiale (1942-1943) où les forces soviétiques ont encerclé et vaincu la 6e armée allemande, un tournant sur le front de l'Est.",
+        "he": "הקרב המכריע במלחמת העולם השנייה (1942-1943) שבו כוחות סובייטים כיתרו והביסו את הארמייה השישית הגרמנית, נקודת מפנה בחזית המזרחית.",
+        "it": "La battaglia cardine della Seconda Guerra Mondiale (1942-1943) in cui le forze sovietiche accerchiarono e sconfissero la 6a Armata tedesca, una svolta sul Fronte Orientale.",
+        "ja": "第二次世界大戦（1942-1943年）の極めて重要な戦いで、ソビエト軍がドイツ第6軍を包囲・撃破し、東部戦線の転機となった。",
+        "pt": "A batalha crucial da Segunda Guerra Mundial (1942-1943) onde as forças soviéticas cercaram e derrotaram o 6º Exército alemão, um ponto de virada na Frente Oriental.",
+        "ru": "Ключевое сражение Второй мировой войны (1942-1943), в котором советские войска окружили и разгромили 6-ю немецкую армию, переломный момент на Восточном фронте.",
+        "zh": "二战的关键战役（1942-1943年），苏军包围并击败了德国第6集团军，成为东线战场的转折点。"
+      },
+      "id": "ru_cultural_reference_сталинградская_битва_947dce6d",
+      "language": "ru",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate WWII battle, surface patterns correct.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "The pivotal WWII battle (1942-1943) where Soviet forces encircled and defeated the German 6th Army, a turning point on the Eastern Front.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.ru.author.various",
+      "source_dataset": "ru_cultural_references",
+      "source_license": "public_domain",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.ru.work.various",
+      "surface_patterns": [
+        "Сталинградская битва",
+        "битва за Сталинград"
       ]
     },
     {
@@ -3772,6 +4595,44 @@
       ]
     },
     {
+      "canonical_form": "ru:literary:ru_literary_reference_бородино_26e51832",
+      "canonical_reference": "Бородино",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_lermontov_poetry_бородино",
+      "i18n_explanations": {
+        "ar": "قصيدة ميخائيل ليرمونتوف المكرسة لمعركة بورودينو عام 1812، والتي أصبحت رمزًا للوطنية والبطولة للجنود الروس. أصبحت الأبيات 'يا رفاق! أليست موسكو خلفنا؟' مشهورة.",
+        "de": "Gedicht von Michail Lermontow, das der Schlacht von Borodino 1812 gewidmet ist und zum Symbol des Patriotismus und Heldentums russischer Soldaten wurde. Die Zeilen 'Jungs! Ist Moskau nicht hinter uns?' sind geflügelt.",
+        "en": "Стихотворение Михаила Лермонтова, посвящённое Бородинскому сражению 1812 года, ставшее символом патриотизма и героизма русских солдат. Строки 'Ребята! не Москва ль за нами?' стали крылатыми.",
+        "es": "Poema de Mijaíl Lérmontov dedicado a la batalla de Borodinó en 1812, que se convirtió en símbolo del patriotismo y heroísmo de los soldados rusos. Los versos '¡Muchachos! ¿Acaso Moscú no está detrás de nosotros?' se volvieron famosos.",
+        "fr": "Poème de Mikhaïl Lermontov dédié à la bataille de Borodino en 1812, devenu symbole du patriotisme et de l'héroïsme des soldats russes. Les vers 'Les gars! Moscou n'est-elle pas derrière nous?' sont devenus célèbres.",
+        "he": "שירו של מיכאיל לרמונטוב המוקדש לקרב בורודינו ב-1812, שהפך לסמל של פטריוטיות וגבורה של החיילים הרוסים. השורות 'חבר'ה! האם מוסקבה לא מאחורינו?' הפכו למטבע לשון.",
+        "it": "Poesia di Michail Lermontov dedicata alla battaglia di Borodino del 1812, divenuta simbolo del patriottismo e dell'eroismo dei soldati russi. I versi 'Ragazzi! Mosca non è forse dietro di noi?' sono diventati proverbiali.",
+        "ja": "ミハイル・レールモントフの詩。1812年のボロジノの戦いに捧げられ、ロシア兵士の愛国心と英雄的行為の象徴となった。「みんな！モスクワは我々の後ろにあるではないか？」という一節は有名になった。",
+        "pt": "Poema de Mikhail Lermontov dedicado à Batalha de Borodino em 1812, que se tornou símbolo do patriotismo e heroísmo dos soldados russos. Os versos 'Rapazes! Moscou não está atrás de nós?' tornaram-se famosos.",
+        "ru": "Стихотворение Михаила Лермонтова, посвящённое Бородинскому сражению 1812 года, ставшее символом патриотизма и героизма русских солдат. Строки 'Ребята! не Москва ль за нами?' стали крылатыми.",
+        "zh": "米哈伊尔·莱蒙托夫的诗，献给1812年的博罗季诺战役，成为俄罗斯士兵爱国主义和英雄主义的象征。诗句'兄弟们！莫斯科不就在我们身后吗？'成为名言。"
+      },
+      "id": "ru_literary_reference_бородино_26e51832",
+      "language": "ru",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Lermontov's poem is accurately attributed and a key patriotic work.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Стихотворение Михаила Лермонтова, посвящённое Бородинскому сражению 1812 года, ставшее символом патриотизма и героизма русских солдат. Строки 'Ребята! не Москва ль за нами?' стали крылатыми.",
+      "source_author": "Михаил Лермонтов",
+      "source_author_key": "mnemosyne.ru.author.михаил_лермонтов",
+      "source_dataset": "ru_lermontov_poetry",
+      "source_license": "public_domain",
+      "source_url": "https://ru.wikisource.org/wiki/Бородино_(Лермонтов)",
+      "source_work": "Бородино",
+      "source_work_key": "mnemosyne.ru.work.бородино",
+      "surface_patterns": [
+        "Бородино",
+        "\"Бородино\" (стихотворение)",
+        "Бородинская битва"
+      ]
+    },
+    {
       "canonical_form": "ru:literary:ru_literary_reference_братья_карамазовы_18e3811f",
       "canonical_reference": "Братья Карамазовы",
       "confidence": 0.9,
@@ -4390,6 +5251,44 @@
       ]
     },
     {
+      "canonical_form": "ru:literary:ru_literary_reference_во_глубине_сибирских_руд_dd81cbdd",
+      "canonical_reference": "Во глубине сибирских руд",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_pushkin_lyrics_во_глубине_сибирских_руд",
+      "i18n_explanations": {
+        "ar": "السطر الأول من قصيدة ألكسندر بوشكين الموجهة إلى الديسمبريين المنفيين. يرمز التعبير إلى الصمود والولاء للمثل العليا، وأصبح رمزًا للنفي السياسي في الثقافة الروسية.",
+        "de": "Erste Zeile des Gedichts von Alexander Puschkin, das an die verbannten Dekabristen gerichtet ist. Der Ausdruck symbolisiert Standhaftigkeit und Treue zu Idealen und wurde zum Symbol politischer Verbannung in der russischen Kultur.",
+        "en": "Первая строка стихотворения Александра Пушкина, обращённого к ссыльным декабристам. Выражение символизирует стойкость и верность идеалам, став символом политической ссылки в русской культуре.",
+        "es": "Primer verso del poema de Alexander Pushkin dirigido a los decembristas exiliados. La expresión simboliza la firmeza y lealtad a los ideales, convirtiéndose en símbolo del exilio político en la cultura rusa.",
+        "fr": "Premier vers du poème d'Alexandre Pouchkine adressé aux décembristes exilés. L'expression symbolise la constance et la fidélité aux idéaux, devenant un symbole de l'exil politique dans la culture russe.",
+        "he": "השורה הראשונה של שירו של אלכסנדר פושקין המופנה אל הדקבריסטים הגולים. הביטוי מסמל עמידות ונאמנות לאידיאלים, והפך לסמל של גלות פוליטית בתרבות הרוסית.",
+        "it": "Primo verso della poesia di Aleksandr Puškin rivolta ai decabristi esiliati. L'espressione simboleggia la costanza e la fedeltà agli ideali, diventando simbolo dell'esilio politico nella cultura russa.",
+        "ja": "アレクサンドル・プーシキンの詩の一行で、流刑されたデカブリストに宛てたもの。この表現は、理想への堅固さと忠誠を象徴し、ロシア文化における政治亡命の象徴となった。",
+        "pt": "Primeiro verso do poema de Alexander Pushkin dirigido aos dezembristas exilados. A expressão simboliza a firmeza e lealdade aos ideais, tornando-se um símbolo do exílio político na cultura russa.",
+        "ru": "Первая строка стихотворения Александра Пушкина, обращённого к ссыльным декабристам. Выражение символизирует стойкость и верность идеалам, став символом политической ссылки в русской культуре.",
+        "zh": "亚历山大·普希金诗作的第一行，写给被流放的十二月党人。这一表达象征着对理想的坚定和忠诚，成为俄罗斯文化中政治流放的象征。"
+      },
+      "id": "ru_literary_reference_во_глубине_сибирских_руд_dd81cbdd",
+      "language": "ru",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase originates from Pushkin's poem to the Decembrists, accurately described.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Первая строка стихотворения Александра Пушкина, обращённого к ссыльным декабристам. Выражение символизирует стойкость и верность идеалам, став символом политической ссылки в русской культуре.",
+      "source_author": "Александр Пушкин",
+      "source_author_key": "mnemosyne.ru.author.александр_пушкин",
+      "source_dataset": "ru_pushkin_lyrics",
+      "source_license": "public_domain",
+      "source_url": "https://ru.wikisource.org/wiki/Во_глубине_сибирских_руд_(Пушкин)",
+      "source_work": "Во глубине сибирских руд",
+      "source_work_key": "mnemosyne.ru.work.во_глубине_сибирских_руд",
+      "surface_patterns": [
+        "во глубине сибирских руд",
+        "глубина сибирских руд",
+        "\"Во глубине сибирских руд\" (стихотворение)"
+      ]
+    },
+    {
       "canonical_form": "ru:literary:ru_literary_reference_война_и_мир_f83d61d9",
       "canonical_reference": "Война и мир",
       "confidence": 0.85,
@@ -4651,6 +5550,49 @@
         "всадник без головы",
         "как всадник без головы",
         "этот всадник без головы"
+      ]
+    },
+    {
+      "canonical_form": "ru:literary:ru_literary_reference_вставай_страна_огромная_e85b0574",
+      "canonical_reference": "Вставай, страна огромная!",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_cultural_references_вставай_страна_огромная",
+      "i18n_explanations": {
+        "ar": "السطر الافتتاحي لأغنية الحرب السوفيتية الشهيرة 'الحرب المقدسة' (Священная война)، التي تم تأليفها في عام 1941 كدعوة لحمل السلاح ضد الغزو النازي. تثير الحماسة الوطنية والتضحية.",
+        "de": "Erste Zeile des ikonischen sowjetischen Kriegsliedes 'Der heilige Krieg' (Священная война), komponiert 1941 als Aufruf zu den Waffen gegen die Nazi-Invasion. Es ruft patriotische Begeisterung und Opferbereitschaft hervor.",
+        "en": "Opening line of the iconic Soviet war song 'The Sacred War' (Священная война), composed in 1941 as a call to arms against the Nazi invasion. It evokes patriotic fervor and sacrifice.",
+        "es": "Verso inicial de la icónica canción de guerra soviética 'La Guerra Sagrada' (Священная война), compuesta en 1941 como un llamado a las armas contra la invasión nazi. Evoca fervor patriótico y sacrificio.",
+        "fr": "Premier vers de la chanson de guerre soviétique emblématique 'La Guerre sacrée' (Священная война), composée en 1941 comme un appel aux armes contre l'invasion nazie. Elle évoque la ferveur patriotique et le sacrifice.",
+        "he": "שורת הפתיחה של שיר המלחמה הסובייטי האיקוני 'המלחמה הקדושה' (Священная война), שהולחן ב-1941 כקריאה לנשק נגד הפלישה הנאצית. הוא מעורר להט פטריוטי והקרבה.",
+        "it": "Prima riga dell'iconica canzone di guerra sovietica 'La Guerra Sacra' (Священная война), composta nel 1941 come appello alle armi contro l'invasione nazista. Evoca fervore patriottico e sacrificio.",
+        "ja": "1941年にナチスの侵略に対抗するための招集として作曲された、象徴的なソビエト軍歌「神聖な戦争」（Священная война）の冒頭の一節。愛国心と犠牲を呼び起こす。",
+        "pt": "Primeira linha da icônica canção de guerra soviética 'A Guerra Sagrada' (Священная война), composta em 1941 como um chamado às armas contra a invasão nazista. Evoca fervor patriótico e sacrifício.",
+        "ru": "Начальная строка знаковой советской военной песни 'Священная война', сочиненной в 1941 году как призыв к оружию против нацистского вторжения. Вызывает патриотический пыл и жертвенность.",
+        "zh": "标志性的苏联战争歌曲《神圣战争》（Священная война）的开场白，创作于1941年，是对抗纳粹入侵的战斗号召。它唤起爱国热情和牺牲精神。"
+      },
+      "id": "ru_literary_reference_вставай_страна_огромная_e85b0574",
+      "language": "ru",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly identifies opening of 'The Sacred War' with proper authors.",
+      "reference_type": "literary_reference",
+      "register": "common",
+      "short_explanation": "Opening line of the iconic Soviet war song 'The Sacred War' (Священная война), composed in 1941 as a call to arms against the Nazi invasion. It evokes patriotic fervor and sacrifice.",
+      "source_author": "Василий Лебедев-Кумач (lyrics), Александр Александров (music)",
+      "source_author_key": "mnemosyne.ru.author.василий_лебедев_кумач_lyrics_александр_александров",
+      "source_dataset": "ru_cultural_references",
+      "source_license": "public_domain",
+      "source_location": "first line",
+      "source_url": "https://ru.wikisource.org/wiki/Священная_война_(Лебедев-Кумач)",
+      "source_work": "Священная война (The Sacred War)",
+      "source_work_key": "mnemosyne.ru.work.священная_война_the_sacred_war",
+      "surface_patterns": [
+        "Вставай, страна огромная!",
+        "Вставай, страна огромная, вставай на смертный бой",
+        "Вставай, страна",
+        "Вставай на смертный бой"
+      ],
+      "variants": [
+        "Вставай на смертный бой"
       ]
     },
     {
@@ -10290,6 +11232,44 @@
       ]
     },
     {
+      "canonical_form": "ru:literary:ru_literary_reference_памятник_4829f673",
+      "canonical_reference": "Памятник",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_pushkin_lyrics_памятник",
+      "i18n_explanations": {
+        "ar": "إشارة إلى قصيدة ألكسندر بوشكين الشهيرة، حيث يتأمل الشاعر في مجده بعد الموت ومعنى الشعر. أصبح هذا الموضوع قانونيًا في الأدب الروسي.",
+        "de": "Anspielung auf das berühmte Gedicht von Alexander Puschkin, in dem der Dichter über seinen Nachruhm und die Bedeutung der Poesie nachdenkt. Dieses Thema wurde kanonisch für die russische Literatur.",
+        "en": "Отсылка к знаменитому стихотворению Александра Пушкина, в котором поэт размышляет о своей посмертной славе и значении поэзии. Эта тема стала канонической для русской литературы.",
+        "es": "Referencia al famoso poema de Alexander Pushkin, en el que el poeta reflexiona sobre su gloria póstuma y el significado de la poesía. Este tema se ha vuelto canónico en la literatura rusa.",
+        "fr": "Référence au célèbre poème d'Alexandre Pouchkine dans lequel le poète réfléchit à sa gloire posthume et à la signification de la poésie. Ce thème est devenu canonique dans la littérature russe.",
+        "he": "התייחסות לשירו המפורסם של אלכסנדר פושקין, שבו המשורר מהרהר על תהילתו לאחר מותו ועל משמעות השירה. נושא זה הפך לקנוני בספרות הרוסית.",
+        "it": "Riferimento alla famosa poesia di Aleksandr Puškin, in cui il poeta riflette sulla sua gloria postuma e sul significato della poesia. Questo tema è diventato canonico nella letteratura russa.",
+        "ja": "アレクサンドル・プーシキンの有名な詩への言及。詩人は死後の名声と詩の意義について考察している。この主題はロシア文学の規範となった。",
+        "pt": "Referência ao famoso poema de Alexander Pushkin, no qual o poeta reflete sobre sua glória póstuma e o significado da poesia. Este tema tornou-se canônico na literatura russa.",
+        "ru": "Отсылка к знаменитому стихотворению Александра Пушкина, в котором поэт размышляет о своей посмертной славе и значении поэзии. Эта тема стала канонической для русской литературы.",
+        "zh": "引用亚历山大·普希金的著名诗歌，诗人反思其身后的荣耀和诗歌的意义。这一主题已成为俄罗斯文学的经典。"
+      },
+      "id": "ru_literary_reference_памятник_4829f673",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Pushkin is correct and the poem is a canonical literary reference.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Отсылка к знаменитому стихотворению Александра Пушкина, в котором поэт размышляет о своей посмертной славе и значении поэзии. Эта тема стала канонической для русской литературы.",
+      "source_author": "Александр Пушкин",
+      "source_author_key": "mnemosyne.ru.author.александр_пушкин",
+      "source_dataset": "ru_pushkin_lyrics",
+      "source_license": "public_domain",
+      "source_url": "https://ru.wikisource.org/wiki/Памятник_(Пушкин)",
+      "source_work": "Памятник",
+      "source_work_key": "mnemosyne.ru.work.памятник",
+      "surface_patterns": [
+        "памятник",
+        "\"Памятник\" (стихотворение)",
+        "Памятник Пушкина"
+      ]
+    },
+    {
       "canonical_form": "ru:literary:ru_literary_reference_первая_любовь_bd0849b1",
       "canonical_reference": "Первая любовь",
       "confidence": 0.85,
@@ -10992,6 +11972,44 @@
       ]
     },
     {
+      "canonical_form": "ru:literary:ru_literary_reference_полтава_c6a3979e",
+      "canonical_reference": "Полтава",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_pushkin_poems_полтава",
+      "i18n_explanations": {
+        "ar": "قصيدة ألكسندر بوشكين التي تصف معركة بولتافا عام 1709 وقصة الهيتمان مازيبا. أثبت هذا العمل في الثقافة الروسية موضوع المجد الإمبراطوري والخيانة.",
+        "de": "Gedicht von Alexander Puschkin, das die Schlacht bei Poltawa 1709 und die Geschichte des Hetmans Masepa beschreibt. Dieses Werk etablierte in der russischen Kultur das Thema kaiserlichen Ruhms und Verrats.",
+        "en": "Поэма Александра Пушкина, описывающая Полтавскую битву 1709 года и историю гетмана Мазепы. Это произведение утвердило в русской культуре тему имперской славы и предательства.",
+        "es": "Poema de Alexander Pushkin que describe la batalla de Poltava de 1709 y la historia del hetman Mazepa. Esta obra estableció en la cultura rusa el tema de la gloria imperial y la traición.",
+        "fr": "Poème d'Alexandre Pouchkine décrivant la bataille de Poltava de 1709 et l'histoire de l'hetman Mazeppa. Cette œuvre a établi dans la culture russe le thème de la gloire impériale et de la trahison.",
+        "he": "פואמה של אלכסנדר פושקין המתארת את קרב פולטבה ב-1709 ואת סיפורו של ההטמן מזפה. יצירה זו ביססה בתרבות הרוסית את נושא התהילה האימפריאלית והבגידה.",
+        "it": "Poema di Aleksandr Puškin che descrive la battaglia di Poltava del 1709 e la storia dell'etman Mazepa. Quest'opera ha affermato nella cultura russa il tema della gloria imperiale e del tradimento.",
+        "ja": "アレクサンドル・プーシキンの詩。1709年のポルタヴァの戦いと、ヘトマン・マゼーパの物語を描く。この作品はロシア文化に帝国の栄光と裏切りのテーマを確立した。",
+        "pt": "Poema de Alexander Pushkin que descreve a Batalha de Poltava de 1709 e a história do hetman Mazepa. Esta obra estabeleceu na cultura russa o tema da glória imperial e da traição.",
+        "ru": "Поэма Александра Пушкина, описывающая Полтавскую битву 1709 года и историю гетмана Мазепы. Это произведение утвердило в русской культуре тему имперской славы и предательства.",
+        "zh": "亚历山大·普希金的长诗，描述了1709年的波尔塔瓦战役和盖特曼马泽帕的故事。这部作品在俄罗斯文化中确立了帝国荣耀与背叛的主题。"
+      },
+      "id": "ru_literary_reference_полтава_c6a3979e",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Pushkin's 'Полтава' is correctly identified as a poem about the battle and Mazepa.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Поэма Александра Пушкина, описывающая Полтавскую битву 1709 года и историю гетмана Мазепы. Это произведение утвердило в русской культуре тему имперской славы и предательства.",
+      "source_author": "Александр Пушкин",
+      "source_author_key": "mnemosyne.ru.author.александр_пушкин",
+      "source_dataset": "ru_pushkin_poems",
+      "source_license": "public_domain",
+      "source_url": "https://ru.wikisource.org/wiki/Полтава_(Пушкин)",
+      "source_work": "Полтава",
+      "source_work_key": "mnemosyne.ru.work.полтава",
+      "surface_patterns": [
+        "Полтава",
+        "\"Полтава\" (поэма)",
+        "Пушкинская Полтава"
+      ]
+    },
+    {
       "canonical_form": "ru:literary:ru_literary_reference_портрет_дориана_грея_50f0036b",
       "canonical_reference": "Портрет Дориана Грея",
       "confidence": 0.88,
@@ -11338,6 +12356,44 @@
       "surface_patterns": [
         "Проблема русского народа",
         "русский народ"
+      ]
+    },
+    {
+      "canonical_form": "ru:literary:ru_literary_reference_пророк_d72d96c9",
+      "canonical_reference": "Пророк",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_pushkin_lyrics_пророк",
+      "i18n_explanations": {
+        "ar": "قصيدة ألكسندر بوشكين عن الدعوة الإلهية للشاعر، مستندة إلى قصة توراتية. أصبح موضوع النبي كشاعر ناقد محوريًا في الشعر الروسي.",
+        "de": "Gedicht von Alexander Puschkin über die göttliche Berufung des Dichters, basierend auf einer biblischen Erzählung. Das Motiv des Propheten als Dichter-Ankläger wurde zentral für die russische Poesie.",
+        "en": "Стихотворение Александра Пушкина о божественном призвании поэта, основанное на библейском сюжете. Тема пророка как поэта-обличителя стала центральной для русской поэзии.",
+        "es": "Poema de Alexander Pushkin sobre la vocación divina del poeta, basado en un tema bíblico. El tema del profeta como poeta denunciante se volvió central en la poesía rusa.",
+        "fr": "Poème d'Alexandre Pouchkine sur la vocation divine du poète, basé sur un récit biblique. Le thème du prophète en tant que poète dénonciateur est devenu central dans la poésie russe.",
+        "he": "שירו של אלכסנדר פושקין על ייעודו האלוהי של המשורר, המבוסס על עלילה מקראית. נושא הנביא כמשורר-מאשים הפך למרכזי בשירה הרוסית.",
+        "it": "Poesia di Aleksandr Puškin sulla vocazione divina del poeta, basata su un soggetto biblico. Il tema del profeta come poeta accusatore è diventato centrale nella poesia russa.",
+        "ja": "アレクサンドル・プーシキンの詩。聖書の主題に基づき、詩人の神聖な使命について歌う。預言者を糾弾する詩人として描くテーマはロシア詩の中心となった。",
+        "pt": "Poema de Alexander Pushkin sobre a vocação divina do poeta, baseado em um tema bíblico. O tema do profeta como poeta-denunciante tornou-se central na poesia russa.",
+        "ru": "Стихотворение Александра Пушкина о божественном призвании поэта, основанное на библейском сюжете. Тема пророка как поэта-обличителя стала центральной для русской поэзии.",
+        "zh": "亚历山大·普希金的诗，基于圣经故事，描写诗人的神圣使命。先知作为谴责诗人的主题成为俄罗斯诗歌的核心。"
+      },
+      "id": "ru_literary_reference_пророк_d72d96c9",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Pushkin's 'Пророк' is a well-known poem referencing the biblical prophet theme.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "Стихотворение Александра Пушкина о божественном призвании поэта, основанное на библейском сюжете. Тема пророка как поэта-обличителя стала центральной для русской поэзии.",
+      "source_author": "Александр Пушкин",
+      "source_author_key": "mnemosyne.ru.author.александр_пушкин",
+      "source_dataset": "ru_pushkin_lyrics",
+      "source_license": "public_domain",
+      "source_url": "https://ru.wikisource.org/wiki/Пророк_(Пушкин)",
+      "source_work": "Пророк",
+      "source_work_key": "mnemosyne.ru.work.пророк",
+      "surface_patterns": [
+        "пророк",
+        "\"Пророк\" (стихотворение)",
+        "Пушкинский пророк"
       ]
     },
     {
@@ -12975,6 +14031,44 @@
         "Федор Достоевский",
         "Достоевский",
         "Фёдор Михайлович Достоевский"
+      ]
+    },
+    {
+      "canonical_form": "ru:literary:ru_literary_reference_хождение_за_три_моря_eca426aa",
+      "canonical_reference": "Хождение за три моря",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.ru.explanation.ru_cultural_references_хождение_за_три_моря",
+      "i18n_explanations": {
+        "ar": "كتاب رحلات من القرن الخامس عشر للتاجر الروسي أفاناسي نيكيتين، يصف رحلته من تفير إلى الهند عبر ثلاثة بحار. وهو واحد من أقدم كتابات الرحلات الروسية ويوفر رؤى تاريخية قيمة.",
+        "de": "Ein Reisebericht aus dem 15. Jahrhundert des russischen Kaufmanns Afanassi Nikitin, der seine Reise von Twer nach Indien über drei Meere beschreibt. Es ist einer der frühesten russischen Reiseberichte und liefert wertvolle historische Einblicke.",
+        "en": "A 15th-century travelogue by Russian merchant Afanasy Nikitin, describing his journey from Tver to India across three seas. It is one of the earliest Russian travel writings and provides valuable historical insights.",
+        "es": "Un libro de viajes del siglo XV del comerciante ruso Afanasi Nikitin, que describe su viaje desde Tver a la India a través de tres mares. Es uno de los primeros escritos de viajes rusos y proporciona valiosos conocimientos históricos.",
+        "fr": "Un récit de voyage du XVe siècle du marchand russe Afanassi Nikitine, décrivant son voyage de Tver à l'Inde à travers trois mers. C'est l'un des plus anciens écrits de voyage russes et fournit de précieuses informations historiques.",
+        "he": "ספר מסע מהמאה ה-15 מאת הסוחר הרוסי אפנסי ניקיטין, המתאר את מסעו מטבר להודו דרך שלושה ימים. זהו אחד מכתבי המסע הרוסיים המוקדמים ביותר ומספק תובנות היסטוריות חשובות.",
+        "it": "Un resoconto di viaggio del XV secolo del mercante russo Afanasy Nikitin, che descrive il suo viaggio da Tver' all'India attraverso tre mari. È uno dei primi scritti di viaggio russi e fornisce preziose intuizioni storiche.",
+        "ja": "15世紀のロシア人商人アファナシー・ニキーチンによる旅行記で、トヴェリからインドへの三つの海を渡る旅を描いている。初期のロシア旅行記の一つであり、貴重な歴史的洞察を提供する。",
+        "pt": "Um relato de viagem do século XV do mercador russo Afanasy Nikitin, descrevendo sua jornada de Tver à Índia através de três mares. É um dos primeiros escritos de viagem russos e fornece valiosas percepções históricas.",
+        "ru": "Путевые записки XV века русского купца Афанасия Никитина, описывающие его путешествие из Твери в Индию через три моря. Это одно из первых русских путевых описаний, дающее ценные исторические сведения.",
+        "zh": "15世纪俄罗斯商人阿法纳西·尼基京的游记，描述了他从特维尔出发，跨越三大海到达印度的旅程。这是最早的俄罗斯旅行著作之一，提供了宝贵的历史见解。"
+      },
+      "id": "ru_literary_reference_хождение_за_три_моря_eca426aa",
+      "language": "ru",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Afanasy Nikitin and historically accurate.",
+      "reference_type": "literary_reference",
+      "register": "literary",
+      "short_explanation": "A 15th-century travelogue by Russian merchant Afanasy Nikitin, describing his journey from Tver to India across three seas. It is one of the earliest Russian travel writings and provides valuable historical insights.",
+      "source_author": "Афанасий Никитин",
+      "source_author_key": "mnemosyne.ru.author.афанасий_никитин",
+      "source_dataset": "ru_cultural_references",
+      "source_license": "public_domain",
+      "source_url": "https://ru.wikisource.org/wiki/Хождение_за_три_моря_(Никитин)",
+      "source_work": "Хождение за три моря",
+      "source_work_key": "mnemosyne.ru.work.хождение_за_три_моря",
+      "surface_patterns": [
+        "Хождение за три моря",
+        "Хожение за три моря",
+        "Афанасий Никитин"
       ]
     },
     {
