@@ -1,6 +1,45 @@
 {
   "entries": [
     {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_א_יזו_ה_י_ד_ר_ך_י_ש_ר_ה_ש_י_בו_ר_לו_ה_א_ד_ם_db6a8c43",
+      "canonical_reference": "אֵיזוֹהִי דֶרֶךְ יְשָׁרָה שֶׁיָּבוֹר לוֹ הָאָדָם",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.heb_cultural_refs_א_יזו_ה_י_ד_ר_ך_י_ש_ר_ה_ש_י_בו_ר",
+      "i18n_explanations": {
+        "ar": "سؤال من بيركي أفوت (أخلاق الآباء) يسأل أي طريق في الحياة يجب أن يختاره الإنسان، مع التركيز على السلوك الأخلاقي.",
+        "de": "Eine Frage aus Pirkei Avot (Ethik der Väter), die fragt, welchen Weg im Leben ein Mensch wählen soll, mit Betonung auf ethischem Verhalten.",
+        "en": "A question from Pirkei Avot (Ethics of the Fathers) asking which path in life a person should choose, emphasizing ethical conduct.",
+        "es": "Una pregunta de Pirkei Avot (Ética de los Padres) que pregunta qué camino en la vida debe elegir una persona, enfatizando la conducta ética.",
+        "fr": "Une question de Pirkei Avot (Éthique des Pères) demandant quelle voie dans la vie une personne doit choisir, mettant l'accent sur la conduite éthique.",
+        "he": "שאלה מפרקי אבות השואלת איזו דרך ישרה אדם צריך לבחור לעצמו, תוך הדגשת התנהגות אתית.",
+        "it": "Una domanda di Pirkei Avot (Etica dei Padri) che chiede quale via nella vita una persona dovrebbe scegliere, enfatizzando la condotta etica.",
+        "ja": "ピルケー・アヴォート（父祖の教え）からの問いで、人は人生でどの道を選ぶべきかを尋ね、倫理的な行動を強調している。",
+        "pt": "Uma pergunta de Pirkei Avot (Ética dos Pais) perguntando qual caminho na vida uma pessoa deve escolher, enfatizando a conduta ética.",
+        "ru": "Вопрос из Пиркей Авот (Поучения отцов), спрашивающий, какой путь в жизни человеку следует выбрать, с акцентом на этическое поведение.",
+        "zh": "来自《先贤箴言》（Pirkei Avot）的问题，询问一个人应该选择哪条人生道路，强调道德行为。"
+      },
+      "id": "he_classical_or_scriptural_allusion_א_יזו_ה_י_ד_ר_ך_י_ש_ר_ה_ש_י_בו_ר_לו_ה_א_ד_ם_db6a8c43",
+      "language": "he",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Pirkei Avot 2:1; surface patterns and explanation are accurate.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A question from Pirkei Avot (Ethics of the Fathers) asking which path in life a person should choose, emphasizing ethical conduct.",
+      "source_author": "Various Sages (Chazal)",
+      "source_author_key": "mnemosyne.he.author.various_sages_chazal",
+      "source_dataset": "heb_cultural_refs",
+      "source_license": "public_domain",
+      "source_location": "Pirkei Avot 2:1",
+      "source_url": "https://he.wikisource.org/wiki/%D7%9E%D7%A9%D7%A0%D7%94_%D7%90%D7%91%D7%95%D7%AA_%D7%91_%D7%90",
+      "source_work": "משנה מסכת אבות",
+      "source_work_key": "mnemosyne.he.work.משנה_מסכת_אבות",
+      "surface_patterns": [
+        "אֵיזוֹהִי דֶרֶךְ יְשָׁרָה שֶׁיָּבוֹר לוֹ הָאָדָם",
+        "איזוהי דרך ישרה שיבור לו האדם",
+        "איזוהי דרך ישרה"
+      ]
+    },
+    {
       "canonical_form": "he:classical:he_classical_or_scriptural_allusion_אברהם_אבינו_e990adb8",
       "canonical_reference": "אברהם אבינו",
       "confidence": 0.9,
@@ -1729,6 +1768,71 @@
       ]
     },
     {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_אני_מאמין_b736cd3c",
+      "canonical_reference": "אני מאמין",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_references_אני_מאמין",
+      "id": "he_classical_or_scriptural_allusion_אני_מאמין_b736cd3c",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to the Ani Ma'amin prayer based on Maimonides' principles.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Opening words of the Ani Ma'amin prayer, based on Maimonides' 13 Principles of Faith. It is recited daily in Jewish liturgy.",
+      "source_author": "Moses Maimonides",
+      "source_author_key": "mnemosyne.he.author.moses_maimonides",
+      "source_dataset": "he_cultural_references",
+      "source_license": "public_domain",
+      "source_location": "Sanhedrin, chapter 10 (introduction)",
+      "source_url": "https://he.wikisource.org/wiki/רמב%22ם_על_מסכת_סנהדרין_פרק_י",
+      "source_work": "פירוש המשניות (Maimonides' Commentary on the Mishnah)",
+      "source_work_key": "mnemosyne.he.work.פירוש_המשניות_maimonides_commentary_on_the_mishnah",
+      "surface_patterns": [
+        "אני מאמין",
+        "אני מאמין באמונה שלימה",
+        "עיקרי האמונה"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_אנכי_ה_אלהיך_40cada77",
+      "canonical_reference": "אנכי ה' אלהיך",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.hebrew_cultural_refs_אנכי_ה_אלהיך",
+      "i18n_explanations": {
+        "ar": "العبارة الافتتاحية للوصايا العشر، التي تعلن هوية الله وسلطانه على إسرائيل.",
+        "de": "Der Eröffnungssatz der Zehn Gebote, der Gottes Identität und Autorität über Israel verkündet.",
+        "en": "The opening phrase of the Ten Commandments, declaring God's identity and authority over Israel.",
+        "es": "La frase inicial de los Diez Mandamientos, que declara la identidad y autoridad de Dios sobre Israel.",
+        "fr": "La phrase d'ouverture des Dix Commandements, déclarant l'identité et l'autorité de Dieu sur Israël.",
+        "he": "ביטוי הפתיחה של עשרת הדיברות, המצהיר על זהותו וסמכותו של ה' על ישראל.",
+        "it": "La frase di apertura dei Dieci Comandamenti, che dichiara l'identità e l'autorità di Dio su Israele.",
+        "ja": "十戒の冒頭の言葉で、神の身分とイスラエルに対する権威を宣言する。",
+        "pt": "A frase de abertura dos Dez Mandamentos, declarando a identidade e autoridade de Deus sobre Israel.",
+        "ru": "Начальная фраза Десяти заповедей, провозглашающая личность и власть Бога над Израилем.",
+        "zh": "十诫的开头语句，宣告上帝的身份和对以色列的权威。"
+      },
+      "id": "he_classical_or_scriptural_allusion_אנכי_ה_אלהיך_40cada77",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Exodus 20:2 and Deuteronomy 5:6 with correct explanation and plausible confidence.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "The opening phrase of the Ten Commandments, declaring God's identity and authority over Israel.",
+      "source_author": "Traditional (Moses)",
+      "source_author_key": "mnemosyne.he.author.traditional_moses",
+      "source_dataset": "hebrew_cultural_refs",
+      "source_license": "public_domain",
+      "source_location": "Exodus 20:2",
+      "source_url": "https://www.sefaria.org/Exodus.20.2",
+      "source_work": "תנ״ך (Tanakh) – Exodus 20:2, Deuteronomy 5:6",
+      "source_work_key": "mnemosyne.he.work.תנ_ך_tanakh_exodus_20_2_deuteronomy_5_6",
+      "surface_patterns": [
+        "אנכי ה' אלהיך",
+        "אנכי ה' אלוהיך",
+        "ה' אלהיך"
+      ]
+    },
+    {
       "canonical_form": "he:classical:he_classical_or_scriptural_allusion_ארור_הגבר_אשר_יבטח_באדם_9cd381c3",
       "canonical_reference": "ארור הגבר אשר יבטח באדם",
       "confidence": 0.89,
@@ -1923,6 +2027,45 @@
         "אשת חיל מי ימצא",
         "אשת חיל",
         "מי ימצא אשת חיל"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_ב_רו_ך_ה_ב_א_ב_ש_ם_י_הו_ה_bbfa5679",
+      "canonical_reference": "בָּרוּךְ הַבָּא בְּשֵׁם יְהוָה",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.heb_cultural_refs_ב_רו_ך_ה_ב_א_ב_ש_ם_י_הו_ה",
+      "i18n_explanations": {
+        "ar": "بركة من المزمور 118:26، تُستخدم لتحية أو ترحيب بشخص، غالبًا في السياقات الدينية.",
+        "de": "Ein Segen aus Psalm 118,26, der verwendet wird, um jemanden zu grüßen oder willkommen zu heißen, oft in religiösen Kontexten.",
+        "en": "A blessing from Psalm 118:26, used to greet or welcome someone, often in religious contexts.",
+        "es": "Una bendición del Salmo 118:26, usada para saludar o dar la bienvenida a alguien, a menudo en contextos religiosos.",
+        "fr": "Une bénédiction du Psaume 118:26, utilisée pour saluer ou accueillir quelqu'un, souvent dans des contextes religieux.",
+        "he": "ברכה מתהילים 118:26, המשמשת לברך או לקבל פני אדם, לעתים קרובות בהקשרים דתיים.",
+        "it": "Una benedizione dal Salmo 118:26, usata per salutare o dare il benvenuto a qualcuno, spesso in contesti religiosi.",
+        "ja": "詩編118編26節の祝福の言葉で、宗教的な文脈でよく人を迎えたり挨拶する際に使われる。",
+        "pt": "Uma bênção do Salmo 118:26, usada para saudar ou dar boas-vindas a alguém, frequentemente em contextos religiosos.",
+        "ru": "Благословение из Псалма 117:26 (по славянской нумерации), используемое для приветствия или встречи кого-либо, часто в религиозном контексте.",
+        "zh": "来自诗篇118:26的祝福，用于问候或欢迎某人，常在宗教语境中使用。"
+      },
+      "id": "he_classical_or_scriptural_allusion_ב_רו_ך_ה_ב_א_ב_ש_ם_י_הו_ה_bbfa5679",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate quotation from Psalm 118:26, commonly used as a greeting; surface patterns are correct and explanation is appropriate.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A blessing from Psalm 118:26, used to greet or welcome someone, often in religious contexts.",
+      "source_author": "David (traditional)",
+      "source_author_key": "mnemosyne.he.author.david_traditional",
+      "source_dataset": "heb_cultural_refs",
+      "source_license": "public_domain",
+      "source_location": "Psalm 118:26",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%94%D7%9C%D7%99%D7%9D_%D7%A7%D7%99%D7%97_%D7%9B%D7%95",
+      "source_work": "תהילים",
+      "source_work_key": "mnemosyne.he.work.תהילים",
+      "surface_patterns": [
+        "בָּרוּךְ הַבָּא בְּשֵׁם יְהוָה",
+        "ברוך הבא בשם ה'",
+        "ברוך הבא"
       ]
     },
     {
@@ -2361,6 +2504,121 @@
       ]
     },
     {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_גיהנום_330abf26",
+      "canonical_reference": "גיהנום",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_references_גיהנום",
+      "i18n_explanations": {
+        "ar": "جهنم (الجحيم)؛ في الأصل وادي هنوم بالقرب من القدس، المرتبط بتقديم الأطفال كقرابين، أصبح لاحقًا المفهوم اليهودي لمكان عقاب الأشرار، ويُستخدم في العبرية الحديثة كمصطلح للجحيم أو مكان فظيع.",
+        "de": "Gehinnom (Hölle); ursprünglich das Tal Hinnom bei Jerusalem, mit Kindesopfern in Verbindung gebracht, später das jüdische Konzept eines Ortes der Bestrafung für die Bösen, im modernen Hebräisch als Begriff für Hölle oder einen schrecklichen Ort verwendet.",
+        "en": "Gehinnom (Hell); originally the Valley of Hinnom near Jerusalem, associated with child sacrifice, later became the Jewish concept of a place of punishment for the wicked, used in modern Hebrew as a term for hell or a terrible place.",
+        "es": "Gehinnom (Infierno); originalmente el valle de Hinom cerca de Jerusalén, asociado con sacrificios de niños, luego se convirtió en el concepto judío de un lugar de castigo para los malvados, usado en hebreo moderno como término para el infierno o un lugar terrible.",
+        "fr": "Gehinnom (Enfer); à l'origine la vallée de Hinnom près de Jérusalem, associée aux sacrifices d'enfants, est devenue plus tard le concept juif d'un lieu de châtiment pour les méchants, utilisé en hébreu moderne pour désigner l'enfer ou un endroit terrible.",
+        "he": "גיהנום; במקור גיא בן הינום ליד ירושלים, הקשור להקרבת ילדים, מאוחר יותר הפך למושג יהודי של מקום עונש לרשעים, ומשמש בעברית מודרנית כמונח לגיהנום או מקום נורא.",
+        "it": "Gehinnom (Inferno); originariamente la valle di Hinnom vicino a Gerusalemme, associata a sacrifici di bambini, divenne in seguito il concetto ebraico di un luogo di punizione per i malvagi, usato nell'ebraico moderno come termine per inferno o un luogo terribile.",
+        "ja": "ゲヒンノム（地獄）; 元はエルサレム近くのヒンノムの谷で、幼児の生け贄と関連し、後にユダヤ教における悪人への罰の場所の概念となり、現代ヘブライ語では地獄や恐ろしい場所を指す言葉として使われる。",
+        "pt": "Gehinnom (Inferno); originalmente o vale de Hinnom perto de Jerusalém, associado a sacrifícios de crianças, depois se tornou o conceito judaico de um lugar de punição para os maus, usado em hebraico moderno como termo para inferno ou um lugar terrível.",
+        "ru": "Геенна (Ад); первоначально долина Еннома возле Иерусалима, связанная с детскими жертвоприношениями, позже стала еврейским понятием места наказания для нечестивых, используется в современном иврите как термин для ада или ужасного места.",
+        "zh": "欣嫩子谷（地狱）；最初是耶路撒冷附近的欣嫩子谷，与儿童献祭有关，后来成为犹太教中惩罚恶人的地方的概念，在现代希伯来语中用于指代地狱或可怕的地方。"
+      },
+      "id": "he_classical_or_scriptural_allusion_גיהנום_330abf26",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical and later Jewish concept; surface patterns and explanation correct.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Gehinnom (Hell); originally the Valley of Hinnom near Jerusalem, associated with child sacrifice, later became the Jewish concept of a place of punishment for the wicked, used in modern Hebrew as a term for hell or a terrible place.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.he.author.various",
+      "source_dataset": "he_cultural_references",
+      "source_license": "public_domain",
+      "source_location": "Various",
+      "source_work": "תנ\"ך",
+      "source_work_key": "mnemosyne.he.work.תנ_ך",
+      "surface_patterns": [
+        "גיהנום",
+        "גיהינום",
+        "גיא בן הינום"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_גלות_בבל_a296ca7d",
+      "canonical_reference": "גלות בבל",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_references_גלות_בבל",
+      "i18n_explanations": {
+        "ar": "يشير إلى السبي البابلي للشعب اليهودي بعد تدمير الهيكل الأول، وهو حدث تاريخي ونبوي رئيسي.",
+        "de": "Bezieht sich auf die babylonische Gefangenschaft des jüdischen Volkes nach der Zerstörung des Ersten Tempels, ein bedeutendes historisches und prophetisches Ereignis.",
+        "en": "Refers to the Babylonian captivity of the Jewish people after the destruction of the First Temple, a major historical and prophetic event.",
+        "es": "Se refiere al cautiverio babilónico del pueblo judío después de la destrucción del Primer Templo, un evento histórico y profético importante.",
+        "fr": "Fait référence à la captivité babylonienne du peuple juif après la destruction du Premier Temple, un événement historique et prophétique majeur.",
+        "he": "מתייחס לגלות בבל של עם ישראל לאחר חורבן בית המקדש הראשון, אירוע היסטורי ונבואי מרכזי.",
+        "it": "Si riferisce alla prigionia babilonese del popolo ebraico dopo la distruzione del Primo Tempio, un importante evento storico e profetico.",
+        "ja": "第一神殿が破壊された後のユダヤ人のバビロン捕囚を指し、主要な歴史的・預言的な出来事です。",
+        "pt": "Refere-se ao cativeiro babilônico do povo judeu após a destruição do Primeiro Templo, um grande evento histórico e profético.",
+        "ru": "Относится к вавилонскому пленению еврейского народа после разрушения Первого Храма, важному историческому и пророческому событию.",
+        "zh": "指的是第一圣殿被毁后犹太人的巴比伦囚掳，这是一个重大的历史和预言事件。"
+      },
+      "id": "he_classical_or_scriptural_allusion_גלות_בבל_a296ca7d",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to the Babylonian exile, with correct biblical sources and surface patterns.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "common",
+      "short_explanation": "Refers to the Babylonian captivity of the Jewish people after the destruction of the First Temple, a major historical and prophetic event.",
+      "source_author": "מסורת",
+      "source_author_key": "mnemosyne.he.author.מסורת",
+      "source_dataset": "he_cultural_references",
+      "source_license": "public_domain",
+      "source_location": "מלכים ב' כ\"ד-כ\"ה; ירמיהו",
+      "source_work": "תנ\"ך, ספר מלכים ב', ירמיהו",
+      "source_work_key": "mnemosyne.he.work.תנ_ך_ספר_מלכים_ב_ירמיהו",
+      "surface_patterns": [
+        "גלות בבל",
+        "גלות בבל 70 שנה",
+        "הגלות לבבל"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_גן_עדן_811b8549",
+      "canonical_reference": "גן עדן",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_references_גן_עדן",
+      "i18n_explanations": {
+        "ar": "جنة عدن؛ الجنة التوراتية، تمثل مكانًا للكمال والنعيم، وتُستخدم أيضًا استعاريًا في العبرية الحديثة للإشارة إلى مكان مثالي.",
+        "de": "Garten Eden; das biblische Paradies, ein Ort der Vollkommenheit und Glückseligkeit, auch metaphorisch im modernen Hebräisch für einen idyllischen Ort verwendet.",
+        "en": "Garden of Eden; the biblical paradise, representing a place of perfection and bliss, also used metaphorically in modern Hebrew for an idyllic place.",
+        "es": "Jardín del Edén; el paraíso bíblico, que representa un lugar de perfección y dicha, también usado metafóricamente en hebreo moderno para un lugar idílico.",
+        "fr": "Jardin d'Éden; le paradis biblique, représentant un lieu de perfection et de bonheur, aussi utilisé métaphoriquement en hébreu moderne pour un lieu idyllique.",
+        "he": "גן עדן; גן העדן המקראי, המייצג מקום של שלמות ואושר, ומשמש באופן מטפורי בעברית מודרנית לתיאור מקום אידילי.",
+        "it": "Giardino dell'Eden; il paradiso biblico, che rappresenta un luogo di perfezione e beatitudine, usato anche metaforicamente nell'ebraico moderno per un luogo idilliaco.",
+        "ja": "エデンの園; 聖書の楽園で、完全さと至福の場所を表し、現代ヘブライ語では理想郷の比喩としても使われる。",
+        "pt": "Jardim do Éden; o paraíso bíblico, representando um lugar de perfeição e felicidade, também usado metaforicamente em hebraico moderno para um lugar idílico.",
+        "ru": "Эдемский сад; библейский рай, представляющий собой место совершенства и блаженства, также используется метафорически в современном иврите для обозначения идиллического места.",
+        "zh": "伊甸园；圣经中的乐园，代表完美和幸福之地，在现代希伯来语中也隐喻地用于指代田园诗般的地方。"
+      },
+      "id": "he_classical_or_scriptural_allusion_גן_עדן_811b8549",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical allusion; surface patterns and explanation correct.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Garden of Eden; the biblical paradise, representing a place of perfection and bliss, also used metaphorically in modern Hebrew for an idyllic place.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.he.author.various",
+      "source_dataset": "he_cultural_references",
+      "source_license": "public_domain",
+      "source_location": "בראשית ב-ג",
+      "source_url": "https://www.mechon-mamre.org/p/pt/pt0102.htm",
+      "source_work": "תנ\"ך",
+      "source_work_key": "mnemosyne.he.work.תנ_ך",
+      "surface_patterns": [
+        "גן עדן",
+        "גן-עדן",
+        "גן העדן"
+      ]
+    },
+    {
       "canonical_form": "he:classical:he_classical_or_scriptural_allusion_דבר_בעתו_מה_טוב_065afa3f",
       "canonical_reference": "דבר בעתו מה טוב",
       "confidence": 0.9,
@@ -2441,6 +2699,44 @@
       ],
       "variants": [
         "המלך דוד"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_דוד_וגלית_74e1f3b6",
+      "canonical_reference": "דוד וגלית",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_references_דוד_וגלית",
+      "i18n_explanations": {
+        "ar": "يشير إلى القصة التوراتية لداود يهزم جالوت العملاق، ويرمز لانتصار الضعيف.",
+        "de": "Bezieht sich auf die biblische Geschichte von David, der den Riesen Goliath besiegt, und symbolisiert den Sieg eines Außenseiters.",
+        "en": "Refers to the biblical story of David defeating the giant Goliath, symbolizing an underdog victory.",
+        "es": "Se refiere a la historia bíblica de David venciendo al gigante Goliat, simbolizando la victoria del desvalido.",
+        "fr": "Fait référence à l'histoire biblique de David vainquant le géant Goliath, symbolisant la victoire d'un outsider.",
+        "he": "מתייחס לסיפור המקראי של דוד מביס את גוליית הענק, המסמל ניצחון של אנדרדוג.",
+        "it": "Si riferisce alla storia biblica di Davide che sconfigge il gigante Golia, simboleggiando la vittoria di un underdog.",
+        "ja": "ダビデが巨人ゴリアテを倒した聖書の物語を指し、弱者が勝利することを象徴しています。",
+        "pt": "Refere-se à história bíblica de Davi derrotando o gigante Golias, simbolizando a vitória de um azarão.",
+        "ru": "Относится к библейской истории о Давиде, побеждающем великана Голиафа, символизирующей победу аутсайдера.",
+        "zh": "指的是圣经中大卫击败巨人歌利亚的故事，象征着弱者获胜。"
+      },
+      "id": "he_classical_or_scriptural_allusion_דוד_וגלית_74e1f3b6",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to 1 Samuel 17 with correct source location and common surface patterns.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "common",
+      "short_explanation": "Refers to the biblical story of David defeating the giant Goliath, symbolizing an underdog victory.",
+      "source_author": "מסורת",
+      "source_author_key": "mnemosyne.he.author.מסורת",
+      "source_dataset": "he_cultural_references",
+      "source_license": "public_domain",
+      "source_location": "שמואל א' י\"ז",
+      "source_url": "https://mechon-mamre.org/i/t/t08a17.htm",
+      "source_work": "תנ\"ך, ספר שמואל א'",
+      "source_work_key": "mnemosyne.he.work.תנ_ך_ספר_שמואל_א",
+      "surface_patterns": [
+        "דוד וגלית",
+        "דוד מול גלית"
       ]
     },
     {
@@ -3880,6 +4176,81 @@
       ],
       "variants": [
         "הרוצה להחכים ידרים יעסוק בתורה"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_הרמב_ם_9d42825e",
+      "canonical_reference": "הרמב\"ם",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_refs_הרמב_ם",
+      "i18n_explanations": {
+        "ar": "اختصار للحاخام موسى بن ميمون (ميمونيدس)، الفيلسوف والمشرع اليهودي في العصور الوسطى الذي تعتبر أعماله مثل المشناه توراة أساسية في القانون والأخلاق اليهودية.",
+        "de": "Akronym für Rabbi Moses ben Maimon (Maimonides), einen mittelalterlichen jüdischen Philosophen und Kodifikator, dessen Werke wie die Mishneh Torah grundlegend für das jüdische Gesetz und die Ethik sind.",
+        "en": "Acronym for Rabbi Moses ben Maimon (Maimonides), a medieval Jewish philosopher and codifier whose works like the Mishneh Torah are foundational in Jewish law and ethics.",
+        "es": "Acrónimo de Rabí Moshé ben Maimón (Maimónides), filósofo y codificador judío medieval cuyas obras como la Mishné Torá son fundamentales en la ley y ética judías.",
+        "fr": "Acronyme de Rabbi Moïse ben Maimon (Maïmonide), philosophe et codificateur juif médiéval dont les œuvres comme le Mishneh Torah sont fondamentales dans la loi et l'éthique juives.",
+        "he": "ראשי תיבות לרבי משה בן מיימון (רמב\"ם), פילוסוף ומחבר יהודי מימי הביניים שכתביו כמו משנה תורה הם יסודיים בהלכה ובאתיקה היהודית.",
+        "it": "Acronimo di Rabbi Mosè ben Maimon (Maimonide), filosofo e codificatore ebraico medievale le cui opere come la Mishneh Torah sono fondamentali nella legge e nell'etica ebraica.",
+        "ja": "ラビ・モーゼス・ベン・マイモン（マイモニデス）の略称。中世ユダヤ哲学者・法典編纂者で、『ミシュネ・トーラー』などの著作はユダヤ法と倫理の基礎となっている。",
+        "pt": "Acrônimo do Rabi Moisés ben Maimom (Maimônides), filósofo e codificador judeu medieval cujas obras como a Mishneh Torá são fundamentais na lei e ética judaicas.",
+        "ru": "Аббревиатура для раввина Моше бен Маймона (Маймонид), средневекового еврейского философа и кодификатора, чьи труды, такие как Мишне Тора, являются основополагающими в еврейском законе и этике.",
+        "zh": "摩西·本·迈蒙（迈蒙尼德）的缩写，中世纪犹太哲学家和法典编纂者，其著作如《密西拿妥拉》在犹太法律和伦理中具有基础地位。"
+      },
+      "id": "he_classical_or_scriptural_allusion_הרמב_ם_9d42825e",
+      "language": "he",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate and verifiable reference to Maimonides.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Acronym for Rabbi Moses ben Maimon (Maimonides), a medieval Jewish philosopher and codifier whose works like the Mishneh Torah are foundational in Jewish law and ethics.",
+      "source_author": "Maimonides",
+      "source_author_key": "mnemosyne.he.author.maimonides",
+      "source_dataset": "he_cultural_refs",
+      "source_license": "public_domain",
+      "source_url": "https://he.wikisource.org/wiki/%D7%94%D7%A8%D7%9E%D7%91%22%D7%9D",
+      "source_work": "Mishneh Torah",
+      "source_work_key": "mnemosyne.he.work.mishneh_torah",
+      "surface_patterns": [
+        "הרמב\"ם",
+        "רמב\"ם"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_ו_י_ה_י_ה_י_ו_ם_ו_י_ב_או_ב_נ_י_ה_א_ל_ה_ים_076fde32",
+      "canonical_reference": "וַיְהִי הַיּוֹם וַיָּבֹאוּ בְּנֵי הָאֱלֹהִים",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.hebrew_cultural_references_ו_י_ה_י_ה_י_ו_ם_ו_י_ב_א",
+      "i18n_explanations": {
+        "ar": "آية من سفر أيوب 1:6 تصف أبناء الله يمثلون أمام الرب؛ غالبًا ما تُستخدم لتقديم مناسبة عظيمة.",
+        "de": "Bibelvers aus Hiob 1:6, der die Söhne Gottes beschreibt, die sich vor dem Herrn präsentieren; oft verwendet, um eine bedeutungsvolle Gelegenheit einzuleiten.",
+        "en": "Biblical verse from Job 1:6 describing the sons of God presenting themselves before the Lord; often used to introduce a momentous occasion.",
+        "es": "Versículo bíblico de Job 1:6 que describe a los hijos de Dios presentándose ante el Señor; a menudo se usa para introducir una ocasión trascendental.",
+        "fr": "Verset biblique de Job 1:6 décrivant les fils de Dieu se présentant devant le Seigneur; souvent utilisé pour introduire un événement mémorable.",
+        "he": "פסוק מקראי מאיוב א':ו' המתאר את בני האלוהים מתייצבים לפני ה'; משמש לעתים קרובות להקדמת אירוע חשוב.",
+        "it": "Versetto biblico da Giobbe 1:6 che descrive i figli di Dio che si presentano davanti al Signore; spesso usato per introdurre un'occasione importante.",
+        "ja": "ヨブ記1章6節の聖句で、神の子たちが主の前に現れる様子を描き、重要な出来事を紹介するために用いられる。",
+        "pt": "Versículo bíblico de Jó 1:6 descrevendo os filhos de Deus se apresentando diante do Senhor; frequentemente usado para introduzir uma ocasião marcante.",
+        "ru": "Библейский стих из Иова 1:6, описывающий сынов Божьих, предстающих перед Господом; часто используется для введения важного события.",
+        "zh": "出自约伯记1:6的圣经经文，描述神的众子侍立在耶和华面前；常用于引出重大事件。"
+      },
+      "id": "he_classical_or_scriptural_allusion_ו_י_ה_י_ה_י_ו_ם_ו_י_ב_או_ב_נ_י_ה_א_ל_ה_ים_076fde32",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correct biblical reference and explanation; surface patterns match.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Biblical verse from Job 1:6 describing the sons of God presenting themselves before the Lord; often used to introduce a momentous occasion.",
+      "source_author": "Traditional (authorship uncertain)",
+      "source_author_key": "mnemosyne.he.author.traditional_authorship_uncertain",
+      "source_dataset": "hebrew_cultural_references",
+      "source_license": "public_domain",
+      "source_location": "Job 1:6",
+      "source_url": "https://www.sefaria.org/Job.1.6?ven=he&lang=bi",
+      "source_work": "תנ\"ך (Tanakh)",
+      "source_work_key": "mnemosyne.he.work.תנ_ך_tanakh",
+      "surface_patterns": [
+        "ויהי היום ויבאו בני האלהים",
+        "ויהי היום ויבאו בני האלוהים"
       ]
     },
     {
@@ -6117,6 +6488,45 @@
       ]
     },
     {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_ז_ה_ה_י_ו_ם_ע_ש_ה_י_הו_ה_409971f6",
+      "canonical_reference": "זֶה הַיּוֹם עָשָׂה יְהוָה",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.hebrew_cultural_references_ז_ה_ה_י_ו_ם_ע_ש_ה_י_הו_",
+      "i18n_explanations": {
+        "ar": "آية من المزمور 118:24، تُتلى في الطقوس اليهودية (هليل) للتعبير عن الفرح والامتنان ليوم خاص.",
+        "de": "Bibelvers aus Psalm 118:24, rezitiert in der jüdischen Liturgie (Hallel), um Freude und Dankbarkeit für einen besonderen Tag auszudrücken.",
+        "en": "Biblical verse from Psalm 118:24, recited in Jewish liturgy (Hallel) to express joy and gratitude for a special day.",
+        "es": "Versículo bíblico del Salmo 118:24, recitado en la liturgia judía (Hallel) para expresar alegría y gratitud por un día especial.",
+        "fr": "Verset biblique du Psaume 118:24, récité dans la liturgie juive (Hallel) pour exprimer la joie et la gratitude pour un jour spécial.",
+        "he": "פסוק מקראי מתהילים קי\"ח:כ\"ד, הנאמר בתפילה היהודית (הלל) כדי לבטא שמחה והכרת תודה על יום מיוחד.",
+        "it": "Versetto biblico dal Salmo 118:24, recitato nella liturgia ebraica (Hallel) per esprimere gioia e gratitudine per un giorno speciale.",
+        "ja": "詩篇118章24節の聖句で、ユダヤ教の礼拝（ハレル）で唱えられ、特別な日への喜びと感謝を表す。",
+        "pt": "Versículo bíblico do Salmo 118:24, recitado na liturgia judaica (Hallel) para expressar alegria e gratidão por um dia especial.",
+        "ru": "Библейский стих из Псалма 118:24, читаемый в еврейской литургии (Аллель) для выражения радости и благодарности за особый день.",
+        "zh": "出自诗篇118:24的圣经经文，在犹太礼仪（哈利尔）中诵读，表达对特别日子的喜乐和感恩。"
+      },
+      "id": "he_classical_or_scriptural_allusion_ז_ה_ה_י_ו_ם_ע_ש_ה_י_הו_ה_409971f6",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical citation and liturgical use; surface patterns correct.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Biblical verse from Psalm 118:24, recited in Jewish liturgy (Hallel) to express joy and gratitude for a special day.",
+      "source_author": "Traditional (attributed to King David)",
+      "source_author_key": "mnemosyne.he.author.traditional_attributed_to_king_david",
+      "source_dataset": "hebrew_cultural_references",
+      "source_license": "public_domain",
+      "source_location": "Psalm 118:24",
+      "source_url": "https://www.sefaria.org/Psalms.118.24?ven=he&lang=bi",
+      "source_work": "תנ\"ך (Tanakh)",
+      "source_work_key": "mnemosyne.he.work.תנ_ך_tanakh",
+      "surface_patterns": [
+        "זה היום עשה ה'",
+        "זה היום עשה יהוה",
+        "זה היום אשר עשה ה'"
+      ]
+    },
+    {
       "canonical_form": "he:classical:he_classical_or_scriptural_allusion_זהרו_במשניות_029b946f",
       "canonical_reference": "זהרו במשניות",
       "confidence": 0.9,
@@ -6731,6 +7141,43 @@
       ]
     },
     {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_יונה_במעי_הדג_651392b0",
+      "canonical_reference": "יונה במעי הדג",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_references_יונה_במעי_הדג",
+      "i18n_explanations": {
+        "ar": "يشير إلى النبي التوراتي يونس الذي ابتلعه حوت كبير، وغالباً ما يستخدم للدلالة على هروب معجزي أو وضع صعب.",
+        "de": "Bezieht sich auf den biblischen Propheten Jona, der von einem großen Fisch verschluckt wurde, oft verwendet, um eine wundersame Rettung oder eine schwierige Situation zu bezeichnen.",
+        "en": "Refers to the biblical prophet Jonah who was swallowed by a great fish, often used to denote a miraculous escape or a difficult situation.",
+        "es": "Se refiere al profeta bíblico Jonás, que fue tragado por un gran pez, usado a menudo para denotar un escape milagroso o una situación difícil.",
+        "fr": "Fait référence au prophète biblique Jonas qui a été avalé par un grand poisson, souvent utilisé pour désigner une évasion miraculeuse ou une situation difficile.",
+        "he": "מתייחס לנביא המקראי יונה שנבלע על ידי דג גדול, משמש לעתים קרובות לציון בריחה מופלאה או מצב קשה.",
+        "it": "Si riferisce al profeta biblico Giona che fu inghiottito da un grande pesce, spesso usato per denotare una fuga miracolosa o una situazione difficile.",
+        "ja": "聖書の預言者ヨナが大きな魚に飲み込まれた話を指し、奇跡的な脱出や困難な状況を表すのに使われます。",
+        "pt": "Refere-se ao profeta bíblico Jonas que foi engolido por um grande peixe, muitas vezes usado para denotar um escape milagroso ou uma situação difícil.",
+        "ru": "Относится к библейскому пророку Ионе, который был проглочен большой рыбой, часто используется для обозначения чудесного спасения или сложной ситуации.",
+        "zh": "指的是圣经中的先知约拿被一条大鱼吞下，通常用来表示奇迹般的逃脱或困境。"
+      },
+      "id": "he_classical_or_scriptural_allusion_יונה_במעי_הדג_651392b0",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Book of Jonah chapters 1-2, with correct surface patterns.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "common",
+      "short_explanation": "Refers to the biblical prophet Jonah who was swallowed by a great fish, often used to denote a miraculous escape or a difficult situation.",
+      "source_author": "מסורת",
+      "source_author_key": "mnemosyne.he.author.מסורת",
+      "source_dataset": "he_cultural_references",
+      "source_license": "public_domain",
+      "source_location": "יונה א'-ב'",
+      "source_work": "תנ\"ך, ספר יונה",
+      "source_work_key": "mnemosyne.he.work.תנ_ך_ספר_יונה",
+      "surface_patterns": [
+        "יונה במעי הדג",
+        "יונה בתוך הדג"
+      ]
+    },
+    {
       "canonical_form": "he:classical:he_classical_or_scriptural_allusion_יוסף_ואחיו_141930d9",
       "canonical_reference": "יוסף ואחיו",
       "confidence": 0.9,
@@ -7051,6 +7498,32 @@
       ],
       "variants": [
         "ישעיהו"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_כ_ל_ה_ב_א_ל_ט_ה_ר_מ_ס_י_ע_ין_או_תו_5bea75c0",
+      "canonical_reference": "כָּל הַבָּא לִטָּהֵר מְסַיְּעִין אוֹתוֹ",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.he.explanation.he_common_cultural_refs_כ_ל_ה_ב_א_ל_ט_ה_ר_מ_ס_י_ע_",
+      "id": "he_classical_or_scriptural_allusion_כ_ל_ה_ב_א_ל_ט_ה_ר_מ_ס_י_ע_ין_או_תו_5bea75c0",
+      "language": "he",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Verifiable Talmudic principle from Shabbat 104a with common surface variants.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A Talmudic principle meaning 'He who comes to purify himself is helped from above.' It emphasizes that those who strive for spiritual purity receive divine assistance.",
+      "source_author": "Talmudic sages",
+      "source_author_key": "mnemosyne.he.author.talmudic_sages",
+      "source_dataset": "he_common_cultural_refs",
+      "source_license": "public_domain",
+      "source_location": "Babylonian Talmud Shabbat 104a (and parallels)",
+      "source_url": "https://www.sefaria.org/Shabbat.104a.21?lang=he",
+      "source_work": "Babylonian Talmud",
+      "source_work_key": "mnemosyne.he.work.babylonian_talmud",
+      "surface_patterns": [
+        "כל הבא ליטהר מסייעין אותו",
+        "כל הבא ליטהר מסייעין לו",
+        "הבא לטהר מסייעין אותו"
       ]
     },
     {
@@ -7587,6 +8060,45 @@
       ]
     },
     {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_ל_א_ל_נו_י_הו_ה_ל_א_ל_נו_a01e3bc7",
+      "canonical_reference": "לֹא לָנוּ יְהוָה לֹא לָנוּ",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.heb_cultural_refs_ל_א_ל_נו_י_הו_ה_ל_א_ל_נו",
+      "i18n_explanations": {
+        "ar": "آية من المزمور 115:1 تعبر عن التواضع، كثيرًا ما تُستخدم في الصلوات والترانيم لإرجاع المجد لله.",
+        "de": "Ein Vers aus Psalm 115,1, der Demut ausdrückt, und oft in Gebeten und Liedern verwendet wird, um Gott die Ehre zu geben.",
+        "en": "A verse from Psalm 115:1 expressing humility, often used in prayers and songs to attribute glory to God.",
+        "es": "Un versículo del Salmo 115:1 que expresa humildad, usado a menudo en oraciones y canciones para atribuir gloria a Dios.",
+        "fr": "Un verset du Psaume 115:1 exprimant l'humilité, souvent utilisé dans les prières et les chants pour attribuer la gloire à Dieu.",
+        "he": "פסוק מתהילים 115:1 המבטא ענווה, משמש לעתים קרובות בתפילות ושירים כדי לייחס כבוד לאלוהים.",
+        "it": "Un versetto del Salmo 115:1 che esprime umiltà, spesso usato in preghiere e canti per attribuire gloria a Dio.",
+        "ja": "詩編115編1節の謙遜を表した聖句で、神に栄光を帰するために祈りや歌でよく使われる。",
+        "pt": "Um versículo do Salmo 115:1 que expressa humildade, frequentemente usado em orações e cânticos para atribuir glória a Deus.",
+        "ru": "Стих из Псалма 113:1 (по славянской нумерации), выражающий смирение, часто используется в молитвах и песнопениях, чтобы воздать славу Богу.",
+        "zh": "诗篇115:1的经文，表达谦卑，常用于祷告和诗歌中，将荣耀归于上帝。"
+      },
+      "id": "he_classical_or_scriptural_allusion_ל_א_ל_נו_י_הו_ה_ל_א_ל_נו_a01e3bc7",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Exact wording from Psalm 115:1; surface patterns correctly capture the verse and its common abbreviations; explanation is accurate.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A verse from Psalm 115:1 expressing humility, often used in prayers and songs to attribute glory to God.",
+      "source_author": "David (traditional)",
+      "source_author_key": "mnemosyne.he.author.david_traditional",
+      "source_dataset": "heb_cultural_refs",
+      "source_license": "public_domain",
+      "source_location": "Psalm 115:1",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%94%D7%9C%D7%99%D7%9D_%D7%A7%D7%98%D7%95_%D7%90",
+      "source_work": "תהילים",
+      "source_work_key": "mnemosyne.he.work.תהילים",
+      "surface_patterns": [
+        "לֹא לָנוּ יְהוָה לֹא לָנוּ",
+        "לא לנו ה' לא לנו",
+        "לא לנו"
+      ]
+    },
+    {
       "canonical_form": "he:classical:he_classical_or_scriptural_allusion_לא_בחיל_ולא_בכוח_כי_אם_ברוחי_0b370581",
       "canonical_reference": "לא בחיל ולא בכוח כי אם ברוחי",
       "confidence": 0.9,
@@ -8096,6 +8608,71 @@
       ]
     },
     {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_מ_ה_ט_בו_א_ה_ל_יך_י_ע_ק_ב_4089c7dd",
+      "canonical_reference": "מַה טֹּבוּ אֹהָלֶיךָ יַעֲקֹב",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.hebrew_phrases_מ_ה_ט_בו_א_ה_ל_יך_י_ע_ק_ב",
+      "i18n_explanations": {
+        "ar": "بركة من بلعام تمدح جمال مخيمات بني إسرائيل، وتُتلى الآن عند دخول الكنيس.",
+        "de": "Ein Segensspruch Bileams, der die Schönheit der Lager der Israeliten preist, der heute beim Betreten einer Synagoge rezitiert wird.",
+        "en": "A blessing from Balaam praising the beauty of the Israelites' encampments, now recited upon entering a synagogue.",
+        "es": "Una bendición de Balaam que alaba la belleza de los campamentos israelitas, ahora recitada al entrar en una sinagoga.",
+        "fr": "Une bénédiction de Balaam louant la beauté des campements israélites, maintenant récitée en entrant dans une synagogue.",
+        "he": "ברכה מבלעם המשבחת את יופי מחנות בני ישראל, הנאמרת כיום בכניסה לבית כנסת.",
+        "it": "Una benedizione di Balaam che loda la bellezza degli accampamenti israeliti, ora recitata all'ingresso di una sinagoga.",
+        "ja": "バラムの祝福で、イスラエル人の陣営の美しさを称え、今ではシナゴーグに入る際に唱えられる。",
+        "pt": "Uma bênção de Balaão elogiando a beleza dos acampamentos israelitas, agora recitada ao entrar em uma sinagoga.",
+        "ru": "Благословение Валаама, восхваляющее красоту станов израильтян, ныне произносится при входе в синагогу.",
+        "zh": "巴兰的祝福，赞美以色列人营地的美丽，现今在进入会堂时诵读。"
+      },
+      "id": "he_classical_or_scriptural_allusion_מ_ה_ט_בו_א_ה_ל_יך_י_ע_ק_ב_4089c7dd",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution and reference are accurate and verifiable.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A blessing from Balaam praising the beauty of the Israelites' encampments, now recited upon entering a synagogue.",
+      "source_author": "Traditionally attributed to Moses",
+      "source_author_key": "mnemosyne.he.author.traditionally_attributed_to_moses",
+      "source_dataset": "hebrew_phrases",
+      "source_license": "public_domain",
+      "source_location": "Numbers 24:5",
+      "source_url": "https://www.sefaria.org/Numbers.24.5?lang=he",
+      "source_work": "תורה (Torah)",
+      "source_work_key": "mnemosyne.he.work.תורה_torah",
+      "surface_patterns": [
+        "מַה טֹּבוּ",
+        "מה טובו",
+        "מה טבו אהליך יעקב"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_מ_י_כ_מ_כ_ה_ב_א_ל_ם_י_הו_ה_2a0753c4",
+      "canonical_reference": "מִי כָמֹכָה בָּאֵלִם יְהוָה",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.he_common_cultural_refs_מ_י_כ_מ_כ_ה_ב_א_ל_ם_י_הו_ה",
+      "id": "he_classical_or_scriptural_allusion_מ_י_כ_מ_כ_ה_ב_א_ל_ם_י_הו_ה_2a0753c4",
+      "language": "he",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Exodus 15:11 and used in daily liturgy.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A verse from the Song of the Sea (Exodus 15:11), praising God's uniqueness and might. It is recited daily in Jewish morning prayers and is a key part of the liturgy.",
+      "source_author": "Moses (traditional attribution)",
+      "source_author_key": "mnemosyne.he.author.moses_traditional_attribution",
+      "source_dataset": "he_common_cultural_refs",
+      "source_license": "public_domain",
+      "source_location": "Exodus 15:11",
+      "source_url": "https://www.sefaria.org/Exodus.15.11?lang=he",
+      "source_work": "Tanakh (Exodus)",
+      "source_work_key": "mnemosyne.he.work.tanakh_exodus",
+      "surface_patterns": [
+        "מי כמוכה באלים ה'",
+        "מי כמוכה באלים",
+        "מי כמוכה"
+      ]
+    },
+    {
       "canonical_form": "he:classical:he_classical_or_scriptural_allusion_מגיד_מראשית_אחרית_a7e3cad7",
       "canonical_reference": "מגיד מראשית אחרית",
       "confidence": 0.9,
@@ -8532,6 +9109,44 @@
       ]
     },
     {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_מעשה_מרכבה_9fc475fc",
+      "canonical_reference": "מעשה מרכבה",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.he.explanation.hebrew_cultural_refs_מעשה_מרכבה",
+      "i18n_explanations": {
+        "ar": "مصطلح للتعاليم الصوفية اليهودية الباطنية القائمة على رؤية حزقيال للمركبة الإلهية، موضوع رئيسي في التصوف اليهودي المبكر.",
+        "de": "Ein Begriff für esoterische jüdische mystische Lehren, die auf Ezechiels Vision des göttlichen Wagens basieren, ein wichtiges Thema der frühen jüdischen Mystik.",
+        "en": "A term for esoteric Jewish mystical teachings based on Ezekiel's vision of the divine chariot, a major topic in early Jewish mysticism.",
+        "es": "Término para las enseñanzas místicas judías esotéricas basadas en la visión de Ezequiel del carro divino, un tema importante en el misticismo judío temprano.",
+        "fr": "Terme désignant les enseignements mystiques juifs ésotériques basés sur la vision d'Ézéchiel du char divin, un sujet majeur du mysticisme juif ancien.",
+        "he": "מונח לתורות מיסטיות יהודיות אזוטריות המבוססות על חזון יחזקאל של המרכבה האלוהית, נושא מרכזי במיסטיקה יהודית מוקדמת.",
+        "it": "Termine per gli insegnamenti mistici ebraici esoterici basati sulla visione di Ezechiele del carro divino, un argomento importante nel misticismo ebraico antico.",
+        "ja": "エゼキエルによる神の戦車の幻視に基づくユダヤ教の秘教的神秘教義の用語で、初期ユダヤ神秘主義の主要なトピック。",
+        "pt": "Um termo para ensinamentos místicos judaicos esotéricos baseados na visão de Ezequiel da carruagem divina, um tópico importante no misticismo judaico primitivo.",
+        "ru": "Термин для эзотерических иудейских мистических учений, основанных на видении Иезекиилем божественной колесницы, важная тема раннего иудейского мистицизма.",
+        "zh": "指基于以西结所见神之战车的犹太神秘主义教义术语，是早期犹太神秘主义的主要主题。"
+      },
+      "id": "he_classical_or_scriptural_allusion_מעשה_מרכבה_9fc475fc",
+      "language": "he",
+      "learner_level": "C1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Mishnah Hagigah 2:1 with accurate description of esoteric mysticism.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A term for esoteric Jewish mystical teachings based on Ezekiel's vision of the divine chariot, a major topic in early Jewish mysticism.",
+      "source_author": "Traditional (Tannaim)",
+      "source_author_key": "mnemosyne.he.author.traditional_tannaim",
+      "source_dataset": "hebrew_cultural_refs",
+      "source_license": "public_domain",
+      "source_location": "Mishnah Hagigah 2:1",
+      "source_url": "https://www.sefaria.org/Mishnah_Chagigah.2.1",
+      "source_work": "משנה (Mishnah) – Hagigah 2:1, and Talmudic literature",
+      "source_work_key": "mnemosyne.he.work.משנה_mishnah_hagigah_2_1_and_talmudic_literature",
+      "surface_patterns": [
+        "מעשה מרכבה",
+        "מרכבה"
+      ]
+    },
+    {
       "canonical_form": "he:classical:he_classical_or_scriptural_allusion_מצווה_הבאה_בעבירה_b199ea87",
       "canonical_reference": "מצווה הבאה בעבירה",
       "confidence": 0.9,
@@ -8768,6 +9383,44 @@
       ]
     },
     {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_מתן_תורה_419e6bd6",
+      "canonical_reference": "מתן תורה",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_references_מתן_תורה",
+      "i18n_explanations": {
+        "ar": "يشير إلى إعطاء التوراة في جبل سيناء، وهو حدث تأسيسي في اليهودية يمثل العهد بين الله وبني إسرائيل.",
+        "de": "Bezieht sich auf die Übergabe der Tora am Berg Sinai, ein grundlegendes Ereignis des Judentums, das den Bund zwischen Gott und den Israeliten darstellt.",
+        "en": "Refers to the giving of the Torah at Mount Sinai, a foundational event in Judaism representing the covenant between God and the Israelites.",
+        "es": "Se refiere a la entrega de la Torá en el Monte Sinaí, un evento fundamental en el judaísmo que representa el pacto entre Dios y los israelitas.",
+        "fr": "Fait référence au don de la Torah sur le mont Sinaï, un événement fondateur du judaïsme représentant l'alliance entre Dieu et les Israélites.",
+        "he": "מתייחס למתן תורה בהר סיני, אירוע יסוד ביהדות המייצג את הברית בין אלוהים לעם ישראל.",
+        "it": "Si riferisce al dono della Torah sul Monte Sinai, un evento fondamentale nell'ebraismo che rappresenta l'alleanza tra Dio e gli Israeliti.",
+        "ja": "シナイ山でのトーラ（律法）の授与を指し、ユダヤ教の基礎となる出来事であり、神とイスラエル人の間の契約を表しています。",
+        "pt": "Refere-se à entrega da Torá no Monte Sinai, um evento fundamental no judaísmo que representa a aliança entre Deus e os israelitas.",
+        "ru": "Относится к дарованию Торы на горе Синай, основополагающему событию в иудаизме, представляющему завет между Богом и израильтянами.",
+        "zh": "指的是在西奈山颁布律法（托拉），这是犹太教的基础事件，代表着上帝与以色列人之间的盟约。"
+      },
+      "id": "he_classical_or_scriptural_allusion_מתן_תורה_419e6bd6",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Exodus 19-20, the giving of the Torah at Sinai.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "common",
+      "short_explanation": "Refers to the giving of the Torah at Mount Sinai, a foundational event in Judaism representing the covenant between God and the Israelites.",
+      "source_author": "מסורת",
+      "source_author_key": "mnemosyne.he.author.מסורת",
+      "source_dataset": "he_cultural_references",
+      "source_license": "public_domain",
+      "source_location": "שמות י\"ט-כ'",
+      "source_work": "תורה, ספר שמות",
+      "source_work_key": "mnemosyne.he.work.תורה_ספר_שמות",
+      "surface_patterns": [
+        "מתן תורה",
+        "מעמד מתן תורה",
+        "מתן תורה בסיני"
+      ]
+    },
+    {
       "allow_short_pattern": true,
       "canonical_form": "he:classical:he_classical_or_scriptural_allusion_נח_d1fd5b39",
       "canonical_reference": "נח",
@@ -8969,6 +9622,83 @@
       ],
       "variants": [
         "במחשבה תחילה"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_ע_ז_ב_ת_ע_ז_ב_ע_מ_ו_b756f177",
+      "canonical_reference": "עֲזֹב תַּעֲזֹב עִמּוֹ",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.he.explanation.hebrew_cultural_references_ע_ז_ב_ת_ע_ז_ב_ע_מ_ו",
+      "i18n_explanations": {
+        "ar": "وصية من سفر الخروج 23:5 لمساعدة تحميل حمار مثقل، حتى لو كان لعدو؛ تُستخدم لتعليم الرحمة والمساعدة للجميع.",
+        "de": "Biblisches Gebot aus Exodus 23:5, einem überladenen Esel zu helfen, auch dem eines Feindes; verwendet, um Mitgefühl und Hilfe für alle zu lehren.",
+        "en": "Biblical commandment from Exodus 23:5 to help unload an overburdened donkey, even of an enemy; used to teach compassion and assistance to all.",
+        "es": "Mandamiento bíblico de Éxodo 23:5 para ayudar a descargar un burro sobrecargado, incluso de un enemigo; usado para enseñar compasión y asistencia a todos.",
+        "fr": "Commandement biblique d'Exode 23:5 d'aider à décharger un âne surchargé, même d'un ennemi ; utilisé pour enseigner la compassion et l'assistance à tous.",
+        "he": "ציווי מקראי משמות כ\"ג:ה' לעזור לפרוק חמור עמוס, אפילו של אויב; משמש ללמד חמלה וסיוע לכולם.",
+        "it": "Comandamento biblico da Esodo 23:5 di aiutare a scaricare un asino sovraccarico, anche di un nemico; usato per insegnare compassione e assistenza a tutti.",
+        "ja": "出エジプト記23章5節の聖句で、過積載のロバを降ろすのを助けるよう命じ、それが敵のものであっても行うべきとされ、すべての人への思いやりと援助を教える。",
+        "pt": "Mandamento bíblico de Êxodo 23:5 para ajudar a descarregar um jumento sobrecarregado, mesmo de um inimigo; usado para ensinar compaixão e assistência a todos.",
+        "ru": "Библейская заповедь из Исхода 23:5 помогать разгружать перегруженного осла, даже врага; используется для обучения состраданию и помощи всем.",
+        "zh": "出自出埃及记23:5的圣经诫命，要帮助卸载负荷过重的驴，即使是仇敌的，用以教导对所有人的同情和援助。"
+      },
+      "id": "he_classical_or_scriptural_allusion_ע_ז_ב_ת_ע_ז_ב_ע_מ_ו_b756f177",
+      "language": "he",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate citation and teaching of compassion; surface patterns correct.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "formal",
+      "short_explanation": "Biblical commandment from Exodus 23:5 to help unload an overburdened donkey, even of an enemy; used to teach compassion and assistance to all.",
+      "source_author": "Traditional (Mosaic authorship)",
+      "source_author_key": "mnemosyne.he.author.traditional_mosaic_authorship",
+      "source_dataset": "hebrew_cultural_references",
+      "source_license": "public_domain",
+      "source_location": "Exodus 23:5",
+      "source_url": "https://www.sefaria.org/Exodus.23.5?ven=he&lang=bi",
+      "source_work": "תנ\"ך (Tanakh)",
+      "source_work_key": "mnemosyne.he.work.תנ_ך_tanakh",
+      "surface_patterns": [
+        "עזוב תעזוב עמו",
+        "עזוב תעזוב"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_ע_ש_ה_ש_לו_ם_ב_מ_רו_מ_יו_fef56ca7",
+      "canonical_reference": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.he.explanation.heb_cultural_refs_ע_ש_ה_ש_לו_ם_ב_מ_רו_מ_יו",
+      "i18n_explanations": {
+        "ar": "عبارة من سفر أيوب 25:2، تُستخدم في صلاة الكاديش للتعبير عن التمني بالسلام العالمي.",
+        "de": "Ein Ausdruck aus Hiob 25,2, der im Kaddisch-Gebet verwendet wird, um den Wunsch nach universalem Frieden auszudrücken.",
+        "en": "A phrase from Job 25:2, used in the Kaddish prayer to express a wish for universal peace.",
+        "es": "Una frase de Job 25:2, utilizada en la oración Kaddish para expresar un deseo de paz universal.",
+        "fr": "Une phrase de Job 25:2, utilisée dans la prière Kaddish pour exprimer un souhait de paix universelle.",
+        "he": "ביטוי מתוך איוב כ\"ה, ב', המשמש בתפילת הקדיש להבעת משאלת שלום עולמי.",
+        "it": "Una frase di Giobbe 25:2, usata nella preghiera Kaddish per esprimere il desiderio di pace universale.",
+        "ja": "ヨブ記25章2節のフレーズで、カディッシュの祈りの中で普遍的な平和への願いを表すために使われる。",
+        "pt": "Uma frase de Jó 25:2, usada na oração Kaddish para expressar um desejo de paz universal.",
+        "ru": "Фраза из Иова 25:2, используемая в молитве Кадиш для выражения пожелания всеобщего мира.",
+        "zh": "出自约伯记25:2的短语，在卡迪什祈祷中使用，表达对普世和平的愿望。"
+      },
+      "id": "he_classical_or_scriptural_allusion_ע_ש_ה_ש_לו_ם_ב_מ_רו_מ_יו_fef56ca7",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Verbatim from Job 25:2, appropriately linked to the Kaddish prayer; confidence is reasonable.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A phrase from Job 25:2, used in the Kaddish prayer to express a wish for universal peace.",
+      "source_author": "Job (traditional)",
+      "source_author_key": "mnemosyne.he.author.job_traditional",
+      "source_dataset": "heb_cultural_refs",
+      "source_license": "public_domain",
+      "source_location": "Job 25:2",
+      "source_url": "https://he.wikisource.org/wiki/%D7%90%D7%99%D7%95%D7%91_%D7%9B%D7%94_%D7%91",
+      "source_work": "איוב",
+      "source_work_key": "mnemosyne.he.work.איוב",
+      "surface_patterns": [
+        "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו",
+        "עושה שלום במרומיו",
+        "עושה שלום"
       ]
     },
     {
@@ -10193,6 +10923,45 @@
       ]
     },
     {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_קו_ל_ב_ר_מ_ה_נ_ש_מ_ע_28c6fc34",
+      "canonical_reference": "קוֹל בְּרָמָה נִשְׁמָע",
+      "confidence": 0.89,
+      "explanation_key": "mnemosyne.he.explanation.hebrew_phrases_קו_ל_ב_ר_מ_ה_נ_ש_מ_ע",
+      "i18n_explanations": {
+        "ar": "عبارة من سفر إرميا تصف راحيل تبكي على أطفالها، وترمز إلى الحزن والأمل في الخلاص.",
+        "de": "Ein Ausspruch aus Jeremia, der Rahel um ihre Kinder weinend beschreibt, symbolisiert Trauer und Hoffnung auf Erlösung.",
+        "en": "A phrase from Jeremiah describing Rachel weeping for her children, symbolizing mourning and hope for redemption.",
+        "es": "Una frase de Jeremías que describe a Raquel llorando por sus hijos, simbolizando el luto y la esperanza de redención.",
+        "fr": "Une phrase de Jérémie décrivant Rachel pleurant ses enfants, symbolisant le deuil et l'espoir de rédemption.",
+        "he": "ביטוי מירמיהו המתאר את רחל בוכה על ילדיה, המסמל אבל ותקווה לגאולה.",
+        "it": "Una frase di Geremia che descrive Rachele che piange i suoi figli, simboleggiando il lutto e la speranza di redenzione.",
+        "ja": "エレミヤ書の一節で、ラケルが子どもたちのため泣く様子を描き、嘆きと救済への希望を象徴する。",
+        "pt": "Uma frase de Jeremias descrevendo Raquel chorando por seus filhos, simbolizando luto e esperança de redenção.",
+        "ru": "Фраза из книги Иеремии, описывающая Рахиль, плачущую о своих детях, символизирующая скорбь и надежду на искупление.",
+        "zh": "耶利米书中的一句话，描述拉结为儿女哭泣，象征哀悼和对救赎的希望。"
+      },
+      "id": "he_classical_or_scriptural_allusion_קו_ל_ב_ר_מ_ה_נ_ש_מ_ע_28c6fc34",
+      "language": "he",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution and reference are accurate and verifiable.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "A phrase from Jeremiah describing Rachel weeping for her children, symbolizing mourning and hope for redemption.",
+      "source_author": "Traditionally attributed to the prophet Jeremiah",
+      "source_author_key": "mnemosyne.he.author.traditionally_attributed_to_the_prophet_jeremiah",
+      "source_dataset": "hebrew_phrases",
+      "source_license": "public_domain",
+      "source_location": "Jeremiah 31:15",
+      "source_url": "https://www.sefaria.org/Jeremiah.31.15?lang=he",
+      "source_work": "ספר ירמיהו (Book of Jeremiah)",
+      "source_work_key": "mnemosyne.he.work.ספר_ירמיהו_book_of_jeremiah",
+      "surface_patterns": [
+        "קוֹל בְּרָמָה נִשְׁמָע",
+        "קול ברמה נשמע",
+        "A voice is heard in Ramah"
+      ]
+    },
+    {
       "canonical_form": "he:classical:he_classical_or_scriptural_allusion_קול_גדול_ולא_יסף_9f239a16",
       "canonical_reference": "קול גדול ולא יסף",
       "confidence": 0.87,
@@ -10717,6 +11486,81 @@
         "רק אין יראת אלוהים במקום הזה",
         "אין יראת אלוהים במקום הזה",
         "אין יראת אלוהים"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_רש_י_54645003",
+      "canonical_reference": "רש\"י",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_refs_רש_י",
+      "i18n_explanations": {
+        "ar": "اختصار للحاخام شلومو يتسحاقي (راشي)، المفسر الأبرز للتوراة والتلمود، وتعتبر تفسيراته أساسية للدراسة اليهودية التقليدية.",
+        "de": "Akronym für Rabbi Salomo Jizchaki (Raschi), den bedeutendsten Kommentator der Tora und des Talmuds, dessen Erklärungen für das traditionelle jüdische Studium wesentlich sind.",
+        "en": "Acronym for Rabbi Shlomo Yitzchaki (Rashi), the foremost commentator on the Torah and Talmud, whose explanations are essential for traditional Jewish study.",
+        "es": "Acrónimo de Rabí Shlomó Yitzjakí (Rashi), el principal comentarista de la Torá y el Talmud, cuyas explicaciones son esenciales para el estudio judío tradicional.",
+        "fr": "Acronyme de Rabbi Shlomo Yitzchaki (Rashi), le plus grand commentateur de la Torah et du Talmud, dont les explications sont essentielles pour l'étude juive traditionnelle.",
+        "he": "ראשי תיבות לרבי שלמה יצחקי (רש\"י), הפרשן המרכזי של התורה והתלמוד, שפירושיו חיוניים ללימוד המסורתי.",
+        "it": "Acronimo di Rabbi Shlomo Yitzchaki (Rashi), il principale commentatore della Torah e del Talmud, le cui spiegazioni sono essenziali per lo studio ebraico tradizionale.",
+        "ja": "ラビ・シュロモ・イツハキ（ラシ）の略称。トーラとタルムードの最も重要な注釈者で、その説明は伝統的なユダヤ学問に不可欠。",
+        "pt": "Acrônimo para Rabi Shlomo Yitzchaki (Rashi), o principal comentarista da Torá e do Talmude, cujas explicações são essenciais para o estudo judaico tradicional.",
+        "ru": "Аббревиатура для раввина Шломо Ицхаки (Раши), ведущего комментатора Торы и Талмуда, чьи объяснения необходимы для традиционного еврейского изучения.",
+        "zh": "拉比所罗门·伊兹哈基（拉希）的缩写，是《托拉》和《塔木德》最重要的注释家，其解释对传统犹太学习至关重要。"
+      },
+      "id": "he_classical_or_scriptural_allusion_רש_י_54645003",
+      "language": "he",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate and verifiable reference to Rashi.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "religious",
+      "short_explanation": "Acronym for Rabbi Shlomo Yitzchaki (Rashi), the foremost commentator on the Torah and Talmud, whose explanations are essential for traditional Jewish study.",
+      "source_author": "Rashi",
+      "source_author_key": "mnemosyne.he.author.rashi",
+      "source_dataset": "he_cultural_refs",
+      "source_license": "public_domain",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A8%D7%A9%22%D7%99",
+      "source_work": "Commentary on the Torah",
+      "source_work_key": "mnemosyne.he.work.commentary_on_the_torah",
+      "surface_patterns": [
+        "רש\"י"
+      ]
+    },
+    {
+      "canonical_form": "he:classical:he_classical_or_scriptural_allusion_ש_ימ_נ_י_כ_חו_ת_ם_ע_ל_ל_ב_ך_1a6d2085",
+      "canonical_reference": "שִׂימֵנִי כַחוֹתָם עַל לִבֶּךָ",
+      "confidence": 0.88,
+      "explanation_key": "mnemosyne.he.explanation.hebrew_phrases_ש_ימ_נ_י_כ_חו_ת_ם_ע_ל_ל_ב_ך",
+      "i18n_explanations": {
+        "ar": "سطر شعري من سفر نشيد الأنشاد يعبر عن الرغبة في رابطة حب لا تنفصم، غالبًا ما يستخدم في السياقات الرومانسية والليتورجية.",
+        "de": "Ein poetischer Vers aus dem Hohelied, der den Wunsch nach einem unzerbrechlichen Liebesbund ausdrückt, oft in romantischen und liturgischen Kontexten verwendet.",
+        "en": "A poetic line from the Song of Songs expressing the desire for an unbreakable bond of love, often used in romantic and liturgical contexts.",
+        "es": "Un verso poético del Cantar de los Cantares que expresa el deseo de un vínculo de amor indestructible, utilizado a menudo en contextos románticos y litúrgicos.",
+        "fr": "Un vers poétique du Cantique des Cantiques exprimant le désir d'un lien d'amour indestructible, souvent utilisé dans des contextes romantiques et liturgiques.",
+        "he": "שורה פיוטית משיר השירים המבטאת את הרצון לקשר אהבה בלתי שביר, המשמשת לעתים קרובות בהקשרים רומנטיים וליטורגיים.",
+        "it": "Un verso poetico del Cantico dei Cantici che esprime il desiderio di un legame d'amore indistruttibile, spesso usato in contesti romantici e liturgici.",
+        "ja": "『雅歌』の詩的な一節で、破れない愛の絆への願望を表現し、恋愛や典礼の文脈でよく使われる。",
+        "pt": "Um verso poético do Cântico dos Cânticos expressando o desejo por um vínculo de amor inquebrável, frequentemente usado em contextos românticos e litúrgicos.",
+        "ru": "Поэтическая строка из Песни песней, выражающая желание неразрывной любовной связи, часто используется в романтическом и литургическом контексте.",
+        "zh": "《雅歌》中的诗意句子，表达对牢不可破的爱情纽带的渴望，常用于浪漫和礼仪场合。"
+      },
+      "id": "he_classical_or_scriptural_allusion_ש_ימ_נ_י_כ_חו_ת_ם_ע_ל_ל_ב_ך_1a6d2085",
+      "language": "he",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution and reference are accurate and verifiable.",
+      "reference_type": "classical_or_scriptural_allusion",
+      "register": "classical",
+      "short_explanation": "A poetic line from the Song of Songs expressing the desire for an unbreakable bond of love, often used in romantic and liturgical contexts.",
+      "source_author": "Traditionally attributed to King Solomon",
+      "source_author_key": "mnemosyne.he.author.traditionally_attributed_to_king_solomon",
+      "source_dataset": "hebrew_phrases",
+      "source_license": "public_domain",
+      "source_location": "Song of Songs 8:6",
+      "source_url": "https://www.sefaria.org/Song_of_Songs.8.6?lang=he",
+      "source_work": "שיר השירים (Song of Songs)",
+      "source_work_key": "mnemosyne.he.work.שיר_השירים_song_of_songs",
+      "surface_patterns": [
+        "שִׂימֵנִי כַחוֹתָם",
+        "שימני כחותם על לבך",
+        "Set me as a seal upon your heart"
       ]
     },
     {
@@ -12176,6 +13020,44 @@
       ]
     },
     {
+      "canonical_form": "he:cultural:he_cultural_reference_הקמת_המדינה_d448d4c9",
+      "canonical_reference": "הקמת המדינה",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_references_הקמת_המדינה",
+      "i18n_explanations": {
+        "ar": "تأسيس دولة إسرائيل عام 1948، حدث أساسي في الهوية الوطنية والتاريخ الإسرائيلي.",
+        "de": "Die Gründung des Staates Israel im Jahr 1948, ein grundlegendes Ereignis der israelischen nationalen Identität und Geschichte.",
+        "en": "The establishment of the State of Israel in 1948, a foundational event in Israeli national identity and history.",
+        "es": "El establecimiento del Estado de Israel en 1948, un evento fundamental en la identidad nacional y la historia israelí.",
+        "fr": "L'établissement de l'État d'Israël en 1948, un événement fondateur de l'identité nationale et de l'histoire israélienne.",
+        "he": "הקמת מדינת ישראל בשנת 1948, אירוע יסוד בזהות הלאומית וההיסטוריה הישראלית.",
+        "it": "La fondazione dello Stato di Israele nel 1948, un evento fondamentale nell'identità nazionale e nella storia israeliana.",
+        "ja": "1948年のイスラエル国家の建国。イスラエルの国民的アイデンティティと歴史における基礎的な出来事。",
+        "pt": "O estabelecimento do Estado de Israel em 1948, um evento fundamental na identidade nacional e na história israelense.",
+        "ru": "Создание государства Израиль в 1948 году, основополагающее событие в израильской национальной идентичности и истории.",
+        "zh": "1948年以色列国的建立，是以色列国家身份和历史中的奠基性事件。"
+      },
+      "id": "he_cultural_reference_הקמת_המדינה_d448d4c9",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate and verifiable foundational event with correct surface patterns.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "The establishment of the State of Israel in 1948, a foundational event in Israeli national identity and history.",
+      "source_author": "Historical events",
+      "source_author_key": "mnemosyne.he.author.historical_events",
+      "source_dataset": "he_cultural_references",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.he.work.various",
+      "surface_patterns": [
+        "הקמת המדינה",
+        "בהקמת המדינה",
+        "לאחר הקמת המדינה"
+      ]
+    },
+    {
       "canonical_form": "he:cultural:he_cultural_reference_התקווה_ed559de7",
       "canonical_reference": "התקווה",
       "confidence": 0.9,
@@ -12286,6 +13168,31 @@
         "חורבן בית המקדש",
         "חורבן הבית",
         "חורבן"
+      ]
+    },
+    {
+      "canonical_form": "he:cultural:he_cultural_reference_יוסף_טרומפלדור_4b5e69ac",
+      "canonical_reference": "יוסף טרומפלדור",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_references_יוסף_טרומפלדור",
+      "id": "he_cultural_reference_יוסף_טרומפלדור_4b5e69ac",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Joseph Trumpeldor, a Zionist pioneer.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Joseph Trumpeldor was a Zionist pioneer and military hero. His last words, 'It is good to die for our country', are iconic in Israeli culture.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.he.author.various",
+      "source_dataset": "he_cultural_references",
+      "source_license": "not_required",
+      "source_work": "Various (biographies)",
+      "source_work_key": "mnemosyne.he.work.various_biographies",
+      "surface_patterns": [
+        "יוסף טרומפלדור",
+        "טרומפלדור",
+        "יוסף טרומפלדור ז\"ל"
       ]
     },
     {
@@ -12450,6 +13357,82 @@
       ]
     },
     {
+      "canonical_form": "he:cultural:he_cultural_reference_מלחמת_השחרור_f2eae20b",
+      "canonical_reference": "מלחמת השחרור",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_references_מלחמת_השחרור",
+      "i18n_explanations": {
+        "ar": "حرب 1948 العربية الإسرائيلية، المعروفة باسم حرب الاستقلال، التي ضمنت تأسيس دولة إسرائيل.",
+        "de": "Der Arabisch-Israelische Krieg von 1948, bekannt als Unabhängigkeitskrieg, der die Gründung des Staates Israel sicherte.",
+        "en": "The 1948 Arab-Israeli War, known as the War of Independence, which secured the establishment of the State of Israel.",
+        "es": "La guerra árabe-israelí de 1948, conocida como Guerra de la Independencia, que aseguró el establecimiento del Estado de Israel.",
+        "fr": "La guerre israélo-arabe de 1948, connue comme la guerre d'indépendance, qui a assuré l'établissement de l'État d'Israël.",
+        "he": "מלחמת 1948 הערבית-ישראלית, הידועה כמלחמת העצמאות, שהבטיחה את הקמת מדינת ישראל.",
+        "it": "La guerra arabo-israeliana del 1948, nota come Guerra d'Indipendenza, che assicurò la fondazione dello Stato di Israele.",
+        "ja": "1948年のアラブ・イスラエル戦争。独立戦争として知られ、イスラエル国家の建国を確固たるものにした。",
+        "pt": "A guerra árabe-israelense de 1948, conhecida como Guerra da Independência, que garantiu o estabelecimento do Estado de Israel.",
+        "ru": "Арабо-израильская война 1948 года, известная как Война за независимость, которая обеспечила создание государства Израиль.",
+        "zh": "1948年的阿以战争，又称独立战争，确保了以色列国的建立。"
+      },
+      "id": "he_cultural_reference_מלחמת_השחרור_f2eae20b",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate historical reference with standard surface patterns.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "The 1948 Arab-Israeli War, known as the War of Independence, which secured the establishment of the State of Israel.",
+      "source_author": "Historical events",
+      "source_author_key": "mnemosyne.he.author.historical_events",
+      "source_dataset": "he_cultural_references",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.he.work.various",
+      "surface_patterns": [
+        "מלחמת השחרור",
+        "מלחמת העצמאות",
+        "במלחמת השחרור"
+      ]
+    },
+    {
+      "canonical_form": "he:cultural:he_cultural_reference_מלחמת_ששת_הימים_58d972c2",
+      "canonical_reference": "מלחמת ששת הימים",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_references_מלחמת_ששת_הימים",
+      "i18n_explanations": {
+        "ar": "حرب الأيام الستة عام 1967، انتصار إسرائيلي سريع استولى على سيناء وغزة والضفة الغربية وهضبة الجولان والقدس الشرقية.",
+        "de": "Der Sechstagekrieg von 1967, ein schneller israelischer Sieg, der den Sinai, Gaza, das Westjordanland, die Golanhöhen und Ostjerusalem eroberte.",
+        "en": "The Six-Day War in 1967, a swift Israeli victory that captured the Sinai, Gaza, West Bank, Golan Heights, and East Jerusalem.",
+        "es": "La Guerra de los Seis Días en 1967, una rápida victoria israelí que capturó el Sinaí, Gaza, Cisjordania, los Altos del Golán y Jerusalén Oriental.",
+        "fr": "La Guerre des Six Jours en 1967, une victoire rapide d'Israël qui a capturé le Sinaï, Gaza, la Cisjordanie, le Golan et Jérusalem-Est.",
+        "he": "מלחמת ששת הימים בשנת 1967, ניצחון ישראלי מהיר שכבש את סיני, עזה, הגדה המערבית, רמת הגולן ומזרח ירושלים.",
+        "it": "La Guerra dei Sei Giorni nel 1967, una rapida vittoria israeliana che conquistò il Sinai, Gaza, la Cisgiordania, le alture del Golan e Gerusalemme Est.",
+        "ja": "1967年の第三次中東戦争（六日間戦争）。イスラエルがシナイ半島、ガザ、ヨルダン川西岸、ゴラン高原、東エルサレムを占領した迅速な勝利。",
+        "pt": "A Guerra dos Seis Dias em 1967, uma rápida vitória israelense que capturou o Sinai, Gaza, Cisjordânia, Colinas de Golã e Jerusalém Oriental.",
+        "ru": "Шестидневная война 1967 года, быстрая победа Израиля, в ходе которой были захвачены Синай, Газа, Западный берег, Голанские высоты и Восточный Иерусалим.",
+        "zh": "1967年的六日战争，以色列迅速获胜，占领了西奈半岛、加沙、约旦河西岸、戈兰高地和东耶路撒冷。"
+      },
+      "id": "he_cultural_reference_מלחמת_ששת_הימים_58d972c2",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate and verifiable historical event with correct surface patterns.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "The Six-Day War in 1967, a swift Israeli victory that captured the Sinai, Gaza, West Bank, Golan Heights, and East Jerusalem.",
+      "source_author": "Historical events",
+      "source_author_key": "mnemosyne.he.author.historical_events",
+      "source_dataset": "he_cultural_references",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.he.work.various",
+      "surface_patterns": [
+        "מלחמת ששת הימים",
+        "ששת הימים",
+        "במלחמת ששת הימים"
+      ]
+    },
+    {
       "canonical_form": "he:cultural:he_cultural_reference_מעשה_שהיה_כך_היה_348f1bc9",
       "canonical_reference": "מעשה שהיה כך היה",
       "confidence": 0.85,
@@ -12487,6 +13470,81 @@
       ],
       "variants": [
         "מעשה שהיה"
+      ]
+    },
+    {
+      "canonical_form": "he:cultural:he_cultural_reference_מרד_החשמונאים_80e0e35a",
+      "canonical_reference": "מרד החשמונאים",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_references_מרד_החשמונאים",
+      "i18n_explanations": {
+        "ar": "يشير إلى ثورة المكابيين ضد الإمبراطورية السلوقية في القرن الثاني قبل الميلاد، ويحييها عيد حانوكا.",
+        "de": "Bezieht sich auf den Aufstand der Makkabäer gegen das Seleukidenreich im 2. Jahrhundert v. Chr., der durch das Chanukka-Fest gefeiert wird.",
+        "en": "Refers to the Maccabean revolt against the Seleucid Empire in the 2nd century BCE, commemorated by the holiday of Hanukkah.",
+        "es": "Se refiere a la revuelta de los macabeos contra el Imperio seléucida en el siglo II a.C., conmemorada por la festividad de Janucá.",
+        "fr": "Fait référence à la révolte des Maccabées contre l'empire séleucide au IIe siècle avant J.-C., commémorée par la fête de Hanoukka.",
+        "he": "מתייחס למרד החשמונאים נגד האימפריה הסלאוקית במאה ה-2 לפנה\"ס, המנציח את חג החנוכה.",
+        "it": "Si riferisce alla rivolta dei Maccabei contro l'Impero seleucide nel II secolo a.C., commemorata dalla festa di Hanukkah.",
+        "ja": "紀元前2世紀にセレウコス帝国に対するマカバイ家の反乱を指し、ハヌカの祝日で記念されます。",
+        "pt": "Refere-se à revolta dos Macabeus contra o Império Selêucida no século II a.C., comemorada pela festa de Hanukkah.",
+        "ru": "Относится к восстанию Маккавеев против империи Селевкидов во 2 веке до н.э., которое отмечается праздником Ханука.",
+        "zh": "指的是公元前2世纪马加比家族反抗塞琉古帝国的起义，由光明节（Hanukkah）纪念。"
+      },
+      "id": "he_cultural_reference_מרד_החשמונאים_80e0e35a",
+      "language": "he",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to the Maccabean revolt, with correct source and common surface patterns.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "Refers to the Maccabean revolt against the Seleucid Empire in the 2nd century BCE, commemorated by the holiday of Hanukkah.",
+      "source_author": "אנונימי",
+      "source_author_key": "mnemosyne.he.author.אנונימי",
+      "source_dataset": "he_cultural_references",
+      "source_license": "public_domain",
+      "source_location": "ספר מכביא א'",
+      "source_work": "ספר המכבים",
+      "source_work_key": "mnemosyne.he.work.ספר_המכבים",
+      "surface_patterns": [
+        "מרד החשמונאים",
+        "מרד המכבים",
+        "מלחמת החשמונאים"
+      ]
+    },
+    {
+      "canonical_form": "he:cultural:he_cultural_reference_עינא_בישא_8864c55f",
+      "canonical_reference": "עינא בישא",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.he.explanation.hebrew_cultural_refs_עינא_בישא",
+      "i18n_explanations": {
+        "ar": "مفهوم العين الشريرة، نظرة خبيثة يُعتقد أنها تسبب الأذى أو سوء الحظ، مذكورة على نطاق واسع في التلمود والفولكلور اليهودي.",
+        "de": "Das Konzept des bösen Blicks, ein böswilliger Blick, der Schaden oder Pech verursachen soll, weit verbreitet im Talmud und in der jüdischen Folklore.",
+        "en": "The concept of the evil eye, a malevolent gaze believed to cause harm or bad luck, widely referenced in Talmudic and Jewish folklore.",
+        "es": "El concepto del mal de ojo, una mirada malévola que se cree causa daño o mala suerte, ampliamente referenciado en el Talmud y el folclore judío.",
+        "fr": "Le concept du mauvais œil, un regard malveillant censé causer du mal ou de la malchance, largement mentionné dans le Talmud et le folklore juif.",
+        "he": "המושג של עין הרע, מבט זדוני שנחשב לגרום נזק או מזל רע, מוזכר רבות בתלמוד ובפולקלור היהודי.",
+        "it": "Il concetto del malocchio, uno sguardo malevolo ritenuto in grado di causare danno o sfortuna, ampiamente citato nel Talmud e nel folklore ebraico.",
+        "ja": "邪悪な目が危害や不運をもたらすと信じられる概念で、タルムードやユダヤの民間伝承で広く言及される。",
+        "pt": "O conceito do mau-olhado, um olhar malévolo acreditado causar dano ou má sorte, amplamente referenciado no Talmud e no folclore judaico.",
+        "ru": "Концепция дурного глаза, злобного взгляда, который, как считается, причиняет вред или неудачу, широко упоминается в Талмуде и еврейском фольклоре.",
+        "zh": "恶眼的概念，一种被认为会带来伤害或厄运的恶毒目光，在塔木德和犹太民间传说中被广泛提及。"
+      },
+      "id": "he_cultural_reference_עינא_בישא_8864c55f",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Plausible attribution to Talmudic and folkloric tradition; explanation of evil eye is correct, though source is generic.",
+      "reference_type": "cultural_reference",
+      "register": "informal",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "The concept of the evil eye, a malevolent gaze believed to cause harm or bad luck, widely referenced in Talmudic and Jewish folklore.",
+      "source_author": "Various",
+      "source_author_key": "mnemosyne.he.author.various",
+      "source_dataset": "hebrew_cultural_refs",
+      "source_license": "not_required",
+      "source_work": "Oral tradition / Talmudic literature (e.g., Berakhot 20a, Bava Metzia 107b)",
+      "source_work_key": "mnemosyne.he.work.oral_tradition_talmudic_literature_e_g_berakhot_20",
+      "surface_patterns": [
+        "עינא בישא",
+        "עין הרע"
       ]
     },
     {
@@ -12564,6 +13622,32 @@
       ],
       "variants": [
         "גגות תל אביב"
+      ]
+    },
+    {
+      "canonical_form": "he:cultural:he_cultural_reference_עם_הספר_c70c1213",
+      "canonical_reference": "עם הספר",
+      "confidence": 0.8,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_references_עם_הספר",
+      "id": "he_cultural_reference_עם_הספר_c70c1213",
+      "language": "he",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate term for the Jewish people, originating from the Quran.",
+      "reference_type": "cultural_reference",
+      "register": "common",
+      "short_explanation": "A term for the Jewish people, originating from the Quranic phrase 'People of the Book'. It highlights the central role of the Torah and religious texts in Jewish identity.",
+      "source_author": "Islamic tradition",
+      "source_author_key": "mnemosyne.he.author.islamic_tradition",
+      "source_dataset": "he_cultural_references",
+      "source_license": "public_domain",
+      "source_location": "Surah 3:110 (and others)",
+      "source_url": "https://he.wikisource.org/wiki/קוראן",
+      "source_work": "הקוראן (Quran)",
+      "source_work_key": "mnemosyne.he.work.הקוראן_quran",
+      "surface_patterns": [
+        "עם הספר",
+        "עם הספר (ביטוי)",
+        "עם הספר (כינוי לעם היהודי)"
       ]
     },
     {
@@ -13062,6 +14146,44 @@
       ]
     },
     {
+      "canonical_form": "he:literary:he_literary_reference_חיים_נחמן_ביאליק_a24a3336",
+      "canonical_reference": "חיים נחמן ביאליק",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_refs_חיים_נחמן_ביאליק",
+      "i18n_explanations": {
+        "ar": "حاييم نحمان بياليك هو الشاعر الوطني لإسرائيل، وقد شكلت قصائده وقصصه الأدب العبري الحديث والهوية الثقافية.",
+        "de": "Chaim Nachman Bialik ist der Nationaldichter Israels, dessen Gedichte und Erzählungen die moderne hebräische Literatur und kulturelle Identität prägten.",
+        "en": "Hayim Nahman Bialik is Israel's national poet, whose poetry and stories shaped modern Hebrew literature and cultural identity.",
+        "es": "Jaim Najman Bialik es el poeta nacional de Israel, cuya poesía y cuentos dieron forma a la literatura hebrea moderna y a la identidad cultural.",
+        "fr": "Haïm Nahman Bialik est le poète national d'Israël, dont la poésie et les histoires ont façonné la littérature hébraïque moderne et l'identité culturelle.",
+        "he": "חיים נחמן ביאליק הוא המשורר הלאומי של ישראל, ששיריו וסיפוריו עיצבו את הספרות העברית המודרנית והזהות התרבותית.",
+        "it": "Chaim Nachman Bialik è il poeta nazionale di Israele, le cui poesie e storie hanno plasmato la letteratura ebraica moderna e l'identità culturale.",
+        "ja": "ハイム・ナフマン・ビアリクはイスラエルの国民的詩人で、その詩と物語は現代ヘブライ文学と文化的アイデンティティを形成した。",
+        "pt": "Hayim Nahman Bialik é o poeta nacional de Israel, cujos poemas e histórias moldaram a literatura hebraica moderna e a identidade cultural.",
+        "ru": "Хаим Нахман Бялик — национальный поэт Израиля, чьи стихи и рассказы сформировали современную ивритскую литературу и культурную идентичность.",
+        "zh": "海姆·纳赫曼·比亚利克是以色列国家诗人，其诗歌和故事塑造了现代希伯来文学和文化认同。"
+      },
+      "id": "he_literary_reference_חיים_נחמן_ביאליק_a24a3336",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate and verifiable reference to H.N. Bialik.",
+      "reference_type": "literary_reference",
+      "register": "common",
+      "short_explanation": "Hayim Nahman Bialik is Israel's national poet, whose poetry and stories shaped modern Hebrew literature and cultural identity.",
+      "source_author": "H.N. Bialik",
+      "source_author_key": "mnemosyne.he.author.h_n_bialik",
+      "source_dataset": "he_cultural_refs",
+      "source_license": "public_domain",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%99%D7%99%D7%9D_%D7%A0%D7%97%D7%9E%D7%9F_%D7%91%D7%99%D7%90%D7%9C%D7%99%D7%A7",
+      "source_work": "Poems and stories",
+      "source_work_key": "mnemosyne.he.work.poems_and_stories",
+      "surface_patterns": [
+        "חיים נחמן ביאליק",
+        "ח.נ. ביאליק",
+        "ביאליק"
+      ]
+    },
+    {
       "canonical_form": "he:literary:he_literary_reference_כור_מחצב_e198f0a9",
       "canonical_reference": "כור מחצב",
       "confidence": 0.9,
@@ -13139,6 +14261,45 @@
         "לבי במזרח ואנכי בסוף מערב",
         "לבי במזרח",
         "ואנכי בסוף מערב"
+      ]
+    },
+    {
+      "canonical_form": "he:literary:he_literary_reference_לויתן_ובהמות_3f60170b",
+      "canonical_reference": "לויתן ובהמות",
+      "confidence": 0.9,
+      "explanation_key": "mnemosyne.he.explanation.hebrew_cultural_refs_לויתן_ובהמות",
+      "i18n_explanations": {
+        "ar": "وحشان بدائيان من سفر أيوب، يرمزان إلى قوى طبيعية لا تُروض؛ ظهرا لاحقًا في الأساطير اليهودية حول الوليمة المسيانية.",
+        "de": "Zwei Urzeitwesen aus dem Buch Hiob, die unbezähmbare Naturkräfte symbolisieren; später in jüdischen Legenden über das messianische Festmahl auftauchend.",
+        "en": "Two primordial beasts from the Book of Job, symbolizing untamable natural forces; later featured in Jewish legends about the messianic feast.",
+        "es": "Dos bestias primordiales del Libro de Job, que simbolizan fuerzas naturales indomables; luego aparecen en leyendas judías sobre el banquete mesiánico.",
+        "fr": "Deux bêtes primordiales du Livre de Job, symbolisant des forces naturelles indomptables; plus tard, elles figurent dans les légendes juives sur le festin messianique.",
+        "he": "שתי חיות קדמוניות מספר איוב, המסמלות כוחות טבע בלתי ניתנים לאילוף; מאוחר יותר מופיעות באגדות יהודיות על סעודה משיחית.",
+        "it": "Due bestie primordiali dal Libro di Giobbe, che simboleggiano forze naturali indomabili; in seguito compaiono nelle leggende ebraiche riguardanti il banchetto messianico.",
+        "ja": "ヨブ記に登場する二匹の原初の獣で、手に負えない自然の力を象徴し、後にユダヤの伝説でメシアの饗宴に登場する。",
+        "pt": "Duas bestas primordiais do Livro de Jó, simbolizando forças naturais indomáveis; posteriormente aparecem em lendas judaicas sobre o banquete messiânico.",
+        "ru": "Два первозданных зверя из Книги Иова, символизирующие неукротимые силы природы; позже появляются в еврейских легендах о мессианском пире.",
+        "zh": "《约伯记》中的两只原始野兽，象征着不可驯服的自然力量；后来出现在关于弥赛亚宴席的犹太传说中。"
+      },
+      "id": "he_literary_reference_לויתן_ובהמות_3f60170b",
+      "language": "he",
+      "learner_level": "B2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Job 40–41 and later legends; surface patterns and explanation are correct.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Two primordial beasts from the Book of Job, symbolizing untamable natural forces; later featured in Jewish legends about the messianic feast.",
+      "source_author": "Traditional (Job)",
+      "source_author_key": "mnemosyne.he.author.traditional_job",
+      "source_dataset": "hebrew_cultural_refs",
+      "source_license": "public_domain",
+      "source_location": "Job 40:15–41:34",
+      "source_url": "https://www.sefaria.org/Job.40.15",
+      "source_work": "תנ״ך (Tanakh) – Job 40–41",
+      "source_work_key": "mnemosyne.he.work.תנ_ך_tanakh_job_40_41",
+      "surface_patterns": [
+        "לויתן ובהמות",
+        "לווייתן ובהמות",
+        "לויתן וּבְהֵמוֹת"
       ]
     },
     {
@@ -13297,6 +14458,45 @@
       ],
       "variants": [
         "שבעת העמודים"
+      ]
+    },
+    {
+      "canonical_form": "he:literary:he_literary_reference_שמים_וארץ_25c7ce21",
+      "canonical_reference": "שמים וארץ",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.he.explanation.hebrew_cultural_refs_שמים_וארץ",
+      "i18n_explanations": {
+        "ar": "مصطلح كتابي للكون بأكمله، يُستخدم غالبًا للتعبير عن الكلية أو التباين بين السماء والأرض.",
+        "de": "Biblischer Begriff für das gesamte Universum, oft verwendet, um Totalität oder den Gegensatz zwischen Himmel und Erde auszudrücken.",
+        "en": "Biblical term for the entire universe, often used to express totality or contrast between heaven and earth.",
+        "es": "Término bíblico para todo el universo, usado a menudo para expresar totalidad o contraste entre el cielo y la tierra.",
+        "fr": "Terme biblique pour l'univers entier, souvent utilisé pour exprimer la totalité ou le contraste entre le ciel et la terre.",
+        "he": "מונח מקראי לכל היקום, משמש לעתים קרובות לבטא שלמות או ניגוד בין שמים וארץ.",
+        "it": "Termine biblico per l'intero universo, spesso usato per esprimere totalità o contrasto tra cielo e terra.",
+        "ja": "全宇宙を表す聖書の用語で、全体性や天と地の対比を表現するのにしばしば使われる。",
+        "pt": "Termo bíblico para todo o universo, frequentemente usado para expressar totalidade ou contraste entre céu e terra.",
+        "ru": "Библейский термин для всей вселенной, часто используемый для выражения целостности или противопоставления неба и земли.",
+        "zh": "圣经术语，指整个宇宙，常用来表达整体性或天与地的对比。"
+      },
+      "id": "he_literary_reference_שמים_וארץ_25c7ce21",
+      "language": "he",
+      "learner_level": "A2",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical reference to Genesis 1:1 and other passages; explanation and confidence are appropriate.",
+      "reference_type": "literary_reference",
+      "register": "classical",
+      "short_explanation": "Biblical term for the entire universe, often used to express totality or contrast between heaven and earth.",
+      "source_author": "Traditional",
+      "source_author_key": "mnemosyne.he.author.traditional",
+      "source_dataset": "hebrew_cultural_refs",
+      "source_license": "public_domain",
+      "source_location": "Genesis 1:1",
+      "source_url": "https://www.sefaria.org/Genesis.1.1",
+      "source_work": "תנ״ך (Tanakh) – e.g., Genesis 1:1, Isaiah 1:2",
+      "source_work_key": "mnemosyne.he.work.תנ_ך_tanakh_e_g_genesis_1_1_isaiah_1_2",
+      "surface_patterns": [
+        "שמים וארץ",
+        "השמים והארץ",
+        "שמיים וארץ"
       ]
     },
     {
@@ -13600,6 +14800,31 @@
         "הבא להרגך השכם להרגו",
         "הבא להרגך השכם להורגו",
         "השכם להרגו"
+      ]
+    },
+    {
+      "canonical_form": "he:proverb:he_proverb_tradition_טוב_למות_בעד_ארצנו_1a2caa6a",
+      "canonical_reference": "טוב למות בעד ארצנו",
+      "confidence": 0.85,
+      "explanation_key": "mnemosyne.he.explanation.he_cultural_references_טוב_למות_בעד_ארצנו",
+      "id": "he_proverb_tradition_טוב_למות_בעד_ארצנו_1a2caa6a",
+      "language": "he",
+      "learner_level": "B1",
+      "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate attribution to Trumpeldor, widely recognized in Israeli culture.",
+      "reference_type": "proverb_tradition",
+      "register": "common",
+      "rights_basis": "common_usage_short_expression",
+      "short_explanation": "Attributed to Joseph Trumpeldor as his last words, this phrase expresses martyrdom for one's country and is a Zionist slogan.",
+      "source_author": "Attributed to Joseph Trumpeldor",
+      "source_author_key": "mnemosyne.he.author.attributed_to_joseph_trumpeldor",
+      "source_dataset": "he_cultural_references",
+      "source_license": "not_required",
+      "source_work": "Various",
+      "source_work_key": "mnemosyne.he.work.various",
+      "surface_patterns": [
+        "טוב למות בעד ארצנו",
+        "טוב למות בעד ארצו",
+        "טוב למות בעד ארצי"
       ]
     },
     {
