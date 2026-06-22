@@ -12,7 +12,9 @@ import path from 'node:path'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT      = path.resolve(__dirname, '..')
 
-const mainJs = readFileSync(path.join(ROOT, 'js', 'main.js'), 'utf8')
+// Annotation density minimap lives in js/modes/lesson.js after the main.js
+// split (Session 1 of the frontend refactor).
+const mainJs = readFileSync(path.join(ROOT, 'js', 'modes', 'lesson.js'), 'utf8')
 const html   = readFileSync(path.join(ROOT, 'index.html'), 'utf8')
 const css    = readFileSync(path.join(ROOT, 'css', 'components.css'), 'utf8')
 

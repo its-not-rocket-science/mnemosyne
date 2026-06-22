@@ -15,3 +15,7 @@ export const API_BASE =
   (hostname === 'localhost' || hostname === '127.0.0.1') && port !== '8000'
     ? `http://${hostname}:8000`
     : ''
+
+// Email of the app owner — gates the "Save lesson" flow to a single account
+// until multi-user lesson ownership exists.
+export const OWNER_EMAIL = 'paul_schleifer@hotmail.com'

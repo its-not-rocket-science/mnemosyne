@@ -11,43 +11,51 @@ import path from 'node:path'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT      = path.resolve(__dirname, '..')
 
-const mainJs = readFileSync(path.join(ROOT, 'js', 'main.js'), 'utf8')
+// Auto-advance state and _trackSentenceRating/_autoAdvanceSentence/lesson-open
+// live in js/modes/lesson.js after the main.js split (Session 1 of the
+// frontend refactor); _loadSource (which seeds _currentSourceDocId via the
+// setCurrentSourceDocId() export and clears _sentenceRatedIds via
+// clearSentenceRatedIds()) lives in js/modes/library.js. Concatenate both so
+// assertions against either file's content keep working.
+const lessonJs  = readFileSync(path.join(ROOT, 'js', 'modes', 'lesson.js'), 'utf8')
+const libraryJs = readFileSync(path.join(ROOT, 'js', 'modes', 'library.js'), 'utf8')
+const mainJs = lessonJs + libraryJs
 const css    = readFileSync(path.join(ROOT, 'css', 'components.css'), 'utf8')
 
 // ── State variables ───────────────────────────────────────────────────────────
 
-assert.ok(mainJs.includes('_currentSourceDocId'), 'main.js must declare _currentSourceDocId')
-assert.ok(mainJs.includes('_currentSentenceIdx'), 'main.js must declare _currentSentenceIdx')
-assert.ok(mainJs.includes('_sentenceRatedIds'),   'main.js must declare _sentenceRatedIds')
-console.log('✓ main.js: auto-advance state variables declared')
+assert.ok(lessonJs.includes('_currentSourceDocId'), 'lesson.js must declare _currentSourceDocId')
+assert.ok(lessonJs.includes('currentSentenceIndex'), 'lesson.js must use the currentSentenceIndex accessor')
+assert.ok(lessonJs.includes('_sentenceRatedIds'),   'lesson.js must declare _sentenceRatedIds')
+console.log('✓ lesson.js: auto-advance state variables declared')
 
 // ── _loadSource resets state ──────────────────────────────────────────────────
 
-const loadSourceIdx  = mainJs.indexOf('async function _loadSource(')
-const loadSourceBody = mainJs.slice(loadSourceIdx, loadSourceIdx + 500)
+const loadSourceIdx  = libraryJs.indexOf('async function _loadSource(')
+const loadSourceBody = libraryJs.slice(loadSourceIdx, loadSourceIdx + 500)
 assert.ok(
-  loadSourceBody.includes('_currentSourceDocId = sourceId'),
-  '_loadSource must assign _currentSourceDocId = sourceId'
+  loadSourceBody.includes('setCurrentSourceDocId(sourceId)'),
+  '_loadSource must call setCurrentSourceDocId(sourceId)'
 )
 assert.ok(
-  loadSourceBody.includes('_sentenceRatedIds.clear()'),
-  '_loadSource must clear _sentenceRatedIds'
+  loadSourceBody.includes('clearSentenceRatedIds()'),
+  '_loadSource must call clearSentenceRatedIds()'
 )
-console.log('✓ main.js: _loadSource captures sourceId and clears rated set')
+console.log('✓ library.js: _loadSource captures sourceId and clears rated set')
 
 // ── lesson-open captures sentence index ───────────────────────────────────────
 
-const lessonOpenIdx  = mainJs.indexOf("results.addEventListener('lesson-open'")
-const lessonOpenBody = mainJs.slice(lessonOpenIdx, lessonOpenIdx + 800)
+const lessonOpenIdx  = lessonJs.indexOf("results.addEventListener('lesson-open'")
+const lessonOpenBody = lessonJs.slice(lessonOpenIdx, lessonOpenIdx + 800)
 assert.ok(
-  lessonOpenBody.includes('_currentSentenceIdx'),
-  "lesson-open handler must update _currentSentenceIdx"
+  lessonOpenBody.includes('setCurrentSentenceIndex'),
+  "lesson-open handler must call setCurrentSentenceIndex"
 )
 assert.ok(
   lessonOpenBody.includes('sentenceIndex'),
   "lesson-open handler must read dataset.sentenceIndex"
 )
-console.log('✓ main.js: lesson-open handler captures sentence index')
+console.log('✓ lesson.js: lesson-open handler captures sentence index')
 
 // ── _trackSentenceRating function ────────────────────────────────────────────
 

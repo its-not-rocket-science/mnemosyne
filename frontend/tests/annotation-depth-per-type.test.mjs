@@ -11,7 +11,16 @@ import path from 'node:path'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT      = path.resolve(__dirname, '..')
 
-const mainJs  = readFileSync(path.join(ROOT, 'js', 'main.js'), 'utf8')
+// main.js was split (Session 1 of the frontend refactor) into js/shared.js
+// (TopNav/filter-bar wiring, lock persistence), js/reading-state.js (the
+// activeLockedTypes/activeLockedCatIds state itself) and js/modes/lesson.js
+// (applyAnnotationFilter). Concatenate the three so the assertions below,
+// written against the old undifferentiated main.js blob, still find what
+// they're looking for regardless of which file it now lives in.
+const sharedJs       = readFileSync(path.join(ROOT, 'js', 'shared.js'), 'utf8')
+const readingStateJs = readFileSync(path.join(ROOT, 'js', 'reading-state.js'), 'utf8')
+const lessonJs       = readFileSync(path.join(ROOT, 'js', 'modes', 'lesson.js'), 'utf8')
+const mainJs   = sharedJs + readingStateJs + lessonJs
 const barJs   = readFileSync(path.join(ROOT, 'components', 'mnemosyne-filter-bar.js'), 'utf8')
 
 // ── Filter bar: lock state ────────────────────────────────────────────────────
@@ -65,23 +74,25 @@ console.log('✓ main.js: setLocks called on page load to restore persisted lock
 const filterFnIdx  = mainJs.indexOf('function applyAnnotationFilter()')
 const filterFnBody = mainJs.slice(filterFnIdx, filterFnIdx + 800)
 
-// Session filter overrides depth (no intersection with depthTypes)
+// Session filter overrides depth (no intersection with depthTypes).
+// State is now read via reading-state.js accessor functions (e.g.
+// activeFilterTypes()) rather than bare module-level variables.
 assert.ok(
-  filterFnBody.includes('activeFilterTypes !== null'),
-  'applyAnnotationFilter must branch on activeFilterTypes !== null'
+  filterFnBody.includes('activeFilterTypes() !== null'),
+  'applyAnnotationFilter must branch on activeFilterTypes() !== null'
 )
 assert.ok(
-  filterFnBody.includes('activeFilterTypes.has(type)'),
-  'applyAnnotationFilter: session filter must check activeFilterTypes.has(type)'
+  filterFnBody.includes('activeFilterTypes().has(type)'),
+  'applyAnnotationFilter: session filter must check activeFilterTypes().has(type)'
 )
 // Locked types bypass depth model
 assert.ok(
-  filterFnBody.includes('activeLockedTypes.has(type)'),
-  'applyAnnotationFilter must check activeLockedTypes.has(type)'
+  filterFnBody.includes('activeLockedTypes().has(type)'),
+  'applyAnnotationFilter must check activeLockedTypes().has(type)'
 )
 assert.ok(
-  filterFnBody.match(/depthTypes\.has\(type\).*activeLockedTypes\.has\(type\)|activeLockedTypes\.has\(type\).*depthTypes\.has\(type\)/),
-  'applyAnnotationFilter must union depthTypes and activeLockedTypes when no session filter'
+  filterFnBody.match(/depthTypes\.has\(type\).*activeLockedTypes\(\)\.has\(type\)|activeLockedTypes\(\)\.has\(type\).*depthTypes\.has\(type\)/),
+  'applyAnnotationFilter must union depthTypes and activeLockedTypes() when no session filter'
 )
 console.log('✓ applyAnnotationFilter: session filter overrides depth; locks union with depth model')
 
