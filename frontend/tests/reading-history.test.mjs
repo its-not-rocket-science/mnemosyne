@@ -16,7 +16,7 @@ const html   = readFileSync(path.join(ROOT, 'index.html'), 'utf8')
 // split (Session 1 of the frontend refactor).
 const mainJs = readFileSync(path.join(ROOT, 'js', 'modes', 'library.js'), 'utf8')
 const css    = readFileSync(path.join(ROOT, 'css', 'components.css'), 'utf8')
-const i18n   = readFileSync(path.join(ROOT, 'js', 'i18n.js'), 'utf8')
+const i18n   = ['core','annotations','lesson','library','review'].map(f => readFileSync(path.join(ROOT, 'js', 'i18n', `${f}.js`), 'utf8')).join('\n')
 
 // ── HTML ──────────────────────────────────────────────────────────────────────
 
@@ -50,7 +50,11 @@ console.log('✓ main.js: _loadSource accepts resumeAt and scrolls to position')
 
 assert.ok(mainJs.includes('async function _fetchReadingHistory('), 'main.js must define _fetchReadingHistory')
 const fetchIdx  = mainJs.indexOf('async function _fetchReadingHistory(')
-const fetchBody = mainJs.slice(fetchIdx, fetchIdx + 400)
+// Window widened slightly past the original 400 chars — Session 5 of the
+// frontend refactor added an i18n loadBundle('library') call + explanatory
+// comment at the top of this function (the "Continue reading" strip can
+// render outside the #/library route, on first load).
+const fetchBody = mainJs.slice(fetchIdx, fetchIdx + 700)
 assert.ok(fetchBody.includes('/reading?limit=3'), '_fetchReadingHistory must call /reading?limit=3')
 assert.ok(fetchBody.includes('_renderReadingHistory'), '_fetchReadingHistory must call _renderReadingHistory on success')
 console.log('✓ main.js: _fetchReadingHistory fetches /reading and renders on success')

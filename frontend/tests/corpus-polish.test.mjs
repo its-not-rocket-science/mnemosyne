@@ -18,7 +18,7 @@ const document  = loadDocument()
 // split (Session 1 of the frontend refactor).
 const mainJs    = readSource('js/modes/library.js')
 const globalCss = readSource('css/components.css')
-const i18n      = readSource('js/i18n.js')
+const i18n      = ['core','annotations','lesson','library','review'].map(f => readSource(`js/i18n/${f}.js`)).join('\n')
 
 // ── Continue reading strip ────────────────────────────────────────────────────
 

@@ -14,7 +14,7 @@ const ROOT      = path.resolve(__dirname, '..')
 const html        = readFileSync(path.join(ROOT, 'index.html'), 'utf8')
 const reviewJs    = readFileSync(path.join(ROOT, 'js', 'review-session.js'), 'utf8')
 const reviewCss   = readFileSync(path.join(ROOT, 'css', 'components.css'), 'utf8')
-const i18n        = readFileSync(path.join(ROOT, 'js', 'i18n.js'), 'utf8')
+const i18n        = ['core','annotations','lesson','library','review'].map(f => readFileSync(path.join(ROOT, 'js', 'i18n', `${f}.js`), 'utf8')).join('\n')
 
 // ── HTML structure ────────────────────────────────────────────────────────────
 
