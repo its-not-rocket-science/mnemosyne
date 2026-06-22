@@ -5,7 +5,10 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-I18N_JS = ROOT / "frontend/js/i18n.js"
+# help_/adaptive_-prefixed keys live in js/i18n/lesson.js since Session 5 of
+# the frontend refactor split the former monolithic js/i18n.js (now a thin
+# re-export shim) into js/i18n/{core,annotations,lesson,library,review}.js.
+I18N_JS = ROOT / "frontend/js/i18n/lesson.js"
 SNAPSHOT = Path(__file__).with_name("snapshots_memory_map_i18n.json")
 LANGS = ["en", "es", "fr", "de", "it", "pt", "ru", "ja", "zh", "ar", "he"]
 KEYS = [

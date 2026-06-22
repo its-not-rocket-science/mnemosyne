@@ -11,7 +11,10 @@ import re
 
 import pytest
 
-_I18N_PATH = pathlib.Path(__file__).parents[2] / "frontend" / "js" / "i18n.js"
+# RECOMMEND_UI_I18N lives in js/i18n/library.js since Session 5 of the
+# frontend refactor split the former monolithic js/i18n.js (now a thin
+# re-export shim) into js/i18n/{core,annotations,lesson,library,review}.js.
+_I18N_PATH = pathlib.Path(__file__).parents[2] / "frontend" / "js" / "i18n" / "library.js"
 
 _REQUIRED_LANGS = {"en", "es", "fr", "de", "it", "pt", "ru", "ja", "zh", "ar", "he"}
 
