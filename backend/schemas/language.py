@@ -196,7 +196,7 @@ class NuanceCapabilities(BaseModel):
 #
 # Internal `analysis_depth` values are stable machine-readable IDs.
 # These are the corresponding learner-facing English display strings.
-# Translations live in frontend/js/i18n.js under CAPABILITY_LABELS_I18N.
+# Translations live in frontend/js/i18n/core.js under CAPABILITY_LABELS_I18N.
 # The `morphology_light` ID intentionally kept internal; users see "Basic grammar hints".
 
 ANALYSIS_DEPTH_USER_LABELS: dict[str, str] = {
@@ -301,7 +301,7 @@ class LanguageCapabilities(BaseModel):
         Internal ``analysis_depth`` values (e.g. "morphology_light") are stable
         machine-readable IDs.  This field translates them to a friendlier string
         for display in language pickers and capability summaries.
-        Localised equivalents are in frontend/js/i18n.js CAPABILITY_LABELS_I18N.
+        Localised equivalents are in frontend/js/i18n/core.js CAPABILITY_LABELS_I18N.
         """
         return ANALYSIS_DEPTH_USER_LABELS.get(self.analysis_depth, self.analysis_depth)
 

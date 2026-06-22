@@ -17,7 +17,9 @@ def _sample_fixture() -> dict[str, str]:
 
 
 def _sample_texts() -> dict[str, str]:
-    js = _read('frontend/js/main.js')
+    # SAMPLE_TEXTS moved to js/modes/explorer.js when Session 1 of the
+    # frontend refactor split the former monolithic js/main.js.
+    js = _read('frontend/js/modes/explorer.js')
     block = re.search(r"const SAMPLE_TEXTS = \{([\s\S]*?)\n\}", js)
     assert block, 'SAMPLE_TEXTS constant missing'
     samples: dict[str, str] = {}
@@ -64,7 +66,9 @@ def test_frontend_sample_texts_include_exact_regression_fixtures_without_leakage
 
 
 def test_language_switch_and_stale_cleanup_guardrails_present() -> None:
-    js = _read('frontend/js/main.js')
+    # This guardrail logic moved to js/modes/explorer.js when Session 1 of
+    # the frontend refactor split the former monolithic js/main.js.
+    js = _read('frontend/js/modes/explorer.js')
     assert 'pickerTextarea.value = sample' in js
     assert "languageSelect.value = selectedSampleLang" in js
     assert "languageSelect.dispatchEvent(new Event('change'))" in js
@@ -72,7 +76,10 @@ def test_language_switch_and_stale_cleanup_guardrails_present() -> None:
 
 
 def test_next_up_and_clickable_pill_wiring_is_language_aware() -> None:
-    i18n = _read('frontend/js/i18n.js')
+    # rec_next_up lives in js/i18n/library.js since Session 5 of the frontend
+    # refactor split the former monolithic js/i18n.js (now a thin re-export
+    # shim) into js/i18n/{core,annotations,lesson,library,review}.js.
+    i18n = _read('frontend/js/i18n/library.js')
     recommended = _read('frontend/js/recommended-reading.js')
     main_js = _read('frontend/js/main.js')
 
