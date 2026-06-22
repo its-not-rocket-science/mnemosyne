@@ -71,6 +71,20 @@ select:focus-visible {
   outline-color: var(--error-color);
 }
 
+.lesson-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-block-start: 1rem;
+}
+
+.rating-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block-start: 1rem;
+}
+
 .rating-button,
 .ghost-button {
   padding: 0.6rem 0.9rem;
