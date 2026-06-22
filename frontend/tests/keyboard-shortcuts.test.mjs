@@ -12,16 +12,23 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT      = path.resolve(__dirname, '..')
 
 const html      = readFileSync(path.join(ROOT, 'index.html'), 'utf8')
-const mainJs    = readFileSync(path.join(ROOT, 'js', 'main.js'), 'utf8')
+// Global keyboard shortcuts live in js/shared.js after the main.js split
+// (Session 1 of the frontend refactor); FILTER_CYCLE is a shared constant
+// re-exported from js/reading-state.js, and the former bare _filterCycleIdx
+// module variable is now the filterCycleIndex()/setFilterCycleIndex()
+// accessor pair (ES module bindings can't be reassigned by importers).
+const mainJs    = readFileSync(path.join(ROOT, 'js', 'shared.js'), 'utf8')
 const filterBar = readFileSync(path.join(ROOT, 'components', 'mnemosyne-filter-bar.js'), 'utf8')
 
 // ── FILTER_CYCLE state ────────────────────────────────────────────────────────
 
-assert.ok(mainJs.includes('FILTER_CYCLE'), 'main.js must declare FILTER_CYCLE')
-assert.ok(mainJs.includes("'vocab'"), 'FILTER_CYCLE must include vocab')
-assert.ok(mainJs.includes("'grammar'"), 'FILTER_CYCLE must include grammar')
-assert.ok(mainJs.includes('_filterCycleIdx'), 'main.js must declare _filterCycleIdx')
-console.log('✓ main.js: FILTER_CYCLE and _filterCycleIdx declared')
+assert.ok(mainJs.includes('FILTER_CYCLE'), 'shared.js must reference FILTER_CYCLE')
+const readingState = readFileSync(path.join(ROOT, 'js', 'reading-state.js'), 'utf8')
+assert.ok(readingState.includes("'vocab'"), 'FILTER_CYCLE must include vocab')
+assert.ok(readingState.includes("'grammar'"), 'FILTER_CYCLE must include grammar')
+assert.ok(mainJs.includes('filterCycleIndex'), 'shared.js must use filterCycleIndex accessor')
+assert.ok(mainJs.includes('setFilterCycleIndex'), 'shared.js must use setFilterCycleIndex accessor')
+console.log('✓ shared.js: FILTER_CYCLE and filterCycleIndex/setFilterCycleIndex used')
 
 // ── mnemosyne-filter-bar: activateCategory ────────────────────────────────────
 
@@ -60,8 +67,16 @@ assert.ok(
   keydownBody.includes("case 'd':") && keydownBody.includes("case 'D':"),
   'D key must be handled'
 )
-assert.ok(keydownBody.includes('_openCorpusDrills'), 'D shortcut must call _openCorpusDrills')
-console.log('✓ main.js: D shortcut opens corpus drills')
+// D shortcut clicks the corpus-drills button rather than calling the drill
+// opener directly — the opener (openCorpusDrills) is wired to that button's
+// click listener in js/modes/review.js, which owns corpus confusable drills.
+assert.ok(keydownBody.includes('corpusDrillsBtn.click()'), 'D shortcut must click corpusDrillsBtn')
+const reviewJs = readFileSync(path.join(ROOT, 'js', 'modes', 'review.js'), 'utf8')
+assert.ok(
+  reviewJs.includes("corpusDrillsBtn?.addEventListener('click', openCorpusDrills)"),
+  'review.js must wire corpusDrillsBtn click to openCorpusDrills'
+)
+console.log('✓ shared.js: D shortcut clicks corpusDrillsBtn, wired to openCorpusDrills in review.js')
 
 // ── F: cycle filter ───────────────────────────────────────────────────────────
 
@@ -69,7 +84,7 @@ assert.ok(
   keydownBody.includes("case 'f':") && keydownBody.includes("case 'F':"),
   'F key must be handled'
 )
-assert.ok(keydownBody.includes('_filterCycleIdx'), 'F shortcut must advance _filterCycleIdx')
+assert.ok(keydownBody.includes('filterCycleIndex'), 'F shortcut must advance filterCycleIndex')
 assert.ok(keydownBody.includes('activateCategory'), 'F shortcut must call activateCategory')
 console.log('✓ main.js: F shortcut cycles annotation filter')
 
