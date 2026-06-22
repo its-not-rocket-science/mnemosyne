@@ -24,8 +24,21 @@ import { initReview, initReviewSession } from './modes/review.js'
 import { initLibrary } from './modes/library.js'
 import { initCreate } from './modes/create.js'
 import { _fetchReadingHistory } from './modes/library.js'
+import { navigate, parseRoute } from './router.js'
 
 initUiLanguage()
+
+// ── Home route redirect ──────────────────────────────────────────────────────
+// #/ redirects to #/library once the user has navigated anywhere before (a
+// simple "has history" signal that doesn't require a backend round-trip
+// before the route resolves). First-ever visit lands on #/explore via
+// js/modes/explorer.js's own route handler, which treats '' the same as
+// 'explore' until results exist.
+const HISTORY_FLAG = 'mnemosyne_has_navigated'
+if (parseRoute().path === 'home' && localStorage.getItem(HISTORY_FLAG)) {
+  navigate('#/library')
+}
+try { localStorage.setItem(HISTORY_FLAG, '1') } catch { /* storage unavailable — non-fatal */ }
 
 /**
  * init() — runs each mode coordinator's init in dependency order:
