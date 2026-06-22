@@ -14,7 +14,7 @@ const ROOT      = path.resolve(__dirname, '..')
 // Sentence translation lives in js/modes/lesson.js after the main.js split
 // (Session 1 of the frontend refactor).
 const mainJs = readFileSync(path.join(ROOT, 'js', 'modes', 'lesson.js'), 'utf8')
-const i18n   = readFileSync(path.join(ROOT, 'js', 'i18n.js'), 'utf8')
+const i18n   = ['core','annotations','lesson','library','review'].map(f => readFileSync(path.join(ROOT, 'js', 'i18n', `${f}.js`), 'utf8')).join('\n')
 const css    = readFileSync(path.join(ROOT, 'css', 'components.css'), 'utf8')
 
 // ── State variables ───────────────────────────────────────────────────────────

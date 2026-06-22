@@ -37,6 +37,11 @@ globalThis.requestAnimationFrame = () => {}
 await import('../components/mnemosyne-pill.js')
 await import('../components/mnemosyne-text-panel.js')
 
+// pill_aria_label lives in the lazy 'lesson' i18n bundle (Session 5 of the
+// frontend refactor) — load it so t()/ti() resolve real text instead of
+// gracefully falling back to the raw key.
+await (await import('../js/i18n/index.js')).loadBundle('lesson')
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 function makePill({ type = 'vocabulary', label = 'test', objectId = 'obj-1',

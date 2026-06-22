@@ -16,7 +16,7 @@ const html     = readFileSync(path.join(ROOT, 'index.html'), 'utf8')
 // Text-picker dialog + difficulty estimator live in js/modes/explorer.js
 // after the main.js split (Session 1 of the frontend refactor).
 const mainJs   = readFileSync(path.join(ROOT, 'js', 'modes', 'explorer.js'), 'utf8')
-const i18n     = readFileSync(path.join(ROOT, 'js', 'i18n.js'), 'utf8')
+const i18n     = ['core','annotations','lesson','library','review'].map(f => readFileSync(path.join(ROOT, 'js', 'i18n', `${f}.js`), 'utf8')).join('\n')
 const globalCss = readFileSync(path.join(ROOT, 'css', 'components.css'), 'utf8')
 
 // ── HTML element ──────────────────────────────────────────────────────────────

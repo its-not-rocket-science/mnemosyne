@@ -14,7 +14,7 @@
  */
 import { API_BASE } from '../config.js'
 import { getAuthHeaders } from '../auth.js'
-import { t, ti, currentUiLang, TYPE_LABELS_LONG_I18N } from '../i18n.js'
+import { t, ti, currentUiLang, TYPE_LABELS_LONG_I18N, loadBundle } from '../i18n.js'
 import { playbackEngine } from '../playback.js'
 import { openDetail, closeDetail } from '../layout.js'
 import { validateLessonPipelinePayload } from '../lesson-pipeline.js'
@@ -1148,12 +1148,23 @@ function _applyLessonRoute(route) {
 
 /**
  * initLesson() — runs the NowPlayingBar's initial placement based on the
- * current viewport, and registers the #/lesson route handler. Everything
- * else in this module wires itself at import time (event listeners on
- * #results/#detail-pane/#annotation-search), which matches how main.js
- * originally ran this code unconditionally on load.
+ * current viewport, registers the #/lesson route handler, and kicks off the
+ * 'lesson' and 'annotations' i18n bundles (fire-and-forget — not awaited,
+ * since a user needs several seconds at minimum to type/paste text and
+ * trigger a parse, which is ample time for these to resolve before
+ * renderResults() or the detail pane ever reads from them; t()/ti() degrade
+ * gracefully to the raw key in the rare case a bundle hasn't landed yet).
+ * Both load together here, not just 'annotations' on first detail-pane
+ * open as the lazy-load trigger points might suggest in isolation, because
+ * TYPE_LABELS_LONG_I18N (in the 'annotations' bundle) is read during
+ * sentence/annotation rendering — i.e. at parse-render time, not only when
+ * the pane opens. Everything else in this module wires itself at import
+ * time (event listeners on #results/#detail-pane/#annotation-search),
+ * which matches how main.js originally ran this code unconditionally on load.
  */
 export function initLesson() {
   _relocateNowPlayingBar(_npMq.matches)
   onRoute(_applyLessonRoute)
+  loadBundle('lesson')
+  loadBundle('annotations')
 }

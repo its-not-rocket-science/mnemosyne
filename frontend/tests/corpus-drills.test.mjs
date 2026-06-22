@@ -19,7 +19,7 @@ const html   = readFileSync(path.join(ROOT, 'index.html'), 'utf8')
 const reviewJs = readFileSync(path.join(ROOT, 'js', 'modes', 'review.js'), 'utf8')
 const lessonJs = readFileSync(path.join(ROOT, 'js', 'modes', 'lesson.js'), 'utf8')
 const mainJs = reviewJs + lessonJs
-const i18n   = readFileSync(path.join(ROOT, 'js', 'i18n.js'), 'utf8')
+const i18n   = ['core','annotations','lesson','library','review'].map(f => readFileSync(path.join(ROOT, 'js', 'i18n', `${f}.js`), 'utf8')).join('\n')
 
 // ── HTML ──────────────────────────────────────────────────────────────────────
 
@@ -57,7 +57,12 @@ console.log('✓ lesson.js: renderResults gates button on nuance items')
 
 assert.ok(reviewJs.includes('async function openCorpusDrills('), 'review.js must define openCorpusDrills')
 const drillsIdx  = reviewJs.indexOf('async function openCorpusDrills(')
-const drillsBody = reviewJs.slice(drillsIdx, drillsIdx + 1400)
+// Window widened slightly past the original 1400 chars — Session 5 of the
+// frontend refactor added an i18n loadBundle('review') call + explanatory
+// comment at the top of this function (corpus drills can be reached via
+// the D shortcut without ever visiting #/review, so the bundle holding its
+// modal_* strings needs an explicit load here too).
+const drillsBody = reviewJs.slice(drillsIdx, drillsIdx + 1700)
 assert.ok(drillsBody.includes('nuance_types'),        'openCorpusDrills must collect nuance_types')
 assert.ok(drillsBody.includes('nuance_type'),         'openCorpusDrills must read lesson_data.nuance_type')
 assert.ok(drillsBody.includes('/nuance-drills'),      'openCorpusDrills must call /nuance-drills endpoint')

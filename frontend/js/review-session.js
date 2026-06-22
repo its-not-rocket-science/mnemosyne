@@ -10,7 +10,7 @@
  */
 
 import { API_BASE } from './config.js'
-import { t, ti } from './i18n.js'
+import { t, ti, loadBundle } from './i18n.js'
 import { navigate, onRoute } from './router.js'
 
 let _pollTimer = null
@@ -219,6 +219,7 @@ export function initReviewSession() {
     const isReview = route.path === 'review'
     reviewPanel.hidden = !isReview
     if (isReview) {
+      loadBundle('review')
       _enterReviewRoute()
     } else if (_sessionActive) {
       _exitReviewRoute()
