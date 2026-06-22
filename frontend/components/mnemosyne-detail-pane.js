@@ -149,8 +149,8 @@ export class MnemosyneDetailPane extends HTMLElement {
   // Private state
   #config         = null   // { lesson, sentenceText, language, dir, ttsTag, caps, depth, uiLang }
   #lastShowArgs   = null   // stored for updateDepth()
-  #activeTab      = 0
-  #visibleTabs    = []     // subset of ALL_TABS that are rendered
+  #level2Open     = false  // "More about this" — Form/Paradigm/Equivalents/Nuance/Memory/Origins/Context/Related
+  #level3Open     = false  // "Full detail" — Practice/Review
   #onSpeak        = null
   #onStudy        = null
   #onTranslate    = null   // async (text, sourceLang, targetLang) => {text, attribution} | null
@@ -171,19 +171,21 @@ export class MnemosyneDetailPane extends HTMLElement {
   #conceptDialogHistory           = []   // [{concept_id, title}] stack for back navigation
   #matchedVariant = ''
 
-  static ALL_TABS = [
-    { id: 'explanation',  labelKey: 'dp_tab_explanation',  alwaysShow: true  },
-    { id: 'form',         labelKey: 'dp_tab_form',         alwaysShow: false },
-    { id: 'paradigm',     labelKey: 'dp_tab_paradigm',     alwaysShow: false },
-    { id: 'equivalents',  labelKey: 'dp_tab_equivalents',  alwaysShow: false },
-    { id: 'nuance',       labelKey: 'dp_tab_nuance',       alwaysShow: false },
-    { id: 'memory',       labelKey: 'dp_tab_memory',       alwaysShow: false },
-    { id: 'origins',      labelKey: 'dp_tab_origins',      alwaysShow: false },
-    { id: 'context',      labelKey: 'dp_tab_context',      alwaysShow: true  },
-    { id: 'related',      labelKey: 'dp_tab_related',      alwaysShow: false },
-    { id: 'practice',     labelKey: 'dp_tab_practice',     alwaysShow: true  },
-    { id: 'review',       labelKey: 'dp_tab_review',       alwaysShow: false },
-  ]
+  // Label keys for each former tab — still used as section sub-headings inside
+  // the level 2 / level 3 disclosure sections.
+  static SECTION_LABELS = {
+    explanation: 'dp_tab_explanation',
+    form:        'dp_tab_form',
+    paradigm:    'dp_tab_paradigm',
+    equivalents: 'dp_tab_equivalents',
+    nuance:      'dp_tab_nuance',
+    memory:      'dp_tab_memory',
+    origins:     'dp_tab_origins',
+    context:     'dp_tab_context',
+    related:     'dp_tab_related',
+    practice:    'dp_tab_practice',
+    review:      'dp_tab_review',
+  }
 
   constructor() {
     super()
@@ -197,12 +199,9 @@ export class MnemosyneDetailPane extends HTMLElement {
     this.#config        = { lesson, sentenceText, language, dir: dir ?? 'ltr', ttsTag, caps, depth: depth ?? 'deep', uiLang: uiLang ?? 'en', reviewQueue, termProgress }
     this.#onSpeak       = onSpeak ?? null
     this.#onTranslate   = onTranslate ?? null
-    this.#vocabTranslationFetched    = false
-    this.#sentenceTranslationFetched = false
-    this.#reviewStatusFetched        = false
     this.#onStudy       = onStudy ?? null
-    this.#activeTab     = 0
-    this.#explanationTranslationFetched = false
+    // Fetch-state flags are (re)reset inside _render(), gated by which
+    // levels are open, so lazy fetches fire at the right disclosure level.
     this.#practiceSession = { correct: 0, total: 0 }
     this.#previousFocus = document.activeElement
 
@@ -213,18 +212,26 @@ export class MnemosyneDetailPane extends HTMLElement {
       this._delegateWired = true
 
       this.shadowRoot.addEventListener('click', (e) => {
-        // Tab switch
-        const tab = e.target.closest('[role="tab"]')
-        if (tab) {
-          const tabEls = Array.from(this.shadowRoot.querySelectorAll('[role="tab"]'))
-          const i = tabEls.indexOf(tab)
-          if (i < 0) return
-          this.#activeTab = i
-          this._applyTabState()
-          const tabId = this.#visibleTabs[i]?.id
-          if (tabId === 'explanation') this.#fetchVocabTranslation()
-          if (tabId === 'context') this.#fetchSentenceTranslation(this.#config.sentenceText || '')
-          if (tabId === 'review') this.#fetchReviewStatus()
+        // Level 2 disclosure — "More about this"
+        const l2Btn = e.target.closest('.pane__level2-toggle')
+        if (l2Btn) {
+          this.#level2Open = !this.#level2Open
+          this.#applyDisclosureState({ focusOnOpen: true })
+          if (this.#level2Open) {
+            this.#fetchSentenceTranslation(this.#config.sentenceText || '')
+          }
+          return
+        }
+
+        // Level 3 disclosure — "Full detail"
+        const l3Btn = e.target.closest('.pane__level3-toggle')
+        if (l3Btn) {
+          this.#level3Open = !this.#level3Open
+          this.#applyDisclosureState({ focusOnOpen: true })
+          if (this.#level3Open) {
+            this.#fetchSentenceTranslation(this.#config.sentenceText || '')
+            this.#fetchReviewStatus()
+          }
           return
         }
 
@@ -355,11 +362,18 @@ export class MnemosyneDetailPane extends HTMLElement {
           return
         }
 
-        // Practice CTA inside concept dialog — close dialog, switch to Practice tab
+        // Practice CTA inside concept dialog — close dialog, open level 3 (Full
+        // detail, which contains Practice) and scroll/focus there.
         if (e.target.closest('.pane__concept-practice-cta')) {
           this.#closeConceptDialog()
-          const practiceTab = this.shadowRoot.querySelector('#dp-tab-practice')
-          if (practiceTab) practiceTab.click()
+          if (!this.#level3Open) {
+            this.#level3Open = true
+            this.#applyDisclosureState({ focusOnOpen: true })
+            this.#fetchSentenceTranslation(this.#config.sentenceText || '')
+            this.#fetchReviewStatus()
+          } else {
+            this.shadowRoot.querySelector('#dp-panel-practice')?.scrollIntoView({ block: 'start' })
+          }
           return
         }
 
@@ -398,9 +412,9 @@ export class MnemosyneDetailPane extends HTMLElement {
         }
       })
 
-      // Tab keyboard navigation — delegated for same reason as click
+      // Escape closes the concept dialog (when open) without closing the pane;
+      // focus trap inside the concept dialog while it is the active surface.
       this.shadowRoot.addEventListener('keydown', (e) => {
-        // Escape closes the concept dialog when it is open
         if (e.key === 'Escape') {
           const dialog = this.shadowRoot.querySelector('#dp-concept-dialog')
           if (dialog && !dialog.hidden) {
@@ -430,23 +444,6 @@ export class MnemosyneDetailPane extends HTMLElement {
             return
           }
         }
-
-        const tab = e.target.closest('[role="tab"]')
-        if (!tab) return
-        const tabEls = Array.from(this.shadowRoot.querySelectorAll('[role="tab"]'))
-        const i = tabEls.indexOf(tab)
-        if (i < 0) return
-        let next = null
-        if (e.key === 'ArrowRight') next = (i + 1) % tabEls.length
-        if (e.key === 'ArrowLeft')  next = (i - 1 + tabEls.length) % tabEls.length
-        if (e.key === 'Home')       next = 0
-        if (e.key === 'End')        next = tabEls.length - 1
-        if (next !== null) {
-          e.preventDefault()
-          this.#activeTab = next
-          this._applyTabState()
-          tabEls[next].focus()
-        }
       })
     }
 
@@ -459,7 +456,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     requestAnimationFrame(() => {
       this.setAttribute('data-open', '')
       this.#setSnap('full')
-      this.shadowRoot.querySelector('[role="tab"]')?.focus()
+      this.shadowRoot.querySelector('.pane__close')?.focus()
     })
 
     // Re-render when UI language changes while pane is open.
@@ -502,6 +499,11 @@ export class MnemosyneDetailPane extends HTMLElement {
       this.#keydownHandler = null
     }
 
+    // Progressive-disclosure state only persists while the pane stays open;
+    // the next show() always starts collapsed at level 1.
+    this.#level2Open = false
+    this.#level3Open = false
+
     this.dispatchEvent(new CustomEvent('pane-close', { bubbles: true, composed: true }))
     this.#previousFocus?.focus?.()
   }
@@ -511,12 +513,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     if (!this.#lastShowArgs || !this.hasAttribute('data-open')) return
     this.#config.depth = depth
     this.#lastShowArgs.depth = depth
-    const prevTab = this.#activeTab
     this._render()
-    if (prevTab < this.#visibleTabs.length) {
-      this.#activeTab = prevTab
-      this._applyTabState()
-    }
   }
 
   // ── Rendering ───────────────────────────────────────────────────────────────
@@ -543,23 +540,16 @@ export class MnemosyneDetailPane extends HTMLElement {
     const hasEquivs     = lesson.equivalents?.length > 0
     const hasNuance     = Array.isArray(lesson.nuance_sets) && lesson.nuance_sets.length > 0
     const hasMemory     = lesson.encountered_vocabulary?.length > 0
+    const hasOriginsAtDepth  = depthIdx >= 1 && hasOrigins
+    const hasRelatedAtDepth  = depthIdx >= 2 && hasRelated
 
-    // Depth controls which tabs are exposed.
-    // subtle=0: Explanation only. learning=1: + Origins + Context. deep=2: all.
-    this.#visibleTabs = MnemosyneDetailPane.ALL_TABS.filter(tab => {
-      if (tab.id === 'explanation')  return true
-      if (tab.id === 'form')         return hasForm
-      if (tab.id === 'paradigm')     return hasParadigm
-      if (tab.id === 'equivalents')  return hasEquivs
-      if (tab.id === 'nuance')       return hasNuance
-      if (tab.id === 'memory')       return hasMemory
-      if (tab.id === 'origins')      return depthIdx >= 1 && hasOrigins
-      if (tab.id === 'context')      return depthIdx >= 1
-      if (tab.id === 'related')      return depthIdx >= 2 && hasRelated
-      if (tab.id === 'practice')     return depthIdx >= 1
-      if (tab.id === 'review')       return depthIdx >= 1
-      return false
-    })
+    // Depth still controls which sections have data worth showing; it no
+    // longer controls navigation (everything lives in one scrollable pane).
+    // subtle=0: explanation only. learning=1: + origins/context/practice/review.
+    // deep=2: + related.
+    const hasLevel2 = hasForm || hasParadigm || hasEquivs || hasNuance || hasMemory ||
+      hasOriginsAtDepth || depthIdx >= 1 || hasRelatedAtDepth
+    const hasLevel3 = depthIdx >= 1
 
     const matchedVariant = ld.matched_variant || lesson.examples?.[0] || ''
     this.#matchedVariant = matchedVariant
@@ -588,32 +578,48 @@ export class MnemosyneDetailPane extends HTMLElement {
           <button class="pane__close" type="button" aria-label="${esc(t('dp_close_aria'))}">&#x2715;</button>
         </header>
 
-        <div class="pane__tabs" role="tablist" aria-label="${esc(t('dp_tabs_aria'))}">
-          ${this.#visibleTabs.map((tab, i) => /* html */`
-            <button
-              class="pane__tab${i === 0 ? ' pane__tab--active' : ''}"
-              role="tab"
-              id="dp-tab-${tab.id}"
-              aria-selected="${i === 0}"
-              aria-controls="dp-panel-${tab.id}"
-              tabindex="${i === 0 ? 0 : -1}"
-              type="button"
-            >${esc(t(tab.labelKey))}</button>
-          `).join('')}
-        </div>
-
         <div class="pane__body">
           ${this._htmlExplanationPanel(lesson, ld, matchedVariant, depthIdx)}
-          ${hasForm      ? this._htmlFormPanel(lesson, dir)       : ''}
-          ${hasParadigm  ? this._htmlParadigmPanel(lesson, dir)   : ''}
-          ${hasEquivs    ? this._htmlEquivalentsPanel(lesson)     : ''}
-          ${hasNuance    ? this._htmlNuancePanel(lesson, dir)     : ''}
-          ${hasMemory    ? this._htmlMemoryPanel(lesson)          : ''}
-          ${depthIdx >= 1 && hasOrigins  ? this._htmlOriginsPanel(ld, isNonCanonical, Boolean(ld.source_text), matchType) : ''}
-          ${depthIdx >= 1               ? this._htmlContextPanel(sentenceText, language, dir, matchedVariant) : ''}
-          ${depthIdx >= 2 && hasRelated  ? this._htmlRelatedPanel(ld, canonical, isNonCanonical) : ''}
-          ${this._htmlPracticePanel()}
-          ${this._htmlReviewPanel()}
+
+          ${hasLevel2 ? /* html */`
+            <div class="pane__level-toggle-row">
+              <button
+                type="button"
+                class="pane__ghost-button pane__level2-toggle"
+                aria-expanded="${this.#level2Open}"
+                aria-controls="dp-level2"
+              >${esc(tr('dp_more_about_this', 'More about this'))}</button>
+            </div>
+          ` : ''}
+
+          <div id="dp-level2" class="pane__level-section" ${hasLevel2 && this.#level2Open ? '' : 'hidden'}>
+            <h3 class="pane__sr-only" id="dp-level2-h">${esc(tr('dp_more_about_this', 'More about this'))}</h3>
+            ${hasForm      ? this.#withSectionHeading('form',      this._htmlFormPanel(lesson, dir))       : ''}
+            ${hasParadigm  ? this.#withSectionHeading('paradigm',  this._htmlParadigmPanel(lesson, dir))   : ''}
+            ${hasEquivs    ? this.#withSectionHeading('equivalents', this._htmlEquivalentsPanel(lesson))   : ''}
+            ${hasNuance    ? this.#withSectionHeading('nuance',    this._htmlNuancePanel(lesson, dir))     : ''}
+            ${hasMemory    ? this.#withSectionHeading('memory',    this._htmlMemoryPanel(lesson))          : ''}
+            ${hasOriginsAtDepth ? this.#withSectionHeading('origins', this._htmlOriginsPanel(ld, isNonCanonical, Boolean(ld.source_text), matchType)) : ''}
+            ${depthIdx >= 1     ? this.#withSectionHeading('context', this._htmlContextPanel(sentenceText, language, dir, matchedVariant)) : ''}
+            ${hasRelatedAtDepth ? this.#withSectionHeading('related', this._htmlRelatedPanel(ld, canonical, isNonCanonical)) : ''}
+          </div>
+
+          ${hasLevel3 ? /* html */`
+            <div class="pane__level-toggle-row">
+              <button
+                type="button"
+                class="pane__ghost-button pane__level3-toggle"
+                aria-expanded="${this.#level3Open}"
+                aria-controls="dp-level3"
+              >${esc(tr('dp_full_detail', 'Full detail'))}</button>
+            </div>
+          ` : ''}
+
+          <div id="dp-level3" class="pane__level-section" ${hasLevel3 && this.#level3Open ? '' : 'hidden'}>
+            <h3 class="pane__sr-only" id="dp-level3-h">${esc(tr('dp_full_detail', 'Full detail'))}</h3>
+            ${this.#withSectionHeading('practice', this._htmlPracticePanel())}
+            ${this.#withSectionHeading('review',   this._htmlReviewPanel())}
+          </div>
         </div>
 
         <footer class="pane__footer">
@@ -630,24 +636,39 @@ export class MnemosyneDetailPane extends HTMLElement {
     const contextEl = this.shadowRoot.querySelector('#dp-panel-context .pane__context-sentence')
     if (contextEl) highlightPhrase(contextEl, sentenceText || '', matchedVariant)
 
-    // Set initial panel visibility
-    this._applyTabState()
-
     // Wire all interactive events
     this._wireEvents(matchedVariant, canonical, sentenceText || '', isNonCanonical)
 
-    // Kick off translations for whichever tab is currently active.
-    // All three flags are reset so re-renders (depth change, language change)
-    // can refetch cleanly without relying on the tab-click path.
+    // Lazy-fetch timing:
+    //  - vocab translation: always kicked off on open (level 1 content).
+    //  - sentence translation + review status: only once level 3 — or level 2,
+    //    for the Context panel which lives there — is actually opened.
     this.#vocabTranslationFetched       = false
-    this.#sentenceTranslationFetched    = false
     this.#explanationTranslationFetched = false
-    this.#reviewStatusFetched           = false
     this.#fetchVocabTranslation()
     this.#fetchExplanationTranslation()
-    if (this.#visibleTabs[this.#activeTab]?.id === 'context') {
+    if (this.#level2Open || this.#level3Open) {
+      this.#sentenceTranslationFetched = false
       this.#fetchSentenceTranslation(sentenceText || '')
     }
+    if (this.#level3Open) {
+      this.#reviewStatusFetched = false
+      this.#fetchReviewStatus()
+    }
+  }
+
+  /** Wrap a former-tab's HTML fragment with a visible section heading using
+   *  its old tab label, so a section is identifiable while scrolling through
+   *  the combined level 2 / level 3 disclosure content. */
+  #withSectionHeading(sectionId, html) {
+    const labelKey = MnemosyneDetailPane.SECTION_LABELS[sectionId]
+    const label     = labelKey ? t(labelKey) : sectionId
+    return /* html */`
+      <div class="pane__disclosure-group">
+        <h4 class="pane__disclosure-heading">${esc(label)}</h4>
+        ${html}
+      </div>
+    `
   }
 
   // ── HTML fragment builders ──────────────────────────────────────────────────
@@ -693,9 +714,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     return /* html */`
       <section
         id="dp-panel-explanation"
-        role="tabpanel"
-        aria-labelledby="dp-tab-explanation"
-        class="pane__panel"
+        class="pane__panel pane__panel--level1"
       >
         ${isConfusable ? /* html */`
           <div class="pane__confusable-warning" role="note">
@@ -799,13 +818,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     ` : ''
 
     return /* html */`
-      <section
-        id="dp-panel-form"
-        role="tabpanel"
-        aria-labelledby="dp-tab-form"
-        class="pane__panel"
-        hidden
-      >
+      <section id="dp-panel-form" class="pane__panel">
         ${axesHtml}
         ${contrastsHtml}
       </section>
@@ -829,13 +842,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     }).join('')
 
     return /* html */`
-      <section
-        id="dp-panel-paradigm"
-        role="tabpanel"
-        aria-labelledby="dp-tab-paradigm"
-        class="pane__panel"
-        hidden
-      >
+      <section id="dp-panel-paradigm" class="pane__panel">
         ${tablesHtml || `<p class="pane__muted">${esc(tr('dp_paradigm_empty', 'No paradigm data available.'))}</p>`}
       </section>
     `
@@ -927,13 +934,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     }).join('')
 
     return /* html */`
-      <section
-        id="dp-panel-equivalents"
-        role="tabpanel"
-        aria-labelledby="dp-tab-equivalents"
-        class="pane__panel"
-        hidden
-      >
+      <section id="dp-panel-equivalents" class="pane__panel">
         <section class="pane__subsection" aria-labelledby="dp-equiv-h">
           <h3 class="pane__section-heading" id="dp-equiv-h">${esc(tr('dp_equivalents_heading', 'Equivalent constructions'))}</h3>
           <p class="pane__muted">${esc(tr('dp_equivalents_desc', 'Alternative ways to express the same meaning or function.'))}</p>
@@ -1023,10 +1024,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     return /* html */`
       <section
         id="dp-panel-nuance"
-        role="tabpanel"
-        aria-labelledby="dp-tab-nuance"
         class="pane__panel"
-        hidden
       >
         <p class="pane__muted pane__nuance-intro">${esc(tr('dp_nuance_intro', 'Observe what changes when a native speaker chooses one form instead of another. Select the sentence that fits each description, then read the explanation.'))}</p>
         ${setsHtml}
@@ -1065,13 +1063,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     }).join('')
 
     return /* html */`
-      <section
-        id="dp-panel-memory"
-        role="tabpanel"
-        aria-labelledby="dp-tab-memory"
-        class="pane__panel"
-        hidden
-      >
+      <section id="dp-panel-memory" class="pane__panel">
         <section class="pane__subsection" aria-labelledby="dp-memory-h">
           <h3 class="pane__section-heading" id="dp-memory-h">${esc(tr('dp_memory_heading', 'Context vocabulary'))}</h3>
           <p class="pane__muted">${esc(tr('dp_memory_desc', 'Vocabulary encountered in the context of this lesson.'))}</p>
@@ -1088,13 +1080,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     // etymology is a structured object {origin_summary, roots?, cognates?, semantic_shift?}
     const etym = (ld.etymology && typeof ld.etymology === 'object') ? ld.etymology : null
     return /* html */`
-      <section
-        id="dp-panel-origins"
-        role="tabpanel"
-        aria-labelledby="dp-tab-origins"
-        class="pane__panel"
-        hidden
-      >
+      <section id="dp-panel-origins" class="pane__panel">
         ${originText ? /* html */`
           <p class="pane__origin-text">${esc(originText)}</p>
         ` : ''}
@@ -1146,13 +1132,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     // Sentence text is embedded as plain text here; highlightPhrase() replaces
     // it with <mark>-wrapped content after innerHTML is set.
     return /* html */`
-      <section
-        id="dp-panel-context"
-        role="tabpanel"
-        aria-labelledby="dp-tab-context"
-        class="pane__panel"
-        hidden
-      >
+      <section id="dp-panel-context" class="pane__panel">
         <p class="pane__context-sentence"
           ${language ? `lang="${esc(language)}"` : ''}
           ${dir && dir !== 'ltr' ? `dir="${esc(dir)}"` : ''}
@@ -1228,13 +1208,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     const hasAnyConfusables = confusableFamilies.length > 0 || confusableForms.length > 0
 
     return /* html */`
-      <section
-        id="dp-panel-related"
-        role="tabpanel"
-        aria-labelledby="dp-tab-related"
-        class="pane__panel"
-        hidden
-      >
+      <section id="dp-panel-related" class="pane__panel">
         ${rawVariants.length ? /* html */`
           <section class="pane__subsection" aria-labelledby="dp-variants-h">
             <h3 class="pane__section-heading" id="dp-variants-h">${esc(t('dp_variant_forms'))}</h3>
@@ -1451,13 +1425,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     `).join('')
 
     return /* html */`
-      <section
-        id="dp-panel-practice"
-        role="tabpanel"
-        aria-labelledby="dp-tab-practice"
-        class="pane__panel"
-        hidden
-      >
+      <section id="dp-panel-practice" class="pane__panel">
         <section class="pane__subsection" aria-labelledby="dp-practice-h">
           <h3 class="pane__section-heading" id="dp-practice-h">${esc(t('dp_practice_heading'))}</h3>
           <p class="pane__muted">${esc(t('dp_practice_description'))}</p>
@@ -1590,15 +1558,9 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   _htmlReviewPanel() {
     return /* html */`
-      <section
-        id="dp-panel-review"
-        role="tabpanel"
-        aria-labelledby="dp-tab-review"
-        class="pane__panel"
-        hidden
-      >
+      <section id="dp-panel-review" class="pane__panel">
         <div id="dp-review-status" class="pane__review-status" aria-live="polite" aria-atomic="false">
-          <p class="pane__muted">${esc(tr('dp_review_tab_intro', 'Select this tab to load your review status for this item.'))}</p>
+          <p class="pane__muted">${esc(tr('dp_review_tab_intro', 'Loading your review status for this item…'))}</p>
         </div>
       </section>
     `
@@ -2236,20 +2198,43 @@ export class MnemosyneDetailPane extends HTMLElement {
     return map[bucket] ?? { icon: '', label: bucket }
   }
 
-  // Apply aria-selected, tabindex, and panel visibility for the active tab.
-  _applyTabState() {
-    const tabEls   = Array.from(this.shadowRoot.querySelectorAll('[role="tab"]'))
-    const panelEls = Array.from(this.shadowRoot.querySelectorAll('[role="tabpanel"]'))
+  // Apply aria-expanded + hidden state for the level 2 / level 3 disclosure
+  // sections, and (optionally) move focus into a newly-opened section — to its
+  // first interactive element, or the section heading if it has none.
+  #applyDisclosureState({ focusOnOpen = false } = {}) {
+    const l2Btn     = this.shadowRoot.querySelector('.pane__level2-toggle')
+    const l3Btn     = this.shadowRoot.querySelector('.pane__level3-toggle')
+    const l2Section = this.shadowRoot.querySelector('#dp-level2')
+    const l3Section = this.shadowRoot.querySelector('#dp-level3')
 
-    tabEls.forEach((tab, i) => {
-      const active = i === this.#activeTab
-      tab.setAttribute('aria-selected', String(active))
-      tab.setAttribute('tabindex', active ? '0' : '-1')
-      tab.classList.toggle('pane__tab--active', active)
-    })
-    panelEls.forEach((panel, i) => {
-      panel.hidden = i !== this.#activeTab
-    })
+    let justOpenedSection = null
+
+    if (l2Btn && l2Section) {
+      l2Btn.setAttribute('aria-expanded', String(this.#level2Open))
+      const wasHidden = l2Section.hidden
+      l2Section.hidden = !this.#level2Open
+      if (this.#level2Open && wasHidden) justOpenedSection = l2Section
+    }
+    if (l3Btn && l3Section) {
+      l3Btn.setAttribute('aria-expanded', String(this.#level3Open))
+      const wasHidden = l3Section.hidden
+      l3Section.hidden = !this.#level3Open
+      if (this.#level3Open && wasHidden) justOpenedSection = l3Section
+    }
+
+    if (focusOnOpen && justOpenedSection) {
+      const firstInteractive = justOpenedSection.querySelector(
+        'button:not(:disabled), [href], input:not(:disabled), select:not(:disabled), ' +
+        'textarea:not(:disabled), [tabindex]:not([tabindex="-1"])'
+      )
+      const heading = justOpenedSection.querySelector('h3')
+      if (firstInteractive) {
+        firstInteractive.focus()
+      } else if (heading) {
+        if (!heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1')
+        heading.focus()
+      }
+    }
   }
 
   // ── Focus trap ────────────────────────────────────────────────────────────────
@@ -2497,46 +2482,87 @@ export class MnemosyneDetailPane extends HTMLElement {
         outline-offset: 2px;
       }
 
-      /* ── Tab strip ──────────────────────────────────────────────────────── */
-      .pane__tabs {
+      /* ── Progressive disclosure triggers (Level 2 / Level 3) ──────────────
+         Visually mirrors the global .ghost-button pattern (pill shape,
+         --border-input outline, 2.75rem touch target) but is defined locally
+         since external stylesheets do not cross the shadow boundary. */
+      .pane__level-toggle-row {
         display: flex;
-        border-block-end: 1px solid var(--border);
-        flex-shrink: 0;
-        overflow-x: auto;
-        scrollbar-width: none;
+        padding-inline: 1rem;
       }
-      .pane__tabs::-webkit-scrollbar { display: none; }
 
-      .pane__tab {
-        flex: 1;
+      .pane__ghost-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
         background: transparent;
-        border: none;
-        border-block-end: 2px solid transparent;
-        margin-block-end: -1px;
-        padding-block: 0.6rem;
-        padding-inline: 0.65rem;
+        border: 1px solid var(--border-input);
+        border-radius: 999px;
+        padding: 0.5rem 1rem;
         font: inherit;
-        font-size: 0.8rem;
+        font-size: 0.8125rem;
         font-weight: 600;
-        letter-spacing: 0.01em;
-        cursor: pointer;
-        color: var(--muted);
-        white-space: nowrap;
-        min-block-size: 2.75rem;
-        text-align: center;
-        transition: color 0.1s ease, border-color 0.1s ease;
-      }
-      .pane__tab--active,
-      .pane__tab[aria-selected="true"] {
         color: var(--text);
-        border-block-end-color: color-mix(in oklch, var(--detail-accent, ${ref}) 85%, CanvasText);
+        cursor: pointer;
+        min-block-size: 2.75rem;
+        white-space: nowrap;
+        transition: background 0.1s ease, border-color 0.1s ease;
       }
-      .pane__tab:focus-visible {
+      .pane__ghost-button::after {
+        content: '';
+        inline-size: 0.5em;
+        block-size: 0.5em;
+        border-inline-end: 2px solid currentColor;
+        border-block-end: 2px solid currentColor;
+        transform: rotate(45deg);
+        transition: transform 0.15s ease;
+        flex-shrink: 0;
+      }
+      .pane__ghost-button[aria-expanded="true"]::after {
+        transform: rotate(225deg);
+      }
+      .pane__ghost-button:hover {
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 10%, Canvas);
+        border-color: color-mix(in oklch, var(--detail-accent, ${ref}) 45%, Canvas);
+      }
+      .pane__ghost-button:focus-visible {
         outline: 3px solid var(--accent);
-        outline-offset: -2px;
+        outline-offset: 2px;
       }
       @media (prefers-reduced-motion: reduce) {
-        .pane__tab { transition: none; }
+        .pane__ghost-button, .pane__ghost-button::after { transition: none; }
+      }
+
+      .pane__level-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+      }
+      .pane__level-section[hidden] { display: none; }
+
+      /* ── Disclosure group headings — identify a former tab's content while
+         scrolling through the combined level 2 / level 3 sections.
+         .pane__panel already carries its own 1rem padding, so the group
+         itself stays unpadded and only supplies the divider + spacing. ────── */
+      .pane__disclosure-group + .pane__disclosure-group {
+        padding-block-start: 0.25rem;
+        margin-block-start: 0.1rem;
+        border-block-start: 1px solid var(--border);
+      }
+      .pane__disclosure-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      .pane__disclosure-heading {
+        margin: 0;
+        padding-inline: 1rem;
+        padding-block-start: 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: color-mix(in oklch, var(--detail-accent, ${ref}) 75%, CanvasText);
       }
 
       /* ── Scrollable panel body ──────────────────────────────────────────── */
