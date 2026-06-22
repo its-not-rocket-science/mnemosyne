@@ -81,7 +81,7 @@ console.log('✓ Boot script has try/catch fallback')
 
 // ── Test 5: i18n keys present in all 11 languages ────────────────────────────
 
-const i18nSrc = readFileSync(path.join(ROOT, 'js', 'i18n.js'), 'utf8')
+const i18nSrc = ['core','annotations','lesson','library','review'].map(f => readFileSync(path.join(ROOT, 'js', 'i18n', `${f}.js`), 'utf8')).join('\n')
 const REQUIRED_KEYS = ['nav_theme_aria', 'nav_theme_auto', 'nav_theme_light', 'nav_theme_dark']
 const LANG_CODES    = ['en', 'es', 'fr', 'de', 'it', 'pt', 'ru', 'ja', 'zh', 'ar', 'he']
 
