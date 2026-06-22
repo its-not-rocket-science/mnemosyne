@@ -48,6 +48,7 @@ import {
   applyScriptViewToResults,
   _clearResultsDifficultyBadge,
 } from './explorer.js'
+import { navigate, onRoute } from '../router.js'
 
 // ── DOM references ────────────────────────────────────────────────────────────
 
@@ -69,7 +70,8 @@ const annotationTooltip = document.querySelector('#annotation-tooltip')
 const annotationSearch  = document.querySelector('#annotation-search')
 const resultsSection    = document.querySelector('#results-section')
 const siteHero          = document.querySelector('#site-hero')
-const parseDialog       = document.querySelector('#parse-dialog')
+// Was #parse-dialog — now the #/explore route's main section.
+const parseDialog       = document.querySelector('#route-explore')
 const changeLessonBtn   = document.querySelector('#change-lesson-btn')
 const corpusDrillsBtn   = document.querySelector('#corpus-drills-btn')
 const readerNowPlaying  = document.querySelector('#reader-nowplaying')
@@ -128,6 +130,7 @@ let _currentSourceDocId   = null  // set by library.js's _loadSource; null for p
 const _sentenceRatedIds   = new Map() // sentenceIdx → Set<objectId> of rated items
 
 export function setCurrentSourceDocId(id) { _currentSourceDocId = id }
+export function currentSourceDocId() { return _currentSourceDocId }
 export function clearSentenceRatedIds() { _sentenceRatedIds.clear() }
 
 // ── Sentence translation state ─────────────────────────────────────────────────
@@ -693,8 +696,14 @@ export function renderResults(pipelinePayload, language) {
   setResultsHeading(currentDocumentTitle(), currentDocumentEyebrow())
   if (resultsSection) resultsSection.hidden = false
   if (siteHero) siteHero.hidden = true
-  parseDialog?.close()
+  if (parseDialog) parseDialog.hidden = true
   if (changeLessonBtn) changeLessonBtn.hidden = false
+
+  // #/lesson/:id — was the parse-dialog's close() call. Falls back to a
+  // generic id for ad-hoc pasted/fetched text that has no corpus document id
+  // yet (only saved/loaded sources have one) — degrades gracefully rather
+  // than overclaiming a specific identity for unsaved text.
+  navigate(`#/lesson/${encodeURIComponent(_currentSourceDocId ?? 'current')}`)
 
   // Show "Practice confusables" button only when the text has nuance items
   if (corpusDrillsBtn) {
@@ -1120,12 +1129,31 @@ function _relocateNowPlayingBar(mobile) {
 
 _npMq.addEventListener('change', e => _relocateNowPlayingBar(e.matches))
 
+// ── Route handling ────────────────────────────────────────────────────────────
+// #/lesson/:id shows the results section (and the #/explore entry form stays
+// hidden); any other route hides results so it doesn't bleed into #/library,
+// #/review, etc. Results content itself is populated by renderResults(),
+// called from explorer.js/library.js — this handler only owns visibility.
+
+function _applyLessonRoute(route) {
+  if (!resultsSection) return
+  if (route.path === 'lesson') {
+    // Only reveal if a lesson has actually been rendered (results section
+    // has content); otherwise leave the explore form as the visible surface.
+    if (results?.children.length) resultsSection.hidden = false
+  } else {
+    resultsSection.hidden = true
+  }
+}
+
 /**
  * initLesson() — runs the NowPlayingBar's initial placement based on the
- * current viewport. Everything else in this module wires itself at import
- * time (event listeners on #results/#detail-pane/#annotation-search), which
- * matches how main.js originally ran this code unconditionally on load.
+ * current viewport, and registers the #/lesson route handler. Everything
+ * else in this module wires itself at import time (event listeners on
+ * #results/#detail-pane/#annotation-search), which matches how main.js
+ * originally ran this code unconditionally on load.
  */
 export function initLesson() {
   _relocateNowPlayingBar(_npMq.matches)
+  onRoute(_applyLessonRoute)
 }

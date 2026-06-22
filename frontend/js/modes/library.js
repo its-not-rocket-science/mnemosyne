@@ -17,6 +17,7 @@ import {
 } from '../reading-state.js'
 import { renderResults, setCurrentSourceDocId, clearSentenceRatedIds, clearSentenceTranslations } from './lesson.js'
 import { _fetchResultsDifficulty } from './explorer.js'
+import { navigate, onRoute } from '../router.js'
 
 // ── DOM references ────────────────────────────────────────────────────────────
 
@@ -25,18 +26,24 @@ const loadLessonBtn  = document.querySelector('#load-lesson-btn')
 const saveLessonBtn  = document.querySelector('#save-lesson-btn')
 const results        = document.querySelector('#results')
 
-const loadLessonDialog   = document.querySelector('#load-lesson-dialog')
-const loadLessonCloseBtn = document.querySelector('#load-lesson-close-btn')
+// Was #load-lesson-dialog — its list is now absorbed inline into #route-library.
+const loadLessonSection  = document.querySelector('#load-lesson-section')
 const loadLessonList     = document.querySelector('#load-lesson-list')
 
-const parseDialog       = document.querySelector('#parse-dialog')
+// Was #parse-dialog — now the #/explore route's main section.
+const parseDialog       = document.querySelector('#route-explore')
 const changeLessonBtn   = document.querySelector('#change-lesson-btn')
 const readingHistoryEl   = document.querySelector('#reading-history')
 const readingHistoryList = document.querySelector('#reading-history-list')
 
-// ── Vocabulary browser ────────────────────────────────────────────────────────
+// Was #vocab-browser-dialog / #corpus-browser-dialog.
+const vocabBrowserRouteSection  = document.querySelector('#route-library-vocab')
+const corpusBrowserRouteSection = document.querySelector('#route-library')
 
-const vocabBrowserDialog    = document.querySelector('#vocab-browser-dialog')
+// ── Vocabulary browser ────────────────────────────────────────────────────────
+// Was #vocab-browser-dialog — now the #/library/vocab route's section.
+
+const vocabBrowserDialog    = vocabBrowserRouteSection
 const vocabBrowserCloseBtn  = document.querySelector('#vocab-browser-close-btn')
 const openVocabBrowserBtn   = document.querySelector('#open-vocab-browser-btn')
 const vocabBrowserSearch    = document.querySelector('#vocab-browser-search')
@@ -149,15 +156,11 @@ function _scheduleVocabSearch() {
   _vocabSearchTimer = setTimeout(() => _loadVocab(false), 350)
 }
 
-openVocabBrowserBtn?.addEventListener('click', () => {
-  vocabBrowserDialog?.showModal()
-  _loadVocab(false)
-})
+// The #/library/vocab route handler (_applyLibraryRoute) calls _loadVocab()
+// once the route activates — calling it here too would double-fetch.
+openVocabBrowserBtn?.addEventListener('click', () => navigate('#/library/vocab'))
 
-vocabBrowserCloseBtn?.addEventListener('click', () => vocabBrowserDialog?.close())
-vocabBrowserDialog?.addEventListener('cancel', (e) => {
-  if (!vocabBrowserDialog.matches(':modal')) e.preventDefault()
-})
+vocabBrowserCloseBtn?.addEventListener('click', () => navigate('#/library'))
 
 vocabBrowserSearch?.addEventListener('input', _scheduleVocabSearch)
 vocabBrowserLevel?.addEventListener('change', () => _loadVocab(false))
@@ -278,12 +281,13 @@ function _buildSourceItem(src) {
   return li
 }
 
-// ── Load-lesson dialog ────────────────────────────────────────────────────────
+// ── Load-lesson list — was #load-lesson-dialog, absorbed into #/library ───────
 
 loadLessonBtn?.addEventListener('click', async () => {
   const language = languageSelect?.value || null
   loadLessonList && (loadLessonList.innerHTML = '')
-  loadLessonDialog?.showModal()
+  navigate('#/library')
+  if (loadLessonSection) loadLessonSection.hidden = false
   try {
     const url = `${API_BASE}/sources` + (language ? `?language=${language}` : '')
     const resp = await fetch(url, { headers: getAuthHeaders() })
@@ -306,8 +310,6 @@ loadLessonBtn?.addEventListener('click', async () => {
     loadLessonList?.appendChild(li)
   }
 })
-
-loadLessonCloseBtn?.addEventListener('click', () => loadLessonDialog?.close())
 
 // ── Reading history ───────────────────────────────────────────────────────────
 
@@ -406,8 +408,7 @@ export async function _fetchReadingHistory() {
 changeLessonBtn?.addEventListener('click', _fetchReadingHistory)
 
 async function _loadSource(sourceId, language, resumeAt = 0) {
-  loadLessonDialog?.close()
-  corpusBrowserDialog?.close()
+  if (loadLessonSection) loadLessonSection.hidden = true
   setCurrentSourceDocId(sourceId)
   clearSentenceRatedIds()
   clearSentenceTranslations()
@@ -464,8 +465,9 @@ export async function refreshLoadLessonBtn() {
 // (corpusDrillsBtn click is wired in review.js; nothing further needed here.)
 
 // ── Corpus browser ────────────────────────────────────────────────────────────
+// Was #corpus-browser-dialog — now the #/library route's main section.
 
-const corpusBrowserDialog   = document.querySelector('#corpus-browser-dialog')
+const corpusBrowserDialog   = corpusBrowserRouteSection
 const corpusBrowserCloseBtn = document.querySelector('#corpus-browser-close-btn')
 const openCorpusBrowserBtn  = document.querySelector('#open-corpus-browser-btn')
 const corpusBrowserSearch   = document.querySelector('#corpus-browser-search')
@@ -1284,8 +1286,12 @@ async function _importCorpusUrl() {
   }
 }
 
-openCorpusBrowserBtn?.addEventListener('click', async () => {
-  corpusBrowserDialog?.showModal()
+// Loads/populates the corpus browser's data. Called by the #/library route
+// handler whenever that route becomes active — it must NOT call navigate()
+// itself, since navigate() to an already-current hash dispatches
+// synchronously and this function is itself invoked from that dispatch
+// (calling navigate('#/library') here would recurse infinitely).
+async function _openCorpusBrowser() {
   await _populateCorpusLangSelect()
   await _loadCorpus()
   await Promise.all([
@@ -1295,12 +1301,11 @@ openCorpusBrowserBtn?.addEventListener('click', async () => {
     _loadCollections(),
     _loadInProgress(),
   ])
-})
+}
 
-corpusBrowserCloseBtn?.addEventListener('click', () => corpusBrowserDialog?.close())
-corpusBrowserDialog?.addEventListener('click', e => {
-  if (e.target === corpusBrowserDialog) corpusBrowserDialog.close()
-})
+openCorpusBrowserBtn?.addEventListener('click', () => navigate('#/library'))
+
+corpusBrowserCloseBtn?.addEventListener('click', () => navigate('#/explore'))
 
 corpusBrowserSearch?.addEventListener('input', () => {
   clearTimeout(_corpusSearchTimer)
@@ -1363,12 +1368,27 @@ corpusImportInput?.addEventListener('keydown', e => {
   if (e.key === 'Enter') _importCorpusUrl()
 })
 
+// ── Route handling ────────────────────────────────────────────────────────────
+// #/library shows the corpus browser section; #/library/vocab shows the
+// vocabulary browser. Each route hides the other, and both hide the
+// load-lesson list (which only opens explicitly via #load-lesson-btn).
+
+function _applyLibraryRoute(route) {
+  if (corpusBrowserRouteSection) corpusBrowserRouteSection.hidden = route.path !== 'library'
+  if (vocabBrowserRouteSection)  vocabBrowserRouteSection.hidden  = route.path !== 'library-vocab'
+  if (route.path !== 'library' && loadLessonSection) loadLessonSection.hidden = true
+
+  if (route.path === 'library') _openCorpusBrowser()
+  if (route.path === 'library-vocab') _loadVocab(false)
+}
+
 /**
- * initLibrary() — no-op at present. All library.js event listeners wire
- * themselves at import time (matching how this code ran unconditionally in
- * the original main.js); refreshLoadLessonBtn() is called by explorer.js's
- * loadLanguages() once the language list is ready, not here.
+ * initLibrary() — registers the #/library and #/library/vocab route
+ * handlers. All other library.js event listeners wire themselves at import
+ * time (matching how this code ran unconditionally in the original main.js);
+ * refreshLoadLessonBtn() is called by explorer.js's loadLanguages() once the
+ * language list is ready, not here.
  */
 export function initLibrary() {
-  // Intentionally empty — see comment above.
+  onRoute(_applyLibraryRoute)
 }

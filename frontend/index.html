@@ -169,11 +169,11 @@
       <div id="main-content" class="app-shell__authenticated" hidden>
         <div class="pane-backdrop" id="pane-backdrop" aria-hidden="true"></div>
 
-        <!-- ── Review panel ──────────────────────────────────────────────────
-             Hidden until the user opens a review session.
+        <!-- ── Route: #/review ───────────────────────────────────────────────
+             Hidden until the router activates the review route.
              mnemosyne-review-pane fetches and renders sentence review items.
         -->
-        <section id="review-panel" aria-label="Sentence review session" hidden>
+        <section id="route-review" aria-label="Review session" hidden>
           <mnemosyne-review-pane id="review-pane"></mnemosyne-review-pane>
         </section>
 
@@ -183,7 +183,7 @@
         -->
         <div class="wrap" id="review-bar" style="padding-block-start:0.5rem" hidden>
           <button type="button" id="open-review-btn" class="ghost-button review-quick-btn"
-                  aria-controls="review-panel"
+                  aria-controls="route-review"
                   aria-expanded="false">
             Review queue
             <span id="review-due-badge" class="review-due-count" hidden aria-live="polite"></span>
@@ -280,22 +280,27 @@
               </div>
             </div>
 
-            <!-- TextPanel region -->
+            <!-- TextPanel region — also the route host: wraps #route-explore
+                 and #results-section (the #/lesson route's content; see
+                 router.js + js/modes/*.js for route show/hide wiring). -->
             <!--
               tabindex="-1" makes <main> programmatically focusable for the skip link.
             -->
-            <main id="main" tabindex="-1" class="app-shell__text-panel">
+            <main id="main" role="main" tabindex="-1" class="app-shell__text-panel">
               <div id="reading-progress" class="reading-progress"
                    role="progressbar" aria-valuenow="0" aria-valuemin="0"
                    aria-valuemax="100" aria-label="Audio reading progress" hidden></div>
               <div class="wrap">
 
                 <!--
-                  Parse dialog — shown inline (non-modal) before results exist;
-                  opened as a modal via #change-lesson-btn once results are rendered.
-                  The [open] attribute keeps it visible on first load without JS.
+                  Route: #/explore — was #parse-dialog, shown inline before
+                  results exist; the route is also activated via
+                  #change-lesson-btn once results are rendered (acts like the
+                  old showModal() re-open). Visible by default (not [hidden])
+                  so first load without JS still shows the entry form; the
+                  router's explorer.js handler reconciles route state on init.
                 -->
-                <dialog id="parse-dialog" class="parse-dialog picker-dialog" open
+                <section id="route-explore" class="parse-dialog picker-dialog"
                         aria-labelledby="parse-heading">
                   <div class="picker-dialog__inner stack">
                     <div class="picker-dialog__header">
@@ -362,9 +367,9 @@
                       <p id="job-progress-label" class="job-progress__label" aria-live="polite"></p>
                     </div>
                   </div>
-                </dialog>
+                </section>
 
-                <section id="results-section" class="panel" aria-labelledby="results-heading" hidden>
+                <section id="results-section" class="panel" data-route="lesson" aria-labelledby="results-heading" hidden>
                   <div class="results-heading-row">
                     <hgroup class="results-hgroup">
                       <p class="results-source-eyebrow" id="results-source-eyebrow" hidden></p>
@@ -497,8 +502,10 @@
 
     <mnemosyne-modal id="lesson-modal"></mnemosyne-modal>
 
-    <!-- Text-picker dialog — opened by #choose-text-btn / #change-text-btn -->
-    <dialog id="text-picker" class="picker-dialog" aria-labelledby="picker-heading">
+    <!-- #/explore text-intake sub-view — was #text-picker dialog, opened by
+         #choose-text-btn / #change-text-btn. #picker-sample-dialog absorbed
+         inline below. Nested inside #route-explore (see #main). -->
+    <section id="route-explore-picker" class="picker-dialog picker-dialog--route" hidden aria-labelledby="picker-heading">
       <div class="picker-dialog__inner stack">
         <div class="picker-dialog__header">
           <h2 id="picker-heading" data-i18n="choose_text_btn">Choose your text</h2>
@@ -546,34 +553,31 @@
              aria-atomic="true"
              hidden></p>
         </div>
+
+        <!-- Sample picker — was #picker-sample-dialog; now an inline disclosure. -->
+        <div id="picker-sample-inline" class="picker-sample-inline" hidden>
+          <div class="field">
+            <label for="picker-sample-language" class="picker-sample-language-label" data-i18n="sample_language_label">Sample language</label>
+            <select id="picker-sample-language" class="ghost-select ghost-select--small" aria-label="Sample language"></select>
+          </div>
+          <div class="button-row">
+            <button type="button" id="picker-sample-btn" class="button-primary" data-i18n="try_sample_btn">Try a sample</button>
+            <button type="button" id="picker-sample-close-btn" class="ghost-button"
+                    data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
+          </div>
+        </div>
+
         <p id="picker-status" role="status" aria-atomic="true" class="status"></p>
         <div class="button-row">
           <button type="button" id="picker-use-btn" class="button-primary"
                   data-i18n="use_text_btn">Use this text</button>
         </div>
       </div>
-    </dialog>
+    </section>
 
-
-    <dialog id="picker-sample-dialog" class="picker-dialog" aria-labelledby="picker-sample-heading">
-      <div class="picker-dialog__inner stack">
-        <div class="picker-dialog__header">
-          <h2 id="picker-sample-heading" data-i18n="try_sample_btn">Try a sample</h2>
-          <button type="button" id="picker-sample-close-btn" class="dialog-close-btn"
-                  data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
-        </div>
-        <div class="field">
-          <label for="picker-sample-language" class="picker-sample-language-label" data-i18n="sample_language_label">Sample language</label>
-          <select id="picker-sample-language" class="ghost-select ghost-select--small" aria-label="Sample language"></select>
-        </div>
-        <div class="button-row">
-          <button type="button" id="picker-sample-btn" class="button-primary" data-i18n="try_sample_btn">Try a sample</button>
-        </div>
-      </div>
-    </dialog>
-
-    <!-- Save-lesson dialog — opened by #save-lesson-btn -->
-    <dialog id="save-lesson-dialog" class="picker-dialog" aria-labelledby="save-lesson-heading">
+    <!-- Route: #/create/:id — was #save-lesson-dialog, opened by #save-lesson-btn.
+         #save-unsupported-dialog absorbed inline below (non-owner accounts). -->
+    <section id="route-create" class="picker-dialog picker-dialog--route" hidden aria-labelledby="save-lesson-heading">
       <div class="picker-dialog__inner stack">
         <div class="picker-dialog__header">
           <h2 id="save-lesson-heading" data-i18n="save_lesson_btn">Save lesson</h2>
@@ -592,11 +596,21 @@
           <button type="button" id="save-lesson-confirm-btn" class="button-primary"
                   data-i18n="save_lesson_btn">Save lesson</button>
         </div>
-      </div>
-    </dialog>
 
-    <!-- Vocabulary browser dialog — opened by #open-vocab-browser-btn -->
-    <dialog id="vocab-browser-dialog" class="picker-dialog vocab-browser-dialog"
+        <!-- Save lesson unavailable — was #save-unsupported-dialog (non-owner accounts). -->
+        <div id="save-unsupported-inline" class="save-unsupported-inline" hidden>
+          <h3 id="save-unsupported-heading" data-i18n="save_unsupported_heading">Not available in preview</h3>
+          <p data-i18n="save_unsupported_body">Lesson saving is not available during the preview period. Your review history and progress are still recorded.</p>
+          <div class="button-row">
+            <button type="button" id="save-unsupported-ok-btn" class="button-primary"
+                    data-i18n="gdpr_close">Close</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Route: #/library/vocab — was #vocab-browser-dialog, opened by #open-vocab-browser-btn -->
+    <section id="route-library-vocab" class="picker-dialog picker-dialog--route vocab-browser-dialog" hidden
             aria-labelledby="vocab-browser-heading">
       <div class="picker-dialog__inner stack">
         <div class="picker-dialog__header">
@@ -648,10 +662,12 @@
           </div>
         </div>
       </div>
-    </dialog>
+    </section>
 
-    <!-- Corpus browser dialog — opened by #open-corpus-browser-btn -->
-    <dialog id="corpus-browser-dialog" class="picker-dialog corpus-browser-dialog"
+    <!-- Route: #/library — was #corpus-browser-dialog, opened by #open-corpus-browser-btn.
+         #load-lesson-dialog's list absorbed inline below per the refactor spec
+         ("Absorbed into #/library — list there, not dialog"). -->
+    <section id="route-library" class="picker-dialog picker-dialog--route corpus-browser-dialog" hidden
             aria-labelledby="corpus-browser-heading">
       <div class="picker-dialog__inner stack">
         <div class="picker-dialog__header">
@@ -659,6 +675,14 @@
           <button type="button" id="corpus-browser-close-btn" class="dialog-close-btn"
                   data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
         </div>
+
+        <!-- Saved-lesson quick list — was #load-lesson-dialog's content. -->
+        <section id="load-lesson-section" class="load-lesson-section" hidden
+                 aria-labelledby="load-lesson-heading">
+          <h3 id="load-lesson-heading" data-i18n="load_lesson_heading">Load a saved lesson</h3>
+          <ul id="load-lesson-list" class="load-lesson-list" role="list"
+              aria-live="polite" aria-atomic="false"></ul>
+        </section>
 
         <!-- Continue reading strip — populated and revealed by JS -->
         <section id="corpus-in-progress" class="corpus-in-progress" hidden
@@ -801,7 +825,7 @@
                   data-i18n="corpus_load_more">Load more</button>
         </div>
       </div>
-    </dialog>
+    </section>
 
     <!-- GDPR / Privacy notice — opened by Privacy policy link -->
     <dialog id="gdpr-dialog" class="picker-dialog" aria-labelledby="gdpr-heading">
@@ -843,34 +867,6 @@
       </div>
     </dialog>
 
-    <!-- Save lesson unavailable — shown for non-owner accounts -->
-    <dialog id="save-unsupported-dialog" class="picker-dialog" aria-labelledby="save-unsupported-heading">
-      <div class="picker-dialog__inner stack">
-        <div class="picker-dialog__header">
-          <h2 id="save-unsupported-heading" data-i18n="save_unsupported_heading">Not available in preview</h2>
-          <button type="button" id="save-unsupported-close-btn" class="dialog-close-btn"
-                  data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
-        </div>
-        <p data-i18n="save_unsupported_body">Lesson saving is not available during the preview period. Your review history and progress are still recorded.</p>
-        <div class="button-row">
-          <button type="button" id="save-unsupported-ok-btn" class="button-primary"
-                  data-i18n="gdpr_close">Close</button>
-        </div>
-      </div>
-    </dialog>
-
-    <!-- Load lesson dialog — opened by #load-lesson-btn -->
-    <dialog id="load-lesson-dialog" class="picker-dialog" aria-labelledby="load-lesson-heading">
-      <div class="picker-dialog__inner stack">
-        <div class="picker-dialog__header">
-          <h2 id="load-lesson-heading" data-i18n="load_lesson_heading">Load a saved lesson</h2>
-          <button type="button" id="load-lesson-close-btn" class="dialog-close-btn"
-                  data-i18n-aria-label="close_btn_aria" aria-label="Close">&#x2715;</button>
-        </div>
-        <ul id="load-lesson-list" class="load-lesson-list" role="list"
-            aria-live="polite" aria-atomic="false"></ul>
-      </div>
-    </dialog>
 
     <!-- Keyboard shortcut legend — opened by ? key or ⚙ button -->
     <dialog id="shortcuts-dialog" class="picker-dialog"
