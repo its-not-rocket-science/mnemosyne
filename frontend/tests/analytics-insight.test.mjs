@@ -12,7 +12,7 @@ import { assertLocaleKeys } from './lib/i18n.mjs'
 const document = loadDocument()
 const mainJs   = readSource('js/review-session.js')
 const i18n     = readSource('js/i18n.js')
-const css      = readSource('css/review.css')
+const css      = readSource('css/components.css')
 
 // ── DOM structure — daily insight ─────────────────────────────────────────────
 
