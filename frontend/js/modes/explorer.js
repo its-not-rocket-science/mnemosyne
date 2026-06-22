@@ -29,6 +29,7 @@ import {
 import { renderResults, makeTranslateCallback, speakText } from './lesson.js'
 import { getTermProgress, submitReview, submitLessonCheck } from './review.js'
 import { refreshLoadLessonBtn } from './library.js'
+import { navigate, onRoute } from '../router.js'
 
 // ── DOM references ────────────────────────────────────────────────────────────
 
@@ -47,7 +48,8 @@ const jobProgressPanel  = document.querySelector('#job-progress')
 const jobProgressFill   = document.querySelector('#job-progress-fill')
 const jobProgressLabel  = document.querySelector('#job-progress-label')
 
-const textPickerDialog  = document.querySelector('#text-picker')
+// Was #text-picker dialog — now the #/explore picker sub-view (Session 3).
+const textPickerDialog  = document.querySelector('#route-explore-picker')
 const pickerUrlInput    = document.querySelector('#picker-url')
 const pickerFetchUrlBtn = document.querySelector('#picker-fetch-url-btn')
 const pickerTextarea    = document.querySelector('#picker-text')
@@ -58,7 +60,8 @@ const pickerDifficulty  = document.querySelector('#picker-difficulty')
 const pickerCloseBtn    = document.querySelector('#picker-close-btn')
 const pickerSampleOpenBtn = document.querySelector('#picker-sample-open-btn')
 const pickerSampleBtn   = document.querySelector('#picker-sample-btn')
-const pickerSampleDialog = document.querySelector('#picker-sample-dialog')
+// Was #picker-sample-dialog — now an inline disclosure within the picker sub-view.
+const pickerSampleDialog = document.querySelector('#picker-sample-inline')
 const pickerSampleCloseBtn = document.querySelector('#picker-sample-close-btn')
 const pickerSampleLanguageSelect = document.querySelector('#picker-sample-language')
 const pickerCharCount   = document.querySelector('#picker-char-count')
@@ -67,7 +70,8 @@ const resultsSection     = document.querySelector('#results-section')
 const resultsTitle       = document.querySelector('#results-heading')
 const resultsEyebrow     = document.querySelector('#results-source-eyebrow')
 const resultsDifficulty  = document.querySelector('#results-difficulty')
-const parseDialog        = document.querySelector('#parse-dialog')
+// Was #parse-dialog — now the #/explore route's main section.
+const parseDialog        = document.querySelector('#route-explore')
 const parseDialogClose   = document.querySelector('#parse-dialog-close')
 const changeLessonBtn    = document.querySelector('#change-lesson-btn')
 const siteHero           = document.querySelector('#site-hero')
@@ -262,29 +266,40 @@ export function applyScriptViewToResults() {
   results.dataset.scriptView = scriptView
 }
 
-// ── Text-picker dialog ────────────────────────────────────────────────────────
+// ── Text-picker sub-view (was #text-picker dialog) ────────────────────────────
+// Session 3: dialog → route. Opening the picker now navigates to #/explore
+// (where it already lives) and reveals the picker sub-view; closing it just
+// hides the sub-view again — #/explore itself stays the active route.
 
 function openPicker() {
   if (currentText && pickerTextarea) pickerTextarea.value = currentText
   languageUserSelected = false
-  textPickerDialog?.showModal()
+  navigate('#/explore')
+  if (textPickerDialog) textPickerDialog.hidden = false
   updatePickerCharCount()
   _clearDifficultyBadge()
   scheduleDifficultyEstimate()
   pickerTextarea?.focus()
 }
 
+function closePicker() {
+  if (textPickerDialog) textPickerDialog.hidden = true
+}
+
 chooseTextBtn?.addEventListener('click', openPicker)
 changeTextBtn?.addEventListener('click', openPicker)
-pickerCloseBtn?.addEventListener('click', () => textPickerDialog?.close())
+pickerCloseBtn?.addEventListener('click', closePicker)
 
-// Parse dialog — non-modal inline on load, modal when user invokes change-lesson
-parseDialog?.addEventListener('cancel', e => {
-  // Prevent ESC from dismissing when shown non-modal (no results yet)
-  if (!parseDialog.matches(':modal')) e.preventDefault()
+// Escape closes the picker sub-view when it's the focused surface, mirroring
+// the old non-modal-vs-modal <dialog> "cancel" behaviour.
+textPickerDialog?.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { e.preventDefault(); closePicker() }
 })
-parseDialogClose?.addEventListener('click', () => parseDialog?.close())
-changeLessonBtn?.addEventListener('click', () => parseDialog?.showModal())
+
+// #/explore route — was #parse-dialog. changeLessonBtn re-activates the route
+// the same way it used to re-open the dialog as a modal.
+parseDialogClose?.addEventListener('click', () => navigate('#/library'))
+changeLessonBtn?.addEventListener('click', () => navigate('#/explore'))
 
 // Sample texts — one short natural-language paragraph per supported language
 const SAMPLE_TEXTS = {
@@ -332,10 +347,12 @@ function populateSampleLanguageSelect() {
 
 pickerSampleOpenBtn?.addEventListener('click', () => {
   syncSampleLanguagePickerOptions()
-  pickerSampleDialog?.showModal()
+  if (pickerSampleDialog) pickerSampleDialog.hidden = false
 })
 
-pickerSampleCloseBtn?.addEventListener('click', () => pickerSampleDialog?.close())
+pickerSampleCloseBtn?.addEventListener('click', () => {
+  if (pickerSampleDialog) pickerSampleDialog.hidden = true
+})
 
 pickerSampleBtn?.addEventListener('click', () => {
   const selectedSampleLang = pickerSampleLanguageSelect?.value || languageSelect.value
@@ -358,7 +375,7 @@ pickerSampleBtn?.addEventListener('click', () => {
     languageSelect.value = selectedSampleLang
     languageSelect.dispatchEvent(new Event('change'))
   }
-  pickerSampleDialog?.close()
+  if (pickerSampleDialog) pickerSampleDialog.hidden = true
 })
 
 pickerSampleLanguageSelect?.addEventListener('change', () => {
@@ -511,7 +528,7 @@ pickerUseBtn?.addEventListener('click', () => {
     setCurrentDocumentEyebrow(null)
   }
 
-  textPickerDialog?.close()
+  closePicker()
   showChosenText(currentText)
   doParseText(currentText)
 })
@@ -973,13 +990,29 @@ async function _openDeepLink() {
   } catch { /* best-effort — user may not be authed yet */ }
 }
 
+// ── Route handling ────────────────────────────────────────────────────────────
+// #/explore (and #/, before any lesson has been parsed) shows the entry form
+// (was #parse-dialog); every other route hides it. The picker sub-view
+// (#route-explore-picker) is opened/closed independently via openPicker()/
+// closePicker() and always starts hidden on a route change.
+
+function _applyExploreRoute(route) {
+  if (!parseDialog) return
+  const hasResults = Boolean(results?.children.length) && resultsSection?.hidden === false
+  const showEntry = route.path === 'explore' || (route.path === 'home' && !hasResults)
+  parseDialog.hidden = !showEntry
+  if (!showEntry) closePicker()
+}
+
 /**
  * initExplorer() — wires language list + parse limits load and runs the
- * initial backend health check. Call once during app startup.
+ * initial backend health check, then registers the #/explore route handler.
+ * Call once during app startup.
  */
 export function initExplorer() {
   loadParseLimits()
   loadLanguages()
   checkBackendHealth()
   window.__checkBackendHealth = checkBackendHealth
+  onRoute(_applyExploreRoute)
 }

@@ -1338,11 +1338,11 @@ body.player-active .app-shell__scroll-area {
   margin: 0;
 }
 
-/* ── Parse dialog: inline (non-modal) state ─────────────────────────────────
-   Shown as a regular panel before results exist; opened via showModal() when
-   the user wants to change lesson. :not(:modal) targets the [open]-attribute
-   state (dialog.show() / open attr) versus the modal state (showModal()).      */
-#parse-dialog[open]:not(:modal) {
+/* ── #/explore route section (was the inline, non-modal #parse-dialog) ──────
+   Session 3 of the frontend refactor converted this from a <dialog> to a
+   <section> shown/hidden by the router (js/router.js), so it's always in
+   this "inline panel" visual state — never a true modal overlay. */
+#route-explore {
   position: static;
   margin: 0;
   margin-block-end: var(--space-4);
@@ -1354,7 +1354,7 @@ body.player-active .app-shell__scroll-area {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-#parse-dialog:not(:modal) .parse-dialog__close {
+#route-explore .parse-dialog__close {
   display: none;
 }
 
