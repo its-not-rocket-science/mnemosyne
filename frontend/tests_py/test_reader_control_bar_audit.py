@@ -5,7 +5,13 @@ READING = (ROOT / 'frontend/js/reading-experience.js').read_text(encoding='utf-8
 FLOW = (ROOT / 'frontend/js/flow-mode.js').read_text(encoding='utf-8')
 ADAPTIVE = (ROOT / 'frontend/js/adaptive-reader.js').read_text(encoding='utf-8')
 DIFFICULTY = (ROOT / 'frontend/js/difficulty-modulation.js').read_text(encoding='utf-8')
-I18N = (ROOT / 'frontend/js/i18n.js').read_text(encoding='utf-8')
+# js/i18n.js is a re-export shim since Session 5 of the frontend refactor
+# split it into js/i18n/{core,annotations,lesson,library,review}.js — read
+# the concatenation of the content-bearing bundles instead.
+I18N = '\n'.join(
+    (ROOT / f'frontend/js/i18n/{name}.js').read_text(encoding='utf-8')
+    for name in ('core', 'annotations', 'lesson', 'library', 'review')
+)
 READING_CSS = (ROOT / 'frontend/css/components.css').read_text(encoding='utf-8')
 
 
