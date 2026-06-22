@@ -11,7 +11,9 @@ import { loadDocument, readSource } from './lib/dom.mjs'
 import { assertLocaleKeys } from './lib/i18n.mjs'
 
 const document = loadDocument()
-const mainJs   = readSource('js/main.js')
+// Offline review queue lives in js/modes/review.js after the main.js split
+// (Session 1 of the frontend refactor).
+const mainJs   = readSource('js/modes/review.js')
 const i18n     = readSource('js/i18n.js')
 const css      = readSource('css/review.css')
 

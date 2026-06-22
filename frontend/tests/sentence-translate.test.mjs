@@ -11,7 +11,9 @@ import path from 'node:path'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT      = path.resolve(__dirname, '..')
 
-const mainJs = readFileSync(path.join(ROOT, 'js', 'main.js'), 'utf8')
+// Sentence translation lives in js/modes/lesson.js after the main.js split
+// (Session 1 of the frontend refactor).
+const mainJs = readFileSync(path.join(ROOT, 'js', 'modes', 'lesson.js'), 'utf8')
 const i18n   = readFileSync(path.join(ROOT, 'js', 'i18n.js'), 'utf8')
 const css    = readFileSync(path.join(ROOT, 'css', 'components.css'), 'utf8')
 
@@ -20,14 +22,16 @@ const css    = readFileSync(path.join(ROOT, 'css', 'components.css'), 'utf8')
 assert.ok(mainJs.includes('_sentenceTranslations'), 'main.js must declare _sentenceTranslations')
 console.log('✓ main.js: _sentenceTranslations cache declared')
 
-// _loadSource clears cache
-const loadSourceIdx  = mainJs.indexOf('async function _loadSource(')
-const loadSourceBody = mainJs.slice(loadSourceIdx, loadSourceIdx + 600)
+// _loadSource lives in js/modes/library.js; _sentenceTranslations is private
+// to lesson.js, so library.js clears it via the exported clearSentenceTranslations().
+const libraryJs       = readFileSync(path.join(ROOT, 'js', 'modes', 'library.js'), 'utf8')
+const loadSourceIdx  = libraryJs.indexOf('async function _loadSource(')
+const loadSourceBody = libraryJs.slice(loadSourceIdx, loadSourceIdx + 600)
 assert.ok(
-  loadSourceBody.includes('_sentenceTranslations.clear()'),
-  '_loadSource must clear _sentenceTranslations'
+  loadSourceBody.includes('clearSentenceTranslations()'),
+  '_loadSource must clear sentence translations via clearSentenceTranslations()'
 )
-console.log('✓ main.js: _loadSource clears translation cache')
+console.log('✓ library.js: _loadSource clears translation cache via lesson.js export')
 
 // ── renderResults: translate button + reveal span ─────────────────────────────
 
@@ -43,10 +47,12 @@ assert.ok(
 )
 console.log('✓ main.js: renderResults adds translate button and reveal span with aria-expanded')
 
-// ── _fetchSentenceTranslation ─────────────────────────────────────────────────
+// ── fetchSentenceTranslation ──────────────────────────────────────────────────
+// Exported (no leading underscore) since renderResults' click handler now
+// calls it across the module boundary within lesson.js.
 
-assert.ok(mainJs.includes('async function _fetchSentenceTranslation('), 'main.js must define _fetchSentenceTranslation')
-const fetchIdx  = mainJs.indexOf('async function _fetchSentenceTranslation(')
+assert.ok(mainJs.includes('export async function fetchSentenceTranslation('), 'lesson.js must define fetchSentenceTranslation')
+const fetchIdx  = mainJs.indexOf('export async function fetchSentenceTranslation(')
 const fetchBody = mainJs.slice(fetchIdx, fetchIdx + 1000)
 assert.ok(fetchBody.includes('_sentenceTranslations.get('),  'must check cache before fetching')
 assert.ok(fetchBody.includes('/translate'),                  'must call /translate endpoint')

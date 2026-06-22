@@ -10,7 +10,9 @@ import assert from 'node:assert/strict'
 import { loadDocument, readSource } from './lib/dom.mjs'
 
 const document = loadDocument()
-const mainJs   = readSource('js/main.js')
+// Annotation hover tooltip wiring lives in js/modes/lesson.js after the
+// main.js split (Session 1 of the frontend refactor).
+const mainJs   = readSource('js/modes/lesson.js')
 const css      = readSource('css/components.css')
 
 // ── DOM structure ─────────────────────────────────────────────────────────────

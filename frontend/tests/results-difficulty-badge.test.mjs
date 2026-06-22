@@ -12,7 +12,12 @@ import path from 'node:path'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT      = path.resolve(__dirname, '..')
 
-const mainJs    = readFileSync(path.join(ROOT, 'js', 'main.js'), 'utf8')
+// Results heading difficulty badge lives in js/modes/explorer.js after the
+// main.js split (Session 1 of the frontend refactor); renderResults itself
+// (which clears the badge on each render) lives in js/modes/lesson.js and
+// imports _clearResultsDifficultyBadge from explorer.js.
+const mainJs    = readFileSync(path.join(ROOT, 'js', 'modes', 'explorer.js'), 'utf8')
+const lessonJs  = readFileSync(path.join(ROOT, 'js', 'modes', 'lesson.js'), 'utf8')
 const html      = readFileSync(path.join(ROOT, 'index.html'), 'utf8')
 const globalCss = readFileSync(path.join(ROOT, 'css', 'global.css'), 'utf8')
 
@@ -70,16 +75,19 @@ assert.ok(
   mainJs.includes('_fetchResultsDifficulty(normalizedText, language)'),
   'doParseText must call _fetchResultsDifficulty after parse'
 )
+// _loadSource lives in js/modes/library.js, which imports _fetchResultsDifficulty
+// from explorer.js (cross-coordinator function import, not DOM passing).
+const libraryJs = readFileSync(path.join(ROOT, 'js', 'modes', 'library.js'), 'utf8')
 assert.ok(
-  mainJs.includes('_fetchResultsDifficulty(sourceText, data.language)'),
+  libraryJs.includes('_fetchResultsDifficulty(sourceText, data.language)'),
   '_loadSource must call _fetchResultsDifficulty after load'
 )
 console.log('✓ main.js: _fetchResultsDifficulty called in doParseText and _loadSource')
 
 // ── renderResults clears badge ────────────────────────────────────────────────
 
-const renderIdx  = mainJs.indexOf('function renderResults(pipelinePayload, language) {')
-const renderHead = mainJs.slice(renderIdx, renderIdx + 150)
+const renderIdx  = lessonJs.indexOf('function renderResults(pipelinePayload, language) {')
+const renderHead = lessonJs.slice(renderIdx, renderIdx + 150)
 assert.ok(
   renderHead.includes('_clearResultsDifficultyBadge()'),
   'renderResults must call _clearResultsDifficultyBadge at start'
