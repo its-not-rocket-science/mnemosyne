@@ -1,6 +1,10 @@
 /*
  * layout.css — App Shell Layout
  *
+ * Structural/positioning rules only — grid, flex containers, widths, the
+ * page skeleton.  Colour, typography, and component look-and-feel live in
+ * components.css.  Design tokens live in tokens.css.
+ *
  * Named regions (exported from js/layout.js):
  *   TopNav      — sticky top bar
  *   FilterBar   — annotation-type chip strip below nav
@@ -91,8 +95,6 @@ body {
   position: sticky;
   inset-block-start: 0;
   z-index: var(--z-filter-bar);
-  background: var(--surface);
-  border-block-end: 1px solid var(--border);
 }
 
 .app-shell__filter-bar[hidden] { display: none; }
@@ -228,5 +230,75 @@ body {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+}
+
+/* ── Page wrap — constrains content max-width on non-app-shell pages ───────── */
+
+.wrap {
+  inline-size: min(72rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+/* ── #/explore route section (was the inline, non-modal #parse-dialog) ──────
+   Session 3 of the frontend refactor converted this from a <dialog> to a
+   <section> shown/hidden by the router (js/router.js), so it's always in
+   this "inline panel" visual state — never a true modal overlay.
+   Structural sizing only; visual chrome (background/border/shadow) lives
+   in components.css under "Dialogs and drawers".                            */
+#route-explore {
+  position: static;
+  margin: 0;
+  margin-block-end: var(--space-4);
+  inline-size: auto;
+  max-block-size: none;
+  overflow-y: visible;
+}
+
+/* ── #/review route section ──────────────────────────────────────────────────
+   Structural sizing for the review session's container; the card flip
+   animation lives in components.css (Review card section).                  */
+#route-review {
+  padding-block: 1rem;
+  padding-inline: var(--wrap-padding, 1rem);
+  max-inline-size: var(--wrap-max, 56rem);
+  margin-inline: auto;
+}
+
+#route-review[hidden] { display: none; }
+
+/* ── Reading column width — pulled from reading-progressive/premium ─────────
+   Constrains the prose reading measure for comfortable line length.         */
+
+.results-region {
+  position: relative;
+  /* Reserve inline-end space so the minimap doesn't overlap sentence text. */
+  padding-inline-end: 0.65rem;
+  max-inline-size: var(--reader-measure, 68ch);
+}
+
+@media (max-width: 53.99rem) {
+  .results-region {
+    max-inline-size: none;
+  }
+}
+
+/* ── Site header spacing ──────────────────────────────────────────────────── */
+
+.site-header {
+  padding-block: var(--space-5) var(--space-4);
+}
+
+/* ── Mobile compact header ───────────────────────────────────────────────────
+   On narrow screens shrink header padding and hide the tagline to give more
+   vertical space to the reading column.                                      */
+
+@media (max-width: 53.99rem) {
+  .site-header {
+    padding-block: var(--space-3) var(--space-2);
+  }
+
+  .lede {
+    display: none;
   }
 }

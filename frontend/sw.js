@@ -25,7 +25,7 @@ const CACHE_NAME      = `mnemosyne-static-${CACHE_VERSION}`;
 const STATIC_ASSETS = [
   '/',
   '/manifest.json',
-  '/css/global.css',
+  '/css/tokens.css',
   '/css/layout.css',
   '/css/components.css',
   '/js/main.js',

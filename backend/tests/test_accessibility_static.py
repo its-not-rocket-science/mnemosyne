@@ -293,9 +293,12 @@ class TestReducedMotionCSS:
     """
 
     def test_global_css_has_reduced_motion(self):
-        src = (_FRONTEND / "css" / "global.css").read_text(encoding="utf-8")
+        # Session 4 of the frontend refactor consolidated css/global.css into
+        # css/tokens.css (design tokens/resets) + css/components.css (the bulk
+        # of the former global.css component rules, including the resets).
+        src = (_FRONTEND / "css" / "tokens.css").read_text(encoding="utf-8")
         assert "prefers-reduced-motion" in src, (
-            "frontend/css/global.css has no prefers-reduced-motion media query"
+            "frontend/css/tokens.css has no prefers-reduced-motion media query"
         )
 
     def test_components_css_has_reduced_motion(self):

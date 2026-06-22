@@ -97,7 +97,7 @@ console.log('✓ i18n keys nav_theme_* present in all 11 language tables')
 
 // ── Test 6: CSS data-theme selectors present in global.css ───────────────────
 
-const globalCss = readFileSync(path.join(ROOT, 'css', 'global.css'), 'utf8')
+const globalCss = readFileSync(path.join(ROOT, 'css', 'tokens.css'), 'utf8')
 
 assert.ok(
   globalCss.includes(':root[data-theme="dark"]'),
