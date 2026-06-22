@@ -217,9 +217,6 @@ export class MnemosyneDetailPane extends HTMLElement {
         if (l2Btn) {
           this.#level2Open = !this.#level2Open
           this.#applyDisclosureState({ focusOnOpen: true })
-          if (this.#level2Open) {
-            this.#fetchSentenceTranslation(this.#config.sentenceText || '')
-          }
           return
         }
 
@@ -542,13 +539,21 @@ export class MnemosyneDetailPane extends HTMLElement {
     const hasMemory     = lesson.encountered_vocabulary?.length > 0
     const hasOriginsAtDepth  = depthIdx >= 1 && hasOrigins
     const hasRelatedAtDepth  = depthIdx >= 2 && hasRelated
+    const nonSuppressedFields = (lesson.fields ?? [])
+      .filter(f => !SUPPRESS_IN_EXPLANATION.has(f.label.toLowerCase()))
+    const hasExtraFields  = depthIdx >= 1 && nonSuppressedFields.length > 1
+    const hasWhyItMatters = Boolean(ld.why_it_matters) && depthIdx >= 2
 
     // Depth still controls which sections have data worth showing; it no
     // longer controls navigation (everything lives in one scrollable pane).
     // subtle=0: explanation only. learning=1: + origins/context/practice/review.
     // deep=2: + related.
+    // Level 2 ("More about this") holds grammar/equivalents/nuance/memory plus
+    // any remaining definition fields and the "why it matters" note. Level 3
+    // ("Full detail") holds origins, in-context translation, related/confusable
+    // forms, practice, review history, and the notes field.
     const hasLevel2 = hasForm || hasParadigm || hasEquivs || hasNuance || hasMemory ||
-      hasOriginsAtDepth || depthIdx >= 1 || hasRelatedAtDepth
+      hasExtraFields || hasWhyItMatters
     const hasLevel3 = depthIdx >= 1
 
     const matchedVariant = ld.matched_variant || lesson.examples?.[0] || ''
@@ -594,14 +599,13 @@ export class MnemosyneDetailPane extends HTMLElement {
 
           <div id="dp-level2" class="pane__level-section" ${hasLevel2 && this.#level2Open ? '' : 'hidden'}>
             <h3 class="pane__sr-only" id="dp-level2-h">${esc(tr('dp_more_about_this', 'More about this'))}</h3>
+            ${this._htmlWhyItMattersPanel(ld, depthIdx)}
+            ${hasExtraFields ? this._htmlExtraFieldsPanel(lesson, depthIdx) : ''}
             ${hasForm      ? this.#withSectionHeading('form',      this._htmlFormPanel(lesson, dir))       : ''}
             ${hasParadigm  ? this.#withSectionHeading('paradigm',  this._htmlParadigmPanel(lesson, dir))   : ''}
             ${hasEquivs    ? this.#withSectionHeading('equivalents', this._htmlEquivalentsPanel(lesson))   : ''}
             ${hasNuance    ? this.#withSectionHeading('nuance',    this._htmlNuancePanel(lesson, dir))     : ''}
             ${hasMemory    ? this.#withSectionHeading('memory',    this._htmlMemoryPanel(lesson))          : ''}
-            ${hasOriginsAtDepth ? this.#withSectionHeading('origins', this._htmlOriginsPanel(ld, isNonCanonical, Boolean(ld.source_text), matchType)) : ''}
-            ${depthIdx >= 1     ? this.#withSectionHeading('context', this._htmlContextPanel(sentenceText, language, dir, matchedVariant)) : ''}
-            ${hasRelatedAtDepth ? this.#withSectionHeading('related', this._htmlRelatedPanel(ld, canonical, isNonCanonical)) : ''}
           </div>
 
           ${hasLevel3 ? /* html */`
@@ -617,8 +621,12 @@ export class MnemosyneDetailPane extends HTMLElement {
 
           <div id="dp-level3" class="pane__level-section" ${hasLevel3 && this.#level3Open ? '' : 'hidden'}>
             <h3 class="pane__sr-only" id="dp-level3-h">${esc(tr('dp_full_detail', 'Full detail'))}</h3>
+            ${hasOriginsAtDepth ? this.#withSectionHeading('origins', this._htmlOriginsPanel(ld, isNonCanonical, Boolean(ld.source_text), matchType)) : ''}
+            ${depthIdx >= 1     ? this.#withSectionHeading('context', this._htmlContextPanel(sentenceText, language, dir, matchedVariant)) : ''}
+            ${hasRelatedAtDepth ? this.#withSectionHeading('related', this._htmlRelatedPanel(ld, canonical, isNonCanonical)) : ''}
             ${this.#withSectionHeading('practice', this._htmlPracticePanel())}
             ${this.#withSectionHeading('review',   this._htmlReviewPanel())}
+            ${this._htmlNotesPanel()}
           </div>
         </div>
 
@@ -641,13 +649,13 @@ export class MnemosyneDetailPane extends HTMLElement {
 
     // Lazy-fetch timing:
     //  - vocab translation: always kicked off on open (level 1 content).
-    //  - sentence translation + review status: only once level 3 — or level 2,
-    //    for the Context panel which lives there — is actually opened.
+    //  - sentence translation + review status: only once level 3 is actually
+    //    opened — the Context panel and review status both live there.
     this.#vocabTranslationFetched       = false
     this.#explanationTranslationFetched = false
     this.#fetchVocabTranslation()
     this.#fetchExplanationTranslation()
-    if (this.#level2Open || this.#level3Open) {
+    if (this.#level3Open) {
       this.#sentenceTranslationFetched = false
       this.#fetchSentenceTranslation(sentenceText || '')
     }
@@ -673,11 +681,13 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   // ── HTML fragment builders ──────────────────────────────────────────────────
 
+  /** Level 1 shows only the primary meaning — the first non-suppressed field.
+   *  Any remaining fields are surfaced in Level 2 via _htmlExtraFieldsPanel(). */
   _htmlExplanationPanel(lesson, ld, matchedVariant, depthIdx = 2) {
     const uiLang       = this.#config?.uiLang ?? 'en'
     const allFields    = (lesson.fields ?? [])
       .filter(f => !SUPPRESS_IN_EXPLANATION.has(f.label.toLowerCase()))
-    const displayFields = depthIdx >= 1 ? allFields : []
+    const displayFields = depthIdx >= 1 ? allFields.slice(0, 1) : []
 
     const fieldsHtml = displayFields.map(f => {
       const labelTip = f.label ? `${esc(t('dp_explain_concept'))}: ${esc(translateFieldLabel(f.label))}` : esc(t('dp_explain_concept'))
@@ -707,7 +717,6 @@ export class MnemosyneDetailPane extends HTMLElement {
     const matchTypeMeta   = matchType ? (MATCH_TYPE_META[matchType] ?? { labelKey: null, cls: 'variant' }) : null
     const showMatchBadge  = Boolean(matchTypeMeta)
     const matchTypeNote   = ld.match_type_note || ''
-    const hasWhyItMatters = Boolean(ld.why_it_matters) && depthIdx >= 2
     const isConfusable    = matchType === 'confusable_not_same'
     const confusableWarning = matchTypeNote || t('dp_confusable_warning')
 
@@ -736,11 +745,6 @@ export class MnemosyneDetailPane extends HTMLElement {
           <p class="pane__translation-text"></p>
           <small class="pane__translation-attribution"></small>
         </div>
-        ${hasWhyItMatters ? /* html */`
-          <blockquote class="pane__why-it-matters">
-            <p class="pane__why-it-matters-text">${esc(ld.why_it_matters)}</p>
-          </blockquote>
-        ` : ''}
         ${displayFields.length ? `<dl class="pane__fields">${fieldsHtml}</dl>` : ''}
         ${hasAudio ? /* html */`
           <div class="pane__audio-row">
@@ -749,19 +753,50 @@ export class MnemosyneDetailPane extends HTMLElement {
             </button>
           </div>
         ` : ''}
-        <div class="pane__note-section">
-          <p class="pane__note-label">${esc(t('dp_notes'))}</p>
-          <textarea class="pane__note-input"
-                    placeholder="${esc(t('dp_note_placeholder'))}"
-                    aria-label="${esc(t('dp_note_placeholder'))}"
-                    rows="3"
-                    spellcheck="false" autocorrect="off" autocapitalize="off"></textarea>
-          <div class="pane__note-actions">
-            <button class="pane__note-save" type="button">${esc(t('dp_note_save'))}</button>
-            <button class="pane__note-clear" type="button">${esc(t('dp_note_clear'))}</button>
-          </div>
-        </div>
       </section>
+    `
+  }
+
+  /** Level 2: any non-suppressed fields beyond the single primary one shown at Level 1. */
+  _htmlExtraFieldsPanel(lesson, depthIdx) {
+    const allFields = (lesson.fields ?? [])
+      .filter(f => !SUPPRESS_IN_EXPLANATION.has(f.label.toLowerCase()))
+    const extra = depthIdx >= 1 ? allFields.slice(1) : []
+    if (!extra.length) return ''
+    const fieldsHtml = extra.map(f => /* html */`
+      <div class="pane__field">
+        <dt class="pane__field-label">${esc(translateFieldLabel(f.label))}</dt>
+        <dd class="pane__field-value">${esc(translateFieldValue(f.value))}</dd>
+      </div>
+    `).join('')
+    return /* html */`<dl class="pane__fields">${fieldsHtml}</dl>`
+  }
+
+  /** Level 2: "why it matters" note, suppressed from the Level 1 explanation. */
+  _htmlWhyItMattersPanel(ld, depthIdx) {
+    if (!ld.why_it_matters || depthIdx < 2) return ''
+    return /* html */`
+      <blockquote class="pane__why-it-matters">
+        <p class="pane__why-it-matters-text">${esc(ld.why_it_matters)}</p>
+      </blockquote>
+    `
+  }
+
+  /** Level 3: free-text personal note, previously rendered at the bottom of the pane. */
+  _htmlNotesPanel() {
+    return /* html */`
+      <div class="pane__note-section">
+        <p class="pane__note-label">${esc(t('dp_notes'))}</p>
+        <textarea class="pane__note-input"
+                  placeholder="${esc(t('dp_note_placeholder'))}"
+                  aria-label="${esc(t('dp_note_placeholder'))}"
+                  rows="3"
+                  spellcheck="false" autocorrect="off" autocapitalize="off"></textarea>
+        <div class="pane__note-actions">
+          <button class="pane__note-save" type="button">${esc(t('dp_note_save'))}</button>
+          <button class="pane__note-clear" type="button">${esc(t('dp_note_clear'))}</button>
+        </div>
+      </div>
     `
   }
 

@@ -61,6 +61,16 @@ const VOCAB_LESSON = {
   },
 }
 
+// A morphology axis guarantees level 2 ("More about this") has content —
+// origins/context/related now live in level 3, so level 2's presence
+// depends on form/paradigm/equivalents/nuance/memory/extra-fields/
+// why-it-matters data, independent of depth (which separately still gates
+// origins/context/related/practice/review availability).
+const VOCAB_LESSON_WITH_FORM = {
+  ...VOCAB_LESSON,
+  morphology_axes: [{ axis: 'tense', value: 'present' }],
+}
+
 const IDIOM_LESSON = {
   id: 'ann-2',
   type: 'idiom',
@@ -137,34 +147,37 @@ const cleanUp = () => { document.body.innerHTML = '' }
   console.log('  ✓ depth="subtle" renders level 1 only — no level 2/3 disclosure triggers')
 }
 
-// 5. depth='learning' → level 2 (context) and level 3 (practice) present; no origins without origin data
+// 5. depth='learning' → level 3 (context + practice) present; no level 2 without
+//    form/paradigm/equivalents/nuance/memory/extra-field/why-it-matters data;
+//    no origins without origin data
 {
   const pane = makePane()
   pane.show({ lesson: VOCAB_LESSON, sentenceText: 'hablar es fácil.', language: 'es', depth: 'learning' })
   const sr_ = sr(pane)
-  assert.ok(sr_.querySelector('.pane__level2-toggle'), 'must have "More about this" toggle at depth="learning"')
+  assert.equal(sr_.querySelector('.pane__level2-toggle'), null,
+    'must not have "More about this" toggle when there is no level 2 content')
   assert.ok(sr_.querySelector('.pane__level3-toggle'), 'must have "Full detail" toggle at depth="learning"')
   assert.ok(sr_.querySelector('#dp-panel-context'),  'context content must exist at depth="learning"')
   assert.ok(sr_.querySelector('#dp-panel-practice'), 'practice content must exist at depth="learning"')
   assert.equal(sr_.querySelector('#dp-panel-origins'), null,
     'origins content must not appear without origin data')
   cleanUp()
-  console.log('  ✓ depth="learning" renders context + practice — no origins without data')
+  console.log('  ✓ depth="learning" renders context + practice in level 3 — no origins without data, no empty level 2')
 }
 
-// 6. depth='deep' with lesson_data.origin → origins content included in level 2
+// 6. depth='deep' with lesson_data.origin → origins content included in level 3
 {
   const pane = makePane()
   pane.show({ lesson: IDIOM_LESSON, sentenceText: 'lo hace a la vez.', language: 'es', depth: 'deep' })
   const origins = sr(pane).querySelector('#dp-panel-origins')
   assert.ok(origins !== null, 'origins content must appear when lesson_data.origin is set')
-  assert.ok(sr(pane).querySelector('#dp-level2').contains(origins),
-    'origins content must live inside the level 2 ("More about this") section')
+  assert.ok(sr(pane).querySelector('#dp-level3').contains(origins),
+    'origins content must live inside the level 3 ("Full detail") section')
   cleanUp()
-  console.log('  ✓ depth="deep" + origin data → origins content rendered inside level 2')
+  console.log('  ✓ depth="deep" + origin data → origins content rendered inside level 3')
 }
 
-// 7. depth='deep' with variants (length > 1) → related content included in level 2
+// 7. depth='deep' with variants (length > 1) → related content included in level 3
 {
   const withVariants = {
     ...VOCAB_LESSON,
@@ -174,13 +187,13 @@ const cleanUp = () => { document.body.innerHTML = '' }
   pane.show({ lesson: withVariants, sentenceText: '', language: 'es', depth: 'deep' })
   const related = sr(pane).querySelector('#dp-panel-related')
   assert.ok(related !== null, 'related content must appear when variants.length > 1')
-  assert.ok(sr(pane).querySelector('#dp-level2').contains(related),
-    'related content must live inside the level 2 ("More about this") section')
+  assert.ok(sr(pane).querySelector('#dp-level3').contains(related),
+    'related content must live inside the level 3 ("Full detail") section')
   cleanUp()
-  console.log('  ✓ depth="deep" + variants → related content rendered inside level 2')
+  console.log('  ✓ depth="deep" + variants → related content rendered inside level 3')
 }
 
-// 8. Context panel rendered at depth='learning' with sentence text (inside level 2)
+// 8. Context panel rendered at depth='learning' with sentence text (inside level 3)
 {
   const pane = makePane()
   pane.show({
@@ -193,10 +206,10 @@ const cleanUp = () => { document.body.innerHTML = '' }
   assert.ok(ctx !== null, '.pane__context-sentence must be rendered at depth="learning"')
   assert.ok(ctx.textContent.includes('hablar'),
     '.pane__context-sentence must contain sentence text')
-  assert.ok(sr(pane).querySelector('#dp-level2').contains(ctx),
-    'context sentence must live inside the level 2 section')
+  assert.ok(sr(pane).querySelector('#dp-level3').contains(ctx),
+    'context sentence must live inside the level 3 section')
   cleanUp()
-  console.log('  ✓ context panel renders sentence text at depth="learning", inside level 2')
+  console.log('  ✓ context panel renders sentence text at depth="learning", inside level 3')
 }
 
 // 9. Context panel highlights matched phrase with <mark class="context-highlight">
@@ -295,7 +308,7 @@ const cleanUp = () => { document.body.innerHTML = '' }
 // 16a. "More about this" toggle click expands level 2 and flips aria-expanded
 {
   const pane = makePane()
-  pane.show({ lesson: VOCAB_LESSON, sentenceText: 'hablar es fácil.', language: 'es', depth: 'learning' })
+  pane.show({ lesson: VOCAB_LESSON_WITH_FORM, sentenceText: 'hablar es fácil.', language: 'es', depth: 'learning' })
   const sr_ = sr(pane)
   const l2Toggle  = sr_.querySelector('.pane__level2-toggle')
   const l2Section = sr_.querySelector('#dp-level2')
@@ -331,16 +344,16 @@ const cleanUp = () => { document.body.innerHTML = '' }
 // 16c. Disclosure state persists across re-render while pane stays open, resets on hide()
 {
   const pane = makePane()
-  pane.show({ lesson: VOCAB_LESSON, sentenceText: 'hablar es fácil.', language: 'es', depth: 'learning' })
+  pane.show({ lesson: VOCAB_LESSON_WITH_FORM, sentenceText: 'hablar es fácil.', language: 'es', depth: 'learning' })
   sr(pane).querySelector('.pane__level2-toggle').click()
   assert.equal(sr(pane).querySelector('.pane__level2-toggle').getAttribute('aria-expanded'), 'true')
   // Re-show with the same lesson (simulates a re-render path, e.g. language change) —
   // level 2/3 state must persist while the pane stays open.
-  pane.show({ lesson: VOCAB_LESSON, sentenceText: 'hablar es fácil.', language: 'es', depth: 'learning' })
+  pane.show({ lesson: VOCAB_LESSON_WITH_FORM, sentenceText: 'hablar es fácil.', language: 'es', depth: 'learning' })
   assert.equal(sr(pane).querySelector('.pane__level2-toggle').getAttribute('aria-expanded'), 'true',
     'level 2 expansion must persist across re-render while pane stays open')
   pane.hide()
-  pane.show({ lesson: VOCAB_LESSON, sentenceText: 'hablar es fácil.', language: 'es', depth: 'learning' })
+  pane.show({ lesson: VOCAB_LESSON_WITH_FORM, sentenceText: 'hablar es fácil.', language: 'es', depth: 'learning' })
   assert.equal(sr(pane).querySelector('.pane__level2-toggle').getAttribute('aria-expanded'), 'false',
     'level 2 must reset to collapsed after hide() + show()')
   cleanUp()
