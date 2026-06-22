@@ -1,9 +1,10 @@
 /**
  * js/modes/create.js — Saving the current parsed text as a persisted lesson.
  *
- * Owns: Save-lesson dialog, Save-unsupported dialog (the save lifecycle,
- * distinct from the library display in library.js, which owns the
- * load/browse dialogs once sources exist).
+ * Owns: #/create/:id route (was #save-lesson-dialog), and the inline
+ * save-unsupported notice (was #save-unsupported-dialog) — the save
+ * lifecycle, distinct from the library display in library.js, which owns
+ * the load/browse surfaces once sources exist.
  */
 import { API_BASE, OWNER_EMAIL } from '../config.js'
 import { getAuthHeaders, getUser } from '../auth.js'
@@ -13,34 +14,43 @@ import { refreshLoadLessonBtn } from './library.js'
 // read here through the DOM-free getters explorer.js exports for this
 // purpose rather than duplicating that state.
 import { committedTextValue, committedSourceUrlValue } from './explorer.js'
+import { currentSourceDocId } from './lesson.js'
+import { navigate, onRoute } from '../router.js'
 
 // ── DOM references ────────────────────────────────────────────────────────────
 
 const languageSelect = document.querySelector('#language')
 const saveLessonBtn  = document.querySelector('#save-lesson-btn')
 
-const saveLessonDialog     = document.querySelector('#save-lesson-dialog')
+// Was #save-lesson-dialog — now the #/create/:id route's section.
+const saveLessonDialog     = document.querySelector('#route-create')
 const saveTitleInput       = document.querySelector('#save-title')
 const saveLessonStatus     = document.querySelector('#save-lesson-status')
 const saveLessonCloseBtn   = document.querySelector('#save-lesson-close-btn')
 const saveLessonConfirmBtn = document.querySelector('#save-lesson-confirm-btn')
 
-const saveUnsupportedDialog   = document.querySelector('#save-unsupported-dialog')
-const saveUnsupportedCloseBtn = document.querySelector('#save-unsupported-close-btn')
+// Was #save-unsupported-dialog — now an inline notice within #route-create.
+const saveUnsupportedDialog   = document.querySelector('#save-unsupported-inline')
 const saveUnsupportedOkBtn    = document.querySelector('#save-unsupported-ok-btn')
 
-// ── Save-lesson dialog ────────────────────────────────────────────────────────
+// ── #/create/:id route (was the save-lesson dialog) ───────────────────────────
+
+function _navigateToCreate() {
+  navigate(`#/create/${encodeURIComponent(currentSourceDocId() ?? 'current')}`)
+}
 
 saveLessonBtn?.addEventListener('click', () => {
   if (getUser()?.email !== OWNER_EMAIL) {
-    saveUnsupportedDialog?.showModal()
+    _navigateToCreate()
+    if (saveUnsupportedDialog) saveUnsupportedDialog.hidden = false
     return
   }
-  saveLessonDialog?.showModal()
+  _navigateToCreate()
+  if (saveUnsupportedDialog) saveUnsupportedDialog.hidden = true
   saveTitleInput?.focus()
 })
 
-saveLessonCloseBtn?.addEventListener('click', () => saveLessonDialog?.close())
+saveLessonCloseBtn?.addEventListener('click', () => navigate('#/explore'))
 
 saveLessonConfirmBtn?.addEventListener('click', async () => {
   const title = saveTitleInput?.value.trim() ?? ''
@@ -54,7 +64,7 @@ saveLessonConfirmBtn?.addEventListener('click', async () => {
   }
   const language = languageSelect?.value
   const currentText = committedTextValue()
-  if (!currentText || !language) { saveLessonDialog?.close(); return }
+  if (!currentText || !language) { navigate('#/explore'); return }
   try {
     const resp = await fetch(`${API_BASE}/ingest`, {
       method:  'POST',
@@ -63,7 +73,7 @@ saveLessonConfirmBtn?.addEventListener('click', async () => {
     })
     if (!resp.ok) throw new Error(resp.status)
     const ingestData = await resp.json()
-    saveLessonDialog?.close()
+    navigate('#/explore')
     refreshLoadLessonBtn()
     window.mnemosyneRecommended?.reload(ingestData.source_document_id ?? null)
   } catch {
@@ -74,16 +84,21 @@ saveLessonConfirmBtn?.addEventListener('click', async () => {
   }
 })
 
-// ── Save-unsupported dialog ───────────────────────────────────────────────────
+// ── Save-unsupported inline notice ────────────────────────────────────────────
 
-saveUnsupportedCloseBtn?.addEventListener('click', () => saveUnsupportedDialog?.close())
-saveUnsupportedOkBtn?.addEventListener('click',    () => saveUnsupportedDialog?.close())
+saveUnsupportedOkBtn?.addEventListener('click', () => navigate('#/explore'))
+
+// ── Route handling ────────────────────────────────────────────────────────────
+
+function _applyCreateRoute(route) {
+  if (saveLessonDialog) saveLessonDialog.hidden = route.path !== 'create'
+}
 
 /**
- * initCreate() — no-op at present. All create.js event listeners wire
- * themselves at import time, matching how this code ran unconditionally in
- * the original main.js.
+ * initCreate() — registers the #/create/:id route handler. All other
+ * create.js event listeners wire themselves at import time, matching how
+ * this code ran unconditionally in the original main.js.
  */
 export function initCreate() {
-  // Intentionally empty — see comment above.
+  onRoute(_applyCreateRoute)
 }

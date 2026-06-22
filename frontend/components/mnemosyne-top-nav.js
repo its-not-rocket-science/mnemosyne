@@ -2,7 +2,14 @@
  * mnemosyne-top-nav.js — Persistent navigation bar.
  *
  * Regions (left → right):
- *   Logo | Depth | Settings | <slot> (auth elements)
+ *   Logo | Routes | Depth | Settings | <slot> (auth elements)
+ *
+ * Routes (Session 3 of the frontend refactor — hash router):
+ *   Desktop (>=54rem): icon + label links in the main nav bar.
+ *   Mobile (<54rem):   fixed bottom tab bar (separate from the Depth/
+ *                      Settings expand row, which remains in the nav).
+ *   The active route is indicated with --accent-fill per CLAUDE.md's
+ *   "use existing CSS custom properties" rule.
  *
  * Mobile (<54rem): Depth and Settings collapse into an expandable row.
  *
@@ -12,6 +19,24 @@
  */
 
 import { t } from '../js/i18n.js'
+import { navigate, onRoute } from '../js/router.js'
+
+// ── Route nav model ───────────────────────────────────────────────────────────
+// labelKey resolves via t(); routePaths lists the router path(s) — including
+// sub-routes — that should mark this link active.
+
+const NAV_ROUTES = [
+  { hash: '#/explore',       routePaths: ['explore', 'home'],    icon: '&#x1F4D6;&#xFE0E;', labelKey: 'choose_text_btn' },
+  { hash: '#/library',       routePaths: ['library'],            icon: '&#x1F4DA;&#xFE0E;', labelKey: 'corpus_browser_btn' },
+  { hash: '#/library/vocab', routePaths: ['library-vocab'],      icon: '&#x1F5C3;&#xFE0E;', labelKey: 'vocab_browser_btn' },
+  { hash: '#/review',        routePaths: ['review'],             icon: '&#x1F501;&#xFE0E;', labelKey: null, fallbackLabel: 'Review' },
+  { hash: '#/create',        routePaths: ['create'],             icon: '&#x1F4BE;&#xFE0E;', labelKey: 'save_lesson_btn' },
+]
+
+function _navLabel(route) {
+  const translated = route.labelKey ? t(route.labelKey) : null
+  return (translated && translated !== route.labelKey) ? translated : (route.fallbackLabel ?? route.labelKey ?? '')
+}
 
 // ── Theme helpers ─────────────────────────────────────────────────────────────
 
@@ -57,6 +82,7 @@ class MnemosyneTopNav extends HTMLElement {
   #expanded = false
   #depth    = 'learning'
   #theme    = 'auto'
+  #activeRoutePath = null
 
   constructor() {
     super()
@@ -65,6 +91,7 @@ class MnemosyneTopNav extends HTMLElement {
 
   #langHandler  = null
   #themeHandler = null
+  #unsubRoute   = null
 
   connectedCallback() {
     this.#theme = _currentTheme()
@@ -80,9 +107,14 @@ class MnemosyneTopNav extends HTMLElement {
     }
     document.addEventListener('mnemosyne:language-changed', this.#langHandler)
     document.addEventListener('mnemosyne:theme-changed', this.#themeHandler)
+    this.#unsubRoute = onRoute((route) => {
+      this.#activeRoutePath = route.path
+      this.#updateActiveNavLink()
+    })
   }
 
   disconnectedCallback() {
+    if (this.#unsubRoute) { this.#unsubRoute(); this.#unsubRoute = null }
     if (this.#langHandler) {
       document.removeEventListener('mnemosyne:language-changed', this.#langHandler)
       this.#langHandler = null
@@ -122,6 +154,16 @@ class MnemosyneTopNav extends HTMLElement {
     </a>
   </div>
 
+  <!-- Route links — desktop sidebar-style group inside the bar; mobile gets
+       the fixed bottom tab bar below (#route-tabbar). -->
+  <div class="nav__routes" role="navigation" aria-label="${t('nav_routes_aria') !== 'nav_routes_aria' ? t('nav_routes_aria') : 'Sections'}">
+    ${NAV_ROUTES.map(r => /* html */`
+    <a class="nav__route-link" data-hash="${r.hash}" href="${r.hash}">
+      <span class="nav__route-icon" aria-hidden="true">${r.icon}</span>
+      <span class="nav__route-label">${_navLabel(r)}</span>
+    </a>`).join('')}
+  </div>
+
   <div class="nav__mid">
 
     <select class="nav__pill" id="depth-select" aria-label="${t('nav_depth_aria')}">
@@ -153,6 +195,15 @@ class MnemosyneTopNav extends HTMLElement {
   </div>
 
 </nav><!-- /.nav -->
+
+<!-- Mobile bottom tab bar — same five routes as .nav__routes, shown <54rem. -->
+<nav class="route-tabbar" id="route-tabbar" role="navigation" aria-label="${t('nav_routes_aria') !== 'nav_routes_aria' ? t('nav_routes_aria') : 'Sections'}">
+  ${NAV_ROUTES.map(r => /* html */`
+  <a class="route-tabbar__link" data-hash="${r.hash}" href="${r.hash}">
+    <span class="route-tabbar__icon" aria-hidden="true">${r.icon}</span>
+    <span class="route-tabbar__label">${_navLabel(r)}</span>
+  </a>`).join('')}
+</nav>
 
 <!-- Expanded row: depth + settings (mobile only) -->
 <div class="nav__xrow" id="xrow" hidden>
@@ -212,6 +263,29 @@ class MnemosyneTopNav extends HTMLElement {
 
     // Expand / collapse
     $('expand-btn').addEventListener('click', () => this.#toggleExpand())
+
+    // Route links — intercept click to use navigate() (hash routing, no
+    // full reload) rather than relying on default <a href="#..."> behaviour,
+    // which is equivalent here but keeps the router as the single source of
+    // navigation truth (e.g. for the review-session back-nav confirm).
+    this.#shadow.querySelectorAll('.nav__route-link, .route-tabbar__link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault()
+        navigate(link.dataset.hash)
+      })
+    })
+    this.#updateActiveNavLink()
+  }
+
+  #updateActiveNavLink() {
+    if (!this.#shadow) return
+    this.#shadow.querySelectorAll('.nav__route-link, .route-tabbar__link').forEach(link => {
+      const route = NAV_ROUTES.find(r => r.hash === link.dataset.hash)
+      const active = Boolean(route?.routePaths.includes(this.#activeRoutePath))
+      link.classList.toggle('is-active', active)
+      if (active) link.setAttribute('aria-current', 'page')
+      else link.removeAttribute('aria-current')
+    })
   }
 
   // Keep paired selects in sync when one changes
@@ -429,6 +503,52 @@ class MnemosyneTopNav extends HTMLElement {
 
 .nav__xrow[hidden] { display: none; }
 
+/* ── Route links (desktop: inline in nav bar) ─────────────────────────────── */
+
+.nav__routes {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  margin-inline-start: 0.5rem;
+}
+
+.nav__route-link {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding-block: 0.3rem;
+  padding-inline: 0.55rem;
+  border-radius: 0.35rem;
+  text-decoration: none;
+  color: oklch(0.88 0.015 60);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.nav__route-link:hover {
+  background: rgb(255 255 255 / 0.1);
+}
+
+.nav__route-link.is-active {
+  background: var(--accent-fill, #C44B22);
+  color: oklch(0.99 0.005 60);
+}
+
+.nav__route-link:focus-visible {
+  outline: 2px solid var(--accent, #3557ff);
+  outline-offset: 1px;
+}
+
+.nav__route-icon { font-size: 0.85rem; }
+
+/* ── Mobile bottom tab bar ─────────────────────────────────────────────────── */
+/* Hidden on desktop; becomes a fixed bottom bar under 54rem (see media query). */
+
+.route-tabbar {
+  display: none;
+}
+
 /* ── Mobile (<54rem / 864px) ──────────────────────────────────────────────── */
 
 @media (max-width: 53.99rem) {
@@ -438,6 +558,56 @@ class MnemosyneTopNav extends HTMLElement {
   #depth-select,
   #theme-btn,
   #settings-btn { display: none; }
+
+  /* Desktop inline route links replaced by the fixed bottom tab bar below */
+  .nav__routes { display: none; }
+
+  .route-tabbar {
+    display: flex;
+    position: fixed;
+    inset-block-end: 0;
+    inset-inline: 0;
+    z-index: 40;
+    background: oklch(0.20 0.04 50);
+    border-block-start: 1px solid rgb(255 255 255 / 0.08);
+    padding-block: 0.3rem;
+    padding-inline: 0.25rem;
+    padding-block-end: calc(0.3rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .route-tabbar__link {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    padding-block: 0.25rem;
+    border-radius: 0.35rem;
+    text-decoration: none;
+    color: oklch(0.88 0.015 60);
+    font-size: 0.62rem;
+    text-align: center;
+  }
+
+  .route-tabbar__link.is-active {
+    background: var(--accent-fill, #C44B22);
+    color: oklch(0.99 0.005 60);
+  }
+
+  .route-tabbar__link:focus-visible {
+    outline: 2px solid var(--accent, #3557ff);
+    outline-offset: -2px;
+  }
+
+  .route-tabbar__icon { font-size: 1rem; }
+  .route-tabbar__label { line-height: 1.1; }
+}
+
+/* Respect reduced motion: no transitions are added for the active state
+   above, so nothing further is needed here, but the rule is declared per
+   project convention for any future motion additions to this component. */
+@media (prefers-reduced-motion: reduce) {
+  .nav__route-link, .route-tabbar__link { transition: none; }
 }
 `
   }

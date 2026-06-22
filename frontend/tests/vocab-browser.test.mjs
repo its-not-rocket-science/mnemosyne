@@ -1,5 +1,9 @@
 /**
- * vocab-browser.test.mjs — structural tests for the vocabulary browser dialog.
+ * vocab-browser.test.mjs — structural tests for the vocabulary browser.
+ *
+ * Session 3 of the frontend refactor converted #vocab-browser-dialog (a
+ * <dialog>) into #route-library-vocab (a <section> activated by the
+ * #/library/vocab route) — see js/router.js and js/modes/library.js.
  *
  * Run with: node frontend/tests/vocab-browser.test.mjs
  */
@@ -20,7 +24,8 @@ const globalCss = readFileSync(path.join(ROOT, 'css', 'global.css'), 'utf8')
 
 // ── HTML elements ─────────────────────────────────────────────────────────────
 
-assert.ok(html.includes('id="vocab-browser-dialog"'),   'vocab-browser-dialog must exist')
+assert.ok(html.includes('id="route-library-vocab"'),    'route-library-vocab section must exist')
+assert.ok(!html.includes('id="vocab-browser-dialog"'),  'vocab-browser-dialog must be retired (Session 3: dialog → route)')
 assert.ok(html.includes('id="open-vocab-browser-btn"'), 'open-vocab-browser-btn must exist')
 assert.ok(html.includes('id="vocab-browser-search"'),   'vocab-browser-search input must exist')
 assert.ok(html.includes('id="vocab-browser-level"'),    'vocab-browser-level select must exist')
@@ -50,6 +55,14 @@ assert.ok(html.includes('value="mastery"'), 'sort select must have mastery optio
 assert.ok(html.includes('value="alpha"'),   'sort select must have alpha option')
 assert.ok(html.includes('value="due"'),     'sort select must have due option')
 console.log('✓ HTML: sort select has mastery/alpha/due options')
+
+// route section is a <section>, not a <dialog>, and starts hidden
+const routeStart = html.indexOf('id="route-library-vocab"')
+const routeTagStart = html.lastIndexOf('<', routeStart)
+const routeEl = html.slice(routeTagStart, html.indexOf('>', routeStart) + 1)
+assert.ok(routeEl.startsWith('<section'), '#route-library-vocab must be a <section>')
+assert.ok(routeEl.includes('hidden'), '#route-library-vocab must start hidden')
+console.log('✓ HTML: #route-library-vocab is a hidden <section> (not a <dialog>)')
 
 // ── CSS ───────────────────────────────────────────────────────────────────────
 
@@ -106,9 +119,14 @@ const openBlock = mainJs.slice(
   mainJs.indexOf("openVocabBrowserBtn?.addEventListener"),
   mainJs.indexOf("openVocabBrowserBtn?.addEventListener") + 200,
 )
-assert.ok(openBlock.includes('showModal'), 'open button must call showModal on dialog')
+assert.ok(openBlock.includes("navigate('#/library/vocab')"), 'open button must navigate to #/library/vocab')
 assert.ok(openBlock.includes('_loadVocab'), 'open button must call _loadVocab')
-console.log('✓ main.js: open button wired to showModal + _loadVocab')
+console.log('✓ main.js: open button wired to navigate(#/library/vocab) + _loadVocab')
+
+// router import present (dialog showModal/close fully replaced by routing)
+assert.ok(mainJs.includes("from '../router.js'"), 'main.js must import the router')
+assert.ok(!mainJs.includes('vocabBrowserDialog?.showModal'), 'vocab browser must not call showModal anywhere')
+console.log('✓ main.js: router-based navigation, no dialog showModal() calls remain')
 
 // filters trigger reload
 assert.ok(

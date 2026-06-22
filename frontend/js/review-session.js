@@ -3,19 +3,21 @@
  *
  * Responsibilities:
  *   · Poll /review/sentence-items/stats on auth and every 5 min to update badge.
- *   · Show/hide #review-panel when the trigger button is clicked.
+ *   · Show/hide #route-review (was #review-panel) on #/review navigation.
  *   · Pass the current language (if one is selected) to startSession().
- *   · Handle review-session-end to collapse the panel.
+ *   · Handle the session-end event to collapse the panel.
+ *   · Confirm before leaving an active review session via browser back.
  */
 
 import { API_BASE } from './config.js'
 import { t, ti } from './i18n.js'
+import { navigate, onRoute } from './router.js'
 
 let _pollTimer = null
 
 export function initReviewSession() {
   const openBtn = document.getElementById('open-review-btn')
-  const reviewPanel = document.getElementById('review-panel')
+  const reviewPanel = document.getElementById('route-review')
   const reviewBar = document.getElementById('review-bar')
   const reviewPane = document.getElementById('review-pane')
   const badge    = document.getElementById('review-due-badge')
@@ -189,33 +191,81 @@ export function initReviewSession() {
     }
   }
 
-  // Open / close toggle
-  openBtn.addEventListener('click', async () => {
-    const isOpen = reviewPanel.hasAttribute('hidden') === false &&
-                   !reviewPanel.hidden
+  // ── #/review route ────────────────────────────────────────────────────────
+  // Was a manual show/hide toggle on #review-panel; now driven by the router.
+  // A session is "active" between startSession() and the session-end event,
+  // so the back-navigation confirm (below) only fires when there's something to
+  // lose.
+  let _sessionActive = false
+  // Set when we're programmatically leaving the route (confirmed back-nav or
+  // session end) so the route handler doesn't re-prompt for the same exit.
+  let _leavingProgrammatically = false
 
-    if (isOpen) {
-      reviewPanel.setAttribute('hidden', '')
-      openBtn.setAttribute('aria-expanded', 'false')
-      reviewPane.endSession?.()
-    } else {
-      reviewPanel.removeAttribute('hidden')
-      openBtn.setAttribute('aria-expanded', 'true')
+  async function _enterReviewRoute() {
+    openBtn.setAttribute('aria-expanded', 'true')
+    const langSel = document.getElementById('language')
+    const lang = langSel?.value || null
+    _sessionActive = true
+    await reviewPane.startSession?.(lang)
+  }
 
-      // Pass current language if selected
-      const langSel = document.getElementById('language')
-      const lang = langSel?.value || null
-      await reviewPane.startSession?.(lang)
+  function _exitReviewRoute() {
+    openBtn.setAttribute('aria-expanded', 'false')
+    reviewPane.endSession?.()
+    _sessionActive = false
+  }
+
+  onRoute((route) => {
+    const isReview = route.path === 'review'
+    reviewPanel.hidden = !isReview
+    if (isReview) {
+      _enterReviewRoute()
+    } else if (_sessionActive) {
+      _exitReviewRoute()
     }
   })
 
+  openBtn.addEventListener('click', () => {
+    const isOpen = !reviewPanel.hidden
+    navigate(isOpen ? '#/explore' : '#/review')
+  })
+
+  // Confirm before losing an in-progress review session via browser back.
+  // hashchange has already happened by the time this fires, so we can't
+  // truly "cancel" navigation — instead, if the user declines, we navigate
+  // straight back to #/review to restore the session view (the underlying
+  // review-pane state, e.g. current card, is preserved since endSession()
+  // was not called).
+  window.addEventListener('hashchange', () => {
+    if (!_sessionActive || _leavingProgrammatically) return
+    const stillReview = (window.location.hash || '').startsWith('#/review')
+    if (stillReview) return
+    const proceed = confirm('Leave your review session? Progress on the current card will be lost.')
+    if (!proceed) {
+      _leavingProgrammatically = true
+      navigate('#/review')
+      _leavingProgrammatically = false
+    }
+  })
+
+  // Navigate off #/review once a session ends, if we're still on that route
+  // (the user may have already navigated away, e.g. via back-nav above).
+  function _leaveReviewRouteIfActive() {
+    if (!(window.location.hash || '').startsWith('#/review')) return
+    _leavingProgrammatically = true
+    navigate('#/explore')
+    _leavingProgrammatically = false
+  }
+
   // Collapse panel when session ends
   reviewPane.addEventListener('review-session-end', () => {
+    _sessionActive = false
     reviewPanel.setAttribute('hidden', '')
     openBtn.setAttribute('aria-expanded', 'false')
     openBtn.focus()
     refreshBadge()
     refreshStats()
+    _leaveReviewRouteIfActive()
   })
 
   // Update badge and stats after each rated item

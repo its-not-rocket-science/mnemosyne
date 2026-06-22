@@ -18,12 +18,14 @@ const mainJs    = readSource('js/modes/library.js')
 const globalCss = readSource('css/global.css')
 const i18n      = readSource('js/i18n.js')
 
-// ── Dialog structure ──────────────────────────────────────────────────────────
+// ── Route structure ───────────────────────────────────────────────────────────
+// Session 3 of the frontend refactor: #corpus-browser-dialog became the
+// #/library route's #route-library section (dialog → route conversion).
 
-describe('corpus browser — dialog structure', () => {
+describe('corpus browser — route structure', () => {
   const REQUIRED_IDS = [
     'open-corpus-browser-btn',
-    'corpus-browser-dialog',
+    'route-library',
     'corpus-browser-heading',
     'corpus-browser-close-btn',
     'corpus-browser-search',
@@ -41,9 +43,19 @@ describe('corpus browser — dialog structure', () => {
     })
   }
 
-  it('dialog has aria-labelledby pointing to corpus-browser-heading', () => {
-    const dialog = document.querySelector('#corpus-browser-dialog')
-    assert.equal(dialog?.getAttribute('aria-labelledby'), 'corpus-browser-heading')
+  it('#route-library is a <section>, not a <dialog> (retired in Session 3)', () => {
+    const section = document.querySelector('#route-library')
+    assert.equal(section?.tagName, 'SECTION')
+  })
+
+  it('#route-library starts hidden', () => {
+    const section = document.querySelector('#route-library')
+    assert.ok(section?.hasAttribute('hidden'), '#route-library must start hidden')
+  })
+
+  it('route section has aria-labelledby pointing to corpus-browser-heading', () => {
+    const section = document.querySelector('#route-library')
+    assert.equal(section?.getAttribute('aria-labelledby'), 'corpus-browser-heading')
   })
 
   it('close button has aria-label or i18n aria-label', () => {

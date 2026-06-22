@@ -226,20 +226,21 @@
   .retention-panel__value { color: ButtonText; }
 }
 
-/* ── Review panel container ─────────────────────────────────────────────────── */
+/* ── Review panel container (was #review-panel; now the #/review route's
+   #route-review section, shown/hidden by js/router.js) ──────────────────────── */
 
-#review-panel {
+#route-review {
   padding-block: 1rem;
   padding-inline: var(--wrap-padding, 1rem);
   max-inline-size: var(--wrap-max, 56rem);
   margin-inline: auto;
 }
 
-#review-panel[hidden] { display: none; }
+#route-review[hidden] { display: none; }
 
 /* Smooth entrance when shown (respects reduced motion). */
 @media (prefers-reduced-motion: no-preference) {
-  #review-panel:not([hidden]) {
+  #route-review:not([hidden]) {
     animation: review-panel-in 0.2s ease both;
   }
 }
