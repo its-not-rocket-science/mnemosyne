@@ -15,7 +15,7 @@ const document = loadDocument()
 // (Session 1 of the frontend refactor).
 const mainJs   = readSource('js/modes/review.js')
 const i18n     = readSource('js/i18n.js')
-const css      = readSource('css/review.css')
+const css      = readSource('css/components.css')
 
 // ── DOM structure ─────────────────────────────────────────────────────────────
 

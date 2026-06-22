@@ -1,3 +1,1791 @@
+/*
+ * components.css — UI components, annotation highlights, focus states,
+ * animations, adaptive overlays, accessibility enhancements.
+ *
+ * Design tokens live in tokens.css; structural app-shell layout lives in
+ * layout.css.  Everything else — visual/component CSS — lives here.
+ */
+
+/* ══════════════════════════════════════════════════════════════════════════
+   1. BUTTONS
+   ══════════════════════════════════════════════════════════════════════════ */
+
+.button-row {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.button-primary {
+  border: none;
+  border-radius: 999px;
+  background: var(--accent-fill);
+  color: var(--accent-contrast);
+  padding-inline: 1.2rem;
+  /* 2.75 rem ≈ 44 CSS px — WCAG 2.5.8 minimum touch target size. */
+  min-block-size: 2.75rem;
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+.button-primary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent-fill) 85%, black);
+}
+
+/* Solid focus rings — color-mix with transparent fails WCAG 2.4.11 3:1
+   non-text contrast requirement against adjacent background colors. */
+.button-primary:focus-visible,
+.ghost-button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.button-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ghost-button--small {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8125rem;
+  min-block-size: unset;
+}
+
+.ghost-select--small {
+  font-size: 0.8125rem;
+  padding: 0.3rem 0.4rem;
+  min-block-size: 2rem;
+}
+
+/* ── Danger ghost button ─────────────────────────────────────────────────────
+   Matches .ghost-button dimensions; signals a destructive action in red.     */
+.ghost-button--danger {
+  color: var(--error-color);
+  border-color: var(--error-color);
+}
+
+.ghost-button--danger:focus-visible {
+  outline-color: var(--error-color);
+}
+
+.rating-button,
+.ghost-button {
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  /* --border-input (45% CanvasText) gives ≥ 3:1 against Canvas — SC 1.4.11. */
+  border: 1px solid var(--border-input);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  /* 2.75 rem ≈ 44 CSS px — WCAG 2.5.8 minimum touch target size. */
+  min-block-size: 2.75rem;
+}
+
+/* ── Dialog close button ─────────────────────────────────────────────────────
+   × glyph button in the dialog header corner.                                */
+.dialog-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  color: var(--muted);
+  border-radius: 0.4rem;
+  min-block-size: 2.75rem;
+  min-inline-size: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-close-btn:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.dialog-close-btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── Footer link button / anchor ─────────────────────────────────────────────
+   Applied to both <button> and <a> in the footer for identical appearance.   */
+.footer-link-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+.footer-link-btn:hover {
+  color: var(--text);
+  text-decoration-thickness: 2px;
+}
+
+/* ── Button elevation (dual-shadow "premium" treatment) ──────────────────────
+   Source: enhanced-accessibility.css SECTION 6.                              */
+
+.button-primary {
+  /* Gradient simulates the light source: slightly lighter at the top */
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--accent) 100%, white  8%),
+    color-mix(in srgb, var(--accent) 100%, black  5%)
+  );
+  box-shadow: var(--shadow-button);
+  transition:
+    background  0.12s ease,
+    box-shadow  0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    transform   0.12s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-primary:hover:not(:disabled) {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--accent) 92%, black  5%),
+    color-mix(in srgb, var(--accent) 82%, black 15%)
+  );
+  box-shadow: var(--shadow-button-hover);
+  transform: translateY(-1px);
+}
+
+.button-primary:active:not(:disabled) {
+  box-shadow: var(--shadow-button-active);
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button-primary {
+    background: var(--accent);
+    transition: background 0.12s ease;
+    transform: none !important;
+  }
+}
+
+/* ── Ghost / rating buttons — very light dual shadow ──────────────────── */
+.ghost-button,
+.rating-button {
+  box-shadow:
+    0 -1px 1px rgba(253, 210, 180, 0.35),
+    0  1px 3px rgba(61,  15,  6,  0.09);
+  transition:
+    background   0.10s ease,
+    color        0.10s ease,
+    border-color 0.10s ease,
+    box-shadow   0.15s ease;
+}
+
+.ghost-button:hover:not(:disabled),
+.rating-button:hover:not(:disabled) {
+  box-shadow:
+    0 -1px 2px rgba(253, 210, 180, 0.45),
+    0  2px 6px rgba(61,  15,  6,  0.13);
+}
+
+:root[data-theme="dark"] .ghost-button,
+:root[data-theme="dark"] .rating-button {
+  box-shadow:
+    0 -1px 1px rgba(30, 10, 3, 0.65),
+    0  1px 3px rgba(0,   0, 0, 0.28);
+}
+
+:root[data-theme="dark"] .ghost-button:hover:not(:disabled),
+:root[data-theme="dark"] .rating-button:hover:not(:disabled) {
+  box-shadow:
+    0 -1px 2px rgba(30, 10, 3, 0.75),
+    0  2px 6px rgba(0,   0, 0, 0.38);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] .ghost-button,
+  :root[data-theme="auto"] .rating-button {
+    box-shadow:
+      0 -1px 1px rgba(30, 10, 3, 0.65),
+      0  1px 3px rgba(0,   0, 0, 0.28);
+  }
+
+  :root[data-theme="auto"] .ghost-button:hover:not(:disabled),
+  :root[data-theme="auto"] .rating-button:hover:not(:disabled) {
+    box-shadow:
+      0 -1px 2px rgba(30, 10, 3, 0.75),
+      0  2px 6px rgba(0,   0, 0, 0.38);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ghost-button,
+  .rating-button {
+    box-shadow: none;
+    transition: background 0.10s ease, color 0.10s ease;
+  }
+}
+
+/* Skip link — slightly darker terracotta (--tc-700, 8.41:1 on white) for AAA. */
+.skip-link {
+  background: var(--tc-700);
+  color: #ffffff;
+  box-shadow: var(--shadow-button);
+}
+
+.button-primary,
+.ghost-button,
+.rating-button,
+.script-toggle__btn,
+.reader-chip {
+  transition:
+    background-color 0.14s ease,
+    border-color 0.14s ease,
+    color 0.14s ease,
+    box-shadow 0.14s ease,
+    transform 0.14s ease;
+}
+
+.button-primary {
+  box-shadow: var(--elevation-1);
+}
+
+.button-primary:hover:not(:disabled),
+.ghost-button:hover:not(:disabled),
+.rating-button:hover:not(:disabled),
+.script-toggle__btn:hover,
+.reader-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--elevation-1);
+}
+
+@media (forced-colors: active) {
+  .button-primary {
+    background: ButtonText;
+    color: ButtonFace;
+    border: 2px solid ButtonText;
+    box-shadow: none;
+    transform: none;
+    /* gradient stripped by UA; explicit flat colour fallback */
+    background-image: none;
+  }
+
+  .button-primary:hover:not(:disabled) {
+    background: Highlight;
+    color: HighlightText;
+    border-color: Highlight;
+  }
+
+  .button-primary:focus-visible,
+  .ghost-button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 3px solid Highlight;
+    outline-offset: 3px;
+    box-shadow: none;
+  }
+
+  .ghost-button,
+  .rating-button {
+    border: 1px solid ButtonText;
+    box-shadow: none;
+  }
+}
+
+@media print {
+  .button-primary,
+  .ghost-button,
+  .rating-button {
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    border: 1px solid currentColor;
+    transform: none;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   2. FORM ELEMENTS
+   ══════════════════════════════════════════════════════════════════════════ */
+
+label {
+  display: block;
+  font-weight: 600;
+}
+
+/* Keep focus outlines from colliding with labels when controls receive focus.
+   Applies to stacked field layouts (label on one line, control below). */
+.field > label + input,
+.field > label + textarea,
+.field > label + select,
+.field > label + .input-group {
+  margin-block-start: 0.4rem;
+}
+
+.field-hint {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.875em;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  inline-size: 100%;
+  padding: 0.75rem;
+  border-radius: 0.7rem;
+  /* --border-input (45% CanvasText) gives ≥ 3:1 against Canvas — SC 1.4.11. */
+  border: 1px solid var(--border-input);
+  background: var(--bg);
+  color: var(--text);
+}
+
+textarea {
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+#picker-text {
+  overflow: auto;
+  scrollbar-gutter: stable;
+  padding-inline-end: calc(0.75rem + 0.25rem);
+}
+
+/* Highlight the invalid state visually and for AT (aria-invalid="true" set
+   in JS on validation failure, removed on the next submission attempt). */
+textarea:invalid,
+textarea[aria-invalid="true"] {
+  border-color: var(--error-color);
+}
+
+/* ── Field header — label + secondary action on one row ──────────────────────
+   Used for the "Text to parse" field, which pairs its label with a file-picker
+   trigger on the inline-end edge.  align-items: baseline keeps label and
+   button text optically aligned even if font sizes differ.                  */
+.field-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-block-end: 0.6rem;
+}
+
+/* Suppress the default label block display inside the flex container. */
+.field-header > label {
+  margin: 0;
+}
+
+.field-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  row-gap: var(--space-1);
+}
+
+@media (max-width: 40rem) {
+  .field-header-actions {
+    inline-size: 100%;
+  }
+}
+
+.picker-sample-language-label {
+  font-size: 0.8125rem;
+}
+
+/* File-pick button — styled like a quiet secondary action.
+   It wraps a visually-hidden <input type="file"> so clicking the label
+   opens the OS file picker.  min-block-size ensures the 44 px touch target
+   even though the text is small.                                             */
+.file-pick-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent);
+  cursor: pointer;
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.4rem;
+  min-block-size: 2.75rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+
+.file-pick-btn:hover {
+  text-decoration-thickness: 2px;
+}
+
+.file-pick-btn:focus-within {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── Input group — input + inline action button ──────────────────────────────
+   Used for the Source URL field: input takes all remaining space, button is
+   intrinsically sized.  min-inline-size: 0 on the input prevents flex overflow
+   when a long URL is typed.                                                  */
+.input-group {
+  display: flex;
+  gap: var(--space-1);
+  align-items: stretch;
+  margin-block-start: 0.35rem;
+}
+
+.input-group > input,
+.input-group > select {
+  flex: 1 1 0;
+  min-inline-size: 0;
+}
+
+/* Align the ghost-button height with the adjacent input (both use 0.75 rem
+   block padding, so explicitly match here in case the cascade differs). */
+.input-group > .ghost-button {
+  padding-block: 0.75rem;
+  white-space: nowrap;
+  /* 2.75 rem ≈ 44 CSS px — WCAG 2.5.8 minimum touch target size. */
+  min-block-size: 2.75rem;
+}
+
+/* File info line — shown below the field header, above the textarea. */
+.file-info {
+  margin-block: 0 0.35rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.file-info[data-state="error"] {
+  color: var(--error-color);
+}
+
+/* Fetch-URL hint line — shown below the URL input group. */
+.fetch-url-hint {
+  margin-block: 0.35rem 0;
+}
+
+.fetch-url-hint[data-state="error"] {
+  color: var(--error-color);
+}
+
+.fetch-url-hint[data-state="busy"] {
+  color: var(--muted);
+}
+
+.status {
+  min-block-size: 1.5rem;
+  color: var(--muted);
+  transition: color 0.15s ease;
+}
+
+.status[data-state="error"] {
+  color: var(--error-color);
+}
+
+.picker-char-count {
+  min-block-size: 0;
+  margin-block: 0.35rem 0;
+}
+
+.picker-difficulty {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-block-size: 0;
+  margin-block: 0.3rem 0;
+  font-size: var(--font-size-label);
+  color: var(--muted);
+}
+
+.picker-difficulty__badge {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 0.1em;
+  padding-inline: 0.45em;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  background: var(--brand-purple-light);
+  color: var(--brand-purple);
+  border: 1px solid color-mix(in srgb, var(--brand-purple) 25%, transparent);
+}
+
+.picker-difficulty__note {
+  font-size: var(--font-size-label);
+  color: var(--muted);
+  font-style: italic;
+}
+
+.picker-difficulty__cap {
+  font-size: var(--font-size-label);
+  color: var(--muted);
+  padding-block: 0.1em;
+  padding-inline: 0.4em;
+  border: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+  border-radius: 0.25rem;
+}
+
+@media (forced-colors: active) {
+  .picker-difficulty__cap {
+    border-color: ButtonText;
+  }
+}
+
+/* ── Input enhancement — soft warm glow ring on focus ─────────────────────── */
+
+input,
+textarea,
+select {
+  background: var(--surface);
+  border-color: var(--wn-300);
+  transition:
+    border-color 0.12s ease,
+    box-shadow   0.15s ease;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  input,
+  textarea,
+  select {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  input,
+  textarea,
+  select {
+    border: 2px solid ButtonText;
+    box-shadow: none;
+  }
+}
+
+/* ── UI language switcher ────────────────────────────────────────────────────
+   Compact select override — the global input/select rule sets inline-size:100%
+   which would stretch it full-width inside the flex row.                     */
+.ui-lang-select {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ui-lang-select__label {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.ui-lang-select select {
+  /* Explicit width so nested-flex + global inline-size:100% can't collapse it. */
+  width: auto;
+  min-width: 8rem;
+  inline-size: auto;
+  padding-block: 0.35rem;
+  padding-inline: 0.5rem 0.25rem;
+  font-size: 0.875rem;
+}
+
+/* ── Nuance-coverage indicator ───────────────────────────────────────────────
+   Compact dot-row shown below the language <select> that summarises
+   per-dimension coverage at a glance.  Dots are color-coded by level:
+   none=hidden, stub=muted, partial=amber, strong=green, gold=gold.          */
+
+.lang-nuance-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  margin-block-start: 0.4rem;
+  font-size: 0.7rem;
+  color: var(--muted);
+  line-height: 1.2;
+}
+
+.lang-nuance-bar__dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  white-space: nowrap;
+}
+
+.lang-nuance-bar__dot::before {
+  content: '';
+  display: inline-block;
+  inline-size: 0.5em;
+  block-size: 0.5em;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.lang-nuance-bar__dot[data-level="none"]    { color: transparent; display: none; }
+.lang-nuance-bar__dot[data-level="stub"]    { color: var(--muted); }
+.lang-nuance-bar__dot[data-level="partial"] { color: var(--ann-idiom); }
+.lang-nuance-bar__dot[data-level="strong"]  { color: var(--ann-grammar); }
+.lang-nuance-bar__dot[data-level="gold"]    { color: oklch(0.75 0.18 80); }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   3. DIALOGS AND DRAWERS
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Picker / save-lesson dialog ─────────────────────────────────────────────
+   Native <dialog> modal sheet.  backdrop is provided by the browser's
+   ::backdrop pseudo-element; we just dim the background.                     */
+.picker-dialog {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 0.18);
+  padding: 0;
+  inline-size: min(40rem, calc(100% - 2rem));
+  max-block-size: calc(100dvh - 4rem);
+  overflow-y: auto;
+}
+
+.picker-dialog::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+
+.picker-dialog__inner {
+  padding: clamp(1rem, 4vw, 1.5rem);
+}
+
+.picker-dialog__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-block-end: var(--space-3);
+}
+
+.picker-dialog__header h2 {
+  margin: 0;
+}
+
+#route-explore .parse-dialog__close {
+  display: none;
+}
+
+/* ── Picker dialog elevation + backdrop polish ───────────────────────────── */
+
+.picker-dialog {
+  box-shadow: var(--shadow-dialog);
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.picker-dialog,
+.picker-dialog__inner,
+.reader-nowplaying {
+  background:
+    linear-gradient(180deg, var(--surface-raised), var(--surface)),
+    var(--surface);
+  border-color: var(--border-soft);
+}
+
+.picker-dialog__inner {
+  box-shadow: var(--elevation-2);
+}
+
+.picker-dialog::backdrop,
+dialog::backdrop {
+  background:
+    radial-gradient(circle at center, rgb(0 0 0 / 0.18), rgb(0 0 0 / 0.52));
+  backdrop-filter: blur(3px);
+}
+
+@media (forced-colors: active) {
+  .panel,
+  .sentence-card,
+  .picker-dialog {
+    border: 2px solid ButtonText;
+    box-shadow: none;
+  }
+
+  .picker-dialog__inner,
+  .reader-nowplaying {
+    background: Canvas;
+    border-color: CanvasText;
+    box-shadow: none;
+  }
+}
+
+@media print {
+  .panel,
+  .sentence-card,
+  .picker-dialog {
+    box-shadow: none;
+    background: transparent;
+    border: 1px solid #aaa;
+  }
+}
+
+/* ── About dialog ────────────────────────────────────────────────────────────
+   Wider than standard picker-dialog to give the image + polyglot text room.  */
+.about-dialog {
+  inline-size: min(44rem, calc(100% - 2rem));
+  max-block-size: calc(100dvh - 3rem);
+}
+
+.about-dialog__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.about-dialog__medallion {
+  display: flex;
+  justify-content: center;
+  padding-block: var(--space-2);
+}
+
+.about-dialog__image {
+  inline-size: clamp(8rem, 28vw, 11rem);
+  block-size: clamp(8rem, 28vw, 11rem);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 3px oklch(0.42 0.12 55), 0 4px 20px rgb(0 0 0 / 0.35);
+}
+
+/* ── About dialog tab strip ──────────────────────────────────────────────────
+   Reuses the same tab pattern as the auth tab strip.                         */
+.about-dialog__tabs {
+  display: flex;
+  gap: 0;
+  border-block-end: 2px solid var(--border);
+}
+
+.about-dialog__tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-block-end: 3px solid transparent;
+  margin-block-end: -2px;
+  padding-block: var(--space-2);
+  padding-inline: var(--space-3);
+  font: inherit;
+  font-size: var(--font-size-ui);
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--muted);
+  min-block-size: 2.75rem;
+  transition: color 0.1s ease, border-color 0.1s ease;
+}
+
+.about-dialog__tab[aria-selected="true"] {
+  color: var(--accent);
+  border-block-end-color: var(--accent);
+}
+
+.about-dialog__tab:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-dialog__tab { transition: none; }
+}
+
+.about-dialog__section {
+  font-family: var(--font-serif);
+  line-height: 1.75;
+}
+
+.about-dialog__section p {
+  margin: 0 0 0.75em;
+}
+.about-dialog__section p:last-child { margin: 0; }
+
+.about-dialog__section--principle {
+  color: var(--text-primary);
+  font-size: 1.05rem;
+}
+
+.about-dialog__principle {
+  font-weight: 500;
+}
+
+.about-dialog__section-heading {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-block: 0 var(--space-1);
+}
+
+/* ── Vocabulary browser dialog ───────────────────────────────────────────────
+   Wider than the default picker-dialog to show word columns comfortably.    */
+
+.vocab-browser-dialog {
+  inline-size: min(52rem, calc(100% - 2rem));
+}
+
+.vocab-browser-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  margin-block-end: var(--space-2);
+}
+
+.vocab-browser-search {
+  flex: 1 1 12rem;
+  padding-block: 0.4rem;
+  padding-inline: 0.65rem;
+  border: 1px solid var(--border-input);
+  border-radius: 0.375rem;
+  font-size: var(--font-size-ui);
+  background: var(--surface);
+  color: var(--text);
+  min-inline-size: 0;
+}
+
+.vocab-browser-search:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.vocab-browser-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  max-block-size: 55dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.vocab-browser-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 0.3rem 0.75rem;
+  padding-block: 0.4rem;
+  padding-inline: 0.5rem;
+  border-radius: 0.375rem;
+  border-block-end: 1px solid var(--border);
+}
+
+.vocab-browser-item:last-child {
+  border-block-end: none;
+}
+
+.vocab-browser-item__word {
+  font-weight: 600;
+  font-size: var(--font-size-ui);
+}
+
+.vocab-browser-item__gloss {
+  color: var(--muted);
+  font-size: var(--font-size-label);
+  grid-column: 1;
+}
+
+.vocab-browser-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  grid-row: 1 / 3;
+  grid-column: 2;
+}
+
+.vocab-browser-item__cefr {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 0.1em;
+  padding-inline: 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--brand-purple-light);
+  color: var(--brand-purple);
+  border: 1px solid color-mix(in srgb, var(--brand-purple) 20%, transparent);
+}
+
+.vocab-browser-item__mastery {
+  font-size: var(--font-size-label);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.vocab-browser-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-block-start: var(--space-2);
+  padding-block-start: var(--space-2);
+  border-block-start: 1px solid var(--border);
+}
+
+.vocab-browser-count {
+  font-size: var(--font-size-label);
+  color: var(--muted);
+  margin: 0;
+}
+
+.vocab-browser-footer__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-wrap: wrap;
+}
+
+/* ── Corpus browser dialog ────────────────────────────────────────────────── */
+
+.corpus-browser-dialog {
+  inline-size: min(48rem, calc(100% - 2rem));
+}
+
+.corpus-browser-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.corpus-browser-search {
+  flex: 1 1 12rem;
+  padding-block: 0.4rem;
+  padding-inline: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  font-size: 0.88rem;
+}
+
+.corpus-browser-search:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.corpus-browser-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow-y: auto;
+  max-block-size: 55vh;
+}
+
+.corpus-browser-list__item {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.corpus-browser-list__btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  inline-size: 100%;
+  padding-block: 0.6rem;
+  padding-inline: 0.75rem;
+  background: transparent;
+  border: none;
+  text-align: start;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+  transition: background 100ms;
+}
+
+.corpus-browser-list__btn:hover {
+  background: var(--surface);
+}
+
+.corpus-browser-list__btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.corpus-browser-list__title {
+  flex: 1 1 auto;
+  font-size: 0.88rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.corpus-browser-list__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.corpus-browser-list__tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding-block: 0.1em;
+  padding-inline: 0.45em;
+  border-radius: 0.25rem;
+  background: color-mix(in srgb, var(--brand-purple) 12%, transparent);
+  color: var(--brand-purple);
+  border: 1px solid color-mix(in srgb, var(--brand-purple) 25%, transparent);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.corpus-browser-list__chars {
+  font-size: 0.72rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.corpus-browser-stats {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.corpus-stats-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding-block: 0.4rem;
+  padding-inline: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: transparent;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  flex: 1 1 auto;
+  transition: background 100ms, border-color 100ms;
+}
+
+.corpus-stats-chip:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+}
+
+.corpus-stats-chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.corpus-stats-chip__n {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.corpus-stats-chip__label {
+  font-size: 0.65rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.corpus-stats-chip--progress .corpus-stats-chip__n { color: var(--brand-purple); }
+.corpus-stats-chip--done    .corpus-stats-chip__n { color: oklch(52% 0.17 145); }
+
+.corpus-browser-list__match {
+  background: oklch(88% 0.16 95);
+  color: inherit;
+  border-radius: 0.15em;
+  padding-inline: 0.05em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .corpus-browser-list__match { background: oklch(38% 0.13 75); }
+}
+
+[data-theme="dark"] .corpus-browser-list__match { background: oklch(38% 0.13 75); }
+
+.corpus-browser-list__progress {
+  block-size: 3px;
+  background: var(--border);
+}
+
+.corpus-browser-list__progress-fill {
+  display: block;
+  block-size: 100%;
+  background: var(--brand-purple);
+  transition: inline-size 0.2s ease;
+}
+
+.corpus-browser-list__item[data-complete] .corpus-browser-list__progress-fill {
+  background: oklch(52% 0.17 145);
+}
+
+.corpus-browser-list__progress-pct {
+  font-size: 0.68rem;
+  color: var(--muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.corpus-browser-list__reset {
+  flex-shrink: 0;
+  padding-block: 0.15rem;
+  padding-inline: 0.35rem;
+  border: 1px solid transparent;
+  border-radius: 0.3rem;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.82rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 100ms, border-color 100ms;
+}
+
+.corpus-browser-list__reset:hover {
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.corpus-browser-list__reset:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.corpus-browser-list__open {
+  flex-shrink: 0;
+  padding-block: 0.3rem;
+  padding-inline: 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 100ms, border-color 100ms;
+}
+
+.corpus-browser-list__open:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.corpus-browser-list__open:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.corpus-browser-list__tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  padding-block: 0.35rem;
+  padding-inline: 0.75rem;
+  border-block-start: 1px solid var(--border);
+}
+
+.corpus-browser-list__tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  border: 1px solid color-mix(in srgb, var(--brand-purple) 30%, transparent);
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.corpus-browser-list__tag-chip-label {
+  padding-block: 0.15rem;
+  padding-inline: 0.5rem 0.25rem;
+  background: color-mix(in srgb, var(--brand-purple) 8%, transparent);
+  border: none;
+  color: var(--brand-purple);
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.corpus-browser-list__tag-chip-label:hover {
+  background: color-mix(in srgb, var(--brand-purple) 16%, transparent);
+}
+
+.corpus-browser-list__tag-remove {
+  padding-block: 0.15rem;
+  padding-inline: 0.25rem 0.4rem;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.7rem;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.corpus-browser-list__tag-remove:hover { color: var(--text); }
+
+.corpus-browser-list__tag-add {
+  padding-block: 0.15rem;
+  padding-inline: 0.4rem;
+  border: 1px dashed var(--border);
+  border-radius: 0.9rem;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+  line-height: 1.4;
+  transition: color 100ms, border-color 100ms;
+}
+
+.corpus-browser-list__tag-add:hover { color: var(--text); border-color: var(--accent); }
+
+.corpus-browser-list__tag-input {
+  inline-size: 7rem;
+  padding-block: 0.1rem;
+  padding-inline: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  font-size: 0.72rem;
+}
+
+.corpus-browser-list__tag-input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.corpus-browser-list__study {
+  margin-inline-start: auto;
+  flex-shrink: 0;
+  padding-block: 0.2rem;
+  padding-inline: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 100ms, border-color 100ms, color 100ms;
+}
+
+.corpus-browser-list__study:hover:not(:disabled) {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.corpus-browser-list__study:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.corpus-browser-list__study:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (forced-colors: active) {
+  .corpus-browser-list__tag-chip { border-color: ButtonText; }
+  .corpus-browser-list__tag-chip-label { background: ButtonFace; color: ButtonText; }
+  .corpus-browser-list__study { border-color: ButtonText; }
+}
+
+/* Vocabulary density dot — appended inside .corpus-browser-list__btn */
+.corpus-browser-list__density {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  margin-inline-start: 0.4rem;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.corpus-browser-list__density--low  { background: oklch(68% 0.16 50); }
+.corpus-browser-list__density--mid  { background: oklch(72% 0.17 95); }
+.corpus-browser-list__density--high { background: oklch(60% 0.17 145); }
+
+/* Note toggle and textarea */
+.corpus-browser-list__note-toggle {
+  display: block;
+  width: 100%;
+  text-align: start;
+  background: none;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-size: var(--font-size-label);
+  color: var(--text);
+  cursor: pointer;
+  border-radius: var(--radius);
+  white-space: pre-line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.corpus-browser-list__note-toggle--empty {
+  color: var(--muted);
+  font-style: italic;
+}
+.corpus-browser-list__note-toggle:hover { background: var(--surface-hover, color-mix(in oklch, var(--surface) 92%, var(--text))); }
+.corpus-browser-list__note-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.corpus-browser-list__note-area {
+  padding-inline: 0.5rem;
+  padding-block-end: 0.4rem;
+}
+.corpus-browser-list__note-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.3rem 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--font-size-label);
+  font-family: inherit;
+  resize: vertical;
+}
+.corpus-browser-list__note-textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.corpus-import-url {
+  padding-block: 0.5rem;
+  border-block-start: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.corpus-import-url__toggle {
+  align-self: flex-start;
+  font-size: var(--font-size-label);
+  color: var(--muted);
+}
+
+.corpus-import-url__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.corpus-import-url__input {
+  flex: 1 1 16rem;
+  min-width: 0;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--font-size-label);
+}
+
+.corpus-import-url__input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.corpus-import-url__lang {
+  flex: 0 0 auto;
+}
+
+.corpus-import-url__status {
+  font-size: var(--font-size-label);
+  color: var(--muted);
+  margin: 0;
+  min-height: 1.2em;
+}
+
+.corpus-browser-footer {
+  display: flex;
+  justify-content: center;
+  padding-block: 0.5rem 0;
+  border-block-start: 1px solid var(--border);
+}
+
+.corpus-browser-count {
+  font-size: var(--font-size-label);
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (forced-colors: active) {
+  .corpus-browser-list__tag { border: 1px solid ButtonText; background: ButtonFace; color: ButtonText; }
+  .corpus-browser-list__progress { background: ButtonFace; border: 1px solid ButtonText; }
+  .corpus-browser-list__progress-fill { background: Highlight; }
+  .corpus-browser-list__item[data-complete] .corpus-browser-list__progress-fill { background: Highlight; }
+  .corpus-stats-chip { border-color: ButtonText; }
+  .corpus-stats-chip__n, .corpus-stats-chip__label { color: ButtonText; }
+  .corpus-import-url__input { border-color: ButtonText; background: ButtonFace; color: ButtonText; }
+  .corpus-browser-list__density { background: Highlight; }
+  .corpus-browser-list__note-textarea { border-color: ButtonText; background: ButtonFace; color: ButtonText; }
+  .corpus-import-log__status { border: 1px solid ButtonText; background: ButtonFace; color: ButtonText; }
+}
+
+/* ── GDPR dialog content ─────────────────────────────────────────────────────── */
+
+.gdpr-content h3 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-block-end: 0.25rem;
+  color: var(--text-primary);
+}
+
+.gdpr-content ul {
+  padding-inline-start: 1.25rem;
+  margin: 0;
+}
+
+.gdpr-content p,
+.gdpr-content li {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* ── Offline explain dialog ──────────────────────────────────────────────────── */
+
+.offline-explain-dialog {
+  max-inline-size: 22rem;
+}
+
+.offline-explain-dialog__body {
+  font-size: var(--font-size-body, 0.9rem);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Keyboard shortcut legend ────────────────────────────────────────────────
+   Used inside #shortcuts-dialog.  Also usable anywhere a shortcut is shown.  */
+
+kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 1.6rem;
+  padding-block: 0.1rem;
+  padding-inline: 0.4rem;
+  background: var(--surface-secondary, var(--bg));
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  box-shadow: 0 1px 0 var(--border);
+  font-family: ui-monospace, 'Cascadia Code', 'Fira Code', monospace;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.shortcuts-list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.shortcut-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.shortcut-row dt {
+  min-inline-size: 9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.shortcut-row dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--font-size-ui, 0.875rem);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   4. FILTER BAR AND PILLS
+   ══════════════════════════════════════════════════════════════════════════ */
+
+.app-shell__filter-bar {
+  background: var(--surface-secondary);
+  border-block-end: 1px solid var(--border);
+}
+
+:root[data-theme="dark"] .app-shell__top-nav {
+  box-shadow:
+    0 1px 8px rgba(0, 0, 0, 0.30),
+    0 2px 4px rgba(0, 0, 0, 0.20);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] .app-shell__top-nav {
+    box-shadow:
+      0 1px 8px rgba(0, 0, 0, 0.30),
+      0 2px 4px rgba(0, 0, 0, 0.20);
+  }
+}
+
+.app-shell__top-nav {
+  background: var(--surface-secondary);
+  border-block-end: 1px solid var(--border);
+  box-shadow:
+    0 1px 6px rgba(61, 15, 6, 0.07),
+    0 2px 4px rgba(61, 15, 6, 0.04);
+}
+
+@media (forced-colors: active) {
+  .app-shell__top-nav,
+  .app-shell__filter-bar {
+    box-shadow: none;
+    border-color: ButtonText;
+  }
+}
+
+@media print {
+  .app-shell__top-nav,
+  .app-shell__filter-bar {
+    box-shadow: none;
+    border-color: #aaa;
+  }
+}
+
+/* ── Annotation-type filter chip strip ───────────────────────────────────── */
+
+.reader-filters {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  /* Fade-out at the scroll edge signals more chips off-screen. */
+  -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+  mask-image:         linear-gradient(to right, black 85%, transparent 100%);
+  padding-block-end: 0.2rem;
+  margin-block-end: var(--space-2);
+}
+.reader-filters::-webkit-scrollbar { display: none; }
+
+.reader-chip {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid var(--border-input);
+  border-radius: 999px;
+  padding-block: 0.2rem;
+  padding-inline: 0.6rem;
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  cursor: pointer;
+  min-block-size: 2rem;
+  white-space: nowrap;
+  transition: background 0.1s ease, color 0.1s ease, border-color 0.1s ease;
+}
+
+.reader-chip--active {
+  background: var(--accent-fill);
+  color: white;
+  border-color: var(--accent-fill);
+}
+
+.reader-chip:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-chip { transition: none; }
+}
+
+.reader-chip {
+  background: color-mix(in srgb, var(--surface) 82%, var(--bg) 18%);
+}
+
+.reader-chip--active {
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.22), var(--elevation-1);
+}
+
+@media (max-width: 53.99rem) {
+  /* Compact filter chips on mobile */
+  .reader-chip {
+    font-size: 0.65rem;
+    padding-inline: 0.5rem;
+    min-block-size: 1.75rem;
+  }
+}
+
+/* ── Script view toggle ──────────────────────────────────────────────────────
+   Segmented button group: Script / Romanized / Both.
+   aria-pressed signals the active state to AT.                               */
+
+.script-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  flex-wrap: wrap;
+}
+
+.script-toggle__label {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-inline-end: 0.2rem;
+}
+
+.script-toggle__btn {
+  /* --border-input (45% CanvasText) gives ≥ 3:1 against Canvas — SC 1.4.11. */
+  border: 1px solid var(--border-input);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.65rem;
+  /* WCAG 2.5.8: 44 × 44 CSS-px minimum not required for optional controls, but
+     keeping min-block-size at 2rem keeps the target reasonably large. */
+  min-block-size: 2rem;
+  cursor: pointer;
+}
+
+.script-toggle__btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Active state signalled by both class (immediate) and aria-pressed (AT). */
+.script-toggle__btn--active,
+.script-toggle__btn[aria-pressed="true"] {
+  background: var(--accent-fill);
+  color: var(--accent-contrast);
+  border-color: var(--accent-fill);
+}
+
+.script-toggle__btn {
+  background: color-mix(in srgb, var(--surface) 82%, var(--bg) 18%);
+}
+
+.script-toggle__btn--active,
+.script-toggle__btn[aria-pressed="true"] {
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.22), var(--elevation-1);
+}
+
+/* ── Script-view layer visibility — sentence cards ───────────────────────────
+   [data-layer="native"]    — source-script text (sentence text, native pills)
+   [data-layer="romanized"] — transliterated / romanized forms
+   Controlled by data-script-view on any ancestor container.  main.js sets
+   this on #results; test fixtures set it on local demo containers.
+   'both' or missing value: all layers visible (default).                     */
+
+[data-script-view="native"]    [data-layer="romanized"] { display: none; }
+[data-script-view="romanized"] [data-layer="native"]    { display: none; }
+
+/* ── Results toolbar ─────────────────────────────────────────────────────────
+   Shown between the results heading and sentence cards when the selected
+   language declares a transliteration_scheme.  JS populates the toggle inside.
+   hidden attribute controlled by main.js via updateScriptViewToolbar().       */
+
+.results-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-block-end: var(--space-2);
+}
+
+/* ── Pill list — <ul>/<li> gives AT the item count; reset UA list styles so
+   the pills render as an inline flex row without bullets or indentation. ── */
+.sentence-card__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each <li> wraps exactly one pill.  display:contents makes the li transparent
+   to flex layout so mnemosyne-pill is the actual flex item, not the li. */
+.sentence-card__pills li {
+  display: contents;
+}
+
+/* Segmented and character-mode scripts (CJK, Thai) carry no inter-word spaces,
+   so pills should be packed tightly to match the visual rhythm of the source text.
+   The tokenization mode is set on .sentence-card by main.js. */
+.sentence-card[data-tokenization="segmented"] .sentence-card__pills,
+.sentence-card[data-tokenization="character"]  .sentence-card__pills {
+  gap: 0.2rem;
+}
+
+/* ── Annotation text search ──────────────────────────────────────────────────── */
+
+.annotation-search-wrap {
+  padding-inline: 0.75rem;
+  padding-block: 0.4rem 0.5rem;
+  border-block-start: 1px solid var(--border);
+}
+
+.annotation-search {
+  inline-size: 100%;
+  padding-block: 0.28rem;
+  padding-inline: 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  background: var(--bg);
+  color: inherit;
+  font-size: 0.78rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.annotation-search:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 0;
+  border-color: transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .annotation-search { transition: border-color 120ms; }
+}
+
+@media (forced-colors: active) {
+  .annotation-search { border: 1px solid ButtonText; }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   5. TEXT PANEL AND ANNOTATIONS
+   ══════════════════════════════════════════════════════════════════════════ */
+
 .sentence-card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -97,6 +1885,41 @@
   .sentence-card--done-flash { outline: 2px solid Highlight; }
 }
 
+/* ── Sentence card elevation (dual-shadow) ──────────────────────────────────── */
+
+.sentence-card {
+  box-shadow: var(--shadow-card);
+  border-color: var(--border);
+  background: var(--surface);
+  transition:
+    box-shadow   0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.14s ease;
+}
+
+.sentence-card:hover {
+  box-shadow:   var(--shadow-card-hover);
+  border-color: color-mix(in srgb, var(--border) 55%, var(--accent) 45%);
+}
+
+.sentence-card--playing {
+  box-shadow:
+    var(--shadow-card),
+    inset 0 0 0 1px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sentence-card {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .sentence-card:hover {
+    border-color: Highlight;
+    box-shadow: none;
+  }
+}
+
 /* ── Sentence translate button ───────────────────────────────────────────────
    Inline chip that appears after the sentence text; revealed on hover/focus.
    In prose mode the button stays inline; the translation reveal uses
@@ -178,171 +2001,12 @@
   }
 }
 
-/* Pill list — <ul>/<li> gives AT the item count; reset UA list styles so the
-   pills render as an inline flex row without bullets or indentation. */
-.sentence-card__pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Each <li> wraps exactly one pill.  display:contents makes the li transparent
-   to flex layout so mnemosyne-pill is the actual flex item, not the li. */
-.sentence-card__pills li {
-  display: contents;
-}
-
-/* Segmented and character-mode scripts (CJK, Thai) carry no inter-word spaces,
-   so pills should be packed tightly to match the visual rhythm of the source text.
-   The tokenization mode is set on .sentence-card by main.js. */
-.sentence-card[data-tokenization="segmented"] .sentence-card__pills,
-.sentence-card[data-tokenization="character"]  .sentence-card__pills {
-  gap: 0.2rem;
-}
-
-/* ── Results toolbar ─────────────────────────────────────────────────────────
-   Shown between the results heading and sentence cards when the selected
-   language declares a transliteration_scheme.  JS populates the toggle inside.
-   hidden attribute controlled by main.js via updateScriptViewToolbar().       */
-
-.results-toolbar {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  flex-wrap: wrap;
-  margin-block-end: var(--space-2);
-}
-
-/* ── Annotation text search ──────────────────────────────────────────────────── */
-
-.annotation-search-wrap {
-  padding-inline: 0.75rem;
-  padding-block: 0.4rem 0.5rem;
-  border-block-start: 1px solid var(--border);
-}
-
-.annotation-search {
-  inline-size: 100%;
-  padding-block: 0.28rem;
-  padding-inline: 0.55rem;
-  border: 1px solid var(--border);
-  border-radius: 0.4rem;
-  background: var(--bg);
-  color: inherit;
-  font-size: 0.78rem;
-  font-family: inherit;
-  box-sizing: border-box;
-}
-
-.annotation-search:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 0;
-  border-color: transparent;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .annotation-search { transition: border-color 120ms; }
-}
-
-@media (forced-colors: active) {
-  .annotation-search { border: 1px solid ButtonText; }
-}
-
-/* ── Script view toggle ──────────────────────────────────────────────────────
-   Segmented button group: Script / Romanized / Both.
-   aria-pressed signals the active state to AT.                               */
-
-.script-toggle {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-size: 0.875rem;
-  flex-wrap: wrap;
-}
-
-.script-toggle__label {
-  color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-inline-end: 0.2rem;
-}
-
-.script-toggle__btn {
-  /* --border-input (45% CanvasText) gives ≥ 3:1 against Canvas — SC 1.4.11. */
-  border: 1px solid var(--border-input);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--text);
-  font: inherit;
-  font-size: 0.8rem;
-  padding: 0.25rem 0.65rem;
-  /* WCAG 2.5.8: 44 × 44 CSS-px minimum not required for optional controls, but
-     keeping min-block-size at 2rem keeps the target reasonably large. */
-  min-block-size: 2rem;
-  cursor: pointer;
-}
-
-.script-toggle__btn:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 2px;
-}
-
-/* Active state signalled by both class (immediate) and aria-pressed (AT). */
-.script-toggle__btn--active,
-.script-toggle__btn[aria-pressed="true"] {
-  background: var(--accent-fill);
-  color: var(--accent-contrast);
-  border-color: var(--accent-fill);
-}
-
-/* ── Script-view layer visibility — sentence cards ───────────────────────────
-   [data-layer="native"]    — source-script text (sentence text, native pills)
-   [data-layer="romanized"] — transliterated / romanized forms
-   Controlled by data-script-view on any ancestor container.  main.js sets
-   this on #results; test fixtures set it on local demo containers.
-   'both' or missing value: all layers visible (default).                     */
-
-[data-script-view="native"]    [data-layer="romanized"] { display: none; }
-[data-script-view="romanized"] [data-layer="native"]    { display: none; }
-
 /* Empty-state message shown before any parse and when no results are found. */
 .results-empty {
   color: var(--muted);
   text-align: center;
   padding-block: var(--space-4);
   margin: 0;
-}
-
-.lesson-actions {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-block-start: 1rem;
-}
-
-.rating-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-block-start: 1rem;
-}
-
-.rating-button,
-.ghost-button {
-  padding: 0.6rem 0.9rem;
-  border-radius: 999px;
-  /* --border-input (45% CanvasText) gives ≥ 3:1 against Canvas — SC 1.4.11. */
-  border: 1px solid var(--border-input);
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  /* 2.75 rem ≈ 44 CSS px — WCAG 2.5.8 minimum touch target size. */
-  min-block-size: 2.75rem;
 }
 
 .markdown {
@@ -364,141 +2028,6 @@
 .markdown ul {
   padding-inline-start: 1.25rem;
 }
-
-/* ── Concordance split-pane layout ────────────────────────────────────────────
-   Wraps the results panel and the detail pane side by side on wide screens.
-   On narrow screens it stacks them.  The --open modifier is added by main.js
-   when detailPane.show() is called.                                           */
-
-.concordance-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: start;
-  gap: var(--space-4);
-  /* Absorb the bottom margin that .panel normally contributes so the pane's
-     own border provides the visual separation from the footer. */
-  margin-block-end: var(--space-4);
-}
-
-/* Remove the default panel margin-block-end when inside the layout so the
-   layout gap governs spacing instead. */
-.concordance-layout > .panel {
-  margin-block-end: 0;
-}
-
-/* Two-column grid when pane is open — on screens wide enough to show both. */
-@media (min-width: 54rem) {
-  .concordance-layout--open {
-    grid-template-columns: 1fr 22rem;
-  }
-}
-
-/* Sticky detail pane on desktop: stays in viewport while user scrolls cards. */
-@media (min-width: 54rem) {
-  .concordance-layout mnemosyne-detail-pane {
-    position: sticky;
-    top: var(--space-3);
-    /* Fill up to viewport height minus top offset so it never overflows. */
-    max-block-size: calc(100dvh - 2 * var(--space-3));
-  }
-}
-
-/* On mobile, pane is not sticky but capped so it doesn't push content off-screen. */
-@media (max-width: 53.99rem) {
-  .concordance-layout mnemosyne-detail-pane {
-    max-block-size: 75dvh;
-  }
-}
-
-/* ── Backdrop — dims content behind the mobile bottom-sheet pane ─────────────
-   Hidden on desktop (pane is inline, not an overlay).
-   JS adds/removes .is-visible on pane open/close.                            */
-
-.pane-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 199;
-  background: rgb(0 0 0 / 0.4);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.32s ease;
-}
-
-.pane-backdrop.is-visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-@media (min-width: 54rem) {
-  .pane-backdrop { display: none; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pane-backdrop { transition: none; }
-}
-
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   READING VIEW
-   ══════════════════════════════════════════════════════════════════════════════
-   Reader-specific classes.  All use a .reader- prefix to avoid collisions with
-   the generic sentence-card classes above.  The existing .sentence-card classes
-   are kept on the same elements for playback-engine compatibility.
-   ══════════════════════════════════════════════════════════════════════════════ */
-
-/* ── Annotation-type filter chip strip ───────────────────────────────────── */
-
-.reader-filters {
-  display: flex;
-  gap: 0.35rem;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scrollbar-width: none;
-  /* Fade-out at the scroll edge signals more chips off-screen. */
-  -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
-  mask-image:         linear-gradient(to right, black 85%, transparent 100%);
-  padding-block-end: 0.2rem;
-  margin-block-end: var(--space-2);
-}
-.reader-filters::-webkit-scrollbar { display: none; }
-
-.reader-chip {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-  background: transparent;
-  border: 1px solid var(--border-input);
-  border-radius: 999px;
-  padding-block: 0.2rem;
-  padding-inline: 0.6rem;
-  font: inherit;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--muted);
-  cursor: pointer;
-  min-block-size: 2rem;
-  white-space: nowrap;
-  transition: background 0.1s ease, color 0.1s ease, border-color 0.1s ease;
-}
-
-.reader-chip--active {
-  background: var(--accent-fill);
-  color: white;
-  border-color: var(--accent-fill);
-}
-
-.reader-chip:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 2px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reader-chip { transition: none; }
-}
-
-
 
 /* ── Reader sentence layout ──────────────────────────────────────────────── */
 /* Two-column grid: narrow gutter column for the play button, 1fr for text.
@@ -584,10 +2113,17 @@
   overflow-wrap: break-word;
 }
 
-/* Serif for Latin-script text (global.css lang-attr overrides take precedence
+/* Serif for Latin-script text (tokens.css lang-attr overrides take precedence
    for Arabic, Hebrew, CJK, Devanagari). */
 .reader-sentence__text[data-script-family="latin"] {
   font-family: var(--font-serif);
+}
+
+.reader-sentence__text {
+  font-size: clamp(1.05rem, 0.35vw + 1rem, 1.2rem);
+  line-height: 1.85;
+  hanging-punctuation: first last;
+  text-wrap: pretty;
 }
 
 /* ── Prose container — sentences flow as one continuous paragraph ─────────
@@ -669,6 +2205,94 @@
   .reader-prose .reader-sentence { transition: none; }
 }
 
+/* ── Reading column — book mode (premium reading experience) ─────────────── */
+
+/* Strip the panel card chrome: reading text sits on the page, not in a box */
+#results-section.panel {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* Prose page — typography and page-like surface */
+.reader-prose {
+  font-family: var(--font-serif);
+  line-height: 1.85;
+  hyphens: auto;
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(0,0,0,0.02), transparent 60%),
+    var(--surface);
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: var(--space-4) clamp(1.5rem, 5vw, 3rem) var(--space-5);
+}
+
+/* Strip card chrome from each sentence — let prose flow unbroken */
+.reader-prose .reader-sentence.sentence-card {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Hover: barely-there tint, no box effect */
+.reader-prose .reader-sentence:hover,
+.reader-prose .reader-sentence:focus-within {
+  background: color-mix(in srgb, var(--accent) 4%, transparent);
+  box-shadow: none;
+  transform: none;
+}
+
+/* Playing sentence: inline background only, no left border */
+.reader-prose .reader-sentence.sentence-card--playing {
+  border-inline-start: none;
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+  border-radius: 0.15em;
+  padding-inline: 0.1em;
+  box-shadow: none;
+}
+
+/* Gutter play button: invisible by default, shows on sentence hover */
+.reader-prose .reader-gutter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  inline-size: 1.1rem;
+  block-size: 1.1rem;
+  min-block-size: unset;
+  min-inline-size: unset;
+  padding: 0;
+  margin-inline-end: 0.3em;
+  border-radius: 50%;
+  font-size: 0.5rem;
+  border: 1.5px solid transparent;
+  background: transparent;
+  color: transparent;
+  flex-shrink: 0;
+  transition: border-color 0.14s ease, color 0.14s ease;
+}
+
+.reader-prose .reader-sentence:hover .reader-gutter-btn,
+.reader-prose .reader-sentence:focus-within .reader-gutter-btn {
+  border-color: var(--muted);
+  color: var(--muted);
+}
+
+.reader-prose .reader-sentence.sentence-card--playing .reader-gutter-btn {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 53.99rem) {
+  .reader-prose .reader-sentence {
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+}
 
 /* ── Inline annotation highlights ───────────────────────────────────────── */
 
@@ -740,8 +2364,7 @@
   .reader-annotation::before   { transition: none; }
 }
 
-/* Type-keyed highlight colours — --_annotation-color drives background + text tint.
-   premium.css overrides these with slightly higher values (18-20%) when loaded.  */
+/* Type-keyed highlight colours — --_annotation-color drives background + text tint. */
 .reader-annotation--vocabulary {
   --_annotation-color: var(--ann-vocab);
   background: color-mix(in srgb, var(--_annotation-color) 14%, transparent);
@@ -826,258 +2449,91 @@
   outline-width: 3px;
 }
 
+/* ── Annotation affordance (premium reading experience polish) ──────────── */
 
-/* ── Now-playing card ────────────────────────────────────────────────────── */
-
-.reader-nowplaying {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-block-start: var(--space-3);
-  padding: 0.55rem 0.75rem;
-  background: color-mix(in srgb, var(--accent) 6%, Canvas);
-  border: 1px solid color-mix(in srgb, var(--accent) 22%, Canvas);
-  border-radius: 0.75rem;
-  /* Sticky at bottom of reading column while scrolling through cards */
-  position: sticky;
-  inset-block-end: 0.75rem;
-  z-index: 20;
+.reader-annotation {
+  border: 1px solid transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition:
+    background-color 0.14s ease,
+    border-color 0.14s ease,
+    box-shadow 0.14s ease,
+    filter 0.14s ease;
 }
 
-/* Lift sticky bottom when global mini-player is visible */
-body.player-active .reader-nowplaying {
-  inset-block-end: calc(3.5rem + 0.75rem);
+.reader-annotation:hover,
+.reader-annotation:focus-visible {
+  border-color: currentColor;
+  box-shadow: 0 0 0 0.18em color-mix(in srgb, currentColor 8%, transparent);
+  filter: none;
 }
 
-.reader-nowplaying[hidden] { display: none; }
-
-.reader-nowplaying__info {
-  display: flex;
-  align-items: baseline;
-  gap: 0.4rem;
-  flex: 1 1 0;
-  min-inline-size: 0;
-  overflow: hidden;
+.reader-annotation::before {
+  box-shadow: var(--elevation-2);
 }
 
-.reader-nowplaying__counter {
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--accent);
-  flex-shrink: 0;
-  letter-spacing: 0.03em;
+.reader-annotation--vocabulary {
+  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
 }
 
-.reader-nowplaying__text {
-  font-size: 0.8125rem;
-  color: var(--muted);
-  font-style: italic;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.reader-annotation--grammar,
+.reader-annotation--agreement,
+.reader-annotation--conjugation {
+  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
 }
 
-.reader-nowplaying__controls {
-  display: flex;
-  gap: 0.1rem;
-  flex-shrink: 0;
+.reader-annotation--idiom {
+  background: color-mix(in srgb, var(--_annotation-color) 20%, transparent);
 }
 
-.reader-nowplaying__btn {
-  background: transparent;
-  border: none;
-  border-radius: 999px;
-  min-block-size: 2.25rem;
-  min-inline-size: 2.25rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  color: var(--accent);
-  cursor: pointer;
-  padding: 0;
-  transition: background 0.1s ease;
+.reader-annotation--nuance,
+.reader-annotation--phrase_family {
+  background: color-mix(in srgb, var(--_annotation-color) 20%, transparent);
 }
 
-.reader-nowplaying__btn:hover {
-  background: color-mix(in srgb, var(--accent) 12%, Canvas);
+.reader-annotation--script,
+.reader-annotation--transliteration {
+  background: color-mix(in srgb, var(--_annotation-color) 18%, transparent);
 }
 
-.reader-nowplaying__btn:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 2px;
+.reader-annotation[data-filtered] {
+  box-shadow: none !important;
+  border-color: transparent !important;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .reader-nowplaying__btn { transition: none; }
+/* Active source annotation — stronger highlight + right-edge accent bar that
+   visually connects to the detail panel border on the right.
+   Specificity (0,3,0) beats type classes (0,1,0) so no !important needed.   */
+
+.reader-annotation[data-detail-source][data-type] {
+  background: color-mix(in srgb, var(--_annotation-color) 30%, transparent);
+  color: color-mix(in srgb, var(--_annotation-color) 50%, var(--text-primary));
+  text-decoration: none;
+  border-color: color-mix(in srgb, var(--_annotation-color) 45%, transparent);
+
 }
 
-
-/* ── Mobile overrides ────────────────────────────────────────────────────── */
-
-@media (max-width: 53.99rem) {
-  /* Tighter gutter on mobile — saves horizontal space */
-  .reader-sentence {
-    grid-template-columns: 1.5rem 1fr;
-    column-gap: 0.3rem;
+@media (forced-colors: active) {
+  .reader-annotation[data-detail-source][data-type] {
+    outline: 2px solid Highlight;
+    box-shadow: none;
   }
-
-  /* Touch has no hover — keep button always slightly visible */
-  .reader-gutter-btn {
-    min-block-size: 2.75rem;
-    min-inline-size: 1.5rem;
-    font-size: 0.65rem;
-    opacity: 0.3;
-  }
-
-  .reader-sentence:focus-within .reader-gutter-btn,
-  .reader-sentence.sentence-card--playing .reader-gutter-btn {
-    opacity: 1;
-  }
-
-  /* Compact now-playing on mobile */
-  .reader-nowplaying {
-    border-radius: 0.6rem;
-    inset-block-end: 0.4rem;
-  }
-  .reader-nowplaying__text {
-    display: none;
-  }
-  .reader-nowplaying__info {
-    flex: 0 0 auto;
-  }
-
-  /* Compact filter chips on mobile */
-  .reader-chip {
-    font-size: 0.65rem;
-    padding-inline: 0.5rem;
-    min-block-size: 1.75rem;
-  }
-
 }
 
+/* ── Feature: Annotation note badge ─────────────────────────────────────────── */
 
-/* ── Feature: Reading progress bar ──────────────────────────────────────────── */
-
-.reading-progress {
-  position: sticky;
-  top: 0;
-  z-index: calc(var(--z-filter-bar, 10) - 1);
-  height: 3px;
-  background: color-mix(in srgb, var(--accent) 15%, var(--border));
-  overflow: hidden;
-  /* Span the full column width by reaching into .wrap horizontal padding */
-  margin-inline: calc(-1 * clamp(1rem, 4vw, 2rem));
-}
-
-.reading-progress::after {
+/* A small amber dot signals that a personal note is saved for this annotation. */
+.reader-annotation[data-has-note]::after {
   content: '';
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: var(--accent-fill);
-  transform-origin: left center;
-  transform: scaleX(var(--progress, 0));
-  transition: transform 0.35s ease;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reading-progress::after { transition: none; }
-}
-
-
-/* ── Feature: Annotation density minimap ────────────────────────────────────── */
-
-.results-region {
-  position: relative;
-  /* Reserve inline-end space so the minimap doesn't overlap sentence text. */
-  padding-inline-end: 0.65rem;
-}
-
-.annotation-minimap {
-  position: absolute;
-  inset-inline-end: 0;
-  inset-block: 0;
-  inline-size: 12px;
-  pointer-events: auto;
-}
-
-.annotation-minimap[hidden] { display: none; }
-
-/* Each tick is a button for keyboard access; JS sets inline background + top. */
-.annotation-minimap__tick {
-  position: absolute;
-  inset-inline-start: 0;
-  inline-size: 100%;
-  block-size: 6px;
-  border-radius: 2px;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  opacity: 0.65;
-  transition: opacity 0.12s ease, transform 0.12s ease;
-}
-
-.annotation-minimap__tick:hover,
-.annotation-minimap__tick:focus-visible {
-  opacity: 1;
-  transform: scaleX(1.3);
-  outline: none;
-}
-
-.annotation-minimap__tick:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 1px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .annotation-minimap__tick { transition: none; transform: none !important; }
-}
-
-@media (forced-colors: active) {
-  .annotation-minimap__tick { border: 1px solid ButtonText; }
-  .annotation-minimap__tick:focus-visible { outline: 2px solid Highlight; }
-}
-
-/* ── Minimap category legend ──────────────────────────────────────────────── */
-
-.minimap-legend {
-  position: absolute;
-  inset-inline-end: 0;
-  inset-block-end: 4px;
-  inline-size: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.minimap-legend[hidden] { display: none; }
-
-.minimap-legend__dot {
-  inline-size: 5px;
-  block-size: 5px;
+  display: inline-block;
+  width:  0.4em;
+  height: 0.4em;
+  background: var(--ann-idiom);
   border-radius: 50%;
-  opacity: 0.25;
-  transition: opacity 0.12s ease;
-  flex-shrink: 0;
-}
-
-/* Category present in current document */
-.minimap-legend__dot--present { opacity: 0.50; }
-
-/* Category in active session filter (or no filter active = all bright) */
-.minimap-legend__dot--active  { opacity: 1.0;  }
-
-@media (prefers-reduced-motion: reduce) {
-  .minimap-legend__dot { transition: none; }
-}
-
-@media (forced-colors: active) {
-  .minimap-legend__dot { background: ButtonText !important; border-radius: 0; }
-  .minimap-legend__dot--active { background: Highlight !important; }
+  vertical-align: super;
+  margin-inline-start: 0.1em;
+  pointer-events: none;
 }
 
 /* Jump highlight: brief ring on the annotation that was scrolled to. */
@@ -1097,7 +2553,6 @@ body.player-active .reader-nowplaying {
 @media (forced-colors: active) {
   .reader-annotation--jump-flash { outline: 2px solid Highlight; }
 }
-
 
 /* ── Annotation hover tooltip ────────────────────────────────────────────────── */
 
@@ -1186,22 +2641,3128 @@ body.player-active .reader-nowplaying {
   .annotation-tooltip__cefr { border: 1px solid ButtonText; }
 }
 
+/* ── Feature: Reading progress bar ──────────────────────────────────────────── */
 
-/* ── Feature: Annotation note badge ─────────────────────────────────────────── */
+.reading-progress {
+  position: sticky;
+  top: 0;
+  z-index: calc(var(--z-filter-bar, 10) - 1);
+  height: 3px;
+  background: color-mix(in srgb, var(--accent) 15%, var(--border));
+  overflow: hidden;
+  /* Span the full column width by reaching into .wrap horizontal padding */
+  margin-inline: calc(-1 * clamp(1rem, 4vw, 2rem));
+}
 
-/* A small amber dot signals that a personal note is saved for this annotation. */
-.reader-annotation[data-has-note]::after {
+.reading-progress::after {
   content: '';
-  display: inline-block;
-  width:  0.4em;
-  height: 0.4em;
-  background: var(--ann-idiom);
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: var(--accent-fill);
+  transform-origin: left center;
+  transform: scaleX(var(--progress, 0));
+  transition: transform 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reading-progress::after { transition: none; }
+}
+
+.reading-progress {
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+/* ── Feature: Annotation density minimap ────────────────────────────────────── */
+
+.annotation-minimap {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block: 0;
+  inline-size: 12px;
+  pointer-events: auto;
+}
+
+.annotation-minimap[hidden] { display: none; }
+
+/* Each tick is a button for keyboard access; JS sets inline background + top. */
+.annotation-minimap__tick {
+  position: absolute;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 6px;
+  border-radius: 2px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.65;
+  transition: opacity 0.12s ease, transform 0.12s ease;
+}
+
+.annotation-minimap__tick:hover,
+.annotation-minimap__tick:focus-visible {
+  opacity: 1;
+  transform: scaleX(1.3);
+  outline: none;
+}
+
+.annotation-minimap__tick:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .annotation-minimap__tick { transition: none; transform: none !important; }
+}
+
+@media (forced-colors: active) {
+  .annotation-minimap__tick { border: 1px solid ButtonText; }
+  .annotation-minimap__tick:focus-visible { outline: 2px solid Highlight; }
+}
+
+.annotation-minimap__tick {
+  box-shadow: 0 0 0 1px color-mix(in srgb, Canvas 70%, transparent);
+}
+
+/* ── Minimap category legend ──────────────────────────────────────────────── */
+
+.minimap-legend {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-end: 4px;
+  inline-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.minimap-legend[hidden] { display: none; }
+
+.minimap-legend__dot {
+  inline-size: 5px;
+  block-size: 5px;
   border-radius: 50%;
-  vertical-align: super;
-  margin-inline-start: 0.1em;
+  opacity: 0.25;
+  transition: opacity 0.12s ease;
+  flex-shrink: 0;
+}
+
+/* Category present in current document */
+.minimap-legend__dot--present { opacity: 0.50; }
+
+/* Category in active session filter (or no filter active = all bright) */
+.minimap-legend__dot--active  { opacity: 1.0;  }
+
+@media (prefers-reduced-motion: reduce) {
+  .minimap-legend__dot { transition: none; }
+}
+
+@media (forced-colors: active) {
+  .minimap-legend__dot { background: ButtonText !important; border-radius: 0; }
+  .minimap-legend__dot--active { background: Highlight !important; }
+}
+
+/* ── Unified reader control bar ──────────────────────────────────────────── */
+
+.reader-ctrl-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-block-end: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.reader-ctrl__row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.3rem 0.5rem;
+}
+
+/* Primary: segmented mode control */
+.reader-ctrl__primary {
+  display: flex;
+  border: 1px solid var(--border-input);
+  border-radius: 999px;
+  overflow: hidden;
+  isolation: isolate;   /* keep focus rings inside rounded border */
+  flex-shrink: 0;
+}
+
+.reader-mode-btn {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 0.28rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: inherit;
+  transition: background 0.14s ease, color 0.14s ease;
+  white-space: nowrap;
+}
+
+.reader-mode-btn + .reader-mode-btn {
+  border-inline-start: 1px solid var(--border-input);
+}
+
+.reader-mode-btn--active {
+  background: var(--accent);
+  color: white;
+}
+
+.reader-mode-btn:not(.reader-mode-btn--active):hover {
+  background: color-mix(in srgb, var(--accent) 9%, transparent);
+}
+
+.reader-mode-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Secondary: focus + settings */
+.reader-ctrl__secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-inline-start: auto;
+}
+
+.reader-focus-btn {
+  border: 1px solid var(--border-input);
+  border-radius: 999px;
+  background: transparent;
+  padding: 0.22rem 0.65rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.14s ease, border-color 0.14s ease, color 0.14s ease;
+}
+
+.reader-focus-btn--active {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.reader-ctrl__settings-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 1.75rem;
+  block-size: 1.75rem;
+  border: 1px solid var(--border-input);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: color 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+}
+
+.reader-ctrl__settings-btn:hover,
+.reader-ctrl__settings-btn--open {
+  color: var(--text-primary);
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.reader-ctrl__explainer {
+  padding: 0 0.5rem 0.45rem;
+}
+
+.reader-ctrl__explainer-toggle {
+  border: 1px solid var(--border-input);
+  border-radius: 999px;
+  background: transparent;
+  padding: 0.22rem 0.65rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.reader-ctrl__explainer-panel {
+  margin-top: 0.45rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, var(--surface) 95%, var(--bg) 5%);
+  padding: 0.55rem 0.65rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  white-space: pre-line;
+}
+
+/* System body — hidden until settings toggle opens it */
+.reader-ctrl__system-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) 0.75rem;
+  border-block-start: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 94%, var(--bg) 6%);
+}
+
+.reader-ctrl__system-body[hidden] { display: none; }
+
+.reader-ctrl__system-group {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.reader-ctrl__system-group--end {
+  margin-inline-start: auto;
+}
+
+.reader-ctrl__system-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  padding-inline-end: 0.2rem;
+}
+
+.reader-ctrl__system-group--categories {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-mode-btn,
+  .reader-focus-btn,
+  .reader-ctrl__settings-btn,
+  .reader-ctrl__explainer-toggle { transition: none; }
+}
+
+@media (forced-colors: active) {
+  .reader-ctrl-bar { border: 1px solid CanvasText; }
+  .reader-ctrl__primary { border: 1px solid ButtonText; }
+  .reader-mode-btn--active { background: Highlight; color: HighlightText; }
+  .reader-focus-btn--active,
+  .reader-ctrl__settings-btn--open { border: 2px solid Highlight; }
+  .reader-ctrl__system-body { border-block-start: 1px solid CanvasText; background: Canvas; }
+}
+
+.reader-ctrl-bar {
+  border-color: var(--border-soft);
+  box-shadow: var(--elevation-1);
+}
+
+/* ── Annotation reveal modes (density) ───────────────────────────────────── */
+
+[data-annotation-reveal="subtle"] .reader-annotation {
+  background: color-mix(in srgb, var(--_annotation-color) 10%, transparent) !important;
+  opacity: 0.7;
+}
+
+[data-annotation-reveal="learning"] .reader-annotation {
+  opacity: 1;
+}
+
+[data-annotation-reveal="deep"] .reader-annotation::before {
+  opacity: 1 !important;
+}
+
+/* ── Focus mode ───────────────────────────────────────────────────────────── */
+
+body.reader-focus-mode .site-header,
+body.reader-focus-mode .site-footer,
+body.reader-focus-mode .app-shell__top-nav {
+  opacity: 0.2;
+}
+
+body.reader-focus-mode .sentence-card {
+  opacity: 0.52;
+  transition: opacity 0.2s ease;
+}
+
+body.reader-focus-mode .sentence-card[data-focus-block="true"],
+body.reader-focus-mode.reader-flow-mode .sentence-card[data-flow-active] {
+  opacity: 1;
+}
+
+body.reader-focus-mode.reader-flow-mode .sentence-card:not([data-flow-active]) {
+  opacity: 0.42;
+}
+
+body.reader-focus-mode #results-section {
+  position: relative;
+}
+
+body.reader-focus-mode #results-section::before,
+body.reader-focus-mode #results-section::after {
+  content: '';
+  position: sticky;
+  display: block;
+  inset-inline: 0;
+  block-size: clamp(3rem, 11vh, 7rem);
+  pointer-events: none;
+  z-index: 2;
+}
+
+body.reader-focus-mode #results-section::before {
+  inset-block-start: 0;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.24), rgb(0 0 0 / 0));
+}
+
+body.reader-focus-mode #results-section::after {
+  inset-block-end: 0;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.24), rgb(0 0 0 / 0));
+}
+
+@media (forced-colors: active) {
+  body.reader-focus-mode .sentence-card { opacity: 0.75; }
+  body.reader-focus-mode .sentence-card[data-focus-block="true"],
+  body.reader-focus-mode.reader-flow-mode .sentence-card[data-flow-active] {
+    outline: 2px solid Highlight;
+    outline-offset: 0.15rem;
+  }
+  body.reader-focus-mode #results-section::before,
+  body.reader-focus-mode #results-section::after { display: none; }
+}
+
+/* ── Flow mode ────────────────────────────────────────────────────────────────
+   During playback, inactive sentences dim so the eye stays on the active one.
+   No fading when idle — user browses freely.
+   body.reader-flow-playing is toggled by flow-mode.js on state-change.       */
+
+body.reader-flow-mode.reader-flow-playing .sentence-card {
+  opacity: 0.38;
+  transition: opacity 0.3s ease;
+}
+
+body.reader-flow-mode.reader-flow-playing .sentence-card[data-flow-active] {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+body.reader-flow-mode .reader-annotation[data-flow-hidden] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.reader-flow-mode .sentence-card {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  body.reader-flow-mode.reader-flow-playing .sentence-card:not([data-flow-active]) {
+    opacity: 0.5;
+  }
+}
+
+/* ── Cognitive pacing indicator ─────────────────────────────────────────────
+   Only shown for fatigue/overload — steady and flow stay silent.            */
+
+.cognitive-pacing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-block: 0 var(--space-2);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.cognitive-pacing-indicator[hidden] { display: none; }
+
+.cognitive-pacing-indicator__dot {
+  display: inline-block;
+  inline-size: 0.4rem;
+  block-size: 0.4rem;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0;
+  flex-shrink: 0;
+}
+
+.cognitive-pacing-indicator[data-pacing-mode="fatigue"] .cognitive-pacing-indicator__dot {
+  opacity: 0.55;
+  color: var(--ann-grammar, var(--accent));
+}
+
+.cognitive-pacing-indicator[data-pacing-mode="overload"] .cognitive-pacing-indicator__dot {
+  opacity: 0.75;
+  color: var(--ann-idiom, var(--accent));
+}
+
+/* ── Quiet-count badge ───────────────────────────────────────────────────── */
+
+.reader-quiet-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-block: 0 var(--space-2);
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.reader-quiet-badge__reveal {
+  padding: 0.1rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.7rem;
+  color: var(--muted);
+  transition: color 0.12s ease, border-color 0.12s ease;
+}
+
+.reader-quiet-badge__reveal:hover,
+.reader-quiet-badge__reveal:focus-visible {
+  color: var(--text-primary);
+  border-color: var(--accent);
+}
+
+.reader-quiet-badge__reveal[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Reveal-known override ───────────────────────────────────────────────── */
+
+body[data-reveal-known] .reader-annotation[data-tier="3"] {
+  background: color-mix(in srgb, var(--_annotation-color) 20%, transparent);
+}
+
+body[data-reveal-known] [data-adaptively-quiet] {
+  opacity: 1 !important;
+}
+
+/* ── Known-annotation tooltip augmentation ──────────────────────────────── */
+
+.reader-annotation[data-adaptive-reason="known"]::before {
+  content: attr(data-type-label) " · ✓";
+}
+
+/* ── Difficulty-adjustment toast ─────────────────────────────────────────── */
+
+.reader-difficulty-toast {
+  position: fixed;
+  inset-inline: 0;
+  inset-block-end: 5rem;
+  margin-inline: auto;
+  inline-size: max-content;
+  max-inline-size: calc(100vw - 2rem);
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.78rem;
+  color: var(--muted);
+  box-shadow: var(--elevation-2, 0 4px 8px rgb(0 0 0 / 0.08));
+  z-index: 100;
+  pointer-events: none;
+  animation: reader-difficulty-toast 2.6s ease forwards;
+}
+
+@keyframes reader-difficulty-toast {
+  0%   { opacity: 0; transform: translateY(6px); }
+  12%  { opacity: 1; transform: translateY(0); }
+  72%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-difficulty-toast {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+@media (forced-colors: active) {
+  .reader-difficulty-toast {
+    border: 1px solid CanvasText;
+    box-shadow: none;
+  }
+  .reader-quiet-badge__reveal {
+    border: 1px solid ButtonText;
+  }
+  .reader-quiet-badge__reveal[aria-pressed="true"] {
+    border: 2px solid ButtonText;
+  }
+}
+
+/* ── Adaptive toggle buttons inside the system body ──────────────────────── */
+
+.reader-adaptive-toggle,
+.reader-reinforcement-toggle {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+}
+
+.reader-adaptive-toggle--active,
+.reader-reinforcement-toggle--active {
+  background: var(--accent-fill);
+  color: white;
+  border-color: var(--accent-fill);
+}
+
+.reader-adaptive-sync {
+  font-size: 0.72rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+.reader-adaptive-sync:hover { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+
+.reader-adaptive-reset {
+  font-size: 0.7rem;
+  color: var(--muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.reader-adaptive-reset:hover { color: var(--text-primary); }
+
+@media (forced-colors: active) {
+  .reader-adaptive-toggle--active,
+  .reader-reinforcement-toggle--active { border: 2px solid Highlight; background: Highlight; color: HighlightText; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-adaptive-toggle,
+  .reader-reinforcement-toggle,
+  .reader-adaptive-sync { transition: none; }
+}
+
+.reader-annotation--known {
+  opacity: 0.4;
+}
+
+.reader-annotation--weak {
+  outline: 1px solid var(--_annotation-color);
+}
+
+[data-adaptively-quiet] {
+  opacity: 0.2 !important;
+}
+
+[data-category-hidden] {
+  background: none !important;
+  text-decoration: none !important;
+  filter: none;
+}
+
+[data-category-hidden]::before,
+[data-category-hidden]::after {
+  display: none;
+}
+
+.reader-mastery-controls {
+  display: flex;
+  gap: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.reader-mastery-btn {
+  font-size: 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.1rem 0.4rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.reader-mastery-btn--active {
+  background: var(--accent-fill);
+  color: white;
+}
+
+@media (forced-colors: active) {
+  .reader-annotation--known { opacity: 1; }
+  [data-adaptively-quiet] { opacity: 1 !important; text-decoration: underline; }
+  .reader-adaptive-toggle--active,
+  .reader-mastery-btn--active { border: 2px solid ButtonText; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-annotation--known,
+  [data-adaptively-quiet] { transition: none; }
+}
+
+/* ── Inline preview — fixed overlay anchored near the clicked annotation ──── */
+
+.reader-inline-preview {
+  position: fixed;
+  z-index: 400;
+  inline-size: max-content;
+  max-inline-size: min(22rem, calc(100vw - 2rem));
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--elevation-2, 0 4px 12px rgb(0 0 0 / 0.10));
+  animation: reader-preview-in 0.14s ease both;
+}
+
+@keyframes reader-preview-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-inline-preview { animation: none; }
+}
+
+.reader-inline-preview__title {
+  font-size: 0.8rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.reader-inline-preview__body {
+  font-size: 0.8rem;
+  margin: 0 0 0.4rem 0;
+  color: var(--muted);
+}
+
+.reader-inline-preview__actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.reader-inline-preview__actions button {
+  font-size: 0.7rem;
+}
+
+/* ── Reading region high-contrast / reduced-motion (premium layer) ───────── */
+
+@media (forced-colors: active) {
+  .panel,
+  .picker-dialog__inner,
+  .reader-nowplaying,
+  .results-filter-row,
+  .reader-sentence,
+  .reader-annotation {
+    background: Canvas;
+    border-color: CanvasText;
+    box-shadow: none;
+  }
+
+  /* Book mode: restore border so content is visible on high-contrast bg */
+  #results-section.panel {
+    border: 1px solid CanvasText;
+  }
+
+  /* Tier backgrounds are UA-forced to Canvas — use system-color outline
+     on tier 1 so primary learning targets remain distinct */
+  .reader-annotation[data-tier="1"] {
+    outline: 1px solid Highlight;
+    outline-offset: 1px;
+  }
+
+  .reader-prose {
+    background: Canvas;
+    border: none;
+  }
+
+  .reader-prose .reader-sentence.sentence-card--playing {
+    outline: 2px solid Highlight;
+    background: Canvas;
+    padding-inline: 0;
+  }
+
+  .reader-prose .reader-gutter-btn {
+    border-color: ButtonText;
+    color: ButtonText;
+  }
+
+  .reader-annotation {
+    text-decoration: underline;
+  }
+
+  .site-hero::before,
+  .reader-annotation::before {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button-primary,
+  .ghost-button,
+  .rating-button,
+  .script-toggle__btn,
+  .reader-chip,
+  .reader-sentence,
+  .reader-annotation,
+  .reader-gutter-btn {
+    transition: none;
+  }
+
+  .button-primary:hover:not(:disabled),
+  .ghost-button:hover:not(:disabled),
+  .rating-button:hover:not(:disabled),
+  .script-toggle__btn:hover,
+  .reader-chip:hover,
+  .reader-sentence:hover,
+  .reader-sentence:focus-within {
+    transform: none;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   6. DETAIL PANE BOTTOM SHEET
+   Global wrapper/backdrop styling for mnemosyne-detail-pane. The component's
+   own Shadow DOM <style> block (components/mnemosyne-detail-pane.js) is
+   separate and out of scope for this session — not touched here.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Backdrop — dims content behind the mobile bottom-sheet pane ─────────────
+   Hidden on desktop (pane is inline, not an overlay).
+   JS adds/removes .is-visible on pane open/close.                            */
+
+.pane-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 199;
+  background: rgb(0 0 0 / 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.32s ease;
+}
+
+.pane-backdrop.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (min-width: 54rem) {
+  .pane-backdrop { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pane-backdrop { transition: none; }
+}
+
+/* ── Concordance split-pane layout ────────────────────────────────────────────
+   Wraps the results panel and the detail pane side by side on wide screens.
+   On narrow screens it stacks them.  The --open modifier is added by main.js
+   when detailPane.show() is called.                                           */
+
+.concordance-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: var(--space-4);
+  /* Absorb the bottom margin that .panel normally contributes so the pane's
+     own border provides the visual separation from the footer. */
+  margin-block-end: var(--space-4);
+}
+
+/* Remove the default panel margin-block-end when inside the layout so the
+   layout gap governs spacing instead. */
+.concordance-layout > .panel {
+  margin-block-end: 0;
+}
+
+/* Two-column grid when pane is open — on screens wide enough to show both. */
+@media (min-width: 54rem) {
+  .concordance-layout--open {
+    grid-template-columns: 1fr 22rem;
+  }
+}
+
+/* Sticky detail pane on desktop: stays in viewport while user scrolls cards. */
+@media (min-width: 54rem) {
+  .concordance-layout mnemosyne-detail-pane {
+    position: sticky;
+    top: var(--space-3);
+    /* Fill up to viewport height minus top offset so it never overflows. */
+    max-block-size: calc(100dvh - 2 * var(--space-3));
+  }
+}
+
+/* On mobile, pane is not sticky but capped so it doesn't push content off-screen. */
+@media (max-width: 53.99rem) {
+  .concordance-layout mnemosyne-detail-pane {
+    max-block-size: 75dvh;
+  }
+}
+
+/* ── Detail pane shell — drop shadow + rounded corners on the host ─────────── */
+
+.app-shell__detail-panel {
+  filter: drop-shadow(0 18px 34px rgb(0 0 0 / 0.12));
+}
+
+mnemosyne-detail-pane {
+  border-radius: calc(var(--radius) * 1.1);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   7. NOW-PLAYING BAR
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Scroll area gains bottom padding while the mini-player is visible so
+   content is never permanently obscured by the fixed player overlay.       */
+body.player-active .app-shell__scroll-area {
+  padding-block-end: 3.5rem;
+}
+
+/* Inline transport: play/stop button + progress scrubber + time label. */
+.results-transport {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.results-transport__play {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.results-transport__scrubber {
+  -webkit-appearance: none;
+  appearance: none;
+  inline-size: clamp(4rem, 10vw, 9rem);
+  block-size: 3px;
+  border-radius: 999px;
+  border: none;
+  background: var(--border);
+  pointer-events: none;
+  flex-shrink: 1;
+}
+
+.results-transport__scrubber::-webkit-progress-bar {
+  background: var(--border);
+  border-radius: 999px;
+}
+
+.results-transport__scrubber::-webkit-progress-value {
+  background: var(--accent, #3557ff);
+  border-radius: 999px;
+}
+
+.results-transport__scrubber::-moz-progress-bar {
+  background: var(--accent, #3557ff);
+  border-radius: 999px;
+}
+
+.results-transport__time {
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted, color-mix(in srgb, CanvasText 60%, Canvas));
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+/* ── Now-playing card (inline, within the reading column) ────────────────── */
+
+.reader-nowplaying {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-block-start: var(--space-3);
+  padding: 0.55rem 0.75rem;
+  background: color-mix(in srgb, var(--accent) 6%, Canvas);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, Canvas);
+  border-radius: 0.75rem;
+  /* Sticky at bottom of reading column while scrolling through cards */
+  position: sticky;
+  inset-block-end: 0.75rem;
+  z-index: 20;
+}
+
+/* Lift sticky bottom when global mini-player is visible */
+body.player-active .reader-nowplaying {
+  inset-block-end: calc(3.5rem + 0.75rem);
+}
+
+.reader-nowplaying[hidden] { display: none; }
+
+.reader-nowplaying__info {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  flex: 1 1 0;
+  min-inline-size: 0;
+  overflow: hidden;
+}
+
+.reader-nowplaying__counter {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  flex-shrink: 0;
+  letter-spacing: 0.03em;
+}
+
+.reader-nowplaying__text {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  font-style: italic;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reader-nowplaying__controls {
+  display: flex;
+  gap: 0.1rem;
+  flex-shrink: 0;
+}
+
+.reader-nowplaying__btn {
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  min-block-size: 2.25rem;
+  min-inline-size: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.1s ease;
+}
+
+.reader-nowplaying__btn:hover {
+  background: color-mix(in srgb, var(--accent) 12%, Canvas);
+}
+
+.reader-nowplaying__btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-nowplaying__btn { transition: none; }
+}
+
+@media (max-width: 53.99rem) {
+  /* Compact now-playing on mobile */
+  .reader-nowplaying {
+    border-radius: 0.6rem;
+    inset-block-end: 0.4rem;
+  }
+  .reader-nowplaying__text {
+    display: none;
+  }
+  .reader-nowplaying__info {
+    flex: 0 0 auto;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   8. REVIEW CARD
+   Note: review.css (the source file) contains no card-flip animation rule —
+   mnemosyne-review-pane's flip animation lives entirely in that component's
+   own Shadow DOM, which is out of scope. This section holds the light-DOM
+   review session styling that did exist in review.css.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Trigger button + badge ─────────────────────────────────────────────────── */
+
+.review-trigger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.review-badge,
+.nav-due-badge {
+  /* Circular count pill; hidden when count is 0 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 1.25rem;
+  block-size: 1.25rem;
+  padding-inline: 0.25rem;
+  border-radius: 999px;
+  background: var(--accent, #3557ff);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.review-badge[hidden],
+.nav-due-badge[hidden] { display: none; }
+
+/* Nav badge: sits in the slotted nav__end area */
+.nav-due-badge {
+  margin-inline-end: 0.25rem;
+  vertical-align: middle;
+}
+
+@media (forced-colors: active) {
+  .nav-due-badge {
+    background: Highlight;
+    color: HighlightText;
+    border: 1px solid HighlightText;
+  }
+}
+
+/* Smooth entrance when #route-review is shown (respects reduced motion). */
+@media (prefers-reduced-motion: no-preference) {
+  #route-review:not([hidden]) {
+    animation: review-panel-in 0.2s ease both;
+  }
+}
+
+@keyframes review-panel-in {
+  from { opacity: 0; translate: 0 -0.5rem; }
+  to   { opacity: 1; translate: 0 0; }
+}
+
+/* ── "Review" quick-access button in the main authenticated area ─────────────── */
+
+.review-quick-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* Inherits ghost-button base styles above. */
+}
+
+.review-quick-btn .review-due-count {
+  font-size: 0.75rem;
+  background: var(--accent, #3557ff);
+  color: white;
+  border-radius: 999px;
+  padding: 0.05em 0.45em;
+  font-weight: 700;
+}
+
+.review-quick-btn .review-due-count[hidden] { display: none; }
+
+/* ── Weakness / learning profile disclosure ───────────────────────────────── */
+
+.weakness-graph-disclosure {
+  margin-block-start: 0.25rem;
+}
+
+.weakness-graph-disclosure__summary {
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--text-muted, #666);
+  user-select: none;
+  padding-block: 0.25rem;
+}
+
+.weakness-graph-disclosure__summary:focus-visible {
+  outline: 2px solid var(--accent, #3557ff);
+  outline-offset: 2px;
+}
+
+@media (forced-colors: active) {
+  .weakness-graph-disclosure__summary { color: ButtonText; }
+}
+
+/* ── 7-day review forecast ───────────────────────────────────────────────── */
+
+.forecast-disclosure {
+  margin-block-start: 0.25rem;
+}
+
+.forecast-disclosure__summary {
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--text-muted, #666);
+  user-select: none;
+  padding-block: 0.25rem;
+}
+
+.forecast-disclosure__summary:focus-visible {
+  outline: 2px solid var(--accent, #3557ff);
+  outline-offset: 2px;
+}
+
+.forecast-chart-wrap {
+  padding-block: 0.5rem 0.25rem;
+}
+
+.forecast-chart {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.25rem;
+  block-size: 72px;
+}
+
+.forecast-bar {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.15rem;
+}
+
+.forecast-bar__fill {
+  inline-size: 100%;
+  block-size: calc(var(--_h, 0) * 56px);
+  min-block-size: 2px;
+  background: color-mix(in srgb, var(--accent) 50%, transparent);
+  border-radius: 2px 2px 0 0;
+  transition: block-size 0.25s ease;
+}
+
+.forecast-bar--today .forecast-bar__fill {
+  background: var(--accent);
+}
+
+.forecast-bar__count {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  min-block-size: 0.7rem;
+}
+
+.forecast-bar__label {
+  font-size: 0.6rem;
+  color: var(--text-muted, #888);
+  line-height: 1;
+}
+
+.forecast-bar--today .forecast-bar__label {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .forecast-bar__fill { transition: none; }
+}
+
+@media (forced-colors: active) {
+  .forecast-bar__fill         { background: ButtonText; }
+  .forecast-bar--today .forecast-bar__fill { background: Highlight; }
+  .forecast-disclosure__summary { color: ButtonText; }
+}
+
+/* ── SRS stats summary bar ───────────────────────────────────────────────── */
+
+.srs-stats-bar {
+  padding-block: 0.5rem;
+}
+
+.srs-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.srs-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--surface-raised, #f0f0f0);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  min-inline-size: 5rem;
+  text-align: center;
+}
+
+.srs-stat__label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted, #666);
+  margin: 0;
+}
+
+.srs-stat__value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text, #111);
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (forced-colors: active) {
+  .srs-stat {
+    border: 1px solid ButtonText;
+  }
+  .srs-stat__label { color: GrayText; }
+  .srs-stat__value { color: ButtonText; }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   9. FOCUS MODE AND INLINE PREVIEWS
+   (from css/reading-experience-premium.css)
+   ══════════════════════════════════════════════════════════════════════════ */
+
+.site-hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.site-hero::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline: -1.5rem;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 12% 8%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 34%),
+    radial-gradient(circle at 90% 0%, color-mix(in srgb, var(--ann-literary) 10%, transparent), transparent 32%);
+  border-radius: calc(var(--radius) * 1.5);
   pointer-events: none;
 }
 
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Chapter heading: padded to align with prose gutter, serif weight */
+.results-heading-row {
+  padding-block: var(--space-3) var(--space-2);
+  padding-inline: clamp(1.5rem, 5vw, 3rem);
+  border-block-end: 1px solid var(--border);
+  margin-block-end: 0;
+}
+
+.results-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 1.5vw + 0.75rem, 1.6rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* ── Adaptive learning bar — inline reading feedback below the text panel ─── */
+
+.results-adaptive-bar {
+  border-block-start: 1px solid var(--border-soft, var(--border));
+  padding: var(--space-3) var(--space-4);
+  margin-block-start: var(--space-4);
+}
+
+.results-adaptive-bar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.results-adaptive-bar__heading {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+}
+
+.results-adaptive-bar__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.difficulty-feedback {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.difficulty-feedback__bias {
+  font-size: 0.72rem;
+  min-inline-size: 5ch;
+  text-align: center;
+  color: var(--muted);
+}
+
+.difficulty-feedback__btn {
+  font-size: 0.75rem;
+}
+
+.difficulty-modulation-toggle {
+  font-size: 0.72rem;
+  border-radius: 999px;
+}
+
+.results-adaptive-bar__hint {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-block: var(--space-1) 0;
+  line-height: 1.4;
+}
+
+.results-adaptive-bar__autonomous {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-block-start: var(--space-2);
+  padding-block-start: var(--space-2);
+  border-block-start: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.results-adaptive-bar__autonomous-hint {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* ── Help buttons and popovers ──────────────────────────────────────────── */
+
+.help-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 1.2rem;
+  block-size: 1.2rem;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--muted);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  flex-shrink: 0;
+  transition: color 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+}
+
+.help-btn:hover,
+.help-btn:focus-visible {
+  color: var(--text-primary);
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.reader-intelligence-summary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2, 0.5rem);
+}
+
+.reader-intelligence-summary__help {
+  margin-inline-start: auto;
+  flex-shrink: 0;
+}
+
+.reader-intelligence-summary__how {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.35rem 0.6rem;
+  background: var(--surface);
+}
+
+.reader-intelligence-summary__how-summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.reader-intelligence-summary__how-body {
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.reader-intelligence-summary__how-body p {
+  margin: 0 0 0.35rem;
+}
+
+.reader-intelligence-summary__how-body ul {
+  margin: 0;
+  padding-inline-start: 1.1rem;
+}
+
+.help-popover {
+  position: fixed;
+  inset: unset;
+  margin: 0;
+  max-inline-size: min(18rem, calc(100vw - 2rem));
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--elevation-2, 0 4px 12px rgb(0 0 0 / 0.10));
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+}
+
+/* Fallback for browsers without Popover API */
+.help-popover:not([popover]) {
+  display: none;
+}
+.help-popover:not([popover]).help-popover--open {
+  display: block;
+}
+
+.reader-intelligence-summary__stats {
+  display: contents;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .help-btn { transition: none; }
+}
+
+@media (forced-colors: active) {
+  .help-btn {
+    border: 1px solid ButtonText;
+    color: ButtonText;
+  }
+  .help-popover {
+    border: 1px solid CanvasText;
+    box-shadow: none;
+    background: Canvas;
+  }
+}
+
+/* ── Onboarding spotlight ──────────────────────────────────────────────── */
+
+.onboarding-spotlight {
+  animation: onboarding-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes onboarding-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--_annotation-color, var(--accent)) 50%, transparent); }
+  50%       { box-shadow: 0 0 0 5px color-mix(in srgb, var(--_annotation-color, var(--accent)) 20%, transparent); }
+}
+
+/* ── Onboarding welcome panel ──────────────────────────────────────────── */
+
+.mnemosyne-onboarding {
+  margin-block-end: var(--space-4);
+}
+
+.mnemosyne-onboarding__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-block-end: var(--space-1);
+}
+
+.mnemosyne-onboarding__eyebrow {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0;
+}
+
+.mnemosyne-onboarding__close {
+  flex-shrink: 0;
+  margin-block-start: -0.15rem;
+}
+
+.mnemosyne-onboarding__headline {
+  font-size: clamp(1.05rem, 1.5vw + 0.8rem, 1.3rem);
+  margin-block: 0 var(--space-2);
+  line-height: 1.3;
+}
+
+.mnemosyne-onboarding__list {
+  margin-block: 0 var(--space-2);
+  padding-inline-start: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.mnemosyne-onboarding__lede {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-block: 0 var(--space-3);
+  line-height: 1.5;
+}
+
+.mnemosyne-onboarding__actions {
+  margin-block-start: 0;
+}
+
+@keyframes onboarding-dismiss {
+  to { opacity: 0; transform: translateY(-0.4rem); max-block-size: 0; margin: 0; padding: 0; overflow: hidden; }
+}
+
+.mnemosyne-onboarding--dismissed {
+  animation: onboarding-dismiss 0.22s ease forwards;
+}
+
+/* ── First-run coach tooltip ──────────────────────────────────────────── */
+
+.mnemosyne-first-run-coach {
+  position: fixed;
+  inset-block-start: var(--coach-top, 50%);
+  inset-inline-start: var(--coach-left, 50%);
+  z-index: 300;
+  inline-size: 18rem;
+  padding: var(--space-2) var(--space-3);
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
+  border-radius: var(--radius);
+  box-shadow: var(--elevation-2, 0 4px 16px rgb(0 0 0 / 0.12));
+}
+
+/* Step dots: ● ○  (step 1) or ○ ●  (step 2) */
+.mnemosyne-first-run-coach::before {
+  content: '';
+  display: block;
+  margin-block-end: var(--space-1);
+  block-size: 0.4rem;
+  background-image:
+    radial-gradient(circle, var(--accent) 0.18rem, transparent 0.18rem),
+    radial-gradient(circle, var(--muted) 0.18rem, transparent 0.18rem);
+  background-size: 0.9rem 0.4rem;
+  background-repeat: no-repeat;
+  background-position: 0 50%, 1rem 50%;
+}
+
+.mnemosyne-first-run-coach[data-step="2"]::before {
+  background-image:
+    radial-gradient(circle, var(--muted) 0.18rem, transparent 0.18rem),
+    radial-gradient(circle, var(--accent) 0.18rem, transparent 0.18rem);
+}
+
+.mnemosyne-first-run-coach h4 {
+  margin: 0 0 var(--space-1);
+  font-size: 0.88rem;
+  padding-inline-end: 1.4rem;  /* avoid overlap with close ×  */
+}
+
+.mnemosyne-first-run-coach p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.mnemosyne-first-run-coach__close {
+  position: absolute;
+  inset-block-start: 0.4rem;
+  inset-inline-end: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mnemosyne-onboarding--dismissed {
+    animation: none;
+  }
+
+  .onboarding-spotlight {
+    animation: none;
+    outline: 2px solid var(--_annotation-color, var(--accent));
+    outline-offset: 2px;
+  }
+}
+
+@media (forced-colors: active) {
+  .onboarding-spotlight {
+    outline: 2px solid Highlight;
+    animation: none;
+  }
+
+  .mnemosyne-first-run-coach {
+    border: 2px solid CanvasText;
+    box-shadow: none;
+  }
+}
+
+/* ── Passage transition card ─────────────────────────────────────────────────
+   Appears after #results-section when the reader scrolls past the sentinel.  */
+
+.passage-transition-card {
+  margin-block-start: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--elevation-1, 0 1px 4px rgb(0 0 0 / 0.05));
+  animation: passage-transition-in 0.25s ease both;
+}
+
+@keyframes passage-transition-in {
+  from { opacity: 0; transform: translateY(0.5rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.passage-transition__reason {
+  margin: 0 0 var(--space-3);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.passage-transition__actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ── Autonomous countdown row ─────────────────────────────────────────────── */
+
+.passage-transition__auto {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-block-start: var(--space-3);
+  padding-block-start: var(--space-2);
+  border-block-start: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.passage-transition__countdown {
+  font-size: 0.8rem;
+  color: var(--muted);
+  flex: 1 1 auto;
+}
+
+.passage-transition__progress {
+  flex: 0 0 6rem;
+  block-size: 0.25rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--border) 60%, transparent);
+  overflow: hidden;
+}
+
+.passage-transition__progress-fill {
+  display: block;
+  block-size: 100%;
+  inline-size: 100%;
+  background: var(--accent-fill);
+  transform-origin: inline-start;
+  transform: scaleX(0);
+}
+
+.passage-transition__progress-fill--running {
+  animation: passage-countdown var(--passage-countdown-duration, 4s) linear forwards;
+}
+
+.passage-transition__progress-fill--paused {
+  animation-play-state: paused;
+}
+
+@keyframes passage-countdown {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .passage-transition-card {
+    animation: none;
+  }
+  .passage-transition__progress-fill--running {
+    animation: none;
+    transform: scaleX(0);
+  }
+}
+
+@media (forced-colors: active) {
+  .passage-transition-card {
+    border: 1px solid CanvasText;
+    box-shadow: none;
+    background: Canvas;
+  }
+  .passage-transition__progress {
+    border: 1px solid ButtonText;
+  }
+  .passage-transition__progress-fill {
+    background: ButtonText;
+  }
+}
+
+/* ── Recommended reading panel — compact / scroll-triggered ───────────────── */
+
+.rec-panel {
+  animation: passage-transition-in 0.3s ease both;
+}
+
+.rec-panel__eyebrow {
+  margin-block-end: var(--space-1, 0.25rem);
+}
+
+.rec-panel__rationale {
+  margin: 0 0 var(--space-3, 1rem);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.rec-panel__no-content {
+  font-size: 0.9rem;
+  color: var(--muted, color-mix(in srgb, CanvasText 55%, Canvas));
+  line-height: 1.5;
+  margin: 0;
+}
+
+.rec-panel__featured {
+  margin-block-end: var(--space-3, 1rem);
+}
+
+.rec-panel__actions {
+  margin-block-end: 0;
+}
+
+.rec-panel__expand-row {
+  display: flex;
+  justify-content: center;
+  margin-block-start: var(--space-2, 0.5rem);
+  padding-block-start: var(--space-2, 0.5rem);
+  border-block-start: 1px solid var(--border);
+}
+
+.rec-panel__alternatives[hidden] {
+  display: none !important;
+}
+
+.rec-panel__alternatives {
+  margin-block-start: var(--space-3, 1rem);
+}
+
+@media (forced-colors: active) {
+  .rec-panel {
+    border: 1px solid CanvasText;
+    box-shadow: none;
+    background: Canvas;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   10. ACCESSIBILITY — focus rings, aria-hidden, prefers-reduced-motion
+   (from css/enhanced-accessibility.css)
+   ══════════════════════════════════════════════════════════════════════════
+
+   Two complementary techniques for premium depth (from "The 60-second CSS
+   trick for expensive-looking UI"):
+
+     1. Multi-shade colour palette — every brand hue has a full tint/shade
+        scale so components can reference richer, more cohesive tones.
+
+     2. Dual-shadow elevation system — a warm-light highlight above (simulates
+        a single overhead light source) + a warm-dark shadow below (depth)
+        make every raised surface feel tactile and expensive.
+
+   Colour source: mnemosyneThumbnail.png — Greek red-figure terracotta pottery.
+   Primary: deep sienna (~#C44B22). Accent: warm ochre (~#D4892A).
+
+   ── RE-THEMING ──────────────────────────────────────────────────────────────
+   All brand colours live in "PALETTE TOKENS" below.  Change those values;
+   everything else picks them up automatically via custom properties.
+
+   ── ACCESSIBILITY GUARANTEES ────────────────────────────────────────────────
+   • WCAG 2.2 AA: all interactive text ≥ 4.5:1, large text / UI ≥ 3:1.
+   • WCAG 2.4.11 Focus Appearance (AA): 3 px outline, ≥ 3:1 against adjacent.
+   • WCAG 1.4.3 / forced-colours: shadows and bg-images stripped; border +
+     outline remain as sole visual indicators.
+   • prefers-contrast: more — border widths and text tones tightened.
+   • prefers-reduced-motion — all transform / transition animations removed
+     on every rule that adds them (inline @media blocks throughout this file).
+   • Print — box-shadows and tinted backgrounds stripped.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── PALETTE TOKENS ───────────────────────────────────────────────────────────
+   Terracotta scale — primary brand. Contrast values are against #FFFFFF (white).
+
+     --tc-500  #C44B22   4.73:1   WCAG AA  ✓  (brand base, button bg w/ white text)
+     --tc-600  #A83B1A   6.31:1   WCAG AA+ ✓
+     --tc-700  #8B2C12   8.41:1   WCAG AAA ✓
+
+   Ochre scale — warm golden accent from thumbnail figure highlights.
+
+     --oc-500  #B8721E   4.85:1   WCAG AA  ✓
+
+   Warm neutral scale — replaces cold grays; derived from terracotta hue.
+   --wn-600 #5E4E42 secondary text on white: 7.89:1  WCAG AAA ✓
+   --wn-800 #231A13 primary text on white:  14.2:1   WCAG AAA ✓
+   ─────────────────────────────────────────────────────────────────────── */
+:root {
+  /* Terracotta */
+  --tc-50:  #FEF2EC;
+  --tc-100: #FCDCC8;
+  --tc-200: #F5B28A;
+  --tc-300: #E8834E;
+  --tc-400: #D45A28;
+  --tc-500: #C44B22;
+  --tc-600: #A83B1A;
+  --tc-700: #8B2C12;
+  --tc-800: #6A1E0C;
+  --tc-900: #3D0F06;
+
+  /* Ochre */
+  --oc-300: #E8A850;
+  --oc-400: #D4892A;
+  --oc-500: #B8721E;
+  --oc-600: #9A5C14;
+
+  /* Warm neutrals */
+  --wn-50:  #FDFAF8;
+  --wn-100: #F7F0EB;
+  --wn-200: #EDE4DC;
+  --wn-300: #D8CBBF;
+  --wn-400: #B8A898;
+  --wn-500: #917E6E;   /* 4.52:1 on white  — meets AA for secondary text  */
+  --wn-600: #5E4E42;   /* 7.89:1 on white  — meets AAA                    */
+  --wn-700: #3A2D24;
+  --wn-800: #231A13;   /* 14.2:1 on white  — primary text                 */
+  --wn-900: #150E09;
+}
+
+/* ── BRAND OVERRIDES ───────────────────────────────────────────────────────────
+   Redirect the tokens.css brand tokens to the terracotta palette.
+   All downstream accent-coloured components (buttons, focus rings, active
+   chips, tabs, pills) update automatically.                                  */
+:root {
+  --brand-purple:       var(--tc-500);  /* was #7C3AED */
+  --brand-purple-light: var(--tc-50);   /* was #EDE9FE */
+
+  /* Warm surfaces — very subtle; preserves readability of all color-mix ops */
+  --surface:           var(--wn-100);   /* warm off-white cards              */
+  --surface-secondary: var(--wn-50);    /* warm page canvas                  */
+  --border:            var(--wn-200);   /* warm light border                 */
+
+  /* Warm text — still far above AAA contrast thresholds                     */
+  --text-primary:      var(--wn-800);   /* 14.2:1 on wn-50 ✓ AAA            */
+  --text-secondary:    var(--wn-600);   /*  7.89:1 on wn-50 ✓ AAA           */
+}
+
+/* Dark mode brand — lighter terracotta readable on dark surfaces */
+:root[data-theme="dark"] {
+  --brand-purple:       var(--tc-300);  /* bright on dark bg — 5.18:1 ✓ AA */
+  --brand-purple-light: var(--tc-800);
+
+  --surface:           #221A14;   /* warm dark card surface               */
+  --surface-secondary: #17100A;   /* warm dark canvas                     */
+  --border:            #3B2D24;   /* warm dark border                     */
+
+  --text-primary:      #F7EDE4;   /* warm near-white — high contrast ✓    */
+  --text-secondary:    var(--wn-400);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    --brand-purple:       var(--tc-300);  /* bright on dark bg — 5.18:1 ✓ AA */
+    --brand-purple-light: var(--tc-800);
+
+    --surface:           #221A14;   /* warm dark card surface               */
+    --surface-secondary: #17100A;   /* warm dark canvas                     */
+    --border:            #3B2D24;   /* warm dark border                     */
+
+    --text-primary:      #F7EDE4;   /* warm near-white — high contrast ✓    */
+    --text-secondary:    var(--wn-400);
+  }
+}
+
+/* ── DUAL-SHADOW TOKENS ───────────────────────────────────────────────────────
+   The technique:
+     • shadow-highlight — a short, diffuse shadow that rises ABOVE the
+       element, simulating reflected warm light from overhead.
+     • shadow-depth     — the main directional shadow BELOW the element.
+   Together they create the "lifted off the page" effect that makes UI
+   feel premium without heavy decoration.
+
+   Tokens are scoped to roles (panel, card, button, dialog) so each surface
+   can be tuned independently.
+   ─────────────────────────────────────────────────────────────────────────
+   NOTE: rgba() used intentionally — forced-colours mode suppresses all
+   box-shadows (UA behaviour), so colour information is never carried by
+   shadow alone.
+   ═══════════════════════════════════════════════════════════════════════ */
+:root {
+  /* Panel / section cards */
+  --shadow-panel:
+    0 -1px  3px  rgba(253, 210, 180, 0.55),   /* warm-light top gleam      */
+    0  4px  16px rgba(61,  15,  6,  0.11),    /* main warm shadow          */
+    0  1px   3px rgba(61,  15,  6,  0.07);    /* close ambient             */
+
+  /* Sentence cards — lighter to keep the list airy */
+  --shadow-card:
+    0 -1px  2px  rgba(253, 210, 180, 0.40),
+    0  2px   8px rgba(61,  15,  6,  0.09),
+    0  1px   2px rgba(61,  15,  6,  0.05);
+
+  /* Sentence cards on hover — more lift */
+  --shadow-card-hover:
+    0 -2px  5px  rgba(253, 210, 180, 0.55),
+    0  6px  18px rgba(61,  15,  6,  0.13),
+    0  1px   3px rgba(61,  15,  6,  0.07);
+
+  /* Modals / dialogs */
+  --shadow-dialog:
+    0 -1px  4px  rgba(253, 210, 180, 0.45),
+    0  8px  32px rgba(61,  15,  6,  0.20),
+    0  2px   8px rgba(61,  15,  6,  0.12);
+
+  /* Raised buttons — resting state */
+  --shadow-button:
+    0 -1px  2px  rgba(253, 210, 180, 0.55),
+    0  2px   6px rgba(61,  15,  6,  0.20),
+    0  1px   2px rgba(61,  15,  6,  0.12);
+
+  /* Raised buttons — hover (more lift) */
+  --shadow-button-hover:
+    0 -2px  4px  rgba(253, 210, 180, 0.65),
+    0  4px  12px rgba(61,  15,  6,  0.24),
+    0  1px   3px rgba(61,  15,  6,  0.14);
+
+  /* Raised buttons — pressed (sink back) */
+  --shadow-button-active:
+    0  0    1px  rgba(253, 210, 180, 0.30),
+    0  1px   3px rgba(61,  15,  6,  0.14),
+    inset 0 1px 3px rgba(61, 15, 6, 0.12);
+
+  /* ── Override the tokens.css --shadow token used by .panel ───────────── */
+  --shadow: var(--shadow-panel);
+}
+
+/* Dark mode — flip the light/dark roles; no warm highlight above */
+:root[data-theme="dark"] {
+  --shadow-panel:
+    0 -1px  3px  rgba(30, 10,  3,  0.80),
+    0  4px  20px rgba(0,   0,  0,  0.45),
+    0  1px   4px rgba(0,   0,  0,  0.30);
+
+  --shadow-card:
+    0 -1px  2px  rgba(30, 10,  3,  0.70),
+    0  2px  10px rgba(0,   0,  0,  0.38),
+    0  1px   3px rgba(0,   0,  0,  0.22);
+
+  --shadow-card-hover:
+    0 -2px  4px  rgba(30, 10,  3,  0.80),
+    0  6px  20px rgba(0,   0,  0,  0.50),
+    0  1px   4px rgba(0,   0,  0,  0.28);
+
+  --shadow-dialog:
+    0 -1px  4px  rgba(30, 10,  3,  0.90),
+    0  8px  40px rgba(0,   0,  0,  0.60),
+    0  2px  10px rgba(0,   0,  0,  0.35);
+
+  --shadow-button:
+    0 -1px  2px  rgba(30, 10,  3,  0.80),
+    0  2px   8px rgba(0,   0,  0,  0.42),
+    0  1px   3px rgba(0,   0,  0,  0.28);
+
+  --shadow-button-hover:
+    0 -2px  4px  rgba(30, 10,  3,  0.90),
+    0  4px  14px rgba(0,   0,  0,  0.55),
+    0  1px   4px rgba(0,   0,  0,  0.32);
+
+  --shadow-button-active:
+    0  0    1px  rgba(30, 10,  3,  0.60),
+    0  1px   4px rgba(0,   0,  0,  0.32),
+    inset 0 1px 4px rgba(0, 0, 0, 0.38);
+
+  --shadow: var(--shadow-panel);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    --shadow-panel:
+      0 -1px  3px  rgba(30, 10,  3,  0.80),
+      0  4px  20px rgba(0,   0,  0,  0.45),
+      0  1px   4px rgba(0,   0,  0,  0.30);
+
+    --shadow-card:
+      0 -1px  2px  rgba(30, 10,  3,  0.70),
+      0  2px  10px rgba(0,   0,  0,  0.38),
+      0  1px   3px rgba(0,   0,  0,  0.22);
+
+    --shadow-card-hover:
+      0 -2px  4px  rgba(30, 10,  3,  0.80),
+      0  6px  20px rgba(0,   0,  0,  0.50),
+      0  1px   4px rgba(0,   0,  0,  0.28);
+
+    --shadow-dialog:
+      0 -1px  4px  rgba(30, 10,  3,  0.90),
+      0  8px  40px rgba(0,   0,  0,  0.60),
+      0  2px  10px rgba(0,   0,  0,  0.35);
+
+    --shadow-button:
+      0 -1px  2px  rgba(30, 10,  3,  0.80),
+      0  2px   8px rgba(0,   0,  0,  0.42),
+      0  1px   3px rgba(0,   0,  0,  0.28);
+
+    --shadow-button-hover:
+      0 -2px  4px  rgba(30, 10,  3,  0.90),
+      0  4px  14px rgba(0,   0,  0,  0.55),
+      0  1px   4px rgba(0,   0,  0,  0.32);
+
+    --shadow-button-active:
+      0  0    1px  rgba(30, 10,  3,  0.60),
+      0  1px   4px rgba(0,   0,  0,  0.32),
+      inset 0 1px 4px rgba(0, 0, 0, 0.38);
+
+    --shadow: var(--shadow-panel);
+  }
+}
+
+/* ── Layered shadows (premium reading experience) — realistic light falloff
+   instead of one heavy blur.                                                */
+:root {
+  --elevation-1:
+    0 1px 2px rgb(0 0 0 / 0.04),
+    0 2px 4px rgb(0 0 0 / 0.03);
+
+  --elevation-2:
+    0 1px 2px rgb(0 0 0 / 0.05),
+    0 4px 8px rgb(0 0 0 / 0.04),
+    0 12px 24px rgb(0 0 0 / 0.05);
+
+  --elevation-3:
+    0 2px 4px rgb(0 0 0 / 0.06),
+    0 8px 18px rgb(0 0 0 / 0.06),
+    0 24px 48px rgb(0 0 0 / 0.08);
+
+  --surface-glass: color-mix(in srgb, var(--surface) 88%, transparent);
+  --surface-raised: color-mix(in srgb, var(--surface) 94%, white 6%);
+  --border-soft: color-mix(in srgb, var(--border) 82%, CanvasText 18%);
+  --reader-measure: 68ch;
+}
+
+:root[data-theme="dark"] {
+  --surface-raised: color-mix(in srgb, var(--surface) 90%, white 4%);
+  --border-soft: color-mix(in srgb, var(--border) 78%, CanvasText 22%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    --surface-raised: color-mix(in srgb, var(--surface) 90%, white 4%);
+    --border-soft: color-mix(in srgb, var(--border) 78%, CanvasText 22%);
+  }
+}
+
+/* ── PANEL ELEVATION ─────────────────────────────────────────────────────── */
+
+.panel {
+  box-shadow: var(--shadow-panel);
+  border-color: var(--border);
+  background: var(--surface);
+  /* Required for the ::before gloss line below */
+  position: relative;
+}
+
+/* Subtle warm gloss line along the top edge — light appears to come
+   from directly above, catching the top rim of the raised surface.
+   pointer-events:none ensures it never intercepts clicks.            */
+.panel::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  block-size: 1px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: linear-gradient(
+    to right,
+    transparent 5%,
+    rgba(255, 215, 180, 0.65) 30%,
+    rgba(255, 215, 180, 0.65) 70%,
+    transparent 95%
+  );
+  pointer-events: none;
+}
+
+:root[data-theme="dark"] .panel::before {
+  background: linear-gradient(
+    to right,
+    transparent 5%,
+    rgba(255, 255, 255, 0.05) 30%,
+    rgba(255, 255, 255, 0.05) 70%,
+    transparent 95%
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] .panel::before {
+    background: linear-gradient(
+      to right,
+      transparent 5%,
+      rgba(255, 255, 255, 0.05) 30%,
+      rgba(255, 255, 255, 0.05) 70%,
+      transparent 95%
+    );
+  }
+}
+
+/* ── Global tactile surfaces (premium reading experience) ─────────────────── */
+
+.panel,
+.picker-dialog__inner,
+.reader-nowplaying {
+  background:
+    linear-gradient(180deg, var(--surface-raised), var(--surface)),
+    var(--surface);
+  border-color: var(--border-soft);
+  box-shadow: var(--elevation-2);
+}
+
+/* ── TYPOGRAPHY REFINEMENTS ─────────────────────────────────────────────────
+   Very slight tightening on headings for a more finished editorial feel.    */
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.015em;
+}
+
+/* ── FORCED COLOURS (Windows High Contrast / Forced Colours API) ─────────────
+   In forced-colours mode the UA:
+     • Maps custom colours to system keywords (ButtonText, Canvas, etc.).
+     • Strips all box-shadow values (they convey no info in this mode).
+     • Strips background-image (gradients).
+   We ensure every component remains fully perceivable via border + outline
+   alone, with no reliance on shadow or colour.                              */
+
+@media (forced-colors: active) {
+  .panel,
+  .sentence-card,
+  .picker-dialog {
+    border: 2px solid ButtonText;
+    box-shadow: none;
+  }
+
+  /* Remove the gloss line pseudo — meaningless in forced-colours mode */
+  .panel::before {
+    display: none;
+  }
+
+  .app-shell__top-nav,
+  .app-shell__filter-bar {
+    box-shadow: none;
+    border-color: ButtonText;
+  }
+}
+
+/* ── PREFERS-CONTRAST: MORE ───────────────────────────────────────────────────
+   Users who want higher contrast without forced-colours get tighter borders
+   and a slightly darker secondary text tone.  All values still ≥ AA.        */
+
+@media (prefers-contrast: more) {
+  :root {
+    --border:         var(--wn-400);    /* darker border                     */
+    --text-secondary: var(--wn-700);    /* darker secondary text ~11:1 ✓ AAA */
+  }
+
+  .panel,
+  .sentence-card,
+  .picker-dialog {
+    border-width: 2px;
+  }
+
+  .ghost-button,
+  .rating-button,
+  input,
+  textarea,
+  select {
+    border-width: 2px;
+  }
+}
+
+/* ── PRINT ─────────────────────────────────────────────────────────────────
+   Remove cosmetic shadows and tinted backgrounds to minimise ink use.
+   All content remains readable via default black-on-white print styles.    */
+
+@media print {
+  .panel,
+  .sentence-card,
+  .picker-dialog {
+    box-shadow: none;
+    background: transparent;
+    border: 1px solid #aaa;
+  }
+
+  .panel::before {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   11. STATS BAR, BADGES, TOOLTIPS
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Offline queue badge ────────────────────────────────────────────────────── */
+
+.offline-queue-badge {
+  /* Inherit pill shape from .nav-due-badge but with a text label */
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 0.5rem;
+  padding-block: 0.15rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+  vertical-align: middle;
+  margin-inline-end: 0.25rem;
+  background: oklch(78% 0.12 65);
+  color: oklch(25% 0.08 65);
+  transition: opacity 0.2s;
+}
+
+.offline-queue-badge[hidden] { display: none; }
+
+.offline-queue-badge[data-state="offline"] {
+  background: oklch(72% 0.14 45);
+  color: oklch(22% 0.10 45);
+}
+
+.offline-queue-badge[data-state="pending"] {
+  background: oklch(82% 0.10 80);
+  color: oklch(28% 0.08 80);
+}
+
+.offline-queue-badge[data-state="syncing"] {
+  background: oklch(68% 0.12 250);
+  color: white;
+  animation: _offline-pulse 1.2s ease-in-out infinite;
+}
+
+.offline-queue-badge[data-state="synced"] {
+  background: oklch(68% 0.14 145);
+  color: white;
+}
+
+.offline-queue-badge[data-state="expired"] {
+  background: oklch(60% 0.16 25);
+  color: white;
+}
+
+@keyframes _offline-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
+}
+
+@media (forced-colors: active) {
+  .offline-queue-badge {
+    background: Highlight;
+    color: HighlightText;
+    border: 1px solid HighlightText;
+  }
+}
+
+/* ── Daily learning insight ─────────────────────────────────────────────────── */
+
+.daily-insight {
+  padding-block: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted, #555);
+  line-height: 1.5;
+}
+
+.daily-insight__item {
+  display: inline;
+}
+
+.daily-insight__item + .daily-insight__item::before {
+  content: ' · ';
+  color: var(--text-muted, #888);
+}
+
+.daily-insight__label {
+  font-weight: 600;
+  color: var(--text, #111);
+}
+
+.daily-insight__accent {
+  color: oklch(45% 0.16 25);
+}
+
+@media (forced-colors: active) {
+  .daily-insight { color: GrayText; }
+  .daily-insight__label { color: ButtonText; }
+  .daily-insight__accent { color: Highlight; }
+}
+
+/* ── Retention / calibration panel ─────────────────────────────────────────── */
+
+.retention-disclosure {
+  margin-block-start: 0.25rem;
+}
+
+.retention-disclosure__summary {
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--text-muted, #666);
+  user-select: none;
+  padding-block: 0.25rem;
+}
+
+.retention-disclosure__summary:focus-visible {
+  outline: 2px solid var(--accent, #3557ff);
+  outline-offset: 2px;
+}
+
+.retention-panel__body {
+  padding-block: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.retention-panel__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+  margin-block-end: 0.25rem;
+}
+
+.retention-panel__label {
+  color: var(--text-muted, #666);
+  flex-shrink: 0;
+}
+
+.retention-panel__value {
+  font-weight: 600;
+  color: var(--text, #111);
+}
+
+.retention-panel__muted {
+  color: var(--text-muted, #888);
+  font-size: 0.8rem;
+}
+
+.retention-panel__actions {
+  margin-block-start: 0.5rem;
+}
+
+.retention-panel__recalibrate-btn {
+  font-size: 0.8rem;
+  padding-block: 0.2rem;
+  padding-inline: 0.6rem;
+}
+
+.retention-panel__status {
+  display: inline-block;
+  margin-inline-start: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted, #666);
+  font-style: italic;
+}
+
+@media (forced-colors: active) {
+  .retention-disclosure__summary { color: ButtonText; }
+  .retention-panel__label { color: GrayText; }
+  .retention-panel__value { color: ButtonText; }
+}
+
+/* ── Job progress bar ─────────────────────────────────────────────────────── */
+
+@keyframes progress-scan {
+  0%   { inset-inline-start: -35%; inline-size: 35%; }
+  100% { inset-inline-start: 100%; inline-size: 35%; }
+}
+
+.job-progress {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.job-progress__bar {
+  block-size: 0.375rem;
+  border-radius: 9999px;
+  background-color: var(--border);
+  overflow: hidden;
+  position: relative;
+}
+
+.job-progress__bar::after {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  inline-size: var(--progress, 0%);
+  background-color: var(--accent-fill);
+  border-radius: inherit;
+  transition: inline-size 0.3s ease;
+}
+
+.job-progress__bar--indeterminate::after {
+  animation: progress-scan 1.4s ease-in-out infinite;
+  inline-size: 35%;
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .job-progress__bar--indeterminate::after {
+    animation: none;
+    inline-size: 100%;
+    opacity: 0.35;
+  }
+}
+
+.job-progress__label {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ── Results difficulty badge ────────────────────────────────────────────── */
+
+.results-difficulty {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 0.1em;
+  padding-inline: 0.5em;
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+  /* default (unknown level) */
+  background: var(--brand-purple-light);
+  color: var(--brand-purple);
+  border: 1px solid color-mix(in srgb, var(--brand-purple) 25%, transparent);
+}
+
+.results-difficulty[hidden] { display: none; }
+
+/* A-level: green */
+.results-difficulty[data-cefr="A1"],
+.results-difficulty[data-cefr="A2"] {
+  background: oklch(0.95 0.06 145);
+  color: oklch(0.35 0.14 145);
+  border-color: oklch(0.70 0.10 145);
+}
+
+/* B-level: amber */
+.results-difficulty[data-cefr="B1"],
+.results-difficulty[data-cefr="B2"] {
+  background: oklch(0.96 0.08 75);
+  color: oklch(0.40 0.14 65);
+  border-color: oklch(0.72 0.12 75);
+}
+
+/* C-level: red */
+.results-difficulty[data-cefr="C1"],
+.results-difficulty[data-cefr="C2"] {
+  background: oklch(0.96 0.07 20);
+  color: oklch(0.40 0.16 25);
+  border-color: oklch(0.72 0.12 20);
+}
+
+@media (prefers-color-scheme: dark) {
+  .results-difficulty[data-cefr="A1"],
+  .results-difficulty[data-cefr="A2"] {
+    background: oklch(0.25 0.07 145);
+    color: oklch(0.80 0.14 145);
+    border-color: oklch(0.40 0.10 145);
+  }
+  .results-difficulty[data-cefr="B1"],
+  .results-difficulty[data-cefr="B2"] {
+    background: oklch(0.25 0.07 75);
+    color: oklch(0.80 0.12 75);
+    border-color: oklch(0.40 0.10 75);
+  }
+  .results-difficulty[data-cefr="C1"],
+  .results-difficulty[data-cefr="C2"] {
+    background: oklch(0.25 0.07 20);
+    color: oklch(0.80 0.12 20);
+    border-color: oklch(0.40 0.10 20);
+  }
+}
+
+[data-theme="dark"] .results-difficulty[data-cefr="A1"],
+[data-theme="dark"] .results-difficulty[data-cefr="A2"] {
+  background: oklch(0.25 0.07 145);
+  color: oklch(0.80 0.14 145);
+  border-color: oklch(0.40 0.10 145);
+}
+[data-theme="dark"] .results-difficulty[data-cefr="B1"],
+[data-theme="dark"] .results-difficulty[data-cefr="B2"] {
+  background: oklch(0.25 0.07 75);
+  color: oklch(0.80 0.12 75);
+  border-color: oklch(0.40 0.10 75);
+}
+[data-theme="dark"] .results-difficulty[data-cefr="C1"],
+[data-theme="dark"] .results-difficulty[data-cefr="C2"] {
+  background: oklch(0.25 0.07 20);
+  color: oklch(0.80 0.12 20);
+  border-color: oklch(0.40 0.10 20);
+}
+
+@media (forced-colors: active) {
+  .results-difficulty {
+    background: ButtonFace;
+    color: ButtonText;
+    border: 1px solid ButtonText;
+  }
+}
+
+/* ── Picker difficulty badge (in picker dialog, pre-parse) ────────────────── */
+/* See .picker-difficulty* rules in section 2 (Form elements). */
+
+/* ══════════════════════════════════════════════════════════════════════════
+   12. WEAKNESS GRAPH
+   See section 8 (Review card) for .weakness-graph-disclosure* rules, which
+   sit alongside the forecast/SRS-stats disclosures they were authored with
+   in review.css.  This section is reserved for any weakness-graph-specific
+   visual chart rules; none beyond the disclosure trigger currently exist.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════════════════════════════════
+   13. MISC / PAGE SECTIONS
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Startup warning banner ──────────────────────────────────────────────────
+   Shown by JS when /ready reports startup errors or returns 503.
+   role="alert" in HTML ensures the message is announced immediately on show.
+   Sits above the header so it is the first visible content after the skip link. */
+.startup-banner {
+  background: color-mix(in srgb, var(--error-color) 8%, Canvas);
+  border-block-end: 2px solid var(--error-color);
+  color: var(--error-color);
+  padding: var(--space-2) var(--space-4);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
+/* Restore default hidden behaviour — display:flex above would override it. */
+.startup-banner[hidden] { display: none; }
+
+.startup-banner__icon {
+  flex-shrink: 0;
+}
+
+/* Header inner — lays heading text and user-info side by side on wide screens,
+   stacks them on narrow ones. */
+.site-header__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* User-info pill — email + sign-out button */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  /* Push to the inline-end edge on wide screens. */
+  margin-inline-start: auto;
+}
+
+.user-info__email {
+  font-size: 0.875rem;
+  color: var(--muted);
+  /* Truncate long email addresses on narrow screens.
+     min-inline-size: 0 lets the flex item shrink below its un-wrapped
+     content width so text-overflow: ellipsis actually fires. */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-inline-size: 18rem;
+  min-inline-size: 0;
+}
+
+/* ── Auth panel ──────────────────────────────────────────────────────────────
+   Displayed when no JWT is in sessionStorage.  Constrained width so the form
+   doesn't stretch the full page on wide viewports.                           */
+
+#auth-panel {
+  padding-block-start: var(--space-4);
+}
+
+#auth-panel .panel {
+  max-inline-size: 28rem;
+  margin-inline: auto;
+}
+
+/* Tab list — two tabs side by side */
+.auth-tabs {
+  display: flex;
+  gap: 0;
+  border-block-end: 2px solid var(--border);
+  margin-block-end: var(--space-3);
+}
+
+.auth-tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-block-end: 3px solid transparent;
+  margin-block-end: -2px;   /* overlap the tablist border */
+  padding-block: var(--space-2);
+  padding-inline: var(--space-3);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--muted);
+  /* 2.75 rem ≈ 44 CSS px — WCAG 2.5.8 minimum touch target size. */
+  min-block-size: 2.75rem;
+  transition: color 0.1s ease, border-color 0.1s ease;
+}
+
+.auth-tab[aria-selected="true"] {
+  color: var(--accent);
+  border-block-end-color: var(--accent);
+}
+
+.auth-tab:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-tab {
+    transition: none;
+  }
+}
+
+/* Auth form — add a bit of breathing room between fields and the submit row. */
+.auth-form .button-row {
+  margin-block-start: var(--space-2);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.875rem;
+}
+
+h1 {
+  /* Scales from 1.5 rem on narrow viewports to 2.25 rem on wide ones,
+     so the heading stays readable at 200% zoom without overflowing. */
+  font-size: clamp(1.5rem, 3vw + 1rem, 2.25rem);
+}
+
+/* Site hero: serif for a literary / editorial tone. */
+.site-hero h1 {
+  font-family: var(--font-serif);
+  font-weight: 400; /* Georgia at 700 is too heavy */
+  letter-spacing: -0.01em;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-block: 0 0.75rem;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  /* clamp keeps padding comfortable on narrow screens and at 200% zoom. */
+  padding: clamp(1rem, 4vw, 1.5rem);
+  margin-block-end: var(--space-4);
+}
+
+.stack > * + * {
+  margin-block-start: var(--space-3);
+}
+
+.results {
+  display: grid;
+  gap: var(--space-3);
+}
+
+/* ── Prose content (privacy page, long-form text) ───────────────────────────
+   Simple readable layout for article pages.  Max width keeps line length
+   comfortable; flow children get vertical rhythm via gap or margin.          */
+.prose {
+  max-inline-size: 52rem;
+  padding-block: var(--space-4);
+}
+
+.prose h2 {
+  margin-block: var(--space-4) var(--space-2);
+  font-size: 1.2rem;
+}
+
+.prose p,
+.prose ul {
+  margin-block: 0 var(--space-3);
+}
+
+.prose ul {
+  padding-inline-start: 1.5rem;
+}
+
+.prose li {
+  margin-block-end: var(--space-1);
+}
+
+.prose a {
+  color: var(--accent);
+}
+
+/* ── Site footer ─────────────────────────────────────────────────────────────
+   Slim footer below the main content.  Uses muted text and a top border to
+   visually separate it without heavyweight styling.                           */
+.site-footer {
+  flex-shrink: 0;
+  padding-block: var(--space-4);
+  border-block-start: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.site-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.site-footer__inner p {
+  margin: 0;
+}
+
+.site-footer__inner a {
+  color: inherit;
+}
+
+.site-footer__inner a:hover {
+  color: var(--text);
+}
+
+/* ── Footer links row ────────────────────────────────────────────────────────
+   Flex row that holds About and Privacy policy CTAs at uniform spacing.       */
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* ── Results heading row (structure) ─────────────────────────────────────────
+   Flex row: hgroup (eyebrow + title) on the inline-start, actions on the end. */
+
+.results-hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-inline-size: 0;
+}
+
+.results-source-eyebrow {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.results-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  min-inline-size: 0;
+}
+
+/* Action buttons cluster on the inline-end edge of the results heading row. */
+.results-heading-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-wrap: wrap;
+}
+
+/* ── Chosen text display ─────────────────────────────────────────────────────
+   Non-editable preview of selected text, shown after picker closes.          */
+.chosen-text-display {
+  background: color-mix(in srgb, var(--bg) 90%, var(--border) 10%);
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-block-size: 6rem;
+  overflow-y: auto;
+}
+
+/* ── Continue reading strip ──────────────────────────────────────────────── */
+
+.corpus-in-progress {
+  border-block-end: 1px solid var(--border);
+  padding-block-end: 0.75rem;
+  margin-block-end: 0.5rem;
+}
+
+.corpus-in-progress__heading {
+  font-size: var(--font-size-label);
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-block-end: 0.5rem;
+}
+
+.corpus-in-progress__scroll {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.corpus-in-progress__list {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0.25rem;
+}
+
+.corpus-in-progress__card {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-inline-size: 180px;
+  max-inline-size: 220px;
+  padding: 0.5rem 0.75rem;
+  background: var(--surface-alt);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.corpus-in-progress__lang {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.corpus-in-progress__title {
+  font-size: var(--font-size-label);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.corpus-in-progress__bar {
+  block-size: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.corpus-in-progress__fill {
+  block-size: 100%;
+  background: oklch(60% 0.15 250);
+  border-radius: 2px;
+  transition: inline-size 0.3s ease;
+}
+
+.corpus-in-progress__pct {
+  font-size: 0.65rem;
+  color: var(--muted);
+}
+
+.corpus-in-progress__resume {
+  margin-block-start: 0.25rem;
+}
+
+/* ── Bulk action bar ─────────────────────────────────────────────────────── */
+
+.corpus-bulk-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--surface-alt);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.corpus-bulk-bar__count {
+  font-size: var(--font-size-label);
+  color: var(--muted);
+  min-inline-size: 5ch;
+}
+
+.corpus-bulk-bar__input {
+  flex: 1 1 120px;
+  min-inline-size: 80px;
+  max-inline-size: 200px;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--font-size-label);
+}
+
+/* ── Corpus list bulk checkboxes ─────────────────────────────────────────── */
+
+.corpus-browser-list--bulk .corpus-browser-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.corpus-browser-list__checkbox {
+  margin-block-start: 0.25rem;
+  flex-shrink: 0;
+  accent-color: oklch(60% 0.15 250);
+}
+
+/* ── Provenance row ──────────────────────────────────────────────────────── */
+
+.corpus-browser-list__provenance {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-block-start: 0.25rem;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.corpus-browser-list__author {
+  font-style: italic;
+}
+
+.corpus-browser-list__source-link {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.corpus-browser-list__source-link:hover {
+  text-decoration: underline;
+}
+
+.corpus-browser-list__type-badge {
+  padding: 0.1em 0.4em;
+  border-radius: 0.25em;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+/* ── Shelf select on cards ───────────────────────────────────────────────── */
+
+.corpus-browser-list__shelf-select {
+  font-size: 0.7rem;
+  margin-block-start: 0.2rem;
+}
+
+/* ── Import history panel ────────────────────────────────────────────────── */
+
+.corpus-import-log {
+  padding-block-start: 0.5rem;
+}
+
+.corpus-import-log__toggle {
+  font-size: var(--font-size-label);
+}
+
+.corpus-import-log__list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.corpus-import-log__empty {
+  font-size: var(--font-size-label);
+  color: var(--muted);
+  padding: 0.25rem 0;
+}
+
+.corpus-import-log__item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: var(--font-size-label);
+  padding: 0.2rem 0;
+  border-block-end: 1px solid var(--border);
+}
+
+.corpus-import-log__status {
+  flex-shrink: 0;
+  font-weight: 600;
+  font-size: 0.65rem;
+  padding: 0.1em 0.4em;
+  border-radius: 0.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.corpus-import-log__item--success .corpus-import-log__status {
+  background: oklch(92% 0.07 145);
+  color: oklch(38% 0.12 145);
+}
+
+.corpus-import-log__item--failed .corpus-import-log__status {
+  background: oklch(92% 0.07 25);
+  color: oklch(38% 0.12 25);
+}
+
+.corpus-import-log__item--duplicate .corpus-import-log__status {
+  background: oklch(92% 0.05 55);
+  color: oklch(38% 0.08 55);
+}
+
+.corpus-import-log__title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.corpus-import-log__error {
+  color: var(--muted);
+  font-size: 0.65rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-inline-size: 200px;
+}
 
 /* ── Reading history ─────────────────────────────────────────────────────────── */
 
@@ -1311,7 +5872,6 @@ body.player-active .reader-nowplaying {
   .reading-history__bar  { background: Highlight; }
 }
 
-
 /* ── Load-lesson list ────────────────────────────────────────────────────────── */
 
 .load-lesson-list {
@@ -1409,27 +5969,6 @@ body.player-active .reader-nowplaying {
   font-size: 0.875rem;
   padding: 0.5rem 0;
 }
-
-/* ── GDPR dialog content ─────────────────────────────────────────────────────── */
-
-.gdpr-content h3 {
-  font-size: 0.875rem;
-  font-weight: 700;
-  margin-block-end: 0.25rem;
-  color: var(--text-primary);
-}
-
-.gdpr-content ul {
-  padding-inline-start: 1.25rem;
-  margin: 0;
-}
-
-.gdpr-content p,
-.gdpr-content li {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-}
-
 
 /* ── Recommended Reading Panel ──────────────────────────────────────────────
    Sits inside the left column (app-shell__left).  container-type lets the

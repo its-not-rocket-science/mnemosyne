@@ -6,7 +6,7 @@ FLOW = (ROOT / 'frontend/js/flow-mode.js').read_text(encoding='utf-8')
 ADAPTIVE = (ROOT / 'frontend/js/adaptive-reader.js').read_text(encoding='utf-8')
 DIFFICULTY = (ROOT / 'frontend/js/difficulty-modulation.js').read_text(encoding='utf-8')
 I18N = (ROOT / 'frontend/js/i18n.js').read_text(encoding='utf-8')
-READING_CSS = (ROOT / 'frontend/css/reading-progressive.css').read_text(encoding='utf-8')
+READING_CSS = (ROOT / 'frontend/css/components.css').read_text(encoding='utf-8')
 
 
 def test_subtle_learning_deep_modes_are_wired_and_persisted():

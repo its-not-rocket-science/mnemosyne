@@ -15,7 +15,7 @@ const document  = loadDocument()
 // Corpus browser lives entirely in js/modes/library.js after the main.js
 // split (Session 1 of the frontend refactor).
 const mainJs    = readSource('js/modes/library.js')
-const globalCss = readSource('css/global.css')
+const globalCss = readSource('css/components.css')
 const i18n      = readSource('js/i18n.js')
 
 // ── Route structure ───────────────────────────────────────────────────────────
