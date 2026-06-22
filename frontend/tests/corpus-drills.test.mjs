@@ -12,7 +12,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT      = path.resolve(__dirname, '..')
 
 const html   = readFileSync(path.join(ROOT, 'index.html'), 'utf8')
-const mainJs = readFileSync(path.join(ROOT, 'js', 'main.js'), 'utf8')
+// Corpus drills moved to js/modes/review.js (the button handler,
+// _openCorpusDrills renamed to exported openCorpusDrills) after the main.js
+// split (Session 1 of the frontend refactor); the renderResults
+// show/hide-on-nuance gating stays with js/modes/lesson.js.
+const reviewJs = readFileSync(path.join(ROOT, 'js', 'modes', 'review.js'), 'utf8')
+const lessonJs = readFileSync(path.join(ROOT, 'js', 'modes', 'lesson.js'), 'utf8')
+const mainJs = reviewJs + lessonJs
 const i18n   = readFileSync(path.join(ROOT, 'js', 'i18n.js'), 'utf8')
 
 // ── HTML ──────────────────────────────────────────────────────────────────────
@@ -26,17 +32,17 @@ console.log('✓ HTML: #corpus-drills-btn present with i18n attr')
 
 // ── main.js: DOM ref ──────────────────────────────────────────────────────────
 
-assert.ok(mainJs.includes('corpusDrillsBtn'), 'main.js must declare corpusDrillsBtn')
+assert.ok(mainJs.includes('corpusDrillsBtn'), 'review.js/lesson.js must declare corpusDrillsBtn')
 assert.ok(
   mainJs.includes("querySelector('#corpus-drills-btn')"),
-  'main.js must query #corpus-drills-btn'
+  'review.js/lesson.js must query #corpus-drills-btn'
 )
-console.log('✓ main.js: corpusDrillsBtn DOM ref declared')
+console.log('✓ review.js/lesson.js: corpusDrillsBtn DOM ref declared')
 
 // ── renderResults: shows/hides button based on nuance items ──────────────────
 
-const renderIdx  = mainJs.indexOf('function renderResults(')
-const renderBody = mainJs.slice(renderIdx, mainJs.indexOf('\nfunction ', renderIdx + 10))
+const renderIdx  = lessonJs.indexOf('function renderResults(')
+const renderBody = lessonJs.slice(renderIdx, lessonJs.indexOf('\nfunction ', renderIdx + 10))
 assert.ok(
   renderBody.includes('corpusDrillsBtn'),
   'renderResults must update corpusDrillsBtn visibility'
@@ -45,28 +51,28 @@ assert.ok(
   renderBody.includes("type === 'nuance'"),
   'renderResults must check for nuance items'
 )
-console.log('✓ main.js: renderResults gates button on nuance items')
+console.log('✓ lesson.js: renderResults gates button on nuance items')
 
-// ── _openCorpusDrills function ────────────────────────────────────────────────
+// ── openCorpusDrills function ─────────────────────────────────────────────────
 
-assert.ok(mainJs.includes('async function _openCorpusDrills('), 'main.js must define _openCorpusDrills')
-const drillsIdx  = mainJs.indexOf('async function _openCorpusDrills(')
-const drillsBody = mainJs.slice(drillsIdx, drillsIdx + 1400)
-assert.ok(drillsBody.includes('nuance_types'),        '_openCorpusDrills must collect nuance_types')
-assert.ok(drillsBody.includes('nuance_type'),         '_openCorpusDrills must read lesson_data.nuance_type')
-assert.ok(drillsBody.includes('/nuance-drills'),      '_openCorpusDrills must call /nuance-drills endpoint')
-assert.ok(drillsBody.includes('syntheticLesson'),     '_openCorpusDrills must build synthetic lesson')
-assert.ok(drillsBody.includes('modal.open('),         '_openCorpusDrills must open modal')
+assert.ok(reviewJs.includes('async function openCorpusDrills('), 'review.js must define openCorpusDrills')
+const drillsIdx  = reviewJs.indexOf('async function openCorpusDrills(')
+const drillsBody = reviewJs.slice(drillsIdx, drillsIdx + 1400)
+assert.ok(drillsBody.includes('nuance_types'),        'openCorpusDrills must collect nuance_types')
+assert.ok(drillsBody.includes('nuance_type'),         'openCorpusDrills must read lesson_data.nuance_type')
+assert.ok(drillsBody.includes('/nuance-drills'),      'openCorpusDrills must call /nuance-drills endpoint')
+assert.ok(drillsBody.includes('syntheticLesson'),     'openCorpusDrills must build synthetic lesson')
+assert.ok(drillsBody.includes('modal.open('),         'openCorpusDrills must open modal')
 assert.ok(drillsBody.includes("'nuance'"),             'synthetic lesson must have type nuance')
-console.log('✓ main.js: _openCorpusDrills collects types, fetches, builds synthetic lesson, opens modal')
+console.log('✓ review.js: openCorpusDrills collects types, fetches, builds synthetic lesson, opens modal')
 
 // ── button wired to handler ───────────────────────────────────────────────────
 
 assert.ok(
-  mainJs.includes("corpusDrillsBtn?.addEventListener('click', _openCorpusDrills)"),
-  'corpusDrillsBtn must be wired to _openCorpusDrills'
+  reviewJs.includes("corpusDrillsBtn?.addEventListener('click', openCorpusDrills)"),
+  'corpusDrillsBtn must be wired to openCorpusDrills'
 )
-console.log('✓ main.js: corpusDrillsBtn click → _openCorpusDrills')
+console.log('✓ review.js: corpusDrillsBtn click → openCorpusDrills')
 
 // ── i18n ──────────────────────────────────────────────────────────────────────
 

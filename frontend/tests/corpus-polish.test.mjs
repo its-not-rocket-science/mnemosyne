@@ -14,7 +14,9 @@ import { loadDocument, readSource } from './lib/dom.mjs'
 import { assertLocaleKeys } from './lib/i18n.mjs'
 
 const document  = loadDocument()
-const mainJs    = readSource('js/main.js')
+// Corpus browser lives entirely in js/modes/library.js after the main.js
+// split (Session 1 of the frontend refactor).
+const mainJs    = readSource('js/modes/library.js')
 const globalCss = readSource('css/global.css')
 const i18n      = readSource('js/i18n.js')
 

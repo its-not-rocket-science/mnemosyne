@@ -12,7 +12,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT      = path.resolve(__dirname, '..')
 
 const html   = readFileSync(path.join(ROOT, 'index.html'), 'utf8')
-const mainJs = readFileSync(path.join(ROOT, 'js', 'main.js'), 'utf8')
+// Reading history / resume lives in js/modes/library.js after the main.js
+// split (Session 1 of the frontend refactor).
+const mainJs = readFileSync(path.join(ROOT, 'js', 'modes', 'library.js'), 'utf8')
 const css    = readFileSync(path.join(ROOT, 'css', 'components.css'), 'utf8')
 const i18n   = readFileSync(path.join(ROOT, 'js', 'i18n.js'), 'utf8')
 
