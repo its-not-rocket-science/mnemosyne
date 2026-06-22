@@ -13,7 +13,7 @@ const ROOT      = path.resolve(__dirname, '..')
 
 const html        = readFileSync(path.join(ROOT, 'index.html'), 'utf8')
 const reviewJs    = readFileSync(path.join(ROOT, 'js', 'review-session.js'), 'utf8')
-const reviewCss   = readFileSync(path.join(ROOT, 'css', 'review.css'), 'utf8')
+const reviewCss   = readFileSync(path.join(ROOT, 'css', 'components.css'), 'utf8')
 const i18n        = readFileSync(path.join(ROOT, 'js', 'i18n.js'), 'utf8')
 
 // ── HTML structure ────────────────────────────────────────────────────────────

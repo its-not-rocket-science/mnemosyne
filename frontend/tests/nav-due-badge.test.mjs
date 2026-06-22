@@ -13,7 +13,7 @@ const ROOT      = path.resolve(__dirname, '..')
 
 const html          = readFileSync(path.join(ROOT, 'index.html'), 'utf8')
 const reviewSession = readFileSync(path.join(ROOT, 'js', 'review-session.js'), 'utf8')
-const css           = readFileSync(path.join(ROOT, 'css', 'review.css'), 'utf8')
+const css           = readFileSync(path.join(ROOT, 'css', 'components.css'), 'utf8')
 
 // ── HTML: badge in top nav ────────────────────────────────────────────────────
 

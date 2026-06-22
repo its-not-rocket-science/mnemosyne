@@ -1,0 +1,350 @@
+/* ── Design tokens ────────────────────────────────────────────────────────────
+   :root custom properties, theme overrides, base resets (box-sizing, body,
+   skip-link). Consumed by layout.css and components.css, and by Web Component
+   Shadow DOM styles (mnemosyne-detail-pane.js, mnemosyne-top-nav.js, etc.)
+   through the Shadow DOM boundary — do not rename any custom property here. */
+
+:root {
+  /* ── Brand ───────────────────────────────────────────────────────────────── */
+  --brand-purple:       #B04018;   /* terracotta — 5.87:1 on white, AA normal text */
+  --brand-purple-light: #FCEEE9;   /* light terracotta tint */
+
+  /* ── Annotation-type colour tokens — single source of truth ─────────────
+     Consumed by filter-bar pills (--_c), .reader-annotation highlights,
+     minimap ticks, and annotation cards.  --accent-* aliases kept for any
+     third-party or legacy code that references the old names.               */
+  --ann-vocab:          oklch(0.46 0.18 240);   /* blue   — vocabulary         */
+  --ann-grammar:        oklch(0.43 0.18 145);   /* green  — grammar            */
+  --ann-idiom:          oklch(0.46 0.16  42);   /* orange — idioms (hue 42 reads warm at low L) */
+  --ann-literary:       oklch(0.43 0.21 305);   /* violet — nuance / literary  */
+  --ann-etymology:      oklch(0.44 0.14 195);   /* teal   — etymology / script */
+  --accent-vocab:       var(--ann-vocab);
+  --accent-grammar:     var(--ann-grammar);
+  --accent-idiom:       var(--ann-idiom);
+  --accent-literary:    var(--ann-literary);
+  --accent-etymology:   var(--ann-etymology);
+
+  /* ── Surfaces ────────────────────────────────────────────────────────────── */
+  --surface:            #FFFFFF;   /* card / panel background                  */
+  --surface-secondary:  #F9FAFB;   /* page canvas                              */
+  --border:             #E5E7EB;
+  --border-input:       #6B7280;   /* ≥3:1 on --surface — WCAG SC 1.4.11      */
+
+  /* ── Text ────────────────────────────────────────────────────────────────── */
+  --text-primary:       #111827;
+  --text-secondary:     #6B7280;
+
+  /* ── Feedback ────────────────────────────────────────────────────────────── */
+  --success:       #047857;   /* emerald-700 — 5.91:1 on white, text-safe */
+  --error:         #B91C1C;   /* red-700     — 6.94:1 on white, text-safe */
+  --success-fill:  #10B981;   /* emerald-500 — decorative dots/icons only */
+  --error-fill:    #EF4444;   /* red-500     — decorative dots/icons only */
+
+  /* ── UI accent (derived from brand) ─────────────────────────────────────── */
+  --accent:             var(--brand-purple);   /* borders, outlines, focus rings, link text */
+  --accent-fill:        #C44B22;               /* button/chip/bar backgrounds (4.78:1 w/ white) */
+  --accent-contrast:    #FFFFFF;
+
+  /* ── Typography ──────────────────────────────────────────────────────────── */
+  --font-ui:            Inter, ui-sans-serif, system-ui, sans-serif;
+  /* Used for literary reading text and headings with a bookish feel.          */
+  --font-serif:         Georgia, 'Playfair Display', 'Times New Roman',
+                        'Noto Serif', serif;
+  --font-size-body:     1rem;       /* 16 px */
+  --font-size-ui:       0.875rem;   /* 14 px */
+  --font-size-label:    0.8125rem;  /* 13 px */
+  --line-height-body:   1.6;
+
+  /* ── Spacing ─────────────────────────────────────────────────────────────── */
+  --space-1:  0.5rem;
+  --space-2:  0.75rem;
+  --space-3:  1rem;
+  --space-4:  1.5rem;
+  --space-5:  2rem;
+
+  /* ── Shape / elevation ───────────────────────────────────────────────────── */
+  --radius:   0.9rem;
+  --shadow:   0 0.5rem 1.5rem rgb(0 0 0 / 0.08);
+
+  /* ── Legacy aliases — keep existing components working ───────────────────── */
+  --bg:          var(--surface-secondary);
+  --text:        var(--text-primary);
+  --muted:       var(--text-secondary);
+  --error-color: var(--error);
+
+  /* ── Browser color-scheme hint (form controls, scrollbars) ──────────────── */
+  color-scheme: light dark;
+
+  font-family: var(--font-ui);
+  font-size:   var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+
+/* ── Dark mode ───────────────────────────────────────────────────────────────── */
+/* Explicit light: override colour-scheme so system colours (Canvas/CanvasText)
+   stay light even if the OS is in dark mode. */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  /* Tell the browser the document is dark so system colours (Canvas, CanvasText,
+     form controls) adapt correctly even when the OS is in light mode. */
+  color-scheme: dark;
+
+    /* Brand — peachy terracotta for dark backgrounds */
+    --brand-purple:       #ED9070;   /* peachy terracotta — 6.10:1 on gray-800 */
+    --brand-purple-light: #3D1810;   /* deep warm brown tint */
+    --accent:             #ED9070;
+    --accent-fill:        #ED9070;
+
+    /* Annotation accents — lightened for readability on dark surfaces */
+    --ann-vocab:          oklch(0.72 0.18 240);
+    --ann-grammar:        oklch(0.72 0.19 145);
+    --ann-idiom:          oklch(0.80 0.17  42);
+    --ann-literary:       oklch(0.75 0.22 305);
+    --ann-etymology:      oklch(0.72 0.15 195);
+
+    /* Surfaces */
+    --surface:            #1F2937;   /* gray-800 */
+    --surface-secondary:  #111827;   /* gray-900 */
+    --border:             #374151;   /* gray-700 */
+    --border-input:       #9CA3AF;   /* gray-400 — ≥3:1 on gray-800 */
+
+    /* Text */
+    --text-primary:       #F9FAFB;   /* gray-50  */
+    --text-secondary:     #9CA3AF;   /* gray-400 */
+
+    /* Feedback — lightened for dark bg; fills reuse readable values */
+    --success:            #34D399;   /* emerald-400 */
+    --error:              #F87171;   /* red-400     */
+    --success-fill:       #34D399;
+    --error-fill:         #F87171;
+
+    /* Elevation — stronger shadow on dark */
+    --shadow:             0 0.5rem 1.5rem rgb(0 0 0 / 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    color-scheme: dark;
+
+    /* Brand — peachy terracotta for dark backgrounds */
+    --brand-purple:       #ED9070;   /* peachy terracotta — 6.10:1 on gray-800 */
+    --brand-purple-light: #3D1810;   /* deep warm brown tint */
+    --accent:             #ED9070;
+    --accent-fill:        #ED9070;
+
+    /* Annotation accents — lightened for readability on dark surfaces */
+    --ann-vocab:          oklch(0.72 0.18 240);
+    --ann-grammar:        oklch(0.72 0.19 145);
+    --ann-idiom:          oklch(0.80 0.17  42);
+    --ann-literary:       oklch(0.75 0.22 305);
+    --ann-etymology:      oklch(0.72 0.15 195);
+
+    /* Surfaces */
+    --surface:            #1F2937;   /* gray-800 */
+    --surface-secondary:  #111827;   /* gray-900 */
+    --border:             #374151;   /* gray-700 */
+    --border-input:       #9CA3AF;   /* gray-400 — ≥3:1 on gray-800 */
+
+    /* Text */
+    --text-primary:       #F9FAFB;   /* gray-50  */
+    --text-secondary:     #9CA3AF;   /* gray-400 */
+
+    /* Feedback — lightened for dark bg; fills reuse readable values */
+    --success:            #34D399;   /* emerald-400 */
+    --error:              #F87171;   /* red-400     */
+    --success-fill:       #34D399;
+    --error-fill:         #F87171;
+
+    /* Elevation — stronger shadow on dark */
+    --shadow:             0 0.5rem 1.5rem rgb(0 0 0 / 0.4);
+  }
+}
+
+/* ── Script-family font overrides ────────────────────────────────────────────
+   Applied to elements carrying a non-Latin lang attribute (sentence text,
+   example text in modals).  Uses system fonts so no download is required.
+   Each family is tested for coverage breadth on Windows, macOS, and Linux.  */
+
+/* Arabic: Segoe UI (Windows), SF Arabic (macOS/iOS), Noto Sans Arabic. */
+[lang^="ar"],
+[lang^="fa"],
+[lang^="ur"] {
+  font-family: "Segoe UI", "SF Arabic", "Noto Sans Arabic", system-ui, sans-serif;
+  line-height: 1.8; /* Arabic diacritics need more vertical space */
+}
+
+/* Hebrew: Segoe UI (Windows), SF Hebrew (macOS/iOS), Noto Sans Hebrew. */
+[lang^="he"],
+[lang^="yi"] {
+  font-family: "Segoe UI", "SF Hebrew", "Noto Sans Hebrew", system-ui, sans-serif;
+}
+
+/* CJK — Chinese, Japanese, Korean: system-ui resolves to the OS CJK font on
+   all major platforms (PingFang, Hiragino, Meiryo, Malgun Gothic, Noto). */
+[lang^="zh"],
+[lang^="ja"],
+[lang^="ko"] {
+  font-family: system-ui, sans-serif;
+  /* CJK often benefits from slightly tighter tracking. */
+  letter-spacing: 0.02em;
+}
+
+/* Chinese and Japanese: break between characters — there are no inter-word
+   spaces so word-break:normal would cause overflow on long strings. */
+[lang^="zh"],
+[lang^="ja"] {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+/* Korean uses dictionary-based line-breaking (keep-all prevents breaking
+   within syllable clusters mid-word). */
+[lang^="ko"] {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* Devanagari: Segoe UI (Windows), Kohinoor Devanagari (Apple), Noto Sans Devanagari. */
+[lang^="hi"],
+[lang^="mr"],
+[lang^="ne"],
+[lang^="sa"] {
+  font-family: "Segoe UI", "Kohinoor Devanagari", "Noto Sans Devanagari",
+               system-ui, sans-serif;
+  line-height: 1.7;
+}
+
+/* ── Script-family data-attribute hooks ─────────────────────────────────────
+   main.js sets data-script-family on each sentence-card text element from the
+   plugin's capabilities.script_family value.  These rules mirror the lang-based
+   font/layout rules above and apply when the lang attribute uses a private-use
+   code (e.g. "x-rtl-test", "x-cjk-test") that the standard selectors miss.
+   Standard lang selectors above have higher specificity and will override where
+   they match, so there is no conflict.                                       */
+
+.sentence-card__text[data-script-family="arabic"] {
+  font-family: "Segoe UI", "SF Arabic", "Noto Sans Arabic", system-ui, sans-serif;
+  line-height: 1.8;
+}
+
+.sentence-card__text[data-script-family="hebrew"] {
+  font-family: "Segoe UI", "SF Hebrew", "Noto Sans Hebrew", system-ui, sans-serif;
+}
+
+.sentence-card__text[data-script-family="cjk"] {
+  font-family: system-ui, sans-serif;
+  letter-spacing: 0.02em;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+.sentence-card__text[data-script-family="devanagari"] {
+  font-family: "Segoe UI", "Kohinoor Devanagari", "Noto Sans Devanagari",
+               system-ui, sans-serif;
+  line-height: 1.7;
+}
+
+/* ── Tokenisation-mode word-breaking ─────────────────────────────────────────
+   When the backend declares tokenization_mode, main.js sets data-tokenization
+   on each sentence-card text element.  The lang-based rules above cover the
+   common CJK case; these catch any language the lang selectors miss.         */
+
+/* Character-segmented languages (e.g. future classical Chinese, Thai) */
+.sentence-card__text[data-tokenization="character"] {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+/* Segmented languages with dictionary-based breaking (e.g. Korean, Thai) */
+.sentence-card__text[data-tokenization="segmented"] {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* ── RTL layout overrides ────────────────────────────────────────────────────
+   When the UI language is Arabic or Hebrew, i18n.js sets dir="rtl" on <html>,
+   flipping all logical-property layouts automatically.  These rules also apply
+   to sentence-card text and pill lists when the content language plugin
+   declares direction = "rtl".                                                */
+
+/* Ensure sentence-card text aligns to the natural reading edge in RTL. */
+[dir="rtl"].sentence-card__text {
+  text-align: start;
+}
+
+/* Pill list: flex-wrap already uses the logical inline axis; explicitly set
+   justify-content so pills start from the inline-start edge in RTL. */
+[dir="rtl"].sentence-card__pills {
+  justify-content: flex-start;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  /* Suppress the status-text colour transition for users who prefer no motion. */
+  .status {
+    transition: none !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* tabindex="-1" is set on <main> in HTML so the skip-link moves keyboard
+   focus (not just scroll position) — needed for Safari and Firefox.
+   Remove the visible focus ring since this focus is from the skip-link,
+   not keyboard navigation. */
+main:focus {
+  outline: none;
+}
+
+/* Skip link — :focus-visible avoids showing it on mouse click.
+   Positioned at the top of the viewport regardless of scroll position. */
+.skip-link {
+  position: fixed;
+  inset-inline-start: 1rem;
+  inset-block-start: 1rem;
+  background: var(--accent-fill);
+  color: var(--accent-contrast);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transform: translateY(-200%);
+  /* Keep it above other fixed elements but below modals. */
+  z-index: 500;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+/* Visually-hidden utility — content remains available to AT.
+   clip-path replaces the deprecated clip property. */
+.sr-only {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}

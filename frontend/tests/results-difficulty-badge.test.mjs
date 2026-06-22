@@ -19,7 +19,7 @@ const ROOT      = path.resolve(__dirname, '..')
 const mainJs    = readFileSync(path.join(ROOT, 'js', 'modes', 'explorer.js'), 'utf8')
 const lessonJs  = readFileSync(path.join(ROOT, 'js', 'modes', 'lesson.js'), 'utf8')
 const html      = readFileSync(path.join(ROOT, 'index.html'), 'utf8')
-const globalCss = readFileSync(path.join(ROOT, 'css', 'global.css'), 'utf8')
+const globalCss = readFileSync(path.join(ROOT, 'css', 'components.css'), 'utf8')
 
 // ── index.html: #results-difficulty element ───────────────────────────────────
 
