@@ -8,7 +8,7 @@
  */
 import { API_BASE } from '../config.js'
 import { getAuthHeaders } from '../auth.js'
-import { t, ti } from '../i18n.js'
+import { t, ti, loadBundle } from '../i18n.js'
 import {
   queueReview,
   getPendingReviews,
@@ -121,6 +121,11 @@ const corpusDrillsBtn = document.querySelector('#corpus-drills-btn')
 const modal           = document.querySelector('#lesson-modal')
 
 export async function openCorpusDrills() {
+  // Corpus drills can be reached via the D keyboard shortcut from the
+  // reading view, without ever visiting #/review — so the 'review' bundle
+  // (which holds the modal_* drill strings) needs an explicit load here too,
+  // not just on route entry.
+  await loadBundle('review')
   const language = languageSelect?.value
   if (!language) return
 

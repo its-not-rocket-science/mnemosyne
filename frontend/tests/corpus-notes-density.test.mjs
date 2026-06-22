@@ -15,7 +15,7 @@ const ROOT      = path.resolve(__dirname, '..')
 // Corpus browser lives entirely in js/modes/library.js after the main.js
 // split (Session 1 of the frontend refactor).
 const mainJs = readFileSync(path.join(ROOT, 'js', 'modes', 'library.js'), 'utf8')
-const i18n   = readFileSync(path.join(ROOT, 'js', 'i18n.js'), 'utf8')
+const i18n   = ['core','annotations','lesson','library','review'].map(f => readFileSync(path.join(ROOT, 'js', 'i18n', `${f}.js`), 'utf8')).join('\n')
 
 // ── _saveCorpusNote / _deleteCorpusNote ───────────────────────────────────────
 

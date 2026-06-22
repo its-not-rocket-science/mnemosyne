@@ -7,7 +7,7 @@
  */
 import { API_BASE } from '../config.js'
 import { getAuthHeaders, getUser } from '../auth.js'
-import { t, ti, currentUiLang } from '../i18n.js'
+import { t, ti, currentUiLang, loadBundle } from '../i18n.js'
 import { buildLessonPipelinePayload } from '../lesson-pipeline.js'
 import { setStatus } from '../shared.js'
 import {
@@ -393,6 +393,11 @@ function _renderReadingHistory(items) {
 
 export async function _fetchReadingHistory() {
   if (!readingHistoryEl) return
+  // The "Continue reading" strip can render outside the #/library route
+  // (main.js calls this unconditionally on startup) — its rec_* heading
+  // and reading-history card strings live in the 'library' bundle, so load
+  // it here too rather than relying solely on the #/library route trigger.
+  loadBundle('library')
   try {
     const resp = await fetch(`${API_BASE}/reading?limit=3`, { headers: getAuthHeaders() })
     if (!resp.ok) { readingHistoryEl.hidden = true; return }
@@ -1378,6 +1383,7 @@ function _applyLibraryRoute(route) {
   if (vocabBrowserRouteSection)  vocabBrowserRouteSection.hidden  = route.path !== 'library-vocab'
   if (route.path !== 'library' && loadLessonSection) loadLessonSection.hidden = true
 
+  if (route.path === 'library' || route.path === 'library-vocab') loadBundle('library')
   if (route.path === 'library') _openCorpusBrowser()
   if (route.path === 'library-vocab') _loadVocab(false)
 }
