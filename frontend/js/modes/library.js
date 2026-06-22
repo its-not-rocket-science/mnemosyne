@@ -156,10 +156,9 @@ function _scheduleVocabSearch() {
   _vocabSearchTimer = setTimeout(() => _loadVocab(false), 350)
 }
 
-openVocabBrowserBtn?.addEventListener('click', () => {
-  navigate('#/library/vocab')
-  _loadVocab(false)
-})
+// The #/library/vocab route handler (_applyLibraryRoute) calls _loadVocab()
+// once the route activates — calling it here too would double-fetch.
+openVocabBrowserBtn?.addEventListener('click', () => navigate('#/library/vocab'))
 
 vocabBrowserCloseBtn?.addEventListener('click', () => navigate('#/library'))
 
@@ -1287,8 +1286,12 @@ async function _importCorpusUrl() {
   }
 }
 
+// Loads/populates the corpus browser's data. Called by the #/library route
+// handler whenever that route becomes active — it must NOT call navigate()
+// itself, since navigate() to an already-current hash dispatches
+// synchronously and this function is itself invoked from that dispatch
+// (calling navigate('#/library') here would recurse infinitely).
 async function _openCorpusBrowser() {
-  navigate('#/library')
   await _populateCorpusLangSelect()
   await _loadCorpus()
   await Promise.all([
@@ -1300,7 +1303,7 @@ async function _openCorpusBrowser() {
   ])
 }
 
-openCorpusBrowserBtn?.addEventListener('click', _openCorpusBrowser)
+openCorpusBrowserBtn?.addEventListener('click', () => navigate('#/library'))
 
 corpusBrowserCloseBtn?.addEventListener('click', () => navigate('#/explore'))
 

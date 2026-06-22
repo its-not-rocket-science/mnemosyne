@@ -120,8 +120,12 @@ const openBlock = mainJs.slice(
   mainJs.indexOf("openVocabBrowserBtn?.addEventListener") + 200,
 )
 assert.ok(openBlock.includes("navigate('#/library/vocab')"), 'open button must navigate to #/library/vocab')
-assert.ok(openBlock.includes('_loadVocab'), 'open button must call _loadVocab')
-console.log('✓ main.js: open button wired to navigate(#/library/vocab) + _loadVocab')
+// _loadVocab is called by the #/library/vocab route handler once the route
+// activates (see _applyLibraryRoute) — calling it from the click handler too
+// would double-fetch.
+assert.ok(mainJs.includes("if (route.path === 'library-vocab') _loadVocab(false)"),
+  'the #/library/vocab route handler must call _loadVocab')
+console.log('✓ main.js: open button navigates to #/library/vocab; route handler triggers _loadVocab')
 
 // router import present (dialog showModal/close fully replaced by routing)
 assert.ok(mainJs.includes("from '../router.js'"), 'main.js must import the router')
