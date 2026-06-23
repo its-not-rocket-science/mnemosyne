@@ -55,7 +55,11 @@ CSV_FIELDS = EXPECTED_CSV_HEADER.split(",")
 
 BASE_URL = "https://en.wiktionary.org/w/api.php"
 USER_AGENT = "Mnemosyne-cultural-catalogue-builder/1.0 (educational; contact: see github)"
-REQUEST_DELAY_S = 0.1  # Wiktionary allows up to 200 req/s anonymous; be polite.
+REQUEST_DELAY_S = 0.25  # Documented anon limit is 200 req/s, but live testing hit
+                         # 429s well under that (shared-IP/gateway throttling is
+                         # plausible) — 4 req/s is conservative; _api_get's 429
+                         # handling (Retry-After / exponential backoff) covers
+                         # the rest.
 
 WIKTIONARY_LANG_NAMES: dict[str, str] = {
     "en":  "English",
@@ -106,20 +110,37 @@ def _session() -> requests.Session:
     return s
 
 
-def _api_get(session: requests.Session, params: dict[str, Any], *, max_retries: int = 2) -> dict[str, Any] | None:
-    """GET the MediaWiki API with one retry on network error. Returns None (and
-    prints a warning to stderr) if both attempts fail — callers must handle that
-    by skipping the affected entry/page rather than crashing the whole run."""
+def _api_get(session: requests.Session, params: dict[str, Any], *, max_retries: int = 5) -> dict[str, Any] | None:
+    """GET the MediaWiki API with retry/backoff. Returns None (and prints a
+    warning to stderr) if every attempt fails — callers must handle that by
+    skipping the affected entry/page rather than crashing the whole run.
+
+    429 responses get dedicated handling: honour Retry-After if present,
+    otherwise exponential backoff (5s, 10s, 20s, 40s...). Despite Wiktionary's
+    documented "200 req/s for anonymous users", live testing showed 429s
+    arriving well under that — the real, enforced limit is much stricter
+    (and/or shared-IP/gateway-level), so this treats the documented figure
+    as unreliable and backs off conservatively instead of trusting it."""
     last_exc: Exception | None = None
     for attempt in range(max_retries):
         try:
             resp = session.get(BASE_URL, params=params, timeout=15)
+            if resp.status_code == 429:
+                retry_after = resp.headers.get("Retry-After")
+                wait = float(retry_after) if retry_after and retry_after.isdigit() else 5 * (2 ** attempt)
+                if attempt < max_retries - 1:
+                    print(f"  [429 rate limited, waiting {wait:.0f}s before retry "
+                          f"{attempt + 2}/{max_retries}] ({params.get('action', '?')})", file=sys.stderr)
+                    time.sleep(wait)
+                    continue
+                last_exc = requests.HTTPError("429 Too Many Requests (retries exhausted)")
+                break
             resp.raise_for_status()
             return resp.json()
         except (requests.RequestException, ValueError) as exc:
             last_exc = exc
             if attempt < max_retries - 1:
-                time.sleep(REQUEST_DELAY_S * 5)
+                time.sleep(REQUEST_DELAY_S * 10 * (attempt + 1))
     print(f"WARNING: Wiktionary API request failed after {max_retries} attempts "
           f"({params.get('action', '?')}): {last_exc}", file=sys.stderr)
     return None
