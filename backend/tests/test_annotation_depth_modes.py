@@ -21,12 +21,17 @@ def test_depth_modes_define_distinct_annotation_categories() -> None:
 
     assert "const ANNOTATION_DEPTH_MODEL = {" in text
     assert "subtle: new Set(['vocabulary'])" in text
-    assert "learning: new Set(['vocabulary', 'conjugation', 'agreement', 'inflection', 'grammar'])" in text
+    # 'learning' (now labelled "Standard" in the UI — see js/i18n/core.js
+    # nav_depth_learning) was expanded by the cultural-catalogue visibility
+    # fixes to include idiom/phrase_family/nuance/cultural_note: these are
+    # detected by the backend but were previously invisible at the default
+    # depth, hidden behind 'deep'/"Full detail" that most users never select.
+    learning_idx = text.index("learning: new Set([")
+    learning_body = text[learning_idx:text.index("]),", learning_idx)]
+    for required in ("vocabulary", "conjugation", "agreement", "inflection", "grammar",
+                      "idiom", "phrase_family", "nuance", "cultural_note"):
+        assert f"'{required}'" in learning_body, f"learning depth set must include '{required}'"
     assert "'nuance'" in text and "'phrase_family'" in text and "'cultural_note'" in text
-
-    # Explicit non-alias guarantees in canonical model.
-    assert "subtle: new Set(['vocabulary'])" in text
-    assert "learning: new Set(['vocabulary', 'conjugation', 'agreement', 'inflection', 'grammar'])" in text
     assert "deep: new Set([" in text
 
 

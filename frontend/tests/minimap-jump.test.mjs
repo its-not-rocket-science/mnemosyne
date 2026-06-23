@@ -19,7 +19,9 @@ const css    = readFileSync(path.join(ROOT, 'css', 'components.css'), 'utf8')
 // ── buildMinimap creates button elements ──────────────────────────────────────
 
 const minimapIdx  = mainJs.indexOf('function buildMinimap(')
-const minimapBody = mainJs.slice(minimapIdx, minimapIdx + 1600)
+// Window widened past the original 1600 chars — the cultural-catalogue
+// visibility fixes added a register-aware category override in this function.
+const minimapBody = mainJs.slice(minimapIdx, minimapIdx + 2000)
 
 assert.ok(minimapBody.includes("createElement('button')"), 'buildMinimap must create button elements')
 assert.ok(minimapBody.includes("tick.type      = 'button'"), 'tick must have type=button')

@@ -21,7 +21,10 @@ export const DEPTH_FALLBACK = 'learning'
 
 export const ANNOTATION_DEPTH_MODEL = {
   subtle: new Set(['vocabulary']),
-  learning: new Set(['vocabulary', 'conjugation', 'agreement', 'inflection', 'grammar']),
+  learning: new Set([
+    'vocabulary', 'conjugation', 'agreement', 'inflection', 'grammar',
+    'idiom', 'phrase_family', 'nuance', 'cultural_note',
+  ]),
   deep: new Set([
     'vocabulary',
     'conjugation',

@@ -86,6 +86,22 @@ const IDIOM_LESSON = {
   },
 }
 
+const PHRASE_FAMILY_LESSON = {
+  id: 'ann-3',
+  type: 'phrase_family',
+  title: 'bite the bullet',
+  explanation: 'To face a difficult situation with courage.',
+  examples: ['bite the bullet'],
+  fields: [],
+  lesson_data: {
+    canonical_form: 'bite the bullet',
+    matched_variant: 'bite the bullet',
+    match_type: 'exact',
+    why_it_matters: 'Soldiers literally bit on a bullet to endure pain before anesthesia existed.',
+    register: 'informal',
+  },
+}
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 function makePane() {
@@ -654,5 +670,46 @@ await (async () => {
   cleanUp()
   console.log('  ✓ concept dialog error state has role="alert"')
 })()
+
+// 31. why_it_matters visible at "learning"/Standard depth (cultural-catalogue
+// visibility fix — was gated to depthIdx >= 2/"deep" only)
+{
+  const pane = makePane()
+  pane.show({ lesson: PHRASE_FAMILY_LESSON, sentenceText: '', language: 'en', depth: 'learning' })
+  const why = sr(pane).querySelector('.pane__why-it-matters-text')
+  assert.ok(why !== null, '.pane__why-it-matters-text must render at depth="learning"')
+  assert.ok(why.textContent.includes('Soldiers'), 'why-it-matters text must match lesson_data.why_it_matters')
+  cleanUp()
+  console.log('  ✓ why_it_matters visible at depth="learning" (Standard)')
+}
+
+// 32. why_it_matters hidden at "subtle"/Words-only depth
+{
+  const pane = makePane()
+  pane.show({ lesson: PHRASE_FAMILY_LESSON, sentenceText: '', language: 'en', depth: 'subtle' })
+  const why = sr(pane).querySelector('.pane__why-it-matters-text')
+  assert.equal(why, null, '.pane__why-it-matters-text must not render at depth="subtle"')
+  cleanUp()
+  console.log('  ✓ why_it_matters hidden at depth="subtle" (Words only)')
+}
+
+// 33. Register badge renders for non-neutral register, absent for neutral
+{
+  const pane = makePane()
+  pane.show({ lesson: PHRASE_FAMILY_LESSON, sentenceText: '', language: 'en', depth: 'deep' })
+  const badge = sr(pane).querySelector('.pane__register-badge')
+  assert.ok(badge !== null, '.pane__register-badge must render for register="informal"')
+  assert.ok(badge.classList.contains('pane__register-badge--informal'),
+    'badge must carry the register-specific modifier class')
+  cleanUp()
+
+  const neutralLesson = { ...PHRASE_FAMILY_LESSON, lesson_data: { ...PHRASE_FAMILY_LESSON.lesson_data, register: 'neutral' } }
+  const pane2 = makePane()
+  pane2.show({ lesson: neutralLesson, sentenceText: '', language: 'en', depth: 'deep' })
+  assert.equal(sr(pane2).querySelector('.pane__register-badge'), null,
+    'no register badge for register="neutral"')
+  cleanUp()
+  console.log('  ✓ register badge shown for non-neutral register, hidden for neutral')
+}
 
 console.log('\nAll detail pane render tests passed.')
