@@ -23,6 +23,14 @@ ROOT = Path(__file__).resolve().parents[2]
 SEED = ROOT / "data" / "cultural_references_seed.yaml"
 OUT = ROOT / "backend" / "nuance" / "data" / "cultural_references"
 
+# Persian (fa) was added to SUPPORTED_LANGUAGES (mnemosyne_catalogue_expansion.txt
+# Session 1) to align the cultural-catalogue build/import/extend scripts ahead of
+# content generation — but the seed has no Persian entries yet (the prompt's own
+# verification step explicitly allows "zero entries is fine" for fa). Languages
+# in SUPPORTED_LANGUAGES are not guaranteed to have seed content the moment
+# they're added; this is the current set that does.
+LANGUAGES_WITH_SEED_CONTENT = set(SUPPORTED_LANGUAGES) - {"fa"}
+
 
 @pytest.fixture(autouse=True)
 def _clear_cultural_catalog_caches():
@@ -86,7 +94,7 @@ def test_seed_schema_validation_accepts_starter_catalogue():
     by_lang, warnings = validate_and_build(load_seed(SEED))
     assert not warnings
     assert set(by_lang) == set(SUPPORTED_LANGUAGES)
-    assert all(by_lang[lang] for lang in SUPPORTED_LANGUAGES)
+    assert all(by_lang[lang] for lang in LANGUAGES_WITH_SEED_CONTENT)
 
 
 def test_missing_review_status_behaves_as_reviewed():
@@ -276,7 +284,7 @@ def test_build_check_prints_concise_ok_not_report_table():
         text=True,
     )
 
-    assert result.stdout.strip() == "OK: validated 8330 entries across 17 languages"
+    assert result.stdout.strip() == "OK: validated 8330 entries across 18 languages"
     assert "language | entries" not in result.stdout
     assert result.stderr == ""
 
@@ -307,7 +315,7 @@ def test_build_report_prints_full_table_for_every_supported_language():
     assert lines[0].split(" | ") == ["language", "entries", *sorted(REFERENCE_TYPES)]
     report_languages = {line.split(" | ", 1)[0] for line in lines[2:] if line.strip()}
     assert report_languages == set(SUPPORTED_LANGUAGES)
-    assert len(report_languages) == 17
+    assert len(report_languages) == 18
 
 
 def test_write_out_dir_writes_files_and_prints_concise_summary(tmp_path):
@@ -326,7 +334,7 @@ def test_write_out_dir_writes_files_and_prints_concise_summary(tmp_path):
     )
 
     assert {p.stem for p in tmp_path.glob("*.json")} == set(SUPPORTED_LANGUAGES)
-    assert result.stdout.strip() == f"Wrote 17 catalogue files to {tmp_path} (8330 entries)"
+    assert result.stdout.strip() == f"Wrote 18 catalogue files to {tmp_path} (8330 entries)"
     assert "language | entries" not in result.stdout
 
 
@@ -418,8 +426,8 @@ def test_generated_json_determinism_in_temp_dir(tmp_path):
     second_payloads = {
         p.name: p.read_text(encoding="utf-8") for p in sorted(second_dir.glob("*.json"))
     }
-    assert first.stdout.strip() == f"Wrote 17 catalogue files to {first_dir} (8330 entries)"
-    assert second.stdout.strip() == f"Wrote 17 catalogue files to {second_dir} (8330 entries)"
+    assert first.stdout.strip() == f"Wrote 18 catalogue files to {first_dir} (8330 entries)"
+    assert second.stdout.strip() == f"Wrote 18 catalogue files to {second_dir} (8330 entries)"
     assert first_payloads == second_payloads
 
 
@@ -461,7 +469,8 @@ def test_generated_file_exists_for_every_supported_language():
     for lang in SUPPORTED_LANGUAGES:
         payload = json.loads((OUT / f"{lang}.json").read_text(encoding="utf-8"))
         assert payload["language"] == lang
-        assert payload["entries"]
+        if lang in LANGUAGES_WITH_SEED_CONTENT:
+            assert payload["entries"]
         for entry in payload["entries"]:
             assert required <= entry.keys()
 
@@ -521,8 +530,20 @@ def test_turkish_casefold_dotted_i_preserves_original_span(monkeypatch, tmp_path
     assert [m.surface_form for m in matches] == ["i̇nce memed"]
 
 
-def test_script_sensitive_languages_remain_case_sensitive():
-    assert extract_cultural_references("هذه قصة من أَلْف لَيْلَة وَلَيْلَة.", "ar") == []
+def test_tashkeel_bearing_text_matches_undiacritised_catalogue_pattern():
+    # Was test_script_sensitive_languages_remain_case_sensitive, asserting
+    # `== []` (no match) — that documented a real matching gap, not a
+    # deliberate design choice: tashkeel (vowel diacritics) are semantically
+    # irrelevant to surface-pattern matching, so a diacritic-bearing real-text
+    # occurrence of "ألف ليلة وليلة" (One Thousand and One Nights) failing to
+    # match the catalogue's undiacritised canonical form meant the matcher
+    # missed real-world occurrences whenever Arabic text happened to include
+    # vowel marks. Fixed by backend/nuance/script_normalise.py
+    # (mnemosyne_catalogue_expansion.txt Session 4) — this is now expected
+    # to match.
+    matches = extract_cultural_references("هذه قصة من أَلْف لَيْلَة وَلَيْلَة.", "ar")
+    assert len(matches) == 1
+    assert matches[0].lesson_data["canonical_reference"] == "ألف ليلة وليلة"
 
 
 @pytest.mark.parametrize("language,text", sorted(SAMPLES.items()))
@@ -667,6 +688,15 @@ def test_capability_update_for_implemented_reference_types(language):
         "tr": ("backend.plugins.turkish", "TurkishPlugin"),
         "fi": ("backend.plugins.finnish", "FinnishPlugin"),
     }
+    if language not in plugin_classes:
+        pytest.skip(
+            f"No backend.plugins NLP plugin implemented for '{language}' yet. "
+            "Persian (fa) was added to SUPPORTED_LANGUAGES by the cultural-"
+            "catalogue scripts (mnemosyne_catalogue_expansion.txt Session 1) — "
+            "that's catalogue-content support, not a full NLP plugin "
+            "(tokenization/morphology/etc.), which is a separate, much larger "
+            "scope not covered by that session."
+        )
     module_name, class_name = plugin_classes[language]
     plugin_class = getattr(import_module(module_name), class_name)
     caps = plugin_class.capabilities.nuance_capabilities

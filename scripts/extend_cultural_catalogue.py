@@ -121,7 +121,7 @@ PROVIDERS: dict[str, dict] = {
 _DISC_IN_PER_BATCH  = 600     # discovery input per batch of 25
 _DISC_OUT_PER_BATCH = 1_400
 _ENRICH_IN_PER_ENT  = 220     # enrichment per entry
-_ENRICH_OUT_PER_ENT = 420
+_ENRICH_OUT_PER_ENT = 650    # calibrated for languages with 4-10 surface_pattern variants
 _I18N_IN_PER_ENT    = 250     # i18n translation per entry (11 UI languages)
 _I18N_OUT_PER_ENT   = 450     # ~11 langs × ~40 tokens each
 _REVIEW_IN_PER_ENT  = 360     # review per entry
@@ -164,6 +164,21 @@ DISCOVERY_THEMES = [
     "idiomatic expressions tied to a specific named source",
 ]
 
+# Theme rotation for --mode idiom (everyday expressions of any/unknown
+# origin, as opposed to DISCOVERY_THEMES' literary/traceable focus above).
+IDIOM_DISCOVERY_THEMES = [
+    "body parts and physical actions (hand, foot, eye, heart, back, face)",
+    "animals and nature (dog, cat, horse, bird, fish, rain, sun, wind)",
+    "food and drink (bread, water, salt, cake, soup, coffee)",
+    "time and speed (fast, slow, early, late, time, moment)",
+    "money and value (cost, price, pay, earn, spend, cheap, expensive)",
+    "success and failure (win, lose, fall, rise, pass, fail)",
+    "communication and honesty (say, speak, lie, truth, secret, promise)",
+    "emotions and mental states (anger, fear, love, worry, calm, surprise)",
+    "work and effort (hard work, lazy, busy, tired, effort, task)",
+    "relationships and social situations (friend, enemy, trust, betray, help)",
+]
+
 
 # ---------------------------------------------------------------------------
 # Schema constants
@@ -175,13 +190,14 @@ REFERENCE_TYPES = {
 }
 REGISTERS = {"common", "literary", "formal", "informal", "religious", "classical", "proverbial"}
 KNOWN_SOURCE_LICENSES = {
-    "public_domain", "not_required", "CC0", "CC0-1.0", "CC-BY-4.0",
+    "public_domain", "not_required", "CC0", "CC0-1.0", "CC-BY-4.0", "CC-BY-SA-4.0",
     "copyright_or_rights_review_needed", "common_usage_short_expression",
 }
-# Languages where a 1-2 character surface pattern is normal word/title
-# length (CJK, Hebrew), not an inherently ambiguous fragment the way it
-# would be in a Latin-script language.
-SHORT_PATTERN_OK_LANGUAGES = {"zh", "ja", "ko", "he"}
+# Languages where 2-4 character surface patterns are normal citation length,
+# not ambiguous fragments. CJK characters carry full semantic weight at short
+# lengths; Arabic/Persian/Hebrew roots do the same in Semitic script;
+# Hindi sacred-text citations are typically 1-3 words in Devanagari.
+SHORT_PATTERN_OK_LANGUAGES = {"zh", "ja", "ko", "he", "ar", "fa", "hi"}
 
 FIELD_ORDER = [
     "id", "language", "canonical_reference", "reference_type",
@@ -348,8 +364,7 @@ Each object:
   "canonical_reference"  -- string (copy unchanged)
   "reference_type"       -- "literary_reference"|"classical_or_scriptural_allusion"|
                             "proverb_tradition"|"cultural_reference"
-  "surface_patterns"     -- array 2-6: how phrase appears in running text
-                            (variants, with/without articles, short forms)
+  "surface_patterns"     -- {variant_instruction}
   "short_explanation"    -- 1-2 sentences English: meaning and cultural significance
   "learner_level"        -- "A1"|"A2"|"B1"|"B2"|"C1"|"C2"
   "confidence"           -- float 0.60-0.90
@@ -367,6 +382,87 @@ Each object:
   "variants"             -- optional alternate surface forms or omit
 
 Return ONLY valid JSON."""
+
+# Per-language additions to the surface_patterns field instruction in
+# _ENRICH_USER. Morphologically rich languages need far more than the 2-6
+# variants that suffice for English/fixed-form languages (Latin, Koine Greek,
+# chéngyǔ, yojijukugo) — without them the backend NLP matcher misses most
+# real-text occurrences of an idiom even when it's in the catalogue.
+_ENRICH_VARIANT_ADDENDUM: dict[str, str] = {
+    # Arabic: article attachment, case endings, clitic pronouns, no-vowel form
+    "ar": (
+        "For Arabic entries, surface_patterns MUST include: "
+        "(1) the form without tashkeel (vowel marks), "
+        "(2) the form with definite article ال attached where natural, "
+        "(3) at least one form with a clitic pronoun (ـه، ـها، ـك) if the "
+        "phrase takes one, (4) both MSA and common colloquial form if they differ. "
+        "Aim for 4-8 patterns. Do NOT include fully vowelled and unvowelled "
+        "versions as separate patterns — prefer the unvowelled form only."
+    ),
+    # Persian: ezafe, verb conjugation, colloquial contraction
+    "fa": (
+        "For Persian entries, surface_patterns MUST include: "
+        "(1) the base form without harakat, "
+        "(2) colloquial contraction if common in spoken Persian, "
+        "(3) the verb in at least two conjugated forms if the phrase contains "
+        "a verb (past tense and present/future stem minimum), "
+        "(4) the ezafe construction variant if applicable. "
+        "Aim for 4-8 patterns."
+    ),
+    # Russian: aspect pairs, key conjugations, short-form adjectives
+    "ru": (
+        "For Russian entries, surface_patterns MUST include: "
+        "(1) imperfective and perfective aspect forms if the phrase contains "
+        "a verb (e.g. идти на попятную AND пойти на попятную), "
+        "(2) at least past tense and infinitive forms, "
+        "(3) instrumental and genitive case variants if the phrase contains "
+        "a noun that case-marks in usage. "
+        "Aim for 5-10 patterns for verb-containing idioms."
+    ),
+    # Turkish: key case suffixes, possessed forms
+    "tr": (
+        "For Turkish entries, surface_patterns MUST include: "
+        "(1) nominative base form, "
+        "(2) accusative (-ı/-i/-u/-ü) form if the phrase takes a direct object, "
+        "(3) locative (-da/-de/-ta/-te) and ablative (-dan/-den/-tan/-ten) "
+        "if the idiom uses these cases, "
+        "(4) 3rd person possessed form (-ı/-i suffix on noun) if natural. "
+        "Aim for 4-8 patterns."
+    ),
+    # Japanese: conjugation forms for kanyōku verbs
+    "ja": (
+        "For Japanese entries, surface_patterns MUST include verb conjugation "
+        "forms for kanyōku (慣用句): "
+        "(1) dictionary form (する), "
+        "(2) te-form (して), "
+        "(3) ta-form (した), "
+        "(4) negative (しない), "
+        "(5) potential (できる) if naturally used. "
+        "For yojijukugo (四字熟語) the form is fixed — 2-3 patterns suffice "
+        "(with and without の/する). "
+        "Aim for 4-8 patterns for kanyōku; 2-4 for yojijukugo."
+    ),
+    # Hindi: postposition variants, verb agreement forms
+    "hi": (
+        "For Hindi entries, surface_patterns MUST include: "
+        "(1) the base form, "
+        "(2) the form with oblique case on noun components where a postposition "
+        "follows (e.g. हाथ → हाथ में, हाथ से, हाथ का), "
+        "(3) masculine and feminine agreement forms of adjectives if relevant, "
+        "(4) perfective and imperfective verb forms if the phrase contains "
+        "a verb. Aim for 4-8 patterns."
+    ),
+    # Korean: verb ending variants, topic/subject marker variants
+    "ko": (
+        "For Korean entries, surface_patterns MUST include: "
+        "(1) the base form, "
+        "(2) key verb ending variants (아/어서, 는, ㄴ, 았/었) for verb-final "
+        "idiomatic expressions, "
+        "(3) topic marker (은/는) and subject marker (이/가) variants if "
+        "the idiom head noun takes them in usage. "
+        "Aim for 3-6 patterns."
+    ),
+}
 
 _I18N_SYS = """\
 You are a professional literary translator.
@@ -418,6 +514,77 @@ Each object:
   "verdict"              -- "approve"|"flag"|"reject"
   "reason"               -- one sentence
   "revised_confidence"   -- float or null
+
+Return ONLY valid JSON."""
+
+# ---------------------------------------------------------------------------
+# Idiom-mode prompts (--mode idiom) — everyday idiomatic expressions of any
+# origin, as opposed to the literary/classical references the prompts above
+# target. The review and i18n phases (_REVIEW_SYS/_REVIEW_USER/_I18N_SYS/
+# _I18N_USER above) are mode-agnostic and shared between both modes.
+# ---------------------------------------------------------------------------
+
+_DISCOVER_IDIOM_SYS = """\
+You are a language specialist and lexicographer for {lang_name}.
+Identify established idiomatic expressions: fixed phrases used figuratively
+whose combined meaning cannot be derived from the individual words.
+
+Criteria:
+  - In common use for at least 30 years (well-established, not slang)
+  - Used figuratively: meaning is NOT literal
+  - Fixed or near-fixed form: the phrase is recognisable as a set expression
+  - Origin may be unknown, folk etymology, or disputed — that is fine
+  - Recognisable to any adult {lang_name} speaker without specialist education
+  - NOT proverbs (complete sentences of wisdom), NOT single-word slang
+  - Target CEFR B1-B2: phrases a learner at intermediate level must know"""
+
+_DISCOVER_IDIOM_USER = """\
+Generate exactly {n} established {lang_name} idiomatic expressions.{theme_clause}
+Return {{"candidates": [array of strings]}} -- phrases in {lang} only, no metadata.
+
+Each phrase must be a fixed idiomatic expression used figuratively, NOT a
+literary quotation or proverb. Body-part idioms, animal idioms, colour idioms,
+weather idioms, and idioms from everyday activities are all in scope.
+
+Exclude equivalents of these already-catalogued expressions (sample of {nexist}):
+{existing_sample}
+
+Format: {{"candidates": ["expression 1", "expression 2", ...]}}"""
+
+_ENRICH_IDIOM_SYS = """\
+You are a lexicographer and language specialist for {lang_name}.
+Produce accurate metadata for idiomatic expressions in JSON.
+
+Confidence for idioms: 0.85-0.90 = meaning universally agreed, widely attested;
+0.75-0.84 = well-established with minor regional variation;
+0.60-0.74 = regional or register-restricted use.
+Do not attempt to assign a specific literary source to idioms of unknown origin —
+use source_work: "Unknown origin" and source_author: "Folk/oral tradition"."""
+
+_ENRICH_IDIOM_USER = """\
+Enrich the following {lang_name} idiomatic expressions.
+Return {{"entries": [array of objects, same order as input]}}.
+
+Expressions: {candidates_json}
+
+Each object:
+  "canonical_reference"  -- the most common/dictionary form of the idiom
+  "reference_type"       -- always "cultural_reference" for idioms
+  "surface_patterns"     -- array 4-8: the phrase as it appears in text
+                            (different verb forms, with/without articles,
+                            common shortened forms, regional variants)
+  "short_explanation"    -- 1-2 sentences: literal meaning, then figurative
+                            meaning and when it is used
+  "learner_level"        -- "A2"|"B1"|"B2"|"C1" (most common idioms are B1-B2)
+  "confidence"           -- float 0.60-0.90
+  "register"             -- "common"|"informal"|"formal"|"proverbial"
+  "source_work"          -- "Unknown origin" OR specific source if traceable
+  "source_author"        -- "Folk/oral tradition" OR specific author
+  "source_location"      -- null for unknown-origin idioms
+  "source_license"       -- "not_required" (short expressions, no quoted text)
+  "rights_basis"         -- "common_usage_short_expression"
+  "source_dataset_tag"   -- snake_case e.g. "en_everyday_idioms"
+  "variants"             -- optional alternate surface forms or omit
 
 Return ONLY valid JSON."""
 
@@ -496,12 +663,13 @@ def discover_candidates(
     client: OpenAI, language: str, lang_name: str, n: int,
     existing: set[str], model: str, already_discovered: list[str],
     theme: str | None = None,
+    sys_tmpl: str = _DISCOVER_SYS, user_tmpl: str = _DISCOVER_USER,
 ) -> tuple[list[str], int, int]:
     all_known = existing | set(already_discovered)
     sample = sorted(all_known)[:80]
-    sys_p = _DISCOVER_SYS.format(lang_name=lang_name)
+    sys_p = sys_tmpl.format(lang_name=lang_name)
     theme_clause = f" Focus specifically on this theme: {theme}." if theme else ""
-    usr_p = _DISCOVER_USER.format(
+    usr_p = user_tmpl.format(
         n=n, lang_name=lang_name, lang=language, theme_clause=theme_clause,
         nexist=len(sample),
         existing_sample=json.dumps(sample, ensure_ascii=False),
@@ -517,11 +685,22 @@ def discover_candidates(
 
 def enrich_batch(
     client: OpenAI, lang_name: str, candidates: list[str], model: str,
+    language: str = "",
+    sys_tmpl: str = _ENRICH_SYS, user_tmpl: str = _ENRICH_USER,
 ) -> tuple[list[dict], int, int]:
-    sys_p = _ENRICH_SYS.format(lang_name=lang_name)
-    usr_p = _ENRICH_USER.format(
+    # variant_instruction is only referenced by the literary template
+    # (_ENRICH_USER); passed unconditionally since str.format() ignores
+    # extra kwargs the idiom template (_ENRICH_IDIOM_USER) doesn't reference.
+    variant_addendum = _ENRICH_VARIANT_ADDENDUM.get(language, "")
+    if variant_addendum:
+        variant_instruction = f"array 4-10: {variant_addendum}"
+    else:
+        variant_instruction = "array 2-6: how phrase appears in running text (variants, with/without articles, short forms)"
+    sys_p = sys_tmpl.format(lang_name=lang_name)
+    usr_p = user_tmpl.format(
         lang_name=lang_name,
         candidates_json=json.dumps(candidates, ensure_ascii=False, indent=2),
+        variant_instruction=variant_instruction,
     )
     raw, in_tok, out_tok = _chat(client, sys_p, usr_p, model, temperature=0.2)
     entries = _parse_list(raw, "entries")
@@ -851,8 +1030,25 @@ def run(
     i18n_batch_size: int, review_batch_size: int,
     resume: bool, do_i18n: bool, do_review: bool, do_promote: bool,
     reviewed_by: str,
+    mode: str = "literary",
 ) -> None:
     lang_name = LANGUAGE_NAMES.get(language, language)
+
+    # Mode selects which prompt templates and discovery theme rotation drive
+    # phases 1-2 below. Review (_REVIEW_SYS/_REVIEW_USER) and i18n (_I18N_SYS/
+    # _I18N_USER) are mode-agnostic and used unchanged regardless of mode.
+    if mode == "idiom":
+        discover_sys_tmpl  = _DISCOVER_IDIOM_SYS
+        discover_user_tmpl = _DISCOVER_IDIOM_USER
+        enrich_sys_tmpl    = _ENRICH_IDIOM_SYS
+        enrich_user_tmpl   = _ENRICH_IDIOM_USER
+        themes             = IDIOM_DISCOVERY_THEMES
+    else:
+        discover_sys_tmpl  = _DISCOVER_SYS
+        discover_user_tmpl = _DISCOVER_USER
+        enrich_sys_tmpl    = _ENRICH_SYS
+        enrich_user_tmpl   = _ENRICH_USER
+        themes             = DISCOVERY_THEMES
 
     # existing = seed entries + any already in the output draft (never overwrite)
     existing = load_existing(seed_path, language, extra_yaml=output if output.exists() else None)
@@ -893,12 +1089,13 @@ def run(
         print(f"Phase 1: discover {still_want} candidates  (batch={discover_batch})")
         theme_idx = 0
         stale_themes = 0
-        while len(to_enrich_pool) < total_needed and stale_themes < len(DISCOVERY_THEMES):
-            theme = DISCOVERY_THEMES[theme_idx % len(DISCOVERY_THEMES)]
+        while len(to_enrich_pool) < total_needed and stale_themes < len(themes):
+            theme = themes[theme_idx % len(themes)]
             ask = min(discover_batch, total_needed - len(to_enrich_pool) + 5)
             print(f"  -> requesting {ask} [{theme}] ...", end="", flush=True)
             cands, in_t, out_t = discover_candidates(
-                client, language, lang_name, ask, existing, model, state["discovered"], theme=theme)
+                client, language, lang_name, ask, existing, model, state["discovered"], theme=theme,
+                sys_tmpl=discover_sys_tmpl, user_tmpl=discover_user_tmpl)
             state["tokens_in"] += in_t; state["tokens_out"] += out_t
             new = [c for c in cands if c not in set(state["discovered"]) | existing]
             state["discovered"].extend(new)
@@ -918,7 +1115,8 @@ def run(
         for i in range(0, len(to_enrich), enrich_batch_size):
             batch = to_enrich[i:i + enrich_batch_size]
             print(f"  -> {i+1}-{min(i+enrich_batch_size, len(to_enrich))} ...", end="", flush=True)
-            enriched, in_t, out_t = enrich_batch(client, lang_name, batch, model)
+            enriched, in_t, out_t = enrich_batch(client, lang_name, batch, model, language=language,
+                                                  sys_tmpl=enrich_sys_tmpl, user_tmpl=enrich_user_tmpl)
             state["tokens_in"] += in_t; state["tokens_out"] += out_t
             state["enriched"].extend(enriched)
             save_progress(output, state)
@@ -1109,10 +1307,16 @@ def main() -> None:
                     help="Include review tokens in --estimate-cost")
     ap.add_argument("--all-languages", action="store_true",
                     help="With --estimate-cost: show totals for all supported languages")
+    ap.add_argument("--mode", choices=["literary", "idiom"], default="literary",
+                    help="Discovery mode: 'literary' (default) = cultural/literary "
+                         "references traceable to a named source; 'idiom' = "
+                         "established everyday idiomatic expressions of any origin")
     args = ap.parse_args()
 
     if args.estimate_cost:
         langs = list(LANGUAGE_NAMES.keys()) if args.all_languages else ([args.language] if args.language else ["(1 language)"])
+        mode_note = ("everyday idioms" if args.mode == "idiom" else "literary references")
+        print(f"Mode: {args.mode} ({mode_note})\n")
         print_cost_estimate(args.target, langs, args.with_i18n, args.with_review)
         return
 
@@ -1141,6 +1345,7 @@ def main() -> None:
         do_review=args.auto_review or args.auto_promote,
         do_promote=args.auto_promote,
         reviewed_by=args.reviewed_by,
+        mode=args.mode,
     )
 
 

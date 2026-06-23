@@ -1,0 +1,334 @@
+#!/usr/bin/env python3
+"""Fetch idiom (and optionally proverb) entries from Wiktionary category pages
+for a target language and write them as a CSV in the format expected by
+import_cultural_sources.py.
+
+Wiktionary's idiom/proverb category pages are structured, freely licensed
+(CC-BY-SA 4.0), and contain thousands of entries per language. This script
+queries the public MediaWiki API (no authentication required) to page through
+category members, optionally fetches a one-line definition per entry, and
+deduplicates against an existing seed YAML before writing output.
+
+Usage:
+  python scripts/fetch_wiktionary_idioms.py \\
+    --language en \\
+    --output data/cultural_sources/en_wiktionary_idioms.csv \\
+    [--seed data/cultural_references_seed.yaml] \\
+    [--fetch-definitions] \\
+    [--include-proverbs] \\
+    [--limit 1000]
+
+Downstream usage — import the CSV using the existing pipeline:
+  python scripts/import_cultural_sources.py \\
+    data/cultural_sources/en_wiktionary_idioms.csv \\
+    --output data/cultural_drafts/en_wiktionary_idioms.yaml
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import re
+import sys
+import time
+from pathlib import Path
+from typing import Any, Iterator
+from urllib.parse import quote
+
+import requests
+
+try:
+    import yaml  # type: ignore
+except ImportError:  # pragma: no cover - exercised in minimal environments
+    yaml = None  # type: ignore[assignment]
+
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_SEED = ROOT / "data" / "cultural_references_seed.yaml"
+
+# Must match EXPECTED_CSV_HEADER in scripts/import_cultural_sources.py exactly.
+EXPECTED_CSV_HEADER = (
+    "language,surface_pattern,surface_patterns,variants,canonical_reference,reference_type,"
+    "source_work,source_author,source_location,source_quote,source_note,short_explanation,"
+    "explanation_key,source_work_key,source_author_key,learner_level,register,confidence,"
+    "source_url,source_license,rights_basis,source_dataset,notes"
+)
+CSV_FIELDS = EXPECTED_CSV_HEADER.split(",")
+
+BASE_URL = "https://en.wiktionary.org/w/api.php"
+USER_AGENT = "Mnemosyne-cultural-catalogue-builder/1.0 (educational; contact: see github)"
+REQUEST_DELAY_S = 0.1  # Wiktionary allows up to 200 req/s anonymous; be polite.
+
+WIKTIONARY_LANG_NAMES: dict[str, str] = {
+    "en":  "English",
+    "es":  "Spanish",
+    "fr":  "French",
+    "de":  "German",
+    "it":  "Italian",
+    "pt":  "Portuguese",
+    "ru":  "Russian",
+    "ar":  "Arabic",
+    "he":  "Hebrew",
+    "zh":  "Chinese",
+    "ja":  "Japanese",
+    "la":  "Latin",
+    "ko":  "Korean",
+    "hi":  "Hindi",
+    "tr":  "Turkish",
+    "fa":  "Persian",
+    "grc": "Ancient Greek",
+    "fi":  "Finnish",
+}
+
+# Separate category map for proverbs — add others as confirmed to exist in
+# Wiktionary (not every language has a populated "{Language} proverbs" category).
+WIKTIONARY_PROVERB_NAMES: dict[str, str] = {
+    "en": "English proverbs",
+    "es": "Spanish proverbs",
+    "fr": "French proverbs",
+    "de": "German proverbs",
+    "ru": "Russian proverbs",
+    "ar": "Arabic proverbs",
+    "zh": "Chinese proverbs",
+    "ja": "Japanese proverbs",
+}
+
+TODO_EXPLANATION = "TODO: add explanation"
+LICENSE_COMMENT = (
+    "# Source: Wiktionary (https://www.wiktionary.org), licensed CC-BY-SA 4.0. "
+    "Attribution and share-alike terms apply to any redistribution of this "
+    "content — see https://creativecommons.org/licenses/by-sa/4.0/. "
+    "Auto-imported; review before promotion."
+)
+
+
+def _session() -> requests.Session:
+    s = requests.Session()
+    s.headers.update({"User-Agent": USER_AGENT})
+    return s
+
+
+def _api_get(session: requests.Session, params: dict[str, Any], *, max_retries: int = 2) -> dict[str, Any] | None:
+    """GET the MediaWiki API with one retry on network error. Returns None (and
+    prints a warning to stderr) if both attempts fail — callers must handle that
+    by skipping the affected entry/page rather than crashing the whole run."""
+    last_exc: Exception | None = None
+    for attempt in range(max_retries):
+        try:
+            resp = session.get(BASE_URL, params=params, timeout=15)
+            resp.raise_for_status()
+            return resp.json()
+        except (requests.RequestException, ValueError) as exc:
+            last_exc = exc
+            if attempt < max_retries - 1:
+                time.sleep(REQUEST_DELAY_S * 5)
+    print(f"WARNING: Wiktionary API request failed after {max_retries} attempts "
+          f"({params.get('action', '?')}): {last_exc}", file=sys.stderr)
+    return None
+
+
+def fetch_category_members(session: requests.Session, category: str, limit: int | None) -> Iterator[str]:
+    """Page through Category:{category} main-namespace members, yielding page titles."""
+    cmcontinue: str | None = None
+    yielded = 0
+    while True:
+        params = {
+            "action": "query",
+            "list": "categorymembers",
+            "cmtitle": f"Category:{category}",
+            "cmlimit": 500,
+            "cmnamespace": 0,
+            "format": "json",
+        }
+        if cmcontinue:
+            params["cmcontinue"] = cmcontinue
+        time.sleep(REQUEST_DELAY_S)
+        data = _api_get(session, params)
+        if data is None:
+            return
+        members = data.get("query", {}).get("categorymembers", [])
+        for m in members:
+            title = m.get("title")
+            if not title:
+                continue
+            yield title
+            yielded += 1
+            if limit is not None and yielded >= limit:
+                return
+        cmcontinue = data.get("continue", {}).get("cmcontinue")
+        if not cmcontinue:
+            return
+
+
+def fetch_definition(session: requests.Session, title: str, lang_name: str) -> str:
+    """Fetch a short, one-line definition for *title* from its Wiktionary page,
+    extracting the section that matches the target language. Best-effort: any
+    failure or unparseable wikitext returns the TODO placeholder rather than
+    raising, since this is an optional, slower enrichment path."""
+    time.sleep(REQUEST_DELAY_S)
+    data = _api_get(session, {
+        "action": "parse",
+        "page": title,
+        "prop": "wikitext",
+        "format": "json",
+    })
+    if data is None or "parse" not in data:
+        return TODO_EXPLANATION
+
+    wikitext = data["parse"].get("wikitext", {}).get("*", "")
+    if not wikitext:
+        return TODO_EXPLANATION
+
+    # Wiktionary pages are split into "==Language==" sections. Find the one
+    # matching our target language, then the first numbered gloss line under
+    # an "===Idiom==="/"===Proverb==="/"===Phrase===" part-of-speech heading.
+    lang_marker = f"=={lang_name}=="
+    start = wikitext.find(lang_marker)
+    if start == -1:
+        return TODO_EXPLANATION
+    # Next level-2 "==Language==" heading bounds this section, if any. Must
+    # match exactly 2 leading/trailing '=' — a naive "\n==" search also
+    # matches level-3+ subheadings like "\n===Etymology 1===" (since that
+    # string starts with "\n=="), truncating the section before any gloss
+    # line under "====Noun===="/"====Adjective====" etc. is ever reached.
+    next_match = re.search(r"\n==[^=\n][^\n]*==\n", wikitext[start + len(lang_marker):])
+    section = (
+        wikitext[start: start + len(lang_marker) + next_match.start()]
+        if next_match else wikitext[start:]
+    )
+
+    for line in section.splitlines():
+        line = line.strip()
+        if line.startswith("# ") and not line.startswith("#:"):
+            gloss = line[2:].strip()
+            # Strip common wikitext markup: [[link|text]] / [[text]] / '' '' / {{...}}
+            gloss = _strip_wikitext_markup(gloss)
+            if gloss:
+                return gloss[:300]
+    return TODO_EXPLANATION
+
+
+def _strip_wikitext_markup(text: str) -> str:
+    text = re.sub(r"\{\{[^}]*\}\}", "", text)          # templates
+    text = re.sub(r"\[\[([^|\]]*\|)?([^\]]*)\]\]", r"\2", text)  # [[a|b]] -> b, [[a]] -> a
+    text = re.sub(r"'{2,}", "", text)                    # ''italic''/'''bold'''
+    return text.strip()
+
+
+def load_seed_canonical_refs(seed_path: Path, language: str) -> set[str]:
+    """Casefolded canonical_reference set for *language* from the seed YAML, used
+    to skip Wiktionary entries that already exist (dedup is title-based: any
+    Wiktionary page title matching an existing seed entry's casefolded
+    canonical_reference is skipped)."""
+    refs: set[str] = set()
+    if not seed_path.exists():
+        return refs
+    if yaml is None:
+        print("WARNING: PyYAML not installed — cannot deduplicate against seed.", file=sys.stderr)
+        return refs
+    with seed_path.open(encoding="utf-8") as f:
+        data = yaml.safe_load(f) or []
+    for entry in data:
+        if isinstance(entry, dict) and entry.get("language") == language and entry.get("canonical_reference"):
+            refs.add(str(entry["canonical_reference"]).casefold())
+    return refs
+
+
+def build_row(title: str, language: str, explanation: str) -> dict[str, str]:
+    row = {field: "" for field in CSV_FIELDS}
+    row.update({
+        "language":            language,
+        "surface_pattern":     title,
+        "canonical_reference": title,
+        "reference_type":      "cultural_reference",
+        "source_work":         "Wiktionary",
+        "source_author":       "Wiktionary contributors",
+        "source_url":          f"https://en.wiktionary.org/wiki/{quote(title.replace(' ', '_'))}",
+        "source_license":      "CC-BY-SA-4.0",
+        "source_dataset":      f"{language}_wiktionary_idioms",
+        "learner_level":       "B1",
+        "register":            "common",
+        "confidence":          "0.70",
+        "short_explanation":   explanation,
+        "notes":               "Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.",
+    })
+    return row
+
+
+def run(
+    language: str, output: Path, seed_path: Path | None,
+    fetch_definitions: bool, include_proverbs: bool, limit: int | None,
+) -> int:
+    if language not in WIKTIONARY_LANG_NAMES:
+        print(
+            f"ERROR: unknown --language '{language}'. Known codes: "
+            f"{', '.join(sorted(WIKTIONARY_LANG_NAMES))}",
+            file=sys.stderr,
+        )
+        return 1
+
+    lang_name = WIKTIONARY_LANG_NAMES[language]
+    existing = load_seed_canonical_refs(seed_path, language) if seed_path else set()
+    session = _session()
+
+    categories = [lang_name + " idioms"]
+    if include_proverbs:
+        proverb_cat = WIKTIONARY_PROVERB_NAMES.get(language)
+        if proverb_cat:
+            categories.append(proverb_cat)
+        else:
+            print(f"WARNING: --include-proverbs requested but no confirmed proverb "
+                  f"category for '{language}' — skipping proverbs.", file=sys.stderr)
+
+    seen_titles: set[str] = set()
+    rows: list[dict[str, str]] = []
+    remaining = limit
+    for category in categories:
+        print(f"Fetching Category:{category} ...", file=sys.stderr)
+        for title in fetch_category_members(session, category, remaining):
+            if title in seen_titles:
+                continue
+            seen_titles.add(title)
+            if title.casefold() in existing:
+                continue
+            explanation = fetch_definition(session, title, lang_name) if fetch_definitions else TODO_EXPLANATION
+            rows.append(build_row(title, language, explanation))
+            if remaining is not None:
+                remaining = limit - len(rows)
+                if remaining <= 0:
+                    break
+        if remaining is not None and remaining <= 0:
+            break
+
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with output.open("w", encoding="utf-8", newline="") as f:
+        f.write(LICENSE_COMMENT + "\n")
+        writer = csv.DictWriter(f, fieldnames=CSV_FIELDS)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(row)
+
+    print(f"Wrote {len(rows)} rows to {output}", file=sys.stderr)
+    return 0
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--language", required=True, help="BCP-47 code (e.g. en, es, fr)")
+    ap.add_argument("--output", required=True, type=Path, help="CSV output path")
+    ap.add_argument("--seed", type=Path, default=DEFAULT_SEED,
+                     help=f"Seed YAML to deduplicate against (default: {DEFAULT_SEED})")
+    ap.add_argument("--fetch-definitions", action="store_true",
+                     help="Fetch one-line definitions from Wiktionary (slow, optional, one extra API call per entry)")
+    ap.add_argument("--include-proverbs", action="store_true",
+                     help="Also fetch from the language's proverbs category, if confirmed to exist")
+    ap.add_argument("--limit", type=int, default=None, help="Maximum entries to fetch (default: no limit)")
+    args = ap.parse_args()
+
+    return run(
+        language=args.language, output=args.output, seed_path=args.seed,
+        fetch_definitions=args.fetch_definitions, include_proverbs=args.include_proverbs,
+        limit=args.limit,
+    )
+
+
+if __name__ == "__main__":
+    sys.exit(main())
