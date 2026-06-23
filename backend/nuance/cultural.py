@@ -9,12 +9,18 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
+from backend.nuance.script_normalise import normalise_for_matching
 from backend.schemas.parse import CandidateObject
 
 DATA_DIR = Path(__file__).resolve().parent / "data" / "cultural_references"
 CASE_INSENSITIVE_LANGUAGES = frozenset({"en", "es", "fr", "de", "it", "pt", "ru", "la", "tr", "fi"})
 WORD_BOUNDARY_LANGUAGES = CASE_INSENSITIVE_LANGUAGES
 AMBIGUOUS_LOW_CONFIDENCE = 0.75
+# Languages with script-variant normalisation beyond plain NFC+casefold (see
+# backend/nuance/script_normalise.py) — tashkeel, alef variants, ye variants,
+# nukta/anusvara typing inconsistencies, etc. that are semantically irrelevant
+# to surface-pattern matching but would otherwise cause silent match misses.
+SCRIPT_NORMALISED_LANGUAGES = frozenset({"ar", "fa", "hi"})
 
 
 @dataclass(frozen=True)
@@ -37,6 +43,8 @@ def normalize_text(text: str) -> str:
 
 
 def _comparable(text: str, language: str) -> str:
+    if language in SCRIPT_NORMALISED_LANGUAGES:
+        return normalise_for_matching(text, language)
     text = normalize_text(text)
     if language in CASE_INSENSITIVE_LANGUAGES:
         return text.casefold()
@@ -46,13 +54,25 @@ def _comparable(text: str, language: str) -> str:
 def _comparable_with_spans(text: str, language: str) -> tuple[str, list[tuple[int, int]]]:
     """Return comparable text plus a map from comparable offsets to original spans."""
     text = normalize_text(text)
-    if language not in CASE_INSENSITIVE_LANGUAGES:
+    if language not in CASE_INSENSITIVE_LANGUAGES and language not in SCRIPT_NORMALISED_LANGUAGES:
         return text, [(idx, idx + 1) for idx in range(len(text))]
 
+    # Apply the per-character transform (casefold, or full script-variant
+    # normalisation for ar/fa/hi) one character at a time so the comparable
+    # string can still be mapped back to original-text offsets — including
+    # when the transform deletes a character entirely (e.g. a tashkeel mark
+    # normalises to '', contributing zero spans for that input position,
+    # same as how casefold's occasional 1-to-many expansion, e.g. 'ß'->'ss',
+    # is already handled below by emitting one span per output character).
+    transform = (
+        (lambda c: normalise_for_matching(c, language))
+        if language in SCRIPT_NORMALISED_LANGUAGES
+        else (lambda c: c.casefold())
+    )
     chars: list[str] = []
     spans: list[tuple[int, int]] = []
     for idx, char in enumerate(text):
-        folded = char.casefold()
+        folded = transform(char)
         chars.append(folded)
         spans.extend((idx, idx + 1) for _ in folded)
     return "".join(chars), spans

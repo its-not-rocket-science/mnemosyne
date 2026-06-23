@@ -43,6 +43,7 @@ SUPPORTED_LANGUAGES = {
     "ru",
     "ar",
     "he",
+    "fa",
     "zh",
     "ja",
     "la",
@@ -76,6 +77,8 @@ KNOWN_SOURCE_LICENSES = {
     "CC0",
     "CC0-1.0",
     "CC-BY-4.0",
+    "CC-BY-SA-4.0",  # Wiktionary (scripts/fetch_wiktionary_idioms.py) — distinct from
+                      # CC-BY-4.0: ShareAlike requires derivatives use the same licence.
     "copyright_or_rights_review_needed",
     "common_usage_short_expression",  # legacy v4 value; kept accepted for older source files
 }
@@ -247,7 +250,12 @@ def stable_generated_id(row: dict[str, Any]) -> str:
 
 def load_csv(path: Path) -> list[dict[str, Any]]:
     with path.open(newline="", encoding="utf-8-sig") as handle:
-        reader = csv.DictReader(handle)
+        # Skip leading '#'-prefixed comment lines (e.g. the license/attribution
+        # note scripts/fetch_wiktionary_idioms.py writes before the header) so
+        # csv.DictReader sees the real header row first, not the comment.
+        lines = handle.readlines()
+        first_data_line = next((i for i, l in enumerate(lines) if not l.startswith("#")), 0)
+        reader = csv.DictReader(lines[first_data_line:])
         if reader.fieldnames is None:
             raise ValueError(f"{path}: CSV must include a header row")
         return [dict(row) for row in reader]

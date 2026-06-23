@@ -14,7 +14,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SEED = ROOT / "data" / "cultural_references_seed.yaml"
 DEFAULT_OUT = ROOT / "backend" / "nuance" / "data" / "cultural_references"
-SUPPORTED_LANGUAGES = ("en", "es", "fr", "de", "it", "pt", "ru", "ar", "he", "zh", "ja", "la", "grc", "ko", "hi", "tr", "fi")
+SUPPORTED_LANGUAGES = ("en", "es", "fr", "de", "it", "pt", "ru", "ar", "he", "fa", "zh", "ja", "la", "grc", "ko", "hi", "tr", "fi")
 REFERENCE_TYPES = {"literary_reference", "cultural_reference", "proverb_tradition", "classical_or_scriptural_allusion"}
 LEARNER_LEVELS = {"A1", "A2", "B1", "B2", "C1", "C2"}
 REGISTERS = {"common", "literary", "formal", "informal", "religious", "classical", "proverbial"}
@@ -41,6 +41,8 @@ KNOWN_SOURCE_LICENSES = {
     "CC0",
     "CC0-1.0",
     "CC-BY-4.0",
+    "CC-BY-SA-4.0",  # Wiktionary (scripts/fetch_wiktionary_idioms.py) — distinct from
+                      # CC-BY-4.0: ShareAlike requires derivatives use the same licence.
     "copyright_or_rights_review_needed",
     "common_usage_short_expression",  # legacy accepted seed/source value
 }
