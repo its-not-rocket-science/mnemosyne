@@ -143,6 +143,7 @@ LANGUAGE_NAMES: dict[str, str] = {
     "nl": "Dutch",      "pl": "Polish",     "sv": "Swedish",
     "he": "Hebrew",     "fa": "Persian",    "uk": "Ukrainian",
     "cs": "Czech",      "ro": "Romanian",   "hu": "Hungarian",
+    "fi": "Finnish",
 }
 
 # A single open-ended "give me N more not already in this list" discover
