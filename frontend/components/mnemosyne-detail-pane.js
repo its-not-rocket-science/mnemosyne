@@ -542,7 +542,7 @@ export class MnemosyneDetailPane extends HTMLElement {
     const nonSuppressedFields = (lesson.fields ?? [])
       .filter(f => !SUPPRESS_IN_EXPLANATION.has(f.label.toLowerCase()))
     const hasExtraFields  = depthIdx >= 1 && nonSuppressedFields.length > 1
-    const hasWhyItMatters = Boolean(ld.why_it_matters) && depthIdx >= 2
+    const hasWhyItMatters = Boolean(ld.why_it_matters) && depthIdx >= 1
 
     // Depth still controls which sections have data worth showing; it no
     // longer controls navigation (everything lives in one scrollable pane).
@@ -719,6 +719,8 @@ export class MnemosyneDetailPane extends HTMLElement {
     const matchTypeNote   = ld.match_type_note || ''
     const isConfusable    = matchType === 'confusable_not_same'
     const confusableWarning = matchTypeNote || t('dp_confusable_warning')
+    const registerValue   = ld.register || ''
+    const showRegister    = Boolean(registerValue) && registerValue !== 'neutral'
 
     return /* html */`
       <section
@@ -731,11 +733,18 @@ export class MnemosyneDetailPane extends HTMLElement {
             <span class="pane__confusable-warning-text">${esc(confusableWarning)}</span>
           </div>
         ` : ''}
-        ${showMatchBadge ? /* html */`
+        ${showMatchBadge || showRegister ? /* html */`
           <div class="pane__match-row">
-            <span class="pane__match-badge pane__match-badge--${esc(matchTypeMeta.cls)}">
-              ${esc(matchTypeMeta.labelKey ? t(matchTypeMeta.labelKey) : matchType)}
-            </span>
+            ${showMatchBadge ? /* html */`
+              <span class="pane__match-badge pane__match-badge--${esc(matchTypeMeta.cls)}">
+                ${esc(matchTypeMeta.labelKey ? t(matchTypeMeta.labelKey) : matchType)}
+              </span>
+            ` : ''}
+            ${showRegister ? /* html */`
+              <span class="pane__register-badge pane__register-badge--${esc(registerValue)}">
+                ${esc(registerValue)}
+              </span>
+            ` : ''}
             ${matchTypeNote ? `<p class="pane__match-note">${esc(matchTypeNote)}</p>` : ''}
           </div>
         ` : ''}
@@ -774,7 +783,7 @@ export class MnemosyneDetailPane extends HTMLElement {
 
   /** Level 2: "why it matters" note, suppressed from the Level 1 explanation. */
   _htmlWhyItMattersPanel(ld, depthIdx) {
-    if (!ld.why_it_matters || depthIdx < 2) return ''
+    if (!ld.why_it_matters || depthIdx < 1) return ''
     return /* html */`
       <blockquote class="pane__why-it-matters">
         <p class="pane__why-it-matters-text">${esc(ld.why_it_matters)}</p>
@@ -2681,6 +2690,39 @@ export class MnemosyneDetailPane extends HTMLElement {
         border: 1px solid color-mix(in oklch, var(--detail-accent, ${ref}) 30%, Canvas);
       }
       /* warning — amber */
+      /* ── Register badge (neutral/literary/formal/informal/archaic) ──────────
+         'neutral' is intentionally never badged — it's the unmarked default
+         and showing it adds noise without information. */
+      .pane__register-badge {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        padding: 0.125rem 0.5rem;
+        border-radius: 999px;
+        background: var(--surface-secondary);
+        color: var(--text-secondary);
+        border: 1px solid var(--border);
+      }
+      .pane__register-badge--literary,
+      .pane__register-badge--archaic {
+        background: var(--brand-purple-light);
+        color: var(--brand-purple);
+        border-color: var(--brand-purple);
+      }
+      .pane__register-badge--formal {
+        background: oklch(0.96 0.02 240);
+        color: oklch(0.35 0.18 240);
+        border-color: oklch(0.80 0.10 240);
+      }
+      .pane__register-badge--informal,
+      .pane__register-badge--colloquial {
+        background: oklch(0.96 0.04 42);
+        color: oklch(0.38 0.16 42);
+        border-color: oklch(0.80 0.12 42);
+      }
+
       .pane__match-badge--warning {
         background: color-mix(in oklch, oklch(0.72 0.18 55) 14%, Canvas);
         color:      color-mix(in oklch, oklch(0.72 0.18 55) 80%, CanvasText);

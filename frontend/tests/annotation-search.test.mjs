@@ -39,7 +39,10 @@ console.log('✓ main.js: annotationSearch ref and activeSearchTerm state declar
 // ── applyAnnotationFilter uses searchAllowed ──────────────────────────────────
 
 const filterIdx  = mainJs.indexOf('function applyAnnotationFilter(')
-const filterBody = mainJs.slice(filterIdx, filterIdx + 900)
+// Window widened past the original 900 chars — the cultural-catalogue
+// visibility fixes added a register-aware category override before the
+// search-term check.
+const filterBody = mainJs.slice(filterIdx, filterIdx + 1700)
 assert.ok(filterBody.includes('searchAllowed'), 'applyAnnotationFilter must use searchAllowed')
 assert.ok(filterBody.includes('activeSearchTerm'), 'applyAnnotationFilter must check activeSearchTerm')
 assert.ok(filterBody.includes('dataset.label'), 'search must match against dataset.label')

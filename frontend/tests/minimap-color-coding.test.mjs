@@ -56,7 +56,10 @@ console.log('✓ main.js: minimapLegend ref declared')
 // ── buildMinimap sets tick.dataset.category and collects presentCats ──────────
 
 const buildIdx  = mainJs.indexOf('function buildMinimap() {')
-const buildBody = mainJs.slice(buildIdx, buildIdx + 2100)
+// Window widened past the original 2100 chars — the cultural-catalogue
+// visibility fixes added a register-aware category override (nuance/
+// phrase_family route to 'idioms' unless register is literary/archaic).
+const buildBody = mainJs.slice(buildIdx, buildIdx + 2500)
 
 assert.ok(buildBody.includes('_MINIMAP_COLORS['), 'buildMinimap must look up _MINIMAP_COLORS')
 assert.ok(buildBody.includes('tick.style.background'), 'buildMinimap must set tick background')

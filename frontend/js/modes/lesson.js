@@ -290,7 +290,7 @@ results.addEventListener('lesson-open', async (event) => {
           vocabulary: 'var(--ann-vocab)',
           grammar: 'var(--ann-grammar)', conjugation: 'var(--ann-grammar)', agreement: 'var(--ann-grammar)',
           idiom: 'var(--ann-idiom)',
-          nuance: 'var(--ann-literary)', phrase_family: 'var(--ann-literary)',
+          nuance: 'var(--ann-idiom)', phrase_family: 'var(--ann-idiom)',
           script: 'var(--ann-etymology)', transliteration: 'var(--ann-etymology)',
         }
         const type = sourceEl?.dataset?.type || lesson.type || ''
@@ -842,6 +842,11 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam, de
     const _gloss = item.lesson_data?.gloss || item.lesson_data?.translation || ''
     if (_gloss)                        mark.dataset.gloss     = _gloss
     if (item.lesson_data?.cefr_level)  mark.dataset.cefrLevel = item.lesson_data.cefr_level
+    // Register (neutral/literary/formal/informal/archaic) — used by
+    // applyAnnotationFilter() to route literary/archaic-register nuance and
+    // phrase_family marks under the Literary pill instead of Idioms, even
+    // though those types default to the Idioms category (see _TYPE_TO_CATEGORY).
+    if (item.lesson_data?.register)    mark.dataset.register  = item.lesson_data.register
     mark.setAttribute('role', 'button')
     mark.setAttribute('tabindex', '0')
     const typeLong  = TYPE_LABELS_LONG_I18N[currentUiLang()]?.[`type_${item.type}_long`]
@@ -893,9 +898,10 @@ const _MINIMAP_COLORS = {
   phrase:              'var(--ann-idiom)',
   collocation:         'var(--ann-idiom)',
   proverb:             'var(--ann-idiom)',
+  // idioms (nuance/phrase_family route to idioms, not literary — see _TYPE_TO_CATEGORY)
+  nuance:              'var(--ann-idiom)',
+  phrase_family:       'var(--ann-idiom)',
   // literary
-  nuance:              'var(--ann-literary)',
-  phrase_family:       'var(--ann-literary)',
   literary:            'var(--ann-literary)',
   literary_device:     'var(--ann-literary)',
   nuance_or_style:     'var(--ann-literary)',
@@ -920,7 +926,7 @@ const _TYPE_TO_CATEGORY = {
   agreement: 'grammar', inflection: 'grammar',
   idiom: 'idioms', expression: 'idioms', phrase: 'idioms',
   collocation: 'idioms', proverb: 'idioms',
-  nuance: 'literary', phrase_family: 'literary', literary: 'literary',
+  nuance: 'idioms', phrase_family: 'idioms', literary: 'literary',
   literary_device: 'literary', nuance_or_style: 'literary', cultural_note: 'literary',
   rhetoric: 'literary', figure_of_speech: 'literary', poetic: 'literary',
   etymology: 'etymology', derivation: 'etymology', cognate: 'etymology',
@@ -955,7 +961,13 @@ function buildMinimap() {
     tick.className = 'annotation-minimap__tick'
     tick.style.top        = `${pct.toFixed(2)}%`
     tick.style.background = _MINIMAP_COLORS[mark.dataset.type] ?? 'var(--accent)'
-    const cat = _TYPE_TO_CATEGORY[mark.dataset.type]
+    // Same register override as applyAnnotationFilter() — keep the minimap
+    // legend's category dots consistent with what the filter pills actually do.
+    let cat = _TYPE_TO_CATEGORY[mark.dataset.type]
+    if (mark.dataset.type === 'nuance' || mark.dataset.type === 'phrase_family') {
+      const register = mark.dataset.register ?? ''
+      cat = (register === 'literary' || register === 'archaic') ? 'literary' : 'idioms'
+    }
     if (cat) { tick.dataset.category = cat; presentCats.add(cat) }
     const label = (mark.dataset.type ?? '') + (mark.textContent.trim() ? ': ' + mark.textContent.trim().slice(0, 40) : '')
     tick.setAttribute('aria-label', label)
@@ -998,6 +1010,18 @@ export function applyAnnotationFilter() {
       typeAllowed = activeFilterTypes().has(type)
     } else {
       typeAllowed = depthTypes.has(type) || activeLockedTypes().has(type)
+    }
+
+    // Register override: nuance/phrase_family default to the Idioms category
+    // (_TYPE_TO_CATEGORY / filter-bar CATEGORIES), but a literary- or
+    // archaic-register instance belongs under Literary instead. Only applies
+    // when a single category pill is active — activeFilterCategories() is
+    // the un-flattened category-id set (activeFilterTypes() loses that
+    // distinction once expanded to a flat type list).
+    if ((type === 'nuance' || type === 'phrase_family') && activeFilterCategories()) {
+      const register = mark.dataset.register ?? ''
+      const effectiveCategory = (register === 'literary' || register === 'archaic') ? 'literary' : 'idioms'
+      typeAllowed = activeFilterCategories().has(effectiveCategory)
     }
 
     const term = activeSearchTerm()

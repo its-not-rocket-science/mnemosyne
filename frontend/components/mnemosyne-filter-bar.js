@@ -34,13 +34,13 @@ const CATEGORIES = [
     id:    'idioms',
     label: 'Idioms',
     color: 'var(--ann-idiom)',
-    types: ['idiom', 'expression', 'phrase', 'collocation', 'proverb'],
+    types: ['idiom', 'expression', 'phrase', 'collocation', 'proverb', 'nuance', 'phrase_family'],
   },
   {
     id:    'literary',
     label: 'Literary',
     color: 'var(--ann-literary)',
-    types: ['literary_device', 'rhetoric', 'figure_of_speech', 'literary', 'poetic', 'nuance', 'phrase_family', 'nuance_or_style'],
+    types: ['literary_device', 'rhetoric', 'figure_of_speech', 'literary', 'poetic', 'nuance_or_style'],
   },
   {
     id:    'etymology',
