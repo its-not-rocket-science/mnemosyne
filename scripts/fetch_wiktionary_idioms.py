@@ -176,52 +176,58 @@ def fetch_category_members(session: requests.Session, category: str, limit: int 
             return
 
 
-def fetch_definition(session: requests.Session, title: str, lang_name: str) -> str:
-    """Fetch a short, one-line definition for *title* from its Wiktionary page,
-    extracting the section that matches the target language. Best-effort: any
-    failure or unparseable wikitext returns the TODO placeholder rather than
-    raising, since this is an optional, slower enrichment path."""
-    time.sleep(REQUEST_DELAY_S)
-    data = _api_get(session, {
-        "action": "parse",
-        "page": title,
-        "prop": "wikitext",
-        "format": "json",
-    })
-    if data is None or "parse" not in data:
-        return TODO_EXPLANATION
+DEFINITION_BATCH_SIZE = 50  # MediaWiki allows up to 50 titles per query request
 
-    wikitext = data["parse"].get("wikitext", {}).get("*", "")
+
+def _extract_definition(wikitext: str, lang_name: str) -> str:
+    """Parse wikitext and return the first gloss line for lang_name's section."""
     if not wikitext:
         return TODO_EXPLANATION
-
-    # Wiktionary pages are split into "==Language==" sections. Find the one
-    # matching our target language, then the first numbered gloss line under
-    # an "===Idiom==="/"===Proverb==="/"===Phrase===" part-of-speech heading.
     lang_marker = f"=={lang_name}=="
     start = wikitext.find(lang_marker)
     if start == -1:
         return TODO_EXPLANATION
-    # Next level-2 "==Language==" heading bounds this section, if any. Must
-    # match exactly 2 leading/trailing '=' — a naive "\n==" search also
-    # matches level-3+ subheadings like "\n===Etymology 1===" (since that
-    # string starts with "\n=="), truncating the section before any gloss
-    # line under "====Noun===="/"====Adjective====" etc. is ever reached.
+    # Must match exactly 2 leading/trailing '=' to avoid matching level-3+ headings.
     next_match = re.search(r"\n==[^=\n][^\n]*==\n", wikitext[start + len(lang_marker):])
     section = (
         wikitext[start: start + len(lang_marker) + next_match.start()]
         if next_match else wikitext[start:]
     )
-
     for line in section.splitlines():
         line = line.strip()
         if line.startswith("# ") and not line.startswith("#:"):
-            gloss = line[2:].strip()
-            # Strip common wikitext markup: [[link|text]] / [[text]] / '' '' / {{...}}
-            gloss = _strip_wikitext_markup(gloss)
+            gloss = _strip_wikitext_markup(line[2:].strip())
             if gloss:
                 return gloss[:300]
     return TODO_EXPLANATION
+
+
+def fetch_definitions_batch(
+    session: requests.Session, titles: list[str], lang_name: str
+) -> dict[str, str]:
+    """Fetch definitions for up to DEFINITION_BATCH_SIZE titles in one API call.
+    Returns a dict mapping title → explanation; missing/failed entries get TODO_EXPLANATION."""
+    time.sleep(REQUEST_DELAY_S)
+    data = _api_get(session, {
+        "action": "query",
+        "titles": "|".join(titles),
+        "prop": "revisions",
+        "rvprop": "content",
+        "rvslots": "main",
+        "format": "json",
+    })
+    result: dict[str, str] = {}
+    if data is not None:
+        for page in ((data.get("query") or {}).get("pages") or {}).values():
+            title = page.get("title", "")
+            revisions = page.get("revisions") or []
+            if revisions:
+                slots = revisions[0].get("slots") or {}
+                wikitext = (slots.get("main") or {}).get("*", "") or revisions[0].get("*", "")
+                result[title] = _extract_definition(wikitext, lang_name)
+    for t in titles:
+        result.setdefault(t, TODO_EXPLANATION)
+    return result
 
 
 def _strip_wikitext_markup(text: str) -> str:
@@ -297,24 +303,34 @@ def run(
                   f"category for '{language}' — skipping proverbs.", file=sys.stderr)
 
     seen_titles: set[str] = set()
-    rows: list[dict[str, str]] = []
-    remaining = limit
+    valid_titles: list[str] = []
     for category in categories:
         print(f"Fetching Category:{category} ...", file=sys.stderr)
-        for title in fetch_category_members(session, category, remaining):
+        for title in fetch_category_members(session, category, limit):
             if title in seen_titles:
                 continue
             seen_titles.add(title)
             if title.casefold() in existing:
                 continue
-            explanation = fetch_definition(session, title, lang_name) if fetch_definitions else TODO_EXPLANATION
-            rows.append(build_row(title, language, explanation))
-            if remaining is not None:
-                remaining = limit - len(rows)
-                if remaining <= 0:
-                    break
-        if remaining is not None and remaining <= 0:
+            valid_titles.append(title)
+            if limit is not None and len(valid_titles) >= limit:
+                break
+        if limit is not None and len(valid_titles) >= limit:
             break
+
+    definitions: dict[str, str] = {}
+    if fetch_definitions and valid_titles:
+        total = (len(valid_titles) + DEFINITION_BATCH_SIZE - 1) // DEFINITION_BATCH_SIZE
+        for i in range(0, len(valid_titles), DEFINITION_BATCH_SIZE):
+            batch = valid_titles[i:i + DEFINITION_BATCH_SIZE]
+            batch_num = i // DEFINITION_BATCH_SIZE + 1
+            print(f"  Fetching definitions batch {batch_num}/{total} ({len(batch)} titles)...", file=sys.stderr)
+            definitions.update(fetch_definitions_batch(session, batch, lang_name))
+
+    rows = [
+        build_row(title, language, definitions.get(title, TODO_EXPLANATION) if fetch_definitions else TODO_EXPLANATION)
+        for title in valid_titles
+    ]
 
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open("w", encoding="utf-8", newline="") as f:
