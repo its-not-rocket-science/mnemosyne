@@ -1,0 +1,1161 @@
+- id: en_classical_or_scriptural_allusion_achilles_heel_09506ade
+  language: en
+  canonical_reference: Achilles' heel
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Achilles' heel
+  - Achilles heel
+  - the Achilles' heel
+  - an Achilles' heel
+  short_explanation: A fatal weakness in spite of overall strength, derived from the mythical Greek hero
+    Achilles whose only vulnerable spot was his heel. It symbolizes a hidden flaw that can lead to downfall.
+  learner_level: B1
+  confidence: 0.9
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.homer_iliad_allusions_achilles_heel
+  source_work_key: mnemosyne.en.work.ἰλιάσ
+  source_author_key: mnemosyne.en.author.homer
+  source_work: Ἰλιάς
+  source_author: Homer
+  source_location: Book 22, line 359-360
+  source_url: http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0133:book=22:card=359
+  source_license: public_domain
+  source_dataset: homer_iliad_allusions
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_beware_the_ides_of_march_31228bf6
+  language: en
+  canonical_reference: Beware the Ides of March
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Beware the Ides of March
+  - the Ides of March
+  - Ides of March
+  short_explanation: A warning phrase associated with the assassination of Julius Caesar on March 15,
+    44 BCE. It has come to symbolize impending danger or betrayal.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.en.explanation.plutarch_lives_allusions_beware_the_ides_of_march
+  source_work_key: mnemosyne.en.work.the_life_of_julius_caesar
+  source_author_key: mnemosyne.en.author.plutarch
+  source_work: The Life of Julius Caesar
+  source_author: Plutarch
+  source_location: Life of Caesar, 63.1
+  source_url: http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0120:book=1:chapter=63&highlight=ides
+  source_license: public_domain
+  source_dataset: plutarch_lives_allusions
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_bread_and_circuses_72a8a11d
+  language: en
+  canonical_reference: Bread and circuses
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - bread and circuses
+  - bread and games
+  - panem et circenses
+  short_explanation: A policy of offering superficial pleasures to distract the public from more serious
+    issues. Originates from the Roman satirist Juvenal, criticizing the Roman populace's reliance on free
+    food and entertainment.
+  learner_level: C1
+  confidence: 0.85
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions_bread_circuses_bread_and_circu
+  source_work_key: mnemosyne.en.work.satire_10
+  source_author_key: mnemosyne.en.author.decimus_junius_juvenalis_juvenal
+  source_work: Satire 10
+  source_author: Decimus Junius Juvenalis (Juvenal)
+  source_location: Line 78-81
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0131:text%3DSat.%2010%3Acard%3D78
+  source_license: public_domain
+  source_dataset: classical_allusions_bread_circuses
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_literary_reference_caviar_to_the_general_7075b1ca
+  language: en
+  canonical_reference: Caviar to the general
+  reference_type: literary_reference
+  surface_patterns:
+  - caviar to the general
+  - caviar for the general
+  - caviare to the general
+  short_explanation: Something that is too sophisticated or refined for the average person. Originates
+    from Shakespeare's play where Hamlet uses it to describe how his wit is wasted on the dull-witted
+    Polonius.
+  learner_level: C2
+  confidence: 0.88
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.en.explanation.shakespeare_hamlet_allusions_caviar_to_the_general
+  source_work_key: mnemosyne.en.work.the_tragedy_of_hamlet_prince_of_denmark
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: The Tragedy of Hamlet, Prince of Denmark
+  source_author: William Shakespeare
+  source_location: Act 2, Scene 2
+  source_url: https://www.folger.edu/explore/shakespeares-works/hamlet/read/2/2/
+  source_license: public_domain
+  source_dataset: shakespeare_hamlet_allusions
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_proverb_tradition_divide_and_conquer_0b315bd9
+  language: en
+  canonical_reference: Divide and conquer
+  reference_type: proverb_tradition
+  surface_patterns:
+  - divide and conquer
+  - divide and rule
+  - divide et impera
+  short_explanation: A strategy of maintaining power by breaking up larger concentrations of power into
+    smaller, more manageable pieces. Originates from Latin political strategy and has been attributed
+    to various historical figures.
+  learner_level: B2
+  confidence: 0.8
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.en.explanation.proverbs_divide_conquer_divide_and_conquer
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.oral_tradition_attributed_to_philip_ii_of_macedon
+  source_work: Various
+  source_author: Oral tradition / attributed to Philip II of Macedon
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: proverbs_divide_conquer
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_et_tu_brute_c775932f
+  language: en
+  canonical_reference: Et tu, Brute?
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Et tu, Brute?
+  - Et tu Brute?
+  - Et tu, Brute
+  - Et tu Brute
+  short_explanation: A betrayal by a trusted friend, originating from Shakespeare's play 'Julius Caesar'
+    where Caesar utters these words upon recognizing Brutus among his assassins.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.en.explanation.shakespeare_julius_caesar_phrases_et_tu_brute
+  source_work_key: mnemosyne.en.work.julius_caesar
+  source_author_key: mnemosyne.en.author.william_shakespeare
+  source_work: Julius Caesar
+  source_author: William Shakespeare
+  source_location: Act 3, Scene 1
+  source_url: https://www.gutenberg.org/files/1533/1533-h/1533-h.htm#act3
+  source_license: public_domain
+  source_dataset: shakespeare_julius_caesar_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_literary_reference_fools_rush_in_where_angels_fear_to_tread_0f595833
+  language: en
+  canonical_reference: Fools rush in where angels fear to tread
+  reference_type: literary_reference
+  surface_patterns:
+  - Fools rush in where angels fear to tread
+  - Fools rush in where angels fear to tread.
+  short_explanation: A proverb warning against reckless behavior, derived from Alexander Pope's poem 'An
+    Essay on Criticism,' highlighting the contrast between foolishness and wisdom.
+  learner_level: B2
+  confidence: 0.88
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.en.explanation.alexander_pope_essay_on_criticism_phrases_fools_ru
+  source_work_key: mnemosyne.en.work.an_essay_on_criticism
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Criticism
+  source_author: Alexander Pope
+  source_location: Part II, line 120
+  source_url: https://www.gutenberg.org/files/1224/1224-h/1224-h.htm#link2HCH0002
+  source_license: public_domain
+  source_dataset: alexander_pope_essay_on_criticism_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_golden_age_79663cda
+  language: en
+  canonical_reference: Golden age
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - the Golden Age
+  - a Golden Age
+  - Golden Age
+  short_explanation: A mythological period of peace and prosperity, originating from Greek mythology and
+    later adopted in literature to describe an idealized past or utopian future.
+  learner_level: B1
+  confidence: 0.85
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.en.explanation.hesiod_works_and_days_phrases_golden_age
+  source_work_key: mnemosyne.en.work.works_and_days
+  source_author_key: mnemosyne.en.author.hesiod
+  source_work: Works and Days
+  source_author: Hesiod
+  source_location: Lines 109-126
+  source_url: http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0128%3Atext%3DHes.%20Op.%20109
+  source_license: public_domain
+  source_dataset: hesiod_works_and_days_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_hydra_headed_problem_f6a2b741
+  language: en
+  canonical_reference: Hydra-headed problem
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - hydra-headed problem
+  - hydra-headed problems
+  - a hydra-headed problem
+  short_explanation: A problem with many facets or branches, derived from the mythological Hydra, a serpent
+    with multiple heads that regrew when severed, symbolizing persistent or complex issues.
+  learner_level: B2
+  confidence: 0.87
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_mythology_phrases_hydra_headed_problem
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.classical_mythology
+  source_work: Various
+  source_author: Classical Mythology
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0063%3Aalphabetic+letter%3DH%3Aentry+group%3D3%3Aentry%3Dhydra1
+  source_license: public_domain
+  source_dataset: classical_mythology_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_i_came_i_saw_i_conquered_b8ebe328
+  language: en
+  canonical_reference: I came, I saw, I conquered
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Veni, vidi, vici
+  - I came, I saw, I conquered
+  - I came I saw I conquered
+  short_explanation: A famous Latin phrase attributed to Julius Caesar, symbolizing swift and decisive
+    victory, often used to describe a quick or effortless triumph.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.en.explanation.julius_caesar_bello_gallico_phrases_i_came_i_saw_i
+  source_work_key: mnemosyne.en.work.commentarii_de_bello_gallico
+  source_author_key: mnemosyne.en.author.julius_caesar
+  source_work: Commentarii de Bello Gallico
+  source_author: Julius Caesar
+  source_location: Book 3, Chapter 16
+  source_url: http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0001%3Abook%3D3%3Achapter%3D16
+  source_license: public_domain
+  source_dataset: julius_caesar_bello_gallico_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_in_media_res_003f1128
+  language: en
+  canonical_reference: In media res
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - in medias res
+  - in media res
+  - in the middle of things
+  short_explanation: A narrative technique where a story begins in the middle of the action rather than
+    at the beginning. Derived from Latin, it literally means 'into the midst of things'.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.en.explanation.horace_ars_poetica_in_media_res
+  source_work_key: mnemosyne.en.work.ars_poetica
+  source_author_key: mnemosyne.en.author.horace
+  source_work: Ars Poetica
+  source_author: Horace
+  source_url: https://en.wikisource.org/wiki/Ars_Poetica_(Conington_translation)
+  source_license: public_domain
+  source_dataset: horace_ars_poetica
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_proverb_tradition_man_proposes_god_disposes_8e94db32
+  language: en
+  canonical_reference: Man proposes, God disposes
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Man proposes, God disposes
+  - Man proposes, God disposes.
+  - Man proposes; God disposes.
+  short_explanation: A proverb emphasizing human limitation and divine sovereignty; outcomes are ultimately
+    controlled by a higher power despite human plans.
+  learner_level: B1
+  confidence: 0.85
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.en.explanation.proverbs_man_proposes_god_disposes_man_proposes_go
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: proverbs_man_proposes_god_disposes
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_memento_mori_0b02e326
+  language: en
+  canonical_reference: Memento mori
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - memento mori
+  - remember you must die
+  short_explanation: A Latin phrase meaning 'remember you must die', used as a reminder of the inevitability
+    of death and the need to live virtuously.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.en.explanation.memento_mori_classical_memento_mori
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.ancient_roman_tradition
+  source_work: Various
+  source_author: Ancient Roman tradition
+  source_url: https://en.wikipedia.org/wiki/Memento_mori
+  source_license: public_domain
+  source_dataset: memento_mori_classical
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_literary_reference_noble_savage_8314550b
+  language: en
+  canonical_reference: Noble savage
+  reference_type: literary_reference
+  surface_patterns:
+  - noble savage
+  - the noble savage
+  short_explanation: A literary trope depicting an idealized, uncivilized person as inherently good and
+    uncorrupted by society, often used to critique Western civilization.
+  learner_level: C1
+  confidence: 0.8
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.en.explanation.dryden_noble_savage_noble_savage
+  source_work_key: mnemosyne.en.work.the_conquest_of_granada
+  source_author_key: mnemosyne.en.author.john_dryden
+  source_work: The Conquest of Granada
+  source_author: John Dryden
+  source_url: https://www.gutenberg.org/files/62476/62476-h/62476-h.htm
+  source_license: public_domain
+  source_dataset: dryden_noble_savage
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_oedipal_complex_27f87f8d
+  language: en
+  canonical_reference: Oedipal complex
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Oedipal complex
+  - Oedipus complex
+  short_explanation: A psychoanalytic concept describing a child's unconscious sexual desire for the parent
+    of the opposite sex and rivalry with the parent of the same sex.
+  learner_level: C1
+  confidence: 0.88
+  review_status: draft
+  register: formal
+  explanation_key: mnemosyne.en.explanation.freud_oedipus_complex_oedipal_complex
+  source_work_key: mnemosyne.en.work.the_interpretation_of_dreams
+  source_author_key: mnemosyne.en.author.sigmund_freud
+  source_work: The Interpretation of Dreams
+  source_author: Sigmund Freud
+  source_url: https://www.gutenberg.org/files/32891/32891-h/32891-h.htm
+  source_license: public_domain
+  source_dataset: freud_oedipus_complex
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_sword_of_damocles_17756bfb
+  language: en
+  canonical_reference: Sword of Damocles
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - the Sword of Damocles
+  - a Sword of Damocles
+  - Damocles' sword
+  short_explanation: A symbol of impending danger or doom hanging over someone. It originates from a story
+    in ancient Greek lore about a courtier who was seated at a banquet with a sword suspended above his
+    head by a single horsehair.
+  learner_level: B2
+  confidence: 0.88
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.en.explanation.classical_allusions_phrases_sword_of_damocles
+  source_work_key: mnemosyne.en.work.tusculanae_disputationes
+  source_author_key: mnemosyne.en.author.cicero
+  source_work: Tusculanae Disputationes
+  source_author: Cicero
+  source_location: Book V, Section 61-62
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0083%3Abook%3D5%3Asection%3D61
+  source_license: public_domain
+  source_dataset: classical_allusions_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_the_die_is_cast_9598a9f2
+  language: en
+  canonical_reference: The die is cast
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - the die is cast
+  - the die was cast
+  - the dice are cast
+  - the die has been cast
+  short_explanation: A phrase meaning that a decision has been made and cannot be changed, often implying
+    a point of no return. It originates from Julius Caesar's crossing of the Rubicon River in 49 BCE,
+    which marked the start of a civil war.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: classical
+  variants:
+  - Alea iacta est
+  explanation_key: mnemosyne.en.explanation.classical_allusions_phrases_the_die_is_cast
+  source_work_key: mnemosyne.en.work.commentarii_de_bello_civili
+  source_author_key: mnemosyne.en.author.gaius_julius_caesar
+  source_work: Commentarii de Bello Civili
+  source_author: Gaius Julius Caesar
+  source_location: Book I, Section 20
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0153%3Abook%3D1%3Achapter%3D20
+  source_license: public_domain
+  source_dataset: classical_allusions_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_literary_reference_the_face_that_launched_a_thousand_ships_e2d61eec
+  language: en
+  canonical_reference: The face that launched a thousand ships
+  reference_type: literary_reference
+  surface_patterns:
+  - the face that launched a thousand ships
+  - a face that launched a thousand ships
+  - the face which launched a thousand ships
+  short_explanation: A poetic phrase referring to extreme beauty that inspires great actions, often war.
+    It alludes to Helen of Troy, whose abduction or elopement sparked the Trojan War.
+  learner_level: C1
+  confidence: 0.85
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.en.explanation.english_literary_phrases_the_face_that_launched_a_
+  source_work_key: mnemosyne.en.work.doctor_faustus
+  source_author_key: mnemosyne.en.author.christopher_marlowe
+  source_work: Doctor Faustus
+  source_author: Christopher Marlowe
+  source_location: Act V, Scene 1
+  source_url: https://www.gutenberg.org/files/779/779-h/779-h.htm#act5
+  source_license: public_domain
+  source_dataset: english_literary_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_thy_kingdom_come_257d715a
+  language: en
+  canonical_reference: Thy kingdom come
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - thy kingdom come
+  - your kingdom come
+  - the kingdom come
+  - thy kingdom come, thy will be done
+  short_explanation: A phrase from the Lord's Prayer in the Christian tradition, expressing a desire for
+    God's reign to be established on earth. It signifies submission to divine will and the hope for a
+    just and peaceful world.
+  learner_level: A2
+  confidence: 0.9
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.en.explanation.scriptural_allusions_phrases_thy_kingdom_come
+  source_work_key: mnemosyne.en.work.the_bible
+  source_author_key: mnemosyne.en.author.tradition_attributed_to_jesus_of_nazareth
+  source_work: The Bible
+  source_author: Tradition (attributed to Jesus of Nazareth)
+  source_location: Matthew 6:10 (New Testament)
+  source_url: https://www.biblegateway.com/passage/?search=Matthew+6%3A10&version=KJV
+  source_license: public_domain
+  source_dataset: scriptural_allusions_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_literary_reference_to_err_is_human_to_forgive_divine_f3c00cad
+  language: en
+  canonical_reference: To err is human, to forgive divine
+  reference_type: literary_reference
+  surface_patterns:
+  - to err is human, to forgive divine
+  - to err is human; to forgive, divine
+  - it is human to err, divine to forgive
+  short_explanation: A proverb-like statement emphasizing that making mistakes is a natural part of being
+    human, while forgiveness is a noble and godly virtue. It reflects a moral perspective on human nature
+    and redemption.
+  learner_level: B1
+  confidence: 0.87
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.en.explanation.english_literary_phrases_to_err_is_human_to_forgiv
+  source_work_key: mnemosyne.en.work.an_essay_on_criticism
+  source_author_key: mnemosyne.en.author.alexander_pope
+  source_work: An Essay on Criticism
+  source_author: Alexander Pope
+  source_location: Part II, Line 131
+  source_url: https://www.gutenberg.org/files/1576/1576-h/1576-h.htm#link2HCH0002
+  source_license: public_domain
+  source_dataset: english_literary_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_gordian_knot_df3b4504
+  language: en
+  canonical_reference: Gordian Knot
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Gordian knot
+  - the Gordian knot
+  - cut the Gordian knot
+  short_explanation: A complex or unsolvable problem; to solve it decisively by bold action. The phrase
+    originates from Alexander the Great cutting the Gordian knot with his sword, symbolizing a swift resolution.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: classical
+  variants:
+  - Gordian's knot
+  explanation_key: mnemosyne.en.explanation.classical_allusions_gordian_knot_gordian_knot
+  source_work_key: mnemosyne.en.work.historiae_philippi
+  source_author_key: mnemosyne.en.author.quintus_curtius_rufus
+  source_work: Historiae Philippi
+  source_author: Quintus Curtius Rufus
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0138:text%3DHistPhil%3Abook%3D3%3Achapter%3D11
+  source_license: public_domain
+  source_dataset: classical_allusions_gordian_knot
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_balkan_powder_keg_c16c3e36
+  language: en
+  canonical_reference: Balkan powder keg
+  reference_type: cultural_reference
+  surface_patterns:
+  - Balkan powder keg
+  - the Balkan powder keg
+  - powder keg of the Balkans
+  short_explanation: A region prone to sudden and violent political upheaval. The phrase reflects historical
+    instability in the Balkans, particularly during the late 19th and early 20th centuries.
+  learner_level: C1
+  confidence: 0.8
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.cultural_references_balkans_balkan_powder_keg
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: cultural_references_balkans
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_proverb_tradition_burning_the_candle_at_both_ends_12c8f66a
+  language: en
+  canonical_reference: Burning the candle at both ends
+  reference_type: proverb_tradition
+  surface_patterns:
+  - burning the candle at both ends
+  - burn the candle at both ends
+  short_explanation: To exhaust oneself by working too hard or living recklessly. The phrase suggests
+    using up resources (the candle) unsustainably, leading to exhaustion or ruin.
+  learner_level: B2
+  confidence: 0.75
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.proverbs_burning_candle_burning_the_candle_at_both
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: proverbs_burning_candle
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_proverb_tradition_caesar_s_wife_must_be_above_suspicion_b5588ef0
+  language: en
+  canonical_reference: Caesar's wife must be above suspicion
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Caesar's wife must be above suspicion
+  - The wife of Caesar must be above suspicion
+  - Caesar's wife should be above suspicion
+  - A Caesar's wife must be above suspicion
+  short_explanation: This phrase emphasizes that a person in a position of authority must maintain the
+    highest standards of integrity, even in their personal life. It originates from the Roman dictator
+    Julius Caesar's reported statement about his wife Pompeia.
+  learner_level: B2
+  confidence: 0.85
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.en.explanation.classical_proverbs_caesar_caesar_s_wife_must_be_ab
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.plutarch
+  source_work: Various
+  source_author: Plutarch
+  source_location: Life of Caesar, 10.6
+  source_url: https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Lives/Caesar*.html
+  source_license: public_domain
+  source_dataset: classical_proverbs_caesar
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_crossing_the_rubicon_26f7a7d0
+  language: en
+  canonical_reference: Crossing the Rubicon
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - cross the Rubicon
+  - crossing the Rubicon
+  - to cross the Rubicon
+  - the Rubicon was crossed
+  short_explanation: This phrase refers to passing a point of no return, often in a bold or irreversible
+    decision. It originates from Julius Caesar's crossing of the Rubicon river in 49 BCE, which sparked
+    civil war in Rome.
+  learner_level: B1
+  confidence: 0.9
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.en.explanation.caesar_rubicon_allusion_crossing_the_rubicon
+  source_work_key: mnemosyne.en.work.commentarii_de_bello_civili
+  source_author_key: mnemosyne.en.author.gaius_julius_caesar
+  source_work: Commentarii de Bello Civili
+  source_author: Gaius Julius Caesar
+  source_location: Book 1, Section 8
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0153
+  source_license: public_domain
+  source_dataset: caesar_rubicon_allusion
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_cultural_revolution_ed234411
+  language: en
+  canonical_reference: Cultural Revolution
+  reference_type: cultural_reference
+  surface_patterns:
+  - the Cultural Revolution
+  - Cultural Revolution
+  - China's Cultural Revolution
+  - during the Cultural Revolution
+  short_explanation: A socio-political movement in China (1966–1976) led by Mao Zedong to preserve communist
+    ideology by purging capitalist and traditional elements. It resulted in widespread chaos, persecution,
+    and cultural destruction.
+  learner_level: B2
+  confidence: 0.8
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.modern_history_cultural_revolution_cultural_revolu
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.mao_zedong
+  source_work: Various
+  source_author: Mao Zedong
+  source_url: https://www.britannica.com/event/Cultural-Revolution
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: modern_history_cultural_revolution
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_d_day_landings_bbb9d57e
+  language: en
+  canonical_reference: D-Day landings
+  reference_type: cultural_reference
+  surface_patterns:
+  - D-Day
+  - the D-Day landings
+  - D-Day invasion
+  - on D-Day
+  - Normandy landings
+  short_explanation: The Allied invasion of Normandy on June 6, 1944, during World War II, marking a pivotal
+    turning point in the war against Nazi Germany. It is often referred to simply as 'D-Day.'
+  learner_level: A2
+  confidence: 0.9
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.wwii_d_day_reference_d_day_landings
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.eisenhower_dwight_d_eisenhower
+  source_work: Various
+  source_author: Eisenhower/Dwight D. Eisenhower
+  source_url: https://www.nationalww2museum.org/war/articles/d-day-invasion-normandy
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: wwii_d_day_reference
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_fiddling_while_rome_burns_19496980
+  language: en
+  canonical_reference: Fiddling while Rome burns
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - fiddling while Rome burns
+  - to fiddle while Rome burns
+  - fiddling as Rome burns
+  - Rome burns while he fiddles
+  short_explanation: This phrase describes a situation where someone is negligently or callously ignoring
+    a crisis while engaging in trivial or self-indulgent activity. It originates from the Great Fire of
+    Rome in 64 CE, though the association with Nero playing the lyre is likely apocryphal.
+  learner_level: B2
+  confidence: 0.85
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.en.explanation.tacitus_rome_fire_allusion_fiddling_while_rome_bur
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.tacitus
+  source_work: Various
+  source_author: Tacitus
+  source_location: Annals, 15.41
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0078:book=15:chapter=41
+  source_license: public_domain
+  source_dataset: tacitus_rome_fire_allusion
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_four_horsemen_of_the_apocalypse_283ced33
+  language: en
+  canonical_reference: Four Horsemen of the Apocalypse
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Four Horsemen of the Apocalypse
+  - the Four Horsemen
+  - Four Horsemen
+  - horsemen of the Apocalypse
+  short_explanation: A symbolic vision from the New Testament (Book of Revelation) depicting four figures
+    representing conquest, war, famine, and death, heralding the end times. Widely used in literature,
+    art, and popular culture to represent catastrophic events or widespread destruction.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.en.explanation.bible_revelation_phrases_four_horsemen_of_the_apoc
+  source_work_key: mnemosyne.en.work.book_of_revelation
+  source_author_key: mnemosyne.en.author.tradition_attributed_to_john_of_patmos
+  source_work: Book of Revelation
+  source_author: Tradition (attributed to John of Patmos)
+  source_location: Revelation 6:1-8
+  source_url: https://www.biblegateway.com/passage/?search=Revelation+6&version=KJV
+  source_license: public_domain
+  source_dataset: bible_revelation_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_gilded_age_356edea9
+  language: en
+  canonical_reference: Gilded Age
+  reference_type: cultural_reference
+  surface_patterns:
+  - Gilded Age
+  - the Gilded Age
+  - Gilded Age era
+  short_explanation: A term coined by Mark Twain and Charles Dudley Warner for the late 19th century in
+    the U.S., marked by rapid economic growth, industrialization, and social inequality. It highlights
+    the contrast between outward prosperity and underlying corruption.
+  learner_level: B2
+  confidence: 0.88
+  review_status: draft
+  register: formal
+  explanation_key: mnemosyne.en.explanation.twain_gilded_age_gilded_age
+  source_work_key: mnemosyne.en.work.the_gilded_age_a_tale_of_today
+  source_author_key: mnemosyne.en.author.mark_twain_and_charles_dudley_warner
+  source_work: 'The Gilded Age: A Tale of Today'
+  source_author: Mark Twain and Charles Dudley Warner
+  source_location: Title and subtitle
+  source_url: https://www.gutenberg.org/ebooks/3178
+  source_license: public_domain
+  source_dataset: twain_gilded_age
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_great_chicago_fire_bf422e84
+  language: en
+  canonical_reference: Great Chicago Fire
+  reference_type: cultural_reference
+  surface_patterns:
+  - Great Chicago Fire
+  - the Great Chicago Fire
+  - Chicago Fire of 1871
+  short_explanation: A devastating fire in 1871 that destroyed much of Chicago, killing hundreds and leaving
+    over 100,000 homeless. It became a symbol of urban resilience and is often cited in discussions of
+    disaster recovery and city planning.
+  learner_level: B1
+  confidence: 0.85
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.chicago_fire_history_great_chicago_fire
+  source_work_key: mnemosyne.en.work.various_historical_records
+  source_author_key: mnemosyne.en.author.oral_tradition_historical_accounts
+  source_work: Various (historical records)
+  source_author: Oral tradition / Historical accounts
+  source_url: https://www.chicagohistory.org/history/chicago-fire/
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: chicago_fire_history
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_great_emu_war_0f9b5b79
+  language: en
+  canonical_reference: Great Emu War
+  reference_type: cultural_reference
+  surface_patterns:
+  - Great Emu War
+  - the Emu War
+  - Emu War
+  short_explanation: A humorous 1932 conflict in Australia where military forces were deployed to cull
+    emus, which were destroying crops. The emus won, becoming a symbol of nature's resilience against
+    human intervention.
+  learner_level: B2
+  confidence: 0.8
+  review_status: draft
+  register: informal
+  explanation_key: mnemosyne.en.explanation.emu_war_history_great_emu_war
+  source_work_key: mnemosyne.en.work.various_news_reports_and_oral_tradition
+  source_author_key: mnemosyne.en.author.oral_tradition_media_accounts
+  source_work: Various (news reports and oral tradition)
+  source_author: Oral tradition / Media accounts
+  source_url: https://www.australianfrontierconflicts.com.au/emu-war.htm
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: emu_war_history
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_great_fire_of_london_d2cfc5f4
+  language: en
+  canonical_reference: Great Fire of London
+  reference_type: cultural_reference
+  surface_patterns:
+  - Great Fire of London
+  - the Great Fire of London
+  - London Fire of 1666
+  short_explanation: A catastrophic fire in 1666 that destroyed much of medieval London, including over
+    13,000 houses and 87 churches. It led to significant urban rebuilding and is a key event in London's
+    history.
+  learner_level: B1
+  confidence: 0.87
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.london_fire_history_great_fire_of_london
+  source_work_key: mnemosyne.en.work.various_historical_records
+  source_author_key: mnemosyne.en.author.oral_tradition_historical_accounts
+  source_work: Various (historical records)
+  source_author: Oral tradition / Historical accounts
+  source_url: https://www.london-fire.gov.uk/museum/history-and-stories/great-fire-of-london/
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: london_fire_history
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_great_leap_forward_d3a1ca0f
+  language: en
+  canonical_reference: Great Leap Forward
+  reference_type: cultural_reference
+  surface_patterns:
+  - Great Leap Forward
+  - the Great Leap Forward
+  short_explanation: A campaign led by Mao Zedong in China (1958–1962) to rapidly industrialize and collectivize
+    agriculture, resulting in widespread famine and economic disruption.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.modern_chinese_history_great_leap_forward
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.mao_zedong
+  source_work: Various
+  source_author: Mao Zedong
+  source_url: https://en.wikipedia.org/wiki/Great_Leap_Forward
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: modern_chinese_history
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_great_purge_c7bcccd3
+  language: en
+  canonical_reference: Great Purge
+  reference_type: cultural_reference
+  surface_patterns:
+  - Great Purge
+  - the Great Purge
+  - Stalin's Great Purge
+  short_explanation: A campaign of political repression and persecution in the Soviet Union (1936–1938)
+    under Joseph Stalin, involving show trials, executions, and forced labor camps.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.soviet_history_great_purge
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.joseph_stalin
+  source_work: Various
+  source_author: Joseph Stalin
+  source_url: https://en.wikipedia.org/wiki/Great_Purge
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: soviet_history
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_iron_curtain_a4d4dee3
+  language: en
+  canonical_reference: Iron Curtain
+  reference_type: cultural_reference
+  surface_patterns:
+  - Iron Curtain
+  - the Iron Curtain
+  short_explanation: A term popularized by Winston Churchill in 1946 to describe the ideological and physical
+    division between Western Europe and the Soviet-dominated Eastern Bloc during the Cold War.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.cold_war_speeches_iron_curtain
+  source_work_key: mnemosyne.en.work.speech
+  source_author_key: mnemosyne.en.author.winston_churchill
+  source_work: Speech
+  source_author: Winston Churchill
+  source_location: Fulton, Missouri
+  source_url: https://www.nato.int/docu/speech/1946/03-05-1946-sf.htm
+  source_license: public_domain
+  source_dataset: cold_war_speeches
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_march_on_rome_6a8b609f
+  language: en
+  canonical_reference: March on Rome
+  reference_type: cultural_reference
+  surface_patterns:
+  - March on Rome
+  - the March on Rome
+  short_explanation: A pivotal event in 1922 when Benito Mussolini's National Fascist Party marched on
+    Rome, leading to his appointment as Prime Minister and the establishment of a fascist regime in Italy.
+  learner_level: B2
+  confidence: 0.85
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fascist_history_march_on_rome
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.benito_mussolini
+  source_work: Various
+  source_author: Benito Mussolini
+  source_url: https://en.wikipedia.org/wiki/March_on_Rome
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: fascist_history
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_mccarthyism_ded322cd
+  language: en
+  canonical_reference: McCarthyism
+  reference_type: cultural_reference
+  surface_patterns:
+  - McCarthyism
+  - McCarthy era
+  - the McCarthy era
+  short_explanation: A period of intense anti-communist suspicion in the U.S. (late 1940s–1950s) led by
+    Senator Joseph McCarthy, characterized by blacklisting, investigations, and suppression of dissent.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.american_political_history_mccarthyism
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.joseph_mccarthy
+  source_work: Various
+  source_author: Joseph McCarthy
+  source_url: https://en.wikipedia.org/wiki/McCarthyism
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: american_political_history
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_night_of_the_long_knives_57dde8d1
+  language: en
+  canonical_reference: Night of the Long Knives
+  reference_type: cultural_reference
+  surface_patterns:
+  - Night of the Long Knives
+  - the Night of the Long Knives
+  short_explanation: A 1934 purge in Nazi Germany where Adolf Hitler ordered the assassination of political
+    rivals within his own party, particularly the SA leadership. It marked a shift in power consolidation.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.historical_events_en_night_of_the_long_knives
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.historical_event
+  source_work: Various
+  source_author: Historical event
+  source_url: https://en.wikipedia.org/wiki/Night_of_the_Long_Knives
+  source_license: CC-BY-SA-4.0
+  source_dataset: historical_events_en
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_scramble_for_africa_e30a6985
+  language: en
+  canonical_reference: Scramble for Africa
+  reference_type: cultural_reference
+  surface_patterns:
+  - Scramble for Africa
+  - the Scramble for Africa
+  short_explanation: The late 19th-century colonization of Africa by European powers, driven by competition
+    for resources and strategic dominance. It reshaped the continent's political and cultural landscape.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.historical_events_en_scramble_for_africa
+  source_work_key: mnemosyne.en.work.various
+  source_author_key: mnemosyne.en.author.historical_event
+  source_work: Various
+  source_author: Historical event
+  source_url: https://en.wikipedia.org/wiki/Scramble_for_Africa
+  source_license: CC-BY-SA-4.0
+  source_dataset: historical_events_en
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_trojan_horse_076f4bc0
+  language: en
+  canonical_reference: Trojan Horse
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Trojan Horse
+  - a Trojan Horse
+  - the Trojan Horse
+  short_explanation: A deceptive gift (a wooden horse) used by the Greeks to infiltrate Troy during the
+    Trojan War, as recounted in Homer's *Iliad*. Symbolizes hidden danger or trickery.
+  learner_level: B1
+  confidence: 0.9
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.en.explanation.greek_mythology_en_trojan_horse
+  source_work_key: mnemosyne.en.work.iliad
+  source_author_key: mnemosyne.en.author.homer
+  source_work: Iliad
+  source_author: Homer
+  source_location: Book 24 (lines 700-725 approx.)
+  source_url: http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0133
+  source_license: public_domain
+  source_dataset: greek_mythology_en
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_a_burning_bush_b4daac21
+  language: en
+  canonical_reference: a burning bush
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - a burning bush
+  - the burning bush
+  short_explanation: A miraculous phenomenon where a bush burns but is not consumed, appearing to Moses
+    in the Book of Exodus. Symbolizes divine revelation and a call to action.
+  learner_level: B1
+  confidence: 0.85
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.en.explanation.bible_references_en_a_burning_bush
+  source_work_key: mnemosyne.en.work.bible
+  source_author_key: mnemosyne.en.author.various_traditionally_attributed_to_moses
+  source_work: Bible
+  source_author: Various (traditionally attributed to Moses)
+  source_location: Exodus 3:2-6
+  source_url: https://www.biblegateway.com/passage/?search=Exodus+3&version=NIV
+  source_license: public_domain
+  source_dataset: bible_references_en
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_cultural_reference_a_prophet_is_not_without_honor_save_in_his_own_country_083574f8
+  language: en
+  canonical_reference: a prophet is not without honor, save in his own country
+  reference_type: cultural_reference
+  surface_patterns:
+  - a prophet is not without honor, save in his own country
+  - a prophet hath no honor in his own country
+  - no prophet is accepted in his hometown
+  short_explanation: A saying attributed to Jesus in the New Testament, expressing the idea that people
+    often reject the wisdom of those they know well. Reflects themes of recognition and rejection.
+  learner_level: C1
+  confidence: 0.88
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.en.explanation.bible_references_en_a_prophet_is_not_without_honor
+  source_work_key: mnemosyne.en.work.bible
+  source_author_key: mnemosyne.en.author.jesus_as_recorded_in_the_gospels
+  source_work: Bible
+  source_author: Jesus (as recorded in the Gospels)
+  source_location: John 4:44 (parallel in Matthew 13:57, Mark 6:4, Luke 4:24)
+  source_url: https://www.biblegateway.com/passage/?search=John+4%3A44&version=NIV
+  source_license: public_domain
+  source_dataset: bible_references_en
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_dust_to_dust_ashes_to_ashes_ea3339ab
+  language: en
+  canonical_reference: dust to dust, ashes to ashes
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - dust to dust
+  - ashes to ashes
+  - from dust to dust
+  - ashes to ashes, dust to dust
+  short_explanation: A phrase from Christian burial rites, signifying the return of the body to the earth
+    after death. It reflects the biblical passage in Genesis 3:19.
+  learner_level: B1
+  confidence: 0.9
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.en.explanation.bible_genesis_phrases_dust_to_dust_ashes_to_ashes
+  source_work_key: mnemosyne.en.work.the_bible_book_of_common_prayer
+  source_author_key: mnemosyne.en.author.traditional_based_on_genesis_3_19
+  source_work: The Bible (Book of Common Prayer)
+  source_author: Traditional (based on Genesis 3:19)
+  source_location: Genesis 3:19
+  source_url: https://www.biblegateway.com/passage/?search=Genesis+3%3A19&version=KJV
+  source_license: public_domain
+  source_dataset: bible_genesis_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_let_he_who_is_without_sin_cast_the_first_stone_620a2a75
+  language: en
+  canonical_reference: let he who is without sin cast the first stone
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - let he who is without sin cast the first stone
+  - let him who is without sin cast the first stone
+  - let the one without sin cast the first stone
+  short_explanation: A biblical phrase from Jesus' teaching on hypocrisy and judgment, emphasizing mercy
+    over condemnation. It originates from the Gospel of John.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.en.explanation.bible_john_phrases_let_he_who_is_without_sin_cast_
+  source_work_key: mnemosyne.en.work.the_bible_gospel_of_john
+  source_author_key: mnemosyne.en.author.traditional_attributed_to_jesus
+  source_work: The Bible (Gospel of John)
+  source_author: Traditional (attributed to Jesus)
+  source_location: John 8:7
+  source_url: https://www.biblegateway.com/passage/?search=John+8%3A7&version=KJV
+  source_license: public_domain
+  source_dataset: bible_john_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_the_apple_of_my_eye_3ec70ff9
+  language: en
+  canonical_reference: the apple of my eye
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - the apple of my eye
+  - apple of my eye
+  - the apple of his/her/their eye
+  short_explanation: A phrase meaning someone cherished above all others, derived from biblical and medieval
+    usage referring to the pupil of the eye.
+  learner_level: B1
+  confidence: 0.85
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.en.explanation.bible_deuteronomy_psalms_phrases_the_apple_of_my_e
+  source_work_key: mnemosyne.en.work.the_bible_deuteronomy_and_psalms
+  source_author_key: mnemosyne.en.author.traditional_hebrew_bible
+  source_work: The Bible (Deuteronomy and Psalms)
+  source_author: Traditional (Hebrew Bible)
+  source_location: Deuteronomy 32:10, Psalm 17:8
+  source_url: https://www.biblegateway.com/passage/?search=Deuteronomy+32%3A10%2C+Psalm+17%3A8&version=KJV
+  source_license: public_domain
+  source_dataset: bible_deuteronomy_psalms_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_the_writing_on_the_wall_5a650a55
+  language: en
+  canonical_reference: the writing on the wall
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - the writing on the wall
+  - writing on the wall
+  - the handwriting on the wall
+  short_explanation: A phrase indicating an omen of impending doom or disaster, originating from the biblical
+    story of Belshazzar's feast in the Book of Daniel.
+  learner_level: B2
+  confidence: 0.9
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.en.explanation.bible_daniel_phrases_the_writing_on_the_wall
+  source_work_key: mnemosyne.en.work.the_bible_book_of_daniel
+  source_author_key: mnemosyne.en.author.traditional_attributed_to_daniel
+  source_work: The Bible (Book of Daniel)
+  source_author: Traditional (attributed to Daniel)
+  source_location: Daniel 5:5-6
+  source_url: https://www.biblegateway.com/passage/?search=Daniel+5%3A5-6&version=KJV
+  source_license: public_domain
+  source_dataset: bible_daniel_phrases
+  notes: AI-generated; verify attribution and surface patterns before promotion.
+- id: en_classical_or_scriptural_allusion_cassandra_s_prophecy_5f233799
+  language: en
+  canonical_reference: Cassandra's prophecy
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Cassandra's prophecy
+  - Cassandra's curse
+  - Cassandra's warning
+  - like Cassandra
+  short_explanation: A reference to the Trojan priestess Cassandra, cursed to prophesy truth but never
+    be believed. It symbolizes a prophetic warning that goes unheeded.
+  learner_level: C1
+  confidence: 0.85
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.en.explanation.greek_mythology_cassandra_cassandra_s_prophecy
+  source_work_key: mnemosyne.en.work.greek_mythology_various_sources
+  source_author_key: mnemosyne.en.author.traditional_greek_mythological_tradition
+  source_work: Greek mythology (various sources)
+  source_author: Traditional (Greek mythological tradition)
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0099%3Abook%3D1%3Achapter%3D42
+  source_license: public_domain
+  source_dataset: greek_mythology_cassandra
+  notes: AI-generated; verify attribution and surface patterns before promotion.
