@@ -1,0 +1,70 @@
+[
+  {
+    "canonical_reference": "Almus Iesus",
+    "reason": "Attribution to Vulgate is incorrect; 'Almus Iesus' is not a biblical epithet."
+  },
+  {
+    "canonical_reference": "Aurora Musis amica",
+    "reason": "This phrase is not found in Horace's Odes 3.11.1; attribution is mistaken."
+  },
+  {
+    "canonical_reference": "Ora et labora",
+    "reason": "Phrase not found in Rule of Saint Benedict; attribution false."
+  },
+  {
+    "canonical_reference": "Abiit in caelum",
+    "reason": "The Apostles' Creed uses 'ascendit in caelum', not 'abiit in caelum'."
+  },
+  {
+    "canonical_reference": "Abluitur Aeneae sanguis",
+    "reason": "The phrase does not appear in Virgil's Aeneid at Book 12 line 831; it is likely invented."
+  },
+  {
+    "canonical_reference": "Aeneae mors",
+    "reason": "The death of Aeneas is not described in Virgil's Aeneid; the cited lines refer to Turnus' death."
+  },
+  {
+    "canonical_reference": "Cum fenicis morior",
+    "reason": "Attribution wrongly claimed; phrase not found in Ovid's Epistulae ex Ponto and is likely a modern invention."
+  },
+  {
+    "canonical_reference": "Aequitatem appella, parum desunt",
+    "reason": "This exact phrase does not appear in Cicero's De Officiis or any known classical text; likely a fabricated or misremembered quote."
+  },
+  {
+    "canonical_reference": "Ars celare artem",
+    "reason": "The phrase is not found in Horace's Ars Poetica; it is a later Renaissance concept misattributed here."
+  },
+  {
+    "canonical_reference": "Babae, heu, quantum mutatus ab illo!",
+    "reason": "Misattributed: the phrase is from Aeneid 2.274 (about Hector), not 1.743, and 'Babae' is not classical."
+  },
+  {
+    "canonical_reference": "Captive spectator",
+    "reason": "Not a Latin phrase; it is an English term from theater studies and does not belong in a Latin reference catalogue."
+  },
+  {
+    "canonical_reference": "Nihil est in intellectu quod non prius fuerit in sensu",
+    "reason": "The phrase is a later scholastic slogan, not found in Aristotle's De Sensu et Sensibilibus; attribution to Aristotle is inaccurate."
+  },
+  {
+    "canonical_reference": "Memento te AEgyptum convenisse",
+    "reason": "The phrase does not appear in Cicero's Epistulae ad Atticum 7.11 and likely is a misattribution or fabrication."
+  },
+  {
+    "canonical_reference": "Arsinoën Ptolemaeorum domum fundatam",
+    "reason": "Inaccurate: Arsinoë II did not found the Ptolemaic dynasty; it was founded by Ptolemy I."
+  },
+  {
+    "canonical_reference": "Augustum imperium ad finem saeculi reduxit",
+    "reason": "Phrase not found in Res Gestae Divi Augusti; appears to be a later invention or paraphrase."
+  },
+  {
+    "canonical_reference": "Medusae oculus",
+    "reason": "'Medusae oculus' is not a standard Latin phrase nor found in Ovid's account of Medusa; the petrifying gaze is attributed to her whole face or head, not a single eye."
+  },
+  {
+    "canonical_reference": "Pandorae pixis",
+    "reason": "The Latin phrase 'Pandorae pixis' is anachronistic; classical sources (Hesiod) refer to a jar (pithos), not a box (pixis), and the phrase is not attested in ancient Latin."
+  }
+]

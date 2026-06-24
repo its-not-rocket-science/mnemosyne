@@ -1,0 +1,520 @@
+- id: fi_cultural_reference_metsän_herra_5ec9b5eb
+  language: fi
+  canonical_reference: Metsän herra
+  reference_type: cultural_reference
+  surface_patterns:
+  - Metsän herra
+  short_explanation: A traditional Finnish folk song or poem personifying the forest as a lord; common
+    in folklore and children's culture.
+  i18n_explanations:
+    en: A traditional Finnish folk song or poem personifying the forest as a lord; common in folklore
+      and children's culture.
+    es: Una canción o poema folclórico tradicional finlandés que personifica al bosque como un señor;
+      común en el folclore y la cultura infantil.
+    fr: Une chanson ou un poème folklorique traditionnel finlandais personnifiant la forêt en seigneur;
+      courant dans le folklore et la culture enfantine.
+    de: Ein traditionelles finnisches Volkslied oder Gedicht, das den Wald als Herrn personifiziert; verbreitet
+      in Folklore und Kinderkultur.
+    it: Una canzone o poesia popolare tradizionale finlandese che personifica la foresta come un signore;
+      comune nel folklore e nella cultura infantile.
+    pt: Uma canção ou poema folclórico tradicional finlandês personificando a floresta como um senhor;
+      comum no folclore e na cultura infantil.
+    ru: Традиционная финская народная песня или стихотворение, олицетворяющее лес как господина; распространено
+      в фольклоре и детской культуре.
+    ja: 森を主君として擬人化した伝統的なフィンランドの民謡または詩。民間伝承や子供の文化でよく見られる。
+    zh: 一首传统的芬兰民歌或诗歌，将森林拟人化为领主；在民间传说和儿童文化中常见。
+    ar: أغنية أو قصيدة شعبية تقليدية فنلندية تجسد الغابة كسيد؛ شائعة في الفولكلور وثقافة الأطفال.
+    he: שיר עממי או שיר מסורתי פיני המאניש את היער כאדון; נפוץ בפולקלור ובתרבות הילדים.
+  learner_level: A1
+  confidence: 0.6
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.fi.explanation.fi_cultural_references_metsän_herra
+  source_work_key: mnemosyne.fi.work.various
+  source_author_key: mnemosyne.fi.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: fi_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    reference is ambiguous; ''Metsän herra'' is a known poem by Eino Leino, not solely oral tradition,
+    so attribution needs refinement.'
+- id: fi_literary_reference_jukolan_kello_8d8b119b
+  language: fi
+  canonical_reference: Jukolan kello
+  reference_type: literary_reference
+  surface_patterns:
+  - Jukolan kello
+  - kello Jukolassa
+  - Jukolan kirkonkello
+  short_explanation: Refers to the bell at Jukola farm, a central location in Aleksis Kivi's novel 'Seitsemän
+    veljestä' (Seven Brothers). The bell marks time and events for the brothers.
+  i18n_explanations:
+    en: Refers to the bell at Jukola farm, a central location in Aleksis Kivi's novel 'Seitsemän veljestä'
+      (Seven Brothers). The bell marks time and events for the brothers.
+    es: Se refiere a la campana de la granja Jukola, un lugar central en la novela de Aleksis Kivi 'Seitsemän
+      veljestä' (Siete Hermanos). La campana marca el tiempo y los eventos para los hermanos.
+    fr: Fait référence à la cloche de la ferme Jukola, un lieu central dans le roman d'Aleksis Kivi 'Seitsemän
+      veljestä' (Les Sept Frères). La cloche marque le temps et les événements pour les frères.
+    de: Bezieht sich auf die Glocke auf dem Hof Jukola, einem zentralen Schauplatz in Aleksis Kivis Roman
+      'Seitsemän veljestä' (Sieben Brüder). Die Glocke markiert für die Brüder die Zeit und Ereignisse.
+    it: Si riferisce alla campana della fattoria Jukola, un luogo centrale nel romanzo di Aleksis Kivi
+      'Seitsemän veljestä' (Sette Fratelli). La campana segna il tempo e gli eventi per i fratelli.
+    pt: Refere-se ao sino da fazenda Jukola, um local central no romance de Aleksis Kivi 'Seitsemän veljestä'
+      (Sete Irmãos). O sino marca o tempo e os eventos para os irmãos.
+    ru: Относится к колоколу на ферме Юкола, центральному месту в романе Алексиса Киви «Seitsemän veljestä»
+      (Семь братьев). Колокол отмечает время и события для братьев.
+    ja: アレクシス・キヴィの小説『Seitsemän veljestä』（七人の兄弟）の中心的な場所であるユコラ農場の鐘を指します。鐘は兄弟たちにとって時間と出来事を示します。
+    zh: 指阿莱克西斯·基维的小说《Seitsemän veljestä》（七兄弟）中的中心地点尤科拉农场的钟。钟为兄弟们标示时间和事件。
+    ar: يشير إلى جرس مزرعة جوكولا، وهو موقع مركزي في رواية ألكسيس كيفي 'Seitsemän veljestä' (سبعة إخوة).
+      يحدد الجرس الوقت والأحداث للإخوة.
+    he: מתייחס לפעמון בחוות יוקולה, מיקום מרכזי ברומן של אלקסיס קיווי 'Seitsemän veljestä' (שבעה אחים).
+      הפעמון מסמן את הזמן והאירועים עבור האחים.
+  learner_level: B2
+  confidence: 0.88
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.fi.explanation.fi_seitseman_veljesta_phrases_jukolan_kello
+  source_work_key: mnemosyne.fi.work.seitsemän_veljestä
+  source_author_key: mnemosyne.fi.author.aleksis_kivi
+  source_work: Seitsemän veljestä
+  source_author: Aleksis Kivi
+  source_url: https://www.gutenberg.org/ebooks/12000
+  source_license: public_domain
+  source_dataset: fi_seitseman_veljesta_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Plausible
+    but not a prominent or widely recognized reference in Seitsemän veljestä; needs verification.'
+- id: fi_literary_reference_seitsemän_veljeksen_tykinlaukaus_6bcd116e
+  language: fi
+  canonical_reference: Seitsemän veljeksen tykinlaukaus
+  reference_type: literary_reference
+  surface_patterns:
+  - seitsemän veljeksen tykinlaukaus
+  - tykinlaukaus seitsemältä veljekseltä
+  - seitsemän veljeksen kanuuna
+  short_explanation: Refers to a scene in Aleksis Kivi's 'Seitsemän veljestä' where the seven brothers
+    fire a cannon. It symbolizes their rebellious and adventurous spirit.
+  i18n_explanations:
+    en: Refers to a scene in Aleksis Kivi's 'Seitsemän veljestä' where the seven brothers fire a cannon.
+      It symbolizes their rebellious and adventurous spirit.
+    es: Se refiere a una escena en 'Seitsemän veljestä' de Aleksis Kivi donde los siete hermanos disparan
+      un cañón. Simboliza su espíritu rebelde y aventurero.
+    fr: Fait référence à une scène dans 'Seitsemän veljestä' d'Aleksis Kivi où les sept frères tirent
+      un canon. Il symbolise leur esprit rebelle et aventureux.
+    de: Bezieht sich auf eine Szene in Aleksis Kivis 'Seitsemän veljestä', in der die sieben Brüder eine
+      Kanone abfeuern. Es symbolisiert ihren rebellischen und abenteuerlustigen Geist.
+    it: Si riferisce a una scena in 'Seitsemän veljestä' di Aleksis Kivi dove i sette fratelli sparano
+      un cannone. Simboleggia il loro spirito ribelle e avventuroso.
+    pt: Refere-se a uma cena em 'Seitsemän veljestä' de Aleksis Kivi onde os sete irmãos disparam um canhão.
+      Simboliza seu espírito rebelde e aventureiro.
+    ru: Относится к сцене в романе Алексиса Киви «Seitsemän veljestä», где семь братьев стреляют из пушки.
+      Это символизирует их бунтарский и авантюрный дух.
+    ja: アレクシス・キヴィの『Seitsemän veljestä』の中で、七人の兄弟が大砲を発射する場面を指します。それは彼らの反抗的で冒険的な精神を象徴しています。
+    zh: 指阿莱克西斯·基维的《Seitsemän veljestä》中七个兄弟发射大炮的场景。它象征着他们叛逆和冒险的精神。
+    ar: يشير إلى مشهد في رواية ألكسيس كيفي 'Seitsemän veljestä' حيث يطلق الإخوة السبعة مدفعًا. يرمز إلى
+      روحهم المتمردة والمغامرة.
+    he: מתייחס לסצנה ב'Seitsemän veljestä' של אלקסיס קיווי שבה שבעת האחים יורים בתותח. הוא מסמל את רוחם
+      המרדנית וההרפתקנית.
+  learner_level: B2
+  confidence: 0.85
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.fi.explanation.fi_seitseman_veljesta_phrases_seitsemän_veljeksen_
+  source_work_key: mnemosyne.fi.work.seitsemän_veljestä
+  source_author_key: mnemosyne.fi.author.aleksis_kivi
+  source_work: Seitsemän veljestä
+  source_author: Aleksis Kivi
+  source_url: https://www.gutenberg.org/ebooks/12000
+  source_license: public_domain
+  source_dataset: fi_seitseman_veljesta_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Scene
+    may be minor or not as iconic; confidence slightly overclaimed.'
+- id: fi_cultural_reference_ilmarisen_takoma_dd44e2dc
+  language: fi
+  canonical_reference: Ilmarisen takoma
+  reference_type: cultural_reference
+  surface_patterns:
+  - Ilmarisen takoma
+  - Ilmarisen takoja
+  - Ilmarisen takomana
+  short_explanation: 'Forged by Ilmarinen: refers to the legendary smith Ilmarinen from Kalevala, whose
+    creations are unmatched in skill; used metaphorically for anything masterfully crafted.'
+  i18n_explanations:
+    en: 'Forged by Ilmarinen: refers to the legendary smith Ilmarinen from Kalevala, whose creations are
+      unmatched in skill; used metaphorically for anything masterfully crafted.'
+    es: 'Forjado por Ilmarinen: se refiere al legendario herrero Ilmarinen de Kalevala, cuyas creaciones
+      no tienen igual en habilidad; se usa metafóricamente para cualquier cosa magistralmente elaborada.'
+    fr: 'Forgé par Ilmarinen : fait référence au légendaire forgeron Ilmarinen du Kalevala, dont les créations
+      sont inégalées en compétence ; utilisé métaphoriquement pour tout ce qui est magistralement fabriqué.'
+    de: 'Geschmiedet von Ilmarinen: bezieht sich auf den legendären Schmied Ilmarinen aus Kalevala, dessen
+      Kreationen an Können unübertroffen sind; metaphorisch verwendet für alles meisterhaft Gefertigte.'
+    it: 'Forgiato da Ilmarinen: si riferisce al leggendario fabbro Ilmarinen del Kalevala, le cui creazioni
+      sono ineguagliabili per abilità; usato metaforicamente per qualsiasi cosa magistralmente realizzata.'
+    pt: 'Forjado por Ilmarinen: refere-se ao lendário ferreiro Ilmarinen do Kalevala, cujas criações são
+      inigualáveis em habilidade; usado metaforicamente para qualquer coisa magistralmente confeccionada.'
+    ru: 'Выковано Ильмариненом: относится к легендарному кузнецу Ильмаринену из «Калевалы», чьи творения
+      непревзойдённы в мастерстве; используется метафорически для чего-либо искусно сделанного.'
+    ja: イルマリネンによって鍛えられた：『カレワラ』の伝説の鍛冶屋イルマリネンを指し、その作品は技術的に比類がない；巧みに作られたものの比喩として用いられる。
+    zh: 伊尔马利宁锻造：指《卡勒瓦拉》中传奇铁匠伊尔马利宁，其作品技艺无与伦比；比喻任何精工细作之物。
+    ar: 'مصوغ بواسطة إلمارينن: يشير إلى الحداد الأسطوري إلمارينن من كاليفالا، الذي لا تضاهى إبداعاته في
+      المهارة؛ يستخدم مجازًا لأي شيء مصنوع بإتقان.'
+    he: 'מחושל על ידי אילמרינן: מתייחס לנפח האגדי אילמרינן מהקלוואלה, שיצירותיו ללא תחרות במיומנות; משמש
+      באופן מטפורי לכל דבר המעוצב במומחיות.'
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.fi.explanation.fi_cultural_references_ilmarisen_takoma
+  source_work_key: mnemosyne.fi.work.kalevala
+  source_author_key: mnemosyne.fi.author.elias_lönnrot_compiler
+  source_work: Kalevala
+  source_author: Elias Lönnrot (compiler)
+  source_location: Various runot
+  source_url: https://fi.wikisource.org/wiki/Kalevala
+  source_license: public_domain
+  source_dataset: fi_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Surface
+    pattern ''Ilmarisen takoja'' is grammatically questionable; may need refinement.'
+- id: fi_cultural_reference_maanemon_poika_6e7d683f
+  language: fi
+  canonical_reference: Maanemon poika
+  reference_type: cultural_reference
+  surface_patterns:
+  - Maanemon poika
+  short_explanation: A term referencing a son of Mother Earth, possibly a mythological figure in Finnish
+    folklore.
+  i18n_explanations:
+    en: A term referencing a son of Mother Earth, possibly a mythological figure in Finnish folklore.
+    es: Un término que hace referencia a un hijo de la Madre Tierra, posiblemente una figura mitológica
+      en el folclore finlandés.
+    fr: Un terme faisant référence à un fils de la Terre Mère, possiblement une figure mythologique dans
+      le folklore finlandais.
+    de: Ein Begriff, der sich auf einen Sohn der Mutter Erde bezieht, möglicherweise eine mythologische
+      Figur in der finnischen Folklore.
+    it: Un termine che si riferisce a un figlio della Madre Terra, possibilmente una figura mitologica
+      nel folklore finlandese.
+    pt: Um termo que se refere a um filho da Mãe Terra, possivelmente uma figura mitológica no folclore
+      finlandês.
+    ru: Термин, обозначающий сына Матери-Земли, возможно, мифологическую фигуру в финском фольклоре.
+    ja: 母なる大地の息子を指す言葉で、おそらくフィンランドの民話における神話上の人物。
+    zh: 一个指代大地之子的术语，可能是芬兰民间传说中的神话人物。
+    ar: مصطلح يشير إلى ابن الأرض الأم، ربما شخصية أسطورية في الفولكلور الفنلندي.
+    he: מונח המתייחס לבן של אמא אדמה, כנראה דמות מיתולוגית בפולקלור הפיני.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.fi.explanation.fi_folklore_phrases_maanemon_poika
+  source_work_key: mnemosyne.fi.work.various
+  source_author_key: mnemosyne.fi.author.tradition
+  source_work: Various
+  source_author: Tradition
+  source_license: public_domain
+  source_dataset: fi_folklore_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Phrase
+    not standard in Finnish mythology; likely a misattribution or rare variant with low confidence.'
+- id: fi_cultural_reference_maahisen_koti_5f52d655
+  language: fi
+  canonical_reference: Maahisen koti
+  reference_type: cultural_reference
+  surface_patterns:
+  - Maahisen koti
+  - maahisten koti
+  short_explanation: Home of the maahinen, a gnome-like creature in Finnish folklore; refers to a hidden
+    or mythical dwelling.
+  i18n_explanations:
+    en: Home of the maahinen, a gnome-like creature in Finnish folklore; refers to a hidden or mythical
+      dwelling.
+    es: Hogar del maahinen, una criatura parecida a un gnomo en el folclore finlandés; se refiere a una
+      morada oculta o mítica.
+    fr: Maison du maahinen, une créature semblable à un gnome dans le folklore finlandais ; fait référence
+      à une demeure cachée ou mythique.
+    de: Heimat des Maahinen, einer gnomenähnlichen Kreatur in der finnischen Folklore; bezieht sich auf
+      eine verborgene oder mythische Behausung.
+    it: Casa del maahinen, una creatura simile a uno gnomo nel folklore finlandese; si riferisce a una
+      dimora nascosta o mitica.
+    pt: Casa do maahinen, uma criatura semelhante a um gnomo no folclore finlandês; refere-se a uma morada
+      oculta ou mítica.
+    ru: Дом маахинена, существа, похожего на гнома в финском фольклоре; относится к скрытому или мифическому
+      жилищу.
+    ja: フィンランドの民話に出てくるノームのような生き物マーヒネンの家。隠された、または神話上の住居を指す。
+    zh: 马希嫩之家，芬兰民间传说中类似地精的生物；指隐藏或神话般的住所。
+    ar: منزل الماهينن، مخلوق يشبه الجنوم في الفولكلور الفنلندي؛ يشير إلى مسكن مخفي أو أسطوري.
+    he: ביתו של המאהינן, יצור דמוי גמד בפולקלור הפיני; מתייחס למעון נסתר או מיתי.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.fi.explanation.fi_folklore_phrases_maahisen_koti
+  source_work_key: mnemosyne.fi.work.various
+  source_author_key: mnemosyne.fi.author.finnish_folklore
+  source_work: Various
+  source_author: Finnish folklore
+  source_license: public_domain
+  source_dataset: fi_folklore_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Generic
+    phrase not a specific canonical reference; confidence overclaimed.'
+- id: fi_literary_reference_kuun_tyttö_2cc2e49d
+  language: fi
+  canonical_reference: Kuun tyttö
+  reference_type: literary_reference
+  surface_patterns:
+  - Kuun tyttö
+  - Kuun tyttären
+  - Kuun tytöt
+  short_explanation: Moon's girl, a mythical figure from Finnish folklore, sometimes associated with the
+    Kalevala.
+  i18n_explanations:
+    en: Moon's girl, a mythical figure from Finnish folklore, sometimes associated with the Kalevala.
+    es: Muchacha de la Luna, una figura mítica del folclore finlandés, a veces asociada con el Kalevala.
+    fr: Fille de la Lune, une figure mythique du folklore finlandais, parfois associée au Kalevala.
+    de: Mondmädchen, eine mythische Gestalt aus der finnischen Folklore, manchmal mit dem Kalevala verbunden.
+    it: Ragazza della Luna, una figura mitica del folklore finlandese, talvolta associata al Kalevala.
+    pt: Moça da Lua, uma figura mítica do folclore finlandês, às vezes associada ao Kalevala.
+    ru: Девушка Луны, мифическая фигура из финского фольклора, иногда связанная с Калевалой.
+    ja: 月の少女、フィンランドの民話に登場する神話上の人物で、カレワラと関連づけられることもある。
+    zh: 月亮少女，芬兰民间传说中的一个神话人物，有时与《卡勒瓦拉》相关联。
+    ar: فتاة القمر، شخصية أسطورية من الفولكلور الفنلندي، ترتبط أحيانًا بكاليفالا.
+    he: נערת הירח, דמות מיתולוגית מהפולקלור הפיני, לעתים מזוהה עם הקלוואלה.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.fi.explanation.fi_kalevala_phrases_kuun_tyttö
+  source_work_key: mnemosyne.fi.work.kalevala
+  source_author_key: mnemosyne.fi.author.elias_lönnrot
+  source_work: Kalevala
+  source_author: Elias Lönnrot
+  source_url: https://fi.wikisource.org/wiki/Kalevala
+  source_license: public_domain
+  source_dataset: fi_kalevala_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    standard term in Kalevala is ''Kuun tytär'', not ''Kuun tyttö''; surface patterns need refinement.'
+- id: fi_literary_reference_sampo_on_hukassa_67fa0745
+  language: fi
+  canonical_reference: Sampo on hukassa
+  reference_type: literary_reference
+  surface_patterns:
+  - Sampo on hukassa
+  - Sampo on kadonnut
+  - Sammon hukka
+  short_explanation: The Sampo is lost, a phrase referring to the central conflict in the Kalevala where
+    the magical mill Sampo is stolen or lost.
+  i18n_explanations:
+    en: The Sampo is lost, a phrase referring to the central conflict in the Kalevala where the magical
+      mill Sampo is stolen or lost.
+    es: El Sampo está perdido, frase que se refiere al conflicto central en el Kalevala donde el molino
+      mágico Sampo es robado o perdido.
+    fr: Le Sampo est perdu, une phrase faisant référence au conflit central du Kalevala où le moulin magique
+      Sampo est volé ou perdu.
+    de: Der Sampo ist verloren, ein Satz, der sich auf den zentralen Konflikt im Kalevala bezieht, bei
+      dem die magische Mühle Sampo gestohlen oder verloren wird.
+    it: Il Sampo è perduto, una frase che si riferisce al conflitto centrale nel Kalevala in cui il mulino
+      magico Sampo viene rubato o perso.
+    pt: O Sampo está perdido, uma frase que se refere ao conflito central no Kalevala onde o moinho mágico
+      Sampo é roubado ou perdido.
+    ru: Сампо потерян, фраза, относящаяся к центральному конфликту в Калевале, где волшебная мельница
+      Сампо украдена или потеряна.
+    ja: サンポは失われた、カレワラの中心的な争いである魔法の臼サンポが盗まれたり失われたりすることを指す言葉。
+    zh: 桑波丢失了，这句话指的是《卡勒瓦拉》中的核心冲突，即魔法磨坊桑波被偷或丢失。
+    ar: سامبو مفقود، عبارة تشير إلى الصراع المركزي في كاليفالا حيث يتم سرقة أو فقدان الطاحونة السحرية
+      سامبو.
+    he: הסמפו אבוד, ביטוי המתייחס לעימות המרכזי בקלוואלה שבו הטחנה הקסומה סמפו נגנבת או אובדת.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.fi.explanation.fi_kalevala_phrases_sampo_on_hukassa
+  source_work_key: mnemosyne.fi.work.kalevala
+  source_author_key: mnemosyne.fi.author.elias_lönnrot
+  source_work: Kalevala
+  source_author: Elias Lönnrot
+  source_url: https://fi.wikisource.org/wiki/Kalevala
+  source_license: public_domain
+  source_dataset: fi_kalevala_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Not
+    a direct quote from Kalevala but a paraphrased cultural reference; confidence overclaimed.'
+- id: fi_literary_reference_sana_on_jousi_laulu_on_nuoli_b72f4c53
+  language: fi
+  canonical_reference: Sana on jousi, laulu on nuoli
+  reference_type: literary_reference
+  surface_patterns:
+  - Sana on jousi, laulu on nuoli
+  - jousi ja nuoli -vertaus
+  short_explanation: A poetic metaphor meaning 'The word is a bow, the song is an arrow', emphasizing
+    the power of words and songs to strike deeply. It is attributed to the Finnish poet Eino Leino, possibly
+    from his collection 'Hymyilevä Apollo'.
+  i18n_explanations:
+    en: A poetic metaphor meaning 'The word is a bow, the song is an arrow', emphasizing the power of
+      words and songs to strike deeply. It is attributed to the Finnish poet Eino Leino, possibly from
+      his collection 'Hymyilevä Apollo'.
+    es: Una metáfora poética que significa 'La palabra es un arco, la canción es una flecha', enfatizando
+      el poder de las palabras y las canciones para impactar profundamente. Se atribuye al poeta finlandés
+      Eino Leino, posiblemente de su colección 'Hymyilevä Apollo'.
+    fr: Une métaphore poétique signifiant 'La parole est un arc, le chant est une flèche', soulignant
+      le pouvoir des mots et des chansons de frapper profondément. Elle est attribuée au poète finlandais
+      Eino Leino, peut-être de son recueil 'Hymyilevä Apollo'.
+    de: Eine poetische Metapher, die bedeutet 'Das Wort ist ein Bogen, das Lied ist ein Pfeil', und betont
+      die Kraft von Worten und Liedern, tief zu treffen. Sie wird dem finnischen Dichter Eino Leino zugeschrieben,
+      möglicherweise aus seiner Sammlung 'Hymyilevä Apollo'.
+    it: Una metafora poetica che significa 'La parola è un arco, la canzone è una freccia', sottolineando
+      il potere delle parole e delle canzoni di colpire profondamente. È attribuita al poeta finlandese
+      Eino Leino, probabilmente dalla sua raccolta 'Hymyilevä Apollo'.
+    pt: Uma metáfora poética que significa 'A palavra é um arco, a canção é uma flecha', enfatizando o
+      poder das palavras e canções para atingir profundamente. É atribuída ao poeta finlandês Eino Leino,
+      possivelmente de sua coleção 'Hymyilevä Apollo'.
+    ru: Поэтическая метафора, означающая 'Слово — лук, песня — стрела', подчеркивающая силу слов и песен
+      поражать глубоко. Приписывается финскому поэту Эйно Лейно, возможно из его сборника 'Hymyilevä Apollo'.
+    ja: 「言葉は弓、歌は矢」という詩的な比喩で、言葉や歌が深く突き刺さる力を強調しています。フィンランドの詩人エイノ・レイノによるものとされ、彼の詩集『Hymyilevä Apollo』に収録されている可能性があります。
+    zh: 一个诗意的隐喻，意思是‘言语是弓，歌曲是箭’，强调言语和歌曲的深刻影响力。它出自芬兰诗人埃诺·雷诺，可能来自他的诗集《Hymyilevä Apollo》。
+    ar: استعارة شعرية تعني 'الكلمة قوس، والأغنية سهم'، تؤكد على قوة الكلمات والأغاني في التأثير العميق.
+      تُنسب إلى الشاعر الفنلندي إينو لينو، ربما من مجموعته 'Hymyilevä Apollo'.
+    he: מטאפורה פואטית שמשמעותה 'המילה היא קשת, השיר הוא חץ', המדגישה את כוחן של מילים ושירים לפגוע עמוקות.
+      היא מיוחסת למשורר הפיני איינו ליינו, אולי מאוסף שיריו 'Hymyilevä Apollo'.
+  learner_level: C1
+  confidence: 0.65
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.fi.explanation.fi_cultural_references_sana_on_jousi_laulu_on_nuol
+  source_work_key: mnemosyne.fi.work.hymyilevä_apollo_attributed
+  source_author_key: mnemosyne.fi.author.eino_leino
+  source_work: Hymyilevä Apollo (attributed)
+  source_author: Eino Leino
+  source_license: public_domain
+  source_dataset: fi_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Eino Leino is plausible but not verified; the exact line may not appear in Hymyilevä Apollo.'
+- id: fi_literary_reference_päivä_kantaa_kuolemaa_b050cd3e
+  language: fi
+  canonical_reference: Päivä kantaa kuolemaa
+  reference_type: literary_reference
+  surface_patterns:
+  - Päivä kantaa kuolemaa
+  short_explanation: Poetic line meaning 'The day carries death,' possibly from Finnish poetry, reflecting
+    on mortality and the passage of time.
+  i18n_explanations:
+    en: Poetic line meaning 'The day carries death,' possibly from Finnish poetry, reflecting on mortality
+      and the passage of time.
+    es: Verso poético que significa 'El día lleva la muerte', posiblemente de la poesía finesa, que reflexiona
+      sobre la mortalidad y el paso del tiempo.
+    fr: Vers poétique signifiant 'Le jour porte la mort', probablement issu de la poésie finlandaise,
+      réfléchissant sur la mortalité et le passage du temps.
+    de: Poetische Zeile mit der Bedeutung 'Der Tag trägt den Tod', möglicherweise aus der finnischen Dichtung,
+      die über Sterblichkeit und den Lauf der Zeit nachdenkt.
+    it: Verso poetico che significa 'Il giorno porta la morte', probabilmente dalla poesia finlandese,
+      che riflette sulla mortalità e sul passare del tempo.
+    pt: Linha poética que significa 'O dia carrega a morte', possivelmente da poesia finlandesa, refletindo
+      sobre a mortalidade e a passagem do tempo.
+    ru: Поэтическая строка, означающая 'День несёт смерть', возможно из финской поэзии, размышляющая о
+      смертности и течении времени.
+    ja: 「昼は死を運ぶ」という意味の詩的な一行で、おそらくフィンランドの詩から来ており、死と時間の経過について考察している。
+    zh: 诗意的一句，意为“白天承载死亡”，可能源自芬兰诗歌，反思死亡和时间的流逝。
+    ar: سطر شعري معناه 'اليوم يحمل الموت'، ربما من الشعر الفنلندي، يتأمل في الفناء ومرور الزمن.
+    he: שורה פואטית שמשמעותה 'היום נושא מוות', ככל הנראה משירה פינית, המשקפת על תמותה וחלוף הזמן.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.fi.explanation.fi_cultural_phrases_päivä_kantaa_kuolemaa
+  source_work_key: mnemosyne.fi.work.unknown_poem
+  source_author_key: mnemosyne.fi.author.unknown
+  source_work: Unknown poem
+  source_author: Unknown
+  source_license: copyright_or_rights_review_needed
+  source_dataset: fi_cultural_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    not verifiable; appears to be from an unknown poem, but surface pattern is plausible.'
+- id: fi_literary_reference_yö_antaa_elämän_6fb45d8c
+  language: fi
+  canonical_reference: Yö antaa elämän
+  reference_type: literary_reference
+  surface_patterns:
+  - Yö antaa elämän
+  short_explanation: Poetic line meaning 'Night gives life,' likely from the same source as 'Päivä kantaa
+    kuolemaa,' contrasting day and night.
+  i18n_explanations:
+    en: Poetic line meaning 'Night gives life,' likely from the same source as 'Päivä kantaa kuolemaa,'
+      contrasting day and night.
+    es: Verso poético que significa 'La noche da la vida', probablemente de la misma fuente que 'Päivä
+      kantaa kuolemaa', contrastando el día y la noche.
+    fr: Vers poétique signifiant 'La nuit donne la vie', probablement de la même source que 'Päivä kantaa
+      kuolemaa', contrastant le jour et la nuit.
+    de: Poetische Zeile mit der Bedeutung 'Die Nacht gibt Leben', wahrscheinlich aus derselben Quelle
+      wie 'Päivä kantaa kuolemaa', die Tag und Nacht kontrastiert.
+    it: Verso poetico che significa 'La notte dà la vita', probabilmente dalla stessa fonte di 'Päivä
+      kantaa kuolemaa', contrapponendo giorno e notte.
+    pt: Linha poética que significa 'A noite dá vida', provavelmente da mesma fonte de 'Päivä kantaa kuolemaa',
+      contrastando o dia e a noite.
+    ru: Поэтическая строка, означающая 'Ночь даёт жизнь', вероятно из того же источника, что и 'Päivä
+      kantaa kuolemaa', противопоставляющая день и ночь.
+    ja: 「夜は命を与える」という意味の詩的な一行で、おそらく「Päivä kantaa kuolemaa」と同じ出典からで、昼と夜を対比している。
+    zh: 诗意的一句，意为“夜晚给予生命”，可能与“Päivä kantaa kuolemaa”同源，对比白天和黑夜。
+    ar: سطر شعري معناه 'الليل يمنح الحياة'، على الأرجح من نفس مصدر 'Päivä kantaa kuolemaa'، يتباين مع
+      النهار والليل.
+    he: שורה פואטית שמשמעותה 'הלילה נותן חיים', ככל הנראה מאותו מקור כמו 'Päivä kantaa kuolemaa', המנוגדת
+      בין יום ללילה.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.fi.explanation.fi_cultural_phrases_yö_antaa_elämän
+  source_work_key: mnemosyne.fi.work.unknown_poem
+  source_author_key: mnemosyne.fi.author.unknown
+  source_work: Unknown poem
+  source_author: Unknown
+  source_license: copyright_or_rights_review_needed
+  source_dataset: fi_cultural_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    not verifiable; likely paired with previous entry but lacks attribution.'
+- id: fi_cultural_reference_mitä_meistä_jää_a144dca8
+  language: fi
+  canonical_reference: Mitä meistä jää
+  reference_type: cultural_reference
+  surface_patterns:
+  - mitä meistä jää
+  - Mitä meistä jää?
+  short_explanation: A common existential phrase meaning 'What becomes of us' or 'What remains of us'.
+    It is used in various contexts, including literature and music, to reflect on mortality and legacy.
+  i18n_explanations:
+    en: A common existential phrase meaning 'What becomes of us' or 'What remains of us'. It is used in
+      various contexts, including literature and music, to reflect on mortality and legacy.
+    es: Una frase existencial común que significa '¿Qué será de nosotros?' o '¿Qué queda de nosotros?'.
+      Se utiliza en varios contextos, incluyendo la literatura y la música, para reflexionar sobre la
+      mortalidad y el legado.
+    fr: Une phrase existentielle courante signifiant 'Que devient-on ?' ou 'Que reste-t-il de nous ?'.
+      Elle est utilisée dans divers contextes, y compris la littérature et la musique, pour réfléchir
+      sur la mortalité et l'héritage.
+    de: Ein gebräuchlicher existenzieller Ausdruck, der 'Was wird aus uns?' oder 'Was bleibt von uns?'
+      bedeutet. Er wird in verschiedenen Zusammenhängen verwendet, darunter Literatur und Musik, um über
+      Sterblichkeit und Vermächtnis nachzudenken.
+    it: Una frase esistenziale comune che significa 'Che ne sarà di noi?' o 'Cosa rimane di noi?'. Viene
+      utilizzata in vari contesti, tra cui letteratura e musica, per riflettere sulla mortalità e sull'eredità.
+    pt: Uma frase existencial comum que significa 'O que será de nós?' ou 'O que resta de nós?'. É usada
+      em vários contextos, incluindo literatura e música, para refletir sobre mortalidade e legado.
+    ru: Распространенная экзистенциальная фраза, означающая 'Что с нами станет?' или 'Что останется от
+      нас?'. Используется в различных контекстах, включая литературу и музыку, чтобы размышлять о смертности
+      и наследии.
+    ja: 「私たちはどうなるのか」または「私たちに何が残るのか」という意味の一般的な実存的フレーズ。文学や音楽など様々な文脈で使われ、死と遺産について考えるもの。
+    zh: 一个常见的存在主义短语，意思是“我们会变成什么”或“我们留下什么”。它被用于各种语境，包括文学和音乐，以反思死亡和遗产。
+    ar: عبارة وجودية شائعة تعني 'ماذا سيصير منا؟' أو 'ماذا يبقى منا؟'. تُستخدم في سياقات مختلفة، بما في
+      ذلك الأدب والموسيقى، للتأمل في الفناء والإرث.
+    he: ביטוי קיומי נפוץ שמשמעותו 'מה יהא עלינו?' או 'מה נשאר מאיתנו?'. הוא משמש בהקשרים שונים, כולל ספרות
+      ומוזיקה, כדי להרהר בתמותה ובמורשת.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: common
+  variants:
+  - mitä meistä jääkään
+  explanation_key: mnemosyne.fi.explanation.fi_cultural_references_mitä_meistä_jää
+  source_work_key: mnemosyne.fi.work.various_oral_tradition
+  source_author_key: mnemosyne.fi.author.various
+  source_work: Various / oral tradition
+  source_author: Various
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: fi_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase is a generic existential expression rather than a distinct cultural reference tied to a specific
+    work.'

@@ -1,0 +1,279 @@
+- id: zh_classical_or_scriptural_allusion_人不知而不愠_0d0a5c69
+  language: zh
+  canonical_reference: 人不知而不愠
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - 人不知而不愠
+  - 人不知而不怄
+  short_explanation: A Confucian phrase praising the virtue of not being annoyed when others fail to recognize
+    one's abilities, highlighting humility and self-cultivation.
+  i18n_explanations:
+    en: A Confucian phrase praising the virtue of not being annoyed when others fail to recognize one's
+      abilities, highlighting humility and self-cultivation.
+    es: Una frase confuciana que alaba la virtud de no molestarse cuando otros no reconocen las propias
+      habilidades, destacando la humildad y la autodisciplina.
+    fr: Une phrase confucéenne louant la vertu de ne pas s'irriter lorsque les autres ne reconnaissent
+      pas ses capacités, soulignant l'humilité et la culture de soi.
+    de: Ein konfuzianischer Satz, der die Tugend preist, sich nicht zu ärgern, wenn andere die eigenen
+      Fähigkeiten nicht anerkennen, und Bescheidenheit sowie Selbstkultivierung hervorhebt.
+    it: Una frase confuciana che loda la virtù di non infastidirsi quando gli altri non riconoscono le
+      proprie capacità, evidenziando umiltà e autocultivazione.
+    pt: Uma frase confuciana que elogia a virtude de não ficar irritado quando outros não reconhecem as
+      próprias habilidades, destacando humildade e autocultivo.
+    ru: Конфуцианская фраза, восхваляющая добродетель не раздражаться, когда окружающие не признают твоих
+      способностей, подчеркивающая смирение и самосовершенствование.
+    ja: 他人が自分の能力を認めなくても腹を立てない美徳を称える孔子の言葉。謙虚さと自己修養を強調する。
+    zh: 孔子的话，赞扬当别人不了解自己的才能时不恼怒的品德，强调谦逊和自我修养。
+    ar: عبارة كونفوشيوسية تمدح فضيلة عدم الانزعاج عندما لا يعترف الآخرون بقدرات الفرد، وتسلط الضوء على
+      التواضع وتهذيب الذات.
+    he: אמרה קונפוציאנית המשבחת את המידה של לא להיעלב כאשר אחרים אינם מכירים ביכולותיו, תוך הדגשת ענווה
+      וטיפוח עצמי.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.zh.explanation.confucius_analects_人不知而不愠
+  source_work_key: mnemosyne.zh.work.论语_lun_yu_analects
+  source_author_key: mnemosyne.zh.author.孔子_confucius
+  source_work: 论语 (Lun Yu / Analects)
+  source_author: 孔子 (Confucius)
+  source_location: 学而篇第一 (Book 1, Chapter 1)
+  source_url: https://ctext.org/analects/xue-er
+  source_license: public_domain
+  source_dataset: confucius_analects
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    surface pattern ''人不知而不怄'' is incorrect; the classical form uses ''愠'', not ''怄''.'
+- id: zh_proverb_tradition_人心齐_泰山移_5a69bd9e
+  language: zh
+  canonical_reference: 人心齐，泰山移
+  reference_type: proverb_tradition
+  surface_patterns:
+  - 人心齐，泰山移
+  - 众志成城
+  short_explanation: A proverb expressing that with unity and collective effort, even the hardest task
+    can be accomplished.
+  i18n_explanations:
+    en: A proverb expressing that with unity and collective effort, even the hardest task can be accomplished.
+    es: Un proverbio que expresa que con unidad y esfuerzo colectivo, incluso la tarea más difícil puede
+      realizarse.
+    fr: Un proverbe exprimant qu'avec l'unité et l'effort collectif, même la tâche la plus difficile peut
+      être accomplie.
+    de: Ein Sprichwort, das besagt, dass selbst die schwierigste Aufgabe mit Einigkeit und gemeinsamer
+      Anstrengung bewältigt werden kann.
+    it: Un proverbio che esprime che con unità e sforzo collettivo, anche il compito più difficile può
+      essere realizzato.
+    pt: Um provérbio que expressa que com unidade e esforço coletivo, até a tarefa mais difícil pode ser
+      realizada.
+    ru: Пословица, выражающая, что с единством и коллективными усилиями можно выполнить даже самую трудную
+      задачу.
+    ja: 一致団結して力を合わせれば、どんなに難しいことでも成し遂げられるという諺。
+    zh: 比喻大家齐心协力，就能创造奇迹，移山倒海。
+    ar: مثل يعبر عن أنه بالوحدة والجهد الجماعي، يمكن إنجاز حتى أصعب المهام.
+    he: פתגם המבטא שבאחדות ומאמץ קולקטיבי, ניתן לבצע אפילו את המשימה הקשה ביותר.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.zh.explanation.chinese_cultural_refs_人心齐_泰山移
+  source_work_key: mnemosyne.zh.work.various
+  source_author_key: mnemosyne.zh.author.unknown
+  source_work: Various
+  source_author: Unknown
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: chinese_cultural_refs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Surface
+    pattern ''众志成城'' is a distinct idiom, not a form of the canonical reference.'
+- id: zh_literary_reference_待月西厢_412fdca5
+  language: zh
+  canonical_reference: 待月西厢
+  reference_type: literary_reference
+  surface_patterns:
+  - 待月西厢
+  - 待月西厢下
+  short_explanation: A line from Wang Shifu's 'The Story of the Western Wing', referring to a tryst under
+    the moon in the western chamber, and it has become an allusion to secret romantic meetings.
+  i18n_explanations:
+    en: A line from Wang Shifu's 'The Story of the Western Wing', referring to a tryst under the moon
+      in the western chamber, and it has become an allusion to secret romantic meetings.
+    es: Un verso de 'La Historia del Ala Oeste' de Wang Shifu, que hace referencia a una cita bajo la
+      luna en la cámara occidental, y se ha convertido en una alusión a encuentros románticos secretos.
+    fr: Un vers de 'L'Histoire de l'Aile Ouest' de Wang Shifu, faisant référence à un rendez-vous sous
+      la lune dans la chambre occidentale, et il est devenu une allusion à des rencontres romantiques
+      secrètes.
+    de: Ein Vers aus Wang Shifus 'Die Geschichte vom Westflügel', der sich auf ein heimliches Treffen
+      unter dem Mond in der Westkammer bezieht, und ist zu einer Anspielung auf geheime romantische Treffen
+      geworden.
+    it: Un verso de 'La Storia dell'Ala Occidentale' di Wang Shifu, che si riferisce a un appuntamento
+      sotto la luna nella camera occidentale, ed è diventato un'allusione a incontri romantici segreti.
+    pt: Um verso de 'A História da Ala Ocidental' de Wang Shifu, referindo-se a um encontro sob a lua
+      na câmara ocidental, e tornou-se uma alusão a encontros românticos secretos.
+    ru: Строка из пьесы Ван Шифу «Западный флигель», отсылающая к любовному свиданию под луной в западной
+      комнате, и стала аллюзией на тайные романтические встречи.
+    ja: 王実甫の『西廂記』の一節で、西の部屋で月の下で密会することを指し、秘密の恋愛の寓喩となっている。
+    zh: 王实甫《西厢记》中的一句唱词，指在西厢月下约会，现已成为秘密约会的典故。
+    ar: سطر من مسرحية وانغ شيفو 'قصة الجناح الغربي'، يشير إلى لقاء تحت القمر في الغرفة الغربية، وأصبح
+      إشارة إلى لقاءات رومانسية سرية.
+    he: שורה מ'סיפור האגף המערבי' של וואנג שיפו, המתייחסת לפגישה חשאית תחת הירח בחדר המערבי, והפכה להרמז
+      למפגשים רומנטיים סודיים.
+  learner_level: C1
+  confidence: 0.85
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.zh.explanation.zh_xixiangji_phrases_待月西厢
+  source_work_key: mnemosyne.zh.work.西厢记
+  source_author_key: mnemosyne.zh.author.王实甫
+  source_work: 西厢记
+  source_author: 王实甫
+  source_url: https://zh.wikisource.org/zh-hans/西厢记
+  source_license: public_domain
+  source_dataset: zh_xixiangji_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Wang Shifu''s ''The Story of the Western Wing'' is correct, but source location is missing; could
+    be improved.'
+- id: zh_classical_or_scriptural_allusion_三令五申_c07d23c2
+  language: zh
+  canonical_reference: 三令五申
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - 三令五申
+  - 三令五申之
+  - 再三令申
+  short_explanation: From Sima Qian's 'Records of the Grand Historian', describing Sun Tzu's repeated
+    orders to concubines during military training. It means to give repeated instructions and warnings.
+  i18n_explanations:
+    en: From Sima Qian's 'Records of the Grand Historian', describing Sun Tzu's repeated orders to concubines
+      during military training. It means to give repeated instructions and warnings.
+    es: De los 'Registros del Gran Historiador' de Sima Qian, que describe las órdenes repetidas de Sun
+      Tzu a las concubinas durante el entrenamiento militar. Significa dar instrucciones y advertencias
+      repetidas.
+    fr: Des 'Mémoires historiques' de Sima Qian, décrivant les ordres répétés de Sun Tzu aux concubines
+      lors d'un entraînement militaire. Cela signifie donner des instructions et des avertissements répétés.
+    de: Aus Sima Qians 'Aufzeichnungen des großen Historikers', die Sun Tzus wiederholte Befehle an Konkubinen
+      während des Militärtrainings beschreiben. Es bedeutet, wiederholte Anweisungen und Warnungen zu
+      geben.
+    it: Dai 'Memorie storiche' di Sima Qian, che descrivono gli ordini ripetuti di Sun Tzu alle concubine
+      durante l'addestramento militare. Significa dare istruzioni e avvertimenti ripetuti.
+    pt: Dos 'Registros do Grande Historiador' de Sima Qian, descrevendo as ordens repetidas de Sun Tzu
+      às concubinas durante o treinamento militar. Significa dar instruções e avisos repetidos.
+    ru: Из «Исторических записок» Сыма Цяня, описывающих повторные приказы Сунь Цзы наложницам во время
+      военной подготовки. Означает многократное повторение инструкций и предупреждений.
+    ja: 司馬遷の『史記』に由来し、孫武が軍事訓練で側室たちに繰り返し命令を出した故事。繰り返し指示や警告を与えることを意味する。
+    zh: 出自司马迁的《史记》，描述孙武在军事训练中反复命令嫔妃的故事。意为反复下达指令和警告。
+    ar: من 'سجلات المؤرخ العظيم' لسيما تشيان، تصف الأوامر المتكررة لسون تزو للمحظيات أثناء التدريب العسكري.
+      يعني إعطاء تعليمات وتحذيرات متكررة.
+    he: מתוך 'רישומי ההיסטוריון הגדול' של סימה צ'יאן, המתאר את פקודותיו החוזרות של סון דזה לפילגשים במהלך
+      אימון צבאי. פירושו לתת הוראות ואזהרות חוזרות.
+  learner_level: B2
+  confidence: 0.8
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.zh.explanation.zh_cultural_references_三令五申
+  source_work_key: mnemosyne.zh.work.史记_shiji
+  source_author_key: mnemosyne.zh.author.sima_qian
+  source_work: 史记 (Shiji)
+  source_author: Sima Qian
+  source_location: 孙子吴起列传 (Biographies of Sun Tzu and Wu Qi)
+  source_url: https://zh.wikisource.org/wiki/史記/卷065
+  source_license: public_domain
+  source_dataset: zh_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Surface
+    pattern ''再三令申'' is non-standard and may cause confusion.'
+- id: zh_classical_or_scriptural_allusion_仁者爱人_d7890dd8
+  language: zh
+  canonical_reference: 仁者爱人
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - 仁者爱人
+  - 仁者爱人，有礼者敬人
+  short_explanation: From Mencius, it means 'The benevolent person loves others.' It encapsulates the
+    Confucian virtue of ren (benevolence) as fundamental to moral conduct.
+  i18n_explanations:
+    en: From Mencius, it means 'The benevolent person loves others.' It encapsulates the Confucian virtue
+      of ren (benevolence) as fundamental to moral conduct.
+    es: De Mencio, significa 'La persona benévola ama a los demás'. Resume la virtud confuciana del ren
+      (benevolencia) como fundamental para la conducta moral.
+    fr: De Mencius, cela signifie 'La personne bienveillante aime les autres'. Il résume la vertu confucéenne
+      du ren (bienveillance) comme fondamentale pour la conduite morale.
+    de: Von Menzius, es bedeutet 'Der gütige Mensch liebt andere'. Es fasst die konfuzianische Tugend
+      des Ren (Güte) als grundlegend für moralisches Handeln zusammen.
+    it: Da Mencio, significa 'La persona benevola ama gli altri'. Riassume la virtù confuciana del ren
+      (benevolenza) come fondamentale per la condotta morale.
+    pt: De Mêncio, significa 'A pessoa benevolente ama os outros'. Resume a virtude confuciana do ren
+      (benevolência) como fundamental para a conduta moral.
+    ru: От Мэн-цзы, это означает 'Добродетельный человек любит других'. Это воплощает конфуцианскую добродетель
+      жэнь (человеколюбие) как основу нравственного поведения.
+    ja: 孟子からで、「仁者は人を愛する」という意味。儒教の徳である仁（思いやり）を道徳的行動の基本として要約しています。
+    zh: 出自《孟子》，意思是“仁爱的人关爱他人”。它概括了儒家之“仁”作为道德行为基础的观念。
+    ar: من كتاب منسيوس، ويعني 'الشخص الخير يحب الآخرين'. يلخص الفضيلة الكونفوشيوسية رن (الخير) كأساس للسلوك
+      الأخلاقي.
+    he: מאת מנצ'יוס, פירושו 'האדם המיטיב אוהב אחרים'. הוא מגלם את המידה הקונפוציאנית רן (טוב לב) כבסיסית
+      להתנהגות מוסרית.
+  learner_level: C1
+  confidence: 0.8
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.zh.explanation.cn_classical_phrases_仁者爱人
+  source_work_key: mnemosyne.zh.work.孟子_mencius
+  source_author_key: mnemosyne.zh.author.孟子_mencius
+  source_work: 孟子 (Mencius)
+  source_author: 孟子 (Mencius)
+  source_location: 离娄下 (Li Lou II), Book 4, Part A, Chapter 10
+  source_url: https://ctext.org/mengzi/li-lou-ii
+  source_license: public_domain
+  source_dataset: cn_classical_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    location likely should be 离娄上 (Li Lou I) instead of 离娄下 (Li Lou II).'
+- id: zh_literary_reference_三头六臂_252a58de
+  language: zh
+  canonical_reference: 三头六臂
+  reference_type: literary_reference
+  surface_patterns:
+  - 三头六臂
+  - 三个头六条臂
+  - 三头六臂的神仙
+  short_explanation: Literally 'three heads and six arms,' this idiom describes someone with superhuman
+    abilities or extraordinary skills, often used to praise competence. It originates from depictions
+    of the god Nezha in Chinese mythology and literature.
+  i18n_explanations:
+    en: Literally 'three heads and six arms,' this idiom describes someone with superhuman abilities or
+      extraordinary skills, often used to praise competence. It originates from depictions of the god
+      Nezha in Chinese mythology and literature.
+    es: Literalmente 'tres cabezas y seis brazos', este modismo describe a alguien con habilidades sobrehumanas
+      o destrezas extraordinarias, utilizado a menudo para elogiar la competencia. Se origina en las representaciones
+      del dios Nezha en la mitología y literatura china.
+    fr: Littéralement 'trois têtes et six bras', cet idiome décrit quelqu'un doté de capacités surhumaines
+      ou de compétences extraordinaires, souvent utilisé pour louer la compétence. Il provient des représentations
+      du dieu Nezha dans la mythologie et la littérature chinoises.
+    de: Wörtlich 'drei Köpfe und sechs Arme', beschreibt diese Redewendung jemanden mit übermenschlichen
+      Fähigkeiten oder außergewöhnlichen Fertigkeiten, oft verwendet, um Kompetenz zu loben. Sie stammt
+      aus Darstellungen des Gottes Nezha in der chinesischen Mythologie und Literatur.
+    it: Letteralmente 'tre teste e sei braccia', questo idioma descrive qualcuno con abilità sovrumane
+      o capacità straordinarie, spesso usato per lodare la competenza. Ha origine dalle raffigurazioni
+      del dio Nezha nella mitologia e letteratura cinese.
+    pt: Literalmente 'três cabeças e seis braços', esse idioma descreve alguém com habilidades sobre-humanas
+      ou capacidades extraordinárias, frequentemente usado para elogiar a competência. Origina-se das
+      representações do deus Nezha na mitologia e literatura chinesas.
+    ru: Буквально 'три головы и шесть рук', эта идиома описывает кого-то со сверхчеловеческими способностями
+      или необычайными навыками, часто используется для похвалы компетентности. Происходит от изображений
+      бога Нэчжа в китайской мифологии и литературе.
+    ja: 直訳すると「三つの頭と六つの腕」。この慣用句は、超人的な能力や非凡な技能を持つ人を表し、しばしば有能さを称賛するのに使われる。中国神話や文学における哪吒（ネザ）の描写に由来する。
+    zh: 字面意思是‘三头六臂’，这个成语形容某人有超人的能力或非凡的技能，常用来称赞才能。它源于中国神话和文学中对哪吒的描绘。
+    ar: حرفياً 'ثلاثة رؤوس وستة أذرع'، يصف هذا التعبير الاصطلاحي شخصاً يتمتع بقدرات خارقة أو مهارات استثنائية،
+      وغالباً ما يستخدم لمدح الكفاءة. ينشأ من تصوير الإله نيزها في الأساطير والأدب الصيني.
+    he: בתרגום מילולי 'שלושה ראשים ושש זרועות', הביטוי הזה מתאר מישהו בעל יכולות על-אנושיות או כישורים
+      יוצאי דופן, ומשמש לעתים קרובות לשבח כשירות. מקורו בתיאורים של האל נז'ה במיתולוגיה ובספרות הסינית.
+  learner_level: B2
+  confidence: 0.75
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.zh.explanation.chinese_idioms_三头六臂
+  source_work_key: mnemosyne.zh.work.西游记_journey_to_the_west
+  source_author_key: mnemosyne.zh.author.wu_cheng_en
+  source_work: 西游记 (Journey to the West)
+  source_author: Wu Cheng'en
+  source_url: https://wikisource.org/wiki/西游记
+  source_license: public_domain
+  source_dataset: chinese_idioms
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Idiom
+    not exclusive to Journey to the West; attribution slightly overclaimed.'

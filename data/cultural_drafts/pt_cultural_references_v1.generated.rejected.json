@@ -1,0 +1,22 @@
+[
+  {
+    "canonical_reference": "a Hidra de Lerna",
+    "reason": "Source work incorrectly attributed to the Iliad; the Lernaean Hydra is not in Homer's Iliad."
+  },
+  {
+    "canonical_reference": "o Cavaleiro das Sete Partidas de 'Amadis de Gaula'",
+    "reason": "The term 'Cavaleiro das Sete Partidas' is not a recognized character in Amadis de Gaula."
+  },
+  {
+    "canonical_reference": "a Dança dos Sete Véus de Salomé em 'Saudades de Saudades'",
+    "reason": "'Saudades de Saudades' is not a known work by Mário de Sá-Carneiro."
+  },
+  {
+    "canonical_reference": "a Estrela de Cinco Pontas de 'Só'",
+    "reason": "Reference appears trivial or anachronistic; surface pattern not clearly tied to source work."
+  },
+  {
+    "canonical_reference": "o Poço do Inferno em 'A Ilha dos Amores'",
+    "reason": "The novel 'A Ilha dos Amores' is not authored by Eça de Queirós; attribution is incorrect."
+  }
+]

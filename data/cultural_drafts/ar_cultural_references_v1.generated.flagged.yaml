@@ -1,0 +1,612 @@
+- id: ar_literary_reference_لقد_أنكرتني_الخيل_وهي_عواقد_0d54ddac
+  language: ar
+  canonical_reference: لقد أنكرتني الخيل وهي عواقد
+  reference_type: literary_reference
+  surface_patterns:
+  - لقد أنكرتني الخيل وهي عواقد
+  short_explanation: A line from Imru' al-Qais's Mu'allaqa, meaning 'The horses denied me, though they
+    are tied.' It expresses the poet's loss of honor or status, using horses as a symbol.
+  i18n_explanations:
+    en: A line from Imru' al-Qais's Mu'allaqa, meaning 'The horses denied me, though they are tied.' It
+      expresses the poet's loss of honor or status, using horses as a symbol.
+    es: Un verso de la Mu'allaqa de Imru' al-Qais, que significa 'Los caballos me negaron, aunque están
+      atados'. Expresa la pérdida de honor o estatus del poeta, usando los caballos como símbolo.
+    fr: Un vers de la Mu'allaqa d'Imru' al-Qais, signifiant 'Les chevaux m'ont renié, bien qu'ils soient
+      attachés.' Il exprime la perte d'honneur ou de statut du poète, utilisant les chevaux comme symbole.
+    de: Ein Vers aus Imru' al-Qais' Mu'allaqa mit der Bedeutung 'Die Pferde verleugneten mich, obwohl
+      sie angebunden sind.' Er drückt den Verlust von Ehre oder Status des Dichters aus, wobei Pferde
+      als Symbol dienen.
+    it: Un verso dalla Mu'allaqa di Imru' al-Qais, che significa 'I cavalli mi hanno rinnegato, sebbene
+      siano legati.' Esprime la perdita di onore o status del poeta, usando i cavalli come simbolo.
+    pt: Um verso da Mu'allaqa de Imru' al-Qais, significando 'Os cavalos me negaram, embora estejam amarrados.'
+      Expressa a perda de honra ou status do poeta, usando cavalos como símbolo.
+    ru: Строка из муаллаки Имру аль-Кайса, означающая «Кони отвергли меня, хотя они привязаны». Она выражает
+      потерю поэтом чести или статуса, используя коней как символ.
+    ja: イムルウ・アル＝カイスの『ムアッラカ』の一節で、「馬は繋がれているのに、私を拒んだ」という意味。馬を象徴として、詩人の名誉や地位の喪失を表現している。
+    zh: 伊姆鲁·盖斯《悬诗》中的一句，意为“马匹否认了我，尽管它们被拴着”。它表达了诗人荣誉或地位的丧失，以马为象征。
+    ar: بيت من معلقة امرئ القيس، معناه 'لقد أنكرتني الخيل وهي عواقد'. يعبر عن فقدان الشاعر لشرفه أو مكانته،
+      مستخدمًا الخيل كرمز.
+    he: שורה מהמועלאקה של אמרו אלקיס, משמעותה 'הסוסים הכחישו אותי, אף על פי שהם קשורים'. היא מבטאת את
+      אובדן הכבוד או המעמד של המשורר, תוך שימוש בסוסים כסמל.
+  learner_level: C2
+  confidence: 0.9
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.ar.explanation.arabic_classical_phrases_لقد_أنكرتني_الخيل_وهي_عوا
+  source_work_key: mnemosyne.ar.work.المعلقة_mu_allaqa_of_imru_al_qais
+  source_author_key: mnemosyne.ar.author.امرؤ_القيس_imru_al_qais
+  source_work: المعلقة (Mu'allaqa of Imru' al-Qais)
+  source_author: امرؤ القيس (Imru' al-Qais)
+  source_location: line 21 (approx.)
+  source_url: https://ar.wikisource.org/wiki/%D9%85%D8%B9%D9%84%D9%82%D8%A9_%D8%A7%D9%85%D8%B1%D8%A6_%D8%A7%D9%84%D9%82%D9%8A%D8%B3
+  source_license: public_domain
+  source_dataset: arabic_classical_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    plausible but uncertain; I am not entirely sure this line is from Imru'' al-Qais''s Mu''allaqa specifically.'
+- id: ar_literary_reference_فإني_إلى_قومي_سواهم_لأميل_454d6472
+  language: ar
+  canonical_reference: فإني إلى قومي سواهم لأميل
+  reference_type: literary_reference
+  surface_patterns:
+  - فإني إلى قومي سواهم لأميل
+  - إني إلى قومي سواهم لأميل
+  short_explanation: A line from classical Arabic poetry expressing the poet's inclination towards his
+    own people despite their faults, reflecting themes of tribal loyalty and personal integrity.
+  i18n_explanations:
+    en: A line from classical Arabic poetry expressing the poet's inclination towards his own people despite
+      their faults, reflecting themes of tribal loyalty and personal integrity.
+    es: Un verso de la poesía árabe clásica que expresa la inclinación del poeta hacia su propio pueblo
+      a pesar de sus defectos, reflejando temas de lealtad tribal e integridad personal.
+    fr: Un vers de la poésie arabe classique exprimant l'inclination du poète envers son propre peuple
+      malgré leurs défauts, reflétant des thèmes de loyauté tribale et d'intégrité personnelle.
+    de: Eine Zeile aus der klassischen arabischen Dichtung, die die Neigung des Dichters zu seinem eigenen
+      Volk trotz seiner Fehler ausdrückt und Themen der Stammesloyalität und persönlichen Integrität widerspiegelt.
+    it: Un verso della poesia araba classica che esprime l'inclinazione del poeta verso la sua gente nonostante
+      i loro difetti, riflettendo temi di lealtà tribale e integrità personale.
+    pt: Um verso da poesia árabe clássica expressando a inclinação do poeta para seu próprio povo apesar
+      de seus defeitos, refletindo temas de lealdade tribal e integridade pessoal.
+    ru: Строка из классической арабской поэзии, выражающая склонность поэта к своему народу, несмотря
+      на его недостатки, отражающая темы племенной верности и личной честности.
+    ja: 古典アラビア詩の一節で、詩人が自らの部族の欠点にもかかわらずそれに傾倒する様子を表現し、部族の忠誠心と個人の誠実さというテーマを反映している。
+    zh: 古典阿拉伯诗歌中的一句，表达了诗人尽管自己的人民有缺点却仍倾向于他们，反映了部落忠诚和个人正直的主题。
+    ar: بيت من الشعر العربي الكلاسيكي يعبر عن ميل الشاعر لقومه رغم عيوبهم، ويعكس موضوعات الولاء القبلي
+      والنزاهة الشخصية.
+    he: שורה משירה ערבית קלאסית המבטאת את נטייתו של המשורר כלפי עמו למרות פגמיהם, ומשקפת נושאים של נאמנות
+      שבטית ויושר אישי.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  variants:
+  - فإني إلى قومي سواهم لأميلُ
+  explanation_key: mnemosyne.ar.explanation.ar_cultural_refs_فإني_إلى_قومي_سواهم_لأميل
+  source_work_key: mnemosyne.ar.work.ديوان_المتنبي
+  source_author_key: mnemosyne.ar.author.أبو_الطيب_المتنبي
+  source_work: ديوان المتنبي
+  source_author: أبو الطيب المتنبي
+  source_url: https://www.aldiwan.net/poem-28.html
+  source_license: public_domain
+  source_dataset: ar_cultural_refs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to al-Mutanabbi is uncertain; line not well-known in his divan.'
+- id: ar_literary_reference_وقد_كنت_في_الحي_المضر_كأنني_c4416c22
+  language: ar
+  canonical_reference: وقد كنت في الحي المضر كأنني
+  reference_type: literary_reference
+  surface_patterns:
+  - وقد كنت في الحي المضر كأنني
+  - وقد كنت في الحي المضر
+  short_explanation: A line from classical Arabic poetry, likely describing the poet's experience among
+    a harmful community, used to illustrate alienation or resilience.
+  i18n_explanations:
+    en: A line from classical Arabic poetry, likely describing the poet's experience among a harmful community,
+      used to illustrate alienation or resilience.
+    es: Un verso de la poesía árabe clásica, probablemente describiendo la experiencia del poeta en una
+      comunidad dañina, usado para ilustrar alienación o resiliencia.
+    fr: Un vers de la poésie arabe classique, décrivant probablement l'expérience du poète au sein d'une
+      communauté nuisible, utilisé pour illustrer l'aliénation ou la résilience.
+    de: Eine Zeile aus der klassischen arabischen Dichtung, die wahrscheinlich die Erfahrung des Dichters
+      in einer schädlichen Gemeinschaft beschreibt und zur Veranschaulichung von Entfremdung oder Widerstandsfähigkeit
+      verwendet wird.
+    it: Un verso della poesia araba classica, probabilmente descrivendo l'esperienza del poeta in una
+      comunità dannosa, usato per illustrare alienazione o resilienza.
+    pt: Um verso da poesia árabe clássica, provavelmente descrevendo a experiência do poeta em uma comunidade
+      prejudicial, usado para ilustrar alienação ou resiliência.
+    ru: Строка из классической арабской поэзии, вероятно, описывающая опыт поэта среди вредоносного сообщества,
+      используемая для иллюстрации отчуждения или стойкости.
+    ja: 古典アラビア詩の一節で、おそらく詩人が有害なコミュニティの中で経験したことを描写し、疎外感や回復力を示すために使われる。
+    zh: 古典阿拉伯诗歌中的一句，可能描述了诗人在有害群体中的经历，用以说明疏离或韧性。
+    ar: بيت من الشعر العربي الكلاسيكي، يصف على الأرجح تجربة الشاعر بين جماعة ضارة، ويستخدم لتوضيح العزلة
+      أو المرونة.
+    he: שורה משירה ערבית קלאסית, המתארת ככל הנראה את חווייתו של המשורר בקהילה מזיקה, המשמשת להמחשת ניכור
+      או חוסן.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ar.explanation.ar_cultural_refs_وقد_كنت_في_الحي_المضر_كأنني
+  source_work_key: mnemosyne.ar.work.classical_arabic_poetry_uncertain
+  source_author_key: mnemosyne.ar.author.unknown
+  source_work: Classical Arabic Poetry (Uncertain)
+  source_author: Unknown
+  source_license: public_domain
+  source_dataset: ar_cultural_refs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    unspecified and cannot be verified; confidence overclaimed.'
+- id: ar_classical_or_scriptural_allusion_قارون_1b03c8b9
+  language: ar
+  canonical_reference: قارون
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - قارون
+  - كارون
+  - قارون الغني
+  short_explanation: A wealthy man in the time of Prophet Moses who was swallowed by the earth for his
+    arrogance and refusal to share his wealth. He symbolizes greed and the punishment of arrogance.
+  i18n_explanations:
+    en: A wealthy man in the time of Prophet Moses who was swallowed by the earth for his arrogance and
+      refusal to share his wealth. He symbolizes greed and the punishment of arrogance.
+    es: Un hombre rico en la época del profeta Moisés que fue tragado por la tierra por su arrogancia
+      y negativa a compartir su riqueza. Simboliza la codicia y el castigo de la arrogancia.
+    fr: Un homme riche à l'époque du prophète Moïse qui fut englouti par la terre pour son arrogance et
+      son refus de partager sa richesse. Il symbolise l'avidité et le châtiment de l'arrogance.
+    de: Ein reicher Mann zur Zeit des Propheten Mose, der wegen seiner Arroganz und Weigerung, seinen
+      Reichtum zu teilen, von der Erde verschluckt wurde. Er symbolisiert Gier und die Bestrafung von
+      Arroganz.
+    it: Un uomo ricco al tempo del profeta Mosè che fu inghiottito dalla terra per la sua arroganza e
+      il rifiuto di condividere la sua ricchezza. Simboleggia l'avidità e la punizione dell'arroganza.
+    pt: Um homem rico na época do profeta Moisés que foi engolido pela terra por sua arrogância e recusa
+      em compartilhar sua riqueza. Ele simboliza a ganância e a punição da arrogância.
+    ru: Богатый человек во времена пророка Моисея, который был поглощен землей за свою гордыню и отказ
+      делиться богатством. Он символизирует жадность и наказание за высокомерие.
+    ja: 預言者モーセの時代の裕福な男で、傲慢さと富を分け与えなかったために地面に飲み込まれました。彼は貪欲さと傲慢への罰を象徴しています。
+    zh: 在先知摩西时代的一个富人，因傲慢和拒绝分享财富而被大地吞没。他象征着贪婪和对傲慢的惩罚。
+    ar: رجل ثري في زمن النبي موسى ابتلعته الأرض بسبب غطرسته ورفضه مشاركة ثروته. يرمز إلى الجشع وعقاب الغرور.
+    he: איש עשיר בימי הנביא משה שנבלע על ידי האדמה בגלל יהירותו וסירובו לחלוק את עושרו. הוא מסמל חמדנות
+      ואת עונשה של היהירות.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.ar.explanation.arabic_cultural_refs_قارون
+  source_work_key: mnemosyne.ar.work.القرآن
+  source_author_key: mnemosyne.ar.author.various
+  source_work: القرآن
+  source_author: Various
+  source_location: Quran 28:76-82
+  source_url: https://quran.com/28/76
+  source_license: public_domain
+  source_dataset: arabic_cultural_refs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Surface
+    pattern ''كارون'' is a misspelling of ''قارون''; correct spelling should be with qaf.'
+- id: ar_literary_reference_مجنون_ليلى_16ea1e73
+  language: ar
+  canonical_reference: مجنون ليلى
+  reference_type: literary_reference
+  surface_patterns:
+  - مجنون ليلى
+  - قيس وليلى
+  - ليلى والمجنون
+  short_explanation: The story of Qays ibn al-Mulawwah who went mad for his beloved Layla; a symbol of
+    pure, unrequited love in Arabic and Islamic culture.
+  i18n_explanations:
+    en: The story of Qays ibn al-Mulawwah who went mad for his beloved Layla; a symbol of pure, unrequited
+      love in Arabic and Islamic culture.
+    es: La historia de Qays ibn al-Mulawwah que enloqueció por su amada Layla; un símbolo del amor puro
+      no correspondido en la cultura árabe e islámica.
+    fr: L'histoire de Qays ibn al-Mulawwah devenu fou pour sa bien-aimée Layla; un symbole d'amour pur
+      et non partagé dans la culture arabe et islamique.
+    de: Die Geschichte von Qays ibn al-Mulawwah, der aus Liebe zu seiner Geliebten Layla den Verstand
+      verlor; ein Symbol für reine, unerwiderte Liebe in der arabischen und islamischen Kultur.
+    it: La storia di Qays ibn al-Mulawwah che impazzì per la sua amata Layla; simbolo dell'amore puro
+      e non corrisposto nella cultura araba e islamica.
+    pt: A história de Qays ibn al-Mulawwah que enlouqueceu por sua amada Layla; um símbolo de amor puro
+      e não correspondido na cultura árabe e islâmica.
+    ru: История Кайса ибн аль-Мулавваха, который сошел с ума от любви к своей возлюбленной Лейле; символ
+      чистой, безответной любви в арабской и исламской культуре.
+    ja: カイス・イブン・アル＝ムラワフが最愛のライラに狂わんばかりの恋をした物語。アラブ・イスラーム文化における純粋で報われない愛の象徴。
+    zh: 盖斯·伊本·穆拉瓦赫为心爱的莱拉发狂的故事；阿拉伯和伊斯兰文化中纯洁、无回报的爱的象征。
+    ar: قصة قيس بن الملوّح الذي جنّ بحب ليلى؛ رمز الحب النقي غير المتبادل في الثقافة العربية والإسلامية.
+    he: סיפורו של קייס אבן אל-מולווח שהשתגע מאהבתו ללאילה; סמל לאהבה טהורה ונכזבת בתרבות הערבית והאסלאמית.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: literary
+  variants:
+  - قيس
+  explanation_key: mnemosyne.ar.explanation.arabic_cultural_references_مجنون_ليلى
+  source_work_key: mnemosyne.ar.work.ديوان_مجنون_ليلى
+  source_author_key: mnemosyne.ar.author.qays_ibn_al_mulawwah_attributed
+  source_work: ديوان مجنون ليلى
+  source_author: Qays ibn al-Mulawwah (attributed)
+  source_license: public_domain
+  source_dataset: arabic_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    of the diwan to Qays is traditional but not fully verifiable; story is accurate.'
+- id: ar_proverb_tradition_رب_كلمة_تضيع_الخصام_027f96e9
+  language: ar
+  canonical_reference: رب كلمة تضيع الخصام
+  reference_type: proverb_tradition
+  surface_patterns:
+  - رب كلمة تضيع الخصام
+  - رب كلمة تضيع خصام
+  - رُبَّ كَلِمَةٍ تُضَيِّعُ الْخِصَامَ
+  short_explanation: A classical Arabic proverb meaning 'Many a word ruins the quarrel', implying that
+    a single word can escalate a dispute unnecessarily.
+  i18n_explanations:
+    en: A classical Arabic proverb meaning 'Many a word ruins the quarrel', implying that a single word
+      can escalate a dispute unnecessarily.
+    es: Un proverbio árabe clásico que significa 'Muchas palabras arruinan la disputa', implicando que
+      una sola palabra puede escalar innecesariamente un conflicto.
+    fr: Un proverbe arabe classique signifiant 'Beaucoup de mots ruinent la querelle', impliquant qu'un
+      seul mot peut escalader inutilement un conflit.
+    de: Ein klassisches arabisches Sprichwort, das bedeutet 'Viele Worte ruinieren den Streit', was impliziert,
+      dass ein einziges Wort einen Konflikt unnötig verschärfen kann.
+    it: Un proverbio arabo classico che significa 'Molte parole rovinano la lite', implicando che una
+      singola parola può innescare inutilmente una disputa.
+    pt: Um provérbio árabe clássico que significa 'Muitas palavras arruínam a briga', implicando que uma
+      única palavra pode escalar desnecessariamente um conflito.
+    ru: Классическая арабская пословица, означающая «Многие слова портят ссору», подразумевающая, что
+      одно слово может ненужно обострить конфликт.
+    ja: 古典的なアラビアのことわざで、「多くの言葉が争いを台無しにする」という意味。たった一言で不必要に紛争が激化することを示唆する。
+    zh: 一句经典的阿拉伯谚语，意为‘许多言语会毁掉争吵’，暗示一句话可能会不必要地加剧争端。
+    ar: مثل عربي كلاسيكي يعني 'رب كلمة تضيع الخصام'، يعني أن كلمة واحدة يمكن أن تصعد النزاع دون داع.
+    he: פתגם ערבי קלאסי שמשמעותו 'מילים רבות הורסות את המריבה', ומרמז שמילה אחת יכולה להסלים מחלוקת שלא
+      לצורך.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  variants:
+  - رب كلمة تضيع خصاماً
+  explanation_key: mnemosyne.ar.explanation.ar_proverbs_batch_رب_كلمة_تضيع_الخصام
+  source_work_key: mnemosyne.ar.work.various
+  source_author_key: mnemosyne.ar.author.unknown
+  source_work: Various
+  source_author: Unknown
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ar_proverbs_batch
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    proverb is plausible but its exact phrasing and meaning are uncertain, and it is less common in classical
+    sources.'
+- id: ar_classical_or_scriptural_allusion_إنما_النصر_صبر_ساعة_12b21a98
+  language: ar
+  canonical_reference: إنما النصر صبر ساعة
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - إنما النصر صبر ساعة
+  - النصر صبر ساعة
+  - ما النصر إلا صبر ساعة
+  short_explanation: Meaning 'Victory is only patience for a moment,' this saying highlights that perseverance
+    leads to success. It is often attributed to Prophet Muhammad and appears in hadith collections.
+  i18n_explanations:
+    en: Meaning 'Victory is only patience for a moment,' this saying highlights that perseverance leads
+      to success. It is often attributed to Prophet Muhammad and appears in hadith collections.
+    es: Significa 'La victoria es solo paciencia por un momento', este dicho destaca que la perseverancia
+      conduce al éxito. A menudo se atribuye al profeta Mahoma y aparece en colecciones de hadices.
+    fr: Signifiant 'La victoire n'est que patience pour un moment', ce dicton souligne que la persévérance
+      mène au succès. Il est souvent attribué au prophète Mahomet et apparaît dans des recueils de hadiths.
+    de: Dieser Spruch bedeutet 'Der Sieg ist nur Geduld für einen Augenblick' und betont, dass Beharrlichkeit
+      zum Erfolg führt. Er wird oft dem Propheten Muhammad zugeschrieben und erscheint in Hadith-Sammlungen.
+    it: Significando 'La vittoria è solo pazienza per un momento', questo detto sottolinea che la perseveranza
+      porta al successo. È spesso attribuito al profeta Maometto e appare in raccolte di hadith.
+    pt: Significando 'A vitória é apenas paciência por um momento', este ditado destaca que a perseverança
+      leva ao sucesso. É frequentemente atribuído ao profeta Maomé e aparece em coleções de hadith.
+    ru: Означая 'Победа — это только терпение на мгновение', эта поговорка подчеркивает, что настойчивость
+      ведет к успеху. Часто приписывается пророку Мухаммаду и встречается в сборниках хадисов.
+    ja: '''勝利はほんの一瞬の忍耐に過ぎない''という意味で、忍耐が成功につながることを強調しています。預言者ムハンマドの言葉とされ、ハディース集に登場します。'
+    zh: 意思是'胜利只是片刻的忍耐'，这句话强调坚持带来成功。常归因于先知穆罕默德，出现在圣训集中。
+    ar: معنى 'إنما النصر صبر ساعة'، هذا القول يبرز أن المثابرة تؤدي إلى النجاح. يُنسب غالبًا إلى النبي
+      محمد ويظهر في مجموعات الحديث.
+    he: פירושו 'הניצחון הוא רק סבלנות לרגע', אמרה זו מדגישה שהתמדה מובילה להצלחה. היא מיוחסת לרוב לנביא
+      מוחמד ומופיעה באוספי חדית'.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.ar.explanation.ar_cultural_references_batch_إنما_النصر_صبر_ساعة
+  source_work_key: mnemosyne.ar.work.sunan_al_tirmidhi
+  source_author_key: mnemosyne.ar.author.prophet_muhammad
+  source_work: Sunan al-Tirmidhi
+  source_author: Prophet Muhammad
+  source_location: Hadith on patience (various)
+  source_url: 'https://sunnah.com/tirmidhi:'
+  source_license: public_domain
+  source_dataset: ar_cultural_references_batch
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to specific hadith collection unverified; more likely a popular saying.'
+- id: ar_classical_or_scriptural_allusion_رأس_الحكمة_مخافة_الله_269a8a6b
+  language: ar
+  canonical_reference: رأس الحكمة مخافة الله
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - رأس الحكمة مخافة الله
+  - مخافة الله رأس الحكمة
+  - أصل الحكمة مخافة الله
+  short_explanation: Meaning 'The head of wisdom is the fear of God,' this saying underscores that piety
+    is the foundation of wisdom. It is a well-known religious saying similar to a hadith.
+  i18n_explanations:
+    en: Meaning 'The head of wisdom is the fear of God,' this saying underscores that piety is the foundation
+      of wisdom. It is a well-known religious saying similar to a hadith.
+    es: Significa 'La cabeza de la sabiduría es el temor de Dios', este dicho subraya que la piedad es
+      el fundamento de la sabiduría. Es un dicho religioso bien conocido similar a un hadiz.
+    fr: Signifiant 'La tête de la sagesse est la crainte de Dieu', ce dicton souligne que la piété est
+      le fondement de la sagesse. C'est un dicton religieux bien connu similaire à un hadith.
+    de: Dieser Spruch bedeutet 'Die Spitze der Weisheit ist die Gottesfurcht' und unterstreicht, dass
+      Frömmigkeit die Grundlage der Weisheit ist. Es ist ein bekannter religiöser Ausspruch, ähnlich einem
+      Hadith.
+    it: Significando 'La testa della saggezza è il timore di Dio', questo detto sottolinea che la pietà
+      è il fondamento della saggezza. È un detto religioso ben noto simile a un hadith.
+    pt: Significando 'A cabeça da sabedoria é o temor de Deus', este ditado enfatiza que a piedade é a
+      base da sabedoria. É um ditado religioso bem conhecido semelhante a um hadith.
+    ru: Означая 'Глава мудрости — страх Божий', эта поговорка подчеркивает, что благочестие является основой
+      мудрости. Это хорошо известное религиозное изречение, похожее на хадис.
+    ja: '''知恵の頂点は神への畏れである''という意味で、敬虔さが知恵の基盤であることを強調しています。ハディースに似た広く知られた宗教的な言葉です。'
+    zh: 意思是'智慧之首是敬畏真主'，这句话强调虔诚是智慧的基础。这是一个众所周知的宗教谚语，类似于圣训。
+    ar: تعني 'رأس الحكمة مخافة الله'، هذا القول يؤكد أن التقوى هي أساس الحكمة. إنه قول ديني معروف يشبه
+      الحديث.
+    he: פירושו 'ראש החכמה הוא יראת אלוהים', אמרה זו מדגישה שיראת שמיים היא בסיס החכמה. זו אמרה דתית ידועה
+      הדומה לחדית'.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.ar.explanation.ar_cultural_references_batch_رأس_الحكمة_مخافة_الله
+  source_work_key: mnemosyne.ar.work.various_hadith_collections
+  source_author_key: mnemosyne.ar.author.prophet_muhammad_attributed
+  source_work: Various hadith collections
+  source_author: Prophet Muhammad (attributed)
+  source_license: public_domain
+  source_dataset: ar_cultural_references_batch
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to hadith collections uncertain; lacks specific source and authentication.'
+- id: ar_cultural_reference_من_يعرف_نفسه_يعرف_ربه_8df9b67d
+  language: ar
+  canonical_reference: من يعرف نفسه يعرف ربه
+  reference_type: cultural_reference
+  surface_patterns:
+  - من يعرف نفسه يعرف ربه
+  - من عرف نفسه فقد عرف ربه
+  - معرفة النفس معرفة الرب
+  short_explanation: This saying means 'He who knows himself knows his Lord,' promoting self-knowledge
+    as a path to divine knowledge. It is a key concept in Islamic mysticism (Sufism) and is often repeated
+    in spiritual discourse.
+  i18n_explanations:
+    en: This saying means 'He who knows himself knows his Lord,' promoting self-knowledge as a path to
+      divine knowledge. It is a key concept in Islamic mysticism (Sufism) and is often repeated in spiritual
+      discourse.
+    es: Este dicho significa 'Quien se conoce a sí mismo conoce a su Señor', promoviendo el autoconocimiento
+      como camino al conocimiento divino. Es un concepto clave en el misticismo islámico (sufismo) y se
+      repite a menudo en el discurso espiritual.
+    fr: Ce dicton signifie 'Celui qui se connaît lui-même connaît son Seigneur', promouvant la connaissance
+      de soi comme chemin vers la connaissance divine. C'est un concept clé du mysticisme islamique (soufisme)
+      et est souvent répété dans le discours spirituel.
+    de: Dieser Spruch bedeutet 'Wer sich selbst kennt, kennt seinen Herrn' und fördert Selbsterkenntnis
+      als Weg zur göttlichen Erkenntnis. Es ist ein Schlüsselkonzept in der islamischen Mystik (Sufismus)
+      und wird oft in spirituellen Diskursen wiederholt.
+    it: Questo detto significa 'Chi conosce se stesso conosce il suo Signore', promuovendo la conoscenza
+      di sé come via alla conoscenza divina. È un concetto chiave nel misticismo islamico (sufismo) ed
+      è spesso ripetuto nel discorso spirituale.
+    pt: Este ditado significa 'Quem conhece a si mesmo conhece o seu Senhor', promovendo o autoconhecimento
+      como caminho para o conhecimento divino. É um conceito-chave no misticismo islâmico (sufismo) e
+      é frequentemente repetido no discurso espiritual.
+    ru: Эта поговорка означает 'Кто познает себя, тот познает своего Господа', продвигая самопознание
+      как путь к божественному знанию. Это ключевая концепция в исламском мистицизме (суфизме) и часто
+      повторяется в духовных дискурсах.
+    ja: この格言は「自分自身を知る者は、その主を知る」という意味で、自己認識を神の知識への道として促進します。イスラム神秘主義（スーフィズム）の重要な概念であり、精神的な談話でよく繰り返されます。
+    zh: 这句格言的意思是‘认识自己的人便认识他的主’，提倡自我认识是通往认识神的途径。这是伊斯兰神秘主义（苏菲主义）中的一个关键概念，常在灵性对话中被重复。
+    ar: يعني هذا القول 'من يعرف نفسه يعرف ربه'، ويعزز معرفة الذات كطريق إلى المعرفة الإلهية. وهو مفهوم
+      رئيسي في التصوف الإسلامي، وغالبًا ما يتكرر في الخطاب الروحي.
+    he: אמרה זו פירושה 'מי שמכיר את עצמו מכיר את אדונו', ומקדמת ידע עצמי כדרך לידע אלוהי. זהו מושג מפתח
+      במיסטיקה האסלאמית (סופיות) ולעיתים קרובות חוזר על עצמו בשיח הרוחני.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ar.explanation.arabic_common_phrases_من_يعرف_نفسه_يعرف_ربه
+  source_work_key: mnemosyne.ar.work.oral_tradition_sufi_literature
+  source_author_key: mnemosyne.ar.author.unknown
+  source_work: Oral tradition / Sufi literature
+  source_author: Unknown
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: arabic_common_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Prophet Muhammad is unsubstantiated; common in Sufi tradition but not a verified hadith.'
+- id: ar_literary_reference_أنا_والغربة_يا_أمي_نتقاسمك_24a5836c
+  language: ar
+  canonical_reference: أنا والغربة يا أمي نتقاسمك
+  reference_type: literary_reference
+  surface_patterns:
+  - أنا والغربة يا أمي نتقاسمك
+  - أنا والغربة يا أمي نقتسمك
+  short_explanation: A line from modern Arabic poetry (often attributed to Mahmoud Darwish) expressing
+    a person's painful sharing of their mother with exile, reflecting themes of loss and displacement.
+    It resonates deeply in Palestinian and broader Arab contexts.
+  i18n_explanations:
+    en: A line from modern Arabic poetry (often attributed to Mahmoud Darwish) expressing a person's painful
+      sharing of their mother with exile, reflecting themes of loss and displacement. It resonates deeply
+      in Palestinian and broader Arab contexts.
+    es: Un verso de la poesía árabe moderna (a menudo atribuido a Mahmud Darwish) que expresa la dolorosa
+      compartición de la madre con el exilio, reflejando temas de pérdida y desplazamiento. Resuena profundamente
+      en contextos palestinos y árabes en general.
+    fr: Un vers de la poésie arabe moderne (souvent attribué à Mahmoud Darwich) exprimant le partage douloureux
+      de la mère avec l'exil, reflétant des thèmes de perte et de déplacement. Il résonne profondément
+      dans les contextes palestiniens et arabes au sens large.
+    de: Ein Vers aus der modernen arabischen Poesie (oft Mahmud Darwisch zugeschrieben), der das schmerzhafte
+      Teilen der Mutter mit dem Exil ausdrückt und Themen von Verlust und Vertreibung widerspiegelt. Es
+      hat eine tiefe Resonanz im palästinensischen und weiteren arabischen Kontext.
+    it: Un verso della poesia araba moderna (spesso attribuito a Mahmoud Darwish) che esprime la dolorosa
+      condivisione della madre con l'esilio, riflettendo temi di perdita e spostamento. Risuona profondamente
+      nei contesti palestinesi e arabi in generale.
+    pt: Um verso da poesia árabe moderna (muitas vezes atribuído a Mahmoud Darwish) expressando a dolorosa
+      partilha da mãe com o exílio, refletindo temas de perda e deslocamento. Ressoa profundamente em
+      contextos palestinos e árabes mais amplos.
+    ru: Строка из современной арабской поэзии (часто приписывается Махмуду Дарвишу), выражающая болезненное
+      разделение матери с изгнанием, отражающая темы потери и перемещения. Она глубоко резонирует в палестинском
+      и более широком арабском контексте.
+    ja: 現代アラビア詩の一節（しばしばマフムード・ダルウィーシュに帰される）で、喪失と避難のテーマを反映し、母を exile（亡命）と苦しく共有することを表現。パレスチナやアラブ世界で深く共感を呼んでいます。
+    zh: 现代阿拉伯诗歌中的一行（常归于马哈茂德·达尔维什），表达了与流亡痛苦分享母亲的情感，反映了失落和流离失所的主题。在巴勒斯坦和更广泛的阿拉伯语境中引起深刻共鸣。
+    ar: سطر من الشعر العربي الحديث (غالباً ما يُنسب إلى محمود درويش) يعبر عن المشاركة المؤلمة للأم مع
+      المنفى، مما يعكس موضوعات الفقد والتهجير. يتردد صداه بعمق في السياقات الفلسطينية والعربية الأوسع.
+    he: שורה משירה ערבי מודרני (מיוחסת לעתים קרובות למחמוד דרוויש) המבטאת את השיתוף הכואב של האם עם הגלות,
+      תוך שיקוף של נושאי אובדן ועקירה. היא מהדהדת עמוקות בהקשרים פלסטיניים וערביים רחבים.
+  learner_level: C1
+  confidence: 0.75
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ar.explanation.ar_cultural_references_أنا_والغربة_يا_أمي_نتقاسمك
+  source_work_key: mnemosyne.ar.work.unknown_poem_possibly_by_mahmoud_darwish
+  source_author_key: mnemosyne.ar.author.mahmoud_darwish_disputed
+  source_work: Unknown poem (possibly by Mahmoud Darwish)
+  source_author: Mahmoud Darwish (disputed)
+  source_license: copyright_or_rights_review_needed
+  source_dataset: ar_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Mahmoud Darwish is plausible but not verified; surface patterns need confirmation.'
+- id: ar_literary_reference_سألوني_عن_حبي_لها_فأجبت_هي_الحياة_05f00988
+  language: ar
+  canonical_reference: 'سألوني عن حبي لها فأجبت: هي الحياة'
+  reference_type: literary_reference
+  surface_patterns:
+  - 'سألوني عن حبي لها فأجبت: هي الحياة'
+  - 'سألوني عن حبي لها فقلت: هي الحياة'
+  short_explanation: A line from modern Arabic love poetry (possibly by Nizar Qabbani) responding that
+    the beloved is life itself. It exemplifies passionate romantic expression common in 20th-century Arabic
+    literature.
+  i18n_explanations:
+    en: A line from modern Arabic love poetry (possibly by Nizar Qabbani) responding that the beloved
+      is life itself. It exemplifies passionate romantic expression common in 20th-century Arabic literature.
+    es: Un verso de la poesía amorosa árabe moderna (posiblemente de Nizar Qabbani) que responde que la
+      amada es la vida misma. Ejemplifica la expresión romántica apasionada común en la literatura árabe
+      del siglo XX.
+    fr: Un vers de la poésie amoureuse arabe moderne (peut-être de Nizar Kabbani) répondant que l'aimée
+      est la vie elle-même. Il illustre l'expression romantique passionnée courante dans la littérature
+      arabe du XXe siècle.
+    de: Ein Vers aus der modernen arabischen Liebespoesie (möglicherweise von Nizar Qabbani), der antwortet,
+      dass die Geliebte das Leben selbst ist. Er veranschaulicht den leidenschaftlichen romantischen Ausdruck,
+      der in der arabischen Literatur des 20. Jahrhunderts üblich ist.
+    it: Un verso della poesia d'amore araba moderna (forse di Nizar Qabbani) che risponde che l'amata
+      è la vita stessa. Esemplifica l'espressione romantica appassionata comune nella letteratura araba
+      del XX secolo.
+    pt: Um verso da poesia de amor árabe moderna (possivelmente de Nizar Qabbani) respondendo que a amada
+      é a própria vida. Exemplifica a expressão romântica apaixonada comum na literatura árabe do século
+      XX.
+    ru: Строка из современной арабской любовной поэзии (возможно, Низара Каббани), отвечающая, что возлюбленная
+      — это сама жизнь. Она иллюстрирует страстное романтическое выражение, распространенное в арабской
+      литературе XX века.
+    ja: 現代アラビア恋愛詩の一節（おそらくニザール・カッバーニの作）で、愛する人は人生そのものだと答える。20世紀アラビア文学に共通する情熱的な恋愛表現の例です。
+    zh: 现代阿拉伯爱情诗中的一行（可能出自尼扎尔·卡巴尼），回答称所爱之人就是生命本身。它是20世纪阿拉伯文学中常见的热烈浪漫表达的例子。
+    ar: سطر من شعر الحب العربي الحديث (ربما لنزار قباني) يجيب بأن الحبيبة هي الحياة نفسها. يجسد التعبير
+      الرومانسي العاطفي الشائع في الأدب العربي في القرن العشرين.
+    he: שורה משירת אהבה ערבית מודרנית (ייתכן של ניזאר קבאני) העונה כי האהובה היא החיים עצמם. היא מדגימה
+      את הביטוי הרומנטי הנלהב הנפוץ בספרות הערבית של המאה ה-20.
+  learner_level: C1
+  confidence: 0.7
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ar.explanation.ar_cultural_references_سألوني_عن_حبي_لها_فأجبت_هي_
+  source_work_key: mnemosyne.ar.work.unknown_poem_possibly_by_nizar_qabbani
+  source_author_key: mnemosyne.ar.author.nizar_qabbani_disputed
+  source_work: Unknown poem (possibly by Nizar Qabbani)
+  source_author: Nizar Qabbani (disputed)
+  source_license: copyright_or_rights_review_needed
+  source_dataset: ar_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Nizar Qabbani is plausible but uncertain; surface patterns may require refinement.'
+- id: ar_literary_reference_لا_يهمني_إن_طال_ليلي_أو_قصر_745f7418
+  language: ar
+  canonical_reference: لا يهمني إن طال ليلي أو قصر
+  reference_type: literary_reference
+  surface_patterns:
+  - لا يهمني إن طال ليلي أو قصر
+  - لا يهمني إن طال ليلي
+  - إن طال ليلي أو قصر
+  short_explanation: A line from Nizar Qabbani's poem 'The Cup Reader', expressing emotional indifference
+    to the passage of time when consumed by love or sorrow. It reflects Qabbani's romantic and melancholic
+    style.
+  i18n_explanations:
+    en: A line from Nizar Qabbani's poem 'The Cup Reader', expressing emotional indifference to the passage
+      of time when consumed by love or sorrow. It reflects Qabbani's romantic and melancholic style.
+    es: Un verso del poema 'La lectora de tazas' de Nizar Qabbani, que expresa indiferencia emocional
+      ante el paso del tiempo cuando se está consumido por el amor o la tristeza. Refleja el estilo romántico
+      y melancólico de Qabbani.
+    fr: Un vers du poème 'La liseuse de tasses' de Nizar Qabbani, exprimant l'indifférence émotionnelle
+      face au passage du temps lorsqu'on est consumé par l'amour ou la tristesse. Il reflète le style
+      romantique et mélancolique de Qabbani.
+    de: Ein Vers aus Nizar Qabbanis Gedicht 'Die Tassenleserin', der emotionale Gleichgültigkeit gegenüber
+      dem Vergehen der Zeit ausdrückt, wenn man von Liebe oder Trauer verzehrt wird. Es spiegelt Qabbanis
+      romantischen und melancholischen Stil wider.
+    it: Un verso della poesia 'La lettrice di tazze' di Nizar Qabbani, che esprime indifferenza emotiva
+      al passare del tempo quando si è consumati dall'amore o dalla tristezza. Riflette lo stile romantico
+      e malinconico di Qabbani.
+    pt: Um verso do poema 'A leitora de xícaras' de Nizar Qabbani, expressando indiferença emocional à
+      passagem do tempo quando se é consumido pelo amor ou pela tristeza. Reflete o estilo romântico e
+      melancólico de Qabbani.
+    ru: Строка из стихотворения Низара Каббани 'Гадалка на чайной гуще', выражающая эмоциональное безразличие
+      к течению времени, когда человек охвачен любовью или печалью. Отражает романтический и меланхоличный
+      стиль Каббани.
+    ja: ニザール・カッバーニーの詩『カップ占い師』の一節で、愛や悲しみに心を奪われている時の時間の経過に対する感情的な無関心を表現している。カッバーニーのロマンティックで憂鬱なスタイルを反映している。
+    zh: 尼扎尔·卡巴尼的诗《杯占者》中的一句诗，表达了在沉浸于爱情或悲伤时对时间流逝的情感漠然。反映了卡巴尼浪漫忧郁的风格。
+    ar: بيت من قصيدة نزار قباني 'قارئة الفنجان'، يعبر عن اللامبالاة العاطفية تجاه مرور الوقت عندما يستهلك
+      المرء بالحب أو الحزن. يعكس الأسلوب الرومانسي الحزين لقباني.
+    he: שורה משירו של ניזאר קבאני 'קוראת הספלים', המביעה אדישות רגשית למעבר הזמן כאשר הוא נאכל על ידי
+      אהבה או עצב. היא משקפת את סגנונו הרומנטי והמלנכולי של קבאני.
+  learner_level: C1
+  confidence: 0.7
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ar.explanation.arabic_cultural_references_لا_يهمني_إن_طال_ليلي_أو
+  source_work_key: mnemosyne.ar.work.قارئة_الفنجان_the_cup_reader
+  source_author_key: mnemosyne.ar.author.نزار_قباني_nizar_qabbani
+  source_work: قارئة الفنجان (The Cup Reader)
+  source_author: نزار قباني (Nizar Qabbani)
+  source_license: copyright_or_rights_review_needed
+  source_dataset: arabic_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    attribution to Nizar Qabbani''s poem ''The Cup Reader'' is plausible but I cannot confirm the exact
+    line exists in that poem; confidence may be overclaimed.'
+- id: ar_classical_or_scriptural_allusion_ما_أعدل_ك_الله_في_أحكام_ك_058cfa10
+  language: ar
+  canonical_reference: ما أعدلَكَ اللهُ في أحكامِكَ
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - ما أعدلَكَ اللهُ في أحكامِكَ
+  - ما أعدل الله في أحكامه
+  - ما أعدلك الله في أحكامك
+  short_explanation: A line praising God's justice, often used in religious contexts. Attributed to various
+    poets, possibly Al-Mutanabbi or another.
+  i18n_explanations:
+    en: A line praising God's justice, often used in religious contexts. Attributed to various poets,
+      possibly Al-Mutanabbi or another.
+    es: Un verso que alaba la justicia de Dios, a menudo usado en contextos religiosos. Atribuido a varios
+      poetas, posiblemente Al-Mutanabbi u otro.
+    fr: Un vers louant la justice de Dieu, souvent utilisé dans des contextes religieux. Attribué à divers
+      poètes, peut-être Al-Mutanabbi ou un autre.
+    de: Eine Zeile, die Gottes Gerechtigkeit preist, oft in religiösen Kontexten verwendet. Wird verschiedenen
+      Dichtern zugeschrieben, möglicherweise Al-Mutanabbi oder einem anderen.
+    it: Un verso che loda la giustizia di Dio, spesso usato in contesti religiosi. Attribuito a vari poeti,
+      forse Al-Mutanabbi o un altro.
+    pt: Um verso louvando a justiça de Deus, frequentemente usado em contextos religiosos. Atribuído a
+      vários poetas, possivelmente Al-Mutanabbi ou outro.
+    ru: Строка, восхваляющая справедливость Бога, часто используется в религиозных контекстах. Приписывается
+      разным поэтам, возможно, Аль-Мутанабби или другому.
+    ja: 神の正義を称える一節で、宗教的な文脈でよく使われる。様々な詩人、おそらくアル＝ムタナッビーなどに帰せられる。
+    zh: 赞美上帝公正的诗句，常用于宗教语境。归功于多位诗人，可能是穆太奈比或其他。
+    ar: بيت يمدح عدل الله، يُستخدم كثيرًا في السياقات الدينية. يُنسب لعدة شعراء، ربما المتنبي أو غيره.
+    he: שורה המשבחת את צדק האל, משמשת לעתים קרובות בהקשרים דתיים. מיוחסת למשוררים שונים, אולי אל-מֻתַנַבִּי
+      או אחר.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.ar.explanation.arabic_phrases_ما_أعدل_ك_الله_في_أحكام_ك
+  source_work_key: mnemosyne.ar.work.various
+  source_author_key: mnemosyne.ar.author.unknown
+  source_work: Various
+  source_author: Unknown
+  source_license: public_domain
+  source_dataset: arabic_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    uncertain; line is commonly used but not definitively traced to a specific classical poet.'

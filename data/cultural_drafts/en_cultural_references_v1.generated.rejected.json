@@ -1,0 +1,54 @@
+[
+  {
+    "canonical_reference": "Every inch a king",
+    "reason": "Misattributes the line to Edgar instead of Lear; surface pattern 'an inch of a king' is not standard."
+  },
+  {
+    "canonical_reference": "Homer sometimes nods",
+    "reason": "Source author is Horace, not Ovid; correct source is Horace's Ars Poetica line 359."
+  },
+  {
+    "canonical_reference": "Eleven score and seven years ago",
+    "reason": "Misquotes Lincoln's Gettysburg Address; 'eleven score and seven' does not correspond to any standard reference."
+  },
+  {
+    "canonical_reference": "Gollum’s my precious",
+    "reason": "Canonical reference is not a recognized phrase; Gollum says 'my precious,' not 'Gollum's my precious.'"
+  },
+  {
+    "canonical_reference": "The game is up",
+    "reason": "Attribution to Julius Caesar is incorrect; the phrase appears in Cymbeline, not Julius Caesar."
+  },
+  {
+    "canonical_reference": "The play must not be the thing",
+    "reason": "Not from Hamlet; the actual line is 'The play's the thing'; this is a misattribution."
+  },
+  {
+    "canonical_reference": "Beware the man who speaks softly",
+    "reason": "The canonical reference does not match the well-known proverb 'Speak softly and carry a big stick'; this appears to be a misquote."
+  },
+  {
+    "canonical_reference": "Cleopatra’s asp",
+    "reason": "Source work 'The Civil Wars' by Julius Caesar is incorrect; Caesar's work does not cover Cleopatra's death, which is documented by Plutarch and others."
+  },
+  {
+    "canonical_reference": "The noble savage",
+    "reason": "The phrase 'noble savage' does not originate in Shakespeare's The Tempest; it was popularized by Dryden and Rousseau."
+  },
+  {
+    "canonical_reference": "Here we go again—one drama after another",
+    "reason": "This is a common colloquial expression without a specific literary or cultural origin; not a distinct reference for educational catalogue."
+  },
+  {
+    "canonical_reference": "Eat the rich",
+    "reason": "Attribution to Jean-Jacques Rousseau and French Revolution is incorrect; the phrase is a modern slogan without classical origins."
+  },
+  {
+    "canonical_reference": "I came, I saw, I conquered",
+    "reason": "Source work is incorrect; the phrase is attributed to Caesar but appears in Suetonius, not De Bello Gallico."
+  },
+  {
+    "canonical_reference": "a Cupid's arrow",
+    "reason": "Source work given as Ovid's Metamorphoses but the myth of Cupid and Psyche is from Apuleius, not Metamorphoses."
+  }
+]

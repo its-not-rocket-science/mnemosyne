@@ -1,0 +1,2085 @@
+- id: ru_literary_reference_бедный_конь_что_скачет_он_да_скачет_c37e1844
+  language: ru
+  canonical_reference: Бедный конь, что скачет он да скачет
+  reference_type: literary_reference
+  surface_patterns:
+  - Бедный конь, что скачет он да скачет
+  - конь скачет он да скачет
+  short_explanation: A line from a folk song or poetic tradition, symbolizing relentless suffering or
+    struggle. Often interpreted as a metaphor for life's hardships.
+  i18n_explanations:
+    en: A line from a folk song or poetic tradition, symbolizing relentless suffering or struggle. Often
+      interpreted as a metaphor for life's hardships.
+    es: Una línea de una canción popular o tradición poética que simboliza el sufrimiento o la lucha sin
+      fin. Suele interpretarse como metáfora de las dificultades de la vida.
+    fr: Un vers d'une chanson populaire ou d'une tradition poétique symbolisant une souffrance ou une
+      lutte sans fin. Souvent interprété comme une métaphore des épreuves de la vie.
+    de: Eine Zeile aus einem Volkslied oder einer poetischen Tradition, die unablässiges Leiden oder Kampf
+      symbolisiert. Wird oft als Metapher für die Härten des Lebens gedeutet.
+    it: Un verso di una canzone popolare o tradizione poetica che simboleggia una sofferenza o lotta incessante.
+      Spesso interpretato come metafora delle difficoltà della vita.
+    pt: Uma linha de uma canção popular ou tradição poética que simboliza sofrimento ou luta incessantes.
+      Frequentemente interpretada como metáfora das dificuldades da vida.
+    ru: Строка из народной песни или поэтической традиции, символизирующая неутолимые страдания или борьбу.
+      Часто воспринимается как метафора жизненных тягот.
+    ja: 民謡や詩的伝統からの一行で、絶え間ない苦しみや闘いを象徴する。しばしば人生の困難の比喩と解釈される。
+    zh: 民歌或诗歌传统中的一句，象征无尽的苦难或挣扎。常被解读为人生艰辛的隐喻。
+    ar: سطر من أغنية شعبية أو تقليد شعري يرمز إلى المعاناة أو النضال الدائم. غالبًا ما يُفهم كاستعارة
+      لصعوبات الحياة.
+    he: שורה משיר עם או מסורת פואטית המסמלת סבל או מאבק בלתי פוסקים. לעיתים קרובות נתפסת כמטאפורה לקשיי
+      החיים.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.folk_song_phrases_бедный_конь_что_скачет_он_да_ска
+  source_work_key: mnemosyne.ru.work.разные_фольклорные_и_песенные_тексты
+  source_author_key: mnemosyne.ru.author.народное_творчество
+  source_work: Разные фольклорные и песенные тексты
+  source_author: Народное творчество
+  source_license: public_domain
+  source_dataset: folk_song_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Plausible
+    as folkloric but exact source unclear; may be a composite or misremembered line.'
+- id: ru_literary_reference_братья_помогите_караул_воры_c726fc93
+  language: ru
+  canonical_reference: Братья, помогите! Караул! Воры!
+  reference_type: literary_reference
+  surface_patterns:
+  - Братья, помогите! Караул! Воры!
+  - помогите! караул! воры!
+  - караул! воры!
+  short_explanation: A famous line from Nikolai Gogol's play 'Ревизор', often cited as an example of panic
+    and chaos. It reflects the absurdity and hypocrisy in Russian bureaucracy.
+  i18n_explanations:
+    en: A famous line from Nikolai Gogol's play 'Ревизор', often cited as an example of panic and chaos.
+      It reflects the absurdity and hypocrisy in Russian bureaucracy.
+    es: Una famosa línea de la obra de Nikolai Gogol 'El inspector', citada como ejemplo de pánico y caos.
+      Refleja la absurdidad y la hipocresía en la burocracia rusa.
+    fr: Une réplique célèbre de la pièce de Nicolas Gogol 'Le Revizor', souvent citée comme exemple de
+      panique et de chaos. Elle reflète l'absurdité et l'hypocrisie de la bureaucratie russe.
+    de: Eine berühmte Zeile aus Nikolai Gogols Stück 'Der Revisor', die oft als Beispiel für Panik und
+      Chaos zitiert wird. Sie spiegelt die Absurdität und Heuchelei der russischen Bürokratie wider.
+    it: Una celebre battuta della commedia di Nikolaj Gogol' 'Il revisore', spesso citata come esempio
+      di panico e caos. Riflette l'assurdità e l'ipocrisia della burocrazia russa.
+    pt: Uma famosa linha da peça de Nikolai Gogol 'O Inspetor Geral', frequentemente citada como exemplo
+      de pânico e caos. Reflete a absurdidade e a hipocrisia na burocracia russa.
+    ru: Знаменитая фраза из пьесы Николая Гоголя 'Ревизор', часто приводимая как пример паники и хаоса.
+      Отражает абсурдность и лицемерие русской бюрократии.
+    ja: ニコライ・ゴーゴリの戯曲「検察官」の有名なセリフで、パニックや混乱の例として引用される。ロシアの官僚主義の不条理と偽善を反映している。
+    zh: 尼古拉·果戈理戏剧《钦差大臣》中的著名台词，常被引为恐慌与混乱的例证。反映了俄罗斯官僚体制的荒诞与虚伪。
+    ar: سطر شهير من مسرحية نيكولاي غوغول 'المفتش العام'، غالبًا ما يُذكر كمثال على الذعر والفوضى. يعكس
+      العبث والنفاق في البيروقراطية الروسية.
+    he: שורה מפורסמת ממחזהו של ניקולאי גוגול 'הרוויזור', הנזכרת לעיתים קרובות כדוגמה לפאניקה ולכאוס. משקפת
+      את האבסורד והצביעות בבירוקרטיה הרוסית.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.gogol_revizor_quotes_братья_помогите_караул_воры
+  source_work_key: mnemosyne.ru.work.ревизор
+  source_author_key: mnemosyne.ru.author.николай_гоголь
+  source_work: Ревизор
+  source_author: Николай Гоголь
+  source_location: Действие 4, явление 12
+  source_url: https://ilibrary.ru/text/1113/p.12/index.html
+  source_license: public_domain
+  source_dataset: gogol_revizor_quotes
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Not
+    an exact quote from Gogol''s ''Ревизор''; the canonical line differs slightly.'
+- id: ru_literary_reference_были_у_отца_три_сына_три_могучих_богатыря_5bfd5200
+  language: ru
+  canonical_reference: Были у отца три сына, три могучих богатыря
+  reference_type: literary_reference
+  surface_patterns:
+  - Были у отца три сына, три могучих богатыря
+  - У отца были три сына, три могучих богатыря
+  - Три сына, три могучих богатыря
+  short_explanation: A formulaic opening line from Russian fairy tales, introducing the three heroic sons
+    of a father, often used to set the scene for a quest or adventure. Symbolizes the archetypal trio
+    of brave warriors.
+  i18n_explanations:
+    en: A formulaic opening line from Russian fairy tales, introducing the three heroic sons of a father,
+      often used to set the scene for a quest or adventure. Symbolizes the archetypal trio of brave warriors.
+    es: Fórmula tradicional de los cuentos rusos que presenta a los tres hijos heroicos de un padre, usada
+      para ambientar una búsqueda o aventura. Simboliza el trío arquetípico de guerreros valientes.
+    fr: Formule d'ouverture traditionnelle des contes russes introduisant les trois fils héroïques d'un
+      père, souvent utilisée pour situer une quête ou une aventure. Symbolise le trio archétypal de guerriers
+      courageux.
+    de: Eine traditionelle Eröffnungszeile russischer Märchen, die die drei heldenhaften Söhne eines Vaters
+      vorstellt und oft eine Quest oder ein Abenteuer einleitet. Symbolisiert das archetypische Trio tapferer
+      Krieger.
+    it: Una formula d'apertura tipica delle fiabe russe che introduce i tre figli eroici di un padre,
+      spesso usata per ambientare una ricerca o un'avventura. Simboleggia il trio archetipico di guerrieri
+      coraggiosi.
+    pt: Fórmula tradicional de contos de fadas russos que apresenta os três filhos heroicos de um pai,
+      usada para ambientar uma busca ou aventura. Simboliza o trio arquetípico de guerreiros valentes.
+    ru: Традиционная зачинная строка русских сказок, представляющая трёх могучих сыновей отца, часто используемая
+      для вступления к путешествию или приключению. Символизирует архетипическую троицу храбрых воинов.
+    ja: ロシアのおとぎ話で定型的に用いられる冒頭の一節で、父親の三人の勇敢な息子を紹介し、しばしば冒険や使命を描く際に用いられる。勇敢な戦士の原型的な三人組を象徴する。
+    zh: 俄罗斯童话中常见的开场白，介绍父亲的三个英勇儿子，常用于铺垫探险或冒险情节。象征着勇敢战士的原型三人组。
+    ar: سطر افتتاح تقليدي في الحكايات الروسية الشعبية، يقدم ثلاثة أبناء أبطال لأب، غالبًا ما يُستخدم لإعداد
+      مشهد لمغامرة أو رحلة. يرمز إلى الثالوث النمطي للفرسان الشجعان.
+    he: פתיחה טיפוסית בסיפורי העם הרוסיים, המציגה שלושה בנים גיבורים לאביהם, המשמשת לעיתים קרובות לתיאור
+      מסע או הרפתקה. מסמלת את הטריו הקלאסי של לוחמים אמיצים.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.russian_fairy_tales_phrases_были_у_отца_три_сына_т
+  source_work_key: mnemosyne.ru.work.сказка_об_иване_царевиче_жар_птице_и_о_сером_волке
+  source_author_key: mnemosyne.ru.author.various_oral_tradition
+  source_work: Сказка об Иване-царевиче, Жар-птице и о сером волке
+  source_author: Various (Oral tradition)
+  source_url: https://ru.wikisource.org/wiki/Сказка_об_Иване-царевиче,_Жар-птице_и_о_сером_волке
+  source_license: public_domain
+  source_dataset: russian_fairy_tales_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    specific phrase ''три могучих богатыря'' is not a standard fairy-tale opening; attribution to ''Сказка
+    об Иване-царевиче...'' is unverifiable.'
+- id: ru_cultural_reference_взойдёт_ли_русская_звезда_6ba5f56c
+  language: ru
+  canonical_reference: Взойдёт ли русская звезда?
+  reference_type: cultural_reference
+  surface_patterns:
+  - Взойдёт ли русская звезда?
+  - Взойдёт ли русская звезда
+  - Взойдёт ли звезда русская?
+  short_explanation: A rhetorical question expressing hope or uncertainty about Russia's future greatness
+    or revival. Often used in patriotic or nostalgic contexts.
+  i18n_explanations:
+    en: A rhetorical question expressing hope or uncertainty about Russia's future greatness or revival.
+      Often used in patriotic or nostalgic contexts.
+    es: Una pregunta retórica que expresa esperanza o incertidumbre sobre el futuro esplendor o renacimiento
+      de Rusia. Usada en contextos patrióticos o nostálgicos.
+    fr: Une question rhétorique exprimant l'espoir ou l'incertitude quant à la grandeur future ou au renouveau
+      de la Russie. Souvent employée dans des contextes patriotiques ou nostalgiques.
+    de: Eine rhetorische Frage, die Hoffnung oder Unsicherheit über Russlands zukünftige Größe oder Wiedergeburt
+      ausdrückt. Wird oft in patriotischen oder nostalgischen Kontexten verwendet.
+    it: Una domanda retorica che esprime speranza o incertezza sul futuro splendore o rinascita della
+      Russia. Usata in contesti patriottici o nostalgici.
+    pt: Uma pergunta retórica que expressa esperança ou incerteza sobre o futuro esplendor ou renascimento
+      da Rússia. Usada em contextos patrióticos ou nostálgicos.
+    ru: Риторический вопрос, выражающий надежду или неопределённость относительно будущего величия или
+      возрождения России. Часто используется в патриотических или ностальгических контекстах.
+    ja: ロシアの未来の偉大さや復興への希望や不確かさを表す修辞的な疑問。愛国的または郷愁的な文脈で用いられる。
+    zh: 表达对俄罗斯未来伟大或复兴的希望或不确定性的反问句。常用于爱国或怀旧语境。
+    ar: سؤال بلاغي يعبر عن الأمل أو عدم اليقين بشأن مستقبل روسيا العظيم أو نهضتها. يُستخدم غالبًا في سياقات
+      وطنية أو حنين.
+    he: שאלה רטורית המביעה תקווה או אי-ודאות לגבי גדולתה או תחייתה העתידית של רוסיה. משמשת לרוב בהקשרים
+      פטריוטיים או נוסטלגיים.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.russian_patriotic_phrases_взойдёт_ли_русская_звезд
+  source_work_key: mnemosyne.ru.work.разные_источники_xix_века
+  source_author_key: mnemosyne.ru.author.various
+  source_work: Разные источники XIX века
+  source_author: Various
+  source_license: public_domain
+  source_dataset: russian_patriotic_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Phrase
+    is plausible but not verifiably a distinct cultural reference from any specific 19th-century source.'
+- id: ru_literary_reference_внемлите_отроки_гласу_разума_c0495412
+  language: ru
+  canonical_reference: Внемлите, отроки, гласу разума
+  reference_type: literary_reference
+  surface_patterns:
+  - Внемлите, отроки, гласу разума
+  - Внемлите, отроки гласу разума
+  - Внемлите гласу разума, отроки
+  short_explanation: A phrase from Russian Romantic literature, often associated with moral or philosophical
+    exhortations to youth ('отроки' means 'young men'). Used in a lofty, didactic tone.
+  i18n_explanations:
+    en: A phrase from Russian Romantic literature, often associated with moral or philosophical exhortations
+      to youth ('отроки' means 'young men'). Used in a lofty, didactic tone.
+    es: Frase de la literatura romántica rusa, asociada a exhortaciones morales o filosóficas a los jóvenes
+      ('отроки' significa 'jóvenes'). Se usa en un tono elevado y didáctico.
+    fr: Une phrase de la littérature romantique russe, souvent liée à des exhortations morales ou philosophiques
+      adressées à la jeunesse ('отроки' signifie 'jeunes gens'). Employée sur un ton élevé et didactique.
+    de: Ein Satz aus der russischen Romantik, der oft mit moralischen oder philosophischen Ermahnungen
+      an die Jugend ('отроки' bedeutet 'junge Männer') verbunden wird. Wird in einem erhabenen, belehrenden
+      Ton verwendet.
+    it: Una frase della letteratura romantica russa, spesso associata a esortazioni morali o filosofiche
+      ai giovani ('отроки' significa 'giovani'). Usata in un tono elevato e didattico.
+    pt: Uma frase da literatura romântica russa, frequentemente associada a exortações morais ou filosóficas
+      à juventude ('отроки' significa 'jovens'). Usada em tom elevado e didático.
+    ru: Фраза из русской романтической литературы, часто связанная с нравственными или философскими наставлениями
+      молодёжи ('отроки' — 'юноши'). Используется в возвышенном, назидательном тоне.
+    ja: ロシア・ロマン主義文学の一節で、若者への道徳的または哲学的な勧告と結びつけられる（「отроки」は「若者」を意味する）。崇高で教訓的な口調で用いられる。
+    zh: 俄罗斯浪漫主义文学中的一句话，常与对青年（отроки意为“年轻人”）的道德或哲学劝诫相关联。以崇高、说教的语调使用。
+    ar: عبارة من الأدب الرومانسي الروسي، غالبًا ما ترتبط بوعظ شباب道德يًا أو فلسفيًا («отроки» تعني «الشباب»).
+      تُستخدم بنبرة رنانة وتعليمية.
+    he: ביטוי מהספרות הרומנטית הרוסית, הקשור לעיתים קרובות להטפות מוסר או פילוסופיות לצעירים («отроки»
+      פירושו 'בחורים צעירים'). משמש בטון נשגב ומלמד.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.russian_romantic_phrases_внемлите_отроки_гласу_раз
+  source_work_key: mnemosyne.ru.work.разные_произведения_xix_века
+  source_author_key: mnemosyne.ru.author.various_e_g_жуковский_пушкин
+  source_work: Разные произведения XIX века
+  source_author: Various (e.g., Жуковский, Пушкин)
+  source_license: public_domain
+  source_dataset: russian_romantic_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- No
+    specific source confirmed; attribution to ''various works'' is too vague and unsupported.'
+- id: ru_literary_reference_войди_в_молитвенный_храм_души_6a655c7b
+  language: ru
+  canonical_reference: Войди в молитвенный храм души
+  reference_type: literary_reference
+  surface_patterns:
+  - Войди в молитвенный храм души
+  - войди в храм души
+  - войди в храм молитвенной души
+  short_explanation: A poetic phrase evoking the idea of entering the inner spiritual sanctuary of the
+    soul for prayer or reflection. Common in Russian religious and philosophical poetry.
+  i18n_explanations:
+    en: A poetic phrase evoking the idea of entering the inner spiritual sanctuary of the soul for prayer
+      or reflection. Common in Russian religious and philosophical poetry.
+    es: Frase poética que evoca la idea de entrar en el santuario espiritual interior del alma para orar
+      o reflexionar. Común en la poesía religiosa y filosófica rusa.
+    fr: Une phrase poétique évoquant l'idée d'entrer dans le sanctuaire spirituel intérieur de l'âme pour
+      prier ou méditer. Courante dans la poésie religieuse et philosophique russe.
+    de: Ein poetischer Ausdruck, der die Vorstellung des Eintretens in das innere geistige Heiligtum der
+      Seele zum Beten oder Nachdenken evoziert. Häufig in der russischen religiösen und philosophischen
+      Dichtung.
+    it: Una frase poetica che evoca l'idea di entrare nel santuario spirituale interiore dell'anima per
+      pregare o riflettere. Comune nella poesia religiosa e filosofica russa.
+    pt: Uma frase poética que evoca a ideia de adentrar o santuário espiritual interior da alma para orar
+      ou refletir. Comum na poesia religiosa e filosófica russa.
+    ru: Поэтическая фраза, выражающая идею вхождения во внутреннее духовное святилище души для молитвы
+      или размышлений. Распространена в русской религиозной и философской поэзии.
+    ja: 魂の内なる祈りや瞑想の場である精神的な聖域に入るという考えを喚起する詩的な表現。ロシアの宗教的・哲学的詩で一般的。
+    zh: 一句诗意的表达，唤起进入灵魂内在精神圣殿进行祈祷或反思的意象。在俄罗斯宗教和哲学诗歌中常见。
+    ar: عبارة شعرية تستحضر فكرة الدخول إلى الحرم الروحي الداخلي للنفس للصلاة أو التأمل. شائعة في الشعر
+      الديني والفلسفي الروسي.
+    he: ביטוי פיוטי המהדהד את הרעיון של כניסה למקדש הרוחני הפנימי של הנפש לתפילה או הרהור. נפוץ בשירה
+      הדתית והפילוסופית הרוסית.
+  learner_level: C2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.russian_religious_poetry_войди_в_молитвенный_храм_
+  source_work_key: mnemosyne.ru.work.разные_произведения_xix_xx_веков
+  source_author_key: mnemosyne.ru.author.various_e_g_фёдор_тютчев_владимир_соловьёв
+  source_work: Разные произведения XIX-XX веков
+  source_author: Various (e.g., Фёдор Тютчев, Владимир Соловьёв)
+  source_license: public_domain
+  source_dataset: russian_religious_poetry
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Poetic
+    phrase is plausible but lacks a verifiable source; attributed to unspecified authors.'
+- id: ru_literary_reference_воротись_душа_в_бреду_коварной_юности_c85c2832
+  language: ru
+  canonical_reference: Воротись, душа, в бреду коварной юности
+  reference_type: literary_reference
+  surface_patterns:
+  - Воротись, душа, в бреду коварной юности
+  - Воротись, душа, в бреду коварной юности!
+  - Воротись, душа, в бреду коварной юности…
+  short_explanation: A poetic line expressing a longing to return to the passionate and deceptive fervor
+    of youth. It evokes themes of nostalgia and regret for lost innocence.
+  i18n_explanations:
+    en: A poetic line expressing a longing to return to the passionate and deceptive fervor of youth.
+      It evokes themes of nostalgia and regret for lost innocence.
+    es: Una línea poética que expresa el deseo de volver a la pasión engañosa de la juventud. Evoca nostalgia
+      y arrepentimiento por la inocencia perdida.
+    fr: Un vers poétique exprimant l'envie de retrouver la fougue trompeuse de la jeunesse. Il évoque
+      la nostalgie et le regret de l'innocence perdue.
+    de: Ein poetischer Vers, der die Sehnsucht ausdrückt, zur leidenschaftlichen und trügerischen Glut
+      der Jugend zurückzukehren. Er beschwört Nostalgie und Reue über verlorene Unschuld.
+    it: Un verso poetico che esprime il desiderio di tornare alla passione ingannevole della giovinezza.
+      Evoca nostalgia e rimpianto per l'innocenza perduta.
+    pt: Um verso poético que expressa o desejo de retornar à paixão enganosa da juventude. Evoca nostalgia
+      e arrependimento pela inocência perdida.
+    ru: Поэтическая строка, выражающая тоску по возвращению к обманчивой страсти юности. Она наполнена
+      ностальгией и сожалением о потерянной невинности.
+    ja: 若さの情熱と裏切りの狂気への回帰を願う詩的な一行。失われた純 innocence への郷愁と後悔を呼び起こす。
+    zh: 一句表达渴望回到青春热情与虚伪狂热的诗句。它唤起对失去纯真之悔与乡愁。
+    ar: سطر شعري يعبر عن الشوق للعودة إلى حماسة الشباب الخادعة. يستحضر الحنين والندم على البراءة المفقودة.
+    he: שורה פואטית המבטאת געגוע לחזור לזעם הנלוז של הנעורים. היא מעוררת נוסטלגיה וחרטה על התמימות שאבדה.
+  learner_level: C1
+  confidence: 0.88
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.tutchev_poems_воротись_душа_в_бреду_коварной_юност
+  source_work_key: mnemosyne.ru.work.стихотворения
+  source_author_key: mnemosyne.ru.author.фёдор_иванович_тютчев
+  source_work: Стихотворения
+  source_author: Фёдор Иванович Тютчев
+  source_location: Стихотворение «Воротись, душа, в бреду коварной юности» (1855)
+  source_url: https://ru.wikisource.org/wiki/Воротись,_душа,_в_бреду_коварной_юности
+  source_license: public_domain
+  source_dataset: tutchev_poems
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Tyutchev uncertain; cannot verify this line in his works.'
+- id: ru_literary_reference_вы_дети_ночи_вы_дети_тьмы_5d0a2d5b
+  language: ru
+  canonical_reference: Вы, дети ночи, вы, дети тьмы
+  reference_type: literary_reference
+  surface_patterns:
+  - Вы, дети ночи, вы, дети тьмы
+  - Вы, дети ночи, вы, дети тьмы!
+  - Вы, дети ночи и тьмы
+  short_explanation: A phrase from a poem depicting those who dwell in darkness, often symbolizing moral
+    corruption or hidden, sinister forces. It carries a tone of reproach or warning.
+  i18n_explanations:
+    en: A phrase from a poem depicting those who dwell in darkness, often symbolizing moral corruption
+      or hidden, sinister forces. It carries a tone of reproach or warning.
+    es: Una frase de un poema que describe a quienes habitan en la oscuridad, simbolizando a menudo la
+      corrupción moral o fuerzas ocultas y siniestras. Tiene un tono de reproche o advertencia.
+    fr: Une phrase d'un poème décrivant ceux qui vivent dans les ténèbres, symbolisant souvent la corruption
+      morale ou des forces obscures et malfaisantes. Elle porte un ton de reproche ou d'avertissement.
+    de: Ein Vers aus einem Gedicht, der diejenigen beschreibt, die in der Dunkelheit leben, oft als Symbol
+      für moralische Verderbtheit oder verborgene, unheilvolle Mächte. Er trägt einen vorwurfsvollen oder
+      warnenden Ton.
+    it: Una frase di un poema che descrive coloro che dimorano nell'oscurità, spesso simbolo di corruzione
+      morale o forze nascoste e sinistre. Ha un tono di biasimo o avvertimento.
+    pt: Uma frase de um poema que descreve aqueles que habitam na escuridão, muitas vezes simbolizando
+      a corrupção moral ou forças ocultas e sinistras. Tem um tom de repreensão ou advertência.
+    ru: Строка из стихотворения, описывающая тех, кто пребывает во тьме, часто символизируя моральное
+      разложение или скрытые, зловещие силы. Несет оттенок упрека или предупреждения.
+    ja: 闇に住む者たちを描写した詩の一節で、しばしば道徳的腐敗や隠された邪悪な力を象徴する。非難や警告の調子を含む。
+    zh: 一句描述栖身黑暗之人的诗句，常象征道德败坏或隐秘的邪恶力量。带有谴责或警告的语气。
+    ar: عبارة من قصيدة تصف من يسكنون الظلام، وغالبًا ما ترمز إلى الفساد الأخلاقي أو القوى الخفية الشريرة.
+      تحمل نبرة توبيخ أو تحذير.
+    he: שורה משיר המתארת את אלה השוכנים בחושך, לרוב כסמל לשחיתות מוסרית או לכוחות נסתרים ומזיקים. נושאת
+      טון של גינוי או אזהרה.
+  learner_level: C1
+  confidence: 0.85
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.lermontov_poems_вы_дети_ночи_вы_дети_тьмы
+  source_work_key: mnemosyne.ru.work.стихотворения
+  source_author_key: mnemosyne.ru.author.михаил_юрьевич_лермонтов
+  source_work: Стихотворения
+  source_author: Михаил Юрьевич Лермонтов
+  source_location: Стихотворение «Ночь» (1831)
+  source_url: https://ru.wikisource.org/wiki/Ночь_(Лермонтов)
+  source_license: public_domain
+  source_dataset: lermontov_poems
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Lermontov uncertain; phrase not clearly found in his poem ''Ночь''.'
+- id: ru_literary_reference_где_счастье_где_творенье_02d5b74d
+  language: ru
+  canonical_reference: Где счастье? Где творенье?
+  reference_type: literary_reference
+  surface_patterns:
+  - Где счастье? Где творенье?
+  - Где счастье? Где творенье!..
+  - Где счастье? Где творенье?..
+  short_explanation: A rhetorical question from a poem questioning the existence and location of happiness
+    and creation. It reflects existential doubt and the search for meaning.
+  i18n_explanations:
+    en: A rhetorical question from a poem questioning the existence and location of happiness and creation.
+      It reflects existential doubt and the search for meaning.
+    es: Una pregunta retórica de un poema que cuestiona la existencia y el lugar de la felicidad y la
+      creación. Refleja la duda existencial y la búsqueda de significado.
+    fr: Une question rhétorique d'un poème qui interroge l'existence et la localisation du bonheur et
+      de la création. Elle reflète le doute existentiel et la quête de sens.
+    de: Eine rhetorische Frage aus einem Gedicht, die nach dem Dasein und dem Ort von Glück und Schöpfung
+      fragt. Sie spiegelt existenzielle Zweifel und die Suche nach Sinn wider.
+    it: Una domanda retorica di un poema che mette in dubbio l'esistenza e il luogo della felicità e della
+      creazione. Riflette il dubbio esistenziale e la ricerca di significato.
+    pt: Uma pergunta retórica de um poema que questiona a existência e o lugar da felicidade e da criação.
+      Reflete a dúvida existencial e a busca por significado.
+    ru: Риторический вопрос из стихотворения, ставящий под сомнение существование и место счастья и творения.
+      Отражает экзистенциальные сомнения и поиск смысла.
+    ja: 幸福と創造の存在と場所を問う詩の修辞疑問文。実存的な疑問と意味の探求を反映する。
+    zh: 一句质疑幸福与创造的存在与所在的诗歌反问句。反映了存在的怀疑与对意义的追寻。
+    ar: سؤال بلاغي من قصيدة يتساءل عن وجود السعادة والخلق ومكانهما. يعكس الشك الوجودي والبحث عن المعنى.
+    he: שאלה רטורית משיר המטילה ספק בקיומם ובמקומם של אושר ויצירה. משקפת ספק existentialי וחיפוש אחר משמעות.
+  learner_level: B2
+  confidence: 0.87
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.pushkin_poems_где_счастье_где_творенье
+  source_work_key: mnemosyne.ru.work.стихотворения
+  source_author_key: mnemosyne.ru.author.александр_сергеевич_пушкин
+  source_work: Стихотворения
+  source_author: Александр Сергеевич Пушкин
+  source_location: Стихотворение «Поэту» (1830)
+  source_url: https://ru.wikisource.org/wiki/Поэту_(Пушкин)
+  source_license: public_domain
+  source_dataset: pushkin_poems
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Pushkin uncertain; line not verified in ''Поэту'' (1830).'
+- id: ru_literary_reference_давайте_воспевать_свободу_как_птица_вольная_поёт_00c828f3
+  language: ru
+  canonical_reference: Давайте воспевать свободу, как птица вольная поёт
+  reference_type: literary_reference
+  surface_patterns:
+  - Давайте воспевать свободу, как птица вольная поёт
+  - воспевать свободу, как птица вольная поёт
+  - петь о свободе, как птица вольная
+  short_explanation: A poetic call to celebrate freedom with the joy and naturalness of a free bird. The
+    phrase evokes the Romantic ideal of freedom as an innate, uplifting force.
+  i18n_explanations:
+    en: A poetic call to celebrate freedom with the joy and naturalness of a free bird. The phrase evokes
+      the Romantic ideal of freedom as an innate, uplifting force.
+    es: Un llamado poético a celebrar la libertad con la alegría y naturalidad de un pájaro libre. La
+      frase evoca el ideal romántico de la libertad como una fuerza innata y elevadora.
+    fr: Un appel poétique à célébrer la liberté avec la joie et la spontanéité d'un oiseau libre. La phrase
+      évoque l'idéal romantique de la liberté comme une force innée et inspirante.
+    de: Ein poetischer Aufruf, die Freiheit mit der Freude und Natürlichkeit eines freien Vogels zu feiern.
+      Der Ausdruck verweist auf das romantische Ideal der Freiheit als eine innewohnende, belebende Kraft.
+    it: Un appello poetico a celebrare la libertà con la gioia e la naturalezza di un uccello libero.
+      La frase evoca l'ideale romantico della libertà come forza innata ed elevante.
+    pt: Um apelo poético para celebrar a liberdade com a alegria e naturalidade de um pássaro livre. A
+      frase evoca o ideal romântico da liberdade como uma força inata e inspiradora.
+    ru: Поэтический призыв воспевать свободу с радостью и естественностью свободной птицы. Фраза отражает
+      романтический идеал свободы как врождённой, вдохновляющей силы.
+    ja: 自由を、まるで自由な鳥が歌うように、詩的に讃える呼びかけ。この言葉は、自由を生来の高揚する力と捉えるロマン主義的理想を表しています。
+    zh: 像自由的鸟儿那样歌唱自由的诗意号召。这句话体现了浪漫主义将自由视为一种与生俱来、振奋人心的力量的理想。
+    ar: نداء شعري للاحتفال بالحرية بفرح وطبيعية الطائر الحر. العبارة تجسد المثالية الرومانسية للحرية كقوة
+      متأصلة ومثيرة.
+    he: קריאה פיוטית לחגוג את החופש בשמחה ובטבעיות של ציפור חופשית. הביטוי מעלה את האידיאל הרומנטי של
+      החופש ככוח טבוע ומעורר.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.gor_skazka_1905_phrases_давайте_воспевать_свободу_
+  source_work_key: mnemosyne.ru.work.песня_о_соколе
+  source_author_key: mnemosyne.ru.author.максим_горький
+  source_work: Песня о Соколе
+  source_author: Максим Горький
+  source_location: 1905, рассказ
+  source_url: https://ru.wikisource.org/wiki/Песня_о_Соколе_(Горький)
+  source_license: public_domain
+  source_dataset: gor_skazka_1905_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Gorky''s ''Песня о Соколе'' is uncertain; the phrase is not a direct quote from that work and appears
+    to be a generic poetic expression.'
+- id: ru_cultural_reference_великий_перелом_4e0bccdf
+  language: ru
+  canonical_reference: Великий перелом
+  reference_type: cultural_reference
+  surface_patterns:
+  - Великий перелом
+  - эпоха великого перелома
+  short_explanation: A term denoting a radical turning point or decisive change, often used in Soviet
+    historiography to describe the forced collectivization and industrialization of the late 1920s–early
+    1930s. It signifies a transformative rupture in society.
+  i18n_explanations:
+    en: A term denoting a radical turning point or decisive change, often used in Soviet historiography
+      to describe the forced collectivization and industrialization of the late 1920s–early 1930s. It
+      signifies a transformative rupture in society.
+    es: Término que designa un punto de inflexión radical o cambio decisivo, usado en la historiografía
+      soviética para describir la colectivización forzada y la industrialización de finales de los años
+      1920 y principios de los 1930. Significa una ruptura transformadora en la sociedad.
+    fr: Terme désignant un tournant radical ou un changement décisif, souvent utilisé en historiographie
+      soviétique pour décrire la collectivisation forcée et l'industrialisation des années 1920–1930.
+      Il symbolise une rupture transformatrice dans la société.
+    de: Begriff für einen radikalen Wendepunkt oder eine entscheidende Veränderung, oft in der sowjetischen
+      Geschichtsschreibung verwendet, um die erzwungene Kollektivierung und Industrialisierung der späten
+      1920er bis frühen 1930er Jahre zu beschreiben. Er steht für einen tiefgreifenden gesellschaftlichen
+      Bruch.
+    it: Termine che indica un punto di svolta radicale o un cambiamento decisivo, spesso usato nella storiografia
+      sovietica per descrivere la collettivizzazione forzata e l'industrializzazione della fine degli
+      anni 1920 e dei primi anni 1930. Simboleggia una rottura trasformativa nella società.
+    pt: Termo que designa um ponto de virada radical ou uma mudança decisiva, frequentemente usado na
+      historiografia soviética para descrever a coletivização forçada e a industrialização do final dos
+      anos 1920 e início dos anos 1930. Representa uma ruptura transformadora na sociedade.
+    ru: Термин, обозначающий радикальный перелом или решительное изменение, часто используемый в советской
+      историографии для описания форсированной коллективизации и индустриализации конца 1920-х — начала
+      1930-х годов. Означает преобразовательный разрыв в обществе.
+    ja: ソ連の歴史学で用いられる、1920年代後半から1930年代初頭にかけての強制的な集団化と工業化を表す、急激な転換点や決定的な変化を指す用語。社会の根本的な断絶を象徴する。
+    zh: 苏联历史学中用于描述20世纪20年代末至30年代初强制集体化和工业化的激进转折点或决定性变革的术语。象征着社会的根本性断裂。
+    ar: مصطلح يشير إلى نقطة تحول جذرية أو تغيير حاسم، يُستخدم غالبًا في التأريخ السوفيتي لوصف التجميع
+      القسري والصناعة في أواخر العشرينيات وأوائل الثلاثينيات من القرن العشرين. يرمز إلى انقطاع تحويلي
+      في المجتمع.
+    he: מונח המציין נקודת מפנה רדיקלית או שינוי מכריע, המשמש לעיתים קרובות בהיסטוריוגרפיה הסובייטית לתיאור
+      הקולקטיביזציה הכפויה והתיעוש של סוף שנות ה-20 ותחילת שנות ה-30. מסמל שבר חברתי עמוק.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: formal
+  explanation_key: mnemosyne.ru.explanation.soviet_historiography_phrases_великий_перелом
+  source_work_key: mnemosyne.ru.work.разгром_правого_уклона_в_вкп_б
+  source_author_key: mnemosyne.ru.author.иосиф_сталин
+  source_work: Разгром правого уклона в ВКП(б)
+  source_author: Иосиф Сталин
+  source_url: https://ru.wikisource.org/wiki/%D0%A0%D0%B0%D0%B7%D0%B3%D1%80%D0%BE%D0%BC_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D0%B3%D0%BE_%D1%83%D0%BA%D0%BB%D0%BE%D0%BD%D0%B0_%D0%B2_%D0%92%D0%9a%D0%9f(%D0%B1)
+  source_license: public_domain
+  source_dataset: soviet_historiography_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    work attributed to ''Разгром правого уклона в ВКП(б)'' but the phrase ''Великий перелом'' is famously
+    from Stalin''s article ''Год великого перелома''.'
+- id: ru_proverb_tradition_жить_богу_служить_3b538723
+  language: ru
+  canonical_reference: Жить — Богу служить
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Жить — Богу служить
+  - Жить — Богу служить да ближнего любить
+  - Жить — Богу да ближнему служить
+  short_explanation: A traditional Russian proverb emphasizing that life's purpose is to serve God and
+    love one's neighbor, reflecting Orthodox Christian values.
+  i18n_explanations:
+    en: A traditional Russian proverb emphasizing that life's purpose is to serve God and love one's neighbor,
+      reflecting Orthodox Christian values.
+    es: Un proverbio ruso tradicional que enfatiza que el propósito de la vida es servir a Dios y amar
+      al prójimo, reflejando valores cristianos ortodoxos.
+    fr: Un proverbe russe traditionnel soulignant que le but de la vie est de servir Dieu et d'aimer son
+      prochain, reflétant les valeurs du christianisme orthodoxe.
+    de: Ein traditionelles russisches Sprichwort, das betont, dass der Sinn des Lebens darin besteht,
+      Gott zu dienen und seinen Nächsten zu lieben, und orthodoxe christliche Werte widerspiegelt.
+    it: Un antico proverbio russo che sottolinea come lo scopo della vita sia servire Dio e amare il prossimo,
+      riflettendo i valori del cristianesimo ortodosso.
+    pt: Um provérbio russo tradicional que enfatiza que o propósito da vida é servir a Deus e amar o próximo,
+      refletindo valores cristãos ortodoxos.
+    ru: Традиционная русская пословица, подчеркивающая, что смысл жизни — служить Богу и любить ближнего,
+      отражающая ценности православного христианства.
+    ja: 伝統的なロシアのことわざで、人生の目的は神に仕え隣人を愛することであり、正教会の価値観を反映する。
+    zh: 俄罗斯传统谚语，强调人生的目的是侍奉上帝并爱邻如己，体现东正教价值观。
+    ar: مثل روسي تقليدي يؤكد أن غرض الحياة هو خدمة الله ومحبة الجار، مما يعكس القيم المسيحية الأرثوذكسية.
+    he: פתגם רוסי מסורתי המדגיש כי מטרת החיים היא לשרת את האל ואהובו, משקף ערכים נוצריים אורתודוקסיים.
+  learner_level: B2
+  confidence: 0.85
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.ru.explanation.russian_proverbs_orthodox_жить_богу_служить
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: russian_proverbs_orthodox
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Plausible
+    as a traditional proverb but not widely attested; may be a general moral maxim rather than a fixed
+    canonical proverb.'
+- id: ru_cultural_reference_многого_богатейство_да_не_нажить_а_молитвы_01dc0221
+  language: ru
+  canonical_reference: Многого богатейство, да не нажить, а молитвы
+  reference_type: cultural_reference
+  surface_patterns:
+  - Многого богатейство, да не нажить, а молитвы
+  - Многого богатства не нажить, а молитвы
+  - Много богатства не нажить, а молитвы
+  short_explanation: A proverb contrasting the transient nature of wealth with the enduring value of prayer,
+    suggesting that spiritual wealth is more reliable than material riches.
+  i18n_explanations:
+    en: A proverb contrasting the transient nature of wealth with the enduring value of prayer, suggesting
+      that spiritual wealth is more reliable than material riches.
+    es: Un refrán que contrasta la naturaleza efímera de la riqueza con el valor duradero de la oración,
+      sugiriendo que la riqueza espiritual es más confiable que las riquezas materiales.
+    fr: Un proverbe qui oppose la nature éphémère de la richesse à la valeur durable de la prière, suggérant
+      que la richesse spirituelle est plus fiable que les richesses matérielles.
+    de: Ein Sprichwort, das die vergängliche Natur des Reichtums mit dem dauerhaften Wert des Gebets kontrastiert
+      und nahelegt, dass geistlicher Reichtum zuverlässiger ist als materieller.
+    it: Un proverbio che contrappone la natura effimera della ricchezza al valore duraturo della preghiera,
+      suggerendo che la ricchezza spirituale è più affidabile di quella materiale.
+    pt: Um provérbio que contrasta a natureza transitória da riqueza com o valor duradouro da oração,
+      sugerindo que a riqueza espiritual é mais confiável do que as riquezas materiais.
+    ru: Пословица, противопоставляющая преходящую природу богатства вечной ценности молитвы, утверждая,
+      что духовное богатство надежнее материального.
+    ja: 富の儚い性質と祈りの永続的な価値を対比することわざで、物質的な富よりも精神的な富の方が信頼できることを示唆する。
+    zh: 一句将财富的短暂与祈祷的永恒价值相对比的谚语，认为精神财富比物质财富更可靠。
+    ar: مثل يقارن بين الطبيعة الزائلة للثروة والقيمة الدائمة للصلاة، مشيرًا إلى أن الثروة الروحية أكثر
+      موثوقية من الثروة المادية.
+    he: פתגם המדגיש את ההבדל בין ארעיות העושר לבין ערך התפילה הנצחי, ומצביע על כך שיש יותר ביטחון בעושר
+      רוחני מאשר בעושר חומרי.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.ru.explanation.russian_proverbs_traditional_многого_богатейство_д
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: russian_proverbs_traditional
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase ''Многого богатейство'' is ungrammatical and the proverb is not attested; likely a misquotation.'
+- id: ru_proverb_tradition_волк_кобыла_да_медведь_один_дом_ведут_63d81902
+  language: ru
+  canonical_reference: Волк, кобыла, да медведь — один дом ведут
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Волк, кобыла, да медведь — один дом ведут
+  - Волк, кобыла и медведь — один дом ведут
+  - Волк, лошадь и медведь — один дом ведут
+  short_explanation: A proverb describing an unlikely or dysfunctional household where incompatible individuals
+    are forced to live together, often used to describe a chaotic or mismatched group.
+  i18n_explanations:
+    en: A proverb describing an unlikely or dysfunctional household where incompatible individuals are
+      forced to live together, often used to describe a chaotic or mismatched group.
+    es: Un refrán que describe un hogar improbable o disfuncional donde personas incompatibles se ven
+      obligadas a vivir juntas, usado a menudo para describir un grupo caótico o desajustado.
+    fr: Un proverbe décrivant un foyer improbable ou dysfonctionnel où des individus incompatibles sont
+      forcés de vivre ensemble, souvent utilisé pour décrire un groupe chaotique ou désuni.
+    de: Ein Sprichwort, das einen unwahrscheinlichen oder dysfunktionalen Haushalt beschreibt, in dem
+      unvereinbare Personen gezwungen sind, zusammenzuleben, oft verwendet für eine chaotische oder unpassende
+      Gruppe.
+    it: Un proverbio che descrive un nucleo familiare improbabile o disfunzionale in cui persone incompatibili
+      sono costrette a vivere insieme, spesso usato per descrivere un gruppo caotico o mal assortito.
+    pt: Um provérbio que descreve um lar improvável ou disfuncional onde pessoas incompatíveis são obrigadas
+      a viver juntas, frequentemente usado para descrever um grupo caótico ou desajustado.
+    ru: Пословица, описывающая маловероятное или дисфункциональное домашнее хозяйство, где несовместимые
+      люди вынуждены жить вместе, часто используется для описания хаотичной или несочетаемой группы.
+    ja: 互いに相容れない者たちが無理やり一緒に暮らす、ありそうもないまたは機能不全の家庭を表すことわざ。混沌とした不釣り合いな集団を指すのにも使われる。
+    zh: 一句描述不太可能或功能失调的家庭，其中不相容的人被迫共同生活的谚语，常用于形容混乱或不匹配的群体。
+    ar: مثل يصف أسرة غير محتملة أو غير وظيفية يعيش فيها أفراد غير متوافقين مجبرين على العيش معًا، وغالبًا
+      ما يستخدم لوصف مجموعة فوضوية أو غير متجانسة.
+    he: פתגם המתאר משק בית בלתי סביר או לא תקין שבו אנשים שאינם מתאימים נאלצים לחיות יחד, לעיתים קרובות
+      לתאר קבוצה כאוטית או לא מתואמת.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.ru.explanation.russian_proverbs_traditional_волк_кобыла_да_медвед
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: russian_proverbs_traditional
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Uncommon
+    and possibly misremembered; standard form is ''Волк, кобыла и медведь — одна семья''.'
+- id: ru_cultural_reference_ворон_ворон_что_ты_вьёшься_9447bffe
+  language: ru
+  canonical_reference: Ворон-ворон, что ты вьёшься?
+  reference_type: cultural_reference
+  surface_patterns:
+  - Ворон-ворон, что ты вьёшься?
+  - что ты вьёшься?
+  - ворон-ворон
+  short_explanation: A traditional Russian folk saying or incantation, often used in children's games
+    or rituals, possibly linked to shamanic or superstitious practices involving birds.
+  i18n_explanations:
+    en: A traditional Russian folk saying or incantation, often used in children's games or rituals, possibly
+      linked to shamanic or superstitious practices involving birds.
+    es: Un dicho o encantamiento popular ruso tradicional, usado a menudo en juegos o rituales infantiles,
+      posiblemente vinculado a prácticas chamánicas o supersticiosas que involucran aves.
+    fr: Une expression ou incantation folklorique russe traditionnelle, souvent utilisée dans des jeux
+      ou rituels pour enfants, possiblement liée à des pratiques chamaniques ou superstitieuses impliquant
+      des oiseaux.
+    de: Ein traditioneller russischer Volksreim oder Zauberspruch, oft in Kinder-spielen oder Ritualen
+      verwendet, möglicherweise verbunden mit schamanischen oder abergläubischen Praktiken, die Vögel
+      einbeziehen.
+    it: Un detto o incantesimo folcloristico russo tradizionale, spesso usato in giochi o rituali per
+      bambini, possibilmente legato a pratiche sciamaniche o superstiziose che coinvolgono uccelli.
+    pt: Um dito ou encanto folclórico russo tradicional, frequentemente usado em jogos ou rituais infantis,
+      possivelmente ligado a práticas xamânicas ou supersticiosas envolvendo pássaros.
+    ru: Традиционная русская народная присказка или заклинание, часто используемая в детских играх или
+      ритуалах, возможно связанная с шаманскими или суеверными практиками, связанными с птицами.
+    ja: 伝統的なロシアの民間語句や呪文で、子供の遊びや儀式で使われることが多く、鳥に関わるシャーマニズムや迷信的な習慣と関連する可能性がある。
+    zh: 俄罗斯传统民间俗语或咒语，常用于儿童游戏或仪式，可能与涉及鸟类的萨满教或迷信习俗有关。
+    ar: قول أو تعويذة شعبية روسية تقليدية، غالبًا ما تستخدم في ألعاب أو طقوس الأطفال، وربما ترتبط بممارسات
+      شامانية أو خرافية تتناول الطيور.
+    he: ביטוי או לחש עממי רוסי מסורתי, המשמש לעיתים קרובות במשחקי ילדים או טקסים, וייתכן שהוא קשור למנהגים
+      שמאניים או טקסיים הכרוכים בציפורים.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.ru.explanation.russian_folk_rituals_ворон_ворон_что_ты_вьёшься
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: russian_folk_rituals
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    plausible but uncertain; the ''shamanic'' link is speculative and lacks clear source.'
+- id: ru_proverb_tradition_вороной_конь_как_ветер_полетел_ed13de73
+  language: ru
+  canonical_reference: Вороной конь, как ветер, полетел
+  reference_type: proverb_tradition
+  surface_patterns:
+  - вороной конь, как ветер, полетел
+  - вороной конь полетел, как ветер
+  - конь вороной, как ветер, полетел
+  short_explanation: A poetic proverb describing swift, unstoppable movement, often used to emphasize
+    speed or urgency. The black horse symbolizes power and grace in motion.
+  i18n_explanations:
+    en: A poetic proverb describing swift, unstoppable movement, often used to emphasize speed or urgency.
+      The black horse symbolizes power and grace in motion.
+    es: Un proverbio poético que describe un movimiento rápido e imparable, usado para enfatizar velocidad
+      o urgencia. El caballo negro simboliza poder y gracia en el movimiento.
+    fr: Un proverbe poétique décrivant un mouvement rapide et inarrêtable, souvent utilisé pour souligner
+      la vitesse ou l'urgence. Le cheval noir symbolise la puissance et la grâce en mouvement.
+    de: Ein poetisches Sprichwort, das eine schnelle, unaufhaltsame Bewegung beschreibt, oft verwendet,
+      um Geschwindigkeit oder Dringlichkeit zu betonen. Das schwarze Pferd symbolisiert Kraft und Anmut
+      in der Bewegung.
+    it: Un proverbio poetico che descrive un movimento rapido e inarrestabile, usato per enfatizzare velocità
+      o urgenza. Il cavallo nero simboleggia potenza e grazia nel movimento.
+    pt: Um provérbio poético que descreve um movimento rápido e imparável, usado para enfatizar velocidade
+      ou urgência. O cavalo negro simboliza poder e graça no movimento.
+    ru: Поэтическая пословица, описывающая стремительное, неудержимое движение, часто используемая для
+      подчеркивания скорости или срочности. Чёрный конь символизирует силу и изящество в движении.
+    ja: 速くて止められない動きを詩的に表現したことわざで、速さや緊急性を強調する際に使われます。黒馬は動きの力強さと優雅さを象徴しています。
+    zh: 形容迅捷、无法阻挡的动作的诗意谚语，常用于强调速度或紧迫感。黑马象征着动作中的力量与优雅。
+    ar: مثل شعري يصف حركة سريعة لا يمكن إيقافها، يُستخدم غالبًا لتأكيد السرعة أو الإلحاح. يرمز الحصان
+      الأسود إلى القوة والأناقة في الحركة.
+    he: פתגם פיוטי המתאר תנועה מהירה ובלתי ניתנת לעצירה, המשמש להדגשת מהירות או דחיפות. הסוס השחור מסמל
+      כוח וחן בתנועה.
+  learner_level: B2
+  confidence: 0.65
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.ru.explanation.oral_proverbs_horse_motion_вороной_конь_как_ветер_
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: oral_proverbs_horse_motion
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase is plausible but not widely attested as a traditional proverb; may be a literary or folk expression
+    rather than a fixed proverb.'
+- id: ru_proverb_tradition_воротился_ерема_не_ведает_где_у_него_берёма_187da805
+  language: ru
+  canonical_reference: Воротился Ерема — не ведает, где у него берёма
+  reference_type: proverb_tradition
+  surface_patterns:
+  - воротился Ерема — не ведает, где у него берёма
+  - Ерема воротился — не ведает, где у него берёма
+  - не ведает Ерема, где у него берёма
+  short_explanation: A humorous proverb about someone returning home but being completely disoriented,
+    often used to describe confusion or forgetfulness in familiar surroundings.
+  i18n_explanations:
+    en: A humorous proverb about someone returning home but being completely disoriented, often used to
+      describe confusion or forgetfulness in familiar surroundings.
+    es: Un proverbio humorístico sobre alguien que regresa a casa pero está completamente desorientado,
+      usado para describir confusión u olvido en entornos familiares.
+    fr: Un proverbe humoristique sur quelqu'un qui rentre chez lui mais est complètement désorienté, souvent
+      utilisé pour décrire la confusion ou l'oubli dans un environnement familier.
+    de: Ein humorvolles Sprichwort über jemanden, der nach Hause zurückkehrt, aber völlig desorientiert
+      ist, oft verwendet, um Verwirrung oder Vergesslichkeit in vertrauter Umgebung zu beschreiben.
+    it: Un proverbio umoristico su qualcuno che torna a casa ma è completamente disorientato, usato per
+      descrivere confusione o smemoratezza in ambienti familiari.
+    pt: Um provérbio humorístico sobre alguém que volta para casa, mas está completamente desorientado,
+      usado para descrever confusão ou esquecimento em ambientes familiares.
+    ru: Шутливое присловье о том, кто вернулся домой, но совершенно растерялся, часто используется для
+      описания замешательства или забывчивости в знакомой обстановке.
+    ja: 家に帰ったのに完全に方向がわからなくなるというユーモラスなことわざで、慣れた場所での混乱や忘れっぽさを表すのに使われます。
+    zh: 一个幽默的谚语，说的是有人回到家却完全迷失方向，常用来形容在熟悉环境中的困惑或健忘。
+    ar: مثل فكاهي عن شخص عاد إلى منزله لكنه في حالة ارتباك تام، يُستخدم لوصف الارتباك أو النسيان في الأماكن
+      المألوفة.
+    he: פתגם הומוריסטי על מישהו שחוזר הביתה אך אינו יודע היכן נמצא מיטתו. משמש לתיאור בלבול או שכחה בסביבה
+      מוכרת.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.ru.explanation.oral_proverbs_confusion_home_воротился_ерема_не_ве
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: oral_proverbs_confusion_home
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    wording is plausible but not well-documented; dialectal ''берёма'' suggests regional variation, not
+    a standard proverb.'
+- id: ru_proverb_tradition_вышибать_клин_клином_44aad8cf
+  language: ru
+  canonical_reference: Вышибать клин клином
+  reference_type: proverb_tradition
+  surface_patterns:
+  - вышибать клин клином
+  - вышибить клин клином
+  - вышибать клином клин
+  - вышибить клином клин
+  short_explanation: To solve a problem by using the same method that caused it, often in a negative or
+    self-destructive way. Similar to 'fighting fire with fire.'
+  i18n_explanations:
+    en: To solve a problem by using the same method that caused it, often in a negative or self-destructive
+      way. Similar to 'fighting fire with fire.'
+    es: Resolver un problema usando el mismo método que lo causó, a menudo de manera negativa o autodestructiva.
+      Similar a 'luchar contra el fuego con fuego'.
+    fr: Résoudre un problème en utilisant la même méthode qui l'a causé, souvent de manière négative ou
+      autodestructrice. Similaire à 'combattre le feu par le feu'.
+    de: Ein Problem lösen, indem man dieselbe Methode anwendet, die es verursacht hat, oft auf negative
+      oder selbstzerstörerische Weise. Ähnlich wie 'Feuer mit Feuer bekämpfen'.
+    it: Risolvere un problema usando lo stesso metodo che lo ha causato, spesso in modo negativo o autodistruttivo.
+      Simile a 'combattere il fuoco con il fuoco'.
+    pt: Resolver um problema usando o mesmo método que o causou, muitas vezes de forma negativa ou autodestrutiva.
+      Semelhante a 'combater fogo com fogo'.
+    ru: Решить проблему, используя тот же метод, который её вызвал, часто негативным или саморазрушительным
+      способом. Аналогично 'клин клином вышибают'.
+    ja: 問題を引き起こした同じ方法を使って解決しようとすること。しばしば否定的または自己破壊的な方法で。'火に油を注ぐ'に似ている。
+    zh: 用引发问题的相同方法来解决问题，通常是负面或自我毁灭的方式。类似于‘以毒攻毒’。
+    ar: حل مشكلة باستخدام نفس الأسلوب الذي تسبب بها، غالبًا بطريقة سلبية أو مدمرة للذات. يشبه 'مكافحة
+      النار بالنار'.
+    he: לפתור בעיה באמצעות אותה שיטה שגרמה לה, לעיתים בצורה שלילית או הרסנית. דומה ל'אין כמו אש שמכבה
+      אש'.
+  learner_level: B2
+  confidence: 0.75
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.ru.explanation.oral_proverbs_rus_вышибать_клин_клином
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: oral_proverbs_rus
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Explanation
+    slightly misrepresents the meaning; ''using the same method that caused it'' is not precise for ''клин
+    клином вышибают''.'
+- id: ru_literary_reference_вот_я_в_москве_как_в_аквариуме_bdbcb5c1
+  language: ru
+  canonical_reference: Вот я в Москве, как в аквариуме
+  reference_type: literary_reference
+  surface_patterns:
+  - Вот я в Москве, как в аквариуме
+  - Я в Москве, как в аквариуме
+  - как в аквариуме в Москве
+  short_explanation: A line from a popular Russian song expressing a sense of being trapped or confined
+    in Moscow, likening the city to a fishbowl ('аквариум'). It reflects urban alienation and the feeling
+    of being observed or restricted.
+  i18n_explanations:
+    en: A line from a popular Russian song expressing a sense of being trapped or confined in Moscow,
+      likening the city to a fishbowl ('аквариум'). It reflects urban alienation and the feeling of being
+      observed or restricted.
+    es: Verso de una canción rusa popular que expresa la sensación de estar atrapado o limitado en Moscú,
+      comparando la ciudad con una pecera ('аквариум'). Refleja la alienación urbana y la sensación de
+      ser observado o restringido.
+    fr: Un vers d'une chanson russe populaire exprimant un sentiment d'être piégé ou confiné à Moscou,
+      comparant la ville à un bocal ('аквариум'). Cela reflète l'aliénation urbaine et le sentiment d'être
+      observé ou limité.
+    de: Eine Zeile aus einem beliebten russischen Lied, die ein Gefühl von Gefangensein oder Eingeschlossensein
+      in Moskau ausdrückt, indem die Stadt mit einem Fischglas ('аквариум') verglichen wird. Es spiegelt
+      die Entfremdung in der Stadt und das Gefühl, beobachtet oder eingeschränkt zu sein.
+    it: Un verso di una famosa canzone russa che esprime la sensazione di essere intrappolato o limitato
+      a Mosca, paragonando la città a un acquario ('аквариум'). Riflette l'alienazione urbana e la sensazione
+      di essere osservati o vincolati.
+    pt: Um verso de uma canção russa popular que expressa a sensação de estar preso ou limitado em Moscou,
+      comparando a cidade a um aquário ('аквариум'). Reflete a alienação urbana e a sensação de ser observado
+      ou restrito.
+    ru: Строка популярной русской песни, выражающая чувство, что находишься в Москве как в аквариуме —
+      в ловушке или в замкнутом пространстве. Отражает отчуждение в городе и ощущение, что за тобой наблюдают
+      или ограничивают свободу.
+    ja: 人気のロシアの歌の一節で、モスクワにいる自分を水槽の中のように閉じ込められた感覚を表します。都市の疎外感や監視されている、制限されているという気持ちを反映しています。
+    zh: 俄罗斯一首流行歌曲中的歌词，表达在莫斯科如同身处鱼缸（'аквариум'）中一般被困或受限的感觉。反映了都市疏离感以及被监视或受约束的感受。
+    ar: سطر من أغنية روسية شعبية يعبر عن الشعور بالحبس أو التقييد في موسكو، حيث تشبه المدينة بوعاء سمك
+      ('аквариум'). يعكس الاغتراب الحضري والشعور بالمراقبة أو القيود.
+    he: שורה מפורסמת משיר רוסי פופולרי המבטאת תחושה של לכידה או הגבלה במוסקבה, תוך השוואת העיר לאקווריום
+      ('аквариум'). משקפת את תחושת הניכור העירוני ואת הרגשת היותך נצפה או מוגבל.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.russian_song_lyrics_вот_я_в_москве_как_в_аквариуме
+  source_work_key: mnemosyne.ru.work.песня_москва_song_moscow
+  source_author_key: mnemosyne.ru.author.михаил_матусовский_mikhail_matusovsky
+  source_work: Песня 'Москва' (Song 'Moscow')
+  source_author: Михаил Матусовский (Mikhail Matusovsky)
+  source_url: https://www.karaoke.ru/song/621.htm
+  source_license: copyright_or_rights_review_needed
+  source_dataset: russian_song_lyrics
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Mikhail Matusovsky is uncertain; the line''s origin in a specific song is not clearly corroborated.'
+- id: ru_literary_reference_глупая_совесть_что_это_ты_b0814604
+  language: ru
+  canonical_reference: Глупая совесть, что это ты?
+  reference_type: literary_reference
+  surface_patterns:
+  - Глупая совесть, что это ты?
+  - что это ты, глупая совесть?
+  - глупая совесть, что это ты
+  short_explanation: A line from a well-known Russian poem, expressing a conflicted relationship with
+    one's conscience. It personifies conscience as something foolish or burdensome, questioning its presence.
+  i18n_explanations:
+    en: A line from a well-known Russian poem, expressing a conflicted relationship with one's conscience.
+      It personifies conscience as something foolish or burdensome, questioning its presence.
+    es: Verso de un famoso poema ruso que expresa una relación conflictiva con la conciencia. Personifica
+      la conciencia como algo tonto o pesado, cuestionando su presencia.
+    fr: Un vers d'un poème russe célèbre exprimant une relation conflictuelle avec sa conscience. Il personnifie
+      la conscience comme quelque chose de stupide ou de pesant, remettant en question sa présence.
+    de: Eine Zeile aus einem bekannten russischen Gedicht, die eine zerrissene Beziehung zum eigenen Gewissen
+      ausdrückt. Es personifiziert das Gewissen als etwas Dummes oder Belastendes und hinterfragt dessen
+      Anwesenheit.
+    it: Un verso di una famosa poesia russa che esprime un rapporto conflittuale con la propria coscienza.
+      Personifica la coscienza come qualcosa di sciocco o opprimente, mettendone in dubbio la presenza.
+    pt: Um verso de um famoso poema russo que expressa um relacionamento conflituoso com a própria consciência.
+      Personifica a consciência como algo tolo ou pesado, questionando sua presença.
+    ru: Строка из известного русского стихотворения, выражающая конфликтные отношения с собственной совестью.
+      Олицетворяет совесть как нечто глупое или обременительное, ставя под вопрос её присутствие.
+    ja: 有名なロシアの詩の一節で、自分の良心との葛藤を表しています。良心を愚かで負担となる存在として擬人化し、その存在を疑問視しています。
+    zh: 出自著名俄罗斯诗歌的一句话，表达与自己良心的矛盾关系。将良心拟人化为愚蠢或沉重的存在，质疑其存在的意义。
+    ar: سطر من قصيدة روسية شهيرة يعبر عن علاقة متضاربة مع الضمير. personifies الضمير كشيء سخيف أو ثقيل،
+      ويتساءل عن وجوده.
+    he: שורה מפורסמת משיר רוסי המבטאת יחסים סוערים עם המצפון. משייכת את המצפון לדבר טיפשי או מעיק, ומעלה
+      ספקות בנוכחותו.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.tyutchev_poems_глупая_совесть_что_это_ты
+  source_work_key: mnemosyne.ru.work.совесть
+  source_author_key: mnemosyne.ru.author.фёдор_тютчев_fyodor_tyutchev
+  source_work: Совесть
+  source_author: Фёдор Тютчев (Fyodor Tyutchev)
+  source_location: '1855'
+  source_url: https://ru.wikisource.org/wiki/Совесть_(Тютчев)
+  source_license: public_domain
+  source_dataset: tyutchev_poems
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Tyutchev is plausible but not easily verifiable; the specific phrasing may be from a different
+    source.'
+- id: ru_cultural_reference_давай_убьём_октябрь_21e9f229
+  language: ru
+  canonical_reference: Давай, убьём Октябрь!
+  reference_type: cultural_reference
+  surface_patterns:
+  - Давай, убьём Октябрь!
+  - убьём Октябрь!
+  - давай убьём Октябрь
+  short_explanation: A phrase associated with the Russian Revolution and the October Revolution of 1917.
+    It can be interpreted as a call to 'kill' or end the revolutionary period, often used metaphorically
+    to criticize or reject revolutionary ideals.
+  i18n_explanations:
+    en: A phrase associated with the Russian Revolution and the October Revolution of 1917. It can be
+      interpreted as a call to 'kill' or end the revolutionary period, often used metaphorically to criticize
+      or reject revolutionary ideals.
+    es: Frase asociada con la Revolución Rusa y la Revolución de Octubre de 1917. Puede interpretarse
+      como un llamado a 'matar' o terminar con el período revolucionario, usada metafóricamente para criticar
+      o rechazar los ideales revolucionarios.
+    fr: Une expression associée à la Révolution russe et à la Révolution d'Octobre 1917. Elle peut s'interpréter
+      comme un appel à 'tuer' ou mettre fin à la période révolutionnaire, souvent utilisée métaphoriquement
+      pour critiquer ou rejeter les idéaux révolutionnaires.
+    de: Ein Ausdruck, der mit der Russischen Revolution und der Oktoberrevolution von 1917 verbunden ist.
+      Kann als Aufruf verstanden werden, die revolutionäre Phase zu 'beenden' oder zu 'töten', oft metaphorisch
+      verwendet, um revolutionäre Ideale zu kritisieren oder abzulehnen.
+    it: Un'espressione associata alla Rivoluzione russa e alla Rivoluzione d'Ottobre del 1917. Può essere
+      interpretata come un invito a 'uccidere' o porre fine al periodo rivoluzionario, spesso usata metaforicamente
+      per criticare o respingere gli ideali rivoluzionari.
+    pt: Uma expressão associada à Revolução Russa e à Revolução de Outubro de 1917. Pode ser interpretada
+      como um chamado para 'matar' ou pôr fim ao período revolucionário, frequentemente usada metaforicamente
+      para criticar ou rejeitar os ideais revolucionários.
+    ru: Выражение, связанное с Русской революцией и Октябрьской революцией 1917 года. Может восприниматься
+      как призыв 'убить' или положить конец революционному периоду, часто используется метафорически для
+      критики или отвержения революционных идеалов.
+    ja: ロシア革命と1917年の十月革命に関連するフレーズ。革命期を「終わらせる」または「葬る」という呼びかけと解釈され、しばしば革命の理想を批判または拒否するための比喩として使われます。
+    zh: 与俄罗斯革命和1917年十月革命相关的短语。可以理解为号召“终结”或“摧毁”革命时期，常用于隐喻性地批评或拒绝革命理想。
+    ar: عبارة مرتبطة بالثورة الروسية والثورة البلشفية في أكتوبر 1917. يمكن تفسيرها على أنها دعوة إلى 'قتل'
+      أو إنهاء الفترة الثورية، وغالبًا ما تُستخدم مجازيًا لنقد أو رفض المثل الثورية.
+    he: ביטוי הקשור למהפכה הרוסית ולמהפכת אוקטובר 1917. ניתן לפרשו כקריאה ל'הרוג' או לסיים את התקופה המהפכנית,
+      ולעיתים קרובות משמשת באופן מטפורי לביקורת או לדחייה של האידיאלים המהפכניים.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: formal
+  explanation_key: mnemosyne.ru.explanation.soviet_history_phrases_давай_убьём_октябрь
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition_soviet_discourse
+  source_work: Various
+  source_author: Oral tradition / Soviet discourse
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: soviet_history_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- No
+    specific literary or historical source cited; phrase is too vague for a reliable cultural reference.'
+- id: ru_literary_reference_за_что_вы_дети_так_любите_бранные_слова_66b08ccc
+  language: ru
+  canonical_reference: За что вы, дети, так любите бранные слова?
+  reference_type: literary_reference
+  surface_patterns:
+  - За что вы, дети, так любите бранные слова?
+  - За что вы, дети, так любите бранные слова
+  short_explanation: A line from Pushkin's 'Boris Godunov,' where the Tsar questions the people's love
+    for coarse language, reflecting moral and social decay. It critiques societal values and language
+    use.
+  i18n_explanations:
+    en: A line from Pushkin's 'Boris Godunov,' where the Tsar questions the people's love for coarse language,
+      reflecting moral and social decay. It critiques societal values and language use.
+    es: Un verso de 'Boris Godunov' de Pushkin, donde el zar cuestiona el amor del pueblo por las palabras
+      groseras, reflejando la decadencia moral y social. Critica los valores y el uso del lenguaje en
+      la sociedad.
+    fr: Une réplique de 'Boris Godounov' de Pouchkine, où le tsar s'interroge sur l'amour du peuple pour
+      les jurons, reflétant la décadence morale et sociale. Elle critique les valeurs et l'usage du langage
+      dans la société.
+    de: Eine Zeile aus Puschkins 'Boris Godunow,' in der der Zar die Liebe des Volkes zu groben Worten
+      hinterfragt und so den moralischen und sozialen Verfall widerspiegelt. Sie kritisiert gesellschaftliche
+      Werte und den Sprachgebrauch.
+    it: Un verso di 'Boris Godunov' di Puškin, in cui lo zar mette in dubbio l'amore del popolo per le
+      parolacce, riflettendo la decadenza morale e sociale. Critica i valori e l'uso del linguaggio nella
+      società.
+    pt: Um verso de 'Boris Godunov' de Pushkin, em que o czar questiona o amor do povo por palavrões,
+      refletindo a decadência moral e social. Critica os valores e o uso da linguagem na sociedade.
+    ru: Строка из 'Бориса Годунова' Пушкина, где царь вопрошает о любви народа к бранным словам, отражая
+      моральный и социальный упадок. Критикует общественные ценности и использование языка.
+    ja: プーシキンの「ボリス・ゴドゥノフ」の一節で、ツァーリが民衆の粗野な言葉への愛着を問い、道徳的・社会的堕落を反映する。社会の価値観と言葉の使用を批判している。
+    zh: 出自普希金《鲍里斯·戈都诺夫》的诗句，沙皇质问民众对粗鄙语言的热爱，反映道德与社会的颓废。批评社会价值观与语言使用。
+    ar: سطر من 'بوریس غودونوف' لبوشكين، حيث يتساءل القيصر عن حب الشعب للألفاظ البذيئة، مما يعكس الانحلال
+      الأخلاقي والاجتماعي. ينتقد القيم الاجتماعية واستخدام اللغة.
+    he: שורה מ'בוריס גודונוב' של פושקין, שבה הצאר תוהה מדוע העם אוהב כל כך קללות, משקפת את ההידרדרות המוסרית
+      והחברתית. מבקרת את ערכי החברה ושימוש בשפה.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.pushkin_boris_godunov_phrases_за_что_вы_дети_так_л
+  source_work_key: mnemosyne.ru.work.борис_годунов
+  source_author_key: mnemosyne.ru.author.александр_пушкин
+  source_work: Борис Годунов
+  source_author: Александр Пушкин
+  source_location: Scene 1 (Monologue of Boris Godunov)
+  source_url: https://ilibrary.ru/text/1099/p.1/index.html
+  source_license: public_domain
+  source_dataset: pushkin_boris_godunov_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Pushkin''s ''Boris Godunov'' is uncertain; the line is not immediately recognizable and may be
+    misattributed.'
+- id: ru_literary_reference_надоела_мне_вся_эта_кутерьма_d26a4357
+  language: ru
+  canonical_reference: Надоела мне вся эта кутерьма
+  reference_type: literary_reference
+  surface_patterns:
+  - Надоела мне вся эта кутерьма
+  - Надоела вся эта кутерьма
+  - Вся эта кутерьма
+  short_explanation: A line from the play 'Ревизор' by Nikolai Gogol, expressing frustration with chaos
+    or absurdity. 'Кутерьма' refers to turmoil or mess, often used to describe bureaucratic or social
+    disorder.
+  i18n_explanations:
+    en: A line from the play 'The Government Inspector' by Nikolai Gogol, expressing frustration with
+      chaos or absurdity. 'Kuteryma' refers to turmoil or mess, often used to describe bureaucratic or
+      social disorder.
+    es: Una línea de la obra 'El inspector general' de Nikolai Gogol que expresa frustración ante el caos
+      o la absurdidad. 'Kuteryma' se refiere al desorden o al lío, usado para describir el desorden burocrático
+      o social.
+    fr: Une réplique de la pièce 'Le Revizor' de Nicolas Gogol exprimant l'exaspération face au chaos
+      ou à l'absurdité. 'Kuteryma' désigne le tumulte ou le désordre, souvent utilisé pour décrire le
+      désordre bureaucratique ou social.
+    de: Eine Zeile aus dem Theaterstück 'Der Revisor' von Nikolai Gogol, die Frustration über Chaos oder
+      Absurdität ausdrückt. 'Kuteryma' bezieht sich auf Wirrwarr oder Durcheinander, oft zur Beschreibung
+      bürokratischer oder sozialer Unordnung verwendet.
+    it: Una frase della commedia 'Il revisore' di Nikolai Gogol che esprime frustrazione per il caos o
+      l'assurdità. 'Kuteryma' si riferisce al trambusto o al disordine, spesso usato per descrivere il
+      caos burocratico o sociale.
+    pt: Uma linha da peça 'O Inspetor Geral' de Nikolai Gogol que expressa frustração com o caos ou a
+      absurdidade. 'Kuteryma' refere-se ao tumulto ou desordem, usado para descrever desordem burocrática
+      ou social.
+    ru: Строка из пьесы Н.В. Гоголя 'Ревизор', выражающая раздражение от хаоса или абсурда. 'Кутерьма'
+      означает суматоху или беспорядок, часто используется для описания бюрократического или социального
+      хаоса.
+    ja: ニコライ・ゴーゴリの戯曲「検察官」の一節で、混沌や不条理へのいらだちを表す。「クテリマ」は混乱やごたごたを指し、官僚的または社会的な無秩序を表すのに使われる。
+    zh: 尼古拉·果戈理戏剧《钦差大臣》中的台词，表达对混乱或荒诞的厌烦。‘Кутерьма’指混乱或杂乱，常用于描述官僚或社会的无序。
+    ar: سطر من مسرحية 'المفتش العام' لنجيبان غوغول يعبر عن الإحباط تجاه الفوضى أو العبث. 'كوتيرما' تشير
+      إلى الفوضى أو الارتباك، وغالبًا ما تستخدم لوصف الفوضى البيروقراطية أو الاجتماعية.
+    he: שורה מהמחזה 'השריף' מאת ניקולאי גוגול, המביעה תסכול כלפי כאוס או אבסורד. 'Кутерьма' מתייחסת לבלבול
+      או למהומה, ומשמשת לתיאור אי-סדר בירוקרטי או חברתי.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.gogol_revizor_надоела_мне_вся_эта_кутерьма
+  source_work_key: mnemosyne.ru.work.ревизор
+  source_author_key: mnemosyne.ru.author.николай_васильевич_гоголь
+  source_work: Ревизор
+  source_author: Николай Васильевич Гоголь
+  source_location: Действие 1, явление 1
+  source_url: https://ru.wikisource.org/wiki/Ревизор_(Гоголь)
+  source_license: public_domain
+  source_dataset: gogol_revizor
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Flagged:
+    attribution to Gogol''s ''Ревизор'' uncertain; line may not appear in play.'
+- id: ru_cultural_reference_по_гумилёву_по_гумилёву_bad0b8d8
+  language: ru
+  canonical_reference: По Гумилёву, по Гумилёву
+  reference_type: cultural_reference
+  surface_patterns:
+  - По Гумилёву, по Гумилёву
+  - по Гумилёву
+  short_explanation: A humorous phrase referencing the Soviet poet Nikolay Gumilyov, often used to mock
+    someone's pretentious or overly poetic speech. It implies that the speaker is trying too hard to sound
+    artistic or profound.
+  i18n_explanations:
+    en: A humorous phrase referencing the Soviet poet Nikolay Gumilyov, often used to mock someone's pretentious
+      or overly poetic speech. It implies that the speaker is trying too hard to sound artistic or profound.
+    es: Frase humorística que hace referencia al poeta soviético Nikolay Gumilyov, usada para burlarse
+      de un discurso pretencioso o excesivamente poético. Implica que el hablante intenta demasiado sonar
+      artístico o profundo.
+    fr: Expression humoristique faisant référence au poète soviétique Nikolaï Goumilev, utilisée pour
+      moquer un discours prétentieux ou trop poétique. Elle suggère que le locuteur force pour paraître
+      artistique ou profond.
+    de: Ein humorvoller Spruch, der auf den sowjetischen Dichter Nikolai Gumiljow anspielt, oft genutzt,
+      um übertrieben poetische oder gespreizte Rede zu verspotten. Er deutet an, dass der Sprecher zu
+      sehr versucht, künstlerisch oder tiefgründig zu wirken.
+    it: Un'espressione umoristica che fa riferimento al poeta sovietico Nikolaj Gumilëv, usata per deridere
+      un discorso pretenzioso o eccessivamente poetico. Implica che il parlante cerchi troppo di sembrare
+      artistico o profondo.
+    pt: Expressão humorística que faz referência ao poeta soviético Nikolay Gumilyov, usada para zombar
+      de um discurso pretensioso ou excessivamente poético. Implica que o falante tenta demais soar artístico
+      ou profundo.
+    ru: Шутливое выражение, отсылающее к советскому поэту Николаю Гумилёву, часто используется, чтобы
+      высмеять чью-то претенциозную или излишне поэтичную речь. Оно подразумевает, что говорящий слишком
+      старается казаться артистичным или глубокомысленным.
+    ja: ソビエトの詩人ニコライ・グミリョフを皮肉った表現で、気取ったり過度に詩的な話し方を揶揄する際に使われる。話し手が芸術的や深遠に見せようと無理をしていることを暗示する。
+    zh: 一句幽默用语，指向苏联诗人尼古拉·古米廖夫，常用于嘲笑某人矫揉造作或过度诗意的言辞。暗示说话者试图过度展现艺术性或深刻。
+    ar: عبارة فكاهية تشير إلى الشاعر السوفيتي نيكولاي غوميليوف، تُستخدم للسخرية من كلام متكلف أو مفرط
+      في الشعرية. تشير إلى أن المتحدث يحاول جاهدًا الظهور بمظهر فني أو عميق.
+    he: ביטוי הומוריסטי המתייחס למשורר הסובייטי ניקולאי גומיליוב, המשמש ללעג לדיבור מתחכם או פיוטי מדי.
+      מרמז שהדובר מנסה יותר מדי להיראות אמנותי או עמוק.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: informal
+  explanation_key: mnemosyne.ru.explanation.oral_gumilev_phrase_по_гумилёву_по_гумилёву
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: oral_gumilev_phrase
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Phrase
+    not widely attested; attribution to humorous mocking of Gumilyov seems speculative.'
+- id: ru_literary_reference_светить_и_никаких_гвоздей_c3b75c68
+  language: ru
+  canonical_reference: Светить — и никаких гвоздей!
+  reference_type: literary_reference
+  surface_patterns:
+  - Светить — и никаких гвоздей!
+  - светить — и никаких гвоздей
+  - светить и никаких гвоздей
+  short_explanation: A famous line from Vladimir Mayakovsky's 1923 poem 'About This' (Про это), symbolizing
+    the poet's commitment to pure artistry without compromise. It is often cited to emphasize dedication
+    to one's craft.
+  i18n_explanations:
+    en: A famous line from Vladimir Mayakovsky's 1923 poem 'About This' (Про это), symbolizing the poet's
+      commitment to pure artistry without compromise. It is often cited to emphasize dedication to one's
+      craft.
+    es: Frase famosa del poema de 1923 'Sobre esto' (Про это) de Vladimir Mayakovsky, que simboliza el
+      compromiso del poeta con el arte puro sin concesiones. Se cita a menudo para enfatizar la dedicación
+      a un oficio.
+    fr: Une réplique célèbre du poème de 1923 'À ce sujet' (Про это) de Vladimir Maïakovski, symbolisant
+      l'engagement du poète envers un art pur sans compromis. Elle est souvent citée pour souligner le
+      dévouement à son métier.
+    de: Ein berühmter Vers aus Wladimir Majakowskis Gedicht 'Davon' (Про это) von 1923, der die Verpflichtung
+      des Dichters zu reiner Kunst ohne Kompromisse symbolisiert. Wird oft zitiert, um Hingabe an sein
+      Handwerk zu betonen.
+    it: Una celebre frase del poema del 1923 'A proposito di questo' (Про это) di Vladimir Majakovskij,
+      che simboleggia l'impegno del poeta verso un'arte pura senza compromessi. Viene spesso citata per
+      enfatizzare la dedizione al proprio mestiere.
+    pt: Frase famosa do poema de 1923 'Sobre Isso' (Про это) de Vladimir Mayakovsky, que simboliza o compromisso
+      do poeta com a arte pura sem concessões. É frequentemente citada para enfatizar a dedicação ao ofício.
+    ru: Знаменитая строка из стихотворения Владимира Маяковского 1923 года 'Про это', символизирующая
+      его преданность чистому искусству без компромиссов. Часто цитируется, чтобы подчеркнуть преданность
+      своему делу.
+    ja: 1923年のウラジーミル・マヤコフスキーの詩「これについて」（Про это）の有名な一節で、詩人が妥協のない純粋な芸術への献身を象徴している。自分の仕事への専念を強調する際によく引用される。
+    zh: 弗拉基米尔·马雅可夫斯基1923年诗作《论此》（Про это）中的著名诗句，象征诗人对纯粹艺术的无条件忠诚。常被引用以强调对自己手艺的奉献。
+    ar: سطر مشهور من قصيدة فلاديمير ماياكوفسكي لعام 1923 'عن هذا' (Про это)، يرمز إلى التزام الشاعر بالفن
+      الخالص دون مساومة. غالبًا ما يُستشهد به لتأكيد التفاني في الحرفة.
+    he: משפט מפורסם מהשיר של ולדימיר מאיאקובסקי מ-1923 'על זה' (Про это), המסמל את מחויבותו של המשורר
+      לאמנות טהורה ללא פשרות. לעיתים קרובות מצוטט כדי להדגיש מסירות למקצוע.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.mayakovsky_quotes_светить_и_никаких_гвоздей
+  source_work_key: mnemosyne.ru.work.про_это
+  source_author_key: mnemosyne.ru.author.vladimir_mayakovsky
+  source_work: Про это
+  source_author: Vladimir Mayakovsky
+  source_url: https://ru.wikisource.org/wiki/Про_это_(Маяковский)
+  source_license: public_domain
+  source_dataset: mayakovsky_quotes
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Line
+    from Mayakovsky''s ''Необычайное приключение...'' (1920), not ''Про это'' (1923); attribution error.'
+- id: ru_cultural_reference_вперёд_и_с_песней_a8a2fe31
+  language: ru
+  canonical_reference: Вперёд, и с песней!
+  reference_type: cultural_reference
+  surface_patterns:
+  - Вперёд, и с песней!
+  - Вперёд и с песней!
+  - Вперёд, с песней!
+  - Вперёд и с песней
+  short_explanation: A call to action, urging someone to move forward with enthusiasm and joy, often associated
+    with Soviet-era slogans and military marches.
+  i18n_explanations:
+    en: A call to action, urging someone to move forward with enthusiasm and joy, often associated with
+      Soviet-era slogans and military marches.
+    es: Un llamado a la acción que urge a avanzar con entusiasmo y alegría, a menudo asociado con eslóganes
+      de la era soviética y marchas militares.
+    fr: Un appel à l'action incitant à avancer avec enthousiasme et joie, souvent associé aux slogans
+      de l'ère soviétique et aux marches militaires.
+    de: Ein Aufruf zum Handeln, der dazu auffordert, mit Begeisterung und Freude voranzuschreiten, oft
+      verbunden mit sowjetischen Slogans und Militärmärschen.
+    it: Un invito all'azione che sprona a procedere con entusiasmo e gioia, spesso associato a slogan
+      dell'era sovietica e marce militari.
+    pt: Um chamado à ação que incentiva a avançar com entusiasmo e alegria, frequentemente associado a
+      slogans da era soviética e marchas militares.
+    ru: Призыв к действию, побуждающий двигаться вперёд с энтузиазмом и радостью, часто связанный с советскими
+      лозунгами и военными маршами.
+    ja: 前進せよ、そして歌を歌え！という行動への呼びかけで、ソ連時代のスローガンや軍隊行進曲としばしば結びつけられる表現。
+    zh: 向前进，并高歌前行！一种行动号召，敦促人们满怀热情与喜悦地前进，常与苏联时代的口号和军队进行曲相关联。
+    ar: نداء للعمل يحث على المضي قدمًا بحماس وفرح، غالبًا ما يرتبط بشعارات الحقبة السوفيتية والمش marches
+      العسكرية.
+    he: קריאה לפעולה שדוחפת להתקדם בהנאה ובשמחה, לעיתים קרובות קשורה לסיסמאות מתקופת ברית המועצות וצעדות
+      צבאיות.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: formal
+  explanation_key: mnemosyne.ru.explanation.soviet_patriotic_songs_вперёд_и_с_песней
+  source_work_key: mnemosyne.ru.work.песня_о_родине
+  source_author_key: mnemosyne.ru.author.лев_ошанин_lyrics_исаак_дунаевский_music
+  source_work: Песня о Родине
+  source_author: Лев Ошанин (lyrics), Исаак Дунаевский (music)
+  source_location: Soviet patriotic song, 1936
+  source_url: https://ru.wikipedia.org/wiki/Песня_о_Родине_(1936)
+  source_license: public_domain
+  source_dataset: soviet_patriotic_songs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to specific song and authors likely incorrect; phrase is a general Soviet-era slogan, not directly
+    from ''Песня о Родине'' by Oshanin and Dunaevsky.'
+- id: ru_cultural_reference_к_вам_пришли_7297aabb
+  language: ru
+  canonical_reference: К вам пришли
+  reference_type: cultural_reference
+  surface_patterns:
+  - К вам пришли
+  - К вам пришли гости
+  - К вам пришли люди
+  short_explanation: A phrase often used in Russian to announce visitors, popularized by a Soviet-era
+    joke and later by a famous sketch featuring comedian Mikhail Zadornov, symbolizing unexpected or intrusive
+    guests.
+  i18n_explanations:
+    en: A phrase often used in Russian to announce visitors, popularized by a Soviet-era joke and later
+      by a famous sketch featuring comedian Mikhail Zadornov, symbolizing unexpected or intrusive guests.
+    es: Frase rusa usada para anunciar visitas, popularizada por un chiste de la era soviética y luego
+      por un famoso sketch del comediante Mikhail Zadornov, simbolizando invitados inesperados o intrusivos.
+    fr: Expression russe utilisée pour annoncer des visiteurs, popularisée par une blague de l'ère soviétique
+      puis par un sketch célèbre de l'humoriste Mikhail Zadornov, symbolisant des invités inattendus ou
+      intrusifs.
+    de: Ein russischer Ausdruck, der verwendet wird, um Besucher anzukündigen, populär gemacht durch einen
+      Sowjet-Witz und später durch einen berühmten Sketch mit dem Komiker Mikhail Zadornov, der unerwartete
+      oder aufdringliche Gäste symbolisiert.
+    it: Frase russa usata per annunciare visite, resa popolare da una barzelletta dell'era sovietica e
+      poi da uno sketch famoso dell'attore Mikhail Zadornov, che simboleggia ospiti inattesi o invadenti.
+    pt: Expressão russa usada para anunciar visitas, popularizada por uma piada da era soviética e depois
+      por um famoso esboço do comediante Mikhail Zadornov, simbolizando hóspedes inesperados ou intrusivos.
+    ru: Распространённая русская фраза для объявления о визитёрах, популяризованная советским анекдотом
+      и позже скетчем с Михаилом Задорновым, символизирующая нежданных или назойливых гостей.
+    ja: ロシアで訪問者を知らせる際に使われるフレーズで、ソ連時代のジョークやコメディアンミハイル・ザドールノフの有名なスケッチによって広まり、予期せぬまたは押しの強い客を象徴する。
+    zh: 俄罗斯人用来通报访客的常用语，因苏联时代的笑话及喜剧演员米哈伊尔·扎多尔诺夫的著名小品而流行，象征不速之客或打扰他人的来访。
+    ar: عبارة روسية تُستخدم لإعلان وصول الزوار، اشتهرت من خلال نكتة سوفيتية ومن ثم من خلال مشهد كوميدي
+      شهير للممثل ميخائيل زادورنوف، ترمز إلى ضيوف غير متوقعين أو مزعجين.
+    he: ביטוי רוסי המשמש להודעה על הגעת אורחים, שהתפרסם באמצעות בדיחה סובייטית ולאחר מכן באמצעות מערכון
+      מפורסם בכיכובו של הקומיקאי מיכאיל זדורנוב, המסמל אורחים בלתי צפויים או פולשניים.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: informal
+  explanation_key: mnemosyne.ru.explanation.ru_jokes_phrases_к_вам_пришли
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ru_jokes_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Phrase
+    is common but attribution to a specific joke/sketch is uncertain; overclaims confidence.'
+- id: ru_cultural_reference_на_подмостках_сцены_907175e3
+  language: ru
+  canonical_reference: На подмостках сцены
+  reference_type: cultural_reference
+  surface_patterns:
+  - на подмостках сцены
+  - выйти на подмостки сцены
+  - жизнь на подмостках сцены
+  short_explanation: A phrase evoking the stage or theatrical life, often used metaphorically to describe
+    a life of performance, fame, or public scrutiny. Derived from the literal stage ('подмостки' meaning
+    'scaffolding' or 'stage platform').
+  i18n_explanations:
+    en: A phrase evoking the stage or theatrical life, often used metaphorically to describe a life of
+      performance, fame, or public scrutiny. Derived from the literal stage ('подмостки' meaning 'scaffolding'
+      or 'stage platform').
+    es: Frase que evoca el escenario o la vida teatral, usada metafóricamente para describir una vida
+      de actuación, fama o escrutinio público. Proviene del término 'подмостки', que significa 'andamios'
+      o 'plataforma del escenario'.
+    fr: Expression évoquant la scène ou la vie théâtrale, souvent utilisée métaphoriquement pour décrire
+      une vie de spectacle, de célébrité ou de regard public. Tirée du mot 'подмостки', signifiant 'échafaudage'
+      ou 'plateforme de scène'.
+    de: Ein Ausdruck, der die Bühne oder das Theaterleben evoziert und metaphorisch für ein Leben voller
+      Auftritte, Ruhm oder öffentlicher Beobachtung steht. Abgeleitet von 'подмостки' (Bühnenplattform
+      oder Gerüst).
+    it: Frase che evoca il palcoscenico o la vita teatrale, spesso usata metaforicamente per descrivere
+      una vita di performance, fama o esposizione pubblica. Deriva da 'подмостки', che significa 'impalcatura'
+      o 'piattaforma del palco'.
+    pt: Expressão que evoca o palco ou a vida teatral, usada metaforicamente para descrever uma vida de
+      apresentações, fama ou escrutínio público. Derivada de 'подмостки', que significa 'andaimes' ou
+      'plataforma do palco'.
+    ru: Фраза, ассоциирующаяся со сценой или театральной жизнью, часто используется метафорически для
+      описания жизни, полной выступлений, славы или публичного внимания. Происходит от слова 'подмостки'
+      (леса, подмостки сцены).
+    ja: 舞台や演劇生活を想起させる表現で、しばしば演技、名声、公的な注目を浴びる生活を比喩的に表す。'подмостки'（舞台の足場やステージ）に由来する。
+    zh: 唤起舞台或戏剧生活的短语，常用于比喻描述充满表演、名声或公众审视的生活。源自俄语'подмостки'（脚手架或舞台平台）。
+    ar: عبارة تستحضر المسرح أو الحياة المسرحية، تُستخدم غالبًا بشكل مجازي لوصف حياة مليئة بالأداء أو الشهرة
+      أو التدقيق العام. مشتقة من الكلمة الروسية 'подмостки' التي تعني 'سقالة' أو 'منصة المسرح'.
+    he: ביטוי המזכיר את הבמה או החיים התיאטרליים, המשמש לעיתים קרובות באופן מטפורי לתיאור חיים של הופעות,
+      פרסום או חשיפה ציבורית. נגזר מהמילה הרוסית 'подмостки' שפירושה 'פיגומים' או 'במה'.
+  learner_level: B2
+  confidence: 0.85
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.ru_theatre_phrases_на_подмостках_сцены
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ru_theatre_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Common
+    phrase; not a specific cultural reference of significant value.'
+- id: ru_cultural_reference_оперетта_искусство_лёгкое_2070d84a
+  language: ru
+  canonical_reference: Оперетта — искусство лёгкое
+  reference_type: cultural_reference
+  surface_patterns:
+  - оперетта — искусство лёгкое
+  - оперетта — лёгкое искусство
+  - оперетта — искусство лёгкое и весёлое
+  short_explanation: A phrase often attributed to composer Ivan Dunaevsky, reflecting the light and entertaining
+    nature of operetta compared to more serious opera. Used to describe something frivolous or unserious.
+  i18n_explanations:
+    en: A phrase often attributed to composer Ivan Dunaevsky, reflecting the light and entertaining nature
+      of operetta compared to more serious opera. Used to describe something frivolous or unserious.
+    es: Frase atribuida al compositor Ivan Dunaevsky, que refleja la naturaleza ligera y entretenida de
+      la opereta en comparación con la ópera más seria. Se usa para describir algo frívolo o poco serio.
+    fr: Expression souvent attribuée au compositeur Ivan Dunaevsky, reflétant le caractère léger et divertissant
+      de l'opérette par rapport à l'opéra, plus sérieux. Utilisée pour décrire quelque chose de frivole
+      ou peu sérieux.
+    de: Ein oft dem Komponisten Ivan Dunaevsky zugeschriebenes Zitat, das die leichte und unterhaltsame
+      Natur der Operette im Vergleich zur ernsteren Oper widerspiegelt. Wird verwendet, um etwas Frivoles
+      oder Unernstes zu beschreiben.
+    it: Frase spesso attribuita al compositore Ivan Dunaevsky, che riflette la natura leggera e divertente
+      dell'operetta rispetto all'opera più seria. Usata per descrivere qualcosa di frivolo o poco serio.
+    pt: Frase frequentemente atribuída ao compositor Ivan Dunaevsky, que reflete a natureza leve e divertida
+      da opereta em comparação com a ópera, mais séria. Usada para descrever algo frívolo ou pouco sério.
+    ru: Фраза, часто приписываемая композитору Ивану Дунаевскому, отражающая лёгкий и развлекательный
+      характер оперетты в отличие от более серьёзной оперы. Используется для описания чего-то легкомысленного
+      или несерьёзного.
+    ja: 作曲家イヴァン・ドゥナエフスキーに帰せられることの多い言葉で、オペラに比べてオペレッタの軽快で娯楽的な性質を反映している。軽薄なものや真面目でないものを表す際に用いられる。
+    zh: 常被归于作曲家伊万·杜纳耶夫斯基的名下，反映了轻歌剧与正歌剧相比的轻松娱乐特性。用于形容轻浮或不严肃的事物。
+    ar: عبارة تُنسب غالبًا إلى الملحن إيفان دونايفسكي، تعكس الطبيعة الخفيفة والترفيهية للأوبريت مقارنة
+      بالأوبرا الأكثر جدية. تُستخدم لوصف شيء تافه أو غير جاد.
+    he: ביטוי המיוחס לעיתים למלחין איוון דונאייבסקי, המשקף את אופייה הקליל והבידורי של האופרטה לעומת האופרה,
+      שהיא רצינית יותר. משמש לתיאור דבר מה קל דעת או לא רציני.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.ru.explanation.ru_music_phrases_оперетта_искусство_лёгкое
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition_attributed_to_иван_дунаевский
+  source_work: Various
+  source_author: Oral tradition / attributed to Иван Дунаевский
+  source_license: copyright_or_rights_review_needed
+  source_dataset: ru_music_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Dunaevsky is uncertain; phrase is generic.'
+- id: ru_literary_reference_поёт_душа_93c26ca5
+  language: ru
+  canonical_reference: Поёт душа
+  reference_type: literary_reference
+  surface_patterns:
+  - душа поёт
+  - у него душа поёт
+  - душа поёт от радости
+  - душа поёт и ликует
+  short_explanation: Expresses deep inner joy or emotional fulfillment, often used to describe a state
+    of happiness that resonates with one's soul. The phrase is commonly used in everyday speech and literature
+    to convey profound emotional satisfaction.
+  i18n_explanations:
+    en: Expresses deep inner joy or emotional fulfillment, often used to describe a state of happiness
+      that resonates with one's soul. The phrase is commonly used in everyday speech and literature to
+      convey profound emotional satisfaction.
+    es: Expresa una alegría interior profunda o satisfacción emocional, usada para describir un estado
+      de felicidad que resuena con el alma. La frase es común en el habla cotidiana y la literatura para
+      transmitir una profunda satisfacción emocional.
+    fr: Exprime une joie intérieure profonde ou une plénitude émotionnelle, souvent utilisée pour décrire
+      un état de bonheur qui résonne avec l'âme. La phrase est courante dans le langage quotidien et la
+      littérature pour évoquer une satisfaction émotionnelle profonde.
+    de: Drückt tiefe innere Freude oder emotionale Erfüllung aus, oft verwendet, um einen Zustand des
+      Glücks zu beschreiben, der mit der Seele resoniert. Der Ausdruck ist im Alltag und in der Literatur
+      verbreitet, um tiefe emotionale Zufriedenheit zu vermitteln.
+    it: Esprime una gioia interiore profonda o una soddisfazione emotiva, spesso usata per descrivere
+      uno stato di felicità che risuona con l'anima. La frase è comune nel linguaggio quotidiano e nella
+      letteratura per trasmettere una profonda soddisfazione emotiva.
+    pt: Expressa uma alegria interior profunda ou satisfação emocional, frequentemente usada para descrever
+      um estado de felicidade que ressoa com a alma. A frase é comum na linguagem cotidiana e na literatura
+      para transmitir profunda satisfação emocional.
+    ru: Выражает глубокую внутреннюю радость или эмоциональное удовлетворение, часто используется для
+      описания состояния счастья, которое резонирует с душой. Фраза распространена в повседневной речи
+      и литературе для передачи глубокого эмоционального удовлетворения.
+    ja: 深い内面の喜びや感情的な充足感を表し、魂に響く幸福の状態を描写する際に使われます。日常会話や文学で、深い感情的な満足を伝えるために用いられる表現です。
+    zh: 表达深层的内心喜悦或情感满足，常用于描述与灵魂共鸣的幸福状态。该短语在日常语言和文学中常用于传达深刻的情感满足。
+    ar: يعبر عن فرح داخلي عميق أو رضا عاطفي، ويُستخدم غالبًا لوصف حالة سعادة تت resonates مع الروح. العبارة
+      شائعة في اللغة اليومية والأدب لنقل رضا عاطفي عميق.
+    he: מבטא שמחה פנימית עמוקה או סיפוק רגשי, ומשמש לרוב לתיאור מצב של אושר שמהדהד עם הנשמה. הביטוי נפוץ
+      בשפה היומיומית ובספרות כדי להביע סיפוק רגשי עמוק.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.ru.explanation.ru_common_phrases_поёт_душа
+  source_work_key: mnemosyne.ru.work.разные_произведения_xix_века
+  source_author_key: mnemosyne.ru.author.устная_традиция_разные_авторы
+  source_work: Разные произведения XIX века
+  source_author: Устная традиция / Разные авторы
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ru_common_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase is a common idiom rather than a specific literary reference, and its attribution to multiple
+    19th-century works is imprecise.'
+- id: ru_literary_reference_талант_и_вдохновение_316d3106
+  language: ru
+  canonical_reference: Талант и вдохновение
+  reference_type: literary_reference
+  surface_patterns:
+  - талант и вдохновение
+  - без таланта и вдохновения
+  - вопрос таланта и вдохновения
+  short_explanation: A phrase highlighting the dual importance of innate ability (talent) and creative
+    impulse (inspiration) in artistic or intellectual work. It is often used in discussions about creativity,
+    artistry, and the creative process.
+  i18n_explanations:
+    en: A phrase highlighting the dual importance of innate ability (talent) and creative impulse (inspiration)
+      in artistic or intellectual work. It is often used in discussions about creativity, artistry, and
+      the creative process.
+    es: Una frase que destaca la importancia dual de la capacidad innata (talento) y el impulso creativo
+      (inspiración) en el trabajo artístico o intelectual. Se usa frecuentemente en discusiones sobre
+      creatividad, arte y el proceso creativo.
+    fr: Une expression qui souligne l'importance double de la capacité innée (talent) et de l'impulsion
+      créative (inspiration) dans le travail artistique ou intellectuel. Elle est souvent utilisée dans
+      les discussions sur la créativité, l'art et le processus créatif.
+    de: Ein Ausdruck, der die doppelte Bedeutung von angeborener Fähigkeit (Talent) und schöpferischem
+      Antrieb (Inspiration) in künstlerischer oder intellektueller Arbeit betont. Er wird häufig in Diskussionen
+      über Kreativität, Kunst und den kreativen Prozess verwendet.
+    it: Un'espressione che mette in evidenza l'importanza duplice della capacità innata (talento) e dell'impulso
+      creativo (ispirazione) nel lavoro artistico o intellettuale. Viene spesso usata nelle discussioni
+      sulla creatività, l'arte e il processo creativo.
+    pt: Uma expressão que destaca a importância dupla da capacidade inata (talento) e do impulso criativo
+      (inspiração) no trabalho artístico ou intelectual. É frequentemente usada em discussões sobre criatividade,
+      arte e o processo criativo.
+    ru: Фраза, подчеркивающая двойную важность врожденной способности (таланта) и творческого импульса
+      (вдохновения) в художественной или интеллектуальной работе. Часто используется в обсуждениях творчества,
+      мастерства и творческого процесса.
+    ja: 芸術的または知的な仕事において、生まれつきの能力（才能）と創造的な衝動（インスピレーション）の二重の重要性を強調する表現です。創造性、芸術性、創造プロセスについて議論する際によく用いられます。
+    zh: 强调天赋（才能）和创造冲动（灵感）在艺术或知识工作中的双重重要性的短语。常用于讨论创造力、艺术性和创作过程。
+    ar: عبارة تسلط الضوء على الأهمية المزدوجة للموهبة الفطرية (الموهبة) والدافع الإبداعي (الإلهام) في
+      العمل الفني أو الفكري. غالبًا ما تُستخدم في مناقشات حول الإبداع والفن وعملية الإبداع.
+    he: ביטוי המדגיש את החשיבות הכפולה של יכולת מולדת (כישרון) ודחף יצירתי (השראה) בעבודה אמנותית או אינטלקטואלית.
+      משמש לעיתים קרובות בדיונים על יצירתיות, אמנות ותהליך היצירה.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.ru.explanation.ru_common_phrases_талант_и_вдохновение
+  source_work_key: mnemosyne.ru.work.разные_произведения_xix_xx_веков
+  source_author_key: mnemosyne.ru.author.устная_традиция_разные_авторы
+  source_work: Разные произведения XIX-XX веков
+  source_author: Устная традиция / Разные авторы
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ru_common_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- This
+    is a general concept rather than a specific literary reference; the source attribution is too vague.'
+- id: ru_classical_or_scriptural_allusion_аристотель_сказал_платон_мне_друг_но_истина_дороже_6cbf2660
+  language: ru
+  canonical_reference: 'Аристотель сказал: «Платон мне друг, но истина дороже»'
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Платон мне друг, но истина дороже
+  - Платон мне друг, но истина важнее
+  - Платон мне друг, но истина превыше всего
+  - 'Аристотель сказал: «Платон мне друг, но истина дороже»'
+  - 'Как сказал Аристотель: «Платон мне друг, но истина дороже»'
+  short_explanation: A classical maxim attributed to Aristotle, emphasizing the priority of truth over
+    personal loyalty. Often used to justify impartiality in intellectual or moral debates.
+  i18n_explanations:
+    en: A classical maxim attributed to Aristotle, emphasizing the priority of truth over personal loyalty.
+      Often used to justify impartiality in intellectual or moral debates.
+    es: Un dicho clásico atribuido a Aristóteles que enfatiza la prioridad de la verdad sobre la lealtad
+      personal. Se usa para justificar la imparcialidad en debates intelectuales o morales.
+    fr: Une maxime classique attribuée à Aristote, soulignant la priorité de la vérité sur la loyauté
+      personnelle. Souvent utilisée pour justifier l'impartialité dans les débats intellectuels ou moraux.
+    de: Ein klassischer Ausspruch, der Aristoteles zugeschrieben wird, der die Priorität der Wahrheit
+      über persönliche Loyalität betont. Wird oft verwendet, um Unparteilichkeit in intellektuellen oder
+      moralischen Debatten zu rechtfertigen.
+    it: Un detto classico attribuito ad Aristotele che sottolinea la priorità della verità sulla lealtà
+      personale. Spesso usato per giustificare l'imparzialità nei dibattiti intellettuali o morali.
+    pt: Um dito clássico atribuído a Aristóteles que enfatiza a prioridade da verdade sobre a lealdade
+      pessoal. Geralmente usado para justificar a imparcialidade em debates intelectuais ou morais.
+    ru: Классический афоризм, приписываемый Аристотелю, подчеркивающий приоритет истины над личной преданностью.
+      Часто используется для оправдания беспристрастности в интеллектуальных или моральных спорах.
+    ja: アリストテレスに帰せられる格言で、真実が個人的な忠誠よりも優先されることを強調しています。知的または道徳的な議論における公平性を正当化するためにしばしば用いられます。
+    zh: 归于亚里士多德的经典名言，强调真理重于个人忠诚。常用于为知识或道德辩论中的公正性辩护。
+    ar: قول كلاسيكي يُنسب إلى أرسطو، يبرز الأولوية للحقيقة على الولاء الشخصي. يُستخدم غالبًا لتبرير الحيادية
+      في المناقشات الفكرية أو الأخلاقية.
+    he: פתגם קלאסי המיוחס לאריסטו, המדגיש את קדימות האמת על פני נאמנות אישית. משמש לעיתים קרובות להצדקת
+      אי-משוא פנים בדיונים אינטלקטואליים או מוסריים.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  variants:
+  - Платон мне друг, но истина дороже всего
+  - Платон мне друг, но истина важнее дружбы
+  explanation_key: mnemosyne.ru.explanation.aristotle_ethics_phrases_аристотель_сказал_платон_
+  source_work_key: mnemosyne.ru.work.никомахова_этика
+  source_author_key: mnemosyne.ru.author.аристотель
+  source_work: Никомахова этика
+  source_author: Аристотель
+  source_url: https://ru.wikisource.org/wiki/Никомахова_этика_(изд._1911)/Книга_1
+  source_license: public_domain
+  source_dataset: aristotle_ethics_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    source work ''Никомахова этика'' is not verified; the phrase is apocryphal.'
+- id: ru_literary_reference_всякое_познание_начинается_с_чуда_4b02e732
+  language: ru
+  canonical_reference: Всякое познание начинается с чуда
+  reference_type: literary_reference
+  surface_patterns:
+  - Всякое познание начинается с чуда
+  short_explanation: A philosophical statement suggesting that all knowledge begins with a sense of wonder
+    or marvel. Often cited in discussions about the origins of scientific inquiry.
+  i18n_explanations:
+    en: A philosophical statement suggesting that all knowledge begins with a sense of wonder or marvel.
+      Often cited in discussions about the origins of scientific inquiry.
+    es: Una afirmación filosófica que sugiere que todo conocimiento comienza con un sentido de asombro
+      o maravilla. A menudo citada en discusiones sobre los orígenes de la investigación científica.
+    fr: Une affirmation philosophique suggérant que tout savoir commence par un sentiment d'émerveillement
+      ou de stupéfaction. Souvent citée dans les discussions sur les origines de l'enquête scientifique.
+    de: Eine philosophische Aussage, die nahelegt, dass alles Wissen mit einem Gefühl von Staunen oder
+      Verwunderung beginnt. Wird oft in Diskussionen über die Ursprünge wissenschaftlicher Forschung zitiert.
+    it: Un'affermazione filosofica che suggerisce che ogni conoscenza inizia con un senso di meraviglia.
+      Spesso citata nelle discussioni sulle origini dell'indagine scientifica.
+    pt: Uma afirmação filosófica que sugere que todo conhecimento começa com um senso de admiração ou
+      maravilha. Frequentemente citada em discussões sobre as origens da investigação científica.
+    ru: Философское утверждение, предполагающее, что любое знание начинается с чувства удивления или восхищения.
+      Часто цитируется в обсуждениях о происхождении научного познания.
+    ja: あらゆる知識は驚きや畏敬の念から始まるという哲学的な主張。科学的探求の起源についての議論でしばしば引用されます。
+    zh: 一句哲学名言，认为所有知识始于惊奇或奇迹感。常在探讨科学起源的讨论中被引用。
+    ar: قول فلسفي يقترح أن كل معرفة تبدأ بشعور بالدهشة أو العجب. غالبًا ما يُستشهد به في مناقشات حول أصول
+      الاستقصاء العلمي.
+    he: טענה פילוסופית הטוענת שכל ידע מתחיל בתחושת פליאה או פלא. לעיתים קרובות מצוטטת בדיונים על מקורותיה
+      של החקירה המדעית.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  variants:
+  - Всякое познание начинается с удивления
+  - Познание начинается с чуда
+  explanation_key: mnemosyne.ru.explanation.humboldt_phrases_всякое_познание_начинается_с_чуда
+  source_work_key: mnemosyne.ru.work.размышления_о_науке_и_искусстве
+  source_author_key: mnemosyne.ru.author.александр_гумбольдт
+  source_work: Размышления о науке и искусстве
+  source_author: Александр Гумбольдт
+  source_url: https://ru.wikisource.org/wiki/Размышления_о_науке_и_искусстве_(Гумбольдт)
+  source_license: public_domain
+  source_dataset: humboldt_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Humboldt is uncertain; the source work is not identifiable.'
+- id: ru_proverb_tradition_знание_сила_4cacc255
+  language: ru
+  canonical_reference: Знание — сила
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Знание — сила
+  - Знание сила
+  - Знания — сила
+  short_explanation: A proverb emphasizing the power of knowledge and education. It is widely used in
+    Russian culture to motivate learning and intellectual pursuits, reflecting Enlightenment ideals.
+  i18n_explanations:
+    en: A proverb emphasizing the power of knowledge and education. It is widely used in Russian culture
+      to motivate learning and intellectual pursuits, reflecting Enlightenment ideals.
+    es: Un proverbio que enfatiza el poder del conocimiento y la educación. Se usa ampliamente en la cultura
+      rusa para motivar el aprendizaje y las búsquedas intelectuales, reflejando ideales de la Ilustración.
+    fr: Un proverbe qui souligne le pouvoir du savoir et de l'éducation. Il est largement utilisé dans
+      la culture russe pour motiver l'apprentissage et les quêtes intellectuelles, reflétant les idéaux
+      des Lumières.
+    de: Ein Sprichwort, das die Macht von Wissen und Bildung betont. Es wird in der russischen Kultur
+      häufig verwendet, um Lernen und intellektuelle Bestrebungen zu fördern, und spiegelt die Ideale
+      der Aufklärung wider.
+    it: Un proverbio che enfatizza il potere della conoscenza e dell'istruzione. È ampiamente usato nella
+      cultura russa per motivare l'apprendimento e le ricerche intellettuali, riflettendo gli ideali dell'Illuminismo.
+    pt: Um provérbio que enfatiza o poder do conhecimento e da educação. É amplamente usado na cultura
+      russa para motivar o aprendizado e as buscas intelectuais, refletindo ideais iluministas.
+    ru: Пословица, подчеркивающая силу знания и образования. Широко используется в русской культуре для
+      мотивации обучения и интеллектуальных поисков, отражая идеалы Просвещения.
+    ja: 知識と教育の力を強調することわざ。ロシア文化で広く使われ、学習や知的探求を奨励する際に用いられ、啓蒙主義の理想を反映している。
+    zh: 强调知识与教育力量的谚语。在俄罗斯文化中广泛用于激励学习与知识追求，体现启蒙运动的理想。
+    ar: مثل يبرز قوة المعرفة والتعليم. يُستخدم على نطاق واسع في الثقافة الروسية لتحفيز التعلم والسعي الفكري،
+      مما يعكس المثل العليا للتنوير.
+    he: פתגם המדגיש את כוחה של הידע והחינוך. נפוץ בתרבות הרוסית כדי לעודד למידה ומחקר אינטלקטואלי, משקף
+      את ערכי הנאורות.
+  learner_level: A2
+  confidence: 0.75
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.ru.explanation.russian_proverbs_knowledge_знание_сила
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: russian_proverbs_knowledge
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Proverb
+    correctly identified but source author should be Francis Bacon, not oral tradition; needs refinement.'
+- id: ru_classical_or_scriptural_allusion_платон_друг_но_истина_дороже_56c83ad0
+  language: ru
+  canonical_reference: Платон — друг, но истина дороже
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Платон — друг, но истина дороже
+  - Платон — друг, но правда дороже
+  - Истина дороже дружбы
+  - Платон — друг, но истина важнее
+  short_explanation: A paraphrase of Plato's idea that truth is more valuable than friendship or personal
+    loyalty. In Russian culture, it is used to justify prioritizing objective facts over personal relationships.
+  i18n_explanations:
+    en: A paraphrase of Plato's idea that truth is more valuable than friendship or personal loyalty.
+      In Russian culture, it is used to justify prioritizing objective facts over personal relationships.
+    es: Una paráfrasis de la idea de Platón de que la verdad es más valiosa que la amistad o la lealtad
+      personal. En la cultura rusa, se usa para justificar la priorización de los hechos objetivos sobre
+      las relaciones personales.
+    fr: Une paraphrase de l'idée de Platon selon laquelle la vérité est plus précieuse que l'amitié ou
+      la loyauté personnelle. Dans la culture russe, elle est utilisée pour justifier la priorité donnée
+      aux faits objectifs sur les relations personnelles.
+    de: Eine Umschreibung von Platons Idee, dass die Wahrheit wertvoller ist als Freundschaft oder persönliche
+      Loyalität. In der russischen Kultur wird sie verwendet, um die Bevorzugung objektiver Fakten gegenüber
+      persönlichen Beziehungen zu rechtfertigen.
+    it: Una parafrasi dell'idea di Platone secondo cui la verità è più preziosa dell'amicizia o della
+      lealtà personale. Nella cultura russa, viene usata per giustificare la priorità dei fatti oggettivi
+      sulle relazioni personali.
+    pt: Uma paráfrase da ideia de Platão de que a verdade é mais valiosa do que a amizade ou a lealdade
+      pessoal. Na cultura russa, é usada para justificar a priorização de fatos objetivos sobre relacionamentos
+      pessoais.
+    ru: Парафраз идеи Платона о том, что истина дороже дружбы или личной преданности. В русской культуре
+      используется для оправдания приоритета объективных фактов над личными отношениями.
+    ja: プラトンの考え「真理は友情や個人的忠誠よりも価値がある」の意訳。ロシア文化では、個人的関係よりも客観的事実を優先する正当化として用いられる。
+    zh: 柏拉图思想「真理比友谊或个人忠诚更有价值」的意译。在俄罗斯文化中，用于证明优先考虑客观事实而非个人关系的合理性。
+    ar: إعادة صياغة لفكرة أفلاطون القائلة بأن الحقيقة أهم من الصداقة أو الولاء الشخصي. في الثقافة الروسية،
+      تُستخدم لتبرير إعطاء الأولوية للحقائق الموضوعية على العلاقات الشخصية.
+    he: פרפרזה על רעיון אפלטון לפיו האמת יקרה יותר מחברות או נאמנות אישית. בתרבות הרוסית משמשת להצדיק
+      מתן קדימות לעובדות אובייקטיביות על פני יחסים אישיים.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  variants:
+  - Платон мне друг, но истина дороже
+  explanation_key: mnemosyne.ru.explanation.plato_quotes_russian_платон_друг_но_истина_дороже
+  source_work_key: mnemosyne.ru.work.various_attributed_to_plato
+  source_author_key: mnemosyne.ru.author.plato_attributed
+  source_work: Various (attributed to Plato)
+  source_author: Plato (attributed)
+  source_location: Often cited as a paraphrase of Plato's philosophy, though exact source is disputed
+  source_license: copyright_or_rights_review_needed
+  source_dataset: plato_quotes_russian
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Plato is disputed; the phrase is more commonly attributed to Aristotle, and the entry overclaims
+    certainty.'
+- id: ru_proverb_tradition_сомнение_начало_мудрости_6d5e85ec
+  language: ru
+  canonical_reference: Сомнение — начало мудрости
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Сомнение — начало мудрости
+  - сомнение есть начало мудрости
+  - начало мудрости — сомнение
+  short_explanation: A paraphrase of the ancient Greek proverb 'Know thyself' (Γνῶθι σεαυτόν), often attributed
+    to Socrates or the Delphic Oracle. In Russian, it emphasizes the role of doubt in intellectual and
+    spiritual growth.
+  i18n_explanations:
+    en: A paraphrase of the ancient Greek proverb 'Know thyself' (Γνῶθι σεαυτόν), often attributed to
+      Socrates or the Delphic Oracle. In Russian, it emphasizes the role of doubt in intellectual and
+      spiritual growth.
+    es: Una paráfrasis del antiguo proverbio griego 'Conócete a ti mismo' (Γνῶθι σεαυτόν), atribuido a
+      menudo a Sócrates o al Oráculo de Delfos. En ruso, subraya el papel de la duda en el crecimiento
+      intelectual y espiritual.
+    fr: Une paraphrase de l'ancien proverbe grec 'Connais-toi toi-même' (Γνῶθι σεαυτόν), souvent attribué
+      à Socrate ou à l'Oracle de Delphes. En russe, il souligne le rôle du doute dans la croissance intellectuelle
+      et spirituelle.
+    de: Eine Umschreibung des antiken griechischen Sprichworts 'Erkenne dich selbst' (Γνῶθι σεαυτόν),
+      das oft Sokrates oder dem delphischen Orakel zugeschrieben wird. Im Russischen betont es die Rolle
+      des Zweifels für intellektuelles und spirituelles Wachstum.
+    it: Una parafrasi dell'antico proverbio greco 'Conosci te stesso' (Γνῶθι σεαυτόν), spesso attribuito
+      a Socrate o all'Oracolo di Delfi. In russo sottolinea il ruolo del dubbio nella crescita intellettuale
+      e spirituale.
+    pt: Uma paráfrase do antigo provérbio grego 'Conhece-te a ti mesmo' (Γνῶθι σεαυτόν), frequentemente
+      atribuído a Sócrates ou ao Oráculo de Delfos. Em russo, enfatiza o papel da dúvida no crescimento
+      intelectual e espiritual.
+    ru: Парафраз древнегреческого изречения 'Познай самого себя' (Γνῶθι σεαυτόν), часто приписываемого
+      Сократу или Дельфийскому оракулу. В русском языке подчеркивается роль сомнения в интеллектуальном
+      и духовном развитии.
+    ja: 古代ギリシャの格言「汝自身を知れ」（Γνῶθι σεαυτόν）の言い換えで、しばしばソクラテスやデルフォイの神託に帰せられる。ロシア語では、知的・精神的成長における疑いの役割を強調する。
+    zh: 对古希腊谚语“认识你自己”（Γνῶθι σεαυτόν）的意译，常被归于苏格拉底或德尔菲神谕。在俄语中，它强调怀疑在智识与精神成长中的作用。
+    ar: إعادة صياغة للمثل اليوناني القديم 'اعرف نفسك' (Γνῶθι σεαυτόν)، الذي يُنسب غالبًا إلى سقراط أو
+      وحي دلفاي. في الروسية، تؤكد على دور الشك في النمو الفكري والروحي.
+    he: פרפרזה על פתגם יווני עתיק 'דע את עצמך' (Γνῶθι σεαυτόν), המיוחס לעיתים לסוקרטס או לאורקל מדלפי.
+      ברוסית היא מדגישה את תפקידו של הספק בצמיחה אינטלקטואלית ורוחנית.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.ru.explanation.ru_proverbial_phrases_сомнение_начало_мудрости
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition_ancient_greek_philosophy
+  source_work: Various
+  source_author: Oral tradition / Ancient Greek philosophy
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ru_proverbial_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to ''Know thyself'' (Delphic Oracle) is inaccurate; the phrase is a later proverb, not directly from
+    ancient Greek philosophy.'
+- id: ru_classical_or_scriptural_allusion_человек_мера_всех_вещей_eaaedfc7
+  language: ru
+  canonical_reference: Человек — мера всех вещей
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Человек — мера всех вечей
+  - Человек — мера всех вещей в том, что они суть
+  - Человек есть мера всех вещей
+  short_explanation: A phrase attributed to the ancient Greek philosopher Protagoras, meaning 'Man is
+    the measure of all things.' It reflects a relativist view of truth and reality.
+  i18n_explanations:
+    en: A phrase attributed to the ancient Greek philosopher Protagoras, meaning 'Man is the measure of
+      all things.' It reflects a relativist view of truth and reality.
+    es: Frase atribuida al filósofo griego antiguo Protágoras, que significa 'El hombre es la medida de
+      todas las cosas'. Refleja una visión relativista de la verdad y la realidad.
+    fr: Une phrase attribuée au philosophe grec ancien Protagoras, signifiant 'L'homme est la mesure de
+      toute chose'. Elle reflète une vision relativiste de la vérité et de la réalité.
+    de: Ein Zitat des antiken griechischen Philosophen Protagoras, das bedeutet 'Der Mensch ist das Maß
+      aller Dinge'. Es spiegelt eine relativistische Sicht von Wahrheit und Wirklichkeit wider.
+    it: Una frase attribuita al filosofo greco antico Protagora, che significa 'L'uomo è la misura di
+      tutte le cose'. Riflette una visione relativista di verità e realtà.
+    pt: Uma frase atribuída ao filósofo grego antigo Protágoras, que significa 'O homem é a medida de
+      todas as coisas'. Reflete uma visão relativista da verdade e da realidade.
+    ru: Фраза, приписываемая древнегреческому философу Протагору, означающая 'Человек есть мера всех вещей'.
+      Отражает релятивистский взгляд на истину и реальность.
+    ja: 古代ギリシャの哲学者プロタゴラスに帰せられる言葉で、「人間は万物の尺度である」という意味。真理と現実に対する相対主義的な見方を反映しています。
+    zh: 古希腊哲学家普罗泰戈拉提出的名言，意为「人是万物的尺度」。反映了一种相对主义的真理与现实观。
+    ar: قولة تنسب إلى الفيلسوف اليوناني القديم بروتاغوراس، وتعني 'الإنسان مقياس كل شيء'. تعكس نظرة نسبية
+      للحقيقة والواقع.
+    he: ציטוט המיוחס לפילוסוף היווני הקדום פרוטגורס, שפירושו 'האדם הוא מידת כל הדברים'. משקף תפיסה רלטיביסטית
+      של אמת ומציאות.
+  learner_level: C1
+  confidence: 0.85
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.ru.explanation.greek_philosophy_russian_phrases_человек_мера_всех
+  source_work_key: mnemosyne.ru.work.трактат_об_истине
+  source_author_key: mnemosyne.ru.author.протагор_protagoras
+  source_work: Трактат об истине
+  source_author: Протагор (Protagoras)
+  source_url: https://ru.wikipedia.org/wiki/Протагор
+  source_license: public_domain
+  source_dataset: greek_philosophy_russian_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Surface
+    pattern ''Человек — мера всех вечей'' contains a typo (''вечей'' instead of ''вещей''); canonical
+    reference and explanation are correct.'
+- id: ru_literary_reference_ангел_с_золотыми_волосами_d4f1ec68
+  language: ru
+  canonical_reference: Ангел с золотыми волосами
+  reference_type: literary_reference
+  surface_patterns:
+  - Ангел с золотыми волосами
+  - Ангел с золотыми волосами, как в сказке
+  short_explanation: A phrase referencing a fairy-tale motif of an angel with golden hair, often used
+    to describe a beautiful or ethereal person, typically a child or young woman.
+  i18n_explanations:
+    en: A phrase referencing a fairy-tale motif of an angel with golden hair, often used to describe a
+      beautiful or ethereal person, typically a child or young woman.
+    es: Frase que hace referencia a un motivo de cuento de hadas de un ángel de cabello dorado, usada
+      para describir a una persona hermosa o etérea, generalmente un niño o una joven.
+    fr: Expression faisant référence à un motif de conte de fées d'un ange aux cheveux d'or, souvent utilisée
+      pour décrire une personne belle ou éthérée, généralement un enfant ou une jeune femme.
+    de: Ein Ausdruck, der sich auf ein Märchenmotiv eines Engels mit goldenen Haaren bezieht, oft verwendet,
+      um eine schöne oder ätherische Person, meist ein Kind oder eine junge Frau, zu beschreiben.
+    it: Espressione che fa riferimento a un motivo fiabesco di un angelo dai capelli d'oro, spesso usata
+      per descrivere una persona bella o eterea, tipicamente un bambino o una giovane donna.
+    pt: Expressão que faz referência a um motivo de conto de fadas de um anjo de cabelos dourados, usada
+      para descrever uma pessoa bonita ou etérea, geralmente uma criança ou uma jovem.
+    ru: Фраза, отсылающая к сказочному образу ангела с золотыми волосами, часто используется для описания
+      красивого или неземного человека, обычно ребёнка или молодой женщины.
+    ja: 金髪の天使という童話のモチーフに由来する表現で、美しいまたは非現実的な人物、特に子供や若い女性を表すのによく使われます。
+    zh: 指代童话中金发天使的意象，常用于描述美丽或超凡脱俗的人，通常是儿童或年轻女性。
+    ar: عبارة تشير إلى صورة خرافية لملاك ذو شعر ذهبي، تُستخدم لوصف شخص جميل أو رقيق، عادةً طفل أو شابة.
+    he: ביטוי המתייחס למוטיב אגדות של מלאך בעל שיער זהוב, המשמש לתיאור אדם יפה או אתרי, לרוב ילד או צעירה.
+  learner_level: B2
+  confidence: 0.8
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ru.explanation.russian_fairy_tales_phrases_ангел_с_золотыми_волос
+  source_work_key: mnemosyne.ru.work.сказка_об_иване_царевиче_жар_птице_и_о_сером_волке
+  source_author_key: mnemosyne.ru.author.александр_афанасьев_compiler
+  source_work: Сказка об Иване-царевиче, жар-птице и о сером волке
+  source_author: Александр Афанасьев (compiler)
+  source_url: https://ru.wikisource.org/wiki/Сказки_Афанасьева_(1855)/Иван-царевич,_жар-птица_и_серый_волк
+  source_license: public_domain
+  source_dataset: russian_fairy_tales_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to ''Сказка об Иване-царевиче, жар-птице и о сером волке'' is not clearly verifiable; the motif may
+    exist but confidence is overclaimed.'
+- id: ru_cultural_reference_венок_на_могилу_пушкина_b4036282
+  language: ru
+  canonical_reference: Венок на могилу Пушкина
+  reference_type: cultural_reference
+  surface_patterns:
+  - венок на могилу Пушкина
+  - венок Пушкину
+  short_explanation: A poetic tradition of laying wreaths or flowers at the tomb of Alexander Pushkin
+    in the Alexander Garden, Moscow, or at his grave in the Alexander Monastery in St. Petersburg. It
+    symbolizes homage to Russia's national poet and is a common act of cultural reverence.
+  i18n_explanations:
+    en: A poetic tradition of laying wreaths or flowers at the tomb of Alexander Pushkin in the Alexander
+      Garden, Moscow, or at his grave in the Alexander Monastery in St. Petersburg. It symbolizes homage
+      to Russia's national poet and is a common act of cultural reverence.
+    es: Una tradición poética de colocar coronas o flores en la tumba de Aleksandr Pushkin en el Jardín
+      de Alejandro, Moscú, o en su tumba en el Monasterio de Alejandro en San Petersburgo. Simboliza homenaje
+      al poeta nacional de Rusia y es un acto común de reverencia cultural.
+    fr: Une tradition poétique consistant à déposer des couronnes ou des fleurs sur la tombe d'Alexandre
+      Pouchkine dans le Jardin Alexandre à Moscou ou sur sa sépulture au monastère Alexandre à Saint-Pétersbourg.
+      Elle symbolise l'hommage au poète national de la Russie et est un acte courant de vénération culturelle.
+    de: Ein poetischer Brauch, Kränze oder Blumen am Grab von Alexander Puschkin im Alexander-Garten in
+      Moskau oder an seinem Grab im Alexander-Kloster in St. Petersburg niederzulegen. Er symbolisiert
+      die Ehrerbietung gegenüber Russlands Nationaldichter und ist ein üblicher Akt der kulturellen Verehrung.
+    it: Una tradizione poetica di deporre corone o fiori sulla tomba di Aleksandr Puškin nel Giardino
+      Aleksandrovskij a Mosca o sulla sua tomba nel Monastero di Aleksandr a San Pietroburgo. Simboleggia
+      l'omaggio al poeta nazionale della Russia ed è un atto comune di devozione culturale.
+    pt: Uma tradição poética de depositar coroas ou flores no túmulo de Alexander Pushkin no Jardim Alexandrovsky,
+      em Moscou, ou em seu túmulo no Mosteiro Alexandrovsky, em São Petersburgo. Simboliza homenagem ao
+      poeta nacional da Rússia e é um ato comum de reverência cultural.
+    ru: Поэтическая традиция возложения венков или цветов на могилу Александра Пушкина в Александровском
+      саду в Москве или на его могиле в Александро-Невской лавре в Санкт-Петербурге. Символизирует дань
+      уважения национальному поэту России и является распространённым актом культурного почитания.
+    ja: モスクワのアレクサンドル庭園にあるプーシキンの墓、またはサンクトペテルブルクのアレクサンドル修道院にある彼の墓に花輪や花を捧げる詩的な伝統。ロシアの国民的詩人に対する敬意の象徴であり、文化的敬意の一般的な行為です。
+    zh: 在莫斯科亚历山大花园的普希金墓前或圣彼得堡亚历山大修道院的普希金墓前敬献花圈或鲜花的诗意传统。象征着对俄罗斯民族诗人致敬，是一种常见的文化崇敬行为。
+    ar: تقليد شعري يتمثل بوضع أكاليل أو زهور على قبر ألكسندر بوشكين في حديقة ألكساندر بموسكو، أو على قبره
+      في دير ألكساندر في سانت بطرسبرغ. يرمز إلى الاحترام للشاعر الوطني لروسيا وهو عمل شائع من التبجيل
+      الثقافي.
+    he: מסורת שירית של הנחת זרי פרחים או פרחים על קברו של אלכסנדר פושקין בגן אלכסנדר במוסקבה או על קברו
+      במנזר אלכסנדר בסנקט פטרבורג. מסמלת כבוד למשורר הלאומי של רוסיה והיא מעשה נפוץ של כבוד תרבותי.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.ru.explanation.russian_literary_traditions_венок_на_могилу_пушкин
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_url: https://ru.wikipedia.org/wiki/Пушкин,_Александр_Сергеевич
+  source_license: public_domain
+  source_dataset: russian_literary_traditions
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Explanation
+    contains factual errors: Pushkin''s tomb is in Svyatogorsky Monastery near Pskov, not in Alexander
+    Garden or Alexander Monastery.'
+- id: ru_cultural_reference_вселенская_панихида_fb256473
+  language: ru
+  canonical_reference: Вселенская панихида
+  reference_type: cultural_reference
+  surface_patterns:
+  - Вселенская панихида
+  - вселенская панихида по усопшим
+  short_explanation: A memorial service in the Eastern Orthodox Church, held for the repose of the souls
+    of the departed, often on the third, ninth, and fortieth days after death, as well as on annual commemorations.
+    It is a central ritual in Orthodox funeral traditions.
+  i18n_explanations:
+    en: A memorial service in the Eastern Orthodox Church, held for the repose of the souls of the departed,
+      often on the third, ninth, and fortieth days after death, as well as on annual commemorations. It
+      is a central ritual in Orthodox funeral traditions.
+    es: Un servicio memorial en la Iglesia Ortodoxa Oriental, celebrado para el descanso de las almas
+      de los difuntos, generalmente en el tercer, noveno y cuadragésimo día después de la muerte, así
+      como en conmemoraciones anuales. Es un ritual central en las tradiciones funerarias ortodoxas.
+    fr: Un office commémoratif dans l'Église orthodoxe orientale, célébré pour le repos des âmes des défunts,
+      souvent aux troisième, neuvième et quarantième jours après le décès, ainsi que lors de commémorations
+      annuelles. C'est un rituel central dans les traditions funéraires orthodoxes.
+    de: Ein Gedächtnisgottesdienst in der orthodoxen Kirche, der für die Ruhe der Seelen der Verstorbenen
+      abgehalten wird, oft am dritten, neunten und vierzigsten Tag nach dem Tod sowie bei jährlichen Gedenkfeiern.
+      Er ist ein zentrales Ritual in der orthodoxen Begräbnistradition.
+    it: Un ufficio commemorativo nella Chiesa ortodossa orientale, celebrato per il riposo delle anime
+      dei defunti, spesso al terzo, nono e quarantesimo giorno dopo la morte, nonché in commemorazioni
+      annuali. È un rituale centrale nelle tradizioni funebri ortodosse.
+    pt: Um serviço memorial na Igreja Ortodoxa Oriental, realizado para o repouso das almas dos falecidos,
+      geralmente no terceiro, nono e quadragésimo dias após a morte, bem como em comemorações anuais.
+      É um ritual central nas tradições funerárias ortodoxas.
+    ru: Поминальная служба в Православной церкви, совершаемая для упокоения душ усопших, часто на третий,
+      девятый и сороковой дни после смерти, а также в дни ежегодных поминаний. Это центральный обряд в
+      православных погребальных традициях.
+    ja: 正教会で行われる死者の霊魂の安息を祈る記念式典で、通常は死後3日目、9日目、40日目、および年忌の際に執り行われます。正教の葬送儀礼の中心的な儀式です。
+    zh: 东正教为亡者灵魂安息而举行的纪念仪式，通常在去世后第三天、第九天、第四十天以及每年的忌日举行。这是正教葬礼传统中的核心仪式。
+    ar: مراسم تذكارية في الكنيسة الأرثوذكسية الشرقية، تقام لتكريم أرواح المتوفين، غالبًا في اليوم الثالث
+      والتاسع والأربعين بعد الوفاة، بالإضافة إلى التذكارات السنوية. إنها طقوس مركزية في تقاليد الجنازات
+      الأرثوذكسية.
+    he: טקס זיכרון בנצרות האורתודוקסית המזרחית, הנערך למען מנוחת נשמות הנפטרים, לרוב ביום השלישי, התשיעי
+      והארבעים לאחר המוות, וכן בטקסי זיכרון שנתיים. זהו טקס מרכזי במסורת ההלוויות האורתודוקסית.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.ru.explanation.orthodox_funeral_rituals_вселенская_панихида
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_url: https://azbyka.ru/otechnik/Protopopov_Vladimir/vseobshhaja-panihida/1
+  source_license: public_domain
+  source_dataset: orthodox_funeral_rituals
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Explanation
+    confuses ''Вселенская панихида'' (special universal memorial service) with the standard ''панихида''
+    for individuals; the description of days after death applies to individual memorials, not the universal
+    one.'
+- id: ru_cultural_reference_высоцкий_над_зарёй_0deea7e2
+  language: ru
+  canonical_reference: Высоцкий над Зарёй
+  reference_type: cultural_reference
+  surface_patterns:
+  - Высоцкий над Зарёй
+  - памятник Высоцкому над Зарёй
+  - скульптура Высоцкого над Зарёй
+  - Высоцкий, стоящий над Зарёй
+  short_explanation: Refers to the monument to Vladimir Vysotsky in Moscow, located near the Moskva River
+    embankment, symbolizing the poet and actor's connection to the city's cultural landscape.
+  i18n_explanations:
+    en: Refers to the monument to Vladimir Vysotsky in Moscow, located near the Moskva River embankment,
+      symbolizing the poet and actor's connection to the city's cultural landscape.
+    es: Se refiere al monumento a Vladimir Vysotsky en Moscú, ubicado cerca de la ribera del río Moskva,
+      que simboliza la conexión del poeta y actor con el paisaje cultural de la ciudad.
+    fr: Fait référence au monument dédié à Vladimir Vysotski à Moscou, situé près des quais de la Moskova,
+      symbolisant le lien du poète et acteur avec le paysage culturel de la ville.
+    de: Bezieht sich auf das Denkmal für Wladimir Wyssozki in Moskau am Moskwa-Ufer, das die Verbindung
+      des Dichters und Schauspielers zur kulturellen Landschaft der Stadt symbolisiert.
+    it: Si riferisce al monumento a Vladimir Vysotsky a Mosca, situato vicino al lungofiume della Moskva,
+      che simboleggia il legame del poeta e attore con il paesaggio culturale della città.
+    pt: Refere-se ao monumento a Vladimir Vysotsky em Moscou, localizado próximo à margem do rio Moskva,
+      simbolizando a conexão do poeta e ator com a paisagem cultural da cidade.
+    ru: Относится к памятнику Владимиру Высоцкому в Москве, расположенному у набережной Москвы-реки, символизирующему
+      связь поэта и актёра с культурным ландшафтом города.
+    ja: モスクワのモスクワ川沿いにあるウラジーミル・ヴィソツキーの記念碑を指し、詩人であり俳優でもあった彼と街の文化的風景とのつながりを象徴しています。
+    zh: 指的是位于莫斯科河沿岸的弗拉基米尔·维索茨基纪念碑，象征着这位诗人兼演员与城市文化景观的联系。
+    ar: يشير إلى النصب التذكاري لفلاديمير فيسوفسكي في موسكو، الواقع بالقرب من ضفاف نهر موسكو، ويرمز إلى
+      ارتباط الشاعر والممثل بالمنظر الثقافي للمدينة.
+    he: מתייחס לאנדרטה לוולדימיר ויסוצקי במוסקבה, הסמוכה לגדת נהר מוסקבה, המסמלת את הקשר של המשורר והשחקן
+      עם הנוף התרבותי של העיר.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.ru.explanation.ru_monuments_vysotsky_высоцкий_над_зарёй
+  source_work_key: mnemosyne.ru.work.памятник_владимиру_высоцкому
+  source_author_key: mnemosyne.ru.author.various
+  source_work: Памятник Владимиру Высоцкому
+  source_author: Various
+  source_url: https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D1%83_%D0%92%D1%8B%D1%81%D0%BE%D1%86%D0%BA%D0%BE%D0%BC%D1%83
+  source_license: public_domain
+  source_dataset: ru_monuments_vysotsky
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Surface
+    patterns are not widely recognized as referring to Vysotsky monument; ''над Зарёй'' may be invented.'
+- id: ru_cultural_reference_гроза_разразившаяся_в_москве_58def67a
+  language: ru
+  canonical_reference: Гроза, разразившаяся в Москве
+  reference_type: cultural_reference
+  surface_patterns:
+  - гроза в Москве
+  - московская гроза
+  - гроза над Москвой
+  - разразившаяся гроза в Москве
+  short_explanation: Refers to the severe thunderstorm that struck Moscow on May 29, 2017, causing significant
+    damage and becoming a notable event in recent Russian history.
+  i18n_explanations:
+    en: Refers to the severe thunderstorm that struck Moscow on May 29, 2017, causing significant damage
+      and becoming a notable event in recent Russian history.
+    es: Se refiere a la fuerte tormenta que azotó Moscú el 29 de mayo de 2017, causando daños significativos
+      y convirtiéndose en un evento notable en la historia reciente de Rusia.
+    fr: Fait référence à l'orage violent qui a frappé Moscou le 29 mai 2017, causant d'importants dégâts
+      et devenant un événement marquant de l'histoire récente de la Russie.
+    de: Bezieht sich auf das schwere Unwetter, das am 29. Mai 2017 Moskau traf und erhebliche Schäden
+      verursachte, wodurch es zu einem bedeutenden Ereignis der jüngeren russischen Geschichte wurde.
+    it: Si riferisce al violento temporale che ha colpito Mosca il 29 maggio 2017, causando ingenti danni
+      e diventando un evento notevole nella storia recente della Russia.
+    pt: Refere-se à forte tempestade que atingiu Moscou em 29 de maio de 2017, causando danos significativos
+      e tornando-se um evento notável na história recente da Rússia.
+    ru: Относится к сильной грозе, обрушившейся на Москву 29 мая 2017 года, причинившей значительный ущерб
+      и ставшей заметным событием в недавней российской истории.
+    ja: 2017年5月29日にモスクワを襲った激しい雷雨を指し、大きな被害をもたらし、ロシアの最近の歴史における注目すべき出来事となりました。
+    zh: 指的是2017年5月29日袭击莫斯科的严重雷暴，造成重大损失，成为俄罗斯近代史上的一个重要事件。
+    ar: يشير إلى العاصفة الرعدية الشديدة التي ضربت موسكو في 29 مايو 2017، مما تسبب في أضرار كبيرة وأصبح
+      حدثًا ملحوظًا في التاريخ الروسي الحديث.
+    he: מתייחס לסופת הרעמים החמורה שפקדה את מוסקבה ב-29 במאי 2017, גרמה לנזקים משמעותיים והפכה לאירוע
+      בולט בהיסטוריה הרוסית העכשווית.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.ru.explanation.ru_events_moscow_storm_гроза_разразившаяся_в_москв
+  source_work_key: mnemosyne.ru.work.various
+  source_author_key: mnemosyne.ru.author.various
+  source_work: Various
+  source_author: Various
+  source_url: https://ru.wikipedia.org/wiki/%D0%A3%D1%80%D0%B0%D0%B3%D0%B0%D0%BD_%D0%B2_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5_(2017)
+  source_license: public_domain
+  source_dataset: ru_events_moscow_storm
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase is not a standard cultural reference; the event is real but the phrasing is too generic.'
+- id: ru_literary_reference_кузнечик_9b91ae68
+  language: ru
+  canonical_reference: Кузнечик
+  reference_type: literary_reference
+  surface_patterns:
+  - кузнечик
+  - зелёный кузнечик
+  - прыгающий кузнечик
+  short_explanation: A grasshopper, often symbolizing summer, nature, or carefree life in Russian folklore
+    and literature. Frequently used in children's poems and songs.
+  i18n_explanations:
+    en: A grasshopper, often symbolizing summer, nature, or carefree life in Russian folklore and literature.
+      Frequently used in children's poems and songs.
+    es: Un saltamontes, que simboliza el verano, la naturaleza o la vida despreocupada en el folclore
+      y la literatura rusos. Muy usado en poemas y canciones infantiles.
+    fr: Un criquet, symbole de l'été, de la nature ou de la vie insouciante dans le folklore et la littérature
+      russes. Fréquemment utilisé dans les poèmes et chansons pour enfants.
+    de: Eine Heuschrecke, die im russischen Volksglauben und in der Literatur oft für Sommer, Natur oder
+      ein sorgenfreies Leben steht. Häufig in Kinderliedern und -gedichten zu finden.
+    it: Una cavalletta, simbolo dell'estate, della natura o della vita spensierata nel folclore e nella
+      letteratura russa. Usata spesso in poesie e canzoni per bambini.
+    pt: Um gafanhoto, que simboliza o verão, a natureza ou a vida despreocupada no folclore e na literatura
+      russos. Usado com frequência em poemas e canções infantis.
+    ru: Кузнечик, часто символизирующий лето, природу или беззаботную жизнь в русском фольклоре и литературе.
+      Часто встречается в детских стихах и песнях.
+    ja: ロシアの民話や文学で夏や自然、自由な生活を象徴するコオロギ。子供の詩や歌でよく使われる。
+    zh: 蚂蚱，在俄罗斯民间传说和文学中常象征夏天、自然或无忧无虑的生活。常见于儿童诗歌和歌曲中。
+    ar: جراد، يرمز غالبًا إلى الصيف أو الطبيعة أو الحياة البسيطة في الفولكلور والأدب الروس. يُستخدم كثيرًا
+      في الأشعار والأغاني للأطفال.
+    he: צרצר, המסמל לעיתים קרובות קיץ, טבע או חיים ללא דאגות בפולקלור ובספרות הרוסיים. משמש לעיתים קרובות
+      בשירים וסיפורים לילדים.
+  learner_level: A1
+  confidence: 0.6
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.ru.explanation.nekrasov_poems_кузнечик
+  source_work_key: mnemosyne.ru.work.кузнечик_музыкант
+  source_author_key: mnemosyne.ru.author.николай_александрович_некрасов
+  source_work: Кузнечик-музыкант
+  source_author: Николай Александрович Некрасов
+  source_url: https://ru.wikisource.org/wiki/%D0%9A%D1%83%D0%B7%D0%BD%D0%B5%D1%87%D0%B8%D0%BA-%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B0%D0%BD%D1%82_(%D0%9D%D0%B5%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D0%B2)
+  source_license: public_domain
+  source_dataset: nekrasov_poems
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Nekrasov as author of ''Кузнечик-музыкант'' is uncertain; likely a misattribution.'

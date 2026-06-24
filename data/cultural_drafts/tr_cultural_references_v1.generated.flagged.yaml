@@ -1,0 +1,758 @@
+- id: tr_cultural_reference_baba_zünnun_0f6deed6
+  language: tr
+  canonical_reference: Baba Zünnun
+  reference_type: cultural_reference
+  surface_patterns:
+  - Baba Zünnun
+  - Baba Zünnun efsanesi
+  short_explanation: Baba Zünnun is a legendary figure in Turkish folklore, often associated with a wise
+    or saintly character. The phrase may refer to a folk tale or a historical person.
+  i18n_explanations:
+    en: Baba Zünnun is a legendary figure in Turkish folklore, often associated with a wise or saintly
+      character. The phrase may refer to a folk tale or a historical person.
+    es: Baba Zünnun es una figura legendaria en el folclore turco, a menudo asociada con un personaje
+      sabio o santo. La frase puede referirse a un cuento popular o a una persona histórica.
+    fr: Baba Zünnun est une figure légendaire du folklore turc, souvent associée à un personnage sage
+      ou saint. L'expression peut faire référence à un conte populaire ou à une personne historique.
+    de: Baba Zünnun ist eine legendäre Figur der türkischen Folklore, oft mit einem weisen oder heiligen
+      Charakter assoziiert. Der Ausdruck kann sich auf ein Volksmärchen oder eine historische Person beziehen.
+    it: Baba Zünnun è una figura leggendaria nel folklore turco, spesso associata a un personaggio saggio
+      o santo. L'espressione può riferirsi a una fiaba popolare o a una persona storica.
+    pt: Baba Zünnun é uma figura lendária no folclore turco, frequentemente associada a um personagem
+      sábio ou santo. A expressão pode se referir a um conto popular ou a uma pessoa histórica.
+    ru: Баба Зюннюн — легендарная фигура в турецком фольклоре, часто ассоциируемая с мудрым или святым
+      персонажем. Фраза может относиться к народной сказке или исторической личности.
+    ja: ババ・ズンヌンはトルコの民間伝承における伝説的な人物で、しばしば賢者や聖人のような性格と関連付けられる。この語句は民話や歴史上の人物を指すことがある。
+    zh: 巴巴·尊农是土耳其民间传说中的传奇人物，常与智者或圣徒形象相关联。该短语可能指民间故事或历史人物。
+    ar: بابا زنون هو شخصية أسطورية في الفولكلور التركي، غالبًا ما يرتبط بشخصية حكيمة أو قديسة. قد تشير
+      العبارة إلى حكاية شعبية أو شخص تاريخي.
+    he: באבא זוננון הוא דמות אגדית בפולקלור הטורקי, לעתים קרובות מזוהה עם דמות חכמה או קדושה. הביטוי עשוי
+      להתייחס לסיפור עם או לאדם היסטורי.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  variants:
+  - Zünnun Baba
+  explanation_key: mnemosyne.tr.explanation.tr_cultural_references_baba_zünnun
+  source_work_key: mnemosyne.tr.work.oral_tradition
+  source_author_key: mnemosyne.tr.author.anonymous
+  source_work: Oral tradition
+  source_author: Anonymous
+  source_license: public_domain
+  source_dataset: tr_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Baba
+    Zünnun is obscure and lacks clear verifiable sources; confidence is appropriately low but may be too
+    high for a legendary figure.'
+- id: tr_cultural_reference_deli_petro_c60b9d00
+  language: tr
+  canonical_reference: Deli Petro
+  reference_type: cultural_reference
+  surface_patterns:
+  - Deli Petro
+  - Petro
+  short_explanation: A legendary figure in Turkish folklore, often depicted as a mad or eccentric character
+    in anecdotes.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: neutral
+  variants:
+  - Petro
+  explanation_key: mnemosyne.tr.explanation.tr_cultural_references_deli_petro
+  source_work_key: mnemosyne.tr.work.oral_tradition
+  source_author_key: mnemosyne.tr.author.oral_tradition
+  source_work: Oral tradition
+  source_author: Oral tradition
+  source_license: public_domain
+  source_dataset: tr_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Deli
+    Petro is not a widely recognized figure in Turkish folklore; the reference may be obscure or misattributed.'
+- id: tr_cultural_reference_kara_davut_c9cd2c7d
+  language: tr
+  canonical_reference: Kara Davut
+  reference_type: cultural_reference
+  surface_patterns:
+  - Kara Davut
+  - Kara Davut Paşa
+  short_explanation: A 17th-century Ottoman statesman and grand vizier, known for his role in the execution
+    of Sultan Osman II; his name is sometimes used in Turkish folklore as a bogeyman figure.
+  i18n_explanations:
+    en: A 17th-century Ottoman statesman and grand vizier, known for his role in the execution of Sultan
+      Osman II; his name is sometimes used in Turkish folklore as a bogeyman figure.
+    es: Un estadista y gran visir otomano del siglo XVII, conocido por su papel en la ejecución del sultán
+      Osman II; su nombre se usa a veces en el folclore turco como figura del coco.
+    fr: Un homme d'État et grand vizir ottoman du XVIIe siècle, connu pour son rôle dans l'exécution du
+      sultan Osman II ; son nom est parfois utilisé dans le folklore turc comme figure du croque-mitaine.
+    de: Ein osmanischer Staatsmann und Großwesir des 17. Jahrhunderts, bekannt für seine Rolle bei der
+      Hinrichtung von Sultan Osman II.; sein Name wird in der türkischen Folklore manchmal als Schreckgestalt
+      verwendet.
+    it: Uomo di stato e gran visir ottomano del XVII secolo, noto per il suo ruolo nell'esecuzione del
+      sultano Osman II; il suo nome è talvolta usato nel folklore turco come figura dell'uomo nero.
+    pt: Um estadista e grão-vizir otomano do século XVII, conhecido por seu papel na execução do sultão
+      Osman II; seu nome é às vezes usado no folclore turco como uma figura do bicho-papão.
+    ru: Османский государственный деятель и великий визирь XVII века, известный своей ролью в казни султана
+      Османа II; его имя иногда используется в турецком фольклоре как образ буки.
+    ja: 17世紀のオスマン帝国の政治家、大宰相。スルタン・オスマン2世の処刑に関与したことで知られ、その名はトルコの民間伝承でおばけとして使われることがある。
+    zh: 17世纪奥斯曼帝国政治家、大维齐尔，因参与处决苏丹奥斯曼二世而闻名；他的名字有时在土耳其民间传说中被用作吓唬人的怪物。
+    ar: رجل دولة وصدر أعظم عثماني في القرن السابع عشر، معروف بدوره في إعدام السلطان عثمان الثاني؛ يُستخدم
+      اسمه أحيانًا في الفولكلور التركي كشخصية مخيفة.
+    he: מדינאי עות'מאני ווזיר גדול מהמאה ה-17, ידוע בתפקידו בהוצאתו להורג של הסולטן עות'מאן השני; שמו
+      משמש לעתים בפולקלור הטורקי כדמות בוגימן.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: neutral
+  explanation_key: mnemosyne.tr.explanation.tr_cultural_references_kara_davut
+  source_work_key: mnemosyne.tr.work.various
+  source_author_key: mnemosyne.tr.author.historical_figure
+  source_work: Various
+  source_author: Historical figure
+  source_license: public_domain
+  source_dataset: tr_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- While
+    Kara Davut Paşa was a historical figure, his association with the execution of Osman II is correct,
+    but the bogeyman folklore usage is not well-documented and may be overstated.'
+- id: tr_literary_reference_i_stemem_elçi_istemem_328a49b2
+  language: tr
+  canonical_reference: İstemem elçi, istemem
+  reference_type: literary_reference
+  surface_patterns:
+  - istemem elçi istemem
+  - elçi istemem
+  short_explanation: A line from a Turkish folk song or poem, expressing a strong refusal, often used
+    humorously to mean 'I don't want it, messenger, I don't want it'.
+  i18n_explanations:
+    en: A line from a Turkish folk song or poem, expressing a strong refusal, often used humorously to
+      mean 'I don't want it, messenger, I don't want it'.
+    es: Una línea de una canción o poema popular turco, que expresa un fuerte rechazo, a menudo usado
+      humorísticamente para significar 'No lo quiero, mensajero, no lo quiero'.
+    fr: Un vers d'une chanson ou d'un poème folklorique turc, exprimant un refus catégorique, souvent
+      utilisé humoristiquement pour dire 'Je ne le veux pas, messager, je ne le veux pas'.
+    de: Eine Zeile aus einem türkischen Volkslied oder Gedicht, die eine starke Ablehnung ausdrückt, oft
+      humorvoll verwendet, um zu bedeuten 'Ich will es nicht, Bote, ich will es nicht'.
+    it: Un verso di una canzone o poesia popolare turca, che esprime un forte rifiuto, spesso usato umoristicamente
+      per significare 'Non lo voglio, messaggero, non lo voglio'.
+    pt: Uma linha de uma canção ou poema folclórico turco, expressando uma forte recusa, frequentemente
+      usada humoristicamente para significar 'Não quero, mensageiro, não quero'.
+    ru: Строка из турецкой народной песни или стихотворения, выражающая решительный отказ, часто используется
+      с юмором в значении 'Я не хочу этого, посланник, я не хочу'.
+    ja: トルコの民謡や詩の一節で、強い拒絶を表し、よくユーモラスに「いらない、使者よ、いらない」という意味で使われます。
+    zh: 土耳其民歌或诗歌中的一句，表达强烈拒绝，常幽默地用于表示'我不要，信使，我不要'。
+    ar: سطر من أغنية أو قصيدة شعبية تركية، يعبر عن رفض قوي، ويستخدم غالبًا بشكل فكاهي ليعني 'لا أريده،
+      أيها الرسول، لا أريده'.
+    he: שורה משיר או שיר עם טורקי, המבטאת סירוב נחרץ, המשמשת לעתים קרובות בהומור במשמעות 'אני לא רוצה
+      את זה, שליח, אני לא רוצה'.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.tr.explanation.tr_folk_phrases_i_stemem_elçi_istemem
+  source_work_key: mnemosyne.tr.work.turkish_folk_literature
+  source_author_key: mnemosyne.tr.author.anonymous
+  source_work: Turkish folk literature
+  source_author: Anonymous
+  source_license: public_domain
+  source_dataset: tr_folk_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Phrase
+    exists but not clearly a standard literary reference; may be from a specific folk song but unverifiable.'
+- id: tr_cultural_reference_mantığın_sınırı_yok_029e9832
+  language: tr
+  canonical_reference: Mantığın sınırı yok
+  reference_type: cultural_reference
+  surface_patterns:
+  - mantığın sınırı yok
+  - mantığın sınırı yoktur
+  short_explanation: This phrase means 'There is no limit to logic,' often used to emphasize that reasoning
+    can be applied endlessly. It is a common expression in Turkish intellectual discourse.
+  i18n_explanations:
+    en: This phrase means 'There is no limit to logic,' often used to emphasize that reasoning can be
+      applied endlessly. It is a common expression in Turkish intellectual discourse.
+    es: Esta frase significa 'No hay límite para la lógica', a menudo usada para enfatizar que el razonamiento
+      se puede aplicar sin fin. Es una expresión común en el discurso intelectual turco.
+    fr: Cette phrase signifie 'Il n'y a pas de limite à la logique', souvent utilisée pour souligner que
+      le raisonnement peut être appliqué sans fin. C'est une expression courante dans le discours intellectuel
+      turc.
+    de: Dieser Satz bedeutet 'Es gibt keine Grenze für die Logik' und wird oft verwendet, um zu betonen,
+      dass das Denken endlos angewendet werden kann. Es ist ein häufiger Ausdruck im türkischen intellektuellen
+      Diskurs.
+    it: Questa frase significa 'Non c'è limite alla logica', spesso usata per sottolineare che il ragionamento
+      può essere applicato all'infinito. È un'espressione comune nel discorso intellettuale turco.
+    pt: Esta frase significa 'Não há limite para a lógica', frequentemente usada para enfatizar que o
+      raciocínio pode ser aplicado infinitamente. É uma expressão comum no discurso intelectual turco.
+    ru: Эта фраза означает 'Нет предела логике', часто используется, чтобы подчеркнуть, что рассуждения
+      можно применять бесконечно. Это распространенное выражение в турецком интеллектуальном дискурсе.
+    ja: このフレーズは「論理に限界はない」という意味で、推論が無限に適用できることを強調するためによく使われます。トルコの知的言説で一般的な表現です。
+    zh: 这句话的意思是“逻辑没有极限”，常用于强调推理可以无限应用。这是土耳其知识界常见的表达。
+    ar: هذه العبارة تعني 'لا حدود للمنطق'، وغالبًا ما تستخدم للتأكيد على أن التفكير يمكن تطبيقه بلا نهاية.
+      إنها تعبير شائع في الخطاب الفكري التركي.
+    he: ביטוי זה פירושו 'אין גבול להיגיון', ומשמש לעתים קרובות כדי להדגיש שניתן ליישם חשיבה ללא סוף. זהו
+      ביטוי נפוץ בשיח האינטלקטואלי הטורקי.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: neutral
+  variants:
+  - mantığın sınırı yoktur
+  explanation_key: mnemosyne.tr.explanation.tr_common_phrases_mantığın_sınırı_yok
+  source_work_key: mnemosyne.tr.work.various
+  source_author_key: mnemosyne.tr.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: public_domain
+  source_dataset: tr_common_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Not
+    a recognized fixed phrase; may be a generic expression rather than a cultural reference.'
+- id: tr_proverb_tradition_meydan_boş_deve_yok_f3ca9b31
+  language: tr
+  canonical_reference: Meydan boş, deve yok
+  reference_type: proverb_tradition
+  surface_patterns:
+  - meydan boş deve yok
+  - meydan boş
+  short_explanation: This Turkish proverb means 'The square is empty, there is no camel,' used to indicate
+    that there is no opportunity or means to do something. It reflects a fatalistic attitude when circumstances
+    are unfavorable.
+  i18n_explanations:
+    en: This Turkish proverb means 'The square is empty, there is no camel,' used to indicate that there
+      is no opportunity or means to do something. It reflects a fatalistic attitude when circumstances
+      are unfavorable.
+    es: Este proverbio turco significa 'La plaza está vacía, no hay camello', usado para indicar que no
+      hay oportunidad o medios para hacer algo. Refleja una actitud fatalista cuando las circunstancias
+      son desfavorables.
+    fr: Ce proverbe turc signifie 'La place est vide, il n'y a pas de chameau', utilisé pour indiquer
+      qu'il n'y a ni opportunité ni moyen de faire quelque chose. Il reflète une attitude fataliste lorsque
+      les circonstances sont défavorables.
+    de: Dieses türkische Sprichwort bedeutet 'Der Platz ist leer, es gibt kein Kamel' und wird verwendet,
+      um anzuzeigen, dass es keine Gelegenheit oder Mittel gibt, etwas zu tun. Es spiegelt eine fatalistische
+      Haltung wider, wenn die Umstände ungünstig sind.
+    it: Questo proverbio turco significa 'La piazza è vuota, non c'è cammello', usato per indicare che
+      non c'è opportunità o mezzo per fare qualcosa. Riflette un atteggiamento fatalista quando le circostanze
+      sono sfavorevoli.
+    pt: Este provérbio turco significa 'A praça está vazia, não há camelo', usado para indicar que não
+      há oportunidade ou meios para fazer algo. Reflete uma atitude fatalista quando as circunstâncias
+      são desfavoráveis.
+    ru: Эта турецкая пословица означает 'Площадь пуста, верблюда нет', используется, чтобы указать, что
+      нет возможности или средств что-либо сделать. Она отражает фаталистическое отношение, когда обстоятельства
+      неблагоприятны.
+    ja: このトルコのことわざは「広場は空っぽ、ラクダはいない」という意味で、何かをする機会や手段がないことを示すために使われます。状況が不利なときの運命論的な態度を反映しています。
+    zh: 这句土耳其谚语的意思是“广场空荡荡，没有骆驼”，用于表示没有机会或手段做某事。它反映了在不利情况下的宿命论态度。
+    ar: هذا المثل التركي يعني 'الساحة فارغة، لا يوجد جمل'، يُستخدم للإشارة إلى عدم وجود فرصة أو وسيلة
+      لفعل شيء. إنه يعكس موقفًا قدريًا عندما تكون الظروف غير مواتية.
+    he: פתגם טורקי זה פירושו 'הכיכר ריקה, אין גמל', ומשמש לציון שאין הזדמנות או אמצעי לעשות משהו. הוא
+      משקף גישה פטליסטית כאשר הנסיבות אינן נוחות.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  variants:
+  - meydan boş deve yok
+  explanation_key: mnemosyne.tr.explanation.tr_proverbs_meydan_boş_deve_yok
+  source_work_key: mnemosyne.tr.work.various
+  source_author_key: mnemosyne.tr.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: public_domain
+  source_dataset: tr_proverbs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Not
+    a standard Turkish proverb; likely a misremembered or rare variant.'
+- id: tr_cultural_reference_tarhana_eşeği_a41a7062
+  language: tr
+  canonical_reference: Tarhana eşeği
+  reference_type: cultural_reference
+  surface_patterns:
+  - tarhana eşeği
+  - tarhana eşek
+  short_explanation: A Turkish idiom referring to a person who is lazy or good-for-nothing, literally
+    'tarhana donkey', from the idea that a donkey used for making tarhana (a dried soup) is not very useful.
+  i18n_explanations:
+    en: A Turkish idiom referring to a person who is lazy or good-for-nothing, literally 'tarhana donkey',
+      from the idea that a donkey used for making tarhana (a dried soup) is not very useful.
+    es: Modismo turco que se refiere a una persona perezosa o inútil, literalmente 'burro de tarhana',
+      de la idea de que un burro usado para hacer tarhana (una sopa seca) no es muy útil.
+    fr: Idiome turc désignant une personne paresseuse ou bonne à rien, littéralement 'âne de tarhana',
+      de l'idée qu'un âne utilisé pour faire du tarhana (une soupe séchée) n'est pas très utile.
+    de: Eine türkische Redewendung, die sich auf eine faule oder nichtsnutzige Person bezieht, wörtlich
+      'Tarhana-Esel', von der Vorstellung, dass ein Esel, der zur Herstellung von Tarhana (einer getrockneten
+      Suppe) verwendet wird, nicht sehr nützlich ist.
+    it: Idioma turco che si riferisce a una persona pigra o buona a nulla, letteralmente 'asino di tarhana',
+      dall'idea che un asino usato per fare tarhana (una zuppa secca) non sia molto utile.
+    pt: Expressão idiomática turca que se refere a uma pessoa preguiçosa ou inútil, literalmente 'burro
+      de tarhana', da ideia de que um burro usado para fazer tarhana (uma sopa seca) não é muito útil.
+    ru: Турецкий идиом, обозначающий ленивого или никчёмного человека, буквально 'тарханный осёл', от
+      идеи, что осёл, используемый для приготовления тарханы (сухой суп), не очень полезен.
+    ja: 怠け者や役立たずの人を指すトルコの慣用句で、文字通り「タルハナロバ」。タルハナ（乾燥スープ）を作るのに使われるロバはあまり役に立たないという考えから。
+    zh: 土耳其习语，指懒惰或无用的人，字面意思是“塔哈纳驴”，源于用来制作塔哈纳（一种干汤）的驴子不太有用。
+    ar: تعبير اصطلاحي تركي يشير إلى شخص كسول أو عديم الفائدة، حرفياً 'حمار الطرخانة'، من فكرة أن الحمار
+      المستخدم في صنع الطرخانة (حساء مجفف) ليس مفيداً جداً.
+    he: ביטוי טורקי המתייחס לאדם עצלן או חסר תועלת, מילולית 'חמור טרחנה', מהרעיון שחמור המשמש להכנת טרחנה
+      (מרק מיובש) אינו מועיל במיוחד.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: neutral
+  variants:
+  - tarhana eşeği gibi
+  explanation_key: mnemosyne.tr.explanation.tr_proverbs_phrases_tarhana_eşeği
+  source_work_key: mnemosyne.tr.work.various
+  source_author_key: mnemosyne.tr.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: public_domain
+  source_dataset: tr_proverbs_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Idiom
+    exists but explanation may be imprecise; ''tarhana eşeği'' more commonly refers to a person who is
+    always hungry or eats a lot.'
+- id: tr_cultural_reference_üç_beyinsiz_63de8cbd
+  language: tr
+  canonical_reference: Üç beyinsiz
+  reference_type: cultural_reference
+  surface_patterns:
+  - üç beyinsiz
+  - üç beyinsizler
+  short_explanation: A Turkish phrase meaning 'three brainless ones,' often used humorously to refer to
+    a trio of incompetent or foolish people.
+  i18n_explanations:
+    en: A Turkish phrase meaning 'three brainless ones,' often used humorously to refer to a trio of incompetent
+      or foolish people.
+    es: Una frase turca que significa 'tres sin cerebro', a menudo usada humorísticamente para referirse
+      a un trío de personas incompetentes o tontas.
+    fr: Une expression turque signifiant 'trois sans cervelle', souvent utilisée humoristiquement pour
+      désigner un trio de personnes incompétentes ou stupides.
+    de: Ein türkischer Ausdruck, der 'drei Hirnlose' bedeutet und oft humorvoll verwendet wird, um sich
+      auf ein Trio inkompetenter oder dummer Menschen zu beziehen.
+    it: Un'espressione turca che significa 'tre senza cervello', spesso usata umoristicamente per riferirsi
+      a un trio di persone incompetenti o sciocche.
+    pt: Uma expressão turca que significa 'três sem cérebro', frequentemente usada humoristicamente para
+      se referir a um trio de pessoas incompetentes ou tolas.
+    ru: Турецкое выражение, означающее 'трое безмозглых', часто используется с юмором для обозначения
+      тройки некомпетентных или глупых людей.
+    ja: 「三人の脳なし」という意味のトルコ語のフレーズで、無能または愚かな三人組をユーモラスに指すのに使われる。
+    zh: 土耳其短语，意为“三个没脑子的人”，常幽默地指代三个无能或愚蠢的人。
+    ar: عبارة تركية تعني 'ثلاثة بلا عقل'، تُستخدم غالباً بشكل فكاهي للإشارة إلى ثلاثي من الأشخاص غير الأكفاء
+      أو الحمقى.
+    he: ביטוי טורקי שפירושו 'שלושה חסרי מוח', המשמש לעתים קרובות בהומור כדי להתייחס לשלישיית אנשים לא
+      כשירים או טיפשים.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: neutral
+  explanation_key: mnemosyne.tr.explanation.tr_cultural_phrases_üç_beyinsiz
+  source_work_key: mnemosyne.tr.work.various
+  source_author_key: mnemosyne.tr.author.unknown
+  source_work: Various
+  source_author: Unknown
+  source_license: public_domain
+  source_dataset: tr_cultural_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Phrase
+    exists but is not a fixed cultural reference; usage is informal and context-dependent.'
+- id: tr_cultural_reference_yarın_da_bugün_gibidir_78823741
+  language: tr
+  canonical_reference: Yarın da bugün gibidir
+  reference_type: cultural_reference
+  surface_patterns:
+  - Yarın da bugün gibidir
+  - Yarın da bugün gibi
+  - Yarın da aynı
+  short_explanation: An expression meaning 'tomorrow is like today', often used to convey monotony or
+    the idea that nothing changes, sometimes with a fatalistic tone.
+  i18n_explanations:
+    en: An expression meaning 'tomorrow is like today', often used to convey monotony or the idea that
+      nothing changes, sometimes with a fatalistic tone.
+    es: Expresión que significa 'mañana es como hoy', usada a menudo para transmitir monotonía o la idea
+      de que nada cambia, a veces con un tono fatalista.
+    fr: Expression signifiant 'demain est comme aujourd'hui', souvent utilisée pour exprimer la monotonie
+      ou l'idée que rien ne change, parfois avec un ton fataliste.
+    de: Ein Ausdruck, der bedeutet 'morgen ist wie heute', oft verwendet, um Monotonie oder die Vorstellung,
+      dass sich nichts ändert, zu vermitteln, manchmal mit einem fatalistischen Ton.
+    it: Espressione che significa 'domani è come oggi', spesso usata per trasmettere monotonia o l'idea
+      che nulla cambi, a volte con un tono fatalista.
+    pt: Expressão que significa 'amanhã é como hoje', frequentemente usada para transmitir monotonia ou
+      a ideia de que nada muda, às vezes com um tom fatalista.
+    ru: Выражение, означающее 'завтра как сегодня', часто используется для передачи монотонности или идеи,
+      что ничего не меняется, иногда с фаталистическим оттенком.
+    ja: 「明日も今日と同じ」という意味の表現で、単調さや何も変わらないという考えを伝えるために使われ、時に運命論的なニュアンスを含む。
+    zh: 一个表达，意为“明天和今天一样”，常用于传达单调或一切不变的想法，有时带有宿命论的语调。
+    ar: تعبير يعني 'الغد مثل اليوم'، يُستخدم غالبًا للتعبير عن الرتابة أو فكرة أن لا شيء يتغير، أحيانًا
+      بنبرة قدريّة.
+    he: ביטוי שפירושו 'מחר הוא כמו היום', המשמש לעתים קרובות להעברת מונוטוניות או הרעיון ששום דבר לא משתנה,
+      לעיתים בנימה פטליסטית.
+  learner_level: A2
+  confidence: 0.7
+  review_status: draft
+  register: neutral
+  variants:
+  - Yarın da bugün gibi
+  explanation_key: mnemosyne.tr.explanation.tr_common_phrases_yarın_da_bugün_gibidir
+  source_work_key: mnemosyne.tr.work.various
+  source_author_key: mnemosyne.tr.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: public_domain
+  source_dataset: tr_common_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Expression
+    exists but less common; could be confused with ''Yarın da bugün gibi olacak''.'
+- id: tr_proverb_tradition_anan_gibi_baban_gibi_c1920993
+  language: tr
+  canonical_reference: Anan gibi, baban gibi
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Anan gibi, baban gibi
+  - Anan gibi baban gibi
+  - Anan gibi baban gibi olma
+  short_explanation: A phrase used to compare someone's behavior to their parents, often implying that
+    they are similar in a negative or positive way. It reflects the cultural emphasis on family resemblance.
+  i18n_explanations:
+    en: A phrase used to compare someone's behavior to their parents, often implying that they are similar
+      in a negative or positive way. It reflects the cultural emphasis on family resemblance.
+    es: Frase utilizada para comparar el comportamiento de alguien con el de sus padres, a menudo implicando
+      que son similares de manera negativa o positiva. Refleja el énfasis cultural en el parecido familiar.
+    fr: Expression utilisée pour comparer le comportement de quelqu'un à celui de ses parents, impliquant
+      souvent qu'ils sont similaires de manière négative ou positive. Elle reflète l'accent culturel mis
+      sur la ressemblance familiale.
+    de: Ein Ausdruck, der verwendet wird, um das Verhalten einer Person mit dem ihrer Eltern zu vergleichen,
+      oft mit der Implikation, dass sie in negativer oder positiver Weise ähnlich sind. Er spiegelt die
+      kulturelle Betonung der Familienähnlichkeit wider.
+    it: Frase usata per paragonare il comportamento di qualcuno a quello dei suoi genitori, spesso implicando
+      che siano simili in modo negativo o positivo. Riflette l'enfasi culturale sulla somiglianza familiare.
+    pt: Uma frase usada para comparar o comportamento de alguém com o de seus pais, muitas vezes implicando
+      que são semelhantes de forma negativa ou positiva. Reflete a ênfase cultural na semelhança familiar.
+    ru: Фраза, используемая для сравнения чьего-либо поведения с поведением родителей, часто подразумевая,
+      что они похожи в негативном или позитивном смысле. Отражает культурный акцент на семейном сходстве.
+    ja: 誰かの行動を両親と比較するために使われるフレーズで、多くの場合、否定的または肯定的な意味で似ていることを示唆する。家族の類似性を重視する文化的な考えを反映している。
+    zh: 一个用来比较某人与父母行为的短语，通常暗示他们在负面或正面方面相似。它反映了文化上对家庭相似性的重视。
+    ar: عبارة تستخدم لمقارنة سلوك شخص ما بسلوك والديه، وغالبًا ما توحي بأنهما متشابهان بطريقة سلبية أو
+      إيجابية. تعكس التركيز الثقافي على التشابه العائلي.
+    he: ביטוי המשמש להשוואת התנהגותו של מישהו להוריו, לעתים קרובות מרמז שהם דומים בצורה שלילית או חיובית.
+      הוא משקף את הדגש התרבותי על דמיון משפחתי.
+  learner_level: A2
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  variants:
+  - Anan gibi baban gibi olma
+  explanation_key: mnemosyne.tr.explanation.tr_proverbs_common_anan_gibi_baban_gibi
+  source_work_key: mnemosyne.tr.work.oral_tradition
+  source_author_key: mnemosyne.tr.author.anonymous
+  source_work: Oral tradition
+  source_author: Anonymous
+  source_license: public_domain
+  source_dataset: tr_proverbs_common
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- This
+    phrase is not a standard proverb; it is more of a colloquial expression, and the explanation may overstate
+    its proverbial status.'
+- id: tr_proverb_tradition_şeytan_işi_yok_insan_işi_çok_f229d50b
+  language: tr
+  canonical_reference: Şeytan işi yok, insan işi çok
+  reference_type: proverb_tradition
+  surface_patterns:
+  - şeytan işi yok, insan işi çok
+  - şeytan işi yok insan işi çok
+  short_explanation: This Turkish proverb means 'There is no devil's work, but plenty of human work',
+    implying that human mischief is more common than demonic influence. It reflects a cultural tendency
+    to attribute wrongdoing to human nature.
+  i18n_explanations:
+    en: This Turkish proverb means 'There is no devil's work, but plenty of human work', implying that
+      human mischief is more common than demonic influence. It reflects a cultural tendency to attribute
+      wrongdoing to human nature.
+    es: Este proverbio turco significa 'No hay trabajo del diablo, pero mucho trabajo humano', implicando
+      que las travesuras humanas son más comunes que la influencia demoníaca. Refleja una tendencia cultural
+      a atribuir las malas acciones a la naturaleza humana.
+    fr: Ce proverbe turc signifie 'Il n'y a pas d'œuvre du diable, mais beaucoup d'œuvre humaine', impliquant
+      que les méfaits humains sont plus courants que l'influence démoniaque. Il reflète une tendance culturelle
+      à attribuer les méfaits à la nature humaine.
+    de: Dieses türkische Sprichwort bedeutet 'Es gibt keine Teufelsarbeit, aber viel menschliche Arbeit',
+      was impliziert, dass menschlicher Unfug häufiger ist als dämonischer Einfluss. Es spiegelt eine
+      kulturelle Tendenz wider, Fehlverhalten der menschlichen Natur zuzuschreiben.
+    it: Questo proverbio turco significa 'Non c'è opera del diavolo, ma molta opera umana', implicando
+      che i misfatti umani sono più comuni dell'influenza demoniaca. Riflette una tendenza culturale ad
+      attribuire il comportamento scorretto alla natura umana.
+    pt: Este provérbio turco significa 'Não há trabalho do diabo, mas muito trabalho humano', implicando
+      que as travessuras humanas são mais comuns do que a influência demoníaca. Reflete uma tendência
+      cultural de atribuir erros à natureza humana.
+    ru: Эта турецкая пословица означает 'Нет дьявольской работы, но много человеческой', подразумевая,
+      что человеческие шалости более распространены, чем демоническое влияние. Она отражает культурную
+      тенденцию приписывать проступки человеческой природе.
+    ja: このトルコのことわざは「悪魔の仕事はなく、人間の仕事は多い」という意味で、人間の悪戯は悪魔の影響よりも一般的であることを示唆しています。不正を人間の本性に帰する文化的傾向を反映しています。
+    zh: 这句土耳其谚语意为‘没有魔鬼的工作，但有很多人的工作’，暗示人类的恶作剧比恶魔的影响更常见。它反映了将错误归因于人性的文化倾向。
+    ar: هذا المثل التركي يعني 'لا عمل للشيطان، بل عمل الإنسان كثير'، مما يعني أن الأذى البشري أكثر شيوعاً
+      من التأثير الشيطاني. يعكس ميلاً ثقافياً لنسب الأخطاء إلى الطبيعة البشرية.
+    he: הפתגם הטורקי הזה פירושו 'אין עבודת שטן, אבל הרבה עבודת אדם', ומרמז ששובבות אנושית נפוצה יותר מהשפעה
+      שטנית. הוא משקף נטייה תרבותית לייחס עוולות לטבע האנושי.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.tr.explanation.tr_proverbs_şeytan_işi_yok_insan_işi_çok
+  source_work_key: mnemosyne.tr.work.various
+  source_author_key: mnemosyne.tr.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: public_domain
+  source_dataset: tr_proverbs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Plausible
+    but not a standard Turkish proverb; may be a variant or misremembered; lacks widespread attestation.'
+- id: tr_proverb_tradition_var_olan_devlet_gece_gündüz_yatar_f74e03c4
+  language: tr
+  canonical_reference: Var olan devlet, gece gündüz yatar
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Var olan devlet, gece gündüz yatar
+  - Var olan devlet gece gündüz yatar
+  - Var olan devlet gece gündüz yatarmış
+  short_explanation: This Turkish proverb means 'The existing state sleeps day and night,' criticizing
+    complacency and laziness in those who rely on past achievements. It warns against resting on one's
+    laurels.
+  i18n_explanations:
+    en: This Turkish proverb means 'The existing state sleeps day and night,' criticizing complacency
+      and laziness in those who rely on past achievements. It warns against resting on one's laurels.
+    es: Este proverbio turco significa 'El estado existente duerme día y noche', criticando la complacencia
+      y la pereza de quienes confían en logros pasados. Advierte contra dormirse en los laureles.
+    fr: Ce proverbe turc signifie 'L'État existant dort jour et nuit', critiquant la complaisance et la
+      paresse de ceux qui se reposent sur leurs acquis. Il met en garde contre le fait de se reposer sur
+      ses lauriers.
+    de: Dieses türkische Sprichwort bedeutet 'Der bestehende Staat schläft Tag und Nacht' und kritisiert
+      Selbstzufriedenheit und Faulheit bei denen, die sich auf vergangene Errungenschaften verlassen.
+      Es warnt davor, sich auf seinen Lorbeeren auszuruhen.
+    it: Questo proverbio turco significa 'Lo stato esistente dorme giorno e notte', criticando l'autocompiacimento
+      e la pigrizia di chi si affida ai successi passati. Avverte contro l'adagiarsi sugli allori.
+    pt: Este provérbio turco significa 'O estado existente dorme dia e noite', criticando a complacência
+      e a preguiça daqueles que confiam em conquistas passadas. Adverte contra descansar sobre os louros.
+    ru: Эта турецкая пословица означает 'Существующее государство спит днем и ночью', критикуя самоуспокоенность
+      и лень тех, кто полагается на прошлые достижения. Она предостерегает от почивания на лаврах.
+    ja: このトルコのことわざは「現状の国家は昼夜眠る」という意味で、過去の成果に頼る人々の自己満足と怠惰を批判しています。功績に安住することへの警告です。
+    zh: 这句土耳其谚语的意思是“现有的国家日夜沉睡”，批评那些依赖过去成就的人的自满和懒惰。它警告不要躺在功劳簿上。
+    ar: يعني هذا المثل التركي 'الدولة القائمة تنام ليل نهار'، منتقدًا الرضا الذاتي والكسل لدى أولئك الذين
+      يعتمدون على الإنجازات السابقة. إنه يحذر من الاتكاء على أمجاد الماضي.
+    he: הפתגם הטורקי הזה פירושו 'המדינה הקיימת ישנה יומם ולילה', ומבקר את השאננות והעצלות של אלה הנשענים
+      על הישגי העבר. הוא מזהיר מפני מנוחה על זרי הדפנה.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  variants:
+  - Var olan devlet gece gündüz yatarmış
+  explanation_key: mnemosyne.tr.explanation.tr_proverbs_common_var_olan_devlet_gece_gündüz_yat
+  source_work_key: mnemosyne.tr.work.various
+  source_author_key: mnemosyne.tr.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: public_domain
+  source_dataset: tr_proverbs_common
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- This
+    phrase is not a standard Turkish proverb; it may be a misquotation or rare variant.'
+- id: tr_cultural_reference_delice_fce5d7e1
+  language: tr
+  canonical_reference: Delice
+  reference_type: cultural_reference
+  surface_patterns:
+  - delice
+  - Delice
+  short_explanation: A term meaning 'madly' or 'foolishly', but also a place name (Delice River in Turkey).
+    As a cultural reference, it may appear in idioms or place names.
+  i18n_explanations:
+    en: A term meaning 'madly' or 'foolishly', but also a place name (Delice River in Turkey). As a cultural
+      reference, it may appear in idioms or place names.
+    es: Un término que significa 'locamente' o 'tontamente', pero también un nombre de lugar (río Delice
+      en Turquía). Como referencia cultural, puede aparecer en modismos o nombres de lugares.
+    fr: Un terme signifiant 'follement' ou 'bêtement', mais aussi un nom de lieu (rivière Delice en Turquie).
+      En tant que référence culturelle, il peut apparaître dans des expressions idiomatiques ou des noms
+      de lieux.
+    de: Ein Begriff, der 'verrückt' oder 'töricht' bedeutet, aber auch ein Ortsname (Delice-Fluss in der
+      Türkei). Als kulturelle Referenz kann er in Redewendungen oder Ortsnamen vorkommen.
+    it: Un termine che significa 'pazzamente' o 'stoltamente', ma anche un nome di luogo (fiume Delice
+      in Turchia). Come riferimento culturale, può apparire in modi di dire o toponimi.
+    pt: Um termo que significa 'loucamente' ou 'tolamente', mas também um nome de lugar (rio Delice na
+      Turquia). Como referência cultural, pode aparecer em expressões idiomáticas ou nomes de lugares.
+    ru: Термин, означающий 'безумно' или 'глупо', но также топоним (река Делидже в Турции). Как культурная
+      отсылка может встречаться в идиомах или названиях мест.
+    ja: 「狂ったように」または「愚かに」を意味する言葉だが、トルコの地名（デリジェ川）でもある。文化的な参照として、慣用句や地名に現れることがある。
+    zh: 一个意为“疯狂地”或“愚蠢地”的术语，也是一个地名（土耳其的德利杰河）。作为文化参考，它可能出现在习语或地名中。
+    ar: مصطلح يعني 'بجنون' أو 'بحماقة'، ولكنه أيضًا اسم مكان (نهر ديليجه في تركيا). كمرجع ثقافي، قد يظهر
+      في التعابير الاصطلاحية أو أسماء الأماكن.
+    he: מונח שפירושו 'בטירוף' או 'בטיפשות', אך גם שם מקום (נהר דליצ'ה בטורקיה). כהתייחסות תרבותית, הוא
+      עשוי להופיע בניבים או בשמות מקומות.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: neutral
+  explanation_key: mnemosyne.tr.explanation.tr_cultural_references_delice
+  source_work_key: mnemosyne.tr.work.various
+  source_author_key: mnemosyne.tr.author.various
+  source_work: Various
+  source_author: Various
+  source_license: public_domain
+  source_dataset: tr_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    term ''delice'' is common and not a distinct cultural reference; its inclusion as a cultural reference
+    is too vague.'
+- id: tr_cultural_reference_i_stanbul_türküsü_0ed284ee
+  language: tr
+  canonical_reference: İstanbul Türküsü
+  reference_type: cultural_reference
+  surface_patterns:
+  - İstanbul Türküsü
+  - İstanbul türküsü
+  short_explanation: İstanbul Türküsü is a traditional Turkish folk song that praises the beauty and cultural
+    richness of Istanbul. It is often performed in folk music gatherings and represents the city's iconic
+    status in Turkish culture.
+  i18n_explanations:
+    en: İstanbul Türküsü is a traditional Turkish folk song that praises the beauty and cultural richness
+      of Istanbul. It is often performed in folk music gatherings and represents the city's iconic status
+      in Turkish culture.
+    es: İstanbul Türküsü es una canción folclórica turca tradicional que alaba la belleza y la riqueza
+      cultural de Estambul. A menudo se interpreta en reuniones de música folclórica y representa el estatus
+      icónico de la ciudad en la cultura turca.
+    fr: İstanbul Türküsü est une chanson folklorique turque traditionnelle qui loue la beauté et la richesse
+      culturelle d'Istanbul. Elle est souvent interprétée lors de rassemblements de musique folklorique
+      et représente le statut emblématique de la ville dans la culture turque.
+    de: İstanbul Türküsü ist ein traditionelles türkisches Volkslied, das die Schönheit und den kulturellen
+      Reichtum Istanbuls preist. Es wird oft bei Volksmusiktreffen aufgeführt und repräsentiert den ikonischen
+      Status der Stadt in der türkischen Kultur.
+    it: İstanbul Türküsü è una canzone popolare turca tradizionale che elogia la bellezza e la ricchezza
+      culturale di Istanbul. Viene spesso eseguita in raduni di musica folk e rappresenta lo status iconico
+      della città nella cultura turca.
+    pt: İstanbul Türküsü é uma canção folclórica turca tradicional que elogia a beleza e a riqueza cultural
+      de Istambul. É frequentemente apresentada em encontros de música folclórica e representa o status
+      icônico da cidade na cultura turca.
+    ru: İstanbul Türküsü — традиционная турецкая народная песня, восхваляющая красоту и культурное богатство
+      Стамбула. Она часто исполняется на собраниях народной музыки и символизирует культовый статус города
+      в турецкой культуре.
+    ja: イスタンブル・テュルクスは、イスタンブールの美しさと文化的豊かさを称える伝統的なトルコ民謡です。民俗音楽の集まりでよく演奏され、トルコ文化における同市の象徴的地位を表しています。
+    zh: 《伊斯坦布尔民歌》是一首传统的土耳其民歌，赞美伊斯坦布尔的美丽和文化丰富性。它常在民间音乐聚会中表演，代表了该城市在土耳其文化中的标志性地位。
+    ar: أغنية إسطنبول التركية هي أغنية شعبية تركية تقليدية تمدح جمال وثراء إسطنبول الثقافي. غالباً ما
+      تُؤدى في تجمعات الموسيقى الشعبية وتمثل المكانة الأيقونية للمدينة في الثقافة التركية.
+    he: שיר איסטנבול הוא שיר עם טורקי מסורתי המשבח את יופייה ועושרה התרבותי של איסטנבול. הוא מבוצע לעתים
+      קרובות במפגשי מוזיקה עממית ומייצג את מעמדה האייקוני של העיר בתרבות הטורקית.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: neutral
+  explanation_key: mnemosyne.tr.explanation.tr_cultural_references_i_stanbul_türküsü
+  source_work_key: mnemosyne.tr.work.oral_tradition
+  source_author_key: mnemosyne.tr.author.anonymous
+  source_work: Oral tradition
+  source_author: Anonymous
+  source_license: public_domain
+  source_dataset: tr_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase ''İstanbul Türküsü'' is too generic; there are multiple songs with this title, and the explanation
+    lacks specificity.'
+- id: tr_cultural_reference_karayılan_bcc7ea6a
+  language: tr
+  canonical_reference: Karayılan
+  reference_type: cultural_reference
+  surface_patterns:
+  - Karayılan
+  - Kara Yılan
+  short_explanation: Karayılan (Black Snake) is a legendary figure in Turkish folklore, often associated
+    with a heroic outlaw or a mythical snake. It also refers to a type of snake found in Turkey.
+  i18n_explanations:
+    en: Karayılan (Black Snake) is a legendary figure in Turkish folklore, often associated with a heroic
+      outlaw or a mythical snake. It also refers to a type of snake found in Turkey.
+    es: Karayılan (Serpiente Negra) es una figura legendaria en el folclore turco, a menudo asociada con
+      un forajido heroico o una serpiente mítica. También se refiere a un tipo de serpiente que se encuentra
+      en Turquía.
+    fr: Karayılan (Serpent Noir) est une figure légendaire du folklore turc, souvent associée à un hors-la-loi
+      héroïque ou à un serpent mythique. Il désigne également un type de serpent trouvé en Turquie.
+    de: Karayılan (Schwarze Schlange) ist eine legendäre Figur in der türkischen Folklore, oft verbunden
+      mit einem heldenhaften Gesetzlosen oder einer mythischen Schlange. Es bezieht sich auch auf eine
+      in der Türkei vorkommende Schlangenart.
+    it: Karayılan (Serpente Nero) è una figura leggendaria del folklore turco, spesso associata a un fuorilegge
+      eroico o a un serpente mitico. Si riferisce anche a un tipo di serpente presente in Turchia.
+    pt: Karayılan (Cobra Negra) é uma figura lendária no folclore turco, frequentemente associada a um
+      fora-da-lei heroico ou a uma cobra mítica. Também se refere a um tipo de cobra encontrada na Turquia.
+    ru: Карайылан (Чёрная змея) — легендарная фигура в турецком фольклоре, часто ассоциируемая с героическим
+      разбойником или мифической змеёй. Также обозначает вид змей, встречающихся в Турции.
+    ja: カライラン（黒蛇）はトルコの民間伝承に登場する伝説的な人物で、しばしば英雄的な無法者や神話上の蛇と関連付けられます。また、トルコに生息するヘビの一種を指します。
+    zh: Karayılan（黑蛇）是土耳其民间传说中的传奇人物，常与英雄般的亡命之徒或神话中的蛇联系在一起。它也指土耳其发现的一种蛇。
+    ar: كارايلان (الأفعى السوداء) هو شخصية أسطورية في الفولكلور التركي، غالبًا ما يرتبط بخارج عن القانون
+      بطولي أو أفعى أسطورية. ويشير أيضًا إلى نوع من الأفاعي الموجودة في تركيا.
+    he: קראיילן (נחש שחור) הוא דמות אגדית בפולקלור הטורקי, המקושרת לעתים קרובות לפורע חוק הרואי או לנחש
+      מיתי. הוא מתייחס גם לסוג של נחש המצוי בטורקיה.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: neutral
+  variants:
+  - Kara Yılan
+  explanation_key: mnemosyne.tr.explanation.tr_cultural_references_karayılan
+  source_work_key: mnemosyne.tr.work.oral_tradition
+  source_author_key: mnemosyne.tr.author.oral_tradition
+  source_work: Oral tradition
+  source_author: Oral tradition
+  source_license: public_domain
+  source_dataset: tr_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Karayılan
+    is primarily a historical figure (outlaw) from the early Republic era, not a mythical snake; folklore
+    association is weak.'
+- id: tr_cultural_reference_ölümsüz_a9a4eefe
+  language: tr
+  canonical_reference: Ölümsüz
+  reference_type: cultural_reference
+  surface_patterns:
+  - Ölümsüz
+  - ölümsüz
+  - Ölümsüz'ün
+  short_explanation: A Turkish word meaning 'immortal', often used as a name or title in literature and
+    media, e.g., the novel 'Ölümsüz' by Nazan Bekiroğlu.
+  i18n_explanations:
+    en: A Turkish word meaning 'immortal', often used as a name or title in literature and media, e.g.,
+      the novel 'Ölümsüz' by Nazan Bekiroğlu.
+    es: Palabra turca que significa 'inmortal', a menudo usada como nombre o título en literatura y medios,
+      por ejemplo, la novela 'Ölümsüz' de Nazan Bekiroğlu.
+    fr: Mot turc signifiant 'immortel', souvent utilisé comme nom ou titre dans la littérature et les
+      médias, par exemple le roman 'Ölümsüz' de Nazan Bekiroğlu.
+    de: Ein türkisches Wort, das 'unsterblich' bedeutet, oft als Name oder Titel in Literatur und Medien
+      verwendet, z.B. der Roman 'Ölümsüz' von Nazan Bekiroğlu.
+    it: Parola turca che significa 'immortale', spesso usata come nome o titolo in letteratura e media,
+      ad esempio il romanzo 'Ölümsüz' di Nazan Bekiroğlu.
+    pt: Palavra turca que significa 'imortal', frequentemente usada como nome ou título na literatura
+      e mídia, por exemplo, o romance 'Ölümsüz' de Nazan Bekiroğlu.
+    ru: Турецкое слово, означающее 'бессмертный', часто используется как имя или название в литературе
+      и СМИ, например, роман 'Ölümsüz' Назан Бекироглу.
+    ja: トルコ語で「不死」を意味する言葉で、文学やメディアで名前やタイトルとしてよく使われる。例：ナザン・ベキロールの小説『Ölümsüz』。
+    zh: 土耳其语单词，意为“不朽”，常作为文学和媒体中的名字或标题，例如纳赞·贝基罗格鲁的小说《Ölümsüz》。
+    ar: كلمة تركية تعني 'خالد'، غالبًا ما تستخدم كاسم أو عنوان في الأدب ووسائل الإعلام، على سبيل المثال
+      رواية 'Ölümsüz' لنازان بكير أوغلو.
+    he: מילה טורקית שפירושה 'אלמוות', משמשת לעתים קרובות כשם או כותרת בספרות ובמדיה, למשל הרומן 'Ölümsüz'
+      מאת נאזאן בקירוגלו.
+  learner_level: A2
+  confidence: 0.6
+  review_status: draft
+  register: neutral
+  variants:
+  - Ölümsüz
+  explanation_key: mnemosyne.tr.explanation.tr_cultural_references_ölümsüz
+  source_work_key: mnemosyne.tr.work.various
+  source_author_key: mnemosyne.tr.author.various
+  source_work: Various
+  source_author: Various
+  source_license: public_domain
+  source_dataset: tr_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Plausible
+    but the reference to Nazan Bekiroğlu''s novel is not widely recognized; surface patterns are too generic.'
+- id: tr_cultural_reference_rembetiko_6745645d
+  language: tr
+  canonical_reference: Rembetiko
+  reference_type: cultural_reference
+  surface_patterns:
+  - Rembetiko
+  - rembetiko
+  - Rembetiko müziği
+  short_explanation: Rembetiko is a Greek musical genre that originated in urban areas, often associated
+    with the working class and rebetis subculture. It is recognized by UNESCO as intangible cultural heritage.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: neutral
+  explanation_key: mnemosyne.tr.explanation.tr_cultural_references_rembetiko
+  source_work_key: mnemosyne.tr.work.oral_tradition
+  source_author_key: mnemosyne.tr.author.various
+  source_work: Oral tradition
+  source_author: Various
+  source_license: public_domain
+  source_dataset: tr_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Rembetiko
+    is a Greek musical genre, not Turkish; its relevance to Turkish culture is marginal and may confuse
+    learners.'

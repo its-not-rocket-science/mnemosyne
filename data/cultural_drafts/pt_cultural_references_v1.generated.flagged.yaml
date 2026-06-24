@@ -1,0 +1,516 @@
+- id: pt_classical_or_scriptural_allusion_o_mito_de_sísifo_ce40f7f9
+  language: pt
+  canonical_reference: o Mito de Sísifo
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - o Mito de Sísifo
+  - Mito de Sísifo
+  - Sísifo
+  short_explanation: A Greek myth where Sisyphus is condemned to eternally roll a boulder up a hill, only
+    for it to roll back down, symbolizing futile effort or absurdity.
+  i18n_explanations:
+    en: A Greek myth where Sisyphus is condemned to eternally roll a boulder up a hill, only for it to
+      roll back down, symbolizing futile effort or absurdity.
+    es: Un mito griego en el que Sísifo es condenado a empujar eternamente una roca cuesta arriba, solo
+      para que ruede de vuelta abajo, simbolizando esfuerzo vano o absurdidad.
+    fr: Un mythe grec où Sisyphe est condamné à pousser éternellement un rocher en haut d'une colline,
+      pour le voir redescendre, symbolisant l'effort vain ou l'absurdité.
+    de: Ein griechischer Mythos, in dem Sisyphos dazu verurteilt ist, ewig einen Felsen einen Hügel hinaufzurollen,
+      der dann wieder hinunterrollt, Symbol für vergebliche Mühe oder Absurdität.
+    it: Un mito greco in cui Sisifo è condannato a spingere eternamente un masso su per una collina, solo
+      per vederlo rotolare di nuovo giù, simbolo di sforzo vano o assurdità.
+    pt: Um mito grego em que Sísifo é condenado a empurrar eternamente uma pedra morro acima, só para
+      que ela role de volta, simbolizando esforço vão ou absurdidade.
+    ru: Греческий миф, в котором Сизиф осужден вечно катить валун вверх по холму, который затем скатывается
+      обратно, символ тщетных усилий или абсурда.
+    ja: シジフォスが永遠に岩を丘の上まで転がす罰を受けるギリシャ神話で、岩が転がり落ちることを繰り返し、無駄な努力や不条理を象徴する。
+    zh: 希腊神话中，西西弗斯被判永远将巨石推上山顶，巨石却总是滚落，象征徒劳的努力或荒诞。
+    ar: أسطورة يونانية يُحكم فيها سيسيفوس بدفع صخرة إلى أعلى تل إلى الأبد، لتعود وتسقط، ترمز إلى الجهد
+      العقيم أو العبثية.
+    he: מיתוס יווני שבו סיזיפוס נידון לדחוף סלע במעלה גבעה לנצח, רק כדי שיתגלגל למטה שוב, מסמל מאמץ לשווא
+      או אבסורד.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.pt.explanation.camus_mito_sisifo_phrases_o_mito_de_sísifo
+  source_work_key: mnemosyne.pt.work.o_mito_de_sísifo
+  source_author_key: mnemosyne.pt.author.albert_camus
+  source_work: O Mito de Sísifo
+  source_author: Albert Camus
+  source_location: Essay (1942)
+  source_url: https://pt.wikipedia.org/wiki/O_Mito_de_S%C3%ADsifo
+  source_license: public_domain
+  source_dataset: camus_mito_sisifo_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    work should be an ancient Greek text, not Camus'' modern essay.'
+- id: pt_cultural_reference_a_convenção_de_gramido_1847_82034bd1
+  language: pt
+  canonical_reference: a Convenção de Gramido (1847)
+  reference_type: cultural_reference
+  surface_patterns:
+  - a Convenção de Gramido
+  - Convenção de Gramido
+  - Convenção do Gramido
+  short_explanation: A treaty signed in 1847 that ended the Portuguese Civil War (1828-1834), establishing
+    peace between liberal and absolutist factions. It marked the consolidation of liberalism in Portugal.
+  i18n_explanations:
+    en: A treaty signed in 1847 that ended the Portuguese Civil War (1828-1834), establishing peace between
+      liberal and absolutist factions. It marked the consolidation of liberalism in Portugal.
+    es: Un tratado firmado en 1847 que puso fin a la Guerra Civil Portuguesa (1828-1834), estableciendo
+      la paz entre facciones liberales y absolutistas. Marcó la consolidación del liberalismo en Portugal.
+    fr: Un traité signé en 1847 qui mit fin à la guerre civile portugaise (1828-1834), établissant la
+      paix entre factions libérales et absolutistes. Il marqua la consolidation du libéralisme au Portugal.
+    de: Ein 1847 unterzeichneter Vertrag, der den portugiesischen Bürgerkrieg (1828-1834) beendete und
+      Frieden zwischen liberalen und absolutistischen Fraktionen herstellte. Er markierte die Konsolidierung
+      des Liberalismus in Portugal.
+    it: Un trattato firmato nel 1847 che pose fine alla guerra civile portoghese (1828-1834), stabilendo
+      la pace tra fazioni liberali e assolutiste. Segnò la consolidazione del liberalismo in Portogallo.
+    pt: Um tratado assinado em 1847 que pôs fim à Guerra Civil Portuguesa (1828-1834), estabelecendo a
+      paz entre facções liberais e absolutistas. Marcou a consolidação do liberalismo em Portugal.
+    ru: Договор, подписанный в 1847 году, положивший конец португальской гражданской войне (1828–1834)
+      и установивший мир между либеральными и абсолютистскими фракциями. Он ознаменовал консолидацию либерализма
+      в Португалии.
+    ja: 1847年に署名された条約で、ポルトガル内戦（1828-1834年）を終結させ、自由主義派と絶対主義派の和平を確立した。ポルトガルにおける自由主義の定着を示した。
+    zh: 1847年签署的一项条约，结束了葡萄牙内战（1828-1834年），在自由派与保守派之间建立了和平。标志着自由主义在葡萄牙的确立。
+    ar: معاهدة وقعتها البرتغال عام 1847 وأنهت الحرب الأهلية البرتغالية (1828-1834)، مما أسس السلام بين
+      الفصائل الليبرالية والمت保لية. وكرست هذا الاتفاق ترسيخ الليبرالية في البرتغال.
+    he: אמנה שנחתמה ב-1847 שהביאה לסיום מלחמת האזרחים הפורטוגלית (1828-1834), תוך כינון שלום בין הפלגים
+      הליברליים והאבסולוטיסטיים. סימנה את התבססות הליברליזם בפורטוגל.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: formal
+  explanation_key: mnemosyne.pt.explanation.pt_history_references_a_convenção_de_gramido_1847
+  source_work_key: mnemosyne.pt.work.história_de_portugal
+  source_author_key: mnemosyne.pt.author.various
+  source_work: História de Portugal
+  source_author: Various
+  source_url: https://pt.wikipedia.org/wiki/Conven%C3%A7%C3%A3o_de_Gramido
+  source_license: public_domain
+  source_dataset: pt_history_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    convention ended the Patuleia (1846-1847), not the original Portuguese Civil War (1828-1834).'
+- id: pt_cultural_reference_a_fundação_da_pátria_portuguesa_por_viriato_52fe56d5
+  language: pt
+  canonical_reference: a Fundação da Pátria Portuguesa por Viriato
+  reference_type: cultural_reference
+  surface_patterns:
+  - Fundação da Pátria Portuguesa por Viriato
+  - Viriato como fundador de Portugal
+  - Lenda de Viriato e a resistência lusitana
+  - Viriato, herói nacional português
+  short_explanation: A mythologized reference to Viriato, a Lusitanian leader who resisted Roman rule
+    in the 2nd century BCE. Though historically Viriato did not found Portugal, he is mythologized as
+    a symbol of Portuguese resistance and national identity.
+  i18n_explanations:
+    en: A mythologized reference to Viriato, a Lusitanian leader who resisted Roman rule in the 2nd century
+      BCE. Though historically Viriato did not found Portugal, he is mythologized as a symbol of Portuguese
+      resistance and national identity.
+    es: Referencia mitificada a Viriato, líder lusitano que resistió el dominio romano en el siglo II
+      a.C. Aunque históricamente Viriato no fundó Portugal, es mitificado como símbolo de la resistencia
+      y la identidad nacional portuguesa.
+    fr: Référence mythifiée à Viriate, chef lusitanien qui résista à la domination romaine au IIe siècle
+      av. J.-C. Bien qu'historiquement Viriate n'ait pas fondé le Portugal, il est mythifié comme symbole
+      de la résistance et de l'identité nationale portugaise.
+    de: Eine mythische Bezugnahme auf Viriatus, einen lusitanischen Anführer, der im 2. Jahrhundert v.
+      Chr. gegen die römische Herrschaft Widerstand leistete. Obwohl Viriatus historisch Portugal nicht
+      gründete, wird er als Symbol des portugiesischen Widerstands und der nationalen Identität mythologisiert.
+    it: Riferimento mitizzato a Viriato, leader lusitano che resistette al dominio romano nel II secolo
+      a.C. Sebbene storicamente Viriato non abbia fondato il Portogallo, è mitizzato come simbolo della
+      resistenza e dell'identità nazionale portoghese.
+    pt: Referência mitificada a Viriato, líder lusitano que resistiu ao domínio romano no século II a.C.
+      Embora historicamente Viriato não tenha fundado Portugal, é mitificado como símbolo da resistência
+      e identidade nacional portuguesa.
+    ru: Мифологизированное упоминание Вириата, лигурийского лидера, который сопротивлялся римскому правлению
+      во II веке до н.э. Хотя исторически Вириат не основал Португалию, он мифологизируется как символ
+      португальского сопротивления и национальной идентичности.
+    ja: 紀元前2世紀にローマ支配に抵抗したルシタニアの指導者ヴィリアトゥスへの神話的言及。歴史的にはヴィリアトゥスがポルトガルを建国したわけではないが、ポルトガルの抵抗と国家アイデンティティの象徴として神話化されている。
+    zh: 对维里亚托的神话化描述，他是公元前2世纪抵抗罗马统治的卢西塔尼亚领袖。尽管历史上维里亚托并未建立葡萄牙，但他被神话为葡萄牙抵抗与民族认同的象征。
+    ar: إشارة أسطورية إلى فيرياتو، زعيم لوسيتاني قاوم الحكم الروماني في القرن الثاني قبل الميلاد. على
+      الرغم من أن فيرياتو لم يؤسس البرتغال تاريخياً، إلا أنه يُمجّد كرمز للمقاومة والهوية الوطنية البرتغالية.
+    he: התייחסות מיתולוגית לוירייאטו, מנהיג לוסיטני שמרד בשלטון הרומי במאה השנייה לפני הספירה. אף שוירייאטו
+      לא ייסד היסטורית את פורטוגל, הוא מיתולוגי כסמל ההתנגדות והזהות הלאומית הפורטוגלית.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.pt.explanation.pt_history_viriato_myth_a_fundação_da_pátria_portu
+  source_work_key: mnemosyne.pt.work.various
+  source_author_key: mnemosyne.pt.author.oral_tradition_literary_tradition
+  source_work: Various
+  source_author: Oral tradition / Literary tradition
+  source_url: https://pt.wikipedia.org/wiki/Viriato
+  source_license: public_domain
+  source_dataset: pt_history_viriato_myth
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Mythologized
+    reference; Viriato did not found Portugal, and the phrase is not standard historical terminology.'
+- id: pt_literary_reference_o_conto_da_moura_encantada_em_a_morgadinha_dos_canaviais_05918aeb
+  language: pt
+  canonical_reference: o Conto da Moura Encantada em 'A Morgadinha dos Canaviais'
+  reference_type: literary_reference
+  surface_patterns:
+  - a Moura Encantada
+  - Moura Encantada
+  - a moura dos canaviais
+  - o conto da moura encantada
+  short_explanation: A Moorish princess enchanted in a tale within Júlio Dinis' novel 'A Morgadinha dos
+    Canaviais'. Represents the romanticized medieval Moorish presence in Portugal, blending folklore with
+    19th-century literary realism.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.pt.explanation.pt_dinis_moura_encantada_o_conto_da_moura_encantad
+  source_work_key: mnemosyne.pt.work.a_morgadinha_dos_canaviais
+  source_author_key: mnemosyne.pt.author.júlio_dinis
+  source_work: A Morgadinha dos Canaviais
+  source_author: Júlio Dinis
+  source_location: Volume II, Chapter 5
+  source_url: https://pt.wikisource.org/wiki/A_Morgadinha_dos_Canaviais
+  source_license: public_domain
+  source_dataset: pt_dinis_moura_encantada
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    reference is plausible but not clearly verified in the specified source location.'
+- id: pt_literary_reference_a_encantada_de_o_monge_de_cister_058063a9
+  language: pt
+  canonical_reference: a Encantada de 'O Monge de Cister'
+  reference_type: literary_reference
+  surface_patterns:
+  - a Encantada de 'O Monge de Cister'
+  - Encantada de 'O Monge de Cister'
+  - a Encantada do Monge de Cister
+  short_explanation: A mythical enchanted woman from the 19th-century novel 'O Monge de Cister' by Camilo
+    Castelo Branco, symbolizing beauty and supernatural allure in Portuguese Romantic literature.
+  i18n_explanations:
+    en: A mythical enchanted woman from the 19th-century novel 'O Monge de Cister' by Camilo Castelo Branco,
+      symbolizing beauty and supernatural allure in Portuguese Romantic literature.
+    es: Una mujer encantada y mítica del siglo XIX de la novela 'O Monge de Cister' de Camilo Castelo
+      Branco, que simboliza la belleza y el atractivo sobrenatural en la literatura romántica portuguesa.
+    fr: Une femme enchantée et mythique du XIXe siècle, tirée du roman 'O Monge de Cister' de Camilo Castelo
+      Branco, symbolisant la beauté et l'attrait surnaturel dans la littérature romantique portugaise.
+    de: Eine mythische verzauberte Frau aus dem 19. Jahrhundert aus dem Roman 'O Monge de Cister' von
+      Camilo Castelo Branco, die Schönheit und übernatürlichen Reiz in der portugiesischen Romantikliteratur
+      verkörpert.
+    it: Una donna incantata e mitica del XIX secolo tratta dal romanzo 'O Monge de Cister' di Camilo Castelo
+      Branco, simbolo di bellezza e fascino soprannaturale nella letteratura romantica portoghese.
+    pt: Uma mulher encantada e mítica do século XIX, do romance 'O Monge de Cister' de Camilo Castelo
+      Branco, que simboliza a beleza e o fascínio sobrenatural na literatura romântica portuguesa.
+    ru: Мифическая зачарованная женщина XIX века из романа Камилу Каштелу Бранку 'O Monge de Cister',
+      олицетворяющая красоту и сверхъестественное обаяние в португальской романтической литературе.
+    ja: 19世紀の小説「O Monge de Cister」に登場するカミロ・カステロ・ブランコによる伝説の美しい女性で、ポルトガルのロマン主義文学における美と超自然的な魅力の象徴。
+    zh: 19世纪小说《奥·蒙热·德·锡斯特》中卡米洛·卡斯特洛·布兰科笔下的传奇女子，象征着葡萄牙浪漫主义文学中的美与超自然魅力。
+    ar: امرأة أسطورية مسحورة من رواية «أومونج دي سيستر» للكاتب كاميلو كاستيلو برانكو في القرن التاسع عشر،
+      ترمز إلى الجمال والجاذبية الخارقة في الأدب الرومانسي البرتغالي.
+    he: אשה מיתולוגית ומכושפת מהרומן 'O Monge de Cister' מאת קמילו קסטלו ברנקו מהמאה ה-19, המסמלת יופי
+      וקסם על-טבעי בספרות הרומנטית הפורטוגזית.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.pt.explanation.camilo_castelo_branco_monge_de_cister_a_encantada_
+  source_work_key: mnemosyne.pt.work.o_monge_de_cister
+  source_author_key: mnemosyne.pt.author.camilo_castelo_branco
+  source_work: O Monge de Cister
+  source_author: Camilo Castelo Branco
+  source_url: https://pt.wikisource.org/wiki/O_Monge_de_Cister
+  source_license: public_domain
+  source_dataset: camilo_castelo_branco_monge_de_cister
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    plausible but not fully verified; surface patterns may need refinement.'
+- id: pt_cultural_reference_a_lenda_de_d_joão_e_a_freira_de_évora_a78580e1
+  language: pt
+  canonical_reference: a Lenda de D. João e a Freira de Évora
+  reference_type: cultural_reference
+  surface_patterns:
+  - D. João e a Freira de Évora
+  - lenda de D. João e a Freira de Évora
+  - a Freira de Évora
+  - D. João de Évora
+  short_explanation: A medieval legend from Évora, Portugal, about a nobleman (D. João) who falls in love
+    with a nun, leading to a tragic outcome. It reflects themes of forbidden love and religious constraints
+    in medieval society.
+  i18n_explanations:
+    en: A medieval legend from Évora, Portugal, about a nobleman (D. João) who falls in love with a nun,
+      leading to a tragic outcome. It reflects themes of forbidden love and religious constraints in medieval
+      society.
+    es: Una leyenda medieval de Évora, Portugal, sobre un noble (D. João) que se enamora de una monja,
+      lo que lleva a un trágico desenlace. Refleja temas de amor prohibido y las restricciones religiosas
+      en la sociedad medieval.
+    fr: Une légende médiévale d'Évora, au Portugal, sur un noble (D. João) qui tombe amoureux d'une religieuse,
+      menant à une issue tragique. Elle reflète les thèmes de l'amour interdit et des contraintes religieuses
+      dans la société médiévale.
+    de: Eine mittelalterliche Legende aus Évora, Portugal, über einen Adligen (D. João), der sich in eine
+      Nonne verliebt, was zu einem tragischen Ausgang führt. Sie spiegelt Themen verbotener Liebe und
+      religiöser Zwänge in der mittelalterlichen Gesellschaft wider.
+    it: Una leggenda medievale di Évora, in Portogallo, su un nobile (D. João) che si innamora di una
+      suora, portando a un tragico epilogo. Riflette temi di amore proibito e vincoli religiosi nella
+      società medievale.
+    pt: Uma lenda medieval de Évora, Portugal, sobre um nobre (D. João) que se apaixona por uma freira,
+      levando a um desfecho trágico. Reflete temas de amor proibido e restrições religiosas na sociedade
+      medieval.
+    ru: Средневековая легенда из Эворы, Португалия, о знатном человеке (D. João), который влюбляется в
+      монахиню, что приводит к трагическому исходу. Она отражает темы запретной любви и религиозных ограничений
+      в средневековом обществе.
+    ja: ポルトガルのエヴォラ発祥の medieval な伝説で、貴族（D. João）が修道女に恋をし、悲劇的な結末を迎える。中世社会における禁断の愛と宗教的制約を反映している。
+    zh: 葡萄牙埃武拉的中世纪传说，讲述贵族D. João爱上修女，最终酿成悲剧。反映了中世纪社会中禁忌之爱与宗教束缚的主题。
+    ar: أسطورة من القرون الوسطى من إبورا، البرتغال، تحكي عن نبيل (D. João) يقع في حب راهبة، مما يؤدي إلى
+      نهاية مأساوية. تعكس مواضيع الحب المحرم والقيود الدينية في المجتمع الأوروبي في العصور الوسطى.
+    he: אגדה מימי הביניים מאבור, פורטוגל, על אציל (D. João) שהתאהב בנזירה, מה שהוביל לתוצאה טרגית. משקפת
+      נושאים של אהבה אסורה ומגבלות דתיות בחברה של ימי הביניים.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: literary
+  variants:
+  - a lenda de D. João de Évora
+  - a história de D. João e a Freira
+  explanation_key: mnemosyne.pt.explanation.herculano_lendas_a_lenda_de_d_joão_e_a_freira_de_é
+  source_work_key: mnemosyne.pt.work.lendas_e_narrativas
+  source_author_key: mnemosyne.pt.author.alexandre_herculano
+  source_work: Lendas e Narrativas
+  source_author: Alexandre Herculano
+  source_location: Volume 1, Capítulo 5
+  source_url: https://pt.wikisource.org/wiki/Lendas_e_Narrativas_(1851)/Volume_1/Cap%C3%ADtulo_5
+  source_license: public_domain
+  source_dataset: herculano_lendas
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    pairing of D. João with the Freira de Évora is not standard; the legend typically centers on the nun
+    alone.'
+- id: pt_classical_or_scriptural_allusion_a_lenda_de_lázaro_e_o_rico_avareza_1eaf70c2
+  language: pt
+  canonical_reference: a Lenda de Lázaro e o Rico Avareza
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Lázaro e o Rico Avareza
+  - lenda de Lázaro e o Rico
+  - o Rico e Lázaro
+  - parábola do Rico e Lázaro
+  short_explanation: A biblical parable from the Gospel of Luke about a rich man who ignores a poor beggar
+    (Lazarus) at his gate, only to face damnation after death. It teaches moral lessons about compassion
+    and humility.
+  i18n_explanations:
+    en: A biblical parable from the Gospel of Luke about a rich man who ignores a poor beggar (Lazarus)
+      at his gate, only to face damnation after death. It teaches moral lessons about compassion and humility.
+    es: Una parábola bíblica del Evangelio de Lucas sobre un hombre rico que ignora a un pobre mendigo
+      (Lázaro) a su puerta, solo para enfrentar la condenación después de la muerte. Enseña lecciones
+      morales sobre compasión y humildad.
+    fr: Une parabole biblique de l'Évangile selon Luc sur un homme riche qui ignore un pauvre mendiant
+      (Lazare) à sa porte, pour finalement faire face à la damnation après la mort. Elle enseigne des
+      leçons morales sur la compassion et l'humilité.
+    de: Ein biblisches Gleichnis aus dem Lukasevangelium über einen reichen Mann, der einen armen Bettler
+      (Lazarus) an seiner Tür ignoriert, nur um nach dem Tod der Verdammnis anheimzufallen. Es vermittelt
+      moralische Lehren über Mitgefühl und Demut.
+    it: Una parabola biblica del Vangelo di Luca su un uomo ricco che ignora un povero mendicante (Lazzaro)
+      alla sua porta, per poi affrontare la dannazione dopo la morte. Insegna lezioni morali sulla compassione
+      e l'umiltà.
+    pt: Uma parábola bíblica do Evangelho de Lucas sobre um homem rico que ignora um pobre mendigo (Lázaro)
+      à sua porta, para enfrentar a danação após a morte. Ensina lições morais sobre compaixão e humildade.
+    ru: Библейская притча из Евангелия от Луки о богаче, который игнорирует бедного нищего (Лазаря) у
+      своих ворот, чтобы в итоге после смерти столкнуться с проклятием. Она учит моральным урокам сострадания
+      и смирения.
+    ja: ルカによる福音書の寓話で、金持ちが門前の貧しい乞食（ラザロ）を無視し、死後に罰を受ける。慈悲と謙虚の道徳的教訓を説く。
+    zh: 《路加福音》中的一个圣经寓言，讲述一个富人忽视门前的穷乞丐（拉撒路），最终死后面临惩罚。它传达了关于同情与谦卑的道德教训。
+    ar: مثل من الإنجيل بحسب لوقا عن رجل غني تجاهل فقيرًا متسولًا (لعازر) عند بابه، ليواجه العقاب بعد الموت.
+      يعلم الدروس الأخلاقية حول الرحمة والتواضع.
+    he: משל מהבשורה על פי לוקאס על איש עשיר שהתעלם מעני קבצן (לזרוס) ליד ביתו, ומצא את עצמו נידון לאחר
+      מותו. מלמד לקחים מוסריים על חמלה וענווה.
+  learner_level: B2
+  confidence: 0.8
+  review_status: draft
+  register: religious
+  variants:
+  - a parábola de Lázaro e o Rico
+  - a história do Rico e Lázaro
+  explanation_key: mnemosyne.pt.explanation.biblical_allusions_a_lenda_de_lázaro_e_o_rico_avar
+  source_work_key: mnemosyne.pt.work.bíblia_sagrada
+  source_author_key: mnemosyne.pt.author.traditional_new_testament
+  source_work: Bíblia Sagrada
+  source_author: Traditional (New Testament)
+  source_location: Lucas 16:19-31
+  source_url: https://www.bibliaonline.com.br/lc/16/19-31
+  source_license: public_domain
+  source_dataset: biblical_allusions
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    canonical reference uses ''Avareza'' which is not standard; the parable is known as ''O Rico e Lázaro''.'
+- id: pt_cultural_reference_a_lenda_do_mouro_que_não_queria_a_lua_9e477cf8
+  language: pt
+  canonical_reference: a Lenda do Mouro que Não Queria a Lua
+  reference_type: cultural_reference
+  surface_patterns:
+  - a Lenda do Mouro que Não Queria a Lua
+  - Lenda do Mouro que Não Queria a Lua
+  - Mouro que Não Queria a Lua
+  short_explanation: A Moorish legend from Portugal about a man who rejected the moon's light, symbolizing
+    cultural and religious tensions between Christians and Moors during the Reconquista.
+  i18n_explanations:
+    en: A Moorish legend from Portugal about a man who rejected the moon's light, symbolizing cultural
+      and religious tensions between Christians and Moors during the Reconquista.
+    es: Leyenda morisca de Portugal sobre un hombre que rechazó la luz de la luna, simbolizando las tensiones
+      culturales y religiosas entre cristianos y moros durante la Reconquista.
+    fr: Légende mauresque du Portugal sur un homme qui rejeta la lumière de la lune, symbolisant les tensions
+      culturelles et religieuses entre chrétiens et maures pendant la Reconquista.
+    de: Eine maurische Legende aus Portugal über einen Mann, der das Mondlicht ablehnte, was die kulturellen
+      und religiösen Spannungen zwischen Christen und Mauren während der Reconquista symbolisiert.
+    it: Leggenda moresca del Portogallo su un uomo che rifiutò la luce della luna, simbolo delle tensioni
+      culturali e religiose tra cristiani e mori durante la Reconquista.
+    pt: Lenda mourisca de Portugal sobre um homem que rejeitou a luz da lua, simbolizando as tensões culturais
+      e religiosas entre cristãos e mouros durante a Reconquista.
+    ru: Мавританская легенда из Португалии о человеке, отвергшем лунный свет, что символизирует культурные
+      и религиозные напряжённости между христианами и маврами во время Реконкисты.
+    ja: ポルトガルのムーア人の伝説で、月に照らされるのを拒否した男の話。レコンキスタ期のキリスト教徒とムーア人の間の文化的・宗教的緊張を象徴している。
+    zh: 葡萄牙的摩尔人传说，讲述一个拒绝月光的男子，象征着收复失地运动期间基督徒与摩尔人之间的文化和宗教紧张关系。
+    ar: أسطورة موريسكية من البرتغال عن رجل رفض ضوء القمر، ترمز إلى التوترات الثقافية والدينية بين المسيحيين
+      والمور خلال فترة الاسترداد.
+    he: אגדה מורית מפורטוגל על גבר שדחה את אור הירח, המסמלת את המתחים התרבותיים והדתיים בין נוצרים למורים
+      במהלך הרקונקיסטה.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.pt.explanation.pt_contos_tradicionais_a_lenda_do_mouro_que_não_qu
+  source_work_key: mnemosyne.pt.work.contos_tradicionais_portugueses
+  source_author_key: mnemosyne.pt.author.various
+  source_work: Contos Tradicionais Portugueses
+  source_author: Various
+  source_url: https://pt.wikisource.org/wiki/Contos_Tradicionais_Portugueses
+  source_license: public_domain
+  source_dataset: pt_contos_tradicionais
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Unverifiable
+    as a standard Portuguese legend; explanation appears fabricated or overly generic.'
+- id: pt_cultural_reference_a_lenda_do_tesouro_do_monte_agraço_730394bf
+  language: pt
+  canonical_reference: a Lenda do Tesouro do Monte Agraço
+  reference_type: cultural_reference
+  surface_patterns:
+  - a Lenda do Tesouro do Monte Agraço
+  - Lenda do Tesouro do Monte Agraço
+  - Tesouro do Monte Agraço
+  short_explanation: A Portuguese folktale about a hidden treasure in Monte Agraço, often linked to Moorish
+    or medieval legends. It reflects local oral traditions and the allure of hidden wealth.
+  i18n_explanations:
+    en: A Portuguese folktale about a hidden treasure in Monte Agraço, often linked to Moorish or medieval
+      legends. It reflects local oral traditions and the allure of hidden wealth.
+    es: Cuento popular portugués sobre un tesoro escondido en Monte Agraço, a menudo vinculado a leyendas
+      moriscas o medievales. Refleja tradiciones orales locales y el atractivo de la riqueza oculta.
+    fr: Un conte populaire portugais sur un trésor caché à Monte Agraço, souvent lié à des légendes mauresques
+      ou médiévales. Il reflète les traditions orales locales et l'attrait des richesses cachées.
+    de: Ein portugiesisches Volksmärchen über einen verborgenen Schatz in Monte Agraço, oft mit maurischen
+      oder mittelalterlichen Legenden verbunden. Es spiegelt lokale mündliche Überlieferungen und den
+      Reiz verborgenen Reichtums wider.
+    it: Una fiaba popolare portoghese su un tesoro nascosto a Monte Agraço, spesso legato a leggende moresche
+      o medievali. Riflette le tradizioni orali locali e il fascino della ricchezza nascosta.
+    pt: Um conto popular português sobre um tesouro escondido em Monte Agraço, frequentemente ligado a
+      lendas mouriscas ou medievais. Reflete tradições orais locais e o fascínio pela riqueza oculta.
+    ru: Португальская народная сказка о спрятанном сокровище в Монте-Аграсу, часто связанная с мавританскими
+      или средневековыми легендами. Отражает местные устные традиции и влечение к скрытому богатству.
+    ja: ポルトガルの民話で、モンテ・アグラッソに隠された宝の伝説。ムーア人や中世の伝説としばしば結びつけられる。地元の口承伝統と隠された富への魅力を反映している。
+    zh: 葡萄牙民间传说，讲述蒙特阿格拉索隐藏的宝藏，常与摩尔人或中世纪传说相关联。反映了当地的口头传统和对隐藏财富的诱惑。
+    ar: حكاية شعبية برتغالية عن كنز مخفي في مونتي أغراسو، غالبًا ما ترتبط بأساطير موريسكية أو العصور الوسطى.
+      تعكس التقاليد الشفوية المحلية وجاذبية الثروة المخفية.
+    he: אגדה עממית פורטוגלית על אוצר מוסתר במונטה אגראסו, לעיתים קרובות קשורה לאגדות מוריות או ימי-ביניים.
+      משקפת מסורות שבעל-פה מקומיות ואת קסמה של עושר מוסתר.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.pt.explanation.pt_lendas_narrativas_a_lenda_do_tesouro_do_monte_a
+  source_work_key: mnemosyne.pt.work.lendas_e_narrativas_portuguesas
+  source_author_key: mnemosyne.pt.author.various
+  source_work: Lendas e Narrativas Portuguesas
+  source_author: Various
+  source_url: https://pt.wikisource.org/wiki/Lendas_e_Narrativas_Portuguesas
+  source_license: public_domain
+  source_dataset: pt_lendas_narrativas
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Not
+    a widely recognized legend; low confidence in source and explanation.'
+- id: pt_literary_reference_a_rainha_das_serpentes_de_o_conde_de_são_germano_cc462f79
+  language: pt
+  canonical_reference: a Rainha das Serpentes de 'O Conde de São Germano'
+  reference_type: literary_reference
+  surface_patterns:
+  - Rainha das Serpentes
+  - a Rainha das Serpentes
+  - Rainha das Serpentes de 'O Conde de São Germano'
+  short_explanation: A mythical or allegorical figure from the novel 'O Conde de São Germano' by Camilo
+    Castelo Branco, representing danger or seduction.
+  i18n_explanations:
+    en: A mythical or allegorical figure from the novel 'O Conde de São Germano' by Camilo Castelo Branco,
+      representing danger or seduction.
+    es: Una figura mítica o alegórica de la novela 'O Conde de São Germano' de Camilo Castelo Branco,
+      que representa el peligro o la seducción.
+    fr: Une figure mythique ou allégorique du roman 'O Conde de São Germano' de Camilo Castelo Branco,
+      symbolisant le danger ou la séduction.
+    de: Eine mythische oder allegorische Figur aus dem Roman 'O Conde de São Germano' von Camilo Castelo
+      Branco, die Gefahr oder Verführung verkörpert.
+    it: Una figura mitica o allegorica del romanzo 'O Conde de São Germano' di Camilo Castelo Branco,
+      che rappresenta il pericolo o la seduzione.
+    pt: Uma figura mítica ou alegórica do romance 'O Conde de São Germano' de Camilo Castelo Branco, representando
+      perigo ou sedução.
+    ru: Мифологическая или аллегорическая фигура из романа Камилу Каштелу Бранку 'O Conde de São Germano',
+      олицетворяющая опасность или соблазн.
+    ja: カミлу・カステロ・ブランコの小説「O Conde de São Germano」に登場する神話的または寓意的な人物で、危険や誘惑を象徴する。
+    zh: 卡米洛·卡斯特洛·布兰科小说《圣热尔曼伯爵》中的一个神话或寓言形象，代表危险或诱惑。
+    ar: شخصية أسطورية أو رمزية من رواية 'O Conde de São Germano' لكاميلو كاستيلو برانكو، تمثل الخطر أو
+      الإغراء.
+    he: דמות מיתולוגית או אלגורית מרומן 'O Conde de São Germano' מאת קמילו קסטלו ברנקו, המסמלת סכנה או
+      פיתוי.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.pt.explanation.camilo_castelo_branco_literary_references_a_rainha
+  source_work_key: mnemosyne.pt.work.o_conde_de_são_germano
+  source_author_key: mnemosyne.pt.author.camilo_castelo_branco
+  source_work: O Conde de São Germano
+  source_author: Camilo Castelo Branco
+  source_url: https://pt.wikisource.org/wiki/O_Conde_de_S%C3%A3o_Germano
+  source_license: public_domain
+  source_dataset: camilo_castelo_branco_literary_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Existence
+    of the character and novel is plausible but not verified; requires confirmation.'
+- id: pt_cultural_reference_o_sapo_e_a_lua_de_contos_tradicionais_portugueses_c8016cf0
+  language: pt
+  canonical_reference: o Sapo e a Lua de 'Contos Tradicionais Portugueses'
+  reference_type: cultural_reference
+  surface_patterns:
+  - o Sapo e a Lua
+  - Sapo e a Lua
+  - Contos Tradicionais Portugueses
+  short_explanation: A traditional Portuguese folktale where a frog attempts to reach the moon, symbolizing
+    futile ambition or the limits of human endeavor.
+  i18n_explanations:
+    en: A traditional Portuguese folktale where a frog attempts to reach the moon, symbolizing futile
+      ambition or the limits of human endeavor.
+    es: Un cuento popular portugués en el que una rana intenta alcanzar la luna, simbolizando la ambición
+      vana o los límites del esfuerzo humano.
+    fr: Un conte traditionnel portugais où une grenouille tente d'atteindre la lune, symbolisant l'ambition
+      vaine ou les limites de l'effort humain.
+    de: Ein portugiesisches Volksmärchen, in dem ein Frosch versucht, den Mond zu erreichen – ein Symbol
+      für vergebliche Ambitionen oder die Grenzen menschlicher Anstrengung.
+    it: Una fiaba tradizionale portoghese in cui una rana cerca di raggiungere la luna, simbolizzando
+      l'ambizione vana o i limiti dell'impegno umano.
+    pt: Um conto tradicional português em que um sapo tenta alcançar a lua, simbolizando a ambição vã
+      ou os limites do esforço humano.
+    ru: Португальская народная сказка, в которой лягушка пытается достать до луны, символизируя тщетные
+      амбиции или пределы человеческих усилий.
+    ja: ポルトガルの伝統的な民話で、カエルが月に届こうとする話。無駄な野心や人間の努力の限界を象徴する。
+    zh: 葡萄牙传统民间故事，讲述一只青蛙试图触摸月亮，象征着徒劳的野心或人类努力的极限。
+    ar: حكاية شعبية برتغالية تقليدية تحكي عن ضفدع يحاول الوصول إلى القمر، ترمز إلى الطموح الفاشل أو حدود
+      الجهد البشري.
+    he: אגדה עממית פורטוגלית שבה צפרדע מנסה להגיע לירח, המסמלת שאפתנות לשווא או גבולות המאמץ האנושי.
+  learner_level: A1
+  confidence: 0.6
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.pt.explanation.portuguese_folktales_o_sapo_e_a_lua_de_contos_trad
+  source_work_key: mnemosyne.pt.work.contos_tradicionais_portugueses
+  source_author_key: mnemosyne.pt.author.oral_tradition
+  source_work: Contos Tradicionais Portugueses
+  source_author: Oral tradition
+  source_url: https://www.tradicao.pt/contos-tradicionais-portugueses/
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: portuguese_folktales
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Specific
+    title not widely recognized as a distinct traditional Portuguese folktale; may be obscure.'

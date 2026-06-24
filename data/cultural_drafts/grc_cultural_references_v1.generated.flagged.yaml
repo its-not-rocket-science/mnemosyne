@@ -1,0 +1,1269 @@
+- id: grc_literary_reference_ἀπὸ_μηχανη_σ_θεόσ_24710063
+  language: grc
+  canonical_reference: Ἀπὸ μηχανῆς θεός
+  reference_type: literary_reference
+  surface_patterns:
+  - ἀπὸ μηχανῆς θεός
+  - θεὸς ἀπὸ μηχανῆς
+  - deus ex machina
+  short_explanation: Literally 'god from the machine,' referring to a plot device in Greek drama where
+    a god is lowered by a crane to resolve the story. By extension, any improbable intervention.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.grc.explanation.greek_phrases_ἀπὸ_μηχανη_σ_θεόσ
+  source_work_key: mnemosyne.grc.work.various_e_g_ευ_ριπίδησ_μήδεια_etc
+  source_author_key: mnemosyne.grc.author.various
+  source_work: Various (e.g., Εὐριπίδης, Μήδεια, etc.)
+  source_author: Various
+  source_license: public_domain
+  source_dataset: greek_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    exact Greek phrase is not attested in ancient texts; it is a later scholarly term for ''deus ex machina''.'
+- id: grc_classical_or_scriptural_allusion_πάντα_ῥει_03afd6a4
+  language: grc
+  canonical_reference: Πάντα ῥεῖ
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - πάντα ῥεῖ
+  - παντα ρει
+  - everything flows
+  - panta rhei
+  short_explanation: A phrase attributed to Heraclitus expressing the concept of universal flux, that
+    everything is in constant change. It is a central tenet of Heraclitean philosophy.
+  i18n_explanations:
+    en: A phrase attributed to Heraclitus expressing the concept of universal flux, that everything is
+      in constant change. It is a central tenet of Heraclitean philosophy.
+    es: Frase atribuida a Heráclito que expresa el concepto de flujo universal, de que todo está en constante
+      cambio. Es un principio central de la filosofía heracleíta.
+    fr: Phrase attribuée à Héraclite exprimant le concept de flux universel, que tout est en changement
+      constant. C'est un principe central de la philosophie héraclitéenne.
+    de: Ein dem Heraklit zugeschriebener Ausdruck, der das Konzept des universellen Flusses ausdrückt,
+      dass alles in ständigem Wandel ist. Es ist ein zentraler Grundsatz der heraklitischen Philosophie.
+    it: Frase attribuita a Eraclito che esprime il concetto di flusso universale, che tutto è in costante
+      cambiamento. È un principio centrale della filosofia eraclitea.
+    pt: Frase atribuída a Heráclito que expressa o conceito de fluxo universal, de que tudo está em constante
+      mudança. É um princípio central da filosofia heracleitana.
+    ru: Фраза, приписываемая Гераклиту, выражающая концепцию всеобщего потока, что все находится в постоянном
+      изменении. Это центральный принцип гераклитовой философии.
+    ja: 万物は流転するという万物の流動性を表す、ヘラクレイトスに帰される言葉。ヘラクレイトス哲学の中心的概念である。
+    zh: 归因于赫拉克利特的短语，表达了普遍流动的概念，即一切都在不断变化。这是赫拉克利特哲学的核心原则。
+    ar: عبارة منسوبة إلى هيراقليطس تعبر عن مفهوم التدفق الكوني، أن كل شيء في تغير مستمر. إنها مبدأ أساسي
+      في الفلسفة الهيراقليطية.
+    he: ביטוי המיוחס להרקליטוס המבטא את מושג הזרימה האוניברסלית, שהכל נמצא בשינוי מתמיד. זהו עיקרון מרכזי
+      בפילוסופיה ההרקליטית.
+  learner_level: C1
+  confidence: 0.7
+  review_status: draft
+  register: classical
+  variants:
+  - πάντα χωρεῖ (everything flows)
+  explanation_key: mnemosyne.grc.explanation.ancient_greek_phrases_πάντα_ῥει
+  source_work_key: mnemosyne.grc.work.heraclitus_fragments_diels_kranz_22b12_b91_etc
+  source_author_key: mnemosyne.grc.author.heraclitus
+  source_work: Heraclitus fragments (Diels-Kranz 22B12, B91, etc.)
+  source_author: Heraclitus
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0085
+  source_license: public_domain
+  source_dataset: ancient_greek_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    exact phrase does not appear verbatim in Heraclitus'' fragments; it is a later paraphrase.'
+- id: grc_literary_reference_οἶδα_ὅτι_ου_δὲν_οἶδα_4f949d8d
+  language: grc
+  canonical_reference: Οἶδα ὅτι οὐδὲν οἶδα
+  reference_type: literary_reference
+  surface_patterns:
+  - οἶδα ὅτι οὐδὲν οἶδα
+  - οἶδα οὐδὲν οἶδα
+  - scio me nihil scire
+  short_explanation: Socrates' statement of intellectual humility, known from Plato's 'Apology', has become
+    a foundational philosophical tenet and a widely used proverb expressing the recognition of one's own
+    ignorance.
+  i18n_explanations:
+    en: Socrates' statement of intellectual humility, known from Plato's 'Apology', has become a foundational
+      philosophical tenet and a widely used proverb expressing the recognition of one's own ignorance.
+    es: La declaración de humildad intelectual de Sócrates, conocida por la 'Apología' de Platón, se ha
+      convertido en un principio filosófico fundamental y un proverbio ampliamente utilizado que expresa
+      el reconocimiento de la propia ignorancia.
+    fr: La déclaration d'humilité intellectuelle de Socrate, connue de l''Apologie' de Platon, est devenue
+      un principe philosophique fondamental et un proverbe largement utilisé exprimant la reconnaissance
+      de sa propre ignorance.
+    de: Sokrates' Aussage über intellektuelle Demut, bekannt aus Platons 'Apologie', ist zu einem grundlegenden
+      philosophischen Grundsatz und einem weit verbreiteten Sprichwort geworden, das das Erkennen der
+      eigenen Unwissenheit ausdrückt.
+    it: L'affermazione di umiltà intellettuale di Socrate, nota dall''Apologia' di Platone, è diventata
+      un principio filosofico fondamentale e un proverbio ampiamente usato che esprime il riconoscimento
+      della propria ignoranza.
+    pt: A declaração de humildade intelectual de Sócrates, conhecida da 'Apologia' de Platão, tornou-se
+      um princípio filosófico fundamental e um provérbio amplamente usado que expressa o reconhecimento
+      da própria ignorância.
+    ru: Утверждение Сократа об интеллектуальном смирении, известное из 'Апологии' Платона, стало основополагающим
+      философским принципом и широко используемой пословицей, выражающей признание собственного невежества.
+    ja: ソクラテスの知的謙虚さの声明は、プラトンの『ソクラテスの弁明』から知られ、基本的な哲学的教義となり、自分の無知を認識することを表す広く使われることわざとなった。
+    zh: 苏格拉底关于智力谦逊的陈述，出自柏拉图的《申辩篇》，已成为一个基础性的哲学原则和广泛使用的谚语，表达了对自己无知的认识。
+    ar: بيان سقراط عن التواضع الفكري، المعروف من 'دفاع أفلاطون'، أصبح مبدأ فلسفياً أساسياً ومثلًا شائعاً
+      يعبر عن الاعتراف بجهل المرء.
+    he: ההצהרה של סוקרטס על ענווה אינטלקטואלית, המוכרת מ'התנצלותו' של אפלטון, הפכה לעיקרון פילוסופי יסודי
+      ולפתגם נפוץ המבטא הכרה בבורותו של האדם.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.grc.explanation.ancient_greek_phrases_οἶδα_ὅτι_ου_δὲν_οἶδα
+  source_work_key: mnemosyne.grc.work.apology
+  source_author_key: mnemosyne.grc.author.plato
+  source_work: Apology
+  source_author: Plato
+  source_location: 21d
+  source_url: http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0170:section=21d
+  source_license: public_domain
+  source_dataset: ancient_greek_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    exact Greek phrase does not appear verbatim in Plato''s Apology; it is a later Latin-derived formulation
+    often misattributed.'
+- id: grc_literary_reference_κτη_μα_ἐσ_αἰεί_b3bcb23e
+  language: grc
+  canonical_reference: Κτῆμα ἐς αἰεί
+  reference_type: literary_reference
+  surface_patterns:
+  - κτῆμα ἐς αἰεί
+  - κτῆμα ἐς ἀεὶ
+  short_explanation: From Pericles' Funeral Oration in Thucydides' 'History of the Peloponnesian War',
+    this phrase describes Athens as an eternal possession or legacy, and is often used to signify something
+    of lasting value.
+  i18n_explanations:
+    en: From Pericles' Funeral Oration in Thucydides' 'History of the Peloponnesian War', this phrase
+      describes Athens as an eternal possession or legacy, and is often used to signify something of lasting
+      value.
+    es: De la Oración Fúnebre de Pericles en la 'Historia de la Guerra del Peloponeso' de Tucídides, esta
+      frase describe Atenas como una posesión o legado eterno, y se usa a menudo para significar algo
+      de valor duradero.
+    fr: Extrait de l'oraison funèbre de Périclès dans l''Histoire de la guerre du Péloponnèse' de Thucydide,
+      cette phrase décrit Athènes comme une possession ou un héritage éternel, et est souvent utilisée
+      pour signifier quelque chose de valeur durable.
+    de: Aus der Gefallenenrede des Perikles in Thukydides' 'Geschichte des Peloponnesischen Krieges' beschreibt
+      dieser Satz Athen als ewigen Besitz oder Vermächtnis und wird oft verwendet, um etwas von dauerhaftem
+      Wert zu bezeichnen.
+    it: Dal discorso funebre di Pericle nella 'Storia della guerra del Peloponneso' di Tucidide, questa
+      frase descrive Atene come un possesso o un'eredità eterna, ed è spesso usata per significare qualcosa
+      di valore duraturo.
+    pt: Do Discurso Fúnebre de Péricles na 'História da Guerra do Peloponeso' de Tucídides, esta frase
+      descreve Atenas como uma posse ou legado eterno, e é frequentemente usada para significar algo de
+      valor duradouro.
+    ru: Из надгробной речи Перикла в «Истории Пелопоннесской войны» Фукидида эта фраза описывает Афины
+      как вечное владение или наследие и часто используется для обозначения чего-то непреходящей ценности.
+    ja: トゥキディデスの『戦史』におけるペリクレスの葬礼演説から、この言葉はアテナイを永遠の所有物または遺産として描写し、持続的な価値を持つものを意味するためによく使われる。
+    zh: 出自修昔底德《伯罗奔尼撒战争史》中伯里克利的葬礼演说，这句话将雅典描述为永恒的财产或遗产，常用来表示具有持久价值的事物。
+    ar: من خطبة جنازة بريكليس في 'تاريخ الحرب البيلوبونيزية' لثوقيديدس، يصف هذا العبارة أثينا كممتلكات
+      أو إرث أبدي، وغالبًا ما تستخدم للدلالة على شيء ذي قيمة دائمة.
+    he: מתוך נאום ההספד של פריקלס ב'תולדות המלחמה הפלופונסית' של תוקידידס, ביטוי זה מתאר את אתונה כנחלה
+      או מורשת נצחית, ומשמש לעתים קרובות לציון דבר בעל ערך מתמשך.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.grc.explanation.ancient_greek_phrases_κτη_μα_ἐσ_αἰεί
+  source_work_key: mnemosyne.grc.work.history_of_the_peloponnesian_war
+  source_author_key: mnemosyne.grc.author.thucydides
+  source_work: History of the Peloponnesian War
+  source_author: Thucydides
+  source_location: 2.41.4
+  source_url: http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0200:book=2:chapter=41:section=4
+  source_license: public_domain
+  source_dataset: ancient_greek_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase is from Thucydides 1.22.4, not Pericles'' Funeral Oration at 2.41.4; the explanation and location
+    are incorrect.'
+- id: grc_cultural_reference_περικλη_σ_χρυσου_σ_αἰών_211b41d3
+  language: grc
+  canonical_reference: Περικλῆς χρυσοῦς αἰών
+  reference_type: cultural_reference
+  surface_patterns:
+  - Περικλῆς χρυσοῦς αἰών
+  - ὁ χρυσοῦς αἰὼν Περικλέους
+  - ἐπὶ Περικλέους χρυσοῦς αἰών
+  short_explanation: Refers to the Golden Age of Athens under Pericles (c. 461–429 BCE), a period of cultural
+    flourishing, imperial power, and democratic consolidation.
+  i18n_explanations:
+    en: Refers to the Golden Age of Athens under Pericles (c. 461–429 BCE), a period of cultural flourishing,
+      imperial power, and democratic consolidation.
+    es: Se refiere a la Edad de Oro de Atenas bajo Pericles (c. 461-429 a.C.), un período de florecimiento
+      cultural, poder imperial y consolidación democrática.
+    fr: Fait référence à l'Âge d'or d'Athènes sous Périclès (vers 461-429 av. J.-C.), une période d'épanouissement
+      culturel, de puissance impériale et de consolidation démocratique.
+    de: Bezieht sich auf das Goldene Zeitalter Athens unter Perikles (ca. 461–429 v. Chr.), eine Zeit
+      kultureller Blüte, imperialer Macht und demokratischer Konsolidierung.
+    it: Si riferisce all'Età dell'Oro di Atene sotto Pericle (ca. 461-429 a.C.), un periodo di fioritura
+      culturale, potere imperiale e consolidamento democratico.
+    pt: Refere-se à Era de Ouro de Atenas sob Péricles (c. 461-429 a.C.), um período de florescimento
+      cultural, poder imperial e consolidação democrática.
+    ru: Относится к Золотому веку Афин при Перикле (ок. 461–429 гг. до н.э.), периоду культурного расцвета,
+      имперской мощи и укрепления демократии.
+    ja: ペリクレス統治下のアテナイの黄金時代（紀元前461～429年頃）を指し、文化的繁栄、帝国の力、民主主義の確立の時代。
+    zh: 指伯里克利统治下雅典的黄金时代（约公元前461-429年），这是一个文化繁荣、帝国权力和民主巩固的时期。
+    ar: يشير إلى العصر الذهبي لأثينا تحت حكم بريكليس (حوالي 461-429 قبل الميلاد)، وهي فترة من الازدهار
+      الثقافي والقوة الإمبراطورية وتعزيز الديمقراطية.
+    he: מתייחס לתור הזהב של אתונה תחת פריקלס (כ-461–429 לפנה"ס), תקופה של פריחה תרבותית, כוח אימפריאלי
+      וביסוס דמוקרטי.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.grc.explanation.ancient_greek_references_περικλη_σ_χρυσου_σ_αἰών
+  source_work_key: mnemosyne.grc.work.ἱστορίαι_history_of_the_peloponnesian_war
+  source_author_key: mnemosyne.grc.author.θουκυδίδησ_thucydides
+  source_work: Ἱστορίαι (History of the Peloponnesian War)
+  source_author: Θουκυδίδης (Thucydides)
+  source_location: '2.65'
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0200
+  source_license: public_domain
+  source_dataset: ancient_greek_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase ''χρυσοῦς αἰών'' is not directly from Thucydides 2.65; it is a modern designation.'
+- id: grc_cultural_reference_παυσανίασ_νικηφόροσ_3605193d
+  language: grc
+  canonical_reference: Παυσανίας νικηφόρος
+  reference_type: cultural_reference
+  surface_patterns:
+  - Παυσανίας νικηφόρος
+  - Παυσανίας
+  - νικηφόρος Παυσανίας
+  short_explanation: Refers to Pausanias, the Spartan general who led the Greek coalition to victory over
+    the Persians at the Battle of Plataea in 479 BCE.
+  i18n_explanations:
+    en: Refers to Pausanias, the Spartan general who led the Greek coalition to victory over the Persians
+      at the Battle of Plataea in 479 BCE.
+    es: Se refiere a Pausanias, el general espartano que lideró la coalición griega a la victoria sobre
+      los persas en la Batalla de Platea en el 479 a. C.
+    fr: Fait référence à Pausanias, le général spartiate qui a mené la coalition grecque à la victoire
+      sur les Perses à la bataille de Platées en 479 av. J.-C.
+    de: Bezieht sich auf Pausanias, den spartanischen General, der die griechische Koalition 479 v. Chr.
+      in der Schlacht von Plataiai zum Sieg über die Perser führte.
+    it: Si riferisce a Pausania, il generale spartano che guidò la coalizione greca alla vittoria sui
+      Persiani nella battaglia di Platea nel 479 a.C.
+    pt: Refere-se a Pausânias, o general espartano que liderou a coalizão grega à vitória sobre os persas
+      na Batalha de Plateias em 479 a.C.
+    ru: Относится к Павсанию, спартанскому полководцу, который привел греческую коалицию к победе над
+      персами в битве при Платеях в 479 г. до н.э.
+    ja: 紀元前479年のプラタイアの戦いで、ギリシャ連合軍を率いてペルシャに勝利したスパルタの将軍パウサニアスに言及。
+    zh: 指斯巴达将军保萨尼亚斯，他在公元前479年的普拉提亚战役中率领希腊联军战胜波斯。
+    ar: يشير إلى باوسانياس، القائد الإسبرطي الذي قاد التحالف اليوناني إلى النصر على الفرس في معركة بلاتايا
+      عام 479 قبل الميلاد.
+    he: מתייחס לפאוסניאס, המפקד הספרטני שהוביל את הקואליציה היוונית לניצחון על הפרסים בקרב פלטאיה בשנת
+      479 לפנה"ס.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  variants:
+  - Παυσανίας ὁ νικηφόρος
+  explanation_key: mnemosyne.grc.explanation.greek_historical_phrases_παυσανίασ_νικηφόροσ
+  source_work_key: mnemosyne.grc.work.ἱστορίαι
+  source_author_key: mnemosyne.grc.author.herodotus
+  source_work: Ἱστορίαι
+  source_author: Herodotus
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Hdt.+9
+  source_license: public_domain
+  source_dataset: greek_historical_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase ''Παυσανίας νικηφόρος'' is not directly attested in Herodotus; Pausanias is described as victorious
+    but the epithet is not verbatim.'
+- id: grc_cultural_reference_μιλτιάδησ_μαραθών_b254c6c0
+  language: grc
+  canonical_reference: Μιλτιάδης Μαραθών
+  reference_type: cultural_reference
+  surface_patterns:
+  - Μιλτιάδης Μαραθών
+  - Μιλτιάδης
+  - Μαραθών
+  short_explanation: Refers to Miltiades, the Athenian general who commanded at the Battle of Marathon
+    (490 BCE) and secured a decisive Greek victory against the Persians.
+  i18n_explanations:
+    en: Refers to Miltiades, the Athenian general who commanded at the Battle of Marathon (490 BCE) and
+      secured a decisive Greek victory against the Persians.
+    es: Se refiere a Milcíades, el general ateniense que comandó en la Batalla de Maratón (490 a. C.)
+      y aseguró una decisiva victoria griega contra los persas.
+    fr: Fait référence à Miltiade, le général athénien qui commanda lors de la bataille de Marathon (490
+      av. J.-C.) et assura une victoire grecque décisive contre les Perses.
+    de: Bezieht sich auf Miltiades, den athenischen General, der in der Schlacht von Marathon (490 v.
+      Chr.) kommandierte und einen entscheidenden griechischen Sieg über die Perser sicherte.
+    it: Si riferisce a Milziade, il generale ateniese che comandò nella battaglia di Maratona (490 a.C.)
+      e ottenne una decisiva vittoria greca contro i Persiani.
+    pt: Refere-se a Milcíades, o general ateniense que comandou na Batalha de Maratona (490 a.C.) e garantiu
+      uma vitória grega decisiva sobre os persas.
+    ru: Относится к Мильтиаду, афинскому полководцу, который командовал в Марафонской битве (490 г. до
+      н.э.) и обеспечил решающую победу греков над персами.
+    ja: 紀元前490年のマラトンの戦いで指揮を執り、ペルシャに対してギリシャの決定的な勝利を収めたアテネの将軍ミルティアデスに言及。
+    zh: 指雅典将军米太亚德，他在公元前490年的马拉松战役中指挥，并确保了希腊对波斯的决定性胜利。
+    ar: يشير إلى ملتيادس، القائد الأثيني الذي قاد في معركة ماراثون (490 قبل الميلاد) وحقق نصرًا يونانيًا
+      حاسمًا ضد الفرس.
+    he: מתייחס למילטיאדס, המפקד האתונאי שפיקד בקרב מרתון (490 לפנה"ס) והבטיח ניצחון יווני מכריע על הפרסים.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: classical
+  variants:
+  - Μιλτιάδης ὁ Μαραθώνιος
+  explanation_key: mnemosyne.grc.explanation.greek_historical_phrases_μιλτιάδησ_μαραθών
+  source_work_key: mnemosyne.grc.work.ἱστορίαι
+  source_author_key: mnemosyne.grc.author.herodotus
+  source_work: Ἱστορίαι
+  source_author: Herodotus
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Hdt.+6
+  source_license: public_domain
+  source_dataset: greek_historical_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    association of Miltiades with Marathon is accurate, but the exact phrase ''Μιλτιάδης Μαραθών'' does
+    not appear in Herodotus.'
+- id: grc_cultural_reference_θηβαίων_ἱερὰσ_λόχοσ_e3e0fa8e
+  language: grc
+  canonical_reference: Θηβαίων ἱερὰς λόχος
+  reference_type: cultural_reference
+  surface_patterns:
+  - ἱερὸς λόχος
+  - Θηβαίων λόχος
+  - ἱερὰς λόχος
+  short_explanation: The Sacred Band of Thebes was an elite military unit composed of 150 pairs of lovers,
+    renowned for its bravery and cohesion in battle.
+  i18n_explanations:
+    en: The Sacred Band of Thebes was an elite military unit composed of 150 pairs of lovers, renowned
+      for its bravery and cohesion in battle.
+    es: El Batallón Sagrado de Tebas era una unidad militar de élite compuesta por 150 parejas de amantes,
+      famosa por su valentía y cohesión en la batalla.
+    fr: Le Bataillon sacré de Thèbes était une unité militaire d'élite composée de 150 couples d'amants,
+      réputée pour sa bravoure et sa cohésion au combat.
+    de: Die Heilige Schar von Theben war eine Elite-Militäreinheit, bestehend aus 150 Liebespaaren, berühmt
+      für ihren Mut und Zusammenhalt im Kampf.
+    it: Il Battaglione Sacro di Tebe era un'unità militare d'élite composta da 150 coppie di amanti, rinomata
+      per il coraggio e la coesione in battaglia.
+    pt: O Batalhão Sagrado de Tebas era uma unidade militar de elite composta por 150 pares de amantes,
+      renomada por sua bravura e coesão em batalha.
+    ru: Священный отряд из Фив был элитным военным подразделением, состоящим из 150 пар влюбленных, известным
+      своей храбростью и сплоченностью в бою.
+    ja: テーバイの神聖隊は、150組の恋人から成る精鋭部隊で、戦場での勇敢さと結束で有名だった。
+    zh: 底比斯圣队是一支由150对恋人组成的精锐军事单位，以其在战斗中的勇敢和团结而闻名。
+    ar: كانت الكتيبة المقدسة من طيبة وحدة عسكرية نخبوية مكونة من 150 زوجًا من العشاق، مشهورة بشجاعتها
+      وتماسكها في المعركة.
+    he: הלגיון הקדוש של תבאי היה יחידה צבאית מובחרת שהורכבה מ-150 זוגות אוהבים, שנודעה באומץ לבה ובלכידותה
+      בקרב.
+  learner_level: B1
+  confidence: 0.85
+  review_status: draft
+  register: classical
+  variants:
+  - Θήβας ἱερὸς λόχος
+  explanation_key: mnemosyne.grc.explanation.ancient_greek_references_θηβαίων_ἱερὰσ_λόχοσ
+  source_work_key: mnemosyne.grc.work.various
+  source_author_key: mnemosyne.grc.author.various_e_g_plutarch_xenophon
+  source_work: Various
+  source_author: Various (e.g., Plutarch, Xenophon)
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ancient_greek_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    canonical reference uses grammatically inconsistent phrase ''Θηβαίων ἱερὰς λόχος''; standard form
+    is ''ἱερὸς λόχος'' or ''Θηβαίων ἱερὸς λόχος''.'
+- id: grc_cultural_reference_κλύτε_θεαί_982abb70
+  language: grc
+  canonical_reference: Κλύτε, θεαί
+  reference_type: cultural_reference
+  surface_patterns:
+  - Κλύτε, θεαί
+  short_explanation: A formal invocation meaning 'Hear me, goddesses', typical of ancient hymns and prayers,
+    though not tied to a single specific work.
+  i18n_explanations:
+    en: A formal invocation meaning 'Hear me, goddesses', typical of ancient hymns and prayers, though
+      not tied to a single specific work.
+    es: Una invocación formal que significa 'Escuchadme, diosas', típica de himnos y plegarias antiguas,
+      aunque no vinculada a una obra específica.
+    fr: Une invocation formelle signifiant 'Entendez-moi, déesses', typique des hymnes et prières antiques,
+      bien que non liée à une œuvre spécifique.
+    de: Eine formelle Anrufung mit der Bedeutung 'Hört mich, Göttinnen', typisch für antike Hymnen und
+      Gebete, aber nicht an ein bestimmtes Werk gebunden.
+    it: Un'invocazione formale che significa 'Ascoltatemi, dee', tipica di inni e preghiere antiche, sebbene
+      non legata a un'opera specifica.
+    pt: Uma invocação formal que significa 'Ouvi-me, deusas', típica de hinos e orações antigas, embora
+      não vinculada a uma obra específica.
+    ru: Формальное обращение, означающее «Услышьте меня, богини», характерное для древних гимнов и молитв,
+      хотя и не привязанное к конкретному произведению.
+    ja: 「聞け、女神たちよ」という正式な呼びかけで、古代の讃歌や祈りに典型的だが、特定の作品に限定されない。
+    zh: 一种正式的祈求，意为“听我说，女神们”，是古代赞美诗和祈祷的典型用语，虽不特指某一具体作品。
+    ar: دعاء رسمي يعني "اسمعنني، أيتها الإلهات"، نموذجي في الأناشيد والصلوات القديمة، رغم أنه غير مرتبط
+      بعمل معين.
+    he: קריאה רשמית שמשמעותה "שמענה, אלות", אופיינית למזמורים ולתפילות עתיקות, אף שאינה קשורה ליצירה מסוימת.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: religious
+  variants:
+  - κλύτε μοι, θεαί
+  explanation_key: mnemosyne.grc.explanation.ancient_greek_phrases_κλύτε_θεαί
+  source_work_key: mnemosyne.grc.work.various
+  source_author_key: mnemosyne.grc.author.unknown_traditional
+  source_work: Various
+  source_author: Unknown/Traditional
+  source_license: public_domain
+  source_dataset: ancient_greek_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Phrase
+    is generic; not a specific canonical reference.'
+- id: grc_literary_reference_ὀρφεὺσ_μυσταγωγόσ_72cb95ab
+  language: grc
+  canonical_reference: Ὀρφεὺς μυσταγωγός
+  reference_type: literary_reference
+  surface_patterns:
+  - Ὀρφεὺς μυσταγωγός
+  - μυσταγωγὸς Ὀρφεύς
+  - Ὀρφεὺς ὁ μυσταγωγός
+  short_explanation: Orpheus is regarded as the founder and guide of the Orphic mysteries, a mystic leader
+    who taught secret rites.
+  i18n_explanations:
+    en: Orpheus is regarded as the founder and guide of the Orphic mysteries, a mystic leader who taught
+      secret rites.
+    es: Orfeo es considerado el fundador y guía de los misterios órficos, un líder místico que enseñaba
+      ritos secretos.
+    fr: Orphée est considéré comme le fondateur et le guide des mystères orphiques, un chef mystique qui
+      enseignait des rites secrets.
+    de: Orpheus gilt als der Gründer und Führer der orphischen Mysterien, ein mystischer Anführer, der
+      geheime Riten lehrte.
+    it: Orfeo è considerato il fondatore e guida dei misteri orfici, un leader mistico che insegnava riti
+      segreti.
+    pt: Orfeu é considerado o fundador e guia dos mistérios órficos, um líder místico que ensinava ritos
+      secretos.
+    ru: Орфей считается основателем и проводником орфических мистерий, мистическим лидером, который учил
+      тайным обрядам.
+    ja: オルフェウスはオルペウス教の秘儀の創始者であり導き手であり、秘密の儀式を教えた神秘的なリーダーと見なされている。
+    zh: 俄耳甫斯被视为俄耳甫斯教秘仪的创始人和引导者，是一位教授秘密仪式的神秘领袖。
+    ar: يعتبر أورفيوس مؤسس ومرشد الأسرار الأورفية، وهو قائد صوفي علم الطقوس السرية.
+    he: אורפיאוס נחשב למייסד ולמדריך של המסתורין האורפיים, מנהיג מיסטי שלימד טקסים סודיים.
+  learner_level: C1
+  confidence: 0.7
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.grc.explanation.ancient_greek_references_ὀρφεὺσ_μυσταγωγόσ
+  source_work_key: mnemosyne.grc.work.various
+  source_author_key: mnemosyne.grc.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ancient_greek_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    specific phrase ''Orpheus mystagogos'' is not common in classical sources and may reflect later traditions.'
+- id: grc_literary_reference_διὸσ_ὄρκοσ_b35866df
+  language: grc
+  canonical_reference: Διὸς ὄρκος
+  reference_type: literary_reference
+  surface_patterns:
+  - Διὸς ὄρκος
+  - ὄρκος Διός
+  - τὸν Διὸς ὄρκον
+  short_explanation: The oath of Zeus was considered the most solemn and inviolable oath in Greek mythology,
+    often invoked to guarantee the truth of a statement.
+  i18n_explanations:
+    en: The oath of Zeus was considered the most solemn and inviolable oath in Greek mythology, often
+      invoked to guarantee the truth of a statement.
+    es: El juramento de Zeus era considerado el juramento más solemne e inviolable en la mitología griega,
+      a menudo invocado para garantizar la veracidad de una declaración.
+    fr: Le serment de Zeus était considéré comme le serment le plus solennel et inviolable de la mythologie
+      grecque, souvent invoqué pour garantir la vérité d'une déclaration.
+    de: Der Eid des Zeus galt als der feierlichste und unantastbarste Eid in der griechischen Mythologie,
+      der oft angerufen wurde, um die Wahrheit einer Aussage zu garantieren.
+    it: Il giuramento di Zeus era considerato il giuramento più solenne e inviolabile nella mitologia
+      greca, spesso invocato per garantire la verità di un'affermazione.
+    pt: O juramento de Zeus era considerado o juramento mais solene e inviolável na mitologia grega, frequentemente
+      invocado para garantir a veracidade de uma afirmação.
+    ru: Клятва Зевса считалась самой торжественной и нерушимой клятвой в греческой мифологии, часто призываемой
+      для гарантии истинности утверждения.
+    ja: ゼウスの誓いはギリシャ神話において最も厳粛で不可侵な誓いとされ、発言の真実を保証するためにしばしば唱えられた。
+    zh: 宙斯的誓言被认为是希腊神话中最庄严、最不可违背的誓言，常被用来保证陈述的真实性。
+    ar: كان قسم زيوس يعتبر أقدس وأقدس قسم في الأساطير اليونانية، وغالبًا ما يُستدعى لضمان صحة البيان.
+    he: שבועת זאוס נחשבה לשבועה החמורה והבלתי ניתנת להפרה ביותר במיתולוגיה היוונית, ולעיתים קרובות הוזכרה
+      כדי להבטיח את אמיתות ההצהרה.
+  learner_level: B1
+  confidence: 0.8
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.grc.explanation.ancient_greek_references_διὸσ_ὄρκοσ
+  source_work_key: mnemosyne.grc.work.iliad
+  source_author_key: mnemosyne.grc.author.homer
+  source_work: Iliad
+  source_author: Homer
+  source_location: Iliad 1.525-527
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0217%3Abook%3D1%3Acard%3D500
+  source_license: public_domain
+  source_dataset: ancient_greek_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- While
+    the concept of Zeus''s oath is valid, the exact phrase ''Διὸς ὄρκος'' is not directly quoted in the
+    cited Iliad passage.'
+- id: grc_literary_reference_ναὶ_μὰ_δία_efc367b0
+  language: grc
+  canonical_reference: Ναὶ μὰ Δία
+  reference_type: literary_reference
+  surface_patterns:
+  - ναὶ μὰ Δία
+  - νὴ Δία
+  - μὰ Δία
+  short_explanation: A strong oath meaning 'yes, by Zeus', used in everyday speech and comedy to emphasize
+    truth or agreement.
+  i18n_explanations:
+    en: A strong oath meaning 'yes, by Zeus', used in everyday speech and comedy to emphasize truth or
+      agreement.
+    es: Un juramento fuerte que significa 'sí, por Zeus', usado en el habla cotidiana y la comedia para
+      enfatizar la verdad o el acuerdo.
+    fr: Un serment fort signifiant 'oui, par Zeus', utilisé dans le langage courant et la comédie pour
+      souligner la vérité ou l'accord.
+    de: Ein starker Schwur, der 'ja, bei Zeus' bedeutet, verwendet in alltäglicher Rede und Komödie, um
+      Wahrheit oder Zustimmung zu betonen.
+    it: Un giuramento forte che significa 'sì, per Zeus', usato nel linguaggio quotidiano e nella commedia
+      per enfatizzare verità o accordo.
+    pt: Um juramento forte que significa 'sim, por Zeus', usado na fala cotidiana e na comédia para enfatizar
+      verdade ou acordo.
+    ru: Сильная клятва, означающая 'да, клянусь Зевсом', используемая в повседневной речи и комедии для
+      подчеркивания истины или согласия.
+    ja: 「はい、ゼウスにかけて」という意味の強い誓いで、日常会話や喜劇で真実や同意を強調するために使われる。
+    zh: 一个强有力的誓言，意为“是的，以宙斯的名义”，在日常生活和喜剧中用于强调事实或同意。
+    ar: قسم قوي يعني 'نعم، بزيوس'، يستخدم في الكلام اليومي والكوميديا لتأكيد الحقيقة أو الاتفاق.
+    he: שבועה חזקה שפירושה 'כן, בזאוס', בשימוש בדיבור יומיומי ובקומדיה כדי להדגיש אמת או הסכמה.
+  learner_level: B2
+  confidence: 0.75
+  review_status: draft
+  register: informal
+  explanation_key: mnemosyne.grc.explanation.ag_greek_phrases_ναὶ_μὰ_δία
+  source_work_key: mnemosyne.grc.work.clouds
+  source_author_key: mnemosyne.grc.author.aristophanes
+  source_work: Clouds
+  source_author: Aristophanes
+  source_location: line 88
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0241:card=83
+  source_license: public_domain
+  source_dataset: ag_greek_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    exact phrase ''Ναὶ μὰ Δία'' is not attested in Clouds line 88; the line contains ''νὴ τὸν Δί'', so
+    the surface pattern is close but not exact.'
+- id: grc_literary_reference_προμηθέωσ_πυ_ρ_5fd8ccbd
+  language: grc
+  canonical_reference: Προμηθέως πῦρ
+  reference_type: literary_reference
+  surface_patterns:
+  - Προμηθέως πῦρ
+  - το πῦρ του Προμηθέως
+  - πῦρ Προμηθέως
+  - Προμηθεϊκόν πῦρ
+  short_explanation: Prometheus' fire refers to the fire stolen from the gods by the Titan Prometheus
+    and given to humanity. It symbolizes knowledge, civilization, and enlightenment, often used metaphorically
+    for a creative or life-giving force.
+  i18n_explanations:
+    en: Prometheus' fire refers to the fire stolen from the gods by the Titan Prometheus and given to
+      humanity. It symbolizes knowledge, civilization, and enlightenment, often used metaphorically for
+      a creative or life-giving force.
+    es: El fuego de Prometeo se refiere al fuego robado a los dioses por el titán Prometeo y entregado
+      a la humanidad. Simboliza el conocimiento, la civilización y la ilustración, y a menudo se usa metafóricamente
+      como una fuerza creativa o dadora de vida.
+    fr: Le feu de Prométhée fait référence au feu volé aux dieux par le Titan Prométhée et donné à l'humanité.
+      Il symbolise la connaissance, la civilisation et l'illumination, souvent utilisé métaphoriquement
+      pour une force créatrice ou vivifiante.
+    de: Das Feuer des Prometheus bezieht sich auf das Feuer, das der Titan Prometheus den Göttern stahl
+      und den Menschen gab. Es symbolisiert Wissen, Zivilisation und Erleuchtung und wird oft metaphorisch
+      für eine schöpferische oder lebensspendende Kraft verwendet.
+    it: Il fuoco di Prometeo si riferisce al fuoco rubato agli dei dal titano Prometeo e donato all'umanità.
+      Simboleggia conoscenza, civiltà e illuminazione, spesso usato metaforicamente per una forza creativa
+      o vivificante.
+    pt: O fogo de Prometeu refere-se ao fogo roubado dos deuses pelo titã Prometeu e dado à humanidade.
+      Simboliza conhecimento, civilização e iluminação, frequentemente usado metaforicamente como uma
+      força criativa ou geradora de vida.
+    ru: Огонь Прометея относится к огню, украденному у богов титаном Прометеем и переданному человечеству.
+      Он символизирует знание, цивилизацию и просвещение, часто используется метафорически для обозначения
+      творческой или животворной силы.
+    ja: プロメーテウスの火は、ティターン神プロメーテウスが神々から盗んで人類に与えた火を指す。知識、文明、啓蒙を象徴し、創造的または生命を与える力の比喩としてよく使われる。
+    zh: 普罗米修斯之火指的是泰坦神普罗米修斯从众神那里盗取并赐予人类的天火。它象征着知识、文明和启迪，常被隐喻为创造或赋予生命的力量。
+    ar: نار بروميثيوس تشير إلى النار التي سرقها العملاق بروميثيوس من الآلهة وأعطاها للبشرية. إنها ترمز
+      إلى المعرفة والحضارة والتنوير، وغالبًا ما تستخدم مجازًا للقوة الإبداعية أو الواهبة للحياة.
+    he: האש של פרומתאוס מתייחסת לאש שנגנבה מהאלים על ידי הטיטאן פרומתאוס וניתנה לאנושות. היא מסמלת ידע,
+      ציוויליזציה והארה, ומשמשת לעתים קרובות כמטאפורה לכוח יצירתי או מעניק חיים.
+  learner_level: B2
+  confidence: 0.8
+  review_status: draft
+  register: classical
+  variants:
+  - Προμηθευτικόν πῦρ
+  - Φωτιά του Προμηθέα
+  explanation_key: mnemosyne.grc.explanation.greek_mythology_phrases_προμηθέωσ_πυ_ρ
+  source_work_key: mnemosyne.grc.work.θεογονία_theogony
+  source_author_key: mnemosyne.grc.author.hesiod
+  source_work: Θεογονία (Theogony)
+  source_author: Hesiod
+  source_location: Lines 565-567 (and other early sources)
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Hesiod+Theogony+565
+  source_license: public_domain
+  source_dataset: greek_mythology_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    location may be imprecise; lines 565-567 refer to the division at Mecone rather than the theft of
+    fire.'
+- id: grc_literary_reference_σφιγγὸσ_αἴνιγμα_79dbff77
+  language: grc
+  canonical_reference: Σφιγγὸς αἴνιγμα
+  reference_type: literary_reference
+  surface_patterns:
+  - Σφιγγὸς αἴνιγμα
+  - το αίνιγμα της Σφίγγας
+  - αἴνιγμα Σφιγγός
+  - το αίνιγμα της Σφιγγός
+  short_explanation: 'The Riddle of the Sphinx, posed to passersby: ''What walks on four legs in the morning,
+    two at noon, and three in the evening?'' Oedipus solved it, and the Sphinx killed herself. It symbolizes
+    an inscrutable puzzle.'
+  i18n_explanations:
+    en: 'The Riddle of the Sphinx, posed to passersby: ''What walks on four legs in the morning, two at
+      noon, and three in the evening?'' Oedipus solved it, and the Sphinx killed herself. It symbolizes
+      an inscrutable puzzle.'
+    es: 'El acertijo de la Esfinge, planteado a los transeúntes: ''¿Qué camina con cuatro patas por la
+      mañana, dos al mediodía y tres por la tarde?'' Edipo lo resolvió, y la Esfinge se suicidó. Simboliza
+      un enigma insondable.'
+    fr: 'L''énigme du Sphinx, posée aux passants : ''Qu''est-ce qui marche à quatre pattes le matin, à
+      deux à midi et à trois le soir ?'' Œdipe la résolut, et le Sphinx se tua. Elle symbolise une énigme
+      impénétrable.'
+    de: 'Das Rätsel der Sphinx, gestellt an Vorbeigehende: ''Was geht morgens auf vier Beinen, mittags
+      auf zwei und abends auf drei?'' Ödipus löste es, und die Sphinx tötete sich selbst. Es symbolisiert
+      ein undurchdringliches Rätsel.'
+    it: 'L''enigma della Sfinge, posto ai passanti: ''Cosa cammina a quattro zampe al mattino, due a mezzogiorno
+      e tre alla sera?'' Edipo lo risolse, e la Sfinge si uccise. Simboleggia un enigma imperscrutabile.'
+    pt: 'O enigma da Esfinge, proposto aos transeuntes: ''O que anda com quatro pernas pela manhã, duas
+      ao meio-dia e três à noite?'' Édipo o resolveu, e a Esfinge se matou. Simboliza um enigma insondável.'
+    ru: 'Загадка Сфинкса, задаваемая прохожим: «Кто утром ходит на четырех ногах, днем на двух, а вечером
+      на трех?» Эдип разгадал ее, и Сфинкс убила себя. Она символизирует непостижимую загадку.'
+    ja: スピンクスの謎かけは、通行人に「朝は四本足、昼は二本足、夕方は三本足で歩くものは何か？」と問うもの。オイディプスが解き、スピンクスは自殺した。不可解な謎を象徴する。
+    zh: 斯芬克斯之谜向路人提出：“什么东西早晨四条腿，中午两条腿，晚上三条腿？”俄狄浦斯解开了谜底，斯芬克斯自杀。它象征着难以捉摸的谜题。
+    ar: 'لغز أبو الهول، الذي يطرح على المارة: ''ما الذي يمشي على أربع أرجل في الصباح، واثنتين في الظهيرة،
+      وثلاث في المساء؟'' حله أوديب، فقتل أبو الهول نفسه. يرمز إلى لغز غامض.'
+    he: 'חידת הספינקס, שהוצגה לעוברים ושבים: ''מה הולך על ארבע רגליים בבוקר, שתיים בצהריים ושלוש בערב?''
+      אדיפוס פתר אותה, והספינקס התאבד. היא מסמלת חידה בלתי פתירה.'
+  learner_level: B2
+  confidence: 0.8
+  review_status: draft
+  register: classical
+  variants:
+  - Αίνιγμα της Σφίγγας
+  - Σφιγγικό αίνιγμα
+  explanation_key: mnemosyne.grc.explanation.greek_mythology_phrases_σφιγγὸσ_αἴνιγμα
+  source_work_key: mnemosyne.grc.work.οἰδίπουσ_τύραννοσ_oedipus_rex
+  source_author_key: mnemosyne.grc.author.sophocles
+  source_work: Οἰδίπους Τύραννος (Oedipus Rex)
+  source_author: Sophocles
+  source_location: Lines 130-131 (reference to the riddle)
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Soph.+OT+130
+  source_license: public_domain
+  source_dataset: greek_mythology_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    riddle is not explicitly quoted at lines 130-131 of Oedipus Rex; it is referenced indirectly, so location
+    is imprecise.'
+- id: grc_classical_or_scriptural_allusion_ἀθηνα_σ_αἰγίσ_5d66a451
+  language: grc
+  canonical_reference: Ἀθηνᾶς αἰγίς
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Ἀθηνᾶς αἰγίς
+  - αἰγὶς Ἀθηνᾶς
+  - ἡ τῆς Ἀθηνᾶς αἰγίς
+  short_explanation: The aegis of Athena, a protective shield or cloak bearing the Gorgon's head, symbolizing
+    divine protection and authority.
+  i18n_explanations:
+    en: The aegis of Athena, a protective shield or cloak bearing the Gorgon's head, symbolizing divine
+      protection and authority.
+    es: La égida de Atenea, un escudo o manto protector que lleva la cabeza de la Gorgona, que simboliza
+      la protección divina y la autoridad.
+    fr: L'égide d'Athéna, un bouclier ou manteau protecteur portant la tête de la Gorgone, symbolisant
+      la protection et l'autorité divines.
+    de: Die Aigis der Athene, ein schützender Schild oder Umhang mit dem Haupt der Gorgone, der göttlichen
+      Schutz und Autorität symbolisiert.
+    it: L'egida di Atena, uno scudo o mantello protettivo con la testa della Gorgone, che simboleggia
+      la protezione divina e l'autorità.
+    pt: A égide de Atena, um escudo ou manto protetor com a cabeça da Górgona, simbolizando proteção divina
+      e autoridade.
+    ru: Эгида Афины, защитный щит или плащ с головой Горгоны, символизирующий божественную защиту и власть.
+    ja: アテナのアイギス。ゴルゴンの頭をあしらった防御用の盾または外套で、神の保護と権威を象徴する。
+    zh: 雅典娜的埃癸斯，一个带有戈耳工头颅的防护盾牌或披风，象征着神圣的保护和权威。
+    ar: إيغيس أثينا، درع أو رداء واقٍ يحمل رأس الغورغون، يرمز إلى الحماية الإلهية والسلطة.
+    he: האגיס של אתנה, מגן או גלימה מגן הנושאים את ראש הגורגונה, המסמלים הגנה אלוהית וסמכות.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.grc.explanation.ag_cultural_references_ἀθηνα_σ_αἰγίσ
+  source_work_key: mnemosyne.grc.work.iliad
+  source_author_key: mnemosyne.grc.author.homer
+  source_work: Iliad
+  source_author: Homer
+  source_location: '2.447'
+  source_url: http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0133:book=2:card=446
+  source_license: public_domain
+  source_dataset: ag_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    location Iliad 2.447 does not mention the aegis; correct line is e.g., 5.738.'
+- id: grc_proverb_tradition_ἕν_οἶδα_ὅτι_ου_δὲν_οἶδα_d0743cbc
+  language: grc
+  canonical_reference: ἕν οἶδα ὅτι οὐδὲν οἶδα
+  reference_type: proverb_tradition
+  surface_patterns:
+  - ἕν οἶδα ὅτι οὐδὲν οἶδα
+  - οἶδα ὅτι οὐδὲν οἶδα
+  short_explanation: A famous Socratic paradox expressing the idea that true wisdom is recognizing one's
+    own ignorance; attributed to Socrates from Plato's Apology.
+  i18n_explanations:
+    en: A famous Socratic paradox expressing the idea that true wisdom is recognizing one's own ignorance;
+      attributed to Socrates from Plato's Apology.
+    es: Una famosa paradoja socrática que expresa la idea de que la verdadera sabiduría es reconocer la
+      propia ignorancia; atribuida a Sócrates en la Apología de Platón.
+    fr: Un célèbre paradoxe socratique exprimant l'idée que la vraie sagesse est de reconnaître sa propre
+      ignorance; attribué à Socrate dans l'Apologie de Platon.
+    de: Ein berühmtes sokratisches Paradoxon, das die Idee ausdrückt, dass wahre Weisheit darin besteht,
+      die eigene Unwissenheit zu erkennen; zugeschrieben Sokrates aus Platons Apologie.
+    it: Un famoso paradosso socratico che esprime l'idea che la vera saggezza è riconoscere la propria
+      ignoranza; attribuito a Socrate nell'Apologia di Platone.
+    pt: Um famoso paradoxo socrático que expressa a ideia de que a verdadeira sabedoria é reconhecer a
+      própria ignorância; atribuído a Sócrates na Apologia de Platão.
+    ru: Знаменитый сократовский парадокс, выражающий идею о том, что истинная мудрость — это осознание
+      собственного невежества; приписывается Сократу из «Апологии» Платона.
+    ja: ソクラテスの有名な逆説で、真の知恵とは自分の無知を認識することであるという考えを表す。プラトンの『ソクラテスの弁明』からソクラテスに帰せられる。
+    zh: 著名的苏格拉底悖论，表达了真正的智慧是认识到自己的无知；出自柏拉图的《申辩篇》，归为苏格拉底所说。
+    ar: مفارقة سقراطية شهيرة تعبر عن فكرة أن الحكمة الحقيقية هي الاعتراف بالجهل الخاص؛ منسوبة إلى سقراط
+      من دفاع أفلاطون.
+    he: פרדוקס סוקרטי מפורסם המבטא את הרעיון שהחוכמה האמיתית היא הכרה בבורותו של האדם; מיוחס לסוקרטס מתוך
+      ההתנצלות של אפלטון.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.grc.explanation.ancient_greek_phrases_ἕν_οἶδα_ὅτι_ου_δὲν_οἶδα
+  source_work_key: mnemosyne.grc.work.various_attributed_via_plato_s_apology
+  source_author_key: mnemosyne.grc.author.socrates_tradition
+  source_work: Various (attributed via Plato's Apology)
+  source_author: Socrates (tradition)
+  source_location: 21d (paraphrased)
+  source_url: http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0170:text=Apology
+  source_license: public_domain
+  source_dataset: ancient_greek_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Phrase
+    is a later paraphrase, not a direct quote from Plato''s Apology; attribution is traditional but not
+    exact.'
+- id: grc_proverb_tradition_κορώνη_τίκτουσα_fd03f346
+  language: grc
+  canonical_reference: Κορώνη τίκτουσα
+  reference_type: proverb_tradition
+  surface_patterns:
+  - κορώνη τίκτουσα
+  - ἡ κορώνη τίκτει
+  - κορώνη τίκτει
+  short_explanation: A phrase meaning 'a crow giving birth', used to denote something rare or unnatural.
+    It originates from ancient Greek fables where the crow's offspring was considered ill-omened.
+  i18n_explanations:
+    en: A phrase meaning 'a crow giving birth', used to denote something rare or unnatural. It originates
+      from ancient Greek fables where the crow's offspring was considered ill-omened.
+    es: Una frase que significa 'un cuervo dando a luz', usada para denotar algo raro o antinatural. Se
+      origina en fábulas griegas antiguas donde la cría del cuervo se consideraba de mal agüero.
+    fr: Une phrase signifiant 'une corneille donnant naissance', utilisée pour désigner quelque chose
+      de rare ou d'anormal. Elle provient de fables grecques antiques où la progéniture de la corneille
+      était considérée comme de mauvais augure.
+    de: Ein Ausdruck, der 'eine Krähe, die gebiert' bedeutet, verwendet, um etwas Seltenes oder Unnatürliches
+      zu bezeichnen. Es stammt aus altgriechischen Fabeln, in denen die Nachkommen der Krähe als Unglücksbringer
+      galten.
+    it: Una frase che significa 'un corvo che dà alla luce', usata per denotare qualcosa di raro o innaturale.
+      Ha origine dalle favole greche antiche in cui la prole del corvo era considerata di cattivo auspicio.
+    pt: Uma frase que significa 'um corvo dando à luz', usada para denotar algo raro ou não natural. Origina-se
+      de fábulas gregas antigas onde a prole do corvo era considerada de mau agouro.
+    ru: Фраза, означающая 'ворон, рождающий потомство', используется для обозначения чего-то редкого или
+      неестественного. Происходит из древнегреческих басен, где потомство ворона считалось дурным предзнаменованием.
+    ja: 「カラスが出産する」という意味のフレーズで、珍しいことや不自然なことを表すのに使われる。古代ギリシャの寓話に由来し、カラスの子孫は不吉とされた。
+    zh: 意为“乌鸦分娩”的短语，用于表示罕见或反常的事物。源自古希腊寓言，其中乌鸦的后代被认为是不祥之兆。
+    ar: عبارة تعني 'غراب يلد'، تستخدم للدلالة على شيء نادر أو غير طبيعي. تنبع من الخرافات اليونانية القديمة
+      حيث كان نسل الغراب يعتبر نذير شؤم.
+    he: ביטוי שפירושו 'עורב יולד', המשמש לציון דבר נדיר או לא טבעי. מקורו באגדות יווניות עתיקות שבהן צאצאיו
+      של העורב נחשבו לסימן רע.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.grc.explanation.gr_ancient_proverbs_κορώνη_τίκτουσα
+  source_work_key: mnemosyne.grc.work.various
+  source_author_key: mnemosyne.grc.author.greek_proverb_tradition
+  source_work: Various
+  source_author: Greek proverb tradition
+  source_license: public_domain
+  source_dataset: gr_ancient_proverbs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Plausible
+    but uncertain; need to verify if ''κορώνη τίκτουσα'' is an established proverbial phrase.'
+- id: grc_proverb_tradition_τυφλὸσ_ἐν_τη_ι_ὁδω_ι_23287301
+  language: grc
+  canonical_reference: Τυφλὸς ἐν τῇ ὁδῷ
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Τυφλὸς ἐν τῇ ὁδῷ
+  - ὁ τυφλὸς ἐν τῇ ὁδῷ
+  - τυφλὸς ἐν ὁδῷ
+  short_explanation: A proverb meaning 'a blind man on the road', often used to describe someone helpless
+    or lost, possibly alluding to the fable of the blind man and the lame man.
+  i18n_explanations:
+    en: A proverb meaning 'a blind man on the road', often used to describe someone helpless or lost,
+      possibly alluding to the fable of the blind man and the lame man.
+    es: Un proverbio que significa 'un ciego en el camino', a menudo usado para describir a alguien desamparado
+      o perdido, posiblemente aludiendo a la fábula del ciego y el cojo.
+    fr: Un proverbe signifiant 'un aveugle sur la route', souvent utilisé pour décrire quelqu'un de désemparé
+      ou perdu, faisant peut-être allusion à la fable de l'aveugle et du boiteux.
+    de: Ein Sprichwort, das 'ein Blinder auf der Straße' bedeutet, oft verwendet, um jemanden hilflos
+      oder verloren zu beschreiben, möglicherweise eine Anspielung auf die Fabel vom Blinden und dem Lahmen.
+    it: Un proverbio che significa 'un cieco sulla strada', spesso usato per descrivere qualcuno indifeso
+      o smarrito, con possibile riferimento alla favola del cieco e del zoppo.
+    pt: Um provérbio que significa 'um cego na estrada', frequentemente usado para descrever alguém desamparado
+      ou perdido, possivelmente aludindo à fábula do cego e do coxo.
+    ru: Пословица, означающая 'слепой на дороге', часто используется для описания беспомощного или заблудившегося
+      человека, возможно, намек на басню о слепом и хромом.
+    ja: 「道の上の盲人」という意味のことわざで、無力または迷っている人を表すのに使われ、盲人と足の不自由な人の寓話を暗示している可能性がある。
+    zh: 一个谚语，意为“路上的盲人”，常用来形容无助或迷路的人，可能暗指盲人和跛子的寓言。
+    ar: مثل يعني 'أعمى على الطريق'، يستخدم غالبًا لوصف شخص عاجز أو تائه، ربما في إشارة إلى حكاية الأعمى
+      والأعرج.
+    he: פתגם שמשמעותו 'עיוור בדרך', משמש לעתים קרובות לתיאור מישהו חסר אונים או אבוד, אולי ברמיזה למשל
+      העיוור והפיסח.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.grc.explanation.greek_proverbs_ancient_τυφλὸσ_ἐν_τη_ι_ὁδω_ι
+  source_work_key: mnemosyne.grc.work.aesop_s_fables
+  source_author_key: mnemosyne.grc.author.aesop
+  source_work: Aesop's Fables
+  source_author: Aesop
+  source_location: Perry Index 135
+  source_license: public_domain
+  source_dataset: greek_proverbs_ancient
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Phrase
+    is known but direct attribution to Aesop''s Fables (Perry 135) is uncertain; it is a general proverb.'
+- id: grc_proverb_tradition_νόσοσ_γόνων_657a53a8
+  language: grc
+  canonical_reference: Νόσος γόνων
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Νόσος γόνων
+  - νόσος γονάτων
+  - ἡ νόσος τῶν γόνων
+  short_explanation: A phrase meaning 'disease of the knees', possibly referring to gout or arthritis,
+    used proverbially to indicate a chronic ailment or lameness.
+  i18n_explanations:
+    en: A phrase meaning 'disease of the knees', possibly referring to gout or arthritis, used proverbially
+      to indicate a chronic ailment or lameness.
+    es: Una frase que significa 'enfermedad de las rodillas', posiblemente refiriéndose a la gota o la
+      artritis, usada proverbialmente para indicar una dolencia crónica o cojera.
+    fr: Une phrase signifiant 'maladie des genoux', faisant peut-être référence à la goutte ou à l'arthrite,
+      utilisée proverbialement pour indiquer une affection chronique ou une claudication.
+    de: Ein Ausdruck, der 'Krankheit der Knie' bedeutet, möglicherweise Bezug nehmend auf Gicht oder Arthritis,
+      sprichwörtlich verwendet, um ein chronisches Leiden oder Lahmheit anzuzeigen.
+    it: Un'espressione che significa 'malattia delle ginocchia', possibilmente riferita alla gotta o all'artrite,
+      usata proverbialmente per indicare un disturbo cronico o zoppia.
+    pt: Uma frase que significa 'doença dos joelhos', possivelmente referindo-se à gota ou artrite, usada
+      proverbialmente para indicar uma doença crônica ou claudicação.
+    ru: Фраза, означающая 'болезнь коленей', возможно, относящаяся к подагре или артриту, используется
+      как пословица для обозначения хронического недуга или хромоты.
+    ja: 「膝の病気」という意味のフレーズで、痛風や関節炎を指す可能性があり、慢性的な病気や足の不自由を示すことわざとして使われる。
+    zh: 一个短语，意为“膝盖的疾病”，可能指痛风或关节炎，用作谚语暗示慢性疾病或跛行。
+    ar: عبارة تعني 'مرض الركبتين'، قد تشير إلى النقرس أو التهاب المفاصل، تُستخدم كمثل للدلالة على مرض
+      مزمن أو عرج.
+    he: ביטוי שמשמעותו 'מחלת ברכיים', אולי מתייחס לשיגדון או דלקת פרקים, משמש כפתגם לציון מחלה כרונית
+      או צליעה.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.grc.explanation.greek_proverbs_ancient_νόσοσ_γόνων
+  source_work_key: mnemosyne.grc.work.hippocratic_corpus
+  source_author_key: mnemosyne.grc.author.hippocrates_attributed
+  source_work: Hippocratic Corpus
+  source_author: Hippocrates (attributed)
+  source_license: public_domain
+  source_dataset: greek_proverbs_ancient
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Not
+    clearly a proverb; likely a medical phrase from Hippocratic texts; proverbial status uncertain.'
+- id: grc_literary_reference_ξει_νοσ_ἐν_ξένηι_1e65fded
+  language: grc
+  canonical_reference: Ξεῖνος ἐν ξένῃ
+  reference_type: literary_reference
+  surface_patterns:
+  - Ξεῖνος ἐν ξένῃ
+  - ξένος ἐν ξένῃ
+  - ξένος σε ξένη γη
+  - xenos en xene
+  short_explanation: A phrase meaning 'a stranger in a foreign land', famously used by Sophocles in Oedipus
+    at Colonus to express isolation and homelessness.
+  i18n_explanations:
+    en: A phrase meaning 'a stranger in a foreign land', famously used by Sophocles in Oedipus at Colonus
+      to express isolation and homelessness.
+    es: Una frase que significa 'un extranjero en tierra extranjera', famosamente utilizada por Sófocles
+      en Edipo en Colono para expresar aislamiento y falta de hogar.
+    fr: Une phrase signifiant 'un étranger en terre étrangère', célèbrement utilisée par Sophocle dans
+      Œdipe à Colone pour exprimer l'isolement et le sans-abrisme.
+    de: Ein Satz, der 'ein Fremder in einem fremden Land' bedeutet, berühmt verwendet von Sophokles in
+      Ödipus auf Kolonos, um Isolation und Obdachlosigkeit auszudrücken.
+    it: Una frase che significa 'uno straniero in terra straniera', famosamente usata da Sofocle nell'Edipo
+      a Colono per esprimere isolamento e mancanza di una casa.
+    pt: Uma frase que significa 'um estranho em terra estrangeira', famosamente usada por Sófocles em
+      Édipo em Colono para expressar isolamento e falta de lar.
+    ru: Фраза, означающая 'чужак в чужой стране', знаменито использованная Софоклом в «Эдипе в Колоне»
+      для выражения изоляции и бездомности.
+    ja: 「見知らぬ土地の見知らぬ人」を意味するフレーズ。ソフォクレスの『コロノスのオイディプス』で孤独とホームレス状態を表現するために有名に使われた。
+    zh: 意为‘异乡的陌生人’的短语，索福克勒斯在《俄狄浦斯在科洛诺斯》中著名地用它来表达孤立与无家可归。
+    ar: عبارة تعني 'غريب في أرض أجنبية'، استخدمها سوفوكليس بشكل مشهور في مسرحية 'أوديب في كولونوس' للتعبير
+      عن العزلة والتشرد.
+    he: ביטוי שמשמעותו 'זר בארץ זרה', ששימש באופן מפורסם את סופוקלס באדיפוס בקולונוס כדי לבטא בדידות וחוסר
+      בית.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.grc.explanation.greek_phrases_ξει_νοσ_ἐν_ξένηι
+  source_work_key: mnemosyne.grc.work.οἰδίπουσ_ἐπὶ_κολωνω_ι
+  source_author_key: mnemosyne.grc.author.sophocles
+  source_work: Οἰδίπους ἐπὶ Κολωνῷ
+  source_author: Sophocles
+  source_location: line 194
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0189:card=194
+  source_license: public_domain
+  source_dataset: greek_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Phrase
+    is plausible but exact line attribution in Oedipus at Colonus is uncertain; specific location may
+    be off.'
+- id: grc_classical_or_scriptural_allusion_ἄξιον_ἐστί_6e5fe086
+  language: grc
+  canonical_reference: Ἄξιον ἐστί
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Ἄξιον ἐστί
+  - Ἀξιόν ἐστι
+  - άξιον εστί
+  - axion esti
+  short_explanation: A liturgical phrase meaning 'It is worthy', central to the Orthodox hymn 'Axion Estin'
+    and also found in classical Greek literature as a general expression of worthiness.
+  i18n_explanations:
+    en: A liturgical phrase meaning 'It is worthy', central to the Orthodox hymn 'Axion Estin' and also
+      found in classical Greek literature as a general expression of worthiness.
+    es: Una frase litúrgica que significa 'Es digno', central en el himno ortodoxo 'Axion Estin' y también
+      encontrada en la literatura griega clásica como expresión general de dignidad.
+    fr: Une phrase liturgique signifiant 'Il est digne', centrale dans l'hymne orthodoxe 'Axion Estin'
+      et également présente dans la littérature grecque classique comme expression générale de dignité.
+    de: Ein liturgischer Satz, der 'Es ist würdig' bedeutet, zentral für den orthodoxen Hymnus 'Axion
+      Estin' und auch in der klassischen griechischen Literatur als allgemeiner Ausdruck der Würdigkeit
+      zu finden.
+    it: Una frase liturgica che significa 'È degno', centrale nell'inno ortodosso 'Axion Estin' e presente
+      anche nella letteratura greca classica come espressione generale di dignità.
+    pt: Uma frase litúrgica que significa 'É digno', central no hino ortodoxo 'Axion Estin' e também encontrada
+      na literatura grega clássica como expressão geral de dignidade.
+    ru: Литургическая фраза, означающая 'Достойно есть', центральная в православном гимне «Достойно есть»
+      (Axion Estin) и также встречающаяся в классической греческой литературе как общее выражение достоинства.
+    ja: 「それはふさわしい」を意味する典礼上のフレーズ。正教会の聖歌『アクシオン・エスティン』の中心であり、古典ギリシャ文学でも一般的な価値の表現として見られる。
+    zh: 意为‘这是值得的’的礼仪短语，是东正教赞美诗《Axion Estin》的核心，也出现在古典希腊文学中作为一般表达值得性的用语。
+    ar: عبارة طقسية تعني 'إنه مستحق'، محورية في الترنيمة الأرثوذكسية 'Axion Estin'، وتوجد أيضًا في الأدب
+      اليوناني الكلاسيكي كتعبير عام عن الجدارة.
+    he: ביטוי ליטורגי שמשמעותו 'ראוי הוא', מרכזי בהמנון האורתודוקסי 'Axion Estin' ונמצא גם בספרות היוונית
+      הקלאסית כביטוי כללי של ראויות.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.grc.explanation.greek_phrases_ἄξιον_ἐστί
+  source_work_key: mnemosyne.grc.work.liturgical_hymn_ἄξιον_ἐστίν
+  source_author_key: mnemosyne.grc.author.traditional_attributed_to_st_john_damascene
+  source_work: Liturgical hymn Ἄξιον ἐστίν
+  source_author: Traditional (attributed to St. John Damascene)
+  source_url: https://en.wikipedia.org/wiki/Axion_Estin
+  source_license: public_domain
+  source_dataset: greek_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Primarily
+    a Byzantine liturgical phrase, not a classical reference; classification as classical_or_scriptural_allusion
+    is misleading.'
+- id: grc_cultural_reference_ἡ_καρδία_μου_διψα_ι_19d1204e
+  language: grc
+  canonical_reference: Ἡ καρδία μου διψᾷ
+  reference_type: cultural_reference
+  surface_patterns:
+  - καρδία μου διψᾷ
+  - ἡ καρδία μου διψᾷ
+  - διψᾷ ἡ καρδία μου
+  short_explanation: A poetic expression meaning 'my heart thirsts,' often used metaphorically for intense
+    longing or desire. It echoes biblical and liturgical language but is not a direct quote from ancient
+    texts.
+  i18n_explanations:
+    en: A poetic expression meaning 'my heart thirsts,' often used metaphorically for intense longing
+      or desire. It echoes biblical and liturgical language but is not a direct quote from ancient texts.
+    es: Una expresión poética que significa 'mi corazón tiene sed', a menudo usada metafóricamente para
+      un anhelo o deseo intenso. Evoca el lenguaje bíblico y litúrgico, pero no es una cita directa de
+      textos antiguos.
+    fr: Une expression poétique signifiant 'mon cœur a soif', souvent utilisée métaphoriquement pour un
+      désir ou une envie intense. Elle rappelle le langage biblique et liturgique mais n'est pas une citation
+      directe de textes anciens.
+    de: Ein poetischer Ausdruck, der 'mein Herz dürstet' bedeutet, oft metaphorisch für starkes Verlangen
+      oder Sehnsucht verwendet. Er erinnert an biblische und liturgische Sprache, ist aber kein direktes
+      Zitat aus antiken Texten.
+    it: Un'espressione poetica che significa 'il mio cuore ha sete', spesso usata metaforicamente per
+      un intenso desiderio o brama. Richiama il linguaggio biblico e liturgico ma non è una citazione
+      diretta di testi antichi.
+    pt: Uma expressão poética que significa 'meu coração tem sede', frequentemente usada metaforicamente
+      para um anseio ou desejo intenso. Ecoa a linguagem bíblica e litúrgica, mas não é uma citação direta
+      de textos antigos.
+    ru: Поэтическое выражение, означающее 'мое сердце жаждет', часто используется метафорически для сильной
+      тоски или желания. Оно перекликается с библейским и литургическим языком, но не является прямой
+      цитатой из древних текстов.
+    ja: 「私の心は渇く」を意味する詩的な表現で、強い憧れや欲望の比喩としてよく使われる。聖書や典礼の言葉を連想させるが、古代の文献からの直接の引用ではない。
+    zh: 一个诗意的表达，意思是'我的心渴了'，常用来比喻强烈的渴望或欲望。它呼应了圣经和礼拜仪式的语言，但并非古代文本的直接引用。
+    ar: تعبير شعري يعني 'قلبي يعطش'، وغالبًا ما يُستخدم مجازيًا للشوق أو الرغبة الشديدة. إنه يردد اللغة
+      الكتابية والليتورجية لكنه ليس اقتباسًا مباشرًا من النصوص القديمة.
+    he: ביטוי פיוטי שמשמעו 'ליבי צמא', המשמש לעתים קרובות באופן מטפורי לכמיהה או תשוקה עזה. הוא מהדהד
+      שפה מקראית וליטורגית אך אינו ציטוט ישיר מטקסטים עתיקים.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.grc.explanation.ag_cultural_refs_ἡ_καρδία_μου_διψα_ι
+  source_work_key: mnemosyne.grc.work.various
+  source_author_key: mnemosyne.grc.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ag_cultural_refs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Plausible
+    as later liturgical Greek but not attested in classical texts.'
+- id: grc_proverb_tradition_ἀνάγκη_πάντωσ_8da5af5e
+  language: grc
+  canonical_reference: Ἀνάγκη πάντως
+  reference_type: proverb_tradition
+  surface_patterns:
+  - ἀνάγκη πάντως
+  - πάντως ἀνάγκη
+  - ἀνάγκη πάντως ἐστί
+  short_explanation: A phrase meaning 'necessity altogether' or 'by all means necessity,' reflecting a
+    fatalistic or deterministic sentiment. It resembles tragic or philosophical expressions but is not
+    a verbatim quote from a specific source.
+  i18n_explanations:
+    en: A phrase meaning 'necessity altogether' or 'by all means necessity,' reflecting a fatalistic or
+      deterministic sentiment. It resembles tragic or philosophical expressions but is not a verbatim
+      quote from a specific source.
+    es: Una frase que significa 'necesidad total' o 'por todos los medios necesidad', reflejando un sentimiento
+      fatalista o determinista. Se asemeja a expresiones trágicas o filosóficas, pero no es una cita textual
+      de una fuente específica.
+    fr: Une expression signifiant 'nécessité absolue' ou 'par tous les moyens nécessité', reflétant un
+      sentiment fataliste ou déterministe. Elle ressemble à des expressions tragiques ou philosophiques
+      mais n'est pas une citation textuelle d'une source spécifique.
+    de: Ein Ausdruck, der 'Notwendigkeit insgesamt' oder 'durchaus Notwendigkeit' bedeutet und eine fatalistische
+      oder deterministische Haltung widerspiegelt. Er ähnelt tragischen oder philosophischen Ausdrücken,
+      ist aber kein wörtliches Zitat aus einer bestimmten Quelle.
+    it: Una frase che significa 'necessità del tutto' o 'con ogni mezzo necessità', che riflette un sentimento
+      fatalista o deterministico. Assomiglia a espressioni tragiche o filosofiche ma non è una citazione
+      testuale da una fonte specifica.
+    pt: Uma frase que significa 'necessidade total' ou 'por todos os meios necessidade', refletindo um
+      sentimento fatalista ou determinista. Assemelha-se a expressões trágicas ou filosóficas, mas não
+      é uma citação literal de uma fonte específica.
+    ru: Фраза, означающая 'необходимость в целом' или 'всеми средствами необходимость', отражающая фаталистическое
+      или детерминистическое настроение. Она напоминает трагические или философские выражения, но не является
+      дословной цитатой из конкретного источника.
+    ja: 「必然性全体」または「何としても必然性」を意味する句で、運命論的または決定論的な感情を反映している。悲劇や哲学の表現に似ているが、特定の出典からの逐語的な引用ではない。
+    zh: 一个短语，意思是'完全必然'或'无论如何必然'，反映了一种宿命论或决定论的情绪。它类似于悲剧或哲学的表达，但并非来自特定来源的逐字引用。
+    ar: عبارة تعني 'الضرورة المطلقة' أو 'بالضرورة بأي وسيلة'، تعكس شعورًا قدرًا أو حتميًا. تشبه التعبيرات
+      المأساوية أو الفلسفية ولكنها ليست اقتباسًا حرفيًا من مصدر محدد.
+    he: ביטוי שמשמעו 'הכרח מוחלט' או 'בכל האמצעים הכרח', המשקף תחושה פטליסטית או דטרמיניסטית. הוא דומה
+      לביטויים טרגיים או פילוסופיים אך אינו ציטוט מילולי ממקור ספציפי.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.grc.explanation.ag_cultural_refs_ἀνάγκη_πάντωσ
+  source_work_key: mnemosyne.grc.work.various
+  source_author_key: mnemosyne.grc.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ag_cultural_refs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Plausible
+    but not a verbatim quotation; resembles tragic or philosophical phrasing.'
+- id: grc_cultural_reference_φυγὴ_ἀπὸ_τὴν_πόλιν_acffe86f
+  language: grc
+  canonical_reference: Φυγὴ ἀπὸ τὴν πόλιν
+  reference_type: cultural_reference
+  surface_patterns:
+  - φυγὴ ἀπὸ τῆς πόλεως
+  - φυγὴ ἐκ τῆς πόλεως
+  - ἡ φυγὴ ἀπὸ τὴν πόλιν
+  short_explanation: A phrase denoting exile or escape from the city-state, reflecting the Greek concept
+    of exile (φυγή) as a severe punishment or voluntary departure from the polis.
+  i18n_explanations:
+    en: A phrase denoting exile or escape from the city-state, reflecting the Greek concept of exile (φυγή)
+      as a severe punishment or voluntary departure from the polis.
+    es: Frase que denota exilio o huida de la ciudad-estado, reflejando el concepto griego de exilio (φυγή)
+      como un castigo severo o una partida voluntaria de la polis.
+    fr: Une phrase désignant l'exil ou la fuite de la cité-État, reflétant le concept grec d'exil (φυγή)
+      comme un châtiment sévère ou un départ volontaire de la polis.
+    de: Ein Ausdruck, der Verbannung oder Flucht aus dem Stadtstaat bezeichnet und das griechische Konzept
+      des Exils (φυγή) als schwere Strafe oder freiwilligen Abschied von der Polis widerspiegelt.
+    it: Frase che denota esilio o fuga dalla città-stato, riflettendo il concetto greco di esilio (φυγή)
+      come punizione severa o partenza volontaria dalla polis.
+    pt: Uma frase que denota exílio ou fuga da cidade-estado, refletindo o conceito grego de exílio (φυγή)
+      como um castigo severo ou partida voluntária da pólis.
+    ru: Фраза, обозначающая изгнание или бегство из города-государства, отражающая греческое понятие изгнания
+      (φυγή) как сурового наказания или добровольного ухода из полиса.
+    ja: 都市国家からの追放または逃亡を表すフレーズで、ギリシャの追放（φυγή）の概念を反映し、厳しい罰またはポリスからの自発的な離脱を意味する。
+    zh: 表示从城邦流放或逃离的短语，反映了希腊流放（φυγή）的概念，即严重惩罚或自愿离开城邦。
+    ar: عبارة تدل على النفي أو الهروب من دولة المدينة، وتعكس المفهوم اليوناني للنفي (φυγή) كعقاب شديد
+      أو رحيل طوعي عن البوليس.
+    he: ביטוי המציין גלות או בריחה מעיר-מדינה, המשקף את המושג היווני של גלות (φυγή) כעונש חמור או עזיבה
+      מרצון מהפוליס.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: formal
+  explanation_key: mnemosyne.grc.explanation.ancient_greek_phrases_φυγὴ_ἀπὸ_τὴν_πόλιν
+  source_work_key: mnemosyne.grc.work.various
+  source_author_key: mnemosyne.grc.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ancient_greek_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    canonical reference uses incorrect Greek grammar; correct form would be ''φυγὴ ἀπὸ τῆς πόλεως''.'
+- id: grc_cultural_reference_ἐν_τη_ι_γη_ι_τη_σ_ἀρχαίασ_9f20c094
+  language: grc
+  canonical_reference: Ἐν τῇ γῇ τῆς ἀρχαίας
+  reference_type: cultural_reference
+  surface_patterns:
+  - ἐν τῇ γῇ τῇ ἀρχαίᾳ
+  - ἐν γῇ ἀρχαίᾳ
+  - ἐν τῇ χώρᾳ τῆς ἀρχαιότητος
+  short_explanation: A phrase evoking the land of ancient Greece, often used to refer to the physical
+    and cultural landscape of classical antiquity.
+  i18n_explanations:
+    en: A phrase evoking the land of ancient Greece, often used to refer to the physical and cultural
+      landscape of classical antiquity.
+    es: Frase que evoca la tierra de la antigua Grecia, a menudo utilizada para referirse al paisaje físico
+      y cultural de la antigüedad clásica.
+    fr: Une phrase évoquant la terre de la Grèce antique, souvent utilisée pour désigner le paysage physique
+      et culturel de l'antiquité classique.
+    de: Ein Ausdruck, der das Land des antiken Griechenlands hervorruft, oft verwendet, um die physische
+      und kulturelle Landschaft der klassischen Antike zu bezeichnen.
+    it: Una frase che evoca la terra dell'antica Grecia, spesso usata per riferirsi al paesaggio fisico
+      e culturale dell'antichità classica.
+    pt: Uma frase que evoca a terra da Grécia antiga, frequentemente usada para se referir à paisagem
+      física e cultural da antiguidade clássica.
+    ru: Фраза, вызывающая в памяти землю Древней Греции, часто используемая для обозначения физического
+      и культурного ландшафта классической античности.
+    ja: 古代ギリシャの地を想起させるフレーズで、古典古代の物理的・文化的景観を指すためにしばしば使われる。
+    zh: 唤起古希腊土地的短语，常用来指古典古代的物理和文化景观。
+    ar: عبارة تستحضر أرض اليونان القديمة، غالبًا ما تستخدم للإشارة إلى المشهد الطبيعي والثقافي للعصور
+      القديمة الكلاسيكية.
+    he: ביטוי המעורר את ארץ יוון העתיקה, המשמש לעתים קרובות להתייחסות לנוף הפיזי והתרבותי של העת העתיקה
+      הקלאסית.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: formal
+  variants:
+  - ἐν τῇ ἀρχαίᾳ γῇ
+  explanation_key: mnemosyne.grc.explanation.ancient_greek_phrases_ἐν_τη_ι_γη_ι_τη_σ_ἀρχαίασ
+  source_work_key: mnemosyne.grc.work.various
+  source_author_key: mnemosyne.grc.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ancient_greek_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase is not a fixed ancient Greek expression; it is a generic construction with grammatical issues.'
+- id: grc_classical_or_scriptural_allusion_σπαρτια_ται_μάχεσθε_cfcf2207
+  language: grc
+  canonical_reference: Σπαρτιᾶται, μάχεσθε
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - ὦ Σπαρτιᾶται, μάχεσθε
+  - Σπαρτιᾶται μάχεσθε
+  - ἄνδρες Σπαρτιᾶται, μάχεσθε
+  short_explanation: A rallying cry attributed to Spartan commanders, epitomizing the martial spirit of
+    Sparta, especially in battles like Thermopylae.
+  i18n_explanations:
+    en: A rallying cry attributed to Spartan commanders, epitomizing the martial spirit of Sparta, especially
+      in battles like Thermopylae.
+    es: Un grito de batalla atribuido a los comandantes espartanos, que resume el espíritu marcial de
+      Esparta, especialmente en batallas como las Termópilas.
+    fr: Un cri de ralliement attribué aux commandants spartiates, incarnant l'esprit martial de Sparte,
+      en particulier dans des batailles comme les Thermopyles.
+    de: Ein Schlachtruf, der spartanischen Feldherren zugeschrieben wird und den kämpferischen Geist Spartas,
+      besonders in Schlachten wie den Thermopylen, verkörpert.
+    it: Un grido di battaglia attribuito ai comandanti spartani, che incarna lo spirito marziale di Sparta,
+      specialmente in battaglie come le Termopili.
+    pt: Um grito de guerra atribuído aos comandantes espartanos, que sintetiza o espírito marcial de Esparta,
+      especialmente em batalhas como as Termópilas.
+    ru: Боевой клич, приписываемый спартанским командирам, олицетворяющий воинственный дух Спарты, особенно
+      в битвах, таких как Фермопилы.
+    ja: スパルタの指揮官に帰せられる鬨の声で、特にテルモピュライのような戦いにおけるスパルタの武勇の精神を象徴する。
+    zh: 归功于斯巴达指挥官的战斗口号，体现了斯巴达的尚武精神，尤其在温泉关等战役中。
+    ar: صرخة حرب تُنسب إلى القادة الإسبرطيين، تجسد الروح الحربية لإسبرطة، خاصة في معارك مثل ثيرموبيلاي.
+    he: קריאת קרב המיוחסת למפקדים ספרטניים, המגלמת את רוח הלחימה של ספרטה, במיוחד בקרבות כמו תרמופילאי.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: classical
+  variants:
+  - Σπαρτιᾶται, νῦν μάχεσθε
+  - μάχεσθε, Σπαρτιᾶται
+  explanation_key: mnemosyne.grc.explanation.ancient_greek_phrases_σπαρτια_ται_μάχεσθε
+  source_work_key: mnemosyne.grc.work.histories
+  source_author_key: mnemosyne.grc.author.herodotus
+  source_work: Histories
+  source_author: Herodotus
+  source_location: Book 7
+  source_url: http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0126
+  source_license: public_domain
+  source_dataset: ancient_greek_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    plausible but not a verbatim quote from Herodotus; it is a simplified condensation.'
+- id: grc_cultural_reference_πλάτων_πλανώμενοσ_2adea08c
+  language: grc
+  canonical_reference: Πλάτων, πλανώμενος
+  reference_type: cultural_reference
+  surface_patterns:
+  - Πλάτων πλανώμενος
+  - Πλάτων ὁ πλανώμενος
+  - πλανώμενος Πλάτων
+  - Πλάτωνος πλανωμένου
+  short_explanation: Plato the wanderer is a wordplay on Plato's name and the Greek verb planomai (to
+    wander), possibly alluding to his philosophical explorations or his travels, often used humorously.
+  i18n_explanations:
+    en: Plato the wanderer is a wordplay on Plato's name and the Greek verb planomai (to wander), possibly
+      alluding to his philosophical explorations or his travels, often used humorously.
+    es: Platón el vagabundo es un juego de palabras con el nombre de Platón y el verbo griego planomai
+      (vagar), aludiendo posiblemente a sus exploraciones filosóficas o sus viajes, a menudo usado humorísticamente.
+    fr: Platon l'errant est un jeu de mots sur le nom de Platon et le verbe grec planomai (errer), faisant
+      peut-être allusion à ses explorations philosophiques ou à ses voyages, souvent utilisé humoristiquement.
+    de: Platon der Wanderer ist ein Wortspiel mit Platons Namen und dem griechischen Verb planomai (wandern),
+      das möglicherweise auf seine philosophischen Erkundungen oder seine Reisen anspielt, oft humorvoll
+      verwendet.
+    it: Platone il vagabondo è un gioco di parole sul nome di Platone e il verbo greco planomai (vagare),
+      possibilmente alludendo alle sue esplorazioni filosofiche o ai suoi viaggi, spesso usato umoristicamente.
+    pt: Platão o andarilho é um jogo de palavras com o nome de Platão e o verbo grego planomai (vagar),
+      possivelmente aludindo às suas explorações filosóficas ou viagens, frequentemente usado humoristicamente.
+    ru: Платон-странник — это игра слов на имени Платона и греческом глаголе planomai (блуждать), возможно,
+      намекающая на его философские изыскания или путешествия, часто используется с юмором.
+    ja: 放浪者プラトンは、プラトンの名前とギリシャ語の動詞planomai（放浪する）をもじったもので、彼の哲学的探求や旅を暗示し、よくユーモラスに使われます。
+    zh: 流浪者柏拉图是一个双关语，将柏拉图的名字与希腊动词planomai（流浪）结合，可能暗指他的哲学探索或旅行，常被幽默地使用。
+    ar: أفلاطون المتجول هو تلاعب لفظي على اسم أفلاطون والفعل اليوناني planomai (التجول)، ربما في إشارة
+      إلى استكشافاته الفلسفية أو رحلاته، ويستخدم غالبًا بشكل فكاهي.
+    he: אפלטון הנודד הוא משחק מילים על שמו של אפלטון והפועל היווני planomai (לנדוד), אולי רומז לחקר הפילוסופי
+      שלו או למסעותיו, לעתים קרובות בשימוש הומוריסטי.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.grc.explanation.greek_cultural_phrases_πλάτων_πλανώμενοσ
+  source_work_key: mnemosyne.grc.work.various
+  source_author_key: mnemosyne.grc.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: greek_cultural_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    wordplay is plausible but not a known established cultural reference; confidence overclaimed.'

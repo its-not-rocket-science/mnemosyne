@@ -1,0 +1,682 @@
+- id: de_cultural_reference_die_sieben_todsünden_bcedb8ab
+  language: de
+  canonical_reference: Die sieben Todsünden
+  reference_type: cultural_reference
+  surface_patterns:
+  - Die sieben Todsünden
+  - sieben Todsünden
+  short_explanation: Refers to the seven deadly sins in Christian theology, which are vices that can lead
+    to further immorality. They are often referenced in literature and art to illustrate moral lessons.
+  i18n_explanations:
+    en: Refers to the seven deadly sins in Christian theology, which are vices that can lead to further
+      immorality. They are often referenced in literature and art to illustrate moral lessons.
+    es: Se refiere a los siete pecados capitales en la teología cristiana, que son vicios que pueden llevar
+      a una mayor inmoralidad. A menudo se mencionan en la literatura y el arte para ilustrar lecciones
+      morales.
+    fr: Fait référence aux sept péchés capitaux dans la théologie chrétienne, qui sont des vices pouvant
+      mener à une immoralité accrue. Ils sont souvent mentionnés dans la littérature et l'art pour illustrer
+      des leçons morales.
+    de: Bezieht sich auf die sieben Todsünden in der christlichen Theologie, die Laster sind, die zu weiterer
+      Unmoral führen können. Sie werden oft in Literatur und Kunst zitiert, um moralische Lektionen zu
+      veranschaulichen.
+    it: Si riferisce ai sette peccati capitali nella teologia cristiana, che sono vizi che possono portare
+      a ulteriore immoralità. Sono spesso citati nella letteratura e nell'arte per illustrare lezioni
+      morali.
+    pt: Refere-se aos sete pecados capitais na teologia cristã, que são vícios que podem levar a uma maior
+      imoralidade. Muitas vezes são mencionados na literatura e na arte para ilustrar lições morais.
+    ru: Относится к семи смертным грехам в христианской теологии, которые являются пороками, способными
+      привести к дальнейшей аморальности. Они часто упоминаются в литературе и искусстве для иллюстрации
+      моральных уроков.
+    ja: キリスト教神学における七つの大罪を指し、さらなる不道徳につながる可能性のある悪徳です。文学や芸術で道徳的教訓を示すためにしばしば言及されます。
+    zh: 指的是基督教神学中的七宗罪，这些罪恶可能导致进一步的不道德行为。它们常在文学和艺术中被提及，以说明道德教训。
+    ar: تشير إلى الخطايا السبع المميتة في اللاهوت المسيحي، وهي رذائل يمكن أن تؤدي إلى مزيد من الفساد.
+      وغالبًا ما يتم الإشارة إليها في الأدب والفن لتوضيح الدروس الأخلاقية.
+    he: מתייחס לשבעת החטאים הקטלניים בתיאולוגיה הנוצרית, שהם רעות שיכולות להוביל לאי מוסריות נוספת. הם
+      לעיתים קרובות מוזכרים בספרות ובאמנות כדי להמחיש לקחים מוסריים.
+  learner_level: B2
+  confidence: 0.85
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.de.explanation.seven_deadly_sins_die_sieben_todsünden
+  source_work_key: mnemosyne.de.work.various
+  source_author_key: mnemosyne.de.author.christian_tradition
+  source_work: Various
+  source_author: Christian Tradition
+  source_license: not_required
+  source_dataset: seven_deadly_sins
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- While
+    the reference to the seven deadly sins is plausible, the connection to specific literary works is
+    too broad and lacks specificity.'
+- id: de_literary_reference_märchen_aus_tausendundeiner_nacht_f1bfda37
+  language: de
+  canonical_reference: Märchen aus Tausendundeiner Nacht
+  reference_type: literary_reference
+  surface_patterns:
+  - Märchen aus Tausendundeiner Nacht
+  - Tausendundeine Nacht
+  - Märchen
+  short_explanation: This collection of Middle Eastern folk tales, known as 'One Thousand and One Nights',
+    features stories of adventure, magic, and morality, influencing literature worldwide.
+  i18n_explanations:
+    en: This collection of Middle Eastern folk tales, known as 'One Thousand and One Nights', features
+      stories of adventure, magic, and morality, influencing literature worldwide.
+    es: Esta colección de cuentos populares de Oriente Medio, conocida como 'Las mil y una noches', presenta
+      historias de aventura, magia y moralidad, influyendo en la literatura mundial.
+    fr: Cette collection de contes populaires du Moyen-Orient, connue sous le nom de 'Mille et Une Nuits',
+      présente des histoires d'aventure, de magie et de moralité, influençant la littérature dans le monde
+      entier.
+    de: Diese Sammlung von Märchen aus dem Nahen Osten, bekannt als 'Tausendundeine Nacht', enthält Geschichten
+      von Abenteuer, Magie und Moral und beeinflusst die Literatur weltweit.
+    it: Questa raccolta di fiabe mediorientali, nota come 'Le mille e una notte', presenta storie di avventura,
+      magia e moralità, influenzando la letteratura in tutto il mondo.
+    pt: Esta coleção de contos populares do Oriente Médio, conhecida como 'As Mil e Uma Noites', apresenta
+      histórias de aventura, magia e moralidade, influenciando a literatura em todo o mundo.
+    ru: Эта коллекция народных сказок Ближнего Востока, известная как 'Тысяча и одна ночь', содержит истории
+      о приключениях, магии и морали, влияя на литературу по всему миру.
+    ja: これは中東の民話のコレクションで、「千夜一夜物語」として知られ、冒険、魔法、道徳の物語が特徴で、世界中の文学に影響を与えています。
+    zh: 这是一部中东民间故事集，称为《一千零一夜》，包含冒险、魔法和道德的故事，对全球文学产生了影响。
+    ar: هذه مجموعة من الحكايات الشعبية من الشرق الأوسط، المعروفة باسم 'ألف ليلة وليلة'، تحتوي على قصص
+      من المغامرة والسحر والأخلاق، مؤثرة في الأدب العالمي.
+    he: זו אוסף של סיפורי עם מהמזרח התיכון, הידוע בשם 'אלף לילה ולילה', שמציג סיפורים של הרפתקאות, קסם
+      ומוסר, והשפיע על ספרות ברחבי העולם.
+  learner_level: C1
+  confidence: 0.75
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.de.explanation.arabian_nights_märchen_aus_tausendundeiner_nacht
+  source_work_key: mnemosyne.de.work.märchen_aus_tausendundeiner_nacht
+  source_author_key: mnemosyne.de.author.various
+  source_work: Märchen aus Tausendundeiner Nacht
+  source_author: Various
+  source_url: https://www.gutenberg.org/ebooks/20001
+  source_license: public_domain
+  source_dataset: arabian_nights
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- While
+    the attribution is plausible, the title should be more accurately referred to as ''Tausendundeine
+    Nacht'' in German, and the explanation could be refined.'
+- id: de_cultural_reference_ein_märchen_aus_alten_zeiten_6408c581
+  language: de
+  canonical_reference: Ein Märchen aus alten Zeiten
+  reference_type: cultural_reference
+  surface_patterns:
+  - Ein Märchen aus alten Zeiten
+  - Märchen aus alten Zeiten
+  short_explanation: A phrase often used to introduce traditional fairy tales, evoking nostalgia and the
+    timeless nature of storytelling.
+  i18n_explanations:
+    en: A phrase often used to introduce traditional fairy tales, evoking nostalgia and the timeless nature
+      of storytelling.
+    es: Una frase que se usa a menudo para introducir cuentos de hadas tradicionales, evocando nostalgia
+      y la naturaleza atemporal de la narración.
+    fr: Une phrase souvent utilisée pour introduire des contes de fées traditionnels, évoquant la nostalgie
+      et la nature intemporelle de la narration.
+    de: Eine Phrase, die oft verwendet wird, um traditionelle Märchen einzuführen, die Nostalgie und die
+      zeitlose Natur des Geschichtenerzählens hervorruft.
+    it: Una frase spesso usata per introdurre fiabe tradizionali, evocando nostalgia e la natura senza
+      tempo della narrazione.
+    pt: Uma frase frequentemente usada para introduzir contos de fadas tradicionais, evocando nostalgia
+      e a natureza atemporal da narrativa.
+    ru: Фраза, часто используемая для введения в традиционные сказки, вызывающая ностальгию и вечную природу
+      повествования.
+    ja: 伝統的な童話を紹介するためにしばしば使われるフレーズで、ノスタルジーと物語の時を超えた性質を呼び起こします。
+    zh: 常用于引入传统童话的短语，唤起怀旧情感和讲故事的永恒性质。
+    ar: عبارة تُستخدم غالبًا لتقديم الحكايات الخيالية التقليدية، مما يثير الحنين إلى الماضي وطبيعة السرد
+      الخالدة.
+    he: ביטוי שמשמש לעיתים קרובות כדי להציג אגדות מסורתיות, מעורר נוסטלגיה ואת הטבע הנצחי של הסיפור.
+  learner_level: B1
+  confidence: 0.75
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.de.explanation.maerchen_phrases_ein_märchen_aus_alten_zeiten
+  source_work_key: mnemosyne.de.work.various
+  source_author_key: mnemosyne.de.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  source_dataset: maerchen_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- While
+    the phrase is commonly used, its attribution to ''oral tradition'' lacks specificity and may not accurately
+    represent a single source.'
+- id: de_classical_or_scriptural_allusion_schicksalsgöttinnen_5093e55d
+  language: de
+  canonical_reference: Schicksalsgöttinnen
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Schicksalsgöttinnen
+  - Schicksalsgöttin
+  short_explanation: Schicksalsgöttinnen, or the Fates, are figures from mythology representing destiny
+    and fate, often referenced in literature to symbolize the inescapable nature of fate.
+  i18n_explanations:
+    en: Schicksalsgöttinnen, or the Fates, are figures from mythology representing destiny and fate, often
+      referenced in literature to symbolize the inescapable nature of fate.
+    es: Schicksalsgöttinnen, o las Parcas, son figuras de la mitología que representan el destino y el
+      destino, a menudo referenciadas en la literatura para simbolizar la naturaleza ineludible del destino.
+    fr: Les Schicksalsgöttinnen, ou les Parques, sont des figures de la mythologie représentant le destin
+      et la fatalité, souvent citées dans la littérature pour symboliser la nature inéluctable du destin.
+    de: Schicksalsgöttinnen, oder die Moiren, sind Figuren aus der Mythologie, die Schicksal und Bestimmung
+      repräsentieren und oft in der Literatur zitiert werden, um die unausweichliche Natur des Schicksals
+      zu symbolisieren.
+    it: Le Schicksalsgöttinnen, o le Moire, sono figure della mitologia che rappresentano il destino e
+      il fato, spesso citate nella letteratura per simboleggiare la natura ineluttabile del destino.
+    pt: As Schicksalsgöttinnen, ou as Moiras, são figuras da mitologia que representam o destino e o fado,
+      frequentemente referenciadas na literatura para simbolizar a natureza inevitável do destino.
+    ru: Шиксальсгеттинен, или судьбы, - это фигуры из мифологии, представляющие судьбу и рок, часто упоминаемые
+      в литературе для символизации неотвратимой природы судьбы.
+    ja: シュキッツァルスゲッティネン、または運命の女神は、運命と宿命を表す神話の人物であり、文学でしばしば運命の避けられない性質を象徴するために言及されます。
+    zh: Schicksalsgöttinnen，或命运女神，是代表命运和宿命的神话人物，常在文学中被提及以象征命运的不可避免性。
+    ar: Schicksalsgöttinnen، أو الآلهة القدر، هم شخصيات من الأساطير تمثل القدر والمصير، وغالبًا ما يتم
+      الإشارة إليهم في الأدب لرمزية الطبيعة الحتمية للقدر.
+    he: Schicksalsgöttinnen, או הגורלות, הן דמויות מהמיתולוגיה המייצגות את הגורל והפאט, לעיתים קרובות
+      מוזכרות בספרות כדי לסמל את טבעו הבלתי נמנע של הגורל.
+  learner_level: B2
+  confidence: 0.75
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.de.explanation.mythological_references_schicksalsgöttinnen
+  source_work_key: mnemosyne.de.work.various
+  source_author_key: mnemosyne.de.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  source_dataset: mythological_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- While
+    the reference to the Fates is plausible, the connection to specific literary works needs refinement.'
+- id: de_cultural_reference_die_freude_an_der_kunst_453b27a0
+  language: de
+  canonical_reference: Die Freude an der Kunst
+  reference_type: cultural_reference
+  surface_patterns:
+  - Die Freude an der Kunst
+  - Freude an der Kunst
+  short_explanation: Translating to 'The Joy of Art', this phrase encapsulates the appreciation and emotional
+    response elicited by artistic expression. It is often referenced in discussions about aesthetics and
+    the value of art in society.
+  i18n_explanations:
+    en: Translating to 'The Joy of Art', this phrase encapsulates the appreciation and emotional response
+      elicited by artistic expression. It is often referenced in discussions about aesthetics and the
+      value of art in society.
+    es: Traducido como 'La alegría del arte', esta frase encapsula la apreciación y la respuesta emocional
+      que provoca la expresión artística. A menudo se hace referencia en discusiones sobre estética y
+      el valor del arte en la sociedad.
+    fr: Se traduisant par 'La Joie de l'Art', cette phrase encapsule l'appréciation et la réponse émotionnelle
+      suscitée par l'expression artistique. Elle est souvent mentionnée dans les discussions sur l'esthétique
+      et la valeur de l'art dans la société.
+    de: Übersetzt als 'Die Freude an der Kunst' fasst dieser Ausdruck die Wertschätzung und emotionale
+      Reaktion zusammen, die durch künstlerische Ausdrucksformen hervorgerufen werden. Er wird oft in
+      Diskussionen über Ästhetik und den Wert von Kunst in der Gesellschaft erwähnt.
+    it: Tradotto come 'La gioia dell'arte', questa frase racchiude l'apprezzamento e la risposta emotiva
+      suscitata dall'espressione artistica. Viene spesso citata nelle discussioni sull'estetica e sul
+      valore dell'arte nella società.
+    pt: Traduzido como 'A Alegria da Arte', esta frase encapsula a apreciação e a resposta emocional provocada
+      pela expressão artística. É frequentemente referenciada em discussões sobre estética e o valor da
+      arte na sociedade.
+    ru: Переводится как 'Радость искусства', эта фраза охватывает признательность и эмоциональную реакцию,
+      вызываемую художественным выражением. Она часто упоминается в обсуждениях о эстетике и ценности
+      искусства в обществе.
+    ja: '''芸術の喜び''と訳されるこのフレーズは、芸術的表現によって引き起こされる感謝と感情的反応を要約しています。これは、審美性や芸術の社会的価値に関する議論でしばしば言及されます。'
+    zh: '''艺术的喜悦''的翻译，这个短语概括了艺术表现所引发的欣赏和情感反应。它常常在关于美学和艺术在社会中价值的讨论中被提及。'
+    ar: تُترجم إلى 'فرحة الفن'، وتلخص هذه العبارة التقدير والاستجابة العاطفية التي تثيرها التعبيرات الفنية.
+      وغالبًا ما يُشار إليها في المناقشات حول الجماليات وقيمة الفن في المجتمع.
+    he: מתורגם ל'שמחת האמנות', ביטוי זה מסכם את ההערכה והתגובה הרגשית שמעוררת ההבעה האמנותית. הוא מוזכר
+      לעיתים קרובות בדיונים על אסתטיקה ועל ערך האמנות בחברה.
+  learner_level: B2
+  confidence: 0.75
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.de.explanation.german_art_terms_die_freude_an_der_kunst
+  source_work_key: mnemosyne.de.work.various
+  source_author_key: mnemosyne.de.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  source_dataset: german_art_terms
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    attribution is plausible but uncertain, as the phrase lacks a specific source and may be too general
+    in its cultural significance.'
+- id: de_literary_reference_der_weg_der_weisen_00f24790
+  language: de
+  canonical_reference: Der Weg der Weisen
+  reference_type: literary_reference
+  surface_patterns:
+  - Der Weg der Weisen
+  - Weg der Weisen
+  - Der weise Weg
+  short_explanation: This phrase translates to 'The Way of the Wise' and often refers to the pursuit of
+    wisdom and knowledge, commonly found in philosophical texts.
+  i18n_explanations:
+    en: This phrase translates to 'The Way of the Wise' and often refers to the pursuit of wisdom and
+      knowledge, commonly found in philosophical texts.
+    es: Esta frase se traduce como 'El Camino de los Sabios' y a menudo se refiere a la búsqueda de sabiduría
+      y conocimiento, comúnmente encontrada en textos filosóficos.
+    fr: Cette phrase se traduit par 'Le Chemin des Sages' et fait souvent référence à la quête de sagesse
+      et de connaissance, que l'on trouve couramment dans les textes philosophiques.
+    de: Dieser Ausdruck bedeutet 'Der Weg der Weisen' und bezieht sich oft auf die Suche nach Weisheit
+      und Wissen, die häufig in philosophischen Texten zu finden ist.
+    it: Questa frase si traduce in 'La Via dei Saggi' e si riferisce spesso alla ricerca di saggezza e
+      conoscenza, comunemente trovata nei testi filosofici.
+    pt: Esta frase se traduz como 'O Caminho dos Sábios' e muitas vezes se refere à busca de sabedoria
+      e conhecimento, comumente encontrada em textos filosóficos.
+    ru: Эта фраза переводится как 'Путь Мудрых' и часто относится к стремлению к мудрости и знаниям, часто
+      встречающимся в философских текстах.
+    ja: このフレーズは「賢者の道」と訳され、しばしば哲学的な文献に見られる知恵と知識の追求を指します。
+    zh: 这个短语翻译为“智者之道”，通常指追求智慧和知识，常见于哲学文本中。
+    ar: هذه العبارة تُترجم إلى 'طريق الحكماء' وغالبًا ما تشير إلى السعي وراء الحكمة والمعرفة، والتي توجد
+      عادة في النصوص الفلسفية.
+    he: ביטוי זה מתורגם ל'דרך החכמים' ולעיתים קרובות מתייחס לחיפוש אחר חוכמה וידע, הנמצאים בדרך כלל בטקסטים
+      פילוסופיים.
+  learner_level: B2
+  confidence: 0.75
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.de.explanation.philosophical_references_der_weg_der_weisen
+  source_work_key: mnemosyne.de.work.various
+  source_author_key: mnemosyne.de.author.philosophical_tradition
+  source_work: Various
+  source_author: Philosophical Tradition
+  source_license: not_required
+  source_dataset: philosophical_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    attribution is plausible but lacks specific sources or notable texts that use this phrase prominently.'
+- id: de_cultural_reference_schicksalhafte_begegnung_75bbda23
+  language: de
+  canonical_reference: Schicksalhafte Begegnung
+  reference_type: cultural_reference
+  surface_patterns:
+  - Schicksalhafte Begegnung
+  - schicksalhafte Begegnung
+  short_explanation: This phrase refers to a fateful or destiny-driven encounter, often implying a significant
+    impact on one's life. It is commonly used in literature and everyday conversation to describe pivotal
+    moments.
+  i18n_explanations:
+    en: This phrase refers to a fateful or destiny-driven encounter, often implying a significant impact
+      on one's life. It is commonly used in literature and everyday conversation to describe pivotal moments.
+    es: Esta frase se refiere a un encuentro fatídico o impulsado por el destino, a menudo implicando
+      un impacto significativo en la vida de uno. Se usa comúnmente en la literatura y en la conversación
+      cotidiana para describir momentos cruciales.
+    fr: Cette phrase fait référence à une rencontre fatidique ou guidée par le destin, impliquant souvent
+      un impact significatif sur la vie d'une personne. Elle est couramment utilisée dans la littérature
+      et la conversation quotidienne pour décrire des moments décisifs.
+    de: Dieser Ausdruck bezieht sich auf eine schicksalhafte oder vom Schicksal gelenkte Begegnung, die
+      oft einen bedeutenden Einfluss auf das Leben eines Menschen hat. Er wird häufig in der Literatur
+      und im Alltag verwendet, um entscheidende Momente zu beschreiben.
+    it: Questa frase si riferisce a un incontro fatale o guidato dal destino, spesso implicando un impatto
+      significativo sulla vita di una persona. È comunemente usata nella letteratura e nella conversazione
+      quotidiana per descrivere momenti cruciali.
+    pt: Esta frase refere-se a um encontro fatídico ou guiado pelo destino, muitas vezes implicando um
+      impacto significativo na vida de alguém. É comumente usada na literatura e na conversa cotidiana
+      para descrever momentos cruciais.
+    ru: Эта фраза относится к судьбоносной или предопределенной встрече, часто подразумевая значительное
+      влияние на жизнь человека. Она часто используется в литературе и повседневной беседе для описания
+      ключевых моментов.
+    ja: このフレーズは、運命的な出会いを指し、しばしば人生に重要な影響を与えることを意味します。文学や日常会話で重要な瞬間を描写するためによく使われます。
+    zh: 这个短语指的是一个命运驱动的相遇，通常暗示对一个人生活的重大影响。它常用于文学和日常对话中，描述关键时刻。
+    ar: تشير هذه العبارة إلى لقاء محكوم بالقدر أو مدفوع بالقدر، وغالبًا ما تعني تأثيرًا كبيرًا على حياة
+      الشخص. تُستخدم عادةً في الأدب والمحادثات اليومية لوصف اللحظات الحاسمة.
+    he: ביטוי זה מתייחס למפגש גורלי או מונחה גורל, לעיתים קרובות implying השפעה משמעותית על חיי האדם.
+      הוא משמש בדרך כלל בספרות ובשיחה יומיומית כדי לתאר רגעים מכריעים.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.de.explanation.german_cultural_references_schicksalhafte_begegnun
+  source_work_key: mnemosyne.de.work.various
+  source_author_key: mnemosyne.de.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  source_dataset: german_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase is plausible but lacks a specific literary source, making its cultural significance uncertain.'
+- id: de_cultural_reference_sich_in_jemandes_schicksal_fügen_bd94e68a
+  language: de
+  canonical_reference: Sich in jemandes Schicksal fügen
+  reference_type: cultural_reference
+  surface_patterns:
+  - Sich in jemandes Schicksal fügen
+  - in jemandes Schicksal fügen
+  short_explanation: This phrase means to submit to or accept someone's fate, often implying a sense of
+    resignation or acceptance of circumstances beyond one's control.
+  i18n_explanations:
+    en: This phrase means to submit to or accept someone's fate, often implying a sense of resignation
+      or acceptance of circumstances beyond one's control.
+    es: Esta frase significa someterse o aceptar el destino de alguien, a menudo implicando un sentido
+      de resignación o aceptación de circunstancias fuera del control de uno.
+    fr: Cette phrase signifie se soumettre ou accepter le destin de quelqu'un, impliquant souvent un sentiment
+      de résignation ou d'acceptation des circonstances échappant à notre contrôle.
+    de: Dieser Ausdruck bedeutet, sich dem Schicksal eines anderen zu fügen, oft mit einem Gefühl der
+      Resignation oder der Akzeptanz von Umständen, die außerhalb der eigenen Kontrolle liegen.
+    it: Questa frase significa sottomettersi o accettare il destino di qualcuno, spesso implicando un
+      senso di rassegnazione o accettazione delle circostanze al di fuori del proprio controllo.
+    pt: Esta frase significa submeter-se ou aceitar o destino de alguém, muitas vezes implicando um senso
+      de resignação ou aceitação de circunstâncias além do controle de alguém.
+    ru: Эта фраза означает подчиниться или принять чью-то судьбу, часто подразумевая чувство смирения
+      или принятия обстоятельств, находящихся вне контроля.
+    ja: このフレーズは、誰かの運命に従うこと、または受け入れることを意味し、しばしば自分の制御を超えた状況の受容やあきらめの感覚を暗示します。
+    zh: 这个短语意味着屈从于或接受某人的命运，通常暗示对超出自己控制的情况的无奈或接受。
+    ar: تشير هذه العبارة إلى الخضوع لمصير شخص ما أو قبوله، وغالبًا ما تعني شعورًا بالاستسلام أو قبول ظروف
+      تتجاوز السيطرة.
+    he: ביטוי זה מתכוון להיכנע או לקבל את גורלו של מישהו, ולעיתים קרובות implying תחושת הת resignation
+      או קבלת נסיבות שמעבר לשליטתך.
+  learner_level: B2
+  confidence: 0.65
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.de.explanation.german_phrases_sich_in_jemandes_schicksal_fügen
+  source_work_key: mnemosyne.de.work.various
+  source_author_key: mnemosyne.de.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  source_dataset: german_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase is plausible but lacks a specific literary source, making its cultural significance uncertain.'
+- id: de_cultural_reference_die_alte_garde_879a3dca
+  language: de
+  canonical_reference: Die alte Garde
+  reference_type: cultural_reference
+  surface_patterns:
+  - alte Garde
+  - die alte Garde
+  short_explanation: This phrase refers to a group of people who are experienced and established in a
+    particular field, often used in political or military contexts. It signifies loyalty and tradition.
+  i18n_explanations:
+    en: This phrase refers to a group of people who are experienced and established in a particular field,
+      often used in political or military contexts. It signifies loyalty and tradition.
+    es: Esta frase se refiere a un grupo de personas que son experimentadas y establecidas en un campo
+      particular, a menudo utilizada en contextos políticos o militares. Significa lealtad y tradición.
+    fr: Cette phrase fait référence à un groupe de personnes expérimentées et établies dans un domaine
+      particulier, souvent utilisée dans des contextes politiques ou militaires. Elle signifie loyauté
+      et tradition.
+    de: This phrase refers to a group of people who are experienced and established in a particular field,
+      often used in political or military contexts. It signifies loyalty and tradition.
+    it: Questa frase si riferisce a un gruppo di persone esperte e affermate in un particolare campo,
+      spesso usata in contesti politici o militari. Significa lealtà e tradizione.
+    pt: Esta frase refere-se a um grupo de pessoas experientes e estabelecidas em um determinado campo,
+      frequentemente usada em contextos políticos ou militares. Significa lealdade e tradição.
+    ru: Эта фраза относится к группе людей, которые имеют опыт и признаны в определенной области, часто
+      используется в политических или военных контекстах. Она означает верность и традицию.
+    ja: このフレーズは、特定の分野で経験豊富で確立された人々のグループを指し、政治的または軍事的な文脈でよく使われます。忠誠心と伝統を意味します。
+    zh: 这个短语指的是在特定领域经验丰富且已建立的一群人，通常用于政治或军事背景。它象征着忠诚和传统。
+    ar: تشير هذه العبارة إلى مجموعة من الأشخاص ذوي الخبرة والمكانة الراسخة في مجال معين، وغالبًا ما تستخدم
+      في السياقات السياسية أو العسكرية. إنها تعبر عن الولاء والتقاليد.
+    he: ביטוי זה מתייחס לקבוצה של אנשים מנוסים ומבוססים בתחום מסוים, לעיתים קרובות בהקשרים פוליטיים או
+      צבאיים. הוא מסמל נאמנות ומסורת.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.de.explanation.cultural_references_die_alte_garde
+  source_work_key: mnemosyne.de.work.various
+  source_author_key: mnemosyne.de.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  source_dataset: cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    attribution is plausible but lacks specific sources or notable examples to verify its usage in political
+    or military contexts.'
+- id: de_cultural_reference_ein_schatten_der_vergangenheit_72cc6e1a
+  language: de
+  canonical_reference: Ein Schatten der Vergangenheit
+  reference_type: cultural_reference
+  surface_patterns:
+  - Schatten der Vergangenheit
+  - ein Schatten der Vergangenheit
+  short_explanation: This phrase refers to the lingering effects or memories of past events that continue
+    to influence the present. It is often used in psychological or historical contexts.
+  i18n_explanations:
+    en: This phrase refers to the lingering effects or memories of past events that continue to influence
+      the present. It is often used in psychological or historical contexts.
+    es: Esta frase se refiere a los efectos persistentes o recuerdos de eventos pasados que continúan
+      influyendo en el presente. A menudo se utiliza en contextos psicológicos o históricos.
+    fr: Cette phrase fait référence aux effets persistants ou aux souvenirs d'événements passés qui continuent
+      d'influencer le présent. Elle est souvent utilisée dans des contextes psychologiques ou historiques.
+    de: This phrase refers to the lingering effects or memories of past events that continue to influence
+      the present. It is often used in psychological or historical contexts.
+    it: Questa frase si riferisce agli effetti persistenti o ai ricordi di eventi passati che continuano
+      a influenzare il presente. Viene spesso utilizzata in contesti psicologici o storici.
+    pt: Esta frase refere-se aos efeitos persistentes ou memórias de eventos passados que continuam a
+      influenciar o presente. É frequentemente usada em contextos psicológicos ou históricos.
+    ru: Эта фраза относится к сохраняющимся эффектам или воспоминаниям о прошлых событиях, которые продолжают
+      влиять на настоящее. Она часто используется в психологических или исторических контекстах.
+    ja: このフレーズは、過去の出来事の残留効果や記憶が現在に影響を与え続けることを指します。心理的または歴史的な文脈でよく使われます。
+    zh: 这个短语指的是过去事件的持续影响或记忆，这些影响仍然在影响现在。它通常用于心理学或历史背景中。
+    ar: تشير هذه العبارة إلى الآثار المستمرة أو الذكريات للأحداث الماضية التي لا تزال تؤثر على الحاضر.
+      وغالبًا ما تستخدم في السياقات النفسية أو التاريخية.
+    he: ביטוי זה מתייחס להשפעות מתמשכות או זיכרונות של אירועים מהעבר שממשיכים להשפיע על ההווה. הוא משמש
+      לעיתים קרובות בהקשרים פסיכולוגיים או היסטוריים.
+  learner_level: B2
+  confidence: 0.65
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.de.explanation.cultural_references_ein_schatten_der_vergangenheit
+  source_work_key: mnemosyne.de.work.various
+  source_author_key: mnemosyne.de.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  source_dataset: cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    attribution is plausible but lacks specific literary or historical references to support its usage.'
+- id: de_cultural_reference_die_sphinx_e6795de3
+  language: de
+  canonical_reference: Die Sphinx
+  reference_type: cultural_reference
+  surface_patterns:
+  - Die Sphinx
+  - Sphinx
+  short_explanation: The Sphinx is a mythical creature from ancient Egyptian and Greek mythology, often
+    symbolizing mystery and enigma. It is commonly associated with riddles and the quest for knowledge.
+  i18n_explanations:
+    en: The Sphinx is a mythical creature from ancient Egyptian and Greek mythology, often symbolizing
+      mystery and enigma. It is commonly associated with riddles and the quest for knowledge.
+    es: La Esfinge es una criatura mítica de la mitología egipcia y griega antigua, que a menudo simboliza
+      el misterio y el enigma. Se asocia comúnmente con acertijos y la búsqueda del conocimiento.
+    fr: Le Sphinx est une créature mythique de la mythologie égyptienne et grecque ancienne, symbolisant
+      souvent le mystère et l'énigme. Il est couramment associé aux énigmes et à la quête de connaissance.
+    de: Die Sphinx ist ein mythisches Wesen aus der altägyptischen und griechischen Mythologie, das oft
+      Mysterium und Rätsel symbolisiert. Sie wird häufig mit Rätseln und der Suche nach Wissen in Verbindung
+      gebracht.
+    it: La Sfinge è una creatura mitica della mitologia egizia e greca antica, che simboleggia spesso
+      mistero ed enigma. È comunemente associata agli enigmi e alla ricerca della conoscenza.
+    pt: A Esfinge é uma criatura mítica da mitologia egípcia e grega antiga, frequentemente simbolizando
+      mistério e enigma. É comumente associada a charadas e à busca pelo conhecimento.
+    ru: Сфинкс — мифическое существо из древнеегипетской и греческой мифологии, часто символизирующее
+      тайну и загадку. Обычно ассоциируется с загадками и поиском знаний.
+    ja: スフィンクスは古代エジプトとギリシャ神話の神話上の生き物で、しばしば神秘や謎を象徴します。一般的に、謎解きや知識の探求に関連付けられています。
+    zh: 斯芬克斯是古埃及和希腊神话中的神话生物，常常象征着神秘和谜团。它通常与谜语和对知识的追求相关联。
+    ar: أبو الهول هو مخلوق أسطوري من الأساطير المصرية واليونانية القديمة، وغالبًا ما يرمز إلى الغموض والألغاز.
+      يرتبط عادة بالألغاز والسعي وراء المعرفة.
+    he: הספינקס הוא יצור מיתי מהמיתולוגיה המצרית והיוונית העתיקה, המסמל לעיתים קרובות מסתורין וחידה. הוא
+      קשור בדרך כלל לחידות ולחיפוש אחר ידע.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.de.explanation.mythical_creatures_die_sphinx
+  source_work_key: mnemosyne.de.work.various
+  source_author_key: mnemosyne.de.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  source_dataset: mythical_creatures
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- While
+    the reference to the Sphinx as a symbol of mystery is plausible, the attribution to ''Various'' lacks
+    specificity and could benefit from more precise sources.'
+- id: de_cultural_reference_die_stunde_der_wahrheit_0bc92192
+  language: de
+  canonical_reference: Die Stunde der Wahrheit
+  reference_type: cultural_reference
+  surface_patterns:
+  - Die Stunde der Wahrheit
+  - Stunde der Wahrheit
+  short_explanation: This phrase translates to 'The hour of truth', often used to denote a critical moment
+    when the truth is revealed or a decisive event occurs.
+  i18n_explanations:
+    en: This phrase translates to 'The hour of truth', often used to denote a critical moment when the
+      truth is revealed or a decisive event occurs.
+    es: Esta frase se traduce como 'La hora de la verdad', a menudo utilizada para denotar un momento
+      crítico en el que se revela la verdad o ocurre un evento decisivo.
+    fr: Cette phrase se traduit par 'L'heure de vérité', souvent utilisée pour désigner un moment critique
+      où la vérité est révélée ou un événement décisif se produit.
+    de: Dieser Ausdruck bedeutet 'Die Stunde der Wahrheit' und wird oft verwendet, um einen kritischen
+      Moment zu kennzeichnen, in dem die Wahrheit offenbart wird oder ein entscheidendes Ereignis eintritt.
+    it: Questa frase si traduce in 'L'ora della verità', spesso usata per denotare un momento critico
+      in cui la verità viene rivelata o si verifica un evento decisivo.
+    pt: Esta frase se traduz como 'A hora da verdade', frequentemente usada para denotar um momento crítico
+      em que a verdade é revelada ou ocorre um evento decisivo.
+    ru: Эта фраза переводится как 'Час истины', часто используется для обозначения критического момента,
+      когда истина раскрывается или происходит решающее событие.
+    ja: このフレーズは「真実の時」と訳され、真実が明らかになる重要な瞬間や決定的な出来事を示すために使われます。
+    zh: 这个短语翻译为“真相时刻”，通常用于表示揭示真相或发生决定性事件的关键时刻。
+    ar: هذه العبارة تُترجم إلى 'ساعة الحقيقة'، وغالبًا ما تُستخدم للدلالة على لحظة حاسمة تُكشف فيها الحقيقة
+      أو يحدث فيها حدث حاسم.
+    he: הביטוי הזה מתורגם ל'שעת האמת', ולעיתים קרובות משמש לציון רגע קריטי שבו האמת מתגלה או מתרחש אירוע
+      מכריע.
+  learner_level: B2
+  confidence: 0.65
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.de.explanation.critical_moments_die_stunde_der_wahrheit
+  source_work_key: mnemosyne.de.work.various
+  source_author_key: mnemosyne.de.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  source_dataset: critical_moments
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase is commonly used, but the attribution to ''Various'' is vague and could be refined with specific
+    literary or cultural sources.'
+- id: de_cultural_reference_das_sind_die_regeln_der_kunst_78c16cbc
+  language: de
+  canonical_reference: Das sind die Regeln der Kunst
+  reference_type: cultural_reference
+  surface_patterns:
+  - Das sind die Regeln der Kunst
+  - Regeln der Kunst
+  short_explanation: This phrase translates to 'These are the rules of art', often used to refer to the
+    established norms and standards in artistic creation and critique.
+  i18n_explanations:
+    en: This phrase translates to 'These are the rules of art', often used to refer to the established
+      norms and standards in artistic creation and critique.
+    es: Esta frase se traduce como 'Estas son las reglas del arte', a menudo utilizada para referirse
+      a las normas y estándares establecidos en la creación y crítica artística.
+    fr: Cette phrase se traduit par 'Voici les règles de l'art', souvent utilisée pour désigner les normes
+      et standards établis dans la création et la critique artistique.
+    de: Dieser Ausdruck bedeutet 'Das sind die Regeln der Kunst' und wird oft verwendet, um auf die etablierten
+      Normen und Standards in der künstlerischen Schöpfung und Kritik hinzuweisen.
+    it: Questa frase si traduce in 'Queste sono le regole dell'arte', spesso usata per riferirsi alle
+      norme e agli standard stabiliti nella creazione e nella critica artistica.
+    pt: Esta frase se traduz como 'Estas são as regras da arte', frequentemente usada para se referir
+      às normas e padrões estabelecidos na criação e crítica artística.
+    ru: Эта фраза переводится как 'Это правила искусства', часто используется для обозначения установленных
+      норм и стандартов в художественном творчестве и критике.
+    ja: このフレーズは「これが芸術のルールです」と訳され、芸術的創造と批評における確立された基準や規範を指すために使われます。
+    zh: 这个短语翻译为“这就是艺术的规则”，通常用于指代艺术创作和批评中的既定规范和标准。
+    ar: هذه العبارة تُترجم إلى 'هذه هي قواعد الفن'، وغالبًا ما تُستخدم للإشارة إلى المعايير والقواعد المعمول
+      بها في الإبداع الفني والنقد.
+    he: הביטוי הזה מתורגם ל'אלו הן כללי האמנות', ולעיתים קרובות משמש להתייחס לנורמות ולסטנדרטים המוסדרים
+      ביצירה ובביקורת אמנותית.
+  learner_level: C1
+  confidence: 0.7
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.de.explanation.artistic_rules_das_sind_die_regeln_der_kunst
+  source_work_key: mnemosyne.de.work.various
+  source_author_key: mnemosyne.de.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  source_dataset: artistic_rules
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase is relevant, but the attribution to ''Various'' lacks specificity and could be better supported
+    with concrete examples from art criticism.'
+- id: de_proverb_tradition_die_vergebliche_mühe_985bc784
+  language: de
+  canonical_reference: Die vergebliche Mühe
+  reference_type: proverb_tradition
+  surface_patterns:
+  - vergebliche Mühe
+  - die vergebliche Mühe
+  short_explanation: This phrase translates to 'the futile effort' and is used to describe actions that
+    are ultimately in vain or unproductive.
+  i18n_explanations:
+    en: This phrase translates to 'the futile effort' and is used to describe actions that are ultimately
+      in vain or unproductive.
+    es: Esta frase se traduce como 'el esfuerzo fútil' y se utiliza para describir acciones que son, en
+      última instancia, vanas o improductivas.
+    fr: Cette phrase se traduit par 'l'effort vain' et est utilisée pour décrire des actions qui sont
+      finalement vaines ou improductives.
+    de: Diese Phrase wird mit 'die vergebliche Mühe' übersetzt und wird verwendet, um Handlungen zu beschreiben,
+      die letztendlich vergeblich oder unproduktiv sind.
+    it: Questa frase si traduce in 'lo sforzo futile' e viene utilizzata per descrivere azioni che sono,
+      in ultima analisi, vane o improduttive.
+    pt: Esta frase se traduz como 'o esforço fútil' e é usada para descrever ações que são, em última
+      análise, vãs ou improdutivas.
+    ru: Эта фраза переводится как 'тщетные усилия' и используется для описания действий, которые в конечном
+      итоге являются напрасными или непродуктивными.
+    ja: このフレーズは「無駄な努力」と訳され、最終的に無駄または非生産的な行動を説明するために使用されます。
+    zh: 这个短语翻译为“徒劳的努力”，用于描述最终无效或不生产的行为。
+    ar: تترجم هذه العبارة إلى 'الجهد العقيم' وتستخدم لوصف الأفعال التي تكون في النهاية بلا جدوى أو غير
+      منتجة.
+    he: ביטוי זה מתורגם ל'מאמץ חסר תועלת' ומשמש לתיאור פעולות שהן בסופו של דבר לשווא או לא פרודוקטיביות.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.de.explanation.futile_efforts_die_vergebliche_mühe
+  source_work_key: mnemosyne.de.work.various
+  source_author_key: mnemosyne.de.author.various
+  source_work: Various
+  source_author: Various
+  source_license: not_required
+  source_dataset: futile_efforts
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    attribution is plausible but lacks specific sources or notable literary references.'
+- id: de_cultural_reference_über_den_dächern_von_berlin_81ba66ef
+  language: de
+  canonical_reference: Über den Dächern von Berlin
+  reference_type: cultural_reference
+  surface_patterns:
+  - Über den Dächern von Berlin
+  - Dächern von Berlin
+  short_explanation: This phrase refers to a popular song by Paul Lincke, which evokes the beauty and
+    charm of Berlin from a high vantage point. It captures the spirit of the city and its cultural vibrancy.
+  i18n_explanations:
+    en: This phrase refers to a popular song by Paul Lincke, which evokes the beauty and charm of Berlin
+      from a high vantage point. It captures the spirit of the city and its cultural vibrancy.
+    es: Esta frase se refiere a una canción popular de Paul Lincke, que evoca la belleza y el encanto
+      de Berlín desde un alto mirador. Captura el espíritu de la ciudad y su vibrante cultura.
+    fr: Cette phrase fait référence à une chanson populaire de Paul Lincke, qui évoque la beauté et le
+      charme de Berlin depuis un point de vue élevé. Elle capture l'esprit de la ville et sa vitalité
+      culturelle.
+    de: Dieser Ausdruck bezieht sich auf ein beliebtes Lied von Paul Lincke, das die Schönheit und den
+      Charme Berlins von einem hohen Aussichtspunkt heraufbeschwört. Es fängt den Geist der Stadt und
+      ihre kulturelle Lebendigkeit ein.
+    it: Questa frase si riferisce a una canzone popolare di Paul Lincke, che evoca la bellezza e il fascino
+      di Berlino da un alto punto di vista. Cattura lo spirito della città e la sua vivacità culturale.
+    pt: Esta frase refere-se a uma canção popular de Paul Lincke, que evoca a beleza e o charme de Berlim
+      de um alto ponto de vista. Captura o espírito da cidade e sua vibrante cultura.
+    ru: Эта фраза относится к популярной песне Пауля Линке, которая вызывает красоту и очарование Берлина
+      с высоты. Она передает дух города и его культурную яркость.
+    ja: このフレーズは、ポール・リンケの人気のある歌を指し、高い視点からベルリンの美しさと魅力を呼び起こします。都市の精神とその文化的活力を捉えています。
+    zh: 这个短语指的是保罗·林克的一首流行歌曲，从高处唤起了柏林的美丽和魅力。它捕捉了这座城市的精神和文化活力。
+    ar: تشير هذه العبارة إلى أغنية شعبية لبول لينكه، التي تستحضر جمال وسحر برلين من وجهة نظر مرتفعة. إنها
+      تلتقط روح المدينة وحيويتها الثقافية.
+    he: ביטוי זה מתייחס לשיר פופולרי של פול לינקה, שמעורר את היופי והקסם של ברלין מנקודת מבט גבוהה. הוא
+      תופס את רוח העיר ואת החיות התרבותית שלה.
+  learner_level: B1
+  confidence: 0.75
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.de.explanation.paul_lincke_berlin_über_den_dächern_von_berlin
+  source_work_key: mnemosyne.de.work.über_den_dächern_von_berlin
+  source_author_key: mnemosyne.de.author.paul_lincke
+  source_work: Über den Dächern von Berlin
+  source_author: Paul Lincke
+  source_url: https://de.wikipedia.org/wiki/%C3%9Cber_den_D%C3%A4chern_von_Berlin
+  source_license: public_domain
+  source_dataset: paul_lincke_berlin
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    is plausible but uncertain; while Paul Lincke is associated with the song, further context about its
+    cultural significance could enhance understanding.'

@@ -1,0 +1,109 @@
+- id: es_classical_or_scriptural_allusion_in_media_res_003f1128
+  language: es
+  canonical_reference: In media res
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - in media res
+  - in medias res
+  short_explanation: Narrative technique of starting a story in the middle of events, from Horace's Ars
+    Poetica.
+  i18n_explanations:
+    en: Narrative technique of starting a story in the middle of events, from Horace's Ars Poetica.
+    es: Técnica narrativa de comenzar una historia en medio de los acontecimientos, de la Ars Poetica
+      de Horacio.
+    fr: Technique narrative consistant à commencer une histoire au milieu des événements, tirée de l'Ars
+      Poetica d'Horace.
+    de: Erzähltechnik, eine Geschichte mitten im Geschehen zu beginnen, aus Horaz' Ars Poetica.
+    it: Tecnica narrativa di iniziare una storia nel mezzo degli eventi, dall'Ars Poetica di Orazio.
+    pt: Técnica narrativa de começar uma história no meio dos acontecimentos, da Ars Poetica de Horácio.
+    ru: Повествовательный прием начинать историю в середине событий, из «Ars Poetica» Горация.
+    ja: 物語を事件の途中から始める叙述技法、ホラティウスの『詩論』に由来。
+    zh: 从事件中间开始叙述故事的技巧，出自贺拉斯的《诗艺》。
+    ar: تقنية سردية لبدء القصة في منتصف الأحداث، من كتاب Ars Poetica لهوراس.
+    he: טכניקה סיפורית של התחלת סיפור באמצע האירועים, מתוך ה-Ars Poetica של הורציוס.
+  learner_level: C1
+  confidence: 0.85
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.es.explanation.es_clasicos_retorica_in_media_res
+  source_work_key: mnemosyne.es.work.ars_poetica
+  source_author_key: mnemosyne.es.author.horacio
+  source_work: Ars Poetica
+  source_author: Horacio
+  source_location: line 148
+  source_url: http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0063%3Acard%3D147
+  source_license: public_domain
+  source_dataset: es_clasicos_retorica
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Canonical
+    reference misspelled; correct Latin is ''In medias res''.'
+- id: es_classical_or_scriptural_allusion_el_hilo_de_ariadna_ddfeeea4
+  language: es
+  canonical_reference: El hilo de Ariadna
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - el hilo de Ariadna
+  - un hilo de Ariadna
+  - ser el hilo de Ariadna
+  short_explanation: A guide or clue to solve a complex problem; from the myth where Ariadne gave Theseus
+    a thread to navigate the labyrinth.
+  i18n_explanations:
+    en: A guide or clue to solve a complex problem; from the myth where Ariadne gave Theseus a thread
+      to navigate the labyrinth.
+    es: Guía o pista para resolver un problema complejo; del mito en que Ariadna dio a Teseo un hilo para
+      navegar el laberinto.
+    fr: Un guide ou indice pour résoudre un problème complexe ; du mythe où Ariane donna à Thésée un fil
+      pour naviguer dans le labyrinthe.
+    de: Ein Leitfaden oder Hinweis zur Lösung eines komplexen Problems; aus dem Mythos, in dem Ariadne
+      Theseus einen Faden gab, um das Labyrinth zu durchqueren.
+    it: Una guida o indizio per risolvere un problema complesso; dal mito in cui Arianna diede a Teseo
+      un filo per orientarsi nel labirinto.
+    pt: Um guia ou pista para resolver um problema complexo; do mito em que Ariadne deu a Teseu um fio
+      para navegar no labirinto.
+    ru: Путеводная нить или ключ к решению сложной проблемы; из мифа, где Ариадна дала Тесею нить, чтобы
+      пройти лабиринт.
+    ja: 複雑な問題を解決するための手がかり。アリアドネがテセウスに迷宮を進むための糸を与えた神話から。
+    zh: 解决复杂问题的指南或线索；出自阿里阿德涅给忒修斯一根线以走出迷宫的神话。
+    ar: دليل أو فكرة لحل مشكلة معقدة؛ من الأسطورة حيث أعطت أريادنة لثيسيوس خيطًا ليتنقل في المتاهة.
+    he: מדריך או רמז לפתרון בעיה מורכבת; מהמיתוס שבו נתנה אריאדנה לתזאוס חוט כדי לנווט במבוך.
+  learner_level: B2
+  confidence: 0.8
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.es.explanation.es_mitologia_griega_el_hilo_de_ariadna
+  source_work_key: mnemosyne.es.work.metamorfosis
+  source_author_key: mnemosyne.es.author.ovidio
+  source_work: Metamorfosis
+  source_author: Ovidio
+  source_location: Libro VIII
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0028:book=8
+  source_license: public_domain
+  source_dataset: es_mitologia_griega
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Ovid''s Metamorphoses is plausible but less common than Greek sources; more typical sources are
+    Apollodorus or Hyginus.'
+- id: es_classical_or_scriptural_allusion_separar_el_grano_de_la_paja_31f35e88
+  language: es
+  canonical_reference: Separar el grano de la paja
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - separar el grano de la paja
+  - separar la paja del trigo
+  - separar el trigo de la cizaña
+  short_explanation: To distinguish what is valuable from what is worthless, originally from John the
+    Baptist's metaphor of separating wheat from chaff.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.es.explanation.es_biblical_allusions_separar_el_grano_de_la_paja
+  source_work_key: mnemosyne.es.work.biblia_evangelio_de_mateo
+  source_author_key: mnemosyne.es.author.various
+  source_work: Biblia, Evangelio de Mateo
+  source_author: Various
+  source_location: Mateo 3:12
+  source_url: https://es.wikisource.org/wiki/Biblia_Reina-Valera_1909
+  source_license: public_domain
+  source_dataset: es_biblical_allusions
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Pattern
+    ''separar el trigo de la cizaña'' conflates two different biblical metaphors (chaff vs. weeds) and
+    is not from the cited Matthew 3:12.'

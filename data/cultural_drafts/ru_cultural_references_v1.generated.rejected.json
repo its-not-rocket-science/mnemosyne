@@ -1,0 +1,78 @@
+[
+  {
+    "canonical_reference": "В минуту жизни трудную",
+    "reason": "This line is from Lermontov's poem 'Молитва', not from the hymn 'Боже, Царя храни!' which begins differently."
+  },
+  {
+    "canonical_reference": "Давайте пить и веселиться, пока не придет пора",
+    "reason": "Attribution incorrect; line not found in Derzhavin's 'Река времен в своем стремленьи...'."
+  },
+  {
+    "canonical_reference": "Давайте петь и смеяться, пока мы молоды и пьяны",
+    "reason": "The phrase is not found in Yesenin's 'Не жалею, не зову, не плачу'; the attribution is incorrect."
+  },
+  {
+    "canonical_reference": "Да, были люди в наше время",
+    "reason": "The line is from Lermontov's 'Бородино', not Pushkin's 'В Сибирь'; author attribution is wrong."
+  },
+  {
+    "canonical_reference": "Год сорок первый, роковой",
+    "reason": "The phrase is not from Akhmatova's 'Rekviem' which deals with 1937, not 1941; likely misattributed."
+  },
+  {
+    "canonical_reference": "Триста лет тому назад",
+    "reason": "Not a canonical reference but a vague temporal phrase; too trivial for a cultural entry."
+  },
+  {
+    "canonical_reference": "Убить немого",
+    "reason": "No such work by Chekhov exists; attribution is false."
+  },
+  {
+    "canonical_reference": "Волчица с Рагуилом сговорилась",
+    "reason": "In Krylov's fable 'Волк на псарне', the characters are a wolf and a huntsman, not a fox named Рагуил; the reference is inaccurate."
+  },
+  {
+    "canonical_reference": "Вязать в три нитки",
+    "reason": "Phrase 'вязать в три нитки' does not correspond to a known Russian proverb meaning to do something carelessly; likely invented or misinterpreted."
+  },
+  {
+    "canonical_reference": "Владычица моя, царица, мама Рома!",
+    "reason": "No verifiable widespread cultural reference found; appears to be a spurious or extremely obscure phrase."
+  },
+  {
+    "canonical_reference": "День скорби и печали",
+    "reason": "The phrase is not a standard Russian cultural reference; it conflates different memorial days and lacks verifiable usage."
+  },
+  {
+    "canonical_reference": "Мама, мама, неужели это я?",
+    "reason": "Rejected: line not found in Lermontov's 'Бородино'; likely invented."
+  },
+  {
+    "canonical_reference": "Балет немыслим без музыки",
+    "reason": "This is a generic statement rather than a recognized cultural reference."
+  },
+  {
+    "canonical_reference": "Божественная трагедия",
+    "reason": "Incorrect attribution; the correct title is 'Божественная комедия' (Divine Comedy)."
+  },
+  {
+    "canonical_reference": "И жизнь хороша, и жить хорошо",
+    "reason": "Attribution to Yesenin's 'Чёрный человек' is incorrect; the line is commonly associated with Mayakovsky's poem 'Хорошо!'."
+  },
+  {
+    "canonical_reference": "Апостол, ты ли это?",
+    "reason": "The phrase does not appear in the Bible; the supposed allusion to Judas' betrayal is incorrect."
+  },
+  {
+    "canonical_reference": "Давайте вооружимся разумом",
+    "reason": "No evidence of this phrase in Cicero's works; likely a modern paraphrase."
+  },
+  {
+    "canonical_reference": "Две души живут в груди моей",
+    "reason": "The line is from Goethe's Faust, not Pushkin's 'Демон'; attribution is clearly wrong."
+  },
+  {
+    "canonical_reference": "А ля гармоник",
+    "reason": "Phrase appears to be a fabricated or extremely obscure pseudo-French expression; not a genuine Russian cultural reference."
+  }
+]
