@@ -55,11 +55,8 @@ CSV_FIELDS = EXPECTED_CSV_HEADER.split(",")
 
 BASE_URL = "https://en.wiktionary.org/w/api.php"
 USER_AGENT = "Mnemosyne-cultural-catalogue-builder/1.0 (educational; contact: see github)"
-REQUEST_DELAY_S = 0.25  # Documented anon limit is 200 req/s, but live testing hit
-                         # 429s well under that (shared-IP/gateway throttling is
-                         # plausible) — 4 req/s is conservative; _api_get's 429
-                         # handling (Retry-After / exponential backoff) covers
-                         # the rest.
+REQUEST_DELAY_S = 1.0  # Wikimedia enforces ~1 req/s in practice (Retry-After: 58
+                        # observed at 4 req/s). 1 req/s matches Wikimedia bot guidelines.
 
 WIKTIONARY_LANG_NAMES: dict[str, str] = {
     "en":  "English",
