@@ -1,0 +1,2370 @@
+- id: ar_cultural_reference_ابا_عن_جد_240a4a84
+  language: ar
+  canonical_reference: أبا عن جد
+  reference_type: cultural_reference
+  surface_patterns:
+    - أبا عن جد
+  short_explanation: through and through
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ابا_عن_جد
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A3%D8%A8%D8%A7_%D8%B9%D9%86_%D8%AC%D8%AF
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ابى_الا_e1c1df95
+  language: ar
+  canonical_reference: أبى إلا
+  reference_type: cultural_reference
+  surface_patterns:
+    - أبى إلا
+  short_explanation: to insist
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ابى_الا
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A3%D8%A8%D9%89_%D8%A5%D9%84%D8%A7
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_اتى_على_الاخضر_واليابس_959192d6
+  language: ar
+  canonical_reference: أتى على الأخضر واليابس
+  reference_type: cultural_reference
+  surface_patterns:
+    - أتى على الأخضر واليابس
+  short_explanation: to wreak havoc
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.اتى_على_الاخضر_واليابس
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A3%D8%AA%D9%89_%D8%B9%D9%84%D9%89_%D8%A7%D9%84%D8%A3%D8%AE%D8%B6%D8%B1_%D9%88%D8%A7%D9%84%D9%8A%D8%A7%D8%A8%D8%B3
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_اجج_العنف_f94543b1
+  language: ar
+  canonical_reference: أجج العنف
+  reference_type: cultural_reference
+  surface_patterns:
+    - أجج العنف
+  short_explanation: to breed violence
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.اجج_العنف
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A3%D8%AC%D8%AC_%D8%A7%D9%84%D8%B9%D9%86%D9%81
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_اذن_في_مالطا_f3f7ca83
+  language: ar
+  canonical_reference: أذن في مالطا
+  reference_type: cultural_reference
+  surface_patterns:
+    - أذن في مالطا
+  short_explanation: to carry coals to Newcastle
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.اذن_في_مالطا
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A3%D8%B0%D9%86_%D9%81%D9%8A_%D9%85%D8%A7%D9%84%D8%B7%D8%A7
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ارضية_ملايمة_2b6e39eb
+  language: ar
+  canonical_reference: أرضية ملائمة
+  reference_type: cultural_reference
+  surface_patterns:
+    - أرضية ملائمة
+  short_explanation: breeding ground, fertile ground
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ارضية_ملايمة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A3%D8%B1%D8%B6%D9%8A%D8%A9_%D9%85%D9%84%D8%A7%D8%A6%D9%85%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_اسطوانة_مشروخة_099bc0f5
+  language: ar
+  canonical_reference: أسطوانة مشروخة
+  reference_type: cultural_reference
+  surface_patterns:
+    - أسطوانة مشروخة
+  short_explanation: broken record
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.اسطوانة_مشروخة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A3%D8%B3%D8%B7%D9%88%D8%A7%D9%86%D8%A9_%D9%85%D8%B4%D8%B1%D9%88%D8%AE%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_اضحك_الثكلى_d726f86a
+  language: ar
+  canonical_reference: أضحك الثكلى
+  reference_type: cultural_reference
+  surface_patterns:
+    - أضحك الثكلى
+  short_explanation: to be utterly ridiculous
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.اضحك_الثكلى
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A3%D8%B6%D8%AD%D9%83_%D8%A7%D9%84%D8%AB%D9%83%D9%84%D9%89
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_اهل_مكة_ادرى_بشعابها_a74d8a63
+  language: ar
+  canonical_reference: أهل مكة أدرى بشعابها
+  reference_type: cultural_reference
+  surface_patterns:
+    - أهل مكة أدرى بشعابها
+  short_explanation: Locals or natives are most familiar with their own territory; insiders or experts
+    know best about their field or area.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.اهل_مكة_ادرى_بشعابها
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A3%D9%87%D9%84_%D9%85%D9%83%D8%A9_%D8%A3%D8%AF%D8%B1%D9%89_%D8%A8%D8%B4%D8%B9%D8%A7%D8%A8%D9%87%D8%A7
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ابرة_في_كومة_قش_492410fa
+  language: ar
+  canonical_reference: إبرة في كومة قش
+  reference_type: cultural_reference
+  surface_patterns:
+    - إبرة في كومة قش
+  short_explanation: needle in a haystack
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ابرة_في_كومة_قش
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A5%D8%A8%D8%B1%D8%A9_%D9%81%D9%8A_%D9%83%D9%88%D9%85%D8%A9_%D9%82%D8%B4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ارتد_على_عقبيه_64f4cf7f
+  language: ar
+  canonical_reference: ارتد على عقبيه
+  reference_type: cultural_reference
+  surface_patterns:
+    - ارتد على عقبيه
+  short_explanation: 'TODO: add explanation'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ارتد_على_عقبيه
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A7%D8%B1%D8%AA%D8%AF_%D8%B9%D9%84%D9%89_%D8%B9%D9%82%D8%A8%D9%8A%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_استد_ساعده_013a07bb
+  language: ar
+  canonical_reference: استد ساعده
+  reference_type: cultural_reference
+  surface_patterns:
+    - استد ساعده
+  short_explanation: to grow strong, powerful, vigorous
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.استد_ساعده
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A7%D8%B3%D8%AA%D8%AF_%D8%B3%D8%A7%D8%B9%D8%AF%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_الايام_بيننا_37a4730a
+  language: ar
+  canonical_reference: الأيام بيننا
+  reference_type: cultural_reference
+  surface_patterns:
+    - الأيام بيننا
+  short_explanation: time will tell
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.الايام_بيننا
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A7%D9%84%D8%A3%D9%8A%D8%A7%D9%85_%D8%A8%D9%8A%D9%86%D9%86%D8%A7
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_البحر_يحب_الزيادة_ff1bff7a
+  language: ar
+  canonical_reference: البحر يحب الزيادة
+  reference_type: cultural_reference
+  surface_patterns:
+    - البحر يحب الزيادة
+  short_explanation: the more one has, the more one wants (literally, the sea likes to increase)
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.البحر_يحب_الزيادة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A7%D9%84%D8%A8%D8%AD%D8%B1_%D9%8A%D8%AD%D8%A8_%D8%A7%D9%84%D8%B2%D9%8A%D8%A7%D8%AF%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_الغرم_بالغنم_fb8084a5
+  language: ar
+  canonical_reference: الغرم بالغنم
+  reference_type: cultural_reference
+  surface_patterns:
+    - الغرم بالغنم
+  short_explanation: whoever benefits also suffers the loss
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.الغرم_بالغنم
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A7%D9%84%D8%BA%D8%B1%D9%85_%D8%A8%D8%A7%D9%84%D8%BA%D9%86%D9%85
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_القشة_التي_قصمت_ظهر_البعير_c43156bd
+  language: ar
+  canonical_reference: القشة التي قصمت ظهر البعير
+  reference_type: cultural_reference
+  surface_patterns:
+    - القشة التي قصمت ظهر البعير
+  short_explanation: the straw that broke the camel's back
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.القشة_التي_قصمت_ظهر_البعير
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A7%D9%84%D9%82%D8%B4%D8%A9_%D8%A7%D9%84%D8%AA%D9%8A_%D9%82%D8%B5%D9%85%D8%AA_%D8%B8%D9%87%D8%B1_%D8%A7%D9%84%D8%A8%D8%B9%D9%8A%D8%B1
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_اللف_والدوران_461237bc
+  language: ar
+  canonical_reference: اللف والدوران
+  reference_type: cultural_reference
+  surface_patterns:
+    - اللف والدوران
+  short_explanation: beating around the bush
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.اللف_والدوران
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A7%D9%84%D9%84%D9%81_%D9%88%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D8%A7%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_انقلب_على_عقبيه_973db703
+  language: ar
+  canonical_reference: انقلب على عقبيه
+  reference_type: cultural_reference
+  surface_patterns:
+    - انقلب على عقبيه
+  short_explanation: to turn on one's heel, to turn tail
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.انقلب_على_عقبيه
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A7%D9%86%D9%82%D9%84%D8%A8_%D8%B9%D9%84%D9%89_%D8%B9%D9%82%D8%A8%D9%8A%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_بابهى_حلة_9fa0db2d
+  language: ar
+  canonical_reference: بأبهى حلة
+  reference_type: cultural_reference
+  surface_patterns:
+    - بأبهى حلة
+  short_explanation: to the nines, to the hilt, at its best, at its finest
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.بابهى_حلة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D8%A3%D8%A8%D9%87%D9%89_%D8%AD%D9%84%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_بحذافيره_a095e097
+  language: ar
+  canonical_reference: بحذافيره
+  reference_type: cultural_reference
+  surface_patterns:
+    - بحذافيره
+  short_explanation: verbatim, in every detail, wholly, completely, to the letter, by the book
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.بحذافيره
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D8%AD%D8%B0%D8%A7%D9%81%D9%8A%D8%B1%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_برميل_beab33b1
+  language: ar
+  canonical_reference: برميل
+  reference_type: cultural_reference
+  surface_patterns:
+    - برميل
+  short_explanation: barrel, cask, keg, drum
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.برميل
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D8%B1%D9%85%D9%8A%D9%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_بسط_يده_e14b5173
+  language: ar
+  canonical_reference: بسط يده
+  reference_type: cultural_reference
+  surface_patterns:
+    - بسط يده
+  short_explanation: to give generously
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.بسط_يده
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D8%B3%D8%B7_%D9%8A%D8%AF%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_بشق_الانفس_23efce35
+  language: ar
+  canonical_reference: بشق الأنفس
+  reference_type: cultural_reference
+  surface_patterns:
+    - بشق الأنفس
+  short_explanation: by grinding out
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.بشق_الانفس
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D8%B4%D9%82_%D8%A7%D9%84%D8%A3%D9%86%D9%81%D8%B3
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_بلغ_السيل_الزبى_4167a416
+  language: ar
+  canonical_reference: بلغ السيل الزبى
+  reference_type: cultural_reference
+  surface_patterns:
+    - بلغ السيل الزبى
+  short_explanation: the matter has become unbearable, reached its limit; enough is enough
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.بلغ_السيل_الزبى
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D9%84%D8%BA_%D8%A7%D9%84%D8%B3%D9%8A%D9%84_%D8%A7%D9%84%D8%B2%D8%A8%D9%89
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_بلغت_القلوب_الحناجر_cd25d02b
+  language: ar
+  canonical_reference: بلغت القلوب الحناجر
+  reference_type: cultural_reference
+  surface_patterns:
+    - بلغت القلوب الحناجر
+  short_explanation: felt extreme fear.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.بلغت_القلوب_الحناجر
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D9%84%D8%BA%D8%AA_%D8%A7%D9%84%D9%82%D9%84%D9%88%D8%A8_%D8%A7%D9%84%D8%AD%D9%86%D8%A7%D8%AC%D8%B1
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_بين_المطرقة_والسندان_539cf658
+  language: ar
+  canonical_reference: بين المطرقة والسندان
+  reference_type: cultural_reference
+  surface_patterns:
+    - بين المطرقة والسندان
+  short_explanation: between the hammer and the anvil; between a rock and a hard place
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.بين_المطرقة_والسندان
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D9%8A%D9%86_%D8%A7%D9%84%D9%85%D8%B7%D8%B1%D9%82%D8%A9_%D9%88%D8%A7%D9%84%D8%B3%D9%86%D8%AF%D8%A7%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_بين_شقي_الرحى_fe534d37
+  language: ar
+  canonical_reference: بين شقي الرحى
+  reference_type: cultural_reference
+  surface_patterns:
+    - بين شقي الرحى
+  short_explanation: between two millstones
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.بين_شقي_الرحى
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D9%8A%D9%86_%D8%B4%D9%82%D9%8A_%D8%A7%D9%84%D8%B1%D8%AD%D9%89
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_بين_فكي_الكماشة_1c266e2b
+  language: ar
+  canonical_reference: بين فكي الكماشة
+  reference_type: cultural_reference
+  surface_patterns:
+    - بين فكي الكماشة
+  short_explanation: between the hammer and the anvil; between a rock and a hard place
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.بين_فكي_الكماشة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D9%8A%D9%86_%D9%81%D9%83%D9%8A_%D8%A7%D9%84%D9%83%D9%85%D8%A7%D8%B4%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_بين_ليلة_وضحاها_cdfda4be
+  language: ar
+  canonical_reference: بين ليلة وضحاها
+  reference_type: cultural_reference
+  surface_patterns:
+    - بين ليلة وضحاها
+  short_explanation: in a short period of time; overnight; suddenly
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.بين_ليلة_وضحاها
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D9%8A%D9%86_%D9%84%D9%8A%D9%84%D8%A9_%D9%88%D8%B6%D8%AD%D8%A7%D9%87%D8%A7
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_تجري_الرياح_بما_لا_تشتهي_السفن_9a0279c7
+  language: ar
+  canonical_reference: تجري الرياح بما لا تشتهي السفن
+  reference_type: cultural_reference
+  surface_patterns:
+    - تجري الرياح بما لا تشتهي السفن
+  short_explanation: Things do not always go as planned
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.تجري_الرياح_بما_لا_تشتهي_السفن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AA%D8%AC%D8%B1%D9%8A_%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%AD_%D8%A8%D9%85%D8%A7_%D9%84%D8%A7_%D8%AA%D8%B4%D8%AA%D9%87%D9%8A_%D8%A7%D9%84%D8%B3%D9%81%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ترب_17f7eb7d
+  language: ar
+  canonical_reference: ترب
+  reference_type: cultural_reference
+  surface_patterns:
+    - ترب
+  short_explanation: to be dusty, to be covered with dust, to have earth on oneself
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ترب
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AA%D8%B1%D8%A8
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ثقيل_الدم_e2d8c015
+  language: ar
+  canonical_reference: ثقيل الدم
+  reference_type: cultural_reference
+  surface_patterns:
+    - ثقيل الدم
+  short_explanation: unfunny, lame, unpleasant
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ثقيل_الدم
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AB%D9%82%D9%8A%D9%84_%D8%A7%D9%84%D8%AF%D9%85
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_جاب_مشارق_الارض_ومغاربها_8b9698f5
+  language: ar
+  canonical_reference: جاب مشارق الأرض ومغاربها
+  reference_type: cultural_reference
+  surface_patterns:
+    - جاب مشارق الأرض ومغاربها
+  short_explanation: to travel from
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.جاب_مشارق_الارض_ومغاربها
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AC%D8%A7%D8%A8_%D9%85%D8%B4%D8%A7%D8%B1%D9%82_%D8%A7%D9%84%D8%A3%D8%B1%D8%B6_%D9%88%D9%85%D8%BA%D8%A7%D8%B1%D8%A8%D9%87%D8%A7
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_جعجعة_بلا_طحن_e0d7ba2b
+  language: ar
+  canonical_reference: جعجعة بلا طحن
+  reference_type: cultural_reference
+  surface_patterns:
+    - جعجعة بلا طحن
+  short_explanation: empty talk, much ado about nothing
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.جعجعة_بلا_طحن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AC%D8%B9%D8%AC%D8%B9%D8%A9_%D8%A8%D9%84%D8%A7_%D8%B7%D8%AD%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_جعل_عالي_الشيء_سافله_b3603ab5
+  language: ar
+  canonical_reference: جعل عالي الشيء سافله
+  reference_type: cultural_reference
+  surface_patterns:
+    - جعل عالي الشيء سافله
+  short_explanation: to turn upside down
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.جعل_عالي_الشيء_سافله
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AC%D8%B9%D9%84_%D8%B9%D8%A7%D9%84%D9%8A_%D8%A7%D9%84%D8%B4%D9%8A%D8%A1_%D8%B3%D8%A7%D9%81%D9%84%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_جن_جنونا_7800ee00
+  language: ar
+  canonical_reference: جن جنونا
+  reference_type: cultural_reference
+  surface_patterns:
+    - جن جنونا
+  short_explanation: to go crazy
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.جن_جنونا
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AC%D9%86_%D8%AC%D9%86%D9%88%D9%86%D8%A7
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_حارب_طواحين_الهواء_5a1a692a
+  language: ar
+  canonical_reference: حارب طواحين الهواء
+  reference_type: cultural_reference
+  surface_patterns:
+    - حارب طواحين الهواء
+  short_explanation: to tilt at windmills
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.حارب_طواحين_الهواء
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AD%D8%A7%D8%B1%D8%A8_%D8%B7%D9%88%D8%A7%D8%AD%D9%8A%D9%86_%D8%A7%D9%84%D9%87%D9%88%D8%A7%D8%A1
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_حفظ_ماء_الوجه_02f3727d
+  language: ar
+  canonical_reference: حفظ ماء الوجه
+  reference_type: cultural_reference
+  surface_patterns:
+    - حفظ ماء الوجه
+  short_explanation: to preserve honor or self-respect; to save face
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.حفظ_ماء_الوجه
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AD%D9%81%D8%B8_%D9%85%D8%A7%D8%A1_%D8%A7%D9%84%D9%88%D8%AC%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_خبط_خبط_عشواء_89e80810
+  language: ar
+  canonical_reference: خبط خبط عشواء
+  reference_type: cultural_reference
+  surface_patterns:
+    - خبط خبط عشواء
+  short_explanation: to act on a whim
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.خبط_خبط_عشواء
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AE%D8%A8%D8%B7_%D8%AE%D8%A8%D8%B7_%D8%B9%D8%B4%D9%88%D8%A7%D8%A1
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_خياران_احلاهما_مر_79947396
+  language: ar
+  canonical_reference: خياران أحلاهما مر
+  reference_type: cultural_reference
+  surface_patterns:
+    - خياران أحلاهما مر
+  short_explanation: a choice between two unpleasant alternatives; expresses between a rock and a hard
+    place, between the hammer and the anvil, between the devil and the deep blue sea
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.خياران_احلاهما_مر
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AE%D9%8A%D8%A7%D8%B1%D8%A7%D9%86_%D8%A3%D8%AD%D9%84%D8%A7%D9%87%D9%85%D8%A7_%D9%85%D8%B1
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_خيرها_بغيرها_1f7a2512
+  language: ar
+  canonical_reference: خيرها بغيرها
+  reference_type: cultural_reference
+  surface_patterns:
+    - خيرها بغيرها
+  short_explanation: better luck next time
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.خيرها_بغيرها
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AE%D9%8A%D8%B1%D9%87%D8%A7_%D8%A8%D8%BA%D9%8A%D8%B1%D9%87%D8%A7
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_دون_ان_يرف_له_جفن_fbd1463a
+  language: ar
+  canonical_reference: دون أن يرف له جفن
+  reference_type: cultural_reference
+  surface_patterns:
+    - دون أن يرف له جفن
+  short_explanation: without batting an eyelid
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.دون_ان_يرف_له_جفن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AF%D9%88%D9%86_%D8%A3%D9%86_%D9%8A%D8%B1%D9%81_%D9%84%D9%87_%D8%AC%D9%81%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ذر_السكر_على_الموت_c4b2f230
+  language: ar
+  canonical_reference: ذر السكر على الموت
+  reference_type: cultural_reference
+  surface_patterns:
+    - ذر السكر على الموت
+  short_explanation: 'TODO: add explanation'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ذر_السكر_على_الموت
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B0%D8%B1_%D8%A7%D9%84%D8%B3%D9%83%D8%B1_%D8%B9%D9%84%D9%89_%D8%A7%D9%84%D9%85%D9%88%D8%AA
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ذر_الملح_على_الجرح_0d81fbd0
+  language: ar
+  canonical_reference: ذر الملح على الجرح
+  reference_type: cultural_reference
+  surface_patterns:
+    - ذر الملح على الجرح
+  short_explanation: 'TODO: add explanation'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ذر_الملح_على_الجرح
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B0%D8%B1_%D8%A7%D9%84%D9%85%D9%84%D8%AD_%D8%B9%D9%84%D9%89_%D8%A7%D9%84%D8%AC%D8%B1%D8%AD
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ذهب_ادراج_الرياح_d8345baa
+  language: ar
+  canonical_reference: ذهب أدراج الرياح
+  reference_type: cultural_reference
+  surface_patterns:
+    - ذهب أدراج الرياح
+  short_explanation: to be in vain, to come to nothing
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ذهب_ادراج_الرياح
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B0%D9%87%D8%A8_%D8%A3%D8%AF%D8%B1%D8%A7%D8%AC_%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%AD
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ذو_وجهين_d3dc7115
+  language: ar
+  canonical_reference: ذو وجهين
+  reference_type: cultural_reference
+  surface_patterns:
+    - ذو وجهين
+  short_explanation: two-faced, deceitful, hypocritical, duplicitous
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ذو_وجهين
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B0%D9%88_%D9%88%D8%AC%D9%87%D9%8A%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_رجع_بخفي_حنين_6852aa10
+  language: ar
+  canonical_reference: رجع بخفي حنين
+  reference_type: cultural_reference
+  surface_patterns:
+    - رجع بخفي حنين
+  short_explanation: to come back empty-handed
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.رجع_بخفي_حنين
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B1%D8%AC%D8%B9_%D8%A8%D8%AE%D9%81%D9%8A_%D8%AD%D9%86%D9%8A%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_رش_السكر_على_الموت_87ea6a14
+  language: ar
+  canonical_reference: رش السكر على الموت
+  reference_type: cultural_reference
+  surface_patterns:
+    - رش السكر على الموت
+  short_explanation: to gild the pill
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.رش_السكر_على_الموت
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B1%D8%B4_%D8%A7%D9%84%D8%B3%D9%83%D8%B1_%D8%B9%D9%84%D9%89_%D8%A7%D9%84%D9%85%D9%88%D8%AA
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_رش_الملح_على_الجرح_9af8866a
+  language: ar
+  canonical_reference: رش الملح على الجرح
+  reference_type: cultural_reference
+  surface_patterns:
+    - رش الملح على الجرح
+  short_explanation: to rub salt in the wound
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.رش_الملح_على_الجرح
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B1%D8%B4_%D8%A7%D9%84%D9%85%D9%84%D8%AD_%D8%B9%D9%84%D9%89_%D8%A7%D9%84%D8%AC%D8%B1%D8%AD
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_زاد_الطين_بلة_60dd7582
+  language: ar
+  canonical_reference: زاد الطين بلة
+  reference_type: cultural_reference
+  surface_patterns:
+    - زاد الطين بلة
+  short_explanation: to make matters worse, to add insult to injury
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.زاد_الطين_بلة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B2%D8%A7%D8%AF_%D8%A7%D9%84%D8%B7%D9%8A%D9%86_%D8%A8%D9%84%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_شاذ_الافاق_d0c5d3e6
+  language: ar
+  canonical_reference: شاذ الآفاق
+  reference_type: cultural_reference
+  surface_patterns:
+    - شاذ الآفاق
+  short_explanation: outcast
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.شاذ_الافاق
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B4%D8%A7%D8%B0_%D8%A7%D9%84%D8%A2%D9%81%D8%A7%D9%82
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_شد_العضد_4964e829
+  language: ar
+  canonical_reference: شد العضد
+  reference_type: cultural_reference
+  surface_patterns:
+    - شد العضد
+  short_explanation: to provide support
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.شد_العضد
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D8%B6%D8%AF
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_شمر_عن_ساعد_الجد_f7a02885
+  language: ar
+  canonical_reference: شمر عن ساعد الجد
+  reference_type: cultural_reference
+  surface_patterns:
+    - شمر عن ساعد الجد
+  short_explanation: to roll up one's sleeves
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.شمر_عن_ساعد_الجد
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B4%D9%85%D8%B1_%D8%B9%D9%86_%D8%B3%D8%A7%D8%B9%D8%AF_%D8%A7%D9%84%D8%AC%D8%AF
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_صال_وجال_cc0c4536
+  language: ar
+  canonical_reference: صال وجال
+  reference_type: cultural_reference
+  surface_patterns:
+    - صال وجال
+  short_explanation: to have free rein
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.صال_وجال
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B5%D8%A7%D9%84_%D9%88%D8%AC%D8%A7%D9%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_صنع_من_الحبة_قبة_8103720e
+  language: ar
+  canonical_reference: صنع من الحبة قبة
+  reference_type: cultural_reference
+  surface_patterns:
+    - صنع من الحبة قبة
+  short_explanation: to make a mountain out of a molehill
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.صنع_من_الحبة_قبة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B5%D9%86%D8%B9_%D9%85%D9%86_%D8%A7%D9%84%D8%AD%D8%A8%D8%A9_%D9%82%D8%A8%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ضبط_متلبسا_بالجرم_المشهود_2b321a6b
+  language: ar
+  canonical_reference: ضبط متلبسا بالجرم المشهود
+  reference_type: cultural_reference
+  surface_patterns:
+    - ضبط متلبسا بالجرم المشهود
+  short_explanation: to get caught red-handed
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ضبط_متلبسا_بالجرم_المشهود
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B6%D8%A8%D8%B7_%D9%85%D8%AA%D9%84%D8%A8%D8%B3%D8%A7_%D8%A8%D8%A7%D9%84%D8%AC%D8%B1%D9%85_%D8%A7%D9%84%D9%85%D8%B4%D9%87%D9%88%D8%AF
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_عاد_ادراجه_18370337
+  language: ar
+  canonical_reference: عاد أدراجه
+  reference_type: cultural_reference
+  surface_patterns:
+    - عاد أدراجه
+  short_explanation: to go back whence one came from
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.عاد_ادراجه
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B9%D8%A7%D8%AF_%D8%A3%D8%AF%D8%B1%D8%A7%D8%AC%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_عاد_بخفي_حنين_c5ea978b
+  language: ar
+  canonical_reference: عاد بخفي حنين
+  reference_type: cultural_reference
+  surface_patterns:
+    - عاد بخفي حنين
+  short_explanation: 'TODO: add explanation'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.عاد_بخفي_حنين
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B9%D8%A7%D8%AF_%D8%A8%D8%AE%D9%81%D9%8A_%D8%AD%D9%86%D9%8A%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_عاش_بوجهين_22acdd2c
+  language: ar
+  canonical_reference: عاش بوجهين
+  reference_type: cultural_reference
+  surface_patterns:
+    - عاش بوجهين
+  short_explanation: to live a double life
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.عاش_بوجهين
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B9%D8%A7%D8%B4_%D8%A8%D9%88%D8%AC%D9%87%D9%8A%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_عرس_ديمقراطي_f21cbd28
+  language: ar
+  canonical_reference: عرس ديمقراطي
+  reference_type: cultural_reference
+  surface_patterns:
+    - عرس ديمقراطي
+  short_explanation: election
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.عرس_ديمقراطي
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B9%D8%B1%D8%B3_%D8%AF%D9%8A%D9%85%D9%82%D8%B1%D8%A7%D8%B7%D9%8A
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_عض_5c898582
+  language: ar
+  canonical_reference: عض
+  reference_type: cultural_reference
+  surface_patterns:
+    - عض
+  short_explanation: to bite
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.عض
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B9%D8%B6
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_على_خير_ما_يرام_ff77390f
+  language: ar
+  canonical_reference: على خير ما يرام
+  reference_type: cultural_reference
+  surface_patterns:
+    - على خير ما يرام
+  short_explanation: it couldn't be better
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.على_خير_ما_يرام
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B9%D9%84%D9%89_%D8%AE%D9%8A%D8%B1_%D9%85%D8%A7_%D9%8A%D8%B1%D8%A7%D9%85
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_على_مراى_ومسمع_e33496b2
+  language: ar
+  canonical_reference: على مرأى ومسمع
+  reference_type: cultural_reference
+  surface_patterns:
+    - على مرأى ومسمع
+  short_explanation: in full view of
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.على_مراى_ومسمع
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B9%D9%84%D9%89_%D9%85%D8%B1%D8%A3%D9%89_%D9%88%D9%85%D8%B3%D9%85%D8%B9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_فلان_وفلان_40bf5606
+  language: ar
+  canonical_reference: فلان وفلان
+  reference_type: cultural_reference
+  surface_patterns:
+    - فلان وفلان
+  short_explanation: two persons of unknown or unmentioned names; so-and-so and so-and-so; somebody and
+    somebody
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.فلان_وفلان
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%81%D9%84%D8%A7%D9%86_%D9%88%D9%81%D9%84%D8%A7%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_قتل_مقبلا_غير_مدبر_59a82266
+  language: ar
+  canonical_reference: قتل مقبلا غير مدبر
+  reference_type: cultural_reference
+  surface_patterns:
+    - قتل مقبلا غير مدبر
+  short_explanation: to get killed chest open without turning your back (i.e. to enemy)
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.قتل_مقبلا_غير_مدبر
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%82%D8%AA%D9%84_%D9%85%D9%82%D8%A8%D9%84%D8%A7_%D8%BA%D9%8A%D8%B1_%D9%85%D8%AF%D8%A8%D8%B1
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_قضى_نحبه_e3030401
+  language: ar
+  canonical_reference: قضى نحبه
+  reference_type: cultural_reference
+  surface_patterns:
+    - قضى نحبه
+  short_explanation: to die, to pass away, to decease
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.قضى_نحبه
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%82%D8%B6%D9%89_%D9%86%D8%AD%D8%A8%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_قيد_شعرة_9d75529d
+  language: ar
+  canonical_reference: قيد شعرة
+  reference_type: cultural_reference
+  surface_patterns:
+    - قيد شعرة
+  short_explanation: in the slightest, not at all, whatsoever, barely, not an inch
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.قيد_شعرة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%82%D9%8A%D8%AF_%D8%B4%D8%B9%D8%B1%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_كذلك_7b1169ac
+  language: ar
+  canonical_reference: كذلك
+  reference_type: cultural_reference
+  surface_patterns:
+    - كذلك
+  short_explanation: likewise
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.كذلك
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%83%D8%B0%D9%84%D9%83
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_كشف_النقاب_01c5c39d
+  language: ar
+  canonical_reference: كشف النقاب
+  reference_type: cultural_reference
+  surface_patterns:
+    - كشف النقاب
+  short_explanation: to disclose
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.كشف_النقاب
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%83%D8%B4%D9%81_%D8%A7%D9%84%D9%86%D9%82%D8%A7%D8%A8
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_كل_من_هب_ودب_80b65c37
+  language: ar
+  canonical_reference: كل من هب ودب
+  reference_type: cultural_reference
+  surface_patterns:
+    - كل من هب ودب
+  short_explanation: ', Tom, Dick and Harry, everybody, everyone, anybody, anyone, any random person'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.كل_من_هب_ودب
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%83%D9%84_%D9%85%D9%86_%D9%87%D8%A8_%D9%88%D8%AF%D8%A8
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_كلمة_حق_يراد_بها_باطل_a1d40487
+  language: ar
+  canonical_reference: كلمة حق يراد بها باطل
+  reference_type: cultural_reference
+  surface_patterns:
+    - كلمة حق يراد بها باطل
+  short_explanation: a twisted saying that is in itself truthful and just, but is used with malicious
+    intentions
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.كلمة_حق_يراد_بها_باطل
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%83%D9%84%D9%85%D8%A9_%D8%AD%D9%82_%D9%8A%D8%B1%D8%A7%D8%AF_%D8%A8%D9%87%D8%A7_%D8%A8%D8%A7%D8%B7%D9%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_لا_فض_فوك_6fdb4350
+  language: ar
+  canonical_reference: لا فض فوك
+  reference_type: cultural_reference
+  surface_patterns:
+    - لا فض فوك
+  short_explanation: How well you've spoken!, well said
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.لا_فض_فوك
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D8%A7_%D9%81%D8%B6_%D9%81%D9%88%D9%83
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_لا_ناقة_له_فيه_ولا_جمل_9d30e579
+  language: ar
+  canonical_reference: لا ناقة له فيه ولا جمل
+  reference_type: cultural_reference
+  surface_patterns:
+    - لا ناقة له فيه ولا جمل
+  short_explanation: having no connection or benefit to it, it does not concern him; he is not affected
+    by it; he is indifferent about it
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.لا_ناقة_له_فيه_ولا_جمل
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D8%A7_%D9%86%D8%A7%D9%82%D8%A9_%D9%84%D9%87_%D9%81%D9%8A%D9%87_%D9%88%D9%84%D8%A7_%D8%AC%D9%85%D9%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_لا_يبقي_ولا_يذر_0aa83b1e
+  language: ar
+  canonical_reference: لا يبقي ولا يذر
+  reference_type: cultural_reference
+  surface_patterns:
+    - لا يبقي ولا يذر
+  short_explanation: to destroy everything
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.لا_يبقي_ولا_يذر
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D8%A7_%D9%8A%D8%A8%D9%82%D9%8A_%D9%88%D9%84%D8%A7_%D9%8A%D8%B0%D8%B1
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_لا_يسمن_ولا_يغني_من_جوع_37cff7b4
+  language: ar
+  canonical_reference: لا يسمن ولا يغني من جوع
+  reference_type: cultural_reference
+  surface_patterns:
+    - لا يسمن ولا يغني من جوع
+  short_explanation: useless, unsatisfying
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.لا_يسمن_ولا_يغني_من_جوع
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D8%A7_%D9%8A%D8%B3%D9%85%D9%86_%D9%88%D9%84%D8%A7_%D9%8A%D8%BA%D9%86%D9%8A_%D9%85%D9%86_%D8%AC%D9%88%D8%B9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_لعب_دورا_842780bb
+  language: ar
+  canonical_reference: لعب دورا
+  reference_type: cultural_reference
+  surface_patterns:
+    - لعب دورا
+  short_explanation: to play a role, to have an influence
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.لعب_دورا
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D8%B9%D8%A8_%D8%AF%D9%88%D8%B1%D8%A7
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_لعب_على_الحبلين_8965de40
+  language: ar
+  canonical_reference: لعب على الحبلين
+  reference_type: cultural_reference
+  surface_patterns:
+    - لعب على الحبلين
+  short_explanation: to play a double game
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.لعب_على_الحبلين
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D8%B9%D8%A8_%D8%B9%D9%84%D9%89_%D8%A7%D9%84%D8%AD%D8%A8%D9%84%D9%8A%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_لقي_حتفه_d90f82be
+  language: ar
+  canonical_reference: لقي حتفه
+  reference_type: cultural_reference
+  surface_patterns:
+    - لقي حتفه
+  short_explanation: to die of natural causes or non-violently
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.لقي_حتفه
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D9%82%D9%8A_%D8%AD%D8%AA%D9%81%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_لكل_امري_من_اسمه_نصيب_d6cb37e5
+  language: ar
+  canonical_reference: لكل امرئ من اسمه نصيب
+  reference_type: cultural_reference
+  surface_patterns:
+    - لكل امرئ من اسمه نصيب
+  short_explanation: Everyone somewhat lives up to his name
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.لكل_امري_من_اسمه_نصيب
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D9%83%D9%84_%D8%A7%D9%85%D8%B1%D8%A6_%D9%85%D9%86_%D8%A7%D8%B3%D9%85%D9%87_%D9%86%D8%B5%D9%8A%D8%A8
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_للحيطان_اذان_وللشوارع_السنة_41b11e70
+  language: ar
+  canonical_reference: للحيطان آذان وللشوارع ألسنة
+  reference_type: cultural_reference
+  surface_patterns:
+    - للحيطان آذان وللشوارع ألسنة
+  short_explanation: walls have ears
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.للحيطان_اذان_وللشوارع_السنة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D9%84%D8%AD%D9%8A%D8%B7%D8%A7%D9%86_%D8%A2%D8%B0%D8%A7%D9%86_%D9%88%D9%84%D9%84%D8%B4%D9%88%D8%A7%D8%B1%D8%B9_%D8%A3%D9%84%D8%B3%D9%86%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_للنجاح_الف_اب_وللهزيمة_طفل_يتيم_d762f942
+  language: ar
+  canonical_reference: للنجاح ألف أب وللهزيمة طفل يتيم
+  reference_type: cultural_reference
+  surface_patterns:
+    - للنجاح ألف أب وللهزيمة طفل يتيم
+  short_explanation: Everyone wants to claim responsibility for success but no one for failure.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.للنجاح_الف_اب_وللهزيمة_طفل_يتيم
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D9%84%D9%86%D8%AC%D8%A7%D8%AD_%D8%A3%D9%84%D9%81_%D8%A3%D8%A8_%D9%88%D9%84%D9%84%D9%87%D8%B2%D9%8A%D9%85%D8%A9_%D8%B7%D9%81%D9%84_%D9%8A%D8%AA%D9%8A%D9%85
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_لله_في_خلقه_شوون_6bc6074f
+  language: ar
+  canonical_reference: لله في خلقه شؤون
+  reference_type: cultural_reference
+  surface_patterns:
+    - لله في خلقه شؤون
+  short_explanation: God works in mysterious ways
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.لله_في_خلقه_شوون
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D9%84%D9%87_%D9%81%D9%8A_%D8%AE%D9%84%D9%82%D9%87_%D8%B4%D8%A4%D9%88%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ليت_شعري_599c8e29
+  language: ar
+  canonical_reference: ليت شعري
+  reference_type: cultural_reference
+  surface_patterns:
+    - ليت شعري
+  short_explanation: I wish I knew
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ليت_شعري
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D9%8A%D8%AA_%D8%B4%D8%B9%D8%B1%D9%8A
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ليلة_سعيدة_واحلام_لذيذة_24e870d1
+  language: ar
+  canonical_reference: ليلة سعيدة وأحلام لذيذة
+  reference_type: cultural_reference
+  surface_patterns:
+    - ليلة سعيدة وأحلام لذيذة
+  short_explanation: sweet dreams!
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ليلة_سعيدة_واحلام_لذيذة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D9%8A%D9%84%D8%A9_%D8%B3%D8%B9%D9%8A%D8%AF%D8%A9_%D9%88%D8%A3%D8%AD%D9%84%D8%A7%D9%85_%D9%84%D8%B0%D9%8A%D8%B0%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ما_انزل_الله_به_من_سلطان_4a8b1131
+  language: ar
+  canonical_reference: ما أنزل الله به من سلطان
+  reference_type: cultural_reference
+  surface_patterns:
+    - ما أنزل الله به من سلطان
+  short_explanation: that which God has not ordained or ordered
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ما_انزل_الله_به_من_سلطان
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%85%D8%A7_%D8%A3%D9%86%D8%B2%D9%84_%D8%A7%D9%84%D9%84%D9%87_%D8%A8%D9%87_%D9%85%D9%86_%D8%B3%D9%84%D8%B7%D8%A7%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ما_هكذا_يا_سعد_تورد_الابل_fcadc9a6
+  language: ar
+  canonical_reference: ما هكذا يا سعد تورد الإبل
+  reference_type: cultural_reference
+  surface_patterns:
+    - ما هكذا يا سعد تورد الإبل
+  short_explanation: This is not the right way to do it; this is not how things should be done.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ما_هكذا_يا_سعد_تورد_الابل
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%85%D8%A7_%D9%87%D9%83%D8%B0%D8%A7_%D9%8A%D8%A7_%D8%B3%D8%B9%D8%AF_%D8%AA%D9%88%D8%B1%D8%AF_%D8%A7%D9%84%D8%A5%D8%A8%D9%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_من_اكثر_النوم_سبقه_القوم_a1b334f5
+  language: ar
+  canonical_reference: من أكثر النوم سبقه القوم
+  reference_type: cultural_reference
+  surface_patterns:
+    - من أكثر النوم سبقه القوم
+  short_explanation: Whoever sleeps a lot will be outrun/surpassed
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.من_اكثر_النوم_سبقه_القوم
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%85%D9%86_%D8%A3%D9%83%D8%AB%D8%B1_%D8%A7%D9%84%D9%86%D9%88%D9%85_%D8%B3%D8%A8%D9%82%D9%87_%D8%A7%D9%84%D9%82%D9%88%D9%85
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_من_ابتعد_عن_الوسادة_اقتربت_له_السيادة_1f04c220
+  language: ar
+  canonical_reference: من ابتعد عن الوسادة اقتربت له السيادة
+  reference_type: cultural_reference
+  surface_patterns:
+    - من ابتعد عن الوسادة اقتربت له السيادة
+  short_explanation: Whoever distances himself from the pillow/sleep will get closer to leadership
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.من_ابتعد_عن_الوسادة_اقتربت_له_السيادة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%85%D9%86_%D8%A7%D8%A8%D8%AA%D8%B9%D8%AF_%D8%B9%D9%86_%D8%A7%D9%84%D9%88%D8%B3%D8%A7%D8%AF%D8%A9_%D8%A7%D9%82%D8%AA%D8%B1%D8%A8%D8%AA_%D9%84%D9%87_%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%AF%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_من_اغتر_بالامل_ترك_العمل_d1f73f65
+  language: ar
+  canonical_reference: من اغتر بالأمل ترك العمل
+  reference_type: cultural_reference
+  surface_patterns:
+    - من اغتر بالأمل ترك العمل
+  short_explanation: Whoever is deuluded by wishful thinking will neglect real work/deeds
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.من_اغتر_بالامل_ترك_العمل
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%85%D9%86_%D8%A7%D8%BA%D8%AA%D8%B1_%D8%A8%D8%A7%D9%84%D8%A3%D9%85%D9%84_%D8%AA%D8%B1%D9%83_%D8%A7%D9%84%D8%B9%D9%85%D9%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_من_المهد_الى_اللحد_8faed8ac
+  language: ar
+  canonical_reference: من المهد إلى اللحد
+  reference_type: cultural_reference
+  surface_patterns:
+    - من المهد إلى اللحد
+  short_explanation: from the cradle to the grave
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.من_المهد_الى_اللحد
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%85%D9%86_%D8%A7%D9%84%D9%85%D9%87%D8%AF_%D8%A5%D9%84%D9%89_%D8%A7%D9%84%D9%84%D8%AD%D8%AF
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_من_سابع_المستحيلات_05e6ef1d
+  language: ar
+  canonical_reference: من سابع المستحيلات
+  reference_type: cultural_reference
+  surface_patterns:
+    - من سابع المستحيلات
+  short_explanation: next to impossible
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.من_سابع_المستحيلات
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%85%D9%86_%D8%B3%D8%A7%D8%A8%D8%B9_%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%AD%D9%8A%D9%84%D8%A7%D8%AA
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_من_لزم_الرقاد_حرم_المراد_c960afd3
+  language: ar
+  canonical_reference: من لزم الرقاد حرم المراد
+  reference_type: cultural_reference
+  surface_patterns:
+    - من لزم الرقاد حرم المراد
+  short_explanation: Whoever sleeps on the floor will never sleep on the throne; no pain, no gain
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.من_لزم_الرقاد_حرم_المراد
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%85%D9%86_%D9%84%D8%B2%D9%85_%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D8%AF_%D8%AD%D8%B1%D9%85_%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D8%AF
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_نكص_على_عقبيه_ffe11da7
+  language: ar
+  canonical_reference: نكص على عقبيه
+  reference_type: cultural_reference
+  surface_patterns:
+    - نكص على عقبيه
+  short_explanation: 'TODO: add explanation'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.نكص_على_عقبيه
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%86%D9%83%D8%B5_%D8%B9%D9%84%D9%89_%D8%B9%D9%82%D8%A8%D9%8A%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_هل_لك_1c8f8bdd
+  language: ar
+  canonical_reference: هل لك
+  reference_type: cultural_reference
+  surface_patterns:
+    - هل لك
+  short_explanation: 'TODO: add explanation'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.هل_لك
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%87%D9%84_%D9%84%D9%83
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_وضعت_الحرب_اوزارها_43196448
+  language: ar
+  canonical_reference: وضعت الحرب أوزارها
+  reference_type: cultural_reference
+  surface_patterns:
+    - وضعت الحرب أوزارها
+  short_explanation: the war has ended
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.وضعت_الحرب_اوزارها
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%88%D8%B6%D8%B9%D8%AA_%D8%A7%D9%84%D8%AD%D8%B1%D8%A8_%D8%A3%D9%88%D8%B2%D8%A7%D8%B1%D9%87%D8%A7
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ولا_3d9794f4
+  language: ar
+  canonical_reference: ولا
+  reference_type: cultural_reference
+  surface_patterns:
+    - ولا
+  short_explanation: and .}}
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ولا
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%88%D9%84%D8%A7
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_وهلم_جرا_e1775a0e
+  language: ar
+  canonical_reference: وهلم جرا
+  reference_type: cultural_reference
+  surface_patterns:
+    - وهلم جرا
+  short_explanation: and so on, and so forth
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.وهلم_جرا
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%88%D9%87%D9%84%D9%85_%D8%AC%D8%B1%D8%A7
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_انا_الغريق_فما_خوفي_من_البلل_df9fa8ed
+  language: ar
+  canonical_reference: أنا الغريق فما خوفي من البلل
+  reference_type: cultural_reference
+  surface_patterns:
+    - أنا الغريق فما خوفي من البلل
+  short_explanation: the situation is so bad that the risk of its deteriorating even more has become irrelevant;
+    to have nothing to lose
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.انا_الغريق_فما_خوفي_من_البلل
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A3%D9%86%D8%A7_%D8%A7%D9%84%D8%BA%D8%B1%D9%8A%D9%82_%D9%81%D9%85%D8%A7_%D8%AE%D9%88%D9%81%D9%8A_%D9%85%D9%86_%D8%A7%D9%84%D8%A8%D9%84%D9%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_الصديق_وقت_الضيق_d9765312
+  language: ar
+  canonical_reference: الصديق وقت الضيق
+  reference_type: cultural_reference
+  surface_patterns:
+    - الصديق وقت الضيق
+  short_explanation: a friend in need is a friend indeed
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.الصديق_وقت_الضيق
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A7%D9%84%D8%B5%D8%AF%D9%8A%D9%82_%D9%88%D9%82%D8%AA_%D8%A7%D9%84%D8%B6%D9%8A%D9%82
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_الغاية_تبرر_الوسيلة_f2a56b3b
+  language: ar
+  canonical_reference: الغاية تبرر الوسيلة
+  reference_type: cultural_reference
+  surface_patterns:
+    - الغاية تبرر الوسيلة
+  short_explanation: the end justifies the means
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.الغاية_تبرر_الوسيلة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A7%D9%84%D8%BA%D8%A7%D9%8A%D8%A9_%D8%AA%D8%A8%D8%B1%D8%B1_%D8%A7%D9%84%D9%88%D8%B3%D9%8A%D9%84%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ثبت_العرش_ثم_انقش_99f6d92a
+  language: ar
+  canonical_reference: ثبت العرش ثم انقش
+  reference_type: cultural_reference
+  surface_patterns:
+    - ثبت العرش ثم انقش
+  short_explanation: prove that your claims are true or your sources reliable, before you draw deductions
+    from them
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ثبت_العرش_ثم_انقش
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AB%D8%A8%D8%AA_%D8%A7%D9%84%D8%B9%D8%B1%D8%B4_%D8%AB%D9%85_%D8%A7%D9%86%D9%82%D8%B4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_رضا_الناس_غاية_لا_تدرك_effeab3b
+  language: ar
+  canonical_reference: رضا الناس غاية لا تدرك
+  reference_type: cultural_reference
+  surface_patterns:
+    - رضا الناس غاية لا تدرك
+  short_explanation: It is impossible to make a decision that is accepted by every single person; pleasing
+    and appeasing everyone is a goal that cannot be reached.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.رضا_الناس_غاية_لا_تدرك
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B1%D8%B6%D8%A7_%D8%A7%D9%84%D9%86%D8%A7%D8%B3_%D8%BA%D8%A7%D9%8A%D8%A9_%D9%84%D8%A7_%D8%AA%D8%AF%D8%B1%D9%83
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_سلامة_الانسان_في_حفظ_اللسان_ddabaa4c
+  language: ar
+  canonical_reference: سلامة الإنسان في حفظ اللسان
+  reference_type: cultural_reference
+  surface_patterns:
+    - سلامة الإنسان في حفظ اللسان
+  short_explanation: the safety of mankind (is) in the protection of the tongue; one should watch their
+    speech to be safe and sound.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.سلامة_الانسان_في_حفظ_اللسان
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B3%D9%84%D8%A7%D9%85%D8%A9_%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86_%D9%81%D9%8A_%D8%AD%D9%81%D8%B8_%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_عدو_عدوي_صديقي_4ee76f82
+  language: ar
+  canonical_reference: عدو عدوي صديقي
+  reference_type: cultural_reference
+  surface_patterns:
+    - عدو عدوي صديقي
+  short_explanation: the enemy of my enemy is my friend
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.عدو_عدوي_صديقي
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B9%D8%AF%D9%88_%D8%B9%D8%AF%D9%88%D9%8A_%D8%B5%D8%AF%D9%8A%D9%82%D9%8A
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_عين_الرضا_عن_كل_عيب_كليلة_d3f57ca4
+  language: ar
+  canonical_reference: عين الرضا عن كل عيب كليلة
+  reference_type: cultural_reference
+  surface_patterns:
+    - عين الرضا عن كل عيب كليلة
+  short_explanation: People tend not to notice, or to ignore, the faults of those whom they like and favour.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.عين_الرضا_عن_كل_عيب_كليلة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B9%D9%8A%D9%86_%D8%A7%D9%84%D8%B1%D8%B6%D8%A7_%D8%B9%D9%86_%D9%83%D9%84_%D8%B9%D9%8A%D8%A8_%D9%83%D9%84%D9%8A%D9%84%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_فسر_الماء_بعد_الجهد_بالماء_22907a70
+  language: ar
+  canonical_reference: فسر الماء بعد الجهد بالماء
+  reference_type: cultural_reference
+  surface_patterns:
+    - فسر الماء بعد الجهد بالماء
+  short_explanation: 'TODO: add explanation'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.فسر_الماء_بعد_الجهد_بالماء
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%81%D8%B3%D8%B1_%D8%A7%D9%84%D9%85%D8%A7%D8%A1_%D8%A8%D8%B9%D8%AF_%D8%A7%D9%84%D8%AC%D9%87%D8%AF_%D8%A8%D8%A7%D9%84%D9%85%D8%A7%D8%A1
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_كل_يبكي_على_ليلاه_4cd21563
+  language: ar
+  canonical_reference: كل يبكي على ليلاه
+  reference_type: cultural_reference
+  surface_patterns:
+    - كل يبكي على ليلاه
+  short_explanation: everybody does what they want; to each his own
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.كل_يبكي_على_ليلاه
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%83%D9%84_%D9%8A%D8%A8%D9%83%D9%8A_%D8%B9%D9%84%D9%89_%D9%84%D9%8A%D9%84%D8%A7%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_لاجل_عين_الف_عين_تكرم_0e45acfe
+  language: ar
+  canonical_reference: لأجل عين ألف عين تكرم
+  reference_type: cultural_reference
+  surface_patterns:
+    - لأجل عين ألف عين تكرم
+  short_explanation: If someone is highly honoured, those associated with them will be honoured as well.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.لاجل_عين_الف_عين_تكرم
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D8%A3%D8%AC%D9%84_%D8%B9%D9%8A%D9%86_%D8%A3%D9%84%D9%81_%D8%B9%D9%8A%D9%86_%D8%AA%D9%83%D8%B1%D9%85
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_لا_تجعل_الحبة_قبة_4ff11d13
+  language: ar
+  canonical_reference: لا تجعل الحبة قبة
+  reference_type: cultural_reference
+  surface_patterns:
+    - لا تجعل الحبة قبة
+  short_explanation: one should not exaggerate or make a scene of trivial matters.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.لا_تجعل_الحبة_قبة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D8%A7_%D8%AA%D8%AC%D8%B9%D9%84_%D8%A7%D9%84%D8%AD%D8%A8%D8%A9_%D9%82%D8%A8%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_لا_تنه_عن_خلق_وتاتي_مثله_عار_عليك_اذا_فعلت_عظيم_3aebc984
+  language: ar
+  canonical_reference: لا تنه عن خلق وتأتي مثله عار عليك إذا فعلت عظيم
+  reference_type: cultural_reference
+  surface_patterns:
+    - لا تنه عن خلق وتأتي مثله عار عليك إذا فعلت عظيم
+  short_explanation: Practice what you preach
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.لا_تنه_عن_خلق_وتاتي_مثله_عار_عليك_اذا_فعلت_عظيم
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D8%A7_%D8%AA%D9%86%D9%87_%D8%B9%D9%86_%D8%AE%D9%84%D9%82_%D9%88%D8%AA%D8%A3%D8%AA%D9%8A_%D9%85%D8%AB%D9%84%D9%87_%D8%B9%D8%A7%D8%B1_%D8%B9%D9%84%D9%8A%D9%83_%D8%A5%D8%B0%D8%A7_%D9%81%D8%B9%D9%84%D8%AA_%D8%B9%D8%B8%D9%8A%D9%85
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_لا_حياء_في_الدين_6c0dcf06
+  language: ar
+  canonical_reference: لا حياء في الدين
+  reference_type: cultural_reference
+  surface_patterns:
+    - لا حياء في الدين
+  short_explanation: One should not be ashamed of talking about bodily, sexual, or other sensitive matters
+    if this is necessary; naturalia non sunt turpia
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.لا_حياء_في_الدين
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D8%A7_%D8%AD%D9%8A%D8%A7%D8%A1_%D9%81%D9%8A_%D8%A7%D9%84%D8%AF%D9%8A%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_لكل_قاعدة_شواذ_699d2f7a
+  language: ar
+  canonical_reference: لكل قاعدة شواذ
+  reference_type: cultural_reference
+  surface_patterns:
+    - لكل قاعدة شواذ
+  short_explanation: there is an exception to every rule
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.لكل_قاعدة_شواذ
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%D9%83%D9%84_%D9%82%D8%A7%D8%B9%D8%AF%D8%A9_%D8%B4%D9%88%D8%A7%D8%B0
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ما_حك_جلدك_مثل_ظفرك_bc7e91d6
+  language: ar
+  canonical_reference: ما حك جلدك مثل ظفرك
+  reference_type: cultural_reference
+  surface_patterns:
+    - ما حك جلدك مثل ظفرك
+  short_explanation: it is better to be self-reliant than to rely on others
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ما_حك_جلدك_مثل_ظفرك
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%85%D8%A7_%D8%AD%D9%83_%D8%AC%D9%84%D8%AF%D9%83_%D9%85%D8%AB%D9%84_%D8%B8%D9%81%D8%B1%D9%83
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ما_فات_قد_مات_cc0a3baf
+  language: ar
+  canonical_reference: ما فات قد مات
+  reference_type: cultural_reference
+  surface_patterns:
+    - ما فات قد مات
+  short_explanation: what's done is done
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ما_فات_قد_مات
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%85%D8%A7_%D9%81%D8%A7%D8%AA_%D9%82%D8%AF_%D9%85%D8%A7%D8%AA
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_مصايب_قوم_عند_قوم_فوايد_16ae34cd
+  language: ar
+  canonical_reference: مصائب قوم عند قوم فوائد
+  reference_type: cultural_reference
+  surface_patterns:
+    - مصائب قوم عند قوم فوائد
+  short_explanation: one man's loss is another man's gain
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.مصايب_قوم_عند_قوم_فوايد
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%85%D8%B5%D8%A7%D8%A6%D8%A8_%D9%82%D9%88%D9%85_%D8%B9%D9%86%D8%AF_%D9%82%D9%88%D9%85_%D9%81%D9%88%D8%A7%D8%A6%D8%AF
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_ناقل_الكفر_ليس_بكافر_99798f40
+  language: ar
+  canonical_reference: ناقل الكفر ليس بكافر
+  reference_type: cultural_reference
+  surface_patterns:
+    - ناقل الكفر ليس بكافر
+  short_explanation: ; don't shoot the messenger.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.ناقل_الكفر_ليس_بكافر
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%86%D8%A7%D9%82%D9%84_%D8%A7%D9%84%D9%83%D9%81%D8%B1_%D9%84%D9%8A%D8%B3_%D8%A8%D9%83%D8%A7%D9%81%D8%B1
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_وراء_كل_رجل_عظيم_امراة_298b82bf
+  language: ar
+  canonical_reference: وراء كل رجل عظيم امرأة
+  reference_type: cultural_reference
+  surface_patterns:
+    - وراء كل رجل عظيم امرأة
+  short_explanation: behind every successful man there stands a woman
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.وراء_كل_رجل_عظيم_امراة
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%88%D8%B1%D8%A7%D8%A1_%D9%83%D9%84_%D8%B1%D8%AC%D9%84_%D8%B9%D8%B8%D9%8A%D9%85_%D8%A7%D9%85%D8%B1%D8%A3%D8%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ar_cultural_reference_يا_طبيب_طب_لنفسك_34a91586
+  language: ar
+  canonical_reference: يا طبيب طب لنفسك
+  reference_type: cultural_reference
+  surface_patterns:
+    - يا طبيب طب لنفسك
+  short_explanation: physician, heal thyself
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ar_wiktionary_idioms.يا_طبيب_طب_لنفسك
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%8A%D8%A7_%D8%B7%D8%A8%D9%8A%D8%A8_%D8%B7%D8%A8_%D9%84%D9%86%D9%81%D8%B3%D9%83
+  source_license: CC-BY-SA-4.0
+  source_dataset: ar_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.

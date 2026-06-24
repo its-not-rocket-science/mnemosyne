@@ -1,0 +1,1504 @@
+- id: ko_cultural_reference_갑과_을_6ad1f518
+  language: ko
+  canonical_reference: 갑과 을
+  reference_type: cultural_reference
+  surface_patterns:
+  - 갑과 을
+  short_explanation: A and B, former and latter
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.갑과_을
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EA%B0%91%EA%B3%BC_%EC%9D%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_강원도_포수_9ab06811
+  language: ko
+  canonical_reference: 강원도 포수
+  reference_type: cultural_reference
+  surface_patterns:
+  - 강원도 포수
+  short_explanation: someone sent on an errand who fails to return even after a long time
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.강원도_포수
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EA%B0%95%EC%9B%90%EB%8F%84_%ED%8F%AC%EC%88%98
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_골로_가다_c23dcfa2
+  language: ko
+  canonical_reference: 골로 가다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 골로 가다
+  short_explanation: to croak, to die
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.골로_가다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EA%B3%A8%EB%A1%9C_%EA%B0%80%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_교하질쉬_4c9dda8a
+  language: ko
+  canonical_reference: 교하질쉬
+  reference_type: cultural_reference
+  surface_patterns:
+  - 교하질쉬
+  short_explanation: '"scolding the village head under the bridge": complaining behind someone''s back'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.교하질쉬
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EA%B5%90%ED%95%98%EC%A7%88%EC%89%AC
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_귀청_87971460
+  language: ko
+  canonical_reference: 귀청
+  reference_type: cultural_reference
+  surface_patterns:
+  - 귀청
+  short_explanation: 'TODO: add explanation'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.귀청
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EA%B7%80%EC%B2%AD
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_기차_떠나고_손_흔들다_0ce6d451
+  language: ko
+  canonical_reference: 기차 떠나고 손 흔들다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 기차 떠나고 손 흔들다
+  short_explanation: '"to wave after the train has left"; to be affected by l''esprit de l''escalier'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.기차_떠나고_손_흔들다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EA%B8%B0%EC%B0%A8_%EB%96%A0%EB%82%98%EA%B3%A0_%EC%86%90_%ED%9D%94%EB%93%A4%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_까마귀_고기를_먹었나_ae06247c
+  language: ko
+  canonical_reference: 까마귀 고기를 먹었나
+  reference_type: cultural_reference
+  surface_patterns:
+  - 까마귀 고기를 먹었나
+  short_explanation: 'TODO: add explanation'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.까마귀_고기를_먹었나
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EA%B9%8C%EB%A7%88%EA%B7%80_%EA%B3%A0%EA%B8%B0%EB%A5%BC_%EB%A8%B9%EC%97%88%EB%82%98
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_꼬리_치다_ae9d233f
+  language: ko
+  canonical_reference: 꼬리 치다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 꼬리 치다
+  short_explanation: to wag the tail
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.꼬리_치다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EA%BC%AC%EB%A6%AC_%EC%B9%98%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_꼬집어_말하다_adc31d7f
+  language: ko
+  canonical_reference: 꼬집어 말하다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 꼬집어 말하다
+  short_explanation: to put one's finger on something, to specify something, to stipulate, to pinpoint
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.꼬집어_말하다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EA%BC%AC%EC%A7%91%EC%96%B4_%EB%A7%90%ED%95%98%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_나이가_들다_43043842
+  language: ko
+  canonical_reference: 나이가 들다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 나이가 들다
+  short_explanation: to age, grow old(er), put on years
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.나이가_들다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%82%98%EC%9D%B4%EA%B0%80_%EB%93%A4%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_낙동강_오리알_eb839831
+  language: ko
+  canonical_reference: 낙동강 오리알
+  reference_type: cultural_reference
+  surface_patterns:
+  - 낙동강 오리알
+  short_explanation: a loner, a person isolated or excluded from the rest of the group
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.낙동강_오리알
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%82%99%EB%8F%99%EA%B0%95_%EC%98%A4%EB%A6%AC%EC%95%8C
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_날이_들다_101b7543
+  language: ko
+  canonical_reference: 날이 들다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 날이 들다
+  short_explanation: to clear up
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.날이_들다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%82%A0%EC%9D%B4_%EB%93%A4%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_눈_가리고_아웅_01992c06
+  language: ko
+  canonical_reference: 눈 가리고 아웅
+  reference_type: cultural_reference
+  surface_patterns:
+  - 눈 가리고 아웅
+  short_explanation: '"peekaboo while covering one''s eyes":'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.눈_가리고_아웅
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%88%88_%EA%B0%80%EB%A6%AC%EA%B3%A0_%EC%95%84%EC%9B%85
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_눈에_들다_2315815b
+  language: ko
+  canonical_reference: 눈에 들다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 눈에 들다
+  short_explanation: to be attention-grabbing, appealing
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.눈에_들다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%88%88%EC%97%90_%EB%93%A4%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_눈에_밟히다_6fc74d00
+  language: ko
+  canonical_reference: 눈에 밟히다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 눈에 밟히다
+  short_explanation: to be at the back of one's mind; to keep coming to mind
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.눈에_밟히다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%88%88%EC%97%90_%EB%B0%9F%ED%9E%88%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_다다익선_6297df55
+  language: ko
+  canonical_reference: 다다익선
+  reference_type: cultural_reference
+  surface_patterns:
+  - 다다익선
+  short_explanation: the more the merrier, the more the better
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.다다익선
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%8B%A4%EB%8B%A4%EC%9D%B5%EC%84%A0
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_대_ea9b5e15
+  language: ko
+  canonical_reference: 대
+  reference_type: cultural_reference
+  surface_patterns:
+  - 대
+  short_explanation: something large; something great
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.대
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%8C%80
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_도찐개찐_a116ac27
+  language: ko
+  canonical_reference: 도찐개찐
+  reference_type: cultural_reference
+  surface_patterns:
+  - 도찐개찐
+  short_explanation: two situations which are basically the same; similar enough; similar in what matters
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.도찐개찐
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%8F%84%EC%B0%90%EA%B0%9C%EC%B0%90
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_도틀_00f5a7e8
+  language: ko
+  canonical_reference: 도틀
+  reference_type: cultural_reference
+  surface_patterns:
+  - 도틀
+  short_explanation: patience, understanding
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.도틀
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%8F%84%ED%8B%80
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_리즈_시절_8d2932ed
+  language: ko
+  canonical_reference: 리즈 시절
+  reference_type: cultural_reference
+  surface_patterns:
+  - 리즈 시절
+  short_explanation: a bygone golden age or heyday
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.리즈_시절
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%A6%AC%EC%A6%88_%EC%8B%9C%EC%A0%88
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_말이_아니다_93642fa2
+  language: ko
+  canonical_reference: 말이 아니다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 말이 아니다
+  short_explanation: to be unreasonable; to be ridiculous
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.말이_아니다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%A7%90%EC%9D%B4_%EC%95%84%EB%8B%88%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_모르모트_901ed23f
+  language: ko
+  canonical_reference: 모르모트
+  reference_type: cultural_reference
+  surface_patterns:
+  - 모르모트
+  short_explanation: a guinea pig
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.모르모트
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%AA%A8%EB%A5%B4%EB%AA%A8%ED%8A%B8
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_무지개_다리를_건너다_21253983
+  language: ko
+  canonical_reference: 무지개 다리를 건너다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 무지개 다리를 건너다
+  short_explanation: to have a pet pass away
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.무지개_다리를_건너다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%AC%B4%EC%A7%80%EA%B0%9C_%EB%8B%A4%EB%A6%AC%EB%A5%BC_%EA%B1%B4%EB%84%88%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_문_닫고_2cd7770c
+  language: ko
+  canonical_reference: 문 닫고
+  reference_type: cultural_reference
+  surface_patterns:
+  - 문 닫고
+  short_explanation: just barely making the cut
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.문_닫고
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%AC%B8_%EB%8B%AB%EA%B3%A0
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_물_만난_고기_f095b4bb
+  language: ko
+  canonical_reference: 물 만난 고기
+  reference_type: cultural_reference
+  surface_patterns:
+  - 물 만난 고기
+  short_explanation: to find oneself in a suitable environment where one can perform well, up someone's
+    alley, in one's element
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.물_만난_고기
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%AC%BC_%EB%A7%8C%EB%82%9C_%EA%B3%A0%EA%B8%B0
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_물타기_27bb8f29
+  language: ko
+  canonical_reference: 물타기
+  reference_type: cultural_reference
+  surface_patterns:
+  - 물타기
+  short_explanation: bringing up an irrelevant topic or saying nonsense in order to distract from the
+    facts or the original topic;  whataboutism
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.물타기
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%AC%BC%ED%83%80%EA%B8%B0
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_밑져야_본전이다_edd4d9b8
+  language: ko
+  canonical_reference: 밑져야 본전이다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 밑져야 본전이다
+  short_explanation: to have nothing to lose
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.밑져야_본전이다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%B0%91%EC%A0%B8%EC%95%BC_%EB%B3%B8%EC%A0%84%EC%9D%B4%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_바나나_공화국_c1869221
+  language: ko
+  canonical_reference: 바나나 공화국
+  reference_type: cultural_reference
+  surface_patterns:
+  - 바나나 공화국
+  short_explanation: banana republic
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.바나나_공화국
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%B0%94%EB%82%98%EB%82%98_%EA%B3%B5%ED%99%94%EA%B5%AD
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_박_db9c92d3
+  language: ko
+  canonical_reference: 박
+  reference_type: cultural_reference
+  surface_patterns:
+  - 박
+  short_explanation: gourd, calabash
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.박
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%B0%95
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_발이_넓다_fc94fb30
+  language: ko
+  canonical_reference: 발이 넓다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 발이 넓다
+  short_explanation: ; to be a social butterfly, to know a lot of people
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.발이_넓다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%B0%9C%EC%9D%B4_%EB%84%93%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_백일천하_4266b9f4
+  language: ko
+  canonical_reference: 백일천하
+  reference_type: cultural_reference
+  surface_patterns:
+  - 백일천하
+  short_explanation: a one hundred-day reign; a brief reign, short-lived rule
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.백일천하
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%B0%B1%EC%9D%BC%EC%B2%9C%ED%95%98
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_벼룩의_간_a5a20e18
+  language: ko
+  canonical_reference: 벼룩의 간
+  reference_type: cultural_reference
+  surface_patterns:
+  - 벼룩의 간
+  short_explanation: '"liver of a flea"; a term used to exaggerate a very small amount'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.벼룩의_간
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%B2%BC%EB%A3%A9%EC%9D%98_%EA%B0%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_빛을_발하다_df975055
+  language: ko
+  canonical_reference: 빛을 발하다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 빛을 발하다
+  short_explanation: to turn out to be useful; to prove its worth
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.빛을_발하다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%B9%9B%EC%9D%84_%EB%B0%9C%ED%95%98%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_뿔_6cc0e11b
+  language: ko
+  canonical_reference: 뿔
+  reference_type: cultural_reference
+  surface_patterns:
+  - 뿔
+  short_explanation: horn, antler
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.뿔
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%BF%94
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_뿔이_나다_0c28b6b9
+  language: ko
+  canonical_reference: 뿔이 나다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 뿔이 나다
+  short_explanation: to get or be angry
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.뿔이_나다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EB%BF%94%EC%9D%B4_%EB%82%98%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_사명당의_사첫방_3af915f9
+  language: ko
+  canonical_reference: 사명당의 사첫방
+  reference_type: cultural_reference
+  surface_patterns:
+  - 사명당의 사첫방
+  short_explanation: a very cold room
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.사명당의_사첫방
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%82%AC%EB%AA%85%EB%8B%B9%EC%9D%98_%EC%82%AC%EC%B2%AB%EB%B0%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_사상누각_7a343dc2
+  language: ko
+  canonical_reference: 사상누각
+  reference_type: cultural_reference
+  surface_patterns:
+  - 사상누각
+  short_explanation: sandcastle
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.사상누각
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%82%AC%EC%83%81%EB%88%84%EA%B0%81
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_시도_때도_없다_86b1e5d3
+  language: ko
+  canonical_reference: 시도 때도 없다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 시도 때도 없다
+  short_explanation: to be recurrent
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.시도_때도_없다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%8B%9C%EB%8F%84_%EB%95%8C%EB%8F%84_%EC%97%86%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_시도_때도_없이_15a6bb9b
+  language: ko
+  canonical_reference: 시도 때도 없이
+  reference_type: cultural_reference
+  surface_patterns:
+  - 시도 때도 없이
+  short_explanation: ': recurrently'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.시도_때도_없이
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%8B%9C%EB%8F%84_%EB%95%8C%EB%8F%84_%EC%97%86%EC%9D%B4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_쌤통_a988d4d5
+  language: ko
+  canonical_reference: 쌤통
+  reference_type: cultural_reference
+  surface_patterns:
+  - 쌤통
+  short_explanation: something that happens to someone who is thought to deserve it; something that
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.쌤통
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%8C%A4%ED%86%B5
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_안_봐도_블루레이_a2abe2bd
+  language: ko
+  canonical_reference: 안 봐도 블루레이
+  reference_type: cultural_reference
+  surface_patterns:
+  - 안 봐도 블루레이
+  short_explanation: 'TODO: add explanation'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.안_봐도_블루레이
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%95%88_%EB%B4%90%EB%8F%84_%EB%B8%94%EB%A3%A8%EB%A0%88%EC%9D%B4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_안_봐도_비디오_413a81d8
+  language: ko
+  canonical_reference: 안 봐도 비디오
+  reference_type: cultural_reference
+  surface_patterns:
+  - 안 봐도 비디오
+  short_explanation: '[like] a video tape even without watching ()'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.안_봐도_비디오
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%95%88_%EB%B4%90%EB%8F%84_%EB%B9%84%EB%94%94%EC%98%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_안면_711952fd
+  language: ko
+  canonical_reference: 안면
+  reference_type: cultural_reference
+  surface_patterns:
+  - 안면
+  short_explanation: person's face
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.안면
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%95%88%EB%A9%B4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_애_2ef35d29
+  language: ko
+  canonical_reference: 애
+  reference_type: cultural_reference
+  surface_patterns:
+  - 애
+  short_explanation: guy, person
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.애
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%95%A0
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_어찌할_바를_모르다_635c4c4e
+  language: ko
+  canonical_reference: 어찌할 바를 모르다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 어찌할 바를 모르다
+  short_explanation: be at a loss what to do
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.어찌할_바를_모르다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%96%B4%EC%B0%8C%ED%95%A0_%EB%B0%94%EB%A5%BC_%EB%AA%A8%EB%A5%B4%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_엎친_데_덮치다_45ea4d57
+  language: ko
+  canonical_reference: 엎친 데 덮치다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 엎친 데 덮치다
+  short_explanation: (for something) to make matters worse/add insult to injury; for one bad event/misfortune
+    to follow another; it never rains but it pours
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.엎친_데_덮치다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%97%8E%EC%B9%9C_%EB%8D%B0_%EB%8D%AE%EC%B9%98%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_오만_9a517939
+  language: ko
+  canonical_reference: 오만
+  reference_type: cultural_reference
+  surface_patterns:
+  - 오만
+  short_explanation: hubris, excessive pride
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.오만
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%98%A4%EB%A7%8C
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_온실_속의_화초_48ab6bfd
+  language: ko
+  canonical_reference: 온실 속의 화초
+  reference_type: cultural_reference
+  surface_patterns:
+  - 온실 속의 화초
+  short_explanation: '"flower in a greenhouse"; an excessively sheltered person who cannot cope with the
+    real world'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.온실_속의_화초
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%98%A8%EC%8B%A4_%EC%86%8D%EC%9D%98_%ED%99%94%EC%B4%88
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_을_de29d7fc
+  language: ko
+  canonical_reference: 을
+  reference_type: cultural_reference
+  surface_patterns:
+  - 을
+  short_explanation: B;
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.을
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%9D%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_이름_7d55cc1c
+  language: ko
+  canonical_reference: 이름
+  reference_type: cultural_reference
+  surface_patterns:
+  - 이름
+  short_explanation: name; full name
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.이름
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%9D%B4%EB%A6%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_인의_장막_48adc06d
+  language: ko
+  canonical_reference: 인의 장막
+  reference_type: cultural_reference
+  surface_patterns:
+  - 인의 장막
+  short_explanation: a human wall; a human barricade
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.인의_장막
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%9D%B8%EC%9D%98_%EC%9E%A5%EB%A7%89
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_인의_장벽_0c6e7eb5
+  language: ko
+  canonical_reference: 인의 장벽
+  reference_type: cultural_reference
+  surface_patterns:
+  - 인의 장벽
+  short_explanation: 'TODO: add explanation'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.인의_장벽
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%9D%B8%EC%9D%98_%EC%9E%A5%EB%B2%BD
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_입을_모으다_407f543b
+  language: ko
+  canonical_reference: 입을 모으다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 입을 모으다
+  short_explanation: to speak with one voice; to be unanimous
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.입을_모으다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%9E%85%EC%9D%84_%EB%AA%A8%EC%9C%BC%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_입이_가볍다_4895d8c7
+  language: ko
+  canonical_reference: 입이 가볍다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 입이 가볍다
+  short_explanation: to be a bigmouth
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.입이_가볍다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%9E%85%EC%9D%B4_%EA%B0%80%EB%B3%8D%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_잠을_청하다_c60e1320
+  language: ko
+  canonical_reference: 잠을 청하다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 잠을 청하다
+  short_explanation: to try and fall asleep; to lull oneself to sleep
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.잠을_청하다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%9E%A0%EC%9D%84_%EC%B2%AD%ED%95%98%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_잠이_들다_1424b2a1
+  language: ko
+  canonical_reference: 잠이 들다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 잠이 들다
+  short_explanation: to fall asleep, go to sleep, nod off
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.잠이_들다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%9E%A0%EC%9D%B4_%EB%93%A4%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_저리_가라_27f0a6e2
+  language: ko
+  canonical_reference: 저리 가라
+  reference_type: cultural_reference
+  surface_patterns:
+  - 저리 가라
+  short_explanation: enough with, out with, it's over for
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.저리_가라
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%A0%80%EB%A6%AC_%EA%B0%80%EB%9D%BC
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_좋은_곳_42f03f91
+  language: ko
+  canonical_reference: 좋은 곳
+  reference_type: cultural_reference
+  surface_patterns:
+  - 좋은 곳
+  short_explanation: a better place
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.좋은_곳
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%A2%8B%EC%9D%80_%EA%B3%B3
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_죽다_살았다_7454c2d1
+  language: ko
+  canonical_reference: 죽다 살았다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 죽다 살았다
+  short_explanation: to have come out safely from a painful or risky situation
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.죽다_살았다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%A3%BD%EB%8B%A4_%EC%82%B4%EC%95%98%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_차고_넘치다_0b535aed
+  language: ko
+  canonical_reference: 차고 넘치다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 차고 넘치다
+  short_explanation: to be overflowing, to be extremely numerous, to be endless
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.차고_넘치다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%B0%A8%EA%B3%A0_%EB%84%98%EC%B9%98%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_천고마비_43b7c07a
+  language: ko
+  canonical_reference: 천고마비
+  reference_type: cultural_reference
+  surface_patterns:
+  - 천고마비
+  short_explanation: the sky is clear, and the horses are strong and well-fed
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.천고마비
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%B2%9C%EA%B3%A0%EB%A7%88%EB%B9%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_철색_8d7b6809
+  language: ko
+  canonical_reference: 철색
+  reference_type: cultural_reference
+  surface_patterns:
+  - 철색
+  short_explanation: iron gray color
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.철색
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%B2%A0%EC%83%89
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_촌각을_다투다_c5bd5986
+  language: ko
+  canonical_reference: 촌각을 다투다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 촌각을 다투다
+  short_explanation: to be a race against time, to be very urgent
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.촌각을_다투다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%B4%8C%EA%B0%81%EC%9D%84_%EB%8B%A4%ED%88%AC%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_칼을_빼들다_94dc4067
+  language: ko
+  canonical_reference: 칼을 빼들다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 칼을 빼들다
+  short_explanation: to take strong action (against)
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.칼을_빼들다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%B9%BC%EC%9D%84_%EB%B9%BC%EB%93%A4%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_캥거루족_8c260e9e
+  language: ko
+  canonical_reference: 캥거루족
+  reference_type: cultural_reference
+  surface_patterns:
+  - 캥거루족
+  short_explanation: adult children who live off their parents' income without finding work
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.캥거루족
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%EC%BA%A5%EA%B1%B0%EB%A3%A8%EC%A1%B1
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_팔랑귀_2dc65426
+  language: ko
+  canonical_reference: 팔랑귀
+  reference_type: cultural_reference
+  surface_patterns:
+  - 팔랑귀
+  short_explanation: a credulous or gullible person; a person who is swayed easily by what others say
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.팔랑귀
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%ED%8C%94%EB%9E%91%EA%B7%80
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_하늘의_별_따기_662937ae
+  language: ko
+  canonical_reference: 하늘의 별 따기
+  reference_type: cultural_reference
+  surface_patterns:
+  - 하늘의 별 따기
+  short_explanation: get blood out of a stone
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.하늘의_별_따기
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%ED%95%98%EB%8A%98%EC%9D%98_%EB%B3%84_%EB%94%B0%EA%B8%B0
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_한도_끝도_없다_8ee3e3da
+  language: ko
+  canonical_reference: 한도 끝도 없다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 한도 끝도 없다
+  short_explanation: to be endless; to be limitless; to be uncountable
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.한도_끝도_없다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%ED%95%9C%EB%8F%84_%EB%81%9D%EB%8F%84_%EC%97%86%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_한시름_49fd8df3
+  language: ko
+  canonical_reference: 한시름
+  reference_type: cultural_reference
+  surface_patterns:
+  - 한시름
+  short_explanation: a psychological burden that is relieved
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.한시름
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%ED%95%9C%EC%8B%9C%EB%A6%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_할_것_없다_ec91d40c
+  language: ko
+  canonical_reference: 할 것 없다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 할 것 없다
+  short_explanation: '}} to have no need to distinguish; to be without distinction'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.할_것_없다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%ED%95%A0_%EA%B2%83_%EC%97%86%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_함흥차사_8f616b8d
+  language: ko
+  canonical_reference: 함흥차사
+  reference_type: cultural_reference
+  surface_patterns:
+  - 함흥차사
+  short_explanation: person sent on an errand who fails to return even after a long time
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.함흥차사
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%ED%95%A8%ED%9D%A5%EC%B0%A8%EC%82%AC
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_행간을_읽다_b3f201d5
+  language: ko
+  canonical_reference: 행간을 읽다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 행간을 읽다
+  short_explanation: to read between the lines
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.행간을_읽다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%ED%96%89%EA%B0%84%EC%9D%84_%EC%9D%BD%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_헛걸음_b67f959d
+  language: ko
+  canonical_reference: 헛걸음
+  reference_type: cultural_reference
+  surface_patterns:
+  - 헛걸음
+  short_explanation: fruitless undertaking
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.헛걸음
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%ED%97%9B%EA%B1%B8%EC%9D%8C
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_호랑이_잡아먹는_담비_c860fbcf
+  language: ko
+  canonical_reference: 호랑이 잡아먹는 담비
+  reference_type: cultural_reference
+  surface_patterns:
+  - 호랑이 잡아먹는 담비
+  short_explanation: '"a marten that hunts tigers"; a David before a Goliath'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.호랑이_잡아먹는_담비
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%ED%98%B8%EB%9E%91%EC%9D%B4_%EC%9E%A1%EC%95%84%EB%A8%B9%EB%8A%94_%EB%8B%B4%EB%B9%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: ko_cultural_reference_힘이_되다_8f3ae0f1
+  language: ko
+  canonical_reference: 힘이 되다
+  reference_type: cultural_reference
+  surface_patterns:
+  - 힘이 되다
+  short_explanation: to be supportive, to be of help
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.ko_wiktionary_idioms.힘이_되다
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%ED%9E%98%EC%9D%B4_%EB%90%98%EB%8B%A4
+  source_license: CC-BY-SA-4.0
+  source_dataset: ko_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
