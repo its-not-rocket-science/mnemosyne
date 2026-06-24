@@ -1,0 +1,413 @@
+- id: ko_literary_reference_어져_내일이여_5bb3d9ff
+  language: ko
+  canonical_reference: 어져 내일이여
+  reference_type: literary_reference
+  surface_patterns:
+  - 어져 내일이여
+  - 어져 내일이요
+  - 어져 내일이
+  short_explanation: A famous sijo by Jeong Cheol expressing sorrow over the fleeting moon, reflecting
+    on transience and beauty.
+  i18n_explanations:
+    en: A famous sijo by Jeong Cheol expressing sorrow over the fleeting moon, reflecting on transience
+      and beauty.
+    es: Un famoso sijo de Jeong Cheol que expresa tristeza por la luna fugaz, reflexionando sobre la transitoriedad
+      y la belleza.
+    fr: Un célèbre sijo de Jeong Cheol exprimant la tristesse face à la lune éphémère, réfléchissant sur
+      la fugacité et la beauté.
+    de: Ein berühmter Sijo von Jeong Cheol, der Trauer über den flüchtigen Mond ausdrückt und über Vergänglichkeit
+      und Schönheit nachdenkt.
+    it: Un famoso sijo di Jeong Cheol che esprime tristezza per la luna fugace, riflettendo sulla transitorietà
+      e la bellezza.
+    pt: Um famoso sijo de Jeong Cheol expressando tristeza pela lua fugaz, refletindo sobre a transitoriedade
+      e a beleza.
+    ru: Знаменитое сиджо Чон Чхоля, выражающее печаль о мимолетной луне, размышляющее о скоротечности
+      и красоте.
+    ja: 丁哲の有名なシジョで、はかない月への悲しみを表現し、儚さと美しさについて考察しています。
+    zh: 郑澈的著名时调，表达对转瞬即逝的月亮的悲伤，反思无常与美。
+    ar: قصيدة سيجو شهيرة لجيونج تشيول تعبر عن الحزن على القمر الزائل، متأملاً في الزوال والجمال.
+    he: סיג'ו מפורסם של ג'ונג צ'אול המביע עצב על הירח החולף, מהרהר על ארעיות ויופי.
+  learner_level: C2
+  confidence: 0.9
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ko.explanation.ko_classical_phrases_어져_내일이여
+  source_work_key: mnemosyne.ko.work.어져_내일이여_시조
+  source_author_key: mnemosyne.ko.author.정철_jeong_cheol
+  source_work: 어져 내일이여 (시조)
+  source_author: 정철 (Jeong Cheol)
+  source_url: https://ko.wikisource.org/wiki/%EC%96%B4%EC%A0%B8_%EB%82%B4%EC%9D%BC%EC%9D%B4%EC%97%AC
+  source_license: public_domain
+  source_dataset: ko_classical_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Canonical
+    form often cited as ''어져 내일이야'' by Jeong Cheol; ''내일이여'' is a plausible variant but requires verification.'
+- id: ko_cultural_reference_강감찬_장군_0cbde63c
+  language: ko
+  canonical_reference: 강감찬 장군
+  reference_type: cultural_reference
+  surface_patterns:
+  - 강감찬
+  - 강감찬 장군님
+  - 강감찬 장군
+  - 장군 강감찬
+  short_explanation: General Gang Gam-chan was a Goryeo military commander who led Korea to victory against
+    the Khitan Liao dynasty. He is remembered for his leadership during the Third Goryeo-Khitan War and
+    his famous tactical retreat.
+  i18n_explanations:
+    en: General Gang Gam-chan was a Goryeo military commander who led Korea to victory against the Khitan
+      Liao dynasty. He is remembered for his leadership during the Third Goryeo-Khitan War and his famous
+      tactical retreat.
+    es: El general Gang Gam-chan fue un comandante militar de Goryeo que llevó a Corea a la victoria contra
+      la dinastía Khitan Liao. Es recordado por su liderazgo durante la Tercera Guerra Goryeo-Khitan y
+      su famosa retirada táctica.
+    fr: Le général Gang Gam-chan était un commandant militaire de Goryeo qui a mené la Corée à la victoire
+      contre la dynastie khitane Liao. Il est connu pour son leadership pendant la troisième guerre Goryeo-Khitan
+      et sa célèbre retraite tactique.
+    de: General Gang Gam-chan war ein militärischer Befehlshaber von Goryeo, der Korea zum Sieg gegen
+      die Khitan-Liao-Dynastie führte. Er wird für seine Führung während des dritten Goryeo-Khitan-Krieges
+      und seinen berühmten taktischen Rückzug in Erinnerung behalten.
+    it: Il generale Gang Gam-chan fu un comandante militare di Goryeo che portò la Corea alla vittoria
+      contro la dinastia Khitan Liao. È ricordato per la sua leadership durante la terza guerra Goryeo-Khitan
+      e la sua famosa ritirata tattica.
+    pt: O general Gang Gam-chan foi um comandante militar de Goryeo que liderou a Coreia à vitória contra
+      a dinastia Khitan Liao. Ele é lembrado por sua liderança durante a Terceira Guerra Goryeo-Khitan
+      e sua famosa retirada tática.
+    ru: Генерал Кан Гам Чхан был военачальником Корё, который привел Корею к победе над киданьской династией
+      Ляо. Он запомнился своим руководством во время третьей войны Корё-киданей и знаменитым тактическим
+      отступлением.
+    ja: 姜邯賛将軍は、高麗の軍事指揮官で、契丹の遼朝に対して韓国を勝利に導きました。彼は第3次高麗-契丹戦争でのリーダーシップと有名な戦術的撤退で記憶されています。
+    zh: 姜邯赞将军是高丽的军事指挥官，领导韩国战胜了契丹辽朝。他在第三次高丽-契丹战争中的领导能力和著名的战术撤退被人们铭记。
+    ar: كان الجنرال كانغ غام تشان قائدًا عسكريًا من غوريو قاد كوريا إلى النصر ضد سلالة لياو الخيتانية.
+      يُذكر لقيادته خلال حرب غوريو-خيتان الثالثة وانسحابه التكتيكي الشهير.
+    he: הגנרל גאנג גאם-צ'אן היה מפקד צבאי מגוריאו שהוביל את קוריאה לניצחון נגד שושלת ליאו החיטאנית. הוא
+      זכור בזכות מנהיגותו במהלך מלחמת גוריאו-חיטאן השלישית ונסיגתו הטקטית המפורסמת.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: formal
+  explanation_key: mnemosyne.ko.explanation.korean_historical_figures_강감찬_장군
+  source_work_key: mnemosyne.ko.work.삼국사기_및_기타_역사_기록
+  source_author_key: mnemosyne.ko.author.various
+  source_work: 삼국사기 및 기타 역사 기록
+  source_author: Various
+  source_license: public_domain
+  source_dataset: korean_historical_figures
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    work incorrectly listed as 삼국사기; should be 고려사.'
+- id: ko_cultural_reference_서희_장군_9f22107d
+  language: ko
+  canonical_reference: 서희 장군
+  reference_type: cultural_reference
+  surface_patterns:
+  - 서희
+  - 서희 장군님
+  - 서희 장군
+  - 장군 서희
+  short_explanation: General Seo Hui was a Goryeo diplomat and military commander who negotiated with
+    the Khitan Liao dynasty to prevent war and secure Goguryeo's former territories. He is praised for
+    his diplomatic acumen and patriotic spirit.
+  i18n_explanations:
+    en: General Seo Hui was a Goryeo diplomat and military commander who negotiated with the Khitan Liao
+      dynasty to prevent war and secure Goguryeo's former territories. He is praised for his diplomatic
+      acumen and patriotic spirit.
+    es: El general Seo Hui fue un diplomático y comandante militar de Goryeo que negoció con la dinastía
+      Khitan Liao para evitar la guerra y asegurar los antiguos territorios de Goguryeo. Es elogiado por
+      su perspicacia diplomática y espíritu patriótico.
+    fr: Le général Seo Hui était un diplomate et commandant militaire de Goryeo qui a négocié avec la
+      dynastie khitane Liao pour éviter la guerre et sécuriser les anciens territoires de Goguryeo. Il
+      est loué pour son sens diplomatique et son esprit patriotique.
+    de: General Seo Hui war ein Diplomat und militärischer Befehlshaber von Goryeo, der mit der Khitan-Liao-Dynastie
+      verhandelte, um Krieg zu vermeiden und die ehemaligen Gebiete von Goguryeo zu sichern. Er wird für
+      sein diplomatisches Geschick und seinen patriotischen Geist gelobt.
+    it: Il generale Seo Hui fu un diplomatico e comandante militare di Goryeo che negoziò con la dinastia
+      Khitan Liao per prevenire la guerra e assicurare gli ex territori di Goguryeo. È lodato per la sua
+      acutezza diplomatica e spirito patriottico.
+    pt: O general Seo Hui foi um diplomata e comandante militar de Goryeo que negociou com a dinastia
+      Khitan Liao para evitar a guerra e assegurar os antigos territórios de Goguryeo. Ele é elogiado
+      por sua perspicácia diplomática e espírito patriótico.
+    ru: Генерал Со Хи был дипломатом и военачальником Корё, который вел переговоры с киданьской династией
+      Ляо, чтобы предотвратить войну и обеспечить бывшие территории Когурё. Его хвалят за дипломатическую
+      проницательность и патриотический дух.
+    ja: 徐熙将軍は高麗の外交官であり軍事指揮官で、契丹の遼朝と交渉して戦争を回避し、高句麗の旧領土を確保しました。彼は外交的手腕と愛国心で称賛されています。
+    zh: 徐熙将军是高丽的外交官和军事指挥官，与契丹辽朝谈判以避免战争并确保高句丽的旧领土。他以外交才能和爱国精神而受到赞扬。
+    ar: كان الجنرال سو هي دبلوماسيًا وقائدًا عسكريًا من غوريو تفاوض مع سلالة لياو الخيتانية لمنع الحرب
+      وتأمين أراضي غوغوريو السابقة. يُشاد بفطنته الدبلوماسية وروحه الوطنية.
+    he: הגנרל סו הי היה דיפלומט ומפקד צבאי מגוריאו שניהל משא ומתן עם שושלת ליאו החיטאנית כדי למנוע מלחמה
+      ולהבטיח את שטחי גוגוריאו לשעבר. הוא זוכה לשבחים על חוכמתו הדיפלומטית ורוחו הפטריוטית.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: formal
+  allow_short_pattern: true
+  explanation_key: mnemosyne.ko.explanation.korean_historical_figures_서희_장군
+  source_work_key: mnemosyne.ko.work.삼국사기_및_기타_역사_기록
+  source_author_key: mnemosyne.ko.author.various
+  source_work: 삼국사기 및 기타 역사 기록
+  source_author: Various
+  source_license: public_domain
+  source_dataset: korean_historical_figures
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    work incorrectly listed as 삼국사기; should be 고려사.'
+- id: ko_classical_or_scriptural_allusion_도덕_6c837d3b
+  language: ko
+  canonical_reference: 도덕
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - 도덕
+  - 도덕적
+  short_explanation: 도덕 (morality/virtue) is a key concept in both Confucianism and Daoism, but here likely
+    alludes to the Dao De Jing (도덕경), the foundational Daoist text by Laozi.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  allow_short_pattern: true
+  explanation_key: mnemosyne.ko.explanation.ko_confucian_terms_도덕
+  source_work_key: mnemosyne.ko.work.도덕경_dao_de_jing
+  source_author_key: mnemosyne.ko.author.노자_laozi
+  source_work: 도덕경 (Dao De Jing)
+  source_author: 노자 (Laozi)
+  source_license: public_domain
+  source_dataset: ko_confucian_terms
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Surface
+    pattern ''도덕'' is too generic; it is a common Korean word, not a clear allusion to the Dao De Jing.'
+- id: ko_cultural_reference_토끼와_자라_99c5dd43
+  language: ko
+  canonical_reference: 토끼와 자라
+  reference_type: cultural_reference
+  surface_patterns:
+  - 토끼와 자라
+  - 토끼와 거북이
+  short_explanation: A classic Korean folktale about a rabbit and a turtle, where the rabbit uses wit
+    to escape being drowned, teaching lessons about cleverness and caution.
+  i18n_explanations:
+    en: A classic Korean folktale about a rabbit and a turtle, where the rabbit uses wit to escape being
+      drowned, teaching lessons about cleverness and caution.
+    es: Un cuento clásico coreano sobre un conejo y una tortuga, en el que el conejo usa su astucia para
+      escapar de ser ahogado, enseñando lecciones sobre inteligencia y precaución.
+    fr: Un conte classique coréen sur un lapin et une tortue, où le lapin utilise son esprit pour échapper
+      à la noyade, enseignant des leçons sur la ruse et la prudence.
+    de: Ein klassisches koreanisches Märchen über einen Hasen und eine Schildkröte, in dem der Hase mit
+      List dem Ertrinken entkommt und Lehren über Klugheit und Vorsicht vermittelt.
+    it: Una fiaba classica coreana su un coniglio e una tartaruga, dove il coniglio usa l'astuzia per
+      sfuggire all'annegamento, insegnando lezioni sull'intelligenza e la prudenza.
+    pt: Um conto clássico coreano sobre um coelho e uma tartaruga, onde o coelho usa a astúcia para escapar
+      de ser afogado, ensinando lições sobre esperteza e cautela.
+    ru: Классическая корейская сказка о кролике и черепахе, в которой кролик с помощью хитрости избегает
+      утопления, преподавая уроки о сообразительности и осторожности.
+    ja: ウサギとカメの古典的な韓国の民話で、ウサギが機知を駆使して溺れそうになるのを逃れ、賢さと用心の教訓を伝える。
+    zh: 一个经典的朝鲜民间故事，讲述兔子和乌龟的故事，兔子用机智逃脱被淹死的命运，教导人们聪明和谨慎。
+    ar: حكاية شعبية كورية كلاسيكية عن أرنب وسلحفاة، حيث يستخدم الأرنب ذكاءه ليهرب من الغرق، وتعلم دروسًا
+      في الدهاء والحذر.
+    he: סיפור עם קוריאני קלאסי על ארנב וצב, שבו הארנב משתמש בתבונה כדי להימלט מטביעה, ומלמד לקחים על ערנות
+      וזהירות.
+  learner_level: A2
+  confidence: 0.8
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.ko.explanation.ko_cultural_refs_토끼와_자라
+  source_work_key: mnemosyne.ko.work.oral_tradition
+  source_author_key: mnemosyne.ko.author.anonymous
+  source_work: Oral tradition
+  source_author: Anonymous
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ko_cultural_refs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Surface
+    pattern ''토끼와 거북이'' likely refers to Aesop''s fable ''The Tortoise and the Hare'', not the Korean
+    folktale ''토끼와 자라''.'
+- id: ko_proverb_tradition_작은_고추가_맵다_dd80d624
+  language: ko
+  canonical_reference: 작은 고추가 맵다
+  reference_type: proverb_tradition
+  surface_patterns:
+  - 작은 고추가 맵다
+  - 작다고 만만히 보지 마라
+  short_explanation: This proverb means that small or seemingly insignificant things can be very powerful
+    or intense, cautioning against underestimating someone or something based on size.
+  i18n_explanations:
+    en: This proverb means that small or seemingly insignificant things can be very powerful or intense,
+      cautioning against underestimating someone or something based on size.
+    es: Este proverbio significa que las cosas pequeñas o aparentemente insignificantes pueden ser muy
+      poderosas o intensas, advirtiendo contra subestimar a alguien o algo por su tamaño.
+    fr: Ce proverbe signifie que les petites choses ou apparemment insignifiantes peuvent être très puissantes
+      ou intenses, mettant en garde contre le fait de sous-estimer quelqu'un ou quelque chose en raison
+      de sa taille.
+    de: Dieses Sprichwort bedeutet, dass kleine oder scheinbar unbedeutende Dinge sehr mächtig oder intensiv
+      sein können, und warnt davor, jemanden oder etwas aufgrund seiner Größe zu unterschätzen.
+    it: Questo proverbio significa che le cose piccole o apparentemente insignificanti possono essere
+      molto potenti o intense, mettendo in guardia dal sottovalutare qualcuno o qualcosa in base alle
+      dimensioni.
+    pt: Este provérbio significa que coisas pequenas ou aparentemente insignificantes podem ser muito
+      poderosas ou intensas, alertando contra subestimar alguém ou algo com base no tamanho.
+    ru: Эта пословица означает, что маленькие или кажущиеся незначительными вещи могут быть очень мощными
+      или интенсивными, предостерегая от недооценки кого-либо или чего-либо на основании размера.
+    ja: このことわざは、小さく一見取るに足らないものでも、非常に強力または強烈である可能性があることを意味し、サイズに基づいて人や物事を過小評価しないように警告しています。
+    zh: 这句谚语的意思是，小而看似微不足道的东西可能非常强大或强烈，警告不要以大小来低估某人或某物。
+    ar: يعني هذا المثل أن الأشياء الصغيرة أو التي تبدو تافهة يمكن أن تكون قوية جدًا أو شديدة، محذرًا من
+      الاستهانة بشخص أو شيء بناءً على الحجم.
+    he: הפתגם הזה אומר שדברים קטנים או שנראים חסרי חשיבות יכולים להיות חזקים מאוד או עזים, ומזהיר מפני
+      זלזול במישהו או במשהו על סמך גודל.
+  learner_level: A2
+  confidence: 0.9
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.ko.explanation.ko_proverbs_작은_고추가_맵다
+  source_work_key: mnemosyne.ko.work.various_oral_tradition
+  source_author_key: mnemosyne.ko.author.korean_folk_tradition
+  source_work: Various (oral tradition)
+  source_author: Korean folk tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ko_proverbs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    second surface pattern ''작다고 만만히 보지 마라'' is a related but distinct saying, not a direct variant of
+    the canonical proverb.'
+- id: ko_literary_reference_나_보기가_역겨워_73ecd45f
+  language: ko
+  canonical_reference: 나 보기가 역겨워
+  reference_type: literary_reference
+  surface_patterns:
+  - 나 보기가 역겨워
+  - 나 보기가 역겨우면
+  - 나 보기가 싫어져
+  short_explanation: The opening line of Kim So-wol's poem 'Azaleas' (진달래꽃), expressing the speaker's
+    resignation as a lover grows tired of them. It is a classic symbol of Korean romantic sorrow.
+  i18n_explanations:
+    en: The opening line of Kim So-wol's poem 'Azaleas' (진달래꽃), expressing the speaker's resignation as
+      a lover grows tired of them. It is a classic symbol of Korean romantic sorrow.
+    es: El verso inicial del poema 'Azaleas' (진달래꽃) de Kim So-wol, que expresa la resignación del hablante
+      cuando su amante se cansa de él/ella. Es un símbolo clásico del dolor romántico coreano.
+    fr: Le premier vers du poème 'Azalées' (진달래꽃) de Kim So-wol, exprimant la résignation du locuteur
+      alors que son amoureux se lasse de lui/elle. C'est un symbole classique de la tristesse romantique
+      coréenne.
+    de: Die erste Zeile von Kim So-wols Gedicht 'Azaleen' (진달래꽃), die die Resignation des Sprechers ausdrückt,
+      wenn der Geliebte seiner/ihrer überdrüssig wird. Ein klassisches Symbol koreanischer romantischer
+      Trauer.
+    it: Il verso iniziale della poesia 'Azalee' (진달래꽃) di Kim So-wol, che esprime la rassegnazione del
+      parlante quando l'amante si stanca di lui/lei. È un classico simbolo del dolore romantico coreano.
+    pt: O verso inicial do poema 'Azaleias' (진달래꽃) de Kim So-wol, expressando a resignação do falante
+      quando o amante se cansa dele/dela. É um símbolo clássico da tristeza romântica coreana.
+    ru: Начальная строка стихотворения Ким Со-воль 'Азалии' (진달래꽃), выражающая смирение говорящего, когда
+      любимый устаёт от него/неё. Это классический символ корейской романтической печали.
+    ja: 김소월의 시 '진달래꽃'의 첫 구절로, 연인이 싫증을 낼 때 화자의 체념을 표현한다. 한국적 연정의 슬픔을 상징하는 고전적 구절이다.
+    zh: 金素月的诗《杜鹃花》的开头诗句，表达了当恋人厌倦时说话者的无奈。它是韩国浪漫悲伤的经典象征。
+    ar: السطر الافتتاحي من قصيدة 'الأزاليات' (진달래꽃) للشاعر كيم سو وول، يعبر عن استسلام المتحدث عندما يمل
+      الحبيب منه/منها. إنه رمز كلاسيكي للحزن الرومانسي الكوري.
+    he: שורת הפתיחה של שירו של קים סו-וול 'אזליאות' (진달래꽃), המבטאת את השלמתו של הדובר כשהאהוב/ה מתעייף
+      ממנו/ה. זהו סמל קלאסי של צער רומנטי קוריאני.
+  learner_level: C2
+  confidence: 0.8
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ko.explanation.kr_poetry_phrases_나_보기가_역겨워
+  source_work_key: mnemosyne.ko.work.진달래꽃
+  source_author_key: mnemosyne.ko.author.김소월
+  source_work: 진달래꽃
+  source_author: 김소월
+  source_url: https://ko.wikisource.org/wiki/%EC%A7%84%EB%8B%AC%EB%9E%98%EA%BD%83
+  source_license: public_domain
+  source_dataset: kr_poetry_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Surface
+    pattern ''나 보기가 싫어져'' is a paraphrase, not the exact phrase from the poem.'
+- id: ko_literary_reference_님은_갔습니다_afaf0f66
+  language: ko
+  canonical_reference: 님은 갔습니다
+  reference_type: literary_reference
+  surface_patterns:
+  - 님은 갔습니다
+  - 님은 가셨습니다
+  - 님은 떠났습니다
+  short_explanation: The opening line of Han Yong-un's poem 'The Silence of the Beloved' (님의 침묵), mourning
+    the departure of a beloved as a metaphor for Korea's loss of independence. A pivotal work in modern
+    Korean poetry.
+  i18n_explanations:
+    en: The opening line of Han Yong-un's poem 'The Silence of the Beloved' (님의 침묵), mourning the departure
+      of a beloved as a metaphor for Korea's loss of independence. A pivotal work in modern Korean poetry.
+    es: El verso inicial del poema 'El silencio del amado' (님의 침묵) de Han Yong-un, que llora la partida
+      del amado como metáfora de la pérdida de independencia de Corea. Obra fundamental de la poesía coreana
+      moderna.
+    fr: Le premier vers du poème 'Le silence du bien-aimé' (님의 침묵) de Han Yong-un, pleurant le départ
+      du bien-aimé comme métaphore de la perte d'indépendance de la Corée. Une œuvre clé de la poésie
+      coréenne moderne.
+    de: Die erste Zeile von Han Yong-uns Gedicht 'Das Schweigen des Geliebten' (님의 침묵), die den Abschied
+      des Geliebten als Metapher für Koreas Verlust der Unabhängigkeit betrauert. Ein zentrales Werk der
+      modernen koreanischen Poesie.
+    it: Il verso iniziale della poesia 'Il silenzio dell'amato' (님의 침묵) di Han Yong-un, che piange la
+      partenza dell'amato come metafora della perdita di indipendenza della Corea. Un'opera fondamentale
+      nella poesia coreana moderna.
+    pt: O verso inicial do poema 'O silêncio do amado' (님의 침묵) de Han Yong-un, lamentando a partida do
+      amado como metáfora da perda da independência da Coreia. Uma obra central na poesia coreana moderna.
+    ru: Начальная строка стихотворения Хан Ён-уна 'Молчание возлюбленного' (님의 침묵), оплакивающая уход
+      возлюбленного как метафору потери независимости Кореи. Ключевое произведение современной корейской
+      поэзии.
+    ja: 한용운의 시 '님의 침묵'의 첫 구절로, 임의 떠남을 조선의 독립 상실에 비유하여 애도한다. 현대 한국시의 중추적 작품.
+    zh: 韩龙云的诗《情人的沉默》的开头诗句，以爱人的离去隐喻朝鲜失去独立。是现代韩国诗歌的关键作品。
+    ar: السطر الافتتاحي من قصيدة 'صمت الحبيب' (님의 침묵) لهان يونغ أون، يندب رحيل الحبيب كاستعارة لفقدان
+      كوريا لاستقلالها. عمل محوري في الشعر الكوري الحديث.
+    he: שורת הפתיחה של שירו של האן יונג-און 'דממת האהוב' (님의 침묵), המתאבלת על עזיבת האהוב כמטאפורה לאובדן
+      העצמאות של קוריאה. יצירה מרכזית בשירה הקוריאנית המודרנית.
+  learner_level: C2
+  confidence: 0.8
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ko.explanation.kr_poetry_phrases_님은_갔습니다
+  source_work_key: mnemosyne.ko.work.님의_침묵
+  source_author_key: mnemosyne.ko.author.한용운
+  source_work: 님의 침묵
+  source_author: 한용운
+  source_url: https://ko.wikisource.org/wiki/%EB%8B%98%EC%9D%98_%EC%B9%A8%EB%AC%B5
+  source_license: public_domain
+  source_dataset: kr_poetry_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Surface
+    pattern ''님은 떠났습니다'' is not from the poem; ''님은 가셨습니다'' is an honorific variant not in the original.'
+- id: ko_literary_reference_하늘을_우러러_한_점_부끄럼_없기를_a2a70c02
+  language: ko
+  canonical_reference: 하늘을 우러러 한 점 부끄럼 없기를
+  reference_type: literary_reference
+  surface_patterns:
+  - 하늘을 우러러 한 점 부끄럼 없기를
+  - 하늘을 우러러 한 점 부끄럼 없이
+  - 하늘을 바라보며 한 점 부끄럼 없기를
+  short_explanation: A line from Yun Dong-ju's poem 'Prologue' (서시), expressing a wish to live without
+    shame before the sky. It embodies the poet's moral integrity and resistance during Japanese colonial
+    rule.
+  i18n_explanations:
+    en: A line from Yun Dong-ju's poem 'Prologue' (서시), expressing a wish to live without shame before
+      the sky. It embodies the poet's moral integrity and resistance during Japanese colonial rule.
+    es: Un verso del poema 'Prólogo' (서시) de Yun Dong-ju, que expresa el deseo de vivir sin vergüenza
+      ante el cielo. Encarna la integridad moral y la resistencia del poeta durante el dominio colonial
+      japonés.
+    fr: Un vers du poème 'Prologue' (서시) de Yun Dong-ju, exprimant le souhait de vivre sans honte devant
+      le ciel. Il incarne l'intégrité morale et la résistance du poète pendant la domination coloniale
+      japonaise.
+    de: Ein Vers aus Yun Dong-jus Gedicht 'Prolog' (서시), der den Wunsch ausdrückt, ohne Scham vor dem
+      Himmel zu leben. Er verkörpert die moralische Integrität und den Widerstand des Dichters während
+      der japanischen Kolonialherrschaft.
+    it: Un verso dalla poesia 'Prologo' (서시) di Yun Dong-ju, che esprime il desiderio di vivere senza
+      vergogna davanti al cielo. Incarna l'integrità morale e la resistenza del poeta durante il dominio
+      coloniale giapponese.
+    pt: Um verso do poema 'Prólogo' (서시) de Yun Dong-ju, expressando o desejo de viver sem vergonha diante
+      do céu. Encarna a integridade moral e a resistência do poeta durante o domínio colonial japonês.
+    ru: Строка из стихотворения Юн Дон-джу 'Пролог' (서시), выражающая желание жить без стыда перед небом.
+      Воплощает моральную чистоту и сопротивление поэта во время японского колониального правления.
+    ja: 윤동주의 시 '서시'의 구절로, 하늘을 우러러 부끄럼 없이 살고자 하는 소망을 표현한다. 일제 강점기 시인의 도덕적 청렴함과 저항을 상징한다.
+    zh: 尹东柱的诗《序诗》中的一行，表达了无愧于天地的愿望。体现了诗人在日本殖民统治下的道德操守和抵抗精神。
+    ar: سطر من قصيدة 'مقدمة' (서시) ليون دونغ-جو، يعبر عن الرغبة في العيش دون خجل أمام السماء. يجسد النزاهة
+      الأخلاقية للشاعر ومقاومته خلال الحكم الاستعماري الياباني.
+    he: שורה משירו של יון דונג-ג'ו 'פרולוג' (서시), המבטאת משאלה לחיות ללא בושה לפני השמיים. היא מגלמת את
+      יושרו המוסרי של המשורר והתנגדותו בתקופת השלטון הקולוניאלי היפני.
+  learner_level: C2
+  confidence: 0.8
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ko.explanation.kr_poetry_phrases_하늘을_우러러_한_점_부끄럼_없기를
+  source_work_key: mnemosyne.ko.work.서시
+  source_author_key: mnemosyne.ko.author.윤동주
+  source_work: 서시
+  source_author: 윤동주
+  source_url: https://ko.wikisource.org/wiki/%EC%84%9C%EC%8B%9C_(%EC%9C%A4%EB%8F%99%EC%A3%BC)
+  source_license: public_domain
+  source_dataset: kr_poetry_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Surface
+    patterns ''부끄럼 없이'' and ''바라보며'' are not exact to the poem''s wording.'

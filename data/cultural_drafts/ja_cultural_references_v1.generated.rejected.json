@@ -1,0 +1,26 @@
+[
+  {
+    "canonical_reference": "関の落葉",
+    "reason": "Attribution to Tale of the Heike and specific scene (Kumagai at Uji) is inaccurate; phrase does not match known Heike passages."
+  },
+  {
+    "canonical_reference": "源氏物語の「薄雲」",
+    "reason": "Explanation incorrectly attributes Aoi's death to the 'Usugumo' chapter; Aoi dies in the 'Aoi' chapter, not 'Usugumo'."
+  },
+  {
+    "canonical_reference": "十六夜日記",
+    "reason": "The work is by Abutsuni, not Lady Nijo; the attribution in the short explanation is incorrect."
+  },
+  {
+    "canonical_reference": "九尾の狐（きゅうびのきつね）",
+    "reason": "The association with 'The Tale of the Bamboo Cutter' is incorrect; the nine-tailed fox is not a character in that tale."
+  },
+  {
+    "canonical_reference": "天の逆鉾（あまのさかほこ）",
+    "reason": "The spear is incorrectly described as the weapon Susanoo used to slay the serpent; in the Kojiki he uses a sword."
+  },
+  {
+    "canonical_reference": "腹を読む",
+    "reason": "腹を読む is not a standard Japanese idiom; the correct form is 腹の内を読む or 腹を探る."
+  }
+]

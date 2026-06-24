@@ -1,0 +1,267 @@
+- id: it_classical_or_scriptural_allusion_roma_caput_mundi_db63d90d
+  language: it
+  canonical_reference: Roma caput mundi
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Roma caput mundi
+  - Roma, caput mundi
+  - caput mundi
+  short_explanation: Latin phrase meaning 'Rome, capital of the world,' used to express the dominance
+    and centrality of Rome in antiquity and later Christian contexts.
+  i18n_explanations:
+    en: Latin phrase meaning 'Rome, capital of the world,' used to express the dominance and centrality
+      of Rome in antiquity and later Christian contexts.
+    es: Frase latina que significa 'Roma, capital del mundo', usada para expresar el dominio y la centralidad
+      de Roma en la antigüedad y posteriormente en contextos cristianos.
+    fr: Locution latine signifiant 'Rome, capitale du monde', utilisée pour exprimer la domination et
+      la centralité de Rome dans l'Antiquité et plus tard dans des contextes chrétiens.
+    de: Lateinische Phrase mit der Bedeutung 'Rom, Hauptstadt der Welt', die die Dominanz und Zentralität
+      Roms in der Antike und später in christlichen Kontexten ausdrückt.
+    it: Frase latina che significa 'Roma, capitale del mondo', usata per esprimere il dominio e la centralità
+      di Roma nell'antichità e successivamente in contesti cristiani.
+    pt: Frase latina que significa 'Roma, capital do mundo', usada para expressar o domínio e a centralidade
+      de Roma na antiguidade e posteriormente em contextos cristãos.
+    ru: Латинская фраза, означающая 'Рим — столица мира', используемая для выражения господства и центральности
+      Рима в древности и позднее в христианских контекстах.
+    ja: 「ローマ、世界の首都」を意味するラテン語のフレーズ。古代および後のキリスト教の文脈でローマの支配と中心性を表現するために使われる。
+    zh: 拉丁语短语，意为“罗马，世界之都”，用于表达罗马在古代及后来基督教语境中的统治地位和中心地位。
+    ar: عبارة لاتينية تعني 'روما عاصمة العالم'، تُستخدم للتعبير عن هيمنة روما ومركزيتها في العصور القديمة
+      ولاحقًا في السياقات المسيحية.
+    he: ביטוי לטיני שפירושו 'רומא, בירת העולם', המשמש להבעת הדומיננטיות והמרכזיות של רומא בעת העתיקה ובהקשרים
+      נוצריים מאוחרים יותר.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.it.explanation.ita_cultural_references_roma_caput_mundi
+  source_work_key: mnemosyne.it.work.various_e_g_ovid_s_fasti_1_607
+  source_author_key: mnemosyne.it.author.roman_literature
+  source_work: Various (e.g., Ovid's Fasti, 1.607)
+  source_author: Roman literature
+  source_license: public_domain
+  source_dataset: ita_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    attribution is vague and Ovid''s Fasti 1.607 does not exactly quote ''Roma caput mundi''.'
+- id: it_proverb_tradition_il_tempo_è_denaro_a4a058ec
+  language: it
+  canonical_reference: Il tempo è denaro
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Il tempo è denaro
+  - tempo è denaro
+  - il tempo è oro
+  short_explanation: Equivalent to 'Time is money'; emphasizes the value of time in productivity. A modern
+    calque from English, widely used in business contexts.
+  i18n_explanations:
+    en: Equivalent to 'Time is money'; emphasizes the value of time in productivity. A modern calque from
+      English, widely used in business contexts.
+    es: Equivalente a 'El tiempo es dinero'; enfatiza el valor del tiempo en la productividad. Un calco
+      moderno del inglés, muy usado en contextos empresariales.
+    fr: Équivalent de 'Le temps, c’est de l’argent'; souligne la valeur du temps dans la productivité.
+      Un calque moderne de l’anglais, largement utilisé dans les contextes professionnels.
+    de: Entspricht 'Zeit ist Geld'; betont den Wert der Zeit für die Produktivität. Ein moderner Anglizismus,
+      häufig in Geschäftskontexten verwendet.
+    it: Equivalente a 'Il tempo è denaro'; enfatizza il valore del tempo nella produttività. Un calco
+      moderno dall'inglese, ampiamente usato in contesti aziendali.
+    pt: Equivalente a 'Tempo é dinheiro'; enfatiza o valor do tempo na produtividade. Um calque moderno
+      do inglês, amplamente usado em contextos empresariais.
+    ru: Эквивалентно 'Время — деньги'; подчеркивает ценность времени в продуктивности. Современная калька
+      с английского, широко используется в деловом контексте.
+    ja: 「時は金なり」に相当。生産性における時間の価値を強調する。英語からの現代的な借用で、ビジネス文脈で広く使われる。
+    zh: 相当于'时间就是金钱'；强调时间在生产力中的价值。是现代从英语借用的说法，广泛用于商业语境。
+    ar: يعادل 'الوقت من ذهب'؛ يؤكد على قيمة الوقت في الإنتاجية. اقتراض حديث من الإنجليزية، يستخدم على
+      نطاق واسع في سياقات الأعمال.
+    he: מקביל ל'זמן הוא כסף'; מדגיש את ערך הזמן ביעילות. שאילה מודרנית מאנגלית, נפוצה בהקשרים עסקיים.
+  learner_level: A2
+  confidence: 0.75
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.it.explanation.ita_proverb_phrases_il_tempo_è_denaro
+  source_work_key: mnemosyne.it.work.oral_tradition
+  source_author_key: mnemosyne.it.author.unknown
+  source_work: Oral tradition
+  source_author: Unknown
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ita_proverb_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Il
+    tempo è oro is a distinct traditional saying; mixing them may cause confusion.'
+- id: it_proverb_tradition_tanta_testa_tanto_cappello_1689afc5
+  language: it
+  canonical_reference: Tanta testa, tanto cappello
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Tanta testa, tanto cappello
+  - a testa grande, cappello grande
+  short_explanation: 'Literal: ''So much head, so much hat.'' Used to indicate proportionality or that
+    each person gets what they deserve, often with a fatalistic tone.'
+  i18n_explanations:
+    en: 'Literal: ''So much head, so much hat.'' Used to indicate proportionality or that each person
+      gets what they deserve, often with a fatalistic tone.'
+    es: 'Literal: ''Tanta cabeza, tanto sombrero.'' Se usa para indicar proporcionalidad o que cada persona
+      recibe lo que merece, a menudo con un tono fatalista.'
+    fr: 'Littéral : ''Tant de tête, tant de chapeau.'' Utilisé pour indiquer la proportionnalité ou que
+      chacun obtient ce qu’il mérite, souvent avec un ton fataliste.'
+    de: 'Wörtlich: ''So viel Kopf, so viel Hut.'' Wird verwendet, um Verhältnismäßigkeit anzuzeigen oder
+      dass jeder bekommt, was er verdient, oft mit fatalistischem Ton.'
+    it: 'Letterale: ''Tanta testa, tanto cappello.'' Usato per indicare proporzionalità o che ognuno ottiene
+      ciò che merita, spesso con tono fatalistico.'
+    pt: 'Literal: ''Tanta cabeça, tanto chapéu.'' Usado para indicar proporcionalidade ou que cada um
+      recebe o que merece, muitas vezes com um tom fatalista.'
+    ru: 'Буквально: ''Сколько головы, столько и шляпы.'' Используется для указания пропорциональности
+      или того, что каждый получает то, что заслуживает, часто с фаталистическим оттенком.'
+    ja: '直訳: ''頭の大きさに応じて帽子も決まる''。比例関係や、人はそれぞれにふさわしいものを受けることを示す。しばしば運命論的なニュアンスで使われる。'
+    zh: 字面意思：'多大的头，多大的帽子。'用于表示比例性或每个人得到他们应得的，常带有宿命论的语气。
+    ar: 'حرفياً: ''بقدر الرأس، بقدر القبعة.'' يُستخدم للإشارة إلى التناسب أو أن كل شخص يحصل على ما يستحقه،
+      غالباً بنبرة قدرية.'
+    he: 'תרגום מילולי: ''כל כך הרבה ראש, כל כך הרבה כובע.'' משמש לציון פרופורציה או שכל אחד מקבל את המגיע
+      לו, לעתים קרובות בנימה פטליסטית.'
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.it.explanation.ita_proverb_phrases_tanta_testa_tanto_cappello
+  source_work_key: mnemosyne.it.work.oral_tradition
+  source_author_key: mnemosyne.it.author.unknown
+  source_work: Oral tradition
+  source_author: Unknown
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: ita_proverb_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Proverb
+    plausibility uncertain; not widely established in standard Italian.'
+- id: it_cultural_reference_l_ultima_sigaretta_059f2b52
+  language: it
+  canonical_reference: L'ultima sigaretta
+  reference_type: cultural_reference
+  surface_patterns:
+  - l'ultima sigaretta
+  - ultima sigaretta
+  - l'ultima siga
+  short_explanation: Common Italian expression referring to the last cigarette before quitting smoking,
+    often used in a nostalgic or farewell context.
+  i18n_explanations:
+    en: Common Italian expression referring to the last cigarette before quitting smoking, often used
+      in a nostalgic or farewell context.
+    es: Expresión italiana común que se refiere al último cigarrillo antes de dejar de fumar, a menudo
+      usada en un contexto nostálgico o de despedida.
+    fr: Expression italienne courante désignant la dernière cigarette avant d'arrêter de fumer, souvent
+      utilisée dans un contexte nostalgique ou d'adieu.
+    de: Häufiger italienischer Ausdruck, der sich auf die letzte Zigarette vor dem Rauchstopp bezieht,
+      oft in einem nostalgischen oder Abschiedskontext verwendet.
+    it: Comune espressione italiana che si riferisce all'ultima sigaretta prima di smettere di fumare,
+      spesso usata in un contesto nostalgico o di addio.
+    pt: Expressão italiana comum referindo-se ao último cigarro antes de parar de fumar, frequentemente
+      usada em um contexto nostálgico ou de despedida.
+    ru: Распространенное итальянское выражение, относящееся к последней сигарете перед отказом от курения,
+      часто используется в ностальгическом или прощальном контексте.
+    ja: 禁煙前の最後のタバコを指す一般的なイタリア語表現で、しばしば懐かしさや別れの文脈で使われる。
+    zh: 常见的意大利语表达，指戒烟前的最后一支烟，通常用于怀旧或告别场合。
+    ar: تعبير إيطالي شائع يشير إلى آخر سيجارة قبل الإقلاع عن التدخين، يُستخدم غالبًا في سياق حنين أو وداع.
+    he: ביטוי איטלקי נפוץ המתייחס לסיגריה האחרונה לפני הפסקת עישון, משמש לעתים קרובות בהקשר נוסטלגי או
+      של פרידה.
+  learner_level: B1
+  confidence: 0.75
+  review_status: draft
+  register: informal
+  explanation_key: mnemosyne.it.explanation.italian_references_l_ultima_sigaretta
+  source_work_key: mnemosyne.it.work.unknown
+  source_author_key: mnemosyne.it.author.unknown
+  source_work: Unknown
+  source_author: Unknown
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: italian_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Plausible
+    common expression but source unclear and may be too trivial.'
+- id: it_literary_reference_ragazzi_di_vita_d4af990c
+  language: it
+  canonical_reference: Ragazzi di vita
+  reference_type: literary_reference
+  surface_patterns:
+  - Ragazzi di vita
+  short_explanation: Pier Paolo Pasolini's first novel, depicting the lives of young street toughs in
+    the Roman suburbs; marks the beginning of Italian neorealism in literature.
+  i18n_explanations:
+    en: Pier Paolo Pasolini's first novel, depicting the lives of young street toughs in the Roman suburbs;
+      marks the beginning of Italian neorealism in literature.
+    es: Primera novela de Pier Paolo Pasolini, que retrata las vidas de jóvenes maleantes callejeros en
+      los suburbios romanos; marca el inicio del neorrealismo italiano en la literatura.
+    fr: Premier roman de Pier Paolo Pasolini, décrivant la vie de jeunes voyous des rues dans les banlieues
+      romaines; marque le début du néoréalisme italien en littérature.
+    de: Pier Paolo Pasolinis erster Roman, der das Leben junger Straßenschläger in den römischen Vorstädten
+      schildert; markiert den Beginn des italienischen Neorealismus in der Literatur.
+    it: Primo romanzo di Pier Paolo Pasolini, che descrive la vita di giovani teppisti di strada nei sobborghi
+      romani; segna l'inizio del neorealismo italiano in letteratura.
+    pt: Primeiro romance de Pier Paolo Pasolini, retratando a vida de jovens marginais das ruas nos subúrbios
+      romanos; marca o início do neorrealismo italiano na literatura.
+    ru: Первый роман Пьера Паоло Пазолини, изображающий жизнь молодых уличных хулиганов в римских пригородах;
+      знаменует начало итальянского неореализма в литературе.
+    ja: ピエル・パオロ・パゾリーニの最初の小説。ローマ郊外の若いストリートギャングの生活を描き、文学におけるイタリアンネオレアリズモの始まりを示す。
+    zh: 皮埃尔·保罗·帕索里尼的首部小说，描绘罗马郊区街头混混的生活；标志着意大利文学新现实主义的开端。
+    ar: أول رواية لبيير باولو باسوليني، تصور حياة شباب الشوارع في ضواحي روما؛ تمثل بداية الواقعية الجديدة
+      الإيطالية في الأدب.
+    he: הרומן הראשון של פייר פאולו פאזוליני, המתאר את חייהם של צעירי רחוב קשוחים בפרברי רומא; מסמן את
+      תחילת הנאו-ריאליזם האיטלקי בספרות.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.it.explanation.ed_italian_literature_ragazzi_di_vita
+  source_work_key: mnemosyne.it.work.ragazzi_di_vita
+  source_author_key: mnemosyne.it.author.pier_paolo_pasolini
+  source_work: Ragazzi di vita
+  source_author: Pier Paolo Pasolini
+  source_license: copyright_or_rights_review_needed
+  source_dataset: ed_italian_literature
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Claim
+    that it marks the beginning of Italian neorealism in literature is inaccurate; neorealism in literature
+    predates this work.'
+- id: it_cultural_reference_l_angoscia_5462ae6a
+  language: it
+  canonical_reference: L'angoscia
+  reference_type: cultural_reference
+  surface_patterns:
+  - angoscia
+  - l'angoscia
+  short_explanation: In existentialist philosophy, 'angoscia' (angst) refers to the profound anxiety or
+    dread that arises from human freedom and the responsibility to choose one's own essence.
+  i18n_explanations:
+    en: In existentialist philosophy, 'angoscia' (angst) refers to the profound anxiety or dread that
+      arises from human freedom and the responsibility to choose one's own essence.
+    es: En la filosofía existencialista, la 'angoscia' (angustia) se refiere a la profunda ansiedad o
+      temor que surge de la libertad humana y la responsabilidad de elegir la propia esencia.
+    fr: Dans la philosophie existentielle, l'« angoscia » (angoisse) désigne l'anxiété profonde ou l'effroi
+      qui découle de la liberté humaine et de la responsabilité de choisir sa propre essence.
+    de: In der existentialistischen Philosophie bezieht sich 'Angoscia' (Angst) auf die tiefe Besorgnis
+      oder Furcht, die aus der menschlichen Freiheit und der Verantwortung, das eigene Wesen zu wählen,
+      entsteht.
+    it: Nella filosofia esistenzialista, l'angoscia si riferisce all'ansia profonda o al timore che deriva
+      dalla libertà umana e dalla responsabilità di scegliere la propria essenza.
+    pt: Na filosofia existencialista, 'angoscia' (angústia) refere-se à profunda ansiedade ou pavor que
+      surge da liberdade humana e da responsabilidade de escolher a própria essência.
+    ru: В экзистенциалистской философии «ангосция» (тревога) относится к глубокой тревоге или ужасу, возникающим
+      из человеческой свободы и ответственности выбора собственной сущности.
+    ja: 実存主義哲学において、「アンゴスチャ」（不安）とは、人間の自由と自己の本質を選択する責任から生じる深い不安や恐怖を指します。
+    zh: 在存在主义哲学中，“angoscia”（焦虑）指的是源于人类自由和选择自己本质的责任而产生的深刻焦虑或恐惧。
+    ar: في الفلسفة الوجودية، تشير "الأنغوسيا" (القلق) إلى القلق العميق أو الرعب الذي ينشأ من الحرية البشرية
+      ومسؤولية اختيار جوهر الفرد.
+    he: בפילוסופיה האקזיסטנציאליסטית, 'אנגוסיה' (חרדה) מתייחסת לחרדה העמוקה או לאימה הנובעת מהחופש האנושי
+      ומהאחריות לבחור את המהות העצמית.
+  learner_level: C1
+  confidence: 0.75
+  review_status: draft
+  register: literary
+  variants:
+  - angoscia esistenziale
+  - l'angoscia esistenziale
+  explanation_key: mnemosyne.it.explanation.italian_cultural_references_l_angoscia
+  source_work_key: mnemosyne.it.work.various
+  source_author_key: mnemosyne.it.author.various_søren_kierkegaard_jean_paul_sartre_etc
+  source_work: Various
+  source_author: Various (Søren Kierkegaard, Jean-Paul Sartre, etc.)
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: italian_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    plausible but concept is broad; may be too generic for a specific cultural reference.'

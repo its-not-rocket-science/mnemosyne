@@ -1,0 +1,54 @@
+[
+  {
+    "canonical_reference": "A sangre y fuego",
+    "reason": "Attribution to Chaves Nogales's book is incorrect; the phrase is a traditional Spanish idiom predating the work."
+  },
+  {
+    "canonical_reference": "Bajo la misma piel",
+    "reason": "Not a recognized fixed cultural reference; appears to be a generic phrase."
+  },
+  {
+    "canonical_reference": "A la sombra del ciprés",
+    "reason": "Novel misattributed to Miguel de Unamuno; correct author is Miguel Delibes (title: 'La sombra del ciprés es alargada')."
+  },
+  {
+    "canonical_reference": "A sangre fría",
+    "reason": "The idiom 'a sangre fría' predates Capote's novel; it is not derived from it."
+  },
+  {
+    "canonical_reference": "A la sombra de un pino",
+    "reason": "Source work 'Poemas del alma' is not a recognized title by Bécquer; attribution likely fabricated."
+  },
+  {
+    "canonical_reference": "A la sombra del almendro en flor",
+    "reason": "Source work attribution to Antonio Machado's 'Camino de perfección' is incorrect; that novel is by Pío Baroja, and the phrase is not a verifiable literary reference."
+  },
+  {
+    "canonical_reference": "A la sombra del árbol que no da fruto",
+    "reason": "Not a recognized Spanish proverb; likely invented or extremely obscure."
+  },
+  {
+    "canonical_reference": "A la sombra de un pájaro",
+    "reason": "Attribution to Bécquer is unsubstantiated; phrase is unusual and likely not a genuine reference."
+  },
+  {
+    "canonical_reference": "A la sombra de un fantasma",
+    "reason": "No evidence this phrase appears in Santa Teresa's Camino de perfección; likely a generic phrase misattributed."
+  },
+  {
+    "canonical_reference": "A la sombra de un nombre",
+    "reason": "No known literary reference in La sombra del viento; appears to be an invented phrase."
+  },
+  {
+    "canonical_reference": "A la sombra de un verso",
+    "reason": "Source work too vague (Various) and no specific evidence; confidence overclaimed for a generic phrase."
+  },
+  {
+    "canonical_reference": "A caballo del tiempo",
+    "reason": "Not a recognized Spanish expression; explanation vague and likely invented."
+  },
+  {
+    "canonical_reference": "A cada cual, su tabla",
+    "reason": "No evidence of this as a genuine proverb; more common is 'cada cual con su cruz' or 'cada uno con su cruz'."
+  }
+]

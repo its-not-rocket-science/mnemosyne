@@ -1,0 +1,1729 @@
+- id: la_classical_or_scriptural_allusion_horror_vacui_917407f7
+  language: la
+  canonical_reference: Horror vacui
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - horror vacui
+  - horror vacui (art)
+  - horror of the void
+  short_explanation: A principle in ancient Greek philosophy and later art, describing an aversion to
+    empty space. Aristotle discussed it in *Physics*, and it influenced artistic styles like Baroque.
+  i18n_explanations:
+    en: A principle in ancient Greek philosophy and later art, describing an aversion to empty space.
+      Aristotle discussed it in *Physics*, and it influenced artistic styles like Baroque.
+    es: Principio de la filosofía griega antigua y luego del arte, que describe la aversión al espacio
+      vacío. Aristóteles lo discutió en *Física* y su influencia se ve en estilos artísticos como el Barroco.
+    fr: Principe de la philosophie grecque antique puis de l'art, décrivant une aversion pour l'espace
+      vide. Aristote en parle dans *Physique*, et il a influencé des styles artistiques comme le Baroque.
+    de: Ein Prinzip der antiken griechischen Philosophie und später der Kunst, das eine Abneigung vor
+      leerem Raum beschreibt. Aristoteles behandelte es in *Physik*, und es prägte Kunststile wie den
+      Barock.
+    it: Principio della filosofia greca antica e poi dell'arte, che descrive l'avversione allo spazio
+      vuoto. Aristotele ne parlò nella *Fisica*, e influenzò stili artistici come il Barocco.
+    pt: Princípio da filosofia grega antiga e depois da arte, que descreve a aversão ao espaço vazio.
+      Aristóteles o discutiu na *Física*, e influenciou estilos artísticos como o Barroco.
+    ru: Принцип древнегреческой философии и позже искусства, описывающий неприятие пустого пространства.
+      Аристотель обсуждал его в *Физике*, и он повлиял на художественные стили, такие как барокко.
+    ja: 古代ギリシャ哲学や芸術における原理で、空白の空間を嫌うことを表す。アリストテレスは*自然学*でこれを論じ、バロック様式などの芸術に影響を与えた。
+    zh: 古希腊哲学及后来艺术中的一个原则，描述对空白空间的厌恶。亚里士多德在《物理学》中讨论过这一原则，并影响了巴洛克等艺术风格。
+    ar: مبدأ في الفلسفة اليونانية القديمة ثم في الفن، يصف النفور من الفراغ. ناقش أرسطو هذا المفهوم في
+      *الفيزياء*، وأثر في أنماط فنية مثل الباروك.
+    he: עיקרון בפילוסופיה היוונית העתיקה ולאחר מכן באמנות, המתאר סלידה ממרחב ריק. אריסטו דן בו ב*פיזיקה*,
+      והוא השפיע על סגנונות אמנותיים כמו הבארוק.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.aristotle_physics_phrases_horror_vacui
+  source_work_key: mnemosyne.la.work.physica
+  source_author_key: mnemosyne.la.author.aristotle
+  source_work: Physica
+  source_author: Aristotle
+  source_location: Book IV, Part 8
+  source_url: https://en.wikisource.org/wiki/The_Physics_(Aristotle)
+  source_license: public_domain
+  source_dataset: aristotle_physics_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase ''horror vacui'' is a later Latin coinage; Aristotle''s original Greek does not use this exact
+    term, making the specific attribution to his Physics imprecise.'
+- id: la_classical_or_scriptural_allusion_pyrrhus_vicit_sed_non_est_victor_95168acf
+  language: la
+  canonical_reference: Pyrrhus vicit, sed non est victor
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Pyrrhus vicit, sed non est victor
+  - Pyrrhus vicit, sed non victor
+  - Pyrrhus victor non est
+  short_explanation: Attributed to the Roman historian Cassius Dio, this phrase refers to Pyrrhus of Epirus,
+    whose costly victories over Rome (e.g., at Asculum, 279 BCE) ultimately led to his defeat. It signifies
+    a 'Pyrrhic victory'—a win that inflicts such damage that it is tantamount to defeat.
+  i18n_explanations:
+    en: Attributed to the Roman historian Cassius Dio, this phrase refers to Pyrrhus of Epirus, whose
+      costly victories over Rome (e.g., at Asculum, 279 BCE) ultimately led to his defeat. It signifies
+      a 'Pyrrhic victory'—a win that inflicts such damage that it is tantamount to defeat.
+    es: 'Atribuida al historiador romano Casio Dión, esta frase se refiere a Pirro de Epiro, cuyas victorias
+      costosas sobre Roma (por ejemplo, en Asculum, 279 a.C.) terminaron llevándolo a la derrota. Significa
+      una ''victoria pírrica'': una victoria que causa tanto daño que equivale a una derrota.'
+    fr: 'Attribuée à l''historien romain Cassius Dio, cette phrase fait référence à Pyrrhus d''Épire,
+      dont les victoires coûteuses contre Rome (par exemple à Asculum, 279 av. J.-C.) ont finalement conduit
+      à sa défaite. Elle désigne une ''victoire à la Pyrrhus'' : une victoire qui inflige tant de dommages
+      qu''elle équivaut à une défaite.'
+    de: Dem römischen Historiker Cassius Dio zugeschrieben, bezieht sich dieser Ausdruck auf Pyrrhus von
+      Epirus, dessen teure Siege über Rom (z. B. in Asculum, 279 v. Chr.) letztlich zu seiner Niederlage
+      führten. Er steht für einen 'Pyrrhussieg' – einen Sieg, der so hohe Kosten verursacht, dass er einer
+      Niederlage gleichkommt.
+    it: Attribuita allo storico romano Cassio Dione, questa frase si riferisce a Pirro d'Epiro, le cui
+      vittorie costose su Roma (ad esempio ad Ascoli, 279 a.C.) portarono infine alla sua sconfitta. Indica
+      una 'vittoria di Pirro' – una vittoria che infligge danni tali da equivalere a una sconfitta.
+    pt: Atribuída ao historiador romano Cassius Dio, esta frase refere-se a Pirro de Épiro, cujas vitórias
+      custosas sobre Roma (por exemplo, em Ásculo, 279 a.C.) levaram-no, por fim, à derrota. Significa
+      uma 'vitória de Pirro' – uma vitória que causa danos tão grandes que equivale a uma derrota.
+    ru: Приписывается римскому историку Кассию Диону, это выражение относится к Пирру Эпирскому, чьи победы
+      над Римом (например, при Аскуле, 279 г. до н.э.) в итоге привели к его поражению. Оно означает 'пиррову
+      победу' — победу, которая наносит такой ущерб, что равносильна поражению.
+    ja: ローマの歴史家カッシウス・ディオに帰せられるこの言葉は、エピルスのピュロス王の、ローマに対する多大な犠牲を伴う勝利（紀元前279年のアスクルムの戦いなど）が最終的に敗北につながったことを指す。これは「ピュロスの勝利」を意味し、損害が甚大で敗北に等しい勝利を表す。
+    zh: 据传为罗马历史学家卡修斯·狄奥所言，此语指皮洛士国王对罗马的代价高昂的胜利（如公元前279年阿斯库卢姆战役），最终却导致其失败。它指代“皮洛士式的胜利”——一种得不偿失的胜利。
+    ar: تنسب إلى المؤرخ الروماني كاسيوس ديو، تشير هذه العبارة إلى بيروس الإبيري، الذي أدت انتصاراته المكلفة
+      على روما (مثل معركة أسكولوم، 279 ق.م) في النهاية إلى هزيمته. تعني 'النصر البيروسي' – فوز يتسبب في
+      أضرار كبيرة لدرجة أنه يعادل الهزيمة.
+    he: מיוחס להיסטוריון הרומי קסיוס דיו, ביטוי זה מתייחס לפירוס מאפירוס, ש побеותיו היקרות על רומא (למשל
+      בקרב אסקולום, 279 לפנה"ס) הובילו בסופו של דבר לתבוסתו. הוא מסמל 'ניצחון פירוסי' – ניצחון שגורם נזק
+      כה רב עד שהוא שקול לתבוסה.
+  learner_level: C1
+  confidence: 0.7
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.cassius_dio_fragments_pyrrhus_vicit_sed_non_est_vi
+  source_work_key: mnemosyne.la.work.roman_history
+  source_author_key: mnemosyne.la.author.cassius_dio
+  source_work: Roman History
+  source_author: Cassius Dio
+  source_location: Book 9 (fragments)
+  source_url: https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/home.html
+  source_license: public_domain
+  source_dataset: cassius_dio_fragments
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Cassius Dio is uncertain as he wrote in Greek; the Latin phrase may be a later translation.'
+- id: la_classical_or_scriptural_allusion_quintili_vare_legiones_redde_82bd7ecc
+  language: la
+  canonical_reference: Quintili Vare, legiones redde!
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Quintili Vare, legiones redde!
+  - Quinctili Vare, legiones redde!
+  - Quintili Vare, redde legiones!
+  short_explanation: Attributed to the Roman emperor Augustus, this exclamation refers to the disastrous
+    Battle of the Teutoburg Forest (9 CE), where three Roman legions under Publius Quinctilius Varus were
+    annihilated by Germanic tribes. It expresses grief and outrage over a catastrophic military defeat.
+  i18n_explanations:
+    en: Attributed to the Roman emperor Augustus, this exclamation refers to the disastrous Battle of
+      the Teutoburg Forest (9 CE), where three Roman legions under Publius Quinctilius Varus were annihilated
+      by Germanic tribes. It expresses grief and outrage over a catastrophic military defeat.
+    es: Atribuida al emperador romano Augusto, esta exclamación se refiere a la desastrosa Batalla del
+      Bosque de Teutoburgo (9 d.C.), donde tres legiones romanas bajo Publio Quintilio Varo fueron aniquiladas
+      por tribus germánicas. Expresa dolor e indignación por una derrota militar catastrófica.
+    fr: Attribuée à l'empereur romain Auguste, cette exclamation fait référence à la désastreuse bataille
+      de la forêt de Teutobourg (9 ap. J.-C.), où trois légions romaines sous le commandement de Publius
+      Quinctilius Varus furent anéanties par des tribus germaniques. Elle exprime le deuil et l'indignation
+      face à une défaite militaire catastrophique.
+    de: Dem römischen Kaiser Augustus zugeschrieben, bezieht sich dieser Ausruf auf die vernichtende Schlacht
+      im Teutoburger Wald (9 n. Chr.), bei der drei römische Legionen unter Publius Quinctilius Varus
+      von germanischen Stämmen vernichtet wurden. Er drückt Trauer und Empörung über eine katastrophale
+      militärische Niederlage aus.
+    it: Attribuita all'imperatore romano Augusto, questa esclamazione si riferisce alla disastrosa Battaglia
+      della Foresta di Teutoburgo (9 d.C.), dove tre legioni romane sotto Publio Quintilio Varo furono
+      annientate dalle tribù germaniche. Esprime dolore e indignazione per una catastrofica sconfitta
+      militare.
+    pt: Atribuída ao imperador romano Augusto, esta exclamação refere-se à desastrosa Batalha da Floresta
+      de Teutoburgo (9 d.C.), onde três legiões romanas sob o comando de Públio Quintílio Varo foram aniquiladas
+      por tribos germânicas. Expressa luto e indignação por uma derrota militar catastrófica.
+    ru: Приписывается римскому императору Августу, этот возглас относится к катастрофической битве в Тевтобургском
+      Лесу (9 г. н.э.), где три римских легиона под командованием Публия Квинтилия Вара были уничтожены
+      германскими племенами. Он выражает скорбь и возмущение по поводу катастрофического военного поражения.
+    ja: ローマ皇帝アウグストゥスに帰せられるこの叫びは、テウトブルクの森の戦い（9年）を指す。そこで、プブリウス・クインクティリウス・ウァルス率いる3個ローマ軍団がゲルマン諸部族に壊滅させられた。これは壊滅的な軍事敗北に対する悲しみと怒りを表す。
+    zh: 传为罗马皇帝奥古斯都所言，此语指公元9年条顿堡森林战役，三个由普布利乌斯·昆克提利乌斯·瓦鲁斯率领的罗马军团被日耳曼部落歼灭。它表达了对这场灾难性军事失败的悲痛与愤怒。
+    ar: تنسب إلى الإمبراطور الروماني أغسطس، تشير هذه الصيحة إلى معركة غابة توتوبورغ الكارثية (9 م)، حيث
+      دمرت ثلاث فيالق رومانية بقيادة بوبليوس كوينكتيليوس فاروس على يد القبائل الجرمانية. تعبر عن الحزن
+      والغضب إزاء هزيمة عسكرية كارثية.
+    he: מיוחס לקיסר הרומי אוגוסטוס, קריאה זו מתייחסת לקרב יער טויטובורג האסוני (9 לספירה), בו הושמדו שלושה
+      לגיונות רומיים בפיקודו של פובליוס קווינקטיליוס וארוס על ידי שבטים גרמאניים. היא מבטאת צער וזעם על
+      תבוסה צבאית קטסטרופלית.
+  learner_level: C2
+  confidence: 0.8
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.augustus_res_gestae_quintili_vare_legiones_redde
+  source_work_key: mnemosyne.la.work.res_gestae_divi_augusti
+  source_author_key: mnemosyne.la.author.augustus
+  source_work: Res Gestae Divi Augusti
+  source_author: Augustus
+  source_location: Section 30
+  source_url: http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0153:text%3DAug.:chapter=30
+  source_license: public_domain
+  source_dataset: augustus_res_gestae
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    work should be Suetonius''s Life of Augustus, not Res Gestae Divi Augusti.'
+- id: la_cultural_reference_sub_rosa_0ef26e53
+  language: la
+  canonical_reference: Sub rosa
+  reference_type: cultural_reference
+  surface_patterns:
+  - sub rosa
+  - sub rosā
+  - under the rose
+  short_explanation: A Latin phrase meaning 'under the rose,' symbolizing secrecy or confidentiality.
+    The rose has been a symbol of silence since antiquity, often associated with the Greek myth of Cupid
+    giving a rose to Harpocrates (god of silence) to ensure discretion.
+  i18n_explanations:
+    en: A Latin phrase meaning 'under the rose,' symbolizing secrecy or confidentiality. The rose has
+      been a symbol of silence since antiquity, often associated with the Greek myth of Cupid giving a
+      rose to Harpocrates (god of silence) to ensure discretion.
+    es: Frase latina que significa 'bajo la rosa', simbolizando secreto o confidencialidad. La rosa ha
+      sido símbolo de silencio desde la antigüedad, vinculada al mito griego de Cupido regalando una rosa
+      a Harpócrates (dios del silencio) para garantizar discreción.
+    fr: Expression latine signifiant 'sous la rose', symbolisant le secret ou la confidentialité. La rose
+      est un symbole de silence depuis l'Antiquité, souvent associé au mythe grec de Cupidon offrant une
+      rose à Harpocrate (dieu du silence) pour garantir la discrétion.
+    de: Ein lateinischer Ausdruck, der 'unter der Rose' bedeutet und Geheimhaltung oder Vertraulichkeit
+      symbolisiert. Die Rose steht seit der Antike für Schweigen und ist mit dem griechischen Mythos verbunden,
+      in dem Cupido Harpocrates (Gott der Stille) eine Rose schenkt, um Diskretion zu sichern.
+    it: Un'espressione latina che significa 'sotto la rosa', simbolo di segretezza o riservatezza. La
+      rosa rappresenta il silenzio fin dall'antichità, spesso legata al mito greco di Cupido che dona
+      una rosa a Arpocrate (dio del silenzio) per garantirne la discrezione.
+    pt: Expressão latina que significa 'sob a rosa', simbolizando segredo ou confidencialidade. A rosa
+      é um símbolo de silêncio desde a Antiguidade, frequentemente associada ao mito grego de Cupido oferecendo
+      uma rosa a Harpócrates (deus do silêncio) para garantir discrição.
+    ru: Латинское выражение, означающее 'под розой', символизирующее секретность или конфиденциальность.
+      Роза с древности является символом молчания, часто связанным с греческим мифом, где Купидон дарит
+      розу Гарпократу (богу молчания), чтобы обеспечить осмотрительность.
+    ja: 「バラの下で」を意味するラテン語の成句で、秘密や機密を象徴します。バラは古代から沈黙の象徴であり、ギリシャ神話でクピドが沈黙の神ハルポクラテスにバラを贈り、口止めしたことに由来します。
+    zh: 拉丁语短语，意为“在玫瑰下”，象征保密或机密。自古以来，玫瑰就是沉默的象征，常与希腊神话中丘比特赠予沉默之神哈耳波克拉忒斯一朵玫瑰以确保其谨慎相关。
+    ar: عبارة لاتينية تعني "تحت الورد"، ترمز إلى السرية أو عدم الإفصاح. وقد كان الورد رمزًا للصمت منذ
+      القدم، often associated with the Greek myth of Cupid giving a rose to Harpocrates (god of silence)
+      to ensure discretion.
+    he: ביטוי לטיני שפירושו 'מתחת לשושנה', המסמל סודיות או חיסיון. השושנה הייתה לסמל שתיקה עוד בעת העתיקה,
+      לעיתים קשורה למיתוס היווני בו קופידון נתן שושנה להרפקרטס (אל השתיקה) כדי להבטיח שתיקה.
+  learner_level: B1
+  confidence: 0.75
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.la.explanation.latin_common_phrases_sub_rosa
+  source_work_key: mnemosyne.la.work.various
+  source_author_key: mnemosyne.la.author.oral_tradition_classical_tradition
+  source_work: Various
+  source_author: Oral tradition / Classical tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: latin_common_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase is post-classical, not attested in classical Latin, so the claim of antiquity is overstated.'
+- id: la_classical_or_scriptural_allusion_ave_caesar_morituri_te_salutant_ad6d15df
+  language: la
+  canonical_reference: Ave, Caesar, morituri te salutant
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Ave, Caesar, morituri te salutant
+  - Ave Caesar morituri te salutant
+  - Hail Caesar, those who are about to die salute you
+  short_explanation: A phrase reportedly spoken by gladiators to the Roman emperor before combat, meaning
+    'Hail Caesar, those who are about to die salute you.' It reflects the ritualized nature of gladiatorial
+    games in ancient Rome.
+  i18n_explanations:
+    en: A phrase reportedly spoken by gladiators to the Roman emperor before combat, meaning 'Hail Caesar,
+      those who are about to die salute you.' It reflects the ritualized nature of gladiatorial games
+      in ancient Rome.
+    es: Frase que, según se dice, los gladiadores pronunciaban ante el emperador romano antes del combate,
+      significando 'Salve, César, los que van a morir te saludan'. Refleja el carácter ritualizado de
+      los juegos de gladiadores en la antigua Roma.
+    fr: Phrase que les gladiateurs auraient adressée à l'empereur romain avant le combat, signifiant 'Salut
+      César, ceux qui vont mourir te saluent'. Elle reflète le caractère ritualisé des jeux de gladiateurs
+      dans la Rome antique.
+    de: Ein angeblich von Gladiatoren vor dem Kampf an den römischen Kaiser gerichteter Gruß mit der Bedeutung
+      'Sei gegrüßt, Caesar, die dem Tod Geweihten grüßen dich'. Er spiegelt den ritualisierten Charakter
+      der Gladiatorenspiele im antiken Rom wider.
+    it: Un'espressione che, secondo la tradizione, i gladiatori rivolgevano all'imperatore romano prima
+      del combattimento, significando 'Ave, Cesare, coloro che stanno per morire ti salutano'. Riflette
+      il carattere rituale dei giochi gladiatori nell'antica Roma.
+    pt: Frase que, segundo a tradição, os gladiadores dirigiam ao imperador romano antes da luta, significando
+      'Salve, César, os que estão para morrer te saúdam'. Reflete o caráter ritualizado dos jogos de gladiadores
+      na Roma Antiga.
+    ru: Фраза, якобы произносившаяся гладиаторами перед боем в адрес римского императора, означающая 'Приветствую,
+      Цезарь, идущие на смерть приветствуют тебя'. Она отражает ритуализованный характер гладиаторских
+      игр в Древнем Риме.
+    ja: 剣闘士がローマ皇帝に戦いの前に発したとされる言葉で、「皇帝陛下、死を目前にした我々は貴方を敬礼します」を意味します。古代ローマの剣闘士の試合の儀式的な性格を反映しています。
+    zh: 据说是古罗马角斗士在战斗前向皇帝致敬的短语，意为“万岁，凯撒，即将赴死的人向您致敬。”这反映了古罗马角斗比赛的仪式化特征。
+    ar: عبارة据说 كان gladiators يقولونها للإمبراطور الروماني قبل القتال، وتعني "تحية لك يا قيصر، الذين
+      على وشك الموت يحيونك". تعكس الطبيعة الطقسية لمباريات المصارعين في روما القديمة.
+    he: ביטוי ש, לפי המסורת, אמרו גלדיאטורים לקיסר הרומי לפני הקרב, ופירושו 'שלום לך, קיסר, אלו העומדים
+      למות מברכים אותך'. הוא משקף את אופיים הטקסי של משחקי הגלדיאטורים ברומא העתיקה.
+  learner_level: C1
+  confidence: 0.7
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.historia_augusta_claudius_ave_caesar_morituri_te_s
+  source_work_key: mnemosyne.la.work.historia_augusta
+  source_author_key: mnemosyne.la.author.various_attributed_to_suetonius_or_dio_cassius
+  source_work: Historia Augusta
+  source_author: Various (attributed to Suetonius or Dio Cassius)
+  source_location: Life of Claudius 21.6 (attribution disputed)
+  source_url: https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Historia_Augusta/Claudius*.html
+  source_license: public_domain
+  source_dataset: historia_augusta_claudius
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    is disputed; the only source is the unreliable Historia Augusta, so confidence should be lower.'
+- id: la_classical_or_scriptural_allusion_hic_est_panis_quem_dabo_pro_mundo_bf15b381
+  language: la
+  canonical_reference: Hic est panis quem dabo pro mundo
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Hic est panis quem dabo pro mundo
+  - Hic est panis qui de caelo descendit
+  - Hic est panis vivus qui de caelo descendit
+  short_explanation: A phrase from the Gospel of John (6:51), where Jesus declares that the bread he gives
+    is for the life of the world. It is a key reference to the Eucharist in Christian theology.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.la.explanation.nt_john_phrases_hic_est_panis_quem_dabo_pro_mundo
+  source_work_key: mnemosyne.la.work.novum_testamentum_graece
+  source_author_key: mnemosyne.la.author.anonymous_traditionally_attributed_to_the_evangeli
+  source_work: Novum Testamentum Graece
+  source_author: Anonymous (traditionally attributed to the Evangelist John)
+  source_location: John 6:51
+  source_url: https://www.biblegateway.com/passage/?search=John+6%3A51&version=VULGATE
+  source_license: public_domain
+  source_dataset: nt_john_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Not
+    a verbatim Vulgate phrase; paraphrase of John 6:51.'
+- id: la_classical_or_scriptural_allusion_vade_retro_satana_d7430cf2
+  language: la
+  canonical_reference: Vade retro, Satana
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Vade retro, Satana
+  - Vade retro Satana
+  - Vade retro, Satan
+  - Get thee behind me, Satan
+  short_explanation: A command attributed to Jesus in the New Testament (Matthew 16:23), rejecting temptation.
+    It is widely used in Christian exorcism and as a formula against evil.
+  i18n_explanations:
+    en: A command attributed to Jesus in the New Testament (Matthew 16:23), rejecting temptation. It is
+      widely used in Christian exorcism and as a formula against evil.
+    es: Un mandato atribuido a Jesús en el Nuevo Testamento (Mateo 16:23), rechazando la tentación. Se
+      usa ampliamente en exorcismos cristianos y como fórmula contra el mal.
+    fr: Un commandement attribué à Jésus dans le Nouveau Testament (Matthieu 16:23), rejetant la tentation.
+      Il est largement utilisé dans les exorcismes chrétiens et comme formule contre le mal.
+    de: Ein Jesus im Neuen Testament (Matthäus 16,23) zugeschriebenes Gebot, das Versuchung zurückweist.
+      Es wird häufig in christlichen Exorzismen und als Formel gegen das Böse verwendet.
+    it: Un comando attribuito a Gesù nel Nuovo Testamento (Matteo 16:23), che respinge la tentazione.
+      È ampiamente usato negli esorcismi cristiani e come formula contro il male.
+    pt: Um mandamento atribuído a Jesus no Novo Testamento (Mateus 16:23), rejeitando a tentação. É amplamente
+      usado em exorcismos cristãos e como fórmula contra o mal.
+    ru: Повеление, приписываемое Иисусу в Новом Завете (Матфей 16:23), отвергающее искушение. Широко используется
+      в христианских обрядах экзорцизма и как формула против зла.
+    ja: 新約聖書（マタイによる福音書16:23）でイエスに帰せられる言葉で、誘惑を拒絶する。キリスト教の悪魔祓いや悪に対抗する呪文として広く用いられる。
+    zh: 《新约圣经》（《马太福音》16:23）中耶稣驱逐诱惑的命令。在基督教驱魔仪式及对抗邪恶的祷文中广泛使用。
+    ar: أمر يُنسب إلى يسوع في العهد الجديد (متى 16:23)، يرفض الإغراء. يُستخدم على نطاق واسع في الطقوس
+      المسيحية لطرد الأرواح الشريرة وللدفاع ضد الشر.
+    he: ציווי המיוחס לישו בברית החדשה (מתי טז:23), דוחה את הפיתוי. משמש באופן נרחב בטקסי גירוש שדים נוצריים
+      ובכלל כמטבע לשון נגד הרוע.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.la.explanation.bible_vulgate_vade_retro_vade_retro_satana
+  source_work_key: mnemosyne.la.work.biblia_sacra_vulgata
+  source_author_key: mnemosyne.la.author.traditionally_attributed_to_jesus_of_nazareth
+  source_work: Biblia Sacra Vulgata
+  source_author: Traditionally attributed to Jesus of Nazareth
+  source_location: Matthew 16:23
+  source_url: https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evang-matthaeum_lt.html#16
+  source_license: public_domain
+  source_dataset: bible_vulgate_vade_retro
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    exact Vulgate reads ''Vade retro me, Satana'' (Matthew 16:23); the surface pattern omits ''me''.'
+- id: la_classical_or_scriptural_allusion_adonis_formosus_6a7ef541
+  language: la
+  canonical_reference: Adonis formosus
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Adonis formosus
+  - formosus Adonis
+  - Adonis pulcher
+  short_explanation: A Latin phrase meaning 'Adonis is beautiful,' referencing the mythological figure
+    Adonis, renowned for his beauty. It is often used to describe someone of extraordinary physical attractiveness.
+  i18n_explanations:
+    en: A Latin phrase meaning 'Adonis is beautiful,' referencing the mythological figure Adonis, renowned
+      for his beauty. It is often used to describe someone of extraordinary physical attractiveness.
+    es: Frase latina que significa 'Adonis es hermoso', aludiendo a la figura mitológica de Adonis, famoso
+      por su belleza. Se usa para describir a alguien de extraordinaria belleza física.
+    fr: Locution latine signifiant 'Adonis est beau', faisant référence au personnage mythologique d'Adonis,
+      célèbre pour sa beauté. Elle sert à décrire une personne d'une beauté physique exceptionnelle.
+    de: Lateinischer Ausdruck für 'Adonis ist schön', der sich auf die mythologische Figur Adonis bezieht,
+      bekannt für seine Schönheit. Wird oft für Menschen von außergewöhnlicher körperlicher Attraktivität
+      verwendet.
+    it: Locuzione latina che significa 'Adone è bello', riferendosi alla figura mitologica di Adone, noto
+      per la sua bellezza. Viene usata per descrivere qualcuno di straordinaria bellezza fisica.
+    pt: Expressão latina que significa 'Adônis é belo', referindo-se à figura mitológica de Adônis, famoso
+      por sua beleza. Usada para descrever alguém de extraordinária beleza física.
+    ru: Латинское выражение, означающее 'Адонис прекрасен', относящееся к мифологическому персонажу Адонису,
+      известному своей красотой. Часто используется для описания человека с исключительной физической
+      привлекательностью.
+    ja: ラテン語の成句で、「アドーニスは美しい」を意味し、美の象徴である神話上のアドーニスに由来する。並外れた肉体的な美しさを持つ人を表す際に用いられる。
+    zh: 拉丁语短语，意为“阿多尼斯很美”，指代以美貌著称的神话人物阿多尼斯。常用于描述极其俊美的人。
+    ar: عبارة لاتينية تعني 'أدونيس جميل'، تشير إلى الشخصية الأسطورية أدونيس، المشهورة بجماله. تُستخدم
+      لوصف شخص ذو جاذبية بدنية استثنائية.
+    he: ביטוי לטיני שפירושו 'אדוניס יפה', בהתייחס לדמות המיתולוגית אדוניס, הידוע ביופיו. משמש לתיאור אדם
+      בעל יופי גופני יוצא דופן.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.ovid_metamorphoses_phrases_adonis_formosus
+  source_work_key: mnemosyne.la.work.metamorphoses
+  source_author_key: mnemosyne.la.author.publius_ovidius_naso
+  source_work: Metamorphoses
+  source_author: Publius Ovidius Naso
+  source_location: Book 10, lines 519-520
+  source_url: https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0028:book=10:line=519
+  source_license: public_domain
+  source_dataset: ovid_metamorphoses_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    exact phrase is not directly verifiable in Ovid''s Metamorphoses at the cited lines, though the allusion
+    is plausible.'
+- id: la_literary_reference_aeneae_profugus_f0cc6c51
+  language: la
+  canonical_reference: Aeneae profugus
+  reference_type: literary_reference
+  surface_patterns:
+  - Aeneae profugus
+  - Aeneas profugus
+  - profugus Aeneas
+  short_explanation: A poetic epithet for Aeneas, the Trojan hero who fled Troy after its fall and became
+    the legendary founder of Rome. It emphasizes his status as an exile and wanderer.
+  i18n_explanations:
+    en: A poetic epithet for Aeneas, the Trojan hero who fled Troy after its fall and became the legendary
+      founder of Rome. It emphasizes his status as an exile and wanderer.
+    es: Epíteto poético de Eneas, héroe troyano que huyó de Troya tras su caída y se convirtió en el legendario
+      fundador de Roma. Destaca su condición de exiliado y errante.
+    fr: Épithète poétique d'Énée, héros troyen ayant fui Troie après sa chute et devenu le fondateur légendaire
+      de Rome. Souligne son statut d'exilé et d'errant.
+    de: Poetische Bezeichnung für Aeneas, den trojanischen Helden, der nach dem Fall Trojas floh und zum
+      legendären Gründer Roms wurde. Betont seinen Status als Verbannter und Wanderer.
+    it: Epiteto poetico di Enea, eroe troiano fuggito da Troia dopo la sua caduta e divenuto il leggendario
+      fondatore di Roma. Sottolinea il suo status di esule e viandante.
+    pt: Epíteto poético de Eneias, herói troiano que fugiu de Troia após sua queda e tornou-se o lendário
+      fundador de Roma. Enfatiza seu status de exilado e errante.
+    ru: Поэтическое прозвище Энея, троянского героя, бежавшего из Трои после её падения и ставшего легендарным
+      основателем Рима. Подчёркивает его статус изгнанника и странника.
+    ja: トロイの没落後に逃れ、ローマの伝説的な建国者となったトロイの英雄アイネイアースの詩的な呼び名。放浪者としての彼の境遇を強調する。
+    zh: 特洛伊陷落后逃离的特洛伊英雄埃涅阿斯的诗意称号，他成为罗马的传说建立者。强调他作为流亡者和漂泊者的身份。
+    ar: لقب شعري لإينياس، البطل الطروادي الذي فر من طروادة بعد سقوطها وأصبح مؤسس روما الأسطوري. يبرز وضعه
+      كلاجئ وتائه.
+    he: כינוי שירי לאיניאס, גיבור טרויה שנמלט ממנה לאחר נפילתה והפך למיסד האגדי של רומא. מדגיש את מעמדו
+      כגולה ונודד.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.la.explanation.vergil_aeneis_phrases_aeneae_profugus
+  source_work_key: mnemosyne.la.work.aeneis
+  source_author_key: mnemosyne.la.author.publius_vergilius_maro
+  source_work: Aeneis
+  source_author: Publius Vergilius Maro
+  source_location: Book 1, line 1
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0054:book=1:card=1
+  source_license: public_domain
+  source_dataset: vergil_aeneis_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    exact phrase ''Aeneae profugus'' is not found in the Aeneid; the common phrase is ''fato profugus''
+    or ''profugus Aeneas''; attribution to Aeneid 1.1 is uncertain.'
+- id: la_literary_reference_anchisae_suboles_ce055b45
+  language: la
+  canonical_reference: Anchisae suboles
+  reference_type: literary_reference
+  surface_patterns:
+  - Anchisae suboles
+  - Anchisae proles
+  - suboles Anchisae
+  short_explanation: A poetic phrase meaning 'offspring of Anchises,' referring to Aeneas, son of Anchises
+    and Venus. It highlights Aeneas' divine lineage and heroic destiny.
+  i18n_explanations:
+    en: A poetic phrase meaning 'offspring of Anchises,' referring to Aeneas, son of Anchises and Venus.
+      It highlights Aeneas' divine lineage and heroic destiny.
+    es: Frase poética que significa 'descendiente de Anquises', refiriéndose a Eneas, hijo de Anquises
+      y Venus. Destaca su linaje divino y destino heroico.
+    fr: Expression poétique signifiant 'descendant d'Anchise', désignant Énée, fils d'Anchise et de Vénus.
+      Met en avant sa lignée divine et son destin héroïque.
+    de: Ein poetischer Ausdruck für 'Nachkomme des Anchises', der sich auf Aeneas bezieht, den Sohn des
+      Anchises und der Venus. Hebt seine göttliche Abstammung und heldenhafte Bestimmung hervor.
+    it: Frase poetica che significa 'discendente di Anchise', riferendosi a Enea, figlio di Anchise e
+      Venere. Evidenzia la sua discendenza divina e il destino eroico.
+    pt: Expressão poética que significa 'descendente de Anquises', referindo-se a Eneias, filho de Anquises
+      e Vênus. Destaca sua linhagem divina e destino heroico.
+    ru: Поэтическое выражение, означающее 'потомок Анхиса', относящееся к Энею, сыну Анхиса и Венеры.
+      Подчёркивает его божественное происхождение и героическую судьбу.
+    ja: 「アンキーセスの子孫」を意味する詩的な表現で、アンキーセスとウェヌスの息子アイネイアースを指す。彼の神聖な血統と英雄的な運命を強調する。
+    zh: 诗意短语，意为“安喀塞斯的后裔”，指埃涅阿斯（安喀塞斯与维纳斯之子）。强调他神圣的血统和英雄命运。
+    ar: عبارة شعرية تعني 'نسل أنخيسيس'، وتشير إلى إينياس، ابن أنخيسيس وفينوس. تسلط الضوء على نسبه الإلهي
+      ومصيره البطولي.
+    he: ביטוי פיוטי שפירושו 'צאצא של אנכיסס', המתייחס לאיניאס, בנו של אנכיסס ונוס. מדגיש את ייחוסו האלוהי
+      ויעודו הגיבור.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.la.explanation.vergil_aeneis_phrases_anchisae_suboles
+  source_work_key: mnemosyne.la.work.aeneis
+  source_author_key: mnemosyne.la.author.publius_vergilius_maro
+  source_work: Aeneis
+  source_author: Publius Vergilius Maro
+  source_location: Book 1, line 92
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0054:book=1:card=2
+  source_license: public_domain
+  source_dataset: vergil_aeneis_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase ''Anchisae suboles'' is not attested in Aeneid 1.92; Vergil uses ''Anchisiades'' instead; the
+    attribution is plausible but unverified.'
+- id: la_cultural_reference_ara_maxima_01fe3cd1
+  language: la
+  canonical_reference: Ara maxima
+  reference_type: cultural_reference
+  surface_patterns:
+  - Ara Maxima
+  - Ara maxima Herculis
+  short_explanation: The 'Greatest Altar' of Hercules in Rome, where sacrifices were made to the hero
+    Hercules. It symbolized Hercules' role as a protector and his cult's importance in Roman religion.
+  i18n_explanations:
+    en: The 'Greatest Altar' of Hercules in Rome, where sacrifices were made to the hero Hercules. It
+      symbolized Hercules' role as a protector and his cult's importance in Roman religion.
+    es: El 'Altar Máximo' de Hércules en Roma, donde se hacían sacrificios al héroe. Simbolizaba su papel
+      como protector y la importancia de su culto en la religión romana.
+    fr: L'« Autel Majeur » d'Hercule à Rome, où des sacrifices étaient offerts au héros. Il symbolisait
+      le rôle protecteur d'Hercule et l'importance de son culte dans la religion romaine.
+    de: Der « Große Altar » des Herakles in Rom, wo dem Helden Opfer dargebracht wurden. Er symbolisierte
+      Herakles' Rolle als Beschützer und die Bedeutung seines Kults in der römischen Religion.
+    it: L'« Altare Massimo » di Ercole a Roma, dove venivano fatti sacrifici all'eroe. Simboleggiava il
+      ruolo di Ercole come protettore e l'importanza del suo culto nella religione romana.
+    pt: O 'Altar Máximo' de Hércules em Roma, onde sacrifícios eram feitos ao herói. Simbolizava o papel
+      de Hércules como protetor e a importância de seu culto na religião romana.
+    ru: Величайший алтарь Геркулеса в Риме, где приносили жертвы этому герою. Он символизировал роль Геркулеса
+      как защитника и значение его культа в римской религии.
+    ja: ローマのヘラクレスの「最大の祭壇」で、英雄へのいけにえが捧げられた。ローマ宗教におけるヘラクレスの守護者としての役割と、その信仰の重要性を象徴していた。
+    zh: 罗马的赫拉克勒斯「最大祭坛」，供奉这位英雄。象征赫拉克勒斯作为守护者的角色及其在罗马宗教中的重要性。
+    ar: «المذبح الأعظم» لهرقل في روما، حيث كانت تقدم القرابين لهذا البطل. كان يرمز لدور هرقل كحامي ولأهمية
+      طائفته في الديانة الرومانية.
+    he: «המזבח הגדול» של הרקולס ברומא, שם הוקרבו קורבנות לגיבור. סימל את תפקידו של הרקולס כמגן ואת חשיבות
+      פולחנו בדת הרומית.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.latin_cultural_references_ara_maxima
+  source_work_key: mnemosyne.la.work.de_origine_et_situ_urbis_romae
+  source_author_key: mnemosyne.la.author.unknown_traditionally_attributed_to_sextus_pompeiu
+  source_work: De origine et situ urbis Romae
+  source_author: Unknown (traditionally attributed to Sextus Pompeius Festus)
+  source_url: http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0529:entry=Ara-max
+  source_license: public_domain
+  source_dataset: latin_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    work ''De origine et situ urbis Romae'' is not a known work by Sextus Pompeius Festus; likely misattributed.'
+- id: la_literary_reference_aurora_caelum_rubescere_0c9c4419
+  language: la
+  canonical_reference: Aurora caelum rubescere
+  reference_type: literary_reference
+  surface_patterns:
+  - Aurora caelum rubescere
+  - caelum rubescere Aurora
+  - Aurora rubescere caelum
+  - Aurora caelum rubescere incipit
+  short_explanation: The dawn ('Aurora') turning the sky red, a poetic motif describing the break of day.
+    Common in Latin poetry to evoke the passage of time or the start of a new day.
+  i18n_explanations:
+    en: The dawn ('Aurora') turning the sky red, a poetic motif describing the break of day. Common in
+      Latin poetry to evoke the passage of time or the start of a new day.
+    es: El amanecer ('Aurora') tiñendo el cielo de rojo, un motivo poético que describe el inicio del
+      día. Común en la poesía latina para evocar el paso del tiempo o el comienzo de un nuevo día.
+    fr: L'aube ('Aurora') rougissant le ciel, un motif poétique décrivant le lever du jour. Fréquent dans
+      la poésie latine pour évoquer le passage du temps ou le début d'une nouvelle journée.
+    de: Die Morgenröte ('Aurora'), die den Himmel rot färbt, ein poetisches Motiv für den Tagesanbruch.
+      Häufig in der lateinischen Dichtung, um den Lauf der Zeit oder den Beginn eines neuen Tages zu beschreiben.
+    it: L'alba ('Aurora') che tinge di rosso il cielo, un motivo poetico che descrive l'inizio del giorno.
+      Comune nella poesia latina per evocare il trascorrere del tempo o l'inizio di una nuova giornata.
+    pt: A aurora ('Aurora') tingindo o céu de vermelho, um motivo poético que descreve o início do dia.
+      Comum na poesia latina para evocar a passagem do tempo ou o começo de um novo dia.
+    ru: Рассвет ('Аврора'), окрашивающий небо в красный цвет, поэтический мотив, описывающий начало дня.
+      Часто встречается в латинской поэзии, чтобы передать течение времени или начало нового дня.
+    ja: 夜明けの「アウロラ」が空を赤く染める、日の出を描写する詩的モチーフ。ラテン詩で時間の流れや新たな日の始まりを表すのに一般的だった。
+    zh: 曙光（奥罗拉）将天空染红，描述破晓的诗意意象。常见于拉丁诗歌，用以表现时光流逝或新的一天的开始。
+    ar: الفجر («أورورا») الذي يحمر السماء، وهو موضوع شعري يصف بداية النهار. شائع في الشعر اللاتيني لاستحضار
+      مرور الزمن أو بداية يوم جديد.
+    he: השחר («אורורה») שצובע את השמיים באדום, מוטיב שירי המתאר את תחילת היום. נפוץ בשירה הלטינית כדי
+      להעלות על הדעת את חילוף הזמנים או תחילתו של יום חדש.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.la.explanation.virgil_aeneid_aurora_caelum_rubescere
+  source_work_key: mnemosyne.la.work.aeneid
+  source_author_key: mnemosyne.la.author.virgil
+  source_work: Aeneid
+  source_author: Virgil
+  source_location: 1.286, 4.586
+  source_url: http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0054:book=1:card=286
+  source_license: public_domain
+  source_dataset: virgil_aeneid
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    specific phrase ''Aurora caelum rubescere'' is not found at Aeneid 1.286 or 4.586; the motif is generic.'
+- id: la_classical_or_scriptural_allusion_danaidum_dolium_dc73b996
+  language: la
+  canonical_reference: Danaidum dolium
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Danaidum dolium
+  - Danaidum dolia
+  - dolium Danaidum
+  - dolium sine fundo
+  short_explanation: The 'Danaids' were the fifty daughters of Danaus who, in Greek myth, were punished
+    in the Underworld by being forced to carry water in leaky jars (dolia) for eternity. The phrase symbolizes
+    an endless, futile task.
+  i18n_explanations:
+    en: The 'Danaids' were the fifty daughters of Danaus who, in Greek myth, were punished in the Underworld
+      by being forced to carry water in leaky jars (dolia) for eternity. The phrase symbolizes an endless,
+      futile task.
+    es: Las 'Dánaides' eran las cincuenta hijas de Dánao que, según la mitología griega, fueron castigadas
+      en el Inframundo a llevar agua en jarras agujereadas (dolia) por toda la eternidad. La frase simboliza
+      una tarea interminable y fútil.
+    fr: Les 'Danaïdes' étaient les cinquante filles de Danaos qui, dans la mythologie grecque, furent
+      condamnées aux Enfers à porter de l'eau dans des jarres percées (dolia) pour l'éternité. L'expression
+      symbolise une tâche sans fin et vaine.
+    de: Die 'Danaiden' waren die fünfzig Töchter des Danaos, die in der griechischen Mythologie im Tartarus
+      bestraft wurden, indem sie Wasser in löchrigen Krügen (dolia) für alle Ewigkeit tragen mussten.
+      Der Ausdruck steht für eine endlose, sinnlose Aufgabe.
+    it: Le 'Danaidi' erano le cinquanta figlie di Danao che, nella mitologia greca, furono condannate
+      negli Inferi a trasportare acqua in anfore bucate (dolia) per l'eternità. La frase simboleggia un
+      compito infinito e vano.
+    pt: As 'Danaides' eram as cinquenta filhas de Dánao que, na mitologia grega, foram condenadas no Mundo
+      Inferior a carregar água em jarros furados (dolia) por toda a eternidade. A frase simboliza uma
+      tarefa interminável e inútil.
+    ru: Данаиды — пятьдесят дочерей Даная, которые в греческой мифологии были наказаны в подземном царстве
+      тем, что должны были вечно носить воду в дырявых кувшинах (долиях). Фраза символизирует бесконечную,
+      бесполезную работу.
+    ja: ダナイダイはギリシャ神話で、タルタロスにおいて穴の開いた壺（ドリウム）で永遠に水を運ぶ罰を受けたダナオスの50人の娘たちを指します。この表現は果てしない無駄な作業を象徴します。
+    zh: 达那伊得斯是希腊神话中达那俄斯的五十个女儿，她们被罚在地狱中永远用漏水的罐子（多利亚）运水。这个短语象征着无止境的徒劳任务。
+    ar: الدانايدات هن خمسون ابنة لداناؤس، اللاتي عوقبن في العالم السفلي في الميثولوجيا اليونانية بحمل
+      الماء في جرار مسربة (دوليوم) إلى الأبد. العبارة ترمز إلى مهمة لا نهاية لها وبلا جدوى.
+    he: הדנאידות הן חמישים בנותיו של דנאוס, שנענשו במיתולוגיה היוונית לשאת מים בכדים מחוררים (דוליום)
+      בעולם התחתון לנצח. הביטוי מסמל משימה אינסופית וחסרת תועלת.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.aratus_phaenomena_phrases_danaidum_dolium
+  source_work_key: mnemosyne.la.work.phaenomena
+  source_author_key: mnemosyne.la.author.aratus
+  source_work: Phaenomena
+  source_author: Aratus
+  source_location: Fragment 373 (as cited by later authors)
+  source_url: https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0081:card=373
+  source_license: public_domain
+  source_dataset: aratus_phaenomena_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    plausible but source work Phaenomena is Greek, not Latin; surface patterns need refinement.'
+- id: la_proverb_tradition_fata_viam_invenient_a37db669
+  language: la
+  canonical_reference: Fata viam invenient
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Fata viam invenient
+  - Fata viam invenient, si non est via
+  - Fata viam invenient, si non est via, facient
+  - Fata viam invenient (si non est via, facient)
+  short_explanation: A Latin proverb meaning 'Fate will find a way' or 'Fate will make a way.' It reflects
+    the Stoic belief in destiny and perseverance.
+  i18n_explanations:
+    en: A Latin proverb meaning 'Fate will find a way' or 'Fate will make a way.' It reflects the Stoic
+      belief in destiny and perseverance.
+    es: Un proverbio latino que significa 'El destino abrirá camino' o 'El destino encontrará la manera.'
+      Refleja la creencia estoica en el destino y la perseverancia.
+    fr: Un proverbe latin signifiant 'Le destin trouvera un chemin' ou 'Le destin ouvrira la voie.' Il
+      reflète la croyance stoïcienne en la destinée et la persévérance.
+    de: Ein lateinisches Sprichwort mit der Bedeutung 'Das Schicksal findet einen Weg' oder 'Das Schicksal
+      bahnt sich seinen Weg.' Es spiegelt den stoischen Glauben an Schicksal und Ausdauer wider.
+    it: Un proverbio latino che significa 'Il destino troverà una via' o 'Il destino aprirà la strada.'
+      Riflette la credenza stoica nel destino e nella perseveranza.
+    pt: Um provérbio latino que significa 'O destino encontrará um caminho' ou 'O destino abrirá caminho.'
+      Reflete a crença estoica no destino e na perseverança.
+    ru: Латинская пословица, означающая 'Судьба найдет путь' или 'Судьба проложит дорогу'. Отражает стоическое
+      убеждение в предопределении и настойчивости.
+    ja: ラテン語の格言で、「運命は道を見つける」または「運命は道を切り開く」という意味。運命と忍耐を信じるストア哲学を反映している。
+    zh: 一句拉丁谚语，意为「命运会找到出路」或「命运会开辟道路」。体现了斯多葛派对命运与坚韧的信念。
+    ar: مثل لاتيني يعني 'القدر سيجد طريقًا' أو 'القدر سيفتح الطريق'. يعكس الإيمان الرواقي بالقدر والمثابرة.
+    he: פתגם לטיני שפירושו 'הגורל ימצא דרך' או 'הגורל יסלול את הדרך'. משקף את האמונה הסטואית בגורל ובהתמדה.
+  learner_level: B1
+  confidence: 0.78
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.la.explanation.latin_proverbs_fata_viam_invenient
+  source_work_key: mnemosyne.la.work.various
+  source_author_key: mnemosyne.la.author.oral_tradition_attributed_to_stoic_philosophy
+  source_work: Various
+  source_author: Oral tradition / Attributed to Stoic philosophy
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: latin_proverbs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    attribution should specify Virgil''s Aeneid 10.113, not just oral tradition.'
+- id: la_proverb_tradition_a_cane_non_magno_saepe_tenetur_aper_dc5db36a
+  language: la
+  canonical_reference: A cane non magno saepe tenetur aper
+  reference_type: proverb_tradition
+  surface_patterns:
+  - A cane non magno saepe tenetur aper
+  - Non magno cane saepe tenetur aper
+  - Apar non magno cane saepe tenetur
+  short_explanation: A Latin proverb meaning 'A boar is often held by no great dog.' It suggests that
+    even the smallest obstacle can stop a powerful force.
+  i18n_explanations:
+    en: A Latin proverb meaning 'A boar is often held by no great dog.' It suggests that even the smallest
+      obstacle can stop a powerful force.
+    es: Un proverbio latino que significa 'A menudo un jabalí es detenido por un perro no muy grande.'
+      Sugiere que incluso el obstáculo más pequeño puede frenar una fuerza poderosa.
+    fr: Un proverbe latin signifiant 'Un sanglier est souvent retenu par un chien pas très grand.' Il
+      suggère que même le plus petit obstacle peut arrêter une force puissante.
+    de: Ein lateinisches Sprichwort mit der Bedeutung 'Ein Eber wird oft von keinem großen Hund gehalten.'
+      Es deutet darauf hin, dass selbst das kleinste Hindernis eine mächtige Kraft aufhalten kann.
+    it: Un proverbio latino che significa 'Spesso un cinghiale è trattenuto da un cane non grande.' Suggerisce
+      che anche il più piccolo ostacolo può fermare una forza potente.
+    pt: Um provérbio latino que significa 'Muitas vezes um javali é contido por um cão não muito grande.'
+      Sugere que até o menor obstáculo pode deter uma força poderosa.
+    ru: Латинская пословица, означающая 'Кабана часто удерживает невеликая собака'. Подразумевает, что
+      даже небольшое препятствие может остановить могущественную силу.
+    ja: ラテン語の格言で、「しばしば猪は大きな犬に捕らえられない」という意味。小さな障害物でも強大な力を止めることがあるという教訓。
+    zh: 一句拉丁谚语，意为「猪常被不大的狗挡住」。意指再小的障碍也能阻止强大的力量。
+    ar: مثل لاتيني يعني 'غالبًا ما يتم حبس الخنزير البري بواسطة كلب ليس كبيرًا'. يشير إلى أن أصغر عقبة
+      يمكن أن توقف قوة كبيرة.
+    he: פתגם לטיני שפירושו 'לעיתים קרובות חזיר הבר נבלם על ידי כלב שאינו גדול'. מרמז שאפילו המכשול הקטן
+      ביותר יכול לעצור כוח עצום.
+  learner_level: B1
+  confidence: 0.76
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.la.explanation.latin_proverbs_a_cane_non_magno_saepe_tenetur_aper
+  source_work_key: mnemosyne.la.work.various
+  source_author_key: mnemosyne.la.author.oral_tradition_attributed_to_phaedrus_fables
+  source_work: Various
+  source_author: Oral tradition / Attributed to Phaedrus (Fables)
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0062:book=1:card=19
+  source_license: public_domain
+  source_dataset: latin_proverbs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Phaedrus is uncertain; the line is from Ovid''s Remedia Amoris 422.'
+- id: la_classical_or_scriptural_allusion_gallina_scripsit_afb4714e
+  language: la
+  canonical_reference: Gallina scripsit
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Gallina scripsit
+  - Gallina scripsit, sed non legit
+  - A chicken wrote it
+  short_explanation: A humorous Latin phrase suggesting something absurd or nonsensical, ascribing authorship
+    to a chicken. Originates from a medieval anecdote about a chicken allegedly writing a letter.
+  i18n_explanations:
+    en: A humorous Latin phrase suggesting something absurd or nonsensical, ascribing authorship to a
+      chicken. Originates from a medieval anecdote about a chicken allegedly writing a letter.
+    es: Una frase latina humorística que sugiere algo absurdo o sin sentido, atribuyendo la autoría a
+      una gallina. Proviene de una anécdota medieval sobre una gallina que supuestamente escribió una
+      carta.
+    fr: Une expression latine humoristique désignant quelque chose d'absurde ou de dénué de sens, en attribuant
+      la paternité à une poule. Vient d'une anecdote médiévale où une poule aurait écrit une lettre.
+    de: Ein humorvoller lateinischer Ausdruck für etwas Absurdes oder Unsinniges, dem eine Henne als Autorin
+      zugeschrieben wird. Stammt aus einer mittelalterlichen Anekdote über eine angeblich einen Brief
+      schreibende Henne.
+    it: Una frase latina umoristica che suggerisce qualcosa di assurdo o senza senso, attribuendo la paternità
+      a una gallina. Deriva da un aneddoto medievale su una gallina che avrebbe scritto una lettera.
+    pt: Uma frase latina humorística que sugere algo absurdo ou sem sentido, atribuindo a autoria a uma
+      galinha. Origina-se de uma anedota medieval sobre uma galinha que supostamente escreveu uma carta.
+    ru: Шутливое латинское выражение, означающее что-то абсурдное или бессмысленное, приписывающее авторство
+      курице. Происходит из средневекового анекдота о курице, якобы написавшей письмо.
+    ja: 「鶏が書いた」という滑稽なラテン語の成句で、馬鹿げた或いは無意味なことを指す。中世の逸話に由来し、鶏が手紙を書いたとされる。
+    zh: 一句拉丁文幽默短语，指荒谬或无意义的事物，并将其归于一只母鸡。源自中世纪一则母鸡 allegedly 写信的轶事。
+    ar: عبارة لاتينية فكاهية تشير إلى شيء سخيف أو لا معنى له، وتنسب التأليف إلى دجاجة. تنشأ من حكاية средневековья
+      عن دجاجة زعم أنها كتبت رسالة.
+    he: ביטוי לטיני הומוריסטי שמרמז על דבר מה אבסורדי או חסר טעם, ומייחס את כתיבתו לתרנגולת. מקורו באנקדוטה
+      מימי הביניים על תרנגולת שכתבה לכאורה מכתב.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: informal
+  variants:
+  - Gallina scripsit, sed non intellexit
+  explanation_key: mnemosyne.la.explanation.latin_anecdotes_gallina_scripsit
+  source_work_key: mnemosyne.la.work.various
+  source_author_key: mnemosyne.la.author.medieval_anecdote
+  source_work: Various
+  source_author: Medieval anecdote
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: latin_anecdotes
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to a medieval anecdote is uncertain and the phrase is not classical.'
+- id: la_proverb_tradition_per_aspera_ad_astra_2bfd93cc
+  language: la
+  canonical_reference: Per aspera ad astra
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Per aspera ad astra
+  - Ad astra per aspera
+  - Per aspera ad astra!
+  short_explanation: A motivational phrase meaning 'Through hardships to the stars,' symbolizing perseverance
+    leading to success. It reflects Stoic philosophy and has been widely adopted in modern contexts.
+  i18n_explanations:
+    en: A motivational phrase meaning 'Through hardships to the stars,' symbolizing perseverance leading
+      to success. It reflects Stoic philosophy and has been widely adopted in modern contexts.
+    es: Frase motivacional que significa 'A través de las dificultades hacia las estrellas', simbolizando
+      que el esfuerzo lleva al éxito. Refleja la filosofía estoica y se usa en contextos modernos.
+    fr: Une phrase motivante signifiant 'À travers les épreuves jusqu'aux étoiles', symbolisant que la
+      persévérance mène au succès. Elle reflète la philosophie stoïcienne et est largement utilisée aujourd'hui.
+    de: Ein Motivationssatz mit der Bedeutung 'Durch Mühen zu den Sternen', der Durchhaltevermögen als
+      Weg zum Erfolg symbolisiert. Er entstammt der Stoischen Philosophie und wird heute oft verwendet.
+    it: Una frase motivazionale che significa 'Attraverso le asperità alle stelle', simboleggiando che
+      la perseveranza porta al successo. Riflette la filosofia stoica ed è ampiamente usata nei contesti
+      moderni.
+    pt: Uma frase motivacional que significa 'Através das dificuldades às estrelas', simbolizando que
+      a perseverança leva ao sucesso. Reflete a filosofia estoica e é amplamente adotada em contextos
+      modernos.
+    ru: Вдохновляющая фраза 'Через тернии к звёздам', символизирующая, что упорство ведёт к успеху. Восходит
+      к стоической философии и широко используется в современных контекстах.
+    ja: 「困難を乗り越えて星々へ」という意味のモットーで、忍耐が成功につながることを象徴する。ストア哲学に由来し、現代でも広く使われている。
+    zh: 一句格言，意为‘通过艰辛通往星辰’，象征坚持通向成功。源自斯多葛哲学，现代广泛使用。
+    ar: عبارة تحفيزية تعني 'من خلال المصاعب إلى النجوم'، ترمز إلى أن المثابرة تؤدي إلى النجاح. تنبع من
+      الفلسفة الرواقية وتستخدم على نطاق واسع في السياقات الحديثة.
+    he: ביטוי מוטיבציוני שפירושו 'דרכי קושי אל הכוכבים', המסמל כי התמדה מובילה להצלחה. נובע מהפילוסופיה
+      הסטואית ונפוץ בהקשרים מודרניים.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.la.explanation.latin_proverbs_per_aspera_ad_astra
+  source_work_key: mnemosyne.la.work.various
+  source_author_key: mnemosyne.la.author.attributed_to_seneca_the_younger
+  source_work: Various
+  source_author: Attributed to Seneca the Younger
+  source_url: https://en.wiktionary.org/wiki/per_aspera_ad_astra
+  source_license: copyright_or_rights_review_needed
+  source_dataset: latin_proverbs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Seneca is plausible but not direct; phrase is a later adaptation of a line from his Hercules Furens.'
+- id: la_classical_or_scriptural_allusion_sic_semper_tyrannis_0064756f
+  language: la
+  canonical_reference: Sic semper tyrannis
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Sic semper tyrannis
+  - Sic semper tyrannis!
+  - Sic semper tyrannis...
+  - Thus always to tyrants
+  short_explanation: A Latin phrase meaning 'Thus always to tyrants,' expressing the idea that tyrants
+    will ultimately fall. It is famously associated with the assassination of Julius Caesar and later
+    adopted as a motto.
+  i18n_explanations:
+    en: A Latin phrase meaning 'Thus always to tyrants,' expressing the idea that tyrants will ultimately
+      fall. It is famously associated with the assassination of Julius Caesar and later adopted as a motto.
+    es: Frase latina que significa 'Así siempre a los tiranos', expresando que los tiranos caerán al final.
+      Famosa por asociarse con el asesinato de Julio César y luego usada como lema.
+    fr: Une phrase latine signifiant 'Ainsi en est-il toujours pour les tyrans', exprimant l'idée que
+      les tyrans finissent par tomber. Célèbre pour son lien avec l'assassinat de Jules César et adoptée
+      comme devise.
+    de: Ein lateinischer Satz mit der Bedeutung 'So immer den Tyrannen', der ausdrückt, dass Tyrannen
+      letztlich fallen werden. Berühmt durch die Verbindung mit der Ermordung Julius Caesars und später
+      als Motto übernommen.
+    it: Una frase latina che significa 'Così sempre ai tiranni', esprimendo l'idea che i tiranni cadranno
+      alla fine. Famosa per essere associata all'assassinio di Giulio Cesare e poi adottata come motto.
+    pt: Uma frase latina que significa 'Assim sempre aos tiranos', expressando a ideia de que os tiranos
+      cairão no fim. Famosamente associada ao assassinato de Júlio César e depois adotada como lema.
+    ru: Латинская фраза 'Так всегда тиранам', выражающая идею, что тираны неизбежно падут. Известна по
+      связи с убийством Юлия Цезаря и позже стала девизом.
+    ja: 「暴君には常にこうあれ」というラテン語の文句で、暴君が最終的に滅びるという考えを表す。ユリウス・カエサル暗殺と関連し、後にモットーとして採用された。
+    zh: 拉丁语短语，意为‘暴君终将如此’，表达暴君终将覆灭的理念。因与尤利乌斯·恺撒遇刺相关而闻名，后被用作格言。
+    ar: عبارة لاتينية تعني 'هكذا دائمًا إلى الطغاة'، تعبر عن فكرة أن الطغاة سينهزمون في النهاية. ارتبطت
+      بشكل مشهور باغتيال يوليوس قيصر واعتمد لاحقًا كشعار.
+    he: ביטוי לטיני שפירושו 'כך תמיד לרודנים', המביע את הרעיון שרודנים יפלו בסופו של דבר. ידוע בקשרו לרצח
+      יוליוס קיסר ונעשה שימוש מאוחר יותר כסיסמה.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.latin_phrases_sic_semper_tyrannis
+  source_work_key: mnemosyne.la.work.various
+  source_author_key: mnemosyne.la.author.attributed_to_marcus_junius_brutus_possibly
+  source_work: Various
+  source_author: Attributed to Marcus Junius Brutus (possibly)
+  source_url: https://en.wikipedia.org/wiki/Sic_semper_tyrannis
+  source_license: copyright_or_rights_review_needed
+  source_dataset: latin_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Brutus is traditional but not historically verifiable; phrase is of later origin.'
+- id: la_proverb_tradition_verba_volant_scripta_manent_be547181
+  language: la
+  canonical_reference: Verba volant, scripta manent
+  reference_type: proverb_tradition
+  surface_patterns:
+  - Verba volant, scripta manent
+  - Verba volant, scripta manent.
+  - Verba volant, scripta manent!
+  - Verba volant, scripta manent; quod non scribitur, evanescit
+  short_explanation: A proverb meaning 'Spoken words fly away, written words remain,' emphasizing the
+    permanence and importance of written records over fleeting speech.
+  i18n_explanations:
+    en: A proverb meaning 'Spoken words fly away, written words remain,' emphasizing the permanence and
+      importance of written records over fleeting speech.
+    es: Proverbio que significa 'Las palabras dichas vuelan, las escritas permanecen', destacando la permanencia
+      e importancia de los registros escritos sobre el habla efímera.
+    fr: Un proverbe signifiant 'Les mots prononcés s'envolent, les écrits restent', soulignant la permanence
+      et l'importance des documents écrits face à la parole éphémère.
+    de: Ein Sprichwort mit der Bedeutung 'Gesprochene Worte verfliegen, geschriebene bleiben', das die
+      Beständigkeit und Bedeutung schriftlicher Aufzeichnungen gegenüber flüchtiger Rede betont.
+    it: Un proverbio che significa 'Le parole dette volano via, quelle scritte rimangono', sottolineando
+      la permanenza e l'importanza dei documenti scritti rispetto al discorso effimero.
+    pt: Um provérbio que significa 'Palavras ditas voam, escritas permanecem', destacando a permanência
+      e importância dos registros escritos sobre a fala fugaz.
+    ru: Поговорка 'Сказанное улетает, написанное остаётся', подчеркивающая неизменность и важность письменных
+      записей по сравнению с мимолётной речью.
+    ja: 「言葉は飛び去るが、書かれたものは残る」という格言で、口頭の言葉よりも書き言葉の永続性と重要性を強調する。
+    zh: 一句谚语，意为‘言语易逝，文字永存’，强调书面记录的永恒性与重要性超过短暂的口头言语。
+    ar: مثل يقول 'الكلمات المنطوقة تطير، المكتوبة تبقى'، مؤكدًا على ديمومة وأهمية السجلات المكتوبة مقارنة
+      بالكلام العابر.
+    he: פתגם שפירושו 'דברים שנאמרים עפים, כתובים נשארים', המדגיש את הנצחיות והחשיבות של רישומים כתובים
+      לעומת דיבור חולף.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.la.explanation.latin_proverbs_verba_volant_scripta_manent
+  source_work_key: mnemosyne.la.work.various
+  source_author_key: mnemosyne.la.author.attributed_to_gaius_titus_1st_century_bce
+  source_work: Various
+  source_author: Attributed to Gaius Titus (1st century BCE)
+  source_url: https://en.wiktionary.org/wiki/verba_volant,_scripta_manent
+  source_license: copyright_or_rights_review_needed
+  source_dataset: latin_proverbs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Gaius Titus is uncertain and not well-documented; phrase is a common proverb.'
+- id: la_literary_reference_histrio_nimis_6179e84b
+  language: la
+  canonical_reference: Histrio nimis
+  reference_type: literary_reference
+  surface_patterns:
+  - histrio nimis
+  - histrio nimis est
+  - histrio nimis.
+  - histrio nimis,
+  short_explanation: A Latin phrase meaning 'an actor too much,' often used to criticize someone who is
+    overly theatrical or pretentious. It appears in classical literature as a critique of exaggerated
+    behavior.
+  i18n_explanations:
+    en: A Latin phrase meaning 'an actor too much,' often used to criticize someone who is overly theatrical
+      or pretentious. It appears in classical literature as a critique of exaggerated behavior.
+    es: Una frase latina que significa 'un actor demasiado', usada para criticar a alguien que es demasiado
+      teatral o pretencioso. Aparece en la literatura clásica como crítica a un comportamiento exagerado.
+    fr: Une expression latine signifiant 'un acteur trop', souvent utilisée pour critiquer quelqu'un qui
+      est trop théâtral ou prétentieux. Elle apparaît dans la littérature classique comme une critique
+      d'un comportement exagéré.
+    de: Ein lateinischer Ausdruck mit der Bedeutung 'ein Schauspieler zu sehr', der oft verwendet wird,
+      um jemanden zu kritisieren, der übertrieben theatralisch oder anmaßend ist. Er erscheint in der
+      klassischen Literatur als Kritik an übertriebenem Verhalten.
+    it: Una frase latina che significa 'un attore troppo', usata per criticare qualcuno che è eccessivamente
+      teatrale o pretenzioso. Compare nella letteratura classica come critica a un comportamento esagerato.
+    pt: Uma expressão latina que significa 'um ator demais', usada para criticar alguém que é excessivamente
+      teatral ou pretensioso. Aparece na literatura clássica como uma crítica a um comportamento exagerado.
+    ru: Латинское выражение, означающее 'слишком актёр', часто используется для критики того, кто слишком
+      театрален или претенциозен. Встречается в классической литературе как критика преувеличенного поведения.
+    ja: 「俳優過剰」を意味するラテン語の表現で、過度に演劇的または気取った人に対する批判として用いられる。古典文学では誇張された行動への批判として登場する。
+    zh: 拉丁语短语，意为“过度的演员”，常用于批评过于矫揉造作或自命不凡的人。在古典文学中作为对夸张行为的批判出现。
+    ar: عبارة لاتينية تعني 'ممثل مفرط'، تُستخدم غالبًا لنقد شخص مبالغ في التمثيل أو التكلف. تظهر في الأدب
+      الكلاسيكي كنقد للسلوك المبالغ فيه.
+    he: ביטוי לטיני שפירושו 'שחקן מופרז', המשמש לעיתים קרובות לביקורת על מי שמתנהג באופן מוגזם או יומרני.
+      מופיע בספרות הקלאסית כביקורת על התנהגות מוגזמת.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.latin_classical_phrases_histrio_nimis
+  source_work_key: mnemosyne.la.work.various
+  source_author_key: mnemosyne.la.author.attributed_to_seneca_the_younger_disputed
+  source_work: Various
+  source_author: Attributed to Seneca the Younger (disputed)
+  source_url: https://en.wiktionary.org/wiki/histrio#Latin
+  source_license: copyright_or_rights_review_needed
+  source_dataset: latin_classical_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Phrase
+    not securely attested in classical literature; attribution to Seneca is disputed and unverifiable.'
+- id: la_classical_or_scriptural_allusion_theatrum_mundi_7f3ef391
+  language: la
+  canonical_reference: Theatrum mundi
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - theatrum mundi
+  - theatrum mundi est
+  - mundi theatrum
+  - theatrum totius mundi
+  short_explanation: A metaphor describing the world as a stage where humans play roles in a divine drama.
+    It reflects Stoic and Christian views on life's transient nature.
+  i18n_explanations:
+    en: A metaphor describing the world as a stage where humans play roles in a divine drama. It reflects
+      Stoic and Christian views on life's transient nature.
+    es: Metáfora que describe el mundo como un escenario donde los humanos interpretan papeles en un drama
+      divino. Refleja las visiones estoica y cristiana sobre la naturaleza efímera de la vida.
+    fr: Métaphore décrivant le monde comme une scène où les humains jouent des rôles dans un drame divin.
+      Elle reflète les visions stoïcienne et chrétienne sur la nature éphémère de la vie.
+    de: Eine Metapher, die die Welt als eine Bühne beschreibt, auf der Menschen Rollen in einem göttlichen
+      Drama spielen. Sie spiegelt stoische und christliche Ansichten über die Vergänglichkeit des Lebens
+      wider.
+    it: Metafora che descrive il mondo come un palcoscenico in cui gli esseri umani recitano ruoli in
+      un dramma divino. Riflette le visioni stoiche e cristiane sulla natura effimera della vita.
+    pt: Metáfora que descreve o mundo como um palco onde os humanos desempenham papéis em um drama divino.
+      Reflete as visões estoica e cristã sobre a natureza transitória da vida.
+    ru: Метафора, описывающая мир как сцену, на которой люди играют роли в божественной драме. Отражает
+      стоические и христианские взгляды на преходящую природу жизни.
+    ja: 世界を神のドラマの中で人間が役割を演じる舞台に例えた比喩。人生の儚さに関するストア派とキリスト教の見方を反映している。
+    zh: 将世界比作舞台，人类在其中扮演角色，上演一出神圣的戏剧。反映了斯多葛派和基督教对生命短暂性的看法。
+    ar: استعارة تصف العالم كمسرح يلعب فيه البشر أدوارًا في دراما إلهية. تعكس وجهات النظر الرواقية والمسيحية
+      حول طبيعة الحياة الزائلة.
+    he: מטאפורה המתארת את העולם כתיאטרון שבו בני האדם מגלמים תפקידים במחזה אלוהי. משקפת את תפיסות הסטואים
+      והנצרות על טבעו החולף של החיים.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.la.explanation.boethius_consolatio_phrases_theatrum_mundi
+  source_work_key: mnemosyne.la.work.de_consolatione_philosophiae
+  source_author_key: mnemosyne.la.author.boethius
+  source_work: De Consolatione Philosophiae
+  source_author: Boethius
+  source_location: Book V, Prosa 1
+  source_url: https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0057:text=Cons.
+  source_license: public_domain
+  source_dataset: boethius_consolatio_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Boethius'' De Consolatione Philosophiae V.1 is plausible but not citable; the exact phrase ''theatrum
+    mundi'' is not found there.'
+- id: la_classical_or_scriptural_allusion_hominem_unius_libri_timeo_ddec34f3
+  language: la
+  canonical_reference: Hominem unius libri timeo
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - hominem unius libri timeo
+  - timeo hominem unius libri
+  - hominem unius libri metuendum est
+  - unius libri hominem timeo
+  short_explanation: A phrase attributed to Thomas Aquinas, meaning 'I fear the man of one book,' warning
+    against dogmatism and advocating for broad learning.
+  i18n_explanations:
+    en: A phrase attributed to Thomas Aquinas, meaning 'I fear the man of one book,' warning against dogmatism
+      and advocating for broad learning.
+    es: Frase atribuida a Tomás de Aquino que significa 'Temo al hombre de un solo libro', advirtiendo
+      contra el dogmatismo y abogando por una educación amplia.
+    fr: Phrase attribuée à Thomas d'Aquin, signifiant 'Je crains l'homme d'un seul livre', mettant en
+      garde contre le dogmatisme et prônant l'apprentissage large.
+    de: Ein Zitat, das Thomas von Aquin zugeschrieben wird, mit der Bedeutung 'Ich fürchte den Mann eines
+      einzigen Buches', das vor Dogmatismus warnt und für umfassende Bildung plädiert.
+    it: Frase attribuita a Tommaso d'Aquino che significa 'Temo l'uomo di un solo libro', mettendo in
+      guardia contro il dogmatismo e sostenendo l'apprendimento ampio.
+    pt: Frase atribuída a Tomás de Aquino que significa 'Temo o homem de um só livro', alertando contra
+      o dogmatismo e defendendo a aprendizagem ampla.
+    ru: Фраза, приписываемая Фоме Аквинскому, означающая 'Боюсь человека одной книги', предостерегающая
+      от догматизма и призывающая к широкому образованию.
+    ja: トマス・アクィナスに帰せられる言葉で、「一冊の本しか持たない人間を恐れる」という意味。独断主義に警告し、幅広い学習を提唱する。
+    zh: 托马斯·阿奎那的名言，意为‘我惧怕只读一本书的人’，告诫人们不要教条主义，倡导广泛学习。
+    ar: عبارة تُنسب إلى توماس الأكويني، وتعني 'أخشى رجل كتاب واحد'، محذرة من التعصب وتدعو إلى التعلم الواسع.
+    he: פתגם המיוחס לתומאס אקווינס, שפירושו 'אני חושש מאדם של ספר אחד', מזהיר מפני דוגמטיות ומעודד למידה
+      רחבה.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.thomas_aquinas_phrases_hominem_unius_libri_timeo
+  source_work_key: mnemosyne.la.work.various
+  source_author_key: mnemosyne.la.author.thomas_aquinas
+  source_work: Various
+  source_author: Thomas Aquinas
+  source_location: Attributed in multiple works
+  source_url: https://www.documentacatholicaomnia.eu/03d/1225-1274,_Thomas_Aquinas,_De_Potentia,_EN.pdf
+  source_license: public_domain
+  source_dataset: thomas_aquinas_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Thomas Aquinas is uncertain; the saying is likely apocryphal and not verifiable in his works.'
+- id: la_literary_reference_perge_quo_duxeris_561fba19
+  language: la
+  canonical_reference: Perge, quo duxeris
+  reference_type: literary_reference
+  surface_patterns:
+  - Perge, quo duxeris
+  - Perge, quo te duxerit
+  - Perge, quo duxerit
+  short_explanation: A phrase from Horace's *Epistles*, meaning 'Proceed where you have been led.' It
+    encourages following one's natural inclinations or calling, reflecting Horace's advice on living in
+    accordance with one's nature.
+  i18n_explanations:
+    en: A phrase from Horace's *Epistles*, meaning 'Proceed where you have been led.' It encourages following
+      one's natural inclinations or calling, reflecting Horace's advice on living in accordance with one's
+      nature.
+    es: Frase de las *Epístolas* de Horacio que significa 'Avanza por donde te lleve'. Anima a seguir
+      los propios instintos o vocación, reflejando el consejo de Horacio sobre vivir en armonía con la
+      naturaleza.
+    fr: Une phrase des *Épîtres* d'Horace signifiant 'Avance là où tu as été conduit'. Elle encourage
+      à suivre ses inclinations naturelles ou sa vocation, reflétant les conseils d'Horace sur la vie
+      en accord avec la nature.
+    de: Ein Zitat aus Horaz' *Episteln* mit der Bedeutung 'Gehe weiter, wohin du geführt wirst'. Es ermutigt,
+      den eigenen natürlichen Neigungen oder Berufungen zu folgen und spiegelt Horaz' Rat wider, im Einklang
+      mit der eigenen Natur zu leben.
+    it: Una frase delle *Epistole* di Orazio che significa 'Prosegui dove sei stato guidato'. Incoraggia
+      a seguire le proprie inclinazioni naturali o la propria vocazione, riflettendo il consiglio di Orazio
+      di vivere in armonia con la propria natura.
+    pt: Frase das *Epístolas* de Horácio que significa 'Avance por onde for conduzido'. Incentiva a seguir
+      as próprias inclinações naturais ou vocação, refletindo o conselho de Horácio sobre viver de acordo
+      com a própria natureza.
+    ru: Цитата из «Посланий» Горация, означающая 'Иди туда, куда тебя ведут'. Призывает следовать своим
+      природным склонностям или призванию, отражая совет Горация жить в согласии с собственной природой.
+    ja: ホラティウスの『書簡集』の一節で「導かれたところへ進め」を意味する。自らの自然な傾向や使命に従うよう促し、ホラティウスの自然に従って生きるという助言を反映している。
+    zh: 贺拉斯《书信集》中的一句话，意为‘顺势而行’。鼓励追随自己的天性或使命，体现了贺拉斯关于顺应自然生活的建议。
+    ar: عبارة من رسائل هوراس تعني 'استمر حيثما تقودك'. تشجع على اتباع الميول الطبيعية أو الدعوة، تعكس
+      نصيحة هوراس بالعيش وفقًا للطبيعة.
+    he: ביטוי מאיגרותיו של הורטיוס שמשמעו 'המשך לאן שהובל'. מעודד ללכת אחר נטיותיו הטבעיות או ייעודו,
+      משקף את עצתו של הורטיוס לחיות בהתאם לטבעו.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.la.explanation.horace_epistulae_perge_quo_duxeris
+  source_work_key: mnemosyne.la.work.epistulae
+  source_author_key: mnemosyne.la.author.horace
+  source_work: Epistulae
+  source_author: Horace
+  source_location: Epistles 1.10.10
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0060:text%3DEpist.%3Abook%3D1:card%3D10
+  source_license: public_domain
+  source_dataset: horace_epistulae
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    exact phrasing may not appear in Horace; verify source citation.'
+- id: la_proverb_tradition_in_arte_veritas_1b23ace6
+  language: la
+  canonical_reference: In arte veritas
+  reference_type: proverb_tradition
+  surface_patterns:
+  - In arte veritas
+  - In arte sola veritas
+  - In arte veritas est
+  short_explanation: This phrase means 'In art, there is truth,' suggesting that art reveals deeper truths
+    about life and human nature. It is often used to emphasize the power of art to convey authentic experiences
+    and emotions.
+  i18n_explanations:
+    en: This phrase means 'In art, there is truth,' suggesting that art reveals deeper truths about life
+      and human nature. It is often used to emphasize the power of art to convey authentic experiences
+      and emotions.
+    es: Esta frase significa 'En el arte, hay verdad', sugiriendo que el arte revela verdades más profundas
+      sobre la vida y la naturaleza humana. Se usa para enfatizar el poder del arte para transmitir experiencias
+      y emociones auténticas.
+    fr: Cette phrase signifie 'Dans l'art, il y a la vérité', suggérant que l'art révèle des vérités plus
+      profondes sur la vie et la nature humaine. Elle est souvent utilisée pour souligner le pouvoir de
+      l'art à transmettre des expériences et des émotions authentiques.
+    de: Dieser Satz bedeutet 'In der Kunst liegt die Wahrheit', was darauf hindeutet, dass Kunst tiefere
+      Wahrheiten über das Leben und die menschliche Natur offenbart. Er wird oft verwendet, um die Kraft
+      der Kunst zu betonen, authentische Erfahrungen und Emotionen zu vermitteln.
+    it: Questa frase significa 'Nell'arte c'è la verità', suggerendo che l'arte rivela verità più profonde
+      sulla vita e sulla natura umana. Viene spesso usata per enfatizzare il potere dell'arte di trasmettere
+      esperienze ed emozioni autentiche.
+    pt: Esta frase significa 'Na arte, há verdade', sugerindo que a arte revela verdades mais profundas
+      sobre a vida e a natureza humana. É frequentemente usada para enfatizar o poder da arte de transmitir
+      experiências e emoções autênticas.
+    ru: Эта фраза означает 'В искусстве есть истина', что предполагает, что искусство раскрывает более
+      глубокие истины о жизни и человеческой природе. Её часто используют, чтобы подчеркнуть силу искусства
+      в передаче подлинных переживаний и эмоций.
+    ja: この言葉は「芸術には真実がある」を意味し、芸術が人生や人間性についてのより深い真実を明らかにするという考えを表しています。芸術が本物の経験や感情を伝える力を強調する際にしばしば用いられます。
+    zh: 这句话的意思是“艺术中蕴含真理”，意指艺术揭示了关于生命和人性的更深层次的真相。常用于强调艺术传达真实体验和情感的力量。
+    ar: هذه العبارة تعني 'في الفن، هناك حقيقة'، مما يشير إلى أن الفن يكشف حقائق أعمق عن الحياة والطبيعة
+      البشرية. غالبًا ما تُستخدم لتأكيد قوة الفن في نقل التجارب والمشاعر الأصيلة.
+    he: משפט זה פירושו 'באמנות יש אמת', ומרמז כי האמנות חושפת אמיתות עמוקות יותר על החיים ועל טבע האדם.
+      לעיתים קרובות משתמשים בו כדי להדגיש את כוחה של האמנות להעביר חוויות ורגשות אותנטיים.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  variants:
+  - Ars est celare artem
+  - In arte veritas, in vita virtus
+  explanation_key: mnemosyne.la.explanation.classical_proverbs_in_arte_veritas
+  source_work_key: mnemosyne.la.work.various
+  source_author_key: mnemosyne.la.author.anonymous_classical_tradition
+  source_work: Various
+  source_author: Anonymous (Classical tradition)
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: classical_proverbs
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Not
+    clearly attested in classical sources; may be a modern adaptation.'
+- id: la_literary_reference_age_qui_agis_2eba1365
+  language: la
+  canonical_reference: Age, qui agis!
+  reference_type: literary_reference
+  surface_patterns:
+  - Age, qui agis!
+  - Age qui agis
+  - Agite, qui agitis!
+  short_explanation: A phrase from Roman comedy, often attributed to Plautus, encouraging action or urging
+    someone to proceed with what they are doing. It reflects the energetic and direct style of Roman theatrical
+    dialogue.
+  i18n_explanations:
+    en: A phrase from Roman comedy, often attributed to Plautus, encouraging action or urging someone
+      to proceed with what they are doing. It reflects the energetic and direct style of Roman theatrical
+      dialogue.
+    es: Frase de la comedia romana, atribuida a menudo a Plauto, que anima a actuar o insta a alguien
+      a seguir con lo que está haciendo. Refleja el estilo enérgico y directo del diálogo teatral romano.
+    fr: Une phrase de la comédie romaine, souvent attribuée à Plaute, encourageant l'action ou incitant
+      à poursuivre ce que l'on fait. Elle reflète le style énergique et direct du dialogue théâtral romain.
+    de: Ein Ausspruch aus der römischen Komödie, oft Plautus zugeschrieben, der zur Tat oder zum Weitermachen
+      auffordert. Er spiegelt den energischen und direkten Stil der römischen Theaterdialoge wider.
+    it: Una frase della commedia romana, spesso attribuita a Plauto, che incoraggia l'azione o esorta
+      a continuare ciò che si sta facendo. Riflette lo stile energico e diretto del dialogo teatrale romano.
+    pt: Frase da comédia romana, frequentemente atribuída a Plauto, que encoraja a agir ou instiga alguém
+      a prosseguir com o que está fazendo. Reflete o estilo enérgico e direto do diálogo teatral romano.
+    ru: Фраза из римской комедии, часто приписываемая Плавту, призывающая к действию или побуждающая продолжать
+      начатое. Отражает энергичный и прямой стиль римского театрального диалога.
+    ja: 古代ローマの喜劇からの言葉で、しばしばプラウトゥスに帰せられ、行動を促すか、現在行っていることを続けるよう促す。ローマ演劇の対話におけるエネルギッシュで直接的なスタイルを反映している。
+    zh: 古罗马喜剧中的一句话，常被认为出自普劳图斯，鼓励行动或敦促某人继续做手头的事。体现了罗马戏剧对话中充满活力且直接的风格。
+    ar: عبارة من كوميديا روما القديمة، غالبًا ما تنسب إلى بلوتوس، تحث على الفعل أو تحث شخصًا على المضي
+      فيما يفعله. تعكس الأسلوب الحيوي والمباشر للحوار المسرحي الروماني.
+    he: ביטוי מהקומדיה הרומית, לעיתים מיוחס לפלאוטוס, המעודד פעולה או דוחק להמשיך במה שעושים. משקף את
+      הסגנון האנרגטי והממוקד של הדיאלוגים התיאטרליים הרומיים.
+  learner_level: B1
+  confidence: 0.65
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.plautus_comedies_phrases_age_qui_agis
+  source_work_key: mnemosyne.la.work.various_comedies
+  source_author_key: mnemosyne.la.author.titus_maccius_plautus
+  source_work: Various comedies
+  source_author: Titus Maccius Plautus
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0129:book=1:card=1
+  source_license: public_domain
+  source_dataset: plautus_comedies_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase is plausible in Plautine comedy but cannot be verified to a specific line; surface pattern
+    may be a misremembered variation.'
+- id: la_literary_reference_aeneas_pio_comitatu_troiam_fugiens_9053d0b7
+  language: la
+  canonical_reference: Aeneas pio comitatu Troiam fugiens
+  reference_type: literary_reference
+  surface_patterns:
+  - Aeneas pio comitatu Troiam fugiens
+  - Aeneas cum pio comitatu ex Troia fugiens
+  short_explanation: A description of Aeneas fleeing Troy with his loyal companions, a key event in Virgil's
+    *Aeneid* that sets the foundation for Rome's mythical origins.
+  i18n_explanations:
+    en: A description of Aeneas fleeing Troy with his loyal companions, a key event in Virgil's *Aeneid*
+      that sets the foundation for Rome's mythical origins.
+    es: Una descripción de Eneas huyendo de Troya con sus leales compañeros, un evento clave en la *Eneida*
+      de Virgilio que sienta las bases de los orígenes míticos de Roma.
+    fr: Une description d'Énée fuyant Troie avec ses fidèles compagnons, un événement clé de l’*Énéide*
+      de Virgile qui pose les bases des origines mythiques de Rome.
+    de: Eine Beschreibung, wie Aeneas mit seinen treuen Begleitern aus Troja flieht, ein zentrales Ereignis
+      in Vergils *Aeneis*, das den Grundstein für Roms mythische Ursprünge legt.
+    it: Una descrizione di Enea che fugge da Troia con i suoi fedeli compagni, un evento chiave nell’*Eneide*
+      di Virgilio che getta le basi per le origini mitiche di Roma.
+    pt: Uma descrição de Eneias fugindo de Troia com seus leais companheiros, um evento-chave na *Eneida*
+      de Virgílio que estabelece as bases para as origens míticas de Roma.
+    ru: Описание бегства Энея из Трои с верными спутниками — ключевого события в «Энеиде» Вергилия, заложившего
+      основы мифологического происхождения Рима.
+    ja: アイネイアースが忠実な仲間と共にトロイアから逃れる様子を描写したもので、ウェルギリウスの『アエネイス』における重要な出来事であり、ローマの神話的起源の基礎を築いた。
+    zh: 描述埃涅阿斯携忠诚随从逃离特洛伊的场景，这是维吉尔《埃涅伊德》中的关键事件，奠定了罗马神话起源的基础。
+    ar: وصف لهروب إينياس من طروادة مع رفاقه المخلصين، وهو حدث رئيسي في *الإنيادة* لفيرجيل الذي يضع أسس
+      أصول روما الأسطورية.
+    he: תיאור בריחתו של איינאס מטרויה עם חבריו הנאמנים, אירוע מרכזי ב*אינאיס* של ורגיליוס שמבסס את מקורותיה
+      המיתולוגיים של רומא.
+  learner_level: C1
+  confidence: 0.7
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.la.explanation.vergil_aeneid_aeneas_pio_comitatu_troiam_fugiens
+  source_work_key: mnemosyne.la.work.aeneis
+  source_author_key: mnemosyne.la.author.publius_vergilius_maro_virgil
+  source_work: Aeneis
+  source_author: Publius Vergilius Maro (Virgil)
+  source_location: Book 1, line 94
+  source_url: https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0054:book=1:line=94
+  source_license: public_domain
+  source_dataset: vergil_aeneid
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    location (Aeneid 1.94) does not contain this phrase; it may be a paraphrase.'
+- id: la_cultural_reference_apollinem_delphis_colere_coeptum_est_efa065a6
+  language: la
+  canonical_reference: Apollinem Delphis colere coeptum est
+  reference_type: cultural_reference
+  surface_patterns:
+  - Apollinem Delphis colere coeptum est
+  - Apollinem Delphis colere coeperunt
+  - Apollinis cultus Delphis inceptus est
+  - Delphis Apollinem colere
+  short_explanation: Refers to the establishment of the cult of Apollo at Delphi, one of the most important
+    religious centers in the ancient Greek world. Delphi became the site of the Oracle of Apollo, central
+    to Greek religion and politics.
+  i18n_explanations:
+    en: Refers to the establishment of the cult of Apollo at Delphi, one of the most important religious
+      centers in the ancient Greek world. Delphi became the site of the Oracle of Apollo, central to Greek
+      religion and politics.
+    es: Se refiere al establecimiento del culto a Apolo en Delfos, uno de los centros religiosos más importantes
+      del mundo griego antiguo. Delfos se convirtió en el lugar del Oráculo de Apolo, fundamental en la
+      religión y política griegas.
+    fr: Fait référence à l'établissement du culte d'Apollon à Delphes, l'un des centres religieux les
+      plus importants du monde grec antique. Delphes devint le site de l'Oracle d'Apollon, central dans
+      la religion et la politique grecques.
+    de: Bezieht sich auf die Gründung des Apollon-Kults in Delphi, einem der wichtigsten religiösen Zentren
+      der antiken griechischen Welt. Delphi wurde zum Standort des Orakels von Apollon, das für die griechische
+      Religion und Politik von zentraler Bedeutung war.
+    it: Si riferisce all'istituzione del culto di Apollo a Delfi, uno dei centri religiosi più importanti
+      del mondo greco antico. Delfi divenne il sito dell'Oracolo di Apollo, centrale nella religione e
+      nella politica greche.
+    pt: Refere-se ao estabelecimento do culto a Apolo em Delfos, um dos centros religiosos mais importantes
+      do mundo grego antigo. Delfos tornou-se o local do Oráculo de Apolo, central na religião e política
+      gregas.
+    ru: Относится к основанию культа Аполлона в Дельфах, одном из важнейших религиозных центров древнего
+      греческого мира. Дельфы стали местом Оракула Аполлона, центрального для греческой религии и политики.
+    ja: 古代ギリシャ世界で最も重要な宗教的中心地の一つであったデルポイにアポロン信仰が始まったことを指す。デルポイはアポロンの神託所が置かれ、ギリシャの宗教と政治の中心となった。
+    zh: 指在古希腊世界最重要的宗教中心之一——德尔斐建立阿波罗崇拜。德尔斐成为阿波罗神谕的所在地，对希腊宗教和政治具有核心地位。
+    ar: يشير إلى تأسيس عبادة أبولو في دلف، أحد أهم المراكز الدينية في العالم اليوناني القديم. أصبحت دلف
+      موقعًا لوحي أبولو، الذي كان محوريًا في الدين والسياسة اليونانيين.
+    he: מתייחס להקמת פולחן אפולו בדלפי, אחד ממרכזי הדת החשובים ביותר בעולם היווני העתיק. דלפי הפכה למיקום
+      הנבואה של אפולו, שהייתה מרכזית בדת ובפוליטיקה היווניות.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: formal
+  explanation_key: mnemosyne.la.explanation.greek_religious_tradition_apollinem_delphis_colere
+  source_work_key: mnemosyne.la.work.various
+  source_author_key: mnemosyne.la.author.oral_tradition_pausanias
+  source_work: Various
+  source_author: Oral tradition / Pausanias
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0160:book=10:chapter=5
+  source_license: public_domain
+  source_dataset: greek_religious_tradition
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    uncertain; no specific verifiable source for the exact phrasing.'
+- id: la_literary_reference_brundisium_tarentumque_portus_romanos_0eff020b
+  language: la
+  canonical_reference: Brundisium Tarentumque portus Romanos
+  reference_type: literary_reference
+  surface_patterns:
+  - Brundisium Tarentumque portus Romanos
+  - portus Romanos Brundisium Tarentumque
+  - Brundisium et Tarentum portus Romani
+  short_explanation: This phrase highlights Brundisium (modern Brindisi) and Tarentum (modern Taranto)
+    as key Roman ports, crucial for trade and military logistics in southern Italy. It underscores their
+    strategic importance in Roman expansion and administration.
+  i18n_explanations:
+    en: This phrase highlights Brundisium (modern Brindisi) and Tarentum (modern Taranto) as key Roman
+      ports, crucial for trade and military logistics in southern Italy. It underscores their strategic
+      importance in Roman expansion and administration.
+    es: Esta frase destaca a Brundisium (Brindisi moderna) y Tarentum (Taranto moderna) como puertos romanos
+      clave, esenciales para el comercio y la logística militar en el sur de Italia. Subraya su importancia
+      estratégica en la expansión y administración romana.
+    fr: Cette expression met en avant Brundisium (Brindisi actuelle) et Tarentum (Tarente actuelle) comme
+      ports romains majeurs, essentiels pour le commerce et la logistique militaire dans le sud de l'Italie.
+      Elle souligne leur importance stratégique dans l'expansion et l'administration romaines.
+    de: Dieser Ausdruck hebt Brundisium (das heutige Brindisi) und Tarentum (das heutige Tarent) als wichtige
+      römische Häfen hervor, die für Handel und militärische Logistik in Süditalien entscheidend waren.
+      Er unterstreicht ihre strategische Bedeutung für die römische Expansion und Verwaltung.
+    it: Questa frase mette in evidenza Brundisium (l'odierna Brindisi) e Tarentum (l'odierna Taranto)
+      come importanti porti romani, fondamentali per il commercio e la logistica militare nell'Italia
+      meridionale. Sottolinea la loro importanza strategica nell'espansione e nell'amministrazione romana.
+    pt: Esta frase destaca Brundísio (Brindisi moderna) e Tarento (Taranto moderna) como importantes portos
+      romanos, essenciais para o comércio e a logística militar no sul da Itália. Ressalta sua importância
+      estratégica na expansão e administração romanas.
+    ru: Это выражение подчеркивает значение Брундизия (современный Бриндизи) и Тарента (современный Таранто)
+      как ключевых римских портов, важных для торговли и военной логистики в Южной Италии. Оно подчеркивает
+      их стратегическую роль в римской экспансии и управлении.
+    ja: この表現は、ブルンディシウム（現代のブリンディジ）とタレントゥム（現代のターラント）を、イタリア南部における貿易と軍事物流に不可欠な重要なローマの港として強調しています。ローマの拡大と統治におけるその戦略的重要性を示しています。
+    zh: 这一短语强调了布伦迪西（现代布林迪西）和塔伦图姆（现代塔兰托）作为罗马帝国的关键港口，对意大利南部的贸易和军事后勤至关重要。它突显了它们在罗马扩张和管理中的战略重要性。
+    ar: تشير هذه العبارة إلى بروزنديسيوم (برينديزي الحديثة) وتارينtum (تارانتو الحديثة) كموانئ رومانية
+      رئيسية، حيوية للتجارة واللوجستيات العسكرية في جنوب إيطاليا. إنها تبرز أهميتها الاستراتيجية في التوسع
+      والإدارة الرومانية.
+    he: ביטוי זה מדגיש את חשיבותם של ברונדיסיום (ברינדיזי של ימינו) וטארנטום (טאראנטו של ימינו) כנמלי
+      המפתח של רומא, חיוניים לסחר וללוגיסטיקה צבאית בדרום איטליה. הוא מדגיש את חשיבותם האסטרטגית בהתרחבות
+      ובניהול הרומי.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.de_bello_civili_brundisium_tarentumque_portus_roma
+  source_work_key: mnemosyne.la.work.de_bello_civili
+  source_author_key: mnemosyne.la.author.gaius_julius_caesar
+  source_work: De Bello Civili
+  source_author: Gaius Julius Caesar
+  source_location: 3.11.1
+  source_url: https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0153:text=Civ.
+  source_license: public_domain
+  source_dataset: de_bello_civili
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Caesar is plausible but exact phrase not verified in De Bello Civili 3.11.1.'
+- id: la_literary_reference_byzantium_a_constantino_conditum_1f1fbfcc
+  language: la
+  canonical_reference: Byzantium a Constantino conditum
+  reference_type: literary_reference
+  surface_patterns:
+  - Byzantium a Constantino conditum
+  - Constantinus Byzantium condidit
+  - Byzantium conditum a Constantino
+  short_explanation: This refers to the refounding of Byzantium as Constantinople by Emperor Constantine
+    the Great in 330 AD. It marks the city's transformation into the capital of the Eastern Roman Empire
+    and later the Byzantine Empire.
+  i18n_explanations:
+    en: This refers to the refounding of Byzantium as Constantinople by Emperor Constantine the Great
+      in 330 AD. It marks the city's transformation into the capital of the Eastern Roman Empire and later
+      the Byzantine Empire.
+    es: Esto se refiere a la refundación de Bizancio como Constantinopla por el emperador Constantino
+      el Grande en el año 330 d.C. Marca la transformación de la ciudad en la capital del Imperio Romano
+      de Oriente y, más tarde, del Imperio Bizantino.
+    fr: Cela fait référence à la refondation de Byzance en tant que Constantinople par l'empereur Constantin
+      le Grand en 330 ap. J.-C. Cela marque la transformation de la ville en capitale de l'Empire romain
+      d'Orient, puis plus tard de l'Empire byzantin.
+    de: Dies bezieht sich auf die Neugründung von Byzanz als Konstantinopel durch Kaiser Konstantin den
+      Großen im Jahr 330 n. Chr. Es markiert die Verwandlung der Stadt in die Hauptstadt des Oströmischen
+      Reiches und später des Byzantinischen Reiches.
+    it: Questo si riferisce alla rifondazione di Bisanzio come Costantinopoli da parte dell'imperatore
+      Costantino il Grande nel 330 d.C. Segna la trasformazione della città nella capitale dell'Impero
+      Romano d'Oriente e, in seguito, dell'Impero Bizantino.
+    pt: Isso se refere à refundação de Bizâncio como Constantinopla pelo imperador Constantino, o Grande,
+      em 330 d.C. Marca a transformação da cidade na capital do Império Romano do Oriente e, posteriormente,
+      do Império Bizantino.
+    ru: Это относится к переоснованию Византия как Константинополя императором Константином Великим в
+      330 году н.э. Это знаменует превращение города в столицу Восточной Римской империи, а позже — Византийской
+      империи.
+    ja: これは、330年に皇帝コンスタンティヌス大帝によってビザンティウムがコンスタンティノープルとして再建されたことを指します。この出来事は、都市が東ローマ帝国、そして後にビザンツ帝国の首都へと変貌したことを示しています。
+    zh: 这指的是公元330年由君士坦丁大帝重建拜占庭为君士坦丁堡。它标志着该城转变为东罗马帝国，后又成为拜占庭帝国的首都。
+    ar: يشير هذا إلى إعادة تأسيس بيزنطة كقسطنطينية على يد الإمبراطور قسطنطين العظيم عام 330 م. إنه يرمز
+      إلى تحول المدينة إلى عاصمة الإمبراطورية الرومانية الشرقية لاحقًا الإمبراطورية البيزنطية.
+    he: ביטוי זה מתייחס להקמתה מחדש של ביזנטיון כקונסטנטינופול על ידי הקיסר קונסטנטינוס הגדול בשנת 330
+      לספירה. הוא מסמל את הפיכתה של העיר לבירת האימפריה הרומית המזרחית ולאחר מכן לאימפריה הביזנטית.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.historia_nova_byzantium_a_constantino_conditum
+  source_work_key: mnemosyne.la.work.historia_nova
+  source_author_key: mnemosyne.la.author.zosimus
+  source_work: Historia Nova
+  source_author: Zosimus
+  source_location: 2.30.1
+  source_url: https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0236:text=Hist.
+  source_license: public_domain
+  source_dataset: historia_nova
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Zosimus plausible but phrase not verbatim in Historia Nova 2.30.1.'
+- id: la_literary_reference_cicero_consul_catilinae_coniurationem_repressit_c101452a
+  language: la
+  canonical_reference: Cicero consul Catilinae coniurationem repressit
+  reference_type: literary_reference
+  surface_patterns:
+  - Cicero consul Catilinae coniurationem repressit
+  - Catilinae coniurationem Cicero repressit
+  - Cicero Catilinae coniurationem repressit
+  short_explanation: This refers to Cicero's suppression of the Catilinarian Conspiracy in 63 BC, a pivotal
+    event in Roman history where Cicero, as consul, exposed and thwarted a plot by Lucius Sergius Catilina
+    to overthrow the Roman Republic.
+  i18n_explanations:
+    en: This refers to Cicero's suppression of the Catilinarian Conspiracy in 63 BC, a pivotal event in
+      Roman history where Cicero, as consul, exposed and thwarted a plot by Lucius Sergius Catilina to
+      overthrow the Roman Republic.
+    es: Esto se refiere a la represión de la conspiración de Catilina por parte de Cicerón en el 63 a.C.,
+      un evento crucial en la historia romana donde Cicerón, como cónsul, expuso y frustró un plan de
+      Lucio Sergio Catilina para derrocar a la República Romana.
+    fr: Cela fait référence à la répression de la conjuration de Catilina par Cicéron en 63 av. J.-C.,
+      un événement clé de l'histoire romaine où Cicéron, en tant que consul, a démasqué et déjoué un complot
+      de Lucius Sergius Catilina visant à renverser la République romaine.
+    de: Dies bezieht sich auf Ciceros Niederschlagung der Catilinarischen Verschwörung im Jahr 63 v. Chr.,
+      ein zentrales Ereignis der römischen Geschichte, bei dem Cicero als Konsul eine Verschwörung von
+      Lucius Sergius Catilina zur Abschaffung der Römischen Republik aufdeckte und vereitelte.
+    it: Questo si riferisce alla repressione della congiura di Catilina da parte di Cicerone nel 63 a.C.,
+      un evento cruciale nella storia romana in cui Cicerone, in qualità di console, svelò e sventò un
+      piano di Lucio Sergio Catilina per rovesciare la Repubblica romana.
+    pt: Isso se refere à repressão da conspiração de Catilina por Cícero em 63 a.C., um evento crucial
+      na história romana em que Cícero, como cônsul, expôs e frustrou um plano de Lúcio Sérgio Catilina
+      para derrubar a República Romana.
+    ru: Это относится к подавлению Цицероном заговора Катилины в 63 году до н.э., ключевого события в
+      римской истории, когда Цицерон, будучи консулом, раскрыл и сорвал план Луция Сергия Катилины по
+      свержению Римской Республики.
+    ja: これは、紀元前63年にキケロがカティリナの陰謀を鎮圧したことを指します。ローマの歴史における重要な出来事であり、キケロが執政官としてルキウス・セルギウス・カティリナによるローマ共和国転覆の陰謀を暴露し阻止した事件です。
+    zh: 这指的是西塞罗在公元前63年镇压卡提利那阴谋的事件，罗马历史上的一个关键事件，时任执政官的西塞罗揭露并挫败了卢基乌斯·塞尔吉乌斯·卡提利那推翻罗马共和国的阴谋。
+    ar: يشير هذا إلى قمع شيشرون لمؤامرة كاتيلينا في عام 63 قبل الميلاد، وهو حدث محوري في التاريخ الروماني
+      حيث كشف شيشرون، بصفته قنصلاً، عن خطة لوسيوس سيرغيوس كاتيلينا للإطاحة بالجمهورية الرومانية.
+    he: ביטוי זה מתייחס לדיכוי הקשר של קאטילינה על ידי קיקרו בשנת 63 לפנה"ס, אירוע מכריע בהיסטוריה הרומית
+      שבו קיקרו, כקונסול, חשף וסיכל מזימה של לוקיוס סרגיוס קאטילינה להפיל את הרפובליקה הרומית.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.in_catilinam_cicero_consul_catilinae_coniurationem
+  source_work_key: mnemosyne.la.work.in_catilinam
+  source_author_key: mnemosyne.la.author.marcus_tullius_cicero
+  source_work: In Catilinam
+  source_author: Marcus Tullius Cicero
+  source_location: '1.1'
+  source_url: https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0154:text=Catil.
+  source_license: public_domain
+  source_dataset: in_catilinam
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to In Catilinam 1.1 incorrect; phrase is a summary not a direct quote.'
+- id: la_cultural_reference_fabii_cognomen_maximi_acceperunt_ae2a1f0a
+  language: la
+  canonical_reference: Fabii cognomen Maximi acceperunt
+  reference_type: cultural_reference
+  surface_patterns:
+  - Fabii cognomen Maximi acceperunt
+  - Fabii cognomen Maximum acceperunt
+  - Fabii cognomen Maximi
+  - Fabii Maximi
+  short_explanation: Refers to the Fabii family, who earned the cognomen 'Maximi' (the greatest) for their
+    military and political achievements, particularly during the Samnite Wars. The phrase is used to highlight
+    excellence and leadership in Roman history.
+  learner_level: B2
+  confidence: 0.8
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.livy_ab_urbe_condita_phrases_fabii_cognomen_maximi
+  source_work_key: mnemosyne.la.work.various
+  source_author_key: mnemosyne.la.author.livy
+  source_work: Various
+  source_author: Livy
+  source_location: Ab Urbe Condita, Book 9, chapters 15-17
+  source_url: https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0145:text=9
+  source_license: public_domain
+  source_dataset: livy_ab_urbe_condita_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Historical
+    reference accurate, but source work is inconsistently listed as ''Various'' while citing Livy specifically;
+    surface patterns are plausible but not direct quotes.'
+- id: la_literary_reference_hannibal_alpes_transgressus_est_d8022a38
+  language: la
+  canonical_reference: Hannibal Alpes transgressus est
+  reference_type: literary_reference
+  surface_patterns:
+  - Hannibal Alpes transgressus est
+  - Hannibal Alpes transgressit
+  - Hannibal Alpes superavit
+  - transgressus Alpes Hannibal
+  short_explanation: Refers to Hannibal's daring crossing of the Alps with elephants during the Second
+    Punic War (218 BCE). The phrase is used to evoke themes of audacity, strategic brilliance, and overcoming
+    seemingly insurmountable obstacles.
+  learner_level: B2
+  confidence: 0.85
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.la.explanation.livy_ab_urbe_condita_phrases_hannibal_alpes_transg
+  source_work_key: mnemosyne.la.work.ab_urbe_condita
+  source_author_key: mnemosyne.la.author.titus_livius
+  source_work: Ab Urbe Condita
+  source_author: Titus Livius
+  source_location: Book 21, chapters 32-38
+  source_url: https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0145:text=21
+  source_license: public_domain
+  source_dataset: livy_ab_urbe_condita_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Canonical
+    reference correct, but surface pattern ''Hannibal Alpes transgressit'' uses non-standard active form
+    instead of deponent perfect participle; should be ''transgressus est''.'
+- id: la_cultural_reference_livia_drusilla_imperium_romanum_gubernavit_0c6de967
+  language: la
+  canonical_reference: Livia Drusilla imperium Romanum gubernavit
+  reference_type: cultural_reference
+  surface_patterns:
+  - Livia imperium Romanum gubernavit
+  - Livia Romana imperium tenuit
+  - Livia Augusti imperium regnavit
+  short_explanation: Refers to Livia Drusilla, wife of Augustus, who wielded significant political influence
+    during her lifetime and after Augustus' death. Often debated as a de facto ruler.
+  i18n_explanations:
+    en: Refers to Livia Drusilla, wife of Augustus, who wielded significant political influence during
+      her lifetime and after Augustus' death. Often debated as a de facto ruler.
+    es: Se refiere a Livia Drusilla, esposa de Augusto, quien ejerció una gran influencia política durante
+      su vida y tras la muerte de Augusto. A menudo debatida como gobernante *de facto*.
+    fr: Fait référence à Livie Drusilla, épouse d'Auguste, qui exerça une influence politique majeure
+      de son vivant et après la mort d'Auguste. Souvent considérée comme une dirigeante *de facto*.
+    de: Bezieht sich auf Livia Drusilla, die Frau des Augustus, die zu Lebzeiten und nach seinem Tod erheblichen
+      politischen Einfluss ausübte. Wird oft als *de facto*-Herrscherin diskutiert.
+    it: Si riferisce a Livia Drusilla, moglie di Augusto, che esercitò una notevole influenza politica
+      durante la sua vita e dopo la morte di Augusto. Spesso considerata una governante *de facto*.
+    pt: Refere-se a Lívia Drusila, esposa de Augusto, que exerceu grande influência política durante sua
+      vida e após a morte de Augusto. Frequentemente debatida como governante *de facto*.
+    ru: Относится к Ливии Друзилле, жене Августа, которая обладала значительным политическим влиянием
+      при жизни и после его смерти. Часто рассматривается как фактическая правительница.
+    ja: アウグストゥスの妻リウィア・ドルシッラを指し、彼女は生前およびアウグストゥスの死後も大きな政治的影響力を持った。事実上の支配者としてしばしば議論される。
+    zh: 指奥古斯都之妻莉薇娅·德鲁西拉，她在世时及奥古斯都死后都拥有巨大的政治影响力。常被视为事实上的统治者。
+    ar: يشير إلى ليفيا دروسيلا، زوجة أغسطس، التي مارست نفوذًا سياسيًا كبيرًا خلال حياتها وبعد وفاته. غالبًا
+      ما تُناقش كحاكمة *بحكم الواقع*.
+    he: מתייחס לליביה דרוסילה, אשתו של אוגוסטוס, שהפעילה השפעה פוליטית משמעותית במהלך חייה ולאחר מותו.
+      לעיתים נדונה כמושלת *דה פקטו*.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: formal
+  explanation_key: mnemosyne.la.explanation.tacitus_annales_livia_livia_drusilla_imperium_roma
+  source_work_key: mnemosyne.la.work.various
+  source_author_key: mnemosyne.la.author.tacitus
+  source_work: Various
+  source_author: Tacitus
+  source_location: Annales 1.5
+  source_url: https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0078:text=Annales:book=1:chapter=5
+  source_license: public_domain
+  source_dataset: tacitus_annales_livia
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Overstates
+    Livia''s official role; she was influential but not a ruler.'
+- id: la_classical_or_scriptural_allusion_in_principio_erat_verbum_et_verbum_erat_apud_deum_e735f354
+  language: la
+  canonical_reference: In principio erat Verbum, et Verbum erat apud Deum
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - In principio erat Verbum, et Verbum erat apud Deum
+  - In principio erat Verbum
+  - Verbum erat apud Deum
+  - In principio erat Verbum et Verbum erat apud Deum
+  short_explanation: The opening verse of the Gospel of John in the Latin Vulgate, meaning 'In the beginning
+    was the Word, and the Word was with God.' It is foundational in Christian theology, emphasizing the
+    divine nature of Christ as the Logos.
+  i18n_explanations:
+    en: The opening verse of the Gospel of John in the Latin Vulgate, meaning 'In the beginning was the
+      Word, and the Word was with God.' It is foundational in Christian theology, emphasizing the divine
+      nature of Christ as the Logos.
+    es: El versículo inicial del Evangelio de Juan en la Vulgata Latina, que significa 'En el principio
+      era el Verbo, y el Verbo estaba con Dios'. Es fundamental en la teología cristiana, destacando la
+      naturaleza divina de Cristo como el Logos.
+    fr: Le verset d'ouverture de l'Évangile de Jean dans la Vulgate latine, signifiant 'Au commencement
+      était le Verbe, et le Verbe était auprès de Dieu'. Il est fondamental dans la théologie chrétienne,
+      soulignant la nature divine du Christ en tant que Logos.
+    de: Der Eröffnungssatz des Johannesevangeliums in der lateinischen Vulgata mit der Bedeutung 'Im Anfang
+      war das Wort, und das Wort war bei Gott'. Er ist grundlegend für die christliche Theologie und betont
+      die göttliche Natur Christi als Logos.
+    it: Il versetto iniziale del Vangelo di Giovanni nella Vulgata latina, che significa 'In principio
+      era il Verbo, e il Verbo era presso Dio'. È fondamentale nella teologia cristiana, sottolineando
+      la natura divina di Cristo come Logos.
+    pt: O versículo inicial do Evangelho de João na Vulgata Latina, que significa 'No princípio era o
+      Verbo, e o Verbo estava com Deus'. É fundamental na teologia cristã, destacando a natureza divina
+      de Cristo como o Logos.
+    ru: Начальный стих Евангелия от Иоанна в латинской Вульгате, означающий 'В начале было Слово, и Слово
+      было у Бога'. Это фундаментальное положение христианской теологии, подчеркивающее божественную природу
+      Христа как Логоса.
+    ja: ラテン語のウルガタ訳ヨハネ福音書の冒頭の言葉で、「初めに言（ことば）があった。言は神と共にあった」という意味。キリスト教神学の基礎であり、キリストの神性、すなわちロゴスとしての本質を強調しています。
+    zh: 拉丁文《武加大译本圣经》中《约翰福音》的开篇句，意为“太初有道，道与上帝同在”。这是基督教神学的基础，强调基督作为“道”（逻各斯）的神性。
+    ar: الآية الافتتاحية لإنجيل يوحنا في فولغاتا اللاتينية، وتعني 'في البدء كان الكلمة، والكلمة كان عند
+      الله'. تعد أساسية في اللاهوت المسيحي، مؤكدة الطبيعة الإلهية للمسيح بصفته اللوغوس.
+    he: פסוק הפתיחה של הבשורה על-פי יוחנן בוולגטה הלטינית, שמשמעו 'בראשית היה הדבר, והדבר היה אצל האלוהים'.
+      מהווה יסוד בתאולוגיה הנוצרית, ומדגיש את מהותו האלוהית של המשיח כ'לוגוס'.
+  learner_level: B2
+  confidence: 0.8
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.la.explanation.nt_john_prologue_in_principio_erat_verbum_et_verbu
+  source_work_key: mnemosyne.la.work.novum_testamentum_graece
+  source_author_key: mnemosyne.la.author.anonymous_traditionally_attributed_to_john_the_apo
+  source_work: Novum Testamentum Graece
+  source_author: Anonymous (traditionally attributed to John the Apostle)
+  source_location: John 1:1
+  source_url: https://www.biblegateway.com/passage/?search=John+1%3A1&version=VULGATE
+  source_license: public_domain
+  source_dataset: nt_john_prologue
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    work should be Vulgata, not Novum Testamentum Graece, as the phrase is the Latin Vulgate version.'
+- id: la_classical_or_scriptural_allusion_panem_nostrum_quotidianum_da_nobis_hodie_0ae50e8c
+  language: la
+  canonical_reference: Panem nostrum quotidianum da nobis hodie
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Panem nostrum quotidianum da nobis hodie
+  - Panem nostrum quotidianum
+  - Da nobis hodie panem nostrum quotidianum
+  - Panem nostrum quotidianum da nobis
+  short_explanation: A line from the Lord's Prayer in the Latin Vulgate, meaning 'Give us this day our
+    daily bread.' It is a petition for sustenance and is central to Christian liturgical practice.
+  i18n_explanations:
+    en: A line from the Lord's Prayer in the Latin Vulgate, meaning 'Give us this day our daily bread.'
+      It is a petition for sustenance and is central to Christian liturgical practice.
+    es: Una línea de la Oración del Señor en la Vulgata Latina, que significa 'Danos hoy nuestro pan de
+      cada día'. Es una petición de sustento y es central en la práctica litúrgica cristiana.
+    fr: Une ligne du Notre Père dans la Vulgate latine, signifiant 'Donne-nous aujourd'hui notre pain
+      de ce jour'. C'est une prière pour la subsistance et est centrale dans la pratique liturgique chrétienne.
+    de: Eine Zeile aus dem Vaterunser in der lateinischen Vulgata mit der Bedeutung 'Gib uns heute unser
+      tägliches Brot'. Es ist eine Bitte um Nahrung und zentral für die christliche Liturgie.
+    it: Una linea del Padre Nostro nella Vulgata latina, che significa 'Dacci oggi il nostro pane quotidiano'.
+      È una richiesta di sostentamento ed è centrale nella pratica liturgica cristiana.
+    pt: Uma linha do Pai Nosso na Vulgata Latina, que significa 'Dá-nos hoje o nosso pão de cada dia'.
+      É um pedido de sustento e é central na prática litúrgica cristã.
+    ru: Строка из молитвы Отче наш на латинском языке, означающая 'Хлеб наш насущный дай нам на сей день'.
+      Это прошение о пропитании и центральный элемент христианской литургии.
+    ja: ラテン語の主の祈りの一節で、「私たちの日ごとの糧を今日与えたまえ」という意味。生活の糧を求める祈りであり、キリスト教の典礼において中心的な位置を占めています。
+    zh: 拉丁文《主祷文》中的一句，意为“今日赐给我们日用的食物”。这是一个求生计的祈祷，也是基督教礼拜仪式的核心部分。
+    ar: سطر من صلاة الرب في فولغاتا اللاتينية، وتعني 'أعطنا خبزنا كفافنا هذا اليوم'. إنها طلبة للرزق وتشكل
+      جزءًا مركزيًا في الممارسة الطقسية المسيحية.
+    he: שורה מתפילת האדון בוולגטה הלטינית, שמשמעה 'את לחמנו הדיומי תן לנו היום'. זו בקשה לפרנסה והיא מרכזית
+      בפרקטיקה הליטורגית הנוצרית.
+  learner_level: A2
+  confidence: 0.8
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.la.explanation.nt_lords_prayer_panem_nostrum_quotidianum_da_nobis
+  source_work_key: mnemosyne.la.work.novum_testamentum_graece
+  source_author_key: mnemosyne.la.author.anonymous_traditionally_attributed_to_jesus
+  source_work: Novum Testamentum Graece
+  source_author: Anonymous (traditionally attributed to Jesus)
+  source_location: Matthew 6:11; Luke 11:3 (Vulgate)
+  source_url: https://www.biblegateway.com/passage/?search=Matthew+6%3A11&version=VULGATE
+  source_license: public_domain
+  source_dataset: nt_lords_prayer
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    work should be Vulgata, not Novum Testamentum Graece, as the phrase is the Latin Vulgate version.'
+- id: la_classical_or_scriptural_allusion_danaum_fatale_munus_b9428931
+  language: la
+  canonical_reference: Danaum fatale munus
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - Danaum fatale munus
+  - fatale munus Danaum
+  - Danaum fatum
+  - munus Danaum
+  short_explanation: The 'fatal gift of the Danaans' refers to the Trojan Horse, a deceptive offering
+    that led to the fall of Troy. It symbolizes treachery disguised as a gift.
+  i18n_explanations:
+    en: The 'fatal gift of the Danaans' refers to the Trojan Horse, a deceptive offering that led to the
+      fall of Troy. It symbolizes treachery disguised as a gift.
+    es: El 'regalo fatal de los dánaos' se refiere al caballo de Troya, una ofrenda engañosa que provocó
+      la caída de Troya. Simboliza la traición disfrazada de regalo.
+    fr: Le 'cadeau fatal des Danaens' fait référence au cheval de Troie, une offrande trompeuse qui a
+      causé la chute de Troie. Il symbolise la trahison déguisée en présent.
+    de: Das 'verhängnisvolle Geschenk der Danaer' bezieht sich auf das Trojanische Pferd, ein trügerisches
+      Angebot, das zum Fall Trojas führte. Es symbolisiert Verrat, der als Geschenk getarnt ist.
+    it: Il 'fatale dono dei Danai' si riferisce al cavallo di Troia, un'offerta ingannevole che portò
+      alla caduta di Troia. Simboleggia il tradimento camuffato da dono.
+    pt: O 'presente fatal dos Dânaos' refere-se ao Cavalo de Troia, uma oferta enganosa que levou à queda
+      de Troia. Simboliza a traição disfarçada de presente.
+    ru: «Роковой дар данайцев» — это Троянский конь, обманчивый подарок, который привёл к падению Трои.
+      Он символизирует предательство, скрытое под видом подарка.
+    ja: 「ダナオス族の災いの贈り物」とはトロイの木馬のことで、トロイを滅ぼした偽りの贈り物を指します。贈り物に偽装された裏切りを象徴しています。
+    zh: “达那俄斯人的致命礼物”指的是特洛伊木马，一个导致特洛伊城陷落的诱饵。它象征着伪装成礼物的背叛。
+    ar: «هدية الدانانيين المميتة» تشير إلى حصان طروادة، وهو هدية خادعة أدت إلى سقوط طروادة. إنها ترمز
+      إلى الخيانة المتخفية بهدية.
+    he: «מתנת הדאנאים המרושעת» מתייחסת לסוס הטרויאני, מתנה מרמה שהובילה לנפילת טרויה. היא מסמלת בגידה
+      המוסווית כמתנה.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.la.explanation.vergil_aeneid_phrases_danaum_fatale_munus
+  source_work_key: mnemosyne.la.work.aeneis
+  source_author_key: mnemosyne.la.author.publius_vergilius_maro
+  source_work: Aeneis
+  source_author: Publius Vergilius Maro
+  source_location: Liber II, versus 19
+  source_url: https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0054:text=2
+  source_license: public_domain
+  source_dataset: vergil_aeneid_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase ''Danaum fatale munus'' is plausible but not directly attested at the given source location
+    (Aeneid II.19); it may be a later paraphrase.'

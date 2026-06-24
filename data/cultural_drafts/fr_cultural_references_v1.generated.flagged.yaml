@@ -1,0 +1,411 @@
+- id: fr_classical_or_scriptural_allusion_le_talon_d_achille_4042b1db
+  language: fr
+  canonical_reference: Le talon d'Achille
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - talon d'Achille
+  - le talon d'Achille
+  - son talon d'Achille
+  short_explanation: A person's vulnerable point; from the myth of Achilles whose only weak spot was his
+    heel.
+  i18n_explanations:
+    en: A person's vulnerable point; from the myth of Achilles whose only weak spot was his heel.
+    es: El punto vulnerable de una persona; del mito de Aquiles, cuyo único punto débil era su talón.
+    fr: Le point vulnérable d'une personne ; du mythe d'Achille dont le seul point faible était son talon.
+    de: Der verwundbare Punkt einer Person; aus dem Mythos von Achilles, dessen einzige Schwachstelle
+      seine Ferse war.
+    it: Il punto vulnerabile di una persona; dal mito di Achille, il cui unico punto debole era il tallone.
+    pt: O ponto vulnerável de uma pessoa; do mito de Aquiles, cujo único ponto fraco era seu calcanhar.
+    ru: Уязвимое место человека; из мифа об Ахилле, чьим единственным слабым местом была пятка.
+    ja: 人の弱点。アキレスの唯一の弱点がかかとだったという神話から。
+    zh: 一个人的弱点；源自阿喀琉斯的神话，他唯一的弱点是脚后跟。
+    ar: نقطة ضعف الإنسان؛ من أسطورة أخيل الذي كان نقطة ضعفه الوحيدة كعبه.
+    he: הנקודה הפגיעה של אדם; מהמיתוס על אכילס שנקודת התורפה היחידה שלו הייתה העקב.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.fr.explanation.fr_mythological_expressions_le_talon_d_achille
+  source_work_key: mnemosyne.fr.work.achilleid
+  source_author_key: mnemosyne.fr.author.statius
+  source_work: Achilleid
+  source_author: Statius
+  source_location: Book 1
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Stat.+Ach.+1.269
+  source_license: public_domain
+  source_dataset: fr_mythological_expressions
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    work and location are not the primary origin of the myth; Achilles'' heel is not detailed in Statius''
+    Achilleid.'
+- id: fr_classical_or_scriptural_allusion_la_pomme_de_discorde_d21955d2
+  language: fr
+  canonical_reference: La pomme de discorde
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - pomme de discorde
+  - la pomme de discorde
+  - une pomme de discorde
+  short_explanation: Something that causes conflict; from the golden apple thrown by Eris at the wedding
+    of Peleus and Thetis, leading to the Trojan War.
+  i18n_explanations:
+    en: Something that causes conflict; from the golden apple thrown by Eris at the wedding of Peleus
+      and Thetis, leading to the Trojan War.
+    es: Algo que causa conflicto; de la manzana dorada lanzada por Eris en la boda de Peleo y Tetis, que
+      llevó a la Guerra de Troya.
+    fr: Quelque chose qui cause un conflit; de la pomme d'or lancée par Éris au mariage de Pélée et Thétis,
+      conduisant à la guerre de Troie.
+    de: Etwas, das Konflikte verursacht; vom goldenen Apfel, den Eris bei der Hochzeit von Peleus und
+      Thetis warf, was zum Trojanischen Krieg führte.
+    it: Qualcosa che causa conflitto; dalla mela d'oro lanciata da Eris al matrimonio di Peleo e Teti,
+      che portò alla guerra di Troia.
+    pt: Algo que causa conflito; da maçã dourada lançada por Éris no casamento de Peleu e Tétis, levando
+      à Guerra de Troia.
+    ru: Нечто, вызывающее конфликт; от золотого яблока, брошенного Эридой на свадьбе Пелея и Фетиды, что
+      привело к Троянской войне.
+    ja: 争いの原因となるもの。エリスがペーレウスとテティスの結婚式に投げた黄金の林檎がトロイ戦争の原因となったという神話から。
+    zh: 引起冲突的东西；源自厄里斯在佩琉斯和忒提斯的婚礼上抛下的金苹果，导致了特洛伊战争。
+    ar: شيء يسبب الصراع؛ من التفاحة الذهبية التي ألقتها إيريس في حفل زفاف بيليوس وثيتيس، مما أدى إلى حرب
+      طروادة.
+    he: משהו שגורם לעימות; מהתפוח המוזהב שהושלך על ידי אריס בחתונתם של פליאוס ותטיס, שהוביל למלחמת טרויה.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.fr.explanation.fr_mythological_expressions_la_pomme_de_discorde
+  source_work_key: mnemosyne.fr.work.métamorphoses
+  source_author_key: mnemosyne.fr.author.ovide
+  source_work: Métamorphoses
+  source_author: Ovide
+  source_license: public_domain
+  source_dataset: fr_mythological_expressions
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    myth of the apple of discord is not primarily from Ovid''s Metamorphoses; earlier sources are more
+    direct.'
+- id: fr_classical_or_scriptural_allusion_le_jugement_de_pâris_a0a42ad4
+  language: fr
+  canonical_reference: Le jugement de Pâris
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - jugement de Pâris
+  - le jugement de Pâris
+  - un jugement à la Pâris
+  short_explanation: Refers to the mythological story where Paris, a Trojan prince, judges which of three
+    goddesses (Hera, Athena, Aphrodite) is the fairest, leading to the Trojan War. Used metaphorically
+    for a difficult or pivotal decision.
+  i18n_explanations:
+    en: Refers to the mythological story where Paris, a Trojan prince, judges which of three goddesses
+      (Hera, Athena, Aphrodite) is the fairest, leading to the Trojan War. Used metaphorically for a difficult
+      or pivotal decision.
+    es: Se refiere a la historia mitológica en la que Paris, un príncipe troyano, juzga cuál de las tres
+      diosas (Hera, Atenea, Afrodita) es la más bella, lo que lleva a la Guerra de Troya. Se usa metafóricamente
+      para una decisión difícil o crucial.
+    fr: Fait référence à l'histoire mythologique où Pâris, un prince troyen, juge laquelle des trois déesses
+      (Héra, Athéna, Aphrodite) est la plus belle, menant à la guerre de Troie. Utilisé métaphoriquement
+      pour une décision difficile ou capitale.
+    de: Bezieht sich auf die mythologische Geschichte, in der Paris, ein trojanischer Prinz, entscheidet,
+      welche der drei Göttinnen (Hera, Athene, Aphrodite) die schönste ist, was zum Trojanischen Krieg
+      führt. Metaphorisch für eine schwierige oder entscheidende Wahl.
+    it: Si riferisce alla storia mitologica in cui Paride, un principe troiano, giudica quale delle tre
+      dee (Era, Atena, Afrodite) sia la più bella, portando alla guerra di Troia. Usato metaforicamente
+      per una decisione difficile o cruciale.
+    pt: Refere-se à história mitológica em que Páris, um príncipe troiano, julga qual das três deusas
+      (Hera, Atena, Afrodite) é a mais bela, levando à Guerra de Troia. Usado metaforicamente para uma
+      decisão difícil ou crucial.
+    ru: Относится к мифологической истории, где Парис, троянский принц, судит, какая из трех богинь (Гера,
+      Афина, Афродита) самая прекрасная, что приводит к Троянской войне. Используется метафорически для
+      трудного или решающего выбора.
+    ja: トロイの王子パリスが3人の女神（ヘラ、アテナ、アフロディーテ）のうち誰が最も美しいかを判断し、それがトロイ戦争へとつながる神話の物語を指す。困難または決定的な決断の比喩として用いられる。
+    zh: 指的是特洛伊王子帕里斯评判三位女神（赫拉、雅典娜、阿佛洛狄忒）谁最美丽的神话故事，最终导致了特洛伊战争。比喻困难或关键的决定。
+    ar: يشير إلى القصة الأسطورية حيث باريس، أمير طروادة، يحكم أي من الآلهة الثلاث (هيرا، أثينا، أفروديت)
+      هي الأجمل، مما يؤدي إلى حرب طروادة. يستخدم مجازياً لقرار صعب أو محوري.
+    he: מתייחס לסיפור המיתולוגי שבו פאריס, נסיך טרויאני, שופט מי מבין שלוש האלות (הרה, אתנה, אפרודיטה)
+      היא היפה ביותר, מה שמוביל למלחמת טרויה. משמש כמטפורה להחלטה קשה או מכרעת.
+  learner_level: C1
+  confidence: 0.75
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.fr.explanation.fr_cultural_references_le_jugement_de_pâris
+  source_work_key: mnemosyne.fr.work.various_greek_mythology_notably_in_homer_s_iliad_a
+  source_author_key: mnemosyne.fr.author.homer_greek_mythology
+  source_work: Various (Greek mythology, notably in Homer's Iliad and later texts)
+  source_author: Homer / Greek mythology
+  source_url: https://www.perseus.tufts.edu/hopper/text?doc=Hom.+Il.+24.1
+  source_license: public_domain
+  source_dataset: fr_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    surface pattern ''un jugement à la Pâris'' is non-standard and may confuse learners.'
+- id: fr_literary_reference_le_complexe_d_œdipe_e96c05c6
+  language: fr
+  canonical_reference: Le complexe d'Œdipe
+  reference_type: literary_reference
+  surface_patterns:
+  - complexe d'Œdipe
+  - le complexe d'Œdipe
+  - Œdipe complexe
+  short_explanation: A psychoanalytic concept introduced by Sigmund Freud, based on the Greek myth of
+    Oedipus who unknowingly kills his father and marries his mother. It describes a child's unconscious
+    sexual desire for the opposite-sex parent and rivalry with the same-sex parent.
+  i18n_explanations:
+    en: A psychoanalytic concept introduced by Sigmund Freud, based on the Greek myth of Oedipus who unknowingly
+      kills his father and marries his mother. It describes a child's unconscious sexual desire for the
+      opposite-sex parent and rivalry with the same-sex parent.
+    es: Un concepto psicoanalítico introducido por Sigmund Freud, basado en el mito griego de Edipo, que
+      sin saberlo mata a su padre y se casa con su madre. Describe el deseo sexual inconsciente de un
+      niño hacia el progenitor del sexo opuesto y la rivalidad con el del mismo sexo.
+    fr: Un concept psychanalytique introduit par Sigmund Freud, basé sur le mythe grec d'Œdipe qui tue
+      involontairement son père et épouse sa mère. Il décrit le désir sexuel inconscient d'un enfant pour
+      le parent du sexe opposé et la rivalité avec le parent du même sexe.
+    de: Ein von Sigmund Freud eingeführtes psychoanalytisches Konzept, basierend auf dem griechischen
+      Mythos von Ödipus, der unwissentlich seinen Vater tötet und seine Mutter heiratet. Es beschreibt
+      das unbewusste sexuelle Verlangen eines Kindes nach dem Elternteil des anderen Geschlechts und die
+      Rivalität mit dem gleichgeschlechtlichen Elternteil.
+    it: Un concetto psicoanalitico introdotto da Sigmund Freud, basato sul mito greco di Edipo che uccide
+      inconsapevolmente suo padre e sposa sua madre. Descrive il desiderio sessuale inconscio di un bambino
+      per il genitore di sesso opposto e la rivalità con quello dello stesso sesso.
+    pt: Um conceito psicanalítico introduzido por Sigmund Freud, baseado no mito grego de Édipo, que sem
+      saber mata seu pai e casa com sua mãe. Descreve o desejo sexual inconsciente de uma criança pelo
+      genitor do sexo oposto e a rivalidade com o do mesmo sexo.
+    ru: Психоаналитическая концепция, введенная Зигмундом Фрейдом, основанная на греческом мифе об Эдипе,
+      который невольно убивает своего отца и женится на своей матери. Описывает бессознательное сексуальное
+      влечение ребенка к родителю противоположного пола и соперничество с родителем того же пола.
+    ja: ジークムント・フロイトによって導入された精神分析の概念で、無意識のうちに父を殺し母と結婚するオイディプスのギリシャ神話に基づく。子どもが異性の親に対して無意識の性的欲求を持ち、同性の親と競争することを描写する。
+    zh: 由西格蒙德·弗洛伊德引入的精神分析概念，基于俄狄浦斯无意中杀父娶母的希腊神话。描述了儿童对异性父母的无意识性欲以及对同性父母的竞争。
+    ar: مفهوم تحليلي نفسي قدمه سيغموند فرويد، استنادًا إلى الأسطورة اليونانية لأوديب الذي يقتل والده دون
+      علم ويتزوج والدته. يصف الرغبة الجنسية اللاواعية للطفل تجاه الوالد من الجنس الآخر والتنافس مع الوالد
+      من نفس الجنس.
+    he: מושג פסיכואנליטי שהוצג על ידי זיגמונד פרויד, המבוסס על המיתוס היווני של אדיפוס שהורג את אביו שלא
+      ביודעין ונושא את אמו לאישה. הוא מתאר את התשוקה המינית הלא מודעת של ילד להורה מהמין השני ואת היריבות
+      עם ההורה מאותו המין.
+  learner_level: C1
+  confidence: 0.8
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.fr.explanation.fr_cultural_references_le_complexe_d_œdipe
+  source_work_key: mnemosyne.fr.work.the_interpretation_of_dreams_die_traumdeutung_by_s
+  source_author_key: mnemosyne.fr.author.sigmund_freud_primary_sophocles_myth
+  source_work: The Interpretation of Dreams (Die Traumdeutung) by Sigmund Freud; also Sophocles' Oedipus
+    Rex
+  source_author: Sigmund Freud (primary); Sophocles (myth)
+  source_location: Freud, Chapter 5
+  source_url: https://www.gutenberg.org/ebooks/2581
+  source_license: public_domain
+  source_dataset: fr_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    surface pattern ''Œdipe complexe'' is an anglicism and not standard French; prefer ''complexe d''Œdipe''.'
+- id: fr_cultural_reference_à_moi_d_auvergne_voilà_les_ennemis_e7885890
+  language: fr
+  canonical_reference: À moi, d'Auvergne, voilà les ennemis!
+  reference_type: cultural_reference
+  surface_patterns:
+  - À moi, d'Auvergne, voilà les ennemis!
+  - À moi d'Auvergne voilà les ennemis
+  - À moi, d'Auvergne, voilà les ennemis !
+  - À moi d'Auvergne ! voilà les ennemis !
+  short_explanation: A battle cry attributed to French soldiers during the French Revolutionary Wars,
+    symbolizing courage and readiness to fight.
+  i18n_explanations:
+    en: A battle cry attributed to French soldiers during the French Revolutionary Wars, symbolizing courage
+      and readiness to fight.
+    es: Un grito de guerra atribuido a los soldados franceses durante las Guerras Revolucionarias Francesas,
+      que simboliza el coraje y la disposición para luchar.
+    fr: Un cri de guerre attribué aux soldats français pendant les guerres de la Révolution française,
+      symbolisant le courage et la volonté de combattre.
+    de: Ein Schlachtruf, der französischen Soldaten während der Revolutionskriege zugeschrieben wird und
+      Mut sowie Kampfbereitschaft symbolisiert.
+    it: Un grido di guerra attribuito ai soldati francesi durante le guerre rivoluzionarie francesi, che
+      simboleggia coraggio e prontezza a combattere.
+    pt: Um grito de guerra atribuído aos soldados franceses durante as Guerras Revolucionárias Francesas,
+      simbolizando coragem e prontidão para lutar.
+    ru: Боевой клич, приписываемый французским солдатам времен Французских революционных войн, символизирующий
+      мужество и готовность к бою.
+    ja: フランス革命戦争中のフランス兵士に帰せられる鬨の声で、勇気と戦闘への覚悟を象徴する。
+    zh: 法国革命战争期间法国士兵的战斗口号，象征着勇气和战斗准备。
+    ar: صرخة حرب نسبت إلى الجنود الفرنسيين خلال حروب الثورة الفرنسية، ترمز إلى الشجاعة والاستعداد للقتال.
+    he: קריאת קרב המיוחסת לחיילים צרפתיים במהלך מלחמות המהפכה הצרפתית, המסמלת אומץ ומוכנות לקרב.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.fr.explanation.fr_cultural_references_à_moi_d_auvergne_voilà_les_
+  source_work_key: mnemosyne.fr.work.historical_tradition
+  source_author_key: mnemosyne.fr.author.unknown
+  source_work: Historical tradition
+  source_author: Unknown
+  source_license: public_domain
+  source_dataset: fr_cultural_references
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Phrase
+    plausible but lacks specific verifiable source; less widely recognized.'
+- id: fr_literary_reference_le_grand_méchant_loup_0fa54ae7
+  language: fr
+  canonical_reference: Le grand méchant loup
+  reference_type: literary_reference
+  surface_patterns:
+  - le grand méchant loup
+  - grand méchant loup
+  - le loup
+  short_explanation: The wolf character in fairy tales, especially Little Red Riding Hood; symbolizes
+    danger and deception.
+  i18n_explanations:
+    en: The wolf character in fairy tales, especially Little Red Riding Hood; symbolizes danger and deception.
+    es: El lobo de los cuentos de hadas, especialmente Caperucita Roja; simboliza el peligro y el engaño.
+    fr: Le loup des contes de fées, notamment Le Petit Chaperon rouge ; symbolise le danger et la tromperie.
+    de: Der Wolf in Märchen, besonders Rotkäppchen; symbolisiert Gefahr und Täuschung.
+    it: Il lupo delle fiabe, specialmente Cappuccetto Rosso; simboleggia pericolo e inganno.
+    pt: O lobo dos contos de fadas, especialmente Chapeuzinho Vermelho; simboliza perigo e engano.
+    ru: Волк из сказок, особенно из «Красной Шапочки»; символизирует опасность и обман.
+    ja: 童話、特に赤ずきんに登場する狼；危険と欺瞞の象徴。
+    zh: 童话中的狼角色，特别是小红帽；象征危险和欺骗。
+    ar: شخصية الذئب في الحكايات الخرافية، خاصة ذات الرداء الأحمر؛ يرمز إلى الخطر والخداع.
+    he: דמות הזאב באגדות, במיוחד כיפה אדומה; מסמל סכנה והונאה.
+  learner_level: A2
+  confidence: 0.6
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.fr.explanation.fr_contes_perrault_le_grand_méchant_loup
+  source_work_key: mnemosyne.fr.work.histoires_ou_contes_du_temps_passé
+  source_author_key: mnemosyne.fr.author.charles_perrault
+  source_work: Histoires ou contes du temps passé
+  source_author: Charles Perrault
+  source_location: Le Petit Chaperon rouge
+  source_url: https://fr.wikisource.org/wiki/Le_Petit_Chaperon_rouge
+  source_license: public_domain
+  source_dataset: fr_contes_perrault
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase ''le grand méchant loup'' is not found in Perrault''s original text but is a later cultural
+    adaptation; surface pattern overclaims direct source.'
+- id: fr_literary_reference_tout_ce_qui_brille_n_est_pas_or_aae806ff
+  language: fr
+  canonical_reference: Tout ce qui brille n’est pas or
+  reference_type: literary_reference
+  surface_patterns:
+  - Tout ce qui brille n’est pas or
+  - Tout ce qui brille n'est pas or
+  - Tout ce qui reluit n'est pas or
+  short_explanation: This French proverb means 'All that glitters is not gold,' cautioning against judging
+    by appearances. It originates from Shakespeare's The Merchant of Venice and is widely used in French.
+  i18n_explanations:
+    en: This French proverb means 'All that glitters is not gold,' cautioning against judging by appearances.
+      It originates from Shakespeare's The Merchant of Venice and is widely used in French.
+    es: Este proverbio francés significa 'No todo lo que brilla es oro', advirtiendo contra juzgar por
+      las apariencias. Se origina en El mercader de Venecia de Shakespeare y se usa ampliamente en francés.
+    fr: Ce proverbe français signifie 'Tout ce qui brille n'est pas or', mettant en garde contre les jugements
+      sur les apparences. Il provient du Marchand de Venise de Shakespeare et est largement utilisé en
+      français.
+    de: Dieses französische Sprichwort bedeutet 'Es ist nicht alles Gold, was glänzt' und warnt davor,
+      nach dem Äußeren zu urteilen. Es stammt aus Shakespeares Der Kaufmann von Venedig und wird im Französischen
+      häufig verwendet.
+    it: Questo proverbio francese significa 'Non è tutto oro ciò che luccica', mettendo in guardia dal
+      giudicare dalle apparenze. Ha origine ne Il mercante di Venezia di Shakespeare ed è ampiamente usato
+      in francese.
+    pt: Este provérbio francês significa 'Nem tudo que reluz é ouro', alertando contra julgar pelas aparências.
+      Origina-se de O Mercador de Veneza de Shakespeare e é amplamente usado em francês.
+    ru: Эта французская пословица означает 'Не всё то золото, что блестит', предостерегая от суждений
+      по внешности. Она происходит из 'Венецианского купца' Шекспира и широко используется во французском
+      языке.
+    ja: このフランスのことわざは「輝くものすべてが金とは限らない」という意味で、外見で判断することに警告しています。シェイクスピアの『ベニスの商人』に由来し、フランス語で広く使われています。
+    zh: 这句法国谚语的意思是'闪光的不都是金子'，告诫不要以貌取人。它源自莎士比亚的《威尼斯商人》，在法语中被广泛使用。
+    ar: يعني هذا المثل الفرنسي 'ليس كل ما يلمع ذهباً'، محذراً من الحكم على المظاهر. أصله من مسرحية 'تاجر
+      البندقية' لشكسبير ويستخدم على نطاق واسع في الفرنسية.
+    he: הפתגם הצרפתי הזה פירושו 'לא כל הנוצץ זהב', ומזהיר מפני שיפוט לפי המראה החיצוני. מקורו במחזה 'הסוחר
+      מוונציה' של שייקספיר והוא נמצא בשימוש נרחב בצרפתית.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.fr.explanation.fr_proverbs_001_tout_ce_qui_brille_n_est_pas_or
+  source_work_key: mnemosyne.fr.work.the_merchant_of_venice
+  source_author_key: mnemosyne.fr.author.william_shakespeare
+  source_work: The Merchant of Venice
+  source_author: William Shakespeare
+  source_location: Act 2, Scene 7
+  source_url: https://fr.wikisource.org/wiki/Le_Marchand_de_Venise
+  source_license: public_domain
+  source_dataset: fr_proverbs_001
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Shakespeare is incorrect; the French proverb predates and is not derived from The Merchant of Venice.'
+- id: fr_literary_reference_rodrigue_as_tu_du_cœur_bb1abcfe
+  language: fr
+  canonical_reference: Rodrigue, as-tu du cœur?
+  reference_type: literary_reference
+  surface_patterns:
+  - Rodrigue, as-tu du cœur
+  - as-tu du cœur
+  short_explanation: Key line from Corneille's tragedy 'Le Cid', where Chimène questions Rodrigue's courage.
+  i18n_explanations:
+    en: Key line from Corneille's tragedy 'Le Cid', where Chimène questions Rodrigue's courage.
+    es: Línea clave de la tragedia 'El Cid' de Corneille, donde Chimène cuestiona el valor de Rodrigue.
+    fr: Réplique clé de la tragédie 'Le Cid' de Corneille, où Chimène interroge le courage de Rodrigue.
+    de: Schlüsselzeile aus Corneilles Tragödie 'Der Cid', in der Chimène Rodrigue nach seinem Mut fragt.
+    it: Verso chiave della tragedia 'Il Cid' di Corneille, dove Chimène mette in dubbio il coraggio di
+      Rodrigue.
+    pt: Linha-chave da tragédia 'O Cid' de Corneille, onde Chimène questiona a coragem de Rodrigue.
+    ru: Ключевая строка из трагедии Корнеля 'Сид', где Химена сомневается в храбрости Родриго.
+    ja: コルネイユの悲劇『ル・シッド』の重要な台詞。シメーヌがロドリーグの勇気を問いただす場面。
+    zh: 高乃依悲剧《熙德》中的关键台词，希梅娜质疑罗德里格的勇气。
+    ar: سطر رئيسي من مأساة 'السيد' لكورني، حيث تشك شيمين في شجاعة رودريغ.
+    he: שורת מפתח מהטרגדיה 'לה סיד' של קורניי, שבה שימן מטילה ספק באומץ ליבו של רודריג.
+  learner_level: B2
+  confidence: 0.8
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.fr.explanation.fr_corneille_le_cid_rodrigue_as_tu_du_cœur
+  source_work_key: mnemosyne.fr.work.le_cid
+  source_author_key: mnemosyne.fr.author.pierre_corneille
+  source_work: Le Cid
+  source_author: Pierre Corneille
+  source_location: Act I, scene 6
+  source_url: https://fr.wikisource.org/wiki/Le_Cid
+  source_license: public_domain
+  source_dataset: fr_corneille_le_cid
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    plausible but scene number may be Act I, scene 5, not 6.'
+- id: fr_literary_reference_il_faut_qu_une_porte_soit_ouverte_ou_fermée_d9f8a055
+  language: fr
+  canonical_reference: Il faut qu'une porte soit ouverte ou fermée
+  reference_type: literary_reference
+  surface_patterns:
+  - il faut qu'une porte soit ouverte ou fermée
+  - une porte doit être ouverte ou fermée
+  short_explanation: This line from Alfred de Musset's play 'Le Chandelier' expresses the necessity of
+    making a choice, as a door cannot remain half-open. It is a common French proverb emphasizing decisiveness.
+  i18n_explanations:
+    en: This line from Alfred de Musset's play 'Le Chandelier' expresses the necessity of making a choice,
+      as a door cannot remain half-open. It is a common French proverb emphasizing decisiveness.
+    es: Esta frase de la obra 'Le Chandelier' de Alfred de Musset expresa la necesidad de tomar una decisión,
+      ya que una puerta no puede permanecer entreabierta. Es un proverbio francés común que enfatiza la
+      determinación.
+    fr: Cette réplique de la pièce 'Le Chandelier' d'Alfred de Musset exprime la nécessité de faire un
+      choix, car une porte ne peut rester entrouverte. C'est un proverbe français courant qui souligne
+      la détermination.
+    de: Dieser Satz aus Alfred de Mussets Stück 'Le Chandelier' drückt die Notwendigkeit aus, eine Entscheidung
+      zu treffen, da eine Tür nicht halb offen bleiben kann. Es ist ein gebräuchliches französisches Sprichwort,
+      das Entschlossenheit betont.
+    it: Questa frase dell'opera 'Le Chandelier' di Alfred de Musset esprime la necessità di fare una scelta,
+      poiché una porta non può rimanere socchiusa. È un proverbio francese comune che sottolinea la determinazione.
+    pt: Essa frase da peça 'Le Chandelier' de Alfred de Musset expressa a necessidade de fazer uma escolha,
+      já que uma porta não pode permanecer entreaberta. É um provérbio francês comum que enfatiza a determinação.
+    ru: Эта строка из пьесы Альфреда де Мюссе «Подсвечник» выражает необходимость сделать выбор, поскольку
+      дверь не может оставаться полуоткрытой. Это распространённая французская пословица, подчёркивающая
+      решительность.
+    ja: アルフレッド・ド・ミュッセの戯曲『燭台』のこの台詞は、ドアは半開きにできないため、選択の必要性を表現しています。決断力を強調する一般的なフランスの諺です。
+    zh: 这句出自阿尔弗雷德·德·缪塞的戏剧《烛台》的台词表达了做出选择的必要性，因为门不能半开着。这是一个常见的法语谚语，强调果断。
+    ar: هذه العبارة من مسرحية 'الشمعدان' لألفريد دي موسيه تعبر عن ضرورة اتخاذ قرار، حيث لا يمكن للباب
+      أن يبقى نصف مفتوح. إنه مثل فرنسي شائع يؤكد على الحسم.
+    he: שורה זו ממחזהו של אלפרד דה מיסה 'הפמוט' מבטאת את הצורך לבחור, כיוון שדלת לא יכולה להישאר חצי פתוחה.
+      זהו פתגם צרפתי נפוץ המדגיש נחישות.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.fr.explanation.fr_cultural_phrases_il_faut_qu_une_porte_soit_ouve
+  source_work_key: mnemosyne.fr.work.le_chandelier
+  source_author_key: mnemosyne.fr.author.alfred_de_musset
+  source_work: Le Chandelier
+  source_author: Alfred de Musset
+  source_location: Act II, scene 3
+  source_url: https://fr.wikisource.org/wiki/Le_Chandelier
+  source_license: public_domain
+  source_dataset: fr_cultural_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    source work is incorrectly given as ''Le Chandelier''; the correct play is ''Il faut qu''une porte
+    soit ouverte ou fermée''.'

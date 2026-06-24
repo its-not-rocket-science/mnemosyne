@@ -1,0 +1,964 @@
+- id: ja_literary_reference_春の夜の夢ばかりなる手枕に_1f87a69c
+  language: ja
+  canonical_reference: 春の夜の夢ばかりなる手枕に
+  reference_type: literary_reference
+  surface_patterns:
+  - 春の夜の夢ばかりなる手枕に
+  - 春の夜の夢ばかりなる手枕
+  - 春の夜の夢ばかりなる枕
+  short_explanation: A poetic phrase from the *Man'yōshū* (Book 10, poem 2213) expressing fleeting, dream-like
+    love or affection, often used to evoke transient beauty. It reflects the Heian-era aesthetic of *mono
+    no aware* (the pathos of things).
+  i18n_explanations:
+    en: A poetic phrase from the *Man'yōshū* (Book 10, poem 2213) expressing fleeting, dream-like love
+      or affection, often used to evoke transient beauty. It reflects the Heian-era aesthetic of *mono
+      no aware* (the pathos of things).
+    es: Frase poética del *Man'yōshū* (Libro 10, poema 2213) que expresa un amor o afecto efímero y onírico,
+      usado para evocar la belleza transitoria. Refleja la estética de la era Heian del *mono no aware*
+      (la patética de las cosas).
+    fr: Une phrase poétique du *Man'yōshū* (Livre 10, poème 2213) exprimant un amour ou une affection
+      éphémère et onirique, souvent utilisée pour évoquer une beauté passagère. Elle reflète l'esthétique
+      de l'ère Heian du *mono no aware* (la mélancolie des choses).
+    de: Ein poetischer Vers aus dem *Man'yōshū* (Buch 10, Gedicht 2213), der flüchtige, traumhafte Liebe
+      oder Zuneigung ausdrückt und oft vergängliche Schönheit evoziert. Er spiegelt die Ästhetik der Heian-Zeit
+      mit *mono no aware* (die Pathos der Dinge) wider.
+    it: Una frase poetica del *Man'yōshū* (Libro 10, poema 2213) che esprime un amore o affetto effimero
+      e onirico, spesso usato per evocare una bellezza transitoria. Riflette l'estetica dell'era Heian
+      del *mono no aware* (la malinconia delle cose).
+    pt: Uma frase poética do *Man'yōshū* (Livro 10, poema 2213) que expressa um amor ou afeto efêmero
+      e onírico, usada para evocar a beleza transitória. Reflete a estética da era Heian do *mono no aware*
+      (a patética das coisas).
+    ru: Поэтическая фраза из «Манъёсю» (Книга 10, стихотворение 2213), выражающая мимолётную, сновидную
+      любовь или привязанность, часто используемая для передачи преходящей красоты. Отражает эстетику
+      эпохи Хэйан — *моно-но аварэ* (пафос вещей).
+    ja: 万葉集（巻第十、2213番）の詩句で、儚い夢のような愛や情愛を表し、移ろいやすい美しさを喚起する。平安時代の「物の哀れ」の美意識を反映している。
+    zh: 《万叶集》（卷十，第2213首）的一句诗，表达短暂如梦的爱与情感，常用以体现易逝之美。反映了平安时代的“物哀”审美意识。
+    ar: عبارة شعرية من *مانيوشو* (الكتاب العاشر، القصيدة 2213) تعبر عن حب أو عاطفة عابرة وحلمية، تُستخدم
+      لإثارة جمال زائل. تعكس الجمالية في حقبة هييان *مونو نو aware* (حزن الأشياء).
+    he: ביטוי שירי מ*מניושו* (ספר 10, שיר 2213) המבטא אהבה או חיבה חולפת ודמוית חלום, המשמש לעורר יופי
+      חולף. משקף את האסתטיקה של תקופת הייאן – *מונו נו aware* (החמלה על הדברים).
+  learner_level: B2
+  confidence: 0.85
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ja.explanation.man_yoshu_phrases_春の夜の夢ばかりなる手枕に
+  source_work_key: mnemosyne.ja.work.万葉集
+  source_author_key: mnemosyne.ja.author.various
+  source_work: 万葉集
+  source_author: Various
+  source_location: 巻第十 二二一三
+  source_url: https://j-texts.com/man-yoshu/10/2213.html
+  source_license: public_domain
+  source_dataset: man_yoshu_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Man''yōshū is correct, but explanation anachronistically refers to Heian aesthetic; poem is from
+    Nara period.'
+- id: ja_literary_reference_徒然草の_月は流れて_37f5e149
+  language: ja
+  canonical_reference: 徒然草の「月は流れて」
+  reference_type: literary_reference
+  surface_patterns:
+  - 月は流れて
+  - 月は流るゝ
+  - 月は流るるなり
+  short_explanation: A passage from 'Tsurezuregusa' describing the moon's reflection on water, symbolizing
+    the transient nature of beauty and life. Often cited in discussions of mono no aware.
+  i18n_explanations:
+    en: A passage from 'Tsurezuregusa' describing the moon's reflection on water, symbolizing the transient
+      nature of beauty and life. Often cited in discussions of mono no aware.
+    es: Un pasaje del 'Tsurezuregusa' que describe el reflejo de la luna en el agua, simbolizando la naturaleza
+      efímera de la belleza y la vida. Citado frecuentemente en discusiones sobre mono no aware.
+    fr: Un passage du 'Tsurezuregusa' décrivant le reflet de la lune sur l'eau, symbolisant la nature
+      éphémère de la beauté et de la vie. Souvent cité dans les discussions sur le mono no aware.
+    de: Ein Abschnitt aus 'Tsurezuregusa', der den Mondreflex auf dem Wasser beschreibt und die Vergänglichkeit
+      von Schönheit und Leben symbolisiert. Wird oft in Diskussionen über mono no aware erwähnt.
+    it: Un passaggio del 'Tsurezuregusa' che descrive il riflesso della luna sull'acqua, simbolo della
+      natura effimera della bellezza e della vita. Spesso citato nelle discussioni sul mono no aware.
+    pt: Um trecho do 'Tsurezuregusa' que descreve o reflexo da lua na água, simbolizando a natureza transitória
+      da beleza e da vida. Frequentemente citado em discussões sobre mono no aware.
+    ru: Отрывок из 'Цуредзурегуса', описывающий отражение луны в воде, символизирующее преходящий характер
+      красоты и жизни. Часто цитируется в обсуждениях mono no aware.
+    ja: 吉田兼好的「徒然草」の一節。水面に映る月の描写が、美と人生の儚さを象徴し、物の哀れの議論でしばしば引用される。
+    zh: 《徒然草》中描写月亮倒映水面的段落，象征美与生命的短暂，常在物哀的讨论中被引用。
+    ar: مقطع من «تسوريزورغوسا» يصف انعكاس القمر على الماء، يرمز إلى الطبيعة العابرة للجمال والحياة. غالبًا
+      ما يُذكر في مناقشات حول «مونو نو aware».
+    he: קטע מ'צורזורגסה' המתאר את השתקפות הירח במים, המסמל את ארעיות היופי והחיים. לעיתים קרובות מצוטט
+      בדיונים על 'מונו נו aware'.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  explanation_key: mnemosyne.ja.explanation.tsurezuregusa_phrases_徒然草の_月は流れて
+  source_work_key: mnemosyne.ja.work.徒然草
+  source_author_key: mnemosyne.ja.author.吉田兼好
+  source_work: 徒然草
+  source_author: 吉田兼好
+  source_location: 第137段
+  source_url: https://ja.wikisource.org/wiki/%E5%BE%92%E3%81%A4%E3%82%8C%E3%81%90%E3%81%95
+  source_license: public_domain
+  source_dataset: tsurezuregusa_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase ''月は流れて'' is more commonly associated with Hōjōki rather than Tsurezuregusa; attribution to
+    Tsurezuregusa is uncertain.'
+- id: ja_literary_reference_狂言の_附子_ff5a4844
+  language: ja
+  canonical_reference: 狂言の「附子」
+  reference_type: literary_reference
+  surface_patterns:
+  - 附子
+  - 附子の狂言
+  - 附子狂言
+  short_explanation: A famous Noh play (also performed as kyōgen) about a man who accidentally poisons
+    himself with aconite (a highly toxic plant) while trying to commit suicide, only to be saved by a
+    doctor. It explores themes of folly, chance, and human error.
+  i18n_explanations:
+    en: A famous Noh play (also performed as kyōgen) about a man who accidentally poisons himself with
+      aconite (a highly toxic plant) while trying to commit suicide, only to be saved by a doctor. It
+      explores themes of folly, chance, and human error.
+    es: Una famosa obra de Nō (también representada como kyōgen) sobre un hombre que se envenena accidentalmente
+      con acónito (una planta altamente tóxica) al intentar suicidarse, solo para ser salvado por un médico.
+      Explora temas como la locura, el azar y el error humano.
+    fr: Une célèbre pièce de Nō (aussi jouée en kyōgen) sur un homme qui s'empoisonne accidentellement
+      avec de l'aconit (une plante très toxique) en tentant de se suicider, avant d'être sauvé par un
+      médecin. Elle explore des thèmes comme la folie, le hasard et l'erreur humaine.
+    de: Ein berühmtes Nō-Stück (auch als Kyōgen aufgeführt) über einen Mann, der sich versehentlich mit
+      Eisenhut (einer hochgiftigen Pflanze) vergiftet, als er Selbstmord begehen will, und schließlich
+      von einem Arzt gerettet wird. Es behandelt Themen wie Torheit, Zufall und menschliches Versagen.
+    it: Un famoso dramma Nō (anche rappresentato come kyōgen) su un uomo che si avvelena accidentalmente
+      con l'aconito (una pianta altamente tossica) cercando di suicidarsi, salvo poi essere salvato da
+      un medico. Esplora temi come la follia, il caso e l'errore umano.
+    pt: Uma famosa peça de Nō (também encenada como kyōgen) sobre um homem que se envenena acidentalmente
+      com acônito (uma planta altamente tóxica) ao tentar cometer suicídio, sendo salvo por um médico.
+      Explora temas como a loucura, o acaso e o erro humano.
+    ru: Знаменитая пьеса Но (также исполняемая как кёгэн) о человеке, который случайно отравляется аконитом
+      (очень токсичным растением), пытаясь покончить с собой, но его спасает врач. Исследуются темы безумия,
+      случая и человеческой ошибки.
+    ja: 狂言の有名な演目（能楽としても上演される）で、自殺を図った男がトリカブト（猛毒の植物）で誤って中毒し、医師に救われる物語。愚かさ、偶然、人間の過ちをテーマとする。
+    zh: 著名的能剧作品（也作为狂言上演），讲述一个男人试图自杀时误食高毒植物乌头中毒，最终被医生救治的故事。探讨愚蠢、偶然与人为错误的主题。
+    ar: مسرحية نوه الشهيرة (التي تُعرض أيضًا ككيوغن) عن رجل يتسمم بال accidentalmente مع نبات الأكونيت
+      ( highly toxic plant) أثناء محاولته الانتحار، ليُنقَذ لاحقًا على يد طبيب. تستكشف مواضيع الحماقة
+      والصدفة والخطأ البشري.
+    he: מחזה נוֹ ידוע (שגם מופיע כקִיוֹגֶן) על אדם שצורך בטעות את הצמח הארסי אקוניטון בניסיון להתאבד,
+      וניצל על ידי רופא. חוקר נושאים כמו טיפשות, מקריות וטעות אנוש.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  allow_short_pattern: true
+  explanation_key: mnemosyne.ja.explanation.kyogen_atsushi_狂言の_附子
+  source_work_key: mnemosyne.ja.work.附子
+  source_author_key: mnemosyne.ja.author.unknown
+  source_work: 附子
+  source_author: Unknown
+  source_url: https://www.kyogen.jp/works/atsushi.html
+  source_license: public_domain
+  source_dataset: kyogen_atsushi
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Explanation
+    misstates plot; it is a kyōgen play where servants eat sugar from a jar labeled poison, not a suicide
+    attempt with aconite.'
+- id: ja_cultural_reference_源平合戦の義経の弓流し_6aa013db
+  language: ja
+  canonical_reference: 源平合戦の義経の弓流し
+  reference_type: cultural_reference
+  surface_patterns:
+  - 弓流し
+  - 義経の弓流し
+  - 源平合戦の弓流し
+  short_explanation: A legendary episode from the Genpei War where Minamoto no Yoshitsune, after a victorious
+    battle, threw his bow into the sea as a gesture of humility, refusing to take credit for the victory.
+    It symbolizes the warrior ethos of modesty and detachment from fame.
+  i18n_explanations:
+    en: A legendary episode from the Genpei War where Minamoto no Yoshitsune, after a victorious battle,
+      threw his bow into the sea as a gesture of humility, refusing to take credit for the victory. It
+      symbolizes the warrior ethos of modesty and detachment from fame.
+    es: Un episodio legendario de la Guerra Genpei en el que Minamoto no Yoshitsune, tras una batalla
+      victoriosa, arrojó su arco al mar como gesto de humildad, rechazando atribuirse el mérito de la
+      victoria. Simboliza el ethos guerrero de la modestia y el desapego de la fama.
+    fr: Un épisode légendaire de la guerre de Genpei où Minamoto no Yoshitsune, après une bataille victorieuse,
+      jeta son arc à la mer en signe d'humilité, refusant de s'attribuer le mérite de la victoire. Cela
+      symbolise l'éthique guerrière de la modestie et du détachement de la gloire.
+    de: Eine legendäre Episode aus dem Genpei-Krieg, in der Minamoto no Yoshitsune nach einer siegreichen
+      Schlacht seinen Bogen ins Meer warf, um Demut zu zeigen und den Ruhm für den Sieg abzulehnen. Es
+      symbolisiert die Kriegerethik von Bescheidenheit und Loslösung vom Ruhm.
+    it: Un episodio leggendario della guerra Genpei in cui Minamoto no Yoshitsune, dopo una battaglia
+      vittoriosa, gettò il suo arco in mare come gesto di umiltà, rifiutando di attribuirsi il merito
+      della vittoria. Simboleggia l'etica guerriera della modestia e del distacco dalla fama.
+    pt: Um episódio lendário da Guerra Genpei em que Minamoto no Yoshitsune, após uma batalha vitoriosa,
+      jogou seu arco no mar como gesto de humildade, recusando-se a tomar crédito pela vitória. Simboliza
+      a ética guerreira da modéstia e do desapego da fama.
+    ru: Легендарный эпизод войны Гэмпэй, в котором Минамото-но Ёсицунэ после победной битвы бросил свой
+      лук в море в знак смирения, отказываясь присваивать себе заслугу победы. Это символизирует воинскую
+      этику скромности и отречения от славы.
+    ja: 源平合戦の伝説的なエピソードで、源義経が勝利の戦いの後、謙虚の gestureとして弓を海に投げ入れ、勝利の功名を拒んだ。武士の美学である謙遜と名誉への執着のなさを象徴する。
+    zh: 源平合战中的传奇片段：源义经在取得胜利后，将自己的弓投入大海，以示谦逊，拒绝为胜利邀功。象征着武士精神中的谦卑与对名利的超脱。
+    ar: ' Episode أسطوري من حرب غينبي حيث ألقى ميناموتو نو يوشيتسونه قوسه في البحر بعد معركة انتصارية
+      كرمز للتواضع، ورفض أخذ الفضل في النصر. يرمز إلى أخلاق المحارب من التواضع والبعد عن الشهرة.'
+    he: אירוע אגדי ממלחמת גֶנְפֵּיי שבו השליך מִינָמוֹטוֹ נוֹ יוֹשִׁיטְסוּנֶה את קשתו לים לאחר ניצחון
+      כגesture של ענווה, וסירב לקחת קרדיט על הניצחון. מסמל את האתוס הלוחם של צניעות וניתוק מהתהילה.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.ja.explanation.genpei_war_yoshitsune_yuminarashi_源平合戦の義経の弓流し
+  source_work_key: mnemosyne.ja.work.various
+  source_author_key: mnemosyne.ja.author.oral_tradition_heike_monogatari
+  source_work: Various
+  source_author: Oral tradition / Heike Monogatari
+  source_url: https://ja.wikipedia.org/wiki/%E5%BC%93%E6%B5%81%E3%81%97
+  source_license: public_domain
+  source_dataset: genpei_war_yoshitsune_yuminarashi
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Explanation
+    conflates the story; traditionally Yoshitsune risked his life to retrieve his bow because it was a
+    gift from his mother, not a gesture of humility.'
+- id: ja_classical_or_scriptural_allusion_因果の縁_ba057d44
+  language: ja
+  canonical_reference: 因果の縁
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - 因果の縁
+  - 因果縁
+  - 因果の縁起
+  - 縁起因果
+  short_explanation: A Buddhist term referring to the interconnectedness of cause (因) and condition (縁)
+    that determines existence. It underpins the concept of dependent origination, central to understanding
+    karma and rebirth.
+  i18n_explanations:
+    en: A Buddhist term referring to the interconnectedness of cause (因) and condition (縁) that determines
+      existence. It underpins the concept of dependent origination, central to understanding karma and
+      rebirth.
+    es: Un término budista que se refiere a la interconexión entre causa (因) y condición (縁) que determina
+      la existencia. Es la base del concepto de origen dependiente, esencial para entender el karma y
+      el renacimiento.
+    fr: Un terme bouddhiste désignant l'interdépendance entre la cause (因) et la condition (縁) qui détermine
+      l'existence. Il sous-tend le concept d'origine dépendante, essentiel pour comprendre le karma et
+      la renaissance.
+    de: Ein buddhistischer Begriff, der sich auf die Wechselwirkung von Ursache (因) und Bedingung (縁)
+      bezieht, die das Dasein bestimmt. Er bildet die Grundlage für das Konzept des bedingten Entstehens,
+      das für das Verständnis von Karma und Wiedergeburt zentral ist.
+    it: Un termine buddista che si riferisce all'interconnessione tra causa (因) e condizione (縁) che determina
+      l'esistenza. È alla base del concetto di origine dipendente, fondamentale per comprendere il karma
+      e la rinascita.
+    pt: Um termo budista que se refere à interconexão entre causa (因) e condição (縁) que determina a existência.
+      É a base do conceito de origem dependente, central para entender o carma e o renascimento.
+    ru: Буддийский термин, обозначающий взаимосвязь причины (因) и условия (縁), определяющих существование.
+      Он лежит в основе концепции зависимого происхождения, ключевой для понимания кармы и перерождения.
+    ja: 因果の縁とは、存在を決定する原因（因）と条件（縁）の相互関係を指す仏教用語。縁起の概念の基盤であり、業と輪廻を理解する上で中心的な役割を果たす。
+    zh: 因果之缘是佛教术语，指决定存在的原因（因）与条件（缘）之间的相互关联。它构成了缘起概念的基础，是理解业与轮回的核心。
+    ar: مصطلح بوذي يشير إلى الترابط بين السبب (因) والشرط (縁) الذي يحدد الوجود. يشكل أساس مفهوم النشأة
+      المعتمدة، وهو أساسي لفهم الكarma وإعادة الميلاد.
+    he: מונח בודהיסטי המתייחס לקשר שבין סיבה (因) לתנאי (縁) הקובעים את הקיום. מהווה בסיס לתפיסת התלות בהתהוות,
+      המרכזית להבנת הקarma ולידה מחדש.
+  learner_level: C1
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  explanation_key: mnemosyne.ja.explanation.buddhist_terminology_因果の縁
+  source_work_key: mnemosyne.ja.work.般若心経
+  source_author_key: mnemosyne.ja.author.traditional_buddhist_canon
+  source_work: 般若心経
+  source_author: Traditional Buddhist canon
+  source_url: https://ja.wikipedia.org/wiki/般若心経
+  source_license: public_domain
+  source_dataset: buddhist_terminology
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to 般若心経 is not accurate; ''因果の縁'' is not a standard phrase from that sutra.'
+- id: ja_classical_or_scriptural_allusion_六根清浄_c05020ad
+  language: ja
+  canonical_reference: 六根清浄
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - 六根清浄
+  - 六根
+  - 清浄
+  short_explanation: A Buddhist concept referring to the purification of the six senses (sight, hearing,
+    smell, taste, touch, and mind) to achieve enlightenment. Often used metaphorically for spiritual clarity.
+  i18n_explanations:
+    en: A Buddhist concept referring to the purification of the six senses (sight, hearing, smell, taste,
+      touch, and mind) to achieve enlightenment. Often used metaphorically for spiritual clarity.
+    es: Un concepto budista que se refiere a la purificación de los seis sentidos (vista, oído, olfato,
+      gusto, tacto y mente) para alcanzar la iluminación. Se usa a menudo metafóricamente para la claridad
+      espiritual.
+    fr: Un concept bouddhiste désignant la purification des six sens (vue, ouïe, odorat, goût, toucher
+      et esprit) pour atteindre l'éveil. Souvent utilisé métaphoriquement pour évoquer la clarté spirituelle.
+    de: Ein buddhistisches Konzept, das die Reinigung der sechs Sinne (Sehen, Hören, Riechen, Schmecken,
+      Fühlen und Denken) zur Erlangung der Erleuchtung bezeichnet. Wird oft metaphorisch für geistige
+      Klarheit verwendet.
+    it: Un concetto buddista che si riferisce alla purificazione dei sei sensi (vista, udito, olfatto,
+      gusto, tatto e mente) per raggiungere l'illuminazione. Spesso usato metaforicamente per indicare
+      la chiarezza spirituale.
+    pt: Um conceito budista que se refere à purificação dos seis sentidos (visão, audição, olfato, paladar,
+      tato e mente) para alcançar a iluminação. Frequentemente usado metaforicamente para clareza espiritual.
+    ru: Буддийское понятие, означающее очищение шести чувств (зрение, слух, обоняние, вкус, осязание и
+      ум) для достижения просветления. Часто используется метафорически для обозначения духовной ясности.
+    ja: 六根清浄とは、仏教で六根（眼・耳・鼻・舌・身・意）を浄化し、悟りに至る概念。しばしば精神的な明瞭さを表す比喩として用いられる。
+    zh: 六根清净是佛教中指通过净化六根（眼、耳、鼻、舌、身、意）以达到觉悟的概念。常被用作精神清明的比喻。
+    ar: مفهوم بوذي يشير إلى تطهير الحواس الستة (البصر، السمع، الشم، التذوق، اللمس، والعقل) لتحقيق التنوير.
+      غالبًا ما يُستخدم مجازيًا للدلالة على الوضوح الروحي.
+    he: מושג בודהיסטי המתייחס לטיהור שש החושים (ראייה, שמיעה, ריח, טעם, מגע ומחשבה) להשגת הארה. לעיתים
+      קרובות משמש כמטפורה לטוהר רוחני.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: religious
+  allow_short_pattern: true
+  explanation_key: mnemosyne.ja.explanation.buddhist_scriptures_phrases_六根清浄
+  source_work_key: mnemosyne.ja.work.般若心経
+  source_author_key: mnemosyne.ja.author.various_buddhist_scriptures
+  source_work: 般若心経
+  source_author: Various (Buddhist scriptures)
+  source_url: https://ja.wikipedia.org/wiki/般若心経
+  source_license: public_domain
+  source_dataset: buddhist_scriptures_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    phrase is not from the Heart Sutra but appears in other Buddhist texts; attribution is uncertain.'
+- id: ja_classical_or_scriptural_allusion_此岸の波羅蜜_dbd2a15d
+  language: ja
+  canonical_reference: 此岸の波羅蜜
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - 此岸の波羅蜜
+  - 此岸の波羅蜜を修める
+  - 此岸の波羅蜜を行ずる
+  short_explanation: A Buddhist term referring to the 'perfections' (pāramitā) practiced in this world
+    (此岸, 'this shore') to attain enlightenment. It contrasts with 彼岸 ('the other shore'), symbolizing
+    Nirvana.
+  i18n_explanations:
+    en: A Buddhist term referring to the 'perfections' (pāramitā) practiced in this world (此岸, 'this shore')
+      to attain enlightenment. It contrasts with 彼岸 ('the other shore'), symbolizing Nirvana.
+    es: Término budista que se refiere a las 'perfecciones' (pāramitā) practicadas en este mundo (此岸,
+      'esta orilla') para alcanzar la iluminación. Se opone a 彼岸 ('la otra orilla'), que simboliza el
+      Nirvana.
+    fr: Terme bouddhiste désignant les 'perfections' (pāramitā) pratiquées en ce monde (此岸, 'cette rive')
+      pour atteindre l'éveil. Il s'oppose à 彼岸 ('l'autre rive'), symbole du Nirvana.
+    de: Ein buddhistischer Begriff für die 'Vollkommenheiten' (pāramitā), die in dieser Welt (此岸, 'dieses
+      Ufer') praktiziert werden, um Erleuchtung zu erlangen. Er steht im Kontrast zu 彼岸 ('das andere Ufer'),
+      das das Nirvana symbolisiert.
+    it: Termine buddista che si riferisce alle 'perfezioni' (pāramitā) praticate in questo mondo (此岸,
+      'questa riva') per raggiungere l'illuminazione. Si contrappone a 彼岸 ('l'altra riva'), simbolo del
+      Nirvana.
+    pt: Termo budista que se refere às 'perfeições' (pāramitā) praticadas neste mundo (此岸, 'esta margem')
+      para atingir a iluminação. Contrasta com 彼岸 ('a outra margem'), que simboliza o Nirvana.
+    ru: Буддийский термин, обозначающий 'совершенства' (pāramitā), практикуемые в этом мире (此岸, 'этот
+      берег') для достижения просветления. Противопоставляется 彼岸 ('другой берег'), символизирующему Нирвану.
+    ja: 仏教用語で、この世（此岸）で実践する「波羅蜜（pāramitā）」を指す。向こう岸（彼岸）の涅槃と対比される。
+    zh: 佛教术语，指在现世（此岸）修行的「波罗蜜（pāramitā）」以达到觉悟。与彼岸（涅槃）相对。
+    ar: مصطلح بوذي يشير إلى الكماليات (pāramitā) التي تُمارس في هذا العالم (此岸، 'الشاطئ') لتحقيق التنوير.
+      وهو يتناقض مع 彼岸 ('الشاطئ الآخر')، الذي يرمز إلى النيرفانا.
+    he: מונח בודהיסטי המתייחס ל'שלמויות' (pāramitā) הנהוגות בעולם הזה (此岸, 'הגדה הזו') להשגת הארה. הוא
+      מנוגד ל彼岸 ('הגדה האחרת'), המסמלת את הנירוונה.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.ja.explanation.buddhist_terms_此岸の波羅蜜
+  source_work_key: mnemosyne.ja.work.般若心経
+  source_author_key: mnemosyne.ja.author.various
+  source_work: 般若心経
+  source_author: Various
+  source_url: https://ja.wikisource.org/wiki/%E8%88%AC%E8%8B%A5%E5%BF%83%E7%B6%93
+  source_license: public_domain
+  source_dataset: buddhist_terms
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to 般若心経 is not accurate; the term ''此岸の波羅蜜'' is not a standard phrase from that sutra.'
+- id: ja_classical_or_scriptural_allusion_来世の善因_a052353b
+  language: ja
+  canonical_reference: 来世の善因
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - 来世の善因
+  - 来世の善因となる
+  - 来世の善因を積む
+  short_explanation: A Buddhist concept meaning 'good causes for the next life,' referring to virtuous
+    actions (e.g., charity, morality) that influence one's rebirth in a favorable existence.
+  i18n_explanations:
+    en: A Buddhist concept meaning 'good causes for the next life,' referring to virtuous actions (e.g.,
+      charity, morality) that influence one's rebirth in a favorable existence.
+    es: Concepto budista que significa 'buenas causas para la próxima vida', refiriéndose a acciones virtuosas
+      (como caridad o moralidad) que influyen en un renacimiento favorable.
+    fr: Concept bouddhiste désignant les 'bonnes causes pour la prochaine vie', c'est-à-dire les actions
+      vertueuses (comme la charité ou la moralité) qui influencent une renaissance favorable.
+    de: Ein buddhistischer Begriff für 'gute Ursachen für das nächste Leben', der sich auf tugendhafte
+      Handlungen (z. B. Wohltätigkeit, Moral) bezieht, die eine günstige Wiedergeburt beeinflussen.
+    it: Concetto buddista che significa 'buone cause per la prossima vita', riferendosi ad azioni virtuose
+      (come carità o moralità) che influenzano una rinascita favorevole.
+    pt: Conceito budista que significa 'boas causas para a próxima vida', referindo-se a ações virtuosas
+      (como caridade ou moralidade) que influenciam um renascimento favorável.
+    ru: Буддийское понятие 'добрых причин для следующей жизни', подразумевающее добродетельные поступки
+      (например, благотворительность, мораль), влияющие на благоприятное перерождение.
+    ja: 来世のための善因を説く仏教の概念。慈善や道徳などの善行が、次世代の良い生まれを左右するという考え。
+    zh: 佛教概念，指‘来世的善因’，即善行（如慈善、道德）会影响来世的善报。
+    ar: مفهوم بوذي يعني 'الأسباب الجيدة للحياة القادمة'، ويشير إلى الأفعال الفاضلة (مثل الصدقة والأخلاق)
+      التي تؤثر على ولادة مواتية في الحياة التالية.
+    he: מושג בודהיסטי שפירושו 'גורמי טוב לחיים הבאים', המתייחס למעשים טובים (כגון צדקה או מוסר) המשפיעים
+      על גלגול מחדש בעולם נוח.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.ja.explanation.buddhist_terms_来世の善因
+  source_work_key: mnemosyne.ja.work.法句経
+  source_author_key: mnemosyne.ja.author.various
+  source_work: 法句経
+  source_author: Various
+  source_url: https://ja.wikisource.org/wiki/%E6%B3%95%E5%8F%A5%E7%B6%93
+  source_license: public_domain
+  source_dataset: buddhist_terms
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    specific phrase ''来世の善因'' is not a direct quote from the 法句経; it is a general concept.'
+- id: ja_classical_or_scriptural_allusion_十界曼荼羅_3cff89fc
+  language: ja
+  canonical_reference: 十界曼荼羅
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - 十界曼荼羅
+  - 十界図
+  - 曼荼羅
+  short_explanation: The 'Ten Realms Mandala' (十界曼荼羅) is a Buddhist concept depicting ten spiritual realms
+    (from hell to Buddhahood) and their interconnectedness, used in Nichiren Buddhism to illustrate the
+    path to enlightenment.
+  i18n_explanations:
+    en: The 'Ten Realms Mandala' (十界曼荼羅) is a Buddhist concept depicting ten spiritual realms (from hell
+      to Buddhahood) and their interconnectedness, used in Nichiren Buddhism to illustrate the path to
+      enlightenment.
+    es: El 'Mandala de los Diez Reinos' (十界曼荼羅) es un concepto budista que representa diez reinos espirituales
+      (desde el infierno hasta la budeidad) y su interconexión, utilizado en el budismo Nichiren para
+      ilustrar el camino hacia la iluminación.
+    fr: Le 'Mandala des Dix Royaumes' (十界曼荼羅) est un concept bouddhiste représentant dix royaumes spirituels
+      (de l'enfer à la bouddhéité) et leurs interconnexions, utilisé dans le bouddhisme Nichiren pour
+      illustrer le chemin vers l'éveil.
+    de: Das 'Mandala der Zehn Reiche' (十界曼荼羅) ist ein buddhistisches Konzept, das zehn spirituelle Reiche
+      (von der Hölle bis zur Buddhaschaft) und ihre Vernetzung darstellt. Es wird im Nichiren-Buddhismus
+      verwendet, um den Weg zur Erleuchtung zu veranschaulichen.
+    it: Il 'Mandala dei Dieci Regni' (十界曼荼羅) è un concetto buddista che rappresenta dieci regni spirituali
+      (dall'inferno alla buddità) e la loro interconnessione, usato nel buddismo Nichiren per illustrare
+      il percorso verso l'illuminazione.
+    pt: O 'Mandala dos Dez Reinos' (十界曼荼羅) é um conceito budista que representa dez reinos espirituais
+      (do inferno à iluminação) e sua interconexão, utilizado no budismo Nichiren para ilustrar o caminho
+      à iluminação.
+    ru: Мандала 'Десяти царств' (十界曼荼羅) — это буддийское понятие, изображающее десять духовных царств
+      (от ада до состояния Будды) и их взаимосвязь, используемое в буддизме Нитирэн для иллюстрации пути
+      к просветлению.
+    ja: 十界曼荼羅とは、地獄から仏界までの十の精神的な世界とその相互関係を描いた仏教の概念で、日蓮仏教において悟りへの道を示すために用いられます。
+    zh: 十界曼荼罗（十界曼荼羅）是佛教概念，描绘从地狱到佛界的十个精神境界及其相互联系，在日莲佛教中用于说明通往觉悟的道路。
+    ar: ماندالا 'العشرة عوالم' (十界曼荼羅) هو مفهوم بوذي يمثل عشرة عوالم روحية (من الجحيم إلى حالة البوذية)
+      وترابطها، ويُستخدم في البوذية النيتشيرينية لتوضيح طريق التنوير.
+    he: מנדלת 'עשרת העולמות' (十界曼荼羅) היא מושג בודהיסטי המתאר עשרה עולמות רוחניים (מגיהנום ועד לבודהה)
+      ואת הקשרים ביניהם, ומשמש בבודהיזם ניטירן להדגמת הדרך להארה.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: religious
+  explanation_key: mnemosyne.ja.explanation.nichiren_buddhism_phrases_十界曼荼羅
+  source_work_key: mnemosyne.ja.work.法華経
+  source_author_key: mnemosyne.ja.author.nichiren_日蓮
+  source_work: 法華経
+  source_author: Nichiren (日蓮)
+  source_url: https://ja.wikipedia.org/wiki/十界曼荼羅
+  source_license: public_domain
+  source_dataset: nichiren_buddhism_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Surface
+    pattern ''曼荼羅'' too broad; source attribution should specify Nichiren''s writings rather than directly
+    Lotus Sutra.'
+- id: ja_literary_reference_浦島太郎_うらしまたろう_22b6ab55
+  language: ja
+  canonical_reference: 浦島太郎（うらしまたろう）
+  reference_type: literary_reference
+  surface_patterns:
+  - 浦島太郎
+  - 浦島
+  - 浦島太郎の物語
+  - うらしま
+  short_explanation: A folktale about a fisherman who visits an underwater dragon palace, returns home
+    centuries later, and opens a mysterious box given to him, turning into an old man. Symbolizes the
+    consequences of curiosity and the passage of time.
+  i18n_explanations:
+    en: A folktale about a fisherman who visits an underwater dragon palace, returns home centuries later,
+      and opens a mysterious box given to him, turning into an old man. Symbolizes the consequences of
+      curiosity and the passage of time.
+    es: Un cuento popular sobre un pescador que visita un palacio submarino de un dragón, regresa a casa
+      siglos después y abre una caja misteriosa que le habían dado, convirtiéndose en un anciano. Simboliza
+      las consecuencias de la curiosidad y el paso del tiempo.
+    fr: Un conte populaire sur un pêcheur qui visite un palais sous-marin d'un dragon, revient chez lui
+      des siècles plus tard et ouvre une boîte mystérieuse qu'on lui avait donnée, se transformant en
+      un vieil homme. Symbolise les conséquences de la curiosité et le passage du temps.
+    de: Ein Volksmärchen über einen Fischer, der einen unterwasser-Drachenpalast besucht, Jahrhunderte
+      später nach Hause zurückkehrt und eine geheimnisvolle Schachtel öffnet, die ihm gegeben wurde, wodurch
+      er zu einem alten Mann wird. Symbolisiert die Folgen von Neugier und den Lauf der Zeit.
+    it: Una fiaba popolare su un pescatore che visita un palazzo sottomarino di un drago, torna a casa
+      secoli dopo e apre una misteriosa scatola datagli, trasformandosi in un vecchio. Simboleggia le
+      conseguenze della curiosità e il passare del tempo.
+    pt: Um conto popular sobre um pescador que visita um palácio submarino de um dragão, retorna para
+      casa séculos depois e abre uma caixa misteriosa que lhe foi dada, transformando-se em um velho.
+      Simboliza as consequências da curiosidade e a passagem do tempo.
+    ru: Народная сказка о рыбаке, который посетил подводный дворец дракона, вернулся домой спустя века
+      и открыл таинственную коробку, данную ему, превратившись в старика. Символизирует последствия любопытства
+      и течение времени.
+    ja: 浦島太郎は、漁師が竜宮城に行き、数世紀後に帰宅して贈られた不思議な箱を開け、老人に変わる昔話。好奇心と時の流れの結果を象徴します。
+    zh: 浦岛太郎是一个渔夫访问龙宫后，数百年后回家打开神秘盒子变成老人的民间故事。象征着好奇心的后果和时间的流逝。
+    ar: حكاية شعبية عن صياد يزور قصر تنين تحت الماء، يعود إلى منزله بعد قرون ويفتح صندوقًا غامضًا أعطوه
+      إياه، فيتحول إلى شيخ. ترمز إلى عواقب الفضول ومرور الزمن.
+    he: אגדה עממית על דייג שמבקר בארמון תת-ימי של דרקון, חוזר לביתו מאות שנים לאחר מכן, פותח תיבה מסתורית
+      שניתנה לו והופך לזקן. מסמלת את תוצאות הסקרנות וחלוף הזמן.
+  learner_level: A2
+  confidence: 0.7
+  review_status: draft
+  register: common
+  allow_short_pattern: true
+  explanation_key: mnemosyne.ja.explanation.nihonshoki_folktales_浦島太郎_うらしまたろう
+  source_work_key: mnemosyne.ja.work.日本書紀
+  source_author_key: mnemosyne.ja.author.unknown_oral_tradition_compiled
+  source_work: 日本書紀
+  source_author: Unknown (oral tradition compiled)
+  source_location: Book 1, Section 1
+  source_url: https://japaneseclass.jp/text/nihonshoki/2020-01-01-1-1-1
+  source_license: public_domain
+  source_dataset: nihonshoki_folktales
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    work ''日本書紀'' is partially correct but location ''Book 1, Section 1'' is inaccurate; mention is in
+    Emperor Yūryaku section.'
+- id: ja_literary_reference_牛若丸と弁慶_うしわかまるとべんけい_47ccd5ae
+  language: ja
+  canonical_reference: 牛若丸と弁慶（うしわかまるとべんけい）
+  reference_type: literary_reference
+  surface_patterns:
+  - 牛若丸と弁慶
+  - 牛若丸
+  - 弁慶
+  - 五条大橋の決闘
+  - 武蔵坊弁慶
+  short_explanation: A legendary meeting where the young warrior Ushiwaka (later Minamoto no Yoshitsune)
+    defeats the warrior monk Benkei on the Gojo Bridge. Symbolizes fate, loyalty, and the rise of a legendary
+    hero.
+  i18n_explanations:
+    en: A legendary meeting where the young warrior Ushiwaka (later Minamoto no Yoshitsune) defeats the
+      warrior monk Benkei on the Gojo Bridge. Symbolizes fate, loyalty, and the rise of a legendary hero.
+    es: Un encuentro legendario donde el joven guerrero Ushiwaka (más tarde Minamoto no Yoshitsune) derrota
+      al monje guerrero Benkei en el puente Gojo. Simboliza el destino, la lealtad y el surgimiento de
+      un héroe legendario.
+    fr: Une rencontre légendaire où le jeune guerrier Ushiwaka (plus tard Minamoto no Yoshitsune) vainc
+      le moine guerrier Benkei sur le pont Gojo. Symbolise le destin, la loyauté et l'ascension d'un héros
+      légendaire.
+    de: Eine legendäre Begegnung, bei der der junge Krieger Ushiwaka (später Minamoto no Yoshitsune) den
+      Krieger-Mönch Benkei auf der Gojo-Brücke besiegt. Symbolisiert Schicksal, Loyalität und den Aufstieg
+      eines legendären Helden.
+    it: Un incontro leggendario in cui il giovane guerriero Ushiwaka (in seguito Minamoto no Yoshitsune)
+      sconfigge il monaco guerriero Benkei sul ponte Gojo. Simboleggia il destino, la lealtà e l'ascesa
+      di un eroe leggendario.
+    pt: Um encontro lendário em que o jovem guerreiro Ushiwaka (mais tarde Minamoto no Yoshitsune) derrota
+      o monge guerreiro Benkei na ponte Gojo. Simboliza o destino, a lealdade e o surgimento de um herói
+      lendário.
+    ru: Легендарная встреча, в которой молодой воин Усивака (позже Минамото-но Ёсицунэ) побеждает воина-монаха
+      Бэнкэя на мосту Годзё. Символизирует судьбу, преданность и восхождение легендарного героя.
+    ja: 牛若丸と弁慶は、若き武将牛若丸（後の源義経）が五条橋で僧兵弁慶を打ち破る伝説的な出会い。運命、忠誠、英雄の誕生を象徴します。
+    zh: 牛若丸与弁慶的传说是年轻武士牛若丸（后为源义经）在五条桥上击败僧兵弁慶。象征着命运、忠诚与传奇英雄的崛起。
+    ar: لقاء أسطوري حيث ينتصر الشاب المحارب أوشيواكا (لاحقًا ميناموتو نو يوشيتسونه) على الراهب المحارب
+      بنكي على جسر غوجو. يرمز إلى القدر والولاء وصعود بطل أسطوري.
+    he: מפגש אגדי בו מנצח הלוחם הצעיר אושיוואקה (לימים מינאמוטו נו יושיטסונה) את הנזיר הלוחם בנקי על גשר
+      גוג'ו. מסמל גורל, נאמנות ועלייתו של גיבור אגדי.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  allow_short_pattern: true
+  explanation_key: mnemosyne.ja.explanation.heike_monogatari_legends_牛若丸と弁慶_うしわかまるとべんけい
+  source_work_key: mnemosyne.ja.work.平家物語
+  source_author_key: mnemosyne.ja.author.unknown_oral_tradition_compiled
+  source_work: 平家物語
+  source_author: Unknown (oral tradition compiled)
+  source_location: Volume 1, Chapter 1
+  source_url: https://www.aozora.gr.jp/cards/000318/files/1568_14918.html
+  source_license: public_domain
+  source_dataset: heike_monogatari_legends
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Source
+    work ''平家物語'' is not the primary source; the story appears in later works like Gikeiki.'
+- id: ja_cultural_reference_時雨の精_しぐれのせい_aeb69715
+  language: ja
+  canonical_reference: 時雨の精（しぐれのせい）
+  reference_type: cultural_reference
+  surface_patterns:
+  - 時雨の精
+  - 時雨の精霊
+  - 時雨の精が降らせる
+  - 時雨の精の伝説
+  short_explanation: A yōsei associated with 'shigure,' a drizzling autumn rain in Japan. It is often
+    depicted as a gentle but elusive spirit, symbolizing the melancholic beauty of transient seasons and
+    nature's cycles.
+  i18n_explanations:
+    en: A yōsei associated with 'shigure,' a drizzling autumn rain in Japan. It is often depicted as a
+      gentle but elusive spirit, symbolizing the melancholic beauty of transient seasons and nature's
+      cycles.
+    es: Un yōsei asociado con el 'shigure', una llovizna otoñal japonesa. A menudo se representa como
+      un espíritu gentil pero esquivo, que simboliza la belleza melancólica de las estaciones transitorias
+      y los ciclos de la naturaleza.
+    fr: Un yōsei associé au 'shigure', une bruine automnale japonaise. Il est souvent représenté comme
+      un esprit doux mais insaisissable, symbolisant la beauté mélancolique des saisons éphémères et les
+      cycles de la nature.
+    de: Ein Yōsei, der mit 'Shigure' verbunden ist, einem japanischen Nieselregen im Herbst. Er wird oft
+      als sanfter, aber schwer fassbarer Geist dargestellt, der die melancholische Schönheit vergänglicher
+      Jahreszeiten und die Zyklen der Natur symbolisiert.
+    it: Uno yōsei associato allo 'shigure', una pioggerella autunnale giapponese. È spesso raffigurato
+      come uno spirito gentile ma sfuggente, che simboleggia la bellezza malinconica delle stagioni effimere
+      e i cicli della natura.
+    pt: Um yōsei associado ao 'shigure', uma garoa outonal japonesa. É frequentemente retratado como um
+      espírito gentil, mas elusivo, que simboliza a beleza melancólica das estações transitórias e os
+      ciclos da natureza.
+    ru: Ёсэй, связанный с 'сигурэ' — японским осенним моросящим дождем. Часто изображается как нежный,
+      но неуловимый дух, символизирующий меланхоличную красоту преходящих сезонов и природных циклов.
+    ja: 時雨（しぐれ）と呼ばれる日本の秋の細かな雨に関連する妖精。優しいが elusive な存在として描かれ、移ろいやすい季節や自然の循環の哀愁ある美しさを象徴する。
+    zh: 与日本秋季细雨‘时雨’（shigure）相关的妖精。常被描绘为温柔却难以捉摸的精灵，象征着短暂季节与自然轮回的忧郁之美。
+    ar: كائن روحي مرتبط بـ'شigure'، وهو رذاذ خريف ياباني. غالبًا ما يُصوَّر كروح لطيفة لكنها صعبة المنال،
+      ترمز إلى الجمال الحزين للمواسم العابرة ودورات الطبيعة.
+    he: רוח יפנית הקשורה ל'שיגורה' (גשם קל אוטumnלי יפני). לעיתים קרובות מוצגת כרוח עדינה אך חמקמקה, המסמלת
+      את היופי המלנכולי של עונות חולפות ומחזורי הטבע.
+  learner_level: B2
+  confidence: 0.6
+  review_status: draft
+  register: literary
+  variants:
+  - 時雨の精の化身
+  explanation_key: mnemosyne.ja.explanation.yousei_folklore_時雨の精_しぐれのせい
+  source_work_key: mnemosyne.ja.work.various
+  source_author_key: mnemosyne.ja.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_url: https://ja.wikipedia.org/wiki/%E6%99%82%E9%9B%A8
+  source_license: copyright_or_rights_review_needed
+  source_dataset: yousei_folklore
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- This
+    is not a well-established figure in Japanese folklore; the reference may be too obscure or invented.'
+- id: ja_classical_or_scriptural_allusion_天の羽衣_あまのはごろも_5896a45d
+  language: ja
+  canonical_reference: 天の羽衣（あまのはごろも）
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - 天の羽衣
+  - 羽衣
+  - 天羽衣
+  short_explanation: A celestial robe worn by heavenly beings in Japanese mythology, often associated
+    with the story of Princess Kaguya. Symbolizes divine origin and the transient nature of life.
+  i18n_explanations:
+    en: A celestial robe worn by heavenly beings in Japanese mythology, often associated with the story
+      of Princess Kaguya. Symbolizes divine origin and the transient nature of life.
+    es: Un manto celestial usado por seres celestiales en la mitología japonesa, a menudo asociado con
+      la historia de la Princesa Kaguya. Simboliza el origen divino y la naturaleza efímera de la vida.
+    fr: Une robe céleste portée par les êtres célestes dans la mythologie japonaise, souvent associée
+      à l'histoire de la Princesse Kaguya. Symbolise l'origine divine et la nature éphémère de la vie.
+    de: Ein himmlisches Gewand, das von himmlischen Wesen in der japanischen Mythologie getragen wird,
+      oft verbunden mit der Geschichte der Prinzessin Kaguya. Symbolisiert den göttlichen Ursprung und
+      die vergängliche Natur des Lebens.
+    it: Un abito celeste indossato dagli esseri celesti nella mitologia giapponese, spesso associato alla
+      storia della Principessa Kaguya. Simboleggia l'origine divina e la natura effimera della vita.
+    pt: Um manto celestial usado por seres celestiais na mitologia japonesa, frequentemente associado
+      à história da Princesa Kaguya. Simboliza a origem divina e a natureza transitória da vida.
+    ru: Небесное одеяние, которое носят божественные существа в японской мифологии, часто связанное с
+      историей принцессы Кагуя. Символизирует божественное происхождение и преходящую природу жизни.
+    ja: 日本神話で天人（天界の者）が纏う celestial robe（天衣）で、かぐや姫の物語としばしば結びつけられる。神聖な起源と人生の儚さを象徴する。
+    zh: 日本神话中天人所穿的天衣，常与《竹取物语》中的辉夜姬故事相关联。象征着神圣的起源与生命的短暂。
+    ar: ثوب سماوي يرتديه الكيانات السماوية في الميثولوجيا اليابانية، often associated with the story of
+      Princess Kaguya. يرمز إلى الأصل الإلهي والطبيعة الزائلة للحياة.
+    he: בגד שמימי הנלבש על ידי ישויות שמימיות במיתולוגיה היפנית, לעיתים קשור לסיפור הנסיכה קגואה. מסמל
+      מקור אלוהי ואת החולפות החיים.
+  learner_level: A2
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  allow_short_pattern: true
+  explanation_key: mnemosyne.ja.explanation.taketori_monogatari_天の羽衣_あまのはごろも
+  source_work_key: mnemosyne.ja.work.竹取物語
+  source_author_key: mnemosyne.ja.author.various_oral_tradition_attributed_to_anonymous
+  source_work: 竹取物語
+  source_author: Various (oral tradition, attributed to anonymous)
+  source_url: https://www.aozora.gr.jp/cards/000085/files/476_14945.html
+  source_license: public_domain
+  source_dataset: taketori_monogatari
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    celestial robe is primarily from the Hagoromo legend, not the Tale of the Bamboo Cutter; the association
+    with Princess Kaguya is tenuous.'
+- id: ja_classical_or_scriptural_allusion_天の葛飾_あまのかずしか_83d49455
+  language: ja
+  canonical_reference: 天の葛飾（あまのかずしか）
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - 天の葛飾
+  - 葛飾
+  - 天葛飾
+  short_explanation: A place name from Japanese mythology, often associated with the celestial realm or
+    a distant, mythical land. Appears in classical texts as a poetic reference to a faraway or divine
+    place.
+  i18n_explanations:
+    en: A place name from Japanese mythology, often associated with the celestial realm or a distant,
+      mythical land. Appears in classical texts as a poetic reference to a faraway or divine place.
+    es: Nombre de un lugar en la mitología japonesa, a menudo asociado con el reino celestial o una tierra
+      mítica lejana. Aparece en textos clásicos como una referencia poética a un lugar lejano o divino.
+    fr: Nom d'un lieu de la mythologie japonaise, souvent associé au royaume céleste ou à une terre mythique
+      lointaine. Apparaît dans les textes classiques comme une référence poétique à un lieu lointain ou
+      divin.
+    de: Ein Ortsname aus der japanischen Mythologie, der oft mit der himmlischen Sphäre oder einem fernen,
+      mythischen Land verbunden wird. Erscheint in klassischen Texten als poetische Anspielung auf einen
+      abgelegenen oder göttlichen Ort.
+    it: Nome di un luogo nella mitologia giapponese, spesso associato al regno celeste o a una terra mitica
+      lontana. Compare in testi classici come riferimento poetico a un luogo lontano o divino.
+    pt: Nome de um lugar na mitologia japonesa, frequentemente associado ao reino celestial ou a uma terra
+      mítica distante. Aparece em textos clássicos como referência poética a um lugar longínquo ou divino.
+    ru: Название места из японской мифологии, часто ассоциируемое с небесным царством или далёкой мифической
+      землёй. Встречается в классических текстах как поэтическая отсылка к далёкому или божественному
+      месту.
+    ja: 日本神話に登場する地名で、しばしば天界や遠い神話の地と結びつけられる。古典文学では、遠方や神聖な場所を象徴的に指す言葉として用いられる。
+    zh: 日本神话中的地名，常与天界或遥远的神话之地相关联。在古典文献中作为对遥远或神圣之地的诗意指代。
+    ar: اسم مكان من الميثولوجيا اليابانية، غالبًا ما يرتبط بالعالم السماوي أو أرض أسطورية بعيدة. يظهر
+      في النصوص الكلاسيكية كإشارة شعرية إلى مكان بعيد أو إلهي.
+    he: שם מקום מהמיתולוגיה היפנית, לעיתים מקושר לממלכה השמימית או ארץ מיתולוגית רחוקה. מופיע בטקסטים
+      קלאסיים כהתייחסות פיוטית למקום מרוחק או אלוהי.
+  learner_level: B1
+  confidence: 0.6
+  review_status: draft
+  register: classical
+  allow_short_pattern: true
+  explanation_key: mnemosyne.ja.explanation.man_yoshu_poetry_天の葛飾_あまのかずしか
+  source_work_key: mnemosyne.ja.work.万葉集
+  source_author_key: mnemosyne.ja.author.various_compiled_by_ōtomo_no_yakamochi
+  source_work: 万葉集
+  source_author: Various (compiled by Ōtomo no Yakamochi)
+  source_location: 巻第14
+  source_url: https://www.aozora.gr.jp/cards/000085/files/476_14945.html
+  source_license: public_domain
+  source_dataset: man_yoshu_poetry
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    term is obscure and not a standard mythological allusion; its presence in the Manyoshu is uncertain.'
+- id: ja_classical_or_scriptural_allusion_天の日矛_あまのひぼこ_966d893d
+  language: ja
+  canonical_reference: 天の日矛（あまのひぼこ）
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - 天の日矛
+  - 天日矛
+  - 日矛
+  - 天の日矛（あまのひぼこ）
+  short_explanation: A divine bow or spear mentioned in the Kojiki, associated with the god Susanoo. It
+    is used in mythological narratives to slay mythical creatures and symbolizes divine power and protection.
+  i18n_explanations:
+    en: A divine bow or spear mentioned in the Kojiki, associated with the god Susanoo. It is used in
+      mythological narratives to slay mythical creatures and symbolizes divine power and protection.
+    es: Un arco o lanza divina mencionado en el Kojiki, asociado al dios Susanoo. Se usa en narrativas
+      mitológicas para matar criaturas míticas y simboliza poder y protección divina.
+    fr: Un arc ou une lance divine mentionné dans le Kojiki, associé au dieu Susanoo. Il est utilisé dans
+      les récits mythologiques pour tuer des créatures mythiques et symbolise le pouvoir et la protection
+      divine.
+    de: Ein göttlicher Bogen oder eine Lanze aus dem Kojiki, verbunden mit dem Gott Susanoo. Er wird in
+      mythologischen Erzählungen genutzt, um mythische Kreaturen zu besiegen, und symbolisiert göttliche
+      Macht und Schutz.
+    it: Un arco o lancia divina menzionato nel Kojiki, associato al dio Susanoo. Viene usato in narrazioni
+      mitologiche per uccidere creature mitiche e simboleggia il potere e la protezione divina.
+    pt: Um arco ou lança divina mencionado no Kojiki, associado ao deus Susanoo. É usado em narrativas
+      mitológicas para matar criaturas míticas e simboliza poder e proteção divina.
+    ru: Божественный лук или копьё, упоминаемые в Кодзики, связанные с богом Сусаноо. Используется в мифологических
+      повествованиях для убийства мифических существ и символизирует божественную силу и защиту.
+    ja: 古事記に登場する神の弓または矛。素戔嗚尊と関連付けられ、神話の中で架空の生物を退治するために用いられ、神聖な力と保護を象徴する。
+    zh: 《古事记》中提到的神弓或神矛，与素戔嗚尊相关。在神话叙事中用于斩杀神兽，象征神圣力量与庇护。
+    ar: قوس أو رمح إلهي مذكور في الكوجيكي، مرتبط بالإله سوسانو. يُستخدم في الروايات الأسطورية لقتل المخلوقات
+      الأسطورية ويرمز إلى القوة الإلهية والحماية.
+    he: קשת או חנית אלוהית המוזכרת בקוג'יקי, הקשורה לאל סוסאנו. משמשת בסיפורי מיתולוגיה להריגת יצורים
+      מיתיים וסמלה כוח אלוהי והגנה.
+  learner_level: B2
+  confidence: 0.87
+  review_status: draft
+  register: classical
+  allow_short_pattern: true
+  explanation_key: mnemosyne.ja.explanation.kojiki_mythology_terms_天の日矛_あまのひぼこ
+  source_work_key: mnemosyne.ja.work.古事記
+  source_author_key: mnemosyne.ja.author.various
+  source_work: 古事記
+  source_author: Various
+  source_url: https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BA%8B%E8%A8%98
+  source_license: public_domain
+  source_dataset: kojiki_mythology_terms
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Attribution
+    to Susanoo may not be precise; surface patterns need refinement.'
+- id: ja_classical_or_scriptural_allusion_天の瓢箪_あまのひょうたん_7c6f1477
+  language: ja
+  canonical_reference: 天の瓢箪（あまのひょうたん）
+  reference_type: classical_or_scriptural_allusion
+  surface_patterns:
+  - 天の瓢箪
+  - 天瓢箪
+  - 瓢箪
+  - 天の瓢箪（あまのひょうたん）
+  short_explanation: A celestial gourd or calabash mentioned in Japanese folklore and mythology, often
+    associated with the god Ebisu or used as a vessel for divine substances. Symbolizes abundance and
+    prosperity.
+  i18n_explanations:
+    en: A celestial gourd or calabash mentioned in Japanese folklore and mythology, often associated with
+      the god Ebisu or used as a vessel for divine substances. Symbolizes abundance and prosperity.
+    es: Una calabaza celestial mencionada en el folclore y mitología japonesa, a menudo asociada al dios
+      Ebisu o usada como recipiente para sustancias divinas. Simboliza abundancia y prosperidad.
+    fr: Une calebasse céleste mentionnée dans le folklore et la mythologie japonaise, souvent associée
+      au dieu Ebisu ou utilisée comme récipient pour des substances divines. Symbolise l'abondance et
+      la prospérité.
+    de: Ein himmlischer Flaschenkürbis aus japanischem Volksglauben und Mythologie, oft mit dem Gott Ebisu
+      verbunden oder als Gefäß für göttliche Substanzen genutzt. Symbolisiert Fülle und Wohlstand.
+    it: Una zucca celeste menzionata nel folclore e nella mitologia giapponese, spesso associata al dio
+      Ebisu o usata come recipiente per sostanze divine. Simboleggia abbondanza e prosperità.
+    pt: Uma cabaça celestial mencionada no folclore e mitologia japonesa, frequentemente associada ao
+      deus Ebisu ou usada como recipiente para substâncias divinas. Simboliza abundância e prosperidade.
+    ru: Небесная тыква из японского фольклора и мифологии, часто связанная с богом Эбису или используемая
+      как сосуд для божественных субстанций. Символизирует изобилие и процветание.
+    ja: 日本の民間伝承や神話に登場する天の瓢箪。恵比須神と関連付けられたり、神聖な物質を入れる容器として用いられたりする。豊かさと繁栄を象徴する。
+    zh: 日本民间传说和神话中提到的天之葫芦。常与恵比寿神相关，或用作盛放神圣物质的容器。象征丰饶与繁荣。
+    ar: قربة سماوية أو قرع ذكر في الفولكلور والأساطير اليابانية، غالبًا ما ترتبط بالإله إيبيسو أو تستخدم
+      كوعاء للمواد الإلهية. ترمز إلى الوفرة والازدهار.
+    he: דלעת שמימית המוזכרת בפולקלור ובמיתולוגיה היפנית, לעיתים קשורה לאל אביסו או משמשת ככלי לאחסון חומרים
+      אלוהיים. סמלה שפע ושגשוג.
+  learner_level: B2
+  confidence: 0.78
+  review_status: draft
+  register: classical
+  allow_short_pattern: true
+  explanation_key: mnemosyne.ja.explanation.folklore_mythology_terms_天の瓢箪_あまのひょうたん
+  source_work_key: mnemosyne.ja.work.various
+  source_author_key: mnemosyne.ja.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: public_domain
+  source_dataset: folklore_mythology_terms
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Reference
+    is obscure and source vague; needs more reliable textual evidence.'
+- id: ja_proverb_tradition_猫の首に鈴をつける_2a711114
+  language: ja
+  canonical_reference: 猫の首に鈴をつける
+  reference_type: proverb_tradition
+  surface_patterns:
+  - 猫の首に鈴をつける
+  - 猫の首に鈴をつけるような
+  short_explanation: Refers to a risky or impossible task, as trying to put a bell on a cat. Symbolizes
+    the futility of certain endeavors.
+  i18n_explanations:
+    en: Refers to a risky or impossible task, as trying to put a bell on a cat. Symbolizes the futility
+      of certain endeavors.
+    es: Se refiere a una tarea arriesgada o imposible, como intentar ponerle un cascabel a un gato. Simboliza
+      la futilidad de ciertos empeños.
+    fr: Fait référence à une tâche risquée ou impossible, comme essayer de mettre une clochette à un chat.
+      Symbolise la futilité de certaines entreprises.
+    de: Bezieht sich auf eine riskante oder unmögliche Aufgabe, wie etwa einer Katze eine Glocke umzuhängen.
+      Symbolisiert die Aussichtslosigkeit bestimmter Vorhaben.
+    it: Si riferisce a un compito rischioso o impossibile, come provare a mettere un campanello al collo
+      di un gatto. Simboleggia la futilità di certe imprese.
+    pt: Refere-se a uma tarefa arriscada ou impossível, como tentar colocar um sino no pescoço de um gato.
+      Simboliza a futilidade de certos empreendimentos.
+    ru: Описывает рискованное или невозможное дело, как попытка надеть колокольчик на кота. Символизирует
+      тщетность некоторых начинаний.
+    ja: 猫の首に鈴をつけるような、危険で不可能な仕事を指す。特定の取り組みの無駄を象徴している。
+    zh: 指的是像给猫脖子上系铃铛那样的冒险或不可能的任务。象征着某些努力的徒劳。
+    ar: يشير إلى مهمة محفوفة بالمخاطر أو مستحيلة، مثل محاولة وضع جرس في رقبة قطة. يرمز إلى عبثية بعض المساعي.
+    he: מתייחס למשימה מסוכנת או בלתי אפשרית, כמו ניסיון לחגור פעמון לצוואר חתול. מסמל את חוסר התוחלת של
+      מאמצים מסוימים.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: proverbial
+  explanation_key: mnemosyne.ja.explanation.japanese_proverbs_common_猫の首に鈴をつける
+  source_work_key: mnemosyne.ja.work.various
+  source_author_key: mnemosyne.ja.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: japanese_proverbs_common
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Phrasing
+    slightly non-standard; common form is ''猫に鈴をつける''.'
+- id: ja_proverb_tradition_兎に角_f4169228
+  language: ja
+  canonical_reference: 兎に角
+  reference_type: proverb_tradition
+  surface_patterns:
+  - 兎に角
+  - とにかく
+  - 兎角
+  short_explanation: Means 'anyway' or 'in any case,' often used to introduce a conclusion or shift in
+    conversation. Reflects a colloquial, pragmatic approach to discourse.
+  i18n_explanations:
+    en: Means 'anyway' or 'in any case,' often used to introduce a conclusion or shift in conversation.
+      Reflects a colloquial, pragmatic approach to discourse.
+    es: Significa 'de todos modos' o 'en cualquier caso,' usado para introducir una conclusión o cambiar
+      de tema en la conversación. Refleja un enfoque coloquial y pragmático del discurso.
+    fr: Signifie 'de toute façon' ou 'en tout cas,' souvent utilisé pour introduire une conclusion ou
+      un changement de sujet dans une conversation. Reflète une approche colloquiale et pragmatique du
+      discours.
+    de: Bedeutet 'jedenfalls' oder 'auf jeden Fall,' wird oft verwendet, um eine Schlussfolgerung einzuleiten
+      oder das Gespräch zu wechseln. Zeigt einen umgangssprachlichen, pragmatischen Gesprächsstil.
+    it: Significa 'in ogni caso' o 'comunque,' usato per introdurre una conclusione o un cambio di argomento
+      nella conversazione. Riflette un approccio colloquiale e pragmatico al discorso.
+    pt: Significa 'de qualquer forma' ou 'em todo caso,' usado para introduzir uma conclusão ou mudança
+      de assunto na conversa. Reflete uma abordagem coloquial e pragmática do discurso.
+    ru: Означает 'в любом случае' или 'так или иначе,' часто используется, чтобы подвести итог или сменить
+      тему разговора. Отражает разговорный, прагматичный подход к общению.
+    ja: 「とにかく」や「いずれにせよ」を意味し、会話で結論を述べたり話題を変える際に使われます。話し言葉の実用的なアプローチを反映しています。
+    zh: 意思是「不管怎么说」或「无论如何」，常用于引出结论或转换话题。反映了日语中对话语的口语化、实用化处理方式。
+    ar: تعني "على أي حال" أو "في كل الأحوال"، وتُستخدم غالبًا لبدء خاتمة أو تغيير الموضوع في المحادثة.
+      تعكس أسلوبًا colloquial وعمليًا في الخطاب.
+    he: פירושו "בכל מקרה" או "למרות הכל", משמש לעיתים קרובות כדי להציג מסקנה או להחליף נושא בשיחה. משקף
+      גישה קולחית ופרגמטית בדיבור.
+  learner_level: A2
+  confidence: 0.9
+  review_status: draft
+  register: informal
+  allow_short_pattern: true
+  explanation_key: mnemosyne.ja.explanation.oral_proverbs_phrases_兎に角
+  source_work_key: mnemosyne.ja.work.various
+  source_author_key: mnemosyne.ja.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: oral_proverbs_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- Surface
+    pattern includes ''兎角'' which can have different readings and meanings; recommend clarifying or removing.'
+- id: ja_cultural_reference_腹癒せ_298d8a24
+  language: ja
+  canonical_reference: 腹癒せ
+  reference_type: cultural_reference
+  surface_patterns:
+  - 腹癒せ
+  - 腹癒せをする
+  - 腹癒せに
+  - 腹癒せを晴らす
+  short_explanation: To take revenge or seek retribution for a personal grievance. It reflects the cultural
+    value placed on emotional catharsis and the resolution of personal conflicts, often through direct
+    action.
+  i18n_explanations:
+    en: To take revenge or seek retribution for a personal grievance. It reflects the cultural value placed
+      on emotional catharsis and the resolution of personal conflicts, often through direct action.
+    es: Tomar venganza o buscar retribución por una ofensa personal. Refleja el valor cultural dado a
+      la catarsis emocional y la resolución de conflictos personales, a menudo mediante acción directa.
+    fr: Prendre sa revanche ou chercher à se venger d'une offense personnelle. Cela reflète la valeur
+      culturelle accordée à la catharsis émotionnelle et à la résolution des conflits personnels, souvent
+      par une action directe.
+    de: Sich an jemandem rächen oder Vergeltung für ein persönliches Unrecht suchen. Dies spiegelt den
+      kulturellen Wert wider, der emotionaler Katharsis und der Lösung persönlicher Konflikte beigemessen
+      wird, oft durch direkte Maßnahmen.
+    it: Prendere la propria rivincita o cercare di vendicarsi per un'offesa personale. Riflette il valore
+      culturale attribuito alla catarsi emotiva e alla risoluzione dei conflitti personali, spesso attraverso
+      un'azione diretta.
+    pt: Tomar vingança ou buscar retribuição por uma ofensa pessoal. Reflete o valor cultural dado à catarse
+      emocional e à resolução de conflitos pessoais, muitas vezes por meio de ação direta.
+    ru: Отомстить или добиться возмездия за личную обиду. Отражает культурную ценность эмоциональной разрядки
+      и разрешения личных конфликтов, часто через прямые действия.
+    ja: 個人的な恨みを晴らすために復讐すること。感情の発散や個人的な対立の解決を重視する文化的価値観を反映し、しばしば直接的な行動を通じて行われる。
+    zh: 为个人恩怨进行报复或寻求报应。反映了文化中对情感宣泄和个人冲突解决的重视，通常通过直接行动实现。
+    ar: الانتقام أو السعي للقصاص من إساءة شخصية. يعكس القيمة الثقافية الممنوحة للتطهير العاطفي وحل الصراعات
+      الشخصية، غالبًا من خلال عمل مباشر.
+    he: לקחת נקמה או לחפש צדק על עוול אישי. משקף את הערך התרבותי המוענק לקתרזיס רגשי ולפתרון קונפליקטים
+      אישיים, לעיתים קרובות באמצעות פעולה ישירה.
+  learner_level: B2
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.ja.explanation.japanese_verbs_phrases_腹癒せ
+  source_work_key: mnemosyne.ja.work.various
+  source_author_key: mnemosyne.ja.author.oral_tradition
+  source_work: Various
+  source_author: Oral tradition
+  source_license: not_required
+  rights_basis: common_usage_short_expression
+  source_dataset: japanese_verbs_phrases
+  notes: 'AI-generated; verify attribution and surface patterns before promotion. AI review: flag -- The
+    canonical reference should be 腹いせ (haraise), not 腹癒せ; the given form is a misspelling.'
