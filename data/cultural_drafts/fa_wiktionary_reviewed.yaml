@@ -1,0 +1,1004 @@
+- id: fa_cultural_reference_اتشی_2bc89ad6
+  language: fa
+  canonical_reference: آتشی
+  reference_type: cultural_reference
+  surface_patterns:
+    - آتشی
+  short_explanation: red, dark red
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.اتشی
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A2%D8%AA%D8%B4%DB%8C
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_از_بیخ_عرب_بودن_bf20414c
+  language: fa
+  canonical_reference: از بیخ عرب بودن
+  reference_type: cultural_reference
+  surface_patterns:
+    - از بیخ عرب بودن
+  short_explanation: to not know at all; to find all Greek to one;  “to be a complete Arab; to be an Arab
+    from the roots”
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.از_بیخ_عرب_بودن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A7%D8%B2_%D8%A8%DB%8C%D8%AE_%D8%B9%D8%B1%D8%A8_%D8%A8%D9%88%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_استخاره_کردن_77fb276e
+  language: fa
+  canonical_reference: استخاره کردن
+  reference_type: cultural_reference
+  surface_patterns:
+    - استخاره کردن
+  short_explanation: to perform
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.استخاره_کردن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A7%D8%B3%D8%AA%D8%AE%D8%A7%D8%B1%D9%87_%DA%A9%D8%B1%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_اون_ممه_رو_لولو_برد_c12a21bf
+  language: fa
+  canonical_reference: اون ممه رو لولو برد
+  reference_type: cultural_reference
+  surface_patterns:
+    - اون ممه رو لولو برد
+  short_explanation: that ship has sailed, the party is over
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.اون_ممه_رو_لولو_برد
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A7%D9%88%D9%86_%D9%85%D9%85%D9%87_%D8%B1%D9%88_%D9%84%D9%88%D9%84%D9%88_%D8%A8%D8%B1%D8%AF
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_بازار_شام_e345241b
+  language: fa
+  canonical_reference: بازار شام
+  reference_type: cultural_reference
+  surface_patterns:
+    - بازار شام
+  short_explanation: very crowded place
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.بازار_شام
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1_%D8%B4%D8%A7%D9%85
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_بدرنگ_ba4bdbee
+  language: fa
+  canonical_reference: بدرنگ
+  reference_type: cultural_reference
+  surface_patterns:
+    - بدرنگ
+  short_explanation: + }}
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.بدرنگ
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D8%AF%D8%B1%D9%86%DA%AF
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_به_دنیا_امدن_2fb3035f
+  language: fa
+  canonical_reference: به دنیا آمدن
+  reference_type: cultural_reference
+  surface_patterns:
+    - به دنیا آمدن
+  short_explanation: to be born
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.به_دنیا_امدن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D9%87_%D8%AF%D9%86%DB%8C%D8%A7_%D8%A2%D9%85%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_به_سیم_اخر_زدن_e82a3cf5
+  language: fa
+  canonical_reference: به سیم آخر زدن
+  reference_type: cultural_reference
+  surface_patterns:
+    - به سیم آخر زدن
+  short_explanation: to run amok, to lose one's temper
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.به_سیم_اخر_زدن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%D9%87_%D8%B3%DB%8C%D9%85_%D8%A2%D8%AE%D8%B1_%D8%B2%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_بی_چشم_و_رو_ffa4a449
+  language: fa
+  canonical_reference: بی چشم و رو
+  reference_type: cultural_reference
+  surface_patterns:
+    - بی چشم و رو
+  short_explanation: ungrateful
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.بی_چشم_و_رو
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%DB%8C_%DA%86%D8%B4%D9%85_%D9%88_%D8%B1%D9%88
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_بی_گدار_به_اب_زدن_8cdae882
+  language: fa
+  canonical_reference: بی گدار به آب زدن
+  reference_type: cultural_reference
+  surface_patterns:
+    - بی گدار به آب زدن
+  short_explanation: to be rash, to not look before you leap
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.بی_گدار_به_اب_زدن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%A8%DB%8C_%DA%AF%D8%AF%D8%A7%D8%B1_%D8%A8%D9%87_%D8%A2%D8%A8_%D8%B2%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_تعارف_تیکه_پاره_کردن_d47d22c5
+  language: fa
+  canonical_reference: تعارف تیکه پاره کردن
+  reference_type: cultural_reference
+  surface_patterns:
+    - تعارف تیکه پاره کردن
+  short_explanation: to practice taarof in an excessive manner
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.تعارف_تیکه_پاره_کردن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AA%D8%B9%D8%A7%D8%B1%D9%81_%D8%AA%DB%8C%DA%A9%D9%87_%D9%BE%D8%A7%D8%B1%D9%87_%DA%A9%D8%B1%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_جان_سالم_به_در_بردن_63d35a8b
+  language: fa
+  canonical_reference: جان سالم به در بردن
+  reference_type: cultural_reference
+  surface_patterns:
+    - جان سالم به در بردن
+  short_explanation: to survive, to stay alive
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.جان_سالم_به_در_بردن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AC%D8%A7%D9%86_%D8%B3%D8%A7%D9%84%D9%85_%D8%A8%D9%87_%D8%AF%D8%B1_%D8%A8%D8%B1%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_حالت_چطوره_93954ec9
+  language: fa
+  canonical_reference: حالت چطوره
+  reference_type: cultural_reference
+  surface_patterns:
+    - حالت چطوره
+  short_explanation: how are you?
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.حالت_چطوره
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AD%D8%A7%D9%84%D8%AA_%DA%86%D8%B7%D9%88%D8%B1%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_حسرت_کشیدن_c7715618
+  language: fa
+  canonical_reference: حسرت کشیدن
+  reference_type: cultural_reference
+  surface_patterns:
+    - حسرت کشیدن
+  short_explanation: to yearn for someone or something
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.حسرت_کشیدن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AD%D8%B3%D8%B1%D8%AA_%DA%A9%D8%B4%DB%8C%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_حواس_580837e4
+  language: fa
+  canonical_reference: حواس
+  reference_type: cultural_reference
+  surface_patterns:
+    - حواس
+  short_explanation: attention
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.حواس
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AD%D9%88%D8%A7%D8%B3
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_خودکشی_از_ترس_مرگ_cab0201e
+  language: fa
+  canonical_reference: خودکشی از ترس مرگ
+  reference_type: cultural_reference
+  surface_patterns:
+    - خودکشی از ترس مرگ
+  short_explanation: a hazardous and foredoomed course of action taken by someone who finds themselves
+    in a slowly but continuously deteriorating position
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.خودکشی_از_ترس_مرگ
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AE%D9%88%D8%AF%DA%A9%D8%B4%DB%8C_%D8%A7%D8%B2_%D8%AA%D8%B1%D8%B3_%D9%85%D8%B1%DA%AF
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_خوره_06e05f2d
+  language: fa
+  canonical_reference: خوره
+  reference_type: cultural_reference
+  surface_patterns:
+    - خوره
+  short_explanation: leprosy
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.خوره
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AE%D9%88%D8%B1%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_دست_شما_درد_نکنه_6a394df1
+  language: fa
+  canonical_reference: دست شما درد نکنه
+  reference_type: cultural_reference
+  surface_patterns:
+    - دست شما درد نکنه
+  short_explanation: thank you
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.دست_شما_درد_نکنه
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AF%D8%B3%D8%AA_%D8%B4%D9%85%D8%A7_%D8%AF%D8%B1%D8%AF_%D9%86%DA%A9%D9%86%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_دست_و_پای_خود_را_گم_کردن_2f5594ce
+  language: fa
+  canonical_reference: دست و پای خود را گم کردن
+  reference_type: cultural_reference
+  surface_patterns:
+    - دست و پای خود را گم کردن
+  short_explanation: to be in distress
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.دست_و_پای_خود_را_گم_کردن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AF%D8%B3%D8%AA_%D9%88_%D9%BE%D8%A7%DB%8C_%D8%AE%D9%88%D8%AF_%D8%B1%D8%A7_%DA%AF%D9%85_%DA%A9%D8%B1%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_دل_به_دریا_زدن_0ec4b2db
+  language: fa
+  canonical_reference: دل به دریا زدن
+  reference_type: cultural_reference
+  surface_patterns:
+    - دل به دریا زدن
+  short_explanation: to risk
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.دل_به_دریا_زدن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AF%D9%84_%D8%A8%D9%87_%D8%AF%D8%B1%DB%8C%D8%A7_%D8%B2%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_دل_را_از_عزا_دراوردن_269a486b
+  language: fa
+  canonical_reference: دل را از عزا درآوردن
+  reference_type: cultural_reference
+  surface_patterns:
+    - دل را از عزا درآوردن
+  short_explanation: to become full, to eat to satiety
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.دل_را_از_عزا_دراوردن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AF%D9%84_%D8%B1%D8%A7_%D8%A7%D8%B2_%D8%B9%D8%B2%D8%A7_%D8%AF%D8%B1%D8%A2%D9%88%D8%B1%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_دو_تا_هندوانه_را_با_یک_دست_برداشتن_4434937d
+  language: fa
+  canonical_reference: دو تا هندوانه را با یک دست برداشتن
+  reference_type: cultural_reference
+  surface_patterns:
+    - دو تا هندوانه را با یک دست برداشتن
+  short_explanation: to pick up or lift two watermelons using one hand
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.دو_تا_هندوانه_را_با_یک_دست_برداشتن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%AF%D9%88_%D8%AA%D8%A7_%D9%87%D9%86%D8%AF%D9%88%D8%A7%D9%86%D9%87_%D8%B1%D8%A7_%D8%A8%D8%A7_%DB%8C%DA%A9_%D8%AF%D8%B3%D8%AA_%D8%A8%D8%B1%D8%AF%D8%A7%D8%B4%D8%AA%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_رجز_a09705ef
+  language: fa
+  canonical_reference: رجز
+  reference_type: cultural_reference
+  surface_patterns:
+    - رجز
+  short_explanation: bragging, boasting
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.رجز
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B1%D8%AC%D8%B2
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_رخ_عقاب_گرفتن_98e36f9c
+  language: fa
+  canonical_reference: رخ عقاب گرفتن
+  reference_type: cultural_reference
+  surface_patterns:
+    - رخ عقاب گرفتن
+  short_explanation: to get a smug look, to turn up one's nose
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.رخ_عقاب_گرفتن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B1%D8%AE_%D8%B9%D9%82%D8%A7%D8%A8_%DA%AF%D8%B1%D9%81%D8%AA%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_روزی_از_روزها_ac277c67
+  language: fa
+  canonical_reference: روزی از روزها
+  reference_type: cultural_reference
+  surface_patterns:
+    - روزی از روزها
+  short_explanation: a day among the days
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.روزی_از_روزها
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B1%D9%88%D8%B2%DB%8C_%D8%A7%D8%B2_%D8%B1%D9%88%D8%B2%D9%87%D8%A7
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_روزی_روزگاری_387afb61
+  language: fa
+  canonical_reference: روزی روزگاری
+  reference_type: cultural_reference
+  surface_patterns:
+    - روزی روزگاری
+  short_explanation: a day, a time
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.روزی_روزگاری
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B1%D9%88%D8%B2%DB%8C_%D8%B1%D9%88%D8%B2%DA%AF%D8%A7%D8%B1%DB%8C
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_روی_سگ_کسی_را_بالا_اوردن_cbeefecc
+  language: fa
+  canonical_reference: روی سگ کسی را بالا آوردن
+  reference_type: cultural_reference
+  surface_patterns:
+    - روی سگ کسی را بالا آوردن
+  short_explanation: to make someone snap; to piss off someone
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.روی_سگ_کسی_را_بالا_اوردن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B1%D9%88%DB%8C_%D8%B3%DA%AF_%DA%A9%D8%B3%DB%8C_%D8%B1%D8%A7_%D8%A8%D8%A7%D9%84%D8%A7_%D8%A2%D9%88%D8%B1%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_ریشه_دواندن_ced49294
+  language: fa
+  canonical_reference: ریشه دواندن
+  reference_type: cultural_reference
+  surface_patterns:
+    - ریشه دواندن
+  short_explanation: to put down roots
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.ریشه_دواندن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B1%DB%8C%D8%B4%D9%87_%D8%AF%D9%88%D8%A7%D9%86%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_سر_31a4ac3b
+  language: fa
+  canonical_reference: سر
+  reference_type: cultural_reference
+  surface_patterns:
+    - سر
+  short_explanation: head
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.سر
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B3%D8%B1
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_سر_کیسه_را_شل_کردن_c825b711
+  language: fa
+  canonical_reference: سر کیسه را شل کردن
+  reference_type: cultural_reference
+  surface_patterns:
+    - سر کیسه را شل کردن
+  short_explanation: to spend more money, to spend money more readily (literally, "to loosen the drawstring
+    of the bag")
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.سر_کیسه_را_شل_کردن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B3%D8%B1_%DA%A9%DB%8C%D8%B3%D9%87_%D8%B1%D8%A7_%D8%B4%D9%84_%DA%A9%D8%B1%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_سرو_خمیده_b3cf5657
+  language: fa
+  canonical_reference: سرو خمیده
+  reference_type: cultural_reference
+  surface_patterns:
+    - سرو خمیده
+  short_explanation: curved cedar
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.سرو_خمیده
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B3%D8%B1%D9%88_%D8%AE%D9%85%DB%8C%D8%AF%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_سنگ_تمام_گذاشتن_0e91a2a4
+  language: fa
+  canonical_reference: سنگ تمام گذاشتن
+  reference_type: cultural_reference
+  surface_patterns:
+    - سنگ تمام گذاشتن
+  short_explanation: to finish something perfectly ()
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.سنگ_تمام_گذاشتن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B3%D9%86%DA%AF_%D8%AA%D9%85%D8%A7%D9%85_%DA%AF%D8%B0%D8%A7%D8%B4%D8%AA%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_سوختن_0746f3fa
+  language: fa
+  canonical_reference: سوختن
+  reference_type: cultural_reference
+  surface_patterns:
+    - سوختن
+  short_explanation: to burn, to be burnt
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.سوختن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B3%D9%88%D8%AE%D8%AA%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_شاهنامه_اخرش_خوشه_dc83158b
+  language: fa
+  canonical_reference: شاهنامه آخرش خوشه
+  reference_type: cultural_reference
+  surface_patterns:
+    - شاهنامه آخرش خوشه
+  short_explanation: 'don''t judge early: things may unexpectedly end in a bad way; he who laughs last
+    laughs best'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.شاهنامه_اخرش_خوشه
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B4%D8%A7%D9%87%D9%86%D8%A7%D9%85%D9%87_%D8%A2%D8%AE%D8%B1%D8%B4_%D8%AE%D9%88%D8%B4%D9%87
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_عزیزم_381afc9e
+  language: fa
+  canonical_reference: عزیزم
+  reference_type: cultural_reference
+  surface_patterns:
+    - عزیزم
+  short_explanation: 'TODO: add explanation'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.عزیزم
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D8%B9%D8%B2%DB%8C%D8%B2%D9%85
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_قمپز_درکردن_ca8d6ad4
+  language: fa
+  canonical_reference: قمپز درکردن
+  reference_type: cultural_reference
+  surface_patterns:
+    - قمپز درکردن
+  short_explanation: to exaggerate, to overstate
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.قمپز_درکردن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%82%D9%85%D9%BE%D8%B2_%D8%AF%D8%B1%DA%A9%D8%B1%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_لیلی_زن_بود_یا_مرد_c5b77456
+  language: fa
+  canonical_reference: لیلی زن بود یا مرد
+  reference_type: cultural_reference
+  surface_patterns:
+    - لیلی زن بود یا مرد
+  short_explanation: '"Was Layla a boy or a girl?":'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.لیلی_زن_بود_یا_مرد
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%84%DB%8C%D9%84%DB%8C_%D8%B2%D9%86_%D8%A8%D9%88%D8%AF_%DB%8C%D8%A7_%D9%85%D8%B1%D8%AF
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_مار_در_استین_پروراندن_3c8f7905
+  language: fa
+  canonical_reference: مار در آستین پروراندن
+  reference_type: cultural_reference
+  surface_patterns:
+    - مار در آستین پروراندن
+  short_explanation: to nourish a viper in one's bosom
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.مار_در_استین_پروراندن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%85%D8%A7%D8%B1_%D8%AF%D8%B1_%D8%A2%D8%B3%D8%AA%DB%8C%D9%86_%D9%BE%D8%B1%D9%88%D8%B1%D8%A7%D9%86%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_هرچه_بادا_باد_d1157a3c
+  language: fa
+  canonical_reference: هرچه بادا باد
+  reference_type: cultural_reference
+  surface_patterns:
+    - هرچه بادا باد
+  short_explanation: '"May whatever will be, be"; que sera sera, whatever happens, happens'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.هرچه_بادا_باد
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%87%D8%B1%DA%86%D9%87_%D8%A8%D8%A7%D8%AF%D8%A7_%D8%A8%D8%A7%D8%AF
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_هوای_کسی_را_داشتن_ddd8f136
+  language: fa
+  canonical_reference: هوای کسی را داشتن
+  reference_type: cultural_reference
+  surface_patterns:
+    - هوای کسی را داشتن
+  short_explanation: to have someone's back; to support
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.هوای_کسی_را_داشتن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%87%D9%88%D8%A7%DB%8C_%DA%A9%D8%B3%DB%8C_%D8%B1%D8%A7_%D8%AF%D8%A7%D8%B4%D8%AA%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_ولش_کن_7e624d85
+  language: fa
+  canonical_reference: ولش کن
+  reference_type: cultural_reference
+  surface_patterns:
+    - ولش کن
+  short_explanation: forget it, never mind
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.ولش_کن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%88%D9%84%D8%B4_%DA%A9%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_پاک_دل_890c51da
+  language: fa
+  canonical_reference: پاک دل
+  reference_type: cultural_reference
+  surface_patterns:
+    - پاک دل
+  short_explanation: sincere
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.پاک_دل
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%BE%D8%A7%DA%A9_%D8%AF%D9%84
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_پرنده_پر_نمی_زد_cc8f4472
+  language: fa
+  canonical_reference: پرنده پر نمی‌زد
+  reference_type: cultural_reference
+  surface_patterns:
+    - پرنده پر نمی‌زد
+  short_explanation: '"no bird flapped a wing"; not a soul in sight,'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.پرنده_پر_نمی_زد
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D9%BE%D8%B1%D9%86%D8%AF%D9%87_%D9%BE%D8%B1_%D9%86%D9%85%DB%8C%E2%80%8C%D8%B2%D8%AF
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_چانه_کسی_گرم_شدن_cd8be140
+  language: fa
+  canonical_reference: چانه کسی گرم شدن
+  reference_type: cultural_reference
+  surface_patterns:
+    - چانه کسی گرم شدن
+  short_explanation: to keep talking a lot for a long time
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.چانه_کسی_گرم_شدن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%DA%86%D8%A7%D9%86%D9%87_%DA%A9%D8%B3%DB%8C_%DA%AF%D8%B1%D9%85_%D8%B4%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_کارد_و_پنیر_52a1c524
+  language: fa
+  canonical_reference: کارد و پنیر
+  reference_type: cultural_reference
+  surface_patterns:
+    - کارد و پنیر
+  short_explanation: chalk and cheese, apples and oranges; something very different
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.کارد_و_پنیر
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%DA%A9%D8%A7%D8%B1%D8%AF_%D9%88_%D9%BE%D9%86%DB%8C%D8%B1
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_کلاه_سر_کسی_گذاشتن_354d1e74
+  language: fa
+  canonical_reference: کلاه سر کسی گذاشتن
+  reference_type: cultural_reference
+  surface_patterns:
+    - کلاه سر کسی گذاشتن
+  short_explanation: to trick someone, to swindle someone
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.کلاه_سر_کسی_گذاشتن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%DA%A9%D9%84%D8%A7%D9%87_%D8%B3%D8%B1_%DA%A9%D8%B3%DB%8C_%DA%AF%D8%B0%D8%A7%D8%B4%D8%AA%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_کلک_کسی_را_کندن_a00f7840
+  language: fa
+  canonical_reference: کلک کسی را کندن
+  reference_type: cultural_reference
+  surface_patterns:
+    - کلک کسی را کندن
+  short_explanation: to dismiss, to dispatch
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.کلک_کسی_را_کندن
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%DA%A9%D9%84%DA%A9_%DA%A9%D8%B3%DB%8C_%D8%B1%D8%A7_%DA%A9%D9%86%D8%AF%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_گوشه_چشم_811a86cd
+  language: fa
+  canonical_reference: گوشه چشم
+  reference_type: cultural_reference
+  surface_patterns:
+    - گوشه چشم
+  short_explanation: canthus, corner of the eye
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.گوشه_چشم
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%DA%AF%D9%88%D8%B4%D9%87_%DA%86%D8%B4%D9%85
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_یک_تیر_و_دو_نشان_aef80b44
+  language: fa
+  canonical_reference: یک تیر و دو نشان
+  reference_type: cultural_reference
+  surface_patterns:
+    - یک تیر و دو نشان
+  short_explanation: '"one arrow and two targets"; two birds with one stone'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.یک_تیر_و_دو_نشان
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%DB%8C%DA%A9_%D8%AA%DB%8C%D8%B1_%D9%88_%D8%AF%D9%88_%D9%86%D8%B4%D8%A7%D9%86
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: fa_cultural_reference_یکی_بود_یکی_نبود_167b332b
+  language: fa
+  canonical_reference: یکی بود یکی نبود
+  reference_type: cultural_reference
+  surface_patterns:
+    - یکی بود یکی نبود
+  short_explanation: once upon a time (literally One was, one wasn't.)
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.fa_wiktionary_idioms.یکی_بود_یکی_نبود
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%DB%8C%DA%A9%DB%8C_%D8%A8%D9%88%D8%AF_%DB%8C%DA%A9%DB%8C_%D9%86%D8%A8%D9%88%D8%AF
+  source_license: CC-BY-SA-4.0
+  source_dataset: fa_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.

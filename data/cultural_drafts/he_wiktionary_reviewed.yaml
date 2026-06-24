@@ -1,0 +1,662 @@
+- id: he_cultural_reference_אין_מה_לחפש_dc1005d8
+  language: he
+  canonical_reference: אין מה לחפש
+  reference_type: cultural_reference
+  surface_patterns:
+    - אין מה לחפש
+  short_explanation: to have no business
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.אין_מה_לחפש
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%90%D7%99%D7%9F_%D7%9E%D7%94_%D7%9C%D7%97%D7%A4%D7%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_בארבע_עיניים_a57b4987
+  language: he
+  canonical_reference: בארבע עיניים
+  reference_type: cultural_reference
+  surface_patterns:
+    - בארבע עיניים
+  short_explanation: face-to-face, tête-à-tête, one-on-one, between the two of us
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.בארבע_עיניים
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%91%D7%90%D7%A8%D7%91%D7%A2_%D7%A2%D7%99%D7%A0%D7%99%D7%99%D7%9D
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_בדם_קר_ca1d978c
+  language: he
+  canonical_reference: בדם קר
+  reference_type: cultural_reference
+  surface_patterns:
+    - בדם קר
+  short_explanation: in cold blood
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.בדם_קר
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%91%D7%93%D7%9D_%D7%A7%D7%A8
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_בוקר_טוב_אליהו_88440443
+  language: he
+  canonical_reference: בוקר טוב אליהו
+  reference_type: cultural_reference
+  surface_patterns:
+    - בוקר טוב אליהו
+  short_explanation: no kidding, you don't say, no shit Sherlock
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.בוקר_טוב_אליהו
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%91%D7%95%D7%A7%D7%A8_%D7%98%D7%95%D7%91_%D7%90%D7%9C%D7%99%D7%94%D7%95
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_בן_זונה_6ed64ad8
+  language: he
+  canonical_reference: בן זונה
+  reference_type: cultural_reference
+  surface_patterns:
+    - בן זונה
+  short_explanation: the son of a prostitute
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.בן_זונה
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%91%D7%9F_%D7%96%D7%95%D7%A0%D7%94
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_בן_פורת_יוסף_1f2070e8
+  language: he
+  canonical_reference: בן פורת יוסף
+  reference_type: cultural_reference
+  surface_patterns:
+    - בן פורת יוסף
+  short_explanation: praise for a young male in order to not jinx him
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.בן_פורת_יוסף
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%91%D7%9F_%D7%A4%D7%95%D7%A8%D7%AA_%D7%99%D7%95%D7%A1%D7%A3
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_בר_מינן_2ca12d8f
+  language: he
+  canonical_reference: בר מינן
+  reference_type: cultural_reference
+  surface_patterns:
+    - בר מינן
+  short_explanation: May it not happen to us.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.בר_מינן
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%91%D7%A8_%D7%9E%D7%99%D7%A0%D7%9F
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_דבר_אחר_c7ebd5a1
+  language: he
+  canonical_reference: דבר אחר
+  reference_type: cultural_reference
+  surface_patterns:
+    - דבר אחר
+  short_explanation: Something else; another thing.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.דבר_אחר
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%93%D7%91%D7%A8_%D7%90%D7%97%D7%A8
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_האותיות_הקטנות_d2ea1634
+  language: he
+  canonical_reference: האותיות הקטנות
+  reference_type: cultural_reference
+  surface_patterns:
+    - האותיות הקטנות
+  short_explanation: 'Fine print, the fine print: the detailed conditions or restrictions of a contract,
+    advertisement, or similar.'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.האותיות_הקטנות
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%94%D7%90%D7%95%D7%AA%D7%99%D7%95%D7%AA_%D7%94%D7%A7%D7%98%D7%A0%D7%95%D7%AA
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_הגיע_עד_פת_לחם_d45e6d63
+  language: he
+  canonical_reference: הגיע עד פת לחם
+  reference_type: cultural_reference
+  surface_patterns:
+    - הגיע עד פת לחם
+  short_explanation: (he/it) became utterly broke, indigent
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.הגיע_עד_פת_לחם
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%94%D7%92%D7%99%D7%A2_%D7%A2%D7%93_%D7%A4%D7%AA_%D7%9C%D7%97%D7%9D
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_הפך_את_הקערה_על_פיה_19afd0cd
+  language: he
+  canonical_reference: הפך את הקערה על פיה
+  reference_type: cultural_reference
+  surface_patterns:
+    - הפך את הקערה על פיה
+  short_explanation: to turn the tables
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.הפך_את_הקערה_על_פיה
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%94%D7%A4%D7%9A_%D7%90%D7%AA_%D7%94%D7%A7%D7%A2%D7%A8%D7%94_%D7%A2%D7%9C_%D7%A4%D7%99%D7%94
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_חלומות_באספמיה_4a9ff835
+  language: he
+  canonical_reference: חלומות באספמיה
+  reference_type: cultural_reference
+  surface_patterns:
+    - חלומות באספמיה
+  short_explanation: Pipe dreams, near impossibilities.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.חלומות_באספמיה
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%97%D7%9C%D7%95%D7%9E%D7%95%D7%AA_%D7%91%D7%90%D7%A1%D7%A4%D7%9E%D7%99%D7%94
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_חמור_נושא_ספרים_e12ec703
+  language: he
+  canonical_reference: חמור נושא ספרים
+  reference_type: cultural_reference
+  surface_patterns:
+    - חמור נושא ספרים
+  short_explanation: One with access to great knowledge, or who has such knowledge, but does not make
+    use of it.
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.חמור_נושא_ספרים
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%97%D7%9E%D7%95%D7%A8_%D7%A0%D7%95%D7%A9%D7%90_%D7%A1%D7%A4%D7%A8%D7%99%D7%9D
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_חשב_מחוץ_לקופסה_a0f54090
+  language: he
+  canonical_reference: חשב מחוץ לקופסה
+  reference_type: cultural_reference
+  surface_patterns:
+    - חשב מחוץ לקופסה
+  short_explanation: to think outside the box
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.חשב_מחוץ_לקופסה
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%97%D7%A9%D7%91_%D7%9E%D7%97%D7%95%D7%A5_%D7%9C%D7%A7%D7%95%D7%A4%D7%A1%D7%94
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_יצא_לו_מהאף_ff593b17
+  language: he
+  canonical_reference: יצא לו מהאף
+  reference_type: cultural_reference
+  surface_patterns:
+    - יצא לו מהאף
+  short_explanation: to get fed up
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.יצא_לו_מהאף
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%99%D7%A6%D7%90_%D7%9C%D7%95_%D7%9E%D7%94%D7%90%D7%A3
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_יש_ל_ג_וק_בראש_52719e62
+  language: he
+  canonical_reference: יש ל־ ג׳וק בראש
+  reference_type: cultural_reference
+  surface_patterns:
+    - יש ל־ ג׳וק בראש
+  short_explanation: to go crazy
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.יש_ל_ג_וק_בראש
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%99%D7%A9_%D7%9C%D6%BE_%D7%92%D7%B3%D7%95%D7%A7_%D7%91%D7%A8%D7%90%D7%A9
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_כמו_ג_וקים_מסוממים_369d7799
+  language: he
+  canonical_reference: כמו ג׳וקים מסוממים
+  reference_type: cultural_reference
+  surface_patterns:
+    - כמו ג׳וקים מסוממים
+  short_explanation: addleheaded and panic-stricken (at the same time)
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.כמו_ג_וקים_מסוממים
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%9B%D7%9E%D7%95_%D7%92%D7%B3%D7%95%D7%A7%D7%99%D7%9D_%D7%9E%D7%A1%D7%95%D7%9E%D7%9E%D7%99%D7%9D
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_כתב_נח_בשבע_שגיאות_37387f3e
+  language: he
+  canonical_reference: כתב נח בשבע שגיאות
+  reference_type: cultural_reference
+  surface_patterns:
+    - כתב נח בשבע שגיאות
+  short_explanation: to make many spelling mistakes
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.כתב_נח_בשבע_שגיאות
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%9B%D7%AA%D7%91_%D7%A0%D7%97_%D7%91%D7%A9%D7%91%D7%A2_%D7%A9%D7%92%D7%99%D7%90%D7%95%D7%AA
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_לא_ברא_השטן_72f51a02
+  language: he
+  canonical_reference: לא ברא השטן
+  reference_type: cultural_reference
+  surface_patterns:
+    - לא ברא השטן
+  short_explanation: 'terrible, horrible (literally: the devil did not create)'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.לא_ברא_השטן
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%9C%D7%90_%D7%91%D7%A8%D7%90_%D7%94%D7%A9%D7%98%D7%9F
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_לא_כל_יום_פורים_26c39ff7
+  language: he
+  canonical_reference: לא כל יום פורים
+  reference_type: cultural_reference
+  surface_patterns:
+    - לא כל יום פורים
+  short_explanation: not every day is Purim; not every day is a holiday; not every day is a party
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.לא_כל_יום_פורים
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%9C%D7%90_%D7%9B%D7%9C_%D7%99%D7%95%D7%9D_%D7%A4%D7%95%D7%A8%D7%99%D7%9D
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_לימים_5526ecc9
+  language: he
+  canonical_reference: לימים
+  reference_type: cultural_reference
+  surface_patterns:
+    - לימים
+  short_explanation: in time, eventually
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.לימים
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%9C%D7%99%D7%9E%D7%99%D7%9D
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_לך_לעזאזל_6c9d43bb
+  language: he
+  canonical_reference: לך לעזאזל
+  reference_type: cultural_reference
+  surface_patterns:
+    - לך לעזאזל
+  short_explanation: go to hell, get lost
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.לך_לעזאזל
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%9C%D7%9A_%D7%9C%D7%A2%D7%96%D7%90%D7%96%D7%9C
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_מחנה_משותף_3d1943ca
+  language: he
+  canonical_reference: מחנה משותף
+  reference_type: cultural_reference
+  surface_patterns:
+    - מחנה משותף
+  short_explanation: common ground, similarity
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.מחנה_משותף
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%9E%D7%97%D7%A0%D7%94_%D7%9E%D7%A9%D7%95%D7%AA%D7%A3
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_מכל_וכל_2f7a0549
+  language: he
+  canonical_reference: מכל וכל
+  reference_type: cultural_reference
+  surface_patterns:
+    - מכל וכל
+  short_explanation: completely, totally, utterly
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.מכל_וכל
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%9E%D7%9B%D7%9C_%D7%95%D7%9B%D7%9C
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_מלכת_יופי_e39e9d79
+  language: he
+  canonical_reference: מלכת יופי
+  reference_type: cultural_reference
+  surface_patterns:
+    - מלכת יופי
+  short_explanation: 'TODO: add explanation'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.מלכת_יופי
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%9E%D7%9C%D7%9B%D7%AA_%D7%99%D7%95%D7%A4%D7%99
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_מצנח_זהב_9636b29d
+  language: he
+  canonical_reference: מצנח זהב
+  reference_type: cultural_reference
+  surface_patterns:
+    - מצנח זהב
+  short_explanation: 'TODO: add explanation'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.מצנח_זהב
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%9E%D7%A6%D7%A0%D7%97_%D7%96%D7%94%D7%91
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_עבר_על_החוק_1156262d
+  language: he
+  canonical_reference: עבר על החוק
+  reference_type: cultural_reference
+  surface_patterns:
+    - עבר על החוק
+  short_explanation: to break, violate the law
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.עבר_על_החוק
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%A2%D7%91%D7%A8_%D7%A2%D7%9C_%D7%94%D7%97%D7%95%D7%A7
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_עיגל_פינות_12a197f1
+  language: he
+  canonical_reference: עיגל פינות
+  reference_type: cultural_reference
+  surface_patterns:
+    - עיגל פינות
+  short_explanation: to tell a partial truth in order to avoid conflict
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.עיגל_פינות
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%A2%D7%99%D7%92%D7%9C_%D7%A4%D7%99%D7%A0%D7%95%D7%AA
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_על_החיים_ועל_המוות_acc43cb9
+  language: he
+  canonical_reference: על החיים ועל המוות
+  reference_type: cultural_reference
+  surface_patterns:
+    - על החיים ועל המוות
+  short_explanation: come what may
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.על_החיים_ועל_המוות
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%A2%D7%9C_%D7%94%D7%97%D7%99%D7%99%D7%9D_%D7%95%D7%A2%D7%9C_%D7%94%D7%9E%D7%95%D7%95%D7%AA
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_עלה_בקנה_אחד_9d9bd98d
+  language: he
+  canonical_reference: עלה בקנה אחד
+  reference_type: cultural_reference
+  surface_patterns:
+    - עלה בקנה אחד
+  short_explanation: to be consistent with; to align with; to be in line with
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.עלה_בקנה_אחד
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%A2%D7%9C%D7%94_%D7%91%D7%A7%D7%A0%D7%94_%D7%90%D7%97%D7%93
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_ענבים_חמוצים_a9cc5ad6
+  language: he
+  canonical_reference: ענבים חמוצים
+  reference_type: cultural_reference
+  surface_patterns:
+    - ענבים חמוצים
+  short_explanation: 'Sour grapes: a feigned disdain for what one cannot have.'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.ענבים_חמוצים
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%A2%D7%A0%D7%91%D7%99%D7%9D_%D7%97%D7%9E%D7%95%D7%A6%D7%99%D7%9D
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_עשה_את_שלו_f594373e
+  language: he
+  canonical_reference: עשה את שלו
+  reference_type: cultural_reference
+  surface_patterns:
+    - עשה את שלו
+  short_explanation: 'To do one''s part: to fulfill one''s duty or responsibility.'
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.עשה_את_שלו
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%A2%D7%A9%D7%94_%D7%90%D7%AA_%D7%A9%D7%9C%D7%95
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
+- id: he_cultural_reference_שיהיה_09ff1afb
+  language: he
+  canonical_reference: שיהיה
+  reference_type: cultural_reference
+  surface_patterns:
+    - שיהיה
+  short_explanation: yeah right, whatever; oh, please
+  learner_level: B1
+  confidence: 0.7
+  review_status: draft
+  register: common
+  explanation_key: mnemosyne.en.explanation.he_wiktionary_idioms.שיהיה
+  source_work_key: mnemosyne.en.work.wiktionary
+  source_author_key: mnemosyne.en.author.wiktionary_contributors
+  source_work: Wiktionary
+  source_author: Wiktionary contributors
+  source_url: https://en.wiktionary.org/wiki/%D7%A9%D7%99%D7%94%D7%99%D7%94
+  source_license: CC-BY-SA-4.0
+  source_dataset: he_wiktionary_idioms
+  notes: Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.
