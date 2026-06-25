@@ -128,9 +128,12 @@ def _load_minimal_seed_yaml(text: str) -> list[dict[str, Any]]:
                 if not item_stripped or item_stripped.startswith("#"):
                     idx += 1
                     continue
-                if not item_raw.startswith("    - "):
+                if item_raw.startswith("    - "):
+                    items.append(_parse_seed_scalar(item_raw[6:]))
+                elif item_raw.startswith("  - "):
+                    items.append(_parse_seed_scalar(item_raw[4:]))
+                else:
                     break
-                items.append(_parse_seed_scalar(item_raw[6:]))
                 idx += 1
             current[key] = items
             continue
