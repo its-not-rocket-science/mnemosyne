@@ -1,4 +1,10 @@
-"""Add missing fl_* field-label i18n keys to all 11 language sections."""
+"""Add fl_* field-label i18n keys to all 11 language sections in annotations.js.
+
+Idempotent — skips any language whose keys are already present.
+Target: frontend/js/i18n/annotations.js  (NOT the thin i18n.js shim)
+"""
+import pathlib
+
 NEW_KEYS = {
     'en': {
         'fl_surface_form': 'Surface form',
@@ -134,33 +140,39 @@ NEW_KEYS = {
     },
 }
 
+# Anchor: the fl_separable_verb line in each language section of annotations.js.
+# New keys are inserted immediately after this line.
 ANCHORS = {
-    'en': "    fl_separable_verb:        'Separable verb',",
-    'es': "    fl_separable_verb       : 'Verbo separable',",
-    'fr': "    fl_separable_verb       : 'Verbe s\\u00e9parable',",
-    'de': "    fl_separable_verb       : 'Trennbares Verb',",
-    'it': "    fl_separable_verb       : 'Verbo separabile',",
-    'pt': "    fl_separable_verb       : 'Verbo separ\\u00e1vel',",
-    'ru': "    fl_separable_verb       : 'Отделяемый глагол',",
-    'ja': "    fl_separable_verb       : '分離動詞',",
-    'zh': "    fl_separable_verb       : '可分动词',",
-    'ar': "    fl_separable_verb       : 'فعل منفصل',",
-    'he': "    fl_separable_verb       : 'פועל נפרד',",
+    'en': '    fl_separable_verb: "Separable verb",',
+    'es': '    fl_separable_verb: "Verbo separable",',
+    'fr': '    fl_separable_verb: "Verbe séparable",',
+    'de': '    fl_separable_verb: "Trennbares Verb",',
+    'it': '    fl_separable_verb: "Verbo separabile",',
+    'pt': '    fl_separable_verb: "Verbo separável",',
+    'ru': '    fl_separable_verb: "Отделяемый глагол",',
+    'ja': '    fl_separable_verb: "分離動詞",',
+    'zh': '    fl_separable_verb: "可分动词",',
+    'ar': '    fl_separable_verb: "فعل منفصل",',
+    'he': '    fl_separable_verb: "פועל נפרד",',
 }
 
-with open('frontend/js/i18n.js', encoding='utf-8') as f:
-    text = f.read()
+path = pathlib.Path('frontend/js/i18n/annotations.js')
+text = path.read_text(encoding='utf-8')
 
+inserted = 0
 for lang, anchor in ANCHORS.items():
-    assert anchor in text, f"Anchor not found for lang={lang!r}: {anchor!r}"
-    keys = NEW_KEYS[lang]
+    assert anchor in text, f'Anchor not found for lang={lang!r}: {anchor!r}'
+    anchor_pos = text.index(anchor)
+    section_snippet = text[anchor_pos:anchor_pos + 2000]
+    first_key = next(iter(NEW_KEYS[lang]))
+    if f'    {first_key}:' in section_snippet or f'    {first_key} :' in section_snippet:
+        continue  # already present
     if lang == 'en':
-        lines = '\n'.join(f"    {k}:{' ' * (24 - len(k))} '{v}'," for k, v in keys.items())
+        lines = '\n'.join(f'    {k}:{" " * (24 - len(k))} "{v}",' for k, v in NEW_KEYS[lang].items())
     else:
-        lines = '\n'.join(f"    {k}{' ' * (22 - len(k))}: '{v}'," for k, v in keys.items())
+        lines = '\n'.join(f'    {k}{" " * (22 - len(k))}: "{v}",' for k, v in NEW_KEYS[lang].items())
     text = text.replace(anchor, anchor + '\n' + lines, 1)
+    inserted += len(NEW_KEYS[lang])
 
-with open('frontend/js/i18n.js', 'w', encoding='utf-8') as f:
-    f.write(text)
-
-print(f"done — added {len(NEW_KEYS['en'])} fl_ keys x 11 languages")
+path.write_text(text, encoding='utf-8')
+print(f'Done — {inserted} fl_ key entries added (0 = all already present).')
