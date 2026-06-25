@@ -1,11 +1,23 @@
-"""Insert all missing i18n keys into frontend/js/i18n.js."""
+"""Insert i18n keys into the correct bundle files under frontend/js/i18n/.
+
+Routes keys by prefix to annotations/review/core/library/lesson bundles.
+Idempotent — skips keys already present in the target bundle.
+Target directory: frontend/js/i18n/  (NOT the thin i18n.js shim)
+"""
 import re, pathlib
 
-SRC = pathlib.Path('frontend/js/i18n.js')
-text = SRC.read_text(encoding='utf-8')
+_ROOT = pathlib.Path('frontend/js/i18n')
+_BUNDLES = {
+    name: _ROOT / f'{name}.js'
+    for name in ('annotations', 'review', 'core', 'library', 'lesson')
+}
 
-# ── 7 new English keys (not in file at all) ───────────────────────────────────
-NEW_EN = """    modal_morphology_heading:    'Morphology',
+# ── Translation blocks — one per UI language ─────────────────────────────────
+BLOCKS = {}
+
+# ── EN ────────────────────────────────────────────────────────────────────────
+BLOCKS['en'] = """
+    modal_morphology_heading:    'Morphology',
     modal_vocab_heading:          'Context vocabulary',
     modal_paradigms_heading:      'Paradigm',
     modal_paradigm_show:          'Show paradigm',
@@ -13,16 +25,6 @@ NEW_EN = """    modal_morphology_heading:    'Morphology',
     modal_equivalents_heading:    'Also expressed as',
     modal_contrasts_heading:      "Don't confuse with",
 """
-text = text.replace(
-    "    modal_review_failed:          'Review failed.',\n    nav_theme_aria:",
-    "    modal_review_failed:          'Review failed.',\n" + NEW_EN + "    nav_theme_aria:",
-    1,
-)
-
-# ── Per-language missing-key blocks ───────────────────────────────────────────
-# Each block is inserted before that language's nav_theme_aria line.
-
-BLOCKS = {}
 
 # ── ES ────────────────────────────────────────────────────────────────────────
 BLOCKS['es'] = """
@@ -1216,42 +1218,106 @@ BLOCKS['he'] = """
     unsupported_file_type:   'סוג קובץ לא נתמך. השתמש ב-TXT, PDF, DOCX, RTF, Markdown, או HTML/XML.',
 """
 
-# ── Insert each block before nav_theme_aria in its language section ───────────
-
-# We search for a unique anchor per language: the nav_theme_aria line with its
-# language-specific value. The replacement inserts the block just before it.
-ANCHORS = {
-    'es': "    nav_theme_aria:  'Tema',",
-    'fr': "    nav_theme_aria:  'Thème',",
-    'de': "    nav_theme_aria:  'Design',",
-    'it': "    nav_theme_aria:  'Tema',",   # same value as es — need different region
-    'pt': "    nav_theme_aria:  'Tema',",   # same as es/it
-    'ru': "    nav_theme_aria:  'Тема',",
-    'ja': "    nav_theme_aria:  'テーマ',",
-    'zh': "    nav_theme_aria:  '主题',",
-    'ar': "    nav_theme_aria:  'ثيم',",
-    'he': "    nav_theme_aria:  'ערכת נושא',",
+# ── Key prefix → bundle routing ──────────────────────────────────────────────
+_PREFIX_ROUTING = [
+    ('dp_',         'annotations'),
+    ('fl_',         'annotations'),
+    ('fv_',         'annotations'),
+    ('ann_',        'annotations'),
+    ('type_',       'annotations'),
+    ('modal_',      'review'),
+    ('stats_',      'review'),
+    ('retention_',  'review'),
+    ('insight_',    'review'),
+    ('adaptive_',   'lesson'),
+    ('nav_',        'core'),
+    ('corpus_',     'library'),
+    ('vocab_',      'library'),
+    ('rec_',        'library'),
+    ('recommend_',  'library'),
+]
+_EXACT_ROUTING = {
+    'corrupt_file':          'core',
+    'no_extractable_text':   'core',
+    'unsupported_file_type': 'core',
+    'encrypted_pdf':         'core',
+    'pacing_fatigue_hint':   'lesson',
+    'pacing_overload_hint':  'lesson',
+    'pill_aria_label':       'lesson',
+    'reader_settings_aria':  'lesson',
+    'rec_no_content':        'library',
+    'text_panel_empty':      'lesson',
+    'text_panel_play_line':  'lesson',
 }
 
-for lang in ('fr', 'de', 'ru', 'ja', 'zh', 'ar', 'he'):
-    anchor = ANCHORS[lang]
-    assert anchor in text, f"Anchor not found for {lang}: {anchor!r}"
-    text = text.replace(anchor, BLOCKS[lang] + anchor, 1)
+def _bundle_for(key):
+    if key in _EXACT_ROUTING:
+        return _EXACT_ROUTING[key]
+    for pfx, bname in _PREFIX_ROUTING:
+        if key.startswith(pfx):
+            return bname
+    return 'lesson'
 
-# es/it/pt share 'Tema' — find all 3 positions upfront, insert last-to-first
-# so earlier offsets are not shifted by later insertions.
-tema_anchor = "    nav_theme_aria:  'Tema',"
-positions = []
-start = 0
-while True:
-    pos = text.find(tema_anchor, start)
-    if pos == -1:
-        break
-    positions.append(pos)
-    start = pos + 1
-assert len(positions) == 3, f"Expected 3 Tema anchors, found {len(positions)}"
-for lang, pos in zip(('pt', 'it', 'es'), reversed(positions)):
-    text = text[:pos] + BLOCKS[lang] + text[pos:]
+_KEY_RE = re.compile(r'^\s{4}([a-z][a-z0-9_]+)\s*:', re.MULTILINE)
 
-SRC.write_text(text, encoding='utf-8')
-print("Done. Lines:", text.count('\n'))
+def _parse_block(block_text):
+    result = []
+    for line in block_text.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            continue
+        m = re.match(r'^([a-z][a-z0-9_]+)\s*:', stripped)
+        if m:
+            result.append((m.group(1), '    ' + stripped))
+    return result
+
+def _insert_into_strings(bundle_name, lang, kv_lines):
+    """Insert kv_lines into STRINGS.{lang} section of bundle_name.
+
+    Targets the first 'export const STRINGS = {' export only (so
+    annotations.js's ANNOTATION_ARIA_I18N / TYPE_LABELS_LONG_I18N sections
+    are not touched).  Idempotent: skips keys already present.
+    Returns number of keys inserted.
+    """
+    path = _BUNDLES[bundle_name]
+    text = path.read_text(encoding='utf-8')
+    # core.js uses CORE_STRINGS rather than the STRINGS export used by the other bundles
+    strings_start = text.find('export const STRINGS = {')
+    if strings_start == -1:
+        strings_start = text.find('const CORE_STRINGS = {')
+    if strings_start == -1:
+        raise ValueError(f'{path.name}: no STRINGS / CORE_STRINGS export')
+    next_export = text.find('\nexport const ', strings_start + 1)
+    region_end = next_export if next_export != -1 else len(text)
+    lang_pat = f'\n  {lang}: {{\n'
+    lang_pos = text.find(lang_pat, strings_start)
+    if lang_pos == -1 or lang_pos >= region_end:
+        raise ValueError(f'{path.name}: no STRINGS.{lang} section')
+    section_end = text.find('\n  },', lang_pos + len(lang_pat))
+    if section_end == -1 or section_end >= region_end:
+        raise ValueError(f'{path.name}: no section closer for {lang}')
+    section_text = text[lang_pos:section_end]
+    existing = set(_KEY_RE.findall(section_text))
+    to_add = [line for key, line in kv_lines if key not in existing]
+    if not to_add:
+        return 0
+    insert = '\n' + '\n'.join(to_add)
+    text = text[:section_end] + insert + text[section_end:]
+    path.write_text(text, encoding='utf-8')
+    return len(to_add)
+
+# ── Main ─────────────────────────────────────────────────────────────────────
+
+total = 0
+for lang, block_text in BLOCKS.items():
+    pairs = _parse_block(block_text)
+    by_bundle: dict = {}
+    for key, line in pairs:
+        by_bundle.setdefault(_bundle_for(key), []).append((key, line))
+    for bname, kv_lines in by_bundle.items():
+        n = _insert_into_strings(bname, lang, kv_lines)
+        if n:
+            print(f'  {lang}/{bname}: inserted {n} keys')
+        total += n
+
+print(f'Done. {total} keys inserted (0 = all already present).')
