@@ -316,7 +316,7 @@ class TurkishPlugin:
             cultural_references="partial",
             etymology="none",
             formality_register="stub",
-            grammar_nuance="stub",
+            grammar_nuance="partial",  # tense/person/number/case/polarity/stacked_suffixes from stanza+zeyrek
             pronunciation_tts="stub",
             transliteration="none",
             proverb_tradition="partial",

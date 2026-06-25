@@ -6,10 +6,10 @@
   "nuance_extractor_class": null,
   "tokenizer": "words",
   "capability_assertions": {
-    "grammar_nuance": ["none", "stub"]
+    "grammar_nuance": ["none", "stub", "partial"]
   },
   "capability_gaps": {
-    "grammar_nuance": "Turkish morphology-light: outermost suffix rules only; no trained model; inner suffix layers (possessive, aspect stacking) not analysed"
+    "grammar_nuance": "Stanza UD + zeyrek: tense/person/number/case/polarity/stacked_suffixes from UD features; no full multi-layer suffix analysis; inner possessive+case stacking partially resolved via stacked_suffixes; degrades to outermost suffix heuristics without stanza"
   },
   "cases": [
     {
@@ -80,6 +80,42 @@
       "confidence_ge": null,
       "assert_no_confidence_above": 0.90,
       "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "tr_stanza_past_definite_conjugation_keys",
+      "category": "morphology",
+      "text": "Dun markete gittim.",
+      "note": "'gittim' — past definite first person singular; stanza should emit conjugation with tense, person, number",
+      "pipeline": "plugin",
+      "assert_types_present": ["conjugation"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.95,
+      "lesson_data_required_keys": {
+        "conjugation": ["tense", "person", "number"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "tr_stanza_progressive_conjugation_keys",
+      "category": "morphology",
+      "text": "Ben simdi okuyorum.",
+      "note": "'okuyorum' — present progressive first person singular; stanza should emit conjugation with tense, person, number",
+      "pipeline": "plugin",
+      "assert_types_present": ["conjugation"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "assert_no_confidence_above": 0.95,
+      "lesson_data_required_keys": {
+        "conjugation": ["tense", "person", "number"]
+      },
       "no_raw_uuids": true
     },
     {
