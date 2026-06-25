@@ -6,10 +6,10 @@
   "nuance_extractor_class": null,
   "tokenizer": "words",
   "capability_assertions": {
-    "grammar_nuance": ["none", "stub"]
+    "grammar_nuance": ["none", "stub", "partial"]
   },
   "capability_gaps": {
-    "grammar_nuance": "Hindi morphology-light: suffix rules only; no dependency parse or full morphological model"
+    "grammar_nuance": "Stanza UD model: tense/gender/number/mood from UD features; no dependency parse; compound verb aspect and postpositional case not fully resolved; degrades to suffix-rule heuristics without stanza"
   },
   "cases": [
     {
@@ -46,35 +46,39 @@
       "no_raw_uuids": true
     },
     {
-      "id": "hi_verb_habitual_suffix",
+      "id": "hi_stanza_future_conjugation_keys",
       "category": "morphology",
-      "text": "राम स्कूल जाता है।",
-      "note": "'जाता' carries habitual masculine suffix -ता; lesson_data should contain morphology hints",
+      "text": "वह कल जाएगा।",
+      "note": "'जाएगा' — future masculine singular; stanza should emit conjugation type with tense, gender, number",
       "pipeline": "plugin",
-      "assert_types_present": ["vocabulary"],
+      "assert_types_present": ["conjugation"],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": null,
-      "assert_no_confidence_above": 0.90,
-      "lesson_data_required_keys": {},
+      "assert_no_confidence_above": 0.95,
+      "lesson_data_required_keys": {
+        "conjugation": ["tense", "gender", "number"]
+      },
       "no_raw_uuids": true
     },
     {
-      "id": "hi_future_verb_suffix",
+      "id": "hi_stanza_habitual_conjugation_keys",
       "category": "morphology",
-      "text": "वह कल आएगा।",
-      "note": "'आएगा' — future masculine singular form; suffix -एगा should be detected",
+      "text": "राम स्कूल जाता है।",
+      "note": "'जाता' — present habitual masculine; stanza should emit conjugation with tense/aspect, gender, number",
       "pipeline": "plugin",
-      "assert_types_present": ["vocabulary"],
+      "assert_types_present": ["conjugation"],
       "assert_types_absent": [],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,
       "confidence_ge": null,
-      "assert_no_confidence_above": 0.90,
-      "lesson_data_required_keys": {},
+      "assert_no_confidence_above": 0.95,
+      "lesson_data_required_keys": {
+        "conjugation": ["gender", "number"]
+      },
       "no_raw_uuids": true
     },
     {

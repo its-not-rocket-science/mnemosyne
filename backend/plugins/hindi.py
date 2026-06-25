@@ -388,7 +388,7 @@ class HindiPlugin:
             cultural_references="partial",
             etymology="none",
             formality_register="stub",
-            grammar_nuance="stub",
+            grammar_nuance="partial",  # tense/aspect/gender/number/mood from stanza UD
             pronunciation_tts="stub",
             transliteration="partial",
             proverb_tradition="partial",
@@ -397,7 +397,7 @@ class HindiPlugin:
                 "Stanza UD model: full lemmatisation + UD POS + morphological "
                 "features (Aspect, Tense, Gender, Number, Case, Mood, VerbForm). "
                 "Falls back to suffix-rule heuristics without stanza. "
-                "Verb forms emitted as conjugation objects with RelationHint. "
+                "Verb forms emitted as conjugation objects with tense/gender/number. "
                 "Multi-word postpositions detected via bigram/trigram scan."
             ),
         ),
