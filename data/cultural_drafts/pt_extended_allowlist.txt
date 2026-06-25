@@ -1,0 +1,923 @@
+A armadilha de Dédalo e o fio de Ariadne
+A caixa de Pandora
+A queda dos Titãs
+A descida de Orfeu ao Inferno
+A morte de Eurídice
+A queda de Ícaro
+A vingança de Medeia
+A loucura de Ajax
+A queda de Tróia
+A metamorfose de Narciso
+A prova de Páris
+A vingança de Agamémnon
+A danação de Tântalo
+A queda de Prometeu
+A morte de Heitor
+A profecia de Cassandra
+A armadilha do Cavalo de Tróia
+A paixão de Píramo e Tisbe
+A danação de Eco e Narciso
+A queda de Ulisses
+A prova das Harpias
+A vingança de Electra
+A morte de Adónis
+A danação de Sêmele
+A Inquisição em Portugal
+A Revolução dos Cravos (25 de Abril de 1974)
+A Tomada de Ceuta (1415)
+A Batalha de Alcácer-Quibir (1578)
+O Desastre de Annual (1921)
+A Expulsão dos Jesuítas (1759)
+O Tratado de Tordesilhas (1494)
+A Restauração da Independência (1640)
+O Terremoto de Lisboa (1755)
+A Morte de D. Sebastião em Alcácer-Quibir
+A Reforma Pombalina
+O Padroado Português do Oriente
+A Fundação da Universidade de Coimbra (1290)
+A Chegada da corte portuguesa ao Brasil (1808)
+O Regicídio de 1908
+A Ditadura Nacional e o Estado Novo
+A Revolta da Armada (1891)
+O Acordo Ortográfico de 1990
+A Revolução Liberal do Porto (1820)
+A Batalha de Roliça (1808)
+A Batalha de Buçaco (1810)
+O Massacre de Pidjiguiti (Guiné-Bissau, 1959)
+O 28 de Janeiro de 1934 (Revolta de 34)
+A Fundação da NATO por Portugal
+O processo dos Távoras (1758)
+A Árvore do Conhecimento do Bem e do Mal
+A Arca de Noé
+A Bênção de Jacó
+A Chama da Santíssima Trindade
+A Cidade de Deus
+A Confissão de Pedro
+A Criação da Luz
+A Cruz de Caravaca
+A Descida de Jesus ao Inferno
+A Estrela de Belém
+A Flagelação de Cristo
+A Igreja militante, padecente e triunfante
+A Lua de Mel de Canaã
+A Missa do Galo
+A Páscoa da Ressurreição
+A Pedra Filosofal da Fé
+A Ressurreição de Lázaro
+A Sepultura de Abraão
+A Torre de Babel
+As Bodas de Caná
+As Tábuas da Lei
+O Calvário de Jesus
+O Cântico dos Cânticos
+O Círio Pascal
+O Dilúvio Universal
+O Lobisomem das Sete Léguas
+A Moura Encantada
+O Galo de Barcelos
+O Zangão da Lenda de São Martinho
+O Boi Barroso do Minho
+O Bicho-Papão das Cantigas de Berço
+A Fada dos Pinheiros de Sintra
+O Gato Preto da Lenda de Coimbra
+O Mandão da Serra da Estrela
+A Rainha Santa Isabel e as Rosas
+O Padre Amaro e a Lenda do Poço
+A Virgem do Leite e a Estrela de Ouro
+O Cão da Furnas dos Açores
+O Gênio do Monte da Lua
+A Dama do Lago do Algarve
+O Anjo da Guarda da Lenda da Torre de Belém
+O Bombo da Lenda de Ourique
+A Fada dos Olhos de Estrela da Serra do Gerês
+O Demónio da Lenda da Ponte de Lima
+O Espírito das Águas da Lagoa de Albufeira
+O Gavião da Lenda de Viana do Castelo
+A avis raras vêem a morte
+A candeia às avessas alumia melhor
+A cavalo dado não se olha o freio
+A cobra que não anda não apanha rasteira
+A dente de cão não se tira carne
+A ferro frio não corre ferro
+A fome é a melhor cozinheira
+A galinha da vizinha sempre é mais gorda
+A mentira tem pernas compridas
+A palha corta mais que a foice
+A pobreza não é vício
+A pressa é inimiga da perfeição
+A raposa quando não pode comer, diz que está azeda
+A riqueza não compra saúde
+A quem Deus não dá filhos, o Diabo dá afilhados
+A sorte é como a lua: ora enche, ora minguas
+A verdade não morre, é a mentira que se coze
+Cada terra com seu uso, cada roca com seu fuso
+Casa de ferreiro, espeto de pau
+Deitar cedo e cedo erguer, dá saúde e faz crescer
+Devagar se vai ao longe
+Em casa de ferreiro, espeto de pau
+Gato escondido com rabo de fora
+Mais vale um pássaro na mão que dois a voar
+Pau que nasce torto, nunca se endireita
+O homem que plantava árvores
+O Delfim
+A Relíquia
+A Cidade e as Serras
+Os Maias
+O Crime do Padre Amaro
+O Primo Basílio
+O Mandarim
+A Capital
+O Properácio
+Autopsicografia
+O Amigo de Pedro
+A Mulher que Prendeu o Diabo
+A Mulher que não Gostava de Carnaval
+O beijo de Judas em 'Os Maias' de Eça de Queirós
+A traição de Inês de Castro em 'Os Lusíadas' de Camões
+O choro de D. Filipa de Lencastre em 'O Fidalgo Aprendiz'
+O espelho de Narciso em 'Auto da Barca do Inferno' de Gil Vicente
+O choro das lavadeiras em 'Auto da Índia' de Gil Vicente
+O riso do Diabo em 'Auto da Alma' de Gil Vicente
+O choro de Maria em 'Auto da Mofina Mendes'
+O pranto de D. Inês em 'Frei Luís de Sousa' de Almeida Garrett
+A maldição de Tântalo em 'O Duelo' de José Régio
+O grito de Medeia em 'Medeia' de Eurípides (tradução portuguesa)
+O riso de Sganarello em 'O Doente Imaginário' de Molière (adaptação portuguesa)
+O choro de Ofélia em 'Hamlet' de Shakespeare (versão portuguesa)
+O pranto de Dido em 'Eneida' de Vergílio (tradução portuguesa)
+O grito de Fedra em 'Fedra' de Racine (tradução portuguesa)
+O choro de Antígona em 'Antígona' de Sófocles (tradução portuguesa)
+O riso de D. João em 'O Convidado de Pedra' de Molière (adaptação portuguesa)
+O choro de Joana d'Arc em 'A Donzela de Orléans' de Schiller (tradução portuguesa)
+O pranto de Ofélia em 'Romeu e Julieta' de Shakespeare (versão portuguesa)
+O choro de D. Leonor em 'O Purgatório' de Teixeira de Pascoaes
+O riso do Diabo em 'O Auto da Lusitânia' de Gil Vicente
+O choro de Inês de Castro em 'O Romance de Inês de Castro' de António Ferreira
+O homem é a medida de todas as coisas
+Nada de excesso
+Conhece-te a ti mesmo
+Sócrates, Sócrates, eu te condeno
+O homem é um animal político
+Tudo flui, nada permanece
+O sábio é o que se contenta com a sua condição
+A virtude está no meio
+Só sei que nada sei
+A felicidade consiste em não sofrer
+O homem é livre, mas em toda a parte traz as suas cadeias
+A natureza é a arte de Deus
+O homem é a obra-prima da criação
+A razão é o fim da vida humana
+A felicidade é o fim último do homem
+O sábio segue a natureza
+O homem é escravo das suas paixões
+A virtude é o único bem
+A verdade está na alma
+O homem é um ser de desejo
+A sabedoria é a arte de viver bem
+O homem é um ser de razão e paixão
+A liberdade é o maior dos bens
+A justiça é a virtude das virtudes
+O homem é um ser de ação e contemplação
+A alegoria da Caverna de Platão em 'As Meninas' de Velázquez
+A Lamentação sobre Cristo Morto de Mantegna na igreja de São Francisco em Évora
+A Legião de Pedro Alexandrino
+A Maternidade de Columbano Bordalo Pinheiro
+A Morte de Camões de Vítor Meireles
+A Nau Catrineta no painel cerâmico da Fábrica Viúva
+A Natividade de Grão Vasco na Sé de Viseu
+A Piedade de Miquelângelo na versão de Manuel Pereira
+A Retirada das Classes do Real Colégio dos Nobres de Domingos Sequeira
+A Saudade de Columbano Bordalo Pinheiro
+A Senhora do Rosário de Almada Negreiros
+A Tentação de Santo Antão de Bosch na coleção do Palácio Nacional de Sintra
+A Última Ceia de Leonardo da Vinci na versão de Diogo de Contreras
+As Meninas de Diego Velázquez reinterpretadas por Almada Negreiros
+As Pupilas do Senhor Reitor de Columbano Bordalo Pinheiro
+Camilo e Ana Plácido na obra de Columbano Bordalo Pinheiro
+O Fado de Columbano Bordalo Pinheiro
+O Menino Jesus de Nossa Senhora de Belém de Machado de Castro
+O Pão Nosso de Cada Dia na azulejaria de Jorge Colaço
+O Retábulo de São Vicente de Fora de Nuno Gonçalves
+Abre-te, Sésamo, da história de Aladino
+Alegrai-vos, Reis Magos, do Evangelho segundo São Mateus
+Amen, amém, disse Jesus na Última Ceia
+Aqui jaz o que morreu de amor, de Camões
+Bem-aventurados os humildes, dos Evangelhos
+Bendito seja Deus, do Salmo 117
+Bem-aventurados os que choram, dos Evangelhos
+Cá está a luz do mundo, de Padre António Vieira
+Como tu não nasceste em berço de oiro, de Gil Vicente
+Deus ajuda quem cedo madruga, do conto popular ibérico
+Em terra de cegos, o que tem um olho é rei, de Frei Luís de Sousa
+Falai baixo que se ouvem os passos, de Almeida Garrett
+Fui à feira e comprei um burro, de provérbio medieval
+Levanta-te e caminha, de Jesus nos Evangelhos
+Morreu o burro, acabou a cangalha, de provérbio alentejano
+Não só de pão vive o homem, do Deuteronómio
+O amor é fogo que arde sem se ver, de Camões
+Onde fores, irei eu, de Rute 1:16
+Pão, pão, queijo, queijo, de Gil Vicente
+Quem não chora não mama, de provérbio português
+Sêde perfeitos como o vosso Pai celestial é perfeito, dos Evangelhos
+Sangue de Cristo inebria-me, de hino litúrgico medieval
+Tal pai, tal filho, de provérbio português
+Vai com Deus, do Canto de Frei Gil
+Vale mais um pássaro na mão que dois a voar, de provérbio português
+'Ai, flores, ai flores do verde pino' de D. Dinis
+'Amor é um fogo que arde sem se ver' de Camões
+'As armas e os barões assinalados' de Camões
+'Bastam-me as paredes da minha cela' de António Nobre
+'Cantiga de amigo' de D. Dinis
+'Deixai os cães ladrar' de Bocage
+'Do Tamariz ao Douro' de Guerra Junqueiro
+'Fado das mãos brancas' de Florbela Espanca
+'Lágrimas na fonte' de Almeida Garrett
+'Mar de tristezas' de Antero de Quental
+'Mãe, a outro amor não tenho' de Gil Vicente
+'Meu amor é um marinheiro' de Florbela Espanca
+'Morreu o rei, viva o rei!' de Camões
+'Não me posso queixar de ti' de Bocage
+'O fado nasceu um dia' de Fernando Pessoa
+'Ondas do mar de Vigo' de Martim Codax
+'Pobre velha música' de Cesário Verde
+'Quem me dera ser como o vento' de Almeida Garrett
+'Saudades da província' de Guerra Junqueiro
+'Se tu viesses ver-me' de Florbela Espanca
+'Senta-te à minha sombra' de Antero de Quental
+'Tanto de repente' de Sá de Miranda
+'Terra de sonhos' de Cesário Verde
+'Viagem na minha terra' de Almeida Garrett
+O 25 de Abril e o fim da ditadura
+Os Descobrimentos e a epopeia de Fernão Magalhães
+A queda de Constantinopla e a vinda dos sábios gregos para Portugal
+A morte de Inês de Castro nas Ilhas da Berlenga
+O dia de Todos os Santos de 1755 e o terramoto de Lisboa
+A aclamação de D. João IV em 1 de Dezembro de 1640
+A fundação do Império Português na Índia por Afonso de Albuquerque
+A batalha de Aljubarrota e a vitória de D. João I sobre Castela
+O casamento de D. Manuel I com D. Maria de Aragão e Castela
+A assinatura do Tratado de Tordesilhas em 1494
+A morte de D. Sebastião em Alcácer-Quibir em 1578
+A chegada de Vasco da Gama a Calecute em 1498
+A revolução do 5 de Outubro de 1910 e a implantação da República
+A restauração da independência com o golpe do 1 de Dezembro
+A expedição de Pedro Álvares Cabral ao Brasil em 1500
+A fundação do Mosteiro da Batalha por D. João I
+A criação da Companhia de Jesus em Portugal no século XVI
+A prisão de Camões em Goa e a sua obra-prima Os Lusíadas
+A transferência da corte portuguesa para o Rio de Janeiro em 1808
+A morte de D. Afonso Henriques na batalha de Badajoz
+A construção do Mosteiro dos Jerónimos por D. Manuel I
+A fundação da nacionalidade com a assinatura do Tratado de Zamora em 1143
+A batalha de Ourique e a lenda da aparição de Cristo a D. Afonso Henriques
+A assinatura da Concordata de 1857 entre Portugal e a Santa Sé
+A proclamação da República em Lisboa a 5 de Outubro de 1910
+'A voz do sangue clama do chão' de Os Lusíadas
+'Bendito o que vem em nome do Senhor' do Saltério
+'Como é bom estar no seio do Senhor' de Frei Luís de Granada
+'Deus é luz e nele não há trevas' da Primeira Epístola de João
+'E a palavra se fez carne' do Evangelho segundo João
+'É melhor pousar à sombra do Alto' de Frei Agostinho da Cruz
+'Filho, teus pecados te são perdoados' dos Evangelhos
+'Glória a Deus nas alturas' da Liturgia da Missa
+'In nomine Patris, et Filii, et Spiritus Sancti' da Tradição litúrgica
+'Lágrimas e lamentos não servem de nada' de A Via Sacra de Antero de Quental
+'Maria, escolheu a melhor parte' do Evangelho segundo Lucas
+'Mestre, que queres que eu faça?' do Evangelho segundo Marcos
+'Não só de pão vive o homem' dos Evangelhos
+'O cordeiro de Deus que tira o pecado do mundo' do Evangelho segundo João
+'O Senhor é o meu pastor' do Salmo 23
+'O sol se escureceu e a lua se tornou em sangue' do Apocalipse
+'Pai, perdoai-lhes porque não sabem o que fazem' dos Evangelhos
+'Pela fé caminhamos, não pela vista' da Epístola aos Hebreus
+'Quem crê em mim, ainda que morra, viverá' do Evangelho segundo João
+'Quem tem ouvidos para ouvir, ouça' dos Evangelhos
+'Santo, Santo, Santo é o Senhor Deus dos Exércitos' do Livro de Isaías
+'Tudo posso naquele que me fortalece' da Epístola aos Filipenses
+'Vai, e não peques mais' do Evangelho segundo João
+'Vinde a mim todos vós que estais cansados' dos Evangelhos
+'Vós sois o sal da terra e a luz do mundo' dos Evangelhos
+O lobisomem das sete freguesias
+A moura encantada dos sete castelos
+O bicho-de-sete-cabeças da serra da Estrela
+O homem das sete léguas de Trás-os-Montes
+A serpe do rio Minho
+O gigante Adamastor de 'Os Lusíadas'
+O dragão de Sintra
+O cavalo de Ogum no candomblé afro-português
+A cobra-capelo da lenda de Dom Fuas Roupinho
+A rainha das fadas do Gerês
+O homem sem cabeça da Beira Alta
+O saci-pererê das matas brasileiras no imaginário português
+A moura que fia no tear de ouro
+O bicho-preto da noite de São João
+A bruxa da serra da Arrábida
+A moura que guarda tesouros afundados
+O homem das sete vidas
+O bicho-de-pé da lenda de D. Afonso Henriques
+A rainha das águas do Mondego
+O gigante de pedra da serra do Buçaco
+À noite todos os gatos são pardos
+A água mole em pedra dura tanto bate até que fura
+A esperança é a última que morre
+A galinha da minha vizinha é sempre mais bonita que a minha
+A mentira tem pernas curtas
+A ocasião faz o ladrão
+Cada macaco no seu galho
+De grão em grão a galinha enche o papo
+Filho de peixe sabe nadar
+Mais vale um pássaro na mão do que dois a voar
+Não se deve pôr o carro à frente dos bois
+O burro é que paga a trovoada
+O que não mata engorda
+O seguro morreu de velho
+Pão para hoje, fome para amanhã
+Para bom entendedor meia palavra basta
+Quem não chora não mama
+Quem não tem cão caça com gato
+Quem semeia ventos colhe tempestades
+Tal pai, tal filho
+O menino de engenho é um deus no chão
+Só uma coisa me admira: saber que nasci
+O homem é um menino grande
+Pois é, os deuses são imortais
+Cada homem é uma ilha
+O mundo não é mau, é mau o homem que o faz
+A vida é um rio que corre para o mar
+A pátria é uma mentira que envelhece
+O homem é um deus quando sonha e um mendigo quando pensa
+A liberdade é a pátria do homem
+A vida é um sonho que sonhamos acordados
+A pátria é o lugar onde se nasce sem querer
+O homem é um ser que se pergunta
+A vida é um jogo de cartas marcadas
+O homem é um ser que se perde
+A pátria é uma prisão sem grades
+O homem é um ser que se inventa
+A vida é um teatro de sombras
+O homem é um ser que se recusa
+A pátria é um país que não existe
+O homem é um ser que se destrói
+'O Fidalgo que não queria ser fidalgo' da peça 'O Auto da Barca do Inferno' de Gil Vicente
+'Fala-se em voz alta, mas não se diz nada' de 'O Auto da Alma' de Gil Vicente
+'Ó ferro, ó ferro, que arrombas as portas!' de 'Farsa de Inês Pereira' de Gil Vicente
+'O mundo é uma comédia' de 'Triunfo do Inverno' de António José da Silva (o Judeu)
+'Canta, meu bem, que o mundo é um teatro' de 'O Magriço' de António José da Silva
+'Aqui jaz o rei das comédias!' de 'Rei Seleuco' de António José da Silva
+'Quem não chora não mama' de 'O Cego' de António José da Silva
+'O demo do meu marido' de 'O Demo das Senhoras' de António José da Silva
+'Cantem os corações, que é tempo de alegria' de 'Guerras do Alecrim e da Manjerona' de António José da Silva
+'Vai-te daqui, Satanás!' de 'O Anfitrião' de António José da Silva
+'A vida é um sonho' de 'A Vida é Sonho' de Almeida Garrett
+'Foge, que te enganam!' de 'Frei Luiz de Sousa' de Almeida Garrett
+'O sol é o grande tirano' de 'Camões' de Almeida Garrett
+'O homem que foi alheio a si mesmo' de 'Um Auto de Gil Vicente' de Júlio Dantas
+'Onde está a tua glória, ó rei das nações?' de 'O Pobre de Lisboa' de D. Francisco Manuel de Melo
+'Não éreis vós, ó lua, que me fizestes sonhar?' de 'A Castro' de António Ferreira
+'O tempo é um ladrão' de 'A Tragédia da Rainha Santa Isabel' de Almeida Garrett
+'Quem não tem cão, caça com gato' de 'O Velho da Horta' de Gil Vicente
+'A arte é um espelho da vida' de 'Teatro' de Antero de Quental
+'O amor é um fogo que queima sem se ver' de 'Frei Luís de Sousa' de Almeida Garrett
+'A morte é apenas um palco vazio' de 'A Morte de D. João' de Guerra Junqueiro
+'O riso é a mais humana das artes' de 'A Morgadinha dos Canaviais' de Júlio Dinis
+'A cena é a vida, e a vida é um sonho' de 'A Joana' de João Baptista da Silva Leitão de Almeida Garrett
+'O silêncio é a voz que mais se ouve' de 'A Mãe do Emigrante' de D. João da Câmara
+'A sabedoria é o principal; logo, adquiram a sabedoria' de Provérbios de Salomão (tradução da Vulgata)
+'A verdade vos libertará' do Evangelho segundo João
+'Conhece-te a ti mesmo' de Apologia de Sócrates de Platão (atribuído a Sócrates)
+'O homem é a medida de todas as coisas' de Protágoras de Platão
+'Ninguém é feliz sem a virtude' de Ética a Nicómaco de Aristóteles
+'O que é a vida? Um frenesi. O que é a vida? Uma ilusão, uma sombra, uma ficção' de 'La vida es sueño' de Calderon (influência em Garrett)
+'O homem é um animal político' de Política de Aristóteles
+'A felicidade depende de nós mesmos' de Ética a Eudemo de Aristóteles
+'O sábio não se inquieta com as coisas que não pode controlar' de Epicteto (estoicismo, via Séneca)
+'O homem é a medida de todas as coisas' de 'O Sofista' de Platão
+'A beleza é o esplendor da verdade' de Platão ('Hípias Maior')
+'A justiça é a virtude de dar a cada um o que lhe é devido' de Aristóteles ('Ética a Nicómaco')
+'O homem é livre quando age segundo a razão' de 'Suma Teológica' de Tomás de Aquino
+'A verdadeira felicidade consiste na contemplação da verdade' de 'Confissões' de Santo Agostinho
+'O tempo é uma ilusão' de 'Ética' de Espinoza (influência em Antero de Quental)
+'O homem é um deus quando sonha e um mendigo quando reflecte' de Novalis (influência em Almeida Garrett)
+'A dúvida é o preço que pagamos pela verdade' de Kierkegaard (via Antero de Quental)
+'O homem é aquilo que a educação faz dele' de Rousseau ('Emílio')
+'A razão é a luz da alma' de Descartes ('Discurso do Método')
+'O homem é um elo na cadeia do ser' de Leibniz ('Monadologia')
+'A liberdade consiste em agir segundo as leis da natureza' de Espinoza ('Ética')
+'O homem é um animal que pode prometer' de Nietzsche ('Assim Falou Zaratustra', via Sampaio Bruno)
+'A virtude é o justo meio entre dois extremos' de Aristóteles ('Ética a Nicómaco')
+'A arte deve ser como o pôr do sol da vida' de 'O Crime do Padre Amaro' de Eça de Queirós
+'A música é a linguagem do coração' de 'Cantares Galegos' de Rosalía de Castro (influência em Portugal)
+'A pintura é a poesia muda' de 'Cartas sobre a Pintura' de Francisco de Holanda
+'A luz é a alma da pintura' de 'Do Desenho' de Francisco de Holanda
+'A música é a única arte que transcende a alma' de 'O Orpheu' de Fernando Pessoa
+'Cada artista é um escravo da beleza' de 'A Arte' de Antero de Quental
+'A arte é a mais alta forma de esperança' de 'A Ilustre Casa de Ramires' de Eça de Queirós
+'A música é a voz do sentimento' de 'Cartas sobre a Música' de João Domingos Bomtempo
+'O pincel deve ser a voz do artista' de 'Arte de Pintura' de Filipe Nunes
+'A arte é a filha do engenho e da fantasia' de 'Lusíadas de Camões' (proêmio, por extensão)
+'A música é a mais pura das artes' de 'O Reino dos Silêncios' de Teófilo Braga
+'O artista é um profeta' de 'Os Brilhantes' de Guerra Junqueiro
+'A arte é a imitação da natureza' de 'Tratado da Pintura' de Francisco de Holanda (traduzido)
+'A música é a alma da poesia' de 'Cancioneiro Geral' de Garcia de Resende
+'O belo é o esplendor do verdadeiro' de 'O Poeta' de Antero de Quental (aplicado à arte)
+'A arte deve comover e ensinar' de 'Cartas sobre a Arte' de Almeida Garrett
+'A pintura é a escrita do silêncio' de 'Arte Poética' de Manuel Maria Barbosa du Bocage
+'A arte é a religião dos sentidos' de 'A Arte' de Antero de Quental
+'A música é a dança dos anjos' de 'O Orfeão' de Alberto de Oliveira
+'O artista deve ser um rebelde' de 'A Revolta das Massas' de Fernando Pessoa (por extensão)
+'A arte é a voz do invisível' de 'A Pintura Portuguesa' de Columbano Bordalo Pinheiro
+'O belo é a sombra de Deus' de 'A Estética' de Sampaio Bruno
+'A cada canto um grande conselheiro' de 'Odes Pindáricas' de Manuel Maria Barbosa du Bocage
+'A casa de Deus é a casa de todos' de 'Sermões' de Padre António Vieira
+'A esperança é o sonho do homem acordado' de 'Cartas' de Sá de Miranda
+'A fama é um sopro passageiro' de 'Os Lusíadas' de Luís de Camões
+'A glória da terra é a palavra' de 'Carta de Pero Vaz de Caminha'
+'A liberdade é o direito de fazer tudo aquilo que os outros não proíbem' de 'Cartas sobre a Tolerância' de John Locke (traduzido/referenciado em Portugal)
+'A mentira tem pernas curtas' de 'Fábulas' de Esopo (traduzido/adaptado em Portugal)
+'A morte é um sono eterno' de 'A Morte de D. João' de Almeida Garrett
+'A paciência é a fortaleza do fraco' de 'Sermões' de Padre António Vieira
+'A pobreza é a mãe das artes' de 'Carta a um amigo' de Sá de Miranda
+'A saúde é a maior riqueza' de 'Ensaio Sobre o Homem' de Alexander Pope (traduzido/adaptado em Portugal)
+'A verdade nasce do embate das opiniões' de 'Cartas' de Antero de Quental
+'A virtude é o único bem' de 'Diálogos' de Sêneca (traduzido em Portugal)
+'A voz do povo é a voz de Deus' de 'Cartas' de Frei Luís de Sousa
+'Abandonai toda a esperança, vós que entrais' de 'Divina Comédia' de Dante Alighieri (traduzido/adaptado em Portugal)
+'Cada qual sabe onde o sapato aperta' de 'Fábulas' de Tomás de Aquino (traduzido/adaptado em Portugal)
+'Como uma luva' de 'Os Maias' de Eça de Queirós
+'Deus ajuda quem se ajuda' de 'Fábulas' de Esopo (traduzido/adaptado em Portugal)
+'É melhor um pássaro na mão do que dois a voar' de 'Fábulas' de Esopo (traduzido/adaptado em Portugal)
+'Falar sem pensar é atirar sem pontaria' de 'Cartas' de Sá de Miranda
+'Mais vale um gosto que um vintém' de 'Fábulas' de Esopo (traduzido/adaptado em Portugal)
+'O hábito não faz o monge' de 'Fábulas' de Esopo (traduzido/adaptado em Portugal)
+'Quem não chora não mama' de 'Fábulas' de Esopo (traduzido/adaptado em Portugal)
+'A ciência é a luz da alma' de 'Cartas a Lucílio' de Sêneca (traduzido em Portugal)
+'A fama é um sonho vazio' de 'Heroides' de Ovídio (traduzido/adaptado em Portugal)
+'A glória é a sombra da virtude' de 'De Gloria' de Cícero (traduzido em Portugal)
+'A guerra é a violência organizada' de 'Da Guerra' de Clausewitz (referenciado por Oliveira Martins, adaptado)
+'A morte é o grande nivelador' de 'Tratado sobre a Morte' de Séneca (traduzido/adaptado)
+'A poesia é a pintura que fala' de 'Ars Poética' de Horácio (traduzida por Sá de Miranda)
+'A primavera da vida' de 'As Metamorfoses' de Ovídio (traduzido/adaptado)
+'A riqueza é uma doença da alma' de 'Vidas Paralelas' de Plutarco (traduzido em Portugal)
+'A riqueza é um bem indiferente' de 'Cartas a Lucílio' de Sêneca (traduzido/adaptado)
+'A sorte favorece os audazes' de 'Eneida' de Vergílio (traduzido por Luís de Camões em glosas)
+'A verdade é a filha do tempo' de 'Vidas dos Doze Césares' de Suetónio (traduzido/adaptado)
+'A vida é breve, a arte é longa' de 'Aforismos' de Hipócrates (traduzido em Portugal)
+'A voz do dinheiro' de 'Plutus' de Aristófanes (adaptado por Gil Vicente)
+'A juventude é um sonho' de 'As Metamorfoses' de Ovídio (traduzido/adaptado)
+'Cada um é o artífice da sua própria fortuna' de 'Fábulas' de Fedro (traduzido em Portugal)
+'Como as flores de um dia' de 'Idílios' de Teócrito (traduzido/adaptado em Portugal)
+'Dize-me com quem andas e dir-te-ei quem és' de 'Fábulas' de Fedro (traduzido/adaptado)
+'Em terra de cegos, quem tem um olho é rei' de 'Sátiras' de Juvenal (traduzido/adaptado)
+'Errare humanum est' de 'Cartas a Lucílio' de Sêneca (traduzido/adaptado)
+'In vino veritas' de 'Cartas a Lucílio' de Sêneca (traduzido/adaptado)
+'Memento mori' de 'Coleção de máximas' de Marco Aurélio (traduzido/adaptado em Portugal)
+'Ninguém é feliz enquanto viver' de 'Cartas a Lucílio' de Sêneca (traduzido/adaptado)
+'O homem é a medida de todas as coisas' de 'Metafísica' de Protágoras (traduzido/adaptado)
+'A batalha de Aljubarrota foi a vitória do povo' de 'Crónica de D. João I' de Fernão Lopes
+'A morte de Inês de Castro' de 'Os Lusíadas' de Luís de Camões
+'A queda de Portugal nas mãos dos Filipes' de 'História de Portugal' de Alexandre Herculano
+'A revolução de 1385 foi o nascimento da nacionalidade' de 'História de Portugal' de Oliveira Martins
+'A revolução de 1502 nasceu do espírito de independência' de 'História do Cerco de Lisboa' de Fernão Lopes
+'A revolta de 1640 libertou Portugal do jugo castelhano' de 'História de Portugal' de Alexandre Herculano
+'A tomada de Ceuta marcou o início da expansão ultramarina' de 'Crónica do Descobrimento e Conquista da Guiné' de Gomes Eanes de Zurara
+'A união ibérica sob os Filipes foi um período de decadência' de 'História de Portugal' de Alexandre Herculano
+'D. Afonso Henriques foi o fundador da nacionalidade' de 'Crónica de Portugal de 1419' de Fernão Lopes
+'D. Dinis foi o rei lavrador' de 'Crónica de D. Dinis' de Rui de Pina
+'D. João I é o rei que venceu em Aljubarrota' de 'Crónica de D. João I' de Fernão Lopes
+'D. Sebastião foi o rei que partiu para a morte em Alcácer Quibir' de 'Os Lusíadas' de Camões
+'D. Vasco da Gama abriu o caminho para a Índia' de 'Os Lusíadas' de Camões
+'El-Rei D. Manuel foi o rei venturoso' de 'Crónica de D. Manuel I' de Damião de Góis
+'Fernão de Magalhães circum-navegou o globo' de 'Relato da Viagem de Fernão de Magalhães' de Pigafetta (referenciado em Portugal)
+'Gil Eanes dobrou o Cabo Bojador' de 'Crónica do Descobrimento e Conquista da Guiné' de Zurara
+'O cerco de Lisboa de 1147 foi a conquista cristã da cidade' de 'Crónica de Portugal de 1419' de Fernão Lopes
+'O dia de Portugal é 10 de Junho, dia de Camões' de decreto-lei de 1922
+'O massacre de 1578 em Alcácer Quibir foi o fim do sonho sebastianista' de 'História de Portugal' de Alexandre Herculano
+'O Tratado de Tordesilhas dividiu o mundo entre Portugal e Castela' de 'Tratado de Tordesilhas' (1494)
+'O Ultimato Inglês de 1890 foi a humilhação nacional' de 'História Diplomática de Portugal' de Jaime Cortesão
+‘A carne é fraca, mas o espírito é forte’ de ‘Evangelho segundo São Marcos’ (Bíblia)
+‘A fé move montanhas’ de ‘Primeira Epístola aos Coríntios’ de São Paulo (Bíblia)
+‘A luz resplandece nas trevas’ do ‘Evangelho segundo São João’ (Bíblia)
+‘Amai-vos uns aos outros’ de ‘Primeira Epístola de João’ (Bíblia)
+‘Amarás o Senhor teu Deus sobre todas as coisas’ de ‘Deuteronómio’ (Bíblia)
+‘Aquele que não tem pecado atire a primeira pedra’ do ‘Evangelho segundo São João’ (Bíblia)
+‘Bem-aventurados os pobres de espírito’ do ‘Sermão da Montanha’ (Bíblia)
+‘Deus é amor’ da ‘Primeira Epístola de João’ (Bíblia)
+‘Dá a César o que é de César’ do ‘Evangelho segundo São Mateus’ (Bíblia)
+‘Em nome do Pai, do Filho e do Espírito Santo’ do ‘Evangelho segundo São Mateus’ (Bíblia)
+‘Erga-se e ande’ da ‘Cura do paralítico’ (Bíblia)
+‘Felizes os que choram, porque serão consolados’ do ‘Sermão da Montanha’ (Bíblia)
+‘Haja luz’ do ‘Livro do Génesis’ (Bíblia)
+‘Lázaro, levanta-te e anda!’ da ‘Ressurreição de Lázaro’ (Bíblia)
+‘Orai e vigiai’ do ‘Evangelho segundo São Mateus’ (Bíblia)
+‘O homem não vive só de pão’ do ‘Deuteronómio’ (Bíblia)
+‘O que Deus uniu, não separe o homem’ do ‘Evangelho segundo São Mateus’ (Bíblia)
+‘O sangue de Abel clama da terra’ do ‘Livro do Génesis’ (Bíblia)
+‘Os últimos serão os primeiros’ do ‘Evangelho segundo São Mateus’ (Bíblia)
+‘Pai, perdoai-lhes, porque não sabem o que fazem’ da ‘Crucificação’ (Bíblia)
+‘Porventura não são dois pardais vendidos por um ceitil? E nenhum deles cairá em terra sem a vontade de vosso Pai’ do ‘Evangelho segundo São Mateus’ (Bíblia)
+‘Quem com ferro fere, com ferro será ferido’ do ‘Evangelho segundo São Mateus’ (Bíblia)
+‘Vede que ninguém vos engane’ do ‘Evangelho segundo São Mateus’ (Bíblia)
+‘Vós sois o sal da terra’ do ‘Sermão da Montanha’ (Bíblia)
+‘Vós sois a luz do mundo’ do ‘Sermão da Montanha’ (Bíblia)
+'A moura que espera pelo seu amor à beira do rio' de contos populares do Alentejo
+'A lenda do Galo de Barcelos' de contos populares do Minho
+'A lenda de D. Branca e o cavaleiro de Avis' de crónicas medievais
+'O tesouro do mouro Al-Mansur' de lendas do Algarve
+'A lenda de São Jorge e o dragão' de tradução portuguesa da 'Lenda Dourada'
+'O gigante Adamastor' de 'Os Lusíadas' de Camões
+'A lenda de Inês de Castro e o beijo póstumo' do ciclo das lendas de Coimbra
+'O ciclo do Rei Artur e a Távola Redonda' em versões portuguesas medievais
+'A lenda de Frei Gil e o diabo' de contos populares do norte de Portugal
+Água mole em pedra dura, tanto bate até que fura
+Quem conta um conto acrescenta um ponto
+Quem corre cansa, quem não corre a pagar
+Deus escreve direito por linhas tortas
+Mais vale tarde do que nunca
+Quem não deve não teme
+O dinheiro não cheira
+Cada um sabe o sapato que lhe aperta
+Quem avisa amigo é
+Quem não arrisca não petisca
+Em terra de cego, quem tem um olho é rei
+Quem parte e reparte e não fica com a parte, ou é tolo ou não tem arte
+Quem com ferro fere, com ferro será ferido
+Deitar cedo e cedo erguer, dá saúde e faz viver
+'A alma é um teatro de paixões' de 'Odes' de Mário de Sá-Carneiro
+'A arte deve ser uma faca no coração' de 'Poesia' de Alexandre O'Neill
+'A beleza é a única coisa que não se pode negar' de 'O Ano da Morte de Ricardo Reis' de José Saramago
+'A cidade é um monstro que devora os seus filhos' de 'Os Maias' de Eça de Queirós
+'A felicidade é uma invenção portuguesa' de 'O Ano da Morte de Ricardo Reis' de José Saramago
+'A liberdade é a condição primeira da arte' de 'Poesias Completas' de Fernando Pessoa
+'A memória é uma ferida que nunca fecha' de 'A Sibila' de Agustina Bessa-Luís
+'A morte é um acidente de percurso' de 'Morte e Vida Severina' de João Cabral de Melo Neto
+'A poesia deve ser um punhal' de 'Ficções do Interlúdio' de Fernando Pessoa (ortónimo)
+'A realidade é um sonho acordado' de 'O Ano da Morte de Ricardo Reis' de José Saramago
+'A saudade é a geografia da alma' de 'Cancioneiro' de Florbela Espanca
+'A solidão é a companhia mais fiel' de 'Ode Marítima' de Álvaro de Campos (Fernando Pessoa)
+'A vida é uma viagem sem regresso' de 'Viagens na Minha Terra' de Almeida Garrett
+'Como o tempo foge e a vida é breve' de 'Mar Limpo' de Sophia de Mello Breyner Andresen
+'Não há maior solidão do que a do homem que nunca se olhou ao espelho' de 'O Livro do Desassossego' de Fernando Pessoa
+'O homem é um deus quando sonha e um mendigo quando reflecte' de 'Poesias Completas' de Fernando Pessoa
+'O homem é um escravo das suas palavras' de 'O Ano da Morte de Ricardo Reis' de José Saramago
+'O tempo é um rio que nos leva sem saber para onde' de 'Odes' de Mário de Sá-Carneiro
+‘Adeus, terras de Portugal, adeus! Que eu vou por esse mar oceano além’ de ‘Os Lusíadas’ de Luís de Camões
+‘As armas e os barões assinalados’ de ‘Os Lusíadas’ de Luís de Camões
+‘Cada um é como Deus o fez’ de ‘O Auto da Barca do Inferno’ de Gil Vicente
+‘Cá estão os que hão-de ir!’ de ‘O Auto da Barca do Inferno’ de Gil Vicente
+‘Deus quer, o homem sonha, a obra nasce’ de ‘A Mensagem’ de Fernando Pessoa
+‘É a hora suprema! É a vez!’ de ‘Os Maias’ de Eça de Queirós (cena do teatro no Ramalhete)
+‘Eu sou um homem qualquer, / Um bicho da terra fria’ de ‘Cancioneiro Geral’ de Garcia de Resende
+‘Fado nasceu um dia, / Quando o vento maltratava / Os búzios do meu canavial’ de ‘Fado’ de Fernando Pessoa
+‘Fado meu, fado meu, / Ninguém te pode compreender’ de ‘Fado’ de Fernando Pessoa
+‘Grande é a arte, mas maior é o artista’ de ‘Odes’ de Antero de Quental
+‘Há tanta gente que não sabe / Que nasceu para ser feliz’ de ‘Odes Pindáricas’ de Bocage
+‘Mais vale uma alma que se salva / Do que um império que se perde’ de ‘Sermões’ de Padre António Vieira
+‘Ó mar salgado, quanto do teu sal / São lágrimas de Portugal!’ de ‘Mar Português’ de Fernando Pessoa
+‘Onde estás, ó liberdade, / Que não vejo o teu clarão?’ de ‘Ode Triunfal’ de Álvaro de Campos
+‘Que é feito de ti, ó minha pátria amada’ de ‘Os Lusíadas’ de Luís de Camões
+‘Só se vê bem com o coração. O essencial é invisível aos olhos’ de ‘O Principezinho’ (tradução/adaptação popular em Portugal)
+‘Tal como as rosas do Sul / Que só desabrocham à luz’ de ‘Fado Alexandrino’ de Fernando Pessoa (ortónimo)
+‘Um dia virá, que ha-de ser / O dia da redenção’ de ‘A Severa’ de Júlio Dantas
+‘Vem, ó noiva, ao meu lado, / Que o céu é o nosso teatro’ de ‘Auto da Índia’ de Gil Vicente
+‘Vós que tendes o poder / De condenar e absolver’ de ‘O Auto da Barca do Inferno’ de Gil Vicente
+‘A vida é um sonho’ de ‘A Vida é Sonho’ de Calderón de la Barca (traduzido/adaptado por Garrett)
+‘O meu teatro é o mundo’ de ‘Poemas’ de Bocage
+‘Tanto vale o que se sonha / Como o que a vida real dá’ de ‘Fado’ de Fernando Pessoa
+O homem é a medida de todas as coisas de Protágoras ('Tratado do Não-Ser' fragmento)
+Conhece-te a ti mesmo de Sócrates (inscrição no templo de Delfos, referenciado por Platão)
+Só sei que nada sei de Sócrates (memória de Platão em 'Apologia de Sócrates')
+A virtude é suficiente para a felicidade de Aristóteles ('Ética a Nicómaco')
+O homem é um animal político de Aristóteles ('Política')
+A felicidade é o fim último do homem de Aristóteles ('Ética a Nicómaco')
+O sábio é feliz por si mesmo de Platão ('Filebo')
+A justiça é a alma em harmonia de Platão ('República')
+O homem é escravo das suas paixões de Platão ('Fedro')
+A alma é imortal de Platão ('Fédon')
+O homem é um ser de desejo de Platão ('Banquete')
+A alma tem três partes de Platão ('República')
+O homem é um Deus quando filosofa de Platão ('Teeteto')
+A virtude é uma disposição voluntária de Aristóteles ('Ética a Nicómaco')
+A felicidade é uma atividade da alma de Aristóteles ('Ética a Eudemo')
+O homem é um ser racional de Aristóteles ('Metafísica')
+A justiça é a igualdade geométrica de Aristóteles ('Ética a Nicómaco')
+O homem é um animal que ri de Aristóteles ('Política')
+A alma é a forma do corpo de Aristóteles ('De Anima')
+O homem é um ser de linguagem de Aristóteles ('De Interpretatione')
+A arte imita a natureza de Aristóteles ('Poética')
+O homem é um ser de razão prática de Aristóteles ('Ética a Nicómaco')
+A felicidade é um fim em si mesmo de Aristóteles ('Ética a Nicómaco')
+O homem é um ser de comunidade de Aristóteles ('Política')
+A alma é o princípio do movimento de Aristóteles ('De Anima')
+'A arte pela arte' de 'Odes' de Teófilo Braga
+'A cor é a alma da pintura' de 'Tratado da Pintura' de Francisco de Holanda
+'A dança é a voz do corpo' de 'O Orfeão' de Alberto de Oliveira
+'A escultura é a arte de dar vida à pedra' de 'Arte Poética' de Bocage
+'A luz e a sombra são as penas do pintor' de 'Cartas sobre a Pintura' de Francisco de Holanda
+'A música é a mais nobre das artes' de 'Cartas sobre a Música' de João Domingos Bomtempo
+'A pintura é um sonho que se faz realidade' de 'Arte Poética' de Manuel Maria Barbosa du Bocage
+'A poesia deve ser pintada por palavras' de 'Cancioneiro Geral' de Garcia de Resende
+'A escultura é a música petrificada' de 'Arte Poética' de Bocage
+'A arte deve ser como um espelho do mundo' de 'Tratado da Pintura' de Francisco de Holanda
+'A música é o eco do sentimento' de 'O Orfeu' de Fernando Pessoa (Orfeu)
+'A pintura é a música dos olhos' de 'Cartas sobre a Pintura' de Francisco de Holanda
+'A dança é a poesia que se move' de 'O Orfeão' de Alberto de Oliveira
+'A arte deve ser um espelho da alma' de 'Tratado da Pintura' de Francisco de Holanda
+'A luz é a alma do retrato' de 'O Retrato' de Antero de Quental
+'A música é a linguagem universal' de 'Cartas sobre a Música' de João Domingos Bomtempo
+'A arte deve ser como um suspiro da alma' de 'Poesias Completas' de Camilo Pessanha
+'A pintura é a escrita do invisível' de 'Do Desenho' de Francisco de Holanda
+'A música é a voz da saudade' de 'Fado' de Fernando Pessoa (ortónimo)
+'A dança é a sombra da música' de 'O Orfeão' de Alberto de Oliveira
+'A arte deve ser um sopro de eternidade' de 'O Modernismo em Portugal' de Fernando Pessoa
+'A luz da pintura é a verdade do mundo' de 'Tratado da Pintura' de Francisco de Holanda
+'A música é a alma do fado' de 'Fado' de Amália Rodrigues
+'A cada passo da vida, um novo engano' de 'Ode ao Sr. Antônio T.', de Bocage
+'A cada riso, um choro se esconde' de 'Cartas a um Jovem Poeta', de Fernando Pessoa (ortónimo)
+'A cada sonho que morre, nasce um novo' de 'Poesias' de Florbela Espanca
+'A conversa é um jogo de palavras' de 'O Primo Basílio' de Eça de Queirós
+'A esperança é a última a morrer' de 'Fábulas' de António José da Silva (adaptação portuguesa)
+'A fama é um eco longínquo' de 'Só' de Mário de Sá-Carneiro
+'A felicidade está nas coisas simples' de 'Contos' de Eça de Queirós ('Os Maias')
+'A guerra é um monstro de mil cabeças' de 'A Morte de D. João' de Almeida Garrett
+'A lei é dura, mas é lei' de 'O Crime do Padre Amaro' de Eça de Queirós
+'A mentira anda sempre à frente da verdade' de 'Fábulas' de António José da Silva (adaptação)
+'A música é o pranto que se não verteu' de 'Fado' de Fernando Pessoa (ortónimo)
+'A noite é a mãe do dia' de 'Odes' de Antero de Quental
+'A paciência é a chave da alegria' de 'Sermões' de Padre António Vieira
+'A palavra é um rio caudaloso' de 'Cartas de Erasmo' (adaptação portuguesa)
+'A sabedoria começa no espanto' de 'Cartas' de Sá de Miranda
+'A saudade é a dor que se sente sem se saber onde' de 'Fado' de Florbela Espanca
+'A terra é um livro aberto' de 'Tratado de Agrimensura' de Duarte Pacheco Pereira
+'A vaidade é o espelho partido da alma' de 'Cartas' de D. Francisco Manuel de Melo
+'A vida é um jogo de azar' de 'O Livro do Desassossego' de Fernando Pessoa (Bernardo Soares)
+'As aparências iludem, mas a verdade liberta' de 'O Alienígena' de Almeida Garrett
+'Como é grande a esperança, quando se aproxima o fim' de 'Os Lusíadas' de Camões (Canto IX)
+'Deus escreve direito por linhas tortas' de 'Sermões' de Padre António Vieira
+'Em boca fechada não entra mosquito' de 'Cartas' de D. Francisco Manuel de Melo
+'Mais vale um pássaro na mão do que dois a voar' de 'Fábulas' de António José da Silva (adaptação)
+'O amor é um fogo que arde sem se ver' de 'Sonetos' de Luís de Camões
+'A alma é um campo de batalha' de 'Os Lusíadas' de Luís de Camões
+'A arte é filha do engenho e da fantasia' de 'Os Lusíadas' de Luís de Camões
+'A arte poética é um deus que nos guia' de 'Arte Poética' de Manuel Maria Barbosa du Bocage
+'A beleza é a forma do bem' de 'Poemas' de António Ferreira
+'A beleza é irmã da verdade' de 'Os Lusíadas' de Luís de Camões
+'A beleza é um dom dos deuses' de 'Poemas' de Francisco Sá de Miranda
+'A coragem é a primeira virtude' de 'Tratado da Virtude' de D. Francisco Manuel de Melo (inspirado em clássicos)
+'A dor é a escola da sabedoria' de 'Poemas Trágicos' de Sophia de Mello Breyner Andresen (referência horaciana)
+'A fama é um eco que se perde' de 'Heroides' de Ovídio (tradução portuguesa do século XVI)
+'A glória é efémera como as flores' de 'Odes' de Horácio (tradução de Faria e Sousa)
+'A inveja é um monstro que se alimenta de si mesmo' de 'Metamorfoses' de Ovídio (tradução portuguesa)
+'A justiça é a rainha das virtudes' de 'Sermão da Sexagésima' de Padre António Vieira (inspirado em Cícero)
+'A lira de Orfeu acalma os deuses' de 'Elegias' de Mário de Sá-Carneiro (referência clássica)
+'A luz da poesia é a lua dos poetas' de 'Poemas' de António Dinis da Cruz e Silva
+'A música é a voz da alma' de 'Cantos' de Garção (Neoclassicismo, inspirado em Horácio)
+'A noite é o véu dos segredos' de 'Odes' de Antero de Quental (referência a Safo)
+'A poesia é um suspiro da alma' de 'Rimas' de Luís de Camões (inspirado em Petrarca)
+'A poesia é um voo além do tempo' de 'Poemas' de Fernando Pessoa (ortónimo, referência a Píndaro)
+'A razão é a medida de todas as coisas' de 'Poemas' de António Ferreira (inspiração horaciana)
+'A razão deve governar os sentidos' de 'Sermão da Terceira Dominga da Quaresma' de Padre António Vieira (inspirado em Aristóteles)
+'A terra é um teatro de vaidades' de 'Os Lusíadas' de Luís de Camões (eco de 'Theatrum Mundi')
+'A vida é um sonho passageiro' de 'Auto da Barca do Inferno' de Gil Vicente (referência a Calderón de la Barca)
+'O amor é um fogo que arde sem se ver' de 'Sonetos' de Luís de Camões (inspirado em Petrarca)
+'O tempo é um rio que tudo leva' de 'Odes' de Horácio (tradução portuguesa do século XVIII)
+'A bandeira de Portugal é o manto da pátria' de 'A Bandeira' de Herculano
+'A batalha de Alcácer Quibir foi o fim da independência' de 'História de Portugal' de Oliveira Martins
+'A batalha de Ourique foi a fundação da nação' de 'História da Província de São Domingos' de frei Luís de Sousa
+'A Batalha de Salado selou a aliança com Castela' de 'Crónica de El-Rei D. Afonso Henriques' de Duarte Galvão
+'A descoberta do Brasil foi o sonho do Infante' de 'História do Reino de Portugal' de Francisco Manuel de Melo
+'A expulsão dos mouros foi a redenção da pátria' de 'Crónica de D. João I' de Fernão Lopes
+'A fundação de Lisboa como Ulissea foi celebrada por Camões' de 'Os Lusíadas' (Canto III)
+'A morte de Inês de Castro foi o crime que envergonhou o reino' de 'Crónica de D. Pedro I' de Fernão Lopes
+'A morte de D. Sebastião foi o desaparecimento que marcou a nação' de 'História de Portugal' de Alexandre Herculano
+'A paz de Zamora consagrou a independência de Portugal' de 'Crónica de D. Afonso Henriques' de Duarte Galvão
+'A queda de Ceuta foi o primeiro passo da expansão' de 'História do Infante D. Henrique' de João de Barros
+'A revolução de 1910 foi o abraço da República' de 'A República Portuguesa' de Teófilo Braga
+'A revolta de 1383-1385 foi a revolução que nasceu do povo' de 'Crónica de D. João I' de Fernão Lopes
+'A saída de D. João II para África foi o desafio ao destino' de 'História de Portugal' de Oliveira Martins
+'A tomada de Ceuta foi o primeiro passo do Império' de 'Crónica da Tomada de Ceuta' de Gomes Eanes de Zurara
+'A vinda da corte para o Brasil em 1807 foi a saga da sobrevivência' de 'História do Brasil' de Varnhagen
+'D. Dinis foi o rei poeta que uniu a nação' de 'Crónica de D. Dinis' de Frei António Brandão
+'D. João I foi o Mestre de Avis que salvou a pátria' de 'Crónica de D. João I' de Fernão Lopes
+'D. Manuel I foi o rei venturoso que abriu as portas do mundo' de 'Saudades da Terra' de Damião de Góis
+'O Tratado de Tordesilhas dividiu o mundo sem consultar os povos' de 'História do Brasil' de Varnhagen
+'O terramoto de 1755 foi a lição que abalou Lisboa' de 'Saudades da Terra' de Damião de Góis
+'A voz do sangue clama pela justiça' de 'Eclesiastes' (versão portuguesa da Vulgata)
+'A palavra de Deus é viva e eficaz' de 'Epístola aos Hebreus' (tradução de João Ferreira de Almeida)
+'O cordeiro de Deus que tira o pecado do mundo' de 'Evangelho segundo João' (João 1:29)
+'O homem nasce para a dor, como as faíscas voam para cima' de 'Livro de Jó' (Jó 5:7)
+'O amor é paciente, o amor é benigno' de 'Primeira Epístola aos Coríntios' (1 Coríntios 13:4-5)
+'Ninguém tem maior amor do que este: de dar alguém a sua vida pelos seus amigos' de 'Evangelho segundo João' (João 15:13)
+'Deus é amor, e quem permanece no amor permanece em Deus' de 'Primeira Epístola de João' (1 João 4:16)
+'A fé sem obras é morta' de 'Epístola de Tiago' (Tiago 2:17)
+'O justo viverá pela fé' de 'Epístola aos Romanos' (Romanos 1:17)
+'Vinde a mim todos vós que estais cansados e sobrecarregados, e eu vos aliviarei' de 'Evangelho segundo Mateus' (Mateus 11:28)
+'Onde está, ó morte, a tua vitória?' de 'Primeira Epístola aos Coríntios' (1 Coríntios 15:55)
+'Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho' de 'Salmos' (Salmo 119:105)
+'O Senhor é o meu pastor; nada me faltará' de 'Salmos' (Salmo 23:1)
+'A terra, ó Senhor, está cheia da tua misericórdia' de 'Salmos' (Salmo 119:64)
+'Os céus proclamam a glória de Deus, e o firmamento anuncia as obras das suas mãos' de 'Salmos' (Salmo 19:1)
+'Tudo posso naquele que me fortalece' de 'Epístola aos Filipenses' (Filipenses 4:13)
+'O temor do Senhor é o princípio da sabedoria' de 'Provérbios' (Provérbios 9:10)
+'Quem crê em mim, ainda que esteja morto, viverá' de 'Evangelho segundo João' (João 11:25)
+'O Espírito sopra onde quer' de 'Evangelho segundo João' (João 3:8)
+'Não só de pão vive o homem, mas de toda a palavra que procede da boca de Deus' de 'Evangelho segundo Mateus' (Mateus 4:4)
+'Aquele que habita no esconderijo do Altíssimo à sombra do Onipotente descansará' de 'Salmos' (Salmo 91:1)
+'O meu jugo é suave e o meu fardo é leve' de 'Evangelho segundo Mateus' (Mateus 11:30)
+'Sede, pois, imitadores de Deus, como filhos amados' de 'Epístola aos Efésios' (Efésios 5:1)
+'O que semeia na carne, da carne colherá a corrupção; o que semeia no Espírito, do Espírito colherá a vida eterna' de 'Epístola aos Gálatas' (Gálatas 6:8)
+'O Senhor é o meu refúgio e a minha fortaleza; em quem confio' de 'Salmos' (Salmo 91:2)
+'A alma do mundo é feita de sonhos' de 'Ode Marítima' de Álvaro de Campos (heterónimo de Fernando Pessoa)
+'A barca de Caronte não espera por ninguém' de 'Os Lusíadas' de Luís de Camões (Canto X, estância 128)
+'A boca do inferno não se fecha' de 'Auto da Barca do Inferno' de Gil Vicente
+'A coruja de Minerva levanta voo ao crepúsculo' de 'Filosofia do Direito' de Hegel (através de Antero de Quental em 'Odas Modernas')
+'A dança das nereidas ao luar' de 'Odes Pindáricas' de Manuel Maria Barbosa du Bocage
+'A dívida do sangue nunca se paga' da lenda de 'D. Branca e o Cavaleiro de Avis'
+'A espada do Cid não foi forjada no metal' da lenda popular ibérica (traduzida em Portugal)
+'A estrela Polar guia os navegantes perdidos' da mitologia grega (referenciada em 'História Trágico-Marítima' de Bernardo Gomes de Brito)
+'A filha do rei do mar é a lua' de 'A Ilha dos Amores' de Almeida Garrett
+'A filha do vento é a tempestade' de 'Cânticos do Realismo' de João de Deus
+'A fada da montanha protege os que respeitam a natureza' de contos populares do Alentejo
+'A força do gigante é a sua fraqueza' do mito de 'David e Golias' (traduzido em 'Sermões' de Padre António Vieira)
+'A lua é a deusa dos amantes' da mitologia romana (referenciada em 'Poemas' de Florbela Espanca)
+'A mãe d'água afoga os descuidados' de lendas do Douro e Minho
+'A mão do destino não se desvia' de 'O Primo Basílio' de Eça de Queirós (inspirado em tragédia grega)
+'A mão que afaga é a mão que mata' de 'O Crime do Padre Amaro' de Eça de Queirós (inspirado em lenda medieval)
+'A náiade do rio Tejo chora quando o rio transborda' de 'Poemas' de António Nobre
+'A ninfa das águas canta à meia-noite' de 'Odes' de Antero de Quental
+'A oferta de Mefistófeles não tem preço' do mito de 'Fausto' (Goethe, traduzido em Portugal)
+'A rainha das fadas é a lua nova' de contos infantis portugueses
+'A serpente que se morde a cauda é o tempo' de 'O Caos' de Teixeira de Pascoaes (inspirado em mitologia grega)
+'O canto das sereias atrai os mortais' da Odisseia de Homero (traduzido em Portugal, referenciado em 'Os Lusíadas')
+'A água corrente não mata a sede do mercador' de provérbios populares
+'A calada é a melhor resposta' de provérbios populares
+'A cavalo dado não se olha o dente' de provérbios populares
+'A custo se apaga o mal que o tempo não esconde' de provérbios populares
+'A fome é o melhor tempero' de provérbios populares
+'A galinha da vizinha é sempre mais gorda' de provérbios populares
+'A guerra avisa quem a não teme' de provérbios populares
+'A inveja come o fígado e os ossos' de provérbios populares
+'A mentira tem pernas curtas' de provérbios populares
+'A missa a meio é como o casamento a meio' de provérbios populares
+'A necessidade aguça o engenho' de provérbios populares
+'A noite é mãe de conselhos' de provérbios populares
+'A ovelha que berra perde o bocado' de provérbios populares
+'A palavra é de prata, o silêncio é de ouro' de provérbios populares
+'A pobreza não envergonha' de provérbios populares
+'A pressa é inimiga da perfeição' de provérbios populares
+'A sorte favorece os audazes' de provérbios populares
+'A verdade está na boca do povo' de provérbios populares
+'A quem Deus não dá filhos, o Diabo dá sobrinhos' de provérbios populares
+'Cada terra com seu uso, cada roca com seu fuso' de provérbios populares
+'Casa onde não há pão, todos ralham, ninguém tem razão' de provérbios populares
+'Deitar cedo e cedo erguer, dá saúde e faz crescer' de provérbios populares
+'Em boca fechada não entra mosquito' de provérbios populares
+'Mais vale um pássaro na mão que dois a voar' de provérbios populares
+'A felicidade é uma mentira azul' de 'Ficções do Interlúdio' de Mário de Sá-Carneiro
+'A guerra é o inferno, mas a paz pior' de 'Felizmente Há Luar!' de Luís de Sttau Monteiro
+'A história é um pesadelo do qual não consigo acordar' de 'A Sibila' de Agustina Bessa-Luís
+'A humanidade é um rebanho de sonâmbulos' de 'O Ano da Morte de Ricardo Reis' de José Saramago
+'A linguagem é uma prisão da mente' de 'O Homem Duplicado' de José Saramago
+'A verdade é uma ferida que sangra devagar' de 'O Crime do Padre Amaro' de Eça de Queirós (versão moderna de Mário de Carvalho)
+'Cada homem é uma ilha' de 'O Ano de 1993' de Mário de Sá-Carneiro
+'Deus é um grande relógio' de 'Poemas' de Alexandre O'Neill
+'O amor é um acto de loucura' de 'Os Maias' de Eça de Queirós (versão moderna de Mário de Carvalho ou Almeida Faria)
+'O homem é um deus quando sonha e um mendigo quando pensa' de 'Poemas' de Mário de Sá-Carneiro
+'O poeta é um fingidor' de 'Cancioneiro' de Fernando Pessoa (ortónimo)
+'Os sonhos são a ponte entre o sono e a morte' de 'Húmus' de Raul Brandão
+'A cena é a vida, e a vida é um sonho' de 'A Joana' de Garrett
+'O teatro é o mundo' de 'Auto da Índia' de Gil Vicente
+'O povo é o rei do palco' de 'O Fidalgo Aprendiz' de Gil Vicente
+'A ribalta é um altar de ilusões' de 'Odes' de Bocage
+'O ator é um deus que morre a cada representação' de 'Teatro' de Antero de Quental
+'A plateia é o espelho do público' de 'Cartas sobre a Arte' de Almeida Garrett
+'O drama deve comover, ensinar e agradar' de 'Arte Poética' de Bocage
+'A ópera é o céu na terra' de 'A Severa' de Júlio Dantas
+'O canto é a voz da alma' de 'O Orfeu' de Almeida Garrett
+'A dança é a poesia que se move' de 'O Orfeu' de Almeida Garrett
+'O teatro deve ser um espelho da sociedade' de 'O Fidalgo Aprendiz' de Gil Vicente
+'A música é a linguagem universal' de 'Teatro' de Antero de Quental
+'O ator é um invisível que se faz visível' de 'Cartas sobre a Arte' de Almeida Garrett
+'A ópera é um sonho de mármore e música' de 'A Severa' de Júlio Dantas
+'O palco é um mundo em miniatura' de 'Auto da Barca do Inferno' de Gil Vicente
+'A comédia deve rir enquanto ensina' de 'Arte Poética' de Bocage
+'A tragédia deve ensinar pelo terror' de 'Cartas sobre a Arte' de Almeida Garrett
+'O coro é a voz da multidão' de 'Teatro' de Antero de Quental
+'A ópera é um espetáculo de lágrimas e luz' de 'A Severa' de Júlio Dantas
+'O ator é um feiticeiro de emoções' de 'O Orfeu' de Almeida Garrett
+'A dança é o corpo que se torna música' de 'O Orfeu' de Almeida Garrett
+'O teatro deve ser um grito ou um sussurro da alma' de 'Cartas sobre a Arte' de Almeida Garrett
+'A ópera é a arte que une o céu e a terra' de 'A Severa' de Júlio Dantas
+'O ator é um camaleão que veste personagens' de 'Teatro' de Antero de Quental
+'A música é a alma da ópera' de 'A Severa' de Júlio Dantas
+A consciência é um teatro interior onde os deuses se manifestam
+A essência das coisas é imutável segundo a doutrina de Parménides
+A felicidade é o fim último da ação humana segundo Aristóteles
+A justiça é a virtude que regula as relações entre os homens
+A medida de todas as coisas é o homem de Protágoras
+A natureza do ser é ser e não ser não pode ser segundo Zenão
+A razão governa as paixões na república ideal de Platão
+A república deve ser governada pelos filósofos segundo Platão
+A virtude está no meio entre dois extremos segundo Aristóteles
+As sombras da caverna são a única realidade dos prisioneiros
+Como é que podemos pensar o que não existe? pergunta de Gorgias
+Conhece-te a ti mesmo e nada em excesso diz o Oráculo de Delfos
+De que adianta ganhar o mundo se se perder a alma pergunta retórica cristã
+É preferível ser escravo de um homem mau do que de muitos homens bons segundo Platão
+Há mais coisas no céu e na terra do que sonha a tua vã filosofia de Hamlet
+Ninguém se lava duas vezes no mesmo rio segundo Heraclito
+O homem é um animal político segundo Aristóteles
+O homem é a medida de todas as coisas segundo Platão (adaptação)
+O ser é e o não-ser não é segundo Parménides
+O todo é maior do que a soma das partes segundo Aristóteles
+O que é o homem para que te lembres dele pergunta retórica bíblica
+O sábio é o homem que se contenta com o que tem segundo Epicuro
+Quebrar a corrente do destino é obra dos deuses segundo tragédias gregas
+Só sei que nada sei diz Sócrates no diálogo de Platão
+Viver segundo a natureza é viver segundo a razão segundo os estoicos
+'A arte é um sonho tornado realidade' de 'História Trágico-Marítima' de Bernardo Gomes de Brito
+'A cor é a voz do silêncio' de 'Tratado da Pintura' de Francisco de Holanda
+'A música é a linguagem universal' de 'Cartas sobre a Música' de Francisco Manuel de Melo
+'A pintura é a poesia muda' de 'Tratado da Pintura' de Francisco de Holanda
+'A Póvoa de Varzim é a Atenas do Norte' de 'O Oiro dos Mares' de Teixeira de Pascoaes
+'Aquarela do Brasil' de Ary Barroso (adaptada e popularizada em Portugal)
+'Aqui jaz o génio, a arte e a beleza' de 'Odes' de Antero de Quental
+'Artistas são os arautos da liberdade' de 'A Arte' de Antero de Quental
+'Cá está a Pátria, a Beleza e a Arte' de 'Os Lusíadas' de Luís de Camões (Canto IX)
+'Canto de Outono' de Fernando Pessoa (ortónimo) como metáfora da melancolia na arte
+'Como um rio que corre para o mar' de 'A Arte' de Almeida Garrett
+'Dançar é viver duas vezes' de 'O Orfeu' de Almeida Garrett
+'Deus é a primeira pincelada do artista' de 'Tratado da Pintura' de Francisco de Holanda
+'É na cor que a alma se revela' de 'A Pintura Portuguesa' de Columbano Bordalo Pinheiro
+'Graça é a síntese da arte' de 'A Arte' de Antero de Quental
+'Na música está a alma de Portugal' de 'Cartas sobre a Música' de Francisco Manuel de Melo
+'Ouvir é sentir, ver é compreender' de 'Tratado da Pintura' de Francisco de Holanda
+'Pintar é recriar o mundo' de 'Tratado da Pintura' de Francisco de Holanda
+'São os artistas que fazem a pátria imortal' de 'Os Maias' de Eça de Queirós
+'Todo o artista é um deus menor' de 'Poesias' de Camilo Pessanha
+'Viver é criar, criar é viver' de 'O Orfeu' de Almeida Garrett
+A ave de arribação não traz o destino de ninguém' de 'Auto da Barca do Inferno' de Gil Vicente
+A barca da Glória espera pelos que viveram na virtude' de 'Auto da Barca do Inferno' de Gil Vicente
+A boca é o espelho da alma' de 'Cartas' de Frei Luís de Granada (adaptado em Portugal)
+A borboleta nocturna não se queima no mesmo fogo duas vezes' de 'Cartas' de Sá de Miranda
+A cabra sempre paga ao lobo' de 'Fábulas' de António José da Silva
+A cada homem, sua ventura' de 'Amadis de Gaula' (versão portuguesa de 1542)
+A cada um o seu fado' de 'Os Lusíadas' de Luís de Camões (Canto II, estância 46)
+A cada um, segundo as suas obras' de 'Sermão da Quarta Dominga da Quaresma' de Padre António Vieira
+A carne é fraca, mas o espírito é forte' de 'Sermões' de Padre António Vieira
+A casa do homem é a sua fortaleza' de 'Fábulas' de António José da Silva
+A cobra e a enguia não se entendem' de 'Fábulas' de António José da Silva
+A cobra não morde a corda que a alimenta' de 'Fábulas' de António José da Silva
+A condição da mulher é a paciência' de 'Sermão do Mandato' de Padre António Vieira
+A confissão é o remédio da alma' de 'Sermões' de Padre António Vieira
+A coruja voa de dia quando perde a vista' de 'Fábulas' de António José da Silva
+A culpa é sempre do carneiro' de 'Fábulas' de António José da Silva
+A culpa é do pastor que não vigia' de 'Fábulas' de António José da Silva
+A curiosidade matou o gato' de 'Fábulas' de António José da Silva (adaptação portuguesa)
+A dança do bêbado nunca tem ritmo' de 'Cartas' de Sá de Miranda
+A defesa do reino é a defesa de todos' de 'Crónica de D. João I' de Fernão Lopes
+A desgraça é como a sombra: segue quem corre' de 'Fábulas' de António José da Silva
+A dignidade não se mendiga' de 'Sermão de Santo António aos Peixes' de Padre António Vieira
+A esperança é a última a morrer' de 'Fábulas' de António José da Silva
+A esperança é a mãe das ilusões' de 'Fábulas' de António José da Silva
+A esperança é a porta da salvação' de 'Sermões' de Padre António Vieira
+'A armadura de Heitor não resiste ao destino' de 'Ilíada' de Homero (tradução portuguesa do século XVI)
+'A arte de viver é saber perder' de 'Epístolas' de Horácio (traduzido/adaptado em Portugal)
+'A beleza de Helena trouxe a guerra' de 'Ilíada' de Homero (referenciado em 'Os Lusíadas' de Camões)
+'A beleza é efêmera como as flores de primavera' de 'Antologia Palatina' (referenciado em poetas portugueses quinhentistas)
+'A coragem de Aquiles levou à queda' de 'Ilíada' de Homero (referenciado em 'Os Lusíadas' de Camões)
+'A dor de Andrômaca é eterna' de 'Ilíada' de Homero (traduzida/adaptada em Portugal)
+'A eloquência de Ulisses venceu os ouvidos' de 'Odisseia' de Homero (referenciado em poetas clássicos portugueses)
+'A fama de Dido perdura além da morte' de 'Eneida' de Virgílio (traduzida em Portugal no século XVI)
+'A fraqueza de Páris foi a queda de Troia' de 'Ilíada' de Homero (referenciado em 'Os Lusíadas' de Camões)
+'A guerra de Tróia foi o fim de um mundo' de 'Ilíada' de Homero (referenciado em crónicas e poemas portugueses)
+'A juventude de Narciso é um espelho partido' de 'Metamorfoses' de Ovídio (traduzido/adaptado em Portugal)
+'A lira de Orfeu domou as feras' de 'Metamorfoses' de Ovídio (referenciado na poesia portuguesa)
+'A loucura de Ajax é a vergonha da força' de 'Ilíada' de Homero (traduzida/adaptada em Portugal)
+'A morte de Pátroclo selou o destino de Aquiles' de 'Ilíada' de Homero (referenciado em 'Os Lusíadas' de Camões)
+'A Musa inspirou Homero a cantar a guerra' de 'Ilíada' de Homero (adaptado em poetas portugueses)
+'A ninfa Calipso prendeu Ulisses por sete anos' de 'Odisseia' de Homero (referenciado em poetas do Renascimento português)
+'A paixão de Eco por Narciso é um eco eterno' de 'Metamorfoses' de Ovídio (traduzido/adaptado em Portugal)
+'A queda de Ícaro é o preço da ambição' de 'Metamorfoses' de Ovídio (referenciado na poesia portuguesa)
+'A sabedoria de Nestor é ouvida por reis' de 'Ilíada' de Homero (referenciado em crónicas e poemas portugueses)
+'A traição de Sinon abriu as portas de Tróia' de 'Eneida' de Virgílio (traduzida em Portugal no século XVI)
+'A vingança de Medeia é o preço do amor' de 'Medeia' de Eurípides (adaptado em teatro português)
+'As Musas cantam a glória dos deuses' de 'Teogonia' de Hesíodo (traduzida/adaptada em Portugal)
+'Como as Horas, a vida passa rápido' de 'Teogonia' de Hesíodo (referenciado em poetas portugueses clássicos)
+'O cavalo de Tróia foi a arma dos covardes' de 'Eneida' de Virgílio (referenciado em 'Os Lusíadas' de Camões)
+'O canto das Sereias levou marinheiros à morte' de 'Odisseia' de Homero (traduzido/adaptado em Portugal)
+'Afonso Henriques uniu o reino pela espada e pela cruz' de 'Crónica de Portugal' de Fernão Lopes
+'Alegrete e Aljubarrota foram as duas vitórias que salvaram Portugal' de 'História de Portugal' de Frei António Brandão
+'A morte de Inês de Castro é a mais trágica história de amor de Portugal' de 'Crónica de D. Pedro I' de Fernão Lopes
+'A tomada de Ceuta marcou o início do império português' de 'Crónica da Tomada de Ceuta' de Gomes Eanes de Zurara
+'A revolução de 1383-1385 foi a salvação da independência' de 'Crónica de D. João I' de Fernão Lopes
+'A morte de D. Sebastião selou o destino de Portugal' de 'História Trágico-Marítima' de Bernardo Gomes de Brito
+'A fundação da nacionalidade está em Ourique' de 'Livro dos Feitos' de frei Luís de Sousa
+'O tratado de Tordesilhas dividiu o mundo entre Portugal e Castela' de 'Tratado de Tordesilhas' (documento histórico)
+'A tomada de Lisboa aos mouros foi a primeira vitória da Reconquista' de 'Crónica do Condestável D. Nuno Álvares Pereira'
+'A morte de D. Afonso Henriques é o nascer da pátria' de 'Crónica Geral de Espanha' de Frei António Brandão
+'A batalha de Montes Claros confirmou a independência portuguesa' de 'História da Guerra da Restauração' de António de Sousa de Macedo
+'A chegada da corte brasileira a Lisboa em 1807 salvou Portugal' de 'Memórias da Corte do Brasil' de frei Francisco de S. Luís
+'A revolta da Maria da Fonte foi o grito das mulheres do Minho' de 'História de Portugal' de Alexandre Herculano
+'A batalha de Atoleiros mostrou o valor de D. Nuno Álvares Pereira' de 'Crónica do Condestável D. Nuno Álvares Pereira'
+'A fundação da nacionalidade está em Guimarães' de 'Livro Velho de Linhagens' (tradição medieval)
+'A morte de D. Dinis é a perda do rei lavrador' de 'Crónica de D. Dinis' de Rui de Pina
