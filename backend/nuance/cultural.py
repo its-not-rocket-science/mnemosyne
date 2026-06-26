@@ -13,6 +13,33 @@ from backend.nuance.script_normalise import normalise_for_matching
 from backend.schemas.parse import CandidateObject
 
 DATA_DIR = Path(__file__).resolve().parent / "data" / "cultural_references"
+COGNATE_FILE = Path(__file__).resolve().parent / "data" / "cross_language_cognates.json"
+
+_cognate_index: dict[str, list[dict]] = {}
+
+
+def _load_cognate_index() -> None:
+    if not COGNATE_FILE.exists():
+        return
+    data = json.loads(COGNATE_FILE.read_text(encoding="utf-8"))
+    for pair in data.get("cognates", []):
+        sid = pair["source_id"]
+        tid = pair["target_id"]
+        _cognate_index.setdefault(sid, []).append({
+            "id":       tid,
+            "language": pair["target_lang"],
+            "ref":      pair["target_ref"],
+            "note":     pair.get("note", ""),
+        })
+        _cognate_index.setdefault(tid, []).append({
+            "id":       sid,
+            "language": pair["source_lang"],
+            "ref":      pair["source_ref"],
+            "note":     pair.get("note", ""),
+        })
+
+
+_load_cognate_index()
 CASE_INSENSITIVE_LANGUAGES = frozenset({"en", "es", "fr", "de", "it", "pt", "ru", "la", "tr", "fi"})
 WORD_BOUNDARY_LANGUAGES = CASE_INSENSITIVE_LANGUAGES
 AMBIGUOUS_LOW_CONFIDENCE = 0.75
@@ -163,6 +190,10 @@ def extract_cultural_references(sentence: str, language: str) -> list[CandidateO
                 "surface": surface,
                 "learner_level": pat.entry["learner_level"],
                 "register": pat.entry.get("register"),
+                "subcategory": pat.entry.get("subcategory") or None,
+                "is_poetic_citation": bool(pat.entry.get("is_poetic_citation", False)),
+                "canonical_form_full": pat.entry.get("canonical_form_full") or None,
+                "cross_language_cognates": _cognate_index.get(pat.entry.get("id", ""), []),
                 "source": "generated_cultural_catalogue",
             }
             confidence_note = _confidence_note(pat.entry)

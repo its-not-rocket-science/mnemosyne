@@ -275,6 +275,19 @@ export class MnemosyneDetailPane extends HTMLElement {
           return
         }
 
+        // Cross-language cognate links
+        const cognateBtn = e.target.closest('.pane__cognate-link')
+        if (cognateBtn) {
+          const familyId = cognateBtn.dataset.cognateId
+          const lang     = cognateBtn.dataset.cognateLang
+          if (!familyId) return
+          this.dispatchEvent(new CustomEvent('pane-navigate', {
+            bubbles: true, composed: true,
+            detail: { familyId, language: lang },
+          }))
+          return
+        }
+
         // Share
         if (e.target.closest('.pane__share')) {
           const { lesson, language } = this.#config
@@ -527,9 +540,10 @@ export class MnemosyneDetailPane extends HTMLElement {
     // Which optional tabs have data?
     const hasOrigins = Boolean(ld.origin || ld.etymology || ld.source_text)
     const hasRelated = Boolean(
-      (Array.isArray(ld.variants)         && ld.variants.length > 1) ||
-      (Array.isArray(ld.confusables)      && ld.confusables.length > 0) ||
-      (Array.isArray(ld.confusable_forms) && ld.confusable_forms.length > 0)
+      (Array.isArray(ld.variants)                && ld.variants.length > 1) ||
+      (Array.isArray(ld.confusables)             && ld.confusables.length > 0) ||
+      (Array.isArray(ld.confusable_forms)        && ld.confusable_forms.length > 0) ||
+      (Array.isArray(ld.cross_language_cognates) && ld.cross_language_cognates.length > 0)
     )
 
     const hasForm       = (lesson.morphology_axes?.length > 0 || lesson.contrasts?.length > 0)
@@ -577,6 +591,13 @@ export class MnemosyneDetailPane extends HTMLElement {
 
         <header class="pane__header">
           <div class="pane__badge" aria-hidden="true">${esc(meta.icon)} ${esc(metaLabel)}</div>
+          ${ld.subcategory ? /* html */`
+            <span class="pane__subcategory-badge
+                  pane__subcategory-badge--${esc(ld.subcategory.replace(/_/g, '-'))}"
+                  aria-label="${esc(t('dp_subcategory_aria') + ' ' + this._subcategoryLabel(ld.subcategory))}">
+              ${esc(this._subcategoryLabel(ld.subcategory))}
+            </span>
+          ` : ''}
           <h2 class="pane__title" id="dp-heading">${esc(titleText)}</h2>
           <button class="pane__share" type="button" aria-label="${esc(t('dp_copy_link_aria'))}">&#x1F517;</button>
           <span class="pane__share-hint" aria-live="polite" aria-atomic="true"></span>
@@ -685,9 +706,13 @@ export class MnemosyneDetailPane extends HTMLElement {
    *  Any remaining fields are surfaced in Level 2 via _htmlExtraFieldsPanel(). */
   _htmlExplanationPanel(lesson, ld, matchedVariant, depthIdx = 2) {
     const uiLang       = this.#config?.uiLang ?? 'en'
+    const language     = this.#config?.language ?? 'und'
     const allFields    = (lesson.fields ?? [])
       .filter(f => !SUPPRESS_IN_EXPLANATION.has(f.label.toLowerCase()))
     const displayFields = depthIdx >= 1 ? allFields.slice(0, 1) : []
+    const isPoetic     = Boolean(ld.is_poetic_citation)
+    const poeticDir    = (language === 'fa' || language === 'ar' || language === 'he' || language === 'ur')
+      ? 'rtl' : 'ltr'
 
     const fieldsHtml = displayFields.map(f => {
       const labelTip = f.label ? `${esc(t('dp_explain_concept'))}: ${esc(translateFieldLabel(f.label))}` : esc(t('dp_explain_concept'))
@@ -748,6 +773,27 @@ export class MnemosyneDetailPane extends HTMLElement {
             ${matchTypeNote ? `<p class="pane__match-note">${esc(matchTypeNote)}</p>` : ''}
           </div>
         ` : ''}
+        ${isPoetic ? /* html */`
+          <figure class="pane__verse-citation" lang="${esc(language)}" dir="${esc(poeticDir)}">
+            <blockquote class="pane__verse-text">${esc(ld.canonical_reference || titleText)}</blockquote>
+            ${(ld.source_work || ld.source_author) ? /* html */`
+              <figcaption class="pane__verse-attribution">
+                ${ld.source_work  ? `<span class="pane__verse-work">${esc(ld.source_work)}</span>`   : ''}
+                ${ld.source_author ? `<span class="pane__verse-author">${esc(ld.source_author)}</span>` : ''}
+              </figcaption>
+            ` : ''}
+          </figure>
+        ` : ''}
+        ${(ld.subcategory === 'xiehouyu' && ld.canonical_form_full) ? /* html */`
+          <div class="pane__xiehouyu-reveal">
+            <span class="pane__xiehouyu-setup">${esc(matchedVariant || ld.canonical_reference || '')}</span>
+            <span class="pane__xiehouyu-dash" aria-hidden="true"> — </span>
+            <span class="pane__xiehouyu-punchline">
+              ${esc(ld.canonical_form_full.split('—').slice(1).join('—').trim())}
+            </span>
+            <p class="pane__xiehouyu-note">${esc(t('dp_xiehouyu_implied_note'))}</p>
+          </div>
+        ` : ''}
         <p class="pane__explanation">${esc(lesson.i18n_explanations?.[uiLang] || lesson.explanation || '')}</p>
         ${gramChipsHtml ? `<div class="pane__gram-chips">${gramChipsHtml}</div>` : ''}
         <div class="pane__translation-row" hidden>
@@ -789,6 +835,33 @@ export class MnemosyneDetailPane extends HTMLElement {
         <p class="pane__why-it-matters-text">${esc(ld.why_it_matters)}</p>
       </blockquote>
     `
+  }
+
+  _subcategoryLabel(sub) {
+    const LABELS = {
+      chengyu:           '成语',   xiehouyu:          '歇后语',
+      suyv:              '俗语',   yanyu:             '谚语',
+      quranic:           'قرآن',   hadith:            'حديث',
+      muallaqat:         'معلقة',  abbasid:           'عباسي',
+      modern_media:      t('dp_sub_modern_media'),
+      shahnameh:         'شاهنامه', hafez:             'حافظ',
+      rumi:              'رومی',   saadi:             'سعدی',
+      khayyam:           'خیام',   persian_proverb:   t('dp_sub_proverb'),
+      yojijukugo:        '四字熟語', kanyoku:           '慣用句',
+      kotowaza:          'ことわざ',  zen_koan:          '公案',
+      sajaseong_eo:      '사자성어', pansori:           '판소리',
+      sijo:              '시조',    korean_proverb:    t('dp_sub_proverb'),
+      doha_kabir:        'कबीर',   doha_rahim:        'रहीम',
+      ramcharitmanas:    'रामचरितमानस', bhagavad_gita: 'गीता',
+      panchatantra:      'पञ्चतन्त्र', filmi:          t('dp_sub_filmi'),
+      hindi_muhavare:    'मुहावरा', hindi_lokokti:     'लोकोक्ति',
+      biblical:          t('dp_sub_biblical'),
+      shakespearean:     t('dp_sub_shakespearean'),
+      latin_tag:         'Latin',  greek_tag:         'Greek',
+      literary_allusion: t('dp_sub_literary'),
+      proverb:           t('dp_sub_proverb'),
+    }
+    return LABELS[sub] || sub
   }
 
   /** Level 3: free-text personal note, previously rendered at the bottom of the pane. */
@@ -1121,10 +1194,27 @@ export class MnemosyneDetailPane extends HTMLElement {
     const isConfusable = matchType === 'confusable_not_same'
     const originText   = ld.origin || ''
     const sourceText   = ld.source_text || ''
+    const language     = this.#config?.language ?? 'und'
     // etymology is a structured object {origin_summary, roots?, cognates?, semantic_shift?}
     const etym = (ld.etymology && typeof ld.etymology === 'object') ? ld.etymology : null
     return /* html */`
       <section id="dp-panel-origins" class="pane__panel">
+        ${(ld.source_work || ld.source_author) ? /* html */`
+          <dl class="pane__source-attribution">
+            ${ld.source_work ? /* html */`
+              <div class="pane__source-row">
+                <dt>${esc(t('dp_source_work'))}</dt>
+                <dd lang="${esc(language)}">${esc(ld.source_work)}</dd>
+              </div>
+            ` : ''}
+            ${ld.source_author ? /* html */`
+              <div class="pane__source-row">
+                <dt>${esc(t('dp_source_author'))}</dt>
+                <dd>${esc(ld.source_author)}</dd>
+              </div>
+            ` : ''}
+          </dl>
+        ` : ''}
         ${originText ? /* html */`
           <p class="pane__origin-text">${esc(originText)}</p>
         ` : ''}
@@ -1274,6 +1364,26 @@ export class MnemosyneDetailPane extends HTMLElement {
               <span aria-hidden="true">&#x1F50A;</span> ${esc(t('dp_hear_canonical'))}
             </button>
           </div>
+        ` : ''}
+        ${Array.isArray(ld.cross_language_cognates) && ld.cross_language_cognates.length ? /* html */`
+          <section class="pane__subsection" aria-labelledby="dp-cognates-h">
+            <h3 class="pane__section-heading" id="dp-cognates-h">
+              ${esc(t('dp_cognates_heading'))}
+            </h3>
+            <ul class="pane__cognate-list" role="list">
+              ${ld.cross_language_cognates.map(cog => /* html */`
+                <li class="pane__cognate-item">
+                  <button class="pane__cognate-link" type="button"
+                          data-cognate-id="${esc(cog.id)}"
+                          data-cognate-lang="${esc(cog.language)}">
+                    <span class="pane__cognate-lang-badge">${esc(cog.language)}</span>
+                    <span class="pane__cognate-ref" lang="${esc(cog.language)}">${esc(cog.ref)}</span>
+                  </button>
+                  ${cog.note ? `<p class="pane__cognate-note">${esc(cog.note)}</p>` : ''}
+                </li>
+              `).join('')}
+            </ul>
+          </section>
         ` : ''}
       </section>
     `
@@ -4239,6 +4349,202 @@ export class MnemosyneDetailPane extends HTMLElement {
       @media (forced-colors: active) {
         .pane__concept-dialog-inner { border: 2px solid ButtonText; }
         .pane__concept-dialog-close { border: 1px solid ButtonText; }
+      }
+
+      /* ── Subcategory badge ──────────────────────────────────────── */
+      .pane__subcategory-badge {
+        display: inline-block;
+        padding: 0.1em 0.55em;
+        border-radius: 0.75em;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 15%, Canvas);
+        color: color-mix(in oklch, var(--detail-accent, ${ref}) 70%, var(--text));
+        border: 1px solid color-mix(in oklch, var(--detail-accent, ${ref}) 30%, Canvas);
+        vertical-align: middle;
+      }
+      /* Arabic/Persian: slightly larger for readability of right-to-left labels */
+      .pane__subcategory-badge--quranic,
+      .pane__subcategory-badge--hadith,
+      .pane__subcategory-badge--muallaqat,
+      .pane__subcategory-badge--abbasid,
+      .pane__subcategory-badge--modern-media,
+      .pane__subcategory-badge--shahnameh,
+      .pane__subcategory-badge--hafez,
+      .pane__subcategory-badge--rumi,
+      .pane__subcategory-badge--saadi,
+      .pane__subcategory-badge--khayyam,
+      .pane__subcategory-badge--persian-proverb { font-size: 0.8rem; }
+      /* CJK: restore normal letter-spacing */
+      .pane__subcategory-badge--chengyu,
+      .pane__subcategory-badge--xiehouyu,
+      .pane__subcategory-badge--suyv,
+      .pane__subcategory-badge--yanyu,
+      .pane__subcategory-badge--yojijukugo,
+      .pane__subcategory-badge--kanyoku,
+      .pane__subcategory-badge--kotowaza,
+      .pane__subcategory-badge--zen-koan,
+      .pane__subcategory-badge--sajaseong-eo,
+      .pane__subcategory-badge--pansori,
+      .pane__subcategory-badge--sijo { letter-spacing: 0; }
+
+      /* ── Verse citation block ───────────────────────────────────── */
+      .pane__verse-citation {
+        margin: 0.6rem 0 0.5rem;
+        padding: 0.6rem 0.85rem;
+        border-inline-start: 3px solid color-mix(in oklch, var(--detail-accent, ${ref}) 55%, Canvas);
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 7%, Canvas);
+        border-radius: 0 0.4rem 0.4rem 0;
+      }
+      .pane__verse-citation[dir="rtl"] {
+        border-inline-start: none;
+        border-inline-end: 3px solid color-mix(in oklch, var(--detail-accent, ${ref}) 55%, Canvas);
+        border-radius: 0.4rem 0 0 0.4rem;
+      }
+      .pane__verse-text {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.65;
+        font-style: italic;
+        color: var(--text);
+      }
+      .pane__verse-attribution {
+        margin: 0.4rem 0 0;
+        padding: 0;
+        font-size: 0.8rem;
+        color: var(--muted);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.2rem 0.5rem;
+        align-items: baseline;
+      }
+      .pane__verse-work {
+        font-style: italic;
+      }
+      .pane__verse-author::before { content: '— '; }
+
+      /* ── Xiēhòuyǔ reveal block ──────────────────────────────────── */
+      .pane__xiehouyu-reveal {
+        margin: 0.5rem 0;
+        padding: 0.6rem 0.85rem;
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 6%, Canvas);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0 0.15rem;
+      }
+      .pane__xiehouyu-setup {
+        font-weight: 600;
+        font-size: 1.05rem;
+        color: var(--text);
+        lang: zh;
+      }
+      .pane__xiehouyu-dash {
+        color: var(--muted);
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+      .pane__xiehouyu-punchline {
+        font-size: 1.05rem;
+        color: color-mix(in oklch, var(--detail-accent, ${ref}) 65%, var(--text));
+        font-weight: 500;
+      }
+      .pane__xiehouyu-note {
+        margin: 0.45rem 0 0;
+        font-size: 0.8rem;
+        color: var(--muted);
+        font-style: italic;
+        flex-basis: 100%;
+      }
+
+      /* ── Cross-language cognate list ────────────────────────────── */
+      .pane__cognate-list {
+        margin: 0.3rem 0 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+      .pane__cognate-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+      }
+      .pane__cognate-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        background: transparent;
+        border: 1px solid var(--border-input);
+        border-radius: 0.4rem;
+        padding: 0.25rem 0.6rem;
+        font: inherit;
+        font-size: 0.875rem;
+        color: var(--text);
+        cursor: pointer;
+        text-align: start;
+        transition: background 0.1s ease, border-color 0.1s ease;
+      }
+      .pane__cognate-link:hover {
+        background: color-mix(in oklch, var(--detail-accent, ${ref}) 10%, Canvas);
+        border-color: color-mix(in oklch, var(--detail-accent, ${ref}) 45%, Canvas);
+      }
+      .pane__cognate-link:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+      .pane__cognate-lang-badge {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        padding: 0.05em 0.4em;
+        border-radius: 0.3em;
+        background: color-mix(in oklch, var(--muted) 18%, Canvas);
+        color: var(--muted);
+        flex-shrink: 0;
+      }
+      .pane__cognate-ref {
+        font-weight: 600;
+        letter-spacing: 0;
+      }
+      .pane__cognate-note {
+        margin: 0 0 0 0.1rem;
+        font-size: 0.775rem;
+        color: var(--muted);
+        font-style: italic;
+        line-height: 1.4;
+      }
+
+      /* ── Source attribution dl ──────────────────────────────────── */
+      .pane__source-attribution {
+        margin: 0 0 0.6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+      .pane__source-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.2rem 0.5rem;
+        align-items: baseline;
+        font-size: 0.8375rem;
+      }
+      .pane__source-attribution dt {
+        font-weight: 600;
+        color: var(--muted);
+        flex-shrink: 0;
+        min-inline-size: 3.5rem;
+      }
+      .pane__source-attribution dd {
+        margin: 0;
+        color: var(--text);
+        font-style: italic;
       }
     `
   }

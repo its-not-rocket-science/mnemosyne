@@ -181,6 +181,15 @@ IDIOM_DISCOVERY_THEMES = [
 ]
 
 
+# Subcategories where AI review is insufficient and human/native review
+# is required before promotion to seed.
+NATIVE_REVIEW_REQUIRED_SUBCATEGORIES = {
+    "hadith",       # Attribution to specific hadith collection needs verification
+    "filmi",        # Modern Bollywood/film dialogue has active copyright
+    "modern_media", # Modern Arabic TV/cinema has active copyright
+    "pansori",      # Regional oral tradition; attribution is often contested
+}
+
 # ---------------------------------------------------------------------------
 # Schema constants
 # ---------------------------------------------------------------------------
@@ -204,7 +213,8 @@ FIELD_ORDER = [
     "id", "language", "canonical_reference", "reference_type",
     "surface_patterns", "short_explanation", "i18n_explanations",
     "learner_level", "confidence", "review_status", "register",
-    "allow_short_pattern", "variants",
+    "subcategory", "is_poetic_citation",
+    "allow_short_pattern", "variants", "canonical_form_full",
     "explanation_key", "source_work_key", "source_author_key",
     "source_work", "source_author", "source_location",
     "source_url", "source_license", "rights_basis", "source_dataset",
@@ -370,6 +380,25 @@ Each object:
   "learner_level"        -- "A1"|"A2"|"B1"|"B2"|"C1"|"C2"
   "confidence"           -- float 0.60-0.90
   "register"             -- "common"|"literary"|"religious"|"proverbial"|"classical"|"formal"|"informal"
+  "subcategory"          -- most specific classification within this language's
+                            idiom ecology. Use exactly one value from:
+                            chengyu, xiehouyu, suyv, yanyu (Chinese);
+                            quranic, hadith, muallaqat, abbasid, modern_media (Arabic);
+                            shahnameh, hafez, rumi, saadi, khayyam,
+                            persian_proverb (Persian);
+                            yojijukugo, kanyoku, kotowaza, zen_koan (Japanese);
+                            sajaseong_eo, pansori, sijo, korean_proverb (Korean);
+                            doha_kabir, doha_rahim, ramcharitmanas, bhagavad_gita,
+                            panchatantra, filmi, hindi_muhavare, hindi_lokokti (Hindi);
+                            biblical, shakespearean, latin_tag, greek_tag,
+                            literary_allusion, proverb (all other languages).
+                            Omit if none apply.
+  "is_poetic_citation"   -- true if this entry is a verbatim quotation from a
+                            named classical poem or scripture; false or omit
+                            otherwise. Arabic Quranic entries are always true.
+                            Persian hemistich entries from named poets are always
+                            true. Hindi doha entries from named saint-poets are
+                            always true.
   "source_work"          -- title in original language ("Various"/"Oral tradition" if unknown)
   "source_author"        -- author or tradition
   "source_location"      -- location (book/act/verse) or null
@@ -381,6 +410,14 @@ Each object:
                             work, or any uncertainty) -- use no other value
   "source_dataset_tag"   -- snake_case batch tag e.g. "es_quijote_phrases"
   "variants"             -- optional alternate surface forms or omit
+  "canonical_form_full"  -- for Chinese xiēhòuyǔ (歇后语) entries ONLY: the
+                            complete two-part form including the implied punchline,
+                            formatted as "setup — punchline". The canonical_reference
+                            and surface_patterns should contain only the setup
+                            (first part), which is what appears in speech.
+                            Example: if canonical_reference is "骑驴看唱本",
+                            canonical_form_full is "骑驴看唱本 — 走着瞧".
+                            Omit for all non-xiēhòuyǔ entries.
 
 Return ONLY valid JSON."""
 
@@ -400,15 +437,20 @@ _ENRICH_VARIANT_ADDENDUM: dict[str, str] = {
         "Aim for 4-8 patterns. Do NOT include fully vowelled and unvowelled "
         "versions as separate patterns — prefer the unvowelled form only."
     ),
-    # Persian: ezafe, verb conjugation, colloquial contraction
+    # Persian: ezafe, verb conjugation, colloquial contraction, poetic citation rules
     "fa": (
-        "For Persian entries, surface_patterns MUST include: "
-        "(1) the base form without harakat, "
-        "(2) colloquial contraction if common in spoken Persian, "
-        "(3) the verb in at least two conjugated forms if the phrase contains "
-        "a verb (past tense and present/future stem minimum), "
-        "(4) the ezafe construction variant if applicable. "
-        "Aim for 4-8 patterns."
+        "For Persian entries sourced from classical poetry (Hafez Divan, Rumi "
+        "Masnavi, Saadi Golestan/Bustan, Ferdowsi Shahnameh, Omar Khayyam "
+        "Rubaiyat): list the complete hemistich (half-line of verse) as the "
+        "FIRST surface pattern. Do NOT generate truncated or shortened variants "
+        "of poetic hemistichs — Persian citations are quoted verbatim or not at "
+        "all. The second surface pattern should be the full couplet (bayt) where "
+        "both hemistichs are sometimes quoted together. Add colloquial and "
+        "non-poetic idioms normally (4-8 patterns with verb conjugations). "
+        "Set is_poetic_citation: true for any entry whose canonical_reference "
+        "is a direct quotation from a named classical poem. "
+        "For Shahnameh entries, source_location must name the dastan "
+        "(story/section) e.g. 'داستان سیاوش' not just a line number."
     ),
     # Russian: aspect pairs, key conjugations, short-form adjectives
     "ru": (
@@ -443,15 +485,19 @@ _ENRICH_VARIANT_ADDENDUM: dict[str, str] = {
         "(with and without の/する). "
         "Aim for 4-8 patterns for kanyōku; 2-4 for yojijukugo."
     ),
-    # Hindi: postposition variants, verb agreement forms
+    # Hindi: postposition variants, verb agreement forms, poetic citation rules
     "hi": (
-        "For Hindi entries, surface_patterns MUST include: "
-        "(1) the base form, "
-        "(2) the form with oblique case on noun components where a postposition "
-        "follows (e.g. हाथ → हाथ में, हाथ से, हाथ का), "
-        "(3) masculine and feminine agreement forms of adjectives if relevant, "
-        "(4) perfective and imperfective verb forms if the phrase contains "
-        "a verb. Aim for 4-8 patterns."
+        "For Hindi entries in doha format (Kabir, Rahim, Surdas, Mirabai, "
+        "Tulsidas Ramcharitmanas): list the complete first line of the doha as "
+        "the FIRST surface pattern. Do NOT truncate doha-format entries. The "
+        "second surface pattern should be the full doha (both lines) where "
+        "both are commonly quoted together. For Ramcharitmanas entries, "
+        "source_location must name the kand (book: Bal Kand, Ayodhya Kand, "
+        "Aranya Kand, Kishkindha Kand, Sundar Kand, Lanka Kand, Uttar Kand) "
+        "and chaupai number where known. Set is_poetic_citation: true for any "
+        "entry that is a direct doha or chaupai quotation. "
+        "For muhavare (idiomatic phrases) and lokokti (proverbs), generate "
+        "normally: 4-8 patterns with postposition and verb conjugation variants."
     ),
     # Korean: verb ending variants, topic/subject marker variants
     "ko": (
@@ -936,6 +982,12 @@ def build_entry(language: str, enriched: dict,
     verdict = review.get("verdict", "draft") if review else "draft"
     review_note = f" AI review: {verdict} -- {review.get('reason', '')}" if review else ""
 
+    subcategory = enriched.get("subcategory", "") or ""
+    if subcategory in NATIVE_REVIEW_REQUIRED_SUBCATEGORIES:
+        if verdict == "approve":
+            verdict = "flag"
+            review_note += f" [auto-flagged: subcategory={subcategory!r} requires human review]"
+
     entry: dict = {
         "id":                  make_id(language, rt, cr),
         "language":            language,
@@ -947,6 +999,8 @@ def build_entry(language: str, enriched: dict,
         "confidence":          conf,
         "review_status":       "draft",
         "register":            reg,
+        "subcategory":         subcategory or None,
+        "is_poetic_citation":  bool(enriched.get("is_poetic_citation", False)),
         "explanation_key":     make_key("explanation", language, f"{dataset_tag}.{cr}"),
         "source_work_key":     make_key("work",   language, enriched.get("source_work") or "unknown"),
         "source_author_key":   make_key("author", language, enriched.get("source_author") or "unknown"),
@@ -980,6 +1034,9 @@ def build_entry(language: str, enriched: dict,
         entry["rights_basis"] = rights_basis
     if allow_short_pattern:
         entry["allow_short_pattern"] = True
+    cfull = enriched.get("canonical_form_full", "")
+    if cfull:
+        entry["canonical_form_full"] = str(cfull).strip()
 
     ordered: dict = {}
     for k in FIELD_ORDER:

@@ -281,6 +281,7 @@ function applyFilterBarLabels() {
     idioms:       t('filter_idioms'),
     literary:     t('filter_literary'),
     etymology:    t('filter_etymology'),
+    verse:        t('filter_verse'),
     custom:       t('filter_custom'),
     custom_title: t('filter_custom_title'),
     custom_hint:  t('filter_custom_hint'),

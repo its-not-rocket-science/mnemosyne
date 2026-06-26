@@ -74,6 +74,29 @@
  * @property {string[]}               [confusables]         - Raw IDs of cross-family confusables (compatibility).
  * @property {ConfusableFamilyRef[]}  [confusable_families] - Rich cross-family confusable references.
  * @property {string[]}             [tags]            - Taxonomy tags.
+ * @property {string}  [subcategory]        - Fine-grained classification
+ *   within the language's idiom ecology. Values depend on language:
+ *   Chinese: 'chengyu'|'xiehouyu'|'suyv'|'yanyu'
+ *   Arabic: 'quranic'|'hadith'|'muallaqat'|'abbasid'|'modern_media'
+ *   Persian: 'shahnameh'|'hafez'|'rumi'|'saadi'|'khayyam'|'persian_proverb'
+ *   Japanese: 'yojijukugo'|'kanyoku'|'kotowaza'|'zen_koan'
+ *   Korean: 'sajaseong_eo'|'pansori'|'sijo'|'korean_proverb'
+ *   Hindi: 'doha_kabir'|'doha_rahim'|'ramcharitmanas'|'bhagavad_gita'
+ *            |'panchatantra'|'filmi'|'hindi_muhavare'|'hindi_lokokti'
+ *   Other: 'biblical'|'shakespearean'|'latin_tag'|'greek_tag'
+ *           |'literary_allusion'|'proverb'
+ * @property {boolean} [is_poetic_citation] - True if entry is a verbatim
+ *   quotation from a named classical poem or scripture.
+ * @property {string}  [canonical_form_full] - For xiēhòuyǔ only: the
+ *   complete two-part form "setup — punchline". The canonical_reference
+ *   contains only the setup (the spoken elliptical form).
+ * @property {string}  [source_work]   - Title of the source work in its
+ *   original language (e.g. "شاهنامه", "Genji Monogatari", "水浒传").
+ * @property {string}  [source_author] - Author or tradition name.
+ * @property {Array<{id:string, language:string, ref:string, note:string}>}
+ *   [cross_language_cognates] - Cognate entries in other languages.
+ *   Each object has: id (catalogue entry id), language (BCP-47 code),
+ *   ref (canonical_reference in the other language), note (relationship note).
  */
 
 // ── Lesson response ───────────────────────────────────────────────────────────
