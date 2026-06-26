@@ -50,8 +50,8 @@ class TestHindiPlugin:
     def test_capabilities_honest(self):
         caps = self.plugin.capabilities
         assert caps.script_family == "devanagari"
-        assert caps.analysis_depth == "morphology_light"
-        assert caps.morphology_depth == "shallow"
+        assert caps.analysis_depth == "full"
+        assert caps.morphology_depth == "rich"
         assert caps.morphology_quality in {"low", "medium"}
         assert caps.syntax_support is False
 
@@ -256,9 +256,9 @@ class TestTurkishPlugin:
     def test_capabilities_honest(self):
         caps = self.plugin.capabilities
         assert caps.script_family == "latin"
-        assert caps.analysis_depth == "morphology_light"
-        assert caps.morphology_depth == "shallow"
-        assert caps.morphology_quality in {"low", "medium"}  # "medium" with zeyrek
+        assert caps.analysis_depth == "full"
+        assert caps.morphology_depth == "rich"
+        assert caps.morphology_quality in {"low", "medium"}  # "medium" with stanza/zeyrek
         assert caps.syntax_support is False
 
     def test_tense_pool_populated(self):
