@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-26T17:07:59.024476+00:00",
-  "total_pairs": 53,
+  "generated_at": "2026-06-26T18:49:00.027962+00:00",
+  "total_pairs": 54,
   "cognates": [
     {
       "source_id": "ja_classical_or_scriptural_allusion_切磋琢磨_ea1c527f",
@@ -612,6 +612,18 @@
       "target_ref": "春秋筆法",
       "match_type": "exact",
       "similarity": 1.0,
+      "note": "Chinese cognate: semantic drift may apply"
+    },
+    {
+      "source_id": "ko_classical_or_scriptural_allusion_서유기_5f80ee91",
+      "source_lang": "ko",
+      "source_ref": "서유기",
+      "source_hanja": "西遊記",
+      "target_id": "西游记",
+      "target_lang": "zh",
+      "target_ref": "西游记",
+      "match_type": "surface_overlap",
+      "similarity": 0.9,
       "note": "Chinese cognate: semantic drift may apply"
     },
     {
