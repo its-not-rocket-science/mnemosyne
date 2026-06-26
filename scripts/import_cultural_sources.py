@@ -23,7 +23,8 @@ EXPECTED_CSV_HEADER = (
     "language,surface_pattern,surface_patterns,variants,canonical_reference,reference_type,"
     "source_work,source_author,source_location,source_quote,source_note,short_explanation,"
     "explanation_key,source_work_key,source_author_key,learner_level,register,confidence,"
-    "source_url,source_license,rights_basis,source_dataset,notes"
+    "source_url,source_license,rights_basis,source_dataset,notes,"
+    "subcategory,is_poetic_citation,canonical_form_full"
 )
 
 try:
@@ -459,6 +460,10 @@ def convert_row(
             continue
         if not is_blank(row.get(field)):
             entry[field] = clean_text(row[field])
+
+    entry["subcategory"]         = clean_text(row.get("subcategory", "") or "")
+    entry["is_poetic_citation"]  = str(row.get("is_poetic_citation", "")).strip().lower() == "true"
+    entry["canonical_form_full"] = clean_text(row.get("canonical_form_full", "") or "")
 
     return entry
 

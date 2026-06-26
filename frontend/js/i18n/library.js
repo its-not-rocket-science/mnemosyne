@@ -11,6 +11,7 @@
 export const STRINGS = {
   en: {
     vocab_search_placeholder: "Search words…",
+    vocab_subcategory_all: "All types",
     vocab_sort_mastery: "By mastery",
     vocab_sort_alpha: "A–Z",
     vocab_sort_due: "Due next",
@@ -103,6 +104,7 @@ export const STRINGS = {
   },
   es: {
     vocab_search_placeholder: "Search words…",
+    vocab_subcategory_all: "All types",
     vocab_sort_mastery: "By mastery",
     vocab_sort_alpha: "A–Z",
     vocab_sort_due: "Due next",
@@ -195,6 +197,7 @@ export const STRINGS = {
   },
   fr: {
     vocab_search_placeholder: "Search words…",
+    vocab_subcategory_all: "All types",
     vocab_sort_mastery: "By mastery",
     vocab_sort_alpha: "A–Z",
     vocab_sort_due: "Due next",
@@ -287,6 +290,7 @@ export const STRINGS = {
   },
   de: {
     vocab_search_placeholder: "Search words…",
+    vocab_subcategory_all: "All types",
     vocab_sort_mastery: "By mastery",
     vocab_sort_alpha: "A–Z",
     vocab_sort_due: "Due next",
@@ -379,6 +383,7 @@ export const STRINGS = {
   },
   it: {
     vocab_search_placeholder: "Search words…",
+    vocab_subcategory_all: "All types",
     vocab_sort_mastery: "By mastery",
     vocab_sort_alpha: "A–Z",
     vocab_sort_due: "Due next",
@@ -471,6 +476,7 @@ export const STRINGS = {
   },
   pt: {
     vocab_search_placeholder: "Search words…",
+    vocab_subcategory_all: "All types",
     vocab_sort_mastery: "By mastery",
     vocab_sort_alpha: "A–Z",
     vocab_sort_due: "Due next",
@@ -563,6 +569,7 @@ export const STRINGS = {
   },
   ru: {
     vocab_search_placeholder: "Search words…",
+    vocab_subcategory_all: "All types",
     vocab_sort_mastery: "By mastery",
     vocab_sort_alpha: "A–Z",
     vocab_sort_due: "Due next",
@@ -655,6 +662,7 @@ export const STRINGS = {
   },
   ja: {
     vocab_search_placeholder: "Search words…",
+    vocab_subcategory_all: "All types",
     vocab_sort_mastery: "By mastery",
     vocab_sort_alpha: "A–Z",
     vocab_sort_due: "Due next",
@@ -747,6 +755,7 @@ export const STRINGS = {
   },
   zh: {
     vocab_search_placeholder: "Search words…",
+    vocab_subcategory_all: "All types",
     vocab_sort_mastery: "By mastery",
     vocab_sort_alpha: "A–Z",
     vocab_sort_due: "Due next",
@@ -839,6 +848,7 @@ export const STRINGS = {
   },
   ar: {
     vocab_search_placeholder: "Search words…",
+    vocab_subcategory_all: "All types",
     vocab_sort_mastery: "By mastery",
     vocab_sort_alpha: "A–Z",
     vocab_sort_due: "Due next",
@@ -931,6 +941,7 @@ export const STRINGS = {
   },
   he: {
     vocab_search_placeholder: "Search words…",
+    vocab_subcategory_all: "All types",
     vocab_sort_mastery: "By mastery",
     vocab_sort_alpha: "A–Z",
     vocab_sort_due: "Due next",

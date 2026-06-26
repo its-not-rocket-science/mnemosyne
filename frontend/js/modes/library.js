@@ -46,9 +46,10 @@ const corpusBrowserRouteSection = document.querySelector('#route-library')
 const vocabBrowserDialog    = vocabBrowserRouteSection
 const vocabBrowserCloseBtn  = document.querySelector('#vocab-browser-close-btn')
 const openVocabBrowserBtn   = document.querySelector('#open-vocab-browser-btn')
-const vocabBrowserSearch    = document.querySelector('#vocab-browser-search')
-const vocabBrowserLevel     = document.querySelector('#vocab-browser-level')
-const vocabBrowserSort      = document.querySelector('#vocab-browser-sort')
+const vocabBrowserSearch      = document.querySelector('#vocab-browser-search')
+const vocabBrowserLevel       = document.querySelector('#vocab-browser-level')
+const vocabBrowserSort        = document.querySelector('#vocab-browser-sort')
+const vocabBrowserSubcategory = document.querySelector('#vocab-browser-subcategory')
 const vocabBrowserList      = document.querySelector('#vocab-browser-list')
 const vocabBrowserStatus    = document.querySelector('#vocab-browser-status')
 const vocabBrowserCount     = document.querySelector('#vocab-browser-count')
@@ -63,13 +64,15 @@ let _vocabSearchTimer = null
 
 function _vocabParams() {
   const p = new URLSearchParams()
-  const q = vocabBrowserSearch?.value.trim()
-  const lv = vocabBrowserLevel?.value
+  const q    = vocabBrowserSearch?.value.trim()
+  const lv   = vocabBrowserLevel?.value
   const sort = vocabBrowserSort?.value || 'mastery'
   const lang = languageSelect?.value
-  if (lang)  p.set('language', lang)
-  if (q)     p.set('q', q)
-  if (lv)    p.set('level', lv)
+  const sub  = vocabBrowserSubcategory?.value
+  if (lang) p.set('language', lang)
+  if (q)    p.set('q', q)
+  if (lv)   p.set('level', lv)
+  if (sub)  p.set('subcategory', sub)
   p.set('sort', sort)
   p.set('limit', String(_VOCAB_PAGE_SIZE))
   p.set('offset', String(_vocabOffset))
@@ -165,6 +168,7 @@ vocabBrowserCloseBtn?.addEventListener('click', () => navigate('#/library'))
 vocabBrowserSearch?.addEventListener('input', _scheduleVocabSearch)
 vocabBrowserLevel?.addEventListener('change', () => _loadVocab(false))
 vocabBrowserSort?.addEventListener('change', () => _loadVocab(false))
+vocabBrowserSubcategory?.addEventListener('change', () => _loadVocab(false))
 vocabBrowserMoreBtn?.addEventListener('click', () => _loadVocab(true))
 
 async function _downloadVocabExport(format) {

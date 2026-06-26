@@ -655,6 +655,33 @@ select:focus-visible {
 .lang-nuance-bar__dot[data-level="strong"]  { color: var(--ann-grammar); }
 .lang-nuance-bar__dot[data-level="gold"]    { color: oklch(0.75 0.18 80); }
 
+/* ── Subcategory summary bar ─────────────────────────────────────────────────
+   Shows which idiom/cultural subcategories appear in the parsed text.         */
+.subcategory-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-block: 0.35rem;
+  align-items: center;
+}
+.subcategory-bar::before {
+  content: attr(aria-label);
+  font-size: 0.72rem;
+  color: var(--text-secondary, var(--muted));
+  margin-inline-end: 0.3rem;
+  white-space: nowrap;
+}
+.subcategory-bar__chip {
+  font-size: 0.72rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 999px;
+  background: var(--surface-secondary, var(--surface, Canvas));
+  border: 1px solid var(--border);
+  color: var(--text-secondary, var(--muted));
+  cursor: default;
+  text-transform: capitalize;
+}
+
 /* ══════════════════════════════════════════════════════════════════════════
    3. DIALOGS AND DRAWERS
    ══════════════════════════════════════════════════════════════════════════ */

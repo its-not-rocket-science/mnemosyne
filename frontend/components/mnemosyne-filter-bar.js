@@ -48,6 +48,12 @@ const CATEGORIES = [
     color: 'var(--ann-etymology)',
     types: ['etymology', 'derivation', 'cognate', 'root', 'script', 'transliteration'],
   },
+  {
+    id:    'verse',
+    label: 'Verse',
+    color: 'var(--ann-literary)',
+    types: ['poetic_citation'],
+  },
 ]
 
 const CUSTOM_COLOR = 'var(--accent)'

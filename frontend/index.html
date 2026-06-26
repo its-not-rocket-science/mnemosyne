@@ -319,6 +319,9 @@
                         <option value="" data-i18n="loading_languages">Loading languages…</option>
                       </select>
                       <div id="lang-nuance-bar" class="lang-nuance-bar" hidden aria-live="polite"></div>
+                      <div id="subcategory-bar" class="subcategory-bar wrap" hidden
+                           aria-label="Cultural categories detected in this text"
+                           role="region"></div>
                     </div>
 
                     <div class="field">
@@ -638,6 +641,44 @@
             <option value="mastery" data-i18n="vocab_sort_mastery">By mastery</option>
             <option value="alpha" data-i18n="vocab_sort_alpha">A–Z</option>
             <option value="due" data-i18n="vocab_sort_due">Due next</option>
+          </select>
+          <select id="vocab-browser-subcategory" class="ghost-select ghost-select--small"
+                  aria-label="Filter by type">
+            <option value="" data-i18n="vocab_subcategory_all">All types</option>
+            <optgroup label="Universal">
+              <option value="proverb">Proverb</option>
+              <option value="biblical">Biblical</option>
+              <option value="shakespearean">Shakespeare</option>
+              <option value="literary_allusion">Literary allusion</option>
+            </optgroup>
+            <optgroup label="Chinese">
+              <option value="chengyu">成语 Chéngyǔ</option>
+              <option value="xiehouyu">歇后语 Xiēhòuyǔ</option>
+              <option value="yanyu">谚语 Proverb</option>
+            </optgroup>
+            <optgroup label="Japanese">
+              <option value="yojijukugo">四字熟語</option>
+              <option value="kanyoku">慣用句</option>
+              <option value="kotowaza">ことわざ</option>
+            </optgroup>
+            <optgroup label="Arabic">
+              <option value="quranic">قرآن Quranic</option>
+              <option value="hadith">حديث Hadith</option>
+            </optgroup>
+            <optgroup label="Persian">
+              <option value="hafez">حافظ Hafez</option>
+              <option value="rumi">رومی Rumi</option>
+              <option value="saadi">سعدی Saadi</option>
+              <option value="shahnameh">شاهنامه Shahnameh</option>
+            </optgroup>
+            <optgroup label="Hindi">
+              <option value="doha_kabir">कबीर Kabir</option>
+              <option value="ramcharitmanas">रामचरितमानस</option>
+              <option value="bhagavad_gita">गीता Gita</option>
+            </optgroup>
+            <optgroup label="Korean">
+              <option value="sajaseong_eo">사자성어</option>
+            </optgroup>
           </select>
         </div>
 

@@ -274,6 +274,14 @@ def validate_and_build(
         register = raw.get("register")
         if register is not None and register not in REGISTERS:
             errors.append(f"row {idx} ({lang}): invalid register {register!r}")
+
+        # subcategory — optional free string; vocabulary enforced at generation time
+        subcategory = clean_text(raw.get("subcategory", "") or "")
+        # is_poetic_citation — optional boolean
+        is_poetic_citation = bool(raw.get("is_poetic_citation", False))
+        # canonical_form_full — optional string for xiēhòuyǔ two-part forms
+        canonical_form_full = clean_text(raw.get("canonical_form_full", "") or "")
+
         review_status = raw.get("review_status", "reviewed")
         if review_status not in REVIEW_STATUSES:
             errors.append(f"row {idx} ({lang}): unknown review_status {review_status!r}")
@@ -344,6 +352,9 @@ def validate_and_build(
             "avoid_if": avoid_if,
             "notes": notes,
             "allow_short_pattern": bool(raw.get("allow_short_pattern", False)),
+            "subcategory":         subcategory or None,
+            "is_poetic_citation":  is_poetic_citation or None,
+            "canonical_form_full": canonical_form_full or None,
         }
         for field in (*LOCALISATION_KEY_FIELDS, *PUBLIC_PROVENANCE_FIELDS):
             if raw.get(field) not in (None, ""):

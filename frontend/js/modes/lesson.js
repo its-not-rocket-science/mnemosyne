@@ -714,9 +714,10 @@ export function renderResults(pipelinePayload, language) {
   }
 
   if (filterBar) {
-    const allTypes = [...new Set(sentences.flatMap(s =>
-      s.learnable_objects.map(o => o.type).filter(Boolean)
-    ))]
+    const allObjects = sentences.flatMap(s => s.learnable_objects ?? [])
+    const allTypes = [...new Set(allObjects.map(o => o.type).filter(Boolean))]
+    const hasPoetic = allObjects.some(o => o.lesson_data?.is_poetic_citation)
+    if (hasPoetic) allTypes.push('poetic_citation')
     filterBar.setAvailable(allTypes)
     filterBar.reset()
     filterBar.hidden = allTypes.length === 0
@@ -745,6 +746,28 @@ export function renderResults(pipelinePayload, language) {
       if (resultsScrubber) resultsScrubber.value = '0'
     }
   }
+
+  _buildSubcategoryBar(sentences)
+}
+
+function _buildSubcategoryBar(sentences) {
+  const bar = document.querySelector('#subcategory-bar')
+  if (!bar) return
+  const subcats = new Set(
+    sentences.flatMap(s => s.learnable_objects ?? [])
+      .map(o => o.lesson_data?.subcategory)
+      .filter(Boolean)
+  )
+  if (subcats.size === 0) { bar.hidden = true; return }
+  bar.replaceChildren()
+  for (const sub of subcats) {
+    const chip = document.createElement('span')
+    chip.className = 'subcategory-bar__chip'
+    chip.textContent = sub.replace(/_/g, ' ')
+    chip.dataset.subcategory = sub
+    bar.appendChild(chip)
+  }
+  bar.hidden = false
 }
 
 // ── Inline annotation builder ─────────────────────────────────────────────────
@@ -846,7 +869,8 @@ function buildAnnotatedText(text, items, language, dir, tokenMode, scriptFam, de
     // applyAnnotationFilter() to route literary/archaic-register nuance and
     // phrase_family marks under the Literary pill instead of Idioms, even
     // though those types default to the Idioms category (see _TYPE_TO_CATEGORY).
-    if (item.lesson_data?.register)    mark.dataset.register  = item.lesson_data.register
+    if (item.lesson_data?.register)          mark.dataset.register        = item.lesson_data.register
+    if (item.lesson_data?.is_poetic_citation) mark.dataset.isPoeticCitation = '1'
     mark.setAttribute('role', 'button')
     mark.setAttribute('tabindex', '0')
     const typeLong  = TYPE_LABELS_LONG_I18N[currentUiLang()]?.[`type_${item.type}_long`]
@@ -1012,13 +1036,13 @@ export function applyAnnotationFilter() {
       typeAllowed = depthTypes.has(type) || activeLockedTypes().has(type)
     }
 
-    // Register override: nuance/phrase_family default to the Idioms category
-    // (_TYPE_TO_CATEGORY / filter-bar CATEGORIES), but a literary- or
-    // archaic-register instance belongs under Literary instead. Only applies
-    // when a single category pill is active — activeFilterCategories() is
-    // the un-flattened category-id set (activeFilterTypes() loses that
-    // distinction once expanded to a flat type list).
-    if ((type === 'nuance' || type === 'phrase_family') && activeFilterCategories()) {
+    // Verse filter: show only is_poetic_citation annotations.
+    if (activeFilterCategories()?.has('verse')) {
+      typeAllowed = mark.dataset.isPoeticCitation === '1'
+    } else if ((type === 'nuance' || type === 'phrase_family') && activeFilterCategories()) {
+      // Register override: nuance/phrase_family default to the Idioms category
+      // (_TYPE_TO_CATEGORY / filter-bar CATEGORIES), but a literary- or
+      // archaic-register instance belongs under Literary instead.
       const register = mark.dataset.register ?? ''
       const effectiveCategory = (register === 'literary' || register === 'archaic') ? 'literary' : 'idioms'
       typeAllowed = activeFilterCategories().has(effectiveCategory)
