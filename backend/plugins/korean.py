@@ -207,9 +207,9 @@ class KoreanPlugin:
         script_family="other",          # Hangul; no dedicated ScriptFamily literal
         tokenization_mode="whitespace", # modern Korean is word-spaced; kiwipiepy
                                         # further sub-divides into morphemes
-        morphology_depth="shallow",     # stem + POS + conjugation when kiwipiepy present
-        lesson_modes_supported=["vocabulary", "dictionary"],
-        analysis_depth="morphology_light",
+        morphology_depth="rich",         # stem + POS + conjugation + tense/register + nuance
+        lesson_modes_supported=["vocabulary", "dictionary", "morphology"],
+        analysis_depth="full",
         segmentation_quality="medium",  # kiwipiepy → high; heuristic → low
         tokenization_quality="medium",
         morphology_quality="medium",    # stem + POS + tense/register conjugation
