@@ -283,6 +283,27 @@ def _agr_code(person: str | None, number: str | None) -> str | None:
     return None
 
 
+# ── Grammar nuance explanation maps ──────────────────────────────────────────
+
+_TR_CASE_MEANINGS: dict[str, str] = {
+    "accusative": "the definite direct object",
+    "dative": "direction, recipient, or goal",
+    "ablative": "source, origin, or comparison base",
+    "locative": "location or point in time",
+    "genitive": "possession or relation to a following noun",
+    "instrumental": "means, manner, or accompaniment",
+}
+
+_TR_POSS_MEANINGS: dict[str, str] = {
+    "first_sg": "my",
+    "second_sg": "your (singular)",
+    "third_sg": "his/her/its",
+    "first_pl": "our",
+    "second_pl": "your (plural)",
+    "third_pl": "their",
+}
+
+
 # ── Plugin ────────────────────────────────────────────────────────────────────
 
 class TurkishPlugin:
@@ -297,9 +318,9 @@ class TurkishPlugin:
         direction="ltr",
         script_family="latin",
         tokenization_mode="whitespace",
-        morphology_depth="shallow",
-        lesson_modes_supported=["vocabulary", "dictionary"],
-        analysis_depth="morphology_light",
+        morphology_depth="rich",
+        lesson_modes_supported=["morphology", "vocabulary"],
+        analysis_depth="full",
         segmentation_quality="medium",
         tokenization_quality="high",
         morphology_quality="medium",   # with zeyrek; degrades to "low" without it
@@ -601,6 +622,7 @@ class TurkishPlugin:
                         confidence=0.65 if has_feats else None,
                     ))
 
+        candidates.extend(self._extract_nuance_candidates(candidates))
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     # ------------------------------------------------------------------
@@ -886,6 +908,204 @@ class TurkishPlugin:
                 ))
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
+
+    # ------------------------------------------------------------------
+    # Grammar nuance extraction (stanza path)
+    # ------------------------------------------------------------------
+
+    def _extract_nuance_candidates(
+        self,
+        candidates: list[CandidateObject],
+    ) -> list[CandidateObject]:
+        out: list[CandidateObject] = []
+        seen: set[str] = set()
+
+        for cand in candidates:
+            ld = cand.lesson_data or {}
+            surface = cand.surface_form or cand.label or cand.canonical_form
+            lemma = str(ld.get("lemma") or cand.canonical_form)
+            harmony = str(ld.get("vowel_harmony") or "")
+            base_conf = cand.confidence if cand.confidence is not None else 0.70
+
+            if cand.type == "vocabulary":
+                case = str(ld.get("case") or "")
+                poss = str(ld.get("possessive") or "")
+                stacked = str(ld.get("stacked_suffixes") or "")
+
+                # Marked case suffix (skip nominative — it's the unmarked default)
+                if case and case != "nominative" and case in _TR_CASE_MEANINGS:
+                    self._append_nuance(out, self._nuance_object(
+                        seen=seen,
+                        nuance_type="turkish_case_suffix",
+                        grammar_axis="case",
+                        key=f"{case}:{surface.lower()}",
+                        surface=surface,
+                        label=surface,
+                        lemma=lemma,
+                        explanation=(
+                            f"«{surface}» takes the Turkish {case} case suffix, marking it as "
+                            f"{_TR_CASE_MEANINGS[case]}. Turkish encodes grammatical relations "
+                            "through agglutinative suffixes attached directly to the noun stem."
+                        ),
+                        level="A2" if case in {"accusative", "dative", "locative", "ablative"} else "B1",
+                        confidence=min(float(base_conf), 0.82),
+                        drill_prompt=f"What grammatical role does the {case} suffix signal in «{surface}»?",
+                        drill_answer=_TR_CASE_MEANINGS[case],
+                        extra={"case": case, "vowel_harmony": harmony or None},
+                    ))
+
+                # Possessive + case stacking
+                if poss and poss in _TR_POSS_MEANINGS:
+                    poss_meaning = _TR_POSS_MEANINGS[poss]
+                    if stacked:
+                        self._append_nuance(out, self._nuance_object(
+                            seen=seen,
+                            nuance_type="turkish_poss_case_stack",
+                            grammar_axis="suffix_stacking",
+                            key=f"{stacked}:{surface.lower()}",
+                            surface=surface,
+                            label=surface,
+                            lemma=lemma,
+                            explanation=(
+                                f"«{surface}» demonstrates Turkish agglutinative suffix stacking: "
+                                f"the possessive suffix ({poss_meaning}) and case suffix ({case}) "
+                                "are both attached to the stem in sequence. Turkish nouns can "
+                                "accumulate multiple suffixes in a fixed order."
+                            ),
+                            level="B1",
+                            confidence=min(float(base_conf), 0.80),
+                            drill_prompt=f"What two grammatical features are stacked in «{surface}»?",
+                            drill_answer=f"possessive ({poss_meaning}) + {case} case",
+                            extra={"possessive": poss, "case": case, "stacked_suffixes": stacked},
+                        ))
+                    else:
+                        self._append_nuance(out, self._nuance_object(
+                            seen=seen,
+                            nuance_type="turkish_possessive_suffix",
+                            grammar_axis="possessive_suffix",
+                            key=f"{poss}:{surface.lower()}",
+                            surface=surface,
+                            label=surface,
+                            lemma=lemma,
+                            explanation=(
+                                f"«{surface}» carries the Turkish {poss} possessive suffix, "
+                                f"indicating {poss_meaning}. Turkish encodes the possessor inside "
+                                "the noun via a suffix, rather than using a separate possessive pronoun."
+                            ),
+                            level="A2",
+                            confidence=min(float(base_conf), 0.82),
+                            drill_prompt=f"Whose possession does the suffix in «{surface}» mark?",
+                            drill_answer=poss_meaning,
+                            extra={"possessive": poss, "possessive_meaning": poss_meaning},
+                        ))
+
+            if cand.type == "conjugation":
+                evidential = str(ld.get("evidential") or "")
+                tense = str(ld.get("tense") or "")
+                negation = ld.get("negation")
+
+                # Evidential (indirect/hearsay) past
+                if evidential == "nfh" or tense == "past_evidential":
+                    self._append_nuance(out, self._nuance_object(
+                        seen=seen,
+                        nuance_type="turkish_evidential_past",
+                        grammar_axis="evidentiality",
+                        key=f"nfh:{lemma}:{surface.lower()}",
+                        surface=surface,
+                        label=surface,
+                        lemma=lemma,
+                        explanation=(
+                            f"«{surface}» uses the Turkish evidential past (-mış/-miş). "
+                            "Unlike the direct past (-dı/-di), this form indicates the speaker "
+                            "did not personally witness the event — it conveys hearsay, inference, "
+                            "or surprise discovery."
+                        ),
+                        level="B2",
+                        confidence=min(float(base_conf), 0.82),
+                        drill_prompt=f"What does the -mış past in «{surface}» imply about the speaker?",
+                        drill_answer="The speaker inferred or heard about the event (indirect evidence)",
+                        extra={"evidential": "nfh"},
+                    ))
+
+                # Negation suffix
+                if negation:
+                    self._append_nuance(out, self._nuance_object(
+                        seen=seen,
+                        nuance_type="turkish_verb_negation",
+                        grammar_axis="polarity",
+                        key=f"neg:{lemma}:{surface.lower()}",
+                        surface=surface,
+                        label=surface,
+                        lemma=lemma,
+                        explanation=(
+                            f"«{surface}» is the negative form of the verb {lemma}. "
+                            "Turkish negation is expressed by the suffix -ma-/-me- inserted into "
+                            "the verb stem before tense and agreement suffixes."
+                        ),
+                        level="A1",
+                        confidence=min(float(base_conf), 0.82),
+                        drill_prompt=f"How is negation marked in «{surface}»?",
+                        drill_answer="By the -ma-/-me- suffix inserted before the tense ending",
+                        extra={"negation": True},
+                    ))
+
+        return out
+
+    @staticmethod
+    def _append_nuance(out: list[CandidateObject], obj: "CandidateObject | None") -> None:
+        if obj is not None:
+            out.append(obj)
+
+    def _nuance_object(
+        self,
+        *,
+        seen: set[str],
+        nuance_type: str,
+        grammar_axis: str,
+        key: str,
+        surface: str,
+        label: str,
+        lemma: str,
+        explanation: str,
+        level: str,
+        confidence: float,
+        drill_prompt: str | None = None,
+        drill_answer: str | None = None,
+        extra: dict[str, Any] | None = None,
+    ) -> "CandidateObject | None":
+        cf = f"nuance:tr:{nuance_type}:{key}"
+        if cf in seen:
+            return None
+        seen.add(cf)
+        lesson_data: dict[str, Any] = {
+            "nuance_type": nuance_type,
+            "grammar_axis": grammar_axis,
+            "explanation": explanation,
+            "note": explanation,
+            "register": "neutral",
+            "learner_level": level,
+            "source": "stanza_ud",
+            "surface": surface,
+            "lemma": lemma,
+        }
+        if drill_prompt and drill_answer:
+            lesson_data["drill_prompt"] = drill_prompt
+            lesson_data["drill_answer"] = drill_answer
+        if extra:
+            lesson_data.update({k: v for k, v in extra.items() if v is not None})
+        return CandidateObject(
+            canonical_form=cf,
+            surface_form=surface,
+            type="nuance",
+            label=label,
+            lesson_data=lesson_data,
+            confidence=confidence,
+            relation_hints=[RelationHint(
+                relation_type="nuance_of",
+                target_canonical_form=lemma,
+                target_type="vocabulary",
+            )],
+        )
 
 
 def create_plugin() -> TurkishPlugin:

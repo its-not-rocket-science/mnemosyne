@@ -352,6 +352,29 @@ def _hi_cefr_confidence(lemma: str, base: float) -> tuple[float, str | None]:
     return base, None
 
 
+# ── Grammar nuance explanation maps ──────────────────────────────────────────
+
+_ASPECT_EXPLANATIONS_HI: dict[str, str] = {
+    "perfective": "a completed action",
+    "habitual": "an ongoing or repeated action",
+    "progressive": "an action in progress",
+}
+
+_VECTOR_VERB_MEANINGS_HI: dict[str, str] = {
+    "जाना": "completion or movement away",
+    "देना": "other-benefit (doing for others)",
+    "लेना": "self-benefit (doing for oneself)",
+    "आना": "involuntary or resultant action",
+    "पड़ना": "compulsion or necessity",
+    "सकना": "ability or possibility",
+    "रहना": "continuous or ongoing aspect",
+    "बैठना": "inadvertent or undesirable action",
+    "उठना": "sudden or inceptive action",
+    "चुकना": "prior completion (anterior aspect)",
+    "डालना": "forceful or sudden completion",
+}
+
+
 class HindiPlugin:
     """Hindi morphology-light plugin.
 
@@ -369,9 +392,9 @@ class HindiPlugin:
         direction="ltr",
         script_family="devanagari",
         tokenization_mode="whitespace",
-        morphology_depth="shallow",
-        lesson_modes_supported=["vocabulary", "dictionary"],
-        analysis_depth="morphology_light",
+        morphology_depth="rich",
+        lesson_modes_supported=["morphology", "vocabulary"],
+        analysis_depth="full",
         segmentation_quality="medium",
         tokenization_quality="medium",
         morphology_quality="medium",   # stanza; degrades to "low" without it
@@ -700,6 +723,7 @@ class HindiPlugin:
                         confidence=0.82,
                     ))
 
+        candidates.extend(self._extract_nuance_candidates(candidates))
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     # ------------------------------------------------------------------
@@ -900,6 +924,177 @@ class HindiPlugin:
             )
 
         return CandidateSentenceResult(text=sentence, candidates=candidates)
+
+    # ------------------------------------------------------------------
+    # Grammar nuance extraction (stanza path)
+    # ------------------------------------------------------------------
+
+    def _extract_nuance_candidates(
+        self,
+        candidates: list[CandidateObject],
+    ) -> list[CandidateObject]:
+        out: list[CandidateObject] = []
+        seen: set[str] = set()
+
+        for cand in candidates:
+            ld = cand.lesson_data or {}
+            surface = cand.surface_form or cand.label or cand.canonical_form
+            lemma = str(ld.get("lemma") or cand.canonical_form)
+            base_conf = cand.confidence if cand.confidence is not None else 0.70
+
+            # Ergative case on noun — subject of transitive verb in past perfective
+            if cand.type == "vocabulary" and ld.get("case") == "ergative":
+                self._append_nuance(out, self._nuance_object(
+                    seen=seen,
+                    nuance_type="hindi_ergative_case",
+                    grammar_axis="case",
+                    key=surface.lower(),
+                    surface=surface,
+                    label=surface,
+                    lemma=lemma,
+                    explanation=(
+                        f"«{surface}» is the ergative subject, typically followed by ने (ne). "
+                        "Hindi requires the subject of transitive verbs in past perfective aspect "
+                        "to take ergative case — the verb then agrees with the object, not the subject."
+                    ),
+                    level="B1",
+                    confidence=min(float(base_conf), 0.82),
+                    drill_prompt="When does Hindi use ergative case (ने) on a subject?",
+                    drill_answer="When the subject of a transitive verb is in past perfective aspect",
+                ))
+
+            if cand.type == "conjugation":
+                aspect = str(ld.get("aspect") or "")
+                gender = str(ld.get("gender") or "")
+
+                # Verb aspect
+                if aspect in _ASPECT_EXPLANATIONS_HI:
+                    meaning = _ASPECT_EXPLANATIONS_HI[aspect]
+                    self._append_nuance(out, self._nuance_object(
+                        seen=seen,
+                        nuance_type=f"hindi_aspect_{aspect}",
+                        grammar_axis="aspect",
+                        key=f"{aspect}:{lemma}",
+                        surface=surface,
+                        label=surface,
+                        lemma=lemma,
+                        explanation=(
+                            f"«{surface}» marks {meaning}. "
+                            "Hindi's verbal system distinguishes aspect (habitual, perfective, "
+                            "progressive) in combination with tense and gender agreement."
+                        ),
+                        level="B1",
+                        confidence=min(float(base_conf), 0.82),
+                        drill_prompt=f"What does the {aspect} aspect in «{surface}» indicate?",
+                        drill_answer=meaning,
+                        extra={"aspect": aspect},
+                    ))
+
+                # Gender agreement on verb
+                if gender:
+                    self._append_nuance(out, self._nuance_object(
+                        seen=seen,
+                        nuance_type="hindi_verb_gender_agreement",
+                        grammar_axis="gender_agreement",
+                        key=f"{gender}:{lemma}",
+                        surface=surface,
+                        label=surface,
+                        lemma=lemma,
+                        explanation=(
+                            f"«{surface}» is a {gender} verb form. Hindi verbs agree with "
+                            "their subject's (or in ergative constructions, object's) gender "
+                            "and number, marked by vowel alternations in the verb ending."
+                        ),
+                        level="A2",
+                        confidence=min(float(base_conf), 0.82),
+                        drill_prompt=f"What does the {gender} ending on «{surface}» indicate?",
+                        drill_answer=f"The verb agrees with a {gender} noun",
+                        extra={"gender": gender},
+                    ))
+
+            # Compound verb (V+V construction)
+            if ld.get("pos") == "compound_verb":
+                main = str(ld.get("main_verb") or "")
+                vector = str(ld.get("vector_verb") or "")
+                meaning = _VECTOR_VERB_MEANINGS_HI.get(vector, "aspectual or directional nuance")
+                self._append_nuance(out, self._nuance_object(
+                    seen=seen,
+                    nuance_type="hindi_compound_verb",
+                    grammar_axis="compound_verb",
+                    key=f"{main}+{vector}",
+                    surface=surface,
+                    label=surface,
+                    lemma=main,
+                    explanation=(
+                        f"«{surface}» is a compound verb (संयुक्त क्रिया). The main verb {main} "
+                        f"is followed by the vector verb {vector}, adding the nuance of {meaning}. "
+                        "Vector verbs are semi-grammaticalised: they lose their literal meaning "
+                        "and instead modify the main verb's aktionsart."
+                    ),
+                    level="B2",
+                    confidence=0.82,
+                    drill_prompt=f"What nuance does the vector verb {vector} add in «{surface}»?",
+                    drill_answer=meaning,
+                    extra={"main_verb": main, "vector_verb": vector},
+                ))
+
+        return out
+
+    @staticmethod
+    def _append_nuance(out: list[CandidateObject], obj: "CandidateObject | None") -> None:
+        if obj is not None:
+            out.append(obj)
+
+    def _nuance_object(
+        self,
+        *,
+        seen: set[str],
+        nuance_type: str,
+        grammar_axis: str,
+        key: str,
+        surface: str,
+        label: str,
+        lemma: str,
+        explanation: str,
+        level: str,
+        confidence: float,
+        drill_prompt: str | None = None,
+        drill_answer: str | None = None,
+        extra: dict[str, Any] | None = None,
+    ) -> "CandidateObject | None":
+        cf = f"nuance:hi:{nuance_type}:{key}"
+        if cf in seen:
+            return None
+        seen.add(cf)
+        lesson_data: dict[str, Any] = {
+            "nuance_type": nuance_type,
+            "grammar_axis": grammar_axis,
+            "explanation": explanation,
+            "note": explanation,
+            "register": "neutral",
+            "learner_level": level,
+            "source": "stanza_ud",
+            "surface": surface,
+            "lemma": lemma,
+        }
+        if drill_prompt and drill_answer:
+            lesson_data["drill_prompt"] = drill_prompt
+            lesson_data["drill_answer"] = drill_answer
+        if extra:
+            lesson_data.update({k: v for k, v in extra.items() if v is not None})
+        return CandidateObject(
+            canonical_form=cf,
+            surface_form=surface,
+            type="nuance",
+            label=label,
+            lesson_data=lesson_data,
+            confidence=confidence,
+            relation_hints=[RelationHint(
+                relation_type="nuance_of",
+                target_canonical_form=lemma,
+                target_type="vocabulary",
+            )],
+        )
 
     def get_lesson(self, object_id: str) -> CandidateObject | None:
         return self.lesson_store.get(object_id)

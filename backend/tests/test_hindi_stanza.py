@@ -241,3 +241,56 @@ class TestHindiPluginStanza:
             if c.type == "conjugation":
                 assert "tense" in c.lesson_data, f"tense missing in {c.canonical_form}"
                 assert "mood" in c.lesson_data,  f"mood missing in {c.canonical_form}"
+
+    def test_nuance_ergative_case(self, plugin):
+        result = plugin.analyze_sentence("राम ने सेब खाया।")
+        nuance = next(
+            (c for c in result.candidates
+             if c.type == "nuance" and c.lesson_data.get("nuance_type") == "hindi_ergative_case"),
+            None,
+        )
+        assert nuance is not None
+        assert nuance.lesson_data.get("grammar_axis") == "case"
+        assert nuance.lesson_data.get("learner_level") == "B1"
+        assert nuance.lesson_data.get("drill_prompt")
+        assert nuance.lesson_data.get("drill_answer")
+
+    def test_nuance_aspect_habitual(self, plugin):
+        result = plugin.analyze_sentence("वह रोज़ जाता है।")
+        nuance = next(
+            (c for c in result.candidates
+             if c.type == "nuance" and c.lesson_data.get("grammar_axis") == "aspect"),
+            None,
+        )
+        assert nuance is not None
+        assert nuance.lesson_data.get("aspect") == "habitual"
+        assert nuance.lesson_data.get("learner_level") == "B1"
+        assert nuance.lesson_data.get("drill_answer")
+
+    def test_nuance_verb_gender_agreement(self, plugin):
+        result = plugin.analyze_sentence("वह रोज़ जाता है।")
+        nuance = next(
+            (c for c in result.candidates
+             if c.type == "nuance" and c.lesson_data.get("nuance_type") == "hindi_verb_gender_agreement"),
+            None,
+        )
+        assert nuance is not None
+        assert nuance.lesson_data.get("grammar_axis") == "gender_agreement"
+        assert nuance.lesson_data.get("gender") == "masculine"
+
+    def test_nuance_compound_verb(self, plugin):
+        result = plugin.analyze_sentence("उसने खाना खा लिया।")
+        nuance = next(
+            (c for c in result.candidates
+             if c.type == "nuance" and c.lesson_data.get("nuance_type") == "hindi_compound_verb"),
+            None,
+        )
+        assert nuance is not None
+        assert nuance.lesson_data.get("grammar_axis") == "compound_verb"
+        assert nuance.lesson_data.get("vector_verb") is not None
+        assert nuance.lesson_data.get("drill_answer")
+
+    def test_nuance_candidates_not_duplicated(self, plugin):
+        result = plugin.analyze_sentence("वह रोज़ जाता है।")
+        forms = [c.canonical_form for c in result.candidates if c.type == "nuance"]
+        assert len(forms) == len(set(forms))
