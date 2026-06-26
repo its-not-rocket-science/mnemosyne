@@ -61,6 +61,20 @@ def load_catalogue(path: Path, language: str) -> list[dict]:
     return payload.get("entries", [])
 
 
+def _cjk_forms(entry: dict) -> list[str]:
+    """Return all CJK-script forms for an entry: canonical_reference if all-CJK,
+    plus any surface_patterns that are all-CJK.  Korean sajaseong-eo entries
+    typically have a hangul canonical_reference but hanja in surface_patterns."""
+    forms: list[str] = []
+    ref = entry.get("canonical_reference", "")
+    if _all_cjk(ref):
+        forms.append(ref)
+    for s in entry.get("surface_patterns", []):
+        if _all_cjk(s) and s not in forms:
+            forms.append(s)
+    return forms
+
+
 def find_cognates(
     zh_entries: list[dict],
     other_entries: list[dict],
@@ -71,9 +85,9 @@ def find_cognates(
     matched_other: set[str] = set()
     matched_zh: set[str] = set()
 
-    # Index zh entries
+    # Index zh entries by canonical_reference and surface_patterns
     zh_by_nfc: dict[str, dict] = {}
-    zh_surfaces: dict[str, list[dict]] = {}  # surface → list of entries
+    zh_surfaces: dict[str, list[dict]] = {}
     for e in zh_entries:
         ref_nfc = _nfc(e.get("canonical_reference", ""))
         if ref_nfc:
@@ -82,13 +96,12 @@ def find_cognates(
             sn = _nfc(s)
             zh_surfaces.setdefault(sn, []).append(e)
 
-    # Pass 1: exact NFC character match
+    # Pass 1: exact NFC match — canonical_reference OR any all-CJK surface pattern
     for other in other_entries:
-        ref = other.get("canonical_reference", "")
-        if not _all_cjk(ref):
-            continue
-        ref_nfc = _nfc(ref)
-        if ref_nfc in zh_by_nfc:
+        for cjk_ref in _cjk_forms(other):
+            ref_nfc = _nfc(cjk_ref)
+            if ref_nfc not in zh_by_nfc:
+                continue
             zh = zh_by_nfc[ref_nfc]
             pair_id = f"{other['id']}|{zh['id']}"
             if pair_id in matched_other:
@@ -98,7 +111,8 @@ def find_cognates(
             pairs.append({
                 "source_id":   other["id"],
                 "source_lang": other_lang,
-                "source_ref":  ref,
+                "source_ref":  other.get("canonical_reference", cjk_ref),
+                "source_hanja": cjk_ref,
                 "target_id":   zh["id"],
                 "target_lang": "zh",
                 "target_ref":  zh["canonical_reference"],
@@ -107,25 +121,28 @@ def find_cognates(
                 "note":        "Chinese cognate: semantic drift may apply",
             })
 
-    # Pass 2: character-level Jaccard similarity
+    # Pass 2: character-level Jaccard similarity on all CJK forms
     for other in other_entries:
-        ref = other.get("canonical_reference", "")
-        if not _all_cjk(ref):
+        cjk_forms = _cjk_forms(other)
+        if not cjk_forms:
             continue
-        ref_nfc = _nfc(ref)
         best_sim = 0.0
         best_zh: dict | None = None
-        for zh in zh_entries:
-            zh_ref = zh.get("canonical_reference", "")
-            if not zh_ref:
-                continue
-            pair_id = f"{other['id']}|{zh['id']}"
-            if pair_id in matched_other:
-                continue
-            sim = _jaccard(ref_nfc, _nfc(zh_ref))
-            if sim >= min_similarity and sim > best_sim:
-                best_sim = sim
-                best_zh = zh
+        best_form: str = cjk_forms[0]
+        for cjk_ref in cjk_forms:
+            ref_nfc = _nfc(cjk_ref)
+            for zh in zh_entries:
+                zh_ref = zh.get("canonical_reference", "")
+                if not zh_ref:
+                    continue
+                pair_id = f"{other['id']}|{zh['id']}"
+                if pair_id in matched_other:
+                    continue
+                sim = _jaccard(ref_nfc, _nfc(zh_ref))
+                if sim >= min_similarity and sim > best_sim:
+                    best_sim = sim
+                    best_zh = zh
+                    best_form = cjk_ref
         if best_zh:
             pair_id = f"{other['id']}|{best_zh['id']}"
             if pair_id not in matched_other:
@@ -133,7 +150,8 @@ def find_cognates(
                 pairs.append({
                     "source_id":   other["id"],
                     "source_lang": other_lang,
-                    "source_ref":  ref,
+                    "source_ref":  other.get("canonical_reference", best_form),
+                    "source_hanja": best_form,
                     "target_id":   best_zh["id"],
                     "target_lang": "zh",
                     "target_ref":  best_zh["canonical_reference"],
@@ -142,27 +160,29 @@ def find_cognates(
                     "note":        "Chinese cognate: semantic drift may apply",
                 })
 
-    # Pass 3: surface pattern overlap
+    # Pass 3: surface pattern overlap (catches remaining CJK surface ↔ zh surface)
     for other in other_entries:
         for other_surf in other.get("surface_patterns", []):
             sn = _nfc(other_surf)
-            if sn in zh_surfaces:
-                for zh in zh_surfaces[sn]:
-                    pair_id = f"{other['id']}|{zh['id']}"
-                    if pair_id in matched_other:
-                        continue
-                    matched_other.add(pair_id)
-                    pairs.append({
-                        "source_id":   other["id"],
-                        "source_lang": other_lang,
-                        "source_ref":  other.get("canonical_reference", ""),
-                        "target_id":   zh["id"],
-                        "target_lang": "zh",
-                        "target_ref":  zh["canonical_reference"],
-                        "match_type":  "surface_overlap",
-                        "similarity":  0.9,
-                        "note":        "Chinese cognate: semantic drift may apply",
-                    })
+            if sn not in zh_surfaces:
+                continue
+            for zh in zh_surfaces[sn]:
+                pair_id = f"{other['id']}|{zh['id']}"
+                if pair_id in matched_other:
+                    continue
+                matched_other.add(pair_id)
+                pairs.append({
+                    "source_id":   other["id"],
+                    "source_lang": other_lang,
+                    "source_ref":  other.get("canonical_reference", ""),
+                    "source_hanja": other_surf if _all_cjk(other_surf) else None,
+                    "target_id":   zh["id"],
+                    "target_lang": "zh",
+                    "target_ref":  zh["canonical_reference"],
+                    "match_type":  "surface_overlap",
+                    "similarity":  0.9,
+                    "note":        "Chinese cognate: semantic drift may apply",
+                })
 
     return pairs
 
