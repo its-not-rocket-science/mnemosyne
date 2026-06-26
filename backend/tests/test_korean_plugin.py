@@ -91,8 +91,8 @@ class TestCapabilities:
     def test_tokenization_mode_whitespace(self, plugin: KoreanPlugin) -> None:
         assert plugin.capabilities.tokenization_mode == "whitespace"
 
-    def test_morphology_depth_shallow(self, plugin: KoreanPlugin) -> None:
-        assert plugin.capabilities.morphology_depth == "shallow"
+    def test_morphology_depth_rich(self, plugin: KoreanPlugin) -> None:
+        assert plugin.capabilities.morphology_depth == "rich"
 
     def test_lesson_modes_vocabulary(self, plugin: KoreanPlugin) -> None:
         assert "vocabulary" in plugin.capabilities.lesson_modes_supported
@@ -100,8 +100,11 @@ class TestCapabilities:
     def test_lesson_modes_dictionary(self, plugin: KoreanPlugin) -> None:
         assert "dictionary" in plugin.capabilities.lesson_modes_supported
 
-    def test_analysis_depth_morphology_light(self, plugin: KoreanPlugin) -> None:
-        assert plugin.capabilities.analysis_depth == "morphology_light"
+    def test_lesson_modes_morphology(self, plugin: KoreanPlugin) -> None:
+        assert "morphology" in plugin.capabilities.lesson_modes_supported
+
+    def test_analysis_depth_full(self, plugin: KoreanPlugin) -> None:
+        assert plugin.capabilities.analysis_depth == "full"
 
     def test_tts_lang_tag(self, plugin: KoreanPlugin) -> None:
         assert plugin.capabilities.tts_lang_tag == "ko"
