@@ -98,8 +98,8 @@ class TestCapabilities:
     def test_lesson_modes_includes_vocabulary(self, plugin) -> None:
         assert "vocabulary" in plugin.capabilities.lesson_modes_supported
 
-    def test_analysis_depth_morphology_light(self, plugin) -> None:
-        assert plugin.capabilities.analysis_depth == "morphology_light"
+    def test_analysis_depth_full(self, plugin) -> None:
+        assert plugin.capabilities.analysis_depth == "full"
 
     def test_tts_lang_tag(self, plugin) -> None:
         assert plugin.capabilities.tts_lang_tag == "ja"
@@ -335,11 +335,11 @@ class TestEdgeCases:
             assert m.text == s.text
             assert {o.canonical_form for o in m.candidates} == {o.canonical_form for o in s.candidates}
 
-    def test_only_vocabulary_type_emitted(self, plugin) -> None:
-        """Japanese plugin emits only vocabulary objects."""
+    def test_only_vocabulary_and_nuance_types_emitted(self, plugin) -> None:
         result = plugin.analyze_sentence("東京は大きな都市です。")
+        allowed = {"vocabulary", "nuance"}
         for obj in result.candidates:
-            assert obj.type == "vocabulary", (
+            assert obj.type in allowed, (
                 f"Unexpected type {obj.type!r} for {obj.canonical_form!r}"
             )
 
@@ -413,3 +413,45 @@ class TestMultilingualArchitecture:
     def test_japanese_vocabulary_only_no_morphology_mode(self, plugin) -> None:
         """Japanese plugin does not claim morphology lesson mode."""
         assert "morphology" not in plugin.capabilities.lesson_modes_supported
+
+
+# ── Nuance extraction ─────────────────────────────────────────────────────────
+
+class TestNuanceExtraction:
+    def test_particle_wa_emitted(self, plugin) -> None:
+        result = plugin.analyze_sentence("猫は魚を食べる。")
+        nuance = [c for c in result.candidates if c.type == "nuance"]
+        particles = [c for c in nuance if c.lesson_data.get("nuance_type") == "particle"]
+        assert any(c.canonical_form == "nuance:ja:particle:は" for c in particles), (
+            "topic particle は should be extracted"
+        )
+
+    def test_particle_wo_emitted(self, plugin) -> None:
+        result = plugin.analyze_sentence("猫は魚を食べる。")
+        nuance = [c for c in result.candidates if c.type == "nuance"]
+        assert any(c.canonical_form == "nuance:ja:particle:を" for c in nuance)
+
+    def test_keigo_teineigo_detected(self, plugin) -> None:
+        result = plugin.analyze_sentence("東京は大きな都市です。")
+        nuance = [c for c in result.candidates if c.type == "nuance"]
+        keigo = [c for c in nuance if c.lesson_data.get("nuance_type") == "keigo"]
+        assert any(c.lesson_data.get("keigo_type") == "teineigo" for c in keigo), (
+            "です ending should trigger teineigo keigo nuance"
+        )
+
+    def test_yojijukugo_detected(self, plugin) -> None:
+        result = plugin.analyze_sentence("一石二鳥だ。")
+        nuance = [c for c in result.candidates if c.type == "nuance"]
+        yoji = [c for c in nuance if c.lesson_data.get("nuance_type") == "yojijukugo"]
+        assert any(c.canonical_form == "nuance:ja:yojijukugo:一石二鳥" for c in yoji)
+
+    def test_nuance_candidates_not_duplicated(self, plugin) -> None:
+        result = plugin.analyze_sentence("先生が学校に来ました。")
+        cfs = [c.canonical_form for c in result.candidates]
+        assert len(cfs) == len(set(cfs)), "duplicate canonical forms found"
+
+    def test_nuance_type_field_present(self, plugin) -> None:
+        result = plugin.analyze_sentence("猫は魚を食べる。")
+        for cand in result.candidates:
+            if cand.type == "nuance":
+                assert "nuance_type" in cand.lesson_data
