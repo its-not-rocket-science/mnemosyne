@@ -197,7 +197,7 @@ class JapanesePlugin:
         morphology_depth="shallow",
         lesson_modes_supported=["vocabulary", "dictionary"],
         # v2 fields
-        analysis_depth="morphology_light",
+        analysis_depth="full",            # spaCy POS/lemma + nuance (keigo/particles/yojijukugo)
         segmentation_quality="high",       # SudachiPy is a production-quality
                                            # segmenter; quality degrades for
                                            # rare vocabulary and neologisms.
@@ -213,8 +213,8 @@ class JapanesePlugin:
             literary_references="partial",
             cultural_references="partial",
             etymology="none",
-            formality_register="none",
-            grammar_nuance="stub",        # basic verb form via morphology_light
+            formality_register="partial",  # keigo: sonkeigo / kenjōgo / teineigo
+            grammar_nuance="partial",     # particles, keigo, verbal government, yojijukugo
             pronunciation_tts="partial",  # ja TTS reliable + hiragana reading
             transliteration="stub",       # hiragana reading only; no full romaji
             proverb_tradition="partial",
@@ -273,7 +273,28 @@ class JapanesePlugin:
         seen: set[str] = set()
         candidates: list[CandidateObject] = []
         candidates.extend(self._extract_vocabulary(tokens, seen))
+        candidates.extend(self._extract_nuance(sentence, tokens, candidates, seen))
         return CandidateSentenceResult(text=sentence, candidates=candidates)
+
+    def _extract_nuance(
+        self,
+        sentence: str,
+        tokens: list[Any],
+        candidates: list[CandidateObject],
+        seen: set[str],
+    ) -> list[CandidateObject]:
+        from backend.nuance.ja import JapaneseNuanceExtractor  # noqa: PLC0415
+
+        nuance_candidates = JapaneseNuanceExtractor().extract_nuance(
+            sentence, tokens, candidates, self.language_code
+        )
+        out: list[CandidateObject] = []
+        for cand in nuance_candidates:
+            if cand.canonical_form in seen:
+                continue
+            seen.add(cand.canonical_form)
+            out.append(cand)
+        return out
 
     def get_lesson(self, object_id: str) -> CandidateObject | None:
         return self.lesson_store.get(object_id)
