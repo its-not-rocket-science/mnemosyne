@@ -413,7 +413,7 @@ class MandarinChinesePlugin:
         tokenization_mode="segmented",
         morphology_depth="none",
         lesson_modes_supported=["vocabulary", "dictionary"],
-        analysis_depth="morphology_light" if _HAS_POSSEG else "dictionary",
+        analysis_depth="full" if _HAS_POSSEG else "dictionary",
         segmentation_quality="medium",
         tokenization_quality="medium",
         # Chinese does not inflect like Spanish/German/Russian.  POS tagging
@@ -458,6 +458,7 @@ class MandarinChinesePlugin:
         seen_canonical: set[str] = set()
 
         pairs = _segment_with_pos(sentence)
+        tokens = [tok for tok, _ in pairs]
 
         for token, jieba_tag in pairs:
             if not _is_learnable(token):
@@ -555,7 +556,27 @@ class MandarinChinesePlugin:
                 confidence=0.70 if _HAS_JIEBA else 0.40,
             ))
 
+        candidates.extend(self._extract_nuance(sentence, tokens, candidates, seen_canonical))
         return CandidateSentenceResult(text=sentence, candidates=candidates)
+
+    def _extract_nuance(
+        self,
+        sentence: str,
+        tokens: list[str],
+        candidates: list,
+        seen: set[str],
+    ) -> list:
+        from backend.nuance.zh import ChineseNuanceExtractor
+        nuance_candidates = ChineseNuanceExtractor().extract_nuance(
+            sentence, tokens, candidates, self.language_code
+        )
+        out = []
+        for cand in nuance_candidates:
+            if cand.canonical_form in seen:
+                continue
+            seen.add(cand.canonical_form)
+            out.append(cand)
+        return out
 
     def get_lesson(self, object_id: str) -> CandidateObject | None:
         return self.lesson_store.get(object_id)

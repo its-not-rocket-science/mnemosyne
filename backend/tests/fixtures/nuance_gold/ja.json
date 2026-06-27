@@ -8,11 +8,10 @@
   "capability_assertions": {
     "idioms": ["none", "stub"],
     "grammar_nuance": ["stub", "partial"],
-    "formality_register": ["none", "stub"]
+    "formality_register": ["partial"]
   },
   "capability_gaps": {
-    "idioms": "Plugin declares 'none' but extractor provides yojijukugo (4-char idiom compounds)",
-    "formality_register": "Plugin declares 'none' but extractor provides keigo (sonkeigo/kenjogo/teineigo) nuances"
+    "idioms": "Plugin declares 'none' but extractor provides yojijukugo (4-char idiom compounds)"
   },
   "cases": [
     {
