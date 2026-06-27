@@ -11395,6 +11395,3489 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
         ),
     ),
 
+    # ── Zh (generated) ────────────────────────────────────────
+
+    "zh_yi_shi_er_niao": PhraseFamily(
+        id="zh_yi_shi_er_niao",
+        language="zh",
+        canonical_form="一石二鸟",
+        meaning="Accomplish two goals with a single action.",
+        register="neutral",
+        origin=(
+            "Calque of the English 'kill two birds with one stone'; the Chinese form "
+            "一石二鸟 is the standard modern equivalent and is widely used in "
+            "contemporary Mandarin."
+        ),
+        confusables=("zh_yi_ju_liang_de", "ko_il_seok_i_jo",),
+        variants=(
+            PhraseVariant(
+                surface="一石二鸟",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="一箭双雕",
+                match_type=MatchType.allusion,
+                note="Classical synonym: 'one arrow, two eagles.' More literary in register; the eagle reference raises the register slightly.",
+            ),
+        ),
+    ),
+
+    "zh_ban_tu_er_fei": PhraseFamily(
+        id="zh_ban_tu_er_fei",
+        language="zh",
+        canonical_form="半途而废",
+        meaning="Give up halfway; leave a task unfinished.",
+        register="neutral",
+        origin=(
+            "Early attestation in the Han dynasty; the Liji (Book of Rites) records a "
+            "version. The image is of stopping on a road halfway to one's "
+            "destination."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="半途而废",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="半途放弃",
+                match_type=MatchType.allusion,
+                note="Modern colloquial paraphrase; less idiomatic but widely understood.",
+            ),
+        ),
+    ),
+
+    "zh_wang_yang_bu_lao": PhraseFamily(
+        id="zh_wang_yang_bu_lao",
+        language="zh",
+        canonical_form="亡羊补牢",
+        meaning=(
+            "Mend the fold after the sheep has escaped — it is not too late to act"
+            "once harm has begun."
+        ),
+        register="neutral",
+        origin=(
+            "Recorded in the Warring States strategy text Zhanguo Ce (circa 3rd–1st "
+            "c. BCE); the full form continues 'it is not too late (犹未晚也).'"
+        ),
+        why_it_matters=(
+            "Often translated as 'better late than never'; the Chinese proverb "
+            "explicitly frames the loss as having already happened, emphasising that "
+            "action remains worthwhile even after the fact."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="亡羊补牢",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="亡羊补牢，犹未晚也",
+                match_type=MatchType.allusion,
+                note="Full classical form including the conclusion 'it is not too late.'",
+            ),
+        ),
+    ),
+
+    "zh_sai_weng_shi_ma": PhraseFamily(
+        id="zh_sai_weng_shi_ma",
+        language="zh",
+        canonical_form="塞翁失马",
+        meaning="A seeming misfortune may be a blessing in disguise, and vice versa.",
+        register="literary",
+        origin=(
+            "From Huainanzi (139 BCE), attributed to the philosopher Liu An. The "
+            "frontier elder (塞翁) loses his horse; it returns with a fine stallion; "
+            "his son riding that stallion breaks a leg; the broken leg spares him "
+            "from conscription. The full form is 塞翁失马，焉知非福."
+        ),
+        confusables=("ja_ningen_banji_saio_ga_uma",),
+        variants=(
+            PhraseVariant(
+                surface="塞翁失马",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="塞翁失马，焉知非福",
+                match_type=MatchType.allusion,
+                note="Extended form: 'the frontier elder lost his horse — how do you know it isn't a blessing?'",
+            ),
+        ),
+    ),
+
+    "zh_hua_she_tian_zu": PhraseFamily(
+        id="zh_hua_she_tian_zu",
+        language="zh",
+        canonical_form="画蛇添足",
+        meaning="Ruin something by adding superfluous detail; overdo it.",
+        register="neutral",
+        origin=(
+            "Zhanguo Ce (Strategies of the Warring States, 3rd–1st c. BCE): men "
+            "competed to drink a vessel of wine; the winner drew a snake but kept "
+            "going and added feet, losing when the runner-up claimed the wine as they "
+            "had drawn a snake first."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="画蛇添足",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_yan_er_dao_ling": PhraseFamily(
+        id="zh_yan_er_dao_ling",
+        language="zh",
+        canonical_form="掩耳盗铃",
+        meaning="Deceive oneself; pretend a problem does not exist.",
+        register="neutral",
+        origin=(
+            "Lüshi Chunqiu (239 BCE): a thief wanted a large bell but could not carry "
+            "it; he covered his own ears so he could not hear it clang — as if this "
+            "prevented others from hearing it."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="掩耳盗铃",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_shou_zhu_dai_tu": PhraseFamily(
+        id="zh_shou_zhu_dai_tu",
+        language="zh",
+        canonical_form="守株待兔",
+        meaning="Wait passively for luck to repeat; rely on chance instead of effort.",
+        register="neutral",
+        origin=(
+            "Han Feizi (3rd c. BCE): a Song-state farmer saw a rabbit run into a tree "
+            "stump and die; he then abandoned farming and sat by the stump waiting "
+            "for the next rabbit."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="守株待兔",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_dui_niu_tan_qin": PhraseFamily(
+        id="zh_dui_niu_tan_qin",
+        language="zh",
+        canonical_form="对牛弹琴",
+        meaning="Waste wisdom or art on someone incapable of appreciating it.",
+        register="neutral",
+        origin=(
+            "Attributed to the Han scholar Mouzi; the image is of the musician "
+            "Gongming Yi playing for an ox. The ox ignores him — the fault lies with "
+            "the audience, not the music."
+        ),
+        why_it_matters=(
+            "English 'pearls before swine' is the nearest equivalent but carries "
+            "biblical connotations; 对牛弹琴 is secular and emphasises incomprehension "
+            "rather than contempt."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="对牛弹琴",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_yi_ju_liang_de": PhraseFamily(
+        id="zh_yi_ju_liang_de",
+        language="zh",
+        canonical_form="一举两得",
+        meaning="Accomplish two things with one action; kill two birds with one stone.",
+        register="neutral",
+        origin=(
+            "Standard four-character compound (成语); the image is of one act (举) "
+            "yielding two gains (得). Attested in Tang-dynasty usage."
+        ),
+        confusables=("zh_yi_shi_er_niao",),
+        variants=(
+            PhraseVariant(
+                surface="一举两得",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_ma_dao_cheng_gong": PhraseFamily(
+        id="zh_ma_dao_cheng_gong",
+        language="zh",
+        canonical_form="马到成功",
+        meaning="Immediate success upon starting; instant triumph.",
+        register="neutral",
+        origin=(
+            "Likely Song-dynasty in origin; the image is of a military cavalry "
+            "charging and immediately winning. Used as a good-luck formula before "
+            "examinations and new ventures."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="马到成功",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_ye_gong_hao_long": PhraseFamily(
+        id="zh_ye_gong_hao_long",
+        language="zh",
+        canonical_form="叶公好龙",
+        meaning="Profess love for something one actually fears or cannot handle.",
+        register="neutral",
+        origin=(
+            "Liu Xiang's Xinxu (about 26 BCE): Lord She (叶公) loved dragons so much he "
+            "decorated his home with dragon images; a real dragon visited him and he "
+            "fled in terror."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="叶公好龙",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_bei_gong_she_ying": PhraseFamily(
+        id="zh_bei_gong_she_ying",
+        language="zh",
+        canonical_form="杯弓蛇影",
+        meaning=(
+            "Extreme fear based on imaginary threat; paranoia over a reflection or"
+            "illusion."
+        ),
+        register="neutral",
+        origin=(
+            "Eastern Jin dynasty text Fengsu Tongyi: a guest saw the reflection of a "
+            "bow hanging on the wall in his cup and believed it was a snake; he fell "
+            "ill from fear until the host explained the illusion."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="杯弓蛇影",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_san_ren_cheng_hu": PhraseFamily(
+        id="zh_san_ren_cheng_hu",
+        language="zh",
+        canonical_form="三人成虎",
+        meaning="A false claim repeated by many becomes accepted as truth.",
+        register="neutral",
+        origin=(
+            "Zhanguo Ce: a minister warned his king that if three people each "
+            "reported seeing a tiger in the marketplace, the king would believe it "
+            "even though it was impossible — because repetition creates conviction."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="三人成虎",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_lam_yu_chong_shu": PhraseFamily(
+        id="zh_lam_yu_chong_shu",
+        language="zh",
+        canonical_form="滥竽充数",
+        meaning="Pass oneself off as competent; make up the numbers.",
+        register="neutral",
+        origin=(
+            "Han Feizi: the king of Qi required 300 players to play the yu (竽) "
+            "simultaneously; Nanguo Xu pretended to play without skill. When the new "
+            "king preferred solo performances, Nanguo Xu fled."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="滥竽充数",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_yu_gong_yi_shan": PhraseFamily(
+        id="zh_yu_gong_yi_shan",
+        language="zh",
+        canonical_form="愚公移山",
+        meaning="Persistent effort can overcome any obstacle, however immovable it seems.",
+        register="literary",
+        origin=(
+            "Liezi (Daoist text, perhaps 4th c. BCE): the Foolish Old Man (愚公) "
+            "resolved to move two mountains blocking his home; when ridiculed, he "
+            "replied that his descendants would continue; Heaven was moved and sent "
+            "gods to carry the mountains away. Mao Zedong cited this in his 1945 "
+            "speech 'The Foolish Old Man Who Removed the Mountains.'"
+        ),
+        why_it_matters=(
+            "Mao's invocation made this chengyu a Maoist political touchstone; "
+            "contemporary use may carry that resonance or simply mean 'perseverance.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="愚公移山",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_ke_zhou_qiu_jian": PhraseFamily(
+        id="zh_ke_zhou_qiu_jian",
+        language="zh",
+        canonical_form="刻舟求剑",
+        meaning=(
+            "Act according to outdated methods when circumstances have already"
+            "changed."
+        ),
+        register="neutral",
+        origin=(
+            "Lüshi Chunqiu (239 BCE): a man on a boat dropped his sword overboard and "
+            "notched the side of the boat to mark where it fell; when the boat "
+            "docked, he dove there — but the boat had moved."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="刻舟求剑",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_wu_tu_tong_gui": PhraseFamily(
+        id="zh_wu_tu_tong_gui",
+        language="zh",
+        canonical_form="殊途同归",
+        meaning=(
+            "Different paths lead to the same destination; multiple methods reach the"
+            "same goal."
+        ),
+        register="literary",
+        origin=(
+            "I Ching commentary (繫辭 Xici, c. 300 BCE): 天下同归而殊途 ('All under heaven "
+            "reach the same destination by different roads'). Now a standard four- "
+            "character compound."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="殊途同归",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_yi_ming_jing_ren": PhraseFamily(
+        id="zh_yi_ming_jing_ren",
+        language="zh",
+        canonical_form="一鸣惊人",
+        meaning=(
+            "Achieve sudden spectacular success after a long period of silence or"
+            "obscurity."
+        ),
+        register="neutral",
+        origin=(
+            "Shiji (Records of the Grand Historian, 91 BCE), biography of King Wei of "
+            "Qi: asked why he had done nothing for three years, the king replied he "
+            "had been biding his time — and then his reforms transformed the state. "
+            "'Once it cries, it will astound the world.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="一鸣惊人",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_zhi_zu_chang_le": PhraseFamily(
+        id="zh_zhi_zu_chang_le",
+        language="zh",
+        canonical_form="知足常乐",
+        meaning="Contentment brings lasting happiness.",
+        register="neutral",
+        origin=(
+            "Laozi (Tao Te Ching), Chapter 33: 知足者富 ('Those who are content are "
+            "wealthy'). The four-character compound form知足常乐 is a later "
+            "crystallisation but faithfully captures the Daoist sentiment."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="知足常乐",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "zh_ren_yi_li_zhi_xin": PhraseFamily(
+        id="zh_ren_yi_li_zhi_xin",
+        language="zh",
+        canonical_form="仁义礼智信",
+        meaning=(
+            "The five constant virtues of Confucian ethics: benevolence,"
+            "righteousness, ritual propriety, wisdom, and faithfulness."
+        ),
+        register="formal",
+        origin=(
+            "Codified by Dong Zhongshu in the Han dynasty (2nd c. BCE) as a synthesis "
+            "of Confucian teaching; traces back to Mencius (4th c. BCE) who listed "
+            "four virtues (ren, yi, li, zhi)."
+        ),
+        why_it_matters=(
+            "These five terms recur across Chinese classical texts, proverbs, and "
+            "ethical discourse. Recognising them individually and as a set is "
+            "important for reading classical and formal modern Chinese."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="仁义礼智信",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    # ── Ja (generated) ────────────────────────────────────────
+
+    "ja_deru_kugi_wa_utareru": PhraseFamily(
+        id="ja_deru_kugi_wa_utareru",
+        language="ja",
+        canonical_form="出る釘は打たれる",
+        meaning=(
+            "The nail that sticks out gets hammered down; stand-out individuals"
+            "attract criticism or suppression."
+        ),
+        register="neutral",
+        origin=(
+            "Japanese proverb (ことわざ) of uncertain antiquity; widely cited since the "
+            "Edo period. Reflects a broadly held cultural value of group conformity."
+        ),
+        why_it_matters=(
+            "Often cited in cross-cultural discussions of Japanese group-orientation "
+            "vs. Western individualism. The English near-equivalent is 'tall poppies "
+            "get cut.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="出る釘は打たれる",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="出る杭は打たれる",
+                match_type=MatchType.orthographic_variant,
+                note="杭 (stake/post) is the older variant; 釘 (nail) is more common in modern usage.",
+            ),
+        ),
+    ),
+
+    "ja_nana_korobi_ya_oki": PhraseFamily(
+        id="ja_nana_korobi_ya_oki",
+        language="ja",
+        canonical_form="七転び八起き",
+        meaning=(
+            "Fall seven times, get up eight; perseverance in the face of repeated"
+            "setbacks."
+        ),
+        register="neutral",
+        origin=(
+            "Japanese proverb; 七 (seven) and 八 (eight) are used numerically rather "
+            "than literally — the point is that you rise one more time than you fall. "
+            "The Daruma doll tradition embodies the same idea."
+        ),
+        confusables=("ja_nana_ko_nana_ko",),
+        variants=(
+            PhraseVariant(
+                surface="七転び八起き",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="七転八起",
+                match_type=MatchType.orthographic_variant,
+                note="Four-character Sino-Japanese compound (四字熟語) form; used in more formal contexts.",
+            ),
+        ),
+    ),
+
+    "ja_hana_yori_dango": PhraseFamily(
+        id="ja_hana_yori_dango",
+        language="ja",
+        canonical_form="花より団子",
+        meaning=(
+            "Dumplings over flowers; prefer practical or material benefit over"
+            "aesthetic appreciation."
+        ),
+        register="informal",
+        origin=(
+            "Edo-period proverb, referring to cherry-blossom viewing (花見): some "
+            "attendees cared more for the food stalls than the blossoms. The phrase "
+            "now describes anyone who values substance over form."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="花より団子",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ja_i_no_naka_no_kawazu": PhraseFamily(
+        id="ja_i_no_naka_no_kawazu",
+        language="ja",
+        canonical_form="井の中の蛙大海を知らず",
+        meaning=(
+            "A frog in a well does not know the great ocean; limited experience leads"
+            "to a narrow worldview."
+        ),
+        register="neutral",
+        origin=(
+            "Derived from Zhuangzi (庄子), Chapter 17 ('Autumn Floods'), via classical "
+            "Chinese. The Japanese form is an established proverb since at least the "
+            "Edo period."
+        ),
+        why_it_matters=(
+            "The full form (including 大海を知らず 'does not know the great sea') is "
+            "standard, but 井の中の蛙 alone functions as a recognized shortening."
+        ),
+        confusables=("ko_u_mul_an_gae_gu_ri",),
+        variants=(
+            PhraseVariant(
+                surface="井の中の蛙大海を知らず",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="井の中の蛙",
+                match_type=MatchType.allusion,
+                note="Allusive shortening; widely understood.",
+            ),
+        ),
+    ),
+
+    "ja_saru_mo_ki_kara_ochiru": PhraseFamily(
+        id="ja_saru_mo_ki_kara_ochiru",
+        language="ja",
+        canonical_form="猿も木から落ちる",
+        meaning="Even monkeys fall from trees; even experts make mistakes.",
+        register="neutral",
+        origin=(
+            "Japanese proverb of Edo origin. The monkey is proverbially skilled at "
+            "climbing; its occasional fall dramatizes that no one is infallible."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="猿も木から落ちる",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ja_ichi_go_ichi_e": PhraseFamily(
+        id="ja_ichi_go_ichi_e",
+        language="ja",
+        canonical_form="一期一会",
+        meaning=(
+            "This encounter will never come again; treasure each meeting as if it"
+            "were once in a lifetime."
+        ),
+        register="formal",
+        origin=(
+            "Associated with Sen no Rikyu (1522–1591) and the philosophy of wabi-cha "
+            "(侘び茶 — the tea ceremony). The phrase appears in Ii Naosuke's Chado "
+            "Ichie-shu (1858). 一期 means 'one lifetime'; 一会 means 'one meeting.'"
+        ),
+        why_it_matters=(
+            "Deeply embedded in Japanese aesthetics of mono no aware and the "
+            "transience of experience. Now used broadly in formal speech and written "
+            "Japanese."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="一期一会",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ja_ishibashi_tataki_wataru": PhraseFamily(
+        id="ja_ishibashi_tataki_wataru",
+        language="ja",
+        canonical_form="石橋を叩いて渡る",
+        meaning=(
+            "Knock on the stone bridge before crossing — take extreme precautions"
+            "even when safety seems assured."
+        ),
+        register="neutral",
+        origin=(
+            "Japanese proverb of uncertain date. The stone bridge (石橋) is already the "
+            "safest kind of bridge; testing it before crossing represents superfluous "
+            "caution."
+        ),
+        why_it_matters=(
+            "Often used to describe a characteristically careful or risk-averse "
+            "temperament, sometimes admiringly, sometimes as mild criticism of over- "
+            "caution."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="石橋を叩いて渡る",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="石橋を叩く",
+                match_type=MatchType.allusion,
+                note="Shortened allusion; less vivid but idiomatic.",
+            ),
+        ),
+    ),
+
+    "ja_isogaba_maware": PhraseFamily(
+        id="ja_isogaba_maware",
+        language="ja",
+        canonical_form="急がば回れ",
+        meaning="If you are in a hurry, take the roundabout way; more haste, less speed.",
+        register="neutral",
+        origin=(
+            "From a verse (小歌) attributed to the poet Sogi (宗祇, 1421–1502): it is "
+            "safer to take the longer land route around Lake Biwa than to risk the "
+            "shortcut by boat in rough weather."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="急がば回れ",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ja_wakareru_node_aru": PhraseFamily(
+        id="ja_wakareru_node_aru",
+        language="ja",
+        canonical_form="会者定離",
+        meaning="Those who meet must part; all unions end in separation.",
+        register="literary",
+        origin=(
+            "Buddhist concept (e-ja-jo-ri); one of the four universal sufferings "
+            "articulated in the Nirvana Sutra. In Japanese it functions as a fixed "
+            "Buddhist phrase used at funerals and in literary contexts."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="会者定離",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ja_nana_ko_nana_ko": PhraseFamily(
+        id="ja_nana_ko_nana_ko",
+        language="ja",
+        canonical_form="七転八倒",
+        meaning="Writhing in extreme pain or distress; rolling around helplessly.",
+        register="neutral",
+        origin=(
+            "Four-character compound (四字熟語). 七 and 八 are used loosely to mean "
+            "'repeatedly in all directions.' Distinct from 七転八起 (七転び八起き) despite the "
+            "similar structure."
+        ),
+        confusables=("ja_nana_korobi_ya_oki",),
+        variants=(
+            PhraseVariant(
+                surface="七転八倒",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ja_koketsu_ni_irazunba": PhraseFamily(
+        id="ja_koketsu_ni_irazunba",
+        language="ja",
+        canonical_form="虎穴に入らずんば虎子を得ず",
+        meaning=(
+            "Nothing ventured, nothing gained; you must enter the tiger's den to"
+            "catch a tiger cub."
+        ),
+        register="formal",
+        origin=(
+            "Attributed in Chinese sources to the Han general Ban Chao (32–102 CE) "
+            "before a night raid on the Xiongnu. The Japanese form is a direct calque "
+            "of the Chinese 不入虎穴，不得虎子."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="虎穴に入らずんば虎子を得ず",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="虎穴に入らずんば",
+                match_type=MatchType.allusion,
+                note="Truncated form recognizable in formal Japanese.",
+            ),
+        ),
+    ),
+
+    "ja_en_no_shita_no_chikaramochi": PhraseFamily(
+        id="ja_en_no_shita_no_chikaramochi",
+        language="ja",
+        canonical_form="縁の下の力持ち",
+        meaning=(
+            "The strong man under the floorboards; someone who does essential but"
+            "unrecognized supporting work."
+        ),
+        register="neutral",
+        origin=(
+            "Refers to a sumo wrestler who hid beneath the floorboards of a "
+            "performance stage to support it; the image captures unsung essential "
+            "support."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="縁の下の力持ち",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ja_ningen_banji_saio_ga_uma": PhraseFamily(
+        id="ja_ningen_banji_saio_ga_uma",
+        language="ja",
+        canonical_form="人間万事塞翁が馬",
+        meaning=(
+            "All human affairs are like the old man of the frontier and his horse;"
+            "fortune and misfortune are unpredictable and interchangeable."
+        ),
+        register="formal",
+        origin=(
+            "Japanese rendering of the Chinese proverb 塞翁失馬 (from Huainanzi, 139 "
+            "BCE). The extended Japanese form 人間万事 ('all human affairs') is added for "
+            "rhetorical emphasis."
+        ),
+        confusables=("zh_sai_weng_shi_ma",),
+        variants=(
+            PhraseVariant(
+                surface="人間万事塞翁が馬",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="塞翁が馬",
+                match_type=MatchType.allusion,
+                note="Shortened form, still widely recognized.",
+            ),
+        ),
+    ),
+
+    "ja_tana_kara_botamochi": PhraseFamily(
+        id="ja_tana_kara_botamochi",
+        language="ja",
+        canonical_form="棚からぼたもち",
+        meaning=(
+            "A rice cake falls from the shelf into your mouth; unexpected good"
+            "fortune arrives without effort."
+        ),
+        register="informal",
+        origin=(
+            "Japanese proverb; ぼたもち (botamochi) is a sweet rice cake. The image of "
+            "food falling from a shelf is used to describe windfall luck."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="棚からぼたもち",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ja_dojo_nihonjin": PhraseFamily(
+        id="ja_dojo_nihonjin",
+        language="ja",
+        canonical_form="同じ釜の飯を食う",
+        meaning=(
+            "Eat rice from the same pot; share hardship or close quarters, forming a"
+            "bond."
+        ),
+        register="neutral",
+        origin=(
+            "Japanese proverb emphasising communal eating as the basis of solidarity. "
+            "The image reflects the shared cooking pot of traditional households and "
+            "military units."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="同じ釜の飯を食う",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="同じ釜の飯",
+                match_type=MatchType.allusion,
+                note="Noun-phrase shortening; recognizable without the verb.",
+            ),
+        ),
+    ),
+
+    "ja_mokusou_no_hate": PhraseFamily(
+        id="ja_mokusou_no_hate",
+        language="ja",
+        canonical_form="沈黙は金、雄弁は銀",
+        meaning="Silence is golden; eloquence is silver.",
+        register="neutral",
+        origin=(
+            "Adaptation of the English proverb 'speech is silver, silence is golden,' "
+            "itself from German (Reden ist Silber, Schweigen ist Gold), widely known "
+            "in Japan via Meiji-era translation."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="沈黙は金、雄弁は銀",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="沈黙は金",
+                match_type=MatchType.allusion,
+                note="Common shortening.",
+            ),
+        ),
+    ),
+
+    "ja_ichi_o_kiite_ju_wo_shiru": PhraseFamily(
+        id="ja_ichi_o_kiite_ju_wo_shiru",
+        language="ja",
+        canonical_form="一を聞いて十を知る",
+        meaning=(
+            "Hear one thing and understand ten; grasp things from minimal information"
+            "— a mark of exceptional intelligence."
+        ),
+        register="neutral",
+        origin=(
+            "From the Analects (論語): Confucius said of Yan Hui that hearing one "
+            "thing, he understood ten; in contrast, he himself only understood two "
+            "from one. The Japanese form is a direct calque."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="一を聞いて十を知る",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ja_kaeru_no_ko_wa_kaeru": PhraseFamily(
+        id="ja_kaeru_no_ko_wa_kaeru",
+        language="ja",
+        canonical_form="蛙の子は蛙",
+        meaning="The child of a frog is a frog; like parent, like child.",
+        register="neutral",
+        origin=(
+            "Japanese proverb equivalent to 'the apple doesn't fall far from the "
+            "tree.' The frog returns to water just as its parents did — regardless of "
+            "where it was raised."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="蛙の子は蛙",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ja_nido_aru_koto_wa_sando_aru": PhraseFamily(
+        id="ja_nido_aru_koto_wa_sando_aru",
+        language="ja",
+        canonical_form="二度あることは三度ある",
+        meaning="What happens twice will happen a third time; history repeats itself.",
+        register="informal",
+        origin=(
+            "Japanese proverb; implies that a pattern of two occurrences makes a "
+            "third likely. Used to warn against optimism after a second incident."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="二度あることは三度ある",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ja_ware_tada_taru_wo_shiru": PhraseFamily(
+        id="ja_ware_tada_taru_wo_shiru",
+        language="ja",
+        canonical_form="吾唯足知",
+        meaning="I alone know what is enough; contentment lies in self-sufficiency.",
+        register="literary",
+        origin=(
+            "Carved on the tsukubai (stone washbasin) at Ryōan-ji temple in Kyoto; "
+            "the four characters 吾唯足知 are arranged around a central 口 (mouth) so that "
+            "each character shares the 口 radical. A meditative calligraphic puzzle."
+        ),
+        why_it_matters=(
+            "The visual pun (four characters sharing one 口) is as important as the "
+            "meaning; the phrase is widely reproduced and recognized as a symbol of "
+            "the Zen value of contentment."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="吾唯足知",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    # ── Ko (generated) ────────────────────────────────────────
+
+    "ko_ga_neun_mal_i_go_wa_ya": PhraseFamily(
+        id="ko_ga_neun_mal_i_go_wa_ya",
+        language="ko",
+        canonical_form="가는 말이 고와야 오는 말이 곱다",
+        meaning=(
+            "If the words you send are kind, the words that return will be kind;"
+            "treat others as you wish to be treated."
+        ),
+        register="neutral",
+        origin=(
+            "Classical Korean proverb (속담); the image is of words traveling out and "
+            "returning, emphasising reciprocity of speech."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="가는 말이 고와야 오는 말이 곱다",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="가는 말이 고와야",
+                match_type=MatchType.allusion,
+                note="Common shortening used in conversation.",
+            ),
+        ),
+    ),
+
+    "ko_ti_kkeul_mo_a_tae_san": PhraseFamily(
+        id="ko_ti_kkeul_mo_a_tae_san",
+        language="ko",
+        canonical_form="티끌 모아 태산",
+        meaning=(
+            "Dust gathered makes a mountain; many small savings or efforts accumulate"
+            "into something great."
+        ),
+        register="neutral",
+        origin=(
+            "Korean proverb equivalent to 'many a mickle makes a muckle.' 태산 (泰山) "
+            "refers to Mount Tai in China, the archetype of great size."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="티끌 모아 태산",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_so_ilkko_oe_yang_gan_go_chin": PhraseFamily(
+        id="ko_so_ilkko_oe_yang_gan_go_chin",
+        language="ko",
+        canonical_form="소 잃고 외양간 고친다",
+        meaning=(
+            "Fix the barn after the cow has been lost; take action only after the"
+            "damage is done."
+        ),
+        register="neutral",
+        origin=(
+            "Korean proverb equivalent to 'lock the stable door after the horse has "
+            "bolted.' Reflects universal human tendency to respond reactively."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="소 잃고 외양간 고친다",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_u_mul_an_gae_gu_ri": PhraseFamily(
+        id="ko_u_mul_an_gae_gu_ri",
+        language="ko",
+        canonical_form="우물 안 개구리",
+        meaning="A frog in a well; someone with a narrow, limited worldview.",
+        register="neutral",
+        origin=(
+            "Derived from the Chinese proverb 井底之蛙 (jǐng dǐ zhī wā — frog at the "
+            "bottom of a well), itself from Zhuangzi. The Korean form is a standard "
+            "calque."
+        ),
+        confusables=("ja_i_no_naka_no_kawazu",),
+        variants=(
+            PhraseVariant(
+                surface="우물 안 개구리",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_baek_ji_jang_do_mat_deul_myeon": PhraseFamily(
+        id="ko_baek_ji_jang_do_mat_deul_myeon",
+        language="ko",
+        canonical_form="백지장도 맞들면 낫다",
+        meaning=(
+            "Even a sheet of paper is lighter when two people lift it; cooperation"
+            "makes any task easier."
+        ),
+        register="neutral",
+        origin=(
+            "Korean proverb emphasising collective effort. 백지장 is a blank sheet of "
+            "paper — already light — making the point that cooperation helps even "
+            "with the simplest of tasks."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="백지장도 맞들면 낫다",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_se_sal_bu_reut_yeo_deun_kkaji_gan_da": PhraseFamily(
+        id="ko_se_sal_bu_reut_yeo_deun_kkaji_gan_da",
+        language="ko",
+        canonical_form="세 살 버릇 여든까지 간다",
+        meaning=(
+            "Habits formed at age three stay with you until eighty; early habits are"
+            "lifelong."
+        ),
+        register="neutral",
+        origin=(
+            "Korean proverb equivalent to 'the child is father to the man.' 여든 "
+            "(eighty) represents extreme old age, emphasising the permanence of "
+            "early-formed tendencies."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="세 살 버릇 여든까지 간다",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_bin_su_re_ga_yo_ran_ha_da": PhraseFamily(
+        id="ko_bin_su_re_ga_yo_ran_ha_da",
+        language="ko",
+        canonical_form="빈 수레가 요란하다",
+        meaning=(
+            "An empty cart makes the most noise; those with the least substance are"
+            "the loudest."
+        ),
+        register="neutral",
+        origin=(
+            "Korean proverb parallel to 'empty vessels make the most sound.' The "
+            "image of a cart with no load rattling loudly is universal."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="빈 수레가 요란하다",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_nun_ga_ri_go_a_ung": PhraseFamily(
+        id="ko_nun_ga_ri_go_a_ung",
+        language="ko",
+        canonical_form="눈 가리고 아웅",
+        meaning=(
+            "Cover your eyes and say peek-a-boo; self-deception that fools no one"
+            "else."
+        ),
+        register="informal",
+        origin=(
+            "Korean proverb. 아웅 is an interjection used in the peekaboo game (아웅다웅); "
+            "the image is of someone who thinks hiding their own eyes makes them "
+            "invisible."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="눈 가리고 아웅",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_ho_rang_i_eob_neun_gol_e_to_kki_ga_wang": PhraseFamily(
+        id="ko_ho_rang_i_eob_neun_gol_e_to_kki_ga_wang",
+        language="ko",
+        canonical_form="호랑이 없는 골에 토끼가 왕 노릇 한다",
+        meaning=(
+            "In the absence of the tiger, the rabbit acts as king; minor figures"
+            "dominate when greater ones are absent."
+        ),
+        register="neutral",
+        origin=(
+            "Korean proverb. The tiger represents authority or true excellence; the "
+            "rabbit represents opportunistic minor actors who only rise because of "
+            "the absence of their betters."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="호랑이 없는 골에 토끼가 왕 노릇 한다",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="호랑이 없는 골에 토끼가 왕",
+                match_type=MatchType.allusion,
+                note="Shortened form.",
+            ),
+        ),
+    ),
+
+    "ko_gae_gu_ri_ol_chaeng_i_jeok_saeng_gak_mot_han_da": PhraseFamily(
+        id="ko_gae_gu_ri_ol_chaeng_i_jeok_saeng_gak_mot_han_da",
+        language="ko",
+        canonical_form="개구리 올챙이 적 생각 못 한다",
+        meaning=(
+            "A frog cannot remember being a tadpole; the successful forget their"
+            "humble origins."
+        ),
+        register="neutral",
+        origin=(
+            "Korean proverb equivalent to 'he has forgotten the rock from which he "
+            "was hewn.' 올챙이 (tadpole) represents a person's lower origins before "
+            "transformation."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="개구리 올챙이 적 생각 못 한다",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_gu_seul_i_seo_mal_i_ra_do": PhraseFamily(
+        id="ko_gu_seul_i_seo_mal_i_ra_do",
+        language="ko",
+        canonical_form="구슬이 서 말이라도 꿰어야 보배",
+        meaning=(
+            "Even three mal of beads are worthless until strung together; raw"
+            "material has no value until organized."
+        ),
+        register="neutral",
+        origin=(
+            "Korean proverb. 말 (mal) is a traditional dry-measure unit; 서 말 is a "
+            "large quantity. The proverb emphasises that knowledge, talent, or "
+            "resources must be properly deployed to have value."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="구슬이 서 말이라도 꿰어야 보배",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_haneul_i_mu_neo_jyeo_do_so_ta_nal_gu_meong_i_itda": PhraseFamily(
+        id="ko_haneul_i_mu_neo_jyeo_do_so_ta_nal_gu_meong_i_itda",
+        language="ko",
+        canonical_form="하늘이 무너져도 솟아날 구멍이 있다",
+        meaning=(
+            "Even if the sky collapses, there is a hole to escape through; there is"
+            "always a way out."
+        ),
+        register="neutral",
+        origin=(
+            "Korean proverb of reassurance; conveys optimism that a solution exists "
+            "even in the most hopeless-seeming situations."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="하늘이 무너져도 솟아날 구멍이 있다",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_chil_jeol_pan_mae": PhraseFamily(
+        id="ko_chil_jeol_pan_mae",
+        language="ko",
+        canonical_form="칠전팔기",
+        meaning="Fall seven times, rise eight; perseverance through repeated failure.",
+        register="neutral",
+        origin=(
+            "Sino-Korean four-character compound (사자성어), calque of the "
+            "Japanese/Chinese 七転八起 (nana korobi ya oki / qī diān bā qǐ). Widely used "
+            "in Korean motivational contexts."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="칠전팔기",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_gong_pong_mu_an_i": PhraseFamily(
+        id="ko_gong_pong_mu_an_i",
+        language="ko",
+        canonical_form="공평무사",
+        meaning="Impartial and selfless; acting without favoritism or personal agenda.",
+        register="formal",
+        origin=(
+            "Sino-Korean compound (公平無私); used in formal administrative, legal, and "
+            "ethical contexts. Classical Chinese origin, 公 (public/fair) + 平 (even) + "
+            "無私 (without self-interest)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="공평무사",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_il_seok_i_jo": PhraseFamily(
+        id="ko_il_seok_i_jo",
+        language="ko",
+        canonical_form="일석이조",
+        meaning="One stone, two birds; achieve two goals with one action.",
+        register="neutral",
+        origin=(
+            "Sino-Korean compound (一石二鳥); direct calque of the Chinese/English 'kill "
+            "two birds with one stone.' Standard modern Korean."
+        ),
+        confusables=("zh_yi_shi_er_niao",),
+        variants=(
+            PhraseVariant(
+                surface="일석이조",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_on_go_ji_sin": PhraseFamily(
+        id="ko_on_go_ji_sin",
+        language="ko",
+        canonical_form="온고지신",
+        meaning=(
+            "Review the old to understand the new; learning from the past illuminates"
+            "the present."
+        ),
+        register="formal",
+        origin=(
+            "From the Analects (論語 Lúnyǔ) of Confucius (Chapter 2): '溫故而知新，可以爲師矣' — "
+            "'He who reviews the old and learns the new may serve as a teacher.' The "
+            "Korean form 온고지신 (溫故知新) is the standard Sino-Korean compound."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="온고지신",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_dong_byeong_sang_ryeon": PhraseFamily(
+        id="ko_dong_byeong_sang_ryeon",
+        language="ko",
+        canonical_form="동병상련",
+        meaning="Fellow sufferers pity each other; shared misfortune creates empathy.",
+        register="neutral",
+        origin=(
+            "Sino-Korean compound (同病相憐), from Wu Zixu's speech in the Shiji (Records "
+            "of the Grand Historian): those with the same illness share sympathy. "
+            "Standard Korean idiom."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="동병상련",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_sa_myeon_cho_ga": PhraseFamily(
+        id="ko_sa_myeon_cho_ga",
+        language="ko",
+        canonical_form="사면초가",
+        meaning=(
+            "Surrounded on all four sides by Chu songs; completely surrounded, with"
+            "no way out."
+        ),
+        register="formal",
+        origin=(
+            "From the Shiji (Records of the Grand Historian): at the Battle of Gaixia "
+            "(202 BCE), the defeated Xiang Yu heard soldiers all around him singing "
+            "songs from his home state of Chu, realising his army had defected. The "
+            "Sino-Korean form 四面楚歌 is a fixed idiom for complete encirclement."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="사면초가",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_maeu_ma_sim": PhraseFamily(
+        id="ko_maeu_ma_sim",
+        language="ko",
+        canonical_form="마이동풍",
+        meaning=(
+            "East wind past the ear of a horse; ignore advice completely; let words"
+            "go in one ear and out the other."
+        ),
+        register="neutral",
+        origin=(
+            "Sino-Korean compound (馬耳東風), from Du Fu's poem '答王十二寒夜獨酌有懷' (8th c. CE): "
+            "the east wind blows past the horse's ear without effect. Standard Korean "
+            "idiom for ignoring advice."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="마이동풍",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ko_sa_jeo_seong_eo": PhraseFamily(
+        id="ko_sa_jeo_seong_eo",
+        language="ko",
+        canonical_form="사자성어",
+        meaning=(
+            "Four-character set phrase; a Sino-Korean idiomatic compound of four"
+            "characters."
+        ),
+        register="formal",
+        origin=(
+            "Korean grammatical/cultural term (四字成語); the broader category name for "
+            "Sino-Korean four-character idioms (like 一石二鳥, 同病相憐 etc.), equivalent to "
+            "Chinese 成語 (chéngyǔ)."
+        ),
+        why_it_matters=(
+            "Understanding 사자성어 as a category helps learners recognize that these "
+            "compounds form a distinct register of educated Korean speech. Many "
+            "derive directly from classical Chinese."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="사자성어",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    # ── La (generated) ────────────────────────────────────────
+
+    "la_carpe_diem": PhraseFamily(
+        id="la_carpe_diem",
+        language="la",
+        canonical_form="carpe diem",
+        meaning="Seize the day; make the most of the present moment.",
+        register="literary",
+        origin=(
+            "Horace, Odes I.11 (23 BCE): 'carpe diem, quam minimum credula postero' — "
+            "'seize the day, trusting as little as possible to tomorrow.' Addressed "
+            "to Leuconoë, urging her not to ask astrologers about the future."
+        ),
+        why_it_matters=(
+            "One of the most quoted Latin phrases in Western culture; widely misread "
+            "as straightforward hedonism. Horace's fuller meaning is Epicurean "
+            "acceptance of mortality."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="carpe diem",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="carpe diem quam minimum credula postero",
+                match_type=MatchType.allusion,
+                note="Full Horatian verse form, used in scholarly contexts.",
+            ),
+        ),
+    ),
+
+    "la_veni_vidi_vici": PhraseFamily(
+        id="la_veni_vidi_vici",
+        language="la",
+        canonical_form="veni, vidi, vici",
+        meaning="I came, I saw, I conquered; swift and decisive victory.",
+        register="formal",
+        origin=(
+            "Julius Caesar, in a letter to the Senate after his victory at Zela (47 "
+            "BCE), reported by Suetonius (Divus Iulius 37.2) and Plutarch. The "
+            "tricolon of monosyllabic perfect verbs dramatises the speed of the "
+            "campaign."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="veni, vidi, vici",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="veni, vidi, vici — Caesar",
+                match_type=MatchType.allusion,
+                note="Attributed form with speaker; common in historical citation.",
+            ),
+        ),
+    ),
+
+    "la_alea_iacta_est": PhraseFamily(
+        id="la_alea_iacta_est",
+        language="la",
+        canonical_form="alea iacta est",
+        meaning="The die is cast; a point of no return has been crossed.",
+        register="formal",
+        origin=(
+            "Suetonius (Divus Iulius 32) attributes this to Caesar at the crossing of "
+            "the Rubicon (49 BCE). Suetonius says Caesar quoted it in Greek "
+            "(ἀνερρίφθω κύβος, 'let the die be thrown') — citing the comedian "
+            "Menander. The Latin form is a translation."
+        ),
+        why_it_matters=(
+            "The phrase 'crossing the Rubicon' derives from the same event and is "
+            "often used alongside alea iacta est."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="alea iacta est",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="iacta alea est",
+                match_type=MatchType.orthographic_variant,
+                note="Alternative word order, also attested.",
+            ),
+        ),
+    ),
+
+    "la_amor_vincit_omnia": PhraseFamily(
+        id="la_amor_vincit_omnia",
+        language="la",
+        canonical_form="amor vincit omnia",
+        meaning="Love conquers all.",
+        register="literary",
+        origin=(
+            "Virgil, Eclogues X.69 (c. 38 BCE): 'omnia vincit Amor: et nos cedamus "
+            "Amori' — 'Love conquers all; let us too yield to Love.' Chaucer's "
+            "Prioress wore a brooch inscribed with 'Amor vincit omnia' (Canterbury "
+            "Tales, General Prologue)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="amor vincit omnia",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="omnia vincit amor",
+                match_type=MatchType.orthographic_variant,
+                note="Virgilian word order; both forms circulate.",
+            ),
+        ),
+    ),
+
+    "la_tempus_fugit": PhraseFamily(
+        id="la_tempus_fugit",
+        language="la",
+        canonical_form="tempus fugit",
+        meaning="Time flies; time passes irrecoverably.",
+        register="neutral",
+        origin=(
+            "Adapted from Virgil, Georgics III.284: 'sed fugit interea, fugit "
+            "inreparabile tempus' — 'but meanwhile time is flying, flying beyond "
+            "recall.' The two-word version is a later crystallisation, not found "
+            "verbatim in Virgil."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="tempus fugit",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="fugit inreparabile tempus",
+                match_type=MatchType.allusion,
+                note="Virgil's actual phrase; more literary and precise.",
+            ),
+        ),
+    ),
+
+    "la_in_vino_veritas": PhraseFamily(
+        id="la_in_vino_veritas",
+        language="la",
+        canonical_form="in vino veritas",
+        meaning=(
+            "In wine there is truth; alcohol loosens inhibitions and reveals one's"
+            "true thoughts."
+        ),
+        register="neutral",
+        origin=(
+            "Pliny the Elder (Natural History, XIV.141) attributes the sentiment to "
+            "the Greeks. The Latin formulation circulates from the medieval period "
+            "onward; often followed by 'in aqua sanitas' (in water, health)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="in vino veritas",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="in vino veritas, in aqua sanitas",
+                match_type=MatchType.allusion,
+                note="Extended form adding 'in water, health.'",
+            ),
+        ),
+    ),
+
+    "la_memento_mori": PhraseFamily(
+        id="la_memento_mori",
+        language="la",
+        canonical_form="memento mori",
+        meaning="Remember that you must die; a meditation on mortality.",
+        register="formal",
+        origin=(
+            "Latin imperative phrase (meminisse + mori); the practice of a slave "
+            "whispering 'Respice post te! Hominem te esse memento! Memento mori!' to "
+            "a Roman general during his triumph is described by Tertullian "
+            "(Apologeticus 33.4). The two-word form is a later condensation."
+        ),
+        why_it_matters=(
+            "Central to Stoic and Christian memento mori traditions; widely used in "
+            "art (skulls, hourglasses) from the medieval period onward."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="memento mori",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "la_cogito_ergo_sum": PhraseFamily(
+        id="la_cogito_ergo_sum",
+        language="la",
+        canonical_form="cogito, ergo sum",
+        meaning=(
+            "I think, therefore I am; the irreducible certainty of one's own"
+            "existence."
+        ),
+        register="formal",
+        origin=(
+            "René Descartes, Principia Philosophiae (1644): 'cogito, ergo sum.' The "
+            "French original 'je pense, donc je suis' appeared in the Discours de la "
+            "méthode (1637). The Latin form became canonical and is the standard "
+            "philosophical quotation."
+        ),
+        why_it_matters=(
+            "The foundational claim of modern Western epistemology; recognising it "
+            "marks basic philosophical literacy."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="cogito, ergo sum",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="I think therefore I am",
+                match_type=MatchType.allusion,
+                note="Standard English translation; the form most commonly encountered outside philosophy.",
+            ),
+        ),
+    ),
+
+    "la_de_mortuis_nil_nisi_bonum": PhraseFamily(
+        id="la_de_mortuis_nil_nisi_bonum",
+        language="la",
+        canonical_form="de mortuis nil nisi bonum",
+        meaning="Of the dead, say nothing but good.",
+        register="formal",
+        origin=(
+            "Attributed to Chilon of Sparta (one of the Seven Sages of Greece) via "
+            "Diogenes Laertius (Lives of the Eminent Philosophers, early 3rd c. CE): "
+            "τὸν τεθνηκότα μὴ κακολογεῖν. The Latin form is a medieval or Renaissance "
+            "Latin rendering."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="de mortuis nil nisi bonum",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="de mortuis nil nisi bene",
+                match_type=MatchType.orthographic_variant,
+                note="'bene' (adverbial) instead of 'bonum' (nominal); both circulate.",
+            ),
+        ),
+    ),
+
+    "la_per_aspera_ad_astra": PhraseFamily(
+        id="la_per_aspera_ad_astra",
+        language="la",
+        canonical_form="per aspera ad astra",
+        meaning=(
+            "Through hardships to the stars; greatness is achieved through"
+            "perseverance against difficulty."
+        ),
+        register="formal",
+        origin=(
+            "Popularised as the motto of multiple institutions (including Kansas "
+            "State, the Royal Air Force); the phrase echoes Seneca (Hercules Furens, "
+            "l.437: 'ad astra mollis e terris via non est') but the exact form is a "
+            "post-classical crystallisation."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="per aspera ad astra",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ad astra per aspera",
+                match_type=MatchType.orthographic_variant,
+                note="Reversed order; motto of Kansas and several institutions.",
+            ),
+        ),
+    ),
+
+    "la_caveat_emptor": PhraseFamily(
+        id="la_caveat_emptor",
+        language="la",
+        canonical_form="caveat emptor",
+        meaning=(
+            "Let the buyer beware; the responsibility for inspecting what one"
+            "purchases lies with the buyer."
+        ),
+        register="formal",
+        origin=(
+            "Legal maxim; attested in English common law from the 16th century "
+            "onward. The full form is 'caveat emptor, quia ignorare non debuit quod "
+            "ius alienum emit' ('let the buyer beware, for he ought not be ignorant "
+            "of the right he is buying')."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="caveat emptor",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "la_vox_populi_vox_dei": PhraseFamily(
+        id="la_vox_populi_vox_dei",
+        language="la",
+        canonical_form="vox populi, vox Dei",
+        meaning=(
+            "The voice of the people is the voice of God; popular consensus carries"
+            "divine authority."
+        ),
+        register="formal",
+        origin=(
+            "Attributed to Alcuin of York (Epistola 166, 800 CE) — but Alcuin himself "
+            "used it to warn Charlemagne against the idea: 'nec audiendi qui solent "
+            "dicere, vox populi, vox Dei.' The phrase's trajectory from cautionary "
+            "warning to democratic maxim is a notable reversal."
+        ),
+        why_it_matters=(
+            "Frequently misattributed as straightforwardly pro-democratic; Alcuin's "
+            "original intent was the opposite."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="vox populi, vox Dei",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="vox populi",
+                match_type=MatchType.allusion,
+                note="Common shortening in political and journalistic contexts.",
+            ),
+        ),
+    ),
+
+    "la_fortes_fortuna_adiuvat": PhraseFamily(
+        id="la_fortes_fortuna_adiuvat",
+        language="la",
+        canonical_form="fortes fortuna adiuvat",
+        meaning="Fortune favors the brave.",
+        register="neutral",
+        origin=(
+            "Terence, Phormio 203 (161 BCE): 'fortes fortuna adiuvat.' Also in Pliny "
+            "the Younger on Pliny the Elder's decision to approach Vesuvius "
+            "(Epistulae VI.16). Virgil's version in Aeneid X.284 is 'audentes Fortuna "
+            "iuvat.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="fortes fortuna adiuvat",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="audentes fortuna iuvat",
+                match_type=MatchType.allusion,
+                note="Virgilian variant: 'Fortune favors the daring (audentes).'",
+            ),
+        ),
+    ),
+
+    "la_dum_spiro_spero": PhraseFamily(
+        id="la_dum_spiro_spero",
+        language="la",
+        canonical_form="dum spiro, spero",
+        meaning="While I breathe, I hope.",
+        register="formal",
+        origin=(
+            "Attributed to Cicero in various sources; the exact Ciceronian passage is "
+            "disputed, but the phrase is consistent with Stoic consolation in his "
+            "letters. It became the state motto of South Carolina (1776)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="dum spiro, spero",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="while I breathe I hope",
+                match_type=MatchType.allusion,
+                note="English translation; appears on South Carolina state documents alongside the Latin.",
+            ),
+        ),
+    ),
+
+    "la_res_ipsa_loquitur": PhraseFamily(
+        id="la_res_ipsa_loquitur",
+        language="la",
+        canonical_form="res ipsa loquitur",
+        meaning=(
+            "The thing speaks for itself; in law, negligence can be inferred from the"
+            "facts alone without requiring direct proof."
+        ),
+        register="formal",
+        origin=(
+            "Legal maxim derived from Roman law; popularised in English law by the "
+            "1863 case Byrne v Boadle (barrel rolling from warehouse). The phrase "
+            "appears in Cicero's speeches as a rhetorical formula."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="res ipsa loquitur",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "la_primum_non_nocere": PhraseFamily(
+        id="la_primum_non_nocere",
+        language="la",
+        canonical_form="primum non nocere",
+        meaning=(
+            "First, do no harm; the primary obligation of a practitioner is to avoid"
+            "causing harm."
+        ),
+        register="formal",
+        origin=(
+            "Associated with the Hippocratic tradition but not found verbatim in the "
+            "Hippocratic Corpus; the principle is in Hippocrates' Epidemics (I.5). "
+            "The Latin formulation is a post-classical medical maxim, codified in the "
+            "17th century."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="primum non nocere",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "la_sic_transit_gloria_mundi": PhraseFamily(
+        id="la_sic_transit_gloria_mundi",
+        language="la",
+        canonical_form="sic transit gloria mundi",
+        meaning="Thus passes the glory of the world; worldly greatness is fleeting.",
+        register="formal",
+        origin=(
+            "Used at papal coronations from 1409 (Papal Synod of Constance) onward: a "
+            "monk burned hemp to symbolise the transience of earthly glory. The text "
+            "derives from Thomas à Kempis, De Imitatione Christi (c. 1418–1427), Book "
+            "I, Chapter 3."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="sic transit gloria mundi",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="sic transit gloria",
+                match_type=MatchType.allusion,
+                note="Shortened allusion; widely recognized.",
+            ),
+        ),
+    ),
+
+    "la_noli_me_tangere": PhraseFamily(
+        id="la_noli_me_tangere",
+        language="la",
+        canonical_form="noli me tangere",
+        meaning="Do not touch me; a command to keep one's distance.",
+        register="literary",
+        origin=(
+            "Vulgate (Latin Bible) rendering of John 20:17, Christ's words to Mary "
+            "Magdalene after the Resurrection: 'Noli me tangere, nondum enim ascendi "
+            "ad Patrem meum.' Holbein, Titian, and Correggio painted the scene; the "
+            "phrase became standard in art history."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="noli me tangere",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "la_tabula_rasa": PhraseFamily(
+        id="la_tabula_rasa",
+        language="la",
+        canonical_form="tabula rasa",
+        meaning="Blank slate; the mind before it has received any impressions.",
+        register="formal",
+        origin=(
+            "Cicero uses tabula rasa metaphorically; John Locke (Essay Concerning "
+            "Human Understanding, 1689) made 'blank slate' central to empiricist "
+            "philosophy, translating it from the Latin tradition. Thomas Aquinas "
+            "earlier discussed the concept via Aristotle."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="tabula rasa",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "la_panem_et_circenses": PhraseFamily(
+        id="la_panem_et_circenses",
+        language="la",
+        canonical_form="panem et circenses",
+        meaning=(
+            "Bread and circuses; the strategy of keeping the populace docile through"
+            "food and entertainment."
+        ),
+        register="formal",
+        origin=(
+            "Juvenal, Satires X.80–81 (early 2nd c. CE): 'duas tantum res anxius "
+            "optat, / panem et circenses' — 'anxiously desires only two things: bread "
+            "and circuses.' A satirical critique of Roman citizens who surrendered "
+            "political engagement for material comfort."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="panem et circenses",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="bread and circuses",
+                match_type=MatchType.allusion,
+                note="Standard English translation; used in political commentary.",
+            ),
+        ),
+    ),
+
+    # ── Grc (generated) ────────────────────────────────────────
+
+    "grc_gnothi_seauton": PhraseFamily(
+        id="grc_gnothi_seauton",
+        language="grc",
+        canonical_form="γνῶθι σεαυτόν",
+        meaning="Know thyself; self-knowledge is the foundation of wisdom.",
+        register="formal",
+        origin=(
+            "One of the Delphic maxims (Δελφικά παραγγέλματα) inscribed on the "
+            "pronaos of Apollo's temple at Delphi. Attributed by Plato (Protagoras "
+            "343a) to the Seven Sages; Socrates made it central to his philosophical "
+            "method. The Latin form is 'nosce te ipsum.'"
+        ),
+        why_it_matters=(
+            "Central to Western philosophical ethics from Socrates onward; Plato's "
+            "dialogues return to it repeatedly as the starting point of moral "
+            "inquiry."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="γνῶθι σεαυτόν",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="γνῶθι σαυτόν",
+                match_type=MatchType.orthographic_variant,
+                note="Contracted form σαυτόν (instead of σεαυτόν); both are attested.",
+            ),
+        ),
+    ),
+
+    "grc_meden_agan": PhraseFamily(
+        id="grc_meden_agan",
+        language="grc",
+        canonical_form="μηδὲν ἄγαν",
+        meaning="Nothing in excess; moderation in all things.",
+        register="formal",
+        origin=(
+            "Second Delphic maxim; attributed to various sages including Solon and "
+            "Chilon of Sparta. Aristotle's doctrine of the mean (μεσότης) is a "
+            "philosophical elaboration of the same principle. Latin equivalent: ne "
+            "quid nimis (Terence, Andria)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="μηδὲν ἄγαν",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "grc_ho_bios_brakhus": PhraseFamily(
+        id="grc_ho_bios_brakhus",
+        language="grc",
+        canonical_form="ὁ βίος βραχύς, ἡ δὲ τέχνη μακρά",
+        meaning=(
+            "Life is short, art is long; there is more to master than a single life"
+            "allows."
+        ),
+        register="literary",
+        origin=(
+            "Hippocrates, Aphorisms I.1 (4th c. BCE): the full aphorism continues 'ὁ "
+            "δὲ καιρὸς ὀξύς, ἡ δὲ πεῖρα σφαλερή, ἡ δὲ κρίσις χαλεπή' ('opportunity is "
+            "fleeting, experience uncertain, judgment difficult'). The Latin "
+            "translation Ars longa, vita brevis (Seneca) is often quoted separately."
+        ),
+        why_it_matters=(
+            "The phrase is frequently misunderstood: τέχνη means 'craft' or 'skill' "
+            "(medicine in Hippocrates' context), not 'art' in the modern aesthetic "
+            "sense."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ὁ βίος βραχύς, ἡ δὲ τέχνη μακρά",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ars longa, vita brevis",
+                match_type=MatchType.allusion,
+                note="Latin translation by Seneca; more widely circulated in Western tradition.",
+            ),
+        ),
+    ),
+
+    "grc_panta_rhei": PhraseFamily(
+        id="grc_panta_rhei",
+        language="grc",
+        canonical_form="πάντα ῥεῖ",
+        meaning="Everything flows; all things are in constant flux.",
+        register="formal",
+        origin=(
+            "Attributed to Heraclitus of Ephesus (c. 500 BCE) by later sources; the "
+            "phrase itself does not appear in surviving Heraclitean fragments but "
+            "reflects his core doctrine (Plato, Cratylus 402a). The river analogy "
+            "('you cannot step in the same river twice') is the canonical "
+            "illustration."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="πάντα ῥεῖ",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="τὰ πάντα ῥεῖ",
+                match_type=MatchType.orthographic_variant,
+                note="With definite article; attested in Simplicius's commentary on Aristotle.",
+            ),
+        ),
+    ),
+
+    "grc_anthropos_politikon_zoon": PhraseFamily(
+        id="grc_anthropos_politikon_zoon",
+        language="grc",
+        canonical_form="ἄνθρωπός ἐστι φύσει πολιτικὸν ζῷον",
+        meaning=(
+            "The human being is by nature a political animal; participation in the"
+            "polis is natural to humanity."
+        ),
+        register="formal",
+        origin=(
+            "Aristotle, Politics I.2 (1253a2-3). 'Political' here means 'of the polis "
+            "(city-state),' not merely engaged in partisan activity. Aristotle "
+            "contrasts humans — who live in community by nature — with beasts and "
+            "gods, who do not."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ἄνθρωπός ἐστι φύσει πολιτικὸν ζῷον",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="πολιτικὸν ζῷον",
+                match_type=MatchType.allusion,
+                note="Standard shortening; 'political animal' is now the established English rendering.",
+            ),
+        ),
+    ),
+
+    "grc_kalos_kagathos": PhraseFamily(
+        id="grc_kalos_kagathos",
+        language="grc",
+        canonical_form="καλὸς κἀγαθός",
+        meaning=(
+            "Beautiful and good; the ideal of aristocratic virtue combining physical"
+            "grace with moral excellence."
+        ),
+        register="formal",
+        origin=(
+            "Classical Athenian ideal; καλός ('beautiful') and ἀγαθός "
+            "('good/excellent') are crasis-combined as κἀγαθός. Plato discusses the "
+            "concept at length; it underpins the aristocratic view that physical "
+            "beauty correlates with moral virtue."
+        ),
+        why_it_matters=(
+            "The concept is historically important for understanding Greek ethics and "
+            "aesthetics; it also underlies Platonic metaphysics linking beauty to the "
+            "Good."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="καλὸς κἀγαθός",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="καλοκαγαθία",
+                match_type=MatchType.allusion,
+                note="Abstract noun form: 'nobility of character'; used in philosophical prose.",
+            ),
+        ),
+    ),
+
+    "grc_he_glossa_omosen": PhraseFamily(
+        id="grc_he_glossa_omosen",
+        language="grc",
+        canonical_form="ἡ γλῶσσα ὤμοσεν, ἡ δὲ φρὴν ἀνώμοτος",
+        meaning="My tongue swore it, but my mind remains unbound by the oath.",
+        register="literary",
+        origin=(
+            "Euripides, Hippolytus 612 (428 BCE); spoken by Hippolytus when he "
+            "considers revealing the secret he swore to keep. The line was notorious "
+            "in antiquity — Aristophanes mocks it (Thesmophoriazusae 275) — and was "
+            "cited by Aristotle as an example of the limits of oath-keeping."
+        ),
+        why_it_matters=(
+            "One of the most controversial lines in Greek tragedy; it raises "
+            "fundamental questions about the relationship between formal commitments "
+            "and moral obligation."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ἡ γλῶσσα ὤμοσεν, ἡ δὲ φρὴν ἀνώμοτος",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ἡ γλῶσσα ὤμοσεν",
+                match_type=MatchType.allusion,
+                note="First clause only; sufficient to invoke the full line in scholarly contexts.",
+            ),
+        ),
+    ),
+
+    "grc_moira": PhraseFamily(
+        id="grc_moira",
+        language="grc",
+        canonical_form="Μοῖρα",
+        meaning=(
+            "Fate, one's allotted portion; the divine destiny assigned to each"
+            "person."
+        ),
+        register="literary",
+        origin=(
+            "Moira (share/portion) is personified as early as Homer (Iliad XIX.87). "
+            "The three Moirai (Clotho, Lachesis, Atropos) spin, measure, and cut the "
+            "thread of life respectively. The concept influenced Stoic notions of "
+            "fate (εἱμαρμένη)."
+        ),
+        why_it_matters=(
+            "Fundamental to Greek tragic theology; understanding Moira is "
+            "prerequisite for reading Homer, Aeschylus, and Sophocles."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Μοῖρα",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="αἶσα",
+                match_type=MatchType.allusion,
+                note="Homeric synonym for fate/allotted share; preferred in Iliad contexts.",
+            ),
+        ),
+    ),
+
+    "grc_hubris": PhraseFamily(
+        id="grc_hubris",
+        language="grc",
+        canonical_form="ὕβρις",
+        meaning=(
+            "Hubris; insolent excess that dishonors others, especially the gods, and"
+            "invites divine punishment."
+        ),
+        register="literary",
+        origin=(
+            "Legal and ethical concept; hubris (ὕβρις) in Athenian law was a specific "
+            "crime of violating another's honor. In tragedy (especially Aeschylus), "
+            "it provokes nemesis (divine retribution). Aristotle defines it in the "
+            "Rhetoric (1378b)."
+        ),
+        why_it_matters=(
+            "The hubris-nemesis cycle is the structural engine of Greek tragedy; the "
+            "modern English 'hubris' carries the literary sense but not the precise "
+            "Athenian legal definition."
+        ),
+        confusables=("grc_nemesis",),
+        variants=(
+            PhraseVariant(
+                surface="ὕβρις",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="hubris",
+                match_type=MatchType.allusion,
+                note="English transliteration; universally understood but stripped of the legal sense.",
+            ),
+        ),
+    ),
+
+    "grc_nemesis": PhraseFamily(
+        id="grc_nemesis",
+        language="grc",
+        canonical_form="Νέμεσις",
+        meaning=(
+            "Divine retribution; the goddess who punishes those who show hubris or"
+            "transgress proper limits."
+        ),
+        register="literary",
+        origin=(
+            "Nemesis (distribution/allotment) is attested in Hesiod (Theogony, c. 700 "
+            "BCE) as a goddess. The concept of Nemesis as corrective justice recurs "
+            "in Pindar, Herodotus, and Plato."
+        ),
+        confusables=("grc_hubris",),
+        variants=(
+            PhraseVariant(
+                surface="Νέμεσις",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="nemesis",
+                match_type=MatchType.allusion,
+                note="English borrowing; means 'inescapable downfall' or 'punishing rival' in modern use.",
+            ),
+        ),
+    ),
+
+    "grc_logos": PhraseFamily(
+        id="grc_logos",
+        language="grc",
+        canonical_form="λόγος",
+        meaning=(
+            "Word, reason, argument, discourse; the rational principle underlying the"
+            "universe."
+        ),
+        register="formal",
+        origin=(
+            "Heraclitus used logos (c. 500 BCE) for the rational principle governing "
+            "all things; Plato for reasoned argument; Aristotle for definition and "
+            "syllogism; the Stoics for divine reason; and the Gospel of John (1:1) "
+            "for the divine Word-become-flesh."
+        ),
+        why_it_matters=(
+            "λόγος spans philosophy, rhetoric, theology, and biology (as in '-logy' "
+            "suffixes); understanding its range prevents misreading across ancient "
+            "Greek texts."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="λόγος",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ὁ λόγος",
+                match_type=MatchType.orthographic_variant,
+                note="With definite article; the form in John 1:1.",
+            ),
+        ),
+    ),
+
+    "grc_eirene": PhraseFamily(
+        id="grc_eirene",
+        language="grc",
+        canonical_form="εἰρήνη",
+        meaning=(
+            "Peace; the personification of peace as a goddess and the general state"
+            "of absence of war."
+        ),
+        register="neutral",
+        origin=(
+            "Eirene (Εἰρήνη) is one of the Horai (Hours) in Hesiod's Theogony; "
+            "Aristophanes' play Eirene (421 BCE) dramatises the desire for peace "
+            "during the Peloponnesian War. The name entered Christianity via Hebrew "
+            "shalom → Greek εἰρήνη in the New Testament."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="εἰρήνη",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "grc_arete": PhraseFamily(
+        id="grc_arete",
+        language="grc",
+        canonical_form="ἀρετή",
+        meaning=(
+            "Excellence, virtue; the full realization of one's potential in the role"
+            "one is fitted for."
+        ),
+        register="formal",
+        origin=(
+            "Central concept in Greek ethics; for Homer, primarily martial "
+            "excellence; for Plato, the virtue of each part of the soul; for "
+            "Aristotle (Nicomachean Ethics), a mean between vices, achieved through "
+            "practice (ἔθος). Christian translators rendered it 'virtue.'"
+        ),
+        why_it_matters=(
+            "Ancient ἀρετή is not equivalent to modern 'virtue' or 'morality'; it is "
+            "functional excellence. A knife has ἀρετή when it cuts well. "
+            "Understanding this distinction is critical for reading Plato and "
+            "Aristotle."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ἀρετή",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "grc_pathos_logos_ethos": PhraseFamily(
+        id="grc_pathos_logos_ethos",
+        language="grc",
+        canonical_form="πάθος, λόγος, ἦθος",
+        meaning="Emotion, reason, character: the three modes of rhetorical persuasion.",
+        register="formal",
+        origin=(
+            "Aristotle, Rhetoric I.2 (1356a): the three pisteis ('proofs') are ethos "
+            "(the credibility of the speaker), pathos (the emotional state of the "
+            "audience), and logos (the argument itself). The order in which they are "
+            "listed here (pathos-logos-ethos) differs from Aristotle's; both "
+            "orderings circulate."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="πάθος, λόγος, ἦθος",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ἦθος, πάθος, λόγος",
+                match_type=MatchType.orthographic_variant,
+                note="Aristotle's own order: ethos first as most persuasive.",
+            ),
+        ),
+    ),
+
+    "grc_en_arche_en_ho_logos": PhraseFamily(
+        id="grc_en_arche_en_ho_logos",
+        language="grc",
+        canonical_form="Ἐν ἀρχῇ ἦν ὁ Λόγος",
+        meaning="In the beginning was the Word.",
+        register="literary",
+        origin=(
+            "John 1:1 (Koine Greek New Testament). The prologue of John deliberately "
+            "echoes Genesis 1:1 ('In the beginning') while identifying the Word "
+            "(Logos) with divine reason and then with Jesus Christ (1:14). The verse "
+            "is foundational to Christian theology of the Trinity."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Ἐν ἀρχῇ ἦν ὁ Λόγος",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "grc_agape": PhraseFamily(
+        id="grc_agape",
+        language="grc",
+        canonical_form="ἀγάπη",
+        meaning=(
+            "Selfless love; unconditional, charitable love — distinguished from"
+            "erotic love (ἔρως) and friendship (φιλία)."
+        ),
+        register="formal",
+        origin=(
+            "ἀγάπη appears rarely in classical Greek but becomes the central New "
+            "Testament word for divine and self-giving love (1 Corinthians 13; John "
+            "3:16). The Septuagint uses it to translate Hebrew אַהֲבָה (ahavah). C.S. "
+            "Lewis's The Four Loves systematises the Greek distinctions."
+        ),
+        why_it_matters=(
+            "Distinguishing ἀγάπη / ἔρως / φιλία / στοργή is essential for reading "
+            "Greek philosophical and theological texts accurately."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ἀγάπη",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "grc_kairos": PhraseFamily(
+        id="grc_kairos",
+        language="grc",
+        canonical_form="καιρός",
+        meaning=(
+            "The right or critical moment; the opportune time for action — distinct"
+            "from chronological time (χρόνος)."
+        ),
+        register="formal",
+        origin=(
+            "Pythagorean and Hippocratic concept; in rhetoric, kairos is the ability "
+            "to seize the right moment for an argument. Aristotle's Rhetoric "
+            "discusses it; the Hippocratic Aphorisms emphasise 'ὁ δὲ καιρὸς ὀξύς' "
+            "(opportunity is fleeting)."
+        ),
+        why_it_matters=(
+            "The chronos/kairos distinction is vital in New Testament Greek: χρόνος "
+            "is sequential time; καιρός is the appointed time (Mark 1:15: 'πεπλήρωται "
+            "ὁ καιρός')."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="καιρός",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "grc_theodicy": PhraseFamily(
+        id="grc_theodicy",
+        language="grc",
+        canonical_form="θεοδικία",
+        meaning=(
+            "The justification of God's ways; the philosophical problem of evil's"
+            "existence given a good and omnipotent God."
+        ),
+        register="formal",
+        origin=(
+            "The Greek compound θεοδικία was coined by Leibniz (Essais de Théodicée, "
+            "1710) from θεός (god) + δίκη (justice). The underlying problem is "
+            "ancient — it animates the Book of Job and Aeschylus' Oresteia — but the "
+            "technical term is Enlightenment-era."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="θεοδικία",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="theodicy",
+                match_type=MatchType.allusion,
+                note="Standard English form; widely used in philosophy and theology.",
+            ),
+        ),
+    ),
+
+    # ── Hi (generated) ────────────────────────────────────────
+
+    "hi_jaisi_karni_vaisi_bharni": PhraseFamily(
+        id="hi_jaisi_karni_vaisi_bharni",
+        language="hi",
+        canonical_form="जैसी करनी वैसी भरनी",
+        meaning="As you sow, so shall you reap; your actions determine your fate.",
+        register="neutral",
+        origin=(
+            "Hindi proverb of wide currency; parallels Sanskrit कर्म (karma) "
+            "doctrine. The rhyme of करनी (action) and भरनी (reaping) makes it highly "
+            "memorable. Equivalent to the English biblical 'whatsoever a man soweth, "
+            "that shall he also reap' (Galatians 6:7)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="जैसी करनी वैसी भरनी",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "hi_nau_do_gyarah": PhraseFamily(
+        id="hi_nau_do_gyarah",
+        language="hi",
+        canonical_form="नौ दो ग्यारह होना",
+        meaning="Nine-two-eleven; to flee, abscond, or disappear suddenly.",
+        register="informal",
+        origin=(
+            "Hindi idiom of uncertain origin. One explanation: 9+2=11 is a nonsense "
+            "calculation (9+2=11 is correct but trivial), suggesting absurdity — or "
+            "refers to two feet running away at speed. The phrase is fully "
+            "lexicalized; the numbers have no literal meaning."
+        ),
+        why_it_matters=(
+            "Completely opaque to learners without explanation; the numbers bear no "
+            "transparent relation to the meaning."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="नौ दो ग्यारह होना",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="नौ दो ग्यारह हो गया",
+                match_type=MatchType.inflectional_variant,
+                note="Past tense: 'he/it ran away.'",
+            ),
+        ),
+    ),
+
+    "hi_khoda_pahad_nikli_chuhiya": PhraseFamily(
+        id="hi_khoda_pahad_nikli_chuhiya",
+        language="hi",
+        canonical_form="खोदा पहाड़ निकली चुहिया",
+        meaning="Dug a mountain, found a mouse; great effort produces a trivial result.",
+        register="neutral",
+        origin=(
+            "Hindi proverb; equivalent to the English 'the mountain labored and "
+            "brought forth a mouse' (Horace, Ars Poetica 139: parturient montes, "
+            "nascetur ridiculus mus)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="खोदा पहाड़ निकली चुहिया",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "hi_unt_ke_munh_mein_jeera": PhraseFamily(
+        id="hi_unt_ke_munh_mein_jeera",
+        language="hi",
+        canonical_form="ऊँट के मुँह में जीरा",
+        meaning=(
+            "Cumin in a camel's mouth; a ridiculously small amount for something"
+            "large."
+        ),
+        register="neutral",
+        origin=(
+            "Hindi proverb. A camel eats huge quantities; cumin (जीरा) is a tiny seed "
+            "— the image captures the absurdity of offering a token amount."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ऊँट के मुँह में जीरा",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "hi_jab_jago_tab_savera": PhraseFamily(
+        id="hi_jab_jago_tab_savera",
+        language="hi",
+        canonical_form="जब जागो तब सवेरा",
+        meaning="When you wake up, it is morning; it is never too late to start.",
+        register="neutral",
+        origin=(
+            "Hindi proverb; the point is that the moment of awakening is always the "
+            "right moment to begin, regardless of how late the hour."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="जब जागो तब सवेरा",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "hi_bandar_kya_jane_adrak_ka_swad": PhraseFamily(
+        id="hi_bandar_kya_jane_adrak_ka_swad",
+        language="hi",
+        canonical_form="बंदर क्या जाने अदरक का स्वाद",
+        meaning=(
+            "What does a monkey know of the taste of ginger? Cast wisdom before the"
+            "ignorant and it is wasted."
+        ),
+        register="neutral",
+        origin=(
+            "Hindi proverb; ginger (अदरक) is a sharp, sophisticated flavour that a "
+            "monkey would not appreciate. Equivalent to 'pearls before swine' or the "
+            "Chinese 对牛弹琴."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="बंदर क्या जाने अदरक का स्वाद",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "hi_aam_ke_aam_guthaliyon_ke_daam": PhraseFamily(
+        id="hi_aam_ke_aam_guthaliyon_ke_daam",
+        language="hi",
+        canonical_form="आम के आम गुठलियों के दाम",
+        meaning=(
+            "Mangoes at mango price, and the value of the pits too; gain on all"
+            "fronts — a double benefit."
+        ),
+        register="neutral",
+        origin=(
+            "Hindi proverb; the mango is eaten and the pit can be dried, powdered "
+            "(amchur), or used for kindling. Getting full value from everything, with "
+            "nothing wasted."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="आम के आम गुठलियों के दाम",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "hi_apna_ullu_seedha_karna": PhraseFamily(
+        id="hi_apna_ullu_seedha_karna",
+        language="hi",
+        canonical_form="अपना उल्लू सीधा करना",
+        meaning=(
+            "To straighten one's own owl; to pursue one's own selfish interests"
+            "without concern for others."
+        ),
+        register="informal",
+        origin=(
+            "Hindi idiom; उल्लू (owl) is associated with foolishness or slyness in "
+            "Indian folk tradition. 'Straightening one's owl' means making one's own "
+            "schemes succeed, often at others' expense."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="अपना उल्लू सीधा करना",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="अपना उल्लू सीधा",
+                match_type=MatchType.allusion,
+                note="Noun-phrase shortening; contextually sufficient.",
+            ),
+        ),
+    ),
+
+    "hi_chor_ki_daadhi_mein_tinka": PhraseFamily(
+        id="hi_chor_ki_daadhi_mein_tinka",
+        language="hi",
+        canonical_form="चोर की दाढ़ी में तिनका",
+        meaning=(
+            "A straw in the thief's beard; the guilty person is the one who feels"
+            "most accused."
+        ),
+        register="neutral",
+        origin=(
+            "Hindi proverb equivalent to 'the guilty dog barks first' or "
+            "Shakespeare's 'the lady doth protest too much.' A straw caught in a "
+            "beard suggests the person was stooping in guilty activity."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="चोर की दाढ़ी में तिनका",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "hi_naach_na_jane_angan_tedha": PhraseFamily(
+        id="hi_naach_na_jane_angan_tedha",
+        language="hi",
+        canonical_form="नाच न जाने आँगन टेढ़ा",
+        meaning=(
+            "Doesn't know how to dance, blames the courtyard for being crooked; a"
+            "poor worker blames the tools."
+        ),
+        register="neutral",
+        origin=(
+            "Hindi proverb equivalent to 'a bad workman blames his tools.' A dancer "
+            "who lacks skill attributes her failures to an uneven floor."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="नाच न जाने आँगन टेढ़ा",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "hi_do_takke_ki_baat": PhraseFamily(
+        id="hi_do_takke_ki_baat",
+        language="hi",
+        canonical_form="दो टके की बात",
+        meaning="A two-paisa matter; something of little worth or importance.",
+        register="informal",
+        origin=(
+            "Hindi idiom; टका (taka/paisa) is a small unit of currency. Calling "
+            "something 'two paisa worth' dismisses it as trivial. The phrase is "
+            "widely used in colloquial dismissals."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="दो टके की बात",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "hi_jitni_chadar_utna_paer_failao": PhraseFamily(
+        id="hi_jitni_chadar_utna_paer_failao",
+        language="hi",
+        canonical_form="जितनी चादर हो उतने पाँव फैलाओ",
+        meaning=(
+            "Stretch your legs only as far as your blanket covers; live within your"
+            "means."
+        ),
+        register="neutral",
+        origin=(
+            "Hindi proverb advising fiscal prudence; the blanket/sheet (चादर) "
+            "represents one's financial resources, and stretching one's legs beyond "
+            "it means overspending or overreaching."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="जितनी चादर हो उतने पाँव फैलाओ",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "hi_sone_pe_suhaga": PhraseFamily(
+        id="hi_sone_pe_suhaga",
+        language="hi",
+        canonical_form="सोने पे सुहागा",
+        meaning="Borax on gold; the perfect addition to something already excellent.",
+        register="neutral",
+        origin=(
+            "Hindi idiom; सुहागा (suhaga, borax) is used in traditional Indian "
+            "goldsmithing to enhance the lustre of gold. The metaphor is that borax "
+            "on gold is a beneficial addition to something already of high value."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="सोने पे सुहागा",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "hi_andhe_mein_kaana_raja": PhraseFamily(
+        id="hi_andhe_mein_kaana_raja",
+        language="hi",
+        canonical_form="अंधों में काना राजा",
+        meaning=(
+            "Among the blind, the one-eyed man is king; relative superiority in a"
+            "context of general deficiency."
+        ),
+        register="neutral",
+        origin=(
+            "Hindi proverb parallel to the European 'in the land of the blind, the "
+            "one-eyed man is king' (attributed to Erasmus in Latin: 'In regione "
+            "caecorum rex est luscus'). The simultaneous existence in multiple "
+            "traditions suggests universal human observation."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="अंधों में काना राजा",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "hi_atithi_devo_bhava": PhraseFamily(
+        id="hi_atithi_devo_bhava",
+        language="hi",
+        canonical_form="अतिथि देवो भव",
+        meaning=(
+            "The guest is equivalent to God; treat your guests with the reverence due"
+            "to a divinity."
+        ),
+        register="formal",
+        origin=(
+            "From Taittiriya Upanishad (Shiksha Valli, 1.11.2): 'मातृदेवो भव, "
+            "पितृदेवो भव, आचार्यदेवो भव, अतिथिदेवो भव' — 'May your mother be your "
+            "god, your father be your god, your teacher be your god, your guest be "
+            "your god.' The Government of India's Incredible India tourism campaign "
+            "(2002) adopted the phrase."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="अतिथि देवो भव",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "hi_satyameva_jayate": PhraseFamily(
+        id="hi_satyameva_jayate",
+        language="hi",
+        canonical_form="सत्यमेव जयते",
+        meaning="Truth alone triumphs.",
+        register="formal",
+        origin=(
+            "Mundaka Upanishad (3.1.6): 'सत्यमेव जयते नानृतं सत्येन पन्था विततो "
+            "देवयानः' — 'Truth alone triumphs, not falsehood; through truth the "
+            "divine path is spread out.' Adopted as the national motto of India "
+            "(1950) below the Lion Capital of Ashoka on the state emblem."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="सत्यमेव जयते",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "hi_vasudhaiva_kutumbakam": PhraseFamily(
+        id="hi_vasudhaiva_kutumbakam",
+        language="hi",
+        canonical_form="वसुधैव कुटुम्बकम्",
+        meaning="The entire world is one family; universal human kinship.",
+        register="formal",
+        origin=(
+            "Maha Upanishad (6.71-75): 'अयं निजः परो वेति गणना लघुचेतसाम् / "
+            "उदारचरितानां तु वसुधैव कुटुम्बकम्' — 'This is mine, that is yours — such "
+            "is the thinking of the small-minded; for the magnanimous, the whole "
+            "earth is one family.' Used in the G20 India 2023 theme."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="वसुधैव कुटुम्बकम्",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    # ── Tr (generated) ────────────────────────────────────────
+
+    "tr_agac_yasken_egilir": PhraseFamily(
+        id="tr_agac_yasken_egilir",
+        language="tr",
+        canonical_form="Ağaç yaşken eğilir",
+        meaning=(
+            "A tree bends while it is young; habits and character are shaped in"
+            "youth."
+        ),
+        register="neutral",
+        origin=(
+            "Turkish proverb (atasözü) of wide currency. The image is of young, green "
+            "wood being pliable, in contrast to old dry wood that snaps. Equivalent "
+            "to 'you can't teach an old dog new tricks' (though the Turkish proverb "
+            "emphasises positive shaping, not the difficulty of change)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Ağaç yaşken eğilir",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "tr_damlaya_damlaya_gol_olur": PhraseFamily(
+        id="tr_damlaya_damlaya_gol_olur",
+        language="tr",
+        canonical_form="Damlaya damlaya göl olur",
+        meaning="Drop by drop, a lake forms; small accumulations lead to great results.",
+        register="neutral",
+        origin=(
+            "Turkish proverb equivalent to 'many a mickle makes a muckle' or the "
+            "Chinese 滴水穿石 ('water drops bore through stone'). The image of water "
+            "dripping into a basin until a lake forms is the core metaphor."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Damlaya damlaya göl olur",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "tr_it_urur_kervan_yuruyor": PhraseFamily(
+        id="tr_it_urur_kervan_yuruyor",
+        language="tr",
+        canonical_form="İt ürür, kervan yürür",
+        meaning="Dogs bark, but the caravan moves on; critics cannot stop the determined.",
+        register="neutral",
+        origin=(
+            "Turkish proverb of Anatolian/Central Asian origin; the caravan (kervan) "
+            "is the archetypal image of purposeful collective movement across the "
+            "steppes. The barking dogs represent ephemeral opposition."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="İt ürür, kervan yürür",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="İt ürür, kervan yürüyor",
+                match_type=MatchType.inflectional_variant,
+                note="Present progressive form; same meaning.",
+            ),
+        ),
+    ),
+
+    "tr_dost_aci_soyler": PhraseFamily(
+        id="tr_dost_aci_soyler",
+        language="tr",
+        canonical_form="Dost acı söyler",
+        meaning="A true friend speaks bitter truths.",
+        register="neutral",
+        origin=(
+            "Turkish proverb; the implicit contrast is with flattery — a real friend "
+            "will tell you what you need to hear rather than what you want to hear. "
+            "Equivalent to 'a friend who tells you the truth is worth more than an "
+            "enemy who flatters you.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Dost acı söyler",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "tr_sabir_acir_meyvesi_tatli": PhraseFamily(
+        id="tr_sabir_acir_meyvesi_tatli",
+        language="tr",
+        canonical_form="Sabır acıdır, meyvesi tatlıdır",
+        meaning="Patience is bitter, but its fruit is sweet.",
+        register="neutral",
+        origin=(
+            "Turkish proverb with roots in Islamic wisdom literature; parallels "
+            "Arabic صَبر (sabr — patience) as a cardinal virtue in the Quran. The "
+            "image of bitter medicine producing sweet fruit is universal."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Sabır acıdır, meyvesi tatlıdır",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="Sabır acıdır",
+                match_type=MatchType.allusion,
+                note="First clause only; widely understood as shorthand for the full proverb.",
+            ),
+        ),
+    ),
+
+    "tr_ne_ekersen_onu_bicersin": PhraseFamily(
+        id="tr_ne_ekersen_onu_bicersin",
+        language="tr",
+        canonical_form="Ne ekersen onu biçersin",
+        meaning="You reap what you sow.",
+        register="neutral",
+        origin=(
+            "Turkish proverb; direct parallel to the biblical Galatians 6:7 and the "
+            "Sanskrit karma doctrine. The agricultural image of sowing and harvesting "
+            "is universal across cultures."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Ne ekersen onu biçersin",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "tr_armut_pis_agzima_dus": PhraseFamily(
+        id="tr_armut_pis_agzima_dus",
+        language="tr",
+        canonical_form="Armut piş ağzıma düş",
+        meaning=(
+            "Pear, ripen and fall into my mouth; waiting for things to happen without"
+            "effort."
+        ),
+        register="informal",
+        origin=(
+            "Turkish proverb describing passive wishful thinking; the pear tree is "
+            "asked to do all the work while the person does nothing. Used to chide "
+            "laziness or unrealistic expectation."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Armut piş ağzıma düş",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "tr_su_akar_yataginini_bulur": PhraseFamily(
+        id="tr_su_akar_yataginini_bulur",
+        language="tr",
+        canonical_form="Su akar yatağını bulur",
+        meaning=(
+            "Water flows and finds its bed; things naturally settle into their"
+            "rightful place."
+        ),
+        register="neutral",
+        origin=(
+            "Turkish proverb. Water's natural tendency to seek its own course is used "
+            "as a metaphor for the inevitability of natural order reasserting itself."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Su akar yatağını bulur",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "tr_bir_elin_nesi_var_iki_elin_sesi_var": PhraseFamily(
+        id="tr_bir_elin_nesi_var_iki_elin_sesi_var",
+        language="tr",
+        canonical_form="Bir elin nesi var, iki elin sesi var",
+        meaning=(
+            "One hand has nothing; two hands make a sound; unity and cooperation"
+            "produce results."
+        ),
+        register="neutral",
+        origin=(
+            "Turkish proverb; the physical image of clapping — which requires two "
+            "hands — is used to represent the power of collective effort over "
+            "individual action."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Bir elin nesi var, iki elin sesi var",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "tr_komsu_komshunun_kulune_muhtac": PhraseFamily(
+        id="tr_komsu_komshunun_kulune_muhtac",
+        language="tr",
+        canonical_form="Komşu komşunun külüne muhtaçtır",
+        meaning=(
+            "A neighbor needs even a neighbor's ashes; neighbors depend on each other"
+            "even for the smallest things."
+        ),
+        register="neutral",
+        origin=(
+            "Turkish proverb emphasising mutual interdependence in community life. "
+            "Küle (ashes) was historically valuable for soap-making and fire- "
+            "starting, making even ash a commodity worth sharing."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Komşu komşunun külüne muhtaçtır",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "tr_bal_tutan_parmaginini_yalar": PhraseFamily(
+        id="tr_bal_tutan_parmaginini_yalar",
+        language="tr",
+        canonical_form="Bal tutan parmağını yalar",
+        meaning=(
+            "He who handles honey licks his fingers; those who are close to something"
+            "desirable will benefit from it."
+        ),
+        register="neutral",
+        origin=(
+            "Turkish proverb; used to explain how proximity to resources leads to "
+            "personal benefit, whether or not intentionally."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Bal tutan parmağını yalar",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "tr_insanlik_ol_hayvanlik_gelir": PhraseFamily(
+        id="tr_insanlik_ol_hayvanlik_gelir",
+        language="tr",
+        canonical_form="İnsanlık elden giderse hayvanlık gelir",
+        meaning=(
+            "If humanity leaves, animality returns; when moral constraints break"
+            "down, brutality follows."
+        ),
+        register="formal",
+        origin=(
+            "Turkish proverb invoking the traditional concept of insanlık "
+            "(humaneness, civilised conduct) as the defining quality of the human "
+            "being. Loss of insanlık is equivalent to moral regression."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="İnsanlık elden giderse hayvanlık gelir",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="insanlık",
+                match_type=MatchType.allusion,
+                note="The concept of insanlık — humaneness/decency — often invoked alone as a cultural touchstone.",
+            ),
+        ),
+    ),
+
+    "tr_akil_akil_dan_usturun": PhraseFamily(
+        id="tr_akil_akil_dan_usturun",
+        language="tr",
+        canonical_form="Akıl akıldan üstündür",
+        meaning="One mind is better than another mind; two heads are better than one.",
+        register="neutral",
+        origin=(
+            "Turkish proverb advocating consultation and collective wisdom over "
+            "individual judgment."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Akıl akıldan üstündür",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "tr_hayir_dua_ile_yurt_olmaz": PhraseFamily(
+        id="tr_hayir_dua_ile_yurt_olmaz",
+        language="tr",
+        canonical_form="Hayır dua ile yurt olmaz",
+        meaning=(
+            "A homeland is not built on prayers alone; good wishes must be backed by"
+            "action."
+        ),
+        register="formal",
+        origin=(
+            "Turkish proverb emphasising that patriotic piety without practical "
+            "effort achieves nothing. Often cited in political and civic contexts."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Hayır dua ile yurt olmaz",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "tr_iste_yildizi_vurulan": PhraseFamily(
+        id="tr_iste_yildizi_vurulan",
+        language="tr",
+        canonical_form="Yıldızı parlamak",
+        meaning="For one's star to shine; to rise to success, to be in one's element.",
+        register="neutral",
+        origin=(
+            "Turkish idiom; the image of a star shining brightly represents a person "
+            "at the peak of their powers or luck. Used both literally of celebrities "
+            "and metaphorically of any person thriving."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Yıldızı parlamak",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="yıldızı parladı",
+                match_type=MatchType.inflectional_variant,
+                note="Past form: 'his/her star shone' — success arrived.",
+            ),
+        ),
+    ),
+
+    "tr_gulen_yuz_her_kapi_acar": PhraseFamily(
+        id="tr_gulen_yuz_her_kapi_acar",
+        language="tr",
+        canonical_form="Gülen yüz her kapıyı açar",
+        meaning=(
+            "A smiling face opens every door; friendliness and warmth overcome"
+            "obstacles."
+        ),
+        register="neutral",
+        origin=(
+            "Turkish proverb; the image of doors opening to a warm smile reflects the "
+            "cultural value placed on hospitality (misafirperverlik) and social grace "
+            "in Turkish culture."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Gülen yüz her kapıyı açar",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    # ── Fi (generated) ────────────────────────────────────────
+
+    "fi_työ_tekijäänsä_kiittää": PhraseFamily(
+        id="fi_työ_tekijäänsä_kiittää",
+        language="fi",
+        canonical_form="Työ tekijäänsä kiittää",
+        meaning="Work praises its doer; good work speaks for itself.",
+        register="neutral",
+        origin=(
+            "Finnish proverb (sananlaskut). The phrasing 'the work thanks the one who "
+            "does it' captures the Finnish cultural emphasis on the intrinsic value "
+            "of skilled labour and craftsmanship."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Työ tekijäänsä kiittää",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fi_kukaan_ei_ole_seppä_syntyessään": PhraseFamily(
+        id="fi_kukaan_ei_ole_seppä_syntyessään",
+        language="fi",
+        canonical_form="Kukaan ei ole seppä syntyessään",
+        meaning=(
+            "Nobody is born a blacksmith; skill comes from practice, not innate"
+            "talent."
+        ),
+        register="neutral",
+        origin=(
+            "Finnish proverb; the blacksmith (seppä) is the archetypal master "
+            "craftsman in Finnish folk tradition, appearing in the Kalevala. The "
+            "proverb asserts that mastery is acquired, not inherited."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Kukaan ei ole seppä syntyessään",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fi_niin_metsä_vastaa_kuin_sinne_huudetaan": PhraseFamily(
+        id="fi_niin_metsä_vastaa_kuin_sinne_huudetaan",
+        language="fi",
+        canonical_form="Niin metsä vastaa kuin sinne huudetaan",
+        meaning="The forest answers as you call into it; you get back what you give.",
+        register="neutral",
+        origin=(
+            "Finnish proverb; the forest (metsä) is the central environment of "
+            "traditional Finnish life and mythology. The echo phenomenon — your shout "
+            "returns to you — is the concrete image for the moral principle of "
+            "reciprocity."
+        ),
+        why_it_matters=(
+            "The forest plays a unique role in Finnish culture and Kalevala "
+            "mythology; this proverb connects everyday observation with deep "
+            "ecological and ethical values."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Niin metsä vastaa kuin sinne huudetaan",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fi_parempi_pyy_pivossa": PhraseFamily(
+        id="fi_parempi_pyy_pivossa",
+        language="fi",
+        canonical_form="Parempi pyy pivossa kuin kymmenen oksalla",
+        meaning=(
+            "Better a hazel grouse in hand than ten on a branch; a certain lesser"
+            "reward is worth more than an uncertain greater one."
+        ),
+        register="neutral",
+        origin=(
+            "Finnish version of 'a bird in the hand is worth two in the bush'; using "
+            "the pyy (hazel grouse, Bonasa bonasia), a native Finnish woodland bird, "
+            "rather than the English sparrow. Attested in early Finnish proverb "
+            "collections."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Parempi pyy pivossa kuin kymmenen oksalla",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fi_ei_savua_ilman_tulta": PhraseFamily(
+        id="fi_ei_savua_ilman_tulta",
+        language="fi",
+        canonical_form="Ei savua ilman tulta",
+        meaning="No smoke without fire; every rumour has some basis in reality.",
+        register="neutral",
+        origin=(
+            "Finnish proverb; parallel to the Latin ubi fumus ibi ignis and the "
+            "international proverbial tradition. The logic of visible smoke implying "
+            "fire is universal, but the Finnish form is distinctly idiomatic."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Ei savua ilman tulta",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fi_hyvin_suunniteltu_on_puoliksi_tehty": PhraseFamily(
+        id="fi_hyvin_suunniteltu_on_puoliksi_tehty",
+        language="fi",
+        canonical_form="Hyvin suunniteltu on puoliksi tehty",
+        meaning="Well planned is half done; thorough preparation makes the task easier.",
+        register="neutral",
+        origin=(
+            "Finnish proverb; consistent with the practical Finnish value of careful "
+            "preparation (associated with the concept of sisu applied to planning "
+            "rather than endurance)."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Hyvin suunniteltu on puoliksi tehty",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fi_laiskalle_kaksi_kertaa_tekemistä": PhraseFamily(
+        id="fi_laiskalle_kaksi_kertaa_tekemistä",
+        language="fi",
+        canonical_form="Laiskalle kaksi kertaa tekemistä",
+        meaning="The lazy person does it twice; cutting corners leads to extra work.",
+        register="neutral",
+        origin=(
+            "Finnish proverb equivalent to 'if a job is worth doing, it is worth "
+            "doing well.' The logic: a lazy first attempt requires a second correct "
+            "attempt, doubling the total effort."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Laiskalle kaksi kertaa tekemistä",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fi_ei_pidä_myydä_karhua": PhraseFamily(
+        id="fi_ei_pidä_myydä_karhua",
+        language="fi",
+        canonical_form="Ei pidä myydä karhua ennen kuin se on kaadettu",
+        meaning=(
+            "Do not sell the bear before you have killed it; don't count on things"
+            "not yet achieved."
+        ),
+        register="neutral",
+        origin=(
+            "Finnish proverb parallel to 'don't count your chickens before they "
+            "hatch.' The bear hunt (an important cultural and ritual activity in "
+            "Finnish and Finno-Ugric tradition) is the image."
+        ),
+        why_it_matters=(
+            "The bear (karhu) holds special significance in Finnish mythology — it is "
+            "taboo-named (ursus/bjǫrn were avoided in proto-Finno-Ugric cultures), "
+            "reflecting deep cultural roots."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Ei pidä myydä karhua ennen kuin se on kaadettu",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="Ei myydä karhua ennen kun se on kaadettu",
+                match_type=MatchType.inflectional_variant,
+                note="Slightly abbreviated colloquial form.",
+            ),
+        ),
+    ),
+
+    "fi_sisu": PhraseFamily(
+        id="fi_sisu",
+        language="fi",
+        canonical_form="sisu",
+        meaning=(
+            "Stoic, stubborn perseverance in the face of extreme adversity; the"
+            "Finnish national concept of inner grit."
+        ),
+        register="neutral",
+        origin=(
+            "Finnish cultural concept with no direct English equivalent; related "
+            "etymologically to sisukas ('gritty') and sisus ('inner being'). "
+            "Popularised internationally after the Finnish-Soviet Winter War "
+            "(1939–40). The concept pre-dates recorded history in Finnish folk "
+            "culture."
+        ),
+        why_it_matters=(
+            "Often considered untranslatable; Emilia Lahti's academic work (2019) "
+            "describes it as 'action mindset' — the capacity to sustain effort beyond "
+            "apparent psychological limits. Understanding sisu is essential to "
+            "understanding modern Finnish identity."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="sisu",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="sisukas",
+                match_type=MatchType.allusion,
+                note="Adjective form: 'gritty, determined.' 'Hänellä on sisu' — 'she has sisu.'",
+            ),
+        ),
+    ),
+
+    "fi_kaikki_hyvä_loppuu_aikanaan": PhraseFamily(
+        id="fi_kaikki_hyvä_loppuu_aikanaan",
+        language="fi",
+        canonical_form="Kaikki hyvä loppuu aikanaan",
+        meaning="All good things come to an end in their time.",
+        register="neutral",
+        origin=(
+            "Finnish proverb; the phrase aikanaan ('in its time/eventually') adds a "
+            "note of acceptance, framing the ending as natural rather than merely "
+            "negative."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Kaikki hyvä loppuu aikanaan",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fi_mitä_taakseen_jättää_sen_edestään_löytää": PhraseFamily(
+        id="fi_mitä_taakseen_jättää_sen_edestään_löytää",
+        language="fi",
+        canonical_form="Mitä taakseen jättää, sen edestään löytää",
+        meaning=(
+            "What you leave behind you, you will find ahead of you; your past actions"
+            "confront you in the future."
+        ),
+        register="neutral",
+        origin=(
+            "Finnish proverb of karmic or consequential resonance; the spatial "
+            "metaphor of past becoming future path captures cause and effect "
+            "elegantly."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Mitä taakseen jättää, sen edestään löytää",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fi_aika_on_rahaa": PhraseFamily(
+        id="fi_aika_on_rahaa",
+        language="fi",
+        canonical_form="Aika on rahaa",
+        meaning="Time is money.",
+        register="neutral",
+        origin=(
+            "Finnish adaptation of Benjamin Franklin's 'time is money' (Advice to a "
+            "Young Tradesman, 1748); the phrase entered Finnish common usage in the "
+            "19th-century industrialisation period. Now fully domesticated."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Aika on rahaa",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fi_kalevala_sampo": PhraseFamily(
+        id="fi_kalevala_sampo",
+        language="fi",
+        canonical_form="Sampo",
+        meaning=(
+            "The Sampo; a magical artifact of boundless wealth and abundance in"
+            "Finnish mythology."
+        ),
+        register="literary",
+        origin=(
+            "Central motif of the Kalevala (compiled by Elias Lönnrot from Finnish "
+            "folk poetry, published 1835/1849); the Sampo is forged by the smith "
+            "Ilmarinen, stolen by the heroes, and eventually lost at sea in the "
+            "battle between Kalevala and Pohjola. Its exact nature is never described "
+            "— a matter of scholarly debate."
+        ),
+        why_it_matters=(
+            "The Sampo is a symbol of Finnish national identity and imaginative "
+            "heritage; Tolkien's Ring of Power is partly influenced by this "
+            "tradition. References appear across Finnish art, design, and brand "
+            "names."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Sampo",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fi_vanha_koira_uusia_temppuja": PhraseFamily(
+        id="fi_vanha_koira_uusia_temppuja",
+        language="fi",
+        canonical_form="Vanhalle koiralle ei opi uusia temppuja",
+        meaning=(
+            "You can't teach an old dog new tricks; it is difficult to change deeply"
+            "ingrained habits."
+        ),
+        register="neutral",
+        origin=(
+            "Finnish proverb parallel to English 'you can't teach an old dog new "
+            "tricks'; the dog (koira) imagery is shared across European proverb "
+            "traditions, suggesting common stock."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Vanhalle koiralle ei opi uusia temppuja",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="vanha koira",
+                match_type=MatchType.allusion,
+                note="Allusive shortening: 'old dog' as a label for someone resistant to change.",
+            ),
+        ),
+    ),
+
+    "fi_luonto_kutsuu": PhraseFamily(
+        id="fi_luonto_kutsuu",
+        language="fi",
+        canonical_form="Luonto kutsuu",
+        meaning="Nature is calling; a polite euphemism for needing to use the toilet.",
+        register="informal",
+        origin=(
+            "Finnish colloquial euphemism; luonto (nature) is used because going to "
+            "relieve oneself outdoors was historically common in rural Finland. Now "
+            "the phrase is used with gentle humour in modern speech."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Luonto kutsuu",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fi_kaiken_takana_on_nainen": PhraseFamily(
+        id="fi_kaiken_takana_on_nainen",
+        language="fi",
+        canonical_form="Kaiken takana on nainen",
+        meaning=(
+            "Behind everything there is a woman; behind every great man there is a"
+            "woman."
+        ),
+        register="informal",
+        origin=(
+            "Finnish adaptation of the international proverb 'behind every great man "
+            "is a great woman'; the Finnish form omits the qualification 'great' for "
+            "the man, reflecting a somewhat more egalitarian framing."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="Kaiken takana on nainen",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
 }
 
 
