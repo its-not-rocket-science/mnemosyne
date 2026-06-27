@@ -108,7 +108,7 @@ class FarsiNuanceExtractor:
     ) -> list[CandidateObject]:
         out: list[CandidateObject] = []
         seen: set[str] = set()
-        out.extend(self._phrase_families(tokens))
+        out.extend(self._phrase_families(sentence))
         out.extend(self._ra_accusative(tokens, seen))
         out.extend(self._nami_negative(sentence, seen))
         out.extend(self._mi_imperfective(sentence, seen))
@@ -119,9 +119,13 @@ class FarsiNuanceExtractor:
 
     # ------------------------------------------------------------------
 
-    def _phrase_families(self, tokens: list[Any]) -> list[CandidateObject]:
+    def _phrase_families(self, sentence: str) -> list[CandidateObject]:
         from backend.dictionary.phrase_families import match_phrase_families
-        return match_phrase_families([_tok_surface(t) for t in tokens], self.language)
+        # Whitespace-split preserves ZWNJ compound verbs as single tokens;
+        # the matcher's normaliser strips ZWNJ before comparison, so
+        # "می‌شمارند" normalises to "میشمارند" and matches the stored surface.
+        # Using WORD_RE-split tokens would break ZWNJ compounds into two parts.
+        return match_phrase_families(sentence.split(), self.language)
 
     def _ra_accusative(
         self, tokens: list[Any], seen: set[str]
