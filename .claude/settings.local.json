@@ -146,7 +146,24 @@
       "Bash(Read \"C:\\\\Users\\\\paul_\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-paul--PROJECTS-mnemosyne\\\\4b365214-0f85-4d2c-bee2-66bd426e5f68\\\\tasks\\\\ba84pjuxh.output\")",
       "Bash(echo \"exit=$?\")",
       "Bash(Select-String -Path \"C:\\\\Users\\\\paul_\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-paul--PROJECTS-mnemosyne\\\\4b365214-0f85-4d2c-bee2-66bd426e5f68\\\\tasks\\\\bqgdxqyew.output\" -Pattern \"passed|failed\")",
-      "Bash(Select-Object -Last 3)"
+      "Bash(Select-Object -Last 3)",
+      "Bash(FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch -f --msg-filter 'perl /c/Users/paul_/PROJECTS/mnemosyne/_strip_trailer.pl' c1882e8..main)",
+      "Bash(xargs -I{} git cat-file -p {})",
+      "Bash(xargs -n1 basename)",
+      "Bash(rm -f _smoke_catalogue.mjs)",
+      "Bash(rm -rf node_modules/playwright node_modules/.package-lock.json)",
+      "Bash(pkill -f \"http.server 8771\")",
+      "Bash(grep -oE \"^[A-Z_]+_API_KEY\" .env)",
+      "Bash(grep -oE \"^[A-Z_]+_API_KEY\" .env.example)",
+      "Bash(grep -l \"^import requests\\\\|^import urllib\" scripts/*.py)",
+      "Bash(grep -n \"import requests\\\\|import urllib\" scripts/*.py)",
+      "Bash(echo \"exit code: $?\")",
+      "Bash(rm -f /tmp/test_en_wiktionary.csv /tmp/test_en_wiktionary_draft.yaml /tmp/test_xx.csv)",
+      "Bash(rm -f \"C:\\\\Users\\\\paul_\\\\AppData\\\\Local\\\\Temp\\\\test_en_defs.csv\" \"C:\\\\Users\\\\paul_\\\\AppData\\\\Local\\\\Temp\\\\test_en_defs2.csv\" \"C:\\\\Users\\\\paul_\\\\AppData\\\\Local\\\\Temp\\\\test_ru.yaml\" \"C:\\\\Users\\\\paul_\\\\AppData\\\\Local\\\\Temp\\\\test_xx.csv\")",
+      "PowerShell(Get-Process *)",
+      "Bash(wait)",
+      "Bash(curl -s http://localhost:8765/health)",
+      "Bash(curl *)"
     ]
   }
 }
