@@ -1,0 +1,168 @@
+{
+  "language": "fa",
+  "plugin_module": "backend.plugins.persian",
+  "plugin_class": "PersianPlugin",
+  "nuance_extractor_module": "backend.nuance.fa",
+  "nuance_extractor_class": "FarsiNuanceExtractor",
+  "tokenizer": "words",
+  "capability_assertions": {
+    "grammar_nuance": ["partial", "strong", "gold"],
+    "formality_register": ["partial", "strong", "gold"],
+    "cultural_references": ["partial", "strong", "gold"],
+    "literary_references": ["partial", "strong", "gold"],
+    "idioms": ["none"],
+    "phrase_families": ["none"]
+  },
+  "capability_gaps": {},
+  "cases": [
+    {
+      "id": "fa_ra_accusative_01",
+      "category": "grammar_nuance",
+      "text": "من کتاب را خواندم.",
+      "note": "Extractor nuance: ra accusative marker on ketab (book)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "ra_accusative",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.9,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fa_mi_imperfective_01",
+      "category": "grammar_nuance",
+      "text": "من می‌روم به خانه.",
+      "note": "Extractor nuance: mi- imperfective preverb in mi-rvam (I am going)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "mi_imperfective",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fa_nami_negative_01",
+      "category": "grammar_nuance",
+      "text": "نمی‌دانم چرا اینجا آمد.",
+      "note": "Extractor nuance: nami- negative imperfective preverb in nami-danam (I don't know)",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "nami_negative",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fa_negation_nist_01",
+      "category": "grammar_nuance",
+      "text": "او اینجا نیست.",
+      "note": "Extractor nuance: nist (is not) -- negative present-tense copula",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "negation_nist",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.85,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fa_formality_shoma_01",
+      "category": "grammar_nuance",
+      "text": "شما کجا می‌روید؟",
+      "note": "Extractor nuance: shoma (formal/polite you) formality register",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "formality_shoma",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fa_formality_to_01",
+      "category": "grammar_nuance",
+      "text": "تو کتاب داری؟",
+      "note": "Extractor nuance: to (informal you) formality register",
+      "pipeline": "extractor",
+      "assert_types_present": ["nuance"],
+      "assert_types_absent": [],
+      "assert_nuance_type": "formality_to",
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "nuance": ["nuance_type", "explanation", "register", "learner_level", "source"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fa_vocabulary_keys_01",
+      "category": "vocabulary",
+      "text": "کتاب روی میز است.",
+      "note": "All vocabulary candidates must carry lemma in lesson_data",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {
+        "vocabulary": ["lemma"]
+      },
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fa_false_positive_01",
+      "category": "false_positive",
+      "text": "کتاب خوب است.",
+      "note": "Simple sentence without ra, mi-, nist, shoma, or classical markers",
+      "pipeline": "extractor",
+      "assert_types_present": [],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": ["ra_accusative", "mi_imperfective", "nami_negative"],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fa_no_raw_uuids_01",
+      "category": "vocabulary",
+      "text": "دانش‌آموز کتاب را به مدرسه برد.",
+      "note": "Verify no UUID-format strings leak into any lesson_data field",
+      "pipeline": "plugin",
+      "assert_types_present": ["vocabulary"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": null,
+      "confidence_ge": null,
+      "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    }
+  ]
+}
