@@ -100,6 +100,10 @@ _SENTENCES: dict[str, list[str]] = {
         "ἡ αἴλουρος καθεύδει.",
         "αὕτη λέγει ἑκάστης ἡμέρας.",
     ],
+    "fa": [
+        "کتاب را خواندم.",
+        "من می‌روم به خانه.",
+    ],
 }
 _FALLBACK = ["Hello world.", "The cat sat on the mat."]
 
