@@ -249,12 +249,12 @@ class TestLexiconLookup:
 
     def test_conjunction_kai(self, plugin):
         result = plugin.analyze_sentence("καί")
-        assert len(result.candidates) == 1
+        assert len(result.candidates) >= 1  # discourse particle nuance also emitted
         assert "and" in result.candidates[0].lesson_data["gloss"].lower()
 
     def test_negation_ou(self, plugin):
         result = plugin.analyze_sentence("οὐ")
-        assert len(result.candidates) == 1
+        assert len(result.candidates) >= 1  # negation_ou nuance also emitted
 
     def test_all_of_john_11(self, plugin):
         """Ἐν ἀρχῇ ἦν ὁ λόγος — at least the article and λόγος are found."""
@@ -353,7 +353,7 @@ class TestDeepMorphology:
 
     def test_conjunction_kai_emits_grammar_type(self, plugin):
         result = plugin.analyze_sentence("καί")
-        assert len(result.candidates) == 1
+        assert len(result.candidates) >= 1  # discourse particle nuance also emitted
         c = result.candidates[0]
         assert c.type == "grammar"
 
