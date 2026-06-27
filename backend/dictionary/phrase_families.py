@@ -15149,6 +15149,7 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
             "Persian literary value placed on measured, careful speech — the opposite "
             "of the Western ideal of frank self-expression."
         ),
+        confusables=("he_tov_shem_mishemen_tov",),
         variants=(
             PhraseVariant(
                 surface="زبان سرخ سر سبز می‌دهد بر باد",
@@ -15230,7 +15231,7 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
             "Used to argue that individual effort is insufficient without "
             "partnership, collective effort, or a counterpart."
         ),
-        confusables=("tr_bir_elin_nesi_var_iki_elin_sesi_var",),
+        confusables=("tr_bir_elin_nesi_var_iki_elin_sesi_var", "he_kol_yisrael_arevim_zeh_bazeh",),
         variants=(
             PhraseVariant(
                 surface="یک دست صدا ندارد",
@@ -15328,6 +15329,475 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
                 surface="خشت اول کج",
                 match_type=MatchType.allusion,
                 note="Compressed reference: 'the first brick is crooked'; the full couplet is implied.",
+            ),
+        ),
+    ),
+
+    # ── He (generated) ────────────────────────────────────────
+
+    "he_ein_chadash_tachat_hashemesh": PhraseFamily(
+        id="he_ein_chadash_tachat_hashemesh",
+        language="he",
+        canonical_form="אין חדש תחת השמש",
+        meaning=(
+            "There is nothing new under the sun; all apparently novel things are"
+            "recurrences of what has happened before."
+        ),
+        register="literary",
+        origin=(
+            "Ecclesiastes (Kohelet) 1:9, attributed in the text to Kohelet "
+            "(traditionally Solomon). One of the most quoted biblical phrases in both "
+            "Hebrew and world literature, invoked to deflate claims of originality or "
+            "to express world-weary cynicism about novelty. The Vulgate rendered it "
+            "'nihil sub sole novum', giving the phrase currency across European "
+            "intellectual culture for two millennia."
+        ),
+        why_it_matters=(
+            "Instantly recognizable to any Hebrew reader. Knowing the Hebrew source "
+            "helps decode allusions in Israeli public discourse and literature."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="אין חדש תחת השמש",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_hevel_havalim": PhraseFamily(
+        id="he_hevel_havalim",
+        language="he",
+        canonical_form="הבל הבלים הכל הבל",
+        meaning=(
+            "Vanity of vanities, all is vanity; human endeavors are ephemeral and"
+            "ultimately without lasting value."
+        ),
+        register="literary",
+        origin=(
+            "Ecclesiastes 1:2, opening declaration of Kohelet (traditionally "
+            "Solomon). Hevel literally means 'breath' or 'vapor' — something "
+            "insubstantial that dissipates. The superlative construction havel "
+            "havalim (vapor of vapors) is the Hebrew idiom for the absolute "
+            "superlative, as in shir hashirim (Song of Songs). The phrase has become "
+            "the archetypal statement of existential futility across world "
+            "literature."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="הבל הבלים הכל הבל",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="הבל הבלים",
+                match_type=MatchType.allusion,
+                note="First two words alone, used as shorthand for futility or impermanence.",
+            ),
+        ),
+    ),
+
+    "he_et_lachol_zman": PhraseFamily(
+        id="he_et_lachol_zman",
+        language="he",
+        canonical_form="לכל זמן ועת לכל חפץ",
+        meaning=(
+            "To everything there is a season, and a time for every purpose; acting at"
+            "the right moment matters as much as acting at all."
+        ),
+        register="literary",
+        origin=(
+            "Ecclesiastes 3:1, followed by the famous paired catalogue of opposites — "
+            "a time to be born and a time to die, a time to plant and a time to "
+            "uproot. Widely cited in Hebrew ethical literature to counsel patience "
+            "and timing-awareness. Popularised globally by Pete Seeger's 'Turn! Turn! "
+            "Turn!' (1959), which set the biblical text almost verbatim."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="לכל זמן ועת לכל חפץ",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="עת לכל חפץ",
+                match_type=MatchType.allusion,
+                note="Compressed form; used to indicate that the proper time for something exists and must be found.",
+            ),
+        ),
+    ),
+
+    "he_tov_shem_mishemen_tov": PhraseFamily(
+        id="he_tov_shem_mishemen_tov",
+        language="he",
+        canonical_form="טוב שם משמן טוב",
+        meaning=(
+            "A good name is better than precious oil; reputation outlasts material"
+            "wealth."
+        ),
+        register="literary",
+        origin=(
+            "Ecclesiastes 7:1. Shemen tov (fine anointing oil) was among the most "
+            "valuable commodities of the ancient Near East, used in ritual, cosmetic, "
+            "and diplomatic contexts. Sa'di's Persian parallel (zaban sorkh sar sabz "
+            "mi-dahad bar bad) makes the inverse point: careless speech destroys the "
+            "good name. Together they frame the classical equation: reputation is "
+            "priceless; speech is its primary threat."
+        ),
+        confusables=("fa_zaban_sorkh_sar_sabz",),
+        variants=(
+            PhraseVariant(
+                surface="טוב שם משמן טוב",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="טוב שם",
+                match_type=MatchType.allusion,
+                note="Two-word shorthand for a good reputation.",
+            ),
+        ),
+    ),
+
+    "he_lo_alecha_hamelakha": PhraseFamily(
+        id="he_lo_alecha_hamelakha",
+        language="he",
+        canonical_form="לא עליך המלאכה לגמור ולא אתה בן חורין ליבטל ממנה",
+        meaning=(
+            "It is not your duty to complete the work, but you are not free to desist"
+            "from it; the obligation is effort, not guaranteed success."
+        ),
+        register="formal",
+        origin=(
+            "Pirkei Avot 2:16, attributed to Rabbi Tarfon (late 1st to early 2nd "
+            "century CE). Addresses the anxiety of facing tasks too large for one "
+            "person — legal, ethical, or communal. Applied today to education, social "
+            "justice, environmental activism, and any long-horizon project."
+        ),
+        why_it_matters=(
+            "One of the most practically cited Talmudic principles in modern Israeli "
+            "discourse. Encountering it in policy, education, or activism contexts is "
+            "common."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="לא עליך המלאכה לגמור ולא אתה בן חורין ליבטל ממנה",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="לא עליך המלאכה לגמור",
+                match_type=MatchType.allusion,
+                note="First clause alone; used to excuse incomplete results without abandoning the obligation to try.",
+            ),
+        ),
+    ),
+
+    "he_al_tidin_et_chavercha": PhraseFamily(
+        id="he_al_tidin_et_chavercha",
+        language="he",
+        canonical_form="אל תדין את חברך עד שתגיע למקומו",
+        meaning=(
+            "Do not judge your fellow until you have reached his place; withhold"
+            "judgment until you truly understand another's circumstances."
+        ),
+        register="formal",
+        origin=(
+            "Pirkei Avot 2:4, attributed to Hillel the Elder (1st century BCE to 1st "
+            "century CE). The Hebrew makom (place) carries both physical and "
+            "existential meaning — literally the location, but also the "
+            "circumstances, history, and inner life. The injunction is not relativism "
+            "but epistemological humility: you cannot know enough to judge. "
+            "Functionally parallel to the English 'walk a mile in someone's shoes', "
+            "but originating independently."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="אל תדין את חברך עד שתגיע למקומו",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="אל תדין את חברך",
+                match_type=MatchType.allusion,
+                note="Compressed form; a warning against hasty judgment of others.",
+            ),
+        ),
+    ),
+
+    "he_eizehu_ashir_hasameyach_bechelko": PhraseFamily(
+        id="he_eizehu_ashir_hasameyach_bechelko",
+        language="he",
+        canonical_form="איזהו עשיר השמח בחלקו",
+        meaning=(
+            "Who is rich? The one who rejoices in his portion; contentment is the"
+            "true measure of wealth."
+        ),
+        register="formal",
+        origin=(
+            "Pirkei Avot 4:1, attributed to Ben Zoma (2nd century CE). He answers "
+            "four parallel questions about wisdom, strength, wealth, and honor by "
+            "inverting conventional definitions. Wealth redefined as contentment "
+            "rather than accumulation is a cornerstone of rabbinic ethics. The full "
+            "four-part teaching (eizehu chacham / gibor / ashir / mechubad) is among "
+            "the most memorized passages of Avot."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="איזהו עשיר השמח בחלקו",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="השמח בחלקו",
+                match_type=MatchType.allusion,
+                note="Predicate phrase alone: 'one who rejoices in his portion'; used as a character description.",
+            ),
+        ),
+    ),
+
+    "he_im_ein_ani_li": PhraseFamily(
+        id="he_im_ein_ani_li",
+        language="he",
+        canonical_form="אם אין אני לי מי לי וכשאני לעצמי מה אני ואם לא עכשיו אימתי",
+        meaning=(
+            "If I am not for myself, who will be for me? And if I am only for myself,"
+            "what am I? And if not now, when? — the tension between self-reliance,"
+            "collective responsibility, and urgency."
+        ),
+        register="formal",
+        origin=(
+            "Pirkei Avot 1:14, attributed to Hillel the Elder. Three questions in "
+            "productive tension: the first mandates self-advocacy; the second warns "
+            "against pure self-interest; the third demands present action. Widely "
+            "applied to individual psychology, political organizing, and ethical "
+            "awakening."
+        ),
+        why_it_matters=(
+            "The final phrase (ve'im lo akhshav eimatai — 'if not now, when?') "
+            "circulates independently in Hebrew and English as a call to present "
+            "action. Recognising all three questions reveals the full ethical balance "
+            "Hillel intended."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="אם אין אני לי מי לי וכשאני לעצמי מה אני ואם לא עכשיו אימתי",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ואם לא עכשיו אימתי",
+                match_type=MatchType.allusion,
+                note="Final clause alone; widely used as an independent call to present action.",
+            ),
+        ),
+    ),
+
+    "he_ve_ahavta_lereakha_kamokha": PhraseFamily(
+        id="he_ve_ahavta_lereakha_kamokha",
+        language="he",
+        canonical_form="ואהבת לרעך כמוך",
+        meaning=(
+            "Love your neighbor as yourself — the foundational ethical command of"
+            "Leviticus, identified by Hillel as the entire Torah in brief."
+        ),
+        register="formal",
+        origin=(
+            "Leviticus 19:18. When a convert challenged Hillel to teach the entire "
+            "Torah while standing on one foot, Hillel replied: 'What is hateful to "
+            "you, do not do to your neighbor — that is the entire Torah; the rest is "
+            "commentary; go and learn' (Talmud Shabbat 31a). The verse itself is the "
+            "positive formulation; Hillel's negative restatement is the more widely "
+            "cited teaching globally. Both carry enormous weight in Jewish, "
+            "Christian, and humanist ethics."
+        ),
+        why_it_matters=(
+            "The most universally recognized verse of Leviticus. Recognising Hillel's "
+            "commentary on it (Shabbat 31a) connects the Biblical command to rabbinic "
+            "reinterpretation and the development of the Golden Rule across "
+            "traditions."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="ואהבת לרעך כמוך",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_galgal_hozer_baolam": PhraseFamily(
+        id="he_galgal_hozer_baolam",
+        language="he",
+        canonical_form="גלגל הוא שחוזר בעולם",
+        meaning=(
+            "A wheel it is that turns in the world; fortune is cyclical, and those"
+            "who are high may fall as those who fell may rise."
+        ),
+        register="neutral",
+        origin=(
+            "Talmud Bavli, Shabbat 151b, attributed to Rava bar Meri. Appears in a "
+            "discussion on the obligations of the wealthy toward the poor: because "
+            "the wheel of fortune turns, today's wealthy may be tomorrow's poor, so "
+            "generosity is not just charity but prudent solidarity. The image "
+            "parallels the classical Fortuna's wheel. In modern Israeli Hebrew, "
+            "'galgal hozer' is used colloquially when fortunes reverse unexpectedly."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="גלגל הוא שחוזר בעולם",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="גלגל חוזר",
+                match_type=MatchType.allusion,
+                note="Compressed modern form: 'the wheel turns'; used in everyday Israeli speech.",
+            ),
+        ),
+    ),
+
+    "he_derech_eretz_kadma_letorah": PhraseFamily(
+        id="he_derech_eretz_kadma_letorah",
+        language="he",
+        canonical_form="דרך ארץ קדמה לתורה",
+        meaning=(
+            "Proper conduct (derekh eretz) precedes Torah; good character and social"
+            "ethics come before religious learning."
+        ),
+        register="formal",
+        origin=(
+            "Yalkut Shimoni (medieval midrashic anthology). Derekh eretz (literally "
+            "'the way of the land') encompasses basic human ethics, social manners, "
+            "and practical wisdom. The teaching argues that Torah study divorced from "
+            "ethical conduct is incomplete; one must first be a good person, then a "
+            "scholar. Used in modern Hebrew to argue that practical decency trumps "
+            "formal learning or religious status."
+        ),
+        why_it_matters=(
+            "Foundational in debates about Jewish education and civic life: what "
+            "comes first, character or knowledge? Recognising this phrase in Israeli "
+            "discourse signals an argument about the relationship between civic and "
+            "religious values."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="דרך ארץ קדמה לתורה",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="דרך ארץ",
+                match_type=MatchType.allusion,
+                note="The two-word phrase alone; refers broadly to basic decent conduct and social propriety.",
+            ),
+        ),
+    ),
+
+    "he_eizehu_gibor_hakovesh_yitzro": PhraseFamily(
+        id="he_eizehu_gibor_hakovesh_yitzro",
+        language="he",
+        canonical_form="איזהו גיבור הכובש את יצרו",
+        meaning=(
+            "Who is strong? One who conquers his impulse; true strength is mastery of"
+            "one's own desires, not physical prowess."
+        ),
+        register="formal",
+        origin=(
+            "Pirkei Avot 4:1, Ben Zoma (same teaching as "
+            "he_eizehu_ashir_hasameyach_bechelko). The yetzer (impulse, inclination) "
+            "— specifically the yetzer ha-ra (evil inclination) — is a central "
+            "concept in rabbinic psychology. It must be redirected rather than "
+            "eliminated. The teaching anticipates Stoic and later psychological "
+            "frameworks for self-mastery."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="איזהו גיבור הכובש את יצרו",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="הכובש את יצרו",
+                match_type=MatchType.allusion,
+                note="Predicate phrase alone: 'one who conquers his inclination'; used as a character description.",
+            ),
+        ),
+    ),
+
+    "he_kol_hamosif_gorea": PhraseFamily(
+        id="he_kol_hamosif_gorea",
+        language="he",
+        canonical_form="כל המוסיף גורע",
+        meaning=(
+            "Whoever adds, detracts; excessive elaboration on a rule or text distorts"
+            "its meaning."
+        ),
+        register="formal",
+        origin=(
+            "Talmudic hermeneutic principle derived from analysis of Genesis 3. God "
+            "told Adam not to eat from the tree; Eve quoted the command as 'do not "
+            "eat and do not touch it' — the addition 'do not touch' was not in the "
+            "original. When the serpent caused her to touch the tree without "
+            "consequence, the prohibition on eating seemed equally doubtful. The "
+            "principle extends to all legal and textual interpretation: faithful "
+            "reproduction matters; additions corrupt. Also used in modern Hebrew: "
+            "over-explanation undermines the point."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="כל המוסיף גורע",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_emor_meat_vaase_harbeh": PhraseFamily(
+        id="he_emor_meat_vaase_harbeh",
+        language="he",
+        canonical_form="אמור מעט ועשה הרבה",
+        meaning=(
+            "Say little and do much; promise sparingly and deliver generously — the"
+            "integrity of deeds over words."
+        ),
+        register="formal",
+        origin=(
+            "Pirkei Avot 1:15, attributed to Shammai (1st century BCE to 1st century "
+            "CE). One of three principles for right conduct alongside fixed Torah "
+            "study and receiving everyone with a cheerful face. The emphasis on "
+            "undercommitment and overdelivery is the inverse of empty boasting. The "
+            "folk formulation 'less talk, more action' is its secular descendant."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="אמור מעט ועשה הרבה",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "he_kol_yisrael_arevim_zeh_bazeh": PhraseFamily(
+        id="he_kol_yisrael_arevim_zeh_bazeh",
+        language="he",
+        canonical_form="כל ישראל ערבים זה בזה",
+        meaning=(
+            "All Israel is responsible for one another; collective moral"
+            "responsibility — each person's conduct affects the whole community."
+        ),
+        register="formal",
+        origin=(
+            "Talmud Bavli, Shevuot 39a. The legal context is communal atonement: can "
+            "an individual atone for a sin affecting the collective? The principle "
+            "extends far beyond: it is the foundation of Jewish communal solidarity, "
+            "mutual guarantee, and the obligation to intervene when a fellow member "
+            "of the community sins or suffers. In modern Israel, arevut hadadit "
+            "(mutual guarantee) is a central concept in civic and social policy "
+            "discourse."
+        ),
+        why_it_matters=(
+            "Underpins the institutional structure of Jewish communal organizations "
+            "globally. Recognising it in modern Israeli discourse — welfare, "
+            "security, social cohesion debates — is essential for reading Israeli "
+            "public life."
+        ),
+        confusables=("fa_yak_dast_seda_nadarad",),
+        variants=(
+            PhraseVariant(
+                surface="כל ישראל ערבים זה בזה",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ערבות הדדית",
+                match_type=MatchType.allusion,
+                note="Modern Hebrew abstract noun form: 'mutual guarantee/responsibility'; standard in Israeli civic discourse.",
             ),
         ),
     ),
