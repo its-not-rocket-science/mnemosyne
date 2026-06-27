@@ -11,4 +11,4 @@ data/lexicons/*_inflections.json
 frontend/corpora/manifest.lock.json
 backend/corpora/manifest.lock.json
 *.tmp
-node_modules/mnemosyne_language_specific.txt
+node_modules/
