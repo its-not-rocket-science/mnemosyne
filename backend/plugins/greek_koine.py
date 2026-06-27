@@ -353,7 +353,7 @@ class KoineGreekPlugin:
             cultural_references="partial",
             etymology="none",
             formality_register="none",
-            grammar_nuance="none",
+            grammar_nuance="partial",  # discourse particles, negation (οὐ/μή), verbal government, definite article
             pronunciation_tts="stub",
             transliteration="partial",
             proverb_tradition="partial",
@@ -563,7 +563,27 @@ class KoineGreekPlugin:
                         confidence=None,
                     ))
 
+        candidates.extend(self._extract_nuance(sentence, candidates, seen))
         return CandidateSentenceResult(text=sentence, candidates=candidates)
+
+    def _extract_nuance(
+        self,
+        sentence: str,
+        candidates: list[CandidateObject],
+        seen: set[str],
+    ) -> list[CandidateObject]:
+        from backend.nuance.grc import AncientGreekNuanceExtractor  # noqa: PLC0415
+
+        nuance_candidates = AncientGreekNuanceExtractor().extract_nuance(
+            sentence, sentence.split(), candidates, self.language_code
+        )
+        out: list[CandidateObject] = []
+        for cand in nuance_candidates:
+            if cand.canonical_form in seen:
+                continue
+            seen.add(cand.canonical_form)
+            out.append(cand)
+        return out
 
     def get_lesson(self, object_id: str) -> CandidateObject | None:
         return self.lesson_store.get(object_id)

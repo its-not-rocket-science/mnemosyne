@@ -160,7 +160,7 @@ class TestKnownWords:
     def test_recognises_with_macrons(self, plugin: LatinPlugin) -> None:
         # "amō" (with macron) should match the lexicon entry "amo".
         result = plugin.analyze_sentence("amō")
-        assert len(result.candidates) == 1
+        assert len(result.candidates) >= 1  # macron triggers classical_register nuance too
         c = result.candidates[0]
         assert c.lesson_data.get("gloss") is not None
 
@@ -610,12 +610,12 @@ class TestDeepMorphology:
 
     def test_conjunction_et_emits_grammar_type(self, plugin: LatinPlugin) -> None:
         result = plugin.analyze_sentence("et")
-        assert len(result.candidates) == 1
+        assert len(result.candidates) >= 1  # discourse particle nuance also emitted
         assert result.candidates[0].type == "grammar"
 
     def test_conjunction_sed_emits_grammar_type(self, plugin: LatinPlugin) -> None:
         result = plugin.analyze_sentence("sed")
-        assert len(result.candidates) == 1
+        assert len(result.candidates) >= 1  # discourse particle nuance also emitted
         assert result.candidates[0].type == "grammar"
 
     def test_noun_amor_stays_vocabulary(self, plugin: LatinPlugin) -> None:
