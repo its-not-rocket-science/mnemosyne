@@ -15040,6 +15040,7 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
             "standalone idiom meaning 'to assimilate/fit in'; learners encounter it "
             "in both proverb and standalone contexts."
         ),
+        confusables=("ar_idha_kunta_fi_qawm_fahlub_halabahum",),
         variants=(
             PhraseVariant(
                 surface="خواهی نشوی رسوا، همرنگ جماعت شو",
@@ -15179,7 +15180,7 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
             "found, the other will follow. A cornerstone of Persian ethical "
             "literature."
         ),
-        confusables=("tr_sabir_acir_meyvesi_tatli",),
+        confusables=("tr_sabir_acir_meyvesi_tatli", "ar_al_sabr_miftah_al_faraj",),
         variants=(
             PhraseVariant(
                 surface="صبر و ظفر هر دو دوستان قدیمند",
@@ -15231,7 +15232,7 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
             "Used to argue that individual effort is insufficient without "
             "partnership, collective effort, or a counterpart."
         ),
-        confusables=("tr_bir_elin_nesi_var_iki_elin_sesi_var", "he_kol_yisrael_arevim_zeh_bazeh",),
+        confusables=("tr_bir_elin_nesi_var_iki_elin_sesi_var", "he_kol_yisrael_arevim_zeh_bazeh", "ar_yad_wahida_la_tusafiq",),
         variants=(
             PhraseVariant(
                 surface="یک دست صدا ندارد",
@@ -15756,6 +15757,7 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
             "undercommitment and overdelivery is the inverse of empty boasting. The "
             "folk formulation 'less talk, more action' is its secular descendant."
         ),
+        confusables=("ar_khayr_al_kalam_ma_qalla_wa_dalla",),
         variants=(
             PhraseVariant(
                 surface="אמור מעט ועשה הרבה",
@@ -15798,6 +15800,457 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
                 surface="ערבות הדדית",
                 match_type=MatchType.allusion,
                 note="Modern Hebrew abstract noun form: 'mutual guarantee/responsibility'; standard in Israeli civic discourse.",
+            ),
+        ),
+    ),
+
+    # ── Ar (generated) ────────────────────────────────────────
+
+    "ar_al_jar_qabla_al_dar": PhraseFamily(
+        id="ar_al_jar_qabla_al_dar",
+        language="ar",
+        canonical_form="الجار قبل الدار",
+        meaning=(
+            "The neighbor before the house; choose your neighbors before you choose"
+            "your home."
+        ),
+        register="neutral",
+        origin=(
+            "Classical Arabic proverb. Attested in collections of أمثال العرب (Arabic "
+            "proverbs) and echoed in Hadith literature advising on the importance of "
+            "neighborhood. The Arabic living environment historically concentrated "
+            "neighbors as near-relatives in shared courtyard compounds; a bad "
+            "neighbor was inescapable. The proverb counsels that social environment "
+            "matters more than the physical dwelling."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="الجار قبل الدار",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_idrib_al_hadida_wahi_harra": PhraseFamily(
+        id="ar_idrib_al_hadida_wahi_harra",
+        language="ar",
+        canonical_form="اضرب الحديدة وهي حارة",
+        meaning=(
+            "Strike the iron while it is hot; act at the moment of greatest"
+            "opportunity."
+        ),
+        register="neutral",
+        origin=(
+            "Pan-cultural proverb that exists independently in Arabic, Persian, "
+            "Turkish, and European languages. In Arabic classical collections of "
+            "أمثال; the blacksmith's knowledge — that iron can only be worked molten "
+            "— maps onto the universal observation that opportunity is time- "
+            "sensitive. The Arabic form is fully integrated in MSA and all major "
+            "dialects."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="اضرب الحديدة وهي حارة",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_man_hafara_hofra_li_akhih": PhraseFamily(
+        id="ar_man_hafara_hofra_li_akhih",
+        language="ar",
+        canonical_form="من حفر حفرة لأخيه وقع فيها",
+        meaning=(
+            "Whoever digs a pit for his brother falls into it; harm planned for"
+            "others redounds on the planner."
+        ),
+        register="neutral",
+        origin=(
+            "Classical Arabic folk proverb with a parallel in Hebrew scripture "
+            "(Psalms 7:15, Proverbs 26:27). The image of the pit-digger falling into "
+            "his own trap is a universal karmic principle. In Arabic ethical "
+            "discourse it serves as a warning against scheming and a reassurance of "
+            "natural justice."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="من حفر حفرة لأخيه وقع فيها",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_al_sabr_miftah_al_faraj": PhraseFamily(
+        id="ar_al_sabr_miftah_al_faraj",
+        language="ar",
+        canonical_form="الصبر مفتاح الفرج",
+        meaning=(
+            "Patience is the key to relief; endurance unlocks the way through"
+            "difficulty."
+        ),
+        register="neutral",
+        origin=(
+            "One of the most widely cited Arabic proverbs on patience. Attributed in "
+            "various collections to Ali ibn Abi Talib (d. 661 CE) and to Prophetic "
+            "tradition. The faraj (relief, deliverance) has both worldly and divine "
+            "resonance in Islamic culture. The image of the key suits the Arabic "
+            "value of sabr (patient endurance) as an active spiritual discipline "
+            "rather than passive resignation."
+        ),
+        confusables=("fa_sabr_o_zafar",),
+        variants=(
+            PhraseVariant(
+                surface="الصبر مفتاح الفرج",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="الصبر مفتاح",
+                match_type=MatchType.allusion,
+                note="Shortened form; the key metaphor alone, used as a standalone encouragement.",
+            ),
+        ),
+    ),
+
+    "ar_al_tuyur_ala_ashkaliha_taqa": PhraseFamily(
+        id="ar_al_tuyur_ala_ashkaliha_taqa",
+        language="ar",
+        canonical_form="الطيور على أشكالها تقع",
+        meaning=(
+            "Birds land according to their kind; people of similar character"
+            "naturally associate."
+        ),
+        register="neutral",
+        origin=(
+            "Classical Arabic proverb in all major collections of أمثال. The Arabic "
+            "verb waqa'a (to fall/land) captures the natural gravitational pull of "
+            "like to like — birds do not choose their flock by reason but by nature. "
+            "Used to explain social clustering and to observe that a person's "
+            "associates reveal their character."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="الطيور على أشكالها تقع",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="الطيور على أشكالها",
+                match_type=MatchType.allusion,
+                note="First three words alone; shorthand for 'birds of a feather.'",
+            ),
+        ),
+    ),
+
+    "ar_khayr_al_kalam_ma_qalla_wa_dalla": PhraseFamily(
+        id="ar_khayr_al_kalam_ma_qalla_wa_dalla",
+        language="ar",
+        canonical_form="خير الكلام ما قل ودل",
+        meaning=(
+            "The best speech is that which is brief and indicative; compression and"
+            "precision are the marks of eloquence."
+        ),
+        register="formal",
+        origin=(
+            "Foundational principle of classical Arabic rhetoric (balāgha). "
+            "Attributed to various classical sages and critics. Arabic rhetorical "
+            "theory — articulated by critics such as al-Jahiz and in the Maqama "
+            "tradition — holds compression (ījāz) as the highest stylistic virtue: "
+            "the saying that carries maximum meaning in minimum words achieves what "
+            "lengthy elaboration cannot."
+        ),
+        why_it_matters=(
+            "This is the Arabic counterpart to the modern 'less is more.' Recognising "
+            "it in classical and modern contexts reveals the rhetorical values "
+            "underlying Arabic literary style."
+        ),
+        confusables=("he_emor_meat_vaase_harbeh",),
+        variants=(
+            PhraseVariant(
+                surface="خير الكلام ما قل ودل",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="ما قل ودل",
+                match_type=MatchType.allusion,
+                note="The predicate clause alone; used as a shorthand for the virtue of brevity.",
+            ),
+        ),
+    ),
+
+    "ar_li_kulli_maqam_maqal": PhraseFamily(
+        id="ar_li_kulli_maqam_maqal",
+        language="ar",
+        canonical_form="لكل مقام مقال",
+        meaning=(
+            "For every station there is appropriate speech; discourse must be matched"
+            "to its context and audience."
+        ),
+        register="formal",
+        origin=(
+            "Classical Arabic rhetorical principle, foundational in the science of "
+            "balāgha (eloquence). The maqam (station, situation) determines what is "
+            "fitting to say — tone, register, vocabulary, and length all vary with "
+            "context. Classical rhetoricians used this to organize discourse types "
+            "from royal court to marketplace."
+        ),
+        why_it_matters=(
+            "This phrase underpins the classical Arabic analysis of register and "
+            "context-appropriateness. Encountering it in modern Arabic — in "
+            "journalism, education, or diplomacy — marks an argument about "
+            "situational appropriateness of language."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="لكل مقام مقال",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_yad_wahida_la_tusafiq": PhraseFamily(
+        id="ar_yad_wahida_la_tusafiq",
+        language="ar",
+        canonical_form="يد واحدة لا تصفق",
+        meaning=(
+            "One hand cannot clap; cooperation and joint effort are needed to"
+            "accomplish anything."
+        ),
+        register="neutral",
+        origin=(
+            "Classical Arabic proverb; the physical fact that clapping requires two "
+            "hands maps onto the necessity of partnership. Parallel to the Persian یک "
+            "دست صدا ندارد (one hand makes no sound) and the Turkish bir elin nesi "
+            "var (what does one hand have?). The Arabic and Persian traditions likely "
+            "developed this image independently given its intuitive physical logic."
+        ),
+        confusables=("fa_yak_dast_seda_nadarad",),
+        variants=(
+            PhraseVariant(
+                surface="يد واحدة لا تصفق",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_idha_kunta_fi_qawm_fahlub_halabahum": PhraseFamily(
+        id="ar_idha_kunta_fi_qawm_fahlub_halabahum",
+        language="ar",
+        canonical_form="إذا كنت في قوم فاحلب حلبهم",
+        meaning=(
+            "If you are among a people, milk as they milk; adopt the customs of those"
+            "among whom you find yourself."
+        ),
+        register="neutral",
+        origin=(
+            "Classical Arabic folk proverb in collections of أمثال العرب. The milking "
+            "image — drawing on the pastoral life central to early Arabian culture — "
+            "means: perform the same tasks in the same way as the community does. "
+            "Parallel to the Latin 'when in Rome do as the Romans do' and to the "
+            "Persian همرنگ جماعت شو (take the color of the crowd). Both the Arabic "
+            "and Persian forms cite observation of natural fact (animals, dyes) as "
+            "the basis for social wisdom."
+        ),
+        confusables=("fa_khahi_nashavi_rosva",),
+        variants=(
+            PhraseVariant(
+                surface="إذا كنت في قوم فاحلب حلبهم",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="فاحلب حلبهم",
+                match_type=MatchType.allusion,
+                note="Command clause alone; the memorable imperative used in shorthand.",
+            ),
+        ),
+    ),
+
+    "ar_man_jadda_wajada": PhraseFamily(
+        id="ar_man_jadda_wajada",
+        language="ar",
+        canonical_form="من جد وجد",
+        meaning="Whoever strives, finds; diligent effort is reliably rewarded.",
+        register="neutral",
+        origin=(
+            "One of the most celebrated and widely memorized Arabic proverbs; appears "
+            "in school curricula across the Arab world and in motivational contexts. "
+            "The succinct three-word form (man-jadda-wajada) demonstrates the Arabic "
+            "rhetorical ideal: maximum meaning in minimum syllables. Often paired "
+            "with من زرع حصد (whoever sows, reaps) to form a couplet on the value of "
+            "persistent effort."
+        ),
+        why_it_matters=(
+            "Extremely common in pan-Arab educational and motivational discourse. "
+            "Memorized by most Arabic learners early in formal study."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="من جد وجد",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "ar_al_mar_bi_asgharihi": PhraseFamily(
+        id="ar_al_mar_bi_asgharihi",
+        language="ar",
+        canonical_form="المرء بأصغريه قلبه ولسانه",
+        meaning=(
+            "A person is defined by his two smallest things: his heart and his"
+            "tongue; character lies in conscience and speech, not size or strength."
+        ),
+        register="formal",
+        origin=(
+            "Attributed to Ali ibn Abi Talib (d. 661 CE), the fourth caliph and a "
+            "central figure in Islamic wisdom literature. The paradox — smallest "
+            "organs determining the whole person's moral value — is characteristic of "
+            "the aphoristic style of Nahj al-Balagha (attributed sayings of Ali). In "
+            "Arabic ethical tradition, this underlies the emphasis on qalb "
+            "(heart/conscience) as the seat of moral life and lisan (tongue) as its "
+            "expression or betrayal."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="المرء بأصغريه قلبه ولسانه",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="قلبه ولسانه",
+                match_type=MatchType.allusion,
+                note="The defining pair alone; used as shorthand for what constitutes a person's character.",
+            ),
+        ),
+    ),
+
+    "ar_dirham_wiqaya_khayr_min_qintar": PhraseFamily(
+        id="ar_dirham_wiqaya_khayr_min_qintar",
+        language="ar",
+        canonical_form="درهم وقاية خير من قنطار علاج",
+        meaning=(
+            "A dirham of prevention is better than a quintar of cure; addressing"
+            "problems early costs far less than treating them after they have grown."
+        ),
+        register="neutral",
+        origin=(
+            "Classical Arabic medical and practical wisdom. The dirham (small silver "
+            "coin) and qintar (large measure, approximately 100 kg or 100 dirhams in "
+            "various systems) represent an extreme ratio: the smallest possible "
+            "preventive action against the largest possible remedial effort. Found in "
+            "Arabic collections of حكم (wisdom sayings) and in medical literature; "
+            "parallel to Benjamin Franklin's 'an ounce of prevention is worth a pound "
+            "of cure.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="درهم وقاية خير من قنطار علاج",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="درهم وقاية",
+                match_type=MatchType.allusion,
+                note="The first two words alone; shorthand for the principle of prevention.",
+            ),
+        ),
+    ),
+
+    "ar_utlub_al_ilm_min_al_mahd": PhraseFamily(
+        id="ar_utlub_al_ilm_min_al_mahd",
+        language="ar",
+        canonical_form="اطلب العلم من المهد إلى اللحد",
+        meaning=(
+            "Seek knowledge from the cradle to the grave; learning is a lifelong"
+            "obligation with no exit."
+        ),
+        register="formal",
+        origin=(
+            "Widely attributed to the Prophet Muhammad in Islamic tradition (as a "
+            "hadith: اطلبوا العلم من المهد إلى اللحد), though hadith scholars note "
+            "the chain of transmission is weak. Regardless of origin, the saying has "
+            "become an axiom of Islamic educational culture and appears on school "
+            "buildings, university seals, and government literacy campaigns across "
+            "the Arab world. It reflects the Quranic injunction to read (iqra', 96:1) "
+            "extended over an entire lifetime."
+        ),
+        why_it_matters=(
+            "One of the most recognized Arabic educational slogans. Encountering it "
+            "on buildings, in speeches, or in texts signals the Islamic framing of "
+            "knowledge-seeking as religious duty."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="اطلب العلم من المهد إلى اللحد",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="اطلب العلم",
+                match_type=MatchType.allusion,
+                note="The imperative alone; common shorthand for the obligation to pursue knowledge.",
+            ),
+        ),
+    ),
+
+    "ar_lissan_al_hal_ablag_min_lissan_al_maqal": PhraseFamily(
+        id="ar_lissan_al_hal_ablag_min_lissan_al_maqal",
+        language="ar",
+        canonical_form="لسان الحال أبلغ من لسان المقال",
+        meaning=(
+            "The tongue of state (what a situation shows) is more eloquent than the"
+            "tongue of speech; actions and circumstances speak more truthfully than"
+            "words."
+        ),
+        register="formal",
+        origin=(
+            "Classical Arabic rhetorical and wisdom tradition. Lisan al-hal (tongue "
+            "of condition/state) refers to what circumstances demonstrate without "
+            "being said — the non-verbal reality of a situation. Lisan al-maqal "
+            "(tongue of speech) is explicit verbal assertion. The proverb encodes the "
+            "Arabic rhetorical insight that observable reality outweighs verbal "
+            "claim, and is widely cited in Islamic ethical literature on sincerity "
+            "and truthfulness."
+        ),
+        why_it_matters=(
+            "Frequently cited in Arabic discourse whenever someone claims one thing "
+            "while their situation demonstrates another. Recognising it helps decode "
+            "appeals to observable evidence over stated position."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="لسان الحال أبلغ من لسان المقال",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="لسان الحال",
+                match_type=MatchType.allusion,
+                note="First two words alone; 'the tongue of state' — what conditions show without being said.",
+            ),
+        ),
+    ),
+
+    "ar_al_hurr_taqfih_al_ishara": PhraseFamily(
+        id="ar_al_hurr_taqfih_al_ishara",
+        language="ar",
+        canonical_form="الحر تكفيه الإشارة",
+        meaning=(
+            "For a person of honor, a hint suffices; those with good character and"
+            "intelligence need no explicit instruction."
+        ),
+        register="formal",
+        origin=(
+            "Classical Arabic proverb on dignity, perceptiveness, and honor. Al-hurr "
+            "(literally 'the free person') in classical Arabic carries connotations "
+            "of noble character, not merely legal freedom. The ishara (hint, gesture, "
+            "signal) is sufficient because the person of honor understands "
+            "implication and acts without needing to be told explicitly. The proverb "
+            "implicitly contrasts the person of quality with those who require blunt, "
+            "repeated instruction."
+        ),
+        why_it_matters=(
+            "Widely used in formal Arabic contexts to praise perceptiveness or to "
+            "communicate indirectly — stating that a hint has been given and "
+            "understood is itself an act of the proverb's logic."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="الحر تكفيه الإشارة",
+                match_type=MatchType.exact,
             ),
         ),
     ),
