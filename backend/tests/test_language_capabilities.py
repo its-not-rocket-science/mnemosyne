@@ -1039,15 +1039,16 @@ class TestLanguagesEndpointV3:
             )
 
     def test_dictionary_only_languages_grammar_nuance_ceiling(self) -> None:
-        # ar has 6 curated grammar signals (definite article + 5 negation particles) → up to "partial".
-        # he has 4 curated heuristic signals (definite_prefix, waw_conjunction,
-        # prefix_decomposition, biblical_register) → up to "partial".
-        # la has no grammar signals and must stay "none".
+        # ar: definite article + 5 negation particles → up to "partial".
+        # he: definite_prefix, waw_conjunction, prefix_decomposition, biblical_register → up to "partial".
+        # la: discourse particles, -que enclitic, verbal government, macron register → up to "partial".
+        # grc: discourse particles, negation (οὐ/μή), verbal government, definite article → up to "partial".
         resp = client.get("/languages")
         ceiling: dict[str, set[str]] = {
             "ar": {"none", "stub", "partial"},
             "he": {"none", "stub", "partial"},
-            "la": {"none"},
+            "la": {"none", "stub", "partial"},
+            "grc": {"none", "stub", "partial"},
         }
         for item in resp.json():
             if item["code"] not in ceiling:
@@ -1145,7 +1146,7 @@ class TestAnalysisDepthUserLabels:
     def test_morphology_light_languages_show_basic_hints_label(self) -> None:
         resp = client.get("/languages")
         # fi/hi/tr upgraded to full stanza paths; remaining are morphology_light
-        morphology_light_codes = {"zh", "grc", "la", "ar", "he"}
+        morphology_light_codes = {"grc", "la", "ar", "he"}
         for item in resp.json():
             if item["code"] in morphology_light_codes:
                 assert item["analysis_depth_label"] == "Basic grammar hints", (
