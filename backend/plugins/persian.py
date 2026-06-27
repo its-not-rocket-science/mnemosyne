@@ -100,7 +100,7 @@ class PersianPlugin:
         transliteration_scheme=None,
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
-            phrase_families="none",
+            phrase_families="partial",
             literary_references="partial",
             cultural_references="partial",
             etymology="none",
@@ -108,7 +108,7 @@ class PersianPlugin:
             grammar_nuance="partial",
             pronunciation_tts="stub",
             transliteration="none",
-            proverb_tradition="none",
+            proverb_tradition="partial",
             classical_or_scriptural_allusion="partial",
         ),
     )

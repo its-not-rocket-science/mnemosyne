@@ -81,6 +81,12 @@ class TestCapabilities:
     def test_cultural_references_partial(self, plugin: PersianPlugin) -> None:
         assert plugin.capabilities.nuance_capabilities.cultural_references == "partial"
 
+    def test_phrase_families_partial(self, plugin: PersianPlugin) -> None:
+        assert plugin.capabilities.nuance_capabilities.phrase_families == "partial"
+
+    def test_proverb_tradition_partial(self, plugin: PersianPlugin) -> None:
+        assert plugin.capabilities.nuance_capabilities.proverb_tradition == "partial"
+
 
 # ── Protocol compliance ────────────────────────────────────────────────────────
 

@@ -14264,6 +14264,7 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
                 note="First clause only; widely understood as shorthand for the full proverb.",
             ),
         ),
+        confusables=("fa_sabr_o_zafar",),
     ),
 
     "tr_ne_ekersen_onu_bicersin": PhraseFamily(
@@ -14348,6 +14349,7 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
                 match_type=MatchType.exact,
             ),
         ),
+        confusables=("fa_yak_dast_seda_nadarad",),
     ),
 
     "tr_komsu_komshunun_kulune_muhtac": PhraseFamily(
@@ -14594,6 +14596,7 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
                 match_type=MatchType.exact,
             ),
         ),
+        confusables=("fa_kachi_be_az_hichi",),
     ),
 
     "fi_ei_savua_ilman_tulta": PhraseFamily(
@@ -14683,6 +14686,7 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
                 note="Slightly abbreviated colloquial form.",
             ),
         ),
+        confusables=("fa_juje_akhar_paeez",),
     ),
 
     "fi_sisu": PhraseFamily(
@@ -14874,6 +14878,456 @@ _FAMILY_CATALOG: dict[str, PhraseFamily] = {
             PhraseVariant(
                 surface="Kaiken takana on nainen",
                 match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    # ── Fa (generated) ────────────────────────────────────────
+
+    "fa_az_kuze_haman": PhraseFamily(
+        id="fa_az_kuze_haman",
+        language="fa",
+        canonical_form="از کوزه همان برون تراود که در اوست",
+        meaning=(
+            "From the jar pours what is in it; a person's actions reveal their true"
+            "character."
+        ),
+        register="neutral",
+        origin=(
+            "Classical Persian proverb attested across Sufi and didactic literature. "
+            "The jar (kuze) that can only pour what has been put into it is a "
+            "metaphor for human character: one can only give what one possesses "
+            "inwardly. Used to explain why unexpected behaviour is actually "
+            "consistent with a person's hidden nature."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="از کوزه همان برون تراود که در اوست",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="از کوزه همان تراود که در اوست",
+                match_type=MatchType.allusion,
+                note="Compressed form omitting 'برون'; both circulate freely.",
+            ),
+        ),
+    ),
+
+    "fa_har_ke_bamash_bish": PhraseFamily(
+        id="fa_har_ke_bamash_bish",
+        language="fa",
+        canonical_form="هر که بامش بیش، برفش بیشتر",
+        meaning=(
+            "The higher the roof, the more snow it collects; greater wealth or power"
+            "brings greater burdens."
+        ),
+        register="neutral",
+        origin=(
+            "Persian proverb of folk provenance. The flat mud-brick roofs of "
+            "traditional Persian architecture accumulated snow in winter; a taller or "
+            "larger roof meant more snow to clear. The image maps naturally onto "
+            "social status: the more one has, the more one must maintain and defend."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="هر که بامش بیش، برفش بیشتر",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fa_divar_mush_darad": PhraseFamily(
+        id="fa_divar_mush_darad",
+        language="fa",
+        canonical_form="دیوار موش دارد، موش گوش دارد",
+        meaning="Walls have mice, mice have ears; be careful what you say in private.",
+        register="neutral",
+        origin=(
+            "Persian proverb parallel to the English 'walls have ears'. The image — "
+            "mice live inside walls and can overhear everything — gives an extra "
+            "physical layer of plausibility to the warning. Used to caution against "
+            "speaking freely in any space where one might be overheard."
+        ),
+        why_it_matters=(
+            "The Persian form adds a semantic chain (wall → mouse → ear) that many "
+            "learners find memorable; the structural doubling (A has B, B has C) is a "
+            "common Persian proverb pattern."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="دیوار موش دارد، موش گوش دارد",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="دیوار گوش دارد",
+                match_type=MatchType.allusion,
+                note="Compressed form: 'walls have ears'; calque of the international form.",
+            ),
+        ),
+    ),
+
+    "fa_shotor_didi_nadidi": PhraseFamily(
+        id="fa_shotor_didi_nadidi",
+        language="fa",
+        canonical_form="شتر دیدی؟ ندیدی",
+        meaning=(
+            "Did you see the camel? No, I didn't; deliberate pretence of ignorance to"
+            "avoid involvement."
+        ),
+        register="informal",
+        origin=(
+            "Persian proverb evoking the absurdity of claiming not to have seen "
+            "something as conspicuous as a camel. The camel (shotor) — large, "
+            "unmissable, associated with the caravan trade — makes the denial "
+            "obviously false. Used to describe wilful blindness or strategic "
+            "ignorance, especially when someone pretends not to notice obvious "
+            "wrongdoing."
+        ),
+        why_it_matters=(
+            "This proverb reflects a cultural archetype of strategic non-involvement "
+            "(khodamo nazar nazadan); understanding it helps with reading Persian "
+            "workplace and political humour."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="شتر دیدی؟ ندیدی",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fa_juje_akhar_paeez": PhraseFamily(
+        id="fa_juje_akhar_paeez",
+        language="fa",
+        canonical_form="جوجه را آخر پاییز می‌شمارند",
+        meaning=(
+            "Chicks are counted at the end of autumn; do not count your gains before"
+            "the outcome is certain."
+        ),
+        register="neutral",
+        origin=(
+            "Persian proverb from agricultural life. Chicks hatched in spring face "
+            "the hazards of summer — predators, disease, drought — so a farmer knows "
+            "better than to count the flock before autumn. Equivalent to 'don't count "
+            "your chickens before they hatch.'"
+        ),
+        confusables=("fi_ei_pidä_myydä_karhua",),
+        variants=(
+            PhraseVariant(
+                surface="جوجه را آخر پاییز می‌شمارند",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fa_khahi_nashavi_rosva": PhraseFamily(
+        id="fa_khahi_nashavi_rosva",
+        language="fa",
+        canonical_form="خواهی نشوی رسوا، همرنگ جماعت شو",
+        meaning=(
+            "If you do not want to be disgraced, take on the colour of the crowd;"
+            "conform to avoid social punishment."
+        ),
+        register="neutral",
+        origin=(
+            "Classical Persian proverb; the image of dye taking the colour of its "
+            "surroundings is central. Used to describe the social pressure to conform "
+            "to group norms, and sometimes cited ironically to criticise blind "
+            "conformity."
+        ),
+        why_it_matters=(
+            "The phrase همرنگ جماعت شو (become the colour of the crowd) is a "
+            "standalone idiom meaning 'to assimilate/fit in'; learners encounter it "
+            "in both proverb and standalone contexts."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="خواهی نشوی رسوا، همرنگ جماعت شو",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="همرنگ جماعت شو",
+                match_type=MatchType.allusion,
+                note="Second clause alone; used as an exhortation to conform.",
+            ),
+        ),
+    ),
+
+    "fa_aftab_amad_dalil_aftab": PhraseFamily(
+        id="fa_aftab_amad_dalil_aftab",
+        language="fa",
+        canonical_form="آفتاب آمد دلیل آفتاب",
+        meaning=(
+            "The sun itself is the proof of the sun; some truths require no argument"
+            "— they are self-evident."
+        ),
+        register="literary",
+        origin=(
+            "Rumi (Jalal al-Din Muhammad Balkhi), Masnavi-ye Ma'navi, Book I (13th "
+            "century). The couplet in full: 'آفتاب آمد دلیل آفتاب / گر دلیلت باید از "
+            "وی رو متاب' — 'The sun has come as proof of the sun; if you need proof "
+            "of it, don't turn your face from it.' Rumi's argument: divine reality is "
+            "self-illuminating and requires no external demonstration."
+        ),
+        why_it_matters=(
+            "One of the most quoted Rumi lines in Persian discourse; recognising it "
+            "signals literacy in classical Persian poetry and Sufi thought."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="آفتاب آمد دلیل آفتاب",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fa_sari_ke_dard_nemikonad": PhraseFamily(
+        id="fa_sari_ke_dard_nemikonad",
+        language="fa",
+        canonical_form="سری که درد نمی‌کند دستمال نمی‌بندند",
+        meaning=(
+            "You do not wrap a head that does not ache; do not meddle with what is"
+            "not your problem."
+        ),
+        register="neutral",
+        origin=(
+            "Persian proverb; the traditional practice of wrapping a cloth around a "
+            "painful head as a remedy gives the metaphor its logic. Extended meaning: "
+            "introducing problems by interfering needlessly, or: do not create "
+            "difficulties for yourself by seeking them out."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="سری که درد نمی‌کند دستمال نمی‌بندند",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fa_kachi_be_az_hichi": PhraseFamily(
+        id="fa_kachi_be_az_hichi",
+        language="fa",
+        canonical_form="کاچی به از هیچی",
+        meaning=(
+            "Gruel is better than nothing; something, however meagre, is preferable"
+            "to nothing."
+        ),
+        register="neutral",
+        origin=(
+            "Persian proverb. Kachi (کاچی) is a thin, bland porridge — the most "
+            "minimal of foods. Its use as the positive example underscores that any "
+            "gain, however small, beats a total absence. Parallel to 'half a loaf is "
+            "better than none.'"
+        ),
+        confusables=("fi_parempi_pyy_pivossa",),
+        variants=(
+            PhraseVariant(
+                surface="کاچی به از هیچی",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fa_zaban_sorkh_sar_sabz": PhraseFamily(
+        id="fa_zaban_sorkh_sar_sabz",
+        language="fa",
+        canonical_form="زبان سرخ سر سبز می‌دهد بر باد",
+        meaning=(
+            "A red tongue gives a green head to the wind; careless or boastful speech"
+            "leads to destruction."
+        ),
+        register="literary",
+        origin=(
+            "Sa'di Shirazi, Gulistan (1258 CE), chapter on the ethics of speech. The "
+            "image contrasts 'red tongue' (the living, speaking organ) with 'green "
+            "head' (a flourishing life, young and vigorous) — the paradox being that "
+            "the thing most alive in you destroys the rest. A classic statement of "
+            "the Persian ideal of سکوت (sokut, silence) as wisdom."
+        ),
+        why_it_matters=(
+            "This is among the most widely cited Sa'di aphorisms; it encapsulates the "
+            "Persian literary value placed on measured, careful speech — the opposite "
+            "of the Western ideal of frank self-expression."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="زبان سرخ سر سبز می‌دهد بر باد",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="زبان سرخ",
+                match_type=MatchType.allusion,
+                note="The first two words alone are used as a shorthand warning about careless speech.",
+            ),
+        ),
+    ),
+
+    "fa_sabr_o_zafar": PhraseFamily(
+        id="fa_sabr_o_zafar",
+        language="fa",
+        canonical_form="صبر و ظفر هر دو دوستان قدیمند",
+        meaning=(
+            "Patience and victory are both old friends; perseverance inevitably leads"
+            "to success."
+        ),
+        register="neutral",
+        origin=(
+            "Classical Persian proverb, widely attributed to the Sufi literary "
+            "tradition. The personification of patience (sabr) and victory (zafar) as "
+            "old companions implies that they always travel together — where one is "
+            "found, the other will follow. A cornerstone of Persian ethical "
+            "literature."
+        ),
+        confusables=("tr_sabir_acir_meyvesi_tatli",),
+        variants=(
+            PhraseVariant(
+                surface="صبر و ظفر هر دو دوستان قدیمند",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="صبر و ظفر",
+                match_type=MatchType.allusion,
+                note="Two-word shorthand; used in motivational and literary contexts.",
+            ),
+        ),
+    ),
+
+    "fa_morgh_hamsaye_qaz": PhraseFamily(
+        id="fa_morgh_hamsaye_qaz",
+        language="fa",
+        canonical_form="مرغ همسایه غاز است",
+        meaning=(
+            "The neighbour's chicken is a goose; the grass is always greener on the"
+            "other side."
+        ),
+        register="neutral",
+        origin=(
+            "Persian proverb; the goose (qaz) is larger and considered more "
+            "impressive than the ordinary chicken (morgh), yet a neighbour's ordinary "
+            "chicken appears to be a goose because it is not yours. The same logic as "
+            "the French 'l'herbe est toujours plus verte dans le pré du voisin.'"
+        ),
+        variants=(
+            PhraseVariant(
+                surface="مرغ همسایه غاز است",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fa_yak_dast_seda_nadarad": PhraseFamily(
+        id="fa_yak_dast_seda_nadarad",
+        language="fa",
+        canonical_form="یک دست صدا ندارد",
+        meaning=(
+            "One hand makes no sound; cooperation and unity are needed to achieve"
+            "anything."
+        ),
+        register="neutral",
+        origin=(
+            "Persian proverb on the necessity of cooperation. The physical fact that "
+            "a single hand cannot clap — the gesture requires two — is the image. "
+            "Used to argue that individual effort is insufficient without "
+            "partnership, collective effort, or a counterpart."
+        ),
+        confusables=("tr_bir_elin_nesi_var_iki_elin_sesi_var",),
+        variants=(
+            PhraseVariant(
+                surface="یک دست صدا ندارد",
+                match_type=MatchType.exact,
+            ),
+        ),
+    ),
+
+    "fa_gorbe_gosht_pife": PhraseFamily(
+        id="fa_gorbe_gosht_pife",
+        language="fa",
+        canonical_form="گربه دستش به گوشت نمی‌رسد، می‌گوید پیفه",
+        meaning=(
+            "When the cat cannot reach the meat, it says 'phew'; denigrating what one"
+            "cannot obtain — sour grapes."
+        ),
+        register="informal",
+        origin=(
+            "Persian proverb; the parallel to Aesop's fox and the grapes (6th century "
+            "BCE) is exact in logic. The cat's sound of disgust (pife) while staring "
+            "at inaccessible meat is the Persian cultural image for the same human "
+            "tendency. The proverb is widely used to diagnose envy disguised as "
+            "contempt."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="گربه دستش به گوشت نمی‌رسد، می‌گوید پیفه",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="پیفه گربه",
+                match_type=MatchType.allusion,
+                note="Ultra-compressed reference; understood as shorthand for sour grapes.",
+            ),
+        ),
+    ),
+
+    "fa_ab_rafte_joy": PhraseFamily(
+        id="fa_ab_rafte_joy",
+        language="fa",
+        canonical_form="آب رفته به جوی باز نمی‌گردد",
+        meaning=(
+            "Water that has flowed into the stream does not return; what is done"
+            "cannot be undone."
+        ),
+        register="neutral",
+        origin=(
+            "Persian proverb on the irreversibility of time and action. The juy (جوی, "
+            "irrigation channel) is a central feature of the traditional Persian "
+            "agricultural landscape; water once diverted downstream is gone. Used to "
+            "counsel acceptance of irreversible circumstances."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="آب رفته به جوی باز نمی‌گردد",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="آب رفته به جوی برنمی‌گردد",
+                match_type=MatchType.orthographic_variant,
+                note="باز نمی‌گردد and برنمی‌گردد are both widely attested.",
+            ),
+        ),
+    ),
+
+    "fa_khesht_avval_kaj": PhraseFamily(
+        id="fa_khesht_avval_kaj",
+        language="fa",
+        canonical_form="خشت اول چون نهد معمار کج، تا ثریا می‌رود دیوار کج",
+        meaning=(
+            "If the builder lays the first brick crooked, the wall goes crooked all"
+            "the way to the Pleiades; a bad foundation corrupts everything built upon"
+            "it."
+        ),
+        register="literary",
+        origin=(
+            "Sa'di Shirazi, Gulistan, Book VIII (on the conduct of kings). The "
+            "Pleiades (Sorayya, ثریا) — visible in the Persian sky as a tight cluster "
+            "— are used as an extreme of height. Sa'di's point: a crooked first brick "
+            "cannot be corrected by later courses. One of the most famous Persian "
+            "couplets on governance and first principles."
+        ),
+        why_it_matters=(
+            "Sa'di uses this couplet to argue that a ruler's first injustice sets the "
+            "entire polity on a crooked course. In modern Persian, خشت اول کج (the "
+            "first brick is crooked) is used whenever a project or relationship is "
+            "established on a flawed premise."
+        ),
+        variants=(
+            PhraseVariant(
+                surface="خشت اول چون نهد معمار کج، تا ثریا می‌رود دیوار کج",
+                match_type=MatchType.exact,
+            ),
+            PhraseVariant(
+                surface="خشت اول کج",
+                match_type=MatchType.allusion,
+                note="Compressed reference: 'the first brick is crooked'; the full couplet is implied.",
             ),
         ),
     ),

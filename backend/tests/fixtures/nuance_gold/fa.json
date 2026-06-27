@@ -10,8 +10,9 @@
     "formality_register": ["partial", "strong", "gold"],
     "cultural_references": ["partial", "strong", "gold"],
     "literary_references": ["partial", "strong", "gold"],
-    "idioms": ["none"],
-    "phrase_families": ["none"]
+    "phrase_families": ["partial", "strong", "gold"],
+    "proverb_tradition": ["partial", "strong", "gold"],
+    "idioms": ["none"]
   },
   "capability_gaps": {},
   "cases": [
@@ -147,6 +148,23 @@
       "assert_canonical_contains": null,
       "confidence_ge": null,
       "lesson_data_required_keys": {},
+      "no_raw_uuids": true
+    },
+    {
+      "id": "fa_phrase_family_kachi_01",
+      "category": "phrase_family",
+      "text": "کاچی به از هیچی",
+      "note": "Extractor: 'کاچی به از هیچی' -> phrase_family match (fa_kachi_be_az_hichi)",
+      "pipeline": "extractor",
+      "assert_types_present": ["phrase_family"],
+      "assert_types_absent": [],
+      "assert_nuance_type": null,
+      "assert_nuance_types_absent": [],
+      "assert_canonical_contains": "fa_kachi_be_az_hichi",
+      "confidence_ge": 0.8,
+      "lesson_data_required_keys": {
+        "phrase_family": ["family_id", "canonical_form", "meaning", "register"]
+      },
       "no_raw_uuids": true
     },
     {
