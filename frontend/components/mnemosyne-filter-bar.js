@@ -1,3 +1,5 @@
+import { t } from '../js/i18n.js'
+
 /**
  * mnemosyne-filter-bar.js — Horizontally-scrollable category filter pill bar.
  *
@@ -20,37 +22,37 @@
 const CATEGORIES = [
   {
     id:    'vocab',
-    label: 'Vocab',
+    get label() { return t('filter_vocab') || 'Vocab' },
     color: 'var(--ann-vocab)',
     types: ['vocabulary', 'lexical_item', 'word_form', 'vocab', 'word'],
   },
   {
     id:    'grammar',
-    label: 'Grammar',
+    get label() { return t('filter_grammar') || 'Grammar' },
     color: 'var(--ann-grammar)',
     types: ['grammar', 'grammatical_pattern', 'morphology', 'grammar_point', 'syntax', 'conjugation', 'agreement'],
   },
   {
     id:    'idioms',
-    label: 'Idioms',
+    get label() { return t('filter_idioms') || 'Idioms' },
     color: 'var(--ann-idiom)',
     types: ['idiom', 'expression', 'phrase', 'collocation', 'proverb', 'nuance', 'phrase_family'],
   },
   {
     id:    'literary',
-    label: 'Literary',
+    get label() { return t('filter_literary') || 'Literary' },
     color: 'var(--ann-literary)',
     types: ['literary_device', 'rhetoric', 'figure_of_speech', 'literary', 'poetic', 'nuance_or_style'],
   },
   {
     id:    'etymology',
-    label: 'Etymology',
+    get label() { return t('filter_etymology') || 'Etymology' },
     color: 'var(--ann-etymology)',
     types: ['etymology', 'derivation', 'cognate', 'root', 'script', 'transliteration'],
   },
   {
     id:    'verse',
-    label: 'Verse',
+    get label() { return t('filter_verse') || 'Verse' },
     color: 'var(--ann-literary)',
     types: ['poetic_citation'],
   },
@@ -174,24 +176,24 @@ class MnemosyneFilterBar extends HTMLElement {
     <button class="pill pill--custom" id="custom-btn" type="button"
             aria-pressed="false" aria-haspopup="dialog" aria-expanded="false"
             style="--_c:${CUSTOM_COLOR}">
-      <span id="custom-label">Custom</span>
+      <span id="custom-label">${t('filter_custom') || 'Custom'}</span>
       <span class="pill__caret" aria-hidden="true">▾</span>
     </button>
   </div>
 </div>
 
 <div class="pop" id="pop" hidden role="dialog"
-     aria-label="Custom filters" aria-modal="false">
+     aria-label="${t('filter_custom_title') || 'Custom filters'}" aria-modal="false">
   <div class="pop__header">
-    <span class="pop__title">Custom filters</span>
+    <span class="pop__title">${t('filter_custom_title') || 'Custom filters'}</span>
     <button class="pop__close" id="pop-close" type="button" aria-label="Close">&#x2715;</button>
   </div>
-  <p class="pop__hint">Enter an annotation type string to add a custom filter.</p>
+  <p class="pop__hint">${t('filter_custom_hint') || 'Enter an annotation type string to add a custom filter.'}</p>
   <div class="pop__add">
     <input class="pop__input" id="pop-input" type="text"
-           placeholder="e.g. subjunctive" autocomplete="off"
+           placeholder="${t('filter_placeholder') || 'e.g. subjunctive'}" autocomplete="off"
            aria-label="New filter term">
-    <button class="pop__add-btn" id="pop-add-btn" type="button">Add</button>
+    <button class="pop__add-btn" id="pop-add-btn" type="button">${t('filter_add_btn') || 'Add'}</button>
   </div>
   <ul class="pop__list" id="pop-list" role="list"></ul>
 </div>`
@@ -331,7 +333,10 @@ class MnemosyneFilterBar extends HTMLElement {
     const active = this.#custom.length > 0
     btn.setAttribute('aria-pressed', String(active))
     btn.classList.toggle('pill--active', active)
-    if (lbl) lbl.textContent = active ? `Custom\u2009(${this.#custom.length})` : 'Custom'
+    if (lbl) {
+      const customWord = t('filter_custom') || this.#labels.custom || 'Custom'
+      lbl.textContent = active ? `${customWord}\u2009(${this.#custom.length})` : customWord
+    }
   }
 
   #syncEmptyState() {
