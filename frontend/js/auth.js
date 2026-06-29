@@ -325,6 +325,24 @@ function getAuthErrorMessage(err) {
   return t('auth_failed')
 }
 
+// ── App config ────────────────────────────────────────────────────────────────
+
+let _ownerEmail = ''
+
+export function ownerEmail() { return _ownerEmail }
+
+export async function fetchAppConfig() {
+  try {
+    const resp = await fetch(`${API_BASE}/config`)
+    if (resp.ok) {
+      const cfg = await resp.json()
+      _ownerEmail = cfg.owner_email ?? ''
+    }
+  } catch {
+    // Config fetch failing is non-fatal — feature degrades gracefully.
+  }
+}
+
 // ── Init ──────────────────────────────────────────────────────────────────────
 
 /**

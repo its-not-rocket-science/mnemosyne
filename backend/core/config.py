@@ -90,6 +90,10 @@ class Settings(BaseSettings):
     # When False: invalid or missing Bearer tokens return 401 on user-private routes.
     # When True:  invalid tokens fall back to X-User-Id / DEFAULT_USER_ID (dev only).
     allow_dev_auth_fallback: bool | None = Field(default=None)
+    # Email of the deployment owner.  Gates the "Save lesson" feature to a single
+    # account until multi-user lesson authoring is implemented.  Empty string (the
+    # default) makes the feature available to all authenticated users.
+    auth_owner_email: str = ""
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 

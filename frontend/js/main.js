@@ -14,7 +14,7 @@ import '../components/mnemosyne-detail-pane.js'
 import '../components/mnemosyne-player.js'
 import '../components/mnemosyne-now-playing-bar.js'
 
-import { initAuth } from './auth.js'
+import { initAuth, fetchAppConfig } from './auth.js'
 import { initUiLanguage } from './i18n.js'
 import './shared.js'
 
@@ -56,8 +56,9 @@ function init() {
 
 init()
 
-// ── Auth init ─────────────────────────────────────────────────────────────────
+// ── App config + auth init ────────────────────────────────────────────────────
 
+fetchAppConfig()
 initAuth()
 
 // ── Review session + reading history init (runs once #main-content becomes visible)
