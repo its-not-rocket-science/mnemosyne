@@ -28,6 +28,7 @@ from backend.api.routes.metrics import router as metrics_router
 from backend.api.routes.ingest import router as ingest_router
 from backend.api.routes.parse import router as parse_router
 from backend.api.routes.parse_jobs import router as parse_jobs_router
+from backend.api.routes.config import router as config_router
 from backend.api.routes.ready import router as ready_router
 from backend.api.routes.vocabulary import router as vocabulary_router
 from backend.api.routes.grammar import router as grammar_router
@@ -415,6 +416,7 @@ app.include_router(recommend_router)
 app.include_router(languages_router)
 app.include_router(users_router)
 app.include_router(translate_router)
+app.include_router(config_router)
 app.include_router(ready_router)
 app.include_router(vocabulary_router)
 app.include_router(grammar_router)

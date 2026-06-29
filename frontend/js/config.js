@@ -16,6 +16,3 @@ export const API_BASE =
     ? `http://${hostname}:8000`
     : ''
 
-// Email of the app owner — gates the "Save lesson" flow to a single account
-// until multi-user lesson ownership exists.
-export const OWNER_EMAIL = 'paul_schleifer@hotmail.com'

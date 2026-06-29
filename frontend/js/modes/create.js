@@ -6,8 +6,8 @@
  * lifecycle, distinct from the library display in library.js, which owns
  * the load/browse surfaces once sources exist.
  */
-import { API_BASE, OWNER_EMAIL } from '../config.js'
-import { getAuthHeaders, getUser } from '../auth.js'
+import { API_BASE } from '../config.js'
+import { getAuthHeaders, getUser, ownerEmail } from '../auth.js'
 import { t } from '../i18n.js'
 import { refreshLoadLessonBtn } from './library.js'
 // currentText/currentSourceUrl belong to explorer.js's picker-intake flow;
@@ -40,7 +40,8 @@ function _navigateToCreate() {
 }
 
 saveLessonBtn?.addEventListener('click', () => {
-  if (getUser()?.email !== OWNER_EMAIL) {
+  const owner = ownerEmail()
+  if (owner && getUser()?.email !== owner) {
     _navigateToCreate()
     if (saveUnsupportedDialog) saveUnsupportedDialog.hidden = false
     return
