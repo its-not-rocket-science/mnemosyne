@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from typing import Any
 
+from backend.nuance.interface import NuanceExtractorMixin
 from backend.schemas.parse import CandidateObject, RelationHint
 
 # Paired motion verbs: (unidirectional, multidirectional)
@@ -140,7 +141,7 @@ def _lemma(c: CandidateObject) -> str:
     return c.lesson_data.get("lemma", c.canonical_form)
 
 
-class RussianNuanceExtractor:
+class RussianNuanceExtractor(NuanceExtractorMixin):
     language = "ru"
 
     def extract_nuance(
@@ -301,4 +302,7 @@ class RussianNuanceExtractor:
         from backend.dictionary.phrase_families import match_phrase_families
         def _text(tok: Any) -> str:
             return tok.text if hasattr(tok, "text") else str(tok)
-        return match_phrase_families([_text(t) for t in tokens], self.language)
+        sentence_text = " ".join(_text(t) for t in tokens)
+        legacy    = match_phrase_families([_text(t) for t in tokens], self.language)
+        generated = self._cultural_references(sentence_text)
+        return self._merge_candidates(legacy, generated)

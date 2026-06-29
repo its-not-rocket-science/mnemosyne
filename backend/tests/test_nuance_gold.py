@@ -194,8 +194,19 @@ def _assert_case(candidates: list[CandidateObject], case: dict) -> None:
         )
 
     # lesson_data required keys (per type)
+    # Optional "lesson_data_required_keys_where" narrows which candidates are checked,
+    # e.g. {"nuance": {"nuance_type": "etymology"}} limits the nuance check to
+    # etymology candidates only — useful when cultural-catalogue wiring adds extra
+    # nuance candidates that legitimately lack the key being asserted.
+    key_where = case.get("lesson_data_required_keys_where") or {}
     for type_name, required_keys in (case.get("lesson_data_required_keys") or {}).items():
         typed = [c for c in candidates if c.type == type_name]
+        where = key_where.get(type_name, {})
+        if where:
+            typed = [
+                c for c in typed
+                if all((c.lesson_data or {}).get(k) == v for k, v in where.items())
+            ]
         assert typed, (
             f"[{cid}] no candidates of type {type_name!r} found for key check"
         )

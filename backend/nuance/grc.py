@@ -4,6 +4,7 @@ from __future__ import annotations
 import unicodedata
 from typing import Any
 
+from backend.nuance.interface import NuanceExtractorMixin
 from backend.schemas.parse import CandidateObject, RelationHint
 
 
@@ -140,7 +141,7 @@ def _lemma(c: CandidateObject) -> str:
     return c.lesson_data.get("lemma", c.canonical_form)
 
 
-class AncientGreekNuanceExtractor:
+class AncientGreekNuanceExtractor(NuanceExtractorMixin):
     language = "grc"
 
     def extract_nuance(
@@ -156,6 +157,7 @@ class AncientGreekNuanceExtractor:
         out.extend(self._negation(tokens, seen))
         out.extend(self._verbal_government(candidates, seen))
         out.extend(self._article_note(tokens, seen))
+        out.extend(self._cultural_references(sentence))
         return out
 
     def _verbal_government(

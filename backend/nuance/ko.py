@@ -42,6 +42,7 @@ from __future__ import annotations
 
 from typing import Any
 
+from backend.nuance.interface import NuanceExtractorMixin
 from backend.schemas.parse import CandidateObject
 
 # ── Politeness — sentence-final surface patterns ──────────────────────────────
@@ -163,7 +164,7 @@ def _lemma(c: CandidateObject) -> str:
     return c.lesson_data.get("lemma", c.canonical_form)
 
 
-class KoreanNuanceExtractor:
+class KoreanNuanceExtractor(NuanceExtractorMixin):
     """Learner-facing Korean grammar nuance extractor.
 
     The extractor deliberately favours a narrow set of high-value, explainable
@@ -265,6 +266,7 @@ class KoreanNuanceExtractor:
         out.extend(self._honorific(tokens, sentence, seen, kiwi_mode))
         out.extend(self._connectives(tokens, sentence, seen, kiwi_mode))
         out.extend(self._verbal_government(candidates, seen))
+        out.extend(self._cultural_references(sentence))
         return out
 
     # ------------------------------------------------------------------

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from typing import Any
 
+from backend.nuance.interface import NuanceExtractorMixin
 from backend.schemas.parse import CandidateObject, RelationHint
 
 _ASPECT_PARTICLES: dict[str, tuple[str, str]] = {
@@ -123,7 +124,7 @@ _VERBAL_GOV: dict[str, tuple[str, str]] = {
 }
 
 
-class ChineseNuanceExtractor:
+class ChineseNuanceExtractor(NuanceExtractorMixin):
     language = "zh"
 
     def extract_nuance(
@@ -139,6 +140,7 @@ class ChineseNuanceExtractor:
         out.extend(self._measure_words(tokens, seen))
         out.extend(self._verbal_government(candidates, seen))
         out.extend(self._chengyu(tokens, seen))
+        out.extend(self._cultural_references(sentence))
         return out
 
     def _verbal_government(

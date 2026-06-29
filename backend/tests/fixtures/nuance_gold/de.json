@@ -165,6 +165,9 @@
       "lesson_data_required_keys": {
         "nuance": ["nuance_type", "explanation", "etymology", "register", "learner_level", "source"]
       },
+      "lesson_data_required_keys_where": {
+        "nuance": {"nuance_type": "etymology"}
+      },
       "no_raw_uuids": true
     },
     {
@@ -181,6 +184,9 @@
       "confidence_ge": 0.8,
       "lesson_data_required_keys": {
         "nuance": ["nuance_type", "explanation", "etymology", "register", "learner_level", "source"]
+      },
+      "lesson_data_required_keys_where": {
+        "nuance": {"nuance_type": "etymology"}
       },
       "no_raw_uuids": true
     },
@@ -215,6 +221,9 @@
       "confidence_ge": 0.8,
       "lesson_data_required_keys": {
         "nuance": ["nuance_type", "explanation", "etymology", "register", "learner_level", "source"]
+      },
+      "lesson_data_required_keys_where": {
+        "nuance": {"nuance_type": "etymology"}
       },
       "no_raw_uuids": true
     },

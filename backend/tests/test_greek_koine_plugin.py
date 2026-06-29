@@ -189,8 +189,10 @@ class TestSentenceSplitting:
 class TestLexiconLookup:
     def test_known_word_logos(self, plugin):
         result = plugin.analyze_sentence("λόγος")
-        assert len(result.candidates) == 1
-        cand = result.candidates[0]
+        # λόγος also matches the cultural catalogue (scriptural allusion); filter to vocab
+        vocab = [c for c in result.candidates if c.type == "vocabulary"]
+        assert len(vocab) >= 1
+        cand = vocab[0]
         assert cand.lesson_data.get("gloss") is not None
         assert "word" in cand.lesson_data["gloss"].lower()
 
@@ -243,9 +245,11 @@ class TestLexiconLookup:
         assert any("ν" in lbl for lbl in found_labels)  # ἐν
 
     def test_deduplicates_same_canonical(self, plugin):
-        # λόγος and λόγος repeated should only yield one candidate.
+        # λόγος repeated should deduplicate to one vocab candidate;
+        # cultural_reference candidates from the catalogue may also appear.
         result = plugin.analyze_sentence("λόγος λόγος")
-        assert len(result.candidates) == 1
+        vocab = [c for c in result.candidates if c.type == "vocabulary"]
+        assert len(vocab) == 1
 
     def test_conjunction_kai(self, plugin):
         result = plugin.analyze_sentence("καί")
@@ -364,8 +368,9 @@ class TestDeepMorphology:
 
     def test_noun_logos_stays_vocabulary(self, plugin):
         result = plugin.analyze_sentence("λόγος")
-        assert len(result.candidates) == 1
-        assert result.candidates[0].type == "vocabulary"
+        # λόγος also matches cultural catalogue (scriptural allusion); vocab must be present
+        vocab = [c for c in result.candidates if c.type == "vocabulary"]
+        assert len(vocab) == 1
 
     def test_verb_has_romanized_in_lesson_data(self, plugin):
         result = plugin.analyze_sentence("λέγει")
