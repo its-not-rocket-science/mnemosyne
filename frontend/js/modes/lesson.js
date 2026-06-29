@@ -1,4 +1,4 @@
-/**
+﻿/**
  * js/modes/lesson.js — Annotated reading surface and the detail pane it opens.
  *
  * Owns: Annotation type metadata, Annotation filters, Render sentence cards,
@@ -19,6 +19,7 @@ import { playbackEngine } from '../playback.js'
 import { openDetail, closeDetail } from '../layout.js'
 import { validateLessonPipelinePayload } from '../lesson-pipeline.js'
 import { announce, setStatus } from '../shared.js'
+import { subcategoryLabel } from '../subcategory-labels.js'
 import {
   currentDepth,
   languageCapabilities,
@@ -763,7 +764,7 @@ function _buildSubcategoryBar(sentences) {
   for (const sub of subcats) {
     const chip = document.createElement('span')
     chip.className = 'subcategory-bar__chip'
-    chip.textContent = sub.replace(/_/g, ' ')
+    chip.textContent = subcategoryLabel(sub)
     chip.dataset.subcategory = sub
     bar.appendChild(chip)
   }

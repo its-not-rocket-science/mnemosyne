@@ -1,4 +1,4 @@
-/**
+﻿/**
  * shared.js — Helpers used by more than one mode coordinator.
  *
  * Owns: the status helper, HTML escaping, screen-reader announcements,
@@ -51,6 +51,8 @@ export function escapeHtml(value) {
     .replaceAll('"',  '&quot;')
     .replaceAll("'", '&#39;')
 }
+
+export { subcategoryLabel } from './subcategory-labels.js'
 
 // ── Screen-reader announcements ───────────────────────────────────────────────
 
