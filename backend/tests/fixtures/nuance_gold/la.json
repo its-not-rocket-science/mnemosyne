@@ -42,6 +42,9 @@
       "lesson_data_required_keys": {
         "nuance": ["nuance_type", "explanation", "register", "learner_level", "source", "particle"]
       },
+      "lesson_data_required_keys_where": {
+        "nuance": {"nuance_type": "discourse_particle"}
+      },
       "no_raw_uuids": true
     },
     {
@@ -58,6 +61,9 @@
       "confidence_ge": 0.75,
       "lesson_data_required_keys": {
         "nuance": ["nuance_type", "explanation", "register", "learner_level", "source", "host_word"]
+      },
+      "lesson_data_required_keys_where": {
+        "nuance": {"nuance_type": "enclitic_que"}
       },
       "no_raw_uuids": true
     },

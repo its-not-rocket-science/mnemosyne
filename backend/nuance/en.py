@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from typing import Any
 
+from backend.nuance.interface import NuanceExtractorMixin
 from backend.schemas.parse import CandidateObject, RelationHint
 
 _FORMAL_MARKERS = frozenset({"therefore", "moreover", "thus", "hence", "shall", "whom"})
@@ -45,7 +46,7 @@ def _lemma(c: CandidateObject) -> str:
     return c.lesson_data.get("lemma", c.canonical_form)
 
 
-class EnglishNuanceExtractor:
+class EnglishNuanceExtractor(NuanceExtractorMixin):
     language = "en"
 
     def extract_nuance(
@@ -231,4 +232,7 @@ class EnglishNuanceExtractor:
 
     def _phrase_families(self, tokens: list[Any]) -> list[CandidateObject]:
         from backend.dictionary.phrase_families import match_phrase_families
-        return match_phrase_families([_text(t) for t in tokens], self.language)
+        sentence_text = " ".join(_text(t) for t in tokens)
+        legacy    = match_phrase_families([_text(t) for t in tokens], self.language)
+        generated = self._cultural_references(sentence_text)
+        return self._merge_candidates(legacy, generated)

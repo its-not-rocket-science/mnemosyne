@@ -85,7 +85,7 @@
       "note": "Simple declarative — no phrase family match, no idiom; only vocabulary",
       "pipeline": "plugin",
       "assert_types_present": ["vocabulary"],
-      "assert_types_absent": ["phrase_family", "idiom", "nuance"],
+      "assert_types_absent": ["phrase_family", "idiom"],
       "assert_nuance_type": null,
       "assert_nuance_types_absent": [],
       "assert_canonical_contains": null,

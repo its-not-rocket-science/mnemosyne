@@ -117,6 +117,9 @@
           "learner_level"
         ]
       },
+      "lesson_data_required_keys_where": {
+        "nuance": {"nuance_type": "particle"}
+      },
       "no_raw_uuids": true
     },
     {
@@ -166,6 +169,9 @@
           "surface",
           "learner_level"
         ]
+      },
+      "lesson_data_required_keys_where": {
+        "nuance": {"nuance_type": "particle"}
       },
       "no_raw_uuids": true
     },
@@ -313,6 +319,9 @@
           "surface",
           "learner_level"
         ]
+      },
+      "lesson_data_required_keys_where": {
+        "nuance": {"nuance_type": "particle"}
       },
       "no_raw_uuids": true
     }

@@ -16,6 +16,7 @@ from __future__ import annotations
 import re
 from typing import Any
 
+from backend.nuance.interface import NuanceExtractorMixin
 from backend.schemas.parse import CandidateObject, RelationHint
 
 # mi- imperfective preverb: U+0645 U+06CC U+200C (mi + ZWNJ).
@@ -96,7 +97,7 @@ def _tok_surface(tok: Any) -> str:
     return _TRAILING_PUNCT_RE.sub("", _tok_text(tok))
 
 
-class FarsiNuanceExtractor:
+class FarsiNuanceExtractor(NuanceExtractorMixin):
     language = "fa"
 
     def extract_nuance(
@@ -125,7 +126,9 @@ class FarsiNuanceExtractor:
         # the matcher's normaliser strips ZWNJ before comparison, so
         # "می‌شمارند" normalises to "میشمارند" and matches the stored surface.
         # Using WORD_RE-split tokens would break ZWNJ compounds into two parts.
-        return match_phrase_families(sentence.split(), self.language)
+        legacy    = match_phrase_families(sentence.split(), self.language)
+        generated = self._cultural_references(sentence)
+        return self._merge_candidates(legacy, generated)
 
     def _ra_accusative(
         self, tokens: list[Any], seen: set[str]

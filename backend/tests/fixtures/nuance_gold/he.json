@@ -159,6 +159,9 @@
       "lesson_data_required_keys": {
         "nuance": ["nuance_type", "explanation", "register", "learner_level", "source", "prefix"]
       },
+      "lesson_data_required_keys_where": {
+        "nuance": {"nuance_type": "prefix_decomposition"}
+      },
       "no_raw_uuids": true
     },
     {
