@@ -146,9 +146,12 @@ async def enrich_objects(
                 return
 
             # Logeion fallback for Latin and Koine Greek (LSJ / Lewis & Short).
-            if gloss is None and lang in logeion.LOGEION_LEXICON:
+            logeion_data: dict | None = None
+            if lang in logeion.LOGEION_LEXICON:
                 try:
-                    gloss = await logeion.fetch_definition(row.canonical_form, lang)
+                    logeion_data = await logeion.fetch_structured(row.canonical_form, lang)
+                    if logeion_data and gloss is None:
+                        gloss = logeion_data.get("gloss")
                 except httpx.HTTPStatusError as exc:
                     logger.warning(
                         "logeion HTTP %d lemma=%r lang=%s",
@@ -164,6 +167,11 @@ async def enrich_objects(
             updated["gloss_attempted"] = True
             if gloss:
                 updated["gloss"] = gloss
+            if logeion_data:
+                updated["ls_definition"]       = logeion_data.get("ls_definition")
+                updated["classical_citations"] = logeion_data.get("classical_citations", [])
+                updated["compound_words"]      = logeion_data.get("compound_words", [])
+                updated["lexicon_source"]      = logeion_data.get("lexicon_source")
             row.lesson_data = updated
             dirty.append(row)
 

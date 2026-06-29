@@ -374,7 +374,7 @@ async def test_enrich_uses_logeion_fallback_for_grc(db_session):
     import backend.dictionary.logeion as logeion_mod
 
     orig_wikt = mod.fetch_definition
-    orig_logeion = logeion_mod.fetch_definition
+    orig_logeion = logeion_mod.fetch_structured
 
     logeion_calls: list = []
 
@@ -383,14 +383,20 @@ async def test_enrich_uses_logeion_fallback_for_grc(db_session):
 
     async def _logeion_spy(lemma, lang, **kw):
         logeion_calls.append((lemma, lang))
-        return "word, reason, account."
+        return {
+            "gloss": "word, reason, account.",
+            "ls_definition": "word, reason, account.",
+            "classical_citations": [],
+            "compound_words": [],
+            "lexicon_source": "Liddell-Scott-Jones",
+        }
 
-    logeion_mod.fetch_definition = _logeion_spy
+    logeion_mod.fetch_structured = _logeion_spy
 
     await enrich_objects(db_session, [row.id])
 
     mod.fetch_definition = orig_wikt
-    logeion_mod.fetch_definition = orig_logeion
+    logeion_mod.fetch_structured = orig_logeion
 
     await db_session.refresh(row)
     assert logeion_calls, "Logeion fallback was not called for grc"
@@ -409,7 +415,7 @@ async def test_enrich_logeion_not_called_for_non_classical(db_session):
     import backend.dictionary.logeion as logeion_mod
 
     orig_wikt = mod.fetch_definition
-    orig_logeion = logeion_mod.fetch_definition
+    orig_logeion = logeion_mod.fetch_structured
 
     logeion_calls: list = []
 
@@ -417,14 +423,15 @@ async def test_enrich_logeion_not_called_for_non_classical(db_session):
 
     async def _logeion_spy(lemma, lang, **kw):
         logeion_calls.append((lemma, lang))
-        return "cat"
+        return {"gloss": "cat", "ls_definition": None, "classical_citations": [],
+                "compound_words": [], "lexicon_source": "Lewis & Short"}
 
-    logeion_mod.fetch_definition = _logeion_spy
+    logeion_mod.fetch_structured = _logeion_spy
 
     await enrich_objects(db_session, [row.id])
 
     mod.fetch_definition = orig_wikt
-    logeion_mod.fetch_definition = orig_logeion
+    logeion_mod.fetch_structured = orig_logeion
 
     assert not logeion_calls, "Logeion should not be called for 'es'"
 
