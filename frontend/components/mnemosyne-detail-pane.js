@@ -1,5 +1,6 @@
 import { t, currentUiLang } from '../js/i18n.js'
 import { API_BASE } from '../js/config.js'
+import { subcategoryLabel } from '../js/subcategory-labels.js'
 
 // ── Type metadata (mirrors mnemosyne-pill.js) ─────────────────────────────────
 const TYPE_META = {
@@ -838,30 +839,7 @@ export class MnemosyneDetailPane extends HTMLElement {
   }
 
   _subcategoryLabel(sub) {
-    const LABELS = {
-      chengyu:           '成语',   xiehouyu:          '歇后语',
-      suyv:              '俗语',   yanyu:             '谚语',
-      quranic:           'قرآن',   hadith:            'حديث',
-      muallaqat:         'معلقة',  abbasid:           'عباسي',
-      modern_media:      t('dp_sub_modern_media'),
-      shahnameh:         'شاهنامه', hafez:             'حافظ',
-      rumi:              'رومی',   saadi:             'سعدی',
-      khayyam:           'خیام',   persian_proverb:   t('dp_sub_proverb'),
-      yojijukugo:        '四字熟語', kanyoku:           '慣用句',
-      kotowaza:          'ことわざ',  zen_koan:          '公案',
-      sajaseong_eo:      '사자성어', pansori:           '판소리',
-      sijo:              '시조',    korean_proverb:    t('dp_sub_proverb'),
-      doha_kabir:        'कबीर',   doha_rahim:        'रहीम',
-      ramcharitmanas:    'रामचरितमानस', bhagavad_gita: 'गीता',
-      panchatantra:      'पञ्चतन्त्र', filmi:          t('dp_sub_filmi'),
-      hindi_muhavare:    'मुहावरा', hindi_lokokti:     'लोकोक्ति',
-      biblical:          t('dp_sub_biblical'),
-      shakespearean:     t('dp_sub_shakespearean'),
-      latin_tag:         'Latin',  greek_tag:         'Greek',
-      literary_allusion: t('dp_sub_literary'),
-      proverb:           t('dp_sub_proverb'),
-    }
-    return LABELS[sub] || sub
+    return subcategoryLabel(sub)
   }
 
   /** Level 3: free-text personal note, previously rendered at the bottom of the pane. */
@@ -1214,6 +1192,27 @@ export class MnemosyneDetailPane extends HTMLElement {
               </div>
             ` : ''}
           </dl>
+        ` : ''}
+        ${ld.lexicon_source ? /* html */`
+          <p class="pane__lexicon-badge">${esc(ld.lexicon_source)}</p>
+        ` : ''}
+        ${ld.ls_definition ? /* html */`
+          <p class="pane__ls-definition">${esc(ld.ls_definition)}</p>
+        ` : ''}
+        ${ld.classical_citations?.length ? /* html */`
+          <ol class="pane__citations">
+            ${ld.classical_citations.map(c => /* html */`
+              <li class="pane__citation">
+                <cite>${esc(c.abbreviated)}</cite>
+                ${c.author ? ` — ${esc(c.author)}` : ''}
+              </li>
+            `).join('')}
+          </ol>
+        ` : ''}
+        ${ld.compound_words?.length ? /* html */`
+          <p class="pane__compounds">
+            ${ld.compound_words.map(w => `<span class="pane__compound">${esc(w)}</span>`).join(' ')}
+          </p>
         ` : ''}
         ${originText ? /* html */`
           <p class="pane__origin-text">${esc(originText)}</p>
