@@ -114,6 +114,15 @@ async def fetch_definition(
 
     resp.raise_for_status()
 
+    ct = resp.headers.get("content-type", "")
+    if "html" in ct:
+        logger.warning(
+            "logeion returned HTML for lemma=%r — API may have changed "
+            "(endpoint previously returned JSON but now serves an SPA page)",
+            lemma,
+        )
+        return None
+
     try:
         data: dict = resp.json()
     except ValueError:
@@ -299,6 +308,14 @@ async def fetch_structured(
         return None
 
     resp.raise_for_status()
+
+    ct = resp.headers.get("content-type", "")
+    if "html" in ct:
+        logger.warning(
+            "logeion returned HTML for lemma=%r — API may have changed",
+            lemma,
+        )
+        return None
 
     try:
         data = resp.json()

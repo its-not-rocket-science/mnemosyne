@@ -18,34 +18,42 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 
 VOCAB_DB_PATHS: dict[str, str] = {
-    "la":  "backend/cache/la_verb_morph.db",
-    "grc": "backend/cache/grc_verb_morph.db",
+    "la":  "data/lexicons/la_verb_morph.db",
+    "grc": "data/lexicons/grc_verb_morph.db",
 }
+
+_PUNCT_STRIP = str.maketrans("", "", ",.;:!?\"'()[]{}—–-")
 
 
 def _collect_lemmas(lang: str) -> list[str]:
-    lemmas: set[str] = set()
-
+    # Verb-morph lemmas first (real dictionary headwords, lowercase).
+    verb_lemmas: list[str] = []
     db_path = pathlib.Path(VOCAB_DB_PATHS.get(lang, ""))
     if db_path.exists():
         conn = sqlite3.connect(str(db_path))
         try:
-            for row in conn.execute("SELECT DISTINCT lemma FROM verb_forms"):
-                lemmas.add(row[0])
+            for row in conn.execute("SELECT DISTINCT lemma FROM verb_morph ORDER BY lemma"):
+                verb_lemmas.append(row[0])
         except sqlite3.OperationalError:
             pass
         finally:
             conn.close()
 
+    # Cultural-reference first words (lowercased, de-duplicated against verb set).
+    verb_set = set(verb_lemmas)
+    ref_lemmas: set[str] = set()
     json_path = pathlib.Path(f"backend/nuance/data/cultural_references/{lang}.json")
     if json_path.exists():
         data = json.loads(json_path.read_text(encoding="utf-8"))
         for entry in data.get("entries", []):
             ref = entry.get("canonical_reference", "")
             if ref:
-                lemmas.add(ref.split()[0])
+                word = ref.split()[0].translate(_PUNCT_STRIP)
+                if len(word) >= 3 and word not in verb_set:
+                    ref_lemmas.add(word)
 
-    return sorted(lemmas)
+    # Verb lemmas first (highest Logeion hit rate), then cultural refs.
+    return verb_lemmas + sorted(ref_lemmas)
 
 
 async def main() -> None:
@@ -91,4 +99,13 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    import sys
+    # ProactorEventLoop on Windows raises spurious errors during cleanup;
+    # SelectorEventLoop is stable for HTTP-only async scripts.
+    if sys.platform == "win32":
+        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        pass
+    sys.exit(0)
