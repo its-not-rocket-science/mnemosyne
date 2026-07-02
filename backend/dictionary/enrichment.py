@@ -147,7 +147,7 @@ async def enrich_objects(
 
             # Logeion fallback for Latin and Koine Greek (LSJ / Lewis & Short).
             logeion_data: dict | None = None
-            if lang in logeion.LOGEION_LEXICON:
+            if lang in logeion.SUPPORTED_LANGUAGES:
                 try:
                     logeion_data = await logeion.fetch_structured(row.canonical_form, lang)
                     if logeion_data and gloss is None:
