@@ -2,23 +2,24 @@
 
 Fetches dictionary definitions from the Logeion aggregation service
 (University of Chicago), which serves Lewis & Short (Latin) and
-Liddell-Scott-Jones (Greek) entries via a single JSON endpoint.
+Liddell-Scott-Jones (Greek) entries via a JSON API.
 
 API endpoint
 ────────────
-    GET https://logeion.uchicago.edu/lexica/{lemma}
+    GET https://anastrophe.uchicago.edu/logeion-api/detail?w={lemma}&type=normal&key={KEY}
 
 Response structure (simplified):
     {
-      "ls":  "<html-fragment>",   # Lewis & Short — Latin
-      "lsj": "<html-fragment>",   # Liddell-Scott-Jones — Greek
-      "slater": "...",            # Slater — Pindar (Greek)
-      ...
+      "detail": {
+        "headword":   "amor",
+        "lewisshort": ["<html-fragment>"],   # Lewis & Short — Latin
+        "dicos":      [{"dname": "LSJ", "es": ["<html-fragment>"]}],  # Greek
+        "shortdef":   ["amor, love, affection"]
+      }
     }
 
-For Latin we read ``ls``; for Koine Greek (``grc``) we read ``lsj``.
-HTML is stripped to plain text; only the first sentence is returned so
-the gloss stays short enough to display inline.
+For Latin we read ``detail.lewisshort[0]``; for Greek we read the first
+``dicos`` entry where ``dname == "LSJ"``.
 
 Graceful degradation
 ────────────────────
@@ -41,15 +42,14 @@ from backend.dictionary.wiktionary import strip_html
 
 logger = logging.getLogger(__name__)
 
-#: Languages handled by this module.  Maps Mnemosyne BCP-47 code → lexicon key
-#: in the Logeion JSON response.
-LOGEION_LEXICON: dict[str, str] = {
-    "la":  "ls",   # Lewis & Short
-    "grc": "lsj",  # Liddell-Scott-Jones
-}
+#: Languages handled by this module.
+SUPPORTED_LANGUAGES: frozenset[str] = frozenset({"la", "grc"})
 
 #: Base URL for the Logeion API (override in tests).
-LOGEION_BASE_URL = "https://logeion.uchicago.edu"
+LOGEION_BASE_URL = "https://anastrophe.uchicago.edu/logeion-api"
+
+#: Firebase Web API key published in logeion.uchicago.edu JS bundle (public).
+LOGEION_API_KEY = "AIzaSyCT5aVzk3Yx-m8FH8rmTpEgfVyVA3pYbqg"
 
 #: HTTP timeout in seconds.
 LOGEION_TIMEOUT_S = 8.0
@@ -58,6 +58,36 @@ LOGEION_TIMEOUT_S = 8.0
 _MAX_GLOSS_CHARS = 200
 
 _USER_AGENT = "Mnemosyne/1.0 (language learning app; https://github.com/mnemosyne)"
+
+_HEADERS = {
+    "User-Agent": _USER_AGENT,
+    "Referer": "https://logeion.uchicago.edu/",
+}
+
+
+def _build_url(lemma: str, base_url: str) -> str:
+    encoded = urllib.parse.quote(lemma, safe="")
+    return f"{base_url}/detail?w={encoded}&type=normal&key={LOGEION_API_KEY}"
+
+
+def _raw_html_from_response(data: dict, language_code: str) -> str:
+    """Extract raw HTML lexicon entry from a /detail response dict."""
+    detail = data.get("detail") or {}
+    if language_code == "la":
+        ls = detail.get("lewisshort") or []
+        if ls and isinstance(ls[0], str):
+            return ls[0]
+        # shortdef as plain-text fallback (no HTML)
+        sd = detail.get("shortdef") or []
+        return sd[0] if sd and isinstance(sd[0], str) else ""
+    else:  # grc
+        for entry in (detail.get("dicos") or []):
+            if isinstance(entry, dict) and entry.get("dname") in ("LSJ", "lsj"):
+                es = entry.get("es") or []
+                if es and isinstance(es[0], str):
+                    return es[0]
+        sd = detail.get("shortdef") or []
+        return sd[0] if sd and isinstance(sd[0], str) else ""
 
 
 async def fetch_definition(
@@ -94,16 +124,14 @@ async def fetch_definition(
     httpx.HTTPStatusError
         On unexpected HTTP error responses (not 404).
     """
-    lexicon_key = LOGEION_LEXICON.get(language_code)
-    if lexicon_key is None:
+    if language_code not in SUPPORTED_LANGUAGES:
         return None
 
-    encoded = urllib.parse.quote(lemma, safe="")
-    url = f"{base_url}/lexica/{encoded}"
+    url = _build_url(lemma, base_url)
 
     async with httpx.AsyncClient(
         timeout=LOGEION_TIMEOUT_S,
-        headers={"User-Agent": _USER_AGENT},
+        headers=_HEADERS,
         follow_redirects=True,
     ) as client:
         resp = await client.get(url)
@@ -114,34 +142,31 @@ async def fetch_definition(
 
     resp.raise_for_status()
 
-    ct = resp.headers.get("content-type", "")
-    if "html" in ct:
-        logger.warning(
-            "logeion returned HTML for lemma=%r — API may have changed "
-            "(endpoint previously returned JSON but now serves an SPA page)",
-            lemma,
-        )
-        return None
-
     try:
         data: dict = resp.json()
     except ValueError:
         logger.warning("logeion invalid JSON for lemma=%r", lemma)
         return None
 
-    return _extract_gloss(data, lexicon_key, lemma)
-
-
-def _extract_gloss(data: dict, lexicon_key: str, lemma: str) -> str | None:
-    """Extract a short plain-text gloss from a Logeion API response dict."""
-    raw_html = data.get(lexicon_key) or ""
-    if not raw_html or raw_html.strip() in ("", "none", "null"):
+    raw_html = _raw_html_from_response(data, language_code)
+    if not raw_html:
         return None
 
     plain = strip_html(raw_html).strip()
     if not plain or len(plain) <= 4:
         return None
 
+    return plain[:_MAX_GLOSS_CHARS]
+
+
+def _extract_gloss(data: dict, language_code: str, lemma: str) -> str | None:
+    """Extract a short plain-text gloss from a Logeion /detail response dict."""
+    raw_html = _raw_html_from_response(data, language_code)
+    if not raw_html:
+        return None
+    plain = strip_html(raw_html).strip()
+    if not plain or len(plain) <= 4:
+        return None
     return plain[:_MAX_GLOSS_CHARS]
 
 
@@ -285,20 +310,18 @@ async def fetch_structured(
     Keys: gloss, ls_definition, classical_citations, compound_words, lexicon_source.
     Results are cached in a SQLite DB at backend/cache/logeion_cache.db.
     """
-    lexicon_key = LOGEION_LEXICON.get(language_code)
-    if lexicon_key is None:
+    if language_code not in SUPPORTED_LANGUAGES:
         return None
 
     cached = _cache_get(lemma, language_code)
     if cached is not None:
         return cached
 
-    encoded = urllib.parse.quote(lemma, safe="")
-    url = f"{base_url}/lexica/{encoded}"
+    url = _build_url(lemma, base_url)
 
     async with httpx.AsyncClient(
         timeout=LOGEION_TIMEOUT_S,
-        headers={"User-Agent": _USER_AGENT},
+        headers=_HEADERS,
         follow_redirects=True,
     ) as client:
         resp = await client.get(url)
@@ -309,14 +332,6 @@ async def fetch_structured(
 
     resp.raise_for_status()
 
-    ct = resp.headers.get("content-type", "")
-    if "html" in ct:
-        logger.warning(
-            "logeion returned HTML for lemma=%r — API may have changed",
-            lemma,
-        )
-        return None
-
     try:
         data = resp.json()
     except ValueError:
@@ -324,11 +339,14 @@ async def fetch_structured(
         return None
 
     lexicon_source = "Lewis & Short" if language_code == "la" else "Liddell-Scott-Jones"
-    raw_html = data.get(lexicon_key) or ""
-    plain = strip_html(raw_html).strip()
+    raw_html = _raw_html_from_response(data, language_code)
+    plain = strip_html(raw_html).strip() if raw_html else ""
+
+    if not plain:
+        return None
 
     result: dict = {
-        "gloss": plain[:_MAX_GLOSS_CHARS] if plain else None,
+        "gloss": plain[:_MAX_GLOSS_CHARS],
         "ls_definition": _extract_primary_definition(plain),
         "classical_citations": _extract_citations(raw_html),
         "compound_words": _extract_compounds(raw_html),
